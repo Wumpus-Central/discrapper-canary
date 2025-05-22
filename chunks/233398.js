@@ -12,12 +12,12 @@ let o = (0, r.U)((e) => ({
     },
     setChassisMixAmount: (t) => {
         (0, i.j)(() => {
-            e({ chassisMixAmount: t });
+            e({ chassisMixAmount: Math.round(t) });
         });
     },
     setGradientAngle: (t) => {
         (0, i.j)(() => {
-            e({ gradientAngle: t });
+            e({ gradientAngle: Math.round(t) });
         });
     }
 }));

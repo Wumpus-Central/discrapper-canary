@@ -9,5 +9,6 @@ e.exports = {
     originalMessageAuthorAndContent: 'originalMessageAuthorAndContent_fc958f',
     message: 'message_fc958f',
     messageContent: 'messageContent_fc958f',
-    originalMessageAuthorAvatar: 'originalMessageAuthorAvatar_fc958f'
+    originalMessageAuthorAvatar: 'originalMessageAuthorAvatar_fc958f',
+    newBadge: 'newBadge_fc958f'
 };

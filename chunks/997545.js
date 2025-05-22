@@ -835,7 +835,7 @@ class L extends _.Z {
     getUserIdBySsrc(e) {}
     prepareSecureFramesTransition(e, t, n) {
         var r, i;
-        null == (r = (i = this.conn).prepareSecureFramesTransition) || r.call(i, e, t, n);
+        0 === e && ((this.lastExecutedTransitionId = -1), (this.lastPreparedTransitionId = -1)), (this.lastPreparedTransitionId = e), null == (r = (i = this.conn).prepareSecureFramesTransition) || r.call(i, e, t, n);
     }
     prepareSecureFramesEpoch(e, t, n) {
         var r, i;
@@ -843,7 +843,12 @@ class L extends _.Z {
     }
     executeSecureFramesTransition(e) {
         var t, n;
-        null == (t = (n = this.conn).executeSecureFramesTransition) || t.call(n, e);
+        let r;
+        if (!(r = -1 === this.lastExecutedTransitionId || -1 === this.lastPreparedTransitionId || (this.lastPreparedTransitionId >= this.lastExecutedTransitionId ? e > this.lastExecutedTransitionId && e <= this.lastPreparedTransitionId : e > this.lastExecutedTransitionId || e <= this.lastPreparedTransitionId))) {
+            let t = 'Skipping invalid transition '.concat(e, ' outside of range (').concat(this.lastExecutedTransitionId, '-').concat(this.lastPreparedTransitionId, ']');
+            throw (this.logger.warn(t), Error(t));
+        }
+        (this.lastExecutedTransitionId = e), null == (t = (n = this.conn).executeSecureFramesTransition) || t.call(n, e);
     }
     getMLSKeyPackage(e) {
         var t, n;
@@ -859,11 +864,11 @@ class L extends _.Z {
     }
     prepareMLSCommitTransition(e, t, n) {
         var r, i;
-        null == (r = (i = this.conn).prepareMLSCommitTransition) || r.call(i, e, t, n);
+        (this.lastPreparedTransitionId = e), null == (r = (i = this.conn).prepareMLSCommitTransition) || r.call(i, e, t, n);
     }
     processMLSWelcome(e, t, n) {
         var r, i;
-        null == (r = (i = this.conn).processMLSWelcome) || r.call(i, e, t, n);
+        (this.lastPreparedTransitionId = e), null == (r = (i = this.conn).processMLSWelcome) || r.call(i, e, t, n);
     }
     getMLSPairwiseFingerprint(e, t, n) {
         var r, i;
@@ -920,6 +925,8 @@ class L extends _.Z {
             I(this, 'videoEncoderExperiments', ''),
             I(this, 'numFastUdpReconnects', 0),
             I(this, 'simulcastLQDisabledSsrc', void 0),
+            I(this, 'lastPreparedTransitionId', -1),
+            I(this, 'lastExecutedTransitionId', -1),
             I(this, 'logger', void 0),
             I(this, 'handleSpeakingNative', (e, t) => {
                 let n = v.Dg.NONE;

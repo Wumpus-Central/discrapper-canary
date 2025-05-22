@@ -99,7 +99,7 @@ class y extends a.Z {
                         })
                         .then(
                             (e) => {
-                                if (null == e.body || '19e24b43289c856a9a165f5e8cc899ee45f7fca5' === e.body.hash) return this._handleUpdateNotAvailable();
+                                if (null == e.body || '3fd59ad4589ce77e1930176431fb3cd51f653f22' === e.body.hash) return this._handleUpdateNotAvailable();
                                 if (e.body.required || (0, s.fD)()) return this._handleUpdateDownloaded(!1);
                                 let t = 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL ? m : g;
                                 if (Date.now() - E > t) return i.K.set('lastNonRequiredUpdateShown', Date.now()), this._handleUpdateDownloaded(!1);
