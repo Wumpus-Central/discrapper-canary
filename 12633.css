@@ -35690,17 +35690,19 @@ html:not(.visual-refresh) .root_e5f3a9 {
 }
 
 .body__5be3e {
+    display: flex;
+    flex-direction: column;
     gap: 12px;
     padding: 4px 16px 8px
 }
 
-.body__5be3e,
-.footer__5be3e {
-    display: flex;
-    flex-direction: column
+.card__5be3e {
+    padding: 12px
 }
 
 .footer__5be3e {
+    display: flex;
+    flex-direction: column;
     padding: 0 16px 12px
 }
 
