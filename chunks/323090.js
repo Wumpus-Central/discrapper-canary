@@ -12,13 +12,13 @@ var r = t(442837),
     f = t(172351),
     p = t(280885),
     g = t(900927),
-    v = t(678738),
-    h = t(179828),
+    h = t(678738),
+    v = t(179828),
     j = t(228168),
     m = t(388032),
     b = t(349966);
 function x(e) {
-    let { user: n, currentUser: t, displayProfile: x, guildId: Z, subsection: O, onClose: y } = e,
+    let { user: n, currentUser: t, displayProfile: x, guildId: Z, subsection: y, onClose: O } = e,
         { trackUserProfileAction: I } = (0, a.KZ)(),
         P = (0, r.e7)([c.Z], () => c.Z.getGuild(Z)),
         E = (0, r.e7)([d.Z], () => {
@@ -43,16 +43,16 @@ function x(e) {
                     commandIds: E.popularApplicationCommandIds,
                     channel: T,
                     guildId: Z,
-                    onClick: y
+                    onClick: O
                 }),
             null != P &&
-                (0, l.jsx)(h.Z, {
+                (0, l.jsx)(v.Z, {
                     user: n,
                     currentUser: t,
                     guild: P,
-                    scrollIntoView: O === j.Tb.ROLES
+                    scrollIntoView: y === j.Tb.ROLES
                 }),
-            (0, l.jsx)(v.Z, {
+            (0, l.jsx)(h.Z, {
                 heading: m.intl.string(m.t['A//N4u']),
                 children: (0, l.jsx)(g.Z, {
                     userId: n.id,
@@ -60,13 +60,13 @@ function x(e) {
                     tooltipDelay: j.vB
                 })
             }),
-            (0, l.jsx)(v.Z, {
+            (0, l.jsx)(h.Z, {
                 heading: m.intl.string(m.t['mQKv+v']),
-                scrollIntoView: O === j.Tb.NOTE,
+                scrollIntoView: y === j.Tb.NOTE,
                 children: (0, l.jsx)(o.Z, {
                     userId: n.id,
                     className: b.note,
-                    autoFocus: O === j.Tb.NOTE,
+                    autoFocus: y === j.Tb.NOTE,
                     onUpdate: () => I({ action: 'SET_NOTE' })
                 })
             })

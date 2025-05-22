@@ -22,8 +22,8 @@ var o = t(255367),
     v = t(113557),
     O = t(867176),
     Z = t(451834),
-    P = t(502762),
-    A = t(544989),
+    A = t(502762),
+    P = t(544989),
     N = t(481932),
     w = t(195387),
     C = t(664794),
@@ -121,13 +121,13 @@ function B(e) {
                     hideShadow: !0,
                     'aria-label': D.intl.string(D.t['3N/J2t']),
                     children: [
-                        (0, o.jsxs)(P.Z, {
+                        (0, o.jsxs)(A.Z, {
                             user: n,
                             displayProfile: et,
                             themeType: M.lY.MODAL,
                             ref: es,
                             children: [
-                                (0, o.jsxs)(A.Z, {
+                                (0, o.jsxs)(P.Z, {
                                     children: [
                                         (0, o.jsx)(w.Z, {
                                             shouldShowTooltip: null === ee.interactionType,

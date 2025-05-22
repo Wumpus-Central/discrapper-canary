@@ -20,7 +20,7 @@ var i = t(442837),
     x = t(405666);
 function g(e) {
     var n;
-    let { user: t, currentUser: g, guildId: j, channelId: v, displayProfile: O, initialSection: Z, initialSubsection: P, onClose: A } = e,
+    let { user: t, currentUser: g, guildId: j, channelId: v, displayProfile: O, initialSection: Z, initialSubsection: A, onClose: P } = e,
         { relationshipType: N, originApplicationId: w } = (0, i.cj)([r.Z], () => ({
             relationshipType: r.Z.getRelationshipType(t.id),
             originApplicationId: r.Z.getOriginApplicationId(t.id)
@@ -33,7 +33,7 @@ function g(e) {
             user: t,
             currentUser: g,
             guildId: j,
-            initialSubsection: P
+            initialSubsection: A
         });
     return (0, o.jsxs)('div', {
         className: x.body,
@@ -48,7 +48,7 @@ function g(e) {
                 tags: (0, o.jsx)(d.Z, {
                     displayProfile: O,
                     themeType: h.lY.MODAL,
-                    onClose: A
+                    onClose: P
                 })
             }),
             N === y.OGo.PENDING_INCOMING &&
@@ -86,7 +86,7 @@ function g(e) {
                 (0, o.jsx)(s.Z, {
                     className: x.bannerContainer,
                     isPremiumUser: T,
-                    onInteraction: A
+                    onInteraction: P
                 }),
             (0, o.jsx)(b.Z, {
                 user: t,
@@ -96,8 +96,8 @@ function g(e) {
                 channelId: v,
                 items: M,
                 initialSection: Z,
-                initialSubsection: P,
-                onClose: A
+                initialSubsection: A,
+                onClose: P
             })
         ]
     });

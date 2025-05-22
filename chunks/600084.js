@@ -131,7 +131,7 @@ function H(e) {
                             children: A
                         }),
                     U.intl.format(U.t['Qvg+6+'], { username: x }),
-                    (null == P ? void 0 : P.isProvisional) && (0, r.jsx)(m.qE, { userId: P.id }),
+                    (null == P ? void 0 : P.isProvisional) && (0, r.jsx)(m.q, { userId: P.id }),
                     e
                 ]
             })

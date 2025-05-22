@@ -46,7 +46,7 @@ function O(e) {
     return e;
 }
 function Z(e) {
-    let { user: n, guildId: t, channelId: Z, messageId: P, roleId: A, transitionState: N, openedAt: w, onHide: C, showGuildProfile: E = !0, sourceAnalyticsLocations: T = [] } = e,
+    let { user: n, guildId: t, channelId: Z, messageId: A, roleId: P, transitionState: N, openedAt: w, onHide: C, showGuildProfile: E = !0, sourceAnalyticsLocations: T = [] } = e,
         S = t === x.ME ? void 0 : t,
         M = (0, c.e7)([s.Z], () => s.Z.isBlocked(n.id)),
         { analyticsLocations: D } = (0, l.ZP)([...T, M ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
@@ -55,8 +55,8 @@ function Z(e) {
             userId: n.id,
             guildId: S,
             channelId: Z,
-            messageId: P,
-            roleId: A,
+            messageId: A,
+            roleId: P,
             showGuildProfile: E
         }),
         R = [
