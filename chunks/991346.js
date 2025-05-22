@@ -35,8 +35,8 @@ var i = n(73800),
     S = n(314897),
     v = n(906467),
     T = n(283595),
-    N = n(131951),
-    I = n(699516),
+    I = n(131951),
+    N = n(699516),
     y = n(663389),
     A = n(594174),
     P = n(202527),
@@ -125,9 +125,9 @@ function G() {
         { hypeSquadRemoved: en } = g.Z.useExperiment({ location: 'settings' }),
         ei = null == (l = (0, h.Z)()) || l,
         er = (null == (t = (0, C.s)()) ? void 0 : t.length) > 0,
-        { hasBlockedUsers: es, hasIgnoredUsers: el } = (0, r.cj)([I.Z], () => ({
-            hasBlockedUsers: I.Z.getBlockedIDs().length > 0,
-            hasIgnoredUsers: I.Z.getIgnoredIDs().length > 0
+        { hasBlockedUsers: es, hasIgnoredUsers: el } = (0, r.cj)([N.Z], () => ({
+            hasBlockedUsers: N.Z.getBlockedIDs().length > 0,
+            hasIgnoredUsers: N.Z.getIgnoredIDs().length > 0
         })),
         { showRefreshedSettings: ea } = (0, w.F)({
             location: 'SettingRendererUtils',
@@ -138,10 +138,10 @@ function G() {
             inputMode: ec,
             activeInputProfile: ed,
             isInputProfileCustom: eu
-        } = (0, r.cj)([N.Z], () => ({
-            activeInputProfile: N.Z.getActiveInputProfile(),
-            inputMode: N.Z.getMode(),
-            isInputProfileCustom: N.Z.isInputProfileCustom()
+        } = (0, r.cj)([I.Z], () => ({
+            activeInputProfile: I.Z.getActiveInputProfile(),
+            inputMode: I.Z.getMode(),
+            isInputProfileCustom: I.Z.isInputProfileCustom()
         }));
     return i.useMemo(
         () =>

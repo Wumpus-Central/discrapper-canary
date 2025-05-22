@@ -169,16 +169,16 @@ function T(e) {
         shouldPollPositionOnMount: !0,
         targetElementRef: c
     });
-    let N = r.useMemo(() => (u ? (null != d ? d : 'bottom') : f ? 'top' : 'bottom'), [u, d, f]),
-        I = _ && !j,
-        y = r.Children.map(s, (e) => r.cloneElement(e, { align: N }));
+    let I = r.useMemo(() => (u ? (null != d ? d : 'bottom') : f ? 'top' : 'bottom'), [u, d, f]),
+        N = _ && !j,
+        y = r.Children.map(s, (e) => r.cloneElement(e, { align: I }));
     return (0, i.jsx)(a.yRy, {
         autoInvert: !1,
         renderPopout: () => y,
         position: p,
-        align: N,
+        align: I,
         nudgeAlignIntoViewport: !1,
-        shouldShow: I,
+        shouldShow: N,
         spacing: m,
         positionKey: E,
         animation: a.yRy.Animation.TRANSLATE,

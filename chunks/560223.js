@@ -53,9 +53,9 @@ let E = (e) => {
     C = (e) => {
         var t;
         let { className: n, variant: s = f.gM.PERKS_DISCOVERABILITY, noBackground: C = !1, leftAlignHeaders: j = !1, showAllPerksButton: O, headerClassname: S, isFullScreen: v = !0, shouldAutoScroll: T = !1 } = e,
-            N = r.useRef(null),
-            I = (0, u.Er)(),
-            y = (0, g.v)(I),
+            I = r.useRef(null),
+            N = (0, u.Er)(),
+            y = (0, g.v)(N),
             A = s === f.gM.WHATS_NEW,
             P = (0, u.IY)(),
             R = (0, p.x)();
@@ -67,7 +67,7 @@ let E = (e) => {
             },
             Z = y && A;
         (0, m.r)({
-            ref: N,
+            ref: I,
             shouldScroll: Z || T,
             onScrollEnd: D,
             onCleanup: D
@@ -81,7 +81,7 @@ let E = (e) => {
                 perksCards: k,
                 variant: s,
                 isFullScreen: v,
-                showTenureCard: null == I ? void 0 : I.showCard,
+                showTenureCard: null == N ? void 0 : N.showCard,
                 isPremiumSubscriber: L,
                 fractionalState: B,
                 isInReverseTrial: M
@@ -98,7 +98,7 @@ let E = (e) => {
                         environment: H.current
                     }),
                 (0, i.jsxs)('div', {
-                    ref: N,
+                    ref: I,
                     className: l()(
                         x.section,
                         {

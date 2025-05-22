@@ -35,7 +35,7 @@ let b = l.memo(function (e) {
         setTimeout(i, 350);
     }, [j, i]);
     let [O, w] = l.useState(!j),
-        N = (0, c.q_F)({
+        S = (0, c.q_F)({
             opacity: +!!j,
             maxHeight: 500 * !!j,
             config: { duration: 300 },
@@ -43,7 +43,7 @@ let b = l.memo(function (e) {
         });
     return null != t.topic && t.topic.length > 0
         ? (0, r.jsx)(s.animated.div, {
-              style: N,
+              style: S,
               className: O ? x.hiddenVisually : void 0,
               children: (0, r.jsxs)('div', {
                   className: x.container,

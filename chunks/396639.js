@@ -1,5 +1,5 @@
 n.d(t, {
-    _Y: () => I,
+    _Y: () => N,
     default: () => Z
 });
 var i = n(255367),
@@ -85,13 +85,13 @@ function T(e, t) {
     }
     return r;
 }
-let N = {
+let I = {
         payment_type: C.Zuq[C.GZQ.ONE_TIME],
         is_gift: !1,
         eligible_for_trial: !1,
         payment_modal_version: m.PaymentModal.CURRENT_VERSION
     },
-    I = (e, t) => {
+    N = (e, t) => {
         let { loadId: n, skuId: i, analyticsLocations: r, analyticsSourceLocation: s } = t;
         e === C.rMx.PAYMENT_FLOW_CANCELED &&
             f.default.track(
@@ -106,7 +106,7 @@ let N = {
                         currency: C.pKx.DISCORD_ORB
                     },
                     null != s && { source: s },
-                    N
+                    I
                 )
             );
     },
@@ -135,7 +135,7 @@ let N = {
                         { currency: C.pKx.DISCORD_ORB }
                     ),
                     null != u && { source: u },
-                    N
+                    I
                 );
             }, [i, e, l, o, u, a]);
         return {
@@ -193,7 +193,7 @@ let N = {
             { emitOrbCheckoutPaymentFlowEvent: f } = y(),
             { skuId: b, onRedeemVirtualCurrency: j, isRedeeming: O, orbRedemptionError: S, orbProductContext: v } = (0, E.C)(),
             T = (0, _.cR)(),
-            N = (0, r.useRef)(T);
+            I = (0, r.useRef)(T);
         (0, l.ZP)(() => {
             f(C.rMx.PAYMENT_FLOW_LOADED);
         }),
@@ -201,17 +201,17 @@ let N = {
                 d === u.A.COMPLETED && n();
             }, [d, n]),
             (0, r.useEffect)(() => {
-                null != S && null !== N.current && (f(C.rMx.PAYMENT_FLOW_FAILED), (N.current = null));
+                null != S && null !== I.current && (f(C.rMx.PAYMENT_FLOW_FAILED), (I.current = null));
             }, [S, f]);
-        let I = (0, r.useCallback)(() => {
-            (N.current = T),
+        let N = (0, r.useCallback)(() => {
+            (I.current = T),
                 f(C.rMx.PAYMENT_FLOW_COMPLETED),
                 j(() => {
                     g(u.A.COMPLETED), f(C.rMx.PAYMENT_FLOW_SUCCEEDED);
                 });
         }, [j, g, T, f]);
         if (null == o || null == m) return (0, i.jsx)(s.$jN, { type: s.$jN.Type.WANDERING_CUBES });
-        let A = null != (t = N.current) ? t : T,
+        let A = null != (t = I.current) ? t : T,
             P = null != v ? v.orbPriceAmount : null;
         return (0, i.jsxs)(i.Fragment, {
             children: [
@@ -231,7 +231,7 @@ let N = {
                         orbPriceAmount: P,
                         orbBalance: A,
                         isSubmitting: O,
-                        onClickCheckout: I
+                        onClickCheckout: N
                     })
                 })
             ]

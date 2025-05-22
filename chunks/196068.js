@@ -33,8 +33,8 @@ let P = (e) => {
                 disable: P
             }
         ),
-        { enabled: D } = E.ru.useExperiment({ location: 'OutboundPromotionNotice' }, { autoTrackExposure: !1 }),
-        { location: h } = (0, u.O)(),
+        { enabled: h } = E.ru.useExperiment({ location: 'OutboundPromotionNotice' }, { autoTrackExposure: !1 }),
+        { location: D } = (0, u.O)(),
         { analyticsLocations: U } = (0, d.ZP)(),
         M = i.useCallback(() => {
             var e, t;
@@ -66,7 +66,7 @@ let P = (e) => {
                                 });
                         }
                         return e;
-                    })({}, h)),
+                    })({}, D)),
                     (t = t =
                         {
                             object: A.qAy.BUTTON_CTA,
@@ -86,7 +86,7 @@ let P = (e) => {
                           }),
                     e)
             });
-        }, [U, h]),
+        }, [U, D]),
         v = i.useCallback(() => {
             s.Z.open(A.oAB.INVENTORY), p.ZP.dismissOutboundPromotionNotice();
         }, []),
@@ -127,7 +127,7 @@ let P = (e) => {
                 })
             ]
         });
-    return D
+    return h
         ? (0, r.jsx)(f.O1, {
               contentType: t,
               newSnowflakeId: n,

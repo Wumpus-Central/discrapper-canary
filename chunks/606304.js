@@ -134,6 +134,10 @@ class A extends (r = i.ZP.Store) {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f.Yn.DEFAULT;
         return O(e, f.Dg.VOICE | f.Dg.PRIORITY);
     }
+    isCurrentUserPrioritySpeaker() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f.Yn.DEFAULT;
+        return null != h && this.isPrioritySpeaker(h, e);
+    }
     isCurrentUserPrioritySpeaking() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f.Yn.DEFAULT;
         return null != h && this.isPrioritySpeaker(h, e) && this.isSpeaking(h, e);

@@ -32,8 +32,8 @@ var r,
     P = n(223606),
     y = n(160404),
     b = n(41776),
-    D = n(347649),
-    h = n(332473),
+    h = n(347649),
+    D = n(332473),
     U = n(30684),
     M = n(646476),
     v = n(616106),
@@ -86,8 +86,8 @@ var r,
     eP = n(474936),
     ey = n(46140),
     eb = n(231338),
-    eD = n(65154);
-function eh(e, t, n) {
+    eh = n(65154);
+function eD(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -267,7 +267,7 @@ let eB = [eg.kVF.QUARANTINED, eg.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eg.kVF.VI
         [eg.kVF.VIDEO_UNSUPPORTED_BROWSER]: {
             predicate: (e) => {
                 let { voiceChannelId: t } = e;
-                return null != t && e_.Z.hasVideo(t) && !ee.Z.supports(eD.AN.VIDEO) && !eV(eg.kVF.VIDEO_UNSUPPORTED_BROWSER);
+                return null != t && e_.Z.hasVideo(t) && !ee.Z.supports(eh.AN.VIDEO) && !eV(eg.kVF.VIDEO_UNSUPPORTED_BROWSER);
             }
         },
         [eg.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK]: {
@@ -468,8 +468,8 @@ let eB = [eg.kVF.QUARANTINED, eg.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eg.kVF.VI
                       };
             }
         },
-        [eg.kVF.POMELO_ELIGIBLE]: { predicate: () => (0, h.e)() && !eV(eg.kVF.POMELO_ELIGIBLE) && !(0, D.ov)() },
-        [eg.kVF.UU_MIGRATION]: { predicate: () => (0, h.e)() && !eV(eg.kVF.UU_MIGRATION) && (0, D.ov)() },
+        [eg.kVF.POMELO_ELIGIBLE]: { predicate: () => (0, D.e)() && !eV(eg.kVF.POMELO_ELIGIBLE) && !(0, h.ov)() },
+        [eg.kVF.UU_MIGRATION]: { predicate: () => (0, D.e)() && !eV(eg.kVF.UU_MIGRATION) && (0, h.ov)() },
         [eg.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION]: {
             predicate: (e) => {
                 let { selectedGuildId: t } = e,
@@ -592,7 +592,7 @@ function eH() {
                                 })
                             )),
                             r.forEach(function (t) {
-                                eh(e, t, n[t]);
+                                eD(e, t, n[t]);
                             });
                     }
                     return e;
@@ -627,7 +627,7 @@ class eK extends (r = o.ZP.Store) {
         return eV(e);
     }
 }
-eh(eK, 'displayName', 'NoticeStore');
+eD(eK, 'displayName', 'NoticeStore');
 let eq = new eK(u.Z, {
     CURRENT_USER_UPDATE: eH,
     MEDIA_ENGINE_SET_AUDIO_ENABLED: eH,

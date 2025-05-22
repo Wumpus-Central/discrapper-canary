@@ -29,8 +29,8 @@ var r = n(255367),
     P = n(217804),
     y = n(139712),
     b = n(765305),
-    D = n(388032),
-    h = n(690606);
+    h = n(388032),
+    D = n(690606);
 let U = (e, t) => (n) => {
         n.stopPropagation(), u.default.selectVoiceChannel(e.channel_id, !1), null == t || t(n);
     },
@@ -80,40 +80,40 @@ let U = (e, t) => (n) => {
                         (0, r.jsx)(f, {
                             size: 'xs',
                             color: 'currentColor',
-                            className: h.channelIcon
+                            className: D.channelIcon
                         }),
                     (0, r.jsx)(c.Text, {
-                        className: h.channelDescription,
+                        className: D.channelDescription,
                         variant: 'text-xs/normal',
                         children: (0, N.m)(null != (t = null == I ? void 0 : I.locationName) ? t : '', !0)
                     })
                 ]
             });
         return (0, r.jsxs)('div', {
-            className: h.inviteDetailsContainer,
+            className: D.inviteDetailsContainer,
             children: [
                 (0, r.jsx)(_.Z.Icon, {
                     guild: E,
                     onClick: T
                 }),
                 (0, r.jsxs)('div', {
-                    className: h.verticalContainer,
+                    className: D.verticalContainer,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: h.guildChannelInfoContainer,
+                            className: D.guildChannelInfoContainer,
                             children: [
                                 (0, r.jsx)(d.Z, {
                                     guild: E,
                                     tooltipPosition: 'top',
                                     tooltipColor: c.ua7.Colors.PRIMARY,
                                     size: 16,
-                                    className: h.guildBadge
+                                    className: D.guildBadge
                                 }),
                                 (0, r.jsx)(c.P3F, {
-                                    className: h.guildNameClickable,
+                                    className: D.guildNameClickable,
                                     onClick: T,
                                     children: (0, r.jsx)(c.X6q, {
-                                        className: u ? h.guildNameLinkable : h.guildName,
+                                        className: u ? D.guildNameLinkable : D.guildName,
                                         variant: 'text-sm/medium',
                                         children: E.name
                                     })
@@ -121,10 +121,10 @@ let U = (e, t) => (n) => {
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: h.channelInfoContainer,
+                            className: D.channelInfoContainer,
                             children: k(l, u)
                                 ? (0, r.jsx)(c.P3F, {
-                                      className: h.channelLocationLink,
+                                      className: D.channelLocationLink,
                                       onClick: S,
                                       children: m
                                   })
@@ -144,26 +144,26 @@ let U = (e, t) => (n) => {
         return s
             ? l
                 ? (0, r.jsx)(c.zxk, {
-                      className: h.button,
+                      className: D.button,
                       size: c.zxk.Sizes.SMALL,
                       onClick: (e) => {
                           u || O(e);
                       },
                       color: u ? c.zxk.Colors.TRANSPARENT : c.zxk.Colors.GREEN,
-                      children: u ? D.intl.string(D.t.GoCQxc) : D.intl.string(D.t.XpeFYm)
+                      children: u ? h.intl.string(h.t.GoCQxc) : h.intl.string(h.t.XpeFYm)
                   })
                 : o
                   ? (0, r.jsx)(c.zxk, {
-                        className: h.button,
+                        className: D.button,
                         size: c.zxk.Sizes.SMALL,
                         disabled: !0,
                         color: c.zxk.Colors.PRIMARY,
                         look: c.zxk.Looks.OUTLINED,
-                        children: D.intl.string(D.t.Pj7Xrq)
+                        children: h.intl.string(h.t.Pj7Xrq)
                     })
                   : (0, r.jsxs)(c.zxk, {
-                        className: h.button,
-                        innerClassName: h.innerButton,
+                        className: D.button,
+                        innerClassName: D.innerButton,
                         size: c.zxk.Sizes.SMALL,
                         color: c.zxk.Colors.PRIMARY,
                         look: E ? c.zxk.Looks.OUTLINED : c.zxk.Looks.FILLED,
@@ -175,22 +175,22 @@ let U = (e, t) => (n) => {
                                 ? (0, r.jsx)(c.dz2, {
                                       size: 'xs',
                                       color: 'currentColor',
-                                      className: h.buttonIcon
+                                      className: D.buttonIcon
                                   })
                                 : (0, r.jsx)(c.Dkj, {
                                       size: 'xs',
                                       color: 'currentColor',
-                                      className: h.buttonIcon
+                                      className: D.buttonIcon
                                   }),
-                            D.intl.string(D.t.DlcqlZ)
+                            h.intl.string(h.t.DlcqlZ)
                         ]
                     })
             : (0, r.jsx)(c.zxk, {
-                  className: h.button,
+                  className: D.button,
                   size: c.zxk.Sizes.SMALL,
                   onClick: O,
                   color: c.zxk.Colors.GREEN,
-                  children: D.intl.string(D.t.XpeFYm)
+                  children: h.intl.string(h.t.XpeFYm)
               });
     }),
     j = i.memo(function (e) {
@@ -210,21 +210,21 @@ let U = (e, t) => (n) => {
         if (null == n || !I) return null;
         let P = (0, S.xt)(n),
             y = (0, S.Z2)(n),
-            D = n.entity_type === b.WX.EXTERNAL;
+            h = n.entity_type === b.WX.EXTERNAL;
         return (0, r.jsx)(_.Z, {
-            className: o()({ [h.clickable]: s }),
+            className: o()({ [D.clickable]: s }),
             children: (0, r.jsxs)(c.P3F, {
                 onClick: N,
                 children: [
                     null != n.image &&
                         (0, r.jsx)(g.Z, {
                             source: (0, R.Z)(n),
-                            className: h.banner
+                            className: D.banner
                         }),
                     (0, r.jsx)(C.ZP, {
                         name: n.name,
                         description: null != (t = n.description) ? t : void 0,
-                        descriptionClassName: h.eventDescription,
+                        descriptionClassName: D.eventDescription,
                         guildId: n.guild_id,
                         creator: p,
                         guildEvent: n,
@@ -232,7 +232,7 @@ let U = (e, t) => (n) => {
                         recurrenceId: O
                     }),
                     (0, r.jsxs)('div', {
-                        className: h.footerContainer,
+                        className: D.footerContainer,
                         children: [
                             (0, r.jsx)(L, {
                                 guild: l,
@@ -249,7 +249,7 @@ let U = (e, t) => (n) => {
                                 recurrenceId: O,
                                 onAcceptInstantInvite: d,
                                 onTransitionToInviteChannel: E,
-                                isExternal: D
+                                isExternal: h
                             })
                         ]
                     })

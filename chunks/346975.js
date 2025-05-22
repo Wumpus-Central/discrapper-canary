@@ -22,8 +22,8 @@ var r = n(255367),
     y = n(898188),
     O = n(41776),
     w = n(256413),
-    N = n(292853),
-    S = n(982168),
+    S = n(292853),
+    N = n(982168),
     P = n(216572),
     T = n(543015),
     I = n(359110),
@@ -133,7 +133,7 @@ function eb(e) {
         et.oL,
         {
             channel: t,
-            children: (0, r.jsx)(eN, {
+            children: (0, r.jsx)(eS, {
                 channel: t,
                 guild: n,
                 sidebarState: l
@@ -197,7 +197,7 @@ function ew(e) {
     }
     return null;
 }
-function eN(e) {
+function eS(e) {
     let { channel: t, sidebarState: n } = e,
         {
             editorHeight: i,
@@ -316,7 +316,7 @@ function eN(e) {
         es = F === h.X.GRID,
         eb = null != b,
         e_ = l.useRef(null),
-        { containerRef: eN, containerWidth: eI } = (0, eo.Z)();
+        { containerRef: eS, containerWidth: eI } = (0, eo.Z)();
     l.useEffect(
         () => () => {
             null != t.id && V.Z.clearForumSearch(t.id);
@@ -400,7 +400,7 @@ function eN(e) {
                             )
                           : l()
                       : (0, r.jsx)(
-                            eS,
+                            eN,
                             {
                                 channel: t,
                                 coords: n
@@ -465,7 +465,7 @@ function eN(e) {
                                           'loading-'.concat(e.row)
                                       );
                             let t = i[e.section][e.row],
-                                n = null != f && (0, S.UD)(f) ? T.ZP : ee.ZP;
+                                n = null != f && (0, N.UD)(f) ? T.ZP : ee.ZP;
                             return (0, r.jsx)(
                                 'li',
                                 {
@@ -720,7 +720,7 @@ function eN(e) {
         tl = (0, g.e7)([M.ZP], () => M.ZP.getSection(t.id)) === eu.ULH.MEMBERS;
     return (0, r.jsx)('div', {
         className: eg.container,
-        ref: eN,
+        ref: eS,
         'data-member-list-open': tl,
         children: (0, r.jsx)(x.Wdt, {
             children: (e) =>
@@ -738,7 +738,7 @@ function eN(e) {
                         H
                             ? (0, r.jsx)('div', {
                                   className: eg.optInNotice,
-                                  children: (0, r.jsx)(N.Z, { channel: t })
+                                  children: (0, r.jsx)(S.Z, { channel: t })
                               })
                             : null,
                         es
@@ -809,7 +809,7 @@ function eN(e) {
         })
     });
 }
-function eS(e) {
+function eN(e) {
     let { channel: t, coords: n } = e,
         l = (0, v.ZP)(t);
     return (0, r.jsx)('div', {
@@ -858,7 +858,7 @@ function eI() {
 }
 function eE(e) {
     var t, n, i;
-    let { channel: s, isEmpty: p, isSearchLoading: v, numResults: O, children: w, coords: N, onHeightChange: T } = e,
+    let { channel: s, isEmpty: p, isSearchLoading: v, numResults: O, children: w, coords: S, onHeightChange: T } = e,
         {
             name: I,
             formOpen: E,
@@ -911,8 +911,8 @@ function eE(e) {
         e_ = (0, W.ql)(s),
         ey = l.useRef(null),
         eO = l.useRef(null),
-        [ew, eN] = l.useState(0),
-        { width: eS } = (0, g.e7)([B.Z], () => B.Z.windowSize()),
+        [ew, eS] = l.useState(0),
+        { width: eN } = (0, g.e7)([B.Z], () => B.Z.windowSize()),
         eP = null == (n = ey.current) || null == (t = n.getBoundingClientRect()) ? void 0 : t.width,
         eT = l.useRef(null),
         eE = l.useRef(null);
@@ -928,9 +928,9 @@ function eE(e) {
                 if (i - t > a) break;
                 n - e > r && (r = n - e);
             }
-            eN(r);
+            eS(r);
         }
-    }, [s.availableTags, eS, eP, U]);
+    }, [s.availableTags, eN, eP, U]);
     let eR = I.length > 0 && !E && (v || null != O),
         eZ = !__OVERLAY__ && !Z && !E && k && (0 === M.textValue.trim().length || M.textValue.trim() === e_) && 0 === eC.length && !ec;
     l.useLayoutEffect(() => {
@@ -985,7 +985,7 @@ function eE(e) {
             },
             [eD, eb, eH]
         ),
-        eV = l.useMemo(() => (ec ? (0, S.iq)(s.availableTags) : s.availableTags), [s.availableTags, ec]);
+        eV = l.useMemo(() => (ec ? (0, N.iq)(s.availableTags) : s.availableTags), [s.availableTags, ec]);
     return (0, r.jsx)(
         'div',
         ex(
@@ -998,7 +998,7 @@ function eE(e) {
                 ez
             ),
             {
-                style: ex(ef({}, N), {
+                style: ex(ef({}, S), {
                     position: G === h.X.GRID ? 'absolute' : 'static',
                     height: 'auto'
                 }),

@@ -37,14 +37,14 @@ function P(e) {
         P = (0, a.e7)([E.Z], () => E.Z.isViewingServerShop(o)),
         y = (0, N.g)(C, 'guild_shop_page'),
         b = (0, S.RF)(o, 'guild_shop_page'),
-        D = (null == C ? void 0 : C.hasFeature(R.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0,
-        h = (0, _.mY)(null == C ? void 0 : C.id),
+        h = (null == C ? void 0 : C.hasFeature(R.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0,
+        D = (0, _.mY)(null == C ? void 0 : C.id),
         U = null == (t = (0, d.YB)(o)) ? void 0 : t.server_shop_tab_order,
         M = [],
         v = f.y.GUILD_SHOP_FULL_PREVIEW;
-    P || (D && h) ? (M.push(U === m.a3.PRODUCTS_FIRST ? f.y.GUILD_PRODUCTS : f.y.GUILD_ROLE_SUBSCRIPTIONS), M.push(U === m.a3.PRODUCTS_FIRST ? f.y.GUILD_ROLE_SUBSCRIPTIONS : f.y.GUILD_PRODUCTS), (v = M[0])) : D && !h ? (M.push(f.y.GUILD_PRODUCTS), (v = f.y.GUILD_PRODUCTS)) : !D && h && (M.push(f.y.GUILD_ROLE_SUBSCRIPTIONS), (v = f.y.GUILD_ROLE_SUBSCRIPTIONS), y && M.push(f.y.GUILD_PRODUCTS_PREVIEW)), (l = null != l ? l : v);
+    P || (h && D) ? (M.push(U === m.a3.PRODUCTS_FIRST ? f.y.GUILD_PRODUCTS : f.y.GUILD_ROLE_SUBSCRIPTIONS), M.push(U === m.a3.PRODUCTS_FIRST ? f.y.GUILD_ROLE_SUBSCRIPTIONS : f.y.GUILD_PRODUCTS), (v = M[0])) : h && !D ? (M.push(f.y.GUILD_PRODUCTS), (v = f.y.GUILD_PRODUCTS)) : !h && D && (M.push(f.y.GUILD_ROLE_SUBSCRIPTIONS), (v = f.y.GUILD_ROLE_SUBSCRIPTIONS), y && M.push(f.y.GUILD_PRODUCTS_PREVIEW)), (l = null != l ? l : v);
     let [k, L] = i.useState(l),
-        Z = (y && !(h && b)) || k === f.y.GUILD_PRODUCTS_PREVIEW;
+        Z = (y && !(D && b)) || k === f.y.GUILD_PRODUCTS_PREVIEW;
     return (
         i.useEffect(() => {
             L(l);

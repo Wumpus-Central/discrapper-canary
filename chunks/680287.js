@@ -1,12 +1,13 @@
-r.d(t, { Z: () => d }), r(539854), r(997841);
+r.d(t, { Z: () => u }), r(539854), r(997841);
 var n = r(544891),
     A = r(881052),
     a = r(687294),
     l = r(476326),
     o = r(45251),
     i = r(861990),
-    s = r(388032);
-function c(e) {
+    s = r(959517),
+    c = r(388032);
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -31,10 +32,43 @@ function c(e) {
     }
     return e;
 }
-class d extends a.Z {
+class u extends a.Z {
+    async uploadFilesSimple(e) {
+        super.upload({ name: c.intl.string(c.t.jfKTen) }, e);
+        let t = new Promise((e, t) => {
+                this.once('error', (e, r, n, A) => {
+                    t({
+                        file: e,
+                        code: r,
+                        responseBody: n,
+                        reason: A
+                    });
+                }),
+                    this.once('complete', () => {
+                        this._errored || e(this.files);
+                    });
+            }),
+            r = new AbortController();
+        try {
+            if (((this.files = e), this._aborted || (this._handleStart(() => r.abort()), !(await this.compressAndCheckFileSize())))) return t;
+            this.setUploadingTextForUI(), await (0, a.$)(this.files, !0, this._recomputeProgress.bind(this));
+        } catch (e) {
+            throw (
+                (this._handleException(e),
+                {
+                    file: this._file,
+                    reason: {
+                        type: s.xi.ERROR_SOURCE_UNKNOWN,
+                        msg: e.toString()
+                    }
+                })
+            );
+        }
+        return this.files;
+    }
     async uploadFiles(e, t) {
         let { addFilesTo: r } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        super.upload({ name: s.intl.string(s.t.jfKTen) }, e);
+        super.upload({ name: c.intl.string(c.t.jfKTen) }, e);
         let n = new AbortController();
         try {
             if (((this.files = e), this._aborted || (this._handleStart(() => n.abort()), !(await this.compressAndCheckFileSize())))) return;
@@ -50,20 +84,20 @@ class d extends a.Z {
         }
     }
     async _createMessage(e, t, r) {
-        var a, s, d, u;
+        var a, s, c, u;
         let g,
             f = [];
         if (
             ((this.files.forEach((e, t) => {
                 let r = (0, i.B)(e, t);
-                e.item.platform === l.ow.WEB && f.push(c({}, r));
+                e.item.platform === l.ow.WEB && f.push(d({}, r));
             }),
             null != r && null != t)
                 ? (g = this._addAttachmentsToPayload(t, r, f))
-                : ((d = c({}, t)),
+                : ((c = d({}, t)),
                   (u = u = { attachments: f }),
                   Object.getOwnPropertyDescriptors
-                      ? Object.defineProperties(d, Object.getOwnPropertyDescriptors(u))
+                      ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(u))
                       : (function (e, t) {
                             var r = Object.keys(e);
                             if (Object.getOwnPropertySymbols) {
@@ -72,9 +106,9 @@ class d extends a.Z {
                             }
                             return r;
                         })(Object(u)).forEach(function (e) {
-                            Object.defineProperty(d, e, Object.getOwnPropertyDescriptor(u, e));
+                            Object.defineProperty(c, e, Object.getOwnPropertyDescriptor(u, e));
                         }),
-                  (g = d)),
+                  (g = c)),
             null != g.scheduled_timestamp)
         ) {
             try {

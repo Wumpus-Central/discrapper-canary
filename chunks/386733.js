@@ -50,7 +50,7 @@ function T(e) {
     }
     return e;
 }
-function N(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -68,7 +68,7 @@ function N(e, t) {
         e
     );
 }
-let I = (e) => {
+let N = (e) => {
         let { userRecord: t, placement: n } = e,
             { avatarSrc: r, eventHandlers: s } = (0, u.Z)({
                 user: t,
@@ -97,7 +97,7 @@ let I = (e) => {
             text: O.intl.string(O.t.UnKHdn),
             shouldShow: !l,
             tooltipContentClassName: S.unsentTooltipContent,
-            children: (e) => (0, i.jsx)('div', N(T({ className: S.userAvatarProgressBarUnit }, e), { children: a }))
+            children: (e) => (0, i.jsx)('div', I(T({ className: S.userAvatarProgressBarUnit }, e), { children: a }))
         });
     },
     y = (e) => {
@@ -124,7 +124,7 @@ let I = (e) => {
         return (0, i.jsxs)('div', {
             className: S.userAvatarProgressBarContainer,
             children: [
-                (0, i.jsx)(I, {
+                (0, i.jsx)(N, {
                     userRecord: r,
                     placement: 1
                 }),
@@ -132,7 +132,7 @@ let I = (e) => {
                     numSentReferrals: n,
                     placement: 1
                 }),
-                (0, i.jsx)(I, {
+                (0, i.jsx)(N, {
                     userRecord: s,
                     placement: 2
                 }),
@@ -140,7 +140,7 @@ let I = (e) => {
                     numSentReferrals: n,
                     placement: 2
                 }),
-                (0, i.jsx)(I, {
+                (0, i.jsx)(N, {
                     userRecord: l,
                     placement: 3
                 })
@@ -152,7 +152,7 @@ let I = (e) => {
         m.default.track(j.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e('47435').then(n.bind(n, 204387));
-                return (n) => (0, i.jsx)(e, N(T({}, n), { sourceAnalyticsLocations: t }));
+                return (n) => (0, i.jsx)(e, I(T({}, n), { sourceAnalyticsLocations: t }));
             });
     },
     R = (e) => {
@@ -162,19 +162,19 @@ let I = (e) => {
             u = r.useMemo(() => s.map((e) => new g.Z(e)), [s]),
             { subscriberHomeVariant: m } = b.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
             T = m === b.p.VARIANT_2,
-            N = {
+            I = {
                 redeemed: 0,
                 converted: 0,
                 sent: n.size
             };
         n.forEach((e) => {
-            e === h.Fe.REDEEMED && N.redeemed++, e === h.Fe.CONVERTED && (N.redeemed++, N.converted++);
+            e === h.Fe.REDEEMED && I.redeemed++, e === h.Fe.CONVERTED && (I.redeemed++, I.converted++);
         });
-        let I = N.sent === _.Q,
+        let N = I.sent === _.Q,
             y = p.Z.getArticleURL(j.BhN.REFERRAL_PROGRAM),
             { analyticsLocations: R } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
             D = r.useRef(null),
-            Z = (N.sent / _.Q) * 100,
+            Z = (I.sent / _.Q) * 100,
             w = (0, i.jsxs)('div', {
                 className: S.referralInfoContent,
                 children: [
@@ -192,14 +192,14 @@ let I = (e) => {
                             (0, i.jsx)(o.X6q, {
                                 variant: t ? 'heading-xl/extrabold' : 'heading-xxl/extrabold',
                                 className: S.expandedProgressBarHeader,
-                                children: (0, C.$s)({ hasSentAll: I })
+                                children: (0, C.$s)({ hasSentAll: N })
                             }),
                             (0, i.jsx)(A, { userRecords: u }),
                             (0, i.jsx)(o.Text, {
                                 variant: t ? 'text-sm/normal' : 'text-lg/medium',
                                 children: (0, C.Hg)({
                                     helpdeskArticle: y,
-                                    referralsStatuses: N
+                                    referralsStatuses: I
                                 })
                             }),
                             (0, i.jsxs)('div', {
@@ -227,7 +227,7 @@ let I = (e) => {
                                                     alt: '',
                                                     className: S.expandedProgressBarSelectFriendsIcon
                                                 }),
-                                                I ? O.intl.string(O.t.SY9tyM) : O.intl.string(O.t.Lm2nFR)
+                                                N ? O.intl.string(O.t.SY9tyM) : O.intl.string(O.t.Lm2nFR)
                                             ]
                                         })
                                     })
@@ -237,7 +237,7 @@ let I = (e) => {
                     })
                 ]
             }),
-            k = N.redeemed === _.Q;
+            k = I.redeemed === _.Q;
         return (0, i.jsx)(d.Gt, {
             value: R,
             children: (0, i.jsx)('div', {

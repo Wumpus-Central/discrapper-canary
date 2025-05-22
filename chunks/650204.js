@@ -8,5 +8,9 @@ let o = new r.Yd('libdiscore');
     } catch (e) {
         o.error('Failed to initialize libdiscore', e);
     }
-    n(750081);
+    try {
+        n(750081);
+    } finally {
+        n(998502).ZP.indexLoadedAsync();
+    }
 })();

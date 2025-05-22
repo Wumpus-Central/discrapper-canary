@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => T,
-    _: () => S
+    _: () => N
 }),
     n(388685);
 var r = n(255367),
@@ -35,11 +35,11 @@ let y = {
         scale: 1,
         opacity: 1
     },
-    N = {
+    S = {
         tension: 2400,
         friction: 52
     };
-function S(e) {
+function N(e) {
     let { channelId: t, onClick: n, onClose: i, onMouseEnter: s } = e,
         u = l.useRef(null),
         m = (0, o.e7)([f.Z], () => f.Z.getChannel(t), [t]);
@@ -87,7 +87,7 @@ function P(e) {
             {
                 from: d.enabled ? O : y,
                 to: w,
-                config: N
+                config: S
             },
             'animate-always'
         ),
@@ -105,7 +105,7 @@ function P(e) {
             paddingFix: !1,
             fade: !0,
             children: [
-                (0, r.jsx)(S, {
+                (0, r.jsx)(N, {
                     channelId: t,
                     onClick: () => {
                         a(!0);
@@ -165,7 +165,7 @@ function T(e) {
                               })
                       ]
                   })
-                : (0, r.jsx)(S, {
+                : (0, r.jsx)(N, {
                       onMouseEnter: d,
                       channelId: t
                   }),

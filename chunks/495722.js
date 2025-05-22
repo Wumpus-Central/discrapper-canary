@@ -195,7 +195,7 @@ function K(e) {
         j = o.useMemo(() => (0, _.fh)(t, _.eC.QUEST_BAR_HERO), [t]),
         O = o.useRef(null);
     o.useEffect(() => {
-        null != O.current && (d && f ? (O.current.pause(), (O.current.currentTime = 0)) : !d && f && O.current.play());
+        null == O.current || d || (f ? ((O.current.currentTime = 0), O.current.play()) : O.current.pause());
     }, [d, f]);
     let C = (0, v.j)({ location: M.dr.QUESTS_BAR }),
         S = (0, b.Kr)(t.config),
@@ -289,7 +289,7 @@ function K(e) {
                                       null != e.current && (O.current = e.current),
                                       (0, r.jsx)(p.Z, {
                                           ref: e,
-                                          autoPlay: !d && f,
+                                          autoPlay: !1,
                                           loop: !0,
                                           muted: !0,
                                           playsInline: !0,

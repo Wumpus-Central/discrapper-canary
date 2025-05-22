@@ -27,8 +27,8 @@ var i = n(255367),
     S = n(211242),
     v = n(975298),
     T = n(15640),
-    N = n(89057),
-    I = n(406128),
+    I = n(89057),
+    N = n(406128),
     y = n(703656),
     A = n(246946),
     P = n(594174),
@@ -389,11 +389,11 @@ let eu = function () {
     }, [b, E, e]);
     let [D, w] = r.useState(!1);
     if (E) return (0, i.jsx)(_.Z, {});
-    if (e) return (0, i.jsx)(N.c8, {});
+    if (e) return (0, i.jsx)(I.c8, {});
     let k = s && null !== n && l,
         L = u.fetched && u.isFractionalPremiumActive;
     if (!k && !L && !a)
-        return (0, i.jsx)(I.Z, {
+        return (0, i.jsx)(N.Z, {
             title: $.intl.string($.t.dyq9TU),
             note: null
         });
