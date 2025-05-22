@@ -19098,9 +19098,12 @@ span.clanTag__5d473 {
     padding: var(--custom-user-profile-theme-padding)
 }
 
-:where(.outer_c0bea0).theme-dark.custom-user-profile-theme.user-profile-modal-v2,
+:where(.outer_c0bea0).theme-dark.custom-user-profile-theme.user-profile-modal-v2 {
+    background: color-mix(in oklab, var(--black-500) 70%, var(--profile-gradient-secondary-color))
+}
+
 :where(.outer_c0bea0).theme-light.custom-user-profile-theme.user-profile-modal-v2 {
-    background: color-mix(in oklab, var(--profile-gradient-overlay-color) 70%, var(--profile-gradient-secondary-color))
+    background: color-mix(in oklab, var(--white-500) 70%, var(--profile-gradient-secondary-color))
 }
 
 .inner_c0bea0 {
