@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(570140),
     d = n(355467),
     u = n(179360),
-    g = n(496929),
-    m = n(821849),
+    m = n(496929),
+    g = n(821849),
     p = n(230711),
     h = n(497321),
     f = n(975298),
@@ -66,7 +66,7 @@ function Y() {
     let e = (0, a.e7)([P.Z], () => P.Z.getForApplication(U.CL));
     return (
         r.useEffect(() => {
-            (0, g.yD)(U.CL);
+            (0, m.yD)(U.CL);
         }, []),
         (0, i.jsxs)('section', {
             children: [
@@ -98,7 +98,7 @@ let q = function () {
         t = (0, b.Z)({ subscriptionFilter: (e) => M.eS.has(e.status) }),
         n = t.length > 1,
         s = (0, a.e7)([y.Z], () => (null != e && null != e.paymentSourceId ? y.Z.getPaymentSource(e.paymentSourceId) : null), [e]),
-        g = (0, a.e7)([A.ZP], () => A.ZP.hasFetchedSubscriptions()),
+        m = (0, a.e7)([A.ZP], () => A.ZP.hasFetchedSubscriptions()),
         x = (0, a.e7)([N.Z], () => N.Z.isBusy),
         E = (0, _.V)(),
         P = (0, a.e7)([I.Z], () => I.Z.getSubsection()),
@@ -119,7 +119,7 @@ let q = function () {
     return (r.useEffect(
         () => (
             c.Z.wait(() => {
-                (0, m.Y2)(), d.jg(), (0, u.X8)(), d.tZ();
+                (0, g.Y2)(), d.jg(), (0, u.X8)(), d.tZ();
             }),
             function () {
                 p.Z.clearSubsection();
@@ -129,7 +129,7 @@ let q = function () {
     ),
     T.Z.enabled)
         ? (0, i.jsx)(h.Z, {})
-        : g && E
+        : m && E
           ? P === G.cP
               ? (0, i.jsx)(j.Z, { onGoBack: () => p.Z.clearSubsection() })
               : P === G.XZ

@@ -9,8 +9,8 @@ var r = n(120356),
     c = n(563132),
     d = n(409813),
     u = n(3409),
-    g = n(388032),
-    m = n(281817),
+    m = n(388032),
+    g = n(281817),
     p = n(893354);
 function h(e) {
     let { transitionState: t, analyticsLocation: n, onClose: r, onAddPaymentSource: l, toastContent: c, initialStep: h = d.h8.PAYMENT_TYPE, overwriteSubscriptionPaymentSource: f = !1 } = e,
@@ -28,11 +28,11 @@ function h(e) {
             },
             onStepChange: () => {},
             header: (0, i.jsxs)('div', {
-                className: s()(m.modalTitle, p.flex, p.justifyBetween, p.alignCenter),
+                className: s()(g.modalTitle, p.flex, p.justifyBetween, p.alignCenter),
                 children: [
                     (0, i.jsx)(o.vwX, {
                         tag: o.RB0.H4,
-                        children: g.intl.string(g.t.eQ2bLi)
+                        children: m.intl.string(m.t.eQ2bLi)
                     }),
                     (0, i.jsx)(o.olH, { onClick: r })
                 ]
@@ -45,10 +45,10 @@ function h(e) {
     return (0, i.jsx)(o.Y0X, {
         transitionState: t,
         size: o.CgR.SMALL,
-        className: m.modal,
-        'aria-label': g.intl.string(g.t.eQ2bLi),
+        className: g.modal,
+        'aria-label': m.intl.string(m.t.eQ2bLi),
         children: (0, i.jsx)('form', {
-            className: m.form,
+            className: g.form,
             onSubmit: function (e) {
                 e.preventDefault();
             },

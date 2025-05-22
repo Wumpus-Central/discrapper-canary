@@ -19,8 +19,8 @@ var i,
     c = n(43267),
     d = n(933557),
     u = n(471445),
-    g = n(16206),
-    m = n(790145),
+    m = n(16206),
+    g = n(790145),
     p = n(925329),
     h = n(565138),
     f = n(754688),
@@ -161,7 +161,7 @@ class I extends (i = s.Component) {
         let { channel: t } = this.props,
             n = (0, u.KS)(t);
         if (null == n) return null;
-        let i = null != (e = (0, g.Z)(t)) ? e : '';
+        let i = null != (e = (0, m.Z)(t)) ? e : '';
         return (0, r.jsx)('div', {
             className: O.iconContainer,
             role: 'img',
@@ -180,7 +180,7 @@ class I extends (i = s.Component) {
         return (
             null != n &&
                 n > 0 &&
-                (e = (0, r.jsx)(m.Z, {
+                (e = (0, r.jsx)(g.Z, {
                     className: O.badge,
                     value: n,
                     lowImportance: l
@@ -238,7 +238,7 @@ class I extends (i = s.Component) {
         let { channel: t } = this.props,
             n = null == (e = _.Z.getGuild(this.props.channel.guild_id)) ? void 0 : e.name,
             i = (0, d.F6)(t, E.default, x.Z),
-            r = (0, g.Z)(t);
+            r = (0, m.Z)(t);
         return j.intl.formatToPlainString(j.t['Vw/da2'], {
             name: i,
             type: r,
@@ -279,7 +279,7 @@ class N extends s.Component {
         return (
             null != t &&
                 t > 0 &&
-                (e = (0, r.jsx)(m.Z, {
+                (e = (0, r.jsx)(g.Z, {
                     className: O.badge,
                     value: t
                 })),
@@ -359,7 +359,7 @@ class y extends s.Component {
         return (
             null != n &&
                 n > 0 &&
-                (e = (0, r.jsx)(m.Z, {
+                (e = (0, r.jsx)(g.Z, {
                     className: O.badge,
                     value: n
                 })),

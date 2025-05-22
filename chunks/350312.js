@@ -3,28 +3,29 @@ var r = n(255367),
     l = n(73800),
     o = n(120356),
     i = n.n(o),
-    a = n(481060),
-    s = n(497505),
-    c = n(720293),
-    u = n(602667),
-    d = n(604142);
-function m(e) {
+    a = n(754700),
+    s = n(481060),
+    c = n(497505),
+    u = n(720293),
+    d = n(602667),
+    m = n(604142);
+function p(e) {
     let { asset: t } = e;
     return null == t
         ? null
         : (0, r.jsx)('img', {
               src: t.url,
               alt: '',
-              className: d.endScreenImageBackground
+              className: m.endScreenImageBackground
           });
 }
-function p(e) {
+function f(e) {
     let { quest: t, asset: n } = e;
     return null == n
         ? null
-        : (0, r.jsx)(u.A, {
+        : (0, r.jsx)(d.A, {
               questOrQuests: t,
-              questContent: s.jn.VIDEO_MODAL_END_CARD,
+              questContent: c.jn.VIDEO_MODAL_END_CARD,
               children: (e) =>
                   (0, r.jsx)('img', {
                       ref: (t) => {
@@ -32,94 +33,94 @@ function p(e) {
                       },
                       src: n.url,
                       alt: 'Video thumbnail',
-                      className: d.endScreenCard
+                      className: m.endScreenCard
                   })
           });
 }
-function f(e) {
+function v(e) {
     let { ctaBtnLabel: t, title: n, subtitle: l, onCTAClick: o } = e;
     return (0, r.jsxs)('div', {
-        className: d.endScreenCtaContainer,
+        className: m.endScreenCtaContainer,
         children: [
-            (0, r.jsx)(v, {
+            (0, r.jsx)(g, {
                 title: n,
                 subtitle: l
             }),
-            (0, r.jsx)(g, {
+            (0, r.jsx)(b, {
                 label: t,
-                icon: a.d4D,
+                icon: s.d4D,
                 onClick: o
             })
         ]
     });
 }
-function v(e) {
+function g(e) {
     let { title: t, subtitle: n } = e;
     return (0, r.jsxs)('div', {
-        className: d.endScreenCtaTitleContainer,
+        className: m.endScreenCtaTitleContainer,
         children: [
-            (0, r.jsx)(a.X6q, {
+            (0, r.jsx)(s.X6q, {
                 variant: 'heading-md/semibold',
-                className: d.endScreenCtaTitle,
+                className: m.endScreenCtaTitle,
                 children: t
             }),
-            (0, r.jsx)(a.X6q, {
+            (0, r.jsx)(s.X6q, {
                 variant: 'heading-sm/normal',
-                className: d.endScreenCtaSubtitle,
+                className: m.endScreenCtaSubtitle,
                 children: n
             })
         ]
     });
 }
-function g(e) {
-    let { label: t, icon: n, onClick: o, className: s } = e,
+function b(e) {
+    let { label: t, icon: n, onClick: o, className: a } = e,
         [c, u] = l.useState(!1),
-        m = () => {
+        d = () => {
             u(!0);
         },
         p = () => {
             u(!1);
         };
-    return (0, r.jsxs)(a.P3F, {
-        className: i()(d.endScreenCtaBtn, d.accentOnHover, s),
-        onMouseEnter: m,
+    return (0, r.jsxs)(s.P3F, {
+        className: i()(m.endScreenCtaBtn, m.accentOnHover, a),
+        onMouseEnter: d,
         onMouseLeave: p,
-        onFocus: m,
+        onFocus: d,
         onBlur: p,
         onClick: o,
         children: [
-            (0, r.jsx)(a.X6q, {
+            (0, r.jsx)(s.X6q, {
                 variant: 'heading-md/semibold',
-                className: d.endScreenCtaBtnTitle,
+                className: m.endScreenCtaBtnTitle,
                 children: t
             }),
             (0, r.jsx)(n, {
                 size: 'md',
-                color: c ? a.TVs.colors.WHITE : '#B5BAC1',
-                className: d.endScreenIcon
+                color: c ? s.TVs.colors.WHITE : '#B5BAC1',
+                className: m.endScreenIcon
             })
         ]
     });
 }
 let E = function (e) {
-    let { quest: t, ctaBtnLabel: n, title: o, subtitle: i, onCTAClick: a } = e,
-        s = l.useMemo(() => (0, c.z)(c.i.VIDEO_PLAYER_THUMBNAIL, t), [t]);
+    let { quest: t, ctaBtnLabel: n, title: o, subtitle: i, onCTAClick: s } = e,
+        c = l.useMemo(() => (0, u.z0)(t, a.X.WATCH_VIDEO, u.n1.VIDEO, u.O.THUMBNAIL), [t]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(m, { asset: s }),
-            (0, r.jsx)('div', { className: d.endScreenOverlay }),
+            (0, r.jsx)(p, { asset: c }),
+            (0, r.jsx)('div', { className: m.endScreenOverlay }),
             (0, r.jsxs)('div', {
-                className: d.endScreenContainer,
+                className: m.endScreenContainer,
                 children: [
-                    (0, r.jsx)(p, {
-                        quest: t,
-                        asset: s
-                    }),
                     (0, r.jsx)(f, {
+                        quest: t,
+                        asset: c
+                    }),
+                    (0, r.jsx)(v, {
                         title: o,
                         subtitle: i,
                         ctaBtnLabel: n,
-                        onCTAClick: a
+                        onCTAClick: s
                     })
                 ]
             })

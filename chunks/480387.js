@@ -1,7 +1,7 @@
 n.d(t, {
-    HJ: () => g,
+    HJ: () => m,
     Zd: () => p,
-    yD: () => m
+    yD: () => g
 });
 var i = n(213919),
     r = n(544891),
@@ -12,7 +12,7 @@ var i = n(213919),
     c = n(726745),
     d = n(981631);
 let u = new a.Z('MultiAccountActionCreators');
-function g() {
+function m() {
     let e = o.default.getId();
     c.Z.getUsers().forEach(async (t) => {
         let n,
@@ -52,7 +52,7 @@ function g() {
             });
     });
 }
-function m(e, t) {
+function g(e, t) {
     u.log('Switching account to '.concat(e), { switchSynchronously: t });
     let n = i.getToken(e);
     return null == n

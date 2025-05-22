@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(366594),
     d = n(442837),
     u = n(481060),
-    g = n(607070),
-    m = n(536837);
+    m = n(607070),
+    g = n(536837);
 let p = {
     mass: 10,
     tension: 550,
@@ -17,7 +17,7 @@ let p = {
 };
 function h(e) {
     let { className: t, pageMultiplier: n } = e,
-        s = (0, d.e7)([g.Z], () => g.Z.useReducedMotion),
+        s = (0, d.e7)([m.Z], () => m.Z.useReducedMotion),
         [a, h] = r.useState({
             x: 0,
             y: 0
@@ -50,7 +50,7 @@ function h(e) {
             style: {
                 transform: (0, c.to)([b.x, b.y], (e, t) => 'translate3d('.concat(e, 'px, ').concat(t, 'px, 0)'))
             },
-            className: l()(m.background, t)
+            className: l()(g.background, t)
         })
     );
 }

@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(660216),
     d = n(230711),
     u = n(825209),
-    g = n(706454),
-    m = n(494620),
+    m = n(706454),
+    g = n(494620),
     p = n(131951),
     h = n(556296),
     f = n(924557),
@@ -35,7 +35,7 @@ function A() {
         w = (0, x.Z)(p.Z),
         { showClipsHeaderEntrypoint: k } = f.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
     l()(null != D, 'Save clip keybind unset');
-    let L = (0, a.e7)([g.default], () => g.default.locale),
+    let L = (0, a.e7)([m.default], () => m.default.locale),
         B = r.useMemo(
             () => [
                 {
@@ -148,14 +148,14 @@ function A() {
                 disabled: !e,
                 children: [
                     !e &&
-                        (0, i.jsx)(m.Z, {
-                            look: m.z.WARNING,
+                        (0, i.jsx)(g.Z, {
+                            look: g.z.WARNING,
                             className: N.formItem,
                             children: T.intl.format(T.t.kiaF4e, { onClick: () => d.Z.open(O.oAB.VOICE, v.gP, { scrollPosition: v.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
                         }),
                     R === _.x.BELOW_MINIMUM
-                        ? (0, i.jsx)(m.Z, {
-                              look: m.z.WARNING,
+                        ? (0, i.jsx)(g.Z, {
+                              look: g.z.WARNING,
                               className: N.formItem,
                               children: T.intl.string(T.t.SIxrIC)
                           })
@@ -174,7 +174,7 @@ function A() {
                         children: T.intl.string(T.t.h8rgrK)
                     }),
                     e &&
-                        (0, i.jsx)(m.Z, {
+                        (0, i.jsx)(g.Z, {
                             className: N.formItem,
                             children: T.intl.string(T.t['Z+Mfqa'])
                         })

@@ -9,9 +9,9 @@ var r = n(120356),
     c = n(44380);
 let d = (e) => {
     var t;
-    let { tabs: n, settingsSection: r, parentSetting: d, panelClassName: u, defaultTabIndex: g, onTabChange: m } = e,
+    let { tabs: n, settingsSection: r, parentSetting: d, panelClassName: u, defaultTabIndex: m, onTabChange: g } = e,
         { viewableTabs: p, filteredTab: h } = (0, o.a)(n, d),
-        f = null != g ? n[g] : null,
+        f = null != m ? n[m] : null,
         b = null != (t = null != f ? f : h) ? t : p[0];
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -19,7 +19,7 @@ let d = (e) => {
                 className: c.tabBar,
                 selectedItem: b.setting,
                 onItemSelect: (e) => {
-                    a.Z.setSection(r, e), null == m || m(e);
+                    a.Z.setSection(r, e), null == g || g(e);
                 },
                 orientation: 'horizontal',
                 type: 'top',

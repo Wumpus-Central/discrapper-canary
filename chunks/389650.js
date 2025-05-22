@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(442837),
     d = n(692547),
     u = n(481060),
-    g = n(660216),
-    m = n(225433),
+    m = n(660216),
+    g = n(225433),
     p = n(825209),
     h = n(721383),
     f = n(612226),
@@ -120,11 +120,11 @@ class F extends r.PureComponent {
             className: l()(Z.keybindGroup, w.card),
             children: [
                 !e &&
-                    (0, i.jsx)(m.Z, {
+                    (0, i.jsx)(g.Z, {
                         'aria-label': D.intl.string(D.t.qEHmmJ),
                         className: Z.removeKeybind,
                         onClick: this.handleDeleteKeybind,
-                        look: m.Z.Looks.FILLED
+                        look: g.Z.Looks.FILLED
                     }),
                 (0, i.jsxs)(x.Z, {
                     className: k.marginBottom8,
@@ -187,26 +187,26 @@ class F extends r.PureComponent {
     constructor(...e) {
         super(...e),
             L(this, 'handleActionChanged', (e) => {
-                g.Z.setKeybind(M(B({}, this.props.keybind), { action: e }));
+                m.Z.setKeybind(M(B({}, this.props.keybind), { action: e }));
             }),
             L(this, 'handleShortcutChange', (e) => {
-                g.Z.setKeybind(M(B({}, this.props.keybind), { shortcut: e }));
+                m.Z.setKeybind(M(B({}, this.props.keybind), { shortcut: e }));
             }),
             L(this, 'handleDeleteKeybind', () => {
-                g.Z.deleteKeybind(this.props.keybind.id);
+                m.Z.deleteKeybind(this.props.keybind.id);
             }),
             L(this, 'handleEnableDisable', () => {
                 let { keybind: e } = this.props;
-                g.Z.setKeybind(M(B({}, this.props.keybind), { enabled: !e.enabled }));
+                m.Z.setKeybind(M(B({}, this.props.keybind), { enabled: !e.enabled }));
             });
     }
 }
 class H extends r.PureComponent {
     componentDidMount() {
-        g.Z.enableAll(!1);
+        m.Z.enableAll(!1);
     }
     componentWillUnmount() {
-        g.Z.enableAll(!0);
+        m.Z.enableAll(!0);
     }
     get keybindActionTypes() {
         let { overlaySupported: e, canGoLive: t, allowSoundboard: n, enableClips: i } = this.props,
@@ -497,7 +497,7 @@ class H extends r.PureComponent {
     constructor(...e) {
         super(...e),
             L(this, 'handleAddKeybind', () => {
-                g.Z.addKeybind();
+                m.Z.addKeybind();
             });
     }
 }

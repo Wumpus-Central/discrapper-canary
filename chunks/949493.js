@@ -9,8 +9,8 @@ var r = n(442837),
     c = n(924356),
     d = n(901151),
     u = n(24400),
-    g = n(122897),
-    m = n(821035),
+    m = n(122897),
+    g = n(821035),
     p = n(694569),
     h = n(394655),
     f = n(540204),
@@ -47,7 +47,7 @@ let y = () =>
         (0, i.jsxs)(_.Z, {
             title: N.intl.string(N.t.xVRG4O),
             webSetting: v.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-            children: [(0, i.jsx)(m.P, {}), (0, i.jsx)(g.Z, {}), (0, i.jsx)(h.Z, {}), (0, i.jsx)(u.Z, {}), (0, i.jsx)(c.Z, {}), (0, i.jsx)(E.Z, {})]
+            children: [(0, i.jsx)(g.P, {}), (0, i.jsx)(m.Z, {}), (0, i.jsx)(h.Z, {}), (0, i.jsx)(u.Z, {}), (0, i.jsx)(c.Z, {}), (0, i.jsx)(E.Z, {})]
         }),
     P = () =>
         (0, i.jsxs)(_.Z, {

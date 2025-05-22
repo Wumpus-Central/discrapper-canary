@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(481060),
     d = n(355467),
     u = n(37234),
-    g = n(254854),
-    m = n(230711),
+    m = n(254854),
+    g = n(230711),
     p = n(100527),
     h = n(906732),
     f = n(377171),
@@ -330,7 +330,7 @@ let L = (e) => {
                                               });
                                       },
                                       onChangePlanClick: () => {
-                                          null != o && ((0, O.uL)(A.Z5c.CHANNEL(o.id, P.oC.ROLE_SUBSCRIPTIONS)), (0, u.xf)(), g.Z.show(A.kVF.BACK_TO_PREVIOUS_SCREEN, void 0, D.intl.string(D.t.DvbaMz), () => m.Z.open(A.oAB.SUBSCRIPTIONS, R.cP)));
+                                          null != o && ((0, O.uL)(A.Z5c.CHANNEL(o.id, P.oC.ROLE_SUBSCRIPTIONS)), (0, u.xf)(), m.Z.show(A.kVF.BACK_TO_PREVIOUS_SCREEN, void 0, D.intl.string(D.t.DvbaMz), () => g.Z.open(A.oAB.SUBSCRIPTIONS, R.cP)));
                                       },
                                       onResubscribeClick: H
                                   })

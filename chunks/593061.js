@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(544891),
@@ -8,7 +8,7 @@ var i = n(255367),
     c = n(231338),
     d = n(388032),
     u = n(468590);
-async function g(e) {
+async function m(e) {
     try {
         return (
             await s.tn.get({
@@ -22,19 +22,19 @@ async function g(e) {
         throw e;
     }
 }
-function m(e) {
+function g(e) {
     let { payment: t } = e,
         [n, s] = r.useState(null),
-        [o, m] = r.useState(null),
+        [o, g] = r.useState(null),
         p = async (e) => {
             try {
-                let n = await g(t.id);
+                let n = await m(t.id);
                 s(n);
                 let i = e ? n.refundInvoiceLinks[0] : n.invoiceLink;
-                window.open(i, '_blank'), m(null);
+                window.open(i, '_blank'), g(null);
             } catch (e) {
                 var n;
-                m(null == (n = e.body) ? void 0 : n.message);
+                g(null == (n = e.body) ? void 0 : n.message);
             }
         },
         h = null != t.paymentSource && t.status === c.Py.COMPLETED,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(780384),
@@ -27,7 +27,7 @@ let c = 'url(#gradient)',
                 return;
         }
     },
-    g = (e, t) => {
+    m = (e, t) => {
         switch (t) {
             case a.Qo.NITRO_GEM:
             case a.Qo.AVATAR_DECO:
@@ -38,11 +38,11 @@ let c = 'url(#gradient)',
                 return;
         }
     },
-    m = (e) => {
-        let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: m = 0, progressCircleStrokeSize: p = 2, progressCircleVariation: h, progressCircleStroke: f } = e,
+    g = (e) => {
+        let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: g = 0, progressCircleStrokeSize: p = 2, progressCircleVariation: h, progressCircleStroke: f } = e,
             b = 43 + p / 2,
             _ = 2 * Math.PI * b,
-            [x, E] = r.useState(m);
+            [x, E] = r.useState(g);
         r.useEffect(() => {
             let e = setTimeout(() => {
                 E(t);
@@ -53,7 +53,7 @@ let c = 'url(#gradient)',
             j = (0, s.ap)(C),
             O = u(h),
             S = d(h, j),
-            v = null != f ? f : g(j, h);
+            v = null != f ? f : m(j, h);
         return (0, i.jsxs)('div', {
             className: o.circleContainer,
             children: [

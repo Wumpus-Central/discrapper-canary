@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var i = n(255367),
     r = n(73800),
     s = n(481060),
@@ -42,4 +42,4 @@ class u extends r.Component {
         });
     }
 }
-let g = u;
+let m = u;

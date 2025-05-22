@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(442837),
     d = n(524437),
     u = n(780384),
-    g = n(481060),
-    m = n(457330),
+    m = n(481060),
+    g = n(457330),
     p = n(410030),
     h = n(726542),
     f = n(116841),
@@ -32,10 +32,10 @@ function R(e) {
     let t = () => {
         T.SE.updateSetting(e ? O.default.keys(E.Z.getGuilds()) : []);
     };
-    (0, g.h7j)((e) => {
+    (0, m.h7j)((e) => {
         var n, r;
         return (0, i.jsx)(
-            g.ConfirmModal,
+            m.ConfirmModal,
             ((n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -66,13 +66,13 @@ function R(e) {
                     confirmText: y.intl.string(y.t.gm1Ven),
                     cancelText: y.intl.string(y.t.p89ACg),
                     onCancel: t,
-                    confirmButtonColor: g.zxk.Colors.BRAND
+                    confirmButtonColor: m.zxk.Colors.BRAND
                 },
                 e
             )),
             (r = r =
                 {
-                    children: (0, i.jsx)(g.Text, {
+                    children: (0, i.jsx)(m.Text, {
                         variant: 'text-md/normal',
                         children: y.intl.string(y.t.EFu2Ki)
                     })
@@ -120,14 +120,14 @@ function D() {
         ];
     return (0, i.jsx)(_.F, {
         setting: I.s6.ACTIVITY_PRIVACY_STATUS,
-        children: (0, i.jsxs)(g.hjN, {
+        children: (0, i.jsxs)(m.hjN, {
             children: [
-                (0, i.jsx)(g.vwX, {
-                    tag: g.RB0.H5,
+                (0, i.jsx)(m.vwX, {
+                    tag: m.RB0.H5,
                     className: P.marginBottom8,
                     children: y.intl.string(y.t['8ka8lp'])
                 }),
-                (0, i.jsx)(g.j7V, {
+                (0, i.jsx)(m.j7V, {
                     value: e,
                     onChange: (e) => T.G6.updateSetting(e),
                     note: r,
@@ -136,27 +136,27 @@ function D() {
                 n
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsxs)(g.xJW, {
-                                  tag: g.RB0.H3,
+                              (0, i.jsxs)(m.xJW, {
+                                  tag: m.RB0.H3,
                                   title: y.intl.string(y.t.ffGYGx),
                                   children: [
-                                      (0, i.jsx)(g.Text, {
+                                      (0, i.jsx)(m.Text, {
                                           variant: 'text-sm/normal',
                                           color: 'header-secondary',
                                           className: P.marginBottom8,
                                           children: y.intl.format(y.t.aUxRra, { helpdeskArticle: C.Z.getArticleURL(N.BhN.ACTIVITY_STATUS_SETTINGS) })
                                       }),
-                                      (0, i.jsx)(g.q4e, {
+                                      (0, i.jsx)(m.q4e, {
                                           options: o,
                                           value: t,
                                           onChange: (e) => a(e)
                                       })
                                   ]
                               }),
-                              (0, i.jsx)(g.$i$, { className: l()(P.marginBottom20, P.marginTop20) })
+                              (0, i.jsx)(m.$i$, { className: l()(P.marginBottom20, P.marginTop20) })
                           ]
                       })
-                    : (0, i.jsx)(g.j7V, {
+                    : (0, i.jsx)(m.j7V, {
                           value: t === d.E5.OFF,
                           note: y.intl.format(y.t['+5/xu7'], { helpdeskArticle: C.Z.getArticleURL(N.BhN.ACTIVITY_STATUS_SETTINGS) }),
                           onChange: (e) => s(!e),
@@ -171,21 +171,21 @@ function Z() {
         t = T.Ou.useSetting();
     return (0, i.jsx)(_.F, {
         setting: I.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
-        children: (0, i.jsxs)(g.hjN, {
+        children: (0, i.jsxs)(m.hjN, {
             className: P.marginBottom40,
             children: [
-                (0, i.jsx)(g.vwX, {
-                    tag: g.RB0.H5,
+                (0, i.jsx)(m.vwX, {
+                    tag: m.RB0.H5,
                     className: P.marginBottom8,
                     children: y.intl.string(y.t.VOszPD)
                 }),
-                (0, i.jsx)(g.j7V, {
+                (0, i.jsx)(m.j7V, {
                     value: e,
                     note: y.intl.string(y.t.Hdh7sb),
                     onChange: (e) => T.cP.updateSetting(e),
                     children: y.intl.string(y.t.WEWQQk)
                 }),
-                (0, i.jsx)(g.j7V, {
+                (0, i.jsx)(m.j7V, {
                     value: t,
                     note: y.intl.string(y.t.Czr3Bg),
                     onChange: (e) => T.Ou.updateSetting(e),
@@ -198,10 +198,10 @@ function Z() {
 function w() {
     return (0, i.jsx)(_.F, {
         setting: I.s6.ACTIVITY_PRIVACY_TOS,
-        children: (0, i.jsx)(g.hjN, {
+        children: (0, i.jsx)(m.hjN, {
             className: P.marginBottom40,
-            children: (0, i.jsx)(g.ToO, {
-                type: g.ToO.Types.PRIMARY,
+            children: (0, i.jsx)(m.ToO, {
+                type: m.ToO.Types.PRIMARY,
                 body: y.intl.format(y.t.xvCsx8, {
                     termsLink: N.EYA.TERMS,
                     privacyLink: N.EYA.PRIVACY
@@ -230,12 +230,12 @@ function L(e) {
     let a = h.Z.get(t.type);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(g.j7V, {
+            (0, i.jsx)(m.j7V, {
                 className: A.switchRowContainer,
                 hideBorder: !0,
                 value: n,
                 onChange: function (e) {
-                    s(e), m.Z.setShowActivity(t.type, t.id, e);
+                    s(e), g.Z.setShowActivity(t.type, t.id, e);
                 },
                 children: (0, i.jsxs)('div', {
                     className: A.activitySwitchRow,
@@ -247,11 +247,11 @@ function L(e) {
                         }),
                         (0, i.jsxs)('div', {
                             children: [
-                                (0, i.jsx)(g.Text, {
+                                (0, i.jsx)(m.Text, {
                                     variant: 'text-md/semibold',
                                     children: a.name
                                 }),
-                                (0, i.jsxs)(g.Text, {
+                                (0, i.jsxs)(m.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-muted',
                                     children: ['"', k(a), '"']
@@ -277,15 +277,15 @@ function B() {
         ? null
         : (0, i.jsx)(_.F, {
               setting: I.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY,
-              children: (0, i.jsxs)(g.hjN, {
+              children: (0, i.jsxs)(m.hjN, {
                   className: P.marginBottom40,
                   children: [
-                      (0, i.jsx)(g.vwX, {
-                          tag: g.RB0.H5,
+                      (0, i.jsx)(m.vwX, {
+                          tag: m.RB0.H5,
                           className: P.marginBottom8,
                           children: y.intl.string(y.t['4F2KoK'])
                       }),
-                      (0, i.jsx)(g.oil, {
+                      (0, i.jsx)(m.oil, {
                           className: A.searchInput,
                           value: n,
                           onChange: s,
@@ -302,9 +302,9 @@ function M(e) {
         { showPerGuildActivityStatusSetting: s } = (0, f.c)('activity privacy tab');
     return s
         ? (0, i.jsx)(b.Z, {})
-        : (0, i.jsxs)(g.hjN, {
+        : (0, i.jsxs)(m.hjN, {
               className: t,
-              tag: g.RB0.H1,
+              tag: m.RB0.H1,
               title: n ? y.intl.string(y.t.Cq98yM) : null,
               children: [(0, i.jsx)(D, {}), (0, i.jsx)(Z, {}), (0, i.jsx)(w, {}), r && (0, i.jsx)(B, {})]
           });

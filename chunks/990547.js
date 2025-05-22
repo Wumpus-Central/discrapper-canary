@@ -262,7 +262,7 @@ function K() {
     let n = {},
         r = window.GLOBAL_ENV.RELEASE_CHANNEL;
     r && (null == n.release_channel || '' === n.release_channel) && (n.release_channel = r.split('-')[0]);
-    let i = parseInt('401954', 10);
+    let i = parseInt('402027', 10);
     isNaN(i) || (n.client_build_number = i);
     let o = null == w || null == (e = (t = w.remoteApp).getBuildNumber) ? void 0 : e.call(t);
     return isNaN(o) || (n.native_build_number = o), (n.client_event_source = W()), (n.has_client_mods = (0, _.e)()), (n.client_launch_id = C), n;

@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(821849),
     d = n(72924),
     u = n(100527),
-    g = n(906732),
-    m = n(228624),
+    m = n(906732),
+    g = n(228624),
     p = n(883904),
     h = n(678558),
     f = n(730647),
@@ -108,7 +108,7 @@ let Z = function () {
         }),
         G = 'true' !== U.gift && null != Z,
         [F, H] = r.useState(w.length > 0 ? w[0].value : null),
-        { analyticsLocations: z } = (0, g.ZP)(u.Z.PAYMENT_FLOW_TEST_PAGE),
+        { analyticsLocations: z } = (0, m.ZP)(u.Z.PAYMENT_FLOW_TEST_PAGE),
         [W, Y] = r.useState(''),
         [K, q] = r.useState(N.lds),
         { balance: X, isFetching: Q, error: J } = (0, S.A)(),
@@ -117,8 +117,8 @@ let Z = function () {
         [er, es] = r.useState(''),
         [el, ea] = r.useState(N.lds),
         [eo, ec] = r.useState(N.lds),
-        ed = (0, m.hv)('PaymentFlowModalTestPage');
-    return (0, i.jsx)(g.Gt, {
+        ed = (0, g.hv)('PaymentFlowModalTestPage');
+    return (0, i.jsx)(m.Gt, {
         value: z,
         children: (0, i.jsxs)(a.hjN, {
             title: 'Payment Flow Modals',

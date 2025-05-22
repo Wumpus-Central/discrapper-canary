@@ -13,24 +13,24 @@ var i = n(255367),
     c = n(100527),
     d = n(906732),
     u = n(535322),
-    g = n(357355),
-    m = n(140465),
+    m = n(357355),
+    g = n(140465),
     p = n(775412),
     h = n(104494),
     f = n(639119),
     b = n(105759),
     _ = n(736519),
-    x = n(346497),
-    E = n(422034),
-    C = n(206127),
-    j = n(710220),
-    O = n(409100),
+    x = n(784238),
+    E = n(346497),
+    C = n(422034),
+    j = n(206127),
+    O = n(710220),
     S = n(474936),
     v = n(388032),
     T = n(909176);
 let I = (e) => {
         let { inOfferExperience: t, subscriptionTier: n, containerClassName: r, buttonClassName: s, isMarketingPageV2Enabled: a, isDarkMode: o } = e,
-            c = (0, i.jsx)(O.Z, {
+            c = (0, i.jsx)(x.Z, {
                 forceInverted: o || !a,
                 className: l()(T.button, T.subButton, s, {
                     [T.extendedButton]: t && a,
@@ -58,7 +58,7 @@ let I = (e) => {
     };
 function y(e) {
     let { variant: t = 'text-lg/normal', withBottomMargin: n = !0, isMarketingPageV2Enabled: r } = e,
-        s = (0, C.$)();
+        s = (0, j.$)();
     return (0, i.jsx)(o.Text, {
         variant: t,
         color: r ? 'header-secondary' : 'always-white',
@@ -71,15 +71,15 @@ function y(e) {
 }
 let A = r.forwardRef((e, t) => {
     var n, r;
-    let { isFullscreen: s, className: u, buttonClassName: C, subscriptionTier: O, entrypoint: A, isDarkMode: P } = e,
+    let { isFullscreen: s, className: u, buttonClassName: x, subscriptionTier: j, entrypoint: A, isDarkMode: P } = e,
         { analyticsLocations: R } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_HERO_CTA),
         D = (0, p._O)(),
         Z = (0, h.Ng)(),
         w = (0, h.Wp)(Z, S.Si.TIER_2) ? S.Si.TIER_2 : void 0,
         k = (0, f.N)(),
-        L = (0, m.Nx)(),
-        B = (0, x.Vi)(),
-        M = (0, a.e7)([g.Z], () => g.Z.affinities),
+        L = (0, g.Nx)(),
+        B = (0, E.Vi)(),
+        M = (0, a.e7)([m.Z], () => m.Z.affinities),
         U = (0, b.Z)(),
         V = A === S.EZ.ApplicationStoreHome && null != U,
         G = M.length > 0;
@@ -102,11 +102,11 @@ let A = r.forwardRef((e, t) => {
                             children: v.intl.string(v.t.YCZldH)
                         }),
                         V
-                            ? (0, i.jsx)(j.Z, { referrer: U })
+                            ? (0, i.jsx)(O.Z, { referrer: U })
                             : G
                               ? (0, i.jsx)('div', {
                                     className: T.affinityDescription,
-                                    children: (0, i.jsx)(E.Z, {
+                                    children: (0, i.jsx)(C.Z, {
                                         textColor: 'always-white',
                                         smallerText: !s
                                     })
@@ -116,14 +116,14 @@ let A = r.forwardRef((e, t) => {
                             ? (0, i.jsx)('div', {
                                   className: T.buttonContainer,
                                   children: (0, i.jsx)(_.Z, {
-                                      className: l()(T.button, C),
+                                      className: l()(T.button, x),
                                       forceWhite: !0
                                   })
                               })
                             : (0, i.jsx)(I, {
-                                  subscriptionTier: null != (r = null != O ? O : null == k || null == (n = k.subscription_trial) ? void 0 : n.sku_id) ? r : w,
+                                  subscriptionTier: null != (r = null != j ? j : null == k || null == (n = k.subscription_trial) ? void 0 : n.sku_id) ? r : w,
                                   inOfferExperience: L,
-                                  buttonClassName: C,
+                                  buttonClassName: x,
                                   isDarkMode: P
                               }),
                         G &&

@@ -16,8 +16,8 @@ var i,
     c = n(594174),
     d = n(78839),
     u = n(111361),
-    g = n(943180),
-    m = n(494450),
+    m = n(943180),
+    g = n(494450),
     p = n(474936);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -65,7 +65,7 @@ function f(e, t) {
 var b = (((i = {}).UPCOMING = 'upcoming'), (i.EARNED = 'earned'), i);
 function _() {
     let e = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
-        t = (0, m.l)(null == e ? void 0 : e.id);
+        t = (0, g.l)(null == e ? void 0 : e.id);
     return null != t ? t : null;
 }
 let x = (e) =>
@@ -107,7 +107,7 @@ let C = () => {
         return null == e || null == t || null == t.premiumSince ? null : (0, a.RZ)(e, t.premiumSince);
     },
     O = () => {
-        let { enabled: e } = (0, g.D)(),
+        let { enabled: e } = (0, m.D)(),
             t = E(),
             n = Object.values(p.vK);
         if (!e || null == t || null == n) return null;
@@ -136,6 +136,6 @@ let C = () => {
               : null;
     },
     v = (e) => {
-        let t = (0, m.l)(e);
+        let t = (0, g.l)(e);
         return null == t ? null : p.vK[t];
     };

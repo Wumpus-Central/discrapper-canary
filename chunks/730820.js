@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(816814),
     d = n(240872),
     u = n(23645),
-    g = n(712364),
-    m = n(279837),
+    m = n(712364),
+    g = n(279837),
     p = n(600164),
     h = n(144114),
     f = n(921801),
@@ -368,7 +368,7 @@ class k extends r.PureComponent {
             R(this, 'sendMFABackupCodesVerificationKeyEmail', () => {
                 (0, o.h7j)((e) =>
                     (0, i.jsx)(
-                        m.Z,
+                        g.Z,
                         Z(D({}, e), {
                             handleSubmit: (e) =>
                                 c.Z.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
@@ -383,7 +383,7 @@ class k extends r.PureComponent {
             R(this, 'viewBackupCodes', (e) => {
                 (0, o.h7j)((t) =>
                     (0, i.jsx)(
-                        g.Z,
+                        m.Z,
                         Z(D({}, t), {
                             handleSubmit: (e) => c.Z.confirmViewBackupCodes(e, !1).then(() => t.onClose()),
                             maxLength: 8,
@@ -422,7 +422,7 @@ class k extends r.PureComponent {
             R(this, 'handleDisableSMS', () => {
                 (0, o.h7j)((e) =>
                     (0, i.jsx)(
-                        m.Z,
+                        g.Z,
                         Z(D({}, e), {
                             handleSubmit: c.Z.disableSMS,
                             title: y.intl.string(y.t.KLWnio),

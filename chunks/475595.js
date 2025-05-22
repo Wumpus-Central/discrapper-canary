@@ -23,7 +23,7 @@ var r = n(887003),
 let s = /\.([a-zA-Z0-9]+)$/,
     l = ['video/mp4', 'video/webm'];
 var c = (function (e) {
-    return (e.HERO = 'hero'), (e.HERO_IMAGE = 'hero_image'), (e.QUEST_BAR_HERO = 'quest_bar_hero'), (e.REWARD = 'reward'), (e.GAME_TILE = 'game_tile'), (e.LOGO_TYPE = 'logo_type'), e;
+    return (e.HERO = 'hero'), (e.HERO_IMAGE = 'hero_image'), (e.HERO_VIDEO = 'hero_video'), (e.QUEST_BAR_HERO = 'quest_bar_hero'), (e.QUEST_BAR_HERO_VIDEO = 'quest_bar_hero_video'), (e.REWARD = 'reward'), (e.GAME_TILE = 'game_tile'), (e.LOGO_TYPE = 'logo_type'), e;
 })({});
 function u(e, t, n) {
     let r = p(e, t, n),
@@ -39,17 +39,34 @@ function d(e, t) {
     return null != e ? e : t;
 }
 function f(e, t, n) {
-    let s;
+    var s, l;
+    let c;
     switch (t) {
         case 'hero':
-            s = d(e.config.assets.heroVideo, e.config.assets.hero);
+            c = d(e.config.assets.heroVideo, e.config.assets.hero);
             break;
         case 'hero_image':
-            s = e.config.assets.hero;
+            c = e.config.assets.hero;
             break;
+        case 'hero_video': {
+            let t = e.config.assets.heroVideo,
+                n = 'videoMetadata' in e.config ? (null == (s = e.config.videoMetadata) ? void 0 : s.assets.questHomeVideo) : null,
+                r = null != t ? t : n;
+            if (null == r) return null;
+            c = r;
+            break;
+        }
         case 'quest_bar_hero':
-            s = d(e.config.assets.questBarHeroVideo, e.config.assets.questBarHero);
+            c = d(e.config.assets.questBarHeroVideo, e.config.assets.questBarHero);
             break;
+        case 'quest_bar_hero_video': {
+            let t = e.config.assets.questBarHeroVideo,
+                n = 'videoMetadata' in e.config ? (null == (l = e.config.videoMetadata) ? void 0 : l.assets.questBarPreviewVideo) : null,
+                r = null != t ? t : n;
+            if (null == r) return null;
+            c = r;
+            break;
+        }
         case 'reward': {
             let t = (0, i.hF)(e);
             if (t.type === r.w.VIRTUAL_CURRENCY)
@@ -58,19 +75,19 @@ function f(e, t, n) {
                     mimetype: 'video/webm',
                     isAnimated: !0
                 };
-            s = d(t.assetVideo, t.asset);
+            c = d(t.assetVideo, t.asset);
             break;
         }
         case 'game_tile':
-            s = e.config.assets.gameTile;
+            c = e.config.assets.gameTile;
             break;
         case 'logo_type':
-            s = e.config.assets.logotype;
+            c = e.config.assets.logotype;
     }
-    let l = e.config.features.includes(o.S7.QUESTS_CDN);
-    return u(e.id, s, {
+    let f = e.config.features.includes(o.S7.QUESTS_CDN);
+    return u(e.id, c, {
         theme: n,
-        newCdn: l
+        newCdn: f
     });
 }
 function _(e) {

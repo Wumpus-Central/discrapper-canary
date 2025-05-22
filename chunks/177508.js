@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(844477),
     d = n(481060),
     u = n(240872),
-    g = n(514361),
-    m = n(705262),
+    m = n(514361),
+    g = n(705262),
     p = n(526156),
     h = n(706705),
     f = n(726985),
@@ -301,9 +301,9 @@ function D() {
             }),
             (0, i.jsx)('div', {
                 className: x.themes,
-                children: (0, i.jsx)(m.ZP, {
-                    type: m.yH.SETTINGS,
-                    children: (0, i.jsx)(m.ZP.Basic, { className: x.themeSelectionGroup })
+                children: (0, i.jsx)(g.ZP, {
+                    type: g.yH.SETTINGS,
+                    children: (0, i.jsx)(g.ZP.Basic, { className: x.themeSelectionGroup })
                 })
             })
         ]
@@ -886,7 +886,7 @@ function V() {
         [n, s] = r.useState(null),
         [l, o] = r.useState([]),
         [c, u] = r.useState([]),
-        [g, m] = r.useState([]);
+        [m, g] = r.useState([]);
     return (0, i.jsxs)('div', {
         className: x.searchableSelectExamples,
         children: [
@@ -918,8 +918,8 @@ function V() {
                 placeholder: 'Multi select (clearable)',
                 multi: !0,
                 clearable: !0,
-                value: g,
-                onChange: (e) => m(e),
+                value: m,
+                onChange: (e) => g(e),
                 options: a.G
             }),
             (0, i.jsx)(d.VcW, {
@@ -1127,7 +1127,7 @@ function H() {
     });
 }
 function z() {
-    let e = (0, o.e7)([g.Z], () => g.Z.gradientPreset);
+    let e = (0, o.e7)([m.Z], () => m.Z.gradientPreset);
     return (0, i.jsx)(d.f6W, {
         theme: _.BR.DARKER,
         disableAdaptiveTheme: !0,

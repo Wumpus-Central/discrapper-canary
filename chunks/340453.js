@@ -11,9 +11,9 @@ let d = l.ZP.getEnableHardwareAcceleration() ? r.Xo$ : r.qEK;
 function u(e) {
     var t, n;
     let { otherUser: l, status: u } = e,
-        g = (0, a.j_)(l.id, u),
+        m = (0, a.j_)(l.id, u),
         {
-            avatarSrc: m,
+            avatarSrc: g,
             avatarDecorationSrc: p,
             eventHandlers: h
         } = (0, s.Z)({
@@ -54,7 +54,7 @@ function u(e) {
                     {
                         children: (0, i.jsx)(d, {
                             className: c.avatar,
-                            src: m,
+                            src: g,
                             avatarDecoration: p,
                             size: r.EFr.SIZE_40,
                             'aria-label': l.username
@@ -85,7 +85,7 @@ function u(e) {
                         className: c.__invalid_timestamp,
                         color: 'text-muted',
                         variant: 'text-xs/normal',
-                        children: g
+                        children: m
                     })
                 ]
             })

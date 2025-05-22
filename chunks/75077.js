@@ -1,5 +1,5 @@
 n.d(t, {
-    Dp: () => m,
+    Dp: () => g,
     Gw: () => h,
     ZM: () => x,
     gx: () => b,
@@ -18,14 +18,14 @@ var i = n(442837),
     c = n(391110),
     d = n(474936),
     u = n(735825),
-    g = n(388032);
-let m = (e) => {
+    m = n(388032);
+let g = (e) => {
         switch (e) {
             case u.EB.PENDING:
-                return g.intl.string(g.t['9o4F4+']);
+                return m.intl.string(m.t['9o4F4+']);
             case u.EB.REDEEMABLE:
             case u.EB.REDEEMED:
-                return g.intl.string(g.t['3R9pPD']);
+                return m.intl.string(m.t['3R9pPD']);
             default:
                 return '';
         }
@@ -33,10 +33,10 @@ let m = (e) => {
     p = (e) => {
         switch (e) {
             case u.EB.PENDING:
-                return g.intl.string(g.t.nlcs6O);
+                return m.intl.string(m.t.nlcs6O);
             case u.EB.REDEEMABLE:
             case u.EB.REDEEMED:
-                return g.intl.string(g.t.F915ra);
+                return m.intl.string(m.t.F915ra);
             default:
                 return;
         }
@@ -44,10 +44,10 @@ let m = (e) => {
     h = (e) => {
         switch (e) {
             case u.EB.PENDING:
-                return g.intl.string(g.t.LAFMBQ);
+                return m.intl.string(m.t.LAFMBQ);
             case u.EB.REDEEMABLE:
             case u.EB.REDEEMED:
-                return g.intl.string(g.t['4cCWPT']);
+                return m.intl.string(m.t['4cCWPT']);
             default:
                 return;
         }
@@ -55,11 +55,11 @@ let m = (e) => {
 function f(e, t) {
     switch (e) {
         case u.EB.PENDING:
-            return null != t ? g.intl.formatToPlainString(g.t.a1eKDg, { days: t }) : '';
+            return null != t ? m.intl.formatToPlainString(m.t.a1eKDg, { days: t }) : '';
         case u.EB.REDEEMABLE:
-            return g.intl.string(g.t.B9eJyc);
+            return m.intl.string(m.t.B9eJyc);
         case u.EB.REDEEMED:
-            return g.intl.string(g.t.hpy7PD);
+            return m.intl.string(m.t.hpy7PD);
         default:
             return '';
     }
@@ -112,16 +112,16 @@ let b = (e, t, n) => ((0, r.wj)(e) ? t : n),
         return e
             ? r
                 ? {
-                      title: g.intl.string(g.t.Aw5DRk),
-                      subtitle: g.intl.string(g.t.aHdO6u)
+                      title: m.intl.string(m.t.Aw5DRk),
+                      subtitle: m.intl.string(m.t.aHdO6u)
                   }
                 : {
-                      title: g.intl.string(g.t.N30YEx),
-                      subtitle: g.intl.string(g.t.GTUdNT)
+                      title: m.intl.string(m.t.N30YEx),
+                      subtitle: m.intl.string(m.t.GTUdNT)
                   }
             : {
-                  title: g.intl.string(g.t['Uh3+CA']),
-                  subtitle: g.intl.string(g.t['5TFEXl'])
+                  title: m.intl.string(m.t['Uh3+CA']),
+                  subtitle: m.intl.string(m.t['5TFEXl'])
               };
     },
     C = () => {

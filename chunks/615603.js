@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(481060),
     d = n(607070),
     u = n(975298),
-    g = n(125529),
-    m = n(760558),
+    m = n(125529),
+    g = n(760558),
     p = n(401786),
     h = n(450468),
     f = n(98278),
@@ -72,7 +72,7 @@ function P(e, t) {
 function R(e) {
     let { guildBoostSlot: t, isCancellable: n, onCancel: s, onUncancel: l, premiumSubscription: a, useReducedMotion: o, boostManagementDisabledFromFractionalPremium: d } = e,
         u = r.useMemo(() => (null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null), [t]),
-        m = (0, E.tl)(t),
+        g = (0, E.tl)(t),
         p = (null == a ? void 0 : a.isPaused) === !0 || d,
         h = d ? N.intl.format(N.t.hshta2, { helpCenterLink: C.Z.getArticleURL(T.BhN.FRACTIONAL_PREMIUM_ABOUT) }) : N.intl.string(N.t.mOWsFx);
     return (0, i.jsxs)(
@@ -86,10 +86,10 @@ function R(e) {
                         (0, i.jsx)(v.Z, {
                             className: y.unappliedGuildBoostSlotIcon,
                             hasCooldown: t.isOnCooldown(),
-                            isCanceled: m,
+                            isCanceled: g,
                             useReducedMotion: o
                         }),
-                        m && null != a
+                        g && null != a
                             ? (0, i.jsx)(c.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/medium',
@@ -109,8 +109,8 @@ function R(e) {
                     className: y.unappliedGuildBoostSlotContentSecondary,
                     children: [
                         n &&
-                            !m &&
-                            (0, i.jsx)(g.Z, {
+                            !g &&
+                            (0, i.jsx)(m.Z, {
                                 shouldShow: p,
                                 text: h,
                                 'aria-label': h.toString(),
@@ -128,8 +128,8 @@ function R(e) {
                                         })
                                     )
                             }),
-                        m &&
-                            (0, i.jsx)(g.Z, {
+                        g &&
+                            (0, i.jsx)(m.Z, {
                                 shouldShow: p,
                                 text: h,
                                 'aria-label': h.toString(),
@@ -295,7 +295,7 @@ let w = function (e) {
                         }),
                         (0, i.jsx)('div', {
                             className: y.headerContentSecondary,
-                            children: (0, i.jsx)(g.Z, {
+                            children: (0, i.jsx)(m.Z, {
                                 shouldShow: null == X || B,
                                 text: J,
                                 'aria-label': J.toString(),
@@ -310,7 +310,7 @@ let w = function (e) {
                                                           (0, c.ZDy)(
                                                               async () => (e) =>
                                                                   (0, i.jsx)(
-                                                                      m.default,
+                                                                      g.default,
                                                                       P(A({}, e), {
                                                                           guildBoostSlots: [X],
                                                                           locationSection: T.jXE.SETTINGS_PREMIUM

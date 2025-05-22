@@ -579,20 +579,20 @@ function eb(e) {
             media: n,
             channel: t
         }),
-        a = (0, y.m8)() && i === L.wk.EXPLICIT_CONTENT;
+        s = (0, y.m8)() && i === L.wk.EXPLICIT_CONTENT;
     return (0, r.jsx)(g.Rny, {
         enabled: !0,
         children: (0, r.jsxs)('div', {
-            className: (ea.bodyMedia, ei.bodyMedia),
+            className: a()(ea.bodyMedia, ei.bodyMedia),
             onClick: function (e) {
-                e.stopPropagation(), a && (e.preventDefault(), e.nativeEvent.stopImmediatePropagation(), b.Z.showAgeVerificationGetStartedModal(j.cU.FORUM_POST_MEDIA_PREVIEW));
+                e.stopPropagation(), s && (e.preventDefault(), e.nativeEvent.stopImmediatePropagation(), b.Z.showAgeVerificationGetStartedModal(j.cU.FORUM_POST_MEDIA_PREVIEW));
             },
             children: [
                 (0, r.jsx)(ep, {
                     firstMedia: n,
                     shouldObscure: l,
                     obscureReason: i,
-                    shouldShowAgeVerification: a
+                    shouldShowAgeVerification: s
                 }),
                 l &&
                     (0, r.jsx)(T.Z, {

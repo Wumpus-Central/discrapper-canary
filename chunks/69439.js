@@ -60,12 +60,12 @@ function C(e) {
         k = (0, u.O5)(),
         B = (0, p._s)({ quest: w }),
         q = (0, p.z)(w),
-        I = (0, p.B6)(w.config.expiresAt, {
+        D = (0, p.B6)(w.config.expiresAt, {
             month: 'numeric',
             day: 'numeric'
         }),
         {
-            isClaiming: D,
+            isClaiming: I,
             isEnrolling: M,
             isQuestEnrollmentBlocked: L
         } = (0, i.cj)([m.Z], () => ({
@@ -77,15 +77,15 @@ function C(e) {
         Z = (null == (n = w.userStatus) ? void 0 : n.completedAt) != null,
         V = Z && (null == (s = w.userStatus) ? void 0 : s.claimedAt) == null,
         Q = (0, g.iQ)(w),
-        U = !(0, g.zi)(w),
-        H = (0, p._Q)(w),
+        H = !(0, g.zi)(w),
+        U = (0, p._Q)(w),
         z = (0, g.Xv)(w.config),
         F = (0, g.q8)(w),
         K = (0, g.Vl)(w),
         X = o.useRef(null),
         Y = (0, p.Rf)(w),
         [G, J, $] = (0, p.me)(w, Y),
-        ee = U && H === p.OH.ACCEPTED,
+        ee = H && U === p.OH.ACCEPTED,
         et = ee && G === f.LI.SELECT,
         en = ee && !et && J.length > 1,
         er = o.useCallback(
@@ -95,7 +95,7 @@ function C(e) {
             [$, P]
         ),
         { text: eo, onClick: es } = (0, x.Ks)({
-            progressState: H,
+            progressState: U,
             quest: w,
             location: S,
             isCollectibleQuest: z,
@@ -126,7 +126,7 @@ function C(e) {
     return (Q && V
         ? (ec = (0, r.jsx)(l.zxk, {
               color: l.Ttl.BRAND,
-              submitting: D,
+              submitting: I,
               onClick: null != es ? es : void 0,
               className: y.button,
               children: eo
@@ -167,16 +167,16 @@ function C(e) {
                       onClick: null != es ? es : void 0,
                       children: eo
                   }))
-          : U
-            ? U && V
+          : H
+            ? H && V
                 ? (ec = (0, r.jsx)(l.zxk, {
                       color: l.Ttl.BRAND,
-                      submitting: D,
+                      submitting: I,
                       onClick: null != es ? es : void 0,
                       className: y.button,
                       children: eo
                   }))
-                : U && W && !el
+                : H && W && !el
                   ? (ec = et
                         ? (0, r.jsx)(l.PhF, {
                               className: y.platformSelectorPrimary,
@@ -225,7 +225,7 @@ function C(e) {
                                   className: y.button,
                                   children: v.intl.string(v.t['9KoPyM'])
                               }))
-                  : U &&
+                  : H &&
                     !W &&
                     (ec = L
                         ? (0, r.jsxs)(r.Fragment, {
@@ -255,7 +255,7 @@ function C(e) {
                   color: l.Ttl.PRIMARY,
                   disabled: !0,
                   className: y.button,
-                  children: v.intl.format(v.t['14o6QU'], { expiryDate: I })
+                  children: v.intl.format(v.t['14o6QU'], { expiryDate: D })
               })),
     null == ec)
         ? null

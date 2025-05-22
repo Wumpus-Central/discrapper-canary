@@ -9,8 +9,8 @@ var r = n(120356),
     c = n(846027),
     d = n(600164),
     u = n(313201),
-    g = n(921801),
-    m = n(463395),
+    m = n(921801),
+    g = n(463395),
     p = n(131951),
     h = n(626135),
     f = n(63063),
@@ -45,27 +45,27 @@ function N(e) {
             noiseCancellation: r,
             noiseSuppression: s,
             noiseSuppressionSupported: u,
-            noiseCancellationSupported: g
+            noiseCancellationSupported: m
         } = (0, l.cj)([p.Z], () => ({
             noiseCancellation: p.Z.getNoiseCancellation(),
             noiseSuppression: p.Z.getNoiseSuppression(),
             noiseSuppressionSupported: p.Z.isNoiseSuppressionSupported(),
             noiseCancellationSupported: p.Z.isNoiseCancellationSupported()
         }));
-    if (!u && !g) return null;
-    let m = [];
+    if (!u && !m) return null;
+    let g = [];
     return (
-        g &&
-            m.push({
+        m &&
+            g.push({
                 name: C.intl.string(C.t.rdoNzs),
                 value: 2
             }),
         u &&
-            m.push({
+            g.push({
                 name: C.intl.string(C.t.qXeYHx),
                 value: 1
             }),
-        m.push({
+        g.push({
             name: C.intl.string(C.t.wkYAl5),
             value: 0
         }),
@@ -84,13 +84,13 @@ function N(e) {
                     children: C.intl.string(C.t.najZCQ)
                 }),
                 (0, i.jsx)(o.FXm, {
-                    options: m,
+                    options: g,
                     onChange: (e) => {
                         c.Z.setNoiseCancellation(2 === e.value, T), c.Z.setNoiseSuppression(1 === e.value, T);
                     },
                     value: r ? 2 : +!!s
                 }),
-                g &&
+                m &&
                     (0, i.jsx)(o.ToO, {
                         className: j.marginBottom8,
                         type: o.Dd5.PRIMARY,
@@ -135,11 +135,11 @@ function y(e) {
             hasNoiseSuppression: O,
             hasAutomaticGainControl: S
         } = (0, l.cj)(
-            [m.Z],
+            [g.Z],
             () => ({
-                hasEchoCancellation: m.Z.hasEchoCancellation(r),
-                hasNoiseSuppression: m.Z.hasNoiseSuppression(r),
-                hasAutomaticGainControl: m.Z.hasAutomaticGainControl(r)
+                hasEchoCancellation: g.Z.hasEchoCancellation(r),
+                hasNoiseSuppression: g.Z.hasNoiseSuppression(r),
+                hasAutomaticGainControl: g.Z.hasAutomaticGainControl(r)
             }),
             [r]
         ),
@@ -152,7 +152,7 @@ function y(e) {
                         type: o.R94.Types.DESCRIPTION,
                         children: C.intl.string(C.t['/Whuzs'])
                     }),
-                (0, i.jsx)(g.F, {
+                (0, i.jsx)(m.F, {
                     setting: x.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
                     children: (0, i.jsx)(o.j7V, {
                         className: t ? void 0 : s()(j.marginTop8, j.marginBottom20),
@@ -167,11 +167,11 @@ function y(e) {
                         children: C.intl.string(C.t.iWTwu7)
                     })
                 }),
-                (0, i.jsx)(g.F, {
+                (0, i.jsx)(m.F, {
                     setting: x.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
                     children: (0, i.jsx)(N, { refreshStyles: t })
                 }),
-                (0, i.jsx)(g.F, {
+                (0, i.jsx)(m.F, {
                     setting: x.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
                     children: (0, i.jsx)(o.j7V, {
                         value: h,
@@ -182,7 +182,7 @@ function y(e) {
                         children: C.intl.string(C.t.BbESsr)
                     })
                 }),
-                (0, i.jsx)(g.F, {
+                (0, i.jsx)(m.F, {
                     setting: x.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL,
                     children: (0, i.jsx)(o.j7V, {
                         value: d,
@@ -197,7 +197,7 @@ function y(e) {
                         children: C.intl.string(C.t.cUMdHx)
                     })
                 }),
-                (0, i.jsx)(g.F, {
+                (0, i.jsx)(m.F, {
                     setting: x.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_BYPASS_SYSTEM_INPUT_PROCESSING,
                     children: (0, i.jsx)(o.j7V, {
                         value: f,

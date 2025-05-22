@@ -7,17 +7,17 @@ var i = n(255367),
     o = n(686546),
     c = n(168301);
 let d = r.forwardRef(function (e, t) {
-    let { tooltipText: n, children: r, onContextMenu: s, onClick: d, disabled: u, icon: g, iconForeground: m, innerClassName: p, className: h, redGlow: f, tooltipClassName: b, onMouseEnter: _, onMouseLeave: x, 'aria-label': E, 'aria-checked': C, role: j, tooltipColor: O, tooltipForceOpen: S, tooltipContentClassName: v, plated: T } = e,
+    let { tooltipText: n, children: r, onContextMenu: s, onClick: d, disabled: u, icon: m, iconForeground: g, innerClassName: p, className: h, redGlow: f, tooltipClassName: b, onMouseEnter: _, onMouseLeave: x, 'aria-label': E, 'aria-checked': C, role: j, tooltipColor: O, tooltipForceOpen: S, tooltipContentClassName: v, plated: T } = e,
         I =
-            'function' == typeof g
-                ? (0, i.jsx)(g, {
+            'function' == typeof m
+                ? (0, i.jsx)(m, {
                       width: 20,
                       height: 20,
                       size: 'custom',
-                      colorClass: null != m ? m : '',
+                      colorClass: null != g ? g : '',
                       color: 'currentColor'
                   })
-                : g;
+                : m;
     return (0, i.jsx)(a.ua7, {
         tooltipClassName: b,
         text: n,
@@ -27,8 +27,8 @@ let d = r.forwardRef(function (e, t) {
         forceOpen: S,
         children: (e) => {
             var n,
-                g,
-                { onClick: m, onMouseEnter: b, onMouseLeave: E } = e,
+                m,
+                { onClick: g, onMouseEnter: b, onMouseLeave: E } = e,
                 O = (function (e, t) {
                     if (null == e) return {};
                     var n,
@@ -75,7 +75,7 @@ let d = r.forwardRef(function (e, t) {
                     }
                     return e;
                 })({}, O)),
-                (g = g =
+                (m = m =
                     {
                         buttonRef: t,
                         look: a.zxk.Looks.BLANK,
@@ -91,7 +91,7 @@ let d = r.forwardRef(function (e, t) {
                             [c.plateMuted]: f && T
                         }),
                         onClick: (e) => {
-                            null != m && m(), null != d && d(e);
+                            null != g && g(), null != d && d(e);
                         },
                         onMouseEnter: () => {
                             null == b || b(), null == _ || _();
@@ -123,7 +123,7 @@ let d = r.forwardRef(function (e, t) {
                         ]
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(g))
+                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(m))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -131,8 +131,8 @@ let d = r.forwardRef(function (e, t) {
                               n.push.apply(n, i);
                           }
                           return n;
-                      })(Object(g)).forEach(function (e) {
-                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(g, e));
+                      })(Object(m)).forEach(function (e) {
+                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(m, e));
                       }),
                 n)
             );

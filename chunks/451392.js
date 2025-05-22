@@ -9,8 +9,8 @@ var r = n(120356),
     c = n(481060),
     d = n(220082),
     u = n(687158),
-    g = n(576635),
-    m = n(74538),
+    m = n(576635),
+    g = n(74538),
     p = n(193528),
     h = n(993413),
     f = n(388032),
@@ -18,13 +18,13 @@ var r = n(120356),
 function _(e) {
     let { user: t, pendingAvatarSrc: n, pendingColors: r, onThemeColorsChange: l, preventDisabled: _, guildId: x, className: E, showPremiumIcon: C = !0, showResetThemeButton: j = !1, forcedDivider: O } = e,
         S = (0, u.ZP)(t.id, x),
-        { primaryColor: v, secondaryColor: T } = (0, g.Z)({
+        { primaryColor: v, secondaryColor: T } = (0, m.Z)({
             user: t,
             displayProfile: S,
             pendingThemeColors: r,
             isPreview: !0
         }),
-        I = m.ZP.canUsePremiumProfileCustomization(t),
+        I = g.ZP.canUsePremiumProfileCustomization(t),
         N = null != n ? n : t.getAvatarURL(x, 80),
         y = (0, c.dQu)(o.Z.unsafe_rawColors.PRIMARY_530).hex(),
         A = (0, d.Cf)(N, y, !1);

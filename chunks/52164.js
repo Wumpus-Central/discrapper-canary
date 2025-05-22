@@ -9,8 +9,8 @@ var r = n(512722),
     c = n(509545),
     d = n(74538),
     u = n(937615),
-    g = n(374649),
-    m = n(474936),
+    m = n(374649),
+    g = n(474936),
     p = n(981631),
     h = n(388032),
     f = n(532897);
@@ -18,7 +18,7 @@ function b(e) {
     let t,
         { subscription: n, withOverheadSeparator: r } = e,
         { analyticsLocations: b } = (0, o.ZP)(),
-        [_] = (0, g.ED)({
+        [_] = (0, m.ED)({
             subscriptionId: n.id,
             renewal: !0,
             analyticsLocations: b,
@@ -36,14 +36,14 @@ function b(e) {
     s()(null != j, 'Missing plan');
     let O = (0, u.T4)(_.total, _.currency);
     return (
-        j.interval === m.rV.YEAR
+        j.interval === g.rV.YEAR
             ? (t = h.intl.format(h.t['jPz/39'], {
                   price: O,
                   termsUrl: p.EYA.TERMS,
                   paidURL: p.EYA.PAID_TERMS,
                   privacyUrl: p.EYA.PRIVACY
               }))
-            : j.interval === m.rV.MONTH &&
+            : j.interval === g.rV.MONTH &&
               (t =
                   1 === j.intervalCount
                       ? h.intl.format(h.t.m27GpK, {

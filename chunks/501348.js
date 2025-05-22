@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(524437),
     d = n(780384),
     u = n(481060),
-    g = n(153867),
-    m = n(230711),
+    m = n(153867),
+    g = n(230711),
     p = n(493773),
     h = n(714338),
     f = n(857595),
@@ -362,7 +362,7 @@ class ee extends r.Component {
                       children: (0, _.b)()
                           ? V.intl.format(V.t.Jae48P, {
                                 onClick: () => {
-                                    m.Z.open(B.oAB.ACCESSIBILITY);
+                                    g.Z.open(B.oAB.ACCESSIBILITY);
                                 }
                             })
                           : V.intl.string(V.t.AUMSZG)
@@ -542,7 +542,7 @@ class ee extends r.Component {
                     className: F.marginTop20,
                     children: V.intl.format(V.t['5LEQdX'], {
                         onAccessibilityClick() {
-                            m.Z.open(B.oAB.ACCESSIBILITY);
+                            g.Z.open(B.oAB.ACCESSIBILITY);
                         }
                     })
                 })
@@ -579,10 +579,10 @@ class ee extends r.Component {
             H(this, 'darkMessages', J(B.BRd.DARK)),
             H(this, 'lightMessages', J(B.BRd.LIGHT)),
             H(this, 'handleDisplayCompactAvatarsChanged', (e) => {
-                g.ZP.updatedUnsyncedSettings({ displayCompactAvatars: e });
+                m.ZP.updatedUnsyncedSettings({ displayCompactAvatars: e });
             }),
             H(this, 'handleDesktopRefreshEnabledChanged', (e) => {
-                g.ZP.updatedUnsyncedSettings({ disableVisualRefresh: !e });
+                m.ZP.updatedUnsyncedSettings({ disableVisualRefresh: !e });
             }),
             H(this, 'handleMessageDisplayModeChange', (e) => {
                 let { value: t } = e;
@@ -725,7 +725,7 @@ class et extends ee {
                 className: G.a11yCallout,
                 children: V.intl.format(V.t['5LEQdX'], {
                     onAccessibilityClick() {
-                        m.Z.open(B.oAB.ACCESSIBILITY);
+                        g.Z.open(B.oAB.ACCESSIBILITY);
                     }
                 })
             });

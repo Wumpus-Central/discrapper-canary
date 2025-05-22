@@ -8,15 +8,15 @@ var i = n(255367),
     c = n(716161),
     d = n(672339),
     u = n(938117),
-    g = n(131951),
-    m = n(594174),
+    m = n(131951),
+    g = n(594174),
     p = n(726985),
     h = n(981631);
 function f() {
     let e = (0, l.O)(),
         t = r.useRef(!1),
-        n = (0, s.e7)([g.Z], () => g.Z.getVideoDeviceId()),
-        [f, b] = r.useState((0, o.P)(m.default.getCurrentUser())),
+        n = (0, s.e7)([m.Z], () => m.Z.getVideoDeviceId()),
+        [f, b] = r.useState((0, o.P)(g.default.getCurrentUser())),
         _ = r.useRef(f);
     return (
         r.useEffect(

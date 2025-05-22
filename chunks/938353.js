@@ -704,10 +704,10 @@ class e6 extends (r = l.Component) {
             });
     }
     renderReportedMessage(e) {
-        if (e.messageSnapshots.length > 0 && (0, et.Q3)(e, this.props.channel)) return (0, i.jsx)(en.Z, { message: e });
+        if (e.messageSnapshots.length > 0 && (0, et.Gi)(e, this.props.channel)) return (0, i.jsx)(en.Z, { message: e });
     }
     renderForwardedMessage(e) {
-        if (e.messageSnapshots.length > 0 && !(0, et.Q3)(e, this.props.channel)) return (0, i.jsx)(P.Z, { message: e });
+        if (e.messageSnapshots.length > 0 && !(0, et.Gi)(e, this.props.channel)) return (0, i.jsx)(P.Z, { message: e });
     }
     renderEditedTag(e, t) {
         return (0, i.jsx)(ez.Z, {
@@ -717,7 +717,7 @@ class e6 extends (r = l.Component) {
         });
     }
     renderReportToModActions(e, t) {
-        return e.isModeratorReportChannel() && 0 !== t.messageSnapshots.length && (0, et.Q3)(t, this.props.channel) && !this.props.disableComponentInteractivity
+        return e.isModeratorReportChannel() && 0 !== t.messageSnapshots.length && (0, et.Gi)(t, this.props.channel) && !this.props.disableComponentInteractivity
             ? (0, i.jsx)(er.Z, {
                   channel: e,
                   message: t

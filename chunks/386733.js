@@ -1,7 +1,4 @@
-n.d(t, {
-    Z: () => R,
-    c: () => P
-});
+n.d(t, { Z: () => R });
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -11,8 +8,8 @@ var i = n(255367),
     c = n(100527),
     d = n(906732),
     u = n(518950),
-    g = n(598077),
-    m = n(626135),
+    m = n(598077),
+    g = n(626135),
     p = n(63063),
     h = n(281494),
     f = n(276444),
@@ -149,7 +146,7 @@ let N = (e) => {
     },
     P = (e) => {
         let { analyticsLocations: t } = e;
-        m.default.track(j.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
+        g.default.track(j.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e('47435').then(n.bind(n, 204387));
                 return (n) => (0, i.jsx)(e, I(T({}, n), { sourceAnalyticsLocations: t }));
@@ -159,9 +156,9 @@ let N = (e) => {
         let { isInSettings: t = !1 } = e,
             n = (0, a.e7)([f.Z], () => f.Z.getRecipientStatus()),
             { referralSentUsers: s } = (0, _.G)(),
-            u = r.useMemo(() => s.map((e) => new g.Z(e)), [s]),
-            { subscriberHomeVariant: m } = b.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
-            T = m === b.p.VARIANT_2,
+            u = r.useMemo(() => s.map((e) => new m.Z(e)), [s]),
+            { subscriberHomeVariant: g } = b.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
+            T = g === b.p.VARIANT_2,
             I = {
                 redeemed: 0,
                 converted: 0,

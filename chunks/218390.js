@@ -12,8 +12,8 @@ var i = n(255367),
     c = n(442837),
     d = n(622535),
     u = n(780384),
-    g = n(481060),
-    m = n(570140),
+    m = n(481060),
+    g = n(570140),
     p = n(355467),
     h = n(37234),
     f = n(821849),
@@ -67,8 +67,8 @@ function ea(e) {
         a = t.planIdFromItems === Q.Xh.PREMIUM_YEAR_TIER_2,
         c = n || l,
         d = null != t.trialEndsAt ? o()(t.trialEndsAt).diff(o()(), 'd') : 0,
-        m = Q.GP[t.planIdFromItems],
-        p = k.ZP.formatPriceString(k.ZP.getDefaultPrice(m.id), m.interval);
+        g = Q.GP[t.planIdFromItems],
+        p = k.ZP.formatPriceString(k.ZP.getDefaultPrice(g.id), g.interval);
     if (c) {
         var h, f, b;
         return (0, i.jsxs)(i.Fragment, {
@@ -80,7 +80,7 @@ function ea(e) {
                         colorOptions: (0, u.wj)(s) ? W.VE.PREMIUM_TIER_2_WHITE_FILL : W.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                     }),
                 (l || !a) && (0, i.jsx)('div', { className: ee.rimGlowTier2 }),
-                (0, i.jsx)(g.X6q, {
+                (0, i.jsx)(m.X6q, {
                     variant: 'heading-md/normal',
                     color: 'always-white',
                     className: ee.trialHeader,
@@ -106,7 +106,7 @@ function ea(e) {
     return (0, i.jsx)(K.Z, {
         variant: void 0,
         subscriptionTier: Q.Si.TIER_2,
-        interval: m.interval
+        interval: g.interval
     });
 }
 function eo() {
@@ -119,7 +119,7 @@ function eo() {
         o = (0, B.W)(),
         d = null !== s && null !== s.planIdFromItems;
     if (!d && !a.isFractionalPremiumActive) return null;
-    let m = a.isFractionalPremiumActive,
+    let g = a.isFractionalPremiumActive,
         p = null !== s && s.hasActiveTrial;
     return (0, i.jsxs)('div', {
         className: l()(ee.tierCard, { [ee.withTier2Rim]: t || p }),
@@ -128,7 +128,7 @@ function eo() {
                 className: ee.tierInfo,
                 children: [
                     (0, i.jsx)(D.Z, { className: ee.tierTitle }),
-                    m && !o
+                    g && !o
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(W.mn, {
@@ -136,7 +136,7 @@ function eo() {
                                       className: ee.fractionalPremiumTopRimPill,
                                       colorOptions: W.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                                   }),
-                                  (0, i.jsx)(g.X6q, {
+                                  (0, i.jsx)(m.X6q, {
                                       variant: 'heading-md/normal',
                                       color: 'always-white',
                                       className: ee.fractionalPremiumSubheader,
@@ -159,7 +159,7 @@ function eo() {
                                           className: ee.topRimPillWithSparkles,
                                           colorOptions: (0, u.wj)(r) ? W.VE.PREMIUM_TIER_2_WHITE_FILL : W.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                                       }),
-                                      (0, i.jsx)(g.X6q, {
+                                      (0, i.jsx)(m.X6q, {
                                           variant: 'heading-md/normal',
                                           color: 'always-white',
                                           className: ee.trialHeader,
@@ -168,8 +168,8 @@ function eo() {
                                   ]
                               })
                             : null,
-                    (0, i.jsx)(Y.nT, { featureSet: m ? Y.uZ.FRACTIONAL_PREMIUM : Y.uZ.DEFAULT }),
-                    m && !d && (0, M.C)('nitro-settings-hero', e)
+                    (0, i.jsx)(Y.nT, { featureSet: g ? Y.uZ.FRACTIONAL_PREMIUM : Y.uZ.DEFAULT }),
+                    g && !d && (0, M.C)('nitro-settings-hero', e)
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(z.Z, {
@@ -178,14 +178,14 @@ function eo() {
                                           textClassName: ee.tierCardButtonCTA
                                       },
                                       className: ee.tierCardButton,
-                                      color: g.zxk.Colors.WHITE,
+                                      color: m.zxk.Colors.WHITE,
                                       disableShine: !0,
                                       showIcon: !1
                                   }),
-                                  (0, i.jsx)(g.zxk, {
+                                  (0, i.jsx)(m.zxk, {
                                       className: ee.managePlanButton,
-                                      look: g.zxk.Looks.OUTLINED,
-                                      color: g.zxk.Colors.WHITE,
+                                      look: m.zxk.Looks.OUTLINED,
+                                      color: m.zxk.Colors.WHITE,
                                       onClick: () => {
                                           Z.default.track(J.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                               cta_type: ei,
@@ -194,7 +194,7 @@ function eo() {
                                               (0, h.xf)(),
                                               (0, y.uL)(J.Z5c.APPLICATION_STORE);
                                       },
-                                      children: (0, i.jsx)(g.Text, {
+                                      children: (0, i.jsx)(m.Text, {
                                           className: ee.__invalid_managePlanButtonCTA,
                                           variant: 'text-sm/medium',
                                           color: 'always-white',
@@ -205,9 +205,9 @@ function eo() {
                           })
                         : (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(g.zxk, {
+                                  (0, i.jsx)(m.zxk, {
                                       className: ee.tierCardButton,
-                                      color: g.zxk.Colors.WHITE,
+                                      color: m.zxk.Colors.WHITE,
                                       onClick: () => {
                                           Z.default.track(J.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                               cta_type: ei,
@@ -216,16 +216,16 @@ function eo() {
                                               (0, h.xf)(),
                                               (0, y.uL)(J.Z5c.APPLICATION_STORE);
                                       },
-                                      children: (0, i.jsx)(g.Text, {
+                                      children: (0, i.jsx)(m.Text, {
                                           className: ee.tierCardButtonCTA,
                                           variant: 'text-sm/medium',
                                           children: $.intl.string($.t.VR2iVF)
                                       })
                                   }),
-                                  (0, i.jsx)(g.zxk, {
+                                  (0, i.jsx)(m.zxk, {
                                       className: ee.managePlanButton,
-                                      look: g.zxk.Looks.OUTLINED,
-                                      color: g.zxk.Colors.WHITE,
+                                      look: m.zxk.Looks.OUTLINED,
+                                      color: m.zxk.Colors.WHITE,
                                       onClick: () => {
                                           Z.default.track(J.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                               cta_type: 'to_subscriptions_button',
@@ -233,7 +233,7 @@ function eo() {
                                           }),
                                               b.Z.open(J.oAB.SUBSCRIPTIONS);
                                       },
-                                      children: (0, i.jsx)(g.Text, {
+                                      children: (0, i.jsx)(m.Text, {
                                           className: ee.__invalid_managePlanButtonCTA,
                                           variant: 'text-sm/medium',
                                           color: 'always-white',
@@ -279,13 +279,13 @@ function ec(e) {
                         className: ee.giftCardPromotionBannerImage,
                         src: r.getBackgroundImageUrl()
                     }),
-                    (0, i.jsx)(g.X6q, {
+                    (0, i.jsx)(m.X6q, {
                         className: ee.giftInfoTitlePromotion,
                         color: 'always-white',
                         variant: 'heading-xl/extrabold',
                         children: r.title()
                     }),
-                    (0, i.jsx)(g.Text, {
+                    (0, i.jsx)(m.Text, {
                         className: ee.giftText,
                         color: 'always-white',
                         variant: 'text-sm/medium',
@@ -294,12 +294,12 @@ function ec(e) {
                     (0, i.jsx)(z.Z, {
                         isGift: !0,
                         className: l()(ee.giftCardButton, ee.halloweenColor),
-                        look: g.zxk.Looks.OUTLINED,
+                        look: m.zxk.Looks.OUTLINED,
                         textOptions: {
                             textOverride: $.intl.string($.t.Ve9Ge3),
                             textClassName: ee.giftButtonCTA
                         },
-                        color: g.zxk.Colors.CUSTOM,
+                        color: m.zxk.Colors.CUSTOM,
                         onClick: () => {
                             Z.default.track(J.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: es,
@@ -328,12 +328,12 @@ function ed() {
                   (0, i.jsxs)('div', {
                       className: ee.giftInfo,
                       children: [
-                          (0, i.jsx)(g.X6q, {
+                          (0, i.jsx)(m.X6q, {
                               className: ee.giftTitle,
                               variant: 'heading-xl/extrabold',
                               children: $.intl.string($.t['3KomGR'])
                           }),
-                          (0, i.jsx)(g.Text, {
+                          (0, i.jsx)(m.Text, {
                               className: ee.giftText,
                               variant: 'text-sm/normal',
                               children: $.intl.string($.t.yQ06u7)
@@ -341,12 +341,12 @@ function ed() {
                           (0, i.jsx)(z.Z, {
                               isGift: !0,
                               className: l()(ee.giftCardButton, ee.giftCardButtonColor),
-                              look: g.zxk.Looks.OUTLINED,
+                              look: m.zxk.Looks.OUTLINED,
                               textOptions: {
                                   textOverride: $.intl.string($.t.Ve9Ge3),
                                   textClassName: ee.giftButtonCTA
                               },
-                              color: g.zxk.Colors.CUSTOM,
+                              color: m.zxk.Colors.CUSTOM,
                               onClick: () => {
                                   Z.default.track(J.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                       cta_type: es,
@@ -383,7 +383,7 @@ let eu = function () {
         (0, H.B)(y);
     let P = (0, F.b)(y);
     r.useEffect(() => {
-        m.Z.wait(async () => {
+        g.Z.wait(async () => {
             E || e || (await Promise.all([p.jg(), p.tZ(), (0, f.Y2)(b, null, J.JjL.DISCOVERY)])), o(!1);
         });
     }, [b, E, e]);
@@ -397,7 +397,7 @@ let eu = function () {
             title: $.intl.string($.t.dyq9TU),
             note: null
         });
-    if ((!k && !L) || a) return (0, i.jsx)(g.$jN, {});
+    if ((!k && !L) || a) return (0, i.jsx)(m.$jN, {});
     let B = !!(null == n ? void 0 : n.hasActiveTrial);
     return (0, i.jsx)(O.Gt, {
         value: t,

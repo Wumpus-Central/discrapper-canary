@@ -8,8 +8,8 @@ var i = n(73800),
     c = n(619899),
     d = n(281598),
     u = n(388032),
-    g = n(513767),
-    m = n(78230),
+    m = n(513767),
+    g = n(78230),
     p = n(786792),
     h = n(161594);
 let f = () => {
@@ -23,8 +23,8 @@ let f = () => {
                     ? f
                     : n
                       ? {
-                            asset: m,
-                            popoutAsset: g,
+                            asset: g,
+                            popoutAsset: m,
                             title: u.intl.string(u.t.QZVVBg),
                             body: u.intl.string(u.t.sajmAg),
                             version: 0,

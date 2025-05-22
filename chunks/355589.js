@@ -427,7 +427,7 @@ let X = (e) => {
         null == o)
             ? null
             : (0, C.iZ)(l)
-              ? n
+              ? n || s.size > 0
                   ? null
                   : (0, r.jsx)(_.q, {})
               : I && m

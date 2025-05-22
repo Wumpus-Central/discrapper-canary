@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(953529);
+n.d(t, { Z: () => m }), n(953529);
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -9,7 +9,7 @@ var r = n(120356),
     c = n(88538),
     d = n(772526),
     u = n(845904);
-function g(e) {
+function m(e) {
     let { onClickManageSubscription: t, count: n } = e;
     return (0, i.jsxs)('div', {
         children: [

@@ -32,8 +32,8 @@ var r = n(255367),
     k = n(981631),
     B = n(701488),
     q = n(388032),
-    I = n(92503);
-function D(e) {
+    D = n(92503);
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -83,7 +83,7 @@ function L(e) {
         autoTrackExposure: !0
     })
         ? (0, r.jsx)(u.zxk, {
-              className: I.cta,
+              className: D.cta,
               style: t,
               color: u.zxk.Colors.CUSTOM,
               fullWidth: !0,
@@ -95,7 +95,7 @@ function L(e) {
 }
 let W = o.forwardRef(function (e, t) {
     var n, s;
-    let { children: _, className: W, collapsedHeight: Z, expansionSpring: V, isExpanded: Q, isExpansionAnimationComplete: U, onCtxMenuOpen: H, onCtxMenuClose: z, onCtxMenuSelect: F, quest: K, useReducedMotion: X } = e,
+    let { children: _, className: W, collapsedHeight: Z, expansionSpring: V, isExpanded: Q, isExpansionAnimationComplete: H, onCtxMenuOpen: U, onCtxMenuClose: z, onCtxMenuSelect: F, quest: K, useReducedMotion: X } = e,
         Y = (0, l.e7)([j.Z], () => j.Z.isEnrolling(K.id), [K]),
         G = (0, x.aM)(),
         J = (0, b.B6)(K.config.expiresAt),
@@ -130,7 +130,7 @@ let W = o.forwardRef(function (e, t) {
         ep = (null == (n = K.userStatus) ? void 0 : n.enrolledAt) != null,
         em = (null == (s = K.userStatus) ? void 0 : s.completedAt) != null,
         ef = o.useMemo(() => (0, y.Xv)(K.config), [K.config]),
-        eg = Q && U,
+        eg = Q && H,
         ex = (0, O.DD)({
             quest: K,
             taskDetails: ec,
@@ -151,7 +151,7 @@ let W = o.forwardRef(function (e, t) {
             };
         }, [K.config.colors.primary]);
     return (0, r.jsxs)(i.animated.div, {
-        className: a()(W, I.contentExpanded, { [I.contentInteractable]: eg }),
+        className: a()(W, D.contentExpanded, { [D.contentInteractable]: eg }),
         style: {
             backgroundColor: K.config.colors.secondary,
             transform: em
@@ -176,17 +176,17 @@ let W = o.forwardRef(function (e, t) {
                 'aria-hidden': !eg,
                 children: ep
                     ? (0, r.jsxs)('div', {
-                          className: I.questAcceptedContent,
+                          className: D.questAcceptedContent,
                           ref: t,
                           children: [
                               (0, r.jsxs)('div', {
-                                  className: I.utils,
+                                  className: D.utils,
                                   children: [
                                       (0, r.jsxs)('div', {
-                                          className: I.questAcceptedContentHeading,
+                                          className: D.questAcceptedContentHeading,
                                           children: [
                                               (0, r.jsx)(E.Z, {
-                                                  className: I.questProgressRewardTile,
+                                                  className: D.questProgressRewardTile,
                                                   learnMoreStyle: 'icon',
                                                   quest: K,
                                                   questContent: v.jn.QUEST_BAR,
@@ -204,7 +204,7 @@ let W = o.forwardRef(function (e, t) {
                                                           })
                                                       }),
                                                       (0, r.jsx)(u.Text, {
-                                                          className: I.questAcceptedContentCopySubheading,
+                                                          className: D.questAcceptedContentCopySubheading,
                                                           color: 'always-white',
                                                           variant: 'text-xxs/normal',
                                                           children: em ? q.intl.formatToPlainString(q.t.APddvL, { expirationDate: ee }) : q.intl.formatToPlainString(q.t['pX+fmp'], { expirationDate: J })
@@ -214,7 +214,7 @@ let W = o.forwardRef(function (e, t) {
                                           ]
                                       }),
                                       (0, r.jsx)(N.r, {
-                                          onOpen: H,
+                                          onOpen: U,
                                           onClose: z,
                                           onSelect: F,
                                           questContent: v.jn.QUEST_BAR,
@@ -224,13 +224,13 @@ let W = o.forwardRef(function (e, t) {
                                           children: (e) =>
                                               (0, r.jsx)(
                                                   u.P3F,
-                                                  M(D({}, e), {
-                                                      className: I.submenuWrapper,
+                                                  M(I({}, e), {
+                                                      className: D.submenuWrapper,
                                                       'aria-label': q.intl.string(q.t.DEoVWV),
                                                       children: (0, r.jsx)(u.xhG, {
                                                           size: 'md',
                                                           color: 'currentColor',
-                                                          className: I.submenuIcon
+                                                          className: D.submenuIcon
                                                       })
                                                   })
                                               )
@@ -239,7 +239,7 @@ let W = o.forwardRef(function (e, t) {
                               }),
                               em
                                   ? (0, r.jsx)(u.zxk, {
-                                        className: a()(I.cta, I.ctaClaimReward),
+                                        className: a()(D.cta, D.ctaClaimReward),
                                         style: ef ? eb : void 0,
                                         color: u.zxk.Colors.CUSTOM,
                                         fullWidth: !0,
@@ -248,7 +248,7 @@ let W = o.forwardRef(function (e, t) {
                                         children: q.intl.string(q.t.cfY4PD)
                                     })
                                   : (0, r.jsx)(u.Text, {
-                                        className: I.description,
+                                        className: D.description,
                                         color: 'always-white',
                                         variant: 'text-xs/normal',
                                         children: ex
@@ -260,15 +260,15 @@ let W = o.forwardRef(function (e, t) {
                     : (0, r.jsxs)('div', {
                           children: [
                               (0, r.jsxs)('div', {
-                                  className: I.questPromoContent,
+                                  className: D.questPromoContent,
                                   ref: t,
                                   children: [
                                       (0, r.jsxs)('div', {
-                                          className: I.utils,
+                                          className: D.utils,
                                           children: [
                                               (0, r.jsx)(P.Z, { color: 'always-white' }),
                                               (0, r.jsx)(N.r, {
-                                                  onOpen: H,
+                                                  onOpen: U,
                                                   onClose: z,
                                                   onSelect: F,
                                                   questContent: v.jn.QUEST_BAR,
@@ -278,13 +278,13 @@ let W = o.forwardRef(function (e, t) {
                                                   children: (e) =>
                                                       (0, r.jsx)(
                                                           u.P3F,
-                                                          M(D({}, e), {
-                                                              className: I.submenuWrapper,
+                                                          M(I({}, e), {
+                                                              className: D.submenuWrapper,
                                                               'aria-label': q.intl.string(q.t.DEoVWV),
                                                               children: (0, r.jsx)(u.xhG, {
                                                                   size: 'md',
                                                                   color: 'currentColor',
-                                                                  className: I.submenuIcon
+                                                                  className: D.submenuIcon
                                                               })
                                                           })
                                                       )
@@ -292,23 +292,23 @@ let W = o.forwardRef(function (e, t) {
                                           ]
                                       }),
                                       (0, r.jsxs)('div', {
-                                          className: I.details,
+                                          className: D.details,
                                           children: [
                                               (0, r.jsx)(E.Z, {
-                                                  className: I.rewardTile,
+                                                  className: D.rewardTile,
                                                   learnMoreStyle: 'text',
                                                   quest: K,
                                                   questContent: v.jn.QUEST_BAR,
                                                   location: R.dr.QUESTS_BAR
                                               }),
                                               (0, r.jsx)(u.X6q, {
-                                                  className: I.title,
+                                                  className: D.title,
                                                   color: 'always-white',
                                                   variant: 'heading-md/medium',
                                                   children: q.intl.format(q.t.EQa7oq, { questName: K.config.messages.questName })
                                               }),
                                               (0, r.jsx)(u.Text, {
-                                                  className: I.description,
+                                                  className: D.description,
                                                   color: 'always-white',
                                                   variant: 'text-sm/normal',
                                                   children: ex
@@ -316,7 +316,7 @@ let W = o.forwardRef(function (e, t) {
                                           ]
                                       }),
                                       (0, r.jsx)(u.zxk, {
-                                          className: I.cta,
+                                          className: D.cta,
                                           style: '1232852290197655573' !== K.id ? eb : void 0,
                                           color: u.zxk.Colors.CUSTOM,
                                           fullWidth: !0,
@@ -328,7 +328,7 @@ let W = o.forwardRef(function (e, t) {
                                   ]
                               }),
                               (0, r.jsx)('div', {
-                                  className: I.heroAssetWrapper,
+                                  className: D.heroAssetWrapper,
                                   style: { color: K.config.colors.secondary },
                                   children: et.isAnimated
                                       ? (0, r.jsx)(T.Fl, {
@@ -341,7 +341,7 @@ let W = o.forwardRef(function (e, t) {
                                                     loop: !0,
                                                     muted: !0,
                                                     playsInline: !0,
-                                                    className: I.heroAsset,
+                                                    className: D.heroAsset,
                                                     controls: !1,
                                                     children: (0, r.jsx)('source', {
                                                         src: et.url,
@@ -356,7 +356,7 @@ let W = o.forwardRef(function (e, t) {
                                                 (0, r.jsx)('img', {
                                                     ref: e,
                                                     alt: '',
-                                                    className: I.heroAsset,
+                                                    className: D.heroAsset,
                                                     src: et.url
                                                 })
                                         })

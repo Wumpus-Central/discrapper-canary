@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685), n(642613), n(583741);
+n.d(t, { Z: () => m }), n(388685), n(642613), n(583741);
 var i = n(392711),
     r = n.n(i),
     s = n(710845),
@@ -20,7 +20,7 @@ function d(e, t, n) {
     );
 }
 let u = new s.Z('ReadStates'),
-    g = new (class {
+    m = new (class {
         async getAll(e) {
             let t = performance.now(),
                 n = await c.Z.readStates(e).getMany(),

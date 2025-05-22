@@ -9,8 +9,8 @@ var r = n(120356),
     c = n(767714),
     d = n(388032),
     u = n(944680),
-    g = n(568147),
-    m = n(332796);
+    m = n(568147),
+    g = n(332796);
 let p = (e) => {
     let { className: t, imageClassName: n, textContainerOverrideStyles: r, location: p, analyticsLocation: h } = e,
         { analyticsLocations: f } = (0, a.ZP)(p),
@@ -49,7 +49,7 @@ let p = (e) => {
                     ]
                 }),
                 (0, i.jsx)('img', {
-                    src: x ? m : g,
+                    src: x ? g : m,
                     className: s()(u.bannerImage, n),
                     alt: 'gift nitro banner'
                 })

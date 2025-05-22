@@ -8,8 +8,8 @@ var i,
     c = n.n(o),
     d = n(481060),
     u = n(987032),
-    g = n(600164),
-    m = n(219929),
+    m = n(600164),
+    g = n(219929),
     p = n(46141),
     h = n(122289),
     f = n(624138),
@@ -18,24 +18,24 @@ var i,
 class x extends (i = a.PureComponent) {
     get typeString() {
         let { paymentSource: e } = this.props;
-        if (e instanceof p.qo) return m.ZP.Types.PAYPAL;
-        if (e instanceof p.Sf) return m.ZP.Types.SOFORT;
-        if (e instanceof p.dm) return m.ZP.getType(e.brand);
-        if (e instanceof p.fv) return m.ZP.Types.GIROPAY;
-        if (e instanceof p.Vg) return m.ZP.Types.PRZELEWY24;
-        else if (e instanceof p.sn) return m.ZP.Types.PAYSAFECARD;
-        else if (e instanceof p.o_) return m.ZP.Types.GCASH;
-        else if (e instanceof p.kX) return m.ZP.Types.GRABPAY;
-        else if (e instanceof p.z) return m.ZP.Types.MOMO_WALLET;
-        else if (e instanceof p.Xc) return m.ZP.Types.VENMO;
-        else if (e instanceof p.Om) return m.ZP.Types.KAKAOPAY;
-        else if (e instanceof p.JC) return m.ZP.Types.GOPAY_WALLET;
-        else if (e instanceof p.U4) return m.ZP.Types.BANCONTACT;
-        else if (e instanceof p.D0) return m.ZP.Types.EPS;
-        else if (e instanceof p.jc) return m.ZP.Types.IDEAL;
-        else if (e instanceof p.u_) return m.ZP.Types.CASH_APP;
-        else if (e instanceof p.$z) return m.ZP.Types.APPLE;
-        return m.ZP.Types.UNKNOWN;
+        if (e instanceof p.qo) return g.ZP.Types.PAYPAL;
+        if (e instanceof p.Sf) return g.ZP.Types.SOFORT;
+        if (e instanceof p.dm) return g.ZP.getType(e.brand);
+        if (e instanceof p.fv) return g.ZP.Types.GIROPAY;
+        if (e instanceof p.Vg) return g.ZP.Types.PRZELEWY24;
+        else if (e instanceof p.sn) return g.ZP.Types.PAYSAFECARD;
+        else if (e instanceof p.o_) return g.ZP.Types.GCASH;
+        else if (e instanceof p.kX) return g.ZP.Types.GRABPAY;
+        else if (e instanceof p.z) return g.ZP.Types.MOMO_WALLET;
+        else if (e instanceof p.Xc) return g.ZP.Types.VENMO;
+        else if (e instanceof p.Om) return g.ZP.Types.KAKAOPAY;
+        else if (e instanceof p.JC) return g.ZP.Types.GOPAY_WALLET;
+        else if (e instanceof p.U4) return g.ZP.Types.BANCONTACT;
+        else if (e instanceof p.D0) return g.ZP.Types.EPS;
+        else if (e instanceof p.jc) return g.ZP.Types.IDEAL;
+        else if (e instanceof p.u_) return g.ZP.Types.CASH_APP;
+        else if (e instanceof p.$z) return g.ZP.Types.APPLE;
+        return g.ZP.Types.UNKNOWN;
     }
     getLabel(e) {
         return e instanceof p.dm
@@ -107,15 +107,15 @@ class x extends (i = a.PureComponent) {
     render() {
         let { isDefault: e, paymentSource: t, showSubtext: n, isForSubscription: i, showPaymentSourceIcon: r, showLabels: s } = this.props,
             a = this.renderSubText();
-        return (0, l.jsxs)(g.Z, {
+        return (0, l.jsxs)(m.Z, {
             children: [
-                r && (0, l.jsx)(m.ZP, { type: this.typeString }),
-                (0, l.jsxs)(g.Z, {
-                    direction: g.Z.Direction.VERTICAL,
+                r && (0, l.jsx)(g.ZP, { type: this.typeString }),
+                (0, l.jsxs)(m.Z, {
+                    direction: m.Z.Direction.VERTICAL,
                     className: _.descriptionWrapper,
                     children: [
-                        (0, l.jsxs)(g.Z, {
-                            align: g.Z.Align.CENTER,
+                        (0, l.jsxs)(m.Z, {
+                            align: m.Z.Align.CENTER,
                             children: [
                                 this.renderDescription(),
                                 s && e

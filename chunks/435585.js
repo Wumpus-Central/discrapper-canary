@@ -48,12 +48,12 @@ function u(e, t, n, u, d) {
         f = (0, o.O5)(),
         v = (0, r.useRef)(-1),
         g = (null == (m = e.userStatus) ? void 0 : m.completedAt) != null,
-        E = e.id,
-        b = r.useCallback(
+        b = e.id,
+        E = r.useCallback(
             (e) => {
                 null != t.current &&
                     p({
-                        questId: E,
+                        questId: b,
                         event: a.rMx.QUEST_VIDEO_LOADING_STARTED,
                         properties: s(
                             {
@@ -66,14 +66,14 @@ function u(e, t, n, u, d) {
                         )
                     });
             },
-            [E, t, d, u, n, p]
+            [b, t, d, u, n, p]
         ),
         O = r.useCallback(
             (e, r) => {
                 null != t.current &&
                     null != r &&
                     p({
-                        questId: E,
+                        questId: b,
                         event: a.rMx.QUEST_VIDEO_LOADING_ENDED,
                         properties: s(
                             {
@@ -86,13 +86,13 @@ function u(e, t, n, u, d) {
                         )
                     });
             },
-            [E, t, d, u, n, p]
+            [b, t, d, u, n, p]
         ),
         h = r.useCallback(
             (e) => {
                 null != t.current &&
                     p({
-                        questId: E,
+                        questId: b,
                         event: a.rMx.QUEST_VIDEO_TIME_TO_FIRST_FRAME,
                         properties: s(
                             {
@@ -104,12 +104,12 @@ function u(e, t, n, u, d) {
                         )
                     });
             },
-            [E, t, d, u, n, p]
+            [b, t, d, u, n, p]
         ),
-        S = r.useCallback(() => {
+        C = r.useCallback(() => {
             null != t.current &&
                 p({
-                    questId: E,
+                    questId: b,
                     event: a.rMx.QUEST_VIDEO_PROGRESSED,
                     properties: s(
                         {
@@ -121,12 +121,12 @@ function u(e, t, n, u, d) {
                         c(n)
                     )
                 });
-        }, [E, t, u, n, p, d]),
-        C = r.useCallback(
+        }, [b, t, u, n, p, d]),
+        S = r.useCallback(
             (e) => {
                 null != t.current &&
                     p({
-                        questId: E,
+                        questId: b,
                         event: a.rMx.QUEST_VIDEO_RESUMED,
                         properties: s(
                             {
@@ -139,14 +139,14 @@ function u(e, t, n, u, d) {
                         )
                     });
             },
-            [E, t, u, n, p, d]
+            [b, t, u, n, p, d]
         ),
         j = r.useCallback(
             (e) => {
                 null != t.current &&
                     null != e &&
                     p({
-                        questId: E,
+                        questId: b,
                         event: a.rMx.QUEST_VIDEO_PAUSED,
                         properties: s(
                             {
@@ -159,13 +159,13 @@ function u(e, t, n, u, d) {
                         )
                     });
             },
-            [E, t, u, n, p, d]
+            [b, t, u, n, p, d]
         ),
-        _ = r.useCallback(
+        y = r.useCallback(
             (e, n) => {
                 null != t.current &&
                     p({
-                        questId: E,
+                        questId: b,
                         event: e ? a.rMx.QUEST_VIDEO_APP_FOCUSED : a.rMx.QUEST_VIDEO_APP_UNFOCUSED,
                         properties: {
                             video_timestamp_seconds: t.current.currentTime,
@@ -175,14 +175,14 @@ function u(e, t, n, u, d) {
                         }
                     });
             },
-            [E, t, u, p, d]
+            [b, t, u, p, d]
         ),
-        y = r.useCallback(
+        _ = r.useCallback(
             (e) => {
                 null != t.current &&
                     ((v.current += 1),
                     p({
-                        questId: E,
+                        questId: b,
                         event: a.rMx.QUEST_VIDEO_BUFFERING_STARTED,
                         properties: s(
                             {
@@ -195,14 +195,14 @@ function u(e, t, n, u, d) {
                         )
                     }));
             },
-            [E, t, d, u, n, p]
+            [b, t, d, u, n, p]
         ),
         x = r.useCallback(
             (e, r) => {
                 null != t.current &&
                     ((v.current += 1),
                     p({
-                        questId: E,
+                        questId: b,
                         event: a.rMx.QUEST_VIDEO_BUFFERING_ENDED,
                         properties: s(
                             {
@@ -216,24 +216,24 @@ function u(e, t, n, u, d) {
                         )
                     }));
             },
-            [E, t, d, u, n, p]
+            [b, t, d, u, n, p]
         ),
         D = r.useCallback(
             (e, t) => {
                 f({
-                    questId: E,
+                    questId: b,
                     questContent: e,
                     questContentCTA: t
                 });
             },
-            [E, f]
+            [b, f]
         ),
-        P = r.useCallback(
+        T = r.useCallback(
             (e) => {
                 if (null != t.current) {
                     var r, l;
                     p({
-                        questId: E,
+                        questId: b,
                         event: a.rMx.QUEST_VIDEO_SEGMENT_WATCHED,
                         properties: s(
                             ((r = s({}, e)),
@@ -263,9 +263,9 @@ function u(e, t, n, u, d) {
                     });
                 }
             },
-            [p, E, d, g, u, n, t]
+            [p, b, d, g, u, n, t]
         ),
-        T = r.useCallback(
+        P = r.useCallback(
             (e, r) => {
                 var l, o;
                 if (null == t.current) return;
@@ -273,7 +273,7 @@ function u(e, t, n, u, d) {
                     f = null == (o = t.current) ? void 0 : o.networkState,
                     v = null != t.current ? (0, i.bA)(t.current.currentTime, t.current.duration) : void 0;
                 p({
-                    questId: E,
+                    questId: b,
                     event: a.rMx.QUEST_VIDEO_ERROR,
                     properties: s(
                         {
@@ -290,25 +290,25 @@ function u(e, t, n, u, d) {
                     )
                 });
             },
-            [E, t, d, u, n, p]
+            [b, t, d, u, n, p]
         );
     return {
-        trackQuestVideoLoadingStarted: b,
+        trackQuestVideoLoadingStarted: E,
         trackQuestVideoLoadingEnded: O,
         trackQuestVideoTimeToFirstFrame: h,
-        trackQuestVideoProgressed: S,
-        trackQuestVideoResumed: C,
+        trackQuestVideoProgressed: C,
+        trackQuestVideoResumed: S,
         trackQuestVideoPaused: j,
-        trackQuestVideoFocusChange: _,
+        trackQuestVideoFocusChange: y,
         trackQuestContentClick: D,
-        trackQuestVideoBufferingStarted: y,
+        trackQuestVideoBufferingStarted: _,
         trackQuestVideoBufferingEnded: x,
-        trackWatchTimeAnalytics: P,
+        trackWatchTimeAnalytics: T,
         trackQuestVideoFullscreenChanged: r.useCallback(
             (e) => {
                 null != t.current &&
                     p({
-                        questId: E,
+                        questId: b,
                         event: e ? a.rMx.QUEST_VIDEO_FULLSCREEN_ENTERED : a.rMx.QUEST_VIDEO_FULLSCREEN_EXITED,
                         properties: s(
                             {
@@ -319,14 +319,14 @@ function u(e, t, n, u, d) {
                         )
                     });
             },
-            [E, t, u, n, p, d]
+            [b, t, u, n, p, d]
         ),
-        trackQuestVideoError: T,
+        trackQuestVideoError: P,
         trackQuestVideoVolumeChanged: r.useCallback(
             (e) => {
                 null != t.current &&
                     p({
-                        questId: E,
+                        questId: b,
                         event: a.rMx.QUEST_VIDEO_VOLUME_CHANGED,
                         properties: s(
                             {
@@ -338,7 +338,7 @@ function u(e, t, n, u, d) {
                         )
                     });
             },
-            [E, t, d, u, n, p]
+            [b, t, d, u, n, p]
         )
     };
 }

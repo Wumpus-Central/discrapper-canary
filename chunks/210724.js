@@ -97,18 +97,18 @@ function k(e) {
             quest: s,
             location: P.dr.QUESTS_BAR
         }),
-        I = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
-        D = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
+        D = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
+        I = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
         M = o.useRef(null),
         L = o.useMemo(() => (0, h.q8)(s), [s]),
         W = (null == (t = s.userStatus) ? void 0 : t.enrolledAt) != null,
         Z = (0, d.Z)(W),
         V = (null == (n = s.userStatus) ? void 0 : n.completedAt) != null,
         Q = (0, d.Z)(V),
-        { hasError: U, isLoading: H } = (0, y.d7)(),
-        z = o.useContext(S.T) || (k && q && !H && !B),
+        { hasError: H, isLoading: U } = (0, y.d7)(),
+        z = o.useContext(S.T) || (k && q && !U && !B),
         F = o.useRef(z),
-        K = (0, w.B)(s, z && !U),
+        K = (0, w.B)(s, z && !H),
         X = o.useRef(-1),
         Y = o.useRef(!1),
         [G, J] = o.useState(!1),
@@ -198,9 +198,9 @@ function k(e) {
     o.useEffect(() => {
         ey({
             expansionSpring: +!!$,
-            immediate: I
+            immediate: D
         });
-    }, [$, ey, I]);
+    }, [$, ey, D]);
     let { visibilitySpring: e_ } = (0, c.q_F)({
         from: { visibilitySpring: 0 },
         to: { visibilitySpring: +!!z },
@@ -224,7 +224,7 @@ function k(e) {
     }, [V, ed, K.canCollapseOnBlur, ec, Q]),
     o.useEffect(() => {
         var e, t;
-        U &&
+        H &&
             (0, m.dA)({
                 questId: s.id,
                 event: E.rMx.QUEST_CONTENT_RENDERING_FAILURE,
@@ -242,12 +242,12 @@ function k(e) {
                         impression_id: null == (t = M.current) ? void 0 : t.getId()
                     })
                 });
-    }, [U, k, s.id]),
-    k && (z || !er || H) && !U)
+    }, [H, k, s.id]),
+    k && (z || !er || U) && !H)
         ? (0, r.jsx)(v.A, {
               questOrQuests: s,
               questContent: K.trackingCtx.content,
-              overrideVisibility: !D && z,
+              overrideVisibility: !I && z,
               children: (e, t) => {
                   let n = K.component;
                   return (
@@ -298,7 +298,7 @@ function k(e) {
                                               onCtxMenuOpened: eu,
                                               onCtxMenuSelection: em,
                                               quest: s,
-                                              useReducedMotion: I,
+                                              useReducedMotion: D,
                                               collapsedHeight: 70
                                           })
                                       })
@@ -309,7 +309,7 @@ function k(e) {
                   );
               }
           })
-        : (U ? f.log('Not rendered due to asset error') : k || f.log('Not rendered due to ineligibility'), null);
+        : (H ? f.log('Not rendered due to asset error') : k || f.log('Not rendered due to ineligibility'), null);
 }
 let B =
     12633 == n.j

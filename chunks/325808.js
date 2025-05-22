@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(846027),
     d = n(230711),
     u = n(825209),
-    g = n(906732),
-    m = n(313201),
+    m = n(906732),
+    g = n(313201),
     p = n(131951),
     h = n(358085),
     f = n(383451),
@@ -20,14 +20,14 @@ var i = n(255367),
     C = n(893354),
     j = n(20493);
 let O = !h.isPlatformEmbedded,
-    S = (0, m.hQ)();
+    S = (0, g.hQ)();
 function v(e) {
     return e >= 1000 ? ((e /= 1000), ''.concat(e.toFixed(2), 's')) : ''.concat(e.toFixed(0), '\xA0ms');
 }
 function T(e) {
     let t,
         { inputMode: n } = e,
-        { shortcut: r, delay: s, pttLatchingEnabled: g } = (0, a.cj)([p.Z], () => p.Z.getModeOptions()),
+        { shortcut: r, delay: s, pttLatchingEnabled: m } = (0, a.cj)([p.Z], () => p.Z.getModeOptions()),
         { enableLatching: O } = (0, f.H)({ location: 'PTTTools' });
     return (
         (t =
@@ -84,7 +84,7 @@ function T(e) {
                     (0, i.jsxs)(o.xJW, {
                         className: j.marginTop8,
                         children: [
-                            (0, i.jsx)(m.FG, {
+                            (0, i.jsx)(g.FG, {
                                 children: (e) =>
                                     (0, i.jsxs)('div', {
                                         className: l()(C.horizontal, j.marginBottom4),
@@ -99,7 +99,7 @@ function T(e) {
                                             }),
                                             (0, i.jsx)(o.rsf, {
                                                 id: e,
-                                                checked: null != g && g,
+                                                checked: null != m && m,
                                                 onChange: (e) => c.Z.setMode(n, { pttLatchingEnabled: e })
                                             })
                                         ]
@@ -118,7 +118,7 @@ function T(e) {
     );
 }
 function I() {
-    let { analyticsLocations: e } = (0, g.ZP)(),
+    let { analyticsLocations: e } = (0, m.ZP)(),
         t = (0, a.e7)([p.Z], () => p.Z.getMode()),
         s = [
             {

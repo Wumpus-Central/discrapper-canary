@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(801937),
     d = n(502109),
     u = n(241209),
-    g = n(563132),
-    m = n(586585),
+    m = n(563132),
+    g = n(586585),
     p = n(439021),
     h = n(450272),
     f = n(231338),
@@ -60,7 +60,7 @@ function C(e, t) {
     );
 }
 function j() {
-    return (0, i.jsx)(g.PaymentContextProvider, {
+    return (0, i.jsx)(m.PaymentContextProvider, {
         stepConfigs: [],
         skuIDs: [],
         activeSubscription: null,
@@ -168,8 +168,8 @@ function T(e) {
             null != n.current && n.current.show();
         };
     return (0, i.jsx)(v, {
-        footer: (0, i.jsx)(m.Z, {
-            primaryCTA: m.Z.CTAType.CONTINUE,
+        footer: (0, i.jsx)(g.Z, {
+            primaryCTA: g.Z.CTAType.CONTINUE,
             primaryText: b.intl.string('applePay' === t ? b.t.WoXvJC : b.t.wnVVr6),
             primaryDisabled: !s,
             onPrimary: () => a(),
@@ -313,8 +313,8 @@ function Z() {
     let [e, t] = r.useState(D(P)),
         [n, l] = r.useState(P),
         [a, c] = r.useState(D(R)),
-        [d, g] = r.useState(R),
-        [m, p] = r.useState(null),
+        [d, m] = r.useState(R),
+        [g, p] = r.useState(null),
         [f, b] = r.useState(
             (0, i.jsx)(h.DS, {
                 errorLabel: y.CONFIGURABLE,
@@ -358,11 +358,11 @@ function Z() {
                 value: a,
                 onChange: c
             }),
-            null != m &&
+            null != g &&
                 (0, i.jsx)(o.Text, {
                     variant: 'text-md/normal',
                     color: 'text-danger',
-                    children: m
+                    children: g
                 }),
             (0, i.jsx)(o.zxk, {
                 className: _.applyChangesButton,
@@ -396,7 +396,7 @@ function Z() {
                                 })
                             ),
                             l(t),
-                            g(n),
+                            m(n),
                             p(null);
                     } catch (e) {
                         console.error('ConfigurableStripeExpressCheckoutElement - error parsing JSON: ', e), p('Error parsing JSON. Check console for more information.');

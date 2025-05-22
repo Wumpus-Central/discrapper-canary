@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var i = n(255367);
 n(73800);
 var r = n(442837),
@@ -9,9 +9,9 @@ var r = n(442837),
     c = n(981631),
     d = n(388032),
     u = n(784740);
-function g(e) {
-    let { errors: t, pendingNick: n, currentNick: g, username: m, guild: p } = e,
-        h = null != n ? n : g,
+function m(e) {
+    let { errors: t, pendingNick: n, currentNick: m, username: g, guild: p } = e,
+        h = null != n ? n : m,
         f = (0, r.e7)([a.Z], () => a.Z.can(c.Plq.CHANGE_NICKNAME, p) || a.Z.can(c.Plq.MANAGE_NICKNAMES, p));
     return (0, i.jsxs)(l.Z, {
         title: d.intl.string(d.t.me1lRk),
@@ -19,10 +19,10 @@ function g(e) {
         children: [
             (0, i.jsx)(s.oil, {
                 value: null != h ? h : '',
-                placeholder: m,
+                placeholder: g,
                 maxLength: c.l$U,
                 onChange: function (e) {
-                    (0, o.wi)(e, g);
+                    (0, o.wi)(e, m);
                 },
                 disabled: !f
             }),

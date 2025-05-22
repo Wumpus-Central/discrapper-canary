@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(932724),
     d = n(716161),
     u = n(672339),
-    g = n(747545),
-    m = n(131951),
+    m = n(747545),
+    g = n(131951),
     p = n(594174),
     h = n(981631),
     f = n(388032),
@@ -20,12 +20,12 @@ let _ = {
 };
 function x(e) {
     let { previewEnabled: t, onEnablePreview: n, onCancelPreview: x } = e,
-        E = m.Z.getCameraComponent(),
+        E = g.Z.getCameraComponent(),
         [C, j] = r.useState((0, c.P)(p.default.getCurrentUser())),
         O = r.useRef(!1),
         S = r.useRef(C),
         v = (0, o.O)(),
-        T = (0, s.e7)([m.Z], () => m.Z.isVideoAvailable());
+        T = (0, s.e7)([g.Z], () => g.Z.isVideoAvailable());
     return (
         r.useEffect(
             () => () => {
@@ -33,7 +33,7 @@ function x(e) {
             },
             []
         ),
-        (0, i.jsx)(g.Z, {
+        (0, i.jsx)(m.Z, {
             selectedBackgroundOption: C,
             onSelectBackgroundOption: (e) => {
                 (O.current = !0), (S.current = e), j(e), (0, u.wG)(e, { location: v.location }).catch(h.dG4);
@@ -52,7 +52,7 @@ function x(e) {
                                       height: _.height,
                                       disabled: !t
                                   }),
-                                  (0, i.jsx)(g.S, {})
+                                  (0, i.jsx)(m.S, {})
                               ]
                           })
                       })

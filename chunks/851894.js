@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(570140),
     d = n(497321),
     u = n(100527),
-    g = n(367907),
-    m = n(906732),
+    m = n(367907),
+    g = n(906732),
     p = n(296810),
     h = n(678135),
     f = n(643879),
@@ -76,7 +76,7 @@ function P(e) {
 }
 function R(e) {
     let { selectedGuild: t } = e,
-        { analyticsLocations: n } = (0, m.ZP)(u.Z.USER_SETTINGS_GUILD_PROFILE),
+        { analyticsLocations: n } = (0, g.ZP)(u.Z.USER_SETTINGS_GUILD_PROFILE),
         s = (0, a.e7)([x.default], () => {
             let e = x.default.getCurrentUser();
             return l()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
@@ -111,7 +111,7 @@ function R(e) {
     return (r.useEffect(() => () => c.Z.wait(j.W3), []),
     r.useEffect(() => {
         null != w &&
-            g.ZP.trackWithMetadata(I.rMx.SETTINGS_PANE_VIEWED, {
+            m.ZP.trackWithMetadata(I.rMx.SETTINGS_PANE_VIEWED, {
                 settings_type: 'guild',
                 destination_pane: I.jXE.SETTINGS_CUSTOMIZE_PROFILE,
                 source: w
@@ -120,7 +120,7 @@ function R(e) {
     D)
         ? (0, i.jsx)(d.Z, {})
         : R
-          ? (0, i.jsxs)(m.Gt, {
+          ? (0, i.jsxs)(g.Gt, {
                 value: n,
                 children: [
                     (0, i.jsx)(o.Text, {

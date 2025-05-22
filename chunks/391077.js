@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -9,10 +9,10 @@ var r = n(120356),
     c = n(474936),
     d = n(388032),
     u = n(846706);
-function g(e) {
+function m(e) {
     let { showChargingUpState: t, rowValueText: n, endsAt: r, fractionalState: a, activationDate: o } = e,
-        g = t ? d.intl.string(d.t['hT6i//']) : d.intl.string(d.t['3G0CTE']),
-        m = t ? (void 0 === o ? null : d.intl.format(d.t['0Vwb/v'], { activateDate: o })) : a === c.a$.FP_SUB_PAUSED ? d.intl.format(d.t.MMvaIC, { resumeDate: r.toDate() }) : null,
+        m = t ? d.intl.string(d.t['hT6i//']) : d.intl.string(d.t['3G0CTE']),
+        g = t ? (void 0 === o ? null : d.intl.format(d.t['0Vwb/v'], { activateDate: o })) : a === c.a$.FP_SUB_PAUSED ? d.intl.format(d.t.MMvaIC, { resumeDate: r.toDate() }) : null,
         p = s()({
             [u.fractionalUnactivatedPill]: t,
             [u.fractionalTimeRemainingPill]: !t
@@ -31,12 +31,12 @@ function g(e) {
                     (0, i.jsx)(l.X6q, {
                         variant: 'heading-md/semibold',
                         className: f,
-                        children: g
+                        children: m
                     }),
-                    null !== m &&
+                    null !== g &&
                         (0, i.jsx)(l.Text, {
                             variant: 'text-sm/normal',
-                            children: m
+                            children: g
                         })
                 ]
             }),
@@ -54,12 +54,12 @@ function g(e) {
         ]
     });
 }
-let m = function (e) {
+let g = function (e) {
     let { fractionalPremiumInfo: t, className: n, activationDate: r } = e,
         c = (0, o.jp)(t),
-        m = c.length > 0,
+        g = c.length > 0,
         p = (0, a.ZP)(t.endsAt, a.aj.SHORT_TIME),
-        h = m ? c : p;
+        h = g ? c : p;
     return (0, i.jsx)('div', {
         children: (0, i.jsxs)('div', {
             className: s()(n, u.fractionalPremiumAccountCredit),
@@ -92,8 +92,8 @@ let m = function (e) {
                         ]
                     })
                 }),
-                (0, i.jsx)(g, {
-                    showChargingUpState: m,
+                (0, i.jsx)(m, {
+                    showChargingUpState: g,
                     rowValueText: h,
                     endsAt: t.endsAt,
                     fractionalState: t.fractionalState,

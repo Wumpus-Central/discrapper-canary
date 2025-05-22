@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var i,
     r = n(255367),
     s = n(73800),
@@ -51,4 +51,4 @@ d(u, 'Header', (e) => {
             children: t
         });
     });
-let g = u;
+let m = u;

@@ -7,8 +7,8 @@ var i = n(255367),
     o = n(838436),
     c = n(169957);
 function d(e) {
-    let { value: t, onChange: n, className: s, note: d, title: u, disabled: g } = e,
-        m = r.useRef(null),
+    let { value: t, onChange: n, className: s, note: d, title: u, disabled: m } = e,
+        g = r.useRef(null),
         p = r.useRef(null),
         h = r.useId(),
         f = (0, i.jsx)(a.rsf, {
@@ -16,15 +16,15 @@ function d(e) {
             checked: t,
             onChange: n,
             focusProps: { enabled: !1 },
-            innerRef: m,
-            disabled: g
+            innerRef: g,
+            disabled: m
         });
     return (0, i.jsx)('div', {
-        className: l()(c.container, s, { [c.disabled]: g }),
+        className: l()(c.container, s, { [c.disabled]: m }),
         children: (0, i.jsx)(a.tEY, {
             within: !0,
             offset: -4,
-            focusTarget: m,
+            focusTarget: g,
             ringTarget: p,
             children: (0, i.jsxs)(i.Fragment, {
                 children: [
@@ -34,7 +34,7 @@ function d(e) {
                             header: u,
                             description: d,
                             relatedId: h,
-                            disabled: g
+                            disabled: m
                         })
                     }),
                     (0, i.jsx)('div', {

@@ -11,8 +11,8 @@ var i,
     c = n(481060),
     d = n(607070),
     u = n(821982),
-    g = n(967538),
-    m = n(885302),
+    m = n(967538),
+    g = n(885302),
     p = n(914677),
     h = n(914242),
     f = (((i = {})[(i.NITRO_GEM = 0)] = 'NITRO_GEM'), (i[(i.NITRO_LOGO = 1)] = 'NITRO_LOGO'), (i[(i.AVATAR_DECO = 2)] = 'AVATAR_DECO'), i);
@@ -50,13 +50,13 @@ let b = (e) => {
                 children: (() => {
                     switch (_) {
                         case 0:
-                            return (0, r.jsx)(g.Z, {
+                            return (0, r.jsx)(m.Z, {
                                 className: T ? h.nitroGemAnimation : void 0,
                                 backgroundColor: a()(h.gemBackgroundFill, s),
                                 backgroundCircleSize: c
                             });
                         case 1:
-                            return (0, r.jsx)(m.Z, {
+                            return (0, r.jsx)(g.Z, {
                                 circleColor: O,
                                 ellipseOpacity: C
                             });

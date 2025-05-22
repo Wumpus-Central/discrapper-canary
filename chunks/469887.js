@@ -9,7 +9,7 @@ var r = n(704215),
     c = n(388032),
     d = n(320790);
 function u(e) {
-    let { children: t, canBeShown: u, onCTA: g, targetElementRef: m } = e;
+    let { children: t, canBeShown: u, onCTA: m, targetElementRef: g } = e;
     return (0, i.jsx)(l.ZP, {
         bypassAutoDismiss: !0,
         contentTypes: u ? [r.z.VOICE_FILTER_LAUNCH_COACHMARK] : [],
@@ -17,7 +17,7 @@ function u(e) {
             let { visibleContent: l, markAsDismissed: u } = e;
             return l === r.z.VOICE_FILTER_LAUNCH_COACHMARK
                 ? (0, i.jsx)(s.yRy, {
-                      targetElementRef: m,
+                      targetElementRef: g,
                       renderPopout: () =>
                           (0, i.jsxs)('div', {
                               className: d.popup,
@@ -59,7 +59,7 @@ function u(e) {
                                               look: s.zxk.Looks.FILLED,
                                               fullWidth: !0,
                                               onClick: () => {
-                                                  u(o.L.TAKE_ACTION), g();
+                                                  u(o.L.TAKE_ACTION), m();
                                               },
                                               children: c.intl.string(c.t['9WdoBw'])
                                           })

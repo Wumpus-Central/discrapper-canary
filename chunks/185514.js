@@ -1,9 +1,9 @@
 n.d(t, {
-    $c: () => m,
+    $c: () => g,
     Nx: () => p,
     On: () => h,
     tQ: () => u,
-    x5: () => g
+    x5: () => m
 });
 var i = n(140492),
     r = n(475468),
@@ -18,12 +18,12 @@ let u = {
         comboKeysBindGlobal: !0,
         action: () => ((0, i.Z)(), !1)
     },
-    g = {
+    m = {
         binds: ['alt+up'],
         comboKeysBindGlobal: !0,
         action: () => ((0, i.Z)(-1), !1)
     },
-    m = {
+    g = {
         binds: ['mod+alt+right'],
         comboKeysBindGlobal: !0,
         action() {

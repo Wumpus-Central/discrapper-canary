@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(921801),
     d = n(131951),
     u = n(962100),
-    g = n(445817),
-    m = n(726985),
+    m = n(445817),
+    g = n(726985),
     p = n(65154),
     h = n(388032),
     f = n(20493);
@@ -33,8 +33,8 @@ function _(e) {
         _ = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(c.F, {
-                    setting: m.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
-                    children: (0, i.jsx)(g.Z, {
+                    setting: g.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
+                    children: (0, i.jsx)(m.Z, {
                         previewEnabled: s,
                         onEnablePreview: () => u(!0),
                         onCancelPreview: () => u(!1)

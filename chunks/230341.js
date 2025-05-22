@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var i = n(255367),
     r = n(442837),
     s = n(90641),
@@ -8,7 +8,7 @@ var i = n(255367),
     c = n(51331),
     d = n(726985),
     u = n(388032);
-function g() {
+function m() {
     let e = (0, r.e7)([l.Z], () => l.Z.getPersistentCodesEnabled());
     return (0, i.jsx)(o.U, {
         setting: d.s6.PRIVACY_AND_SAFETY_PERSISTENT_VERIFICATION_CODES,

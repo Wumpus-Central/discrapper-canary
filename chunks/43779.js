@@ -26,15 +26,15 @@ let S = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 function P(e) {
     var t, n, s, P, T;
     let { quest: N, questContent: A, isHovering: R, contentPosition: k, rowIndex: B, onReceiveErrorHints: q } = e,
-        I = (0, g.j)({ location: _.dr.QUESTS_BAR_MOBILE }),
-        D = o.useMemo(() => x.r.build(N.config), [N.config]),
-        M = D.defaultReward.messages.name,
-        L = D.defaultReward.messages.nameWithArticle,
-        W = I ? M : L,
+        D = (0, g.j)({ location: _.dr.QUESTS_BAR_MOBILE }),
+        I = o.useMemo(() => x.r.build(N.config), [N.config]),
+        M = I.defaultReward.messages.name,
+        L = I.defaultReward.messages.nameWithArticle,
+        W = D ? M : L,
         Z = (null == (t = N.userStatus) ? void 0 : t.enrolledAt) != null,
         { ref: V, scrollHeight: Q } = (0, d.kE)(),
-        U = 104 !== Q,
-        { onAssetLoadComplete: H } = o.useContext(j.k),
+        H = 104 !== Q,
+        { onAssetLoadComplete: U } = o.useContext(j.k),
         { expansionSpring: z } = (0, c.q_F)({
             expansionSpring: +!!R,
             config:
@@ -176,7 +176,7 @@ function P(e) {
                                                       className: w.circularQuestRewardTileAsset,
                                                       location: _.dr.QUEST_HOME_DESKTOP,
                                                       autoplay: R,
-                                                      onLoadComplete: H
+                                                      onLoadComplete: U
                                                   })
                                               })
                                           })
@@ -188,13 +188,13 @@ function P(e) {
                                       questContent: A,
                                       className: w.questRewardTileAsset,
                                       location: _.dr.QUEST_HOME_DESKTOP,
-                                      onLoadComplete: H
+                                      onLoadComplete: U
                                   })
                         ]
                     }),
                     (0, r.jsxs)('div', {
                         ref: V,
-                        className: a()(w.textContainer, { [w.justifyCenter]: !U }),
+                        className: a()(w.textContainer, { [w.justifyCenter]: !H }),
                         children: [
                             (0, r.jsx)(c.X6q, {
                                 variant: 'eyebrow',
@@ -205,10 +205,10 @@ function P(e) {
                             (0, r.jsx)(c.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'header-primary',
-                                className: a()(w.header, { [w.headerWithoutMargin]: I }),
+                                className: a()(w.header, { [w.headerWithoutMargin]: D }),
                                 children: ee
                             }),
-                            I &&
+                            D &&
                                 (0, r.jsx)(v.Z, {
                                     quest: N,
                                     textColor: 'text-muted'
@@ -216,7 +216,7 @@ function P(e) {
                             et
                         ]
                     }),
-                    U &&
+                    H &&
                         (0, r.jsx)(i.animated.div, {
                             style: {
                                 opacity: z.to([0, 1], [1, 0])

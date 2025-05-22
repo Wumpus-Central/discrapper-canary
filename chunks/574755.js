@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(605236),
     d = n(441167),
     u = n(695346),
-    g = n(131951),
-    m = n(924557),
+    m = n(131951),
+    g = n(924557),
     p = n(435064),
     h = n(779618),
     f = n(39604),
@@ -25,9 +25,9 @@ function S(e) {
         S = u.tU.useSetting(),
         { enableViewerClipping: v } = d.Z.useExperiment({ location: 'Clips Settings' }, { autoTrackExposure: !1 }),
         { analyticsLocations: T } = (0, o.ZP)(),
-        I = (0, m.Go)(),
+        I = (0, g.Go)(),
         { viewerClipsEnabled: N } = (0, s.cj)([p.Z], () => p.Z.getSettings()),
-        y = (0, h.Z)(g.Z);
+        y = (0, h.Z)(m.Z);
     return (
         r.useEffect(() => {
             (0, c.EW)(l.z.CLIPS_SETTINGS_BETA_TAG);

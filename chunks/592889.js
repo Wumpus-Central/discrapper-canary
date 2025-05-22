@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(442837),
     d = n(780384),
     u = n(481060),
-    g = n(355467),
-    m = n(100527),
+    m = n(355467),
+    g = n(100527),
     p = n(906732),
     h = n(975298),
     f = n(600164),
@@ -24,7 +24,7 @@ var i = n(255367),
 function v(e) {
     let { subscription: t, renewalMutations: n, transitionState: r, onClose: s, analyticsLocation: l } = e,
         a = (0, c.e7)([b.Z], () => b.Z.theme),
-        { analyticsLocations: h } = (0, p.ZP)(m.Z.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL),
+        { analyticsLocations: h } = (0, p.ZP)(g.Z.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL),
         j = x.Z.get(t.planId);
     o()(null != j, 'Missing subscriptionPlan');
     let v = (0, E.aS)(t.planId, !1, !1, {
@@ -33,7 +33,7 @@ function v(e) {
         }),
         T = (0, C.og)((0, C.T4)(v.amount, v.currency), j.interval, j.intervalCount);
     async function I() {
-        await (0, g.dP)(
+        await (0, m.dP)(
             t,
             t.planId,
             {
@@ -95,9 +95,9 @@ function T(e) {
     let { subscription: t, renewalMutations: n, className: s, analyticsLocation: a } = e,
         [o, c] = r.useState(!1),
         d = (0, h.Z)(),
-        g = t.currentPeriodEnd;
+        m = t.currentPeriodEnd;
     return (
-        d.fractionalState === j.a$.FP_SUB_PAUSED && (g = d.endsAt.toDate()),
+        d.fractionalState === j.a$.FP_SUB_PAUSED && (m = d.endsAt.toDate()),
         (0, i.jsxs)('div', {
             className: l()(S.root, s),
             children: [
@@ -112,7 +112,7 @@ function T(e) {
                     className: S.text,
                     children: O.intl.format(O.t.ar1cPj, {
                         planName: t.hasExternalPlanChange ? (0, E.zL)(n) : E.ZP.getDisplayName(n.planId),
-                        date: g
+                        date: m
                     })
                 }),
                 t.isPurchasedExternally

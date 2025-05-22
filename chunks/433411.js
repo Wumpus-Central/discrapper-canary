@@ -8,16 +8,16 @@ var i = n(255367),
     c = n(864106),
     d = n(1585),
     u = n(580747),
-    g = n(345861),
-    m = n(150039),
+    m = n(345861),
+    g = n(150039),
     p = n(993413),
     h = n(388032),
     f = n(142436);
 function b(e) {
-    let { user: t, guild: n, className: s, sectionTitle: g, forcedDivider: b = !1, withTutorial: x = !1, isTryItOutFlow: E = !1 } = e,
+    let { user: t, guild: n, className: s, sectionTitle: m, forcedDivider: b = !1, withTutorial: x = !1, isTryItOutFlow: E = !1 } = e,
         { analyticsLocations: C } = (0, o.ZP)(),
         j = null != n,
-        { userAvatarDecoration: O, guildAvatarDecoration: S, pendingAvatarDecoration: v, pendingErrors: T } = (0, m.$U)(t, n),
+        { userAvatarDecoration: O, guildAvatarDecoration: S, pendingAvatarDecoration: v, pendingErrors: T } = (0, g.$U)(t, n),
         I = (0, u.Z)('enable_avatar_decoration_uploads'),
         N = r.useCallback(
             () =>
@@ -34,7 +34,7 @@ function b(e) {
         className: s,
         forcedDivider: b,
         hasBackground: !0,
-        title: g,
+        title: m,
         errors: T,
         children: [
             (0, i.jsxs)('div', {
@@ -53,7 +53,7 @@ function b(e) {
                             look: a.zxk.Looks.LINK,
                             size: a.zxk.Sizes.SMALL,
                             onClick: function () {
-                                (0, m.PO)(null == n ? void 0 : n.id, null);
+                                (0, g.PO)(null == n ? void 0 : n.id, null);
                             },
                             children: (0, c.ad)(t, n) ? h.intl.string(h.t.CHf9iI) : h.intl.string(h.t.OrokWl)
                         })
@@ -72,7 +72,7 @@ let _ = (e) => {
                 variant: 'text-xs/bold',
                 children: 'STAFF ONLY and Experimental. Upload a decoration to view throughout the app.'
             }),
-            (0, i.jsx)(g.Z, {
+            (0, i.jsx)(m.Z, {
                 onChange: (e) => {
                     null != e &&
                         (t.avatarDecoration = {

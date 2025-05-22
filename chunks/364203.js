@@ -14,8 +14,8 @@ var r = n(255367),
     h = n(213609),
     m = n(357352),
     g = n(565942),
-    E = n(612659),
-    b = n(409100),
+    E = n(784238),
+    b = n(612659),
     y = n(703656),
     O = n(727939),
     v = n(592125),
@@ -349,7 +349,7 @@ function X() {
                     }
                 })
             }),
-            (0, r.jsx)(b.Z, {
+            (0, r.jsx)(E.Z, {
                 className: M.getNitroButton,
                 textOptions: {
                     textOverride: k.intl.string(k.t.JST6jo),
@@ -367,7 +367,7 @@ let J = function (e) {
         { analyticsLocations: l } = (0, p.ZP)(_.Z.CHAT_WALLPAPER_PICKER),
         { activePickerChannelId: c, closePicker: h, setPreviewWallpaperId: m } = (0, S.B)(),
         g = (0, w.Z)(c),
-        b = (0, E.m)(x.p9.TIER_2),
+        E = (0, b.m)(x.p9.TIER_2),
         [y, R] = i.useState(!1),
         j = (0, A.e)(y),
         U = (0, P.u)();
@@ -382,8 +382,8 @@ let J = function (e) {
             Z.current = V.current;
         }, [V]),
         i.useEffect(() => {
-            null != F && R(F.isBlurred && b);
-        }, [F, b]);
+            null != F && R(F.isBlurred && E);
+        }, [F, E]);
     let H = i.useCallback(() => {
             h();
         }, [h]),
@@ -511,7 +511,7 @@ let J = function (e) {
                                     )
                                 ]
                             }),
-                            b
+                            E
                                 ? (0, r.jsx)(Q, {
                                       canApply: (null == g ? void 0 : g.wallpaperId) !== void 0,
                                       isUpdating: K,
@@ -537,11 +537,11 @@ let J = function (e) {
                         (null == s ? void 0 : s.pickerType) === S.j.COACHMARK
                             ? (0, r.jsx)(Y, {
                                   handleClose: $,
-                                  isPremiumTier2Subscriber: b
+                                  isPremiumTier2Subscriber: E
                               })
                             : (0, r.jsx)(W, {
                                   handleClose: $,
-                                  isPremiumTier2Subscriber: b
+                                  isPremiumTier2Subscriber: E
                               }),
                         (0, r.jsx)('div', { className: M.divider }),
                         (0, r.jsx)(d.JcV, {

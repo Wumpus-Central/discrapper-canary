@@ -8,8 +8,8 @@ var i,
     c = n.n(o),
     d = n(91192),
     u = n(442837),
-    g = n(481060),
-    m = n(570140),
+    m = n(481060),
+    g = n(570140),
     p = n(355467),
     h = n(827837),
     f = n(821849),
@@ -78,7 +78,7 @@ function Z(e) {
     let { payments: t, locale: n, compactMode: i, numPages: l } = e,
         o = s.useRef(null),
         [c, u] = s.useState(0),
-        [m, h] = s.useState(null),
+        [g, h] = s.useState(null),
         f = t.slice(10 * c, (c + 1) * 10);
     s.useEffect(() => {
         var e;
@@ -88,9 +88,9 @@ function Z(e) {
             (e) => {
                 u(e);
                 let n = t[t.length - 1].id;
-                e >= l - 2 && m !== n && ((0, p.cQ)(10, n), h(n));
+                e >= l - 2 && g !== n && ((0, p.cQ)(10, n), h(n));
             },
-            [t, l, m]
+            [t, l, g]
         ),
         E = (0, b.Z)('billing-history', o);
     return (0, r.jsx)(d.bG, {
@@ -132,7 +132,7 @@ function Z(e) {
                             s
                         ),
                         {
-                            children: (0, r.jsx)(g.Den, {
+                            children: (0, r.jsx)(m.Den, {
                                 className: y.bottomDivider,
                                 ref: o,
                                 children: f.map((e, t) =>
@@ -160,14 +160,14 @@ class w extends (i = s.PureComponent) {
         return Math.max(Math.ceil(this.props.payments.length / 10), 1);
     }
     componentDidMount() {
-        m.Z.wait(() => {
+        g.Z.wait(() => {
             (0, h.N)(), (0, p.cQ)(30);
         });
     }
     renderPremiumExternalSubscription(e) {
         return (
             c()(null != e.paymentGateway, 'Expected payment gateway when rendering for external subscription'),
-            (0, r.jsxs)(g.Zbd, {
+            (0, r.jsxs)(m.Zbd, {
                 className: y.externalRow,
                 children: [
                     (0, r.jsx)('div', {
@@ -271,7 +271,7 @@ function L(e) {
     return (
         s.useEffect(() => {
             o() ||
-                m.Z.wait(() => {
+                g.Z.wait(() => {
                     l.forEach((e) => (0, f.GZ)(e, void 0, void 0, !0, void 0));
                 });
         }, [o, l]),

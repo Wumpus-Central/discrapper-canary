@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(442837),
     d = n(780384),
     u = n(481060),
-    g = n(816814),
-    m = n(809206),
+    m = n(816814),
+    g = n(809206),
     p = n(497321),
     h = n(279837),
     f = n(952306),
@@ -93,7 +93,7 @@ class X extends r.PureComponent {
         (0, v.Z)(e.id, e.getAvatarURL(void 0, 80));
     }
     componentWillUnmount() {
-        g.Z.clearBackupCodes(), (0, m.Zy)();
+        m.Z.clearBackupCodes(), (0, g.Zy)();
     }
     renderAccountWarning() {
         let { currentUser: e } = this.props;
@@ -269,7 +269,7 @@ class X extends r.PureComponent {
                 confirmText: z.intl.string(z.t['8lQ2ra']),
                 cancelText: z.intl.string(z.t['ETE/oK']),
                 onCancel: e,
-                onConfirm: () => (0, m.ss)('', !0).then(e),
+                onConfirm: () => (0, g.ss)('', !0).then(e),
                 children: (0, i.jsx)(u.Text, {
                     variant: 'text-md/normal',
                     children: z.intl.string(z.t.FB4H1N)
@@ -363,7 +363,7 @@ class X extends r.PureComponent {
         });
     }
     handleSubmitDisableAccount(e, t) {
-        return (0, m.ss)(e, t).then(F.dG4, this.handleDisableAccountError);
+        return (0, g.ss)(e, t).then(F.dG4, this.handleDisableAccountError);
     }
     handleDisableAccount() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],

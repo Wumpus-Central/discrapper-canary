@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -14,29 +14,28 @@ var r = n(255367),
     h = n(585483),
     m = n(70956),
     g = n(36703),
-    E = n(953221),
-    b = n(347312),
-    y = n(94432),
-    O = n(981631),
-    v = n(388032),
-    I = n(182525);
-let S = i.lazy(() => n.e('89792').then(n.bind(n, 711635)));
-function T(e) {
-    let t = (y.TC.indexOf(e) + 1) % y.TC.length,
-        n = y.TC[t];
+    E = n(347312),
+    b = n(94432),
+    y = n(981631),
+    O = n(388032),
+    v = n(182525);
+let I = i.lazy(() => n.e('89792').then(n.bind(n, 711635)));
+function S(e) {
+    let t = (b.TC.indexOf(e) + 1) % b.TC.length,
+        n = b.TC[t];
     (0, u.C)(n, d.Ir.VOICE_MESSAGE);
 }
-function A(e) {
+function T(e) {
     let { played: t, duration: n, currentTime: i } = e,
         o = null == n ? '--:--' : t ? (0, _.yv)(Math.ceil(n - i)) : (0, _.yv)(Math.ceil(n));
     return (0, r.jsx)(l.Text, {
         variant: 'text-sm/normal',
-        className: I.duration,
+        className: v.duration,
         tabularNumbers: !0,
         children: o
     });
 }
-function N(e, t, n) {
+function A(e, t, n) {
     i.useEffect(() => {
         let r;
         function i() {
@@ -51,14 +50,14 @@ function N(e, t, n) {
         );
     }, [e, t, n]);
 }
-function C(e, t, n) {
+function N(e, t, n) {
     i.useEffect(() => {
         if (t)
             return (
-                h.S.dispatch(O.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, { src: e }),
-                h.S.subscribe(O.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, r),
+                h.S.dispatch(y.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, { src: e }),
+                h.S.subscribe(y.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, r),
                 () => {
-                    h.S.unsubscribe(O.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, r);
+                    h.S.unsubscribe(y.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, r);
                 }
             );
         function r(t) {
@@ -67,222 +66,220 @@ function C(e, t, n) {
         }
     }, [e, t, n]);
 }
-let P = i.memo(function (e) {
+let C = i.memo(function (e) {
     let t,
-        { src: n, volume: o = 1, onVolumeChange: _, onMute: h, waveform: y, durationSecs: O, onVolumeShow: P, onVolumeHide: R, onPlay: w, onPause: D, onError: L, playbackCacheKey: x } = e,
-        { playbackSettingsEnabled: k } = (0, E.t)('VoiceMessagePlayer'),
-        M = i.useRef(null),
-        j = i.useMemo(() => (null != x && k ? d.ZP.getPlaybackPosition(x) : 0), [x, k]),
-        U = (0, s.e7)([d.ZP], () => (k ? d.ZP.getPlaybackRate(d.Ir.VOICE_MESSAGE) : 1)),
-        [G, B] = i.useState(j > 0),
-        [F, V] = i.useState(j),
-        [Z, H] = i.useState(O),
+        { src: n, volume: o = 1, onVolumeChange: _, onMute: h, waveform: b, durationSecs: y, onVolumeShow: C, onVolumeHide: P, onPlay: R, onPause: w, onError: D, playbackCacheKey: L } = e,
+        x = i.useRef(null),
+        k = i.useMemo(() => (null != L ? d.ZP.getPlaybackPosition(L) : 0), [L]),
+        M = (0, s.e7)([d.ZP], () => d.ZP.getPlaybackRate(d.Ir.VOICE_MESSAGE)),
+        [j, U] = i.useState(k > 0),
+        [G, B] = i.useState(k),
+        [F, V] = i.useState(y),
+        [Z, H] = i.useState(!1),
         [Y, W] = i.useState(!1),
         [K, z] = i.useState(!1),
         [q, Q] = i.useState(!1),
-        [X, J] = i.useState(!1),
-        [$, ee] = i.useState('none'),
-        [et, en] = i.useState(() => ('function' == typeof o ? o() : o)),
-        er = i.useRef(void 0),
-        ei = i.useCallback(() => {
-            z((e) => !e), J(!0);
+        [X, J] = i.useState('none'),
+        [$, ee] = i.useState(() => ('function' == typeof o ? o() : o)),
+        et = i.useRef(void 0),
+        en = i.useCallback(() => {
+            W((e) => !e), Q(!0);
         }, []),
-        eo = i.useCallback(() => {
-            ee('metadata');
+        er = i.useCallback(() => {
+            J('metadata');
         }, []),
-        ea = i.useCallback((e) => {
+        ei = i.useCallback((e) => {
             let t = e.currentTarget.duration;
-            isNaN(t) || H(t);
+            isNaN(t) || V(t);
         }, []),
-        es = i.useCallback(
+        eo = i.useCallback(
             (e) => {
-                null != O && null != x && k && (0, u.U)(x, e, O);
+                null != y && null != L && (0, u.U)(L, e, y);
             },
-            [x, O, k]
+            [L, y]
         ),
-        el = i.useCallback(() => {
-            z(!1),
-                null == er.current &&
-                    (er.current = setTimeout(() => {
-                        B(!1), J(!1), (er.current = void 0);
+        ea = i.useCallback(() => {
+            W(!1),
+                null == et.current &&
+                    (et.current = setTimeout(() => {
+                        U(!1), Q(!1), (et.current = void 0);
                     }, 500));
         }, []),
-        ec = i.useCallback(() => {
-            q || (es(0), el());
-        }, [el, q, es]),
-        eu = i.useCallback((e) => {
-            let t = M.current;
-            null != t && (V(e), (t.currentTime = e), B(!0));
+        es = i.useCallback(() => {
+            K || (eo(0), ea());
+        }, [ea, K, eo]),
+        el = i.useCallback((e) => {
+            let t = x.current;
+            null != t && (B(e), (t.currentTime = e), U(!0));
         }, []),
-        ed = i.useCallback(() => {
-            let e = M.current;
+        ec = i.useCallback(() => {
+            let e = x.current;
             if (null == e) return;
             let t = e.error;
-            null == L || L(t);
-        }, [L]),
-        ef = i.useCallback(
+            null == D || D(t);
+        }, [D]),
+        eu = i.useCallback(
             (e) => {
                 let t = (0, g.A)(e, 1);
-                W(0 === t), en(t), null == _ || _(t);
+                H(0 === t), ee(t), null == _ || _(t);
             },
             [_]
         ),
-        e_ = i.useCallback(() => {
-            W(!Y), null == h || h(!Y);
-        }, [Y, h]),
-        ep = i.useCallback(() => {
-            Q(!0);
+        ed = i.useCallback(() => {
+            H(!Z), null == h || h(!Z);
+        }, [Z, h]),
+        ef = i.useCallback(() => {
+            z(!0);
         }, []),
-        eh = i.useCallback(() => {
-            Q(!1), F === Z && el(), es(F);
-        }, [F, Z, el, es]),
-        em = i.useCallback(
+        e_ = i.useCallback(() => {
+            z(!1), G === F && ea(), eo(G);
+        }, [G, F, ea, eo]),
+        ep = i.useCallback(
             (e) => {
-                let t = M.current;
-                null != Z && null != t && (eu(e * Z), clearTimeout(er.current), (er.current = void 0));
+                let t = x.current;
+                null != F && null != t && (el(e * F), clearTimeout(et.current), (et.current = void 0));
             },
-            [Z, eu]
+            [F, el]
         );
     i.useEffect(() => {
-        !G && K && B(!0);
-    }, [K, G]);
-    let eg = i.useRef(null),
-        eE = {
-            played: X,
-            currentTime: F,
-            onPause: D,
-            onPlay: w
+        !j && Y && U(!0);
+    }, [Y, j]);
+    let eh = i.useRef(null),
+        em = {
+            played: q,
+            currentTime: G,
+            onPause: w,
+            onPlay: R
         },
-        eb = i.useRef(eE);
+        eg = i.useRef(em);
     i.useEffect(() => {
-        eb.current = eE;
+        eg.current = em;
     }),
         i.useEffect(() => {
-            j > 0 && eu(j);
-        }, [j, eu]),
+            k > 0 && el(k);
+        }, [k, el]),
         i.useEffect(() => {
             let e;
             return (
-                K &&
-                    !q &&
+                Y &&
+                    !K &&
                     (e = setInterval(() => {
                         var e, t;
-                        es(null != (t = null == (e = M.current) ? void 0 : e.currentTime) ? t : 0);
+                        eo(null != (t = null == (e = x.current) ? void 0 : e.currentTime) ? t : 0);
                     }, m.Z.Millis.SECOND)),
                 () => {
                     null != e && clearInterval(e);
                 }
             );
-        }, [K, q, es]),
+        }, [Y, K, eo]),
         i.useEffect(() => {
-            let { played: e, currentTime: t, onPause: n, onPlay: r } = eb.current;
-            if (e || K)
-                if (K) {
+            let { played: e, currentTime: t, onPause: n, onPlay: r } = eg.current;
+            if (e || Y)
+                if (Y) {
                     var i, o;
-                    (eg.current = performance.now()), null == r || r(!1, t, (null != (o = null == (i = M.current) ? void 0 : i.duration) ? o : 0) * m.Z.Millis.SECOND);
+                    (eh.current = performance.now()), null == r || r(!1, t, (null != (o = null == (i = x.current) ? void 0 : i.duration) ? o : 0) * m.Z.Millis.SECOND);
                 } else {
                     let e = performance.now(),
-                        r = eg.current,
+                        r = eh.current,
                         i = null != r ? (e - r) / 1000 : 0;
-                    null == n || n(t, i), es(t), (eg.current = null);
+                    null == n || n(t, i), eo(t), (eh.current = null);
                 }
-        }, [K, n, Z, es]),
-        N(M, K, V),
-        C(n, K, z);
-    let ey = K ? l.fpf : l.o1U,
-        eO = K ? v.intl.string(v.t.ZcgDJS) : v.intl.string(v.t.RscU7O),
-        ev = v.intl.formatToPlainString(v.t.LgCPMj, { playbackRate: U });
+        }, [Y, n, F, eo]),
+        A(x, Y, B),
+        N(n, Y, W);
+    let eE = Y ? l.fpf : l.o1U,
+        eb = Y ? O.intl.string(O.t.ZcgDJS) : O.intl.string(O.t.RscU7O),
+        ey = O.intl.formatToPlainString(O.t.LgCPMj, { playbackRate: M });
     t =
         'Safari' === platform.name
             ? (0, r.jsx)(i.Suspense, {
-                  children: (0, r.jsx)(S, {
-                      ref: M,
-                      className: I.audioElement,
+                  children: (0, r.jsx)(I, {
+                      ref: x,
+                      className: v.audioElement,
                       src: n,
-                      preload: $,
-                      playing: K && !q,
-                      onEnded: ec,
-                      onLoadedMetadata: ea,
-                      onError: ed,
-                      muted: Y,
-                      volume: et,
-                      playbackRate: U
+                      preload: X,
+                      playing: Y && !K,
+                      onEnded: es,
+                      onLoadedMetadata: ei,
+                      onError: ec,
+                      muted: Z,
+                      volume: $,
+                      playbackRate: M
                   })
               })
             : (0, r.jsx)(f.Z, {
-                  ref: M,
-                  className: I.audioElement,
+                  ref: x,
+                  className: v.audioElement,
                   controls: !1,
-                  preload: $,
-                  onEnded: ec,
-                  onLoadedMetadata: ea,
-                  onError: ed,
-                  muted: Y,
-                  volume: et,
-                  playbackRate: U,
-                  playing: K && !q,
+                  preload: X,
+                  onEnded: es,
+                  onLoadedMetadata: ei,
+                  onError: ec,
+                  muted: Z,
+                  volume: $,
+                  playbackRate: M,
+                  playing: Y && !K,
                   children: (0, r.jsx)('source', { src: n })
               });
-    let eI = (0, s.e7)([c.Z], () => c.Z.useReducedMotion);
+    let eO = (0, s.e7)([c.Z], () => c.Z.useReducedMotion);
     return (0, r.jsxs)('div', {
-        className: a()(I.container, { [I.playing]: K }),
-        onMouseEnter: eo,
+        className: a()(v.container, { [v.playing]: Y }),
+        onMouseEnter: er,
         children: [
             (0, r.jsx)('div', {
-                className: I.rippleContainer,
-                children: (0, r.jsx)('div', { className: a()(I.ripple, { [I.reducedMotion]: eI }) })
+                className: v.rippleContainer,
+                children: (0, r.jsx)('div', { className: a()(v.ripple, { [v.reducedMotion]: eO }) })
             }),
             (0, r.jsx)(l.P3F, {
-                className: I.playButtonContainer,
-                onClick: ei,
-                'aria-label': eO,
-                children: (0, r.jsx)(ey, {
-                    className: I.playIcon,
+                className: v.playButtonContainer,
+                onClick: en,
+                'aria-label': eb,
+                children: (0, r.jsx)(eE, {
+                    className: v.playIcon,
                     color: 'currentColor',
                     size: 'sm'
                 })
             }),
-            (0, r.jsx)(b.Z, {
-                className: I.waveform,
-                waveform: y,
-                currentTime: F,
-                duration: null != Z ? Z : 1,
-                playing: K,
-                played: G,
-                onDrag: em,
-                onDragStart: ep,
-                onDragEnd: eh
+            (0, r.jsx)(E.Z, {
+                className: v.waveform,
+                waveform: b,
+                currentTime: G,
+                duration: null != F ? F : 1,
+                playing: Y,
+                played: j,
+                onDrag: ep,
+                onDragStart: ef,
+                onDragEnd: e_
             }),
-            (0, r.jsx)(A, {
-                played: G,
-                currentTime: F,
-                duration: Z
+            (0, r.jsx)(T, {
+                played: j,
+                currentTime: G,
+                duration: F
             }),
-            k &&
-                (0, r.jsx)(l.P3F, {
-                    className: I.playbackRateContainer,
-                    onClick: () => T(U),
-                    'aria-label': ev,
-                    children: (0, r.jsx)(l.Text, {
-                        variant: 'text-xs/semibold',
-                        className: I.playbackRate,
-                        children: ''.concat(U, 'x')
-                    })
-                }),
+            (0, r.jsx)(l.P3F, {
+                className: v.playbackRateContainer,
+                onClick: () => S(M),
+                'aria-label': ey,
+                children: (0, r.jsx)(l.Text, {
+                    variant: 'text-xs/semibold',
+                    className: v.playbackRate,
+                    children: ''.concat(M, 'x')
+                })
+            }),
             (0, r.jsx)(p.Z, {
-                className: I.volumeButton,
-                iconClassName: I.volumeButtonIcon,
+                className: v.volumeButton,
+                iconClassName: v.volumeButtonIcon,
                 iconColor: 'currentColor',
-                sliderWrapperClassName: I.volumeSlider,
-                muted: Y,
-                value: (0, g.P)(et, 1),
+                sliderWrapperClassName: v.volumeSlider,
+                muted: Z,
+                value: (0, g.P)($, 1),
                 minValue: 0,
                 maxValue: 1,
                 currentWindow: window,
-                onValueChange: ef,
-                onToggleMute: e_,
-                onVolumeShow: P,
-                onVolumeHide: R
+                onValueChange: eu,
+                onToggleMute: ed,
+                onVolumeShow: C,
+                onVolumeHide: P
             }),
             t
         ]

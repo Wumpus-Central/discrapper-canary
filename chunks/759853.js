@@ -34,7 +34,7 @@ let b = ['#51BC9D'],
                 })
             ),
             q = (0, i.uR)(N, R),
-            I = o.useCallback(() => {
+            D = o.useCallback(() => {
                 if (S) return;
                 let e = v.current,
                     t = P.current;
@@ -128,21 +128,21 @@ let b = ['#51BC9D'],
                     );
                 }
             }, [v, P, q, S]),
-            D = (0, u.Z)(y);
+            I = (0, u.Z)(y);
         return (o.useEffect(() => {
-            C && y && !D && (O(), I());
-        }, [y, C, O, I, D]),
+            C && y && !I && (O(), D());
+        }, [y, C, O, D, I]),
         o.useEffect(() => {
             C &&
                 !E &&
                 T &&
                 setTimeout(() => {
-                    O(), I();
+                    O(), D();
                 }, 200);
-        }, [C, T, E, O, I]),
+        }, [C, T, E, O, D]),
         o.useEffect(() => {
-            q.isReady && (!w.current && C && (O(), I()), (w.current = C));
-        }, [C, w, I, O, q]),
+            q.isReady && (!w.current && C && (O(), D()), (w.current = C));
+        }, [C, w, D, O, q]),
         S)
             ? null
             : (0, r.jsxs)('div', {

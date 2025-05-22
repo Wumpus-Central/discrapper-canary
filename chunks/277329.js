@@ -9,13 +9,13 @@ var r = n(442837),
     c = n(309739),
     d = n(293389),
     u = n(327885),
-    g = n(326528),
-    m = n(332325),
+    m = n(326528),
+    g = n(332325),
     p = n(981631),
     h = n(388032),
     f = n(881328);
 function b() {
-    let e = (0, g.b)(),
+    let e = (0, m.b)(),
         t = (0, r.e7)([o.Z], () => o.Z.getSubsection()),
         n = null != t && e.some((e) => e.id === t) ? t : e[0].id;
     return (0, i.jsxs)(i.Fragment, {
@@ -58,22 +58,22 @@ function b() {
             }),
             (() => {
                 switch (n) {
-                    case m.Z.CLIPS:
+                    case g.Z.CLIPS:
                         return (0, i.jsx)(a.Z, {
                             className: f.body,
                             showHeader: !1
                         });
-                    case m.Z.OVERLAY:
+                    case g.Z.OVERLAY:
                         return (0, i.jsx)(u.Z, {
                             className: f.body,
                             showHeader: !1
                         });
-                    case m.Z.ACTIVITY_PRIVACY:
+                    case g.Z.ACTIVITY_PRIVACY:
                         return (0, i.jsx)(c.Z, {
                             className: f.body,
                             showHeader: !1
                         });
-                    case m.Z.MY_GAMES:
+                    case g.Z.MY_GAMES:
                     default:
                         return (0, i.jsx)(d.Z, {
                             className: f.body,

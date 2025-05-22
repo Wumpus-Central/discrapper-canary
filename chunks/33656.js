@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(921801),
     d = n(663389),
     u = n(960412),
-    g = n(151662),
-    m = n(930441),
+    m = n(151662),
+    g = n(930441),
     p = n(726985),
     h = n(388032),
     f = n(495288),
@@ -26,21 +26,21 @@ function _(e) {
 function x() {
     let e = (0, a.e7)([d.Z], () => d.Z.getSubsection()),
         t = r.useRef(null),
-        { categories: n, initialized: s } = (0, a.cj)([g.Z], () => g.Z.getEmailSettings());
+        { categories: n, initialized: s } = (0, a.cj)([m.Z], () => m.Z.getEmailSettings());
     r.useEffect(() => {
         if (null == s) (0, u.Y7)();
-        else if (e === m.vG.toUpperCase()) {
+        else if (e === g.vG.toUpperCase()) {
             var n;
             null == t || null == (n = t.current) || n.scrollIntoView(!0);
         }
     }, [s, t, e]);
-    let x = m.M0.reduce((e, t) => e || !!n[t], !1),
+    let x = g.M0.reduce((e, t) => e || !!n[t], !1),
         E = {
-            [m.$Z.COMMUNICATION]: p.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
-            [m.$Z.SOCIAL]: p.s6.NOTIFICATIONS_EMAILS_SOCIAL,
-            [m.$Z.UPDATES_AND_ANNOUNCEMENTS]: p.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
-            [m.$Z.TIPS]: p.s6.NOTIFICATIONS_EMAILS_TIPS,
-            [m.$Z.RECOMMENDATIONS_AND_EVENTS]: p.s6.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS
+            [g.$Z.COMMUNICATION]: p.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
+            [g.$Z.SOCIAL]: p.s6.NOTIFICATIONS_EMAILS_SOCIAL,
+            [g.$Z.UPDATES_AND_ANNOUNCEMENTS]: p.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
+            [g.$Z.TIPS]: p.s6.NOTIFICATIONS_EMAILS_TIPS,
+            [g.$Z.RECOMMENDATIONS_AND_EVENTS]: p.s6.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS
         };
     return s
         ? (0, i.jsxs)(c.F, {
@@ -52,7 +52,7 @@ function x() {
                       tag: o.RB0.H1,
                       title: h.intl.string(h.t.TPchzM),
                       children: [
-                          m.Od.map((e) => {
+                          g.Od.map((e) => {
                               let { category: t, label: r, subLabel: s } = e,
                                   l = E[t],
                                   a = (0, i.jsx)(

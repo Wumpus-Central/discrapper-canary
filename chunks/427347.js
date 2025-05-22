@@ -9,15 +9,15 @@ var r = n(704215),
     c = n(605236),
     d = n(314910),
     u = n(378364),
-    g = n(197344),
-    m = n(226625),
+    m = n(197344),
+    g = n(226625),
     p = n(981631),
     h = n(921944),
     f = n(388032),
     b = n(963748);
 function _(e) {
     let { dismissibleContent: t } = e,
-        n = g.Z.useIsEligible(),
+        n = m.Z.useIsEligible(),
         u = (0, c.wE)(t),
         { analyticsLocations: _ } = (0, o.ZP)(a.Z.HOLIDAY_COACHMARK),
         x = (e) => {
@@ -34,7 +34,7 @@ function _(e) {
                       (0, i.jsxs)('div', {
                           className: b.backgroundWrapper,
                           children: [
-                              (0, i.jsx)(m.Z, {
+                              (0, i.jsx)(g.Z, {
                                   className: b.backgroundImage,
                                   pageMultiplier: 5
                               }),

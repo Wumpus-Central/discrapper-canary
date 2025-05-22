@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -8,14 +8,14 @@ var i = n(255367),
     c = n(920321),
     d = n(131951),
     u = n(388032);
-function g() {
+function m() {
     let e = (0, c.Z)(),
         { currentDeviceId: t, isVideoAvailable: n } = (0, s.cj)([d.Z], () => ({
             currentDeviceId: d.Z.getVideoDeviceId(),
             isVideoAvailable: d.Z.isVideoAvailable()
         })),
-        { analyticsLocations: g } = (0, o.ZP)(),
-        m = r.useMemo(
+        { analyticsLocations: m } = (0, o.ZP)(),
+        g = r.useMemo(
             () =>
                 Object.values(e).map((e) => {
                     let { id: t, name: n } = e;
@@ -30,10 +30,10 @@ function g() {
         title: u.intl.string(u.t.FsQ3OT),
         children: (0, i.jsx)(l.q4e, {
             placeholder: u.intl.string(u.t['t9eQ/v']),
-            options: m,
+            options: g,
             value: t,
             isDisabled: !n,
-            onChange: (e) => a.Z.setVideoDevice(e, { analyticsLocations: g }),
+            onChange: (e) => a.Z.setVideoDevice(e, { analyticsLocations: m }),
             'aria-label': u.intl.string(u.t['t9eQ/v'])
         })
     });

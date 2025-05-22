@@ -12,8 +12,8 @@ var i = n(255367),
     c = n(565138),
     d = n(993413),
     u = n(430824),
-    g = n(771845),
-    m = n(823379),
+    m = n(771845),
+    g = n(823379),
     p = n(778825),
     h = n(388032),
     f = n(835813);
@@ -35,7 +35,7 @@ function b(e) {
 function _(e) {
     let { guildId: t, globalOption: n, onChange: s, renderOptionSuffix: l } = e,
         d = (0, a.e7)([p.Z], () => p.Z.showNotice()),
-        b = (0, a.e7)([g.ZP], () => g.ZP.getFlattenedGuildIds()),
+        b = (0, a.e7)([m.ZP], () => m.ZP.getFlattenedGuildIds()),
         _ = (0, a.e7)([u.Z], () => u.Z.getGuilds()),
         x = r.useMemo(() => {
             let e = b
@@ -48,7 +48,7 @@ function _(e) {
                               value: t.id
                           };
                 })
-                .filter(m.lm);
+                .filter(g.lm);
             return null != n && e.unshift(n), e;
         }, [b, _, n]),
         E = r.useCallback(
