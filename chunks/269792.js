@@ -1,50 +1,50 @@
 d.r(t), d.d(t, { default: () => R }), d(388685);
 var a = d(255367),
-    n = d(73800),
-    c = d(120356),
-    s = d.n(c),
+    c = d(73800),
+    n = d(120356),
+    s = d.n(n),
     o = d(990547),
     i = d(704215),
     l = d(481060),
     r = d(213609),
     f = d(70097),
     _ = d(605236),
-    p = d(7093),
-    u = d(553896),
+    u = d(7093),
+    b = d(553896),
     E = d(848572),
-    b = d(765018),
+    p = d(765018),
     T = d(483444),
-    h = d(626135),
+    U = d(626135),
     m = d(40347),
-    U = d(981631),
+    h = d(981631),
     g = d(921944),
     M = d(388032),
     N = d(882714);
 function R() {
     var e;
-    let t = n.useRef(null),
-        [d, c] = n.useState(!1),
-        [o, r] = n.useState(!0),
+    let t = c.useRef(null),
+        [d, n] = c.useState(!1),
+        [o, r] = c.useState(!0),
         f = (0, m.Z)(),
-        u = null == f ? void 0 : f.currentBadge.id;
-    n.useEffect(() => {
-        if (null != u) return (0, _.wH)(i.z.NITRO_TENURE_BADGE_LEVEL_UP, (0, b.q)(u), { dismissAction: g.L.INDIRECT_ACTION }), () => p.Z.setState({ shouldRenderTenureLevelUp: !1 });
-    }, [u]);
-    let E = n.useCallback(() => {
-            c(!0);
+        b = null == f ? void 0 : f.currentBadge.id;
+    c.useEffect(() => {
+        if (null != b) return (0, _.wH)(i.z.NITRO_TENURE_BADGE_LEVEL_UP, (0, p.q)(b), { dismissAction: g.L.INDIRECT_ACTION }), () => u.Z.setState({ shouldRenderTenureLevelUp: !1 });
+    }, [b]);
+    let E = c.useCallback(() => {
+            n(!0);
         }, []),
-        T = n.useCallback(() => {
+        T = c.useCallback(() => {
             r(!1);
         }, []);
     if (!o || null == f) return null;
-    let h = {
+    let U = {
         '--custom-old-badge-color': 'linear-gradient(to right, '.concat(null != (e = f.prevBadgeTextGradient) ? e : 'transparent', ')'),
         '--custom-new-badge-color': 'linear-gradient(to right, '.concat(f.currentBadgeTextGradient, ')')
     };
     return (0, a.jsxs)('div', {
         ref: t,
         className: s()(N.container, { [N.loaded]: d }),
-        style: h,
+        style: U,
         children: [
             d &&
                 (0, a.jsx)(l.EqS, {
@@ -61,19 +61,19 @@ function R() {
                         onClick: T
                     })
                 }),
-            (0, a.jsx)(x, {
+            (0, a.jsx)(Z, {
                 onVideoLoaded: E,
                 levelUpData: f
             })
         ]
     });
 }
-function x(e) {
+function Z(e) {
     let { onVideoLoaded: t, levelUpData: d } = e,
-        [c, i] = n.useState(!1),
+        [n, i] = c.useState(!1),
         _ = (0, E.GG)(),
-        p = n.useRef(null),
-        b = n.useRef(null),
+        u = c.useRef(null),
+        p = c.useRef(null),
         { currentBadge: m, prevBadge: g, levelUpVideoSrc: R } = d;
     (0, r.Z)(
         {
@@ -83,23 +83,23 @@ function x(e) {
         },
         { trackOnInitialLoad: !0 }
     ),
-        n.useEffect(() => {
-            null != b.current && b.current.load();
+        c.useEffect(() => {
+            null != p.current && p.current.load();
         }, []);
-    let x = n.useCallback(() => {
-        i(!1), b.current.play(), (p.current.style.display = 'none'), p.current.offsetWidth, (p.current.style.display = ''), h.default.track(U.rMx.TIERED_TENURE_BADGE_LEVEL_UP_REPLAY_CLICKED, { new_badge_id: m.id });
+    let Z = c.useCallback(() => {
+        i(!1), p.current.play(), (u.current.style.display = 'none'), u.current.offsetWidth, (u.current.style.display = ''), U.default.track(h.rMx.TIERED_TENURE_BADGE_LEVEL_UP_REPLAY_CLICKED, { new_badge_id: m.id });
     }, [m.id]);
     return (0, a.jsxs)('div', {
-        className: s()(N.content, { [N.ended]: c }),
-        ref: p,
+        className: s()(N.content, { [N.ended]: n }),
+        ref: u,
         children: [
             (0, a.jsx)(f.Z, {
-                ref: b,
+                ref: p,
                 className: N.video,
                 src: R,
                 playsInline: !0,
                 onLoadedData: () => {
-                    t(), b.current.play();
+                    t(), p.current.play();
                 },
                 onEnded: () => i(!0)
             }),
@@ -109,20 +109,10 @@ function x(e) {
                 height: 15
             }),
             null != g &&
-                (0, a.jsxs)(a.Fragment, {
-                    children: [
-                        (0, a.jsx)(l.Text, {
-                            variant: 'display-md',
-                            className: s()(N.badgeText, N.old),
-                            children: M.intl.string(g.nameUnformatted)
-                        }),
-                        (0, a.jsx)(l.Text, {
-                            variant: 'display-md',
-                            className: s()(N.badgeText, N.oldWhite),
-                            'aria-hidden': !0,
-                            children: M.intl.string(g.nameUnformatted)
-                        })
-                    ]
+                (0, a.jsx)(l.Text, {
+                    variant: 'display-md',
+                    className: s()(N.badgeText, N.old),
+                    children: M.intl.string(g.nameUnformatted)
                 }),
             (0, a.jsx)(l.Text, {
                 variant: 'display-md',
@@ -134,7 +124,7 @@ function x(e) {
                     variant: 'text-xs/medium',
                     className: N.subscribedText,
                     children: M.intl.formatToPlainString(M.t['f/OGgI'], {
-                        timeFrame: (0, u.q)(m.id, m.tenureReqNumMonths),
+                        timeFrame: (0, b.q)(m.id, m.tenureReqNumMonths),
                         date: _
                     })
                 }),
@@ -147,7 +137,7 @@ function x(e) {
                         size: 'xs',
                         color: 'currentColor'
                     }),
-                    onClick: x
+                    onClick: Z
                 })
             })
         ]

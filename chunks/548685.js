@@ -1,16 +1,16 @@
 n.d(t, { Z: () => k }), n(388685);
 var r = n(255367),
     l = n(73800),
-    i = n(120356),
-    a = n.n(i),
+    a = n(120356),
+    i = n.n(a),
     o = n(442837),
     s = n(481060),
     c = n(782568),
     u = n(607070),
     d = n(594174),
     f = n(451478),
-    p = n(626135),
-    b = n(63063),
+    b = n(626135),
+    p = n(63063),
     g = n(74538),
     h = n(381585),
     m = n(597688),
@@ -26,11 +26,11 @@ var r = n(255367),
     P = n(806734);
 let k = (e) => {
     var t;
-    let { isLoading: n, sortedSkuIds: i, handleTransition: k, numVisibleItems: T, tab: I } = e,
+    let { isLoading: n, sortedSkuIds: a, handleTransition: k, numVisibleItems: T, tab: I } = e,
         w = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
         B = g.ZP.canUseCollectibles(w),
         L = (0, _.s)('useShopHomeSorting') && I === j.AW.HOME,
-        { sortType: N, setSortType: R, sortedItems: A, sortOptions: Z, shuffleProducts: F, showRecommendationOption: H } = (0, C.N)(i, B),
+        { sortType: N, setSortType: R, sortedItems: A, sortOptions: Z, shuffleProducts: F, showRecommendationOption: H } = (0, C.N)(a, B),
         D = (0, S.St)(A),
         M = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         W = (0, o.e7)([f.Z], () => f.Z.isFocused()),
@@ -45,7 +45,7 @@ let k = (e) => {
                     isShuffling: !1,
                     onOutroComplete: () => R(e)
                 }),
-                    p.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
+                    b.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                         page_session_id: q,
                         sort_type: e
                     });
@@ -55,7 +55,7 @@ let k = (e) => {
     return null == w
         ? null
         : (0, r.jsxs)('div', {
-              className: a()(P.popularPicksSection, P.centeredSection),
+              className: i()(P.popularPicksSection, P.centeredSection),
               children: [
                   (0, r.jsxs)('div', {
                       className: P.blockHeader,
@@ -103,7 +103,7 @@ let k = (e) => {
                                                   })({}, e)),
                                                   (n = n =
                                                       {
-                                                          onClick: () => (0, c.Z)(b.Z.getArticleURL(y.BhN.DATA_USED_FOR_RECOMMENDED)),
+                                                          onClick: () => (0, c.Z)(p.Z.getArticleURL(y.BhN.DATA_USED_FOR_RECOMMENDED)),
                                                           className: P.informationIcon,
                                                           children: (0, r.jsx)(s.d3s, { size: 'sm' })
                                                       }),
@@ -155,7 +155,7 @@ let k = (e) => {
                                                         onOutroComplete: F,
                                                         returnRef: Y
                                                     }),
-                                                        p.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, { page_session_id: q });
+                                                        b.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, { page_session_id: q });
                                                 },
                                                 disabled: U !== x.g.MOUNTED && U !== x.g.FINISHED,
                                                 children: E.intl.string(E.t.X3tnc3)

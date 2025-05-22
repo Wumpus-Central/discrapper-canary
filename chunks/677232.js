@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
     l = n(73800),
-    i = n(366594),
-    a = n(780384),
+    a = n(366594),
+    i = n(780384),
     o = n(481060),
     s = n(410030),
     c = n(965645),
@@ -67,15 +67,15 @@ let d = [
             ribbon: '#81C29F'
         }
     ],
-    p = 1 / 300,
-    b = (0, i.animated)(c.Z),
-    g = (0, i.animated)(u.Z),
-    h = (0, i.animated)(o.OgN),
+    b = 1 / 300,
+    p = (0, a.animated)(c.Z),
+    g = (0, a.animated)(u.Z),
+    h = (0, a.animated)(o.OgN),
     m = l.memo(function (e) {
         let {
                 themeOverride: t,
                 hovered: n,
-                isContentDismissed: i,
+                isContentDismissed: a,
                 boxColors: c = {
                     dark: d,
                     light: f
@@ -84,20 +84,20 @@ let d = [
             u = (0, s.ZP)(),
             [m, _] = (function (e) {
                 let [t, n] = l.useState(!1),
-                    [r, i] = l.useState(Math.floor(7 * Math.random())),
-                    a = l.useRef(r);
+                    [r, a] = l.useState(Math.floor(7 * Math.random())),
+                    i = l.useRef(r);
                 return (
                     l.useEffect(() => {
-                        a.current = r;
+                        i.current = r;
                     }),
                     l.useEffect(() => {
                         if (e) return;
-                        let t = Math.random() <= p;
+                        let t = Math.random() <= b;
                         if ((n(t), !t)) {
                             let e;
                             do e = Math.floor(7 * Math.random());
-                            while (e === a.current);
-                            i(e);
+                            while (e === i.current);
+                            a(e);
                         }
                     }, [e]),
                     [t, r]
@@ -113,16 +113,16 @@ let d = [
                     friction: 24
                 }
             }),
-            v = i ? _ : 0,
-            O = (0, a.wj)(null != t ? t : u) ? c.dark[v] : c.light[v];
-        return !n && i
+            v = a ? _ : 0,
+            O = (0, i.wj)(null != t ? t : u) ? c.dark[v] : c.light[v];
+        return !n && a
             ? (0, r.jsx)(h, {})
-            : i && m
+            : a && m
               ? (0, r.jsx)(g, {
-                    isDark: (0, a.wj)(u),
+                    isDark: (0, i.wj)(u),
                     style: C
                 })
-              : (0, r.jsx)(b, {
+              : (0, r.jsx)(p, {
                     boxColor: O.box,
                     ribbonColor: O.ribbon,
                     style: C

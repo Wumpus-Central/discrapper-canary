@@ -1,7 +1,7 @@
-n.d(t, { a: () => a });
+n.d(t, { a: () => i });
 var r = n(818083),
     l = n(215023);
-let i = (0, r.B)({
+let a = (0, r.B)({
         kind: 'user',
         id: '2025-04_shop_shop_all_perf',
         label: 'Shop All Pagination Experiment',
@@ -14,8 +14,8 @@ let i = (0, r.B)({
             }
         ]
     }),
-    a = (e) => {
-        let { isPaginationEnabled: t } = i.useExperiment({ location: e });
+    i = (e) => {
+        let { isPaginationEnabled: t } = a.useExperiment({ location: e });
         return {
             isPaginationEnabled: t,
             categoriesPerPage: l.kN

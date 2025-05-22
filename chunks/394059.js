@@ -1,3 +1,3 @@
-t.d(n, { K: () => i });
-var r,
-    i = (((r = {})[(r.STREAM = 0)] = 'STREAM'), (r[(r.VIDEO = 1)] = 'VIDEO'), r);
+n.d(t, { K: () => r });
+var i,
+    r = (((i = {})[(i.STREAM = 0)] = 'STREAM'), (i[(i.VIDEO = 1)] = 'VIDEO'), i);

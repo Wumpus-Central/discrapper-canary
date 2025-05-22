@@ -19,8 +19,8 @@ function x(e) {
     let { transitionState: t, analyticsLocations: r, onClose: c } = e,
         d = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
         { analyticsLocations: f } = (0, s.ZP)(r, a.Z.EDIT_NAMEPLATE_MODAL),
-        { available: v, purchased: h, isFetchingCategories: x, isFetchingPurchases: O } = (0, u.yV)('NameplateModal'),
-        j = x || (O && 0 === h.length);
+        { available: v, purchased: h, isFetchingCategories: x, isFetchingPurchases: _ } = (0, u.yV)('NameplateModal'),
+        j = x || (_ && 0 === h.length);
     return (
         (0, i.useEffect)(() => {
             b.default.track(m.rMx.OPEN_MODAL, {
@@ -40,7 +40,7 @@ function x(e) {
                                 className: g.spinner,
                                 type: l.$jN.Type.SPINNING_CIRCLE
                             })
-                          : (0, n.jsx)(_, {
+                          : (0, n.jsx)(O, {
                                 user: d,
                                 onClose: c,
                                 available: v,
@@ -51,7 +51,7 @@ function x(e) {
               })
     );
 }
-function _(e) {
+function O(e) {
     let { user: t, available: r, purchased: o, analyticsLocations: s, onClose: u } = e,
         p = o.find((e) => {
             var r, n;
@@ -59,7 +59,7 @@ function _(e) {
         }),
         { pendingNameplate: b } = (0, d._A)(),
         [m, x] = (0, i.useState)(() => (void 0 !== b ? b : null != p ? p : null)),
-        [_, O] = (0, i.useState)(null != m),
+        [O, _] = (0, i.useState)(null != m),
         j = (0, i.useCallback)(
             (e) => {
                 u(),
@@ -94,7 +94,7 @@ function _(e) {
                     (0, n.jsx)(v.Z, {
                         selected: m,
                         onSelect: (e, t) => {
-                            x(e), O(null != t && t);
+                            x(e), _(null != t && t);
                         },
                         onOpenShop: j,
                         available: r,
@@ -103,13 +103,13 @@ function _(e) {
                     (0, n.jsx)(f.Z, {
                         user: t,
                         selectedNameplate: m,
-                        purchased: _
+                        purchased: O
                     })
                 ]
             }),
             (0, n.jsxs)(l.mzw, {
                 children: [
-                    _ || null == m
+                    O || null == m
                         ? (0, n.jsx)(l.zxk, {
                               disabled: void 0 === m,
                               onClick: () => {

@@ -1,25 +1,25 @@
-d.d(t, { Z: () => Z });
+d.d(t, { Z: () => x });
 var a = d(780384),
-    n = d(410030),
-    c = d(804413),
+    c = d(410030),
+    n = d(804413),
     s = d(291175),
     o = d(474936),
-    i = d(861885),
-    l = d(245013),
-    r = d(662190),
-    f = d(234372),
-    _ = d(23732),
-    p = d(643193),
-    u = d(107120),
-    E = d(261684),
-    b = d(831631),
-    T = d(594393),
-    h = d(636774),
-    m = d(705821),
-    U = d(927982),
-    g = d(254673),
-    M = d(38932),
-    N = d(56946);
+    i = d(538092),
+    l = d(533577),
+    r = d(799974),
+    f = d(264511),
+    _ = d(345614),
+    u = d(925773),
+    b = d(298342),
+    E = d(761822),
+    p = d(131664),
+    T = d(389457),
+    U = d(673252),
+    m = d(869708),
+    h = d(288829),
+    g = d(943323),
+    M = d(958657),
+    N = d(605493);
 let R = {
         [o.VU.PREMIUM_TENURE_1_MONTH]: {
             dark: ' #D76C1F, #F79C53',
@@ -54,10 +54,10 @@ let R = {
             light: ' #6881D4, #956CB8, #5491A0'
         }
     },
-    x = {
+    Z = {
         [o.VU.PREMIUM_TENURE_1_MONTH]: {
             dark: i.Z,
-            light: b.Z
+            light: p.Z
         },
         [o.VU.PREMIUM_TENURE_3_MONTH]: {
             dark: l.Z,
@@ -65,7 +65,7 @@ let R = {
         },
         [o.VU.PREMIUM_TENURE_6_MONTH]: {
             dark: r.Z,
-            light: h.Z
+            light: U.Z
         },
         [o.VU.PREMIUM_TENURE_12_MONTH]: {
             dark: f.Z,
@@ -73,14 +73,14 @@ let R = {
         },
         [o.VU.PREMIUM_TENURE_24_MONTH]: {
             dark: _.Z,
-            light: U.Z
+            light: h.Z
         },
         [o.VU.PREMIUM_TENURE_36_MONTH]: {
-            dark: p.Z,
+            dark: u.Z,
             light: g.Z
         },
         [o.VU.PREMIUM_TENURE_60_MONTH]: {
-            dark: u.Z,
+            dark: b.Z,
             light: M.Z
         },
         [o.VU.PREMIUM_TENURE_72_MONTH]: {
@@ -88,12 +88,12 @@ let R = {
             light: N.Z
         }
     };
-function Z() {
-    let e = (0, c.Z)(),
-        t = (0, a.wj)((0, n.ZP)());
+function x() {
+    let e = (0, n.Z)(),
+        t = (0, a.wj)((0, c.ZP)());
     if (!e) return null;
     let d = R[e],
-        i = x[e],
+        i = Z[e],
         l = {
             currentBadge: (0, s.fv)(e),
             currentBadgeTextGradient: t ? (null == d ? void 0 : d.dark) : null == d ? void 0 : d.light,

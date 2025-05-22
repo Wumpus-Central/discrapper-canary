@@ -1,16 +1,16 @@
 n.d(t, { I: () => E }), n(539854);
 var r = n(255367),
     l = n(73800),
-    i = n(120356),
-    a = n.n(i),
+    a = n(120356),
+    i = n.n(a),
     o = n(636977),
     s = n(442837),
     c = n(481060),
     u = n(37234),
     d = n(425493),
     f = n(410030),
-    p = n(984370),
-    b = n(341907),
+    b = n(984370),
+    p = n(341907),
     g = n(507808),
     h = n(822857),
     m = n(775451),
@@ -22,16 +22,16 @@ var r = n(255367),
     S = n(388032),
     j = n(774457);
 function y(e) {
-    let { tab: t, displayText: n, selected: l, handleTransition: i } = e;
-    return (0, r.jsx)(p.Z.Title, {
-        onClick: () => i(t),
+    let { tab: t, displayText: n, selected: l, handleTransition: a } = e;
+    return (0, r.jsx)(b.Z.Title, {
+        onClick: () => a(t),
         wrapperClassName: j.tabWrapper,
-        className: a()(j.tab, { [j.selected]: l }),
+        className: i()(j.tab, { [j.selected]: l }),
         children: n
     });
 }
 function E(e) {
-    let { isFullScreen: t, isLayer: n, onClose: i, selectedTab: E, handleTransition: P } = e,
+    let { isFullScreen: t, isLayer: n, onClose: a, selectedTab: E, handleTransition: P } = e,
         k = (0, f.ZP)(),
         T = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
         I = (null == T ? void 0 : T.isStaff()) || (null == T ? void 0 : T.isStaffPersonal()) || !1,
@@ -51,7 +51,7 @@ function E(e) {
             tab: O.AW.ORBS,
             displayText: S.intl.string(S.t['KUYR+P'])
         });
-    let L = n ? v.DR : i,
+    let L = n ? v.DR : a,
         N = E === O.AW.ORBS ? x.ZY5.SHOP_ORBS_TAB : x.ZY5.COLLECTIBLES_SHOP,
         R = l.useCallback(() => {
             t && (L(), (0, u.Ou)()),
@@ -60,13 +60,13 @@ function E(e) {
                     sectionType: x.jXE.ORBS_BALANCE_MENU,
                     ctaObject: x.qAy.CTA_TO_QUEST_HOME
                 }),
-                (0, b.navigateToQuestHome)({ fromContent: o.j.ORBS_BALANCE_MENU });
+                (0, p.navigateToQuestHome)({ fromContent: o.j.ORBS_BALANCE_MENU });
         }, [L, t, N]);
     return (0, r.jsx)(c.f6W, {
         theme: k,
         children: (e) =>
-            (0, r.jsxs)(p.Z, {
-                className: a()(e, j.headerBar, { [j.fullscreenHeaderBar]: t }),
+            (0, r.jsxs)(b.Z, {
+                className: i()(e, j.headerBar, { [j.fullscreenHeaderBar]: t }),
                 innerClassname: w ? j.headerBarInner : void 0,
                 toolbar: t || !I ? null : (0, r.jsx)(l.Fragment, {}),
                 children: [
@@ -74,7 +74,7 @@ function E(e) {
                         className: j.shopHomeLink,
                         onClick: () => P(O.AW.HOME),
                         'aria-label': S.intl.string(S.t.pWG4zc) + ' home',
-                        children: [(0, r.jsx)(C.Z, { className: j.discordLogo }), (0, r.jsx)(p.Z.Title, { children: S.intl.string(S.t.pWG4zc) })]
+                        children: [(0, r.jsx)(C.Z, { className: j.discordLogo }), (0, r.jsx)(b.Z.Title, { children: S.intl.string(S.t.pWG4zc) })]
                     }),
                     (0, r.jsx)('div', {
                         className: j.tabs,
