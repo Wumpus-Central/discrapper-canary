@@ -54,31 +54,31 @@ let g = (e, t) => {
         return n ? 'spoiler' : null;
     };
 function y(e) {
-    switch (e) {
+    switch (e.type) {
         case s.Ah.EMBED:
-            return o.lJ.Embed;
+            return {
+                type: o.lJ.Embed,
+                media: e
+            };
         case s.Ah.ATTACHMENT:
-            return o.lJ.Attachment;
+            return {
+                type: o.lJ.Attachment,
+                media: e
+            };
+        case s.Ah.COMPONENT:
+            return {
+                type: o.lJ.GenericMedia,
+                media: e.srcUnfurledMediaItem
+            };
         default:
-            return;
+            return null;
     }
 }
 function O(e, t, n) {
     if (null == e) return [!1, void 0];
     if (n && (0, o.Sv)(e.contentScanVersion)) return [!0, 'potential_explicit_content'];
-    let r = y(e.type);
-    return null != r &&
-        (0, o.KP)(
-            {
-                type: r,
-                media: e
-            },
-            n
-        )
-        ? [!0, 'explicit_content']
-        : e.spoiler
-          ? [t, 'spoiler']
-          : [!1, void 0];
+    let r = y(e);
+    return null != r && (0, o.KP)(r, n) ? [!0, 'explicit_content'] : e.spoiler ? [t, 'spoiler'] : [!1, void 0];
 }
 function v(e) {
     let { channel: t, media: n } = e,

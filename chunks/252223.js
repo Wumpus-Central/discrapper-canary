@@ -55,7 +55,7 @@ function C(e) {
     let { user: t, activities: n, applicationStream: o, voiceChannel: A, textClassName: C, iconClassName: P, textSize: R = 'xs', animateEmoji: w = !0, animateText: D = !1, disableTextScroll: L = !1, hasQuest: x = !1, hideEmoji: k = !1, hideTooltip: M = !1 } = e;
     (0, d.Z)(null == t ? void 0 : t.id);
     let j = (null == o ? void 0 : o.discoverable) !== !1 ? o : null,
-        { enabledWithActivityStatus: U } = (0, f.Z)({ location: 'ActivityStatus' }),
+        U = (0, f.Z)({ location: 'ActivityStatus' }),
         G = i.useMemo(() => {
             var e, t;
             let r =

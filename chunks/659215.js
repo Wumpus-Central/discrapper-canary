@@ -67,9 +67,9 @@ function f(e) {
                 o.Z.open(u.oAB.PREMIUM), r();
             }
         }),
-        j = (0, a.N)(),
-        O = (0, l.Ng)(),
-        v = null != j || null != O;
+        O = (0, a.N)(),
+        j = (0, l.Ng)(),
+        v = null != O || null != j;
     return (0, i.jsx)(
         s.Z,
         m(
@@ -89,7 +89,7 @@ function f(e) {
                 },
                 onClose: r,
                 subscribeButtonText: v ? void 0 : d.intl.string(d.t['8x0jKS']),
-                subscriptionTier: null != (n = null == j || null == (t = j.subscription_trial) ? void 0 : t.sku_id) ? n : c.Si.TIER_2,
+                subscriptionTier: null != (n = null == O || null == (t = O.subscription_trial) ? void 0 : t.sku_id) ? n : c.Si.TIER_2,
                 backButtonText: d.intl.string(d.t.f3Pet7)
             },
             g

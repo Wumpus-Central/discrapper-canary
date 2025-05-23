@@ -19,11 +19,11 @@ var i,
 let g = (e) => {
     let { type: t, guild: i, closePopout: f, ctaRef: g } = e,
         b = (0, c.Dt)(),
-        [j, O] = o.useState(!1),
+        [O, j] = o.useState(!1),
         v = (0, l.e7)([d.Z], () => d.Z.isLurking(i.id), [i.id]);
     o.useEffect(() => {
-        j && !v && f();
-    }, [j, v, f]);
+        O && !v && f();
+    }, [O, v, f]);
     let y = null,
         T = p.intl.string(p.t.d7b1p6);
     switch (t) {
@@ -37,12 +37,12 @@ let g = (e) => {
             return (0, u.vE)(t);
     }
     if (null == y) return null;
-    let x = async () => {
-        O(!0);
+    let S = async () => {
+        j(!0);
         try {
             await s.Z.joinGuild(i.id, { source: h.vtS.CHAT_INPUT_BLOCKER }), f();
         } catch (e) {
-            O(!1);
+            j(!1);
         }
     };
     return (0, r.jsxs)(a.VqE, {
@@ -72,8 +72,8 @@ let g = (e) => {
                         children: [
                             (0, r.jsx)(a.zxk, {
                                 buttonRef: g,
-                                onClick: x,
-                                submitting: j,
+                                onClick: S,
+                                submitting: O,
                                 children: p.intl.string(p.t['9VLmlZ'])
                             }),
                             (0, r.jsx)(a.zxk, {

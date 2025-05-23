@@ -13,17 +13,17 @@ var i = n(255367),
     m = n(981341),
     f = n(994648);
 let g = r.memo(function (e) {
-    let { channelId: t, messageId: n, emoji: g, useChatFontScaling: b, color: j, count: O, emojiSize: v } = e,
+    let { channelId: t, messageId: n, emoji: g, useChatFontScaling: b, color: O, count: j, emojiSize: v } = e,
         y = (0, o.e7)([u.Z], () => u.Z.getEffectForEmojiId(t, n, g)),
         T = r.useMemo(
             () =>
-                (0, p.Zn)(g, j, t, {
+                (0, p.Zn)(g, O, t, {
                     key: y,
                     messageId: n
                 }),
-            [j, y, g, t, n]
+            [O, y, g, t, n]
         ),
-        [x, S] = r.useState(!1),
+        [S, x] = r.useState(!1),
         _ = (0, o.e7)([a.Z], () => a.Z.useReducedMotion),
         P = c.Yk.useSetting(),
         E = r.useCallback(() => {
@@ -36,10 +36,10 @@ let g = r.memo(function (e) {
         }, [g, t, n]);
     return (r.useEffect(() => {
         let e = () => {
-            if (x) return;
+            if (S) return;
             let e = (0, d.vJ)(''.concat(Date.now()).concat(t).concat(n).concat(g.name)) % 10;
-            (e += O > 4 ? 4 : O - 1) > 7 &&
-                (S(!0),
+            (e += j > 4 ? 4 : j - 1) > 7 &&
+                (x(!0),
                 (0, s.T6)({
                     channelId: t,
                     messageId: n,
@@ -47,13 +47,13 @@ let g = r.memo(function (e) {
                     key: u.I.RANDOM
                 }));
         };
-        if (x || (_ && !P) || !P) return;
+        if (S || (_ && !P) || !P) return;
         e();
         let i = setInterval(e, 5000);
         return () => {
             clearInterval(i);
         };
-    }, [P, t, O, g, g.name, x, n, _]),
+    }, [P, t, j, g, g.name, S, n, _]),
     null == y)
         ? null
         : (0, i.jsx)(h.Z, {

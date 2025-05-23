@@ -21,8 +21,8 @@ var r = n(255367),
     y = n(65443),
     T = n(340100),
     O = n(644646),
-    E = n(667105),
-    N = n(341907),
+    N = n(667105),
+    E = n(341907),
     q = n(128535),
     S = n(87894),
     P = n(2660),
@@ -103,7 +103,7 @@ function Z(e) {
         p = (0, a.e7)([g.Z], () => g.Z.isEnrolling(t.id)),
         h = (0, f.q8)(t),
         j = (0, f.Vl)(t),
-        b = (0, E.Ks)({
+        b = (0, N.Ks)({
             progressState: n,
             quest: t,
             location: i,
@@ -142,7 +142,7 @@ function Z(e) {
 }
 let L = (e) => {
     var t;
-    let { quest: n, location: i, size: c, isFocused: E, isQuestExpired: L, isExpanded: B, isAnimating: U, contentPosition: Q } = e,
+    let { quest: n, location: i, size: c, isFocused: N, isQuestExpired: L, isExpanded: B, isAnimating: U, contentPosition: Q } = e,
         W = (0, x._Q)(n),
         z = (0, x.B6)(null == (t = n.userStatus) ? void 0 : t.completedAt, {
             year: 'numeric',
@@ -176,7 +176,7 @@ let L = (e) => {
         eu = L && !G,
         ed = ee.length > 0 && Y && (0, f.$J)(n) && F && !G && !el,
         em = (0, r.jsx)(O.Z, {
-            autoplay: E,
+            autoplay: N,
             className: o()(I.gridImg, {
                 [I.questRewardGiftInventory]: Y && 'lg' === c,
                 [I.questRewardEmbed]: V && 'lg' === c,
@@ -219,7 +219,7 @@ let L = (e) => {
                                             ? (0, r.jsx)(P.Z, {
                                                   questConfig: n.config,
                                                   fallback: em,
-                                                  isFocused: E
+                                                  isFocused: N
                                               })
                                             : em
                                     ]
@@ -254,7 +254,7 @@ let L = (e) => {
                                               y = u ? v : C,
                                               T = (0, f.Kr)(o.config),
                                               O = (0, f.b7)(o),
-                                              E = (0, b.U)();
+                                              N = (0, b.U)();
                                           if (h) {
                                               let e = j
                                                       ? (0, f.o9)({
@@ -280,21 +280,21 @@ let L = (e) => {
                                                         reward: y,
                                                         date: x
                                                     });
-                                          let N = j
+                                          let E = j
                                               ? (0, f.o9)({
                                                     quest: o,
                                                     idx: 0
                                                 })
                                               : null;
                                           return l
-                                              ? _.intl.formatToPlainString(_.t.DT3aub, { reward: null != (i = null == N ? void 0 : N.messages.nameWithArticle) ? i : y })
-                                              : null != N && null != N.approximateCount
+                                              ? _.intl.formatToPlainString(_.t.DT3aub, { reward: null != (i = null == E ? void 0 : E.messages.nameWithArticle) ? i : y })
+                                              : null != E && null != E.approximateCount
                                                 ? _.intl.format(_.t['4bMK19'], {
-                                                      maxReward: N.messages.nameWithArticle,
-                                                      maxRewardCount: (0, m.Bs)(N.approximateCount, a),
+                                                      maxReward: E.messages.nameWithArticle,
+                                                      maxRewardCount: (0, m.Bs)(E.approximateCount, a),
                                                       helpCenterLink: d.Z.getArticleURL(R.BhN.QUESTS_LEARN_MORE)
                                                   })
-                                                : E
+                                                : N
                                                   ? p
                                                   : null != T
                                                     ? _.intl.formatToPlainString(_.t.Pu5eyM, {
@@ -328,7 +328,7 @@ let L = (e) => {
                                   }),
                                   (0, r.jsx)(l.zxk, {
                                       color: l.Ttl.BRAND,
-                                      onClick: () => (0, N.openQuestMinorEnrollmentBlockModal)(n, i),
+                                      onClick: () => (0, E.openQuestMinorEnrollmentBlockModal)(n, i),
                                       className: I.questEnrollmentBlockedButton,
                                       children: _.intl.string(_.t.vY9GgI)
                                   })
@@ -341,7 +341,7 @@ let L = (e) => {
                                       (0, r.jsx)(k, {
                                           containerSize: c,
                                           onClick: () => {
-                                              (0, N.navigateToQuestHome)({
+                                              (0, E.navigateToQuestHome)({
                                                   fromContent: i,
                                                   questId: n.id
                                               }),

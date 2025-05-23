@@ -36,7 +36,7 @@ function L(t) {
     let { transitionState: a, onClose: L, sourceAnalyticsContext: Z, sourceAnalyticsLocations: R, prompt: B = null, label: U = null, showLabelSelectorNewTooltip: M = !1 } = t,
         z = (0, g.p)({ location: 'CustomStatusModalWithPreview' }),
         Y = (0, S.P)({ location: 'CustomStatusModalWithPreview' }),
-        { isEligibleForCustomStatusLabels: F } = (0, j.Z)({ location: 'CustomStatusModalWithPreview' }),
+        F = (0, j.Z)({ location: 'CustomStatusModalWithPreview' }),
         W = (0, o.e7)([p.default], () => {
             var t;
             return null != (t = p.default.getCurrentUser()) ? t : null;

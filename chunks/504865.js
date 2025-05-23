@@ -1,31 +1,50 @@
-n.d(t, { Z: () => C });
-var r = n(255367);
+n.d(t, { Z: () => m });
+var i = n(255367);
 n(73800);
-var i = n(120356),
-    l = n.n(i),
+var r = n(120356),
+    l = n.n(r),
     a = n(442837),
     s = n(481060),
     o = n(509545),
     c = n(74538),
     u = n(474936),
     d = n(106112);
-let C = function (e) {
-    let { subscriptionTier: t, interval: n = u.rV.MONTH, className: i, isGift: C = !1, variant: m, priceOptions: g, isMarketingPageV2: p } = e;
+let m = function (e) {
+    let { subscriptionTier: t, interval: n = u.rV.MONTH, className: r, isGift: m = !1, variant: C, priceOptions: g, isMarketingPageV2: x, enablePremiumRebrandDesign: p } = e;
     if (!(0, a.e7)([o.Z], () => o.Z.isLoadedForPremiumSKUs()))
-        return (0, r.jsx)(s.$jN, {
+        return (0, i.jsx)(s.$jN, {
             type: s.$jN.Type.PULSING_ELLIPSIS,
             className: d.priceSpinner
         });
-    let x = o.Z.getForSkuAndInterval((0, c.Wz)(t), n),
-        f = null != x ? (0, c.gy)(x, g, !1, C) : null;
-    return (0, r.jsx)(s.X6q, {
-        color: p ? 'none' : 'always-white',
-        variant: null != m ? m : 'heading-md/medium',
-        className: l()(d.pricePerInterval, i),
-        children: (0, r.jsxs)(r.Fragment, {
+    let h = o.Z.getForSkuAndInterval((0, c.Wz)(t), n),
+        f = null != h ? (0, c.gy)(h, g, !1, m) : null;
+    if (p) {
+        let e = n === u.rV.YEAR;
+        return (0, i.jsxs)('div', {
             children: [
-                (0, r.jsx)('span', {
-                    className: p ? void 0 : d.price,
+                (0, i.jsx)(s.Text, {
+                    variant: e ? 'heading-md/semibold' : 'heading-xxl/extrabold',
+                    color: e ? 'text-muted' : 'text-primary',
+                    tag: 'span',
+                    children: (0, i.jsx)('span', { children: f })
+                }),
+                (0, i.jsxs)(s.Text, {
+                    variant: 'text-xs/semibold',
+                    tag: 'span',
+                    color: 'text-muted',
+                    children: ['/', (0, c.eP)(n)]
+                })
+            ]
+        });
+    }
+    return (0, i.jsx)(s.X6q, {
+        color: x ? 'none' : 'always-white',
+        variant: null != C ? C : 'heading-md/medium',
+        className: l()(d.pricePerInterval, r),
+        children: (0, i.jsxs)(i.Fragment, {
+            children: [
+                (0, i.jsx)('span', {
+                    className: x ? void 0 : d.price,
                     children: f
                 }),
                 ' / ',

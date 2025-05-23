@@ -36,8 +36,8 @@ function h(e) {
 function p(e) {
     let { user: t, channelId: n, guildId: p, messageId: m, stopPropagation: f = !1, ariaLabel: g } = e,
         b = r.useRef(null),
-        { analyticsLocations: j } = (0, a.ZP)(l.Z.USERNAME),
-        O = (0, s.$V)(p, 'useUsernameHook'),
+        { analyticsLocations: O } = (0, a.ZP)(l.Z.USERNAME),
+        j = (0, s.$V)(p, 'useUsernameHook'),
         v = r.useCallback(
             (e) => {
                 let i = u.Z.getChannel(n);
@@ -48,7 +48,7 @@ function p(e) {
     return r.useCallback(
         (e) => (r, l) => {
             let s = null == e ? void 0 : e.colorStrings,
-                u = O && null != s && null != s.primaryColor && null != s.secondaryColor,
+                u = j && null != s && null != s.primaryColor && null != s.secondaryColor,
                 d = (t) => {
                     var n, l;
                     return (0, i.jsx)(
@@ -85,7 +85,7 @@ function p(e) {
             return (0, i.jsx)(
                 a.Gt,
                 {
-                    value: j,
+                    value: O,
                     children:
                         null != t
                             ? (0, i.jsx)(c.Z, {
@@ -125,6 +125,6 @@ function p(e) {
                 l
             );
         },
-        [j, t, n, p, m, v, f, g, O]
+        [O, t, n, p, m, v, f, g, j]
     );
 }

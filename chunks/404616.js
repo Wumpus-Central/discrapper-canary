@@ -24,13 +24,13 @@ var i = n(255367),
     f = n(481060),
     g = n(738619),
     b = n(393238),
-    j = n(963374),
-    O = n(884338),
+    O = n(963374),
+    j = n(884338),
     v = n(168107),
     y = n(480916),
     T = n(446489),
-    x = n(824578),
-    S = n(95398),
+    S = n(824578),
+    x = n(95398),
     _ = n(247206),
     P = n(406432),
     E = n(169525),
@@ -97,8 +97,8 @@ let el = 72,
             {
                 channel: m,
                 isOpen: g,
-                messageCount: j,
-                firstMessage: O,
+                messageCount: O,
+                firstMessage: j,
                 content: v,
                 media: y
             } = (function (e) {
@@ -121,11 +121,11 @@ let el = 72,
                 threadId: t,
                 overrideMedia: a
             }),
-            { ref: T, height: x } = (0, b.ZP)(),
-            S = (0, J.xH)((e) => e.setCardHeight, d.X);
+            { ref: T, height: S } = (0, b.ZP)(),
+            x = (0, J.xH)((e) => e.setCardHeight, d.X);
         r.useEffect(() => {
-            null != x && S(t, x);
-        }, [x, S, t]),
+            null != S && x(t, S);
+        }, [S, x, t]),
             r.useEffect(() => {
                 null == o || o(T.current, t);
             }, [T, o, t]);
@@ -173,7 +173,7 @@ let el = 72,
                             onContextMenu: E,
                             'aria-label': en.intl.formatToPlainString(en.t.pgYN6e, {
                                 title: m.name,
-                                count: j
+                                count: O
                             }),
                             className: ei.focusTarget,
                             onFocus: Z,
@@ -188,7 +188,7 @@ let el = 72,
                         (0, i.jsx)(f.y5t, {
                             children: (0, i.jsx)(ec, {
                                 channel: m,
-                                firstMessage: O,
+                                firstMessage: j,
                                 content: v,
                                 hasMediaAttachment: null != y,
                                 containerWidth: u
@@ -198,15 +198,15 @@ let el = 72,
                             enabled: !N,
                             children: (0, i.jsx)(eh, {
                                 channel: m,
-                                firstMessage: O,
+                                firstMessage: j,
                                 facepileRef: _
                             })
                         })
                     ]
                 }),
-                (null == O ? void 0 : O.blocked) || null == y
+                (null == j ? void 0 : j.blocked) || null == y
                     ? null
-                    : (0, i.jsx)(eO, {
+                    : (0, i.jsx)(ej, {
                           channel: m,
                           firstMedia: y
                       })
@@ -274,7 +274,7 @@ function ec(e) {
 function eu(e) {
     let t = (0, p.e7)([W.Z], () => W.Z.getHasSearchResults(e.parent_id)),
         n = (0, p.e7)([W.Z], () => W.Z.getSearchQuery(e.parent_id)),
-        i = r.useMemo(() => (0, j.nC)(t && null != n ? n : ''), [t, n]);
+        i = r.useMemo(() => (0, O.nC)(t && null != n ? n : ''), [t, n]);
     return r.useMemo(
         () =>
             (0, I.ZP)(
@@ -340,7 +340,7 @@ let ed = r.memo(function (e) {
                         children: null == t ? (u ? null : en.intl.string(en.t.mE3KJC)) : e
                     });
     }
-    return (0, i.jsxs)(S.aQ.Provider, {
+    return (0, i.jsxs)(x.aQ.Provider, {
         value: (0, R.Z)(h, d),
         children: [
             !s &&
@@ -359,7 +359,7 @@ let ed = r.memo(function (e) {
 });
 function eh(e) {
     let { channel: t, facepileRef: n, firstMessage: r } = e,
-        o = (0, x.Q)(t.id),
+        o = (0, S.Q)(t.id),
         l = (null == r ? void 0 : r.reactions) != null && r.reactions.length > 0;
     return (0, i.jsxs)('div', {
         className: ei.footer,
@@ -543,7 +543,7 @@ function eb(e) {
         o = (0, G.iM)(t, n);
     return (0, i.jsx)('div', {
         ref: r,
-        children: (0, i.jsx)(O.Z, {
+        children: (0, i.jsx)(j.Z, {
             className: ei.__invalid_facepile,
             showDefaultAvatarsForNullUsers: !0,
             guildId: t.guild_id,
@@ -555,58 +555,53 @@ function eb(e) {
         })
     });
 }
-function ej(e) {
-    let t,
-        n,
-        { firstMedia: r, shouldObscure: o, obscureReason: a, shouldShowAgeVerification: s } = e,
-        c = (0, p.e7)([F.Z], () => F.Z.isFocused()),
-        u = (0, P.d$)(r.src),
-        d = M.QK.useSetting(),
-        h = (0, E.MC)(a),
-        { src: m, width: g, height: b, alt: j } = r;
-    if ((b > g ? (n = ea) : (t = el), s)) {
-        var O;
+function eO(e) {
+    let { firstMedia: t, shouldObscure: n, obscureReason: r, shouldShowAgeVerification: o } = e,
+        a = (0, p.e7)([F.Z], () => F.Z.isFocused()),
+        s = (0, P.d$)(t.src),
+        c = M.QK.useSetting(),
+        u = (0, E.MC)(r),
+        { src: d, width: h, height: m, alt: g } = t;
+    if (o) {
+        var b;
         return (0, i.jsx)('div', {
-            'aria-label': null != (O = null != h ? h : j) ? O : en.intl.string(en.t.hqwnc3),
+            'aria-label': null != (b = null != u ? u : g) ? b : en.intl.string(en.t.hqwnc3),
             className: l()(ei.thumbnailContainer, ei.obscuredThumbnailPlaceholder),
             style: {
-                maxWidth: t,
-                maxHeight: n,
-                height: b,
-                width: g
+                maxWidth: ea,
+                maxHeight: el,
+                height: m,
+                width: h
             }
         });
     }
-    return m.startsWith('data:')
+    return d.startsWith('data:')
         ? (0, i.jsx)(f.Eep, {
-              src: m,
-              maxHeight: t,
-              maxWidth: n,
-              width: g,
-              height: b,
-              alt: null != j && o ? h : j,
+              src: d,
+              width: h,
+              height: m,
+              minWidth: ea,
+              minHeight: el,
+              alt: null != g && n ? u : g,
               className: ei.thumbnailContainer,
-              imageClassName: l()({
-                  [ei.obscured]: o,
-                  [ei.thumbnailOverride]: !0
-              })
+              imageClassName: l()(ei.thumbnailOverride, { [ei.obscured]: n })
           })
         : (0, N.Yi)({
-              src: m,
-              maxHeight: t,
-              maxWidth: n,
-              width: g,
-              height: b,
-              alt: null != j && o ? h : j,
-              autoPlay: d,
-              animated: u && !o && c,
-              srcIsAnimated: r.srcIsAnimated,
+              src: d,
+              width: h,
+              height: m,
+              minWidth: ea,
+              minHeight: el,
+              alt: null != g && n ? u : g,
+              autoPlay: c,
+              animated: s && !n && a,
+              srcIsAnimated: t.srcIsAnimated,
               containerClassName: ei.thumbnailContainer,
-              imageClassName: l()({ [ei.obscured]: o }),
+              imageClassName: l()(ei.thumbnailOverride, { [ei.obscured]: n }),
               analyticsSource: 'ForumPostMediaPreview'
           });
 }
-function eO(e) {
+function ej(e) {
     let { channel: t, firstMedia: n } = e,
         [r, o] = (0, E.hL)({
             media: n,
@@ -621,7 +616,7 @@ function eO(e) {
                 e.stopPropagation(), l && (e.preventDefault(), e.nativeEvent.stopImmediatePropagation(), v.Z.showAgeVerificationGetStartedModal(y.cU.FORUM_POST_MEDIA_PREVIEW));
             },
             children: [
-                (0, i.jsx)(ej, {
+                (0, i.jsx)(eO, {
                     firstMedia: n,
                     shouldObscure: r,
                     obscureReason: o,

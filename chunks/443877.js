@@ -16,8 +16,8 @@ function p(e) {
         f = (0, i.e7)([l.Z], () => null != p && l.Z.isLurking(p), [p]),
         g = (0, i.e7)([s.ZP], () => null != p && s.ZP.isCurrentUserGuest(p), [p]),
         b = (0, i.e7)([u.Z], () => m && u.Z.can(h.Plq.ADD_REACTIONS, e), [m, e]),
-        j = (0, r.ux)(p),
-        [, O] = (0, o.AB)(p),
+        O = (0, r.ux)(p),
+        [, j] = (0, o.AB)(p),
         v = (0, a.$R)(e);
     return null == e
         ? {
@@ -61,9 +61,9 @@ function p(e) {
                   canAddNewReactions: b,
                   isLurking: f,
                   isGuest: g,
-                  communicationDisabled: O,
+                  communicationDisabled: j,
                   isActiveChannelOrUnarchivableThread: v,
-                  isAutomodQuarantined: j
+                  isAutomodQuarantined: O
               })
           )),
           (n = n =

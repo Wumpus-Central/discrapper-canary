@@ -44,58 +44,58 @@ function p(e, t) {
         f = l.Z.getChannel(e.getChannelId()),
         g = null == f || f.isPrivate() ? null : f.getGuildId(),
         b = e.getReaction(t),
-        j = i === u.O.BURST,
-        O = r()(m)
+        O = i === u.O.BURST,
+        j = r()(m)
             .reject((e) => s.Z.isBlockedOrIgnored(e.id))
             .take(3)
             .map((e) => c.ZP.getName(g, null == f ? void 0 : f.id, e))
             .value();
-    if (0 === O.length) return '';
-    let v = j ? h.burst : h.standard,
-        y = Math.max(0, (null != (n = j ? (null == b ? void 0 : b.burst_count) : null == b ? void 0 : b.count) ? n : 0) - O.length),
+    if (0 === j.length) return '';
+    let v = O ? h.burst : h.standard,
+        y = Math.max(0, (null != (n = O ? (null == b ? void 0 : b.burst_count) : null == b ? void 0 : b.count) ? n : 0) - j.length),
         T = (0, o.Lh)(t);
-    if (1 === O.length)
+    if (1 === j.length)
         if (!(y > 0))
             return d.intl.formatToPlainString(v.reactionTooltip1, {
-                a: O[0],
+                a: j[0],
                 emojiName: T
             });
         else if (null != p)
             return d.intl.format(v.reactionTooltip1NInteractive, {
-                a: O[0],
+                a: j[0],
                 n: y,
                 emojiName: T,
                 onClick: p
             });
         else
             return d.intl.formatToPlainString(v.reactionTooltip1N, {
-                a: O[0],
+                a: j[0],
                 n: y,
                 emojiName: T
             });
-    if (2 === O.length)
+    if (2 === j.length)
         if (!(y > 0))
             return d.intl.formatToPlainString(v.reactionTooltip2, {
-                a: O[0],
-                b: O[1],
+                a: j[0],
+                b: j[1],
                 emojiName: T
             });
         else if (null != p)
             return d.intl.format(v.reactionTooltip2NInteractive, {
-                a: O[0],
-                b: O[1],
+                a: j[0],
+                b: j[1],
                 n: y,
                 emojiName: T,
                 onClick: p
             });
         else
             return d.intl.formatToPlainString(v.reactionTooltip2N, {
-                a: O[0],
-                b: O[1],
+                a: j[0],
+                b: j[1],
                 n: y,
                 emojiName: T
             });
-    return 3 !== O.length
+    return 3 !== j.length
         ? null != p
             ? d.intl.format(v.reactionTooltipNInteractive, {
                   n: y,
@@ -109,24 +109,24 @@ function p(e, t) {
         : y > 0
           ? null != p
               ? d.intl.format(v.reactionTooltip3NInteractive, {
-                    a: O[0],
-                    b: O[1],
-                    c: O[2],
+                    a: j[0],
+                    b: j[1],
+                    c: j[2],
                     n: y,
                     emojiName: T,
                     onClick: p
                 })
               : d.intl.formatToPlainString(v.reactionTooltip3N, {
-                    a: O[0],
-                    b: O[1],
-                    c: O[2],
+                    a: j[0],
+                    b: j[1],
+                    c: j[2],
                     n: y,
                     emojiName: T
                 })
           : d.intl.formatToPlainString(v.reactionTooltip3, {
-                a: O[0],
-                b: O[1],
-                c: O[2],
+                a: j[0],
+                b: j[1],
+                c: j[2],
                 emojiName: T
             });
 }

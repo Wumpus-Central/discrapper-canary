@@ -38,14 +38,14 @@ function g(e) {
             shownTags: d,
             remainingTags: g,
             moreTagsCount: b,
-            isPinned: j,
-            shouldRenderTagsRow: O
+            isPinned: O,
+            shouldRenderTagsRow: j
         } = f({
             channel: t,
             isNew: n
         }),
         { tagFilter: v } = (0, s.H)(t.id);
-    return O
+    return j
         ? (0, i.jsxs)('div', {
               className: o()(m.tags, c),
               children: [
@@ -56,7 +56,7 @@ function g(e) {
                             text: h.intl.string(h.t.y2b7CA)
                         })
                       : null,
-                  j &&
+                  O &&
                       (0, i.jsx)('div', {
                           className: m.pinIcon,
                           children: (0, i.jsx)(a.ua7, {

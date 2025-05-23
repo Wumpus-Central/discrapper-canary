@@ -5,22 +5,23 @@ var n = r(73800),
     c = r(353250),
     o = r(981631);
 function s(e) {
-    let t = n.useRef(!0);
+    let { onReject: t, analyticsType: r = 'Guild Join Captcha' } = e,
+        s = n.useRef(!0);
     return (
         (0, a.ZP)(() => () => {
-            t.current && (null == e || e(c.CaptchaError.CANCEL));
+            s.current && (null == t || t(c.CaptchaError.CANCEL));
         }),
         n.useEffect(
             () => (
-                i.default.track(o.rMx.OPEN_MODAL, { type: 'Guild Join Captcha' }),
+                i.default.track(o.rMx.OPEN_MODAL, { type: r }),
                 () => {
-                    t.current && i.default.track(o.rMx.MODAL_DISMISSED, { type: 'Guild Join Captcha' });
+                    s.current && i.default.track(o.rMx.MODAL_DISMISSED, { type: r });
                 }
             ),
-            []
+            [r]
         ),
         () => {
-            t.current = !1;
+            s.current = !1;
         }
     );
 }

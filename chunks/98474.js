@@ -38,7 +38,7 @@ function b(e) {
     }
     return e;
 }
-function j(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,11 +56,11 @@ function j(e, t) {
         e
     );
 }
-let O = [];
+let j = [];
 function v(e) {
     let { messageId: t, emoji: n, startPosition: v, targetPosition: y } = e,
-        [T, x] = r.useState(0),
-        [S, _] = r.useState(0),
+        [T, S] = r.useState(0),
+        [x, _] = r.useState(0),
         [P, E] = r.useState(null),
         { confettiCanvas: C } = r.useContext(u.h),
         R = (0, o.uR)(C, P),
@@ -114,31 +114,31 @@ function v(e) {
             },
             onChange: (e) => {
                 let { x: t } = e;
-                x(t);
+                S(t);
             }
         });
     return (
         r.useEffect(() => {
             T > 0 &&
-                S > 0 &&
+                x > 0 &&
                 R.createConfetti(
-                    j(b({}, f.We), {
+                    O(b({}, f.We), {
                         position: {
                             type: 'static',
                             value: {
                                 x: T,
-                                y: S
+                                y: x
                             }
                         }
                     })
                 );
-        }, [R, T, S]),
+        }, [R, T, x]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o.Ji, {
                     ref: E,
                     sprites: I,
-                    colors: O,
+                    colors: j,
                     spriteWidth: f.Ko,
                     spriteHeight: f.Ko
                 }),
@@ -147,7 +147,7 @@ function v(e) {
                         style: b({}, Z),
                         className: g.emojiContainer,
                         children: (0, i.jsx)(l.animated.div, {
-                            style: j(b({}, A), { opacity: A.opacity }),
+                            style: O(b({}, A), { opacity: A.opacity }),
                             children: (0, i.jsx)(c.Z, {
                                 className: g.emoji,
                                 emojiId: n.id,

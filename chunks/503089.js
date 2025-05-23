@@ -38,7 +38,7 @@ function O(e, t, n) {
         e
     );
 }
-function j(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,7 +54,7 @@ function j(e) {
     }
     return e;
 }
-function x(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -94,7 +94,7 @@ function E(e) {
         section: i.section,
         children: (0, r.jsx)(
             c,
-            x(j({}, u), {
+            j(x({}, u), {
                 setPreventNavigation: o,
                 refToScroller: a
             })
@@ -222,7 +222,7 @@ class w extends i.PureComponent {
             O(this, '_intensity', C),
             O(this, '_subscribedStores', []),
             O(this, 'scrollerRef', i.createRef()),
-            O(this, 'state', x(j({}, y), { sidebarOpen: this.props.section !== _.oAB.SUBSCRIPTIONS && this.props.section !== _.oAB.PROFILE_CUSTOMIZATION })),
+            O(this, 'state', j(x({}, y), { sidebarOpen: this.props.section !== _.oAB.SUBSCRIPTIONS && this.props.section !== _.oAB.PROFILE_CUSTOMIZATION })),
             O(this, 'setPreventNavigation', (e, t) => {
                 this.setState({
                     shouldPreventNavigation: e,
@@ -241,7 +241,7 @@ class w extends i.PureComponent {
                             s.forEach((e) => {
                                 this._subscribedStores.includes(e) || (e.addChangeListener(this.handleNoticeStoreUpdate), this._subscribedStores.push(e));
                             }),
-                            this.setState(x(j({}, y), { sidebarOpen: !1 }));
+                            this.setState(j(x({}, y), { sidebarOpen: !1 }));
                     };
                 this.validNavigation() &&
                     !r &&
@@ -282,7 +282,7 @@ class w extends i.PureComponent {
                         : null != p
                           ? (O = p)
                           : null != m && m > 0 && (O = (0, r.jsx)(a.mAB, { count: m }));
-                let j =
+                let x =
                     i === _.oAB.PREMIUM
                         ? (0, r.jsx)(d.Z, {
                               label: s,
@@ -303,7 +303,7 @@ class w extends i.PureComponent {
                         onClick: c,
                         className: f,
                         'aria-label': l,
-                        children: j
+                        children: x
                     },
                     i
                 );

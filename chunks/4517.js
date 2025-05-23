@@ -137,7 +137,7 @@ function ee(e) {
         g = i.useRef(null),
         E = i.useRef(!1),
         b = i.useRef(null),
-        { isEligibleForCustomStatusLabels: y } = (0, m.Z)({ location: 'AddCustomStatusBubble' });
+        y = (0, m.Z)({ location: 'AddCustomStatusBubble' });
     (0, d.ZP)(() => {
         if (!y) return;
         let e = setTimeout(() => {

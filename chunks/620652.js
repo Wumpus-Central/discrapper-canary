@@ -1,6 +1,6 @@
 n.d(t, {
     M: () => g,
-    Z: () => j
+    Z: () => O
 });
 var i,
     r = n(255367),
@@ -23,7 +23,7 @@ let b = async (e) => {
         r = await (0, p.aB)(''.concat(n.channelId, ':').concat(n.messageId, ':').concat(n.emoji.name), n.url, i, n.color);
     return (r.assets[0].p = n.url), r;
 };
-function j(e) {
+function O(e) {
     let { className: t, effect: n, onComplete: i, emojiSize: l = 20 } = e,
         s = o.useRef(null),
         h = l * p.Vz,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(35282), n(388685), n(358797);
+n.d(t, { Z: () => j }), n(35282), n(388685), n(358797);
 var i,
     r = n(442837),
     o = n(570140),
@@ -50,7 +50,7 @@ function b(e, t) {
     let i = h[t.id];
     null != i && null != p[i.id] && (p[i.id] = s({}, p[i.id], t));
 }
-class j extends (i = r.ZP.Store) {
+class O extends (i = r.ZP.Store) {
     initialize() {
         this.waitFor(l.Z);
     }
@@ -68,8 +68,8 @@ class j extends (i = r.ZP.Store) {
         if (null != e) return m[e];
     }
 }
-a(j, 'displayName', 'UploadStore');
-let O = new j(o.Z, {
+a(O, 'displayName', 'UploadStore');
+let j = new O(o.Z, {
     CONNECTION_OPEN: function () {
         m = {};
     },

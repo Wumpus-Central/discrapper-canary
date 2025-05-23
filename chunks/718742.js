@@ -36,7 +36,7 @@ function O(e) {
             }
             return a;
         })(e, ['onClose', 'onCaptchaVerify', 'onReject', 'transitionState', 'headerText', 'bodyText', 'rqtoken', 'serveInvisible']);
-    let _ = (0, d.Z)(i),
+    let _ = (0, d.Z)({ onReject: i }),
         R = (0, s.Q3)('CaptchaModal');
     return (a.useEffect(() => {
         l.S.subscribe(h.CkL.LAYER_POP_ESCAPE_KEY, t);

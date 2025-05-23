@@ -21,8 +21,8 @@ function x(e) {
         { containerRef: v, size: y, height: T } = (0, m.h)(),
         {
             expansionSpring: O,
-            isAnimating: E,
-            isExpanded: N,
+            isAnimating: N,
+            isExpanded: E,
             toggleExpanded: q
         } = (0, m.O)({
             initiallyExpanded:
@@ -66,8 +66,8 @@ function x(e) {
                             quest: t,
                             size: y,
                             expansionSpring: O,
-                            isAnimating: E,
-                            isExpanded: N,
+                            isAnimating: N,
+                            isExpanded: E,
                             contentPosition: g,
                             toggleExpanded: q
                         }),
@@ -77,8 +77,8 @@ function x(e) {
                             location: n,
                             size: y,
                             isFocused: h,
-                            isExpanded: N,
-                            isAnimating: E,
+                            isExpanded: E,
+                            isAnimating: N,
                             contentPosition: g
                         })
                     ]

@@ -1,12 +1,12 @@
 n.d(t, { Z: () => f });
-var l = n(255367);
+var i = n(255367);
 n(73800);
-var i = n(442837),
+var l = n(442837),
     s = n(481060),
     r = n(607070),
     a = n(906732),
-    o = n(821982),
-    C = n(832149),
+    C = n(821982),
+    o = n(832149),
     d = n(600164),
     c = n(286961),
     u = n(594174),
@@ -15,31 +15,31 @@ var i = n(442837),
     h = n(317112);
 function f(e) {
     let { onClose: t, selectedPromotionalDecoPurchaseRecord: n, selectedGiftingPromotionReward: f } = e,
-        j = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
-        _ = (0, i.e7)([r.Z], () => r.Z.useReducedMotion),
+        j = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
+        m = (0, l.e7)([r.Z], () => r.Z.useReducedMotion),
         { analyticsLocations: L } = (0, a.ZP)(),
-        m = s.EFr.SIZE_32,
-        g = (0, o.Z)(null == f ? void 0 : f.assetId, m, !_),
+        _ = s.EFr.SIZE_32,
+        g = (0, C.Z)(null == f ? void 0 : f.assetId, _, !m),
         E = (0, c.Z)(),
         y = null == E ? void 0 : E.giftPurchaseConfirmation;
     return null == n || null == y
         ? null
-        : (0, l.jsx)(p.O3, {
-              children: (0, l.jsx)(s.mzw, {
+        : (0, i.jsx)(p.O3, {
+              children: (0, i.jsx)(s.mzw, {
                   align: d.Z.Align.CENTER,
-                  children: (0, l.jsxs)('div', {
+                  children: (0, i.jsxs)('div', {
                       className: h.promotionalFooter,
                       children: [
-                          (0, l.jsx)(s.Xo$, {
+                          (0, i.jsx)(s.Xo$, {
                               'aria-label': null == j ? void 0 : j.username,
-                              size: m,
-                              src: null == j ? void 0 : j.getAvatarURL(void 0, (0, s.pxk)(m), !_),
+                              size: _,
+                              src: null == j ? void 0 : j.getAvatarURL(void 0, (0, s.pxk)(_), !m),
                               avatarDecoration: g
                           }),
-                          (0, l.jsx)(s.zxk, {
+                          (0, i.jsx)(s.zxk, {
                               onClick: () => {
                                   t(),
-                                      (0, C.Z)({
+                                      (0, o.Z)({
                                           product: n,
                                           shouldShowPromotionalExperience: !0,
                                           analyticsLocations: L,
