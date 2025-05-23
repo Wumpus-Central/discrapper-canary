@@ -4,8 +4,8 @@ n(73800);
 var o = n(442837),
     i = n(481060),
     c = n(100527),
-    l = n(906732),
-    a = n(138201),
+    a = n(906732),
+    l = n(138201),
     s = n(699516),
     d = n(5192),
     u = n(785717),
@@ -15,8 +15,8 @@ var o = n(442837),
     b = n(502762),
     _ = n(848780),
     y = n(907179),
-    h = n(228168),
-    x = n(981631),
+    x = n(228168),
+    h = n(981631),
     g = n(388032),
     j = n(247787);
 function O(e) {
@@ -45,10 +45,10 @@ function O(e) {
     return e;
 }
 function I(e) {
-    let { user: t, guildId: n, channelId: I, messageId: v, roleId: P, transitionState: A, openedAt: N, onHide: T, sourceAnalyticsLocations: Z = [] } = e,
-        C = n === x.ME ? void 0 : n,
+    let { user: t, guildId: n, channelId: I, messageId: v, roleId: N, transitionState: P, openedAt: A, onHide: T, sourceAnalyticsLocations: Z = [] } = e,
+        C = n === h.ME ? void 0 : n,
         w = (0, o.e7)([s.Z], () => s.Z.isBlocked(t.id)),
-        { analyticsLocations: S } = (0, l.ZP)([...Z, w ? c.Z.BLOCKED_PROFILE_MODAL : c.Z.IGNORED_PROFILE_MODAL]),
+        { analyticsLocations: S } = (0, a.ZP)([...Z, w ? c.Z.BLOCKED_PROFILE_MODAL : c.Z.IGNORED_PROFILE_MODAL]),
         E = (0, u.ZB)({
             layout: 'MODAL_V2',
             userId: t.id,
@@ -56,7 +56,7 @@ function I(e) {
             guildId: C,
             channelId: I,
             messageId: v,
-            roleId: P
+            roleId: N
         }),
         B = [
             {
@@ -69,22 +69,22 @@ function I(e) {
             }
         ],
         D = (0, p.ZP)(t.id, C);
-    return (0, r.jsx)(l.Gt, {
+    return (0, r.jsx)(a.Gt, {
         value: S,
         children: (0, r.jsx)(u.Mt, {
             value: E,
-            openedAt: N,
+            openedAt: A,
             fetchStartedAt: null == D ? void 0 : D.fetchStartedAt,
             fetchEndedAt: null == D ? void 0 : D.fetchEndedAt,
             isLoaded: null == D ? void 0 : D.isLoaded,
             children: (0, r.jsx)(i.Y0X, {
-                transitionState: A,
+                transitionState: P,
                 className: j.root,
                 'aria-label': g.intl.string(g.t['3N/J2t']),
                 children: (0, r.jsxs)(b.Z, {
                     user: t,
                     displayProfile: D,
-                    themeType: h.lY.MODAL_V2,
+                    themeType: x.lY.MODAL_V2,
                     children: [
                         (0, r.jsx)('div', { className: j.background }),
                         (0, r.jsxs)('div', {
@@ -115,7 +115,7 @@ function I(e) {
                                     children: B.map((e, t) => {
                                         let { icon: n, description: o } = e;
                                         return (0, r.jsx)(
-                                            a.ZP,
+                                            l.ZP,
                                             {
                                                 icon: n,
                                                 title: o,

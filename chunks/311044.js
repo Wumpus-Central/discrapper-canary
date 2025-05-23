@@ -3,8 +3,8 @@ var r = n(255367),
     o = n(73800),
     i = n(481060),
     c = n(81897),
-    l = n(906732),
-    a = n(566898),
+    a = n(906732),
+    l = n(566898),
     s = n(785717),
     d = n(806729),
     u = n(857302),
@@ -14,8 +14,8 @@ var r = n(255367),
     b = n(274151);
 function _(e) {
     let { user: t, guildId: n, channelId: _ } = e,
-        { analyticsLocations: y } = (0, l.ZP)(),
-        { context: h, trackUserProfileAction: x } = (0, s.KZ)(),
+        { analyticsLocations: y } = (0, a.ZP)(),
+        { context: x, trackUserProfileAction: h } = (0, s.KZ)(),
         { mutualFriends: g, mutualFriendsCount: j } = (0, d.Z)(t),
         O = (0, c.Z)();
     return (
@@ -33,11 +33,11 @@ function _(e) {
                               {
                                   className: b.loadingItem,
                                   children: [
-                                      (0, r.jsx)(a.ZT, {
+                                      (0, r.jsx)(l.ZT, {
                                           width: 40,
                                           opacity: 0.08
                                       }),
-                                      (0, r.jsx)(a.ZT, {
+                                      (0, r.jsx)(l.ZT, {
                                           width: 135,
                                           opacity: 0.08
                                       })
@@ -59,7 +59,7 @@ function _(e) {
                                     channelId: _,
                                     onSelect: () => {
                                         var e, t;
-                                        x({ action: 'PRESS_MUTUAL_FRIEND' }),
+                                        h({ action: 'PRESS_MUTUAL_FRIEND' }),
                                             (0, f.openUserProfileModal)(
                                                 ((e = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
@@ -85,7 +85,7 @@ function _(e) {
                                                             });
                                                     }
                                                     return e;
-                                                })({}, h)),
+                                                })({}, x)),
                                                 (t = t =
                                                     {
                                                         userId: o.id,

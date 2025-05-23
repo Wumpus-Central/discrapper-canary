@@ -1,11 +1,11 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => l });
 var r = n(255367);
 n(73800);
 var o = n(120356),
     i = n.n(o),
     c = n(678738),
-    l = n(362258);
-function a(e) {
+    a = n(362258);
+function l(e) {
     var { className: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -54,7 +54,7 @@ function a(e) {
             return e;
         })(
             {
-                className: i()(l.section, t),
+                className: i()(a.section, t),
                 headingVariant: 'text-xs/medium',
                 headingColor: 'currentColor'
             },

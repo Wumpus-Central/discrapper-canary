@@ -4,15 +4,15 @@ n(73800);
 var o = n(481060),
     i = n(37234),
     c = n(566898),
-    l = n(769654),
-    a = n(785717),
+    a = n(769654),
+    l = n(785717),
     s = n(806729),
     d = n(821179),
     u = n(264481),
     f = n(274151);
 function p(e) {
     let { user: t, onClose: n } = e,
-        { trackUserProfileAction: p } = (0, a.KZ)(),
+        { trackUserProfileAction: p } = (0, l.KZ)(),
         { mutualGuilds: m, isFetching: b } = (0, s.Z)(t);
     return (0, r.jsx)(o.Ttm, {
         className: f.scroller,
@@ -50,7 +50,7 @@ function p(e) {
                                     guild: o,
                                     nick: c,
                                     onSelect: () => {
-                                        p({ action: 'PRESS_MUTUAL_GUILD' }), (0, l.X)(o.id), n(), (0, i.xf)();
+                                        p({ action: 'PRESS_MUTUAL_GUILD' }), (0, a.X)(o.id), n(), (0, i.xf)();
                                     }
                                 },
                                 o.id

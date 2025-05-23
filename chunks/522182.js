@@ -4,8 +4,8 @@ n(73800);
 var o = n(481060),
     i = n(906732),
     c = n(335131),
-    l = n(475413),
-    a = n(388032);
+    a = n(475413),
+    l = n(388032);
 function s(e) {
     var { onClose: t } = e,
         n = (function (e, t) {
@@ -29,7 +29,7 @@ function s(e) {
         })(e, ['onClose']);
     let { analyticsLocations: s, newestAnalyticsLocation: d } = (0, i.ZP)();
     return (0, r.jsx)(
-        l.ef,
+        a.ef,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -58,7 +58,7 @@ function s(e) {
             {
                 action: 'VISIT_SHOP',
                 icon: o.EOn,
-                tooltipText: a.intl.string(a.t.b2d0Nz),
+                tooltipText: l.intl.string(l.t.b2d0Nz),
                 themeColor: 'secondary',
                 onClick: () => {
                     (0, c.mK)({
