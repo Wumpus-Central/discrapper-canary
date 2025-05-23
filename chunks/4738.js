@@ -9,7 +9,7 @@ var r = n(255367),
     u = n(481060),
     d = n(889963),
     f = n(388032),
-    _ = n(746428);
+    _ = n(578949);
 function p(e) {
     let { page: t, totalPageCount: n, disabled: o, onPageChange: s } = e,
         [d, f] = i.useState(!1),

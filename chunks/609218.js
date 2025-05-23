@@ -25,8 +25,8 @@ var r = n(255367),
     v = n(474936),
     I = n(981631),
     S = n(388032),
-    T = n(922801),
-    A = n(597439),
+    T = n(520303),
+    A = n(229191),
     N = n(635048),
     C = (function (e) {
         return (e[(e.NONE = 0)] = 'NONE'), (e[(e.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (e[(e.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER'), e;
@@ -96,7 +96,7 @@ function P(e) {
                                           }),
                                           U && (0, r.jsx)(O.Z, { affinities: M }),
                                           (0, r.jsx)(c.Text, {
-                                              variant: 'text-sm/medium',
+                                              variant: 'text-md/medium',
                                               color: 'text-secondary',
                                               children: C
                                           })

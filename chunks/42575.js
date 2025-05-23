@@ -11,7 +11,7 @@ var i = n(481060),
     d = n(170245),
     p = n(981631),
     h = n(388032),
-    f = n(866000);
+    f = n(292568);
 function g(e) {
     let { user: t, nickname: n, status: g, isFocused: m } = e,
         { analyticsLocations: b } = (0, a.ZP)(),

@@ -10,9 +10,9 @@ var B = v(255367),
     w = v(434404),
     Q = v(999382),
     D = v(981631),
-    o = v(69590),
+    o = v(817239),
     s = v(388032),
-    i = v(271529);
+    i = v(602268);
 let M = function (A) {
     let { className: g, guildId: v, tag: t, badge: M, primaryColor: a, secondaryColor: l, isDisabled: E = !1 } = A,
         c = (0, f.e7)([Q.Z], () => Q.Z.getProps().originalProfile),

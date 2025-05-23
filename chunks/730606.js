@@ -26,7 +26,7 @@ var r = n(255367),
     v = n(549635),
     I = n(981631),
     S = n(388032),
-    T = n(341241);
+    T = n(606584);
 function A(e) {
     let { src: t, width: n, height: r, hasMultiple: i = !1, options: o } = e,
         { width: a, height: s } = (0, E.p)(i, {

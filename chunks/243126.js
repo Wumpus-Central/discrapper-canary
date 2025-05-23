@@ -9,11 +9,11 @@ var r = n(73800),
     u = n(884697),
     d = n(26931),
     p = n(370039),
-    b = n(937510),
-    f = n(981631),
-    g = n(388032);
+    g = n(937510),
+    b = n(981631),
+    f = n(388032);
 let h = (e, t) => {
-    let n = (0, o.e7)([s.Z], () => s.Z.hasConsented(f.pjP.PERSONALIZATION)),
+    let n = (0, o.e7)([s.Z], () => s.Z.hasConsented(b.pjP.PERSONALIZATION)),
         l = r.useMemo(() => {
             var t;
             return null != (t = null == e ? void 0 : e[i.m.RECOMMENDED]) ? t : [];
@@ -25,59 +25,59 @@ let h = (e, t) => {
         m = l.length > 0 && n,
         [_, C] = r.useState(m ? i.m.RECOMMENDED : i.m.POPULAR),
         [v, O] = r.useState(0),
-        x = (0, d.u)(),
-        S = (0, o.e7)([c.Z], () => c.Z.productsWithVariantsAsGroup),
+        S = (0, d.u)(),
+        x = (0, o.e7)([c.Z], () => c.Z.productsWithVariantsAsGroup),
         E = (0, p.a)(),
         j = r.useMemo(() => {
             let e = [];
             return (
                 _ === i.m.RECENT
-                    ? (e = S)
+                    ? (e = x)
                     : _ === i.m.PRICE_LOW_TO_HIGH
-                      ? (e = [...S].sort((e, n) => {
+                      ? (e = [...x].sort((e, n) => {
                             var r, l, a, i;
                             return (null != (a = null == (r = (0, u.Vw)(e, t, !1)) ? void 0 : r.amount) ? a : 0) - (null != (i = null == (l = (0, u.Vw)(n, t, !1)) ? void 0 : l.amount) ? i : 0);
                         }))
                       : _ === i.m.RECOMMENDED
-                        ? (e = x(l))
+                        ? (e = S(l))
                         : _ === i.m.POPULAR
-                          ? (e = x(h))
-                          : _ === i.m.RANDOM && (e = a().shuffle(S)),
+                          ? (e = S(h))
+                          : _ === i.m.RANDOM && (e = a().shuffle(x)),
                 E(e)
             );
-        }, [_, E, S, t, x, l, h, v]),
-        P = r.useCallback(() => {
+        }, [_, E, x, t, S, l, h, v]),
+        y = r.useCallback(() => {
             O((e) => e + 1), C(i.m.RANDOM);
         }, []);
     return {
         sortType: _,
         setSortType: C,
-        sortedItems: (0, b.l)(j),
+        sortedItems: (0, g.l)(j),
         sortOptions: r.useMemo(() => {
             let e = [
                 {
                     value: i.m.POPULAR,
-                    label: g.intl.string(g.t['1wQj4O'])
+                    label: f.intl.string(f.t['1wQj4O'])
                 },
                 {
                     value: i.m.RECENT,
-                    label: g.intl.string(g.t['6NZpt7'])
+                    label: f.intl.string(f.t['6NZpt7'])
                 },
                 {
                     value: i.m.PRICE_LOW_TO_HIGH,
-                    label: g.intl.string(g.t.RTG4yM)
+                    label: f.intl.string(f.t.RTG4yM)
                 }
             ];
             return (
                 m &&
                     e.unshift({
                         value: i.m.RECOMMENDED,
-                        label: g.intl.string(g.t.JrlKlp)
+                        label: f.intl.string(f.t.JrlKlp)
                     }),
                 e
             );
         }, [m]),
         showRecommendationOption: m,
-        shuffleProducts: P
+        shuffleProducts: y
     };
 };

@@ -15,7 +15,7 @@ var i = n(255367),
     f = n(726985),
     b = n(981631),
     _ = n(388032),
-    x = n(468147);
+    x = n(296281);
 function E(e) {
     let { applications: t } = e,
         n = r.useMemo(() => t.sort((e, t) => d.default.compare(t.id, e.id)), [t]),

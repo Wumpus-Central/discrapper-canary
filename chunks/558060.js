@@ -9,9 +9,9 @@ var l = n(120356),
     c = n(200615),
     u = n(981631),
     d = n(388032),
-    p = n(187339);
-function b() {
-    return (b =
+    p = n(561197);
+function g() {
+    return (g =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -21,7 +21,7 @@ function b() {
             return e;
         }).apply(this, arguments);
 }
-function f(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function f(e) {
     }
     return e;
 }
-function g(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -75,15 +75,15 @@ function h(e) {
         });
     let v = (0, o.ql)(t, u.tuJ.PREMIUM_TIER_2),
         O = !n && !(0, o.x6)(t),
-        x = (0, o.x6)(t) && n ? g(f({}, C), { amount: l.original }) : C,
-        S = _ && n,
+        S = (0, o.x6)(t) && n ? f(b({}, C), { amount: l.original }) : C,
+        x = _ && n,
         E = _ && !n;
     return (0, r.jsxs)('div', {
         className: a()(p.priceTagsContainer, h),
         children: [
-            !S &&
+            !x &&
                 (0, r.jsx)(s.F, {
-                    price: x,
+                    price: S,
                     discount: n ? o.f_ : l,
                     className: a()(p.price, {
                         [p.striked]: n,
@@ -117,7 +117,7 @@ function h(e) {
                         text: d.intl.string(d.t.MPFyJy),
                         'aria-label': d.intl.string(d.t.X3Ekj4),
                         children: (e) => {
-                            var t = b(
+                            var t = g(
                                 {},
                                 (function (e) {
                                     if (null == e) throw TypeError('Cannot destructure ' + e);
@@ -126,8 +126,8 @@ function h(e) {
                             );
                             return (0, r.jsx)(
                                 i.SrA,
-                                g(
-                                    f(
+                                f(
+                                    b(
                                         {
                                             size: 'md',
                                             color: 'currentColor'

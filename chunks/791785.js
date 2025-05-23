@@ -47,7 +47,7 @@ var r = n(255367),
     H = n(981631),
     Y = n(474936),
     W = n(388032),
-    K = n(178904);
+    K = n(179742);
 function z(e, t, n) {
     return (
         t in e
@@ -184,7 +184,7 @@ function ee(e) {
         }, [eQ, eY, eH, eZ, eV, eW, ew.startTime, eJ, o]),
         e0 = i.useMemo(() => () => (null == G ? void 0 : G(ey === M.A.COMPLETED, ev)), [G, ey, ev]),
         e1 = (0, s.Z)(() => Date.now(), [eR]),
-        e3 = i.useCallback(
+        e2 = i.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                     { trackedFromStep: n, analyticsDataOverride: r, fulfillment: i, emitPaymentFlowLoadedEvent: o } = t,
@@ -213,11 +213,11 @@ function ee(e) {
             },
             [eN, ed, eC, eA, eR, eE, eQ, e1, ew.startTime, e$, m, eg, e0, ek]
         );
-    (0, T.bp)(eR, eP, e3, eO), (0, k.dZ)(eR, ey, eO), (0, A.p)(eR, eD, e3), (0, E.Z)(e0), (0, N.w)(eL, () => G(!1), eV), (0, T.D6)(eP);
-    let e2 = {
+    (0, T.bp)(eR, eP, e2, eO), (0, k.dZ)(eR, ey, eO), (0, A.p)(eR, eD, e2), (0, E.Z)(e0), (0, N.w)(eL, () => G(!1), eV), (0, T.D6)(eP);
+    let e3 = {
             initialPlanId: P,
             subscriptionTier: U,
-            handleStepChange: e3,
+            handleStepChange: e2,
             handleClose: e0,
             analyticsData: eQ,
             setAnalyticsData: eX,
@@ -261,7 +261,7 @@ function ee(e) {
                         isLargeModal: e_ || (null == eB ? void 0 : eB.isLargeModal),
                         isDynamicModal: ep || (null == eB ? void 0 : eB.isDynamicModal)
                     },
-                    e2
+                    e3
                 )
             )
         })

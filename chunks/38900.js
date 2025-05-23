@@ -1,15 +1,15 @@
 n.d(t, {
     K: () => p,
-    Z: () => b
+    Z: () => g
 });
 var r = n(255367);
 n(73800);
 var l = n(120356),
     a = n.n(l),
-    i = n(842817),
-    o = n(517866),
-    s = n(927071),
-    c = n(976001);
+    i = n(484920),
+    o = n(544348),
+    s = n(556559),
+    c = n(33588);
 let u = () => 4 * Math.random() + 8,
     d = [u(), u(), u()],
     p = () =>
@@ -20,7 +20,7 @@ let u = () => 4 * Math.random() + 8,
                 children: [(0, r.jsx)('div', { className: s.cardAvatar }), (0, r.jsx)('div', { className: s.cardTitle }), (0, r.jsx)('div', { className: s.cardDescription }), (0, r.jsx)('div', { className: s.cardSummary })]
             })
         }),
-    b = () =>
+    g = () =>
         (0, r.jsx)('div', {
             className: i.skeletons,
             children: d.map((e) =>

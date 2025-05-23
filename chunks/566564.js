@@ -1,47 +1,49 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => y });
 var r = n(255367),
     l = n(73800),
     a = n(120356),
     i = n.n(a),
     o = n(685816),
     s = n(481060),
-    c = n(381585),
-    u = n(139668),
-    d = n(364111),
-    p = n(303952),
+    c = n(626135),
+    u = n(381585),
+    d = n(139668),
+    p = n(364111),
+    g = n(303952),
     b = n(752053),
     f = n(81136),
-    g = n(953655),
-    h = n(548685),
-    m = n(580914),
-    _ = n(963278),
-    C = n(384067),
-    v = n(215023),
-    O = n(388032),
-    x = n(379890);
-let S = (e) => {
+    h = n(953655),
+    m = n(548685),
+    _ = n(580914),
+    C = n(963278),
+    v = n(384067),
+    O = n(215023),
+    S = n(981631),
+    x = n(388032),
+    E = n(806734);
+let j = (e) => {
         var t;
-        let { handleTransition: n, numVisibleItems: a, isFetchingCategories: s, tab: u, isFullScreen: v } = e,
+        let { handleTransition: n, numVisibleItems: a, isFetchingCategories: s, tab: c, isFullScreen: d } = e,
             { noCache: O, includeUnpublished: S } = (0, f.Z)(),
-            E = (0, c.sp)(),
-            j = null != (t = null == E ? void 0 : E.sessionId) ? t : '';
+            x = (0, u.sp)(),
+            j = null != (t = null == x ? void 0 : x.sessionId) ? t : '';
         l.useEffect(() => {
-            (0, p.n)({
+            (0, g.n)({
                 sessionId: j,
-                checkpoint: p.a.SHOP_MOUNTED,
-                tab: u,
-                isFullScreen: v,
+                checkpoint: g.a.SHOP_MOUNTED,
+                tab: c,
+                isFullScreen: d,
                 unpublishedCategoriesShown: S,
                 cacheDisabled: O
             });
-        }, [u]);
+        }, [c]);
         let {
-                isFetchingShopHome: P,
-                fetchShopHomeError: y,
+                isFetchingShopHome: y,
+                fetchShopHomeError: P,
                 shopBlocks: k,
                 refreshShopHome: T
-            } = (0, d.E)(
-                u,
+            } = (0, p.E)(
+                c,
                 {
                     noCache: O,
                     includeUnpublished: S,
@@ -50,8 +52,8 @@ let S = (e) => {
                 },
                 {
                     sessionId: j,
-                    tab: u,
-                    isFullScreen: v
+                    tab: c,
+                    isFullScreen: d
                 }
             ),
             I = l.useCallback(() => {
@@ -59,44 +61,44 @@ let S = (e) => {
             }, [T]);
         if (
             (l.useEffect(() => {
-                null != y ||
-                    P ||
+                null != P ||
+                    y ||
                     0 === k.length ||
-                    (0, p.n)({
+                    (0, g.n)({
                         sessionId: j,
-                        checkpoint: p.a.SHOP_RENDERED,
-                        tab: u,
-                        isFullScreen: v,
+                        checkpoint: g.a.SHOP_RENDERED,
+                        tab: c,
+                        isFullScreen: d,
                         unpublishedCategoriesShown: S,
                         cacheDisabled: O
                     });
-            }, [y, P, k.length, S, O, j, u, v]),
-            null != y)
+            }, [P, y, k.length, S, O, j, c, d]),
+            null != P)
         )
             return (0, r.jsx)(b.Z, {
                 onRetry: I,
                 errorOrigin: b.i.SHOP_PAGE,
-                errorMessage: y.message
+                errorMessage: P.message
             });
-        if (P || 0 === k.length)
+        if (y || 0 === k.length)
             return (0, r.jsxs)('div', {
-                className: x.loadingContainer,
+                className: E.loadingContainer,
                 children: [
-                    (0, r.jsx)(m.Z, {
-                        isLoading: P,
+                    (0, r.jsx)(_.Z, {
+                        isLoading: y,
                         handleTransition: n,
-                        tab: u
+                        tab: c
                     }),
-                    (0, r.jsx)(g.Z, {
-                        isLoading: P,
+                    (0, r.jsx)(h.Z, {
+                        isLoading: y,
                         handleTransition: n,
                         categories: []
                     }),
-                    (0, r.jsx)(h.Z, {
-                        isLoading: P,
+                    (0, r.jsx)(m.Z, {
+                        isLoading: y,
                         handleTransition: n,
                         numVisibleItems: a,
-                        tab: u
+                        tab: c
                     })
                 ]
             });
@@ -106,21 +108,21 @@ let S = (e) => {
             switch (e.type) {
                 case o.z.HERO:
                     l = (0, r.jsx)(
-                        m.Z,
+                        _.Z,
                         {
-                            isLoading: P,
+                            isLoading: y,
                             handleTransition: n,
                             heroBlock: e,
-                            tab: u
+                            tab: c
                         },
                         t
                     );
                     break;
                 case o.z.FEATURED:
                     l = (0, r.jsx)(
-                        g.Z,
+                        h.Z,
                         {
-                            isLoading: P,
+                            isLoading: y,
                             handleTransition: n,
                             featuredBlockRecord: e
                         },
@@ -128,37 +130,37 @@ let S = (e) => {
                     );
                     break;
                 case o.z.FEED:
-                    let c = e.sortedSkuIds;
+                    let u = e.sortedSkuIds;
                     l = (0, r.jsx)(
-                        h.Z,
+                        m.Z,
                         {
-                            isLoading: P || s,
+                            isLoading: y || s,
                             handleTransition: n,
                             numVisibleItems: a,
-                            sortedSkuIds: c,
-                            tab: u
+                            sortedSkuIds: u,
+                            tab: c
                         },
                         t
                     );
                     break;
                 case o.z.WIDE_BANNER:
                     l = (0, r.jsx)(
-                        C.Z,
+                        v.Z,
                         {
                             handleTransition: n,
                             wideBannerBlock: e,
-                            tab: u
+                            tab: c
                         },
                         t
                     );
                     break;
                 case o.z.SHELF:
                     l = (0, r.jsx)(
-                        _.Z,
+                        C.Z,
                         {
                             handleTransition: n,
                             shelf: e,
-                            tab: u
+                            tab: c
                         },
                         t
                     );
@@ -169,7 +171,7 @@ let S = (e) => {
             return (0, r.jsx)(
                 'div',
                 {
-                    className: i()(x.blockContainer, { [x.topBlockContainer]: 0 === t }),
+                    className: i()(E.blockContainer, { [E.topBlockContainer]: 0 === t }),
                     children: l
                 },
                 t
@@ -177,39 +179,46 @@ let S = (e) => {
         };
         return (0, r.jsx)(r.Fragment, { children: k.map((e, t) => L(e, t)) });
     },
-    E = (e) => {
+    y = (e) => {
         let { isFullScreen: t, handleTransition: n, numVisibleItems: l, tab: a, isFetchingCategories: o } = e,
-            c = (0, u.R)('CollectiblesFeedShop');
+            p = (0, d.R)('CollectiblesFeedShop'),
+            g = (0, u.sp)();
         return (0, r.jsx)('div', {
-            className: i()(x.shop, { [x.shopFullscreen]: t }),
+            className: i()(E.shop, { [E.shopFullscreen]: t }),
             children: (0, r.jsxs)('div', {
-                className: i()(x.content, x.mainContent),
+                className: i()(E.content, E.mainContent),
                 children: [
-                    (0, r.jsx)(S, {
+                    (0, r.jsx)(j, {
                         handleTransition: n,
                         numVisibleItems: l,
                         isFetchingCategories: o,
                         tab: a,
                         isFullScreen: t
                     }),
-                    a !== v.AW.CATALOG &&
-                        l >= c &&
+                    a !== O.AW.CATALOG &&
+                        l >= p &&
                         (0, r.jsxs)('div', {
-                            className: x.endOfFeed,
+                            className: E.endOfFeed,
                             children: [
                                 (0, r.jsx)(s.X6q, {
                                     variant: 'heading-md/semibold',
-                                    children: O.intl.string(O.t.Yr70c3)
+                                    children: x.intl.string(x.t.Yr70c3)
                                 }),
                                 (0, r.jsx)(s.zxk, {
-                                    className: x.endOfFeedButton,
+                                    className: E.endOfFeedButton,
                                     onClick: () => {
-                                        n('shop all bottom', void 0, !0);
+                                        n('shop all button', void 0, !0),
+                                            c.default.track(S.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                collectibles_shop_session_id: null == g ? void 0 : g.sessionId,
+                                                page_type: a,
+                                                page_category: a === O.AW.HOME || null == g ? void 0 : g.pageCategory,
+                                                cta_name: 'shop the whole shop button'
+                                            });
                                     },
                                     children: (0, r.jsx)(s.Text, {
                                         variant: 'text-md/medium',
                                         color: 'always-white',
-                                        children: O.intl.string(O.t.AfrvRE)
+                                        children: x.intl.string(x.t.AfrvRE)
                                     })
                                 })
                             ]

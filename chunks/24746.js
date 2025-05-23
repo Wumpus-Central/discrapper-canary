@@ -9,7 +9,7 @@ var r = n(255367),
     d = n(241209),
     u = n(547563),
     p = n(388032),
-    m = n(30285);
+    m = n(582735);
 let h = o().parserFor(u.Z),
     g = o().reactFor(o().ruleOutput(u.Z, 'react'));
 function _(e) {

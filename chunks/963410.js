@@ -21,7 +21,7 @@ var r = n(255367),
     R = n(760373),
     N = n(981631),
     I = n(388032),
-    v = n(308877);
+    v = n(268999);
 function T(e) {
     let { badgeText: t, badgeColor: n } = e,
         i = l.useRef(t),

@@ -3,7 +3,7 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     o = n.n(i),
-    a = n(809918);
+    a = n(197007);
 function s(e) {
     let { children: t, className: n, color: i } = e;
     return (0, r.jsxs)('div', {

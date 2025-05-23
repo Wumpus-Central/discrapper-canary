@@ -12,7 +12,7 @@ var r = e(442837),
     h = e(592125),
     g = e(710352),
     f = e(388032),
-    b = e(518235);
+    b = e(939852);
 function Z(t) {
     let { tag: n } = t,
         { name: e, emojiId: l, emojiName: a } = n,

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => i });
 var r = n(255367);
 n(73800);
-var a = n(453398);
+var a = n(767786);
 function i(e) {
     let { children: t } = e;
     return (0, r.jsx)('section', {

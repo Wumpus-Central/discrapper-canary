@@ -6,7 +6,7 @@ var r,
     a = n(120356),
     u = n.n(a),
     c = n(481060),
-    s = n(928086);
+    s = n(974393);
 let d = {
         UP: 'up',
         RIGHT: 'right',

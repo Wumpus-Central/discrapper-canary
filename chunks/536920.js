@@ -12,7 +12,7 @@ var r = n(255367),
     _ = n(371651),
     x = n(981631),
     h = n(388032),
-    g = n(984639);
+    g = n(933150);
 function p(e) {
     let { onClose: t, transitionState: n, clientSettingType: p, gameId: v } = e,
         [k, j] = a.useState('unreported'),

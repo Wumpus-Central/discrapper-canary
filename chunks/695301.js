@@ -12,7 +12,7 @@ var r = n(255367),
     p = n(451478),
     f = n(61634),
     g = n(325257),
-    m = n(19463);
+    m = n(240848);
 let b = i.memo(function (e) {
     var t, n;
     let { guildNode: b, lowerBadge: y } = e,

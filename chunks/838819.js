@@ -9,21 +9,21 @@ var r = n(255367),
     u = n(952265),
     d = n(4738),
     p = n(481060),
-    b = n(150063),
-    f = n(100527),
-    g = n(906732),
+    g = n(150063),
+    b = n(100527),
+    f = n(906732),
     h = n(702486),
     m = n(605236),
     _ = n(977395),
     C = n(214852),
     v = n(290026),
     O = n(511050),
-    x = n(819640),
-    S = n(594174),
+    S = n(819640),
+    x = n(594174),
     E = n(626135),
     j = n(74538),
-    P = n(960048),
-    y = n(381585),
+    y = n(960048),
+    P = n(381585),
     k = n(597688),
     T = n(328347),
     I = n(744112),
@@ -44,11 +44,11 @@ var r = n(255367),
     G = n(763891),
     z = n(531864),
     q = n(215023),
-    Y = n(981631),
-    $ = n(921944),
-    K = n(420212),
+    K = n(981631),
+    Y = n(921944),
+    $ = n(420212),
     X = n(474936),
-    J = n(842817);
+    J = n(484920);
 let Q = (e) => {
         let { isFullScreen: t, tab: n } = e;
         return !t && (n === q.AW.HOME || n === q.AW.ORBS);
@@ -60,7 +60,7 @@ let Q = (e) => {
             l.useEffect(() => {
                 if (!n || a) return;
                 let e = (e) => {
-                    e.key === K.mR.Escape && r();
+                    e.key === $.mR.Escape && r();
                 };
                 return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
             }, [n, a, r]),
@@ -71,32 +71,32 @@ let Q = (e) => {
         var t;
         let { isFullScreen: n = !0, tab: a = q.AW.HOME } = e;
         (0, C.z)(_.f);
-        let { analyticsSource: u, analyticsLocations: K } = (0, s.cj)([T.Z], () => T.Z.getAnalytics()),
+        let { analyticsSource: u, analyticsLocations: $ } = (0, s.cj)([T.Z], () => T.Z.getAnalytics()),
             et = l.useMemo(() => {
                 switch (a) {
                     case q.AW.ORBS:
-                        return f.Z.COLLECTIBLES_SHOP_ORBS_TAB;
+                        return b.Z.COLLECTIBLES_SHOP_ORBS_TAB;
                     case q.AW.HOME:
-                        return f.Z.COLLECTIBLES_SHOP_HOME_SCREEN;
+                        return b.Z.COLLECTIBLES_SHOP_HOME_SCREEN;
                     case q.AW.BUNDLES:
-                        return f.Z.COLLECTIBLES_SHOP_BUNDLES_TAB;
+                        return b.Z.COLLECTIBLES_SHOP_BUNDLES_TAB;
                     case q.AW.AVATAR_DECORATIONS:
-                        return f.Z.COLLECTIBLES_SHOP_AVATAR_DECORATIONS_TAB;
+                        return b.Z.COLLECTIBLES_SHOP_AVATAR_DECORATIONS_TAB;
                     case q.AW.PROFILE_EFFECTS:
-                        return f.Z.COLLECTIBLES_SHOP_PROFILE_EFFECTS_TAB;
+                        return b.Z.COLLECTIBLES_SHOP_PROFILE_EFFECTS_TAB;
                     case q.AW.NAMEPLATES:
-                        return f.Z.COLLECTIBLES_SHOP_NAMEPLATES_TAB;
+                        return b.Z.COLLECTIBLES_SHOP_NAMEPLATES_TAB;
                     case q.AW.CATALOG:
-                        return f.Z.COLLECTIBLES_SHOP_FULLSCREEN;
+                        return b.Z.COLLECTIBLES_SHOP_FULLSCREEN;
                 }
             }, [a]),
-            { analyticsLocations: en, newestAnalyticsLocation: er } = (0, g.ZP)([...K, f.Z.COLLECTIBLES_SHOP, et]),
-            { sessionId: el, scrollerRef: ea, scrollHandler: ei } = (0, h._)(Y.rMx.COLLECTIBLES_SHOP_SCROLLED, u),
+            { analyticsLocations: en, newestAnalyticsLocation: er } = (0, f.ZP)([...$, b.Z.COLLECTIBLES_SHOP, et]),
+            { sessionId: el, scrollerRef: ea, scrollHandler: ei } = (0, h._)(K.rMx.COLLECTIBLES_SHOP_SCROLLED, u),
             { selectedTab: eo, transitionState: es, transitionToTab: ec } = (0, A.B)(ea, a, n),
             [eu, ed] = l.useState(!1),
             ep = (0, B.R)('CollectiblesShop'),
-            [eb, ef] = l.useState(q.IV),
-            [eg, eh] = l.useState(),
+            [eg, eb] = l.useState(q.IV),
+            [ef, eh] = l.useState(),
             [em, e_] = l.useState(),
             { noCache: eC, includeUnpublished: ev } = (0, V.Z)(),
             { closeIntroToOrbsClaimedCoachmark: eO } = (0, O.Z)({ location: 'CollectiblesShop' });
@@ -106,13 +106,13 @@ let Q = (e) => {
             },
             [u, eO]
         );
-        let ex = (0, s.e7)([x.Z], () => x.Z.getLayers().includes(Y.S9g.COLLECTIBLES_SHOP)),
-            { onClose: eS } = (0, H.Db)(),
-            eE = (0, s.e7)([S.default], () => S.default.getCurrentUser()),
+        let eS = (0, s.e7)([S.Z], () => S.Z.getLayers().includes(K.S9g.COLLECTIBLES_SHOP)),
+            { onClose: ex } = (0, H.Db)(),
+            eE = (0, s.e7)([x.default], () => x.default.getCurrentUser()),
             ej = j.ZP.canUseCollectibles(eE),
             {
-                categories: eP,
-                isFetchingCategories: ey,
+                categories: ey,
+                isFetchingCategories: eP,
                 fetchCategoriesError: ek,
                 fetchPurchasesError: eT,
                 claimError: eI,
@@ -130,12 +130,12 @@ let Q = (e) => {
             ),
             eB = null != (t = null != ek ? ek : eT) ? t : eI;
         (0, v.P)();
-        let ew = (0, N.O)(eP),
+        let ew = (0, N.O)(ey),
             eN = l.useRef(null),
             [eA, eR] = l.useState(!1);
         (0, Z.Kp)({
-            isFetchingCategories: ey,
-            isLayer: ex,
+            isFetchingCategories: eP,
+            isLayer: eS,
             initialItemCardRef: eN
         }),
             l.useEffect(() => {
@@ -143,19 +143,19 @@ let Q = (e) => {
                     var e;
                     let t;
                     (t = eo === q.AW.CATALOG ? em : u),
-                        E.default.track(Y.rMx.COLLECTIBLES_SHOP_VIEWED, {
+                        E.default.track(K.rMx.COLLECTIBLES_SHOP_VIEWED, {
                             location_stack: en,
                             source: t,
                             page_session_id: el,
                             page_type: eo === q.AW.CATALOG ? 'full' : eo,
-                            category: eo === q.AW.HOME || null == (e = k.Z.getCategory(eg)) ? void 0 : e.name
+                            category: eo === q.AW.HOME || null == (e = k.Z.getCategory(ef)) ? void 0 : e.name
                         });
                 }
-            }, [en, u, el, eg, eh, em, es, eo, et, er]),
+            }, [en, u, el, ef, eh, em, es, eo, et, er]),
             l.useEffect(() => {
                 null == eE ||
                     ej ||
-                    E.default.track(Y.rMx.PREMIUM_UPSELL_VIEWED, {
+                    E.default.track(K.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: X.cd.COLLECTIBLES_SHOP,
                         location_stack: en
                     });
@@ -165,12 +165,12 @@ let Q = (e) => {
             eZ(),
                 (0, m.un)(c.z.COLLECTIBLES_GIFTING_COACHMARK) ||
                     (0, m.EW)(c.z.COLLECTIBLES_GIFTING_COACHMARK, {
-                        dismissAction: $.L.AUTO_DISMISS,
+                        dismissAction: Y.L.AUTO_DISMISS,
                         forceTrack: !0
                     });
         }, [eZ]),
             l.useEffect(() => {
-                n || (0, b.Y)(Y.Z5c.COLLECTIBLES_SHOP);
+                n || (0, g.Y)(K.Z5c.COLLECTIBLES_SHOP);
             }, [n]);
         let eF = l.useCallback(() => {
                 eL();
@@ -188,7 +188,7 @@ let Q = (e) => {
             }, [n]);
         let [eU, eG] = l.useState(1),
             { isPaginationEnabled: ez, categoriesPerPage: eq } = (0, L.a)('CollectiblesShop'),
-            eY = l.useCallback(
+            eK = l.useCallback(
                 (e) => {
                     if (!ez || eq <= 0) return 1;
                     let t = ew.findIndex((t) => t.skuId === e);
@@ -196,21 +196,21 @@ let Q = (e) => {
                 },
                 [ew, ez, eq]
             ),
-            e$ = l.useCallback(
+            eY = l.useCallback(
                 async (e, t, r) => {
                     let l = r && !n && !eM.enabled;
                     if ((e_(e), eh(t), t === o.T.ORB)) await ec(q.AW.ORBS, r);
                     else if ((await ec(q.AW.CATALOG, l), t)) {
                         if (ez && eq > 0) {
-                            let e = eY(t);
+                            let e = eK(t);
                             e !== eU && eG(e);
                         }
                         eH(t);
                     }
                 },
-                [eH, n, eM.enabled, ec, ez, eq, eY, eU, eG]
+                [eH, n, eM.enabled, ec, ez, eq, eK, eU, eG]
             ),
-            eK = (0, I.b)('Collectibles Shop Button'),
+            e$ = (0, I.b)('Collectibles Shop Button'),
             eX = l.useMemo(() => {
                 if (!ez) return ew;
                 let e = (eU - 1) * eq;
@@ -225,18 +225,20 @@ let Q = (e) => {
             ),
             e0 = (0, s.e7)([k.Z], () => {
                 var e;
-                return null == (e = k.Z.getCategory(eg)) ? void 0 : e.name;
+                return null == (e = k.Z.getCategory(ef)) ? void 0 : e.name;
             });
-        return (0, r.jsx)(g.Gt, {
+        return (0, r.jsx)(f.Gt, {
             value: en,
-            children: (0, r.jsx)(y.k0, {
+            children: (0, r.jsx)(P.k0, {
                 newValue: {
                     sessionId: el,
-                    pageCategory: e0
+                    pageCategory: e0,
+                    pageIndex: eU,
+                    pageSize: eq
                 },
                 children: (0, r.jsxs)(ee, {
-                    onClose: eS,
-                    shouldAddEventListener: n && !ex,
+                    onClose: ex,
+                    shouldAddEventListener: n && !eS,
                     children: [
                         (0, r.jsx)('div', {
                             className: J.shop,
@@ -248,7 +250,7 @@ let Q = (e) => {
                                 onScroll: () => {
                                     if ((ei(), null != ea.current)) {
                                         let e = ea.current.getDistanceFromBottom();
-                                        eb >= ep ? ed(e < 20) : e <= 200 && ef(eb + q.IV);
+                                        eg >= ep ? ed(e < 20) : e <= 200 && eb(eg + q.IV);
                                     }
                                 },
                                 children: (0, r.jsxs)('div', {
@@ -260,8 +262,8 @@ let Q = (e) => {
                                     children: [
                                         (0, r.jsx)(D.I, {
                                             isFullScreen: n,
-                                            isLayer: ex,
-                                            onClose: eS,
+                                            isLayer: eS,
+                                            onClose: ex,
                                             handleTransition: ec,
                                             selectedTab: eo
                                         }),
@@ -271,10 +273,10 @@ let Q = (e) => {
                                                 let e = [];
                                                 return (
                                                     null != ek ? e.push('shop load fetch categories error: '.concat(eB.message)) : null != eT ? e.push('shop load fetch purchase error: '.concat(eB.message)) : e.push('shop load claim error: '.concat(eB.message)),
-                                                    P.Z.captureMessage(e.join('\n'), {
+                                                    y.Z.captureMessage(e.join('\n'), {
                                                         tags: {
                                                             isStaff: null != (l = null == eE || null == (t = eE.isStaff()) ? void 0 : t.toString()) ? l : 'unknown',
-                                                            preloadEnabled: eK.toString(),
+                                                            preloadEnabled: e$.toString(),
                                                             disableCache: eC.toString(),
                                                             includeUnpublished: ev.toString()
                                                         }
@@ -291,10 +293,10 @@ let Q = (e) => {
                                                 case q.AW.ORBS:
                                                     return (0, r.jsx)(U.Z, {
                                                         isFullScreen: n,
-                                                        handleTransition: e$,
-                                                        numVisibleItems: eb,
+                                                        handleTransition: eY,
+                                                        numVisibleItems: eg,
                                                         tab: e,
-                                                        isFetchingCategories: ey
+                                                        isFetchingCategories: eP
                                                     });
                                                 case q.AW.AVATAR_DECORATIONS:
                                                 case q.AW.PROFILE_EFFECTS:
@@ -307,7 +309,7 @@ let Q = (e) => {
                                                             children: (0, r.jsx)(
                                                                 G.Z,
                                                                 {
-                                                                    isFetchingCategories: ey,
+                                                                    isFetchingCategories: eP,
                                                                     isFullScreen: n,
                                                                     scrollerRef: ea,
                                                                     tab: e
@@ -326,7 +328,7 @@ let Q = (e) => {
                                                             }),
                                                             children: [
                                                                 (0, r.jsx)(R.Z, {
-                                                                    isFetchingCategories: ey,
+                                                                    isFetchingCategories: eP,
                                                                     sortedCategories: eX,
                                                                     setCategoryRef: eD,
                                                                     isPremiumUser: ej,

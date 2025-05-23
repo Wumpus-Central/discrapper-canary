@@ -55,7 +55,7 @@ var l,
     $ = n(474936),
     J = n(231338),
     Q = n(388032),
-    ee = n(822681);
+    ee = n(104274);
 function et(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -248,8 +248,8 @@ function ec(e) {
         });
     let [e3, e1] = i.useState(ei),
         [e2, e7] = i.useState(L.A.WAITING),
-        [e4, e5] = i.useState(!0),
-        e6 = () => {
+        [e4, e6] = i.useState(!0),
+        e5 = () => {
             l(e2 === L.A.COMPLETED);
         },
         e9 = null != em && em.isPurchasedExternally;
@@ -296,7 +296,7 @@ function ec(e) {
             );
         }
     });
-    if (eh) t = (0, r.jsx)(g.Vq, { onClose: e6 });
+    if (eh) t = (0, r.jsx)(g.Vq, { onClose: e5 });
     else if (ey && eI && eY && null != tl && '' !== tl)
         if ((null == em ? void 0 : em.isPausedOrPausePending) && !em.isPausedAllowsUpdatesButNotResume)
             t = (0, r.jsx)(E.hzk, {
@@ -325,7 +325,7 @@ function ec(e) {
                 premiumSubscriptionPlan: eg,
                 analyticsLocation: m,
                 analyticsSourceLocation: el,
-                onClose: e6,
+                onClose: e5,
                 onBack: () => eQ(M.h8.PLAN_SELECT),
                 onSkip: () => eQ(null != ef || ew ? M.h8.REVIEW : M.h8.ADD_PAYMENT_STEPS),
                 onSubscriptionConfirmation: ep,
@@ -349,7 +349,7 @@ function ec(e) {
                             premiumSubscriptionPlan: eg,
                             numGuildBoosts: eU,
                             setNumGuildBoosts: eG,
-                            setForceDisableSubmitButton: e5,
+                            setForceDisableSubmitButton: e6,
                             premiumSubscription: em,
                             existingAvailableSlots: eb,
                             onClickPremiumSubscriptionLink: () => {
@@ -357,7 +357,7 @@ function ec(e) {
                                     window.location.href = 'discord://app/settings/nitro';
                                     return;
                                 }
-                                e6(), null != s && s(), (0, T.z)();
+                                e5(), null != s && s(), (0, T.z)();
                             },
                             guildId: ec,
                             priceOptions: o
@@ -377,7 +377,7 @@ function ec(e) {
                         (l = (0, r.jsx)(E.zxk, {
                             look: E.zxk.Looks.LINK,
                             color: (0, p.ap)(eO) ? E.zxk.Colors.PRIMARY : E.zxk.Colors.WHITE,
-                            onClick: e6,
+                            onClick: e5,
                             children: Q.intl.string(Q.t.oEAioK)
                         })),
                         (i = (0, r.jsx)(E.zxk, {
@@ -457,7 +457,7 @@ function ec(e) {
                                               let r = await (0, P.Mg)(em, l, t, n, eX);
                                               if (r.redirectConfirmation) return void tc(null != r.redirectURL);
                                           }
-                                          0 === eP && eQ(M.h8.CONFIRM), e7(L.A.COMPLETED), null != ec && (await eo(ec, 0 !== eP)), 0 !== eP && e6(), null == ea || ea();
+                                          0 === eP && eQ(M.h8.CONFIRM), e7(L.A.COMPLETED), null != ec && (await eo(ec, 0 !== eP)), 0 !== eP && e5(), null == ea || ea();
                                       } catch (t) {
                                           e7(L.A.FAIL),
                                               ek(t),
@@ -499,7 +499,7 @@ function ec(e) {
                     e = (0, r.jsx)(X.R7, {
                         guild: c,
                         guildBoostQuantity: eU + eb.length,
-                        onClose: e6,
+                        onClose: e5,
                         withAnimation: !1,
                         paymentSourceType: u,
                         didPurchaseOnFractionalPremium: d
@@ -557,7 +557,7 @@ function ec(e) {
         eh ||
             eq === M.h8.PREMIUM_UPSELL ||
             (td = (0, r.jsx)(V.Z, {
-                onClose: e6,
+                onClose: e5,
                 currentStep: eq,
                 purchaseState: e2
             })),

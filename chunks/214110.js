@@ -4,7 +4,7 @@ var r = n(255367),
     l = n(251794),
     a = n(71619),
     o = n(796263),
-    s = n(720068),
+    s = n(776571),
     c = n(388032);
 function u(e) {
     let { channel: t, user: n, inline: u = !1 } = e,

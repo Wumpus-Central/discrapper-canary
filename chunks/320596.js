@@ -16,7 +16,7 @@ var i = n(442837),
     _ = n(88751),
     h = n(930180),
     b = n(388032),
-    p = n(298824);
+    p = n(193132);
 let g = (e) => {
         let { channelId: t } = e;
         return (0, r.jsx)(f, { channelId: t });

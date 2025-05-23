@@ -13,7 +13,7 @@ var r = n(255367),
     u = n(981631),
     f = n(526761),
     h = n(388032),
-    m = n(781242),
+    m = n(618386),
     A = n(444812);
 let C = (e) => {
     let { channelId: t, messageId: C, transitionState: g, onClose: R } = e,

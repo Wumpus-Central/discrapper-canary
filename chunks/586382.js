@@ -10,7 +10,7 @@ var r = n(255367),
     a = n(949640),
     o = n(981631),
     c = n(30513),
-    u = n(6128);
+    u = n(187561);
 function d(e) {
     let { guild: t, guildFeature: n, analyticsSection: o, analyticsObject: c, getPerks: d, targetPremiumGuildTier: m } = e,
         { analyticsLocations: g } = (0, l.ZP)(),

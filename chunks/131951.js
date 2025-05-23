@@ -237,8 +237,8 @@ let eB = {},
     e$ = !1,
     e0 = em.Av,
     e1 = !1,
-    e3 = !1,
     e2 = !1,
+    e3 = !1,
     e4 = new b.V7(),
     e5 = !1,
     e6 = !1,
@@ -432,15 +432,15 @@ function tD() {
             });
         }),
             e.context === em.Yn.DEFAULT &&
-                ((e3 = !1),
-                (e2 = !1),
+                ((e2 = !1),
+                (e3 = !1),
                 e.on(g.Sh.SpeakingWhileMuted, () => {
-                    (e3 = !0),
-                        (e2 = !0),
+                    (e2 = !0),
+                        (e3 = !0),
                         r.emitChange(),
                         e4.stop(),
                         e4.start(ek, () => {
-                            (e2 = !1), r.emitChange();
+                            (e3 = !1), r.emitChange();
                         });
                 })),
             e.on(g.Sh.DesktopSourceEnd, () => {
@@ -974,7 +974,7 @@ function t0(e) {
 function t1() {
     i = null;
 }
-function t3(e) {
+function t2(e) {
     switch (e.state) {
         case ed.hes.CONNECTING:
             tZ();
@@ -990,7 +990,7 @@ function t3(e) {
     }
     tU.update();
 }
-function t2(e) {
+function t3(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => (i === t.sessionId ? ((eq = t.mute || t.suppress), (eJ = t.deaf), eG.eachConnection(tA), tC((null == t.guildId || null == t.channelId || null == ts || ts === t.channelId) && e$), (ts = t.channelId), !0) : (__OVERLAY__ || t.userId !== en.default.getId() || null != es.Z.getChannelId() || tC(!1, null), e)), !1);
 }
@@ -1403,11 +1403,11 @@ function n1(e) {
             }),
         eG.eachConnection(tA);
 }
-function n3(e) {
+function n2(e) {
     let { enabled: t } = e;
     Z.Z.requestPermission(e_.Eu.CAMERA), tC(t);
 }
-function n2(e) {
+function n3(e) {
     let { sourceId: t, applicationName: n, quality: i } = e,
         o = S.Z.isDecoupledGameClippingEnabled(),
         s = S.Z.getSettings().decoupledClipsEnabled;
@@ -1928,10 +1928,10 @@ class rc extends (l = m.ZP.Store) {
         return tI().openH264;
     }
     getEverSpeakingWhileMuted() {
-        return e3;
+        return e2;
     }
     getSpeakingWhileMuted() {
-        return e2;
+        return e3;
     }
     hasActiveCallKitCall() {
         return tE;
@@ -2001,10 +2001,10 @@ function ru(e) {
 eE(rc, 'displayName', 'MediaEngineStore');
 let rd = (r = new rc(y.Z, {
     VOICE_CHANNEL_SELECT: nX,
-    VOICE_STATE_UPDATES: t2,
+    VOICE_STATE_UPDATES: t3,
     CONNECTION_OPEN: t$,
     CONNECTION_CLOSED: t1,
-    RTC_CONNECTION_STATE: t3,
+    RTC_CONNECTION_STATE: t2,
     AUDIO_SET_TEMPORARY_SELF_MUTE: t4,
     AUDIO_TOGGLE_SELF_MUTE: t5,
     AUDIO_SET_SELF_MUTE: t6,
@@ -2040,7 +2040,7 @@ let rd = (r = new rc(y.Z, {
     AUDIO_SET_SUBSYSTEM: nz,
     AUDIO_SET_BYPASS_SYSTEM_INPUT_PROCESSING: nK,
     MEDIA_ENGINE_SET_AUDIO_ENABLED: n1,
-    MEDIA_ENGINE_SET_VIDEO_ENABLED: n3,
+    MEDIA_ENGINE_SET_VIDEO_ENABLED: n2,
     MEDIA_ENGINE_PERMISSION: n0,
     MEDIA_ENGINE_SET_GO_LIVE_SOURCE: n5,
     MEDIA_ENGINE_SET_VIDEO_DEVICE: nu,
@@ -2066,7 +2066,7 @@ let rd = (r = new rc(y.Z, {
     MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START: ra,
     MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR: rs,
     USER_SETTINGS_PROTO_UPDATE: t8,
-    CLIPS_INIT: n2,
+    CLIPS_INIT: n3,
     CLIPS_SETTINGS_UPDATE: n4,
     MEDIA_ENGINE_SET_ENABLE_HARDWARE_MUTE_NOTICE: rl,
     VOICE_FILTER_REQUEST_SWITCH: nH,

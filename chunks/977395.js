@@ -1,4 +1,4 @@
-n.d(t, { f: () => g });
+n.d(t, { f: () => f });
 var r = n(534517),
     l = n(819570),
     a = n(909688),
@@ -9,6 +9,6 @@ var r = n(534517),
     u = n(228624),
     d = n(635316),
     p = n(91641),
-    b = n(166350),
-    f = n(987338);
-let g = new p.E([b.NR, b.ZI, b.Ob, b.uc, b.m1, u.k, c.g, a.j, l.M, o.h, i.l, s.A, d.K, r.B], f.$P.COLLECTIBLES_SHOP_OPEN, { location: 'collectibles shop open' });
+    g = n(166350),
+    b = n(987338);
+let f = new p.E([g.NR, g.ZI, g.Ob, g.uc, g.m1, u.k, c.g, a.j, l.M, o.h, i.l, s.A, d.K, r.B], b.$P.COLLECTIBLES_SHOP_OPEN, { location: 'collectibles shop open' });

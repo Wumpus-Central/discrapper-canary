@@ -20,7 +20,7 @@ var r = n(255367),
     O = n(981631),
     v = n(710111),
     I = n(388032),
-    S = n(539066);
+    S = n(367753);
 function T(e) {
     let { discoverableGuildId: t, closePopout: n, buttonType: o } = e,
         a = i.useCallback(async () => {

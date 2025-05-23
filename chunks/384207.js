@@ -5,7 +5,7 @@ var r = n(646466),
     l = n(484486),
     i = n(812381),
     s = n(511010),
-    o = n(429208);
+    o = n(590824);
 let c = () =>
     (0, a.jsxs)('div', {
         className: o.previewPanel,

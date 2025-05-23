@@ -22,8 +22,8 @@ var r = n(255367),
     I = n(981631),
     S = n(231338),
     j = n(388032),
-    y = n(229261),
-    N = n(971005);
+    y = n(84879),
+    N = n(20493);
 let C = n(515695),
     T = new f.Z('LoginQRSocket');
 function A(e) {

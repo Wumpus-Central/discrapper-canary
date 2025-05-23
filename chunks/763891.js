@@ -9,22 +9,22 @@ var r = n(255367),
     u = n(597688),
     d = n(370039),
     p = n(937510),
-    b = n(303952),
-    f = n(38900),
-    g = n(709999),
+    g = n(303952),
+    b = n(38900),
+    f = n(709999),
     h = n(81136),
     m = n(215023),
     _ = n(388032),
-    C = n(842817),
+    C = n(484920),
     v = n(558513),
     O = n(676790),
-    x = n(42742),
-    S = n(266058);
+    S = n(42742),
+    x = n(266058);
 function E(e) {
     var t;
-    let { isFetchingCategories: n, isFullScreen: E, scrollerRef: j, tab: P } = e,
-        y = (0, c.sp)(),
-        k = null != (t = null == y ? void 0 : y.sessionId) ? t : '',
+    let { isFetchingCategories: n, isFullScreen: E, scrollerRef: j, tab: y } = e,
+        P = (0, c.sp)(),
+        k = null != (t = null == P ? void 0 : P.sessionId) ? t : '',
         { noCache: T, includeUnpublished: I } = (0, h.Z)(),
         L = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
         B = (0, i.e7)([u.Z], () => u.Z.productsWithVariantsAsGroup),
@@ -34,17 +34,17 @@ function E(e) {
             null == j || null == (e = j.current) || e.scrollToTop({ animate: !0 });
         },
         [R, Z, F] = l.useMemo(() => {
-            switch (P) {
+            switch (y) {
                 case m.AW.AVATAR_DECORATIONS:
                     return [_.intl.string(_.t.dRZYND), O.Z, a.Z.AVATAR_DECORATION];
                 case m.AW.PROFILE_EFFECTS:
-                    return [_.intl.string(_.t['1cNjt7']), S.Z, a.Z.PROFILE_EFFECT];
+                    return [_.intl.string(_.t['1cNjt7']), x.Z, a.Z.PROFILE_EFFECT];
                 case m.AW.BUNDLES:
                     return [_.intl.string(_.t.FYFppq), v.Z, a.Z.BUNDLE];
                 case m.AW.NAMEPLATES:
-                    return [_.intl.string(_.t.V68Fq6), x.Z, a.Z.NAMEPLATE];
+                    return [_.intl.string(_.t.V68Fq6), S.Z, a.Z.NAMEPLATE];
             }
-        }, [P]),
+        }, [y]),
         D = (0, d.a)(),
         H = l.useMemo(
             () =>
@@ -58,10 +58,10 @@ function E(e) {
         ),
         M = (0, p.l)(H);
     return (l.useEffect(() => {
-        (0, b.n)({
+        (0, g.n)({
             sessionId: k,
-            checkpoint: b.a.SHOP_MOUNTED,
-            tab: P,
+            checkpoint: g.a.SHOP_MOUNTED,
+            tab: y,
             isFullScreen: E,
             unpublishedCategoriesShown: I,
             cacheDisabled: T
@@ -69,17 +69,17 @@ function E(e) {
     }, []),
     l.useEffect(() => {
         n ||
-            (0, b.n)({
+            (0, g.n)({
                 sessionId: k,
-                checkpoint: b.a.SHOP_RENDERED,
-                tab: P,
+                checkpoint: g.a.SHOP_RENDERED,
+                tab: y,
                 isFullScreen: E,
                 unpublishedCategoriesShown: I,
                 cacheDisabled: T
             });
-    }, [k, E, I, T, n, P]),
+    }, [k, E, I, T, n, y]),
     n || null == L)
-        ? (0, r.jsx)(f.Z, {})
+        ? (0, r.jsx)(b.Z, {})
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)('div', {
@@ -102,12 +102,12 @@ function E(e) {
                                     {
                                         newValue: { tilePosition: t },
                                         children: (0, r.jsx)(
-                                            g.Z,
+                                            f.Z,
                                             {
                                                 product: e,
                                                 user: L,
                                                 category: n,
-                                                tab: P
+                                                tab: y
                                             },
                                             e.skuId
                                         )

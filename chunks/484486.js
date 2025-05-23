@@ -5,7 +5,7 @@ var r = n(442837),
     l = n(481060),
     i = n(335131),
     s = n(597688),
-    o = n(509202);
+    o = n(23721);
 let c = () => {
     let e = (0, r.e7)([s.Z], () => s.Z.skipNumCategories);
     return (0, a.jsxs)('div', {

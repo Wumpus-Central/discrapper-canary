@@ -50,7 +50,7 @@ var r = n(255367),
     J = n(228168),
     Q = n(981631),
     $ = n(388032),
-    ee = n(125905);
+    ee = n(517603);
 function et(e) {
     var t;
     let { user: n, currentUser: i, guildId: et, channelId: en, messageId: er, roleId: eo, sessionId: ei, initialSection: ec, initialSubsection: el, transitionState: ea, customStatusPrompt: es, openedAt: ed, onClose: eu, sourceAnalyticsLocations: ef = [] } = e,

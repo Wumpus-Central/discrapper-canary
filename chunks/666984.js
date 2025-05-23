@@ -11,7 +11,7 @@ var i = n(481060),
     d = n(228168),
     f = n(981631),
     _ = n(388032),
-    p = n(935693);
+    p = n(227832);
 function h(e) {
     var t, n, h, m;
     let { user: g, activity: E, onAction: b } = e,

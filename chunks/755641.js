@@ -5,7 +5,7 @@ var B = v(255367),
     f = v(481060),
     r = v(510918),
     C = v(254925),
-    h = v(271529);
+    h = v(602268);
 function n(A) {
     let { selectedBadge: g, onBadgeClicked: v } = A;
     return (0, B.jsx)('div', {

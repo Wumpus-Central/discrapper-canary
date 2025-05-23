@@ -4,7 +4,7 @@ n(73800);
 var r = n(120356),
     s = n.n(r),
     l = n(283029),
-    a = n(156526);
+    a = n(60667);
 let o = function (e) {
     let { className: t, hasCooldown: r, isCanceled: o, useReducedMotion: c } = e;
     return (0, i.jsxs)('div', {

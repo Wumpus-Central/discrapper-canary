@@ -6,7 +6,7 @@ var i = n(255367),
     r = n(120356),
     s = n.n(r),
     l = n(481060),
-    a = n(389277);
+    a = n(517791);
 let o = () => (0, i.jsx)('hr', { className: a.sectionDivider }),
     c = (e) => {
         let { label: t, children: n, direction: r = 'horizontal', className: c } = e;

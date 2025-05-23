@@ -26,8 +26,8 @@ var i = n(255367),
     N = n(726985),
     I = n(981631),
     y = n(388032),
-    A = n(320258),
-    P = n(971005);
+    A = n(187382),
+    P = n(20493);
 function R(e) {
     let t = () => {
         T.SE.updateSetting(e ? j.default.keys(E.Z.getGuilds()) : []);

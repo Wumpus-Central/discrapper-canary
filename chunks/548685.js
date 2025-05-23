@@ -9,43 +9,43 @@ var r = n(255367),
     u = n(607070),
     d = n(594174),
     p = n(451478),
-    b = n(626135),
-    f = n(63063),
-    g = n(74538),
+    g = n(626135),
+    b = n(63063),
+    f = n(74538),
     h = n(381585),
     m = n(597688),
     _ = n(315066),
     C = n(243126),
     v = n(38900),
     O = n(709999),
-    x = n(328626),
-    S = n(619899),
+    S = n(328626),
+    x = n(619899),
     E = n(215023),
     j = n(981631),
-    P = n(388032),
-    y = n(379890);
+    y = n(388032),
+    P = n(806734);
 let k = (e) => {
     var t;
     let { isLoading: n, sortedSkuIds: a, handleTransition: k, numVisibleItems: T, tab: I } = e,
         L = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
-        B = g.ZP.canUseCollectibles(L),
+        B = f.ZP.canUseCollectibles(L),
         w = (0, _.s)('useShopHomeSorting') && I === E.AW.HOME,
         { sortType: N, setSortType: A, sortedItems: R, sortOptions: Z, shuffleProducts: F, showRecommendationOption: D } = (0, C.N)(a, B),
-        H = (0, S.St)(R),
+        H = (0, x.St)(R),
         M = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         W = (0, o.e7)([p.Z], () => p.Z.isFocused()),
         V = !M && W,
-        { animationPhase: U, startAnimation: G } = (0, x.y)(),
+        { animationPhase: U, startAnimation: G } = (0, S.y)(),
         z = (0, h.sp)(),
         q = null != (t = null == z ? void 0 : z.sessionId) ? t : '',
-        Y = l.useRef(null),
-        $ = l.useCallback(
+        K = l.useRef(null),
+        Y = l.useCallback(
             (e) => {
                 G({
                     isShuffling: !1,
                     onOutroComplete: () => A(e)
                 }),
-                    b.default.track(j.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
+                    g.default.track(j.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                         page_session_id: q,
                         sort_type: e
                     });
@@ -55,23 +55,23 @@ let k = (e) => {
     return null == L
         ? null
         : (0, r.jsxs)('div', {
-              className: i()(y.popularPicksSection, y.centeredSection),
+              className: i()(P.popularPicksSection, P.centeredSection),
               children: [
                   (0, r.jsxs)('div', {
-                      className: y.blockHeader,
+                      className: P.blockHeader,
                       children: [
                           (0, r.jsxs)('div', {
-                              className: y.headerLeft,
+                              className: P.headerLeft,
                               children: [
                                   (0, r.jsx)(s.X6q, {
                                       variant: 'heading-lg/semibold',
-                                      children: I === E.AW.ORBS ? P.intl.string(P.t.dFgeub) : P.intl.string(P.t.NSv5KS)
+                                      children: I === E.AW.ORBS ? y.intl.string(y.t.dFgeub) : y.intl.string(y.t.NSv5KS)
                                   }),
                                   D &&
                                       (0, r.jsx)(s.ua7, {
-                                          text: P.intl.string(P.t['3taPdn']),
+                                          text: y.intl.string(y.t['3taPdn']),
                                           position: 'top',
-                                          'aria-label': P.intl.string(P.t['3taPdn']),
+                                          'aria-label': y.intl.string(y.t['3taPdn']),
                                           children: (e) => {
                                               var t, n;
                                               return (0, r.jsx)(
@@ -103,8 +103,8 @@ let k = (e) => {
                                                   })({}, e)),
                                                   (n = n =
                                                       {
-                                                          onClick: () => (0, c.Z)(f.Z.getArticleURL(j.BhN.DATA_USED_FOR_RECOMMENDED)),
-                                                          className: y.informationIcon,
+                                                          onClick: () => (0, c.Z)(b.Z.getArticleURL(j.BhN.DATA_USED_FOR_RECOMMENDED)),
+                                                          className: P.informationIcon,
                                                           children: (0, r.jsx)(s.d3s, { size: 'sm' })
                                                       }),
                                                   Object.getOwnPropertyDescriptors
@@ -126,19 +126,19 @@ let k = (e) => {
                               ]
                           }),
                           (0, r.jsxs)('div', {
-                              className: y.headerRight,
+                              className: P.headerRight,
                               children: [
                                   w &&
                                       (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)(s.Text, {
                                                   variant: 'text-md/medium',
-                                                  children: P.intl.string(P.t.uaX709)
+                                                  children: y.intl.string(y.t.uaX709)
                                               }),
                                               (0, r.jsx)(s.PhF, {
                                                   options: Z,
-                                                  select: $,
-                                                  className: y.sortSelect,
+                                                  select: Y,
+                                                  className: P.sortSelect,
                                                   isSelected: (e) => e === N,
                                                   serialize: (e) => e
                                               })
@@ -148,30 +148,30 @@ let k = (e) => {
                                       (w
                                           ? (0, r.jsx)(s.zxk, {
                                                 color: s.Ttl.PRIMARY,
-                                                buttonRef: Y,
+                                                buttonRef: K,
                                                 onClick: () => {
                                                     G({
                                                         isShuffling: !0,
                                                         onOutroComplete: F,
-                                                        returnRef: Y
+                                                        returnRef: K
                                                     }),
-                                                        b.default.track(j.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, { page_session_id: q });
+                                                        g.default.track(j.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, { page_session_id: q });
                                                 },
-                                                disabled: U !== x.g.MOUNTED && U !== x.g.FINISHED,
-                                                children: P.intl.string(P.t.X3tnc3)
+                                                disabled: U !== S.g.MOUNTED && U !== S.g.FINISHED,
+                                                children: y.intl.string(y.t.X3tnc3)
                                             })
                                           : (0, r.jsx)(s.zxk, {
                                                 color: s.Ttl.PRIMARY,
                                                 look: s.iLD.FILLED,
                                                 onClick: () => k('shop all top'),
-                                                children: P.intl.string(P.t.xFcotb)
+                                                children: y.intl.string(y.t.xFcotb)
                                             }))
                               ]
                           })
                       ]
                   }),
                   (0, r.jsx)('div', {
-                      className: y.feed,
+                      className: P.feed,
                       children: n
                           ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(v.K, {}, t + 1)) })
                           : H.slice(0, T).map((e, t) => {
@@ -179,8 +179,8 @@ let k = (e) => {
                                     l = m.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;
                                 if (V)
-                                    if (U === x.g.SHUFFLE_OUT) return (0, r.jsx)('div', { className: y.shuffleOutro }, ''.concat(e.skuId, '-').concat(t));
-                                    else U === x.g.SORT_OUT ? (n = y.sortChangedOutro) : U === x.g.SHUFFLE_IN ? (n = y.shuffleIntro) : U === x.g.SORT_IN && (n = y.sortChangedIntro);
+                                    if (U === S.g.SHUFFLE_OUT) return (0, r.jsx)('div', { className: P.shuffleOutro }, ''.concat(e.skuId, '-').concat(t));
+                                    else U === S.g.SORT_OUT ? (n = P.sortChangedOutro) : U === S.g.SHUFFLE_IN ? (n = P.shuffleIntro) : U === S.g.SORT_IN && (n = P.sortChangedIntro);
                                 return (0, r.jsx)(
                                     h.k0,
                                     {

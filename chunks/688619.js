@@ -459,15 +459,15 @@
             }
         });
     var e1 = d.unpack,
-        e3 = d.type,
-        e2 = y,
+        e2 = d.type,
+        e3 = y,
         e4 = E,
         e5 = f,
         e6 = j;
     (e4.prototype.hsl = function () {
         return e6(this._rgb);
     }),
-        (e2.hsl = function () {
+        (e3.hsl = function () {
             for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
             return new (Function.prototype.bind.apply(e4, [null].concat(e, ['hsl'])))();
         }),
@@ -476,7 +476,7 @@
             p: 2,
             test: function () {
                 for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
-                if ('array' === e3((e = e1(e, 'hsl'))) && 3 === e.length) return 'hsl';
+                if ('array' === e2((e = e1(e, 'hsl'))) && 3 === e.length) return 'hsl';
             }
         });
     var e8 = d.unpack,
@@ -675,13 +675,13 @@
         t$ = d.type,
         t0 = y,
         t1 = E,
-        t3 = f,
-        t2 = tG;
+        t2 = f,
+        t3 = tG;
     (t1.prototype.lch = function () {
-        return t2(this._rgb);
+        return t3(this._rgb);
     }),
         (t1.prototype.hcl = function () {
-            return t2(this._rgb).reverse();
+            return t3(this._rgb).reverse();
         }),
         (t0.lch = function () {
             for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
@@ -691,10 +691,10 @@
             for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
             return new (Function.prototype.bind.apply(t1, [null].concat(e, ['hcl'])))();
         }),
-        (t3.format.lch = tz),
-        (t3.format.hcl = tX),
+        (t2.format.lch = tz),
+        (t2.format.hcl = tX),
         ['lch', 'hcl'].forEach(function (e) {
-            return t3.autodetect.push({
+            return t2.autodetect.push({
                 p: 2,
                 test: function () {
                     for (var t = [], n = arguments.length; n--; ) t[n] = arguments[n];
@@ -1083,10 +1083,10 @@
                 if ('array' === nX((e = nQ(e, 'oklch'))) && 3 === e.length) return 'oklch';
             }
         });
-    var n3 = E,
-        n2 = d.type;
-    (n3.prototype.alpha = function (e, t) {
-        return (void 0 === t && (t = !1), void 0 !== e && 'number' === n2(e)) ? (t ? ((this._rgb[3] = e), this) : new n3([this._rgb[0], this._rgb[1], this._rgb[2], e], 'rgb')) : this._rgb[3];
+    var n2 = E,
+        n3 = d.type;
+    (n2.prototype.alpha = function (e, t) {
+        return (void 0 === t && (t = !1), void 0 !== e && 'number' === n3(e)) ? (t ? ((this._rgb[3] = e), this) : new n2([this._rgb[0], this._rgb[1], this._rgb[2], e], 'rgb')) : this._rgb[3];
     }),
         (E.prototype.clipped = function () {
             return this._rgb._clipped || !1;
@@ -1646,10 +1646,10 @@
         r1 = function (e, t) {
             return (e * t) / 255;
         },
-        r3 = function (e, t) {
+        r2 = function (e, t) {
             return e > t ? t : e;
         },
-        r2 = function (e, t) {
+        r3 = function (e, t) {
             return e > t ? e : t;
         },
         r4 = function (e, t) {
@@ -1672,8 +1672,8 @@
         (rJ.multiply = r$(r0(r1))),
         (rJ.screen = r$(r0(r4))),
         (rJ.overlay = r$(r0(r5))),
-        (rJ.darken = r$(r0(r3))),
-        (rJ.lighten = r$(r0(r2))),
+        (rJ.darken = r$(r0(r2))),
+        (rJ.lighten = r$(r0(r3))),
         (rJ.dodge = r$(r0(r8))),
         (rJ.burn = r$(r0(r6)));
     for (

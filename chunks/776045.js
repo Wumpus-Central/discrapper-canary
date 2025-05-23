@@ -8,7 +8,7 @@ var n,
     a = r(73800),
     l = r(481060),
     o = r(388032),
-    i = r(86275),
+    i = r(683290),
     s = (((n = {}).DANGER = 'danger'), (n.WARNING = 'warning'), n);
 function c(e) {
     let { transitionState: t, onClose: r, title: n, body: s, cta: c, closeLabel: d, onConfirm: u, iconVariant: g = 'warning' } = e,
