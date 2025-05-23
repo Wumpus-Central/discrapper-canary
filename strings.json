@@ -8858,6 +8858,8 @@
   "yONu/v": "$[**!!{user}!!**]({{userHook}}) updated onboarding for this server",
   "Br0y5+": "$[**!!{user}!!**]({{userHook}}) created a private thread $[**!!{target}!!**]({{targetHook}})",
   "2FQFi4": "Set the color to **!!{newValue}!!** $[]({{newColorHook}})",
+  "WnSwLy": "Set the gradient to [$[]({{newColorsHook}})]",
+  "U44ttr": "With no gradient",
   "92xIQk": "Set the color to **!!{newValue}!!**",
   "TK6E1N": "With no color",
   "UTLTx8": "$[**!!{user}!!**]({{userHook}}) created the role $[**!!{target}!!**]({{targetHook}})",
