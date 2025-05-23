@@ -44606,8 +44606,8 @@ div.mobilePushContainer__3d3b0 {
     z-index: 0
 }
 
-.theme-light .username_e5de78 {
-    filter: brightness(75%)
+.theme-light .usernameGradient_e5de78 {
+    filter: brightness(.65) saturate(1.8)
 }
 
 .convenienceGlowGradient_e5de78:after {
