@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685);
+n.d(t, { Z: () => B }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -23,8 +23,8 @@ var i = n(255367),
     S = n(594174),
     v = n(78839),
     T = n(626135),
-    I = n(111361),
-    N = n(357355),
+    N = n(111361),
+    I = n(357355),
     y = n(937579),
     A = n(91802),
     P = n(104494),
@@ -34,12 +34,12 @@ var i = n(255367),
     w = n(132547),
     k = n(474936),
     L = n(981631),
-    B = n(126867);
-let M = function (e) {
+    M = n(126867);
+let B = function (e) {
     let { entrypoint: t = k.EZ.UserSettings } = e;
     (0, E.z)(x.X);
     let n = (0, f.Q)(),
-        { sourceAnalyticsLocations: s, analyticsLocations: M } = (0, h.ZP)(p.Z.PREMIUM_MARKETING),
+        { sourceAnalyticsLocations: s, analyticsLocations: B } = (0, h.ZP)(p.Z.PREMIUM_MARKETING),
         U = (0, a.e7)([v.ZP], () => v.ZP.hasFetchedSubscriptions()),
         V = (0, a.e7)([S.default], () => S.default.getCurrentUser()),
         G = null == V ? void 0 : V.id,
@@ -48,12 +48,12 @@ let M = function (e) {
         z = (0, b.V)(),
         [W, Y] = r.useState(!0),
         K = r.useRef(0),
-        q = (0, I.M5)(V, k.p9.TIER_2),
+        q = (0, N.M5)(V, k.p9.TIER_2),
         X = (0, A.n)(),
         Q = null == X ? void 0 : X.countryCode,
         { enabled: J } = (0, D.D)(),
         $ = (0, a.e7)([C.Z], () => (null != V ? C.Z.getUserProfile(V.id) : null)),
-        ee = (0, a.e7)([N.Z], () => N.Z.hasFetched);
+        ee = (0, a.e7)([I.Z], () => I.Z.hasFetched);
     return (r.useEffect(() => {
         ee || d.MH();
     }, [ee]),
@@ -80,20 +80,20 @@ let M = function (e) {
           : t === k.EZ.ApplicationStoreHome && q
             ? J && null == $
                 ? (0, i.jsx)('div', {
-                      className: l()(B.container, B.loading),
+                      className: l()(M.container, M.loading),
                       children: (0, i.jsx)(o.$jN, {})
                   })
                 : (0, i.jsx)(h.Gt, {
-                      value: M,
+                      value: B,
                       children: (0, i.jsx)(w.Z, {})
                   })
             : U && z && !W
               ? (0, i.jsx)(h.Gt, {
-                    value: M,
+                    value: B,
                     children: (0, i.jsx)(Z.Z, { entrypoint: t })
                 })
               : (0, i.jsx)('div', {
-                    className: l()(B.container, B.loading),
+                    className: l()(M.container, M.loading),
                     children: (0, i.jsx)(o.$jN, {})
                 });
 };

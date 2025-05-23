@@ -24,8 +24,8 @@ var r = n(990547),
     S = n(540059),
     v = n(621628),
     T = n(243778),
-    I = n(890022),
-    N = n(18438),
+    N = n(890022),
+    I = n(18438),
     y = n(778825),
     A = n(665166),
     P = n(442933),
@@ -35,8 +35,8 @@ var r = n(990547),
     w = n(231765),
     k = n(813732),
     L = n(398140),
-    B = n(564344),
-    M = n(538645),
+    M = n(564344),
+    B = n(538645),
     U = n(977156),
     V = n(14676),
     G = n(652380),
@@ -78,8 +78,8 @@ var r = n(990547),
     eS = n(389650),
     ev = n(649157),
     eT = n(593648),
-    eI = n(327885),
-    eN = n(595242),
+    eN = n(327885),
+    eI = n(595242),
     ey = n(463153),
     eA = n(36192),
     eP = n(889029),
@@ -89,8 +89,8 @@ var r = n(990547),
     ew = n(200645),
     ek = n(287490),
     eL = n(706060),
-    eB = n(168308),
-    eM = n(277329),
+    eM = n(168308),
+    eB = n(277329),
     eU = n(273927),
     eV = n(604224),
     eG = n(43434),
@@ -234,7 +234,7 @@ let e0 = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eX.intl.string(eX.t.URyqtL)],
                 label: eX.intl.string(eX.t.URyqtL),
                 ariaLabel: eX.intl.string(eX.t.URyqtL),
-                element: eM.Z,
+                element: eB.Z,
                 predicate: () => e6
             },
             [ez.s6.GAMES_MY_GAMES]: {
@@ -263,7 +263,7 @@ let e0 = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eX.intl.string(eX.t['vi7f+v'])],
                 label: eX.intl.string(eX.t['vi7f+v']),
                 ariaLabel: eX.intl.string(eX.t['vi7f+v']),
-                element: B.Z,
+                element: M.Z,
                 newIndicator: (0, i.jsx)(e3, {}),
                 newIndicatorDismissibleContentTypes: [...e1()],
                 notice: {
@@ -272,7 +272,7 @@ let e0 = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 },
                 onSettingsClose: () => {
                     o.Z.wait(() => {
-                        (0, N.It)(), (0, u.P6)(), m.Z.clearSubsection(eY.oAB.PROFILE_CUSTOMIZATION);
+                        (0, I.It)(), (0, u.P6)(), m.Z.clearSubsection(eY.oAB.PROFILE_CUSTOMIZATION);
                     });
                 },
                 url: eY.Z5c.SETTINGS('profile-customization')
@@ -575,7 +575,7 @@ let e0 = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eY.oAB.GUILD_BOOSTING,
                 searchableTitles: [eX.intl.string(eX.t['+CbP2t'])],
                 label: eX.intl.string(eX.t['+CbP2t']),
-                element: eN.Z
+                element: eI.Z
             },
             [ez.s6.SUBSCRIPTIONS]: {
                 section: eY.oAB.SUBSCRIPTIONS,
@@ -1368,7 +1368,7 @@ let e0 = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eY.oAB.NOTIFICATIONS,
                 searchableTitles: [eX.intl.string(eX.t.omtoJy)],
                 parent: ez.s6.NOTIFICATIONS,
-                predicate: () => (0, I.uw)('SettingsRendererConfig')
+                predicate: () => (0, N.uw)('SettingsRendererConfig')
             },
             [ez.s6.KEYBINDS]: {
                 section: eY.oAB.KEYBINDS,
@@ -1521,13 +1521,13 @@ let e0 = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eX.intl.string(eX.t.AVDyEh)],
                 label: eX.intl.string(eX.t.AVDyEh),
                 element: eC.Z,
-                predicate: () => !e6 && (0, eB.Jw)()
+                predicate: () => !e6 && (0, eM.Jw)()
             },
             [ez.s6.OVERLAY]: {
                 section: eY.oAB.OVERLAY,
                 searchableTitles: [eX.intl.string(eX.t['9cb1U1']), eX.intl.string(eX.t.HcoRu7)],
                 label: eX.intl.string(eX.t['9cb1U1']),
-                element: eI.Z,
+                element: eN.Z,
                 predicate: () => !e6 && F
             },
             [ez.s6.CHANGELOG]: {
@@ -1850,7 +1850,7 @@ let e0 = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eY.oAB.PROFILE_EFFECTS_PREVIEW_TOOL,
                 searchableTitles: ['PFX Editor'],
                 label: 'PFX Editor',
-                element: M.Z,
+                element: B.Z,
                 predicate: () => z.Z.isDeveloper
             },
             [ez.s6.NAMEPLATES_PREVIEW_TOOL]: {

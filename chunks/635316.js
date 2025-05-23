@@ -18,4 +18,4 @@ let a = (0, r.B)({
             }
         ]
     }),
-    i = (e) => a.useExperiment({ location: e }, { autoTrackExposure: !1 }).canGiftNameplates;
+    i = (e) => a.useExperiment({ location: e }, { autoTrackExposure: !0 }).canGiftNameplates;

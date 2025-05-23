@@ -729,19 +729,20 @@ let eM = {
             if (t.reaction) return Promise.resolve();
             let o = await (0, q.Z)(e);
             if (null != o) return ej.sendMessage(o, t, r, i);
-            let a = () => ej._sendMessage(e, t, i),
-                s = D.ZP.backgroundify(a, void 0),
-                l = null != (n = i.nonce) ? n : (0, j.r)();
-            return ((i = eN(eT({}, i), { nonce: l })), x.Z.recordMessageSendAttempt(e, l), ea.Z.isReady(e))
-                ? s()
+            let a = null != (n = i.nonce) ? n : (0, j.r)();
+            i = eN(eT({}, i), { nonce: a });
+            let s = () => ej._sendMessage(e, t, i),
+                l = D.ZP.backgroundify(s, void 0);
+            return (x.Z.recordMessageSendAttempt(e, a), ea.Z.isReady(e))
+                ? l()
                 : r && e !== m.V
                   ? (eP.info('Waiting for channel '.concat(e, ' to be ready before sending.')),
                     new Promise((t, n) => {
                         ea.Z.whenReady(e, () => {
-                            eP.info('Channel '.concat(e, ' is ready for sending now.')), s().then(t, n);
+                            eP.info('Channel '.concat(e, ' is ready for sending now.')), l().then(t, n);
                         });
                     }))
-                  : s();
+                  : l();
         },
         getSendMessageOptionsForReply(e) {
             var t;

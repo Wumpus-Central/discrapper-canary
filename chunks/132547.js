@@ -27,7 +27,7 @@ let O = () => {
         { analyticsLocations: S } = (0, o.ZP)(a.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [v, T] = r.useState(!1);
     (0, m.FM)();
-    let I = 'true' === new URLSearchParams(window.location.search).get('autoScroll');
+    let N = 'true' === new URLSearchParams(window.location.search).get('autoScroll');
     return (
         window.history.replaceState({}, '', window.location.pathname),
         (0, i.jsxs)(i.Fragment, {
@@ -49,7 +49,7 @@ let O = () => {
                                     className: C.whatsNew,
                                     noBackground: !0,
                                     leftAlignHeaders: !0,
-                                    shouldAutoScroll: I
+                                    shouldAutoScroll: N
                                 }),
                                 (0, i.jsx)(g.Z, {
                                     className: C.perksDiscoverability,

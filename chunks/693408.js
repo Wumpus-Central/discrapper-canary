@@ -55,7 +55,7 @@ function a(e) {
         })(
             {
                 className: i()(l.section, t),
-                headingVariant: 'text-xs/semibold',
+                headingVariant: 'text-xs/medium',
                 headingColor: 'currentColor'
             },
             n

@@ -1,143 +1,147 @@
-d.r(t), d.d(t, { default: () => R }), d(388685);
-var a = d(255367),
-    c = d(73800),
-    n = d(120356),
-    s = d.n(n),
-    o = d(990547),
-    i = d(704215),
-    l = d(481060),
-    r = d(213609),
-    f = d(70097),
-    _ = d(605236),
-    u = d(7093),
-    b = d(553896),
-    E = d(848572),
-    p = d(765018),
-    T = d(483444),
-    U = d(626135),
-    m = d(40347),
-    h = d(981631),
-    g = d(921944),
-    M = d(388032),
-    N = d(882714);
-function R() {
-    var e;
-    let t = c.useRef(null),
-        [d, n] = c.useState(!1),
-        [o, r] = c.useState(!0),
-        f = (0, m.Z)(),
-        b = null == f ? void 0 : f.currentBadge.id;
-    c.useEffect(() => {
-        if (null != b) return (0, _.wH)(i.z.NITRO_TENURE_BADGE_LEVEL_UP, (0, p.q)(b), { dismissAction: g.L.INDIRECT_ACTION }), () => u.Z.setState({ shouldRenderTenureLevelUp: !1 });
-    }, [b]);
-    let E = c.useCallback(() => {
-            n(!0);
+n.r(t), n.d(t, { default: () => v }), n(388685);
+var a = n(255367),
+    d = n(73800),
+    s = n(120356),
+    r = n.n(s),
+    o = n(990547),
+    l = n(704215),
+    i = n(481060),
+    c = n(213609),
+    u = n(70097),
+    _ = n(605236),
+    x = n(7093),
+    T = n(553896),
+    g = n(848572),
+    m = n(765018),
+    E = n(483444),
+    p = n(626135),
+    f = n(981631),
+    h = n(921944),
+    b = n(388032),
+    N = n(882714);
+function v(e) {
+    var t;
+    let { levelUpData: n } = e,
+        s = d.useRef(null),
+        [o, c] = d.useState(!0),
+        [u, T] = d.useState(!1),
+        [g, E] = d.useState(!1);
+    d.useEffect(() => {
+        let e = setTimeout(() => {
+            E(!0);
+        }, 1000);
+        return () => clearTimeout(e);
+    }, []),
+        d.useEffect(() => ((0, _.wH)(l.z.NITRO_TENURE_BADGE_LEVEL_UP, (0, m.q)(n.currentBadge.id), { dismissAction: h.L.INDIRECT_ACTION }), () => x.Z.setState({ shouldRenderTenureLevelUp: !1 })), [n.currentBadge.id]);
+    let p = d.useCallback(() => {
+            T(!0);
         }, []),
-        T = c.useCallback(() => {
-            r(!1);
+        f = d.useCallback(() => {
+            c(!1);
         }, []);
-    if (!o || null == f) return null;
-    let U = {
-        '--custom-old-badge-color': 'linear-gradient(to right, '.concat(null != (e = f.prevBadgeTextGradient) ? e : 'transparent', ')'),
-        '--custom-new-badge-color': 'linear-gradient(to right, '.concat(f.currentBadgeTextGradient, ')')
-    };
+    if (!o) return null;
+    let v = u && g,
+        C = {
+            '--custom-old-badge-color': 'linear-gradient(to right, '.concat(null != (t = n.prevBadgeTextGradient) ? t : 'transparent', ')'),
+            '--custom-new-badge-color': 'linear-gradient(to right, '.concat(n.currentBadgeTextGradient, ')')
+        };
     return (0, a.jsxs)('div', {
-        ref: t,
-        className: s()(N.container, { [N.loaded]: d }),
-        style: U,
+        ref: s,
+        className: r()(N.container, { [N.loaded]: v }),
+        style: C,
         children: [
-            d &&
-                (0, a.jsx)(l.EqS, {
-                    containerRef: t,
-                    children: (0, a.jsx)(l.M0o, {
+            v &&
+                (0, a.jsx)(i.EqS, {
+                    containerRef: s,
+                    children: (0, a.jsx)(i.M0o, {
                         className: N.closeButton,
-                        tooltip: M.intl.string(M.t.cpT0Cg),
-                        color: l.YX$.SECONDARY,
-                        size: l.tT7.SIZE_24,
-                        icon: (0, a.jsx)(l.Dio, {
+                        tooltip: b.intl.string(b.t.cpT0Cg),
+                        color: i.YX$.SECONDARY,
+                        size: i.tT7.SIZE_24,
+                        icon: (0, a.jsx)(i.Dio, {
                             size: 'xs',
                             color: 'currentColor'
                         }),
-                        onClick: T
+                        onClick: f
                     })
                 }),
-            (0, a.jsx)(Z, {
-                onVideoLoaded: E,
-                levelUpData: f
+            (0, a.jsx)(B, {
+                onVideoLoaded: p,
+                levelUpData: n
             })
         ]
     });
 }
-function Z(e) {
-    let { onVideoLoaded: t, levelUpData: d } = e,
-        [n, i] = c.useState(!1),
-        _ = (0, E.GG)(),
-        u = c.useRef(null),
-        p = c.useRef(null),
-        { currentBadge: m, prevBadge: g, levelUpVideoSrc: R } = d;
-    (0, r.Z)(
+function B(e) {
+    let { onVideoLoaded: t, levelUpData: n } = e,
+        [s, l] = d.useState(!1),
+        _ = (0, g.GG)(),
+        x = d.useRef(null),
+        m = d.useRef(null),
+        { currentBadge: h, prevBadge: v, levelUpVideoSrc: B } = n;
+    (0, c.Z)(
         {
             type: o.ImpressionTypes.POPOUT,
             name: o.ImpressionNames.TIERED_TENURE_BADGE_LEVEL_UP,
-            properties: { new_badge_id: m.id }
+            properties: { new_badge_id: h.id }
         },
         { trackOnInitialLoad: !0 }
     ),
-        c.useEffect(() => {
-            null != p.current && p.current.load();
+        d.useEffect(() => {
+            null != m.current && m.current.load();
         }, []);
-    let Z = c.useCallback(() => {
-        i(!1), p.current.play(), (u.current.style.display = 'none'), u.current.offsetWidth, (u.current.style.display = ''), U.default.track(h.rMx.TIERED_TENURE_BADGE_LEVEL_UP_REPLAY_CLICKED, { new_badge_id: m.id });
-    }, [m.id]);
+    let C = d.useCallback(() => {
+        l(!1), m.current.play(), (x.current.style.display = 'none'), x.current.offsetWidth, (x.current.style.display = ''), p.default.track(f.rMx.TIERED_TENURE_BADGE_LEVEL_UP_REPLAY_CLICKED, { new_badge_id: h.id });
+    }, [h.id]);
     return (0, a.jsxs)('div', {
-        className: s()(N.content, { [N.ended]: n }),
-        ref: u,
+        className: r()(N.content, { [N.ended]: s }),
+        ref: x,
         children: [
-            (0, a.jsx)(f.Z, {
-                ref: p,
+            (0, a.jsx)(u.Z, {
+                ref: m,
                 className: N.video,
-                src: R,
+                src: B,
                 playsInline: !0,
                 onLoadedData: () => {
-                    t(), p.current.play();
+                    t(), m.current.play();
                 },
-                onEnded: () => i(!0)
+                onEnded: () => l(!0)
             }),
-            (0, a.jsx)(T.Z, {
+            (0, a.jsx)(E.Z, {
                 className: N.nitroLogo,
                 width: 60,
                 height: 15
             }),
-            null != g &&
-                (0, a.jsx)(l.Text, {
+            null != v &&
+                (0, a.jsx)(i.Text, {
                     variant: 'display-md',
-                    className: s()(N.badgeText, N.old),
-                    children: M.intl.string(g.nameUnformatted)
+                    className: r()(N.badgeText, N.old),
+                    children: b.intl.string(v.nameUnformatted)
                 }),
-            (0, a.jsx)(l.Text, {
+            (0, a.jsx)(i.Text, {
                 variant: 'display-md',
-                className: s()(N.badgeText, N.new),
-                children: M.intl.string(m.nameUnformatted)
+                className: r()(N.badgeText, N.new),
+                children: b.intl.string(h.nameUnformatted)
             }),
             null != _ &&
-                (0, a.jsx)(l.Text, {
+                (0, a.jsx)(i.Text, {
                     variant: 'text-xs/medium',
                     className: N.subscribedText,
-                    children: M.intl.formatToPlainString(M.t['f/OGgI'], {
-                        timeFrame: (0, b.q)(m.id, m.tenureReqNumMonths),
+                    children: b.intl.formatToPlainString(b.t['f/OGgI'], {
+                        timeFrame: (0, T.q)(h.id, h.tenureReqNumMonths),
                         date: _
                     })
                 }),
             (0, a.jsx)('div', {
                 className: N.actionButtons,
-                children: (0, a.jsx)(l.M0o, {
-                    tooltip: M.intl.string(M.t.hsvh0t),
-                    color: l.YX$.SECONDARY,
-                    icon: (0, a.jsx)(l.o1U, {
+                children: (0, a.jsx)(i.M0o, {
+                    tooltip: b.intl.string(b.t.hsvh0t),
+                    color: i.YX$.SECONDARY,
+                    icon: (0, a.jsx)(i.o1U, {
                         size: 'xs',
                         color: 'currentColor'
                     }),
-                    onClick: Z
+                    onClick: C
                 })
             })
         ]

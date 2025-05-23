@@ -172,7 +172,7 @@ function et(e) {
                                                 className: ee.profileSection,
                                                 nickname: v.ZP.useName(null == ex ? void 0 : ex.id, en, n),
                                                 nicknameIcons: (0, r.jsx)(U.Z, { userId: n.id }),
-                                                nicknameVariant: 'heading-xxl/semibold',
+                                                nicknameVariant: 'heading-xxl/medium',
                                                 pronouns: null == ej ? void 0 : ej.pronouns,
                                                 tagClassName: ee.profileUsernameTag,
                                                 tags: (0, r.jsx)(S.Z, {

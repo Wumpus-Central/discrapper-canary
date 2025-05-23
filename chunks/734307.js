@@ -23,12 +23,12 @@ var i,
     S = n(944486),
     v = n(9156),
     T = n(823379),
-    I = n(709054),
-    N = n(540126),
+    N = n(709054),
+    I = n(540126),
     y = n(526761);
 let A = null,
     P = null,
-    R = new N.ZP();
+    R = new I.ZP();
 function D() {
     let e = S.Z.getChannelId(),
         t = S.Z.getVoiceChannelId();
@@ -54,11 +54,11 @@ function L(e) {
     let { channelId: t } = e;
     return R.nonPositionalChannelIdUpdate(t);
 }
-function B(e) {
+function M(e) {
     let { channel: t } = e;
     return R.nonPositionalChannelIdUpdate(t.id);
 }
-function M(e) {
+function B(e) {
     let { id: t } = e;
     return R.nonPositionalChannelIdUpdate(t);
 }
@@ -256,15 +256,15 @@ let W = new z(c.Z, {
     RECOMPUTE_READ_STATES: D,
     RESORT_THREADS: L,
     SET_RECENTLY_ACTIVE_COLLAPSED: D,
-    THREAD_CREATE: B,
+    THREAD_CREATE: M,
     THREAD_DELETE: function (e) {
         let { channel: t } = e;
         return R.nonPositionalChannelUpdate(t);
     },
     THREAD_LIST_SYNC: k,
-    THREAD_MEMBER_UPDATE: M,
-    THREAD_MEMBERS_UPDATE: M,
-    THREAD_UPDATE: B,
+    THREAD_MEMBER_UPDATE: B,
+    THREAD_MEMBERS_UPDATE: B,
+    THREAD_UPDATE: M,
     TRY_ACK: L,
     UPDATE_CHANNEL_DIMENSIONS: L,
     UPDATE_CHANNEL_LIST_SUBTITLES: function (e) {
@@ -290,7 +290,7 @@ let W = new z(c.Z, {
             r = !1;
         return (
             null != i &&
-                I.default.keys(i).forEach((e) => {
+                N.default.keys(i).forEach((e) => {
                     null != i[e].guildRecentsDismissedAt && (r = R.updateRecentsCategory(e) || r);
                 }),
             r

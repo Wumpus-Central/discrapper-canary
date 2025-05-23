@@ -77,18 +77,19 @@ let O = new j(o.Z, {
         m = {};
     },
     UPLOAD_START: function (e) {
-        var t, n, i;
-        let { channelId: r, file: o, uploader: l, message: a } = e;
-        if (l._aborted || l._errored) return;
-        let m = null != (t = u[r]) ? t : c;
-        (d[o.id] = l), (u[r] = [...m, o]), (h[o.id] = a);
-        let { items: f } = o;
-        null != f &&
-            (p[a.id] =
-                ((n = s({}, o)),
-                (i = i = { items: f }),
+        var t, n, i, r;
+        let { channelId: o, file: l, uploader: a, message: m } = e;
+        if (a._aborted || a._errored) return;
+        let f = null != (t = u[o]) ? t : c;
+        if (((d[l.id] = a), (u[o] = [...f, l]), null == m)) return;
+        h[l.id] = m;
+        let { items: g } = l;
+        null != g &&
+            (p[m.id] =
+                ((i = s({}, l)),
+                (r = r = { items: g }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(r))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -96,11 +97,11 @@ let O = new j(o.Z, {
                               n.push.apply(n, i);
                           }
                           return n;
-                      })(Object(i)).forEach(function (e) {
-                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                      })(Object(r)).forEach(function (e) {
+                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(r, e));
                       }),
-                n)),
-            a.nonce;
+                i)),
+            null != (n = m.nonce) || m.id;
     },
     UPLOAD_COMPRESSION_PROGRESS: function (e) {
         let { channelId: t, file: n } = e;
@@ -136,7 +137,11 @@ let O = new j(o.Z, {
     UPLOAD_FILE_UPDATE: function (e) {
         let { channelId: t, file: n } = e,
             i = h[n.id];
-        null != i && i.nonce, b(t, n);
+        if (null != i) {
+            var r;
+            null != (r = i.nonce) || i.id;
+        }
+        b(t, n);
     },
     UPLOAD_RESTORE_FAILED_UPLOAD: function (e) {
         let { file: t, messageId: n } = e;

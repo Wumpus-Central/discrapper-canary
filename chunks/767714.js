@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => O });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -6,21 +6,13 @@ var i = n(120356),
     a = n(442837),
     s = n(844477),
     l = n(481060),
-    c = n(230711),
-    u = n(906732),
-    d = n(543241),
-    f = n(963249),
-    _ = n(703656),
-    p = n(594174),
-    h = n(78839),
-    m = n(451478),
-    g = n(639119),
-    E = n(433390),
-    b = n(474936),
-    y = n(981631),
-    O = n(388032),
-    v = n(163882);
-function I(e, t, n) {
+    c = n(451478),
+    u = n(648613),
+    d = n(433390),
+    f = n(474936),
+    _ = n(388032),
+    p = n(163882);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +25,7 @@ function I(e, t, n) {
         e
     );
 }
-function S(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,12 +36,12 @@ function S(e) {
                 })
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
-function T(e, t) {
+function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,29 +53,29 @@ function T(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function N(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = C(e, t);
+        i = y(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function C(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -92,154 +84,137 @@ function C(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let P = function (e) {
-    var t,
-        { subscriptionTier: i, onClick: I, size: T, className: C, textOptions: P, iconClassName: R, postSuccessGuild: w, onSubscribeModalClose: D, premiumModalAnalyticsLocation: L, showIcon: x = !0, disableShine: k, applicationId: M, giftMessage: j, shinyButtonClassName: U, showGradient: G = !1, confirmationFooter: B, paymentModalBanner: F, isGift: V, iconColor: Z = 'currentColor', useExpressiveButton: H, giftIconClassName: Y } = e,
-        W = N(e, ['subscriptionTier', 'onClick', 'size', 'className', 'textOptions', 'iconClassName', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'showIcon', 'disableShine', 'applicationId', 'giftMessage', 'shinyButtonClassName', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'isGift', 'iconColor', 'useExpressiveButton', 'giftIconClassName']);
-    let K = (0, a.e7)([p.default], () => p.default.getCurrentUser()),
-        z = (0, a.e7)([m.Z], () => m.Z.isFocused()),
-        q = (0, a.e7)([h.ZP], () => h.ZP.getPremiumTypeSubscription()),
-        { analyticsLocations: Q } = (0, u.ZP)(),
-        X = (0, g.N)(),
-        J = !V && null != X && null != i && b.nG[X.trial_id].skus.includes(i),
-        $ = (0, E.Z)({
-            subscriptionTier: i,
-            buttonTextOverride: null == P ? void 0 : P.textOverride,
-            defaultTextOverride: null == P ? void 0 : P.subscribeText
+let O = function (e) {
+    var { subscriptionTier: t, onClick: n, size: i, className: h, textOptions: g, iconClassName: y, postSuccessGuild: O, onSubscribeModalClose: v, premiumModalAnalyticsLocation: I, showIcon: S = !0, disableShine: T, applicationId: A, giftMessage: N, shinyButtonClassName: C, showGradient: P = !1, confirmationFooter: R, paymentModalBanner: w, isGift: D, iconColor: L = 'currentColor', useExpressiveButton: x, giftIconClassName: k } = e,
+        M = b(e, ['subscriptionTier', 'onClick', 'size', 'className', 'textOptions', 'iconClassName', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'showIcon', 'disableShine', 'applicationId', 'giftMessage', 'shinyButtonClassName', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'isGift', 'iconColor', 'useExpressiveButton', 'giftIconClassName']);
+    let j = (0, a.e7)([c.Z], () => c.Z.isFocused()),
+        U = (0, d.Z)({
+            subscriptionTier: t,
+            buttonTextOverride: null == g ? void 0 : g.textOverride,
+            defaultTextOverride: null == g ? void 0 : g.subscribeText
         }),
-        ee = (e) => {
-            var t;
-            if ((e.preventDefault(), null == K)) return void (0, _.uL)(y.Z5c.LOGIN, { source: 'premium_subscribe_button' });
-            if ((null == I || I(e), (null == q ? void 0 : q.status) === y.O0b.ACCOUNT_HOLD)) {
-                (0, d.A3)(), c.Z.open(y.oAB.PREMIUM), null == D || D(!1);
-                return;
-            }
-            if (!K.isClaimed())
-                return void (0, l.ZDy)(async () => {
-                    let { default: e } = await n.e('69417').then(n.bind(n, 918995));
-                    return (t) => {
-                        var { onClose: n } = t,
-                            i = N(t, ['onClose']);
-                        return (0, r.jsx)(e, A(S({}, i), { onClose: n }));
-                    };
-                });
-            if (!K.verified)
-                return void (0, l.ZDy)(async () => {
-                    let { default: e } = await n.e('20102').then(n.bind(n, 444688));
-                    return (t) => {
-                        var { onClose: n } = t,
-                            i = N(t, ['onClose']);
-                        return (0, r.jsx)(e, A(S({}, i), { onClose: n }));
-                    };
-                });
-            let o = J ? (null == (t = X.subscription_trial) ? void 0 : t.id) : null,
-                a = y.Qqv.BUY;
-            null != o ? (a = y.Qqv.TRIAL) : V && (a = y.Qqv.GIFT),
-                (0, f.Z)({
-                    isGift: V,
-                    initialPlanId: null,
-                    subscriptionTier: i,
-                    analyticsLocations: Q,
-                    analyticsObject: S(
-                        {
-                            object: y.qAy.BUTTON_CTA,
-                            objectType: a
-                        },
-                        L
-                    ),
-                    trialId: o,
-                    postSuccessGuild: w,
-                    onClose: D,
-                    applicationId: M,
-                    giftMessage: j,
-                    confirmationFooter: B,
-                    paymentModalBanner: F
-                });
+        G = {
+            onClick: n,
+            subscriptionTier: t,
+            postSuccessGuild: O,
+            onSubscribeModalClose: v,
+            premiumModalAnalyticsLocation: I,
+            applicationId: A,
+            confirmationFooter: R,
+            paymentModalBanner: w,
+            isGift: D,
+            giftMessage: N
         };
-    if (H && (null == P ? void 0 : P.expressiveButtonText) != null)
-        return (0, r.jsx)(s.z, {
-            onClick: ee,
-            variant: 'expressive',
-            text: null == P ? void 0 : P.expressiveButtonText,
-            icon: l.SrA
-        });
-    if (V) {
-        let e = i === b.Si.TIER_0 ? O.intl.string(O.t.rk4Uu7) : O.intl.string(O.t.Ve9Ge3);
-        return (0, r.jsxs)(
-            l.zxk,
-            A(
-                S(
-                    {
-                        size: T,
-                        className: C,
-                        innerClassName: v.giftButton,
-                        color: l.zxk.Colors.PRIMARY,
-                        onClick: ee
-                    },
-                    W
-                ),
-                {
-                    children: [
-                        x &&
-                            (0, r.jsx)(l.OgN, {
-                                size: 'md',
-                                color: 'currentColor',
-                                className: o()(v.giftIcon, Y)
-                            }),
-                        (0, r.jsx)('span', {
-                            className: o()(v.buttonText, null == P ? void 0 : P.textClassName),
-                            children: null != (t = null == P ? void 0 : P.textOverride) ? t : e
-                        })
-                    ]
+    if (x && (null == g ? void 0 : g.expressiveButtonText) != null)
+        return (0, r.jsx)(
+            u.Z,
+            E(m({}, G), {
+                children: (e) => {
+                    var t;
+                    let { onClick: n } = e;
+                    return (0, r.jsx)(s.z, {
+                        onClick: n,
+                        variant: 'expressive',
+                        text: null != (t = null == g ? void 0 : g.expressiveButtonText) ? t : '',
+                        icon: l.SrA
+                    });
                 }
-            )
+            })
         );
-    }
-    function et(e) {
-        return (0, r.jsxs)(
-            l.gtL,
-            A(
-                S(
-                    {
-                        disabled: $.disabled,
-                        onClick: ee,
-                        innerClassName: v.premiumSubscribeButton,
-                        color: i === b.Si.TIER_1 ? l.zxk.Colors.PRIMARY : l.zxk.Colors.GREEN,
-                        size: T,
-                        className: U,
-                        wrapperClassName: o()(
+    if (D) {
+        let e = t === f.Si.TIER_0 ? _.intl.string(_.t.rk4Uu7) : _.intl.string(_.t.Ve9Ge3);
+        return (0, r.jsx)(
+            u.Z,
+            E(m({}, G), {
+                children: (t) => {
+                    var n;
+                    let { onClick: a } = t;
+                    return (0, r.jsxs)(
+                        l.zxk,
+                        E(
+                            m(
+                                {
+                                    size: i,
+                                    className: h,
+                                    innerClassName: p.giftButton,
+                                    color: l.zxk.Colors.PRIMARY,
+                                    onClick: a
+                                },
+                                M
+                            ),
                             {
-                                [v.tier2Gradient]: G && i === b.Si.TIER_2,
-                                [v.tier1Gradient]: G && i === b.Si.TIER_1
-                            },
-                            C
-                        ),
-                        pauseAnimation: !z || k
-                    },
-                    W,
-                    e
-                ),
-                {
-                    children: [
-                        x &&
-                            (0, r.jsx)(l.SrA, {
-                                size: 'md',
-                                color: Z,
-                                className: o()(v.premiumIcon, R)
-                            }),
-                        (0, r.jsx)('span', {
-                            className: o()(v.buttonText, null == P ? void 0 : P.textClassName),
-                            children: $.buttonText
-                        })
-                    ]
+                                children: [
+                                    S &&
+                                        (0, r.jsx)(l.OgN, {
+                                            size: 'md',
+                                            color: 'currentColor',
+                                            className: o()(p.giftIcon, k)
+                                        }),
+                                    (0, r.jsx)('span', {
+                                        className: o()(p.buttonText, null == g ? void 0 : g.textClassName),
+                                        children: null != (n = null == g ? void 0 : g.textOverride) ? n : e
+                                    })
+                                ]
+                            }
+                        )
+                    );
                 }
-            )
+            })
         );
     }
-    return null != $.buttonTooltipText
+    function B(e) {
+        return (0, r.jsx)(
+            u.Z,
+            E(m({}, G), {
+                children: (n) => {
+                    let { onClick: a } = n;
+                    return (0, r.jsxs)(
+                        l.gtL,
+                        E(
+                            m(
+                                {
+                                    disabled: U.disabled,
+                                    onClick: a,
+                                    innerClassName: p.premiumSubscribeButton,
+                                    color: t === f.Si.TIER_1 ? l.zxk.Colors.PRIMARY : l.zxk.Colors.GREEN,
+                                    size: i,
+                                    className: C,
+                                    wrapperClassName: o()(
+                                        {
+                                            [p.tier2Gradient]: P && t === f.Si.TIER_2,
+                                            [p.tier1Gradient]: P && t === f.Si.TIER_1
+                                        },
+                                        h
+                                    ),
+                                    pauseAnimation: !j || T
+                                },
+                                M,
+                                e
+                            ),
+                            {
+                                children: [
+                                    S &&
+                                        (0, r.jsx)(l.SrA, {
+                                            size: 'md',
+                                            color: L,
+                                            className: o()(p.premiumIcon, y)
+                                        }),
+                                    (0, r.jsx)('span', {
+                                        className: o()(p.buttonText, null == g ? void 0 : g.textClassName),
+                                        children: U.buttonText
+                                    })
+                                ]
+                            }
+                        )
+                    );
+                }
+            })
+        );
+    }
+    return null != U.buttonTooltipText
         ? (0, r.jsx)(l.ua7, {
-              text: $.buttonTooltipText,
-              children: et
+              text: U.buttonTooltipText,
+              children: B
           })
-        : et();
+        : B();
 };

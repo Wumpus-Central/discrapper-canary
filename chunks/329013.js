@@ -26,13 +26,13 @@ var i = n(255367),
     S = n(626135),
     v = n(210887),
     T = n(981631),
-    I = n(921944),
-    N = n(474936),
+    N = n(921944),
+    I = n(474936),
     y = n(388032),
     A = n(967655);
 let P = () => {
         (0, _.EW)(l.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
-            dismissAction: I.L.PRIMARY,
+            dismissAction: N.L.PRIMARY,
             forceTrack: !0
         }),
             (0, p.Kq)(),
@@ -42,15 +42,15 @@ let P = () => {
         var e, t;
         let { analyticsLocations: n } = (0, g.ZP)(m.Z.USER_SETTINGS),
             l = (0, s.e7)([h.Z], () => h.Z.isPreview),
-            a = (null == (t = (0, E.N)()) || null == (e = t.subscription_trial) ? void 0 : e.sku_id) === N.Si.TIER_2,
+            a = (null == (t = (0, E.N)()) || null == (e = t.subscription_trial) ? void 0 : e.sku_id) === I.Si.TIER_2,
             c = (0, x.Ng)(),
-            d = (0, x.Wp)(c, N.Si.TIER_2),
+            d = (0, x.Wp)(c, I.Si.TIER_2),
             u = (0, b.Q3)('UserSettingsAppearanceClientThemes');
         return (
             r.useEffect(() => {
                 l &&
                     S.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
-                        type: N.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                        type: I.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                         location_stack: n
                     });
             }, [l, n]),
@@ -82,7 +82,7 @@ let P = () => {
                                                           }),
                                                           (0, i.jsx)(C.Z, {
                                                               showGradient: !1,
-                                                              subscriptionTier: N.Si.TIER_2,
+                                                              subscriptionTier: I.Si.TIER_2,
                                                               textOptions: { textOverride: d ? y.intl.formatToPlainString(y.t.bkQ4bG, { percent: null == c ? void 0 : c.discount.amount }) : y.intl.string(y.t.mr4K7O) },
                                                               className: A.premiumCta
                                                           })
@@ -101,8 +101,8 @@ let P = () => {
                                                 }),
                                                 (0, i.jsx)('div', { className: A.premiumTier2Divider }),
                                                 (0, i.jsx)(j.ZP, {
-                                                    type: N.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
-                                                    subscriptionTier: N.Si.TIER_2
+                                                    type: I.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
+                                                    subscriptionTier: I.Si.TIER_2
                                                 })
                                             ]
                                         })
