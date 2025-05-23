@@ -18,14 +18,14 @@ var i = n(255367),
     x = n(63063),
     E = n(581883),
     C = n(738486),
-    j = n(918257),
-    O = n(970813),
+    O = n(918257),
+    j = n(970813),
     S = n(726985),
     v = n(981631),
     T = n(710111),
     N = n(388032),
-    I = n(576813),
-    y = n(20493);
+    I = n(225521),
+    y = n(971005);
 function A(e) {
     return (0, a.e7)([h.Z], () => {
         if (null == e) return null;
@@ -39,7 +39,7 @@ function P(e) {
             children: [
                 (0, i.jsxs)(g.F, {
                     setting: S.s6.VOICE_AND_VIDEO_SOUNDBOARD,
-                    children: [(0, i.jsx)(j.Z, { refreshStyles: t }), (0, i.jsx)(O.Z, { refreshStyles: t })]
+                    children: [(0, i.jsx)(O.Z, { refreshStyles: t }), (0, i.jsx)(j.Z, { refreshStyles: t })]
                 }),
                 (0, i.jsxs)(g.F, {
                     setting: S.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
@@ -63,11 +63,11 @@ function R(e) {
         [s, c] = r.useState(T.hY),
         g = (0, b.tT)(s),
         E = A(g),
-        j = (null == g ? void 0 : g.type) === b.zx.GLOBAL,
-        O = (0, a.e7)([h.Z], () => h.Z.hasFetchedAllSounds()) && null != g && null == E;
+        O = (null == g ? void 0 : g.type) === b.zx.GLOBAL,
+        j = (0, a.e7)([h.Z], () => h.Z.hasFetchedAllSounds()) && null != g && null == E;
     r.useEffect(() => {
-        O && (0, f.tt)({ location: n });
-    }, [O, n]),
+        j && (0, f.tt)({ location: n });
+    }, [j, n]),
         r.useEffect(() => {
             (0, p.w)();
         }, []);
@@ -108,12 +108,12 @@ function R(e) {
                     children: [
                         (0, i.jsx)(_.Z, {
                             sound: E,
-                            isGlobal: j,
+                            isGlobal: O,
                             onSelect: (e) => {
                                 null == e ? (0, f.aC)(s, n) : (0, f.SZ)(s, e, n);
                             }
                         }),
-                        O &&
+                        j &&
                             (0, i.jsx)(o.Wn, {
                                 className: I.notice,
                                 messageType: o.QYI.WARNING,

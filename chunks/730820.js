@@ -18,16 +18,16 @@ var i = n(255367),
     x = n(314897),
     E = n(325067),
     C = n(594174),
-    j = n(572004),
-    O = n(287880),
+    O = n(572004),
+    j = n(287880),
     S = n(714565),
     v = n(202858),
     T = n(726985),
     N = n(981631),
     I = n(815660),
     y = n(388032),
-    A = n(951839),
-    P = n(20493);
+    A = n(87494),
+    P = n(971005);
 function R(e, t, n) {
     return (
         t in e
@@ -83,9 +83,9 @@ function w(e) {
         l = r.useRef(null),
         a = r.useCallback(
             (e) => {
-                if ('c' === e.key && e.metaKey && j.wS) {
+                if ('c' === e.key && e.metaKey && O.wS) {
                     var t;
-                    e.preventDefault(), e.stopPropagation(), (0, j.JG)(s), null == l || null == (t = l.current) || t.focus();
+                    e.preventDefault(), e.stopPropagation(), (0, O.JG)(s), null == l || null == (t = l.current) || t.focus();
                 }
             },
             [s]
@@ -320,7 +320,7 @@ class k extends r.PureComponent {
     }
     render() {
         let { currentUser: e } = this.props;
-        return O.uZ
+        return j.uZ
             ? e.verified
                 ? e.mfaEnabled
                     ? this.renderEnabled()

@@ -5,9 +5,9 @@ var i = n(255367),
     l = n.n(s),
     a = n(481060),
     o = n(686546),
-    c = n(168301);
+    c = n(730422);
 let d = r.forwardRef(function (e, t) {
-    let { tooltipText: n, children: r, onContextMenu: s, onClick: d, disabled: u, icon: m, iconForeground: g, innerClassName: p, className: h, redGlow: f, tooltipClassName: b, onMouseEnter: _, onMouseLeave: x, 'aria-label': E, 'aria-checked': C, role: j, tooltipColor: O, tooltipForceOpen: S, tooltipContentClassName: v, plated: T } = e,
+    let { tooltipText: n, children: r, onContextMenu: s, onClick: d, disabled: u, icon: m, iconForeground: g, innerClassName: p, className: h, redGlow: f, tooltipClassName: b, onMouseEnter: _, onMouseLeave: x, 'aria-label': E, 'aria-checked': C, role: O, tooltipColor: j, tooltipForceOpen: S, tooltipContentClassName: v, plated: T } = e,
         N =
             'function' == typeof m
                 ? (0, i.jsx)(m, {
@@ -22,14 +22,14 @@ let d = r.forwardRef(function (e, t) {
         tooltipClassName: b,
         text: n,
         'aria-label': E,
-        color: O,
+        color: j,
         tooltipContentClassName: v,
         forceOpen: S,
         children: (e) => {
             var n,
                 m,
                 { onClick: g, onMouseEnter: b, onMouseLeave: E } = e,
-                O = (function (e, t) {
+                j = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         i,
@@ -74,7 +74,7 @@ let d = r.forwardRef(function (e, t) {
                             });
                     }
                     return e;
-                })({}, O)),
+                })({}, j)),
                 (m = m =
                     {
                         buttonRef: t,
@@ -100,7 +100,7 @@ let d = r.forwardRef(function (e, t) {
                             null == E || E(), null == x || x();
                         },
                         onContextMenu: s,
-                        role: j,
+                        role: O,
                         'aria-checked': C,
                         focusProps: {
                             offset: {

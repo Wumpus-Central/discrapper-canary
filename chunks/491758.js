@@ -18,42 +18,42 @@ var i = n(255367),
     x = n(779618),
     E = n(39604),
     C = n(442334),
-    j = n(356659),
-    O = n(981631),
+    O = n(356659),
+    j = n(981631),
     S = n(37113),
     v = n(526761),
     T = n(388032),
-    N = n(99645),
-    I = n(802454),
-    y = n(20493);
+    N = n(841522),
+    I = n(770659),
+    y = n(971005);
 function A() {
     let e = (0, a.e7)([p.Z], () => p.Z.getHardwareEncoding()),
         { clipsEnabled: t, remindersEnabled: n, decoupledClipsEnabled: s, clipsLength: A, clipsQuality: P } = (0, a.cj)([b.Z], () => b.Z.getSettings()),
         R = (0, a.e7)([b.Z], () => b.Z.getHardwareClassification()),
-        D = (0, a.e7)([h.ZP], () => h.ZP.getKeybindForAction(O.kg4.SAVE_CLIP, !0)),
+        D = (0, a.e7)([h.ZP], () => h.ZP.getKeybindForAction(j.kg4.SAVE_CLIP, !0)),
         Z = b.Z.isDecoupledGameClippingEnabled(),
         w = (0, x.Z)(p.Z),
         { showClipsHeaderEntrypoint: k } = f.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
     l()(null != D, 'Save clip keybind unset');
     let L = (0, a.e7)([m.default], () => m.default.locale),
-        M = r.useMemo(
+        B = r.useMemo(
             () => [
                 {
-                    value: j.OT.SECONDS_30,
+                    value: O.OT.SECONDS_30,
                     label: T.intl.formatToPlainString(T.t['bTFv//'], { count: 30 })
                 },
                 {
-                    value: j.OT.MINUTES_1,
+                    value: O.OT.MINUTES_1,
                     label: T.intl.formatToPlainString(T.t.ICo9Nj, { count: 1 })
                 },
                 {
-                    value: j.OT.MINUTES_2,
+                    value: O.OT.MINUTES_2,
                     label: T.intl.formatToPlainString(T.t.ICo9Nj, { count: 2 })
                 }
             ],
             [L]
         ),
-        B = r.useMemo(
+        M = r.useMemo(
             () => [
                 {
                     value: S.LY.RESOLUTION_480,
@@ -151,7 +151,7 @@ function A() {
                         (0, i.jsx)(g.Z, {
                             look: g.z.WARNING,
                             className: I.formItem,
-                            children: T.intl.format(T.t.kiaF4e, { onClick: () => d.Z.open(O.oAB.VOICE, v.gP, { scrollPosition: v.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
+                            children: T.intl.format(T.t.kiaF4e, { onClick: () => d.Z.open(j.oAB.VOICE, v.gP, { scrollPosition: v.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
                         }),
                     R === _.x.BELOW_MINIMUM
                         ? (0, i.jsx)(g.Z, {
@@ -231,7 +231,7 @@ function A() {
                         title: T.intl.string(T.t.OgfUio),
                         note: T.intl.string(T.t.H7j4tb),
                         value: A,
-                        options: M
+                        options: B
                     }),
                     (0, i.jsx)(C.Q, {
                         className: I.formItem,
@@ -243,7 +243,7 @@ function A() {
                         title: T.intl.string(T.t.aFudZG),
                         note: T.intl.string(T.t.nIrkW1),
                         value: P.resolution,
-                        options: B
+                        options: M
                     }),
                     (0, i.jsx)(C.Q, {
                         className: I.formItem,

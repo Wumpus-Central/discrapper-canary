@@ -24,8 +24,8 @@ var i = n(255367),
     x = n(600164),
     E = n(925329),
     C = n(963249),
-    j = n(301766),
-    O = n(594174),
+    O = n(301766),
+    j = n(594174),
     S = n(626135),
     v = n(63063),
     T = n(74538),
@@ -39,12 +39,12 @@ var i = n(255367),
     Z = n(981631),
     w = n(362786),
     k = n(388032),
-    L = n(772526);
-function M(e) {
+    L = n(515474);
+function B(e) {
     let t,
         { subscription: n, renewalInvoicePreview: r, fractionalPremiumInfo: s, fromStandaloneBillingPage: a = !0, className: c } = e,
-        d = (0, u.e7)([O.default], () => {
-            let e = O.default.getCurrentUser();
+        d = (0, u.e7)([j.default], () => {
+            let e = j.default.getCurrentUser();
             return o()(null != e, 'GuildBoostingHeader: currentUser cannot be undefined'), e;
         });
     if (0 === (0, T.uV)(n.additionalPlans)) return null;
@@ -103,7 +103,7 @@ function M(e) {
         ]
     });
 }
-function B() {
+function M() {
     return (
         r.useEffect(() => {
             S.default.track(Z.rMx.TOOLTIP_VIEWED, { type: 'subscription_settings_missing_payment_method' });
@@ -274,7 +274,7 @@ function H(e) {
                               busy: s,
                               analyticsLocation: n
                           }),
-                          (0, i.jsx)(M, {
+                          (0, i.jsx)(B, {
                               subscription: t,
                               renewalInvoicePreview: b,
                               fromStandaloneBillingPage: a,
@@ -368,9 +368,9 @@ function Y(e) {
             analyticsLocation: c
         }),
         x = null == l ? void 0 : l.invalid,
-        E = (0, u.e7)([O.default], () => {
+        E = (0, u.e7)([j.default], () => {
             var e;
-            return null == (e = O.default.getCurrentUser()) ? void 0 : e.hasFreePremium();
+            return null == (e = j.default.getCurrentUser()) ? void 0 : e.hasFreePremium();
         }),
         C = d()(r.currentPeriodEnd),
         S = null != r.paymentSourceId,
@@ -387,7 +387,7 @@ function Y(e) {
     return null == b || null == _
         ? (0, i.jsx)(g.$jN, {})
         : (null != r.renewalMutations &&
-              ((r.renewalMutations.planId !== r.planId && !(0, j.Q0)(r.renewalMutations.planId)) || r.hasExternalPlanChange) &&
+              ((r.renewalMutations.planId !== r.planId && !(0, O.Q0)(r.renewalMutations.planId)) || r.hasExternalPlanChange) &&
               (n = (0, i.jsx)(D.Z, {
                   subscription: r,
                   renewalMutations: r.renewalMutations,
@@ -402,7 +402,7 @@ function Y(e) {
                       children: k.intl.string(k.t['/gs+Pz'])
                   }),
                   children: [
-                      T ? (0, i.jsx)(B, {}) : null,
+                      T ? (0, i.jsx)(M, {}) : null,
                       N ? (0, i.jsx)(U, {}) : null,
                       P && null != w
                           ? (0, i.jsx)(V, {

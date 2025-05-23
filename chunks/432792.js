@@ -1,5 +1,5 @@
 n.d(t, {
-    M: () => O,
+    M: () => j,
     M4: () => v,
     WS: () => T,
     t4: () => C
@@ -21,26 +21,26 @@ var i = n(255367),
     h = n(622562),
     f = n(937860),
     b = n(921944),
-    _ = n(973792),
+    _ = n(473012),
     x = n(447489),
     E = n(484885);
 let C = () => (0, g.Lk)(document.body.style.getPropertyValue('--custom-app-panels-height'), 56) + 8,
-    j = {
+    O = {
         discover: l.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK,
         shop: l.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK
     },
-    O = (e) => {
+    j = (e) => {
         let { onboardingCoachmarkType: t, prevCoachmarksDismissed: n = !0, onShowCoachmarkHandler: i } = e,
             s = (0, u.wE)(l.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL),
             { enabled: a } = (0, p.WX)({ location: 'virtual_currency_onboarding_coachmark' }),
-            o = j[t],
+            o = O[t],
             c = (0, u.wE)(o),
             d = a && s && n && !c,
             m = r.useCallback(
                 function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'CLOSE';
                     c ||
-                        (0, u.EW)(j[t], {
+                        (0, u.EW)(O[t], {
                             forceTrack: !0,
                             dismissAction: 'CTA_CLICK' === e ? b.L.TAKE_ACTION : b.L.USER_DISMISS,
                             groupName: b.R.VIRTUAL_CURRENCY_ONBOARDING
@@ -123,8 +123,8 @@ function T(e) {
         [f, b] = r.useState('bottom' === d),
         [_, x] = r.useState(!0),
         [E, C] = r.useState(String(Date.now())),
-        j = (0, o.Z)(),
-        O = r.useCallback(
+        O = (0, o.Z)(),
+        j = r.useCallback(
             (e) => {
                 let n = t(e);
                 n !== _ && x(n);
@@ -155,13 +155,13 @@ function T(e) {
                     }),
                 null != i)
             ) {
-                if ((O(i), r && C(String(Date.now())), u)) return;
+                if ((j(i), r && C(String(Date.now())), u)) return;
                 let e = i.top < window.innerHeight / 2;
                 if (e === f) return;
                 b(e), C(String(Date.now()));
             }
         },
-        [f, O, m, u]
+        [f, j, m, u]
     );
     (0, h.fu)({
         onGetElementDimensionsAndBoundingRect: T,
@@ -170,7 +170,7 @@ function T(e) {
         targetElementRef: c
     });
     let N = r.useMemo(() => (u ? (null != d ? d : 'bottom') : f ? 'top' : 'bottom'), [u, d, f]),
-        I = _ && !j,
+        I = _ && !O,
         y = r.Children.map(s, (e) => r.cloneElement(e, { align: N }));
     return (0, i.jsx)(a.yRy, {
         autoInvert: !1,

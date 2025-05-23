@@ -28,14 +28,14 @@ var r = n(255367),
     N = n(258971),
     T = n(133743),
     A = n(726941),
-    L = n(666697),
+    L = n(271200),
     R = n(548514),
     Z = n(370648),
     k = n(569527),
     w = n(979007),
     D = n(981631),
     M = n(388032),
-    G = n(691133);
+    G = n(28015);
 function z(e) {
     let { applicationId: t, hideDetailHeaderButtons: n, onClickBack: i } = e,
         s = (0, o.e7)([y.Z], () => y.Z.getApplication(t)),

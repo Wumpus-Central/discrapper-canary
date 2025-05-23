@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(642613), n(539854);
+n.d(t, { Z: () => j }), n(642613), n(539854);
 var i = n(255367),
     r = n(73800),
     s = n(524437),
@@ -15,7 +15,7 @@ var i = n(255367),
     f = n(726985),
     b = n(981631),
     _ = n(388032),
-    x = n(296281);
+    x = n(468147);
 function E(e) {
     let { applications: t } = e,
         n = r.useMemo(() => t.sort((e, t) => d.default.compare(t.id, e.id)), [t]),
@@ -190,7 +190,7 @@ function C() {
         })
     });
 }
-function j() {
+function O() {
     let e = u.JG.useSetting(),
         t = e === s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET ? s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL : e,
         n = [
@@ -225,14 +225,14 @@ function j() {
         ]
     });
 }
-function O() {
+function j() {
     let { showLoadingIndicator: e, slayerSdkApplications: t } = (0, m.Z)();
     return (0, i.jsx)(g.Z, {
         children: e
             ? (0, i.jsx)(l.$jN, {})
             : t.length > 0
               ? (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(E, { applications: t }), (0, i.jsx)(C, {}), (0, i.jsx)('div', { className: x.divider }), (0, i.jsx)(j, {})]
+                    children: [(0, i.jsx)(E, { applications: t }), (0, i.jsx)(C, {}), (0, i.jsx)('div', { className: x.divider }), (0, i.jsx)(O, {})]
                 })
               : (0, i.jsxs)('div', {
                     className: x.emptyContainer,

@@ -13,7 +13,7 @@ var i = n(481060),
     c = n(601964),
     u = n(230224),
     d = n(388032),
-    g = n(807048);
+    g = n(188327);
 function h(e) {
     var t;
     let { guildScheduledEvent: n, channel: l, onAcceptInvite: a, isSubmitting: c } = e;

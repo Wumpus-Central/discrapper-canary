@@ -11,7 +11,7 @@ var n = r(255367),
     x = r(981631),
     u = r(135899),
     p = r(388032),
-    b = r(193198);
+    b = r(828278);
 function h(e) {
     let { guild: t } = e,
         r = c.ZP.getGuildIconURL({

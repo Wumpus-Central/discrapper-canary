@@ -11,9 +11,9 @@ var i = n(255367),
     m = n(933970),
     g = n(340453),
     p = n(292352),
-    h = n(332495),
+    h = n(127941),
     f = n(388032),
-    b = n(708734);
+    b = n(561226);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,7 +62,7 @@ function E(e) {
         s = (0, d.Z)(),
         E = (0, u.VM)(),
         C = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
-        j = r.useCallback(() => {
+        O = r.useCallback(() => {
             l()(void 0 !== C, 'User must be logged in to accept a link request'),
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('59716').then(n.bind(n, 275370));
@@ -76,7 +76,7 @@ function E(e) {
                         );
                 });
         }, [C, t]),
-        O = r.useCallback(() => {
+        j = r.useCallback(() => {
             l()(void 0 !== C, 'User must be logged in to decline a link request'),
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('958').then(n.bind(n, 4526));
@@ -131,13 +131,13 @@ function E(e) {
                                         icon: o.dz2,
                                         className: b.__invalid_actionAccept,
                                         tooltip: f.intl.string(h.default.krWQZG),
-                                        onClick: j
+                                        onClick: O
                                     }),
                               (0, i.jsx)(m.Z, {
                                   icon: o.Dio,
                                   className: b.__invalid_actionDeny,
                                   tooltip: f.intl.string(h.default.bBDeND),
-                                  onClick: O
+                                  onClick: j
                               })
                           ]
                       })

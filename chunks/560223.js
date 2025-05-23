@@ -15,7 +15,7 @@ var i = n(255367),
     f = n(391110),
     b = n(75077),
     _ = n(51636),
-    x = n(795067);
+    x = n(491654);
 let E = (e) => {
         let { showAllPerksButton: t, leftAlignHeaders: n, title: r, headerClassname: s } = e,
             l = (0, i.jsx)(o.X6q, {
@@ -48,7 +48,7 @@ let E = (e) => {
     },
     C = (e) => {
         var t;
-        let { className: n, variant: s = f.gM.PERKS_DISCOVERABILITY, noBackground: C = !1, leftAlignHeaders: j = !1, showAllPerksButton: O, headerClassname: S, isFullScreen: v = !0, shouldAutoScroll: T = !1 } = e,
+        let { className: n, variant: s = f.gM.PERKS_DISCOVERABILITY, noBackground: C = !1, leftAlignHeaders: O = !1, showAllPerksButton: j, headerClassname: S, isFullScreen: v = !0, shouldAutoScroll: T = !1 } = e,
             N = r.useRef(null),
             I = (0, u.Er)(),
             y = (0, m.v)(I),
@@ -71,16 +71,16 @@ let E = (e) => {
         let w = (0, b.re)(A),
             k = (0, h.Z)(),
             L = (0, b.mN)(),
-            { fractionalState: M } = (0, c.Z)(),
-            B = (0, d.W)(),
+            { fractionalState: B } = (0, c.Z)(),
+            M = (0, d.W)(),
             U = (0, b.ZM)({
                 perksCards: k,
                 variant: s,
                 isFullScreen: v,
                 showTenureCard: null == I ? void 0 : I.showCard,
                 isPremiumSubscriber: L,
-                fractionalState: M,
-                isInReverseTrial: B
+                fractionalState: B,
+                isInReverseTrial: M
             }),
             V = U.some((e) => null != e.pillText),
             [G, F] = r.useState(null),
@@ -98,15 +98,15 @@ let E = (e) => {
                     className: l()(
                         x.section,
                         {
-                            [x.centerAlignSection]: !j,
-                            [x.leftAlignSection]: j
+                            [x.centerAlignSection]: !O,
+                            [x.leftAlignSection]: O
                         },
                         n
                     ),
                     children: [
                         (0, i.jsx)(E, {
-                            showAllPerksButton: O,
-                            leftAlignHeaders: j,
+                            showAllPerksButton: j,
+                            leftAlignHeaders: O,
                             title: w.title,
                             headerClassname: S
                         }),
@@ -114,20 +114,20 @@ let E = (e) => {
                             variant: 'text-lg/normal',
                             color: 'header-primary',
                             className: l()(x.subtitle, {
-                                [x.subtitle]: null == O || j,
-                                [x.subtitleWithButton]: null != O && !j,
-                                [x.fullWidth]: A || j,
+                                [x.subtitle]: null == j || O,
+                                [x.subtitleWithButton]: null != j && !O,
+                                [x.fullWidth]: A || O,
                                 [x.moreSubtitleMargin]: V,
-                                [x.leftAlignSubtitle]: j,
-                                [x.centerAlignSubtitle]: !j
+                                [x.leftAlignSubtitle]: O,
+                                [x.centerAlignSubtitle]: !O
                             }),
                             children: w.subtitle
                         }),
-                        !j &&
-                            null != O &&
+                        !O &&
+                            null != j &&
                             (0, i.jsx)('div', {
                                 className: x.showAllPerksButtonCenter,
-                                children: O
+                                children: j
                             }),
                         (0, i.jsx)('div', {
                             className: l()({

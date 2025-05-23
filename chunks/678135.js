@@ -23,7 +23,7 @@ var i = n(120356),
     I = n(981631),
     S = n(228168),
     T = n(388032),
-    A = n(997926);
+    A = n(909535);
 function N(e) {
     let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: a, pendingBanner: l, pendingAccentColor: m, pendingBio: g, pendingPronouns: T, pendingAvatar: N, pendingAvatarDecoration: P, pendingNickname: R, pendingGlobalName: w, pendingThemeColors: D, pendingProfileEffectId: L, pendingLegacyUsernameDisabled: x, avatarClassName: k, containerClassName: M, isTryItOutFlow: j = !1, disabledInputs: U = !1, hideCustomStatus: G = !1, hideBioSection: B = !1, hideMessageInput: F = !0, hideExampleButton: V = !1, pendingBadges: Z, shouldOpenBadgeTooltip: H, showNameplatePreview: Y = !1 } = e,
         W = (0, d.ZP)(t.id, null == n ? void 0 : n.id),

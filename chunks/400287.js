@@ -15,7 +15,7 @@ var r = n(120356),
     h = n(726985),
     f = n(981631),
     b = n(388032),
-    _ = n(20493);
+    _ = n(971005);
 function x() {
     let e = (0, c.pR)(),
         t = (0, c.Ju)(),
@@ -24,8 +24,8 @@ function x() {
         x = (0, u.V2)({ location: 'UserSettingsTextImages' }),
         E = p.R$.useSetting(),
         C = p.cC.useSetting(),
-        j = p.vF.useSetting(),
-        O = p.H1.useSetting(),
+        O = p.vF.useSetting(),
+        j = p.H1.useSetting(),
         S = p.ev.useSetting(),
         v = p.x4.useSetting(),
         T = p.RS.useSetting(),
@@ -66,7 +66,7 @@ function x() {
                         setting: h.s6.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS,
                         children: (0, i.jsx)(l.j7V, {
                             className: s()(_.marginTop8, _.marginBottom40),
-                            value: O,
+                            value: j,
                             note: b.intl.string(b.t.T0rbtL),
                             onChange: p.H1.updateSetting,
                             children: b.intl.string(b.t['w8j+yc'])
@@ -237,7 +237,7 @@ function x() {
                             setting: h.s6.CHAT_THREADS_SPLIT_VIEW,
                             children: (0, i.jsx)(l.j7V, {
                                 className: _.marginTop8,
-                                value: j,
+                                value: O,
                                 onChange: p.vF.updateSetting,
                                 children: b.intl.string(b.t.AInv5u)
                             })

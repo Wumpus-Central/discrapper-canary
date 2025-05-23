@@ -1,10 +1,10 @@
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => o });
 var r = n(255367);
 n(73800);
-var o = n(410575);
-function i(e, t) {
+var i = n(410575);
+function o(e, t) {
     return function (n) {
-        return (0, r.jsx)(o.Z, {
+        return (0, r.jsx)(i.Z, {
             page: t.page,
             section: t.section,
             object: t.object,

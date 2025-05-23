@@ -13,7 +13,7 @@ var i = n(255367),
     p = n(429467),
     h = n(676035),
     f = n(388032),
-    b = n(493456);
+    b = n(888433);
 function _(e) {
     let { openModal: t, hasCustomStatus: n, className: r, onFocus: s, onBlur: o } = e,
         c = (e) => {
@@ -39,8 +39,8 @@ function _(e) {
     });
 }
 function x(e) {
-    let { hovered: t, activities: s, user: l, applicationStream: f, voiceChannel: x, status: E, userTag: C, customStatusHoverOnlyRTCEntrypointEnabled: j } = e,
-        { analyticsLocations: O } = (0, m.ZP)(u.Z.RTC_PANEL),
+    let { hovered: t, activities: s, user: l, applicationStream: f, voiceChannel: x, status: E, userTag: C, customStatusHoverOnlyRTCEntrypointEnabled: O } = e,
+        { analyticsLocations: j } = (0, m.ZP)(u.Z.RTC_PANEL),
         S = (0, h.a)(),
         v = r.useCallback(() => {
             (0, a.ZDy)(async () => {
@@ -77,7 +77,7 @@ function x(e) {
                         })({}, n)),
                         (s = s =
                             {
-                                sourceAnalyticsLocations: O,
+                                sourceAnalyticsLocations: j,
                                 location: 'CustomStatusRTCEntrypoint',
                                 prompt: e
                             }),
@@ -97,7 +97,7 @@ function x(e) {
                     );
                 };
             });
-        }, [O]),
+        }, [j]),
         T = r.useMemo(() => (null != E && E !== a.Skl.UNKNOWN && null != l && l.isPomelo() ? (0, i.jsx)(c.Z, { text: g.ZP.humanizeStatus(E) }) : C), [E, l, C]),
         N = null != S,
         [I, y] = r.useState(!1),
@@ -112,7 +112,7 @@ function x(e) {
                 }),
             [v, N]
         ),
-        P = j
+        P = O
             ? (0, i.jsx)(d.Z, {
                   hoverText: A,
                   forceHover: t || I,
@@ -120,7 +120,7 @@ function x(e) {
               })
             : A;
     return (0, i.jsx)(m.Gt, {
-        value: O,
+        value: j,
         children:
             null != s && s.length > 0
                 ? (0, i.jsx)(d.Z, {

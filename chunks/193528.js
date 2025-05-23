@@ -12,7 +12,7 @@ var i = n(255367),
     g = n(654904),
     p = n(981631),
     h = n(388032),
-    f = n(768402);
+    f = n(268343);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,7 +57,7 @@ function _(e, t) {
     );
 }
 function x(e) {
-    let { onChange: t, onClose: n, color: s, suggestedColors: x, disabled: E, label: C, colorPickerMiddle: j, colorPickerFooter: O, showEyeDropper: S } = e,
+    let { onChange: t, onClose: n, color: s, suggestedColors: x, disabled: E, label: C, colorPickerMiddle: O, colorPickerFooter: j, showEyeDropper: S } = e,
         v = r.useRef(null),
         T = (0, d.dQu)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
         N = c.Z.colors.BACKGROUND_ACCENT.css,
@@ -65,13 +65,13 @@ function x(e) {
         y = (0, o.Rf)(s),
         A = y === T ? N : y,
         P = (0, m.Lq)(I ? p.Ilk.WHITE_500 : p.Ilk.PRIMARY_530),
-        R = (0, u.Z)(j),
-        D = (0, u.Z)(O),
+        R = (0, u.Z)(O),
+        D = (0, u.Z)(j),
         [Z, w] = r.useState((0, a.Z)());
     return (
         r.useEffect(() => {
-            (R !== j || D !== O) && w((0, a.Z)());
-        }, [O, j, D, R]),
+            (R !== O || D !== j) && w((0, a.Z)());
+        }, [j, O, D, R]),
         (0, i.jsx)(d.yRy, {
             targetElementRef: v,
             positionKey: Z,
@@ -82,8 +82,8 @@ function x(e) {
                         value: s,
                         onChange: t,
                         suggestedColors: x,
-                        middle: j,
-                        footer: O,
+                        middle: O,
+                        footer: j,
                         showEyeDropper: S
                     })
                 ),

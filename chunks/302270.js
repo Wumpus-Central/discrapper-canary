@@ -34,7 +34,7 @@ var r = n(255367),
     M = n(981631),
     k = n(474936),
     L = n(388032),
-    D = n(523335);
+    D = n(752917);
 function U(e) {
     let { inPopout: t, channel: n, toggleRequestToSpeakSidebar: i, showRequestToSpeakSidebar: l } = e,
         { analyticsLocations: s, newestAnalyticsLocation: c } = (0, p.ZP)(d.Z.VOICE_CHANNEL_HEADER),

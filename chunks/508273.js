@@ -19,7 +19,7 @@ var r = n(255367),
     x = n(358595),
     y = n(981631),
     v = n(388032),
-    O = n(583136);
+    O = n(14164);
 function j(e) {
     let { invite: t, isMemberOfGuild: n, message: l, onTransitionToInviteChannel: c, onAcceptInstantInvite: d, currentUserId: p } = e,
         h = i.useRef(null),

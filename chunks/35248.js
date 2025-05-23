@@ -27,7 +27,7 @@ var r = n(255367),
     g = n(981631),
     E = n(474936),
     b = n(388032),
-    y = n(940667);
+    y = n(631031);
 let O = 1000;
 function v(e, t, n, r, i) {
     let s = g.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n, i),

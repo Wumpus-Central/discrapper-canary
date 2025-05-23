@@ -13,7 +13,7 @@ var i = n(255367),
     C = n(892322),
     h = n(15608),
     g = n(75666),
-    p = n(563000);
+    p = n(272017);
 function f(e) {
     let { directoryChannelId: t, transitionState: n, initialSlide: f = g.VX.CHOOSE_GUILD, onClose: _, directoryGuildName: j, directoryGuildId: b, currentCategoryId: L } = e,
         [N, I] = s.useState(f),

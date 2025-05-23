@@ -19,8 +19,8 @@ var a = n(149765),
     x = n(347994),
     E = n(591526),
     C = n(261875),
-    j = n(710845),
-    O = n(38618),
+    O = n(710845),
+    j = n(38618),
     S = n(218543),
     v = n(314897),
     T = n(944486),
@@ -30,13 +30,13 @@ var a = n(149765),
     A = n(38217),
     P = n(864631),
     R = n(981631);
-let D = new j.Z('CacheStore'),
+let D = new O.Z('CacheStore'),
     Z = !1,
     w = !1,
     k = 'initializing',
     L = 0,
-    M = !1,
     B = !1,
+    M = !1,
     U = !1;
 function V(e) {
     D.log('Clearing cache store'), (L = Date.now()), c.K.remove(R.FsG), c.K.remove(R.ihW), c.K.remove(R.O42), (k = 'no-cache'), 'CLEAR_CACHES' === e.type && e.preventWritingCachesAgainThisSession && (w = !0);
@@ -73,7 +73,7 @@ async function G(e, t, n) {
 async function F(e, t, n) {
     var i, r, s;
     D.verbose('loading early cache');
-    let a = O.Z.getSocket();
+    let a = j.Z.getSocket();
     a.connect();
     let c = null != (i = N.Z.getGuildId()) ? i : null,
         u = null != (r = T.Z.getChannelId()) ? r : null,
@@ -83,11 +83,11 @@ async function F(e, t, n) {
         h = S.Z.fetchGuildCache.measureAsync(() => W(e, n)),
         f = null != e ? l.Z.timeAsync('\uD83D\uDCBE', 'cache: private_channels', () => E.Z.getAsync(e, null)) : Promise.resolve([]),
         C = null == e ? Promise.resolve({}) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_settings', () => x.Z.getAll(e)),
-        j = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: read_states', () => b.Z.getAll(e)),
+        O = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: read_states', () => b.Z.getAll(e)),
         v = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_guild_settings', () => _.Z.getAll(e)),
-        [[I, y], A, R, Z, w, k, L] = await Promise.all([g, p, h, f, C, j, v]),
-        M = performance.now() - m;
-    if ((D.verbose('cache loaded in '.concat(M, 'ms (channel_history ').concat(I, 'ms)')), null == y)) return (0, P.Z)('database:history_cache_null'), D.verbose('finished without dispatching CACHE_LOADED'), [!1, null, 0];
+        [[I, y], A, R, Z, w, k, L] = await Promise.all([g, p, h, f, C, O, v]),
+        B = performance.now() - m;
+    if ((D.verbose('cache loaded in '.concat(B, 'ms (channel_history ').concat(I, 'ms)')), null == y)) return (0, P.Z)('database:history_cache_null'), D.verbose('finished without dispatching CACHE_LOADED'), [!1, null, 0];
     {
         let i = Object.fromEntries(y.members.map((e) => [e.userId, e])),
             r = null != R.guildId && null != R.channels,
@@ -201,7 +201,7 @@ async function Y(e, t, n, i) {
                 : Promise.resolve([])
         );
     await new Promise((e) => setTimeout(e, 0)), S.Z.loadLazyCache.recordStart();
-    let h = O.Z.getSocket();
+    let h = j.Z.getSocket();
     K(() => {
         let l = performance.now();
         if (!1 === r) {
@@ -239,7 +239,7 @@ async function Y(e, t, n, i) {
                 d.Z.dispatch({ type: 'CACHE_LOADED_LAZY_NO_CACHE' });
             return;
         }
-        if (B) {
+        if (M) {
             (0, P.Z)('already_connected'), D.log('Skipping lazy cache; already connected.'), d.Z.dispatch({ type: 'CACHE_LOADED_LAZY_NO_CACHE' });
             return;
         }
@@ -310,7 +310,7 @@ async function Y(e, t, n, i) {
     });
 }
 function K(e) {
-    let t = O.Z.getSocket(),
+    let t = j.Z.getSocket(),
         n = !1;
     o.ZP.Emitter.batched(() => {
         try {
@@ -340,10 +340,10 @@ function K(e) {
 }
 class q extends (i = o.ZP.Store) {
     initialize() {
-        Z || O.Z.getSocket().dispatcher.unpauseDispatchQueue();
+        Z || j.Z.getSocket().dispatcher.unpauseDispatchQueue();
     }
     hasCache() {
-        return !Z || M;
+        return !Z || B;
     }
     getLazyCacheStatus() {
         return Z ? k : 'no-cache';
@@ -361,7 +361,7 @@ class q extends (i = o.ZP.Store) {
                 n(),
                 setTimeout(() => {
                     var e, t;
-                    return null == (t = O.Z.getSocket()) || null == (e = t.dispatcher) ? void 0 : e.unpauseDispatchQueue();
+                    return null == (t = j.Z.getSocket()) || null == (e = t.dispatcher) ? void 0 : e.unpauseDispatchQueue();
                 }, 0);
             return;
         }
@@ -398,24 +398,24 @@ class q extends (i = o.ZP.Store) {
         Z
             ? {
                   CONNECTION_OPEN: function () {
-                      return (B = !0), (U = !0), !1;
+                      return (M = !0), (U = !0), !1;
                   },
                   LOGOUT: V,
                   CONNECTION_CLOSED: function () {
-                      return (B = !1), (U = !0), !1;
+                      return (M = !1), (U = !0), !1;
                   },
                   CACHE_LOADED: function () {
-                      M = !0;
+                      B = !0;
                   },
                   CACHE_LOADED_LAZY: function () {
-                      (M = !0), (k = 'cache-loaded');
+                      (B = !0), (k = 'cache-loaded');
                   },
                   CACHE_LOADED_LAZY_NO_CACHE: function () {
                       k = 'no-cache';
                   },
                   CLEAR_CACHES: V,
                   WRITE_CACHES: function () {
-                      D.verbose('Writing cache now'), (L = Date.now()), (M = !0), c.K.remove(R.FsG), c.K.remove(R.O42), c.K.remove(R.ihW);
+                      D.verbose('Writing cache now'), (L = Date.now()), (B = !0), c.K.remove(R.FsG), c.K.remove(R.O42), c.K.remove(R.ihW);
                   }
               }
             : {}

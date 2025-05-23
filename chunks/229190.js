@@ -3,7 +3,7 @@ var B = v(255367),
     t = v(73800),
     e = v(481060),
     f = v(388032),
-    r = v(404922);
+    r = v(347848);
 function C(A) {
     let { showSecondaryColor: g, palette: v, onPrimaryColorChange: C, onSecondaryColorChange: h } = A,
         n = t.useRef(null);

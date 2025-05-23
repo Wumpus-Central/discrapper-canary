@@ -18,15 +18,15 @@ var i = n(255367),
     x = n(775412),
     E = n(104494),
     C = n(639119),
-    j = n(736519),
-    O = n(784238),
+    O = n(736519),
+    j = n(784238),
     S = n(230916),
     v = n(346497),
     T = n(382791),
     N = n(21023),
     I = n(474936),
     y = n(388032),
-    A = n(554074),
+    A = n(809649),
     P = n(102655),
     R = n(768236),
     D = n(314907),
@@ -73,7 +73,7 @@ let k = () => {
                 children: y.intl.string(y.t['o/oRJC'])
             })
         }),
-    M = (e) => {
+    B = (e) => {
         let t,
             { premiumType: n } = e,
             r = (0, u.ZP)();
@@ -85,7 +85,7 @@ let k = () => {
             alt: s
         });
     },
-    B = (e) => {
+    M = (e) => {
         let { label: t, column1: n, column2: r } = e;
         return (0, i.jsxs)('tr', {
             className: l()(A.headerRow, A.rowBottomBorder, A.topBorderRadius),
@@ -178,8 +178,8 @@ let k = () => {
                 variant: 'heading-lg/extrabold',
                 children: y.intl.string(y.t.ED4UVF)
             }),
-            column1: (0, i.jsx)(M, { premiumType: I.p9.TIER_0 }),
-            column2: (0, i.jsx)(M, { premiumType: I.p9.TIER_2 })
+            column1: (0, i.jsx)(B, { premiumType: I.p9.TIER_0 }),
+            column2: (0, i.jsx)(B, { premiumType: I.p9.TIER_2 })
         };
         P
             ? el.push({
@@ -196,7 +196,7 @@ let k = () => {
                   column1: (0, i.jsxs)(i.Fragment, {
                       children: [
                           Q === I.Si.TIER_2 || ea
-                              ? (0, i.jsx)(O.Z, {
+                              ? (0, i.jsx)(j.Z, {
                                     className: A.button,
                                     subscriptionTier: I.Si.TIER_0,
                                     showIcon: !1,
@@ -204,14 +204,14 @@ let k = () => {
                                     color: Y ? c.Ttl.BRAND : c.Ttl.WHITE,
                                     buttonShineClassName: void 0
                                 })
-                              : (0, i.jsx)(O.Z, {
+                              : (0, i.jsx)(j.Z, {
                                     className: A.button,
                                     subscriptionTier: I.Si.TIER_0,
                                     showIcon: !1
                                 }),
                           J === I.p9.TIER_2 || null != Q
                               ? null
-                              : (0, i.jsx)(j.Z, {
+                              : (0, i.jsx)(O.Z, {
                                     className: A.button,
                                     subscriptionTier: I.Si.TIER_0
                                 })
@@ -220,7 +220,7 @@ let k = () => {
                   column2: (0, i.jsxs)(i.Fragment, {
                       children: [
                           Q === I.Si.TIER_0
-                              ? (0, i.jsx)(O.Z, {
+                              ? (0, i.jsx)(j.Z, {
                                     className: A.button,
                                     subscriptionTier: I.Si.TIER_2,
                                     showIcon: !1,
@@ -228,7 +228,7 @@ let k = () => {
                                     color: Y ? c.Ttl.BRAND : c.Ttl.WHITE,
                                     buttonShineClassName: void 0
                                 })
-                              : (0, i.jsx)(O.Z, {
+                              : (0, i.jsx)(j.Z, {
                                     className: A.button,
                                     subscriptionTier: I.Si.TIER_2,
                                     showIcon: !1,
@@ -236,7 +236,7 @@ let k = () => {
                                 }),
                           J === I.p9.TIER_0 || null != Q
                               ? null
-                              : (0, i.jsx)(j.Z, {
+                              : (0, i.jsx)(O.Z, {
                                     className: A.button,
                                     subscriptionTier: I.Si.TIER_2
                                 })
@@ -282,7 +282,7 @@ let k = () => {
                             (0, i.jsxs)('table', {
                                 className: A.table,
                                 children: [
-                                    (0, i.jsx)('thead', { children: (0, i.jsx)(B, w({}, eo)) }),
+                                    (0, i.jsx)('thead', { children: (0, i.jsx)(M, w({}, eo)) }),
                                     (0, i.jsx)('tbody', {
                                         children: el.map((e, t) => {
                                             var n, i;

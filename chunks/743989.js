@@ -1506,9 +1506,9 @@
                                         ez(e, r, i);
                                 },
                                 e1 = {},
-                                e2 = void 0;
-                            function e3() {
-                                return C[((e2 += 4) - 4) >> 2];
+                                e3 = void 0;
+                            function e2() {
+                                return C[((e3 += 4) - 4) >> 2];
                             }
                             function e4(e) {
                                 if (void 0 === e) return '_unknown';
@@ -1845,7 +1845,7 @@
                                 var t = typeof e;
                                 return 'object' === t || 'array' === t || 'function' === t ? e.toString() : '' + e;
                             }
-                            function t2(e, t) {
+                            function t3(e, t) {
                                 switch (t) {
                                     case 2:
                                         return function (e) {
@@ -1859,7 +1859,7 @@
                                         throw TypeError('Unknown float type: ' + e);
                                 }
                             }
-                            function t3(e, t, n) {
+                            function t2(e, t, n) {
                                 switch (t) {
                                     case 0:
                                         return n
@@ -2331,12 +2331,12 @@
                                 (tz = o.UnboundTypeError = tn('UnboundTypeError'));
                             var nE = {
                                 __syscall_fcntl64: function (e, t, n) {
-                                    e2 = n;
+                                    e3 = n;
                                     try {
                                         var r = eV(e);
                                         switch (t) {
                                             case 0:
-                                                var i = e3();
+                                                var i = e2();
                                                 return 0 > i ? -28 : eZ(r, i).X;
                                             case 1:
                                             case 2:
@@ -2346,9 +2346,9 @@
                                             case 3:
                                                 return r.flags;
                                             case 4:
-                                                return (i = e3()), (r.flags |= i), 0;
+                                                return (i = e2()), (r.flags |= i), 0;
                                             case 5:
-                                                return (A[((i = e3()) + 0) >> 1] = 2), 0;
+                                                return (A[((i = e2()) + 0) >> 1] = 2), 0;
                                             case 16:
                                             case 8:
                                             default:
@@ -2362,7 +2362,7 @@
                                     }
                                 },
                                 __syscall_ioctl: function (e, t, n) {
-                                    e2 = n;
+                                    e3 = n;
                                     try {
                                         var r = eV(e);
                                         switch (t) {
@@ -2377,7 +2377,7 @@
                                                 if (!r.s) return -59;
                                                 if (r.s.V.bc) {
                                                     t = [3, 28, 127, 21, 4, 0, 1, 0, 17, 19, 26, 0, 18, 15, 23, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-                                                    var i = e3();
+                                                    var i = e2();
                                                     (C[i >> 2] = 25856), (C[(i + 4) >> 2] = 5), (C[(i + 8) >> 2] = 191), (C[(i + 12) >> 2] = 35387);
                                                     for (var o = 0; 32 > o; o++) S[(i + o + 17) >> 0] = t[o] || 0;
                                                 }
@@ -2386,19 +2386,19 @@
                                             case 21507:
                                             case 21508:
                                                 if (!r.s) return -59;
-                                                if (r.s.V.cc) for (i = e3(), t = [], o = 0; 32 > o; o++) t.push(S[(i + o + 17) >> 0]);
+                                                if (r.s.V.cc) for (i = e2(), t = [], o = 0; 32 > o; o++) t.push(S[(i + o + 17) >> 0]);
                                                 return 0;
                                             case 21519:
                                                 if (!r.s) return -59;
-                                                return (C[(i = e3()) >> 2] = 0);
+                                                return (C[(i = e2()) >> 2] = 0);
                                             case 21520:
                                                 return r.s ? -28 : -59;
                                             case 21531:
-                                                if (((i = e3()), !r.m.ac)) throw new ew(59);
+                                                if (((i = e2()), !r.m.ac)) throw new ew(59);
                                                 return r.m.ac(r, t, i);
                                             case 21523:
                                                 if (!r.s) return -59;
-                                                return r.s.V.dc && ((o = [24, 80]), (A[(i = e3()) >> 1] = o[0]), (A[(i + 2) >> 1] = o[1])), 0;
+                                                return r.s.V.dc && ((o = [24, 80]), (A[(i = e2()) >> 1] = o[0]), (A[(i + 2) >> 1] = o[1])), 0;
                                             default:
                                                 return -28;
                                         }
@@ -2408,7 +2408,7 @@
                                     }
                                 },
                                 __syscall_openat: function (e, t, n, r) {
-                                    e2 = r;
+                                    e3 = r;
                                     try {
                                         var i = (t = t ? el(T, t) : '');
                                         if ('/' === i.charAt(0)) t = i;
@@ -2417,7 +2417,7 @@
                                             if (0 == i.length) throw new ew(44);
                                             t = et(o + '/' + i);
                                         }
-                                        var a = r ? e3() : 0;
+                                        var a = r ? e2() : 0;
                                         return eX(t, n, a).X;
                                     } catch (e) {
                                         if (void 0 === e1 || 'ErrnoError' !== e.name) throw e;
@@ -2772,7 +2772,7 @@
                                                 return t;
                                             },
                                             argPackAdvance: 8,
-                                            readValueFromPointer: t2(t, n),
+                                            readValueFromPointer: t3(t, n),
                                             K: null
                                         });
                                 },
@@ -2810,7 +2810,7 @@
                                             fromWireType: o,
                                             toWireType: n,
                                             argPackAdvance: 8,
-                                            readValueFromPointer: t3(t, i, 0 !== r),
+                                            readValueFromPointer: t2(t, i, 0 !== r),
                                             K: null
                                         });
                                 },

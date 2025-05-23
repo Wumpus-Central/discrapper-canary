@@ -376,7 +376,7 @@ let l = [
                 whitePNG: n(463728),
                 lightSVG: n(519515),
                 darkSVG: n(519515),
-                whiteSVG: n(98668)
+                whiteSVG: n(167918)
             },
             enabled: !0,
             hasMetadata: !0,

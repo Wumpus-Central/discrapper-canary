@@ -18,7 +18,7 @@ var r = n(255367),
     b = n(74538),
     y = n(204418),
     O = n(388032),
-    v = n(520271);
+    v = n(84666);
 let I = [
         {
             avatarSize: c.EFr.SIZE_40,

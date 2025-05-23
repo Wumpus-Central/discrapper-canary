@@ -9,7 +9,7 @@ var r = n(120356),
     c = n(55935),
     d = n(955204),
     u = n(674680),
-    m = n(927671);
+    m = n(924206);
 function g(e) {
     let { achievementId: t, dateUnlocked: n } = e,
         r = (0, d.oX)(t);
@@ -21,8 +21,8 @@ function g(e) {
         x = l ? 'header-secondary' : 'text-muted',
         E = a()(n),
         C = null != f && l,
-        j = C ? o.P3F : 'div';
-    return (0, i.jsxs)(j, {
+        O = C ? o.P3F : 'div';
+    return (0, i.jsxs)(O, {
         className: s()(m.container, C && m.actionable),
         onClick: () => {
             C && f();

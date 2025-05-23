@@ -18,7 +18,7 @@ var i = n(120356),
     _ = n(933557),
     x = n(354459),
     C = n(388032),
-    y = n(249671);
+    y = n(838722);
 function v(e) {
     let { recipientUser: t, voiceChannel: n } = e,
         i = (0, _.ZP)(n),

@@ -8,7 +8,7 @@ var i = n(255367),
     c = n(981631),
     d = n(474936),
     u = n(388032),
-    m = n(898582);
+    m = n(842954);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -80,7 +80,7 @@ function h(e) {
             x === d.a$.NONE && ((C.transfer.disabled = !0), (C.transfer.subtext = u.intl.string(u.t.LiLRRU)), (0, a.y)('guild_boost_slot_popout', E, x) || ((C.cancel.subtext = u.intl.string(u.t['1ywaWF'])), (C.cancel.disabled = !0), (C.uncancel.disabled = !0)));
     }
     (0, a.y)('guild_boost_slot_popout', E, x) && ((C.cancel.subtext = u.intl.string(u.t.dq4vq6)), (C.cancel.disabled = !0), (C.uncancel.disabled = !0));
-    let j = r.useMemo(
+    let O = r.useMemo(
         () =>
             b.isPausedOrPausePending && x === d.a$.NONE
                 ? (0, i.jsx)(s.sNh, {
@@ -145,7 +145,7 @@ function h(e) {
                       disabled: C.cancel.disabled,
                       color: 'danger'
                   }),
-            j
+            O
         ]
     });
 }

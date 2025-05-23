@@ -10,14 +10,14 @@ var r = n(255367),
     d = n(268350),
     m = n(419922),
     g = n(388032),
-    p = n(646084);
+    p = n(493767);
 let f = (e) => {
     let { className: t, isDisabled: l, sticker: f, canManageSticker: h } = e,
         [x, b] = i.useState(!1),
         [j, _] = (0, c.Z)(null, 4000),
         v = () => {
             (0, a.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e('93626'), n.e('64386')]).then(n.bind(n, 136735));
+                let { default: e } = await Promise.all([n.e('93626'), n.e('95965')]).then(n.bind(n, 136735));
                 return (t) =>
                     (0, r.jsx)(
                         e,

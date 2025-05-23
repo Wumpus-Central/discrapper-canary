@@ -33,15 +33,15 @@ let _ = s().throttle(function (e, t) {
     let a,
         { channelPredicate: m = () => !0, guildPredicate: f = () => !0, guildFeaturePredicate: _ = () => !1, ensureChatIsVisible: x = () => !1, withVoiceChannels: E = !1 } = t,
         C = null != (r = o.Z.getState().guildId) ? r : h.ME,
-        j = o.Z.getState().channelId,
-        O = (function (e, t) {
+        O = o.Z.getState().channelId,
+        j = (function (e, t) {
             let n = [h.ME, ...u.ZP.getFlattenedGuildIds()],
                 i = n.indexOf(e);
             return t > 0 ? n.slice(i).concat(n.slice(0, i), e) : (n.splice(i, 0, e), n.slice(i + 1).concat(n.slice(0, i + 1)));
         })(C, e),
-        S = e > 0 ? 0 : O.length - 1,
+        S = e > 0 ? 0 : j.length - 1,
         v = b(C, E),
-        T = v.indexOf(j) + e;
+        T = v.indexOf(O) + e;
     for (; null != C && '' !== C; ) {
         if (((a = v[T]), f(C)))
             for (; null != a && '' !== a; ) {
@@ -51,7 +51,7 @@ let _ = s().throttle(function (e, t) {
                     return (
                         C !== d.Z.getGuildId() && (0, p.K)(C, null == (s = c.ZP.getDefaultChannel(C)) ? void 0 : s.id),
                         (0, l.ZDy)(async () => {
-                            let { default: e } = await Promise.all([n.e('42743'), n.e('22347'), n.e('56236'), n.e('7549')]).then(n.bind(n, 17671));
+                            let { default: e } = await Promise.all([n.e('42743'), n.e('22347'), n.e('56236'), n.e('529')]).then(n.bind(n, 17671));
                             return (t) =>
                                 (0, i.jsx)(
                                     e,
@@ -105,7 +105,7 @@ let _ = s().throttle(function (e, t) {
                     );
                 (T += e), (a = v[T]);
             }
-        if (((S += e), null == (C = O[S]) || '' === C)) break;
+        if (((S += e), null == (C = j[S]) || '' === C)) break;
         (v = b(C, E)), (T = e < 0 ? v.length - 1 : 0);
     }
     g.S.dispatch(h.CkL.SHAKE_APP, {

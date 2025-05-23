@@ -1,10 +1,10 @@
 n.d(t, {
     $_: () => Z,
     Er: () => A,
-    FM: () => M,
+    FM: () => B,
     IB: () => w,
     IY: () => k,
-    Kb: () => B,
+    Kb: () => M,
     bq: () => P,
     rM: () => D
 }),
@@ -28,8 +28,8 @@ var i = n(73800),
     x = n(823379),
     E = n(111361),
     C = n(595878),
-    j = n(944880),
-    O = n(513785),
+    O = n(944880),
+    j = n(513785),
     S = n(106255),
     v = n(474936),
     T = n(735825),
@@ -80,7 +80,7 @@ function y(e, t) {
 function A() {
     var e;
     let t = (function () {
-            let e = (0, l.cj)([O.Z], () => O.Z.getState());
+            let e = (0, l.cj)([j.Z], () => j.Z.getState());
             if (null != e) return e.userTenureRewardStatusByRewardId[T.Ft.FREE_AVATAR_DECO_1_MONTH];
         })(),
         n = (function () {
@@ -235,17 +235,17 @@ function L() {
         !1 === n && !0 === r && !1 === s.current && !0 === t && (o.yD(e), (s.current = !0));
     }, [n, r, e, t]);
 }
-function M() {
+function B() {
     var e;
     let t = (0, C.oY)({ location: 'Home' });
-    L(v.CL), L(N.XAJ, t), B(T.qY);
+    L(v.CL), L(N.XAJ, t), M(T.qY);
     let n = A(),
         r = null != (e = null == n ? void 0 : n.showCard) && e;
     i.useEffect(() => {
-        r && j.Z.forceRefreshIfOutdated();
+        r && O.Z.forceRefreshIfOutdated();
     }, [r]);
 }
-function B(e) {
+function M(e) {
     var t;
     let n = (0, C.oY)({ location: 'Home' }),
         r = (0, m.hv)('useCollectiblePurchaseForTenureReward'),

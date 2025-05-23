@@ -6,7 +6,7 @@ var i = n(149765),
     a = n(481060),
     s = n(981631),
     l = n(388032),
-    c = n(340181);
+    c = n(20811);
 let u = 5;
 function d(e) {
     let { error: t, selectedGuildId: n, onGuildChange: d, guilds: f, disabled: _ = !1 } = e,

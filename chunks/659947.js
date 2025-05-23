@@ -13,7 +13,7 @@ var i = n(255367),
     p = n(914010),
     h = n(727785),
     f = n(388032),
-    b = n(484671);
+    b = n(684493);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -59,18 +59,18 @@ function x(e, t) {
 }
 function E() {}
 let C = [h.h8.VOICE_CHANNEL];
-function j(e) {
+function O(e) {
     e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
-function O(e) {
+function j(e) {
     let { height: t } = e;
     return (0, i.jsx)('div', { style: { height: t } });
 }
 function S() {
-    return (0, i.jsx)(O, { height: 16 }, 'footer');
+    return (0, i.jsx)(j, { height: 16 }, 'footer');
 }
 function v() {
-    return (0, i.jsx)(O, { height: 8 }, 'header');
+    return (0, i.jsx)(j, { height: 8 }, 'header');
 }
 function T() {
     return (0, i.jsx)('div', {
@@ -133,7 +133,7 @@ function I(e) {
         {
             mouseFocusEnabled: x,
             enableMouseFocus: E,
-            disableMouseFocus: O
+            disableMouseFocus: j
         } = (function () {
             let e = r.useRef(!1),
                 t = r.useCallback(() => {
@@ -155,7 +155,7 @@ function I(e) {
         } = (0, o.Z)({
             visible: !0,
             autocompleterResultTypes: C,
-            autocompleterBeforeCreateSearchContext: j
+            autocompleterBeforeCreateSearchContext: O
         }),
         A = (function (e) {
             let t = '' !== e,
@@ -221,7 +221,7 @@ function I(e) {
                         value: N,
                         onChange: I,
                         onKeyDown: function (e) {
-                            O();
+                            j();
                             let t = e.key.toLowerCase();
                             if ('arrowdown' === t || 'arrowup' === t || 'enter' === t || 'escape' === t)
                                 switch ((e.preventDefault(), t)) {

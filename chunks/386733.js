@@ -18,9 +18,9 @@ var i = n(255367),
     x = n(767714),
     E = n(119269),
     C = n(938736),
-    j = n(981631),
-    O = n(388032),
-    S = n(357885),
+    O = n(981631),
+    j = n(388032),
+    S = n(641796),
     v = n(691766);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -91,7 +91,7 @@ let I = (e) => {
                       children: n
                   });
         return (0, i.jsx)(o.ua7, {
-            text: O.intl.string(O.t.UnKHdn),
+            text: j.intl.string(j.t.UnKHdn),
             shouldShow: !l,
             tooltipContentClassName: S.unsentTooltipContent,
             children: (e) => (0, i.jsx)('div', N(T({ className: S.userAvatarProgressBarUnit }, e), { children: a }))
@@ -146,7 +146,7 @@ let I = (e) => {
     },
     P = (e) => {
         let { analyticsLocations: t } = e;
-        g.default.track(j.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
+        g.default.track(O.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e('47435').then(n.bind(n, 204387));
                 return (n) => (0, i.jsx)(e, N(T({}, n), { sourceAnalyticsLocations: t }));
@@ -168,7 +168,7 @@ let I = (e) => {
             e === h.Fe.REDEEMED && N.redeemed++, e === h.Fe.CONVERTED && (N.redeemed++, N.converted++);
         });
         let I = N.sent === _.Q,
-            y = p.Z.getArticleURL(j.BhN.REFERRAL_PROGRAM),
+            y = p.Z.getArticleURL(O.BhN.REFERRAL_PROGRAM),
             { analyticsLocations: R } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
             D = r.useRef(null),
             Z = (N.sent / _.Q) * 100,
@@ -206,7 +206,7 @@ let I = (e) => {
                                         !T &&
                                         (0, i.jsx)(x.Z, {
                                             color: o.Ttl.CUSTOM,
-                                            textOptions: { textOverride: O.intl.string(O.t.Ve9Ge3) },
+                                            textOptions: { textOverride: j.intl.string(j.t.Ve9Ge3) },
                                             className: l()(S.expandedProgressBarGiftingCTA, { [S.expandedProgressBarGiftingCTALayout]: !t }),
                                             look: o.iLD.OUTLINED,
                                             isGift: !0
@@ -224,7 +224,7 @@ let I = (e) => {
                                                     alt: '',
                                                     className: S.expandedProgressBarSelectFriendsIcon
                                                 }),
-                                                I ? O.intl.string(O.t.SY9tyM) : O.intl.string(O.t.Lm2nFR)
+                                                I ? j.intl.string(j.t.SY9tyM) : j.intl.string(j.t.Lm2nFR)
                                             ]
                                         })
                                     })

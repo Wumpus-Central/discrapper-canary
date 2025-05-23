@@ -20,7 +20,7 @@ var r = n(120356),
     d = n(275759),
     u = n(856651),
     m = n(388032),
-    g = n(566825);
+    g = n(658303);
 function p(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
@@ -123,7 +123,7 @@ function f(e) {
         c > -1 &&
             a.push(
                 (0, i.jsx)(
-                    O,
+                    j,
                     {
                         className: l,
                         label: m.intl.format(m.t['Y88M5+'], { count: c }),
@@ -136,7 +136,7 @@ function f(e) {
         d > -1 &&
             a.push(
                 (0, i.jsx)(
-                    O,
+                    j,
                     {
                         className: l,
                         label: m.intl.format(m.t['Y88M5+'], { count: d }),
@@ -293,7 +293,7 @@ function E(e) {
                 case u.xn.DATETIME_LESS_THAN_EQUAL:
                     r.push(
                         (0, i.jsx)(
-                            j,
+                            O,
                             {
                                 className: t,
                                 date: a,
@@ -344,7 +344,7 @@ function C(e) {
         })
     );
 }
-function j(e) {
+function O(e) {
     let { date: t, locale: n, label: r, className: l } = e;
     return (0, i.jsx)(o.Text, {
         className: s()(g.connectedAccountVanityMetadata, l),
@@ -356,7 +356,7 @@ function j(e) {
         })
     });
 }
-function O(e) {
+function j(e) {
     let { label: t, imageSrc: n, imageAlt: r, className: l } = e;
     return (0, i.jsxs)('div', {
         className: s()(g.connectedAccountVanityMetadata, g.connectedAccountVanityMetadataItem, l),

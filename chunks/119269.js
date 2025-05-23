@@ -14,7 +14,7 @@ var i,
     m = n(967538),
     g = n(885302),
     p = n(914677),
-    h = n(914242),
+    h = n(688870),
     f = (((i = {})[(i.NITRO_GEM = 0)] = 'NITRO_GEM'), (i[(i.NITRO_LOGO = 1)] = 'NITRO_LOGO'), (i[(i.AVATAR_DECO = 2)] = 'AVATAR_DECO'), i);
 let b = (e) => {
         let { avatarDecoAssetId: t, avatarDecoAssetDescription: n } = e,
@@ -32,7 +32,7 @@ let b = (e) => {
         });
     },
     _ = (e) => {
-        let { showAnimations: t = !0, iconClassName: n, staticPercentage: i, innerCircleClassName: s, progressCircleStrokeSize: l, backgroundCircleSize: c, percentage: u, initialPercentage: f, progressCircleVariation: _ = 0, avatarDecoAssetId: x, avatarDecoAssetDescription: E, ellipseOpacity: C, customAnimationClassName: j, circleColor: O, circleStroke: S } = e,
+        let { showAnimations: t = !0, iconClassName: n, staticPercentage: i, innerCircleClassName: s, progressCircleStrokeSize: l, backgroundCircleSize: c, percentage: u, initialPercentage: f, progressCircleVariation: _ = 0, avatarDecoAssetId: x, avatarDecoAssetDescription: E, ellipseOpacity: C, customAnimationClassName: O, circleColor: j, circleStroke: S } = e,
             v = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
             T = t && !v;
         return (0, r.jsx)('div', {
@@ -40,7 +40,7 @@ let b = (e) => {
             children: (0, r.jsx)(p.Z, {
                 animationClassName: a()(h.activeProgressCircle, {
                     [h.activeProgressCircleAnimation]: T,
-                    [null != j ? j : '']: T
+                    [null != O ? O : '']: T
                 }),
                 progressCircleStroke: S,
                 progressCircleStrokeSize: l,
@@ -57,7 +57,7 @@ let b = (e) => {
                             });
                         case 1:
                             return (0, r.jsx)(g.Z, {
-                                circleColor: O,
+                                circleColor: j,
                                 ellipseOpacity: C
                             });
                         case 2:

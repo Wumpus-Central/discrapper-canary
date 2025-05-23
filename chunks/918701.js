@@ -57,7 +57,7 @@ n.d(t, {
     oo: () => eN,
     pO: () => ew,
     q6: () => Q,
-    q8: () => e3,
+    q8: () => e2,
     qe: () => tO,
     t2: () => ed,
     u7: () => t_,
@@ -562,7 +562,7 @@ let eU = (e, t) => {
         var n, r, i, o, a;
         let s = null == (r = e.userStatus) || null == (n = r.progress) ? void 0 : n[t.type],
             l = null != (a = null != (o = null == s ? void 0 : s.value) ? o : null == (i = e.userStatus) ? void 0 : i.streamProgressSeconds) ? a : 0;
-        if (e3(e)) {
+        if (e2(e)) {
             let n = T.Z.getOptimisticProgress(e.id, t.type);
             return null == n || n < l ? l : n;
         }
@@ -628,12 +628,12 @@ let eU = (e, t) => {
                 percentComplete: 0,
                 taskType: a.X.STREAM_ON_DESKTOP
             };
-        if (e2(e))
+        if (e3(e))
             return eK({
                 quest: e,
                 includeTaskTypes: null != t ? t : e8(e) ? a.T.CONSOLE : a.T.ALL
             });
-        if (e3(e))
+        if (e2(e))
             if (e4(e))
                 return eY({
                     quest: e,
@@ -700,12 +700,12 @@ function e0(e) {
 function e1(e, t) {
     return ''.concat(String(e).padStart(2, '0'), ':').concat(String(t).padStart(2, '0'));
 }
-let e2 = eQ([a.X.PLAY_ON_XBOX, a.X.PLAY_ON_PLAYSTATION]),
-    e3 = eQ([a.X.WATCH_VIDEO, a.X.WATCH_VIDEO_ON_MOBILE]);
+let e3 = eQ([a.X.PLAY_ON_XBOX, a.X.PLAY_ON_PLAYSTATION]),
+    e2 = eQ([a.X.WATCH_VIDEO, a.X.WATCH_VIDEO_ON_MOBILE]);
 eQ([a.X.WATCH_VIDEO]);
 let e4 = eQ([a.X.WATCH_VIDEO_ON_MOBILE]);
 function e5(e) {
-    return e2(e);
+    return e3(e);
 }
 let e6 = (e, t) => {
     var n, r;
@@ -718,7 +718,7 @@ function e8(e) {
     return null != e.userStatus && (e6(e.userStatus, a.X.PLAY_ON_XBOX) || e6(e.userStatus, a.X.PLAY_ON_PLAYSTATION));
 }
 function e7(e) {
-    return !!e3(e) && (0, n(952265).nf)(t_(e.id));
+    return !!e2(e) && (0, n(952265).nf)(t_(e.id));
 }
 function e9() {
     d.Z.open(D.oAB.CONNECTIONS);
@@ -808,7 +808,7 @@ function tl(e) {
 }
 function tc(e) {
     let t = eP({ quest: e }) || eR({ quest: e }),
-        n = e2(e),
+        n = e3(e),
         r = [];
     return t && r.push(w.cd.DESKTOP), n && r.push(w.cd.CONSOLE), r;
 }
@@ -839,7 +839,7 @@ function t_(e) {
     return 'VIDEO-QUEST-'.concat(e);
 }
 function tp(e) {
-    let t = e3(e),
+    let t = e2(e),
         n = ew(e);
     return t || n;
 }

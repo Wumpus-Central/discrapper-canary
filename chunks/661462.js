@@ -7,7 +7,7 @@ var r = n(255367),
     a = n(311044),
     s = n(408986),
     d = n(228168),
-    u = n(662776);
+    u = n(163401);
 function f(e) {
     let { user: t, currentUser: n, section: o, subsection: i, displayProfile: c, guildId: u, channelId: f, onClose: p } = e;
     return o === d.oh.ACTIVITY

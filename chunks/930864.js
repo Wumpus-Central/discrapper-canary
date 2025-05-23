@@ -19,7 +19,7 @@ var l = n(255367),
     y = n(912332),
     I = n(819727),
     S = n(388032),
-    O = n(691176),
+    O = n(272393),
     A = n(621054);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -112,11 +112,20 @@ function x(e) {
         }),
         Y = r.useCallback(
             (e) => {
-                q(e), X(e), (H.current += 1), '' !== e && G(j, Z);
+                q(e), X(e);
             },
-            [j, Z, G, X]
+            [X]
         ),
-        J = r.useCallback(() => {
+        J = r.useCallback(
+            (e) => {
+                Y(e), (H.current += 1), '' !== e && G(j, Z);
+            },
+            [j, Z, G, Y]
+        ),
+        $ = r.useCallback(() => {
+            Y('');
+        }, [Y]),
+        ee = r.useCallback(() => {
             (0, m.sF)({
                 channelId: j,
                 messageId: Z,
@@ -125,17 +134,14 @@ function x(e) {
             }),
                 L();
         }, [j, Z, L]),
-        $ = r.useCallback(() => {
-            q('');
-        }, [q]),
-        ee = r.useRef(null);
+        et = r.useRef(null);
     r.useEffect(() => {
         if ('' === B) {
             var e;
-            null == (e = ee.current) || e.focus();
+            null == (e = et.current) || e.focus();
         }
     }, [B]);
-    let et = r.useMemo(
+    let en = r.useMemo(
             () =>
                 (0, i.throttle)(
                     () => {
@@ -149,7 +155,7 @@ function x(e) {
                 ),
             []
         ),
-        en = r.useCallback(
+        el = r.useCallback(
             (e) => {
                 M(j, Z, '' !== B),
                     Q((t) => {
@@ -157,14 +163,14 @@ function x(e) {
                             let { type: n, id: l } = t;
                             return n === e.type && l === e.id;
                         });
-                        if (-1 === n) return V ? t : (q(''), X(''), (U.current += 1), [e, ...t]);
+                        if (-1 === n) return V ? t : (Y(''), (U.current += 1), [e, ...t]);
                         let l = [...t];
                         return l.splice(n, 1), (U.current += 1), l;
                     });
             },
-            [j, V, Z, B, X, M]
+            [j, V, Z, B, Y, M]
         ),
-        el = r.useCallback(
+        er = r.useCallback(
             async function (e) {
                 var r;
                 let { withMessage: i, transitionToDestination: a, closeAfterSend: d } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -211,7 +217,7 @@ function x(e) {
                         numQueryChanges: H.current,
                         anyDestinationHasSlowmode: O
                     }),
-                        et();
+                        en();
                     return;
                 }
                 (0, m.gP)({
@@ -231,20 +237,20 @@ function x(e) {
                     forwardOptions: P
                 });
             },
-            [j, P, Z, t, T, et]
+            [j, P, Z, t, T, en]
         ),
-        er = r.useCallback(
+        ei = r.useCallback(
             (e) => {
-                el(W, {
+                er(W, {
                     withMessage: e,
                     transitionToDestination: 1 === W.length,
                     closeAfterSend: !0
                 });
             },
-            [el, W]
+            [er, W]
         );
     if (null == k || null == F) return null;
-    let ei =
+    let ea =
             K.length > 0
                 ? (0, l.jsx)(E.F, {
                       paddingBottom: 16,
@@ -253,7 +259,7 @@ function x(e) {
                       rowMode: E.G.TOGGLE,
                       message: k,
                       originChannel: F,
-                      handleToggleDestination: en,
+                      handleToggleDestination: el,
                       selectedDestinations: W,
                       disableSelection: V
                   })
@@ -272,7 +278,7 @@ function x(e) {
                           })
                       ]
                   }),
-        ea = z <= 1 ? S.intl.string(S.t.TXNS7e) : S.intl.formatToPlainString(S.t.jWtYUl, { count: z });
+        es = z <= 1 ? S.intl.string(S.t.TXNS7e) : S.intl.formatToPlainString(S.t.jWtYUl, { count: z });
     return (0, l.jsxs)(
         s.Y0X,
         C(
@@ -313,15 +319,15 @@ function x(e) {
                                     }),
                                     (0, l.jsx)(s.olH, {
                                         className: O.closeButton,
-                                        onClick: J
+                                        onClick: ee
                                     })
                                 ]
                             }),
                             (0, l.jsx)(s.E1j, {
-                                ref: ee,
+                                ref: et,
                                 size: s.E1j.Sizes.MEDIUM,
                                 query: B,
-                                onChange: Y,
+                                onChange: J,
                                 onClear: $,
                                 placeholder: S.intl.string(S.t['5h0QOD']),
                                 'aria-label': S.intl.string(S.t['5h0QOD']),
@@ -329,15 +335,15 @@ function x(e) {
                             })
                         ]
                     }),
-                    ei,
+                    ea,
                     (0, l.jsx)(b.n, {
                         message: k,
                         forwardOptions: P,
-                        sendLabel: ea,
+                        sendLabel: es,
                         canSend: z > 0,
                         selectedDestinations: W,
                         isSending: D,
-                        onSend: er
+                        onSend: ei
                     })
                 ]
             }

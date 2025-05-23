@@ -6,7 +6,7 @@ var a = n(481060),
     l = n(592125),
     o = n(430824),
     s = n(388032),
-    c = n(548304);
+    c = n(860630);
 let d = (e) => {
     let { entry: t } = e,
         n = l.Z.getChannel(t.channelId);

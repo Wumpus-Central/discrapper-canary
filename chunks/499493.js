@@ -13,8 +13,8 @@ var n = r(255367),
     f = r(91140),
     p = r(297781),
     O = r(388032),
-    E = r(152790),
-    h = r(263930);
+    E = r(921108),
+    h = r(206218);
 let x = (e) => {
     let { entry: t, onClose: r, onReaction: a, onRequestOpen: x, disableActivityProfileLinks: v, customCTA: j, popoutClassname: b, popoutPosition: I = 'right' } = e,
         y = i.useRef(null),

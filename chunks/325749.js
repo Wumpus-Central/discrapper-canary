@@ -36,7 +36,7 @@ var r = n(255367),
     R = n(932174),
     B = n(981631),
     L = n(388032),
-    Y = n(951927);
+    Y = n(314219);
 let z = D.u.SIZE_24;
 function M(e) {
     let { applicationId: t, channelId: n } = e,

@@ -7,7 +7,7 @@ var i = n(255367),
     o = n(60034),
     c = n(172751),
     d = n(131085),
-    u = n(919563);
+    u = n(120632);
 function m(e) {
     let { className: t, guildTag: n, guildBadge: s, onTagClick: m, guildId: g, guildName: p, guildIcon: h, guildIconSize: f } = e,
         b = r.useRef(null),

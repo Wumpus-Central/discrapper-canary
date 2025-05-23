@@ -10,7 +10,7 @@ var r = n(255367),
     d = n(479398),
     p = n(981631),
     m = n(388032),
-    g = n(875231);
+    g = n(534664);
 let f = o.lazy(() => n.e('85831').then(n.bind(n, 120314)));
 function b(e, t) {
     let { hideSimpleEmbedContent: b, formatInline: h = !1, noStyleAndInteraction: O = !1, isInteracting: y = !1, allowHeading: j = !1, allowList: v = !1, allowLinks: P = !1, allowDevLinks: x = !1, previewLinkTarget: C = !1, viewingChannelId: w } = t,

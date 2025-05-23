@@ -12,7 +12,7 @@ var i = n(255367),
     g = n(572004),
     p = n(878209),
     h = n(987338),
-    f = n(516370);
+    f = n(533925);
 function b() {
     let e = (0, a.cj)([u.Z], () => u.Z.getAllExperimentOverrideDescriptors()),
         t = (0, a.cj)([u.Z], () => u.Z.getRegisteredExperiments()),
@@ -60,8 +60,8 @@ function _(e) {
         C = r.useCallback(() => {
             _((e) => !e);
         }, []),
-        j = (0, a.e7)([u.Z], () => u.Z.getUserExperimentDescriptor(s)),
-        O = (0, a.e7)([u.Z], () => u.Z.getLoadedUserExperiment(s)),
+        O = (0, a.e7)([u.Z], () => u.Z.getUserExperimentDescriptor(s)),
+        j = (0, a.e7)([u.Z], () => u.Z.getLoadedUserExperiment(s)),
         S = (0, a.Wu)([u.Z], () =>
             l()
                 .sortBy(u.Z.getRecentExposures(h.xY.USER, s), (e) => {
@@ -157,9 +157,9 @@ function _(e) {
                               children: [
                                   (0, i.jsxs)(o.R94, {
                                       type: o.geA.DESCRIPTION,
-                                      children: ['Current assigned to bucket ', null != (t = null == j ? void 0 : j.bucket) ? t : h.NZ.NOT_ELIGIBLE]
+                                      children: ['Current assigned to bucket ', null != (t = null == O ? void 0 : O.bucket) ? t : h.NZ.NOT_ELIGIBLE]
                                   }),
-                                  null == O
+                                  null == j
                                       ? (0, i.jsx)(o.R94, {
                                             type: o.geA.DESCRIPTION,
                                             children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
@@ -178,7 +178,7 @@ function _(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: f.pre,
-                                            children: null == O ? 'None' : JSON.stringify(O, void 0, 2)
+                                            children: null == j ? 'None' : JSON.stringify(j, void 0, 2)
                                         }),
                                         (0, i.jsx)(o.vwX, {
                                             tag: 'h5',
@@ -238,7 +238,7 @@ function x(e) {
                     return ''.concat(new Date(n).toLocaleString(), ' (').concat(t, ')');
                 })
         ),
-        [C, j] = (0, a.Wu)([m.Z, u.Z], () => {
+        [C, O] = (0, a.Wu)([m.Z, u.Z], () => {
             let e = l().sortBy(l().values(m.Z.getGuilds()), (e) => e.name.toLowerCase()),
                 t = {},
                 i = [];
@@ -256,7 +256,7 @@ function x(e) {
                 .join(', ');
             return [i.join('\n'), s];
         }),
-        O = (0, i.jsx)(o.P3F, {
+        j = (0, i.jsx)(o.P3F, {
             onClick: _,
             children: (0, i.jsxs)(o.vwX, {
                 tag: o.RB0.H3,
@@ -285,7 +285,7 @@ function x(e) {
               children: [
                   (0, i.jsxs)(o.hjN, {
                       children: [
-                          O,
+                          j,
                           (0, i.jsxs)('div', {
                               children: [
                                   (0, i.jsx)(o.xJW, {
@@ -312,7 +312,7 @@ function x(e) {
                               children: [
                                   (0, i.jsxs)(o.R94, {
                                       type: o.geA.DESCRIPTION,
-                                      children: ['Current Assignments: ', j]
+                                      children: ['Current Assignments: ', O]
                                   }),
                                   null == x
                                       ? (0, i.jsx)(o.R94, {
@@ -381,6 +381,6 @@ function x(e) {
           })
         : (0, i.jsx)('div', {
               className: f.group,
-              children: (0, i.jsx)(o.hjN, { children: O })
+              children: (0, i.jsx)(o.hjN, { children: j })
           });
 }

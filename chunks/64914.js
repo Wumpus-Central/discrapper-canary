@@ -46,8 +46,8 @@ function C() {
         t = h.bm.useSetting(),
         n = h.Sb.useSetting(),
         C = (0, s.e7)([m.Z], () => m.Z.testModeApplicationId),
-        j = (0, s.e7)([p.ZP], () => p.ZP.showPlayAgain),
-        O = r.useCallback((e) => {
+        O = (0, s.e7)([p.ZP], () => p.ZP.showPlayAgain),
+        j = r.useCallback((e) => {
             h.bm.updateSetting(!e);
         }, []),
         S = r.useCallback((e) => {
@@ -131,7 +131,7 @@ function C() {
                 setting: b.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
                 children: (0, i.jsx)(l.j7V, {
                     value: !t,
-                    onChange: O,
+                    onChange: j,
                     note: x.intl.string(x.t['8mYp39']),
                     children: x.intl.string(x.t.fi3UQE)
                 })
@@ -148,7 +148,7 @@ function C() {
             (0, i.jsx)(u.F, {
                 setting: b.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN,
                 children: (0, i.jsx)(l.j7V, {
-                    value: j,
+                    value: O,
                     note: x.intl.string(x.t['B/qU4O']),
                     onChange: v,
                     children: x.intl.string(x.t.qDZryM)

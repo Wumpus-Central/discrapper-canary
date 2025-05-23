@@ -7,7 +7,7 @@ var r = n(120356),
     a = n(481060),
     o = n(993413),
     c = n(388032),
-    d = n(775853);
+    d = n(258493);
 function u(e) {
     let { children: t, className: n, layoutClassName: r, profilePreview: u, previewTitle: m } = e,
         g = () =>

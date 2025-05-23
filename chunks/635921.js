@@ -23,11 +23,11 @@ var i = n(255367),
     x = n(784238),
     E = n(346497),
     C = n(422034),
-    j = n(206127),
-    O = n(710220),
+    O = n(206127),
+    j = n(710220),
     S = n(474936),
     v = n(388032),
-    T = n(909176);
+    T = n(898118);
 let N = (e) => {
         let { inOfferExperience: t, subscriptionTier: n, containerClassName: r, buttonClassName: s, isMarketingPageV2Enabled: a, isDarkMode: o } = e,
             c = (0, i.jsx)(x.Z, {
@@ -58,7 +58,7 @@ let N = (e) => {
     };
 function y(e) {
     let { variant: t = 'text-lg/normal', withBottomMargin: n = !0, isMarketingPageV2Enabled: r } = e,
-        s = (0, j.$)();
+        s = (0, O.$)();
     return (0, i.jsx)(o.Text, {
         variant: t,
         color: r ? 'header-secondary' : 'always-white',
@@ -71,18 +71,18 @@ function y(e) {
 }
 let A = r.forwardRef((e, t) => {
     var n, r;
-    let { isFullscreen: s, className: u, buttonClassName: x, subscriptionTier: j, entrypoint: A, isDarkMode: P } = e,
+    let { isFullscreen: s, className: u, buttonClassName: x, subscriptionTier: O, entrypoint: A, isDarkMode: P } = e,
         { analyticsLocations: R } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_HERO_CTA),
         D = (0, p._O)(),
         Z = (0, h.Ng)(),
         w = (0, h.Wp)(Z, S.Si.TIER_2) ? S.Si.TIER_2 : void 0,
         k = (0, f.N)(),
         L = (0, g.Nx)(),
-        M = (0, E.Vi)(),
-        B = (0, a.e7)([m.Z], () => m.Z.affinities),
+        B = (0, E.Vi)(),
+        M = (0, a.e7)([m.Z], () => m.Z.affinities),
         U = (0, b.Z)(),
         V = A === S.EZ.ApplicationStoreHome && null != U,
-        G = B.length > 0;
+        G = M.length > 0;
     return (0, i.jsx)(d.Gt, {
         value: R,
         children: (0, i.jsxs)('div', {
@@ -102,7 +102,7 @@ let A = r.forwardRef((e, t) => {
                             children: v.intl.string(v.t.YCZldH)
                         }),
                         V
-                            ? (0, i.jsx)(O.Z, { referrer: U })
+                            ? (0, i.jsx)(j.Z, { referrer: U })
                             : G
                               ? (0, i.jsx)('div', {
                                     className: T.affinityDescription,
@@ -112,7 +112,7 @@ let A = r.forwardRef((e, t) => {
                                     })
                                 })
                               : (0, i.jsx)(y, {}),
-                        M || D
+                        B || D
                             ? (0, i.jsx)('div', {
                                   className: T.buttonContainer,
                                   children: (0, i.jsx)(_.Z, {
@@ -121,7 +121,7 @@ let A = r.forwardRef((e, t) => {
                                   })
                               })
                             : (0, i.jsx)(N, {
-                                  subscriptionTier: null != (r = null != j ? j : null == k || null == (n = k.subscription_trial) ? void 0 : n.sku_id) ? r : w,
+                                  subscriptionTier: null != (r = null != O ? O : null == k || null == (n = k.subscription_trial) ? void 0 : n.sku_id) ? r : w,
                                   inOfferExperience: L,
                                   buttonClassName: x,
                                   isDarkMode: P

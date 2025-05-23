@@ -1,4 +1,4 @@
-n.d(t, { g: () => j }), n(539854);
+n.d(t, { g: () => O }), n(539854);
 var i = n(255367);
 n(73800);
 var r = n(442837),
@@ -18,12 +18,12 @@ var r = n(442837),
     _ = n(383832),
     x = n(981631),
     E = n(388032),
-    C = n(965695);
-function j(e) {
+    C = n(479370);
+function O(e) {
     let t = (0, r.e7)([m.default], () => m.default.getCurrentUser()),
         n = (0, r.e7)([u.Z], () => u.Z.hidePersonalInformation),
-        j = (0, r.e7)([c.Z], () => (0, s.wj)(c.Z.theme)),
-        O = (0, o.R6)('useMultiAccountMenuItems'),
+        O = (0, r.e7)([c.Z], () => (0, s.wj)(c.Z.theme)),
+        j = (0, o.R6)('useMultiAccountMenuItems'),
         { multiAccountUsers: S } = (0, b.L)(),
         v = (e) => {
             e !== (null == t ? void 0 : t.id) && (g.default.track(x.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: x.jXE.USER_PROFILE } }), h.yD(e));
@@ -71,13 +71,13 @@ function j(e) {
                                     (0, i.jsx)(l.owK, {
                                         size: 'sm',
                                         color: (0, a.Lq)(t ? x.Ilk.WHITE_500 : x.Ilk.BRAND_500),
-                                        secondaryColor: (0, a.Lq)((t && j) || (t && !O && !j) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500),
+                                        secondaryColor: (0, a.Lq)((t && O) || (t && !j && !O) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500),
                                         className: C.activeIcon
                                     }),
                                 c &&
                                     (0, i.jsx)(l.P4T, {
                                         color: (0, a.Lq)(x.Ilk.RED_400),
-                                        secondaryColor: (0, a.Lq)((t && j) || (t && !O && !j) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500),
+                                        secondaryColor: (0, a.Lq)((t && O) || (t && !j && !O) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500),
                                         size: 'xs',
                                         className: C.activeIcon
                                     })

@@ -6,7 +6,7 @@ var i = n(120356),
     a = n(297700),
     s = n(471885),
     l = n(981631),
-    c = n(306641);
+    c = n(596350);
 let u = {
         [l.Eu4.NONE]: c.iconBackgroundTierNone,
         [l.Eu4.TIER_1]: c.iconBackgroundTierOne,

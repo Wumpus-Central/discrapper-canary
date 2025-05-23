@@ -13,7 +13,7 @@ var i = n(255367),
     p = n(305342),
     h = n(293810),
     f = n(388032),
-    b = n(637158);
+    b = n(633798);
 let _ = (e) => {
         let [t, n] = r.useState(!1),
             [i, s] = r.useState(null);
@@ -35,8 +35,8 @@ let _ = (e) => {
         var t;
         let { transitionState: n, groupListing: r, guildId: s, listing: o, subscription: x, onClose: E } = e,
             C = (0, u.Dt)(),
-            j = (0, g.YB)(s),
-            O = (null == j || null == (t = j.cover_image_asset) ? void 0 : t.application_id) != null ? (0, m._W)(j.cover_image_asset.application_id, j.cover_image_asset, 440) : void 0,
+            O = (0, g.YB)(s),
+            j = (null == O || null == (t = O.cover_image_asset) ? void 0 : t.application_id) != null ? (0, m._W)(O.cover_image_asset.application_id, O.cover_image_asset, 440) : void 0,
             { analyticsLocations: S } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
             { cancelSubscription: v, error: T, submitting: N } = _(S),
             I = async () => {
@@ -58,7 +58,7 @@ let _ = (e) => {
                 (0, i.jsxs)('div', {
                     children: [
                         (0, i.jsx)('img', {
-                            src: O,
+                            src: j,
                             alt: '',
                             className: b.headerImage
                         }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(388685), n(781311);
+n.d(t, { Z: () => M }), n(388685), n(781311);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -18,19 +18,19 @@ var i = n(255367),
     x = n(553795),
     E = n(430824),
     C = n(63063),
-    j = n(358085),
-    O = n(709054),
+    O = n(358085),
+    j = n(709054),
     S = n(362352),
     v = n(413182),
     T = n(695346),
     N = n(726985),
     I = n(981631),
     y = n(388032),
-    A = n(187382),
-    P = n(20493);
+    A = n(320258),
+    P = n(971005);
 function R(e) {
     let t = () => {
-        T.SE.updateSetting(e ? O.default.keys(E.Z.getGuilds()) : []);
+        T.SE.updateSetting(e ? j.default.keys(E.Z.getGuilds()) : []);
     };
     (0, m.h7j)((e) => {
         var n, r;
@@ -97,7 +97,7 @@ function D() {
     let e = T.G6.useSetting(),
         t = T.Wz.useSetting(),
         n = (0, S.Yd)('activity privacy tab'),
-        r = j.isPlatformEmbedded ? y.intl.string(y.t.MznbeH) : y.intl.string(y.t.oKqC4u),
+        r = O.isPlatformEmbedded ? y.intl.string(y.t.MznbeH) : y.intl.string(y.t.oKqC4u),
         s = (e) => {
             T.Wz.updateSetting(e ? d.E5.ON_FOR_LARGE_GUILDS : d.E5.OFF), R(e);
         },
@@ -265,7 +265,7 @@ function L(e) {
         ]
     });
 }
-function M() {
+function B() {
     let e = (0, c.e7)([x.Z], () => x.Z.getAccounts()),
         t = r.useMemo(() => e.filter((e) => h.Z.isSupported(e.type) && I.vbS.has(e.type)), [e]),
         [n, s] = r.useState(''),
@@ -296,7 +296,7 @@ function M() {
               })
           });
 }
-function B(e) {
+function M(e) {
     let { className: t, showHeader: n = !0 } = e,
         { showRedesign: r } = v.b.useExperiment({ location: 'activity privacy tab' }),
         { showPerGuildActivityStatusSetting: s } = (0, f.c)('activity privacy tab');
@@ -306,6 +306,6 @@ function B(e) {
               className: t,
               tag: m.RB0.H1,
               title: n ? y.intl.string(y.t.Cq98yM) : null,
-              children: [(0, i.jsx)(D, {}), (0, i.jsx)(Z, {}), (0, i.jsx)(w, {}), r && (0, i.jsx)(M, {})]
+              children: [(0, i.jsx)(D, {}), (0, i.jsx)(Z, {}), (0, i.jsx)(w, {}), r && (0, i.jsx)(B, {})]
           });
 }

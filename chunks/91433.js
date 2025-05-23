@@ -11,7 +11,7 @@ var r = n(255367),
     f = n(5192),
     _ = n(785717),
     p = n(388032),
-    h = n(185589);
+    h = n(877468);
 function m(e) {
     let { user: t, guildId: n, channelId: o, applicationId: m, isGameRelationship: g = !1, className: E } = e,
         b = f.ZP.getName(n, o, t),

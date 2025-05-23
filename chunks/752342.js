@@ -25,7 +25,7 @@ var r = t(481060),
     P = t(228168),
     E = t(981631),
     T = t(388032),
-    S = t(405666);
+    S = t(191902);
 function N(e) {
     let { user: n, currentUser: t, guildId: N, channelId: A, messageId: C, roleId: _, sessionId: w, initialSection: R, initialSubsection: M, transitionState: U, openedAt: L, onClose: D, sourceAnalyticsLocations: B = [] } = e,
         k = N === E.ME ? void 0 : N,

@@ -2,7 +2,7 @@ n.d(t, { Z: () => a });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    l = n(564965);
+    l = n(139021);
 function a(e) {
     let { text: t, icon: n, onClick: a, disabled: o, color: s = i.zxk.Colors.PRIMARY, submitting: c } = e;
     return (0, r.jsxs)(i.zxk, {

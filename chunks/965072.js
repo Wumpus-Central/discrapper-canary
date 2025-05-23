@@ -6,7 +6,7 @@ var a = s(255367),
     i = s(479531),
     o = s(213609),
     c = s(388032),
-    h = s(472319),
+    h = s(965461),
     d = s(800010);
 function u(e) {
     let { transitionState: t, onFormSubmit: s, onResend: u, onSuccess: x, onClose: m, headerText: p, confirmButtonText: g, confirmButtonColor: k, impressionName: y } = e,

@@ -54,7 +54,7 @@ function h(e) {
                 var a;
                 (a = c({}, e)).isCoachmarkEnabled &&
                     (0, i.ZDy)(async () => {
-                        let { BalanceWidgetEarnedOrbsCoachmarkModal: e } = await Promise.all([r.e('82081'), r.e('1258')]).then(r.bind(r, 720463));
+                        let { BalanceWidgetEarnedOrbsCoachmarkModal: e } = await Promise.all([r.e('82081'), r.e('42242')]).then(r.bind(r, 720463));
                         return (t) => (0, n.jsx)(e, c({}, a, t));
                     }, f);
             } else !o && t && b();

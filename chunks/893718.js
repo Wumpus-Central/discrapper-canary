@@ -65,7 +65,7 @@ var r = n(255367),
     ef = n(981631),
     e_ = n(761652),
     ep = n(957825),
-    eh = n(302195);
+    eh = n(120232);
 function em(e, t, n) {
     return (
         t in e
@@ -418,7 +418,7 @@ function eM(e, t, n, r) {
 }
 function ej(e, t) {
     var n, o, s, l, u, f, h, O, P, w, L, x, j, G, B;
-    let { textValue: F, richValue: V, className: H, innerClassName: Y, editorClassName: W, id: z, required: q, disabled: Q, placeholder: X, accessibilityLabel: J, channel: eo, type: ep, focused: em, renderAttachButton: eg, renderApplicationCommandIcon: eE, renderAppLauncherButton: eb, renderAppCommandButton: eO, renderLeftAccessories: ev, pendingReply: ej, onChange: eU, onResize: eG, onBlur: eB, onFocus: eF, onKeyDown: eV, onSubmit: eZ, promptToUpload: eH, highlighted: eY, canMentionRoles: eW, canMentionChannels: eK, maxCharacterCount: ez, showRemainingCharsAfterCount: eq, allowNewLines: eQ = !0, characterCountClassName: eX, 'aria-describedby': eJ, 'aria-labelledby': e$, setEditorRef: e0, autoCompletePosition: e1, children: e2, disableThemedBackground: e3 = !1, emojiPickerCloseOnModalOuterClick: e4, parentModalKey: e5, onCommandSentinelTyped: e6, pendingScheduledMessage: e8 } = e;
+    let { textValue: F, richValue: V, className: H, innerClassName: Y, editorClassName: W, id: z, required: q, disabled: Q, placeholder: X, accessibilityLabel: J, channel: eo, type: ep, focused: em, renderAttachButton: eg, renderApplicationCommandIcon: eE, renderAppLauncherButton: eb, renderAppCommandButton: eO, renderLeftAccessories: ev, pendingReply: ej, onChange: eU, onResize: eG, onBlur: eB, onFocus: eF, onKeyDown: eV, onSubmit: eZ, promptToUpload: eH, highlighted: eY, canMentionRoles: eW, canMentionChannels: eK, maxCharacterCount: ez, showRemainingCharsAfterCount: eq, allowNewLines: eQ = !0, characterCountClassName: eX, 'aria-describedby': eJ, 'aria-labelledby': e$, setEditorRef: e0, autoCompletePosition: e1, children: e3, disableThemedBackground: e2 = !1, emojiPickerCloseOnModalOuterClick: e4, parentModalKey: e5, onCommandSentinelTyped: e6, pendingScheduledMessage: e8 } = e;
     c()(null != ep, 'chat input type must be set');
     let { analyticsLocations: e7 } = (0, y.ZP)(b.Z.CHANNEL_TEXT_AREA),
         e9 = (0, C.R6)('ChannelTextAreaContainer'),
@@ -499,8 +499,8 @@ function ej(e, t) {
             pendingReply: ej,
             pendingScheduledMessage: e8
         }),
-        t2 = 0 === F.trim().length,
-        t3 = (0, es.G)(eo.id, ep, t2),
+        t3 = 0 === F.trim().length,
+        t2 = (0, es.G)(eo.id, ep, t3),
         t4 = !0 === ep.showSlowmodeIndicator,
         t5 = !0 === ep.showTypingIndicator,
         t6 = te && ep.layout === et.gy.INLINE,
@@ -517,7 +517,7 @@ function ej(e, t) {
             disabled: tp,
             channel: eo,
             handleSubmit: tw,
-            isEmpty: t2,
+            isEmpty: t3,
             showAllButtons: tl,
             children: te ? (null == eb ? void 0 : eb()) : null
         }),
@@ -594,7 +594,7 @@ function ej(e, t) {
                             onScroll: tG,
                             className: a()(Y, {
                                 [eh.scrollableContainer]: !0,
-                                [eh.themedBackground]: !e3,
+                                [eh.themedBackground]: !e2,
                                 [eh.hasStackedBar]: t1.stacked.length > 0
                             }),
                             children: [
@@ -678,7 +678,7 @@ function ej(e, t) {
                                                       (null == (l = ep.submit) ? void 0 : l.button) != null && ((null == (u = ep.submit) ? void 0 : u.ignorePreference) || tv)
                                                           ? (0, r.jsx)(er.Z, {
                                                                 onClick: tw,
-                                                                disabled: tp || t3
+                                                                disabled: tp || t2
                                                             })
                                                           : null
                                                   ]
@@ -734,7 +734,7 @@ function ej(e, t) {
                                   stickerIconVisible: null != (G = null == (w = ep.stickers) ? void 0 : w.button) && G && !(ta && null != (B = null == (L = ep.confetti) ? void 0 : L.button) && B)
                               })
                             : null,
-                        e2
+                        e3
                     ]
                 }),
                 tW

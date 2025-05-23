@@ -18,14 +18,14 @@ var i = n(255367),
     x = n(78839),
     E = n(267642),
     C = n(63063),
-    j = n(74538),
-    O = n(283029),
+    O = n(74538),
+    j = n(283029),
     S = n(357956),
     v = n(275909),
     T = n(981631),
     N = n(474936),
     I = n(388032),
-    y = n(504185);
+    y = n(334977);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -171,9 +171,9 @@ let w = function (e) {
         w = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
         k = S === N.a$.FP_SUB_PAUSED,
         L = (0, b.y)('guild_boost_settings_unapplied', w, S),
-        M = h && !k,
+        B = h && !k,
         {
-            appliedGuildBoostSlots: B,
+            appliedGuildBoostSlots: M,
             unappliedGuildBoostSlots: U,
             numActiveGuildBoostSlots: V,
             hasCooldownBoosts: G,
@@ -197,8 +197,8 @@ let w = function (e) {
                 }
             );
         }, [s]),
-        H = null != p ? j.ZP.getNumIncludedPremiumGuildSubscriptionSlots(p.planId) : 0,
-        z = Math.max(0, H - B.length),
+        H = null != p ? O.ZP.getNumIncludedPremiumGuildSubscriptionSlots(p.planId) : 0,
+        z = Math.max(0, H - M.length),
         W = V > H,
         Y = H === s.length,
         K = Y ? z : 1,
@@ -207,7 +207,7 @@ let w = function (e) {
             for (let t = 0; t < K; t++)
                 e.push(
                     (0, i.jsx)(
-                        O.Z,
+                        j.Z,
                         {
                             className: y.headerBoostGem,
                             useReducedMotion: v
@@ -220,7 +220,7 @@ let w = function (e) {
         X = r.useMemo(() => U.find((e) => e.isAvailable()), [U]);
     if (0 === U.length) return null;
     let Q = U.length;
-    if (((t = Y ? I.intl.formatToPlainString(F ? I.t['3DW6DQ'] : I.t['/u15QU'], { numUnappliedGuildBoostSlots: Q }) : I.intl.formatToPlainString(F ? I.t['3DW6DQ'] : I.t.BPadnJ, { numUnappliedGuildBoostSlots: Q })), j.ZP.isPremium(w))) {
+    if (((t = Y ? I.intl.formatToPlainString(F ? I.t['3DW6DQ'] : I.t['/u15QU'], { numUnappliedGuildBoostSlots: Q }) : I.intl.formatToPlainString(F ? I.t['3DW6DQ'] : I.t.BPadnJ, { numUnappliedGuildBoostSlots: Q })), O.ZP.isPremium(w))) {
         let e = (e, t) =>
             (0, i.jsx)(
                 c.P3F,
@@ -296,14 +296,14 @@ let w = function (e) {
                         (0, i.jsx)('div', {
                             className: y.headerContentSecondary,
                             children: (0, i.jsx)(m.Z, {
-                                shouldShow: null == X || M,
+                                shouldShow: null == X || B,
                                 text: J,
                                 'aria-label': J.toString(),
                                 children: (e) =>
                                     (0, i.jsx)(
                                         c.zxk,
                                         P(A({}, e), {
-                                            disabled: null == X || M,
+                                            disabled: null == X || B,
                                             onClick:
                                                 null != X
                                                     ? () => {

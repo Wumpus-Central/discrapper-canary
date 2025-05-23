@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(299206),
     E = n(295474),
     C = n(144114),
-    j = n(918505),
-    O = n(332473),
+    O = n(918505),
+    j = n(332473),
     S = n(921801),
     v = n(485341),
     T = n(687158),
@@ -34,11 +34,11 @@ var i = n(255367),
     w = n(695346),
     k = n(461877),
     L = n(726985),
-    M = n(981631),
-    B = n(815660),
+    B = n(981631),
+    M = n(815660),
     U = n(801461),
     V = n(388032),
-    G = n(556780);
+    G = n(454032);
 function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -87,8 +87,8 @@ function W(e) {
     var t, s;
     let { className: a, user: o } = e,
         c = r.useRef(null),
-        m = (0, j.o9)(),
-        g = (0, O.b)(),
+        m = (0, O.o9)(),
+        g = (0, j.b)(),
         p = (0, E.gS)(),
         h = null != (s = null == p || null == (t = p.nick) ? void 0 : t[0]) ? s : null,
         [f, b] = r.useState(!1);
@@ -191,7 +191,7 @@ function W(e) {
                             onClick: () =>
                                 (0, u.ZDy)(async () => {
                                     if (g) {
-                                        let { default: e } = await Promise.all([n.e('85342'), n.e('69525')]).then(n.bind(n, 193049));
+                                        let { default: e } = await Promise.all([n.e('85342'), n.e('71050')]).then(n.bind(n, 193049));
                                         return (t) => (0, i.jsx)(e, F({ source: U.Kq.USER_SETTINGS_EDIT }, t));
                                     }
                                     {
@@ -308,7 +308,7 @@ function q(e) {
                 valueMessage: V.intl.string(V.t['8SfTNz']),
                 handleClick: () =>
                     (0, u.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e('9343'), n.e('39809')]).then(n.bind(n, 642298));
+                        let { default: e } = await Promise.all([n.e('9343'), n.e('23639')]).then(n.bind(n, 642298));
                         return (t) => (0, i.jsx)(e, F({}, t));
                     })
             };
@@ -326,7 +326,7 @@ function q(e) {
                 }),
                 handleClick: () =>
                     (0, u.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e('9343'), n.e('39809')]).then(n.bind(n, 642298));
+                        let { default: e } = await Promise.all([n.e('9343'), n.e('23639')]).then(n.bind(n, 642298));
                         return (t) => (0, i.jsx)(e, F({}, t));
                     })
             };
@@ -425,7 +425,7 @@ function X(e) {
                                               p.Z,
                                               H(F({}, e), {
                                                   title: V.intl.string(V.t['3CTiKi']),
-                                                  children: s.hasFlag(M.xW$.MFA_SMS) ? V.intl.string(V.t.jrhJys) : void 0,
+                                                  children: s.hasFlag(B.xW$.MFA_SMS) ? V.intl.string(V.t.jrhJys) : void 0,
                                                   actionText: V.intl.string(V.t.N86XcH),
                                                   handleSubmit: (e) => C.Z.removePhone(e, C.L.USER_SETTINGS_UPDATE)
                                               })
@@ -446,7 +446,7 @@ function X(e) {
                                         let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
                                         return (t) => (0, i.jsx)(e, F({ reason: C.L.USER_SETTINGS_UPDATE }, t));
                                     },
-                                    { modalKey: B.M }
+                                    { modalKey: M.M }
                                 );
                             },
                             children: c ? V.intl.string(V.t.bt75u7) : V.intl.string(V.t.OYkgVl)
@@ -496,7 +496,7 @@ function Q(e) {
         : null;
 }
 function J() {
-    m.Z.setSection(M.oAB.PROFILE_CUSTOMIZATION);
+    m.Z.setSection(B.oAB.PROFILE_CUSTOMIZATION);
 }
 function $(e) {
     let { className: t } = e,

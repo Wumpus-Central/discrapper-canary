@@ -19,31 +19,31 @@ var r = n(512722),
     x = n(371651),
     E = n(624864),
     C = n(957148),
-    j = n(556296),
-    O = n(808506),
+    O = n(556296),
+    j = n(808506),
     S = n(237997),
     v = n(626135);
 n(63063);
 var T = n(13140),
     N = n(981631),
     I = n(388032),
-    y = n(967122);
+    y = n(527224);
 let A = P(null);
 function P(e) {
     var t;
     let n = S.default.getNotificationPositionMode(),
         i = n !== N._vf.DISABLED,
-        r = j.ZP.getOverlayKeybind(),
-        s = j.ZP.getOverlayChatKeybind();
+        r = O.ZP.getOverlayKeybind(),
+        s = O.ZP.getOverlayChatKeybind();
     return {
-        enabled: O.default.enabled,
+        enabled: j.default.enabled,
         notifications_enabled: i,
         notifications_position: i ? n : null,
         text_notifications_mode: E.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT) ? 'DISABLED' : 'ENABLED',
         hotkey: null != r ? (0, T.BB)(r.shortcut) : null,
         text_activation_hotkey: null != s ? (0, T.BB)(s.shortcut) : null,
         text_opacity_slider: S.default.getTextWidgetOpacity(),
-        old_enabled: null != (t = null == e ? void 0 : e.enabled) ? t : O.default.enabled
+        old_enabled: null != (t = null == e ? void 0 : e.enabled) ? t : j.default.enabled
     };
 }
 function R(e) {
@@ -58,7 +58,7 @@ function D(e) {
     let { className: t, showHeader: n = !0 } = e,
         { oopEnabled: r, legacyEnabled: l } = (0, o.cj)([x.default], () => x.default.getGlobalEnabledStatus()),
         {
-            avatarSizeMode: O,
+            avatarSizeMode: j,
             displayNameMode: T,
             displayUserMode: D,
             textChatDisabled: Z,
@@ -72,9 +72,9 @@ function D(e) {
             shouldShowKeybindIndicators: S.default.showKeybindIndicators,
             textChatDisabled: E.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT)
         })),
-        L = (0, o.e7)([j.ZP], () => j.ZP.getOverlayKeybind()),
-        M = (0, _.Z)({ location: 'overlay_user_settings' }),
-        B = (0, g.$1)(),
+        L = (0, o.e7)([O.ZP], () => O.ZP.getOverlayKeybind()),
+        B = (0, _.Z)({ location: 'overlay_user_settings' }),
+        M = (0, g.$1)(),
         U = P(A);
     return (
         a().isEqual(U, A) || (v.default.track(N.rMx.OVERLAY_SETTINGS_UPDATED, U), (A = U)),
@@ -95,8 +95,8 @@ function D(e) {
                                     children: (0, i.jsx)(c.j7V, {
                                         className: y.enableSwitch,
                                         value: l,
-                                        disabled: B,
-                                        note: B ? I.intl.string(I.t.Eb0lnJ) : null,
+                                        disabled: M,
+                                        note: M ? I.intl.string(I.t.Eb0lnJ) : null,
                                         hideBorder: !0,
                                         onChange: function (e) {
                                             var t, n;
@@ -179,7 +179,7 @@ function D(e) {
                                     let { value: t } = e;
                                     return u.Z.setAvatarSizeMode(t);
                                 },
-                                value: O
+                                value: j
                             })
                         }),
                         (0, i.jsx)(R, {
@@ -226,7 +226,7 @@ function D(e) {
                                 value: D
                             })
                         }),
-                        M &&
+                        B &&
                             (0, i.jsx)(R, {
                                 children: (0, i.jsx)(c.j7V, {
                                     value: k,

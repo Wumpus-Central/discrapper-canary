@@ -4,7 +4,7 @@ var r = n(255367),
     l = n(475179),
     a = n(841397),
     o = n(388032),
-    s = n(761325);
+    s = n(55706);
 function c(e) {
     let { channelId: t } = e;
     return (0, r.jsxs)('div', {

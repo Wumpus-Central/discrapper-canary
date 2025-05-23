@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(953529);
+n.d(t, { Z: () => j }), n(388685), n(953529);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -15,7 +15,7 @@ var i = n(255367),
     f = n(881100),
     b = n(981631),
     _ = n(388032),
-    x = n(969397);
+    x = n(602690);
 let E = (e) => (e ? _.intl.string(_.t.QX14gI) : _.intl.string(_.t.RGadQU)),
     C = (e) => {
         let { isShowingAll: t, onClick: n } = e;
@@ -38,7 +38,7 @@ let E = (e) => (e ? _.intl.string(_.t.QX14gI) : _.intl.string(_.t.RGadQU)),
             ]
         });
     },
-    j = (e) => {
+    O = (e) => {
         let { title: t, description: n, className: r, imageSource: s, imageClassName: a, titleBadge: c, isNew: p = !1, isEarlyAccess: h = !1 } = e,
             { analyticsLocations: f } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD);
         return (0, i.jsx)(u.Gt, {
@@ -77,14 +77,14 @@ let E = (e) => (e ? _.intl.string(_.t.QX14gI) : _.intl.string(_.t.RGadQU)),
             })
         });
     },
-    O = (e) => {
+    j = (e) => {
         let { className: t, isSubscriberNitroHome: n = !1 } = e,
             [s, d] = r.useState(!1),
             m = (0, f.N)({ styles: x }),
             g = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
             { analyticsLocations: _ } = (0, u.ZP)(),
-            O = (0, p._f)(),
-            S = [m.emoji, m.streaming, m.upload, m.customAppIcons, m.soundboard, O ? m.remix : m.videoBackground, m.superReactions, m.stickersPremiumPerk, m.badgeAlt];
+            j = (0, p._f)(),
+            S = [m.emoji, m.streaming, m.upload, m.customAppIcons, m.soundboard, j ? m.remix : m.videoBackground, m.superReactions, m.stickersPremiumPerk, m.badgeAlt];
         return (0, i.jsxs)('div', {
             className: l()(x.perksContainer, t, {
                 [x.partiallyHidden]: n && !s,
@@ -103,7 +103,7 @@ let E = (e) => (e ? _.intl.string(_.t.QX14gI) : _.intl.string(_.t.RGadQU)),
                         (e) =>
                             null != e &&
                             (0, i.jsx)(
-                                j,
+                                O,
                                 (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},

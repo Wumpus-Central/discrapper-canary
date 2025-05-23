@@ -19,14 +19,14 @@ var r = n(512722),
     x = n(271383),
     E = n(594174),
     C = n(74538),
-    j = n(51144),
-    O = n(18438),
+    O = n(51144),
+    j = n(18438),
     S = n(778825),
     v = n(52597),
     T = n(430131),
     N = n(133484),
     I = n(388032),
-    y = n(565872);
+    y = n(220929);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -81,8 +81,8 @@ function R(e) {
             pendingAvatar: w,
             pendingNickname: k,
             pendingBanner: L,
-            pendingBio: M,
-            pendingPronouns: B,
+            pendingBio: B,
+            pendingPronouns: M,
             pendingThemeColors: U,
             errors: V,
             guild: G
@@ -124,7 +124,7 @@ function R(e) {
                 T.Z,
                 {
                     errors: null != (r = null == V ? void 0 : V.nick) ? r : null == z ? void 0 : z.nick,
-                    username: j.ZP.getName(Z),
+                    username: O.ZP.getName(Z),
                     pendingNick: k,
                     currentNick: null == W ? void 0 : W.nick,
                     guild: H
@@ -139,7 +139,7 @@ function R(e) {
                     onPronounsChange: (e) => {
                         (0, v.xs)(e, $);
                     },
-                    pendingPronouns: B,
+                    pendingPronouns: M,
                     currentPronouns: $
                 },
                 'pronouns'
@@ -174,7 +174,7 @@ function R(e) {
                                 ]
                             }),
                             showRemoveAvatarButton: q,
-                            onAvatarChange: (e) => ee(e, null == W ? void 0 : W.avatar, O.I5),
+                            onAvatarChange: (e) => ee(e, null == W ? void 0 : W.avatar, j.I5),
                             errors: null == V ? void 0 : V.avatar,
                             guildId: H.id,
                             disabled: !K
@@ -246,7 +246,7 @@ function R(e) {
                         {
                             showRemoveBannerButton: X,
                             errors: null == V ? void 0 : V.banner,
-                            onBannerChange: (e) => ee(e, null == Y ? void 0 : Y.banner, O.g_),
+                            onBannerChange: (e) => ee(e, null == Y ? void 0 : Y.banner, j.g_),
                             guildId: null == H ? void 0 : H.id,
                             disabled: !K
                         },
@@ -290,7 +290,7 @@ function R(e) {
                             }),
                             onBioChange: (e) => (0, v.qN)(e, J),
                             errors: null != (R = null == V ? void 0 : V.bio) ? R : null == z ? void 0 : z.bio,
-                            pendingBio: M,
+                            pendingBio: B,
                             currentBio: J,
                             disabled: !K
                         },

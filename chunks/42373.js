@@ -13,9 +13,9 @@ var i = n(255367),
     p = n(572995),
     h = n(981631),
     f = n(869783),
-    b = n(888723);
+    b = n(113929);
 let _ = (e) => {
-    let { name: t, title: n, description: s, descriptionCta: _, previewImage: x, videoUrl: E, shouldLoadVideo: C, index: j, size: O, customVideoStyle: S, isReducedMotion: v, onClick: T } = e,
+    let { name: t, title: n, description: s, descriptionCta: _, previewImage: x, videoUrl: E, shouldLoadVideo: C, index: O, size: j, customVideoStyle: S, isReducedMotion: v, onClick: T } = e,
         N = (0, g.rO)(),
         I = r.useRef(null),
         y = r.useRef(0),
@@ -63,18 +63,18 @@ let _ = (e) => {
         L = () =>
             (0, i.jsxs)('div', {
                 className: l()({
-                    [b.largeTextBox]: O === p.y$.LARGE,
-                    [b.mediumTextBox]: O === p.y$.MEDIUM,
-                    [b.smallTextBox]: O === p.y$.SMALL
+                    [b.largeTextBox]: j === p.y$.LARGE,
+                    [b.mediumTextBox]: j === p.y$.MEDIUM,
+                    [b.smallTextBox]: j === p.y$.SMALL
                 }),
                 children: [
                     (0, i.jsx)(c.X6q, {
-                        variant: O === p.y$.SMALL ? 'heading-xl/extrabold' : 'heading-xxl/extrabold',
+                        variant: j === p.y$.SMALL ? 'heading-xl/extrabold' : 'heading-xxl/extrabold',
                         color: 'header-primary',
                         className: l()({
-                            [b.largeBoxHeader]: O === p.y$.LARGE,
-                            [b.mediumBoxHeader]: O === p.y$.MEDIUM,
-                            [b.smallBoxHeader]: O === p.y$.SMALL
+                            [b.largeBoxHeader]: j === p.y$.LARGE,
+                            [b.mediumBoxHeader]: j === p.y$.MEDIUM,
+                            [b.smallBoxHeader]: j === p.y$.SMALL
                         }),
                         children: n
                     }),
@@ -96,12 +96,12 @@ let _ = (e) => {
                         })
                 ]
             }),
-        M = () =>
+        B = () =>
             (0, i.jsx)('div', {
                 className: l()({
-                    [b.largeBoxArtContainer]: O === p.y$.LARGE,
-                    [b.mediumBoxArtContainer]: O === p.y$.MEDIUM,
-                    [b.smallBoxArtContainer]: O === p.y$.SMALL
+                    [b.largeBoxArtContainer]: j === p.y$.LARGE,
+                    [b.mediumBoxArtContainer]: j === p.y$.MEDIUM,
+                    [b.smallBoxArtContainer]: j === p.y$.SMALL
                 }),
                 children: (0, i.jsx)(
                     u.Z,
@@ -112,9 +112,9 @@ let _ = (e) => {
                         poster: x,
                         loop: !0,
                         className: l()({
-                            [b.largeBoxVideo]: O === p.y$.LARGE,
-                            [b.mediumBoxVideo]: O === p.y$.MEDIUM,
-                            [b.smallBoxVideo]: O === p.y$.SMALL,
+                            [b.largeBoxVideo]: j === p.y$.LARGE,
+                            [b.mediumBoxVideo]: j === p.y$.MEDIUM,
+                            [b.smallBoxVideo]: j === p.y$.SMALL,
                             [S]: null != S
                         }),
                         ref: I,
@@ -128,21 +128,21 @@ let _ = (e) => {
             });
     return (0, i.jsx)('div', {
         className: l()(A, {
-            [b.largeBoxContainer]: O === p.y$.LARGE,
-            [b.mediumBoxContainer]: O === p.y$.MEDIUM,
-            [b.smallBoxContainer]: O === p.y$.SMALL
+            [b.largeBoxContainer]: j === p.y$.LARGE,
+            [b.mediumBoxContainer]: j === p.y$.MEDIUM,
+            [b.smallBoxContainer]: j === p.y$.SMALL
         }),
         onMouseEnter: w,
         onFocus: w,
         onBlur: k,
         onMouseLeave: k,
         children:
-            j % 2 != 0
+            O % 2 != 0
                 ? (0, i.jsxs)(i.Fragment, {
-                      children: [(0, i.jsx)(L, {}), (0, i.jsx)(M, {})]
+                      children: [(0, i.jsx)(L, {}), (0, i.jsx)(B, {})]
                   })
                 : (0, i.jsxs)(i.Fragment, {
-                      children: [(0, i.jsx)(M, {}), (0, i.jsx)(L, {})]
+                      children: [(0, i.jsx)(B, {}), (0, i.jsx)(L, {})]
                   })
     });
 };

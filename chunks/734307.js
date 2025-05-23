@@ -18,8 +18,8 @@ var i,
     x = n(592125),
     E = n(58468),
     C = n(77498),
-    j = n(496675),
-    O = n(306680),
+    O = n(496675),
+    j = n(306680),
     S = n(944486),
     v = n(9156),
     T = n(823379),
@@ -54,11 +54,11 @@ function L(e) {
     let { channelId: t } = e;
     return R.nonPositionalChannelIdUpdate(t);
 }
-function M(e) {
+function B(e) {
     let { channel: t } = e;
     return R.nonPositionalChannelIdUpdate(t.id);
 }
-function B(e) {
+function M(e) {
     let { id: t } = e;
     return R.nonPositionalChannelIdUpdate(t);
 }
@@ -96,7 +96,7 @@ function H(e) {
 }
 class z extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, b.default, _.Z, x.Z, E.Z, d.ZP, C.Z, m.Z, g.ZP, h.Z, j.Z, O.ZP, S.Z, v.ZP, f.Z);
+        this.waitFor(p.Z, b.default, _.Z, x.Z, E.Z, d.ZP, C.Z, m.Z, g.ZP, h.Z, O.Z, j.ZP, S.Z, v.ZP, f.Z);
     }
     getGuild(e, t) {
         var n, i;
@@ -256,15 +256,15 @@ let W = new z(c.Z, {
     RECOMPUTE_READ_STATES: D,
     RESORT_THREADS: L,
     SET_RECENTLY_ACTIVE_COLLAPSED: D,
-    THREAD_CREATE: M,
+    THREAD_CREATE: B,
     THREAD_DELETE: function (e) {
         let { channel: t } = e;
         return R.nonPositionalChannelUpdate(t);
     },
     THREAD_LIST_SYNC: k,
-    THREAD_MEMBER_UPDATE: B,
-    THREAD_MEMBERS_UPDATE: B,
-    THREAD_UPDATE: M,
+    THREAD_MEMBER_UPDATE: M,
+    THREAD_MEMBERS_UPDATE: M,
+    THREAD_UPDATE: B,
     TRY_ACK: L,
     UPDATE_CHANNEL_DIMENSIONS: L,
     UPDATE_CHANNEL_LIST_SUBTITLES: function (e) {

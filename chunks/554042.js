@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -16,7 +16,7 @@ var i = n(255367),
     b = n(210887),
     _ = n(981631),
     x = n(388032),
-    E = n(560030);
+    E = n(363286);
 let C = [
     {
         label: 'Latin alphabet',
@@ -47,13 +47,13 @@ let C = [
         value: 'custom'
     }
 ];
-function j() {
+function O() {
     let [e, t] = r.useState(Math.round((window.outerWidth / window.innerWidth) * 100)),
         { platformZoom: n, theme: s } = (0, a.cj)([b.Z, g.Z], () => ({
             theme: b.Z.theme,
             platformZoom: g.Z.zoom
         })),
-        [j, O] = r.useState('upright'),
+        [O, j] = r.useState('upright'),
         S = ['normal', 'medium', 'semibold', 'bold', 'extrabold'],
         v = new Map([
             ['normal', 400],
@@ -88,8 +88,8 @@ function j() {
     return (0, i.jsx)('div', {
         className: E.fullscreen,
         style: {
-            '--playground-font-family': 'mono' === j ? 'gg mono' : 'gg sans',
-            '--playground-font-style': 'italic' === j ? 'italic' : 'normal'
+            '--playground-font-family': 'mono' === O ? 'gg mono' : 'gg sans',
+            '--playground-font-style': 'italic' === O ? 'italic' : 'normal'
         },
         children: (0, i.jsxs)(o.hjN, {
             tag: o.RB0.H1,
@@ -178,9 +178,9 @@ function j() {
                                     }
                                 ],
                                 onChange: (e) => {
-                                    O(e.value);
+                                    j(e.value);
                                 },
-                                value: j
+                                value: O
                             })
                         }),
                         (0, i.jsx)(u.Z, {

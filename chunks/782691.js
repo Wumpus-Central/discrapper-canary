@@ -13,7 +13,7 @@ var i = n(255367),
     p = n(373071),
     h = n(489495),
     f = n(189),
-    b = n(662583),
+    b = n(808207),
     _ = n(346537),
     x = n(830318);
 function E(e) {
@@ -59,12 +59,12 @@ function C(e, t) {
         e
     );
 }
-let j = {
+let O = {
         [h.cq.THUMBNAIL]: null,
         [h.cq.STATIC]: null,
         [h.cq.REDUCED_MOTION]: null
     },
-    O = 'debug',
+    j = 'debug',
     S = (e) => {
         let { effect: t, back: n } = e,
             { upsertConfig: s } = (0, p.n6)(),
@@ -74,18 +74,18 @@ let j = {
             [I, y] = r.useState(!1),
             [A, P] = r.useState(!1),
             [R, D] = r.useState([]),
-            [Z, w] = r.useState(j),
+            [Z, w] = r.useState(O),
             k = r.useRef([]),
-            [L, M] = r.useState(t.name),
-            B = L.toLowerCase().replace(/\s+/g, '_'),
+            [L, B] = r.useState(t.name),
+            M = L.toLowerCase().replace(/\s+/g, '_'),
             U = r.useMemo(
                 () => ({
                     type: a.Z.PROFILE_EFFECT,
-                    id: O,
-                    skuId: O,
-                    title: O,
-                    description: O,
-                    accessibilityLabel: O,
+                    id: j,
+                    skuId: j,
+                    title: j,
+                    description: j,
+                    accessibilityLabel: j,
                     reducedMotionSrc: '',
                     effects: R,
                     animationType: 0
@@ -217,7 +217,7 @@ let j = {
                                                   value: L,
                                                   className: b.input,
                                                   onChange: (e) => {
-                                                      M(e.target.value);
+                                                      B(e.target.value);
                                                   }
                                               })
                                           ]
@@ -357,7 +357,7 @@ let j = {
                                                       (0, i.jsx)(d.Z, {
                                                           fileContents: () => (0, h.yR)(R),
                                                           contentType: 'text/plain',
-                                                          fileName: ''.concat(B, '_timing_config.txt'),
+                                                          fileName: ''.concat(M, '_timing_config.txt'),
                                                           children: (0, i.jsx)(c.zxk, {
                                                               size: c.PhG.SMALL,
                                                               color: c.Ttl.BRAND,
@@ -376,7 +376,7 @@ let j = {
                                                                   })
                                                               ),
                                                           contentType: 'text/plain',
-                                                          fileName: ''.concat(B, '_config.txt'),
+                                                          fileName: ''.concat(M, '_config.txt'),
                                                           children: (0, i.jsx)(c.zxk, {
                                                               size: c.PhG.SMALL,
                                                               color: c.Ttl.BRAND,
@@ -472,7 +472,7 @@ let j = {
                                               color: c.Ttl.RED,
                                               look: c.iLD.OUTLINED,
                                               onClick: () => {
-                                                  D([]), w(j);
+                                                  D([]), w(O);
                                               },
                                               children: 'Clear Assets'
                                           })

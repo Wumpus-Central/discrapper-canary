@@ -4,7 +4,7 @@ var i = n(255367),
     s = n(780384),
     l = n(410030),
     a = n(119269),
-    o = n(3504);
+    o = n(820136);
 let c = 'url(#gradient)',
     d = (e, t) => {
         switch (e) {
@@ -50,10 +50,10 @@ let c = 'url(#gradient)',
             return () => clearTimeout(e);
         }, [t]);
         let C = (0, l.ZP)(),
-            j = (0, s.ap)(C),
-            O = u(h),
-            S = d(h, j),
-            v = null != f ? f : m(j, h);
+            O = (0, s.ap)(C),
+            j = u(h),
+            S = d(h, O),
+            v = null != f ? f : m(O, h);
         return (0, i.jsxs)('div', {
             className: o.circleContainer,
             children: [
@@ -68,7 +68,7 @@ let c = 'url(#gradient)',
                             r: ''.concat(b),
                             cx: '50%',
                             cy: '50%',
-                            stroke: O,
+                            stroke: j,
                             strokeOpacity: S
                         }),
                         (0, i.jsx)('circle', {

@@ -12,8 +12,8 @@ var i,
     g = n(772096),
     p = n(428595),
     h = n(532901),
-    f = n(204227),
-    b = n(283574);
+    f = n(173343),
+    b = n(675857);
 function _(e, t, n) {
     return (
         t in e
@@ -62,10 +62,10 @@ function E(e, t) {
     );
 }
 let C = new RegExp('https?://'.concat(null != (i = window.GLOBAL_ENV.CDN_HOST) ? i : ''));
-function j(e) {
+function O(e) {
     return 'string' == typeof e.content ? e.content : v(e.content);
 }
-let O = E(x({}, d().defaultRules), {
+let j = E(x({}, d().defaultRules), {
         heading: E(x({}, d().defaultRules.heading), {
             react(e, t, n) {
                 let i = 'h'.concat(e.level);
@@ -101,7 +101,7 @@ let O = E(x({}, d().defaultRules), {
                     'blockquote',
                     {
                         className: f.blockquote,
-                        children: j(e)
+                        children: O(e)
                     },
                     n.key
                 )
@@ -126,7 +126,7 @@ let O = E(x({}, d().defaultRules), {
                     'code',
                     {
                         className: f.codeInline,
-                        children: j(e)
+                        children: O(e)
                     },
                     n.key
                 )
@@ -139,7 +139,7 @@ let O = E(x({}, d().defaultRules), {
                         {
                             children: (0, s.jsx)('code', {
                                 className: o()(b.scrollbarGhostHairline, 'hljs'),
-                                children: j(e)
+                                children: O(e)
                             })
                         },
                         i.key
@@ -174,8 +174,8 @@ let O = E(x({}, d().defaultRules), {
             }
         })
     }),
-    S = d().parserFor(O),
-    v = d().reactFor(d().ruleOutput(O, 'react'));
+    S = d().parserFor(j),
+    v = d().reactFor(d().ruleOutput(j, 'react'));
 class T extends (r = l.PureComponent) {
     render() {
         let { className: e, children: t, state: n, parser: i, output: r } = this.props,
@@ -186,7 +186,7 @@ class T extends (r = l.PureComponent) {
         });
     }
 }
-_(T, 'rules', O),
+_(T, 'rules', j),
     _(T, 'defaultProps', {
         parser: S,
         output: v

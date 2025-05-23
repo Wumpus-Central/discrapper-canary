@@ -25,7 +25,7 @@ var r = n(255367),
     I = n(981631),
     E = n(535396),
     S = n(388032),
-    T = n(145635);
+    T = n(130985);
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -77,7 +77,7 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
     Z = (e) => {
         let { guildId: t } = e;
         (0, o.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e('93626'), n.e('64386')]).then(n.bind(n, 136735));
+            let { default: e } = await Promise.all([n.e('93626'), n.e('95965')]).then(n.bind(n, 136735));
             return (n) => (0, r.jsx)(e, P({ guildId: t }, n));
         });
     },

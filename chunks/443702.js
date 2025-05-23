@@ -18,11 +18,11 @@ var i = n(255367),
     x = n(351402),
     E = n(853872),
     C = n(78839),
-    j = n(706454),
-    O = n(726985),
+    O = n(706454),
+    j = n(726985),
     S = n(981631),
     v = n(388032),
-    T = n(189435);
+    T = n(289465);
 class N extends r.PureComponent {
     componentDidMount() {
         c.Z.wait(() => {
@@ -45,7 +45,7 @@ class N extends r.PureComponent {
                                 children: (0, i.jsx)(o.$jN, {})
                             })
                           : (0, i.jsx)(f.F, {
-                                setting: O.s6.BILLING_PAYMENT_METHODS,
+                                setting: j.s6.BILLING_PAYMENT_METHODS,
                                 children: (0, i.jsx)(p.Z, {
                                     paymentSources: n,
                                     defaultPaymentSourceId: r,
@@ -56,7 +56,7 @@ class N extends r.PureComponent {
                                 })
                             }),
                       (0, i.jsx)(f.F, {
-                          setting: O.s6.BILLING_TRANSACTION_HISTORY,
+                          setting: j.s6.BILLING_TRANSACTION_HISTORY,
                           children: (0, i.jsx)('div', {
                               className: T.paymentHistory,
                               children: (0, i.jsxs)(o.y5t, {
@@ -78,13 +78,13 @@ class N extends r.PureComponent {
     }
 }
 function I() {
-    let e = (0, a.cj)([j.default, x.Z, E.Z, _.default, b.Z, C.ZP], () => {
+    let e = (0, a.cj)([O.default, x.Z, E.Z, _.default, b.Z, C.ZP], () => {
         let e = C.ZP.getPremiumTypeSubscription(),
             t = _.default.getCurrentUser();
         return (
             l()(null != t, 'UserSettingsBilling: currentUser cannot be undefined'),
             {
-                locale: j.default.locale,
+                locale: O.default.locale,
                 hide: b.Z.enabled,
                 isClaimed: t.isClaimed(),
                 isVerified: t.verified,

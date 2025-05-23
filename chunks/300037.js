@@ -17,13 +17,13 @@ var r = n(120356),
     b = n(267642),
     _ = n(981631),
     x = n(388032),
-    E = n(939400);
+    E = n(694787);
 let C = function (e) {
     let { className: t, guildId: n, boostingVariant: r } = e,
         C = (0, l.e7)([p.Z], () => p.Z.getGuild(n), [n]),
-        j = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
-        { fractionalState: O } = (0, o.Z)(),
-        S = (0, m.y)('guild_boosting_setting_guild_info_card', j, O),
+        O = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
+        { fractionalState: j } = (0, o.Z)(),
+        S = (0, m.y)('guild_boosting_setting_guild_info_card', O, j),
         v = (0, g.Z)(null == C ? void 0 : C.id).total;
     return null == C
         ? (0, i.jsx)('div', {

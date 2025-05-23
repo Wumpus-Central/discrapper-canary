@@ -16,13 +16,13 @@ var i = n(255367),
     g = n(82856),
     p = n(981631),
     h = n(388032),
-    f = n(313008);
+    f = n(970809);
 let b = {
         START: f.alignLeft,
         END: f.alignRight
     },
     _ = (e) => {
-        let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, anchorPillType: _, analyticsPage: x, isCoachmarkEnabled: E = !0, linkText: C = h.intl.string(h.t.XRdyj4), cardAlignment: j = b.START, className: O } = e,
+        let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, anchorPillType: _, analyticsPage: x, isCoachmarkEnabled: E = !0, linkText: C = h.intl.string(h.t.XRdyj4), cardAlignment: O = b.START, className: j } = e,
             { balance: S } = (0, d.A)(),
             [v, T] = r.useState(u.b.DEFAULT),
             [N, I] = r.useState(!1),
@@ -54,7 +54,7 @@ let b = {
             }, [N, D]),
             w = (0, a.Z)(null, Z);
         return (0, i.jsxs)('div', {
-            className: l()(f.container, O, {
+            className: l()(f.container, j, {
                 [f.hidden]: y,
                 [f.visible]: !y
             }),
@@ -72,7 +72,7 @@ let b = {
                 }),
                 N &&
                     (0, i.jsx)('div', {
-                        className: l()(f.cardContainer, j, {
+                        className: l()(f.cardContainer, O, {
                             [f.hidden]: y,
                             [f.visible]: !y
                         }),

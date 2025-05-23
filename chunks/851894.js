@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(594174),
     E = n(63063),
     C = n(74538),
-    j = n(18438),
-    O = n(778825),
+    O = n(18438),
+    j = n(778825),
     S = n(856607),
     v = n(594496),
     T = n(856768),
@@ -83,7 +83,7 @@ function R(e) {
         }),
         R = (0, a.e7)([b.Z], () => !b.Z.isFetchingProfile(s.id, null == t ? void 0 : t.id)),
         D = (0, a.e7)([_.Z], () => _.Z.hidePersonalInformation),
-        Z = (0, a.cj)([O.Z], () => A(y({}, O.Z.getAllPending()), { source: O.Z.getSource() })),
+        Z = (0, a.cj)([j.Z], () => A(y({}, j.Z.getAllPending()), { source: j.Z.getSource() })),
         { source: w, pendingAvatar: k } = Z,
         L = (function (e, t) {
             if (null == e) return {};
@@ -104,11 +104,11 @@ function R(e) {
             }
             return r;
         })(Z, ['source', 'pendingAvatar']),
-        M = (0, f.SD)({
+        B = (0, f.SD)({
             userId: s.id,
             image: k
         });
-    return (r.useEffect(() => () => c.Z.wait(j.W3), []),
+    return (r.useEffect(() => () => c.Z.wait(O.W3), []),
     r.useEffect(() => {
         null != w &&
             m.ZP.trackWithMetadata(N.rMx.SETTINGS_PANE_VIEWED, {
@@ -133,7 +133,7 @@ function R(e) {
                                   (0, i.jsx)(T.Z, {
                                       guildId: t.id,
                                       onChange: (e) => {
-                                          null != e && (0, j.HP)(e);
+                                          null != e && (0, O.HP)(e);
                                       }
                                   }),
                                   (0, i.jsx)(p.Z, {
@@ -141,7 +141,7 @@ function R(e) {
                                       profilePreview: (0, i.jsx)(
                                           h.Z,
                                           A(y({}, L), {
-                                              pendingAvatar: M,
+                                              pendingAvatar: B,
                                               user: s,
                                               guild: t,
                                               canUsePremiumCustomization: C.ZP.canUsePremiumProfileCustomization(s),

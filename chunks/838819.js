@@ -48,7 +48,7 @@ var r = n(255367),
     $ = n(921944),
     K = n(420212),
     X = n(474936),
-    J = n(484920);
+    J = n(842817);
 let Q = (e) => {
         let { isFullScreen: t, tab: n } = e;
         return !t && (n === q.AW.HOME || n === q.AW.ORBS);

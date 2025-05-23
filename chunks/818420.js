@@ -11,7 +11,7 @@ var i = n(255367),
     m = n(993413),
     g = n(921944),
     p = n(388032),
-    h = n(388898);
+    h = n(684659);
 function f(e) {
     let { user: t } = e,
         { analyticsLocations: n } = (0, a.ZP)(),
@@ -19,8 +19,8 @@ function f(e) {
         { pendingNameplate: b, pendingErrors: _ } = (0, u._A)(),
         x = [s.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE],
         [E, C] = (0, o.US)(x),
-        j = E === s.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE,
-        O = r.useCallback(() => {
+        O = E === s.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE,
+        j = r.useCallback(() => {
             C(g.L.TAKE_ACTION), (0, d.f)({ analyticsLocations: n });
         }, [n, C]),
         S = r.useCallback(() => {
@@ -28,14 +28,14 @@ function f(e) {
         }, []);
     return (0, i.jsx)(m.Z, {
         title: p.intl.string(p.t.x5CoXV),
-        titleIcon: j ? (0, i.jsx)(c.Z, { className: h.newBadge }) : void 0,
+        titleIcon: O ? (0, i.jsx)(c.Z, { className: h.newBadge }) : void 0,
         errors: _,
         children: (0, i.jsxs)('div', {
             className: h.section,
             children: [
                 (0, i.jsx)(l.zxk, {
                     size: l.zxk.Sizes.SMALL,
-                    onClick: O,
+                    onClick: j,
                     children: p.intl.string(p.t.BwdeMz)
                 }),
                 (void 0 === b ? null != f : null != b) &&

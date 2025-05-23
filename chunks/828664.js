@@ -8,7 +8,7 @@ var c = r(442837),
     a = r(497505),
     s = r(602667),
     u = r(388032),
-    f = r(842054);
+    f = r(388866);
 function p(t) {
     let { transitionState: e, onClose: r, questEnrollmentBlockedUntil: c } = t,
         { hours: i, minutes: a, seconds: s } = (0, o.Z)(c),

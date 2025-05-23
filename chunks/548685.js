@@ -23,7 +23,7 @@ var r = n(255367),
     E = n(215023),
     j = n(981631),
     P = n(388032),
-    y = n(806734);
+    y = n(379890);
 let k = (e) => {
     var t;
     let { isLoading: n, sortedSkuIds: a, handleTransition: k, numVisibleItems: T, tab: I } = e,

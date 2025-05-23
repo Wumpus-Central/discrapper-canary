@@ -26,7 +26,7 @@ var r = n(255367),
     O = n(626135),
     v = n(981631),
     I = n(388032),
-    S = n(823150);
+    S = n(903308);
 let T = 'VoiceChannelStatusModal',
     A = 500;
 function N(e) {

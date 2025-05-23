@@ -110,7 +110,7 @@ var r,
     eK = n(981631),
     eY = n(474936),
     eX = n(388032),
-    eq = n(813102),
+    eq = n(219509),
     eQ = n(680674);
 function eJ(e, t, n) {
     return (
@@ -178,7 +178,7 @@ function e1() {
 }
 let e3 = 15 * eb.Z.Millis.MINUTE,
     e5 = new Set(['discord-developers', 'discord-testers', 'discord-townhall', 'discordgameslab']),
-    e8 = (e, t, n) => () => {
+    e2 = (e, t, n) => () => {
         let r = null != t ? t : n;
         if (null == r) return null;
         let { url: l, proxyURL: a, width: o, height: s } = r;
@@ -191,7 +191,7 @@ let e3 = 15 * eb.Z.Millis.MINUTE,
             className: eq.gifFavoriteButton
         });
     },
-    e2 = (e) => () => {
+    e8 = (e) => () => {
         let { url: t, proxyUrl: n, width: r, height: l, flags: a } = e,
             o = (0, ex.yE)(a, z.hR.IS_ANIMATED);
         return null != r && null != l && (W.uo.test(n) || (o && (W.YG.test(n) || W.FH.test(n))))
@@ -468,7 +468,7 @@ class e6 extends (r = l.Component) {
                             duration: r
                         });
                     },
-                    gifFavoriteButton: e2(o),
+                    gifFavoriteButton: e8(o),
                     isSearchResult: this.props.isSearchResult
                 },
                 c = (0, eg.q)({
@@ -513,7 +513,7 @@ class e6 extends (r = l.Component) {
         let { gifAutoPlay: t, shouldRedactExplicitContent: n, shouldHideMediaOptions: r, disableComponentInteractivity: l, onMediaItemContextMenu: a } = this.props;
         return (0, i.jsx)(eM.F, {
             gifAutoPlay: t,
-            getGifFavButton: e2,
+            getGifFavButton: e8,
             getOnMediaItemContextMenu:
                 null == a
                     ? void 0
@@ -789,7 +789,7 @@ class e6 extends (r = l.Component) {
                     : (0, i.jsx)(
                           A.h.Provider,
                           {
-                              value: e8(e.url, e.image, e.video),
+                              value: e2(e.url, e.image, e.video),
                               children: (0, i.jsx)(
                                   O.ZP,
                                   e$(

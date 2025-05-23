@@ -7,7 +7,7 @@ var i = n(255367),
     o = n(643879),
     c = n(25990),
     d = n(678135),
-    u = n(976979);
+    u = n(525037);
 function m(e) {
     var t;
     let { user: m, disabledInputs: g, containerClassName: p } = e,
@@ -19,8 +19,8 @@ function m(e) {
             pendingPronouns: x,
             pendingBio: E,
             tryItOutThemeColors: C,
-            tryItOutAvatar: j,
-            tryItOutBanner: O,
+            tryItOutAvatar: O,
+            tryItOutBanner: j,
             tryItOutAvatarDecoration: S,
             tryItOutProfileEffectId: v
         } = (0, s.cj)([c.Z], () =>
@@ -52,7 +52,7 @@ function m(e) {
         ),
         T = (0, o.SD)({
             userId: m.id,
-            image: null != j ? j : f
+            image: null != O ? O : f
         }),
         N = (0, a.Z)(S, !1);
     return (0, i.jsx)(d.Z, {
@@ -60,12 +60,12 @@ function m(e) {
         user: m,
         pendingPronouns: x,
         pendingBio: E,
-        pendingBanner: null != (t = null != O ? O : b) ? t : n(466045),
+        pendingBanner: null != (t = null != j ? j : b) ? t : n(466045),
         pendingAvatar: T,
         pendingThemeColors: null != C ? C : _,
         pendingAvatarDecoration: N,
         pendingProfileEffectId: v,
-        avatarClassName: null != j || null != f || h.enabled ? void 0 : u.spinningAvatar,
+        avatarClassName: null != O || null != f || h.enabled ? void 0 : u.spinningAvatar,
         canUsePremiumCustomization: !0,
         isTryItOutFlow: !0,
         hideExampleButton: !0,

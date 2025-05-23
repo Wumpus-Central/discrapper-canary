@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -16,7 +16,7 @@ var i = n(255367),
     b = n(981631),
     _ = n(869783),
     x = n(388032),
-    E = n(635968);
+    E = n(489118);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,7 +42,7 @@ function C(e) {
     }
     return e;
 }
-function j(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,8 +60,8 @@ function j(e, t) {
         e
     );
 }
-function O(e) {
-    let { onLearnMore: t, selectedBackgroundOption: O, onSelectBackgroundOption: S, currentDeviceId: v, smallerBackgroundOptions: T, className: N } = e,
+function j(e) {
+    let { onLearnMore: t, selectedBackgroundOption: j, onSelectBackgroundOption: S, currentDeviceId: v, smallerBackgroundOptions: T, className: N } = e,
         I = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
         [y, A] = r.useState(null),
         P = (0, p.Z)(),
@@ -75,7 +75,7 @@ function O(e) {
         k = {
             isVideoBackgroundSupported: P,
             onSelectBackgroundOption: S,
-            selectedBackgroundOption: O
+            selectedBackgroundOption: j
         },
         L = r.useRef(k);
     r.useEffect(() => {
@@ -85,7 +85,7 @@ function O(e) {
             let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = L.current;
             e ? (0, g.FU)(n, v, { track: !1 }).catch(() => t(null)) : null != n && t(null);
         }, [v]);
-    let M = (e) => {
+    let B = (e) => {
         S(e),
             (0, g.FU)(e, v, { location: w.location })
                 .then(() => A(null))
@@ -107,17 +107,17 @@ function O(e) {
                   (0, i.jsx)(h.Z, {
                       canUseCustomBackgrounds: R,
                       customBackgroundOptions: Z,
-                      selectedOption: O,
-                      onSelectOption: M,
+                      selectedOption: j,
+                      onSelectOption: B,
                       onUpsellClick: () => {
                           (0, l.ZDy)(async () => {
                               let { default: e } = await n.e('87200').then(n.bind(n, 592163));
                               return (n) =>
                                   (0, i.jsx)(
                                       e,
-                                      j(C({}, n), {
+                                      O(C({}, n), {
                                           onLearnMore: t,
-                                          analyticsSource: j(C({}, w.location), { object: b.qAy.BUTTON_CTA })
+                                          analyticsSource: O(C({}, w.location), { object: b.qAy.BUTTON_CTA })
                                       })
                                   );
                           });
@@ -127,7 +127,7 @@ function O(e) {
                           return new Promise(async (i) => {
                               try {
                                   let i = await (0, d.Ff)(e, f.xV.BACKGROUND);
-                                  M(i), (0, m.g5)(i, t.type === _.m.MP4, n), A(null);
+                                  B(i), (0, m.g5)(i, t.type === _.m.MP4, n), A(null);
                               } catch (e) {
                                   A(e.message);
                               }

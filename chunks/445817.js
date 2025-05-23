@@ -13,7 +13,7 @@ var i = n(255367),
     p = n(594174),
     h = n(981631),
     f = n(388032),
-    b = n(959963);
+    b = n(263983);
 let _ = {
     width: 387,
     height: 218
@@ -21,22 +21,22 @@ let _ = {
 function x(e) {
     let { previewEnabled: t, onEnablePreview: n, onCancelPreview: x } = e,
         E = g.Z.getCameraComponent(),
-        [C, j] = r.useState((0, c.P)(p.default.getCurrentUser())),
-        O = r.useRef(!1),
+        [C, O] = r.useState((0, c.P)(p.default.getCurrentUser())),
+        j = r.useRef(!1),
         S = r.useRef(C),
         v = (0, o.O)(),
         T = (0, s.e7)([g.Z], () => g.Z.isVideoAvailable());
     return (
         r.useEffect(
             () => () => {
-                O.current && a.Z.wait(() => (0, d.Up)(S.current));
+                j.current && a.Z.wait(() => (0, d.Up)(S.current));
             },
             []
         ),
         (0, i.jsx)(m.Z, {
             selectedBackgroundOption: C,
             onSelectBackgroundOption: (e) => {
-                (O.current = !0), (S.current = e), j(e), (0, u.wG)(e, { location: v.location }).catch(h.dG4);
+                (j.current = !0), (S.current = e), O(e), (0, u.wG)(e, { location: v.location }).catch(h.dG4);
             },
             onCancelPreview: x,
             renderCamera: (e) =>

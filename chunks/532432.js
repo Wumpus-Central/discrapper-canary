@@ -14,7 +14,7 @@ var i = n(255367),
     h = n(486324),
     f = n(485696),
     b = n(388032),
-    _ = n(24085);
+    _ = n(316999);
 let x = [
     {
         name: 'gif',
@@ -22,7 +22,7 @@ let x = [
     }
 ];
 function E(e) {
-    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: E, changeAvatarButtonText: C, guildId: j, className: O, disabled: S = !1, isTryItOutFlow: v = !1, forcedDivider: T, withHighlight: N = !1 } = e,
+    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: E, changeAvatarButtonText: C, guildId: O, className: j, disabled: S = !1, isTryItOutFlow: v = !1, forcedDivider: T, withHighlight: N = !1 } = e,
         { newestAnalyticsLocation: I } = (0, c.ZP)(),
         y = N ? o.gtL : o.zxk,
         A = (0, u.T)({ location: 'AvatarSection' }),
@@ -36,12 +36,12 @@ function E(e) {
                     uploadType: h.pC.AVATAR,
                     analyticsSource: I,
                     filters: v ? x : void 0,
-                    guildId: j,
+                    guildId: O,
                     isTryItOutFlow: v
                 });
-        }, [j, I, v, D]);
+        }, [O, I, v, D]);
     return (0, i.jsx)(g.Z, {
-        className: O,
+        className: j,
         title: E,
         titleIcon: Z
             ? (0, i.jsx)(o.IGR, {
@@ -74,7 +74,7 @@ function E(e) {
                         look: o.zxk.Looks.LINK,
                         size: o.zxk.Sizes.SMALL,
                         onClick: () => s(null),
-                        children: null != j ? b.intl.string(b.t.TDjKDg) : b.intl.string(b.t.twB3f3)
+                        children: null != O ? b.intl.string(b.t.TDjKDg) : b.intl.string(b.t.twB3f3)
                     })
             ]
         })

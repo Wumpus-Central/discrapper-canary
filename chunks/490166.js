@@ -6,7 +6,7 @@ var o = n(481060),
     s = n(13140),
     c = n(487029),
     l = n(388032),
-    a = n(771031);
+    a = n(169804);
 function d(e) {
     let { guildId: t, channel: d, keybind: u, transitionState: h, onClose: k } = e;
     function b() {

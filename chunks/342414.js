@@ -19,8 +19,8 @@ var r = n(120356),
     x = n(249689),
     E = n(464670),
     C = n(520540),
-    j = n(104494),
-    O = n(639119),
+    O = n(104494),
+    j = n(639119),
     S = n(533525),
     v = n(784238),
     T = n(767714),
@@ -30,7 +30,7 @@ var r = n(120356),
     A = n(474936),
     P = n(981631),
     R = n(388032),
-    D = n(734664),
+    D = n(180021),
     Z = n(872905),
     w = n(578478),
     k = n(435635);
@@ -73,7 +73,7 @@ let L = () =>
                 })
             ]
         }),
-    M = (e) => {
+    B = (e) => {
         let { cohort: t } = e;
         return t === E.XS.Control
             ? (0, i.jsx)('div', {
@@ -90,15 +90,15 @@ let L = () =>
               ? (0, i.jsx)(L, {})
               : void 0;
     },
-    B = (e) => {
+    M = (e) => {
         var t, n;
         let { className: r, giftingExperimentCohort: o } = e,
             { headingText: c, headingTop: d } = F(),
             m = g.default.getCurrentUser(),
             h = (0, l.e7)([p.ZP], () => p.ZP.getPremiumTypeSubscription()),
-            f = (0, O.N)(),
-            b = (0, j.Ng)(),
-            _ = (0, j.Wp)(b, A.Si.TIER_2) ? A.Si.TIER_2 : void 0,
+            f = (0, j.N)(),
+            b = (0, O.Ng)(),
+            _ = (0, O.Wp)(b, A.Si.TIER_2) ? A.Si.TIER_2 : void 0,
             E = null != h && h.status !== P.O0b.ACCOUNT_HOLD && h.hasAnyPremiumNitro,
             C = (0, u.Z)(),
             S = (0, x.C)('nitro-home', m) && C.isFractionalPremiumActive && !E;
@@ -129,7 +129,7 @@ let L = () =>
                                         className: s()(D.button, D.subscribeButton),
                                         subscriptionTier: null != (n = null == f || null == (t = f.subscription_trial) ? void 0 : t.sku_id) ? n : _
                                     }),
-                                M({ cohort: o })
+                                B({ cohort: o })
                             ]
                         })
                     ]
@@ -161,7 +161,7 @@ let L = () =>
                                 color: 'always-white',
                                 children: l
                             }),
-                            s && M({ cohort: n }),
+                            s && B({ cohort: n }),
                             (0, i.jsx)(y.Z, {})
                         ]
                     })
@@ -191,7 +191,7 @@ let L = () =>
                                 children: n
                             })
                         }),
-                        M({ cohort: t }),
+                        B({ cohort: t }),
                         (0, i.jsx)(I.Z, {})
                     ]
                 })
@@ -207,24 +207,24 @@ let L = () =>
             p = R.intl.string(R.t.qYKftb),
             h = E.PU.useExperiment({ location: 'HeroHeading' }),
             x = (0, S.b)(n),
-            C = (0, i.jsx)(B, {
+            C = (0, i.jsx)(M, {
                 className: t,
                 giftingExperimentCohort: h.cohort
             }),
-            j = R.intl.string(R.t.ifwQZW),
-            { fractionalState: O, endsAt: v } = (0, u.Z)(),
+            O = R.intl.string(R.t.ifwQZW),
+            { fractionalState: j, endsAt: v } = (0, u.Z)(),
             T = (0, d.ZP)(v, d.aj.CREDITS_ENDS_IN);
         l
-            ? ((j = R.intl.string(R.t.ifwQZW)), (C = (0, i.jsx)(V, { giftingExperimentCohort: h.cohort })))
+            ? ((O = R.intl.string(R.t.ifwQZW)), (C = (0, i.jsx)(V, { giftingExperimentCohort: h.cohort })))
             : x &&
               ((p = R.intl.string(R.t.qYKftb)),
-              (j = R.intl.string(R.t.ifwQZW)),
+              (O = R.intl.string(R.t.ifwQZW)),
               (C = (0, i.jsx)(U, {
                   location: n,
                   giftingExperimentCohort: h.cohort
               })));
         let I = null;
-        if (O === A.a$.NONE || l)
+        if (j === A.a$.NONE || l)
             I = (0, i.jsx)(N.Cy, {
                 className: s()(D.trialPill, { [D.hidden]: !g }),
                 text: p,
@@ -309,7 +309,7 @@ let L = () =>
             value: r,
             children: (0, i.jsx)(G.Provider, {
                 value: {
-                    headingText: j,
+                    headingText: O,
                     headingTop: I
                 },
                 children: C

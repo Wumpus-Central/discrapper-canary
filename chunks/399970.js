@@ -10,8 +10,8 @@ var i = n(255367),
     u = n(313201),
     m = n(695103),
     g = n(388032),
-    p = n(458240),
-    h = n(20493);
+    p = n(657860),
+    h = n(971005);
 let f = /^\d+$|^$/;
 function b(e) {
     let { onClose: t, transitionState: n } = e,
@@ -25,7 +25,7 @@ function b(e) {
             authorizing: m.Z.isFetchingAuthorization
         })),
         [E, C] = r.useState(null != b ? b : ''),
-        [j, O] = r.useState('8080'),
+        [O, j] = r.useState('8080'),
         [S, v] = r.useState('localhost'),
         T = (0, u.Dt)(),
         N = f.test(E);
@@ -39,7 +39,7 @@ function b(e) {
                 case 'proxy':
                     return (0, c.ZP)(n);
             }
-        })(S, j, E);
+        })(S, O, E);
         null != (await o.Wt(E, e)) && t();
     }
     r.useEffect(() => () => a.Z.wait(() => o.q$()), []);
@@ -133,16 +133,16 @@ function b(e) {
                                           title: g.intl.string(g.t.fF4zxs),
                                           required: !0,
                                           children: (0, i.jsx)(l.oil, {
-                                              value: j,
+                                              value: O,
                                               maxLength: 5,
-                                              onChange: (e) => O(e),
+                                              onChange: (e) => j(e),
                                               disabled: x
                                           })
                                       }),
                                 (0, i.jsx)(l.zxk, {
                                     submitting: x,
                                     type: 'submit',
-                                    disabled: !N || 0 === E.length || ('localhost' === S && 0 === j.length),
+                                    disabled: !N || 0 === E.length || ('localhost' === S && 0 === O.length),
                                     color: y ? l.zxk.Colors.RED : l.zxk.Colors.GREEN,
                                     children: y ? g.intl.string(g.t.d6TR3N) : g.intl.string(g.t.qwuK5O)
                                 })

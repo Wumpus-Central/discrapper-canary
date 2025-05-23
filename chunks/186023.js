@@ -10,7 +10,7 @@ var r = n(255367),
     u = n(185625),
     m = n(255514),
     p = n(981631),
-    _ = n(864012);
+    _ = n(702995);
 let g = (e) => {
     let { reportType: t, menu: n, modalProps: g, onSubmit: b, onNavigate: x, emailToken: h, isAuthenticated: f = !0 } = e,
         v = (0, s.Dt)(),

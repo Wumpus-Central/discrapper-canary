@@ -6,7 +6,7 @@ var r = n(255367),
     s = n(583901),
     l = n(981631),
     c = n(388032),
-    u = n(313572);
+    u = n(221858);
 function d() {
     return (0, r.jsxs)('svg', {
         className: u.newRing,

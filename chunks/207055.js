@@ -28,7 +28,7 @@ var r = n(255367),
     Z = n(262317),
     N = n(981631),
     T = n(524484),
-    A = n(50259);
+    A = n(510519);
 let w = i.memo((e) => {
     var t, n, i;
     let { mute: l, deaf: a, user: s, channel: g, sessionId: y, nick: A } = e,

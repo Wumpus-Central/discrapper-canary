@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(209698),
     E = n(687158),
     C = n(892001),
-    j = n(899007),
-    O = n(648052),
+    O = n(899007),
+    j = n(648052),
     S = n(867176),
     v = n(537006),
     T = n(483517),
@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(785184),
     k = n(695346),
     L = n(158776),
-    M = n(246946),
-    B = n(572004),
+    B = n(246946),
+    M = n(572004),
     U = n(5192),
     V = n(74538),
     G = n(7093),
@@ -47,8 +47,8 @@ var i = n(255367),
     K = n(981631),
     q = n(228168),
     X = n(388032),
-    Q = n(404255),
-    J = n(200669);
+    Q = n(992973),
+    J = n(165957);
 function $(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -93,7 +93,7 @@ function ee(e) {
         ed = k.Cr.useSetting(),
         eu = (0, W.F)(ed),
         { expiringStatusProfileFeedback: em } = p.Y.useExperiment({ location: 'UserProfileAccountPopout' }, { autoTrackExposure: !1 }),
-        eg = (0, l.e7)([M.Z], () => M.Z.hidePersonalInformation),
+        eg = (0, l.e7)([B.Z], () => B.Z.hidePersonalInformation),
         ep = (0, h.p)(),
         eh = k.Sb.useSetting(),
         ef = (0, W.I)(ec),
@@ -102,8 +102,8 @@ function ee(e) {
         ex = (0, V.I5)(t),
         eE = (0, m.p)({ location: 'UserProfileAccountPopout' }),
         eC = (0, x.b)({ location: 'UserProfileAccountPopout' }),
-        ej = r.useRef((0, G.Z)((e) => e.shouldRenderTenureLevelUp)),
-        eO = r.useMemo(() => (0, g.Z)(), []),
+        eO = r.useRef((0, G.Z)((e) => e.shouldRenderTenureLevelUp)),
+        ej = r.useMemo(() => (0, g.Z)(), []),
         [eS, ev] = r.useState(!0);
     r.useEffect(() => {
         setTimeout(() => {
@@ -115,7 +115,7 @@ function ee(e) {
                 (0, C.openUserProfileModal)(
                     $(
                         {
-                            customStatusPrompt: eO,
+                            customStatusPrompt: ej,
                             sourceAnalyticsLocations: es
                         },
                         el,
@@ -123,7 +123,7 @@ function ee(e) {
                     )
                 );
         },
-        eN = (null == er ? void 0 : er.profileEffectId) != null && !ej.current;
+        eN = (null == er ? void 0 : er.profileEffectId) != null && !eO.current;
     return (0, i.jsx)(u.Gt, {
         value: es,
         children: (0, i.jsx)(_.Mt, {
@@ -150,7 +150,7 @@ function ee(e) {
                                         displayProfile: er,
                                         themeType: q.lY.POPOUT
                                     }),
-                                    (0, i.jsx)(j.Z, {
+                                    (0, i.jsx)(O.Z, {
                                         user: t,
                                         displayProfile: er,
                                         themeType: q.lY.POPOUT,
@@ -161,7 +161,7 @@ function ee(e) {
                                         user: t,
                                         themeType: q.lY.POPOUT,
                                         onCloseProfile: n,
-                                        prompt: eE ? eO : null
+                                        prompt: eE ? ej : null
                                     })
                                 ]
                             }),
@@ -180,12 +180,12 @@ function ee(e) {
                                         nickname: U.ZP.getName(null, null, t),
                                         onOpenProfile: ei ? void 0 : eT,
                                         pronouns: null == er ? void 0 : er.pronouns,
-                                        tags: (0, i.jsx)(O.Z, {
+                                        tags: (0, i.jsx)(j.Z, {
                                             displayProfile: er,
                                             themeType: q.lY.POPOUT,
                                             onClose: n,
                                             shouldOpenBadgeTooltip: null != et ? (e) => e === et : void 0,
-                                            shouldGlowTenureBadge: ej.current
+                                            shouldGlowTenureBadge: eO.current
                                         }),
                                         nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                             children: [
@@ -363,7 +363,7 @@ function ee(e) {
                                                             }
                                                         }),
                                                         !__OVERLAY__ &&
-                                                            B.wS &&
+                                                            M.wS &&
                                                             eh &&
                                                             (0, i.jsxs)(i.Fragment, {
                                                                 children: [
@@ -374,7 +374,7 @@ function ee(e) {
                                                                         icon: a.VuL,
                                                                         label: X.intl.string(X.t['/AXYnJ']),
                                                                         onClick: () => {
-                                                                            (0, B.JG)(t.id), n();
+                                                                            (0, M.JG)(t.id), n();
                                                                         }
                                                                     })
                                                                 ]

@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(346585),
     E = n(347649),
     C = n(332473),
-    j = n(303172),
-    O = n(518560),
+    O = n(303172),
+    j = n(518560),
     S = n(921801),
     v = n(484459),
     T = n(430824),
@@ -34,16 +34,16 @@ var i = n(255367),
     w = n(418632),
     k = n(10298),
     L = n(526156),
-    M = n(730820),
-    B = n(888256),
+    B = n(730820),
+    M = n(888256),
     U = n(2719),
     V = n(194530),
     G = n(726985),
     F = n(981631),
     H = n(801461),
     z = n(388032),
-    W = n(951839),
-    Y = n(20493);
+    W = n(87494),
+    Y = n(971005);
 function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -163,7 +163,7 @@ class X extends r.PureComponent {
                       '',
                       (0, i.jsx)(_.Z, {
                           className: W.noticeTextButton,
-                          onClick: () => (0, j.Z)(H.Kq.USER_SETTINGS),
+                          onClick: () => (0, O.Z)(H.Kq.USER_SETTINGS),
                           children: z.intl.string(z.t.LhlgY2)
                       })
                   ]
@@ -224,7 +224,7 @@ class X extends r.PureComponent {
                         children: [
                             (0, i.jsx)(b.Z.Child, {
                                 wrap: !0,
-                                children: (0, i.jsx)(M.Z, { backupCodes: e })
+                                children: (0, i.jsx)(B.Z, { backupCodes: e })
                             }),
                             t.mfaEnabled
                                 ? null
@@ -299,7 +299,7 @@ class X extends r.PureComponent {
     }
     renderAccountRemovalSettings() {
         let { currentUser: e } = this.props;
-        return (0, i.jsx)(B.Z, {
+        return (0, i.jsx)(M.Z, {
             className: Y.marginTop40,
             currentUser: e,
             handleDisableAccount: () => this.handleDisableAccount(!1),
@@ -345,7 +345,7 @@ class X extends r.PureComponent {
                     },
                     {
                         title: z.intl.string(z.t['Vov/9v']),
-                        component: O.Z,
+                        component: j.Z,
                         setting: G.s6.PRIVACY_AND_SAFETY_STANDING
                     }
                 ]

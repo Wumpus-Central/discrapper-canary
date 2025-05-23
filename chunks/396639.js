@@ -21,8 +21,8 @@ var i = n(255367),
     x = n(621490),
     E = n(257493),
     C = n(981631),
-    j = n(231338),
-    O = n(388032);
+    O = n(231338),
+    j = n(388032);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -147,7 +147,7 @@ let N = {
                               C.rMx.PAYMENT_FLOW_STARTED,
                               v(S({}, m), {
                                   has_saved_payment_source: t,
-                                  payment_gateway: j.ht.VIRTUAL_CURRENCY,
+                                  payment_gateway: O.ht.VIRTUAL_CURRENCY,
                                   continue_session_initial_step: null
                               })
                           )
@@ -166,7 +166,7 @@ let N = {
                               ? f.default.track(
                                     C.rMx.PAYMENT_FLOW_COMPLETED,
                                     v(S({}, m), {
-                                        payment_gateway: j.ht.VIRTUAL_CURRENCY,
+                                        payment_gateway: O.ht.VIRTUAL_CURRENCY,
                                         duration_ms: n
                                     })
                                 )
@@ -176,7 +176,7 @@ let N = {
                                   f.default.track(
                                       C.rMx.PAYMENT_FLOW_FAILED,
                                       v(S({}, m), {
-                                          payment_gateway: j.ht.VIRTUAL_CURRENCY,
+                                          payment_gateway: O.ht.VIRTUAL_CURRENCY,
                                           duration_ms: n
                                       })
                                   );
@@ -191,7 +191,7 @@ let N = {
             { selectedSkuId: o, purchaseState: d, setPurchaseState: m } = (0, c.JL)(),
             { product: g } = (0, a.T)(o),
             { emitOrbCheckoutPaymentFlowEvent: f } = y(),
-            { skuId: b, onRedeemVirtualCurrency: j, isRedeeming: O, orbRedemptionError: S, orbProductContext: v } = (0, E.C)(),
+            { skuId: b, onRedeemVirtualCurrency: O, isRedeeming: j, orbRedemptionError: S, orbProductContext: v } = (0, E.C)(),
             T = (0, _.cR)(),
             N = (0, r.useRef)(T);
         (0, l.ZP)(() => {
@@ -206,10 +206,10 @@ let N = {
         let I = (0, r.useCallback)(() => {
             (N.current = T),
                 f(C.rMx.PAYMENT_FLOW_COMPLETED),
-                j(() => {
+                O(() => {
                     m(u.A.COMPLETED), f(C.rMx.PAYMENT_FLOW_SUCCEEDED);
                 });
-        }, [j, m, T, f]);
+        }, [O, m, T, f]);
         if (null == o || null == g) return (0, i.jsx)(s.$jN, { type: s.$jN.Type.WANDERING_CUBES });
         let A = null != (t = N.current) ? t : T,
             P = null != v ? v.orbPriceAmount : null;
@@ -230,7 +230,7 @@ let N = {
                     children: (0, i.jsx)(x.f9, {
                         orbPriceAmount: P,
                         orbBalance: A,
-                        isSubmitting: O,
+                        isSubmitting: j,
                         onClickCheckout: I
                     })
                 })
@@ -241,7 +241,7 @@ let N = {
         {
             key: d.h8.REVIEW,
             renderStep: (e) => (0, i.jsx)(A, S({}, e)),
-            options: { useBreadcrumbLabel: () => O.intl.string(O.t.QBnNHh) }
+            options: { useBreadcrumbLabel: () => j.intl.string(j.t.QBnNHh) }
         }
     ],
     R = (e, t, n) =>

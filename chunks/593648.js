@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(890022),
     E = n(688907),
     C = n(487419),
-    j = n(197344),
-    O = n(476756),
+    O = n(197344),
+    j = n(476756),
     S = n(734934),
     v = n(223683),
     T = n(312400),
@@ -34,15 +34,15 @@ var i = n(255367),
     w = n(912101),
     k = n(358085),
     L = n(709054),
-    M = n(695346),
-    B = n(675478),
+    B = n(695346),
+    M = n(675478),
     U = n(33656),
     V = n(726985),
     G = n(981631),
     F = n(468788),
     H = n(388032),
-    z = n(589848),
-    W = n(20493);
+    z = n(791633),
+    W = n(971005);
 function Y(e, t, n) {
     return (
         t in e
@@ -229,7 +229,7 @@ function Q(e) {
                 sound: 'reconnect'
             }
         ],
-        p = null != j.Z.useHolidaySoundpack();
+        p = null != O.Z.useHolidaySoundpack();
     return (0, i.jsx)(P.F, {
         setting: V.s6.NOTIFICATIONS_SOUNDS,
         children: (0, i.jsxs)(u.hjN, {
@@ -241,7 +241,7 @@ function Q(e) {
                                   className: W.marginBottom20,
                                   children: H.intl.string(H.t.fgSHf3)
                               }),
-                              (0, i.jsx)(O.Z, {})
+                              (0, i.jsx)(j.Z, {})
                           ]
                       })
                     : null,
@@ -328,12 +328,12 @@ function J() {
                                                     note: H.intl.string(H.t['z8Td4+']),
                                                     value: !e[t].disableRaidAlertNag,
                                                     onChange: () => {
-                                                        (0, B.PS)(
+                                                        (0, M.PS)(
                                                             t,
                                                             (e) => {
                                                                 e.disableRaidAlertNag = !e.disableRaidAlertNag;
                                                             },
-                                                            B.fy.INFREQUENT_USER_ACTION
+                                                            M.fy.INFREQUENT_USER_ACTION
                                                         );
                                                     },
                                                     hideBorder: !0,
@@ -350,12 +350,12 @@ function J() {
                                                     note: H.intl.string(H.t.PyxXs7),
                                                     value: !e[t].disableRaidAlertPush,
                                                     onChange: () => {
-                                                        (0, B.PS)(
+                                                        (0, M.PS)(
                                                             t,
                                                             (e) => {
                                                                 e.disableRaidAlertPush = !e.disableRaidAlertPush;
                                                             },
-                                                            B.fy.INFREQUENT_USER_ACTION
+                                                            M.fy.INFREQUENT_USER_ACTION
                                                         );
                                                     },
                                                     hideBorder: !0,
@@ -443,7 +443,7 @@ class $ extends r.PureComponent {
                         children: [
                             (0, i.jsx)(u.q4e, {
                                 value: t,
-                                onChange: M.CM.updateSetting,
+                                onChange: B.CM.updateSetting,
                                 options: g
                             }),
                             (0, i.jsx)(u.R94, {
@@ -658,7 +658,7 @@ function es() {
         ttsType: D.Z.getTTSType(),
         notifyMessagesInSelectedChannel: D.Z.getNotifyMessagesInSelectedChannel()
     }));
-    return (0, i.jsx)(er, q(K({}, e), { afkTimeout: M.CM.useSetting() }));
+    return (0, i.jsx)(er, q(K({}, e), { afkTimeout: B.CM.useSetting() }));
 }
 function el() {
     let e = (0, x._x)('notification_settings'),
@@ -695,7 +695,7 @@ function el() {
                     (0, i.jsx)(u.FXm, {
                         options: r,
                         onChange: (e) => {
-                            M.YT.updateSetting(e.value);
+                            B.YT.updateSetting(e.value);
                         },
                         value: t
                     })
@@ -706,7 +706,7 @@ function el() {
     });
 }
 function ea() {
-    let e = M.fz.useSetting(),
+    let e = B.fz.useSetting(),
         t = [
             {
                 name: H.intl.string(H.t['9x/Rtb']),

@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(13245),
     E = n(825209),
     C = n(615287),
-    j = n(593472),
-    O = n(493773),
+    O = n(593472),
+    j = n(493773),
     S = n(887278),
     v = n(812206),
     T = n(835473),
@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(809357),
     k = n(371651),
     L = n(829907),
-    M = n(624864),
-    B = n(610394),
+    B = n(624864),
+    M = n(610394),
     U = n(957148),
     V = n(340101),
     G = n(243487),
@@ -61,7 +61,7 @@ var i = n(255367),
     eo = n(987650),
     ec = n(501787),
     ed = n(388032),
-    eu = n(91481),
+    eu = n(354067),
     em = n(131970),
     eg = n(730462);
 function ep(e) {
@@ -120,7 +120,7 @@ function ex(e) {
         enabled: $.default.enabled,
         notifications_enabled: i,
         notifications_position: i ? n : null,
-        text_notifications_mode: M.Z.isNotificationDisabled(D.OverlayNotificationDisabledSetting.TEXT_CHAT) ? 'DISABLED' : 'ENABLED',
+        text_notifications_mode: B.Z.isNotificationDisabled(D.OverlayNotificationDisabledSetting.TEXT_CHAT) ? 'DISABLED' : 'ENABLED',
         hotkey: null != r ? (0, er.BB)(r.shortcut) : null,
         text_activation_hotkey: null != s ? (0, er.BB)(s.shortcut) : null,
         text_opacity_slider: ee.default.getTextWidgetOpacity(),
@@ -198,7 +198,7 @@ function eC(e) {
         ]
     });
 }
-function ej(e) {
+function eO(e) {
     var { children: t, className: n, onExpand: s } = e,
         a = (function (e, t) {
             if (null == e) return {};
@@ -262,7 +262,7 @@ function ej(e) {
         }
     });
 }
-let eO = new Set([C.mM.INITIALIZING, C.mM.WAITING_FOR_SCREEN_TYPE_RESOLUTION, C.mM.WAITING_FOR_MODULE_TRACKING, C.mM.WAITING_FOR_OVERLAY_OPEN]),
+let ej = new Set([C.mM.INITIALIZING, C.mM.WAITING_FOR_SCREEN_TYPE_RESOLUTION, C.mM.WAITING_FOR_MODULE_TRACKING, C.mM.WAITING_FOR_OVERLAY_OPEN]),
     eS = (e) => {
         e.preventDefault(), e.stopPropagation();
     };
@@ -320,7 +320,7 @@ function ev(e) {
             }
             (a || o) && (0, U.l)(a ? R.AE.LEGACY_GAME : R.AE.OOP_GAME, null != (s = l.id) ? s : null);
         },
-        M = (e, t) => {
+        B = (e, t) => {
             let n = !t && e,
                 i = !w && b,
                 r = !Z && E,
@@ -335,7 +335,7 @@ function ev(e) {
                     return 'game';
             }
         },
-        B = (e, t, n) => {
+        M = (e, t, n) => {
             if ((eS(n), null == l)) return;
             let i = !1,
                 r = !1;
@@ -361,7 +361,7 @@ function ev(e) {
         H = !E && !w && b && !D,
         z = (null == d ? void 0 : d.overlayMethod) === C.gl.Disabled,
         W = (null == d ? void 0 : d.state) === C.mM.OVERLAY_RENDERING && !z,
-        Y = (null == d ? void 0 : d.state) != null && eO.has(d.state) && !z,
+        Y = (null == d ? void 0 : d.state) != null && ej.has(d.state) && !z,
         q = (null == d ? void 0 : d.overlayMethod) === C.gl.OutOfProcess,
         Q = (null == d ? void 0 : d.overlayMethod) === C.gl.OutOfProcessLimitedInteraction,
         J = (null == d ? void 0 : d.overlayMethod) === C.gl.Hook,
@@ -427,7 +427,7 @@ function ev(e) {
                         (function () {
                             var e, t;
                             switch (!0) {
-                                case (null == d ? void 0 : d.fullscreenType) !== j.Jx.BORDERLESS_FULLSCREEN:
+                                case (null == d ? void 0 : d.fullscreenType) !== O.Jx.BORDERLESS_FULLSCREEN:
                                     return ed.intl.string(ed.t.mJmbeH);
                                 case D:
                                     return ed.intl.string(ed.t.C7bLTU);
@@ -464,13 +464,13 @@ function ev(e) {
                     return [ed.intl.string(ed.t.ONovPz), null];
             }
         })();
-    (0, O.ZP)(() => {
+    (0, j.ZP)(() => {
         f.Z.getDetectableGames();
     });
     let [ei, er] = r.useMemo(() => (Y ? ['text-muted', h.TVs.colors.TEXT_MUTED.css] : W && Q ? ['text-warning', h.TVs.colors.TEXT_WARNING.css] : W && q ? ['text-positive', h.TVs.colors.TEXT_POSITIVE.css] : W && J ? ['text-primary', h.TVs.colors.TEXT_PRIMARY.css] : ['interactive-normal', h.TVs.colors.INTERACTIVE_NORMAL.css]), [Y, W, Q, q, J]);
     return null == l
         ? null
-        : (0, i.jsxs)(ej, {
+        : (0, i.jsxs)(eO, {
               onExpand: N,
               className: T ? eu.expandedContainer : void 0,
               title: (0, i.jsxs)(i.Fragment, {
@@ -533,7 +533,7 @@ function ev(e) {
                       checked: (b && w) || (E && Z),
                       disabled: V,
                       onChange: (e, t) => {
-                          B(e, M(e, (b && w) || (E && Z)), t);
+                          M(e, B(e, (b && w) || (E && Z)), t);
                       }
                   })
               }),
@@ -656,7 +656,7 @@ function eI() {
                   ]
               })
           })
-        : (0, i.jsxs)(ej, {
+        : (0, i.jsxs)(eO, {
               onExpand: t,
               className: e ? eu.expandedContainer : void 0,
               title: ed.intl.string(ed.t.BfFpW1),
@@ -739,7 +739,7 @@ function ey() {
                   ]
               })
           })
-        : (0, i.jsxs)(ej, {
+        : (0, i.jsxs)(eO, {
               onExpand: t,
               className: e ? eu.expandedContainer : void 0,
               title: ed.intl.string(ed.t['7BlVIi']),
@@ -861,7 +861,7 @@ function eR() {
         r = (e) => (t) => {
             x.Z.setNotificationDisabledSetting(e, !t);
         },
-        s = (0, g.e7)([M.Z], () => M.Z.getDisabledNotifications());
+        s = (0, g.e7)([B.Z], () => B.Z.getDisabledNotifications());
     return (0, i.jsxs)('div', {
         className: eu.notificationSettingsContainer,
         children: [
@@ -959,8 +959,8 @@ function eZ() {
         })),
         c = (0, g.e7)([Q.default], () => Q.default.getCurrentUser()),
         [d] = r.useState(() => [eD(ed.intl.string(ed.t.C0ZDvr), !0, !1), eD(ed.intl.string(ed.t.iOtj8P), !1, !1, !0), eD(ed.intl.string(ed.t['0oqNgI']), !1, !0)]),
-        u = (0, g.e7)([B.ZP, q.Z], () => {
-            let e = B.ZP.getWidgetByType(el.Odu.VOICE_V3);
+        u = (0, g.e7)([M.ZP, q.Z], () => {
+            let e = M.ZP.getWidgetByType(el.Odu.VOICE_V3);
             if (null == e) return null;
             let t = q.Z.getWidget(e.id);
             return null != t && (0, V.Aw)(t) ? t : null;
@@ -1110,7 +1110,7 @@ function ew() {
         n = () => {
             t(ea.L.DISMISS);
         };
-    return ((0, O.ZP)(() => () => {
+    return ((0, j.ZP)(() => () => {
         t(ea.L.AUTO_DISMISS);
     }),
     e !== p.z.OVERLAY_OOP_SETTINGS_NUX)
@@ -1161,7 +1161,7 @@ function ew() {
 function ek(e) {
     let { runningGame: t, runningGameApplication: n } = e,
         s = null == n ? void 0 : n.id,
-        l = (0, g.e7)([M.Z], () => M.Z.isLimitedInteractionOverrideEnabled(s), [s]),
+        l = (0, g.e7)([B.Z], () => B.Z.isLimitedInteractionOverrideEnabled(s), [s]),
         a = r.useMemo(() => null != t && (0, L.H8)(t.pid), [t]),
         o = (0, w.Z)({ location: 'overlay_user_settings' }),
         { disableClickableRegions: c, shouldShowKeybindIndicators: d } = (0, g.cj)([ee.default], () => ({
@@ -1259,7 +1259,7 @@ function eL(e) {
         })(),
         l = (0, Z.o4)('user_settings').overlayV3UI,
         a = (0, g.e7)([Q.default], () => Q.default.getCurrentUser());
-    (0, O.ZP)(() => {
+    (0, j.ZP)(() => {
         if (ei.isPlatformEmbedded) return (0, y.Ky)(), y.P7;
     });
     let c = ex(ef);

@@ -13,7 +13,7 @@ var i = n(255367),
     p = n(267642),
     h = n(981631),
     f = n(388032),
-    b = n(122039);
+    b = n(778711);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,8 +62,8 @@ let E = function () {
         { analyticsLocations: t } = (0, a.ZP)(),
         E = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
         { fractionalState: C } = (0, o.Z)(),
-        j = (0, u.y)('guild_boosting_boost_cta', E, C);
-    function O(n) {
+        O = (0, u.y)('guild_boosting_boost_cta', E, C);
+    function j(n) {
         null != e.current && (0, l.Mr3)(e.current),
             (0, d.u)({
                 analyticsLocation: {
@@ -80,7 +80,7 @@ let E = function () {
         e.current = await (0, l.ZDy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 719228));
-                return (t) => (0, i.jsx)(e, x(_({}, t), { onSelectGuild: O }));
+                return (t) => (0, i.jsx)(e, x(_({}, t), { onSelectGuild: j }));
             },
             {
                 onCloseRequest: () => {
@@ -89,7 +89,7 @@ let E = function () {
             }
         );
     }
-    let v = (0, p.aq)({ isBoostManagementDisabledForFractionalPremium: j });
+    let v = (0, p.aq)({ isBoostManagementDisabledForFractionalPremium: O });
     return (0, i.jsxs)('div', {
         className: b.wrapper,
         children: [

@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(629654),
     E = n(53691),
     C = n(165583),
-    j = n(267717),
-    O = n(643879),
+    O = n(267717),
+    j = n(643879),
     S = n(350327),
     v = n(996073),
     T = n(25990),
@@ -34,10 +34,10 @@ var i = n(255367),
     w = n(451392),
     k = n(490220),
     L = n(981631),
-    M = n(474936),
-    B = n(526761),
+    B = n(474936),
+    M = n(526761),
     U = n(388032),
-    V = n(23821);
+    V = n(651408);
 function G(e) {
     var t, n;
     let { user: G, isVisible: F, shouldShow: H } = e,
@@ -99,7 +99,7 @@ function G(e) {
         $ = (0, h.Z)(Q),
         { preset: ee, onShuffle: et } = (0, _.Z)(),
         en = r.useRef(null);
-    (0, v.Z)(en, B.Y_.TRY_IT_OUT);
+    (0, v.Z)(en, M.Y_.TRY_IT_OUT);
     let { analyticsLocations: ei, newestAnalyticsLocation: er, sourceAnalyticsLocations: es } = (0, d.ZP)(c.Z.USER_SETTINGS_TRY_OUT_PREMIUM),
         el = (e) => {
             if (e) {
@@ -113,14 +113,14 @@ function G(e) {
     r.useEffect(() => {
         F &&
             N.default.track(L.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: M.cd.PREMIUM_PROFILE_TRY_IT_OUT,
+                type: B.cd.PREMIUM_PROFILE_TRY_IT_OUT,
                 location: { page: L.ZY5.USER_SETTINGS },
                 location_stack: es
             });
     }, [es, G, F]);
-    let ea = (null == (n = (0, b.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === M.Si.TIER_2,
+    let ea = (null == (n = (0, b.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === B.Si.TIER_2,
         eo = (0, f.Ng)(),
-        ec = (0, f.Wp)(eo, M.Si.TIER_2),
+        ec = (0, f.Wp)(eo, B.Si.TIER_2),
         ed = 'TryOutPremiumSection';
     return ((0, o.j)({
         location: ed + ' auto on',
@@ -180,7 +180,7 @@ function G(e) {
                                   (0, i.jsx)(w.Z, {
                                       className: V.customizationSection,
                                       user: G,
-                                      pendingAvatarSrc: (0, O.SD)({
+                                      pendingAvatarSrc: (0, j.SD)({
                                           userId: G.id,
                                           image: null != q ? q : W
                                       }),
@@ -240,7 +240,7 @@ function G(e) {
                               showUpsell: !0,
                               text: U.intl.format(U.t.TmfgIy, {
                                   onClick: () => {
-                                      (0, j.y)({
+                                      (0, O.y)({
                                           analyticsSource: er,
                                           onSubscribeFinish: el
                                       });
@@ -255,8 +255,8 @@ function G(e) {
                               children: [
                                   (0, i.jsx)('div', { className: V.premiumTier2Divider }),
                                   (0, i.jsx)(C.ZP, {
-                                      type: M.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL,
-                                      subscriptionTier: M.Si.TIER_2
+                                      type: B.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL,
+                                      subscriptionTier: B.Si.TIER_2
                                   })
                               ]
                           })

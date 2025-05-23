@@ -9,12 +9,12 @@ var i = n(255367),
     d = n(155433),
     u = n(981631),
     m = n(388032),
-    g = n(132709);
+    g = n(424108);
 function p(e) {
     var t, n, p, h;
     let { transitionState: f, onSuccess: b, onClose: _, requirementsUpdated: x, noSkip: E = !1 } = e,
-        [C, j] = r.useState(''),
-        [O, S] = r.useState(''),
+        [C, O] = r.useState(''),
+        [j, S] = r.useState(''),
         [v, T] = r.useState(''),
         [N, I] = r.useState(null),
         [y, A] = r.useState(null),
@@ -24,10 +24,10 @@ function p(e) {
     async function Z(e) {
         e.preventDefault(), (0, a.b9)();
         let t = !1;
-        if (('' === O ? (I(m.intl.string(m.t['/7/oPT'])), (t = !0)) : I(null), O !== v ? (A(m.intl.string(m.t.IEKYZ2)), (t = !0)) : A(null), t)) return;
+        if (('' === j ? (I(m.intl.string(m.t['/7/oPT'])), (t = !0)) : I(null), j !== v ? (A(m.intl.string(m.t.IEKYZ2)), (t = !0)) : A(null), t)) return;
         let n = await (0, a.Mn)({
             password: C,
-            newPassword: O
+            newPassword: j
         });
         if (null == n ? void 0 : n.ok) b();
         else {
@@ -80,7 +80,7 @@ function p(e) {
                                     children: (0, i.jsx)(l.oil, {
                                         type: 'password',
                                         value: C,
-                                        onChange: j,
+                                        onChange: O,
                                         inputRef: D
                                     })
                                 }),
@@ -90,7 +90,7 @@ function p(e) {
                                     error: null != (h = null != (p = null == P || null == (n = P.new_password) ? void 0 : n[0]) ? p : N) ? h : void 0,
                                     children: (0, i.jsx)(l.oil, {
                                         type: 'password',
-                                        value: O,
+                                        value: j,
                                         onChange: S
                                     })
                                 }),

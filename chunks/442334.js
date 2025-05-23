@@ -7,7 +7,7 @@ var i = n(255367),
     s = n(120356),
     l = n.n(s),
     a = n(481060),
-    o = n(948865);
+    o = n(490411);
 function c(e) {
     let { title: t, note: n, children: r, className: s, id: c } = e;
     return (0, i.jsxs)('div', {

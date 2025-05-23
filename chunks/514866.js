@@ -11,12 +11,12 @@ var r = n(120356),
     u = n(110478),
     m = n(423932),
     x = n(695346),
-    h = n(601948),
+    h = n(306052),
     p = n(594174),
-    b = n(994331),
-    f = n(20493);
+    b = n(795611),
+    f = n(971005);
 let v = () => {
-    Promise.all([n.e('52030'), n.e('58717')])
+    Promise.all([n.e('52030'), n.e('28318')])
         .then(n.bind(n, 24031))
         .then((e) => {
             let { openMFAModal: t } = e;
@@ -49,7 +49,7 @@ function g() {
         children: [
             (0, a.jsx)('div', {
                 className: l()(b.buttonsContainer, f.marginBottom20),
-                children: (0, a.jsx)(h.S, { isDevTools: !0 })
+                children: (0, a.jsx)(h.g, { isDevTools: !0 })
             }),
             (0, a.jsx)('div', {
                 className: l()(b.buttonsContainer, f.marginBottom20),

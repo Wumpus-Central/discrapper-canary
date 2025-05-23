@@ -76,7 +76,7 @@ var r = n(255367),
     ei = n(981631),
     eo = n(186901),
     ea = n(388032),
-    es = n(453214);
+    es = n(370315);
 function el(e, t, n) {
     return (
         t in e
@@ -293,8 +293,8 @@ function eE(e) {
         [eQ, eX] = i.useState(null != ev ? ev : null),
         [eJ, e$] = i.useState(G.Hn),
         [e0, e1] = i.useState(!1),
-        e2 = i.useMemo(() => ((null == ej ? void 0 : ej.user) != null ? new k.Z(ej.user) : null), [null == ej ? void 0 : ej.user]),
-        e3 = i.useMemo(() => (null == eK ? void 0 : eK.find((e) => e.id === ez)), [eK, ez]),
+        e3 = i.useMemo(() => ((null == ej ? void 0 : ej.user) != null ? new k.Z(ej.user) : null), [null == ej ? void 0 : ej.user]),
+        e2 = i.useMemo(() => (null == eK ? void 0 : eK.find((e) => e.id === ez)), [eK, ez]),
         [e4, e5] = i.useState(null),
         e6 = i.useMemo(() => {
             var e;
@@ -356,7 +356,7 @@ function eE(e) {
                     null != eP &&
                         (eP({
                             application: null == ej ? void 0 : ej.application,
-                            guild: e3
+                            guild: e2
                         }),
                         null == ew || ew());
                     return;
@@ -391,7 +391,7 @@ function eE(e) {
                         eP({
                             application: null == ej ? void 0 : ej.application,
                             location: n.location,
-                            guild: e3
+                            guild: e2
                         }),
                             null == ew || ew();
                     else if (null != n.location) {
@@ -401,7 +401,7 @@ function eE(e) {
                             ? (0, L.uL)(ei.Z5c.OAUTH2_AUTHORIZED, {
                                   state: {
                                       application: null == ej ? void 0 : ej.application,
-                                      guild: e3
+                                      guild: e2
                                   }
                               })
                             : (window.location = n.location);
@@ -411,7 +411,7 @@ function eE(e) {
                     (null == e ? void 0 : e.message) != null && '' !== e.message ? eV(Error(e.message)) : eV(e), eB('AUTHORIZE_SCOPES'), eH(!1);
                 }
             },
-            [eR, eA, eP, null == ej ? void 0 : ej.application, e3, ew, ee, tt, eo, el, eu, ef, e_, eh, tr, eJ, ez, e4, eQ, to, e0]
+            [eR, eA, eP, null == ej ? void 0 : ej.application, e2, ew, ee, tt, eo, el, eu, ef, e_, eh, tr, eJ, ez, e4, eQ, to, e0]
         ),
         tu = i.useRef(!1),
         td = i.useCallback(async () => {
@@ -561,7 +561,7 @@ function eE(e) {
                 (tI = !0);
             break;
         case 'AUTHORIZE_SCOPES':
-            if (null == ej || null == e2 || null == e4) return { body: (0, r.jsx)(eg, {}) };
+            if (null == ej || null == e3 || null == e4) return { body: (0, r.jsx)(eg, {}) };
             let tS = null == eF || eF instanceof Error ? {} : eF,
                 tT = null == eK ? void 0 : eK.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
                 tA = e4 === c.Y.GUILD_INSTALL && tt.includes(u.x.WEBHOOK_INCOMING),
@@ -617,7 +617,7 @@ function eE(e) {
             })),
                 tt.includes(u.x.BOT) && !f.fS(tr, G.Hn) && (T = 'AUTHORIZE_BOT_PERMISSIONS'),
                 tf.length > 1 && (E = 'SELECT_INSTALL_TYPE'),
-                (tb = (tN && null == e3) || (tA && null == eQ)),
+                (tb = (tN && null == e2) || (tA && null == eQ)),
                 (tE = !0);
             break;
         case 'AUTHORIZE_BOT_PERMISSIONS':
@@ -627,7 +627,7 @@ function eE(e) {
                 permissions: tr,
                 deniedPermissions: eJ,
                 onPermissionsChange: tg,
-                guild: e3
+                guild: e2
             })),
                 (E = 'AUTHORIZE_SCOPES'),
                 (tE = !0);
@@ -654,10 +654,10 @@ function eE(e) {
     return (
         tO &&
             null != ej &&
-            null != e2 &&
+            null != e3 &&
             (R = (0, r.jsx)(J.Z, {
                 id: ep,
-                user: e2,
+                user: e3,
                 application: ej.application,
                 bot: ej.bot,
                 accountScopes: tn,

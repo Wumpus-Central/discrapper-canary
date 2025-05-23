@@ -16,7 +16,7 @@ var i = n(255367),
     b = n(755733),
     _ = n(981631),
     x = n(388032),
-    E = n(49149);
+    E = n(113869);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,7 +42,7 @@ function C(e) {
     }
     return e;
 }
-function j(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,11 +60,11 @@ function j(e, t) {
         e
     );
 }
-function O(e) {
+function j(e) {
     let { transitionState: t, onClose: l, ticket: o, challenge: u } = e,
         f = (0, c.Dt)(),
-        [C, j] = r.useState(''),
-        [O, S] = r.useState(!0),
+        [C, O] = r.useState(''),
+        [j, S] = r.useState(!0),
         [v, T] = r.useState(b.x.INIT),
         [N, I] = r.useState(''),
         [y, A] = r.useState(null),
@@ -200,7 +200,7 @@ function O(e) {
                                                     className: E.input,
                                                     value: C,
                                                     onChange: (e) => {
-                                                        j(e), S(0 === e.length);
+                                                        O(e), S(0 === e.length);
                                                     },
                                                     autoFocus: !0,
                                                     minLength: 1
@@ -214,7 +214,7 @@ function O(e) {
                                     children: [
                                         (0, i.jsx)(a.zxk, {
                                             type: 'submit',
-                                            disabled: O,
+                                            disabled: j,
                                             children: x.intl.string(x.t['5dyZ1d'])
                                         }),
                                         (0, i.jsx)(a.zxk, {
@@ -300,7 +300,7 @@ function v() {
                                         color: a.zxk.Colors.TRANSPARENT,
                                         size: a.zxk.Sizes.ICON,
                                         onClick: (t) => {
-                                            (0, o.vq)(t, (t) => (0, i.jsx)(S, j(C({}, t), { credential: e })));
+                                            (0, o.vq)(t, (t) => (0, i.jsx)(S, O(C({}, t), { credential: e })));
                                         },
                                         'aria-label': x.intl.string(x.t['+nrTbG']),
                                         innerClassName: E.credentialOptions,
@@ -326,8 +326,8 @@ function v() {
                                     let { ticket: t, challenge: n } = e;
                                     (0, a.h7j)((e) =>
                                         (0, i.jsx)(
-                                            O,
-                                            j(C({}, e), {
+                                            j,
+                                            O(C({}, e), {
                                                 ticket: t,
                                                 challenge: n
                                             })

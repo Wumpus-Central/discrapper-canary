@@ -1,6 +1,6 @@
 n.d(t, {
     F: () => C,
-    I: () => j
+    I: () => O
 }),
     n(953529),
     n(388685);
@@ -17,7 +17,7 @@ var i = n(255367),
     g = n(246133),
     p = n(981631),
     h = n(388032),
-    f = n(404255);
+    f = n(992973);
 let b = [
         {
             duration: 15 * u.Z.Millis.MINUTE,
@@ -71,7 +71,7 @@ function E(e) {
         h = o && t !== p.Skl.ONLINE,
         [x, E] = r.useState(void 0),
         C = void 0 !== x && t === n,
-        j = (0, i.jsx)(i.Fragment, {
+        O = (0, i.jsx)(i.Fragment, {
             children: b.map((e) => {
                 let { duration: r, label: s } = e;
                 return (0, i.jsx)(
@@ -91,7 +91,7 @@ function E(e) {
                 );
             })
         }),
-        O = (0, i.jsx)('div', {
+        j = (0, i.jsx)('div', {
             className: f.durationButtons,
             children: _.map((e) => {
                 let { duration: r, label: s } = e;
@@ -143,7 +143,7 @@ function E(e) {
                             className: f.description,
                             children: s
                         }),
-                    h && d && C ? O : void 0
+                    h && d && C ? j : void 0
                 ]
             });
         },
@@ -156,7 +156,7 @@ function E(e) {
                 });
         },
         dontCloseOnAction: !0,
-        children: h && !d ? j : void 0
+        children: h && !d ? O : void 0
     });
 }
 function C(e) {
@@ -173,7 +173,7 @@ function C(e) {
               timeString: h.intl.data.formatTime(t, { format: 'short' })
           });
 }
-function j(e) {
+function O(e) {
     let { hasNewStrings: t } = a.Y.useExperiment({ location: 'UserProfileAccountPopout' }),
         n = d.Cr.useSetting(),
         r = (0, o.p)(),
@@ -209,11 +209,11 @@ function j(e) {
                 );
             })
         }),
-        j = E({
+        O = E({
             status: p.Skl.ONLINE,
             currentStatus: e
         }),
-        O = E({
+        j = E({
             status: p.Skl.IDLE,
             currentStatus: e,
             description: _(p.Skl.IDLE)
@@ -230,9 +230,9 @@ function j(e) {
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            j,
-            (0, i.jsx)(l.Clw, {}, 'menu-separator-statuses'),
             O,
+            (0, i.jsx)(l.Clw, {}, 'menu-separator-statuses'),
+            j,
             S,
             v,
             u || r

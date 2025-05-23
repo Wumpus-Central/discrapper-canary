@@ -5,7 +5,7 @@ var i = n(120356),
     o = n.n(i),
     a = n(481060),
     s = n(388032),
-    l = n(330479),
+    l = n(848941),
     c = n(247844);
 function u(e) {
     let { className: t, icon: n, children: i } = e;

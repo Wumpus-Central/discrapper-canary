@@ -18,13 +18,13 @@ var i = n(255367),
     x = n(422034),
     E = n(710220),
     C = n(635921),
-    j = n(474936),
-    O = n(388032),
-    S = n(909176);
+    O = n(474936),
+    j = n(388032),
+    S = n(898118);
 let v = (e) => {
         let t,
             { trialOffer: n, discountOffer: r } = e;
-        if ((null != n ? (t = O.intl.string(O.t.IBYG5e)) : null != r && (t = O.intl.formatToPlainString(O.t.iiLbvr, { percent: r.discount.amount })), null != t))
+        if ((null != n ? (t = j.intl.string(j.t.IBYG5e)) : null != r && (t = j.intl.formatToPlainString(j.t.iiLbvr, { percent: r.discount.amount })), null != t))
             return (0, i.jsx)('div', {
                 className: S.premiumOfferPill,
                 children: (0, i.jsx)(o.Text, {
@@ -40,14 +40,14 @@ let v = (e) => {
             { analyticsLocations: P } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_HERO_CTA),
             R = (0, g._O)(),
             D = (0, p.Ng)(),
-            Z = (0, p.Wp)(D, j.Si.TIER_2) ? j.Si.TIER_2 : void 0,
+            Z = (0, p.Wp)(D, O.Si.TIER_2) ? O.Si.TIER_2 : void 0,
             w = (0, h.N)(),
             k = (0, m.Nx)(),
             L = (0, _.Vi)(),
-            M = (0, a.e7)([u.Z], () => u.Z.affinities),
-            B = (0, f.Z)(),
-            U = y === j.EZ.ApplicationStoreHome && null != B,
-            V = M.length > 0;
+            B = (0, a.e7)([u.Z], () => u.Z.affinities),
+            M = (0, f.Z)(),
+            U = y === O.EZ.ApplicationStoreHome && null != M,
+            V = B.length > 0;
         return (0, i.jsx)(d.Gt, {
             value: P,
             children: (0, i.jsx)('div', {
@@ -66,11 +66,11 @@ let v = (e) => {
                             className: S.marketingPageV2Heading,
                             variant: 'display-sm',
                             color: 'header-primary',
-                            children: O.intl.string(O.t.YCZldH)
+                            children: j.intl.string(j.t.YCZldH)
                         }),
                         U
                             ? (0, i.jsx)(E.Z, {
-                                  referrer: B,
+                                  referrer: M,
                                   isMarketingPageV2Enabled: !0
                               })
                             : V &&

@@ -1,12 +1,12 @@
 t.a(e, async function (e, r) {
     try {
-        t.r(n), t.d(n, { default: () => y });
+        t.r(n), t.d(n, { default: () => j });
         var l = t(255367);
         t(73800);
-        var i = t(545578),
-            u = t(222082),
-            c = t(63681),
-            o = t(743965),
+        var i = t(318569),
+            o = t(222082),
+            u = t(63681),
+            c = t(743965),
             a = t(12781),
             d = t(980426),
             s = t(659700),
@@ -15,18 +15,18 @@ t.a(e, async function (e, r) {
             g = t(312539),
             h = t(325980),
             b = t(472433),
-            m = e([i]);
-        i = (m.then ? (await m)() : m)[0];
-        let p = {
-            text: u.xv,
-            paragraph: u.nv,
-            empty: u.HY,
+            y = e([a, i]);
+        [a, i] = y.then ? (await y)() : y;
+        let x = {
+            text: o.xv,
+            paragraph: o.nv,
+            empty: o.HY,
             emoji: a.d,
             link: f.r,
             list: _.a,
             listItem: _.H,
-            code: c.E,
-            code_block: o.d,
+            code: u.E,
+            code_block: c.d,
             quote: h.p,
             bold: d.d8,
             italic: d.Tx,
@@ -37,11 +37,11 @@ t.a(e, async function (e, r) {
             small: s.x,
             spoiler: b.o
         };
-        function y(e) {
+        function j(e) {
             let { content: n } = e;
             return (0, l.jsx)(i.ZP, {
                 content: n,
-                renderers: p
+                renderers: x
             });
         }
         r();

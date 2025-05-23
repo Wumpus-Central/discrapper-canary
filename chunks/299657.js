@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(433811),
     E = n(214852),
     C = n(621853),
-    j = n(484459),
-    O = n(246946),
+    O = n(484459),
+    j = n(246946),
     S = n(594174),
     v = n(78839),
     T = n(626135),
@@ -29,71 +29,69 @@ var i = n(255367),
     A = n(91802),
     P = n(104494),
     R = n(639119),
-    D = n(943180),
-    Z = n(2359),
-    w = n(132547),
-    k = n(474936),
-    L = n(981631),
-    M = n(126867);
+    D = n(2359),
+    Z = n(132547),
+    w = n(474936),
+    k = n(981631),
+    L = n(779468);
 let B = function (e) {
-    let { entrypoint: t = k.EZ.UserSettings } = e;
+    let { entrypoint: t = w.EZ.UserSettings } = e;
     (0, E.z)(x.X);
     let n = (0, f.Q)(),
         { sourceAnalyticsLocations: s, analyticsLocations: B } = (0, h.ZP)(p.Z.PREMIUM_MARKETING),
-        U = (0, a.e7)([v.ZP], () => v.ZP.hasFetchedSubscriptions()),
-        V = (0, a.e7)([S.default], () => S.default.getCurrentUser()),
-        G = null == V ? void 0 : V.id,
-        F = (0, R.N)(),
-        H = (0, P.Ng)(),
-        z = (0, b.V)(),
-        [W, Y] = r.useState(!0),
-        K = r.useRef(0),
-        q = (0, N.M5)(V, k.p9.TIER_2),
-        X = (0, A.n)(),
-        Q = null == X ? void 0 : X.countryCode,
-        { enabled: J } = (0, D.D)(),
-        $ = (0, a.e7)([C.Z], () => (null != V ? C.Z.getUserProfile(V.id) : null)),
-        ee = (0, a.e7)([I.Z], () => I.Z.hasFetched);
+        M = (0, a.e7)([v.ZP], () => v.ZP.hasFetchedSubscriptions()),
+        U = (0, a.e7)([S.default], () => S.default.getCurrentUser()),
+        V = null == U ? void 0 : U.id,
+        G = (0, R.N)(),
+        F = (0, P.Ng)(),
+        H = (0, b.V)(),
+        [z, W] = r.useState(!0),
+        Y = r.useRef(0),
+        K = (0, N.M5)(U, w.p9.TIER_2),
+        q = (0, A.n)(),
+        X = null == q ? void 0 : q.countryCode,
+        Q = (0, a.e7)([C.Z], () => (null != U ? C.Z.getUserProfile(U.id) : null)),
+        J = (0, a.e7)([I.Z], () => I.Z.hasFetched);
     return (r.useEffect(() => {
-        ee || d.MH();
-    }, [ee]),
+        J || d.MH();
+    }, [J]),
     r.useEffect(() => {
         c.Z.wait(async () => {
             let e = Date.now();
-            await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(Q, null, L.JjL.DISCOVERY), null != G && J && q && (0, j.Z)(G)]), (K.current = Date.now() - e), Y(!1);
+            await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(X, null, k.JjL.DISCOVERY), null != V && K && (0, O.Z)(V)]), (Y.current = Date.now() - e), W(!1);
         });
-    }, [Q, G, J, q]),
+    }, [X, V, K]),
     r.useEffect(() => {
-        n && (null != F || null != H) && (0, y.a)(F, H);
-    }, [n, F, H]),
+        n && (null != G || null != F) && (0, y.a)(G, F);
+    }, [n, G, F]),
     r.useEffect(() => {
-        W ||
-            T.default.track(L.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
+        z ||
+            T.default.track(k.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
                 location_stack: s,
-                load_duration_ms: K.current
+                load_duration_ms: Y.current
             });
-    }, [s, W]),
-    (0, a.e7)([O.Z], () => O.Z.enabled))
+    }, [s, z]),
+    (0, a.e7)([j.Z], () => j.Z.enabled))
         ? (0, i.jsx)(g.Z, {})
         : n
           ? (0, i.jsx)(_.c8, {})
-          : t === k.EZ.ApplicationStoreHome && q
-            ? J && null == $
+          : t === w.EZ.ApplicationStoreHome && K
+            ? null == Q
                 ? (0, i.jsx)('div', {
-                      className: l()(M.container, M.loading),
+                      className: l()(L.container, L.loading),
                       children: (0, i.jsx)(o.$jN, {})
                   })
                 : (0, i.jsx)(h.Gt, {
                       value: B,
-                      children: (0, i.jsx)(w.Z, {})
+                      children: (0, i.jsx)(Z.Z, {})
                   })
-            : U && z && !W
+            : M && H && !z
               ? (0, i.jsx)(h.Gt, {
                     value: B,
-                    children: (0, i.jsx)(Z.Z, { entrypoint: t })
+                    children: (0, i.jsx)(D.Z, { entrypoint: t })
                 })
               : (0, i.jsx)('div', {
-                    className: l()(M.container, M.loading),
+                    className: l()(L.container, L.loading),
                     children: (0, i.jsx)(o.$jN, {})
                 });
 };
