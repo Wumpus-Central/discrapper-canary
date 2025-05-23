@@ -8,12 +8,12 @@ var r = n(255367),
     c = n(597688),
     u = n(616066),
     d = n(215023),
-    f = n(167568);
+    p = n(167568);
 let b = {
         x: 160,
         y: 160
     },
-    p = [
+    f = [
         {
             left: 0,
             top: 20,
@@ -103,7 +103,7 @@ let b = {
         let { peaking: t, transitioning: n, style: a } = e,
             b = window.innerHeight,
             [g, h] = l.useState(!1),
-            m = p.map((e) => {
+            m = f.map((e) => {
                 let { skuId: t } = e;
                 return c.Z.getProduct(t);
             });
@@ -116,24 +116,24 @@ let b = {
             }, [n]),
             (0, r.jsx)('div', {
                 style: a,
-                className: i()(f.jumbleWrapper, {
-                    [f.peaking]: t,
-                    [f.transitioned]: g
+                className: i()(p.jumbleWrapper, {
+                    [p.peaking]: t,
+                    [p.transitioned]: g
                 }),
-                children: p.map((e, t) => {
+                children: f.map((e, t) => {
                     var l, a;
-                    let { top: i, left: c, rotation: p, size: g, skuId: h } = e,
+                    let { top: i, left: c, rotation: f, size: g, skuId: h } = e,
                         _ = null == (l = m[t]) ? void 0 : l.items[0],
                         C = null == (a = m[t]) ? void 0 : a.type,
                         v = C === o.Z.AVATAR_DECORATION ? 384 : 512;
                     return (0, r.jsxs)(
                         'div',
                         {
-                            className: f.asset,
+                            className: p.asset,
                             style: {
                                 top: n ? -b - v : i,
                                 left: n ? ''.concat(c - 75 - 350 * Math.random()) : c,
-                                transform: 'rotate('.concat(p, 'deg)'),
+                                transform: 'rotate('.concat(f, 'deg)'),
                                 height: g.y,
                                 width: g.x,
                                 transitionDelay: ''.concat(Math.random() / 3, 's'),

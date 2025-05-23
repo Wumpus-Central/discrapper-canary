@@ -181,8 +181,8 @@ function g(e) {
 function T(e) {
     let { product: t, guildId: n, onEditProduct: i, onUnpublishProduct: l, onDeleteProduct: T, onCopyProductLink: b, onTestDownload: h, disabled: C = !1 } = e,
         y = (0, c.U)(t, 600),
-        N = null !== t.price_tier ? (0, s.T4)(t.price_tier, E.pK.USD) : void 0,
-        P = (0, d.C)(t);
+        P = null !== t.price_tier ? (0, s.T4)(t.price_tier, E.pK.USD) : void 0,
+        N = (0, d.C)(t);
     return (0, r.jsxs)(a.kL8, {
         tag: 'article',
         className: o()(_.productCardClickable, _.productCard, { [_.disabled]: C }),
@@ -239,16 +239,16 @@ function T(e) {
                                     (0, r.jsx)(a.Text, {
                                         variant: 'text-md/normal',
                                         color: 'header-secondary',
-                                        children: N
+                                        children: P
                                     }),
-                                    null != P
+                                    null != N
                                         ? (0, r.jsxs)(r.Fragment, {
                                               children: [
                                                   (0, r.jsx)('div', { className: _.dotSeparator }),
                                                   (0, r.jsx)(a.Text, {
                                                       variant: 'text-md/normal',
                                                       color: 'header-secondary',
-                                                      children: P
+                                                      children: N
                                                   })
                                               ]
                                           })

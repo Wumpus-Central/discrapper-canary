@@ -37,7 +37,7 @@ let d = [
             ribbon: '#67DA9C'
         }
     ],
-    f = [
+    p = [
         {
             box: '#EABB75',
             ribbon: '#E4595C'
@@ -68,7 +68,7 @@ let d = [
         }
     ],
     b = 1 / 300,
-    p = (0, a.animated)(c.Z),
+    f = (0, a.animated)(c.Z),
     g = (0, a.animated)(u.Z),
     h = (0, a.animated)(o.OgN),
     m = l.memo(function (e) {
@@ -78,7 +78,7 @@ let d = [
                 isContentDismissed: a,
                 boxColors: c = {
                     dark: d,
-                    light: f
+                    light: p
                 }
             } = e,
             u = (0, s.ZP)(),
@@ -122,7 +122,7 @@ let d = [
                     isDark: (0, i.wj)(u),
                     style: C
                 })
-              : (0, r.jsx)(p, {
+              : (0, r.jsx)(f, {
                     boxColor: O.box,
                     ribbonColor: O.ribbon,
                     style: C

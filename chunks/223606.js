@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => P });
 var r,
     i = n(442837),
     l = n(570140),
@@ -95,7 +95,7 @@ class y extends (r = i.ZP.PersistedStore) {
     }
 }
 f(y, 'displayName', 'GuildAutomodMessageStore'), f(y, 'persistKey', 'GuildAutomodMessages');
-let N = new y(l.Z, {
+let P = new y(l.Z, {
     CONNECTION_OPEN: function (e) {
         return (_ = {}), S++, !0;
     },

@@ -44,13 +44,13 @@ let T = new s.h(
     ),
     C = {},
     y = {};
-function N(e) {
+function P(e) {
     var t, n;
     for (let r of (T.set(e.id, e), null != (t = e.subscription_listings) ? t : [])) {
         (n = r), b.set(n.id, n);
     }
 }
-class P extends (r = c.yh) {
+class N extends (r = c.yh) {
     getSubscriptionGroupListingsForApplicationFetchState(e) {
         var t;
         return null != (t = C[e]) ? t : 0;
@@ -86,15 +86,15 @@ class P extends (r = c.yh) {
     }
 }
 (o = 'ApplicationSubscriptionStore'),
-    (l = 'displayName') in P
-        ? Object.defineProperty(P, l, {
+    (l = 'displayName') in N
+        ? Object.defineProperty(N, l, {
               value: o,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (P[l] = o);
-let m = new P(d.Z, {
+        : (N[l] = o);
+let m = new N(d.Z, {
     LOGOUT: function () {
         T.clear(), b.clear(), h.clear(), (C = {}), (y = {});
     },
@@ -106,7 +106,7 @@ let m = new P(d.Z, {
     },
     APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: function (e) {
         let { applicationId: t, groupListing: n } = e;
-        (C[t] = 2), N(n);
+        (C[t] = 2), P(n);
     },
     APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: function (e) {
         let { applicationId: t } = e;
@@ -130,6 +130,6 @@ let m = new P(d.Z, {
     },
     APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS: function (e) {
         let { groupListing: t } = e;
-        N(t);
+        P(t);
     }
 });

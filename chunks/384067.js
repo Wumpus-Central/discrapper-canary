@@ -8,9 +8,9 @@ var r = n(255367),
     c = n(63063),
     u = n(597688),
     d = n(297651),
-    f = n(215023),
+    p = n(215023),
     b = n(981631),
-    p = n(388032),
+    f = n(388032),
     g = n(806734);
 let h = (e) => {
     var t, n, a;
@@ -32,26 +32,26 @@ let h = (e) => {
             }
         );
     }, []);
-    let j = null != C ? C : '',
-        { handleCardVisibilityChange: y } = (0, d.E)(j, 'home', 'marketing wide banner'),
-        E = h.bannerUrl;
-    if (null == E) return null;
-    let P = _ === f.AW.ORBS;
+    let E = null != C ? C : '',
+        { handleCardVisibilityChange: j } = (0, d.E)(E, 'home', 'marketing wide banner'),
+        P = h.bannerUrl;
+    if (null == P) return null;
+    let y = _ === p.AW.ORBS;
     return (0, r.jsx)(o.$, {
         innerRef: v,
-        onChange: y,
+        onChange: j,
         threshold: 0,
         children: (0, r.jsxs)('div', {
             ref: v,
-            className: i()(g.row, g.between, g.bannerBlockContainer, g.centeredSection, { [g.extraRounded]: P }),
+            className: i()(g.row, g.between, g.bannerBlockContainer, g.centeredSection, { [g.extraRounded]: y }),
             children: [
                 (0, r.jsx)('div', {
-                    className: i()(g.wideBannerBackgroundImg, { [g.extraRounded]: P }),
+                    className: i()(g.wideBannerBackgroundImg, { [g.extraRounded]: y }),
                     children: (0, r.jsx)('img', {
                         ref: O,
-                        src: E,
+                        src: P,
                         alt: h.title,
-                        className: i()(g.wideBannerArt, { [g.wideBannerArtOrbs]: P }),
+                        className: i()(g.wideBannerArt, { [g.wideBannerArtOrbs]: y }),
                         style: { height: null != x ? ''.concat(x, 'px') : 'auto' }
                     })
                 }),
@@ -63,15 +63,15 @@ let h = (e) => {
                         children: [
                             (0, r.jsx)(s.X6q, {
                                 style: { color: null != (n = h.bannerTextColor) ? n : 'var(--header-primary)' },
-                                className: P ? g.wideBannerOrbsHeading : void 0,
-                                variant: P ? 'heading-xl/bold' : 'heading-lg/semibold',
+                                className: y ? g.wideBannerOrbsHeading : void 0,
+                                variant: y ? 'heading-xl/bold' : 'heading-lg/semibold',
                                 children: h.title
                             }),
                             (0, r.jsx)(s.Text, {
                                 style: { color: null != (a = h.bannerTextColor) ? a : 'var(--text-muted)' },
                                 lineClamp: 2,
-                                variant: P ? 'text-md/medium' : 'text-sm/medium',
-                                children: P ? p.intl.format(p.t.SFFP7O, { helpdeskArticle: c.Z.getArticleURL(b.BhN.VIRTUAL_CURRENCY_LEARN_MORE) }) : h.body
+                                variant: y ? 'text-md/medium' : 'text-sm/medium',
+                                children: y ? f.intl.format(f.t.SFFP7O, { helpdeskArticle: c.Z.getArticleURL(b.BhN.VIRTUAL_CURRENCY_LEARN_MORE) }) : h.body
                             })
                         ]
                     })
@@ -80,8 +80,8 @@ let h = (e) => {
                     (0, r.jsx)(s.zxk, {
                         className: g.wideBannerBlockButton,
                         color: s.Ttl.PRIMARY,
-                        onClick: () => m('shop wide banner', j),
-                        children: p.intl.string(p.t.jVcuVV)
+                        onClick: () => m('shop wide banner', E),
+                        children: f.intl.string(f.t.jVcuVV)
                     })
             ]
         })

@@ -1,9 +1,9 @@
 n.d(t, {
     ID: () => h,
-    NM: () => y,
+    NM: () => x,
     Xi: () => j,
     ZP: () => P,
-    bT: () => x
+    bT: () => y
 });
 var r,
     i,
@@ -111,7 +111,7 @@ class j extends (i = o.PureComponent) {
         });
     }
 }
-function y(e) {
+function x(e) {
     let { children: t } = e;
     return (0, s.jsx)('div', {
         className: _.customColumn,
@@ -128,7 +128,7 @@ v(j, 'defaultProps', {
     paddingTop: 60,
     paddingBottom: 60
 });
-var x = (((r = {}).MINIMAL = 'minimal'), (r.CUSTOM = 'custom'), (r.DEFAULT = 'default'), (r.WIDE = 'wide'), (r.SCROLLABLE_CUSTOM = 'scrollableCustom'), r);
+var y = (((r = {}).MINIMAL = 'minimal'), (r.CUSTOM = 'custom'), (r.DEFAULT = 'default'), (r.WIDE = 'wide'), (r.SCROLLABLE_CUSTOM = 'scrollableCustom'), r);
 let C = Object.freeze({
     minimal: 'contentColumnMinimal',
     custom: 'contentColumnCustom',
@@ -163,32 +163,32 @@ function S(e) {
           });
 }
 let P = function (e) {
-    let { sidebar: t, content: n, notice: r, section: i, closeAction: a, sidebarTheme: b, contentType: m, scrollerRef: v, mobileSidebarOpen: h, toggleSidebar: j, hideSidebar: y = !1 } = e,
-        x = o.useRef(null),
+    let { sidebar: t, content: n, notice: r, section: i, closeAction: a, sidebarTheme: b, contentType: m, scrollerRef: v, mobileSidebarOpen: h, toggleSidebar: j, hideSidebar: x = !1 } = e,
+        y = o.useRef(null),
         P = o.useRef(null),
         E = (0, g.Z)(i),
         w = (0, f.Yzy)(
-            y,
+            x,
             {
                 from: {
                     position: 'absolute',
                     opacity: 0
                 },
                 enter: { opacity: 1 },
-                reverse: y,
+                reverse: x,
                 config: c.config.stiff
             },
             'animate-always'
         ),
         T = o.useCallback(
             (e) => {
-                (x.current = e), null != v && (v.current = e);
+                (y.current = e), null != v && (v.current = e);
             },
             [v]
         );
     o.useLayoutEffect(() => {
-        null != x.current && E !== i && x.current.scrollTo({ to: 0 });
-    }, [i, E, x]);
+        null != y.current && E !== i && y.current.scrollTo({ to: 0 });
+    }, [i, E, y]);
     let N = (0, s.jsx)(S, {
         isMobile: d.tq,
         mobileSidebarOpen: h,
@@ -200,7 +200,7 @@ let P = function (e) {
             : (0, s.jsx)(
                   f.oXn,
                   {
-                      className: l()(_.noticeRegion, { [_.noticeRegionHiddenSidebar]: y }),
+                      className: l()(_.noticeRegion, { [_.noticeRegionHiddenSidebar]: x }),
                       children: r
                   },
                   i
@@ -261,11 +261,11 @@ let P = function (e) {
                                 children: [
                                     t,
                                     (0, s.jsxs)(f.yWw, {
-                                        className: l()(_.contentRegionScroller, y ? _.contentRegionHiddenSidebar : _.contentRegionShownSidebar),
+                                        className: l()(_.contentRegionScroller, x ? _.contentRegionHiddenSidebar : _.contentRegionShownSidebar),
                                         ref: T,
                                         children: [
                                             (0, s.jsx)(O.Provider, {
-                                                value: x.current,
+                                                value: y.current,
                                                 children: (0, s.jsx)('div', {
                                                     ref: P,
                                                     className: _.contentColumnScrollable,
@@ -291,17 +291,17 @@ let P = function (e) {
                                     children: [
                                         t,
                                         (0, s.jsxs)(f.yWw, {
-                                            className: l()(_.contentRegionScroller, y ? _.contentRegionHiddenSidebar : _.contentRegionShownSidebar),
+                                            className: l()(_.contentRegionScroller, x ? _.contentRegionHiddenSidebar : _.contentRegionShownSidebar),
                                             ref: T,
                                             children: [
                                                 (0, s.jsx)(O.Provider, {
-                                                    value: x.current,
+                                                    value: y.current,
                                                     children: (0, s.jsx)(f.njP.Panel, {
                                                         id: i,
                                                         className: l()(_.contentColumn, _[r], { [_.mobileContent]: d.tq }),
                                                         ref: P,
                                                         style: d.tq ? { maxWidth: window.innerWidth } : void 0,
-                                                        children: y
+                                                        children: x
                                                             ? n
                                                             : (0, s.jsx)(f.JcV, {
                                                                   containerRef: P,

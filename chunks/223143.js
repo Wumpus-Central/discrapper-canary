@@ -95,7 +95,8 @@ function _(e, t) {
             {
                 paymentGateway: n,
                 noOp: null == e ? void 0 : e.noOp,
-                logPerf: null == e ? void 0 : e.logPerf
+                logPerf: null == e ? void 0 : e.logPerf,
+                countryCode: null == e ? void 0 : e.countryCode
             },
             t
         ),

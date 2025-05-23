@@ -5,8 +5,6 @@ e.exports = {
     headings: 'headings__67a11',
     upsellText: 'upsellText__67a11',
     title: 'title__67a11',
-    description: 'description__67a11',
-    nitroWheel: 'nitroWheel__67a11',
     premiumIcon: 'premiumIcon__67a11',
     easterEggSelection: 'easterEggSelection__67a11',
     'scale-bounce-wiggle': 'scale-bounce-wiggle__67a11',

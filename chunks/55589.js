@@ -16,8 +16,8 @@ var o,
     h = n(430824),
     O = n(306680),
     j = n(9156),
-    y = n(594174),
-    x = n(709054);
+    x = n(594174),
+    y = n(709054);
 let C = new p.h(
     (e) => {
         let { isRequest: t, isFavorite: n } = e;
@@ -25,7 +25,7 @@ let C = new p.h(
     },
     (e) => {
         let { lastMessageId: t } = e;
-        return -x.default.extractTimestamp(t);
+        return -y.default.extractTimestamp(t);
     }
 );
 function S(e) {
@@ -38,8 +38,8 @@ function S(e) {
                       i = e.isMessageRequestTimestamp;
                   if (null != i) {
                       let e = u()(i).valueOf(),
-                          t = x.default.fromTimestamp(e);
-                      return x.default.compare(r, t) > 0 ? r : t;
+                          t = y.default.fromTimestamp(e);
+                      return y.default.compare(r, t) > 0 ? r : t;
                   }
                   return r;
               })(e);
@@ -85,7 +85,7 @@ let w =
     });
 class T extends (o = d.ZP.Store) {
     initialize() {
-        this.waitFor(v.Z, h.Z, y.default, b.Z, j.ZP), this.syncWith([j.ZP, b.Z], P);
+        this.waitFor(v.Z, h.Z, x.default, b.Z, j.ZP), this.syncWith([j.ZP, b.Z], P);
     }
     getPrivateChannelIds() {
         return w();

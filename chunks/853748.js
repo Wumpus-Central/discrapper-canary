@@ -8,9 +8,9 @@ var r = n(255367),
     c = n(481060),
     u = n(774078),
     d = n(388032),
-    f = n(894948),
+    p = n(894948),
     b = n(781385),
-    p = n(585616);
+    f = n(585616);
 function g(e) {
     let { endDate: t } = e,
         { days: n, hours: l, minutes: a, seconds: i } = (0, u.Z)(t),
@@ -21,7 +21,7 @@ function g(e) {
         })(n, l, a, i);
     return (0, r.jsx)(c.Text, {
         variant: 'heading-md/medium',
-        className: f.countdown,
+        className: p.countdown,
         tag: 'div',
         children: (0, r.jsx)('div', {
             role: 'timer',
@@ -41,7 +41,7 @@ let h = l.memo(function (e) {
             }
         });
     return (0, r.jsxs)(o.animated.div, {
-        className: i()([f.countDownWrapper, a && f.fullScreenWrapper, s.tq && f.mobileWrapper]),
+        className: i()([p.countDownWrapper, a && p.fullScreenWrapper, s.tq && p.mobileWrapper]),
         role: 'status',
         style: (function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -71,26 +71,26 @@ let h = l.memo(function (e) {
         children: [
             (0, r.jsx)(c.Text, {
                 variant: 'text-md/medium',
-                className: f.countdownLabel,
+                className: p.countdownLabel,
                 children: l.label()
             }),
             null != l.iconSrc &&
                 (0, r.jsx)('img', {
                     src: l.iconSrc,
-                    className: f.countdownIcon,
+                    className: p.countdownIcon,
                     alt: '',
                     'aria-hidden': !0
                 }),
             (0, r.jsx)(g, { endDate: t }),
             (0, r.jsx)('img', {
                 src: b.Z,
-                className: i()(f.sparkles, f.left),
+                className: i()(p.sparkles, p.left),
                 alt: '',
                 'aria-hidden': !0
             }),
             (0, r.jsx)('img', {
-                src: p.Z,
-                className: i()(f.sparkles, f.right),
+                src: f.Z,
+                className: i()(p.sparkles, p.right),
                 alt: '',
                 'aria-hidden': !0
             })

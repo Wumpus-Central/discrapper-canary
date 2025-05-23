@@ -1,22 +1,23 @@
 n.d(t, {
     AW: () => y,
-    Cm: () => I,
-    HU: () => w,
-    IV: () => S,
-    J0: () => A,
-    K8: () => R,
-    Vt: () => L,
+    Cm: () => T,
+    HU: () => L,
+    IV: () => A,
+    J0: () => C,
+    K8: () => D,
+    RE: () => v,
+    Vt: () => k,
     ZS: () => f,
-    a$: () => P,
-    aK: () => O,
+    a$: () => w,
+    aK: () => I,
     f7: () => b,
-    gJ: () => C,
+    gJ: () => R,
     i0: () => E,
-    kN: () => N,
-    lb: () => v,
-    o0: () => k,
-    o8: () => D,
-    pv: () => T,
+    kN: () => P,
+    lb: () => S,
+    o0: () => j,
+    o8: () => x,
+    pv: () => N,
     rL: () => _,
     yf: () => g
 }),
@@ -142,25 +143,27 @@ var b = (function (e) {
         return (e[(e.VISIBLE = 0)] = 'VISIBLE'), (e[(e.HIDDEN = 1)] = 'HIDDEN'), (e[(e.IN = 2)] = 'IN'), (e[(e.OUT = 3)] = 'OUT'), e;
     })({}),
     y = (function (e) {
-        return (e.HOME = 'home'), (e.CATALOG = 'catalog'), (e.ORBS = 'orbs'), e;
+        return (e.HOME = 'home'), (e.CATALOG = 'catalog'), (e.ORBS = 'orbs'), (e.AVATAR_DECORATIONS = 'avatar-decorations'), (e.PROFILE_EFFECTS = 'profile-effects'), (e.NAMEPLATES = 'nameplates'), (e.BUNDLES = 'bundles'), e;
     })({});
-let O = (e) => null != e && 'home' !== e && 'catalog' !== e,
-    v = 800,
-    I = 604800000,
-    S = 12,
-    T = 1128,
-    A = 518,
-    N = 5,
-    C = new Date('2025-01-02T23:59:00-08:00'),
-    P = new Date('2025-02-15T23:59:00-08:00'),
-    R = 3,
-    w = ['1212569433839636530', '1212570343567261736', '1212582298893946880'];
-var D = (function (e) {
+let O = ['avatar-decorations', 'profile-effects', 'nameplates', 'bundles'],
+    v = (e) => O.includes(e),
+    I = (e) => null != e && 'home' !== e && 'catalog' !== e,
+    S = 800,
+    T = 604800000,
+    A = 12,
+    N = 1128,
+    C = 518,
+    P = 5,
+    R = new Date('2025-01-02T23:59:00-08:00'),
+    w = new Date('2025-02-15T23:59:00-08:00'),
+    D = 3,
+    L = ['1212569433839636530', '1212570343567261736', '1212582298893946880'];
+var x = (function (e) {
     return (e[(e.FIAT = 0)] = 'FIAT'), (e[(e.ORB = 1)] = 'ORB'), (e[(e.PREMIUM_PURCHASE = 2)] = 'PREMIUM_PURCHASE'), (e[(e.PROMOTIONAL = 3)] = 'PROMOTIONAL'), (e[(e.TENURE_REWARD = 4)] = 'TENURE_REWARD'), (e[(e.GIFT = 5)] = 'GIFT'), e;
 })({});
-let L = {
+let k = {
         ORB_PROFILE_BADGE: '1342211853484429445',
         FRACTIONAL_PREMIUM: u.a.PREMIUM_TIER_2_3_DAY
     },
-    x = new Set(Object.values(L)),
-    k = (e) => x.has(e);
+    M = new Set(Object.values(k)),
+    j = (e) => M.has(e);

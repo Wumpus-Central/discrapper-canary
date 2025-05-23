@@ -8,9 +8,9 @@ var r = n(255367),
     c = n(677232),
     u = n(884697),
     d = n(228624),
-    f = n(67409),
+    p = n(67409),
     b = n(474936),
-    p = n(231338),
+    f = n(231338),
     g = n(388032),
     h = n(846165);
 let m = {
@@ -78,9 +78,9 @@ let m = {
     _ = (e) => {
         let { product: t, selectedVariantIndex: n, returnRef: _, onSuccess: C, tooltipDelay: v, isGiftEasterEggEnabled: O, color: x = a.Ttl.BRAND } = e,
             { analyticsLocations: S } = (0, o.ZP)(),
-            j = l.useRef(null),
-            y = (0, i.Z)(j),
-            E = (0, d.hv)('CollectiblesShopGiftButton');
+            E = l.useRef(null),
+            j = (0, i.Z)(E),
+            P = (0, d.hv)('CollectiblesShopGiftButton');
         return (0, u.x6)(t)
             ? null
             : (0, r.jsx)(a.ua7, {
@@ -117,7 +117,7 @@ let m = {
                           })({}, e)),
                           (i = i =
                               {
-                                  buttonRef: j,
+                                  buttonRef: E,
                                   className: h.giftButton,
                                   color: x,
                                   look: a.zxk.Looks.FILLED,
@@ -127,7 +127,7 @@ let m = {
                                   onClick: (e) => {
                                       e.stopPropagation(),
                                           (0, s.Z)({
-                                              skuId: (0, f.S)({
+                                              skuId: (0, p.S)({
                                                   product: t,
                                                   selectedVariantIndex: n
                                               }),
@@ -135,7 +135,7 @@ let m = {
                                               giftingOrigin: b.Wt.SHOP_PAGE,
                                               analyticsLocations: S,
                                               returnRef: _,
-                                              variantsReturnStyle: E,
+                                              variantsReturnStyle: P,
                                               onClose:
                                                   null != C
                                                       ? (e) => {
@@ -146,9 +146,9 @@ let m = {
                                   },
                                   children: O
                                       ? (0, r.jsx)(c.Z, {
-                                            hovered: y,
+                                            hovered: j,
                                             isContentDismissed: !0,
-                                            themeOverride: p.BR.DARK,
+                                            themeOverride: f.BR.DARK,
                                             boxColors: m
                                         })
                                       : (0, r.jsx)(a.OgN, {

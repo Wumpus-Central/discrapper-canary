@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var l = n(120356),
@@ -9,12 +9,12 @@ var l = n(120356),
     c = n(381585),
     u = n(597688),
     d = n(709999),
-    f = n(388032),
+    p = n(388032),
     b = n(806734);
-let p = (e) => {
+let f = (e) => {
     let { shelf: t, handleTransition: n, tab: l } = e,
-        p = (0, i.e7)([s.default], () => s.default.getCurrentUser());
-    return null == p
+        f = (0, i.e7)([s.default], () => s.default.getCurrentUser());
+    return null == f
         ? null
         : (0, r.jsxs)('div', {
               className: a()(b.shelfBlockContainer, b.centeredSection),
@@ -30,7 +30,7 @@ let p = (e) => {
                               color: o.Ttl.PRIMARY,
                               look: o.iLD.FILLED,
                               onClick: () => n('shelf block see all', t.categorySkuId),
-                              children: f.intl.formatToPlainString(f.t.bc9RBA, { category_name: t.name })
+                              children: p.intl.formatToPlainString(p.t.bc9RBA, { category_name: t.name })
                           })
                       ]
                   }),
@@ -55,7 +55,7 @@ let p = (e) => {
                                                 {
                                                     product: i,
                                                     category: a,
-                                                    user: p,
+                                                    user: f,
                                                     tab: l
                                                 },
                                                 e

@@ -54,7 +54,7 @@ function j(e) {
     }
     return e;
 }
-function y(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,7 +72,7 @@ function y(e, t) {
         e
     );
 }
-let x = Object.freeze({
+let y = Object.freeze({
         shouldPreventNavigation: !1,
         onPreventNavigation: null,
         sidebarOpen: !0
@@ -94,7 +94,7 @@ function E(e) {
         section: i.section,
         children: (0, r.jsx)(
             c,
-            y(j({}, u), {
+            x(j({}, u), {
                 setPreventNavigation: o,
                 refToScroller: a
             })
@@ -222,7 +222,7 @@ class w extends i.PureComponent {
             O(this, '_intensity', C),
             O(this, '_subscribedStores', []),
             O(this, 'scrollerRef', i.createRef()),
-            O(this, 'state', y(j({}, x), { sidebarOpen: this.props.section !== _.oAB.SUBSCRIPTIONS && this.props.section !== _.oAB.PROFILE_CUSTOMIZATION })),
+            O(this, 'state', x(j({}, y), { sidebarOpen: this.props.section !== _.oAB.SUBSCRIPTIONS && this.props.section !== _.oAB.PROFILE_CUSTOMIZATION })),
             O(this, 'setPreventNavigation', (e, t) => {
                 this.setState({
                     shouldPreventNavigation: e,
@@ -241,7 +241,7 @@ class w extends i.PureComponent {
                             s.forEach((e) => {
                                 this._subscribedStores.includes(e) || (e.addChangeListener(this.handleNoticeStoreUpdate), this._subscribedStores.push(e));
                             }),
-                            this.setState(y(j({}, x), { sidebarOpen: !1 }));
+                            this.setState(x(j({}, y), { sidebarOpen: !1 }));
                     };
                 this.validNavigation() &&
                     !r &&

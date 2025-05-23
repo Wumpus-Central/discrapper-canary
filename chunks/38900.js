@@ -1,5 +1,5 @@
 n.d(t, {
-    K: () => f,
+    K: () => p,
     Z: () => b
 });
 var r = n(255367);
@@ -12,7 +12,7 @@ var l = n(120356),
     c = n(33588);
 let u = () => 4 * Math.random() + 8,
     d = [u(), u(), u()],
-    f = () =>
+    p = () =>
         (0, r.jsx)('div', {
             className: a()(s.skeleton, c.shopCard),
             children: (0, r.jsxs)('div', {
@@ -33,7 +33,7 @@ let u = () => 4 * Math.random() + 8,
                                 className: a()(s.skeleton, o.shopBanner),
                                 children: (0, r.jsx)('div', { className: s.bannerBody })
                             }),
-                            Array.from({ length: e }, (e, t) => t).map((e) => (0, r.jsx)(f, {}, e))
+                            Array.from({ length: e }, (e, t) => t).map((e) => (0, r.jsx)(p, {}, e))
                         ]
                     },
                     e
