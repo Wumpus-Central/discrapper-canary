@@ -215,74 +215,70 @@ function x(e) {
                         }, R));
                 });
         }, [P, x]);
-    if (
-        ((0, c.zq)(() => {
-            null != z.current && window.clearTimeout(z.current);
-        }),
-        B || 0 === et.length)
-    )
-        return null;
-    let el = 'en-US' === S.intl.currentLocale || 'en-GB' === S.intl.currentLocale,
-        ec = S.intl.string(el ? S.t.J6STd3 : S.t.IC5Anp);
-    return (0, r.jsxs)(r.Fragment, {
-        children: [
-            (0, r.jsxs)('div', {
-                ref: Y,
-                className: T.activityContainer,
-                style: { height: 'auto' !== X ? ''.concat(X, 'px') : X },
-                children: [
-                    (0, r.jsxs)('ul', {
-                        ref: W,
-                        className: T.cardsList,
-                        'aria-label': ec,
-                        tabIndex: -1,
-                        children: [
-                            (0, r.jsxs)('li', {
-                                className: a()(T.firstCardContainer, !ee && ei.length > 0 && T.hasShowMoreButton, H && T.isInteracting),
-                                children: [
-                                    er,
-                                    eo &&
-                                        'done' !== J &&
-                                        (0, r.jsx)('div', {
-                                            className: T.showMoreButtonContainer,
-                                            children: (0, r.jsx)(l.zxk, {
-                                                look: l.zxk.Looks.BLANK,
-                                                size: l.zxk.Sizes.NONE,
-                                                color: l.zxk.Colors.TRANSPARENT,
-                                                className: a()(T.showMoreButton, ee && T.isHidden),
-                                                onClick: es,
-                                                children: (0, r.jsx)(l.Text, {
-                                                    variant: 'text-xs/medium',
-                                                    color: 'header-primary',
-                                                    children: '+ '.concat(S.intl.format(S.t.O6PLYW, { activitiesCount: ei.length }))
-                                                })
-                                            })
-                                        })
-                                ]
-                            }),
-                            eo &&
-                                $ &&
-                                ei.map((e, t) =>
-                                    (0, r.jsx)(
-                                        'li',
-                                        {
-                                            className: a()(T.remainingCardContainer, ee && T.isShown),
-                                            children: e
-                                        },
-                                        'activity-'.concat(t)
-                                    )
-                                )
-                        ]
-                    }),
-                    eo && $ && ea
-                ]
-            }),
-            eo &&
-                (0, r.jsxs)('div', {
-                    ref: K,
-                    className: a()(T.cardsList, T.remainingCardsCopyToMeasure),
-                    children: [ei, ea]
-                })
-        ]
-    });
+    return ((0, c.zq)(() => {
+        null != z.current && window.clearTimeout(z.current);
+    }),
+    B || 0 === et.length)
+        ? null
+        : (0, r.jsxs)(r.Fragment, {
+              children: [
+                  (0, r.jsxs)('div', {
+                      ref: Y,
+                      className: T.activityContainer,
+                      style: { height: 'auto' !== X ? ''.concat(X, 'px') : X },
+                      children: [
+                          (0, r.jsxs)('ul', {
+                              ref: W,
+                              className: T.cardsList,
+                              'aria-label': S.intl.string(S.t.J6STd3),
+                              tabIndex: -1,
+                              children: [
+                                  (0, r.jsxs)('li', {
+                                      className: a()(T.firstCardContainer, !ee && ei.length > 0 && T.hasShowMoreButton, H && T.isInteracting),
+                                      children: [
+                                          er,
+                                          eo &&
+                                              'done' !== J &&
+                                              (0, r.jsx)('div', {
+                                                  className: T.showMoreButtonContainer,
+                                                  children: (0, r.jsx)(l.zxk, {
+                                                      look: l.zxk.Looks.BLANK,
+                                                      size: l.zxk.Sizes.NONE,
+                                                      color: l.zxk.Colors.TRANSPARENT,
+                                                      className: a()(T.showMoreButton, ee && T.isHidden),
+                                                      onClick: es,
+                                                      children: (0, r.jsx)(l.Text, {
+                                                          variant: 'text-xs/medium',
+                                                          color: 'header-primary',
+                                                          children: S.intl.format(S.t.wv8Q7u, { activitiesCount: ei.length })
+                                                      })
+                                                  })
+                                              })
+                                      ]
+                                  }),
+                                  eo &&
+                                      $ &&
+                                      ei.map((e, t) =>
+                                          (0, r.jsx)(
+                                              'li',
+                                              {
+                                                  className: a()(T.remainingCardContainer, ee && T.isShown),
+                                                  children: e
+                                              },
+                                              'activity-'.concat(t)
+                                          )
+                                      )
+                              ]
+                          }),
+                          eo && $ && ea
+                      ]
+                  }),
+                  eo &&
+                      (0, r.jsxs)('div', {
+                          ref: K,
+                          className: a()(T.cardsList, T.remainingCardsCopyToMeasure),
+                          children: [ei, ea]
+                      })
+              ]
+          });
 }

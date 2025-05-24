@@ -36,23 +36,24 @@ function u(e, t) {
     return n;
 }
 function d(e, t, n, i) {
-    let o = () => {
+    let o = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : l.fy.INFREQUENT_USER_ACTION,
+        c = () => {
             var r;
             return n(null == (r = s.Z.settings[e]) ? void 0 : r[t]);
         },
-        c = () => (0, r.e7)([s.Z], o);
+        u = () => (0, r.e7)([s.Z], c);
     return {
-        getSetting: o,
-        updateSetting: h(o, (n) =>
+        getSetting: c,
+        updateSetting: h(c, (n) =>
             a.hW.updateAsync(
                 e,
                 (e) => {
                     e[t] = i(n, e[t]);
                 },
-                l.fy.INFREQUENT_USER_ACTION
+                o
             )
         ),
-        useSetting: c
+        useSetting: u
     };
 }
 function f(e, t, n) {
