@@ -147,7 +147,8 @@ function C(e) {
                                     location: 'BotUserProfilePopout',
                                     user: t,
                                     themeType: I.lY.POPOUT,
-                                    onCloseProfile: D
+                                    onCloseProfile: D,
+                                    disableToolbar: !0
                                 })
                             ]
                         }),

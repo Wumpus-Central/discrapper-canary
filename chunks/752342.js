@@ -6,8 +6,8 @@ var r = t(481060),
     o = t(100527),
     s = t(906732),
     c = t(5192),
-    u = t(785717),
-    a = t(687158),
+    a = t(785717),
+    u = t(687158),
     d = t(899007),
     f = t(648052),
     p = t(867176),
@@ -29,9 +29,9 @@ var r = t(481060),
 function N(e) {
     let { user: n, currentUser: t, guildId: N, channelId: A, messageId: C, roleId: _, sessionId: w, initialSection: R, initialSubsection: M, transitionState: U, openedAt: L, onClose: D, sourceAnalyticsLocations: B = [] } = e,
         k = N === E.ME ? void 0 : N,
-        G = (0, a.ZP)(n.id, k),
+        G = (0, u.ZP)(n.id, k),
         { analyticsLocations: Y } = (0, s.ZP)([...B, o.Z.USER_PROFILE_MODAL]),
-        V = (0, u.ZB)({
+        V = (0, a.ZB)({
             layout: 'MODAL',
             userId: n.id,
             sourceSessionId: w,
@@ -43,7 +43,7 @@ function N(e) {
         F = (0, I.Z)(n);
     return (0, l.jsx)(s.Gt, {
         value: Y,
-        children: (0, l.jsx)(u.Mt, {
+        children: (0, l.jsx)(a.Mt, {
             value: V,
             openedAt: L,
             fetchStartedAt: null == G ? void 0 : G.fetchStartedAt,
@@ -88,7 +88,8 @@ function N(e) {
                                             user: n,
                                             themeType: P.lY.MODAL,
                                             hasEntered: U === r.Dvm.ENTERED,
-                                            onCloseProfile: D
+                                            onCloseProfile: D,
+                                            disableToolbar: !0
                                         }),
                                         (0, l.jsxs)('div', {
                                             className: S.headerButtons,

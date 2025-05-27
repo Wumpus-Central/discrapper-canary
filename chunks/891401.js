@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(49124);
+n.d(t, { Z: () => O }), n(49124);
 var a = n(255367),
     r = n(73800),
     l = n(120356),
@@ -10,17 +10,16 @@ var a = n(255367),
     u = n(481060),
     m = n(411149),
     x = n(151480),
-    h = n(461762),
-    p = n(680783),
-    b = n(553049),
-    f = n(605236),
-    v = n(291175),
-    g = n(675478),
-    j = n(944486),
-    _ = n(474936),
-    y = n(388032),
-    C = n(145634);
-function N(e) {
+    p = n(461762),
+    h = n(680783),
+    b = n(605236),
+    f = n(291175),
+    v = n(675478),
+    g = n(944486),
+    j = n(474936),
+    _ = n(388032),
+    y = n(145634);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -45,7 +44,7 @@ function N(e) {
     }
     return e;
 }
-function O(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -63,18 +62,18 @@ function O(e, t) {
         e
     );
 }
-function E() {
+function O() {
     return (0, a.jsxs)(u.Ttm, {
-        className: C.container,
-        children: [(0, a.jsx)(T, {}), (0, a.jsx)(S, {}), (0, a.jsx)(b.Z, {})]
+        className: y.container,
+        children: [(0, a.jsx)(E, {}), (0, a.jsx)(T, {})]
     });
 }
-function T() {
+function E() {
     var e, t;
-    let n = (0, c.e7)([j.Z], () => j.Z.getChannelId()),
-        l = (0, p.Z)(n),
+    let n = (0, c.e7)([g.Z], () => g.Z.getChannelId()),
+        l = (0, h.Z)(n),
         s = null == l ? void 0 : l.wallpaperId,
-        d = (0, h.Z)(s),
+        d = (0, p.Z)(s),
         b = r.useCallback(
             (e) => {
                 null != s && (0, x.i)(s, { opacity: e });
@@ -83,32 +82,32 @@ function T() {
         ),
         f = r.useCallback(
             (e) => {
-                P(null == l ? void 0 : l.wallpaperId, e.target.value);
+                S(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
             [null == l ? void 0 : l.wallpaperId]
         ),
         v = r.useCallback(
             (e) => {
-                k(null == l ? void 0 : l.wallpaperId, e.target.value);
-            },
-            [null == l ? void 0 : l.wallpaperId]
-        ),
-        g = r.useCallback(
-            (e) => {
                 I(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
             [null == l ? void 0 : l.wallpaperId]
         ),
-        _ = r.useCallback(() => P(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        E = r.useCallback(() => k(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        T = r.useCallback(() => I(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        S = r.useCallback(
+        j = r.useCallback(
+            (e) => {
+                P(null == l ? void 0 : l.wallpaperId, e.target.value);
+            },
+            [null == l ? void 0 : l.wallpaperId]
+        ),
+        O = r.useCallback(() => S(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        E = r.useCallback(() => I(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        T = r.useCallback(() => P(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        w = r.useCallback(
             (e) => {
                 null != s && (0, x.i)(s, { token_mix_amount: Math.round(e) });
             },
             [s]
         ),
-        w = r.useCallback(() => {
+        k = r.useCallback(() => {
             null != s && (0, x.i)(s, null);
         }, [s]),
         R = null != (e = null == d ? void 0 : d.opacity) ? e : 1,
@@ -116,25 +115,25 @@ function T() {
     return (0, a.jsxs)('div', {
         children: [
             (0, a.jsx)(o.X6, {
-                className: C.header,
+                className: y.header,
                 variant: 'heading-lg/semibold',
                 children: 'DM Wallpapers'
             }),
             null == d &&
                 (0, a.jsx)('p', {
-                    className: C.explanation,
+                    className: y.explanation,
                     children: 'Open a DM with a wallpaper to customize.'
                 }),
             null != d &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)(o.X6, {
-                            className: C.subheader,
+                            className: y.subheader,
                             variant: 'heading-md/semibold',
                             children: 'ChatWallpaperMetadataRecord'
                         }),
                         (0, a.jsx)('pre', {
-                            className: C.code,
+                            className: y.code,
                             children: JSON.stringify(m.Z.getWallpaperById(s), null, 2)
                         }),
                         (0, a.jsx)(u.ua7, {
@@ -142,10 +141,10 @@ function T() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     o.X6,
-                                    O(
-                                        N(
+                                    N(
+                                        C(
                                             {
-                                                className: i()(C.subheader, C.hasTooltip),
+                                                className: i()(y.subheader, y.hasTooltip),
                                                 variant: 'heading-md/semibold'
                                             },
                                             e
@@ -157,7 +156,7 @@ function T() {
                         (0, a.jsx)(
                             u.iRW,
                             {
-                                className: C.slider,
+                                className: y.slider,
                                 initialValue: R,
                                 defaultValue: 1,
                                 minValue: 0,
@@ -171,10 +170,10 @@ function T() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     o.X6,
-                                    O(
-                                        N(
+                                    N(
+                                        C(
                                             {
-                                                className: i()(C.subheader, C.hasTooltip),
+                                                className: i()(y.subheader, y.hasTooltip),
                                                 variant: 'heading-md/semibold'
                                             },
                                             e
@@ -184,7 +183,7 @@ function T() {
                                 )
                         }),
                         (0, a.jsxs)('div', {
-                            className: C.colorInputContainer,
+                            className: y.colorInputContainer,
                             children: [
                                 (0, a.jsx)(
                                     'input',
@@ -197,13 +196,13 @@ function T() {
                                 ),
                                 (0, a.jsx)(u.M0o, {
                                     color: 'currentColor',
-                                    tooltip: y.intl.string(y.t.N86XcH),
+                                    tooltip: _.intl.string(_.t.N86XcH),
                                     icon: (0, a.jsx)(u.P$X, {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
-                                    onClick: _,
-                                    className: C.removeButton
+                                    onClick: O,
+                                    className: y.removeButton
                                 })
                             ]
                         }),
@@ -212,10 +211,10 @@ function T() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     o.X6,
-                                    O(
-                                        N(
+                                    N(
+                                        C(
                                             {
-                                                className: i()(C.subheader, C.hasTooltip),
+                                                className: i()(y.subheader, y.hasTooltip),
                                                 variant: 'heading-md/semibold'
                                             },
                                             e
@@ -225,7 +224,7 @@ function T() {
                                 )
                         }),
                         (0, a.jsxs)('div', {
-                            className: C.colorInputContainer,
+                            className: y.colorInputContainer,
                             children: [
                                 (0, a.jsx)(
                                     'input',
@@ -238,13 +237,13 @@ function T() {
                                 ),
                                 (0, a.jsx)(u.M0o, {
                                     color: 'currentColor',
-                                    tooltip: y.intl.string(y.t.N86XcH),
+                                    tooltip: _.intl.string(_.t.N86XcH),
                                     icon: (0, a.jsx)(u.P$X, {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
                                     onClick: E,
-                                    className: C.removeButton
+                                    className: y.removeButton
                                 })
                             ]
                         }),
@@ -253,10 +252,10 @@ function T() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     o.X6,
-                                    O(
-                                        N(
+                                    N(
+                                        C(
                                             {
-                                                className: i()(C.subheader, C.hasTooltip),
+                                                className: i()(y.subheader, y.hasTooltip),
                                                 variant: 'heading-md/semibold'
                                             },
                                             e
@@ -268,12 +267,12 @@ function T() {
                         (0, a.jsx)(
                             u.iRW,
                             {
-                                className: C.slider,
+                                className: y.slider,
                                 initialValue: A,
                                 defaultValue: 100,
                                 minValue: 0,
                                 maxValue: 100,
-                                onValueChange: S
+                                onValueChange: w
                             },
                             'tokenMixAmount-'.concat(A)
                         ),
@@ -282,10 +281,10 @@ function T() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     o.X6,
-                                    O(
-                                        N(
+                                    N(
+                                        C(
                                             {
-                                                className: i()(C.subheader, C.hasTooltip),
+                                                className: i()(y.subheader, y.hasTooltip),
                                                 variant: 'heading-md/semibold'
                                             },
                                             e
@@ -295,32 +294,32 @@ function T() {
                                 )
                         }),
                         (0, a.jsxs)('div', {
-                            className: C.colorInputContainer,
+                            className: y.colorInputContainer,
                             children: [
                                 (0, a.jsx)(
                                     'input',
                                     {
                                         type: 'color',
                                         value: d.link_color,
-                                        onChange: g
+                                        onChange: j
                                     },
                                     'linkColor-'.concat(d.link_color)
                                 ),
                                 (0, a.jsx)(u.M0o, {
                                     color: 'currentColor',
-                                    tooltip: y.intl.string(y.t.N86XcH),
+                                    tooltip: _.intl.string(_.t.N86XcH),
                                     icon: (0, a.jsx)(u.P$X, {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
                                     onClick: T,
-                                    className: C.removeButton
+                                    className: y.removeButton
                                 })
                             ]
                         }),
                         (0, a.jsx)(u.zxk, {
-                            className: C.resetButton,
-                            onClick: w,
+                            className: y.resetButton,
+                            onClick: k,
                             children: 'Reset'
                         })
                     ]
@@ -328,18 +327,18 @@ function T() {
         ]
     });
 }
-function S() {
+function T() {
     var e;
     let t = r.useCallback(() => {
-            (0, g.Z1)(d.z.NITRO_TENURE_BADGE_LEVEL_UP);
+            (0, v.Z1)(d.z.NITRO_TENURE_BADGE_LEVEL_UP);
         }, []),
-        { lastDismissedVersion: n } = (0, f.H4)(d.z.NITRO_TENURE_BADGE_LEVEL_UP),
-        l = (null != n ? n : 0) > 0 ? _.Qh[n - 1] : null,
-        i = null != l ? (null == (e = (0, v.fv)(l)) ? void 0 : e.nameUnformatted) : null;
+        { lastDismissedVersion: n } = (0, b.H4)(d.z.NITRO_TENURE_BADGE_LEVEL_UP),
+        l = (null != n ? n : 0) > 0 ? j.Qh[n - 1] : null,
+        i = null != l ? (null == (e = (0, f.fv)(l)) ? void 0 : e.nameUnformatted) : null;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(o.X6, {
-                className: C.header,
+                className: y.header,
                 variant: 'heading-lg/semibold',
                 children: 'Tenure Badges'
             }),
@@ -348,13 +347,13 @@ function S() {
                     'Level Up DC:\xA0',
                     null != i &&
                         (0, a.jsxs)('b', {
-                            children: ['Dismissed (', y.intl.string(i), ')']
+                            children: ['Dismissed (', _.intl.string(i), ')']
                         }),
                     null == i && (0, a.jsx)('b', { children: 'Not Dismissed' })
                 ]
             }),
             (0, a.jsx)('div', {
-                className: C.tenureBadgeControls,
+                className: y.tenureBadgeControls,
                 children: (0, a.jsx)(u.zxk, {
                     onClick: t,
                     children: 'Reset Level Up DC'
@@ -363,12 +362,12 @@ function S() {
         ]
     });
 }
-let P = (0, s.debounce)(function (e, t) {
+let S = (0, s.debounce)(function (e, t) {
         null != e && (0, x.i)(e, { primary_color: t });
     }, 200),
-    I = (0, s.debounce)(function (e, t) {
+    P = (0, s.debounce)(function (e, t) {
         null != e && (0, x.i)(e, { link_color: t });
     }, 200),
-    k = (0, s.debounce)(function (e, t) {
+    I = (0, s.debounce)(function (e, t) {
         null != e && (0, x.i)(e, { secondary_color: t });
     }, 200);

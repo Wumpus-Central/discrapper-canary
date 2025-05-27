@@ -5,13 +5,13 @@ var l = t(255367),
     o = t(481060),
     s = t(34854),
     c = t(531301),
-    u = t(246946),
-    a = t(981631),
+    a = t(246946),
+    u = t(981631),
     d = t(388032),
     f = t(343074);
 function p(e) {
     let { autoFocus: n = !1, className: t, userId: p, onUpdate: g } = e,
-        h = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
+        h = (0, i.e7)([a.Z], () => a.Z.hidePersonalInformation),
         { loading: v, note: j } = (0, c.Z)(p),
         m = r.useRef(null);
     return (r.useEffect(() => {
@@ -39,10 +39,10 @@ function p(e) {
                               var n;
                               (null != (n = e.currentTarget.value.match(/\n/g)) ? n : []).length >= 5 && e.preventDefault();
                           } else e.preventDefault(), e.currentTarget.blur();
-                      else e.which === a.yXg.SPACE && e.stopPropagation();
+                      else e.which === u.yXg.SPACE && e.stopPropagation();
                   },
                   defaultValue: null != j ? j : void 0,
-                  maxLength: a.vuo
+                  maxLength: u.vuo
               })
           });
 }

@@ -90,7 +90,7 @@ function N(e) {
                                     location: 'UserProfilePreview',
                                     user: t,
                                     themeType: S.lY.POPOUT,
-                                    disableEdit: U
+                                    disableToolbar: U
                                 })
                         ]
                     }),

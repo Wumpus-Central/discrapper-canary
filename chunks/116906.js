@@ -6,8 +6,8 @@ var r = t(442837),
     o = t(468363),
     s = t(353647),
     c = t(158776),
-    u = t(885110),
-    a = t(63063),
+    a = t(885110),
+    u = t(63063),
     d = t(209698),
     f = t(369566),
     p = t(29899),
@@ -32,8 +32,8 @@ function I(e) {
         }),
         M = (0, r.e7)([s.Z], () => s.Z.isFetchingUserOutbox(n.id)),
         U = n.id === t.id,
-        L = (0, r.e7)([u.Z, c.Z], () => {
-            let e = U ? u.Z.getStatus() : c.Z.getStatus(n.id);
+        L = (0, r.e7)([a.Z, c.Z], () => {
+            let e = U ? a.Z.getStatus() : c.Z.getStatus(n.id);
             return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
         }),
         D = A.length > 0 || null != _,
@@ -98,7 +98,7 @@ function I(e) {
                                           (0, l.jsx)(
                                               i.eee,
                                               {
-                                                  href: a.Z.getArticleURL(x.BhN.ACTIVITY_STATUS_SETTINGS),
+                                                  href: u.Z.getArticleURL(x.BhN.ACTIVITY_STATUS_SETTINGS),
                                                   children: e
                                               },
                                               n

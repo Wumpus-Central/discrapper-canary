@@ -11,8 +11,8 @@ function d(e, t, n, r) {
         u = a.useRef(null),
         m = a.useRef(null),
         x = a.useRef(n),
-        { searchStringGenerator: h } = r,
-        p = (function (e) {
+        { searchStringGenerator: p } = r,
+        h = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
                 [n, r] = a.useState(e),
                 i = a.useRef(e);
@@ -28,7 +28,7 @@ function d(e, t, n, r) {
                 }, t),
                 n
             );
-        })(t.map(h), [t, h, ...d]),
+        })(t.map(p), [t, p, ...d]),
         b = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
                 [n, r] = a.useState(e),
@@ -121,13 +121,13 @@ function d(e, t, n, r) {
     }, [r]);
     return (
         a.useEffect(() => {
-            f(e, b, p);
-        }, [f, e, b, p, ...d]),
+            f(e, b, h);
+        }, [f, e, b, h, ...d]),
         a.useEffect(
             () => () => {
                 null != m.current && m.current.cancel(), (m.current = null), (u.current = null);
             },
-            [p, n, r]
+            [h, n, r]
         ),
         f
     );

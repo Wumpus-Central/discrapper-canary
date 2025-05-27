@@ -6,8 +6,8 @@ var r = t(442837),
     o = t(666520),
     s = t(592125),
     c = t(430824),
-    u = t(944486),
-    a = t(785717),
+    a = t(944486),
+    u = t(785717),
     d = t(621853),
     f = t(172351),
     p = t(280885),
@@ -19,13 +19,13 @@ var r = t(442837),
     b = t(349966);
 function x(e) {
     let { user: n, currentUser: t, displayProfile: x, guildId: Z, subsection: y, onClose: O } = e,
-        { trackUserProfileAction: I } = (0, a.KZ)(),
+        { trackUserProfileAction: I } = (0, u.KZ)(),
         P = (0, r.e7)([c.Z], () => c.Z.getGuild(Z)),
         E = (0, r.e7)([d.Z], () => {
             var e;
             return null == (e = d.Z.getUserProfile(n.id)) ? void 0 : e.application;
         }),
-        T = (0, r.e7)([s.Z, u.Z], () => s.Z.getChannel(u.Z.getChannelId()));
+        T = (0, r.e7)([s.Z, a.Z], () => s.Z.getChannel(a.Z.getChannelId()));
     return (0, l.jsxs)(i.zJl, {
         fade: !0,
         className: b.scroller,

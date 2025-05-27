@@ -6,8 +6,8 @@ var r = t(481060),
     o = t(769654),
     s = t(785717),
     c = t(806729),
-    u = t(821179),
-    a = t(388032),
+    a = t(821179),
+    u = t(388032),
     d = t(301150);
 function f(e) {
     let { user: n, onClose: t } = e,
@@ -31,7 +31,7 @@ function f(e) {
                       : p.map((e) => {
                             let { guild: t, nick: r } = e;
                             return (0, l.jsx)(
-                                u.Z,
+                                a.Z,
                                 {
                                     user: n,
                                     guild: t,
@@ -49,7 +49,7 @@ function f(e) {
                             (0, l.jsx)('div', { className: d.emptyIconGuilds }),
                             (0, l.jsx)('div', {
                                 className: d.emptyText,
-                                children: a.intl.string(a.t.zjVh8v)
+                                children: u.intl.string(u.t.zjVh8v)
                             })
                         ]
                     })

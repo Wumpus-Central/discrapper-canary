@@ -1,49 +1,51 @@
-n.d(t, { Z: () => g }), n(539854), n(388685);
+n.d(t, { Z: () => E }), n(539854), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(442837),
     o = n(704215),
     a = n(907459),
     s = n(514361),
-    l = n(724145),
-    c = n(605236),
-    u = n(243778),
-    d = n(819640),
-    f = n(594174),
-    _ = n(74538),
-    p = n(550385),
-    h = n(981631),
-    m = n(921944);
-let g = function () {
+    l = n(553049),
+    c = n(724145),
+    u = n(605236),
+    d = n(243778),
+    f = n(819640),
+    _ = n(594174),
+    p = n(74538),
+    h = n(550385),
+    m = n(981631),
+    g = n(921944);
+let E = function () {
     let e = (0, i.e7)([s.Z], () => s.Z.isCoachmark),
-        t = (0, i.e7)([d.Z], () => d.Z.getLayers().includes(h.S9g.USER_SETTINGS)),
-        n = (0, i.e7)([f.default], () => _.ZP.canUseClientThemes(f.default.getCurrentUser())),
-        { activePanel: g } = (0, p.oq)(),
-        E = [];
-    t || !e || n || null != g || E.push(o.z.CLIENT_THEMES_COACHMARK);
-    let [b, y] = (0, u.US)(E, m.R.SIDEBAR, !0),
-        O = b === o.z.CLIENT_THEMES_COACHMARK;
+        t = (0, i.e7)([f.Z], () => f.Z.getLayers().includes(m.S9g.USER_SETTINGS)),
+        n = (0, i.e7)([_.default], () => p.ZP.canUseClientThemes(_.default.getCurrentUser())),
+        { activePanel: E, metadata: b } = (0, h.oq)(),
+        y = [];
+    t || !e || n || null != E || y.push(o.z.CLIENT_THEMES_COACHMARK);
+    let [O, v] = (0, d.US)(y, g.R.SIDEBAR, !0),
+        I = O === o.z.CLIENT_THEMES_COACHMARK;
     return t
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (g === p.wh.CLIENT_THEMES || O) &&
-                      (0, r.jsx)(l.Z, {
-                          markAsDismissed: O
-                              ? y
+                  (E === h.wh.CLIENT_THEMES || I) &&
+                      (0, r.jsx)(c.Z, {
+                          markAsDismissed: I
+                              ? v
                               : () => {
-                                    (0, c.EW)(o.z.CLIENT_THEMES_COACHMARK, {
-                                        dismissAction: m.L.INDIRECT_ACTION,
+                                    (0, u.EW)(o.z.CLIENT_THEMES_COACHMARK, {
+                                        dismissAction: g.L.INDIRECT_ACTION,
                                         forceTrack: !0
                                     });
                                 },
-                          showClientThemesCoachmark: O
+                          showClientThemesCoachmark: I
                       }),
-                  g === p.wh.APP_ICON &&
+                  E === h.wh.APP_ICON &&
                       (0, r.jsx)(a.Z, {
                           isCoachmark: !1,
-                          markAsDismissed: y
-                      })
+                          markAsDismissed: v
+                      }),
+                  E === h.wh.CUSTOM_THEME && (0, r.jsx)(l.Z, { metadata: b })
               ]
           });
 };

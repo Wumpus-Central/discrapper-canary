@@ -67,13 +67,13 @@ let E = 57.75,
         let { user: t, onClose: n, bio: o, hidePersonalInformation: p, viewFullBioDisabled: m = !1 } = e,
             { context: b } = (0, c.KZ)(),
             { analyticsLocations: y } = (0, l.ZP)(),
-            [O, v] = i.useState(null),
+            [O, v] = i.useState(!1),
             [I, S] = i.useState(!1),
-            [T, A] = i.useState(!1),
-            N = (e) => {
-                null != e && (v(e), S(!T && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > E && A(!0));
+            T = i.useRef(null),
+            A = (e) => {
+                (T.current = e), null != e && (v(!I && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > E && S(!0));
             },
-            C = () => {
+            N = () => {
                 null == n || n(),
                     (0, u.openUserProfileModal)(
                         g(h({}, b), {
@@ -82,30 +82,30 @@ let E = 57.75,
                         })
                     );
             },
-            P = (e) => {
-                null == O || (null == O ? void 0 : O.contains(e.relatedTarget)) || (O.scrollTop = 0);
+            C = (e) => {
+                null == T.current || T.current.contains(e.relatedTarget) || (T.current.scrollTop = 0);
             };
         return p || null == o || '' === o
             ? null
             : (0, r.jsxs)('div', {
                   children: [
                       (0, r.jsx)('div', {
-                          ref: N,
-                          className: a()(_.descriptionClamp, T && _.maxBioHeight),
-                          onBlur: P,
+                          ref: A,
+                          className: a()(_.descriptionClamp, I && _.maxBioHeight),
+                          onBlur: C,
                           children: (0, r.jsx)(d.Z, {
                               userBio: o,
                               setLineClamp: !1,
                               textColor: 'header-primary'
                           })
                       }),
-                      (I || T) &&
+                      (O || I) &&
                           (0, r.jsx)(s.zxk, {
                               look: s.zxk.Looks.BLANK,
                               size: s.zxk.Sizes.NONE,
                               className: _.viewFullBio,
                               color: a()(_.viewFullBioColor, m && _.viewFullBioDisabled),
-                              onClick: C,
+                              onClick: N,
                               children: (0, r.jsx)(s.Text, {
                                   variant: 'text-xs/normal',
                                   color: 'none',

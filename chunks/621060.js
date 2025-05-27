@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => g,
-    v0: () => p
+    v0: () => h
 }),
     n(388685),
     n(539854),
@@ -16,13 +16,13 @@ var a,
     u = n(424625),
     m = n(823379),
     x = n(246992),
-    h = n(616257),
-    p = (((a = {}).NONE = ''), (a.EXPERIMENTS = 'Experiments'), (a.EVENTS = 'Events'), (a.PREMIUM = 'Premium'), (a.BILLING = 'Billing'), (a.USERS = 'Users'), (a.GUILDS = 'Guilds'), (a.UI = 'UI'), (a.GAMES = 'Games'), (a.AUDIO_VIDEO = 'Audio / Video'), (a.DEVELOPMENT = 'Development'), a);
+    p = n(616257),
+    h = (((a = {}).NONE = ''), (a.EXPERIMENTS = 'Experiments'), (a.EVENTS = 'Events'), (a.PREMIUM = 'Premium'), (a.BILLING = 'Billing'), (a.USERS = 'Users'), (a.GUILDS = 'Guilds'), (a.UI = 'UI'), (a.GAMES = 'Games'), (a.AUDIO_VIDEO = 'Audio / Video'), (a.DEVELOPMENT = 'Development'), a);
 let b = ['Experiments', 'Events', 'Premium', 'Billing', 'Users', 'Guilds', 'UI', 'Games', 'Audio / Video', 'Development'],
     f = l.forwardRef(function (e, t) {
         let { id: n, selected: a, onClick: l, children: i } = e;
         return (0, r.jsx)(c.P3F, {
-            className: s()(h.tabItem, { [h.selected]: a }),
+            className: s()(p.tabItem, { [p.selected]: a }),
             'data-tab-id': n,
             innerRef: t,
             onClick: l,
@@ -32,7 +32,7 @@ let b = ['Experiments', 'Events', 'Premium', 'Billing', 'Users', 'Guilds', 'UI',
 function v(e) {
     let { tabs: t, selectedTabId: n, onSelectTab: a } = e,
         i = l.useRef(new Map()),
-        [s, p] = l.useState(() => new Set()),
+        [s, h] = l.useState(() => new Set()),
         { ref: v, width: g } = (0, d.ZP)(),
         j = l.useRef(null);
     l.useEffect(() => {
@@ -41,7 +41,7 @@ function v(e) {
         let s = new Set(),
             o = null != g ? g : 0;
         for (let c of ((o -= null != (a = null == (e = i.current.get(n)) ? void 0 : e.getBoundingClientRect().width) ? a : 0), t)) c.id !== n && (o -= null != (l = null == (r = i.current.get(c.id)) ? void 0 : r.getBoundingClientRect().width) ? l : 0) < 0 && s.add(c.id);
-        p(s);
+        h(s);
     }, [t, g, v, n]);
     let _ = l.useCallback(
         (e) => {
@@ -102,10 +102,10 @@ function v(e) {
         [t, a]
     );
     return (0, r.jsxs)('div', {
-        className: h.tabBarContainer,
+        className: p.tabBarContainer,
         children: [
             (0, r.jsxs)('div', {
-                className: h.tabBar,
+                className: p.tabBar,
                 ref: v,
                 children: [
                     t
@@ -125,7 +125,7 @@ function v(e) {
                         })
                         .filter(m.lm),
                     (0, r.jsx)('div', {
-                        className: h.tabMeasurer,
+                        className: p.tabMeasurer,
                         children: t.map((e) => {
                             let { id: t, name: l } = e;
                             return (0, r.jsx)(
@@ -146,7 +146,7 @@ function v(e) {
                 ]
             }),
             (0, r.jsx)('div', {
-                className: h.menu,
+                className: p.menu,
                 children:
                     s.size > 0 &&
                     (0, r.jsx)(c.yRy, {
@@ -188,11 +188,11 @@ function v(e) {
                                 (n = n =
                                     {
                                         buttonRef: j,
-                                        className: h.overflowChevron,
+                                        className: p.overflowChevron,
                                         size: c.zxk.Sizes.ICON,
                                         look: c.zxk.Looks.BLANK,
                                         children: (0, r.jsx)(u.Z, {
-                                            className: h.__invalid_overflowIcon,
+                                            className: p.__invalid_overflowIcon,
                                             width: 16,
                                             height: 16
                                         })

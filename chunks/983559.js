@@ -150,7 +150,8 @@ function R(e) {
                                             location: 'UserProfileSiebar',
                                             user: t,
                                             channelId: R.id,
-                                            themeType: N.lY.SIDEBAR
+                                            themeType: N.lY.SIDEBAR,
+                                            disableToolbar: t.bot
                                         }),
                                         t.isClyde() && (0, r.jsx)(p.Z, { className: A.headerTag })
                                     ]

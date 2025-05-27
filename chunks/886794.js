@@ -5,8 +5,8 @@ var l = t(255367),
     o = t(727637),
     s = t(100527),
     c = t(906732),
-    u = t(680295),
-    a = t(5192),
+    a = t(680295),
+    u = t(5192),
     d = t(785717),
     f = t(687158),
     p = t(899007),
@@ -87,7 +87,7 @@ function N(e) {
                                     (0, l.jsx)(x.Z, {
                                         className: E.username,
                                         user: n,
-                                        nickname: a.ZP.getName(L, N, n),
+                                        nickname: u.ZP.getName(L, N, n),
                                         pronouns: null == D ? void 0 : D.pronouns,
                                         nicknameVariant: 'heading-xl/bold',
                                         tags: (0, l.jsx)(g.Z, {
@@ -144,7 +144,7 @@ function N(e) {
                         ]
                     }),
                     (null == D ? void 0 : D.profileEffectId) != null &&
-                        (0, l.jsx)(u.Z, {
+                        (0, l.jsx)(a.Z, {
                             profileEffectId: null == D ? void 0 : D.profileEffectId,
                             isHovering: Y
                         })

@@ -1,6 +1,6 @@
 n.d(t, {
     Mn: () => b,
-    OD: () => p,
+    OD: () => h,
     W9: () => x
 }),
     n(388685),
@@ -43,13 +43,13 @@ function x() {
         }
     ];
 }
-let h = {
+let p = {
     ignoreMute: !1,
     ignoreUnreadSetting: !0,
     ignoreNotificationSetting: !1
 };
-function p(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h;
+function h(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p;
     return s.default.keys(e).filter((n) => {
         var a, l;
         let s = e[n].message_notifications !== c.bL.NULL,

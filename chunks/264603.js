@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var a = n(255367),
     r = n(73800),
     l = n(120356),
@@ -27,7 +27,7 @@ let x = [
         value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE
     }
 ];
-function h() {
+function p() {
     let e = r.useRef(null),
         t = c.JG.useSetting();
     return (0, a.jsxs)('div', {

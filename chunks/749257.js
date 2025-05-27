@@ -113,7 +113,6 @@ function x(e) {
         I = (0, m.Z)({
             channel: t,
             user: x,
-            member: v,
             inline: C.has('ban')
         }),
         N = (0, h.Z)({

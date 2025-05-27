@@ -1,39 +1,39 @@
-n.d(t, { o: () => p }), n(388685);
-var a = n(255367),
-    r = n(73800),
-    l = n(657707),
-    i = n(442837),
+n.d(t, { o: () => h }), n(388685);
+var r = n(255367),
+    i = n(73800),
+    o = n(657707),
+    a = n(442837),
     s = n(481060),
-    o = n(153867),
+    l = n(153867),
     c = n(210887),
-    d = n(740492),
-    u = n(514361),
-    m = n(874893),
-    x = n(231338),
-    h = n(531864);
-function p() {
-    let [e, t] = r.useState(x.BR.LIGHT),
+    u = n(740492),
+    d = n(514361),
+    f = n(874893),
+    _ = n(231338),
+    p = n(531864);
+function h() {
+    let [e, t] = i.useState(_.BR.LIGHT),
         n = [
             {
                 name: '',
-                value: x.BR.DARK,
-                icon: l.Z6G
+                value: _.BR.DARK,
+                icon: o.Z6G
             },
             {
                 name: '',
-                value: x.BR.LIGHT,
-                icon: l.chG
+                value: _.BR.LIGHT,
+                icon: o.chG
             }
         ],
-        [p, b, f] = (0, i.Wu)([c.Z, d.ZP, u.Z], () => [c.Z.theme, null == u.Z.gradientPreset, d.ZP.useSystemTheme === m.KW.ON]);
-    return (0, a.jsx)('div', {
-        className: h.themeSelector,
-        children: (0, a.jsx)(s.sY7, {
+        [h, m, g] = (0, a.Wu)([c.Z, u.ZP, d.Z], () => [c.Z.theme, null == d.Z.gradientPreset, u.ZP.useSystemTheme === f.KW.ON]);
+    return (0, r.jsx)('div', {
+        className: p.themeSelector,
+        children: (0, r.jsx)(s.sY7, {
             options: n,
-            value: b && !f ? p : e,
+            value: m && !g ? h : e,
             onChange: (e) => {
                 let { value: n } = e;
-                t(n), (0, o.ZI)({ theme: n });
+                t(n), (0, l.ZI)({ theme: n });
             },
             look: 'pill'
         })

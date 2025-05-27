@@ -23,7 +23,7 @@ var r = n(887003),
 let s = /\.([a-zA-Z0-9]+)$/,
     l = ['video/mp4', 'video/webm'];
 var c = (function (e) {
-    return (e.HERO = 'hero'), (e.HERO_IMAGE = 'hero_image'), (e.HERO_VIDEO = 'hero_video'), (e.QUEST_BAR_HERO = 'quest_bar_hero'), (e.QUEST_BAR_HERO_VIDEO = 'quest_bar_hero_video'), (e.REWARD = 'reward'), (e.GAME_TILE = 'game_tile'), (e.LOGO_TYPE = 'logo_type'), e;
+    return (e.HERO = 'hero'), (e.HERO_IMAGE = 'hero_image'), (e.HERO_VIDEO = 'hero_video'), (e.QUEST_BAR_HERO = 'quest_bar_hero'), (e.QUEST_BAR_HERO_VIDEO = 'quest_bar_hero_video'), (e.REWARD = 'reward'), (e.REWARD_IMAGE = 'reward_image'), (e.GAME_TILE = 'game_tile'), (e.LOGO_TYPE = 'logo_type'), e;
 })({});
 function u(e, t, n) {
     let r = p(e, t, n),
@@ -76,6 +76,12 @@ function f(e, t, n) {
                     isAnimated: !0
                 };
             c = d(t.assetVideo, t.asset);
+            break;
+        }
+        case 'reward_image': {
+            let t = (0, i.hF)(e);
+            if (t.type === r.w.VIRTUAL_CURRENCY) return null;
+            c = t.asset;
             break;
         }
         case 'game_tile':

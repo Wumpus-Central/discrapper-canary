@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => I });
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -18,14 +18,75 @@ var r = n(255367),
     b = n(341907),
     y = n(388032),
     O = n(734506);
-let v = function (e) {
+function v(e) {
+    let { videoActive: t, imageAsset: n, videoAsset: o, useReducedMotion: s, onLoadComplete: l } = e,
+        c = i.useRef(null),
+        u = i.useRef(t);
+    i.useEffect(() => {
+        var e;
+        if (null != o && null != c.current) {
+            if (!(null == (e = o.asset) ? void 0 : e.isAnimated) || s) {
+                (c.current.currentTime = 0), c.current.pause();
+                return;
+            }
+            t && !u.current ? c.current.play() : !t && u.current && ((c.current.currentTime = 0), c.current.pause()), (u.current = t);
+        }
+    }, [t, o, s]);
+    let f = null != n && !n.asset.isAnimated,
+        _ = null != o && o.asset.isAnimated;
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            f &&
+                (0, r.jsx)(E.Fl, {
+                    id: n.assetId,
+                    children: (e) => {
+                        var i;
+                        return (0, r.jsx)('img', {
+                            ref: e,
+                            alt: n.alt,
+                            className: a()(n.className, { [O.hidden]: t }),
+                            src: null == (i = n.asset) ? void 0 : i.url,
+                            onLoad: l
+                        });
+                    }
+                }),
+            _ &&
+                (0, r.jsx)(E.Fl, {
+                    id: o.assetId,
+                    children: (e) => {
+                        var i, u, _, p;
+                        return (0, r.jsx)(d.Z, {
+                            ref: (t) => {
+                                (e.current = t), (c.current = t);
+                            },
+                            autoPlay: !s && t,
+                            loop: !0,
+                            muted: !0,
+                            preload: f ? 'none' : 'auto',
+                            poster: f ? (null == (i = n.asset) ? void 0 : i.url) : void 0,
+                            playsInline: !0,
+                            className: a()(o.className, { [O.hidden]: !t && f }),
+                            controls: !1,
+                            onProgress: l,
+                            children: (0, r.jsx)('source', {
+                                src: null == (u = o.asset) ? void 0 : u.url,
+                                type: null != (p = null == (_ = o.asset) ? void 0 : _.mimetype) ? p : void 0
+                            })
+                        });
+                    }
+                })
+        ]
+    });
+}
+let I = function (e) {
     let t,
-        { className: n, quest: o, autoplay: v = !0, learnMoreStyle: I = null } = e,
+        { className: n, quest: o, autoplay: d = !0, learnMoreStyle: I = null } = e,
         S = (0, _.O5)(),
         T = (0, l.e7)([f.Z], () => f.Z.isFocused()),
         A = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         N = i.useMemo(() => (0, h.fh)(o, h.eC.REWARD), [o]),
-        C = i.useCallback(
+        C = i.useMemo(() => (0, h.fh)(o, h.eC.REWARD_IMAGE), [o]),
+        P = i.useCallback(
             (t) => {
                 var n;
                 (0, s.k)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
@@ -42,21 +103,9 @@ let v = function (e) {
                     null == (n = e.onClick) || n.call(e, t);
             },
             [S, o.id, e]
-        ),
-        P = i.useRef(null),
-        R = i.useRef(v),
-        w = (0, p.Bg)(o.config);
+        );
     return (
-        i.useEffect(() => {
-            if (null != P.current) {
-                if (!N.isAnimated || A) {
-                    (P.current.currentTime = 0), P.current.pause();
-                    return;
-                }
-                v && !R.current ? P.current.play() : !v && R.current && ((P.current.currentTime = 0), P.current.pause()), (R.current = v);
-            }
-        }, [v, N, A]),
-        (t = w
+        (t = (0, p.Bg)(o.config)
             ? (0, r.jsx)(E.Fl, {
                   id: 'QuestRewardTile_rewardTileNitro',
                   children: (e) =>
@@ -66,27 +115,23 @@ let v = function (e) {
                       })
               })
             : N.isAnimated
-              ? (0, r.jsx)(E.Fl, {
-                    id: 'QuestRewardTile_rewardTileAnimated',
-                    children: (t) => {
-                        var n;
-                        return (0, r.jsx)(d.Z, {
-                            ref: (e) => {
-                                (t.current = e), (P.current = e);
-                            },
-                            autoPlay: !A && v,
-                            loop: !0,
-                            muted: !0,
-                            playsInline: !0,
-                            className: O.questRewardTileAsset,
-                            controls: !1,
-                            onProgress: e.onLoadComplete,
-                            children: (0, r.jsx)('source', {
-                                src: N.url,
-                                type: null != (n = N.mimetype) ? n : void 0
-                            })
-                        });
-                    }
+              ? (0, r.jsx)(v, {
+                    imageAsset:
+                        null != C
+                            ? {
+                                  asset: C,
+                                  assetId: 'QuestRewardTile_rewardTileStatic',
+                                  className: O.imageVideoOverlay
+                              }
+                            : void 0,
+                    videoAsset: {
+                        asset: N,
+                        assetId: 'QuestRewardTile_rewardTileAnimated',
+                        className: O.questRewardTileAsset
+                    },
+                    videoActive: d,
+                    useReducedMotion: A,
+                    onLoadComplete: e.onLoadComplete
                 })
               : (0, r.jsx)(E.Fl, {
                     id: 'QuestRewardTile_rewardTileStatic',
@@ -106,7 +151,7 @@ let v = function (e) {
               })
             : (0, r.jsxs)(c.P3F, {
                   className: a()(O.questRewardTileInteractive, O.questRewardTile, O.rewardHighlight, n),
-                  onClick: C,
+                  onClick: P,
                   children: [
                       t,
                       (0, r.jsx)(c.ZX5, {

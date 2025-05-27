@@ -10,8 +10,8 @@ var a = n(255367),
     u = n(213609),
     m = n(213713),
     x = n(665149),
-    h = n(238246),
-    p = n(788983),
+    p = n(238246),
+    h = n(788983),
     b = n(906467),
     f = n(259580),
     v = n(31336),
@@ -28,8 +28,8 @@ var _ = n(392750),
     S = n(903502),
     P = n(604776),
     I = n(912072),
-    k = n(272193),
-    w = n(685560),
+    w = n(272193),
+    k = n(685560),
     R = n(735959),
     A = n(572444),
     Z = n(246992),
@@ -37,8 +37,8 @@ var _ = n(392750),
     D = n(442954),
     M = n(633001),
     z = n(702904),
-    B = n(178821),
-    U = n(891401),
+    U = n(178821),
+    B = n(891401),
     F = n(958328),
     G = n(315384),
     V = n(514866),
@@ -47,8 +47,8 @@ var _ = n(392750),
     X = n(678639),
     K = n(771751),
     Y = n(596768),
-    q = n(56706),
-    J = n(260950),
+    J = n(56706),
+    q = n(260950),
     $ = n(621060),
     Q = n(981631),
     ee = n(388032),
@@ -122,7 +122,7 @@ function er(e) {
                         id: 'performance',
                         name: 'Performance',
                         group: $.v0.DEVELOPMENT,
-                        render: () => (0, a.jsx)(B.ZP, {})
+                        render: () => (0, a.jsx)(U.ZP, {})
                     }),
                     e.push({
                         id: 'feedback',
@@ -213,7 +213,7 @@ function er(e) {
                     id: 'perks',
                     name: 'Perks',
                     group: $.v0.PREMIUM,
-                    render: () => (0, a.jsx)(U.Z, {})
+                    render: () => (0, a.jsx)(B.Z, {})
                 }),
                 e.push({
                     id: 'potions',
@@ -238,7 +238,7 @@ function er(e) {
                         id: 'subscriptions',
                         name: 'Subscriptions',
                         group: $.v0.PREMIUM,
-                        render: () => (0, a.jsx)(J.Z, {})
+                        render: () => (0, a.jsx)(q.Z, {})
                     }),
                     e.push({
                         id: 'fractional_nitro',
@@ -250,13 +250,13 @@ function er(e) {
                     id: 'gifting_intent',
                     name: 'Gifting Intent',
                     group: $.v0.PREMIUM,
-                    render: () => (0, a.jsx)(k.Z, {})
+                    render: () => (0, a.jsx)(w.Z, {})
                 }),
                 e.push({
                     id: 'voice_filters',
                     name: 'Voice Filters',
                     group: $.v0.AUDIO_VIDEO,
-                    render: () => (0, a.jsx)(q.Z, {})
+                    render: () => (0, a.jsx)(J.Z, {})
                 }),
                 e.push({
                     id: 'krisp_tester',
@@ -268,7 +268,7 @@ function er(e) {
                     id: 'skill_trees',
                     name: 'Skill Trees',
                     group: $.v0.GUILDS,
-                    render: () => (0, a.jsx)(w.Z, {})
+                    render: () => (0, a.jsx)(k.Z, {})
                 }),
                 e
             );
@@ -305,10 +305,10 @@ function er(e) {
                                       icon: c.rgF,
                                       tooltip: 'Pop Out',
                                       onClick: () => {
-                                          (0, p.bA)(
+                                          (0, h.bA)(
                                               Q.KJ3.DEVTOOLS_POPOUT,
                                               () =>
-                                                  (0, a.jsx)(h.Z, {
+                                                  (0, a.jsx)(p.Z, {
                                                       windowKey: Q.KJ3.DEVTOOLS_POPOUT,
                                                       title: 'DevTools',
                                                       withTitleBar: !0,

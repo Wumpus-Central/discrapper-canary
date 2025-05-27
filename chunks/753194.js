@@ -10,7 +10,7 @@ var r = n(866442),
     d = n(388032);
 function u(e) {
     let t,
-        { color: n, size: u, forcedIconColor: m, className: x, iconClassName: h, tooltipText: p } = e,
+        { color: n, size: u, forcedIconColor: m, className: x, iconClassName: p, tooltipText: h } = e,
         [b, f] = (0, l.Wu)([o.Z], () => [o.Z.desaturateUserColors, o.Z.saturation]),
         v = (0, s.dQu)(i.Z.unsafe_rawColors.PRIMARY_300).hex(),
         g = (0, r._i)(null != n ? n : v),
@@ -18,7 +18,7 @@ function u(e) {
     return (
         (t = null != m ? m : 0.3 > (0, r.Bd)(g) ? i.Z.unsafe_rawColors.PRIMARY_630.css : i.Z.unsafe_rawColors.WHITE_500.css),
         (0, a.jsx)(s.ua7, {
-            text: null != p ? p : d.intl.string(d.t.T3PvV1),
+            text: null != h ? h : d.intl.string(d.t.T3PvV1),
             children: (e) => {
                 var n, r;
                 return (0, a.jsx)(
@@ -58,7 +58,7 @@ function u(e) {
                                 color: t,
                                 height: u,
                                 width: u,
-                                className: h
+                                className: p
                             })
                         }),
                     Object.getOwnPropertyDescriptors
