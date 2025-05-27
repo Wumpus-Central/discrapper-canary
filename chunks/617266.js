@@ -15,9 +15,9 @@ var r = n(255367),
     p = n(933557),
     g = n(266076),
     y = n(810123),
-    j = n(448486),
-    v = n(987509),
-    x = n(131704),
+    v = n(448486),
+    x = n(987509),
+    j = n(131704),
     O = n(592125),
     _ = n(430824),
     S = n(496675),
@@ -191,7 +191,7 @@ function U(e) {
     var { channel: t, subLabel: n } = e,
         l = I(e, ['channel', 'subLabel']);
     let i = (0, p.ZP)(t),
-        a = (0, j._)(t);
+        a = (0, v._)(t);
     return (0, r.jsx)(
         F,
         R(A({}, l), {
@@ -272,7 +272,7 @@ function H(e) {
         f = l.useCallback(() => 48, []),
         b = l.useMemo(() => {
             var e;
-            return null != (e = null == n ? void 0 : n.map(v.hC)) ? e : [];
+            return null != (e = null == n ? void 0 : n.map(x.hC)) ? e : [];
         }, [n]),
         p = l.useCallback(
             (e) => {
@@ -290,14 +290,14 @@ function H(e) {
                                   type: 'channel',
                                   id: u.id
                               },
-                    d = (0, v.hC)(c),
+                    d = (0, x.hC)(c),
                     f =
                         null != s
                             ? (function (e, t) {
-                                  if (t instanceof x.Sf && (0, x.Km)(t.type)) {
+                                  if (t instanceof j.Sf && (0, j.Km)(t.type)) {
                                       if (null != t.rateLimitPerUser && t.rateLimitPerUser > 0 && !(S.Z.can(D.Plq.MANAGE_CHANNELS, t) || S.Z.can(D.Plq.MANAGE_MESSAGES, t))) return { label: T.intl.string(T.t.Icu3bW) };
                                       if (t.isThread() || t.isForumPost() || !S.Z.can(D.Plq.USE_APPLICATION_COMMANDS, t)) return { label: T.intl.string(T.t.v8MLq6) };
-                                      let n = (0, v.dL)(t.id);
+                                      let n = (0, x.dL)(t.id);
                                       if (e.id === n.id) return { label: T.intl.string(T.t.mD4gqa) };
                                   }
                               })(s, u)

@@ -1,54 +1,58 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var i = n(255367);
 n(73800);
 var r = n(120356),
     l = n.n(r),
     a = n(442837),
-    s = n(481060),
-    o = n(509545),
-    c = n(74538),
-    u = n(474936),
-    d = n(106112);
-let m = function (e) {
-    let { subscriptionTier: t, interval: n = u.rV.MONTH, className: r, isGift: m = !1, variant: C, priceOptions: g, isMarketingPageV2: x, enablePremiumRebrandDesign: p } = e;
-    if (!(0, a.e7)([o.Z], () => o.Z.isLoadedForPremiumSKUs()))
-        return (0, i.jsx)(s.$jN, {
-            type: s.$jN.Type.PULSING_ELLIPSIS,
-            className: d.priceSpinner
+    s = n(780384),
+    o = n(481060),
+    c = n(410030),
+    u = n(509545),
+    d = n(74538),
+    m = n(474936),
+    C = n(106112);
+let g = function (e) {
+    let { subscriptionTier: t, interval: n = m.rV.MONTH, className: r, isGift: g = !1, variant: p, priceOptions: x, isMarketingPageV2: h, enablePremiumRebrandDesign: f } = e,
+        v = (0, a.e7)([u.Z], () => u.Z.isLoadedForPremiumSKUs()),
+        T = (0, s.ap)((0, c.ZP)());
+    if (!v)
+        return (0, i.jsx)(o.$jN, {
+            type: o.$jN.Type.PULSING_ELLIPSIS,
+            className: C.priceSpinner
         });
-    let h = o.Z.getForSkuAndInterval((0, c.Wz)(t), n),
-        f = null != h ? (0, c.gy)(h, g, !1, m) : null;
-    if (p) {
-        let e = n === u.rV.YEAR;
+    let I = u.Z.getForSkuAndInterval((0, d.Wz)(t), n),
+        j = null != I ? (0, d.gy)(I, x, !1, g) : null;
+    if (f) {
+        let e = n === m.rV.YEAR;
         return (0, i.jsxs)('div', {
             children: [
-                (0, i.jsx)(s.Text, {
-                    variant: e ? 'heading-md/semibold' : 'heading-xxl/extrabold',
-                    color: e ? 'text-muted' : 'text-primary',
+                (0, i.jsx)(o.Text, {
+                    variant: e ? 'heading-md/semibold' : 'heading-xxl/semibold',
+                    color: e ? 'text-muted' : T ? 'header-primary' : 'always-white',
                     tag: 'span',
-                    children: (0, i.jsx)('span', { children: f })
+                    children: (0, i.jsx)('span', { children: j })
                 }),
-                (0, i.jsxs)(s.Text, {
-                    variant: 'text-xs/semibold',
+                (0, i.jsxs)(o.Text, {
+                    variant: 'text-xs/medium',
                     tag: 'span',
                     color: 'text-muted',
-                    children: ['/', (0, c.eP)(n)]
+                    children: ['/', (0, d.eP)(n)]
                 })
             ]
         });
     }
-    return (0, i.jsx)(s.X6q, {
-        color: x ? 'none' : 'always-white',
-        variant: null != C ? C : 'heading-md/medium',
-        className: l()(d.pricePerInterval, r),
+    return (0, i.jsx)(o.X6q, {
+        color: h ? 'none' : 'always-white',
+        variant: null != p ? p : 'heading-md/medium',
+        className: l()(C.pricePerInterval, r),
         children: (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('span', {
-                    className: x ? void 0 : d.price,
-                    children: f
+                    className: h ? void 0 : C.price,
+                    children: j
                 }),
                 ' / ',
-                (0, c.eP)(n)
+                (0, d.eP)(n)
             ]
         })
     });

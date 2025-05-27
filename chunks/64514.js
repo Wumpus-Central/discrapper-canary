@@ -32,7 +32,7 @@ class h extends l.Z {
         var t;
         super(...e),
             (t = this),
-            p(this, 'focusedOrForegrounded', !0),
+            p(this, 'focusedOrForegrounded', (0, u.H)()),
             p(this, 'heartbeatInterval', new r.Xp()),
             p(this, 'schedulerStarted', !1),
             p(this, 'maybeStartHeartbeat', () => {

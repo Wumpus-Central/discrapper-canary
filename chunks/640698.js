@@ -2,7 +2,7 @@ n.d(t, { F: () => r });
 var i = n(255367);
 n(73800);
 var l = n(481060),
-    s = n(195078);
+    s = n(487292);
 function r(e) {
     let { text: t } = e;
     return (0, i.jsx)('div', {

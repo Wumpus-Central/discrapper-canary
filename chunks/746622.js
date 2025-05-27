@@ -4,8 +4,8 @@ r.d(t, {
 });
 var n = r(255367),
     a = r(598117),
-    i = r(981631),
-    s = r(185923),
+    s = r(981631),
+    i = r(185923),
     l = r(388032),
     o = r(632261);
 let c = (e) => {
@@ -17,15 +17,15 @@ let c = (e) => {
     },
     u = (e) => {
         switch (e) {
-            case i.evJ.TOO_MANY_EMOJI:
+            case s.evJ.TOO_MANY_EMOJI:
                 return l.intl.string(l.t['jP/Rqq']);
-            case i.evJ.TOO_MANY_ANIMATED_EMOJI:
+            case s.evJ.TOO_MANY_ANIMATED_EMOJI:
                 return l.intl.string(l.t['6v5dPz']);
             case a.ze.TOO_BIG:
-            case i.evJ.INVALID_FILE_ASSET_SIZE:
-            case i.evJ.INVALID_FORM_BODY:
-                return l.intl.formatToPlainString(l.t.kIO9j4, { maxSize: s.xG });
-            case i.evJ.INVALID_FILE_ASSET_SIZE_RESIZE_GIF:
+            case s.evJ.INVALID_FILE_ASSET_SIZE:
+            case s.evJ.INVALID_FORM_BODY:
+                return l.intl.formatToPlainString(l.t.kIO9j4, { maxSize: i.xG });
+            case s.evJ.INVALID_FILE_ASSET_SIZE_RESIZE_GIF:
                 return l.intl.string(l.t.sp16MT);
             case a.ze.MISSING_IMAGE_DATA:
                 return l.intl.string(l.t['41/Kbm']);

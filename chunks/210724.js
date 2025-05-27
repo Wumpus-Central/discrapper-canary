@@ -10,8 +10,8 @@ var r = n(255367),
     i = n(366594),
     l = n(442837),
     c = n(481060),
-    d = n(110924),
-    u = n(607070),
+    u = n(110924),
+    d = n(607070),
     p = n(819640),
     m = n(617136),
     f = n(113434),
@@ -97,14 +97,14 @@ function k(e) {
             quest: s,
             location: P.dr.QUESTS_BAR
         }),
-        D = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
-        I = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
+        I = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        D = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
         M = o.useRef(null),
         L = o.useMemo(() => (0, h.q8)(s), [s]),
         W = (null == (t = s.userStatus) ? void 0 : t.enrolledAt) != null,
-        Z = (0, d.Z)(W),
+        Z = (0, u.Z)(W),
         V = (null == (n = s.userStatus) ? void 0 : n.completedAt) != null,
-        Q = (0, d.Z)(V),
+        Q = (0, u.Z)(V),
         { hasError: H, isLoading: U } = (0, y.d7)(),
         z = o.useContext(S.T) || (k && q && !U && !B),
         F = o.useRef(z),
@@ -124,10 +124,10 @@ function k(e) {
             var e, t;
             ea((null != (t = null == (e = ei.current) ? void 0 : e.offsetHeight) ? t : 84) + 2 * K.paddingVertical);
         }, [K.paddingVertical]),
-        ed = o.useCallback(() => {
+        eu = o.useCallback(() => {
             ec(), el(!0);
         }, [ec, el]),
-        eu = o.useCallback(() => {
+        ed = o.useCallback(() => {
             J(!0);
         }, []),
         ep = o.useCallback(() => {
@@ -141,9 +141,9 @@ function k(e) {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 if ($) return;
                 let { withDelay: t = !1 } = e;
-                t ? (X.current = window.setTimeout(ed, 75)) : ed();
+                t ? (X.current = window.setTimeout(eu, 75)) : eu();
             },
-            [ed, $]
+            [eu, $]
         ),
         eg = o.useCallback(() => {
             ef();
@@ -173,11 +173,11 @@ function k(e) {
                 ex();
         }, [ex, s]);
     o.useLayoutEffect(() => {
-        V && K.shouldExpandOnQuestComplete && ed();
-    }, [ed, V, K.shouldExpandOnQuestComplete]),
+        V && K.shouldExpandOnQuestComplete && eu();
+    }, [eu, V, K.shouldExpandOnQuestComplete]),
         o.useLayoutEffect(() => {
-            W && !Z && Y.current && ed();
-        }, [ed, W, Z]),
+            W && !Z && Y.current && eu();
+        }, [eu, W, Z]),
         o.useLayoutEffect(() => {
             V || !W || Z || Y.current || el(!1);
         }, [W, V, Z, el]),
@@ -198,9 +198,9 @@ function k(e) {
     o.useEffect(() => {
         ey({
             expansionSpring: +!!$,
-            immediate: D
+            immediate: I
         });
-    }, [$, ey, D]);
+    }, [$, ey, I]);
     let { visibilitySpring: e_ } = (0, c.q_F)({
         from: { visibilitySpring: 0 },
         to: { visibilitySpring: +!!z },
@@ -221,7 +221,7 @@ function k(e) {
     }, [L]),
     o.useLayoutEffect(() => {
         V && !Q && K.canCollapseOnBlur && ec();
-    }, [V, ed, K.canCollapseOnBlur, ec, Q]),
+    }, [V, eu, K.canCollapseOnBlur, ec, Q]),
     o.useEffect(() => {
         var e, t;
         H &&
@@ -247,7 +247,7 @@ function k(e) {
         ? (0, r.jsx)(v.A, {
               questOrQuests: s,
               questContent: K.trackingCtx.content,
-              overrideVisibility: !I && z,
+              overrideVisibility: !D && z,
               children: (e, t) => {
                   let n = K.component;
                   return (
@@ -295,10 +295,10 @@ function k(e) {
                                               isExpanded: $,
                                               isExpansionAnimationComplete: et,
                                               onCtxMenuClosed: ep,
-                                              onCtxMenuOpened: eu,
+                                              onCtxMenuOpened: ed,
                                               onCtxMenuSelection: em,
                                               quest: s,
-                                              useReducedMotion: D,
+                                              useReducedMotion: I,
                                               collapsedHeight: 70
                                           })
                                       })

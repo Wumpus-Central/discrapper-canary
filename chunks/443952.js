@@ -306,14 +306,14 @@ let G = {
             let n,
                 {
                     socket: r,
-                    args: { command: i, preview_image: l, components: o, require_launch_channel: s, content: c, pid: u }
+                    args: { command: i, preview_image: l, components: o, require_launch_channel: s, content: c, options: u, pid: d }
                 } = e,
-                d = r.application.id;
-            if (null == d) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'No application.');
-            if (!M.Cr.includes(d)) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'Unsupported application.');
+                p = r.application.id;
+            if (null == p) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'No application.');
+            if (!M.Cr.includes(p)) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'Unsupported application.');
             if (!(0, S.yE)(null != (t = r.application.flags) ? t : 0, k.udG.EMBEDDED)) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'This application cannot access this API');
-            let p = (0, L.Z)();
-            if (null == p && s) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'No channel found');
+            let h = (0, L.Z)();
+            if (null == h && s) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'No channel found');
             if (null !== l || null !== o || null !== c) {
                 let e = [];
                 void 0 !== l &&
@@ -330,7 +330,7 @@ let G = {
                     ]),
                     (n = new O.ZP({
                         id: T.default.cast(T.default.fromTimestamp(Date.now())),
-                        applicationId: d,
+                        applicationId: p,
                         content: c,
                         components: o,
                         attachments: e
@@ -338,13 +338,16 @@ let G = {
             }
             return new Promise((e) => {
                 let t = !1,
-                    r = (0, R.jU)(u),
+                    r = (0, R.jU)(d),
                     l = a.z1l;
                 (E.Z.getWindowOpen(k.KJ3.ACTIVITY_POPOUT) || r.context === k.IlC.POPOUT) && (l = a.u1M),
                     (0, _.M)({
-                        applicationId: d,
-                        channel: p,
-                        command: i,
+                        applicationId: p,
+                        channel: h,
+                        command: {
+                            name: i,
+                            options: u
+                        },
                         requireLaunchChannel: !0 === s,
                         onShareResult: (n) => {
                             t || (t = n), r.lock(), e({ success: t });

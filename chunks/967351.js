@@ -126,7 +126,7 @@ class y extends u.Z {
                     !Object.values(m).includes(this.currentHeader.opcode) || this.currentHeader.size < 0)
                 )
                     throw Error('protocol error');
-                if (this.currentHeader.size > 1048576) throw Error('message too large');
+                if (this.currentHeader.size > 3145728) throw Error('message too large');
                 this.messageBuffer = this.copyBuffer(this.messageBuffer, 8, this.messageBuffer.byteLength);
             }
             if (this.messageBuffer.byteLength >= this.currentHeader.size) {
@@ -165,7 +165,7 @@ class y extends u.Z {
         (this.clientId = t.client_id), this.checkRpcVersion(+t.v), b(e, !0);
     }
     constructor(e, t) {
-        super('ipc', p.X6Q, t), h(this, 'messageBuffer', r.Buffer.alloc(0)), h(this, 'currentHeader', null), h(this, 'MAX_BUFFER_SIZE', 2097152), h(this, 'socket', void 0), h(this, 'clientId', null), (this.socket = e), b(e, !1);
+        super('ipc', p.X6Q, t), h(this, 'messageBuffer', r.Buffer.alloc(0)), h(this, 'currentHeader', null), h(this, 'MAX_BUFFER_SIZE', 5242880), h(this, 'socket', void 0), h(this, 'clientId', null), (this.socket = e), b(e, !1);
     }
 }
 class I extends i.EventEmitter {
@@ -179,12 +179,13 @@ class I extends i.EventEmitter {
                 try {
                     t.read(r.Buffer.from(n));
                 } catch (t) {
-                    e.end(
-                        O(m.CLOSE, {
-                            code: p.$VG.CLOSE_UNSUPPORTED,
-                            message: t.message
-                        })
-                    ),
+                    g.error('Socket Error: '.concat(t.message)),
+                        e.end(
+                            O(m.CLOSE, {
+                                code: p.$VG.CLOSE_UNSUPPORTED,
+                                message: t.message
+                            })
+                        ),
                         e.destroy();
                 }
             }),

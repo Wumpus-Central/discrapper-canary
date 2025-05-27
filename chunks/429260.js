@@ -55,18 +55,19 @@ function S() {
 }
 function _(e) {
     let t = (0, i.e7)([g.Z], () => g.Z.hasReportedMessage(e.channel_id, e.id)),
-        n = (0, b.sP)(e) && !t;
+        n = (0, b.sP)(e);
     return ((0, o.zq)(() => {
         n && (0, u.EW)(l.z.REPORT_TO_MOD_NEW_TAG, { dismissAction: y.L.AUTO_DISMISS });
     }),
     n)
         ? (0, r.jsx)(a.sNh, {
               id: 'report-to-mod',
-              label: v.intl.string(E.default['1D+vq6']),
+              label: t ? v.intl.string(E.default['8wsdnp']) : v.intl.string(E.default['1D+vq6']),
               action: () => {
                   (0, u.EW)(l.z.REPORT_TO_MOD_NEW_TAG, { dismissAction: y.L.USER_DISMISS }), (0, f.tV)(e);
               },
-              icon: (0, r.jsx)(S, {})
+              icon: (0, r.jsx)(S, {}),
+              disabled: t
           })
         : null;
 }

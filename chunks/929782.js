@@ -158,7 +158,7 @@ function N(e) {
         enabled: !l.Z.isSelfMute(),
         custom_keybind_assigned: null != r && r.id !== u.Ek.id,
         used_keybind: t,
-        app_in_focus: d.Z.isFocused(),
+        app_in_focus: d.Z.isAppFocused(),
         overlay_activated: null != (0, p.Z)(),
         voice_channel_type: null != o ? o.type : null,
         location: n
@@ -173,7 +173,7 @@ function C(e) {
         enabled: !l.Z.isSelfDeaf(),
         keybind_assigned: null != r ? (0, _.BB)(r.shortcut) : void 0,
         used_keybind: t,
-        app_in_focus: d.Z.isFocused(),
+        app_in_focus: d.Z.isAppFocused(),
         overlay_activated: null != (0, p.Z)(),
         voice_channel_type: null != o ? o.type : null,
         location: n

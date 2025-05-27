@@ -11,8 +11,8 @@ var l = n(255367),
     m = n(100527),
     f = n(318766),
     h = n(907040),
-    p = n(594174),
-    b = n(626135),
+    b = n(594174),
+    p = n(626135),
     S = n(644540),
     j = n(359588),
     g = n(368326),
@@ -33,28 +33,28 @@ var l = n(255367),
     A = n(782628);
 function L(t) {
     var e, n;
-    let { transitionState: a, onClose: L, sourceAnalyticsContext: Z, sourceAnalyticsLocations: R, prompt: B = null, showLabelSelectorNewTooltip: U = !1 } = t,
-        M = (0, g.p)({ location: 'CustomStatusModalWithPreview' }),
+    let { transitionState: a, onClose: L, sourceAnalyticsContext: Z, sourceAnalyticsLocations: R, prompt: B = null, showLabelSelectorNewTooltip: M = !1 } = t,
+        U = (0, g.p)({ location: 'CustomStatusModalWithPreview' }),
         z = (0, S.P)({ location: 'CustomStatusModalWithPreview' }),
         Y = (0, j.Z)({ location: 'CustomStatusModalWithPreview' }),
-        F = (0, o.e7)([p.default], () => {
+        F = (0, o.e7)([b.default], () => {
             var t;
-            return null != (t = p.default.getCurrentUser()) ? t : null;
+            return null != (t = b.default.getCurrentUser()) ? t : null;
         }),
         W = (0, T.a)(),
         [H, K] = r.useState(null != (e = null == W ? void 0 : W.state) ? e : ''),
         [V, G] = r.useState(null != (n = null == W ? void 0 : W.emoji) ? n : null),
         [q, X] = r.useState((0, O.Z)()),
+        Q = r.useRef(null),
         $ = r.useRef(null),
         J = r.useRef(null),
-        Q = r.useRef(null),
         [tt, te] = r.useState(null != W && Y ? (0, _.Z)(W) : null),
-        [tn, tl] = r.useState(U),
-        [tr, ta] = r.useState(() => (M && null != B ? B.label() : D.intl.string(D.t['xod36+']))),
+        [tn, tl] = r.useState(M),
+        [tr, ta] = r.useState(() => (U && null != B ? B.label() : D.intl.string(D.t['xod36+']))),
         [ti, to] = r.useState(tr),
         { ref: ts, width: tu } = (0, c.ZP)(tr);
     r.useEffect(() => {
-        let t = Q.current;
+        let t = J.current;
         if (null == tu || null == t) return;
         let e = tu - 78;
         t.textContent = tr;
@@ -67,14 +67,14 @@ function L(t) {
         }
     }, [tu, tr]),
         r.useEffect(() => {
-            b.default.track(I.rMx.OPEN_MODAL, {
+            p.default.track(I.rMx.OPEN_MODAL, {
                 type: m.Z.CUSTOM_STATUS_MODAL,
                 location_stack: R
             });
         }, [R]),
         (0, d.ZP)(() => {
             var t, e;
-            null == (t = $.current) || t.focus(), null == (e = $.current) || e.setSelection(H.length, H.length);
+            null == (t = Q.current) || t.focus(), null == (e = Q.current) || e.setSelection(H.length, H.length);
         });
     let tc = (t) => {
             null != t &&
@@ -113,7 +113,7 @@ function L(t) {
                           emojiName: V.name,
                           animated: !!V.animated
                       }),
-        tf = M ? D.intl.string(D.t.rp0aho) : D.intl.string(D.t.UcdRn5),
+        tf = U ? D.intl.string(D.t.rp0aho) : D.intl.string(D.t.UcdRn5),
         th = 'custom-status-placeholder-text';
     return (0, l.jsxs)(s.Y0X, {
         transitionState: a,
@@ -169,7 +169,7 @@ function L(t) {
                                             currentValue: tt,
                                             onChange: (t) => {
                                                 let e = t === tt ? null : t;
-                                                b.default.track(I.rMx.CUSTOM_STATUS_LABEL_CLICKED, {
+                                                p.default.track(I.rMx.CUSTOM_STATUS_LABEL_CLICKED, {
                                                     previous_label: tt,
                                                     new_label: e,
                                                     location_stack: R
@@ -186,14 +186,14 @@ function L(t) {
                                 ref: ts,
                                 children: [
                                     (0, l.jsx)('span', {
-                                        ref: Q,
+                                        ref: J,
                                         className: A.hiddenPlaceholder,
                                         'aria-hidden': 'true'
                                     }),
                                     (0, l.jsx)('div', {
                                         className: i()(A.emojiButtonContainer, null != tt && A.emojiButtonContainerWithLabel),
                                         children: (0, l.jsx)(s.yRy, {
-                                            targetElementRef: J,
+                                            targetElementRef: $,
                                             renderPopout: (t) => {
                                                 let { closePopout: e } = t;
                                                 return (0, l.jsx)(h.Z, {
@@ -241,7 +241,7 @@ function L(t) {
                                                     })({}, t)),
                                                     (r = r =
                                                         {
-                                                            ref: J,
+                                                            ref: $,
                                                             active: a,
                                                             className: A.emojiButton,
                                                             tabIndex: 0,
@@ -281,7 +281,7 @@ function L(t) {
                                                 'Enter' === t.key && td();
                                             },
                                             className: i()(A.input, null != tt && A.inputWithLabel),
-                                            inputRef: $
+                                            inputRef: Q
                                         },
                                         null != tt ? 'with-label' : 'without-label'
                                     ),

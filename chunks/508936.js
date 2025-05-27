@@ -3,6 +3,7 @@ e.exports = {
     positionContentOverBackground: 'positionContentOverBackground_b5b7aa',
     contents: 'contents_b5b7aa',
     heroAssetWrapper: 'heroAssetWrapper_b5b7aa',
+    heroAssetCont: 'heroAssetCont_b5b7aa',
     heroAsset: 'heroAsset_b5b7aa',
     heroAssetVideo: 'heroAssetVideo_b5b7aa',
     hidden: 'hidden_b5b7aa',

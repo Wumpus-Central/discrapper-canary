@@ -18,13 +18,13 @@ let d = (e) => {
                 activeSubscription: null
             }),
             g = (0, a.Wz)(u.GP[e].skuId),
-            { priceOptions: x } = (0, r.Z)({
+            { priceOptions: p } = (0, r.Z)({
                 activeSubscription: null,
                 skuIDs: [g],
                 paymentSourceId: C,
                 isGift: !1
             }),
-            p = (0, c.Ng)(),
+            x = (0, c.Ng)(),
             [h, f] = (0, o.ED)({
                 items: [
                     {
@@ -33,12 +33,12 @@ let d = (e) => {
                     }
                 ],
                 renewal: !0,
-                preventFetch: null == p,
+                preventFetch: null == x,
                 paymentSourceId: C,
-                currency: x.currency
+                currency: p.currency
             }),
             v = null == h || null == (m = h.invoiceItems) || null == (d = m.find((t) => t.subscriptionPlanId === e)) || null == (n = d.discounts) || null == (t = n.find((e) => e.type === i.eW.SUBSCRIPTION_PLAN)) ? void 0 : t.amount,
-            T = (0, a.aS)(e, !1, !1, x);
+            T = (0, a.aS)(e, !1, !1, p);
         return (0, s.T4)(T.amount - (null != v ? v : 0), T.currency);
     },
     m = (e, t, n) => {
@@ -47,10 +47,10 @@ let d = (e) => {
                 isGift: !1,
                 activeSubscription: null
             }),
-            x = (0, a.Wz)(u.GP[t].skuId),
-            { priceOptions: p } = (0, r.Z)({
+            p = (0, a.Wz)(u.GP[t].skuId),
+            { priceOptions: x } = (0, r.Z)({
                 activeSubscription: null,
-                skuIDs: [x],
+                skuIDs: [p],
                 paymentSourceId: g,
                 isGift: !1
             }),
@@ -66,10 +66,10 @@ let d = (e) => {
                 renewal: !0,
                 preventFetch: !h,
                 paymentSourceId: g,
-                currency: p.currency,
+                currency: x.currency,
                 userDiscountOfferId: null == n ? void 0 : n.id
             }),
             T = null == f || null == (C = f.invoiceItems) || null == (m = C.find((e) => e.subscriptionPlanId === t)) || null == (d = m.discounts) || null == (c = d.find((e) => e.type === i.eW.SUBSCRIPTION_PLAN)) ? void 0 : c.amount,
-            I = (0, a.aS)(t, !1, !1, p);
+            I = (0, a.aS)(t, !1, !1, x);
         return (0, s.T4)(I.amount - (null != T ? T : 0), I.currency);
     };

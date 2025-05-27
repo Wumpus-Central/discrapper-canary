@@ -165,7 +165,10 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                         D && R && b.length === f && b.shift();
                         let x = b.length > m && null != y && _.isNitroLocked,
                             U = x && !ee.has(y.id);
-                        U && b.splice(m - 1);
+                        if (U) {
+                            let e = !el && D;
+                            b.splice(m - (e ? 2 : 1));
+                        }
                         let G = el && D && !h,
                             B = Math.ceil((D || x ? b.length + 1 : b.length) / f),
                             F = [];

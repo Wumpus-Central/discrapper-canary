@@ -1,4 +1,4 @@
-n.d(e, { Z: () => b });
+n.d(e, { Z: () => p });
 var l = n(255367);
 n(73800);
 var r = n(481060),
@@ -12,15 +12,15 @@ var r = n(481060),
     m = n(4517),
     f = n(5192),
     h = n(228168),
-    p = n(200051);
-function b(t) {
-    let { user: e, previewText: n, previewEmoji: b, previewStatus: S, placeHolderText: j, transitionState: g, label: x } = t,
+    b = n(200051);
+function p(t) {
+    let { user: e, previewText: n, previewEmoji: p, previewStatus: S, placeHolderText: j, transitionState: g, label: x } = t,
         O = (0, i.ZP)(e.id);
     return (0, l.jsxs)(c.Z, {
         user: e,
         displayProfile: O,
         themeType: h.lY.POPOUT,
-        className: p.profilePreviewContainer,
+        className: b.profilePreviewContainer,
         children: [
             (0, l.jsxs)('header', {
                 children: [
@@ -36,7 +36,7 @@ function b(t) {
                             displayProfile: O,
                             themeType: h.lY.POPOUT,
                             previewStatus: S,
-                            className: p.avatar
+                            className: b.avatar
                         })
                     }),
                     (0, l.jsx)(m.Z, {
@@ -44,7 +44,7 @@ function b(t) {
                         user: e,
                         themeType: h.lY.POPOUT,
                         previewText: n,
-                        previewEmoji: b,
+                        previewEmoji: p,
                         placeholderText: j,
                         hasEntered: g === r.Dvm.ENTERED,
                         previewLabel: x
@@ -53,7 +53,7 @@ function b(t) {
             }),
             (null == O ? void 0 : O.profileEffectId) != null && (0, l.jsx)(a.Z, { profileEffectId: O.profileEffectId }),
             (0, l.jsx)('div', {
-                className: p.usernameContainer,
+                className: b.usernameContainer,
                 inert: !0,
                 children: (0, l.jsx)(d.Z, {
                     user: e,

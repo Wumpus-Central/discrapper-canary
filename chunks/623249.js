@@ -10,8 +10,8 @@ var r = n(255367),
     i = n(442837),
     l = n(780384),
     c = n(481060),
-    d = n(607070),
-    u = n(600164),
+    u = n(607070),
+    d = n(600164),
     p = n(210887),
     m = n(617136),
     f = n(915750),
@@ -58,13 +58,13 @@ function w(e) {
         A = (0, g.KX)(),
         R = (0, m.O5)(),
         k = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
-        B = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
+        B = (0, i.e7)([u.Z], () => u.Z.useReducedMotion),
         q = (0, j.g2)({
             useReducedMotion: B,
             className: _.colorTransition
         }),
-        D = T.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
-        I = (0, h.Bz)(E),
+        I = T.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
+        D = (0, h.Bz)(E),
         M = (0, i.e7)([p.Z], () => p.Z.getState().theme),
         L = (0, l.wj)(M) ? v.BRd.DARK : v.BRd.LIGHT,
         { startConsoleQuest: W, startingConsoleQuest: Z } = (0, g.GI)({
@@ -87,7 +87,7 @@ function w(e) {
         className: _.modalRoot,
         children: [
             (0, r.jsxs)(c.xBx, {
-                direction: u.Z.Direction.VERTICAL,
+                direction: d.Z.Direction.VERTICAL,
                 separator: !1,
                 className: _.modalHeader,
                 children: [
@@ -156,8 +156,8 @@ function w(e) {
                             (0, r.jsx)(S, {
                                 icon: (0, r.jsx)(c.iWm, { size: 'sm' }),
                                 text: y.intl.string(y.t.XF4wuL),
-                                errors: I ? void 0 : D.map((e) => e.message),
-                                gameTile: I
+                                errors: D ? void 0 : I.map((e) => e.message),
+                                gameTile: D
                                     ? (0, r.jsx)(c.ua7, {
                                           'aria-label': E.config.messages.gameTitle,
                                           text: () =>

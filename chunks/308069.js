@@ -6,8 +6,8 @@ var r = n(255367),
     i = n(366594),
     l = n(481060),
     c = n(617136),
-    d = n(915750),
-    u = n(497505),
+    u = n(915750),
+    d = n(497505),
     p = n(918701),
     m = n(685613),
     f = n(670638),
@@ -17,16 +17,16 @@ var r = n(255367),
     b = n(74783);
 let j = (e) => {
     let { quest: t, expansionSpring: n, onCtxMenuSelect: s, onCtxMenuOpen: j, onCtxMenuClose: v, useReducedMotion: y, isExpanded: _, isExpansionAnimationComplete: O } = e,
-        C = (0, d.aM)(),
+        C = (0, u.aM)(),
         w = o.useCallback(() => {
             (0, g.openDisclosureModal)(t, {
-                content: u.jn.QUEST_BAR_V2,
+                content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_DISCLOSURE
             });
         }, [t]),
         S = o.useCallback(() => {
             (0, p.FE)(t, {
-                content: u.jn.QUEST_BAR_V2,
+                content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_GAME_LINK,
                 impressionId: C
             });
@@ -99,7 +99,7 @@ let j = (e) => {
                         onOpen: j,
                         onClose: v,
                         onSelect: s,
-                        questContent: u.jn.QUEST_BAR_V2,
+                        questContent: d.jn.QUEST_BAR_V2,
                         quest: t,
                         shouldShowDisclosure: !0,
                         showShareLink: !0,

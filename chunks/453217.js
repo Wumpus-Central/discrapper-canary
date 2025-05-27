@@ -7,8 +7,8 @@ var o = n(120356),
     i = n(481060),
     l = n(113434),
     c = n(497505),
-    d = n(685613),
-    u = n(340100),
+    u = n(685613),
+    d = n(340100),
     p = n(644646),
     m = n(788284),
     f = n(46140),
@@ -52,7 +52,7 @@ let h = function (e) {
                                   location: f.dr.QUESTS_BAR
                               }),
                               C
-                                  ? (0, r.jsx)(u.Z, {
+                                  ? (0, r.jsx)(d.Z, {
                                         className: x.questProgressBar,
                                         quest: j
                                     })
@@ -67,7 +67,7 @@ let h = function (e) {
                     : (0, r.jsxs)('div', {
                           className: x.brandingWrapper,
                           children: [
-                              (0, r.jsx)(d.ZP, {
+                              (0, r.jsx)(u.ZP, {
                                   className: x.partnerBranding,
                                   quest: j
                               }),

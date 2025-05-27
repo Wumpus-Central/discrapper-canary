@@ -175,4 +175,4 @@ let f = [
             label: () => a.intl.string(a.t['xod36+'])
         }
     ],
-    _ = [{ value: r.w.LISTEN }, { value: r.w.WATCH }, { value: r.w.PLAY }, { value: r.w.THINK }, { value: r.w.LOVE }];
+    _ = [{ value: r.w.QUESTION }, { value: r.w.THINK }, { value: r.w.LOVE }, { value: r.w.EXCITED }, { value: r.w.RECOMMEND }];

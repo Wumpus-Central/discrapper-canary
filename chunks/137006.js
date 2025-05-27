@@ -56,6 +56,12 @@ let l = {
         [i.Q5.SHARE_INTERACTION]: {
             request: (e) => ({
                 command: e.string().required(),
+                options: e.array().items(
+                    e.object({
+                        name: e.string().required(),
+                        value: e.string().required()
+                    })
+                ),
                 content: e.string().max(2000),
                 require_launch_channel: e.boolean(),
                 preview_image: e.object({

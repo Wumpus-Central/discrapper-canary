@@ -23,6 +23,7 @@ e.exports = {
     v2starBackground: 'v2starBackground_ac86f6',
     itemWithWumpus: 'itemWithWumpus_ac86f6 item_ac86f6',
     icon: 'icon_ac86f6',
+    smallIcon: 'smallIcon_ac86f6',
     freeTrialPillInlineBlock: 'freeTrialPillInlineBlock_ac86f6',
     freeTrialPillInline: 'freeTrialPillInline_ac86f6 freeTrialPillInlineBlock_ac86f6',
     price: 'price_ac86f6',

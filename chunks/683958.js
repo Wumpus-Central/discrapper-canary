@@ -15,9 +15,9 @@ var r = n(255367),
     p = n(617266),
     g = n(333861),
     y = n(388032),
-    j = n(120575),
-    v = n(621054);
-function x(e) {
+    v = n(120575),
+    x = n(621054);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -70,11 +70,11 @@ function P(e) {
             s();
         }, [s]);
     return (0, r.jsx)(i.mzw, {
-        className: j.footerWithMessage,
+        className: v.footerWithMessage,
         children: (0, r.jsx)('div', {
-            className: j.footerButtons,
+            className: v.footerButtons,
             children: (0, r.jsx)(i.zxk, {
-                className: j.sendWithMessage,
+                className: v.sendWithMessage,
                 submitting: a,
                 disabled: !n,
                 onClick: o,
@@ -164,16 +164,16 @@ function w(e) {
                         let { type: n, id: r } = t;
                         return n === e.type && r === e.id;
                     });
-                    if (-1 === n) return q ? t : (z(''), (A.current += 1), [e, ...t]);
+                    if (-1 === n) return q ? t : (z(''), W(''), (A.current += 1), [e, ...t]);
                     let r = [...t];
                     return r.splice(n, 1), (A.current += 1), r;
                 });
             },
-            [q]
+            [q, W]
         ),
         [Q, K] = l.useMemo(() => {
             if (k) return [null, !1];
-            let e = T.find((e) => e.untranslatedName === g);
+            let e = T.find((e) => e.untranslatedName === g.name);
             return void 0 !== e ? [e, !1] : [null, !0];
         }, [g, T, k]),
         $ = l.useCallback(
@@ -184,23 +184,43 @@ function w(e) {
                 let n = (await Promise.all(e.map(o.qx))).filter(f.lm);
                 t && (C(!0), S()),
                     n.forEach(async (e) => {
-                        let t = c.Z.getChannel(e);
-                        if (null == t) return;
-                        let n = d.Z.getGuild(null == t ? void 0 : t.guild_id);
+                        var t, n;
+                        let r = c.Z.getChannel(e);
+                        if (null == r) return;
+                        let l =
+                                null !=
+                                (n =
+                                    null == (t = g.options)
+                                        ? void 0
+                                        : t.reduce(
+                                              (e, t) => (
+                                                  (e[t.name] = [
+                                                      {
+                                                          type: 'text',
+                                                          text: t.value
+                                                      }
+                                                  ]),
+                                                  e
+                                              ),
+                                              {}
+                                          ))
+                                    ? n
+                                    : {},
+                            a = d.Z.getGuild(null == r ? void 0 : r.guild_id);
                         null !=
                             (await (0, h.Z)({
                                 command: Q,
-                                optionValues: {},
+                                optionValues: l,
                                 context: {
-                                    channel: t,
-                                    guild: n
+                                    channel: r,
+                                    guild: a
                                 }
                             })) && (0, i.showToast)((0, i.createToast)(y.intl.string(y.t['5WjJcn']), i.ToastType.MESSAGE));
                     }),
                     C(!0),
                     S();
             },
-            [C, Q]
+            [C, Q, g.options]
         ),
         ee = l.useCallback(() => {
             $(R, { closeAfterSend: !0 });
@@ -209,23 +229,23 @@ function w(e) {
         return (0, r.jsx)(
             i.Y0X,
             O(
-                x(
+                j(
                     {
-                        className: j.modal,
+                        className: v.modal,
                         'aria-label': y.intl.string(y.t.fuFvw8)
                     },
                     Z
                 ),
-                { children: (0, r.jsx)(i.$jN, { className: j.spinnerContainer }) }
+                { children: (0, r.jsx)(i.$jN, { className: v.spinnerContainer }) }
             )
         );
     if (K)
         return (0, r.jsx)(
             i.Y0X,
             O(
-                x(
+                j(
                     {
-                        className: j.modal,
+                        className: v.modal,
                         'aria-label': y.intl.string(y.t.fuFvw8)
                     },
                     Z
@@ -245,11 +265,11 @@ function w(e) {
                   originDestination: L
               })
             : (0, r.jsxs)(i.hzk, {
-                  className: j.noResults,
+                  className: v.noResults,
                   children: [
                       (0, r.jsx)('img', {
-                          className: j.noResultsImg,
-                          src: v,
+                          className: v.noResultsImg,
+                          src: x,
                           alt: ''
                       }),
                       (0, r.jsx)(i.Text, {
@@ -262,9 +282,9 @@ function w(e) {
     return (0, r.jsxs)(
         i.Y0X,
         O(
-            x(
+            j(
                 {
-                    className: j.modal,
+                    className: v.modal,
                     'aria-label': y.intl.string(y.t.fuFvw8)
                 },
                 Z
@@ -272,13 +292,13 @@ function w(e) {
             {
                 children: [
                     (0, r.jsxs)(i.xBx, {
-                        className: j.header,
+                        className: v.header,
                         children: [
                             (0, r.jsxs)('div', {
-                                className: j.titleLine,
+                                className: v.titleLine,
                                 children: [
                                     (0, r.jsx)('div', {
-                                        className: j.title,
+                                        className: v.title,
                                         children: (0, r.jsxs)(i.y5t, {
                                             component: (0, r.jsxs)(i.X6q, {
                                                 variant: 'heading-lg/semibold',
@@ -301,14 +321,14 @@ function w(e) {
                                         })
                                     }),
                                     (0, r.jsx)(i.olH, {
-                                        className: j.closeButton,
+                                        className: v.closeButton,
                                         onClick: X
                                     })
                                 ]
                             }),
                             void 0 !== N ? (0, r.jsx)(m.z, { previewMessage: N }) : null,
                             (0, r.jsx)(i.E1j, {
-                                className: j.search,
+                                className: v.search,
                                 ref: Y,
                                 size: i.E1j.Sizes.MEDIUM,
                                 query: U,

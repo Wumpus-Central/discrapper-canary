@@ -6,8 +6,8 @@ var r = n(255367),
     i = n(392711),
     l = n.n(i),
     c = n(442837),
-    d = n(481060),
-    u = n(451478),
+    u = n(481060),
+    d = n(451478),
     p = n(302221),
     m = n(464121);
 let f = [0, 0.5, 1],
@@ -35,7 +35,7 @@ async function x(e, t) {
 function h(e) {
     var t;
     let { animationClassName: n, className: s, quest: i, useReducedMotion: l } = e,
-        g = (0, c.e7)([u.Z], () => u.Z.isFocused()),
+        g = (0, c.e7)([d.Z], () => d.Z.isFocused()),
         h = o.useRef(null),
         [b, j] = o.useState(!1),
         v = o.useMemo(() => {
@@ -66,7 +66,7 @@ function h(e) {
         : (0, r.jsx)('div', {
               className: a()(m.lottieAnimationBackgroundWrapper, s),
               children: (0, r.jsx)(
-                  d.Fmz,
+                  u.Fmz,
                   {
                       ref: h,
                       onComplete: O,

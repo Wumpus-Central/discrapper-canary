@@ -7,12 +7,12 @@ var o = n(481060),
     i = n(497505),
     l = n(981631),
     c = n(388032),
-    d = n(382845);
-function u(e) {
+    u = n(382845);
+function d(e) {
     let { text: t, quest: n } = e,
         c = (0, a.O5)();
     return (0, r.jsx)(o.P3F, {
-        className: d.showConnectionsButton,
+        className: u.showConnectionsButton,
         onClick: () => {
             c({
                 questId: n.id,
@@ -32,7 +32,7 @@ function u(e) {
 function p(e) {
     let { xboxAndPlaystationAccounts: t, quest: n } = e;
     return t.length > 0
-        ? (0, r.jsx)(u, {
+        ? (0, r.jsx)(d, {
               text: c.intl.string(c.t['qiS+xs']),
               quest: n
           })

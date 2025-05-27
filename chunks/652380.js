@@ -11,8 +11,8 @@ var r = n(255367),
     i = n(278074),
     l = n(754700),
     c = n(887003),
-    d = n(742635),
-    u = n(458708),
+    u = n(742635),
+    d = n(458708),
     p = n(481060),
     m = n(70956),
     f = n(497505),
@@ -64,7 +64,7 @@ function q(e) {
     }
     return e;
 }
-function D(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -82,8 +82,8 @@ function D(e, t) {
         e
     );
 }
-let I = ['png', 'gif', 'webp'],
-    M = [...I, 'jpg', 'jpeg'],
+let D = ['png', 'gif', 'webp'],
+    M = [...D, 'jpg', 'jpeg'],
     L = Array.from(new Set([...M, 'gif', 'mp4', 'webm']));
 function W(e) {
     var t, n;
@@ -168,8 +168,8 @@ let V = '1193992107035983872',
                 logotype: 'game_logotype.png'
             },
             taskConfig: {
-                type: d.L.FIRST_PARTY,
-                joinOperator: u.r.AND,
+                type: u.L.FIRST_PARTY,
+                joinOperator: d.r.AND,
                 tasks: {
                     [l.X.PLAY_ON_DESKTOP]: {
                         eventName: l.X.PLAY_ON_DESKTOP,
@@ -179,7 +179,7 @@ let V = '1193992107035983872',
                 }
             },
             taskConfigV2: {
-                joinOperator: u.r.AND,
+                joinOperator: d.r.AND,
                 tasks: {
                     [l.X.PLAY_ON_DESKTOP]: {
                         type: l.X.PLAY_ON_DESKTOP,
@@ -193,10 +193,10 @@ let V = '1193992107035983872',
         targetedContent: []
     };
 function H() {
-    var e, t, s, d, u, B, W, V, H, U, z, F, K, X;
+    var e, t, s, u, d, B, W, V, H, U, z, F, K, X;
     let [Y, G] = o.useState(Q),
         J = o.useCallback((e) => {
-            G(D(q({}, e), { preview: !0 }));
+            G(I(q({}, e), { preview: !0 }));
         }, []),
         [$, ee] = o.useState(R.a.UNENROLLED),
         [et, en] = o.useState(!1),
@@ -211,12 +211,12 @@ function H() {
         if ('hero' === e || 'questBarHero' === e || 'gameTile' === e || 'logotype' === e || 'heroVideo' === e || 'questBarHeroVideo' === e) {
             var n, r;
             J(
-                D(q({}, Y), {
+                I(q({}, Y), {
                     config:
                         ((n = Y.config),
                         (r = { [e]: t }),
                         (0, i.EQ)(n)
-                            .with({ configVersion: 2 }, (e) => D(q({}, e), { assets: q({}, e.assets, r) }))
+                            .with({ configVersion: 2 }, (e) => I(q({}, e), { assets: q({}, e.assets, r) }))
                             .exhaustive())
                 })
             );
@@ -225,39 +225,39 @@ function H() {
     function ec(e, t) {
         var n, r, o;
         J(
-            D(q({}, Y), {
-                config: D(q({}, Y.config), {
-                    videoMetadata: D(q({}, Y.config.videoMetadata), {
+            I(q({}, Y), {
+                config: I(q({}, Y.config), {
+                    videoMetadata: I(q({}, Y.config.videoMetadata), {
                         messages: null != (o = null == (n = Y.config.videoMetadata) ? void 0 : n.messages) ? o : {},
-                        assets: D(q({}, null == (r = Y.config.videoMetadata) ? void 0 : r.assets), { [e]: t })
+                        assets: I(q({}, null == (r = Y.config.videoMetadata) ? void 0 : r.assets), { [e]: t })
                     })
                 })
             })
         );
     }
-    function ed(e, t) {
+    function eu(e, t) {
         if ('questName' === e || 'gameTitle' === e || 'gamePublisher' === e) {
             var n, r;
             J(
-                D(q({}, Y), {
+                I(q({}, Y), {
                     config:
                         ((n = Y.config),
                         (r = { [e]: t }),
                         (0, i.EQ)(n)
-                            .with({ configVersion: 2 }, (e) => D(q({}, e), { messages: q({}, e.messages, r) }))
+                            .with({ configVersion: 2 }, (e) => I(q({}, e), { messages: q({}, e.messages, r) }))
                             .exhaustive())
                 })
             );
         }
     }
-    function eu(e, t) {
+    function ed(e, t) {
         var n, r, o;
         J(
-            D(q({}, Y), {
-                config: D(q({}, Y.config), {
-                    videoMetadata: D(q({}, Y.config.videoMetadata), {
+            I(q({}, Y), {
+                config: I(q({}, Y.config), {
+                    videoMetadata: I(q({}, Y.config.videoMetadata), {
                         assets: null != (o = null == (n = Y.config.videoMetadata) ? void 0 : n.assets) ? o : {},
-                        messages: D(q({}, null == (r = Y.config.videoMetadata) ? void 0 : r.messages), { [e]: t })
+                        messages: I(q({}, null == (r = Y.config.videoMetadata) ? void 0 : r.messages), { [e]: t })
                     })
                 })
             })
@@ -267,19 +267,19 @@ function H() {
         if ('name' === e || 'nameWithArticle' === e) {
             var r, o;
             J(
-                D(q({}, Y), {
+                I(q({}, Y), {
                     config:
                         ((r = Y.config),
                         (o = { [e]: t }),
                         (0, i.EQ)(r)
-                            .with({ configVersion: 2 }, (e) => D(q({}, e), { rewardsConfig: D(q({}, e.rewardsConfig), { rewards: e.rewardsConfig.rewards.map((e, t) => (t === n ? D(q({}, e), { messages: q({}, e.messages, o) }) : e)) }) }))
+                            .with({ configVersion: 2 }, (e) => I(q({}, e), { rewardsConfig: I(q({}, e.rewardsConfig), { rewards: e.rewardsConfig.rewards.map((e, t) => (t === n ? I(q({}, e), { messages: q({}, e.messages, o) }) : e)) }) }))
                             .exhaustive())
                 })
             );
         }
     }
     function em(e, t) {
-        J(D(q({}, Y), { config: D(q({}, Y.config), { colors: D(q({}, Y.config.colors), { [e]: t }) }) }));
+        J(I(q({}, Y), { config: I(q({}, Y.config), { colors: I(q({}, Y.config.colors), { [e]: t }) }) }));
     }
     function ef() {
         (0, g.Xv)(Y.config)
@@ -338,7 +338,7 @@ function H() {
                         taskDuration: eg,
                         taskConfig: Y.config.taskConfig,
                         onSelect: function (e) {
-                            J(D(q({}, Y), { config: D(q({}, Y.config), { taskConfig: e }) }));
+                            J(I(q({}, Y), { config: I(q({}, Y.config), { taskConfig: e }) }));
                         }
                     })
                 }),
@@ -353,19 +353,19 @@ function H() {
                         (0, r.jsx)(E.Z, {
                             title: 'Quest Name',
                             assetKey: 'questName',
-                            onMessageChange: ed,
+                            onMessageChange: eu,
                             initialValue: Y.config.messages.questName
                         }),
                         (0, r.jsx)(E.Z, {
                             title: 'Game Title',
                             assetKey: 'gameTitle',
-                            onMessageChange: ed,
+                            onMessageChange: eu,
                             initialValue: Y.config.messages.gameTitle
                         }),
                         (0, r.jsx)(E.Z, {
                             title: 'Game Publisher',
                             assetKey: 'gamePublisher',
-                            onMessageChange: ed,
+                            onMessageChange: eu,
                             initialValue: Y.config.messages.gamePublisher
                         }),
                         ex &&
@@ -374,19 +374,19 @@ function H() {
                                     (0, r.jsx)(E.Z, {
                                         title: 'Video Title',
                                         assetKey: 'videoTitle',
-                                        onMessageChange: eu,
+                                        onMessageChange: ed,
                                         initialValue: null == (e = Y.config.videoMetadata) ? void 0 : e.messages.videoTitle
                                     }),
                                     (0, r.jsx)(E.Z, {
                                         title: 'End CTA Title',
                                         assetKey: 'videoEndCtaTitle',
-                                        onMessageChange: eu,
+                                        onMessageChange: ed,
                                         initialValue: null == (t = Y.config.videoMetadata) ? void 0 : t.messages.videoEndCtaTitle
                                     }),
                                     (0, r.jsx)(E.Z, {
                                         title: 'End CTA Subtitle',
                                         assetKey: 'videoEndCtaSubtitle',
-                                        onMessageChange: eu,
+                                        onMessageChange: ed,
                                         initialValue: null == (s = Y.config.videoMetadata) ? void 0 : s.messages.videoEndCtaSubtitle
                                     })
                                 ]
@@ -440,7 +440,7 @@ function H() {
                             title: 'Logotype',
                             assetKey: 'logotype',
                             onFileChange: el,
-                            filters: [...I, 'svg'],
+                            filters: [...D, 'svg'],
                             initialValue: Y.config.assets.logotype
                         }),
                         ex &&
@@ -451,14 +451,14 @@ function H() {
                                         assetKey: 'videoPlayerVideo',
                                         onFileChange: ec,
                                         filters: L,
-                                        initialValue: null == (d = Y.config.videoMetadata) ? void 0 : d.assets.videoPlayerVideo
+                                        initialValue: null == (u = Y.config.videoMetadata) ? void 0 : u.assets.videoPlayerVideo
                                     }),
                                     (0, r.jsx)(P.Z, {
                                         title: 'Quest Video (Low Resolution)',
                                         assetKey: 'videoPlayerVideoLowRes',
                                         onFileChange: ec,
                                         filters: L,
-                                        initialValue: null == (u = Y.config.videoMetadata) ? void 0 : u.assets.videoPlayerVideoLowRes
+                                        initialValue: null == (d = Y.config.videoMetadata) ? void 0 : d.assets.videoPlayerVideoLowRes
                                     }),
                                     (0, r.jsx)(P.Z, {
                                         title: 'Video Player Thumbnail (optional)',
@@ -519,16 +519,16 @@ function H() {
                                                         if ('asset' === e) {
                                                             var r;
                                                             J(
-                                                                D(q({}, Y), {
+                                                                I(q({}, Y), {
                                                                     config:
                                                                         ((r = Y.config),
                                                                         (0, i.EQ)(r)
                                                                             .with({ configVersion: 2 }, (e) =>
-                                                                                D(q({}, e), {
-                                                                                    rewardsConfig: D(q({}, e.rewardsConfig), {
+                                                                                I(q({}, e), {
+                                                                                    rewardsConfig: I(q({}, e.rewardsConfig), {
                                                                                         rewards: e.rewardsConfig.rewards.map((e, r) =>
                                                                                             r === n
-                                                                                                ? D(q({}, e), {
+                                                                                                ? I(q({}, e), {
                                                                                                       asset: t,
                                                                                                       skuId: ''
                                                                                                   })
@@ -596,14 +596,14 @@ function H() {
                             onChange: function (e) {
                                 switch ((ee(e), e)) {
                                     case R.a.UNENROLLED:
-                                        J(D(q({}, Y), { userStatus: null }));
+                                        J(I(q({}, Y), { userStatus: null }));
                                         break;
                                     case R.a.ENROLLED:
-                                        J(D(q({}, Y), { userStatus: Z({ enrolledAt: new Date().toISOString() }) }));
+                                        J(I(q({}, Y), { userStatus: Z({ enrolledAt: new Date().toISOString() }) }));
                                         break;
                                     case R.a.COMPLETED_25:
                                         J(
-                                            D(q({}, Y), {
+                                            I(q({}, Y), {
                                                 userStatus: Z({
                                                     enrolledAt: new Date().toISOString(),
                                                     streamProgressSeconds: 0.25 * eg
@@ -613,7 +613,7 @@ function H() {
                                         break;
                                     case R.a.COMPLETED_50:
                                         J(
-                                            D(q({}, Y), {
+                                            I(q({}, Y), {
                                                 userStatus: Z({
                                                     enrolledAt: new Date().toISOString(),
                                                     streamProgressSeconds: 0.5 * eg
@@ -623,7 +623,7 @@ function H() {
                                         break;
                                     case R.a.COMPLETED_75:
                                         J(
-                                            D(q({}, Y), {
+                                            I(q({}, Y), {
                                                 userStatus: Z({
                                                     enrolledAt: new Date().toISOString(),
                                                     streamProgressSeconds: 0.75 * eg
@@ -633,7 +633,7 @@ function H() {
                                         break;
                                     case R.a.COMPLETED_100:
                                         J(
-                                            D(q({}, Y), {
+                                            I(q({}, Y), {
                                                 userStatus: Z({
                                                     completedAt: new Date().toISOString(),
                                                     enrolledAt: new Date().toISOString(),
@@ -644,7 +644,7 @@ function H() {
                                         break;
                                     case R.a.CLAIMED:
                                         J(
-                                            D(q({}, Y), {
+                                            I(q({}, Y), {
                                                 userStatus: Z({
                                                     claimedAt: new Date().toISOString(),
                                                     completedAt: new Date().toISOString(),
@@ -793,7 +793,7 @@ function H() {
                                                     var n;
                                                     return (0, r.jsx)(
                                                         e,
-                                                        D(q({}, t), {
+                                                        I(q({}, t), {
                                                             openStartClockTime: performance.now(),
                                                             videoSessionId: 'fake-quest-session-id',
                                                             questId: null != (n = Y.id) ? n : 'fake-quest-id',

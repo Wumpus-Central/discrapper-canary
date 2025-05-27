@@ -12,5 +12,6 @@ e.exports = {
     ignoreButton: 'ignoreButton__6fddf button__6fddf',
     lifecycleContainer: 'lifecycleContainer__6fddf',
     lifecycleText: 'lifecycleText__6fddf',
-    checkbox: 'checkbox__6fddf'
+    checkbox: 'checkbox__6fddf',
+    emoji: 'emoji__6fddf'
 };

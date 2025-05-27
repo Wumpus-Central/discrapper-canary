@@ -56,12 +56,12 @@ function d(e) {
     var { label: t } = e,
         n = c(e, ['label']);
     switch (t) {
-        case i.w.LISTEN:
-            return (0, r.jsx)(o.RZG, l({}, n));
-        case i.w.WATCH:
-            return (0, r.jsx)(o.ARS, l({}, n));
-        case i.w.PLAY:
-            return (0, r.jsx)(o.iWm, l({}, n));
+        case i.w.QUESTION:
+            return (0, r.jsx)(o.Que, l({}, n));
+        case i.w.EXCITED:
+            return (0, r.jsx)(o.rIT, l({}, n));
+        case i.w.RECOMMEND:
+            return (0, r.jsx)(o.Vy8, l({}, n));
         case i.w.THINK:
             return (0, r.jsx)(o.WGR, l({}, n));
         case i.w.LOVE:

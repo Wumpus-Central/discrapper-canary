@@ -9,7 +9,7 @@ function o() {
 let a = {
     canUIRequestGatewaySocket: i,
     getState: function () {
-        return r.Z.isFocused() ? 'focused' : 'unfocused';
+        return r.Z.isAppFocused() ? 'focused' : 'unfocused';
     },
     useCanUIRequestGatewaySocket: o
 };

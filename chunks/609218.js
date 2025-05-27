@@ -27,7 +27,7 @@ var r = n(255367),
     S = n(388032),
     T = n(520303),
     A = n(229191),
-    N = n(635048),
+    N = n(308362),
     C = (function (e) {
         return (e[(e.NONE = 0)] = 'NONE'), (e[(e.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (e[(e.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER'), e;
     })({});
@@ -89,15 +89,15 @@ function P(e) {
                                               alt: 'Nitro Perk'
                                           }),
                                           (0, r.jsx)(c.X6q, {
-                                              className: a()(T.title, { [T.titleNoSocialProof]: !U }),
+                                              className: T.title,
                                               variant: 'heading-xl/bold',
                                               color: 'header-primary',
                                               children: o
                                           }),
-                                          U && (0, r.jsx)(O.Z, { affinities: M }),
                                           (0, r.jsx)(c.Text, {
                                               variant: 'text-md/medium',
                                               color: 'text-secondary',
+                                              className: T.body,
                                               children: C
                                           })
                                       ]
@@ -113,7 +113,11 @@ function P(e) {
                                           color: Z ? c.zxk.Colors.PRIMARY : c.zxk.Colors.WHITE,
                                           look: c.zxk.Looks.LINK,
                                           onClick: B,
-                                          children: S.intl.string(S.t.ZnqyZ2)
+                                          children: (0, r.jsx)(c.Text, {
+                                              variant: 'text-md/medium',
+                                              color: 'text-primary',
+                                              children: S.intl.string(S.t.ZnqyZ2)
+                                          })
                                       }),
                                       (0, r.jsx)(y.Z, {
                                           showGradient: !0,

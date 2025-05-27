@@ -17,8 +17,8 @@ var r = n(255367),
 function v(e) {
     var t;
     let { guildId: n, role: s, theme: v, content: h = m.intl.string(m.t['6OSasb']), className: O } = e,
-        x = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
-        j = g.ZP.useName(n, null, x),
+        j = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
+        x = g.ZP.useName(n, null, j),
         y = (0, c.Kz)(s),
         C = i.useMemo(() => {
             var e, t;
@@ -56,7 +56,7 @@ function v(e) {
                         type: void 0,
                         messageReference: void 0,
                         allowedMentions: void 0,
-                        author: x
+                        author: j
                     })
                 )),
                 (t = t =
@@ -78,9 +78,9 @@ function v(e) {
                       }),
                 e)
             );
-        }, [x, h]),
+        }, [j, h]),
         S = {
-            nick: j,
+            nick: x,
             colorString: null != (t = s.colorString) ? t : void 0
         };
     return (0, r.jsx)(l.f6W, {

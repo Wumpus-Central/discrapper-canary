@@ -743,7 +743,7 @@ function ee(e) {
                                 hideCaptionBtn: null == tW,
                                 handlePlaybackBtnClick: tR,
                                 handleTranscriptBtnClick: () => {
-                                    ea || (null != e1 && e1.questId === ee.id && e1.fetchStatus !== x.iF.NONE && e1.fetchStatus !== x.iF.FAILURE) || (0, j.lL)(ee), es(!ea), tb(y.jn.VIDEO_MODAL, ea ? S.jZ.TRANSCRIPT_DISABLE : S.jZ.TRANSCRIPT_ENABLE);
+                                    ea || (null != e1 && e1.questId === ee.id && e1.fetchStatus !== x.iF.NONE && e1.fetchStatus !== x.iF.FAILURE) || (0, j.lL)(ee, u.X.WATCH_VIDEO), es(!ea), tb(y.jn.VIDEO_MODAL, ea ? S.jZ.TRANSCRIPT_DISABLE : S.jZ.TRANSCRIPT_ENABLE);
                                 },
                                 handleCaptionBtnClick: () => {
                                     eu(!ec), tb(y.jn.VIDEO_MODAL, ec ? S.jZ.CLOSED_CAPTIONING_DISABLE : S.jZ.CLOSED_CAPTIONING_ENABLE);
