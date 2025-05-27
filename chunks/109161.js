@@ -64,44 +64,44 @@ function _(e, t) {
 }
 function p(e) {
     var t;
-    let { color: n, colors: o, className: s, background: u = !0 } = e,
-        [d, f] = i.useState(!1),
-        _ = null != (t = null == o ? void 0 : o.primaryColor) ? t : n,
-        { hasGradient: p, stops: h, gradientId: m, animatedGradientId: g } = (0, l.De)(_, null == o ? void 0 : o.secondaryColor, null == o ? void 0 : o.tertiaryColor);
-    return null == _
+    let { color: n, colors: o, className: s, background: u = !0, hoverOverride: d } = e,
+        [f, _] = i.useState(!1),
+        p = null != (t = null == o ? void 0 : o.primaryColor) ? t : n,
+        { hasGradient: h, stops: m, gradientId: g, animatedGradientId: E } = (0, l.De)(p, null == o ? void 0 : o.secondaryColor, null == o ? void 0 : o.tertiaryColor);
+    return null == p
         ? null
         : (0, r.jsxs)('svg', {
               className: a()(c.svg, s),
               viewBox: '0 0 20 20',
               fill: 'none',
               onMouseEnter: () => {
-                  f(!0);
+                  _(!0);
               },
               onMouseLeave: () => {
-                  f(!1);
+                  _(!1);
               },
               children: [
-                  p &&
+                  h &&
                       (0, r.jsxs)('defs', {
                           children: [
                               (0, r.jsx)('linearGradient', {
-                                  id: m,
-                                  x1: '0%',
-                                  y1: '0%',
-                                  x2: '100%',
-                                  y2: '0%',
-                                  spreadMethod: 'reflect',
-                                  children: h
-                              }),
-                              (0, r.jsxs)('linearGradient', {
                                   id: g,
                                   x1: '0%',
                                   y1: '0%',
                                   x2: '100%',
                                   y2: '0%',
                                   spreadMethod: 'reflect',
+                                  children: m
+                              }),
+                              (0, r.jsxs)('linearGradient', {
+                                  id: E,
+                                  x1: '0%',
+                                  y1: '0%',
+                                  x2: '100%',
+                                  y2: '0%',
+                                  spreadMethod: 'reflect',
                                   children: [
-                                      h,
+                                      m,
                                       (0, r.jsx)('animate', {
                                           attributeName: 'x1',
                                           from: '0%',
@@ -136,14 +136,14 @@ function p(e) {
                       cx: '10',
                       cy: '10',
                       r: '6',
-                      fill: p ? 'url(#'.concat(m, ')') : _
+                      fill: h ? 'url(#'.concat(g, ')') : p
                   }),
                   (0, r.jsx)('circle', {
                       className: c.dot,
                       cx: '10',
                       cy: '10',
                       r: '5',
-                      fill: p ? 'url(#'.concat(d ? g : m, ')') : _
+                      fill: h ? 'url(#'.concat(d || f ? E : g, ')') : p
                   })
               ]
           });

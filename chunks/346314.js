@@ -129,7 +129,8 @@ function O(e) {
                   color: o,
                   colors: A ? c : null,
                   name: l,
-                  className: 'left' === d ? p.roleDotLeft : p.roleDotRight
+                  className: 'left' === d ? p.roleDotLeft : p.roleDotRight,
+                  hoverOverride: g || y || (null == b ? void 0 : b.animate)
               })
             : null;
     return (0, r.jsxs)('span', {

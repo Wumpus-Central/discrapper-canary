@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => I }), n(388685), n(539854);
+n.d(t, { ZP: () => P }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -6,19 +6,18 @@ var r = n(255367),
     s = n(392711),
     a = n.n(s),
     c = n(91192),
-    u = n(442837),
-    d = n(481060),
-    h = n(724757),
-    p = n(210887),
-    f = n(626135),
-    g = n(585483),
-    m = n(821020),
-    b = n(846355),
-    y = n(982183),
-    O = n(981631),
-    v = n(388032),
-    _ = n(709701);
-function C(e) {
+    u = n(481060),
+    d = n(724757),
+    h = n(210887),
+    p = n(626135),
+    f = n(585483),
+    g = n(821020),
+    m = n(370774),
+    b = n(982183),
+    y = n(981631),
+    O = n(388032),
+    v = n(709701);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,7 +42,7 @@ function C(e) {
     }
     return e;
 }
-function j(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,162 +60,161 @@ function j(e, t) {
         e
     );
 }
-function S(e) {
+function j(e) {
     e.stopPropagation();
 }
-let E = () =>
+let S = () =>
     (0, r.jsxs)('div', {
-        className: _.unreadsEmpty,
+        className: v.unreadsEmpty,
         children: [
-            (0, r.jsx)(d.xx7, {
+            (0, r.jsx)(u.xx7, {
                 color: 'currentColor',
                 size: 'custom',
-                className: _.unreadsEmptyIcon,
+                className: v.unreadsEmptyIcon,
                 width: 36,
                 height: 36
             }),
-            (0, r.jsx)(d.Text, {
+            (0, r.jsx)(u.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-muted',
-                children: v.intl.string(v.t['6XMM+P'])
+                children: O.intl.string(O.t['6XMM+P'])
             })
         ]
     });
-function x(e) {
+function E(e) {
     let { group: t, isOpen: n, toggleOpenedState: i } = e;
-    return (0, r.jsx)(d.P3F, {
+    return (0, r.jsx)(u.P3F, {
         onClick: i,
-        className: o()(_.messagesGroupHeaderWrap, { [_.collapsed]: !n }),
-        children: (0, r.jsxs)(d.Kqy, {
+        className: o()(v.messagesGroupHeaderWrap, { [v.collapsed]: !n }),
+        children: (0, r.jsxs)(u.Kqy, {
             gap: 4,
             direction: 'horizontal',
             align: 'center',
             children: [
-                (0, r.jsx)(d.X6q, {
+                (0, r.jsx)(u.X6q, {
                     variant: 'text-sm/medium',
                     color: 'text-secondary',
-                    className: _.messagesGroupHeader,
-                    children: (0, s.capitalize)(v.intl.string(y.Ty[t]).toLowerCase())
+                    className: v.messagesGroupHeader,
+                    children: (0, s.capitalize)(O.intl.string(b.Ty[t]).toLowerCase())
                 }),
-                (0, r.jsx)(d.CJ0, {
+                (0, r.jsx)(u.CJ0, {
                     size: 'xxs',
-                    className: _.chevron
+                    className: v.chevron
                 })
             ]
         })
     });
 }
-let P = {
-    [y.dm.UNREAD]: !0,
-    [y.dm.TODAY]: !1,
-    [y.dm.YESTERDAY]: !1,
-    [y.dm.OLDER]: !1
+let x = {
+    [b.dm.UNREAD]: !0,
+    [b.dm.TODAY]: !1,
+    [b.dm.YESTERDAY]: !1,
+    [b.dm.OLDER]: !1
 };
-function I(e) {
-    let { analyticsName: t, messages: n, hasMore: l, loading: s, loadMore: v, renderEmptyState: I, renderMessage: w, scrollerClassName: N, className: Z, listName: T } = e,
-        A = i.useRef(null),
-        R = (0, h.Z)(T, A),
-        D = (0, u.e7)([b.Z], () => b.Z.unreadMessageIds),
-        { notificationCenterVariant: L } = m.L.useExperiment({ location: 'NotificationsInboxSidebarList' }),
-        [k, M] = i.useState(P);
+function P(e) {
+    let { analyticsName: t, messages: n, hasMore: l, loading: s, loadMore: O, renderEmptyState: P, renderMessage: I, scrollerClassName: w, className: N, listName: Z } = e,
+        T = i.useRef(null),
+        A = (0, d.Z)(Z, T),
+        { notificationCenterVariant: R } = g.L.useExperiment({ location: 'NotificationsInboxSidebarList' }),
+        [D, L] = i.useState(x);
     i.useEffect(() => {
-        f.default.track(O.rMx.OPEN_POPOUT, { type: t });
+        p.default.track(y.rMx.OPEN_POPOUT, { type: t });
     }, [t]),
         i.useEffect(() => {
             function e() {
                 var e;
-                null == (e = A.current) || e.scrollPageUp({ animate: !0 });
+                null == (e = T.current) || e.scrollPageUp({ animate: !0 });
             }
             function t() {
                 var e;
-                null == (e = A.current) || e.scrollPageDown({ animate: !0 });
+                null == (e = T.current) || e.scrollPageDown({ animate: !0 });
             }
             return (
-                g.S.subscribe(O.CkL.SCROLL_PAGE_DOWN, t),
-                g.S.subscribe(O.CkL.SCROLL_PAGE_UP, e),
+                f.S.subscribe(y.CkL.SCROLL_PAGE_DOWN, t),
+                f.S.subscribe(y.CkL.SCROLL_PAGE_UP, e),
                 () => {
-                    g.S.unsubscribe(O.CkL.SCROLL_PAGE_DOWN, t), g.S.unsubscribe(O.CkL.SCROLL_PAGE_UP, e);
+                    f.S.unsubscribe(y.CkL.SCROLL_PAGE_DOWN, t), f.S.unsubscribe(y.CkL.SCROLL_PAGE_UP, e);
                 }
             );
         }, []);
-    let U = i.useCallback(() => {
+    let k = i.useCallback(() => {
             var e;
-            let t = null == (e = A.current) ? void 0 : e.getScrollerState();
-            null != t && t.scrollHeight >= t.scrollTop + t.offsetHeight && l && !s && (null == v || v());
-        }, [l, v, s]),
-        G = [],
-        B = {
-            [y.dm.UNREAD]: [],
-            [y.dm.TODAY]: [],
-            [y.dm.YESTERDAY]: [],
-            [y.dm.OLDER]: []
+            let t = null == (e = T.current) ? void 0 : e.getScrollerState();
+            null != t && t.scrollHeight >= t.scrollTop + t.offsetHeight && l && !s && (null == O || O());
+        }, [l, O, s]),
+        M = [],
+        U = {
+            [b.dm.UNREAD]: [],
+            [b.dm.TODAY]: [],
+            [b.dm.YESTERDAY]: [],
+            [b.dm.OLDER]: []
         };
     null == n
-        ? (G = [
+        ? (M = [
               (0, r.jsx)(
                   'div',
                   {
-                      className: o()(_.emptyPlaceholder, _.loadingPlaceholder),
-                      children: (0, r.jsx)(d.$jN, {})
+                      className: o()(v.emptyPlaceholder, v.loadingPlaceholder),
+                      children: (0, r.jsx)(u.$jN, {})
                   },
                   'spinner'
               )
           ])
         : 0 === n.length
-          ? G.push((0, r.jsx)(i.Fragment, { children: I(p.Z.theme) }, 'empty-state'))
+          ? M.push((0, r.jsx)(i.Fragment, { children: P(h.Z.theme) }, 'empty-state'))
           : (a().each(n, (e) => {
-                B[(0, y.Qz)(e, D)].push(w(e, 'sidebar' === L));
+                U[(0, m.Q)(e)].push(I(e, 'sidebar' === R));
             }),
-            (G = []),
-            a().each([y.dm.UNREAD, y.dm.TODAY, y.dm.YESTERDAY, y.dm.OLDER], (e) => {
-                if (0 === B[e].length) {
-                    e === y.dm.UNREAD &&
-                        (G.push(
-                            (0, r.jsx)(x, {
+            (M = []),
+            a().each([b.dm.UNREAD, b.dm.TODAY, b.dm.YESTERDAY, b.dm.OLDER], (e) => {
+                if (0 === U[e].length) {
+                    e === b.dm.UNREAD &&
+                        (M.push(
+                            (0, r.jsx)(E, {
                                 group: e,
-                                isOpen: k[e],
-                                toggleOpenedState: () => M((t) => j(C({}, t), { [e]: !t[e] }))
+                                isOpen: D[e],
+                                toggleOpenedState: () => L((t) => C(_({}, t), { [e]: !t[e] }))
                             })
                         ),
-                        k[e] && G.push((0, r.jsx)(E, {}, 'unread-empty-state')));
+                        D[e] && M.push((0, r.jsx)(S, {}, 'unread-empty-state')));
                     return;
                 }
-                G.push(
-                    (0, r.jsx)(x, {
+                M.push(
+                    (0, r.jsx)(E, {
                         group: e,
-                        isOpen: k[e],
-                        toggleOpenedState: () => M((t) => j(C({}, t), { [e]: !t[e] }))
+                        isOpen: D[e],
+                        toggleOpenedState: () => L((t) => C(_({}, t), { [e]: !t[e] }))
                     })
                 ),
-                    k[e] && G.push(...B[e]);
-            }),
-            G.push((0, r.jsx)(d.LZC, { size: 8 }, 'spacer')));
-    let V = null;
+                    D[e] && M.push(...U[e]);
+            })),
+        M.push((0, r.jsx)(u.LZC, { size: 8 }, 'spacer'));
+    let G = null;
     null != n &&
         n.length > 0 &&
-        null != v &&
+        null != O &&
         s &&
-        (V = (0, r.jsx)(
+        (G = (0, r.jsx)(
             'div',
             {
-                className: _.loadingMore,
-                children: (0, r.jsx)(d.$jN, {})
+                className: v.loadingMore,
+                children: (0, r.jsx)(u.$jN, {})
             },
             'loading-more-after'
         ));
-    let H = null != v && l;
+    let B = null != O && l;
     return (0, r.jsx)('div', {
-        className: o()(Z, _.messagesPopoutWrap),
-        onClick: S,
-        onDoubleClick: S,
+        className: o()(N, v.messagesPopoutWrap),
+        onClick: j,
+        onDoubleClick: j,
         'aria-label': e['aria-label'],
-        children: (0, r.jsxs)(d.Den, {
-            className: o()(_.messagesPopout, N),
-            onScroll: H ? U : void 0,
-            ref: A,
+        children: (0, r.jsxs)(u.Den, {
+            className: o()(v.messagesPopout, w),
+            onScroll: B ? k : void 0,
+            ref: T,
             children: [
                 (0, r.jsx)(c.bG, {
-                    navigator: R,
+                    navigator: A,
                     children: (0, r.jsx)(c.SJ, {
                         children: (e) => {
                             var { ref: t } = e,
@@ -239,11 +237,11 @@ function I(e) {
                                     }
                                     return i;
                                 })(e, ['ref']);
-                            return (0, r.jsx)('div', j(C({ ref: t }, n), { children: G }));
+                            return (0, r.jsx)('div', C(_({ ref: t }, n), { children: M }));
                         }
                     })
                 }),
-                V
+                G
             ]
         })
     });
