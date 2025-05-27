@@ -32938,6 +32938,22 @@ html:not(.visual-refresh) .root_e5f3a9 {
     display: none
 }
 
+.premiumRebrandContainer__0687d {
+    align-items: center;
+    background-color: var(--background-surface-highest);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+    margin-top: 5px;
+    padding: var(--spacing-8);
+    position: relative
+}
+
+.premiumRebrandIcon__0687d {
+    margin-right: var(--spacing-12)
+}
+
 .wrapper_c0e5ec {
     border-radius: 4px;
     transition: background-color .2s ease
