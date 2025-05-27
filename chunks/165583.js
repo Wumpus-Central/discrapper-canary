@@ -17,7 +17,7 @@ var r = n(255367),
     p = n(481060),
     h = n(410030),
     m = n(607070),
-    g = n(238302),
+    g = n(55358),
     E = n(703656),
     b = n(483444),
     y = n(599250),
@@ -442,7 +442,7 @@ function F(e) {
                     discountOffer: T,
                     children: w.intl.format(w.t['5KMAnJ'], {
                         onClick: () => {
-                            (0, E.uL)(R.Z5c.APPLICATION_STORE), (0, g.Mo)();
+                            (0, E.uL)(R.Z5c.APPLICATION_STORE), (0, g.C)();
                         }
                     })
                 })

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -10,133 +10,130 @@ var r = n(255367),
     d = n(607070),
     f = n(100527),
     _ = n(906732),
-    p = n(639119),
-    h = n(767714),
-    m = n(587446),
-    g = n(594174),
-    E = n(626135),
-    b = n(74538),
-    y = n(94795),
-    O = n(327943),
-    v = n(539873),
-    I = n(981631),
-    S = n(921944),
-    T = n(474936),
-    A = n(388032),
-    N = n(362450);
-let C = () => {
+    p = n(550385),
+    h = n(639119),
+    m = n(767714),
+    g = n(587446),
+    E = n(594174),
+    b = n(626135),
+    y = n(74538),
+    O = n(874926),
+    v = n(737604),
+    I = n(539873),
+    S = n(981631),
+    T = n(921944),
+    A = n(474936),
+    N = n(388032),
+    C = n(362450);
+let P = () => {
         var e, t, n;
-        let i = (0, s.e7)([g.default], () => b.ZP.isPremium(g.default.getCurrentUser())),
-            o = (0, p.N)(),
-            a = (null == o || null == (e = o.subscription_trial) ? void 0 : e.sku_id) === T.Si.TIER_2;
-        return (0, r.jsx)(h.Z, {
+        let i = (0, s.e7)([E.default], () => y.ZP.isPremium(E.default.getCurrentUser())),
+            o = (0, h.N)(),
+            a = (null == o || null == (e = o.subscription_trial) ? void 0 : e.sku_id) === A.Si.TIER_2;
+        return (0, r.jsx)(m.Z, {
             size: l.zxk.Sizes.MEDIUM,
             textOptions: {
                 textOverride: i
-                    ? A.intl.string(A.t.IJI7ys)
+                    ? N.intl.string(N.t.IJI7ys)
                     : a
-                      ? (0, b.Rt)({
+                      ? (0, y.Rt)({
                             intervalType: null == o || null == (t = o.subscription_trial) ? void 0 : t.interval,
                             intervalCount: null == o || null == (n = o.subscription_trial) ? void 0 : n.interval_count
                         })
-                      : A.intl.string(A.t.mr4K7O)
+                      : N.intl.string(N.t.mr4K7O)
             },
-            subscriptionTier: T.Si.TIER_2
+            subscriptionTier: A.Si.TIER_2
         });
     },
-    P = (e) => {
+    R = (e) => {
         let { markAsDismissed: t } = e,
             n = () => {
-                null == t || t(S.L.DISMISS), (0, y.G8)();
+                null == t || t(T.L.DISMISS), (0, p.Ll)(), (0, O.O)();
             };
         return (0, r.jsxs)('div', {
-            className: N.editorHeader,
+            className: C.editorHeader,
             children: [
                 (0, r.jsx)(l.P3F, {
-                    className: N.closeCircleButton,
+                    className: C.closeCircleButton,
                     onClick: () => n(),
                     children: (0, r.jsx)(l.k$p, {
                         size: 'md',
                         color: 'currentColor',
-                        className: N.closeCircle
+                        className: C.closeCircle
                     })
                 }),
                 (0, r.jsxs)('div', {
-                    className: N.title,
+                    className: C.title,
                     children: [
                         (0, r.jsx)(l.X6q, {
                             variant: 'heading-lg/extrabold',
-                            children: A.intl.string(A.t['hb/wEx'])
+                            children: N.intl.string(N.t['hb/wEx'])
                         }),
-                        (0, r.jsx)(m.Z, { className: N.premiumIcon })
+                        (0, r.jsx)(g.Z, { className: C.premiumIcon })
                     ]
                 })
             ]
         });
     },
-    R = (e) => {
+    w = (e) => {
         let { isCoachmark: t, markAsDismissed: n } = e,
-            i = (0, s.e7)([O.Z], () => O.Z.isUpsellPreview),
+            i = (0, s.e7)([v.Z], () => v.Z.isUpsellPreview),
             o = () => {
-                null == n || n(S.L.DISMISS), (0, y.G8)(), t || c.Z.open();
+                null == n || n(T.L.DISMISS), (0, p.Ll)(), (0, O.O)(), t || c.Z.open();
             };
         return (0, r.jsxs)('div', {
-            className: N.editorFooter,
+            className: C.editorFooter,
             children: [
-                i && (0, r.jsx)(C, {}),
+                i && (0, r.jsx)(P, {}),
                 (0, r.jsx)(l.zxk, {
-                    className: N.footerButton,
+                    className: C.footerButton,
                     onClick: o,
                     color: l.zxk.Colors.PRIMARY,
                     size: l.zxk.Sizes.MEDIUM,
-                    children: i || t ? A.intl.string(A.t['dqH+qq']) : A.intl.string(A.t.Olc2Ky)
+                    children: i || t ? N.intl.string(N.t['dqH+qq']) : N.intl.string(N.t.Olc2Ky)
                 })
             ]
         });
     };
-function w(e) {
+function D(e) {
     let { isCoachmark: t, markAsDismissed: n } = e,
         { analyticsLocations: o } = (0, _.ZP)(f.Z.APP_ICON_EDITOR),
-        c = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
-        {
-            isUpsellPreview: p,
-            isEditorOpen: h,
-            shouldEditorAnimate: m
-        } = (0, s.cj)([O.Z, d.Z], () => ({
-            isUpsellPreview: O.Z.isUpsellPreview,
-            isEditorOpen: O.Z.isEditorOpen,
+        c = (0, s.e7)([E.default], () => E.default.getCurrentUser()),
+        { isUpsellPreview: h, shouldEditorAnimate: m } = (0, s.cj)([v.Z, d.Z], () => ({
+            isUpsellPreview: v.Z.isUpsellPreview,
             shouldEditorAnimate: t && !d.Z.useReducedMotion
-        }));
+        })),
+        g = p.oq.getState().activePanel === p.wh.APP_ICON;
     i.useEffect(() => {
-        p &&
-            E.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: T.cd.APP_ICON_UPSELL,
+        h &&
+            b.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: A.cd.APP_ICON_UPSELL,
                 location_stack: o
             });
-    }, [p, o]);
-    let b = (0, u.Z)(null, p ? y.O7 : I.dG4);
+    }, [h, o]);
+    let y = (0, u.Z)(null, h ? O.O : S.dG4);
     return (i.useEffect(() => {
-        if (p && !h) return y.O7;
-    }, [p, h]),
+        if (h && !g) return O.O;
+    }, [h, g]),
     null == c)
         ? null
         : (0, r.jsx)(_.Gt, {
               value: o,
               children: (0, r.jsx)('div', {
-                  ref: b,
-                  className: a()(N.editor, m ? N.editorAnimate : null),
+                  ref: y,
+                  className: a()(C.editor, m ? C.editorAnimate : null),
                   'data-app-right-panel': !0,
                   children: (0, r.jsxs)(l.y5t, {
                       children: [
-                          (0, r.jsx)(P, { markAsDismissed: n }),
+                          (0, r.jsx)(R, { markAsDismissed: n }),
                           (0, r.jsx)(l.Ttm, {
-                              className: N.editorBody,
-                              children: (0, r.jsx)(v.Z, {
-                                  className: N.selectionGroup,
+                              className: C.editorBody,
+                              children: (0, r.jsx)(I.Z, {
+                                  className: C.selectionGroup,
                                   isEditor: !0
                               })
                           }),
-                          (0, r.jsx)(R, {
+                          (0, r.jsx)(w, {
                               markAsDismissed: n,
                               isCoachmark: t
                           })

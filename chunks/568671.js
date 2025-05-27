@@ -15,7 +15,7 @@ function m() {
         size: r.zxk.Sizes.LARGE,
         onClick: () => {
             (0, r.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e('75584'), n.e('90688')]).then(n.bind(n, 978305));
+                let { default: e } = await Promise.all([n.e('60093'), n.e('90688')]).then(n.bind(n, 978305));
                 return (t) =>
                     (0, i.jsx)(
                         e,

@@ -10,13 +10,13 @@ var r = n(73800),
     s = n(740492),
     l = n(581883),
     c = n(626135),
-    u = n(238302),
-    d = n(514361),
+    u = n(514361),
+    d = n(55358),
     f = n(981631),
     _ = n(474936),
     p = n(874893);
 let h = () => {
-        let e = (0, i.e7)([d.Z], () => d.Z.gradientPreset),
+        let e = (0, i.e7)([u.Z], () => u.Z.gradientPreset),
             t = (0, i.e7)([s.ZP], () => s.ZP.useSystemTheme === p.KW.ON),
             [n, o] = (0, r.useState)(t);
         return (
@@ -24,12 +24,12 @@ let h = () => {
                 null == e && o(t);
             }, [e, t]),
             (0, r.useCallback)(() => {
-                null != e && ((0, u.kj)(), n && (0, a.hi)(p.KW.ON));
+                null != e && ((0, d.k)(), n && (0, a.hi)(p.KW.ON));
             }, [e, n])
         );
     },
     m = () => {
-        let { previewPaneVariant: e } = (0, i.cj)([d.Z], () => ({ previewPaneVariant: d.Z.isPreview ? _.h1.FREE : _.h1.PREMIUM_STANDARD })),
+        let { previewPaneVariant: e } = (0, i.cj)([u.Z], () => ({ previewPaneVariant: u.Z.isPreview ? _.h1.FREE : _.h1.PREMIUM_STANDARD })),
             t = (0, i.e7)([l.Z], () => {
                 var e;
                 let t = null == (e = l.Z.settings.appearance) ? void 0 : e.theme;

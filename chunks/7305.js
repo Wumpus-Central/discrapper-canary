@@ -9,8 +9,8 @@ var i = n(255367),
     s = n(442837),
     r = n(570140),
     a = n(821849),
-    C = n(100527),
-    o = n(906732),
+    o = n(100527),
+    C = n(906732),
     d = n(717401),
     c = n(509545),
     u = n(78839),
@@ -20,18 +20,18 @@ var i = n(255367),
     f = n(409813),
     j = n(107998),
     m = n(791785),
-    L = n(276442),
-    _ = n(793541),
+    _ = n(276442),
+    L = n(793541),
     g = n(380898),
     E = n(710094),
     y = n(293858),
     S = n(183813),
-    M = n(614223),
-    Z = n(174827),
-    P = n(846464),
-    v = n(184160),
-    I = n(48175),
-    b = n(981631),
+    Z = n(614223),
+    M = n(174827),
+    v = n(846464),
+    P = n(184160),
+    b = n(48175),
+    I = n(981631),
     T = n(474936),
     N = n(388032),
     O = n(236691);
@@ -60,10 +60,10 @@ function w(e) {
     }
     return e;
 }
-let k = [f.h8.PLAN_SELECT, f.h8.ADD_PAYMENT_STEPS, f.h8.REVIEW, f.h8.CONFIRM];
-function H(e) {
-    let { analyticsLocation: t, analyticsObject: n, analyticsSourceLocation: s, onComplete: C, transitionState: d, initialPlanId: u, subscriptionTier: j, onClose: L, trialId: _, trialFooterMessageOverride: g, reviewWarningMessage: E, openInvoiceId: y, onSubscriptionConfirmation: S, renderPurchaseConfirmation: M, postSuccessGuild: Z, followupSKUInfo: P, renderHeader: v, applicationId: I, guildId: N, referralTrialOfferId: O, skuId: w, returnRef: k, skipConfirm: H = !1, continueSessionToInitialStep: R } = e,
-        { analyticsLocations: U } = (0, o.ZP)();
+let R = [f.h8.PLAN_SELECT, f.h8.ADD_PAYMENT_STEPS, f.h8.REVIEW, f.h8.CONFIRM];
+function k(e) {
+    let { analyticsLocation: t, analyticsObject: n, analyticsSourceLocation: s, onComplete: o, transitionState: d, initialPlanId: u, subscriptionTier: j, onClose: _, trialId: L, trialFooterMessageOverride: g, reviewWarningMessage: E, openInvoiceId: y, onSubscriptionConfirmation: S, renderPurchaseConfirmation: Z, postSuccessGuild: M, followupSKUInfo: v, renderHeader: P, applicationId: b, guildId: N, referralTrialOfferId: O, skuId: w, returnRef: R, skipConfirm: k = !1, continueSessionToInitialStep: H } = e,
+        { analyticsLocations: U } = (0, C.ZP)();
     l.useEffect(() => {
         c.Z.isLoadedForPremiumSKUs() || r.Z.wait(() => (0, a.Y2)());
     }, []);
@@ -75,39 +75,39 @@ function H(e) {
         analyticsLocation: t,
         analyticsObject: n,
         analyticsSourceLocation: s,
-        analyticsSubscriptionType: b.NYc.PREMIUM,
-        onComplete: C,
+        analyticsSubscriptionType: I.NYc.PREMIUM,
+        onComplete: o,
         transitionState: d,
         initialPlanId: u,
         giftMessage: F,
         subscriptionTier: j,
-        onClose: L,
-        trialId: _,
+        onClose: _,
+        trialId: L,
         isGift: B,
         trialFooterMessageOverride: g,
         reviewWarningMessage: E,
         planGroup: T.Y1,
         openInvoiceId: y,
         onSubscriptionConfirmation: S,
-        renderPurchaseConfirmation: M,
-        postSuccessGuild: Z,
-        followupSKUInfo: P,
-        renderHeader: v,
-        applicationId: I,
+        renderPurchaseConfirmation: Z,
+        postSuccessGuild: M,
+        followupSKUInfo: v,
+        renderHeader: P,
+        applicationId: b,
         guildId: N,
         referralTrialOfferId: O,
         skuId: w,
         shakeWhilePurchasing: !0,
         isDynamicModal: D,
-        returnRef: k,
-        skipConfirm: H,
-        continueSessionToInitialStep: R
+        returnRef: R,
+        skipConfirm: k,
+        continueSessionToInitialStep: H
     });
 }
-function R(e) {
+function H(e) {
     let { startedPaymentFlowWithPaymentSourcesRef: t, selectedSkuId: n } = (0, h.JL)(),
         { isGift: i } = (0, x.wD)();
-    return (0, M.Kp)({
+    return (0, Z.Kp)({
         isTrial: null != e && e,
         isGift: i,
         selectedSkuId: n,
@@ -117,22 +117,22 @@ function R(e) {
 function U(e) {
     var t, n;
     let { initialPlanId: l, handleStepChange: s, referralTrialOfferId: r } = e,
-        { paymentSources: a, selectedSkuId: C, selectedPlan: o } = (0, h.JL)(),
+        { paymentSources: a, selectedSkuId: o, selectedPlan: C } = (0, h.JL)(),
         { isGift: c, claimableRewards: u } = (0, x.wD)(),
-        p = R(
-            (0, I.Z)({
+        p = H(
+            (0, b.Z)({
                 isGift: c,
-                skuId: C,
+                skuId: o,
                 referralTrialOfferId: r
             })
         ),
-        j = (0, d.id)(o, c, u);
+        j = (0, d.id)(C, c, u);
     return (0, i.jsx)(
-        L.J,
+        _.J,
         ((t = w({}, e)),
         (n = n =
             {
-                breadcrumbSteps: k,
+                breadcrumbSteps: R,
                 onReturn: () => {
                     let e = Object.values(a),
                         t = e.length < 1 && null == l ? f.h8.PLAN_SELECT : f.h8.REVIEW;
@@ -161,7 +161,7 @@ let A = [
     },
     {
         key: f.h8.SKU_SELECT,
-        renderStep: (e) => (0, i.jsx)(P.q, w({}, e)),
+        renderStep: (e) => (0, i.jsx)(v.q, w({}, e)),
         options: {
             renderHeader: !1,
             hideSlider: !0,
@@ -170,7 +170,7 @@ let A = [
     },
     {
         key: f.h8.WHAT_YOU_LOSE,
-        renderStep: (e) => (0, i.jsx)(v.x, w({}, e)),
+        renderStep: (e) => (0, i.jsx)(P.x, w({}, e)),
         options: {
             renderHeader: !1,
             hideSlider: !0
@@ -178,10 +178,10 @@ let A = [
     },
     {
         key: f.h8.PLAN_SELECT,
-        renderStep: (e) => (0, i.jsx)(Z.x, w({}, e)),
+        renderStep: (e) => (0, i.jsx)(M.x, w({}, e)),
         options: {
             renderHeader: !0,
-            useBreadcrumbLabel: (e) => (R(e) ? null : N.intl.string(N.t['r+SebW']))
+            useBreadcrumbLabel: (e) => (H(e) ? null : N.intl.string(N.t['r+SebW']))
         }
     },
     {
@@ -189,7 +189,7 @@ let A = [
         renderStep: (e) => (0, i.jsx)(U, w({}, e)),
         options: {
             renderHeader: !0,
-            useBreadcrumbLabel: (e) => (R(e) ? null : N.intl.string(N.t.Sb6wIy))
+            useBreadcrumbLabel: (e) => (H(e) ? null : N.intl.string(N.t.Sb6wIy))
         }
     },
     {
@@ -198,14 +198,14 @@ let A = [
     },
     {
         key: f.h8.AWAITING_AUTHENTICATION,
-        renderStep: () => (0, i.jsx)(_.Z, {})
+        renderStep: () => (0, i.jsx)(L.Z, {})
     },
     {
         key: f.h8.REVIEW,
         renderStep: (e) => (0, i.jsx)(E.l, w({}, e)),
         options: {
             renderHeader: !0,
-            useBreadcrumbLabel: (e) => (R(e) ? N.intl.string(N.t.UKbp1N) : N.intl.string(N.t.QBnNHh))
+            useBreadcrumbLabel: (e) => (H(e) ? N.intl.string(N.t.UKbp1N) : N.intl.string(N.t.QBnNHh))
         }
     },
     {
@@ -223,10 +223,10 @@ let A = [
 ];
 function B(e) {
     let t = (0, s.e7)([u.ZP], () => u.ZP.getPremiumTypeSubscription()),
-        { analyticsLocations: n } = (0, o.ZP)(e.analyticsLocations, C.Z.PREMIUM_PAYMENT_MODAL),
-        { confirmationFooter: l, defaultPlanId: r, giftingOrigin: a, giftMessage: d, giftRecipient: c, giftStyle: p, isGift: f, loadId: m, paymentModalBanner: L, referralCode: _, repeatPurchase: g, subscriptionTier: E } = e;
+        { analyticsLocations: n } = (0, C.ZP)(e.analyticsLocations, o.Z.PREMIUM_PAYMENT_MODAL),
+        { confirmationFooter: l, defaultPlanId: r, giftingOrigin: a, giftMessage: d, giftRecipient: c, giftStyle: p, isGift: f, loadId: m, paymentModalBanner: _, referralCode: L, repeatPurchase: g, subscriptionTier: E } = e;
     if (null != E && !Object.values(T.Si).includes(E)) throw Error('subscriptionTier must be a premium subscription');
-    return (0, i.jsx)(o.Gt, {
+    return (0, i.jsx)(C.Gt, {
         value: n,
         children: (0, i.jsx)(h.PaymentContextProvider, {
             loadId: m,
@@ -235,18 +235,18 @@ function B(e) {
             skuIDs: [...T.YQ],
             isGift: f,
             defaultPlanId: r,
-            referralCode: _,
+            referralCode: L,
             repeatPurchase: g,
             children: (0, i.jsx)(j.c1, {
                 confirmationFooter: l,
-                paymentModalBanner: L,
+                paymentModalBanner: _,
                 children: (0, i.jsx)(x.KB, {
                     isGift: f,
                     giftRecipient: null == c ? void 0 : c,
                     giftMessage: d,
                     giftStyle: p,
                     giftingOrigin: a,
-                    children: (0, i.jsx)(H, w({}, e))
+                    children: (0, i.jsx)(k, w({}, e))
                 })
             })
         })

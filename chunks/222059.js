@@ -6,8 +6,8 @@ var r = n(255367),
     s = n(433517),
     a = n(481060),
     c = n(339149),
-    u = n(327943),
-    d = n(864682),
+    u = n(864682),
+    d = n(550385),
     h = n(540059),
     p = n(899740),
     f = n(849862),
@@ -44,33 +44,33 @@ let R = {
 };
 function D(e) {
     var t, n;
-    let { selected: p, user: f, badge: b, link: y, showProgressBadge: O } = e,
-        v = (0, o.e7)([u.Z], () => u.Z.isEditorOpen),
+    let { selected: o, user: p, badge: f, link: b, showProgressBadge: y } = e,
+        [O, v] = i.useState(!1),
         [_, C] = i.useState(!1),
-        [j, S] = i.useState(!1),
-        [N, D] = i.useState(null),
-        [L, k] = i.useState(0),
-        M = (0, l.Ie)('home'),
-        U = (0, h.Q3)('DefaultHomeButton'),
-        G = () => {
-            D(null), k(0), clearTimeout(N);
+        [j, S] = i.useState(null),
+        [N, D] = i.useState(0),
+        L = (0, l.Ie)('home'),
+        k = (0, h.Q3)('DefaultHomeButton'),
+        M = (0, d.oq)().activePanel === d.wh.APP_ICON,
+        U = () => {
+            S(null), D(0), clearTimeout(j);
         };
-    if (null == f) return null;
-    let B = T.intl.string(T.t.YUU0RE);
-    j && (B = s.K.get(w.wli) ? T.intl.string(T.t.nkq1l5) : T.intl.string(T.t.Be8Q5O));
-    let V = null;
-    !p &&
-        O &&
-        (V = (0, r.jsx)(c.Z, {
+    if (null == p) return null;
+    let G = T.intl.string(T.t.YUU0RE);
+    _ && (G = s.K.get(w.wli) ? T.intl.string(T.t.nkq1l5) : T.intl.string(T.t.Be8Q5O));
+    let B = null;
+    !o &&
+        y &&
+        (B = (0, r.jsx)(c.Z, {
             className: A.downloadProgress,
             determineOwnVisibility: !1
         }));
-    let H = p || _ || v,
-        F = (0, r.jsx)(a.aRk, {
-            selected: U || H,
-            lowerBadge: b > 0 ? (0, I.Ne)(b) : null,
-            upperBadge: V,
-            lowerBadgeSize: { width: (0, a.OVM)(b) },
+    let V = o || O || M,
+        H = (0, r.jsx)(a.aRk, {
+            selected: k || V,
+            lowerBadge: f > 0 ? (0, I.Ne)(f) : null,
+            upperBadge: B,
+            lowerBadgeSize: { width: (0, a.OVM)(f) },
             children: (0, r.jsx)(
                 a.LYs,
                 ((t = (function (e) {
@@ -99,32 +99,32 @@ function D(e) {
                     return e;
                 })(
                     {
-                        onMouseEnter: () => C(!0),
-                        onMouseLeave: () => C(!1),
+                        onMouseEnter: () => v(!0),
+                        onMouseLeave: () => v(!1),
                         onClick: () => {
-                            if (!__OVERLAY__ && (null != N && clearTimeout(N), D(setTimeout(G, 500)), k(L + 1), 15 === L)) {
-                                G();
+                            if (!__OVERLAY__ && (null != j && clearTimeout(j), S(setTimeout(U, 500)), D(N + 1), 15 === N)) {
+                                U();
                                 let e = !s.K.get(w.wli);
                                 s.K.set(w.wli, e),
                                     e && s.K.set(Z.O5, !0),
                                     e ? (0, g.GN)('discodo') : (0, g.GN)('user_leave'),
-                                    S(!0),
+                                    C(!0),
                                     setTimeout(() => {
-                                        S(!1);
+                                        C(!1);
                                     }, 1000);
                             }
                         },
-                        selected: H,
+                        selected: V,
                         ariaLabel: T.intl.string(T.t.YUU0RE),
                         'aria-owns': 'guild-list-unread-dms',
-                        'aria-selected': p
+                        'aria-selected': o
                     },
-                    M
+                    L
                 )),
                 (n = n =
                     {
                         to: {
-                            pathname: y,
+                            pathname: b,
                             state: {
                                 analyticsSource: {
                                     page: w.ZY5.GUILD_CHANNEL,
@@ -133,7 +133,7 @@ function D(e) {
                                 }
                             }
                         },
-                        children: (0, r.jsx)(d.Z, {})
+                        children: (0, r.jsx)(u.Z, {})
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -159,16 +159,16 @@ function D(e) {
             children: (0, r.jsxs)(x.H, {
                 children: [
                     (0, r.jsx)(E.Z, {
-                        selected: p,
-                        hovered: _,
+                        selected: o,
+                        hovered: O,
                         className: A.pill
                     }),
                     (0, r.jsx)(P.Z, {
                         color: a.ua7.Colors.PRIMARY,
                         hideOnClick: !0,
-                        text: B,
-                        selected: p,
-                        children: F
+                        text: G,
+                        selected: o,
+                        children: H
                     })
                 ]
             })

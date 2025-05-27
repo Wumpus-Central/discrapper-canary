@@ -6,15 +6,15 @@ var r = n(392711),
     a = n(442837),
     o = n(481060),
     c = n(344185),
-    s = n(665906),
-    d = n(388032);
+    d = n(665906),
+    s = n(388032);
 function u(e) {
-    let t = (0, s.Xb)(e),
+    let t = (0, d.Xb)(e),
         r = (0, a.e7)([c.Z], () => !l().isEmpty(c.Z.getThreadsForGuild(e.id)));
     return t && r
         ? (0, i.jsx)(o.sNh, {
               id: 'active-threads',
-              label: d.intl.string(d.t.TM6erq),
+              label: s.intl.string(s.t.TM6erq),
               icon: o.kBi,
               action: () => {
                   (0, o.ZDy)(async () => {

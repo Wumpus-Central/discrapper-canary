@@ -1,11 +1,11 @@
-v.d(g, { h: () => h });
-var B = v(255367);
-v(73800);
-var t = v(331595),
-    e = v(84502);
-let f = ['#ff1b90', '#ff7fc0', '#f0f0f0'],
-    r = [0.2, 0.52, 1],
-    C = [
+g.d(v, { h: () => Q });
+var B = g(255367);
+g(73800);
+var t = g(331595),
+    f = g(84502);
+let C = ['#ff1b90', '#ff7fc0', '#f0f0f0'],
+    e = [0.2, 0.52, 1],
+    r = [
         {
             base: 3,
             tint: 1
@@ -19,66 +19,66 @@ let f = ['#ff1b90', '#ff7fc0', '#f0f0f0'],
             tint: 1
         }
     ],
-    h = (A) => {
-        var g,
-            v,
-            { width: h = 24, height: n = 24, primaryTintColor: w } = A,
-            Q = (function (A, g) {
+    Q = (A) => {
+        var v,
+            g,
+            { width: Q = 24, height: w = 24, primaryTintColor: h } = A,
+            n = (function (A, v) {
                 if (null == A) return {};
-                var v,
+                var g,
                     B,
-                    t = (function (A, g) {
+                    t = (function (A, v) {
                         if (null == A) return {};
-                        var v,
+                        var g,
                             B,
                             t = {},
-                            e = Object.keys(A);
-                        for (B = 0; B < e.length; B++) (v = e[B]), g.indexOf(v) >= 0 || (t[v] = A[v]);
+                            f = Object.keys(A);
+                        for (B = 0; B < f.length; B++) (g = f[B]), v.indexOf(g) >= 0 || (t[g] = A[g]);
                         return t;
-                    })(A, g);
+                    })(A, v);
                 if (Object.getOwnPropertySymbols) {
-                    var e = Object.getOwnPropertySymbols(A);
-                    for (B = 0; B < e.length; B++) (v = e[B]), !(g.indexOf(v) >= 0) && Object.prototype.propertyIsEnumerable.call(A, v) && (t[v] = A[v]);
+                    var f = Object.getOwnPropertySymbols(A);
+                    for (B = 0; B < f.length; B++) (g = f[B]), !(v.indexOf(g) >= 0) && Object.prototype.propertyIsEnumerable.call(A, g) && (t[g] = A[g]);
                 }
                 return t;
             })(A, ['width', 'height', 'primaryTintColor']);
-        let { primaryColorsTransformed: D } = (0, e.s)({
-            primaryBaseColors: f,
-            primaryTintColor: w,
-            primaryTintLuminances: r,
-            primaryLuminanceWeights: C
+        let { primaryColorsTransformed: D } = (0, f.s)({
+            primaryBaseColors: C,
+            primaryTintColor: h,
+            primaryTintLuminances: e,
+            primaryLuminanceWeights: r
         });
         return (0, B.jsxs)(
             'svg',
-            ((g = (function (A) {
-                for (var g = 1; g < arguments.length; g++) {
-                    var v = null != arguments[g] ? arguments[g] : {},
-                        B = Object.keys(v);
+            ((v = (function (A) {
+                for (var v = 1; v < arguments.length; v++) {
+                    var g = null != arguments[v] ? arguments[v] : {},
+                        B = Object.keys(g);
                     'function' == typeof Object.getOwnPropertySymbols &&
                         (B = B.concat(
-                            Object.getOwnPropertySymbols(v).filter(function (A) {
-                                return Object.getOwnPropertyDescriptor(v, A).enumerable;
+                            Object.getOwnPropertySymbols(g).filter(function (A) {
+                                return Object.getOwnPropertyDescriptor(g, A).enumerable;
                             })
                         )),
-                        B.forEach(function (g) {
+                        B.forEach(function (v) {
                             var B;
-                            (B = v[g]),
-                                g in A
-                                    ? Object.defineProperty(A, g, {
+                            (B = g[v]),
+                                v in A
+                                    ? Object.defineProperty(A, v, {
                                           value: B,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (A[g] = B);
+                                    : (A[v] = B);
                         });
                 }
                 return A;
-            })({}, (0, t.Z)(Q))),
-            (v = v =
+            })({}, (0, t.Z)(n))),
+            (g = g =
                 {
-                    width: h,
-                    height: n,
+                    width: Q,
+                    height: w,
                     viewBox: '0 0 16 16',
                     fill: 'none',
                     xmlns: 'http://www.w3.org/2000/svg',
@@ -115,17 +115,17 @@ let f = ['#ff1b90', '#ff7fc0', '#f0f0f0'],
                     ]
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(g, Object.getOwnPropertyDescriptors(v))
-                : (function (A, g) {
-                      var v = Object.keys(A);
+                ? Object.defineProperties(v, Object.getOwnPropertyDescriptors(g))
+                : (function (A, v) {
+                      var g = Object.keys(A);
                       if (Object.getOwnPropertySymbols) {
                           var B = Object.getOwnPropertySymbols(A);
-                          v.push.apply(v, B);
+                          g.push.apply(g, B);
                       }
-                      return v;
-                  })(Object(v)).forEach(function (A) {
-                      Object.defineProperty(g, A, Object.getOwnPropertyDescriptor(v, A));
+                      return g;
+                  })(Object(g)).forEach(function (A) {
+                      Object.defineProperty(v, A, Object.getOwnPropertyDescriptor(g, A));
                   }),
-            g)
+            v)
         );
     };

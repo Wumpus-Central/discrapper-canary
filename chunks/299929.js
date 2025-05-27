@@ -1,41 +1,35 @@
-n.d(t, { Z: () => p }), n(953529), n(388685);
+n.d(t, { Z: () => m }), n(953529);
 var i = n(255367),
     r = n(73800),
     s = n(481060),
-    l = n(300284),
-    a = n(321114),
-    o = n(731722),
-    c = n(172751),
-    d = n(131085),
-    u = n(526761),
-    m = n(388032),
-    g = n(729495);
-let p = r.memo(function (e) {
-    let { guildId: t, guildProfile: n, title: p, description: h, onClose: f } = e,
-        b = (0, l.Z)({ scrollPosition: u.Y_.GUILD_TAG }),
-        [_, x] = r.useState(!1);
-    async function E() {
-        x(!0), await (0, a.c)(t, !0), x(!1), null == f || f();
-    }
+    l = n(731722),
+    a = n(172751),
+    o = n(446094),
+    c = n(131085),
+    d = n(388032),
+    u = n(729495);
+let m = r.memo(function (e) {
+    let { guildId: t, guildProfile: n, title: r, description: m, onClose: g } = e,
+        { isAdopting: p, onAdoptTag: h, onEditProfile: f } = (0, o.Z)(t, g);
     return (0, i.jsxs)('div', {
-        className: g.container,
+        className: u.container,
         ref: e.ref,
         children: [
             (0, i.jsx)(s.olH, {
-                className: g.closeButton,
-                onClick: f
+                className: u.closeButton,
+                onClick: g
             }),
             (0, i.jsx)('div', {
-                className: g.tagContainer,
+                className: u.tagContainer,
                 children: (0, i.jsxs)('div', {
-                    className: g.tag,
+                    className: u.tag,
                     children: [
                         null != n.badge &&
-                            (0, i.jsx)(c.eI, {
-                                src: (0, o.Ic)(t, n.badge, d.Gg.SIZE_36),
+                            (0, i.jsx)(a.eI, {
+                                src: (0, l.Ic)(t, n.badge, c.Gg.SIZE_36),
                                 tag: n.tag,
-                                size: d.Gg.SIZE_36,
-                                className: g.badge
+                                size: c.Gg.SIZE_36,
+                                className: u.badge
                             }),
                         (0, i.jsx)(s.Text, {
                             tag: 'span',
@@ -47,27 +41,25 @@ let p = r.memo(function (e) {
             }),
             (0, i.jsx)(s.X6q, {
                 variant: 'heading-md/semibold',
-                className: g.title,
-                children: p
+                className: u.title,
+                children: r
             }),
             (0, i.jsx)(s.Text, {
                 variant: 'text-sm/medium',
-                className: g.description,
-                children: h
+                className: u.description,
+                children: m
             }),
             (0, i.jsx)(s.zxk, {
-                className: g.adoptButton,
-                submitting: _,
-                onClick: E,
-                children: m.intl.string(m.t.jwEaiY)
+                className: u.adoptButton,
+                submitting: p,
+                onClick: h,
+                children: d.intl.string(d.t.jwEaiY)
             }),
             (0, i.jsx)(s.zxk, {
                 color: s.zxk.Colors.PRIMARY,
-                className: g.editButton,
-                onClick: function () {
-                    null == f || f(), b();
-                },
-                children: m.intl.string(m.t.s5vZlZ)
+                className: u.editButton,
+                onClick: f,
+                children: d.intl.string(d.t.s5vZlZ)
             })
         ]
     });

@@ -1,31 +1,33 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(442837),
     l = n(481060),
-    o = n(540059),
-    s = n(594174),
-    a = n(74538),
-    c = n(327943),
+    o = n(550385),
+    s = n(540059),
+    a = n(594174),
+    c = n(74538),
     u = n(997945),
     d = n(630117),
-    h = n(441319);
-function p() {
-    let e = (0, o.Q3)('AppIconHome'),
-        [t, n, p] = (0, i.Wu)([s.default, c.Z], () => [c.Z.getCurrentDesktopIcon(), c.Z.isEditorOpen, a.ZP.isPremium(s.default.getCurrentUser())]),
-        f = (0, h.aW)(t),
-        g = t !== u.aH.DEFAULT && (p || n),
-        m = e ? 24 : 30,
-        b = (0, r.jsx)(l.gw7, {
+    h = n(737604),
+    p = n(441319);
+function f() {
+    let e = (0, s.Q3)('AppIconHome'),
+        [t, n] = (0, i.Wu)([a.default, h.Z], () => [h.Z.getCurrentDesktopIcon(), c.ZP.isPremium(a.default.getCurrentUser())]),
+        f = (0, o.oq)().activePanel === o.wh.APP_ICON,
+        g = (0, p.aW)(t),
+        m = t !== u.aH.DEFAULT && (n || f),
+        b = e ? 24 : 30,
+        y = (0, r.jsx)(l.gw7, {
             size: 'custom',
             color: 'currentColor',
-            width: m,
-            height: m
+            width: b,
+            height: b
         });
-    return null != f && g
+    return null != g && m
         ? (0, r.jsx)(d.Z, {
               id: t,
               width: 48
           })
-        : b;
+        : y;
 }

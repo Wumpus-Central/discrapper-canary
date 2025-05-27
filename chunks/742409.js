@@ -1,23 +1,23 @@
-v.d(g, {
-    Z: () => i,
-    l: () => s
+g.d(v, {
+    Z: () => E,
+    l: () => M
 });
-var B = v(255367);
-v(73800);
-var t = v(120356),
-    e = v.n(t),
-    f = v(481060),
-    r = v(957537),
-    C = v(737770),
-    h = v(839008),
-    n = v(685184),
-    w = v(369509),
-    Q = v(817239),
-    D = v(388032),
-    o = v(668271);
-function s(A) {
+var B = g(255367);
+g(73800);
+var t = g(120356),
+    f = g.n(t),
+    C = g(481060),
+    e = g(957537),
+    r = g(737770),
+    Q = g(839008),
+    w = g(685184),
+    h = g(369509),
+    n = g(817239),
+    D = g(388032),
+    o = g(668271);
+function M(A) {
     return (0, B.jsxs)('div', {
-        className: e()(o.messageContainer, A.className),
+        className: f()(o.messageContainer, A.className),
         children: [
             (0, B.jsx)('div', {
                 className: o.avatarContainer,
@@ -34,7 +34,7 @@ function s(A) {
                     (0, B.jsxs)('div', {
                         className: o.usernameContainer,
                         children: [
-                            (0, B.jsx)(f.Text, {
+                            (0, B.jsx)(C.Text, {
                                 'data-text': A.username,
                                 className: A.usernameClassName,
                                 variant: 'text-md/semibold',
@@ -48,7 +48,7 @@ function s(A) {
                                 })
                         ]
                     }),
-                    (0, B.jsx)(f.Text, {
+                    (0, B.jsx)(C.Text, {
                         variant: 'text-md/medium',
                         children: A.message
                     })
@@ -57,71 +57,71 @@ function s(A) {
         ]
     });
 }
-let i = function (A) {
+let E = function (A) {
     return (0, B.jsxs)('div', {
         className: o.container,
         children: [
-            (0, B.jsx)(s, {
+            (0, B.jsx)(M, {
                 className: o.unfocusedMessage,
-                avatar: r.Z,
+                avatar: e.Z,
                 username: 'Roka',
                 usernameStyle: { color: 'var(--brand-400)' },
-                message: D.intl.string(Q.default.bpghV1)
+                message: D.intl.string(n.default.bpghV1)
             }),
-            (0, B.jsx)(s, {
+            (0, B.jsx)(M, {
                 className: o.unfocusedMessage,
-                avatar: C.Z,
+                avatar: r.Z,
                 username: 'hongo',
                 usernameStyle: { color: 'var(--green-230)' },
-                message: D.intl.string(Q.default['rnpv7+'])
+                message: D.intl.string(n.default['rnpv7+'])
             }),
-            (0, B.jsx)(s, {
-                avatar: h.Z,
+            (0, B.jsx)(M, {
+                avatar: Q.Z,
                 username: 'Lily',
                 usernameStyle: { color: 'var(--orange-300)' },
-                message: D.intl.string(Q.default.u7tjsr),
+                message: D.intl.string(n.default.u7tjsr),
                 decorations: (0, B.jsx)(
-                    w.S,
+                    h.S,
                     (function (A) {
-                        for (var g = 1; g < arguments.length; g++) {
-                            var v = null != arguments[g] ? arguments[g] : {},
-                                B = Object.keys(v);
+                        for (var v = 1; v < arguments.length; v++) {
+                            var g = null != arguments[v] ? arguments[v] : {},
+                                B = Object.keys(g);
                             'function' == typeof Object.getOwnPropertySymbols &&
                                 (B = B.concat(
-                                    Object.getOwnPropertySymbols(v).filter(function (A) {
-                                        return Object.getOwnPropertyDescriptor(v, A).enumerable;
+                                    Object.getOwnPropertySymbols(g).filter(function (A) {
+                                        return Object.getOwnPropertyDescriptor(g, A).enumerable;
                                     })
                                 )),
-                                B.forEach(function (g) {
+                                B.forEach(function (v) {
                                     var B;
-                                    (B = v[g]),
-                                        g in A
-                                            ? Object.defineProperty(A, g, {
+                                    (B = g[v]),
+                                        v in A
+                                            ? Object.defineProperty(A, v, {
                                                   value: B,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (A[g] = B);
+                                            : (A[v] = B);
                                 });
                         }
                         return A;
                     })({}, A)
                 )
             }),
-            (0, B.jsx)(s, {
+            (0, B.jsx)(M, {
                 className: o.unfocusedMessage,
-                avatar: n.Z,
+                avatar: w.Z,
                 username: 'sharon',
                 usernameStyle: { color: 'var(--brand-400)' },
-                message: D.intl.string(Q.default.GlWVJC)
+                message: D.intl.string(n.default.GlWVJC)
             }),
-            (0, B.jsx)(s, {
+            (0, B.jsx)(M, {
                 className: o.unfocusedMessage,
-                avatar: h.Z,
+                avatar: Q.Z,
                 username: 'Lily',
                 usernameStyle: { color: 'var(--orange-300)' },
-                message: D.intl.string(Q.default.AIp9ho)
+                message: D.intl.string(n.default.AIp9ho)
             })
         ]
     });

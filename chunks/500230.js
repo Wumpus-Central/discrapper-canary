@@ -1,124 +1,124 @@
-v.d(g, { Z: () => M }), v(388685);
-var B = v(255367),
-    t = v(73800),
-    e = v(120356),
-    f = v.n(e),
-    r = v(866442),
-    C = v(481060),
-    h = v(229190),
-    n = v(510918),
-    w = v(434404),
-    Q = v(254925),
-    D = v(131085),
-    o = v(817239),
-    s = v(388032),
-    i = v(602268);
-let M = function (A) {
-    let { className: g, guildId: v, badge: e, primaryColor: M, secondaryColor: a } = A,
-        [l, E] = t.useState(!1),
-        c = t.useRef(null),
-        P = t.useMemo(() => Q.go.every((A) => A.primary !== M || A.secondary !== a), [M, a]);
-    function d(A) {
-        let g = {};
-        void 0 !== A.primary && (g.badgeColorPrimary = A.primary), void 0 !== A.secondary && (g.badgeColorSecondary = A.secondary), w.Z.updateGuildProfile(v, g);
+r.d(n, { Z: () => y }), r(388685);
+var t = r(255367),
+    a = r(73800),
+    i = r(120356),
+    s = r.n(i),
+    l = r(866442),
+    o = r(481060),
+    d = r(229190),
+    c = r(510918),
+    m = r(434404),
+    f = r(254925),
+    u = r(131085),
+    h = r(817239),
+    p = r(388032),
+    x = r(602268);
+let y = function (e) {
+    let { className: n, guildId: r, badge: i, primaryColor: y, secondaryColor: b } = e,
+        [g, j] = a.useState(!1),
+        C = a.useRef(null),
+        v = a.useMemo(() => f.go.every((e) => e.primary !== y || e.secondary !== b), [y, b]);
+    function N(e) {
+        let n = {};
+        void 0 !== e.primary && (n.badgeColorPrimary = e.primary), void 0 !== e.secondary && (n.badgeColorSecondary = e.secondary), m.Z.updateGuildProfile(r, n);
     }
-    return (0, B.jsxs)('div', {
-        className: g,
+    return (0, t.jsxs)('div', {
+        className: n,
         children: [
-            (0, B.jsx)(C.vwX, {
-                className: i.sectionTitle,
-                children: s.intl.string(o.default.zSbMdX)
+            (0, t.jsx)(o.vwX, {
+                className: x.sectionTitle,
+                children: p.intl.string(h.default.zSbMdX)
             }),
-            (0, B.jsxs)('div', {
-                className: i.pickerGrid,
+            (0, t.jsxs)('div', {
+                className: x.pickerGrid,
                 children: [
-                    Q.go.map((A) =>
-                        (0, B.jsx)(
-                            C.P3F,
+                    f.go.map((e) =>
+                        (0, t.jsx)(
+                            o.P3F,
                             {
-                                className: f()(i.pickerItem, { [i.pickerItemSelected]: A.primary === M && A.secondary === a }),
-                                onClick: () => d(A),
-                                children: (0, B.jsx)(n.v, {
-                                    badge: e,
+                                className: s()(x.pickerItem, { [x.pickerItemSelected]: e.primary === y && e.secondary === b }),
+                                onClick: () => N(e),
+                                children: (0, t.jsx)(c.v, {
+                                    badge: i,
                                     width: 32,
                                     height: 32,
-                                    primaryTintColor: A.primary,
-                                    secondaryTintColor: A.secondary
+                                    primaryTintColor: e.primary,
+                                    secondaryTintColor: e.secondary
                                 })
                             },
-                            ''.concat(A.primary).concat(A.secondary)
+                            ''.concat(e.primary).concat(e.secondary)
                         )
                     ),
-                    (0, B.jsx)(h.Z, {
-                        popoutTargetRef: c,
-                        showSecondaryColor: D.ER[e] >= 2,
+                    (0, t.jsx)(d.Z, {
+                        popoutTargetRef: C,
+                        showSecondaryColor: u.ER[i] >= 2,
                         palette: {
-                            primary: M,
-                            secondary: a
+                            primary: y,
+                            secondary: b
                         },
-                        onPrimaryColorChange: (A) => {
-                            d({ primary: (0, r.Rf)(A) });
+                        onPrimaryColorChange: (e) => {
+                            N({ primary: (0, l.Rf)(e) });
                         },
-                        onSecondaryColorChange: (A) => {
-                            d({ secondary: (0, r.Rf)(A) });
+                        onSecondaryColorChange: (e) => {
+                            N({ secondary: (0, l.Rf)(e) });
                         },
-                        shouldShow: l,
-                        onRequestClose: () => E(!1),
-                        children: (A) => {
-                            var g, v;
-                            return (0, B.jsx)(
-                                C.P3F,
-                                ((g = (function (A) {
-                                    for (var g = 1; g < arguments.length; g++) {
-                                        var v = null != arguments[g] ? arguments[g] : {},
-                                            B = Object.keys(v);
+                        shouldShow: g,
+                        onRequestClose: () => j(!1),
+                        children: (e) => {
+                            var n, r;
+                            return (0, t.jsx)(
+                                o.P3F,
+                                ((n = (function (e) {
+                                    for (var n = 1; n < arguments.length; n++) {
+                                        var r = null != arguments[n] ? arguments[n] : {},
+                                            t = Object.keys(r);
                                         'function' == typeof Object.getOwnPropertySymbols &&
-                                            (B = B.concat(
-                                                Object.getOwnPropertySymbols(v).filter(function (A) {
-                                                    return Object.getOwnPropertyDescriptor(v, A).enumerable;
+                                            (t = t.concat(
+                                                Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                                                 })
                                             )),
-                                            B.forEach(function (g) {
-                                                var B;
-                                                (B = v[g]),
-                                                    g in A
-                                                        ? Object.defineProperty(A, g, {
-                                                              value: B,
+                                            t.forEach(function (n) {
+                                                var t;
+                                                (t = r[n]),
+                                                    n in e
+                                                        ? Object.defineProperty(e, n, {
+                                                              value: t,
                                                               enumerable: !0,
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (A[g] = B);
+                                                        : (e[n] = t);
                                             });
                                     }
-                                    return A;
-                                })({}, A)),
-                                (v = v =
+                                    return e;
+                                })({}, e)),
+                                (r = r =
                                     {
-                                        innerRef: c,
+                                        innerRef: C,
                                         onClick: () => {
-                                            E((A) => !A);
+                                            j((e) => !e);
                                         },
-                                        className: f()(i.pickerItem, { [i.pickerItemSelected]: P }),
-                                        children: (0, B.jsx)(C.ilE, {
+                                        className: s()(x.pickerItem, { [x.pickerItemSelected]: v }),
+                                        children: (0, t.jsx)(o.ilE, {
                                             size: 'custom',
                                             width: 20,
                                             height: 20
                                         })
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(g, Object.getOwnPropertyDescriptors(v))
-                                    : (function (A, g) {
-                                          var v = Object.keys(A);
+                                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                                    : (function (e, n) {
+                                          var r = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
-                                              var B = Object.getOwnPropertySymbols(A);
-                                              v.push.apply(v, B);
+                                              var t = Object.getOwnPropertySymbols(e);
+                                              r.push.apply(r, t);
                                           }
-                                          return v;
-                                      })(Object(v)).forEach(function (A) {
-                                          Object.defineProperty(g, A, Object.getOwnPropertyDescriptor(v, A));
+                                          return r;
+                                      })(Object(r)).forEach(function (e) {
+                                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                                       }),
-                                g)
+                                n)
                             );
                         }
                     })

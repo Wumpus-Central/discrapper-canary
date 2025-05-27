@@ -1,7 +1,5 @@
-n.d(t, { vi: () => o });
-var r = n(818083),
-    i = n(875527);
-let a = (0, r.B)({
+n.d(t, { vi: () => i });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2025-05_flamingo_prefetch',
     label: 'Flamingo Prefetch',
@@ -14,18 +12,14 @@ let a = (0, r.B)({
         }
     ]
 });
-function o(e) {
+function i(e) {
     let { location: t, autoTrackExposure: n } = e,
-        r = (0, i.Hu)({
-            location: t,
-            autoTrackExposure: n
-        }),
-        { enabled: o } = a.useExperiment(
+        { enabled: i } = r.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
-                disable: __OVERLAY__ || !r
+                disable: __OVERLAY__
             }
         );
-    return o;
+    return i;
 }

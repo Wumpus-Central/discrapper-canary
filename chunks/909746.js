@@ -401,7 +401,8 @@ let F = new A.Z('AuditLogUtils'),
         [v.zUn.CUSTOM_BANNER_HASH]: () => j.t['04b5KC'],
         [v.zUn.TRAITS]: () => j.t.dEy9WF,
         [v.zUn.GAME_APPLICATION_IDS]: () => j.t['8BOT39'],
-        [v.zUn.VISIBILITY]: () => j.t.bCl1Eh
+        [v.zUn.VISIBILITY]: () => j.t.bCl1Eh,
+        [v.zUn.SERVER_TAG]: eC(j.t.ix1dnZ, j.t['4LKpKS'])
     }),
     eE = {
         [v.KFR.CHANNEL]: {

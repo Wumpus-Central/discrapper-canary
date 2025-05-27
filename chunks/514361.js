@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => F }), n(388685);
+n.d(t, { Z: () => M }), n(388685);
 var o,
     a = n(442837),
     s = n(704215),
@@ -32,10 +32,9 @@ function S(e, t, n) {
         e
     );
 }
-let T = !1,
-    A = !0,
-    N = !1,
-    C = (e) => {
+let T = !0,
+    A = !1,
+    N = (e) => {
         let { presetId: t } = e;
         if (null == t) {
             r = void 0;
@@ -43,7 +42,7 @@ let T = !1,
         }
         r = v.qt[t];
     },
-    P = (e) => {
+    C = (e) => {
         let { mobileThemesIndex: t } = e;
         if (null == t) {
             i = void 0;
@@ -51,37 +50,25 @@ let T = !1,
         }
         i = t;
     },
-    R = (e) => {
-        k();
-    },
-    w = (e) => {
-        M();
-    },
-    D = (e) => {
+    P = (e) => {
         r = void 0;
     },
-    L = (e) => {
+    R = (e) => {
         let { channelId: t, guildId: n } = e,
             r = E.default.getCurrentUser();
         if (null == t || null == n || (0, c.un)(s.z.CLIENT_THEMES_COACHMARK) || !(0, y.Fc)(r)) return;
         let i = g.Z.getChannel(t);
-        null != i && (0, m.zi)(i.type) && (N = !0);
+        null != i && (0, m.zi)(i.type) && (A = !0);
     };
-function x() {
-    M();
+function w() {
+    T && (r = void 0), (A = !1);
 }
-function k() {
-    T = !0;
-}
-function M() {
-    A && (r = void 0), (N = !1), (T = !1);
-}
-let j = () => {
+let D = () => {
         let e = !b.ZP.canUseClientThemes(E.default.getCurrentUser());
-        if (e === A) return !1;
-        A = e;
+        if (e === T) return !1;
+        T = e;
     },
-    U = () => {
+    L = () => {
         if (!u.Z.shouldSync('appearance')) return !1;
         let e = p.L1.getSetting().backgroundGradientPresetId;
         if (null == e) {
@@ -93,7 +80,7 @@ let j = () => {
             r = t;
         }
     },
-    G = () => {
+    x = () => {
         if (!u.Z.shouldSync('appearance')) return !1;
         let e = p.L1.getSetting().backgroundGradientPresetId;
         if ((_.ZP.useSystemTheme === I.KW.ON && null != e && (0, d.hi)(I.KW.OFF), null == e)) {
@@ -104,12 +91,12 @@ let j = () => {
             n = (null == r ? void 0 : r.id) === (null == t ? void 0 : t.id);
         null == t || n || (r = t);
     };
-class B extends (o = a.ZP.PersistedStore) {
+class k extends (o = a.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? v.qt[e.gradientPresetId] : void 0), this.waitFor(E.default, f.Z, g.Z, u.Z, h.Z), this.syncWith([E.default], j), this.syncWith([u.Z], U), this.syncWith([h.Z], G);
+        null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? v.qt[e.gradientPresetId] : void 0), this.waitFor(E.default, f.Z, g.Z, u.Z, h.Z), this.syncWith([E.default], D), this.syncWith([u.Z], L), this.syncWith([h.Z], x);
     }
     getState() {
-        return A ? {} : { gradientPresetId: null == r ? void 0 : r.id };
+        return T ? {} : { gradientPresetId: null == r ? void 0 : r.id };
     }
     get gradientPreset() {
         return r;
@@ -117,14 +104,11 @@ class B extends (o = a.ZP.PersistedStore) {
     getLinearGradient() {
         return null == this.gradientPreset ? null : (0, O.VK)(this.gradientPreset);
     }
-    get isEditorOpen() {
+    get isPreview() {
         return T;
     }
-    get isPreview() {
-        return A;
-    }
     get isCoachmark() {
-        return N;
+        return A;
     }
     get mobilePendingThemeIndex() {
         return i;
@@ -139,13 +123,12 @@ class B extends (o = a.ZP.PersistedStore) {
             ]);
     }
 }
-S(B, 'displayName', 'ClientThemesBackgroundStore'), S(B, 'persistKey', 'ClientThemesBackgroundStore');
-let F = new B(l.Z, {
-    UPDATE_BACKGROUND_GRADIENT_PRESET: C,
-    UPDATE_MOBILE_PENDING_THEME_INDEX: P,
-    CLIENT_THEMES_EDITOR_OPEN: R,
+S(k, 'displayName', 'ClientThemesBackgroundStore'), S(k, 'persistKey', 'ClientThemesBackgroundStore');
+let M = new k(l.Z, {
+    UPDATE_BACKGROUND_GRADIENT_PRESET: N,
+    UPDATE_MOBILE_PENDING_THEME_INDEX: C,
+    RESET_PREVIEW_CLIENT_THEME: P,
     CLIENT_THEMES_EDITOR_CLOSE: w,
-    RESET_PREVIEW_CLIENT_THEME: D,
-    CHANNEL_SELECT: L,
-    LOGOUT: x
+    CHANNEL_SELECT: R,
+    LOGOUT: w
 });

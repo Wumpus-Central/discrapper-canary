@@ -1,30 +1,30 @@
-v.d(g, { Z: () => w });
-var B = v(255367),
-    t = v(73800),
-    e = v(481060),
-    f = v(434404),
-    r = v(755641),
-    C = v(817239),
-    h = v(388032),
-    n = v(602268);
-function w(A) {
-    let { className: g, guildId: v, selectedBadge: w } = A,
-        Q = t.useCallback(
-            (A) => {
-                f.Z.updateGuildProfile(v, { badge: A });
+r.d(n, { Z: () => m });
+var t = r(255367),
+    a = r(73800),
+    i = r(481060),
+    s = r(434404),
+    l = r(755641),
+    o = r(817239),
+    d = r(388032),
+    c = r(602268);
+function m(e) {
+    let { className: n, guildId: r, selectedBadge: m } = e,
+        f = a.useCallback(
+            (e) => {
+                s.Z.updateGuildProfile(r, { badge: e });
             },
-            [v]
+            [r]
         );
-    return (0, B.jsxs)('div', {
-        className: g,
+    return (0, t.jsxs)('div', {
+        className: n,
         children: [
-            (0, B.jsx)(e.vwX, {
-                className: n.sectionTitle,
-                children: h.intl.string(C.default.pb7lpK)
+            (0, t.jsx)(i.vwX, {
+                className: c.sectionTitle,
+                children: d.intl.string(o.default.pb7lpK)
             }),
-            (0, B.jsx)(r.g, {
-                onBadgeClicked: Q,
-                selectedBadge: w
+            (0, t.jsx)(l.g, {
+                onBadgeClicked: f,
+                selectedBadge: m
             })
         ]
     });

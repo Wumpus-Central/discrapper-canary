@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => s });
 var i = n(255367);
 n(73800);
 var r = n(481060),
@@ -6,13 +6,13 @@ var r = n(481060),
     a = n(749681),
     o = n(258971),
     c = n(49898),
-    s = n(388032);
-function d(e) {
+    d = n(388032);
+function s(e) {
     let { enabled: t } = l.c.useExperiment({ location: 'useApplicationDirectoryItem' }, { autoTrackExposure: !0 }),
         n = t ? r.iWm : r.jje;
     return (0, i.jsx)(r.sNh, {
         id: 'application-directory',
-        label: (0, i.jsx)(i.Fragment, { children: s.intl.string(s.t.AKcFUl) }),
+        label: (0, i.jsx)(i.Fragment, { children: d.intl.string(d.t.AKcFUl) }),
         icon: n,
         action: () => {
             (0, a.transitionToGlobalDiscovery)({

@@ -7,9 +7,9 @@ var r = n(442837),
     a = n(493773),
     o = n(100527),
     c = n(906732),
-    d = n(94795),
-    u = n(327943),
-    m = n(539873),
+    d = n(737604),
+    u = n(539873),
+    m = n(550385),
     g = n(767714),
     p = n(626135),
     h = n(981631),
@@ -17,11 +17,11 @@ var r = n(442837),
     b = n(388032),
     _ = n(614467);
 let x = () => {
-        (0, d.nJ)(), (0, l.xf)();
+        (0, m.XO)(m.wh.APP_ICON), (0, l.xf)();
     },
     E = () => {
         let { analyticsLocations: e } = (0, c.ZP)(o.Z.USER_SETTINGS),
-            t = (0, r.e7)([u.Z], () => u.Z.isUpsellPreview);
+            t = (0, r.e7)([d.Z], () => d.Z.isUpsellPreview);
         return (
             (0, a.ZP)(() => {
                 t &&
@@ -33,7 +33,7 @@ let x = () => {
             (0, i.jsxs)('div', {
                 className: _.selectionGroup,
                 children: [
-                    (0, i.jsx)(m.Z, {
+                    (0, i.jsx)(u.Z, {
                         disabled: t,
                         renderCTAButtons: () =>
                             (0, i.jsxs)('div', {

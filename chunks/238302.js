@@ -1,7 +1,4 @@
 n.d(t, {
-    Kq: () => a,
-    Mo: () => s,
-    kj: () => l,
     xs: () => o,
     zO: () => i
 });
@@ -17,13 +14,4 @@ let i = (e) => {
             type: 'UPDATE_BACKGROUND_GRADIENT_PRESET',
             presetId: null
         });
-    },
-    a = () => {
-        r.Z.dispatch({ type: 'CLIENT_THEMES_EDITOR_OPEN' });
-    },
-    s = () => {
-        r.Z.dispatch({ type: 'CLIENT_THEMES_EDITOR_CLOSE' });
-    },
-    l = () => {
-        r.Z.dispatch({ type: 'RESET_PREVIEW_CLIENT_THEME' });
     };

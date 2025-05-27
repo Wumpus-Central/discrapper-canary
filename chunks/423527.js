@@ -287,7 +287,7 @@ class eh extends (r = l.PureComponent) {
             children: [
                 (0, i.jsx)(Q.R, {}),
                 (0, i.jsxs)(S.gO, {
-                    className: eo.marginTop40,
+                    className: ea.authBlock,
                     children: [
                         (0, i.jsx)(h.vwX, { children: el.intl.string(el.t.TWzdWl) }),
                         (0, i.jsx)(h.ua7, {
@@ -404,7 +404,7 @@ class eh extends (r = l.PureComponent) {
                         this.renderInviteHeader(),
                         m ? (0, i.jsx)('div', { className: ea.divider }) : null,
                         (0, i.jsxs)(S.gO, {
-                            className: m ? void 0 : eo.marginTop40,
+                            className: m ? void 0 : ea.authBlock,
                             children: [
                                 (0, i.jsx)(h.vwX, {
                                     error: null != s ? s : eg(null != l ? l : r),
@@ -477,7 +477,6 @@ class eh extends (r = l.PureComponent) {
                                 en.a
                                     ? null
                                     : (0, i.jsx)('div', {
-                                          className: n ? ea.centeredButtonContainer : void 0,
                                           children: (0, i.jsx)(S.zx, {
                                               look: S.zx.Looks.LINK,
                                               color: S.zx.Colors.LINK,
