@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(990547),
@@ -42,7 +42,7 @@ function v(e) {
     }
     return e;
 }
-function O(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,7 +61,7 @@ function O(e, t) {
     );
 }
 a.ZP.initialize();
-let I = {
+let O = {
         [g.BM.MESSAGE]: x.t.fuqnBA,
         [g.BM.USER]: x.t.F4jrRU,
         [g.BM.GUILD]: x.t.gH3aMj
@@ -74,7 +74,7 @@ let I = {
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            O(v({}, t), {
+                            I(v({}, t), {
                                 onSuccess: s,
                                 headerText: x.intl.string(x.t.ZLRYGR),
                                 confirmButtonText: x.intl.string(x.t.PDTjLC),
@@ -99,7 +99,7 @@ let I = {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                O(v({}, n), {
+                                I(v({}, n), {
                                     onFormSubmit: a,
                                     onResend: t,
                                     onSuccess: s,
@@ -126,7 +126,7 @@ let I = {
             ]
         });
     },
-    j = () => {
+    y = () => {
         let [e, t] = i.useState(!0),
             [n, l] = i.useState([]),
             g = (0, a.e7)([m.default], () => m.default.isAuthenticated()),
@@ -175,12 +175,12 @@ let I = {
                           (0, r.jsx)('div', {
                               className: E.container,
                               children: n.map((e) =>
-                                  null == I[e]
+                                  null == O[e]
                                       ? null
                                       : (0, r.jsx)(
                                             S,
                                             {
-                                                title: x.intl.string(I[e]),
+                                                title: x.intl.string(O[e]),
                                                 menuType: e
                                             },
                                             e

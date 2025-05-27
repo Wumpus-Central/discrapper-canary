@@ -45,7 +45,13 @@ function b() {
                                 });
                         }
                         return e;
-                    })({ cta_name: d.jZ.VIEW_QUESTS }, (0, d.mH)(u.jn.QUEST_HOME_MOVE_CALLOUT))
+                    })(
+                        {
+                            cta_name: d.jZ.VIEW_QUESTS,
+                            is_targeted: !1
+                        },
+                        (0, d.mH)(u.jn.QUEST_HOME_MOVE_CALLOUT)
+                    )
                 );
         }, []);
     return (0, i.jsx)('div', {

@@ -67,17 +67,17 @@ function C() {
         t = (0, s.e7)([x.default], () => x.default.getCurrentUser()),
         [n, l] = r.useState('511651880837840896'),
         [m, v] = r.useState([]),
-        [C, O] = r.useState(!1),
-        N = r.useCallback(async () => {
+        [C, N] = r.useState(!1),
+        O = r.useCallback(async () => {
             try {
-                O(!0), await (0, d.jg)(), await (0, u.In)(t.id), v(await _());
+                N(!0), await (0, d.jg)(), await (0, u.In)(t.id), v(await _());
             } finally {
-                O(!1);
+                N(!1);
             }
         }, [t]);
     r.useEffect(() => {
-        N();
-    }, [N]);
+        O();
+    }, [O]);
     let E = r.useMemo(() => m.filter((e) => e.status !== f.O0b.ACTIVE).sort((e, t) => (e.id > t.id ? -1 : 1)), [m]),
         T = async () => {
             await o.tn.post({
@@ -85,14 +85,14 @@ function C() {
                 body: { plan_id: n },
                 rejectWithError: !1
             }),
-                await N();
+                await O();
         },
         S = async () => {
             await o.tn.del({
                 url: '/debug/subscription',
                 rejectWithError: !1
             }),
-                await N();
+                await O();
         };
     return (0, a.jsx)(c.zJl, {
         className: g.panel,
@@ -111,7 +111,7 @@ function C() {
                             disabled: C,
                             look: c.zxk.Looks.BLANK,
                             size: c.zxk.Sizes.ICON,
-                            onClick: N,
+                            onClick: O,
                             children: (0, a.jsx)('span', {
                                 title: 'Refresh',
                                 children: (0, a.jsx)(c.DuK, {
@@ -146,7 +146,7 @@ function C() {
                 null != e &&
                     (0, a.jsx)(b.Z, {
                         subscription: e,
-                        onUpdated: N
+                        onUpdated: O
                     }),
                 (0, a.jsx)(c.X6q, {
                     variant: 'heading-lg/semibold',
@@ -174,7 +174,7 @@ function C() {
                                     b.Z,
                                     {
                                         subscription: e,
-                                        onUpdated: N
+                                        onUpdated: O
                                     },
                                     e.id
                                 )

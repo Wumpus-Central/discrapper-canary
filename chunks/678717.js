@@ -21,18 +21,18 @@ n(381996);
 var _ = n(392750),
     y = n(926976),
     C = n(789654),
-    O = n(719672),
-    N = n(691867),
+    N = n(719672),
+    O = n(691867),
     E = n(916790),
     T = n(645973),
     S = n(903502),
     P = n(604776),
-    k = n(912072),
-    w = n(272193),
-    I = n(685560),
+    I = n(912072),
+    k = n(272193),
+    w = n(685560),
     R = n(735959),
-    Z = n(572444),
-    A = n(246992),
+    A = n(572444),
+    Z = n(246992),
     L = n(496025),
     D = n(442954),
     M = n(633001),
@@ -158,13 +158,13 @@ function er(e) {
                     id: 'design_toggles',
                     name: 'Design Toggles',
                     group: $.v0.UI,
-                    render: () => (0, a.jsx)(N.Z, {})
+                    render: () => (0, a.jsx)(O.Z, {})
                 }),
                 e.push({
                     id: 'overlays',
                     name: 'Dev Overlays',
                     group: $.v0.DEVELOPMENT,
-                    render: () => (0, a.jsx)(k.Z, { devSettingsCategory: j.zU.OVERLAYS })
+                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: j.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
@@ -176,7 +176,7 @@ function er(e) {
                     id: 'reporting',
                     name: 'Reporting',
                     group: $.v0.EXPERIMENTS,
-                    render: () => (0, a.jsx)(k.Z, { devSettingsCategory: j.zU.REPORTING })
+                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: j.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
@@ -207,7 +207,7 @@ function er(e) {
                     id: 'dcf',
                     name: 'DCF',
                     group: $.v0.EXPERIMENTS,
-                    render: () => (0, a.jsx)(O.Z, {})
+                    render: () => (0, a.jsx)(N.Z, {})
                 }),
                 e.push({
                     id: 'perks',
@@ -250,7 +250,7 @@ function er(e) {
                     id: 'gifting_intent',
                     name: 'Gifting Intent',
                     group: $.v0.PREMIUM,
-                    render: () => (0, a.jsx)(w.Z, {})
+                    render: () => (0, a.jsx)(k.Z, {})
                 }),
                 e.push({
                     id: 'voice_filters',
@@ -262,13 +262,13 @@ function er(e) {
                     id: 'krisp_tester',
                     name: 'Krisp Tester',
                     group: $.v0.AUDIO_VIDEO,
-                    render: () => (0, a.jsx)(Z.Z, {})
+                    render: () => (0, a.jsx)(A.Z, {})
                 }),
                 e.push({
                     id: 'skill_trees',
                     name: 'Skill Trees',
                     group: $.v0.GUILDS,
-                    render: () => (0, a.jsx)(I.Z, {})
+                    render: () => (0, a.jsx)(w.Z, {})
                 }),
                 e
             );
@@ -293,7 +293,7 @@ function er(e) {
             name: s.ImpressionNames.VIEW_PANEL_DEVTOOLS,
             properties: { panel: d }
         }),
-        (0, a.jsxs)(A.Gk, {
+        (0, a.jsxs)(Z.Gk, {
             children: [
                 (0, a.jsxs)(x.ZP, {
                     className: en.headerBar,
@@ -341,7 +341,7 @@ function er(e) {
                 }),
                 (0, a.jsx)(i, {}),
                 o(),
-                (0, a.jsx)(A.Br, { className: et.layerContainer })
+                (0, a.jsx)(Z.Br, { className: et.layerContainer })
             ]
         })
     );

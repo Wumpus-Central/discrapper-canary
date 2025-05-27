@@ -46,8 +46,8 @@ function j() {
         _ = (0, s.e7)([m.Z], () => m.Z.computePermissions(r)),
         y = (0, c.ZP)(n, !0),
         C = null != n ? (0, b.IG)(n, !1, !0) : null,
-        O = null != r ? p.Z.getGuildPermissionSpecMap(r) : null,
-        N = Object.values(null != C ? C : {}).map((e) => {
+        N = null != r ? p.Z.getGuildPermissionSpecMap(r) : null,
+        O = Object.values(null != C ? C : {}).map((e) => {
             let { title: t, flag: n } = e,
                 r = i.e$(j, n);
             return (0, a.jsx)(
@@ -59,7 +59,7 @@ function j() {
                 t
             );
         }),
-        E = Object.values(null != O ? O : {}).map((e) => {
+        E = Object.values(null != N ? N : {}).map((e) => {
             let { title: t, flag: n } = e,
                 r = i.e$(_, n);
             return (0, a.jsx)(
@@ -83,7 +83,7 @@ function j() {
                             variant: 'heading-md/semibold',
                             children: null != y ? 'Permissions in '.concat(y) : 'No channel selected'
                         }),
-                        N
+                        O
                     ]
                 }),
                 (0, a.jsxs)('section', {

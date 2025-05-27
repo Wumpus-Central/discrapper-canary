@@ -1,27 +1,27 @@
-n.d(t, { default: () => l });
-var r = n(255367);
-n(73800);
-var o = n(332664),
-    a = n(814249),
-    i = n(531578),
-    s = n(388032);
-let c = [a.R7.OTHER];
-function l(e) {
-    let { transitionState: t, startRating: n, onClose: l, onSubmit: u } = e;
-    return (0, r.jsx)(o.Z, {
+o.d(t, { default: () => s });
+var _ = o(255367);
+o(73800);
+var c = o(332664),
+    n = o(814249),
+    i = o(531578),
+    a = o(388032);
+let r = [n.R7.OTHER];
+function s(e) {
+    let { transitionState: t, startRating: o, onClose: s, onSubmit: b } = e;
+    return (0, _.jsx)(c.Z, {
         modalType: 'summary',
-        header: s.intl.string(s.t.hghcMj),
-        body: s.intl.string(s.t['QFU78/']),
-        problemTitle: s.intl.string(s.t.CtiHPj),
-        onSubmit: u,
-        onClose: l,
+        header: a.intl.string(a.t.hghcMj),
+        body: a.intl.string(a.t['QFU78/']),
+        problemTitle: a.intl.string(a.t.CtiHPj),
+        onSubmit: b,
+        onClose: s,
         ratingOptions: [i.aZ.GOOD, i.aZ.BAD],
         ratingEmojiKind: 'thumb',
         transitionState: t,
-        problems: (0, a.iq)(),
-        freeformNeededProblems: c,
-        otherKey: a.R7.OTHER,
-        startRating: n,
+        problems: (0, n.iq)(),
+        freeformNeededProblems: r,
+        otherKey: n.R7.OTHER,
+        startRating: o,
         hideDontShowAgainCheckbox: !0
     });
 }

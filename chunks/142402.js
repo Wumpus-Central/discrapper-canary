@@ -1,74 +1,74 @@
-n.d(t, { default: () => h });
+n.d(t, { default: () => O });
 var r = n(255367),
-    l = n(73800),
+    o = n(73800),
     i = n(990547),
-    o = n(481060),
+    l = n(481060),
     a = n(957115),
-    s = n(891802),
-    c = n(332664),
+    c = n(891802),
+    s = n(332664),
     u = n(538211),
-    d = n(698066),
+    _ = n(698066),
     b = n(626135),
-    m = n(981631),
+    d = n(981631),
     p = n(531578),
-    f = n(70722),
-    _ = n(388032);
-let O = [f.kr.OTHER];
-function h(e) {
-    let { isStreamer: t, stream: h, streamApplication: g, onClose: y, transitionState: j, analyticsData: x } = e;
-    l.useEffect(() => {
-        b.default.track(m.rMx.OPEN_MODAL, {
+    m = n(70722),
+    f = n(388032);
+let y = [m.kr.OTHER];
+function O(e) {
+    let { isStreamer: t, stream: O, streamApplication: g, onClose: h, transitionState: w, analyticsData: S } = e;
+    o.useEffect(() => {
+        b.default.track(d.rMx.OPEN_MODAL, {
             type: 'Stream Problem Report',
-            other_user_id: h.ownerId,
+            other_user_id: O.ownerId,
             application_id: null != g ? g.id : null,
             application_name: null != g ? g.name : null,
             game_id: null != g ? g.id : null,
             source: 'Stream End'
         });
-    }, [h.ownerId, g]);
-    let { showVibesHoneypot: v } = (0, s.X)({ location: 'StreamFeedback' }),
-        S = _.intl.string(_.t['5smP3d']),
-        k = _.intl.string(_.t['0uxA2d']),
-        w = _.intl.string(_.t.CqjnLC);
-    return (0, r.jsx)(c.Z, {
+    }, [O.ownerId, g]);
+    let { showVibesHoneypot: j } = (0, c.X)({ location: 'StreamFeedback' }),
+        v = f.intl.string(f.t['5smP3d']),
+        k = f.intl.string(f.t['0uxA2d']),
+        E = f.intl.string(f.t.CqjnLC);
+    return (0, r.jsx)(s.Z, {
         modalType: 'stream',
-        header: S,
+        header: v,
         impression: {
             impressionName: i.ImpressionNames.STREAM_FEEDBACK_MODAL,
             impressionProperties: {
-                media_session_id: x.media_session_id,
-                rtc_connection_id: x.rtc_connection_id,
-                parent_media_session_id: x.parent_media_session_id
+                media_session_id: S.media_session_id,
+                rtc_connection_id: S.rtc_connection_id,
+                parent_media_session_id: S.parent_media_session_id
             }
         },
-        body: t ? k : w,
-        problemTitle: _.intl.string(_.t['6Y1t5O']),
+        body: t ? k : E,
+        problemTitle: f.intl.string(f.t['6Y1t5O']),
         problems: (0, u.Z)({
             isStreamer: t,
             isEndStream: !0,
-            showVibesHoneypot: v
+            showVibesHoneypot: j
         }),
-        freeformNeededProblems: O,
+        freeformNeededProblems: y,
         onSubmit: function (e) {
             var t;
-            let { rating: l, problem: i, dontShowAgain: s, feedback: c } = e;
-            s &&
-                (0, a.U)({
+            let { rating: o, problem: i, dontShowAgain: c, feedback: s } = e;
+            c &&
+                (0, a.Uv)({
                     feedbackType: p.nw.STREAM,
                     location: 'StreamFeedback'
                 }),
-                null != l &&
-                    ((0, d.Z)({
+                null != o &&
+                    ((0, _.Z)({
                         problem: null != (t = null == i ? void 0 : i.value) ? t : null,
-                        stream: h,
-                        feedback: c,
+                        stream: O,
+                        feedback: s,
                         streamApplication: g,
-                        analyticsData: x,
+                        analyticsData: S,
                         location: 'Stream End',
-                        rating: l
+                        rating: o
                     }),
                     null != i &&
-                        (0, o.ZDy)(async () => {
+                        (0, l.ZDy)(async () => {
                             let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                             return (t) =>
                                 (0, r.jsx)(
@@ -97,12 +97,12 @@ function h(e) {
                                                 });
                                         }
                                         return e;
-                                    })({ body: _.intl.string(_.t.mMTVnp) }, t)
+                                    })({ body: f.intl.string(f.t.mMTVnp) }, t)
                                 );
                         }));
         },
-        onClose: y,
-        transitionState: j,
-        otherKey: f.kr.OTHER
+        onClose: h,
+        transitionState: w,
+        otherKey: m.kr.OTHER
     });
 }

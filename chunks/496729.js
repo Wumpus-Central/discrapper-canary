@@ -50,13 +50,13 @@ function u(e) {
 }
 function m() {
     (0, l.ZDy)(async () => {
-        let { default: e } = await n.e('87995').then(n.bind(n, 180970));
+        let { default: e } = await Promise.all([n.e('60137'), n.e('37332')]).then(n.bind(n, 180970));
         return (t) => (0, a.jsx)(e, d({}, t));
     });
 }
 function x() {
     (0, l.ZDy)(async () => {
-        let { default: e } = await n.e('3980').then(n.bind(n, 746147));
+        let { default: e } = await Promise.all([n.e('60137'), n.e('46355')]).then(n.bind(n, 746147));
         return (t) => (0, a.jsx)(e, d({}, t));
     });
 }

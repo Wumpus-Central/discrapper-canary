@@ -20,8 +20,8 @@ var a = n(255367),
     _ = n(621060),
     y = n(388032),
     C = n(459100),
-    O = n(616257);
-let N = [
+    N = n(616257);
+let O = [
         {
             key: 'id',
             cellClassName: C.eventColumn,
@@ -60,7 +60,7 @@ let N = [
                 return (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsxs)(h.ZP, {
-                            className: i()(O.headerBar, C.subPanelHeaderBar),
+                            className: i()(N.headerBar, C.subPanelHeaderBar),
                             children: [
                                 (0, a.jsx)(h.ZP.Icon, {
                                     icon: m.IeX,
@@ -137,7 +137,7 @@ function T() {
         }, []);
     return (0, a.jsxs)('div', {
         ref: n,
-        className: i()(O.panel, C.panel),
+        className: i()(N.panel, C.panel),
         children: [
             (0, a.jsxs)('div', {
                 className: C.toolbar,
@@ -175,7 +175,7 @@ function T() {
                 ]
             }),
             (0, a.jsx)(j.Z, {
-                columns: N,
+                columns: O,
                 data: s,
                 selectedRowKey: c,
                 onClickRow: (e) => d(e.key)

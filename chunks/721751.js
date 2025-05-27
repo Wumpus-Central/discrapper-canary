@@ -20,7 +20,7 @@ function b(e) {
     return E.some((t) => e.startsWith(t));
 }
 let v = (e) => ((r = e), e);
-function O(e) {
+function I(e) {
     let { children: t } = e;
     switch (
         (function () {
@@ -52,7 +52,7 @@ function O(e) {
             return null;
     }
 }
-class I extends l.Component {
+class O extends l.Component {
     componentDidMount() {
         window.addEventListener('resize', this.handleResize);
     }
@@ -98,7 +98,7 @@ class I extends l.Component {
                                   })
                               ]
                           })
-                        : (0, i.jsx)(O, { children: t })
+                        : (0, i.jsx)(I, { children: t })
             })
         });
     }
@@ -136,4 +136,4 @@ class I extends l.Component {
             (this.state = { isMobileWidth: window.innerWidth <= 485 });
     }
 }
-let S = I;
+let S = O;

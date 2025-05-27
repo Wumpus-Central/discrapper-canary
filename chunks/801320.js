@@ -1,26 +1,26 @@
-n.d(t, { default: () => m });
-var r = n(255367),
-    o = n(73800),
-    a = n(481060),
-    l = n(957115),
-    c = n(332664),
-    i = n(626135),
-    s = n(981631),
-    u = n(531578),
-    d = n(388032);
-function b(e) {
+o.d(t, { default: () => d });
+var r = o(255367),
+    n = o(73800),
+    c = o(481060),
+    a = o(957115),
+    i = o(332664),
+    l = o(626135),
+    _ = o(981631),
+    b = o(531578),
+    s = o(388032);
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var o = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(o);
         'function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                Object.getOwnPropertySymbols(o).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(o, e).enumerable;
                 })
             )),
             r.forEach(function (t) {
                 var r;
-                (r = n[t]),
+                (r = o[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -34,81 +34,81 @@ function b(e) {
     return e;
 }
 let p = ['OTHER'];
-function m(e) {
-    let { analyticsData: t, transitionState: m, onClose: f } = e;
+function d(e) {
+    let { analyticsData: t, transitionState: d, onClose: m } = e;
     return (
-        o.useEffect(() => {
-            i.default.track(s.rMx.OPEN_MODAL, { type: 'Video Background Feedback' });
+        n.useEffect(() => {
+            l.default.track(_.rMx.OPEN_MODAL, { type: 'Video Background Feedback' });
         }, []),
-        (0, r.jsx)(c.Z, {
+        (0, r.jsx)(i.Z, {
             modalType: 'video_background',
-            header: d.intl.string(d.t.Wl8qXl),
-            body: d.intl.string(d.t.vPw6j4),
-            problemTitle: d.intl.string(d.t['UNFF8/']),
+            header: s.intl.string(s.t.Wl8qXl),
+            body: s.intl.string(s.t.vPw6j4),
+            problemTitle: s.intl.string(s.t['UNFF8/']),
             problems: [
                 {
                     value: 'BAD_OUTLINE',
-                    label: d.intl.string(d.t.pyhS3t)
+                    label: s.intl.string(s.t.pyhS3t)
                 },
                 {
                     value: 'BACKGROUND_DETECTION_ACCURACY',
-                    label: d.intl.string(d.t.cymRTU)
+                    label: s.intl.string(s.t.cymRTU)
                 },
                 {
                     value: 'FLICKERING',
-                    label: d.intl.string(d.t.xZ60CA)
+                    label: s.intl.string(s.t.xZ60CA)
                 },
                 {
                     value: 'BACKGROUND_DETECTION_LAG',
-                    label: d.intl.string(d.t.DweTcX)
+                    label: s.intl.string(s.t.DweTcX)
                 },
                 {
                     value: 'OTHER',
-                    label: d.intl.string(d.t['emlT9/'])
+                    label: s.intl.string(s.t['emlT9/'])
                 }
             ],
             freeformNeededProblems: p,
             onSubmit: function (e) {
-                var o, c, p, m;
-                let { rating: f, problem: _, dontShowAgain: x, feedback: O } = e;
-                x &&
-                    (0, l.U)({
-                        feedbackType: u.nw.VIDEO_BACKGROUND,
+                var n, i, p, d;
+                let { rating: m, problem: f, dontShowAgain: O, feedback: y } = e;
+                O &&
+                    (0, a.Uv)({
+                        feedbackType: b.nw.VIDEO_BACKGROUND,
                         location: 'VideoBackgroundFeedbackModal'
                     }),
-                    null != f &&
-                        ((c = null != (o = null == _ ? void 0 : _.value) ? o : null),
-                        i.default.track(
-                            s.rMx.VIDEO_BACKGROUND_FEEDBACK,
-                            ((p = b({}, t)),
-                            (m = m =
+                    null != m &&
+                        ((i = null != (n = null == f ? void 0 : f.value) ? n : null),
+                        l.default.track(
+                            _.rMx.VIDEO_BACKGROUND_FEEDBACK,
+                            ((p = u({}, t)),
+                            (d = d =
                                 {
-                                    reason: c,
-                                    rating: f,
-                                    feedback: O
+                                    reason: i,
+                                    rating: m,
+                                    feedback: y
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(p, Object.getOwnPropertyDescriptors(m))
+                                ? Object.defineProperties(p, Object.getOwnPropertyDescriptors(d))
                                 : (function (e, t) {
-                                      var n = Object.keys(e);
+                                      var o = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
                                           var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
+                                          o.push.apply(o, r);
                                       }
-                                      return n;
-                                  })(Object(m)).forEach(function (e) {
-                                      Object.defineProperty(p, e, Object.getOwnPropertyDescriptor(m, e));
+                                      return o;
+                                  })(Object(d)).forEach(function (e) {
+                                      Object.defineProperty(p, e, Object.getOwnPropertyDescriptor(d, e));
                                   }),
                             p)
                         ),
-                        null != _ &&
-                            (0, a.ZDy)(async () => {
-                                let { default: e } = await n.e('14466').then(n.bind(n, 729328));
-                                return (t) => (0, r.jsx)(e, b({ body: d.intl.string(d.t.aHB11d) }, t));
+                        null != f &&
+                            (0, c.ZDy)(async () => {
+                                let { default: e } = await o.e('14466').then(o.bind(o, 729328));
+                                return (t) => (0, r.jsx)(e, u({ body: s.intl.string(s.t.aHB11d) }, t));
                             }));
             },
-            onClose: f,
-            transitionState: m,
+            onClose: m,
+            transitionState: d,
             otherKey: 'OTHER'
         })
     );

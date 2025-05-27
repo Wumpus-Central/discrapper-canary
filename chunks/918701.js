@@ -872,7 +872,7 @@ function tO(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T.Z,
         r = tm(e),
         i = null != r ? n.questToDeliverForPlacement.get(r) : void 0;
-    return null != (t = null == i ? void 0 : i.adDecisionData) ? t : {};
+    return null != (t = null == i ? void 0 : i.adDecisionData) ? t : w.Jp;
 }
 function tv(e) {
     var t, n;

@@ -18,11 +18,11 @@ var r,
     E = n(213609),
     b = n(882037),
     v = n(8184),
-    O = n(254942),
-    I = n(481230),
+    I = n(254942),
+    O = n(481230),
     S = n(388905),
-    j = n(853268),
-    y = n(639946),
+    y = n(853268),
+    j = n(639946),
     N = n(616952),
     C = n(792766),
     T = n(692483),
@@ -205,7 +205,7 @@ class eh extends (r = l.PureComponent) {
             });
         try {
             d || null == a
-                ? await (0, I.R$)({
+                ? await (0, O.R$)({
                       email: e,
                       username: x,
                       globalName: E,
@@ -218,7 +218,7 @@ class eh extends (r = l.PureComponent) {
                       birthday: l,
                       promoEmailConsent: f.required ? f : null
                   })
-                : await (0, I.ZP)({
+                : await (0, O.ZP)({
                       consent: i,
                       invite: h,
                       giftCodeSKUId: p,
@@ -229,7 +229,7 @@ class eh extends (r = l.PureComponent) {
                 null == c || c();
         } catch (t) {
             if ((this.setState({ registering: !1 }), !(t instanceof m.Hx))) return;
-            let e = (0, O.F)(t);
+            let e = (0, I.F)(t);
             this.setState({ apiErrors: e });
         }
     }
@@ -243,7 +243,7 @@ class eh extends (r = l.PureComponent) {
             l = null;
         return (
             t
-                ? (l = (0, i.jsx)(j.Z, {
+                ? (l = (0, i.jsx)(y.Z, {
                       value: e,
                       onChange: (e) => this.setState({ consent: e }),
                       subText: el.intl.format(el.t.qMDAPz, {
@@ -345,7 +345,7 @@ class eh extends (r = l.PureComponent) {
                   guild: e.guild
               })
             : (null == e ? void 0 : e.guild_scheduled_event) != null
-              ? (0, i.jsx)(y.r, {
+              ? (0, i.jsx)(j.r, {
                     channel: e.channel,
                     guildScheduledEvent: e.guild_scheduled_event
                 })
@@ -514,10 +514,10 @@ class eh extends (r = l.PureComponent) {
               });
     }
     renderFull(e, t) {
-        let { email: n, username: r, globalName: a, password: s, consent: c, parsedDateOfBirth: u, globalNameFocused: d, emailClientError: g, usernameClientError: p, passwordClientError: m, dateOfBirthClientError: f, registering: _, apiErrors: { email: E, username: b, global_name: v, password: O, date_of_birth: I } = {} } = this.state,
+        let { email: n, username: r, globalName: a, password: s, consent: c, parsedDateOfBirth: u, globalNameFocused: d, emailClientError: g, usernameClientError: p, passwordClientError: m, dateOfBirthClientError: f, registering: _, apiErrors: { email: E, username: b, global_name: v, password: I, date_of_birth: O } = {} } = this.state,
             {
-                consentRequired: j,
-                isMobileWebInviteRegistration: y,
+                consentRequired: y,
+                isMobileWebInviteRegistration: j,
                 uniqueUsernameRegistrationConfig: { suggestions: C },
                 authBoxClassName: T,
                 hasLoggedInAccounts: A
@@ -525,7 +525,7 @@ class eh extends (r = l.PureComponent) {
             { subText: P, consentText: Z } = this.renderConsentComponents(),
             R = this.renderErrorMessage(),
             w = (0, i.jsx)(h.ua7, {
-                text: !c && j ? el.intl.string(el.t.AY4IVF) : null,
+                text: !c && y ? el.intl.string(el.t.AY4IVF) : null,
                 children: (e) =>
                     (0, i.jsx)(
                         'div',
@@ -633,7 +633,7 @@ class eh extends (r = l.PureComponent) {
                                 password: e,
                                 passwordClientError: 0 === e.length ? el.intl.string(el.t.EkokLy) : null
                             }),
-                        error: null != m ? m : eg(O),
+                        error: null != m ? m : eg(I),
                         type: 'password',
                         autoComplete: 'new-password',
                         setRef: (e) => {
@@ -649,7 +649,7 @@ class eh extends (r = l.PureComponent) {
                         name: 'date_of_birth',
                         onChange: this.handleBirthdayChange,
                         ref: this.dateOfBirthRef,
-                        error: null != f ? f : eg(I),
+                        error: null != f ? f : eg(O),
                         value: u,
                         required: !0,
                         onFocus: this.trackInputFocus,
@@ -663,8 +663,8 @@ class eh extends (r = l.PureComponent) {
                     en.a
                         ? null
                         : (0, i.jsx)(S.zx, {
-                              look: y ? S.zx.Looks.FILLED : S.zx.Looks.LINK,
-                              color: y ? S.zx.Colors.PRIMARY : S.zx.Colors.LINK,
+                              look: j ? S.zx.Looks.FILLED : S.zx.Looks.LINK,
+                              color: j ? S.zx.Colors.PRIMARY : S.zx.Colors.LINK,
                               onClick: this.handleGotoLogin,
                               className: eo.marginTop20,
                               children: el.intl.string(el.t['r/jzu7'])
@@ -699,7 +699,7 @@ class eh extends (r = l.PureComponent) {
                   tag: 'form',
                   className: T,
                   children: [
-                      A && !y
+                      A && !j
                           ? (0, i.jsx)(S.zx, {
                                 onClick: this.handleGotoLogin,
                                 look: S.zx.Looks.LINK,

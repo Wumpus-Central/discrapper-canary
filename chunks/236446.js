@@ -18,11 +18,11 @@ var r = n(255367),
     E = n(390885),
     b = n(314897),
     v = n(896797),
-    O = n(954824),
-    I = n(781428),
+    I = n(954824),
+    O = n(781428),
     S = n(163671),
-    j = n(423527),
-    y = n(981631),
+    y = n(423527),
+    j = n(981631),
     N = n(260539),
     C = n(701476),
     T = n(630724),
@@ -46,7 +46,7 @@ function w(e, t, n) {
 c.ZP.initialize();
 class L extends i.PureComponent {
     componentDidMount() {
-        (0, x.e)('guildTemplate'), A.KO || O.Z.launch('discord://' + y.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
+        (0, x.e)('guildTemplate'), A.KO || I.Z.launch('discord://' + j.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
     }
     componentDidUpdate(e) {
         this.props.code !== e.code && p.Z.resolveGuildTemplate(this.props.code);
@@ -110,20 +110,20 @@ class L extends i.PureComponent {
     render() {
         let { guildTemplate: e, nativeAppState: t, authenticated: n, transitionTo: i, location: l } = this.props;
         if (null == e) return this.renderSpinner(P.intl.string(P.t.ZTNur6));
-        if (t === y.kEZ.OPEN) return this.renderAppOpened();
-        if (t === y.kEZ.OPENING) return this.renderSpinner(P.intl.string(P.t['Z+hCVV']));
+        if (t === j.kEZ.OPEN) return this.renderAppOpened();
+        if (t === j.kEZ.OPENING) return this.renderSpinner(P.intl.string(P.t['Z+hCVV']));
         switch (e.state) {
             case N.Rj.RESOLVING:
                 return this.renderSpinner(P.intl.string(P.t['Z+hCVV']));
             case N.Rj.RESOLVED:
                 if (n || !A.KO) return this.renderAuthenticatedOrDownload();
                 if (this.props.login)
-                    return (0, r.jsx)(I.Z, {
+                    return (0, r.jsx)(O.Z, {
                         guildTemplate: e,
                         transitionTo: i,
                         location: l
                     });
-                return (0, r.jsx)(j.Z, {
+                return (0, r.jsx)(y.Z, {
                     guildTemplate: e,
                     transitionTo: i,
                     location: l,

@@ -1,10 +1,10 @@
 n.d(t, { Z: () => i });
 var r = n(626135),
-    l = n(981631);
+    o = n(981631);
 function i(e) {
-    let { problem: t, stream: n, feedback: i, streamApplication: o, analyticsData: a, location: s, rating: c = null } = e;
+    let { problem: t, stream: n, feedback: i, streamApplication: l, analyticsData: a, location: c, rating: s = null } = e;
     r.default.track(
-        l.rMx.STREAM_REPORT_PROBLEM,
+        o.rMx.STREAM_REPORT_PROBLEM,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -35,10 +35,10 @@ function i(e) {
                 streamer_user_id: n.ownerId,
                 stream_channel_id: n.channelId,
                 guild_id: n.guildId,
-                application_id: null != o ? o.id : null,
-                application_name: null != o ? o.name : null,
-                location: s,
-                rating: c,
+                application_id: null != l ? l.id : null,
+                application_name: null != l ? l.name : null,
+                location: c,
+                rating: s,
                 feedback: i
             },
             a

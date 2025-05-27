@@ -18,8 +18,8 @@ var r = n(255367),
     E = n(474936),
     b = n(388032),
     v = n(378027),
-    O = n(893354),
-    I = n(20493);
+    I = n(893354),
+    O = n(20493);
 let S = o.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
     let { giftCode: t } = e,
         n = f.Z.get(t.skuId),
@@ -51,7 +51,7 @@ let S = o.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
                     : (0, r.jsx)(u.qE, {
                           src: null != l ? l.getAvatarURL(void 0, 100) : null,
                           size: s.EFr.DEPRECATED_SIZE_100,
-                          className: I.marginBottom20
+                          className: O.marginBottom20
                       }),
                 null != t
                     ? (0, r.jsxs)(i.Fragment, {
@@ -61,7 +61,7 @@ let S = o.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
                           children: [
                               (0, r.jsx)(u.DK, { children: m }),
                               (0, r.jsxs)(u.Dx, {
-                                  className: a()(I.marginTop8, O.flexCenter),
+                                  className: a()(O.marginTop8, I.flexCenter),
                                   children: [
                                       o.productLine !== x.POd.COLLECTIBLES &&
                                           (0, r.jsx)(d.Z, {

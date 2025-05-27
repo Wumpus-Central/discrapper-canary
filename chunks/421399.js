@@ -21,11 +21,11 @@ var r,
     E = n(477747),
     b = n(477734),
     v = n(670188),
-    O = n(768581),
-    I = n(585483),
+    I = n(768581),
+    O = n(585483),
     S = n(463396),
-    j = n(935910),
-    y = n(981631),
+    y = n(935910),
+    j = n(981631),
     N = n(848697);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -92,14 +92,14 @@ function Z(e) {
         ee = 'username' === $,
         et = (0, b.X$)(),
         en = (0, E.Z)(null != F ? F : K, 'BaseUsername'),
-        er = (0, j.Z)(r),
+        er = (0, y.Z)(r),
         ei = l.useContext(u.d),
         el = en && null != X && null != X.primaryColor && null != X.secondaryColor,
         ea = ee && el;
     l.useEffect(() => {
         if (null == z || !ea || null == ei) return;
         let { setAnimate: e } = ei;
-        return I.S.subscribeKeyed(y.LPv.ANIMATE_CHAT_AVATAR, ''.concat(z, ':').concat(r.author.id), e), () => void I.S.unsubscribeKeyed(y.LPv.ANIMATE_CHAT_AVATAR, ''.concat(z, ':').concat(r.author.id), e);
+        return O.S.subscribeKeyed(j.LPv.ANIMATE_CHAT_AVATAR, ''.concat(z, ':').concat(r.author.id), e), () => void O.S.unsubscribeKeyed(j.LPv.ANIMATE_CHAT_AVATAR, ''.concat(z, ':').concat(r.author.id), e);
     }, [r.author.id, z, ea, ei]);
     let { gradientStyle: eo, gradientClassname: es } = (0, g.Icv)({
             primaryColor: null == X ? void 0 : X.primaryColor,
@@ -144,7 +144,7 @@ function Z(e) {
                       position: s.tq ? 'window_center' : 'right',
                       avatarUrl:
                           null != n.guildMemberAvatar && null != K
-                              ? (0, O.JM)({
+                              ? (0, I.JM)({
                                     guildId: K,
                                     userId: eg.id,
                                     avatar: n.guildMemberAvatar,

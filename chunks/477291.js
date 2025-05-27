@@ -76,7 +76,7 @@ function _(e) {
     null != t &&
         (s === a.aZ.BAD
             ? (0, i.ZDy)(async () => {
-                  let { default: e } = await n.e('62104').then(n.bind(n, 580584));
+                  let { default: e } = await Promise.all([n.e('60137'), n.e('96114')]).then(n.bind(n, 580584));
                   return (n) =>
                       (0, r.jsx)(
                           e,

@@ -1,7 +1,7 @@
-e.d(i, { R: () => l });
-var n = e(818083),
-    o = e(846573);
-let a = (0, n.B)({
+n.d(t, { R: () => a });
+var r = n(818083),
+    i = n(846573);
+let o = (0, r.B)({
     kind: 'user',
     id: '2025-04_win_electron_notifications',
     label: 'Windows Electron Notifications',
@@ -14,13 +14,13 @@ let a = (0, n.B)({
         }
     ]
 });
-function l(t) {
-    let { location: i } = t,
-        { isInHoldout: e } = o.X.getCurrentConfig({ location: i }, { autoTrackExposure: !0 });
-    return a.getCurrentConfig(
-        { location: i },
+function a(e) {
+    let { location: t } = e,
+        { isInHoldout: n } = i.X.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
+    return o.getCurrentConfig(
+        { location: t },
         {
-            disable: e,
+            disable: n,
             autoTrackExposure: !0
         }
     );

@@ -16,9 +16,9 @@ var r = n(255367),
     b = n(730749),
     y = n(607070),
     O = n(636449),
-    v = n(214629),
-    _ = n(566620),
-    C = n(317381),
+    v = n(566620),
+    _ = n(317381),
+    C = n(889441),
     j = n(736409),
     S = n(367907),
     E = n(835473),
@@ -290,7 +290,7 @@ class ey extends i.PureComponent {
                 let { channel: t, embeddedActivity: n } = this.props;
                 a()(null != n, 'Activity cannot be null during navigation click');
                 let r = n.location.kind === c.E.CONTEXTLESS;
-                if (!(0, O.R)() && r) return void (0, _.tg)(eu.Ez.PANEL);
+                if (!(0, O.R)() && r) return void (0, v.tg)(eu.Ez.PANEL);
                 a()(null != t, 'Channel cannot be null during navigation click'),
                     g.Z.channelListScrollTo(null != (e = t.guild_id) ? e : ec.ME, t.id),
                     !(0, O.R)() &&
@@ -302,7 +302,7 @@ class ey extends i.PureComponent {
                                     instanceId: n.compositeInstanceId
                                 })
                             ),
-                        (0, F.Qm)(t.type) && (0, _.tg)(eu.Ez.PANEL));
+                        (0, F.Qm)(t.type) && (0, v.tg)(eu.Ez.PANEL));
             });
     }
 }
@@ -331,17 +331,17 @@ let eO = (0, b.Z)(function (e) {
     let o = (0, u.e7)([W.default], () => W.default.getId()),
         s = (0, u.e7)([A.ZP, en.Z], () => (0, U.Z)(A.ZP, en.Z)),
         a = (0, u.e7)([ee.Z, Y.Z], () => Y.Z.getChannel(ee.Z.getVoiceChannelId())),
-        c = (0, u.e7)([C.ZP], () => C.ZP.getConnectedActivityChannelId()),
+        c = (0, u.e7)([_.ZP], () => _.ZP.getConnectedActivityChannelId()),
         h = (0, u.e7)([Y.Z], () => Y.Z.getChannel(c)),
         p = (0, u.e7)([q.Z], () => q.Z.getGuild(null == h ? void 0 : h.guild_id)),
         [f, g] = (0, u.Wu)([z.Z], () => [z.Z.getCurrentUserActiveStream(), z.Z.getStreamerActiveStreamMetadata()]),
         m = (0, u.e7)([y.Z], () => y.Z.useReducedMotion),
-        b = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
-        _ = (0, u.e7)([q.Z, X.Z, K.ZP], () => (null != a ? D.JL(a, q.Z, X.Z, !1) : null != n && D.h_(K.ZP.getChannels(n), q.Z, X.Z).length > 0)),
+        b = (0, u.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
+        v = (0, u.e7)([q.Z, X.Z, K.ZP], () => (null != a ? D.JL(a, q.Z, X.Z, !1) : null != n && D.h_(K.ZP.getChannels(n), q.Z, X.Z).length > 0)),
         [j] = (0, E.Z)([null != (t = null != g && null != g.id ? g.id : null != s && null != s.id ? s.id : null != b ? b.applicationId : void 0) ? t : '']),
         S = (0, u.e7)([w.Z], () => w.Z.getFakeGameData()),
-        x = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
-        I = (0, v.Z0)() && null != x && (0, O.R)(),
+        x = (0, u.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
+        I = (0, C.Z)() && null != x && (0, O.R)(),
         N = (0, u.e7)([Q.Z], () => (0, L.Z)(Q.Z) && (0, ei.isWindows)()),
         R = (0, u.e7)([J.Z], () => (null != o ? J.Z.findActivity(o, (e) => e.type === ec.IIU.PLAYING) : null)),
         k = null != f && f.ownerId === o && f.state !== ec.jm8.ENDED,
@@ -372,7 +372,7 @@ let eO = (0, b.Z)(function (e) {
             useReducedMotion: m,
             isStreaming: k,
             channel: h,
-            canStream: _,
+            canStream: v,
             stream: f,
             streamMetadata: g,
             channelName: M,

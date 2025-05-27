@@ -113,7 +113,7 @@ let O = (e) => {
                             (0, c.jW)(
                                 e,
                                 () =>
-                                    Promise.all([n.e('79695'), n.e('5639'), n.e('70205'), n.e('53912'), n.e('518')])
+                                    Promise.all([n.e('79695'), n.e('70205'), n.e('53912'), n.e('32325')])
                                         .then(n.bind(n, 354741))
                                         .then((e) => {
                                             let { default: n } = e;

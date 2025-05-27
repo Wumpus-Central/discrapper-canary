@@ -460,7 +460,8 @@ async function B(e) {
                 campaign_id: null == (c = _.ad_identifiers) ? void 0 : c.campaign_id,
                 creative_id: null == (u = _.ad_identifiers) ? void 0 : u.creative_id,
                 creative_type: null == (d = _.ad_identifiers) ? void 0 : d.creative_type,
-                decision_id: _.request_id
+                decision_id: _.request_id,
+                is_targeted: null != _.ad_identifiers
             },
             placement: e
         });

@@ -1,7 +1,7 @@
 n.d(e, {
-    ZP: () => T,
-    k: () => h,
-    u9: () => N
+    ZP: () => h,
+    k: () => g,
+    u9: () => T
 }),
     n(388685);
 var r = n(255367);
@@ -17,36 +17,36 @@ var i = n(913527),
     f = n(9156),
     _ = n(621600),
     E = n(933557),
-    m = n(981631),
-    p = n(969943),
-    g = n(388032);
-let h = () => [
+    p = n(981631),
+    m = n(969943),
+    N = n(388032);
+let g = () => [
         {
-            value: p.Oe.MINUTES_15,
-            label: g.intl.string(g.t['8ot6go'])
+            value: m.Oe.MINUTES_15,
+            label: N.intl.string(N.t['8ot6go'])
         },
         {
-            value: p.Oe.HOURS_1,
-            label: g.intl.string(g.t.UMWBZm)
+            value: m.Oe.HOURS_1,
+            label: N.intl.string(N.t.UMWBZm)
         },
         {
-            value: p.Oe.HOURS_3,
-            label: g.intl.string(g.t.QmYWtr)
+            value: m.Oe.HOURS_3,
+            label: N.intl.string(N.t.QmYWtr)
         },
         {
-            value: p.Oe.HOURS_8,
-            label: g.intl.string(g.t.EpAXPD)
+            value: m.Oe.HOURS_8,
+            label: N.intl.string(N.t.EpAXPD)
         },
         {
-            value: p.Oe.HOURS_24,
-            label: g.intl.string(g.t['755t4u'])
+            value: m.Oe.HOURS_24,
+            label: N.intl.string(N.t['755t4u'])
         },
         {
-            value: p.Oe.ALWAYS,
-            label: g.intl.string(g.t.r3LawM)
+            value: m.Oe.ALWAYS,
+            label: N.intl.string(N.t.r3LawM)
         }
     ],
-    N = (t) => {
+    T = (t) => {
         let e = t > 0 ? l()().add(t, 'second').toISOString() : null;
         return {
             muted: !0,
@@ -56,46 +56,46 @@ let h = () => [
             }
         };
     };
-function T(t, e) {
+function h(t, e) {
     let [n, i] = (0, a.Wu)([f.ZP], () => [f.ZP.isChannelMuted(t.guild_id, t.id), f.ZP.getChannelMuteConfig(t.guild_id, t.id)]),
         l = (0, d.U)(i),
-        p = (0, E.ZP)(t, !0);
-    function T(e) {
-        e && t.type === m.d4z.GUILD_CATEGORY && (0, o.c4)(t.id), c.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: e }, _.UE.muted(e));
+        m = (0, E.ZP)(t, !0);
+    function h(e) {
+        e && t.type === p.d4z.GUILD_CATEGORY && (0, o.c4)(t.id), c.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: e }, _.UE.muted(e));
     }
-    let C = g.intl.string(g.t.tbeRRE),
-        O = g.intl.string(g.t.OYefmZ);
+    let A = N.intl.string(N.t.tbeRRE),
+        C = N.intl.string(N.t.OYefmZ);
     switch (t.type) {
-        case m.d4z.GUILD_CATEGORY:
-            (C = g.intl.string(g.t.pNMCg4)), (O = g.intl.string(g.t.olaBeH));
+        case p.d4z.GUILD_CATEGORY:
+            (A = N.intl.string(N.t.pNMCg4)), (C = N.intl.string(N.t.olaBeH));
             break;
-        case m.d4z.GROUP_DM:
-            (C = g.intl.string(g.t.LO3kaG)), (O = g.intl.string(g.t['s5/5fn']));
+        case p.d4z.GROUP_DM:
+            (A = N.intl.string(N.t.LO3kaG)), (C = N.intl.string(N.t['s5/5fn']));
             break;
-        case m.d4z.DM:
-            (C = g.intl.format(g.t.byjuJi, { name: p })), (O = g.intl.format(g.t['eC+9rq'], { name: p }));
+        case p.d4z.DM:
+            (A = N.intl.format(N.t.byjuJi, { name: m })), (C = N.intl.format(N.t['eC+9rq'], { name: m }));
             break;
         default:
-            (C = g.intl.string(g.t.tbeRRE)), (O = g.intl.string(g.t.OYefmZ));
+            (A = N.intl.string(N.t.tbeRRE)), (C = N.intl.string(N.t.OYefmZ));
     }
     return n
         ? (0, r.jsx)(u.sNh, {
               id: 'unmute-channel',
-              label: O,
+              label: C,
               subtext: l,
-              action: () => T(!1)
+              action: () => h(!1)
           })
         : (0, r.jsx)(u.sNh, {
               id: 'mute-channel',
-              label: C,
+              label: A,
               action: () => {
-                  T(!0),
+                  h(!0),
                       (0, s.sT)({
                           channelId: t.id,
                           location: 'channel_context_menu'
                       });
               },
-              children: h().map((n) => {
+              children: g().map((n) => {
                   let { value: i, label: l } = n;
                   return (0, r.jsx)(
                       u.sNh,
@@ -104,8 +104,8 @@ function T(t, e) {
                           label: l,
                           action: () =>
                               (function (n) {
-                                  t.type === m.d4z.GUILD_CATEGORY && (0, o.c4)(t.id);
-                                  let r = N(n);
+                                  t.type === p.d4z.GUILD_CATEGORY && (0, o.c4)(t.id);
+                                  let r = T(n);
                                   c.Z.updateChannelOverrideSettings(t.guild_id, t.id, r, _.ZB.Muted, e);
                               })(i)
                       },

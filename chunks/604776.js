@@ -96,7 +96,7 @@ function j() {
         [n, l] = r.useState(s.a.PREMIUM_TIER_2_1_HOUR),
         [d, f] = r.useState([]),
         [j, _] = r.useState([]),
-        { refreshEntitlementList: y, grantFractionalPremium: C, deleteFractionalPremium: O, triggerNextEntitlementFulfillment: N, entitlements: E, loading: T } = (0, m.m)();
+        { refreshEntitlementList: y, grantFractionalPremium: C, deleteFractionalPremium: N, triggerNextEntitlementFulfillment: O, entitlements: E, loading: T } = (0, m.m)();
     r.useEffect(() => {
         y();
     }, [y]);
@@ -195,7 +195,7 @@ function j() {
                                                 size: o.zxk.Sizes.TINY,
                                                 color: o.zxk.Colors.PRIMARY,
                                                 look: o.zxk.Looks.OUTLINED,
-                                                onClick: () => N(),
+                                                onClick: () => O(),
                                                 children: 'Run fulfillment'
                                             }),
                                             (0, a.jsx)(o.zxk, {
@@ -203,7 +203,7 @@ function j() {
                                                 size: o.zxk.Sizes.TINY,
                                                 color: o.zxk.Colors.RED,
                                                 look: o.zxk.Looks.OUTLINED,
-                                                onClick: () => O(),
+                                                onClick: () => N(),
                                                 children: 'Delete all'
                                             }),
                                             (0, a.jsx)(o.zxk, {
@@ -238,7 +238,7 @@ function j() {
                                                     {
                                                         entitlement: e,
                                                         active: !0,
-                                                        onDelete: () => O(e.id)
+                                                        onDelete: () => N(e.id)
                                                     },
                                                     e.id
                                                 )

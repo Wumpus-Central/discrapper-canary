@@ -136,7 +136,8 @@ function C(e) {
                 renderLinkComponent: t,
                 autoPlay: !i,
                 alt: v,
-                onContextMenu: d
+                onContextMenu: d,
+                disableArrowKeySeek: !0
             })
         );
     }

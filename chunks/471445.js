@@ -65,6 +65,7 @@ function _(e, t) {
     if (null == e) return null;
     null == t && (t = a.Z.getGuild(e.getGuildId()));
     let m = (0, i.n)(null == t ? void 0 : t.id, [a.Z, s.default, o.ZP]);
+    if (e.isModeratorReportChannel()) return r.U65;
     if ((null == e ? void 0 : e.id) === (null == t ? void 0 : t.rulesChannelId)) return r.snC;
     switch (e.type) {
         case u.d4z.GUILD_ANNOUNCEMENT:
@@ -93,7 +94,6 @@ function _(e, t) {
             if ((0, l.Z)(e)) return r.W4G;
             return r.VL1;
         case u.d4z.GUILD_FORUM:
-            if (e.isModeratorReportChannel()) return r.U65;
             let g = e.isMediaChannel();
             if (e.isNSFW()) return g ? r.fFY : r.Mec;
             if ((0, l.Z)(e)) return g ? r.D7T : r.BUe;

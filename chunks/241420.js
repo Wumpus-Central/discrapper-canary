@@ -3,8 +3,8 @@ var a = n(255367);
 n(73800);
 var r = n(481060),
     o = n(546957),
-    c = n(190014),
-    i = n(301812),
+    i = n(190014),
+    c = n(301812),
     l = n(988043),
     s = n(919539),
     u = n(526761),
@@ -22,11 +22,11 @@ function p(e) {
                 ingress: u.f4.SERVER_PRIVACY_MODAL,
                 guildId: t
             }),
-            (0, a.jsx)(i.Z, {
+            (0, a.jsx)(c.Z, {
                 ingress: u.f4.SERVER_PRIVACY_MODAL,
                 guildId: t
             }),
-            (0, a.jsx)(c.Z, {
+            (0, a.jsx)(i.Z, {
                 ingress: u.f4.SERVER_PRIVACY_MODAL,
                 guildId: t
             }),
@@ -40,16 +40,16 @@ function p(e) {
 }
 function g(e) {
     let { guild: t, transitionState: n, onClose: o } = e,
-        c = ''.concat(d.intl.string(d.t.BayiAg), '\u2014').concat(null != t ? t.toString() : '??');
+        i = ''.concat(d.intl.string(d.t.BayiAg), '\u2014').concat(null != t ? t.toString() : '??');
     return (0, a.jsxs)(r.Y0X, {
         transitionState: n,
         size: r.CgR.SMALL,
-        'aria-label': c,
+        'aria-label': i,
         children: [
             (0, a.jsx)(r.xBx, {
                 children: (0, a.jsx)(r.X6q, {
                     variant: 'heading-lg/semibold',
-                    children: c
+                    children: i
                 })
             }),
             (0, a.jsx)(r.hzk, {

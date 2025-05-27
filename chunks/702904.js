@@ -704,14 +704,14 @@ function v() {
                 }),
                 await (0, o.tZ)();
         },
-        O = async () => {
+        N = async () => {
             await i.tn.del({
                 url: '/debug/payment-source',
                 rejectWithError: !1
             }),
                 await (0, o.tZ)();
         },
-        N = async () => {
+        O = async () => {
             await i.tn.del({
                 url: '/debug/rate-limits',
                 rejectWithError: !1
@@ -768,12 +768,12 @@ function v() {
                             _.length > 0 &&
                                 (0, a.jsx)(s.zxk, {
                                     size: s.zxk.Sizes.SMALL,
-                                    onClick: O,
+                                    onClick: N,
                                     children: 'Delete All Payment Sources'
                                 }),
                             (0, a.jsx)(s.zxk, {
                                 size: s.zxk.Sizes.SMALL,
-                                onClick: N,
+                                onClick: O,
                                 children: 'Reset API Rate limits and reload app'
                             })
                         ]

@@ -29,19 +29,19 @@ var r = n(255367),
     T = n(998502),
     k = n(228488),
     N = n(145597),
-    E = n(214629),
-    A = n(317381),
+    E = n(317381),
+    A = n(426419),
     D = n(884338),
     U = n(473179),
-    R = n(932174),
-    B = n(981631),
+    B = n(932174),
+    R = n(981631),
     L = n(388032),
     Y = n(951927);
 let z = D.u.SIZE_24;
 function M(e) {
     let { applicationId: t, channelId: n } = e,
         i = (0, c.e7)([p.Z], () => p.Z.getApplication(t)),
-        M = (0, c.e7)([A.ZP], () => A.ZP.getSelfEmbeddedActivities().get(t)),
+        M = (0, c.e7)([E.ZP], () => E.ZP.getSelfEmbeddedActivities().get(t)),
         K = (0, c.e7)([_.Z], () => _.Z.getChannel(n)),
         W = j.Sb.useSetting(),
         V = (0, c.Wu)(
@@ -101,18 +101,18 @@ function M(e) {
             let e = (0, N.getPID)();
             s.Z.setInputLocked(!b.ZP.isInputLocked(e), e);
         }, []),
-        $ = (0, E.PR)(),
+        $ = (0, A.P)(),
         {
             canStayOnTop: Q,
             popoutWindowAlwaysOnTop: ee,
             handleStayOnTop: et
         } = (function () {
-            let e = (0, c.e7)([v.Z], () => v.Z.getIsAlwaysOnTop(B.KJ3.ACTIVITY_POPOUT)),
+            let e = (0, c.e7)([v.Z], () => v.Z.getIsAlwaysOnTop(R.KJ3.ACTIVITY_POPOUT)),
                 t = o.useCallback((e) => {
-                    O.hY(B.KJ3.ACTIVITY_POPOUT, e);
+                    O.hY(R.KJ3.ACTIVITY_POPOUT, e);
                 }, []);
             return {
-                canStayOnTop: w.isPlatformEmbedded && T.ZP.supportsFeature(B.eRX.POPOUT_WINDOWS),
+                canStayOnTop: w.isPlatformEmbedded && T.ZP.supportsFeature(R.eRX.POPOUT_WINDOWS),
                 popoutWindowAlwaysOnTop: e,
                 handleStayOnTop: t
             };
@@ -122,7 +122,7 @@ function M(e) {
             popoutWindow: er,
             toggleFullScreen: eo
         } = (function () {
-            let { popoutWindow: e, currentDocument: t, rootNode: n } = (0, R.Z)(),
+            let { popoutWindow: e, currentDocument: t, rootNode: n } = (0, B.Z)(),
                 [r, i] = o.useState(!1),
                 l = o.useCallback(() => {
                     null != n && r && (i(!1), (0, k.Pr)(n, t));
@@ -165,7 +165,7 @@ function M(e) {
                 children: el
             })),
         (0, r.jsx)(u.f6W, {
-            theme: B.BRd.DARK,
+            theme: R.BRd.DARK,
             children: (e) =>
                 (0, r.jsxs)('div', {
                     className: l()(Y.container, e),
@@ -205,7 +205,7 @@ function M(e) {
                                     className: Y.actionButtonsContainer,
                                     children: [
                                         (0, r.jsx)(P.Z, {
-                                            appContext: B.IlC.POPOUT,
+                                            appContext: R.IlC.POPOUT,
                                             applicationId: t,
                                             channel: K,
                                             shouldPrioritizeGroupPlusIcon: !0,

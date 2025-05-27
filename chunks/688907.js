@@ -1,20 +1,20 @@
-e.d(i, {
-    BH: () => r,
-    MH: () => s
+n.d(t, {
+    BH: () => s,
+    MH: () => o
 });
-var n = e(442837),
-    o = e(524437),
-    a = e(761781),
-    l = e(695346);
-function r() {
+var a = n(442837),
+    r = n(524437),
+    l = n(761781),
+    i = n(695346);
+function s() {
     return c(
-        l.YT.useSetting(),
-        (0, n.e7)([a.Z], () => a.Z.currentUserApplicationIds.size > 0)
+        i.YT.useSetting(),
+        (0, a.e7)([l.Z], () => l.Z.currentUserApplicationIds.size > 0)
     );
 }
-function s() {
-    return c(l.YT.getSetting(), a.Z.currentUserApplicationIds.size > 0);
+function o() {
+    return c(i.YT.getSetting(), l.Z.currentUserApplicationIds.size > 0);
 }
-function c(t, i) {
-    return t === o.Tv.ACTIVITY_NOTIFICATIONS_UNSET ? (i ? o.Tv.ONLY_GAMES_PLAYED : o.Tv.ACTIVITY_NOTIFICATIONS_ENABLED) : t !== o.Tv.ONLY_GAMES_PLAYED || i ? t : o.Tv.ACTIVITY_NOTIFICATIONS_ENABLED;
+function c(e, t) {
+    return e === r.Tv.ACTIVITY_NOTIFICATIONS_UNSET ? (t ? r.Tv.ONLY_GAMES_PLAYED : r.Tv.ACTIVITY_NOTIFICATIONS_ENABLED) : e !== r.Tv.ONLY_GAMES_PLAYED || t ? e : r.Tv.ACTIVITY_NOTIFICATIONS_ENABLED;
 }

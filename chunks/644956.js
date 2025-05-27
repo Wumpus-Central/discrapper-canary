@@ -166,14 +166,12 @@ function G(e) {
         d = i.useRef(null);
     (0, _.ZP)(() => {
         var e;
-        return (
-            null == (e = t.setPopoutRef) || e.call(t, d.current),
-            () => {
-                var e;
-                return null == (e = t.setPopoutRef) ? void 0 : e.call(t, null);
-            }
-        );
-    });
+        null == (e = t.setPopoutRef) || e.call(t, d.current);
+    }),
+        (0, _.zq)(() => {
+            var e;
+            null == (e = t.setPopoutRef) || e.call(t, null);
+        });
     let f = (0, b.Z)(o),
         p = (0, l.e7)(
             [N.Z],

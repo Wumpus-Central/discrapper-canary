@@ -1,66 +1,68 @@
-n.d(t, { Z: () => r });
-var o = n(131951),
-    i = n(626135);
-function r(e, t) {
-    let { rating: n, reasonCode: r, reasonDescription: a, feedback: l, analyticsData: s } = t,
-        c = o.Z.getSettings(),
-        u = o.Z.getInputDeviceId(),
-        d = o.Z.getInputDevices()[u],
-        b = o.Z.getOutputDeviceId(),
-        p = o.Z.getOutputDevices()[b],
-        m = o.Z.getVideoDeviceId(),
-        _ = o.Z.getVideoDevices()[m],
-        f = o.Z.getNoiseCancellation(),
-        h = o.Z.getMediaEngine().getAudioSubsystem(),
-        O = o.Z.getMediaEngine().getAudioLayer();
-    i.default.track(
+o.d(t, { Z: () => i });
+var n = o(131951),
+    r = o(626135);
+function i(e, t) {
+    let { rating: o, category: i, reasonCode: l, reasonDescription: a, variant: s, feedback: c, analyticsData: u } = t,
+        d = n.Z.getSettings(),
+        b = n.Z.getInputDeviceId(),
+        m = n.Z.getInputDevices()[b],
+        p = n.Z.getOutputDeviceId(),
+        _ = n.Z.getOutputDevices()[p],
+        f = n.Z.getVideoDeviceId(),
+        h = n.Z.getVideoDevices()[f],
+        g = n.Z.getNoiseCancellation(),
+        O = n.Z.getMediaEngine().getAudioSubsystem(),
+        v = n.Z.getMediaEngine().getAudioLayer();
+    r.default.track(
         e,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    o = Object.keys(n);
+                var o = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(o);
                 'function' == typeof Object.getOwnPropertySymbols &&
-                    (o = o.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(o).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(o, e).enumerable;
                         })
                     )),
-                    o.forEach(function (t) {
-                        var o;
-                        (o = n[t]),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = o[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: o,
+                                      value: n,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = o);
+                                : (e[t] = n);
                     });
             }
             return e;
         })(
             {
-                rating: null != n ? n : 'no response',
-                reason_code: r,
+                rating: null != o ? o : 'no response',
+                category: i,
+                reason_code: l,
                 reason_description: a,
-                feedback: l,
-                audio_input_mode: c.mode,
-                automatic_audio_input_sensitivity_enabled: c.modeOptions.autoThreshold,
-                audio_input_sensitivity: c.modeOptions.threshold,
-                echo_cancellation_enabled: c.echoCancellation,
-                noise_suppression_enabled: c.noiseSuppression,
-                automatic_gain_control_enabled: c.automaticGainControl,
-                voice_output_volume: c.outputVolume,
-                noise_cancellation_enabled: f,
-                input_device_name: null == d ? void 0 : d.name,
-                output_device_name: null == p ? void 0 : p.name,
-                video_device_name: null == _ ? void 0 : _.name,
-                audio_subsystem: h,
-                audio_layer: O,
-                automatic_audio_subsystem: c.automaticAudioSubsystem
+                reason_variant: s,
+                feedback: c,
+                audio_input_mode: d.mode,
+                automatic_audio_input_sensitivity_enabled: d.modeOptions.autoThreshold,
+                audio_input_sensitivity: d.modeOptions.threshold,
+                echo_cancellation_enabled: d.echoCancellation,
+                noise_suppression_enabled: d.noiseSuppression,
+                automatic_gain_control_enabled: d.automaticGainControl,
+                voice_output_volume: d.outputVolume,
+                noise_cancellation_enabled: g,
+                input_device_name: null == m ? void 0 : m.name,
+                output_device_name: null == _ ? void 0 : _.name,
+                video_device_name: null == h ? void 0 : h.name,
+                audio_subsystem: O,
+                audio_layer: v,
+                automatic_audio_subsystem: d.automaticAudioSubsystem
             },
-            s
+            u
         )
     );
 }

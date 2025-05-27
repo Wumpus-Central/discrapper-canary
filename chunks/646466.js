@@ -1,4 +1,4 @@
-n.d(t, { O: () => N }), n(388685);
+n.d(t, { O: () => O }), n(388685);
 var a = n(255367),
     r = n(73800),
     l = n(481060),
@@ -395,7 +395,7 @@ let h = [
             ]
         });
     },
-    O = () => {
+    N = () => {
         let { previewEnabled: e, setPreviewEnabled: t, clearAssets: n } = (0, o.N9)(),
             { ignoredFilenames: i, clearAssets: s, clearIgnoredFilenames: u, processAndUpsertAssets: x } = (0, d.hm)(),
             h = r.useCallback(
@@ -444,7 +444,7 @@ let h = [
             ]
         });
     },
-    N = () => {
+    O = () => {
         let [e, t] = r.useState('preview');
         return (0, a.jsxs)('div', {
             className: m.container,
@@ -460,7 +460,7 @@ let h = [
                     optionClassName: m.panelModeControlOption
                 }),
                 (0, a.jsx)(l.LZC, { size: 8 }),
-                'preview' === e && (0, a.jsx)(O, {}),
+                'preview' === e && (0, a.jsx)(N, {}),
                 'validate' === e && (0, a.jsx)(C, {}),
                 (0, a.jsx)(l.LZC, { size: 16 })
             ]

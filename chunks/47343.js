@@ -18,7 +18,7 @@ let x = () => {
     var e;
     let [t, n] = i.useState(!1),
         l = c.G6.useSetting(),
-        { nickname: x, dmsAllowed: E, showActivity: b, mutedServer: v, setNickname: O, setDmsAllowed: I, setShowActivity: S, setMutedServer: j, guildId: y, inviteCode: N } = (0, p.XW)(),
+        { nickname: x, dmsAllowed: E, showActivity: b, mutedServer: v, setNickname: I, setDmsAllowed: O, setShowActivity: S, setMutedServer: y, guildId: j, inviteCode: N } = (0, p.XW)(),
         C = null == (e = s.Z.getProps().invite) ? void 0 : e.is_nickname_changeable,
         T = (0, h.m4)({ location: 'InviteSettingsControls' });
     return (0, r.jsxs)('div', {
@@ -29,7 +29,7 @@ let x = () => {
                 onClick: () => {
                     t ||
                         g.default.track(m.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
-                            guild_id: y,
+                            guild_id: j,
                             invite_code: N
                         }),
                         n(!t);
@@ -80,14 +80,14 @@ let x = () => {
                                     placeholder: f.intl.string(f.t['09Q8ys']),
                                     maxLength: m.l$U,
                                     value: x,
-                                    onChange: O
+                                    onChange: I
                                 })
                             ]
                         }),
                     (0, r.jsx)(u.Z, {
                         title: f.intl.string(f.t['/2ed39']),
                         value: E,
-                        onChange: I
+                        onChange: O
                     }),
                     l &&
                         (0, r.jsx)(u.Z, {
@@ -99,7 +99,7 @@ let x = () => {
                         (0, r.jsx)(u.Z, {
                             title: f.intl.string(f.t['0nZCqK']),
                             value: v,
-                            onChange: j
+                            onChange: y
                         })
                 ]
             })

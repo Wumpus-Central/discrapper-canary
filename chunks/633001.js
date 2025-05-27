@@ -20,14 +20,14 @@ var a = n(255367),
     _ = n(808506),
     y = n(572004),
     C = n(70956),
-    O = n(145597),
-    N = n(246992),
+    N = n(145597),
+    O = n(246992),
     E = n(981631),
     T = n(757744),
     S = n(388032),
     P = n(931207),
-    k = n(616257);
-function w(e) {
+    I = n(616257);
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -52,7 +52,7 @@ function w(e) {
     }
     return e;
 }
-function I(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,8 +72,8 @@ function I(e, t) {
 }
 let R = {
         [E.Odu.CLICK_ZONE_DEBUG]: (e) =>
-            I(
-                w(
+            w(
+                k(
                     {
                         type: E.Odu.CLICK_ZONE_DEBUG,
                         id: (0, s.Z)(),
@@ -92,8 +92,8 @@ let R = {
                 { pinned: !0 }
             ),
         [E.Odu.PERFORMANCE_DEBUG]: (e) =>
-            I(
-                w(
+            w(
+                k(
                     {
                         type: E.Odu.PERFORMANCE_DEBUG,
                         id: (0, s.Z)(),
@@ -113,8 +113,8 @@ let R = {
                 { pinned: !0 }
             )
     },
-    Z = (e, t) => e.find((e) => e.type === t);
-function A(e) {
+    A = (e, t) => e.find((e) => e.type === t);
+function Z(e) {
     let { id: t } = e,
         [n, l] = r.useState(!1);
     return (
@@ -173,7 +173,7 @@ function L(e) {
                 (0, a.jsx)(c.Text, {
                     variant: 'text-md/bold',
                     color: 'text-primary',
-                    children: (0, a.jsx)(A, { id: t.applicationId })
+                    children: (0, a.jsx)(Z, { id: t.applicationId })
                 }),
             (0, a.jsxs)(c.Text, {
                 variant: 'text-sm/normal',
@@ -316,7 +316,7 @@ function D(e) {
     });
 }
 function M(e) {
-    let t = Z(Object.values((0, o.Wu)([g.Z], () => g.Z.getWidgetsForLayout(T.$S))), e);
+    let t = A(Object.values((0, o.Wu)([g.Z], () => g.Z.getWidgetsForLayout(T.$S))), e);
     return [
         t,
         () => {
@@ -339,8 +339,8 @@ function z() {
         y = (0, o.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.DisabledGPUBoost)),
         T = (0, o.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.ForceGPUBoost)),
         S = (0, o.e7)([p.default], () => p.default.getForcedRenderMode()),
-        [R, Z] = r.useState({}),
-        [A, z] = r.useState(S),
+        [R, A] = r.useState({}),
+        [Z, z] = r.useState(S),
         B = (e) => {
             z(e), u.Z.forceRenderMode(e);
         },
@@ -361,16 +361,16 @@ function z() {
                 label: m.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
                 value: m.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION
             }
-        ].map((e) => I(w({}, e), { label: ''.concat(e.label, ' ').concat(S === e.value ? '(current)' : '') })),
+        ].map((e) => w(k({}, e), { label: ''.concat(e.label, ' ').concat(S === e.value ? '(current)' : '') })),
         F = (0, o.cj)([p.default], () => p.default.getTrackedGames()),
         G = (0, o.e7)([_.default], () => _.default.getFocusedPID()),
         V = (0, o.e7)([_.default], () => _.default.isFocusedPidOutOfProcess()),
-        H = (0, O.getPID)(),
+        H = (0, N.getPID)(),
         W = (0, o.e7)([p.default], () => p.default.isOverlayOOPEnabledForPid(H), [H]),
         [X, K] = (0, o.Wu)([v.Z], () => [v.Z.enabled, v.Z.keepOpen]),
         Y = (0, o.e7)([x.ZP], () => x.ZP.getRunningGames());
     r.useEffect(() => {
-        Z((e) => {
+        A((e) => {
             for (let t of Object.keys(F)) e[Number(t)] = F[Number(t)];
             return e;
         });
@@ -405,7 +405,7 @@ function z() {
                                 e
                             );
                         },
-                        w({}, e)
+                        k({}, e)
                     )
                 );
             }, 10 * C.Z.Millis.SECOND)),
@@ -439,7 +439,7 @@ function z() {
         ei = Y.filter((e) => null == F[e.pid]);
     return (0, a.jsx)(c.w0Z, {
         children: (0, a.jsxs)('div', {
-            className: i()(k.panel, P.panel),
+            className: i()(I.panel, P.panel),
             children: [
                 (0, a.jsxs)('div', {
                     className: P.panelGroup,
@@ -450,7 +450,7 @@ function z() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     'div',
-                                    I(w({}, e), {
+                                    w(k({}, e), {
                                         children: (0, a.jsx)(c.XZJ, {
                                             value: g,
                                             onChange: () => ee(),
@@ -473,7 +473,7 @@ function z() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     'div',
-                                    I(w({}, e), {
+                                    w(k({}, e), {
                                         children: (0, a.jsx)(c.XZJ, {
                                             value: j,
                                             onChange: () => et(),
@@ -496,7 +496,7 @@ function z() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     'div',
-                                    I(w({}, e), {
+                                    w(k({}, e), {
                                         children: (0, a.jsx)(c.XZJ, {
                                             value: y,
                                             onChange: () => en(),
@@ -519,7 +519,7 @@ function z() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     'div',
-                                    I(w({}, e), {
+                                    w(k({}, e), {
                                         children: (0, a.jsx)(c.XZJ, {
                                             value: T,
                                             onChange: () => ea(),
@@ -543,7 +543,7 @@ function z() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     'div',
-                                    I(w({}, e), {
+                                    w(k({}, e), {
                                         children: (0, a.jsx)(c.XZJ, {
                                             value: null != n,
                                             onChange: () => l(),
@@ -566,7 +566,7 @@ function z() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     'div',
-                                    I(w({}, e), {
+                                    w(k({}, e), {
                                         children: (0, a.jsx)(c.XZJ, {
                                             value: null != s,
                                             onChange: () => d(),
@@ -591,14 +591,14 @@ function z() {
                     children: (e) =>
                         (0, a.jsx)(
                             'div',
-                            I(w({}, e), {
+                            w(k({}, e), {
                                 className: P.panelGroup,
                                 children: (0, a.jsx)(c.PhF, {
                                     serialize: (e) => e,
-                                    isSelected: (e) => e === A,
+                                    isSelected: (e) => e === Z,
                                     options: U,
                                     select: B,
-                                    popoutLayerContext: N.O$
+                                    popoutLayerContext: O.O$
                                 })
                             })
                         )
@@ -610,7 +610,7 @@ function z() {
                         children: (e) =>
                             (0, a.jsx)(
                                 'div',
-                                I(w({}, e), {
+                                w(k({}, e), {
                                     children: (0, a.jsxs)('div', {
                                         className: P.panelGroup,
                                         children: [
@@ -641,7 +641,7 @@ function z() {
                     children: (e) =>
                         (0, a.jsx)(
                             'div',
-                            I(w({}, e), {
+                            w(k({}, e), {
                                 children: (0, a.jsxs)('div', {
                                     className: P.panelGroup,
                                     children: [
@@ -709,7 +709,7 @@ function z() {
                     children: (e) =>
                         (0, a.jsx)(
                             'div',
-                            I(w({}, e), {
+                            w(k({}, e), {
                                 children: (0, a.jsxs)('div', {
                                     className: P.panelGroup,
                                     children: [

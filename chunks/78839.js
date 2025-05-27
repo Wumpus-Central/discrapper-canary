@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => V,
-    sE: () => G
+    ZP: () => Z,
+    sE: () => B
 }),
     n(539854),
     n(388685);
@@ -77,20 +77,21 @@ let g = null,
     T = !1,
     A = !1,
     N = null,
-    C = new a.Z('SubscriptionStore');
-function P(e) {
-    let { subscriptions: t } = e,
-        n = {},
+    C = null,
+    P = new a.Z('SubscriptionStore');
+function R(e) {
+    let { subscriptions: t, lastLazyPerkSync: n } = e,
         r = {},
-        i = [],
+        i = {},
         o = [],
-        a = c.default.getId();
+        a = [],
+        s = c.default.getId();
     t.forEach((e) => {
-        if (e.user_id !== a && !I) {
-            C.log('[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
+        if (e.user_id !== s && !I) {
+            P.log('[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
                 (0, u.g9)('[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch', {
                     extra: {
-                        authUserId: a,
+                        authUserId: s,
                         subscriptionId: e.id,
                         subscriptionUserId: e.user_id
                     }
@@ -99,46 +100,47 @@ function P(e) {
             return;
         }
         let t = l.Q.createFromServer(e);
-        (n[t.id] = t), U(t) && ((r[t.id] = t), t.type === d.NYc.GUILD && t.status !== d.O0b.ENDED && i.push(t), t.type === d.NYc.APPLICATION && t.status !== d.O0b.ENDED && o.push(t));
+        (r[t.id] = t), G(t) && ((i[t.id] = t), t.type === d.NYc.GUILD && t.status !== d.O0b.ENDED && o.push(t), t.type === d.NYc.APPLICATION && t.status !== d.O0b.ENDED && a.push(t));
     }),
-        (g = n),
-        (E = r),
-        (y = i),
-        (O = o);
+        (g = r),
+        (E = i),
+        (y = o),
+        (O = a),
+        (C = n);
 }
-function R(e) {
+function w(e) {
     let { activeSubscriptions: t, record: n } = e,
         r = t.findIndex((e) => e.id === n.id);
     if (-1 === r) return [n, ...t];
     {
         let e = [...t];
-        return U(n) && n.status !== d.O0b.ENDED ? (e[r] = n) : e.splice(r, 1), e;
+        return G(n) && n.status !== d.O0b.ENDED ? (e[r] = n) : e.splice(r, 1), e;
     }
 }
-function w(e) {
+function D(e) {
     let { subscription: t } = e,
         n = l.Q.createFromServer(t);
     (g = m(p({}, g), { [n.id]: n })),
-        U(n) && (E = m(p({}, E), { [n.id]: n })),
+        G(n) && (E = m(p({}, E), { [n.id]: n })),
         null != y &&
             n.type === d.NYc.GUILD &&
-            (y = R({
+            (y = w({
                 activeSubscriptions: y,
                 record: n
             })),
         null != O &&
             n.type === d.NYc.APPLICATION &&
-            (y = R({
+            (y = w({
                 activeSubscriptions: O,
                 record: n
             }));
 }
-function D(e) {
+function L(e) {
     let { subscription: t } = e;
     if (((v = !0), null != t)) {
         let e = c.default.getId();
         if (t.user_id !== e && !I) {
-            C.log('[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
+            P.log('[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
                 (0, u.g9)('[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch', {
                     extra: {
                         authUserId: e,
@@ -153,12 +155,12 @@ function D(e) {
         b = l.Q.createFromServer(t);
     }
 }
-function L(e) {
+function x(e) {
     let { subscription: t } = e;
     if (((T = !0), null != t)) {
         let e = c.default.getId();
         if (t.user_id !== e && !I) {
-            C.log('[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
+            P.log('[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
                 (0, u.g9)('[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch', {
                     extra: {
                         authUserId: e,
@@ -173,37 +175,37 @@ function L(e) {
         S = l.Q.createFromServer(t);
     }
 }
-function x() {
+function k() {
     A = !0;
 }
-function k(e) {
+function M(e) {
     let { eligible: t } = e;
     (N = t), (A = !1);
 }
-function M(e) {
+function j(e) {
     let {} = e;
     (N = !1), (A = !1);
 }
-function j() {
-    (g = null), (E = null), (b = null), (y = null), (O = null), (v = !1), (I = !1), (S = null), (T = !1), (A = !1);
-}
-function U(e) {
-    return e.status !== d.O0b.UNPAID;
+function U() {
+    (g = null), (E = null), (b = null), (y = null), (O = null), (v = !1), (I = !1), (S = null), (T = !1), (A = !1), (C = null);
 }
 function G(e) {
+    return e.status !== d.O0b.UNPAID;
+}
+function B(e) {
     let t = c.default.getId();
     return e.userId === t;
 }
-function B(e, t) {
+function F(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         r = n ? E : g;
     if (null == r) return null;
     for (let n in r) {
         let i = r[n];
-        if (!G(i)) {
+        if (!B(i)) {
             if (!I) {
                 let e = c.default.getId();
-                C.log('user id mismatch between logged in user and SubscriptionStore user'),
+                P.log('user id mismatch between logged in user and SubscriptionStore user'),
                     (0, u.g9)('user id mismatch between logged in user and SubscriptionStore user', {
                         extra: {
                             authUserId: e,
@@ -219,7 +221,7 @@ function B(e, t) {
     }
     return null;
 }
-class F extends (r = i.ZP.Store) {
+class V extends (r = i.ZP.Store) {
     hasFetchedSubscriptions() {
         return null != g;
     }
@@ -231,14 +233,14 @@ class F extends (r = i.ZP.Store) {
     }
     getPremiumSubscription() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return B(d.NYc.PREMIUM, (e) => !(0, s.Q0)(e.planId), e);
+        return F(d.NYc.PREMIUM, (e) => !(0, s.Q0)(e.planId), e);
     }
     getPremiumTypeSubscription() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return B(d.NYc.PREMIUM, void 0, e);
+        return F(d.NYc.PREMIUM, void 0, e);
     }
     inReverseTrial() {
-        let e = B(d.NYc.PREMIUM, void 0, !0);
+        let e = F(d.NYc.PREMIUM, void 0, !0);
         return null != e && null != e.trialId && !!f.h8.includes(e.trialId) && null == e.paymentSourceId;
     }
     getSubscriptions() {
@@ -274,16 +276,19 @@ class F extends (r = i.ZP.Store) {
     getIsFetchingSubscriptionRewardEligibility() {
         return A;
     }
+    getLastLazyPerkSync() {
+        return C;
+    }
 }
-_(F, 'displayName', 'SubscriptionStore');
-let V = new F(o.Z, {
-    BILLING_SUBSCRIPTION_FETCH_SUCCESS: P,
-    BILLING_SUBSCRIPTION_UPDATE_SUCCESS: w,
-    BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: D,
-    BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: L,
-    BILLING_SUBSCRIPTION_RESET: j,
-    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_START: x,
-    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: k,
-    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: M,
-    LOGOUT: j
+_(V, 'displayName', 'SubscriptionStore');
+let Z = new V(o.Z, {
+    BILLING_SUBSCRIPTION_FETCH_SUCCESS: R,
+    BILLING_SUBSCRIPTION_UPDATE_SUCCESS: D,
+    BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: L,
+    BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: x,
+    BILLING_SUBSCRIPTION_RESET: U,
+    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_START: k,
+    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: M,
+    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: j,
+    LOGOUT: U
 });

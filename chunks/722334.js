@@ -52,7 +52,8 @@ function _(e) {
                         })(
                             {
                                 quest_id: t,
-                                cta_name: s.jZ.VIEW_QUESTS
+                                cta_name: s.jZ.VIEW_QUESTS,
+                                is_targeted: !1
                             },
                             (0, s.mH)(c.jn.EXCLUDED_QUEST_EMBED)
                         )

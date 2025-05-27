@@ -18,11 +18,11 @@ var r = n(255367),
     E = n(283595),
     b = n(55563),
     v = n(669079),
-    O = n(63063),
-    I = n(51144),
+    I = n(63063),
+    O = n(51144),
     S = n(481153),
-    j = n(781428),
-    y = n(423527),
+    y = n(781428),
+    j = n(423527),
     N = n(981631),
     C = n(388032),
     T = n(20493);
@@ -100,7 +100,7 @@ class P extends i.PureComponent {
                     children: C.intl.string(C.t.fIv16O)
                 }),
                 (0, r.jsx)(h.zx, {
-                    onClick: () => window.open(O.Z.getArticleURL(N.BhN.GIFTING), '_blank'),
+                    onClick: () => window.open(I.Z.getArticleURL(N.BhN.GIFTING), '_blank'),
                     look: h.zx.Looks.LINK,
                     color: h.zx.Colors.LINK,
                     children: C.intl.string(C.t['/CjuXF'])
@@ -172,7 +172,7 @@ class P extends i.PureComponent {
                     : (0, r.jsx)(h.i_, {
                           className: T.marginTop20,
                           children: C.intl.format(C.t.NYM08v, {
-                              userTag: I.ZP.getUserTag(t),
+                              userTag: O.ZP.getUserTag(t),
                               onLogoutClick: this.handleLogout
                           })
                       })
@@ -192,13 +192,13 @@ class P extends i.PureComponent {
                 return c || null == e ? this.renderSpinner(C.intl.string(C.t.bYb2nZ)) : this.requiresVerification && null != e ? this.renderVerification(e) : this.renderAuthenticated(i, e);
             }
             return 'login' === this.getMode()
-                ? (0, r.jsx)(j.Z, {
+                ? (0, r.jsx)(y.Z, {
                       giftCodeSKU: t,
                       giftCode: i,
                       transitionTo: o,
                       location: s
                   })
-                : (0, r.jsx)(y.Z, {
+                : (0, r.jsx)(j.Z, {
                       giftCodeSKU: t,
                       giftCode: i,
                       transitionTo: o,

@@ -63,6 +63,10 @@ let i = {
         inlineRequire: () => n(146661).Z,
         loadAfterConnectionOpen: !0
     },
+    DesktopNotificationsManager: {
+        actions: ['POST_CONNECTION_OPEN'],
+        inlineRequire: () => n(863065).Z
+    },
     TopEmojisDataManager: {
         actions: ['EMOJI_INTERACTION_INITIATED'],
         inlineRequire: () => n(496207).Z

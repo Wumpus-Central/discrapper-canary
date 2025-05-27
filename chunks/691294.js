@@ -1,71 +1,68 @@
-e.d(i, {
-    D: () => s,
-    m: () => c
+n.d(t, {
+    D: () => u,
+    m: () => d
 });
-var n = e(960048);
-let o = 5 / 11,
-    a = 1 + 1 / 11,
-    l = 1 / 11;
-function r(t, i, e) {
-    return i.beginPath(), i.arc(e / 2, e / 2, e / 2, 0, 2 * Math.PI), i.closePath(), i.clip(), i.drawImage(t, 0, 0, e, e, 0, 0, e, e), i;
+var r = n(960048);
+let i = 5 / 11,
+    o = 1 + 1 / 11,
+    a = 1 / 11;
+function s(e, t, n) {
+    return t.beginPath(), t.arc(n / 2, n / 2, n / 2, 0, 2 * Math.PI), t.closePath(), t.clip(), t.drawImage(e, 0, 0, n, n, 0, 0, n, n), t;
 }
-function s(t) {
-    let i = new Image();
+function l(e) {
+    let t = document.createElement('canvas'),
+        n = t.getContext('2d'),
+        r = Math.min(e.width, e.height);
+    (t.width = r), (t.height = r), null != n && (n = s(e, n, r));
+    let i = t.toDataURL();
+    return t.remove(), i;
+}
+function c(e, t) {
+    let n = document.createElement('canvas'),
+        r = n.getContext('2d'),
+        l = Math.min(e.width, e.height);
+    (n.width = l * o), (n.height = l * o);
+    let c = l * i,
+        u = n.width - c;
+    null != r && (r.save(), (r = s(e, r, l)).restore(), r.beginPath(), r.moveTo(u, u), r.roundRect(u, u, c, c, a * l), r.closePath(), r.clip(), r.drawImage(t, 0, 0, t.width, t.height, u, u, c, c));
+    let d = n.toDataURL();
+    return n.remove(), d;
+}
+function u(e) {
+    let t = new Image();
     return (
-        (i.src = t),
-        (i.crossOrigin = 'anonymous'),
-        new Promise((t, e) => {
-            (i.onload = () => {
-                '' !== i.src &&
-                    t(
-                        (function (t) {
-                            let i = document.createElement('canvas'),
-                                e = i.getContext('2d'),
-                                n = Math.min(t.width, t.height);
-                            (i.width = n), (i.height = n), null != e && (e = r(t, e, n));
-                            let o = i.toDataURL();
-                            return i.remove(), o;
-                        })(i)
-                    );
+        (t.src = e),
+        (t.crossOrigin = 'anonymous'),
+        new Promise((e, n) => {
+            (t.onload = () => {
+                '' !== t.src && e(l(t));
             }),
-                (i.onerror = (t) => {
-                    n.Z.captureMessage('Failed to load notification avatar to circle crop: '.concat(t)), e(i.src);
+                (t.onerror = (e) => {
+                    r.Z.captureMessage('Failed to load notification avatar to circle crop: '.concat(e)), n(t.src);
                 });
         })
     );
 }
-function c(t, i) {
-    if (null == i) return s(t);
-    let e = new Image();
-    (e.src = t), (e.crossOrigin = 'anonymous');
-    let c = new Image();
+function d(e, t) {
+    if (null == t) return u(e);
+    let n = new Image();
+    (n.src = e), (n.crossOrigin = 'anonymous');
+    let i = new Image();
     return (
-        (c.src = i),
-        (c.crossOrigin = 'anonymous'),
-        new Promise((t, i) => {
-            (e.onload = () => {
-                '' !== e.src &&
-                    ((c.onload = () => {
-                        t(
-                            (function (t, i) {
-                                let e = document.createElement('canvas'),
-                                    n = e.getContext('2d'),
-                                    s = Math.min(t.width, t.height);
-                                (e.width = s * a), (e.height = s * a);
-                                let c = s * o,
-                                    u = e.width - c;
-                                null != n && (n.save(), (n = r(t, n, s)).restore(), n.beginPath(), n.moveTo(u, u), n.roundRect(u, u, c, c, l * s), n.closePath(), n.clip(), n.drawImage(i, 0, 0, i.width, i.height, u, u, c, c));
-                                let d = e.toDataURL();
-                                return e.remove(), d;
-                            })(e, c)
-                        );
+        (i.src = t),
+        (i.crossOrigin = 'anonymous'),
+        new Promise((e, t) => {
+            (n.onload = () => {
+                '' !== n.src &&
+                    ((i.onload = () => {
+                        e(c(n, i));
                     }),
-                    (c.onerror = (t) => {
-                        n.Z.captureMessage('Failed to load notification avatar to circle crop with secondary image: '.concat(t)), i(e.src);
+                    (i.onerror = (e) => {
+                        r.Z.captureMessage('Failed to load notification avatar to circle crop with secondary image: '.concat(e)), t(n.src);
                     }));
             }),
-                (e.onerror = (t) => {
-                    n.Z.captureMessage('Failed to load notification avatar to circle crop with secondary image: '.concat(t)), i(e.src);
+                (n.onerror = (e) => {
+                    r.Z.captureMessage('Failed to load notification avatar to circle crop with secondary image: '.concat(e)), t(n.src);
                 });
         })
     );
