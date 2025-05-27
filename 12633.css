@@ -16235,6 +16235,12 @@ div.modalHeader_c28af8 {
     width: 24px
 }
 
+.smallIcon_ac86f6 {
+    height: 18px;
+    margin-right: 10px;
+    width: 18px
+}
+
 .newCircleIcon_ac86f6 {
     filter: saturate(var(--saturation-factor, 1));
     left: 250px;
@@ -20176,9 +20182,7 @@ span.clanTag__5d473 {
 }
 
 .image__4f6e5 {
-    height: 112px;
-    margin: 14px 0;
-    width: 127px
+    width: 250px
 }
 
 .title__4f6e5 {
@@ -20187,8 +20191,8 @@ span.clanTag__5d473 {
     max-width: 250px
 }
 
-.titleNoSocialProof__4f6e5 {
-    margin-bottom: 24px
+.body__4f6e5 {
+    max-width: 380px
 }
 
 .footer__4f6e5 {
