@@ -8764,6 +8764,8 @@
   "XbwtSE": "Set system channel welcome stickers to **!!{newValue}!!**",
   "+fQAen": "Set system channel boost notifications to **!!{newValue}!!**",
   "E1fc4u": "Set system channel server setup tips to **!!{newValue}!!**",
+  "ix1dnZ": "**Disabled** the server tag",
+  "4LKpKS": "Updated server tag to **!!{newValue}!!**",
   "LjZO39": "$[**!!{user}!!**]({{userHook}}) made changes to $[**!!{target}!!**]({{targetHook}})",
   "Ehsnio": "Set the Community Server updates channel to **!!{newValue}!!**",
   "YxBKra": "**Cleared** the Community Server updates channel",
