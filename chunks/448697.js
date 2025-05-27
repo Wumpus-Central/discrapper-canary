@@ -11,7 +11,7 @@ var r = n(255367),
     _ = n(690410);
 function m() {
     let { hasActiveDownloads: e, progress: t } = (function () {
-            let e = (0, l.e7)([c.Z], () => c.Z.getOngoingDownloads()),
+            let e = (0, l.cj)([c.Z], () => c.Z.getOngoingDownloads()),
                 t = i.useRef({});
             i.useEffect(() => {
                 0 === Object.entries(e).length && (t.current = {}), Object.assign(t.current, e);
