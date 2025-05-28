@@ -1,136 +1,136 @@
-t.d(n, {
-    P: () => b,
+t.d(e, {
+    P: () => j,
     l: () => p
 }),
     t(388685);
-var i = t(255367);
+var r = t(255367);
 t(73800);
-var r = t(392711),
-    a = t.n(r),
-    l = t(442837),
-    o = t(481060),
-    d = t(984933),
-    u = t(853856),
-    s = t(117984),
-    c = t(593214),
+var i = t(392711),
+    l = t.n(i),
+    a = t(442837),
+    c = t(481060),
+    o = t(984933),
+    s = t(853856),
+    u = t(117984),
+    d = t(593214),
     f = t(362658),
     h = t(981631),
-    v = t(388032);
-function g(e, n) {
-    return e.type === h.d4z.GROUP_DM ? (n ? v.intl.string(v.t['0BWmSE']) : v.intl.string(v.t.uuVTOD)) : e.type === h.d4z.DM ? (n ? v.intl.string(v.t['2wfKGh']) : v.intl.string(v.t.wPbAsb)) : n ? v.intl.string(v.t.Bou7lZ) : v.intl.string(v.t['4wcdEx']);
+    b = t(388032);
+function O(n, e) {
+    return n.type === h.d4z.GROUP_DM ? (e ? b.intl.string(b.t['0BWmSE']) : b.intl.string(b.t.uuVTOD)) : n.type === h.d4z.DM ? (e ? b.intl.string(b.t['2wfKGh']) : b.intl.string(b.t.wPbAsb)) : e ? b.intl.string(b.t.Bou7lZ) : b.intl.string(b.t['4wcdEx']);
 }
-function p(e) {
-    let n = (0, l.e7)([d.ZP], () => d.ZP.getChannels(h.I_8))[h.d4z.GUILD_CATEGORY],
+function p(n) {
+    let e = (0, a.e7)([o.ZP], () => o.ZP.getChannels(h.I_8))[h.d4z.GUILD_CATEGORY],
         { isFavoritesPerk: t } = (0, f.z)('58e21a_1'),
-        { notifyFavoriteAdded: r } = (0, c.up)();
-    if (!(0, c.li)(e)) return null;
-    let [[u], v] = a().partition(n, (e) => 'null' === e.channel.id);
-    function p(n) {
-        r(), (0, s.kj)(e.id, n);
+        { notifyFavoriteAdded: i } = (0, d.up)();
+    if (!(0, d.li)(n)) return null;
+    let [[s], b] = l().partition(e, (n) => 'null' === n.channel.id);
+    function p(e) {
+        i(), (0, u.kj)(n.id, e);
     }
-    return 0 === v.length
-        ? (0, i.jsx)(o.sNh, {
+    return 0 === b.length
+        ? (0, r.jsx)(c.sNh, {
               id: 'favorite-channel',
-              label: g(e, !1),
+              label: O(n, !1),
               action: () => p(null)
           })
-        : (0, i.jsxs)(o.sNh, {
+        : (0, r.jsxs)(c.sNh, {
               id: 'favorite-channel',
-              label: g(e, !1),
+              label: O(n, !1),
               action: () => p(null),
               children: [
                   t &&
-                      (0, i.jsx)(o.kSQ, {
-                          children: (0, i.jsx)(
-                              o.sNh,
+                      (0, r.jsx)(c.kSQ, {
+                          children: (0, r.jsx)(
+                              c.sNh,
                               {
-                                  id: 'favorite-'.concat(u.channel.id),
-                                  label: u.channel.name,
-                                  action: () => p('null' === u.channel.id ? null : u.channel.id)
+                                  id: 'favorite-'.concat(s.channel.id),
+                                  label: s.channel.name,
+                                  action: () => p('null' === s.channel.id ? null : s.channel.id)
                               },
-                              u.channel.id
+                              s.channel.id
                           )
                       }),
-                  (0, i.jsx)(o.kSQ, {
-                      children: v.map((e) =>
-                          (0, i.jsx)(
-                              o.sNh,
+                  (0, r.jsx)(c.kSQ, {
+                      children: b.map((n) =>
+                          (0, r.jsx)(
+                              c.sNh,
                               {
-                                  id: 'favorite-'.concat(e.channel.id),
-                                  label: e.channel.name,
-                                  action: () => p(e.channel.id)
+                                  id: 'favorite-'.concat(n.channel.id),
+                                  label: n.channel.name,
+                                  action: () => p(n.channel.id)
                               },
-                              e.channel.id
+                              n.channel.id
                           )
                       )
                   })
               ]
           });
 }
-function b(e) {
-    let n = (0, l.e7)([u.Z], () => u.Z.isFavorite(e.id));
-    return __OVERLAY__ || !n
+function j(n) {
+    let e = (0, a.e7)([s.Z], () => s.Z.isFavorite(n.id));
+    return __OVERLAY__ || !e
         ? null
-        : (0, i.jsx)(o.sNh, {
+        : (0, r.jsx)(c.sNh, {
               id: 'favorite-channel',
-              label: g(e, !0),
+              label: O(n, !0),
               color: 'danger',
               action: () =>
-                  e.type === h.d4z.GUILD_CATEGORY
-                      ? (0, o.ZDy)(async () => {
-                            let { default: n } = await t.e('37720').then(t.bind(t, 357632));
+                  n.type === h.d4z.GUILD_CATEGORY
+                      ? (0, c.ZDy)(async () => {
+                            let { default: e } = await t.e('37720').then(t.bind(t, 357632));
                             return (t) => {
-                                var r, a;
-                                return (0, i.jsx)(
-                                    n,
-                                    ((r = (function (e) {
-                                        for (var n = 1; n < arguments.length; n++) {
-                                            var t = null != arguments[n] ? arguments[n] : {},
-                                                i = Object.keys(t);
+                                var i, l;
+                                return (0, r.jsx)(
+                                    e,
+                                    ((i = (function (n) {
+                                        for (var e = 1; e < arguments.length; e++) {
+                                            var t = null != arguments[e] ? arguments[e] : {},
+                                                r = Object.keys(t);
                                             'function' == typeof Object.getOwnPropertySymbols &&
-                                                (i = i.concat(
-                                                    Object.getOwnPropertySymbols(t).filter(function (e) {
-                                                        return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                                                (r = r.concat(
+                                                    Object.getOwnPropertySymbols(t).filter(function (n) {
+                                                        return Object.getOwnPropertyDescriptor(t, n).enumerable;
                                                     })
                                                 )),
-                                                i.forEach(function (n) {
-                                                    var i;
-                                                    (i = t[n]),
-                                                        n in e
-                                                            ? Object.defineProperty(e, n, {
-                                                                  value: i,
+                                                r.forEach(function (e) {
+                                                    var r;
+                                                    (r = t[e]),
+                                                        e in n
+                                                            ? Object.defineProperty(n, e, {
+                                                                  value: r,
                                                                   enumerable: !0,
                                                                   configurable: !0,
                                                                   writable: !0
                                                               })
-                                                            : (e[n] = i);
+                                                            : (n[e] = r);
                                                 });
                                         }
-                                        return e;
+                                        return n;
                                     })({}, t)),
-                                    (a = a =
+                                    (l = l =
                                         {
                                             onConfirm: () => {
-                                                t.onClose(), (0, s.oC)(e.id);
+                                                t.onClose(), (0, u.oC)(n.id);
                                             },
-                                            channel: e
+                                            channel: n
                                         }),
                                     Object.getOwnPropertyDescriptors
-                                        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
-                                        : (function (e, n) {
-                                              var t = Object.keys(e);
+                                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                        : (function (n, e) {
+                                              var t = Object.keys(n);
                                               if (Object.getOwnPropertySymbols) {
-                                                  var i = Object.getOwnPropertySymbols(e);
-                                                  t.push.apply(t, i);
+                                                  var r = Object.getOwnPropertySymbols(n);
+                                                  t.push.apply(t, r);
                                               }
                                               return t;
-                                          })(Object(a)).forEach(function (e) {
-                                              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
+                                          })(Object(l)).forEach(function (n) {
+                                              Object.defineProperty(i, n, Object.getOwnPropertyDescriptor(l, n));
                                           }),
-                                    r)
+                                    i)
                                 );
                             };
                         })
-                      : (0, s.oC)(e.id)
+                      : (0, u.oC)(n.id)
           });
 }

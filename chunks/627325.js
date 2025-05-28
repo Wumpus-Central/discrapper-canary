@@ -18,8 +18,8 @@ var r = n(255367),
     b = n(990525),
     y = n(388032),
     j = n(92609);
-let C = [51],
-    x = [y.t.OpqAoq];
+let x = [51],
+    C = [y.t.OpqAoq];
 function I(e) {
     let { columns: t, handleScroll: n, voiceListRef: i, showSectionHeaders: a = !1, query: l } = e,
         s = E(),
@@ -120,9 +120,9 @@ function I(e) {
                                     variant: 'text-sm/medium',
                                     color: 'header-muted',
                                     className: j.header,
-                                    children: y.intl.string(x[e])
+                                    children: y.intl.string(C[e])
                                 }),
-                  sectionHeaderHeight: !1 === a ? void 0 : (e) => C[e],
+                  sectionHeaderHeight: !1 === a ? void 0 : (e) => x[e],
                   rowCount: N,
                   rowHeight: 130,
                   onScroll: n,

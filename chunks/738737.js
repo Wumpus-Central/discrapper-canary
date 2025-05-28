@@ -14,8 +14,8 @@ function s(e) {
                 { STEPS: l } = await Promise.all([n.e('17938'), n.e('54433'), n.e('71533')]).then(n.bind(n, 7305));
             return (n) => {
                 var j,
-                    C,
-                    { onClose: x } = n,
+                    x,
+                    { onClose: C } = n,
                     I = (function (e, t) {
                         if (null == e) return {};
                         var n,
@@ -68,11 +68,11 @@ function s(e) {
                                     }
                                     return e;
                                 })({}, I)),
-                                (C = C =
+                                (x = x =
                                     {
                                         initialPlanId: t,
                                         onClose: (e) => {
-                                            x(), null == u || u(e);
+                                            C(), null == u || u(e);
                                         },
                                         analyticsLocations: f,
                                         analyticsObject: _,
@@ -87,7 +87,7 @@ function s(e) {
                                         reviewWarningMessage: b
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(j, Object.getOwnPropertyDescriptors(C))
+                                    ? Object.defineProperties(j, Object.getOwnPropertyDescriptors(x))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -95,8 +95,8 @@ function s(e) {
                                               n.push.apply(n, r);
                                           }
                                           return n;
-                                      })(Object(C)).forEach(function (e) {
-                                          Object.defineProperty(j, e, Object.getOwnPropertyDescriptor(C, e));
+                                      })(Object(x)).forEach(function (e) {
+                                          Object.defineProperty(j, e, Object.getOwnPropertyDescriptor(x, e));
                                       }),
                                 j)
                             )

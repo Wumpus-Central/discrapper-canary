@@ -1,23 +1,24 @@
 n.d(t, {
-    E: () => i,
-    Z: () => r
+    E: () => o,
+    Z: () => i
 }),
     n(539854);
-function r(e, t, n, r) {
+let r = {};
+function i(e, t, n) {
+    let { shouldWarnLargeObjects: i, logCallback: o } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r;
     if (e === t) return !0;
     if (void 0 === e || void 0 === t) return e === t;
-    let i = Object.keys(e),
-        o = Object.keys(t);
-    if (i.length !== o.length) return null != r && r('shallowEqual: unequal key lengths '.concat(i.length, ' !=== ').concat(o.length)), !1;
-    let a = [];
-    for (let o = 0; o < i.length; o++) {
-        let s = i[o];
-        if (e[s] !== t[s] && (null == n || !n.includes(s)))
-            if (null == r) return !1;
-            else a.push(s);
+    let a = Object.keys(e),
+        s = Object.keys(t);
+    if (a.length !== s.length) return !1;
+    let l = [];
+    for (let r = 0; r < a.length; r++) {
+        let i = a[r];
+        if (e[i] !== t[i] && (null == n || !n.includes(i))) return !1;
     }
-    return null != r && a.length > 0 && r('shallowEqual: unequal keys: '.concat(a.join(', '))), 0 === a.length;
+    return 0 === l.length;
 }
-function i(e, t) {
+function o(e, t) {
+    let { logCallback: n, shouldWarnLargeObjects: i } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r;
     return null != t && e.length === t.length && !e.some((e, n) => t[n] !== e);
 }

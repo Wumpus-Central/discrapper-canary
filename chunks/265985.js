@@ -1,6 +1,6 @@
 n.d(t, {
     h: () => j,
-    x: () => C
+    x: () => x
 });
 var r = n(255367);
 n(73800);
@@ -68,7 +68,7 @@ let j = (e) => {
             ]
         });
     },
-    C = (e) => {
+    x = (e) => {
         let { onClose: t, listing: n, guildId: i } = e,
             a = (0, o.e7)([u.Z], () => u.Z.getGuild(i), [i]),
             c = (0, p.Z)(i).filter((e) => e.roles.includes(n.role_id)),

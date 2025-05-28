@@ -5,6 +5,7 @@ n.r(
         insetBorder: 'insetBorder_ed0705',
         thumbnail: 'thumbnail_ed0705',
         filterName: 'filterName_ed0705',
+        downloadRequiredContent: 'downloadRequiredContent_ed0705',
         iconCircle: 'iconCircle_ed0705',
         lockedCircle: 'lockedCircle_ed0705',
         clockCircle: 'clockCircle_ed0705',

@@ -1,5 +1,6 @@
 e.exports = {
     filters: 'filters_c485a2',
-    filterBtn: 'filterBtn_c485a2',
-    active: 'active_c485a2'
+    moreButton: 'moreButton_c485a2',
+    moreButtonIcon: 'moreButtonIcon_c485a2',
+    tabBar: 'tabBar_c485a2'
 };

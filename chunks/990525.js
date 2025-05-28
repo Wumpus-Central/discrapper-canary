@@ -1,21 +1,24 @@
-n.d(t, { J: () => y }), n(388685);
+n.d(t, { J: () => I }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
-    l = n(692547),
-    s = n(481060),
-    c = n(457165),
-    d = n(469121),
-    u = n(626135),
-    _ = n(743498),
-    m = n(778033),
-    f = n(56848),
-    p = n(378441),
-    g = n(981631),
-    h = n(388032),
-    v = n(905490);
-function b(e) {
+    l = n(442837),
+    s = n(692547),
+    c = n(481060),
+    d = n(457165),
+    u = n(469121),
+    _ = n(626135),
+    m = n(743498),
+    f = n(778033),
+    p = n(967021),
+    g = n(709706),
+    h = n(56848),
+    v = n(378441),
+    b = n(981631),
+    y = n(388032),
+    j = n(905490);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,155 +43,192 @@ function b(e) {
     }
     return e;
 }
-let y = (e) => {
+function C(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let I = (e) => {
     let { voiceFilter: t, hasNitro: n, analyticsContext: a } = e,
-        { activeVoice: y, mostRecentlyRequestedVoiceId: j } = (0, p.o)(),
-        C = (0, f.z)(t.id),
-        x = t.id === y,
-        I = !t.available && !t.temporarilyAvailable,
-        O = t.temporarilyAvailable && !n && !x,
-        E = !x && t.id === j,
-        [N, S] = i.useState(!1);
+        { activeVoice: I, mostRecentlyRequestedVoiceId: O } = (0, v.o)(),
+        E = (0, h.z)(t.id),
+        N = t.id === I,
+        S = !t.available && !t.temporarilyAvailable,
+        P = t.temporarilyAvailable && !n && !N,
+        w = !N && t.id === O,
+        [T, L] = i.useState(!1);
     i.useEffect(() => {
-        let e = E ? setTimeout(() => S(E), 200) : void 0;
+        let e = w ? setTimeout(() => L(w), 200) : void 0;
         return () => {
-            clearTimeout(e), S(!1);
+            clearTimeout(e), L(!1);
         };
-    }, [E]);
-    let P = null == C ? void 0 : C.previewSoundURLs,
-        [w, T] = i.useState(0),
-        { isPlaying: L, playSound: k, stopSound: Z, preloadSound: A } = (0, d.Z)(null != P ? P[w] : null, { soundId: t.id }),
-        D = v[t.styleKey],
-        F = i.useCallback(() => {
-            n || !I ? ((0, _.v6)(y === t.id ? null : t.id, a), O && u.default.track(g.rMx.VOICE_FILTER_LIMITED_TIME_VOICE_SELECTED, b({ voice_filter_id: t.id }, (0, m.w)(a)))) : (0, c.i)();
-        }, [n, I, y, t.id, a, O]),
-        M = i.useCallback(() => {
-            u.default.track(g.rMx.VOICE_FILTER_PREVIEW_PLAYED, b({ voice_filter_id: t.id }, (0, m.w)(a))), k({ volume: 0.5 }), (0.25 > Math.random() || w > 0) && null != P && T((e) => (e + 1) % P.length);
-        }, [a, k, w, P, t.id]),
-        R = null != C ? h.intl.string(C.name) : '';
+    }, [w]);
+    let k = (0, p.J_)({
+            location: 'voice_filter_item',
+            autoTrackExposure: !0
+        }),
+        Z = (0, l.e7)([g.Z], () => g.Z.isVoiceFilterDownloaded(t.id), [t]),
+        D = null == E ? void 0 : E.previewSoundURLs,
+        [A, M] = i.useState(0),
+        { isPlaying: F, playSound: R, stopSound: B, preloadSound: z } = (0, u.Z)(null != D ? D[A] : null, { soundId: t.id }),
+        U = j[t.styleKey],
+        V = i.useCallback(() => {
+            n || !S ? ((0, m.v6)(I === t.id ? null : t.id, a), P && _.default.track(b.rMx.VOICE_FILTER_LIMITED_TIME_VOICE_SELECTED, x({ voice_filter_id: t.id }, (0, f.w)(a)))) : (0, d.i)();
+        }, [n, S, I, t.id, a, P]),
+        W = i.useCallback(() => {
+            _.default.track(b.rMx.VOICE_FILTER_PREVIEW_PLAYED, x({ voice_filter_id: t.id }, (0, f.w)(a))), R({ volume: 0.5 }), (0.25 > Math.random() || A > 0) && null != D && M((e) => (e + 1) % D.length);
+        }, [a, R, A, D, t.id]),
+        H = null != E ? y.intl.string(E.name) : '';
     return (0, r.jsxs)('div', {
-        className: o()(v.filter, D, {
-            [v.selected]: x,
-            [v.locked]: I && !x
+        className: o()(j.filter, U, {
+            [j.selected]: N,
+            [j.locked]: S && !N
         }),
         children: [
-            (0, r.jsxs)(s.P3F, {
-                className: v.selector,
-                onClick: F,
-                onMouseEnter: A,
-                children: [
-                    (0, r.jsxs)('div', {
-                        className: v.iconTreatmentsWrapper,
-                        children: [
-                            (0, r.jsxs)('div', {
-                                className: o()(v.profile, { [v.underDevelopment]: t.underDevelopment }),
-                                children: [
-                                    (0, r.jsx)('img', {
-                                        className: v.thumbnail,
-                                        alt: '',
-                                        src: null == C ? void 0 : C.iconURL,
-                                        draggable: !1
-                                    }),
-                                    (0, r.jsx)('div', { className: v.insetBorder })
-                                ]
-                            }),
-                            x &&
-                                (0, r.jsx)('div', {
-                                    className: v.iconCircle,
-                                    children: (0, r.jsx)(s.owK, {
-                                        size: 'md',
-                                        color: 'currentColor',
-                                        colorClass: v.checkmark,
-                                        secondaryColor: l.Z.unsafe_rawColors.WHITE_500.css
-                                    })
+            (0, r.jsx)(c.ua7, {
+                shouldShow: k && !Z,
+                'aria-label': y.intl.string(y.t.SQ7qMD),
+                text: (0, r.jsxs)('div', {
+                    className: j.downloadRequiredContent,
+                    children: [
+                        (0, r.jsx)(c.Text, {
+                            variant: 'text-sm/medium',
+                            children: y.intl.string(y.t.SQ7qMD)
+                        }),
+                        (0, r.jsx)(c.Text, {
+                            variant: 'text-xs/normal',
+                            children: y.intl.string(y.t.TbnPVl)
+                        })
+                    ]
+                }),
+                children: (e) =>
+                    (0, r.jsxs)(
+                        c.P3F,
+                        C(x({ className: j.selector }, e), {
+                            onClick: () => {
+                                var t;
+                                V(), null == e || null == (t = e.onClick) || t.call(e);
+                            },
+                            onMouseEnter: () => {
+                                var t;
+                                z(), null == e || null == (t = e.onMouseEnter) || t.call(e);
+                            },
+                            children: [
+                                (0, r.jsxs)('div', {
+                                    className: j.iconTreatmentsWrapper,
+                                    children: [
+                                        (0, r.jsxs)('div', {
+                                            className: o()(j.profile, { [j.underDevelopment]: t.underDevelopment }),
+                                            children: [
+                                                (0, r.jsx)('img', {
+                                                    className: j.thumbnail,
+                                                    alt: '',
+                                                    src: null == E ? void 0 : E.iconURL,
+                                                    draggable: !1
+                                                }),
+                                                (0, r.jsx)('div', { className: j.insetBorder })
+                                            ]
+                                        }),
+                                        N &&
+                                            (0, r.jsx)('div', {
+                                                className: j.iconCircle,
+                                                children: (0, r.jsx)(c.owK, {
+                                                    size: 'md',
+                                                    color: 'currentColor',
+                                                    colorClass: j.checkmark,
+                                                    secondaryColor: s.Z.unsafe_rawColors.WHITE_500.css
+                                                })
+                                            }),
+                                        S &&
+                                            !N &&
+                                            (0, r.jsx)('div', {
+                                                className: o()([j.iconCircle, j.lockedCircle]),
+                                                children: (0, r.jsx)(c.mBM, {
+                                                    size: 'custom',
+                                                    height: 16,
+                                                    width: 16,
+                                                    color: 'currentColor',
+                                                    colorClass: j.lockedIcon
+                                                })
+                                            }),
+                                        P &&
+                                            (0, r.jsx)('div', {
+                                                className: o()([j.iconCircle, j.iconBorder]),
+                                                children: (0, r.jsx)('div', {
+                                                    className: o()([j.clockCircle]),
+                                                    children: (0, r.jsx)(c.T39, {
+                                                        size: 'custom',
+                                                        height: 16,
+                                                        width: 16,
+                                                        color: 'currentColor',
+                                                        colorClass: j.clockIcon
+                                                    })
+                                                })
+                                            }),
+                                        T &&
+                                            (0, r.jsx)('div', {
+                                                className: j.spinnerWrapper,
+                                                children: (0, r.jsx)(c.$jN, {
+                                                    type: c.$jN.Type.CHASING_DOTS,
+                                                    animated: !0,
+                                                    className: j.spinner
+                                                })
+                                            })
+                                    ]
                                 }),
-                            I &&
-                                !x &&
-                                (0, r.jsx)('div', {
-                                    className: o()([v.iconCircle, v.lockedCircle]),
-                                    children: (0, r.jsx)(s.mBM, {
-                                        size: 'custom',
-                                        height: 16,
-                                        width: 16,
-                                        color: 'currentColor',
-                                        colorClass: v.lockedIcon
-                                    })
-                                }),
-                            O &&
-                                (0, r.jsx)('div', {
-                                    className: o()([v.iconCircle, v.iconBorder]),
-                                    children: (0, r.jsx)('div', {
-                                        className: o()([v.clockCircle]),
-                                        children: (0, r.jsx)(s.T39, {
-                                            size: 'custom',
-                                            height: 16,
-                                            width: 16,
-                                            color: 'currentColor',
-                                            colorClass: v.clockIcon
-                                        })
-                                    })
-                                }),
-                            N &&
-                                (0, r.jsx)('div', {
-                                    className: v.spinnerWrapper,
-                                    children: (0, r.jsx)(s.$jN, {
-                                        type: s.$jN.Type.CHASING_DOTS,
-                                        animated: !0,
-                                        className: v.spinner
-                                    })
+                                (0, r.jsxs)('div', {
+                                    className: j.filterName,
+                                    children: [
+                                        (0, r.jsxs)(c.Text, {
+                                            variant: 'text-xs/medium',
+                                            color: t.underDevelopment ? 'header-muted' : 'header-primary',
+                                            children: [t.underDevelopment ? '\uD83D\uDEA7 ' : '', H]
+                                        }),
+                                        k && !Z ? (0, r.jsx)(c._8t, { size: 'xxs' }) : null
+                                    ]
                                 })
-                        ]
-                    }),
-                    (0, r.jsxs)(s.Text, {
-                        className: v.filterName,
-                        variant: 'text-xs/medium',
-                        color: t.underDevelopment ? 'header-muted' : 'header-primary',
-                        children: [t.underDevelopment ? '\uD83D\uDEA7 ' : '', R]
-                    })
-                ]
+                            ]
+                        })
+                    )
             }),
-            null != P &&
-                (0, r.jsx)(s.ua7, {
-                    text: h.intl.string(L ? h.t.ItuPbm : h.t['0gtbEx']),
-                    children: (e) => {
-                        var t, n;
-                        return (0, r.jsx)(
-                            s.P3F,
-                            ((t = b({}, e)),
-                            (n = n =
-                                {
-                                    className: o()([v.hoverButtonCircle, v.previewButton], { [v.visible]: L }),
-                                    onClick: L ? Z : M,
-                                    'aria-label': h.intl.formatToPlainString(h.t.gDzvjY, { voiceFilterName: R }),
-                                    children: L
-                                        ? (0, r.jsx)(s.wNq, {
-                                              size: 'custom',
-                                              height: 16,
-                                              width: 16,
-                                              color: 'white'
-                                          })
-                                        : (0, r.jsx)(s.o1U, {
-                                              size: 'custom',
-                                              height: 16,
-                                              width: 16,
-                                              color: 'white'
-                                          })
-                                }),
-                            Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                                : (function (e, t) {
-                                      var n = Object.keys(e);
-                                      if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
-                                      }
-                                      return n;
-                                  })(Object(n)).forEach(function (e) {
-                                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                                  }),
-                            t)
-                        );
-                    }
+            null != D &&
+                (0, r.jsx)(c.ua7, {
+                    text: y.intl.string(F ? y.t.ItuPbm : y.t['0gtbEx']),
+                    children: (e) =>
+                        (0, r.jsx)(
+                            c.P3F,
+                            C(x({}, e), {
+                                className: o()([j.hoverButtonCircle, j.previewButton], { [j.visible]: F }),
+                                onClick: F ? B : W,
+                                'aria-label': y.intl.formatToPlainString(y.t.gDzvjY, { voiceFilterName: H }),
+                                children: F
+                                    ? (0, r.jsx)(c.wNq, {
+                                          size: 'custom',
+                                          height: 16,
+                                          width: 16,
+                                          color: 'white'
+                                      })
+                                    : (0, r.jsx)(c.o1U, {
+                                          size: 'custom',
+                                          height: 16,
+                                          width: 16,
+                                          color: 'white'
+                                      })
+                            })
+                        )
                 })
         ]
     });

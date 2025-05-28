@@ -360,6 +360,7 @@ let F = {
         stopVoiceFilterDownloads() {
             I.fileManager.stopVoiceFilterDownloads();
         },
+        checkVoiceFilterFilesExist: async (e) => await I.fileManager.checkVoiceFilterFilesExist(e),
         canCopyImage() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0;
             if (!h.isPlatformEmbedded) return !1;
