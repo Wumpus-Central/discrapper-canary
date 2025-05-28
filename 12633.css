@@ -38004,14 +38004,14 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     margin-bottom: 2px
 }
 
-.section_bf424d {
+:where(.section_bf424d) {
     display: flex;
     flex-direction: column;
     gap: 8px
 }
 
-.section_bf424d:empty,
-.section_bf424d:has(>.headings_bf424d:only-child) {
+:where(.section_bf424d):empty,
+:where(.section_bf424d):has(>.headings_bf424d:only-child) {
     display: none
 }
 
