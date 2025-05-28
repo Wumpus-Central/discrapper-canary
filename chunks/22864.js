@@ -1,26 +1,25 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => c }), n(388685);
 var l = n(348327),
     a = n.n(l),
-    s = n(392711),
-    r = n.n(s),
-    i = n(442837),
-    o = n(566006),
-    c = n(542578),
-    d = n(981631);
-function u(e) {
+    s = n(442837),
+    r = n(566006),
+    i = n(542578),
+    o = n(981631);
+function c(e) {
     var t, n;
-    let { channelId: l, messageId: s, reaction: u } = e,
-        m = (0, i.e7)(
-            [c.Z],
+    let { channelId: l, messageId: c, reaction: d } = e,
+        u = (0, s.e7)(
+            [i.Z],
             () => {
-                let e = c.Z.getReactions(l, s, u.emoji, d.pTL, o.O.VOTE);
-                return r().map(e, (e) => e);
+                var e;
+                let t = i.Z.getReactions(l, c, d.emoji, o.pTL, r.O.VOTE);
+                return Array.from(null != (e = null == t ? void 0 : t.values()) ? e : []);
             },
-            [l, s, u.emoji],
+            [l, c, d.emoji],
             a()
         );
     return {
-        reactors: m,
-        hasMore: (null != (n = null == (t = u.count_details) ? void 0 : t.vote) ? n : 0) > m.length
+        reactors: u,
+        hasMore: (null != (n = null == (t = d.count_details) ? void 0 : t.vote) ? n : 0) > u.length
     };
 }

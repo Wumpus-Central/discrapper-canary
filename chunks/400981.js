@@ -18,8 +18,8 @@ function f(e) {
         j = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
         m = (0, l.e7)([r.Z], () => r.Z.useReducedMotion),
         { analyticsLocations: _ } = (0, a.ZP)(),
-        L = s.EFr.SIZE_32,
-        g = (0, o.Z)(null == f ? void 0 : f.assetId, L, !m),
+        g = s.EFr.SIZE_32,
+        L = (0, o.Z)(null == f ? void 0 : f.assetId, g, !m),
         E = (0, c.Z)(),
         y = null == E ? void 0 : E.giftPurchaseConfirmation;
     return null == n || null == y
@@ -32,9 +32,9 @@ function f(e) {
                       children: [
                           (0, i.jsx)(s.Xo$, {
                               'aria-label': null == j ? void 0 : j.username,
-                              size: L,
-                              src: null == j ? void 0 : j.getAvatarURL(void 0, (0, s.pxk)(L), !m),
-                              avatarDecoration: g
+                              size: g,
+                              src: null == j ? void 0 : j.getAvatarURL(void 0, (0, s.pxk)(g), !m),
+                              avatarDecoration: L
                           }),
                           (0, i.jsx)(s.zxk, {
                               onClick: () => {

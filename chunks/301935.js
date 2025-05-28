@@ -130,18 +130,19 @@ function k(e) {
         Q = null != z && (0, T.OL)(z),
         J = p.status === A.O0b.PAST_DUE,
         { analyticsLocations: $ } = (0, m.ZP)(),
-        [ee] = (0, _.ED)({
+        [ee, et] = (0, _.ED)({
             subscriptionId: p.id,
             renewal: !0,
             analyticsLocations: $,
             analyticsLocation: u.Z.APP_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE
         }),
-        et = (0, I.p)(p.currentPeriodEnd),
-        en = 0 === E;
+        en = (null == et ? void 0 : et.code) === 100062 && null != N && null == H,
+        ei = (0, I.p)(p.currentPeriodEnd),
+        er = 0 === E;
     return (0, r.jsxs)(l.l, {
         headerClassName: R.headerWrapper,
         header:
-            !1 === en
+            !1 === er
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsxs)('div', {
@@ -175,6 +176,7 @@ function k(e) {
                                   null != K &&
                                   null != k &&
                                   null != z &&
+                                  !1 === en &&
                                   (0, r.jsx)(U, {
                                       subscription: p,
                                       app: K,
@@ -192,7 +194,12 @@ function k(e) {
             W &&
                 (0, r.jsx)(M, {
                     type: 'warning',
-                    title: Q ? P.intl.formatToPlainString(P.t.QOnM19, { subscriptionPeriodEnd: et }) : P.intl.formatToPlainString(P.t.HOaZu7, { subscriptionPeriodEnd: et })
+                    title: Q ? P.intl.formatToPlainString(P.t.QOnM19, { subscriptionPeriodEnd: ei }) : P.intl.formatToPlainString(P.t.HOaZu7, { subscriptionPeriodEnd: ei })
+                }),
+            en &&
+                (0, r.jsx)(M, {
+                    type: 'warning',
+                    title: P.intl.formatToPlainString(P.t.HOaZu7, { subscriptionPeriodEnd: ei })
                 }),
             J &&
                 (0, r.jsx)(M, {
@@ -244,7 +251,7 @@ function k(e) {
                     }),
                     (0, r.jsx)(L, {
                         isCancelled: W,
-                        subscriptionPeriodEnd: et,
+                        subscriptionPeriodEnd: ei,
                         renewalPlan: Y
                     })
                 ]
@@ -254,7 +261,7 @@ function k(e) {
                 children: [
                     (0, r.jsx)(c.vwX, { children: P.intl.string(P.t.azZaZW) }),
                     null != ee &&
-                        !(en || 2 === E) &&
+                        !(er || 2 === E) &&
                         (0, r.jsx)(x.Z, {
                             subscription: p,
                             currentInvoicePreview: ee,

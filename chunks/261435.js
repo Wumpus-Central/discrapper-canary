@@ -31,8 +31,8 @@ var i,
     T = n(158776),
     k = n(944486),
     D = n(885110),
-    R = n(246946),
-    A = n(594174),
+    A = n(246946),
+    R = n(594174),
     L = n(974180),
     M = n(808506),
     z = n(237997),
@@ -166,7 +166,7 @@ function el(e) {
 }
 class ea extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(N.Z, A.default, j.Z);
+        this.waitFor(N.Z, R.default, j.Z);
     }
     getNotifications() {
         return et;
@@ -211,7 +211,7 @@ let ec = new ea(a.Z, {
         var t, n, i;
         let { channelId: r, message: o } = e,
             l = N.Z.getChannel(r),
-            a = A.default.getUser(null == (t = o.author) ? void 0 : t.id);
+            a = R.default.getUser(null == (t = o.author) ? void 0 : t.id);
         if (null == l || null == a) return !1;
         if ((null == (n = o.activity) ? void 0 : n.type) === F.mFx.JOIN || (null == (i = o.activity) ? void 0 : i.type) === F.mFx.JOIN_REQUEST) {
             if (!(0, b.eF)(o, r, !0, !0)) return !1;
@@ -239,7 +239,7 @@ let ec = new ea(a.Z, {
             })(l, o, a);
             if (!1 !== e) return e;
         }
-        if (((!z.default.isInstanceLocked() || z.default.isPinned(F.Odu.TEXT)) && r === k.Z.getChannelId()) || j.Z.isNotificationDisabled(E.OverlayNotificationDisabledSetting.TEXT_CHAT) || R.Z.disableNotifications || !(0, b.eF)(o, r)) return !1;
+        if (((!z.default.isInstanceLocked() || z.default.isPinned(F.Odu.TEXT)) && r === k.Z.getChannelId()) || j.Z.isNotificationDisabled(E.OverlayNotificationDisabledSetting.TEXT_CHAT) || A.Z.disableNotifications || !(0, b.eF)(o, r)) return !1;
         let c = !w.Z.isSoundDisabled(L.Ay);
         eo((0, y.Z)(l, o, a, c), {
             type: 1,

@@ -124,7 +124,7 @@ function es(e, t) {
         case J.mFx.WATCH:
             return ee.intl.formatToPlainString(ee.t.BBJXVl, { name: e });
         case J.mFx.JOIN:
-            return ee.intl.string(ee.t['hC/Ze3']);
+            return ee.intl.string(ee.t.pkq6Vl);
         case J.mFx.JOIN_REQUEST:
         default:
             return ee.intl.string(ee.t.Ckxb6u);
@@ -515,7 +515,7 @@ function ep(e) {
                     case J.mFx.LISTEN:
                     case J.mFx.WATCH:
                     case J.mFx.JOIN:
-                        return ee.intl.string(ee.t.cX9uLS);
+                        return ee.intl.string(ee.t.x1UXGR);
                     case J.mFx.JOIN_REQUEST:
                     default:
                         return ed(e, t, n, r, !0);
@@ -545,7 +545,10 @@ function ep(e) {
             null != eZ
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(o.iWm, { size: 'xxs' }),
+                          (0, r.jsx)(o.iWm, {
+                              size: 'xxs',
+                              color: 'currentColor'
+                          }),
                           (0, r.jsx)(x.x3, {
                               entry: {
                                   start: eZ,

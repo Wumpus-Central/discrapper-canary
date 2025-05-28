@@ -20,7 +20,8 @@ function i(e) {
                 })
                 .map((e) => ({
                     id: e.key,
-                    useBreadcrumbLabel: e.options.useBreadcrumbLabel
+                    useBreadcrumbLabel: e.options.useBreadcrumbLabel,
+                    sectionHeaderText: e.options.sectionHeaderText
                 }))
                 .sort((e, t) => (null != i ? i.indexOf(e.id) - i.indexOf(t.id) : 0)),
             previousStepRef: s

@@ -1,11 +1,13 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(685072),
-    a = n(287734),
-    o = n(871499),
-    s = n(388032);
-function l(e, t, n) {
+    a = n(481060),
+    o = n(287734),
+    s = n(77880),
+    l = n(871499),
+    c = n(388032);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +20,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,12 +31,12 @@ function c(e) {
                 })
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,29 +48,29 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function f(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function _(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,28 +79,29 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function p(e) {
-    var { centerButton: t = !1, onClick: n, onMouseEnter: l, onMouseLeave: u } = e,
-        _ = f(e, ['centerButton', 'onClick', 'onMouseEnter', 'onMouseLeave']);
-    let p = t ? o.d : o.Z,
-        h = () => {
-            null == n || n(), a.default.disconnect();
+function m(e) {
+    var { centerButton: t = !1, onClick: n, onMouseEnter: u, onMouseLeave: f } = e,
+        h = p(e, ['centerButton', 'onClick', 'onMouseEnter', 'onMouseLeave']);
+    let m = t ? l.d : l.Z,
+        { changeLeaveCallAndActivityIcons: g } = (0, s.A)({ location: 'LeaveCallButton' }),
+        E = () => {
+            null == n || n(), o.default.disconnect();
         },
-        m = () => s.intl.string(s.t['6vrfgo']),
-        { Component: g, events: E } = (0, i.K)();
+        b = () => c.intl.string(c.t['6vrfgo']),
+        { Component: y, events: O } = (0, i.K)();
     return (0, r.jsx)(
-        p,
-        d(c({}, _), {
+        m,
+        _(d({}, h), {
             isTrayButton: !1,
-            onClick: h,
-            iconComponent: g,
+            onClick: E,
+            iconComponent: g ? a.PBZ : y,
             onMouseEnter: (e) => {
-                null == l || l(e), E.onMouseEnter();
+                null == u || u(e), O.onMouseEnter();
             },
             onMouseLeave: (e) => {
-                null == u || u(e), E.onMouseLeave();
+                null == f || f(e), O.onMouseLeave();
             },
-            label: m()
+            label: b()
         })
     );
 }

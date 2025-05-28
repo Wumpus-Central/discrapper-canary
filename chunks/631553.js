@@ -32,8 +32,8 @@ var P = n(605236),
     T = n(74299),
     k = n(989941),
     D = n(377400),
-    R = n(329557),
-    A = n(199902),
+    A = n(329557),
+    R = n(199902),
     L = n(314897),
     M = n(592125),
     z = n(430824),
@@ -174,7 +174,7 @@ class eC extends s.Component {
         _.Z.deactivateAllRegions();
     }
     componentDidMount() {
-        _.Z.startSession(), D.Z.initialize(), S.Z.initialize(), R.Z.initialize();
+        _.Z.startSession(), D.Z.initialize(), S.Z.initialize(), A.Z.initialize();
     }
     componentDidUpdate(e) {
         let { initialized: t } = this.props;
@@ -267,7 +267,7 @@ class eC extends s.Component {
         window.addEventListener('keydown', this.onKeyDownGlobal, !0), window.addEventListener('keyup', this.onKeyUpGlobal, !0);
     }
     componentWillUnmount() {
-        window.removeEventListener('resize', this.handleWindowResize), window.removeEventListener('keydown', this.onKeyDownGlobal, !0), window.removeEventListener('keyup', this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener('contextmenu', eb, !1), D.Z.terminate(), S.Z.terminate(), R.Z.terminate();
+        window.removeEventListener('resize', this.handleWindowResize), window.removeEventListener('keydown', this.onKeyDownGlobal, !0), window.removeEventListener('keyup', this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener('contextmenu', eb, !1), D.Z.terminate(), S.Z.terminate(), A.Z.terminate();
     }
     renderInvalidSizeMessage() {
         return (0, r.jsx)(I.Z, {
@@ -382,7 +382,7 @@ function ej() {
         h = (0, w.Ns)(null == u ? void 0 : u.id),
         p = (0, f.e7)([Z.Z], () => null != Z.Z.getLastFeedFetchDate(em.YN.GAME_PROFILE_FEED)),
         g = (0, f.e7)([W.Z], () => (0, T.Z)(W.Z)),
-        m = (0, f.e7)([A.Z], () => null != A.Z.getCurrentUserActiveStream()),
+        m = (0, f.e7)([R.Z], () => null != R.Z.getCurrentUserActiveStream()),
         { analyticsLocations: y } = (0, j.ZP)(C.Z.OVERLAY),
         { showKeybindIndicators: v, dismissKeybindNotification: _ } = (0, eo.K)(),
         O = (0, er.o4)('ipOverlay').overlayV3UI;

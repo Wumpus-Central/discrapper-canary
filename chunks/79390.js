@@ -179,19 +179,20 @@ function G(e) {
     }, 0);
 }
 function B(e, t) {
-    let n = {
+    var n;
+    let r = {
             id: t,
             name: '',
             animated: !1
         },
-        r = e.getChannelId(),
-        a = _.Z.getReactions(r, e.id, n, b.$J, u.O.VOTE),
-        o = f.Z.getChannel(r),
-        s = null == o || o.isPrivate() ? null : o.getGuildId();
-    return i()(a)
+        a = e.getChannelId(),
+        o = _.Z.getReactions(a, e.id, r, b.$J, u.O.VOTE),
+        s = f.Z.getChannel(a),
+        l = null == s || s.isPrivate() ? null : s.getGuildId();
+    return i()(Array.from(null != (n = null == o ? void 0 : o.values()) ? n : []))
         .reject((e) => m.Z.isBlockedOrIgnored(e.id))
         .take(b.$J)
-        .map((e) => E.ZP.getName(s, null == o ? void 0 : o.id, e))
+        .map((e) => E.ZP.getName(l, null == s ? void 0 : s.id, e))
         .value();
 }
 function F(e, t) {

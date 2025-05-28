@@ -31,7 +31,7 @@ var i = n(255367),
     T = n(647086),
     k = n(388032),
     D = n(506098);
-function R(e, t, n) {
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,7 +44,7 @@ function R(e, t, n) {
         e
     );
 }
-function A(e) {
+function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -55,7 +55,7 @@ function A(e) {
                 })
             )),
             i.forEach(function (t) {
-                R(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
@@ -165,7 +165,7 @@ class L extends r.PureComponent {
                               children: (e) =>
                                   (0, i.jsx)(
                                       I.ZP.Icon,
-                                      A(
+                                      R(
                                           {
                                               ref: this.settingsIconRef,
                                               icon: l.ewm,
@@ -184,7 +184,7 @@ class L extends r.PureComponent {
                         null != o
                             ? (0, i.jsx)(
                                   m,
-                                  ((e = A({}, s)),
+                                  ((e = R({}, s)),
                                   (t = t =
                                       {
                                           guild: o,
@@ -218,8 +218,8 @@ class L extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            R(this, 'settingsIconRef', r.createRef()),
-            R(this, 'state', {
+            A(this, 'settingsIconRef', r.createRef()),
+            A(this, 'state', {
                 controller: new s.Controller({
                     value: 1,
                     immediate: !0
@@ -228,7 +228,7 @@ class L extends r.PureComponent {
                 bannerVisible: !1,
                 communityInfoVisible: !1
             }),
-            R(this, 'handleScroll', (e) => {
+            A(this, 'handleScroll', (e) => {
                 let { scrollTop: t } = e;
                 this.setAnimatedValue(t);
             });
@@ -255,8 +255,8 @@ function M(e) {
         T = (0, o.e7)([x.Z], () => x.Z.getGuildVersion(n)),
         k = (0, o.e7)([g.Z], () => g.Z.version),
         D = (0, o.e7)([O.default], () => O.default.getGuildChangeSentinel(n)),
-        R = (0, a.QN)(null == r ? void 0 : r.id),
-        A = (0, c.gM)(null == r ? void 0 : r.id),
+        A = (0, a.QN)(null == r ? void 0 : r.id),
+        R = (0, c.gM)(null == r ? void 0 : r.id),
         M = null != (t = null == r ? void 0 : r.hasFeature(w.oNc.COMMUNITY)) && t,
         z = (0, o.e7)([S.Z], () => S.Z.getChannelId()),
         V = (0, o.e7)([E.Z], () => E.Z.desyncedVoiceStatesCount);
@@ -277,8 +277,8 @@ function M(e) {
         guildReadStateSentinel: D,
         permissionVersion: T,
         categoryCollapseVersion: k,
-        embeddedAppsByChannel: R,
-        activeEventsByChannel: A,
+        embeddedAppsByChannel: A,
+        activeEventsByChannel: R,
         showNewUnreadsBar: M,
         optInEnabled: !1
     });

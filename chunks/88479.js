@@ -1,9 +1,11 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(685072),
-    a = n(871499);
-function o(e, t, n) {
+    a = n(481060),
+    o = n(77880),
+    s = n(871499);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +18,7 @@ function o(e, t, n) {
         e
     );
 }
-function s(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -27,23 +29,23 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function l(e, t) {
+function u(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = c(e, t);
+        i = d(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function c(e, t) {
+function d(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -52,19 +54,23 @@ function c(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let u = function (e) {
+let f = function (e) {
     var { iconComponent: t } = e,
-        n = l(e, ['iconComponent']);
-    let { Component: o, events: c } = (0, i.K)();
+        n = u(e, ['iconComponent']);
+    let { changeLeaveCallAndActivityIcons: l } = (0, o.A)({ location: 'DisconnectButton' }),
+        { Component: d, events: f } = (0, i.K)();
+    function _() {
+        return null != t ? t : l ? a.PBZ : d;
+    }
     return (0, r.jsx)(
-        a.d,
-        s(
+        s.d,
+        c(
             {
                 isTrayButton: !1,
                 color: 'disconnect',
-                iconComponent: null != t ? t : o
+                iconComponent: _()
             },
-            c,
+            f,
             n
         )
     );

@@ -31,8 +31,8 @@ var i = n(255367),
     T = n(623292),
     k = n(807092),
     D = n(592125),
-    R = n(703558),
-    A = n(731290),
+    A = n(703558),
+    R = n(731290),
     L = n(430824),
     M = n(375954),
     z = n(944486),
@@ -123,7 +123,7 @@ class eo extends r.Component {
         e.channel.id !== this.props.channel.id && this.draftDidChange(this.props), (this.props.channel !== e.channel || (this.props.isTemporarilyActive && !e.isTemporarilyActive)) && this.setState({ focused: !0 });
     }
     componentWillUnmount() {
-        R.Z.removeChangeListener(this.draftDidChange), G.S.unsubscribe(Q.CkL.TEXTAREA_FOCUS, this.focusInput), G.S.unsubscribe(Q.CkL.TEXTAREA_BLUR, this.blurInput);
+        A.Z.removeChangeListener(this.draftDidChange), G.S.unsubscribe(Q.CkL.TEXTAREA_FOCUS, this.focusInput), G.S.unsubscribe(Q.CkL.TEXTAREA_BLUR, this.blurInput);
     }
     render() {
         let e = this.props,
@@ -188,7 +188,7 @@ class eo extends r.Component {
             et(this, 'draftDidChange', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : t.props,
                     { textValue: n } = t.state,
-                    i = R.Z.getDraft(e.channel.id, R.d.ChannelMessage);
+                    i = A.Z.getDraft(e.channel.id, A.d.ChannelMessage);
                 n !== i && '' === i && t.setState((0, C.eK)(i));
             }),
             et(this, 'handleTextareaKeyDown', (e) => {
@@ -203,7 +203,7 @@ class eo extends r.Component {
                 let {
                     channel: { id: i }
                 } = this.props;
-                h.Z.changeDraft(i, this.state.textValue, R.d.ChannelMessage),
+                h.Z.changeDraft(i, this.state.textValue, A.d.ChannelMessage),
                     '' !== t ? g.Z.startTyping(i) : g.Z.stopTyping(i),
                     this.setState({
                         textValue: t,
@@ -259,14 +259,14 @@ class eo extends r.Component {
                 (0, i.jsx)(j.Z, {
                     className: t,
                     channel: this.props.channel,
-                    draftType: R.d.ChannelMessage,
+                    draftType: A.d.ChannelMessage,
                     editorTextContent: this.state.textValue,
                     setValue: (e) => this.handleTextareaChange(null, e, (0, C.JM)(e)),
                     canOnlyUseTextCommands: e
                 })
             ),
-            R.Z.addChangeListener(this.draftDidChange);
-        let n = R.Z.getDraft(e.channel.id, R.d.ChannelMessage);
+            A.Z.addChangeListener(this.draftDidChange);
+        let n = A.Z.getDraft(e.channel.id, A.d.ChannelMessage);
         (this.state = ei(en({}, (0, C.eK)(n)), {
             focused: !1,
             contentWarningProps: null
@@ -509,7 +509,7 @@ function ea(e) {
         a = null != l ? (0, H.BB)(l.shortcut, !0) : ']',
         [d, u, h] = (0, c.Wu)([B.default], () => [B.default.getTextWidgetOpacity(), B.default.getActiveRegions(), !t && B.default.isPreviewingInGame()]),
         p = (0, c.e7)([L.Z], () => L.Z.getGuild(r)),
-        f = (0, c.e7)([A.Z], () => null != r && A.Z.didAgree(r)),
+        f = (0, c.e7)([R.Z], () => null != r && R.Z.didAgree(r)),
         g = null != o && o.isPrivate() ? o.getRecipientId() : null,
         m = (0, c.e7)([k.Z], () => (null != s ? k.Z.getPendingReply(s) : void 0)),
         y = (0, c.e7)([W.default], () => (null != g ? W.default.getUser(g) : null)),

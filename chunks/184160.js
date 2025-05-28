@@ -17,16 +17,16 @@ var l = n(512722),
 function j(e) {
     let { handleStepChange: t, handleClose: n } = e,
         l = (0, o.ZP)(),
-        { activeSubscription: j, selectedSkuId: m, setSelectedPlanId: _, startedPaymentFlowWithPaymentSourcesRef: L } = (0, u.JL)(),
-        { isGift: g } = (0, c.wD)(),
+        { activeSubscription: j, selectedSkuId: m, setSelectedPlanId: _, startedPaymentFlowWithPaymentSourcesRef: g } = (0, u.JL)(),
+        { isGift: L } = (0, c.wD)(),
         E = null != j ? (0, d.Af)(j) : null,
         y = null != E ? (0, d.gq)(E.planId) : null,
         S = null != E ? (0, d.Rd)(E.planId) : null,
-        Z = (0, x.Kp)({
+        v = (0, x.Kp)({
             isTrial: !1,
-            isGift: g,
+            isGift: L,
             selectedSkuId: m,
-            startedPaymentFlowWithPaymentSources: L.current
+            startedPaymentFlowWithPaymentSources: g.current
         });
     return (
         s()(null != S, 'Expected premium type'),
@@ -39,7 +39,7 @@ function j(e) {
                 children: [
                     (0, i.jsx)(a.zxk, {
                         onClick: () => {
-                            Z ? (_((0, x.nA)(m, j)), t(p.h8.REVIEW)) : t(p.h8.PLAN_SELECT);
+                            v ? (_((0, x.nA)(m, j)), t(p.h8.REVIEW)) : t(p.h8.PLAN_SELECT);
                         },
                         children: h.intl.string(h.t['3PatS0'])
                     }),

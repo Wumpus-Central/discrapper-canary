@@ -1,43 +1,43 @@
-r.d(i, { default: () => j }), r(388685);
-var s = r(255367),
-    n = r(73800),
-    t = r(392711),
-    o = r.n(t),
-    a = r(481060),
-    l = r(139387),
-    d = r(479531),
-    c = r(895924),
-    m = r(581364),
-    u = r(768581),
-    p = r(821864),
-    b = r(399860),
-    x = r(995390),
-    h = r(665578),
-    y = r(388032),
-    f = r(566670);
+o.d(i, { default: () => j }), o(388685);
+var s = o(255367),
+    a = o(73800),
+    r = o(392711),
+    t = o.n(r),
+    n = o(481060),
+    l = o(139387),
+    d = o(479531),
+    c = o(895924),
+    m = o(581364),
+    u = o(768581),
+    p = o(821864),
+    b = o(399860),
+    x = o(995390),
+    h = o(665578),
+    y = o(388032),
+    f = o(566670);
 function j(e) {
-    let { applicationIcon: i, applicationId: r, applicationName: t, command: u, guildId: j, onClose: E, transitionState: g } = e,
-        [v, w] = n.useState(null),
-        [C, P] = n.useState(!1),
-        { originalApplicationPermissions: z, originalCommandPermissions: O, editedTargetPermissions: I, hasChanges: N, selectedPermissionCount: R } = (0, x.Z)(j, r, u.id),
-        D = n.useCallback(async () => {
-            var e, i, s, n, t;
-            if (!N) return void E();
-            let a = o().difference(Object.keys(null != (s = u.permissions) ? s : {}), Object.keys(I)),
-                l = o().omit(
+    let { applicationIcon: i, applicationId: o, applicationName: r, command: u, guildId: j, onClose: E, transitionState: g } = e,
+        [v, w] = a.useState(null),
+        [C, P] = a.useState(!1),
+        { originalApplicationPermissions: z, originalCommandPermissions: N, editedTargetPermissions: O, hasChanges: R, selectedPermissionCount: I } = (0, x.Z)(j, o, u.id),
+        _ = a.useCallback(async () => {
+            var e, i, s, a, r;
+            if (!R) return void E();
+            let n = t().difference(Object.keys(null != (s = u.permissions) ? s : {}), Object.keys(O)),
+                l = t().omit(
                     (function (e) {
                         for (var i = 1; i < arguments.length; i++) {
-                            var r = null != arguments[i] ? arguments[i] : {},
-                                s = Object.keys(r);
+                            var o = null != arguments[i] ? arguments[i] : {},
+                                s = Object.keys(o);
                             'function' == typeof Object.getOwnPropertySymbols &&
                                 (s = s.concat(
-                                    Object.getOwnPropertySymbols(r).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                    Object.getOwnPropertySymbols(o).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(o, e).enumerable;
                                     })
                                 )),
                                 s.forEach(function (i) {
                                     var s;
-                                    (s = r[i]),
+                                    (s = o[i]),
                                         i in e
                                             ? Object.defineProperty(e, i, {
                                                   value: s,
@@ -49,14 +49,14 @@ function j(e) {
                                 });
                         }
                         return e;
-                    })({}, I),
-                    a
+                    })({}, O),
+                    n
                 ),
                 x = (0, m.bD)(j),
                 h = (0, b.rE)(j, c.Kw.ROLE),
                 y = (0, b.rE)(x, c.Kw.CHANNEL),
-                f = null == (n = null == (e = z[h]) ? void 0 : e.permission) || n,
-                k = null == (t = null == (i = z[y]) ? void 0 : i.permission) || t,
+                f = null == (a = null == (e = z[h]) ? void 0 : e.permission) || a,
+                k = null == (r = null == (i = z[y]) ? void 0 : i.permission) || r,
                 g = Object.values(l).map((e) => ({
                     id: e.id,
                     permission: e.permission,
@@ -67,7 +67,7 @@ function j(e) {
                 await p.U3({
                     defaultEveryoneValue: f,
                     defaultEverywhereValue: k,
-                    applicationId: r,
+                    applicationId: o,
                     commandId: u.id,
                     guildId: j,
                     permissions: g
@@ -78,36 +78,37 @@ function j(e) {
                 w(new d.Z(e));
             }
             P(!1);
-        }, [r, z, u.id, u.permissions, j, N, E, I, w, P]);
-    n.useEffect(
+        }, [o, z, u.id, u.permissions, j, R, E, O, w, P]);
+    a.useEffect(
         () => () => {
             p.Ui(u.id), l.Z.stopEditingCommandPermissions(u.id);
         },
         [u.id]
     );
-    let _ = (0, b.gw)(u.type, u.displayName);
-    return (0, s.jsxs)(a.Y0X, {
+    let D = (0, b.gw)(u.type, u.displayName);
+    return (0, s.jsxs)(n.Y0X, {
         'aria-label': y.intl.string(y.t['N+InBQ']),
-        size: a.CgR.MEDIUM,
+        size: n.CgR.MEDIUM,
         transitionState: g,
+        className: f.modalRoot,
         children: [
-            (0, s.jsxs)(a.xBx, {
+            (0, s.jsxs)(n.xBx, {
                 separator: !1,
                 className: f.modalHeader,
                 children: [
                     (0, s.jsx)(k, {
                         icon: i,
-                        id: r,
-                        name: t
+                        id: o,
+                        name: r
                     }),
                     (0, s.jsxs)('div', {
                         className: f.headerDescription,
                         children: [
-                            (0, s.jsx)(a.Text, {
+                            (0, s.jsx)(n.Text, {
                                 variant: 'text-md/semibold',
-                                children: _
+                                children: D
                             }),
-                            (0, s.jsx)(a.Text, {
+                            (0, s.jsx)(n.Text, {
                                 color: 'text-muted',
                                 variant: 'text-sm/normal',
                                 children: u.displayDescription
@@ -116,36 +117,36 @@ function j(e) {
                     })
                 ]
             }),
-            (0, s.jsxs)(a.hzk, {
+            (0, s.jsxs)(n.hzk, {
                 className: f.modalBody,
                 children: [
-                    null == v || v.hasFieldErrors() ? null : (0, s.jsx)(a.kzN, { children: v.getAnyErrorMessage() }),
+                    null == v || v.hasFieldErrors() ? null : (0, s.jsx)(n.kzN, { children: v.getAnyErrorMessage() }),
                     (0, s.jsx)(h.Z, {
-                        applicationId: r,
+                        applicationId: o,
                         commandId: u.id,
                         guildId: j,
                         inModal: !0,
                         originalApplicationPermissions: z,
-                        originalCommandPermissions: O,
-                        editedTargetPermissions: I,
-                        selectedPermissionCount: R
+                        originalCommandPermissions: N,
+                        editedTargetPermissions: O,
+                        selectedPermissionCount: I
                     })
                 ]
             }),
-            (0, s.jsxs)(a.mzw, {
+            (0, s.jsxs)(n.mzw, {
                 className: f.modalFooter,
                 children: [
-                    (0, s.jsx)(a.zxk, {
+                    (0, s.jsx)(n.zxk, {
                         type: 'submit',
                         disabled: C,
-                        onClick: D,
-                        color: !0 === N ? a.zxk.Colors.GREEN : a.zxk.Colors.PRIMARY,
+                        onClick: _,
+                        color: !0 === R ? n.zxk.Colors.GREEN : n.zxk.Colors.PRIMARY,
                         children: y.intl.string(y.t.R3BPHx)
                     }),
-                    (0, s.jsx)(a.zxk, {
+                    (0, s.jsx)(n.zxk, {
                         onClick: E,
-                        look: a.zxk.Looks.LINK,
-                        color: a.zxk.Colors.PRIMARY,
+                        look: n.zxk.Looks.LINK,
+                        color: n.zxk.Colors.PRIMARY,
                         children: y.intl.string(y.t['ETE/oK'])
                     })
                 ]
@@ -154,15 +155,15 @@ function j(e) {
     });
 }
 function k(e) {
-    let { icon: i, id: r } = e,
-        n = u.ZP.getApplicationIconURL({
-            id: r,
+    let { icon: i, id: o } = e,
+        a = u.ZP.getApplicationIconURL({
+            id: o,
             icon: i,
             size: 40
         });
-    return (0, s.jsx)(a.qEK, {
-        src: n,
-        size: a.EFr.SIZE_40,
+    return (0, s.jsx)(n.qEK, {
+        src: a,
+        size: n.EFr.SIZE_40,
         'aria-hidden': !0
     });
 }

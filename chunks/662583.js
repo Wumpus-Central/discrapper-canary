@@ -23,5 +23,8 @@ e.exports = {
     layerPreview: 'layerPreview_a35735',
     stillFramesContainer: 'stillFramesContainer_a35735',
     stillFramePreviewContainer: 'stillFramePreviewContainer_a35735',
-    stillFramePreview: 'stillFramePreview_a35735'
+    stillFramePreview: 'stillFramePreview_a35735',
+    pfxGrid: 'pfxGrid_a35735',
+    pfxListItem: 'pfxListItem_a35735',
+    pfxListItemFooter: 'pfxListItemFooter_a35735'
 };

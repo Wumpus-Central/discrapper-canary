@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -10,17 +10,18 @@ var i = n(255367),
     u = n(933557),
     h = n(984370),
     p = n(910611),
-    f = n(131704),
-    g = n(523746),
-    m = n(592125),
-    y = n(430824),
-    v = n(699516),
-    _ = n(944486),
-    O = n(707878),
-    b = n(518084),
-    x = n(388032),
-    E = n(901939);
-function S(e, t, n) {
+    f = n(77880),
+    g = n(131704),
+    m = n(523746),
+    y = n(592125),
+    v = n(430824),
+    _ = n(699516),
+    O = n(944486),
+    b = n(707878),
+    x = n(518084),
+    E = n(388032),
+    S = n(901939);
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,25 +34,25 @@ function S(e, t, n) {
         e
     );
 }
-class C extends r.Component {
+class j extends r.Component {
     componentDidUpdate() {
         this.props.locked && this.state.showOpacitySlider && this.setState({ showOpacitySlider: !1 });
     }
     renderCallButton() {
         let e,
             t,
-            { channel: n, channelHasActiveCall: r, userIsInChannelCall: s, isBlocked: o } = this.props;
-        if (!(0, f.hv)(n.type)) return null;
-        let l = a.Csw,
-            c = !1;
+            { channel: n, channelHasActiveCall: r, userIsInChannelCall: s, isBlocked: o, changeLeaveCallAndActivityIcons: l } = this.props;
+        if (!(0, g.hv)(n.type)) return null;
+        let c = a.Csw,
+            d = !1;
         return (
-            r ? (s ? ((e = x.intl.string(x.t['4ry6ys'])), (l = a.gkL)) : (e = x.intl.string(x.t['0D/6R0']))) : o ? ((e = x.intl.string(x.t.PHzjvb)), (t = a.ua7.Colors.RED), (c = !0)) : (e = x.intl.string(x.t.focH1t)),
+            r ? (s ? ((e = E.intl.string(E.t['4ry6ys'])), (c = l ? a.PBZ : a.gkL)) : (e = E.intl.string(E.t['0D/6R0']))) : o ? ((e = E.intl.string(E.t.PHzjvb)), (t = a.ua7.Colors.RED), (d = !0)) : (e = E.intl.string(E.t.focH1t)),
             (0, i.jsx)(h.Z.Icon, {
-                icon: l,
+                icon: c,
                 tooltip: e,
                 onClick: this.handleClickCall,
                 tooltipColor: t,
-                disabled: c
+                disabled: d
             })
         );
     }
@@ -59,21 +60,21 @@ class C extends r.Component {
         let { className: e, draggableClassName: t, locked: n, channel: r, channelName: s, guild: l, onMouseDown: c, onContextMenu: d, isPreviewingInGame: u, disableDragIndicator: f } = this.props,
             { showOpacitySlider: g } = this.state;
         return g && !n
-            ? (0, i.jsxs)(b.ZP.Bar, {
-                  className: E.opacityHeader,
+            ? (0, i.jsxs)(x.ZP.Bar, {
+                  className: S.opacityHeader,
                   children: [
-                      (0, i.jsx)(O.Z, {}),
+                      (0, i.jsx)(b.Z, {}),
                       (0, i.jsx)(h.Z.Icon, {
                           icon: a.Dio,
                           onClick: this.handleCloseOpacitySettings,
-                          tooltip: x.intl.string(x.t.cpT0Cg)
+                          tooltip: E.intl.string(E.t.cpT0Cg)
                       })
                   ]
               })
-            : (0, i.jsx)(b.ZP.Background, {
+            : (0, i.jsx)(x.ZP.Background, {
                   opacityOverride: n || u ? null : 1,
                   children: (0, i.jsx)('div', {
-                      className: o()(e, t, E.headerContainer),
+                      className: o()(e, t, S.headerContainer),
                       onMouseDown: c,
                       onContextMenu: d,
                       children: (0, i.jsxs)(h.Z, {
@@ -87,7 +88,7 @@ class C extends r.Component {
                                   : (0, i.jsx)(a.Vni, {
                                         size: 'custom',
                                         color: 'currentColor',
-                                        className: o()(E.dragIcon, t),
+                                        className: o()(S.dragIcon, t),
                                         width: 20,
                                         height: 20
                                     }),
@@ -103,8 +104,8 @@ class C extends r.Component {
     }
     constructor(...e) {
         super(...e),
-            S(this, 'state', { showOpacitySlider: !1 }),
-            S(this, 'handleClickCall', (e) => {
+            C(this, 'state', { showOpacitySlider: !1 }),
+            C(this, 'handleClickCall', (e) => {
                 let { channel: t, userIsInChannelCall: n, channelHasActiveCall: i } = this.props;
                 if (i) n ? d.default.selectVoiceChannel(null) : c.Z.callPrivateChannel(t.id, !1);
                 else {
@@ -112,21 +113,21 @@ class C extends r.Component {
                     c.Z.callPrivateChannel(t.id, n);
                 }
             }),
-            S(this, 'handleOpenOpacitySettings', () => {
+            C(this, 'handleOpenOpacitySettings', () => {
                 let { pinned: e } = this.props;
                 this.setState({ showOpacitySlider: !0 }), e && c.Z.setPreviewInGameMode(!0);
             }),
-            S(this, 'handleCloseOpacitySettings', () => {
+            C(this, 'handleCloseOpacitySettings', () => {
                 let { pinned: e } = this.props;
                 this.setState({ showOpacitySlider: !1 }), e && c.Z.setPreviewInGameMode(!1);
             }),
-            S(this, 'handleMouseDown', (e) => {
+            C(this, 'handleMouseDown', (e) => {
                 let { onMouseDown: t } = this.props;
                 null != t && t(e);
             }),
-            S(this, 'renderWidgetButtons', () => {
+            C(this, 'renderWidgetButtons', () => {
                 let { locked: e, handlePin: t, pinned: n } = this.props,
-                    s = n ? x.intl.string(x.t.cSu80t) : x.intl.string(x.t.cM8Vnp);
+                    s = n ? E.intl.string(E.t.cSu80t) : E.intl.string(E.t.cM8Vnp);
                 return e
                     ? null
                     : (0, i.jsxs)(r.Fragment, {
@@ -135,7 +136,7 @@ class C extends r.Component {
                               n
                                   ? (0, i.jsx)(h.Z.Icon, {
                                         icon: a._S3,
-                                        tooltip: x.intl.string(x.t.OVovCQ),
+                                        tooltip: E.intl.string(E.t.OVovCQ),
                                         onClick: this.handleOpenOpacitySettings
                                     })
                                   : null,
@@ -150,7 +151,7 @@ class C extends r.Component {
             });
     }
 }
-function j(e) {
+function Z(e) {
     var { channel: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -171,16 +172,17 @@ function j(e) {
             }
             return r;
         })(e, ['channel']);
-    let r = (0, l.e7)([_.Z, m.Z], () => {
-            let e = _.Z.getVoiceChannelId();
-            return m.Z.getChannel(e);
+    let r = (0, l.e7)([O.Z, y.Z], () => {
+            let e = O.Z.getVoiceChannelId();
+            return y.Z.getChannel(e);
         }),
-        s = (0, l.e7)([y.Z], () => y.Z.getGuild(t.guild_id)),
-        o = (0, l.e7)([g.Z], () => g.Z.isCallActive(t.id)),
+        s = (0, l.e7)([v.Z], () => v.Z.getGuild(t.guild_id)),
+        o = (0, l.e7)([m.Z], () => m.Z.isCallActive(t.id)),
         a = (0, u.ZP)(t),
-        c = (0, l.e7)([v.Z], () => !!t.isDM() && null != t.getRecipientId() && v.Z.isBlocked(t.getRecipientId()));
+        c = (0, l.e7)([_.Z], () => !!t.isDM() && null != t.getRecipientId() && _.Z.isBlocked(t.getRecipientId())),
+        { changeLeaveCallAndActivityIcons: d } = (0, f.A)({ location: 'TextWidgetHeader' });
     return (0, i.jsx)(
-        C,
+        j,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -192,7 +194,7 @@ function j(e) {
                         })
                     )),
                     i.forEach(function (t) {
-                        S(e, t, n[t]);
+                        C(e, t, n[t]);
                     });
             }
             return e;
@@ -203,7 +205,8 @@ function j(e) {
                 guild: s,
                 channelHasActiveCall: o,
                 userIsInChannelCall: null != r && r.id === t.id,
-                isBlocked: c
+                isBlocked: c,
+                changeLeaveCallAndActivityIcons: d
             },
             n
         )
