@@ -1,5 +1,6 @@
 e.exports = {
     pictureInPicture: 'pictureInPicture__6341f',
+    dragging: 'dragging__6341f',
     pictureInPictureWindow: 'pictureInPictureWindow__6341f',
     borderRadius: 'borderRadius__6341f',
     hidden: 'hidden__6341f',

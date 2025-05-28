@@ -24,7 +24,8 @@ function f(e) {
           ? (0, o.jsx)(a.Z, {
                 user: t,
                 guildId: u,
-                channelId: f
+                channelId: f,
+                onClose: p
             })
           : r === d.oh.MUTUAL_GUILDS
             ? (0, o.jsx)(s.Z, {

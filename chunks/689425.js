@@ -100,6 +100,7 @@ class _ extends (r = a.PureComponent) {
                 u(
                     {
                         pointerEvents: e ? 'none' : 'auto',
+                        cursor: e ? 'grabbing' : 'grab',
                         transform: [
                             {
                                 translateX: t.x.interpolate({
