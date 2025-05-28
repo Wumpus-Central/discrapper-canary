@@ -1,0 +1,1 @@
+i.exports = JSON.parse('{"MkgMBw":"Etkinlik paylaşmak için çevrim içi ol","Poezn5":"Çevrim İçi Ol","qKDqen":"Etkinlik paylaşmak için çevrim içi ol","jfDsyM":"Sınırlı Paylaşım","TvK8dH":[[1,"numTruncated"]," Tane Daha Göster"],"a3AofX":"Durumunu çevrim içi yapar"}');

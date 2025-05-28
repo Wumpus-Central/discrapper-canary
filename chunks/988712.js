@@ -1,1 +1,0 @@
-e.exports = JSON.parse('{"MkgMBw":"Přejdi online a\xA0sdílej aktivitu","Poezn5":"Přejít online","qKDqen":"Přejdi online a\xA0sdílej aktivitu","jfDsyM":"Omezené sdílení","TvK8dH":["Zobrazit ",[1,"numTruncated"]," k\xA0tomu"],"a3AofX":"Nastaví stav Online"}');

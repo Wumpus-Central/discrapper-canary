@@ -1,0 +1,1 @@
+e.exports = JSON.parse('{"MkgMBw":"Va en ligne pour partager ton Activité","Poezn5":"Va en ligne","qKDqen":"Va en ligne pour partager ton Activité","jfDsyM":"Partage limité","TvK8dH":["Afficher ",[1,"numTruncated"]," de plus"],"a3AofX":"Définit le statut sur \xAB\xA0En ligne\xA0\xBB"}');

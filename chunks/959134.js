@@ -1,1 +1,0 @@
-i.exports = JSON.parse('{"MkgMBw":"Vai online per condividere l\'attività","Poezn5":"Vai online","qKDqen":"Vai online per condividere l\'attività","jfDsyM":"Condivisione limitata","TvK8dH":["Mostra ancora ",[1,"numTruncated"]],"a3AofX":"Imposta lo stato online"}');

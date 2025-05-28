@@ -1,0 +1,1 @@
+e.exports = JSON.parse('{"MkgMBw":"Logg på for å dele aktivitet","Poezn5":"Logg på","qKDqen":"Logg på for å dele aktivitet","jfDsyM":"Begrenset deling","TvK8dH":["Vis ",[1,"numTruncated"]," flere"],"a3AofX":"Setter status til pålogget"}');

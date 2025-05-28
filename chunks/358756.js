@@ -1,1 +1,0 @@
-i.exports = JSON.parse('{"MkgMBw":"Siirry online-tilaan, jos haluat jakaa toimintasi tilatietonasi","Poezn5":"Siirry online","qKDqen":"Siirry online-tilaan, jos haluat jakaa toimintasi tilatietonasi","jfDsyM":"Rajoitettu jako","TvK8dH":["Näytä ",[1,"numTruncated"]," lisää"],"a3AofX":"Asettaa tilaksesi online"}');

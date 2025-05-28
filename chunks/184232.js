@@ -1,0 +1,1 @@
+s.exports = JSON.parse('{"MkgMBw":"Aby udostępnić aktywność, ustaw status \u201EOnline\u201D","Poezn5":"Ustaw status \u201EOnline\u201D","qKDqen":"Aby udostępnić aktywność, ustaw status \u201EOnline\u201D","jfDsyM":"Ograniczone udostępnianie","TvK8dH":["Pokaż ",[1,"numTruncated"]," więcej"],"a3AofX":"Ustawia status \u201EOnline\u201D"}');

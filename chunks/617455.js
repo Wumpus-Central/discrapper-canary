@@ -1,0 +1,1 @@
+a.exports = JSON.parse('{"MkgMBw":"Apareça online para compartilhar a atividade","Poezn5":"Aparecer online","qKDqen":"Apareça online para compartilhar a atividade","jfDsyM":"Compartilhamento limitado","TvK8dH":["Mostrar mais ",[1,"numTruncated"]],"a3AofX":"Muda o status para online"}');
