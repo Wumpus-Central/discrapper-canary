@@ -1,7 +1,7 @@
 n.d(t, { Z: () => R });
 var r = n(255367),
     i = n(73800),
-    l = n(714673),
+    l = n(240894),
     a = n(597312),
     o = n(481060),
     s = n(727637),
@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(510659),
     _ = n(892001),
     x = n(113557),
-    C = n(867176),
-    y = n(451834),
+    y = n(867176),
+    C = n(451834),
     v = n(502762),
     j = n(952124),
     O = n(544989),
@@ -56,8 +56,8 @@ function w(e) {
 }
 function R(e) {
     let { user: t, currentUser: n, channel: R } = e,
-        M = __OVERLAY__,
-        k = (0, g.ZP)(t.id),
+        k = __OVERLAY__,
+        M = (0, g.ZP)(t.id),
         L = (0, c.ZP)(),
         D = i.useRef(Date.now()),
         { analyticsLocations: U } = (0, d.ZP)(u.Z.USER_PROFILE_SIDEBAR),
@@ -90,15 +90,15 @@ function R(e) {
         children: (0, r.jsx)(f.Mt, {
             value: B,
             openedAt: D.current,
-            fetchStartedAt: null == k ? void 0 : k.fetchStartedAt,
-            fetchEndedAt: null == k ? void 0 : k.fetchEndedAt,
-            isLoaded: null == k ? void 0 : k.isLoaded,
+            fetchStartedAt: null == M ? void 0 : M.fetchStartedAt,
+            fetchEndedAt: null == M ? void 0 : M.fetchEndedAt,
+            isLoaded: null == M ? void 0 : M.isLoaded,
             children: (0, r.jsx)(b.NJ, {
                 value: H,
                 children: (0, r.jsxs)(v.Z, {
                     ref: G,
                     user: t,
-                    displayProfile: k,
+                    displayProfile: M,
                     themeType: N.lY.SIDEBAR,
                     themeOverride: L,
                     children: [
@@ -127,24 +127,24 @@ function R(e) {
                                 (0, r.jsxs)('header', {
                                     className: A.header,
                                     children: [
-                                        (0, r.jsx)(C.Z, {
+                                        (0, r.jsx)(y.Z, {
                                             user: t,
-                                            displayProfile: k,
+                                            displayProfile: M,
                                             themeType: N.lY.SIDEBAR,
                                             animateOnHover: !F,
                                             className: A.banner
                                         }),
-                                        (0, r.jsx)(y.Z, {
+                                        (0, r.jsx)(C.Z, {
                                             userId: t.id,
                                             className: A.toast
                                         }),
                                         (0, r.jsx)(x.Z, {
                                             location: 'UserProfileSiebar',
                                             user: t,
-                                            displayProfile: k,
+                                            displayProfile: M,
                                             channelId: R.id,
                                             themeType: N.lY.SIDEBAR,
-                                            onOpenProfile: M ? void 0 : z
+                                            onOpenProfile: k ? void 0 : z
                                         }),
                                         (0, r.jsx)(P.Z, {
                                             location: 'UserProfileSiebar',
@@ -159,10 +159,10 @@ function R(e) {
                                 (0, r.jsx)(S.Z, {
                                     user: t,
                                     currentUser: n,
-                                    displayProfile: k,
+                                    displayProfile: M,
                                     channel: R,
                                     isHovering: null == H.interactionType && F,
-                                    onOpenProfile: M ? void 0 : z
+                                    onOpenProfile: k ? void 0 : z
                                 }),
                                 (0, r.jsx)(Z.Z, {
                                     user: t,
@@ -170,7 +170,7 @@ function R(e) {
                                 })
                             ]
                         }),
-                        !M &&
+                        !k &&
                             (0, r.jsx)('footer', {
                                 className: A.footer,
                                 children: (0, r.jsx)(o.zxk, {
@@ -193,9 +193,9 @@ function R(e) {
                                     children: T.intl.string(T.t['+Xp3ho'])
                                 })
                             }),
-                        (null == k ? void 0 : k.profileEffectId) != null &&
+                        (null == M ? void 0 : M.profileEffectId) != null &&
                             (0, r.jsx)(h.Z, {
-                                profileEffectId: null == k ? void 0 : k.profileEffectId,
+                                profileEffectId: null == M ? void 0 : M.profileEffectId,
                                 isHovering: F
                             })
                     ]

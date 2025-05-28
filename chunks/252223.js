@@ -1,28 +1,34 @@
-n.d(t, { Z: () => C }), n(781311), n(539854);
+n.d(t, { Z: () => F }), n(539854), n(781311);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(392711),
     l = n(793030),
     c = n(442837),
-    u = n(833664),
-    d = n(545957),
-    f = n(359588),
-    _ = n(74340),
-    p = n(19391),
-    h = n(699516),
-    m = n(584973),
-    g = n(303524),
-    E = n(170187),
-    b = n(329520),
-    y = n(868781),
-    O = n(767431),
-    v = n(122943),
-    I = n(556638),
-    S = n(981631),
-    T = n(843280);
-function A(e, t, n) {
+    u = n(481060),
+    d = n(833664),
+    f = n(545957),
+    _ = n(933557),
+    p = n(359588),
+    h = n(74340),
+    m = n(19391),
+    g = n(482798),
+    E = n(687516),
+    b = n(699516),
+    y = n(802529),
+    O = n(11133),
+    v = n(584973),
+    I = n(303524),
+    S = n(170187),
+    T = n(329520),
+    A = n(868781),
+    N = n(122943),
+    C = n(556638),
+    P = n(981631),
+    R = n(388032),
+    w = n(843280);
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +41,7 @@ function A(e, t, n) {
         e
     );
 }
-function N(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,30 +52,95 @@ function N(e) {
                 })
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
 }
-function C(e) {
-    let { user: t, activities: n, applicationStream: o, voiceChannel: A, textClassName: C, iconClassName: P, textSize: R = 'xs', animateEmoji: w = !0, animateText: D = !1, disableTextScroll: L = !1, hasQuest: x = !1, hideEmoji: k = !1, hideTooltip: M = !1 } = e;
-    (0, d.Z)(null == t ? void 0 : t.id);
-    let j = (null == o ? void 0 : o.discoverable) !== !1 ? o : null,
-        U = (0, f.Z)({ location: 'ActivityStatus' }),
-        G = i.useMemo(() => {
+function x(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function k(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : x(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function M(e) {
+    let t = (null == e ? void 0 : e.name) === '' ? null : null == e ? void 0 : e.name;
+    return null != t ? R.intl.formatToPlainString(R.t['0wJXSk'], { name: t }) : R.intl.string(R.t.eXan7O);
+}
+function j(e, t) {
+    return (e.isDM() || e.isGroupDM() ? R.intl.string(R.t['9FaEzs']) : e.isGuildStageVoice() ? R.intl.string(R.t.QygGCA) : R.intl.string(R.t.msxteH)) + (null != t ? ' ('.concat(t, ')') : '');
+}
+function U(e) {
+    let { streamActivity: t, otherActivities: n, voiceActivityChannel: r } = e,
+        i = [],
+        { descriptiveTextEnabled: a } = (0, y.f)({ location: 'StackedActivityStatus' }),
+        { enableTopNavButton: o } = (0, g.Cq)({ location: 'StackedActivityStatus' }),
+        s = (0, _.ZP)(r),
+        l = a || o;
+    return (
+        null != t && i.push(M(t)),
+        n.forEach((e) => {
+            let { tooltip: t } = (0, O.Z)(e, l);
+            null != t && i.push(t);
+        }),
+        null == t && null != r && i.push(j(r, s)),
+        i.length > 0 ? i.join(', ') : ''
+    );
+}
+function G(e) {
+    let { textVariant: t, className: n, hasCustomStatusText: i, totalActivityCount: a } = e,
+        o = a - 1;
+    return (0, r.jsx)(l.xv, {
+        variant: t,
+        className: n,
+        color: i ? 'text-positive' : 'none',
+        children: i ? '+'.concat(o) : '(+'.concat(o, ')')
+    });
+}
+function B(e) {
+    let { textVariant: t, className: n } = e;
+    return (0, r.jsx)(l.xv, {
+        variant: t,
+        className: o()(w.dot, n),
+        children: C.l
+    });
+}
+function F(e) {
+    let { user: t, activities: n, applicationStream: a, voiceChannel: _, textClassName: g, iconClassName: y, textSize: O = 'xs', animateEmoji: R = !0, hasQuest: D = !1, hideEmoji: x = !1, hideTooltip: M = !1 } = e;
+    (0, f.Z)(null == t ? void 0 : t.id);
+    let j = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
+        F = (0, E.Cf)(j),
+        V = i.useMemo(() => {
             var e, t;
             let r =
                 null == n
                     ? void 0
                     : n.find((e) => {
                           let { type: t } = e;
-                          return t === S.IIU.CUSTOM_STATUS;
+                          return t === P.IIU.CUSTOM_STATUS;
                       });
             if (null == r) return null;
             let i = null != (t = null == (e = r.state) ? void 0 : e.trim()) ? t : null;
             return null == ('' === i ? null : i) && null == r.emoji ? null : r;
         }, [n]),
-        B = i.useMemo(() => {
+        Z = i.useMemo(() => {
             var e;
             return (0, s.uniqWith)(
                 null !=
@@ -77,134 +148,170 @@ function C(e) {
                         null == n
                             ? void 0
                             : n.filter((e) => {
-                                  let { type: t } = e;
-                                  return t !== S.IIU.CUSTOM_STATUS && t !== S.IIU.HANG_STATUS;
+                                  let { type: t, name: n } = e;
+                                  return t !== P.IIU.CUSTOM_STATUS && t !== P.IIU.HANG_STATUS && n !== (null == F ? void 0 : F.name);
                               }))
                     ? e
                     : [],
                 (e, t) => (null != e.application_id && null != t.application_id && e.application_id === t.application_id) || (null != e.name && null != t.name && e.name === t.name)
             );
-        }, [n]),
-        F = (null == t ? void 0 : t.bot) === !0;
-    if ((0, c.e7)([h.Z], () => h.Z.isBlockedOrIgnored(null == t ? void 0 : t.id))) return null;
-    let V = U && null != G ? (0, _.Z)(G) : null,
-        Z = (null == G ? void 0 : G.state) != null || null != V,
-        H = null != j,
-        Y = !H && null != A,
-        W = B.length + (H || Y ? 1 : 0),
-        K = W > 1,
-        z = M || !L,
-        q = () =>
-            (0, r.jsx)(l.xv, {
-                variant: 'text-'.concat(R, '/normal'),
-                className: a()(T.dot, C),
-                children: I.l
-            }),
-        Q = () => {
+        }, [n, null == F ? void 0 : F.name]),
+        H = null == n ? void 0 : n.find((e) => e.name === (null == F ? void 0 : F.name)),
+        Y = (null == t ? void 0 : t.bot) === !0,
+        W = (0, c.e7)([b.Z], () => b.Z.isBlockedOrIgnored(null == t ? void 0 : t.id)),
+        K = (0, p.Z)({ location: 'ActivityStatus' }) && null != V ? (0, h.Z)(V) : null,
+        z = (null == V ? void 0 : V.state) != null || null != K,
+        q = null != j,
+        Q = !q && null != _,
+        X = Z.length + (q || Q ? 1 : 0),
+        J = X > 1,
+        $ = (null == V ? void 0 : V.state) != null && 'xs' === O,
+        ee = U({
+            streamActivity: H,
+            otherActivities: Z,
+            voiceActivityChannel: Q ? _ : null
+        });
+    if (W) return null;
+    let et = function () {
+            let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+                t = !0 === e || M;
+            if (null != j)
+                return (0, r.jsx)(T.Z, {
+                    stream: j,
+                    game: H,
+                    textVariant: 'text-'.concat(O, '/medium'),
+                    textClassName: g,
+                    iconClassName: y,
+                    hideText: $,
+                    hideIcon: Y,
+                    hideTooltip: t
+                });
+            let n = null == Z ? void 0 : Z[0];
+            return null != n
+                ? (0, r.jsx)(A.Z, {
+                      activity: n,
+                      textVariant: 'text-'.concat(O, '/medium'),
+                      textClassName: g,
+                      iconClassName: y,
+                      hideText: $,
+                      hideIcon: Y,
+                      hideTooltip: t
+                  })
+                : null != _
+                  ? (0, r.jsx)(N.Z, {
+                        channel: _,
+                        textVariant: 'text-'.concat(O, '/medium'),
+                        textClassName: g,
+                        iconClassName: y,
+                        hideText: $,
+                        hideTooltip: t
+                    })
+                  : null;
+        },
+        en = () => {
             let e = [],
                 t = {
-                    textVariant: 'text-'.concat(R, '/medium'),
-                    textClassName: C,
-                    iconClassName: P,
-                    hideTooltip: z,
-                    hideIcon: F,
-                    hideText: Z,
+                    textVariant: 'text-sm/medium',
+                    hideTooltip: !0,
+                    hideIcon: !1,
+                    hideText: !1,
                     canTruncate: !1
                 };
             return (
                 null != j &&
                     e.push(
                         (0, r.jsx)(
-                            b.Z,
-                            N(
+                            T.Z,
+                            L(
                                 {
                                     stream: j,
-                                    game: null == n ? void 0 : n.find(u.Z)
+                                    game: null == n ? void 0 : n.find(d.Z)
                                 },
                                 t
-                            )
+                            ),
+                            'stream'
                         )
                     ),
-                B.forEach((n) => {
-                    e.push((0, r.jsx)(y.Z, N({ activity: n }, t)));
+                Z.forEach((n, i) => {
+                    e.push((0, r.jsx)(A.Z, L({ activity: n }, t), 'activity-'.concat(i)));
                 }),
-                Y && e.push((0, r.jsx)(v.Z, N({ channel: A }, t))),
+                Q && e.push((0, r.jsx)(N.Z, k(L({ channel: _ }, t), { showChannelName: !0 }), 'voice')),
                 e
             );
         },
-        X = () => {
-            let e = Q();
-            return 0 === e.length
+        er = () =>
+            0 === X
                 ? null
-                : K && Z && !F
-                  ? (0, r.jsxs)(r.Fragment, {
-                        children: [
-                            e[0],
-                            (0, r.jsxs)(l.xv, {
-                                variant: 'text-'.concat(R, '/medium'),
-                                className: C,
-                                color: 'text-positive',
-                                children: ['(+', W - 1, ')']
-                            })
-                        ]
+                : J && !Y
+                  ? (0, r.jsx)(u.ua7, {
+                        tooltipContentClassName: o()(w.container, w.activitiesTooltip),
+                        delay: C.X,
+                        text: en(),
+                        'aria-label': ee,
+                        children: (e) =>
+                            (0, r.jsxs)(
+                                'div',
+                                k(L({ className: w.activityContainer }, e), {
+                                    children: [
+                                        et(!0),
+                                        (0, r.jsx)(G, {
+                                            textVariant: 'text-'.concat(O, '/medium'),
+                                            className: g,
+                                            hasCustomStatusText: z,
+                                            totalActivityCount: X
+                                        })
+                                    ]
+                                })
+                            )
                     })
-                  : K && !F
-                    ? e.map((e, t) =>
-                          (0, r.jsxs)(
-                              i.Fragment,
-                              {
-                                  children: [0 !== t && q(), e]
-                              },
-                              t
-                          )
-                      )
-                    : e[0];
-        },
-        J = () => {
-            if (null == G) return null;
-            let e = G.emoji,
-                t = G.state,
-                n = null != V ? (0, p.Z)(V) : null;
+                  : et(),
+        ei = () => {
+            if (null == V) return null;
+            let e = V.emoji,
+                t = V.state,
+                n = null != K ? (0, m.Z)(K) : null;
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     null != n &&
                         (0, r.jsx)(l.xv, {
-                            variant: 'text-'.concat(R, '/medium'),
-                            className: a()(C, T.customStatusLabel),
+                            variant: 'text-'.concat(O, '/medium'),
+                            className: o()(g, w.customStatusLabel),
                             color: 'none',
                             children: ''.concat(n, ': ')
                         }),
                     null != e &&
-                        !k &&
-                        (0, r.jsx)(m.Z, {
+                        !x &&
+                        (0, r.jsx)(v.Z, {
                             emoji: e,
-                            animate: w,
-                            hideTooltip: z,
-                            className: P
+                            animate: R,
+                            hideTooltip: M,
+                            className: y
                         }),
                     null != t &&
-                        (0, r.jsx)(E.Z, {
-                            variant: 'text-'.concat(R, '/medium'),
-                            className: C,
-                            hideTooltip: z,
-                            canTruncate: !1,
+                        (0, r.jsx)(S.Z, {
+                            variant: 'text-'.concat(O, '/medium'),
+                            className: g,
+                            hideTooltip: M,
                             children: t
                         })
                 ]
             });
-        },
-        $ = () =>
-            (0, r.jsxs)('div', {
-                className: a()(T.container, {
-                    [T.textXs]: 'xs' === R,
-                    [T.textSm]: 'sm' === R
+        };
+    return (0, r.jsxs)('div', {
+        className: o()(w.container, {
+            [w.textXs]: 'xs' === O,
+            [w.textSm]: 'sm' === O
+        }),
+        children: [
+            er(),
+            null != V &&
+                X > 0 &&
+                (0, r.jsx)(B, {
+                    textVariant: 'text-'.concat(O, '/normal'),
+                    className: g
                 }),
-                children: [X(), null != G && W > 0 && q(), J(), x && (0, r.jsx)(g.Z, {})]
-            });
-    return L
-        ? $()
-        : (0, r.jsx)(O.Z, {
-              shouldAnimate: D,
-              children: $()
-          });
+            ei(),
+            D && (0, r.jsx)(I.Z, {})
+        ]
+    });
 }

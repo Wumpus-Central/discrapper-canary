@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(872810),
-    a = n(451467),
+    a = n(872810),
+    o = n(451467),
     s = n(592125),
     l = n(430824),
     c = n(131951),
@@ -78,7 +78,7 @@ function g(e, t, _) {
     else {
         var h;
         let n = s.Z.getChannel(t),
-            r = (0, a.Z)(f.tI.PRESET_CUSTOM, f.LY.RESOLUTION_1080, f.ws.FPS_30, u.default.getCurrentUser(), null == (h = l.Z.getGuild(e)) ? void 0 : h.premiumTier, n)
+            r = (0, o.Z)(f.tI.PRESET_CUSTOM, f.LY.RESOLUTION_1080, f.ws.FPS_30, u.default.getCurrentUser(), null == (h = l.Z.getGuild(e)) ? void 0 : h.premiumTier, n)
                 ? {
                       width: 1920,
                       height: 1080
@@ -90,7 +90,7 @@ function g(e, t, _) {
         c.Z.getMediaEngine()
             .getDesktopSource(r, !0)
             .then((n) => {
-                (0, o.WH)(e, t, {
+                (0, a.WH)(e, t, {
                     pid: null,
                     sourceId: n,
                     sourceName: null

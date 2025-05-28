@@ -1,6 +1,6 @@
 n.d(t, { Z: () => c }), n(388685), n(467055);
-var r,
-    i = n(442837),
+var i,
+    r = n(442837),
     l = n(570140);
 function a(e, t, n) {
     return (
@@ -16,7 +16,7 @@ function a(e, t, n) {
     );
 }
 let o = { reportedMessages: {} };
-class s extends (r = i.ZP.PersistedStore) {
+class s extends (i = r.ZP.PersistedStore) {
     initialize(e) {
         null != e &&
             (o.reportedMessages = Object.fromEntries(
@@ -33,8 +33,8 @@ class s extends (r = i.ZP.PersistedStore) {
         return o.reportedMessages;
     }
     hasReportedMessage(e, t) {
-        var n, r;
-        return null != (r = null == (n = o.reportedMessages[e]) ? void 0 : n.has(t)) && r;
+        var n, i;
+        return null != (i = null == (n = o.reportedMessages[e]) ? void 0 : n.has(t)) && i;
     }
 }
 a(s, 'displayName', 'ReportToModStore'),

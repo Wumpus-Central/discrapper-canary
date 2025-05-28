@@ -20,8 +20,8 @@ var r = n(255367),
     b = n(358221),
     _ = n(414910),
     x = n(909820),
-    C = n(493010),
-    y = n(71127),
+    y = n(493010),
+    C = n(71127),
     v = n(185935),
     j = n(522651),
     O = n(540059),
@@ -35,8 +35,8 @@ var r = n(255367),
     A = n(800965),
     w = n(107169),
     R = n(891551),
-    M = n(314897),
-    k = n(979696),
+    k = n(314897),
+    M = n(979696),
     L = n(430824),
     D = n(496675),
     U = n(944486),
@@ -100,21 +100,21 @@ function eu(e) {
         { parentAnalyticsLocation: u } = (0, g.ZP)(),
         d = t.getGuildId(),
         p = (0, s.e7)([U.Z], () => U.Z.getMostRecentSelectedTextChannelId(d), [d]),
-        h = M.default.getId(),
+        h = k.default.getId(),
         f = !(0, s.e7)([b.Z], () => b.Z.isFullscreenInContext(n)) && (!B.isPlatformEmbedded || (B.isPlatformEmbedded && G.ZP.supportsFeature(et.eRX.POPOUT_WINDOWS))),
         m = null != c && c.type !== en.fO.ACTIVITY && c.user.id !== h,
         x = i.useMemo(() => {
             var e;
             return null != (e = null == a ? void 0 : a.window) ? e : window;
         }, [a]),
-        C = (0, $.Z)({
+        y = (0, $.Z)({
             channel: t,
             appContext: n,
             popoutOpen: l,
             popoutWindow: a,
             currentWindow: x
         }),
-        y = n === et.IlC.POPOUT && B.isPlatformEmbedded && G.ZP.supportsFeature(et.eRX.POPOUT_WINDOWS);
+        C = n === et.IlC.POPOUT && B.isPlatformEmbedded && G.ZP.supportsFeature(et.eRX.POPOUT_WINDOWS);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             m
@@ -126,7 +126,7 @@ function eu(e) {
                       location: u
                   })
                 : null,
-            y
+            C
                 ? (0, r.jsx)(w.Z, {
                       className: ei.rightTrayIcon,
                       popoutWindowAlwaysOnTop: o,
@@ -145,7 +145,7 @@ function eu(e) {
                       }
                   })
                 : null,
-            C
+            y
         ]
     });
 }
@@ -171,20 +171,20 @@ function ed(e) {
 function ep(e) {
     var t, n;
     let l,
-        { channel: c, toggleRequestToSpeakSidebar: d, showRequestToSpeakSidebar: p, popoutWindow: h, popoutWindowAlwaysOnTop: _, popoutOpen: C, chatOpen: y, idleProps: v } = e,
+        { channel: c, toggleRequestToSpeakSidebar: d, showRequestToSpeakSidebar: p, popoutWindow: h, popoutWindowAlwaysOnTop: _, popoutOpen: y, chatOpen: C, idleProps: v } = e,
         { analyticsLocations: j } = (0, g.ZP)(m.Z.VOICE_CONTROL_TRAY),
         E = (0, f.bp)(),
         I = (0, s.e7)([U.Z], () => U.Z.getVoiceChannelId() === c.id, [c.id]),
         P = (0, s.e7)([D.Z], () => D.Z.can(et.Plq.CONNECT, c)),
         S = (0, H.w8)(c.id, V.pV.SPEAKER),
         Z = (0, s.e7)([b.Z], () => b.Z.getSelectedParticipant(c.id)),
-        A = C && E !== et.IlC.POPOUT,
+        A = y && E !== et.IlC.POPOUT,
         w = (0, O.Q3)('StageChannelCallContent'),
-        [R, M] = i.useState(0),
+        [R, k] = i.useState(0),
         L = (0, u._q$)('StageChannelCall'),
         { isOnStartStageScreen: B } = (0, W.ZP)();
     (0, W.MV)(c);
-    let G = (0, s.e7)([k.Z], () => k.Z.getToastsEnabled(c.id)),
+    let G = (0, s.e7)([M.Z], () => M.Z.getToastsEnabled(c.id)),
         z = (0, ee.Z)(c) ? (null != Z ? '84px' : '124px') : null != Z ? '0px' : '48px';
     return (
         L && B && (z = '0px'),
@@ -200,7 +200,7 @@ function ep(e) {
                     channel: c,
                     onScroll: (e) => {
                         let { scrollTop: t } = e.target;
-                        (0, o.debounce)(() => M(t), 1000, { leading: !0 })();
+                        (0, o.debounce)(() => k(t), 1000, { leading: !0 })();
                     }
                 })
               : (0, r.jsx)(q.Z, {
@@ -241,7 +241,7 @@ function ep(e) {
                                   children: (0, r.jsx)(eu, {
                                       channel: c,
                                       appContext: E,
-                                      popoutOpen: C,
+                                      popoutOpen: y,
                                       popoutWindow: h,
                                       popoutWindowAlwaysOnTop: _,
                                       selectedParticipant: Z
@@ -256,7 +256,7 @@ function ep(e) {
                             channel: c
                         }),
                     renderChatToasts: () =>
-                        !G || y || A
+                        !G || C || A
                             ? null
                             : (0, r.jsx)(x.ZP, {
                                   children: (0, r.jsx)(N.Z, {
@@ -317,8 +317,8 @@ function eh(e) {
             c.K.set(ea, Date.now()));
     });
     let { width: w = 0, ref: R } = (0, p.ZP)(),
-        M = w - 550,
-        k = !O || (O && P === et.IlC.POPOUT);
+        k = w - 550,
+        M = !O || (O && P === et.IlC.POPOUT);
     return (0, r.jsx)(g.Gt, {
         value: E,
         children: (0, r.jsxs)(x.B2, {
@@ -362,18 +362,18 @@ function eh(e) {
                             className: ei.channelChatWrapper,
                             children: [
                                 S &&
-                                    k &&
-                                    (0, r.jsx)(C.Z, {
+                                    M &&
+                                    (0, r.jsx)(y.Z, {
                                         channel: t,
                                         guild: T,
-                                        maxWidth: M
+                                        maxWidth: k
                                     }),
                                 N &&
                                     A &&
-                                    k &&
-                                    (0, r.jsx)(y.Z, {
+                                    M &&
+                                    (0, r.jsx)(C.Z, {
                                         channel: t,
-                                        maxWidth: M
+                                        maxWidth: k
                                     })
                             ]
                         })

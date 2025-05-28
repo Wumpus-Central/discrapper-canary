@@ -40,13 +40,13 @@ function C() {
             setSearchBarState: (e) => f.Z.setState({ searchBarState: e })
         }),
         G = d.Z.useField('fetchedQuery'),
-        B = i.useCallback(
+        V = i.useCallback(
             (e) => {
                 T(e), w && x();
             },
             [w, x, T]
         ),
-        V = i.useMemo(
+        B = i.useMemo(
             () =>
                 w
                     ? S.filter((e) => {
@@ -87,9 +87,9 @@ function C() {
                         !w &&
                             (0, r.jsx)(c.Z, {
                                 className: U,
-                                tabs: V,
+                                tabs: B,
                                 selectedTab: w ? null : N,
-                                onTabSelect: B,
+                                onTabSelect: V,
                                 onAvailableWidthChange: D
                             }),
                         w &&

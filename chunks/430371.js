@@ -3,7 +3,7 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     a = n.n(l),
-    o = n(714673),
+    o = n(240894),
     s = n(481060),
     c = n(110924),
     u = n(988980),
@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(111248),
     _ = n(312703),
     x = n(796638),
-    C = n(981631),
-    y = n(354459),
+    y = n(981631),
+    C = n(354459),
     v = n(363987),
     j = n(999976);
 function O(e) {
@@ -68,7 +68,7 @@ let I = 16 / 9,
 function S(e) {
     var t;
     let n,
-        { onSelectParticipant: l, onContextMenuParticipant: S, onFullscreenParticipant: Z, participants: N, filteredParticipants: T, popoutWindow: A, inCall: w, channel: R, selectedParticipant: M, showParticipants: k = !0, className: L, width: D, height: U, layout: B, idle: G } = e,
+        { onSelectParticipant: l, onContextMenuParticipant: S, onFullscreenParticipant: Z, participants: N, filteredParticipants: T, popoutWindow: A, inCall: w, channel: R, selectedParticipant: k, showParticipants: M = !0, className: L, width: D, height: U, layout: B, idle: G } = e,
         F = null != A,
         H = h.Z.getVideoComponent(),
         V = p.default.getId(),
@@ -76,16 +76,16 @@ function S(e) {
         Y = (0, c.Z)(z),
         [q, K] = i.useState(!0),
         [X, Q] = i.useState(!1),
-        J = M.type === y.fO.ACTIVITY,
-        $ = (0, u.Z)(J ? M.applicationId : void 0),
-        ee = !J && null != M.streamId,
+        J = k.type === C.fO.ACTIVITY,
+        $ = (0, u.Z)(J ? k.applicationId : void 0),
+        ee = !J && null != k.streamId,
         et = U <= 2 * P + 144,
-        en = k && !et,
+        en = M && !et,
         er = (0, c.Z)(en),
-        ei = B === C.AEg.MINIMUM || B === C.AEg.NORMAL,
+        ei = B === y.AEg.MINIMUM || B === y.AEg.NORMAL,
         el = !et && (!ei || J),
         ea = (0, m.Z)(el, 100),
-        eo = (null != (t = (0, c.Z)(M.id)) ? t : M.id) !== M.id,
+        eo = (null != (t = (0, c.Z)(k.id)) ? t : k.id) !== k.id,
         es = 0;
     (J || en) && (es += 72), J && !en && (el ? (es += 48) : (es += 8)), en && (es += 0.5 * P + 8);
     let ec = i.useMemo(() => (J && $ ? D / (U - 2 * es) : ee && null != z && z.width > 0 && z.height > 0 ? z.width / z.height : I), [ee, z, J, D, U, es, $]),
@@ -110,9 +110,9 @@ function S(e) {
                 delay: eh || !en ? 0 : 100,
                 config: E(O({}, o.config.stiff), { clamp: !0 }),
                 onStart: () => Q(!0),
-                onChange: () => f.S.dispatch(C.CkL.REMEASURE_TARGET),
+                onChange: () => f.S.dispatch(y.CkL.REMEASURE_TARGET),
                 onRest: () => {
-                    Q(!1), f.S.dispatch(C.CkL.REMEASURE_TARGET);
+                    Q(!1), f.S.dispatch(y.CkL.REMEASURE_TARGET);
                 }
             },
             em
@@ -138,8 +138,8 @@ function S(e) {
             },
             em
         ),
-        eC = (0, s.Yzy)(
-            M,
+        ey = (0, s.Yzy)(
+            k,
             {
                 keys: (e) => (null == e ? void 0 : e.id),
                 config: E(O({}, o.config.stiff), { clamp: !0 }),
@@ -150,10 +150,10 @@ function S(e) {
             },
             em
         ),
-        ey = i.useCallback((e) => {
+        eC = i.useCallback((e) => {
             W(e), K(!1);
         }, []),
-        ev = en ? [] : (0, _.n3)(N, M, V),
+        ev = en ? [] : (0, _.n3)(N, k, V),
         { visibleParticipants: ej, participantTileWidth: eO } = (0, x.ZB)(D, T);
     return (0, r.jsxs)('div', {
         className: a()(j.root, v.flexCenter, L),
@@ -172,7 +172,7 @@ function S(e) {
                                 children: (0, r.jsx)('div', {
                                     className: v.videoSizer,
                                     style: { aspectRatio: ec },
-                                    children: eC((e, t, n) => {
+                                    children: ey((e, t, n) => {
                                         let { key: i } = n;
                                         return null != t
                                             ? (0, r.jsx)(
@@ -191,7 +191,7 @@ function S(e) {
                                                           onClick: l,
                                                           onDoubleClick: Z,
                                                           onContextMenu: S,
-                                                          onVideoResize: ey,
+                                                          onVideoResize: eC,
                                                           inCall: w,
                                                           inPopout: F
                                                       })
@@ -208,7 +208,7 @@ function S(e) {
                                       style: { bottom: ex.value },
                                       children: (0, r.jsx)(d.Z, {
                                           channelId: R.id,
-                                          isParticipantsOpen: k,
+                                          isParticipantsOpen: M,
                                           isVertical: !0
                                       })
                                   })
@@ -229,10 +229,10 @@ function S(e) {
                             onDoubleClick: Z,
                             participants: ej,
                             participantTileWidth: eO,
-                            selectedParticipantId: M.id,
+                            selectedParticipantId: k.id,
                             inCall: w,
                             popoutWindow: A,
-                            paused: X || !k
+                            paused: X || !M
                         })
                     })
                 ]

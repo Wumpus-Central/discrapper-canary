@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(470956),
     _ = n(430824),
     x = n(496675),
-    C = n(434488),
-    y = n(27457),
+    y = n(434488),
+    C = n(27457),
     v = n(251564),
     j = n(695492),
     O = n(981631),
@@ -27,8 +27,8 @@ function I(e) {
         A = (0, c.bp)() === O.IlC.POPOUT,
         w = (0, o.e7)([_.Z], () => _.Z.getGuild(S.guild_id), [S.guild_id]),
         { dismissedActivityEntryPointTileChannel: R } = (0, v.d)(),
-        M = (0, o.e7)([h.Z], () => h.Z.getUserParticipantCount(S.id), [S]),
-        k = (0, b.bt)(S.id, t),
+        k = (0, o.e7)([h.Z], () => h.Z.getUserParticipantCount(S.id), [S]),
+        M = (0, b.bt)(S.id, t),
         L = i.useCallback(() => {
             (0, a.j)(() => {
                 v.d.setState({ dismissedActivityEntryPointTileChannel: S.id });
@@ -48,10 +48,10 @@ function I(e) {
         F = (0, f.wE)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
         H = (0, d.KF)(S.id) !== d.jy.CAN_LAUNCH,
         V = null != R && R === S.id,
-        z = k.map(
+        z = M.map(
             (e) => (t) =>
                 (0, r.jsx)(
-                    y.ZP,
+                    C.ZP,
                     {
                         participant: e,
                         channel: S,
@@ -82,19 +82,19 @@ function I(e) {
     ),
         null != w &&
             !U &&
-            (!(M >= 2) || !G || H || F || V
+            (!(k >= 2) || !G || H || F || V
                 ? B &&
-                  1 === M &&
+                  1 === k &&
                   D &&
                   (G && !H
                       ? z.push((e) =>
-                            (0, r.jsx)(C.h, {
+                            (0, r.jsx)(y.h, {
                                 channel: S,
                                 guild: w,
                                 width: e,
                                 inPopout: A,
                                 handleClose: L,
-                                userParticipantCount: M
+                                userParticipantCount: k
                             })
                         )
                       : z.push((e) =>
@@ -106,21 +106,21 @@ function I(e) {
                             })
                         ))
                 : z.push((e) =>
-                      (0, r.jsx)(C.h, {
+                      (0, r.jsx)(y.h, {
                           channel: S,
                           guild: w,
                           width: e,
                           inPopout: A,
                           handleClose: L,
-                          userParticipantCount: M
+                          userParticipantCount: k
                       })
                   ));
     let W = i.useCallback(
         (e) => {
             var t, n;
-            return null != (n = null == (t = k[e]) ? void 0 : t.id) ? n : 'empty-tile';
+            return null != (n = null == (t = M[e]) ? void 0 : t.id) ? n : 'empty-tile';
         },
-        [k]
+        [M]
     );
     return (0, r.jsx)(g.Z, {
         className: Z,

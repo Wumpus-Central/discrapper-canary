@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j }), n(388685), n(539854), n(35282);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(392711),
     l = n.n(s),
     c = n(218887),
@@ -199,12 +199,12 @@ class j extends i.Component {
         return e && !n ? P.intl.string(P.t.IYKTTU) : t;
     }
     render() {
-        var e, t, n, i, o, s;
+        var e, t, n, i, a, s;
         let { textValue: l, richValue: c, disabled: u, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, fontSize: E, useSlate: b, spellcheckEnabled: O, useNewSlashCommands: S, canOnlyUseTextCommands: N, className: P, id: w, required: L, maxCharacterCount: k, allowNewLines: j, 'aria-describedby': U, 'aria-labelledby': G, accessibilityLabel: B } = this.props,
             { submitting: F, popup: V } = this.state,
             Z = {
                 channel: m,
-                className: a()(P, R.textArea, {
+                className: o()(P, R.textArea, {
                     [R.textAreaSlate]: b,
                     [R.textAreaDisabled]: u || F
                 }),
@@ -228,7 +228,7 @@ class j extends i.Component {
                 onResize: p,
                 onKeyDown: _,
                 onSubmit: h,
-                textAreaPaddingClassName: a()(M[E], {
+                textAreaPaddingClassName: o()(M[E], {
                     [R.textAreaWithoutAttachmentButton]: g !== v.Ie.NORMAL && g !== v.Ie.OVERLAY && g !== v.Ie.THREAD_CREATION && g !== v.Ie.SIDEBAR,
                     [R.textAreaForPostCreation]: g === v.Ie.CREATE_FORUM_POST,
                     [R.textAreaCustomGift]: g === v.Ie.CUSTOM_GIFT,
@@ -239,7 +239,7 @@ class j extends i.Component {
                 useNewSlashCommands: S,
                 disableAutoFocus: f.tq || (null != (n = g.disableAutoFocus) && n),
                 disableEnterToSubmit: null != (i = null == (e = g.submit) ? void 0 : e.disableEnterToSubmit) && i,
-                'aria-controls': null != (o = V.id) ? o : void 0,
+                'aria-controls': null != (a = V.id) ? a : void 0,
                 'aria-haspopup': 'listbox',
                 'aria-expanded': null !== V.id || void 0,
                 'aria-activedescendant': null != (s = V.activeDescendant) ? s : void 0,
@@ -345,26 +345,26 @@ class j extends i.Component {
                 null == t || t(e), n && this.setState({ focused: !1 });
             }),
             w(this, 'handlePaste', (e) => {
-                let { channel: t, canPasteFiles: n, uploadPromptCharacterCount: r, promptToUpload: i, maxCharacterCount: o, type: a } = this.props;
+                let { channel: t, canPasteFiles: n, uploadPromptCharacterCount: r, promptToUpload: i, maxCharacterCount: a, type: o } = this.props;
                 if (null == i || (!t.isPrivate() && !n) || (t.isPrivate() && t.isManaged())) return !1;
                 let s = (e, n) => {
-                        var r, o;
+                        var r, a;
                         let s = g.Z.getActiveCommand(t.id);
                         if (null == s)
-                            return i(e, t, a.drafts.type, {
+                            return i(e, t, o.drafts.type, {
                                 requireConfirm: !0,
                                 showLargeMessageDialog: n
                             });
-                        let l = null != (r = a.drafts.commandType) ? r : a.drafts.type,
+                        let l = null != (r = o.drafts.commandType) ? r : o.drafts.type,
                             c = null,
                             u = g.Z.getActiveOption(t.id);
                         null !=
                             (c =
                                 (null == u ? void 0 : u.type) === h.jw.ATTACHMENT
                                     ? u
-                                    : null == (o = s.options)
+                                    : null == (a = s.options)
                                       ? void 0
-                                      : o.find((e) => {
+                                      : a.find((e) => {
                                             if (e.type === h.jw.ATTACHMENT) return null == b.Z.getUpload(t.id, e.name, l);
                                         })) &&
                             p.Z.setFile({
@@ -378,8 +378,8 @@ class j extends i.Component {
                                 }
                             });
                     },
-                    l = null != r ? r : o,
-                    { files: c } = U(e.clipboardData, a.uploadLongMessages ? l : null);
+                    l = null != r ? r : a,
+                    { files: c } = U(e.clipboardData, o.uploadLongMessages ? l : null);
                 return (
                     k(
                         'onPaste',
@@ -419,19 +419,19 @@ function U(e, t) {
     let n = [],
         r = [],
         i = null,
-        o = null;
+        a = null;
     for (let t of e.items)
         if ('file' === t.kind) {
             let e = t.getAsFile();
             if (null == e) continue;
             null != e.path && e.path.length > 0 ? n.push(e) : r.push(e);
-        } else 'string' === t.kind && ('text/plain' === t.type && null == i ? (i = t) : 'text/html' === t.type && null == o && (o = t));
+        } else 'string' === t.kind && ('text/plain' === t.type && null == i ? (i = t) : 'text/html' === t.type && null == a && (a = t));
     if (n.length > 0) return { files: n };
     if (r.length > 0) {
-        if (1 === r.length && 'image/png' === r[0].type && null != o) {
-            var a;
+        if (1 === r.length && 'image/png' === r[0].type && null != a) {
+            var o;
             let t = r[0],
-                n = null != (a = G(e.getData(o.type))) ? a : t.name;
+                n = null != (o = G(e.getData(a.type))) ? o : t.name;
             return { files: [(0, O.dp)(t, n, t.type)] };
         }
         return { files: r };

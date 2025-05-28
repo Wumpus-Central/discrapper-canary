@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(906732),
-    a = n(222062),
+    a = n(906732),
+    o = n(222062),
     s = n(867176),
     l = n(654904),
     c = n(486324),
@@ -12,10 +12,10 @@ var i = n(481060),
     f = n(83561);
 function _(e) {
     let { user: t, displayProfile: n, guildId: _, canUsePremiumCustomization: p, pendingBanner: h, pendingAccentColor: m, isTryItOutFlow: g, disabledInputs: E, onUpsellClick: b } = e,
-        { newestAnalyticsLocation: y } = (0, o.ZP)(),
+        { newestAnalyticsLocation: y } = (0, a.ZP)(),
         O = p || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1,
         v = O ? i.vdY : i.SrA,
-        I = (0, a.M)(O),
+        I = (0, o.M)(O),
         S = () => {
             if (!O && !I) {
                 null == b || b();

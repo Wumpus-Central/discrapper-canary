@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(931619),
+    a = n(570140),
+    o = n(931619),
     s = n(981631);
 function l(e, t, n) {
     return (
@@ -26,7 +26,7 @@ function f(e) {
 }
 class _ extends (r = i.ZP.Store) {
     initialize() {
-        a.Z.getNetworkInformation().then(f), a.Z.addChangeCallback(f);
+        o.Z.getNetworkInformation().then(f), o.Z.addChangeCallback(f);
     }
     getType() {
         return c;
@@ -39,5 +39,5 @@ class _ extends (r = i.ZP.Store) {
     }
 }
 l(_, 'displayName', 'NetworkStore');
-let p = new _(o.Z, {}),
+let p = new _(a.Z, {}),
     h = p;

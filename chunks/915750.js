@@ -10,8 +10,8 @@ n.d(t, {
     n(415506);
 var r = n(255367),
     i = n(73800),
-    o = n(772848),
-    a = n(286379),
+    a = n(772848),
+    o = n(286379),
     s = n(442837),
     l = n(493773),
     c = n(110924),
@@ -209,7 +209,7 @@ class C {
                     }),
                     (0, h.a)('QuestImpressionTracker') &&
                         u.Z.increment({
-                            name: a.V.QUEST_CONTENT_IMPRESSION,
+                            name: o.V.QUEST_CONTENT_IMPRESSION,
                             tags: ['quest_content:'.concat((0, d._b)(this.questContent))]
                         }),
                     (this.isRunning = !0);
@@ -218,7 +218,7 @@ class C {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
                 e && O.beat(!0), (O.lastBeatTime = void 0), clearInterval(O.heartbeatTimeoutId), clearTimeout(O.minViewTimeReachedTimeoutId), (O.isRunning = !1);
             }),
-            (this.id = (0, o.Z)()),
+            (this.id = (0, a.Z)()),
             (this.adDecisionData = null != n ? n : g.Jp),
             (this.questContent = t),
             (this.questContentPosition = s),
@@ -255,7 +255,7 @@ function L() {
     return null == (e = D()) ? void 0 : e.getId();
 }
 function x(e) {
-    let { visible: t, visibleChanged: n, focused: o, reference: a, focusedChanged: c } = e,
+    let { visible: t, visibleChanged: n, focused: a, reference: o, focusedChanged: c } = e,
         u = R(e.questOrQuests),
         d = (0, f.KZ)(e.questContent),
         p = i.useRef(null),
@@ -265,10 +265,10 @@ function x(e) {
             null != p.current && p.current.stop();
         }),
         i.useEffect(() => {
-            let r = o && t,
+            let r = a && t,
                 i = (n || c || u) && r,
-                a = ((n || c) && !r) || u;
-            (i || a) && null != p.current && p.current.stop(),
+                o = ((n || c) && !r) || u;
+            (i || o) && null != p.current && p.current.stop(),
                 i &&
                     ((p.current = new C({
                         adDecisionData: d,
@@ -282,10 +282,10 @@ function x(e) {
                         isQuestEnrollmentBlocked: h
                     })),
                     p.current.start());
-        }, [o, t, c, n, e.questOrQuests, e.questContent, e.questContentPosition, e.questContentRowIndex, e.trackGuildAndChannelMetadata, u, e.minViewTimeSeconds, d, h]),
+        }, [a, t, c, n, e.questOrQuests, e.questContent, e.questContentPosition, e.questContentRowIndex, e.trackGuildAndChannelMetadata, u, e.minViewTimeSeconds, d, h]),
         (0, r.jsx)(w.Provider, {
             value: p,
-            children: e.children(a, p)
+            children: e.children(o, p)
         })
     );
 }

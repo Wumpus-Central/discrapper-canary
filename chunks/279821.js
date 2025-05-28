@@ -11,7 +11,7 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { d: () => o }), n(415506);
+n.d(t, { d: () => a }), n(415506);
 class i {
     raise(e) {
         throw e;
@@ -80,4 +80,4 @@ class i {
         r(this, 'callback', null);
     }
 }
-let o = new i();
+let a = new i();

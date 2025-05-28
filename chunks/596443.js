@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(430824),
     _ = n(496675),
     x = n(594174),
-    C = n(233608),
-    y = n(370595),
+    y = n(233608),
+    C = n(370595),
     v = n(351127),
     j = n(981631),
     O = n(388032),
@@ -25,16 +25,16 @@ var r = n(255367),
     I = n(444021);
 function P(e) {
     var t, n, l, o;
-    let { permission: s, roleIds: g, guild: x, specMap: C, categoryTitle: y, userId: E } = e,
+    let { permission: s, roleIds: g, guild: x, specMap: y, categoryTitle: C, userId: E } = e,
         P = (0, c.e7)([b.Z], () => b.Z.getRoles(x.id)),
         S = j.Plq[s],
-        Z = null != (l = null == (t = C[S.toString()]) ? void 0 : t.title) ? l : (0, m.wt)(S),
-        N = null != (o = null == (n = C[S.toString()]) ? void 0 : n.description) ? o : '',
+        Z = null != (l = null == (t = y[S.toString()]) ? void 0 : t.title) ? l : (0, m.wt)(S),
+        N = null != (o = null == (n = y[S.toString()]) ? void 0 : n.description) ? o : '',
         T = v._o.has(S),
         A = v.Qn.includes(s),
         w = g.length,
         R = (0, c.e7)([_.Z], () => _.Z.can(j.Plq.MANAGE_ROLES, x), [x]),
-        M = i.useCallback(
+        k = i.useCallback(
             async (e) => {
                 R && (await f.Z.open(x.id, j.pNK.ROLES), await f.Z.selectRole(e));
             },
@@ -54,14 +54,14 @@ function P(e) {
                                 color: 'header-primary',
                                 children: Z
                             }),
-                            null != y &&
+                            null != C &&
                                 (0, r.jsxs)('div', {
                                     className: I.permissionItemSubheader,
                                     children: [
                                         (0, r.jsx)(u.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'header-muted',
-                                            children: y
+                                            children: C
                                         }),
                                         T &&
                                             (0, r.jsxs)(r.Fragment, {
@@ -200,7 +200,7 @@ function P(e) {
                               u.P3F,
                               {
                                   className: a()(I.roleTooltipItem, { [I.editable]: R && !(0, d.pM)(x.id, e) }),
-                                  onClick: () => M(e),
+                                  onClick: () => k(e),
                                   children: (0, r.jsx)(h.Z, {
                                       role: P[e],
                                       guildId: x.id,
@@ -224,19 +224,19 @@ function Z(e) {
         f = (0, c.e7)([g.ZP], () => g.ZP.getMember(n, t), [n, t]),
         _ = (0, v.B2)(t, n, v.pd),
         Z = Object.keys(_).length,
-        N = i.useMemo(() => (null != h ? C.Z.getGuildPermissionSpecMap(h) : null), [h]),
-        T = i.useMemo(() => (null != h ? C.Z.generateGuildPermissionSpec(h) : null), [h]),
+        N = i.useMemo(() => (null != h ? y.Z.getGuildPermissionSpecMap(h) : null), [h]),
+        T = i.useMemo(() => (null != h ? y.Z.generateGuildPermissionSpec(h) : null), [h]),
         [A, w] = i.useState(''),
-        [R, M] = i.useState(''),
-        k = i.useMemo(() => s()(M, 300), []),
+        [R, k] = i.useState(''),
+        M = i.useMemo(() => s()(k, 300), []),
         L = i.useCallback(
             (e) => {
-                w(e), k(e);
+                w(e), M(e);
             },
-            [k]
+            [M]
         ),
         D = i.useCallback(() => {
-            w(''), M('');
+            w(''), k('');
         }, []),
         U = i.useMemo(() => {
             if (null == h || null == N || null == f) return null;
@@ -294,7 +294,7 @@ function Z(e) {
         : (0, r.jsxs)('div', {
               className: a()(E.container, o),
               children: [
-                  (0, r.jsx)(y.Z, {
+                  (0, r.jsx)(C.Z, {
                       guildId: n,
                       userId: t,
                       onNavigate: d

@@ -1,8 +1,8 @@
 n.d(t, { o: () => h }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(657707),
-    a = n(442837),
+    a = n(657707),
+    o = n(442837),
     s = n(481060),
     l = n(153867),
     c = n(210887),
@@ -17,15 +17,15 @@ function h() {
             {
                 name: '',
                 value: _.BR.DARK,
-                icon: o.Z6G
+                icon: a.Z6G
             },
             {
                 name: '',
                 value: _.BR.LIGHT,
-                icon: o.chG
+                icon: a.chG
             }
         ],
-        [h, m, g] = (0, a.Wu)([c.Z, u.ZP, d.Z], () => [c.Z.theme, null == d.Z.gradientPreset, u.ZP.useSystemTheme === f.KW.ON]);
+        [h, m, g] = (0, o.Wu)([c.Z, u.ZP, d.Z], () => [c.Z.theme, null == d.Z.gradientPreset, u.ZP.useSystemTheme === f.KW.ON]);
     return (0, r.jsx)('div', {
         className: p.themeSelector,
         children: (0, r.jsx)(s.sY7, {

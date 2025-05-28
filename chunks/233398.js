@@ -1,7 +1,7 @@
-n.d(t, { I: () => o });
+n.d(t, { I: () => a });
 var r = n(381814),
     i = n(731965);
-let o = (0, r.U)((e) => ({
+let a = (0, r.U)((e) => ({
     colors: [],
     chassisMixAmount: 0,
     gradientAngle: 0,

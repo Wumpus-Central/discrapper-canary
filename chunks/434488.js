@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(895924),
     _ = n(540059),
     x = n(605236),
-    C = n(340541),
-    y = n(448239),
+    y = n(340541),
+    C = n(448239),
     v = n(626135),
     j = n(607187),
     O = n(981631),
@@ -183,7 +183,7 @@ function w(e) {
     }, []);
     let { analyticsLocations: u } = (0, g.ZP)(m.Z.VC_TILE_ACTIVITY_INVITE),
         p = (0, _.Q3)('SingleUserTile'),
-        { entrypoints: h } = (0, C._k)({ location: 'single_user_tile' }),
+        { entrypoints: h } = (0, y._k)({ location: 'single_user_tile' }),
         { enabled: b } = d.c.useExperiment({ location: 'SingleUserTile' }, { autoTrackExposure: !0 });
     function x() {
         (0, c.ZDy)(
@@ -202,7 +202,7 @@ function w(e) {
             { contextKey: o ? c.u1M : c.z1l }
         );
     }
-    function y() {
+    function C() {
         (0, f.Z)({
             channel: t,
             openInPopout: o,
@@ -261,7 +261,7 @@ function w(e) {
                                     color: c.zxk.Colors.PRIMARY,
                                     className: a()({ [I.button]: !p }),
                                     innerClassName: I.buttonContents,
-                                    onClick: y,
+                                    onClick: C,
                                     children: [
                                         (0, r.jsx)(T, {
                                             size: 'xs',
@@ -286,7 +286,7 @@ function R(e) {
             n_participants: d
         });
     });
-    let C = (0, p.Z)({ guildId: n.id }).slice(0, 3),
+    let y = (0, p.Z)({ guildId: n.id }).slice(0, 3),
         { analyticsLocations: P } = (0, g.ZP)(m.Z.VC_TILE_ACTIVITY_SUGGESTION),
         Z = i.useMemo(
             () => ({
@@ -316,7 +316,7 @@ function R(e) {
                     : null,
                 (0, r.jsx)('div', {
                     className: a()(I.activitiesContainer, { [I.activitiesContainerSmol]: s <= 300 }),
-                    children: C.map((e) =>
+                    children: y.map((e) =>
                         (0, r.jsx)(
                             h.Y,
                             {
@@ -341,7 +341,7 @@ function R(e) {
                             (0, x.EW)(o.z.VC_TILE_ACTIVITIES_ENTRY_POINT);
                     },
                     children: [
-                        (0, r.jsx)(y.Z, {}),
+                        (0, r.jsx)(C.Z, {}),
                         (0, r.jsx)(c.Text, {
                             variant: 'text-sm/medium',
                             children: E.intl.string(E.t['5E9SBw'])

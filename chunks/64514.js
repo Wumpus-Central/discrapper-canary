@@ -66,20 +66,13 @@ class h extends l.Z {
             }),
             p(this, 'stopAnalyticHeartbeat', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'DEFAULT';
-                if (!t.schedulerStarted) return;
-                t.schedulerStarted = !1;
-                let n = (0, c.S9)();
-                a.default.track(d.rMx.CLIENT_AD_HEARTBEAT_TERMINATION, {
-                    client_ad_session_id: null == n ? void 0 : n.uuid,
-                    client_heartbeat_initialization_timestamp: null == n ? void 0 : n.createdAtTimestamp,
-                    client_heartbeat_version: 2,
-                    reason: e
-                }),
+                t.schedulerStarted &&
+                    ((t.schedulerStarted = !1),
                     s.Z.addBreadcrumb({
                         category: 'ad',
                         message: 'Stopping ad session heartbeat: '.concat(e)
                     }),
-                    t.heartbeatInterval.stop();
+                    t.heartbeatInterval.stop());
             }),
             p(this, 'scheduleHeartbeatTracking', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'DEFAULT';

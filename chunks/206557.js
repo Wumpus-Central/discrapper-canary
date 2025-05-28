@@ -2,12 +2,12 @@ n.d(t, { S: () => f });
 var r = n(255367);
 n(73800);
 var i = n(979714),
-    o = n(414534),
-    a = n(780384),
+    a = n(414534),
+    o = n(780384),
     s = n(79320),
     l = n(600795);
-let c = (0, o.vQ)('keydown', (e) => !!(0, l.Tm)(e) && (e.preventDefault(), !0)),
-    u = (0, o.vQ)('mousedown', (e) => -1 === e.type.indexOf('touch') && -1 !== e.type.indexOf('mouse') && ((0, s.Yk)(!1), !0)),
+let c = (0, a.vQ)('keydown', (e) => !!(0, l.Tm)(e) && (e.preventDefault(), !0)),
+    u = (0, a.vQ)('mousedown', (e) => -1 === e.type.indexOf('touch') && -1 !== e.type.indexOf('mouse') && ((0, s.Yk)(!1), !0)),
     d = {
         backends: [
             {
@@ -24,7 +24,7 @@ let c = (0, o.vQ)('keydown', (e) => !!(0, l.Tm)(e) && (e.preventDefault(), !0)),
                 },
                 options: {
                     onDndModeChanged: s.Yk,
-                    announcer: a.uv
+                    announcer: o.uv
                 },
                 preview: !0,
                 transition: c
@@ -33,7 +33,7 @@ let c = (0, o.vQ)('keydown', (e) => !!(0, l.Tm)(e) && (e.preventDefault(), !0)),
     };
 function f(e) {
     let { children: t } = e;
-    return (0, r.jsx)(o.WG, {
+    return (0, r.jsx)(a.WG, {
         options: d,
         children: t
     });

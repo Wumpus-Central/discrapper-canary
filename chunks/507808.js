@@ -1,11 +1,11 @@
-n.d(t, { Y: () => o });
+n.d(t, { Y: () => a });
 var r = n(626135),
     i = n(981631);
-function o(e) {
-    let { pageType: t, sectionType: n, ctaObject: o } = e;
+function a(e) {
+    let { pageType: t, sectionType: n, ctaObject: a } = e;
     r.default.track(i.rMx.ORBS_ENTRYPOINT_CLICKED, {
         location_page: t,
         location_section: n,
-        location_object: o
+        location_object: a
     });
 }

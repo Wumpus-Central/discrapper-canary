@@ -2,8 +2,8 @@ n.d(t, { Z: () => A }), n(314940);
 var r = n(255367);
 n(73800);
 var i = n(278074),
-    o = n(979554),
-    a = n(481060),
+    a = n(979554),
+    o = n(481060),
     s = n(1585),
     l = n(125988),
     c = n(583434),
@@ -68,16 +68,16 @@ function v(e, t) {
         e
     );
 }
-let I = p.ZP.getEnableHardwareAcceleration() ? a.Xo$ : a.qEK;
+let I = p.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK;
 function S(e) {
     let { avatarDecoration: t } = e,
         {
             avatarDecorationSrc: n,
             eventHandlers: i,
-            avatarPlaceholderSrc: o
+            avatarPlaceholderSrc: a
         } = (0, l.Z)({
             avatarDecorationOverride: t,
-            size: (0, s.y9)(a.EFr.SIZE_152)
+            size: (0, s.y9)(o.EFr.SIZE_152)
         });
     return (0, r.jsx)('div', {
         className: g.giftMainAnimationWrapper,
@@ -85,9 +85,9 @@ function S(e) {
             I,
             v(y({}, i), {
                 avatarDecoration: n,
-                src: o,
+                src: a,
                 className: g.avatar,
-                size: a.EFr.SIZE_152,
+                size: o.EFr.SIZE_152,
                 'aria-label': m.intl.string(m.t.lqaIxM)
             })
         )
@@ -112,11 +112,11 @@ function T(e) {
 function A(e) {
     let { sku: t } = e,
         { selectedGiftStyle: n } = (0, h.wD)(),
-        { product: a } = (0, c.T)(null == t ? void 0 : t.id),
-        s = null == a ? void 0 : a.items[0],
+        { product: o } = (0, c.T)(null == t ? void 0 : t.id),
+        s = null == o ? void 0 : o.items[0],
         l = (0, i.EQ)(s)
-            .with({ type: o.Z.AVATAR_DECORATION }, (e) => (0, r.jsx)(S, { avatarDecoration: e }))
-            .with({ type: o.Z.PROFILE_EFFECT }, (e) => (0, r.jsx)(T, { id: e.id }))
+            .with({ type: a.Z.AVATAR_DECORATION }, (e) => (0, r.jsx)(S, { avatarDecoration: e }))
+            .with({ type: a.Z.PROFILE_EFFECT }, (e) => (0, r.jsx)(T, { id: e.id }))
             .otherwise(() => null);
     return null != n && null == l
         ? (0, r.jsx)('div', {

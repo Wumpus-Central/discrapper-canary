@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(687158),
     _ = n(892001),
     x = n(899007),
-    C = n(648052),
-    y = n(867176),
+    y = n(648052),
+    C = n(867176),
     v = n(280885),
     j = n(900927),
     O = n(678738),
@@ -57,8 +57,8 @@ function w(e) {
 function R(e) {
     let { user: t, channel: n } = e,
         R = __OVERLAY__ || !(0, d.Z)(t.id),
-        M = (0, b.ZP)(t.id),
-        k = (0, s.ZP)(),
+        k = (0, b.ZP)(t.id),
+        M = (0, s.ZP)(),
         L = i.useRef(Date.now()),
         { analyticsLocations: D } = (0, u.ZP)(c.Z.USER_PROFILE_SIDEBAR),
         U = (0, m.ZB)({
@@ -85,15 +85,15 @@ function R(e) {
         children: (0, r.jsx)(m.Mt, {
             value: U,
             openedAt: L.current,
-            fetchStartedAt: null == M ? void 0 : M.fetchStartedAt,
-            fetchEndedAt: null == M ? void 0 : M.fetchEndedAt,
-            isLoaded: null == M ? void 0 : M.isLoaded,
+            fetchStartedAt: null == k ? void 0 : k.fetchStartedAt,
+            fetchEndedAt: null == k ? void 0 : k.fetchEndedAt,
+            isLoaded: null == k ? void 0 : k.isLoaded,
             children: (0, r.jsxs)(E.Z, {
                 ref: B,
                 user: t,
-                displayProfile: M,
+                displayProfile: k,
                 themeType: Z.lY.SIDEBAR,
-                themeOverride: k,
+                themeOverride: M,
                 children: [
                     (0, r.jsxs)(l.u2, {
                         children: [
@@ -101,15 +101,15 @@ function R(e) {
                             (0, r.jsxs)('header', {
                                 className: T.header,
                                 children: [
-                                    (0, r.jsx)(y.Z, {
+                                    (0, r.jsx)(C.Z, {
                                         user: t,
-                                        displayProfile: M,
+                                        displayProfile: k,
                                         themeType: Z.lY.SIDEBAR,
                                         animateOnHover: !G
                                     }),
                                     (0, r.jsx)(x.Z, {
                                         user: t,
-                                        displayProfile: M,
+                                        displayProfile: k,
                                         channelId: n.id,
                                         themeType: Z.lY.SIDEBAR,
                                         onOpenProfile: R ? void 0 : F
@@ -123,10 +123,10 @@ function R(e) {
                                     (0, r.jsx)(I.Z, {
                                         user: t,
                                         nickname: f.ZP.getName(null, n.id, t),
-                                        pronouns: null == M ? void 0 : M.pronouns,
+                                        pronouns: null == k ? void 0 : k.pronouns,
                                         onOpenProfile: R ? void 0 : F,
-                                        tags: (0, r.jsx)(C.Z, {
-                                            displayProfile: M,
+                                        tags: (0, r.jsx)(y.Z, {
+                                            displayProfile: k,
                                             themeType: Z.lY.SIDEBAR
                                         })
                                     }),
@@ -137,7 +137,7 @@ function R(e) {
                                                 heading: N.intl.string(N.t['61W33d']),
                                                 headingColor: 'header-primary',
                                                 children: (0, r.jsx)(v.Z, {
-                                                    userBio: null == M ? void 0 : M.bio,
+                                                    userBio: null == k ? void 0 : k.bio,
                                                     userId: t.id,
                                                     animateOnHover: !0,
                                                     isHovering: G
@@ -177,9 +177,9 @@ function R(e) {
                                 children: N.intl.string(N.t['+Xp3ho'])
                             })
                         }),
-                    (null == M ? void 0 : M.profileEffectId) != null &&
+                    (null == k ? void 0 : k.profileEffectId) != null &&
                         (0, r.jsx)(h.Z, {
-                            profileEffectId: null == M ? void 0 : M.profileEffectId,
+                            profileEffectId: null == k ? void 0 : k.profileEffectId,
                             isHovering: G
                         })
                 ]

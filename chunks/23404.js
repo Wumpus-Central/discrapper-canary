@@ -105,7 +105,7 @@ function L(e) {
                 questContentCTA: u.jZ.ACCEPT_QUEST
             });
         }, [E]),
-        B = i.useCallback(() => {
+        V = i.useCallback(() => {
             null != E &&
                 (O({
                     questId: E.id,
@@ -117,7 +117,7 @@ function L(e) {
                     questId: E.id
                 }));
         }, [E, O]),
-        V = i.useCallback(() => {
+        B = i.useCallback(() => {
             O({
                 questId: E.id,
                 questContent: f.jn.ACTIVITY_PANEL,
@@ -243,7 +243,7 @@ function L(e) {
                                           color: s.zxk.Colors.PRIMARY,
                                           fullWidth: !0,
                                           size: s.zxk.Sizes.SMALL,
-                                          onClick: V,
+                                          onClick: B,
                                           children: j.intl.string(j.t.LLLLPD)
                                       }),
                                       (0, r.jsx)(s.zxk, {
@@ -263,7 +263,7 @@ function L(e) {
                                   className: A.cta,
                                   color: s.zxk.Colors.BRAND,
                                   fullWidth: !0,
-                                  onClick: B,
+                                  onClick: V,
                                   size: s.zxk.Sizes.SMALL,
                                   children: j.intl.string(j.t.VN1Ajo)
                               }),

@@ -4,7 +4,7 @@ n.d(t, {
     So: () => b,
     Su: () => x,
     YZ: () => h,
-    _Q: () => C,
+    _Q: () => y,
     bF: () => f,
     c$: () => p,
     kx: () => m
@@ -147,7 +147,7 @@ let g = i()(async (e, t) => {
             categoryId: t
         });
     },
-    C = async (e, t) => {
+    y = async (e, t) => {
         try {
             let n = await a.tn.get({
                 url: d.ANM.DIRECTORY_CHANNEL_LIST_BY_ID(e),

@@ -19,8 +19,8 @@ var r = n(255367),
     b = n(358221),
     _ = n(795318),
     x = n(258609),
-    C = n(569545),
-    y = n(102172),
+    y = n(569545),
+    C = n(102172),
     v = n(352978),
     j = n(880395),
     O = n(670188),
@@ -34,8 +34,8 @@ var r = n(255367),
     A = n(248400),
     w = n(981631),
     R = n(354459),
-    M = n(820573);
-function k(e) {
+    k = n(820573);
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -94,7 +94,7 @@ let D = 16 / 9,
                 (0, r.jsx)(
                     c.P3F,
                     L(
-                        k(
+                        M(
                             {
                                 innerRef: h,
                                 onContextMenu: (e) => d(n, e)
@@ -110,7 +110,7 @@ let D = 16 / 9,
                                     blocked: m,
                                     ignored: g,
                                     channel: l,
-                                    className: M.tile,
+                                    className: k.tile,
                                     inCall: !0,
                                     inPopout: p,
                                     pulseSpeakingIndicator: !f.enabled,
@@ -136,9 +136,9 @@ let D = 16 / 9,
             })),
             N = i.useCallback(
                 (e, t) => {
-                    if (e.type === R.fO.STREAM && 0 === j.filter((t) => (0, C.V9)(t) === e.id && t.state !== w.jm8.ENDED).length) {
-                        if (!(0, y.p9)(l, Z.Z, P.Z, S.Z, x.Z)[0]) return;
-                        (0, p.rn)((0, C.my)(e.id), { forceMultiple: t.shiftKey });
+                    if (e.type === R.fO.STREAM && 0 === j.filter((t) => (0, y.V9)(t) === e.id && t.state !== w.jm8.ENDED).length) {
+                        if (!(0, C.p9)(l, Z.Z, P.Z, S.Z, x.Z)[0]) return;
+                        (0, p.rn)((0, y.my)(e.id), { forceMultiple: t.shiftKey });
                     }
                     (null == O ? void 0 : O.id) === e.id ? (I ? (u.Z.selectParticipant(l.id, null), u.Z.updateStageStreamSize(l.id, !1)) : u.Z.updateStageStreamSize(l.id, !0)) : (u.Z.updateStageStreamSize(l.id, !1), u.Z.selectParticipant(l.id, e.id));
                 },
@@ -153,7 +153,7 @@ let D = 16 / 9,
                 blocked: g,
                 ignored: _,
                 channel: l,
-                className: M.tile,
+                className: k.tile,
                 inCall: !0,
                 inPopout: h,
                 onClick: N,
@@ -171,11 +171,11 @@ let D = 16 / 9,
             { newestAnalyticsLocation: u } = (0, m.ZP)(f.Z.STAGE_TILE),
             p = (0, h.bp)(),
             x = l.getGuildId(),
-            C = I.default.getId();
+            y = I.default.getId();
         a()(null != x, 'Channel cannot be guildless');
-        let { user: y } = i,
+        let { user: C } = i,
             v = (0, s.e7)([b.Z], () => b.Z.getParticipant(l.id, i.id), [l.id, i.id]),
-            O = (0, s.e7)([N.ZP], () => N.ZP.isModerator(y.id, l.id), [l.id, y.id]);
+            O = (0, s.e7)([N.ZP], () => N.ZP.isModerator(C.id, l.id), [l.id, C.id]);
         if (null == v || v.type === R.fO.ACTIVITY) return null;
         let E = (e) => {
                 (0, g.h)({
@@ -183,7 +183,7 @@ let D = 16 / 9,
                     name: o.ImpressionNames.CALL_TILE_CONTEXT_MENU,
                     properties: {
                         location: 'StageTile',
-                        is_tile_owner: y.id === C,
+                        is_tile_owner: C.id === y,
                         tile_type: e
                     }
                 });
@@ -200,13 +200,13 @@ let D = 16 / 9,
                                     return (n) =>
                                         (0, r.jsx)(
                                             t,
-                                            L(k({}, n), {
+                                            L(M({}, n), {
                                                 stream: e.stream,
                                                 appContext: p,
                                                 exitFullscreen: () => {},
                                                 onInteraction: (0, _.u)('StreamContextMenu', u, {
                                                     entrypoint: a,
-                                                    targetUserId: y.id,
+                                                    targetUserId: C.id,
                                                     tileType: R.TH.STREAM
                                                 })
                                             })
@@ -218,12 +218,12 @@ let D = 16 / 9,
                     case R.fO.USER:
                     default:
                         if ((E(R.TH.USER), i))
-                            return (0, j.D)(t, y, l, { context: p }, (e, t) =>
+                            return (0, j.D)(t, C, l, { context: p }, (e, t) =>
                                 (0, _.o)({
                                     menuName: e,
                                     menuItemProps: t,
                                     entrypoint: R.A5.THREE_DOT,
-                                    targetUserId: y.id,
+                                    targetUserId: C.id,
                                     location: u,
                                     tileType: R.TH.USER
                                 })
@@ -235,15 +235,15 @@ let D = 16 / 9,
                                 return (t) =>
                                     (0, r.jsx)(
                                         e,
-                                        L(k({}, t), {
-                                            user: y,
+                                        L(M({}, t), {
+                                            user: C,
                                             guildId: x,
                                             channel: l,
                                             showMediaItems: !0,
                                             showStageChannelItems: !0,
                                             showChatItems: !1,
                                             onInteraction: (0, _.u)('GuildChannelUserContextMenu', u, {
-                                                targetUserId: y.id,
+                                                targetUserId: C.id,
                                                 tileType: R.TH.USER
                                             })
                                         })
@@ -259,7 +259,7 @@ let D = 16 / 9,
                   rtcParticipant: v,
                   channel: l,
                   guildId: x,
-                  user: y,
+                  user: C,
                   width: c,
                   isModerator: O,
                   onContextMenu: P,
@@ -270,7 +270,7 @@ let D = 16 / 9,
                   rtcParticipant: v,
                   channel: l,
                   guildId: x,
-                  user: y,
+                  user: C,
                   width: c,
                   isModerator: O,
                   onContextMenu: P,

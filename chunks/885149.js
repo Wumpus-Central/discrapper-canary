@@ -2,8 +2,8 @@ n.d(t, { c: () => u });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(626135),
-    a = n(617015),
+    a = n(626135),
+    o = n(617015),
     s = n(981631);
 function l(e, t, n) {
     return (
@@ -36,7 +36,7 @@ function c(e) {
 }
 function u(e) {
     let { onConfirm: t } = e;
-    o.default.track(s.rMx.OPEN_MODAL, { type: a.M1 }),
+    a.default.track(s.rMx.OPEN_MODAL, { type: o.M1 }),
         (0, i.ZDy)(async () => {
             let { default: e } = await n.e('97951').then(n.bind(n, 537509));
             return (n) => (0, r.jsx)(e, c({ onConfirm: t }, n));

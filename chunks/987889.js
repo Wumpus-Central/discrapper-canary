@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -61,22 +61,48 @@ let m = {
         MESSAGE: ['SETTINGS']
     },
     b = (e, t) =>
-        i.useMemo(() => {
-            let n = m[v(e)];
+        (0, i.useMemo)(() => {
+            let n = m[_(e)];
             return t ? ['ACK', ...n] : n;
         }, [e, t]);
 function y(e) {
+    let { label: t, onClick: n, message: l, Icon: s } = e,
+        [a, c] = (0, i.useState)(!1);
+    return (0, r.jsx)(o.ua7, {
+        text: t,
+        position: 'top',
+        spacing: 4,
+        children: (e) =>
+            (0, r.jsx)(
+                o.P3F,
+                g(f({}, e), {
+                    className: p.action,
+                    onMouseEnter: () => c(!0),
+                    onMouseLeave: () => c(!1),
+                    onClick: (e) => {
+                        e.stopPropagation(), n(l);
+                    },
+                    children: (0, r.jsx)(s, {
+                        size: a ? 'sm' : 'xs',
+                        className: p.actionIcon
+                    })
+                })
+            )
+    });
+}
+function O(e) {
     let { channel: t, message: n, label: l, Icon: s, Menu: a } = e,
-        [c, u] = i.useState(!1),
-        d = i.useRef(null);
+        [c, u] = (0, i.useState)(!1),
+        [d, h] = (0, i.useState)(!1),
+        m = (0, i.useRef)(null);
     return (0, r.jsx)(o.yRy, {
-        shouldShow: c,
+        shouldShow: d,
         animation: o.yRy.Animation.NONE,
         position: 'right',
         align: 'top',
         autoInvert: !1,
-        targetElementRef: d,
-        onRequestClose: () => u(!1),
+        targetElementRef: m,
+        onRequestClose: () => h(!1),
         renderPopout: (e) =>
             (0, r.jsx)(a, {
                 renderPopoutProps: e,
@@ -92,17 +118,20 @@ function y(e) {
                     (0, r.jsx)(
                         o.P3F,
                         g(f({}, t), {
-                            innerRef: d,
+                            innerRef: m,
                             className: p.action,
+                            onMouseEnter: () => u(!0),
+                            onMouseLeave: () => u(!1),
                             onClick: (e) => {
-                                e.stopPropagation(), u(!c);
+                                e.stopPropagation(), h(!d);
                             },
                             children: (0, r.jsx)(
                                 s,
                                 g(f({}, e), {
+                                    message: n,
                                     'aria-label': l,
                                     className: p.actionIcon,
-                                    size: 'xs'
+                                    size: c ? 'sm' : 'xs'
                                 })
                             )
                         })
@@ -110,7 +139,7 @@ function y(e) {
             })
     });
 }
-let O = {
+let v = {
         ACK: {
             type: 'standard',
             Icon: o.dz2,
@@ -122,7 +151,7 @@ let O = {
         BOOKMARK: {
             type: 'menu',
             label: h.intl.string(h.t['9p3D9v']),
-            Icon: o.plf,
+            Icon: (e) => (null != d.Z.getSavedMessage(e.message.channel_id, e.message.id) ? (0, r.jsx)(o.plf, f({}, e)) : (0, r.jsx)(o.gt9, f({}, e))),
             Menu: (e) => {
                 let { message: t, renderPopoutProps: n } = e,
                     i = (0, l.e7)([d.Z], () => d.Z.getSavedMessage(t.channel_id, t.id)),
@@ -186,46 +215,31 @@ let O = {
             }
         }
     },
-    v = (e) => 'MENTION';
-function _(e) {
+    _ = (e) => 'MENTION';
+function C(e) {
     let { message: t, channel: n, isUnread: i } = e,
         l = b(t, i);
     return (0, r.jsx)(o.Kqy, {
         direction: 'horizontal',
         gap: 4,
         align: 'center',
+        justify: 'center',
         className: p.actions,
         children: l.map((e) => {
-            let i = O[e];
+            let i = v[e];
             switch (i.type) {
                 case 'standard':
                     return (0, r.jsx)(
-                        o.ua7,
-                        {
-                            text: i.label,
-                            position: 'top',
-                            spacing: 4,
-                            children: (n) =>
-                                (0, r.jsx)(
-                                    o.P3F,
-                                    g(f({}, n), {
-                                        className: p.action,
-                                        onClick: (e) => {
-                                            e.stopPropagation(), i.onClick(t);
-                                        },
-                                        children: (0, r.jsx)(i.Icon, {
-                                            size: 'xs',
-                                            className: p.actionIcon
-                                        })
-                                    }),
-                                    e
-                                )
-                        },
+                        y,
+                        g(f({}, i), {
+                            message: t,
+                            channel: n
+                        }),
                         e
                     );
                 case 'menu':
                     return (0, r.jsx)(
-                        y,
+                        O,
                         g(f({}, i), {
                             channel: n,
                             message: t

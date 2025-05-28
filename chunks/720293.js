@@ -1,24 +1,24 @@
 n.d(t, {
     CC: () => c,
-    O: () => a,
-    n1: () => o,
+    O: () => o,
+    n1: () => a,
     z0: () => s
 });
 var r = n(475595),
     i = n(46140),
-    o = (function (e) {
+    a = (function (e) {
         return (e.VIDEO = 'video'), (e.VIDEO_LOW_RES = 'videoLowRes'), (e.VIDEO_HLS = 'videoHls'), e;
     })({}),
-    a = (function (e) {
+    o = (function (e) {
         return (e.VIDEO = 'url'), (e.THUMBNAIL = 'thumbnail'), (e.CAPTION = 'caption'), (e.TRANSCRIPT = 'transcript'), e;
     })({});
-function s(e, t, n, o) {
-    var a;
-    let s = null == (a = e.config.taskConfigV2) ? void 0 : a.tasks[t];
+function s(e, t, n, a) {
+    var o;
+    let s = null == (o = e.config.taskConfigV2) ? void 0 : o.tasks[t];
     if (null == s) return null;
     let l = s.assets[n];
     if (null == l) return null;
-    let c = l[o];
+    let c = l[a];
     if (null == c) return null;
     let u = e.config.features.includes(i.S7.QUESTS_CDN),
         d = (0, r.Dm)(c);

@@ -1,8 +1,8 @@
 n.d(t, { kZ: () => _ });
 var r = n(4313),
     i = n(493623),
-    o = n(620720),
-    a = n(343713),
+    a = n(620720),
+    o = n(343713),
     s = n(540321),
     l = n(609027),
     c = n(375317),
@@ -48,8 +48,8 @@ function _(e) {
                     y(),
                         (p.options = Object.assign({}, h, p.options, r)),
                         (p.scrollParents = {
-                            reference: (0, u.kK)(e) ? (0, o.Z)(e) : e.contextElement ? (0, o.Z)(e.contextElement) : [],
-                            popper: (0, o.Z)(t)
+                            reference: (0, u.kK)(e) ? (0, a.Z)(e) : e.contextElement ? (0, a.Z)(e.contextElement) : [],
+                            popper: (0, a.Z)(t)
                         });
                     var i = (0, s.Z)((0, c.Z)([].concat(_, p.options.modifiers)));
                     return (
@@ -67,7 +67,7 @@ function _(e) {
                             n = e.popper;
                         if (f(t, n)) {
                             (p.rects = {
-                                reference: (0, r.Z)(t, (0, a.Z)(n), 'fixed' === p.options.strategy),
+                                reference: (0, r.Z)(t, (0, o.Z)(n), 'fixed' === p.options.strategy),
                                 popper: (0, i.Z)(n)
                             }),
                                 (p.reset = !1),
@@ -75,12 +75,12 @@ function _(e) {
                                 p.orderedModifiers.forEach(function (e) {
                                     return (p.modifiersData[e.name] = Object.assign({}, e.data));
                                 });
-                            for (var o = 0; o < p.orderedModifiers.length; o++) {
+                            for (var a = 0; a < p.orderedModifiers.length; a++) {
                                 if (!0 === p.reset) {
-                                    (p.reset = !1), (o = -1);
+                                    (p.reset = !1), (a = -1);
                                     continue;
                                 }
-                                var s = p.orderedModifiers[o],
+                                var s = p.orderedModifiers[a],
                                     l = s.fn,
                                     c = s.options,
                                     u = void 0 === c ? {} : c,
@@ -114,14 +114,14 @@ function _(e) {
                     r = void 0 === n ? {} : n,
                     i = e.effect;
                 if ('function' == typeof i) {
-                    var o = i({
+                    var a = i({
                             state: p,
                             name: t,
                             instance: E,
                             options: r
                         }),
-                        a = function () {};
-                    m.push(o || a);
+                        o = function () {};
+                    m.push(a || o);
                 }
             });
         }

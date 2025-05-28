@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(5192),
     _ = n(501655),
     x = n(856393),
-    C = n(388032),
-    y = n(761325);
+    y = n(388032),
+    C = n(761325);
 let v = (e, t) => b.ZP.getName(e.getGuildId(), e.id, t.user),
     j = function (e) {
         let { participants: t, channel: n, hasConnectPermission: l } = e,
@@ -30,11 +30,11 @@ let v = (e, t) => b.ZP.getName(e.getGuildId(), e.id, t.user),
             I = 4 === E.length ? 2 : 3,
             P = (0, o.Wu)([u.Z], () => E.map((e) => u.Z.getParticipant(n.id, e.id)).filter(g.lm), [n.id, E]);
         return (0, r.jsxs)('div', {
-            className: y.container,
+            className: C.container,
             children: [
                 b && (0, r.jsx)(m.Z, {}),
                 (0, r.jsx)('div', {
-                    className: y.tiles,
+                    className: C.tiles,
                     style: { maxWidth: 168 * I },
                     children: P.slice(0, 5).map((e) =>
                         (0, r.jsx)(
@@ -42,7 +42,7 @@ let v = (e, t) => b.ZP.getName(e.getGuildId(), e.id, t.user),
                             {
                                 participant: e,
                                 channel: n,
-                                className: y.tile,
+                                className: C.tile,
                                 inCall: !0,
                                 noVideoRender: !0,
                                 inPopout: !1,
@@ -53,28 +53,28 @@ let v = (e, t) => b.ZP.getName(e.getGuildId(), e.id, t.user),
                     )
                 }),
                 (0, r.jsx)(s.X6q, {
-                    className: y.channelName,
+                    className: C.channelName,
                     variant: b ? 'heading-xxl/normal' : 'heading-xxl/semibold',
                     children: n.name
                 }),
                 (0, r.jsx)('div', {
-                    className: y.participantsRow,
+                    className: C.participantsRow,
                     children: (0, r.jsx)(s.Text, {
                         tag: 'div',
                         color: 'header-secondary',
                         variant: b ? 'heading-lg/normal' : 'text-sm/normal',
                         children:
                             0 === E.length
-                                ? C.intl.string(C.t.FUVhyM)
+                                ? y.intl.string(y.t.FUVhyM)
                                 : 1 === E.length
-                                  ? C.intl.formatToPlainString(C.t.EQwZlJ, { a: v(n, E[0]) })
+                                  ? y.intl.formatToPlainString(y.t.EQwZlJ, { a: v(n, E[0]) })
                                   : 2 === E.length
-                                    ? C.intl.formatToPlainString(C.t.zBcKoK, {
+                                    ? y.intl.formatToPlainString(y.t.zBcKoK, {
                                           a: v(n, E[0]),
                                           b: v(n, E[1])
                                       })
                                     : E.length > 2
-                                      ? C.intl.formatToPlainString(C.t['3AqFaG'], {
+                                      ? y.intl.formatToPlainString(y.t['3AqFaG'], {
                                             a: v(n, E[0]),
                                             b: v(n, E[1]),
                                             n: E.length - 2
@@ -83,15 +83,15 @@ let v = (e, t) => b.ZP.getName(e.getGuildId(), e.id, t.user),
                     })
                 }),
                 (0, r.jsxs)('div', {
-                    className: y.buttonContainer,
+                    className: C.buttonContainer,
                     children: [
                         (0, r.jsx)(s.zxk, {
                             disabled: !l,
-                            className: a()(y.joinButton, { [y.roundButton]: !b }),
+                            className: a()(C.joinButton, { [C.roundButton]: !b }),
                             color: l ? (b ? s.zxk.Colors.WHITE : s.zxk.Colors.GREEN) : s.zxk.Colors.PRIMARY,
                             onClick: O,
                             size: s.zxk.Sizes.MEDIUM,
-                            children: l ? C.intl.string(C.t['7vb2cX']) : C.intl.string(C.t.TVBCKS)
+                            children: l ? y.intl.string(y.t['7vb2cX']) : y.intl.string(y.t.TVBCKS)
                         }),
                         b && (0, r.jsx)(x.e, { channel: n })
                     ]

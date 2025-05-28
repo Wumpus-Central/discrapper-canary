@@ -12,23 +12,23 @@ function i(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = o(e, t);
+        i = a(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function o(e, t) {
+function a(e, t) {
     if (null == e) return {};
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let a = new (n(710845).Z)('AVError');
+let o = new (n(710845).Z)('AVError');
 var s = (function (e) {
     return (e.STREAM_FAILED_TO_START = 'stream-failed-to-start'), (e.NO_INPUT_DEVICES = 'no-input-devices'), (e.NO_AUDIO_INPUT_DETECTED = 'no-audio-input-detected'), (e.DEBUG_LOG_UPLOAD_FAILED = 'debug-log-upload-failed'), (e.STREAM_VIEW_LOW_FPS = 'stream-view-low-fps'), (e.STREAM_VIEW_HIGH_PACKET_LOSS = 'stream-view-high-packet-loss'), (e.STREAM_SEND_LOW_FPS = 'stream-send-low-encode-fps'), (e.STREAM_SEND_HIGH_PACKET_LOSS = 'stream-send-high-packet-loss'), (e.STREAM_BAD_NETWORK_QUALITY = 'stream-send-network-quality'), (e.STREAM_SOUNDSHARE_FAILED = 'stream-soundshare-failed'), (e.NOISE_CANCELLER_ERROR = 'noise-canceller-error'), (e.SCREENSHARE_OS_NOT_SUPPORTED = 'screenshare-min-os-requirement'), (e.STREAM_RECONNECTING = 'stream-reconnecting'), (e.VIDEO_DECODE_ERROR = 'video-decode-error'), (e.VIDEO_ENCODE_ERROR = 'video-encode-error'), (e.STREAM_FULL = 'stream-full'), (e.AUDIO_CAPTURE_SAMPLE_RATE_MISMATCH = 'audio-capture-sample-rate-mismatch'), (e.VIDEO_STREAM_SENDER_READY_TIMEOUT = 'video-stream-sender-ready-timeout'), (e.VIDEO_STREAM_RECEIVER_READY_TIMEOUT = 'video-stream-receiver-ready-timeout'), (e.VIDEO_STREAM_SENDER_READY_TIMEOUT_NO_STREAM = 'video-stream-sender-ready-timeout-no-stream'), (e.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM = 'video-stream-receiver-ready-timeout-no-stream'), (e.CAMERA_SEND_LOW_FPS = 'camera-send-low-encode-fps'), e;
 })({});
@@ -172,14 +172,14 @@ var c = (function (e) {
 function u(e) {
     let { type: t } = e,
         n = i(e, ['type']);
-    a.error('AV error reported: '.concat(t, ' ').concat(JSON.stringify(n)));
-    let o = l[t];
+    o.error('AV error reported: '.concat(t, ' ').concat(JSON.stringify(n)));
+    let a = l[t];
     r.Z.dispatch({
         type: 'REPORT_AV_ERROR',
         error: t,
-        errorCode: o.errorCode,
-        severity: o.severity,
-        category: o.category,
+        errorCode: a.errorCode,
+        severity: a.severity,
+        category: a.category,
         context: e
     });
 }

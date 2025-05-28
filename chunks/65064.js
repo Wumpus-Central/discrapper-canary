@@ -1,7 +1,7 @@
 var r = n(135839),
     i = n(117973),
-    o = n(780712),
-    a = n(400353),
+    a = n(780712),
+    o = n(400353),
     s = n(653180),
     l = n(657398),
     c = n(19235),
@@ -13,11 +13,11 @@ var r = n(135839),
     h = '[object DataView]',
     m = c(r),
     g = c(i),
-    E = c(o),
-    b = c(a),
+    E = c(a),
+    b = c(o),
     y = c(s),
     O = l;
-((r && O(new r(new ArrayBuffer(1))) != h) || (i && O(new i()) != u) || (o && O(o.resolve()) != f) || (a && O(new a()) != _) || (s && O(new s()) != p)) &&
+((r && O(new r(new ArrayBuffer(1))) != h) || (i && O(new i()) != u) || (a && O(a.resolve()) != f) || (o && O(new o()) != _) || (s && O(new s()) != p)) &&
     (O = function (e) {
         var t = l(e),
             n = t == d ? e.constructor : void 0,

@@ -14,7 +14,7 @@ var i = n(120356),
     f = n(900054);
 function m(e) {
     var t, n;
-    let { user: i, row: m, hideDiscriminator: g, comparator: b, selected: _, checked: x, inlineUsername: C = !0, onClick: y, onMouseEnter: v, 'aria-setsize': j, 'aria-posinset': O } = e,
+    let { user: i, row: m, hideDiscriminator: g, comparator: b, selected: _, checked: x, inlineUsername: y = !0, onClick: C, onMouseEnter: v, 'aria-setsize': j, 'aria-posinset': O } = e,
         E = (0, o.e7)([p.Z], () => p.Z.getStatus(i.id)),
         I = (0, a.JA)(String(i.id));
     return (0, r.jsx)(
@@ -48,7 +48,7 @@ function m(e) {
                 id: 'user-row-'.concat(m),
                 className: f.friendWrapper,
                 onClick: () => {
-                    null != y && y(i.id);
+                    null != C && C(i.id);
                 },
                 onMouseEnter: () => {
                     null != v && v(m);
@@ -66,7 +66,7 @@ function m(e) {
                     align: d.Z.Align.CENTER,
                     className: l()(f.friend, {
                         [f.friendSelected]: _,
-                        [f.twoRows]: !C
+                        [f.twoRows]: !y
                     }),
                     children: [
                         (0, r.jsx)(u.Z, {
@@ -77,7 +77,7 @@ function m(e) {
                         (0, r.jsxs)(d.Z, {
                             className: f.match,
                             align: d.Z.Align.BASELINE,
-                            direction: C ? d.Z.Direction.HORIZONTAL : d.Z.Direction.VERTICAL,
+                            direction: y ? d.Z.Direction.HORIZONTAL : d.Z.Direction.VERTICAL,
                             children: [
                                 (0, r.jsx)(s.Text, {
                                     tag: 'strong',

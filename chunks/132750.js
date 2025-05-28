@@ -132,8 +132,7 @@ function x(e) {
                           activities: s,
                           applicationStream: f,
                           voiceChannel: x,
-                          hideTooltip: !0,
-                          disableTextScroll: !0
+                          hideTooltip: !0
                       })
                   })
                 : P

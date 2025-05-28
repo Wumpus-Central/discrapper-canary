@@ -50,6 +50,8 @@ e.exports = {
     rimGlowTier2: 'rimGlowTier2_ac86f6',
     trialHeader: 'trialHeader_ac86f6',
     withPromotionalGradientBanner: 'withPromotionalGradientBanner_ac86f6',
+    withPromotionalCardImage: 'withPromotionalCardImage_ac86f6',
+    promotionalCardImage: 'promotionalCardImage_ac86f6',
     promotionalBackgroundImage: 'promotionalBackgroundImage_ac86f6',
     tier2SideGradient: 'tier2SideGradient_ac86f6'
 };

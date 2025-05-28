@@ -6,8 +6,8 @@ n.d(t, {
 var r,
     i = n(255367);
 n(73800);
-var o = n(442837),
-    a = n(481060),
+var a = n(442837),
+    o = n(481060),
     s = n(570140),
     l = n(962293),
     c = n(592125),
@@ -30,7 +30,7 @@ function h(e, t, n) {
     );
 }
 let m = new Set();
-class g extends (r = o.ZP.PersistedStore) {
+class g extends (r = a.ZP.PersistedStore) {
     initialize(e) {
         null != e && (m = new Set(e));
     }
@@ -44,7 +44,7 @@ class g extends (r = o.ZP.PersistedStore) {
 h(g, 'displayName', 'PTOStore'), h(g, 'persistKey', 'PTOStore');
 let E = new g(s.Z, {}),
     b = (e) =>
-        (0, o.e7)([u.ZP, f.default, E], () => {
+        (0, a.e7)([u.ZP, f.default, E], () => {
             let t = f.default.getCurrentUser();
             if (null == t || !t.isStaff() || !e.isDM()) return !1;
             let n = f.default.getUser(e.getRecipientId());
@@ -62,7 +62,7 @@ let E = new g(s.Z, {}),
         (0, i.jsxs)('div', {
             className: p.bar,
             children: [
-                (0, i.jsx)(a.Text, {
+                (0, i.jsx)(o.Text, {
                     variant: 'text-sm/medium',
                     children: _.intl.string(_.t['2UvR1N'])
                 }),

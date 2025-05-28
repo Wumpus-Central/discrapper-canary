@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(367907),
     _ = n(213609),
     x = n(499254),
-    C = n(541099),
-    y = n(827498),
+    y = n(541099),
+    C = n(827498),
     v = n(663924),
     j = n(533379),
     O = n(562129),
@@ -31,12 +31,12 @@ var r = n(255367),
     A = n(981631),
     w = n(314734),
     R = n(921944),
-    M = n(388032),
-    k = n(560163);
+    k = n(388032),
+    M = n(560163);
 let L = i.forwardRef(function (e, t) {
         var n, l;
         let { type: v, animateRef: j } = e,
-            E = (0, s.e7)([C.Z], () => C.Z.shouldShowPopup() && C.Z.activeViewType() === v),
+            E = (0, s.e7)([y.Z], () => y.Z.shouldShowPopup() && y.Z.activeViewType() === v),
             { badgeTreatment: S } = h.Y.useExperiment({ location: 'ChannelAppLauncherButton' }, { autoTrackExposure: !0 }),
             { Component: Z, events: T, play: L } = (0, O.Z)('ChannelAppLauncherButton'),
             { Component: D, play: U } = (0, u.B)(),
@@ -56,10 +56,10 @@ let L = i.forwardRef(function (e, t) {
             }),
             F = i.useCallback(() => {
                 (0, b.yw)(A.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED, {
-                    source: y._b.TEXT,
+                    source: C._b.TEXT,
                     badge_type: G ? S.valueOf() : null
                 }),
-                    E ? x.yT(y.ti.DISMISSED) : ((0, P.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: R.L.TAKE_ACTION }), x.__(y._b.TEXT, v), f.ux()),
+                    E ? x.yT(C.ti.DISMISSED) : ((0, P.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: R.L.TAKE_ACTION }), x.__(C._b.TEXT, v), f.ux()),
                     L();
             }, [E, v, L, G, S]);
         i.useEffect(() => {
@@ -71,7 +71,7 @@ let L = i.forwardRef(function (e, t) {
                         type: o.ImpressionTypes.VIEW,
                         name: o.ImpressionNames.APP_LAUNCHER_BADGE,
                         properties: {
-                            source: y._b.TEXT,
+                            source: C._b.TEXT,
                             badge_type: S.valueOf()
                         }
                     }));
@@ -99,7 +99,7 @@ let L = i.forwardRef(function (e, t) {
                 G &&
                     S === h.O.GLOWING_ANIMATION &&
                     (0, r.jsx)('div', {
-                        className: k.appLauncherGlow,
+                        className: M.appLauncherGlow,
                         children: (0, r.jsx)(D, {
                             size: 'custom',
                             width: 48,
@@ -108,7 +108,7 @@ let L = i.forwardRef(function (e, t) {
                         })
                     }),
                 (0, r.jsxs)('div', {
-                    className: a()(k.buttonContainer, w.t4, { [k.appLauncherCircleMask]: G && S === h.O.GLOWING_ANIMATION }),
+                    className: a()(M.buttonContainer, w.t4, { [M.appLauncherCircleMask]: G && S === h.O.GLOWING_ANIMATION }),
                     ref: t,
                     children: [
                         (0, r.jsx)(
@@ -142,9 +142,9 @@ let L = i.forwardRef(function (e, t) {
                                     look: d.zxk.Looks.BLANK,
                                     size: d.zxk.Sizes.NONE,
                                     tabIndex: 0,
-                                    className: a()(k.button, { [k.buttonActive]: E }),
+                                    className: a()(M.button, { [M.buttonActive]: E }),
                                     onClick: F,
-                                    'aria-label': M.intl.string(M.t.erHFxM),
+                                    'aria-label': k.intl.string(k.t.erHFxM),
                                     'aria-expanded': E,
                                     'aria-haspopup': 'dialog',
                                     focusProps: {
@@ -155,7 +155,7 @@ let L = i.forwardRef(function (e, t) {
                                             right: -4
                                         }
                                     },
-                                    innerClassName: k.buttonContents
+                                    innerClassName: M.buttonContents
                                 },
                                 T
                             )),
@@ -197,17 +197,17 @@ let L = i.forwardRef(function (e, t) {
             }),
             u = (0, T.Z)({ type: n }),
             d = (0, E.h9)(t.id),
-            p = (0, s.e7)([C.Z], () => C.Z.appDMChannelsWithFailedLoads().has(t.id)),
+            p = (0, s.e7)([y.Z], () => y.Z.appDMChannelsWithFailedLoads().has(t.id)),
             { visible: h } = (0, Z.xL)();
         return c
             ? (0, r.jsxs)('div', {
-                  className: k.channelAppLauncher,
+                  className: M.channelAppLauncher,
                   children: [
                       (0, r.jsx)(S.Z, {
                           channel: t,
-                          animationContainerClassName: k.entrypointAnimation,
-                          glowClassName: k.animationGlow,
-                          trinketsClassName: k.animationTrinkets,
+                          animationContainerClassName: M.entrypointAnimation,
+                          glowClassName: M.animationGlow,
+                          trinketsClassName: M.animationTrinkets,
                           children: (0, r.jsx)(L, {
                               type: n,
                               ref: o,

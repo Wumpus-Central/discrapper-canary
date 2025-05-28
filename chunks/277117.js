@@ -17,8 +17,8 @@ var i = n(657707),
     b = n(280885),
     _ = n(483424),
     x = n(681837),
-    C = n(78806),
-    y = n(91433),
+    y = n(78806),
+    C = n(91433),
     v = n(900927),
     j = n(944043),
     O = n(678738),
@@ -31,7 +31,7 @@ var i = n(657707),
     T = n(388032),
     A = n(283189);
 function w(e) {
-    let { user: t, currentUser: n, displayProfile: w, channel: R, isHovering: M, onOpenProfile: k } = e,
+    let { user: t, currentUser: n, displayProfile: w, channel: R, isHovering: k, onOpenProfile: M } = e,
         { relationshipType: L, originApplicationId: D } = (0, l.cj)([u.Z], () => ({
             relationshipType: u.Z.getRelationshipType(t.id),
             originApplicationId: u.Z.getOriginApplicationId(t.id)
@@ -51,7 +51,7 @@ function w(e) {
                 user: t,
                 nickname: p.ZP.getName(null, R.id, t),
                 pronouns: null == w ? void 0 : w.pronouns,
-                onOpenProfile: k,
+                onOpenProfile: M,
                 tags: (0, r.jsx)(g.Z, {
                     displayProfile: w,
                     themeType: Z.lY.SIDEBAR
@@ -62,15 +62,15 @@ function w(e) {
                         !G &&
                             (0, r.jsx)(S.Z, {
                                 userId: t.id,
-                                isHovering: M,
-                                onOpenProfile: k
+                                isHovering: k,
+                                onOpenProfile: M
                             })
                     ]
                 })
             }),
             L === N.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(I.Z.Overlay, {
-                    children: (0, r.jsx)(y.Z, {
+                    children: (0, r.jsx)(C.Z, {
                         user: t,
                         channelId: R.id,
                         applicationId: D
@@ -80,7 +80,7 @@ function w(e) {
                 (0, r.jsx)(
                     I.Z.Overlay,
                     {
-                        children: (0, r.jsx)(y.Z, {
+                        children: (0, r.jsx)(C.Z, {
                             user: t,
                             isGameRelationship: !0,
                             applicationId: e.applicationId,
@@ -112,7 +112,7 @@ function w(e) {
                       user: t,
                       currentUser: n,
                       displayProfile: w,
-                      onOpenUserProfileModal: k
+                      onOpenUserProfileModal: M
                   })
                 : (0, r.jsx)(_.Z, {
                       user: t,
@@ -132,7 +132,7 @@ function w(e) {
                             children: (0, r.jsx)(b.Z, {
                                 userBio: w.bio,
                                 animateOnHover: !0,
-                                isHovering: M,
+                                isHovering: k,
                                 userId: t.id
                             })
                         }),
@@ -146,7 +146,7 @@ function w(e) {
                         (0, r.jsx)(O.Z, {
                             heading: T.intl.string(T.t['Uv/eT0']),
                             headingColor: 'header-primary',
-                            children: (0, r.jsx)(C.Z, { applicationIds: B })
+                            children: (0, r.jsx)(y.Z, { applicationIds: B })
                         }),
                     (0, r.jsx)(O.Z, {
                         heading: t.bot ? T.intl.string(T.t['A//N4u']) : T.intl.string(T.t.a6XYDw),

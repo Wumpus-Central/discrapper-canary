@@ -1,9 +1,9 @@
 n.d(t, {
-    AC: () => a,
+    AC: () => o,
     IW: () => s,
     aC: () => l,
     bT: () => i,
-    z: () => o
+    z: () => a
 });
 var r = n(818083);
 let i = (0, r.B)({
@@ -19,7 +19,7 @@ let i = (0, r.B)({
             }
         ]
     }),
-    o = (0, r.B)({
+    a = (0, r.B)({
         kind: 'guild',
         id: '2022-09_creator_monetization_raven',
         label: 'Creator Monetization Onboarding v2',
@@ -32,7 +32,7 @@ let i = (0, r.B)({
             }
         ]
     }),
-    a = (0, r.B)({
+    o = (0, r.B)({
         kind: 'user',
         id: '2022-09_creator_monetization_raven_users',
         label: 'Creator Monetization Onboarding v2 Users',

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => y });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -59,8 +59,8 @@ function _(e, t) {
 function x(e) {
     let { channel: t, speaker: l, className: f } = e,
         x = i.useRef(null),
-        { newestAnalyticsLocation: C } = (0, d.ZP)(),
-        y = (0, u.bp)(),
+        { newestAnalyticsLocation: y } = (0, d.ZP)(),
+        C = (0, u.bp)(),
         { reducedMotion: v } = i.useContext(o.Sfi),
         j = (0, c.Z)({ userId: l.id }),
         O = null != l.member ? (0, m.CA)(l.member) : null,
@@ -79,11 +79,11 @@ function x(e) {
                                 showMediaItems: !0,
                                 showStageChannelItems: !0,
                                 showChatItems: !1,
-                                onInteraction: (0, p.u)('GuildChannelUserContextMenu', C)
+                                onInteraction: (0, p.u)('GuildChannelUserContextMenu', y)
                             })
                         );
                 },
-                { context: y }
+                { context: C }
             );
         };
     return (0, r.jsx)(h.Z, {
@@ -118,7 +118,7 @@ function x(e) {
             })
     });
 }
-function C(e) {
+function y(e) {
     let { speakers: t, channel: n } = e;
     return (0, r.jsx)(f.Z, {
         className: g.summary,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(997841), n(388685);
 var r = n(533800),
     i = n(147913),
-    o = n(82085),
-    a = n(630388),
+    a = n(82085),
+    o = n(630388),
     s = n(461014),
     l = n(981631);
 function c(e, t, n) {
@@ -22,8 +22,8 @@ function u(e) {
     var t, n;
     let { guild: i } = e.invite,
         c = null != (n = e.invite.flags) ? n : 0;
-    if (null != i && (null == i || null == (t = i.features) ? void 0 : t.includes(l.oNc.HUB))) return void o.Z.onOpenHubInvite(e.invite);
-    !((0, a.yE)(c, r.$.IS_GUEST_INVITE) || (0, a.yE)(c, r.$.IS_APPLICATION_BYPASS)) && null != i && (0, s.u)(i) && (0, s._)(i.id);
+    if (null != i && (null == i || null == (t = i.features) ? void 0 : t.includes(l.oNc.HUB))) return void a.Z.onOpenHubInvite(e.invite);
+    !((0, o.yE)(c, r.$.IS_GUEST_INVITE) || (0, o.yE)(c, r.$.IS_APPLICATION_BYPASS)) && null != i && (0, s.u)(i) && (0, s._)(i.id);
 }
 class d extends i.Z {
     constructor(...e) {

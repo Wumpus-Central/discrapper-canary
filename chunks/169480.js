@@ -6,8 +6,8 @@ n.r(t),
 var r = n(255367);
 n(73800);
 var i = n(952265),
-    o = n(712364);
-function a(e, t, n) {
+    a = n(712364);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -39,7 +39,7 @@ function s(e) {
 let l = (e, t, n) =>
     function (i) {
         return (0, r.jsx)(
-            o.Z,
+            a.Z,
             s(
                 {
                     handleSubmit: e,

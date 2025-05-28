@@ -12,8 +12,8 @@ var r = n(255367),
     h = n(871499),
     f = n(981631);
 function m(e) {
-    var { selfMute: t, serverMute: n, suppress: m, centerButton: g = !1, awaitingRemote: b, onMouseEnter: _, onMouseLeave: x, onClick: C } = e,
-        y = (function (e, t) {
+    var { selfMute: t, serverMute: n, suppress: m, centerButton: g = !1, awaitingRemote: b, onMouseEnter: _, onMouseLeave: x, onClick: y } = e,
+        C = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -86,10 +86,10 @@ function m(e) {
                         null == x || x(e), T.onMouseLeave();
                     },
                     onClick: (e) => {
-                        null == C || C(e), (0, d.v)(v, d.d.MIC, t);
+                        null == y || y(e), (0, d.v)(v, d.d.MIC, t);
                     }
                 },
-                y
+                C
             )
         )
     );

@@ -1,8 +1,8 @@
 n.d(t, { E: () => p }), n(953529);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(562558),
     c = n(464647),
@@ -39,12 +39,12 @@ function _(e) {
 }
 function p(e) {
     let { profile: t, className: n } = e,
-        { gamesToDisplay: o, lastGameToDisplay: f, remainingGames: p } = (0, l.Z)(t),
+        { gamesToDisplay: a, lastGameToDisplay: f, remainingGames: p } = (0, l.Z)(t),
         h = i.useMemo(() => t.traits.map((e, t) => _({ key: 'trait-'.concat(t) }, e)).filter((e) => e.label.length > 0), [t]),
         m = t.description.length > 0;
-    return m || o.length > 0 || h.length > 0
+    return m || a.length > 0 || h.length > 0
         ? (0, r.jsxs)('div', {
-              className: a()(d.body, n),
+              className: o()(d.body, n),
               children: [
                   m
                       ? (0, r.jsx)(s.Text, {
@@ -54,7 +54,7 @@ function p(e) {
                         })
                       : null,
                   (0, r.jsx)(c.Z, {
-                      gamesToDisplay: o,
+                      gamesToDisplay: a,
                       lastGameToDisplay: f,
                       remainingGames: p,
                       activity: t.gameActivity

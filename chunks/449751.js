@@ -1,17 +1,17 @@
 n.d(t, { Z: () => c });
-var r = n(255367);
+var i = n(255367);
 n(73800);
-var i = n(481060),
+var r = n(481060),
     l = n(626135),
     a = n(572004),
     o = n(981631),
     s = n(388032);
 function c(e, t) {
     return a.wS && e.type !== o.uaV.GUILD_INVITE_REMINDER
-        ? (0, r.jsx)(i.sNh, {
+        ? (0, i.jsx)(r.sNh, {
               id: 'copy-link',
               label: s.intl.string(s.t.Xrt5Pj),
-              icon: i.xPt,
+              icon: r.xPt,
               action: () => {
                   (0, a.JG)(
                       ''

@@ -2,21 +2,21 @@ n.d(t, {
     N4: () => _,
     Pn: () => p,
     RS: () => f,
-    X2: () => a,
+    X2: () => o,
     XN: () => l,
     au: () => u,
     fn: () => s,
     hZ: () => i,
     mb: () => c,
-    nx: () => o,
+    nx: () => a,
     tL: () => d
 }),
     n(388685);
 var r = n(246364);
 r.QJ.VERIFICATION, r.QJ.TERMS;
 let i = new Set([r.QJ.MULTIPLE_CHOICE, r.QJ.TEXT_INPUT, r.QJ.PARAGRAPH]),
-    o = 5,
-    a = 16,
+    a = 5,
+    o = 16,
     s = 300,
     l = 300,
     c = 8,

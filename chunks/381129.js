@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ }), n(413496), n(433524), n(35282), n(388685);
 var r = n(512722),
     i = n.n(r),
-    o = n(957730),
-    a = n(662594),
+    a = n(957730),
+    o = n(662594),
     s = n(496675),
     l = n(981631);
 let c = new RegExp(/@(:?everyone|here)/),
@@ -14,7 +14,7 @@ function d(e, t) {
         return null != (r = t.memberCount) ? r : 0;
     }
     return (
-        a.ZP.getProps(t.getGuildId(), t.id).groups.forEach((t) => {
+        o.ZP.getProps(t.getGuildId(), t.id).groups.forEach((t) => {
             ('@everyone' === e || t.id !== l.Skl.OFFLINE) && (n += t.count);
         }),
         n
@@ -43,7 +43,7 @@ let _ = {
     },
     everyoneMemberCount: d,
     extractEveryoneRole: function (e, t) {
-        for (let n of o.ZP.parsePreprocessor(t, e)) {
+        for (let n of a.ZP.parsePreprocessor(t, e)) {
             let e = f(n);
             if (null != e) return e;
         }

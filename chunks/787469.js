@@ -34,8 +34,8 @@ function _(e) {
             [t.roles, t.highestRoleId, n, l]
         ),
         x = (0, o.e7)([c.Z], () => c.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]),
-        C = (0, u.zq)(x),
-        y = (0, u.vN)(t),
+        y = (0, u.zq)(x),
+        C = (0, u.vN)(t),
         v = (0, o.e7)([h.Z], () => h.Z.can(m.Plq.MANAGE_ROLES, n), [n]);
     return null == n
         ? null
@@ -60,7 +60,7 @@ function _(e) {
                                                     onMouseLeave: i,
                                                     children: (0, r.jsx)(d.Z, {
                                                         className: a()(b.roleTooltipItem, b.highestRole),
-                                                        role: C,
+                                                        role: y,
                                                         guildId: t.guildId
                                                     })
                                                 });
@@ -86,7 +86,7 @@ function _(e) {
                                                     let { onMouseEnter: t, onMouseLeave: n } = e;
                                                     return (0, r.jsx)(s.P3F, {
                                                         className: b.addRoleContainer,
-                                                        onClick: y,
+                                                        onClick: C,
                                                         onMouseEnter: t,
                                                         onMouseLeave: n,
                                                         children: (0, r.jsx)(s.oFk, {

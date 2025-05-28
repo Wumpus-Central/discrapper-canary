@@ -383,6 +383,7 @@ var r = (function (e) {
         (e.VALENTINES_GIFTING_COACHMARK = 'valentines gifting coachmark'),
         (e.SEASONAL_GIFTING_REMINDER_COACHMARK = 'seasonal gifting reminder coachmark'),
         (e.SEASONAL_GIFTING_REMINDER_NAGBAR = 'seasonal gifting reminder nagbar'),
+        (e.GIFTING_PROMOTION_COACHMARK = 'gifting promotion coachmark'),
         (e.HD_STREAMING_POTION_MODAL = 'hd streaming potion modal'),
         (e.CONFETTI_POTION_MODAL = 'confetti potion modal'),
         (e.GO_LIVE_MODAL_V2 = 'go live modal v2'),

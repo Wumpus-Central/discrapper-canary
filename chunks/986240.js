@@ -1,6 +1,6 @@
 n.d(t, { Z: () => p });
-var r = n(255367),
-    i = n(73800),
+var i = n(255367),
+    r = n(73800),
     l = n(481060),
     a = n(980463),
     o = n(328908),
@@ -10,37 +10,37 @@ var r = n(255367),
     d = n(84040),
     f = n(626135),
     g = n(981631),
-    b = n(388032);
+    m = n(388032);
 function p(e, t) {
     let n = (0, d.Z)(t, e),
         p = e.hasPotions(),
-        O = (0, u.Nt)(),
-        m = i.useCallback(
+        b = (0, u.Nt)(),
+        h = r.useCallback(
             (n) => {
                 try {
                     (0, a.qc)(t.id, e.id, n);
                 } catch (e) {
-                    (0, l.showToast)((0, l.createToast)(b.intl.string(b.t.xsfC2d), l.ToastType.FAILURE));
+                    (0, l.showToast)((0, l.createToast)(m.intl.string(m.t.xsfC2d), l.ToastType.FAILURE));
                 }
             },
             [t.id, e.id]
         ),
-        h = i.useCallback(() => {
+        O = r.useCallback(() => {
             f.default.track(g.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: s.MG.MessageContextMenu }),
                 (0, c.s)({
                     channelId: t.id,
                     message: e,
-                    onRedeem: m,
+                    onRedeem: h,
                     onClose: o.Qy,
                     source: s.YD.MessageContextMenu
                 });
-        }, [t.id, e, m]);
-    return n && !p && O
-        ? (0, r.jsx)(l.sNh, {
+        }, [t.id, e, h]);
+    return n && !p && b
+        ? (0, i.jsx)(l.sNh, {
               id: 'add-confetti-potion',
-              label: b.intl.string(b.t.icaJW1),
+              label: m.intl.string(m.t.icaJW1),
               icon: l.l22,
-              action: h
+              action: O
           })
         : null;
 }

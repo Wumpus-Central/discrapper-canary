@@ -19,8 +19,8 @@ var r = n(255367),
     b = n(213459),
     _ = n(541716),
     x = n(540059),
-    C = n(61356),
-    y = n(981631),
+    y = n(61356),
+    C = n(981631),
     v = n(314734),
     j = n(522271);
 let O = (0, o.U)(() => ({ visible: !1 })),
@@ -34,13 +34,13 @@ function P(e) {
     let { context: t, entryPointCommandButtonRef: n, type: l } = e,
         { isInitialLoading: a, application: o, primaryEntryPointCommand: s } = (0, h.Z)({ context: t }),
         c = null == o ? void 0 : o.id,
-        f = (0, C.Z)({ type: l }),
+        f = (0, y.Z)({ type: l }),
         { sectionCommands: x } = (0, b.If)(t, null != c ? c : ''),
         v = i.useCallback(() => {
             f
                 ? m.yT(g.ti.DISMISSED)
                 : (m.__(g._b.TEXT, _.Ie.NORMAL, { applicationId: c }),
-                  (0, p.yw)(y.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
+                  (0, p.yw)(C.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
                       application_id: c,
                       location: d.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
                       source: g._b.TEXT
@@ -70,7 +70,7 @@ function P(e) {
 }
 function S(e) {
     let { context: t, application: n, primaryEntryPointCommand: i, onOpenButtonPress: l, entryPointCommandButtonRef: o, type: s } = e,
-        u = (0, C.Z)({ type: s }),
+        u = (0, y.Z)({ type: s }),
         {
             isExecutingLaunchInteraction: d,
             buttonText: p,
@@ -79,7 +79,7 @@ function S(e) {
             currentEmbeddedActivity: g,
             channelRecipientUserId: b,
             setIsExecutingLaunchInteraction: _,
-            analyticsLocations: y
+            analyticsLocations: C
         } = (0, f.Z)({
             context: t,
             primaryEntryPointCommand: i,
@@ -95,7 +95,7 @@ function S(e) {
             onOpenButtonPress: l,
             channelRecipientUserId: b,
             setIsExecutingLaunchInteraction: _,
-            analyticsLocations: y
+            analyticsLocations: C
         }),
         E = h ? c.zxk.Colors.RED : c.zxk.Colors.BRAND,
         I = (0, x.Q3)('LoadedEntryPointCommandButton');

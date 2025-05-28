@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(255367),
     i = n(73800),
-    o = n(481060),
-    a = n(921944),
+    a = n(481060),
+    o = n(921944),
     s = n(388032),
     l = n(784168),
     c = n(905287);
@@ -68,7 +68,7 @@ function p(e) {
                 className: l.image,
                 alt: 'Nitroween Gift Box'
             }),
-            (0, r.jsx)(o.olH, {
+            (0, r.jsx)(a.olH, {
                 onClick: t,
                 withCircleBackground: !0,
                 className: l.closeButton,
@@ -77,12 +77,12 @@ function p(e) {
             (0, r.jsxs)('div', {
                 className: l.body,
                 children: [
-                    (0, r.jsx)(o.X6q, {
+                    (0, r.jsx)(a.X6q, {
                         className: l.text,
                         variant: 'heading-sm/semibold',
                         children: s.intl.string(s.t['YMI+UV'])
                     }),
-                    (0, r.jsx)(o.Text, {
+                    (0, r.jsx)(a.Text, {
                         className: l.text,
                         variant: 'text-sm/normal',
                         children: s.intl.string(s.t.BIBwbm)
@@ -91,9 +91,9 @@ function p(e) {
             }),
             (0, r.jsx)('div', {
                 className: l.buttonContainer,
-                children: (0, r.jsx)(o.zxk, {
+                children: (0, r.jsx)(a.zxk, {
                     className: l.ctaButton,
-                    color: o.zxk.Colors.BRAND_INVERTED,
+                    color: a.zxk.Colors.BRAND_INVERTED,
                     onClick: () => n(),
                     children: s.intl.string(s.t.RzWDqa)
                 })
@@ -105,7 +105,7 @@ function p(e) {
 function h(e) {
     let { onComplete: t, onCheckItOutClick: n, markAsDismissed: s } = e,
         c = i.useRef(null);
-    return (0, r.jsx)(o.yRy, {
+    return (0, r.jsx)(a.yRy, {
         targetElementRef: c,
         spacing: 0,
         shouldShow: !0,
@@ -116,10 +116,10 @@ function h(e) {
                 p,
                 _(d({}, e), {
                     onDismissClick: () => {
-                        t(), s(a.L.USER_DISMISS);
+                        t(), s(o.L.USER_DISMISS);
                     },
                     onCheckItOutClick: () => {
-                        n(), t(), s(a.L.TAKE_ACTION);
+                        n(), t(), s(o.L.TAKE_ACTION);
                     }
                 })
             ),

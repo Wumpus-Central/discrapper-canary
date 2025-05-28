@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(539854), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(692547),
+    a = n(442837),
+    o = n(692547),
     s = n(481060),
     l = n(475179),
     c = n(519938),
@@ -69,16 +69,16 @@ function I(e, t) {
     );
 }
 function S(e) {
-    let { closePopout: t, idle: n, pipWindows: i, voiceChannelId: a, onSelect: h } = e;
+    let { closePopout: t, idle: n, pipWindows: i, voiceChannelId: o, onSelect: h } = e;
     n && t();
-    let b = (0, o.e7)([u.ZP], () => u.ZP.getCurrentEmbeddedActivity()),
-        y = (0, o.e7)([p.Z], () => p.Z.pipWindow),
-        O = (0, o.e7)([f.Z], () => f.Z.getSelectedParticipant(a)),
-        v = (0, o.e7)([f.Z], () => f.Z.getStreamParticipants(a));
+    let b = (0, a.e7)([u.ZP], () => u.ZP.getCurrentEmbeddedActivity()),
+        y = (0, a.e7)([p.Z], () => p.Z.pipWindow),
+        O = (0, a.e7)([f.Z], () => f.Z.getSelectedParticipant(o)),
+        v = (0, a.e7)([f.Z], () => f.Z.getStreamParticipants(o));
     function I(e) {
         (null == y ? void 0 : y.id) !== e.pipWindow.id && (0, c.k3)(e.pipWindow.id);
         let t = e.participant;
-        null != t && t.type !== g.fO.ACTIVITY && l.Z.selectParticipant(a, t.id);
+        null != t && t.type !== g.fO.ACTIVITY && l.Z.selectParticipant(o, t.id);
     }
     function S(e) {
         if (e.pipWindow.component === m.NYg.EMBED_IFRAME && null != b) {
@@ -111,16 +111,16 @@ function S(e) {
         var t;
         let n = e.pipWindow.id,
             i = null == (t = e.participant) ? void 0 : t.id,
-            o = S(e),
-            a = ''.concat(n).concat(null != i ? i : '');
+            a = S(e),
+            o = ''.concat(n).concat(null != i ? i : '');
         return (0, r.jsx)(
             s.sNh,
             {
-                id: a,
-                label: o,
+                id: o,
+                label: a,
                 action: () => I(e)
             },
-            a
+            o
         );
     }
     return (0, r.jsx)(s.v2r, {
@@ -134,8 +134,8 @@ function S(e) {
 let T = function (e) {
     let { voiceChannelId: t, idle: n } = e,
         l = i.useRef(null),
-        c = Array.from((0, o.e7)([p.Z], () => p.Z.pipWindows).values()).filter((e) => e.component !== m.NYg.EMBED_IFRAME),
-        u = (0, o.Wu)([_.Z], () => _.Z.getAllActiveStreamsForChannel(t)).filter((e) => {
+        c = Array.from((0, a.e7)([p.Z], () => p.Z.pipWindows).values()).filter((e) => e.component !== m.NYg.EMBED_IFRAME),
+        u = (0, a.Wu)([_.Z], () => _.Z.getAllActiveStreamsForChannel(t)).filter((e) => {
             var n;
             return e.ownerId !== (null == (n = h.default.getCurrentUser()) ? void 0 : n.id) && e.channelId === t;
         }),
@@ -165,7 +165,7 @@ let T = function (e) {
                           innerRef: l,
                           children: (0, r.jsx)(s.Huf, {
                               size: 'md',
-                              color: a.Z.unsafe_rawColors.WHITE_500.css
+                              color: o.Z.unsafe_rawColors.WHITE_500.css
                           })
                       })
                   )

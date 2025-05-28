@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(540059),
     _ = n(517525),
     x = n(2818),
-    C = n(954551),
-    y = n(44136),
+    y = n(954551),
+    C = n(44136),
     v = n(651183),
     j = n(853476),
     O = n(390322),
@@ -31,7 +31,7 @@ var r = n(255367),
     A = n(354459),
     w = n(388032),
     R = n(232989);
-function M(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function M(e) {
     }
     return e;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,7 +80,7 @@ function L(e) {
             let e = Date.now();
             return s()(S.Z.getSpeakers())
                 .map((e) => Z.Z.getParticipant(t, e))
-                .filter((e) => null != e && e.type === A.fO.USER && e.speaking && !(0, y.ZP)(e))
+                .filter((e) => null != e && e.type === A.fO.USER && e.speaking && !(0, C.ZP)(e))
                 .sortBy((t) => -S.Z.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
                 .value();
@@ -98,7 +98,7 @@ function L(e) {
                           children: (l) =>
                               (0, r.jsx)(
                                   P.ZP,
-                                  k(M({}, l), {
+                                  M(k({}, l), {
                                       className: a()(R.speaker, { [R.last]: t === i.length - 1 }),
                                       user: e.user,
                                       speaking: !0,
@@ -116,7 +116,7 @@ function D(e) {
     let { inPopout: t, channel: n, isChatOpen: l } = e,
         o = i.useRef(null),
         { analyticsLocations: s } = (0, h.ZP)(p.Z.VOICE_CHANNEL_HEADER),
-        y = n.id,
+        C = n.id,
         {
             voiceParticipantsHidden: P,
             selectedParticipant: S,
@@ -125,12 +125,12 @@ function D(e) {
         } = (0, c.cj)(
             [Z.Z],
             () => ({
-                selectedParticipant: Z.Z.getSelectedParticipant(y),
-                voiceParticipantsHidden: Z.Z.getVoiceParticipantsHidden(y),
-                userParticipantCount: Z.Z.getUserParticipantCount(y),
-                participantsListOpen: Z.Z.getParticipantsListOpen(y)
+                selectedParticipant: Z.Z.getSelectedParticipant(C),
+                voiceParticipantsHidden: Z.Z.getVoiceParticipantsHidden(C),
+                userParticipantCount: Z.Z.getUserParticipantCount(C),
+                participantsListOpen: Z.Z.getParticipantsListOpen(C)
             }),
-            [y]
+            [C]
         ),
         U = n.isGuildVoice() && !l,
         { hasParticipantsPanel: B } = (0, T.Z)({ location: 'ChannelCallHeaderToolbar' }),
@@ -144,7 +144,7 @@ function D(e) {
                 (0, r.jsx)(
                     L,
                     {
-                        channelId: y,
+                        channelId: C,
                         guildId: n.guild_id
                     },
                     'current-speaker'
@@ -155,7 +155,7 @@ function D(e) {
                 g.Z,
                 {
                     className: R.button,
-                    channelId: y
+                    channelId: C
                 },
                 'clips-enabled-indicator'
             )
@@ -208,7 +208,7 @@ function D(e) {
                             let { isShown: n } = t;
                             return (0, i.createElement)(
                                 I.Z,
-                                k(M({}, e), {
+                                M(k({}, e), {
                                     buttonRef: o,
                                     isActive: n,
                                     count: w,
@@ -222,7 +222,7 @@ function D(e) {
                 )
             ),
         V || t || z.push((0, r.jsx)(m.Z, { className: R.button }, 'clips')),
-        F && !H && z.push((0, r.jsx)(C.Z, { className: R.button }, 'for-later')),
+        F && !H && z.push((0, r.jsx)(y.Z, { className: R.button }, 'for-later')),
         G &&
             z.push(
                 (0, r.jsx)(

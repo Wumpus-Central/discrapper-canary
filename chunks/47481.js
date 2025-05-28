@@ -14,8 +14,8 @@ function d(e) {
         { channel: p, messages: h, oldestUnreadMessageId: f, treatSpam: m, summaries: g, selectedSummary: b } = e,
         _ = [],
         x = !1,
-        C = null != f ? a.default.extractTimestamp(f) : null,
-        y = null;
+        y = null != f ? a.default.extractTimestamp(f) : null,
+        C = null;
     return (
         h.forEach((e) => {
             var i, v, j;
@@ -27,20 +27,20 @@ function d(e) {
                     let n = a.default.extractTimestamp(g[e].startId),
                         r = a.default.extractTimestamp(g[e].endId);
                     if (t >= n && t <= r) {
-                        if (y === g[e].id) break;
+                        if (C === g[e].id) break;
                         _.push({
                             type: u.ys_.DIVIDER,
                             content: g[e].topic,
                             contentKey: g[e].id
                         }),
-                            (y = g[e].id);
+                            (C = g[e].id);
                         break;
                     }
                 }
             }
             let I = (0, l.vc)(e.timestamp, 'LL');
             I !== t &&
-                null == y &&
+                null == C &&
                 (_.push({
                     type: u.ys_.DIVIDER,
                     content: I,
@@ -70,7 +70,7 @@ function d(e) {
                           _.push(O))
                         : (E = (O = v).content[O.content.length - 1]),
                     [O, E])),
-            f === e.id && null != C)
+            f === e.id && null != y)
                 ? (null != P && P.type === u.ys_.DIVIDER
                       ? (P.unreadId = e.id)
                       : null !== S
@@ -86,15 +86,15 @@ function d(e) {
                               type: u.ys_.DIVIDER,
                               unreadId: e.id
                           }),
-                  (C = null))
-                : null != C &&
-                  a.default.extractTimestamp(e.id) > C &&
+                  (y = null))
+                : null != y &&
+                  a.default.extractTimestamp(e.id) > y &&
                   (e.isFirstMessageInForumPost(p) ||
                       _.push({
                           type: u.ys_.DIVIDER,
                           unreadId: e.id
                       }),
-                  (C = null));
+                  (y = null));
             let T = (0, c.f)(e, p);
             null != T &&
                 _.push({
@@ -110,8 +110,8 @@ function d(e) {
                 groupId: n
             };
             n === e.id && (d = w);
-            let { jumpSequenceId: R, jumpFlash: M, jumpTargetId: k } = h;
-            M && e.id === k && null != R && (w.flashKey = R),
+            let { jumpSequenceId: R, jumpFlash: k, jumpTargetId: M } = h;
+            k && e.id === M && null != R && (w.flashKey = R),
                 h.jumpTargetId === e.id && (w.jumpTarget = !0),
                 null != b &&
                     e.id === b.startId &&

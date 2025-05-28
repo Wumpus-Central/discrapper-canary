@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(388685);
 var r = n(147913),
     i = n(367907),
-    o = n(728345),
-    a = n(812206),
+    a = n(728345),
+    o = n(812206),
     s = n(314897),
     l = n(592125),
     c = n(944486),
@@ -26,7 +26,7 @@ function p(e) {
     return e.filter((e) => e.type === f.IIU.PLAYING && e.application_id).map((e) => e.application_id);
 }
 async function h(e) {
-    await o.ZP.fetchApplications(e, !1);
+    await a.ZP.fetchApplications(e, !1);
 }
 async function m(e) {
     if (null == e) return;
@@ -36,12 +36,12 @@ async function m(e) {
     if (0 === n.length) return;
     let r = p([...n]);
     await h([...r]);
-    let o = a.Z.getApplication(r[0]);
-    null != o &&
+    let a = o.Z.getApplication(r[0]);
+    null != a &&
         i.ZP.trackWithMetadata(f.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET, {
             channel_id: e,
             guild_id: t.guild_id,
-            game_name: o.name,
+            game_name: a.name,
             user_id: s.default.getId()
         });
 }

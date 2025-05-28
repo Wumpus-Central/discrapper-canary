@@ -1,13 +1,13 @@
 n.d(t, { Z: () => l });
 var r = n(255367),
     i = n(481060),
-    o = n(26033),
-    a = n(614716),
+    a = n(26033),
+    o = n(614716),
     s = n(388032);
 function l(e) {
     let { display: t, entry: n, onAction: l, onClose: c } = e,
-        u = (0, o.Mq)(n),
-        d = (0, a.Z)({
+        u = (0, a.Mq)(n),
+        d = (0, o.Z)({
             applicationId: u ? n.extra.application_id : void 0,
             onClose: c
         });

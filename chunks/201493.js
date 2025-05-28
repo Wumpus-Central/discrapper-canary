@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(102888),
     _ = n(65839),
     x = n(453879),
-    C = n(408310),
-    y = n(75666),
+    y = n(408310),
+    C = n(75666),
     v = n(981631),
     j = n(400816);
 let O = (e) => {
@@ -31,7 +31,7 @@ let O = (e) => {
             isLoading: N
         } = (0, l.cj)([m.Z], () => {
             let e = m.Z.getCurrentCategoryId(O.id),
-                t = m.Z.getDirectoryEntries(O.id, e === y.AR.ALL ? null : e),
+                t = m.Z.getDirectoryEntries(O.id, e === C.AR.ALL ? null : e),
                 n = m.Z.getDirectoryCategoryCounts(O.id);
             return {
                 currentCategoryId: e,
@@ -64,7 +64,7 @@ let O = (e) => {
                 searchResults: f.Z.getSearchResults(O.id, e)
             };
         }),
-        [M, k] = i.useState(A),
+        [k, M] = i.useState(A),
         L = '' !== A,
         { showHubEventsList: D } = c.Z.useExperiment(
             {
@@ -83,7 +83,7 @@ let O = (e) => {
     }),
         i.useEffect(() => {
             let { mostRecentQuery: e, showHubEventsList: t } = B.current;
-            h.c$(O.id), h.YZ(O.id), t && p.c(O.id), k(e);
+            h.c$(O.id), h.YZ(O.id), t && p.c(O.id), M(e);
         }, [O.id]),
         i.useEffect(() => {
             d.default.track(v.rMx.GUILD_DIRECTORY_CHANNEL_VIEWED, {
@@ -130,7 +130,7 @@ let O = (e) => {
                                       directoryGuildName: E.name,
                                       directoryGuildId: E.id,
                                       directoryChannelId: O.id,
-                                      currentCategoryId: I === y.AR.ALL ? null : I
+                                      currentCategoryId: I === C.AR.ALL ? null : I
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -151,21 +151,21 @@ let O = (e) => {
               }
             : void 0,
         F = (e) => {
-            0 !== M.trim().length &&
+            0 !== k.trim().length &&
                 e.charCode === v.yXg.ENTER &&
-                (h.Rq(O.id, M),
+                (h.Rq(O.id, k),
                 d.default.track(v.rMx.GUILD_DIRECTORY_SEARCH, {
                     directory_channel_id: O.id,
                     directory_guild_id: E.id
                 }));
         },
         H = () => {
-            k(''), h.So(O.id);
+            M(''), h.So(O.id);
         };
     return L
-        ? (0, r.jsx)(C.Z, {
-              searchQuery: M,
-              setSearchQuery: k,
+        ? (0, r.jsx)(y.Z, {
+              searchQuery: k,
+              setSearchQuery: M,
               mostRecentQuery: A,
               handleSearchKeyPress: F,
               handleClearSearch: H,
@@ -188,8 +188,8 @@ let O = (e) => {
               })
             : (0, r.jsx)(_.Z, {
                   channel: O,
-                  searchQuery: M,
-                  setSearchQuery: k,
+                  searchQuery: k,
+                  setSearchQuery: M,
                   handleSearchKeyPress: F,
                   handleClearSearch: H,
                   handleCreateOrAddGuild: G,

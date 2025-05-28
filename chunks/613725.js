@@ -31,9 +31,9 @@ function m() {
             size: a.EFr.SIZE_80,
             className: f.avatarSizeOverride
         }),
-        C = null;
+        y = null;
     return (
-        (C =
+        (y =
             null != n
                 ? (0, r.jsx)(s.Z, { guild: n })
                 : null != b
@@ -53,7 +53,7 @@ function m() {
                 }),
                 (0, r.jsx)('div', {
                     className: f.guildAvatar,
-                    children: C
+                    children: y
                 }),
                 (0, r.jsx)('svg', {
                     className: f.illustration,

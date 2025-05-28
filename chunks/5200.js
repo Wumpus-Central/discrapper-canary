@@ -1,10 +1,10 @@
-n.d(t, { Y: () => C }), n(388685);
+n.d(t, { Y: () => y }), n(388685);
 var r,
     i = n(255367),
     l = n(73800),
     a = n(120356),
     o = n.n(a),
-    s = n(714673),
+    s = n(240894),
     c = n(481060),
     u = n(542094),
     d = n(182906),
@@ -19,9 +19,9 @@ let b = ['embedded_cover'],
         friction: 24
     };
 var x = (((r = x || {})[(r.THIRTEEN_BY_ELEVEN = 0)] = 'THIRTEEN_BY_ELEVEN'), (r[(r.SIXTEEN_BY_NINE = 1)] = 'SIXTEEN_BY_NINE'), r);
-function C(e) {
+function y(e) {
     var t;
-    let { context: n, activityItem: r, onClick: a, aspectRatio: x = 0, animatedDivClass: C, commandOrigin: y } = e,
+    let { context: n, activityItem: r, onClick: a, aspectRatio: x = 0, animatedDivClass: y, commandOrigin: C } = e,
         {
             onActivityItemSelected: v,
             imageBackground: j,
@@ -35,7 +35,7 @@ function C(e) {
             onActivityItemSelected: a,
             embeddedActivitiesManager: h.Z,
             assetNames: b,
-            commandOrigin: y
+            commandOrigin: C
         }),
         [I, P] = l.useState(!1),
         S = l.useCallback(() => {
@@ -106,7 +106,7 @@ function C(e) {
                     theme: f.BRd.DARK,
                     children: (e) =>
                         (0, i.jsxs)(s.animated.div, {
-                            className: o()(e, g.activityItem, C, {
+                            className: o()(e, g.activityItem, y, {
                                 [g.activityItem_13_11]: 0 === x,
                                 [g.activityItem_16_9]: 1 === x
                             }),
@@ -129,4 +129,4 @@ function C(e) {
         })
     });
 }
-C.AspectRatio = x;
+y.AspectRatio = x;

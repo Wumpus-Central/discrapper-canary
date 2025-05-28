@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => k });
+n.d(t, { ZP: () => M });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -17,8 +17,8 @@ var i = n(120356),
     b = n(592125),
     _ = n(271383),
     x = n(430824),
-    C = n(496675),
-    y = n(158776),
+    y = n(496675),
+    C = n(158776),
     v = n(944486),
     j = n(885110),
     O = n(594174),
@@ -74,7 +74,7 @@ function A(e, t) {
 function w(e) {
     let { user: t, guildId: n, onClose: i } = e,
         l = t.id,
-        s = (0, a.e7)([j.Z, y.Z, g.default], () => (l === g.default.getId() ? j.Z.getStatus() : y.Z.getStatus(l, n)), [l, n]);
+        s = (0, a.e7)([j.Z, C.Z, g.default], () => (l === g.default.getId() ? j.Z.getStatus() : C.Z.getStatus(l, n)), [l, n]);
     return (0, r.jsxs)('div', {
         className: N.topRow,
         children: [
@@ -177,19 +177,19 @@ function R(e) {
             )
     });
 }
-function M(e) {
+function k(e) {
     let { user: t, member: i, guildId: l } = e,
         m = (0, a.e7)([x.Z], () => x.Z.getGuild(l)),
         {
             canKickUser: _,
-            canBanUser: y,
+            canBanUser: C,
             canModerateMembers: j
         } = (0, a.cj)(
-            [C.Z, O.default, x.Z],
+            [y.Z, O.default, x.Z],
             () => ({
                 canKickUser: (0, h.BK)(t, m),
                 canBanUser: (0, h.mm)(t, m),
-                canModerateMembers: null != m && (0, p.F)(m.id, t.id, [O.default, x.Z, C.Z])
+                canModerateMembers: null != m && (0, p.F)(m.id, t.id, [O.default, x.Z, y.Z])
             }),
             [t, m]
         ),
@@ -200,8 +200,8 @@ function M(e) {
             location: S,
             locations: P
         }),
-        M = (0, a.e7)([g.default], () => g.default.getId() === (null == t ? void 0 : t.id)),
-        k = (0, a.e7)(
+        k = (0, a.e7)([g.default], () => g.default.getId() === (null == t ? void 0 : t.id)),
+        M = (0, a.e7)(
             [v.Z, b.Z],
             () => {
                 var e;
@@ -214,7 +214,7 @@ function M(e) {
         className: N.bottomRow,
         children: [
             (0, r.jsx)(R, {
-                disabled: M,
+                disabled: k,
                 text: Z.intl.string(Z.t['g33r/P']),
                 onClick: () => {
                     s.Z.openPrivateChannel({ recipientIds: t.id });
@@ -239,7 +239,7 @@ function M(e) {
                                     location: S,
                                     guildId: l,
                                     user: t,
-                                    modReportId: k
+                                    modReportId: M
                                 })
                             );
                     });
@@ -252,7 +252,7 @@ function M(e) {
                 })
             }),
             (0, r.jsx)(R, {
-                disabled: !y,
+                disabled: !C,
                 text: Z.intl.string(Z.t['5MBJ5O']),
                 onClick: () => {
                     (0, o.ZDy)(async () => {
@@ -264,7 +264,7 @@ function M(e) {
                                     location: S,
                                     guildId: l,
                                     user: t,
-                                    modReportId: k
+                                    modReportId: M
                                 })
                             );
                     });
@@ -290,7 +290,7 @@ function M(e) {
                               guildId: i.guildId,
                               userId: i.userId,
                               anaylticsLocations: P,
-                              modReportId: k
+                              modReportId: M
                           });
                 },
                 children: (0, r.jsx)(o.YlB, {
@@ -316,7 +316,7 @@ function M(e) {
         ]
     });
 }
-function k(e) {
+function M(e) {
     let { userId: t, guildId: n, onClose: i } = e,
         l = (0, a.e7)([O.default], () => O.default.getUser(t), [t]),
         o = (0, a.e7)([_.ZP], () => _.ZP.getMember(n, t), [n, t]);
@@ -330,7 +330,7 @@ function k(e) {
                       guildId: n,
                       onClose: i
                   }),
-                  (0, r.jsx)(M, {
+                  (0, r.jsx)(k, {
                       user: l,
                       member: o,
                       guildId: n

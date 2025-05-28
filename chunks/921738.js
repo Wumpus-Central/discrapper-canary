@@ -3,22 +3,22 @@ function n(e) {
         var t = e.which || e.keyCode || e.charCode;
         t && (e = t);
     }
-    if ('number' == typeof e) return a[e];
+    if ('number' == typeof e) return o[e];
     var n = String(e),
-        o = r[n.toLowerCase()];
-    if (o) return o;
-    var o = i[n.toLowerCase()];
-    return o || (1 === n.length ? n.charCodeAt(0) : void 0);
+        a = r[n.toLowerCase()];
+    if (a) return a;
+    var a = i[n.toLowerCase()];
+    return a || (1 === n.length ? n.charCodeAt(0) : void 0);
 }
 n.isEventKey = function (e, t) {
     if (e && 'object' == typeof e) {
         var n = e.which || e.keyCode || e.charCode;
         if (null == n) return !1;
         if ('string' == typeof t) {
-            var o = r[t.toLowerCase()];
-            if (o) return o === n;
-            var o = i[t.toLowerCase()];
-            if (o) return o === n;
+            var a = r[t.toLowerCase()];
+            if (a) return a === n;
+            var a = i[t.toLowerCase()];
+            if (a) return a === n;
         } else if ('number' == typeof t) return t === n;
         return !1;
     }
@@ -93,10 +93,10 @@ var r =
         del: 46,
         cmd: 91
     });
-for (o = 97; o < 123; o++) r[String.fromCharCode(o)] = o - 32;
-for (var o = 48; o < 58; o++) r[o - 48] = o;
-for (o = 1; o < 13; o++) r['f' + o] = o + 111;
-for (o = 0; o < 10; o++) r['numpad ' + o] = o + 96;
-var a = (t.names = t.title = {});
-for (o in r) a[r[o]] = o;
+for (a = 97; a < 123; a++) r[String.fromCharCode(a)] = a - 32;
+for (var a = 48; a < 58; a++) r[a - 48] = a;
+for (a = 1; a < 13; a++) r['f' + a] = a + 111;
+for (a = 0; a < 10; a++) r['numpad ' + a] = a + 96;
+var o = (t.names = t.title = {});
+for (a in r) o[r[a]] = a;
 for (var s in i) r[s] = i[s];

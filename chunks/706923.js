@@ -1,46 +1,46 @@
-t.d(n, { default: () => _ }), t(388685);
-var l = t(255367);
-t(73800);
-var s = t(399606),
-    i = t(481060),
-    o = t(904245),
-    a = t(434404),
-    r = t(592125),
-    c = t(812545),
-    u = t(981631),
-    d = t(388032),
-    g = t(739788);
+s.d(n, { default: () => _ }), s(388685);
+var t = s(255367);
+s(73800);
+var l = s(399606),
+    i = s(481060),
+    o = s(904245),
+    a = s(434404),
+    r = s(592125),
+    c = s(812545),
+    u = s(981631),
+    d = s(388032),
+    g = s(739788);
 function _(e) {
-    let { channelId: n, messageId: t, transitionState: _, onClose: h } = e,
-        F = (0, s.e7)([r.Z], () => r.Z.getChannel(n)),
-        [S, f] = (0, c.Z)(n),
-        C = null == F ? void 0 : F.guild_id;
-    return (0, l.jsx)(i.ConfirmModal, {
+    let { channelId: n, messageId: s, transitionState: _, onClose: f } = e,
+        h = (0, l.e7)([r.Z], () => r.Z.getChannel(n)),
+        [m, p] = (0, c.Z)(n),
+        F = null == h ? void 0 : h.guild_id;
+    return (0, t.jsx)(i.ConfirmModal, {
         header: d.intl.string(d.t.aIz1oa),
         confirmText: d.intl.string(d.t['cY+Ooa']),
         cancelText: d.intl.string(d.t['ETE/oK']),
         confirmButtonColor: i.zxk.Colors.BRAND,
-        onConfirm: () => o.Z.crosspostMessage(n, t),
+        onConfirm: () => o.Z.crosspostMessage(n, s),
         transitionState: _,
-        onClose: h,
-        children: (0, l.jsx)(i.Text, {
+        onClose: f,
+        children: (0, t.jsx)(i.Text, {
             variant: 'text-md/normal',
             className: g.spacing,
-            children: f
-                ? (0, l.jsx)(i.$jN, {})
-                : null != S && null != S.guildsFollowing && S.guildsFollowing > 0
-                  ? (0, l.jsxs)(l.Fragment, {
+            children: p
+                ? (0, t.jsx)(i.$jN, {})
+                : null != m && null != m.guildsFollowing && m.guildsFollowing > 0
+                  ? (0, t.jsxs)(t.Fragment, {
                         children: [
-                            (0, l.jsx)(i.Text, {
+                            (0, t.jsx)(i.Text, {
                                 className: g.spacing,
                                 variant: 'text-sm/normal',
-                                children: d.intl.format(d.t.GCGrND, { numGuildsFollowing: S.guildsFollowing })
+                                children: d.intl.format(d.t.GCGrND, { numGuildsFollowing: m.guildsFollowing })
                             }),
-                            (0, l.jsx)(i.Text, {
+                            (0, t.jsx)(i.Text, {
                                 variant: 'text-sm/normal',
                                 children: d.intl.format(d.t.IMhGZ2, {
                                     onClick: () => {
-                                        null != C && null != h && (h(), a.Z.open(C, u.pNK.ANALYTICS));
+                                        null != F && null != f && (f(), a.Z.open(F, u.pNK.ANALYTICS));
                                     }
                                 })
                             })

@@ -16,8 +16,8 @@ var i,
     b = n(592125),
     _ = n(480294),
     x = n(580005),
-    C = n(699516),
-    y = n(594174),
+    y = n(699516),
+    C = n(594174),
     v = n(981631);
 let j = !1,
     O = '',
@@ -41,11 +41,11 @@ function A() {
         return (
             null != r && r.clearQuery(),
             (t = e),
-            (n = C.Z.getFriendIDs()),
+            (n = y.Z.getFriendIDs()),
             (null == t ? void 0 : t.isPrivate()) && (n = n.filter((e) => !t.recipients.includes(e))),
             (I = n
                 .reduce((e, t) => {
-                    let n = y.default.getUser(t);
+                    let n = C.default.getUser(t);
                     return (
                         null == n ||
                             n.isProvisional ||
@@ -83,7 +83,7 @@ function A() {
                         e.forEach((e) => {
                             let r = x.Z.getScoreWithoutFetchingLatest(e.id),
                                 i = e.getRecipientId(),
-                                l = 0.2 * !!C.Z.isFriend(i),
+                                l = 0.2 * !!y.Z.isFriend(i),
                                 a = 0.1 * (null != b.Z.getDMFromUserId(i));
                             n[i] = 1 + r / t + l + a;
                         }),
@@ -97,7 +97,7 @@ function A() {
 function w() {
     if (!j) return !1;
     let e = P;
-    return (P = s().some(C.Z.getRelationships(), (e) => e === v.OGo.FRIEND)) !== e;
+    return (P = s().some(y.Z.getRelationships(), (e) => e === v.OGo.FRIEND)) !== e;
 }
 function R(e, t) {
     if (_.Z.hasConsented(v.pjP.PERSONALIZATION)) {
@@ -108,12 +108,12 @@ function R(e, t) {
     }
     return (0, m._I)(g.ZP.getName(e.user).toLocaleLowerCase()).localeCompare((0, m._I)(g.ZP.getName(t.user).toLocaleLowerCase()));
 }
-function M(e) {
+function k(e) {
     let { results: t } = e;
     if (!j || '' === O) return;
     let n = [];
     for (let { id: e, comparator: r } of t) {
-        let t = y.default.getUser(e);
+        let t = C.default.getUser(e);
         null != t &&
             n.push({
                 user: t,
@@ -122,12 +122,12 @@ function M(e) {
     }
     (I = n), G.emitChange();
 }
-function k() {
-    return null != r && (r.destroy(), (r = null)), d.Z.getSearchContext(M, 1000);
+function M() {
+    return null != r && (r.destroy(), (r = null)), d.Z.getSearchContext(k, 1000);
 }
 function L(e) {
     if (e.key !== v.vTt) return !1;
-    (j = !0), w(), (r = k()), (Z = null), T('');
+    (j = !0), w(), (r = M()), (Z = null), T('');
 }
 function D(e) {
     if (e.key !== v.vTt) return !1;
@@ -138,7 +138,7 @@ function U() {
 }
 class B extends (i = c.ZP.Store) {
     initialize() {
-        this.waitFor(y.default, b.Z, C.Z, p.Z, _.Z), this.syncWith([y.default, b.Z], A), this.syncWith([C.Z], w);
+        this.waitFor(C.default, b.Z, y.Z, p.Z, _.Z), this.syncWith([C.default, b.Z], A), this.syncWith([y.Z], w);
     }
     getResults() {
         return I;
@@ -184,7 +184,7 @@ let G = new B(u.Z, {
         MODAL_PUSH: L,
         SHOW_ACTION_SHEET: L,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function (e) {
-            (j = !0), w(), (r = k()), (Z = e.channelId), T('');
+            (j = !0), w(), (r = M()), (Z = e.channelId), T('');
         },
         MODAL_POP: D,
         HIDE_ACTION_SHEET: D,

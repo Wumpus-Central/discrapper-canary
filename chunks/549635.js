@@ -6,8 +6,8 @@ n.d(t, {
     n(997841);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(768494),
     l = n(124347),
     c = n(80966),
@@ -79,8 +79,8 @@ function S(e, t) {
         r,
         i = T(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -89,8 +89,8 @@ function T(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function A(e, t) {
@@ -107,7 +107,7 @@ function N(e) {
 }
 function C(e) {
     let t,
-        { media: n, obscured: i = !1, maxWidth: o, maxHeight: s, onContextMenu: d } = e,
+        { media: n, obscured: i = !1, maxWidth: a, maxHeight: s, onContextMenu: d } = e,
         { width: _, height: p, url: m, proxyUrl: y, alt: v, type: T, maxWidth: A, maxHeight: C } = n,
         P = S(n, ['width', 'height', 'url', 'proxyUrl', 'alt', 'type', 'maxWidth', 'maxHeight']),
         { zoomed: w, setZoomed: D } = (0, E.Y)(),
@@ -124,7 +124,7 @@ function C(e) {
                 src: L,
                 width: _,
                 height: p,
-                maxWidth: o,
+                maxWidth: a,
                 maxHeight: s,
                 poster: e,
                 naturalWidth: _,
@@ -150,7 +150,7 @@ function C(e) {
                           src: L,
                           width: _,
                           height: p,
-                          maxWidth: o,
+                          maxWidth: a,
                           maxHeight: s,
                           useFullWidth: !0,
                           shouldLink: !1,
@@ -167,7 +167,7 @@ function C(e) {
                       onContextMenu: d,
                       className: b.dimensionlessImage,
                       style: {
-                          maxWidth: o,
+                          maxWidth: a,
                           maxHeight: s
                       }
                   })),
@@ -175,10 +175,10 @@ function C(e) {
             ? (0, r.jsx)(u.Z, {
                   width: _,
                   height: p,
-                  maxWidth: o,
+                  maxWidth: a,
                   maxHeight: s,
                   active: w,
-                  className: a()(b.wrapper, { [b.zoomed]: w }),
+                  className: o()(b.wrapper, { [b.zoomed]: w }),
                   onClick: () => {
                       D(!w), (0, g.yg)(w ? g.uG.ZOOM_OUT_IMAGE_PRESSED : g.uG.ZOOM_IN_IMAGE_PRESSED);
                   },

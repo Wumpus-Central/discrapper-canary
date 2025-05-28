@@ -8,21 +8,21 @@ n.d(t, {
     n(642613);
 let r = ['COLD_START'],
     i = 'NO_REASONS',
-    o = !0,
-    a = new Set();
+    a = !0,
+    o = new Set();
 function s() {
-    return a.size > 0 || o;
+    return o.size > 0 || a;
 }
 function l() {
-    let e = [...(o ? r : []), ...a].sort();
+    let e = [...(a ? r : []), ...o].sort();
     return e.length > 0 ? e.join(',') : i;
 }
 function c(e) {
-    d(() => a.add(e));
+    d(() => o.add(e));
 }
 function u(e) {
-    d(() => a.delete(e));
+    d(() => o.delete(e));
 }
 function d(e) {
-    s(), (o = !1), e(), s();
+    s(), (a = !1), e(), s();
 }

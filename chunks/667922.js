@@ -1,6 +1,6 @@
 n.d(t, { Z: () => y });
-var r = n(255367),
-    i = n(73800),
+var i = n(255367),
+    r = n(73800),
     l = n(442837),
     a = n(481060),
     o = n(543241),
@@ -10,59 +10,60 @@ var r = n(255367),
     d = n(695346),
     f = n(496675),
     g = n(768581),
-    b = n(585483),
+    m = n(585483),
     p = n(176354),
-    O = n(981631),
-    m = n(185923),
-    h = n(388032);
+    b = n(981631),
+    h = n(185923),
+    O = n(388032);
 function y(e, t) {
-    let { reducedMotion: n } = i.useContext(a.Sfi),
+    let { reducedMotion: n } = r.useContext(a.Sfi),
         g = (0, u.$R)(t),
-        y = (0, l.e7)([f.Z], () => (t.isPrivate() || f.Z.can(O.Plq.ADD_REACTIONS, t)) && g, [t, g]),
-        E = (0, o.MZ)(t.getGuildId());
-    if (!d.nc.getSetting() || !y || e.type === O.uaV.GUILD_INVITE_REMINDER) return null;
-    let j = E.filter(
-        (e) =>
-            !p.ZP.isEmojiFilteredOrLocked({
-                emoji: e,
-                channel: t,
-                intention: m.Hz.REACTION
-            })
-    )
+        y = (0, l.e7)([f.Z], () => (t.isPrivate() || f.Z.can(b.Plq.ADD_REACTIONS, t)) && g, [t, g]),
+        v = (0, o.MZ)(t.getGuildId());
+    if (!d.nc.getSetting() || !y || e.type === b.uaV.GUILD_INVITE_REMINDER) return null;
+    let j = v
+        .filter(
+            (e) =>
+                !p.ZP.isEmojiFilteredOrLocked({
+                    emoji: e,
+                    channel: t,
+                    intention: h.Hz.REACTION
+                })
+        )
         .slice(0, 12)
-        .map((i, l) => {
+        .map((r, l) => {
             var o, u;
-            return (0, r.jsx)(
+            return (0, i.jsx)(
                 a.sNh,
                 {
                     color: 'default',
-                    id: null != (u = null != (o = i.id) ? o : i.optionallyDiverseSequence) ? u : i.name,
-                    label: ':'.concat(i.name, ':'),
+                    id: null != (u = null != (o = r.id) ? o : r.optionallyDiverseSequence) ? u : r.name,
+                    label: ':'.concat(r.name, ':'),
                     icon: (e) => {
                         var t, l;
-                        return (0, r.jsx)(
-                            v,
+                        return (0, i.jsx)(
+                            E,
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
-                                        r = Object.keys(n);
+                                        i = Object.keys(n);
                                     'function' == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
+                                        (i = i.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                             })
                                         )),
-                                        r.forEach(function (t) {
-                                            var r;
-                                            (r = n[t]),
+                                        i.forEach(function (t) {
+                                            var i;
+                                            (i = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
-                                                          value: r,
+                                                          value: i,
                                                           enumerable: !0,
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = r);
+                                                    : (e[t] = i);
                                         });
                                 }
                                 return e;
@@ -70,15 +71,15 @@ function y(e, t) {
                             (l = l =
                                 {
                                     reducedMotionEnabled: n.enabled,
-                                    emoji: i
+                                    emoji: r
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(l))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
+                                          var i = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, i);
                                       }
                                       return n;
                                   })(Object(l)).forEach(function (e) {
@@ -88,47 +89,47 @@ function y(e, t) {
                         );
                     },
                     action: () => {
-                        (0, s.rU)(t.id, e.id, (0, c.g1)(i), s.TW.MESSAGE_CONTEXT_MENU);
+                        (0, s.rU)(t.id, e.id, (0, c.g1)(r), s.TW.MESSAGE_CONTEXT_MENU);
                     },
                     dontCloseOnActionIfHoldingShiftKey: !0
                 },
                 l
             );
         });
-    return (0, r.jsx)(a.sNh, {
+    return (0, i.jsx)(a.sNh, {
         id: 'add-reaction',
-        label: h.intl.string(h.t.lfIHs7),
+        label: O.intl.string(O.t.lfIHs7),
         action: () => {
-            b.S.dispatchKeyed(O.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+            m.S.dispatchKeyed(b.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
         },
         color: 'default',
-        children: (0, r.jsxs)(r.Fragment, {
+        children: (0, i.jsxs)(i.Fragment, {
             children: [
                 j,
-                (0, r.jsx)(a.Clw, {}),
-                (0, r.jsx)(a.sNh, {
+                (0, i.jsx)(a.Clw, {}),
+                (0, i.jsx)(a.sNh, {
                     color: 'default',
                     id: 'other-reactions',
-                    label: h.intl.string(h.t['OBCR+v']),
+                    label: O.intl.string(O.t['OBCR+v']),
                     icon: a.EO4,
                     action: () => {
-                        b.S.dispatchKeyed(O.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+                        m.S.dispatchKeyed(b.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
                     }
                 })
             ]
         })
     });
 }
-function v(e) {
+function E(e) {
     var t;
-    let { emoji: n, reducedMotionEnabled: i, className: l = '', isFocused: a = !1 } = e;
-    return (0, r.jsx)('img', {
+    let { emoji: n, reducedMotionEnabled: r, className: l = '', isFocused: a = !1 } = e;
+    return (0, i.jsx)('img', {
         className: l,
         src:
             null != n.id
                 ? g.ZP.getEmojiURL({
                       id: n.id,
-                      animated: n.animated && (!i || a),
+                      animated: n.animated && (!r || a),
                       size: 18
                   })
                 : p.ZP.getURL(null != (t = n.optionallyDiverseSequence) ? t : ''),

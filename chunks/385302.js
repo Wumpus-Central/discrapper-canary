@@ -1,7 +1,7 @@
 n.d(t, { Z: () => g });
-var r = n(255367);
+var i = n(255367);
 n(73800);
-var i = n(442837),
+var r = n(442837),
     l = n(481060),
     a = n(668781),
     o = n(79390),
@@ -12,9 +12,9 @@ var i = n(442837),
     f = n(388032);
 function g(e, t) {
     let n = (0, c.$R)(t);
-    return !(0, i.e7)([u.Z], () => u.Z.can(d.Plq.MANAGE_MESSAGES, t) && n, [t, n]) || null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, o.eQ)(e))
+    return !(0, r.e7)([u.Z], () => u.Z.can(d.Plq.MANAGE_MESSAGES, t) && n, [t, n]) || null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, o.eQ)(e))
         ? null
-        : (0, r.jsx)(l.sNh, {
+        : (0, i.jsx)(l.sNh, {
               id: 'remove-reactions',
               label: f.intl.string(f.t.ZbtGBg),
               action: function (n) {

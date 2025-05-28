@@ -1,8 +1,8 @@
 n.d(t, { r: () => u }), n(415506), n(388685);
 var r = n(754700),
     i = n(319245),
-    o = n(918701);
-function a(e, t, n) {
+    a = n(918701);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -81,7 +81,7 @@ class u {
         return this.quest.rewardsConfig.platforms;
     }
     get questType() {
-        return (0, o.q8)({ config: this.quest }) ? i.W.VIDEO : i.W.GAMEPLAY;
+        return (0, a.q8)({ config: this.quest }) ? i.W.VIDEO : i.W.GAMEPLAY;
     }
     get defaultInGameTask() {
         var e;
@@ -95,10 +95,10 @@ class u {
         var e, t, n;
         if (null == this.quest.taskConfigV2) return null;
         let i = null == (e = this.quest.taskConfigV2) ? void 0 : e.tasks[r.X.WATCH_VIDEO],
-            o = null == (t = this.quest.taskConfigV2) ? void 0 : t.tasks[r.X.WATCH_VIDEO_ON_MOBILE];
-        return null != i && null != o ? i : null != (n = null != o ? o : i) ? n : null;
+            a = null == (t = this.quest.taskConfigV2) ? void 0 : t.tasks[r.X.WATCH_VIDEO_ON_MOBILE];
+        return null != i && null != a ? i : null != (n = null != a ? a : i) ? n : null;
     }
     constructor(e) {
-        a(this, 'quest', void 0), (this.quest = e);
+        o(this, 'quest', void 0), (this.quest = e);
     }
 }

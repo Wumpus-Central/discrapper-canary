@@ -1,11 +1,11 @@
 Object.defineProperty(t, '__esModule', { value: !0 });
 var r = n(73800),
     i = n(743989),
-    o = (function (e) {
+    a = (function (e) {
         return e && 'object' == typeof e && 'default' in e ? e : { default: e };
     })(r),
-    a = function () {
-        return (a =
+    o = function () {
+        return (o =
             Object.assign ||
             function (e) {
                 for (var t, n = 1, r = arguments.length; n < r; n++) for (var i in (t = arguments[n])) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i]);
@@ -22,19 +22,19 @@ function s(e, t) {
     return n;
 }
 function l(e, t, n, r) {
-    return new (n || (n = Promise))(function (i, o) {
-        function a(e) {
+    return new (n || (n = Promise))(function (i, a) {
+        function o(e) {
             try {
                 l(r.next(e));
             } catch (e) {
-                o(e);
+                a(e);
             }
         }
         function s(e) {
             try {
                 l(r.throw(e));
             } catch (e) {
-                o(e);
+                a(e);
             }
         }
         function l(e) {
@@ -46,7 +46,7 @@ function l(e, t, n, r) {
                       : new n(function (e) {
                             e(t);
                         })
-                  ).then(a, s);
+                  ).then(o, s);
         }
         l((r = r.apply(e, t || [])).next());
     });
@@ -55,8 +55,8 @@ function c(e, t) {
     var n,
         r,
         i,
-        o,
-        a = {
+        a,
+        o = {
             label: 0,
             sent: function () {
                 if (1 & i[0]) throw i[1];
@@ -66,75 +66,75 @@ function c(e, t) {
             ops: []
         };
     return (
-        (o = {
+        (a = {
             next: s(0),
             throw: s(1),
             return: s(2)
         }),
         'function' == typeof Symbol &&
-            (o[Symbol.iterator] = function () {
+            (a[Symbol.iterator] = function () {
                 return this;
             }),
-        o
+        a
     );
-    function s(o) {
+    function s(a) {
         return function (s) {
-            return (function (o) {
+            return (function (a) {
                 if (n) throw TypeError('Generator is already executing.');
-                for (; a; )
+                for (; o; )
                     try {
-                        if (((n = 1), r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done)) return i;
-                        switch (((r = 0), i && (o = [2 & o[0], i.value]), o[0])) {
+                        if (((n = 1), r && (i = 2 & a[0] ? r.return : a[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, a[1])).done)) return i;
+                        switch (((r = 0), i && (a = [2 & a[0], i.value]), a[0])) {
                             case 0:
                             case 1:
-                                i = o;
+                                i = a;
                                 break;
                             case 4:
                                 return (
-                                    a.label++,
+                                    o.label++,
                                     {
-                                        value: o[1],
+                                        value: a[1],
                                         done: !1
                                     }
                                 );
                             case 5:
-                                a.label++, (r = o[1]), (o = [0]);
+                                o.label++, (r = a[1]), (a = [0]);
                                 continue;
                             case 7:
-                                (o = a.ops.pop()), a.trys.pop();
+                                (a = o.ops.pop()), o.trys.pop();
                                 continue;
                             default:
-                                if (!(i = (i = a.trys).length > 0 && i[i.length - 1]) && (6 === o[0] || 2 === o[0])) {
-                                    a = 0;
+                                if (!(i = (i = o.trys).length > 0 && i[i.length - 1]) && (6 === a[0] || 2 === a[0])) {
+                                    o = 0;
                                     continue;
                                 }
-                                if (3 === o[0] && (!i || (o[1] > i[0] && o[1] < i[3]))) {
-                                    a.label = o[1];
+                                if (3 === a[0] && (!i || (a[1] > i[0] && a[1] < i[3]))) {
+                                    o.label = a[1];
                                     break;
                                 }
-                                if (6 === o[0] && a.label < i[1]) {
-                                    (a.label = i[1]), (i = o);
+                                if (6 === a[0] && o.label < i[1]) {
+                                    (o.label = i[1]), (i = a);
                                     break;
                                 }
-                                if (i && a.label < i[2]) {
-                                    (a.label = i[2]), a.ops.push(o);
+                                if (i && o.label < i[2]) {
+                                    (o.label = i[2]), o.ops.push(a);
                                     break;
                                 }
-                                i[2] && a.ops.pop(), a.trys.pop();
+                                i[2] && o.ops.pop(), o.trys.pop();
                                 continue;
                         }
-                        o = t.call(e, a);
+                        a = t.call(e, o);
                     } catch (e) {
-                        (o = [6, e]), (r = 0);
+                        (a = [6, e]), (r = 0);
                     } finally {
                         n = i = 0;
                     }
-                if (5 & o[0]) throw o[1];
+                if (5 & a[0]) throw a[1];
                 return {
-                    value: o[0] ? o[1] : void 0,
+                    value: a[0] ? a[1] : void 0,
                     done: !0
                 };
-            })([o, s]);
+            })([a, s]);
         };
     }
 }
@@ -142,13 +142,13 @@ function u(e) {
     var t = e || d(),
         n = r.useState(t),
         i = n[0],
-        o = n[1];
+        a = n[1];
     return (
         r.useEffect(
             function () {
                 if ('undefined' != typeof window && 'matchMedia' in window) {
                     var t = function () {
-                            o(e || d());
+                            a(e || d());
                         },
                         n = window.matchMedia('screen and (resolution: '.concat(i, 'dppx)'));
                     return (
@@ -181,11 +181,11 @@ function m(e, t) {
             height: 0
         }),
         i = n[0],
-        o = n[1];
+        a = n[1];
     r.useEffect(function () {
         if ('undefined' != typeof window && t) {
             var e = function () {
-                o({
+                a({
                     width: window.innerWidth,
                     height: window.innerHeight
                 });
@@ -198,14 +198,14 @@ function m(e, t) {
             );
         }
     }, []);
-    var a,
+    var o,
         s,
         l,
         c = r.useRef(
             new _(
-                ((a = function (e) {
+                ((o = function (e) {
                     p &&
-                        o({
+                        a({
                             width: e[e.length - 1].contentRect.width,
                             height: e[e.length - 1].contentRect.height
                         });
@@ -216,7 +216,7 @@ function m(e, t) {
                     for (var e = this, t = [], n = 0; n < arguments.length; n++) t[n] = arguments[n];
                     clearTimeout(l),
                         (l = window.setTimeout(function () {
-                            return a.apply(e, t);
+                            return o.apply(e, t);
                         }, s));
                 })
             )
@@ -254,9 +254,9 @@ function b(e) {
     var t = e.riveLoaded,
         n = void 0 !== t && t,
         i = e.canvasElem,
-        o = e.containerRef,
-        a = e.options,
-        s = void 0 === a ? {} : a,
+        a = e.containerRef,
+        o = e.options,
+        s = void 0 === o ? {} : o,
         l = e.onCanvasHasResized,
         c = e.artboardBounds,
         d = E(s),
@@ -283,7 +283,7 @@ function b(e) {
         C = d.shouldResizeCanvasToContainer,
         P = d.useDevicePixelRatio,
         R = d.customDevicePixelRatio,
-        w = m(o, C),
+        w = m(a, C),
         D = u(R),
         L = null != c ? c : {},
         x = L.maxX,
@@ -294,8 +294,8 @@ function b(e) {
                     t,
                     n,
                     r,
-                    i = null != (t = null == (e = o.current) ? void 0 : e.clientWidth) ? t : 0,
-                    a = null != (r = null == (n = o.current) ? void 0 : n.clientHeight) ? r : 0;
+                    i = null != (t = null == (e = a.current) ? void 0 : e.clientWidth) ? t : 0,
+                    o = null != (r = null == (n = a.current) ? void 0 : n.clientHeight) ? r : 0;
                 return N && c
                     ? {
                           width: i,
@@ -303,21 +303,21 @@ function b(e) {
                       }
                     : {
                           width: i,
-                          height: a
+                          height: o
                       };
             },
-            [o, N, x, k]
+            [a, N, x, k]
         );
     r.useEffect(
         function () {
-            if (C && o.current && n) {
+            if (C && a.current && n) {
                 var e = M(),
                     t = e.width,
                     r = e.height,
-                    a = !1;
+                    o = !1;
                 if (i) {
                     var s = t !== h || r !== p;
-                    if ((d.fitCanvasToArtboardHeight && s && ((o.current.style.height = r + 'px'), (a = !0)), d.useDevicePixelRatio)) {
+                    if ((d.fitCanvasToArtboardHeight && s && ((a.current.style.height = r + 'px'), (o = !0)), d.useDevicePixelRatio)) {
                         if (s || t * D !== v || r * D !== O) {
                             var c = D * t,
                                 u = D * r;
@@ -329,7 +329,7 @@ function b(e) {
                                     width: c,
                                     height: u
                                 }),
-                                (a = !0);
+                                (o = !0);
                         }
                     } else
                         s &&
@@ -339,16 +339,16 @@ function b(e) {
                                 width: t,
                                 height: r
                             }),
-                            (a = !0));
+                            (o = !0));
                     g({
                         width: t,
                         height: r
                     });
                 }
-                l && (T || a) && l && l(), T && A(!1);
+                l && (T || o) && l && l(), T && A(!1);
             }
         },
-        [i, o, w, D, M, T, A, O, v, p, h, l, C, N, P, n]
+        [i, a, w, D, M, T, A, O, v, p, h, l, C, N, P, n]
     ),
         r.useEffect(
             function () {
@@ -399,25 +399,25 @@ function T(e) {
         l = e.style,
         c = e.children,
         u = s(e, ['setContainerRef', 'setCanvasRef', 'className', 'style', 'children']),
-        d = a(
+        d = o(
             {
                 width: '100%',
                 height: '100%'
             },
             l
         );
-    return o.default.createElement(
+    return a.default.createElement(
         'div',
-        a(
+        o(
             {
                 ref: t,
                 className: i
             },
             !i && { style: d }
         ),
-        o.default.createElement(
+        a.default.createElement(
             'canvas',
-            a(
+            o(
                 {
                     ref: n,
                     style: {
@@ -474,7 +474,7 @@ function A(e, t) {
                     n = null != f;
                 if (null == f) {
                     var r = h.useOffscreenRenderer;
-                    (t = new i.Rive(a(a({ useOffscreenRenderer: r }, e), { canvas: s }))).on(i.EventType.Load, function () {
+                    (t = new i.Rive(o(o({ useOffscreenRenderer: r }, e), { canvas: s }))).on(i.EventType.Load, function () {
                         (n = !0), s ? _(t) : t.cleanup();
                     });
                 }
@@ -538,9 +538,9 @@ function A(e, t) {
     );
     var C = r.useCallback(
         function (e) {
-            return o.default.createElement(
+            return a.default.createElement(
                 T,
-                a(
+                o(
                     {
                         setContainerRef: O,
                         setCanvasRef: y
@@ -562,7 +562,7 @@ function A(e, t) {
 }
 function N(e, t, n) {
     var i = r.useState(null),
-        o = i[0],
+        a = i[0],
         s = i[1],
         l = r.useState(n.defaultValue),
         c = l[0],
@@ -607,9 +607,9 @@ function N(e, t, n) {
     );
     var E = r.useCallback(
             function (e) {
-                if (o && p.current === t)
+                if (a && p.current === t)
                     try {
-                        return e(o), void (m.current.getExtendedData && _(m.current.getExtendedData(o)));
+                        return e(a), void (m.current.getExtendedData && _(m.current.getExtendedData(a)));
                     } catch (e) {}
                 if (p.current)
                     try {
@@ -617,7 +617,7 @@ function N(e, t, n) {
                         n && (s(n), e(n), m.current.getExtendedData && _(m.current.getExtendedData(n)));
                     } catch (e) {}
             },
-            [o, t]
+            [a, t]
         ),
         b = r.useMemo(
             function () {
@@ -625,7 +625,7 @@ function N(e, t, n) {
             },
             [E]
         ),
-        y = a({ value: c }, b);
+        y = o({ value: c }, b);
     return n.getExtendedData && (y.extendedData = f), y;
 }
 (t.default = function (e) {
@@ -660,15 +660,15 @@ function N(e, t, n) {
                 shouldResizeCanvasToContainer: p
             }
         ).RiveComponent;
-    return o.default.createElement(b, a({}, E), g);
+    return a.default.createElement(b, o({}, E), g);
 }),
     (t.useResizeCanvas = b),
     (t.useRive = A),
     (t.useRiveFile = function (e) {
         var t = this,
             n = r.useState(null),
-            o = n[0],
-            a = n[1],
+            a = n[0],
+            o = n[1],
             s = r.useState('idle'),
             u = s[0],
             d = s[1];
@@ -683,12 +683,12 @@ function N(e, t, n) {
                                     d('loading'),
                                         (n = new i.RiveFile(e)).init(),
                                         n.on(i.EventType.Load, function () {
-                                            null == n || n.getInstance(), a(n), d('success');
+                                            null == n || n.getInstance(), o(n), d('success');
                                         }),
                                         n.on(i.EventType.LoadError, function () {
                                             d('failed');
                                         }),
-                                        a(n);
+                                        o(n);
                                 } catch (e) {
                                     console.error(e), d('failed');
                                 }
@@ -703,15 +703,15 @@ function N(e, t, n) {
                 [e.src, e.buffer]
             ),
             {
-                riveFile: o,
+                riveFile: a,
                 status: u
             }
         );
     }),
-    (t.useStateMachineInput = function (e, t, n, o) {
-        var a = r.useState(null),
-            s = a[0],
-            l = a[1];
+    (t.useStateMachineInput = function (e, t, n, a) {
+        var o = r.useState(null),
+            s = o[0],
+            l = o[1];
         return (
             r.useEffect(
                 function () {
@@ -722,7 +722,7 @@ function N(e, t, n) {
                                 var i = r.find(function (e) {
                                     return e.name === n;
                                 });
-                                void 0 !== o && i && (i.value = o), l(i || null);
+                                void 0 !== a && i && (i.value = a), l(i || null);
                             }
                         } else l(null);
                     }
@@ -739,9 +739,9 @@ function N(e, t, n) {
     }),
     (t.useViewModel = function (e, t) {
         var n = null != t ? t : {},
-            o = n.name,
-            a = n.useDefault,
-            s = void 0 !== a && a,
+            a = n.name,
+            o = n.useDefault,
+            s = void 0 !== o && o,
             l = r.useState(null),
             c = l[0],
             u = l[1];
@@ -752,7 +752,7 @@ function N(e, t, n) {
                         var t;
                         if (e) {
                             var n = null;
-                            u((n = null != o ? (null == (t = e.viewModelByName) ? void 0 : t.call(e, o)) || null : e.defaultViewModel() || null));
+                            u((n = null != a ? (null == (t = e.viewModelByName) ? void 0 : t.call(e, a)) || null : e.defaultViewModel() || null));
                         } else u(null);
                     }
                     return (
@@ -763,7 +763,7 @@ function N(e, t, n) {
                         }
                     );
                 },
-                [e, o, s]
+                [e, a, s]
             ),
             c
         );
@@ -771,8 +771,8 @@ function N(e, t, n) {
     (t.useViewModelInstance = function (e, t) {
         var n = null != t ? t : {},
             i = n.name,
-            o = n.useDefault,
-            a = void 0 !== o && o,
+            a = n.useDefault,
+            o = void 0 !== a && a,
             s = n.useNew,
             l = void 0 !== s && s,
             c = n.rive,
@@ -784,11 +784,11 @@ function N(e, t, n) {
                 function () {
                     var t, n, r;
                     if (e) {
-                        var o = null;
-                        f((o = null != i ? e.instanceByName(i) || null : a ? (null == (t = e.defaultInstance) ? void 0 : t.call(e)) || null : l ? (null == (n = e.instance) ? void 0 : n.call(e)) || null : (null == (r = e.defaultInstance) ? void 0 : r.call(e)) || null)), c && o && c.viewModelInstance !== o && c.bindViewModelInstance(o);
+                        var a = null;
+                        f((a = null != i ? e.instanceByName(i) || null : o ? (null == (t = e.defaultInstance) ? void 0 : t.call(e)) || null : l ? (null == (n = e.instance) ? void 0 : n.call(e)) || null : (null == (r = e.defaultInstance) ? void 0 : r.call(e)) || null)), c && a && c.viewModelInstance !== a && c.bindViewModelInstance(a);
                     } else f(null);
                 },
-                [e, i, a, l, c]
+                [e, i, o, l, c]
             ),
             d
         );

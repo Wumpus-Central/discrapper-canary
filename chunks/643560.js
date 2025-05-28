@@ -54,15 +54,15 @@ function h(e, t) {
 function f(e) {
     let { entry: t, onSelect: f, closePopout: m, hideEditButton: g = !1 } = e,
         { isEntryAdmin: b, canEdit: _, canRemove: x } = (0, u.Z)(t),
-        C = (0, o.Z)({
+        y = (0, o.Z)({
             id: t.guildId,
             label: d.intl.string(d.t['94lLDw']),
             onSuccess: m
         });
     i.useEffect(() => {
-        _ || x || null != C || (0, a.Zy)();
+        _ || x || null != y || (0, a.Zy)();
     });
-    let y = () => {
+    let C = () => {
         c.kx(t.channelId, t.guildId);
     };
     function v() {
@@ -103,7 +103,7 @@ function f(e) {
                                                       header: d.intl.string(d.t.KUxYWF),
                                                       confirmText: d.intl.string(d.t.N86XcH),
                                                       cancelText: d.intl.string(d.t['ETE/oK']),
-                                                      onConfirm: y
+                                                      onConfirm: C
                                                   },
                                                   e
                                               ),
@@ -134,7 +134,7 @@ function f(e) {
                           })
                 ]
             }),
-            (0, r.jsx)(l.kSQ, { children: C })
+            (0, r.jsx)(l.kSQ, { children: y })
         ]
     });
 }

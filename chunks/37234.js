@@ -1,7 +1,7 @@
 n.d(t, {
-    Ou: () => a,
+    Ou: () => o,
     jN: () => i,
-    xf: () => o
+    xf: () => a
 });
 var r = n(570140);
 function i(e) {
@@ -10,9 +10,9 @@ function i(e) {
         component: e
     });
 }
-function o() {
+function a() {
     r.Z.dispatch({ type: 'LAYER_POP' });
 }
-function a() {
+function o() {
     r.Z.dispatch({ type: 'LAYER_POP_ALL' });
 }

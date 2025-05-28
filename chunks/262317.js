@@ -1,7 +1,7 @@
 n.d(t, {
     XX: () => R,
-    ZP: () => k,
-    ul: () => M
+    ZP: () => M,
+    ul: () => k
 }),
     n(388685);
 var r = n(255367),
@@ -21,8 +21,8 @@ var r = n(255367),
     b = n(569545),
     _ = n(102172),
     x = n(525925),
-    C = n(701362),
-    y = n(670188),
+    y = n(701362),
+    C = n(670188),
     v = n(597998),
     j = n(314897),
     O = n(430824),
@@ -87,7 +87,7 @@ function R(e) {
         })
     });
 }
-function M(e) {
+function k(e) {
     let { numAudience: t, collapsed: n } = e,
         i = n ? t : N.intl.formatToPlainString(N.t['+v2pNz'], { count: t });
     return (0, r.jsxs)('div', {
@@ -109,9 +109,9 @@ function M(e) {
         ]
     });
 }
-let k = (0, p.$)(function (e) {
+let M = (0, p.$)(function (e) {
     var t;
-    let { collapsed: l, user: p, channel: R, mute: M, localMute: k, localVideoDisabled: L, deaf: D, video: U, embeddedApplication: B, serverMute: G, serverDeaf: F, nick: H, ringing: V, speaking: z, disconnected: W, connectUserDragSource: Y, canDrag: q, isStreaming: K, isWatching: X, isGuest: Q, priority: J, showPreview: $, hidePreview: ee, shouldShowPreview: et, previewIsOpen: en, otherClientSessionType: er, voicePlatform: ei, isSelfOnOtherClient: el = !1, tabIndex: ea, location: eo, isSelf: es, application: ec } = e,
+    let { collapsed: l, user: p, channel: R, mute: k, localMute: M, localVideoDisabled: L, deaf: D, video: U, embeddedApplication: B, serverMute: G, serverDeaf: F, nick: H, ringing: V, speaking: z, disconnected: W, connectUserDragSource: Y, canDrag: q, isStreaming: K, isWatching: X, isGuest: Q, priority: J, showPreview: $, hidePreview: ee, shouldShowPreview: et, previewIsOpen: en, otherClientSessionType: er, voicePlatform: ei, isSelfOnOtherClient: el = !1, tabIndex: ea, location: eo, isSelf: es, application: ec } = e,
         eu = i.useRef(null),
         [ed, ep] = i.useState(!1),
         eh = () => {
@@ -149,7 +149,7 @@ let k = (0, p.$)(function (e) {
             });
         },
         e_ = () =>
-            (0, r.jsx)(C.Z, {
+            (0, r.jsx)(y.Z, {
                 user: p,
                 channel: R,
                 onWatch: eg,
@@ -162,8 +162,8 @@ let k = (0, p.$)(function (e) {
                     user: p,
                     speaking: z,
                     disconnected: W,
-                    mute: M,
-                    localMute: k,
+                    mute: k,
+                    localMute: M,
                     localVideoDisabled: L,
                     isStreaming: K,
                     isGuest: Q,
@@ -238,7 +238,7 @@ let k = (0, p.$)(function (e) {
                     )
             });
         },
-        eC = (0, r.jsx)('div', {
+        ey = (0, r.jsx)('div', {
             className: T.draggable,
             'data-dnd-name': R.name,
             onMouseEnter: el
@@ -247,7 +247,7 @@ let k = (0, p.$)(function (e) {
                       K && !ed && (null == $ || $(p.id));
                   },
             onMouseLeave: el ? void 0 : ef,
-            children: (0, r.jsx)(y.Z, {
+            children: (0, r.jsx)(C.Z, {
                 clickTrap: (null == p ? void 0 : p.id) === (null == (t = I.default.getCurrentUser()) ? void 0 : t.id) && ed,
                 targetElementRef: eu,
                 user: p,
@@ -259,5 +259,5 @@ let k = (0, p.$)(function (e) {
                 children: (e) => ex(e)
             })
         });
-    return q ? Y(eC) : eC;
+    return q ? Y(ey) : ey;
 });

@@ -6,10 +6,10 @@ n.d(t, {
 });
 var r = n(544891),
     i = n(921072),
-    o = n(981631),
-    a = n(388032);
+    a = n(981631),
+    o = n(388032);
 async function s(e) {
-    let t = o.ANM.APPLICATION_DISCLOSURES(e),
+    let t = a.ANM.APPLICATION_DISCLOSURES(e),
         n = await r.tn.get({
             url: t,
             retries: 3,
@@ -23,7 +23,7 @@ async function s(e) {
     };
 }
 async function l(e, t) {
-    let n = o.ANM.APPLICATION_DISCLOSURES(e);
+    let n = a.ANM.APPLICATION_DISCLOSURES(e);
     await r.tn.post({
         url: n,
         body: { disclosures: t },
@@ -33,9 +33,9 @@ async function l(e, t) {
 function c(e) {
     switch (e) {
         case i.u$.IP_LOCATION:
-            return a.intl.string(a.t['6wPmjo']);
+            return o.intl.string(o.t['6wPmjo']);
         case i.u$.DISPLAYS_ADVERTISEMENTS:
-            return a.intl.string(a.t['/uOMKS']);
+            return o.intl.string(o.t['/uOMKS']);
         default:
             return null;
     }

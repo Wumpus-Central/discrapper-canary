@@ -28,9 +28,9 @@ function s(e) {
         })(e, ['hasPermission', 'streamActive', 'isSelfStream', 'centerButton', 'onMouseEnter', 'onMouseLeave', 'renderNUXHighlight', 'buttonRef']);
     let b = d ? a.d : a.Z;
     t = c ? (u ? o.intl.string(o.t.S5anIS) : o.intl.string(o.t.q3O3Jy)) : s ? o.intl.string(o.t.fjBNo6) : o.intl.string(o.t.uQn9Bw);
-    let { Component: _, events: x, play: C } = (0, l.P)(c ? 'disable' : 'enable');
+    let { Component: _, events: x, play: y } = (0, l.P)(c ? 'disable' : 'enable');
     return (
-        i.useEffect(() => () => C(), [c, C]),
+        i.useEffect(() => () => y(), [c, y]),
         (0, r.jsx)(
             b,
             (function (e) {

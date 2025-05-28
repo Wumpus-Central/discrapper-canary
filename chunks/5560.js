@@ -20,7 +20,7 @@ var r = n(255367),
     b = n(232495),
     _ = n(10401),
     x = n(322274);
-function C(e, t, n) {
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function C(e, t, n) {
         e
     );
 }
-function y(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function y(e) {
                 })
             )),
             r.forEach(function (t) {
-                C(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
@@ -119,7 +119,7 @@ class j extends i.PureComponent {
         if (null == l) return null;
         let { media: o, textAlign: s, isLongText: c, highPriority: u, spacing: p, arrowAlignment: f = h.cy.TOP, popoutPosition: m } = l,
             { offsetX: b, offsetY: _ } = this.state,
-            C = {
+            y = {
                 left: null != b ? i.x + b : void 0,
                 top: null != _ ? i.y + _ : void 0
             },
@@ -156,7 +156,7 @@ class j extends i.PureComponent {
         return (0, r.jsx)(
             h.ZP,
             v(
-                y(
+                C(
                     {
                         innerRef: this.contentRef,
                         position: m,
@@ -177,9 +177,9 @@ class j extends i.PureComponent {
                         let { isShown: n } = t;
                         return (0, r.jsx)(
                             d.P3F,
-                            v(y({}, e), {
+                            v(C({}, e), {
                                 className: x.indicator,
-                                style: C,
+                                style: y,
                                 innerRef: this.contentRef,
                                 children: (0, r.jsxs)('div', {
                                     className: a()(x.animationContainer, O(n)),
@@ -194,12 +194,12 @@ class j extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            C(this, 'state', {
+            y(this, 'state', {
                 offsetX: null,
                 offsetY: null
             }),
-            C(this, 'contentRef', i.createRef()),
-            C(this, 'handleDismiss', () => {
+            y(this, 'contentRef', i.createRef()),
+            y(this, 'handleDismiss', () => {
                 p.Z.dismiss(this.props.tutorialId);
             });
     }
@@ -227,7 +227,7 @@ let O =
                                 s()(null != a, 'Missing tutorial definition for '.concat(i)),
                                 (0, r.jsx)(
                                     j,
-                                    y(
+                                    C(
                                         {
                                             tutorialId: i,
                                             tutorialDefinition: a,

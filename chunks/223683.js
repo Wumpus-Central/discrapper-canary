@@ -7,22 +7,22 @@ n.d(t, {
 });
 var r = n(392711),
     i = n.n(r),
-    o = n(544891),
-    a = n(981631);
+    a = n(544891),
+    o = n(981631);
 let s = 5,
     l = 1000000;
 async function c() {
     return (
-        await o.tn.get({
-            url: a.ANM.NOTIFICATION_SNAPSHOTS,
+        await a.tn.get({
+            url: o.ANM.NOTIFICATION_SNAPSHOTS,
             rejectWithError: !1
         })
     ).body;
 }
 async function u(e) {
     return (
-        await o.tn.post({
-            url: a.ANM.NOTIFICATION_SNAPSHOTS,
+        await a.tn.post({
+            url: o.ANM.NOTIFICATION_SNAPSHOTS,
             body: { label: e },
             rejectWithError: !1
         })
@@ -30,16 +30,16 @@ async function u(e) {
 }
 async function d(e) {
     return (
-        await o.tn.post({
-            url: a.ANM.RESTORE_NOTIFICATION_SNAPSHOT(e),
+        await a.tn.post({
+            url: o.ANM.RESTORE_NOTIFICATION_SNAPSHOT(e),
             rejectWithError: !1
         })
     ).body;
 }
 async function f(e) {
     return (
-        await o.tn.del({
-            url: a.ANM.NOTIFICATION_SNAPSHOT(e),
+        await a.tn.del({
+            url: o.ANM.NOTIFICATION_SNAPSHOT(e),
             rejectWithError: !1
         })
     ).body;

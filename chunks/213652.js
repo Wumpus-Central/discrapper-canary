@@ -19,15 +19,15 @@ function x(e) {
     let { channel: t } = e,
         { parentAnalyticsLocation: n } = (0, o.ZP)(),
         x = (0, l.e7)([f.Z], () => f.Z.getSelectedParticipant(t.id)),
-        C = (null == x ? void 0 : x.type) === g.fO.STREAM,
-        y = (0, l.e7)([p.Z], () => (C ? p.Z.getActiveStreamForStreamKey(x.id) : null)),
+        y = (null == x ? void 0 : x.type) === g.fO.STREAM,
+        C = (0, l.e7)([p.Z], () => (y ? p.Z.getActiveStreamForStreamKey(x.id) : null)),
         { ignoreSenderPreference: v } = u.Z.useExperiment({ location: 'ActionBarClipsButton' }, { autoTrackExposure: !1 }),
         { viewerClippingAllowed: j, isAtMaxSavingClipOperations: O } = (0, l.cj)([s.Z], () => ({
-            viewerClippingAllowed: null != y && (s.Z.isViewerClippingAllowedForUser(y.ownerId) || v),
+            viewerClippingAllowed: null != C && (s.Z.isViewerClippingAllowedForUser(C.ownerId) || v),
             isAtMaxSavingClipOperations: s.Z.getIsAtMaxSaveClipOperations()
         })),
         E = s.Z.getSettings().clipsEnabled,
-        I = (null == y ? void 0 : y.ownerId) === h.default.getId(),
+        I = (null == C ? void 0 : C.ownerId) === h.default.getId(),
         P = !E || !(I || j) || O || null == x,
         S = i.useCallback((e) => {
             var t, n;
@@ -81,7 +81,7 @@ function x(e) {
         },
         disabled: P,
         iconComponent: S,
-        label: null == y ? b.intl.string(b.t.eg5qtb) : I || j ? (E ? (O ? void 0 : b.intl.string(b.t.U4URzM)) : b.intl.string(b.t.wSS1yM)) : b.intl.string(b.t.aRifJS),
+        label: null == C ? b.intl.string(b.t.eg5qtb) : I || j ? (E ? (O ? void 0 : b.intl.string(b.t.U4URzM)) : b.intl.string(b.t.wSS1yM)) : b.intl.string(b.t.aRifJS),
         grow: !1
     });
 }

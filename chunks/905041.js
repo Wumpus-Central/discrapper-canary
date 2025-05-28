@@ -1,7 +1,7 @@
-n.d(t, { Z: () => m }), n(704826), n(35282), n(539854), n(388685);
-var r = n(255367);
+n.d(t, { Z: () => h }), n(704826), n(35282), n(539854), n(388685);
+var i = n(255367);
 n(73800);
-var i = n(481060),
+var r = n(481060),
     l = n(296182),
     a = n(976853),
     o = n(902676),
@@ -11,46 +11,46 @@ var i = n(481060),
     d = n(998502),
     f = n(36998),
     g = n(981631),
-    b = n(388032);
+    m = n(388032);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (e[t] = i);
             });
     }
     return e;
 }
-let O = /^(tel|sms|mailto):([^?;]+)/;
-function m(e, t, n, m) {
-    let h = (0, a.Z)(null == n ? void 0 : n.getChannelId());
-    if (!u.isPlatformEmbedded || null == e || '' === e || h || (null == m ? void 0 : m.shouldHideMediaOptions) === !0 || !(0, l.Jj)(e)) return null;
+let b = /^(tel|sms|mailto):([^?;]+)/;
+function h(e, t, n, h) {
+    let O = (0, a.Z)(null == n ? void 0 : n.getChannelId());
+    if (!u.isPlatformEmbedded || null == e || '' === e || O || (null == h ? void 0 : h.shouldHideMediaOptions) === !0 || !(0, l.Jj)(e)) return null;
     let y = (0, o.F)(e),
-        v = (e) => {
-            s.default.track(g.rMx.CONTEXT_MENU_LINK_COPIED, p({ hostname: y }, (0, f.v)())), d.ZP.copy(e), (0, i.showToast)((0, i.createToast)(b.intl.string(b.t['L/PwZW']), i.ToastType.SUCCESS));
+        E = (e) => {
+            s.default.track(g.rMx.CONTEXT_MENU_LINK_COPIED, p({ hostname: y }, (0, f.v)())), d.ZP.copy(e), (0, r.showToast)((0, r.createToast)(m.intl.string(m.t['L/PwZW']), r.ToastType.SUCCESS));
         },
-        E = (n, r) => {
-            let i = !0 === r ? e.replace('tel:', 'sms:') : e;
+        v = (n, i) => {
+            let r = !0 === i ? e.replace('tel:', 'sms:') : e;
             s.default.track(g.rMx.CONTEXT_MENU_LINK_OPENED, p({ hostname: y }, (0, f.v)())),
                 (0, c.q)(
                     {
-                        href: i,
+                        href: r,
                         trusted: (0, c.r)(e, t),
                         shouldConfirm: !0
                     },
@@ -58,17 +58,17 @@ function m(e, t, n, m) {
                 );
         },
         j = [],
-        S = e.match(O);
+        S = e.match(b);
     if (null != S) {
-        let e = b.intl.string('mailto' === S[1] ? b.t.ZYLVKi : b.t['3zozoa']);
+        let e = m.intl.string('mailto' === S[1] ? m.t.ZYLVKi : m.t['3zozoa']);
         j.push(
-            (0, r.jsx)(
-                i.sNh,
+            (0, i.jsx)(
+                r.sNh,
                 {
                     id: 'copy-native-contact',
                     label: e,
                     action: () => {
-                        v(S[2]);
+                        E(S[2]);
                     }
                 },
                 'copy-native-contact'
@@ -76,36 +76,36 @@ function m(e, t, n, m) {
         ),
             'tel' === S[1] &&
                 j.push(
-                    (0, r.jsx)(
-                        i.sNh,
+                    (0, i.jsx)(
+                        r.sNh,
                         {
                             id: 'native-send-sms',
-                            label: b.intl.string(b.t['+wbjMT']),
-                            action: (e) => E(e, !0)
+                            label: m.intl.string(m.t['+wbjMT']),
+                            action: (e) => v(e, !0)
                         },
                         'native-send-sms'
                     )
                 );
     }
     return [
-        (0, r.jsx)(
-            i.sNh,
+        (0, i.jsx)(
+            r.sNh,
             {
                 id: 'copy-native-link',
-                label: b.intl.string(b.t.WqhZsr),
+                label: m.intl.string(m.t.WqhZsr),
                 action: () => {
-                    v(e);
+                    E(e);
                 }
             },
             'copy-native-link'
         ),
         ...j,
-        (0, r.jsx)(
-            i.sNh,
+        (0, i.jsx)(
+            r.sNh,
             {
                 id: 'open-native-link',
-                label: b.intl.string(b.t.wuRE8P),
-                action: (e) => E(e)
+                label: m.intl.string(m.t.wuRE8P),
+                action: (e) => v(e)
             },
             'open-native-link'
         )

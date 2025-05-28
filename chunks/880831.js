@@ -8,7 +8,7 @@ var r = n(255367),
     l = n(120356),
     a = n.n(l),
     o = n(392711),
-    s = n(714673),
+    s = n(240894),
     c = n(442837),
     u = n(481060),
     d = n(570140),
@@ -20,8 +20,8 @@ var r = n(255367),
     b = n(739566),
     _ = n(267128),
     x = n(378233),
-    C = n(419922),
-    y = n(375954),
+    y = n(419922),
+    C = n(375954),
     v = n(699516),
     j = n(768581),
     O = n(70956),
@@ -43,7 +43,7 @@ function N(e) {
         ),
         s = (0, b.Uj)(n),
         d = i.useContext(f.Z),
-        [y, O] = i.useState(!1),
+        [C, O] = i.useState(!1),
         E = (0, m.p)(),
         I = i.useCallback(
             (e) => {
@@ -60,7 +60,7 @@ function N(e) {
         Z =
             null != n.content && '' !== n.content
                 ? (0, g.ZP)(n, {
-                      isInteracting: y,
+                      isInteracting: C,
                       shouldFilterKeywords: E
                   }).content
                 : null,
@@ -75,16 +75,16 @@ function N(e) {
             iconSize: P.WW
         }),
         R = (0, x.cv)(n),
-        M =
+        k =
             R.length > 0
                 ? R.map((e) =>
                       (0, r.jsx)(
-                          C.Z,
+                          y.Z,
                           {
                               className: S.sticker,
                               size: 128,
                               sticker: e,
-                              isInteracting: y
+                              isInteracting: C
                           },
                           e.id
                       )
@@ -102,7 +102,7 @@ function N(e) {
         children: [
             (0, r.jsxs)('div', {
                 className: a()(S.messageContentWrapper, { [S.mentioned]: n.mentioned }),
-                children: [null != M ? null : w, null != (t = null != T ? T : M) ? t : (0, r.jsx)('span', { children: N }), null != M ? null : A]
+                children: [null != k ? null : w, null != (t = null != T ? T : k) ? t : (0, r.jsx)('span', { children: N }), null != k ? null : A]
             }),
             (0, r.jsx)('img', {
                 alt: '',
@@ -161,7 +161,7 @@ function T(e) {
             let g = null != (t = h.current) ? t : o;
             return {
                 toastsHidden: u,
-                toastMessages: (0, c.Wu)([y.Z], () => g.map((e) => y.Z.getMessage(n, e)), [n, g]).filter(E.lm)
+                toastMessages: (0, c.Wu)([C.Z], () => g.map((e) => C.Z.getMessage(n, e)), [n, g]).filter(E.lm)
             };
         })({
             channelId: t,
@@ -188,12 +188,12 @@ function T(e) {
             }
             (0, o.isEqual)(e, x.current) || b(e);
         }, [f]);
-    let C = f.map((e) => ({
+    let y = f.map((e) => ({
             message: e,
             height: m.current[e.id],
             y: g[e.id]
         })),
-        v = (0, u.Yzy)(C, {
+        v = (0, u.Yzy)(y, {
             keys: (e) => e.message.id,
             from: () => ({ opacity: 0 }),
             enter: (e) => {

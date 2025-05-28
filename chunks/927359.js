@@ -6,8 +6,8 @@ n.d(t, {
     n(415506);
 var r = n(774078),
     i = n(55935),
-    o = n(960048),
-    a = n(388032);
+    a = n(960048),
+    o = n(388032);
 function s(e, t, n) {
     return (
         t in e
@@ -90,37 +90,37 @@ function f(e, t) {
     switch (t) {
         case 0:
             n = {
-                days: a.t['/wnvqK'],
-                hours: a.t.Jsq0XF,
-                minutes: a.t['SBd+Bg']
+                days: o.t['/wnvqK'],
+                hours: o.t.Jsq0XF,
+                minutes: o.t['SBd+Bg']
             };
             break;
         case 1:
             n = {
-                days: a.t.UD5nn5,
-                hours: a.t.Hg8FeX,
-                minutes: a.t.XSbQZW
+                days: o.t.UD5nn5,
+                hours: o.t.Hg8FeX,
+                minutes: o.t.XSbQZW
             };
             break;
         case 2:
             n = {
-                days: a.t.rLqNaW,
-                hours: a.t.d1LvCA,
-                minutes: a.t.Z2LX7O
+                days: o.t.rLqNaW,
+                hours: o.t.d1LvCA,
+                minutes: o.t.Z2LX7O
             };
             break;
         case 4:
             n = {
-                days: a.t.xQ3zuL,
-                hours: a.t.SFU7QE,
-                minutes: a.t.Y4FNdH
+                days: o.t.xQ3zuL,
+                hours: o.t.SFU7QE,
+                minutes: o.t.Y4FNdH
             };
             break;
         case 3:
             n = {
-                days: a.t.fYmir6,
-                hours: a.t['C3RO+v'],
-                minutes: a.t.r77oHR
+                days: o.t.fYmir6,
+                hours: o.t['C3RO+v'],
+                minutes: o.t.r77oHR
             };
             break;
         default:
@@ -131,7 +131,7 @@ function f(e, t) {
     try {
         l = (0, i.QX)(s, n);
     } catch (e) {
-        o.Z.captureMessage('Error trying to format string for fractional nitro duration pill');
+        a.Z.captureMessage('Error trying to format string for fractional nitro duration pill');
     }
     return l;
 }

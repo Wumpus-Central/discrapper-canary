@@ -1,6 +1,6 @@
 n.d(t, {
     D: () => i,
-    x: () => o
+    x: () => a
 });
 var r = n(570140);
 let i = (e) => {
@@ -9,7 +9,7 @@ let i = (e) => {
         guildId: e
     });
 };
-function o(e) {
+function a(e) {
     r.Z.dispatch({
         type: 'EMOJI_INTERACTION_INITIATED',
         interaction: e

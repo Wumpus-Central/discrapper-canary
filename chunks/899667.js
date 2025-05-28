@@ -1,93 +1,93 @@
-n.d(t, { Z: () => _ }), n(388685);
-var r,
-    i,
-    s,
-    o = n(442837),
+n.d(t, { Z: () => m }), n(388685);
+var l,
+    o,
+    r,
+    i = n(442837),
     a = n(570140);
-let l = {},
-    c = null,
-    u = [],
-    d = !1,
-    p = !1,
-    f = null,
-    g = null;
-function b() {
-    p = !0;
+let c = {},
+    _ = null,
+    d = [],
+    s = !1,
+    u = !1,
+    p = null,
+    S = null;
+function f() {
+    u = !0;
 }
-class m extends (r = o.ZP.Store) {
+class C extends (l = i.ZP.Store) {
     getAppliedGuildBoostsForGuild(e) {
-        return null != l[e] ? l[e].subscriptions : null;
+        return null != c[e] ? c[e].subscriptions : null;
     }
     getLastFetchedAtForGuild(e) {
-        return null != l[e] ? l[e].lastFetchedAt : null;
+        return null != c[e] ? c[e].lastFetchedAt : null;
     }
     getCurrentUserAppliedBoosts() {
-        return u;
-    }
-    getAppliedGuildBoost(e) {
-        return u.find((t) => t.id === e);
-    }
-    get isModifyingAppliedBoost() {
-        return p;
-    }
-    get applyBoostError() {
-        return f;
-    }
-    get unapplyBoostError() {
-        return g;
-    }
-    get cooldownEndsAt() {
-        return c;
-    }
-    get isFetchingCurrentUserAppliedBoosts() {
         return d;
     }
+    getAppliedGuildBoost(e) {
+        return d.find((t) => t.id === e);
+    }
+    get isModifyingAppliedBoost() {
+        return u;
+    }
+    get applyBoostError() {
+        return p;
+    }
+    get unapplyBoostError() {
+        return S;
+    }
+    get cooldownEndsAt() {
+        return _;
+    }
+    get isFetchingCurrentUserAppliedBoosts() {
+        return s;
+    }
 }
-(s = 'AppliedGuildBoostStore'),
-    (i = 'displayName') in m
-        ? Object.defineProperty(m, i, {
-              value: s,
+(r = 'AppliedGuildBoostStore'),
+    (o = 'displayName') in C
+        ? Object.defineProperty(C, o, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (m[i] = s);
-let _ = new m(a.Z, {
+        : (C[o] = r);
+let m = new C(a.Z, {
     GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function (e) {
         let { guildId: t, appliedBoosts: n } = e;
-        l[t] = {
+        c[t] = {
             subscriptions: n,
             lastFetchedAt: Date.now()
         };
     },
     USER_APPLIED_BOOSTS_FETCH_SUCCESS: function (e) {
         let { appliedGuildBoosts: t } = e;
-        (d = !1), (u = t);
+        (s = !1), (d = t);
     },
     APPLIED_BOOSTS_COOLDOWN_FETCH_SUCCESS: function (e) {
         let { endsAt: t } = e;
-        c = t;
+        _ = t;
     },
-    GUILD_UNAPPLY_BOOST_START: b,
-    GUILD_APPLY_BOOST_START: b,
+    GUILD_UNAPPLY_BOOST_START: f,
+    GUILD_APPLY_BOOST_START: f,
     GUILD_APPLY_BOOST_SUCCESS: function (e) {
         let { appliedGuildBoost: t } = e,
             n = new Set(t.map((e) => e.id));
-        (u = [...t, ...u.filter((e) => !n.has(e.id))]), (f = null), (p = !1);
+        (d = [...t, ...d.filter((e) => !n.has(e.id))]), (p = null), (u = !1);
     },
     GUILD_APPLY_BOOST_FAIL: function (e) {
         let { error: t } = e;
-        (p = !1), (f = t);
+        (u = !1), (p = t);
     },
     GUILD_UNAPPLY_BOOST_SUCCESS: function (e) {
         let { boostId: t } = e;
-        (u = u.filter((e) => e.id !== t)), (p = !1);
+        (d = d.filter((e) => e.id !== t)), (u = !1);
     },
     GUILD_UNAPPLY_BOOST_FAIL: function (e) {
         let { error: t } = e;
-        (p = !1), (g = t);
+        (u = !1), (S = t);
     },
     USER_APPLIED_BOOSTS_FETCH_START: function () {
-        d = !0;
+        s = !0;
     }
 });

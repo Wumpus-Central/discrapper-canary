@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(880831),
     _ = n(774168),
     x = n(871499),
-    C = n(981631),
-    y = n(388032);
+    y = n(981631),
+    C = n(388032);
 function v(e) {
     let t = (0, s.e7)([m.Z], () => !(0, o.isEmpty)(m.Z.getTypingUsers(e)), [e]),
         n = (0, s.e7)([f.Z], () => f.Z.getVoiceChannelId() === e, [e]),
@@ -115,33 +115,33 @@ function O(e) {
             null == (e = P.current) || e.focus();
         }, []);
     (0, g.yp)({
-        event: C.CkL.FOCUS_CHAT_BUTTON,
+        event: y.CkL.FOCUS_CHAT_BUTTON,
         handler: I ? null : R
     });
-    let [M, k] = i.useState(!1),
+    let [k, M] = i.useState(!1),
         L = i.useCallback(() => {
-            f && k(!0);
+            f && M(!0);
         }, [f]);
     (0, g.yp)({
-        event: C.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
+        event: y.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
         handler: L
     }),
         i.useEffect(() => {
             let e;
             return (
-                M &&
+                k &&
                     (e = setTimeout(() => {
-                        k(!1);
+                        M(!1);
                     }, 3000)),
                 () => {
                     clearTimeout(e);
                 }
             );
-        }, [M]);
-    let D = [(t = f && I ? y.intl.string(y.t.DPgc5u) : S ? y.intl.string(y.t.nthdxM) : y.intl.string(y.t['5KxXrK']))];
+        }, [k]);
+    let D = [(t = f && I ? C.intl.string(C.t.DPgc5u) : S ? C.intl.string(C.t.nthdxM) : C.intl.string(C.t['5KxXrK']))];
     return (
-        T > 0 && D.push(y.intl.formatToPlainString(y.t['3l1GOz'], { mentionCount: T })),
-        N > 0 && D.push(y.intl.string(y.t.x5zAGR)),
+        T > 0 && D.push(C.intl.formatToPlainString(C.t['3l1GOz'], { mentionCount: T })),
+        N > 0 && D.push(C.intl.string(C.t.x5zAGR)),
         (0, r.jsx)(
             x.Z,
             (function (e) {
@@ -177,7 +177,7 @@ function O(e) {
                     iconComponent: w,
                     tooltipPosition: 'bottom',
                     wrapperClassName: a()(l, null != o && { [o]: Z }),
-                    forceTooltipOpen: M
+                    forceTooltipOpen: k
                 },
                 O
             )

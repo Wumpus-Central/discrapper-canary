@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => j,
-    cy: () => y,
-    iu: () => C
+    cy: () => C,
+    iu: () => y
 }),
     n(388685);
 var r,
@@ -65,8 +65,8 @@ function x(e, t) {
         e
     );
 }
-var C = (((i = {}).CENTER = 'center'), (i.LEFT = 'left'), i),
-    y = (((l = {}).TOP = 'top'), (l.MIDDLE = 'middle'), l);
+var y = (((i = {}).CENTER = 'center'), (i.LEFT = 'left'), i),
+    C = (((l = {}).TOP = 'top'), (l.MIDDLE = 'middle'), l);
 class v extends o.PureComponent {
     componentDidMount() {
         let { uniqueId: e } = this.props;
@@ -214,4 +214,4 @@ class j extends (r = o.PureComponent) {
             });
     }
 }
-b(j, 'TextAlignments', C), b(j, 'defaultProps', { textAlign: 'left' });
+b(j, 'TextAlignments', y), b(j, 'defaultProps', { textAlign: 'left' });

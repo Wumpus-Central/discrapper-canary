@@ -23,8 +23,8 @@ function _(e) {
     let { context: t, primaryEntryPointCommand: n, application: o, showAppLauncherPopup: c = !1 } = e,
         [h, _] = r.useState(!1),
         x = (0, l.e7)([a.ZP], () => a.ZP.getCurrentEmbeddedActivity()),
-        C = c ? b.t.cpT0Cg : b.t['0hKkS0'],
-        y = r.useMemo(() => (null != n ? (0, p.XZ)(n.displayName) : b.intl.string(b.t['3xjX0d'])), [n]),
+        y = c ? b.t.cpT0Cg : b.t['0hKkS0'],
+        C = r.useMemo(() => (null != n ? (0, p.XZ)(n.displayName) : b.intl.string(b.t['3xjX0d'])), [n]),
         v = void 0 !== o.flags && (0, m.yE)(o.flags, g.udG.EMBEDDED),
         j = null != x && x.applicationId === o.id && (x.location.kind === i.E.CONTEXTLESS || (0, s.pY)(x.location) === t.channel.id),
         { analyticsLocations: O } = (0, d.ZP)(u.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON),
@@ -39,10 +39,10 @@ function _(e) {
             }) && v
                 ? j
                     ? b.intl.string(b.t['Hi1/aW'])
-                    : null != y
-                      ? y
+                    : null != C
+                      ? C
                       : b.intl.string(b.t.zKX8Nj)
-                : b.intl.string(C),
+                : b.intl.string(y),
         hasActiveMatchingEmbeddedActivity: j,
         isEmbeddedApp: v,
         currentEmbeddedActivity: x,

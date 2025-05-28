@@ -32,8 +32,7 @@ let d = function (e) {
                 voiceChannel: b,
                 animateEmoji: t,
                 user: h,
-                textSize: 'sm',
-                disableTextScroll: !0
+                textSize: 'sm'
             })
           : (0, r.jsx)('div', {
                 className: u.text,

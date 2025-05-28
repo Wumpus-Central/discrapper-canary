@@ -11,8 +11,8 @@ n.d(t, {
 });
 var r = n(367907),
     i = n(592125),
-    o = n(19780),
-    a = n(626135),
+    a = n(19780),
+    o = n(626135),
     s = n(768581),
     l = n(678916),
     c = n(981631);
@@ -52,11 +52,11 @@ function h(e) {
     return null == e ? 'None' : u(e) ? 'Custom' : 'blur' === e ? 'Blur' : 'Preset - '.concat(p(e));
 }
 function m(e, t, n) {
-    let s = o.Z.getGuildId(),
-        l = o.Z.getChannelId(),
+    let s = a.Z.getGuildId(),
+        l = a.Z.getChannelId(),
         u = i.Z.getChannel(l),
         d = (0, r.kO)(s, l, !0);
-    a.default.track(c.rMx.VIDEO_EFFECT_UPDATED, {
+    o.default.track(c.rMx.VIDEO_EFFECT_UPDATED, {
         location: t,
         effect_type: _(e),
         effect_detail: h(e),
@@ -66,20 +66,20 @@ function m(e, t, n) {
         guild_id: s,
         voice_state_count: d.voice_state_count,
         video_stream_count: d.video_stream_count,
-        media_session_id: o.Z.getMediaSessionId(),
-        rtc_connection_id: o.Z.getRTCConnectionId(),
+        media_session_id: a.Z.getMediaSessionId(),
+        rtc_connection_id: a.Z.getRTCConnectionId(),
         is_animated: f(e)
     });
 }
 function g(e, t, n) {
-    a.default.track(c.rMx.VIDEO_BACKGROUND_ADDED, {
+    o.default.track(c.rMx.VIDEO_BACKGROUND_ADDED, {
         is_animated: f(e),
         is_video: t,
         is_from_tenor: n
     });
 }
 function E(e) {
-    a.default.track(c.rMx.VIDEO_BACKGROUND_DELETED, { is_animated: f(e) });
+    o.default.track(c.rMx.VIDEO_BACKGROUND_DELETED, { is_animated: f(e) });
 }
 function b(e) {
     return null == e

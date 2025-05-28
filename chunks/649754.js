@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a }), n(388685);
+n.d(t, { Z: () => o }), n(388685);
 var r = n(992774);
 function i(e, t, n) {
     return (
@@ -13,15 +13,15 @@ function i(e, t, n) {
         e
     );
 }
-class o {
+class a {
     addSink(e, t, n) {
         let i = this.streams,
-            o = i[e];
-        if ((null == o && (o = i[e] = new Map()), 0 === o.size)) {
+            a = i[e];
+        if ((null == a && (a = i[e] = new Map()), 0 === a.size)) {
             let t = (0, r.zS)();
-            t.setVideoOutputSink(e, this.handleImageData.bind(this, t.signalVideoOutputSinkReady.bind(t, e), o), !0);
+            t.setVideoOutputSink(e, this.handleImageData.bind(this, t.signalVideoOutputSinkReady.bind(t, e), a), !0);
         }
-        o.set(t, n);
+        a.set(t, n);
     }
     removeSink(e, t) {
         let n = this.streams,
@@ -36,4 +36,4 @@ class o {
         i(this, 'streams', {});
     }
 }
-let a = new o();
+let o = new a();

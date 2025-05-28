@@ -4,7 +4,7 @@ n.d(t, {
 });
 var r = n(979554),
     i = n(656698);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +17,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,7 +28,7 @@ function a(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -36,7 +36,7 @@ function a(e) {
 let s = (e) => e instanceof l;
 class l extends i.Z {
     static fromServer(e) {
-        return new l(a({}, super.fromServer(e), e));
+        return new l(o({}, super.fromServer(e), e));
     }
     constructor(e) {
         super(e), (this.type = r.Z.PROFILE_EFFECT);

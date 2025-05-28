@@ -1,6 +1,6 @@
 n.d(t, { Z: () => f });
-var r = n(255367),
-    i = n(73800),
+var i = n(255367),
+    r = n(73800),
     l = n(512722),
     a = n.n(l),
     o = n(481060),
@@ -9,12 +9,12 @@ var r = n(255367),
     u = n(981631),
     d = n(388032);
 function f(e) {
-    let t = i.useCallback(() => {
+    let t = r.useCallback(() => {
         a()(null != e, 'text cannot be null'), s.default.track(u.rMx.MESSAGE_MENU_GOOGLE_SEARCHED), window.open('https://www.google.com/search?q='.concat(encodeURIComponent(e)), '_blank');
     }, [e]);
     return c.isPlatformEmbedded && null != e && (null == e ? void 0 : e.length) !== 0
         ? [
-              (0, r.jsx)(
+              (0, i.jsx)(
                   o.sNh,
                   {
                       id: 'search-google',

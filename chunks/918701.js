@@ -8,7 +8,7 @@ n.d(t, {
     Bg: () => eE,
     Bz: () => e8,
     C1: () => ts,
-    C9: () => ta,
+    C9: () => to,
     Dr: () => eR,
     F9: () => tE,
     FE: () => eM,
@@ -39,7 +39,7 @@ n.d(t, {
     ZZ: () => Y,
     Zp: () => tm,
     _D: () => H,
-    _j: () => to,
+    _j: () => ta,
     _p: () => td,
     b7: () => eq,
     bA: () => tb,
@@ -82,8 +82,8 @@ n.d(t, {
     n(539854);
 var r = n(991998),
     i = n(392711),
-    o = n(278074),
-    a = n(754700),
+    a = n(278074),
+    o = n(754700),
     s = n(551910),
     l = n(34738),
     c = n(887003),
@@ -170,7 +170,7 @@ let G = 2592000000,
     B = new Set([l.n.PREMIUM_EXTENSION, l.n.PREMIUM_PERMANENT]);
 function F(e) {
     try {
-        return (0, o.EQ)(e.config)
+        return (0, a.EQ)(e.config)
             .with({ config_version: 2 }, () => !0)
             .exhaustive();
     } catch (n) {
@@ -211,7 +211,7 @@ function q(e) {
     return null != e.config.expiresAt && !(n <= t);
 }
 function Q(e) {
-    return (0, o.EQ)(e)
+    return (0, a.EQ)(e)
         .with({ config_version: 2 }, (e) => (0, R.Q)(e))
         .exhaustive();
 }
@@ -324,7 +324,7 @@ function ei(e) {
         tier: null != (t = e.tier) ? t : null
     };
 }
-function eo(e) {
+function ea(e) {
     if ((null == e ? void 0 : e.quest_rewards) == null) return null;
     let t = e.quest_rewards;
     switch (t.reward.tag) {
@@ -341,17 +341,17 @@ function eo(e) {
             };
     }
 }
-function ea(e) {
+function eo(e) {
     return {
         skuId: e.sku_id,
-        tenantMetadata: eo(e.tenant_metadata),
+        tenantMetadata: ea(e.tenant_metadata),
         consumed: e.consumed
     };
 }
 function es(e) {
     return {
         claimedAt: e.claimed_at,
-        items: e.entitlements.map(ea),
+        items: e.entitlements.map(eo),
         errors: e.errors
     };
 }
@@ -386,11 +386,11 @@ let ed = (e) => {
 };
 function ef(e) {
     var t, n;
-    let { quest: r, taskDetails: i, thirdPartyTaskDetails: o } = e;
+    let { quest: r, taskDetails: i, thirdPartyTaskDetails: a } = e;
     if ((null == (t = r.userStatus) ? void 0 : t.completedAt) != null) return x.intl.string(x.t.BzFeTE);
     if ((null == (n = r.userStatus) ? void 0 : n.enrolledAt) != null) {
         let { percentComplete: e } = i,
-            t = null != o ? o.percentComplete : e;
+            t = null != a ? a.percentComplete : e;
         return t >= 0.75 ? x.intl.string(x.t.gvCR4O) : t >= 0.45 && t <= 0.55 ? x.intl.string(x.t.JNx8sL) : t > 0 ? x.intl.string(x.t.JMbfnZ) : x.intl.string(x.t['7e5k7O']);
     }
     return x.intl.formatToPlainString(x.t.EQa7oq, { questName: r.config.messages.questName });
@@ -416,14 +416,14 @@ function eg(e) {
     if (null == t || !('expiresAt' in t) || null == t.expiresAt) return null;
     let n = new Date(e.expiresAt),
         i = new Date(t.expiresAt),
-        o = (0, r.Z)(i, n),
-        a = Math.floor(o / 30) + +(o % 30 >= 25);
-    if (a >= 12) {
-        let e = Math.floor(a / 12);
+        a = (0, r.Z)(i, n),
+        o = Math.floor(a / 30) + +(a % 30 >= 25);
+    if (o >= 12) {
+        let e = Math.floor(o / 12);
         return x.intl.formatToPlainString(x.t.PClsr6, { years: e });
     }
     {
-        if (a > 0) return x.intl.formatToPlainString(x.t.kridzM, { months: a });
+        if (o > 0) return x.intl.formatToPlainString(x.t.kridzM, { months: o });
         let e = (0, r.Z)(i, n);
         if (!(e >= 7)) return x.intl.formatToPlainString(x.t.k2UNz8, { days: e });
         {
@@ -475,7 +475,7 @@ function eN(e) {
 }
 function eC(e) {
     var t;
-    return (null == (t = e.taskConfigV2) ? void 0 : t.tasks[a.X.PLAY_ON_DESKTOP]) != null;
+    return (null == (t = e.taskConfigV2) ? void 0 : t.tasks[o.X.PLAY_ON_DESKTOP]) != null;
 }
 function eP(e) {
     let { quest: t } = e;
@@ -484,11 +484,11 @@ function eP(e) {
 function eR(e) {
     var t;
     let { quest: n } = e;
-    return (null == (t = n.config.taskConfigV2) ? void 0 : t.tasks[a.X.STREAM_ON_DESKTOP]) != null;
+    return (null == (t = n.config.taskConfigV2) ? void 0 : t.tasks[o.X.STREAM_ON_DESKTOP]) != null;
 }
 function ew(e) {
     var t;
-    return (null == (t = e.config.taskConfigV2) ? void 0 : t.tasks[a.X.PLAY_ACTIVITY]) != null;
+    return (null == (t = e.config.taskConfigV2) ? void 0 : t.tasks[o.X.PLAY_ACTIVITY]) != null;
 }
 function eD(e) {
     return null != e && eP({ quest: e });
@@ -552,16 +552,16 @@ let eU = (e, t) => {
     eG = (e, t) => (e > 0 ? (0, i.floor)(Math.min(t / e, 1), 4) : 0),
     eB = (e) => e8(e) || T.Z.isProgressingOnDesktop(e.id),
     eF = (e, t) => {
-        var n, r, o, a;
-        let s = null == (a = e.userStatus) || null == (o = a.progress) || null == (r = o[t.type]) || null == (n = r.heartbeat) ? void 0 : n.lastBeatAt;
+        var n, r, a, o;
+        let s = null == (o = e.userStatus) || null == (a = o.progress) || null == (r = a[t.type]) || null == (n = r.heartbeat) ? void 0 : n.lastBeatAt;
         if (null == s || !eB(e)) return 0;
         let l = Date.now() - new Date(s).valueOf();
         return (0, i.floor)(l / E.Z.Millis.SECOND, 2);
     },
     eV = (e, t) => {
-        var n, r, i, o, a;
+        var n, r, i, a, o;
         let s = null == (r = e.userStatus) || null == (n = r.progress) ? void 0 : n[t.type],
-            l = null != (a = null != (o = null == s ? void 0 : s.value) ? o : null == (i = e.userStatus) ? void 0 : i.streamProgressSeconds) ? a : 0;
+            l = null != (o = null != (a = null == s ? void 0 : s.value) ? a : null == (i = e.userStatus) ? void 0 : i.streamProgressSeconds) ? o : 0;
         if (e3(e)) {
             let n = T.Z.getOptimisticProgress(e.id, t.type);
             return null == n || n < l ? l : n;
@@ -573,16 +573,16 @@ let eU = (e, t) => {
         var n;
         let r = t.target;
         if ((null == (n = e.userStatus) ? void 0 : n.completedAt) != null) return r;
-        let o = Math.min(r * eZ, eV(e, t));
-        return Math.max((0, i.floor)(o, 2), 0);
+        let a = Math.min(r * eZ, eV(e, t));
+        return Math.max((0, i.floor)(a, 2), 0);
     },
     eY = (e) => {
         var t, n;
-        let { quest: r, taskType: i, includeTaskTypes: o = a.T.ALL } = e,
+        let { quest: r, taskType: i, includeTaskTypes: a = o.T.ALL } = e,
             s = r.config.taskConfigV2;
         if (null == s) throw Error('Cannot retrieve task details for quest '.concat(r.id, '!'));
-        let l = null != i ? i : null == (t = Object.values(s.tasks).filter((e) => o.has(e.type))[0]) ? void 0 : t.type,
-            c = null != (n = s.tasks[l]) ? n : s.tasks[a.X.STREAM_ON_DESKTOP];
+        let l = null != i ? i : null == (t = Object.values(s.tasks).filter((e) => a.has(e.type))[0]) ? void 0 : t.type,
+            c = null != (n = s.tasks[l]) ? n : s.tasks[o.X.STREAM_ON_DESKTOP];
         if (null == c) throw Error('No task with type '.concat(i, ' found for quest ').concat(r.id, '!'));
         let u = c.target,
             d = eH(r, c);
@@ -594,16 +594,16 @@ let eU = (e, t) => {
             taskType: l
         };
     },
-    eW = (e) => (a.T.ALL.has(e) ? e : null),
+    eW = (e) => (o.T.ALL.has(e) ? e : null),
     eK = (e) => {
         var t, n;
-        let { quest: r, includeTaskTypes: i = a.T.ALL } = e;
+        let { quest: r, includeTaskTypes: i = o.T.ALL } = e;
         for (let e of Object.values(null != (n = null == (t = r.userStatus) ? void 0 : t.progress) ? n : {})
             .sort((e, t) => {
                 var n, r;
                 let i = null == e || null == (n = e.heartbeat) ? void 0 : n.lastBeatAt,
-                    o = null == t || null == (r = t.heartbeat) ? void 0 : r.lastBeatAt;
-                return null != i && null != o ? (new Date(i).valueOf() > new Date(o).valueOf() ? -1 : 1) : null == i && null == o && (null == e ? void 0 : e.updatedAt) != null && (null == t ? void 0 : t.updatedAt) != null ? (new Date(e.updatedAt).valueOf() > new Date(t.updatedAt).valueOf() ? -1 : 1) : null != i && null == o ? -1 : 1;
+                    a = null == t || null == (r = t.heartbeat) ? void 0 : r.lastBeatAt;
+                return null != i && null != a ? (new Date(i).valueOf() > new Date(a).valueOf() ? -1 : 1) : null == i && null == a && (null == e ? void 0 : e.updatedAt) != null && (null == t ? void 0 : t.updatedAt) != null ? (new Date(e.updatedAt).valueOf() > new Date(t.updatedAt).valueOf() ? -1 : 1) : null != i && null == a ? -1 : 1;
             })
             .filter(y.lm)) {
             let t = eW(e.eventName);
@@ -626,50 +626,50 @@ let eU = (e, t) => {
                 targetSeconds: 1,
                 targetMinutes: 1,
                 percentComplete: 0,
-                taskType: a.X.STREAM_ON_DESKTOP
+                taskType: o.X.STREAM_ON_DESKTOP
             };
         if (e2(e))
             return eK({
                 quest: e,
-                includeTaskTypes: null != t ? t : e8(e) ? a.T.CONSOLE : a.T.ALL
+                includeTaskTypes: null != t ? t : e8(e) ? o.T.CONSOLE : o.T.ALL
             });
         if (e3(e))
             if (e4(e))
                 return eY({
                     quest: e,
-                    taskType: a.X.WATCH_VIDEO_ON_MOBILE
+                    taskType: o.X.WATCH_VIDEO_ON_MOBILE
                 });
             else
                 return eY({
                     quest: e,
-                    taskType: a.X.WATCH_VIDEO
+                    taskType: o.X.WATCH_VIDEO
                 });
         return eD(e)
             ? eY({
                   quest: e,
-                  taskType: a.X.PLAY_ON_DESKTOP
+                  taskType: o.X.PLAY_ON_DESKTOP
               })
             : ew(e)
               ? eY({
                     quest: e,
-                    taskType: a.X.PLAY_ACTIVITY
+                    taskType: o.X.PLAY_ACTIVITY
                 })
               : eY({
                     quest: e,
-                    taskType: a.X.STREAM_ON_DESKTOP
+                    taskType: o.X.STREAM_ON_DESKTOP
                 });
     };
 function eq(e) {
     var t, n, r, i;
-    let o = P.r.build(e.config).defaultInGameTask;
-    if (null == o) return null;
-    let a = null != (i = null == (r = e.userStatus) || null == (n = r.progress) || null == (t = n[o.eventName]) ? void 0 : t.value) ? i : 0,
-        s = eG(o.target, a);
+    let a = P.r.build(e.config).defaultInGameTask;
+    if (null == a) return null;
+    let o = null != (i = null == (r = e.userStatus) || null == (n = r.progress) || null == (t = n[a.eventName]) ? void 0 : t.value) ? i : 0,
+        s = eG(a.target, o);
     return {
-        title: o.messages.taskTitle,
-        description: o.messages.taskDescription,
-        target: o.target,
-        progress: a,
+        title: a.messages.taskTitle,
+        description: a.messages.taskDescription,
+        target: a.target,
+        progress: o,
         percentComplete: s
     };
 }
@@ -679,7 +679,7 @@ let eQ = (e) => (t) =>
         return (null == (n = t.config.taskConfigV2) ? void 0 : n.tasks[e]) != null;
     });
 function eX(e) {
-    return Array.from(a.T.IN_GAME).some((t) => {
+    return Array.from(o.T.IN_GAME).some((t) => {
         var n;
         return (null == (n = e.config.taskConfigV2) ? void 0 : n.tasks[t]) != null;
     });
@@ -700,10 +700,10 @@ function e0(e) {
 function e1(e, t) {
     return ''.concat(String(e).padStart(2, '0'), ':').concat(String(t).padStart(2, '0'));
 }
-let e2 = eQ([a.X.PLAY_ON_XBOX, a.X.PLAY_ON_PLAYSTATION]),
-    e3 = eQ([a.X.WATCH_VIDEO, a.X.WATCH_VIDEO_ON_MOBILE]);
-eQ([a.X.WATCH_VIDEO]);
-let e4 = eQ([a.X.WATCH_VIDEO_ON_MOBILE]);
+let e2 = eQ([o.X.PLAY_ON_XBOX, o.X.PLAY_ON_PLAYSTATION]),
+    e3 = eQ([o.X.WATCH_VIDEO, o.X.WATCH_VIDEO_ON_MOBILE]);
+eQ([o.X.WATCH_VIDEO]);
+let e4 = eQ([o.X.WATCH_VIDEO_ON_MOBILE]);
 function e5(e) {
     return e2(e);
 }
@@ -711,11 +711,11 @@ let e6 = (e, t) => {
     var n, r;
     let i = null == e || null == (r = e.progress[t]) || null == (n = r.heartbeat) ? void 0 : n.expiresAt;
     if (null == i) return !1;
-    let o = new Date(i).valueOf();
-    return !isNaN(o) && o > Date.now();
+    let a = new Date(i).valueOf();
+    return !isNaN(a) && a > Date.now();
 };
 function e8(e) {
-    return null != e.userStatus && (e6(e.userStatus, a.X.PLAY_ON_XBOX) || e6(e.userStatus, a.X.PLAY_ON_PLAYSTATION));
+    return null != e.userStatus && (e6(e.userStatus, o.X.PLAY_ON_XBOX) || e6(e.userStatus, o.X.PLAY_ON_PLAYSTATION));
 }
 function e7(e) {
     return !!e3(e) && (0, n(952265).nf)(t_(e.id));
@@ -772,21 +772,21 @@ function ti(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { dateStyle: 'short' };
     return null == e ? '' : new Date(e).toLocaleDateString(p.default.locale, t);
 }
-function to(e) {
+function ta(e) {
     return 'xbox' === e.connected_account_type ? D.ABu.XBOX : D.ABu.PLAYSTATION;
 }
-function ta(e) {
-    return to(e) === D.ABu.XBOX ? x.t.mytEv7 : x.t.iDiwb2;
+function to(e) {
+    return ta(e) === D.ABu.XBOX ? x.t.mytEv7 : x.t.iDiwb2;
 }
 function ts(e) {
     var t, n, r, i;
-    let { quest: o, rewardCode: a, selectedPlatformType: s, sharedQuestFields: l } = e,
-        c = eN({ quest: o }),
-        u = null != s ? s : null == a ? void 0 : a.platform,
+    let { quest: a, rewardCode: o, selectedPlatformType: s, sharedQuestFields: l } = e,
+        c = eN({ quest: a }),
+        u = null != s ? s : null == o ? void 0 : o.platform,
         d = c
             ? ek({
-                  quest: o,
-                  idx: null != (r = null == a ? void 0 : a.tier) ? r : null == (t = o.userStatus) ? void 0 : t.claimedTier
+                  quest: a,
+                  idx: null != (r = null == o ? void 0 : o.tier) ? r : null == (t = a.userStatus) ? void 0 : t.claimedTier
               })
             : null,
         f = null != (i = null == d || null == (n = d.messages) ? void 0 : n.redemptionInstructionsByPlatform) ? i : l.defaultRewardRedemptionInstructionsByPlatform;
@@ -827,10 +827,10 @@ function tf(e) {
         i = [];
     for (let e of r)
         switch (e) {
-            case a.X.PLAY_ON_XBOX:
+            case o.X.PLAY_ON_XBOX:
                 i.push(D.ABu.XBOX);
                 break;
-            case a.X.PLAY_ON_PLAYSTATION:
+            case o.X.PLAY_ON_PLAYSTATION:
                 i.push(D.ABu.PLAYSTATION);
         }
     return i;
@@ -896,17 +896,17 @@ function tS(e, t) {
 function tT(e) {
     var t, n;
     let { questId: r, videoSessionId: i } = e,
-        o = N.ZP.getState().getVideoProgress(r);
-    if (null == o) return;
-    let a = T.Z.getQuest(r);
-    null != a && (null == (t = a.userStatus) ? void 0 : t.enrolledAt) != null && (null == (n = a.userStatus) ? void 0 : n.completedAt) == null && th(a, o.maxTimestampSec);
-    let s = tb(o.maxTimestampSec, o.duration);
+        a = N.ZP.getState().getVideoProgress(r);
+    if (null == a) return;
+    let o = T.Z.getQuest(r);
+    null != o && (null == (t = o.userStatus) ? void 0 : t.enrolledAt) != null && (null == (n = o.userStatus) ? void 0 : n.completedAt) == null && th(o, a.maxTimestampSec);
+    let s = tb(a.maxTimestampSec, a.duration);
     (0, I.dA)({
         questId: r,
         event: D.rMx.QUEST_VIDEO_PROGRESSED,
         properties: {
             progress: s,
-            video_timestamp_seconds: o.maxTimestampSec,
+            video_timestamp_seconds: a.maxTimestampSec,
             video_session_id: i
         }
     }),

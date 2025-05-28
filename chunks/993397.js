@@ -67,7 +67,7 @@ let _ = i.memo(function (e) {
         { hasJumpTarget: p = !1 } = n,
         [f, _] = i.useState(p),
         x = i.useCallback(() => _((e) => !e), []),
-        C = n.hasUnread ? n.content.length - 1 : n.content.length;
+        y = n.hasUnread ? n.content.length - 1 : n.content.length;
     return (0, r.jsxs)('div', {
         className: a()({
             [g.groupStart]: !0,
@@ -87,7 +87,7 @@ let _ = i.memo(function (e) {
             (0, r.jsx)(
                 b,
                 {
-                    count: C,
+                    count: y,
                     compact: o,
                     expanded: f,
                     onClick: x,

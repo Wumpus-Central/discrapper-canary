@@ -3,15 +3,15 @@ n.d(t, {
     z: () => a
 }),
     n(539854);
-var r,
-    i = n(442837),
+var i,
+    r = n(442837),
     l = n(314897),
-    a = (((r = {})[(r.END_EARLY = 0)] = 'END_EARLY'), r);
+    a = (((i = {})[(i.END_EARLY = 0)] = 'END_EARLY'), i);
 let o = [];
 function s(e) {
-    let t = (0, i.e7)([l.default], () => l.default.getId()),
+    let t = (0, r.e7)([l.default], () => l.default.getId()),
         { poll: n } = e;
     if (!e.isPoll() || null == n) return o;
-    let r = [];
-    return n.expiry.isSameOrBefore(Date.now()) || e.author.id !== t || r.push(0), r;
+    let i = [];
+    return n.expiry.isSameOrBefore(Date.now()) || e.author.id !== t || i.push(0), i;
 }

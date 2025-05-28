@@ -1,8 +1,8 @@
 n.d(t, { S1: () => E });
 var r = n(268146),
     i = n(433517),
-    o = n(131951),
-    a = n(594174),
+    a = n(131951),
+    o = n(594174),
     s = n(626135),
     l = n(358085),
     c = n(998502),
@@ -59,31 +59,31 @@ async function E() {
     let t = null == p || null == (e = p.processUtils) ? void 0 : e.getLastCrash;
     if (((0, l.isDesktop)() && c.ZP.on('CRASH_REPORTER_NEW_CRASH', g), null == t)) return void console.log('AppCrashedFatalReport: getLastCrash not supported.');
     let n = await t(),
-        { didCrashReporterSeeCrash: r, didCrashOrUncleanExit: o } = b(i.K.get(h, {}), n),
-        a = O(r, o, n);
-    s.default.track(d.rMx.APP_NATIVE_CRASH, a), i.K.set(h, { lastId: null == n ? void 0 : n.id }), o && setTimeout(async () => await y(), 10000);
+        { didCrashReporterSeeCrash: r, didCrashOrUncleanExit: a } = b(i.K.get(h, {}), n),
+        o = O(r, a, n);
+    s.default.track(d.rMx.APP_NATIVE_CRASH, o), i.K.set(h, { lastId: null == n ? void 0 : n.id }), a && setTimeout(async () => await y(), 10000);
 }
 function b(e, t) {
     var n;
     let r = (null == e ? void 0 : e.lastId) !== (null == t ? void 0 : t.id) && (null == t ? void 0 : t.id) != null,
         i = null != (n = null == t ? void 0 : t.rendererCrashExitCode) ? n : null,
-        o = r || (null != i && 0 !== i);
+        a = r || (null != i && 0 !== i);
     return {
         didCrashReporterSeeCrash: r,
-        didCrashOrUncleanExit: o
+        didCrashOrUncleanExit: a
     };
 }
 async function y() {
     var e, t;
-    if (null != (t = null == (e = a.default.getCurrentUser()) ? void 0 : e.isStaff()) && t)
+    if (null != (t = null == (e = o.default.getCurrentUser()) ? void 0 : e.isStaff()) && t)
         try {
-            await o.Z.getMediaEngine().writeAudioDebugState(), await (0, u.E)(d.GU0.RTC), console.log('Successfully uploaded debug files');
+            await a.Z.getMediaEngine().writeAudioDebugState(), await (0, u.E)(d.GU0.RTC), console.log('Successfully uploaded debug files');
         } catch (e) {
             console.log('Failed to upload debug files');
         }
 }
 function O(e, t, n) {
-    var i, o, a, s, l, c, u, d, f, p, h, m, g, E, b, y, O, v, I;
+    var i, a, o, s, l, c, u, d, f, p, h, m, g, E, b, y, O, v, I;
     function S(e) {
         return (null == n ? void 0 : n.storedInformation) != null && 1 === n.storedInformation[e];
     }
@@ -105,8 +105,8 @@ function O(e, t, n) {
         video_media_session_id: T(r.X4.VideoMediaSessionId),
         stream_media_session_id: T(r.X4.StreamMediaSessionId),
         last_memory_usage_kb: null != (f = null == n || null == (i = n.lastMemoryInformation) ? void 0 : i.memoryUsageKB) ? f : null,
-        last_used_js_heap_size_kb: null != (p = null == n || null == (o = n.lastMemoryInformation) ? void 0 : o.usedJSHeapSizeKB) ? p : null,
-        last_memory_usage_uptime: null != (h = null == n || null == (a = n.lastMemoryInformation) ? void 0 : a.uptimeSeconds) ? h : null,
+        last_used_js_heap_size_kb: null != (p = null == n || null == (a = n.lastMemoryInformation) ? void 0 : a.usedJSHeapSizeKB) ? p : null,
+        last_memory_usage_uptime: null != (h = null == n || null == (o = n.lastMemoryInformation) ? void 0 : o.uptimeSeconds) ? h : null,
         highest_memory_usage_kb: null != (m = null == n || null == (s = n.highestMemoryInformation) ? void 0 : s.memoryUsageKB) ? m : null,
         highest_used_js_heap_size_kb: null != (g = null == n || null == (l = n.highestMemoryInformation) ? void 0 : l.usedJSHeapSizeKB) ? g : null,
         highest_memory_usage_uptime: null != (E = null == n || null == (c = n.highestMemoryInformation) ? void 0 : c.uptimeSeconds) ? E : null

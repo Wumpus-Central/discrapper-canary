@@ -2,8 +2,8 @@ n.d(t, { Z: () => u });
 var r = n(255367);
 n(73800);
 var i = n(685072),
-    o = n(871499);
-function a(e, t, n) {
+    a = n(871499);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -38,8 +38,8 @@ function l(e, t) {
         r,
         i = c(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -48,21 +48,21 @@ function c(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let u = function (e) {
     var { iconComponent: t } = e,
         n = l(e, ['iconComponent']);
-    let { Component: a, events: c } = (0, i.K)();
+    let { Component: o, events: c } = (0, i.K)();
     return (0, r.jsx)(
-        o.d,
+        a.d,
         s(
             {
                 isTrayButton: !1,
                 color: 'disconnect',
-                iconComponent: null != t ? t : a
+                iconComponent: null != t ? t : o
             },
             c,
             n

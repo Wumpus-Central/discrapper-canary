@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(916752),
-    a = n(73433);
+    a = n(916752),
+    o = n(73433);
 function s(e, t, n) {
     return (
         t in e
@@ -58,15 +58,15 @@ function u(e, t) {
 }
 function d(e) {
     let { node: t } = e,
-        n = (0, o.Z)(t);
+        n = (0, a.Z)(t);
     return (0, r.jsx)(i.ua7, {
         text: t.full,
-        tooltipClassName: a.timestampTooltip,
+        tooltipClassName: o.timestampTooltip,
         children: (e) =>
             (0, r.jsx)(
                 'span',
                 u(l({}, e), {
-                    className: a.timestamp,
+                    className: o.timestamp,
                     children: n
                 })
             )

@@ -1,5 +1,5 @@
 n.d(t, {
-    _: () => o,
+    _: () => a,
     e: () => r
 }),
     n(388685),
@@ -17,7 +17,7 @@ function i(e) {
             return null;
     }
 }
-function o(e) {
+function a(e) {
     if (null == e) return null;
     let [t, n] = e.split('-'),
         r = i(t);

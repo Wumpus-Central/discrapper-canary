@@ -1,15 +1,15 @@
 var t = 30,
     n = 12;
 e.exports = function (e, r) {
-    var i, o, a, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, S, T, A, N, C;
-    (i = e.state), (o = e.next_in), (N = e.input), (a = o + (e.avail_in - 5)), (s = e.next_out), (C = e.output), (l = s - (r - e.avail_out)), (c = s + (e.avail_out - 257)), (u = i.dmax), (d = i.wsize), (f = i.whave), (_ = i.wnext), (p = i.window), (h = i.hold), (m = i.bits), (g = i.lencode), (E = i.distcode), (b = (1 << i.lenbits) - 1), (y = (1 << i.distbits) - 1);
+    var i, a, o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, S, T, A, N, C;
+    (i = e.state), (a = e.next_in), (N = e.input), (o = a + (e.avail_in - 5)), (s = e.next_out), (C = e.output), (l = s - (r - e.avail_out)), (c = s + (e.avail_out - 257)), (u = i.dmax), (d = i.wsize), (f = i.whave), (_ = i.wnext), (p = i.window), (h = i.hold), (m = i.bits), (g = i.lencode), (E = i.distcode), (b = (1 << i.lenbits) - 1), (y = (1 << i.distbits) - 1);
     r: do
-        for (m < 15 && ((h += N[o++] << m), (m += 8), (h += N[o++] << m), (m += 8)), O = g[h & b]; ; ) {
+        for (m < 15 && ((h += N[a++] << m), (m += 8), (h += N[a++] << m), (m += 8)), O = g[h & b]; ; ) {
             if (((h >>>= v = O >>> 24), (m -= v), 0 == (v = (O >>> 16) & 255))) C[s++] = 65535 & O;
             else if (16 & v)
-                for (I = 65535 & O, (v &= 15) && (m < v && ((h += N[o++] << m), (m += 8)), (I += h & ((1 << v) - 1)), (h >>>= v), (m -= v)), m < 15 && ((h += N[o++] << m), (m += 8), (h += N[o++] << m), (m += 8)), O = E[h & y]; ; ) {
+                for (I = 65535 & O, (v &= 15) && (m < v && ((h += N[a++] << m), (m += 8)), (I += h & ((1 << v) - 1)), (h >>>= v), (m -= v)), m < 15 && ((h += N[a++] << m), (m += 8), (h += N[a++] << m), (m += 8)), O = E[h & y]; ; ) {
                     if (((h >>>= v = O >>> 24), (m -= v), 16 & (v = (O >>> 16) & 255))) {
-                        if (((S = 65535 & O), m < (v &= 15) && ((h += N[o++] << m), (m += 8) < v && ((h += N[o++] << m), (m += 8))), (S += h & ((1 << v) - 1)) > u)) {
+                        if (((S = 65535 & O), m < (v &= 15) && ((h += N[a++] << m), (m += 8) < v && ((h += N[a++] << m), (m += 8))), (S += h & ((1 << v) - 1)) > u)) {
                             (e.msg = 'invalid distance too far back'), (i.mode = t);
                             break r;
                         }
@@ -72,6 +72,6 @@ e.exports = function (e, r) {
             }
             break;
         }
-    while (o < a && s < c);
-    (o -= I = m >> 3), (m -= I << 3), (h &= (1 << m) - 1), (e.next_in = o), (e.next_out = s), (e.avail_in = o < a ? 5 + (a - o) : 5 - (o - a)), (e.avail_out = s < c ? 257 + (c - s) : 257 - (s - c)), (i.hold = h), (i.bits = m);
+    while (a < o && s < c);
+    (a -= I = m >> 3), (m -= I << 3), (h &= (1 << m) - 1), (e.next_in = a), (e.next_out = s), (e.avail_in = a < o ? 5 + (o - a) : 5 - (a - o)), (e.avail_out = s < c ? 257 + (c - s) : 257 - (s - c)), (i.hold = h), (i.bits = m);
 };

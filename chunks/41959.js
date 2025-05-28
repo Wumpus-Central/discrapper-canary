@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(768581),
+    a = n.n(i),
+    o = n(768581),
     s = n(73346),
     l = n(700307),
     c = (function (e) {
@@ -23,7 +23,7 @@ let u = {
             (t =
                 null != c
                     ? (0, s._W)(n.id, c, i)
-                    : a.ZP.getApplicationIconURL({
+                    : o.ZP.getApplicationIconURL({
                           id: n.id,
                           icon: n.icon,
                           size: i
@@ -31,7 +31,7 @@ let u = {
             (0, r.jsx)('img', {
                 alt: '',
                 src: t,
-                className: o()(l.icon, u[i], d)
+                className: a()(l.icon, u[i], d)
             })
         );
     };

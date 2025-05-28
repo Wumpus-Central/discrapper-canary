@@ -3,7 +3,7 @@ var r = n(255367),
     l = n(73800),
     o = n(120356),
     i = n.n(o),
-    a = n(714673),
+    a = n(240894),
     s = n(442837),
     c = n(692547),
     u = n(561779),
@@ -165,14 +165,14 @@ function T(e) {
         B = (0, p.Q3)('ListSectionItem'),
         F = (0, f.km)((e) => e.volume),
         Z = (0, f.km)((e) => e.setVolume),
-        U = (0, f.km)((e) => e.muted),
-        q = (0, f.km)((e) => e.setMuted),
+        q = (0, f.km)((e) => e.muted),
+        U = (0, f.km)((e) => e.setMuted),
         Q = (0, f.km)((e) => e.transcriptEnabled),
         G = (0, f.km)((e) => e.captionEnabled),
         H = (0, f.km)((e) => e.fullScreenEnabled),
         Y = (0, s.e7)([m.Z], () => m.Z.useReducedMotion),
         z = (0, s.e7)([m.Z], () => m.Z.keyboardModeEnabled),
-        [K, W] = l.useState(U ? 0 : F),
+        [K, W] = l.useState(q ? 0 : F),
         [X, $] = l.useState(!1),
         [J, ee] = l.useState(!1),
         [{ volumeAnimSpring: et }, en] = (0, d.q_F)(() => ({
@@ -191,8 +191,8 @@ function T(e) {
             [o, K]
         ),
         eo = l.useCallback(() => {
-            null != o.current && (0 === K ? (el(F), q(!1), V(F)) : (Z(K), el(0), q(!0), V(0)));
-        }, [o, K, el, F, q, Z, V]),
+            null != o.current && (0 === K ? (el(F), U(!1), V(F)) : (Z(K), el(0), U(!0), V(0)));
+        }, [o, K, el, F, U, Z, V]),
         ei = () => {
             $(!0);
         },
@@ -367,7 +367,7 @@ function T(e) {
                                             minValue: 0,
                                             maxValue: 1,
                                             onValueChange: (e) => {
-                                                el(e), Z(e), V(e), J && (ee(!1), M(!1)), U && e > 0 && q(!1);
+                                                el(e), Z(e), V(e), J && (ee(!1), M(!1)), q && e > 0 && U(!1);
                                             },
                                             asValueChanges: (e) => {
                                                 el(e), J || (ee(!0), M(!0));

@@ -16,7 +16,7 @@ var r = n(73800),
     b = n(173033),
     _ = n(959517),
     x = n(981631);
-function C(e, t, n) {
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function C(e, t, n) {
         e
     );
 }
-function y(e) {
+function C(e) {
     var t, n;
     if (null == e.jumpTargetId || !e.ready) return null;
     let { jumpTargetId: r, jumpTargetOffset: i } = e;
@@ -111,7 +111,7 @@ class j {
                         })
                     )),
                     r.forEach(function (t) {
-                        C(e, t, n[t]);
+                        y(e, t, n[t]);
                     });
             }
             return e;
@@ -126,7 +126,7 @@ class j {
         }
         if (null != e.messages.jumpTargetId) {
             if (this.isLoading()) return;
-            let n = y(e.messages);
+            let n = C(e.messages);
             if (null == n || this.isJumping() || e.messages.jumpSequenceId === t.jumpSequenceId) {
                 if (this.isJumping()) return void (null != n ? this.scrollToMessage(n, !0) : (this.jumping = !1));
             } else {
@@ -338,7 +338,7 @@ class j {
         if (!this.isJumping()) return;
         let { messages: e, hasUnreads: t } = this.props;
         if (null != e.jumpTargetId) {
-            let n = y(e);
+            let n = C(e);
             if (null == n) return;
             let r = this.getElementFromMessageId(n);
             (0, a.k)(r) ? this.scrollTo(this.getOffsetOrientationFromNode(r, 'middle', t ? this.newMessageBarBuffer() : _.kQ), !0) : this.scrollToNewMessages(!0, 'middle');
@@ -368,7 +368,7 @@ class j {
         if (this.isInitialized()) return;
         let { initialScrollTop: e } = this;
         this.initialScrollTop = void 0;
-        let t = y(this.props.messages);
+        let t = C(this.props.messages);
         null != t ? this.scrollToMessage(t, !1) : this.props.hasUnreads && this.props.channel.type !== x.d4z.GUILD_VOICE && this.props.channel.type !== x.d4z.GUILD_STAGE_VOICE ? this.scrollToNewMessages() : null != e ? this.scrollTo(e + this.props.placeholderHeight, !1, this.handleScroll) : this.setScrollToBottom();
     }
     scrollTo(e) {
@@ -476,29 +476,29 @@ class j {
             n,
             i = this;
         if (
-            (C(this, 'props', void 0),
-            C(this, 'ref', r.createRef()),
-            C(this, 'automaticAnchor', null),
-            C(this, 'messageFetchAnchor', null),
-            C(this, 'focusAnchor', null),
-            C(this, 'loading', void 0),
-            C(this, 'jumping', !1),
-            C(this, 'pinned', void 0),
-            C(this, 'dragging', !1),
-            C(this, 'isAtBottom', !1),
-            C(this, 'prevScrollTop', null),
-            C(this, 'anchorTimeout', null),
-            C(this, 'initialScrollTop', null),
-            C(this, 'acking', !1),
-            C(this, 'scrollCounter', 0),
-            C(this, 'offsetHeightCache', 0),
-            C(this, 'scrollHeightCache', 0),
-            C(this, 'scrollTopCache', -1),
-            C(this, '_bottomAnchor', null),
-            C(this, '_automaticAnchorCallbacks', []),
-            C(this, '_scrollCompleteCallbacks', []),
-            C(this, 'updateVisibleMessagesDebounced', l().debounce(h.JR, 300)),
-            C(this, 'handleScroll', (e) => {
+            (y(this, 'props', void 0),
+            y(this, 'ref', r.createRef()),
+            y(this, 'automaticAnchor', null),
+            y(this, 'messageFetchAnchor', null),
+            y(this, 'focusAnchor', null),
+            y(this, 'loading', void 0),
+            y(this, 'jumping', !1),
+            y(this, 'pinned', void 0),
+            y(this, 'dragging', !1),
+            y(this, 'isAtBottom', !1),
+            y(this, 'prevScrollTop', null),
+            y(this, 'anchorTimeout', null),
+            y(this, 'initialScrollTop', null),
+            y(this, 'acking', !1),
+            y(this, 'scrollCounter', 0),
+            y(this, 'offsetHeightCache', 0),
+            y(this, 'scrollHeightCache', 0),
+            y(this, 'scrollTopCache', -1),
+            y(this, '_bottomAnchor', null),
+            y(this, '_automaticAnchorCallbacks', []),
+            y(this, '_scrollCompleteCallbacks', []),
+            y(this, 'updateVisibleMessagesDebounced', l().debounce(h.JR, 300)),
+            y(this, 'handleScroll', (e) => {
                 var t;
                 if (!this.isInitialized()) return;
                 let n = this.getScrollerState(),
@@ -522,17 +522,17 @@ class j {
                 let i = this.isInScrollTriggerLoadingRegion(n);
                 1 === i ? this.loadMore() : 2 === i ? this.loadMore(!0) : this.enableAutomaticAck(), this.handleScrollSpeed(n);
             }),
-            C(this, 'handleResize', (e, t) => {
+            y(this, 'handleResize', (e, t) => {
                 let { offsetHeightCache: n, scrollHeightCache: r } = this;
                 'container' === t ? (n = e.contentRect.height) : 'content' === t && (r = e.contentRect.height), this.isHeightChange(n, r) && this.fixScrollPosition(n, r);
             }),
-            C(this, 'handleMouseDown', (e) => {
+            y(this, 'handleMouseDown', (e) => {
                 e.target === e.currentTarget && (this.dragging = !0);
             }),
-            C(this, 'handleMouseUp', () => {
+            y(this, 'handleMouseUp', () => {
                 (this.dragging = !1), this.handleScroll();
             }),
-            C(this, 'loadMore', function () {
+            y(this, 'loadMore', function () {
                 let e,
                     t,
                     n = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -554,7 +554,7 @@ class j {
                         truncate: !0
                     });
             }),
-            C(this, 'updateStoreDimensionsDebounced', l().debounce(this.updateStoreDimensions, 200)),
+            y(this, 'updateStoreDimensionsDebounced', l().debounce(this.updateStoreDimensions, 200)),
             (this.props = e),
             (this.loading = e.messages.loadingMore),
             null != e.messages.jumpTargetId)

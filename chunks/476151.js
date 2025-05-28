@@ -1,8 +1,8 @@
 n.r(t), n.d(t, { default: () => f });
 var r,
     i = n(442837),
-    o = n(570140);
-function a(e, t, n) {
+    a = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,8 +37,8 @@ class d extends (r = i.ZP.Store) {
         return s[e];
     }
 }
-a(d, 'displayName', 'NoteStore');
-let f = new d(o.Z, {
+o(d, 'displayName', 'NoteStore');
+let f = new d(a.Z, {
     CONNECTION_OPEN: l,
     OVERLAY_INITIALIZE: l,
     USER_NOTE_UPDATE: c,

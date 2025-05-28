@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(79712),
     _ = n(736052),
     x = n(216572),
-    C = n(359110),
-    y = n(359119),
+    y = n(359110),
+    C = n(359119),
     v = n(13279),
     j = n(248789),
     O = n(88101),
@@ -31,8 +31,8 @@ var r = n(255367),
     A = n(944486),
     w = n(594174),
     R = n(55935),
-    M = n(70956),
-    k = n(709054),
+    k = n(70956),
+    M = n(709054),
     L = n(534091),
     D = n(900164),
     U = n(554838),
@@ -115,20 +115,20 @@ function ei(e) {
         eb = (0, G.$)(f),
         e_ = F.length > 0 && (null == (t = F.first()) ? void 0 : t.isFirstMessageInForumPost(f)),
         ex = (0, c.ts)(f),
-        eC = (0, l.e7)([I.Z], () => I.Z.shouldShowTopicsBar() && !eh),
-        ey = (0, O.P)(f.id),
+        ey = (0, l.e7)([I.Z], () => I.Z.shouldShowTopicsBar() && !eh),
+        eC = (0, O.P)(f.id),
         ev = (0, v.z)(f.id, $.zr),
         ej = (0, p.k)(f.id),
         eO = (0, B.Z)(),
         eE = (function (e, t) {
             if (e.isDM() && null != t)
-                if (t.type === y.pj.STRANGER_DANGER)
+                if (t.type === C.pj.STRANGER_DANGER)
                     return (0, r.jsx)(E.M, {
                         channelId: e.id,
                         warningId: t.id,
                         senderId: e.getRecipientId()
                     });
-                else if (t.type === y.pj.LIKELY_ATO)
+                else if (t.type === C.pj.LIKELY_ATO)
                     return (0, r.jsx)(h.M, {
                         channelId: e.id,
                         warningId: t.id,
@@ -141,7 +141,7 @@ function ei(e) {
                         senderId: e.getRecipientId()
                     });
             return null;
-        })(f, null != (n = null != ey ? ey : ev) ? n : ej),
+        })(f, null != (n = null != eC ? eC : ev) ? n : ej),
         eI = f.isForumPost() && !e_ ? (0, r.jsx)(g.Z, { postId: f.id }) : null,
         eP = (0, _.Z)(f.id),
         eS = (0, x.nw)(f);
@@ -200,7 +200,7 @@ function ei(e) {
                     )
                 );
             }
-            if (null != ed && ed > e.content.timestamp.getTime() * M.Z.Millis.SECOND) return;
+            if (null != ed && ed > e.content.timestamp.getTime() * k.Z.Millis.SECOND) return;
             let l = N.Z.can(J.Plq.CREATE_INSTANT_INVITE, f);
             if ((0, D.Z)(e.content, l)) return;
             e.type === J.ys_.MESSAGE && null == eZ && (eZ = e);
@@ -288,7 +288,7 @@ function ei(e) {
         let e,
             t,
             n = T.ZP.getOldestUnreadTimestamp(f.id),
-            l = 0 !== n ? n : k.default.extractTimestamp(f.id),
+            l = 0 !== n ? n : M.default.extractTimestamp(f.id),
             o = (0, R.KC)(new Date(), new Date(l));
         if ((T.ZP.isEstimated(f.id) ? ((e = o ? ee.t.wvtbbG : ee.t.tHqbtr), (t = ee.t.vaPWFR)) : ((e = o ? ee.t.BctFHx : ee.t['3wXb9P']), (t = ee.t['4H8ldH'])), ex && (0, c.tW)(f) && eO.includes(X.E.SUMMARIES))) {
             let n = T.ZP.ackMessageId(f.id),
@@ -298,18 +298,18 @@ function ei(e) {
                     num_unread_summaries: o,
                     num_unread_messages: ei,
                     last_ack_message_id: n,
-                    summaries_enabled_by_user: eC,
+                    summaries_enabled_by_user: ey,
                     summaries_enabled_for_channel: (0, c.Lp)(f)
                 }),
                 (0, c.Lp)(f))
             ) {
-                let n = eC
+                let n = ey
                     ? ee.intl.format(t, { count: ei })
                     : ee.intl.format(e, {
                           count: ei,
                           timestamp: l
                       });
-                if (eC) {
+                if (ey) {
                     let e =
                         o > 0
                             ? (0, r.jsxs)(r.Fragment, {
@@ -400,7 +400,7 @@ function ei(e) {
     if (
         (null == i &&
             (0, c.Lp)(f) &&
-            eC &&
+            ey &&
             eO.includes(X.E.SUMMARIES) &&
             (i = (0, r.jsx)(W.BO, {
                 channel: f,
@@ -445,7 +445,7 @@ function ei(e) {
                             (function (e) {
                                 o.Z.jumpToPresent(e.id, J.AQB);
                                 let t = A.Z.getChannelId();
-                                e.id === t && (0, C.Kh)(e.id);
+                                e.id === t && (0, y.Kh)(e.id);
                             })(f),
                         className: ef
                     });

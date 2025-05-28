@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(358085),
     _ = n(228488),
     x = n(981631),
-    C = n(806176);
-let y = () => {
+    y = n(806176);
+let C = () => {
     a.Z.wait(() => p.xv(x.KJ3.CHANNEL_CALL_POPOUT));
 };
 function v(e) {
@@ -64,7 +64,7 @@ function v(e) {
             },
             [n, t]
         ),
-        M = i.useCallback(
+        k = i.useCallback(
             (e) => {
                 null != T &&
                     e === x.AEg.FULL_SCREEN &&
@@ -75,15 +75,15 @@ function v(e) {
             },
             [N, R, T]
         ),
-        k = i.useCallback(
+        M = i.useCallback(
             (e) => () => {
-                null != T && ((0, d.v)(j, d.d.FULL_SCREEN, e !== x.AEg.FULL_SCREEN), e !== x.AEg.FULL_SCREEN ? ((Z.current = e), R(e, x.AEg.FULL_SCREEN), (0, _.Dj)(T)) : M(e));
+                null != T && ((0, d.v)(j, d.d.FULL_SCREEN, e !== x.AEg.FULL_SCREEN), e !== x.AEg.FULL_SCREEN ? ((Z.current = e), R(e, x.AEg.FULL_SCREEN), (0, _.Dj)(T)) : k(e));
             },
-            [R, M, T, j]
+            [R, k, T, j]
         );
     i.useEffect(() => {
         let e = () => {
-            null != T && ((0, _.rB)(T, N) || I !== x.AEg.FULL_SCREEN || k(I)());
+            null != T && ((0, _.rB)(T, N) || I !== x.AEg.FULL_SCREEN || M(I)());
         };
         return (
             N.addEventListener(_.NO, e),
@@ -91,10 +91,10 @@ function v(e) {
                 N.removeEventListener(_.NO, e);
             }
         );
-    }, [N, I, k, T]);
+    }, [N, I, M, T]);
     let L = {
             channel: t,
-            maybeLeaveFullScreen: M
+            maybeLeaveFullScreen: k
         },
         D = i.useRef(L);
     return (i.useEffect(() => {
@@ -140,15 +140,15 @@ function v(e) {
         null != T && E.current === x.WtW.VIDEO && P === x.WtW.VOICE && (0, _.Pr)(T, N);
     }, [N, P, E, T]),
     i.useEffect(() => {
-        !S && O && y();
+        !S && O && C();
     }, [S, O]),
     w)
         ? (0, r.jsx)(h.Z, {
               themeable: !1,
               node: T,
               guestWindow: p,
-              className: C.rightTrayIcon,
-              onClick: k(I)
+              className: y.rightTrayIcon,
+              onClick: M(I)
           })
         : null;
 }

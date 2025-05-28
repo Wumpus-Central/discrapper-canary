@@ -22,8 +22,8 @@ var r = n(475179),
     b = n(981631),
     _ = n(959517),
     x = n(474936),
-    C = n(388032);
-function y(e) {
+    y = n(388032);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -70,7 +70,7 @@ function v(e, t) {
             attachment_mimetypes: d
         }),
             (0, a.openUploadError)({
-                title: C.intl.string(C.t['/tGlcn']),
+                title: y.intl.string(y.t['/tGlcn']),
                 help: (0, g.BK)(n, r),
                 showPremiumUpsell: !(0, m.M5)(n, x.p9.TIER_2),
                 fileSize: s
@@ -78,8 +78,8 @@ function v(e, t) {
         return;
     }
     (0, a.openUploadError)({
-        title: C.intl.string(C.t['/tGlcn']),
-        help: C.intl.formatToPlainString(C.t.tUOJdH, { maxSize: f.Ng(f.OC()) })
+        title: y.intl.string(y.t['/tGlcn']),
+        help: y.intl.formatToPlainString(y.t.tUOJdH, { maxSize: f.Ng(f.OC()) })
     });
 }
 function j(e, t, n) {
@@ -90,8 +90,8 @@ function j(e, t, n) {
     if ((0, g.Bf)(e, _)) return void v(t, e);
     if (d.Z.getUploadCount(t.id, n) + e.length > b.dN1) {
         (0, a.openUploadError)({
-            title: C.intl.string(C.t.wOr6hI),
-            help: C.intl.formatToPlainString(C.t['qqyp/f'], { limit: b.dN1 })
+            title: y.intl.string(y.t.wOr6hI),
+            help: y.intl.formatToPlainString(y.t['qqyp/f'], { limit: b.dN1 })
         }),
             h.default.track(b.rMx.UPLOAD_FILE_LIMIT_ERROR, {
                 existing_count: d.Z.getUploadCount(t.id, n),
@@ -101,7 +101,7 @@ function j(e, t, n) {
     }
     if (((t.type !== b.d4z.GUILD_VOICE && t.type !== b.d4z.GUILD_STAGE_VOICE) || u.Z.getChatOpen(t.id) || r.Z.updateChatOpen(t.id, !0), p)) {
         let r = Array.from(e).map((e, t) =>
-            y(
+            C(
                 {
                     file: e,
                     platform: s.ow.WEB,
@@ -120,7 +120,7 @@ function j(e, t, n) {
         let r = Array.from(e).map((e, n) => {
             let r = null != c ? c[n] : {};
             return new o.n(
-                y(
+                C(
                     {
                         file: e,
                         platform: s.ow.WEB,

@@ -37,8 +37,8 @@ var r,
     M = n(395361),
     U = n(639351),
     G = n(81063),
-    B = n(823379),
-    V = n(51144),
+    V = n(823379),
+    B = n(51144),
     H = n(599706),
     F = n(981631),
     z = n(388032),
@@ -556,7 +556,7 @@ let er = (e) => {
                             className: W.applicationStreamingAvatar
                         }),
                         (0, i.jsxs)('div', {
-                            children: [q(V.ZP.getName(l)), X(g)]
+                            children: [q(B.ZP.getName(l)), X(g)]
                         }),
                         (0, i.jsx)(S.ZP, { size: S.ZP.Sizes.SMALL })
                     ]
@@ -579,7 +579,7 @@ let er = (e) => {
         let p = (0, s.Wu)([k.default, R.default], () =>
                 Array.from(a)
                     .map((e) => (R.default.getId() === e ? null : k.default.getUser(e)))
-                    .filter(B.lm)
+                    .filter(V.lm)
             ),
             f = (0, h.O)(),
             { analyticsLocations: m } = (0, I.ZP)();

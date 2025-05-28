@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(540059),
     _ = n(605236),
     x = n(536442),
-    C = n(79390),
-    y = n(216789),
+    y = n(79390),
+    C = n(216789),
     v = n(665906),
     j = n(695346),
     O = n(433355),
@@ -31,8 +31,8 @@ var r = n(255367),
     A = n(316595),
     w = n(193910),
     R = n(951211),
-    M = n(981631),
-    k = n(356659),
+    k = n(981631),
+    M = n(356659),
     L = n(921944),
     D = n(388032),
     U = n(911777);
@@ -92,13 +92,13 @@ let F = i.memo(function (e) {
         et = (0, o.e7)([O.ZP], () => null == O.ZP.getCurrentSidebarChannelId(H.id)),
         { showClipsHeaderEntrypoint: en } = f.NV.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
         er = (0, o.e7)([x.qc], () => x.qc.hasHotspot(x.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
-        ei = (0, c.s9z)((e) => (0, c.DEQ)(e, k.Qr)),
+        ei = (0, c.s9z)((e) => (0, c.DEQ)(e, M.Qr)),
         el = (0, o.e7)([E.Z], () => E.Z.hasLayers()),
         ea = (0, o.e7)([m.Z], () => m.Z.hasClips()),
         [eo, es] = i.useState(null),
         ec = (0, f.Go)() && (J || ea),
         eu = H.isPrivate(),
-        ed = (0, o.e7)([P.Z], () => eu || (P.Z.can(M.Plq.ATTACH_FILES, H) && P.Z.can(M.Plq.SEND_MESSAGES, H))),
+        ed = (0, o.e7)([P.Z], () => eu || (P.Z.can(k.Plq.ATTACH_FILES, H) && P.Z.can(k.Plq.SEND_MESSAGES, H))),
         ep = (0, d.Z)($);
     (null == ep ? void 0 : ep.newClipIds.length) !== (null == $ ? void 0 : $.newClipIds.length) && (null != (t = null == $ ? void 0 : $.newClipIds.length) ? t : 0) > 0 && null == eo && er && et && !ei && !en && !el && es('recentClips');
     let eh = (e, t, n) => {
@@ -108,7 +108,7 @@ let F = i.memo(function (e) {
                       requireConfirm: !0,
                       showLargeMessageDialog: n
                   }),
-                Z.S.dispatchToLastSubscribed(M.CkL.TEXTAREA_FOCUS);
+                Z.S.dispatchToLastSubscribed(k.CkL.TEXTAREA_FOCUS);
         },
         ef = (0, o.e7)([I.Z], () => I.Z.hasCurrentUserSentMessageSinceAppStart());
     function em() {
@@ -117,7 +117,7 @@ let F = i.memo(function (e) {
                 let { default: e } = await Promise.all([n.e('2668'), n.e('71248')]).then(n.bind(n, 542055));
                 return (t) => (0, r.jsx)(e, G(B({}, t), { channelId: H.id }));
             },
-            { modalKey: k.Qr }
+            { modalKey: M.Qr }
         ),
             es(null);
     }
@@ -127,18 +127,18 @@ let F = i.memo(function (e) {
             return null == (e = K.current) ? void 0 : e.activateUploadDialogue();
         };
         return (
-            Z.S.subscribe(M.CkL.UPLOAD_FILE, e),
+            Z.S.subscribe(k.CkL.UPLOAD_FILE, e),
             () => {
-                Z.S.unsubscribe(M.CkL.UPLOAD_FILE, e);
+                Z.S.unsubscribe(k.CkL.UPLOAD_FILE, e);
             }
         );
     });
     let eg = (0, v.NE)(H),
         eb = (0, v.Xu)(H),
         e_ = !j.dN.useSetting() && !(0, N.isAndroidWeb)() && null != window.ResizeObserver,
-        ex = (0, C.UI)(null != H ? H : void 0),
-        eC = (0, h.qB)(),
-        ey = (0, y.Us)({ location: 'ChannelAttachButton' }),
+        ex = (0, y.UI)(null != H ? H : void 0),
+        ey = (0, h.qB)(),
+        eC = (0, C.Us)({ location: 'ChannelAttachButton' }),
         ev = null != (l = null == ee ? void 0 : ee.length) ? l : 0,
         ej = (0, R.Z)({
             canAttachFiles: ed,
@@ -150,9 +150,9 @@ let F = i.memo(function (e) {
             activities: Q,
             newClipsCount: ev,
             canPostPolls: ex,
-            canLaunchActivities: eC,
+            canLaunchActivities: ey,
             appContext: q,
-            canSendScheduledMessages: ey
+            canSendScheduledMessages: eC
         }),
         eO = (0, b.Q3)('ChannelAttachButton'),
         eE = (0, b.R6)('ChannelAttachButton');
@@ -262,7 +262,7 @@ let F = i.memo(function (e) {
                     channel: H,
                     isOmniMenuOpen: 'attachMenu' === eo,
                     openOmniMenu: () => es('attachMenu'),
-                    enabled: eC,
+                    enabled: ey,
                     animationContainerClassName: U.buttonAnimation,
                     glowClassName: U.buttonAnimationGlow,
                     trinketsClassName: U.buttonAnimationTrinkets,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685), n(539854);
+n.d(t, { Z: () => M }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(970731),
     _ = n(560688),
     x = n(173507),
-    C = n(523746),
-    y = n(819640),
+    y = n(523746),
+    C = n(819640),
     v = n(131951),
     j = n(699516),
     O = n(594174),
@@ -43,7 +43,7 @@ function R(e, t, n) {
         e
     );
 }
-class M extends i.PureComponent {
+class k extends i.PureComponent {
     componentDidMount() {
         I.S.subscribe(Z.CkL.CALL_START, this.handleVoiceClick);
     }
@@ -165,16 +165,16 @@ class M extends i.PureComponent {
             });
     }
 }
-function k(e) {
+function M(e) {
     var t;
     let { channel: n } = e,
         o = (0, g.Z)(),
         s = (0, l.e7)([h.Z], () => h.Z.getMode(n.id)),
         c = (0, l.e7)([E.Z], () => E.Z.isInChannel(n.id)),
         f = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        { callActive: m, callUnavailable: b } = (0, l.cj)([C.Z], () => ({
-            callActive: C.Z.isCallActive(n.id),
-            callUnavailable: C.Z.isCallUnavailable(n.id)
+        { callActive: m, callUnavailable: b } = (0, l.cj)([y.Z], () => ({
+            callActive: y.Z.isCallActive(n.id),
+            callUnavailable: y.Z.isCallUnavailable(n.id)
         })),
         _ = n.getRecipientId(),
         { notFriend: x, isBlocked: v } = (0, l.cj)([j.Z], () => ({
@@ -185,7 +185,7 @@ function k(e) {
         P = (0, u.bp)(),
         S = [],
         N = (0, p.Z)(n.id),
-        T = (0, l.e7)([y.Z], () => y.Z.hasLayers());
+        T = (0, l.e7)([C.Z], () => C.Z.hasLayers());
     N && !T && S.push(a.z.ACTIVITY_GDM_CALL_TOOLTIP);
     let [A, w] = i.useState(!1);
     return (i.useEffect(() => {
@@ -196,7 +196,7 @@ function k(e) {
     }, []),
     o || (null == I ? void 0 : I.bot))
         ? null
-        : (0, r.jsx)(M, {
+        : (0, r.jsx)(k, {
               channel: n,
               mode: s,
               inCall: c,

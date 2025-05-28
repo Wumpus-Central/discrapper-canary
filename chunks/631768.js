@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var r,
     i = n(442837),
-    o = n(570140);
-function a(e, t, n) {
+    a = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,5 +24,5 @@ class c extends (r = i.ZP.Store) {
         return s;
     }
 }
-a(c, 'displayName', 'VideoQualityModeStore');
-let u = new c(o.Z, { SET_CHANNEL_VIDEO_QUALITY_MODE: l });
+o(c, 'displayName', 'VideoQualityModeStore');
+let u = new c(a.Z, { SET_CHANNEL_VIDEO_QUALITY_MODE: l });

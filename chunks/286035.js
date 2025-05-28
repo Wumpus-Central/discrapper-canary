@@ -1,15 +1,15 @@
 n.d(t, {
-    Pg: () => a,
+    Pg: () => o,
     Te: () => i,
-    kb: () => o
+    kb: () => a
 });
 var r = n(570140);
 function i() {
     r.Z.wait(() => r.Z.dispatch({ type: 'DOMAIN_MIGRATION_START' }));
 }
-function o() {
+function a() {
     r.Z.dispatch({ type: 'DOMAIN_MIGRATION_FAILURE' });
 }
-function a() {
+function o() {
     window.location.reload();
 }

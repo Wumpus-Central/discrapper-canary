@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685), n(539854);
+n.d(t, { Z: () => M }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(873546),
@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(670188),
     _ = n(158776),
     x = n(699516),
-    C = n(111583),
-    y = n(594174),
+    y = n(111583),
+    C = n(594174),
     v = n(626135),
     j = n(585483),
     O = n(233870),
@@ -56,8 +56,8 @@ let A = [],
     w = I.ZP.getEnableHardwareAcceleration();
 function R(e) {
     let { user: t, channel: o, status: u, activities: d } = e,
-        p = (0, a.e7)([C.Z], () => null != C.Z.getTypingUsers(o.id)[t.id]),
-        f = (0, a.e7)([y.default], () => y.default.getCurrentUser()),
+        p = (0, a.e7)([y.Z], () => null != y.Z.getTypingUsers(o.id)[t.id]),
+        f = (0, a.e7)([C.default], () => C.default.getCurrentUser()),
         v = (0, a.e7)([_.Z], () => _.Z.isMobileOnline(t.id)),
         O = (0, a.e7)([x.Z], () => x.Z.getNickname(t.id)),
         I = (0, h.Z)(t.id),
@@ -102,11 +102,11 @@ function R(e) {
                 }),
                 c.Z.startTyping(o.id);
         },
-        M = (0, m.K)({
+        k = (0, m.K)({
             location: 'PrivateChannelRecipients',
             user: t
         }),
-        [k, L] = i.useState(!1),
+        [M, L] = i.useState(!1),
         D = (0, g.ic)({ location: 'PrivateChannelRecipients' });
     return (0, r.jsx)(b.Z, {
         targetElementRef: N,
@@ -116,7 +116,7 @@ function R(e) {
         position: l.tq ? 'window_center' : 'left',
         spacing: 16,
         onShiftClick: R,
-        shouldShow: k,
+        shouldShow: M,
         onRequestClose: () => L(!1),
         children: (e) => {
             var { onClick: n, onMouseDown: i } = e,
@@ -155,16 +155,16 @@ function R(e) {
                         applicationStream: I,
                         channel: o,
                         onContextMenu: A,
-                        selected: k,
+                        selected: M,
                         isMobile: v,
                         nick: O,
-                        nameplate: M,
+                        nameplate: k,
                         hideTooltip: D,
                         onClick: (e) => {
                             e.shiftKey ? null == R || R() : L((e) => !e);
                         },
                         onMouseDown: (e) => {
-                            k ? e.stopPropagation() : null == i || i(e);
+                            M ? e.stopPropagation() : null == i || i(e);
                         }
                     },
                     l
@@ -174,7 +174,7 @@ function R(e) {
         }
     });
 }
-function M(e, t) {
+function k(e, t) {
     if (e.listItems.length !== t.listItems.length) return !1;
     for (let n = 0; n < e.listItems.length; n++) {
         let r = e.listItems[n],
@@ -183,19 +183,19 @@ function M(e, t) {
     }
     return !0;
 }
-function k(e) {
+function M(e) {
     let { channel: t } = e,
-        n = y.default.getCurrentUser(),
+        n = C.default.getCurrentUser(),
         l = null == n ? void 0 : n.isStaff(),
         { analyticsLocations: s } = (0, d.ZP)(u.Z.MEMBER_LIST),
         { listItems: c } = (0, a.e7)(
-            [x.Z, y.default, _.Z],
+            [x.Z, C.default, _.Z],
             () => {
-                let e = (0, O.T)(t.recipients, y.default),
+                let e = (0, O.T)(t.recipients, C.default),
                     n = {};
                 for (let t of e) {
                     var r, i, l;
-                    x.Z.isFriend(t.id) || t.id === (null == (r = y.default.getCurrentUser()) ? void 0 : r.id)
+                    x.Z.isFriend(t.id) || t.id === (null == (r = C.default.getCurrentUser()) ? void 0 : r.id)
                         ? (n[t.id] = {
                               status: null != (i = _.Z.getStatus(t.id)) ? i : S.Skl.OFFLINE,
                               activities: null != (l = _.Z.getActivities(t.id)) ? l : A
@@ -217,7 +217,7 @@ function k(e) {
                 return { listItems: a };
             },
             [t],
-            M
+            k
         );
     i.useEffect(() => {
         v.default.track(S.rMx.MEMBER_LIST_VIEWED, {

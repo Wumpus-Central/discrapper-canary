@@ -1,6 +1,6 @@
 n.d(t, {
     H: () => v,
-    T: () => y
+    T: () => C
 }),
     n(388685);
 var r = n(73800),
@@ -20,11 +20,11 @@ var r = n(73800),
     b = n(206583),
     _ = n(809017),
     x = n(981631),
-    C = n(388032);
-let y = 0;
+    y = n(388032);
+let C = 0;
 function v(e) {
     let {
-            memberStoreProps: { groups: t, rows: n, version: y },
+            memberStoreProps: { groups: t, rows: n, version: C },
             channelId: v,
             guildId: j
         } = e,
@@ -35,10 +35,10 @@ function v(e) {
         A = (0, i.e7)([o.Z], () => o.Z.getChannel(v)),
         w = (0, i.e7)([s.Z], () => s.Z.getGuild(j), [j]),
         R = (0, h.E)(w),
-        M = null != R && R && (null == A ? void 0 : A.isForumChannel()) === !1,
-        [k, L, D, U] = r.useMemo(() => {
+        k = null != R && R && (null == A ? void 0 : A.isForumChannel()) === !1,
+        [M, L, D, U] = r.useMemo(() => {
             let e;
-            if (null == P || 0 === P.length || null == I || !M) return [t, n, y];
+            if (null == P || 0 === P.length || null == I || !k) return [t, n, C];
             let r = O ? P.length : Z ? 4 : 3,
                 i = P.slice(0, r);
             e = N
@@ -54,7 +54,7 @@ function v(e) {
                 key: _.G,
                 count: e.length,
                 index: n.length,
-                title: C.intl.string(C.t['6gwSFR']),
+                title: y.intl.string(y.t['6gwSFR']),
                 onToggleExpand: () => {
                     E((e) => {
                         let t = !e;
@@ -73,7 +73,7 @@ function v(e) {
                 feedHeight: e.map(g.iZ).reduce((e, t) => e + t, 0)
             };
             return [[l, ...t], [...n, l, ...e], Math.random(), e];
-        }, [v, P, O, t, j, I, n, y, N, M, Z]),
+        }, [v, P, O, t, j, I, n, C, N, k, Z]),
         B = r.useRef(0),
         G = r.useRef(P),
         F = r.useRef(void 0),
@@ -105,7 +105,7 @@ function v(e) {
                         r = n.slice(0, B.current);
                     !N &&
                         T &&
-                        M &&
+                        k &&
                         ((0, f.e)(x.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
                             request_id: I,
                             first_shown_at: F.current,
@@ -123,10 +123,10 @@ function v(e) {
                             }));
                 }
             ),
-            [I, v, j, N, T, M]
+            [I, v, j, N, T, k]
         ),
         {
-            groups: k,
+            groups: M,
             rows: L,
             version: D,
             updateMaxRowSeen: V

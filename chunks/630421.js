@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(740078),
     i = n(343713),
-    o = n(49691),
-    a = n(285363),
+    a = n(49691),
+    o = n(285363),
     s = n(874900),
     l = n(126387),
     c = n(632471),
@@ -59,7 +59,7 @@ function _(e) {
         var R = (0, i.Z)(l),
             w = 'clientHeight',
             D = 'clientWidth';
-        R === (0, o.Z)(l) && ((R = (0, a.Z)(l)), 'static' !== (0, s.Z)(R).position && 'absolute' === h && ((w = 'scrollHeight'), (D = 'scrollWidth'))), (u === r.we || ((u === r.t$ || u === r.F2) && _ === r.ut)) && ((C = r.I), (I -= (b && R === P && P.visualViewport ? P.visualViewport.height : R[w]) - c.height), (I *= m ? 1 : -1)), (u === r.t$ || ((u === r.we || u === r.I) && _ === r.ut)) && ((N = r.F2), (O -= (b && R === P && P.visualViewport ? P.visualViewport.width : R[D]) - c.width), (O *= m ? 1 : -1));
+        R === (0, a.Z)(l) && ((R = (0, o.Z)(l)), 'static' !== (0, s.Z)(R).position && 'absolute' === h && ((w = 'scrollHeight'), (D = 'scrollWidth'))), (u === r.we || ((u === r.t$ || u === r.F2) && _ === r.ut)) && ((C = r.I), (I -= (b && R === P && P.visualViewport ? P.visualViewport.height : R[w]) - c.height), (I *= m ? 1 : -1)), (u === r.t$ || ((u === r.we || u === r.I) && _ === r.ut)) && ((N = r.F2), (O -= (b && R === P && P.visualViewport ? P.visualViewport.width : R[D]) - c.width), (O *= m ? 1 : -1));
     }
     var L = Object.assign({ position: h }, g && d),
         x =
@@ -69,7 +69,7 @@ function _(e) {
                           x: O,
                           y: I
                       },
-                      (0, o.Z)(l)
+                      (0, a.Z)(l)
                   )
                 : {
                       x: O,
@@ -86,8 +86,8 @@ let p = {
             n = e.options,
             r = n.gpuAcceleration,
             i = void 0 === r || r,
-            o = n.adaptive,
-            a = void 0 === o || o,
+            a = n.adaptive,
+            o = void 0 === a || a,
             s = n.roundOffsets,
             u = void 0 === s || s,
             d = {
@@ -106,7 +106,7 @@ let p = {
                     Object.assign({}, d, {
                         offsets: t.modifiersData.popperOffsets,
                         position: t.options.strategy,
-                        adaptive: a,
+                        adaptive: o,
                         roundOffsets: u
                     })
                 )

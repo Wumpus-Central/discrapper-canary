@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(388685);
 var r = n(664751),
     i = n(975641),
-    o = n(544891),
-    a = n(570140),
+    a = n(544891),
+    o = n(570140),
     s = n(147913),
     l = n(900849),
     c = n(356164),
@@ -40,13 +40,13 @@ class p extends s.Z {
                 let n = null != (t = null == e ? void 0 : e.forceRefresh) && t,
                     s = c.Z.getLastFetchTimestamp({ categoryId: d.Hk });
                 if (n || (0, u.Ew)(s)) {
-                    a.Z.dispatch({
+                    o.Z.dispatch({
                         type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_START',
                         categoryId: d.Hk,
                         reset: !0
                     });
                     try {
-                        let e = await o.tn.get({
+                        let e = await a.tn.get({
                                 url: f.ANM.GUILD_DISCOVERY,
                                 query: r.stringify({
                                     offset: 0,
@@ -57,14 +57,14 @@ class p extends s.Z {
                             }),
                             t = e.body.total,
                             n = e.body.guilds.map(u.Uv);
-                        a.Z.dispatch({
+                        o.Z.dispatch({
                             type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS',
                             categoryId: d.Hk,
                             guilds: n,
                             total: t
                         });
                     } catch (e) {
-                        a.Z.dispatch({
+                        o.Z.dispatch({
                             type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE',
                             categoryId: d.Hk,
                             error: e
@@ -78,13 +78,13 @@ class p extends s.Z {
                 if (!this.isFetchEnabled) return void this.queue.add(t);
                 let i = c.Z.getLastFetchTimestamp({ categoryId: t });
                 if (n || (0, u.Ew)(i)) {
-                    a.Z.dispatch({
+                    o.Z.dispatch({
                         type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_START',
                         categoryId: t,
                         reset: !0
                     });
                     try {
-                        let e = await o.tn.get({
+                        let e = await a.tn.get({
                                 url: f.ANM.GUILD_DISCOVERY,
                                 query: r.stringify({ categories: [t] }),
                                 oldFormErrors: !0,
@@ -92,14 +92,14 @@ class p extends s.Z {
                             }),
                             n = e.body.total,
                             i = e.body.guilds.map(u.Uv);
-                        a.Z.dispatch({
+                        o.Z.dispatch({
                             type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS',
                             categoryId: t,
                             guilds: i,
                             total: n
                         });
                     } catch (e) {
-                        a.Z.dispatch({
+                        o.Z.dispatch({
                             type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE',
                             categoryId: t,
                             error: e

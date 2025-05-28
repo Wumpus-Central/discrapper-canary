@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => y });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -43,11 +43,11 @@ function x() {
         ]
     });
 }
-function C(e) {
+function y(e) {
     let { userId: t, guildId: n, location: i, className: u, onNavigate: b } = e,
-        C = (0, a.e7)([c.default], () => c.default.getUser(t), [t]),
-        y = (0, a.e7)([s.ZP], () => s.ZP.getMember(n, t), [n, t]);
-    return null == C || null == y
+        y = (0, a.e7)([c.default], () => c.default.getUser(t), [t]),
+        C = (0, a.e7)([s.ZP], () => s.ZP.getMember(n, t), [n, t]);
+    return null == y || null == C
         ? null
         : (0, r.jsxs)('div', {
               className: l()(_.container, u),
@@ -56,18 +56,18 @@ function C(e) {
                   (0, r.jsxs)(o.Ttm, {
                       className: _.innerContainer,
                       children: [
-                          (0, r.jsx)(m.Z, { member: y }),
+                          (0, r.jsx)(m.Z, { member: C }),
                           (0, r.jsx)(g.Z, {
                               userId: t,
                               guildId: n
                           }),
                           (0, r.jsx)(f.Z, {
-                              member: y,
+                              member: C,
                               onNavigate: b
                           }),
-                          (0, r.jsx)(p.Z, { member: y }),
-                          (0, r.jsx)(d.Z, { member: y }),
-                          (0, r.jsx)(h.Z, { member: y })
+                          (0, r.jsx)(p.Z, { member: C }),
+                          (0, r.jsx)(d.Z, { member: C }),
+                          (0, r.jsx)(h.Z, { member: C })
                       ]
                   })
               ]

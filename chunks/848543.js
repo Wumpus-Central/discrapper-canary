@@ -96,8 +96,8 @@ function A(e) {
         [D, k] = i.useState(!1),
         M = t.getGuildId(),
         U = (0, y.sR)({ isSoundboardButtonDisabled: R }),
-        [G, B] = (0, b.cv)(U),
-        { analyticsLocations: V, parentAnalyticsLocation: H } = (0, h.ZP)(p.Z.SOUNDBOARD_BUTTON);
+        [G, V] = (0, b.cv)(U),
+        { analyticsLocations: B, parentAnalyticsLocation: H } = (0, h.ZP)(p.Z.SOUNDBOARD_BUTTON);
     function F(e) {
         null != M &&
             (0, d.jW)(e, async () => {
@@ -109,7 +109,7 @@ function A(e) {
                             P(
                                 {
                                     guildId: M,
-                                    sourceAnalyticsLocations: V
+                                    sourceAnalyticsLocations: B
                                 },
                                 t
                             ),
@@ -140,7 +140,7 @@ function A(e) {
                             G === s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
                             (0, r.jsx)(I.o, {
                                 onClose: n,
-                                markAsDismissed: B
+                                markAsDismissed: V
                             }),
                         analyticsSource: 'rtc panel'
                     });
@@ -162,7 +162,7 @@ function A(e) {
                                         disabled: R,
                                         onClick: () => {
                                             var t;
-                                            null != G && G !== s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && B(S.L.UNKNOWN), null == e || null == (t = e.onClick) || t.call(e), k(!D), W(), (0, f.v)(H, f.d.SOUNDBOARD);
+                                            null != G && G !== s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && V(S.L.UNKNOWN), null == e || null == (t = e.onClick) || t.call(e), k(!D), W(), (0, f.v)(H, f.d.SOUNDBOARD);
                                         },
                                         onMouseEnter: (t) => {
                                             var n, r;
@@ -198,7 +198,7 @@ function A(e) {
             handler: X
         }),
         (0, r.jsx)(h.Gt, {
-            value: V,
+            value: B,
             children: (0, r.jsx)(u.ua7, {
                 targetElementRef: A,
                 text: x ? N.intl.string(N.t['Ox4/zc']) : L ? N.intl.string(N.t['+YBKYG']) : w ? N.intl.string(N.t.X1lQlp) : N.intl.string(N.t['6EJvHh']),

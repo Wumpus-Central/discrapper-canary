@@ -5,7 +5,7 @@ var r = n(255367),
     a = n.n(l),
     o = n(913527),
     s = n.n(o),
-    c = n(714673),
+    c = n(240894),
     u = n(442837),
     d = n(481060),
     p = n(846027),
@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(131951),
     _ = n(594174),
     x = n(63063),
-    C = n(5192),
-    y = n(823961),
+    y = n(5192),
+    C = n(823961),
     v = n(981631),
     j = n(37113),
     O = n(388032),
@@ -54,15 +54,15 @@ function Z(e) {
         N = (0, u.Wu)([g.Z], () => g.Z.getAllActiveStreams()),
         T = (0, u.e7)([_.default], () => _.default.getCurrentUser()),
         A = null != N.find((e) => e.ownerId === (null == T ? void 0 : T.id)),
-        w = (0, u.e7)([y.Z], () => y.Z.getPreviousGoLiveSettings()),
+        w = (0, u.e7)([C.Z], () => C.Z.getPreviousGoLiveSettings()),
         R = A && null != w && w.resolution !== j.LY.RESOLUTION_1440 && w.frameRate !== j.ws.FPS_60,
-        [M, k] = (0, i.useState)(!1);
+        [k, M] = (0, i.useState)(!1);
     (0, i.useEffect)(() => {
-        k(!0);
+        M(!0);
     }, []);
     let L = (0, i.useContext)(m.h9),
         D = (0, d.q_F)({
-            from: M
+            from: k
                 ? {
                       opacity: 0,
                       transform: 'translateX(-50%) translateY(30px) scale(0.9)'
@@ -75,7 +75,7 @@ function Z(e) {
             config: {
                 duration: 250,
                 easing: S,
-                immediate: !M
+                immediate: !k
             }
         }),
         { avatarSrc: U, eventHandlers: B } = (0, f.Z)({
@@ -83,7 +83,7 @@ function Z(e) {
             size: d.EFr.SIZE_48,
             animateOnHover: !0
         }),
-        G = C.ZP.getName(t.guild_id, t.id, l),
+        G = y.ZP.getName(t.guild_id, t.id, l),
         F = A && !R,
         H = t.hdStreamingUntil;
     if (null == H || null == l || null == T) return null;
@@ -139,7 +139,7 @@ function Z(e) {
                           (0, r.jsx)(d.zxk, {
                               onClick: () => {
                                   if (R) {
-                                      let e = y.Z.getPreviousGoLiveSettings(),
+                                      let e = C.Z.getPreviousGoLiveSettings(),
                                           t = b.Z.getGoLiveSource();
                                       if (null == e) return void o();
                                       let n = (0, h.s_)(e.resolution, e.frameRate, t);

@@ -9,11 +9,11 @@ e.exports = function (e) {
             literal: ['__debug__', 'Ellipsis', 'False', 'None', 'NotImplemented', 'True'],
             type: ['Any', 'Callable', 'Coroutine', 'Dict', 'List', 'Literal', 'Generic', 'Optional', 'Sequence', 'Set', 'Tuple', 'Type', 'Union']
         },
-        o = {
+        a = {
             className: 'meta',
             begin: /^(>>>|\.\.\.) /
         },
-        a = {
+        o = {
             className: 'subst',
             begin: /\{/,
             end: /\}/,
@@ -31,24 +31,24 @@ e.exports = function (e) {
                 {
                     begin: /([uU]|[bB]|[rR]|[bB][rR]|[rR][bB])?'''/,
                     end: /'''/,
-                    contains: [e.BACKSLASH_ESCAPE, o],
+                    contains: [e.BACKSLASH_ESCAPE, a],
                     relevance: 10
                 },
                 {
                     begin: /([uU]|[bB]|[rR]|[bB][rR]|[rR][bB])?"""/,
                     end: /"""/,
-                    contains: [e.BACKSLASH_ESCAPE, o],
+                    contains: [e.BACKSLASH_ESCAPE, a],
                     relevance: 10
                 },
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])'''/,
                     end: /'''/,
-                    contains: [e.BACKSLASH_ESCAPE, o, s, a]
+                    contains: [e.BACKSLASH_ESCAPE, a, s, o]
                 },
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])"""/,
                     end: /"""/,
-                    contains: [e.BACKSLASH_ESCAPE, o, s, a]
+                    contains: [e.BACKSLASH_ESCAPE, a, s, o]
                 },
                 {
                     begin: /([uU]|[rR])'/,
@@ -71,12 +71,12 @@ e.exports = function (e) {
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])'/,
                     end: /'/,
-                    contains: [e.BACKSLASH_ESCAPE, s, a]
+                    contains: [e.BACKSLASH_ESCAPE, s, o]
                 },
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])"/,
                     end: /"/,
-                    contains: [e.BACKSLASH_ESCAPE, s, a]
+                    contains: [e.BACKSLASH_ESCAPE, s, o]
                 },
                 e.APOS_STRING_MODE,
                 e.QUOTE_STRING_MODE
@@ -118,12 +118,12 @@ e.exports = function (e) {
                     excludeBegin: !0,
                     excludeEnd: !0,
                     keywords: i,
-                    contains: ['self', o, f, l, e.HASH_COMMENT_MODE]
+                    contains: ['self', a, f, l, e.HASH_COMMENT_MODE]
                 }
             ]
         };
     return (
-        (a.contains = [l, f, o]),
+        (o.contains = [l, f, a]),
         {
             name: 'Python',
             aliases: ['py', 'gyp', 'ipython'],
@@ -131,7 +131,7 @@ e.exports = function (e) {
             keywords: i,
             illegal: /(<\/|\?)|=>/,
             contains: [
-                o,
+                a,
                 f,
                 {
                     scope: 'variable.language',

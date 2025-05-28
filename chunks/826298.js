@@ -7,9 +7,9 @@ n.d(t, {
     n(125548);
 var r = n(895924),
     i = n(809090),
-    o = n(944877),
-    a = n(689079);
-let s = (e) => (e.type === r.Qi.BUILT_IN ? o.Z : i.Z);
+    a = n(944877),
+    o = n(689079);
+let s = (e) => (e.type === r.Qi.BUILT_IN ? a.Z : i.Z);
 function l(e) {
     return ''.concat(e / 16, 'rem');
 }
@@ -21,14 +21,14 @@ function c(e, t) {
         let e = t.lastIndexOf(' ', i);
         e >= 0 ? ((t = t.substring(0, e)), (r = !0)) : (t = t.substring(0, i));
     } else t = t.substring(0, t.length);
-    let o = t.split(' ', a.Vd + 1);
+    let a = t.split(' ', o.Vd + 1);
     return (
-        o.length > a.Vd && ((r = !0), o.pop()),
-        (t = o.join(' ')),
+        a.length > o.Vd && ((r = !0), a.pop()),
+        (t = a.join(' ')),
         (n.length > t.length || t.endsWith(' ')) && ((r = !0), (t = t.trimEnd())),
         {
             text: t,
-            parts: o,
+            parts: a,
             hasSpaceTerminator: r
         }
     );

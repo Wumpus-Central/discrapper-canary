@@ -3,7 +3,7 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     a = n.n(l),
-    o = n(714673),
+    o = n(240894),
     s = n(442837),
     c = n(481060),
     u = n(393238),
@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(351780),
     _ = n(843693),
     x = n(641033),
-    C = n(989830),
-    y = n(388032),
+    y = n(989830),
+    C = n(388032),
     v = n(837265);
 let j = i.memo(function (e) {
         let { channelId: t, width: n } = e,
@@ -78,7 +78,7 @@ let j = i.memo(function (e) {
                             className: v.comboMultiplier,
                             style: { color: u },
                             variant: 'text-sm/bold',
-                            children: y.intl.format(y.t['6bgVlp'], { multiplier: n })
+                            children: C.intl.format(C.t['6bgVlp'], { multiplier: n })
                         }),
                         o &&
                             (0, r.jsxs)(r.Fragment, {
@@ -116,7 +116,7 @@ let j = i.memo(function (e) {
                             (0, r.jsx)(c.Text, {
                                 className: v.tip,
                                 variant: 'text-sm/bold',
-                                children: y.intl.string(y.t.b5Cpoa)
+                                children: C.intl.string(C.t.b5Cpoa)
                             })
                     ]
                 })
@@ -131,7 +131,7 @@ let j = i.memo(function (e) {
             d = (0, s.e7)([_.ZP], () => _.ZP.isComboing(n, t), [t, n]),
             { ref: p, width: m = 0 } = (0, u.ZP)(),
             [g, x] = i.useState(!1),
-            y = (0, C.Z)(t),
+            C = (0, y.Z)(t),
             E = a && d && l;
         i.useEffect(() => {
             E && x(!0);
@@ -146,13 +146,13 @@ let j = i.memo(function (e) {
             }),
             P = i.useMemo(
                 () =>
-                    null != y
-                        ? y
+                    null != C
+                        ? C
                         : {
                               value: 0,
                               multiplier: 1
                           },
-                [y]
+                [C]
             ),
             S = i.useRef(P);
         i.useEffect(() => {

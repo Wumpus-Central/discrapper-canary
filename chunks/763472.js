@@ -6,8 +6,8 @@ n.d(t, {
     n(415506);
 var r = n(544891),
     i = n(570140),
-    o = n(647162),
-    a = n(158776),
+    a = n(647162),
+    o = n(158776),
     s = n(981631);
 function l(e, t) {
     i.Z.dispatch({
@@ -17,7 +17,7 @@ function l(e, t) {
     });
 }
 function c(e, t) {
-    (0, o.iy)(e, t)
+    (0, a.iy)(e, t)
         .then((n) =>
             i.Z.dispatch({
                 type: 'ACTIVITY_PLAY',
@@ -37,8 +37,8 @@ function c(e, t) {
 async function u(e, t) {
     let n = e.metadata;
     if (null != n) return n;
-    let o = a.Z.getActivityMetadata(t);
-    if (null != o) return o;
+    let a = o.Z.getActivityMetadata(t);
+    if (null != a) return a;
     if (null == e.session_id) throw Error('null/undefined session_id');
     let { body: l } = await r.tn.get({
         url: s.ANM.USER_ACTIVITY_METADATA(t, e.session_id, e.application_id),

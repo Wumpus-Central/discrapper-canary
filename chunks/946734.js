@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(594174),
     _ = n(251625),
     x = n(823379),
-    C = n(665149),
-    y = n(228168),
+    y = n(665149),
+    C = n(228168),
     v = n(388032),
     j = n(479367);
 function O(e, t, n) {
@@ -122,7 +122,7 @@ class E {
                     userId: this.userId,
                     channelId: this.channelId,
                     sourceAnalyticsLocations: this.analyticsLocations,
-                    section: y.oh.MUTUAL_GUILDS
+                    section: C.oh.MUTUAL_GUILDS
                 });
             }),
             (this.userId = e),
@@ -168,7 +168,7 @@ function I(e) {
         : (0, r.jsxs)(d.Gt, {
               value: f,
               children: [
-                  (0, r.jsx)(C.iz, { className: j.divider }),
+                  (0, r.jsx)(y.iz, { className: j.divider }),
                   (0, r.jsx)(s.IGR, {
                       text: v.intl.string(v.t.l1QVfn),
                       disableColor: !0,

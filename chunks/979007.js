@@ -4,13 +4,13 @@ n.r(t),
         GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID: () => r,
         GlobalDiscoveryAppsSections: () => s,
         GlobalDiscoveryAppsTabId: () => l,
-        MAX_PAGES: () => o,
-        PAGE_SIZE: () => a
+        MAX_PAGES: () => a,
+        PAGE_SIZE: () => o
     });
 let r = 0,
     i = '',
-    o = 100,
-    a = 48;
+    a = 100,
+    o = 48;
 var s = (function (e) {
         return (e.ABOUT = 'about'), (e.STORE = 'store'), e;
     })({}),

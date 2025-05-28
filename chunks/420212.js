@@ -1,14 +1,14 @@
 n.d(t, {
     LT: () => i,
-    Sp: () => a,
-    el: () => o,
+    Sp: () => o,
+    el: () => a,
     mR: () => r.Key,
     vn: () => s
 }),
     n(388685);
 var r = n(56742);
 let i = r.Key.F6,
-    o = new Map([
+    a = new Map([
         [r.Key.F6, 'f6'],
         [r.Key.Tab, 'tab'],
         [r.Key.ArrowDown, 'down'],
@@ -18,7 +18,7 @@ let i = r.Key.F6,
         [r.Key.Home, 'home'],
         [r.Key.End, 'end']
     ]),
-    a = new Set(['tab', 'shift+tab', 'down', 'up', 'left', 'right', 'home', 'end']);
+    o = new Set(['tab', 'shift+tab', 'down', 'up', 'left', 'right', 'home', 'end']);
 var s = (function (e) {
     return (e.ENTER = 'Enter'), (e.TAB = 'Tab'), (e.SPACE = ' '), (e.ESCAPE = 'Escape'), (e.SHIFT = 'Shift'), e;
 })({});

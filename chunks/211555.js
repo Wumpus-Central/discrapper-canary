@@ -7,20 +7,20 @@ function i(e) {
     }
     return 'Minified React error #' + e + '; visit ' + t + ' for the full message or use the non-minified dev environment for full errors and additional helpful warnings.';
 }
-function o() {}
-var a = {
+function a() {}
+var o = {
         d: {
-            f: o,
+            f: a,
             r: function () {
                 throw Error(i(522));
             },
-            D: o,
-            C: o,
-            L: o,
-            m: o,
-            X: o,
-            S: o,
-            M: o
+            D: a,
+            C: a,
+            L: a,
+            m: a,
+            X: a,
+            S: a,
+            M: a
         },
         p: 0,
         findDOMNode: null
@@ -40,7 +40,7 @@ var c = r.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
 function u(e, t) {
     return 'font' === e ? '' : 'string' == typeof t ? ('use-credentials' === t ? t : '') : void 0;
 }
-(t.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = a),
+(t.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = o),
     (t.createPortal = function (e, t) {
         var n = 2 < arguments.length && void 0 !== arguments[2] ? arguments[2] : null;
         if (!t || (1 !== t.nodeType && 9 !== t.nodeType && 11 !== t.nodeType)) throw Error(i(299));
@@ -48,36 +48,36 @@ function u(e, t) {
     }),
     (t.flushSync = function (e) {
         var t = c.T,
-            n = a.p;
+            n = o.p;
         try {
-            if (((c.T = null), (a.p = 2), e)) return e();
+            if (((c.T = null), (o.p = 2), e)) return e();
         } finally {
-            (c.T = t), (a.p = n), a.d.f();
+            (c.T = t), (o.p = n), o.d.f();
         }
     }),
     (t.preconnect = function (e, t) {
-        'string' == typeof e && ((t = t ? ('string' == typeof (t = t.crossOrigin) ? ('use-credentials' === t ? t : '') : void 0) : null), a.d.C(e, t));
+        'string' == typeof e && ((t = t ? ('string' == typeof (t = t.crossOrigin) ? ('use-credentials' === t ? t : '') : void 0) : null), o.d.C(e, t));
     }),
     (t.prefetchDNS = function (e) {
-        'string' == typeof e && a.d.D(e);
+        'string' == typeof e && o.d.D(e);
     }),
     (t.preinit = function (e, t) {
         if ('string' == typeof e && t && 'string' == typeof t.as) {
             var n = t.as,
                 r = u(n, t.crossOrigin),
                 i = 'string' == typeof t.integrity ? t.integrity : void 0,
-                o = 'string' == typeof t.fetchPriority ? t.fetchPriority : void 0;
+                a = 'string' == typeof t.fetchPriority ? t.fetchPriority : void 0;
             'style' === n
-                ? a.d.S(e, 'string' == typeof t.precedence ? t.precedence : void 0, {
+                ? o.d.S(e, 'string' == typeof t.precedence ? t.precedence : void 0, {
                       crossOrigin: r,
                       integrity: i,
-                      fetchPriority: o
+                      fetchPriority: a
                   })
                 : 'script' === n &&
-                  a.d.X(e, {
+                  o.d.X(e, {
                       crossOrigin: r,
                       integrity: i,
-                      fetchPriority: o,
+                      fetchPriority: a,
                       nonce: 'string' == typeof t.nonce ? t.nonce : void 0
                   });
         }
@@ -87,19 +87,19 @@ function u(e, t) {
             if ('object' == typeof t && null !== t) {
                 if (null == t.as || 'script' === t.as) {
                     var n = u(t.as, t.crossOrigin);
-                    a.d.M(e, {
+                    o.d.M(e, {
                         crossOrigin: n,
                         integrity: 'string' == typeof t.integrity ? t.integrity : void 0,
                         nonce: 'string' == typeof t.nonce ? t.nonce : void 0
                     });
                 }
-            } else null == t && a.d.M(e);
+            } else null == t && o.d.M(e);
     }),
     (t.preload = function (e, t) {
         if ('string' == typeof e && 'object' == typeof t && null !== t && 'string' == typeof t.as) {
             var n = t.as,
                 r = u(n, t.crossOrigin);
-            a.d.L(e, n, {
+            o.d.L(e, n, {
                 crossOrigin: r,
                 integrity: 'string' == typeof t.integrity ? t.integrity : void 0,
                 nonce: 'string' == typeof t.nonce ? t.nonce : void 0,
@@ -116,15 +116,15 @@ function u(e, t) {
         if ('string' == typeof e)
             if (t) {
                 var n = u(t.as, t.crossOrigin);
-                a.d.m(e, {
+                o.d.m(e, {
                     as: 'string' == typeof t.as && 'script' !== t.as ? t.as : void 0,
                     crossOrigin: n,
                     integrity: 'string' == typeof t.integrity ? t.integrity : void 0
                 });
-            } else a.d.m(e);
+            } else o.d.m(e);
     }),
     (t.requestFormReset = function (e) {
-        a.d.r(e);
+        o.d.r(e);
     }),
     (t.unstable_batchedUpdates = function (e, t) {
         return e(t);

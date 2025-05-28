@@ -2,8 +2,8 @@ n.d(t, { Z: () => E }), n(539854), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(704215),
-    a = n(907459),
+    a = n(704215),
+    o = n(907459),
     s = n(514361),
     l = n(553049),
     c = n(724145),
@@ -21,9 +21,9 @@ let E = function () {
         n = (0, i.e7)([_.default], () => p.ZP.canUseClientThemes(_.default.getCurrentUser())),
         { activePanel: E, metadata: b } = (0, h.oq)(),
         y = [];
-    t || !e || n || null != E || y.push(o.z.CLIENT_THEMES_COACHMARK);
+    t || !e || n || null != E || y.push(a.z.CLIENT_THEMES_COACHMARK);
     let [O, v] = (0, d.US)(y, g.R.SIDEBAR, !0),
-        I = O === o.z.CLIENT_THEMES_COACHMARK;
+        I = O === a.z.CLIENT_THEMES_COACHMARK;
     return t
         ? null
         : (0, r.jsxs)(r.Fragment, {
@@ -33,7 +33,7 @@ let E = function () {
                           markAsDismissed: I
                               ? v
                               : () => {
-                                    (0, u.EW)(o.z.CLIENT_THEMES_COACHMARK, {
+                                    (0, u.EW)(a.z.CLIENT_THEMES_COACHMARK, {
                                         dismissAction: g.L.INDIRECT_ACTION,
                                         forceTrack: !0
                                     });
@@ -41,7 +41,7 @@ let E = function () {
                           showClientThemesCoachmark: I
                       }),
                   E === h.wh.APP_ICON &&
-                      (0, r.jsx)(a.Z, {
+                      (0, r.jsx)(o.Z, {
                           isCoachmark: !1,
                           markAsDismissed: v
                       }),

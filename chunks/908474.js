@@ -23,7 +23,7 @@ function f(e) {
         }, []),
         _ = i.useMemo(() => (null == t ? null : b(g)), [t, b, g]),
         x = i.useMemo(() => (0, s.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
-        C = i.useMemo(() => (null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil)), [t.communicationDisabledUntil]);
+        y = i.useMemo(() => (null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil)), [t.communicationDisabledUntil]);
     return null != g || x
         ? (0, r.jsx)(a.xJW, {
               title: p.intl.string(p.t['7V375+']),
@@ -50,7 +50,7 @@ function f(e) {
                               })
                           }),
                       x &&
-                          null != C &&
+                          null != y &&
                           (0, r.jsx)(d._2, {
                               icon: (0, r.jsx)(a.YlB, {
                                   size: 'custom',
@@ -67,7 +67,7 @@ function f(e) {
                                   variant: 'text-sm/semibold',
                                   color: 'text-normal',
                                   children: (0, r.jsx)(o.Z, {
-                                      deadline: C,
+                                      deadline: y,
                                       showUnits: !0,
                                       stopAtOneSec: !0
                                   })

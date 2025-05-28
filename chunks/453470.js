@@ -16,15 +16,15 @@ var r = n(255367),
     b = n(276060),
     _ = n(870991),
     x = n(981631),
-    C = n(134612),
-    y = n(388032);
+    y = n(134612),
+    C = n(388032);
 function v(e) {
     let { channelId: t, warningId: v, senderId: j } = e,
         O = (0, _.E4)(),
         E = i.useCallback(() => {
             (0, p.T)(t, [v]);
         }, [t, v]),
-        I = (0, b.t)({ location: C.zr }),
+        I = (0, b.t)({ location: y.zr }),
         P = (e) => {
             o.Z.updateChannelOverrideSettings(null, t, { muted: !0 }, g.ZB.Muted),
                 c.Z.showMuteSuccessToast(j, t),
@@ -48,7 +48,7 @@ function v(e) {
                         channelId: t,
                         warningId: v,
                         senderId: j,
-                        description: y.intl.string(y.t['/uid3t']),
+                        description: C.intl.string(C.t['/uid3t']),
                         safetyTipRows: O.map((e, t) =>
                             (0, r.jsx)(
                                 u.q,
@@ -65,9 +65,9 @@ function v(e) {
                             (0, r.jsx)(
                                 d.ZP,
                                 {
-                                    title: y.intl.string(y.t.ftIK2N),
-                                    description: y.intl.string(y.t.w2ve0t),
-                                    buttonText: y.intl.string(y.t.ftIK2N),
+                                    title: C.intl.string(C.t.ftIK2N),
+                                    description: C.intl.string(C.t.w2ve0t),
+                                    buttonText: C.intl.string(C.t.ftIK2N),
                                     onButtonPress: () => {
                                         P(f.NM.USER_MODAL_MUTE), l();
                                     }
@@ -87,7 +87,7 @@ function v(e) {
                             children: (0, r.jsx)(a.X6q, {
                                 variant: 'heading-sm/medium',
                                 color: 'text-link',
-                                children: y.intl.format(y.t.UkH129, { learnMoreLink: _.D8 })
+                                children: C.intl.format(C.t.UkH129, { learnMoreLink: _.D8 })
                             })
                         })
                     });
@@ -110,12 +110,12 @@ function v(e) {
               warningId: v,
               senderId: j,
               warningType: h.pj.LIKELY_ATO,
-              header: y.intl.string(y.t.R8UsiI),
-              description: y.intl.string(y.t.lI8nQk),
+              header: C.intl.string(C.t.R8UsiI),
+              description: C.intl.string(C.t.lI8nQk),
               onDismiss: E,
               buttons: [
                   {
-                      text: y.intl.string(y.t.tC1pvL),
+                      text: C.intl.string(C.t.tC1pvL),
                       color: a.zxk.Colors.BRAND,
                       onclick: () => {
                           S(),
@@ -129,7 +129,7 @@ function v(e) {
                       }
                   },
                   {
-                      text: y.intl.string(y.t.ftIK2N),
+                      text: C.intl.string(C.t.ftIK2N),
                       color: a.zxk.Colors.PRIMARY,
                       onclick: () => P(f.NM.USER_BANNER_MUTE)
                   }

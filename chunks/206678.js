@@ -1,11 +1,11 @@
-n.d(t, { Z: () => o }), n(388685);
+n.d(t, { Z: () => a }), n(388685);
 var r = n(73800);
 function i(e, t) {
     let n = e.getBoundingClientRect();
     return Math.min(1, Math.max(0, (t.clientX - n.left) / n.width));
 }
-function o(e) {
-    let { ref: t, onDrag: n, onDragStart: o, onDragEnd: a } = e,
+function a(e) {
+    let { ref: t, onDrag: n, onDragStart: a, onDragEnd: o } = e,
         [s, l] = r.useState(!1);
     return (
         r.useEffect(() => {
@@ -18,22 +18,22 @@ function o(e) {
                     }
                 );
             function e() {
-                null == a || a(), l(!1);
+                null == o || o(), l(!1);
             }
             function r(e) {
                 let r = t.current;
                 null != r && (null == n || n(i(r, e)));
             }
-        }, [t, s, a, n]),
+        }, [t, s, o, n]),
         [
             s,
             r.useCallback(
                 (e) => {
                     e.preventDefault();
                     let r = t.current;
-                    null != r && (l(!0), null == o || o(), null == n || n(i(r, e)));
+                    null != r && (l(!0), null == a || a(), null == n || n(i(r, e)));
                 },
-                [t, o, n]
+                [t, a, n]
             )
         ]
     );

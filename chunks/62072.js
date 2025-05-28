@@ -16,8 +16,8 @@ var r = n(73800),
     b = n(375954),
     _ = n(496675),
     x = n(572004),
-    C = n(585483),
-    y = n(358085),
+    y = n(585483),
+    C = n(358085),
     v = n(709054),
     j = n(418476),
     O = n(901461),
@@ -40,21 +40,21 @@ let Z = function (e, t, n) {
                     A = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
                     w = n.shiftKey && !(n.altKey || n.ctrlKey || n.metaKey),
                     R = b.Z.getMessage(t, e),
-                    M = h.Z.getChannel(t);
-                if (null == R || null == M) return;
-                let k = p.default.getId();
+                    k = h.Z.getChannel(t);
+                if (null == R || null == k) return;
+                let M = p.default.getId();
                 switch (n.key.toLowerCase()) {
                     case 'backspace':
-                        r && (S(M) || R.canDeleteOwnMessage(k)) && (n.preventDefault(), (0, I.$Z)(M, R, n));
+                        r && (S(k) || R.canDeleteOwnMessage(M)) && (n.preventDefault(), (0, I.$Z)(k, R, n));
                         break;
                     case 'c':
-                        ((0, y.isMac)() ? A : T) && x.wS && (n.preventDefault(), (0, x.JG)(R.content));
+                        ((0, C.isMac)() ? A : T) && x.wS && (n.preventDefault(), (0, x.JG)(R.content));
                         break;
                     case 'e':
-                        r && !M.isSystemDM() && (0, j.Z)(R, k) && (n.preventDefault(), (0, I.Hd)(M, R));
+                        r && !k.isSystemDM() && (0, j.Z)(R, M) && (n.preventDefault(), (0, I.Hd)(k, R));
                         break;
                     case 'p':
-                        (r || w) && !M.isSystemDM() && !(0, O.Z)(R) && (S(M) || M.isPrivate()) && (n.preventDefault(), (0, I.rY)(M, R, n));
+                        (r || w) && !k.isSystemDM() && !(0, O.Z)(R) && (S(k) || k.isPrivate()) && (n.preventDefault(), (0, I.rY)(k, R, n));
                         break;
                     case '+':
                         (r || w) &&
@@ -71,11 +71,11 @@ let Z = function (e, t, n) {
                                         isActiveChannelOrUnarchivableThread: (0, c.RG)(e)
                                     });
                                 return !r && n;
-                            })(M) &&
-                            (n.preventDefault(), C.S.dispatchKeyed(P.LPv.TOGGLE_REACTION_POPOUT, R.id, { emojiPicker: !0 }));
+                            })(k) &&
+                            (n.preventDefault(), y.S.dispatchKeyed(P.LPv.TOGGLE_REACTION_POPOUT, R.id, { emojiPicker: !0 }));
                         break;
                     case 'r':
-                        (r || w) && (0, s.o)(M, R) && (n.preventDefault(), (0, I.HH)(M, R, n));
+                        (r || w) && (0, s.o)(k, R) && (n.preventDefault(), (0, I.HH)(k, R, n));
                         break;
                     case 'f':
                         (r || w) &&
@@ -87,17 +87,17 @@ let Z = function (e, t, n) {
                             }));
                         break;
                     case 't':
-                        if (r && (0, c.ki)(M, R)) n.preventDefault(), (0, u.R6)(M, R, 'Message Shortcut');
+                        if (r && (0, c.ki)(k, R)) n.preventDefault(), (0, u.R6)(k, R, 'Message Shortcut');
                         else if (R.hasFlag(P.iLy.HAS_THREAD)) {
                             let e = h.Z.getChannel(v.default.castMessageIdAsChannelId(R.id));
                             null != e && (r || w) && (n.preventDefault(), (0, u.ok)(e, w));
                         }
                         break;
                     case 'enter':
-                        N && (n.preventDefault(), (0, I.B8)(M, R));
+                        N && (n.preventDefault(), (0, I.B8)(k, R));
                         break;
                     case 'escape':
-                        f.Z.isEditing(M.id, R.id) ? i.Z.endEditMessage(M.id) : C.S.dispatch(P.CkL.TEXTAREA_FOCUS);
+                        f.Z.isEditing(k.id, R.id) ? i.Z.endEditMessage(k.id) : y.S.dispatch(P.CkL.TEXTAREA_FOCUS);
                 }
             },
             [e, t]

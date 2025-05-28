@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(320427),
     _ = n(145010),
     x = n(361057),
-    C = n(159909),
-    y = n(531675);
+    y = n(159909),
+    C = n(531675);
 function v(e) {
     let { channel: t, hasActiveStream: n, showRightDivider: v } = e,
         { analyticsLocations: j } = (0, o.ZP)(a.Z.VOICE_CONTROL_TRAY),
@@ -35,12 +35,12 @@ function v(e) {
         w = T === l.z.CONSUMABLE_HD_POTION_UPSELL;
     if (null == t || null != I) return null;
     let R = S && Z,
-        M = P && n;
+        k = P && n;
     return (0, r.jsxs)(o.Gt, {
         value: j,
         children: [
             (0, r.jsxs)('div', {
-                className: y.voiceEffectsActionBar,
+                className: C.voiceEffectsActionBar,
                 children: [
                     R && (0, r.jsx)(g.Z, { channel: t }),
                     w &&
@@ -55,12 +55,12 @@ function v(e) {
                             channel: t,
                             glow: w
                         }),
-                    M && (0, r.jsx)(b.Z, {}),
-                    M && (0, r.jsx)(_.Z, { channel: t }),
-                    M && (0, r.jsx)(C.Z, {})
+                    k && (0, r.jsx)(b.Z, {}),
+                    k && (0, r.jsx)(_.Z, { channel: t }),
+                    k && (0, r.jsx)(y.Z, {})
                 ]
             }),
-            v && (R || w || O || M) && (0, r.jsx)('div', { className: y.divider })
+            v && (R || w || O || k) && (0, r.jsx)('div', { className: C.divider })
         ]
     });
 }

@@ -1,12 +1,12 @@
 n(710845);
 var r = n(259443),
     i = n(511495);
-let o = new r.Yd('libdiscore');
+let a = new r.Yd('libdiscore');
 !(async function () {
     try {
         __OVERLAY__ || (await (0, i.e)());
     } catch (e) {
-        o.error('Failed to initialize libdiscore', e);
+        a.error('Failed to initialize libdiscore', e);
     }
     try {
         n(750081);

@@ -1,10 +1,10 @@
 n.d(t, {
-    S: () => a,
-    i: () => o
+    S: () => o,
+    i: () => a
 });
 var r = n(818083),
     i = n(987338);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: 'user',
     id: '2025-05_hide_rtc_buttons_experiment',
     label: 'RTC Buttons Negative Test',
@@ -32,6 +32,6 @@ let o = (0, r.B)({
         }
     ]
 });
-function a(e) {
-    return o.useExperiment(e, { autoTrackExposure: !1 });
+function o(e) {
+    return a.useExperiment(e, { autoTrackExposure: !1 });
 }

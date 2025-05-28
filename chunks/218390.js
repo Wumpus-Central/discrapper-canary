@@ -256,50 +256,58 @@ function eo() {
     });
 }
 function ec(e) {
-    var t;
-    let { className: n, config: r } = e,
-        s = (0, c.e7)([C.Z], () => C.Z.useReducedMotion) ? r.getStaticImageUrl() : r.getAnimatedImageUrl(),
-        a = (0, U.Tl)(null != (t = r.gradientConfig) ? t : void 0);
+    var t, n;
+    let { className: r, config: s } = e,
+        a = (0, c.e7)([C.Z], () => C.Z.useReducedMotion) ? s.getStaticImageUrl() : s.getAnimatedImageUrl(),
+        o = (0, U.Tl)(null != (t = s.gradientConfig) ? t : void 0),
+        d = { color: null != (n = s.textColor) ? n : 'var(--always-white)' };
     return (0, i.jsxs)('div', {
-        className: l()(ee.giftCardPromotion, n),
-        style: a,
+        className: l()(ee.giftCardPromotion, r),
+        style: o,
         children: [
             (0, i.jsx)('img', {
                 alt: '',
                 className: ee.giftImagePromotion,
                 'aria-hidden': !0,
-                src: s
+                src: a
             }),
             (0, i.jsxs)('div', {
                 className: ee.giftInfoPromotion,
                 children: [
-                    (0, i.jsx)('img', {
-                        alt: '',
-                        'aria-hidden': !0,
-                        className: ee.giftCardPromotionBannerImage,
-                        src: r.getBackgroundImageUrl()
-                    }),
+                    null != s.getBackgroundImageUrl &&
+                        (0, i.jsx)('img', {
+                            alt: '',
+                            'aria-hidden': !0,
+                            className: ee.giftCardPromotionBannerImage,
+                            src: s.getBackgroundImageUrl()
+                        }),
                     (0, i.jsx)(m.X6q, {
                         className: ee.giftInfoTitlePromotion,
-                        color: 'always-white',
-                        variant: 'heading-xl/extrabold',
-                        children: r.title()
+                        style: d,
+                        variant: 'text-lg/bold',
+                        children: s.title()
                     }),
                     (0, i.jsx)(m.Text, {
                         className: ee.giftText,
-                        color: 'always-white',
+                        style: d,
                         variant: 'text-sm/medium',
-                        children: r.body()
+                        children: s.body()
                     }),
+                    null != s.additionalTerm &&
+                        (0, i.jsx)(m.Text, {
+                            className: ee.giftAdditionalTerm,
+                            style: d,
+                            variant: 'text-xxs/normal',
+                            children: s.additionalTerm()
+                        }),
                     (0, i.jsx)(z.Z, {
                         isGift: !0,
-                        className: l()(ee.giftCardButton, ee.halloweenColor),
-                        look: m.zxk.Looks.OUTLINED,
+                        className: ee.giftCardButton,
                         textOptions: {
                             textOverride: $.intl.string($.t.Ve9Ge3),
                             textClassName: ee.giftButtonCTA
                         },
-                        color: m.zxk.Colors.CUSTOM,
+                        color: m.zxk.Colors.BRAND,
                         onClick: () => {
                             Z.default.track(J.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: es,
