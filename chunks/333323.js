@@ -21,8 +21,8 @@ var l = t(255367),
     I = t(605276),
     v = t(869764),
     Z = t(919318),
-    y = t(150512),
-    N = t(981631),
+    N = t(150512),
+    y = t(981631),
     O = t(176505),
     P = t(388032),
     w = t(617449),
@@ -94,22 +94,22 @@ function D(e) {
     let { guild: a, width: m } = e,
         P = (0, s.e7)([g.ZP], () => g.ZP.getSection(O.oC.GUILD_HOME)),
         [D, R] = r.useState(!1),
-        [L, T] = r.useState(N.$Y6),
-        B = P === N.ULH.SIDEBAR_CHAT,
+        [L, T] = r.useState(y.$Y6),
+        B = P === y.ULH.SIDEBAR_CHAT,
         H = (0, c.mFp)(),
         W = (0, s.e7)([b.Z], () => b.Z.getSettings(a.id)),
         U = null == W ? void 0 : W.welcomeMessage,
         z = (0, C.Z)(a.id),
         G = !z && (null != (t = null == W || null == (n = W.resourceChannels) ? void 0 : n.length) ? t : 0) === 0,
         F = (0, d.Z)('(max-width: 1300px)'),
-        q = m - N.PrS - L,
+        q = m - y.PrS - L,
         V = (B && q < A) || F || G;
     return (r.useEffect(() => {
         if (W === b.P) (0, x.cP)(a.id);
         else if (null != W) {
             var e, n, t, l, r;
             p.default.track(
-                N.rMx.SERVER_GUIDE_VIEWED,
+                y.rMx.SERVER_GUIDE_VIEWED,
                 k(S({}, (0, u.hH)(a.id)), {
                     num_member_actions: null != (t = null == (e = W.newMemberActions) ? void 0 : e.length) ? t : 0,
                     num_member_actions_completed: Object.keys(null != (l = j.Z.getCompletedActions(a.id)) ? l : {}).length,
@@ -158,7 +158,7 @@ function D(e) {
                                                       className: w.mainContent,
                                                       children: [
                                                           z &&
-                                                              (0, l.jsx)(y.Z, {
+                                                              (0, l.jsx)(N.Z, {
                                                                   guildId: a.id,
                                                                   welcomeMessage: U
                                                               }),

@@ -12,6 +12,6 @@ e.exports = {
     profileUsernameTag: 'profileUsernameTag__9c3be',
     profileButtons: 'profileButtons__9c3be',
     profileScroller: 'profileScroller__9c3be',
-    profileHeading: 'profileHeading__9c3be',
+    profileRolesSection: 'profileRolesSection__9c3be',
     profileNote: 'profileNote__9c3be'
 };

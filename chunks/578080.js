@@ -1,8 +1,8 @@
-n.d(t, { Z: () => W }), n(953529);
+n.d(t, { Z: () => Z }), n(953529);
 var r = n(255367),
-    o = n(73800),
-    s = n(120356),
-    a = n.n(s),
+    s = n(73800),
+    o = n(120356),
+    a = n.n(o),
     i = n(240894),
     l = n(442837),
     c = n(950104),
@@ -93,19 +93,19 @@ function L(e) {
           })
         : null;
 }
-let W = o.forwardRef(function (e, t) {
-    var n, s;
-    let { children: _, className: W, collapsedHeight: Z, expansionSpring: V, isExpanded: Q, isExpansionAnimationComplete: H, onCtxMenuOpen: U, onCtxMenuClose: z, onCtxMenuSelect: F, quest: K, useReducedMotion: X } = e,
+let Z = s.forwardRef(function (e, t) {
+    var n, o;
+    let { children: _, className: Z, collapsedHeight: W, expansionSpring: V, isExpanded: Q, isExpansionAnimationComplete: H, onCtxMenuOpen: U, onCtxMenuClose: z, onCtxMenuSelect: F, quest: K, useReducedMotion: X } = e,
         Y = (0, l.e7)([j.Z], () => j.Z.isEnrolling(K.id), [K]),
         G = (0, x.aM)(),
         J = (0, b.B6)(K.config.expiresAt),
         $ = w.r.build(K.config),
         ee = (0, b.B6)($.rewardsExpireAt),
-        et = o.useMemo(() => (0, C.fh)(K, C.eC.HERO), [K]),
+        et = s.useMemo(() => (0, C.fh)(K, C.eC.HERO), [K]),
         en = (0, A.tP)($.application.id),
         er = $.features.has(R.S7.START_QUEST_CTA) ? g.jZ.START_QUEST : g.jZ.ACCEPT_QUEST,
-        eo = $.features.has(R.S7.START_QUEST_CTA) ? q.intl.string(q.t.E80Bdn) : q.intl.string(q.t.l7E81t),
-        es = o.useCallback(() => {
+        es = $.features.has(R.S7.START_QUEST_CTA) ? q.intl.string(q.t.E80Bdn) : q.intl.string(q.t.l7E81t),
+        eo = s.useCallback(() => {
             (0, h.AH)(K.id, {
                 questContent: v.jn.QUEST_BAR,
                 questContentCTA: er
@@ -116,7 +116,7 @@ let W = o.forwardRef(function (e, t) {
             quest: K,
             location: v.jn.QUEST_BAR
         }),
-        ei = o.useCallback(() => {
+        ei = s.useCallback(() => {
             (0, y.FE)(K, {
                 content: v.jn.QUEST_BAR,
                 ctaContent: g.jZ.OPEN_GAME_LINK,
@@ -128,8 +128,8 @@ let W = o.forwardRef(function (e, t) {
         eu = (0, b.Jf)(K),
         ed = null != eu ? eu.progress > 0 : ec.progressSeconds > 0,
         ep = (null == (n = K.userStatus) ? void 0 : n.enrolledAt) != null,
-        em = (null == (s = K.userStatus) ? void 0 : s.completedAt) != null,
-        ef = o.useMemo(() => (0, y.Xv)(K.config), [K.config]),
+        em = (null == (o = K.userStatus) ? void 0 : o.completedAt) != null,
+        ef = s.useMemo(() => (0, y.Xv)(K.config), [K.config]),
         eg = Q && H,
         ex = (0, O.DD)({
             quest: K,
@@ -139,7 +139,7 @@ let W = o.forwardRef(function (e, t) {
             thirdPartyTaskDetails: null != eu ? eu : void 0
         }),
         eh = (0, f.isWeb)(),
-        eb = o.useMemo(() => {
+        eb = s.useMemo(() => {
             let e = (0, u.Qg)(K.config.colors.primary, {
                 base: '#ffffff',
                 contrastRatio: u.S3.Text
@@ -151,7 +151,7 @@ let W = o.forwardRef(function (e, t) {
             };
         }, [K.config.colors.primary]);
     return (0, r.jsxs)(i.animated.div, {
-        className: a()(W, I.contentExpanded, { [I.contentInteractable]: eg }),
+        className: a()(Z, I.contentExpanded, { [I.contentInteractable]: eg }),
         style: {
             backgroundColor: K.config.colors.secondary,
             transform: em
@@ -164,7 +164,7 @@ let W = o.forwardRef(function (e, t) {
                           }),
                           V.to({
                               range: [0, 1],
-                              output: [0, Z]
+                              output: [0, W]
                           })
                       ],
                       (e, t) => 'translateY(calc('.concat(e, '% + ').concat(t, 'px))')
@@ -320,10 +320,10 @@ let W = o.forwardRef(function (e, t) {
                                           style: '1232852290197655573' !== K.id ? eb : void 0,
                                           color: d.zxk.Colors.CUSTOM,
                                           fullWidth: !0,
-                                          onClick: eg ? es : void 0,
+                                          onClick: eg ? eo : void 0,
                                           size: d.zxk.Sizes.NONE,
                                           submitting: Y,
-                                          children: eo
+                                          children: es
                                       })
                                   ]
                               }),

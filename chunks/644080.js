@@ -1,4 +1,4 @@
-t.d(n, { Z: () => N });
+t.d(n, { Z: () => y });
 var l = t(255367),
     r = t(73800),
     a = t(120356),
@@ -37,7 +37,7 @@ let Z = (e) => {
         homeHeaderScroll: 200 * (null != n)
     };
 };
-function y(e) {
+function N(e) {
     let { guild: n } = e,
         t = () => {
             f.Z.open(n.id, j.pNK.ONBOARDING, void 0, j.KsC.SERVER_GUIDE);
@@ -72,7 +72,7 @@ function y(e) {
               ]
           });
 }
-let N = r.memo(function (e) {
+let y = r.memo(function (e) {
     let { guild: n, titleClassName: r } = e,
         { homeHeaderImage: a, isHomeHeaderImageSet: c } = Z(n),
         f = (0, m.b$)(n.id),
@@ -88,7 +88,7 @@ let N = r.memo(function (e) {
                         className: i()(_.headerArt, { [_.headerArtPlaceholder]: !c }),
                         style: { backgroundImage: 'url('.concat(c ? a : 'dark' === b ? I : v, ')') }
                     }),
-                    f && (0, l.jsx)(y, { guild: n })
+                    f && (0, l.jsx)(N, { guild: n })
                 ]
             }),
             (0, l.jsx)('div', {

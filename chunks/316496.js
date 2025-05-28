@@ -5,65 +5,23 @@ let r = (0, n(818083).B)({
     label: 'Activity Sharing Popout Per Server',
     defaultConfig: {
         isEnabled: !1,
-        showActivitySharingIndicatorWhenSharing: !1,
-        autoOpenPopout: !1,
-        settingsPageEnabled: !1,
-        perServerControlsEnabled: !1
+        showActivitySharingIndicatorWhenSharing: !1
     },
     treatments: [
         {
             id: 1,
-            label: 'Manually opened RTC popout only when not sharing',
+            label: 'Popout not available when already sharing',
             config: {
                 isEnabled: !0,
-                showActivitySharingIndicatorWhenSharing: !1,
-                autoOpenPopout: !1,
-                settingsPageEnabled: !1,
-                perServerControlsEnabled: !1
+                showActivitySharingIndicatorWhenSharing: !1
             }
         },
         {
             id: 2,
-            label: 'Manually opened RTC popout only when not sharing with settings page',
+            label: 'Popout always available',
             config: {
                 isEnabled: !0,
-                showActivitySharingIndicatorWhenSharing: !1,
-                autoOpenPopout: !1,
-                settingsPageEnabled: !0,
-                perServerControlsEnabled: !1
-            }
-        },
-        {
-            id: 3,
-            label: 'Manually opened RTC popout with settings page',
-            config: {
-                isEnabled: !0,
-                showActivitySharingIndicatorWhenSharing: !0,
-                autoOpenPopout: !1,
-                settingsPageEnabled: !0,
-                perServerControlsEnabled: !1
-            }
-        },
-        {
-            id: 4,
-            label: 'Auto-open RTC popout when not sharing with settings page',
-            config: {
-                isEnabled: !0,
-                showActivitySharingIndicatorWhenSharing: !1,
-                autoOpenPopout: !0,
-                settingsPageEnabled: !0,
-                perServerControlsEnabled: !1
-            }
-        },
-        {
-            id: 5,
-            label: 'Auto-open RTC popout when not sharing with settings page and per server controls',
-            config: {
-                isEnabled: !0,
-                showActivitySharingIndicatorWhenSharing: !1,
-                autoOpenPopout: !0,
-                settingsPageEnabled: !0,
-                perServerControlsEnabled: !0
+                showActivitySharingIndicatorWhenSharing: !0
             }
         }
     ]

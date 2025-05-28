@@ -6,8 +6,6 @@ e.exports = {
     heroAssetCont: 'heroAssetCont_b5b7aa',
     heroAsset: 'heroAsset_b5b7aa',
     heroAssetVideo: 'heroAssetVideo_b5b7aa',
-    hidden: 'hidden_b5b7aa',
-    visible: 'visible_b5b7aa',
     overlay: 'overlay_b5b7aa',
     darkThemeGradient: 'darkThemeGradient_b5b7aa',
     lightThemeGradient: 'lightThemeGradient_b5b7aa',

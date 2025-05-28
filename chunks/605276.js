@@ -27,7 +27,8 @@ let _ = r.memo(function (e) {
             ? null
             : (0, l.jsx)(d.ZP, {
                   profile: t,
-                  disableCTA: !0
+                  disableCTA: !0,
+                  disableGuildNameClick: !0
               });
     }),
     I = (e) => {
@@ -47,7 +48,7 @@ let _ = r.memo(function (e) {
                     limit: 5
                 });
         }, [n, Z]);
-        let y = (e) => {
+        let N = (e) => {
             null != d &&
                 (e.shiftKey
                     ? (0, p.C3)(d.guild_id, d.id)
@@ -60,7 +61,7 @@ let _ = r.memo(function (e) {
             i.P3F,
             {
                 className: C.resourceChannel,
-                onClick: (e) => y(e),
+                onClick: (e) => N(e),
                 children: (0, l.jsxs)(l.Fragment, {
                     children: [
                         (() => {

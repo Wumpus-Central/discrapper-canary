@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => P }), n(388685), n(539854);
+n.d(t, { Z: () => P }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -63,25 +63,7 @@ function C(e, t) {
 function j(e) {
     e.stopPropagation();
 }
-let S = () =>
-    (0, r.jsxs)('div', {
-        className: v.unreadsEmpty,
-        children: [
-            (0, r.jsx)(u.xx7, {
-                color: 'currentColor',
-                size: 'custom',
-                className: v.unreadsEmptyIcon,
-                width: 36,
-                height: 36
-            }),
-            (0, r.jsx)(u.Text, {
-                variant: 'text-sm/medium',
-                color: 'text-muted',
-                children: O.intl.string(O.t['6XMM+P'])
-            })
-        ]
-    });
-function E(e) {
+function S(e) {
     let { group: t, isOpen: n, toggleOpenedState: i } = e;
     return (0, r.jsx)(u.P3F, {
         onClick: i,
@@ -105,29 +87,30 @@ function E(e) {
         })
     });
 }
-let x = {
-    [b.dm.UNREAD]: !0,
-    [b.dm.TODAY]: !1,
-    [b.dm.YESTERDAY]: !1,
-    [b.dm.OLDER]: !1
-};
+let E = {
+        [b.dm.UNREAD]: !0,
+        [b.dm.TODAY]: !1,
+        [b.dm.YESTERDAY]: !1,
+        [b.dm.OLDER]: !1
+    },
+    x = [b.dm.UNREAD, b.dm.TODAY, b.dm.YESTERDAY, b.dm.OLDER];
 function P(e) {
-    let { analyticsName: t, messages: n, hasMore: l, loading: s, loadMore: O, renderEmptyState: P, renderMessage: I, scrollerClassName: w, className: N, listName: Z } = e,
-        T = i.useRef(null),
-        A = (0, d.Z)(Z, T),
-        { notificationCenterVariant: R } = g.L.useExperiment({ location: 'NotificationsInboxSidebarList' }),
-        [D, L] = i.useState(x);
+    let { analyticsName: t, messages: n, hasMore: l, loading: s, loadMore: O, renderEmptyState: P, renderMessageGroup: I, setInboxReadState: w, scrollerClassName: N, className: Z, listName: T, ignoreGrouping: A = !1 } = e,
+        R = i.useRef(null),
+        D = (0, d.Z)(T, R),
+        { notificationCenterVariant: L } = g.L.useExperiment({ location: 'NotificationsInboxSidebarList' }),
+        [k, M] = i.useState(E);
     i.useEffect(() => {
         p.default.track(y.rMx.OPEN_POPOUT, { type: t });
     }, [t]),
         i.useEffect(() => {
             function e() {
                 var e;
-                null == (e = T.current) || e.scrollPageUp({ animate: !0 });
+                null == (e = R.current) || e.scrollPageUp({ animate: !0 });
             }
             function t() {
                 var e;
-                null == (e = T.current) || e.scrollPageDown({ animate: !0 });
+                null == (e = R.current) || e.scrollPageDown({ animate: !0 });
             }
             return (
                 f.S.subscribe(y.CkL.SCROLL_PAGE_DOWN, t),
@@ -137,64 +120,81 @@ function P(e) {
                 }
             );
         }, []);
-    let k = i.useCallback(() => {
+    let U = i.useCallback(() => {
             var e;
-            let t = null == (e = T.current) ? void 0 : e.getScrollerState();
+            let t = null == (e = R.current) ? void 0 : e.getScrollerState();
             null != t && t.scrollHeight >= t.scrollTop + t.offsetHeight && l && !s && (null == O || O());
         }, [l, O, s]),
-        M = [],
-        U = {
-            [b.dm.UNREAD]: [],
-            [b.dm.TODAY]: [],
-            [b.dm.YESTERDAY]: [],
-            [b.dm.OLDER]: []
-        };
-    null == n
-        ? (M = [
-              (0, r.jsx)(
-                  'div',
-                  {
-                      className: o()(v.emptyPlaceholder, v.loadingPlaceholder),
-                      children: (0, r.jsx)(u.$jN, {})
-                  },
-                  'spinner'
-              )
-          ])
-        : 0 === n.length
-          ? M.push((0, r.jsx)(i.Fragment, { children: P(h.Z.theme) }, 'empty-state'))
-          : (a().each(n, (e) => {
-                U[(0, m.Q)(e)].push(I(e, 'sidebar' === R));
-            }),
-            (M = []),
-            a().each([b.dm.UNREAD, b.dm.TODAY, b.dm.YESTERDAY, b.dm.OLDER], (e) => {
-                if (0 === U[e].length) {
-                    e === b.dm.UNREAD &&
-                        (M.push(
-                            (0, r.jsx)(E, {
-                                group: e,
-                                isOpen: D[e],
-                                toggleOpenedState: () => L((t) => C(_({}, t), { [e]: !t[e] }))
-                            })
-                        ),
-                        D[e] && M.push((0, r.jsx)(S, {}, 'unread-empty-state')));
-                    return;
-                }
-                M.push(
-                    (0, r.jsx)(E, {
-                        group: e,
-                        isOpen: D[e],
-                        toggleOpenedState: () => L((t) => C(_({}, t), { [e]: !t[e] }))
-                    })
-                ),
-                    D[e] && M.push(...U[e]);
-            })),
-        M.push((0, r.jsx)(u.LZC, { size: 8 }, 'spacer'));
-    let G = null;
+        G = i.useMemo(() => {
+            let e = {
+                    [b.dm.UNREAD]: {},
+                    [b.dm.TODAY]: {},
+                    [b.dm.YESTERDAY]: {},
+                    [b.dm.OLDER]: {}
+                },
+                t = {
+                    [b.dm.UNREAD]: [],
+                    [b.dm.TODAY]: [],
+                    [b.dm.YESTERDAY]: [],
+                    [b.dm.OLDER]: []
+                };
+            return (
+                null != n &&
+                    n.length > 0 &&
+                    (a().each(n, (t) => {
+                        let n = (0, m.Q)(t);
+                        t.channel_id in e[n] ? e[n][t.channel_id].push(t) : (e[n][t.channel_id] = [t]);
+                    }),
+                    a().each(x, (n) => {
+                        Object.values(e[n]).forEach((e) => {
+                            t[n].push(e);
+                        });
+                    })),
+                t
+            );
+        }, [n]),
+        B = i.useMemo(() => {
+            let e = [];
+            return (
+                null == n
+                    ? e.push(
+                          (0, r.jsx)(
+                              'div',
+                              {
+                                  className: o()(v.emptyPlaceholder, v.loadingPlaceholder),
+                                  children: (0, r.jsx)(u.$jN, {})
+                              },
+                              'spinner'
+                          )
+                      )
+                    : 0 === n.length
+                      ? e.push((0, r.jsx)(i.Fragment, { children: P(h.Z.theme) }, 'empty-state'))
+                      : A
+                        ? e.push(...n.map((e) => I([e], 'sidebar' === L)))
+                        : a().each(x, (t) => {
+                              0 !== G[t].length &&
+                                  (e.push(
+                                      (0, r.jsx)(S, {
+                                          group: t,
+                                          isOpen: k[t],
+                                          toggleOpenedState: () => M((e) => C(_({}, e), { [t]: !e[t] }))
+                                      })
+                                  ),
+                                  k[t] && e.push(...G[t].map((e) => I(e, 'sidebar' === L))));
+                          }),
+                e.push((0, r.jsx)(u.LZC, { size: 8 }, 'spacer')),
+                e
+            );
+        }, [n, P, k, G, A, I, L]);
+    i.useEffect(() => {
+        0 === G.UNREAD.length ? w(b.xM.READ) : w(b.xM.UNREAD);
+    }, [G, w]);
+    let V = null;
     null != n &&
         n.length > 0 &&
         null != O &&
         s &&
-        (G = (0, r.jsx)(
+        (V = (0, r.jsx)(
             'div',
             {
                 className: v.loadingMore,
@@ -202,19 +202,19 @@ function P(e) {
             },
             'loading-more-after'
         ));
-    let B = null != O && l;
+    let H = null != O && l;
     return (0, r.jsx)('div', {
-        className: o()(N, v.messagesPopoutWrap),
+        className: o()(Z, v.messagesPopoutWrap),
         onClick: j,
         onDoubleClick: j,
         'aria-label': e['aria-label'],
         children: (0, r.jsxs)(u.Den, {
-            className: o()(v.messagesPopout, w),
-            onScroll: B ? k : void 0,
-            ref: T,
+            className: o()(v.messagesPopout, N),
+            onScroll: H ? U : void 0,
+            ref: R,
             children: [
                 (0, r.jsx)(c.bG, {
-                    navigator: A,
+                    navigator: D,
                     children: (0, r.jsx)(c.SJ, {
                         children: (e) => {
                             var { ref: t } = e,
@@ -237,11 +237,11 @@ function P(e) {
                                     }
                                     return i;
                                 })(e, ['ref']);
-                            return (0, r.jsx)('div', C(_({ ref: t }, n), { children: M }));
+                            return (0, r.jsx)('div', C(_({ ref: t }, n), { children: B }));
                         }
                     })
                 }),
-                G
+                V
             ]
         })
     });

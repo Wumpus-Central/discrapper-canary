@@ -82,7 +82,7 @@ function y(e) {
     function u(e, t) {
         null != i &&
             (0, o.ZDy)(async () => {
-                let { default: a } = await Promise.all([n.e('91689'), n.e('59732'), n.e('48389')]).then(n.bind(n, 712451));
+                let { default: a } = await Promise.all([n.e('91689'), n.e('59732'), n.e('19195')]).then(n.bind(n, 712451));
                 return (n) =>
                     (0, r.jsx)(
                         a,
@@ -137,13 +137,13 @@ function y(e) {
     });
 }
 function O(e) {
-    let { profile: t, onIconChange: n, className: i, disableCTA: o, CTAOverride: s, onClose: l } = e,
-        c = null;
+    let { profile: t, onIconChange: n, className: i, disableCTA: o, CTAOverride: s, onClose: l, disableGuildNameClick: c } = e,
+        _ = null;
     return (
         null != s
-            ? (c = s)
+            ? (_ = s)
             : o ||
-              (c = (0, r.jsx)(d.Z, {
+              (_ = (0, r.jsx)(d.Z, {
                   profile: t,
                   onComplete: l
               })),
@@ -155,12 +155,15 @@ function O(e) {
                     onIconChange: n,
                     profile: t
                 }),
-                (0, r.jsx)(f.Z, { profile: t }),
+                (0, r.jsx)(f.Z, {
+                    profile: t,
+                    disableGuildNameClick: c
+                }),
                 (0, r.jsx)(u.E, { profile: t }),
-                null != c &&
+                null != _ &&
                     (0, r.jsx)('div', {
                         className: h.buttonContainer,
-                        children: c
+                        children: _
                     })
             ]
         })

@@ -1,11 +1,11 @@
 n.d(t, { Z: () => v });
-var r = n(255367);
+var o = n(255367);
 n(73800);
-var o = n(120356),
-    i = n.n(o),
+var r = n(120356),
+    i = n.n(r),
     c = n(442837),
-    a = n(481060),
-    l = n(410030),
+    l = n(481060),
+    a = n(410030),
     s = n(726542),
     d = n(367907),
     u = n(122021),
@@ -21,24 +21,24 @@ var o = n(120356),
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            o = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (o = o.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            o.forEach(function (t) {
+                var o;
+                (o = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: o,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (e[t] = o);
             });
     }
     return e;
@@ -51,8 +51,8 @@ function O(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var o = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, o);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -63,40 +63,40 @@ function O(e, t) {
 }
 function I(e) {
     var t;
-    let { account: n, theme: o, locale: i, userId: c } = e,
-        l = null != (t = n.metadata) ? t : {},
-        b = (0, f.FI)(l[x.PC.CREATED_AT], i),
+    let { account: n, theme: r, locale: i, userId: c } = e,
+        a = null != (t = n.metadata) ? t : {},
+        b = (0, f.FI)(a[x.PC.CREATED_AT], i),
         I = s.Z.get((0, u.rR)(n.type));
-    return (0, r.jsxs)('div', {
+    return (0, o.jsxs)('div', {
         className: g.connection,
         children: [
-            (0, r.jsx)(a.ua7, {
+            (0, o.jsx)(l.ua7, {
                 text: null == I ? void 0 : I.name,
                 children: (e) =>
-                    (0, r.jsx)(
+                    (0, o.jsx)(
                         'img',
                         O(j({}, e), {
                             alt: h.intl.formatToPlainString(h.t.rtm15O, { name: null == I ? void 0 : I.name }),
                             className: g.platformIcon,
-                            src: (0, a.wjy)(o) ? (null == I ? void 0 : I.icon.darkSVG) : null == I ? void 0 : I.icon.lightSVG
+                            src: (0, l.wjy)(r) ? (null == I ? void 0 : I.icon.darkSVG) : null == I ? void 0 : I.icon.lightSVG
                         })
                     )
             }),
-            (0, r.jsxs)('div', {
+            (0, o.jsxs)('div', {
                 className: g.connectionInfo,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, o.jsxs)('div', {
                         children: [
                             (() => {
                                 var e;
                                 let t = null == I || null == (e = I.getPlatformUserUrl) ? void 0 : e.call(I, n);
                                 return null == t
-                                    ? (0, r.jsx)(a.ua7, {
+                                    ? (0, o.jsx)(l.ua7, {
                                           overflowOnly: !0,
                                           text: n.name,
                                           children: (e) =>
-                                              (0, r.jsx)(
-                                                  a.Text,
+                                              (0, o.jsx)(
+                                                  l.Text,
                                                   O(j({}, e), {
                                                       variant: 'text-sm/normal',
                                                       className: g.accountNameText,
@@ -104,7 +104,7 @@ function I(e) {
                                                   })
                                               )
                                       })
-                                    : (0, r.jsx)(a.eee, {
+                                    : (0, o.jsx)(l.eee, {
                                           href: t,
                                           className: g.platformUrlAnchor,
                                           useDefaultUnderlineStyles: !1,
@@ -121,15 +121,15 @@ function I(e) {
                                                       e
                                                   );
                                           },
-                                          children: (0, r.jsxs)('div', {
+                                          children: (0, o.jsxs)('div', {
                                               className: g.accountName,
                                               children: [
-                                                  (0, r.jsx)(a.ua7, {
+                                                  (0, o.jsx)(l.ua7, {
                                                       overflowOnly: !0,
                                                       text: n.name,
                                                       children: (e) =>
-                                                          (0, r.jsx)(
-                                                              a.Text,
+                                                          (0, o.jsx)(
+                                                              l.Text,
                                                               O(j({}, e), {
                                                                   variant: 'text-sm/normal',
                                                                   className: g.accountNameText,
@@ -137,7 +137,7 @@ function I(e) {
                                                               })
                                                           )
                                                   }),
-                                                  (0, r.jsx)(m.Z, {
+                                                  (0, o.jsx)(m.Z, {
                                                       className: g.platformUrlIcon,
                                                       direction: m.Z.Directions.RIGHT
                                                   })
@@ -146,15 +146,15 @@ function I(e) {
                                       });
                             })(),
                             null != b &&
-                                (0, r.jsx)(a.Text, {
+                                (0, o.jsx)(l.Text, {
                                     variant: 'text-xs/normal',
                                     children: h.intl.format(h.t['9rfonp'], { date: b })
                                 })
                         ]
                     }),
-                    (0, r.jsx)('div', {
+                    (0, o.jsx)('div', {
                         className: g.metadata,
-                        children: n.type === y.ABu.REDDIT ? (0, p.oP)(l) : n.type === y.ABu.STEAM ? (0, p.Dq)(l) : n.type === y.ABu.BLUESKY || n.type === y.ABu.MASTODON || n.type === y.ABu.TWITTER ? (0, p.rJ)(l) : n.type === y.ABu.PAYPAL ? (0, p.li)(l) : n.type === y.ABu.EBAY ? (0, p.ul)(l) : n.type === y.ABu.TIKTOK ? (0, p.hf)(l) : null
+                        children: n.type === y.ABu.REDDIT ? (0, p.oP)(a) : n.type === y.ABu.STEAM ? (0, p.Dq)(a) : n.type === y.ABu.BLUESKY || n.type === y.ABu.MASTODON || n.type === y.ABu.TWITTER ? (0, p.rJ)(a) : n.type === y.ABu.PAYPAL ? (0, p.li)(a) : n.type === y.ABu.EBAY ? (0, p.ul)(a) : n.type === y.ABu.TIKTOK ? (0, p.hf)(a) : null
                     })
                 ]
             })
@@ -162,20 +162,20 @@ function I(e) {
     });
 }
 function v(e) {
-    let { connections: t, userId: n, className: o } = e,
-        a = (0, l.ZP)(),
+    let { connections: t, userId: n, className: r } = e,
+        l = (0, a.ZP)(),
         s = (0, c.e7)([b.default], () => b.default.locale);
     return 0 === t.length
         ? null
-        : (0, r.jsx)('div', {
-              className: i()(g.container, o),
+        : (0, o.jsx)('div', {
+              className: i()(g.container, r),
               children: t.map((e) =>
-                  (0, r.jsx)(
+                  (0, o.jsx)(
                       I,
                       {
                           account: e,
                           userId: n,
-                          theme: a,
+                          theme: l,
                           locale: s
                       },
                       ''.concat(e.type, ':').concat(e.id)

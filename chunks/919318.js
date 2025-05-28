@@ -21,8 +21,8 @@ var l = t(255367),
     I = t(496675),
     v = t(451478),
     Z = t(768581),
-    y = t(526120),
-    N = t(689981),
+    N = t(526120),
+    y = t(689981),
     O = t(825334),
     P = t(981631),
     w = t(388032),
@@ -42,7 +42,7 @@ function A(e) {
         p = (0, s.e7)([v.Z], () => v.Z.isFocused()),
         x = (0, m.d$)(r.src),
         C = b.QK.useSetting(),
-        { src: _, width: I, height: Z, alt: y } = r;
+        { src: _, width: I, height: Z, alt: N } = r;
     return (
         Z > I ? (t = 72) : (n = 72),
         (0, l.jsxs)('div', {
@@ -54,7 +54,7 @@ function A(e) {
                     maxWidth: t,
                     width: I,
                     height: Z,
-                    alt: null != y && o && null != h ? h : y,
+                    alt: null != N && o && null != h ? h : N,
                     autoPlay: C,
                     animated: x && !o && p,
                     containerClassName: E.thumbnailContainer,
@@ -76,7 +76,7 @@ function M(e) {
         a = (0, s.e7)([_.Z], () => _.Z.getMessages(n.channelId)),
         u = (0, s.e7)([I.Z], () => I.Z.can(P.Plq.VIEW_CHANNEL, t)),
         m = a.first(),
-        f = (0, N.Z)(m),
+        f = (0, y.Z)(m),
         g = (0, d.zy)(m, !1),
         p = (null == g ? void 0 : g.length) > 0 ? g[0] : null,
         b = null != t && null == a.first() && !a.loadingMore && !a.ready && !a.hasFetched && u;
@@ -102,7 +102,7 @@ function M(e) {
         onClick: (e) => {
             null != t &&
                 (e.shiftKey
-                    ? (0, y.C3)(t.guild_id, t.id)
+                    ? (0, N.C3)(t.guild_id, t.id)
                     : x.Z.openResourceChannelAsSidebar({
                           guildId: t.guild_id,
                           channelId: t.id

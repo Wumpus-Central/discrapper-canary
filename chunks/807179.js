@@ -3,7 +3,6 @@ e.exports = {
     grid: 'grid_db78b7',
     preview: 'preview_db78b7',
     inputNote: 'inputNote_db78b7',
-    select: 'select_db78b7',
     submit: 'submit_db78b7',
     heading: 'heading_db78b7',
     editor: 'editor_db78b7',

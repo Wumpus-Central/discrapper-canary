@@ -152,7 +152,7 @@ let eL = (0, u.Un)({
         renderLoader: ew
     }),
     eM = (0, u.Un)({
-        createPromise: () => Promise.all([n.e('44156'), n.e('58227'), n.e('58121')]).then(n.bind(n, 603072)),
+        createPromise: () => Promise.all([n.e('44156'), n.e('58227'), n.e('72132')]).then(n.bind(n, 603072)),
         webpackId: 603072,
         name: 'ChannelsAndRolesPage',
         renderLoader: ew

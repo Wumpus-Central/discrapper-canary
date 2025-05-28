@@ -438,7 +438,7 @@ var r,
             return n.e('37052').then(n.bind(n, 24510));
         },
         'da-DK': function () {
-            return n.e('20294').then(n.bind(n, 822053));
+            return n.e('33691').then(n.bind(n, 822053));
         },
         'de-DE': function () {
             return n.e('25507').then(n.bind(n, 119377));

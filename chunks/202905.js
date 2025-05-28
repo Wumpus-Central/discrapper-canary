@@ -133,7 +133,8 @@ function _(e) {
                                         size: o.zxk.Sizes.SMALL,
                                         fullWidth: !0,
                                         children: x.intl.string(x.t['7XdMW1'])
-                                    })
+                                    }),
+                                    disableGuildNameClick: !0
                                 })
                             ]
                         })

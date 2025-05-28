@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685), n(642613), n(361932), n(187205), n(415506);
+n.d(t, { Z: () => P }), n(388685), n(642613), n(361932), n(187205), n(415506);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -8,19 +8,21 @@ var r = n(255367),
     c = n(442837),
     u = n(481060),
     d = n(235820),
-    h = n(315174),
-    p = n(455199),
-    f = n(768943),
-    g = n(592125),
-    m = n(594174),
-    b = n(709054),
-    y = n(207913),
-    O = n(553984),
-    v = n(333834),
-    _ = n(982183),
-    C = n(981631),
-    j = n(21678);
-let S = {
+    h = n(377171),
+    p = n(315174),
+    f = n(455199),
+    g = n(768943),
+    m = n(592125),
+    b = n(594174),
+    y = n(709054),
+    O = n(207913),
+    v = n(553984),
+    _ = n(333834),
+    C = n(982183),
+    j = n(981631),
+    S = n(388032),
+    E = n(21678);
+let x = {
     controller: new a.Controller({
         value: 1,
         immediate: !0
@@ -29,54 +31,56 @@ let S = {
     bannerVisible: !1,
     communityInfoVisible: !1,
     shouldShowSubscribeTooltip: !1,
-    bannerVisibleHeight: _.$J,
+    bannerVisibleHeight: C.$J,
     hasGuildSubheader: !1,
     disableBannerAnimation: !0
 };
-function E(e) {
+function P(e) {
     let { includePanelSpacing: t } = e,
         {
             messages: n,
             hasMore: l,
             loading: a,
             hasLoadedEver: u
-        } = (0, c.cj)([p.Z], () => ({
-            messages: p.Z.getMentions(),
-            hasMore: p.Z.hasMore,
-            loading: p.Z.loading,
-            hasLoadedEver: p.Z.hasLoadedEver,
-            guildFilter: p.Z.guildFilter,
-            roleFilter: p.Z.roleFilter,
-            everyoneFilter: p.Z.everyoneFilter
+        } = (0, c.cj)([f.Z], () => ({
+            messages: f.Z.getMentions(),
+            hasMore: f.Z.hasMore,
+            loading: f.Z.loading,
+            hasLoadedEver: f.Z.hasLoadedEver,
+            guildFilter: f.Z.guildFilter,
+            roleFilter: f.Z.roleFilter,
+            everyoneFilter: f.Z.everyoneFilter
         })),
-        [d, y] = i.useState(_.V5.ALL);
+        [d, h] = i.useState(C.V5.ALL),
+        [O, S] = i.useState(C.xM.UNREAD);
     (0, i.useEffect)(() => {
-        if (!u) return void x(null);
+        if (!u) return void I(null);
     }, [u]);
-    let E = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
-        w = (0, c.e7)([f.Z], () => f.Z.getSavedMessages()),
-        N = i.useMemo(() => {
+    let P = (0, c.e7)([b.default], () => b.default.getCurrentUser()),
+        T = (0, c.e7)([g.Z], () => g.Z.getSavedMessages()),
+        A = i.useMemo(() => {
             let e = (0, s.uniqBy)(
-                [...(null != n ? n : [])].sort((e, t) => b.default.compare(t.id, e.id)),
+                [...(null != n ? n : [])].sort((e, t) => y.default.compare(t.id, e.id)),
                 'id'
             );
-            if (d === _.V5.ALL) return e;
-            if (d === _.V5.ANNOUNCEMENTS)
+            if (d === C.V5.ALL) return e;
+            if (d === C.V5.ANNOUNCEMENTS)
                 return null == e
                     ? void 0
                     : e.filter((e) => {
-                          let t = g.Z.getChannel(e.channel_id);
-                          return (null == t ? void 0 : t.type) === C.d4z.GUILD_ANNOUNCEMENT;
+                          let t = m.Z.getChannel(e.channel_id);
+                          return (null == t ? void 0 : t.type) === j.d4z.GUILD_ANNOUNCEMENT;
                       });
-            if (d === _.V5.MENTIONS) return null == e ? void 0 : e.filter((e) => (null == E ? void 0 : E.id) != null && e.mentioned && e.mentions.includes(null == E ? void 0 : E.id));
-            if (d === _.V5.BOOKMARKS) return w.flatMap((e) => (null != e.message ? [e.message] : []));
+            if (d === C.V5.MENTIONS) return null == e ? void 0 : e.filter((e) => (null == P ? void 0 : P.id) != null && e.mentioned && e.mentions.includes(null == P ? void 0 : P.id));
+            if (d === C.V5.BOOKMARKS) return T.flatMap((e) => (null != e.message ? [e.message] : []));
             throw Error('Unknown filter: '.concat(d));
-        }, [d, n, E, w]);
+        }, [d, n, P, T]),
+        R = O === C.xM.READ && d === C.V5.ALL;
     return (0, r.jsxs)('nav', {
-        className: o()(j.container, { [j.panelSpacing]: t }),
+        className: o()(E.container, { [E.panelSpacing]: t }),
         children: [
             (0, r.jsx)(
-                h.ZP,
+                p.ZP,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -104,49 +108,78 @@ function E(e) {
                 })(
                     {
                         hasSubheader: !0,
-                        guild: _.F7
+                        guild: C.F7
                     },
-                    S
+                    x
                 )
             ),
-            (0, r.jsx)(O.Z, {
+            (0, r.jsx)(v.Z, {
                 selectedFilter: d,
-                setSelectedFilter: y
+                setSelectedFilter: h
             }),
-            (0, r.jsx)(v.ZP, {
-                className: j.messageList,
-                renderMessage: I,
-                messages: N,
+            R && (0, r.jsx)(Z, {}),
+            (0, r.jsx)(_.Z, {
+                className: E.messageList,
+                renderMessageGroup: N,
+                messages: A,
                 loading: a,
                 hasMore: l,
                 analyticsName: 'Notifications Inbox',
                 channel: null,
                 listName: 'notifications-inbox',
                 loadMore: function () {
-                    x(null, null != n && n.length > 0 ? n[n.length - 1].id : null);
+                    I(null, null != n && n.length > 0 ? n[n.length - 1].id : null);
                 },
-                renderEmptyState: P
+                renderEmptyState: w,
+                setInboxReadState: S
             })
         ]
     });
 }
-function x(e, t) {
-    let n = p.Z.guildFilter,
-        r = p.Z.roleFilter,
-        i = p.Z.everyoneFilter,
+function I(e, t) {
+    let n = f.Z.guildFilter,
+        r = f.Z.roleFilter,
+        i = f.Z.everyoneFilter,
         l = null;
-    null != e && null != n && (l = n === C.NgX.ALL_SERVERS ? null : e.getGuildId()), d.Z.fetchRecentMentions(t, C.DJj, l, r, i);
+    null != e && null != n && (l = n === j.NgX.ALL_SERVERS ? null : e.getGuildId()), d.Z.fetchRecentMentions(t, j.DJj, l, r, i);
 }
-function P() {
+function w() {
     return (0, r.jsx)(u.LZC, { size: 16 });
 }
-function I(e, t) {
+function N(e, t) {
     return (0, r.jsx)(
-        y.B,
+        O.B,
         {
-            message: e,
-            goToSidebar: t
+            message: e[0],
+            goToSidebar: t,
+            groupedMessages: e.slice(1)
         },
-        e.id
+        e[0].id
     );
+}
+function Z() {
+    let [e, t] = i.useState(!1),
+        [n, l] = i.useState(!1),
+        o = n ? u.kSu : u.kmB;
+    return e
+        ? null
+        : (0, r.jsxs)(u.P3F, {
+              onClick: () => t(!0),
+              onMouseEnter: () => l(!0),
+              onMouseLeave: () => l(!1),
+              className: E.emptyStateContainer,
+              children: [
+                  (0, r.jsx)(u.Text, {
+                      variant: n ? 'text-sm/medium' : 'text-sm/normal',
+                      color: 'text-positive',
+                      className: E.emptyStateText,
+                      children: S.intl.string(S.t['6XMM+P'])
+                  }),
+                  (0, r.jsx)(o, {
+                      size: 'sm',
+                      className: E.emptyStateIcon,
+                      color: h.Z.TEXT_POSITIVE
+                  })
+              ]
+          });
 }

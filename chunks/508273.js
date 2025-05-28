@@ -29,7 +29,7 @@ function j(e) {
         T = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         { updateButton: P, updateCopy: A } = (0, f.n2)(),
         w = p === l.author.id,
-        Z = A ? 324 : 292;
+        Z = A ? 326 : 292;
     i.useLayoutEffect(() => {
         var e, t;
         I((null != (t = null == (e = h.current) ? void 0 : e.clientHeight) ? t : 0) > Z);
@@ -65,8 +65,8 @@ function j(e) {
                               ? (0, r.jsx)('div', {
                                     className: O.inviteTitleWrapper,
                                     children: (0, r.jsx)(s.Text, {
-                                        variant: 'text-xs/semibold',
-                                        color: 'text-secondary',
+                                        variant: 'text-sm/semibold',
+                                        color: 'header-secondary',
                                         className: O.inviteTitle,
                                         children: w ? v.intl.string(v.t['oU/lsr']) : v.intl.string(v.t.BoQUFR)
                                     })

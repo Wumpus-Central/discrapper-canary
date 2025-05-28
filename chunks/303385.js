@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(255367);
 n(73800);
-var o = n(240894),
-    s = n(481060),
+var s = n(240894),
+    o = n(481060),
     a = n(497505),
     i = n(467628),
     l = n(644646),
@@ -15,10 +15,10 @@ let p = (e) => {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', { className: d.rewardTileSpacer }),
-            (0, r.jsx)(o.animated.div, {
+            (0, r.jsx)(s.animated.div, {
                 className: d.rewardTileContainer,
                 style: {
-                    transform: (0, o.to)(
+                    transform: (0, s.to)(
                         [
                             n.to({
                                 range: [0, 1],
@@ -44,10 +44,10 @@ let p = (e) => {
                     autoplay: p && !f
                 })
             }),
-            (0, r.jsxs)(o.animated.div, {
+            (0, r.jsxs)(s.animated.div, {
                 className: d.rewardHighlightLogoCTA,
                 style: {
-                    transform: (0, o.to)(
+                    transform: (0, s.to)(
                         [
                             n.to({
                                 range: [0, 1],
@@ -66,7 +66,7 @@ let p = (e) => {
                         className: d.partnerBranding,
                         children: m
                     }),
-                    (0, r.jsx)(o.animated.div, {
+                    (0, r.jsx)(s.animated.div, {
                         className: d.rewardHighlightCTA,
                         style: {
                             opacity: n.to({
@@ -74,7 +74,7 @@ let p = (e) => {
                                 output: [0.7, 0]
                             })
                         },
-                        children: (0, r.jsx)(s.Text, {
+                        children: (0, r.jsx)(o.Text, {
                             color: 'always-white',
                             variant: 'text-xs/medium',
                             children: u.intl.string(u.t['1Wvve3'])

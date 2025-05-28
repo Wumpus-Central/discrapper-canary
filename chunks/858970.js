@@ -1,11 +1,11 @@
 n.d(t, { Z: () => I }), n(388685), n(953529);
-var r = n(255367);
+var o = n(255367);
 n(73800);
-var o = n(442837),
+var r = n(442837),
     i = n(481060),
     c = n(100527),
-    a = n(906732),
-    l = n(138201),
+    l = n(906732),
+    a = n(138201),
     s = n(699516),
     d = n(5192),
     u = n(785717),
@@ -22,24 +22,24 @@ var o = n(442837),
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            o = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (o = o.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            o.forEach(function (t) {
+                var o;
+                (o = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: o,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (e[t] = o);
             });
     }
     return e;
@@ -47,8 +47,8 @@ function O(e) {
 function I(e) {
     let { user: t, guildId: n, channelId: I, messageId: v, roleId: N, transitionState: P, openedAt: A, onHide: T, sourceAnalyticsLocations: Z = [] } = e,
         C = n === h.ME ? void 0 : n,
-        w = (0, o.e7)([s.Z], () => s.Z.isBlocked(t.id)),
-        { analyticsLocations: S } = (0, a.ZP)([...Z, w ? c.Z.BLOCKED_PROFILE_MODAL : c.Z.IGNORED_PROFILE_MODAL]),
+        w = (0, r.e7)([s.Z], () => s.Z.isBlocked(t.id)),
+        { analyticsLocations: S } = (0, l.ZP)([...Z, w ? c.Z.BLOCKED_PROFILE_MODAL : c.Z.IGNORED_PROFILE_MODAL]),
         E = (0, u.ZB)({
             layout: 'MODAL_V2',
             userId: t.id,
@@ -69,56 +69,56 @@ function I(e) {
             }
         ],
         D = (0, p.ZP)(t.id, C);
-    return (0, r.jsx)(a.Gt, {
+    return (0, o.jsx)(l.Gt, {
         value: S,
-        children: (0, r.jsx)(u.Mt, {
+        children: (0, o.jsx)(u.Mt, {
             value: E,
             openedAt: A,
             fetchStartedAt: null == D ? void 0 : D.fetchStartedAt,
             fetchEndedAt: null == D ? void 0 : D.fetchEndedAt,
             isLoaded: null == D ? void 0 : D.isLoaded,
-            children: (0, r.jsx)(i.Y0X, {
+            children: (0, o.jsx)(i.Y0X, {
                 transitionState: P,
                 className: j.root,
                 'aria-label': g.intl.string(g.t['3N/J2t']),
-                children: (0, r.jsxs)(b.Z, {
+                children: (0, o.jsxs)(b.Z, {
                     user: t,
                     displayProfile: D,
                     themeType: x.lY.MODAL_V2,
                     children: [
-                        (0, r.jsx)('div', { className: j.background }),
-                        (0, r.jsxs)('div', {
+                        (0, o.jsx)('div', { className: j.background }),
+                        (0, o.jsxs)('div', {
                             className: j.content,
                             children: [
-                                (0, r.jsx)(m.Z, {
+                                (0, o.jsx)(m.Z, {
                                     user: t,
                                     guildId: C,
                                     iconColor: i.TVs.colors.TEXT_NORMAL
                                 }),
-                                (0, r.jsxs)('div', {
+                                (0, o.jsxs)('div', {
                                     className: j.textContainer,
                                     children: [
-                                        (0, r.jsx)(i.X6q, {
+                                        (0, o.jsx)(i.X6q, {
                                             variant: 'heading-xl/bold',
                                             color: 'text-normal',
                                             children: g.intl.string(g.t.b33pLC)
                                         }),
-                                        (0, r.jsx)(i.Text, {
+                                        (0, o.jsx)(i.Text, {
                                             variant: 'text-md/medium',
                                             color: 'text-normal',
                                             children: g.intl.format(w ? g.t.T7QiLi : g.t.MnEow8, { username: d.ZP.getName(C, I, t) })
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)('div', {
+                                (0, o.jsx)('div', {
                                     className: j.safetyTable,
                                     children: B.map((e, t) => {
-                                        let { icon: n, description: o } = e;
-                                        return (0, r.jsx)(
-                                            l.ZP,
+                                        let { icon: n, description: r } = e;
+                                        return (0, o.jsx)(
+                                            a.ZP,
                                             {
                                                 icon: n,
-                                                title: o,
+                                                title: r,
                                                 titleVariant: 'text-md/normal',
                                                 color: i.TVs.colors.TEXT_NORMAL.css
                                             },
@@ -126,10 +126,10 @@ function I(e) {
                                         );
                                     })
                                 }),
-                                (0, r.jsxs)(i.Kqy, {
+                                (0, o.jsxs)(i.Kqy, {
                                     align: 'center',
                                     children: [
-                                        (0, r.jsx)(y.Z, {
+                                        (0, o.jsx)(y.Z, {
                                             size: i.PhG.MEDIUM,
                                             isBlocked: w,
                                             onClick: () => {
@@ -145,7 +145,7 @@ function I(e) {
                                                     );
                                             }
                                         }),
-                                        (0, r.jsx)(_.Z, {
+                                        (0, o.jsx)(_.Z, {
                                             userId: t.id,
                                             onClick: () => {
                                                 T(),

@@ -6,5 +6,6 @@ e.exports = {
     dotOnline: 'dotOnline__99f53',
     established: 'established__99f53',
     nameContainer: 'nameContainer__99f53',
+    guildNameContainer: 'guildNameContainer__99f53',
     guildName: 'guildName__99f53'
 };

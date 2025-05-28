@@ -4,9 +4,9 @@ r.d(t, {
 });
 var n = r(255367),
     a = r(598117),
-    s = r(981631),
-    i = r(185923),
-    l = r(388032),
+    i = r(981631),
+    l = r(185923),
+    s = r(388032),
     o = r(632261);
 let c = (e) => {
         let { error: t } = e;
@@ -17,29 +17,29 @@ let c = (e) => {
     },
     u = (e) => {
         switch (e) {
-            case s.evJ.TOO_MANY_EMOJI:
-                return l.intl.string(l.t['jP/Rqq']);
-            case s.evJ.TOO_MANY_ANIMATED_EMOJI:
-                return l.intl.string(l.t['6v5dPz']);
+            case i.evJ.TOO_MANY_EMOJI:
+                return s.intl.string(s.t['jP/Rqq']);
+            case i.evJ.TOO_MANY_ANIMATED_EMOJI:
+                return s.intl.string(s.t['6v5dPz']);
             case a.ze.TOO_BIG:
-            case s.evJ.INVALID_FILE_ASSET_SIZE:
-            case s.evJ.INVALID_FORM_BODY:
-                return l.intl.formatToPlainString(l.t.kIO9j4, { maxSize: i.xG });
-            case s.evJ.INVALID_FILE_ASSET_SIZE_RESIZE_GIF:
-                return l.intl.string(l.t.sp16MT);
+            case i.evJ.INVALID_FILE_ASSET_SIZE:
+            case i.evJ.INVALID_FORM_BODY:
+                return s.intl.formatToPlainString(s.t.kIO9j4, { maxSize: l.xG });
+            case i.evJ.INVALID_FILE_ASSET_SIZE_RESIZE_GIF:
+                return s.intl.string(s.t.sp16MT);
             case a.ze.MISSING_IMAGE_DATA:
-                return l.intl.string(l.t['41/Kbm']);
+                return s.intl.string(s.t['41/Kbm']);
             case a.ze.MISSING_GUILD:
-                return l.intl.string(l.t['8RCtpK']);
+                return s.intl.string(s.t['8RCtpK']);
             case a.ze.GIF_CROPPING:
-                return l.intl.string(l.t.X6rtiI);
+                return s.intl.string(s.t.X6rtiI);
             case a.ze.IMAGE_LOAD:
-                return l.intl.string(l.t['+ITMYW']);
+                return s.intl.string(s.t['+ITMYW']);
             case 429:
-                return l.intl.string(l.t['4rjikp']);
+                return s.intl.string(s.t['4rjikp']);
             case a.ze.UNKNOWN:
             default:
-                return l.intl.string(l.t.iufib2);
+                return s.intl.string(s.t.iufib2);
         }
     },
     d = (e) => {

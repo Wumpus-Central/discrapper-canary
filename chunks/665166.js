@@ -1,10 +1,10 @@
 n.d(t, { Z: () => d }), n(388685);
 var i = n(255367),
     r = n(73800),
-    s = n(66685),
+    s = n(31584),
     l = n(481060),
-    a = n(267631),
-    o = n(639618),
+    a = n(816340),
+    o = n(637263),
     c = n(388032);
 function d() {
     r.useSyncExternalStore(c.intl.onLocaleChange, () => c.intl.currentLocale);

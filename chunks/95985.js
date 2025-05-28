@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(255367);
 n(73800);
-var o = n(481060),
-    s = n(113434),
+var s = n(481060),
+    o = n(113434),
     a = n(497505),
     i = n(644646),
     l = n(613087),
@@ -11,8 +11,8 @@ var o = n(481060),
     d = n(667904);
 let p = (e) => {
     let { contentLocation: t, quest: n, progressBarRef: p, isExpanded: m, percentComplete: f, activeScreen: g } = e,
-        x = (0, s.eQ)(n),
-        h = (0, s.vf)(n, m, g);
+        x = (0, o.eQ)(n),
+        h = (0, o.vf)(n, m, g);
     return (0, r.jsxs)('div', {
         className: d.questProgressWrapper,
         children: [
@@ -43,7 +43,7 @@ let p = (e) => {
                         inState: t,
                         id: 'progress-title',
                         children: (e) =>
-                            (0, r.jsx)(o.Text, {
+                            (0, r.jsx)(s.Text, {
                                 ref: e,
                                 className: d.questProgressHint,
                                 color: 'header-primary',
@@ -56,7 +56,7 @@ let p = (e) => {
                         id: 'progress-subtitle',
                         isTextTransition: !0,
                         children: (e) =>
-                            (0, r.jsx)(o.Text, {
+                            (0, r.jsx)(s.Text, {
                                 ref: e,
                                 className: d.questProgressHint,
                                 color: 'text-muted',

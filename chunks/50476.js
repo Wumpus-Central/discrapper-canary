@@ -1,11 +1,11 @@
 n.d(t, { Z: () => l });
 var r = n(255367),
-    o = n(481060),
-    s = n(388032),
+    s = n(481060),
+    o = n(388032),
     a = n(374578);
 function i(e) {
     let { onClick: t, children: n } = e;
-    return (0, r.jsx)(o.zxk, {
+    return (0, r.jsx)(s.zxk, {
         onClick: t,
         className: a.button,
         innerClassName: a.buttonInner,
@@ -20,11 +20,11 @@ let l = function (e) {
         children: [
             (0, r.jsxs)(i, {
                 onClick: t,
-                children: [s.intl.string(s.t.QXc019), (0, r.jsx)(o.pzj, { size: 'sm' })]
+                children: [o.intl.string(o.t.QXc019), (0, r.jsx)(s.pzj, { size: 'sm' })]
             }),
             (0, r.jsxs)(i, {
                 onClick: n,
-                children: [s.intl.string(s.t['8lAfuL']), (0, r.jsx)(o.iWm, { size: 'sm' })]
+                children: [o.intl.string(o.t['8lAfuL']), (0, r.jsx)(s.iWm, { size: 'sm' })]
             })
         ]
     });
