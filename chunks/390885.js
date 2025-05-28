@@ -32,7 +32,7 @@ function d(e) {
     }
     return e;
 }
-function g(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -50,7 +50,7 @@ function g(e, t) {
         e
     );
 }
-function h(e, t) {
+function g(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -92,7 +92,7 @@ function x(e) {
     let t = a.K.get(''.concat(_, '-').concat(e));
     if (null == t) return null;
     let { version: n } = t,
-        r = h(t, ['version']);
+        r = g(t, ['version']);
     return 1 !== n ? null : r;
 }
 new o.Z('UserFlowAnalytics');
@@ -113,12 +113,12 @@ let E = (0, r.U)()(
 function b(e, t) {
     let n = E.getState().flows,
         { [e]: r } = n,
-        i = h(n, [e].map(p)),
+        i = g(n, [e].map(p)),
         a = null != r ? r : x(e);
     ((null == a ? void 0 : a.currentStep) == null || a.currentStep !== t) &&
         (0, l.j)(() => {
             E.setState({
-                flows: g(d({}, i), {
+                flows: h(d({}, i), {
                     [e]: {
                         type: e,
                         lastStep: null,
@@ -141,15 +141,15 @@ function v(e, t) {
     }
     let a = E.getState().flows,
         { [r]: o } = a,
-        s = h(a, [r].map(p)),
+        s = g(a, [r].map(p)),
         u = null != o ? o : x(r);
     null != u &&
         null != u.currentStep &&
         u.currentStep !== t &&
         (0, l.j)(() => {
             E.setState({
-                flows: g(d({}, s), {
-                    [r]: g(d({}, u), {
+                flows: h(d({}, s), {
+                    [r]: h(d({}, u), {
                         lastStep: u.currentStep,
                         lastTimestamp: u.currentTimestamp,
                         currentStep: t,
@@ -173,7 +173,7 @@ E.subscribe(
             (!(function (e) {
                 if (e.type === c.MK.UNKNOWN) return;
                 let t = ''.concat(_, '-').concat(e.type);
-                e.ended ? (a.K.remove(t), a.K.remove(f)) : (a.K.set(''.concat(_, '-').concat(e.type), g(d({}, e), { version: 1 })), a.K.set(f, e.type));
+                e.ended ? (a.K.remove(t), a.K.remove(f)) : (a.K.set(''.concat(_, '-').concat(e.type), h(d({}, e), { version: 1 })), a.K.set(f, e.type));
             })(e),
             s.default.track(
                 u.rMx.NUO_TRANSITION,

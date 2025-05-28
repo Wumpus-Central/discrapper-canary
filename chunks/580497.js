@@ -8,8 +8,8 @@ var r = n(512722),
     c = n(756647),
     u = n(703656),
     d = n(314897),
-    g = n(896797),
-    h = n(626135),
+    h = n(896797),
+    g = n(626135),
     p = n(954824),
     m = n(981631);
 function f(e) {
@@ -32,12 +32,12 @@ function f(e) {
         })(e),
         n = (0, s.zS)(t);
     null != n &&
-        h.default.track(m.rMx.DEEP_LINK_CLICKED, {
+        g.default.track(m.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, c.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource
         }),
         p.Z.launch(t, (e) => {
-            e || (0, u.dL)(g.Z.fallbackRoute);
+            e || (0, u.dL)(h.Z.fallbackRoute);
         });
 }

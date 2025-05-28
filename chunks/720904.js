@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(781311);
+n.d(t, { Z: () => _ }), n(781311);
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -16,8 +16,8 @@ var r = n(120356),
     b = n(981631),
     h = n(185923),
     O = n(388032),
-    y = n(933070);
-function E(e) {
+    E = n(933070);
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -84,19 +84,19 @@ function S(e) {
                     (0, i.jsx)(
                         'div',
                         v(
-                            E(
+                            y(
                                 {
                                     'aria-label': O.intl.formatToPlainString(O.t['/iYSo6'], { emojiName: n.name }),
-                                    className: l()(y.button, { [y.focused]: r })
+                                    className: l()(E.button, { [E.focused]: r })
                                 },
                                 e
                             ),
                             {
                                 children:
                                     null == s || '' === s.trim()
-                                        ? (0, i.jsx)('span', v(E({ className: l()('emoji', 'emoji-text', y.icon) }, e), { children: c }))
+                                        ? (0, i.jsx)('span', v(y({ className: l()('emoji', 'emoji-text', E.icon) }, e), { children: c }))
                                         : (0, i.jsx)('img', {
-                                              className: y.icon,
+                                              className: E.icon,
                                               src: s,
                                               alt: ''
                                           })
@@ -108,7 +108,7 @@ function S(e) {
         )
     );
 }
-function P(e, t) {
+function _(e, t) {
     let n = (0, s.MZ)(t.guild_id).filter((e) => {
         var n;
         return (
@@ -129,7 +129,7 @@ function P(e, t) {
         };
     return m && n.length > 0
         ? (0, i.jsx)(o.kSQ, {
-              className: y.wrapper,
+              className: E.wrapper,
               children: n.map((e, t) => {
                   var n;
                   return (0, i.jsx)(

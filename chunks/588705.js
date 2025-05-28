@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(925329),
     u = n(372769),
     d = n(44609),
-    g = n(47343),
-    h = n(973616),
+    h = n(47343),
+    g = n(973616),
     p = n(131704),
     m = n(601964),
     f = n(598077),
@@ -78,7 +78,7 @@ let S = () =>
         if (null == c) return null;
         let Z = null != c.guild ? new m.ZP(c.guild) : null,
             R = null != c.channel ? (0, p.jD)(c.channel) : null,
-            w = null != c.target_application ? new h.ZP(c.target_application) : null,
+            w = null != c.target_application ? new g.ZP(c.target_application) : null,
             L = S || null == c.inviter ? null : new f.Z(c.inviter),
             D = !((null != c.approximate_member_count && c.approximate_member_count > 100) || (null != Z && Z.hasFeature(E.oNc.COMMUNITY))) && null != L,
             k = null,
@@ -186,7 +186,7 @@ let S = () =>
                           total: c.approximate_member_count,
                           flat: N
                       }),
-                !T && P ? (0, r.jsx)(g.R, {}) : (0, r.jsx)(o.jQ, { user: A })
+                !T && P ? (0, r.jsx)(h.R, {}) : (0, r.jsx)(o.jQ, { user: A })
             ]
         });
     };

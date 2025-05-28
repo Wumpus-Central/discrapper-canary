@@ -8,8 +8,8 @@ var r,
     c = n(481060),
     u = n(129293),
     d = n(388905),
-    g = n(108427),
-    h = n(598077),
+    h = n(108427),
+    g = n(598077),
     p = n(896797),
     m = n(981631),
     f = n(930441),
@@ -50,7 +50,7 @@ class b extends (r = l.PureComponent) {
                     let {
                             body: { user: n }
                         } = e,
-                        r = new h.Z(n);
+                        r = new g.Z(n);
                     this.setState({
                         success: !0,
                         busy: !1,
@@ -64,7 +64,7 @@ class b extends (r = l.PureComponent) {
                         busy: !1
                     })
             ),
-            (0, g.e)('disable_email_notifications');
+            (0, h.e)('disable_email_notifications');
     }
     renderBusy() {
         return (0, i.jsx)(d.ZP, { children: (0, i.jsx)(d.Hh, {}) });

@@ -42,7 +42,7 @@ function c(e) {
                 friction: 26
             }
         }),
-        g = (0, o.q_F)({
+        h = (0, o.q_F)({
             from: { opacity: 0 },
             to: { opacity: +!!t },
             config: {
@@ -58,7 +58,7 @@ function c(e) {
             marginTop: d.marginTop
         },
         children: (0, r.jsx)(l.animated.div, {
-            style: { opacity: g.opacity },
+            style: { opacity: h.opacity },
             ref: c,
             children: n
         })

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(695346),
     u = n(51331),
     d = n(259580),
-    g = n(626135),
-    h = n(44609),
+    h = n(626135),
+    g = n(44609),
     p = n(731971),
     m = n(981631),
     f = n(388032),
@@ -20,7 +20,7 @@ let x = () => {
         l = c.G6.useSetting(),
         { nickname: x, dmsAllowed: E, showActivity: b, mutedServer: v, setNickname: I, setDmsAllowed: O, setShowActivity: S, setMutedServer: y, guildId: j, inviteCode: N } = (0, p.XW)(),
         C = null == (e = s.Z.getProps().invite) ? void 0 : e.is_nickname_changeable,
-        T = (0, h.m4)({ location: 'InviteSettingsControls' });
+        T = (0, g.m4)({ location: 'InviteSettingsControls' });
     return (0, r.jsxs)('div', {
         className: a()(_.editProfileContainer, { [_.opened]: t }),
         children: [
@@ -28,7 +28,7 @@ let x = () => {
                 className: _.header,
                 onClick: () => {
                     t ||
-                        g.default.track(m.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
+                        h.default.track(m.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
                             guild_id: j,
                             invite_code: N
                         }),

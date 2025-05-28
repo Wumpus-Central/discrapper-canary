@@ -9,9 +9,9 @@ var i = n(120356),
     c = n(256478),
     u = n(20493);
 function d(e) {
-    let { value: t, onChange: n, subText: i, muted: d, marginTopStyle: g, subtextClassName: h } = e;
+    let { value: t, onChange: n, subText: i, muted: d, marginTopStyle: h, subtextClassName: g } = e;
     return (0, r.jsx)(o.Z, {
-        className: null != g ? g : u.marginTop20,
+        className: null != h ? h : u.marginTop20,
         align: o.Z.Align.CENTER,
         children: (0, r.jsx)(a.XZJ, {
             value: t,
@@ -19,7 +19,7 @@ function d(e) {
             onChange: (e, t) => n(t),
             className: c.checkbox,
             children: (0, r.jsx)(s.i_, {
-                className: l()(h, { [c.subText]: !d }),
+                className: l()(g, { [c.subText]: !d }),
                 children: i
             })
         })

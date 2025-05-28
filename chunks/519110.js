@@ -15,8 +15,8 @@ var i = n(255367),
     b = n(926491),
     h = n(378233),
     O = n(981631),
-    y = n(388032);
-function E(e) {
+    E = n(388032);
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -63,9 +63,9 @@ function j(e) {
     return d.ZP.getByName(e.replace(/(^:|:$)/g, ''));
 }
 function S(e) {
-    let { type: t, id: n, name: S, isInExpressionPicker: P = !1 } = e,
-        { location: _ } = (0, s.O)(),
-        N = r.useMemo(() => v(E({}, _), { section: P ? O.jXE.EXPRESSION_PICKER : O.jXE.CONTEXT_MENU }), [_, P]),
+    let { type: t, id: n, name: S, isInExpressionPicker: _ = !1 } = e,
+        { location: P } = (0, s.O)(),
+        N = r.useMemo(() => v(y({}, P), { section: _ ? O.jXE.EXPRESSION_PICKER : O.jXE.CONTEXT_MENU }), [P, _]),
         Z = (0, p.Go)(),
         I = (0, l.e7)([b.Z], () => (t === f.S.STICKER && null != n ? b.Z.getStickerById(n) : null)),
         x = null != I && Z.includes(I.id),
@@ -86,36 +86,36 @@ function S(e) {
               ? (0, i.jsx)(a.sNh, {
                     id: 'unfavorite',
                     action: () => (0, g.hW)(I.id),
-                    label: y.intl.string(y.t.XhzKyM)
+                    label: E.intl.string(E.t.XhzKyM)
                 })
               : (0, i.jsx)(a.sNh, {
                     id: 'favorite',
                     action: () => {
                         (0, m.cQ)({
                             sticker: I,
-                            location: v(E({}, N), { object: O.qAy.STICKER })
+                            location: v(y({}, N), { object: O.qAy.STICKER })
                         }),
                             (0, g.SA)(null == I ? void 0 : I.id);
                     },
-                    label: y.intl.string(y.t.kWmiPT)
+                    label: E.intl.string(E.t.kWmiPT)
                 })
         : null != T && t === f.S.EMOJI
           ? M
               ? (0, i.jsx)(a.sNh, {
                     id: 'unfavorite',
                     action: () => (0, o.Xe)(T),
-                    label: y.intl.string(y.t.Ay49KC)
+                    label: E.intl.string(E.t.Ay49KC)
                 })
               : (0, i.jsx)(a.sNh, {
                     id: 'favorite',
                     action: () => {
                         (0, c.J1)({
                             emoji: T,
-                            location: v(E({}, N), { object: O.qAy.EMOJI })
+                            location: v(y({}, N), { object: O.qAy.EMOJI })
                         }),
                             (0, o.$K)(T);
                     },
-                    label: y.intl.string(y.t['nNsr6+'])
+                    label: E.intl.string(E.t['nNsr6+'])
                 })
           : void 0;
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(35282);
+n.d(t, { Z: () => h }), n(35282);
 var r,
     i = n(255367),
     l = n(73800),
@@ -21,7 +21,7 @@ function d(e, t, n) {
     );
 }
 a.ZP.initialize();
-class g extends (r = l.PureComponent) {
+class h extends (r = l.PureComponent) {
     componentDidMount() {
         (0, c.e)('account_revert');
     }
@@ -57,7 +57,7 @@ class g extends (r = l.PureComponent) {
         });
     }
 }
-d(g, 'defaultProps', {
+d(h, 'defaultProps', {
     transitionTo: s.uL,
     replaceWith: s.dL
 });

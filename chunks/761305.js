@@ -8,8 +8,8 @@ var r,
     c = n(108427),
     u = n(601964),
     d = n(896797),
-    g = n(129293),
-    h = n(388905),
+    h = n(129293),
+    g = n(388905),
     p = n(981631),
     m = n(388032),
     f = n(20493);
@@ -29,7 +29,7 @@ function _(e, t, n) {
 o.ZP.initialize();
 class x extends (r = l.PureComponent) {
     componentDidMount() {
-        let e = (0, g.Z)(this.props.location),
+        let e = (0, h.Z)(this.props.location),
             t = (0, a.parse)(this.props.location.search);
         s.tn
             .post({
@@ -63,27 +63,27 @@ class x extends (r = l.PureComponent) {
             (0, c.e)('disable_server_highlight_notifications');
     }
     renderBusy() {
-        return (0, i.jsx)(h.ZP, { children: (0, i.jsx)(h.Hh, {}) });
+        return (0, i.jsx)(g.ZP, { children: (0, i.jsx)(g.Hh, {}) });
     }
     renderSuccess() {
         let { defaultRoute: e, transitionTo: t } = this.props,
             { guild: n } = this.state;
-        return (0, i.jsxs)(h.ZP, {
+        return (0, i.jsxs)(g.ZP, {
             children: [
-                (0, i.jsx)(h.Dx, {
+                (0, i.jsx)(g.Dx, {
                     className: f.marginBottom8,
                     children: m.intl.string(m.t.Z33eiI)
                 }),
-                (0, i.jsx)(h.DK, { children: m.intl.format(m.t.NRWtfH, { guildName: n.name }) }),
-                (0, i.jsx)(h.zx, {
+                (0, i.jsx)(g.DK, { children: m.intl.format(m.t.NRWtfH, { guildName: n.name }) }),
+                (0, i.jsx)(g.zx, {
                     className: f.marginTop40,
                     onClick: () => t(e),
                     children: m.intl.string(m.t.fIv16O)
                 }),
-                (0, i.jsx)(h.zx, {
+                (0, i.jsx)(g.zx, {
                     className: f.marginTop8,
-                    color: h.zx.Colors.LINK,
-                    look: h.zx.Looks.LINK,
+                    color: g.zx.Colors.LINK,
+                    look: g.zx.Looks.LINK,
                     onClick: () => {
                         t(p.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(n.id));
                     },
@@ -94,18 +94,18 @@ class x extends (r = l.PureComponent) {
     }
     renderError() {
         let { defaultRoute: e, transitionTo: t } = this.props;
-        return (0, i.jsxs)(h.ZP, {
+        return (0, i.jsxs)(g.ZP, {
             children: [
-                (0, i.jsx)(h.Ee, {
+                (0, i.jsx)(g.Ee, {
                     src: n(105020),
                     className: f.marginBottom20
                 }),
-                (0, i.jsx)(h.Dx, {
+                (0, i.jsx)(g.Dx, {
                     className: f.marginBottom8,
                     children: m.intl.string(m.t.ox9hIS)
                 }),
-                (0, i.jsx)(h.DK, { children: m.intl.string(m.t['/dcuR0']) }),
-                (0, i.jsx)(h.zx, {
+                (0, i.jsx)(g.DK, { children: m.intl.string(m.t['/dcuR0']) }),
+                (0, i.jsx)(g.zx, {
                     className: f.marginTop40,
                     onClick: () => t(e),
                     children: m.intl.string(m.t.fIv16O)

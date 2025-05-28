@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => h });
 var r,
     i,
     l,
@@ -25,7 +25,7 @@ class d extends (l = a.ZP.Store) {
               writable: !0
           })
         : (d[r] = i);
-let g = new d(o.Z, {
+let h = new d(o.Z, {
     HUB_VERIFY_EMAIL_SUCCESS: function (e) {
         let { guildId: t } = e;
         (s = !0), (c = null), (u = t);

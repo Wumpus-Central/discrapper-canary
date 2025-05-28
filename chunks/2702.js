@@ -1,10 +1,10 @@
-n.d(t, { default: () => L }), n(314940), n(388685);
+n.d(t, { default: () => P }), n(314940), n(388685);
 var i = n(255367),
-    s = n(73800),
-    a = n(120356),
-    r = n.n(a),
-    o = n(512722),
-    l = n.n(o),
+    r = n(73800),
+    s = n(120356),
+    o = n.n(s),
+    a = n(512722),
+    l = n.n(a),
     u = n(954955),
     d = n.n(u),
     c = n(278074),
@@ -13,17 +13,17 @@ var i = n(255367),
     f = n(809206),
     E = n(118012),
     h = n(219496),
-    _ = n(575681),
+    S = n(575681),
     p = n(807369),
-    v = n(180529),
-    S = n(25990),
-    b = n(594174),
-    x = n(74538),
-    T = n(981631),
-    O = n(388032),
+    _ = n(180529),
+    v = n(25990),
+    x = n(594174),
+    T = n(74538),
+    O = n(981631),
+    b = n(388032),
     y = n(238861),
-    k = n(953100);
-let M = (e) => {
+    M = n(953100);
+let L = (e) => {
     let { usernameStatus: t, showHint: n } = e;
     return (0, c.EQ)(t)
         .with(
@@ -55,50 +55,50 @@ let M = (e) => {
                 ? (0, i.jsx)(m.Text, {
                       variant: 'text-sm/normal',
                       color: 'text-normal',
-                      children: O.intl.string(O.t.z7c4bG)
+                      children: b.intl.string(b.t.z7c4bG)
                   })
                 : null
         );
 };
-function L(e) {
+function P(e) {
     var t;
-    let { transitionState: n, onClose: a } = e,
-        o = (0, g.e7)([b.default], () => {
-            let e = b.default.getCurrentUser();
+    let { transitionState: n, onClose: s } = e,
+        a = (0, g.e7)([x.default], () => {
+            let e = x.default.getCurrentUser();
             return l()(null != e, 'ChangeUsernameModal: currentUser cannot be undefined'), e;
         }),
-        u = s.useMemo(() => x.ZP.canEditDiscriminator(o) && !o.isPomelo(), [o]),
-        [c, L] = s.useState(!1),
-        [P, R] = s.useState(o.username),
-        [C, U] = s.useState(o.discriminator),
-        [N, A] = s.useState(''),
-        [I, w] = s.useState(!1),
-        Z = (0, g.e7)([S.Z], () => S.Z.getErrors()),
-        j = (0, _.n)(),
-        G = o.isPomelo() && j,
-        F = (0, p.a)(P, G, !1, o.username),
-        D = s.useRef(null),
-        z = s.useMemo(() => {
+        u = r.useMemo(() => T.ZP.canEditDiscriminator(a) && !a.isPomelo(), [a]),
+        [c, P] = r.useState(!1),
+        [C, R] = r.useState(a.username),
+        [N, k] = r.useState(a.discriminator),
+        [A, I] = r.useState(''),
+        [U, w] = r.useState(!1),
+        Z = (0, g.e7)([v.Z], () => v.Z.getErrors()),
+        j = (0, S.n)(),
+        G = a.isPomelo() && j,
+        F = (0, p.a)(C, G, !1, a.username),
+        D = r.useRef(null),
+        z = r.useMemo(() => {
             var e, t, n;
             return null != (n = null == Z || null == (e = Z.username) ? void 0 : e[0]) ? n : null == Z || null == (t = Z.discriminator) ? void 0 : t[0];
         }, [Z]);
-    s.useEffect(() => {
+    r.useEffect(() => {
         if (n === m.Dvm.ENTERED) {
             var e;
             null == (e = D.current) || e.focus();
         }
     }, [n]);
-    let B = C !== o.discriminator;
-    async function q(e) {
+    let B = N !== a.discriminator;
+    async function W(e) {
         e.preventDefault(), w(!0);
         let t = await (0, f.Mn)({
-            username: P,
-            discriminator: u ? C : void 0,
-            password: N
+            username: C,
+            discriminator: u ? N : void 0,
+            password: A
         });
-        w(!1), (null == t ? void 0 : t.ok) && a();
+        w(!1), (null == t ? void 0 : t.ok) && s();
     }
-    let W = s.useMemo(() => d()(L, 50), []);
+    let H = r.useMemo(() => d()(P, 50), []);
     return (0, i.jsxs)(m.Y0X, {
         transitionState: n,
         children: [
@@ -110,56 +110,56 @@ function L(e) {
                         color: E.Z.Colors.HEADER_PRIMARY,
                         size: E.Z.Sizes.SIZE_24,
                         className: y.title,
-                        children: O.intl.string(O.t['m5or5+'])
+                        children: b.intl.string(b.t['m5or5+'])
                     }),
                     (0, i.jsx)(m.Text, {
                         color: 'header-secondary',
                         variant: 'text-md/normal',
                         className: y.subtitle,
-                        children: O.intl.string(O.t.SLJvy8)
+                        children: b.intl.string(b.t.SLJvy8)
                     }),
                     (0, i.jsx)(m.olH, {
-                        onClick: a,
+                        onClick: s,
                         className: y.modalCloseButton
                     })
                 ]
             }),
             (0, i.jsxs)('form', {
-                onSubmit: q,
+                onSubmit: W,
                 children: [
                     (0, i.jsxs)(m.hzk, {
                         className: y.content,
                         children: [
                             (0, i.jsx)(m.xJW, {
-                                title: O.intl.string(O.t.TWzdWl),
+                                title: b.intl.string(b.t.TWzdWl),
                                 error: z,
                                 children: (0, i.jsxs)('div', {
-                                    className: r()(k.input, y.multiInput, {
-                                        [k.error]: null != z,
-                                        [k.focused]: c
+                                    className: o()(M.input, y.multiInput, {
+                                        [M.error]: null != z,
+                                        [M.focused]: c
                                     }),
                                     children: [
                                         (0, i.jsx)(m.oil, {
                                             name: 'username',
-                                            'aria-label': O.intl.string(O.t.qqhR3N),
-                                            value: P,
-                                            maxLength: T.l$U,
+                                            'aria-label': b.intl.string(b.t.qqhR3N),
+                                            value: C,
+                                            maxLength: O.l$U,
                                             onChange: R,
-                                            onFocus: () => W(!0),
-                                            onBlur: () => W(!1),
+                                            onFocus: () => H(!0),
+                                            onBlur: () => H(!1),
                                             inputRef: D,
                                             className: y.multiInputFirst,
-                                            inputClassName: r()(y.multiInputField, { [y.lowercase]: o.isPomelo() })
+                                            inputClassName: o()(y.multiInputField, { [y.lowercase]: a.isPomelo() })
                                         }),
-                                        !o.isPomelo() &&
+                                        !a.isPomelo() &&
                                             (0, i.jsx)(m.oil, {
                                                 name: 'discriminator',
-                                                'aria-label': O.intl.string(O.t.ozumaG),
+                                                'aria-label': b.intl.string(b.t.ozumaG),
                                                 maxLength: 4,
-                                                value: C,
-                                                onChange: U,
-                                                onFocus: () => W(!0),
-                                                onBlur: () => W(!1),
+                                                value: N,
+                                                onChange: k,
+                                                onFocus: () => H(!0),
+                                                onBlur: () => H(!1),
                                                 inputPrefix: '#',
                                                 disabled: !u,
                                                 className: y.multiInputLast,
@@ -173,28 +173,28 @@ function L(e) {
                                       variant: 'text-xs/normal',
                                       color: 'header-secondary',
                                       className: y.discriminatorChangeWarning,
-                                      children: O.intl.string(O.t.mConUV)
+                                      children: b.intl.string(b.t.mConUV)
                                   })
                                 : null,
                             G
-                                ? (0, i.jsx)(v.Z, {
+                                ? (0, i.jsx)(_.Z, {
                                       show: (null == F ? void 0 : F.type) === h.K.ERROR || c,
                                       top: 8,
                                       bottom: 4,
-                                      children: (0, i.jsx)(M, {
+                                      children: (0, i.jsx)(L, {
                                           usernameStatus: F,
-                                          showHint: o.isPomelo()
+                                          showHint: a.isPomelo()
                                       })
                                   })
                                 : null,
                             (0, i.jsx)(m.xJW, {
                                 className: y.password,
-                                title: O.intl.string(O.t.TmdnJy),
+                                title: b.intl.string(b.t.TmdnJy),
                                 error: null == Z || null == (t = Z.password) ? void 0 : t[0],
                                 children: (0, i.jsx)(m.oil, {
                                     type: 'password',
-                                    value: N,
-                                    onChange: A
+                                    value: A,
+                                    onChange: I
                                 })
                             })
                         ]
@@ -205,15 +205,15 @@ function L(e) {
                                 type: 'submit',
                                 color: m.zxk.Colors.BRAND,
                                 size: m.zxk.Sizes.MEDIUM,
-                                submitting: I,
-                                children: O.intl.string(O.t.i4jeWV)
+                                submitting: U,
+                                children: b.intl.string(b.t.i4jeWV)
                             }),
                             (0, i.jsx)(m.zxk, {
                                 className: y.cancel,
                                 look: m.zxk.Looks.LINK,
                                 color: m.zxk.Colors.PRIMARY,
-                                onClick: a,
-                                children: O.intl.string(O.t['ETE/oK'])
+                                onClick: s,
+                                children: b.intl.string(b.t['ETE/oK'])
                             })
                         ]
                     })

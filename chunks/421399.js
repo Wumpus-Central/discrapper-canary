@@ -11,8 +11,8 @@ var r,
     c = n(442837),
     u = n(573385),
     d = n(865672),
-    g = n(481060),
-    h = n(607070),
+    h = n(481060),
+    g = n(607070),
     p = n(100527),
     m = n(906732),
     f = n(385499),
@@ -88,7 +88,7 @@ function Z(e) {
         { analyticsLocations: q } = (0, m.ZP)(p.Z.USERNAME),
         Y = Z ? '@' : '',
         { nick: J, colorString: X, colorStrings: Q, colorRoleName: $ } = n,
-        ee = (0, c.e7)([h.Z], () => h.Z.roleStyle),
+        ee = (0, c.e7)([g.Z], () => g.Z.roleStyle),
         et = 'username' === ee,
         en = (0, b.X$)(),
         er = (0, E.Z)(null != z ? z : W, 'BaseUsername'),
@@ -101,7 +101,7 @@ function Z(e) {
         let { setAnimate: e } = el;
         return O.S.subscribeKeyed(j.LPv.ANIMATE_CHAT_AVATAR, ''.concat(V, ':').concat(r.author.id), e), () => void O.S.unsubscribeKeyed(j.LPv.ANIMATE_CHAT_AVATAR, ''.concat(V, ':').concat(r.author.id), e);
     }, [r.author.id, V, eo, el]);
-    let { gradientStyle: es, gradientClassname: ec } = (0, g.Icv)({
+    let { gradientStyle: es, gradientClassname: ec } = (0, h.Icv)({
             primaryColor: null == Q ? void 0 : Q.primaryColor,
             secondaryColor: null == Q ? void 0 : Q.secondaryColor,
             tertiaryColor: null == Q ? void 0 : Q.tertiaryColor,
@@ -120,7 +120,7 @@ function Z(e) {
             children: eu,
             'data-text': Y + J
         },
-        eg = l.useMemo(
+        eh = l.useMemo(
             () =>
                 A && !w
                     ? (0, i.jsx)(x.ZP, {
@@ -132,12 +132,12 @@ function Z(e) {
                     : null,
             [A, n.primaryGuild, W, r.author.id, w]
         ),
-        eh = null != f ? f : r.author,
+        eg = null != f ? f : r.author,
         ep =
             null != B && null != R
                 ? (0, i.jsx)(v.Z, {
                       targetElementRef: H,
-                      user: eh,
+                      user: eg,
                       renderPopout: B,
                       shouldShow: R,
                       shouldPreload: ei,
@@ -146,7 +146,7 @@ function Z(e) {
                           null != n.guildMemberAvatar && null != W
                               ? (0, I.JM)({
                                     guildId: W,
-                                    userId: eh.id,
+                                    userId: eg.id,
                                     avatar: n.guildMemberAvatar,
                                     size: 80
                                 })
@@ -177,7 +177,7 @@ function Z(e) {
                           return (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(
-                                      g.P3F,
+                                      h.P3F,
                                       T(
                                           C(
                                               {
@@ -190,13 +190,13 @@ function Z(e) {
                                           { className: o()(ed.className, N.clickable, D) }
                                       )
                                   ),
-                                  eg
+                                  eh
                               ]
                           });
                       }
                   })
                 : (0, i.jsxs)(i.Fragment, {
-                      children: [(0, i.jsx)(g.P3F, T(C({}, ed), { className: o()(ed.className, D) })), eg]
+                      children: [(0, i.jsx)(h.P3F, T(C({}, ed), { className: o()(ed.className, D) })), eh]
                   }),
         em = null != F ? F[0] : null,
         ef = null != F ? F[1] : null;
@@ -209,7 +209,7 @@ function Z(e) {
                   })
                 : null,
             'dot' === ee
-                ? (0, i.jsx)(g.FhE, {
+                ? (0, i.jsx)(h.FhE, {
                       color: X,
                       colors: ea ? Q : null,
                       name: $,

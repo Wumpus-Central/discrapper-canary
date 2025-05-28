@@ -8,13 +8,13 @@ var r = n(255367),
     c = n(493773),
     u = n(129293),
     d = n(388905),
-    g = n(703656),
-    h = n(108427),
+    h = n(703656),
+    g = n(108427),
     p = n(981631),
     m = n(388032),
     f = n(20493);
 function _(e) {
-    let { location: t, transitionTo: l = g.uL } = e,
+    let { location: t, transitionTo: l = h.uL } = e,
         [o, _] = i.useState('submitting');
     function x() {
         return 'Android' === a().os.family || 'iOS' === a().os.family
@@ -25,7 +25,7 @@ function _(e) {
               });
     }
     return ((0, c.ZP)(() => {
-        (0, h.e)('authorize_ip');
+        (0, g.e)('authorize_ip');
         let e = (0, u.Z)(t);
         if (null == e) return void _('failed');
         (async () => {

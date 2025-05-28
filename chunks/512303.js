@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => y });
 var i = n(255367),
     r = n(73800),
     l = n(373793),
@@ -15,18 +15,18 @@ var i = n(255367),
     b = n(430824),
     h = n(594174),
     O = n(388032),
-    y = n(274693);
-function E(e) {
-    var t, n, E, v;
+    E = n(274693);
+function y(e) {
+    var t, n, y, v;
     let { analyticsLocations: j } = (0, u.ZP)(),
         S = null == (t = e.interactionMetadata) ? void 0 : t.authorizing_integration_owners[l.Y.USER_INSTALL],
-        P = null == (n = e.interactionMetadata) ? void 0 : n.authorizing_integration_owners[l.Y.GUILD_INSTALL],
-        _ = null == (E = e.interactionMetadata) ? void 0 : E.user.id,
+        _ = null == (n = e.interactionMetadata) ? void 0 : n.authorizing_integration_owners[l.Y.GUILD_INSTALL],
+        P = null == (y = e.interactionMetadata) ? void 0 : y.user.id,
         N = (0, a.e7)([h.default], () => h.default.getUser(S)),
-        Z = (0, a.e7)([b.Z], () => b.Z.getGuild(P)),
+        Z = (0, a.e7)([b.Z], () => b.Z.getGuild(_)),
         I = p.Z.getChannel(e.channel_id),
         x = null == I ? void 0 : I.getGuildId(),
-        T = (0, a.e7)([h.default], () => h.default.getUser(_));
+        T = (0, a.e7)([h.default], () => h.default.getUser(P));
     if (
         (r.useEffect(() => {
             null == N && null != S && (0, s.PR)(S);
@@ -39,7 +39,7 @@ function E(e) {
     return (
         null != Z
             ? (M = (0, i.jsx)(o.sNh, {
-                  className: y.interactionInfoMenuItem,
+                  className: E.interactionInfoMenuItem,
                   disabled: !0,
                   iconLeft: () =>
                       (0, i.jsx)(f.Z, {
@@ -59,7 +59,7 @@ function E(e) {
                           channelId: e.channel_id,
                           sourceAnalyticsLocations: j
                       }),
-                  className: y.interactionInfoMenuItem,
+                  className: E.interactionInfoMenuItem,
                   iconLeft: () =>
                       (0, i.jsx)(c.Z, {
                           user: N,
@@ -83,7 +83,7 @@ function E(e) {
                                   channelId: e.channel_id,
                                   sourceAnalyticsLocations: j
                               }),
-                          className: y.interactionInfoMenuItem,
+                          className: E.interactionInfoMenuItem,
                           iconLeft: () =>
                               (0, i.jsx)(c.Z, {
                                   user: T,

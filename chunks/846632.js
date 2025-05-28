@@ -136,18 +136,13 @@ function m(e) {
                                                     children: (e) =>
                                                         (0, r.jsx)(
                                                             l.zxk,
-                                                            h(
-                                                                _(
-                                                                    {
-                                                                        fullWidth: !0,
-                                                                        onClick: v,
-                                                                        submitting: y,
-                                                                        disabled: O
-                                                                    },
-                                                                    e
-                                                                ),
-                                                                { children: b.intl.string(b.t.jwEaiY) }
-                                                            )
+                                                            h(_({}, e), {
+                                                                fullWidth: !0,
+                                                                onClick: v,
+                                                                submitting: y,
+                                                                disabled: O,
+                                                                children: b.intl.string(b.t.jwEaiY)
+                                                            })
                                                         )
                                                 }),
                                                 (0, r.jsx)(l.zxk, {

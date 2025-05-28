@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(244231);
 function d(e) {
     let { guildScheduledEvent: t, channel: n, onClose: d } = e,
-        g = t.entity_type === c.WX.EXTERNAL,
-        h = i.useCallback((e) => (0, o.Qt)(t, d)(e), [t, d]),
+        h = t.entity_type === c.WX.EXTERNAL,
+        g = i.useCallback((e) => (0, o.Qt)(t, d)(e), [t, d]),
         p = (0, s.u)(t, n);
     if (null == p) return null;
     let { IconComponent: m, locationName: f } = p,
@@ -35,10 +35,10 @@ function d(e) {
     return (0, r.jsx)('div', {
         className: u.row,
         children:
-            null != h
+            null != g
                 ? (0, r.jsx)(l.P3F, {
-                      className: g ? u.externalLocation : u.channelLocation,
-                      onClick: h,
+                      className: h ? u.externalLocation : u.channelLocation,
+                      onClick: g,
                       children: _
                   })
                 : _

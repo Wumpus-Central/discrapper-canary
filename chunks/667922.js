@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => E });
 var i = n(255367),
     r = n(73800),
     l = n(442837),
@@ -15,12 +15,12 @@ var i = n(255367),
     b = n(981631),
     h = n(185923),
     O = n(388032);
-function y(e, t) {
+function E(e, t) {
     let { reducedMotion: n } = r.useContext(a.Sfi),
         g = (0, u.$R)(t),
-        y = (0, l.e7)([f.Z], () => (t.isPrivate() || f.Z.can(b.Plq.ADD_REACTIONS, t)) && g, [t, g]),
+        E = (0, l.e7)([f.Z], () => (t.isPrivate() || f.Z.can(b.Plq.ADD_REACTIONS, t)) && g, [t, g]),
         v = (0, o.MZ)(t.getGuildId());
-    if (!d.nc.getSetting() || !y || e.type === b.uaV.GUILD_INVITE_REMINDER) return null;
+    if (!d.nc.getSetting() || !E || e.type === b.uaV.GUILD_INVITE_REMINDER) return null;
     let j = v
         .filter(
             (e) =>
@@ -42,7 +42,7 @@ function y(e, t) {
                     icon: (e) => {
                         var t, l;
                         return (0, i.jsx)(
-                            E,
+                            y,
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
@@ -120,7 +120,7 @@ function y(e, t) {
         })
     });
 }
-function E(e) {
+function y(e) {
     var t;
     let { emoji: n, reducedMotionEnabled: r, className: l = '', isFocused: a = !1 } = e;
     return (0, i.jsx)('img', {

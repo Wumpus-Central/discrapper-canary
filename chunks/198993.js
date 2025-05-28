@@ -12,7 +12,7 @@ var r,
     c = n.n(s),
     u = n(740915),
     d = n(634715);
-function g(e, t, n) {
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function g(e, t, n) {
         e
     );
 }
-function h(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function h(e) {
                 })
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -79,7 +79,7 @@ class _ extends (i = o.PureComponent) {
             className: c()(d.qrCodeContainer, t),
             children: (0, a.jsx)(
                 u.default,
-                h(
+                g(
                     {
                         value: n,
                         level: 'M'
@@ -90,7 +90,7 @@ class _ extends (i = o.PureComponent) {
         });
     }
 }
-g(_, 'defaultProps', {
+h(_, 'defaultProps', {
     size: 128,
     bgColor: '#ffffff',
     fgColor: '#000000'
@@ -102,7 +102,7 @@ class x extends (l = o.PureComponent) {
         return (0, a.jsxs)('div', {
             className: d.qrCodeOverlayContainer,
             children: [
-                (0, a.jsx)(_, h({}, this.props)),
+                (0, a.jsx)(_, g({}, this.props)),
                 (0, a.jsx)('div', {
                     className: d.qrCodeOverlay,
                     children: (0, a.jsx)('img', {
@@ -115,7 +115,7 @@ class x extends (l = o.PureComponent) {
         });
     }
 }
-g(x, 'defaultProps', {
+h(x, 'defaultProps', {
     size: 144,
     bgColor: '#ffffff',
     fgColor: '#000000'

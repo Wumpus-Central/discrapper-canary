@@ -1,5 +1,5 @@
 n.d(t, {
-    FW: () => h,
+    FW: () => g,
     Pk: () => s,
     Rq: () => m,
     W_: () => a,
@@ -59,7 +59,7 @@ function u(e) {
 async function d(e) {
     return c(await window.crypto.subtle.digest({ name: 'SHA-256' }, e));
 }
-function g(e, t) {
+function h(e, t) {
     return (
         i()(null != e.privateKey, 'private key cannot be null'),
         window.crypto.subtle.decrypt(
@@ -72,16 +72,16 @@ function g(e, t) {
         )
     );
 }
-async function h(e, t) {
+async function g(e, t) {
     let n = new TextDecoder(),
-        r = await g(e, u(t));
+        r = await h(e, u(t));
     return n.decode(r);
 }
 async function p(e, t) {
-    return c(await g(e, u(t)));
+    return c(await h(e, u(t)));
 }
 async function m(e, t) {
-    let n = (t = await h(e, t)).match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
+    let n = (t = await g(e, t)).match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
     if (null == n) throw Error('Invalid encoded user record.');
     let [, r, i, a, o] = n;
     return new l.Z({

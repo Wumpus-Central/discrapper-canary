@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(980591),
     u = n(605782),
     d = n(133853),
-    g = n(568154),
-    h = n(353926),
+    h = n(568154),
+    g = n(353926),
     p = n(703656),
     m = n(981631),
     f = n(963865);
@@ -27,7 +27,7 @@ function I(e) {
             var e;
             let [t, n] = l.useState(!1),
                 [i, a] = l.useState(!0),
-                s = (0, o.e7)([h.Z], () => h.Z.hasLoadedExperiments);
+                s = (0, o.e7)([g.Z], () => g.Z.hasLoadedExperiments);
             return ((0, c.Z)(() => {}, 300), void 0 !== r) ? r : !i && s ? (t || n(!0), v(((e = 0), 'default'))) : i ? v('default') : 'loading';
         })()
     ) {
@@ -92,7 +92,7 @@ class O extends l.Component {
                                       show: !0,
                                       className: f.logo
                                   }),
-                                  (0, i.jsx)(g.h, {
+                                  (0, i.jsx)(h.h, {
                                       splash: e,
                                       children: t
                                   })

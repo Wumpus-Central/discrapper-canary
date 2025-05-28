@@ -9,16 +9,16 @@ var r = n(255367),
     u = n(20493);
 function d(e) {
     let { location: t } = e,
-        [d, g] = i.useState('submitting');
+        [d, h] = i.useState('submitting');
     return (i.useEffect(() => {
         (0, s.e)('authorize_payment');
         let e = (0, a.Z)(t);
-        if (null == e) return void g('failed');
+        if (null == e) return void h('failed');
         (async () => {
             try {
-                await l.Z.authorizePayment(e), g('succeeded');
+                await l.Z.authorizePayment(e), h('succeeded');
             } catch (e) {
-                g('failed');
+                h('failed');
             }
         })();
     }, [t]),

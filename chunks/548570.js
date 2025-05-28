@@ -483,7 +483,7 @@ class ea extends x.Z {
         y.Z.increment(
             {
                 name: c.V.SOCKET_CRASHED,
-                tags: ['action:'.concat(null != r ? r : t), 'modded_client:'.concat(i), 'browser:'.concat(null == Y ? void 0 : Y.browser), 'client_build_number:'.concat(null == Y ? void 0 : Y.client_build_number), 'release_channel:'.concat(null == Y ? void 0 : Y.release_channel)]
+                tags: ['action:'.concat(null != r ? r : t), 'modded_client:'.concat(i), 'client_build_number:'.concat(null == Y ? void 0 : Y.client_build_number), 'client_version:'.concat(null == Y ? void 0 : Y.client_version), 'release_channel:'.concat(null == Y ? void 0 : Y.release_channel)]
             },
             !0
         ),

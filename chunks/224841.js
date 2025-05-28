@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -9,10 +9,10 @@ var i = n(481060),
     c = n(981631),
     u = n(388032),
     d = n(963650);
-let g = () => (0, a.uL)(c.Z5c.LOGIN, { source: 'age_gate_underage' }),
-    h = (e) => {
-        let { authBoxClassName: t, underageMessage: a, inUnclaimedFlowExperiment: h } = e;
-        return h
+let h = () => (0, a.uL)(c.Z5c.LOGIN, { source: 'age_gate_underage' }),
+    g = (e) => {
+        let { authBoxClassName: t, underageMessage: a, inUnclaimedFlowExperiment: g } = e;
+        return g
             ? (0, r.jsx)(l.ZP, {
                   children: (0, r.jsxs)('div', {
                       className: d.contentContainer,
@@ -63,7 +63,7 @@ let g = () => (0, a.uL)(c.Z5c.LOGIN, { source: 'age_gate_underage' }),
                       }),
                       (0, r.jsx)(i.zxk, {
                           fullWidth: !0,
-                          onClick: g,
+                          onClick: h,
                           children: u.intl.string(u.t.szzQ6O)
                       })
                   ]

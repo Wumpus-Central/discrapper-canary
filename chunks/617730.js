@@ -9,8 +9,8 @@ var i = n(481060),
     c = n(230224),
     u = n(258356),
     d = n(981631),
-    g = n(388032),
-    h = n(15282);
+    h = n(388032),
+    g = n(15282);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -88,7 +88,7 @@ function _(e) {
               onAcceptInvite: n
           })
         : (0, r.jsxs)('div', {
-              className: h.container,
+              className: g.container,
               children: [
                   (0, r.jsx)(c.GB, {
                       application: b,
@@ -101,8 +101,8 @@ function _(e) {
                   (0, r.jsx)(i.zxk, {
                       onClick: n,
                       submitting: O,
-                      className: h.acceptButton,
-                      children: g.intl.string(g.t.ohMvm5)
+                      className: g.acceptButton,
+                      children: h.intl.string(h.t.ohMvm5)
                   })
               ]
           });

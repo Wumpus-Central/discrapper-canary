@@ -503,9 +503,6 @@ class e7 extends (_ = E.ZP.Store) {
     getBans() {
         return [ec, eu];
     }
-    isUserBanned(e) {
-        return null == ec ? void 0 : ec.has(e);
-    }
     getProps() {
         return {
             submitting: this.isSubmitting(),

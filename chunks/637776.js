@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(703656),
     u = n(108427),
     d = n(844800),
-    g = n(580497),
-    h = n(981631),
+    h = n(580497),
+    g = n(981631),
     p = n(388032),
     m = n(742834);
 function f(e) {
@@ -21,7 +21,7 @@ function f(e) {
         a.Z.verify(e), (0, u.e)('verify_hub_email');
     }, [t]);
     let v = () => {
-        (0, g.Z)(b), _(!0);
+        (0, h.Z)(b), _(!0);
     };
     return f
         ? (0, r.jsxs)(s.ZP, {
@@ -36,7 +36,7 @@ function f(e) {
                   }),
                   (0, r.jsx)(s.zx, {
                       className: m.spacedButton,
-                      onClick: () => (0, c.uL)(h.Z5c.CHANNEL(b)),
+                      onClick: () => (0, c.uL)(g.Z5c.CHANNEL(b)),
                       children: p.intl.string(p.t.fIv16O)
                   })
               ]

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(232567),
     u = n(388905),
     d = n(353926),
-    g = n(82554),
-    h = n(726521),
+    h = n(82554),
+    g = n(726521),
     p = n(185625),
     m = n(314897),
     f = n(63063),
@@ -62,9 +62,9 @@ function I(e, t) {
 }
 a.ZP.initialize();
 let O = {
-        [g.BM.MESSAGE]: x.t.fuqnBA,
-        [g.BM.USER]: x.t.F4jrRU,
-        [g.BM.GUILD]: x.t.gH3aMj
+        [h.BM.MESSAGE]: x.t.fuqnBA,
+        [h.BM.USER]: x.t.F4jrRU,
+        [h.BM.GUILD]: x.t.gH3aMj
     },
     S = (e) => {
         let { title: t, menuType: i } = e,
@@ -91,7 +91,7 @@ let O = {
                     a = async (t) => await (0, p.RV)(i, e, t),
                     s = (e) => {
                         let t = null == e ? void 0 : e.token;
-                        i === g.BM.MESSAGE ? (0, h.eE)(t) : i === g.BM.USER ? (0, h.JM)(t) : i === g.BM.GUILD && (0, h.FO)(t);
+                        i === h.BM.MESSAGE ? (0, g.eE)(t) : i === h.BM.USER ? (0, g.JM)(t) : i === h.BM.GUILD && (0, g.FO)(t);
                     };
                 t(),
                     (0, o.ZDy)(async () => {
@@ -129,8 +129,8 @@ let O = {
     y = () => {
         let [e, t] = i.useState(!0),
             [n, l] = i.useState([]),
-            g = (0, a.e7)([m.default], () => m.default.isAuthenticated()),
-            h = (0, a.e7)([d.Z], () => d.Z.hasLoadedExperiments),
+            h = (0, a.e7)([m.default], () => m.default.isAuthenticated()),
+            g = (0, a.e7)([d.Z], () => d.Z.hasLoadedExperiments),
             v = () => {
                 (0, p.Jj)()
                     .then((e) => {
@@ -145,20 +145,20 @@ let O = {
             };
         return (
             i.useEffect(() => {
-                g
+                h
                     ? (t(!0),
                       c
                           .k({ withAnalyticsToken: !0 })
                           .then(() => v())
                           .catch(() => t(!1)))
                     : v();
-            }, [g]),
+            }, [h]),
             i.useEffect(() => {
                 (async () => {
-                    h || (await s.Z.getLocationMetadata(), s.Z.getExperiments());
+                    g || (await s.Z.getLocationMetadata(), s.Z.getExperiments());
                 })();
-            }, [h]),
-            e || !h
+            }, [g]),
+            e || !g
                 ? (0, r.jsx)(u.ZP, { children: (0, r.jsx)(o.$jN, {}) })
                 : null != n &&
                   n.length > 0 &&

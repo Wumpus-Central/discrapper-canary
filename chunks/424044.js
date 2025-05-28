@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(129293),
     u = n(388905),
     d = n(353926),
-    g = n(185625),
-    h = n(551549),
+    h = n(185625),
+    g = n(551549),
     p = n(108427),
     m = n(314897),
     f = n(981631),
@@ -20,7 +20,7 @@ let E = (e) => {
     let { location: t } = e,
         n = (0, l.e7)([m.default], () => m.default.isAuthenticated()),
         E = (0, l.e7)([d.Z], () => d.Z.hasLoadedExperiments),
-        b = (0, h.oK)('RSL - Landing Page'),
+        b = (0, g.oK)('RSL - Landing Page'),
         [v, I] = i.useState(!1),
         [O, S] = i.useState(_.intl.string(_.t['9exy+f'])),
         [y, j] = i.useState(!0),
@@ -60,7 +60,7 @@ let E = (e) => {
             let e = async (e) => {
                 var t, n;
                 try {
-                    let n = null != e ? await (0, g.hs)(e) : void 0;
+                    let n = null != e ? await (0, h.hs)(e) : void 0;
                     null != n ? S(_.intl.string(_.t.e6mZMj)) : N(null == (t = n.body) ? void 0 : t.code);
                 } catch (e) {
                     N(null == (n = e.body) ? void 0 : n.code);

@@ -41,13 +41,13 @@ let b = /^(tel|sms|mailto):([^?;]+)/;
 function h(e, t, n, h) {
     let O = (0, a.Z)(null == n ? void 0 : n.getChannelId());
     if (!u.isPlatformEmbedded || null == e || '' === e || O || (null == h ? void 0 : h.shouldHideMediaOptions) === !0 || !(0, l.Jj)(e)) return null;
-    let y = (0, o.F)(e),
-        E = (e) => {
-            s.default.track(g.rMx.CONTEXT_MENU_LINK_COPIED, p({ hostname: y }, (0, f.v)())), d.ZP.copy(e), (0, r.showToast)((0, r.createToast)(m.intl.string(m.t['L/PwZW']), r.ToastType.SUCCESS));
+    let E = (0, o.F)(e),
+        y = (e) => {
+            s.default.track(g.rMx.CONTEXT_MENU_LINK_COPIED, p({ hostname: E }, (0, f.v)())), d.ZP.copy(e), (0, r.showToast)((0, r.createToast)(m.intl.string(m.t['L/PwZW']), r.ToastType.SUCCESS));
         },
         v = (n, i) => {
             let r = !0 === i ? e.replace('tel:', 'sms:') : e;
-            s.default.track(g.rMx.CONTEXT_MENU_LINK_OPENED, p({ hostname: y }, (0, f.v)())),
+            s.default.track(g.rMx.CONTEXT_MENU_LINK_OPENED, p({ hostname: E }, (0, f.v)())),
                 (0, c.q)(
                     {
                         href: r,
@@ -68,7 +68,7 @@ function h(e, t, n, h) {
                     id: 'copy-native-contact',
                     label: e,
                     action: () => {
-                        E(S[2]);
+                        y(S[2]);
                     }
                 },
                 'copy-native-contact'
@@ -94,7 +94,7 @@ function h(e, t, n, h) {
                 id: 'copy-native-link',
                 label: m.intl.string(m.t.WqhZsr),
                 action: () => {
-                    E(e);
+                    y(e);
                 }
             },
             'copy-native-link'

@@ -15,7 +15,7 @@ function s(e) {
 }
 function c(e) {
     let { message: t, channel: n, user: l, compact: a, isRepliedMessage: c, hideIcon: u = !1, children: d } = e,
-        g = s({
+        h = s({
             message: t,
             channel: n,
             user: l,
@@ -24,11 +24,11 @@ function c(e) {
             hideIcon: u,
             children: d
         });
-    return null == g
+    return null == h
         ? null
         : (0, r.jsx)(i.Z, {
               className: a ? o.botTagCompact : o.botTagCozy,
-              type: g,
+              type: h,
               verified: null == l ? void 0 : l.isVerifiedBot(),
               hideIcon: u,
               useRemSizes: !0,
