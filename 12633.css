@@ -49515,6 +49515,14 @@ div.mobilePushContainer__3d3b0 {
     top: 0
 }
 
+.pictureInPicture__6341f.dragging__6341f {
+    cursor: grabbing;
+    height: 100%;
+    pointer-events: auto;
+    width: 100%;
+    z-index: 999
+}
+
 .pictureInPictureWindow__6341f {
     position: absolute;
     z-index: 1000
