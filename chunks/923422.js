@@ -1,152 +1,152 @@
-r.d(t, { default: () => x }), r(388685), r(704826), r(35282);
-var n = r(255367),
-    i = r(73800),
-    o = r(481060),
-    l = r(239091),
-    c = r(230711),
-    a = r(493544),
-    s = r(108843),
-    u = r(100527),
-    d = r(906732),
-    p = r(386506),
-    b = r(366953),
-    g = r(991346),
-    f = r(606669),
-    j = r(53432),
-    O = r(74869),
-    y = r(45570),
-    h = r(308512),
-    m = r(594791),
-    v = r(393431),
-    S = r(69021),
-    P = r(981631),
-    Z = r(388032);
+n.d(t, { default: () => x }), n(388685), n(704826), n(35282);
+var r = n(255367),
+    i = n(73800),
+    l = n(481060),
+    a = n(239091),
+    o = n(230711),
+    c = n(493544),
+    s = n(108843),
+    u = n(100527),
+    d = n(906732),
+    p = n(386506),
+    g = n(366953),
+    b = n(991346),
+    y = n(606669),
+    O = n(53432),
+    f = n(74869),
+    j = n(45570),
+    h = n(308512),
+    v = n(594791),
+    S = n(393431),
+    E = n(69021),
+    P = n(981631),
+    m = n(388032);
 let x = (0, s.Z)(
     function (e) {
-        let { webBuildOverride: t, onSelect: r, onInteraction: s } = e,
+        let { webBuildOverride: t, onSelect: n, onInteraction: s } = e,
             [u, x] = i.useState(!1),
-            w = (0, y.Z)(),
-            E = (0, h.Z)(),
-            k = (0, j.Z)(),
-            D = (0, f.Z)(),
+            w = (0, j.Z)(),
+            k = (0, h.Z)(),
+            Z = (0, O.Z)(),
+            D = (0, y.Z)(),
+            A = (0, S.Z)(),
             C = (0, v.Z)(),
-            I = (0, m.Z)(),
-            B = (0, O.Z)(),
-            T = (0, S.Z)(),
-            { analyticsLocations: N } = (0, d.ZP)(),
-            A = i.useMemo(() => (0, b.j)(), []);
-        async function M() {
+            I = (0, f.Z)(),
+            T = (0, E.Z)(),
+            { analyticsLocations: _ } = (0, d.ZP)(),
+            N = i.useMemo(() => (0, g.j)(), []);
+        async function R() {
             try {
                 x(!0), await (0, p.bF)(), window.location.reload(!0);
             } catch (e) {
                 x(!1);
             }
         }
-        let _ = (e) => {
+        let B = (e) => {
                 switch (e) {
                     case P.oAB.GAMES:
                         return w;
                     case P.oAB.STREAMER_MODE:
-                        return E;
-                    case P.oAB.APPEARANCE:
                         return k;
+                    case P.oAB.APPEARANCE:
+                        return Z;
                     case P.oAB.ACCESSIBILITY:
                         return D;
                     case P.oAB.VOICE:
-                        return C;
+                        return A;
                     case P.oAB.TEXT:
-                        return I;
+                        return C;
                     case P.oAB.EXPERIMENTS:
-                        return B;
+                        return I;
                     case P.oAB.DEVELOPER_OPTIONS:
                         return T;
                     default:
                         return null;
                 }
             },
-            R = (0, g.VO)()
+            M = (0, b.VO)()
                 .filter((e) => {
                     let { section: t } = e;
-                    return t !== a.ID.HEADER && t !== a.ID.CUSTOM && t !== a.ID.DIVIDER && 'logout' !== t;
+                    return t !== c.ID.HEADER && t !== c.ID.CUSTOM && t !== c.ID.DIVIDER && 'logout' !== t;
                 })
                 .filter((e) => null == e.predicate || e.predicate());
-        return (0, n.jsx)(d.Gt, {
-            value: N,
-            children: (0, n.jsxs)(o.v2r, {
+        return (0, r.jsx)(d.Gt, {
+            value: _,
+            children: (0, r.jsxs)(l.v2r, {
                 navId: 'user-settings-cog',
-                onClose: l.Zy,
-                'aria-label': Z.intl.string(Z.t.opYYHh),
-                onSelect: r,
+                onClose: a.Zy,
+                'aria-label': m.intl.string(m.t.opYYHh),
+                onSelect: n,
                 onInteraction: s,
                 children: [
-                    R.map((e) => {
-                        var t, r;
-                        let { section: i, label: l, onClick: a } = e,
+                    M.map((e) => {
+                        var t, n;
+                        let { section: i, label: a, onClick: c } = e,
                             s = i.replace(/\W/gi, '_');
-                        return (0, n.jsx)(
-                            o.sNh,
+                        return (0, r.jsx)(
+                            l.sNh,
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
-                                    var r = null != arguments[t] ? arguments[t] : {},
-                                        n = Object.keys(r);
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
                                     'function' == typeof Object.getOwnPropertySymbols &&
-                                        (n = n.concat(
-                                            Object.getOwnPropertySymbols(r).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                             })
                                         )),
-                                        n.forEach(function (t) {
-                                            var n;
-                                            (n = r[t]),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
-                                                          value: n,
+                                                          value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = n);
+                                                    : (e[t] = r);
                                         });
                                 }
                                 return e;
                             })(
                                 { id: s },
                                 {
-                                    label: l,
+                                    label: a,
                                     action: () =>
-                                        null != a
-                                            ? a()
+                                        null != c
+                                            ? c()
                                             : (function (e, t) {
-                                                  let r = Object.values(P.oAB).filter((t) => t === e)[0];
-                                                  null != r && c.Z.open(r, void 0, { analyticsLocations: t });
-                                              })(i, N)
+                                                  let n = Object.values(P.oAB).filter((t) => t === e)[0];
+                                                  null != n && o.Z.open(n, void 0, { analyticsLocations: t });
+                                              })(i, _)
                                 }
                             )),
-                            (r = r = { children: _(i) }),
+                            (n = n = { children: B(i) }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                                 : (function (e, t) {
-                                      var r = Object.keys(e);
+                                      var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
-                                          var n = Object.getOwnPropertySymbols(e);
-                                          r.push.apply(r, n);
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
                                       }
-                                      return r;
-                                  })(Object(r)).forEach(function (e) {
-                                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                                      return n;
+                                  })(Object(n)).forEach(function (e) {
+                                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                   }),
                             t),
                             s
                         );
                     }),
-                    e.user.isStaff() && A.length > 0
-                        ? (0, n.jsx)(o.sNh, {
+                    e.user.isStaff() && N.length > 0
+                        ? (0, r.jsx)(l.sNh, {
                               label: 'Build Overrides',
                               id: 'build_overrides',
-                              children: (0, n.jsx)(o.kSQ, {
-                                  children: A.map((e) =>
-                                      (0, n.jsx)(
-                                          o.k5B,
+                              children: (0, r.jsx)(l.kSQ, {
+                                  children: N.map((e) =>
+                                      (0, r.jsx)(
+                                          l.k5B,
                                           {
                                               id: 'input-'.concat(e.payload),
                                               group: 'build_overrides',
@@ -163,12 +163,12 @@ let x = (0, s.Z)(
                           })
                         : null,
                     null != t
-                        ? (0, n.jsx)(o.kSQ, {
-                              children: (0, n.jsx)(o.sNh, {
+                        ? (0, r.jsx)(l.kSQ, {
+                              children: (0, r.jsx)(l.sNh, {
                                   id: 'clear-build-override',
                                   disabled: u,
-                                  label: Z.intl.string(Z.t['/Nz9ra']),
-                                  action: M,
+                                  label: m.intl.string(m.t['/Nz9ra']),
+                                  action: R,
                                   color: 'danger'
                               })
                           })

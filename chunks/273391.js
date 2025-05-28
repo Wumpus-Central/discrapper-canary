@@ -1,8 +1,8 @@
 r.d(t, { v: () => f }), r(388685);
 var n = r(255367),
     a = r(73800),
-    i = r(36793),
-    l = r(481060),
+    l = r(36793),
+    i = r(481060),
     s = r(710845),
     o = r(197712),
     c = r(511004),
@@ -117,7 +117,7 @@ let h = new s.Z('ImageEditor'),
                     r = f.current.y,
                     n = E.height,
                     a = E.width,
-                    i = x(
+                    l = x(
                         {
                             width: n,
                             height: a
@@ -133,7 +133,7 @@ let h = new s.Z('ImageEditor'),
                         width: n,
                         height: a
                     }),
-                    I(i);
+                    I(l);
             }, [E, y, P, O]),
             Z = a.useCallback(() => {
                 if (null == E) return {};
@@ -181,10 +181,10 @@ let h = new s.Z('ImageEditor'),
                         height: u.eT,
                         width: u.eT
                     },
-                    l = null;
+                    i = null;
                 if ((null != W.current && (W.current(), (W.current = null)), T))
                     try {
-                        let { result: r, cancelFn: i } = await (0, o.$p)({
+                        let { result: r, cancelFn: l } = await (0, o.$p)({
                             file: t,
                             image: n,
                             cropDimensions: m,
@@ -192,15 +192,15 @@ let h = new s.Z('ImageEditor'),
                             maxDimensions: a,
                             imageRotation: y
                         });
-                        (W.current = i), (e = await r);
+                        (W.current = l), (e = await r);
                     } catch (e) {
-                        h.error('Error cropping GIF: '.concat(e)), (l = u.ze.GIF_CROPPING);
+                        h.error('Error cropping GIF', e), (i = u.ze.GIF_CROPPING);
                     } finally {
                         var c;
                         null == (c = W.current) || c.call(W), (W.current = null);
                     }
                 else
-                    e = (0, i.PT)({
+                    e = (0, l.PT)({
                         image: n,
                         cropDimensions: m,
                         cropOriginCoordinates: f.current,
@@ -211,7 +211,7 @@ let h = new s.Z('ImageEditor'),
                     s({
                         imageData: e,
                         imageDataTimestamp: r,
-                        error: l,
+                        error: i,
                         loading: !1
                     }),
                     () => {
@@ -274,12 +274,12 @@ let h = new s.Z('ImageEditor'),
                             (0, n.jsxs)('div', {
                                 className: p.zoomControls,
                                 children: [
-                                    (0, n.jsx)(l.XBm, {
+                                    (0, n.jsx)(i.XBm, {
                                         size: 'xxs',
                                         color: 'currentColor',
                                         className: p.zoomIcon
                                     }),
-                                    (0, n.jsx)(l.iRW, {
+                                    (0, n.jsx)(i.iRW, {
                                         className: p.slider,
                                         initialValue: 1,
                                         minValue: 1,
@@ -290,21 +290,21 @@ let h = new s.Z('ImageEditor'),
                                         hideBubble: !0,
                                         'aria-label': d.intl.string(d.t.dnvZSk)
                                     }),
-                                    (0, n.jsx)(l.XBm, {
+                                    (0, n.jsx)(i.XBm, {
                                         size: 'md',
                                         color: 'currentColor',
                                         className: p.zoomIcon
                                     })
                                 ]
                             }),
-                            (0, n.jsx)(l.ua7, {
+                            (0, n.jsx)(i.ua7, {
                                 text: d.intl.string(d.t.E36Wd3),
                                 'aria-label': d.intl.string(d.t.LzFiKC),
                                 children: (e) => {
                                     var t,
                                         r,
                                         { onClick: a } = e,
-                                        i = (function (e, t) {
+                                        l = (function (e, t) {
                                             if (null == e) return {};
                                             var r,
                                                 n,
@@ -313,32 +313,32 @@ let h = new s.Z('ImageEditor'),
                                                     var r,
                                                         n,
                                                         a = {},
-                                                        i = Object.keys(e);
-                                                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
+                                                        l = Object.keys(e);
+                                                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
                                                     return a;
                                                 })(e, t);
                                             if (Object.getOwnPropertySymbols) {
-                                                var i = Object.getOwnPropertySymbols(e);
-                                                for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+                                                var l = Object.getOwnPropertySymbols(e);
+                                                for (n = 0; n < l.length; n++) (r = l[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
                                             }
                                             return a;
                                         })(e, ['onClick']);
                                     return (0, n.jsx)(
-                                        l.zxk,
+                                        i.zxk,
                                         ((t = g(
                                             {
                                                 className: p.rotateButton,
-                                                look: l.zxk.Looks.BLANK,
-                                                size: l.PhG.NONE,
-                                                color: l.zxk.Colors.TRANSPARENT,
+                                                look: i.zxk.Looks.BLANK,
+                                                size: i.PhG.NONE,
+                                                color: i.zxk.Colors.TRANSPARENT,
                                                 grow: !1
                                             },
-                                            i
+                                            l
                                         )),
                                         (r = r =
                                             {
                                                 onClick: G,
-                                                children: (0, n.jsx)(l.Vk2, {
+                                                children: (0, n.jsx)(i.Vk2, {
                                                     size: 'md',
                                                     color: 'currentColor'
                                                 })
@@ -380,9 +380,9 @@ let h = new s.Z('ImageEditor'),
     v = (e, t) => {
         let { width: r, height: n } = e,
             a = 400 * t,
-            i = r / n;
+            l = r / n;
         return (
-            r > n ? (n = (r = a) / i) : (r = (n = a) * i),
+            r > n ? (n = (r = a) / l) : (r = (n = a) * l),
             {
                 width: r,
                 height: n
@@ -392,10 +392,10 @@ let h = new s.Z('ImageEditor'),
 function x(e, t) {
     let { width: r, height: n } = v(e, t),
         a = Math.abs(400 - r) / 2,
-        i = Math.abs(400 - n) / 2;
+        l = Math.abs(400 - n) / 2;
     return {
-        top: i,
-        bottom: -i,
+        top: l,
+        bottom: -l,
         left: -a,
         right: a
     };

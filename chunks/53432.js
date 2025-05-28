@@ -1,67 +1,67 @@
-r.d(t, { Z: () => h }), r(539854);
-var n = r(255367);
-r(73800);
-var i = r(442837),
-    o = r(524437),
-    l = r(481060),
-    c = r(153867),
-    a = r(857595),
-    s = r(607070),
-    u = r(906732),
-    d = r(705262),
-    p = r(540059),
-    b = r(210887),
-    g = r(740492),
-    f = r(695346),
-    j = r(874893),
-    O = r(981631),
-    y = r(388032);
+n.d(t, { Z: () => h }), n(539854);
+var r = n(255367);
+n(73800);
+var i = n(442837),
+    l = n(524437),
+    a = n(481060),
+    o = n(153867),
+    c = n(857595),
+    s = n(607070),
+    u = n(906732),
+    d = n(705262),
+    p = n(540059),
+    g = n(210887),
+    b = n(740492),
+    y = n(695346),
+    O = n(874893),
+    f = n(981631),
+    j = n(388032);
 function h() {
-    let e = f.jU.useSetting(),
+    let e = y.jU.useSetting(),
         { analyticsLocations: t } = (0, u.ZP)(),
         {
-            theme: r,
+            theme: n,
             useSystemTheme: h,
-            useForcedColors: m
-        } = (0, i.cj)([b.Z, g.ZP, s.Z], () => ({
-            theme: b.Z.theme,
-            useSystemTheme: g.ZP.useSystemTheme,
+            useForcedColors: v
+        } = (0, i.cj)([g.Z, b.ZP, s.Z], () => ({
+            theme: g.Z.theme,
+            useSystemTheme: b.ZP.useSystemTheme,
             useForcedColors: s.Z.useForcedColors
         })),
-        v = f.YC.useSetting(),
-        S = (0, p.Q3)('appearance_settings'),
+        S = y.YC.useSetting(),
+        E = (0, p.Q3)('appearance_settings'),
         P = (0, p.o9)('appearance_settings'),
-        Z = (e, i) =>
-            (0, n.jsx)(l.k5B, {
+        m = (e, i) =>
+            (0, r.jsx)(a.k5B, {
                 id: e,
                 group: 'input-modes',
                 label: i,
-                disabled: m,
-                checked: h === j.KW.ON ? 'system' === e : e === r,
+                disabled: v,
+                checked: h === O.KW.ON ? 'system' === e : e === n,
                 action: () => {
                     (0, d.Yk)({
                         isPersisted: !0,
                         analyticsLocations: t,
                         themeName: 'default '.concat(e)
                     }),
-                        (0, c.ZI)({ theme: e });
+                        (0, o.ZI)({ theme: e });
                 }
             }),
-        x = Z(O.BRd.DARK, S ? y.intl.string(y.t.SMPT1t) : y.intl.string(y.t.b8Cei4)),
-        w = Z(O.BRd.LIGHT, y.intl.string(y.t.K2sFfn)),
-        E = [
-            (0, n.jsxs)(
-                l.kSQ,
+        x = m(f.BRd.DARK, E ? j.intl.string(j.t.SMPT1t) : j.intl.string(j.t.b8Cei4)),
+        w = m(f.BRd.LIGHT, j.intl.string(j.t.K2sFfn)),
+        k = [
+            (0, r.jsxs)(
+                a.kSQ,
                 {
                     children: [
-                        S
-                            ? (0, n.jsxs)(n.Fragment, {
-                                  children: [w, x, Z(O.BRd.DARKER, y.intl.string(y.t.b8Cei4)), Z(O.BRd.MIDNIGHT, y.intl.string(y.t.Do4ZJy))]
+                        E
+                            ? (0, r.jsxs)(r.Fragment, {
+                                  children: [w, x, m(f.BRd.DARKER, j.intl.string(j.t.b8Cei4)), m(f.BRd.MIDNIGHT, j.intl.string(j.t.Do4ZJy))]
                               })
-                            : (0, n.jsxs)(n.Fragment, {
+                            : (0, r.jsxs)(r.Fragment, {
                                   children: [x, w]
                               }),
-                        Z('system', y.intl.string(y.t['7rOU6u']))
+                        m('system', j.intl.string(j.t['7rOU6u']))
                     ]
                 },
                 'theme-items'
@@ -70,37 +70,37 @@ function h() {
         ];
     return (
         P
-            ? (E.push(
-                  (0, n.jsxs)(
-                      l.kSQ,
+            ? (k.push(
+                  (0, r.jsxs)(
+                      a.kSQ,
                       {
                           label: 'UI Density',
                           children: [
-                              (0, n.jsx)(l.k5B, {
+                              (0, r.jsx)(a.k5B, {
                                   id: 'compact-ui',
                                   group: 'list-density',
-                                  label: y.intl.string(y.t['7iegX1']),
-                                  checked: v === o.Pi.COMPACT,
+                                  label: j.intl.string(j.t['7iegX1']),
+                                  checked: S === l.Pi.COMPACT,
                                   action: () => {
-                                      f.YC.updateSetting(o.Pi.COMPACT);
+                                      y.YC.updateSetting(l.Pi.COMPACT);
                                   }
                               }),
-                              (0, n.jsx)(l.k5B, {
+                              (0, r.jsx)(a.k5B, {
                                   id: 'default-ui',
                                   group: 'list-density',
-                                  label: y.intl.string(y.t.bBvAEB),
-                                  checked: v === o.Pi.DEFAULT,
+                                  label: j.intl.string(j.t.bBvAEB),
+                                  checked: S === l.Pi.DEFAULT,
                                   action: () => {
-                                      f.YC.updateSetting(o.Pi.DEFAULT);
+                                      y.YC.updateSetting(l.Pi.DEFAULT);
                                   }
                               }),
-                              (0, n.jsx)(l.k5B, {
+                              (0, r.jsx)(a.k5B, {
                                   id: 'cozy-ui',
                                   group: 'list-density',
-                                  label: y.intl.string(y.t['4cuYHx']),
-                                  checked: v === o.Pi.COZY,
+                                  label: j.intl.string(j.t['4cuYHx']),
+                                  checked: S === l.Pi.COZY,
                                   action: () => {
-                                      f.YC.updateSetting(o.Pi.COZY);
+                                      y.YC.updateSetting(l.Pi.COZY);
                                   }
                               })
                           ]
@@ -108,28 +108,28 @@ function h() {
                       'list-density'
                   )
               ),
-              E.push(
-                  (0, n.jsxs)(
-                      l.kSQ,
+              k.push(
+                  (0, r.jsxs)(
+                      a.kSQ,
                       {
                           label: 'Message Display',
                           children: [
-                              (0, n.jsx)(l.k5B, {
+                              (0, r.jsx)(a.k5B, {
                                   id: 'cozy-chat',
                                   group: 'chat-density',
-                                  label: y.intl.string(y.t.Jqj4cX),
+                                  label: j.intl.string(j.t.Jqj4cX),
                                   checked: !e,
                                   action: () => {
-                                      f.jU.updateSetting(!1), (0, a.ZZ)();
+                                      y.jU.updateSetting(!1), (0, c.ZZ)();
                                   }
                               }),
-                              (0, n.jsx)(l.k5B, {
+                              (0, r.jsx)(a.k5B, {
                                   id: 'compact-chat',
                                   group: 'chat-density',
-                                  label: y.intl.string(y.t['1JNcPT']),
+                                  label: j.intl.string(j.t['1JNcPT']),
                                   checked: e,
                                   action: () => {
-                                      f.jU.updateSetting(!0), (0, a.ZZ)();
+                                      y.jU.updateSetting(!0), (0, c.ZZ)();
                                   }
                               })
                           ]
@@ -137,21 +137,21 @@ function h() {
                       'chat-density'
                   )
               ))
-            : E.push(
-                  (0, n.jsx)(
-                      l.kSQ,
+            : k.push(
+                  (0, r.jsx)(
+                      a.kSQ,
                       {
-                          children: (0, n.jsx)(l.sNh, {
+                          children: (0, r.jsx)(a.sNh, {
                               id: 'compact-mode',
-                              label: e ? y.intl.string(y.t.CTpwDw) : y.intl.string(y.t['J/FISU']),
+                              label: e ? j.intl.string(j.t.CTpwDw) : j.intl.string(j.t['J/FISU']),
                               action: () => {
-                                  f.jU.updateSetting(!e), (0, a.ZZ)();
+                                  y.jU.updateSetting(!e), (0, c.ZZ)();
                               }
                           })
                       },
                       'compact-mode'
                   )
               ),
-        E
+        k
     );
 }

@@ -201,12 +201,14 @@ class k extends P.ZP {
             R(this, 'renderPopout', (e) => {
                 let { channel: t, sorting: n, embeddedApps: i } = this.props,
                     { shouldShowActivities: l } = this.state;
-                return null != i && i.length > 0 && l && !n
-                    ? (0, r.jsx)(N.Z, {
-                          onAction: this.handleActivitiesPopoutClose,
-                          channel: t
-                      })
-                    : (0, r.jsx)(x.Z, L(D({}, e), { channel: this.props.channel }));
+                return t.isModeratorReportChannel()
+                    ? null
+                    : null != i && i.length > 0 && l && !n
+                      ? (0, r.jsx)(N.Z, {
+                            onAction: this.handleActivitiesPopoutClose,
+                            channel: t
+                        })
+                      : (0, r.jsx)(x.Z, L(D({}, e), { channel: this.props.channel }));
             }),
             R(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props;

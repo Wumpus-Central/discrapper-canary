@@ -890,12 +890,8 @@ function el() {
         } = (0, d.cj)([D.default], () => ({
             isTracingRequests: D.default.isTracingRequests,
             isForcedCanary: D.default.isForcedCanary,
-            isLoggingGatewayEvents: D.default.isLoggingGatewayEvents,
-            isLoggingOverlayEvents: D.default.isLoggingOverlayEvents,
-            isLoggingAnalyticsEvents: D.default.isLoggingAnalyticsEvents,
             isAxeEnabled: D.default.isAxeEnabled,
             isSourceMapsEnabled: D.default.sourceMapsEnabled,
-            isAnalyticsDebuggerEnabled: D.default.isAnalyticsDebuggerEnabled,
             isIdleStatusIndicatorEnabled: D.default.isIdleStatusIndicatorEnabled,
             onlyShowPreviewAppCollections: D.default.onlyShowPreviewAppCollections,
             disableAppCollectionsCache: D.default.disableAppCollectionsCache,

@@ -17,7 +17,10 @@ async function a(e) {
             result: e
         });
     } catch (e) {
-        self.postMessage({ type: o.u.CROP_GIF_ERROR });
+        self.postMessage({
+            type: o.u.CROP_GIF_ERROR,
+            error: e
+        });
     }
 }
 self.addEventListener('message', (e) => {

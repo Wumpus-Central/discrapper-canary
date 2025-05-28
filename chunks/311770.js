@@ -1,8 +1,8 @@
 r.d(t, { EmojiStudioModal: () => E }), r(388685);
 var n = r(255367),
     a = r(73800),
-    i = r(442837),
-    l = r(481060),
+    l = r(442837),
+    i = r(481060),
     s = r(80932),
     o = r(710845),
     c = r(430824),
@@ -20,7 +20,7 @@ var n = r(255367),
 let O = new o.Z('EmojiStudioModal'),
     j = (e) => {
         let { userImage: t, guildId: r, back: o } = e,
-            h = (0, i.e7)([c.Z, d.Z, u.Z], () => {
+            h = (0, l.e7)([c.Z, d.Z, u.Z], () => {
                 let e = d.Z.getGuildId(),
                     t = c.Z.getGuild(e);
                 return u.Z.can(v.Plq.CREATE_GUILD_EXPRESSIONS, t) && null != t ? t.id : null;
@@ -43,17 +43,17 @@ let O = new o.Z('EmojiStudioModal'),
                     I((0, m.z)(e)), O.error('Failed to upload emoji.', e);
                     return;
                 }
-                (0, l.Mr3)(g.Hj);
+                (0, i.Mr3)(g.Hj);
             },
             L = a.useRef(0),
             T = a.useCallback((e) => {
                 let { imageData: t, imageDataTimestamp: r = 0, error: n, loading: a } = e,
-                    i = null;
-                null != t && p.ZP.isDataTooBig(t) && (i = g.ze.TOO_BIG), I(null != n ? n : i), k(a), r < L.current || (null != t && (w(t), (L.current = r)));
+                    l = null;
+                null != t && p.ZP.isDataTooBig(t) && (l = g.ze.TOO_BIG), I(null != n ? n : l), k(a), r < L.current || (null != t && (w(t), (L.current = r)));
             }, []);
         return (0, n.jsxs)('main', {
             children: [
-                (0, n.jsx)(l.X6q, {
+                (0, n.jsx)(i.X6q, {
                     variant: 'heading-lg/semibold',
                     className: _.heading,
                     children: 'Add Custom Emoji'
@@ -82,14 +82,14 @@ let O = new o.Z('EmojiStudioModal'),
                                         }),
                                         (0, n.jsxs)('div', {
                                             children: [
-                                                (0, n.jsx)(l.oil, {
+                                                (0, n.jsx)(i.oil, {
                                                     placeholder: ':emoji:',
                                                     onChange: (e) => {
                                                         C(e.length < 2 ? e : p.ZP.sanitizeEmojiName(e));
                                                     },
                                                     value: y
                                                 }),
-                                                (0, n.jsx)(l.Text, {
+                                                (0, n.jsx)(i.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'header-muted',
                                                     className: _.inputNote,
@@ -103,7 +103,7 @@ let O = new o.Z('EmojiStudioModal'),
                                     onChange: E,
                                     selected: j
                                 }),
-                                (0, n.jsx)(l.zxk, {
+                                (0, n.jsx)(i.zxk, {
                                     className: _.submit,
                                     onClick: M,
                                     fullWidth: !0,
@@ -119,14 +119,14 @@ let O = new o.Z('EmojiStudioModal'),
         });
     },
     E = (e) => {
-        let { transitionState: t, userImage: r, guildId: i } = e,
+        let { transitionState: t, userImage: r, guildId: l } = e,
             [s, o] = a.useState(r),
             c = a.useCallback(() => o(null), [o]),
-            u = null == s ? l.CgR.MEDIUM : l.CgR.LARGE;
-        return (0, n.jsx)(l.Y0X, {
+            u = null == s ? i.CgR.MEDIUM : i.CgR.LARGE;
+        return (0, n.jsx)(i.Y0X, {
             transitionState: t,
             size: u,
-            children: (0, n.jsxs)(l.hzk, {
+            children: (0, n.jsxs)(i.hzk, {
                 scrollbarType: 'none',
                 className: _.modalContent,
                 children: [
@@ -134,11 +134,11 @@ let O = new o.Z('EmojiStudioModal'),
                         ? (0, n.jsx)(h.u, { setUserImage: o })
                         : (0, n.jsx)(j, {
                               userImage: s,
-                              guildId: i,
+                              guildId: l,
                               back: c
                           }),
-                    (0, n.jsx)(l.olH, {
-                        onClick: () => (0, l.Mr3)(g.Hj),
+                    (0, n.jsx)(i.olH, {
+                        onClick: () => (0, i.Mr3)(g.Hj),
                         className: _.closeButton
                     })
                 ]
@@ -147,15 +147,15 @@ let O = new o.Z('EmojiStudioModal'),
     },
     D = (e) => {
         let { back: t } = e;
-        return (0, n.jsxs)(l.zxk, {
+        return (0, n.jsxs)(i.zxk, {
             'aria-label': x.intl.string(x.t['13/7kZ']),
             onClick: t,
-            look: l.zxk.Looks.BLANK,
-            size: l.zxk.Sizes.MIN,
+            look: i.zxk.Looks.BLANK,
+            size: i.zxk.Sizes.MIN,
             innerClassName: _.backButtonInnner,
             className: _.backButton,
             children: [
-                (0, n.jsx)(l.j9r, {
+                (0, n.jsx)(i.j9r, {
                     color: 'currentColor',
                     size: 'xs'
                 }),

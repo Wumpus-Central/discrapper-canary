@@ -1,101 +1,101 @@
-r.d(t, { Z: () => s });
-var n = r(255367);
-r(73800);
-var i = r(442837),
-    o = r(481060),
-    l = r(857595),
-    c = r(607070),
-    a = r(388032);
+n.d(t, { Z: () => s });
+var r = n(255367);
+n(73800);
+var i = n(442837),
+    l = n(481060),
+    a = n(857595),
+    o = n(607070),
+    c = n(388032);
 function s() {
     let {
             saturation: e,
             useReducedMotion: t,
-            roleStyle: r
-        } = (0, i.cj)([c.Z], () => ({
-            saturation: c.Z.saturation,
-            useReducedMotion: c.Z.useReducedMotion,
-            roleStyle: c.Z.roleStyle
+            roleStyle: n
+        } = (0, i.cj)([o.Z], () => ({
+            saturation: o.Z.saturation,
+            useReducedMotion: o.Z.useReducedMotion,
+            roleStyle: o.Z.roleStyle
         })),
         s = [
             {
-                name: a.intl.string(a.t.YEOEi4),
+                name: c.intl.string(c.t.YEOEi4),
                 value: 'username'
             },
             {
-                name: a.intl.string(a.t.mQaro6),
+                name: c.intl.string(c.t.mQaro6),
                 value: 'dot'
             },
             {
-                name: a.intl.string(a.t.Ji2EVF),
+                name: c.intl.string(c.t.Ji2EVF),
                 value: 'hidden'
             }
         ];
     return [
-        (0, n.jsx)(
-            o.kSQ,
+        (0, r.jsx)(
+            l.kSQ,
             {
-                children: (0, n.jsx)(o.S89, {
+                children: (0, r.jsx)(l.S89, {
                     id: 'reduced-motion',
-                    label: a.intl.string(a.t.b3XBzs),
+                    label: c.intl.string(c.t.b3XBzs),
                     checked: t,
-                    action: () => (0, l.Zt)(t ? 'no-preference' : 'reduce')
+                    action: () => (0, a.Zt)(t ? 'no-preference' : 'reduce')
                 })
             },
             'reduced-motion'
         ),
-        (0, n.jsx)(
-            o.kSQ,
+        (0, r.jsx)(
+            l.kSQ,
             {
-                children: (0, n.jsx)(o.II_, {
+                children: (0, r.jsx)(l.II_, {
                     id: 'input',
-                    label: a.intl.string(a.t['5PWWCQ']),
-                    control: (t, r) => {
-                        var i, c;
-                        return (0, n.jsx)(
-                            o._wy,
+                    label: c.intl.string(c.t['5PWWCQ']),
+                    control: (t, n) => {
+                        var i, o;
+                        return (0, r.jsx)(
+                            l._wy,
                             ((i = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
-                                    var r = null != arguments[t] ? arguments[t] : {},
-                                        n = Object.keys(r);
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
                                     'function' == typeof Object.getOwnPropertySymbols &&
-                                        (n = n.concat(
-                                            Object.getOwnPropertySymbols(r).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                             })
                                         )),
-                                        n.forEach(function (t) {
-                                            var n;
-                                            (n = r[t]),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
-                                                          value: n,
+                                                          value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[t] = n);
+                                                    : (e[t] = r);
                                         });
                                 }
                                 return e;
                             })({}, t)),
-                            (c = c =
+                            (o = o =
                                 {
-                                    ref: r,
+                                    ref: n,
                                     value: 100 * e,
-                                    onChange: (e) => (0, l.o2)(e / 100),
-                                    'aria-label': a.intl.string(a.t['5PWWCQ'])
+                                    onChange: (e) => (0, a.o2)(e / 100),
+                                    'aria-label': c.intl.string(c.t['5PWWCQ'])
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(c))
+                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
                                 : (function (e, t) {
-                                      var r = Object.keys(e);
+                                      var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
-                                          var n = Object.getOwnPropertySymbols(e);
-                                          r.push.apply(r, n);
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
                                       }
-                                      return r;
-                                  })(Object(c)).forEach(function (e) {
-                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(c, e));
+                                      return n;
+                                  })(Object(o)).forEach(function (e) {
+                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
                                   }),
                             i)
                         );
@@ -104,22 +104,22 @@ function s() {
             },
             'input'
         ),
-        (0, n.jsx)(
-            o.kSQ,
+        (0, r.jsx)(
+            l.kSQ,
             {
-                children: (0, n.jsx)(o.sNh, {
+                children: (0, r.jsx)(l.sNh, {
                     id: 'role-colors',
-                    label: a.intl.string(a.t.uSOPWl),
+                    label: c.intl.string(c.t.uSOPWl),
                     children: s.map((e) => {
                         let { name: t, value: i } = e;
-                        return (0, n.jsx)(
-                            o.k5B,
+                        return (0, r.jsx)(
+                            l.k5B,
                             {
                                 id: i,
                                 group: 'role-colors',
-                                checked: i === r,
+                                checked: i === n,
                                 label: t,
-                                action: () => (0, l.u1)(i)
+                                action: () => (0, a.u1)(i)
                             },
                             i
                         );

@@ -1,18 +1,18 @@
-r.d(t, { Z: () => s });
-var n = r(255367);
-r(73800);
-var i = r(442837),
-    o = r(481060),
-    l = r(223245),
-    c = r(246946),
-    a = r(388032);
+n.d(t, { Z: () => s });
+var r = n(255367);
+n(73800);
+var i = n(442837),
+    l = n(481060),
+    a = n(223245),
+    o = n(246946),
+    c = n(388032);
 function s() {
-    let e = (0, i.e7)([c.Z], () => c.Z.enabled, []);
-    return (0, n.jsx)(o.S89, {
+    let e = (0, i.e7)([o.Z], () => o.Z.enabled, []);
+    return (0, r.jsx)(l.S89, {
         id: 'streamer-mode-toggle',
-        label: a.intl.string(a.t.p9ZAJS),
+        label: c.intl.string(c.t.p9ZAJS),
         action: () => {
-            l.Z.setEnabled(!e);
+            a.Z.setEnabled(!e);
         },
         checked: e
     });
