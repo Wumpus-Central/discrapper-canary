@@ -126,7 +126,10 @@ function N(e) {
                                     nickname: c.ZP.getName(k, A, n),
                                     pronouns: null == G ? void 0 : G.pronouns,
                                     nicknameVariant: 'heading-xl/bold',
-                                    nicknameIcons: (0, l.jsx)(g.Z, { userId: n.id }),
+                                    nicknameIcons: (0, l.jsx)(g.Z, {
+                                        size: 'sm',
+                                        userId: n.id
+                                    }),
                                     tags: (0, l.jsx)(f.Z, {
                                         displayProfile: G,
                                         themeType: P.lY.MODAL,

@@ -1,8 +1,8 @@
 n.d(t, {
     P9: () => I,
-    Uf: () => N,
+    Uf: () => P,
     b0: () => O,
-    s_: () => j
+    s_: () => g
 }),
     n(388685);
 var o = n(255367),
@@ -22,7 +22,7 @@ let _ = [() => m.intl.string(m.t.madJdH), () => m.intl.string(m.t.NYmfoK), () =>
     y = [() => m.intl.string(m.t.nFSbeH), () => m.intl.string(m.t.gTcxOz), () => m.intl.string(m.t['8T0wYm']), () => m.intl.string(m.t.BIHl1t), () => m.intl.string(m.t.jhBm09)],
     x = [() => m.intl.string(m.t.AyMGXF), () => m.intl.string(m.t.aAFW7e), (e) => m.intl.formatToPlainString(m.t.h2g0cH, { name: e }), () => m.intl.string(m.t['rrYh5+']), () => m.intl.string(m.t['HX3K+P']), () => m.intl.string(m.t['/yW3aW']), () => m.intl.string(m.t['PmL/v7']), () => m.intl.string(m.t.IALa3t), () => m.intl.string(m.t.HRcTFB), () => m.intl.string(m.t.NuCqPj), () => m.intl.string(m.t['M1tw+/']), () => m.intl.string(m.t.UBm1y8), () => m.intl.string(m.t.Cu95PT), () => m.intl.string(m.t['R/wFur']), () => m.intl.string(m.t.HQPAVV), () => m.intl.string(m.t.YolGh4)],
     h = [p.ABu.EPIC_GAMES, p.ABu.RIOT_GAMES, p.ABu.XBOX, p.ABu.SPOTIFY, p.ABu.PLAYSTATION, p.ABu.LEAGUE_OF_LEGENDS, p.ABu.STEAM, p.ABu.CRUNCHYROLL, p.ABu.YOUTUBE, p.ABu.REDDIT, p.ABu.BATTLENET, p.ABu.GITHUB, p.ABu.TIKTOK, p.ABu.TWITTER, p.ABu.TWITCH];
-function g(e) {
+function j(e) {
     let { heading: t, bodyText: n, children: r } = e;
     return (0, o.jsxs)('div', {
         className: b.empty,
@@ -46,13 +46,13 @@ function g(e) {
         ]
     });
 }
-function j() {
+function g() {
     let e = m.intl.string(m.t.RnD2yc),
         [t] = r.useState(() => {
             var e;
             return (null != (e = (0, i.sample)(_)) ? e : _[0])();
         });
-    return (0, o.jsx)(g, {
+    return (0, o.jsx)(j, {
         heading: e,
         bodyText: t
     });
@@ -63,7 +63,7 @@ function O() {
             var e;
             return (null != (e = (0, i.sample)(y)) ? e : y[0])();
         });
-    return (0, o.jsx)(g, {
+    return (0, o.jsx)(j, {
         heading: e,
         bodyText: t
     });
@@ -86,7 +86,7 @@ function I(e) {
             }),
                 null == s || s();
         }, [t.id, s]);
-    return (0, o.jsx)(g, {
+    return (0, o.jsx)(j, {
         heading: p,
         bodyText: _,
         children: (0, o.jsxs)('div', {
@@ -128,7 +128,7 @@ function v() {
         })
     });
 }
-function N(e) {
+function P(e) {
     let { onClose: t } = e,
         n = r.useCallback(() => {
             null == t || t(), a.Z.open(p.oAB.CONNECTIONS);
@@ -136,7 +136,7 @@ function N(e) {
         i = r.useCallback(() => {
             null == t || t(), a.Z.open(p.oAB.CONTENT_AND_SOCIAL, 'CONNECTED_GAMES');
         }, [t]);
-    return (0, o.jsxs)(g, {
+    return (0, o.jsxs)(j, {
         heading: m.intl.string(m.t.Sc0oWF),
         bodyText: m.intl.string(m.t.m8UJqa),
         children: [

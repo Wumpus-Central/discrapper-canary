@@ -17,7 +17,7 @@ var o = n(788983),
     g = n(981631);
 let E = {
     selectChannel(e) {
-        let { guildId: t, channelId: n, messageId: i, jumpType: a, preserveDrawerState: o, source: s } = e;
+        let { guildId: t, channelId: n, messageId: i, jumpType: a, preserveDrawerState: o, source: s, isInitialSetup: l } = e;
         r.Z.dispatch({
             type: 'CHANNEL_SELECT',
             guildId: t === g.ME ? null : t,
@@ -25,7 +25,8 @@ let E = {
             messageId: i,
             jumpType: a,
             preserveDrawerState: o,
-            source: s
+            source: s,
+            isInitialSetup: l
         });
     },
     selectPrivateChannel(e) {

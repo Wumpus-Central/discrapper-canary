@@ -17,8 +17,8 @@ var r = n(442837),
     y = n(907179),
     x = n(228168),
     h = n(981631),
-    g = n(388032),
-    j = n(247787);
+    j = n(388032),
+    g = n(247787);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,7 +45,7 @@ function O(e) {
     return e;
 }
 function I(e) {
-    let { user: t, guildId: n, channelId: I, messageId: v, roleId: N, transitionState: P, openedAt: A, onHide: T, sourceAnalyticsLocations: Z = [] } = e,
+    let { user: t, guildId: n, channelId: I, messageId: v, roleId: P, transitionState: N, openedAt: A, onHide: T, sourceAnalyticsLocations: Z = [] } = e,
         C = n === h.ME ? void 0 : n,
         w = (0, r.e7)([s.Z], () => s.Z.isBlocked(t.id)),
         { analyticsLocations: S } = (0, l.ZP)([...Z, w ? c.Z.BLOCKED_PROFILE_MODAL : c.Z.IGNORED_PROFILE_MODAL]),
@@ -56,16 +56,16 @@ function I(e) {
             guildId: C,
             channelId: I,
             messageId: v,
-            roleId: N
+            roleId: P
         }),
         B = [
             {
                 icon: i.owK,
-                description: g.intl.string(g.t.kcuWvb)
+                description: j.intl.string(j.t.kcuWvb)
             },
             {
                 icon: i.owK,
-                description: g.intl.string(w ? g.t.QxrDY2 : g.t.W6fjkZ)
+                description: j.intl.string(w ? j.t.QxrDY2 : j.t.W6fjkZ)
             }
         ],
         D = (0, p.ZP)(t.id, C);
@@ -78,17 +78,17 @@ function I(e) {
             fetchEndedAt: null == D ? void 0 : D.fetchEndedAt,
             isLoaded: null == D ? void 0 : D.isLoaded,
             children: (0, o.jsx)(i.Y0X, {
-                transitionState: P,
-                className: j.root,
-                'aria-label': g.intl.string(g.t['3N/J2t']),
+                transitionState: N,
+                className: g.root,
+                'aria-label': j.intl.string(j.t['3N/J2t']),
                 children: (0, o.jsxs)(b.Z, {
                     user: t,
                     displayProfile: D,
                     themeType: x.lY.MODAL_V2,
                     children: [
-                        (0, o.jsx)('div', { className: j.background }),
+                        (0, o.jsx)('div', { className: g.background }),
                         (0, o.jsxs)('div', {
-                            className: j.content,
+                            className: g.content,
                             children: [
                                 (0, o.jsx)(m.Z, {
                                     user: t,
@@ -96,22 +96,22 @@ function I(e) {
                                     iconColor: i.TVs.colors.TEXT_NORMAL
                                 }),
                                 (0, o.jsxs)('div', {
-                                    className: j.textContainer,
+                                    className: g.textContainer,
                                     children: [
                                         (0, o.jsx)(i.X6q, {
                                             variant: 'heading-xl/bold',
                                             color: 'text-normal',
-                                            children: g.intl.string(g.t.b33pLC)
+                                            children: j.intl.string(j.t.b33pLC)
                                         }),
                                         (0, o.jsx)(i.Text, {
                                             variant: 'text-md/medium',
                                             color: 'text-normal',
-                                            children: g.intl.format(w ? g.t.T7QiLi : g.t.MnEow8, { username: d.ZP.getName(C, I, t) })
+                                            children: j.intl.format(w ? j.t.T7QiLi : j.t.MnEow8, { username: d.ZP.getName(C, I, t) })
                                         })
                                     ]
                                 }),
                                 (0, o.jsx)('div', {
-                                    className: j.safetyTable,
+                                    className: g.safetyTable,
                                     children: B.map((e, t) => {
                                         let { icon: n, description: r } = e;
                                         return (0, o.jsx)(

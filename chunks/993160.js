@@ -14,8 +14,8 @@ var r = n(481060),
 function m(e) {
     let { user: t, currentUser: n, guildId: m, relationshipType: b, onClose: _ } = e,
         { newestAnalyticsLocation: y } = (0, c.ZP)(),
-        { gameFriends: x, hasOutgoingPendingGameFriends: h, hasIncomingPendingGameFriends: g } = (0, f.H)({ userId: t.id }),
-        j = x.length > 0 || h || g;
+        { gameFriends: x, hasOutgoingPendingGameFriends: h, hasIncomingPendingGameFriends: j } = (0, f.H)({ userId: t.id }),
+        g = x.length > 0 || h || j;
     return b === p.OGo.BLOCKED
         ? null
         : t.id === n.id
@@ -78,7 +78,7 @@ function m(e) {
                         })
                     ]
                 })
-              : b === p.OGo.NONE && j
+              : b === p.OGo.NONE && g
                 ? (0, o.jsxs)(o.Fragment, {
                       children: [
                           (0, o.jsx)(a.Z, {
@@ -96,7 +96,7 @@ function m(e) {
                               tooltipPosition: 'top',
                               tooltipAlign: 'center',
                               shouldShowTooltip: !0,
-                              hasIncomingPendingGameFriends: g,
+                              hasIncomingPendingGameFriends: j,
                               hasOutgoingPendingGameFriends: h
                           }),
                           (0, o.jsx)(s.Z, {

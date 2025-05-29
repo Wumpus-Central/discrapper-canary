@@ -11,21 +11,21 @@ var i = n(442837),
     d = n(388032),
     f = n(537987);
 function _(e) {
-    let { userId: t } = e,
-        n = (0, l.ML)(t),
-        _ = (0, l.vh)(t),
-        p = (0, i.e7)([c.Z], () => {
+    let { userId: t, size: n = 'xs' } = e,
+        _ = (0, l.ML)(t),
+        p = (0, l.vh)(t),
+        h = (0, i.e7)([c.Z], () => {
             var e;
             return null == (e = c.Z.getUserProfile(t)) ? void 0 : e.fetchError;
         });
-    return n.length > 0 || _.length > 0 || null == p
+    return _.length > 0 || p.length > 0 || null == h
         ? null
         : (0, r.jsx)(o.DY, {
               className: f.container,
               text: d.intl.string(d.t.p3Q9Y2),
               delay: u.vB,
               children: (0, r.jsx)(s.P4T, {
-                  size: 'xs',
+                  size: n,
                   color: a.Z.colors.STATUS_WARNING.css
               })
           });
