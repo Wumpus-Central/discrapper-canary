@@ -15961,20 +15961,6 @@ div.modalHeader_c28af8 {
     animation-timing-function: ease-in-out
 }
 
-.hidden__28141 {
-    opacity: 0
-}
-
-.imageVideoOverlay__28141 {
-    border-radius: inherit;
-    height: 100%;
-    left: 0;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    width: 100%
-}
-
 .nitroUpsellContainer_d0caf4 {
     align-items: center;
     display: flex;
