@@ -9,7 +9,7 @@ var r = n(255367),
     u = n(388032);
 function d(e) {
     let { channel: t, user: d, member: p, guild: h } = e;
-    if (!(0, i.e7)([o.Z], () => null != d && null != h && (0, a.BK)(d, h, [o.Z]))) return null;
+    if (!(0, i.e7)([o.Z], () => null != d && null != h && (0, a.nX)(d, h, [o.Z]))) return null;
     let f = null == p ? u.intl.string(c.default.Ux67nZ) : u.intl.string(c.default['snp/lJ']),
         m = 'kick-user-'.concat(null == d ? void 0 : d.id);
     return (0, r.jsx)(

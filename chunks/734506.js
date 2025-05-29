@@ -6,7 +6,5 @@ e.exports = {
     questRewardTileAssetStatic: 'questRewardTileAssetStatic__28141',
     questRewardTileDetailsLearnMore: 'questRewardTileDetailsLearnMore__28141',
     Shine: 'Shine__28141',
-    shine: 'shine__28141',
-    hidden: 'hidden__28141',
-    imageVideoOverlay: 'imageVideoOverlay__28141'
+    shine: 'shine__28141'
 };

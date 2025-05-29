@@ -1921,6 +1921,7 @@ var tC = (function (e) {
             (e.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK = 'Friend Anniversaries Action Button Coachmark'),
             (e.VOICE_FILTERS = 'Voice Filters Popout'),
             (e.FRIENDS_POPOUT = 'Friends Popout'),
+            (e.ROBLOX_CONNECTION_ACTION_SHEET = 'Roblox Connection Action Sheet'),
             e
         );
     })({}),

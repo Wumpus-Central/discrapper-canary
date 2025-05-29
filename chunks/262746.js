@@ -16,7 +16,7 @@ function m(e) {
         b = (0, l.e7)([d.Z], () => null != m && d.Z.isUserBanned(m.id)),
         _ = null != m && null == b,
         [x, y] = i.useState(_),
-        C = (0, l.e7)([u.Z], () => null != m && null != g && (0, c.mm)(m, g, [u.Z]));
+        C = (0, l.e7)([u.Z], () => null != m && null != g && (0, c.lD)(m, g, [u.Z]));
     if (
         ((0, s.ZP)(() => {
             _ && o.Z.searchGuildBans(t.guild_id, void 0, [null == m ? void 0 : m.id]).finally(() => y(!1));

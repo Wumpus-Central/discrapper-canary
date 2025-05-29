@@ -20,11 +20,11 @@ let h = (0, a.Z)(
             let { user: n, channel: t, guildId: u, onSelect: a, onInteraction: o, context: g } = e,
                 h = t.id,
                 v = n.isNonUserBot(),
-                T = n.id === _.default.getId(),
-                b = (0, c.Z)(n),
+                b = n.id === _.default.getId(),
+                T = (0, c.Z)(n),
                 O = (0, s.Z)(n, u, h),
                 S = (0, E.Y)({
-                    isOwnSettings: T,
+                    isOwnSettings: b,
                     userId: n.id,
                     channelId: h,
                     guildId: u,
@@ -48,10 +48,10 @@ let h = (0, a.Z)(
                     (0, l.jsxs)(l.Fragment, {
                         children: [
                             (0, l.jsxs)(i.kSQ, {
-                                children: [b, O]
+                                children: [T, O]
                             }),
                             S,
-                            !T &&
+                            !b &&
                                 (0, l.jsx)(i.kSQ, {
                                     children: (0, l.jsxs)(i.sNh, {
                                         id: 'more-options',
@@ -59,7 +59,7 @@ let h = (0, a.Z)(
                                         children: [I, (0, l.jsx)(i.kSQ, { children: p }), y]
                                     })
                                 }),
-                            T && (0, l.jsx)(i.kSQ, { children: M })
+                            b && (0, l.jsx)(i.kSQ, { children: M })
                         ]
                     })
             });

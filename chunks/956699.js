@@ -209,18 +209,10 @@ class ei extends r.Component {
         return o().without($, ...t);
     }
     renderEmpty() {
-        return (0, i.jsxs)(g.ubH, {
+        return (0, i.jsx)(g.ubH, {
             theme: B.Z.theme,
             className: l()(K.marginTop40, K.marginBottom20),
-            children: [
-                (0, i.jsx)(g.oxh, {
-                    darkSrc: n(770227),
-                    lightSrc: n(398684),
-                    width: 294,
-                    height: 192
-                }),
-                (0, i.jsx)(g.OZU, { children: 'You have no build overrides configured.' })
-            ]
+            children: (0, i.jsx)(g.OZU, { children: 'You have no build overrides configured.' })
         });
     }
     renderItems() {
@@ -343,7 +335,6 @@ class ei extends r.Component {
                             })
                         ]
                     }),
-                    (0, i.jsx)(g.$i$, {}),
                     (0, i.jsxs)(v.Z, {
                         direction: v.Z.Direction.VERTICAL,
                         children: [

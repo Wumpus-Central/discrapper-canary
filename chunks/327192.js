@@ -168,7 +168,7 @@ function z(e) {
         }, [o]);
     function $() {
         let e = _.Z.get(o.type),
-            t = U.intl.string(U.t.apVJu7);
+            t = U.intl.format(U.t.VgqIPj, { provider: e.name });
         (0, D.Z)(o) &&
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [

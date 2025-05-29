@@ -17,22 +17,22 @@ var r = n(255367),
     _ = n(933409),
     p = n(389052),
     m = n(158508),
-    j = n(88966),
-    M = n(712301),
+    M = n(88966),
+    j = n(712301),
     P = n(567711),
     S = n(358386),
     A = n(37258),
-    v = n(931617),
-    N = n(981631),
-    Z = n(388032);
+    Z = n(931617),
+    v = n(981631),
+    N = n(388032);
 let I = (0, c.Z)(
     (0, u.Z)(
         function (e) {
             var t;
-            let { user: n, guildId: u, channelId: c, context: N, onSelect: I, moderationAlertId: h, analyticsLocation: T, analyticsLocations: C, onCloseContextMenu: D, showTransferOwnershipItem: U } = e,
+            let { user: n, guildId: u, channelId: c, context: v, onSelect: I, moderationAlertId: h, analyticsLocation: T, analyticsLocations: D, onCloseContextMenu: C, showTransferOwnershipItem: U } = e,
                 { analyticsLocations: R } = (0, f.ZP)(d.Z.CONTEXT_MENU),
                 L = (0, s.O)(),
-                w = null != (t = null == C ? void 0 : C[0]) ? t : R[0],
+                w = null != (t = null == D ? void 0 : D[0]) ? t : R[0],
                 x = (0, g.sE)(u, {
                     location: w,
                     targetUserId: n.id
@@ -52,15 +52,15 @@ let I = (0, c.Z)(
                 q = (0, A.Z)({
                     userId: n.id,
                     guildId: u,
-                    sourceAnalyticsLocations: C
+                    sourceAnalyticsLocations: D
                 }),
-                F = (0, j.Z)(n.id, N),
+                F = (0, M.Z)(n.id, v),
                 K = (0, E.Z)({
                     guildId: u,
                     userId: n.id,
                     analyticsLocation: null != T ? T : L.location,
                     analyticsLocations: [w],
-                    context: N
+                    context: v
                 }),
                 V = (0, p.Z)({
                     user: n,
@@ -77,20 +77,20 @@ let I = (0, c.Z)(
                 Y = (0, _.Z)(n, u, null != c ? c : G, w),
                 H = (0, P.Z)(c, h),
                 Q = (0, S.Z)(n, u),
-                X = (0, v.Z)(n.id, u, !1, w),
+                X = (0, Z.Z)(n.id, u, !1, w),
                 J = (0, O.Z)({
                     id: n.id,
-                    label: Z.intl.string(Z.t['/AXYnJ']),
+                    label: N.intl.string(N.t['/AXYnJ']),
                     onSuccess: k
                 }),
-                z = (0, M.Z)(n, u),
+                z = (0, j.Z)(n, u),
                 $ = !!(null == n ? void 0 : n.isNonUserBot());
             return (0, r.jsxs)(a.v2r, {
                 navId: 'user-context',
                 onClose: () => {
-                    (0, o.Zy)(), null == D || D();
+                    (0, o.Zy)(), null == C || C();
                 },
-                'aria-label': Z.intl.string(Z.t.liqwPD),
+                'aria-label': N.intl.string(N.t.liqwPD),
                 onSelect: I,
                 children: [
                     !$ &&
@@ -119,7 +119,7 @@ let I = (0, c.Z)(
                 ]
             });
         },
-        { object: N.qAy.CONTEXT_MENU }
+        { object: v.qAy.CONTEXT_MENU }
     ),
     [d.Z.CONTEXT_MENU, d.Z.GUILD_MODERATION_USER_MENU]
 );

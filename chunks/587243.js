@@ -1,6 +1,6 @@
 n.d(t, {
-    F: () => C,
-    I: () => O
+    F: () => O,
+    I: () => j
 }),
     n(953529),
     n(388685);
@@ -58,20 +58,21 @@ let b = [
             label: () => h.intl.formatToPlainString(h.t.GBLpQ0, { days: 3 })
         },
         {
-            duration: null,
+            duration: void 0,
             label: () => h.intl.string(h.t['46dqJS'])
         }
-    ];
-function x(e, t) {
+    ],
+    x = 'forever';
+function E(e, t) {
     return e.getFullYear() === t.getFullYear() && e.getMonth() === t.getMonth() && e.getDate() === t.getDate();
 }
-function E(e) {
+function C(e) {
     let { status: t, currentStatus: n, description: s } = e,
         { showTempStatusOptions: o, hasDefaultClickOption: c, hasButtonStyling: d } = a.Y.useExperiment({ location: 'UserProfileAccountPopout' }),
         h = o && t !== p.Skl.ONLINE,
-        [x, E] = r.useState(void 0),
-        C = void 0 !== x && t === n,
-        O = (0, i.jsx)(i.Fragment, {
+        [E, C] = r.useState(void 0),
+        O = void 0 !== E && t === n,
+        j = (0, i.jsx)(i.Fragment, {
             children: b.map((e) => {
                 let { duration: r, label: s } = e;
                 return (0, i.jsx)(
@@ -87,11 +88,11 @@ function E(e) {
                             }),
                         dontCloseOnAction: !0
                     },
-                    r
+                    null != r ? r : x
                 );
             })
         }),
-        j = (0, i.jsx)('div', {
+        S = (0, i.jsx)('div', {
             className: f.durationButtons,
             children: _.map((e) => {
                 let { duration: r, label: s } = e;
@@ -101,7 +102,7 @@ function E(e) {
                         id: ''.concat(t, '-').concat(r),
                         onClick: (e) => {
                             e.stopPropagation(),
-                                E(r),
+                                C(r),
                                 (0, g.Z)({
                                     nextStatus: t,
                                     prevStatus: n,
@@ -109,12 +110,12 @@ function E(e) {
                                 });
                         },
                         className: f.durationButton,
-                        color: x === r ? l.Ttl.BRAND : l.Ttl.PRIMARY,
+                        color: E === r ? l.Ttl.BRAND : l.Ttl.PRIMARY,
                         size: l.PhG.NONE,
                         grow: !1,
                         children: s()
                     },
-                    r
+                    null != r ? r : x
                 );
             })
         });
@@ -143,12 +144,12 @@ function E(e) {
                             className: f.description,
                             children: s
                         }),
-                    h && d && C ? j : void 0
+                    h && d && O ? S : void 0
                 ]
             });
         },
         action: () => {
-            E(h ? u.Z.Millis.DAY : null),
+            C(h ? u.Z.Millis.DAY : void 0),
                 (0, g.Z)({
                     nextStatus: t,
                     prevStatus: n,
@@ -156,16 +157,16 @@ function E(e) {
                 });
         },
         dontCloseOnAction: !0,
-        children: h && !d ? O : void 0
+        children: h && !d ? j : void 0
     });
 }
-function C(e) {
+function O(e) {
     if (null == e || '0' === e) return;
     let t = new Date(Number(e)),
-        n = x(t, new Date()),
+        n = E(t, new Date()),
         i = new Date();
     i.setDate(i.getDate() + 1);
-    let r = x(t, i);
+    let r = E(t, i);
     return n
         ? h.intl.formatToPlainString(h.t.ZxxHIC, { timeString: h.intl.data.formatTime(t, { format: 'short' }) })
         : h.intl.formatToPlainString(h.t['9OFjSU'], {
@@ -173,7 +174,7 @@ function C(e) {
               timeString: h.intl.data.formatTime(t, { format: 'short' })
           });
 }
-function O(e) {
+function j(e) {
     let { hasNewStrings: t } = a.Y.useExperiment({ location: 'UserProfileAccountPopout' }),
         n = d.Cr.useSetting(),
         r = (0, o.p)(),
@@ -181,7 +182,7 @@ function O(e) {
         m = d.fv.useSetting(),
         g = e === p.Skl.DND,
         _ = (i) => {
-            let r = C(n);
+            let r = O(n);
             if (e === i && null != r) return r;
             switch (i) {
                 case p.Skl.DND:
@@ -192,7 +193,7 @@ function O(e) {
                     return;
             }
         },
-        x = (0, i.jsx)(i.Fragment, {
+        E = (0, i.jsx)(i.Fragment, {
             children: b.map((t) => {
                 let { duration: n, label: r } = t;
                 return (0, i.jsx)(
@@ -205,36 +206,36 @@ function O(e) {
                         },
                         dontCloseOnAction: !0
                     },
-                    n
+                    null != n ? n : x
                 );
             })
         }),
-        O = E({
+        j = C({
             status: p.Skl.ONLINE,
             currentStatus: e
         }),
-        j = E({
+        S = C({
             status: p.Skl.IDLE,
             currentStatus: e,
             description: _(p.Skl.IDLE)
         }),
-        S = E({
+        v = C({
             status: p.Skl.DND,
             currentStatus: e,
             description: _(p.Skl.DND)
         }),
-        v = E({
+        T = C({
             status: p.Skl.INVISIBLE,
             currentStatus: e,
             description: _(p.Skl.INVISIBLE)
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            O,
-            (0, i.jsx)(l.Clw, {}, 'menu-separator-statuses'),
             j,
+            (0, i.jsx)(l.Clw, {}, 'menu-separator-statuses'),
             S,
             v,
+            T,
             u || r
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
@@ -285,7 +286,7 @@ function O(e) {
                                       (0, o.oW)(!r);
                                   },
                                   dontCloseOnAction: !0,
-                                  children: x
+                                  children: E
                               },
                               'quiet-mode'
                           )

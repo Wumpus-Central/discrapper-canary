@@ -22,8 +22,8 @@ var l = i(442837),
     N = i(158776),
     g = i(699516),
     S = i(944486),
-    E = i(885110),
-    m = i(594174),
+    m = i(885110),
+    E = i(594174),
     _ = i(979651),
     P = i(181106),
     C = i(5192),
@@ -43,9 +43,9 @@ var l = i(442837),
     J = i(388032);
 function M(t, e) {
     let { analyticsLocations: M } = (0, c.ZP)(),
-        W = (0, l.e7)([m.default], () => m.default.getCurrentUser()),
+        W = (0, l.e7)([E.default], () => E.default.getCurrentUser()),
         X = (0, l.e7)([T.ZP], () => T.ZP.getSelfEmbeddedActivities()),
-        q = (0, l.Wu)([E.Z], () => E.Z.getActivities().filter((t) => null == t.application_id || !(null == X ? void 0 : X.has(t.application_id)))),
+        q = (0, l.Wu)([m.Z], () => m.Z.getActivities().filter((t) => null == t.application_id || !(null == X ? void 0 : X.has(t.application_id)))),
         $ = (0, l.Wu)([N.Z], () => (null != e ? N.Z.getActivities(e.id, null == t ? void 0 : t.getGuildId()) : []), [e, t]),
         z = (0, l.Wu)(
             [T.ZP],
@@ -298,7 +298,7 @@ function M(t, e) {
                           )
                       ));
         }),
-        td.length > 0 && td.push((0, n.jsx)(a.Clw, {})),
+        td.length > 0 && td.push((0, n.jsx)(a.Clw, {}, 'menu-separator')),
         $.forEach((i, l) => {
             let o = (0, D.Z)(i, F.xjy.EMBEDDED),
                 d = (0, D.Z)(i, F.xjy.CONTEXTLESS);

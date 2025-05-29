@@ -17,14 +17,14 @@ var r = n(255367),
     _ = n(496675),
     p = n(594174),
     m = n(979651),
-    j = n(630388),
-    M = n(5192),
+    M = n(630388),
+    j = n(5192),
     P = n(813872),
     S = n(981631),
     A = n(590433),
-    v = n(372897),
-    N = n(388032);
-function Z(e) {
+    Z = n(372897),
+    v = n(388032);
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -67,10 +67,10 @@ function I(e, t) {
         e
     );
 }
-function h(e, t, h, T, C) {
-    let D = l.useMemo(() => ({ [t]: [e.id] }), [t, e.id]),
+function h(e, t, h, T, D) {
+    let C = l.useMemo(() => ({ [t]: [e.id] }), [t, e.id]),
         U = null != T ? [T] : [];
-    (0, c.$)(D), (0, i.e7)([_.Z], () => _.Z.getGuildVersion(t), [t]);
+    (0, c.$)(C), (0, i.e7)([_.Z], () => _.Z.getGuildVersion(t), [t]);
     let R = (0, i.e7)([y.Z], () => y.Z.getGuild(t), [t]),
         L = (0, i.e7)(
             [p.default],
@@ -105,7 +105,7 @@ function h(e, t, h, T, C) {
             guildId: t,
             channelId: h,
             location: T,
-            appContext: C
+            appContext: D
         }),
         Y = (0, E.sE)(t, {
             location: T,
@@ -120,7 +120,7 @@ function h(e, t, h, T, C) {
                                 a.S89,
                                 {
                                     id: 'voice-mute',
-                                    label: N.intl.string(N.t.e9e9UV),
+                                    label: v.intl.string(v.t.e9e9UV),
                                     checked: B,
                                     color: 'danger',
                                     action: () => {
@@ -135,7 +135,7 @@ function h(e, t, h, T, C) {
                                 a.S89,
                                 {
                                     id: 'voice-deafen',
-                                    label: N.intl.string(N.t.hMA2GB),
+                                    label: v.intl.string(v.t.hMA2GB),
                                     checked: q,
                                     color: 'danger',
                                     action: () => u.Z.setServerDeaf(t, e.id, !q)
@@ -148,7 +148,7 @@ function h(e, t, h, T, C) {
                                 a.sNh,
                                 {
                                     id: 'voice-disconnect',
-                                    label: L ? N.intl.string(N.t['6vrfgo']) : N.intl.string(N.t['/jERiI']),
+                                    label: L ? v.intl.string(v.t['6vrfgo']) : v.intl.string(v.t['/jERiI']),
                                     color: 'danger',
                                     action: () => u.Z.setChannel(t, e.id, null)
                                 },
@@ -161,9 +161,9 @@ function h(e, t, h, T, C) {
             if (t.ctrlKey || t.metaKey)
                 try {
                     var l;
-                    await o.Z.setCommunicationDisabledDuration(n, r, A.UK.DURATION_60_SEC, null, T), Y(E.jQ.TIMEOUT), (0, a.showToast)((0, a.createToast)(N.intl.formatToPlainString(N.t.O9C3Nj, { user: null != (l = M.ZP.getName(n, null, e)) ? l : '' }), a.ToastType.SUCCESS));
+                    await o.Z.setCommunicationDisabledDuration(n, r, A.UK.DURATION_60_SEC, null, T), Y(E.jQ.TIMEOUT), (0, a.showToast)((0, a.createToast)(v.intl.formatToPlainString(v.t.O9C3Nj, { user: null != (l = j.ZP.getName(n, null, e)) ? l : '' }), a.ToastType.SUCCESS));
                 } catch (e) {
-                    (0, a.showToast)((0, a.createToast)(N.intl.string(N.t.epyCur), a.ToastType.FAILURE));
+                    (0, a.showToast)((0, a.createToast)(v.intl.string(v.t.epyCur), a.ToastType.FAILURE));
                 }
         },
         J = null,
@@ -171,15 +171,15 @@ function h(e, t, h, T, C) {
         $ = null != R && (_.Z.canManageUser(S.Plq.MANAGE_GUILD, e, R) || _.Z.canManageUser(S.Plq.MANAGE_ROLES, e, R));
     if (!L && null != R && null != V && null != V.joinedAt && (z || $) && R.hasFeature(S.oNc.GUILD_ONBOARDING_EVER_ENABLED)) {
         var ee;
-        J = (0, j.yE)(null != (ee = V.flags) ? ee : 0, v.q.BYPASSES_VERIFICATION)
+        J = (0, M.yE)(null != (ee = V.flags) ? ee : 0, Z.q.BYPASSES_VERIFICATION)
             ? (0, r.jsx)(
                   a.sNh,
                   {
                       id: 'verify',
-                      label: N.intl.string(N.t.NbhSIy),
+                      label: v.intl.string(v.t.NbhSIy),
                       action: () => {
                           var t;
-                          return u.Z.setMemberFlags(R.id, e.id, (0, j.mB)(null != (t = V.flags) ? t : 0, v.q.BYPASSES_VERIFICATION, !1));
+                          return u.Z.setMemberFlags(R.id, e.id, (0, M.mB)(null != (t = V.flags) ? t : 0, Z.q.BYPASSES_VERIFICATION, !1));
                       }
                   },
                   'verify'
@@ -188,10 +188,10 @@ function h(e, t, h, T, C) {
                   a.sNh,
                   {
                       id: 'verify',
-                      label: N.intl.string(N.t['6QlTeH']),
+                      label: v.intl.string(v.t['6QlTeH']),
                       action: () => {
                           var t;
-                          return u.Z.setMemberFlags(R.id, e.id, (0, j.mB)(null != (t = V.flags) ? t : 0, v.q.BYPASSES_VERIFICATION, !0));
+                          return u.Z.setMemberFlags(R.id, e.id, (0, M.mB)(null != (t = V.flags) ? t : 0, Z.q.BYPASSES_VERIFICATION, !0));
                       }
                   },
                   'verify'
@@ -210,7 +210,7 @@ function h(e, t, h, T, C) {
                                 a.sNh,
                                 {
                                     id: 'removetimeout',
-                                    label: N.intl.formatToPlainString(N.t.csKetb, { user: e.username }),
+                                    label: v.intl.formatToPlainString(v.t.csKetb, { user: e.username }),
                                     color: 'danger',
                                     action: () => {
                                         (0, s.q)({
@@ -226,7 +226,7 @@ function h(e, t, h, T, C) {
                                 a.sNh,
                                 {
                                     id: 'timeout',
-                                    label: N.intl.formatToPlainString(N.t.OhsOy8, { user: e.username }),
+                                    label: v.intl.formatToPlainString(v.t.OhsOy8, { user: e.username }),
                                     color: 'danger',
                                     action: (n) => {
                                         if (n.ctrlKey || n.metaKey) return X(n, t, e.id);
@@ -245,7 +245,7 @@ function h(e, t, h, T, C) {
                             a.sNh,
                             {
                                 id: 'kick',
-                                label: N.intl.formatToPlainString(N.t['9l/iTU'], { user: e.username }),
+                                label: v.intl.formatToPlainString(v.t['9l/iTU'], { user: e.username }),
                                 color: 'danger',
                                 action: () =>
                                     (0, a.ZDy)(async () => {
@@ -253,7 +253,7 @@ function h(e, t, h, T, C) {
                                         return (n) =>
                                             (0, r.jsx)(
                                                 l,
-                                                I(Z({}, n), {
+                                                I(N({}, n), {
                                                     location: T,
                                                     guildId: t,
                                                     user: e
@@ -269,7 +269,7 @@ function h(e, t, h, T, C) {
                             a.sNh,
                             {
                                 id: 'ban',
-                                label: N.intl.formatToPlainString(N.t.WnpUBg, { user: e.username }),
+                                label: v.intl.formatToPlainString(v.t.WnpUBg, { user: e.username }),
                                 color: 'danger',
                                 action: () =>
                                     (0, a.ZDy)(async () => {
@@ -277,7 +277,7 @@ function h(e, t, h, T, C) {
                                         return (n) =>
                                             (0, r.jsx)(
                                                 l,
-                                                I(Z({}, n), {
+                                                I(N({}, n), {
                                                     location: T,
                                                     guildId: t,
                                                     user: e

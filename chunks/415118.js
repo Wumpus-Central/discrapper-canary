@@ -23,8 +23,8 @@ var i = n(481060),
     P = n(88966),
     y = n(712301),
     S = n(47091),
-    C = n(991307),
-    M = n(37258),
+    M = n(991307),
+    C = n(37258),
     x = n(931617),
     I = n(700994),
     N = n(332031),
@@ -39,7 +39,7 @@ let _ = (0, a.Z)(
                     section: T.jXE.CHAT_USERNAME,
                     object: T.qAy.CONTEXT_MENU_ITEM
                 },
-                L = (0, M.Z)({
+                L = (0, C.Z)({
                     userId: t.id,
                     guildId: n
                 }),
@@ -57,7 +57,7 @@ let _ = (0, a.Z)(
                 }),
                 q = (0, Z.Z)({ user: t }),
                 G = (0, I.Z)(t.id),
-                F = (0, C.Z)(t.id),
+                F = (0, M.Z)(t.id),
                 Y = (0, c.Z)({
                     guildId: n,
                     userId: t.id,

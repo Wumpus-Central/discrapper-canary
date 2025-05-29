@@ -8,15 +8,15 @@ var l = n(255367),
     u = n(481060),
     c = n(493773),
     d = n(110924),
-    _ = n(600164),
-    b = n(313201),
+    b = n(600164),
+    _ = n(313201),
     f = n(237617),
     O = n(572539),
-    E = n(648159),
-    v = n(63063),
-    g = n(957115),
-    m = n(531578),
-    h = n(388032),
+    h = n(648159),
+    E = n(63063),
+    v = n(957115),
+    g = n(531578),
+    m = n(388032),
     p = n(297849),
     S = n(135771);
 function N() {
@@ -24,21 +24,21 @@ function N() {
         className: p.helpdeskLink,
         variant: 'text-xs/normal',
         color: 'text-muted',
-        children: h.intl.format(h.t.ybi2tL, { helpdeskURL: v.Z.getSubmitRequestURL() })
+        children: m.intl.format(m.t.ybi2tL, { helpdeskURL: E.Z.getSubmitRequestURL() })
     });
 }
 function T(e) {
     var t, n;
-    let { header: r, body: o, problems: v, transitionState: T, feedbackProblems: y = {}, otherKey: x, hasCloseButton: I, onSubmit: C, onClose: k, canDismissForever: j = !0, showHelpdeskLink: A = !0 } = e,
-        L = (0, d.Z)(v),
-        [R, D] = a.useState(!1),
+    let { header: r, body: o, problems: E, transitionState: T, feedbackProblems: y = {}, otherKey: x, hasCloseButton: I, onSubmit: C, onClose: k, canDismissForever: j = !0, showHelpdeskLink: A = !0 } = e,
+        R = (0, d.Z)(E),
+        [L, D] = a.useState(!1),
         [P, B] = a.useState(null),
-        [F, M] = a.useState(s().shuffle(v)),
+        [F, M] = a.useState(s().shuffle(E)),
         [U, w] = a.useState(''),
         [H, Z] = a.useState(!1),
-        $ = (0, b.Dt)(),
-        Y = (0, f.Z)(R),
-        G = (0, f.Z)(P),
+        $ = (0, _.Dt)(),
+        G = (0, f.Z)(L),
+        Y = (0, f.Z)(P),
         z = (0, f.Z)(C),
         K = (0, f.Z)(U),
         W = (0, f.Z)(H),
@@ -46,12 +46,12 @@ function T(e) {
         X = null != V;
     return (
         a.useEffect(() => {
-            s().isEqual(L, v) || M((0, g.Bi)(v, x));
-        }, [v, L, x]),
+            s().isEqual(R, E) || M((0, v.Bi)(E, x));
+        }, [E, R, x]),
         (0, c.ZP)(() => () => {
             z.current({
-                problem: G.current,
-                dontShowAgain: Y.current,
+                problem: Y.current,
+                dontShowAgain: G.current,
                 feedback: K.current,
                 closeClicked: W.current
             });
@@ -60,7 +60,7 @@ function T(e) {
             transitionState: T,
             'aria-labelledby': $,
             children: [
-                (0, l.jsx)(E.Z, {}),
+                (0, l.jsx)(h.Z, {}),
                 (0, l.jsxs)(u.xBx, {
                     separator: !1,
                     className: i()(p.headerContainer, S.headerContainer),
@@ -109,10 +109,10 @@ function T(e) {
                                   children: [
                                       (0, l.jsx)(u.Kx8, {
                                           value: U,
-                                          maxLength: m.iF,
+                                          maxLength: g.iF,
                                           onChange: w,
                                           className: S.textArea,
-                                          placeholder: null != (n = V.hint) ? n : h.intl.string(h.t.h95hcn)
+                                          placeholder: null != (n = V.hint) ? n : m.intl.string(m.t.h95hcn)
                                       }),
                                       A ? (0, l.jsx)(N, {}) : null
                                   ]
@@ -123,7 +123,7 @@ function T(e) {
                 j || X
                     ? (0, l.jsx)(u.mzw, {
                           className: i()(p.footer, X ? S.submitFooter : S.modalFooter),
-                          direction: _.Z.Direction.HORIZONTAL,
+                          direction: b.Z.Direction.HORIZONTAL,
                           children: X
                               ? (0, l.jsxs)(l.Fragment, {
                                     children: [
@@ -135,12 +135,12 @@ function T(e) {
                                             onClick: () => {
                                                 B(null), w('');
                                             },
-                                            children: h.intl.string(h.t['13/7kZ'])
+                                            children: m.intl.string(m.t['13/7kZ'])
                                         }),
                                         (0, l.jsx)(u.zxk, {
                                             size: u.zxk.Sizes.SMALL,
                                             onClick: k,
-                                            children: h.intl.string(h.t.geKm7u)
+                                            children: m.intl.string(m.t.geKm7u)
                                         })
                                     ]
                                 })
@@ -148,11 +148,11 @@ function T(e) {
                                 ? (0, l.jsx)(u.XZJ, {
                                       size: 24,
                                       type: u.XZJ.Types.INVERTED,
-                                      value: R,
-                                      onChange: () => D(!R),
+                                      value: L,
+                                      onChange: () => D(!L),
                                       children: (0, l.jsx)(u.Text, {
                                           variant: 'text-md/normal',
-                                          children: h.intl.string(h.t.lkWab2)
+                                          children: m.intl.string(m.t.lkWab2)
                                       })
                                   })
                                 : null

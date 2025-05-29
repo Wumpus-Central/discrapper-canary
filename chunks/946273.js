@@ -1,7 +1,9 @@
 n.d(t, {
     BK: () => p,
-    CX: () => g,
-    mm: () => m,
+    CX: () => b,
+    lD: () => f,
+    mm: () => g,
+    nX: () => m,
     vV: () => d
 }),
     n(997841),
@@ -53,14 +55,22 @@ let d = (e, t) => {
     );
 };
 function p(e, t) {
-    let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Z];
-    return null != t && n.canManageUser(u.Plq.KICK_MEMBERS, e, t) && !e.isNonUserBot();
+    let [n, r] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Z, o.ZP];
+    return null != t && m(e, t, [n]) && null != r.getMember(t.id, e.id);
 }
 function m(e, t) {
     let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Z];
-    return null != t && n.canManageUser(u.Plq.BAN_MEMBERS, e, t) && !e.isNonUserBot() && !e.bot;
+    return null != t && n.canManageUser(u.Plq.KICK_MEMBERS, e, t) && !e.isNonUserBot();
 }
 function g(e, t) {
+    let [n, r] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Z, o.ZP];
+    return null != t && f(e, t, [n]) && null != r.getMember(t.id, e.id);
+}
+function f(e, t) {
+    let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Z];
+    return null != t && n.canManageUser(u.Plq.BAN_MEMBERS, e, t) && !e.isNonUserBot() && !e.bot;
+}
+function b(e, t) {
     let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Z];
     return null != e && null != t && n.canManageUser(u.Plq.MANAGE_MESSAGES, e, t) && !e.isNonUserBot();
 }

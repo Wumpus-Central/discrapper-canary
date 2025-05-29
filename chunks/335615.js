@@ -399,26 +399,33 @@ class eo extends i.Component {
                 let { section: t } = e,
                     { groups: n, channel: l } = this.props,
                     a = n[t];
-                return (0, O.R)(a)
-                    ? (0, i.createElement)(O.Z, $(J({}, a), { key: 'section-'.concat(t) }))
-                    : 0 === t
-                      ? (0, r.jsx)(
-                            k.Z,
-                            {
-                                tutorialId: 'whos-online',
-                                position: 'left',
-                                inlineSpecs: en,
-                                children: (0, r.jsx)(el, $(J({}, a), { guildId: l.guild_id }))
-                            },
-                            'section-'.concat(t)
-                        )
-                      : (0, i.createElement)(
-                            el,
-                            $(J({}, a), {
-                                key: 'section-'.concat(t),
-                                guildId: l.guild_id
-                            })
-                        );
+                if ((0, O.R)(a)) return (0, i.createElement)(O.Z, $(J({}, a), { key: 'section-'.concat(t) }));
+                if (0 === t) {
+                    let { key: e } = a;
+                    return (0, r.jsx)(
+                        k.Z,
+                        {
+                            tutorialId: 'whos-online',
+                            position: 'left',
+                            inlineSpecs: en,
+                            children: (0, i.createElement)(
+                                el,
+                                $(J({}, a), {
+                                    key: 'section-'.concat(e),
+                                    guildId: l.guild_id
+                                })
+                            )
+                        },
+                        'section-'.concat(t)
+                    );
+                }
+                return (0, i.createElement)(
+                    el,
+                    $(J({}, a), {
+                        key: 'section-'.concat(t),
+                        guildId: l.guild_id
+                    })
+                );
             }),
             Q(this, 'getRowProps', (e) => {
                 let { groups: t, rows: n } = this.props,

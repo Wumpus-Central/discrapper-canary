@@ -1,4 +1,4 @@
-n.d(t, { default: () => v });
+n.d(t, { default: () => E });
 var l = n(255367),
     a = n(73800),
     r = n(442837),
@@ -8,35 +8,35 @@ var l = n(255367),
     u = n(605236),
     c = n(624659),
     d = n(594174),
-    _ = n(626135),
-    b = n(924400),
+    b = n(626135),
+    _ = n(924400),
     f = n(987562),
     O = n(981631),
-    E = n(388032);
-function v(e) {
-    let { transitionState: t, onClose: v, channel: g } = e,
-        m = (0, s.Z)(f.TL),
-        h = (0, r.e7)([d.default], () => d.default.getUser(g.getRecipientId()));
+    h = n(388032);
+function E(e) {
+    let { transitionState: t, onClose: E, channel: v } = e,
+        g = (0, s.Z)(f.TL),
+        m = (0, r.e7)([d.default], () => d.default.getUser(v.getRecipientId()));
     return (
         a.useEffect(() => {
-            _.default.track(O.rMx.OPEN_MODAL, { type: 'DM Mute Feedback Modal' });
+            b.default.track(O.rMx.OPEN_MODAL, { type: 'DM Mute Feedback Modal' });
         }, []),
         (0, l.jsx)(c.Z, {
             hasCloseButton: !0,
-            header: E.intl.string(E.t.SxsBFB),
-            body: E.intl.formatToPlainString(E.t['7kb7z8'], { username: null == h ? void 0 : h.username }),
-            problems: m,
+            header: h.intl.string(h.t.SxsBFB),
+            body: h.intl.formatToPlainString(h.t['7kb7z8'], { username: null == m ? void 0 : m.username }),
+            problems: g,
             feedbackProblems: {
                 [f.YA.OTHER]: {
-                    subheader: E.intl.string(E.t.VQkdtL),
-                    hint: E.intl.string(E.t.EG3N9f)
+                    subheader: h.intl.string(h.t.VQkdtL),
+                    hint: h.intl.string(h.t.EG3N9f)
                 }
             },
             onSubmit: function (e) {
                 let { problem: t, dontShowAgain: a, feedback: r, closeClicked: s } = e;
                 a && (0, u.EW)(i.z.USER_DM_MUTE_FEEDBACK);
                 let c = null == t || s;
-                (0, b.Z)(t, r, c, a),
+                (0, _.Z)(t, r, c, a),
                     c ||
                         (0, o.ZDy)(async () => {
                             let { default: e } = await n.e('14466').then(n.bind(n, 729328));
@@ -67,11 +67,11 @@ function v(e) {
                                                 });
                                         }
                                         return e;
-                                    })({ body: E.intl.string(E.t.sYrCub) }, t)
+                                    })({ body: h.intl.string(h.t.sYrCub) }, t)
                                 );
                         });
             },
-            onClose: v,
+            onClose: E,
             transitionState: t,
             otherKey: f.YA.OTHER,
             showHelpdeskLink: !1
