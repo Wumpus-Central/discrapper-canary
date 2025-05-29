@@ -19798,8 +19798,7 @@ span.clanTag__5d473 {
 }
 
 .custom-user-profile-theme.theme-dark .themeColor_fb7f94.secondary_fb7f94 {
-    background: var(--opacity-white-24);
-    border: var(--opacity-white-8)
+    background: var(--opacity-white-24)
 }
 
 .custom-user-profile-theme.theme-dark .themeColor_fb7f94.secondary_fb7f94:hover {
@@ -19811,8 +19810,7 @@ span.clanTag__5d473 {
 }
 
 .custom-user-profile-theme.theme-light .themeColor_fb7f94.secondary_fb7f94 {
-    background: var(--opacity-white-72);
-    border: var(--opacity-white-8)
+    background: var(--opacity-white-72)
 }
 
 .custom-user-profile-theme.theme-light .themeColor_fb7f94.secondary_fb7f94:hover {
@@ -42249,7 +42247,6 @@ img.thumbnail__0f2e8 {
 }
 
 .custom-user-profile-theme .upsellButton__5997d {
-    border: var(--opacity-white-8);
     color: var(--interactive-active)
 }
 
