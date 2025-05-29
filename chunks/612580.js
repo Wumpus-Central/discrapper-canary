@@ -1,19 +1,19 @@
 t.a(
     n,
-    async function (r, a) {
+    async function (r, i) {
         try {
-            var i = t(463281),
-                u = r([i]),
-                [i] = u.then ? (await u)() : u;
-            await t.v(e, n.id, 'd0d0996c20c03af2', {
+            var a = t(463281),
+                f = r([a]),
+                [a] = f.then ? (await f)() : f;
+            await t.v(e, n.id, 'e8dcd95269d20ee0', {
                 './index_bg.js': {
-                    __wbindgen_string_new: i.h4,
-                    __wbindgen_rethrow: i.nD
+                    __wbindgen_string_new: a.h4,
+                    __wbindgen_rethrow: a.nD
                 }
             }),
-                a();
+                i();
         } catch (n) {
-            a(n);
+            i(n);
         }
     },
     1

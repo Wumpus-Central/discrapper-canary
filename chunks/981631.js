@@ -3884,6 +3884,7 @@ var n_ = (function (e) {
             (e.CACHE_STORE_CACHE_SKIPPED = 'cache_store_cache_skipped'),
             (e.GATEWAY_CONNECT_SKIPPED = 'gateway_connect_skipped'),
             (e.POST_GATEWAY_CONNECT_SKIPPED = 'post_gateway_connect_skipped'),
+            (e.GATEWAY_BRIDGE_TIMEOUT = 'gateway_bridge_timeout'),
             (e.GATEWAY_SOCKET_RESET = 'gateway_socket_reset'),
             (e.SESSION_START_CLIENT = 'session_start_client'),
             (e.APPLE_PARTNER_IAP_REQUEST_SENT = 'apple_partner_iap_request_sent'),

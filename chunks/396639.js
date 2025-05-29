@@ -140,8 +140,8 @@ let N = {
             }, [i, e, l, o, u, a]);
         return {
             emitOrbCheckoutPaymentFlowEvent: (0, r.useCallback)(
-                (e) => {
-                    let n = Date.now() - s;
+                (e, n) => {
+                    let i = Date.now() - s;
                     e === C.rMx.PAYMENT_FLOW_STARTED
                         ? f.default.track(
                               C.rMx.PAYMENT_FLOW_STARTED,
@@ -157,28 +157,36 @@ let N = {
                                 v(S({}, m), {
                                     has_saved_payment_source: t,
                                     initial_step: d.h8.REVIEW,
-                                    duration_ms: n
+                                    duration_ms: i
                                 })
                             )
                           : e === C.rMx.PAYMENT_FLOW_CANCELED
-                            ? f.default.track(C.rMx.PAYMENT_FLOW_CANCELED, v(S({}, m), { duration_ms: n }))
+                            ? f.default.track(C.rMx.PAYMENT_FLOW_CANCELED, v(S({}, m), { duration_ms: i }))
                             : e === C.rMx.PAYMENT_FLOW_COMPLETED
                               ? f.default.track(
                                     C.rMx.PAYMENT_FLOW_COMPLETED,
                                     v(S({}, m), {
                                         payment_gateway: O.ht.VIRTUAL_CURRENCY,
-                                        duration_ms: n
+                                        duration_ms: i
                                     })
                                 )
                               : e === C.rMx.PAYMENT_FLOW_SUCCEEDED
-                                ? f.default.track(C.rMx.PAYMENT_FLOW_SUCCEEDED, v(S({}, m), { duration_ms: n }))
+                                ? f.default.track(C.rMx.PAYMENT_FLOW_SUCCEEDED, v(S({}, m), { duration_ms: i }))
                                 : e === C.rMx.PAYMENT_FLOW_FAILED &&
                                   f.default.track(
                                       C.rMx.PAYMENT_FLOW_FAILED,
-                                      v(S({}, m), {
-                                          payment_gateway: O.ht.VIRTUAL_CURRENCY,
-                                          duration_ms: n
-                                      })
+                                      S(
+                                          v(S({}, m), {
+                                              payment_gateway: O.ht.VIRTUAL_CURRENCY,
+                                              duration_ms: i
+                                          }),
+                                          null != n
+                                              ? {
+                                                    payment_error_code: n.code,
+                                                    error_message: n.message
+                                                }
+                                              : {}
+                                      )
                                   );
                 },
                 [s, m, t]
@@ -201,7 +209,7 @@ let N = {
                 d === u.A.COMPLETED && n();
             }, [d, n]),
             (0, r.useEffect)(() => {
-                null != S && null !== N.current && (f(C.rMx.PAYMENT_FLOW_FAILED), (N.current = null));
+                null != S && null !== N.current && (f(C.rMx.PAYMENT_FLOW_FAILED, S), (N.current = null));
             }, [S, f]);
         let I = (0, r.useCallback)(() => {
             (N.current = T),

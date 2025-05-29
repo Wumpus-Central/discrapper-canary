@@ -1,5 +1,5 @@
 t.d(n, {
-    HY: () => o,
+    HY: () => u,
     nv: () => i,
     xv: () => l
 });
@@ -9,12 +9,12 @@ function l(e) {
     return n;
 }
 function i(e) {
-    let { children: n } = e;
+    let { siblings: n, index: t, children: l } = e;
     return (0, r.jsxs)('span', {
-        children: [n, (0, r.jsx)('br', {})]
+        children: [l, t < n.length - 1 ? (0, r.jsx)('br', {}) : null]
     });
 }
-function o() {
+function u() {
     return (0, r.jsx)('p', {});
 }
 t(73800);

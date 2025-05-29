@@ -415,7 +415,7 @@ let ee = u.ZP.connectStores([N.Z], (e) => {
             reactors: [],
             hasMore: !1
         };
-    let o = Object.values(r),
+    let o = r.values().toArray(),
         l = (i === T.O.BURST ? n.burst_count : n.count) > o.length;
     return {
         reactors: o,

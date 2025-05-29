@@ -403,6 +403,7 @@ var r = (function (e) {
             (e[(e.REPORT_TO_MOD_NEW_TAG = 542)] = 'REPORT_TO_MOD_NEW_TAG'),
             (e[(e.NITRO_TENURE_BADGE_LEVEL_UP = 544)] = 'NITRO_TENURE_BADGE_LEVEL_UP'),
             (e[(e.ROBLOX_CONNECTION_COACHMARK = 545)] = 'ROBLOX_CONNECTION_COACHMARK'),
+            (e[(e.VOICE_FILTER_FIRST_USE_COACHMARK = 546)] = 'VOICE_FILTER_FIRST_USE_COACHMARK'),
             e
         );
     })({}),
