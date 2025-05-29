@@ -1,11 +1,11 @@
 n.d(t, {
     CM: () => p,
     UT: () => E,
-    _Z: () => A,
+    _Z: () => N,
     kj: () => f,
     oC: () => _,
-    s3: () => N,
-    uA: () => T,
+    s3: () => h,
+    uA: () => A,
     xh: () => m
 }),
     n(388685);
@@ -93,7 +93,7 @@ function p(e) {
 function m(e) {
     _(e);
 }
-function N(e) {
+function h(e) {
     i.hW.updateAsync(
         'favorites',
         (t) => {
@@ -106,7 +106,7 @@ function N(e) {
         i.fy.FREQUENT_USER_ACTION
     );
 }
-function T(e, t) {
+function A(e, t) {
     i.hW.updateAsync(
         'favorites',
         (n) => {
@@ -115,7 +115,7 @@ function T(e, t) {
         i.fy.FREQUENT_USER_ACTION
     );
 }
-function A() {
+function N() {
     i.hW.updateAsync(
         'favorites',
         (e) => {

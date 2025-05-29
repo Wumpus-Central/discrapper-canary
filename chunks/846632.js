@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     o = n.n(i),
-    a = n(442837),
-    l = n(481060),
+    l = n(442837),
+    a = n(481060),
     s = n(840720),
     d = n(742409),
     c = n(430824),
@@ -80,22 +80,23 @@ function m(e) {
             }
             return i;
         })(e, ['guildId']);
-    let j = (0, a.e7)([c.Z], () => c.Z.getGuild(i)),
-        O = (0, a.e7)(
+    let j = (0, l.e7)([c.Z], () => c.Z.getGuild(i)),
+        O = (0, l.e7)(
             [u.default],
             () => {
-                var e, t;
-                return (null == (t = u.default.getCurrentUser()) || null == (e = t.primaryGuild) ? void 0 : e.identityGuildId) === i;
+                var e;
+                let t = null == (e = u.default.getCurrentUser()) ? void 0 : e.primaryGuild;
+                return (null == t ? void 0 : t.identityGuildId) === i && (null == t ? void 0 : t.identityEnabled) === !0;
             },
             [i]
         ),
-        { isAdopting: y, onAdoptTag: v, onEditProfile: x } = (0, f.Z)(i, m.onClose);
+        { isAdopting: v, onAdoptTag: y, onEditProfile: x } = (0, f.Z)(i, m.onClose);
     if (null != j && (0, g.up)(j) && (0, g.jq)(j))
         return (0, r.jsxs)(
-            l.Y0X,
-            h(_({ size: l.CgR.DYNAMIC }, m), {
+            a.Y0X,
+            h(_({ size: a.CgR.DYNAMIC }, m), {
                 children: [
-                    (0, r.jsxs)(l.hzk, {
+                    (0, r.jsxs)(a.hzk, {
                         className: C.modalContent,
                         scrollbarType: 'none',
                         children: [
@@ -107,11 +108,11 @@ function m(e) {
                                         (0, r.jsxs)('div', {
                                             className: C.headerContainer,
                                             children: [
-                                                (0, r.jsx)(l.X6q, {
+                                                (0, r.jsx)(a.X6q, {
                                                     variant: 'heading-lg/bold',
                                                     children: b.intl.string(p.default.OvKPi4)
                                                 }),
-                                                (0, r.jsx)(l.Text, {
+                                                (0, r.jsx)(a.Text, {
                                                     variant: 'text-md/normal',
                                                     children: b.intl.string(p.default.kHxfDw)
                                                 })
@@ -129,24 +130,24 @@ function m(e) {
                                         (0, r.jsxs)('div', {
                                             className: C.buttonContainer,
                                             children: [
-                                                (0, r.jsx)(l.ua7, {
+                                                (0, r.jsx)(a.ua7, {
                                                     text: b.intl.string(p.default.WlENZm),
                                                     tooltipContentClassName: C.tooltip,
                                                     shouldShow: O,
                                                     children: (e) =>
                                                         (0, r.jsx)(
-                                                            l.zxk,
+                                                            a.zxk,
                                                             h(_({}, e), {
                                                                 fullWidth: !0,
-                                                                onClick: v,
-                                                                submitting: y,
+                                                                onClick: y,
+                                                                submitting: v,
                                                                 disabled: O,
                                                                 children: b.intl.string(b.t.jwEaiY)
                                                             })
                                                         )
                                                 }),
-                                                (0, r.jsx)(l.zxk, {
-                                                    color: l.Ttl.PRIMARY,
+                                                (0, r.jsx)(a.zxk, {
+                                                    color: a.Ttl.PRIMARY,
                                                     fullWidth: !0,
                                                     onClick: x,
                                                     children: b.intl.string(b.t.s5vZlZ)
@@ -166,7 +167,7 @@ function m(e) {
                             })
                         ]
                     }),
-                    (0, r.jsx)(l.olH, {
+                    (0, r.jsx)(a.olH, {
                         className: C.close,
                         onClick: m.onClose
                     })

@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(255367);
 n(73800);
 var r = n(704215),
-    s = n(481060),
-    o = n(13245),
+    o = n(481060),
+    s = n(13245),
     l = n(312839),
     a = n(706140),
     c = n(809357),
@@ -36,21 +36,21 @@ function g(e) {
             children: [
                 (0, i.jsx)('div', {
                     className: p.iconContainer,
-                    children: (0, i.jsx)(s.S6n, {
+                    children: (0, i.jsx)(o.S6n, {
                         size: 'custom',
                         color: 'currentColor',
                         height: 28,
                         width: 28
                     })
                 }),
-                (0, i.jsx)(s.Text, {
+                (0, i.jsx)(o.Text, {
                     variant: 'text-sm/normal',
                     children: h.intl.string(h.t.EFRNtL)
                 })
             ]
         }),
         onDismissClick: (e, n) => {
-            r('dismiss'), t(u.L.DISMISS), o.Z.updateNotificationStatus(n);
+            r('dismiss'), t(u.L.DISMISS), s.Z.updateNotificationStatus(n);
         },
         onNotificationShow: () => {
             t(u.L.AUTO_DISMISS), n();

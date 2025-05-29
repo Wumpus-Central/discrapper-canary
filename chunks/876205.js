@@ -2,20 +2,20 @@ n.d(t, { Z: () => u });
 var i = n(255367);
 n(73800);
 var r = n(442837),
-    s = n(481060),
-    o = n(556296),
+    o = n(481060),
+    s = n(556296),
     l = n(13140),
     a = n(981631),
     c = n(42124);
 let d = {
     [a.kg4.TOGGLE_MUTE]: {
-        slash: s.nRN,
-        default: s.S6n
+        slash: o.nRN,
+        default: o.S6n
     }
 };
 function u(e) {
     let { value: t, action: n, shouldShow: a } = e,
-        u = (0, r.e7)([o.ZP], () => o.ZP.getKeybindForAction(n, !1, !0));
+        u = (0, r.e7)([s.ZP], () => s.ZP.getKeybindForAction(n, !1, !0));
     if (null == u || !a) return null;
     let h = l.BB(u.shortcut),
         p = d[n],
@@ -28,7 +28,7 @@ function u(e) {
                 size: 'xs',
                 color: 'currentColor'
             }),
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(o.Text, {
                 variant: 'text-xxs/semibold',
                 className: c.keybindIndicatorText,
                 children: h

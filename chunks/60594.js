@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(410575),
     v = n(579806),
     j = n(636449),
-    S = n(317381),
-    b = n(89425),
+    b = n(317381),
+    S = n(89425),
     C = n(812206),
     y = n(835473),
     O = n(600164),
@@ -123,10 +123,10 @@ function ef(e) {
     let { selectGuild: F = !1, selectSource: ee = !0, guildId: ef, analyticsLocation: em, onClose: eh, transitionState: ep } = e,
         { preset: ex, resolution: eg, fps: e_, soundshareEnabled: ev } = (0, m.cj)([R.Z], () => R.Z.getState()),
         ej = l.useRef(null),
-        eS = l.useRef(Date.now()),
-        eb = (0, m.e7)([L.Z, k.Z], () => k.Z.getChannel(L.Z.getVoiceChannelId())),
+        eb = l.useRef(Date.now()),
+        eS = (0, m.e7)([L.Z, k.Z], () => k.Z.getChannel(L.Z.getVoiceChannelId())),
         eC = (0, m.e7)([N.ZP, B.Z], () => ((0, W.isWindows)() ? (0, X.Z)(N.ZP, B.Z) : null)),
-        ey = (0, m.e7)([S.ZP], () => S.ZP.getCurrentEmbeddedActivity()),
+        ey = (0, m.e7)([b.ZP], () => b.ZP.getCurrentEmbeddedActivity()),
         eO = (null == ey ? void 0 : ey.location.kind) === f.E.CONTEXTLESS,
         eZ = (0, y.q)(null == ey ? void 0 : ey.applicationId),
         [eI, ew] = l.useState(null);
@@ -141,7 +141,7 @@ function ef(e) {
             let e = D.default.getCurrentUser();
             return a()(null != e, 'GoLiveModal: user cannot be undefined'), e;
         }),
-        eE = null != (t = null == eb ? void 0 : eb.getGuildId()) ? t : ef,
+        eE = null != (t = null == eS ? void 0 : eS.getGuildId()) ? t : ef,
         eT = (0, m.e7)([A.Z], () => {
             var e;
             return null != eE ? (null == (e = A.Z.getGuild(eE)) ? void 0 : e.premiumTier) : null;
@@ -175,17 +175,17 @@ function ef(e) {
         [e5, e3] = l.useState(ev),
         [e7, e4] = l.useState(null != (o = P.I0.getSetting()) && o),
         [e8, e6] = l.useState(null != ef ? ef : null),
-        e9 = null != (d = null == eb ? void 0 : eb.id) ? d : eH,
+        e9 = null != (d = null == eS ? void 0 : eS.id) ? d : eH,
         [te, tt] = l.useState(eM ? '' : void 0),
         tn = (0, I.Q3)('GoLiveModal');
     async function tr() {
         var e, t;
         a()(null != eC || null != eY || (null != ey && null != eI), 'got nothing to stream');
-        let n = null != (e = null == eb ? void 0 : eb.id) ? e : eH;
+        let n = null != (e = null == eS ? void 0 : eS.id) ? e : eH;
         a()(null != n, 'Received null target channel ID');
         let r = k.Z.getChannel(n),
             l = null != (t = null == r ? void 0 : r.getGuildId()) ? t : ef;
-        if (null == eb && !(await (0, b.Z)({ channelId: n }))) return;
+        if (null == eS && !(await (0, S.Z)({ channelId: n }))) return;
         let i = eq,
             s = e$,
             o = e0;
@@ -211,7 +211,7 @@ function ef(e) {
                 sound: e5,
                 previewDisabled: e7,
                 nativePickerStyleUsed: te,
-                goLiveModalDurationMs: Date.now() - eS.current
+                goLiveModalDurationMs: Date.now() - eb.current
             })
         ),
             null != eD && eB(el.L.AUTO_DISMISS),
@@ -244,7 +244,7 @@ function ef(e) {
                 let l = (0, V.Z)(e, eN, eT),
                     [i, s] = null != l ? l : [t, n];
                 e !== eq && ((t = i), (n = s));
-                let o = null != (r = null == eb ? void 0 : eb.id) ? r : eH;
+                let o = null != (r = null == eS ? void 0 : eS.id) ? r : eH;
                 a()(null != o, 'Received null target channel ID');
                 let c = k.Z.getChannel(o);
                 if (!(0, H.Z)(e, t, n, eN, eT, c)) {
@@ -253,7 +253,7 @@ function ef(e) {
                 }
                 n !== e0 && e2(n), t !== e$ && e1(t), i !== t || s !== n ? eQ(en.tI.PRESET_CUSTOM) : e !== eq && eQ(e);
             },
-            [eb, eH, eN, eT, e0, e$, eq]
+            [eS, eH, eN, eT, e0, e$, eq]
         ),
         ts = l.useCallback(
             (e) => {
@@ -384,7 +384,7 @@ function ef(e) {
                     children: (0, r.jsx)('div', {
                         className: eo.modalSize,
                         children: (0, r.jsx)(K.Z, {
-                            selectedChannelId: null != (T = null == eb ? void 0 : eb.id) ? T : eH,
+                            selectedChannelId: null != (T = null == eS ? void 0 : eS.id) ? T : eH,
                             selectedPreset: eq,
                             selectedResolution: e$,
                             selectedSource: eY,

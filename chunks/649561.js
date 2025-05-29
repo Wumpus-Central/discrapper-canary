@@ -1,8 +1,8 @@
 n.d(t, { Z: () => D }), n(388685), n(358797);
 var i = n(255367),
     r = n(73800),
-    s = n(120356),
-    o = n.n(s),
+    o = n(120356),
+    s = n.n(o),
     l = n(392711),
     a = n.n(l),
     c = n(818405),
@@ -14,12 +14,12 @@ var i = n(255367),
     g = n(797614),
     m = n(593481),
     y = n(703656),
-    v = n(254761),
-    _ = n(70956),
+    _ = n(254761),
+    v = n(70956),
     O = n(960048),
     b = n(145597),
-    x = n(692546),
-    E = n(518084),
+    E = n(692546),
+    x = n(518084),
     S = n(987650),
     C = n(981631),
     j = n(388032),
@@ -37,7 +37,7 @@ function I(e, t, n) {
         e
     );
 }
-let P = 10 * _.Z.Millis.SECOND;
+let P = 10 * v.Z.Millis.SECOND;
 function N() {
     let e = (0, b.getPID)(),
         t = (0, b.getRPCAuthToken)();
@@ -68,7 +68,7 @@ class w extends r.PureComponent {
             { notificationTimer: r } = this;
         return null == r
             ? null
-            : (0, i.jsx)(x.Z, {
+            : (0, i.jsx)(E.Z, {
                   contentDomRef: this.contentDomRef,
                   observe: !1,
                   children: (0, i.jsx)(h.f6W, {
@@ -76,12 +76,12 @@ class w extends r.PureComponent {
                       children: (r) =>
                           (0, i.jsxs)(h.P3F, {
                               innerRef: this.contentDomRef,
-                              className: o()(r, Z.container),
+                              className: s()(r, Z.container),
                               onClick: (e) => e.stopPropagation(),
                               children: [
                                   (0, i.jsx)(m.ZP, {
                                       expand: !0,
-                                      icon: (0, i.jsx)(v.Z, {
+                                      icon: (0, i.jsx)(_.Z, {
                                           width: 40,
                                           height: 40,
                                           className: Z.notificationIcon
@@ -94,11 +94,11 @@ class w extends r.PureComponent {
                                       locked: !1
                                   }),
                                   n && null != e
-                                      ? (0, i.jsxs)(E.ZP, {
+                                      ? (0, i.jsxs)(x.ZP, {
                                             className: Z.stackTrace,
                                             children: [
-                                                (0, i.jsx)(E.ZP.Bar, { children: 'Error Details' }),
-                                                (0, i.jsx)(E.ZP.Content, {
+                                                (0, i.jsx)(x.ZP.Bar, { children: 'Error Details' }),
+                                                (0, i.jsx)(x.ZP.Content, {
                                                     className: Z.stackTraceCode,
                                                     children: (0, i.jsx)('code', {
                                                         className: Z.code,
@@ -187,13 +187,13 @@ class k extends r.PureComponent {
             ]
         }),
             setImmediate(() => window.addEventListener('click', N));
-        let s = O.Z.captureCrash(e, { extra: t });
+        let o = O.Z.captureCrash(e, { extra: t });
         p.Z.track(C.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
             error_stack: e.stack,
-            sentry_issue_id: s,
+            sentry_issue_id: o,
             error_level: 'fatal'
         }),
             T();

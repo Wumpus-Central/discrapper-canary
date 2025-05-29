@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var i = n(278323),
     r = n(13245),
-    s = n(45114),
-    o = n(593481),
+    o = n(45114),
+    s = n(593481),
     l = n(237997),
     a = n(312839),
     c = n(981631),
@@ -25,7 +25,7 @@ function h(e, t, n, h) {
         icon: g,
         title: p,
         body: f,
-        hint: (e) => (0, o.QR)(e, (0, a.P)(), u.t['Odi54+']),
+        hint: (e) => (0, s.QR)(e, (0, a.P)(), u.t['Odi54+']),
         confirmText: u.intl.string(u.t['fgP/wc']),
         cancelText: u.intl.string(u.t.tpXzJy),
         onNotificationShow: () => {
@@ -42,7 +42,7 @@ function h(e, t, n, h) {
                 r.Z.updateNotificationStatus(n);
         },
         onCancelClick: (t, n) => {
-            (0, s.In)(e.id, !0, !0), r.Z.updateNotificationStatus(n), y('decline');
+            (0, o.In)(e.id, !0, !0), r.Z.updateNotificationStatus(n), y('decline');
         },
         onDismissClick: () => {
             y('dismiss');

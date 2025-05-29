@@ -5,8 +5,8 @@ n.d(t, {
     n(35282);
 var i = n(13245),
     r = n(556296),
-    s = n(237997),
-    o = n(13140),
+    o = n(237997),
+    s = n(13140),
     l = n(981631),
     a = n(987650);
 function c(e, t) {
@@ -15,8 +15,8 @@ function c(e, t) {
             i.Z.track(l.rMx.NOTIFICATION_VIEWED, t), i.Z.notificationEvent(e, a.bv.Viewed);
         },
         trackClick(n) {
-            var r, o;
-            let c = s.default.isInstanceLocked() ? l.Sbl.LOCKED_OVERLAY : l.Sbl.UNLOCKED_OVERLAY;
+            var r, s;
+            let c = o.default.isInstanceLocked() ? l.Sbl.LOCKED_OVERLAY : l.Sbl.UNLOCKED_OVERLAY;
             i.Z.track(
                 l.rMx.NOTIFICATION_CLICKED,
                 ((r = (function (e) {
@@ -44,13 +44,13 @@ function c(e, t) {
                     }
                     return e;
                 })({}, t)),
-                (o = o =
+                (s = s =
                     {
                         location: c,
                         action_type: n
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(o))
+                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(s))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -58,8 +58,8 @@ function c(e, t) {
                               n.push.apply(n, i);
                           }
                           return n;
-                      })(Object(o)).forEach(function (e) {
-                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(o, e));
+                      })(Object(s)).forEach(function (e) {
+                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(s, e));
                       }),
                 r)
             ),
@@ -69,5 +69,5 @@ function c(e, t) {
 }
 function d() {
     let e = r.ZP.getOverlayKeybind();
-    return null != e ? (0, o.BB)(e.shortcut, !0).split(' + ') : ['???'];
+    return null != e ? (0, s.BB)(e.shortcut, !0).split(' + ') : ['???'];
 }

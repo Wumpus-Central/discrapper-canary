@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var i = n(255367);
 n(73800);
 var r = n(704215),
-    s = n(13245),
-    o = n(605236),
+    o = n(13245),
+    s = n(605236),
     l = n(593481),
     a = n(371651),
     c = n(237997),
@@ -78,7 +78,7 @@ function m(e) {
             }
             return e;
         })(f(), e),
-        { trackView: y, trackClick: v } = (0, u.R)(m, { notif_type: m });
+        { trackView: y, trackClick: _ } = (0, u.R)(m, { notif_type: m });
     return {
         icon: n,
         title: l,
@@ -95,17 +95,17 @@ function m(e) {
         confirmText: t ? p.intl.string(p.t.TxyTbm) : void 0,
         onConfirmClick: t
             ? () => {
-                  v('unlock'), s.Z.setInputLocked(!1, (0, d.getPID)());
+                  _('unlock'), o.Z.setInputLocked(!1, (0, d.getPID)());
               }
             : void 0,
         onNotificationShow: () => {
-            y(), t && (0, o.EW)(r.z.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX);
+            y(), t && (0, s.EW)(r.z.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX);
         },
         onNotificationClick: (e, t) => {
-            v('unlock'), a.default.isOverlayOOPEnabledForPid((0, d.getPID)()) ? s.Z.setInputLocked(!1, (0, d.getPID)()) : c.default.isInstanceLocked() && s.Z.setInstanceLocked(!1);
+            _('unlock'), a.default.isOverlayOOPEnabledForPid((0, d.getPID)()) ? o.Z.setInputLocked(!1, (0, d.getPID)()) : c.default.isInstanceLocked() && o.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
-            v('dismiss');
+            _('dismiss');
         }
     };
 }

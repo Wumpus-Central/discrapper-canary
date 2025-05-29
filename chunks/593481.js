@@ -1,14 +1,14 @@
 n.d(t, {
     QR: () => y,
-    Yj: () => v,
+    Yj: () => _,
     ZP: () => O,
     iz: () => m
 });
 var i,
     r = n(255367),
-    s = n(73800),
-    o = n(120356),
-    l = n.n(o),
+    o = n(73800),
+    s = n(120356),
+    l = n.n(s),
     a = n(481060),
     c = n(294033),
     d = n(388032),
@@ -52,12 +52,12 @@ let f = (e) => e.stopPropagation(),
                     )
             })
         }),
-    v = (e, t) =>
+    _ = (e, t) =>
         (0, r.jsx)('div', {
             className: u.hintSubtleText,
             children: t
         });
-class _ extends (i = s.PureComponent) {
+class v extends (i = o.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         let { expand: n } = e,
             { expanded: i } = t;
@@ -97,7 +97,7 @@ class _ extends (i = s.PureComponent) {
             let i = e(n, t);
             return null != i
                 ? (0, r.jsxs)(
-                      s.Fragment,
+                      o.Fragment,
                       {
                           children: [(0, r.jsx)(m, {}), i]
                       },
@@ -106,7 +106,7 @@ class _ extends (i = s.PureComponent) {
                 : null;
         }
         return (0, r.jsxs)(
-            s.Fragment,
+            o.Fragment,
             {
                 children: [
                     (0, r.jsx)(m, {}),
@@ -125,15 +125,15 @@ class _ extends (i = s.PureComponent) {
     }
     renderFooter() {
         let {
-            props: { cancelText: e, confirmText: t, onConfirmClick: n, onCancelClick: i, hint: o },
+            props: { cancelText: e, confirmText: t, onConfirmClick: n, onCancelClick: i, hint: s },
             state: { expanded: l }
         } = this;
-        if (!l) return null != o ? this.renderHint() : null;
+        if (!l) return null != s ? this.renderHint() : null;
         if (null != this.props.renderFooter) {
             let e = this.props.renderFooter(l);
             return null != e
                 ? (0, r.jsxs)(
-                      s.Fragment,
+                      o.Fragment,
                       {
                           children: [(0, r.jsx)(m, {}), e]
                       },
@@ -142,11 +142,11 @@ class _ extends (i = s.PureComponent) {
                 : null;
         }
         if (null != n || null != i) {
-            let o = a.zxk.Colors.GREEN,
+            let s = a.zxk.Colors.GREEN,
                 l = a.zxk.Colors.PRIMARY,
                 c = a.zxk.Looks.FILLED;
             return (0, r.jsxs)(
-                s.Fragment,
+                o.Fragment,
                 {
                     children: [
                         (0, r.jsx)(m, {}),
@@ -157,7 +157,7 @@ class _ extends (i = s.PureComponent) {
                                     ? (0, r.jsx)(a.zxk, {
                                           fullWidth: !0,
                                           size: a.zxk.Sizes.SMALL,
-                                          color: o,
+                                          color: s,
                                           onClick: this.handleConfirmClick,
                                           className: u.button,
                                           innerClassName: u.innerText,
@@ -269,9 +269,9 @@ class _ extends (i = s.PureComponent) {
         this.state = { expanded: t };
     }
 }
-p(_, 'defaultProps', {
+p(v, 'defaultProps', {
     maxBodyLines: void 0,
     expand: !1,
     disabled: !1
 });
-let O = _;
+let O = v;

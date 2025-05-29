@@ -1,70 +1,70 @@
-t.d(n, { Z: () => x });
-var l = t(255367);
-t(73800);
-var i = t(442837),
-    r = t(481060),
-    a = t(749210),
-    o = t(287734),
-    u = t(933557),
-    s = t(314897),
-    c = t(592125),
-    d = t(984933),
-    g = t(271383),
-    b = t(430824),
-    Z = t(496675),
-    f = t(699516),
-    p = t(594174),
-    O = t(979651),
-    m = t(934415),
-    h = t(700785),
-    j = t(981631),
-    P = t(388032);
-function x(e, n) {
-    let t = (0, i.e7)([d.ZP], () => d.ZP.getChannels(n)[d.Zb], [n]),
-        x = (0, i.e7)(
-            [O.Z, c.Z],
+n.d(t, { Z: () => M });
+var r = n(255367);
+n(73800);
+var l = n(442837),
+    i = n(481060),
+    a = n(749210),
+    o = n(287734),
+    u = n(933557),
+    c = n(314897),
+    s = n(592125),
+    d = n(984933),
+    f = n(271383),
+    O = n(430824),
+    E = n(496675),
+    g = n(699516),
+    b = n(594174),
+    y = n(979651),
+    _ = n(934415),
+    p = n(700785),
+    m = n(981631),
+    j = n(388032);
+function M(e, t) {
+    let n = (0, l.e7)([d.ZP], () => d.ZP.getChannels(t)[d.Zb], [t]),
+        M = (0, l.e7)(
+            [y.Z, s.Z],
             () => {
-                let t = O.Z.getUserVoiceChannelId(n, e.id);
-                return c.Z.getChannel(t);
+                let n = y.Z.getUserVoiceChannelId(t, e.id);
+                return s.Z.getChannel(n);
             },
-            [n, e.id]
+            [t, e.id]
         );
-    if ((0, i.e7)([g.ZP], () => g.ZP.isGuestOrLurker(n, e.id), [n, e.id]) || null == x) return null;
-    let v = e.id === s.default.getId();
-    if (!v && !Z.Z.can(j.Plq.MOVE_MEMBERS, x)) return null;
-    let _ = t.filter((n) => {
-        let { channel: t } = n;
+    if ((0, l.e7)([f.ZP], () => f.ZP.isGuestOrLurker(t, e.id), [t, e.id]) || null == M) return null;
+    let P = e.id === c.default.getId();
+    if (!P && !E.Z.can(m.Plq.MOVE_MEMBERS, M)) return null;
+    let S = n.filter((t) => {
+        let { channel: n } = t;
         return (
-            t.id !== x.id &&
-            (v
-                ? Z.Z.can(j.Plq.CONNECT, t) && !(0, m.rY)(t, O.Z, b.Z)
-                : Z.Z.can(j.Plq.MOVE_MEMBERS, t) &&
-                  (Z.Z.can(j.Plq.CONNECT, t) ||
-                      h.BT({
-                          permission: j.Plq.CONNECT,
+            n.id !== M.id &&
+            (P
+                ? E.Z.can(m.Plq.CONNECT, n) && !(0, _.rY)(n, y.Z, O.Z)
+                : E.Z.can(m.Plq.MOVE_MEMBERS, n) &&
+                  (E.Z.can(m.Plq.CONNECT, n) ||
+                      p.BT({
+                          permission: m.Plq.CONNECT,
                           user: e,
-                          context: t
+                          context: n
                       })) &&
-                  !(0, m.rY)(t, O.Z, b.Z))
+                  !(0, _.rY)(n, y.Z, O.Z))
         );
     });
-    return 0 === _.length
+    return 0 === S.length
         ? null
-        : (0, l.jsx)(r.sNh, {
+        : (0, r.jsx)(i.sNh, {
               id: 'voice-move',
-              label: P.intl.string(P.t.FAplmp),
-              children: _.map((t) => {
-                  let { channel: i } = t;
-                  return (0, l.jsx)(
-                      r.sNh,
+              label: j.intl.string(j.t.FAplmp),
+              children: S.map((n) => {
+                  let { channel: l } = n;
+                  return (0, r.jsx)(
+                      i.sNh,
                       {
-                          id: i.id,
+                          id: l.id,
                           action: () => {
-                              e.id === s.default.getId() ? o.default.selectVoiceChannel(i.id) : a.Z.setChannel(n, e.id, i.id);
+                              e.id === c.default.getId() ? o.default.selectVoiceChannel(l.id) : a.Z.setChannel(t, e.id, l.id);
                           },
-                          label: (0, u.F6)(i, p.default, f.Z)
+                          label: (0, u.F6)(l, b.default, g.Z)
                       },
-                      i.id
+                      l.id
                   );
               })
           });

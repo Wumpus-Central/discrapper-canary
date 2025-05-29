@@ -34,7 +34,7 @@ var r = n(250683),
     o = n(913527),
     c = n.n(o),
     l = n(544891),
-    u = n(253135),
+    u = n(825448),
     s = n(668781),
     E = n(314897),
     d = n(131951),
@@ -51,16 +51,16 @@ var r = n(250683),
     R = n(352954),
     U = n(571826),
     C = n(760373),
-    A = n(981631),
-    b = n(388032);
+    b = n(981631),
+    A = n(388032);
 function O() {
-    return h.Z.getArticleURL(A.BhN.END_TO_END_ENCRYPTION);
+    return h.Z.getArticleURL(b.BhN.END_TO_END_ENCRYPTION);
 }
 function D() {
-    return h.Z.getArticleURL(A.BhN.END_TO_END_ENCRYPTION);
+    return h.Z.getArticleURL(b.BhN.END_TO_END_ENCRYPTION);
 }
 function N() {
-    return h.Z.getArticleURL(A.BhN.END_TO_END_ENCRYPTION);
+    return h.Z.getArticleURL(b.BhN.END_TO_END_ENCRYPTION);
 }
 function Z(e, t, n, r, i) {
     n ? m.Z.createSecureFramesVerifiedKey(e, t) : m.Z.createSecureFramesTransientKey(e, t),
@@ -78,8 +78,8 @@ function P(e, t, n) {
 }
 function w(e, t) {
     R.Z.openSecureFramesUpdateConfirmation({
-        title: b.intl.string(b.t['hdL15+']),
-        subtitle: b.intl.string(b.t['8VGYKi']),
+        title: A.intl.string(A.t['hdL15+']),
+        subtitle: A.intl.string(A.t['8VGYKi']),
         onConfirm: () => {
             m.Z.deleteSecureFramesVerifiedKey(e, t), (0, U.Pn)();
         }
@@ -89,8 +89,8 @@ function M(e) {
     let t = S.default.getUser(e),
         n = I.ZP.getName(t);
     R.Z.openSecureFramesUpdateConfirmation({
-        title: b.intl.formatToPlainString(b.t.K6NGBw, { username: n }),
-        subtitle: b.intl.string(b.t.F1BQKy),
+        title: A.intl.formatToPlainString(A.t.K6NGBw, { username: n }),
+        subtitle: A.intl.string(A.t.F1BQKy),
         onConfirm: () => {
             m.Z.deleteSecureFramesUserVerifiedKeys(e), (0, U.DF)();
         }
@@ -101,41 +101,41 @@ function F(e) {
         n = c()().diff(t, 's');
     if (n > 12 * y.Z.Seconds.DAYS_30) {
         let e = Math.round(n / (12 * y.Z.Seconds.DAYS_30));
-        return b.intl.formatToPlainString(b.t.F1wqkJ, { count: e });
+        return A.intl.formatToPlainString(A.t.F1wqkJ, { count: e });
     }
     if (n > y.Z.Seconds.DAYS_30) {
         let e = Math.round(n / y.Z.Seconds.DAYS_30);
-        return b.intl.formatToPlainString(b.t['iT+b+/'], { count: e });
+        return A.intl.formatToPlainString(A.t['iT+b+/'], { count: e });
     }
     if (n > 7 * y.Z.Seconds.DAY) {
         let e = Math.round(n / (7 * y.Z.Seconds.DAY));
-        return b.intl.formatToPlainString(b.t.dLurKS, { count: e });
+        return A.intl.formatToPlainString(A.t.dLurKS, { count: e });
     }
     if (n > y.Z.Seconds.DAY) {
         let e = Math.round(n / y.Z.Seconds.DAY);
-        return b.intl.formatToPlainString(b.t.LE8a2N, { count: e });
+        return A.intl.formatToPlainString(A.t.LE8a2N, { count: e });
     }
     if (n > y.Z.Seconds.HOUR) {
         let e = Math.round(n / y.Z.Seconds.HOUR);
-        return b.intl.formatToPlainString(b.t.KULxVV, { count: e });
+        return A.intl.formatToPlainString(A.t.KULxVV, { count: e });
     } else {
-        if (!(n > y.Z.Seconds.MINUTE)) return b.intl.formatToPlainString(b.t['/w0Qp6'], { count: n });
+        if (!(n > y.Z.Seconds.MINUTE)) return A.intl.formatToPlainString(A.t['/w0Qp6'], { count: n });
         let e = Math.round(n / y.Z.Seconds.MINUTE);
-        return b.intl.formatToPlainString(b.t.ws6rWl, { count: e });
+        return A.intl.formatToPlainString(A.t.ws6rWl, { count: e });
     }
 }
 function K(e) {
     let { isCurrentUserKeyPersistent: t, isOtherUserKeyPersistent: n, otherUserNickname: r } = e;
     return t && n
-        ? b.intl.format(b.t['FJN+kp'], { helpArticle: O() })
+        ? A.intl.format(A.t['FJN+kp'], { helpArticle: O() })
         : t
-          ? b.intl.format(b.t['p/9PGh'], {
+          ? A.intl.format(A.t['p/9PGh'], {
                 username: r,
                 helpArticle: O()
             })
           : n
-            ? b.intl.format(b.t['qT5z8/'], { helpArticle: O() })
-            : b.intl.format(b.t['6JLy+v'], { helpArticle: O() });
+            ? A.intl.format(A.t['qT5z8/'], { helpArticle: O() })
+            : A.intl.format(A.t['6JLy+v'], { helpArticle: O() });
 }
 async function L(e) {
     let t = E.default.getStaticAuthSessionId();
@@ -149,7 +149,7 @@ async function v(e, t, n) {
     try {
         return (
             await l.tn.post({
-                url: A.ANM.VOICE_MATCH_PUBLIC_KEY(e),
+                url: b.ANM.VOICE_MATCH_PUBLIC_KEY(e),
                 body: {
                     public_key: V(t),
                     key_version: n
@@ -165,7 +165,7 @@ async function k(e) {
     let { key: t, signature: n } = await L(e);
     try {
         await l.tn.put({
-            url: A.ANM.VOICE_PUBLIC_KEYS(),
+            url: b.ANM.VOICE_PUBLIC_KEYS(),
             body: {
                 public_key: V(t),
                 signature: V(n),
@@ -215,8 +215,8 @@ function W(e) {
         reason: C.Xe.OTHER_USER_INCONSISTENT_KEYS
     }),
         s.Z.show({
-            title: b.intl.string(b.t.mznLyc),
-            body: b.intl.format(b.t.WY6IKS, { username: r })
+            title: A.intl.string(A.t.mznLyc),
+            body: A.intl.format(A.t.WY6IKS, { username: r })
         });
 }
 function G(e) {

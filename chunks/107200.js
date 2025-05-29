@@ -2,8 +2,8 @@ n.d(t, { Z: () => p }), n(388685);
 var i = n(255367);
 n(73800);
 var r = n(442837),
-    s = n(352527),
-    o = n(183584),
+    o = n(352527),
+    s = n(183584),
     l = n(487029),
     a = n(592125),
     c = n(944486),
@@ -11,7 +11,7 @@ var r = n(442837),
     u = n(710111),
     h = n(143719);
 function p() {
-    let [e, t] = (0, r.Wu)([s.Z], () => [s.Z.enabled, s.Z.keepOpen]),
+    let [e, t] = (0, r.Wu)([o.Z], () => [o.Z.enabled, o.Z.keepOpen]),
         n = (0, r.e7)([c.Z], () => c.Z.getVoiceChannelId()),
         p = (0, r.e7)([a.Z], () => a.Z.getChannel(n), [n]),
         f = null == p ? void 0 : p.getGuildId();
@@ -26,7 +26,7 @@ function p() {
                   keepOpen: t,
                   onClose: function () {
                       let e = (0, d.Z)();
-                      null != e && (0, o.oZ)(e);
+                      null != e && (0, s.oZ)(e);
                   },
                   analyticsSource: 'overlay'
               })

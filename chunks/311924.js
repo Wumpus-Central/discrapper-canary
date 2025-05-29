@@ -17,11 +17,11 @@ var r = n(255367),
     _ = n(37113),
     v = n(576202),
     j = n(388032),
-    S = n(496958);
-function b(e) {
+    b = n(496958);
+function S(e) {
     let { label: t, children: n } = e;
     return (0, r.jsxs)('div', {
-        className: S.setting,
+        className: b.setting,
         children: [
             (0, r.jsx)(s.Text, {
                 variant: 'text-sm/semibold',
@@ -51,7 +51,7 @@ function C() {
                 name: (0, f.M)(t),
                 tooltipAriaLabel: n ? void 0 : j.intl.string(j.t.sEAnVF),
                 tooltip: n ? void 0 : (0, r.jsx)(d.W, {}),
-                className: n ? void 0 : S.premiumOption
+                className: n ? void 0 : b.premiumOption
             };
         }),
         U = p.YX.map((e) => {
@@ -61,13 +61,13 @@ function C() {
                 name: ''.concat(e, 'fps'),
                 tooltipAriaLabel: t ? void 0 : j.intl.string(j.t.sEAnVF),
                 tooltip: t ? void 0 : (0, r.jsx)(d.W, {}),
-                className: t ? void 0 : S.premiumOption
+                className: t ? void 0 : b.premiumOption
             };
         });
     return (0, r.jsxs)('div', {
-        className: S.root,
+        className: b.root,
         children: [
-            (0, r.jsx)(b, {
+            (0, r.jsx)(S, {
                 label: j.intl.string(v.default['7eHfrq']),
                 children: (0, r.jsx)(s.PhF, {
                     isSelected: (e) => C === e,
@@ -90,10 +90,10 @@ function C() {
                     })
                 })
             }),
-            (0, r.jsx)(b, {
+            (0, r.jsx)(S, {
                 label: j.intl.string(v.default.PYBXFR),
                 children: (0, r.jsx)(s.sY7, {
-                    className: S.segmentedControl,
+                    className: b.segmentedControl,
                     options: B,
                     look: 'pill',
                     disabled: D,
@@ -114,10 +114,10 @@ function C() {
                         })(e.value)
                 })
             }),
-            (0, r.jsx)(b, {
+            (0, r.jsx)(S, {
                 label: j.intl.string(v.default['/ssDMT']),
                 children: (0, r.jsx)(s.sY7, {
-                    className: S.segmentedControl,
+                    className: b.segmentedControl,
                     disabled: D,
                     options: U,
                     value: L,

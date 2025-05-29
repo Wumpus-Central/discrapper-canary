@@ -1,13 +1,13 @@
 n.d(t, {
-    ZP: () => E,
+    ZP: () => x,
     wB: () => m
 }),
     n(415506);
 var i,
     r = n(255367),
-    s = n(73800),
-    o = n(120356),
-    l = n.n(o),
+    o = n(73800),
+    s = n(120356),
+    l = n.n(s),
     a = n(877921),
     c = n.n(a),
     d = n(481060),
@@ -29,12 +29,12 @@ function f(e, t, n) {
 }
 let g = u.t_t.DEFAULT,
     m = 1,
-    y = s.createContext({
+    y = o.createContext({
         type: g,
         opacity: m
     }),
-    v = s.createContext(void 0),
-    _ = (e) => {
+    _ = o.createContext(void 0),
+    v = (e) => {
         var { children: t, className: n } = e,
             i = (function (e, t) {
                 if (null == e) return {};
@@ -45,25 +45,25 @@ let g = u.t_t.DEFAULT,
                         var n,
                             i,
                             r = {},
-                            s = Object.keys(e);
-                        for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                            o = Object.keys(e);
+                        for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                         return r;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var s = Object.getOwnPropertySymbols(e);
-                    for (i = 0; i < s.length; i++) (n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                    var o = Object.getOwnPropertySymbols(e);
+                    for (i = 0; i < o.length; i++) (n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                 }
                 return r;
             })(e, ['children', 'className']);
         return (0, r.jsx)(y.Consumer, {
             children: (e) => {
-                let { type: s } = e;
-                return (0, r.jsx)(v.Consumer, {
+                let { type: o } = e;
+                return (0, r.jsx)(_.Consumer, {
                     children: (e) => {
-                        var o, a;
+                        var s, a;
                         return (0, r.jsx)(
                             'div',
-                            ((o = (function (e) {
+                            ((s = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         i = Object.keys(n);
@@ -80,14 +80,14 @@ let g = u.t_t.DEFAULT,
                                 return e;
                             })(
                                 {
-                                    className: l()(h.bar, h[c()(s)], n),
+                                    className: l()(h.bar, h[c()(o)], n),
                                     style: e
                                 },
                                 i
                             )),
                             (a = a = { children: t }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(a))
+                                ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(a))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -96,32 +96,32 @@ let g = u.t_t.DEFAULT,
                                       }
                                       return n;
                                   })(Object(a)).forEach(function (e) {
-                                      Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(a, e));
+                                      Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(a, e));
                                   }),
-                            o)
+                            s)
                         );
                     }
                 });
             }
         });
     };
-class O extends (i = s.PureComponent) {
+class O extends (i = o.PureComponent) {
     render() {
         let { disableScroll: e, children: t, className: n } = this.props;
-        return (0, r.jsx)(v.Consumer, {
+        return (0, r.jsx)(_.Consumer, {
             children: (i) =>
                 (0, r.jsx)(y.Consumer, {
-                    children: (s) => {
-                        let o = l()(h.body, h[c()(s.type)], n);
+                    children: (o) => {
+                        let s = l()(h.body, h[c()(o.type)], n);
                         return e
                             ? (0, r.jsx)('div', {
-                                  className: o,
+                                  className: s,
                                   style: i,
                                   children: t
                               })
                             : (0, r.jsx)(d.Ttm, {
                                   fade: !0,
-                                  className: o,
+                                  className: s,
                                   children: t
                               });
                     }
@@ -131,26 +131,26 @@ class O extends (i = s.PureComponent) {
 }
 f(O, 'defaultProps', { disableScroll: !1 });
 let b = (e) => {
-        let { type: t = g, width: n, height: i, children: s, className: o, opacity: a = m, onClick: d } = e;
+        let { type: t = g, width: n, height: i, children: o, className: s, opacity: a = m, onClick: d } = e;
         return (0, r.jsx)(y.Provider, {
             value: {
                 type: t,
                 opacity: a
             },
             children: (0, r.jsx)('div', {
-                className: l()(h.widget, h[c()(t)], o),
+                className: l()(h.widget, h[c()(t)], s),
                 style: {
                     width: n,
                     height: i
                 },
                 onClick: d,
-                children: s
+                children: o
             })
         });
     },
-    x = (e) => {
+    E = (e) => {
         let { children: t, className: n, dynamicSize: i = !1 } = e;
-        return (0, r.jsx)(v.Consumer, {
+        return (0, r.jsx)(_.Consumer, {
             children: (e) =>
                 (0, r.jsx)('div', {
                     className: l()(h.content, { [h.staticSize]: !i }, n),
@@ -162,15 +162,15 @@ let b = (e) => {
 (b.Background = (e) => {
     let { children: t, opacityOverride: n } = e;
     if (null == t) return null;
-    let i = [_, O, x];
+    let i = [v, O, E];
     return (0, r.jsx)(y.Consumer, {
         children: (e) => {
-            let { opacity: o } = e,
-                l = { backgroundColor: 'rgba(54, 57, 63, '.concat('' + (null != n ? n : o), ')') };
-            if ('string' == typeof t.type) return s.cloneElement(t, { style: l });
+            let { opacity: s } = e,
+                l = { backgroundColor: 'rgba(54, 57, 63, '.concat('' + (null != n ? n : s), ')') };
+            if ('string' == typeof t.type) return o.cloneElement(t, { style: l });
             {
                 if (i.includes(t.type))
-                    return (0, r.jsx)(v.Provider, {
+                    return (0, r.jsx)(_.Provider, {
                         value: l,
                         children: t
                     });
@@ -181,9 +181,9 @@ let b = (e) => {
     });
 }),
     (b.Body = O),
-    (b.Content = x),
+    (b.Content = E),
     (b.Icon = (e) => {
-        let { ref: t, icon: n, label: i, onClick: s, isActive: o, tooltipPosition: a = 'top', size: c = 20, isTutorial: u = !1 } = e;
+        let { ref: t, icon: n, label: i, onClick: o, isActive: s, tooltipPosition: a = 'top', size: c = 20, isTutorial: u = !1 } = e;
         return (0, r.jsx)(d.ua7, {
             text: u
                 ? (0, r.jsx)('div', {
@@ -201,10 +201,10 @@ let b = (e) => {
                     buttonRef: t,
                     look: d.zxk.Looks.BLANK,
                     size: d.zxk.Sizes.NONE,
-                    onClick: s,
+                    onClick: o,
                     onMouseEnter: a,
                     onMouseLeave: u,
-                    className: l()(h.icon, { [h.toggledIconOn]: o }),
+                    className: l()(h.icon, { [h.toggledIconOn]: s }),
                     innerClassName: p.flexCenter,
                     'aria-label': i,
                     children: (0, r.jsx)(n, {
@@ -218,5 +218,5 @@ let b = (e) => {
             }
         });
     }),
-    (b.Bar = _);
-let E = b;
+    (b.Bar = v);
+let x = b;

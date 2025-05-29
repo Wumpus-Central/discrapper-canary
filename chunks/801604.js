@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(255367);
 n(73800);
 var l = n(120356),
@@ -23,7 +23,7 @@ function j() {
         children: '\u2022'
     });
 }
-function S(e) {
+function b(e) {
     let { source: t } = e;
     return null == t
         ? (0, r.jsx)(o.hGI, {
@@ -48,26 +48,26 @@ function S(e) {
                   className: v.sourceIcon
               });
 }
-function b(e) {
+function S(e) {
     var t, n, l, a;
     let { nativePickerEnabled: m } = e,
-        [{ preset: b, resolution: C, fps: y, muteStreamAudio: O, selectedSource: Z, sourceType: I, audioSourceId: w }] = (0, h.E_)(),
+        [{ preset: S, resolution: C, fps: y, muteStreamAudio: O, selectedSource: Z, sourceType: I, audioSourceId: w }] = (0, h.E_)(),
         { twoClickVariant: N } = (0, d.a)({
             location: 'go_live_modal_refresh',
             autoTrackExposure: !1
         }),
         E = (0, c.Z)(),
-        [T, P] = null != (l = (0, p.Z)(b)) ? l : [C, y],
-        R = (0, u.L)(b),
+        [T, P] = null != (l = (0, p.Z)(S)) ? l : [C, y],
+        R = (0, u.L)(S),
         k = (0, f.M)(T),
         A = I === s.vA.CAMERA,
         M = null != Z || (!!N && (!m || A)),
         L = null != Z ? (null == Z || null == (t = Z.id) ? void 0 : t.startsWith(s.vA.CAMERA)) : A,
-        D = M ? void 0 : b === x.tI.PRESET_VIDEO ? _.intl.string(g.default.MuHUFR) : b === x.tI.PRESET_DOCUMENTS ? _.intl.string(g.default.y0JuYW) : void 0;
+        D = M ? void 0 : S === x.tI.PRESET_VIDEO ? _.intl.string(g.default.MuHUFR) : S === x.tI.PRESET_DOCUMENTS ? _.intl.string(g.default.y0JuYW) : void 0;
     return (0, r.jsxs)('div', {
         className: v.root,
         children: [
-            M && (0, r.jsx)(S, { source: Z }),
+            M && (0, r.jsx)(b, { source: Z }),
             (0, r.jsxs)('div', {
                 className: v.summary,
                 children: [

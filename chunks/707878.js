@@ -1,8 +1,8 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var i = n(255367),
     r = n(73800),
-    s = n(442837),
-    o = n(481060),
+    o = n(442837),
+    s = n(481060),
     l = n(13245),
     a = n(313201),
     c = n(237997),
@@ -24,15 +24,15 @@ class y extends r.PureComponent {
         return (0, i.jsxs)('div', {
             className: f.container,
             children: [
-                (0, i.jsx)(o.vwX, {
+                (0, i.jsx)(s.vwX, {
                     id: m,
-                    tag: o.RB0.H5,
+                    tag: s.RB0.H5,
                     className: f.title,
                     children: p.intl.string(p.t.OVovCQ)
                 }),
                 (0, i.jsx)('div', {
                     className: f.sliderContainer,
-                    children: (0, i.jsx)(o.iRW, {
+                    children: (0, i.jsx)(s.iRW, {
                         mini: !0,
                         initialValue: this.initialValue,
                         defaultValue: this.initialValue,
@@ -66,4 +66,4 @@ class y extends r.PureComponent {
                 : (this[t] = n);
     }
 }
-let v = s.ZP.connectStores([c.default], () => ({ opacity: c.default.getTextWidgetOpacity() }))(y);
+let _ = o.ZP.connectStores([c.default], () => ({ opacity: c.default.getTextWidgetOpacity() }))(y);

@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(100527),
     v = n(906732),
     j = n(594190),
-    S = n(687058),
-    b = n(695346),
+    b = n(687058),
+    S = n(695346),
     C = n(131951),
     y = n(19780),
     O = n(594174),
@@ -68,7 +68,7 @@ function Q(e) {
         es = (0, m.e7)([O.default], () => O.default.getCurrentUser()),
         eo = (0, k.Z)(),
         { state: ea, dispatch: ec } = (0, B.Ti)(a, es, eo, (0, I.isWindows)() && null != a && Q ? 'confirm' : 'source_select'),
-        ed = (0, S.Z)();
+        ed = (0, b.Z)();
     (0, V.Z)(el, ec, 'confirm' === ea.modalStep);
     let eu = !w.ZP.canStreamQuality(w.ZP.StreamQuality.HIGH, es),
         ef = en && !el,
@@ -89,7 +89,7 @@ function Q(e) {
         e_ = el || !(0, I.isWindows)() || !ee || eh,
         ev = et && eu,
         ej = eh && ee,
-        eS = l.useMemo(() => {
+        eb = l.useMemo(() => {
             let e = [
                 {
                     name: X.intl.string(X.t.tHoi7u),
@@ -112,10 +112,10 @@ function Q(e) {
                 e
             );
         }, [el]),
-        { sourceType: eb } = ea,
+        { sourceType: eS } = ea,
         eC = l.useCallback(
             async (e) => {
-                b.eo.updateSetting(ea.notifyFriends), b.I0.updateSetting(ea.hidePreview);
+                S.eo.updateSetting(ea.notifyFriends), S.I0.updateSetting(ea.hidePreview);
                 let [t, r] = await (0, P.Z)(e.hasOwnProperty('pid') ? e.pid : e, {
                     preset: ea.preset,
                     fps: ea.fps,
@@ -243,7 +243,7 @@ function Q(e) {
                                     className: K.header,
                                     children: (0, r.jsx)(h.sY7, {
                                         className: K.segmentedControl,
-                                        value: eb,
+                                        value: eS,
                                         look: 'pill',
                                         optionClassName: K.segmentedControlOption,
                                         onChange: (e) => {
@@ -253,13 +253,13 @@ function Q(e) {
                                                 sourceType: t
                                             });
                                         },
-                                        options: eS
+                                        options: eb
                                     })
                                 }),
                                 (0, r.jsx)(h.hzk, {
                                     className: K.content,
                                     children:
-                                        el && eb !== f.vA.CAMERA
+                                        el && eS !== f.vA.CAMERA
                                             ? (0, r.jsx)(U.Z, { onSourceSelect: eO })
                                             : (0, r.jsx)(G.Z, {
                                                   onClick: function (e) {

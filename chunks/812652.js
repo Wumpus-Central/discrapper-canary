@@ -1,5 +1,5 @@
 n.d(t, {
-    PG: () => b,
+    PG: () => S,
     Vf: () => C,
     YX: () => y,
     ZP: () => Z,
@@ -25,8 +25,8 @@ var r = n(255367),
     _ = n(37113),
     v = n(576202),
     j = n(388032),
-    S = n(864443);
-let b = [
+    b = n(864443);
+let S = [
         {
             value: _.tI.PRESET_VIDEO,
             canUse: (e) => !0
@@ -62,7 +62,7 @@ let b = [
 function O(e) {
     let { label: t } = e;
     return (0, r.jsxs)('div', {
-        className: S.premiumOptionContainer,
+        className: b.premiumOptionContainer,
         children: [
             t,
             (0, r.jsx)(o.SrA, {
@@ -74,7 +74,7 @@ function O(e) {
 }
 function Z(e) {
     var t, n, l;
-    let { onClose: S, onSelect: Z } = e,
+    let { onClose: b, onSelect: Z } = e,
         [{ notifyFriends: I, hidePreview: w, muteStreamAudio: N, preset: E, resolution: T, fps: P, sourceType: R, audioSourceId: k }, A] = (0, p.E_)(),
         M = (0, c.Z)(),
         L = (0, h.Z)(),
@@ -83,52 +83,50 @@ function Z(e) {
     return (0, r.jsxs)(o.v2r, {
         'aria-label': j.intl.string(j.t['+1H47u']),
         navId: 'stream-options',
-        onClose: S,
+        onClose: b,
         onSelect: Z,
         children: [
             (0, r.jsx)(o.kSQ, {
                 label: j.intl.string(v.default.P2pjm5),
-                children: b
-                    .filter((e) => {
-                        let { canUse: t } = e;
-                        return t(R);
-                    })
-                    .map((e) => {
-                        let { value: t } = e;
-                        return (0, r.jsx)(
-                            o.k5B,
-                            {
-                                group: 'preset',
-                                id: 'stream-preset-'.concat(t),
-                                checked: E === t,
-                                label: (0, f.L)(t),
-                                subtext: (function (e) {
-                                    switch (e) {
-                                        case _.tI.PRESET_VIDEO:
-                                            return j.intl.format(v.default.G5O1Mz, {
-                                                resolution: (0, m.M)(D),
-                                                frameRate: B
-                                            });
-                                        case _.tI.PRESET_DOCUMENTS:
-                                            return j.intl.format(v.default['8tcFLy'], {
-                                                resolution: (0, m.M)(U),
-                                                frameRate: G
-                                            });
-                                        case _.tI.PRESET_CUSTOM:
-                                            return;
-                                        default:
-                                            throw Error('No case implemented for '.concat(e));
-                                    }
-                                })(t),
-                                action: () =>
-                                    A({
-                                        type: 'set_preset',
-                                        preset: t
-                                    })
-                            },
-                            t
-                        );
-                    })
+                children: S.filter((e) => {
+                    let { canUse: t } = e;
+                    return t(R);
+                }).map((e) => {
+                    let { value: t } = e;
+                    return (0, r.jsx)(
+                        o.k5B,
+                        {
+                            group: 'preset',
+                            id: 'stream-preset-'.concat(t),
+                            checked: E === t,
+                            label: (0, f.L)(t),
+                            subtext: (function (e) {
+                                switch (e) {
+                                    case _.tI.PRESET_VIDEO:
+                                        return j.intl.format(v.default.G5O1Mz, {
+                                            resolution: (0, m.M)(D),
+                                            frameRate: B
+                                        });
+                                    case _.tI.PRESET_DOCUMENTS:
+                                        return j.intl.format(v.default['8tcFLy'], {
+                                            resolution: (0, m.M)(U),
+                                            frameRate: G
+                                        });
+                                    case _.tI.PRESET_CUSTOM:
+                                        return;
+                                    default:
+                                        throw Error('No case implemented for '.concat(e));
+                                }
+                            })(t),
+                            action: () =>
+                                A({
+                                    type: 'set_preset',
+                                    preset: t
+                                })
+                        },
+                        t
+                    );
+                })
             }),
             E === _.tI.PRESET_CUSTOM &&
                 (0, r.jsxs)(r.Fragment, {
@@ -151,7 +149,7 @@ function Z(e) {
                                         label: t !== _.LY.RESOLUTION_720 ? (0, r.jsx)(O, { label: (0, m.M)(t) }) : (0, m.M)(t),
                                         action: () =>
                                             (function (e) {
-                                                if (!(0, u.Z)(E, e, P, d.default.getCurrentUser(), L)) return S(), (0, x.E)({ analyticsLocation: a.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
+                                                if (!(0, u.Z)(E, e, P, d.default.getCurrentUser(), L)) return b(), (0, x.E)({ analyticsLocation: a.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
                                                 A({
                                                     type: 'set_resolution',
                                                     resolution: e
@@ -175,7 +173,7 @@ function Z(e) {
                                         label: e === _.ws.FPS_60 ? (0, r.jsx)(O, { label: ''.concat(e, 'fps') }) : ''.concat(e, 'fps'),
                                         action: () =>
                                             (function (e) {
-                                                if (!(0, u.Z)(E, T, e, d.default.getCurrentUser(), L)) return S(), (0, x.E)({ analyticsLocation: a.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
+                                                if (!(0, u.Z)(E, T, e, d.default.getCurrentUser(), L)) return b(), (0, x.E)({ analyticsLocation: a.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
                                                 A({
                                                     type: 'set_fps',
                                                     fps: e

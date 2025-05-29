@@ -1,8 +1,8 @@
 n.d(t, { Z: () => ec }), n(388685), n(539854);
 var i,
     r = n(512722),
-    s = n.n(r),
-    o = n(772848),
+    o = n.n(r),
+    s = n(772848),
     l = n(442837),
     a = n(570140),
     c = n(13245),
@@ -14,12 +14,12 @@ var i,
     g = n(791288),
     m = n(194295),
     y = n(998033),
-    v = n(181364),
-    _ = n(435064),
+    _ = n(181364),
+    v = n(435064),
     O = n(668761),
     b = n(864060),
-    x = n(86071),
-    E = n(486016),
+    E = n(86071),
+    x = n(486016),
     S = n(358446),
     C = n(371651),
     j = n(624864),
@@ -31,15 +31,15 @@ var i,
     T = n(158776),
     k = n(944486),
     D = n(885110),
-    A = n(246946),
-    R = n(594174),
+    R = n(246946),
+    A = n(594174),
     L = n(974180),
     M = n(808506),
     z = n(237997),
     V = n(70956),
     W = n(129724),
-    U = n(709054),
-    B = n(145597),
+    B = n(709054),
+    U = n(145597),
     G = n(449224),
     F = n(981631),
     H = n(987650),
@@ -117,14 +117,14 @@ function er(e) {
     let t = et.length;
     return (et = et.filter((t) => 1 !== t.type || t.channelId !== e)).length !== t;
 }
-function es(e) {
+function eo(e) {
     let t = et.find((t) => 2 === t.type && t.channelId === e);
     return null != t ? t.id : null;
 }
-function eo(e, t) {
+function es(e, t) {
     let n = X({}, ee, t);
     if (2 !== n.priority && !z.default.isInstanceFocused()) return null;
-    let i = (0, o.Z)(),
+    let i = (0, s.Z)(),
         r = X(
             {
                 id: i,
@@ -134,12 +134,12 @@ function eo(e, t) {
             },
             n
         ),
-        s = (et = [...et]).findIndex((e) => e.priority <= n.priority);
-    return -1 === s ? et.push(r) : et.splice(s, 0, r), et.length > 10 && clearTimeout(et.pop().timerId), i;
+        o = (et = [...et]).findIndex((e) => e.priority <= n.priority);
+    return -1 === o ? et.push(r) : et.splice(o, 0, r), et.length > 10 && clearTimeout(et.pop().timerId), i;
 }
 function el(e) {
     let { channelId: t, ringing: n } = e,
-        i = es(t);
+        i = eo(t);
     if (!n.includes(P.default.getId())) return ei(i);
     if (null != i) return !1;
     let r = N.Z.getChannel(t);
@@ -155,9 +155,9 @@ function el(e) {
         Z.QZ.getSetting()
     )
         return !1;
-    let s = et.find((e) => 1 === e.type && e.channelId === t && e.messageType === F.uaV.CALL);
-    null != s && ei(s.id),
-        eo((0, p.Z)(r), {
+    let o = et.find((e) => 1 === e.type && e.channelId === t && e.messageType === F.uaV.CALL);
+    null != o && ei(o.id),
+        es((0, p.Z)(r), {
             priority: 1,
             expirationExternallyManaged: !0,
             type: 2,
@@ -166,7 +166,7 @@ function el(e) {
 }
 class ea extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(N.Z, R.default, j.Z);
+        this.waitFor(N.Z, A.default, j.Z);
     }
     getNotifications() {
         return et;
@@ -181,7 +181,7 @@ let ec = new ea(a.Z, {
     OVERLAY_MOUNTED: function (e) {
         var t;
         let { nudges: n } = e;
-        if (C.default.hasChangedRenderMode(null != (t = M.default.getFocusedPID()) ? t : (0, B.getPID)())) return;
+        if (C.default.hasChangedRenderMode(null != (t = M.default.getFocusedPID()) ? t : (0, U.getPID)())) return;
         let i = (function (e) {
             switch (e.type) {
                 case H.nc.OOP_WELCOME:
@@ -193,11 +193,11 @@ let ec = new ea(a.Z, {
                     return (0, S.Z)(e);
                 case H.nc.NEWS:
                 default:
-                    return (0, v.Z)(e);
+                    return (0, _.Z)(e);
             }
         })(n[0]);
         null != i &&
-            eo(i, {
+            es(i, {
                 priority: 2,
                 duration: Q
             });
@@ -209,42 +209,42 @@ let ec = new ea(a.Z, {
     },
     MESSAGE_CREATE: function (e) {
         var t, n, i;
-        let { channelId: r, message: o } = e,
+        let { channelId: r, message: s } = e,
             l = N.Z.getChannel(r),
-            a = R.default.getUser(null == (t = o.author) ? void 0 : t.id);
+            a = A.default.getUser(null == (t = s.author) ? void 0 : t.id);
         if (null == l || null == a) return !1;
-        if ((null == (n = o.activity) ? void 0 : n.type) === F.mFx.JOIN || (null == (i = o.activity) ? void 0 : i.type) === F.mFx.JOIN_REQUEST) {
-            if (!(0, b.eF)(o, r, !0, !0)) return !1;
+        if ((null == (n = s.activity) ? void 0 : n.type) === F.mFx.JOIN || (null == (i = s.activity) ? void 0 : i.type) === F.mFx.JOIN_REQUEST) {
+            if (!(0, b.eF)(s, r, !0, !0)) return !1;
             let e = (function (e, t, n) {
                 let i, r;
-                if ((s()(null != t.activity, 'received null message activity'), n.id === P.default.getId())) return !1;
-                let o = G.Z.getGame();
-                if (null == o) return !1;
+                if ((o()(null != t.activity, 'received null message activity'), n.id === P.default.getId())) return !1;
+                let s = G.Z.getGame();
+                if (null == s) return !1;
                 switch (t.activity.type) {
                     case F.mFx.JOIN:
-                        if (null == (i = T.Z.getApplicationActivity(n.id, o.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
-                        r = (0, d.Z)(e, t, n, o, i);
+                        if (null == (i = T.Z.getApplicationActivity(n.id, s.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
+                        r = (0, d.Z)(e, t, n, s, i);
                         break;
                     case F.mFx.JOIN_REQUEST:
-                        if (null == (i = D.Z.getApplicationActivity(o.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
-                        r = (0, m.Z)(e, n, o, i);
+                        if (null == (i = D.Z.getApplicationActivity(s.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
+                        r = (0, m.Z)(e, n, s, i);
                 }
                 if (null == r) return !1;
-                let l = eo(r, {
+                let l = es(r, {
                     priority: 2,
                     expirationExternallyManaged: !0,
                     channelId: e.id
                 });
                 return null != l && en(l, !1, $), !0;
-            })(l, o, a);
+            })(l, s, a);
             if (!1 !== e) return e;
         }
-        if (((!z.default.isInstanceLocked() || z.default.isPinned(F.Odu.TEXT)) && r === k.Z.getChannelId()) || j.Z.isNotificationDisabled(E.OverlayNotificationDisabledSetting.TEXT_CHAT) || A.Z.disableNotifications || !(0, b.eF)(o, r)) return !1;
+        if (((!z.default.isInstanceLocked() || z.default.isPinned(F.Odu.TEXT)) && r === k.Z.getChannelId()) || j.Z.isNotificationDisabled(x.OverlayNotificationDisabledSetting.TEXT_CHAT) || R.Z.disableNotifications || !(0, b.eF)(s, r)) return !1;
         let c = !w.Z.isSoundDisabled(L.Ay);
-        eo((0, y.Z)(l, o, a, c), {
+        es((0, y.Z)(l, s, a, c), {
             type: 1,
             channelId: l.id,
-            messageType: o.type
+            messageType: s.type
         });
     },
     CHANNEL_SELECT: function (e) {
@@ -259,7 +259,7 @@ let ec = new ea(a.Z, {
     CALL_UPDATE: el,
     CALL_DELETE: function (e) {
         let { channelId: t } = e;
-        ei(es(t));
+        ei(eo(t));
     },
     GUILD_RING_START: el,
     GUILD_RING_STOP: function (e) {
@@ -271,48 +271,48 @@ let ec = new ea(a.Z, {
             }).enabled
         )
             return !1;
-        i.includes(P.default.getId()) && ei(es(t));
+        i.includes(P.default.getId()) && ei(eo(t));
     },
     ACTIVITY_USER_ACTION: function (e) {
         let t,
             { actionType: n, user: i, applicationId: r } = e,
-            s = G.Z.getGame();
+            o = G.Z.getGame();
         return (
-            null != s &&
-            s.id === r &&
-            (n === F.mFx.JOIN && (t = (0, u.Z)(i, s)),
+            null != o &&
+            o.id === r &&
+            (n === F.mFx.JOIN && (t = (0, u.Z)(i, o)),
             null != t &&
-                void eo(t, {
+                void es(t, {
                     priority: 2,
                     type: 0
                 }))
         );
     },
     CLIPS_SAVE_CLIP_START: function () {
-        eo((0, O.f)(Y.intl.string(Y.t.NBMK9v)));
+        es((0, O.f)(Y.intl.string(Y.t.NBMK9v)));
     },
     CLIPS_SAVE_CLIP: function () {
-        eo((0, O.f)(Y.intl.formatToPlainString(Y.t.KLhk6u, { duration: (0, W.A)(_.Z.getSettings().clipsLength / 1000, !0) })));
+        es((0, O.f)(Y.intl.formatToPlainString(Y.t.KLhk6u, { duration: (0, W.A)(v.Z.getSettings().clipsLength / 1000, !0) })));
     },
     CLIPS_SAVE_CLIP_ERROR: function () {
-        eo((0, O.f)(Y.intl.string(Y.t['1ZbZur'])));
+        es((0, O.f)(Y.intl.string(Y.t['1ZbZur'])));
     },
     STREAM_START: function (e) {
         let t = (0, O.y)();
-        null != t && eo(t);
+        null != t && es(t);
     },
     OVERLAY_CONTENT_INVENTORY_READY: function (e) {
         var t;
         let { contentInventoryEntries: n } = e;
-        if (0 === n.length || j.Z.isNotificationDisabled(E.OverlayNotificationDisabledSetting.GAME_ACTIVITY) || C.default.hasChangedRenderMode(null != (t = M.default.getFocusedPID()) ? t : (0, B.getPID)())) return;
+        if (0 === n.length || j.Z.isNotificationDisabled(x.OverlayNotificationDisabledSetting.GAME_ACTIVITY) || C.default.hasChangedRenderMode(null != (t = M.default.getFocusedPID()) ? t : (0, U.getPID)())) return;
         let i = G.Z.getGame();
         if (null == i) return;
-        let { enabled: r, dateLookbackMs: s } = x.Z.getCurrentConfig({ location: 'OverlayNotificationsStore' });
+        let { enabled: r, dateLookbackMs: o } = E.Z.getCurrentConfig({ location: 'OverlayNotificationsStore' });
         if (!r) return;
-        let o = n;
-        null != s && (o = o.filter((e) => U.default.age(e.id) < s)),
-            0 !== o.length &&
-                eo((0, g.Z)(i, o), {
+        let s = n;
+        null != o && (s = s.filter((e) => B.default.age(e.id) < o)),
+            0 !== s.length &&
+                es((0, g.Z)(i, s), {
                     priority: 2,
                     type: 'content-inventory',
                     expirationExternallyManaged: !0,
