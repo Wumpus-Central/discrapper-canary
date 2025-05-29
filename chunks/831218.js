@@ -16,8 +16,8 @@ var r,
     b = n(906732),
     y = n(453542),
     O = n(702321),
-    v = n(46148),
-    _ = n(82295),
+    _ = n(46148),
+    v = n(82295),
     C = n(313201),
     j = n(540059),
     S = n(860144),
@@ -29,8 +29,8 @@ var r,
     N = n(210887),
     Z = n(592125),
     T = n(158776),
-    A = n(55589),
-    R = n(515753),
+    R = n(55589),
+    A = n(515753),
     D = n(981631),
     L = n(388032),
     k = n(555614);
@@ -388,11 +388,11 @@ class V extends (r = l.Component) {
                 return null == a
                     ? null
                     : (0, i.jsx)(
-                          v.s,
+                          _.s,
                           {
                               channelId: a.id,
                               selectedChannelId: l,
-                              children: (0, i.jsx)(R.ZP, {
+                              children: (0, i.jsx)(A.ZP, {
                                   channel: a,
                                   selected: a.id === l,
                                   'aria-posinset': s + t + 1,
@@ -422,7 +422,7 @@ class V extends (r = l.Component) {
                     { showDMHeader: n, isVisualRefreshEnabled: r } = this.props;
                 return 0 !== t && n
                     ? (0, i.jsxs)(
-                          _.Z,
+                          v.Z,
                           {
                               className: k.privateChannelsHeaderContainer,
                               children: [
@@ -475,26 +475,26 @@ let H = (e) => {
         m = l.Children.count(d),
         y = Z.Z.getMutablePrivateChannels(),
         O = (0, I.k1)(y),
-        v = (0, u.Wu)(
-            [A.Z, P.Z, w.Z],
+        _ = (0, u.Wu)(
+            [R.Z, P.Z, w.Z],
             () => {
-                let e = A.Z.getPrivateChannelIds();
+                let e = R.Z.getPrivateChannelIds();
                 return (0, I.tU)(e, [P.Z, w.Z]);
             },
             []
         );
     (0, E.z)(S.R);
-    let { analyticsLocations: _ } = (0, b.ZP)(g.Z.CONTACTS_LIST),
+    let { analyticsLocations: v } = (0, b.ZP)(g.Z.CONTACTS_LIST),
         x = (0, u.cj)([f.Z, N.Z, Z.Z], () => ({
             theme: N.Z.darkSidebar ? D.BRd.DARK : s,
             keyboardModeEnabled: f.Z.keyboardModeEnabled,
             version: null != o ? ''.concat(o, ':').concat(Z.Z.getPrivateChannelsVersion()) : Z.Z.getPrivateChannelsVersion()
         })),
         T = l.useRef(null),
-        R = null != (t = e.listScrollerRef) ? t : T,
+        A = null != (t = e.listScrollerRef) ? t : T,
         L = l.useCallback(
             (e) => {
-                let t = R.current,
+                let t = A.current,
                     n = document.querySelector(e);
                 null != t &&
                     null != n &&
@@ -508,21 +508,21 @@ let H = (e) => {
                         }
                     });
             },
-            [R]
+            [A]
         ),
         k = l.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = R.current;
+                    let t = A.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
-            [R]
+            [A]
         ),
         M = l.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = R.current;
+                    let t = A.current;
                     if (null == t) return e();
                     t.scrollToBottom({
                         callback() {
@@ -530,7 +530,7 @@ let H = (e) => {
                         }
                     });
                 }),
-            [R]
+            [A]
         ),
         B = (0, C.Dt)(),
         H = (0, c.ZP)({
@@ -542,7 +542,7 @@ let H = (e) => {
             setFocus: L
         });
     return (0, i.jsx)(b.Gt, {
-        value: _,
+        value: v,
         children: (0, i.jsx)(a.bG, {
             navigator: H,
             children: (0, i.jsx)(
@@ -554,8 +554,8 @@ let H = (e) => {
                                 density: r,
                                 isVisualRefreshEnabled: n,
                                 channels: O,
-                                privateChannelIds: v,
-                                listRef: R,
+                                privateChannelIds: _,
+                                listRef: A,
                                 theme: s,
                                 version: o
                             },

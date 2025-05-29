@@ -2,8 +2,8 @@ n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     s = n(893776),
     c = n(493773),
     u = n(129293),
@@ -20,7 +20,7 @@ function E(e) {
 }
 function b(e) {
     let { location: t, transitionTo: l = E } = e,
-        [o, b] = i.useState('submitting'),
+        [a, b] = i.useState('submitting'),
         v = i.useRef(void 0);
     (0, c.ZP)(() => {
         (0, g.e)('verify_email');
@@ -41,12 +41,12 @@ function b(e) {
         O = i.useCallback(() => {
             p.default.track(m.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: v.current }), (0, h.Z)('verify_email');
         }, []);
-    return 'failed' === o
+    return 'failed' === a
         ? (0, r.jsxs)(d.ZP, {
               children: [
                   (0, r.jsx)(d.Ee, {
                       src: n(375673),
-                      className: a()(_.image, x.marginBottom20)
+                      className: o()(_.image, x.marginBottom20)
                   }),
                   (0, r.jsx)(d.Dx, {
                       className: x.marginBottom8,
@@ -62,12 +62,12 @@ function b(e) {
                   })
               ]
           })
-        : 'succeeded' === o
+        : 'succeeded' === a
           ? (0, r.jsxs)(d.ZP, {
                 children: [
                     (0, r.jsx)(d.Ee, {
                         src: n(73962),
-                        className: a()(_.image, x.marginBottom20)
+                        className: o()(_.image, x.marginBottom20)
                     }),
                     (0, r.jsx)(d.Dx, {
                         className: x.marginBottom40,
@@ -83,7 +83,7 @@ function b(e) {
                 children: [
                     (0, r.jsx)(d.Ee, {
                         src: n(892235),
-                        className: a()(_.image, x.marginBottom20)
+                        className: o()(_.image, x.marginBottom20)
                     }),
                     (0, r.jsx)(d.Dx, {
                         className: x.marginBottom8,
@@ -100,4 +100,4 @@ function b(e) {
                 ]
             });
 }
-o.ZP.initialize();
+a.ZP.initialize();

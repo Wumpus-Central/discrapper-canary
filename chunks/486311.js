@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(921944),
     y = n(348189),
     O = n(388032),
-    v = n(388298);
-function _(e) {
+    _ = n(388298);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,11 +63,11 @@ let C = {
                 var e;
                 switch (null == j || null == (e = j.popout) ? void 0 : e.type) {
                     case p.J.LEVEL_REACHED:
-                        return (0, r.jsx)(g.jG, _({ guildId: t }, j.popout));
+                        return (0, r.jsx)(g.jG, v({ guildId: t }, j.popout));
                     case p.J.PERKS_AVAILABLE:
-                        return (0, r.jsx)(g.$h, _({ guildId: t }, j.popout));
+                        return (0, r.jsx)(g.$h, v({ guildId: t }, j.popout));
                     case p.J.PERKS_PURCHASABLE:
-                        return (0, r.jsx)(g.yI, _({ guildId: t }, j.popout));
+                        return (0, r.jsx)(g.yI, v({ guildId: t }, j.popout));
                     default:
                         return (0, r.jsx)('div', {});
                 }
@@ -94,11 +94,11 @@ let C = {
                 var i, s;
                 return (0, r.jsx)(
                     u.m,
-                    ((i = _({}, e)),
+                    ((i = v({}, e)),
                     (s = s =
                         {
                             ref: T,
-                            className: v.container,
+                            className: _.container,
                             id: 'skill-trees-'.concat(t),
                             renderIcon: (e) =>
                                 (0, r.jsx)(a.$Eu, {
@@ -109,10 +109,10 @@ let C = {
                             background:
                                 (null == j ? void 0 : j.popout) != null &&
                                 (0, r.jsx)('div', {
-                                    className: v.lottieContainer,
+                                    className: _.lottieContainer,
                                     children: (0, r.jsx)(a.kci, {
                                         nextScene: N,
-                                        className: v.lottie,
+                                        className: _.lottie,
                                         sceneSegments: C,
                                         importData: () => n.e('50821').then(n.t.bind(n, 548421, 19)),
                                         onScenePlay: Z,
@@ -120,7 +120,7 @@ let C = {
                                     })
                                 }),
                             text: (0, r.jsx)('span', {
-                                className: o()({ [v.textImportant]: (null == j ? void 0 : j.showUnread) === !0 }),
+                                className: o()({ [_.textImportant]: (null == j ? void 0 : j.showUnread) === !0 }),
                                 children: O.intl.string(y.default.yv3DJC)
                             }),
                             selected: l,

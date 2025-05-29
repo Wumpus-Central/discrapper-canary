@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(921944),
     y = n(474936),
     O = n(388032),
-    v = n(706442),
-    _ = n(777091);
+    _ = n(706442),
+    v = n(777091);
 let C = (e, t) => {
         let n = null != t && !t.isPreview;
         return e ? (e && !n ? 'no-wallpaper-nitro' : 'has-wallpaper-nitro') : 'non-nitro';
@@ -43,8 +43,8 @@ let C = (e, t) => {
                 selectedChannelId: E
             }),
             Z = N === h.FN.CONTEXT_MENU,
-            [T, A] = (0, c.US)(x && Z && I && w && !P ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
-            R = (0, u.m)(y.p9.TIER_2),
+            [T, R] = (0, c.US)(x && Z && I && w && !P ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
+            A = (0, u.m)(y.p9.TIER_2),
             D = (0, f.Z)(n),
             L = T === o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
             k = (0, i.useRef)(null),
@@ -67,9 +67,9 @@ let C = (e, t) => {
         )
             return t;
         let V = () => {
-                A(b.L.USER_DISMISS);
+                R(b.L.USER_DISMISS);
             },
-            H = C(R, null != D ? D : null),
+            H = C(A, null != D ? D : null),
             F = j(H),
             z = S(H);
         return (0, r.jsx)('div', {
@@ -87,9 +87,9 @@ let C = (e, t) => {
                         buttonText: O.intl.string(O.t['+IrDzM']),
                         header: F,
                         art: (0, r.jsx)('img', {
-                            src: _.Z,
+                            src: v.Z,
                             alt: '',
-                            className: v.chatWallpaperDMListCoachmarkArt
+                            className: _.chatWallpaperDMListCoachmarkArt
                         }),
                         body: z,
                         align: G

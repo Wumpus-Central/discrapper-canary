@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(997841);
+n.d(t, { Z: () => E }), n(388685), n(997841);
 var i = n(255367),
     r = n(73800),
     l = n(442837),
@@ -14,13 +14,13 @@ var i = n(255367),
     f = n(490897),
     S = n(526761),
     O = n(388032);
-function h(e) {
+function E(e) {
     let t = (0, d.ng)(e, !0),
-        h = (0, d.U)();
+        E = (0, d.U)();
     return (0, i.jsxs)(s.sNh, {
         id: 'notification',
         label: (0, i.jsxs)(i.Fragment, {
-            children: [h, O.intl.string(O.t.HcoRu7)]
+            children: [E, O.intl.string(O.t.HcoRu7)]
         }),
         action: () => {
             (0, s.ZDy)(async () => {
@@ -75,17 +75,17 @@ function h(e) {
         children: [
             (function (e) {
                 let [t, n] = r.useState(!1),
-                    [d, h] = r.useState(!1),
-                    E = (0, l.e7)([g.ZP], () => g.ZP.getGuildUnreadSetting(e)),
+                    [d, E] = r.useState(!1),
+                    h = (0, l.e7)([g.ZP], () => g.ZP.getGuildUnreadSetting(e)),
                     y = (0, l.e7)([g.ZP], () => g.ZP.getMessageNotifications(e)),
-                    j = d ? u.s8.CUSTOM : (0, u.gs)(E, y),
+                    j = d ? u.s8.CUSTOM : (0, u.gs)(h, y),
                     _ = (t) => {
-                        h(!1);
+                        E(!1);
                         let n = { message_notifications: t };
-                        t === p.bL.ALL_MESSAGES && E !== f.i.ALL_MESSAGES && (n.flags = (0, a.Q4)(g.ZP.getGuildFlags(e), S.vc.UNREADS_ALL_MESSAGES)), o.Z.updateGuildNotificationSettings(e, n, b.UE.notifications(t));
+                        t === p.bL.ALL_MESSAGES && h !== f.i.ALL_MESSAGES && (n.flags = (0, a.Q4)(g.ZP.getGuildFlags(e), S.vc.UNREADS_ALL_MESSAGES)), o.Z.updateGuildNotificationSettings(e, n, b.UE.notifications(t));
                     },
                     N = (t) => {
-                        h(!1);
+                        E(!1);
                         let n = g.ZP.getGuildFlags(e);
                         o.Z.updateGuildNotificationSettings(e, { flags: (0, a.Q4)(n, t === f.i.ALL_MESSAGES ? S.vc.UNREADS_ALL_MESSAGES : S.vc.UNREADS_ONLY_MENTIONS) }, b.UE.unreads(t));
                     };
@@ -98,27 +98,27 @@ function h(e) {
                                     group: 'notification-preset',
                                     checked: j === u.s8.ALL_MESSAGES,
                                     label: O.intl.string(O.t.hZrr6u),
-                                    action: () => ((0, c.V)(e, u.s8.ALL_MESSAGES), h(!1))
+                                    action: () => ((0, c.V)(e, u.s8.ALL_MESSAGES), E(!1))
                                 }),
                                 (0, i.jsx)(s.k5B, {
                                     id: 'essentials',
                                     group: 'notification-preset',
                                     checked: j === u.s8.MENTIONS,
                                     label: O.intl.string(O.t.y59NJi),
-                                    action: () => ((0, c.V)(e, u.s8.MENTIONS), h(!1))
+                                    action: () => ((0, c.V)(e, u.s8.MENTIONS), E(!1))
                                 }),
                                 (0, i.jsx)(s.k5B, {
                                     id: 'nothing',
                                     group: 'notification-preset',
                                     checked: j === u.s8.NOTHING,
                                     label: O.intl.string(O.t['pGn/bG']),
-                                    action: () => ((0, c.V)(e, u.s8.NOTHING), h(!1))
+                                    action: () => ((0, c.V)(e, u.s8.NOTHING), E(!1))
                                 }),
                                 (0, i.jsx)(s.k5B, {
                                     id: 'custom',
                                     group: 'notification-preset',
                                     checked: j === u.s8.CUSTOM,
-                                    action: () => (n(!0), h(!0)),
+                                    action: () => (n(!0), E(!0)),
                                     label: O.intl.string(O.t['32yow8'])
                                 })
                             ]
@@ -135,18 +135,18 @@ function h(e) {
                                                 (0, i.jsx)(s.k5B, {
                                                     id: 'unread_setting_all_messages',
                                                     group: 'unread_setting',
-                                                    checked: E === f.i.ALL_MESSAGES,
+                                                    checked: h === f.i.ALL_MESSAGES,
                                                     label: O.intl.string(O.t['HVah//']),
                                                     action: () => N(f.i.ALL_MESSAGES)
                                                 }),
                                                 (0, i.jsx)(s.k5B, {
                                                     id: 'unread_setting_mention_only',
                                                     group: 'unread_setting',
-                                                    checked: E === f.i.ONLY_MENTIONS,
+                                                    checked: h === f.i.ONLY_MENTIONS,
                                                     label: O.intl.string(O.t['tu+ZWF']),
                                                     action: () => N(f.i.ONLY_MENTIONS),
-                                                    disabled: E !== f.i.ONLY_MENTIONS && y === p.bL.ALL_MESSAGES,
-                                                    subtext: E !== f.i.ONLY_MENTIONS && y === p.bL.ALL_MESSAGES ? O.intl.string(O.t.eP8yWV) : void 0
+                                                    disabled: h !== f.i.ONLY_MENTIONS && y === p.bL.ALL_MESSAGES,
+                                                    subtext: h !== f.i.ONLY_MENTIONS && y === p.bL.ALL_MESSAGES ? O.intl.string(O.t.eP8yWV) : void 0
                                                 })
                                             ]
                                         },
@@ -164,7 +164,7 @@ function h(e) {
                                                     label: O.intl.string(O.t['HVah//']),
                                                     checked: y === p.bL.ALL_MESSAGES,
                                                     action: () => _(p.bL.ALL_MESSAGES),
-                                                    subtext: E !== f.i.ALL_MESSAGES && y !== p.bL.ALL_MESSAGES ? O.intl.string(O.t.idXSbG) : void 0
+                                                    subtext: h !== f.i.ALL_MESSAGES && y !== p.bL.ALL_MESSAGES ? O.intl.string(O.t.idXSbG) : void 0
                                                 }),
                                                 (0, i.jsx)(s.k5B, {
                                                     group: 'notification-preset',

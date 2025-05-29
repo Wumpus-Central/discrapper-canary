@@ -74,17 +74,13 @@ function j(e) {
     return null != t && null == n[t] && (n[t] = d.we(t)), n;
 }
 function A() {
-    let e = p.Z.getSection();
-    if (((C = p.Z.getChannel()), (S = p.Z.getCategory()), null == C || e !== f.CoT.PERMISSIONS)) return !1;
-    let t = C.getGuildId();
-    (v = I = j(C)), null == I[N] && (N = t), (i = null != S), (r = d.o4(C, S)), (T = null), (y = !1), (O = f.QZA.CLOSED), E.clear();
+    if (((C = p.Z.getChannel()), (S = p.Z.getCategory()), null == C)) return !1;
+    let e = C.getGuildId();
+    (v = I = j(C)), null == I[N] && (N = e), (i = null != S), (r = d.o4(C, S)), (T = null), (y = !1), (O = f.QZA.CLOSED), E.clear();
 }
 class Z extends (l = s.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, h.Z),
-            this.syncWith([p.Z, h.Z], () => {
-                A();
-            });
+        this.waitFor(p.Z, h.Z);
     }
     hasChanges() {
         return y;

@@ -21,8 +21,8 @@ var r = n(255367),
     b = n(434404),
     y = n(151494),
     O = n(496675),
-    v = n(259580),
-    _ = n(267642),
+    _ = n(259580),
+    v = n(267642),
     C = n(624138),
     j = n(667815),
     S = n(531572),
@@ -75,8 +75,8 @@ function T(e, t) {
         e
     );
 }
-let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
-    R = (e) => {
+let R = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+    A = (e) => {
         let { guild: t, onSelect: n } = e,
             [l, o] = i.useState(t.premiumProgressBarEnabled),
             [s, a] = i.useState(!1),
@@ -99,7 +99,7 @@ let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
         });
     },
     D = 57,
-    L = 57 + A,
+    L = 57 + R,
     k = {
         tension: 180,
         friction: 80
@@ -108,11 +108,11 @@ let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
         let { guild: t, withMargin: n } = e,
             l = (0, m.Q3)('GuildBoostingSidebarDisplay'),
             { analyticsLocations: u } = (0, g.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
-            b = (0, _.Jh)(t.id),
+            b = (0, v.Jh)(t.id),
             C = (0, y.Z)(t.id),
-            A = (0, _.FZ)(b),
-            D = null == A,
-            L = null != A ? A : b,
+            R = (0, v.FZ)(b),
+            D = null == R,
+            L = null != R ? R : b,
             M = (0, c.e7)([S.Z], () => {
                 var e;
                 return null != (e = S.Z.getCountForGuild(t.id)) ? e : 0;
@@ -151,16 +151,16 @@ let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                         perkIntro: I.intl.string(I.t.ZhvSn5)
                     });
             },
-            z = I.intl.formatToPlainString(I.t['2oNfMT'], { levelName: (0, _.e9)(L) }),
+            z = I.intl.formatToPlainString(I.t['2oNfMT'], { levelName: (0, v.e9)(L) }),
             W = I.intl.format(I.t.dhKnYm, {
                 numBoosts: C,
                 numTotal: P.oCV[L]
             });
-        D && ((z = (0, _.e9)(L)), (W = I.intl.format(I.t.B2byER, { numBoosts: C }))), l && (z = z.toLocaleLowerCase());
+        D && ((z = (0, v.e9)(L)), (W = I.intl.format(I.t.B2byER, { numBoosts: C }))), l && (z = z.toLocaleLowerCase());
         let Y = (0, a.JA)('boosts-'.concat(t.id));
         return (0, r.jsx)('li', {
             children: (0, r.jsx)(d.ua7, {
-                text: H ? I.intl.formatToPlainString(w.default['9CtPjo'], { perk: (0, _.nW)(L) }) : D ? I.intl.string(I.t['Y+V9go']) : I.intl.formatToPlainString(I.t.UyDKl5, { levelName: (0, _.nW)(L) }),
+                text: H ? I.intl.formatToPlainString(w.default['9CtPjo'], { perk: (0, v.nW)(L) }) : D ? I.intl.string(I.t['Y+V9go']) : I.intl.formatToPlainString(I.t.UyDKl5, { levelName: (0, v.nW)(L) }),
                 color: d.ua7.Colors.BLACK,
                 position: 'top',
                 delay: 200,
@@ -180,7 +180,7 @@ let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                             onClick: F,
                             className: o()(N.container, { [N.containerWithMargin]: n }),
                             onContextMenu: (e) => {
-                                U && (0, h.vq)(e, (e) => (0, r.jsx)(R, T(Z({}, e), { guild: t })));
+                                U && (0, h.vq)(e, (e) => (0, r.jsx)(A, T(Z({}, e), { guild: t })));
                             },
                             children: [
                                 (0, r.jsx)(d.nn4, { children: e['aria-label'] }),
@@ -207,11 +207,11 @@ let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                                     lineClamp: 1,
                                                     children: W
                                                 }),
-                                                (0, r.jsx)(v.Z, {
+                                                (0, r.jsx)(_.Z, {
                                                     className: N.count,
                                                     height: 16,
                                                     width: 16,
-                                                    direction: v.Z.Directions.RIGHT
+                                                    direction: _.Z.Directions.RIGHT
                                                 })
                                             ]
                                         })

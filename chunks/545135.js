@@ -1,4 +1,4 @@
-n.d(t, { default: () => k });
+n.d(t, { default: () => G });
 var i = n(255367);
 n(73800);
 var r = n(512722),
@@ -15,8 +15,8 @@ var r = n(512722),
     f = n(837949),
     S = n(122074),
     O = n(314897),
-    h = n(984933),
-    E = n(594174),
+    E = n(984933),
+    h = n(594174),
     y = n(976192),
     j = n(904483),
     _ = n(429824),
@@ -73,15 +73,15 @@ function T(e, t) {
         e
     );
 }
-function w(e) {
+function k(e) {
     let { guild: t, onSelect: r, hideSettings: c } = e,
         u = t.id,
-        w = h.ZP.getDefaultChannel(u),
-        { entrypoints: k } = (0, b._k)({ location: 'guild_context_menu' }),
-        G = (0, s.e7)(
-            [E.default],
+        k = E.ZP.getDefaultChannel(u),
+        { entrypoints: G } = (0, b._k)({ location: 'guild_context_menu' }),
+        w = (0, s.e7)(
+            [h.default],
             () => {
-                let e = E.default.getCurrentUser();
+                let e = h.default.getCurrentUser();
                 return l()(null != e, 'GuildContextMenu: user cannot be undefined'), t.isOwner(e);
             },
             [t]
@@ -89,7 +89,7 @@ function w(e) {
         U = (0, I.Z)({
             guild: t,
             source: Z.t4x.GUILD_CONTEXT_MENU,
-            channel: k ? null : w
+            channel: G ? null : k
         }),
         C = (0, L.Z)(u),
         R = (0, P.Z)(t),
@@ -138,14 +138,14 @@ function w(e) {
                               label: D.intl.string(D.t.IlFwwc),
                               action: () =>
                                   (0, o.ZDy)(async () => {
-                                      let { default: e } = await Promise.all([n.e('14006'), n.e('68856'), n.e('16172'), n.e('70791'), n.e('22878'), n.e('13351'), n.e('74891'), n.e('6380'), n.e('46097'), n.e('8739'), n.e('18543'), n.e('58059'), n.e('28467'), n.e('86282'), n.e('17938'), n.e('18895'), n.e('30243'), n.e('37447'), n.e('53937'), n.e('76540'), n.e('23491'), n.e('15483'), n.e('36087'), n.e('93602'), n.e('49508'), n.e('22646'), n.e('25183'), n.e('64838'), n.e('3940'), n.e('88622'), n.e('87040'), n.e('88712'), n.e('30419'), n.e('66317'), n.e('18824'), n.e('82081'), n.e('8787'), n.e('90202'), n.e('5507'), n.e('92241')]).then(n.bind(n, 241420));
+                                      let { default: e } = await Promise.all([n.e('14006'), n.e('68856'), n.e('16172'), n.e('70791'), n.e('22878'), n.e('13351'), n.e('74891'), n.e('6380'), n.e('46097'), n.e('8739'), n.e('18543'), n.e('58059'), n.e('28467'), n.e('86282'), n.e('17938'), n.e('18895'), n.e('30243'), n.e('37447'), n.e('53937'), n.e('76540'), n.e('23491'), n.e('15483'), n.e('36087'), n.e('93602'), n.e('49508'), n.e('22646'), n.e('25183'), n.e('64838'), n.e('3940'), n.e('88622'), n.e('87040'), n.e('88712'), n.e('30419'), n.e('66317'), n.e('18824'), n.e('82081'), n.e('8787'), n.e('90202'), n.e('6325'), n.e('88752')]).then(n.bind(n, 241420));
                                       return (n) => (0, i.jsx)(e, T(M({}, n), { guild: t }));
                                   })
                           }),
                           Q
                       ]
                   }),
-                  G
+                  w
                       ? null
                       : (0, i.jsx)(o.kSQ, {
                             children: (0, i.jsx)(o.sNh, {
@@ -179,7 +179,7 @@ function w(e) {
                                     label: D.intl.string(D.t.BayiAg),
                                     action: () =>
                                         (0, o.ZDy)(async () => {
-                                            let { default: e } = await Promise.all([n.e('14006'), n.e('68856'), n.e('16172'), n.e('70791'), n.e('22878'), n.e('13351'), n.e('74891'), n.e('6380'), n.e('46097'), n.e('8739'), n.e('18543'), n.e('58059'), n.e('28467'), n.e('86282'), n.e('17938'), n.e('18895'), n.e('30243'), n.e('37447'), n.e('53937'), n.e('76540'), n.e('23491'), n.e('15483'), n.e('36087'), n.e('93602'), n.e('49508'), n.e('22646'), n.e('25183'), n.e('64838'), n.e('3940'), n.e('88622'), n.e('87040'), n.e('88712'), n.e('30419'), n.e('66317'), n.e('18824'), n.e('82081'), n.e('8787'), n.e('90202'), n.e('5507'), n.e('92241')]).then(n.bind(n, 241420));
+                                            let { default: e } = await Promise.all([n.e('14006'), n.e('68856'), n.e('16172'), n.e('70791'), n.e('22878'), n.e('13351'), n.e('74891'), n.e('6380'), n.e('46097'), n.e('8739'), n.e('18543'), n.e('58059'), n.e('28467'), n.e('86282'), n.e('17938'), n.e('18895'), n.e('30243'), n.e('37447'), n.e('53937'), n.e('76540'), n.e('23491'), n.e('15483'), n.e('36087'), n.e('93602'), n.e('49508'), n.e('22646'), n.e('25183'), n.e('64838'), n.e('3940'), n.e('88622'), n.e('87040'), n.e('88712'), n.e('30419'), n.e('66317'), n.e('18824'), n.e('82081'), n.e('8787'), n.e('90202'), n.e('6325'), n.e('88752')]).then(n.bind(n, 241420));
                                             return (n) => (0, i.jsx)(e, T(M({}, n), { guild: t }));
                                         })
                                 }),
@@ -192,7 +192,7 @@ function w(e) {
                   (0, i.jsxs)(o.kSQ, {
                       children: [
                           z,
-                          !G &&
+                          !w &&
                               (0, i.jsx)(o.sNh, {
                                   id: 'leave-guild',
                                   label: D.intl.string(D.t.J2TBi4),
@@ -206,10 +206,10 @@ function w(e) {
               ]
           });
 }
-function k(e) {
+function G(e) {
     let { analyticsLocations: t } = (0, u.ZP)(c.Z.CONTEXT_MENU);
     return (0, i.jsx)(u.Gt, {
         value: t,
-        children: (0, i.jsx)(w, M({}, e))
+        children: (0, i.jsx)(k, M({}, e))
     });
 }

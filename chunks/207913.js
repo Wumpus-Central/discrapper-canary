@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(245216),
     y = n(172751),
     O = n(739566),
-    v = n(930282),
-    _ = n(318713),
+    _ = n(930282),
+    v = n(318713),
     C = n(47930),
     j = n(123145),
     S = n(25015),
@@ -29,8 +29,8 @@ var r = n(255367),
     N = n(430824),
     Z = n(306680),
     T = n(709054),
-    A = n(987889),
-    R = n(586694),
+    R = n(987889),
+    A = n(586694),
     D = n(981631),
     L = n(388032),
     k = n(539499);
@@ -126,7 +126,7 @@ function B(e) {
         h = (0, f.KS)(n, null),
         m = (0, p.ZP)(n, !1),
         b = (0, a.e7)([N.Z], () => N.Z.getGuild(n.getGuildId())),
-        { nick: v, colorString: _, primaryGuild: S } = (0, O.ZP)(t),
+        { nick: _, colorString: v, primaryGuild: S } = (0, O.ZP)(t),
         {
             avatarDecorationSrc: E,
             avatarSrc: x,
@@ -185,7 +185,7 @@ function B(e) {
                                 marginTop: '4px'
                             },
                             children: Z
-                                ? (0, r.jsx)(R.q, {
+                                ? (0, r.jsx)(A.q, {
                                       'aria-label': 'User Avatar',
                                       src: x,
                                       size: c.EFr.SIZE_32,
@@ -194,7 +194,7 @@ function B(e) {
                                       cornerIconOffsetY: 3,
                                       avatarDecoration: E
                                   })
-                                : (0, r.jsx)(R.E, {
+                                : (0, r.jsx)(A.E, {
                                       'aria-label': 'Guild Icon',
                                       src: b.getIconURL(32),
                                       size: c.EFr.SIZE_32,
@@ -222,7 +222,7 @@ function B(e) {
                                                   children: [
                                                       (0, r.jsx)('div', {
                                                           className: k.username,
-                                                          style: { color: _ },
+                                                          style: { color: v },
                                                           children: (0, r.jsx)(g.Z, { children: L })
                                                       }),
                                                       T
@@ -231,7 +231,7 @@ function B(e) {
                                             : (0, r.jsx)(g.Z, {
                                                   children: (0, r.jsx)(c.X6q, {
                                                       variant: 'text-md/semibold',
-                                                      style: { color: _ },
+                                                      style: { color: v },
                                                       className: k.username,
                                                       children: b.name
                                                   })
@@ -242,7 +242,7 @@ function B(e) {
                                             align: 'center',
                                             style: { width: 'fit-content' },
                                             children: [
-                                                (0, r.jsx)(A.Z, {
+                                                (0, r.jsx)(R.Z, {
                                                     message: t,
                                                     channel: n,
                                                     isUnread: u
@@ -273,7 +273,7 @@ function B(e) {
                                                 [k.unread]: u,
                                                 [k.selected]: s
                                             }),
-                                            children: [m, !Z && ' \xB7 '.concat(v)]
+                                            children: [m, !Z && ' \xB7 '.concat(_)]
                                         })
                                     ]
                                 }),
@@ -363,7 +363,7 @@ function F(e) {
 function z(e) {
     let { message: t } = e,
         n = (0, E.a3)(t.timestamp.getTime());
-    return (0, r.jsx)(_.Z, {
+    return (0, r.jsx)(v.Z, {
         timestamp: t.timestamp,
         className: k.timestamp,
         isEdited: t.isEdited(),
@@ -400,16 +400,16 @@ function W(e) {
                     y = null;
                 1 === a ? (y = c.XBm) : a > 1 ? (y = c.Ka2) : u ? (y = b.Z) : p || f ? (y = c.QDj) : d ? (y = c.n$P) : h ? (y = c.SlE) : g && (y = c.gj8);
                 let O = !0,
-                    _ = null;
+                    v = null;
                 if (e)
-                    if (u) _ = L.intl.string(L.t['9ddYKi']);
+                    if (u) v = L.intl.string(L.t['9ddYKi']);
                     else if (p) {
                         var C;
-                        (O = !1), (_ = null == (C = t.poll) ? void 0 : C.question.text);
-                    } else _ = f ? L.intl.string(L.t.sad2PD) : i ? L.intl.string(L.t.p0oZm5) : a > 1 ? L.intl.formatToPlainString(L.t.rtfTKi, { count: a }) : 1 === a ? L.intl.string(L.t.tCcq5u) : h ? L.intl.format(L.t.zY4v1N, { stickerName: t.stickerItems[0].name }) : g ? L.intl.string(L.t.slFYgo) : L.intl.string(L.t.sDqZHB);
+                        (O = !1), (v = null == (C = t.poll) ? void 0 : C.question.text);
+                    } else v = f ? L.intl.string(L.t.sad2PD) : i ? L.intl.string(L.t.p0oZm5) : a > 1 ? L.intl.formatToPlainString(L.t.rtfTKi, { count: a }) : 1 === a ? L.intl.string(L.t.tCcq5u) : h ? L.intl.format(L.t.zY4v1N, { stickerName: t.stickerItems[0].name }) : g ? L.intl.string(L.t.slFYgo) : L.intl.string(L.t.sDqZHB);
                 else
                     (O = !1),
-                        (_ = (0, r.jsx)(v.ZP, {
+                        (v = (0, r.jsx)(_.ZP, {
                             content: s,
                             message: t,
                             compact: !1,
@@ -420,16 +420,16 @@ function W(e) {
                         }));
                 return (
                     e &&
-                        (_ = (0, r.jsx)('div', {
+                        (v = (0, r.jsx)('div', {
                             className: o()(k.message, {
                                 [k.unread]: n,
                                 [k.selected]: l,
                                 [k.descriptionMessage]: O
                             }),
-                            children: _
+                            children: v
                         })),
                     {
-                        previewContent: _,
+                        previewContent: v,
                         Icon: y
                     }
                 );

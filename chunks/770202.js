@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(473403),
     y = n(981631),
     O = n(490897),
-    v = n(915887);
-function _(e, t, n) {
+    _ = n(915887);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function C(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
@@ -55,10 +55,10 @@ class S extends m.ZP {
     render() {
         let { channel: e, selected: t, connectChannelDropTarget: n, connectChannelDragSource: i, connectDragPreview: l, canReorderChannel: s } = this.props,
             a = (0, r.jsx)('li', {
-                className: o()(this.getClassName(), { [v.disabled]: this.isDisabled() }),
+                className: o()(this.getClassName(), { [_.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
                 children: (0, r.jsxs)(b.ZP, {
-                    className: v.iconVisibility,
+                    className: _.iconVisibility,
                     channel: e,
                     selected: t,
                     onClick: this.handleClick,
@@ -74,7 +74,7 @@ class S extends m.ZP {
     }
     constructor(...e) {
         super(...e),
-            _(this, 'handleContextMenu', (e) => {
+            v(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
                     i = f.Z.getGuild(t.getGuildId());
                 null != i &&
@@ -107,7 +107,7 @@ class S extends m.ZP {
                         };
                     });
             }),
-            _(this, 'handleClick', (e) => {
+            v(this, 'handleClick', (e) => {
                 let t = e.getGuildId();
                 if (null == t) throw Error('TextChannel, transitionTo: Channel does not have a guildId');
                 (0, h.uL)(y.Z5c.CHANNEL(t, e.id), {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => E });
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -8,33 +8,35 @@ var i = n(442837),
     l = n(189432),
     c = n(189357),
     u = n(434404),
-    d = n(314897),
-    f = n(944486),
-    _ = n(475413),
-    p = n(176505),
-    h = n(50493),
-    m = n(388032);
-function g(e) {
-    let { user: t, guildId: n, channelId: g, onClose: E, appContext: b, shouldShowTooltip: y } = e,
-        { newestAnalyticsLocation: O } = (0, s.ZP)(),
-        v = (0, i.e7)([d.default], () => d.default.getId() === (null == t ? void 0 : t.id)),
-        I = (0, c.m)(null != n ? n : null),
-        S = (0, i.e7)([f.Z], () => (null != g ? g : f.Z.getChannelId(n, !0)), [g, n]);
-    return null == n || !I || v
+    d = n(359110),
+    f = n(314897),
+    _ = n(944486),
+    p = n(475413),
+    h = n(176505),
+    m = n(50493),
+    g = n(388032);
+function E(e) {
+    let { user: t, guildId: n, channelId: E, onClose: b, appContext: y, shouldShowTooltip: O } = e,
+        { newestAnalyticsLocation: v } = (0, s.ZP)(),
+        I = (0, i.e7)([f.default], () => f.default.getId() === (null == t ? void 0 : t.id)),
+        S = (0, c.m)(null != n ? n : null),
+        T = (0, i.e7)([_.Z], () => (null != E ? E : _.Z.getChannelId(n, !0)), [E, n]);
+    return null == n || !S || I
         ? null
-        : (0, r.jsx)(_.oY, {
+        : (0, r.jsx)(p.oY, {
               action: 'PRESS_MOD_VIEW',
               icon: a.HI3,
-              shouldShowTooltip: y,
-              tooltipText: m.intl.string(m.t.kj3tz8),
+              shouldShowTooltip: O,
+              tooltipText: g.intl.string(g.t.kj3tz8),
               onClick: () => {
                   u.Z.close(),
-                      (0, o.i)(b),
-                      (0, l.r)(n, t.id, null != S ? S : p.oC.MEMBER_SAFETY, {
-                          modViewPanel: h.k.INFO,
-                          sourceLocation: O
+                      null != T && (0, d.Kh)(T),
+                      (0, o.i)(y),
+                      (0, l.r)(n, t.id, null != T ? T : h.oC.MEMBER_SAFETY, {
+                          modViewPanel: m.k.INFO,
+                          sourceLocation: v
                       }),
-                      null == E || E();
+                      null == b || b();
               }
           });
 }

@@ -81,8 +81,8 @@ function b(e) {
             tooltipName: b,
             folderGroupId: y,
             folderButtonContent: O,
-            onClick: v,
-            onContextMenu: _,
+            onClick: _,
+            onContextMenu: v,
             onHoverChange: C,
             onKeyDown: j,
             treeItemProps: { onFocus: S },
@@ -116,7 +116,7 @@ function b(e) {
             s || w(!1), null == C || C(!1);
         }, [s, C]),
         T = o || null == u ? null : (0, h.Or)(u),
-        A = !o && d > 0 ? (0, h.Ne)(d, g ? c.Z.BACKGROUND_ACCENT : c.Z.STATUS_DANGER) : null;
+        R = !o && d > 0 ? (0, h.Ne)(d, g ? c.Z.BACKGROUND_ACCENT : c.Z.STATUS_DANGER) : null;
     return (0, r.jsx)(a.tEY, {
         children: (0, r.jsx)(
             a.P3F,
@@ -147,8 +147,8 @@ function b(e) {
             })(
                 {
                     className: f.folderButton,
-                    onClick: v,
-                    onContextMenu: _,
+                    onClick: _,
+                    onContextMenu: v,
                     onMouseEnter: N,
                     onMouseLeave: Z,
                     onKeyDown: j,
@@ -167,7 +167,7 @@ function b(e) {
                     children: (0, r.jsxs)(a.aRk, {
                         isFolder: !0,
                         upperBadge: T,
-                        lowerBadge: A,
+                        lowerBadge: R,
                         lowerBadgeSize: { width: (0, a.OVM)(d) },
                         children: [
                             (0, r.jsx)(a.nn4, {

@@ -2,8 +2,8 @@ n.d(t, { Z: () => O });
 var r = n(381814),
     i = n(734641),
     l = n(731965),
-    a = n(433517),
-    o = n(710845),
+    o = n(433517),
+    a = n(710845),
     s = n(626135),
     c = n(630724),
     u = n(981631);
@@ -89,20 +89,20 @@ let f = 'UserFlowAnalyticsStore_current',
     _ = 'UserFlowAnalyticsStore';
 function x(e) {
     if (e === c.MK.UNKNOWN) return null;
-    let t = a.K.get(''.concat(_, '-').concat(e));
+    let t = o.K.get(''.concat(_, '-').concat(e));
     if (null == t) return null;
     let { version: n } = t,
         r = g(t, ['version']);
     return 1 !== n ? null : r;
 }
-new o.Z('UserFlowAnalytics');
+new a.Z('UserFlowAnalytics');
 let E = (0, r.U)()(
     (0, i.XR)((e, t) => ({
         flows: {},
         currentFlow: null,
         activeFlow: () => {
             var e;
-            let n = null != (e = t().currentFlow) ? e : a.K.get(f);
+            let n = null != (e = t().currentFlow) ? e : o.K.get(f);
             if (null == n) return null;
             let { [n]: r } = t().flows,
                 i = null != r ? r : x(n);
@@ -114,8 +114,8 @@ function b(e, t) {
     let n = E.getState().flows,
         { [e]: r } = n,
         i = g(n, [e].map(p)),
-        a = null != r ? r : x(e);
-    ((null == a ? void 0 : a.currentStep) == null || a.currentStep !== t) &&
+        o = null != r ? r : x(e);
+    ((null == o ? void 0 : o.currentStep) == null || o.currentStep !== t) &&
         (0, l.j)(() => {
             E.setState({
                 flows: h(d({}, i), {
@@ -139,10 +139,10 @@ function v(e, t) {
         var i;
         r = null != (i = E.getState().activeFlow()) ? i : c.MK.UNKNOWN;
     }
-    let a = E.getState().flows,
-        { [r]: o } = a,
-        s = g(a, [r].map(p)),
-        u = null != o ? o : x(r);
+    let o = E.getState().flows,
+        { [r]: a } = o,
+        s = g(o, [r].map(p)),
+        u = null != a ? a : x(r);
     null != u &&
         null != u.currentStep &&
         u.currentStep !== t &&
@@ -173,7 +173,7 @@ E.subscribe(
             (!(function (e) {
                 if (e.type === c.MK.UNKNOWN) return;
                 let t = ''.concat(_, '-').concat(e.type);
-                e.ended ? (a.K.remove(t), a.K.remove(f)) : (a.K.set(''.concat(_, '-').concat(e.type), h(d({}, e), { version: 1 })), a.K.set(f, e.type));
+                e.ended ? (o.K.remove(t), o.K.remove(f)) : (o.K.set(''.concat(_, '-').concat(e.type), h(d({}, e), { version: 1 })), o.K.set(f, e.type));
             })(e),
             s.default.track(
                 u.rMx.NUO_TRANSITION,

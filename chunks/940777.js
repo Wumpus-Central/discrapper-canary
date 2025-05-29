@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(674552),
     y = n(593364),
     O = n(905423),
-    v = n(199902),
-    _ = n(592125),
+    _ = n(199902),
+    v = n(592125),
     C = n(944486),
     j = n(979651),
     S = n(709054),
@@ -29,7 +29,7 @@ var r = n(255367),
     N = n(981631),
     Z = n(388032),
     T = n(940751);
-function A(e) {
+function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,7 +54,7 @@ function A(e) {
     }
     return e;
 }
-let R = {
+let A = {
     analyticsSource: {
         page: N.ZY5.GUILD_CHANNEL,
         section: N.jXE.CHANNEL_LIST,
@@ -71,18 +71,18 @@ function D() {
             favoriteServerMuted: E.Z.favoriteServerMuted
         })),
         B = (0, a.e7)([C.Z], () => C.Z.getChannelId(N.I_8)),
-        V = (0, a.e7)([_.Z], () => _.Z.getChannel(B)),
+        V = (0, a.e7)([v.Z], () => v.Z.getChannel(B)),
         H = (0, O.Z)((e) => e.guildId) === N.I_8,
         { badge: F, unread: z } = (0, P.Z)(G),
         W = (function (e) {
             let t = (0, a.e7)([C.Z], () => C.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
-                r = (0, a.e7)([v.Z], () => {
+                r = (0, a.e7)([_.Z], () => {
                     if (!n) return !1;
-                    let t = v.Z.getCurrentUserActiveStream();
+                    let t = _.Z.getCurrentUserActiveStream();
                     return null != t && null != e[t.channelId];
                 }),
-                i = (0, a.e7)([v.Z], () => v.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
+                i = (0, a.e7)([_.Z], () => _.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
                 l = (0, a.e7)([j.Z], () => n && null != t && j.Z.hasVideo(t), [n, t]),
                 o = (0, a.Wu)([h.ZP], () => S.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
                 s = (0, a.e7)([h.ZP], () =>
@@ -131,7 +131,7 @@ function D() {
                         lowerBadge: Y,
                         children: (0, r.jsx)(
                             c.LYs,
-                            ((e = A({}, l)),
+                            ((e = R({}, l)),
                             (t = t =
                                 {
                                     ariaLabel: Z.intl.formatToPlainString(Z.t['/uzRsr'], {
@@ -141,7 +141,7 @@ function D() {
                                     'aria-selected': H,
                                     to: {
                                         pathname: N.Z5c.CHANNEL(N.I_8, B),
-                                        state: R
+                                        state: A
                                     },
                                     selected: H || k,
                                     onMouseEnter: () => M(!0),
@@ -152,7 +152,7 @@ function D() {
                                     onContextMenu: function (e) {
                                         (0, d.jW)(e, async () => {
                                             let { default: e } = await n.e('3190').then(n.bind(n, 631981));
-                                            return (t) => (0, r.jsx)(e, A({}, t));
+                                            return (t) => (0, r.jsx)(e, R({}, t));
                                         });
                                     },
                                     children: (0, r.jsx)('div', {

@@ -17,8 +17,8 @@ var i = n(442837),
     b = n(790901),
     y = n(714794),
     O = n(355363),
-    v = n(687352),
-    _ = n(876548),
+    _ = n(687352),
+    v = n(876548),
     C = n(25601),
     j = n(981631),
     S = n(490897),
@@ -26,7 +26,7 @@ var i = n(442837),
     x = n(990252);
 function P(e) {
     var t;
-    let { channel: n, isChannelSelected: P, isChannelCollapsed: I, voiceStates: w, enableConnectedUserLimit: N, enableActivities: Z, isSubscriptionGated: T, needSubscriptionToAccess: A, isNewChannel: R, muted: D, resolvedUnreadSetting: L } = e,
+    let { channel: n, isChannelSelected: P, isChannelCollapsed: I, voiceStates: w, enableConnectedUserLimit: N, enableActivities: Z, isSubscriptionGated: T, needSubscriptionToAccess: R, isNewChannel: A, muted: D, resolvedUnreadSetting: L } = e,
         k = (0, i.e7)([f.ZP], () => f.ZP.getMentionCount(n.id)),
         M = (0, i.e7)([f.ZP], () => f.ZP.getIsMentionLowImportance(n.id)),
         U = (0, s.ZP)(n),
@@ -50,8 +50,8 @@ function P(e) {
             mentionsCount: k,
             isMentionLowImportance: M
         });
-    if ((0, c.O)(T)) return (0, r.jsx)(c.Z, { locked: A });
-    if (R)
+    if ((0, c.O)(T)) return (0, r.jsx)(c.Z, { locked: R });
+    if (A)
         return (0, r.jsx)(o.IGR, {
             text: E.intl.string(E.t.y2b7CA),
             color: l.Z.unsafe_rawColors.BRAND_260.css,
@@ -71,7 +71,7 @@ function P(e) {
         });
     let Y = null != (t = null == w ? void 0 : w.length) ? t : 0;
     return null != N && N && H
-        ? (0, r.jsx)(_.Z, {
+        ? (0, r.jsx)(v.Z, {
               userCount: Y,
               video: B || V,
               channel: n
@@ -82,7 +82,7 @@ function P(e) {
                 color: l.Z.unsafe_rawColors.RED_400.css
             })
           : null != Z && Z && (0, b.u)(U)
-            ? (0, r.jsx)(v.Z, {
+            ? (0, r.jsx)(_.Z, {
                   embeddedApps: U,
                   muted: D
               })

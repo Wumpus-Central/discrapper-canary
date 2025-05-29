@@ -1,10 +1,10 @@
-n.d(t, { default: () => m });
+n.d(t, { default: () => h });
 var r = n(255367);
 n(73800);
 var i = n(120356),
     o = n.n(i),
-    l = n(442837),
-    a = n(481060),
+    a = n(442837),
+    l = n(481060),
     s = n(840720),
     d = n(742409),
     c = n(430824),
@@ -13,8 +13,8 @@ var i = n(120356),
     f = n(446094),
     b = n(388032),
     p = n(941469),
-    C = n(288013);
-function _(e) {
+    _ = n(288013);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function _(e) {
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,11 +57,11 @@ function h(e, t) {
         e
     );
 }
-function m(e) {
+function h(e) {
     var t,
         n,
         { guildId: i } = e,
-        m = (function (e, t) {
+        h = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -80,8 +80,8 @@ function m(e) {
             }
             return i;
         })(e, ['guildId']);
-    let j = (0, l.e7)([c.Z], () => c.Z.getGuild(i)),
-        O = (0, l.e7)(
+    let j = (0, a.e7)([c.Z], () => c.Z.getGuild(i)),
+        O = (0, a.e7)(
             [u.default],
             () => {
                 var e;
@@ -90,88 +90,97 @@ function m(e) {
             },
             [i]
         ),
-        { isAdopting: v, onAdoptTag: y, onEditProfile: x } = (0, f.Z)(i, m.onClose);
+        { isAdopting: v, onAdoptTag: y, onEditProfile: x } = (0, f.Z)(i, h.onClose);
     if (null != j && (0, g.up)(j) && (0, g.jq)(j))
         return (0, r.jsxs)(
-            a.Y0X,
-            h(_({ size: a.CgR.DYNAMIC }, m), {
-                children: [
-                    (0, r.jsxs)(a.hzk, {
-                        className: C.modalContent,
-                        scrollbarType: 'none',
-                        children: [
-                            (0, r.jsx)('div', {
-                                className: C.modalContentChild,
-                                children: (0, r.jsxs)('div', {
-                                    className: C.left,
-                                    children: [
-                                        (0, r.jsxs)('div', {
-                                            className: C.headerContainer,
-                                            children: [
-                                                (0, r.jsx)(a.X6q, {
-                                                    variant: 'heading-lg/bold',
-                                                    children: b.intl.string(p.default.OvKPi4)
-                                                }),
-                                                (0, r.jsx)(a.Text, {
-                                                    variant: 'text-md/normal',
-                                                    children: b.intl.string(p.default.kHxfDw)
-                                                })
-                                            ]
-                                        }),
-                                        (0, r.jsx)(s.Z, {
-                                            className: C.guildRow,
-                                            guildId: j.id,
-                                            guildName: j.name,
-                                            guildIcon: j.icon,
-                                            guildIconSize: 32,
-                                            guildTag: j.profile.tag,
-                                            guildBadge: null != (t = j.profile.badge) ? t : ''
-                                        }),
-                                        (0, r.jsxs)('div', {
-                                            className: C.buttonContainer,
-                                            children: [
-                                                (0, r.jsx)(a.ua7, {
-                                                    text: b.intl.string(p.default.WlENZm),
-                                                    tooltipContentClassName: C.tooltip,
-                                                    shouldShow: O,
-                                                    children: (e) =>
-                                                        (0, r.jsx)(
-                                                            a.zxk,
-                                                            h(_({}, e), {
-                                                                fullWidth: !0,
-                                                                onClick: y,
-                                                                submitting: v,
-                                                                disabled: O,
-                                                                children: b.intl.string(b.t.jwEaiY)
-                                                            })
-                                                        )
-                                                }),
-                                                (0, r.jsx)(a.zxk, {
-                                                    color: a.Ttl.PRIMARY,
-                                                    fullWidth: !0,
-                                                    onClick: x,
-                                                    children: b.intl.string(b.t.s5vZlZ)
-                                                })
-                                            ]
-                                        })
-                                    ]
+            l.Y0X,
+            m(
+                C(
+                    {
+                        className: _.modal,
+                        size: l.CgR.DYNAMIC
+                    },
+                    h
+                ),
+                {
+                    children: [
+                        (0, r.jsxs)(l.hzk, {
+                            className: _.modalContent,
+                            scrollbarType: 'none',
+                            children: [
+                                (0, r.jsx)('div', {
+                                    className: _.modalContentChild,
+                                    children: (0, r.jsxs)('div', {
+                                        className: _.left,
+                                        children: [
+                                            (0, r.jsxs)('div', {
+                                                className: _.headerContainer,
+                                                children: [
+                                                    (0, r.jsx)(l.X6q, {
+                                                        variant: 'heading-lg/bold',
+                                                        children: b.intl.string(p.default.OvKPi4)
+                                                    }),
+                                                    (0, r.jsx)(l.Text, {
+                                                        variant: 'text-md/normal',
+                                                        children: b.intl.string(p.default.kHxfDw)
+                                                    })
+                                                ]
+                                            }),
+                                            (0, r.jsx)(s.Z, {
+                                                className: _.guildRow,
+                                                guildId: j.id,
+                                                guildName: j.name,
+                                                guildIcon: j.icon,
+                                                guildIconSize: 32,
+                                                guildTag: j.profile.tag,
+                                                guildBadge: null != (t = j.profile.badge) ? t : ''
+                                            }),
+                                            (0, r.jsxs)('div', {
+                                                className: _.buttonContainer,
+                                                children: [
+                                                    (0, r.jsx)(l.ua7, {
+                                                        text: b.intl.string(p.default.WlENZm),
+                                                        tooltipContentClassName: _.tooltip,
+                                                        shouldShow: O,
+                                                        children: (e) =>
+                                                            (0, r.jsx)(
+                                                                l.zxk,
+                                                                m(C({}, e), {
+                                                                    fullWidth: !0,
+                                                                    onClick: y,
+                                                                    submitting: v,
+                                                                    disabled: O,
+                                                                    children: b.intl.string(b.t.jwEaiY)
+                                                                })
+                                                            )
+                                                    }),
+                                                    (0, r.jsx)(l.zxk, {
+                                                        color: l.Ttl.PRIMARY,
+                                                        fullWidth: !0,
+                                                        onClick: x,
+                                                        children: b.intl.string(b.t.s5vZlZ)
+                                                    })
+                                                ]
+                                            })
+                                        ]
+                                    })
+                                }),
+                                (0, r.jsx)('div', {
+                                    className: o()(_.modalContentChild, _.right),
+                                    children: (0, r.jsx)(d.Z, {
+                                        guildId: j.id,
+                                        tag: j.profile.tag,
+                                        badge: null != (n = j.profile.badge) ? n : ''
+                                    })
                                 })
-                            }),
-                            (0, r.jsx)('div', {
-                                className: o()(C.modalContentChild, C.right),
-                                children: (0, r.jsx)(d.Z, {
-                                    guildId: j.id,
-                                    tag: j.profile.tag,
-                                    badge: null != (n = j.profile.badge) ? n : ''
-                                })
-                            })
-                        ]
-                    }),
-                    (0, r.jsx)(a.olH, {
-                        className: C.close,
-                        onClick: m.onClose
-                    })
-                ]
-            })
+                            ]
+                        }),
+                        (0, r.jsx)(l.olH, {
+                            className: _.close,
+                            onClick: h.onClose
+                        })
+                    ]
+                }
+            )
         );
 }

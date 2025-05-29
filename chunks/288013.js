@@ -1,4 +1,5 @@
 e.exports = {
+    modal: 'modal__58ae6',
     modalContent: 'modalContent__58ae6',
     modalContentChild: 'modalContentChild__58ae6',
     close: 'close__58ae6',

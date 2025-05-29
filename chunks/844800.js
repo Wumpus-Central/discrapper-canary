@@ -2,12 +2,12 @@ n.d(t, { Z: () => h });
 var r,
     i,
     l,
-    a = n(442837),
-    o = n(570140);
+    o = n(442837),
+    a = n(570140);
 let s = !1,
     c = null,
     u = null;
-class d extends (l = a.ZP.Store) {
+class d extends (l = o.ZP.Store) {
     getState() {
         return {
             verifySuccess: s,
@@ -25,7 +25,7 @@ class d extends (l = a.ZP.Store) {
               writable: !0
           })
         : (d[r] = i);
-let h = new d(o.Z, {
+let h = new d(a.Z, {
     HUB_VERIFY_EMAIL_SUCCESS: function (e) {
         let { guildId: t } = e;
         (s = !0), (c = null), (u = t);

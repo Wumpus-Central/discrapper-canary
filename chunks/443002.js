@@ -156,7 +156,7 @@ let A = function (e) {
                                             guild: n
                                         }),
                                         (0, r.jsx)(p.Z, {}),
-                                        (0, r.jsx)(m.Z, {})
+                                        (0, r.jsx)(m.Z, { isGuildPowerupsExperimentEnabled: M })
                                     ]
                                 }),
                                 (0, r.jsx)(v.A, {}),

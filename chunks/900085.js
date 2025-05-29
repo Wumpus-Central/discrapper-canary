@@ -16,8 +16,8 @@ var r,
     b = n(576855),
     y = n(313201),
     O = n(991346),
-    v = n(592125),
-    _ = n(888369),
+    _ = n(592125),
+    v = n(888369),
     C = n(430824),
     j = n(306680),
     S = n(944486),
@@ -29,8 +29,8 @@ var r,
     N = n(823385),
     Z = n(415795),
     T = n(670512),
-    A = n(558631),
-    R = n(981631),
+    R = n(558631),
+    A = n(981631),
     D = n(388032),
     L = n(298746);
 function k(e, t, n) {
@@ -92,7 +92,7 @@ let G = { bottom: 10 },
                 (0, i.jsx)('div', {
                     className: L.emptyStateCTA,
                     children: (0, i.jsx)(u.eee, {
-                        href: I.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL),
+                        href: I.Z.getArticleURL(A.BhN.QUICK_SWITCHER_TUTORIAL),
                         children: D.intl.string(D.t['4iPfEB'])
                     })
                 })
@@ -113,13 +113,13 @@ class V extends (r = l.Component) {
     }
 }
 k(V, 'defaultProps', { unread: !1 });
-let H = c.ZP.connectStores([j.ZP, v.Z], (e) => {
+let H = c.ZP.connectStores([j.ZP, _.Z], (e) => {
         let { channel: t } = e;
         return {
             unread: j.ZP.hasUnread(t.id),
             mentions: j.ZP.getMentionCount(t.id),
             isMentionLowImportance: j.ZP.getIsMentionLowImportance(t.id),
-            category: v.Z.getChannel(t.parent_id)
+            category: _.Z.getChannel(t.parent_id)
         };
     })(V),
     F = c.ZP.connectStores([E.ZP], (e) => {
@@ -127,17 +127,17 @@ let H = c.ZP.connectStores([j.ZP, v.Z], (e) => {
         if (null == t.guild_id) throw Error('ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...');
         return { voiceStates: E.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(V),
-    z = c.ZP.connectStores([_.default], (e) => {
+    z = c.ZP.connectStores([v.default], (e) => {
         let { guild: t } = e;
-        return { unread: _.default.hasUnread(t.id) };
+        return { unread: v.default.hasUnread(t.id) };
     })(Z.ic),
     W = c.ZP.connectStores([j.ZP], (e) => {
         let { channel: t } = e;
         return { mentions: j.ZP.getMentionCount(t.id) };
     })(Z.PZ),
-    Y = c.ZP.connectStores([v.Z, j.ZP], (e) => {
+    Y = c.ZP.connectStores([_.Z, j.ZP], (e) => {
         let { user: t } = e,
-            n = v.Z.getDMFromUserId(t.id);
+            n = _.Z.getDMFromUserId(t.id);
         return { mentions: null != n ? j.ZP.getMentionCount(n) : 0 };
     })(Z.n5);
 function K(e, t, n) {
@@ -234,7 +234,7 @@ class q extends l.PureComponent {
                 });
     }
     focusNode(e) {
-        P.S.dispatch(R.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
+        P.S.dispatch(A.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
     }
     getRowId(e) {
         return 'quick-switcher-'.concat(this._listId, '-item-').concat(e);
@@ -248,7 +248,7 @@ class q extends l.PureComponent {
                 textChannelSymbolHook: (e, t) => K(t, f.xQ.TEXT_CHANNEL, D.intl.string(D.t.wrwhub)),
                 voiceChannelSymbolHook: (e, t) => K(t, f.xQ.VOICE_CHANNEL, D.intl.string(D.t['jz+hJi'])),
                 guildSymbolHook: (e, t) => K(t, f.xQ.GUILD, D.intl.string(D.t.WuwCWl)),
-                helpdeskArticle: I.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL)
+                helpdeskArticle: I.Z.getArticleURL(A.BhN.QUICK_SWITCHER_TUTORIAL)
             })
         });
     }
@@ -316,10 +316,10 @@ class q extends l.PureComponent {
                             l = C.Z.getGuild(r.getGuildId());
                         if (null == l) return;
                         switch (r.type) {
-                            case R.d4z.GUILD_TEXT:
-                            case R.d4z.GUILD_ANNOUNCEMENT:
-                            case R.d4z.GUILD_FORUM:
-                            case R.d4z.GUILD_MEDIA:
+                            case A.d4z.GUILD_TEXT:
+                            case A.d4z.GUILD_ANNOUNCEMENT:
+                            case A.d4z.GUILD_FORUM:
+                            case A.d4z.GUILD_MEDIA:
                                 return (0, d.jW)(e, async () => {
                                     let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('44011')]).then(n.bind(n, 373651));
                                     return (t) =>
@@ -332,8 +332,8 @@ class q extends l.PureComponent {
                                             })
                                         );
                                 });
-                            case R.d4z.GUILD_VOICE:
-                            case R.d4z.GUILD_STAGE_VOICE:
+                            case A.d4z.GUILD_VOICE:
+                            case A.d4z.GUILD_STAGE_VOICE:
                                 return (0, d.jW)(e, async () => {
                                     let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331'), n.e('81070')]).then(n.bind(n, 213202));
                                     return (t) =>
@@ -346,9 +346,9 @@ class q extends l.PureComponent {
                                             })
                                         );
                                 });
-                            case R.d4z.ANNOUNCEMENT_THREAD:
-                            case R.d4z.PUBLIC_THREAD:
-                            case R.d4z.PRIVATE_THREAD:
+                            case A.d4z.ANNOUNCEMENT_THREAD:
+                            case A.d4z.PUBLIC_THREAD:
+                            case A.d4z.PRIVATE_THREAD:
                                 return (0, d.jW)(e, async () => {
                                     let { default: e } = await n.e('40157').then(n.bind(n, 422200));
                                     return (t) =>
@@ -360,7 +360,7 @@ class q extends l.PureComponent {
                                             })
                                         );
                                 });
-                            case R.d4z.GUILD_STORE:
+                            case A.d4z.GUILD_STORE:
                                 return (0, d.jW)(e, async () => {
                                     let { default: e } = await n.e('99905').then(n.bind(n, 649400));
                                     return (t) =>
@@ -373,7 +373,7 @@ class q extends l.PureComponent {
                                             })
                                         );
                                 });
-                            case R.d4z.GUILD_DIRECTORY:
+                            case A.d4z.GUILD_DIRECTORY:
                                 return (0, d.jW)(e, async () => {
                                     let { default: e } = await n.e('70623').then(n.bind(n, 99334));
                                     return (t) => (0, i.jsx)(e, U(M({}, t), { channel: r }));
@@ -588,7 +588,7 @@ class q extends l.PureComponent {
 function Q(e) {
     let t = (0, c.cj)([N.Z], () => N.Z.getProps()),
         n = (0, O.Pt)(),
-        r = A.Z.useExperiment({ location: 'QuickSwitcher' }).enabled,
+        r = R.Z.useExperiment({ location: 'QuickSwitcher' }).enabled,
         o = l.useMemo(
             () =>
                 r
@@ -614,7 +614,7 @@ function Q(e) {
             e.unshift({
                 title: D.intl.string(D.t['3D5yo6']),
                 searchableTitles: [D.intl.string(D.t['3D5yo6'])],
-                path: R.Z5c.SETTINGS('account')
+                path: A.Z5c.SETTINGS('account')
             }),
                 (0, x.gF)(e);
         }, [o, r]),

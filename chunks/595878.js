@@ -1,7 +1,6 @@
 n.d(t, {
     cG: () => i,
-    dR: () => a,
-    oY: () => o
+    oY: () => l
 });
 var r = n(290031);
 function i(e) {
@@ -9,12 +8,7 @@ function i(e) {
         { enabled: n } = r.H.useExperiment({ location: t });
     return n;
 }
-function a(e) {
-    let { location: t } = e,
-        { enabled: n } = r.H.getCurrentConfig({ location: t });
-    return n;
-}
-function o(e) {
+function l(e) {
     let { location: t } = e,
         { enabled: n } = r.H.useExperiment({ location: t });
     return n;

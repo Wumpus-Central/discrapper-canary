@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r = n(512722),
     i = n.n(r),
     l = n(525654),
-    a = n.n(l),
-    o = n(39612),
+    o = n.n(l),
+    a = n(39612),
     s = n(271579),
     c = n(756647),
     u = n(703656),
@@ -15,13 +15,13 @@ var r = n(512722),
 function f(e) {
     let t = (function (e) {
             var t;
-            let n = null == (t = a().os) ? void 0 : t.family;
+            let n = null == (t = o().os) ? void 0 : t.family;
             if ('Android' === n || 'iOS' === n) {
                 let t = d.default.getFingerprint(),
                     n = (0, s.WS)();
                 return (
                     i()(null != e, 'generateAppPath: guildId cannot be null'),
-                    (0, s.ZP)((0, o.z0)(e), {
+                    (0, s.ZP)((0, a.z0)(e), {
                         utmSource: 'verify_hub_email',
                         fingerprint: t,
                         attemptId: n

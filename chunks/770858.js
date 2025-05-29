@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(522458);
 function y(e) {
     var t, n;
-    let { onClick: f, selectedOverride: y = !1, popoutProps: O, ref: v } = e,
-        _ = (0, l.Ie)('notifications-inbox'),
+    let { onClick: f, selectedOverride: y = !1, popoutProps: O, ref: _ } = e,
+        v = (0, l.Ie)('notifications-inbox'),
         [C, j] = i.useState(!1),
         S = y || window.location.pathname.startsWith(m.Z5c.NOTIFICATIONS_INBOX()),
         E = (0, o.e7)([p.Z], () => p.Z.unreadMessageIds),
@@ -28,7 +28,7 @@ function y(e) {
             if ('sidebar' === P) return m.Z5c.NOTIFICATIONS_INBOX(null != I ? I : void 0);
         }, [P, I]);
     return (0, r.jsxs)(c.H, {
-        ref: v,
+        ref: _,
         children: [
             'sidebar' === P &&
                 (0, r.jsx)(a.Z, {
@@ -67,7 +67,7 @@ function y(e) {
                                     });
                             }
                             return e;
-                        })({}, _, O)),
+                        })({}, v, O)),
                         (n = n =
                             {
                                 onClick: f,

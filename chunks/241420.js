@@ -1,4 +1,4 @@
-n.d(t, { default: () => g });
+n.d(t, { default: () => b });
 var a = n(255367);
 n(73800);
 var r = n(481060),
@@ -38,7 +38,7 @@ function p(e) {
         ]
     });
 }
-function g(e) {
+function b(e) {
     let { guild: t, transitionState: n, onClose: o } = e,
         i = ''.concat(d.intl.string(d.t.BayiAg), '\u2014').concat(null != t ? t.toString() : '??');
     return (0, a.jsxs)(r.Y0X, {

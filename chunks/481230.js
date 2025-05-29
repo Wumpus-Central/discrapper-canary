@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(913527),
     i = n.n(r),
     l = n(990547),
-    a = n(570140),
-    o = n(479531),
+    o = n(570140),
+    a = n(479531),
     s = n(771308),
     c = n(314897),
     u = n(626135),
@@ -87,7 +87,7 @@ function m(e) {
 }
 function f(e) {
     let { email: t, phoneToken: n, username: r, globalName: m, consent: f, password: _, guildTemplateCode: x, birthday: E, invite: b = null, giftCodeSKUId: v = null, promoEmailConsent: I = null, usedUsernameSuggestion: O = null } = e;
-    if ((a.Z.dispatch({ type: 'REGISTER' }), null != E)) {
+    if ((o.Z.dispatch({ type: 'REGISTER' }), null != E)) {
         (0, h.Z)(E, g.jXE.REGISTER),
             u.default.track(g.rMx.AGE_GATE_ACTION, {
                 source: p.L0.REGISTER,
@@ -125,7 +125,7 @@ function f(e) {
         rejectWithError: !1
     }).then(
         (e) => {
-            a.Z.dispatch({
+            o.Z.dispatch({
                 type: 'REGISTER_SUCCESS',
                 token: e.body.token
             }),
@@ -135,7 +135,7 @@ function f(e) {
                 });
         },
         (e) => {
-            let t = new o.Z(e);
+            let t = new a.Z(e);
             throw (
                 (null != t.getFieldErrors('date_of_birth') && s.wE(p.L0.REGISTER),
                 u.default.track(g.rMx.REGISTER_SUBMIT_ERRORED, {

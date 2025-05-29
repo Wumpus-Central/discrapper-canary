@@ -2,14 +2,14 @@ n.d(t, { Z: () => c }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(240894),
-    a = n(849146),
-    o = n(481060);
+    o = n(849146),
+    a = n(481060);
 let s = () => {
     let e = i.useRef(null),
         [t, n] = i.useState(0),
         r = i.useMemo(
             () =>
-                new a.Z((e) => {
+                new o.Z((e) => {
                     let [t] = e;
                     return n(t.contentRect.height);
                 }),
@@ -24,9 +24,9 @@ let s = () => {
     );
 };
 function c(e) {
-    let { show: t, children: n, top: i = 0, bottom: a = 0 } = e,
+    let { show: t, children: n, top: i = 0, bottom: o = 0 } = e,
         { ref: c, height: u } = s(),
-        d = (0, o.q_F)({
+        d = (0, a.q_F)({
             from: {
                 height: 0,
                 paddingBottom: '0px',
@@ -34,7 +34,7 @@ function c(e) {
             },
             to: {
                 height: t ? u : 0,
-                paddingBottom: t ? ''.concat(a, 'px') : '0px',
+                paddingBottom: t ? ''.concat(o, 'px') : '0px',
                 marginTop: t ? ''.concat(i, 'px') : '0px'
             },
             config: {
@@ -42,7 +42,7 @@ function c(e) {
                 friction: 26
             }
         }),
-        h = (0, o.q_F)({
+        h = (0, a.q_F)({
             from: { opacity: 0 },
             to: { opacity: +!!t },
             config: {

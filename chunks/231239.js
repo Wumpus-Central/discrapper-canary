@@ -2,12 +2,12 @@ n.d(t, { Z: () => s }), n(35282);
 var r = n(990547),
     i = n(283693),
     l = n(570140),
-    a = n(573261),
-    o = n(981631);
+    o = n(573261),
+    a = n(981631);
 let s = {
     signup: (e, t) =>
-        a.Z.post({
-            url: o.ANM.HUB_WAITLIST_SIGNUP,
+        o.Z.post({
+            url: a.ANM.HUB_WAITLIST_SIGNUP,
             body: {
                 email: e,
                 school: t
@@ -25,8 +25,8 @@ let s = {
         }),
     sendVerificationEmail: async (e, t, n) =>
         (
-            await a.Z.post({
-                url: o.ANM.HUB_EMAIL_VERIFY_SEND,
+            await o.Z.post({
+                url: a.ANM.HUB_EMAIL_VERIFY_SEND,
                 body: {
                     email: e,
                     guild_id: n,
@@ -51,8 +51,8 @@ let s = {
                 let n =
                     null ==
                     (t = (
-                        await a.Z.post({
-                            url: o.ANM.HUB_EMAIL_VERIFY,
+                        await o.Z.post({
+                            url: a.ANM.HUB_EMAIL_VERIFY,
                             body: { token: e },
                             trackedActionData: { event: r.NetworkActionNames.HUB_EMAIL_VERIFY },
                             rejectWithError: !1
@@ -75,8 +75,8 @@ let s = {
         if (null != e)
             try {
                 var i;
-                let s = await a.Z.post({
-                        url: o.ANM.HUB_EMAIL_VERIFY_CODE,
+                let s = await o.Z.post({
+                        url: a.ANM.HUB_EMAIL_VERIFY_CODE,
                         body: {
                             code: e,
                             guild_id: t,

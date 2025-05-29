@@ -52,12 +52,12 @@ let M = () => {
                     children: [
                         (0, i.jsx)(a.Text, {
                             variant: 'text-lg/semibold',
-                            color: 'always-white',
+                            color: 'header-primary',
                             children: D.intl.string(D.t.GyAbk5)
                         }),
                         (0, i.jsx)(a.Text, {
                             variant: 'text-md/normal',
-                            color: 'always-white',
+                            color: 'header-primary',
                             children: D.intl.string(D.t.DNXdBA)
                         })
                     ]

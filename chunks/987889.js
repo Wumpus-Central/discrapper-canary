@@ -62,7 +62,7 @@ let m = {
     },
     b = (e, t) =>
         (0, i.useMemo)(() => {
-            let n = m[_(e)];
+            let n = m[v(e)];
             return t ? ['ACK', ...n] : n;
         }, [e, t]);
 function y(e) {
@@ -139,7 +139,7 @@ function O(e) {
             })
     });
 }
-let v = {
+let _ = {
         ACK: {
             type: 'standard',
             Icon: o.dz2,
@@ -215,7 +215,7 @@ let v = {
             }
         }
     },
-    _ = (e) => 'MENTION';
+    v = (e) => 'MENTION';
 function C(e) {
     let { message: t, channel: n, isUnread: i } = e,
         l = b(t, i);
@@ -226,7 +226,7 @@ function C(e) {
         justify: 'center',
         className: p.actions,
         children: l.map((e) => {
-            let i = v[e];
+            let i = _[e];
             switch (i.type) {
                 case 'standard':
                     return (0, r.jsx)(

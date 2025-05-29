@@ -1,27 +1,17 @@
 n.d(t, {
     EB: () => a,
-    Ft: () => r,
-    VA: () => d,
-    bm: () => l,
-    dF: () => s,
+    Ft: () => l,
+    VA: () => u,
     jW: () => c,
     nW: () => o,
-    qY: () => u,
-    uv: () => i
-}),
-    n(388685);
-var r = (function (e) {
-    return (e.FREE_AVATAR_DECO_1_MONTH = '1297846842163200000'), e;
-})({});
-let i = new Set(['1297846842163200000']);
-var a = (function (e) {
-        return (e[(e.PENDING = 0)] = 'PENDING'), (e[(e.REDEEMABLE = 1)] = 'REDEEMABLE'), (e[(e.REDEEMED = 2)] = 'REDEEMED'), e;
-    })({}),
-    o = (function (e) {
-        return (e.SERVER_BOOST = 'server_boost'), (e.AVATAR_DECO = 'avatar_deco'), e;
-    })({});
-let s = 10,
-    l = 10,
-    c = 30,
-    u = '1304519765917696011',
-    d = 'a_9cd7e573f48859a995266a0a8345f336';
+    qY: () => d
+});
+var i,
+    r,
+    s,
+    l = (((i = {}).FREE_AVATAR_DECO_1_MONTH = '1297846842163200000'), i),
+    a = (((r = {})[(r.PENDING = 0)] = 'PENDING'), (r[(r.REDEEMABLE = 1)] = 'REDEEMABLE'), (r[(r.REDEEMED = 2)] = 'REDEEMED'), r),
+    o = (((s = {}).SERVER_BOOST = 'server_boost'), (s.AVATAR_DECO = 'avatar_deco'), s);
+let c = 30,
+    d = '1304519765917696011',
+    u = 'a_9cd7e573f48859a995266a0a8345f336';

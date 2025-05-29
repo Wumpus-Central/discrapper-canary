@@ -21,16 +21,16 @@ var i = n(120356),
     b = n(981631),
     y = n(921944),
     O = n(348189),
-    v = n(388032),
-    _ = n(423151),
+    _ = n(388032),
+    v = n(423151),
     C = n(928381);
 function j(e) {
     let { guildId: t, powerup: n, markAsDismissed: i } = e;
     return (0, r.jsx)(x, {
-        asset: (0, r.jsx)(g.g, { className: _.image }),
-        header: v.intl.formatToPlainString(O.default['Zg/m9P'], { perkName: n.title }),
-        content: v.intl.formatToPlainString(O.default['1EGXSE'], { perkName: n.title }),
-        buttonCTA: v.intl.string(v.t.RzWDqa),
+        asset: (0, r.jsx)(g.g, { className: v.image }),
+        header: _.intl.formatToPlainString(O.default['Zg/m9P'], { perkName: n.title }),
+        content: _.intl.formatToPlainString(O.default['1EGXSE'], { perkName: n.title }),
+        buttonCTA: _.intl.string(_.t.RzWDqa),
         onClick: () => (0, f.Z)(t, c.Z.GUILD_POWERUPS_COACHMARK_LEVEL_UP, n.skuId),
         markAsDismissed: i
     });
@@ -42,11 +42,11 @@ function S(e) {
         asset: (0, r.jsx)('img', {
             alt: '',
             src: C.Z,
-            className: l()(_.image, _.newPerksImage)
+            className: l()(v.image, v.newPerksImage)
         }),
-        header: v.intl.string(O.default.QpQBPT),
-        content: i ? v.intl.string(O.default['6hn0xM']) : v.intl.string(O.default.RDuvXl),
-        buttonCTA: v.intl.string(v.t.RzWDqa),
+        header: _.intl.string(O.default.QpQBPT),
+        content: i ? _.intl.string(O.default['6hn0xM']) : _.intl.string(O.default.RDuvXl),
+        buttonCTA: _.intl.string(_.t.RzWDqa),
         onClick: () =>
             i
                 ? (0, f.Z)(t, c.Z.GUILD_POWERUPS_COACHMARK_NEW_PERKS)
@@ -72,13 +72,13 @@ function E(e) {
         asset:
             1 === n.length
                 ? (0, r.jsx)(g.m, {
-                      className: _.image,
+                      className: v.image,
                       powerup: n[0]
                   })
-                : (0, r.jsx)(g.g, { className: _.image }),
-        header: v.intl.formatToPlainString(O.default.LmpChI, { guildName: l }),
-        content: n.length > 1 ? v.intl.formatToPlainString(O.default.wcQOqK, { perks: a }) : v.intl.formatToPlainString(O.default.ZF8NT0, { perk: a }),
-        buttonCTA: u ? v.intl.string(O.default.gSxlHR) : v.intl.string(v.t.RzWDqa),
+                : (0, r.jsx)(g.g, { className: v.image }),
+        header: _.intl.formatToPlainString(O.default.LmpChI, { guildName: l }),
+        content: n.length > 1 ? _.intl.formatToPlainString(O.default.wcQOqK, { perks: a }) : _.intl.formatToPlainString(O.default.ZF8NT0, { perk: a }),
+        buttonCTA: u ? _.intl.string(O.default.gSxlHR) : _.intl.string(_.t.RzWDqa),
         onClick: (e) => (u ? o(e) : (0, f.Z)(t, c.Z.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS)),
         markAsDismissed: i
     });
@@ -105,7 +105,7 @@ function x(e) {
             return i;
         })(e, ['asset', 'header', 'content', 'caretPosition', 'markAsDismissed']);
     let h = null != s ? s : d.DF.LEFT_TOP,
-        p = h === d.DF.TOP_CENTER || h === d.DF.LEFT_TOP ? _[h] : '';
+        p = h === d.DF.TOP_CENTER || h === d.DF.LEFT_TOP ? v[h] : '';
     return (0, r.jsx)(
         d.ZP,
         (function (e) {
@@ -135,11 +135,11 @@ function x(e) {
         })(
             {
                 asset: (0, r.jsxs)('div', {
-                    className: _.imageContainer,
+                    className: v.imageContainer,
                     children: [
                         t,
                         (0, r.jsx)(a.olH, {
-                            className: _.close,
+                            className: v.close,
                             onClick: () => (null == c ? void 0 : c(y.L.USER_DISMISS))
                         })
                     ]
@@ -153,9 +153,9 @@ function x(e) {
                     color: 'text-muted',
                     children: i
                 }),
-                className: l()(_.container, p),
-                headerClassName: _.header,
-                contentClassName: _.header,
+                className: l()(v.container, p),
+                headerClassName: v.header,
+                contentClassName: v.header,
                 caretPosition: h,
                 markAsDismissed: c
             },

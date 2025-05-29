@@ -1,16 +1,16 @@
 r.d(t, { R: () => o });
 var n = r(255367),
     a = r(692547),
-    l = r(481060),
-    s = r(192360),
-    i = r(954292);
+    s = r(481060),
+    i = r(192360),
+    l = r(954292);
 let o = (e) => {
         let { onChange: t, value: r } = e;
         return (0, n.jsxs)('div', {
-            className: s.nameInput,
+            className: i.nameInput,
             children: [
                 (0, n.jsxs)('div', {
-                    className: s.wrapInput,
+                    className: i.wrapInput,
                     children: [
                         (0, n.jsx)(c, {}),
                         (0, n.jsx)('input', {
@@ -19,15 +19,15 @@ let o = (e) => {
                                 t(e.currentTarget.value);
                             },
                             placeholder: 'emoji_name',
-                            className: i['text-md/semibold']
+                            className: l['text-md/semibold']
                         }),
                         (0, n.jsx)(u, { value: r })
                     ]
                 }),
-                (0, n.jsx)(l.Text, {
+                (0, n.jsx)(s.Text, {
                     variant: 'text-xs/normal',
                     color: 'header-muted',
-                    className: s.inputNote,
+                    className: i.inputNote,
                     children: 'Min. 2 characters (letters, numbers & underscores only).'
                 })
             ]
@@ -35,26 +35,26 @@ let o = (e) => {
     },
     c = () =>
         (0, n.jsx)('span', {
-            className: s.bookend,
+            className: i.bookend,
             'arria-hidden': !0,
             children: ':'
         }),
     u = (e) => {
         let { value: t } = e;
-        return (0, n.jsxs)(l.Text, {
+        return (0, n.jsxs)(s.Text, {
             variant: 'text-md/semibold',
             color: 'header-muted',
-            className: s.ghost,
+            className: i.ghost,
             'aria-hidden': !0,
             children: [
                 (0, n.jsx)(c, {}),
                 (0, n.jsx)('span', {
-                    className: s.spacer,
+                    className: i.spacer,
                     children: '' === t ? 'emoji_name' : t
                 }),
                 (0, n.jsx)(c, {}),
                 '' === t &&
-                    (0, n.jsx)(l.vdY, {
+                    (0, n.jsx)(s.vdY, {
                         color: a.Z.colors.INTERACTIVE_MUTED,
                         size: 'xs'
                     })

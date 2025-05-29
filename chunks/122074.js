@@ -19,8 +19,8 @@ var i = n(255367),
     f = n(213931),
     S = n(767157),
     O = n(112440),
-    h = n(671105),
-    E = n(552958),
+    E = n(671105),
+    h = n(552958),
     y = n(981631),
     j = n(921944),
     _ = n(871465),
@@ -49,29 +49,29 @@ function x() {
 }
 function A(e, t, s, v) {
     var m, x;
-    let A = (0, h.OR)(e),
-        L = (0, h._c)(e, t),
+    let A = (0, E.OR)(e),
+        L = (0, E._c)(e, t),
         I = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
         Z = (0, l.e7)([u.ZP], () => u.ZP.isMuted(e), [e]),
         D = g.ZP.canUseCustomNotificationSounds(I),
         M = D ? (null != L ? L : A) : _.YC.CLASSIC,
         T = p.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }).enabled,
-        [w, k] = r.useState(!1),
-        { playSound: G } = (0, E.Z)(),
+        [k, G] = r.useState(!1),
+        { playSound: w } = (0, h.Z)(),
         [U, C] = (0, c.cv)([s]),
         R = U === s;
     if (
         (r.useEffect(
             () => () => {
-                w && C(j.L.TAKE_ACTION);
+                k && C(j.L.TAKE_ACTION);
             },
-            [w, C]
+            [k, C]
         ),
         !T)
     )
         return null;
     let B = (n) => {
-            if ((G(n), C(j.L.TAKE_ACTION), !D && n !== _.YC.CLASSIC)) {
+            if ((w(n), C(j.L.TAKE_ACTION), !D && n !== _.YC.CLASSIC)) {
                 (0, S.Z)(n, 'contextMenu'), (0, O.Z)();
                 return;
             }
@@ -89,7 +89,7 @@ function A(e, t, s, v) {
         label: (e) => {
             let { isFocused: t } = e;
             return (
-                t && k(t),
+                t && G(t),
                 (0, i.jsxs)('div', {
                     className: P.rootContainer,
                     children: [
@@ -101,21 +101,19 @@ function A(e, t, s, v) {
                                     children: [
                                         (0, i.jsx)(Y, {
                                             className: P.text,
-                                            color: t ? 'always-white' : void 0,
                                             variant: 'text-sm/medium',
                                             children: N.intl.string(N.t.mrqSOj)
                                         }),
                                         (0, i.jsx)(o.SrA, {
                                             size: 'xs',
                                             className: P.nitroWheel,
-                                            color: t ? 'white' : D ? void 0 : a.JX.PREMIUM_TIER_2
+                                            color: D ? void 0 : a.JX.PREMIUM_TIER_2
                                         })
                                     ]
                                 }),
                                 null != F &&
                                     (0, i.jsx)(Y, {
                                         className: P.text,
-                                        color: t ? 'always-white' : void 0,
                                         variant: 'text-xs/normal',
                                         children: F
                                     })

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(953529), n(388685), n(539854);
+n.d(t, { Z: () => R }), n(953529), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(714338),
     y = n(607070),
     O = n(460181),
-    v = n(585483),
-    _ = n(264549),
+    _ = n(585483),
+    v = n(264549),
     C = n(981631),
     j = n(388032),
     S = n(268751);
@@ -139,10 +139,10 @@ function N() {
 }
 class Z extends i.PureComponent {
     componentDidMount() {
-        (this.lastInputedKeys = []), v.S.subscribe(C.CkL.SCROLL_PAGE_UP, this.scrollPageUp), v.S.subscribe(C.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.addEventListener('keyup', this.handleKeyUp, { capture: !0 });
+        (this.lastInputedKeys = []), _.S.subscribe(C.CkL.SCROLL_PAGE_UP, this.scrollPageUp), _.S.subscribe(C.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.addEventListener('keyup', this.handleKeyUp, { capture: !0 });
     }
     componentWillUnmount() {
-        v.S.unsubscribe(C.CkL.SCROLL_PAGE_UP, this.scrollPageUp), v.S.unsubscribe(C.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.removeEventListener('keyup', this.handleKeyUp, { capture: !0 });
+        _.S.unsubscribe(C.CkL.SCROLL_PAGE_UP, this.scrollPageUp), _.S.unsubscribe(C.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.removeEventListener('keyup', this.handleKeyUp, { capture: !0 });
     }
     render() {
         let { UP: e, DOWN: t, LEFT: n, RIGHT: i } = this.state;
@@ -302,7 +302,7 @@ function T(e) {
         })
     );
 }
-function A(e) {
+function R(e) {
     let { transitionState: t, onClose: n } = e,
         [l, s] = i.useState(!1),
         [a, c] = i.useState(!1),
@@ -323,7 +323,7 @@ function A(e) {
                     component: 'div',
                     children: l
                         ? (0, r.jsx)(
-                              _.Z,
+                              v.Z,
                               {
                                   handleDemonClose: function () {
                                       c(!1), setTimeout(n, 500);

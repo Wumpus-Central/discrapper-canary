@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(727258),
     y = n(276952),
     O = n(199540),
-    v = n(40153),
-    _ = n(252686),
+    _ = n(40153),
+    v = n(252686),
     C = n(682662),
     j = n(662146),
     S = n(981631),
@@ -27,15 +27,15 @@ var r = n(255367),
 let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
     w = (0, a.animated)(h.Kqy),
     N = i.memo(function (e) {
-        let { folderNode: t, setNodeRef: n, selected: l, expanded: a, mediaState: d, mentionCount: m = 0, isMentionLowImportance: N, unread: Z = !1, defaultFolderName: T, draggable: A = !1, sorting: R = !1, onDragStart: D, onDragEnd: L, onExpandCollapse: k, onContextMenu: M, renderChildNode: U, folderButtonSize: G, folderButtonContent: B, 'aria-setsize': V, 'aria-posinset': H } = e,
+        let { folderNode: t, setNodeRef: n, selected: l, expanded: a, mediaState: d, mentionCount: m = 0, isMentionLowImportance: N, unread: Z = !1, defaultFolderName: T, draggable: R = !1, sorting: A = !1, onDragStart: D, onDragEnd: L, onExpandCollapse: k, onContextMenu: M, renderChildNode: U, folderButtonSize: G, folderButtonContent: B, 'aria-setsize': V, 'aria-posinset': H } = e,
             { id: F, name: z, children: W } = t,
             [Y, K] = i.useState(!1),
             [q, Q] = i.useState(!1),
             X = Y || q,
             J = (0, f.Ml)('FolderItem');
         i.useEffect(() => {
-            R && K(!1);
-        }, [R]);
+            A && K(!1);
+        }, [A]);
         let [{ dragging: $ }, ee] = (0, s.c)({
                 type: b.eD.FOLDER,
                 item: () => (
@@ -86,11 +86,11 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                     }),
                     (0, r.jsx)(j.Z, {
                         text: er,
-                        disabled: R,
+                        disabled: A,
                         selected: l,
                         disableWrapper: !0,
                         children: (0, r.jsx)('div', {
-                            ref: A
+                            ref: R
                                 ? (e) => {
                                       ee(e);
                                   }
@@ -101,11 +101,11 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                             }),
                             'data-dnd-name': er,
                             children: $
-                                ? (0, r.jsx)(_.Z, { isFolder: !0 })
+                                ? (0, r.jsx)(v.Z, { isFolder: !0 })
                                 : (0, r.jsx)(O.Z, {
                                       folderNode: t,
                                       expanded: a,
-                                      sorting: R,
+                                      sorting: A,
                                       mediaState: d,
                                       mentionCount: m,
                                       isMentionLowImportance: N,
@@ -122,8 +122,8 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                   })
                         })
                     }),
-                    A
-                        ? (0, r.jsx)(v.ZP, {
+                    R
+                        ? (0, r.jsx)(_.ZP, {
                               name: er,
                               targetNode: t,
                               onDragOverChanged: et
@@ -164,8 +164,8 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                         )
                     );
                 }),
-                A && a
-                    ? (0, r.jsx)(v.Zu, {
+                R && a
+                    ? (0, r.jsx)(_.Zu, {
                           name: er,
                           targetNode: t
                       })

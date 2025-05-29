@@ -389,11 +389,6 @@ let i = {
         inlineRequire: () => n(401416).Z,
         neverLoadBeforeConnectionOpen: !0
     },
-    TenureRewardManager: {
-        actions: ['POST_CONNECTION_OPEN', 'CONNECTION_CLOSED', 'ENTITLEMENT_FETCH_APPLICATION_SUCCESS', 'ENTITLEMENT_CREATE', 'ENTITLEMENT_UPDATE', 'ENTITLEMENT_DELETE', 'LOGOUT'],
-        inlineRequire: () => n(944880).Z,
-        neverLoadBeforeConnectionOpen: !0
-    },
     ForwardGuildBreadcrumbManager: {
         actions: ['POST_CONNECTION_OPEN', 'MESSAGE_UPDATE', 'LOAD_MESSAGES_SUCCESS', 'LOAD_MESSAGES_AROUND_SUCCESS', 'LOAD_RECENT_MENTIONS_SUCCESS', 'LOAD_PINNED_MESSAGES_SUCCESS', 'SEARCH_FINISH', 'MOD_VIEW_SEARCH_FINISH'],
         inlineRequire: () => n(35260).Z

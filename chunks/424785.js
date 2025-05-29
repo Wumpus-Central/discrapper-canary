@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(66999),
     y = n(378844),
     O = n(359110),
-    v = n(922482),
-    _ = n(431328),
+    _ = n(922482),
+    v = n(431328),
     C = n(501655),
     j = n(427679),
     S = n(368442),
@@ -29,8 +29,8 @@ var r = n(255367),
     N = n(496675),
     Z = n(306680),
     T = n(9156),
-    A = n(979651),
-    R = n(934415),
+    R = n(979651),
+    A = n(934415),
     D = n(98597),
     L = n(648501),
     k = n(473403),
@@ -95,7 +95,7 @@ class Y extends D.ZP {
     }
     isFull() {
         let { channel: e } = this.props;
-        return (0, R.rY)(e, A.Z, I.Z);
+        return (0, A.rY)(e, R.Z, I.Z);
     }
     getModeClass() {
         let { position: e, sortingPosition: t, isUserOver: n } = this.props;
@@ -120,8 +120,8 @@ class Y extends D.ZP {
         return this.props.channelInfo;
     }
     render() {
-        let { channel: e, selected: t, connected: n, locked: i, connectChannelDropTarget: l, connectChannelDragSource: s, connectUserDropTarget: c, connectDragPreview: u, canReorderChannel: d, canMoveMembers: h, stageInstance: f, isSubscriptionGated: g, needSubscriptionToAccess: m, unread: b, resolvedUnreadSetting: y, mentionCount: O, isFavoriteSuggestion: v } = this.props,
-            { shouldShowGuildVerificationPopout: _ } = this.state,
+        let { channel: e, selected: t, connected: n, locked: i, connectChannelDropTarget: l, connectChannelDragSource: s, connectUserDropTarget: c, connectDragPreview: u, canReorderChannel: d, canMoveMembers: h, stageInstance: f, isSubscriptionGated: g, needSubscriptionToAccess: m, unread: b, resolvedUnreadSetting: y, mentionCount: O, isFavoriteSuggestion: _ } = this.props,
+            { shouldShowGuildVerificationPopout: v } = this.state,
             C = this.getVoiceStatesCount(),
             j = (0, r.jsxs)('li', {
                 className: o()(this.getModeClass(), { [V.disabled]: this.isDisabled() }),
@@ -133,7 +133,7 @@ class Y extends D.ZP {
                         renderPopout: this.renderPopout,
                         spacing: 0,
                         onRequestClose: this.closeGuildVerificationPopout,
-                        shouldShow: _,
+                        shouldShow: v,
                         children: () =>
                             (0, r.jsx)(a.ua7, {
                                 text: this.getTooltipText(),
@@ -167,7 +167,7 @@ class Y extends D.ZP {
                                                     className: V.iconVisibility,
                                                     iconClassName: o()({ [H.iconLive]: null != f }),
                                                     channel: e,
-                                                    selected: !v && t,
+                                                    selected: !_ && t,
                                                     connected: n,
                                                     unread: n ? b : void 0,
                                                     resolvedUnreadSetting: y,
@@ -181,7 +181,7 @@ class Y extends D.ZP {
                                                     },
                                                     connectDragPreview: u,
                                                     subtitle: this.renderSubtitle(),
-                                                    isFavoriteSuggestion: v,
+                                                    isFavoriteSuggestion: _,
                                                     'aria-label': (0, p.ZP)({
                                                         channel: e,
                                                         unread: b,
@@ -194,7 +194,7 @@ class Y extends D.ZP {
                                                 c
                                             ),
                                             {
-                                                children: [v && this.renderAcceptSuggestionButton(), v && this.renderRemoveSuggestionButton(), !v && this.renderOpenChatButton(), !v && this.renderInviteButton(), !v && this.renderEditButton(), !v && this.renderChannelInfo()]
+                                                children: [_ && this.renderAcceptSuggestionButton(), _ && this.renderRemoveSuggestionButton(), !_ && this.renderOpenChatButton(), !_ && this.renderInviteButton(), !_ && this.renderEditButton(), !_ && this.renderChannelInfo()]
                                             }
                                         )
                                     );
@@ -216,7 +216,7 @@ class Y extends D.ZP {
             F(this, 'handleClick', () => {
                 let { channel: e, locked: t, connected: n, unverifiedAccount: r } = this.props,
                     i = e.getGuildId();
-                null != i && (0, m.n)(i) && (0, g.hk)(i), r && this.setState({ shouldShowGuildVerificationPopout: !0 }), t || n || e.isRoleSubscriptionTemplatePreviewChannel() || (0, v.Cq)(e), __OVERLAY__ || (0, O.Kh)(e.id);
+                null != i && (0, m.n)(i) && (0, g.hk)(i), r && this.setState({ shouldShowGuildVerificationPopout: !0 }), t || n || e.isRoleSubscriptionTemplatePreviewChannel() || (0, _.Cq)(e), __OVERLAY__ || (0, O.Kh)(e.id);
             }),
             F(this, 'handleClickChat', () => {
                 let { channel: e, locked: t } = this.props;
@@ -309,10 +309,10 @@ function q(e) {
         h = (0, s.e7)([x.Z], () => x.Z.isCollapsed(n.parent_id)),
         p = (0, E.ZP)(n.id),
         f = (0, s.e7)([j.Z], () => j.Z.getStageInstanceByChannel(n.id), [n.id]),
-        g = (0, _.Rk)(n.id, C.pV.AUDIENCE),
+        g = (0, v.Rk)(n.id, C.pV.AUDIENCE),
         { isSubscriptionGated: m, needSubscriptionToAccess: y } = (0, b.Z)(n.id),
         O = (0, s.e7)([T.ZP], () => T.ZP.isFavorite(t.id, n.id)),
-        v = (0, S.xJ)(n.id),
+        _ = (0, S.xJ)(n.id),
         I = (0, L.Z)({
             channel: n,
             isChannelSelected: !1,
@@ -320,9 +320,9 @@ function q(e) {
             voiceStates: a,
             isSubscriptionGated: m,
             needSubscriptionToAccess: y,
-            enableConnectedUserLimit: v || (n.userLimit > 0 && n.userLimit < U.xGv)
+            enableConnectedUserLimit: _ || (n.userLimit > 0 && n.userLimit < U.xGv)
         }),
-        A = e.connected && null == I;
+        R = e.connected && null == I;
     return (0, r.jsx)(
         K,
         W(
@@ -341,7 +341,7 @@ function q(e) {
             ),
             {
                 isFavoriteSuggestion: l && !O,
-                forceShowButtons: A,
+                forceShowButtons: R,
                 channelInfo: I,
                 resolvedUnreadSetting: u
             }
