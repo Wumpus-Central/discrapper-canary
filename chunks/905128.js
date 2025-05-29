@@ -1,11 +1,8 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => v });
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(430824),
-    s = n(474936),
-    l = n(981631);
-function c(e, t, n) {
+    a = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +15,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,12 +26,12 @@ function u(e) {
                 })
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e, t) {
+function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,50 +43,43 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : l(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let _ = 86400000,
-    p = 3600000,
-    h = {};
-function m(e) {
-    let {
-        guild: { id: t }
-    } = e;
-    h[t] = f(u({}, h[t]), { appliedBoosts: g(t) });
+let u = 86400000,
+    d = 3600000,
+    f = {};
+function _(e) {
+    return Object.values(e).reduce((e, t) => {
+        var n, r, i;
+        return e + (null != (i = null == (r = t.sku) || null == (n = r.powerup_metadata) ? void 0 : n.boost_price) ? i : 0);
+    }, 0);
 }
-function g(e) {
-    var t;
-    let n = o.Z.getGuild(e),
-        r = (null == n ? void 0 : n.hasFeature(l.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0 ? 0 : l.oCV[null != (t = null == n ? void 0 : n.premiumTier) ? t : l.Eu4.NONE];
-    for (let [e, t] of Object.entries(s.jn)) (null == n ? void 0 : n.hasFeature(e)) && (r += t);
-    return r;
+function p(e) {
+    return (
+        null == f[e] &&
+            (f[e] = {
+                allPowerups: {},
+                unlockedPowerups: {},
+                powerupCatalog: {},
+                appliedBoosts: 0
+            }),
+        f[e]
+    );
 }
-function E(e) {
-    if (null == h[e]) {
-        let t = g(e);
-        h[e] = {
-            allPowerups: {},
-            unlockedPowerups: {},
-            powerupCatalog: {},
-            appliedBoosts: t
-        };
-    }
-    return h[e];
-}
-function b(e) {
+function h(e) {
     let { guildId: t, allPowerups: n, powerupCatalog: r } = e,
-        i = E(t);
-    h = f(u({}, h), {
-        [t]: f(u({}, i), {
+        i = p(t);
+    f = c(s({}, f), {
+        [t]: c(s({}, i), {
             allPowerups: n,
             powerupCatalog: r,
             catalogFetchCooldown: Date.now(),
@@ -97,12 +87,12 @@ function b(e) {
         })
     });
 }
-function y(e) {
+function m(e) {
     let { guildId: t, unlockedPowerups: n } = e,
-        r = E(t),
-        i = g(t);
-    h = f(u({}, h), {
-        [t]: f(u({}, r), {
+        r = p(t),
+        i = _(n);
+    f = c(s({}, f), {
+        [t]: c(s({}, r), {
             unlockedPowerups: n,
             appliedBoosts: i,
             unlockedPowerupsFetchCooldown: Date.now(),
@@ -110,58 +100,58 @@ function y(e) {
         })
     });
 }
-function O(e, t) {
+function g(e, t) {
     let { guildId: n, entitlements: r } = e,
-        i = E(n);
+        i = p(n);
     r.forEach((e) => {
         t ? (i.unlockedPowerups[e.sku_id] = e) : delete i.unlockedPowerups[e.sku_id];
-    }),
-        (h = f(u({}, h), { [n]: f(u({}, i), { appliedBoosts: g(n) }) }));
+    });
+    let a = _(i.unlockedPowerups);
+    f = c(s({}, f), { [n]: c(s({}, i), { appliedBoosts: a }) });
 }
-function v(e) {
-    O(e, !0);
+function E(e) {
+    g(e, !0);
 }
-function I(e) {
-    O(e, !1);
+function b(e) {
+    g(e, !1);
 }
-function S() {
-    h = {};
+function y() {
+    f = {};
 }
-class T extends (r = i.ZP.PersistedStore) {
+class O extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (h = e);
+        null != e && (f = e);
     }
     getState() {
-        return h;
+        return f;
     }
     getStateForGuild(e) {
-        return null != e ? h[e] : void 0;
+        return null != e ? f[e] : void 0;
     }
     shouldFetchCatalogForGuild(e) {
         var t;
-        let n = null == (t = h[e]) ? void 0 : t.catalogFetchCooldown;
-        return null == n || n + _ < Date.now();
+        let n = null == (t = f[e]) ? void 0 : t.catalogFetchCooldown;
+        return null == n || n + u < Date.now();
     }
     shouldFetchPowerupsForGuild(e) {
         var t;
-        let n = null == (t = h[e]) ? void 0 : t.unlockedPowerupsFetchCooldown;
-        return null == n || n + p < Date.now();
+        let n = null == (t = f[e]) ? void 0 : t.unlockedPowerupsFetchCooldown;
+        return null == n || n + d < Date.now();
     }
     hasFetchedPowerupCatalog(e) {
         var t;
-        return null != e && (null == (t = h[e]) ? void 0 : t.hasFetchedPowerupCatalog) === !0;
+        return null != e && (null == (t = f[e]) ? void 0 : t.hasFetchedPowerupCatalog) === !0;
     }
     hasFetchedUnlockedPowerups(e) {
         var t;
-        return null != e && (null == (t = h[e]) ? void 0 : t.hasFetchedUnlockedPowerups) === !0;
+        return null != e && (null == (t = f[e]) ? void 0 : t.hasFetchedUnlockedPowerups) === !0;
     }
 }
-c(T, 'displayName', 'GuildPowerupsStore'), c(T, 'persistKey', 'GuildPowerupsStore');
-let A = new T(a.Z, {
-    LOGOUT: S,
-    GUILD_POWERUP_CATALOG_FETCH_SUCCESS: b,
-    GUILD_UNLOCKED_POWERUPS_FETCH_SUCCESS: y,
-    GUILD_POWERUP_ENTITLEMENTS_CREATE: v,
-    GUILD_POWERUP_ENTITLEMENTS_DELETE: I,
-    GUILD_UPDATE: m
+o(O, 'displayName', 'GuildPowerupsStore'), o(O, 'persistKey', 'GuildPowerupsStore');
+let v = new O(a.Z, {
+    LOGOUT: y,
+    GUILD_POWERUP_CATALOG_FETCH_SUCCESS: h,
+    GUILD_UNLOCKED_POWERUPS_FETCH_SUCCESS: m,
+    GUILD_POWERUP_ENTITLEMENTS_CREATE: E,
+    GUILD_POWERUP_ENTITLEMENTS_DELETE: b
 });

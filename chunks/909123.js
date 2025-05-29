@@ -35,7 +35,7 @@ class h extends i.Z {
         });
         let n = (0, u.gV)(t.id, 'GuildPowerupsManager'),
             r = (0, d.D)(o.Z, t);
-        n && r && (c.Z.shouldFetchCatalogForGuild(e) && (0, l.Sn)(e), c.Z.shouldFetchPowerupsForGuild(e) && (0, l.Fm)(e));
+        n && (r && c.Z.shouldFetchCatalogForGuild(e) && (0, l.Sn)(e), c.Z.shouldFetchPowerupsForGuild(e) && (0, l.Fm)(e));
     }
     handleEntitlementUpdate(e) {
         let { guildId: t } = e;

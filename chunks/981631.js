@@ -3230,6 +3230,7 @@ var n_ = (function (e) {
             (e.QUEST_VIDEO_SEGMENT_WATCHED = 'quest_video_segment_watched'),
             (e.QUEST_VIDEO_TIME_TO_FIRST_FRAME = 'quest_video_time_to_first_frame'),
             (e.QUEST_VIDEO_VOLUME_CHANGED = 'quest_video_volume_changed'),
+            (e.ATT_PROMPT_RESULT = 'att_prompt_result'),
             (e.USER_SETTINGS_KEYBIND_UPDATED = 'user_settings_keybind_updated'),
             (e.USER_ATTRIBUTION_RECEIVED = 'user_attribution_received'),
             (e.USER_AVATAR_UPDATED = 'user_avatar_updated'),
