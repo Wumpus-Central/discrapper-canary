@@ -240,7 +240,7 @@ let V = i.memo(
                                                 F(
                                                     G(
                                                         {
-                                                            className: B.scrollerInner,
+                                                            className: a()(B.scrollerInner, { [B.scrollerAllowSticky]: f.isModeratorReportChannel() }),
                                                             'aria-label': U.intl.formatToPlainString(U.t.XarRiI, { channelName: f.name })
                                                         },
                                                         en

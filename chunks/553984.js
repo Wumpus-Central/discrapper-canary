@@ -167,7 +167,7 @@ function O(e) {
                                       o.sNh,
                                       {
                                           id: e,
-                                          action: () => t(e),
+                                          action: () => t((t) => (t === e ? d.V5.ALL : e)),
                                           label: b[e],
                                           dontCloseOnAction: !0,
                                           icon: e === l ? (0, r.jsx)(o.dz2, { size: 'sm' }) : void 0

@@ -149,6 +149,9 @@ let x = new Z(u.Z, {
             T = t;
         }
     },
+    CHANNEL_SETTINGS_INIT: function () {
+        p.Z.getSection() === f.CoT.PERMISSIONS && A();
+    },
     CHANNEL_SETTINGS_CLOSE: function () {
         (O = f.QZA.CLOSED), (I = null), (v = null), (C = null), (S = null), (y = !1), E.clear(), (N = null), (T = null);
     },

@@ -20,8 +20,8 @@ var r = n(255367),
     b = n(578976),
     y = n(649739),
     O = n(37091),
-    _ = n(6572),
-    v = n(352978),
+    v = n(6572),
+    _ = n(352978),
     C = n(936847),
     j = n(512384),
     S = n(33316),
@@ -103,7 +103,7 @@ function ei(e, t) {
 let el = [X.fO.ACTIVITY],
     eo = i.memo((e) => {
         var t, n, l, a, M;
-        let { participant: U, onDoubleClick: G, onContextMenu: K, onClick: eo, onMouseDown: es, onKeyDown: ea, className: eu, style: ed, containerStyle: eh, channel: ep, width: ef, inPopout: eg, onVideoResize: em, inCall: eb = !1, selected: ey = !1, noBorder: eO = !1, noVideoRender: e_ = !1, focused: ev = !1, blocked: eC = !1, ignored: ej = !1, fit: eS = v.L.CONTAIN, paused: eE = !1, pulseSpeakingIndicator: ex = !1, forceIdle: eP = !1, inOverlayPopout: eI = !1 } = e,
+        let { participant: U, onDoubleClick: G, onContextMenu: K, onClick: eo, onMouseDown: es, onKeyDown: ea, className: eu, style: ed, containerStyle: eh, channel: ep, width: ef, inPopout: eg, onVideoResize: em, inCall: eb = !1, selected: ey = !1, noBorder: eO = !1, noVideoRender: ev = !1, focused: e_ = !1, blocked: eC = !1, ignored: ej = !1, fit: eS = _.L.CONTAIN, paused: eE = !1, pulseSpeakingIndicator: ex = !1, forceIdle: eP = !1, inOverlayPopout: eI = !1 } = e,
             ew = i.useContext(I.h9) || eP,
             [eN, eZ] = i.useState(!1),
             eT = P.Sb.useSetting(),
@@ -188,8 +188,8 @@ let el = [X.fO.ACTIVITY],
             }),
             e6 = i.useMemo(() => (U.type === X.fO.STREAM ? null != e4 && e4 : U.type === X.fO.USER && null != e3 && e3), [e4, e3, U.type]);
         i.useEffect(() => {
-            eZ(ev);
-        }, [ev]);
+            eZ(e_);
+        }, [e_]);
         let [e5, e8] = i.useState(!1),
             e7 = i.useCallback(() => {
                 h.Z.useReducedMotion || e8(!0);
@@ -229,14 +229,14 @@ let el = [X.fO.ACTIVITY],
                     onVideoResize: em,
                     paused: eE,
                     inPopout: eg,
-                    focused: ev,
+                    focused: e_,
                     inOverlayPopout: eI
                 })),
                     (tr = (0, r.jsx)(W._, {
                         participant: U,
                         selected: ey,
                         width: ef,
-                        focused: ev,
+                        focused: e_,
                         idle: ew,
                         premiumIndicator: !1
                     })),
@@ -254,7 +254,7 @@ let el = [X.fO.ACTIVITY],
                     width: ef,
                     blocked: eC,
                     ignored: ej,
-                    noVideoRender: e_ || eH,
+                    noVideoRender: ev || eH,
                     pulseSpeakingIndicator: ex,
                     inOverlayPopout: eI
                 })),
@@ -266,7 +266,7 @@ let el = [X.fO.ACTIVITY],
                 break;
             case X.fO.ACTIVITY:
                 (tn = (0, r.jsx)(F.ZP, {
-                    interactible: ev,
+                    interactible: e_,
                     participant: U,
                     selected: ey,
                     channel: ep,
@@ -283,7 +283,7 @@ let el = [X.fO.ACTIVITY],
                     onVideoResize: em,
                     paused: eE,
                     inPopout: eg,
-                    focused: ev,
+                    focused: e_,
                     inOverlayPopout: eI
                 });
         }
@@ -377,7 +377,7 @@ let el = [X.fO.ACTIVITY],
                                                   ei(
                                                       er(
                                                           {
-                                                              focused: ev,
+                                                              focused: e_,
                                                               width: ef,
                                                               inCall: eb,
                                                               participantType: U.type,
@@ -404,7 +404,7 @@ let el = [X.fO.ACTIVITY],
                                                   )
                                               ),
                                         U.type === X.fO.USER && eG
-                                            ? (0, r.jsx)(_.Z, {
+                                            ? (0, r.jsx)(v.Z, {
                                                   userId: U.id,
                                                   channelId: ep.id
                                               })
@@ -412,8 +412,8 @@ let el = [X.fO.ACTIVITY],
                                         eb && !eO
                                             ? (0, r.jsx)('div', {
                                                   className: o()(en.border, {
-                                                      [en.voiceChannelEffect]: !ev && null != eQ,
-                                                      [en.speaking]: eF && !ev
+                                                      [en.voiceChannelEffect]: !e_ && null != eQ,
+                                                      [en.speaking]: eF && !e_
                                                   })
                                               })
                                             : null
@@ -512,7 +512,7 @@ function ea(e) {
 }
 eo.displayName = 'CallTile';
 let ec = i.memo((e) => {
-    let { idle: t, title: n, width: l, focused: u, videoToggleState: d, blocked: h, ignored: p, participantType: f, participantUserId: m, platform: b, secureFramesVerified: y, onContextMenu: O, muted: _, deafened: v, localMuted: C, serverMuted: j, serverDeafened: S, hasVideo: E, hideAudioIcon: x, onToggleMute: P } = e,
+    let { idle: t, title: n, width: l, focused: u, videoToggleState: d, blocked: h, ignored: p, participantType: f, participantUserId: m, platform: b, secureFramesVerified: y, onContextMenu: O, muted: v, deafened: _, localMuted: C, serverMuted: j, serverDeafened: S, hasVideo: E, hideAudioIcon: x, onToggleMute: P } = e,
         I = (0, s.e7)([A.Z], () => null != m && A.Z.isLocalVideoAutoDisabled(m, (0, g.Z)(f)), [m, f]),
         w = (0, K.N)(l),
         N = (0, K.K)(l),
@@ -532,8 +532,8 @@ let ec = i.memo((e) => {
             localMuted: C,
             serverMuted: j,
             serverDeafened: S,
-            deafened: v,
-            muted: _
+            deafened: _,
+            muted: v
         });
     return (0, r.jsxs)('div', {
         className: o()(en.overlayContainer, { [en.compact]: N }),
@@ -662,5 +662,5 @@ let ec = i.memo((e) => {
     });
 });
 ec.displayName = 'CallTileOverlay';
-let eu = v.L,
+let eu = _.L,
     ed = eo;

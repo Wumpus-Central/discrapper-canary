@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(718589),
     y = n(933557),
     O = n(557135),
-    _ = n(873696),
-    v = n(446226),
+    v = n(873696),
+    _ = n(446226),
     C = n(305325),
     j = n(281956),
     S = n(66999),
@@ -120,7 +120,7 @@ class en extends H.ZP {
     renderSubtitle() {
         var e;
         let { channel: t, connected: n } = this.props,
-            i = null == (e = (0, _.D)(this.props.subtitle)) ? void 0 : e.subtitle,
+            i = null == (e = (0, v.D)(this.props.subtitle)) ? void 0 : e.subtitle,
             { hovered: l } = this.state;
         return (0, r.jsx)(Y.Z, {
             onClick: this.handleVoiceStatusClick,
@@ -179,7 +179,7 @@ class en extends H.ZP {
               });
     }
     render() {
-        let { channel: e, selected: t, connected: n, unread: i, resolvedUnreadSetting: l, mentionCount: s, locked: a, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: y, canMoveMembers: O, showTutorial: _, hasActiveEvent: v, embeddedApps: C, isSubscriptionGated: j, isFavoriteSuggestion: S, withGuildIcon: E } = this.props,
+        let { channel: e, selected: t, connected: n, unread: i, resolvedUnreadSetting: l, mentionCount: s, locked: a, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: y, canMoveMembers: O, showTutorial: v, hasActiveEvent: _, embeddedApps: C, isSubscriptionGated: j, isFavoriteSuggestion: S, withGuildIcon: E } = this.props,
             { shouldShowActivities: x, shouldShowGuildVerificationPopout: w } = this.state,
             N = (0, P.jW)({ location: 'voice_channel' }).entrypoints,
             T = this.getVoiceStatesCount(),
@@ -231,8 +231,8 @@ class en extends H.ZP {
                                                         {
                                                             ref: this.channelItemRef,
                                                             className: J.iconVisibility,
-                                                            iconClassName: o()({ [J.iconLive]: v }),
-                                                            hasActiveEvent: v,
+                                                            iconClassName: o()({ [J.iconLive]: _ }),
+                                                            hasActiveEvent: _,
                                                             channel: e,
                                                             selected: !S && t,
                                                             connected: n,
@@ -290,7 +290,7 @@ class en extends H.ZP {
         return (
             O && (R = f(R)),
             y && (R = h(p(R))),
-            _ &&
+            v &&
                 (R = (0, r.jsx)(Z.Z, {
                     childRef: this.ref,
                     tutorialId: 'voice-conversations',
@@ -445,8 +445,8 @@ function ei(e) {
         g = (0, f.ZP)(n),
         m = (0, y.ZP)(n),
         b = (0, E.qY)(n.id),
-        { isSubscriptionGated: O, needSubscriptionToAccess: _ } = (0, S.Z)(n.id),
-        C = (0, v.Z)(),
+        { isSubscriptionGated: O, needSubscriptionToAccess: v } = (0, S.Z)(n.id),
+        C = (0, _.Z)(),
         j = (0, s.e7)([U.ZP], () => U.ZP.isFavorite(t.id, n.id)),
         x = e.connected || (null == C ? void 0 : C.channelId) === n.id,
         P = (0, F.Z)({
@@ -455,7 +455,7 @@ function ei(e) {
             isChannelCollapsed: a,
             voiceStates: c,
             isSubscriptionGated: O,
-            needSubscriptionToAccess: _,
+            needSubscriptionToAccess: v,
             enableConnectedUserLimit: !0,
             enableActivities: !0
         }),
@@ -471,7 +471,7 @@ function ei(e) {
                     video: p,
                     hasActiveEvent: null != b,
                     isSubscriptionGated: O,
-                    needSubscriptionToAccess: _
+                    needSubscriptionToAccess: v
                 },
                 u,
                 h,

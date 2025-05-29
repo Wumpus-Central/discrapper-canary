@@ -54,7 +54,7 @@ function p(e, t) {
 }
 function f(e) {
     var t,
-        { id: n, className: i, innerClassName: f, renderIcon: g, text: m, selected: b, trailing: y, background: O, showUnread: _ = !1, ref: v } = e,
+        { id: n, className: i, innerClassName: f, renderIcon: g, text: m, selected: b, trailing: y, background: O, showUnread: v = !1, ref: _ } = e,
         C = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -77,7 +77,7 @@ function f(e) {
     let j = (0, o.JA)(n),
         S = null != (t = (0, s.qg)(m)) ? t : '';
     return (0, r.jsx)('li', {
-        ref: v,
+        ref: _,
         children: (0, r.jsxs)(
             a.kL8,
             p(h({}, C), {
@@ -103,7 +103,7 @@ function f(e) {
                 className: l()(u.containerDefault, d.wrapper, { [d.modeSelected]: b }, i),
                 children: [
                     O,
-                    _ ? (0, r.jsx)('div', { className: l()(d.unread, d.unreadImportant) }) : null,
+                    v ? (0, r.jsx)('div', { className: l()(d.unread, d.unreadImportant) }) : null,
                     (0, r.jsx)('div', {
                         className: l()([d.link, d.basicChannelRowLink, f]),
                         children: (0, r.jsxs)('div', {

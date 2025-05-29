@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(245216),
     y = n(172751),
     O = n(739566),
-    _ = n(930282),
-    v = n(318713),
+    v = n(930282),
+    _ = n(318713),
     C = n(47930),
     j = n(123145),
     S = n(25015),
@@ -126,7 +126,7 @@ function B(e) {
         h = (0, f.KS)(n, null),
         m = (0, p.ZP)(n, !1),
         b = (0, a.e7)([N.Z], () => N.Z.getGuild(n.getGuildId())),
-        { nick: _, colorString: v, primaryGuild: S } = (0, O.ZP)(t),
+        { nick: v, colorString: _, primaryGuild: S } = (0, O.ZP)(t),
         {
             avatarDecorationSrc: E,
             avatarSrc: x,
@@ -222,7 +222,7 @@ function B(e) {
                                                   children: [
                                                       (0, r.jsx)('div', {
                                                           className: k.username,
-                                                          style: { color: v },
+                                                          style: { color: _ },
                                                           children: (0, r.jsx)(g.Z, { children: L })
                                                       }),
                                                       T
@@ -231,7 +231,7 @@ function B(e) {
                                             : (0, r.jsx)(g.Z, {
                                                   children: (0, r.jsx)(c.X6q, {
                                                       variant: 'text-md/semibold',
-                                                      style: { color: v },
+                                                      style: { color: _ },
                                                       className: k.username,
                                                       children: b.name
                                                   })
@@ -273,7 +273,7 @@ function B(e) {
                                                 [k.unread]: u,
                                                 [k.selected]: s
                                             }),
-                                            children: [m, !Z && ' \xB7 '.concat(_)]
+                                            children: [m, !Z && ' \xB7 '.concat(v)]
                                         })
                                     ]
                                 }),
@@ -363,7 +363,7 @@ function F(e) {
 function z(e) {
     let { message: t } = e,
         n = (0, E.a3)(t.timestamp.getTime());
-    return (0, r.jsx)(v.Z, {
+    return (0, r.jsx)(_.Z, {
         timestamp: t.timestamp,
         className: k.timestamp,
         isEdited: t.isEdited(),
@@ -400,16 +400,16 @@ function W(e) {
                     y = null;
                 1 === a ? (y = c.XBm) : a > 1 ? (y = c.Ka2) : u ? (y = b.Z) : p || f ? (y = c.QDj) : d ? (y = c.n$P) : h ? (y = c.SlE) : g && (y = c.gj8);
                 let O = !0,
-                    v = null;
+                    _ = null;
                 if (e)
-                    if (u) v = L.intl.string(L.t['9ddYKi']);
+                    if (u) _ = L.intl.string(L.t['9ddYKi']);
                     else if (p) {
                         var C;
-                        (O = !1), (v = null == (C = t.poll) ? void 0 : C.question.text);
-                    } else v = f ? L.intl.string(L.t.sad2PD) : i ? L.intl.string(L.t.p0oZm5) : a > 1 ? L.intl.formatToPlainString(L.t.rtfTKi, { count: a }) : 1 === a ? L.intl.string(L.t.tCcq5u) : h ? L.intl.format(L.t.zY4v1N, { stickerName: t.stickerItems[0].name }) : g ? L.intl.string(L.t.slFYgo) : L.intl.string(L.t.sDqZHB);
+                        (O = !1), (_ = null == (C = t.poll) ? void 0 : C.question.text);
+                    } else _ = f ? L.intl.string(L.t.sad2PD) : i ? L.intl.string(L.t.p0oZm5) : a > 1 ? L.intl.formatToPlainString(L.t.rtfTKi, { count: a }) : 1 === a ? L.intl.string(L.t.tCcq5u) : h ? L.intl.format(L.t.zY4v1N, { stickerName: t.stickerItems[0].name }) : g ? L.intl.string(L.t.slFYgo) : L.intl.string(L.t.sDqZHB);
                 else
                     (O = !1),
-                        (v = (0, r.jsx)(_.ZP, {
+                        (_ = (0, r.jsx)(v.ZP, {
                             content: s,
                             message: t,
                             compact: !1,
@@ -420,16 +420,16 @@ function W(e) {
                         }));
                 return (
                     e &&
-                        (v = (0, r.jsx)('div', {
+                        (_ = (0, r.jsx)('div', {
                             className: o()(k.message, {
                                 [k.unread]: n,
                                 [k.selected]: l,
                                 [k.descriptionMessage]: O
                             }),
-                            children: v
+                            children: _
                         })),
                     {
-                        previewContent: v,
+                        previewContent: _,
                         Icon: y
                     }
                 );

@@ -1,4 +1,4 @@
-n.d(t, { V: () => _ });
+n.d(t, { V: () => v });
 var r = n(255367),
     i = n(512722),
     l = n.n(i),
@@ -68,7 +68,7 @@ function O(e) {
         })
     });
 }
-function _(e) {
+function v(e) {
     let { onClick: t } = e,
         { isEnabled: n, showActivitySharingIndicatorWhenSharing: i } = (0, p.D)('not sharing link'),
         l = d.G6.useSetting(),

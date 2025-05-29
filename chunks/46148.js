@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(921944),
     y = n(474936),
     O = n(388032),
-    _ = n(706442),
-    v = n(777091);
+    v = n(706442),
+    _ = n(777091);
 let C = (e, t) => {
         let n = null != t && !t.isPreview;
         return e ? (e && !n ? 'no-wallpaper-nitro' : 'has-wallpaper-nitro') : 'non-nitro';
@@ -87,9 +87,9 @@ let C = (e, t) => {
                         buttonText: O.intl.string(O.t['+IrDzM']),
                         header: F,
                         art: (0, r.jsx)('img', {
-                            src: v.Z,
+                            src: _.Z,
                             alt: '',
-                            className: _.chatWallpaperDMListCoachmarkArt
+                            className: v.chatWallpaperDMListCoachmarkArt
                         }),
                         body: z,
                         align: G

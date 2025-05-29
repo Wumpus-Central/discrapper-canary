@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(823379),
     y = n(51144),
     O = n(291798);
-let _ = d.u.SIZE_24;
-function v(e) {
+let v = d.u.SIZE_24;
+function _(e) {
     var t, n;
     let { activity: l, user: o, embeddedApp: s, onOpenSpotifyAlbum: u } = e,
         d = null == l ? void 0 : l.assets,
@@ -190,7 +190,7 @@ function x(e) {
                   (0, r.jsxs)('div', {
                       className: O.flexRow,
                       children: [
-                          (0, r.jsx)(v, {
+                          (0, r.jsx)(_, {
                               activity: t,
                               user: l,
                               embeddedApp: n,
@@ -215,7 +215,7 @@ function x(e) {
                                           className: O.usersSummary,
                                           guildId: o.guild_id,
                                           users: x,
-                                          size: _,
+                                          size: v,
                                           max: 7,
                                           renderUser: (e) => {
                                               var t;
@@ -230,7 +230,7 @@ function x(e) {
                                                       children: (0, r.jsx)(
                                                           'img',
                                                           {
-                                                              src: e.getAvatarURL(o.guild_id, _),
+                                                              src: e.getAvatarURL(o.guild_id, v),
                                                               alt: i,
                                                               className: O.avatar
                                                           },

@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(944486),
     y = n(594174),
     O = n(431),
-    _ = n(774343),
-    v = n(417363),
+    v = n(774343),
+    _ = n(417363),
     C = n(941128),
     j = n(780570),
     S = n(278464),
@@ -45,8 +45,8 @@ let A = {
 function D(e) {
     var t, n;
     let { selected: o, user: p, badge: f, link: b, showProgressBadge: y } = e,
-        [O, _] = i.useState(!1),
-        [v, C] = i.useState(!1),
+        [O, v] = i.useState(!1),
+        [_, C] = i.useState(!1),
         [j, S] = i.useState(null),
         [N, D] = i.useState(0),
         L = (0, l.Ie)('home'),
@@ -57,7 +57,7 @@ function D(e) {
         };
     if (null == p) return null;
     let G = T.intl.string(T.t.YUU0RE);
-    v && (G = s.K.get(w.wli) ? T.intl.string(T.t.nkq1l5) : T.intl.string(T.t.Be8Q5O));
+    _ && (G = s.K.get(w.wli) ? T.intl.string(T.t.nkq1l5) : T.intl.string(T.t.Be8Q5O));
     let B = null;
     !o &&
         y &&
@@ -99,8 +99,8 @@ function D(e) {
                     return e;
                 })(
                     {
-                        onMouseEnter: () => _(!0),
-                        onMouseLeave: () => _(!1),
+                        onMouseEnter: () => v(!0),
+                        onMouseLeave: () => v(!1),
                         onClick: () => {
                             if (!__OVERLAY__ && (null != j && clearTimeout(j), S(setTimeout(U, 500)), D(N + 1), 15 === N)) {
                                 U();
@@ -177,8 +177,8 @@ function D(e) {
 }
 function L() {
     let e = (0, S.n)(),
-        t = (0, o.e7)([C.Z, v.Z], () => {
-            let e = (0, c.E)(C.Z.activeItems, v.Z),
+        t = (0, o.e7)([C.Z, _.Z], () => {
+            let e = (0, c.E)(C.Z.activeItems, _.Z),
                 { total: t, progress: n } = j.lK(e),
                 r = j.xI(n, t);
             return r > 0 && r < 100;
@@ -194,7 +194,7 @@ function L() {
         d = (0, p.q)(),
         h = n + a + d,
         g = h === a && a > 0 && n + d === 0,
-        m = _.Z.getHomeLink();
+        m = v.Z.getHomeLink();
     return (
         g && (m = w.Z5c.APPLICATION_STORE),
         (0, r.jsx)(D, {

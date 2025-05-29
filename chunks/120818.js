@@ -28,17 +28,17 @@ let y = i.memo(function (e) {
     var t, n;
     let { guild: y } = e,
         O = (0, o.e7)([c.Z], () => c.Z.getNewMemberActions(y.id), [y.id]),
-        _ = (0, o.e7)([u.Z], () => u.Z.getCompletedActions(y.id)),
-        v = i.useMemo(() => {
-            if (null == O || null == _) return 0;
+        v = (0, o.e7)([u.Z], () => u.Z.getCompletedActions(y.id)),
+        _ = i.useMemo(() => {
+            if (null == O || null == v) return 0;
             let e = 0;
             return (
                 O.forEach((t) => {
-                    null != _[t.channelId] && e++;
+                    null != v[t.channelId] && e++;
                 }),
                 e
             );
-        }, [_, O]),
+        }, [v, O]),
         C = null == O ? 0 : O.length,
         j = (0, l.JA)('progress-bar-'.concat(y.id));
     return (0, r.jsxs)('li', {
@@ -96,7 +96,7 @@ let y = i.memo(function (e) {
                                                 children: g.intl.format(g.t.eqZ1lZ, {
                                                     numberHook: b,
                                                     total: C.toString(),
-                                                    completed: v.toString()
+                                                    completed: _.toString()
                                                 })
                                             }),
                                             (0, r.jsx)(h.Z, {
@@ -112,7 +112,7 @@ let y = i.memo(function (e) {
                             (0, r.jsx)(s.Exd, {
                                 className: m.progressBar,
                                 foregroundGradientColor: [(0, a.Lq)(p.Ilk.GREEN_300), (0, a.Lq)(p.Ilk.GREEN_230)],
-                                percent: (v / C) * 100 + 3,
+                                percent: (_ / C) * 100 + 3,
                                 animate: !0
                             })
                         ]

@@ -16,30 +16,30 @@ var r = n(255367),
     b = n(73433);
 function y(e) {
     let { channel: t, connected: n, hovered: l, subtitle: y, onClick: O } = e,
-        _ = (0, s.e7)([u.Z], () => u.Z.getChannelStatus(t)),
-        v = null != _ && _.length > 0,
+        v = (0, s.e7)([u.Z], () => u.Z.getChannelStatus(t)),
+        _ = null != v && v.length > 0,
         C = (0, c.ZP)(t, !0),
         j = null != y && y.length > 0;
     if (
         (i.useEffect(() => {
-            v &&
+            _ &&
                 p.default.track(f.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
                     channel_id: t.id,
                     guild_id: t.guild_id
                 });
-        }, [v, t.id, t.guild_id]),
+        }, [_, t.id, t.guild_id]),
         null == t.guild_id)
     )
         return null;
     let S = o()(m.statusDiv, n && C ? m.hoverable : null);
-    return v
+    return _
         ? (0, r.jsx)(a.P3F, {
               className: S,
               onClick: C ? O : void 0,
               children: (0, r.jsx)(a.Text, {
                   variant: 'text-xs/medium',
                   className: o()(m.statusText, b.markup),
-                  children: (0, r.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(_, !0, { channelId: t.id }) })
+                  children: (0, r.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(v, !0, { channelId: t.id }) })
               })
           })
         : n && C && (!j || l)

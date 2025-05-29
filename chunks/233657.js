@@ -58,7 +58,7 @@ function b(e, t) {
 }
 function y(e) {
     let { guild: t, selected: y } = e,
-        { hasUnread: O, mentionCount: _ } = (0, i.cj)(
+        { hasUnread: O, mentionCount: v } = (0, i.cj)(
             [u.ZP],
             () => ({
                 hasUnread: u.ZP.hasUnread(t.id, p.W.GUILD_EVENT),
@@ -66,7 +66,7 @@ function y(e) {
             }),
             [t.id]
         ),
-        v = (0, i.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
+        _ = (0, i.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
     async function C() {
         await (0, o.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e('22347'), n.e('56236'), n.e('79010')]).then(n.bind(n, 17671));
@@ -93,13 +93,13 @@ function y(e) {
                 return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
             });
         },
-        showUnread: O && !v,
+        showUnread: O && !_,
         trailing:
-            !v && _ > 0
+            !_ && v > 0
                 ? (0, r.jsx)(o.mAB, {
                       className: g.numberBadge,
                       disableColor: !0,
-                      count: _
+                      count: v
                   })
                 : null
     });
