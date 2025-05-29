@@ -35459,9 +35459,17 @@ html:not(.visual-refresh) .root_e5f3a9 {
 }
 
 .container__63ed3 {
+    --custom-nickname-line-height: 24px;
+    --custom-nickname-icon-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
+}
+
+.user-profile-modal .container__63ed3,
+.user-profile-modal-v2 .container__63ed3 {
+    --custom-nickname-line-height: 30px;
+    --custom-nickname-icon-size: 18px
 }
 
 .container__63ed3.bot__63ed3 {
@@ -35482,32 +35490,16 @@ html:not(.visual-refresh) .root_e5f3a9 {
 }
 
 .nickname__63ed3 {
+    max-height: calc(var(--custom-nickname-line-height)*3);
     overflow: hidden;
     word-break: break-word
-}
-
-.user-profile-popout .nickname__63ed3,
-.user-profile-sidebar .nickname__63ed3 {
-    max-height: 72px
-}
-
-.user-profile-modal .nickname__63ed3 {
-    max-height: 90px
 }
 
 .nicknameIcons__63ed3 {
     align-self: flex-start;
     display: flex;
-    gap: 2px
-}
-
-.user-profile-popout .nicknameIcons__63ed3,
-.user-profile-sidebar .nicknameIcons__63ed3 {
-    padding-top: 4px
-}
-
-.user-profile-modal .nicknameIcons__63ed3 {
-    padding-top: 8px
+    gap: 2px;
+    padding-top: calc((var(--custom-nickname-line-height) - var(--custom-nickname-icon-size))/2)
 }
 
 .usernameRow__63ed3 {
