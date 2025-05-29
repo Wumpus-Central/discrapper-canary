@@ -1,25 +1,25 @@
-r.d(n, { P: () => o });
-var t = r(255367);
-r(73800);
-var a = r(481060),
-    i = r(709586),
-    s = r(388032),
-    l = r(476128);
-function o(e) {
-    let { onClick: n, className: r } = e;
-    return (0, t.jsxs)(a.gtL, {
-        color: a.zxk.Colors.GREEN,
-        className: r,
-        innerClassName: l.upsellButton,
+t.d(n, { P: () => d });
+var r = t(255367);
+t(73800);
+var i = t(481060),
+    a = t(709586),
+    l = t(388032),
+    s = t(476128);
+function d(e) {
+    let { onClick: n, className: t } = e;
+    return (0, r.jsxs)(i.gtL, {
+        color: i.zxk.Colors.GREEN,
+        className: t,
+        innerClassName: s.upsellButton,
         onClick: n,
         children: [
-            (0, t.jsx)(i.Z, {
+            (0, r.jsx)(a.Z, {
                 height: 16,
                 width: 16,
-                className: l.premiumUpsellBadge
+                className: s.premiumUpsellBadge
             }),
             ' ',
-            s.intl.string(s.t['+7XY39'])
+            l.intl.string(l.t['+7XY39'])
         ]
     });
 }

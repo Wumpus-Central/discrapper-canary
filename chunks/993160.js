@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var o = n(255367);
 n(73800);
 var r = n(481060),
-    i = n(572691),
-    c = n(906732),
+    c = n(572691),
+    i = n(906732),
     l = n(705556),
     a = n(30556),
     s = n(664794),
@@ -13,7 +13,7 @@ var r = n(481060),
     p = n(981631);
 function m(e) {
     let { user: t, currentUser: n, guildId: m, relationshipType: b, onClose: _ } = e,
-        { newestAnalyticsLocation: y } = (0, c.ZP)(),
+        { newestAnalyticsLocation: y } = (0, i.ZP)(),
         { gameFriends: x, hasOutgoingPendingGameFriends: h, hasIncomingPendingGameFriends: j } = (0, f.H)({ userId: t.id }),
         g = x.length > 0 || h || j;
     return b === p.OGo.BLOCKED
@@ -41,7 +41,7 @@ function m(e) {
                       (0, o.jsx)(a.Z, {
                           type: 'text',
                           userId: t.id,
-                          onClose: i.Z.popAll,
+                          onClose: c.Z.popAll,
                           autoFocus: !0
                       }),
                       (0, o.jsx)(s.Z, {
@@ -59,7 +59,7 @@ function m(e) {
                             type: 'text',
                             userId: t.id,
                             color: r.zxk.Colors.BRAND,
-                            onClose: i.Z.popAll,
+                            onClose: c.Z.popAll,
                             autoFocus: !0
                         }),
                         (0, o.jsx)(u.g, {
@@ -84,7 +84,7 @@ function m(e) {
                           (0, o.jsx)(a.Z, {
                               type: 'text',
                               userId: t.id,
-                              onClose: i.Z.popAll,
+                              onClose: c.Z.popAll,
                               autoFocus: !0
                           }),
                           (0, o.jsx)(u.k9, {
@@ -119,7 +119,7 @@ function m(e) {
                           (0, o.jsx)(a.Z, {
                               type: 'icon',
                               userId: t.id,
-                              onClose: i.Z.popAll,
+                              onClose: c.Z.popAll,
                               themeColor: 'secondary'
                           }),
                           (0, o.jsx)(s.Z, {

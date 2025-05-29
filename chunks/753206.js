@@ -13,9 +13,9 @@ var r = n(255367),
     g = n(30804);
 let b = i.memo(function (e) {
     var t;
-    let { message: n, channel: s, compact: b, className: m, isGroupStart: _, hideSimpleEmbedContent: v = !0, disableInteraction: h, previewGuildId: O, preview: j, author: x } = e,
-        y = null != O ? O : (0, c.k)(n),
-        C = (0, l.Z)(x),
+    let { message: n, channel: s, compact: b, className: m, isGroupStart: _, hideSimpleEmbedContent: v = !0, disableInteraction: h, previewGuildId: O, preview: y, author: j } = e,
+        x = null != O ? O : (0, c.k)(n),
+        C = (0, l.Z)(j),
         S = (0, a.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
         { content: P } = (0, d.Z)(n, {
             hideSimpleEmbedContent: v,
@@ -55,7 +55,7 @@ let b = i.memo(function (e) {
                 (n = n =
                     {
                         channel: s,
-                        guildId: y
+                        guildId: x
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -71,7 +71,7 @@ let b = i.memo(function (e) {
                       }),
                 t)
             );
-        }, [e, s, y]);
+        }, [e, s, x]);
     return (0, r.jsx)(u.Z, {
         compact: b,
         className: o()(m, {
@@ -83,7 +83,7 @@ let b = i.memo(function (e) {
         childrenMessageContent: (0, p.Z)(e, P),
         disableInteraction: h,
         authorHasGradientRole: C,
-        guildId: y,
-        preview: j
+        guildId: x,
+        preview: y
     });
 });

@@ -1,9 +1,9 @@
 n.d(t, { default: () => h });
 var r = n(255367);
 n(73800);
-var i = n(120356),
-    o = n.n(i),
-    a = n(442837),
+var a = n(120356),
+    i = n.n(a),
+    o = n(442837),
     l = n(481060),
     s = n(840720),
     d = n(742409),
@@ -60,37 +60,37 @@ function m(e, t) {
 function h(e) {
     var t,
         n,
-        { guildId: i } = e,
+        { guildId: a } = e,
         h = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                i = (function (e, t) {
+                a = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        i = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                        a = {},
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+                    return a;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
             }
-            return i;
+            return a;
         })(e, ['guildId']);
-    let j = (0, a.e7)([c.Z], () => c.Z.getGuild(i)),
-        O = (0, a.e7)(
+    let j = (0, o.e7)([c.Z], () => c.Z.getGuild(a)),
+        v = (0, o.e7)(
             [u.default],
             () => {
                 var e;
                 let t = null == (e = u.default.getCurrentUser()) ? void 0 : e.primaryGuild;
-                return (null == t ? void 0 : t.identityGuildId) === i && (null == t ? void 0 : t.identityEnabled) === !0;
+                return (null == t ? void 0 : t.identityGuildId) === a && (null == t ? void 0 : t.identityEnabled) === !0;
             },
-            [i]
+            [a]
         ),
-        { isAdopting: v, onAdoptTag: y, onEditProfile: x } = (0, f.Z)(i, h.onClose);
+        { isAdopting: O, onAdoptTag: y, onEditProfile: x } = (0, f.Z)(a, h.onClose);
     if (null != j && (0, g.up)(j) && (0, g.jq)(j))
         return (0, r.jsxs)(
             l.Y0X,
@@ -141,15 +141,15 @@ function h(e) {
                                                     (0, r.jsx)(l.ua7, {
                                                         text: b.intl.string(p.default.WlENZm),
                                                         tooltipContentClassName: _.tooltip,
-                                                        shouldShow: O,
+                                                        shouldShow: v,
                                                         children: (e) =>
                                                             (0, r.jsx)(
                                                                 l.zxk,
                                                                 m(C({}, e), {
                                                                     fullWidth: !0,
                                                                     onClick: y,
-                                                                    submitting: v,
-                                                                    disabled: O,
+                                                                    submitting: O,
+                                                                    disabled: v,
                                                                     children: b.intl.string(b.t.jwEaiY)
                                                                 })
                                                             )
@@ -166,7 +166,7 @@ function h(e) {
                                     })
                                 }),
                                 (0, r.jsx)('div', {
-                                    className: o()(_.modalContentChild, _.right),
+                                    className: i()(_.modalContentChild, _.right),
                                     children: (0, r.jsx)(d.Z, {
                                         guildId: j.id,
                                         tag: j.profile.tag,

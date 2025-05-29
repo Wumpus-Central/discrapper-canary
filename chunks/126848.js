@@ -20,8 +20,8 @@ function _(e) {
         v = (0, l.N)(),
         h = (0, a.Ng)(),
         O = (0, d.Vi)(),
-        j = (0, o.e7)([f.Z], () => f.Z.isLocalizedPromoEnabled) && null == v && null == n,
-        x = (null == v ? void 0 : v.trial_id) === b.a7;
+        y = (0, o.e7)([f.Z], () => f.Z.isLocalizedPromoEnabled) && null == v && null == n,
+        j = (null == v ? void 0 : v.trial_id) === b.a7;
     return (
         (t = O
             ? (0, r.jsx)(c.Z, {})
@@ -31,10 +31,10 @@ function _(e) {
                     userDiscount: h,
                     includesAmountOff: !1
                 })
-              : null == v || x
+              : null == v || j
                 ? null != n
                     ? n
-                    : j
+                    : y
                       ? (0, r.jsx)(u.k, { entryPoint: u.U.SettingsMenu })
                       : (0, r.jsx)(g.Z, { isSelected: _ })
                 : (0, r.jsx)(p.$H, {
@@ -44,14 +44,14 @@ function _(e) {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)('div', {
-                    className: s()(m.premiumLabel, { [m.selected]: (_ || j) && !O }),
+                    className: s()(m.premiumLabel, { [m.selected]: (_ || y) && !O }),
                     children: [i, t]
                 }),
                 (0, r.jsx)('div', {
                     className: s()(m.background, {
-                        [m.auPromo]: j && !_,
-                        [m.auPromoSelected]: j && _,
-                        [m.selectedBackground]: !j && !O && _
+                        [m.auPromo]: y && !_,
+                        [m.auPromoSelected]: y && _,
+                        [m.selectedBackground]: !y && !O && _
                     })
                 })
             ]

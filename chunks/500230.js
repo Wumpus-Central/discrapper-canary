@@ -1,45 +1,45 @@
-r.d(n, { Z: () => y }), r(388685);
-var t = r(255367),
-    a = r(73800),
-    i = r(120356),
-    s = r.n(i),
-    l = r(866442),
-    o = r(481060),
-    d = r(229190),
-    c = r(510918),
-    m = r(434404),
-    f = r(254925),
-    u = r(131085),
-    h = r(941469),
-    p = r(388032),
-    x = r(602268);
-let y = function (e) {
-    let { className: n, guildId: r, badge: i, primaryColor: y, secondaryColor: b } = e,
-        [g, j] = a.useState(!1),
-        C = a.useRef(null),
-        v = a.useMemo(() => f.go.every((e) => e.primary !== y || e.secondary !== b), [y, b]);
+t.d(n, { Z: () => g }), t(388685);
+var r = t(255367),
+    i = t(73800),
+    a = t(120356),
+    l = t.n(a),
+    s = t(866442),
+    d = t(481060),
+    o = t(229190),
+    c = t(510918),
+    u = t(434404),
+    m = t(254925),
+    f = t(131085),
+    h = t(941469),
+    x = t(388032),
+    p = t(602268);
+let g = function (e) {
+    let { className: n, guildId: t, badge: a, primaryColor: g, secondaryColor: b } = e,
+        [y, j] = i.useState(!1),
+        v = i.useRef(null),
+        C = i.useMemo(() => m.go.every((e) => e.primary !== g || e.secondary !== b), [g, b]);
     function N(e) {
         let n = {};
-        void 0 !== e.primary && (n.badgeColorPrimary = e.primary), void 0 !== e.secondary && (n.badgeColorSecondary = e.secondary), m.Z.updateGuildProfile(r, n);
+        void 0 !== e.primary && (n.badgeColorPrimary = e.primary), void 0 !== e.secondary && (n.badgeColorSecondary = e.secondary), u.Z.updateGuildProfile(t, n);
     }
-    return (0, t.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: n,
         children: [
-            (0, t.jsx)(o.vwX, {
-                className: x.sectionTitle,
-                children: p.intl.string(h.default.zSbMdX)
+            (0, r.jsx)(d.vwX, {
+                className: p.sectionTitle,
+                children: x.intl.string(h.default.zSbMdX)
             }),
-            (0, t.jsxs)('div', {
-                className: x.pickerGrid,
+            (0, r.jsxs)('div', {
+                className: p.pickerGrid,
                 children: [
-                    f.go.map((e) =>
-                        (0, t.jsx)(
-                            o.P3F,
+                    m.go.map((e) =>
+                        (0, r.jsx)(
+                            d.P3F,
                             {
-                                className: s()(x.pickerItem, { [x.pickerItemSelected]: e.primary === y && e.secondary === b }),
+                                className: l()(p.pickerItem, { [p.pickerItemSelected]: e.primary === g && e.secondary === b }),
                                 onClick: () => N(e),
-                                children: (0, t.jsx)(c.v, {
-                                    badge: i,
+                                children: (0, r.jsx)(c.v, {
+                                    badge: a,
                                     width: 32,
                                     height: 32,
                                     primaryTintColor: e.primary,
@@ -49,74 +49,74 @@ let y = function (e) {
                             ''.concat(e.primary).concat(e.secondary)
                         )
                     ),
-                    (0, t.jsx)(d.Z, {
-                        popoutTargetRef: C,
-                        showSecondaryColor: u.ER[i] >= 2,
+                    (0, r.jsx)(o.Z, {
+                        popoutTargetRef: v,
+                        showSecondaryColor: f.ER[a] >= 2,
                         palette: {
-                            primary: y,
+                            primary: g,
                             secondary: b
                         },
                         onPrimaryColorChange: (e) => {
-                            N({ primary: (0, l.Rf)(e) });
+                            N({ primary: (0, s.Rf)(e) });
                         },
                         onSecondaryColorChange: (e) => {
-                            N({ secondary: (0, l.Rf)(e) });
+                            N({ secondary: (0, s.Rf)(e) });
                         },
-                        shouldShow: g,
+                        shouldShow: y,
                         onRequestClose: () => j(!1),
                         children: (e) => {
-                            var n, r;
-                            return (0, t.jsx)(
-                                o.P3F,
+                            var n, t;
+                            return (0, r.jsx)(
+                                d.P3F,
                                 ((n = (function (e) {
                                     for (var n = 1; n < arguments.length; n++) {
-                                        var r = null != arguments[n] ? arguments[n] : {},
-                                            t = Object.keys(r);
+                                        var t = null != arguments[n] ? arguments[n] : {},
+                                            r = Object.keys(t);
                                         'function' == typeof Object.getOwnPropertySymbols &&
-                                            (t = t.concat(
-                                                Object.getOwnPropertySymbols(r).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                            (r = r.concat(
+                                                Object.getOwnPropertySymbols(t).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                                 })
                                             )),
-                                            t.forEach(function (n) {
-                                                var t;
-                                                (t = r[n]),
+                                            r.forEach(function (n) {
+                                                var r;
+                                                (r = t[n]),
                                                     n in e
                                                         ? Object.defineProperty(e, n, {
-                                                              value: t,
+                                                              value: r,
                                                               enumerable: !0,
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[n] = t);
+                                                        : (e[n] = r);
                                             });
                                     }
                                     return e;
                                 })({}, e)),
-                                (r = r =
+                                (t = t =
                                     {
-                                        innerRef: C,
+                                        innerRef: v,
                                         onClick: () => {
                                             j((e) => !e);
                                         },
-                                        className: s()(x.pickerItem, { [x.pickerItemSelected]: v }),
-                                        children: (0, t.jsx)(o.ilE, {
+                                        className: l()(p.pickerItem, { [p.pickerItemSelected]: C }),
+                                        children: (0, r.jsx)(d.ilE, {
                                             size: 'custom',
                                             width: 20,
                                             height: 20
                                         })
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(t))
                                     : (function (e, n) {
-                                          var r = Object.keys(e);
+                                          var t = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
-                                              var t = Object.getOwnPropertySymbols(e);
-                                              r.push.apply(r, t);
+                                              var r = Object.getOwnPropertySymbols(e);
+                                              t.push.apply(t, r);
                                           }
-                                          return r;
-                                      })(Object(r)).forEach(function (e) {
-                                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                                          return t;
+                                      })(Object(t)).forEach(function (e) {
+                                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(t, e));
                                       }),
                                 n)
                             );

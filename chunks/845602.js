@@ -16,8 +16,8 @@ var n = r(255367),
     f = r(742409),
     b = r(369509),
     g = r(141006),
-    m = r(981631),
-    _ = r(131085),
+    _ = r(981631),
+    m = r(131085),
     j = r(348189),
     y = r(388032),
     O = r(606217),
@@ -51,7 +51,7 @@ function C() {
                 })
             }),
             (0, n.jsx)(d.default, {
-                defaultColor: m.p6O,
+                defaultColor: _.p6O,
                 colors: g.tl,
                 value: r.primary_color,
                 secondaryValue: null != (e = r.secondary_color) ? e : void 0,
@@ -112,7 +112,7 @@ function C() {
 }
 function x(e) {
     let { guildId: t } = e,
-        [r, a] = o.useState(_.x_.HEART);
+        [r, a] = o.useState(m.x_.HEART);
     return (0, n.jsxs)('div', {
         className: O.container,
         children: [
