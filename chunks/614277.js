@@ -45,27 +45,27 @@ function m(e) {
 function g(e) {
     var t, n, a, s, c, p;
     let { header: h, isLargeModal: g, stepProps: E } = m(e),
-        { step: b, stepConfigs: y, setBodyNode: O, setFooterNode: v, setModalOverlayNode: I, setReadySlideId: S } = (0, d.JL)(),
-        T = y.find((e) => e.key === b);
+        { step: b, stepConfigs: y, setBodyNode: O, setFooterNode: v, setModalOverlayNode: I, setReadySlideId: S, premiumRebrandBackgroundClassName: T } = (0, d.JL)(),
+        A = y.find((e) => e.key === b);
     i.useEffect(() => {
         I(null);
     }, [b, I]),
-        l()(null != T, 'Unknown step for current payment flow.');
-    let A = null != (c = null == T || null == (t = T.options) ? void 0 : t.hideSlider) && c,
-        N = null == T || null == (n = T.options) ? void 0 : n.bodyClassName,
-        C = null == T || null == (a = T.options) ? void 0 : a.sliderBodyClassName;
+        l()(null != A, 'Unknown step for current payment flow.');
+    let N = null != (c = null == A || null == (t = A.options) ? void 0 : t.hideSlider) && c,
+        C = null == A || null == (n = A.options) ? void 0 : n.bodyClassName,
+        P = null == A || null == (a = A.options) ? void 0 : a.sliderBodyClassName;
     return (
-        void 0 !== g && g && (C = _.sliderBodyLarge),
+        void 0 !== g && g && (P = _.sliderBodyLarge),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                null == (p = null == T || null == (s = T.options) ? void 0 : s.renderHeader) || p ? h : null,
-                T.renderStep(E),
-                null == b || A
+                null == (p = null == A || null == (s = A.options) ? void 0 : s.renderHeader) || p ? h : null,
+                A.renderStep(E),
+                null == b || N
                     ? null
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(u.hzk, {
-                                  className: o()(N, _.body, _.noRoundedCorners, { [_.reviewStep]: b === f.h8.REVIEW }),
+                                  className: o()(C, _.body, _.noRoundedCorners, T, { [_.reviewStep]: b === f.h8.REVIEW }),
                                   children: (0, r.jsx)(u.MyZ, {
                                       activeSlide: b,
                                       centered: !1,
@@ -79,7 +79,7 @@ function g(e) {
                                                   {
                                                       id: e.key,
                                                       children: (0, r.jsx)('form', {
-                                                          className: o()(_.sliderBody, C),
+                                                          className: o()(_.sliderBody, P),
                                                           ref: (e) => {
                                                               O(e);
                                                           },

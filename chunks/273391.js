@@ -184,15 +184,18 @@ let g = new l.Z('ImageEditor'),
                     i = null;
                 if ((null != W.current && (W.current(), (W.current = null)), R))
                     try {
-                        let { result: r, cancelFn: s } = await (0, o.$p)({
-                            file: t,
-                            image: n,
-                            cropDimensions: m,
-                            cropOriginCoordinates: f.current,
-                            maxDimensions: a,
-                            imageRotation: y
-                        });
-                        (W.current = s), (e = await r);
+                        let r = {
+                                file: t,
+                                image: n,
+                                cropDimensions: m,
+                                cropOriginCoordinates: f.current,
+                                maxDimensions: a,
+                                imageRotation: y,
+                                resizeWidth: u.eT,
+                                resizeHeight: u.eT
+                            },
+                            { result: s, cancelFn: i } = await (0, o.$p)(r);
+                        (W.current = i), (e = await s);
                     } catch (e) {
                         g.error('Error cropping GIF', e), (i = u.ze.GIF_CROPPING);
                     } finally {

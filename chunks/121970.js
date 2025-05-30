@@ -29,7 +29,7 @@ function c() {
                       className: d.textSection,
                       children: [
                           (0, i.jsx)(s.Text, {
-                              variant: 'text-md/bold',
+                              variant: 'text-md/medium',
                               color: 'text-primary',
                               children: c.heading()
                           }),

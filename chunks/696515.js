@@ -102,7 +102,7 @@ let A = function (e) {
         L = null;
     if (null != D) {
         var x;
-        L = null == w || null == (x = w.sectionHeaderText) ? void 0 : x.call(w, D === p.p9.TIER_2);
+        L = null == w || null == (x = w.sectionHeaderText) ? void 0 : x.call(w);
     }
     let k = null != (L = null != L ? L : null == w ? void 0 : w.label) && null != A;
     return (0, r.jsxs)(r.Fragment, {

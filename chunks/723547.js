@@ -1,4 +1,4 @@
-n.d(t, { v: () => d });
+n.d(t, { v: () => d }), n(953529);
 var i = n(255367);
 n(73800);
 var r = n(704215),
@@ -29,6 +29,7 @@ function d(e) {
                                           children: (0, i.jsx)(s.Dio, { size: 'xs' })
                                       }),
                                       (0, i.jsx)(s.Text, {
+                                          className: c.description,
                                           variant: 'text-md/normal',
                                           children: o.intl.string(o.t['Ny/0ur'])
                                       }),

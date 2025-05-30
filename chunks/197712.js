@@ -29,12 +29,12 @@ var n = r(392711),
     a = r(36793),
     s = r(486324);
 async function i(e) {
-    let { file: t, image: n, cropDimensions: i, cropOriginCoordinates: l, maxDimensions: o, imageRotation: c = 0 } = e,
+    let { file: t, image: n, cropDimensions: i, cropOriginCoordinates: l, maxDimensions: o, imageRotation: c = 0, resizeWidth: u = null, resizeHeight: d = null } = e,
         {
-            sourceX: u,
-            sourceY: d,
-            sourceWidth: p,
-            sourceHeight: h
+            sourceX: p,
+            sourceY: h,
+            sourceWidth: g,
+            sourceHeight: m
         } = (0, a.GS)({
             image: n,
             cropDimensions: i,
@@ -42,10 +42,10 @@ async function i(e) {
             maxDimensions: o,
             imageRotation: c
         }),
-        g = await t.arrayBuffer(),
-        m = new Worker(new URL('/assets/' + r.u('86047'), r.b)),
-        f = new Promise((e, t) => {
-            m.onmessage = (r) => {
+        f = await t.arrayBuffer(),
+        v = new Worker(new URL('/assets/' + r.u('86047'), r.b)),
+        b = new Promise((e, t) => {
+            v.onmessage = (r) => {
                 let { data: n } = r;
                 if (n.type === s.u.CROP_GIF_COMPLETE) {
                     var a;
@@ -61,23 +61,25 @@ async function i(e) {
                                 t.readAsDataURL(a);
                         }))
                     ),
-                        m.terminate();
-                } else n.type === s.u.CROP_GIF_ERROR && (t(Error('Error cropping GIF', { cause: null == n ? void 0 : n.error })), m.terminate());
+                        v.terminate();
+                } else n.type === s.u.CROP_GIF_ERROR && (t(Error('Error cropping GIF', { cause: null == n ? void 0 : n.error })), v.terminate());
             };
         });
     return (
-        m.postMessage({
+        v.postMessage({
             type: s.u.CROP_GIF_START,
-            gif: new Uint8Array(g),
-            x: 0 | u,
-            y: 0 | d,
-            width: 0 | p,
-            height: 0 | h,
-            imageRotation: 0 | c
+            gif: new Uint8Array(f),
+            x: 0 | p,
+            y: 0 | h,
+            width: 0 | g,
+            height: 0 | m,
+            imageRotation: 0 | c,
+            resizeWidth: u,
+            resizeHeight: d
         }),
         {
-            result: f,
-            cancelFn: () => m.terminate()
+            result: b,
+            cancelFn: () => v.terminate()
         }
     );
 }
