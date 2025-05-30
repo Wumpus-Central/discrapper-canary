@@ -46300,7 +46300,7 @@ div.mobilePushContainer__3d3b0 {
     padding-left: calc(var(--custom-message-margin-horizontal) - var(--space-4) + var(--custom-chat-aligned-icon-offset))
 }
 
-.theme-light.custom-theme-background .container__9293f {
+.theme-light.client-theme-color-picker .container__9293f {
     background: var(--bg-overlay-chat)
 }
 
