@@ -1,104 +1,47 @@
-r.d(t, { default: () => f }), r(388685);
+r.d(t, { default: () => b }), r(388685);
 var n = r(255367),
-    o = r(73800),
-    c = r(481060),
-    i = r(749210),
+    l = r(73800),
+    i = r(442837),
+    o = r(481060),
+    s = r(749210),
     a = r(910693),
-    s = r(51144),
-    l = r(981631),
-    u = r(388032),
-    p = r(373283);
-function f(e) {
-    var t,
-        r,
-        { guildId: f, user: b, location: O, modReportId: g } = e,
-        d = (function (e, t) {
-            if (null == e) return {};
-            var r,
-                n,
-                o = (function (e, t) {
-                    if (null == e) return {};
-                    var r,
-                        n,
-                        o = {},
-                        c = Object.keys(e);
-                    for (n = 0; n < c.length; n++) (r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
-                    return o;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var c = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < c.length; n++) (r = c[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
-            }
-            return o;
-        })(e, ['guildId', 'user', 'location', 'modReportId']);
-    let [y, j] = o.useState(''),
-        m = (0, a.sE)(f, {
-            location: O,
-            targetUserId: b.id
-        }),
-        h = o.useCallback(() => {
-            i.Z.kickUser(f, b.id, y, g), m(a.jQ.KICK);
-        }, [f, b.id, y, m, g]),
-        P = o.useCallback((e) => {
-            j(e);
-        }, []);
-    return (0, n.jsxs)(
-        c.ConfirmModal,
-        ((t = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var r = null != arguments[t] ? arguments[t] : {},
-                    n = Object.keys(r);
-                'function' == typeof Object.getOwnPropertySymbols &&
-                    (n = n.concat(
-                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                        })
-                    )),
-                    n.forEach(function (t) {
-                        var n;
-                        (n = r[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: n,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0
-                                  })
-                                : (e[t] = n);
-                    });
-            }
-            return e;
-        })(
-            {
-                header: u.intl.formatToPlainString(u.t['1Ie87u'], { user: b.username }),
-                confirmText: u.intl.string(u.t['3glT6e']),
-                cancelText: u.intl.string(u.t['ETE/oK']),
-                onConfirm: h
-            },
-            d
-        )),
-        (r = r =
-            {
-                children: [
-                    (0, n.jsx)(c.Text, {
-                        variant: 'text-md/normal',
-                        className: p.spacing,
-                        children: u.intl.format(u.t['/yH0UV'], { user: '@'.concat(s.ZP.getName(b)) })
-                    }),
-                    (0, n.jsx)(c.xJW, {
-                        title: u.intl.string(u.t['+2QEPj']),
-                        className: p.spacing,
-                        children: (0, n.jsx)(c.Kx8, {
-                            maxLength: l.GNZ,
-                            onChange: P,
-                            value: y,
-                            rows: 2
-                        })
-                    })
-                ]
-            }),
+    c = r(501517),
+    u = r(592125),
+    d = r(51144),
+    p = r(981631),
+    g = r(388032),
+    f = r(877021),
+    j = r(373283);
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                })
+            )),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = n);
+            });
+    }
+    return e;
+}
+function O(e, t) {
+    return (
+        (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
             : (function (e, t) {
                   var r = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
@@ -106,9 +49,153 @@ function f(e) {
                       r.push.apply(r, n);
                   }
                   return r;
-              })(Object(r)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
               }),
-        t)
+        e
     );
+}
+function b(e) {
+    var { guildId: t, user: r, location: b, modReportId: m } = e,
+        x = (function (e, t) {
+            if (null == e) return {};
+            var r,
+                n,
+                l = (function (e, t) {
+                    if (null == e) return {};
+                    var r,
+                        n,
+                        l = {},
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
+                    return l;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var i = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+            }
+            return l;
+        })(e, ['guildId', 'user', 'location', 'modReportId']);
+    let [y, v] = l.useState(''),
+        [P, C] = l.useState(!1),
+        k = (0, a.sE)(t, {
+            location: b,
+            targetUserId: r.id
+        }),
+        w = (0, i.e7)([u.Z], () => {
+            var e;
+            return null == (e = u.Z.getChannel(m)) ? void 0 : e.isArchivedThread();
+        }),
+        E = l.useCallback(() => {
+            if (
+                (s.Z.kickUser(t, r.id, y, m).then(() => {
+                    P && null != m && c.Z.resolveFlag(m);
+                }),
+                k(a.jQ.KICK),
+                null != m)
+            ) {
+                var e;
+                null == (e = x.onClose) || e.call(x);
+            }
+        }, [t, r.id, y, k, m, P, x]),
+        T = l.useCallback((e) => {
+            v(e);
+        }, []);
+    return null != m
+        ? (0, n.jsxs)(
+              o.Y0X,
+              O(h({}, x), {
+                  children: [
+                      (0, n.jsx)(o.xBx, {
+                          separator: !1,
+                          children: (0, n.jsxs)(o.Kqy, {
+                              direction: 'vertical',
+                              justify: 'space-between',
+                              children: [
+                                  (0, n.jsx)(o.olH, {
+                                      className: j.closeButton,
+                                      onClick: x.onClose
+                                  }),
+                                  (0, n.jsx)(o.X6q, {
+                                      variant: 'heading-lg/semibold',
+                                      children: g.intl.formatToPlainString(g.t['1Ie87u'], { user: r.username })
+                                  })
+                              ]
+                          })
+                      }),
+                      (0, n.jsxs)(o.hzk, {
+                          children: [
+                              (0, n.jsx)(o.Text, {
+                                  variant: 'text-md/normal',
+                                  className: j.spacing,
+                                  children: g.intl.format(g.t['/yH0UV'], { user: '@'.concat(d.ZP.getName(r)) })
+                              }),
+                              (0, n.jsx)(o.xJW, {
+                                  titleClassName: j.title,
+                                  title: g.intl.string(null != m ? g.t.hmKy8P : g.t['+2QEPj']),
+                                  className: j.spacing,
+                                  children: (0, n.jsx)(o.Kx8, {
+                                      maxLength: p.GNZ,
+                                      onChange: T,
+                                      value: y,
+                                      rows: 2
+                                  })
+                              })
+                          ]
+                      }),
+                      (0, n.jsxs)(o.mzw, {
+                          children: [
+                              (0, n.jsx)(o.zxk, {
+                                  type: 'submit',
+                                  color: o.zxk.Colors.RED,
+                                  size: o.zxk.Sizes.SMALL,
+                                  onClick: E,
+                                  children: g.intl.string(g.t['3glT6e'])
+                              }),
+                              !w &&
+                                  (0, n.jsx)(o.XZJ, {
+                                      value: P,
+                                      onChange: (e, t) => {
+                                          C(t);
+                                      },
+                                      children: g.intl.string(f.default['8yIKen'])
+                                  })
+                          ]
+                      })
+                  ]
+              })
+          )
+        : (0, n.jsxs)(
+              o.ConfirmModal,
+              O(
+                  h(
+                      {
+                          header: g.intl.formatToPlainString(g.t['1Ie87u'], { user: r.username }),
+                          confirmText: g.intl.string(g.t['3glT6e']),
+                          cancelText: g.intl.string(g.t['ETE/oK']),
+                          onConfirm: E
+                      },
+                      x
+                  ),
+                  {
+                      children: [
+                          (0, n.jsx)(o.Text, {
+                              variant: 'text-md/normal',
+                              className: j.spacing,
+                              children: g.intl.format(g.t['/yH0UV'], { user: '@'.concat(d.ZP.getName(r)) })
+                          }),
+                          (0, n.jsx)(o.xJW, {
+                              title: g.intl.string(g.t['+2QEPj']),
+                              className: j.spacing,
+                              children: (0, n.jsx)(o.Kx8, {
+                                  maxLength: p.GNZ,
+                                  onChange: T,
+                                  value: y,
+                                  rows: 2
+                              })
+                          })
+                      ]
+                  }
+              )
+          );
 }

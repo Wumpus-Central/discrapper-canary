@@ -187,16 +187,16 @@ function ee(e) {
             [ee]
         ),
         { title: tl, subtitle: to } = (function (e) {
-            var t, n, r, l, o;
-            let i = null == (t = e.config.taskConfigV2) ? void 0 : t.tasks[u.X.WATCH_VIDEO],
-                a = null != (n = null == i ? void 0 : i.messages.videoEndCtaTitle) ? n : Y.intl.string(Y.t.iiTtpK),
-                s = null != (l = null != (r = null == i ? void 0 : i.messages.videoEndCtaButtonLabel) ? r : null == i ? void 0 : i.messages.videoEndCtaSubtitle) ? l : Y.intl.string(Y.t.mxaHf3),
-                c = (0, _.B2)(e.config),
-                m = null != (o = null == i ? void 0 : i.messages.videoEndCtaSubtitle) ? o : Y.intl.string(Y.t.mxaHf3),
-                p = e.config.features.includes(d.S.VIDEO_QUEST_FORCE_END_CARD_CTA_SWAP);
+            var t, n, r, l;
+            let o = e.config.taskConfigV2.tasks[u.X.WATCH_VIDEO],
+                i = null != (t = null == o ? void 0 : o.messages.videoEndCtaTitle) ? t : Y.intl.string(Y.t.iiTtpK),
+                a = null != (r = null != (n = null == o ? void 0 : o.messages.videoEndCtaButtonLabel) ? n : null == o ? void 0 : o.messages.videoEndCtaSubtitle) ? r : Y.intl.string(Y.t.mxaHf3),
+                s = (0, _.B2)(e.config),
+                c = null != (l = null == o ? void 0 : o.messages.videoEndCtaSubtitle) ? l : Y.intl.string(Y.t.mxaHf3),
+                m = e.config.features.includes(d.S.VIDEO_QUEST_FORCE_END_CARD_CTA_SWAP);
             return {
-                title: p ? c : a,
-                subtitle: p ? m : s
+                title: m ? s : i,
+                subtitle: m ? c : a
             };
         })(ee),
         ti = e0 ? (eH.timestampSec >= eH.duration ? 0 : eH.timestampSec) : Math.max(eH.timestampSec, eS.progressSeconds);
@@ -208,39 +208,39 @@ function ee(e) {
             videoAsset: ts,
             hlsRef: tc
         } = (function (e, t, n, r) {
-            var o, i;
-            let s = l.useRef(!1),
-                c = l.useRef(null),
-                d = (0, T.z)(e, Q.dr.VIDEO_MODAL),
-                m = null == (i = e.config.taskConfigV2) || null == (o = i.tasks[u.X.WATCH_VIDEO]) ? void 0 : o.assets,
-                p = l.useMemo(() => (null != m ? (d && a.ZP.isSupported() && null != m.videoHls ? I.n1.VIDEO_HLS : K.has(n) || null == m.videoLowRes ? I.n1.VIDEO : I.n1.VIDEO_LOW_RES) : null), [m, n, d]),
-                f = l.useMemo(() => (null != p ? (0, I.z0)(e, u.X.WATCH_VIDEO, p, I.O.VIDEO) : null), [e, p]),
-                v = () => {
-                    null != c.current && 800000 !== c.current.config.minAutoBitrate && (c.current.config.minAutoBitrate = 800000);
+            var o;
+            let i = l.useRef(!1),
+                s = l.useRef(null),
+                c = (0, T.z)(e, Q.dr.VIDEO_MODAL),
+                d = null == (o = e.config.taskConfigV2.tasks[u.X.WATCH_VIDEO]) ? void 0 : o.assets,
+                m = l.useMemo(() => (null != d ? (c && a.ZP.isSupported() && null != d.videoHls ? I.n1.VIDEO_HLS : K.has(n) || null == d.videoLowRes ? I.n1.VIDEO : I.n1.VIDEO_LOW_RES) : null), [d, n, c]),
+                p = l.useMemo(() => (null != m ? (0, I.z0)(e, u.X.WATCH_VIDEO, m, I.O.VIDEO) : null), [e, m]),
+                f = () => {
+                    null != s.current && 800000 !== s.current.config.minAutoBitrate && (s.current.config.minAutoBitrate = 800000);
                 };
             return (
                 l.useEffect(() => {
-                    if (p !== I.n1.VIDEO_HLS || null == f || null == t.current || s.current) return;
-                    (c.current = new a.ZP({
+                    if (m !== I.n1.VIDEO_HLS || null == p || null == t.current || i.current) return;
+                    (s.current = new a.ZP({
                         backBufferLength: 20,
                         maxBufferLength: 30,
                         startPosition: r,
                         startFragPrefetch: !0,
                         startLevel: -1
                     })),
-                        c.current.on(a.ZP.Events.FRAG_LOADING, v),
-                        c.current.loadSource(f.url),
-                        c.current.attachMedia(t.current),
-                        (s.current = !0);
-                    let e = c.current;
+                        s.current.on(a.ZP.Events.FRAG_LOADING, f),
+                        s.current.loadSource(p.url),
+                        s.current.attachMedia(t.current),
+                        (i.current = !0);
+                    let e = s.current;
                     return () => {
-                        null != e && e.off(a.ZP.Events.FRAG_LOADING, v);
+                        null != e && e.off(a.ZP.Events.FRAG_LOADING, f);
                     };
-                }, [f, p, t, r]),
+                }, [p, m, t, r]),
                 {
-                    videoVariant: p,
-                    videoAsset: f,
-                    hlsRef: c
+                    videoVariant: m,
+                    videoAsset: p,
+                    hlsRef: s
                 }
             );
         })(ee, eX, ew, ti),
@@ -479,13 +479,13 @@ function ee(e) {
                                 ]
                             });
                         {
-                            var e, t, n, l;
-                            let o = null == (e = ee.config.taskConfigV2) ? void 0 : e.tasks[u.X.WATCH_VIDEO];
+                            var e, t, n;
+                            let l = ee.config.taskConfigV2.tasks[u.X.WATCH_VIDEO];
                             return (0, r.jsx)(R.Z, {
                                 quest: ee,
-                                title: null != (t = null == o ? void 0 : o.messages.videoEndCtaTitle) ? t : Y.intl.string(Y.t.Ka526u),
-                                subtitle: null != (n = null == o ? void 0 : o.messages.videoEndCtaSubtitle) ? n : Y.intl.string(Y.t.tKMcAg),
-                                ctaBtnLabel: null != (l = null == o ? void 0 : o.messages.videoEndCtaButtonLabel) ? l : Y.intl.string(Y.t.iiTtpK),
+                                title: null != (e = null == l ? void 0 : l.messages.videoEndCtaTitle) ? e : Y.intl.string(Y.t.Ka526u),
+                                subtitle: null != (t = null == l ? void 0 : l.messages.videoEndCtaSubtitle) ? t : Y.intl.string(Y.t.tKMcAg),
+                                ctaBtnLabel: null != (n = null == l ? void 0 : l.messages.videoEndCtaButtonLabel) ? n : Y.intl.string(Y.t.iiTtpK),
                                 onCTAClick: () => tz(y.jn.VIDEO_MODAL_END_CARD)
                             });
                         }

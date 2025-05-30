@@ -1,3 +1,4 @@
-n.d(t, { r: () => s });
-var r,
-    s = (((r = {}).AND = 'and'), (r.OR = 'or'), r);
+n.d(t, { r: () => r });
+var r = (function (e) {
+    return (e.AND = 'and'), (e.OR = 'or'), e;
+})({});

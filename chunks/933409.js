@@ -249,7 +249,7 @@ function h(e, t, h, T, D) {
                                 color: 'danger',
                                 action: () =>
                                     (0, a.ZDy)(async () => {
-                                        let { default: l } = await n.e('5454').then(n.bind(n, 854360));
+                                        let { default: l } = await n.e('36760').then(n.bind(n, 854360));
                                         return (n) =>
                                             (0, r.jsx)(
                                                 l,

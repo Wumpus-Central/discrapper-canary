@@ -13,22 +13,21 @@ var r = n(475595),
         return (e.VIDEO = 'url'), (e.THUMBNAIL = 'thumbnail'), (e.CAPTION = 'caption'), (e.TRANSCRIPT = 'transcript'), e;
     })({});
 function s(e, t, n, a) {
-    var o;
-    let s = null == (o = e.config.taskConfigV2) ? void 0 : o.tasks[t];
+    let o = e.config.taskConfigV2.tasks[t];
+    if (null == o) return null;
+    let s = o.assets[n];
     if (null == s) return null;
-    let l = s.assets[n];
+    let l = s[a];
     if (null == l) return null;
-    let c = l[a];
-    if (null == c) return null;
-    let u = e.config.features.includes(i.S7.QUESTS_CDN),
-        d = (0, r.Dm)(c);
-    if (null == d) return null;
-    let f = (0, r.Q2)(e.id, c, { newCdn: u }),
-        _ = r.N0.includes(d);
+    let c = e.config.features.includes(i.S7.QUESTS_CDN),
+        u = (0, r.Dm)(l);
+    if (null == u) return null;
+    let d = (0, r.Q2)(e.id, l, { newCdn: c }),
+        f = r.N0.includes(u);
     return {
-        url: f,
-        mimetype: d,
-        isAnimated: _
+        url: d,
+        mimetype: u,
+        isAnimated: f
     };
 }
 let l = {

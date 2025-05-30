@@ -5,8 +5,8 @@ var i = n(442837),
     a = n(704215),
     o = n(907459),
     s = n(514361),
-    l = n(553049),
-    c = n(724145),
+    l = n(724145),
+    c = n(726034),
     u = n(605236),
     d = n(243778),
     f = n(819640),
@@ -29,7 +29,7 @@ let E = function () {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (E === h.wh.CLIENT_THEMES || I) &&
-                      (0, r.jsx)(c.Z, {
+                      (0, r.jsx)(l.Z, {
                           markAsDismissed: I
                               ? v
                               : () => {
@@ -45,7 +45,7 @@ let E = function () {
                           isCoachmark: !1,
                           markAsDismissed: v
                       }),
-                  E === h.wh.CUSTOM_THEME && (0, r.jsx)(l.Z, { metadata: b })
+                  E === h.wh.CUSTOM_THEME && (0, r.jsx)(c.Z, { metadata: b })
               ]
           });
 };

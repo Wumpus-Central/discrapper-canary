@@ -3,7 +3,7 @@ var r = n(381814),
     i = n(731965);
 let a = (0, r.U)((e) => ({
     colors: [],
-    chassisMixAmount: 0,
+    chassisMixAmount: 80,
     gradientAngle: 0,
     setColors: (t) => {
         (0, i.j)(() => {

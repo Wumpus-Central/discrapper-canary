@@ -1104,7 +1104,7 @@ function H() {
         children: [
             (0, i.jsx)(d.X6q, {
                 variant: 'heading-xl/semibold',
-                children: 'Modals'
+                children: 'Modals (Void)'
             }),
             (0, i.jsx)(d.zxk, {
                 onClick: () => {

@@ -85,18 +85,16 @@ class u {
     }
     get defaultInGameTask() {
         var e;
-        if (null == this.quest.taskConfigV2) return null;
         let t = this.quest.taskConfigV2.tasks,
             n = t[r.X.ACHIEVEMENT_IN_ACTIVITY],
             i = t[r.X.ACHIEVEMENT_IN_GAME];
         return null != (e = null != n ? n : i) ? e : null;
     }
     get defaultWatchVideoTask() {
-        var e, t, n;
-        if (null == this.quest.taskConfigV2) return null;
-        let i = null == (e = this.quest.taskConfigV2) ? void 0 : e.tasks[r.X.WATCH_VIDEO],
-            a = null == (t = this.quest.taskConfigV2) ? void 0 : t.tasks[r.X.WATCH_VIDEO_ON_MOBILE];
-        return null != i && null != a ? i : null != (n = null != a ? a : i) ? n : null;
+        var e;
+        let t = this.quest.taskConfigV2.tasks[r.X.WATCH_VIDEO],
+            n = this.quest.taskConfigV2.tasks[r.X.WATCH_VIDEO_ON_MOBILE];
+        return null != t && null != n ? t : null != (e = null != n ? n : t) ? e : null;
     }
     constructor(e) {
         o(this, 'quest', void 0), (this.quest = e);
