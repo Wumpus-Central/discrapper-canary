@@ -29,16 +29,16 @@ var i = n(255367),
     v = n(388032),
     T = n(909176);
 let N = (e) => {
-        let { inOfferExperience: t, subscriptionTier: n, containerClassName: r, buttonClassName: s, isMarketingPageV2Enabled: a, isDarkMode: o } = e,
-            c = (0, i.jsx)(x.Z, {
-                forceInverted: o || !a,
+        let { inOfferExperience: t, subscriptionTier: n, containerClassName: r, buttonClassName: s, isMarketingPageV2Enabled: a, isDarkMode: c } = e,
+            d = (0, i.jsx)(x.Z, {
+                color: c || !a ? o.Ttl.BRAND_INVERTED : void 0,
                 className: l()(T.button, T.subButton, s, {
                     [T.extendedButton]: t && a,
-                    [T.whiteSubButton]: a && !o
+                    [T.whiteSubButton]: a && !c
                 }),
                 subscriptionTier: n
             }),
-            d =
+            u =
                 t && a
                     ? null
                     : (0, i.jsx)(_.Z, {
@@ -47,7 +47,7 @@ let N = (e) => {
                       });
         return (0, i.jsxs)('div', {
             className: l()(T.buttonContainer, r),
-            children: [c, ' ', d]
+            children: [d, ' ', u]
         });
     },
     I = (e) => {

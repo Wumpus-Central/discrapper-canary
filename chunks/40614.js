@@ -1,89 +1,63 @@
-n.d(t, { V: () => v });
+n.d(t, { V: () => _ }), n(388685);
 var r = n(255367),
-    i = n(512722),
-    l = n.n(i),
-    o = n(442837),
-    s = n(481060),
-    a = n(550532),
-    c = n(371991),
-    u = n(594190),
-    d = n(695346),
-    h = n(885110),
-    p = n(316496),
-    f = n(797910),
-    g = n(388032),
-    m = n(24655);
-function b() {
-    return (0, r.jsxs)(r.Fragment, {
-        children: [
-            (0, r.jsx)(s.kZF, {
-                size: 'xxs',
-                color: 'currentColor',
-                className: m.iconEye
-            }),
-            g.intl.string(g.t.jfrLLS)
-        ]
+    i = n(73800),
+    l = n(512722),
+    o = n.n(l),
+    s = n(442837),
+    a = n(481060),
+    c = n(550532),
+    u = n(371991),
+    d = n(561308),
+    h = n(594190),
+    p = n(695346),
+    f = n(885110),
+    g = n(316496),
+    m = n(797910),
+    b = n(388032),
+    y = n(24655);
+function O() {
+    return (0, r.jsx)(a.Text, {
+        className: y.textContent,
+        variant: 'text-xs/medium',
+        color: 'text-secondary',
+        children: b.intl.string(b.t.jfrLLS)
     });
 }
-function y() {
+function v() {
     var e;
-    let t = (0, o.e7)([a.Z], () => a.Z.getFakeGameData()),
-        n = (0, o.e7)([u.ZP], () => u.ZP.getVisibleGame()),
-        i = null != (e = null == t ? void 0 : t.start) ? e : null == n ? void 0 : n.start,
-        h = d.SE.useSetting().length > 0;
-    return (
-        l()(null != i, 'Start time should be set for currently running game'),
-        (0, r.jsxs)(r.Fragment, {
-            children: [
-                h &&
-                    (0, r.jsxs)(r.Fragment, {
-                        children: [
-                            (0, r.jsx)(s.OgY, {
-                                className: m.iconEye,
-                                size: 'xxs',
-                                color: 'currentColor'
-                            }),
-                            g.intl.string(f.default.jfDsyM),
-                            '\xA0\xA0'
-                        ]
-                    }),
-                (0, r.jsx)(c.x3, {
-                    entry: { start: i },
-                    textColor: 'text-positive'
-                })
-            ]
-        })
-    );
-}
-function O(e) {
-    let { onClick: t, children: n } = e;
-    return (0, r.jsx)(s.P3F, {
-        onClick: t,
-        className: m.container,
-        children: (0, r.jsx)(s.Text, {
-            variant: 'text-xs/medium',
-            className: m.text,
-            color: 'text-secondary',
-            children: n
-        })
+    let t = (0, s.e7)([c.Z], () => c.Z.getFakeGameData()),
+        n = (0, s.e7)([h.ZP], () => h.ZP.getVisibleGame()),
+        l = null != (e = null == t ? void 0 : t.start) ? e : null == n ? void 0 : n.start,
+        f = p.SE.useSetting().length > 0;
+    o()(null != l, 'Start time should be set for currently running game');
+    let { now: g } = (0, u.tS)(),
+        O = (0, i.useMemo)(() => (0, d.T_)({ start: l }, g), [l, g]),
+        v = [...(f ? [b.intl.string(m.default.jfDsyM)] : []), b.intl.string(b.t.BMTj29), O];
+    return (0, r.jsx)(a.Text, {
+        className: y.textContent,
+        variant: 'text-xs/medium',
+        color: 'text-positive',
+        children: v.join(' \xB7 ')
     });
 }
-function v(e) {
+function _(e) {
     let { onClick: t } = e,
-        { isEnabled: n, showActivitySharingIndicatorWhenSharing: i } = (0, p.D)('not sharing link'),
-        l = d.G6.useSetting(),
-        a = (0, o.e7)([h.Z], () => h.Z.getStatus());
+        { isEnabled: n, showActivitySharingIndicatorWhenSharing: i } = (0, g.D)('not sharing link'),
+        l = p.G6.useSetting(),
+        o = (0, s.e7)([f.Z], () => f.Z.getStatus());
     return n
-        ? l && a !== s.Skl.INVISIBLE
+        ? l && o !== a.Skl.INVISIBLE
             ? i
-                ? (0, r.jsx)(O, {
+                ? (0, r.jsx)(a.P3F, {
+                      className: y.container,
                       onClick: t,
-                      children: (0, r.jsx)(y, {})
+                      children: (0, r.jsx)(v, {})
                   })
                 : null
-            : (0, r.jsx)(O, {
+            : (0, r.jsx)(a.P3F, {
+                  className: y.container,
                   onClick: t,
-                  children: (0, r.jsx)(b, {})
+                  children: (0, r.jsx)(O, {})
               })
         : null;
 }

@@ -75,10 +75,10 @@ let E = (e) => {
     },
     b = (e, t, n, r) => (t || n ? f.intl.string(f.t.fkPGam) : e === d.Si.TIER_2 ? f.intl.formatToPlainString(f.t.bkQ4bG, { percent: r }) : void 0),
     y = (e) => {
-        var { textOptions: t, forceInverted: n, subscriptionTier: p, hasActivePromotion: g = !1, isPersistentCTA: y = !1, useShorterCTA: O = !1, showGradient: v, confirmationFooter: I, paymentModalBanner: S } = e,
-            T = m(e, ['textOptions', 'forceInverted', 'subscriptionTier', 'hasActivePromotion', 'isPersistentCTA', 'useShorterCTA', 'showGradient', 'confirmationFooter', 'paymentModalBanner']);
-        let A = (0, o.ZP)(),
-            N = !v && ((0, i.wj)(A) || n),
+        var t,
+            { textOptions: n, subscriptionTier: p, hasActivePromotion: g = !1, isPersistentCTA: y = !1, useShorterCTA: O = !1, showGradient: v, confirmationFooter: I, paymentModalBanner: S, buttonShineClassName: T } = e,
+            A = m(e, ['textOptions', 'subscriptionTier', 'hasActivePromotion', 'isPersistentCTA', 'useShorterCTA', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'buttonShineClassName']);
+        let N = (0, o.ZP)(),
             C = (0, c.N)(),
             P = null == C ? void 0 : C.subscription_trial,
             R = (0, s.a5)({
@@ -99,19 +99,20 @@ let E = (e) => {
                         isPersistentCTA: y,
                         shouldShowReferralTrialCopy: L,
                         subscriptionTrial: P
-                    });
+                    }),
+            k = null != (t = A.color) ? t : (0, i.wj)(N) ? a.Ttl.BRAND_INVERTED : a.Ttl.BRAND;
         return (0, r.jsx)(
             u.Z,
             h(
                 {
-                    color: N ? a.Ttl.BRAND_INVERTED : a.Ttl.BRAND,
-                    buttonShineClassName: 'buttonShineClassName' in T ? T.buttonShineClassName : N ? _.brandShine : void 0,
+                    color: k,
+                    buttonShineClassName: null != T ? T : k === a.Ttl.BRAND_INVERTED ? _.brandShine : void 0,
                     textOptions: h(
                         {
                             textOverride: x,
                             textClassName: D ? _.freeTrialText : void 0
                         },
-                        t
+                        n
                     ),
                     onlyShineOnHover: !0,
                     subscriptionTier: p,
@@ -119,7 +120,7 @@ let E = (e) => {
                     confirmationFooter: I,
                     paymentModalBanner: S
                 },
-                T
+                A
             )
         );
     };

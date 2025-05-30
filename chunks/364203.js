@@ -357,6 +357,7 @@ function X() {
                 },
                 subscriptionTier: x.Si.TIER_2,
                 showGradient: !0,
+                color: d.Ttl.BRAND,
                 size: d.zxk.Sizes.MEDIUM
             })
         ]
