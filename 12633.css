@@ -1172,6 +1172,24 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     background-color: var(--button-filled-white-background-active)
 }
 
+.scrim_d9cec8 {
+    background-color: var(--scrim-default);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: var(--devtools-sidebar-width, 0);
+    top: 0;
+    transform: translateZ(0)
+}
+
+.lightbox_d9cec8 {
+    background-color: var(--scrim-lightbox)
+}
+
+.pointerEventsNone_d9cec8 {
+    pointer-events: none
+}
+
 .dots__5ad89 {
     color: var(--white-500);
     pointer-events: none;
@@ -52413,6 +52431,8 @@ html.disable-forced-colors * {
     --redesign-image-button-pressed-background: hsl(var(--black-hsl)/0.08);
     --redesign-input-control-active-bg: var(--primary-645);
     --redesign-input-control-selected: var(--brand-500);
+    --scrim-default: hsl(var(--opacity-black-72-hsl)/0.7215686274509804);
+    --scrim-lightbox: hsl(var(--opacity-black-92-hsl)/0.9215686274509803);
     --scrollbar-auto-scrollbar-color-thumb: var(--primary-730);
     --scrollbar-auto-scrollbar-color-track: var(--primary-630);
     --scrollbar-auto-thumb: var(--primary-730);
@@ -52690,6 +52710,8 @@ html.disable-forced-colors * {
         --redesign-image-button-pressed-background: color-mix(in oklab, hsl(var(--black-hsl)/0.08) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.08) var(--theme-base-color-amount, 0%));
         --redesign-input-control-active-bg: color-mix(in oklab, var(--primary-645) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --redesign-input-control-selected: color-mix(in oklab, var(--brand-500) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --scrim-default: color-mix(in oklab, hsl(var(--opacity-black-72-hsl)/0.7215686274509804) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.7215686274509804) var(--theme-base-color-amount, 0%));
+        --scrim-lightbox: color-mix(in oklab, hsl(var(--opacity-black-92-hsl)/0.9215686274509803) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.9215686274509803) var(--theme-base-color-amount, 0%));
         --scrollbar-auto-scrollbar-color-thumb: color-mix(in oklab, var(--primary-730) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --scrollbar-auto-scrollbar-color-track: color-mix(in oklab, var(--primary-630) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --scrollbar-auto-thumb: color-mix(in oklab, var(--primary-730) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
@@ -53044,6 +53066,8 @@ html.disable-forced-colors * {
     --redesign-image-button-pressed-background: hsl(var(--black-hsl)/0.08);
     --redesign-input-control-active-bg: var(--white);
     --redesign-input-control-selected: var(--brand-500);
+    --scrim-default: hsl(var(--opacity-black-52-hsl)/0.5215686274509804);
+    --scrim-lightbox: hsl(var(--opacity-black-92-hsl)/0.9215686274509803);
     --scrollbar-auto-scrollbar-color-thumb: var(--primary-230);
     --scrollbar-auto-scrollbar-color-track: var(--primary-130);
     --scrollbar-auto-thumb: var(--primary-300);
@@ -53321,6 +53345,8 @@ html.disable-forced-colors * {
         --redesign-image-button-pressed-background: color-mix(in oklab, hsl(var(--black-hsl)/0.08) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.08) var(--theme-base-color-amount, 0%));
         --redesign-input-control-active-bg: color-mix(in oklab, var(--white) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --redesign-input-control-selected: color-mix(in oklab, var(--brand-500) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --scrim-default: color-mix(in oklab, hsl(var(--opacity-black-52-hsl)/0.5215686274509804) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.5215686274509804) var(--theme-base-color-amount, 0%));
+        --scrim-lightbox: color-mix(in oklab, hsl(var(--opacity-black-92-hsl)/0.9215686274509803) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.9215686274509803) var(--theme-base-color-amount, 0%));
         --scrollbar-auto-scrollbar-color-thumb: color-mix(in oklab, var(--primary-230) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --scrollbar-auto-scrollbar-color-track: color-mix(in oklab, var(--primary-130) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --scrollbar-auto-thumb: color-mix(in oklab, var(--primary-300) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
@@ -53675,6 +53701,8 @@ html.disable-forced-colors * {
     --redesign-image-button-pressed-background: hsl(var(--black-hsl)/0.08);
     --redesign-input-control-active-bg: var(--plum-17);
     --redesign-input-control-selected: var(--brand-500);
+    --scrim-default: hsl(var(--opacity-black-72-hsl)/0.7215686274509804);
+    --scrim-lightbox: hsl(var(--opacity-black-92-hsl)/0.9215686274509803);
     --scrollbar-auto-scrollbar-color-thumb: var(--plum-20);
     --scrollbar-auto-scrollbar-color-track: var(--plum-17);
     --scrollbar-auto-thumb: var(--plum-16);
@@ -53952,6 +53980,8 @@ html.disable-forced-colors * {
         --redesign-image-button-pressed-background: color-mix(in oklab, hsl(var(--black-hsl)/0.08) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.08) var(--theme-base-color-amount, 0%));
         --redesign-input-control-active-bg: color-mix(in oklab, var(--plum-17) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --redesign-input-control-selected: color-mix(in oklab, var(--brand-500) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --scrim-default: color-mix(in oklab, hsl(var(--opacity-black-72-hsl)/0.7215686274509804) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.7215686274509804) var(--theme-base-color-amount, 0%));
+        --scrim-lightbox: color-mix(in oklab, hsl(var(--opacity-black-92-hsl)/0.9215686274509803) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.9215686274509803) var(--theme-base-color-amount, 0%));
         --scrollbar-auto-scrollbar-color-thumb: color-mix(in oklab, var(--plum-20) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --scrollbar-auto-scrollbar-color-track: color-mix(in oklab, var(--plum-17) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --scrollbar-auto-thumb: color-mix(in oklab, var(--plum-16) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
@@ -54306,6 +54336,8 @@ html.disable-forced-colors * {
     --redesign-image-button-pressed-background: hsl(var(--black-hsl)/0.08);
     --redesign-input-control-active-bg: var(--plum-16);
     --redesign-input-control-selected: var(--brand-500);
+    --scrim-default: hsl(var(--opacity-black-72-hsl)/0.7215686274509804);
+    --scrim-lightbox: hsl(var(--opacity-black-92-hsl)/0.9215686274509803);
     --scrollbar-auto-scrollbar-color-thumb: var(--plum-21);
     --scrollbar-auto-scrollbar-color-track: var(--plum-17);
     --scrollbar-auto-thumb: var(--plum-21);
@@ -54583,6 +54615,8 @@ html.disable-forced-colors * {
         --redesign-image-button-pressed-background: color-mix(in oklab, hsl(var(--black-hsl)/0.08) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.08) var(--theme-base-color-amount, 0%));
         --redesign-input-control-active-bg: color-mix(in oklab, var(--plum-16) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --redesign-input-control-selected: color-mix(in oklab, var(--brand-500) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --scrim-default: color-mix(in oklab, hsl(var(--opacity-black-72-hsl)/0.7215686274509804) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.7215686274509804) var(--theme-base-color-amount, 0%));
+        --scrim-lightbox: color-mix(in oklab, hsl(var(--opacity-black-92-hsl)/0.9215686274509803) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.9215686274509803) var(--theme-base-color-amount, 0%));
         --scrollbar-auto-scrollbar-color-thumb: color-mix(in oklab, var(--plum-21) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --scrollbar-auto-scrollbar-color-track: color-mix(in oklab, var(--plum-17) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --scrollbar-auto-thumb: color-mix(in oklab, var(--plum-21) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
