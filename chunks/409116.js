@@ -14,28 +14,28 @@ let u = (e) => (e.length > 5 ? e.replace(/\.00$/, '') : e),
                 price: { amount: n, currency: l },
                 renderPrice: d,
                 icon: p,
-                className: g,
-                discount: b = s.f_,
-                variant: f = 'heading-md/semibold'
+                className: f,
+                discount: g = s.f_,
+                variant: b = 'heading-md/semibold'
             } = e,
             h = u((0, o.T4)(n, l)),
             m =
-                b !== s.f_ && b.discountPercentage >= 5
+                g !== s.f_ && g.discountPercentage >= 5
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               h,
                               (0, r.jsx)(i.Text, {
-                                  variant: f,
+                                  variant: b,
                                   color: 'text-positive',
                                   className: c.discount,
-                                  children: ' (-'.concat(b.discountPercentage, '%)')
+                                  children: ' (-'.concat(g.discountPercentage, '%)')
                               })
                           ]
                       })
                     : h;
         return (0, r.jsxs)(i.X6q, {
-            variant: f,
-            className: a()(c.container, g),
+            variant: b,
+            className: a()(c.container, f),
             children: [p, null != (t = null == d ? void 0 : d(m)) ? t : m]
         });
     };

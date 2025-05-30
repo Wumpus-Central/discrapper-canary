@@ -97,7 +97,7 @@ class y extends (r = i.ZP.PersistedStore) {
 f(y, 'displayName', 'GuildAutomodMessageStore'), f(y, 'persistKey', 'GuildAutomodMessages');
 let P = new y(l.Z, {
     CONNECTION_OPEN: function (e) {
-        return (_ = {}), S++, !0;
+        return 0 !== Object.keys(_).length && ((_ = {}), S++, !0);
     },
     LOAD_MESSAGES_SUCCESS: C,
     LOCAL_MESSAGES_LOADED: C,

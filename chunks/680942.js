@@ -9,9 +9,9 @@ var r = n(255367),
     u = n(677232),
     d = n(626135),
     p = n(381585),
-    g = n(884697),
-    b = n(228624),
-    f = n(67409),
+    f = n(884697),
+    g = n(228624),
+    b = n(67409),
     h = n(981631),
     m = n(474936),
     _ = n(231338),
@@ -80,13 +80,13 @@ let O = {
         ]
     },
     S = (e) => {
-        let { product: t, selectedVariantIndex: n, returnRef: S, onSuccess: x, tooltipDelay: E, isGiftEasterEggEnabled: j, color: y = i.Ttl.BRAND } = e,
+        let { product: t, selectedVariantIndex: n, returnRef: S, onSuccess: x, tooltipDelay: E, isGiftEasterEggEnabled: y, color: j = i.Ttl.BRAND } = e,
             { analyticsLocations: P } = (0, s.ZP)(),
             k = l.useRef(null),
             T = (0, o.Z)(k),
-            I = (0, b.hv)('CollectiblesShopGiftButton'),
+            I = (0, g.hv)('CollectiblesShopGiftButton'),
             L = (0, p.sp)();
-        return (0, g.x6)(t)
+        return (0, f.x6)(t)
             ? null
             : (0, r.jsx)(i.ua7, {
                   text: C.intl.string(C.t['JCFN//']),
@@ -124,7 +124,7 @@ let O = {
                               {
                                   buttonRef: k,
                                   className: v.giftButton,
-                                  color: y,
+                                  color: j,
                                   look: i.zxk.Looks.FILLED,
                                   size: i.PhG.ICON,
                                   innerClassName: v.giftButtonInner,
@@ -141,7 +141,7 @@ let O = {
                                               cta_name: 'gift button'
                                           }),
                                           (0, c.Z)({
-                                              skuId: (0, f.S)({
+                                              skuId: (0, b.S)({
                                                   product: t,
                                                   selectedVariantIndex: n
                                               }),
@@ -158,7 +158,7 @@ let O = {
                                                       : void 0
                                           });
                                   },
-                                  children: j
+                                  children: y
                                       ? (0, r.jsx)(u.Z, {
                                             hovered: T,
                                             isContentDismissed: !0,

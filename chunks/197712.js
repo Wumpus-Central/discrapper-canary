@@ -1,8 +1,8 @@
 r.d(t, {
-    $p: () => i,
+    $p: () => l,
     AK: () => d,
     Es: () => c,
-    U$: () => l,
+    U$: () => i,
     kH: () => u
 }),
     r(190126),
@@ -28,8 +28,8 @@ r.d(t, {
 var n = r(392711),
     a = r(36793),
     s = r(486324);
-async function i(e) {
-    let { file: t, image: n, cropDimensions: i, cropOriginCoordinates: l, maxDimensions: o, imageRotation: c = 0, resizeWidth: u = null, resizeHeight: d = null } = e,
+async function l(e) {
+    let { file: t, image: n, cropDimensions: l, cropOriginCoordinates: i, maxDimensions: o, imageRotation: c = 0, resizeWidth: u = null, resizeHeight: d = null } = e,
         {
             sourceX: p,
             sourceY: h,
@@ -37,8 +37,8 @@ async function i(e) {
             sourceHeight: m
         } = (0, a.GS)({
             image: n,
-            cropDimensions: i,
-            cropOriginCoordinates: l,
+            cropDimensions: l,
+            cropOriginCoordinates: i,
             maxDimensions: o,
             imageRotation: c
         }),
@@ -83,23 +83,23 @@ async function i(e) {
         }
     );
 }
-function l(e, t, r) {
+function i(e, t, r) {
     return {
         x: (0, n.clamp)(e, r.left, r.right),
         y: (0, n.clamp)(t, r.bottom, r.top)
     };
 }
 function o(e, t, r, n, a) {
-    let i = r,
-        l = n,
+    let l = r,
+        i = n,
         o = a ? s.US : s.vJ;
-    return (r > o && ((i = o), (l = (o / r) * n)), r / n < e)
+    return (r > o && ((l = o), (i = (o / r) * n)), r / n < e)
         ? {
-              width: i,
-              height: l
+              width: l,
+              height: i
           }
         : {
-              width: (t / l) * i,
+              width: (t / i) * l,
               height: t
           };
 }
@@ -116,11 +116,11 @@ function c(e, t, r, n) {
             let a = n ? s.SP : s.qj;
             return o(s.MY, a, t, r, n);
         case s.pC.GUILD_BANNER:
-            let i = n ? s.t2 : s.C5;
-            return o(s.Ij, i, t, r, n);
+            let l = n ? s.t2 : s.C5;
+            return o(s.Ij, l, t, r, n);
         case s.pC.VIDEO_BACKGROUND:
-            let l = n ? s.kP : s.PB;
-            return o(s.Ff, l, t, r, n);
+            let i = n ? s.kP : s.PB;
+            return o(s.Ff, i, t, r, n);
         case s.pC.SCHEDULED_EVENT_IMAGE:
             let c = n ? s.tv : s.WV;
             return o(s.ut, c, t, r, n);
@@ -140,42 +140,42 @@ function u(e, t, r) {
     return 0 !== a && ((n.left = -Math.abs(a / 2)), (n.right = a / 2)), 0 !== s && ((n.bottom = -Math.abs(s / 2)), (n.top = s / 2)), n;
 }
 function d(e, t, r, n, a) {
-    let i = a ? s.US : s.vJ;
+    let l = a ? s.US : s.vJ;
     switch (e) {
         case s.pC.AVATAR:
         case s.pC.AVATAR_DECORATION:
         case s.pC.GUILD_ICON:
-            let l = Math.min(t, r);
+            let i = Math.min(t, r);
             return {
-                width: l,
-                height: l
+                width: i,
+                height: i
             };
         case s.pC.BANNER:
-            let o = Math.min(t, i);
+            let o = Math.min(t, l);
             return {
                 width: o,
                 height: o * (1 / s.MY)
             };
         case s.pC.GUILD_BANNER:
-            let c = Math.min(t, i);
+            let c = Math.min(t, l);
             return {
                 width: c,
                 height: Math.min((9 / 16) * c, n)
             };
         case s.pC.VIDEO_BACKGROUND:
-            let u = Math.min(t, i);
+            let u = Math.min(t, l);
             return {
                 width: u,
                 height: (9 / 16) * u
             };
         case s.pC.SCHEDULED_EVENT_IMAGE:
-            let d = Math.min(t, i);
+            let d = Math.min(t, l);
             return {
                 width: d,
                 height: 0.4 * d
             };
         case s.pC.HOME_HEADER:
-            let p = Math.min(t, i);
+            let p = Math.min(t, l);
             return {
                 width: p,
                 height: p * (1 / s.sX)

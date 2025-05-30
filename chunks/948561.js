@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => er,
+    ZP: () => ei,
     b2: () => R
 }),
     n(388685);
@@ -367,54 +367,63 @@ function z(e) {
     return Z(o()(n, (e, t) => e.id === t.id && e.channel_id === t.channel_id));
 }
 function q(e) {
+    let { pins: t } = e;
+    return Z(
+        t.map((e) => {
+            let { message: t } = e;
+            return t;
+        })
+    );
+}
+function Q(e) {
     let { guildId: t, threads: n } = e;
     return null != n && E.Z.getGuildId() === t && Z(b.default.keys(n).map((e) => n[e].first_message));
 }
-function Q(e) {
+function X(e) {
     let { guildId: t, firstMessages: n } = e;
     return null != n && E.Z.getGuildId() === t && Z(n, { forceBatchScan: !0 });
 }
-function X(e) {
-    let { channelId: t } = e;
-    return null != t && et(t);
-}
 function J(e) {
     let { channelId: t } = e;
-    return (0, A.U)(), null != t && t === g.Z.getChannelId() && et(t);
+    return null != t && en(t);
 }
 function $(e) {
+    let { channelId: t } = e;
+    return (0, A.U)(), null != t && t === g.Z.getChannelId() && en(t);
+}
+function ee(e) {
     let { settings: t, local: n } = e;
     if (!n || t.type !== C.yP.PRELOADED_USER_SETTINGS) return !1;
     let r = g.Z.getChannelId();
-    return null != r && et(r);
-}
-function ee(e) {
-    let { channelId: t, chatOpen: n } = e;
-    return !!n && et(t);
+    return null != r && en(r);
 }
 function et(e) {
+    let { channelId: t, chatOpen: n } = e;
+    return !!n && en(t);
+}
+function en(e) {
     let t = m.Z.getMessages(e);
     return 0 !== t.length && H(t);
 }
-class en extends c.Z {
+class er extends c.Z {
     constructor(...e) {
         super(...e),
             P(this, 'actions', {
                 LOAD_MESSAGES_SUCCESS: K,
-                LOAD_FORUM_POSTS: q,
-                LOAD_THREADS_SUCCESS: Q,
-                LOAD_ARCHIVED_THREADS_SUCCESS: Q,
-                SIDEBAR_VIEW_CHANNEL: X,
+                LOAD_FORUM_POSTS: Q,
+                LOAD_THREADS_SUCCESS: X,
+                LOAD_ARCHIVED_THREADS_SUCCESS: X,
+                SIDEBAR_VIEW_CHANNEL: J,
                 MESSAGE_CREATE: W,
                 MESSAGE_UPDATE: Y,
                 LOGOUT: x,
                 SEARCH_FINISH: z,
                 MOD_VIEW_SEARCH_FINISH: z,
-                CHANNEL_SELECT: J,
-                LOAD_PINNED_MESSAGES_SUCCESS: z,
-                USER_SETTINGS_PROTO_UPDATE: $,
-                CHANNEL_RTC_UPDATE_CHAT_OPEN: ee
+                CHANNEL_SELECT: $,
+                LOAD_PINNED_MESSAGES_SUCCESS: q,
+                USER_SETTINGS_PROTO_UPDATE: ee,
+                CHANNEL_RTC_UPDATE_CHAT_OPEN: et
             });
     }
 }
-let er = new en();
+let ei = new er();

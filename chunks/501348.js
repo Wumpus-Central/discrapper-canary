@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(514361),
     E = n(600164),
     C = n(313201),
-    O = n(540059),
-    j = n(605236),
+    j = n(540059),
+    O = n(605236),
     S = n(786761),
     v = n(3148),
     T = n(739566),
@@ -175,7 +175,7 @@ let W = {
         ];
     },
     J = () => {
-        let e = (0, O.Q3)('ThemeTitle');
+        let e = (0, j.Q3)('ThemeTitle');
         return (0, i.jsxs)('div', {
             className: V.themeTitle,
             children: [
@@ -726,8 +726,8 @@ class ee extends $ {
     }
 }
 let et = (e) => {
-    (0, j.un)(e) ||
-        (0, j.EW)(e, {
+    (0, O.un)(e) ||
+        (0, O.EW)(e, {
             dismissAction: B.L.AUTO,
             forceTrack: !0
         });
@@ -757,8 +757,8 @@ function en() {
                 gradientPreset: x.Z.gradientPreset
             };
         }),
-        d = (0, O.o9)('UserSettingsAppearance'),
-        u = (0, O.Q3)('UserSettingsAppearance');
+        d = (0, j.o9)('UserSettingsAppearance'),
+        u = (0, j.Q3)('UserSettingsAppearance');
     return (0, i.jsx)(
         u ? ee : $,
         H(

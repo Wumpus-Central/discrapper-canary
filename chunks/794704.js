@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(13245),
     E = n(825209),
     C = n(615287),
-    O = n(593472),
-    j = n(493773),
+    j = n(593472),
+    O = n(493773),
     S = n(887278),
     v = n(812206),
     T = n(835473),
@@ -198,7 +198,7 @@ function eC(e) {
         ]
     });
 }
-function eO(e) {
+function ej(e) {
     var { children: t, className: n, onExpand: s } = e,
         a = (function (e, t) {
             if (null == e) return {};
@@ -262,7 +262,7 @@ function eO(e) {
         }
     });
 }
-let ej = new Set([C.mM.INITIALIZING, C.mM.WAITING_FOR_SCREEN_TYPE_RESOLUTION, C.mM.WAITING_FOR_MODULE_TRACKING, C.mM.WAITING_FOR_OVERLAY_OPEN]),
+let eO = new Set([C.mM.INITIALIZING, C.mM.WAITING_FOR_SCREEN_TYPE_RESOLUTION, C.mM.WAITING_FOR_MODULE_TRACKING, C.mM.WAITING_FOR_OVERLAY_OPEN]),
     eS = (e) => {
         e.preventDefault(), e.stopPropagation();
     };
@@ -361,7 +361,7 @@ function ev(e) {
         H = !E && !w && b && !D,
         z = (null == d ? void 0 : d.overlayMethod) === C.gl.Disabled,
         W = (null == d ? void 0 : d.state) === C.mM.OVERLAY_RENDERING && !z,
-        Y = (null == d ? void 0 : d.state) != null && ej.has(d.state) && !z,
+        Y = (null == d ? void 0 : d.state) != null && eO.has(d.state) && !z,
         q = (null == d ? void 0 : d.overlayMethod) === C.gl.OutOfProcess,
         Q = (null == d ? void 0 : d.overlayMethod) === C.gl.OutOfProcessLimitedInteraction,
         J = (null == d ? void 0 : d.overlayMethod) === C.gl.Hook,
@@ -427,7 +427,7 @@ function ev(e) {
                         (function () {
                             var e, t;
                             switch (!0) {
-                                case (null == d ? void 0 : d.fullscreenType) !== O.Jx.BORDERLESS_FULLSCREEN:
+                                case (null == d ? void 0 : d.fullscreenType) !== j.Jx.BORDERLESS_FULLSCREEN:
                                     return ed.intl.string(ed.t.mJmbeH);
                                 case D:
                                     return ed.intl.string(ed.t.C7bLTU);
@@ -464,13 +464,13 @@ function ev(e) {
                     return [ed.intl.string(ed.t.ONovPz), null];
             }
         })();
-    (0, j.ZP)(() => {
+    (0, O.ZP)(() => {
         f.Z.getDetectableGames();
     });
     let [ei, er] = r.useMemo(() => (Y ? ['text-muted', h.TVs.colors.TEXT_MUTED.css] : W && Q ? ['text-warning', h.TVs.colors.TEXT_WARNING.css] : W && q ? ['text-positive', h.TVs.colors.TEXT_POSITIVE.css] : W && J ? ['text-primary', h.TVs.colors.TEXT_PRIMARY.css] : ['interactive-normal', h.TVs.colors.INTERACTIVE_NORMAL.css]), [Y, W, Q, q, J]);
     return null == l
         ? null
-        : (0, i.jsxs)(eO, {
+        : (0, i.jsxs)(ej, {
               onExpand: N,
               className: T ? eu.expandedContainer : void 0,
               title: (0, i.jsxs)(i.Fragment, {
@@ -656,7 +656,7 @@ function eI() {
                   ]
               })
           })
-        : (0, i.jsxs)(eO, {
+        : (0, i.jsxs)(ej, {
               onExpand: t,
               className: e ? eu.expandedContainer : void 0,
               title: ed.intl.string(ed.t.BfFpW1),
@@ -739,7 +739,7 @@ function ey() {
                   ]
               })
           })
-        : (0, i.jsxs)(eO, {
+        : (0, i.jsxs)(ej, {
               onExpand: t,
               className: e ? eu.expandedContainer : void 0,
               title: ed.intl.string(ed.t['7BlVIi']),
@@ -1110,7 +1110,7 @@ function ew() {
         n = () => {
             t(ea.L.DISMISS);
         };
-    return ((0, j.ZP)(() => () => {
+    return ((0, O.ZP)(() => () => {
         t(ea.L.AUTO_DISMISS);
     }),
     e !== p.z.OVERLAY_OOP_SETTINGS_NUX)
@@ -1259,7 +1259,7 @@ function eL(e) {
         })(),
         l = (0, Z.o4)('user_settings').overlayV3UI,
         a = (0, g.e7)([Q.default], () => Q.default.getCurrentUser());
-    (0, j.ZP)(() => {
+    (0, O.ZP)(() => {
         if (ei.isPlatformEmbedded) return (0, y.Ky)(), y.P7;
     });
     let c = ex(ef);

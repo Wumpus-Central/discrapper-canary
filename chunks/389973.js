@@ -24,9 +24,9 @@ var l = n(120356),
     L = n(474936),
     E = n(388032),
     y = n(195078),
-    S = n(510319),
-    v = n(747794),
-    P = n(59595);
+    S = n(865520),
+    v = n(27252),
+    P = n(234286);
 function b(e) {
     var t;
     let { ctaButton: n, showYearlyPrice: l, className: u, isGift: p = !1, priceOptions: x } = e,

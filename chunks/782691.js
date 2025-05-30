@@ -59,12 +59,12 @@ function C(e, t) {
         e
     );
 }
-let O = {
+let j = {
         [h.cq.THUMBNAIL]: null,
         [h.cq.STATIC]: null,
         [h.cq.REDUCED_MOTION]: null
     },
-    j = 'debug',
+    O = 'debug',
     S = (e) => {
         let { effect: t, back: n, skipStore: s = !1 } = e,
             { upsertConfig: S } = (0, p.n6)(),
@@ -74,18 +74,18 @@ let O = {
             [y, A] = r.useState(!1),
             [P, R] = r.useState(!1),
             [D, Z] = r.useState([]),
-            [w, k] = r.useState(O),
+            [w, k] = r.useState(j),
             L = r.useRef([]),
             [B, M] = r.useState(t.name),
             U = B.toLowerCase().replace(/\s+/g, '_'),
             V = r.useMemo(
                 () => ({
                     type: a.Z.PROFILE_EFFECT,
-                    id: j,
-                    skuId: j,
-                    title: j,
-                    description: j,
-                    accessibilityLabel: j,
+                    id: O,
+                    skuId: O,
+                    title: O,
+                    description: O,
+                    accessibilityLabel: O,
                     reducedMotionSrc: '',
                     effects: D,
                     animationType: 0
@@ -476,7 +476,7 @@ let O = {
                                               color: c.Ttl.RED,
                                               look: c.iLD.OUTLINED,
                                               onClick: () => {
-                                                  Z([]), k(O);
+                                                  Z([]), k(j);
                                               },
                                               children: 'Clear Assets'
                                           })

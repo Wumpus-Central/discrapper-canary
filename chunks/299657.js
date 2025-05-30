@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(433811),
     E = n(214852),
     C = n(621853),
-    O = n(484459),
-    j = n(246946),
+    j = n(484459),
+    O = n(246946),
     S = n(594174),
     v = n(78839),
     T = n(626135),
@@ -58,7 +58,7 @@ let B = function (e) {
     r.useEffect(() => {
         c.Z.wait(async () => {
             let e = Date.now();
-            await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(X, null, k.JjL.DISCOVERY), null != V && K && (0, O.Z)(V)]), (Y.current = Date.now() - e), W(!1);
+            await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(X, null, k.JjL.DISCOVERY), null != V && K && (0, j.Z)(V)]), (Y.current = Date.now() - e), W(!1);
         });
     }, [X, V, K]),
     r.useEffect(() => {
@@ -71,7 +71,7 @@ let B = function (e) {
                 load_duration_ms: Y.current
             });
     }, [s, z]),
-    (0, a.e7)([j.Z], () => j.Z.enabled))
+    (0, a.e7)([O.Z], () => O.Z.enabled))
         ? (0, i.jsx)(g.Z, {})
         : n
           ? (0, i.jsx)(_.c8, {})

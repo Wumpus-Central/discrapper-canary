@@ -77,8 +77,12 @@ function s(e, t) {
         null == r || r(), n.forEach((e) => t(e));
     }
     function _(e) {
-        let { messages: n } = e;
-        null == r || r(), n.forEach((e) => t(e));
+        let { pins: n } = e;
+        null == r || r(),
+            n.forEach((e) => {
+                let { message: n } = e;
+                return t(n);
+            });
     }
     function p(e) {
         null == r || r(),

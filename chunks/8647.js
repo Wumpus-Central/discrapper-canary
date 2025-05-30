@@ -21,9 +21,9 @@ var r = n(120356),
 let C = function (e) {
     let { isFullScreen: t, buttonClassName: r } = e,
         { promotion: C } = (0, f.mq)(),
-        O = (0, l.e7)([d.ZP], () => d.ZP.getPremiumTypeSubscription());
+        j = (0, l.e7)([d.ZP], () => d.ZP.getPremiumTypeSubscription());
     if (!(0, h.Vi)()) return null;
-    let j = new Date(C.endDate);
+    let O = new Date(C.endDate);
     return (0, i.jsx)(c.O, {
         newLocations: [o.Z.PREMIUM_MARKETING_PAGE_BANNER],
         children: (0, i.jsxs)('div', {
@@ -45,12 +45,12 @@ let C = function (e) {
                                 (0, i.jsx)(a.X6q, {
                                     variant: 'display-sm',
                                     color: 'always-white',
-                                    children: null == O || null == (0, m.he)(O) ? x.intl.string(x.t.xbzNJC) : x.intl.string(x.t['22WZ9P'])
+                                    children: null == j || null == (0, m.he)(j) ? x.intl.string(x.t.xbzNJC) : x.intl.string(x.t['22WZ9P'])
                                 }),
                                 (0, i.jsx)(a.Text, {
                                     className: E.countdown,
                                     variant: 'text-sm/bold',
-                                    children: (0, i.jsx)(g.Z, { endDate: j })
+                                    children: (0, i.jsx)(g.Z, { endDate: O })
                                 }),
                                 (0, i.jsx)(a.Text, {
                                     variant: 'text-sm/medium',

@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(243778),
     E = n(957730),
     C = n(442933),
-    O = n(53691),
-    j = n(267717),
+    j = n(53691),
+    O = n(267717),
     S = n(296810),
     v = n(678135),
     T = n(610794),
@@ -181,10 +181,10 @@ function F() {
                   }),
                   ed &&
                       !K &&
-                      (0, i.jsx)(O.p, {
+                      (0, i.jsx)(j.p, {
                           className: G.floatingNitroUpsell,
                           showUpsell: ed && !ea,
-                          text: V.intl.format(V.t.TmfgIy, { onClick: () => (0, j.y)({ analyticsSource: J }) }),
+                          text: V.intl.format(V.t.TmfgIy, { onClick: () => (0, O.y)({ analyticsSource: J }) }),
                           textVariant: 'heading-md/medium',
                           button: (0, i.jsxs)(d.gtL, {
                               className: G.floatingNitroButton,

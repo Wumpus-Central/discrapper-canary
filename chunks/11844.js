@@ -62,8 +62,8 @@ let E = function () {
         { analyticsLocations: t } = (0, a.ZP)(),
         E = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
         { fractionalState: C } = (0, o.Z)(),
-        O = (0, u.y)('guild_boosting_boost_cta', E, C);
-    function j(n) {
+        j = (0, u.y)('guild_boosting_boost_cta', E, C);
+    function O(n) {
         null != e.current && (0, l.Mr3)(e.current),
             (0, d.u)({
                 analyticsLocation: {
@@ -80,7 +80,7 @@ let E = function () {
         e.current = await (0, l.ZDy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 719228));
-                return (t) => (0, i.jsx)(e, x(_({}, t), { onSelectGuild: j }));
+                return (t) => (0, i.jsx)(e, x(_({}, t), { onSelectGuild: O }));
             },
             {
                 onCloseRequest: () => {
@@ -89,7 +89,7 @@ let E = function () {
             }
         );
     }
-    let v = (0, p.aq)({ isBoostManagementDisabledForFractionalPremium: O });
+    let v = (0, p.aq)({ isBoostManagementDisabledForFractionalPremium: j });
     return (0, i.jsxs)('div', {
         className: b.wrapper,
         children: [

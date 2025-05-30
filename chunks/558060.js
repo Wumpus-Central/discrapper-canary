@@ -10,8 +10,8 @@ var l = n(120356),
     u = n(981631),
     d = n(388032),
     p = n(561197);
-function g() {
-    return (g =
+function f() {
+    return (f =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -21,7 +21,7 @@ function g() {
             return e;
         }).apply(this, arguments);
 }
-function b(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function b(e) {
     }
     return e;
 }
-function f(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -75,7 +75,7 @@ function h(e) {
         });
     let v = (0, o.ql)(t, u.tuJ.PREMIUM_TIER_2),
         O = !n && !(0, o.x6)(t),
-        S = (0, o.x6)(t) && n ? f(b({}, C), { amount: l.original }) : C,
+        S = (0, o.x6)(t) && n ? b(g({}, C), { amount: l.original }) : C,
         x = _ && n,
         E = _ && !n;
     return (0, r.jsxs)('div', {
@@ -117,7 +117,7 @@ function h(e) {
                         text: d.intl.string(d.t.MPFyJy),
                         'aria-label': d.intl.string(d.t.X3Ekj4),
                         children: (e) => {
-                            var t = g(
+                            var t = f(
                                 {},
                                 (function (e) {
                                     if (null == e) throw TypeError('Cannot destructure ' + e);
@@ -126,8 +126,8 @@ function h(e) {
                             );
                             return (0, r.jsx)(
                                 i.SrA,
-                                f(
-                                    b(
+                                b(
+                                    g(
                                         {
                                             size: 'md',
                                             color: 'currentColor'

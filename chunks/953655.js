@@ -9,16 +9,16 @@ var r = n(255367),
     u = n(381585),
     d = n(597688),
     p = n(506800),
-    g = n(788822),
-    b = n(215023),
-    f = n(388032),
+    f = n(788822),
+    g = n(215023),
+    b = n(388032),
     h = n(806734);
 let m = (e) => {
         let { handleTransition: t, featuredBlockRecord: n } = e,
             a = d.Z.getCategory(o.T.ROBERT),
             c = (0, p.c)('CollectiblesFeedShop') && null != a,
             m = d.Z.getCategory(o.T.ANIME_V2),
-            _ = l.useMemo(() => f.intl.string(new Date() > b.gJ ? f.t.l0CjbW : f.t.uPewb2), []);
+            _ = l.useMemo(() => b.intl.string(new Date() > g.gJ ? b.t.l0CjbW : b.t.uPewb2), []);
         return (0, r.jsx)('div', {
             className: i()(h.col2, h.centeredSection),
             children:
@@ -26,7 +26,7 @@ let m = (e) => {
                     ? void 0
                     : n.subblocks.map((e, n) => {
                           if (e.type === s.O.CATEGORY) {
-                              let l = null != e.unpublishedAt ? f.intl.string(f.t['h/uBCQ']) : '1341506445245415424' === e.categoryStoreListingId ? f.intl.string(f.t.PsL3bW) : e.categoryStoreListingId === (null == m ? void 0 : m.storeListingId) ? f.intl.string(f.t['o/oRJC']) : void 0,
+                              let l = null != e.unpublishedAt ? b.intl.string(b.t['h/uBCQ']) : '1341506445245415424' === e.categoryStoreListingId ? b.intl.string(b.t.PsL3bW) : e.categoryStoreListingId === (null == m ? void 0 : m.storeListingId) ? b.intl.string(b.t['o/oRJC']) : void 0,
                                   i = c && e.categoryStoreListingId === (null == a ? void 0 : a.storeListingId) ? _ : l;
                               return (0, r.jsx)(
                                   u.k0,
@@ -38,7 +38,7 @@ let m = (e) => {
                                           tilePosition: n
                                       },
                                       children: (0, r.jsx)(
-                                          g.q,
+                                          f.q,
                                           {
                                               subblock: e,
                                               badgeText: 0 === n ? l : i,
@@ -59,9 +59,9 @@ let m = (e) => {
             l = (0, p.c)('CollectiblesFeedShop') && null != d.Z.getCategory(o.T.ROBERT);
         if (null == n || n.length < 2) return c.Z.captureMessage('Collectible Featured Block requires at least 2 categories'), null;
         let [a, s] = n,
-            m = (null == a ? void 0 : a.unpublishedAt) != null ? f.intl.string(f.t['h/uBCQ']) : void 0,
-            _ = f.intl.string(new Date() > b.gJ ? f.t.l0CjbW : f.t.uPewb2),
-            C = l ? _ : f.intl.string(f.t['o/oRJC']);
+            m = (null == a ? void 0 : a.unpublishedAt) != null ? b.intl.string(b.t['h/uBCQ']) : void 0,
+            _ = b.intl.string(new Date() > g.gJ ? b.t.l0CjbW : b.t.uPewb2),
+            C = l ? _ : b.intl.string(b.t['o/oRJC']);
         return (0, r.jsx)('div', {
             className: i()(h.col2, h.centeredSection),
             children: (0, r.jsxs)(u.k0, {
@@ -73,13 +73,13 @@ let m = (e) => {
                 },
                 children: [
                     null != a &&
-                        (0, r.jsx)(g.q, {
+                        (0, r.jsx)(f.q, {
                             category: a,
                             badgeText: m,
                             handleTransition: t
                         }),
                     null != s &&
-                        (0, r.jsx)(g.q, {
+                        (0, r.jsx)(f.q, {
                             category: s,
                             badgeText: C,
                             handleTransition: t

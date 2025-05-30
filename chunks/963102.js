@@ -1,4 +1,4 @@
-n.d(t, { I: () => T }), n(388685), n(539854);
+n.d(t, { I: () => I }), n(388685), n(539854);
 var r = n(255367),
     l = n(73800),
     a = n(120356),
@@ -9,30 +9,31 @@ var r = n(255367),
     u = n(37234),
     d = n(425493),
     p = n(410030),
+    f = n(857595),
     g = n(984370),
     b = n(341907),
-    f = n(507808),
-    h = n(822857),
-    m = n(775451),
-    _ = n(594174),
-    C = n(471731),
-    v = n(335131),
-    O = n(534517),
-    S = n(304742),
-    x = n(215023),
-    E = n(981631),
+    h = n(507808),
+    m = n(822857),
+    _ = n(775451),
+    C = n(594174),
+    v = n(471731),
+    O = n(335131),
+    S = n(534517),
+    x = n(304742),
+    E = n(215023),
+    y = n(981631),
     j = n(388032),
-    y = n(774457);
-function P(e) {
+    P = n(774457);
+function k(e) {
     let { tab: t, displayText: n, selected: l, handleTransition: a } = e;
     return (0, r.jsx)(g.Z.Title, {
         onClick: () => a(t),
-        wrapperClassName: y.tabWrapper,
-        className: i()(y.tab, { [y.selected]: l }),
+        wrapperClassName: P.tabWrapper,
+        className: i()(P.tab, { [P.selected]: l }),
         children: n
     });
 }
-function k(e) {
+function T(e) {
     let { tab: t, selected: n, displayText: a, handleTransition: i } = e,
         [o, s] = l.useState(!1),
         u = l.useRef(null),
@@ -45,83 +46,86 @@ function k(e) {
                     }, 100)
                 );
         };
-    return (0, r.jsx)('div', {
-        className: y.tabWithMenuContainer,
-        onMouseEnter: () => g(!0),
-        onMouseLeave: () => g(!1),
-        children: (0, r.jsx)(c.yRy, {
-            targetElementRef: u,
-            shouldShow: o,
-            position: 'bottom',
-            align: 'left',
-            onRequestOpen: () => g(!0),
-            onRequestClose: () => g(!1),
-            renderPopout: (e) => {
-                let { closePopout: t } = e;
-                return (0, r.jsx)(S.Z, {
-                    handleTransition: i,
-                    onClose: t
-                });
-            },
-            children: () =>
-                (0, r.jsxs)('div', {
-                    ref: u,
-                    className: y.tabWithMenu,
-                    children: [
-                        (0, r.jsx)(
-                            P,
-                            {
-                                tab: t,
-                                displayText: a,
-                                selected: n,
-                                handleTransition: i
-                            },
-                            t
-                        ),
-                        o
-                            ? (0, r.jsx)(c.u04, {
-                                  size: 'sm',
-                                  color: 'currentColor'
-                              })
-                            : (0, r.jsx)(c.CJ0, {
-                                  size: 'sm',
-                                  color: 'currentColor'
-                              })
-                    ]
-                })
-        })
+    return (0, r.jsx)(c.yRy, {
+        targetElementRef: u,
+        shouldShow: o,
+        position: 'bottom',
+        align: 'left',
+        onRequestOpen: () => g(!0),
+        onRequestClose: () => {
+            var e;
+            (0, f.Qj)(), g(!1), null == (e = u.current) || e.focus();
+        },
+        renderPopout: (e) => {
+            let { closePopout: t } = e;
+            return (0, r.jsx)(x.Z, {
+                handleTransition: i,
+                onClose: t
+            });
+        },
+        children: () =>
+            (0, r.jsxs)('div', {
+                ref: u,
+                className: P.tabWithMenu,
+                onMouseEnter: () => g(!0),
+                onMouseLeave: () => g(!1),
+                onKeyDown: (e) => {
+                    ('Enter' === e.key || ' ' === e.key) && (g(!0), e.preventDefault());
+                },
+                children: [
+                    (0, r.jsx)(
+                        k,
+                        {
+                            tab: t,
+                            displayText: a,
+                            selected: n,
+                            handleTransition: i
+                        },
+                        t
+                    ),
+                    o
+                        ? (0, r.jsx)(c.u04, {
+                              size: 'sm',
+                              color: 'currentColor'
+                          })
+                        : (0, r.jsx)(c.CJ0, {
+                              size: 'sm',
+                              color: 'currentColor'
+                          })
+                ]
+            })
     });
 }
-function T(e) {
-    let { isFullScreen: t, isLayer: n, onClose: a, selectedTab: S, handleTransition: T } = e,
+function I(e) {
+    let { isFullScreen: t, isLayer: n, onClose: a, selectedTab: f, handleTransition: x } = e,
         I = (0, p.ZP)(),
-        L = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
+        L = (0, s.e7)([C.default], () => C.default.getCurrentUser()),
         B = (null == L ? void 0 : L.isStaff()) || (null == L ? void 0 : L.isStaffPersonal()) || !1,
-        { enabled: w } = (0, h.WX)({ location: 'collectibles_shop_header_bar' }),
-        N = [
+        { enabled: w } = (0, m.WX)({ location: 'collectibles_shop_header_bar' }),
+        N = (0, S.S)('collectibles_shop_header_bar'),
+        A = [
             {
-                tab: x.AW.HOME,
+                tab: E.AW.HOME,
                 displayText: j.intl.string(j.t.ijDDw8)
             },
             {
-                tab: x.AW.CATALOG,
-                displayText: j.intl.string(j.t.xFcotb)
+                tab: E.AW.CATALOG,
+                displayText: N ? j.intl.string(j.t.Ah5sJi) : j.intl.string(j.t.xFcotb)
             }
         ];
     w &&
-        N.push({
-            tab: x.AW.ORBS,
+        A.push({
+            tab: E.AW.ORBS,
             displayText: j.intl.string(j.t['KUYR+P'])
         });
-    let A = (0, O.S)('collectibles_shop_header_bar'),
-        R = n ? v.DR : a,
-        Z = S === x.AW.ORBS ? E.ZY5.SHOP_ORBS_TAB : E.ZY5.COLLECTIBLES_SHOP,
+    let R = n ? O.DR : a,
+        Z = f === E.AW.ORBS ? y.ZY5.SHOP_ORBS_TAB : y.ZY5.COLLECTIBLES_SHOP,
         F = l.useCallback(() => {
             t && (R(), (0, u.Ou)()),
-                (0, f.Y)({
+                (0, h.Y)({
                     pageType: Z,
-                    sectionType: E.jXE.ORBS_BALANCE_MENU,
-                    ctaObject: E.qAy.CTA_TO_QUEST_HOME
+                    sectionType: y.jXE.ORBS_BALANCE_MENU,
+                    ctaObject: y.qAy.CTA_TO_QUEST_HOME
                 }),
                 (0, b.navigateToQuestHome)({ fromContent: o.j.ORBS_BALANCE_MENU });
         }, [R, t, Z]);
@@ -129,38 +133,38 @@ function T(e) {
         theme: I,
         children: (e) =>
             (0, r.jsxs)(g.Z, {
-                className: i()(e, y.headerBar, { [y.fullscreenHeaderBar]: t }),
-                innerClassname: w ? y.headerBarInner : void 0,
+                className: i()(e, P.headerBar, { [P.fullscreenHeaderBar]: t }),
+                innerClassname: w ? P.headerBarInner : void 0,
                 toolbar: t || !B ? null : (0, r.jsx)(l.Fragment, {}),
                 children: [
                     (0, r.jsxs)(c.P3F, {
-                        className: y.shopHomeLink,
-                        onClick: () => T(x.AW.HOME),
+                        className: P.shopHomeLink,
+                        onClick: () => x(E.AW.HOME),
                         'aria-label': j.intl.string(j.t.pWG4zc) + ' home',
-                        children: [(0, r.jsx)(C.Z, { className: y.discordLogo }), (0, r.jsx)(g.Z.Title, { children: j.intl.string(j.t.pWG4zc) })]
+                        children: [(0, r.jsx)(v.Z, { className: P.discordLogo }), (0, r.jsx)(g.Z.Title, { children: j.intl.string(j.t.pWG4zc) })]
                     }),
                     (0, r.jsx)('div', {
-                        className: y.tabs,
-                        children: N.map((e) => {
+                        className: P.tabs,
+                        children: A.map((e) => {
                             let { tab: t, displayText: n } = e;
-                            return t === x.AW.CATALOG && A
+                            return t === E.AW.CATALOG && N
                                 ? (0, r.jsx)(
-                                      k,
+                                      T,
                                       {
                                           tab: t,
-                                          selected: (0, x.RE)(S) || S === t,
+                                          selected: (0, E.RE)(f) || f === t,
                                           displayText: n,
-                                          handleTransition: T
+                                          handleTransition: x
                                       },
                                       t
                                   )
                                 : (0, r.jsx)(
-                                      P,
+                                      k,
                                       {
                                           tab: t,
                                           displayText: n,
-                                          selected: S === t,
-                                          handleTransition: T
+                                          selected: f === t,
+                                          handleTransition: x
                                       },
                                       t
                                   );
@@ -168,16 +172,16 @@ function T(e) {
                     }),
                     (w || t) &&
                         (0, r.jsxs)('div', {
-                            className: y.alignedRightContent,
+                            className: P.alignedRightContent,
                             children: [
                                 w &&
-                                    (0, r.jsx)(m.V9, {
+                                    (0, r.jsx)(_.V9, {
                                         anchorPillType: t ? 'SHOP_FULLSCREEN' : 'SHOP',
                                         analyticsPage: Z,
-                                        cardAlignment: m.V9.CardAlignment.END,
+                                        cardAlignment: _.V9.CardAlignment.END,
                                         ctaText: j.intl.string(j.t.VC4Mq6),
                                         ctaOnClick: F,
-                                        className: y.balanceWidgetMenu
+                                        className: P.balanceWidgetMenu
                                     }),
                                 t &&
                                     (0, r.jsx)(d.Z, {

@@ -9,9 +9,9 @@ var r = n(255367),
     u = n(626135),
     d = n(381585),
     p = n(597688),
-    g = n(297651),
-    b = n(794324),
-    f = n(981631),
+    f = n(297651),
+    g = n(794324),
+    b = n(981631),
     h = n(388032),
     m = n(806734);
 let _ = (e) => {
@@ -20,23 +20,23 @@ let _ = (e) => {
         { category: C, subblock: v, badgeText: O, handleTransition: S } = e;
     null != v && (_ = null == (t = p.Z.getCategoryByStoreListingId(null == v ? void 0 : v.categoryStoreListingId)) ? void 0 : t.skuId);
     let x = null != (n = null != _ ? _ : null == C ? void 0 : C.skuId) ? n : '',
-        { handleCardVisibilityChange: E } = (0, g.E)(x, 'home', 'marketing featured block'),
-        { featuredBlockBanner: j } = (0, b.YG)(C, v),
-        y = l.useRef(null),
+        { handleCardVisibilityChange: E } = (0, f.E)(x, 'home', 'marketing featured block'),
+        { featuredBlockBanner: y } = (0, g.YG)(C, v),
+        j = l.useRef(null),
         P = x === o.T.NAMEPLATE,
         k = P ? h.intl.string(h.t['/Rk1dn']) : null == v ? void 0 : v.bodyText,
         T = (0, d.sp)();
     return (0, r.jsx)(s.$, {
-        innerRef: y,
+        innerRef: j,
         onChange: E,
         threshold: 0,
         children: (0, r.jsxs)(c.P3F, {
             className: m.featuredBlock,
-            innerRef: y,
-            style: { backgroundImage: 'url('.concat(j, ')') },
+            innerRef: j,
+            style: { backgroundImage: 'url('.concat(y, ')') },
             onClick: () => {
                 S('shop marketing tile', x),
-                    u.default.track(f.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    u.default.track(b.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: null == T ? void 0 : T.sessionId,
                         sku_id: x,
                         page_type: 'home',
@@ -68,7 +68,7 @@ let _ = (e) => {
                     onClick: (e) => {
                         S('shop marketing take me there button', x),
                             e.stopPropagation(),
-                            u.default.track(f.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                            u.default.track(b.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                 collectibles_shop_session_id: null == T ? void 0 : T.sessionId,
                                 sku_id: x,
                                 page_type: 'home',

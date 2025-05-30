@@ -95,34 +95,33 @@ function h(e, t) {
 async function x(e, t, n, s, a) {
     r.Z.dispatch({ type: 'GUILD_SETTINGS_ROLES_SUBMITTING' });
     try {
-        let r = async () => {
-            if (null == t || 0 === t.length) return;
+        for (null != n && n.length > 0 && (await i.Z.batchRoleUpdate(e, n)); null != t && t.length > 0; ) {
             let n = t.pop();
-            if (null == n || '' === n.name) return r();
-            await i.Z.updateRole(e, n.id, {
-                name: n.name,
-                description: n.description,
-                permissions: n.permissions,
-                color: n.color,
-                colors: n.colors,
-                hoist: n.hoist,
-                mentionable: n.mentionable,
-                icon: n.icon,
-                unicodeEmoji: n.unicodeEmoji
-            }).then(r, r);
-        };
-        if ((null != n && n.length > 0 ? await i.Z.batchRoleUpdate(e, n).then(r, r) : await r(), null != a && null != s))
+            null != n &&
+                '' !== n.name &&
+                (await i.Z.updateRole(e, n.id, {
+                    name: n.name,
+                    description: n.description,
+                    permissions: n.permissions,
+                    color: n.color,
+                    colors: n.colors,
+                    hoist: n.hoist,
+                    mentionable: n.mentionable,
+                    icon: n.icon,
+                    unicodeEmoji: n.unicodeEmoji
+                }));
+        }
+        if (null != a && null != s)
             for await (let t of s) {
                 let n = a.get(t);
                 await (0, l.L_)(e, t, null != n ? n : []);
             }
+        r.Z.dispatch({ type: 'GUILD_SETTINGS_ROLES_SAVE_SUCCESS' });
     } catch (e) {
         var o, c;
         r.Z.dispatch({
             type: 'GUILD_SETTINGS_ROLES_SAVE_FAIL',
             message: null != (c = null == (o = e.body) ? void 0 : o.message) ? c : Object.values(e.body)[0]
         });
-        return;
     }
-    r.Z.dispatch({ type: 'GUILD_SETTINGS_ROLES_SAVE_SUCCESS' });
 }

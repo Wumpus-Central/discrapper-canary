@@ -7,8 +7,8 @@ var i = n(255367),
     o = n(686546),
     c = n(168301);
 let d = r.forwardRef(function (e, t) {
-    let { tooltipText: n, children: r, onContextMenu: s, onClick: d, disabled: u, icon: m, iconForeground: g, innerClassName: p, className: h, redGlow: f, tooltipClassName: b, onMouseEnter: _, onMouseLeave: x, 'aria-label': E, 'aria-checked': C, role: O, tooltipColor: j, tooltipForceOpen: S, tooltipContentClassName: v, plated: T } = e,
-        N =
+    let { tooltipText: n, children: r, onContextMenu: s, onClick: d, disabled: u, icon: m, iconForeground: g, innerClassName: p, className: h, redGlow: f, orangeGlow: b, tooltipClassName: _, onMouseEnter: x, onMouseLeave: E, 'aria-label': C, 'aria-checked': j, role: O, tooltipColor: S, tooltipForceOpen: v, tooltipContentClassName: T, plated: N } = e,
+        I =
             'function' == typeof m
                 ? (0, i.jsx)(m, {
                       width: 20,
@@ -19,17 +19,17 @@ let d = r.forwardRef(function (e, t) {
                   })
                 : m;
     return (0, i.jsx)(a.ua7, {
-        tooltipClassName: b,
+        tooltipClassName: _,
         text: n,
-        'aria-label': E,
-        color: j,
-        tooltipContentClassName: v,
-        forceOpen: S,
+        'aria-label': C,
+        color: S,
+        tooltipContentClassName: T,
+        forceOpen: v,
         children: (e) => {
             var n,
                 m,
-                { onClick: g, onMouseEnter: b, onMouseLeave: E } = e,
-                j = (function (e, t) {
+                { onClick: g, onMouseEnter: _, onMouseLeave: C } = e,
+                S = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         i,
@@ -74,7 +74,7 @@ let d = r.forwardRef(function (e, t) {
                             });
                     }
                     return e;
-                })({}, j)),
+                })({}, S)),
                 (m = m =
                     {
                         buttonRef: t,
@@ -85,23 +85,24 @@ let d = r.forwardRef(function (e, t) {
                         wrapperClassName: l()(c.button, h),
                         className: l()(c.button, h, {
                             [c.redGlow]: f,
+                            [c.orangeGlow]: b,
                             [c.disabled]: u,
                             [c.enabled]: !u,
-                            [c.plated]: T,
-                            [c.plateMuted]: f && T
+                            [c.plated]: N,
+                            [c.plateMuted]: f && N
                         }),
                         onClick: (e) => {
                             null != g && g(), null != d && d(e);
                         },
                         onMouseEnter: () => {
-                            null == b || b(), null == _ || _();
+                            null == _ || _(), null == x || x();
                         },
                         onMouseLeave: () => {
-                            null == E || E(), null == x || x();
+                            null == C || C(), null == E || E();
                         },
                         onContextMenu: s,
                         role: O,
-                        'aria-checked': C,
+                        'aria-checked': j,
                         focusProps: {
                             offset: {
                                 left: -1,
@@ -116,9 +117,9 @@ let d = r.forwardRef(function (e, t) {
                                       width: 20,
                                       height: 20,
                                       mask: o.ZP.Masks.PANEL_BUTTON,
-                                      children: N
+                                      children: I
                                   })
-                                : N,
+                                : I,
                             r
                         ]
                     }),

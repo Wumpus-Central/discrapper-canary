@@ -1,7 +1,7 @@
 n.d(t, { Z: () => v });
-var o = n(255367);
+var r = n(255367);
 n(73800);
-var r = n(442837),
+var o = n(442837),
     c = n(481060),
     i = n(468363),
     l = n(353647),
@@ -30,38 +30,38 @@ function v(e) {
             userId: t.id,
             guildId: N
         }),
-        k = (0, r.e7)([l.Z], () => l.Z.isFetchingUserOutbox(t.id)),
-        U = t.id === n.id,
-        L = (0, r.e7)([s.Z, a.Z], () => {
-            let e = U ? s.Z.getStatus() : a.Z.getStatus(t.id);
+        k = (0, o.e7)([l.Z], () => l.Z.isFetchingUserOutbox(t.id)),
+        L = t.id === n.id,
+        U = (0, o.e7)([s.Z, a.Z], () => {
+            let e = L ? s.Z.getStatus() : a.Z.getStatus(t.id);
             return e === c.Skl.OFFLINE || e === c.Skl.INVISIBLE;
         }),
         M = w.length > 0 || null != E,
         R = Z && null == E && null == D && null != B,
-        G = !L && (M || R),
+        G = !U && (M || R),
         V = S.length > 0;
     return G || V || !k
         ? G || V || k
-            ? (0, o.jsxs)(c.Ttm, {
+            ? (0, r.jsxs)(c.Ttm, {
                   className: I.scroller,
                   fade: !0,
                   children: [
                       G
-                          ? (0, o.jsx)(h.Z, {
+                          ? (0, r.jsx)(h.Z, {
                                 heading: O.intl.string(O.t.J6STd3),
-                                children: (0, o.jsxs)('div', {
+                                children: (0, r.jsxs)('div', {
                                     className: I.cards,
                                     children: [
                                         !C &&
                                             R &&
-                                            (0, o.jsx)(y.Z, {
+                                            (0, r.jsx)(y.Z, {
                                                 user: t,
                                                 currentUser: n,
                                                 voiceChannel: B,
                                                 onClose: T
                                             }),
                                         null != E &&
-                                            (0, o.jsx)(_.Z, {
+                                            (0, r.jsx)(_.Z, {
                                                 location: 'UserProfileModalV2Activity',
                                                 user: t,
                                                 currentUser: n,
@@ -69,8 +69,8 @@ function v(e) {
                                                 onClose: T,
                                                 profileGuildId: null == v ? void 0 : v.guildId
                                             }),
-                                        w.map((e, r) =>
-                                            (0, o.jsx)(
+                                        w.map((e, o) =>
+                                            (0, r.jsx)(
                                                 m.Z,
                                                 {
                                                     user: t,
@@ -79,12 +79,12 @@ function v(e) {
                                                     onClose: T,
                                                     profileGuildId: null == v ? void 0 : v.guildId
                                                 },
-                                                'live-'.concat(r)
+                                                'live-'.concat(o)
                                             )
                                         ),
                                         C &&
                                             R &&
-                                            (0, o.jsx)(y.Z, {
+                                            (0, r.jsx)(y.Z, {
                                                 user: t,
                                                 currentUser: n,
                                                 voiceChannel: B,
@@ -95,12 +95,12 @@ function v(e) {
                             })
                           : null,
                       V
-                          ? (0, o.jsx)(h.Z, {
+                          ? (0, r.jsx)(h.Z, {
                                 heading: O.intl.string(O.t.jzgEoK),
-                                subheading: U
+                                subheading: L
                                     ? O.intl.format(O.t['4bk9Ag'], {
                                           learnMoreHook: (e, t) =>
-                                              (0, o.jsx)(
+                                              (0, r.jsx)(
                                                   c.eee,
                                                   {
                                                       href: d.Z.getArticleURL(g.BhN.ACTIVITY_STATUS_SETTINGS),
@@ -111,10 +111,10 @@ function v(e) {
                                       })
                                     : void 0,
                                 scrollIntoView: A === j.Tb.RECENT_ACTIVITY,
-                                children: (0, o.jsx)('div', {
+                                children: (0, r.jsx)('div', {
                                     className: I.cards,
                                     children: S.map((e) =>
-                                        (0, o.jsx)(
+                                        (0, r.jsx)(
                                             b.Z,
                                             {
                                                 location: 'UserProfileModalV2Activity',
@@ -132,16 +132,16 @@ function v(e) {
                           : null
                   ]
               })
-            : U
-              ? (0, o.jsx)(x.Uf, { onClose: T })
-              : (0, o.jsx)(x.P9, {
+            : L
+              ? (0, r.jsx)(x.Uf, { onClose: T })
+              : (0, r.jsx)(x.P9, {
                     user: t,
                     guildId: N,
                     channelId: P,
                     onClose: T
                 })
-        : (0, o.jsx)('div', {
+        : (0, r.jsx)('div', {
               className: I.spinner,
-              children: (0, o.jsx)(c.$jN, {})
+              children: (0, r.jsx)(c.$jN, {})
           });
 }

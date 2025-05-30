@@ -22,7 +22,7 @@ let x = [
     }
 ];
 function E(e) {
-    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: E, changeAvatarButtonText: C, guildId: O, className: j, disabled: S = !1, isTryItOutFlow: v = !1, forcedDivider: T, withHighlight: N = !1 } = e,
+    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: E, changeAvatarButtonText: C, guildId: j, className: O, disabled: S = !1, isTryItOutFlow: v = !1, forcedDivider: T, withHighlight: N = !1 } = e,
         { newestAnalyticsLocation: I } = (0, c.ZP)(),
         y = N ? o.gtL : o.zxk,
         A = (0, u.T)({ location: 'AvatarSection' }),
@@ -36,12 +36,12 @@ function E(e) {
                     uploadType: h.pC.AVATAR,
                     analyticsSource: I,
                     filters: v ? x : void 0,
-                    guildId: O,
+                    guildId: j,
                     isTryItOutFlow: v
                 });
-        }, [O, I, v, D]);
+        }, [j, I, v, D]);
     return (0, i.jsx)(g.Z, {
-        className: j,
+        className: O,
         title: E,
         titleIcon: Z
             ? (0, i.jsx)(o.IGR, {
@@ -74,7 +74,7 @@ function E(e) {
                         look: o.zxk.Looks.LINK,
                         size: o.zxk.Sizes.SMALL,
                         onClick: () => s(null),
-                        children: null != O ? b.intl.string(b.t.TDjKDg) : b.intl.string(b.t.twB3f3)
+                        children: null != j ? b.intl.string(b.t.TDjKDg) : b.intl.string(b.t.twB3f3)
                     })
             ]
         })

@@ -18,20 +18,20 @@ var i = n(255367),
     x = n(509545),
     E = n(74538),
     C = n(937615),
-    O = n(474936),
-    j = n(388032),
+    j = n(474936),
+    O = n(388032),
     S = n(169000);
 function v(e) {
     let { subscription: t, renewalMutations: n, transitionState: r, onClose: s, analyticsLocation: l } = e,
         a = (0, c.e7)([b.Z], () => b.Z.theme),
         { analyticsLocations: h } = (0, p.ZP)(g.Z.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL),
-        O = x.Z.get(t.planId);
-    o()(null != O, 'Missing subscriptionPlan');
+        j = x.Z.get(t.planId);
+    o()(null != j, 'Missing subscriptionPlan');
     let v = (0, E.aS)(t.planId, !1, !1, {
             paymentSourceId: t.paymentSourceId,
             currency: t.currency
         }),
-        T = (0, C.og)((0, C.T4)(v.amount, v.currency), O.interval, O.intervalCount);
+        T = (0, C.og)((0, C.T4)(v.amount, v.currency), j.interval, j.intervalCount);
     async function N() {
         await (0, m.dP)(
             t,
@@ -48,7 +48,7 @@ function v(e) {
     }
     return (0, i.jsxs)(u.Y0X, {
         transitionState: r,
-        'aria-label': j.intl.string(j.t['E9kB4+']),
+        'aria-label': O.intl.string(O.t['E9kB4+']),
         children: [
             (0, i.jsxs)(u.xBx, {
                 justify: f.Z.Justify.BETWEEN,
@@ -56,7 +56,7 @@ function v(e) {
                 children: [
                     (0, i.jsx)(u.vwX, {
                         tag: u.RB0.H4,
-                        children: j.intl.string(j.t['E9kB4+'])
+                        children: O.intl.string(O.t['E9kB4+'])
                     }),
                     (0, i.jsx)(u.olH, { onClick: s })
                 ]
@@ -64,11 +64,11 @@ function v(e) {
             (0, i.jsx)(u.hzk, {
                 className: S.modalBody,
                 children: (0, _.Q0)(t.planId)
-                    ? j.intl.format(j.t.GMp54O, {
+                    ? O.intl.format(O.t.GMp54O, {
                           downgradedPlan: E.ZP.getDisplayName(n.planId),
                           existingRate: T
                       })
-                    : j.intl.format(j.t['vx/NZ2'], {
+                    : O.intl.format(O.t['vx/NZ2'], {
                           existingPlan: E.ZP.getDisplayName(t.planId),
                           downgradedPlan: E.ZP.getDisplayName(n.planId),
                           existingRate: T
@@ -78,13 +78,13 @@ function v(e) {
                 children: [
                     (0, i.jsx)(u.zxk, {
                         onClick: N,
-                        children: j.intl.string(j.t.frE8KC)
+                        children: O.intl.string(O.t.frE8KC)
                     }),
                     (0, i.jsx)(u.zxk, {
                         look: u.zxk.Looks.LINK,
                         color: (0, d.ap)(a) ? u.zxk.Colors.PRIMARY : u.zxk.Colors.WHITE,
                         onClick: s,
-                        children: j.intl.string(j.t.oEAioK)
+                        children: O.intl.string(O.t.oEAioK)
                     })
                 ]
             })
@@ -97,7 +97,7 @@ function T(e) {
         d = (0, h.Z)(),
         m = t.currentPeriodEnd;
     return (
-        d.fractionalState === O.a$.FP_SUB_PAUSED && (m = d.endsAt.toDate()),
+        d.fractionalState === j.a$.FP_SUB_PAUSED && (m = d.endsAt.toDate()),
         (0, i.jsxs)('div', {
             className: l()(S.root, s),
             children: [
@@ -110,7 +110,7 @@ function T(e) {
                 }),
                 (0, i.jsx)('div', {
                     className: S.text,
-                    children: j.intl.format(j.t.ar1cPj, {
+                    children: O.intl.format(O.t.ar1cPj, {
                         planName: t.hasExternalPlanChange ? (0, E.zL)(n) : E.ZP.getDisplayName(n.planId),
                         date: m
                     })
@@ -122,7 +122,7 @@ function T(e) {
                               c(!0), e.preventDefault();
                           },
                           className: S.cancelLink,
-                          children: j.intl.string(j.t['ETE/oK'])
+                          children: O.intl.string(O.t['ETE/oK'])
                       }),
                 o
                     ? (0, i.jsx)(u.u_l, {

@@ -6,7 +6,6 @@ e.exports = {
     tabWrapper: 'tabWrapper__80679',
     tab: 'tab__80679',
     selected: 'selected__80679',
-    tabWithMenuContainer: 'tabWithMenuContainer__80679',
     tabWithMenu: 'tabWithMenu__80679',
     discordLogo: 'discordLogo__80679',
     shopHomeLink: 'shopHomeLink__80679',

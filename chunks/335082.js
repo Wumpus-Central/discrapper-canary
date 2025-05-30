@@ -1,115 +1,168 @@
-n.d(t, { Z: () => f }), n(953529);
+n.d(t, { Z: () => x });
 var i = n(255367);
 n(73800);
 var r = n(524437),
     s = n(481060),
-    l = n(695346),
-    a = n(358085),
-    o = n(981631),
-    c = n(797910),
-    d = n(388032),
-    u = n(154947);
-function m() {
-    let e = l.Wz.useSetting(),
+    l = n(921801),
+    a = n(695346),
+    o = n(358085),
+    c = n(940276),
+    d = n(981631),
+    u = n(726985),
+    m = n(797910),
+    g = n(388032),
+    p = n(154947);
+function h() {
+    let e = a.Wz.useSetting(),
         t = (e) => {
-            l.Wz.updateSetting(e);
+            a.Wz.updateSetting(e);
         },
         n = [
             {
                 value: r.E5.ON,
-                label: d.intl.string(d.t.UzGMHx)
+                name: g.intl.string(g.t.UzGMHx)
             },
             {
                 value: r.E5.ON_FOR_LARGE_GUILDS,
-                label: d.intl.string(d.t.OFqxQU)
+                name: g.intl.string(m.default['/sAeRU'])
             },
             {
                 value: r.E5.OFF,
-                label: d.intl.string(d.t.MIgNPD)
+                name: g.intl.string(m.default.m3oL7e)
             }
         ];
-    return (0, i.jsx)(s.hjN, {
-        tag: s.RB0.H5,
-        title: d.intl.string(c.default.o0peVV),
-        titleClassName: u.title,
-        children: (0, i.jsxs)(s.xJW, {
-            tag: s.RB0.H5,
-            title: d.intl.string(c.default.eAQM7u),
-            className: u.defaultSetting,
+    return (0, i.jsx)(s.y5t, {
+        children: (0, i.jsxs)(s.hjN, {
+            className: p.formSection,
             children: [
-                (0, i.jsx)(s.R94, {
-                    type: s.R94.Types.DESCRIPTION,
-                    className: u.description,
-                    children: d.intl.string(c.default.lKsV2t)
+                (0, i.jsxs)('div', {
+                    children: [
+                        (0, i.jsx)(s.vwX, {
+                            className: p.formTitle,
+                            children: g.intl.string(m.default.TG0Qsb)
+                        }),
+                        (0, i.jsx)(s.R94, {
+                            className: p.formDescription,
+                            type: s.R94.Types.DESCRIPTION,
+                            children: g.intl.string(m.default.OO17Li)
+                        })
+                    ]
                 }),
-                (0, i.jsx)(s.q4e, {
-                    options: n,
-                    value: e,
-                    onChange: (e) => t(e)
-                })
+                (0, i.jsxs)('div', {
+                    children: [
+                        (0, i.jsx)(s.y5t, {
+                            children: (0, i.jsx)(s.vwX, {
+                                className: p.defaultSetting,
+                                children: g.intl.string(m.default['/LHVbm'])
+                            })
+                        }),
+                        (0, i.jsx)(s.FXm, {
+                            options: n,
+                            value: e,
+                            onChange: (e) => t(e.value)
+                        })
+                    ]
+                }),
+                (0, i.jsx)(c.Z, {})
             ]
         })
     });
 }
-function g() {
-    let e = l.cP.useSetting(),
-        t = l.Ou.useSetting();
-    return (0, i.jsxs)(s.hjN, {
-        tag: s.RB0.H5,
-        title: d.intl.string(d.t['5gexRU']),
-        titleClassName: u.title,
-        children: [
-            (0, i.jsx)(s.j7V, {
-                hideBorder: !0,
-                onChange: (e) => l.cP.updateSetting(e),
-                note: d.intl.string(d.t.IjucAA),
-                value: e,
-                children: d.intl.string(d.t.eVdoIy)
-            }),
-            (0, i.jsx)(s.j7V, {
-                hideBorder: !0,
-                onChange: (e) => l.Ou.updateSetting(e),
-                note: d.intl.string(d.t.oCONqK),
-                value: t,
-                children: d.intl.string(d.t['tuKl+v'])
-            })
-        ]
-    });
-}
-function p() {
-    let e = l.G6.useSetting(),
-        t = a.isPlatformEmbedded ? d.intl.string(d.t.MznbeH) : d.intl.string(d.t.oKqC4u);
-    return (0, i.jsx)(s.hjN, {
-        className: u.allActivitySharingTitle,
-        tag: s.RB0.H5,
-        title: d.intl.string(d.t.Wspazs),
-        children: (0, i.jsx)(s.j7V, {
-            value: e,
-            onChange: l.G6.updateSetting,
-            note: t,
-            hideBorder: !0,
-            children: d.intl.string(d.t['4q/Ewc'])
-        })
-    });
-}
-function h() {
-    return (0, i.jsx)(s.hjN, {
-        className: u.privacyAndTerms,
-        children: (0, i.jsx)(s.ToO, {
-            type: s.ToO.Types.PRIMARY,
-            body: d.intl.format(d.t.xvCsx8, {
-                termsLink: o.EYA.TERMS,
-                privacyLink: o.EYA.PRIVACY
+function f() {
+    let e = a.cP.useSetting(),
+        t = a.Ou.useSetting();
+    return (0, i.jsx)(s.y5t, {
+        children: (0, i.jsx)(l.F, {
+            setting: u.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
+            children: (0, i.jsxs)(s.hjN, {
+                className: p.formSection,
+                children: [
+                    (0, i.jsx)('div', {
+                        children: (0, i.jsx)(s.vwX, {
+                            className: p.formTitle,
+                            children: g.intl.string(m.default['5rYBAQ'])
+                        })
+                    }),
+                    (0, i.jsx)(s.j7V, {
+                        className: p.joinRequestSwitch,
+                        hideBorder: !0,
+                        onChange: (e) => a.cP.updateSetting(e),
+                        note: g.intl.string(m.default['8EWsJy']),
+                        value: e,
+                        children: g.intl.string(m.default.khuuzs)
+                    }),
+                    (0, i.jsx)(s.j7V, {
+                        className: p.joinRequestSwitch,
+                        hideBorder: !0,
+                        onChange: (e) => a.Ou.updateSetting(e),
+                        note: g.intl.string(m.default.CZI2GR),
+                        value: t,
+                        children: g.intl.string(m.default.Uz5Ipq)
+                    })
+                ]
             })
         })
     });
 }
-let f = function (e) {
+function b() {
+    let e = a.G6.useSetting(),
+        t = o.isPlatformEmbedded ? g.intl.string(m.default.UQ9RHB) : g.intl.string(g.t.oKqC4u);
+    return (0, i.jsx)(l.F, {
+        setting: u.s6.ACTIVITY_PRIVACY_STATUS,
+        children: (0, i.jsx)(s.y5t, {
+            children: (0, i.jsxs)(s.hjN, {
+                className: p.formSection,
+                children: [
+                    (0, i.jsxs)('div', {
+                        children: [
+                            (0, i.jsx)(s.vwX, {
+                                className: p.formTitle,
+                                children: g.intl.string(g.t['6x5uWV'])
+                            }),
+                            (0, i.jsx)(s.R94, {
+                                className: p.formDescription,
+                                type: s.R94.Types.DESCRIPTION,
+                                children: g.intl.string(m.default.t2Ysra)
+                            })
+                        ]
+                    }),
+                    (0, i.jsx)('div', {
+                        className: p.switchContainer,
+                        children: (0, i.jsx)(s.j7V, {
+                            className: p.activitySharingSwitch,
+                            value: e,
+                            onChange: a.G6.updateSetting,
+                            note: t,
+                            hideBorder: !0,
+                            children: g.intl.string(m.default.WhdCGB)
+                        })
+                    })
+                ]
+            })
+        })
+    });
+}
+function _() {
+    return (0, i.jsx)(l.F, {
+        setting: u.s6.ACTIVITY_PRIVACY_TOS,
+        children: (0, i.jsx)(s.hjN, {
+            children: (0, i.jsx)(s.ToO, {
+                type: s.ToO.Types.PRIMARY,
+                body: g.intl.format(g.t.xvCsx8, {
+                    termsLink: d.EYA.TERMS,
+                    privacyLink: d.EYA.PRIVACY
+                })
+            })
+        })
+    });
+}
+let x = function (e) {
     let { className: t } = e;
-    return (0, i.jsxs)(s.hjN, {
+    return (0, i.jsx)(s.hjN, {
         className: t,
-        tag: s.RB0.H1,
-        title: d.intl.string(d.t['6x5uWV']),
-        children: [(0, i.jsx)(p, {}), (0, i.jsx)(s.$i$, { className: u.divider }), (0, i.jsx)(m, {}), (0, i.jsx)(s.$i$, { className: u.divider }), (0, i.jsx)(g, {}), (0, i.jsx)(h, {})]
+        children: (0, i.jsxs)(s.y5t, {
+            forceLevel: 1,
+            children: [(0, i.jsx)(b, {}), (0, i.jsx)(s.$i$, { className: p.divider }), (0, i.jsx)(h, {}), (0, i.jsx)(s.$i$, { className: p.divider }), (0, i.jsx)(f, {}), (0, i.jsx)(s.$i$, { className: p.divider }), (0, i.jsx)(_, {})]
+        })
     });
 };

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(997841), n(388685);
+n.d(t, { Z: () => I }), n(997841), n(388685);
 var i = n(255367),
     r = n(73800),
     l = n(120356),
@@ -18,7 +18,7 @@ var i = n(255367),
     E = n(981631),
     y = n(388032),
     v = n(739788);
-function j(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function j(e, t, n) {
         e
     );
 }
-function S(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -42,7 +42,7 @@ function S(e) {
                 })
             )),
             i.forEach(function (t) {
-                j(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
@@ -111,7 +111,7 @@ class P extends r.PureComponent {
                 children: (0, i.jsxs)(
                     o.ConfirmModal,
                     _(
-                        S(
+                        j(
                             {
                                 header: u ? y.intl.string(y.t.aIz1oa) : y.intl.string(y.t.MWMcg4),
                                 confirmText: y.intl.string(y.t.oyYWHB),
@@ -146,18 +146,18 @@ class P extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            j(this, 'state', { report: !1 }),
-            j(this, 'handleDelete', () => {
+            S(this, 'state', { report: !1 }),
+            S(this, 'handleDelete', () => {
                 let { report: e } = this.state,
                     { channel: t, message: n } = this.props;
                 e ? (0, g.ak)(n, 'message_delete_alert', () => c.Z.deleteMessage(t.id, n.id)) : c.Z.deleteMessage(t.id, n.id);
             }),
-            j(this, 'handleToggleReport', (e) => {
+            S(this, 'handleToggleReport', (e) => {
                 this.setState({ report: e });
             });
     }
 }
-let N = {
+let I = {
     confirmPin: function (e, t) {
         (0, o.h7j)((n) => {
             let r,
@@ -169,7 +169,7 @@ let N = {
                     children: (0, i.jsxs)(
                         o.ConfirmModal,
                         _(
-                            S(
+                            j(
                                 {
                                     header: y.intl.string(y.t.bKMaZW),
                                     confirmText: y.intl.string(y.t.rOQ5BQ),
@@ -210,7 +210,7 @@ let N = {
                 children: (0, i.jsxs)(
                     o.ConfirmModal,
                     _(
-                        S(
+                        j(
                             {
                                 header: y.intl.string(y.t.CFF2vL),
                                 confirmText: y.intl.string(y.t.lAU5jI),
@@ -247,7 +247,7 @@ let N = {
         (0, o.h7j)((r) =>
             (0, i.jsx)(
                 P,
-                S(
+                j(
                     {
                         channel: e,
                         message: t,
@@ -263,7 +263,7 @@ let N = {
             (0, i.jsx)(
                 o.ConfirmModal,
                 _(
-                    S(
+                    j(
                         {
                             header: y.intl.string(y.t.aIz1oa),
                             confirmText: y.intl.string(y.t['cY+Ooa']),

@@ -9,9 +9,9 @@ var r = n(255367),
     u = n(774078),
     d = n(388032),
     p = n(894948),
-    g = n(781385),
-    b = n(787935);
-function f(e) {
+    f = n(781385),
+    g = n(787935);
+function b(e) {
     let { endDate: t } = e,
         { days: n, hours: l, minutes: a, seconds: i } = (0, u.Z)(t),
         o = (function (e, t, n, r) {
@@ -81,15 +81,15 @@ let h = l.memo(function (e) {
                     alt: '',
                     'aria-hidden': !0
                 }),
-            (0, r.jsx)(f, { endDate: t }),
+            (0, r.jsx)(b, { endDate: t }),
             (0, r.jsx)('img', {
-                src: g.Z,
+                src: f.Z,
                 className: i()(p.sparkles, p.left),
                 alt: '',
                 'aria-hidden': !0
             }),
             (0, r.jsx)('img', {
-                src: b.Z,
+                src: g.Z,
                 className: i()(p.sparkles, p.right),
                 alt: '',
                 'aria-hidden': !0

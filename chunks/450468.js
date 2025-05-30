@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(78839),
     E = n(74538),
     C = n(388032),
-    O = n(485312);
-async function j(e, t, n, i) {
+    j = n(485312);
+async function O(e, t, n, i) {
     let r = (0, E.MY)(e, t);
     await (0, u.bG)(n),
         await (0, d.Mg)(
@@ -52,11 +52,11 @@ function S(e) {
                 ]
             }),
             (0, i.jsxs)(c.hzk, {
-                className: O.body,
+                className: j.body,
                 children: [
                     null !== v &&
                         (0, i.jsx)(c.kzN, {
-                            className: O.error,
+                            className: j.error,
                             children: v
                         }),
                     C.intl.string(C.t.DY2CXl)
@@ -70,7 +70,7 @@ function S(e) {
                             try {
                                 p(!0), T(null);
                                 let e = (0, b.g)(t, 1);
-                                l()((0, E.uV)(e) <= (0, E.uV)(t.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await j(t, e, n, S), s();
+                                l()((0, E.uV)(e) <= (0, E.uV)(t.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await O(t, e, n, S), s();
                             } catch (t) {
                                 let e = t instanceof m.HF ? t : new m.HF(t, t.code);
                                 T(C.intl.string(e.code === g.SM.BILLING_PAUSE_INVALID_UPDATE ? C.t.dq4vq6 : C.t['5mlOCQ'])), p(!1);
@@ -106,8 +106,8 @@ function v(e) {
                 ]
             }),
             (0, i.jsxs)(c.hzk, {
-                className: O.body,
-                children: [(0, i.jsx)('div', { className: O.uncancelImage }), (0, i.jsx)('div', { children: C.intl.string(C.t.G27uHR) })]
+                className: j.body,
+                children: [(0, i.jsx)('div', { className: j.uncancelImage }), (0, i.jsx)('div', { children: C.intl.string(C.t.G27uHR) })]
             }),
             (0, i.jsx)(c.mzw, {
                 children: (0, i.jsx)(c.zxk, {

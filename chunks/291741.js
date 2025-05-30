@@ -28,6 +28,14 @@ let r = (0, n(818083).B)({
                     enabled: !0,
                     defaultTimeout: 120
                 }
+            },
+            {
+                id: 3,
+                label: 'Set afk_timer default to 1 min (to test with holdout)',
+                config: {
+                    enabled: !0,
+                    defaultTimeout: 60
+                }
             }
         ]
     }),

@@ -59,8 +59,8 @@ function C(e, t) {
         e
     );
 }
-let O = Object.keys(d.zxk.Colors).filter((e) => 'CUSTOM' !== e),
-    j = Object.keys(d.zxk.Looks).filter((e) => 'BLANK' !== e),
+let j = Object.keys(d.zxk.Colors).filter((e) => 'CUSTOM' !== e),
+    O = Object.keys(d.zxk.Looks).filter((e) => 'BLANK' !== e),
     S = Object.keys(d.zxk.Sizes).filter((e) => 'NONE' !== e);
 function v() {
     return (0, i.jsxs)('div', {
@@ -311,8 +311,8 @@ function D() {
 }
 function Z() {
     let [e, t] = r.useState(!1),
-        n = O.flatMap((e) => [
-            ...j.map((t) =>
+        n = j.flatMap((e) => [
+            ...O.map((t) =>
                 (0, i.jsxs)(
                     d.zxk,
                     {

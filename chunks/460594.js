@@ -15,5 +15,6 @@ e.exports = {
     stickersNavItem: 'stickersNavItem__08434',
     soundboardContainer: 'soundboardContainer__08434',
     soundboardHeader: 'soundboardHeader__08434',
-    soundmojiLabelContainer: 'soundmojiLabelContainer__08434'
+    soundmojiLabelContainer: 'soundmojiLabelContainer__08434',
+    addEmojiButton: 'addEmojiButton__08434'
 };

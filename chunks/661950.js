@@ -19,9 +19,9 @@ var r = n(481060),
     x = n(269876),
     E = n(976758),
     C = n(726985),
-    O = n(981631),
-    j = n(388032);
-let S = ''.concat(l.Z.getArticleURL(O.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
+    j = n(981631),
+    O = n(388032);
+let S = ''.concat(l.Z.getArticleURL(j.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
 function v() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -44,7 +44,7 @@ function v() {
                                     (0, i.jsx)(p.Z, {}),
                                     (0, i.jsx)(r.R94, {
                                         type: r.R94.Types.DESCRIPTION,
-                                        children: j.intl.format(j.t['V+B3FB'], { guideURL: S })
+                                        children: O.intl.format(O.t['V+B3FB'], { guideURL: S })
                                     })
                                 ]
                             })
@@ -72,11 +72,11 @@ function v() {
             }),
             (0, i.jsx)(a.Z, {
                 webSetting: C.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
-                title: j.intl.string(j.t['6I6GUl']),
+                title: O.intl.string(O.t['6I6GUl']),
                 children: (0, i.jsx)(_.Z, { refreshStyles: !0 })
             }),
             (0, i.jsx)(a.Z, {
-                title: j.intl.string(j.t['8/udY2']),
+                title: O.intl.string(O.t['8/udY2']),
                 webSetting: C.s6.VOICE_AND_VIDEO_VOICE_ADVANCED,
                 children: (0, i.jsxs)(o.Z, {
                     children: [(0, i.jsx)(f.Z, { refreshStyles: !0 }), (0, i.jsx)(b.Z, { refreshStyles: !0 }), (0, i.jsx)(c.Z, { refreshStyles: !0 }), (0, i.jsx)(d.Z, { refreshStyles: !0 }), (0, i.jsx)(h.Z, { refreshStyles: !0 })]

@@ -21,7 +21,7 @@ function E(e, t) {
         E = (0, l.e7)([f.Z], () => (t.isPrivate() || f.Z.can(b.Plq.ADD_REACTIONS, t)) && g, [t, g]),
         v = (0, o.MZ)(t.getGuildId());
     if (!d.nc.getSetting() || !E || e.type === b.uaV.GUILD_INVITE_REMINDER) return null;
-    let j = v
+    let S = v
         .filter(
             (e) =>
                 !p.ZP.isEmojiFilteredOrLocked({
@@ -105,7 +105,7 @@ function E(e, t) {
         color: 'default',
         children: (0, i.jsxs)(i.Fragment, {
             children: [
-                j,
+                S,
                 (0, i.jsx)(a.Clw, {}),
                 (0, i.jsx)(a.sNh, {
                     color: 'default',

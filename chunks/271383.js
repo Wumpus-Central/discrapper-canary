@@ -1,7 +1,7 @@
 n.d(t, {
     O5: () => W,
     V6: () => Y,
-    ZP: () => ew
+    ZP: () => eD
 }),
     n(35282),
     n(388685),
@@ -562,15 +562,22 @@ function eN(e) {
     t.forEach((e) => eA(e));
 }
 function eC(e) {
+    let { pins: t } = e;
+    t.forEach((e) => {
+        let { message: t } = e;
+        return eA(t);
+    });
+}
+function eP(e) {
     let { messages: t } = e;
     t.forEach((e) => eN({ messages: e }));
 }
-function eP(e) {
+function eR(e) {
     let { location: t, participants: n } = e,
         r = (0, u.jS)(t);
     return null == r && (r = (0, u.hu)(t)), null != r && eE(r, n);
 }
-class eR extends (r = s.ZP.Store) {
+class ew extends (r = s.ZP.Store) {
     initialize() {
         this.waitFor(v.Z, y.default, h.Z);
     }
@@ -683,8 +690,8 @@ class eR extends (r = s.ZP.Store) {
         return M;
     }
 }
-S(eR, 'displayName', 'GuildMemberStore');
-let ew = new eR(l.Z, {
+S(ew, 'displayName', 'GuildMemberStore');
+let eD = new ew(l.Z, {
     CONNECTION_OPEN: q,
     CONNECTION_OPEN_SUPPLEMENTAL: Q,
     OVERLAY_INITIALIZE: J,
@@ -715,10 +722,10 @@ let ew = new eR(l.Z, {
     MESSAGE_UPDATE: eT,
     LOAD_MESSAGES_SUCCESS: eN,
     LOAD_MESSAGES_AROUND_SUCCESS: eN,
-    LOAD_PINNED_MESSAGES_SUCCESS: eN,
     LOAD_RECENT_MENTIONS_SUCCESS: eN,
-    SEARCH_FINISH: eC,
-    MOD_VIEW_SEARCH_FINISH: eC,
+    LOAD_PINNED_MESSAGES_SUCCESS: eC,
+    SEARCH_FINISH: eP,
+    MOD_VIEW_SEARCH_FINISH: eP,
     MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eh,
-    EMBEDDED_ACTIVITY_UPDATE_V2: eP
+    EMBEDDED_ACTIVITY_UPDATE_V2: eR
 });

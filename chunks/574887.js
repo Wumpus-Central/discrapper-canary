@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v });
-var o = n(255367);
+var r = n(255367);
 n(73800);
-var r = n(120356),
-    c = n.n(r),
+var o = n(120356),
+    c = n.n(o),
     i = n(442837),
     l = n(481060),
     a = n(410030),
@@ -21,24 +21,24 @@ var r = n(120356),
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            o = Object.keys(n);
+            r = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (o = o.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            o.forEach(function (t) {
-                var o;
-                (o = n[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: o,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = o);
+                        : (e[t] = r);
             });
     }
     return e;
@@ -51,8 +51,8 @@ function O(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var o = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, o);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -63,39 +63,39 @@ function O(e, t) {
 }
 function I(e) {
     var t;
-    let { account: n, theme: r, locale: c, userId: i } = e,
+    let { account: n, theme: o, locale: c, userId: i } = e,
         a = null != (t = n.metadata) ? t : {},
         b = (0, f.FI)(a[x.PC.CREATED_AT], c),
         I = s.Z.get((0, u.rR)(n.type));
-    return (0, o.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: j.connection,
         children: [
-            (0, o.jsx)(l.ua7, {
+            (0, r.jsx)(l.ua7, {
                 text: null == I ? void 0 : I.name,
                 children: (e) =>
-                    (0, o.jsx)(
+                    (0, r.jsx)(
                         'img',
                         O(g({}, e), {
                             alt: h.intl.formatToPlainString(h.t.rtm15O, { name: null == I ? void 0 : I.name }),
                             className: j.platformIcon,
-                            src: (0, l.wjy)(r) ? (null == I ? void 0 : I.icon.darkSVG) : null == I ? void 0 : I.icon.lightSVG
+                            src: (0, l.wjy)(o) ? (null == I ? void 0 : I.icon.darkSVG) : null == I ? void 0 : I.icon.lightSVG
                         })
                     )
             }),
-            (0, o.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: j.connectionInfo,
                 children: [
-                    (0, o.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         children: [
                             (() => {
                                 var e;
                                 let t = null == I || null == (e = I.getPlatformUserUrl) ? void 0 : e.call(I, n);
                                 return null == t
-                                    ? (0, o.jsx)(l.ua7, {
+                                    ? (0, r.jsx)(l.ua7, {
                                           overflowOnly: !0,
                                           text: n.name,
                                           children: (e) =>
-                                              (0, o.jsx)(
+                                              (0, r.jsx)(
                                                   l.Text,
                                                   O(g({}, e), {
                                                       variant: 'text-sm/normal',
@@ -104,7 +104,7 @@ function I(e) {
                                                   })
                                               )
                                       })
-                                    : (0, o.jsx)(l.eee, {
+                                    : (0, r.jsx)(l.eee, {
                                           href: t,
                                           className: j.platformUrlAnchor,
                                           useDefaultUnderlineStyles: !1,
@@ -121,14 +121,14 @@ function I(e) {
                                                       e
                                                   );
                                           },
-                                          children: (0, o.jsxs)('div', {
+                                          children: (0, r.jsxs)('div', {
                                               className: j.accountName,
                                               children: [
-                                                  (0, o.jsx)(l.ua7, {
+                                                  (0, r.jsx)(l.ua7, {
                                                       overflowOnly: !0,
                                                       text: n.name,
                                                       children: (e) =>
-                                                          (0, o.jsx)(
+                                                          (0, r.jsx)(
                                                               l.Text,
                                                               O(g({}, e), {
                                                                   variant: 'text-sm/normal',
@@ -137,7 +137,7 @@ function I(e) {
                                                               })
                                                           )
                                                   }),
-                                                  (0, o.jsx)(m.Z, {
+                                                  (0, r.jsx)(m.Z, {
                                                       className: j.platformUrlIcon,
                                                       direction: m.Z.Directions.RIGHT
                                                   })
@@ -146,13 +146,13 @@ function I(e) {
                                       });
                             })(),
                             null != b &&
-                                (0, o.jsx)(l.Text, {
+                                (0, r.jsx)(l.Text, {
                                     variant: 'text-xs/normal',
                                     children: h.intl.format(h.t['9rfonp'], { date: b })
                                 })
                         ]
                     }),
-                    (0, o.jsx)('div', {
+                    (0, r.jsx)('div', {
                         className: j.metadata,
                         children: n.type === y.ABu.REDDIT ? (0, p.oP)(a) : n.type === y.ABu.STEAM ? (0, p.Dq)(a) : n.type === y.ABu.BLUESKY || n.type === y.ABu.MASTODON || n.type === y.ABu.TWITTER ? (0, p.rJ)(a) : n.type === y.ABu.PAYPAL ? (0, p.li)(a) : n.type === y.ABu.EBAY ? (0, p.ul)(a) : n.type === y.ABu.TIKTOK ? (0, p.hf)(a) : null
                     })
@@ -162,15 +162,15 @@ function I(e) {
     });
 }
 function v(e) {
-    let { connections: t, userId: n, className: r } = e,
+    let { connections: t, userId: n, className: o } = e,
         l = (0, a.ZP)(),
         s = (0, i.e7)([b.default], () => b.default.locale);
     return 0 === t.length
         ? null
-        : (0, o.jsx)('div', {
-              className: c()(j.container, r),
+        : (0, r.jsx)('div', {
+              className: c()(j.container, o),
               children: t.map((e) =>
-                  (0, o.jsx)(
+                  (0, r.jsx)(
                       I,
                       {
                           account: e,

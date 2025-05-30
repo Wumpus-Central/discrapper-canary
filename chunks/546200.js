@@ -2,8 +2,8 @@ r.d(t, { EmojiStudioModal: () => u }), r(388685);
 var n = r(255367),
     a = r(73800),
     s = r(481060),
-    i = r(598117),
-    l = r(375727),
+    l = r(598117),
+    i = r(375727),
     o = r(903759),
     c = r(205721);
 let u = (e) => {
@@ -20,13 +20,13 @@ let u = (e) => {
             children: [
                 null == d
                     ? (0, n.jsx)(o.u, { setUserImage: p })
-                    : (0, n.jsx)(l.I, {
+                    : (0, n.jsx)(i.I, {
                           userImage: d,
                           guildId: u,
                           back: h
                       }),
                 (0, n.jsx)(s.olH, {
-                    onClick: () => (0, s.Mr3)(i.Hj),
+                    onClick: () => (0, s.Mr3)(l.Hj),
                     className: c.closeButton
                 })
             ]

@@ -32,7 +32,7 @@ let b = (e) => {
         });
     },
     _ = (e) => {
-        let { showAnimations: t = !0, iconClassName: n, staticPercentage: i, innerCircleClassName: s, progressCircleStrokeSize: l, backgroundCircleSize: c, percentage: u, initialPercentage: f, progressCircleVariation: _ = 0, avatarDecoAssetId: x, avatarDecoAssetDescription: E, ellipseOpacity: C, customAnimationClassName: O, circleColor: j, circleStroke: S } = e,
+        let { showAnimations: t = !0, iconClassName: n, staticPercentage: i, innerCircleClassName: s, progressCircleStrokeSize: l, backgroundCircleSize: c, percentage: u, initialPercentage: f, progressCircleVariation: _ = 0, avatarDecoAssetId: x, avatarDecoAssetDescription: E, ellipseOpacity: C, customAnimationClassName: j, circleColor: O, circleStroke: S } = e,
             v = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
             T = t && !v;
         return (0, r.jsx)('div', {
@@ -40,7 +40,7 @@ let b = (e) => {
             children: (0, r.jsx)(p.Z, {
                 animationClassName: a()(h.activeProgressCircle, {
                     [h.activeProgressCircleAnimation]: T,
-                    [null != O ? O : '']: T
+                    [null != j ? j : '']: T
                 }),
                 progressCircleStroke: S,
                 progressCircleStrokeSize: l,
@@ -57,7 +57,7 @@ let b = (e) => {
                             });
                         case 1:
                             return (0, r.jsx)(g.Z, {
-                                circleColor: j,
+                                circleColor: O,
                                 ellipseOpacity: C
                             });
                         case 2:

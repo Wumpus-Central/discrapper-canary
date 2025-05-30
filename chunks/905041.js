@@ -57,25 +57,25 @@ function h(e, t, n, h) {
                     n
                 );
         },
-        j = [],
-        S = e.match(b);
-    if (null != S) {
-        let e = m.intl.string('mailto' === S[1] ? m.t.ZYLVKi : m.t['3zozoa']);
-        j.push(
+        S = [],
+        j = e.match(b);
+    if (null != j) {
+        let e = m.intl.string('mailto' === j[1] ? m.t.ZYLVKi : m.t['3zozoa']);
+        S.push(
             (0, i.jsx)(
                 r.sNh,
                 {
                     id: 'copy-native-contact',
                     label: e,
                     action: () => {
-                        y(S[2]);
+                        y(j[2]);
                     }
                 },
                 'copy-native-contact'
             )
         ),
-            'tel' === S[1] &&
-                j.push(
+            'tel' === j[1] &&
+                S.push(
                     (0, i.jsx)(
                         r.sNh,
                         {
@@ -99,7 +99,7 @@ function h(e, t, n, h) {
             },
             'copy-native-link'
         ),
-        ...j,
+        ...S,
         (0, i.jsx)(
             r.sNh,
             {

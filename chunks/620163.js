@@ -19,8 +19,8 @@ var r = n(990547),
     x = n(498646),
     E = n(489968),
     C = n(703288),
-    O = n(574755),
-    j = n(994714),
+    j = n(574755),
+    O = n(994714),
     S = n(377171),
     v = n(540059),
     T = n(621628),
@@ -73,8 +73,8 @@ var r = n(990547),
     ex = n(54942),
     eE = n(293389),
     eC = n(88624),
-    eO = n(387747),
-    ej = n(389650),
+    ej = n(387747),
+    eO = n(389650),
     eS = n(649157),
     ev = n(593648),
     eT = n(327885),
@@ -116,7 +116,7 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
     },
     e3 = eZ.Z,
     e8 = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: N, impressionSource: R, numOfPendingFamilyRequests: D, isOverlaySupported: G, isClipsBetaTagShowing: e8 = !1, shouldMergeGameSettings: e2, isKeywordFilteringEnabled: e6, isStaff: e5, isInappropriateConversationWarningEnabled: e4, isInapproprateConversationsDefaultOn: e7, paymentsBlocked: e9, isEligibleForQuests: te, showGiftNitro: tt, isStricterMessageRequestsEnabled: tn, hasLibraryApplication: ti, hasTOTPEnabled: tr, developerMode: ts, isAdultUser: tl, hasSecureFramesVerifiedUserIds: ta, hypeSquadRemoved: to, hasIgnoredUsers: tc, hasBlockedUsers: td, useRefreshedVoiceAndVideo: tu, isEligibleForSensitiveContentDefaults: tm, inputMode: tg, activeInputProfile: tp, isInputProfileCustom: th } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: N, impressionSource: R, numOfPendingFamilyRequests: D, isOverlaySupported: G, isClipsBetaTagShowing: e8 = !1, shouldMergeGameSettings: e2, isKeywordFilteringEnabled: e6, isStaff: e5, isInappropriateConversationWarningEnabled: e4, isInapproprateConversationsDefaultOn: e7, paymentsBlocked: e9, isEligibleForQuests: te, showGiftNitro: tt, isStricterMessageRequestsEnabled: tn, hasLibraryApplication: ti, hasTOTPEnabled: tr, developerMode: ts, isAdultUser: tl, hasSecureFramesVerifiedUserIds: ta, hypeSquadRemoved: to, hasIgnoredUsers: tc, hasBlockedUsers: td, useRefreshedVoiceAndVideo: tu, isEligibleForSensitiveContentDefaults: tm, inputMode: tg, activeInputProfile: tp, isInputProfileCustom: th, isActivitySharingExperimentEnabled: tf } = e;
         return Object.freeze({
             [eH.s6.SEARCH_NO_RESULTS]: {
                 section: g.ID.CUSTOM,
@@ -535,7 +535,7 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 label: eq.intl.string(eq.t.z2jK6e),
                 ariaLabel: eq.intl.string(eq.t.z2jK6e),
                 icon: e8 ? (0, i.jsx)(C.Z, {}) : void 0,
-                element: O.Z,
+                element: j.Z,
                 predicate: () => !e2,
                 url: eW.Z5c.SETTINGS('clips')
             },
@@ -598,7 +598,7 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eW.oAB.INVENTORY,
                 searchableTitles: [eq.intl.string(eq.t['jcSP+v'])],
                 label: eq.intl.string(eq.t['jcSP+v']),
-                element: eO.Z,
+                element: ej.Z,
                 ariaLabel: eq.intl.string(eq.t['jcSP+v']),
                 badgeCount: t
             },
@@ -1373,7 +1373,7 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eW.oAB.KEYBINDS,
                 searchableTitles: [eq.intl.string(eq.t.T9DA2N)],
                 label: eq.intl.string(eq.t.T9DA2N),
-                element: ej.Z,
+                element: eO.Z,
                 url: eW.Z5c.SETTINGS('keybinds')
             },
             [eH.s6.LANGUAGE]: {
@@ -1488,9 +1488,9 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
             },
             [eH.s6.ACTIVITY_PRIVACY]: {
                 section: eW.oAB.ACTIVITY_PRIVACY,
-                searchableTitles: [eq.intl.string(eq.t.Cq98yM)],
-                label: eq.intl.string(eq.t.Cq98yM),
-                ariaLabel: eq.intl.string(eq.t.Cq98yM),
+                searchableTitles: tf ? [eq.intl.string(eq.t.Cq98yM), eq.intl.string(eq.t['6x5uWV'])] : [eq.intl.string(eq.t.Cq98yM)],
+                label: eq.intl.string(tf ? eq.t['6x5uWV'] : eq.t.Cq98yM),
+                ariaLabel: eq.intl.string(tf ? eq.t['6x5uWV'] : eq.t.Cq98yM),
                 element: ec.Z,
                 predicate: () => !e2,
                 url: eW.Z5c.SETTINGS('activity-privacy')
@@ -1873,7 +1873,7 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eW.oAB.SHOP_KEEPER,
                 searchableTitles: ['Shop Keeper'],
                 label: 'Shop Keeper',
-                element: j.Z,
+                element: O.Z,
                 predicate: () => H.Z.isDeveloper
             },
             [eH.s6.QUEST_PREVIEW_TOOL]: {

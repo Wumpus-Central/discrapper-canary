@@ -9,10 +9,6 @@ function s(e) {
         s = l.useMemo(
             () => [
                 {
-                    label: o.intl.string(o.t.xFcotb),
-                    value: i.AW.CATALOG
-                },
-                {
                     label: o.intl.string(o.t.dRZYND),
                     value: i.AW.AVATAR_DECORATIONS
                 },
@@ -21,12 +17,16 @@ function s(e) {
                     value: i.AW.PROFILE_EFFECTS
                 },
                 {
+                    label: o.intl.string(o.t.V68Fq6),
+                    value: i.AW.NAMEPLATES
+                },
+                {
                     label: o.intl.string(o.t.FYFppq),
                     value: i.AW.BUNDLES
                 },
                 {
-                    label: o.intl.string(o.t.V68Fq6),
-                    value: i.AW.NAMEPLATES
+                    label: o.intl.string(o.t.xFcotb),
+                    value: i.AW.CATALOG
                 }
             ],
             []

@@ -22,8 +22,8 @@ var i,
     x = n(612253),
     E = n(872532),
     C = n(91342),
-    O = n(181708),
-    j = n(290650),
+    j = n(181708),
+    O = n(290650),
     S = n(751125),
     v = n(357003),
     T = n(904505),
@@ -139,7 +139,7 @@ let B = () => {
                 title: p.intl.string(p.t.zY5PPT),
                 description: p.intl.string(p.t.R5Xag4),
                 previewImage: f,
-                videoUrl: n ? C.ZP : O.ZP,
+                videoUrl: n ? C.ZP : j.ZP,
                 size: 'medium'
             },
             noLimits: {
@@ -147,7 +147,7 @@ let B = () => {
                 title: p.intl.string(p.t['6b3ydH']),
                 description: p.intl.string(p.t['Y+IJys']),
                 previewImage: b,
-                videoUrl: n ? j.ZP : S.ZP,
+                videoUrl: n ? O.ZP : S.ZP,
                 size: 'medium'
             }
         }

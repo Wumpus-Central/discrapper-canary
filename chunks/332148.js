@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => d }), n(784620), n(973216);
 var i = n(544891),
     r = n(570140),
     l = n(346479),
@@ -55,17 +55,38 @@ let u = {
                 channelId: e
             });
         },
-        fetchPins(e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                n = a.Z.getPinnedMessages(e);
-            (!t && null != n && (n.loaded || n.loading)) ||
+        fetchPins(e, t) {
+            var n, l;
+            let o = null != (n = null == t ? void 0 : t.reset) && n,
+                c = null != (l = null == t ? void 0 : t.limit) ? l : 25,
+                u = null == t ? void 0 : t.before;
+            (o ||
+                (function (e, t) {
+                    let n = a.Z.getPins(e);
+                    if (null == n) return !0;
+                    switch (n.state) {
+                        case a.M.FAILED:
+                            return !0;
+                        case a.M.LOADING:
+                        case a.M.LOADED_FINISHED:
+                            return !1;
+                        case a.M.LOADED_HAS_MORE:
+                            if (null == t) return 0 === n.items.length;
+                            return n.items.at(-1).pinnedAt === t;
+                    }
+                })(e, u)) &&
                 (r.Z.dispatch({
                     type: 'LOAD_PINNED_MESSAGES',
-                    channelId: e
+                    channelId: e,
+                    reset: o
                 }),
                 i.tn
                     .get({
                         url: s.ANM.PINS(e),
+                        query: {
+                            limit: c,
+                            before: null == u ? void 0 : u.toISOString()
+                        },
                         retries: 2,
                         oldFormErrors: !0,
                         rejectWithError: !0
@@ -74,8 +95,9 @@ let u = {
                         (t) => {
                             r.Z.dispatch({
                                 type: 'LOAD_PINNED_MESSAGES_SUCCESS',
-                                messages: t.body,
-                                channelId: e
+                                pins: t.body.items,
+                                channelId: e,
+                                hasMore: t.body.has_more
                             });
                         },
                         () => {

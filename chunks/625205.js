@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(962100),
     E = n(65154),
     C = n(388032),
-    O = n(209782),
-    j = n(20493);
+    j = n(209782),
+    O = n(20493);
 let S = f.isWindows() ? ['BTHENUM', 'BTHHFENUM'] : [];
 function v() {
     let e,
@@ -55,13 +55,13 @@ function v() {
     v ||
         (e = (0, i.jsx)(c.R94, {
             type: c.R94.Types.DESCRIPTION,
-            className: j.marginTop8,
+            className: O.marginTop8,
             children: C.intl.format(C.t['1iK6UV'], { onDownloadClick: () => (0, x.y)('Help Text Input Devices') })
         })),
         T ||
             (t = (0, i.jsx)(c.R94, {
                 type: c.R94.Types.DESCRIPTION,
-                className: j.marginTop8,
+                className: O.marginTop8,
                 children: C.intl.format(C.t.Ow0dbG, { onDownloadClick: () => (0, x.y)('Help Text Output Devices') })
             }));
     let R = l()(y).values().first(),
@@ -76,16 +76,16 @@ function v() {
             t = (0, i.jsx)('img', {
                 src: e,
                 alt: 'Certified',
-                className: O.deviceOptionCertified
+                className: j.deviceOptionCertified
             });
         }
         return (0, i.jsxs)(
             'span',
             {
-                className: O.deviceOption,
+                className: j.deviceOption,
                 children: [
                     (0, i.jsx)('span', {
-                        className: O.deviceOptionLabel,
+                        className: j.deviceOptionLabel,
                         children: p.Z.getCertifiedDeviceName(s, r)
                     }),
                     t
@@ -98,13 +98,13 @@ function v() {
         return k(e[0]);
     }
     return (0, i.jsxs)('div', {
-        className: O.devices,
+        className: j.devices,
         children: [
             (0, i.jsxs)('div', {
-                className: O.deviceColumns,
+                className: j.deviceColumns,
                 children: [
                     (0, i.jsx)('div', {
-                        className: O.column,
+                        className: j.column,
                         children: (0, i.jsxs)(c.xJW, {
                             title: C.intl.string(C.t.hHMYbW),
                             children: [
@@ -131,7 +131,7 @@ function v() {
                         })
                     }),
                     (0, i.jsx)('div', {
-                        className: O.column,
+                        className: j.column,
                         children: (0, i.jsxs)(c.xJW, {
                             title: C.intl.string(C.t.dl18zc),
                             children: [

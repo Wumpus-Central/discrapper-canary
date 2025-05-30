@@ -2,15 +2,15 @@ r.d(t, { R: () => o });
 var n = r(255367),
     a = r(692547),
     s = r(481060),
-    i = r(192360),
-    l = r(954292);
+    l = r(192360),
+    i = r(954292);
 let o = (e) => {
         let { onChange: t, value: r } = e;
         return (0, n.jsxs)('div', {
-            className: i.nameInput,
+            className: l.nameInput,
             children: [
                 (0, n.jsxs)('div', {
-                    className: i.wrapInput,
+                    className: l.wrapInput,
                     children: [
                         (0, n.jsx)(c, {}),
                         (0, n.jsx)('input', {
@@ -19,7 +19,7 @@ let o = (e) => {
                                 t(e.currentTarget.value);
                             },
                             placeholder: 'emoji_name',
-                            className: l['text-md/semibold']
+                            className: i['text-md/semibold']
                         }),
                         (0, n.jsx)(u, { value: r })
                     ]
@@ -27,7 +27,7 @@ let o = (e) => {
                 (0, n.jsx)(s.Text, {
                     variant: 'text-xs/normal',
                     color: 'header-muted',
-                    className: i.inputNote,
+                    className: l.inputNote,
                     children: 'Min. 2 characters (letters, numbers & underscores only).'
                 })
             ]
@@ -35,7 +35,7 @@ let o = (e) => {
     },
     c = () =>
         (0, n.jsx)('span', {
-            className: i.bookend,
+            className: l.bookend,
             'arria-hidden': !0,
             children: ':'
         }),
@@ -44,12 +44,12 @@ let o = (e) => {
         return (0, n.jsxs)(s.Text, {
             variant: 'text-md/semibold',
             color: 'header-muted',
-            className: i.ghost,
+            className: l.ghost,
             'aria-hidden': !0,
             children: [
                 (0, n.jsx)(c, {}),
                 (0, n.jsx)('span', {
-                    className: i.spacer,
+                    className: l.spacer,
                     children: '' === t ? 'emoji_name' : t
                 }),
                 (0, n.jsx)(c, {}),

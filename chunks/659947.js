@@ -59,18 +59,18 @@ function x(e, t) {
 }
 function E() {}
 let C = [h.h8.VOICE_CHANNEL];
-function O(e) {
+function j(e) {
     e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
-function j(e) {
+function O(e) {
     let { height: t } = e;
     return (0, i.jsx)('div', { style: { height: t } });
 }
 function S() {
-    return (0, i.jsx)(j, { height: 16 }, 'footer');
+    return (0, i.jsx)(O, { height: 16 }, 'footer');
 }
 function v() {
-    return (0, i.jsx)(j, { height: 8 }, 'header');
+    return (0, i.jsx)(O, { height: 8 }, 'header');
 }
 function T() {
     return (0, i.jsx)('div', {
@@ -133,7 +133,7 @@ function I(e) {
         {
             mouseFocusEnabled: x,
             enableMouseFocus: E,
-            disableMouseFocus: j
+            disableMouseFocus: O
         } = (function () {
             let e = r.useRef(!1),
                 t = r.useCallback(() => {
@@ -155,7 +155,7 @@ function I(e) {
         } = (0, o.Z)({
             visible: !0,
             autocompleterResultTypes: C,
-            autocompleterBeforeCreateSearchContext: O
+            autocompleterBeforeCreateSearchContext: j
         }),
         A = (function (e) {
             let t = '' !== e,
@@ -221,7 +221,7 @@ function I(e) {
                         value: N,
                         onChange: I,
                         onKeyDown: function (e) {
-                            j();
+                            O();
                             let t = e.key.toLowerCase();
                             if ('arrowdown' === t || 'arrowup' === t || 'enter' === t || 'escape' === t)
                                 switch ((e.preventDefault(), t)) {

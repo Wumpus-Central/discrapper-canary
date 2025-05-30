@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(404615),
     E = n(238108),
     C = n(22189),
-    O = n(391110),
-    j = n(484239),
+    j = n(391110),
+    O = n(484239),
     S = n(658370),
     v = n(735825),
     T = n(981631),
@@ -76,7 +76,7 @@ let R = {
         yMax: -20
     },
     D = r.memo((e) => {
-        let { name: t, canReveal: n = !0, dismissibleContentType: s, forceShadow: x, cardType: j, confettiCanvas: S } = e,
+        let { name: t, canReveal: n = !0, dismissibleContentType: s, forceShadow: x, cardType: O, confettiCanvas: S } = e,
             w = null == e ? void 0 : e.onCtaClick,
             k = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
             [L, B] = r.useState(!1),
@@ -91,7 +91,7 @@ let R = {
         let Y = r.useCallback(() => {
                 H(!0);
             }, []),
-            K = j === O.gM.CARD_CAROUSEL_FIRST_ROW || j === O.gM.CARD_CAROUSEL_SECOND_ROW || j === O.gM.CARD_CAROUSEL_THIRD_ROW,
+            K = O === j.gM.CARD_CAROUSEL_FIRST_ROW || O === j.gM.CARD_CAROUSEL_SECOND_ROW || O === j.gM.CARD_CAROUSEL_THIRD_ROW,
             q = (0, C.Z)(),
             [X, Q] = (0, h.cv)((null != s && n) || s === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI ? [s] : []);
         r.useEffect(
@@ -254,8 +254,8 @@ D.displayName = 'PremiumPerkCard';
 let Z = r.forwardRef((e, t) => {
     var n;
     let { title: r, titleClassName: s = '', subtitle: a = '', description: o = '', descriptionCta: c = '', isPremiumGetCta: d, onCtaClick: m, onMouseEnter: g, className: p, perkComponent: h, cardVariant: f, cardType: b, onClick: _, backgroundImage: E, pillText: C, perkImage: v, imageOverlayText: T } = e,
-        N = b === O.gM.CARD_CAROUSEL_FIRST_ROW || b === O.gM.CARD_CAROUSEL_SECOND_ROW || b === O.gM.CARD_CAROUSEL_THIRD_ROW,
-        I = '' !== o || '' !== c || ('' !== a && f === O.zW.REWARD),
+        N = b === j.gM.CARD_CAROUSEL_FIRST_ROW || b === j.gM.CARD_CAROUSEL_SECOND_ROW || b === j.gM.CARD_CAROUSEL_THIRD_ROW,
+        I = '' !== o || '' !== c || ('' !== a && f === j.zW.REWARD),
         A = (0, x._)(f);
     return (0, i.jsxs)(u.P3F, {
         className: l()(y.card, p, null == (n = A.cardContainer) ? void 0 : n.className, {
@@ -273,7 +273,7 @@ let Z = r.forwardRef((e, t) => {
                     children: C
                 }),
             (0, i.jsx)('div', { ref: t }),
-            (0, i.jsx)(j.Z, {
+            (0, i.jsx)(O.Z, {
                 title: r,
                 titleClassName: s,
                 subtitle: a,

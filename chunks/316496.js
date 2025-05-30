@@ -1,5 +1,5 @@
-n.d(t, { D: () => i });
-let r = (0, n(818083).B)({
+n.d(t, { D: () => r });
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2025-05_activity_sharing_popout_per_server',
     label: 'Activity Sharing Popout Per Server',
@@ -26,6 +26,6 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
-    return r.useExperiment({ location: e }, { autoTrackExposure: !0 });
+function r(e) {
+    return i.useExperiment({ location: e }, { autoTrackExposure: !0 });
 }

@@ -9,11 +9,11 @@ var r = n(73800),
     u = n(884697),
     d = n(26931),
     p = n(370039),
-    g = n(937510),
-    b = n(981631),
-    f = n(388032);
+    f = n(937510),
+    g = n(981631),
+    b = n(388032);
 let h = (e, t) => {
-    let n = (0, o.e7)([s.Z], () => s.Z.hasConsented(b.pjP.PERSONALIZATION)),
+    let n = (0, o.e7)([s.Z], () => s.Z.hasConsented(g.pjP.PERSONALIZATION)),
         l = r.useMemo(() => {
             var t;
             return null != (t = null == e ? void 0 : e[i.m.RECOMMENDED]) ? t : [];
@@ -28,7 +28,7 @@ let h = (e, t) => {
         S = (0, d.u)(),
         x = (0, o.e7)([c.Z], () => c.Z.productsWithVariantsAsGroup),
         E = (0, p.a)(),
-        j = r.useMemo(() => {
+        y = r.useMemo(() => {
             let e = [];
             return (
                 _ === i.m.RECENT
@@ -46,38 +46,38 @@ let h = (e, t) => {
                 E(e)
             );
         }, [_, E, x, t, S, l, h, v]),
-        y = r.useCallback(() => {
+        j = r.useCallback(() => {
             O((e) => e + 1), C(i.m.RANDOM);
         }, []);
     return {
         sortType: _,
         setSortType: C,
-        sortedItems: (0, g.l)(j),
+        sortedItems: (0, f.l)(y),
         sortOptions: r.useMemo(() => {
             let e = [
                 {
                     value: i.m.POPULAR,
-                    label: f.intl.string(f.t['1wQj4O'])
+                    label: b.intl.string(b.t['1wQj4O'])
                 },
                 {
                     value: i.m.RECENT,
-                    label: f.intl.string(f.t['6NZpt7'])
+                    label: b.intl.string(b.t['6NZpt7'])
                 },
                 {
                     value: i.m.PRICE_LOW_TO_HIGH,
-                    label: f.intl.string(f.t.RTG4yM)
+                    label: b.intl.string(b.t.RTG4yM)
                 }
             ];
             return (
                 m &&
                     e.unshift({
                         value: i.m.RECOMMENDED,
-                        label: f.intl.string(f.t.JrlKlp)
+                        label: b.intl.string(b.t.JrlKlp)
                     }),
                 e
             );
         }, [m]),
         showRecommendationOption: m,
-        shuffleProducts: y
+        shuffleProducts: j
     };
 };

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(828576),
     E = n(982404),
     C = n(299156);
-let O = function (e) {
-    let { premiumSubscription: t, premiumType: n, onClose: s, onConfirm: O, userDiscountOffer: j } = e,
+let j = function (e) {
+    let { premiumSubscription: t, premiumType: n, onClose: s, onConfirm: j, userDiscountOffer: O } = e,
         [S, v] = r.useState(!1),
         [T, N] = r.useState(!1),
         I = async (e) => {
@@ -31,7 +31,7 @@ let O = function (e) {
                         body: { user_discount_offer_id: e },
                         rejectWithError: !0
                     }),
-                    O();
+                    j();
             } catch (e) {
                 v(!0);
             }
@@ -39,13 +39,13 @@ let O = function (e) {
         },
         y = (0, d.ZP)(),
         A = (0, o.wj)(y) ? E : C,
-        P = (0, p._)(t, f.Xh.PREMIUM_MONTH_TIER_2, j),
+        P = (0, p._)(t, f.Xh.PREMIUM_MONTH_TIER_2, O),
         R = (0, m.aS)(f.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId
         }),
         D = (0, g.T4)(R.amount, R.currency);
-    return null == j
+    return null == O
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
@@ -60,7 +60,7 @@ let O = function (e) {
                           children: [
                               (0, i.jsx)(c.X6q, {
                                   variant: 'heading-xl/bold',
-                                  children: _.intl.format(_.t.q9Vxu7, { percent: j.discount.amount })
+                                  children: _.intl.format(_.t.q9Vxu7, { percent: O.discount.amount })
                               }),
                               (0, i.jsxs)('div', {
                                   className: x.confirmDiscountDescription,
@@ -73,8 +73,8 @@ let O = function (e) {
                                       (0, i.jsx)(c.Text, {
                                           variant: 'text-sm/medium',
                                           children: _.intl.format(_.t.Eq1RHB, {
-                                              percent: j.discount.amount,
-                                              numMonths: j.discount.user_usage_limit,
+                                              percent: O.discount.amount,
+                                              numMonths: O.discount.user_usage_limit,
                                               price: D
                                           })
                                       })
@@ -87,8 +87,8 @@ let O = function (e) {
                                       className: x.confirmDiscountLegaleseText,
                                       children: _.intl.format(_.t.hrGTjI, {
                                           discountedPrice: P,
-                                          billingPeriod: (0, m.JP)(j.discount.user_usage_limit_interval),
-                                          numMonths: j.discount.user_usage_limit,
+                                          billingPeriod: (0, m.JP)(O.discount.user_usage_limit_interval),
+                                          numMonths: O.discount.user_usage_limit,
                                           fullPrice: D,
                                           helpdeskArticle: u.Z.getArticleURL(b.BhN.PAID_TERMS)
                                       })
@@ -117,7 +117,7 @@ let O = function (e) {
                                       (0, i.jsx)(c.zxk, {
                                           size: c.PhG.SMALL,
                                           submitting: T,
-                                          onClick: () => I(j.id),
+                                          onClick: () => I(O.id),
                                           children: _.intl.string(_.t.CKSuZG)
                                       })
                                   ]

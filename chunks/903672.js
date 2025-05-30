@@ -175,7 +175,7 @@ function R(e) {
         ]
     });
 }
-function k(e) {
+function k() {
     return (0, r.jsx)(C.Z, {
         Icon: c.lOy,
         header: N.intl.string(N.t['bgDz7+']),

@@ -16,8 +16,8 @@ var i = n(255367),
 function b(e) {
     let { user: t, guild: n, className: s, sectionTitle: m, forcedDivider: b = !1, withTutorial: x = !1, isTryItOutFlow: E = !1 } = e,
         { analyticsLocations: C } = (0, o.ZP)(),
-        O = null != n,
-        { userAvatarDecoration: j, guildAvatarDecoration: S, pendingAvatarDecoration: v, pendingErrors: T } = (0, g.$U)(t, n),
+        j = null != n,
+        { userAvatarDecoration: O, guildAvatarDecoration: S, pendingAvatarDecoration: v, pendingErrors: T } = (0, g.$U)(t, n),
         N = (0, u.Z)('enable_avatar_decoration_uploads'),
         I = r.useCallback(
             () =>
@@ -28,7 +28,7 @@ function b(e) {
                 }),
             [C, E, n]
         ),
-        y = E || void 0 !== v ? null != v : (O ? S : j) != null,
+        y = E || void 0 !== v ? null != v : (j ? S : O) != null,
         A = x ? a.gtL : a.zxk;
     return (0, i.jsxs)(p.Z, {
         className: s,

@@ -195,8 +195,11 @@ let A = new P(u.Z, {
             t.forEach((e) => C(e));
         },
         LOAD_PINNED_MESSAGES_SUCCESS: function (e) {
-            let { messages: t } = e;
-            t.forEach((e) => C(e));
+            let { pins: t } = e;
+            t.forEach((e) => {
+                let { message: t } = e;
+                return C(t);
+            });
         },
         SEARCH_FINISH: function (e) {
             e.messages.forEach((e) => {

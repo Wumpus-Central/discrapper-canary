@@ -76,7 +76,7 @@ let b = (e, t, n) => ((0, r.wj)(e) ? t : n),
             c = () => {
                 o({ card: n.specialShopPerks });
             },
-            d = O();
+            d = j();
         return a && o({ card: n.nameplates }), null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.tenureRewardCollectible && !0 === r && o({ card: n.tenureRewardCollectible }), o({ card: n.permadecos }), i && d ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : i && !d && (o({ card: n.referralProgram }), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), a || c(), o({ card: n.unlimitedSuperReactions }), t;
     },
     x = (e) => {
@@ -128,7 +128,7 @@ let b = (e, t, n) => ((0, r.wj)(e) ? t : n),
         let e = (0, i.e7)([l.default], () => l.default.getCurrentUser());
         return (0, o.I5)(e);
     },
-    O = () => {
+    j = () => {
         let e = l.default.getCurrentUser();
         return (0, o.M5)(e, d.p9.TIER_2);
     };

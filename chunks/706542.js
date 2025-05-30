@@ -18,28 +18,28 @@ var i = n(255367),
     x = n(230916),
     E = n(694338),
     C = n(474936),
-    O = n(388032),
-    j = n(835826),
+    j = n(388032),
+    O = n(835826),
     S = n(102655),
     v = n(768236),
     T = n(314907),
     N = n(826701);
 let I = () =>
         (0, i.jsx)('div', {
-            className: j.comparisonTablePill,
+            className: O.comparisonTablePill,
             children: (0, i.jsx)(c.X6q, {
-                className: j.mostPopularText,
+                className: O.mostPopularText,
                 variant: 'text-xs/bold',
-                children: O.intl.string(O.t.TR2B4e)
+                children: j.intl.string(j.t.TR2B4e)
             })
         }),
     y = () =>
         (0, i.jsx)('div', {
-            className: j.comparisonTablePill,
+            className: O.comparisonTablePill,
             children: (0, i.jsx)(c.X6q, {
-                className: j.mostPopularText,
+                className: O.mostPopularText,
                 variant: 'heading-deprecated-12/extrabold',
-                children: O.intl.string(O.t.IBYG5e)
+                children: j.intl.string(j.t.IBYG5e)
             })
         }),
     A = (e) => {
@@ -50,32 +50,32 @@ let I = () =>
         let s = (0, f.Px)(n);
         return (0, i.jsx)('img', {
             src: t,
-            className: j.logo,
+            className: O.logo,
             alt: s
         });
     },
     P = () =>
         (0, i.jsx)('thead', {
             children: (0, i.jsxs)('tr', {
-                className: l()(j.headerRow, j.topBorderRadius),
+                className: l()(O.headerRow, O.topBorderRadius),
                 children: [
                     (0, i.jsx)('th', {
                         scope: 'col',
-                        className: j.headerLabelCell,
+                        className: O.headerLabelCell,
                         children: (0, i.jsx)(c.X6q, {
-                            className: j.__invalid_textColor,
+                            className: O.__invalid_textColor,
                             variant: 'heading-xl/semibold',
-                            children: O.intl.string(O.t.XXENra)
+                            children: j.intl.string(j.t.XXENra)
                         })
                     }),
                     (0, i.jsx)('th', {
                         scope: 'col',
-                        className: j.headerCell,
+                        className: O.headerCell,
                         children: (0, i.jsx)(A, { premiumType: C.p9.TIER_0 })
                     }),
                     (0, i.jsx)('th', {
                         scope: 'col',
-                        className: l()(j.headerCell, j.topBorderRadius),
+                        className: l()(O.headerCell, O.topBorderRadius),
                         children: (0, i.jsx)(A, { premiumType: C.p9.TIER_2 })
                     })
                 ]
@@ -84,22 +84,22 @@ let I = () =>
     R = (e) => {
         let { label: t, tier0Column: n, tier2Column: r, withBottomBorder: s = !0, withBottomMargin: a = !1 } = e;
         return (0, i.jsxs)('tr', {
-            className: l()(j.row, {
-                [j.rowBottomBorder]: s,
-                [j.bottomMargin]: a
+            className: l()(O.row, {
+                [O.rowBottomBorder]: s,
+                [O.bottomMargin]: a
             }),
             children: [
                 (0, i.jsx)('th', {
                     scope: 'row',
-                    className: j.labelCell,
+                    className: O.labelCell,
                     children: t
                 }),
                 (0, i.jsx)('td', {
-                    className: j.cell,
+                    className: O.cell,
                     children: n
                 }),
                 (0, i.jsx)('td', {
-                    className: j.cell,
+                    className: O.cell,
                     children: r
                 })
             ]
@@ -109,7 +109,7 @@ let I = () =>
         var t;
         let n,
             { className: s, hidePill: o = !1, selectedPlanColumnClassName: c, selectedPlanTier: u = C.p9.TIER_2 } = e,
-            { analyticsLocations: O } = (0, g.ZP)(m.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
+            { analyticsLocations: j } = (0, g.ZP)(m.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
             S = (0, a.e7)([h.ZP], () => h.ZP.hasFetchedSubscriptions()),
             v = (0, p.V)(),
             T = 'PlanComparisonTable';
@@ -140,30 +140,30 @@ let I = () =>
             (n = o ? null : null != N ? (0, i.jsx)(y, {}) : (0, i.jsx)(I, {}));
         let U = A === C.Si.TIER_0 || u === C.p9.TIER_0;
         return (0, i.jsx)(g.Gt, {
-            value: O,
+            value: j,
             children: (0, i.jsx)('div', {
-                className: l()(j.root, s),
+                className: l()(O.root, s),
                 'data-testid': 'v2-marketing-page-comparison-table',
                 children: (0, i.jsxs)('div', {
-                    className: j.tableWrapper,
+                    className: O.tableWrapper,
                     children: [
                         (0, i.jsxs)('div', {
                             className: l()(c, {
-                                [j.tier0ColumnPosition]: U,
-                                [j.tier2ColumnPosition]: !U
+                                [O.tier0ColumnPosition]: U,
+                                [O.tier2ColumnPosition]: !U
                             }),
                             children: [
                                 !U && n,
                                 (0, i.jsx)('div', {
                                     className: l()({
-                                        [j.tier0ColumnOuter]: U,
-                                        [j.tier2ColumnOuter]: !U
+                                        [O.tier0ColumnOuter]: U,
+                                        [O.tier2ColumnOuter]: !U
                                     })
                                 })
                             ]
                         }),
                         (0, i.jsxs)('table', {
-                            className: j.table,
+                            className: O.table,
                             children: [
                                 (0, i.jsx)(P, {}),
                                 (0, i.jsx)('tbody', {

@@ -19,8 +19,8 @@ function f(e) {
         { pendingNameplate: b, pendingErrors: _ } = (0, u._A)(),
         x = [s.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE],
         [E, C] = (0, o.US)(x),
-        O = E === s.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE,
-        j = r.useCallback(() => {
+        j = E === s.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE,
+        O = r.useCallback(() => {
             C(g.L.TAKE_ACTION), (0, d.f)({ analyticsLocations: n });
         }, [n, C]),
         S = r.useCallback(() => {
@@ -28,14 +28,14 @@ function f(e) {
         }, []);
     return (0, i.jsx)(m.Z, {
         title: p.intl.string(p.t.x5CoXV),
-        titleIcon: O ? (0, i.jsx)(c.Z, { className: h.newBadge }) : void 0,
+        titleIcon: j ? (0, i.jsx)(c.Z, { className: h.newBadge }) : void 0,
         errors: _,
         children: (0, i.jsxs)('div', {
             className: h.section,
             children: [
                 (0, i.jsx)(l.zxk, {
                     size: l.zxk.Sizes.SMALL,
-                    onClick: j,
+                    onClick: O,
                     children: p.intl.string(p.t.BwdeMz)
                 }),
                 (void 0 === b ? null != f : null != b) &&

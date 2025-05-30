@@ -1,7 +1,7 @@
 n.d(t, {
     ED: () => x,
-    fO: () => O,
-    qp: () => j
+    fO: () => j,
+    qp: () => O
 });
 var i = n(255367),
     r = n(73800),
@@ -60,7 +60,7 @@ let x = (e) =>
         position: 'right',
         align: 'bottom'
     },
-    O = (e) => {
+    j = (e) => {
         var t,
             n,
             { onClose: a, onCtaClick: c, targetElementRef: m, isGuildBarScrolling: h, children: f } = e,
@@ -83,12 +83,12 @@ let x = (e) =>
                 }
                 return r;
             })(e, ['onClose', 'onCtaClick', 'targetElementRef', 'isGuildBarScrolling', 'children']);
-        let j = r.useRef(null),
+        let O = r.useRef(null),
             S = (0, o.Q3)('VirtualCurrency: DiscoveryOnboardingCoachmark'),
             v = r.useCallback(
                 (e) => {
                     if (S) {
-                        let t = window.innerHeight - ((0, g.t4)() + O.COACHMARK_VERTICAL_OFFSET);
+                        let t = window.innerHeight - ((0, g.t4)() + j.COACHMARK_VERTICAL_OFFSET);
                         return e.top <= t;
                     }
                     return !0;
@@ -97,10 +97,10 @@ let x = (e) =>
             ),
             T = (0, l.e7)([u.Z], () => u.Z.getExpandedFolders().size);
         r.useEffect(() => {
-            null !== j.current && j.current.updateElementPositionWithPolling();
+            null !== O.current && O.current.updateElementPositionWithPolling();
         }, [T]),
             r.useEffect(() => {
-                null !== j.current && j.current.updateElementPosition();
+                null !== O.current && O.current.updateElementPosition();
             }, [h]);
         let N = (0, s.TH)().pathname,
             I = r.useCallback(() => {
@@ -110,7 +110,7 @@ let x = (e) =>
             g.WS,
             ((t = _(
                 {
-                    positionControlRef: j,
+                    positionControlRef: O,
                     targetElementRef: m,
                     calculateVisibility: v,
                     defaultCoachmarkAlign: C.align,
@@ -145,8 +145,8 @@ let x = (e) =>
             t)
         );
     };
-O.COACHMARK_VERTICAL_OFFSET = 10;
-let j = (e) => {
+j.COACHMARK_VERTICAL_OFFSET = 10;
+let O = (e) => {
     let { isVirtualCurrencyEnabled: t, discoveryButtonRef: n, scrollToBottom: i } = e,
         s = (0, o.Q3)('VirtualCurrency: DiscoveryOnboardingCoachmark'),
         l = r.useCallback(() => {

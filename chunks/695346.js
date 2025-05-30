@@ -1,15 +1,16 @@
 n.d(t, {
-    A2: () => eY,
+    A2: () => eW,
     AY: () => en,
     CM: () => ei,
+    CW: () => ew,
     Cr: () => ep,
     DC: () => ea,
-    Ex: () => ex,
+    Ex: () => ek,
     Fg: () => J,
     G6: () => ed,
     H1: () => L,
     I0: () => M,
-    JG: () => ej,
+    JG: () => eU,
     L1: () => eT,
     NA: () => eb,
     OW: () => el,
@@ -20,23 +21,23 @@ n.d(t, {
     QZ: () => N,
     R$: () => b,
     RS: () => eE,
-    R_: () => ek,
-    Rt: () => eZ,
+    R_: () => eM,
+    Rt: () => eH,
     SE: () => eR,
     Sb: () => eS,
-    Sh: () => eG,
+    Sh: () => eB,
     T4: () => D,
     UP: () => ec,
     Wp: () => eC,
-    Wz: () => eL,
+    Wz: () => ex,
     Xc: () => B,
     Xk: () => x,
     Xr: () => eu,
-    YC: () => eH,
+    YC: () => eY,
     YT: () => A,
     Yk: () => eN,
     _O: () => w,
-    _j: () => eM,
+    _j: () => ej,
     bh: () => er,
     bm: () => es,
     cC: () => I,
@@ -52,15 +53,15 @@ n.d(t, {
     fv: () => C,
     fz: () => T,
     gR: () => q,
-    gw: () => eB,
+    gw: () => eF,
     h2: () => Q,
-    hg: () => eF,
+    hg: () => eV,
     iG: () => z,
-    iH: () => eD,
+    iH: () => eL,
     jU: () => ee,
     kJ: () => K,
     kU: () => et,
-    l4: () => eV,
+    l4: () => eZ,
     mX: () => W,
     nc: () => ey,
     qF: () => k,
@@ -73,7 +74,7 @@ n.d(t, {
     xM: () => eo,
     xq: () => X,
     zA: () => Y,
-    zY: () => eU
+    zY: () => eG
 }),
     n(388685);
 var r = n(392711),
@@ -759,14 +760,21 @@ let eS = (0, d.KM)(
         (e) => (null != e ? e : eP),
         (e) => e
     ),
-    ew = [],
-    eD = (0, d.Zc)(
+    ew = (0, d.Zc)(
+        'privacy',
+        'activityRestrictedGuildIds',
+        (e) => (null != e ? e : eP),
+        (e) => e,
+        p.fy.FREQUENT_USER_ACTION
+    ),
+    eD = [],
+    eL = (0, d.Zc)(
         'privacy',
         'activityJoiningRestrictedGuildIds',
-        (e) => (null != e ? e : ew),
+        (e) => (null != e ? e : eD),
         (e) => e
     ),
-    eL = (0, d.TG)({
+    ex = (0, d.TG)({
         baseSetting: (0, d.Zc)(
             'privacy',
             'defaultGuildsActivityRestricted',
@@ -778,13 +786,13 @@ let eS = (0, d.KM)(
         ineligibleDefault: a.E5.OFF,
         eligibleDefault: () => a.E5.ON
     }),
-    ex = (0, d.Zc)(
+    ek = (0, d.Zc)(
         'privacy',
         'familyCenterEnabledV2',
         (e) => (null == e ? void 0 : e.value),
         (e) => o.D5.create({ value: e })
     ),
-    ek = (0, d.Zc)(
+    eM = (0, d.Zc)(
         'privacy',
         'hideLegacyUsername',
         (e) => {
@@ -793,7 +801,7 @@ let eS = (0, d.KM)(
         },
         (e) => o.D5.create({ value: e })
     ),
-    eM = (0, d.Zc)(
+    ej = (0, d.Zc)(
         'privacy',
         'allowGameFriendDmsInDiscord',
         (e) => {
@@ -802,19 +810,19 @@ let eS = (0, d.KM)(
         },
         (e) => o.D5.create({ value: e })
     ),
-    ej = (0, d.Zc)(
+    eU = (0, d.Zc)(
         'privacy',
         'slayerSdkReceiveDmsInGame',
         (e) => (null != e ? e : a.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET),
         (e) => e
     ),
-    eU = (0, d.Zc)(
+    eG = (0, d.Zc)(
         'ads',
         'alwaysDeliver',
         (e) => null != e && e,
         (e) => e
     ),
-    eG = (0, d.Zc)(
+    eB = (0, d.Zc)(
         'textAndImages',
         'explicitContentSettings',
         (e) => {
@@ -834,7 +842,7 @@ let eS = (0, d.KM)(
             };
         }
     ),
-    eB = (0, d.Zc)(
+    eF = (0, d.Zc)(
         'textAndImages',
         'keywordFilterSettings',
         (e) => {
@@ -872,7 +880,7 @@ let eS = (0, d.KM)(
         },
         (e) => o.D5.create({ value: e })
     );
-let eF = (0, d.Zc)(
+let eV = (0, d.Zc)(
     'appearance',
     'timestampHourCycle',
     (e) => (null != e ? e : a.hg.AUTO),
@@ -890,25 +898,25 @@ let eF = (0, d.Zc)(
         (e) => (null != e ? e : a.n9.SWIPE_RIGHT_TO_LEFT_UNSET),
         (e) => e
     );
-let eV = (0, d.Zc)(
+let eZ = (0, d.Zc)(
         'userContent',
         'lastReceivedChangelogId',
         (e) => (null != e ? e : '0'),
         (e) => e
     ),
-    eZ = (0, d.Zc)(
+    eH = (0, d.Zc)(
         'safetySettings',
         'ignoreProfileSpeedbumpDisabled',
         (e) => null != e && e,
         (e) => e
     ),
-    eH = (0, d.Zc)(
+    eY = (0, d.Zc)(
         'appearance',
         'uiDensity',
         (e) => (e === a.Pi.UNSET_UI_DENSITY ? a.Pi.DEFAULT : null != e ? e : a.Pi.DEFAULT),
         (e) => e
     ),
-    eY = (0, d.Zc)(
+    eW = (0, d.Zc)(
         'inAppFeedbackSettings',
         'inAppFeedbackStates',
         (e) => (0, r.mapValues)(null != e ? e : {}, (e) => (0, r.mapValues)(e, (e) => ((null == e ? void 0 : e.value) != null ? Number(e.value) : void 0))),

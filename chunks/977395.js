@@ -1,4 +1,4 @@
-n.d(t, { f: () => b });
+n.d(t, { f: () => g });
 var r = n(534517),
     l = n(819570),
     a = n(909688),
@@ -9,5 +9,5 @@ var r = n(534517),
     u = n(635316),
     d = n(91641),
     p = n(166350),
-    g = n(987338);
-let b = new d.E([p.NR, p.ZI, p.Ob, p.uc, p.m1, c.k, s.g, a.j, l.M, i.l, o.A, u.K, r.B], g.$P.COLLECTIBLES_SHOP_OPEN, { location: 'collectibles shop open' });
+    f = n(987338);
+let g = new d.E([p.NR, p.ZI, p.Ob, p.uc, p.m1, c.k, s.g, a.j, l.M, i.l, o.A, u.K, r.B], f.$P.COLLECTIBLES_SHOP_OPEN, { location: 'collectibles shop open' });

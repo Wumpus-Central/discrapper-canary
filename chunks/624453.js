@@ -1,144 +1,185 @@
-n.d(t, { Z: () => _ }), n(290780);
+n.d(t, {
+    M: () => y,
+    Z: () => P
+}),
+    n(388685),
+    n(290780);
 var i,
     r,
     l,
-    a = n(392711),
-    o = n.n(a),
-    s = n(442837),
-    c = n(570140),
-    u = n(247206),
-    d = n(786761),
-    f = n(706454),
-    g = n(592125),
-    m = n(271383),
-    p = n(430824),
-    b = n(375954),
-    h = n(699516),
-    O = n(594174);
-let E = {};
-function y(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-        n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        r = g.Z.getChannel(e),
-        l = null != r ? r.getGuildId() : null;
-    return {
-        id: e,
-        messages: t.map((e) => (0, d.e5)(e)),
-        guildId: l,
-        loaded: n,
-        loading: i
-    };
-}
-function v(e) {
+    a,
+    o = n(392711),
+    s = n.n(o),
+    c = n(442837),
+    u = n(570140),
+    d = n(247206),
+    f = n(786761),
+    g = n(706454),
+    m = n(592125),
+    p = n(271383),
+    b = n(430824),
+    h = n(375954),
+    O = n(699516),
+    E = n(594174),
+    y = (((r = {}).LOADING = 'LOADING'), (r.LOADED_HAS_MORE = 'LOADED_HAS_MORE'), (r.LOADED_FINISHED = 'LOADING_FINISHED'), (r.FAILED = 'FAILED'), r);
+let v = {};
+function S(e) {
     let { channel: t } = e;
-    delete E[t.id];
+    delete v[t.id];
 }
 function j() {
-    o().forEach(E, (e) => {
-        e.messages = e.messages.map((e) => e.set('blocked', h.Z.isBlockedForMessage(e)).set('ignored', h.Z.isIgnoredForMessage(e)));
+    s().forEach(v, (e) => {
+        e.items.forEach((e) => {
+            let { message: t } = e;
+            t.set('blocked', O.Z.isBlockedForMessage(t)), t.set('ignored', O.Z.isIgnoredForMessage(t));
+        }),
+            (e.items = e.items.slice());
     });
 }
-class S extends (i = s.ZP.Store) {
+class _ extends (i = c.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, p.Z, m.ZP, b.Z, O.default, f.default);
+        this.waitFor(m.Z, b.Z, p.ZP, h.Z, E.default, g.default);
     }
-    getPinnedMessages(e) {
-        var t;
-        return null != (t = E[e]) ? t : void 0;
-    }
-    loaded(e) {
-        return null != E[e] && E[e].loaded;
+    getPins(e) {
+        return v[e];
     }
 }
-(l = 'ChannelPinsStore'),
-    (r = 'displayName') in S
-        ? Object.defineProperty(S, r, {
-              value: l,
+(a = 'ChannelPinsStore'),
+    (l = 'displayName') in _
+        ? Object.defineProperty(_, l, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (S[r] = l);
-let _ = new S(c.Z, {
+        : (_[l] = a);
+let P = new _(u.Z, {
     CONNECTION_OPEN: function () {
-        E = {};
+        v = {};
     },
+    LOAD_PINNED_MESSAGES: function (e) {
+        var t, n;
+        let { channelId: i, reset: r } = e;
+        if (!r && null != v[i]) {
+            v[i].state = 'LOADING';
+            return;
+        }
+        let l = null != (n = null == (t = m.Z.getChannel(i)) ? void 0 : t.getGuildId()) ? n : void 0;
+        v[i] = {
+            id: i,
+            items: [],
+            state: 'LOADING',
+            guildId: l
+        };
+    },
+    LOAD_PINNED_MESSAGES_SUCCESS: function (e) {
+        let { channelId: t, pins: n, hasMore: i } = e,
+            r = v[t];
+        if (null == r) return !1;
+        let l = n.map((e) => {
+            let { pinned_at: t, message: n } = e;
+            return {
+                pinnedAt: new Date(Date.parse(t)),
+                message: (0, f.e5)(n)
+            };
+        });
+        (r.items = [...r.items, ...l]), (r.state = i ? 'LOADED_HAS_MORE' : 'LOADING_FINISHED');
+    },
+    LOAD_PINNED_MESSAGES_FAILURE: function (e) {
+        let { channelId: t } = e,
+            n = v[t];
+        if (null == n) return !1;
+        n.state = 'FAILED';
+    },
+    CHANNEL_DELETE: S,
+    THREAD_DELETE: S,
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        E = o()(E)
+        v = s()(v)
             .filter((e) => e.guildId !== t.id)
             .keyBy('id')
             .value();
+    },
+    MESSAGE_DELETE: function (e) {
+        let { id: t, channelId: n } = e,
+            i = v[n];
+        if (
+            null == i ||
+            0 ===
+                s().remove(i.items, (e) => {
+                    let { message: n } = e;
+                    return n.id === t;
+                }).length
+        )
+            return !1;
+        (i.items = i.items.slice()), (v[n] = i);
+    },
+    MESSAGE_DELETE_BULK: function (e) {
+        let { ids: t, channelId: n } = e,
+            i = v[n];
+        if (null == i) return !1;
+        i.items = i.items.filter((e) => {
+            let { message: n } = e;
+            return !t.includes(n.id);
+        });
     },
     MESSAGE_UPDATE: function (e) {
         let t = e.message.id,
             n = e.message.channel_id;
         if (null == n) return !1;
-        let i = E[n];
-        if (null == i && !e.message.pinned) return !1;
+        let i = v[n];
+        if (null == i) return !1;
         if (null == e.message.author) {
-            if (null != i) {
-                let r = o().findIndex(i.messages, (e) => e.id === t);
-                if (r >= 0) {
-                    let t = i.messages[r],
-                        l = (0, d.wi)(t, e.message);
-                    if (l !== t) {
-                        let e = i.messages.slice();
-                        (e[r] = l), (E[n].messages = e);
-                    }
-                }
+            let r = s().findIndex(i.items, (e) => {
+                let { message: n } = e;
+                return n.id === t;
+            });
+            if (-1 === r) return;
+            let { pinnedAt: l, message: a } = i.items[r],
+                o = (0, f.wi)(a, e.message);
+            if (o !== a) {
+                let e = i.items.slice();
+                (e[r] = {
+                    pinnedAt: l,
+                    message: o
+                }),
+                    (v[n].items = e);
             }
             return;
         }
         if (e.message.pinned) {
-            if (null == i) {
-                (i = y(n, [e.message], !1)), (E[n] = i);
-                return;
-            }
-            i.messages = i.messages.slice();
-            let r = o().findIndex(i.messages, (e) => e.id === t);
-            -1 === r ? i.messages.unshift((0, d.e5)(e.message)) : (i.messages[r] = (0, d.wi)(i.messages[r], e.message)), (E[n] = i);
-        } else {
-            if (null == i) return;
-            let e = o().findIndex(i.messages, (e) => e.id === t);
-            if (-1 === e) return;
-            (i.messages = i.messages.slice()), i.messages.splice(e, 1), (E[n] = i);
+            i.items = i.items.slice();
+            let n = s().findIndex(i.items, (e) => {
+                let { message: n } = e;
+                return n.id === t;
+            });
+            -1 === n
+                ? i.items.unshift({
+                      message: (0, f.e5)(e.message),
+                      pinnedAt: new Date()
+                  })
+                : (i.items[n].message = (0, f.wi)(i.items[n].message, e.message));
+            return;
         }
+        let r = s().findIndex(i.items, (e) => {
+            let { message: n } = e;
+            return n.id === t;
+        });
+        if (-1 === r) return !1;
+        (i.items = i.items.slice()), i.items.splice(r, 1);
     },
-    MESSAGE_DELETE: function (e) {
-        let { id: t, channelId: n } = e,
-            i = E[n];
-        if (null == i || 0 === o().remove(i.messages, (e) => e.id === t).length) return !1;
-        (i.messages = i.messages.slice()), (E[n] = i);
-    },
-    MESSAGE_DELETE_BULK: function (e) {
-        let { ids: t, channelId: n } = e,
-            i = E[n];
-        null != i && (i.messages = i.messages.filter((e) => -1 === t.indexOf(e.id)));
-    },
-    LOAD_PINNED_MESSAGES: function (e) {
-        let { channelId: t } = e;
-        E[t] = y(t, [], !1, !0);
-    },
-    LOAD_PINNED_MESSAGES_SUCCESS: function (e) {
-        let { channelId: t, messages: n } = e;
-        E[t] = y(t, n, !0);
-    },
-    LOAD_PINNED_MESSAGES_FAILURE: function (e) {
-        let { channelId: t } = e;
-        delete E[t];
-    },
-    CHANNEL_DELETE: v,
-    THREAD_DELETE: v,
     RELATIONSHIP_ADD: j,
     RELATIONSHIP_REMOVE: j,
     RELATIONSHIP_UPDATE: j,
     MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function (e) {
         let { messageId: t, channelId: n } = e,
-            i = E[n];
-        if (null == i) return;
-        let r = o().findIndex(i.messages, (e) => e.id === t);
-        -1 !== r && ((i.messages = i.messages.slice()), (i.messages[r] = (0, u.Cm)(i.messages[r])), (E[n] = i));
+            i = v[n];
+        if (null == i) return !1;
+        let r = s().findIndex(i.items, (e) => {
+            let { message: n } = e;
+            return n.id === t;
+        });
+        if (-1 === r) return !1;
+        (i.items = i.items.slice()), (i.items[r].message = (0, d.Cm)(i.items[r].message));
     }
 });

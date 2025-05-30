@@ -1,113 +1,120 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(255367),
     l = n(73800),
     a = n(979554),
     i = n(399606),
-    o = n(481060),
-    s = n(594174),
-    c = n(381585),
-    u = n(597688),
-    d = n(370039),
-    p = n(937510),
-    g = n(303952),
-    b = n(38900),
-    f = n(709999),
-    h = n(81136),
-    m = n(215023),
-    _ = n(388032),
-    C = n(484920),
-    v = n(558513),
-    O = n(676790),
-    S = n(42742),
-    x = n(266058);
-function E(e) {
+    o = n(780384),
+    s = n(481060),
+    c = n(410030),
+    u = n(594174),
+    d = n(381585),
+    p = n(597688),
+    f = n(370039),
+    g = n(937510),
+    b = n(303952),
+    h = n(38900),
+    m = n(709999),
+    _ = n(81136),
+    C = n(215023),
+    v = n(388032),
+    O = n(484920),
+    S = n(558513),
+    x = n(662128),
+    E = n(676790),
+    y = n(665195),
+    j = n(42742),
+    P = n(283727),
+    k = n(266058),
+    T = n(719138);
+function I(e) {
     var t;
-    let { isFetchingCategories: n, isFullScreen: E, scrollerRef: j, tab: y } = e,
-        P = (0, c.sp)(),
-        k = null != (t = null == P ? void 0 : P.sessionId) ? t : '',
-        { noCache: T, includeUnpublished: I } = (0, h.Z)(),
-        L = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
-        B = (0, i.e7)([u.Z], () => u.Z.productsWithVariantsAsGroup),
-        [w, N] = l.useState(1),
-        A = () => {
+    let { isFetchingCategories: n, isFullScreen: I, scrollerRef: L, tab: B } = e,
+        w = (0, d.sp)(),
+        N = null != (t = null == w ? void 0 : w.sessionId) ? t : '',
+        { noCache: A, includeUnpublished: R } = (0, _.Z)(),
+        Z = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
+        F = (0, i.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
+        [D, H] = l.useState(1),
+        M = () => {
             var e;
-            null == j || null == (e = j.current) || e.scrollToTop({ animate: !0 });
+            null == L || null == (e = L.current) || e.scrollToTop({ animate: !0 });
         },
-        [R, Z, F] = l.useMemo(() => {
-            switch (y) {
-                case m.AW.AVATAR_DECORATIONS:
-                    return [_.intl.string(_.t.dRZYND), O.Z, a.Z.AVATAR_DECORATION];
-                case m.AW.PROFILE_EFFECTS:
-                    return [_.intl.string(_.t['1cNjt7']), x.Z, a.Z.PROFILE_EFFECT];
-                case m.AW.BUNDLES:
-                    return [_.intl.string(_.t.FYFppq), v.Z, a.Z.BUNDLE];
-                case m.AW.NAMEPLATES:
-                    return [_.intl.string(_.t.V68Fq6), S.Z, a.Z.NAMEPLATE];
+        W = (0, c.Fg)(),
+        V = (0, o.ap)(W),
+        [U, G, z] = l.useMemo(() => {
+            switch (B) {
+                case C.AW.AVATAR_DECORATIONS:
+                    return [v.intl.string(v.t.dRZYND), V ? y.Z : E.Z, a.Z.AVATAR_DECORATION];
+                case C.AW.PROFILE_EFFECTS:
+                    return [v.intl.string(v.t['1cNjt7']), V ? T.Z : k.Z, a.Z.PROFILE_EFFECT];
+                case C.AW.NAMEPLATES:
+                    return [v.intl.string(v.t.V68Fq6), V ? P.Z : j.Z, a.Z.NAMEPLATE];
+                case C.AW.BUNDLES:
+                    return [v.intl.string(v.t.FYFppq), V ? x.Z : S.Z, a.Z.BUNDLE];
             }
-        }, [y]),
-        D = (0, d.a)(),
-        H = l.useMemo(
+        }, [B, V]),
+        q = (0, f.a)(),
+        K = l.useMemo(
             () =>
-                D(
-                    B.filter((e) => {
+                q(
+                    F.filter((e) => {
                         var t;
-                        return e.type === F || (e.type === a.Z.VARIANTS_GROUP && (null == (t = e.variants) ? void 0 : t.some((e) => e.type === F)) === !0);
+                        return e.type === z || (e.type === a.Z.VARIANTS_GROUP && (null == (t = e.variants) ? void 0 : t.some((e) => e.type === z)) === !0);
                     })
                 ),
-            [B, F, D]
+            [F, z, q]
         ),
-        M = (0, p.l)(H);
+        Y = (0, g.l)(K);
     return (l.useEffect(() => {
-        (0, g.n)({
-            sessionId: k,
-            checkpoint: g.a.SHOP_MOUNTED,
-            tab: y,
-            isFullScreen: E,
-            unpublishedCategoriesShown: I,
-            cacheDisabled: T
+        (0, b.n)({
+            sessionId: N,
+            checkpoint: b.a.SHOP_MOUNTED,
+            tab: B,
+            isFullScreen: I,
+            unpublishedCategoriesShown: R,
+            cacheDisabled: A
         });
     }, []),
     l.useEffect(() => {
         n ||
-            (0, g.n)({
-                sessionId: k,
-                checkpoint: g.a.SHOP_RENDERED,
-                tab: y,
-                isFullScreen: E,
-                unpublishedCategoriesShown: I,
-                cacheDisabled: T
+            (0, b.n)({
+                sessionId: N,
+                checkpoint: b.a.SHOP_RENDERED,
+                tab: B,
+                isFullScreen: I,
+                unpublishedCategoriesShown: R,
+                cacheDisabled: A
             });
-    }, [k, E, I, T, n, y]),
-    n || null == L)
-        ? (0, r.jsx)(b.Z, {})
+    }, [N, I, R, A, n, B]),
+    n || null == Z)
+        ? (0, r.jsx)(h.Z, {})
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)('div', {
-                      style: { backgroundImage: 'url('.concat(Z, ')') },
-                      className: C.bannerContainer,
-                      children: (0, r.jsx)(o.X6q, {
+                      style: { backgroundImage: 'url('.concat(G, ')') },
+                      className: O.bannerContainer,
+                      children: (0, r.jsx)(s.X6q, {
                           variant: 'heading-xxl/extrabold',
-                          color: 'always-white',
-                          children: R
+                          children: U
                       })
                   }),
                   (0, r.jsx)('div', {
-                      className: C.products,
-                      children: M.slice(40 * (w - 1), 40 * w).map((e, t) => {
-                          let n = u.Z.getCategory(e.categorySkuId);
+                      className: O.products,
+                      children: Y.slice(40 * (D - 1), 40 * D).map((e, t) => {
+                          let n = p.Z.getCategory(e.categorySkuId);
                           return null == n
                               ? null
                               : (0, r.jsx)(
-                                    c.k0,
+                                    d.k0,
                                     {
                                         newValue: { tilePosition: t },
                                         children: (0, r.jsx)(
-                                            f.Z,
+                                            m.Z,
                                             {
                                                 product: e,
-                                                user: L,
+                                                user: Z,
                                                 category: n,
-                                                tab: y
+                                                tab: B
                                             },
                                             e.skuId
                                         )
@@ -116,16 +123,16 @@ function E(e) {
                                 );
                       })
                   }),
-                  M.length > 40 &&
+                  Y.length > 40 &&
                       (0, r.jsx)('div', {
-                          className: C.paginationContainer,
+                          className: O.paginationContainer,
                           children: (0, r.jsx)('div', {
-                              children: (0, r.jsx)(o.DsT, {
-                                  currentPage: w,
-                                  totalCount: M.length,
+                              children: (0, r.jsx)(s.DsT, {
+                                  currentPage: D,
+                                  totalCount: Y.length,
                                   pageSize: 40,
                                   onPageChange: (e) => {
-                                      N(e), A();
+                                      H(e), M();
                                   },
                                   disablePaginationGap: !0
                               })

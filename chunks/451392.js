@@ -16,7 +16,7 @@ var r = n(120356),
     f = n(388032),
     b = n(732391);
 function _(e) {
-    let { user: t, pendingAvatarSrc: n, pendingColors: r, onThemeColorsChange: l, preventDisabled: _, guildId: x, className: E, showPremiumIcon: C = !0, showResetThemeButton: O = !1, forcedDivider: j } = e,
+    let { user: t, pendingAvatarSrc: n, pendingColors: r, onThemeColorsChange: l, preventDisabled: _, guildId: x, className: E, showPremiumIcon: C = !0, showResetThemeButton: j = !1, forcedDivider: O } = e,
         S = (0, u.ZP)(t.id, x),
         { primaryColor: v, secondaryColor: T } = (0, m.Z)({
             user: t,
@@ -37,7 +37,7 @@ function _(e) {
         disabled: !N && !_,
         className: s()(b.__invalid_profileThemesSection, E),
         showPremiumIcon: C,
-        forcedDivider: j,
+        forcedDivider: O,
         children: (0, i.jsxs)('div', {
             className: b.sectionContainer,
             children: [
@@ -73,7 +73,7 @@ function _(e) {
                         })
                     })
                 }),
-                O &&
+                j &&
                     null != x &&
                     (0, i.jsx)(c.zxk, {
                         className: b.resetButton,
