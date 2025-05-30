@@ -27676,11 +27676,11 @@ html:not(.visual-refresh) .root_e5f3a9 {
 }
 
 .tier0Background_c7bb69 {
-    background: radial-gradient(100% 100% at 50% 100%, var(--background-primary) 60%, var(--transparent) 100%), linear-gradient(270deg, var(--background-modal-gradient-green-end) 0, var(--background-modal-gradient-green-start) 100%)
+    background: radial-gradient(100% 100% at 50% 100%, var(--background-primary) 60%, var(--transparent) 100%), linear-gradient(270deg, var(--background-modal-gradient-nitro-2-end) 0, var(--background-modal-gradient-nitro-2-start) 100%)
 }
 
 .tier2Background_c7bb69 {
-    background: radial-gradient(100% 100% at 50% 100%, var(--background-primary) 60%, var(--transparent) 100%), linear-gradient(270deg, var(--background-modal-gradient-pink-end) 0, var(--background-modal-gradient-pink-start) 100%)
+    background: radial-gradient(100% 100% at 50% 100%, var(--background-primary) 60%, var(--transparent) 100%), linear-gradient(270deg, var(--background-modal-gradient-nitro-1-end) 0, var(--background-modal-gradient-nitro-1-start) 100%)
 }
 
 .bigWumpus_c7bb69 {
