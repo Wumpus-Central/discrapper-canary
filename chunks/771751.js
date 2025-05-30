@@ -150,10 +150,10 @@ function S(e) {
             };
         }
     }, [b, j]);
-    let U = 'Active';
+    let B = 'Active';
     return (
-        Z && (U = 'Acked'),
-        L && (U = 'Expired'),
+        Z && (B = 'Acked'),
+        L && (B = 'Expired'),
         (0, a.jsxs)('div', {
             className: i()(_.card, D ? _.gradientWrapperTier0 : _.gradientWrapperTier2),
             children: [
@@ -255,8 +255,8 @@ function S(e) {
                             }),
                             children: (0, a.jsx)(c.Text, {
                                 variant: 'eyebrow',
-                                color: 'Acked' === U ? void 0 : 'always-white',
-                                children: U
+                                color: 'Acked' === B ? void 0 : 'always-white',
+                                children: B
                             })
                         }),
                         null != I &&
@@ -495,13 +495,13 @@ function I() {
         [k, R] = r.useState(!0),
         [A, Z] = r.useState(10080),
         [L, D] = r.useState([]),
-        { entitlements: M, deleteFractionalPremium: z, refreshEntitlementList: U } = (0, f.m)();
+        { entitlements: M, deleteFractionalPremium: z, refreshEntitlementList: B } = (0, f.m)();
     r.useEffect(() => {
-        U();
-    }, [U]);
-    let B = (e) => e.filter((e) => e.sourceType === v.kNB.REVERSE_TRIAL && null != e.endsAt && e.endsAt > new Date());
+        B();
+    }, [B]);
+    let U = (e) => e.filter((e) => e.sourceType === v.kNB.REVERSE_TRIAL && null != e.endsAt && e.endsAt > new Date());
     r.useEffect(() => {
-        D(B(M));
+        D(U(M));
     }, [M]),
         r.useEffect(() => {
             (0 === e.length || 0 === n.length || k) &&
@@ -537,7 +537,7 @@ function I() {
         },
         H = async () => {
             let e = new Date(Date.now() + 60 * A * 1000).toISOString();
-            await T(e), U();
+            await T(e), B();
         };
     return (0, a.jsx)(c.zJl, {
         className: j.panel,

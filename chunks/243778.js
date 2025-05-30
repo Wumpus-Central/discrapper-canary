@@ -1,5 +1,6 @@
 n.d(t, {
-    O1: () => _,
+    Nq: () => _,
+    O1: () => p,
     US: () => l,
     XR: () => c,
     Xf: () => f,
@@ -55,6 +56,19 @@ function f(e) {
     );
 }
 function _(e) {
+    let { contentType: t, timeRecurringConfig: n, groupName: i, bypassAutoDismiss: a, children: l } = e,
+        [c, u] = (0, o.Tt)(t, n, i);
+    return (
+        (0, s.A)(c, u, a),
+        (0, r.jsx)(r.Fragment, {
+            children: l({
+                visibleContent: c,
+                markAsDismissed: u
+            })
+        })
+    );
+}
+function p(e) {
     let { contentType: t, newSnowflakeId: n, timeRecurringConfig: i, groupName: a, bypassAutoDismiss: l, children: c } = e,
         [u, d] = (0, o.sx)(t, i, n, a);
     return (

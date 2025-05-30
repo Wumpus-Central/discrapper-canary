@@ -4106,6 +4106,7 @@ var n_ = (function (e) {
             (e.RING_CALL_ACCEPTED = 'ring_call_accepted'),
             (e.CHANNEL_ICON_EDIT_PROGRESSED = 'channel_icon_edit_progressed'),
             (e.GDM_EDIT_INTERACTED = 'gdm_edit_interacted'),
+            (e.CAN_OPEN_URL_REQUESTED = 'can_open_url_requested'),
             e
         );
     })({}),

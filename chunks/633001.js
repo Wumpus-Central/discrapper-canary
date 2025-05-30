@@ -341,10 +341,10 @@ function z() {
         S = (0, o.e7)([h.default], () => h.default.getForcedRenderMode()),
         [R, A] = r.useState({}),
         [Z, z] = r.useState(S),
-        U = (e) => {
+        B = (e) => {
             z(e), u.Z.forceRenderMode(e);
         },
-        B = [
+        U = [
             {
                 label: m.R5.UNSET,
                 value: m.R5.UNSET
@@ -596,8 +596,8 @@ function z() {
                                 children: (0, a.jsx)(c.PhF, {
                                     serialize: (e) => e,
                                     isSelected: (e) => e === Z,
-                                    options: B,
-                                    select: U,
+                                    options: U,
+                                    select: B,
                                     popoutLayerContext: O.O$
                                 })
                             })

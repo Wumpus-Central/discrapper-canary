@@ -1,12 +1,10 @@
-n.d(t, { t: () => u });
+n.d(t, { t: () => l });
 var r = n(115434),
     i = n(704215),
     a = n(283693),
     o = n(874703),
-    s = n(75459),
-    l = n(765018),
-    c = n(474936);
-function u(e) {
+    s = n(75459);
+function l(e) {
     switch (e) {
         case i.z.COLLECTIBLES_SHOP_ENTRY_MARKETING:
             var t, n;
@@ -16,8 +14,6 @@ function u(e) {
         case i.z.GIFTING_PROMOTION_MOBILE_FIRST_TIME_HALFSHEET:
         case i.z.GIFTING_PROMOTION_REMINDER:
             return s.D_;
-        case i.z.NITRO_TENURE_BADGE_LEVEL_UP:
-            return (0, l.q)(c.VU.PREMIUM_TENURE_72_MONTH);
         default:
             return (0, a.UT)(e, { andFail: !1 }), 0;
     }
