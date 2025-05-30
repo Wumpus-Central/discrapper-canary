@@ -7731,6 +7731,10 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     border: 1px solid var(--border-normal)
 }
 
+.custom-theme-background .markup__75297 code {
+    background: color-mix(in oklab, var(--background-code) 95%, var(--white-500))
+}
+
 @media (-webkit-max-device-pixel-ratio:1) {
     .theme-light .markup__75297 {
         font-weight: 500
