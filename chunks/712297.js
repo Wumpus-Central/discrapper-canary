@@ -73,51 +73,52 @@ function m() {
     };
 }
 function g(e) {
-    let { applicationId: t, skuIDs: n, currentPaymentSourceId: f, isGift: _ } = e,
-        p = r.useMemo(() => n.filter((e) => !d.YQ.includes(e)), [JSON.stringify(n)]),
-        h = (0, i.e7)([u.Z], () => p.every((e) => !u.Z.isFetching(e) && null != u.Z.get(e))),
-        { previewErrorsById: g, setErrorById: E } = m(),
-        b = (0, i.cj)(
+    let { applicationId: t, skuIDs: n, currentPaymentSourceId: f, isGift: _, excludeSKUPurchasePreviews: p = !1 } = e,
+        h = r.useMemo(() => n.filter((e) => !d.YQ.includes(e)), [JSON.stringify(n)]),
+        g = (0, i.e7)([u.Z], () => h.every((e) => !u.Z.isFetching(e) && null != u.Z.get(e))),
+        { previewErrorsById: E, setErrorById: b } = m(),
+        y = (0, i.cj)(
             [u.Z],
             () => {
                 let e = {};
-                for (let n of p) {
+                for (let n of h) {
                     var t;
                     e[n] = null != (t = u.Z.get(n)) ? t : void 0;
                 }
                 return e;
             },
-            [p]
+            [h]
         ),
-        y = (0, l.hv)('useSkus');
+        O = (0, l.hv)('useSkus');
     r.useEffect(() => {
-        for (let e of p) u.Z.isFetching(e) || null != u.Z.get(e) || (0, a.$N)(t, e, y);
-    }, [t, p, y]);
-    let O = (0, i.cj)(
+        for (let e of h) u.Z.isFetching(e) || null != u.Z.get(e) || (0, a.$N)(t, e, O);
+    }, [t, h, O]);
+    let v = (0, i.cj)(
         [c.Z],
         () => {
             let e = {};
-            for (let n of p) {
+            for (let n of h) {
                 var t;
                 e[n] = null != (t = c.Z.getPricesForSku(n)) ? t : void 0;
             }
             return e;
         },
-        [p]
+        [h]
     );
     return (
         r.useEffect(() => {
-            for (let e of p)
-                c.Z.isFetchingSKU(e) ||
-                    (0, a.x2)(t, e, f, { isGift: _ }).catch((t) => {
-                        t instanceof o.HF && (t.code === s.SM.BILLING_BUNDLE_ALREADY_PURCHASED || t.code === s.SM.BILLING_BUNDLE_PARTIALLY_OWNED || t.code === s.SM.INVALID_BILLING_ADDRESS) && E(e, t);
-                    });
-        }, [t, p, f, _, E]),
+            if (!p)
+                for (let e of h)
+                    c.Z.isFetchingSKU(e) ||
+                        (0, a.x2)(t, e, f, { isGift: _ }).catch((t) => {
+                            t instanceof o.HF && (t.code === s.SM.BILLING_BUNDLE_ALREADY_PURCHASED || t.code === s.SM.BILLING_BUNDLE_PARTIALLY_OWNED || t.code === s.SM.INVALID_BILLING_ADDRESS) && b(e, t);
+                        });
+        }, [t, h, f, _, b, p]),
         {
-            hasFetchedSkus: h,
-            skusById: b,
-            skuPricePreviewsById: O,
-            previewErrorsById: g
+            hasFetchedSkus: g,
+            skusById: y,
+            skuPricePreviewsById: v,
+            previewErrorsById: E
         }
     );
 }

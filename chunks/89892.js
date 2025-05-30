@@ -1,4 +1,17 @@
-n.d(t, { Z: () => O }), n(388685), n(482853), n(539854), n(290780), n(704826), n(35282), n(642613), n(583741);
+n.d(t, {
+    K: () => y,
+    Z: () => v
+}),
+    n(388685),
+    n(361932),
+    n(187205),
+    n(482853),
+    n(539854),
+    n(290780),
+    n(704826),
+    n(35282),
+    n(642613),
+    n(583741);
 var r = n(392711),
     i = n.n(r),
     a = n(612002),
@@ -131,34 +144,35 @@ class b {
         _(this, '_messages', void 0), _(this, '_map', void 0), _(this, '_wasAtEdge', void 0), _(this, '_isCacheBefore', void 0), (this._messages = []), (this._map = {}), (this._wasAtEdge = !1), (this._isCacheBefore = e);
     }
 }
-class y {
+let y = (e) => e.flatMap((e) => e._array);
+class O {
     static forEach(e) {
-        i().forEach(y._channelMessages, e);
+        i().forEach(O._channelMessages, e);
     }
     static get(e) {
-        return y._channelMessages[e];
+        return O._channelMessages[e];
     }
     static hasPresent(e) {
-        let t = y.get(e);
+        let t = O.get(e);
         return null != t && t.hasPresent();
     }
     static getOrCreate(e) {
-        let t = y._channelMessages[e];
-        return null == t && ((t = new y(e)), (y._channelMessages[e] = t)), t;
+        let t = O._channelMessages[e];
+        return null == t && ((t = new O(e)), (O._channelMessages[e] = t)), t;
     }
     static clear(e) {
-        delete y._channelMessages[e];
+        delete O._channelMessages[e];
     }
     static clearCache(e) {
-        let t = y._channelMessages[e];
+        let t = O._channelMessages[e];
         null != t && (t._before.clear(), t._after.clear(), this.commit(t));
     }
     static commit(e) {
-        y._channelMessages[e.channelId] = e;
+        O._channelMessages[e.channelId] = e;
     }
     mutate(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = new y(this.channelId);
+            n = new O(this.channelId);
         return (n._array = t ? [...this._array] : this._array), (n._map = t ? p({}, this._map) : this._map), (n._after = t ? this._after.clone() : this._after), (n._before = t ? this._before.clone() : this._before), e instanceof Function ? ((n.ready = this.ready), (n.jumpType = this.jumpType), (n.jumpTargetId = this.jumpTargetId), (n.jumpTargetOffset = this.jumpTargetOffset), (n.jumpSequenceId = this.jumpSequenceId), (n.jumped = this.jumped), (n.jumpedToPresent = this.jumpedToPresent), (n.jumpFlash = this.jumpFlash), (n.jumpReturnTargetId = this.jumpReturnTargetId), (n.focusTargetId = this.focusTargetId), (n.focusSequenceId = this.focusSequenceId), (n.hasMoreBefore = this.hasMoreBefore), (n.hasMoreAfter = this.hasMoreAfter), (n.loadingMore = this.loadingMore), (n.revealedMessageId = this.revealedMessageId), (n.cached = this.cached), (n.hasFetched = this.hasFetched), (n.error = this.error), e(n)) : 'object' == typeof e && ((n.ready = void 0 !== e.ready ? !0 === e.ready : this.ready), (n.jumpType = void 0 !== e.jumpType ? e.jumpType : this.jumpType), (n.jumpTargetId = void 0 !== e.jumpTargetId ? e.jumpTargetId : this.jumpTargetId), (n.jumpTargetOffset = void 0 !== e.jumpTargetOffset ? e.jumpTargetOffset : this.jumpTargetOffset), (n.jumpSequenceId = void 0 !== e.jumpSequenceId ? e.jumpSequenceId : this.jumpSequenceId), (n.jumped = void 0 !== e.jumped ? !0 === e.jumped : this.jumped), (n.jumpedToPresent = void 0 !== e.jumpedToPresent ? !0 === e.jumpedToPresent : this.jumpedToPresent), (n.jumpFlash = void 0 !== e.jumpFlash ? !0 === e.jumpFlash : this.jumpFlash), (n.jumpReturnTargetId = void 0 !== e.jumpReturnTargetId ? e.jumpReturnTargetId : this.jumpReturnTargetId), (n.focusTargetId = void 0 !== e.focusTargetId ? e.focusTargetId : this.focusTargetId), (n.focusSequenceId = void 0 !== e.focusSequenceId ? e.focusSequenceId : this.focusSequenceId), (n.hasMoreBefore = void 0 !== e.hasMoreBefore ? !0 === e.hasMoreBefore : this.hasMoreBefore), (n.hasMoreAfter = void 0 !== e.hasMoreAfter ? !0 === e.hasMoreAfter : this.hasMoreAfter), (n.loadingMore = void 0 !== e.loadingMore ? e.loadingMore : this.loadingMore), (n.revealedMessageId = void 0 !== e.revealedMessageId ? e.revealedMessageId : this.revealedMessageId), (n.cached = void 0 !== e.cached ? e.cached : this.cached), (n.hasFetched = void 0 !== e.hasFetched ? e.hasFetched : this.hasFetched), (n.error = void 0 !== e.error ? e.error : this.error)), n;
     }
     get length() {
@@ -493,5 +507,5 @@ class y {
         _(this, 'channelId', void 0), _(this, 'ready', void 0), _(this, 'jumpType', void 0), _(this, 'jumpTargetId', void 0), _(this, 'jumpTargetOffset', void 0), _(this, 'jumpSequenceId', void 0), _(this, 'jumped', void 0), _(this, 'jumpedToPresent', void 0), _(this, 'jumpFlash', void 0), _(this, 'jumpReturnTargetId', void 0), _(this, 'focusTargetId', void 0), _(this, 'focusSequenceId', void 0), _(this, 'hasMoreBefore', void 0), _(this, 'hasMoreAfter', void 0), _(this, 'loadingMore', void 0), _(this, 'revealedMessageId', void 0), _(this, 'cached', void 0), _(this, 'hasFetched', void 0), _(this, 'error', void 0), _(this, '_array', []), _(this, '_before', void 0), _(this, '_after', void 0), _(this, '_map', {}), (this.channelId = e), (this.ready = !1), (this.jumpTargetId = null), (this.jumpTargetOffset = 0), (this.jumpSequenceId = 1), (this.jumped = !1), (this.jumpedToPresent = !1), (this.jumpType = o.SR.ANIMATED), (this.jumpFlash = !0), (this.jumpReturnTargetId = null), (this.focusTargetId = null), (this.focusSequenceId = 1), (this.hasMoreBefore = !0), (this.hasMoreAfter = !1), (this.loadingMore = !1), (this.revealedMessageId = null), this._clearMessages(), (this._before = new b(!0)), (this._after = new b(!1)), (this.cached = !1), (this.hasFetched = !1), (this.error = !1);
     }
 }
-_(y, '_channelMessages', {});
-let O = y;
+_(O, '_channelMessages', {});
+let v = O;

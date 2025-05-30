@@ -303,6 +303,9 @@ class el extends (r = o.ZP.Store) {
         var n;
         return e in v && null != (n = v[e][t]) ? n : ea;
     }
+    getAllActiveJoinedThreads() {
+        return v;
+    }
     getActiveJoinedThreadsForGuild(e) {
         var t;
         return null != (t = v[e]) ? t : er;

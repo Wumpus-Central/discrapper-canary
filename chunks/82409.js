@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685), n(642613), n(361932), n(187205), n(415506);
+n.d(t, { Z: () => N }), n(388685), n(642613), n(361932), n(187205), n(415506);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -17,14 +17,15 @@ var r = n(255367),
     y = n(592125),
     O = n(594174),
     v = n(709054),
-    _ = n(207913),
-    C = n(553984),
-    j = n(333834),
-    S = n(982183),
-    E = n(981631),
-    x = n(388032),
-    P = n(21678);
-let I = {
+    _ = n(739340),
+    C = n(207913),
+    j = n(553984),
+    S = n(333834),
+    E = n(982183),
+    x = n(981631),
+    P = n(388032),
+    I = n(21678);
+let w = {
     controller: new a.Controller({
         value: 1,
         immediate: !0
@@ -33,18 +34,18 @@ let I = {
     bannerVisible: !1,
     communityInfoVisible: !1,
     shouldShowSubscribeTooltip: !1,
-    bannerVisibleHeight: S.$J,
+    bannerVisibleHeight: E.$J,
     hasGuildSubheader: !1,
     disableBannerAnimation: !0
 };
-function w(e) {
+function N(e) {
     var t, n;
     let { includePanelSpacing: l } = e,
         {
             messages: a,
             hasMore: d,
             loading: p,
-            hasLoadedEver: _
+            hasLoadedEver: C
         } = (0, c.cj)([m.Z], () => ({
             messages: m.Z.getMentions(),
             hasMore: m.Z.hasMore,
@@ -54,33 +55,35 @@ function w(e) {
             roleFilter: m.Z.roleFilter,
             everyoneFilter: m.Z.everyoneFilter
         })),
-        [w, A] = i.useState(S.V5.ALL),
-        [D, L] = i.useState(S.xM.UNREAD);
+        [N, D] = i.useState(E.V5.ALL),
+        [L, k] = i.useState(E.xM.UNREAD),
+        { messages: M, loadState: U, loadMore: G, hasLoadedEver: B } = (0, _.ZP)();
     (0, i.useEffect)(() => {
-        if (!_) return void N(null);
-    }, [_]);
-    let k = (0, c.e7)([O.default], () => O.default.getCurrentUser()),
-        M = (0, c.e7)([b.Z], () => b.Z.getSavedMessages()),
-        U = i.useMemo(() => {
+        if (!C) return void Z(null);
+    }, [C]);
+    let V = (0, c.e7)([O.default], () => O.default.getCurrentUser()),
+        H = (0, c.e7)([b.Z], () => b.Z.getSavedMessages()),
+        F = i.useMemo(() => {
+            if (!B) return null;
             let e = (0, s.uniqBy)(
-                [...(null != a ? a : [])].sort((e, t) => v.default.compare(t.id, e.id)),
+                [...(null != a ? a : []), ...M.filter((e) => e.author.id !== (null == V ? void 0 : V.id))].sort((e, t) => v.default.compare(t.id, e.id)),
                 'id'
-            );
-            if (w === S.V5.ALL) return e;
-            if (w === S.V5.ANNOUNCEMENTS)
+            ).filter((e) => e.author.id !== (null == V ? void 0 : V.id) && v.default.age(e.id) < E.ib);
+            if (N === E.V5.ALL) return e;
+            if (N === E.V5.ANNOUNCEMENTS)
                 return null == e
                     ? void 0
                     : e.filter((e) => {
                           let t = y.Z.getChannel(e.channel_id);
-                          return (null == t ? void 0 : t.type) === E.d4z.GUILD_ANNOUNCEMENT;
+                          return (null == t ? void 0 : t.type) === x.d4z.GUILD_ANNOUNCEMENT;
                       });
-            if (w === S.V5.MENTIONS) return null == e ? void 0 : e.filter((e) => (null == k ? void 0 : k.id) != null && e.mentioned && e.mentions.includes(null == k ? void 0 : k.id));
-            if (w === S.V5.BOOKMARKS) return M.flatMap((e) => (null != e.message ? [e.message] : []));
-            throw Error('Unknown filter: '.concat(w));
-        }, [w, a, k, M]),
-        G = D === S.xM.READ && w === S.V5.ALL;
+            if (N === E.V5.MENTIONS) return null == e ? void 0 : e.filter((e) => (null == V ? void 0 : V.id) != null && e.mentioned && e.mentions.includes(null == V ? void 0 : V.id));
+            if (N === E.V5.BOOKMARKS) return H.flatMap((e) => (null != e.message ? [e.message] : []));
+            throw Error('Unknown filter: '.concat(N));
+        }, [N, a, V, H, M, B]),
+        z = L === E.xM.READ && N === E.V5.ALL;
     return (0, r.jsxs)('nav', {
-        className: o()(P.container, { [P.panelSpacing]: l }),
+        className: o()(I.container, { [I.panelSpacing]: l }),
         children: [
             (0, r.jsx)(
                 f.ZP,
@@ -111,19 +114,19 @@ function w(e) {
                 })(
                     {
                         hasSubheader: !0,
-                        guild: S.F7
+                        guild: E.F7
                     },
-                    I
+                    w
                 )),
                 (n = n =
                     {
                         children: (0, r.jsx)(g.JO, {
                             icon: u.ewm,
-                            iconClassName: P.settingsButtonIcon,
-                            className: P.settingsButton,
+                            iconClassName: I.settingsButtonIcon,
+                            className: I.settingsButton,
                             'aria-hidden': !0,
-                            tooltip: x.intl.string(x.t.h850Sk),
-                            onClick: () => h.Z.open(E.oAB.NOTIFICATIONS, void 0)
+                            tooltip: P.intl.string(P.t.h850Sk),
+                            onClick: () => h.Z.open(x.oAB.NOTIFICATIONS, void 0)
                         })
                     }),
                 Object.getOwnPropertyDescriptors
@@ -140,43 +143,43 @@ function w(e) {
                       }),
                 t)
             ),
-            (0, r.jsx)(C.Z, {
-                selectedFilter: w,
-                setSelectedFilter: A
-            }),
-            G && (0, r.jsx)(R, {}),
             (0, r.jsx)(j.Z, {
-                className: P.messageList,
-                renderMessageGroup: T,
-                messages: U,
-                loading: p,
-                hasMore: d,
+                selectedFilter: N,
+                setSelectedFilter: D
+            }),
+            z && (0, r.jsx)(A, {}),
+            (0, r.jsx)(S.Z, {
+                className: I.messageList,
+                renderMessageGroup: R,
+                messages: F,
+                loading: p || U === _.jd.Loading,
                 analyticsName: 'Notifications Inbox',
                 channel: null,
                 listName: 'notifications-inbox',
-                loadMore: function () {
-                    N(null, null != a && a.length > 0 ? a[a.length - 1].id : null);
+                loadMore: function (e) {
+                    let t = null != a && a.length > 0 ? a[a.length - 1].id : null;
+                    d && !p && Z(null, t), U !== _.jd.Done && U !== _.jd.Loading && G(e);
                 },
-                renderEmptyState: Z,
-                setInboxReadState: L,
-                ignoreGrouping: w !== S.V5.ALL
+                renderEmptyState: T,
+                setInboxReadState: k,
+                ignoreGrouping: N !== E.V5.ALL
             })
         ]
     });
 }
-function N(e, t) {
+function Z(e, t) {
     let n = m.Z.guildFilter,
         r = m.Z.roleFilter,
         i = m.Z.everyoneFilter,
         l = null;
-    null != e && null != n && (l = n === E.NgX.ALL_SERVERS ? null : e.getGuildId()), d.Z.fetchRecentMentions(t, E.DJj, l, r, i);
+    null != e && null != n && (l = n === x.NgX.ALL_SERVERS ? null : e.getGuildId()), d.Z.fetchRecentMentions(t, x.DJj, l, r, i);
 }
-function Z() {
+function T() {
     return (0, r.jsx)(u.LZC, { size: 16 });
 }
-function T(e, t) {
+function R(e, t) {
     return (0, r.jsx)(
-        _.B,
+        C.B,
         {
             message: e[0],
             goToSidebar: t,
@@ -185,7 +188,7 @@ function T(e, t) {
         e[0].id
     );
 }
-function R() {
+function A() {
     let [e, t] = i.useState(!1),
         [n, l] = i.useState(!1),
         o = n ? u.kSu : u.kmB;
@@ -195,17 +198,17 @@ function R() {
               onClick: () => t(!0),
               onMouseEnter: () => l(!0),
               onMouseLeave: () => l(!1),
-              className: P.emptyStateContainer,
+              className: I.emptyStateContainer,
               children: [
                   (0, r.jsx)(u.Text, {
                       variant: n ? 'text-sm/medium' : 'text-sm/normal',
                       color: 'text-positive',
-                      className: P.emptyStateText,
-                      children: x.intl.string(x.t['6XMM+P'])
+                      className: I.emptyStateText,
+                      children: P.intl.string(P.t['6XMM+P'])
                   }),
                   (0, r.jsx)(o, {
                       size: 'sm',
-                      className: P.emptyStateIcon,
+                      className: I.emptyStateIcon,
                       color: p.Z.TEXT_POSITIVE
                   })
               ]

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(91192),
@@ -10,37 +10,39 @@ var r = n(255367),
     d = n(944486),
     h = n(821020),
     p = n(846355),
-    f = n(961040),
-    g = n(932711),
-    m = n(981631),
-    b = n(522458);
-function y(e) {
+    f = n(370774),
+    g = n(961040),
+    m = n(932711),
+    b = n(981631),
+    y = n(522458);
+function O(e) {
     var t, n;
-    let { onClick: f, selectedOverride: y = !1, popoutProps: O, ref: v } = e,
-        _ = (0, l.Ie)('notifications-inbox'),
-        [C, j] = i.useState(!1),
-        S = y || window.location.pathname.startsWith(m.Z5c.NOTIFICATIONS_INBOX()),
-        E = (0, o.e7)([p.Z], () => p.Z.unreadMessageIds),
-        x = E.size > 0 ? (0, u.N)(E.size) : null,
-        { notificationCenterVariant: P } = h.L.useExperiment({ location: 'NotificationsInboxButtonInner' }),
-        I = (0, o.e7)([d.Z], () => d.Z.getChannelId()),
-        w = i.useMemo(() => {
-            if ('sidebar' === P) return m.Z5c.NOTIFICATIONS_INBOX(null != I ? I : void 0);
-        }, [P, I]);
+    let { onClick: g, selectedOverride: O = !1, popoutProps: v, ref: _ } = e,
+        C = (0, l.Ie)('notifications-inbox'),
+        [j, S] = i.useState(!1),
+        E = (0, f.D)(),
+        x = O || E,
+        P = (0, o.e7)([p.Z], () => p.Z.unreadMessageIds),
+        I = P.size > 0 ? (0, u.N)(P.size) : null,
+        { notificationCenterVariant: w } = h.L.useExperiment({ location: 'NotificationsInboxButtonInner' }),
+        N = (0, o.e7)([d.Z], () => d.Z.getChannelId()),
+        Z = i.useMemo(() => {
+            if ('sidebar' === w) return b.Z5c.NOTIFICATIONS_INBOX(null != N ? N : void 0);
+        }, [w, N]);
     return (0, r.jsxs)(c.H, {
-        ref: v,
+        ref: _,
         children: [
-            'sidebar' === P &&
+            'sidebar' === w &&
                 (0, r.jsx)(a.Z, {
-                    selected: S,
-                    hovered: C,
-                    unread: E.size > 0,
-                    className: b.pill
+                    selected: x,
+                    hovered: j,
+                    unread: P.size > 0,
+                    className: y.pill
                 }),
-            (0, r.jsx)(g.Z, {
+            (0, r.jsx)(m.Z, {
                 children: (0, r.jsx)(s.aRk, {
-                    selected: S || C,
-                    lowerBadge: x,
+                    selected: x || j,
+                    lowerBadge: I,
                     children: (0, r.jsx)(
                         s.LYs,
                         ((t = (function (e) {
@@ -67,18 +69,18 @@ function y(e) {
                                     });
                             }
                             return e;
-                        })({}, _, O)),
+                        })({}, C, v)),
                         (n = n =
                             {
-                                onClick: f,
-                                to: w,
-                                selected: S || C,
-                                onMouseEnter: () => j(!0),
-                                onMouseLeave: () => j(!1),
+                                onClick: g,
+                                to: Z,
+                                selected: x || j,
+                                onMouseEnter: () => S(!0),
+                                onMouseLeave: () => S(!1),
                                 children: (0, r.jsx)(s.Dkj, {
                                     size: 'custom',
                                     color: 'currentColor',
-                                    className: b.notificationsIcon,
+                                    className: y.notificationsIcon,
                                     width: 20,
                                     height: 20
                                 })
@@ -102,18 +104,18 @@ function y(e) {
         ]
     });
 }
-function O() {
+function v() {
     let e = i.useRef(null),
         { notificationCenterVariant: t } = h.L.useExperiment({ location: 'NotificationsInboxButton' });
     return 'sidebar' === t
-        ? (0, r.jsx)(y, {})
+        ? (0, r.jsx)(O, {})
         : 'popout' === t
-          ? (0, r.jsx)(f.Z, {
+          ? (0, r.jsx)(g.Z, {
                 targetElementRef: e,
                 popoutPosition: 'right',
                 popoutAlign: 'bottom',
                 children: (t, n, i) =>
-                    (0, r.jsx)(y, {
+                    (0, r.jsx)(O, {
                         ref: e,
                         selectedOverride: n,
                         onClick: t,

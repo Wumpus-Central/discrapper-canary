@@ -11,7 +11,8 @@ var l = n(120356),
     d = n(862173);
 function p(e) {
     let { guildId: t, recurrenceRule: n, guildEventId: l, onRecurrenceClick: p, hideScroller: b = !1, activeRecurrenceId: g } = e,
-        { recurrenceStartTimes: x, canViewMoreRecurrences: f, updateRecurrenceStartTimes: j } = (0, c.Z)(l, t, n);
+        { recurrenceStartTimes: x, canViewMoreRecurrences: f, updateRecurrenceStartTimes: j } = (0, c.Z)(l, t, n),
+        m = b ? 'div' : s.Ttm;
     return (0, r.jsxs)('div', {
         className: d.recurrences,
         children: [
@@ -20,7 +21,7 @@ function p(e) {
                 className: d.heading,
                 children: a.intl.string(a.t['D/jjoa'])
             }),
-            (0, r.jsxs)(s.Ttm, {
+            (0, r.jsxs)(m, {
                 className: i()(d.scroller, { [d.showScroller]: !b }),
                 children: [
                     x.map((e) => {

@@ -316,6 +316,7 @@ let I = {
             purchaseType: O.GZQ.ONE_TIME,
             skuIDs: [t],
             excludeSubscriptionPlansBySKU: !0,
+            excludeSKUPurchasePreviews: !0,
             children: (0, i.jsx)(C.d, {
                 skuId: t,
                 loadId: n,
