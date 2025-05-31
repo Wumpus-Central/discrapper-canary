@@ -10,8 +10,8 @@ var r = n(255367),
     i = n(442837),
     l = n(780384),
     c = n(481060),
-    u = n(607070),
-    d = n(600164),
+    d = n(607070),
+    u = n(600164),
     p = n(210887),
     m = n(617136),
     f = n(915750),
@@ -58,7 +58,7 @@ function w(e) {
         A = (0, g.KX)(),
         R = (0, m.O5)(),
         k = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
-        B = (0, i.e7)([u.Z], () => u.Z.useReducedMotion),
+        B = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
         q = (0, j.g2)({
             useReducedMotion: B,
             className: _.colorTransition
@@ -67,7 +67,7 @@ function w(e) {
         D = (0, h.Bz)(E),
         M = (0, i.e7)([p.Z], () => p.Z.getState().theme),
         L = (0, l.wj)(M) ? v.BRd.DARK : v.BRd.LIGHT,
-        { startConsoleQuest: Z, startingConsoleQuest: W } = (0, g.GI)({
+        { startConsoleQuest: Z, startingConsoleQuest: V } = (0, g.GI)({
             questId: E.id,
             beforeRequest: () => {
                 q.startAnimation(),
@@ -87,7 +87,7 @@ function w(e) {
         className: _.modalRoot,
         children: [
             (0, r.jsxs)(c.xBx, {
-                direction: d.Z.Direction.VERTICAL,
+                direction: u.Z.Direction.VERTICAL,
                 separator: !1,
                 className: _.modalHeader,
                 children: [
@@ -132,7 +132,7 @@ function w(e) {
                                 children: y.intl.string(y.t['+/hZMz'])
                             }),
                             (0, r.jsxs)(c.P3F, {
-                                className: a()(_.refreshWrapper, { [_.disabled]: W }),
+                                className: a()(_.refreshWrapper, { [_.disabled]: V }),
                                 onClick: Z,
                                 children: [
                                     q.render(),

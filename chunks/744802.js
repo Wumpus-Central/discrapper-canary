@@ -1,4 +1,4 @@
-t.d(n, { Z: () => c });
+t.d(n, { Z: () => a });
 var l = t(255367);
 t(73800);
 var r = t(81570),
@@ -29,9 +29,9 @@ function s(e) {
     }
     return e;
 }
-function c(e) {
-    var { location: n, user: t, currentUser: c } = e,
-        a = (function (e, n) {
+function a(e) {
+    var { location: n, user: t, currentUser: a } = e,
+        c = (function (e, n) {
             if (null == e) return {};
             var t,
                 l,
@@ -50,5 +50,5 @@ function c(e) {
             }
             return r;
         })(e, ['location', 'user', 'currentUser']);
-    return (0, r.T)({ location: n }) && t.id !== c.id && !t.bot ? (0, l.jsx)(o.Z, s({ user: t }, a)) : (0, l.jsx)(i.Z, s({ user: t }, a));
+    return (0, r.T)({ location: n }) && t.id !== a.id && !t.bot ? (0, l.jsx)(o.Z, s({ user: t }, c)) : (0, l.jsx)(i.Z, s({ user: t }, c));
 }

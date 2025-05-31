@@ -74,7 +74,7 @@ async function g(e) {
     null != I &&
         (h = await (0, i.ZDy)(
             async () => {
-                let { default: e } = (0, c.q)({ location: 'UserProfileModalManager' }) ? await Promise.all([n.e('1268'), n.e('82412'), n.e('62880'), n.e('41071'), n.e('43473')]).then(n.bind(n, 866035)) : await Promise.all([n.e('1268'), n.e('82412'), n.e('62880'), n.e('41071'), n.e('11678')]).then(n.bind(n, 678780));
+                let { default: e } = (0, c.q)({ location: 'UserProfileModalManager' }) ? await Promise.all([n.e('1268'), n.e('82412'), n.e('62880'), n.e('37048'), n.e('43473')]).then(n.bind(n, 866035)) : await Promise.all([n.e('1268'), n.e('82412'), n.e('62880'), n.e('37048'), n.e('11678')]).then(n.bind(n, 678780));
                 return (t) =>
                     (0, r.jsx)(
                         e,

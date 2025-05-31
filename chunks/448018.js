@@ -18,8 +18,8 @@ let c = {
         shouldExpandOnQuestComplete: (e) => !0,
         getVerticalPadding: () => 8
     },
-    u = l.Li,
-    d = {
+    d = l.Li,
+    u = {
         component: o.Z,
         getCollapsedHeight: (e) => {
             var t;
@@ -30,22 +30,22 @@ let c = {
         getPreEnrollmentBackgroundColor: (e) => 'var(--home-background)',
         canCollapseOnBlur: (e) => !0,
         shouldExpandOnQuestComplete: (e) => !1,
-        getVerticalPadding: () => u
+        getVerticalPadding: () => d
     },
     p = (e, t, n) => {
         var o;
         let i = (null == (o = e.userStatus) ? void 0 : o.enrolledAt) != null,
             l = (!i && t === s.P.V2) || (i && n === s.P.V2) || (0, a.a)(e),
-            u = l ? d : c;
+            d = l ? u : c;
         return {
-            component: u.component,
-            collapsedHeight: u.getCollapsedHeight(e),
-            preEnrollmentExpandedHeight: u.getPreEnrollmentExpandedHeight(e),
-            postEnrollmentBackgroundImage: u.getPostEnrollmentBackgroundImage(e),
-            preEnrollmentBackgroundColor: u.getPreEnrollmentBackgroundColor(e),
-            canCollapseOnBlur: u.canCollapseOnBlur(e),
-            shouldExpandOnQuestComplete: u.shouldExpandOnQuestComplete(e),
-            paddingVertical: u.getVerticalPadding(),
+            component: d.component,
+            collapsedHeight: d.getCollapsedHeight(e),
+            preEnrollmentExpandedHeight: d.getPreEnrollmentExpandedHeight(e),
+            postEnrollmentBackgroundImage: d.getPostEnrollmentBackgroundImage(e),
+            preEnrollmentBackgroundColor: d.getPreEnrollmentBackgroundColor(e),
+            canCollapseOnBlur: d.canCollapseOnBlur(e),
+            shouldExpandOnQuestComplete: d.shouldExpandOnQuestComplete(e),
+            paddingVertical: d.getVerticalPadding(),
             trackingCtx: { content: l ? r.jn.QUEST_BAR_V2 : r.jn.QUEST_BAR }
         };
     };

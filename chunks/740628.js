@@ -1,94 +1,94 @@
-t.d(n, { Z: () => Z }), t(388685);
+t.d(n, { Z: () => O }), t(388685);
 var l = t(255367),
     r = t(73800),
     i = t(442837),
     o = t(706898),
     s = t(481060),
-    c = t(246946),
-    a = t(785717),
+    a = t(246946),
+    c = t(785717),
     u = t(786366),
     d = t(323090),
     f = t(116906),
     p = t(384816),
     g = t(389190),
-    h = t(428927),
-    v = t(228168),
-    j = t(388032),
-    m = t(301150),
-    b = t(923243);
+    v = t(428927),
+    j = t(228168),
+    b = t(388032),
+    h = t(301150),
+    m = t(923243);
 function x(e) {
-    let { section: n, subsection: t, user: r, currentUser: i, displayProfile: o, guildId: s, channelId: c, onClose: a } = e;
-    return n === v.oh.ACTIVITY
+    let { section: n, subsection: t, user: r, currentUser: i, displayProfile: o, guildId: s, channelId: a, onClose: c } = e;
+    return n === j.oh.ACTIVITY
         ? (0, l.jsx)(f.Z, {
               user: r,
               currentUser: i,
               displayProfile: o,
               guildId: s,
-              onClose: a
+              onClose: c
           })
-        : n === v.oh.MUTUAL_FRIENDS
+        : n === j.oh.MUTUAL_FRIENDS
           ? (0, l.jsx)(g.Z, {
                 user: r,
                 guildId: s,
-                channelId: c,
-                onClose: a
+                channelId: a,
+                onClose: c
             })
-          : n === v.oh.MUTUAL_GUILDS
-            ? (0, l.jsx)(h.Z, {
+          : n === j.oh.MUTUAL_GUILDS
+            ? (0, l.jsx)(v.Z, {
                   user: r,
-                  onClose: a
+                  onClose: c
               })
-            : n === v.oh.BOT_DATA_ACCESS
+            : n === j.oh.BOT_DATA_ACCESS
               ? (0, l.jsx)(u.Z, { user: r })
-              : n === v.oh.BOT_INFO
+              : n === j.oh.BOT_INFO
                 ? (0, l.jsx)(d.Z, {
                       user: r,
                       currentUser: i,
                       displayProfile: o,
                       guildId: s,
                       subsection: t,
-                      onClose: a
+                      onClose: c
                   })
                 : (0, l.jsx)(p.Z, {
                       user: r,
                       currentUser: i,
                       displayProfile: o,
                       subsection: t,
-                      onClose: a
+                      onClose: c
                   });
 }
-function Z(e) {
+function O(e) {
     var n, t, u;
-    let { user: d, currentUser: f, displayProfile: p, guildId: g, items: h, initialSection: Z = v.oh.USER_INFO, initialSubsection: y, onClose: O } = e,
-        { trackUserProfileAction: I } = (0, a.KZ)(),
-        P = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
+    let { user: d, currentUser: f, displayProfile: p, guildId: g, items: v, initialSection: O = j.oh.USER_INFO, initialSubsection: Z, onClose: y } = e,
+        { trackUserProfileAction: P } = (0, c.KZ)(),
+        I = (0, i.e7)([a.Z], () => a.Z.hidePersonalInformation),
         [{ section: E, subsection: T }, S] = r.useState({
             section:
                 null !=
                 (u =
                     null ==
-                    (n = h.find((e) => {
+                    (n = v.find((e) => {
                         let { section: n } = e;
-                        return n === Z;
+                        return n === O;
                     }))
                         ? void 0
                         : n.section)
                     ? u
-                    : null == (t = h[0])
+                    : null == (t = v[0])
                       ? void 0
                       : t.section,
-            subsection: y
+            subsection: Z
         });
     r.useEffect(() => {
-        null == h.find((e) => e.section === E) &&
+        null == v.find((e) => e.section === E) &&
             S({
-                section: h[0].section,
+                section: v[0].section,
                 subsection: void 0
             });
-    }, [h, E]);
+    }, [v, E]);
     let N = r.useCallback(
         (e) => {
-            I({
+            P({
                 action: 'PRESS_SECTION',
                 section: e
             }),
@@ -97,36 +97,36 @@ function Z(e) {
                     subsection: void 0
                 });
         },
-        [I, S]
+        [P, S]
     );
-    return P
+    return I
         ? (0, l.jsx)('div', {
-              className: b.container,
+              className: m.container,
               children: (0, l.jsxs)('div', {
-                  className: m.empty,
+                  className: h.empty,
                   children: [
-                      (0, l.jsx)('div', { className: m.emptyIconStreamerMode }),
+                      (0, l.jsx)('div', { className: h.emptyIconStreamerMode }),
                       (0, l.jsx)('div', {
-                          className: m.emptyText,
-                          children: j.intl.string(j.t.Br1ls7)
+                          className: h.emptyText,
+                          children: b.intl.string(b.t.Br1ls7)
                       })
                   ]
               })
           })
         : (0, l.jsxs)('div', {
-              className: b.container,
+              className: m.container,
               children: [
                   (0, l.jsx)(o.n, {
-                      className: b.tabBar,
+                      className: m.tabBar,
                       type: 'top',
                       selectedItem: E,
                       onItemSelect: N,
-                      children: h.map((e) => {
+                      children: v.map((e) => {
                           let { section: n, text: t } = e;
                           return (0, l.jsx)(
                               o.n.Item,
                               {
-                                  className: b.tabBarItem,
+                                  className: m.tabBarItem,
                                   id: n,
                                   'aria-label': t,
                                   children: (0, l.jsx)(s.Text, {
@@ -139,14 +139,14 @@ function Z(e) {
                       })
                   }),
                   (0, l.jsx)(x, {
-                      items: h,
+                      items: v,
                       section: E,
                       subsection: T,
                       user: d,
                       currentUser: f,
                       displayProfile: p,
                       guildId: g,
-                      onClose: O
+                      onClose: y
                   })
               ]
           });

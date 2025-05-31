@@ -6,8 +6,8 @@ var r = n(255367),
     i = n(442837),
     l = n(607070),
     c = n(70097),
-    u = n(78826),
-    d = n(536087);
+    d = n(78826),
+    u = n(536087);
 function p(e) {
     let { videoActive: t, imageAsset: n, videoAsset: o, onLoadComplete: p } = e,
         m = s.useRef(null),
@@ -28,24 +28,24 @@ function p(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             x &&
-                (0, r.jsx)(u.Fl, {
+                (0, r.jsx)(d.Fl, {
                     id: n.assetId,
                     children: (e) => {
                         var s;
                         return (0, r.jsx)('img', {
                             ref: e,
                             alt: n.alt,
-                            className: a()(n.className, { [d.hidden]: t && h }),
+                            className: a()(n.className, { [u.hidden]: t && h }),
                             src: null == (s = n.asset) ? void 0 : s.url,
                             onLoad: p
                         });
                     }
                 }),
             h &&
-                (0, r.jsx)(u.Fl, {
+                (0, r.jsx)(d.Fl, {
                     id: o.assetId,
                     children: (e) => {
-                        var s, i, l, u;
+                        var s, i, l, d;
                         return (0, r.jsx)(c.Z, {
                             ref: (t) => {
                                 (e.current = t), (m.current = t);
@@ -56,12 +56,12 @@ function p(e) {
                             preload: x ? 'none' : 'auto',
                             poster: x ? (null == (s = n.asset) ? void 0 : s.url) : void 0,
                             playsInline: !0,
-                            className: a()(o.className, { [d.hidden]: !t && x }),
+                            className: a()(o.className, { [u.hidden]: !t && x }),
                             controls: !1,
                             onProgress: p,
                             children: (0, r.jsx)('source', {
                                 src: null == (i = o.asset) ? void 0 : i.url,
-                                type: null != (u = null == (l = o.asset) ? void 0 : l.mimetype) ? u : void 0
+                                type: null != (d = null == (l = o.asset) ? void 0 : l.mimetype) ? d : void 0
                             })
                         });
                     }

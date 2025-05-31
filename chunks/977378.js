@@ -1,5 +1,5 @@
-t.d(n, { E: () => i });
-let o = (0, t(818083).B)({
+t.d(n, { E: () => r });
+let l = (0, t(818083).B)({
         kind: 'user',
         id: '2025-05_user_profile_view_main_profile_negative_experiment',
         label: 'User Profile View Main Profile Negative Experiment',
@@ -12,7 +12,7 @@ let o = (0, t(818083).B)({
             }
         ]
     }),
-    i = (e) => {
+    r = (e) => {
         let { location: n, autoTrackExposure: t = !0 } = e;
-        return o.useExperiment({ location: n }, { autoTrackExposure: t });
+        return l.useExperiment({ location: n }, { autoTrackExposure: t });
     };

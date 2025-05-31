@@ -232,6 +232,14 @@ function B(e) {
         { launchInGameActivity: U } = (0, E.zB)(n),
         B = (0, I.up)(v);
     return i.useMemo(() => {
+        if ((0, O.HJ)(n) && r !== E.OH.COMPLETED && r !== E.OH.CLAIMED) {
+            let e = R.intl.string(R.t.BkZhUF);
+            return {
+                text: e,
+                tooltipText: e,
+                onClick: null
+            };
+        }
         switch (r) {
             case E.OH.UNACCEPTED:
                 let e = R.intl.string(R.t.kUQLMD),

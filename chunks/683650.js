@@ -1,67 +1,72 @@
-n.d(t, { o: () => h });
-var r = n(255367);
+n.d(t, {
+    X: () => f,
+    o: () => j
+});
+var r,
+    s = n(255367);
 n(73800);
-var s = n(120356),
-    i = n.n(s),
-    o = n(481060),
-    a = n(617136),
-    l = n(497505),
-    c = n(266843),
-    u = n(341907),
-    d = n(46140),
-    m = n(388032),
-    p = n(444879),
-    x = n(87181);
-function g() {
-    return (0, r.jsx)('div', {
-        className: p.buttonContainer,
-        children: (0, r.jsx)(o.zxk, {
-            className: p.button,
-            color: o.Ttl.BRAND,
+var i = n(120356),
+    o = n.n(i),
+    a = n(481060),
+    l = n(617136),
+    c = n(497505),
+    u = n(266843),
+    d = n(341907),
+    m = n(46140),
+    p = n(388032),
+    x = n(444879),
+    g = n(87181);
+function h() {
+    return (0, s.jsx)('div', {
+        className: x.buttonContainer,
+        children: (0, s.jsx)(a.zxk, {
+            className: x.button,
+            color: a.Ttl.BRAND,
             onClick: () => {
-                (0, u.navigateToQuestHome)({ fromContent: l.jn.QUESTS_EMBED });
+                (0, d.navigateToQuestHome)({ fromContent: c.jn.QUESTS_EMBED });
             },
-            children: m.intl.string(m.t.GURBQk)
+            children: p.intl.string(p.t.GURBQk)
         })
     });
 }
-function h(e) {
-    let { questId: t } = e,
-        { containerRef: n, size: s } = (0, c.h)();
+var f = (((r = {}).NOT_FOUND = 'not_found'), (r.MOBILE_ONLY = 'mobile_only'), r);
+function j(e) {
+    let { questId: t, reason: n = 'not_found' } = e,
+        { containerRef: r, size: i } = (0, u.h)();
     return (
-        (0, a.Zk)(d.V_.UNKNOWN_QUEST, t),
-        (0, r.jsxs)('div', {
+        (0, l.Zk)(m.V_.UNKNOWN_QUEST, t),
+        (0, s.jsxs)('div', {
             ref: (e) => {
-                n.current = e;
+                r.current = e;
             },
-            className: i()(p.container, {
-                [p.wide]: 'lg' === s,
-                [p.tall]: 'lg' !== s
+            className: o()(x.container, {
+                [x.wide]: 'lg' === i,
+                [x.tall]: 'lg' !== i
             }),
             children: [
-                (0, r.jsxs)('div', {
-                    className: p.contentContainer,
+                (0, s.jsxs)('div', {
+                    className: x.contentContainer,
                     children: [
-                        (0, r.jsx)(o.X6q, {
-                            variant: 'lg' === s ? 'heading-xl/bold' : 'heading-lg/bold',
+                        (0, s.jsx)(a.X6q, {
+                            variant: 'lg' === i ? 'heading-xl/bold' : 'heading-lg/bold',
                             color: 'header-primary',
-                            children: m.intl.string(m.t.vnP31d)
+                            children: p.intl.string(p.t.vnP31d)
                         }),
-                        (0, r.jsx)(o.Text, {
-                            variant: 'lg' === s ? 'text-sm/medium' : 'text-xs/medium',
+                        (0, s.jsx)(a.Text, {
+                            variant: 'lg' === i ? 'text-sm/medium' : 'text-xs/medium',
                             color: 'text-normal',
-                            className: p.__invalid_mobileWebCopy,
-                            children: m.intl.string(m.t.CTn0yc)
+                            className: x.__invalid_mobileWebCopy,
+                            children: p.intl.string('mobile_only' === n ? p.t.Pag1gY : p.t.CTn0yc)
                         }),
-                        (0, r.jsx)(g, {})
+                        (0, s.jsx)(h, {})
                     ]
                 }),
-                (0, r.jsx)('div', {
-                    className: p.imgContainer,
-                    children: (0, r.jsx)('img', {
-                        src: x,
+                (0, s.jsx)('div', {
+                    className: x.imgContainer,
+                    children: (0, s.jsx)('img', {
+                        src: g,
                         alt: '',
-                        className: p.missingQuestImage
+                        className: x.missingQuestImage
                     })
                 })
             ]

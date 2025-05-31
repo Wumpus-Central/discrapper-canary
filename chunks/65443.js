@@ -18,7 +18,7 @@ function g(e) {
         C = b.defaultReward.messages.name,
         v = b.defaultReward.messages.nameWithArticle,
         y = (0, l.Kr)(f.config),
-        T = (0, u.mK)(f.config);
+        O = (0, u.mK)(f.config);
     return (0, r.jsxs)('div', {
         children: [
             g &&
@@ -35,19 +35,19 @@ function g(e) {
                     }),
                     children: [
                         (0, r.jsx)(a.Text, {
-                            className: o()({ [x.rewardsDisclosuresDurationPremiumExtendable]: null != T }),
+                            className: o()({ [x.rewardsDisclosuresDurationPremiumExtendable]: null != O }),
                             color: i,
                             tag: 'li',
                             variant: 'text-xs/medium',
                             children: p.intl.formatToPlainString(p.t.coKAb2, { rewardsDuration: y })
                         }),
-                        null != T &&
+                        null != O &&
                             (0, r.jsx)(a.Text, {
                                 className: o()({ [x.rewardsDisclosuresItemPremiumHighlight]: h }),
                                 tag: 'li',
                                 color: h ? void 0 : i,
                                 variant: 'text-xs/medium',
-                                children: T
+                                children: O
                             })
                     ]
                 })

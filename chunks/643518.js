@@ -1,61 +1,61 @@
-t.d(n, { Z: () => b }), t(539854);
+t.d(n, { Z: () => I }), t(539854);
 var o = t(442837),
-    i = t(468363),
-    c = t(158776),
-    r = t(885110),
-    a = t(585305),
-    l = t(369566),
-    d = t(806729),
+    c = t(468363),
+    i = t(158776),
+    a = t(885110),
+    r = t(585305),
+    d = t(369566),
+    l = t(806729),
     s = t(29899),
     u = t(708108),
-    f = t(146078),
-    p = t(228168),
-    _ = t(981631),
+    _ = t(146078),
+    f = t(228168),
+    p = t(981631),
     m = t(388032);
-function b(e) {
-    let { user: n, currentUser: t, guildId: b, initialSubsection: I } = e,
-        { voiceActivityStatusEnabled: h } = (0, i.U)({ location: 'useUserProfileModalTabBarItems' }),
-        { live: y, recent: x, stream: g, outbox: j } = (0, l.Z)(n.id),
-        { voiceChannel: v, voiceActivity: O } = (0, s.Z)({
+function I(e) {
+    let { user: n, currentUser: t, guildId: I, initialSubsection: h } = e,
+        { voiceActivityStatusEnabled: b } = (0, c.U)({ location: 'useUserProfileModalTabBarItems' }),
+        { live: x, recent: y, stream: Z, outbox: j } = (0, d.Z)(n.id),
+        { voiceChannel: g, voiceActivity: v } = (0, s.Z)({
             userId: n.id,
-            guildId: b
+            guildId: I
         }),
-        Z = n.id === (null == t ? void 0 : t.id),
-        A = (0, o.e7)([r.Z, c.Z], () => {
-            let e = Z ? r.Z.getStatus() : c.Z.getStatus(n.id);
-            return e === _.Skl.OFFLINE || e === _.Skl.INVISIBLE;
+        A = n.id === (null == t ? void 0 : t.id),
+        N = (0, o.e7)([a.Z, i.Z], () => {
+            let e = A ? a.Z.getStatus() : i.Z.getStatus(n.id);
+            return e === p.Skl.OFFLINE || e === p.Skl.INVISIBLE;
         }),
-        P = null != g || y.length > 0,
-        N = x.length > 0,
-        { mutualFriendsCount: w, mutualGuilds: C } = (0, d.Z)(n),
-        E = null == C ? void 0 : C.length,
-        T = (0, a.Z)(n),
+        O = null != Z || x.length > 0,
+        C = y.length > 0,
+        { mutualFriendsCount: T, mutualGuilds: P } = (0, l.Z)(n),
+        w = null == P ? void 0 : P.length,
+        E = (0, r.Z)(n),
         S = [
             {
-                section: p.oh.USER_INFO,
+                section: f.oh.USER_INFO,
                 text: m.intl.string(m.t.jGoPJS)
             }
         ];
     return (
-        !A && (P || (h && null == g && null == O && null != v))
+        !N && (O || (b && null == Z && null == v && null != g))
             ? S.push({
-                  section: p.oh.ACTIVITY,
+                  section: f.oh.ACTIVITY,
                   text: m.intl.string(m.t.chq59f)
               })
-            : (N || (null == j && I === p.Tb.RECENT_ACTIVITY)) &&
+            : (C || (null == j && h === f.Tb.RECENT_ACTIVITY)) &&
               S.push({
-                  section: p.oh.ACTIVITY,
+                  section: f.oh.ACTIVITY,
                   text: m.intl.string(m.t.chq59f)
               }),
-        !Z &&
-            T &&
+        !A &&
+            E &&
             (S.push({
-                section: p.oh.MUTUAL_FRIENDS,
-                text: (0, u.Z)(w)
+                section: f.oh.MUTUAL_FRIENDS,
+                text: (0, u.Z)(T)
             }),
             S.push({
-                section: p.oh.MUTUAL_GUILDS,
-                text: (0, f.Z)(E)
+                section: f.oh.MUTUAL_GUILDS,
+                text: (0, _.Z)(w)
             })),
         S
     );

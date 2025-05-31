@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(539854), n(388685);
+n.d(t, { Z: () => O }), n(539854), n(388685);
 var r = n(255367);
 n(73800);
 var s = n(120356),
@@ -61,7 +61,7 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
             children: g.reduce((e, t) => [...e, t, ' '], [])
         });
     },
-    T = function (e) {
+    O = function (e) {
         let t = e.quest.config.messages.gameTitle,
             n = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
             s = (0, f.k3)(e.quest.id, e.location),
@@ -73,8 +73,8 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
                 className: b.refreshIcon
             }),
             {
-                errorHints: T,
-                startingConsoleQuest: O,
+                errorHints: O,
+                startingConsoleQuest: T,
                 startConsoleQuest: N
             } = (0, g.GI)({
                 questId: e.quest.id,
@@ -89,7 +89,7 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
                 afterRequest: h.stopAnimation
             });
         return (0, r.jsxs)('div', {
-            className: i()(b.container, { [b.inFlight]: O }),
+            className: i()(b.container, { [b.inFlight]: T }),
             children: [
                 (0, r.jsxs)('div', {
                     className: b.info,
@@ -98,7 +98,7 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
                             className: b.header,
                             children: [
                                 (0, r.jsx)(l.P4T, {
-                                    className: i()(b.headerIcon, C(T)),
+                                    className: i()(b.headerIcon, C(O)),
                                     size: 'custom',
                                     color: 'currentColor',
                                     width: 16,
@@ -106,13 +106,13 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
                                 }),
                                 (0, r.jsx)(l.Text, {
                                     variant: 'text-sm/semibold',
-                                    children: v(T, t)
+                                    children: v(O, t)
                                 })
                             ]
                         }),
                         y({
                             quest: e.quest,
-                            errors: T,
+                            errors: O,
                             gameTitle: t,
                             location: e.location,
                             consoleHelpArticle: s,
@@ -126,7 +126,7 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
                     children: (0, r.jsx)(l.zxk, {
                         color: l.Ttl.PRIMARY,
                         onClick: N,
-                        disabled: O,
+                        disabled: T,
                         children: (0, r.jsxs)('div', {
                             className: b.ctaInner,
                             children: [h.render(), j.intl.string(j.t.nPThNT)]

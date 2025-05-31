@@ -8,10 +8,10 @@ function i(e, t) {
         i = (0, r.useRef)(null),
         l = (0, s.Z)(null != t ? t : a),
         c = (0, r.useRef)(null),
-        u = (0, r.useRef)(e);
+        d = (0, r.useRef)(e);
     return (
         (0, r.useEffect)(() => {
-            u.current = e;
+            d.current = e;
         }, [e]),
         (0, r.useEffect)(() => {
             if (!n) return;
@@ -20,7 +20,7 @@ function i(e, t) {
                 t = c.current;
             if (null != e && null != t)
                 return (
-                    (0, o.YP)(t, e, u.current),
+                    (0, o.YP)(t, e, d.current),
                     () => {
                         (0, o.UC)(t, e);
                     }

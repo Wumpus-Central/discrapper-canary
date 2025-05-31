@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -6,8 +6,8 @@ var r = n(255367),
     i = n(481060),
     l = n(53281),
     c = n(121746);
-function u(e) {
-    let { filename: t, className: n, filters: o, buttonText: u, placeholder: d, onFileSelect: p } = e,
+function d(e) {
+    let { filename: t, className: n, filters: o, buttonText: d, placeholder: u, onFileSelect: p } = e,
         m = s.useRef(null);
     return (0, r.jsxs)('div', {
         className: a()(n, c.fileUpload),
@@ -16,7 +16,7 @@ function u(e) {
                 className: c.fileUploadInput,
                 tabIndex: -1,
                 readOnly: !0,
-                placeholder: d,
+                placeholder: u,
                 type: 'text',
                 value: t
             }),
@@ -24,7 +24,7 @@ function u(e) {
                 size: i.zxk.Sizes.MIN,
                 className: c.fileUploadButton,
                 children: [
-                    u,
+                    d,
                     (0, r.jsx)(l.Z, {
                         ref: m,
                         tabIndex: -1,

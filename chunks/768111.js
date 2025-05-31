@@ -1,8 +1,8 @@
 n.d(t, { Z: () => s }), n(539854);
 var r = n(585305),
     o = n(806729),
-    c = n(708108),
-    i = n(146078),
+    i = n(708108),
+    c = n(146078),
     l = n(228168),
     a = n(388032);
 function s(e) {
@@ -21,12 +21,12 @@ function s(e) {
         t.id !== (null == n ? void 0 : n.id) &&
             f &&
             (p.push({
-                text: (0, c.Z)(s),
+                text: (0, i.Z)(s),
                 section: l.oh.MUTUAL_FRIENDS,
                 subsection: void 0
             }),
             p.push({
-                text: (0, i.Z)(u),
+                text: (0, c.Z)(u),
                 section: l.oh.MUTUAL_GUILDS,
                 subsection: void 0
             })),

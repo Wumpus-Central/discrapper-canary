@@ -1,93 +1,93 @@
-t.d(n, { Z: () => p });
+t.d(n, { Z: () => f });
 var o = t(255367);
 t(73800);
-var i = t(481060),
-    c = t(572691),
-    r = t(906732),
-    a = t(705556),
-    l = t(30556),
-    d = t(821706),
+var c = t(481060),
+    i = t(572691),
+    a = t(906732),
+    r = t(705556),
+    d = t(30556),
+    l = t(821706),
     s = t(562831),
     u = t(981631),
-    f = t(887910);
-function p(e) {
-    let { user: n, currentUser: t, guildId: p, relationshipType: _, onClose: m } = e,
-        { newestAnalyticsLocation: b } = (0, r.ZP)(),
-        { gameFriends: I, hasOutgoingPendingGameFriends: h, hasIncomingPendingGameFriends: y } = (0, s.H)({ userId: n.id });
-    if (_ === u.OGo.BLOCKED) return null;
+    _ = t(887910);
+function f(e) {
+    let { user: n, currentUser: t, guildId: f, relationshipType: p, onClose: m } = e,
+        { newestAnalyticsLocation: I } = (0, a.ZP)(),
+        { gameFriends: h, hasOutgoingPendingGameFriends: b, hasIncomingPendingGameFriends: x } = (0, s.H)({ userId: n.id });
+    if (p === u.OGo.BLOCKED) return null;
     if (n.id === t.id)
         return (0, o.jsx)('div', {
-            className: f.container,
-            children: (0, o.jsx)(a.Z, {
+            className: _.container,
+            children: (0, o.jsx)(r.Z, {
                 user: n,
-                guildId: p,
+                guildId: f,
                 onClose: m
             })
         });
-    if (_ === u.OGo.FRIEND || n.bot)
+    if (p === u.OGo.FRIEND || n.bot)
         return (0, o.jsx)('div', {
-            className: f.container,
-            children: (0, o.jsx)(l.Z, {
+            className: _.container,
+            children: (0, o.jsx)(d.Z, {
                 type: 'text',
                 userId: n.id,
-                onClose: c.Z.popAll,
+                onClose: i.Z.popAll,
                 autoFocus: !0
             })
         });
-    if (_ === u.OGo.PENDING_OUTGOING || _ === u.OGo.PENDING_INCOMING)
+    if (p === u.OGo.PENDING_OUTGOING || p === u.OGo.PENDING_INCOMING)
         return (0, o.jsxs)('div', {
-            className: f.container,
+            className: _.container,
             children: [
-                (0, o.jsx)(d.g, {
+                (0, o.jsx)(l.g, {
                     type: 'icon',
                     user: n,
-                    relationshipType: _,
+                    relationshipType: p,
                     shouldShowTooltip: !0,
-                    analyticsLocation: b
+                    analyticsLocation: I
                 }),
-                (0, o.jsx)(l.Z, {
+                (0, o.jsx)(d.Z, {
                     type: 'text',
                     userId: n.id,
-                    onClose: c.Z.popAll,
+                    onClose: i.Z.popAll,
                     autoFocus: !0
                 })
             ]
         });
-    let x = I.length > 0 || h || y;
-    return _ === u.OGo.NONE && x
+    let y = h.length > 0 || b || x;
+    return p === u.OGo.NONE && y
         ? (0, o.jsxs)('div', {
-              className: f.container,
+              className: _.container,
               children: [
-                  (0, o.jsx)(d.k9, {
+                  (0, o.jsx)(l.k9, {
                       type: 'icon',
                       user: n,
-                      analyticsLocation: b,
-                      gameFriends: I,
+                      analyticsLocation: I,
+                      gameFriends: h,
                       shouldShowTooltip: !0,
-                      hasIncomingPendingGameFriends: y,
-                      hasOutgoingPendingGameFriends: h
+                      hasIncomingPendingGameFriends: x,
+                      hasOutgoingPendingGameFriends: b
                   }),
-                  (0, o.jsx)(l.Z, {
+                  (0, o.jsx)(d.Z, {
                       type: 'text',
                       userId: n.id,
-                      onClose: c.Z.popAll,
+                      onClose: i.Z.popAll,
                       autoFocus: !0
                   })
               ]
           })
         : (0, o.jsxs)('div', {
-              className: f.container,
+              className: _.container,
               children: [
-                  (0, o.jsx)(l.Z, {
+                  (0, o.jsx)(d.Z, {
                       type: 'icon',
                       userId: n.id,
-                      onClose: c.Z.popAll
+                      onClose: i.Z.popAll
                   }),
-                  (0, o.jsx)(d.Z7, {
+                  (0, o.jsx)(l.Z7, {
                       type: 'text',
                       userId: n.id,
-                      color: i.zxk.Colors.BRAND,
-                      analyticsLocation: b,
+                      color: c.zxk.Colors.BRAND,
+                      analyticsLocation: I,
                       autoFocus: !0
                   })
               ]

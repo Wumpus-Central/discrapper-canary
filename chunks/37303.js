@@ -18,9 +18,9 @@ function x(e) {
         j = s.useCallback(() => f(!0), []),
         b = s.useCallback(() => f(!1), []),
         C = (0, o.tP)(t),
-        { containerRef: v, size: y, height: T } = (0, m.h)(),
+        { containerRef: v, size: y, height: O } = (0, m.h)(),
         {
-            expansionSpring: O,
+            expansionSpring: T,
             isAnimating: N,
             isExpanded: E,
             toggleExpanded: q
@@ -32,7 +32,7 @@ function x(e) {
                     quest: t
                 })
         }),
-        S = null != T ? T : c.U0;
+        S = null != O ? O : c.U0;
     return (0, r.jsx)(l.A, {
         questOrQuests: t,
         questContent: n,
@@ -44,7 +44,7 @@ function x(e) {
                     maxHeight:
                         n === a.jn.QUESTS_EMBED
                             ? void 0
-                            : O.to({
+                            : T.to({
                                   range: [0, 1],
                                   output: [c.DJ, S]
                               })
@@ -65,7 +65,7 @@ function x(e) {
                             location: n,
                             quest: t,
                             size: y,
-                            expansionSpring: O,
+                            expansionSpring: T,
                             isAnimating: N,
                             isExpanded: E,
                             contentPosition: g,

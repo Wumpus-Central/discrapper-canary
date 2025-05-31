@@ -11,8 +11,8 @@ var r = n(255367),
     i = n(278074),
     l = n(754700),
     c = n(887003),
-    u = n(742635),
-    d = n(458708),
+    d = n(742635),
+    u = n(458708),
     p = n(481060),
     m = n(70956),
     f = n(497505),
@@ -96,7 +96,7 @@ function Z(e) {
         claimedAt: null != (n = null == (t = e.userStatus) ? void 0 : t.claimedAt) ? n : ''
     };
 }
-function W() {
+function V() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { streamProgressSeconds: t = 0, completedAt: n = null, enrolledAt: r = null, claimedAt: s = null } = e;
     return {
@@ -112,12 +112,12 @@ function W() {
         progress: {}
     };
 }
-let V = '1193992107035983872',
+let W = '1193992107035983872',
     Q = {
-        id: V,
+        id: W,
         preview: !0,
         config: {
-            id: V,
+            id: W,
             configVersion: 2,
             startsAt: '2024-01-01T00:00:00+00:00',
             expiresAt: '2030-01-01T00:00:00+00:00',
@@ -168,8 +168,8 @@ let V = '1193992107035983872',
                 logotype: 'game_logotype.png'
             },
             taskConfig: {
-                type: u.L.FIRST_PARTY,
-                joinOperator: d.r.AND,
+                type: d.L.FIRST_PARTY,
+                joinOperator: u.r.AND,
                 tasks: {
                     [l.X.PLAY_ON_DESKTOP]: {
                         eventName: l.X.PLAY_ON_DESKTOP,
@@ -179,7 +179,7 @@ let V = '1193992107035983872',
                 }
             },
             taskConfigV2: {
-                joinOperator: d.r.AND,
+                joinOperator: u.r.AND,
                 tasks: {
                     [l.X.PLAY_ON_DESKTOP]: {
                         type: l.X.PLAY_ON_DESKTOP,
@@ -193,7 +193,7 @@ let V = '1193992107035983872',
         targetedContent: []
     };
 function H() {
-    var e, t, o, u, d, B, Z, V, H, U, z, F, K, X;
+    var e, t, o, d, u, B, Z, W, H, U, z, F, K, X;
     let [Y, G] = s.useState(Q),
         J = s.useCallback((e) => {
             G(I(q({}, e), { preview: !0 }));
@@ -235,7 +235,7 @@ function H() {
             })
         );
     }
-    function eu(e, t) {
+    function ed(e, t) {
         if ('questName' === e || 'gameTitle' === e || 'gamePublisher' === e) {
             var n, r;
             J(
@@ -250,7 +250,7 @@ function H() {
             );
         }
     }
-    function ed(e, t) {
+    function eu(e, t) {
         var n, r, s;
         J(
             I(q({}, Y), {
@@ -353,19 +353,19 @@ function H() {
                         (0, r.jsx)(E.Z, {
                             title: 'Quest Name',
                             assetKey: 'questName',
-                            onMessageChange: eu,
+                            onMessageChange: ed,
                             initialValue: Y.config.messages.questName
                         }),
                         (0, r.jsx)(E.Z, {
                             title: 'Game Title',
                             assetKey: 'gameTitle',
-                            onMessageChange: eu,
+                            onMessageChange: ed,
                             initialValue: Y.config.messages.gameTitle
                         }),
                         (0, r.jsx)(E.Z, {
                             title: 'Game Publisher',
                             assetKey: 'gamePublisher',
-                            onMessageChange: eu,
+                            onMessageChange: ed,
                             initialValue: Y.config.messages.gamePublisher
                         }),
                         ex &&
@@ -374,19 +374,19 @@ function H() {
                                     (0, r.jsx)(E.Z, {
                                         title: 'Video Title',
                                         assetKey: 'videoTitle',
-                                        onMessageChange: ed,
+                                        onMessageChange: eu,
                                         initialValue: null == (e = Y.config.videoMetadata) ? void 0 : e.messages.videoTitle
                                     }),
                                     (0, r.jsx)(E.Z, {
                                         title: 'End CTA Title',
                                         assetKey: 'videoEndCtaTitle',
-                                        onMessageChange: ed,
+                                        onMessageChange: eu,
                                         initialValue: null == (t = Y.config.videoMetadata) ? void 0 : t.messages.videoEndCtaTitle
                                     }),
                                     (0, r.jsx)(E.Z, {
                                         title: 'End CTA Subtitle',
                                         assetKey: 'videoEndCtaSubtitle',
-                                        onMessageChange: ed,
+                                        onMessageChange: eu,
                                         initialValue: null == (o = Y.config.videoMetadata) ? void 0 : o.messages.videoEndCtaSubtitle
                                     })
                                 ]
@@ -451,14 +451,14 @@ function H() {
                                         assetKey: 'videoPlayerVideo',
                                         onFileChange: ec,
                                         filters: L,
-                                        initialValue: null == (u = Y.config.videoMetadata) ? void 0 : u.assets.videoPlayerVideo
+                                        initialValue: null == (d = Y.config.videoMetadata) ? void 0 : d.assets.videoPlayerVideo
                                     }),
                                     (0, r.jsx)(P.Z, {
                                         title: 'Quest Video (Low Resolution)',
                                         assetKey: 'videoPlayerVideoLowRes',
                                         onFileChange: ec,
                                         filters: L,
-                                        initialValue: null == (d = Y.config.videoMetadata) ? void 0 : d.assets.videoPlayerVideoLowRes
+                                        initialValue: null == (u = Y.config.videoMetadata) ? void 0 : u.assets.videoPlayerVideoLowRes
                                     }),
                                     (0, r.jsx)(P.Z, {
                                         title: 'Video Player Thumbnail (optional)',
@@ -472,7 +472,7 @@ function H() {
                                         assetKey: 'questBarPreviewVideo',
                                         onFileChange: ec,
                                         filters: L,
-                                        initialValue: null == (V = Y.config.videoMetadata) ? void 0 : V.assets.questBarPreviewVideo
+                                        initialValue: null == (W = Y.config.videoMetadata) ? void 0 : W.assets.questBarPreviewVideo
                                     }),
                                     (0, r.jsx)(P.Z, {
                                         title: 'Quest Home Video (optional)',
@@ -599,12 +599,12 @@ function H() {
                                         J(I(q({}, Y), { userStatus: null }));
                                         break;
                                     case R.a.ENROLLED:
-                                        J(I(q({}, Y), { userStatus: W({ enrolledAt: new Date().toISOString() }) }));
+                                        J(I(q({}, Y), { userStatus: V({ enrolledAt: new Date().toISOString() }) }));
                                         break;
                                     case R.a.COMPLETED_25:
                                         J(
                                             I(q({}, Y), {
-                                                userStatus: W({
+                                                userStatus: V({
                                                     enrolledAt: new Date().toISOString(),
                                                     streamProgressSeconds: 0.25 * eg
                                                 })
@@ -614,7 +614,7 @@ function H() {
                                     case R.a.COMPLETED_50:
                                         J(
                                             I(q({}, Y), {
-                                                userStatus: W({
+                                                userStatus: V({
                                                     enrolledAt: new Date().toISOString(),
                                                     streamProgressSeconds: 0.5 * eg
                                                 })
@@ -624,7 +624,7 @@ function H() {
                                     case R.a.COMPLETED_75:
                                         J(
                                             I(q({}, Y), {
-                                                userStatus: W({
+                                                userStatus: V({
                                                     enrolledAt: new Date().toISOString(),
                                                     streamProgressSeconds: 0.75 * eg
                                                 })
@@ -634,7 +634,7 @@ function H() {
                                     case R.a.COMPLETED_100:
                                         J(
                                             I(q({}, Y), {
-                                                userStatus: W({
+                                                userStatus: V({
                                                     completedAt: new Date().toISOString(),
                                                     enrolledAt: new Date().toISOString(),
                                                     streamProgressSeconds: eg
@@ -645,7 +645,7 @@ function H() {
                                     case R.a.CLAIMED:
                                         J(
                                             I(q({}, Y), {
-                                                userStatus: W({
+                                                userStatus: V({
                                                     claimedAt: new Date().toISOString(),
                                                     completedAt: new Date().toISOString(),
                                                     enrolledAt: new Date().toISOString(),

@@ -1,106 +1,108 @@
-t.d(n, { Z: () => g });
+t.d(n, { Z: () => Z });
 var o = t(255367);
 t(73800);
-var i = t(442837),
-    c = t(320582),
-    r = t(699516),
-    a = t(5192),
-    l = t(111361),
-    d = t(648052),
+var c = t(442837),
+    i = t(320582),
+    a = t(699516),
+    r = t(5192),
+    d = t(111361),
+    l = t(648052),
     s = t(537006),
     u = t(681837),
-    f = t(91433),
-    p = t(944043),
-    _ = t(502762),
+    _ = t(91433),
+    f = t(944043),
+    p = t(502762),
     m = t(530),
-    b = t(740628),
-    I = t(643518),
-    h = t(228168),
-    y = t(981631),
-    x = t(405666);
-function g(e) {
+    I = t(740628),
+    h = t(643518),
+    b = t(228168),
+    x = t(981631),
+    y = t(405666);
+function Z(e) {
     var n;
-    let { user: t, currentUser: g, guildId: j, channelId: v, displayProfile: O, initialSection: Z, initialSubsection: A, onClose: P } = e,
-        { relationshipType: N, originApplicationId: w } = (0, i.cj)([r.Z], () => ({
-            relationshipType: r.Z.getRelationshipType(t.id),
-            originApplicationId: r.Z.getOriginApplicationId(t.id)
+    let { user: t, currentUser: Z, guildId: j, channelId: g, displayProfile: v, initialSection: A, initialSubsection: N, onClose: O } = e,
+        { relationshipType: C, originApplicationId: T } = (0, c.cj)([a.Z], () => ({
+            relationshipType: a.Z.getRelationshipType(t.id),
+            originApplicationId: a.Z.getOriginApplicationId(t.id)
         })),
-        C = (0, c.vh)(t.id),
-        E = t.id === g.id,
-        T = (0, l.I5)(g),
-        S = a.ZP.useName(null == O ? void 0 : O.guildId, v, t),
-        M = (0, I.Z)({
+        P = (0, i.vh)(t.id),
+        w = t.id === Z.id,
+        E = (0, d.I5)(Z),
+        S = r.ZP.useName(null == v ? void 0 : v.guildId, g, t),
+        M = (0, h.Z)({
             user: t,
-            currentUser: g,
+            currentUser: Z,
             guildId: j,
-            initialSubsection: A
+            initialSubsection: N
         });
     return (0, o.jsxs)('div', {
-        className: x.body,
+        className: y.body,
         children: [
             (0, o.jsx)(m.Z, {
-                className: x.username,
+                className: y.username,
                 user: t,
                 nickname: S,
-                pronouns: null == O ? void 0 : O.pronouns,
+                pronouns: null == v ? void 0 : v.pronouns,
                 nicknameVariant: 'heading-xl/bold',
                 nicknameIcons: (0, o.jsx)(u.Z, {
                     size: 'sm',
                     userId: t.id
                 }),
-                tags: (0, o.jsx)(d.Z, {
-                    displayProfile: O,
-                    themeType: h.lY.MODAL,
-                    onClose: P
+                tags: (0, o.jsx)(l.Z, {
+                    displayProfile: v,
+                    themeType: b.lY.MODAL,
+                    onClose: O
                 })
             }),
-            N === y.OGo.PENDING_INCOMING &&
-                (0, o.jsx)(_.Z.Overlay, {
-                    className: x.bannerContainer,
-                    children: (0, o.jsx)(f.Z, {
+            C === x.OGo.PENDING_INCOMING &&
+                (0, o.jsx)(p.Z.Overlay, {
+                    className: y.bannerContainer,
+                    children: (0, o.jsx)(_.Z, {
                         user: t,
-                        applicationId: w,
-                        guildId: null != (n = null == O ? void 0 : O.guildId) ? n : void 0,
-                        channelId: v,
-                        className: x.friendRequestBanner
+                        applicationId: T,
+                        guildId: null != (n = null == v ? void 0 : v.guildId) ? n : void 0,
+                        channelId: g,
+                        className: y.friendRequestBanner
                     })
                 }),
-            C.map((e) =>
-                (0, o.jsx)(
-                    _.Z.Overlay,
+            P.map((e) => {
+                var n;
+                return (0, o.jsx)(
+                    p.Z.Overlay,
                     {
-                        className: x.bannerContainer,
-                        children: (0, o.jsx)(f.Z, {
+                        className: y.bannerContainer,
+                        children: (0, o.jsx)(_.Z, {
                             user: t,
-                            channelId: v,
+                            guildId: null != (n = null == v ? void 0 : v.guildId) ? n : void 0,
+                            channelId: g,
                             isGameRelationship: !0,
                             applicationId: e.applicationId,
-                            className: x.friendRequestBanner
+                            className: y.friendRequestBanner
                         })
                     },
                     e.applicationId
-                )
-            ),
-            (0, o.jsx)(p.Z, {
-                user: t,
-                className: x.bannerContainer
+                );
             }),
-            E &&
-                (0, o.jsx)(s.Z, {
-                    className: x.bannerContainer,
-                    isPremiumUser: T,
-                    onInteraction: P
-                }),
-            (0, o.jsx)(b.Z, {
+            (0, o.jsx)(f.Z, {
                 user: t,
-                currentUser: g,
-                displayProfile: O,
+                className: y.bannerContainer
+            }),
+            w &&
+                (0, o.jsx)(s.Z, {
+                    className: y.bannerContainer,
+                    isPremiumUser: E,
+                    onInteraction: O
+                }),
+            (0, o.jsx)(I.Z, {
+                user: t,
+                currentUser: Z,
+                displayProfile: v,
                 guildId: j,
-                channelId: v,
+                channelId: g,
                 items: M,
-                initialSection: Z,
-                initialSubsection: A,
-                onClose: P
+                initialSection: A,
+                initialSubsection: N,
+                onClose: O
             })
         ]
     });

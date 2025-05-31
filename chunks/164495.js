@@ -9,8 +9,8 @@ var r = n(255367),
     i = n(481060),
     l = n(100527),
     c = n(335131),
-    u = n(617136),
-    d = n(915750),
+    d = n(617136),
+    u = n(915750),
     p = n(113434),
     m = n(497505),
     f = n(918701),
@@ -61,14 +61,14 @@ function O(e) {
 }
 let C = (e) => {
         let { quest: t } = e,
-            n = (0, d.aM)();
+            n = (0, u.aM)();
         return (0, r.jsx)(i.zxk, {
             className: y.cta,
             size: i.zxk.Sizes.SMALL,
             onClick: () =>
                 (0, f.FE)(t, {
                     content: m.jn.QUEST_BAR_V2,
-                    ctaContent: u.jZ.OPEN_GAME_LINK,
+                    ctaContent: d.jZ.OPEN_GAME_LINK,
                     impressionId: n
                 }),
             children: (0, f.pO)(t) ? v.intl.string(v.t.hvVgAQ) : v.intl.string(v.t.lwQdjI)
@@ -77,7 +77,7 @@ let C = (e) => {
     w = (e) => {
         var t;
         let { quest: n } = e,
-            s = null == (t = (0, d.WD)()) ? void 0 : t.getId();
+            s = null == (t = (0, u.WD)()) ? void 0 : t.getId();
         return (0, r.jsx)(i.zxk, {
             fullWidth: !0,
             className: y.cta,
@@ -86,7 +86,7 @@ let C = (e) => {
                     { quest: n },
                     {
                         content: m.jn.QUEST_BAR_V2,
-                        ctaContent: u.jZ.CONNECT_CONSOLE,
+                        ctaContent: d.jZ.CONNECT_CONSOLE,
                         impressionId: s
                     }
                 ),
@@ -118,7 +118,7 @@ let C = (e) => {
         var t,
             n,
             o,
-            { quest: u, useReducedMotion: d, isExpanded: p, className: h, ctaLabel: v, onClick: O } = e,
+            { quest: d, useReducedMotion: u, isExpanded: p, className: h, ctaLabel: v, onClick: O } = e,
             C = (function (e, t) {
                 if (null == e) return {};
                 var n,
@@ -139,7 +139,7 @@ let C = (e) => {
                 return s;
             })(e, ['quest', 'useReducedMotion', 'isExpanded', 'className', 'ctaLabel', 'onClick']);
         let w = (0, x.hf)({
-                quest: u,
+                quest: d,
                 location: m.jn.QUEST_BAR_V2
             }),
             S = (0, g.up)(b.dr.QUESTS_BAR),
@@ -147,7 +147,7 @@ let C = (e) => {
                 (e) => {
                     var t;
                     null == O || O(e),
-                        (0, f.xN)(u.config) && (null == (t = u.userStatus) ? void 0 : t.claimedAt) != null
+                        (0, f.xN)(d.config) && (null == (t = d.userStatus) ? void 0 : t.claimedAt) != null
                             ? (0, c.mK)({
                                   openInLayer: !1,
                                   tab: j.AW.ORBS,
@@ -156,7 +156,7 @@ let C = (e) => {
                               })
                             : w();
                 },
-                [O, u.config, null == (o = u.userStatus) ? void 0 : o.claimedAt, w]
+                [O, d.config, null == (o = d.userStatus) ? void 0 : o.claimedAt, w]
             );
         return (0, r.jsx)(
             i.gtL,
@@ -165,7 +165,7 @@ let C = (e) => {
                     fullWidth: !0,
                     size: i.zxk.Sizes.SMALL,
                     onClick: P,
-                    pauseAnimation: d || !p,
+                    pauseAnimation: u || !p,
                     className: a()(y.cta, h),
                     buttonShineClassName: y.shine
                 },
@@ -189,11 +189,11 @@ let C = (e) => {
     },
     E = (e) => {
         var t;
-        let { quest: n, useReducedMotion: s, isExpanded: o, awaitingConsoleConnections: a, hasMadeProgress: i, isProgressing: l, activeScreen: c, taskDetails: u } = e,
-            d = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
+        let { quest: n, useReducedMotion: s, isExpanded: o, awaitingConsoleConnections: a, hasMadeProgress: i, isProgressing: l, activeScreen: c, taskDetails: d } = e,
+            u = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
             p = (0, f.q8)(n),
             g = (0, f.Vl)(n);
-        if (d)
+        if (u)
             return (0, r.jsx)(P, {
                 quest: n,
                 useReducedMotion: s,
@@ -202,7 +202,7 @@ let C = (e) => {
         if (p)
             return (0, r.jsx)(O, {
                 quest: n,
-                taskDetails: u
+                taskDetails: d
             });
         if (g) return (0, r.jsx)(S, { quest: n });
         if (c === m.LI.CONSOLE && a) return (0, r.jsx)(w, { quest: n });

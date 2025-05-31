@@ -6,12 +6,7 @@ var l = n(55935),
     o = n(388032);
 let s = (t) => {
     let e = Date.now() + t;
-    return (0, l.KC)(new Date(), new Date(e))
-        ? o.intl.data.formatTime(e, { format: 'short' })
-        : o.intl.formatToPlainString(o.t['sdRx+P'], {
-              date: o.intl.data.formatRelativeTime(1, 'day', { numeric: 'auto' }),
-              time: o.intl.data.formatTime(e, { format: 'short' })
-          });
+    return (0, l.KC)(new Date(), new Date(e)) ? o.intl.data.formatTime(e, { format: 'short' }) : o.intl.formatToPlainString(o.t.DN91Jy, { time: o.intl.data.formatTime(e, { format: 'short' }) });
 };
 function u(t) {
     let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];

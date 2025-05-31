@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(255367);
 n(73800);
 var o = n(481060),
-    c = n(37234),
-    i = n(566898),
+    i = n(37234),
+    c = n(566898),
     l = n(769654),
     a = n(785717),
     s = n(806729),
@@ -25,11 +25,11 @@ function p(e) {
                           {
                               className: f.loadingItem,
                               children: [
-                                  (0, r.jsx)(i.ZT, {
+                                  (0, r.jsx)(c.ZT, {
                                       width: 40,
                                       opacity: 0.08
                                   }),
-                                  (0, r.jsx)(i.ZT, {
+                                  (0, r.jsx)(c.ZT, {
                                       width: 135,
                                       opacity: 0.08
                                   })
@@ -42,15 +42,15 @@ function p(e) {
                   ? null == m
                       ? void 0
                       : m.map((e) => {
-                            let { guild: o, nick: i } = e;
+                            let { guild: o, nick: c } = e;
                             return (0, r.jsx)(
                                 d.Z,
                                 {
                                     user: t,
                                     guild: o,
-                                    nick: i,
+                                    nick: c,
                                     onSelect: () => {
-                                        p({ action: 'PRESS_MUTUAL_GUILD' }), (0, l.X)(o.id), n(), (0, c.xf)();
+                                        p({ action: 'PRESS_MUTUAL_GUILD' }), (0, l.X)(o.id), n(), (0, i.xf)();
                                     }
                                 },
                                 o.id

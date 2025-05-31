@@ -7,14 +7,14 @@ var s = n(481060),
     i = n(644646),
     l = n(613087),
     c = n(472144),
-    u = n(46140),
-    d = n(667904);
+    d = n(46140),
+    u = n(667904);
 let p = (e) => {
     let { contentLocation: t, quest: n, progressBarRef: p, isExpanded: m, percentComplete: f, activeScreen: g } = e,
         x = (0, o.eQ)(n),
         h = (0, o.vf)(n, m, g);
     return (0, r.jsxs)('div', {
-        className: d.questProgressWrapper,
+        className: u.questProgressWrapper,
         children: [
             (0, r.jsx)(l.l7, {
                 inState: t,
@@ -28,16 +28,16 @@ let p = (e) => {
                         size: 42,
                         strokeWidth: 3,
                         children: (0, r.jsx)(i.Z, {
-                            className: d.questProgressRewardTile,
+                            className: u.questProgressRewardTile,
                             quest: n,
                             questContent: a.jn.QUEST_BAR_V2,
                             autoplay: !1,
-                            location: u.dr.QUESTS_BAR
+                            location: d.dr.QUESTS_BAR
                         })
                     })
             }),
             (0, r.jsxs)('div', {
-                className: d.questProgressCopy,
+                className: u.questProgressCopy,
                 children: [
                     (0, r.jsx)(l.l7, {
                         inState: t,
@@ -45,7 +45,7 @@ let p = (e) => {
                         children: (e) =>
                             (0, r.jsx)(s.Text, {
                                 ref: e,
-                                className: d.questProgressHint,
+                                className: u.questProgressHint,
                                 color: 'header-primary',
                                 variant: 'text-sm/semibold',
                                 children: x
@@ -58,7 +58,7 @@ let p = (e) => {
                         children: (e) =>
                             (0, r.jsx)(s.Text, {
                                 ref: e,
-                                className: d.questProgressHint,
+                                className: u.questProgressHint,
                                 color: 'text-muted',
                                 variant: 'text-xs/normal',
                                 children: h

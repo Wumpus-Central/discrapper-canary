@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(46140),
     v = n(981631),
     y = n(231338),
-    T = n(388032);
-function O(e) {
+    O = n(388032);
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -67,7 +67,7 @@ function E(e) {
     var t;
     let n = (0, i.e7)([h.Z], () => h.Z.questDeliveryOverride, []),
         c = (0, j.GN)(e.questContent),
-        O = [f.jn.QUEST_BAR_V2, f.jn.QUEST_BAR].includes(e.questContent),
+        T = [f.jn.QUEST_BAR_V2, f.jn.QUEST_BAR].includes(e.questContent),
         N = (0, m.O5)(),
         E = (0, p.aM)(),
         q = (0, g.Yj)(e.quest),
@@ -87,7 +87,7 @@ function E(e) {
                 ctaContent: m.jZ.CONTEXT_MENU_COPY_LINK,
                 impressionId: E
             }),
-                (0, o.showToast)((0, o.createToast)(T.intl.string(T.t['+5kSoa']), o.ToastType.SUCCESS));
+                (0, o.showToast)((0, o.createToast)(O.intl.string(O.t['+5kSoa']), o.ToastType.SUCCESS));
         }, [E, e.quest.id, e.questContent, e.questContentPosition]),
         M = (e) => (0, o.showToast)((0, o.createToast)(new l.Z(e, e.status).message, o.ToastType.FAILURE)),
         A = () => (0, x.is)(e.quest.id).catch(M),
@@ -108,7 +108,7 @@ function E(e) {
             null != e.onSelect ? e.onSelect() : (0, a.Zy)();
         },
         navId: 'quests-entry',
-        'aria-label': T.intl.string(T.t.ogxXGh),
+        'aria-label': O.intl.string(O.t.ogxXGh),
         onClose: null != (t = null == e ? void 0 : e.onClose) ? t : y.dG,
         children: [
             (0, r.jsxs)(
@@ -124,7 +124,7 @@ function E(e) {
                         !0 === e.showShareLink &&
                             (0, r.jsx)(o.sNh, {
                                 id: 'share-link',
-                                label: T.intl.string(T.t.RDE0SU),
+                                label: O.intl.string(O.t.RDE0SU),
                                 action: D,
                                 icon: o.TIy
                             }),
@@ -140,7 +140,7 @@ function E(e) {
                         !e.hideLearnMore &&
                             (0, r.jsx)(o.sNh, {
                                 id: 'learn-more',
-                                label: T.intl.string(T.t.Ws2Bl5),
+                                label: O.intl.string(O.t.Ws2Bl5),
                                 action: () => {
                                     N({
                                         questId: e.quest.id,
@@ -158,7 +158,7 @@ function E(e) {
                         Z &&
                             (0, r.jsx)(o.sNh, {
                                 id: 'display-disclosure',
-                                label: T.intl.string(T.t.GcsZKC),
+                                label: O.intl.string(O.t.GcsZKC),
                                 action: () => {
                                     (0, b.openDisclosureModal)(e.quest, {
                                         content: e.questContent,
@@ -171,7 +171,7 @@ function E(e) {
                         c &&
                             (0, r.jsx)(o.sNh, {
                                 id: 'hide-entrypoint',
-                                label: T.intl.string(T.t.NN79Ex),
+                                label: O.intl.string(O.t.NN79Ex),
                                 action: () => {
                                     N({
                                         questId: e.quest.id,
@@ -179,9 +179,9 @@ function E(e) {
                                         questContentPosition: e.questContentPosition,
                                         questContentCTA: m.jZ.CONTEXT_MENU_HIDE_CONTENT
                                     }),
-                                        (0, j.GN)(e.questContent) && ((0, x.gl)(e.quest.id, e.questContent), O && (0, b.maybeShowSurveyForQuest)(e.quest));
+                                        (0, j.GN)(e.questContent) && ((0, x.gl)(e.quest.id, e.questContent), T && (0, b.maybeShowSurveyForQuest)(e.quest));
                                 },
-                                subtext: T.intl.string(T.t['1u3YPD'])
+                                subtext: O.intl.string(O.t['1u3YPD'])
                             })
                     ]
                 },
@@ -296,7 +296,7 @@ function q(e) {
                 ? (0, r.jsx)(c.Z, {
                       children: (0, r.jsx)(
                           E,
-                          N(O({}, p), {
+                          N(T({}, p), {
                               quest: l,
                               questContent: u,
                               questContentPosition: d,
@@ -306,7 +306,7 @@ function q(e) {
                   })
                 : (0, r.jsx)(
                       E,
-                      N(O({}, p), {
+                      N(T({}, p), {
                           quest: l,
                           questContent: u,
                           questContentPosition: d,
