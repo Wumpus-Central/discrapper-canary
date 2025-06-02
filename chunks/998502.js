@@ -163,12 +163,11 @@ let V = {
         getCrashReporterMetadata: () => I.crashReporter.getMetadata(),
         getSetting: async (e, t) => await I.settings.get(e, t),
         beforeUnload() {
-            var e, t;
-            let n;
+            let e;
             try {
-                n = this.requireModule('discord_overlay2');
+                e = this.requireModule('discord_overlay2');
             } catch (e) {}
-            n && n.reset && n.reset(), n && n.disconnectAllProcesses && n.destroyHostProcess && (n.disconnectAllProcesses(), n.destroyHostProcess()), I.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== f.K.get(u.SV) && this.supportsFeature(g.eRX.USER_DATA_CACHE) && I.userDataCache.cacheUserData(f.K.stringify()), null == I || null == (t = I.window) || t.close(null == I || null == (e = I.globalOverlay) ? void 0 : e.WINDOW_KEY);
+            e && e.reset && e.reset(), e && e.disconnectAllProcesses && e.destroyHostProcess && (e.disconnectAllProcesses(), e.destroyHostProcess()), I.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== f.K.get(u.SV) && this.supportsFeature(g.eRX.USER_DATA_CACHE) && I.userDataCache.cacheUserData(f.K.stringify());
         },
         inputEventRegister(e, t, n, r) {
             this.getDiscordUtils().inputEventRegister(
