@@ -1,1 +1,0 @@
-e.exports = JSON.parse('{"xRdYAQ":"Özel temalar [Beta], mobilde mevcut değil.","2hAz8f":"Temanı özelleştir","23QUzs":"Yeni! Özel Temalar","TRCE4u":"Ruh hâline uygun sonsuz renk kombinasyonları seni bekliyor. Nitro ile şimdi dene."}');

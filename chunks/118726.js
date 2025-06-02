@@ -1,0 +1,1 @@
+t.exports = JSON.parse('{"xRdYAQ":"Mukautetut teemat [beetaominaisuus] eivät ole käytettävissä mobiilisovelluksessa.","2hAz8f":"Mukauta teemasi","23QUzs":"Uutta! Mukautetut teemat","TRCE4u":"Sovita tunnelma mielialaasi loputtomilla väriyhdistelmillä. Kokeile nyt, vain Nitro-tilauksella."}');

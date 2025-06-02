@@ -1,1 +1,0 @@
-a.exports = JSON.parse('{"xRdYAQ":"[Beta] verzija prilagođenih verzija nije dostupna na mobilnim uređajima.","2hAz8f":"Prilagodi svoju temu","23QUzs":"Novo! Prilagođene teme","TRCE4u":"Neograničene kombinacije boja omogućuju ti da pokažeš kakvog si raspoloženja. Isprobaj odmah, samo uz Nitro."}');

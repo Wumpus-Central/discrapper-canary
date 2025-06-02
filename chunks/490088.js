@@ -1,1 +1,0 @@
-t.exports = JSON.parse('{"xRdYAQ":"Anpassade teman [beta] är inte tillgängligt på mobilen.","2hAz8f":"Anpassa ditt tema","23QUzs":"Nytt! Anpassade teman","TRCE4u":"Matcha ditt humör med oändliga färgkombinationer. Pröva det nu, endast med Nitro."}');

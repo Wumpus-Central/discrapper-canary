@@ -1,1 +1,0 @@
-h.exports = JSON.parse('{"xRdYAQ":"Tùy chỉnh chủ đề [Beta] không hoạt động trên di động.","2hAz8f":"Tùy chỉnh chủ đề của bạn","23QUzs":"Mới! Tùy chỉnh Chủ đề","TRCE4u":"Phối màu theo cảm xúc với vô số tổ hợp màu sắc. Hãy thử ngay, chỉ có khi đăng ký Nitro."}');

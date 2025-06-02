@@ -1,1 +1,0 @@
-e.exports = JSON.parse('{"xRdYAQ":"A [béta-verziójú] egyedi témák nem érhetők el mobileszközön.","2hAz8f":"A témád személyre szabása","23QUzs":"Újdonság! Egyedi témák","TRCE4u":"Végtelen színkombinációkkal fejezheted ki a hangulatodat. Csak Nitróval tudod kipróbálni!"}');

@@ -1,0 +1,1 @@
+e.exports = JSON.parse('{"xRdYAQ":"Aangepaste thema\'s in [bèta]versie zijn niet beschikbaar op mobiel.","2hAz8f":"Je thema aanpassen","23QUzs":"Nieuw! Gepersonaliseerde thema\'s","TRCE4u":"Pas het thema aan je stemming aan met eindeloze kleurencombinaties. Probeer het nu, alleen met Nitro."}');

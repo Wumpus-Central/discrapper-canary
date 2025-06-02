@@ -1,1 +1,0 @@
-s.exports = JSON.parse('{"xRdYAQ":"Los temas personalizados [Beta] no están disponibles en la versión móvil.","2hAz8f":"Personalizar tu tema","23QUzs":"\xA1Nuevo! Temas personalizados","TRCE4u":"Configura tu estado de ánimo con infinitas combinaciones de color. Prueba hoy mismo esta función exclusiva de Nitro."}');

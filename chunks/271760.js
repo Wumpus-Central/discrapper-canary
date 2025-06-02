@@ -1,1 +1,0 @@
-e.exports = JSON.parse('{"xRdYAQ":"[Beta] für benutzerdefinierte Schemata ist auf Mobilgeräten nicht verfügbar.","2hAz8f":"Passe dein Schema an","23QUzs":"Neu! Benutzerdefinierte\xA0Schemata","TRCE4u":"Verleihe deiner Stimmung mit endlosen Farbkombinationen Ausdruck. Probier es jetzt aus, nur mit Nitro."}');
