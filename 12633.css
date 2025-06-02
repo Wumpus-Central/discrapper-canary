@@ -13385,7 +13385,13 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     display: flex;
     flex-shrink: 0;
     gap: 4px;
+    max-width: 100%;
     overflow: hidden
+}
+
+.activitiesTooltip_c9d15c,
+.tooltip_c9d15c {
+    word-break: break-word
 }
 
 .activitiesTooltip_c9d15c {
@@ -13413,6 +13419,14 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
+}
+
+.textWithIconContainer_c9d15c {
+    max-width: 100%
+}
+
+.activityCounter_c9d15c {
+    flex-shrink: 0
 }
 
 .emoji_c9d15c {
