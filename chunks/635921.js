@@ -43,7 +43,7 @@ let N = (e) => {
                     ? null
                     : (0, i.jsx)(_.Z, {
                           className: l()(T.button, s),
-                          forceWhite: !a
+                          color: a ? void 0 : o.Ttl.WHITE
                       });
         return (0, i.jsxs)('div', {
             className: l()(T.buttonContainer, r),
@@ -117,7 +117,7 @@ let A = r.forwardRef((e, t) => {
                                   className: T.buttonContainer,
                                   children: (0, i.jsx)(_.Z, {
                                       className: l()(T.button, x),
-                                      forceWhite: !0
+                                      color: o.Ttl.WHITE
                                   })
                               })
                             : (0, i.jsx)(N, {

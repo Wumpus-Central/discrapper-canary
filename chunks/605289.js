@@ -56,7 +56,7 @@ let b = function (e) {
                         subscriptionTier: p.Si.TIER_2
                     }),
                     (0, i.jsx)(m.Z, {
-                        forceWhite: !0,
+                        color: a.Ttl.WHITE,
                         subscriptionTier: p.Si.TIER_2,
                         className: f.ctaButton
                     })

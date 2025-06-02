@@ -1,47 +1,49 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
-    l = n(481060),
-    a = n(747545),
-    o = n(131951),
-    c = n(388032),
-    d = n(959963);
-let u = {
+    l = n(844168),
+    a = n(481060),
+    o = n(747545),
+    c = n(131951),
+    d = n(388032),
+    u = n(959963);
+let m = {
     width: 387,
     height: 218
 };
-function m() {
-    let e = o.Z.getCameraComponent(),
-        t = (0, s.e7)([o.Z], () => o.Z.getVideoDeviceId()),
-        [n, m] = r.useState(!1),
-        g = (0, s.e7)([o.Z], () => o.Z.isVideoAvailable());
-    return n
+function g() {
+    let e = c.Z.getCameraComponent(),
+        t = (0, s.e7)([c.Z], () => c.Z.getVideoDeviceId()),
+        n = (0, l.C)('user-settings-camera-preview'),
+        [g, p] = r.useState(!1),
+        h = (0, s.e7)([c.Z], () => c.Z.isVideoAvailable());
+    return g
         ? (0, i.jsx)('div', {
-              className: d.cameraWrapper,
+              className: u.cameraWrapper,
               children: (0, i.jsxs)('div', {
-                  className: d.camera,
+                  className: u.camera,
                   children: [
                       (0, i.jsx)(e, {
                           deviceId: t,
-                          width: u.width,
-                          height: u.height,
-                          disabled: !n
+                          width: m.width,
+                          height: m.height,
+                          disabled: !g
                       }),
-                      (0, i.jsx)(a.S, {})
+                      (0, i.jsx)(o.S, {})
                   ]
               })
           })
         : (0, i.jsxs)('div', {
-              className: d.cameraWrapper,
+              className: u.cameraWrapper,
               children: [
-                  (0, i.jsx)('div', { className: d.previewImage }),
-                  (0, i.jsx)(l.ua7, {
-                      text: g ? null : c.intl.string(c.t['8jSzSU']),
+                  !n && (0, i.jsx)('div', { className: u.previewImage }),
+                  (0, i.jsx)(a.ua7, {
+                      text: h ? null : d.intl.string(d.t['8jSzSU']),
                       children: (e) => {
                           var t, n;
                           return (0, i.jsx)(
-                              l.zxk,
+                              a.zxk,
                               ((t = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
@@ -69,9 +71,9 @@ function m() {
                               })({}, e)),
                               (n = n =
                                   {
-                                      onClick: () => m(!0),
-                                      disabled: !g,
-                                      children: c.intl.string(c.t.JIf4v7)
+                                      onClick: () => p(!0),
+                                      disabled: !h,
+                                      children: d.intl.string(d.t.JIf4v7)
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

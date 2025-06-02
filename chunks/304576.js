@@ -87,7 +87,7 @@ let v = (e) => {
                                   className: l()(S.buttonContainer, S.marketingPageV2CTAContainer, { [S.marketingPageV2CTAMargin]: !(V || U) }),
                                   children: (0, i.jsx)(b.Z, {
                                       className: l()(S.button, N),
-                                      forceWhite: !0
+                                      color: o.Ttl.WHITE
                                   })
                               })
                             : (0, i.jsx)(C.PK, {

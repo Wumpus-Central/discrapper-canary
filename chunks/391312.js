@@ -1,16 +1,16 @@
-r.d(t, { default: () => p }), r(388685), r(49124);
+r.d(t, { default: () => p }), r(388685);
 var n = r(255367),
     o = r(73800),
-    c = r(433517),
-    i = r(481060),
-    a = r(43740),
+    c = r(481060),
+    i = r(43740),
+    a = r(437152),
     s = r(388032),
     l = r(301403);
 function p(e) {
     var t, r;
     let [p, u] = o.useState(!1);
     return (0, n.jsxs)(
-        i.ConfirmModal,
+        c.ConfirmModal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -42,22 +42,22 @@ function p(e) {
                 confirmText: s.intl.string(s.t.zVZXRU),
                 cancelText: s.intl.string(s.t['ETE/oK']),
                 onConfirm: () => {
-                    (0, a.l)(!0);
+                    (0, i.l)(!0);
                 },
-                confirmButtonColor: i.zxk.Colors.BRAND,
+                confirmButtonColor: c.zxk.Colors.BRAND,
                 children: [
-                    (0, n.jsx)(i.Text, {
+                    (0, n.jsx)(c.Text, {
                         variant: 'text-md/normal',
                         children: s.intl.format(s.t['0eydys'], {})
                     }),
-                    (0, n.jsx)(i.XZJ, {
+                    (0, n.jsx)(c.XZJ, {
                         className: l.checkboxMargin,
-                        type: i.XZJ.Types.INVERTED,
+                        type: c.XZJ.Types.INVERTED,
                         value: p,
                         onChange: () => {
-                            c.K.set('doNotShowReorderModal', JSON.stringify(!0)), u(!0);
+                            (0, a.E)(), u(!0);
                         },
-                        children: (0, n.jsx)(i.Text, {
+                        children: (0, n.jsx)(c.Text, {
                             variant: 'text-md/normal',
                             children: s.intl.string(s.t['50TyjY'])
                         })
