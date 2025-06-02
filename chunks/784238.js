@@ -75,9 +75,8 @@ let E = (e) => {
     },
     b = (e, t, n, r) => (t || n ? f.intl.string(f.t.fkPGam) : e === d.Si.TIER_2 ? f.intl.formatToPlainString(f.t.bkQ4bG, { percent: r }) : void 0),
     y = (e) => {
-        var t,
-            { textOptions: n, subscriptionTier: p, hasActivePromotion: g = !1, isPersistentCTA: y = !1, useShorterCTA: O = !1, showGradient: v, confirmationFooter: I, paymentModalBanner: S, buttonShineClassName: T } = e,
-            A = m(e, ['textOptions', 'subscriptionTier', 'hasActivePromotion', 'isPersistentCTA', 'useShorterCTA', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'buttonShineClassName']);
+        var { textOptions: t, subscriptionTier: n, hasActivePromotion: p = !1, isPersistentCTA: g = !1, useShorterCTA: y = !1, showGradient: O, confirmationFooter: v, paymentModalBanner: I, buttonShineClassName: S, color: T } = e,
+            A = m(e, ['textOptions', 'subscriptionTier', 'hasActivePromotion', 'isPersistentCTA', 'useShorterCTA', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'buttonShineClassName', 'color']);
         let N = (0, o.ZP)(),
             C = (0, c.N)(),
             P = null == C ? void 0 : C.subscription_trial,
@@ -86,39 +85,39 @@ let E = (e) => {
                 intervalCount: null == P ? void 0 : P.interval_count
             }),
             w = (0, l.Ng)(),
-            D = null != P && p === P.sku_id,
+            D = null != P && n === P.sku_id,
             L = (null == C ? void 0 : C.trial_id) === d.a7,
-            x = g
+            x = p
                 ? f.intl.string(f.t.J61px8)
                 : null != w
-                  ? b(p, O, y, w.discount.amount)
+                  ? b(n, y, g, w.discount.amount)
                   : E({
                         showTrialCTA: D,
-                        subscriptionTier: p,
+                        subscriptionTier: n,
                         trialDurationCopy: R,
-                        isPersistentCTA: y,
+                        isPersistentCTA: g,
                         shouldShowReferralTrialCopy: L,
                         subscriptionTrial: P
                     }),
-            k = null != (t = A.color) ? t : (0, i.wj)(N) ? a.Ttl.BRAND_INVERTED : a.Ttl.BRAND;
+            k = null != T ? T : (0, i.wj)(N) ? a.Ttl.BRAND_INVERTED : a.Ttl.BRAND;
         return (0, r.jsx)(
             u.Z,
             h(
                 {
                     color: k,
-                    buttonShineClassName: null != T ? T : k === a.Ttl.BRAND_INVERTED ? _.brandShine : void 0,
+                    buttonShineClassName: null != S ? S : k === a.Ttl.BRAND_INVERTED ? _.brandShine : void 0,
                     textOptions: h(
                         {
                             textOverride: x,
                             textClassName: D ? _.freeTrialText : void 0
                         },
-                        n
+                        t
                     ),
                     onlyShineOnHover: !0,
-                    subscriptionTier: p,
-                    showGradient: v,
-                    confirmationFooter: I,
-                    paymentModalBanner: S
+                    subscriptionTier: n,
+                    showGradient: O,
+                    confirmationFooter: v,
+                    paymentModalBanner: I
                 },
                 A
             )

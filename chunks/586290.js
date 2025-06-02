@@ -4,9 +4,9 @@ n.d(t, {
 }),
     n(388685);
 var r = n(255367),
-    l = n(73800),
-    i = n(512722),
-    s = n.n(i),
+    i = n(73800),
+    l = n(512722),
+    s = n.n(l),
     o = n(392711),
     a = n.n(o),
     c = n(856901),
@@ -22,19 +22,19 @@ function _(e, t, n) {
     if (null != t && null != n) {
         let r = t.find((t) => t.id === e);
         if (null == r) return null;
-        let l = a().reduce(n, (e, t) => ((0, c.stringSimilarity)(r.name, t.name) > (0, c.stringSimilarity)(r.name, e.name) ? t : e));
-        return null == l ? null : l.id;
+        let i = a().reduce(n, (e, t) => ((0, c.stringSimilarity)(r.name, t.name) > (0, c.stringSimilarity)(r.name, e.name) ? t : e));
+        return null == i ? null : i.id;
     }
     return null;
 }
 function v(e) {
-    let { selectedSource: t, onChangeVideoDeviceSource: n, onChangeAudioDevice: i } = e;
+    let { selectedSource: t, onChangeVideoDeviceSource: n, onChangeAudioDevice: l } = e;
     s()(null != t, 'Camera capture device cannot be null');
     let o = (0, m.Z)(),
         c = (0, u.Z)(),
-        [v, j] = l.useState(_(t.id, o, c));
+        [v, j] = i.useState(_(t.id, o, c));
     return (
-        null != v && i(v),
+        null != v && l(v),
         (0, r.jsxs)(d.xJW, {
             title: 'Capture Device',
             className: x.modalContent,
@@ -64,7 +64,7 @@ function v(e) {
                         value: v,
                         className: g.__invalid_marginaTop8,
                         onChange: (e) => {
-                            j(e), i(e);
+                            j(e), l(e);
                         },
                         options: a().map(c, (e) => {
                             let { id: t, name: n } = e;

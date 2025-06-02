@@ -1,14 +1,14 @@
 n.d(t, { Z: () => c });
 var r = n(255367),
-    l = n(73800),
-    i = n(481060),
+    i = n(73800),
+    l = n(481060),
     s = n(812652),
     o = n(388032),
     a = n(79309);
 function c(e) {
     let { align: t = 'left', useSimplifiedMenu: n = !1 } = e,
-        c = l.useRef(null);
-    return (0, r.jsx)(i.yRy, {
+        c = i.useRef(null);
+    return (0, r.jsx)(l.yRy, {
         targetElementRef: c,
         position: 'top',
         align: t,
@@ -27,7 +27,7 @@ function c(e) {
         children: (e) => {
             var t, n;
             return (0, r.jsx)(
-                i.zxk,
+                l.zxk,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,9 +54,9 @@ function c(e) {
                     return e;
                 })(
                     {
-                        size: i.zxk.Sizes.ICON,
+                        size: l.zxk.Sizes.ICON,
                         'aria-label': o.intl.string(o.t['+1H47u']),
-                        color: i.zxk.Colors.PRIMARY,
+                        color: l.zxk.Colors.PRIMARY,
                         className: a.streamOptionsButton,
                         buttonRef: c
                     },
@@ -64,7 +64,7 @@ function c(e) {
                 )),
                 (n = n =
                     {
-                        children: (0, r.jsx)(i.ewm, {
+                        children: (0, r.jsx)(l.ewm, {
                             className: a.settingsIcon,
                             size: 'refresh_sm',
                             color: 'currentColor'

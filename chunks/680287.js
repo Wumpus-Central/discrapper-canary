@@ -34,7 +34,7 @@ function d(e) {
 }
 class u extends a.Z {
     async uploadFilesSimple(e) {
-        super.upload({ name: c.intl.string(c.t.jfKTen) }, e);
+        super.upload(c.intl.string(c.t.jfKTen), e);
         let t = new Promise((e, t) => {
                 this.once('error', (e, r, n, A) => {
                     t({
@@ -68,7 +68,7 @@ class u extends a.Z {
     }
     async uploadFiles(e, t) {
         let { addFilesTo: r } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        super.upload({ name: c.intl.string(c.t.jfKTen) }, e);
+        super.upload(c.intl.string(c.t.jfKTen), e);
         let n = new AbortController();
         try {
             if (((this.files = e), this._aborted || (this._handleStart(() => n.abort()), !(await this.compressAndCheckFileSize())))) return;

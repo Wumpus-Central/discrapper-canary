@@ -1,5 +1,5 @@
 n.d(t, {
-    PG: () => S,
+    PG: () => b,
     Vf: () => C,
     YX: () => y,
     ZP: () => Z,
@@ -8,8 +8,8 @@ n.d(t, {
     n(388685),
     n(415506);
 var r = n(255367),
-    l = n(392711),
-    i = n.n(l),
+    i = n(392711),
+    l = n.n(i),
     s = n(268146),
     o = n(481060),
     a = n(100527),
@@ -25,8 +25,8 @@ var r = n(255367),
     _ = n(37113),
     v = n(825107),
     j = n(388032),
-    b = n(864443);
-let S = [
+    S = n(864443);
+let b = [
         {
             value: _.tI.PRESET_VIDEO,
             canUse: (e) => !0
@@ -62,7 +62,7 @@ let S = [
 function O(e) {
     let { label: t } = e;
     return (0, r.jsxs)('div', {
-        className: b.premiumOptionContainer,
+        className: S.premiumOptionContainer,
         children: [
             t,
             (0, r.jsx)(o.SrA, {
@@ -73,62 +73,64 @@ function O(e) {
     });
 }
 function Z(e) {
-    var t, n, l;
-    let { onClose: b, onSelect: Z } = e,
-        [{ notifyFriends: I, hidePreview: w, muteStreamAudio: N, preset: E, resolution: T, fps: P, sourceType: R, audioSourceId: k }, A] = (0, p.E_)(),
+    var t, n, i;
+    let { onClose: S, onSelect: Z } = e,
+        [{ notifyFriends: I, hidePreview: w, muteStreamAudio: N, preset: T, resolution: E, fps: P, sourceType: R, audioSourceId: k }, A] = (0, p.E_)(),
         M = (0, c.Z)(),
         L = (0, h.Z)(),
         [D, B] = null != (n = (0, g.Z)(_.tI.PRESET_VIDEO)) ? n : [_.LY.RESOLUTION_720, _.ws.FPS_30],
-        [U, G] = null != (l = (0, g.Z)(_.tI.PRESET_DOCUMENTS)) ? l : [_.LY.RESOLUTION_SOURCE, _.ws.FPS_15];
+        [U, G] = null != (i = (0, g.Z)(_.tI.PRESET_DOCUMENTS)) ? i : [_.LY.RESOLUTION_SOURCE, _.ws.FPS_15];
     return (0, r.jsxs)(o.v2r, {
         'aria-label': j.intl.string(j.t['+1H47u']),
         navId: 'stream-options',
-        onClose: b,
+        onClose: S,
         onSelect: Z,
         children: [
             (0, r.jsx)(o.kSQ, {
                 label: j.intl.string(v.default.P2pjm5),
-                children: S.filter((e) => {
-                    let { canUse: t } = e;
-                    return t(R);
-                }).map((e) => {
-                    let { value: t } = e;
-                    return (0, r.jsx)(
-                        o.k5B,
-                        {
-                            group: 'preset',
-                            id: 'stream-preset-'.concat(t),
-                            checked: E === t,
-                            label: (0, f.L)(t),
-                            subtext: (function (e) {
-                                switch (e) {
-                                    case _.tI.PRESET_VIDEO:
-                                        return j.intl.format(v.default.G5O1Mz, {
-                                            resolution: (0, m.M)(D),
-                                            frameRate: B
-                                        });
-                                    case _.tI.PRESET_DOCUMENTS:
-                                        return j.intl.format(v.default['8tcFLy'], {
-                                            resolution: (0, m.M)(U),
-                                            frameRate: G
-                                        });
-                                    case _.tI.PRESET_CUSTOM:
-                                        return;
-                                    default:
-                                        throw Error('No case implemented for '.concat(e));
-                                }
-                            })(t),
-                            action: () =>
-                                A({
-                                    type: 'set_preset',
-                                    preset: t
-                                })
-                        },
-                        t
-                    );
-                })
+                children: b
+                    .filter((e) => {
+                        let { canUse: t } = e;
+                        return t(R);
+                    })
+                    .map((e) => {
+                        let { value: t } = e;
+                        return (0, r.jsx)(
+                            o.k5B,
+                            {
+                                group: 'preset',
+                                id: 'stream-preset-'.concat(t),
+                                checked: T === t,
+                                label: (0, f.L)(t),
+                                subtext: (function (e) {
+                                    switch (e) {
+                                        case _.tI.PRESET_VIDEO:
+                                            return j.intl.format(v.default.G5O1Mz, {
+                                                resolution: (0, m.M)(D),
+                                                frameRate: B
+                                            });
+                                        case _.tI.PRESET_DOCUMENTS:
+                                            return j.intl.format(v.default['8tcFLy'], {
+                                                resolution: (0, m.M)(U),
+                                                frameRate: G
+                                            });
+                                        case _.tI.PRESET_CUSTOM:
+                                            return;
+                                        default:
+                                            throw Error('No case implemented for '.concat(e));
+                                    }
+                                })(t),
+                                action: () =>
+                                    A({
+                                        type: 'set_preset',
+                                        preset: t
+                                    })
+                            },
+                            t
+                        );
+                    })
             }),
-            E === _.tI.PRESET_CUSTOM &&
+            T === _.tI.PRESET_CUSTOM &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(o.Clw, {}),
@@ -145,11 +147,11 @@ function Z(e) {
                                     {
                                         group: 'resolution',
                                         id: 'stream-option-resolution-'.concat(t),
-                                        checked: T === t,
+                                        checked: E === t,
                                         label: t !== _.LY.RESOLUTION_720 ? (0, r.jsx)(O, { label: (0, m.M)(t) }) : (0, m.M)(t),
                                         action: () =>
                                             (function (e) {
-                                                if (!(0, u.Z)(E, e, P, d.default.getCurrentUser(), L)) return b(), (0, x.E)({ analyticsLocation: a.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
+                                                if (!(0, u.Z)(T, e, P, d.default.getCurrentUser(), L)) return S(), (0, x.E)({ analyticsLocation: a.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
                                                 A({
                                                     type: 'set_resolution',
                                                     resolution: e
@@ -173,7 +175,7 @@ function Z(e) {
                                         label: e === _.ws.FPS_60 ? (0, r.jsx)(O, { label: ''.concat(e, 'fps') }) : ''.concat(e, 'fps'),
                                         action: () =>
                                             (function (e) {
-                                                if (!(0, u.Z)(E, T, e, d.default.getCurrentUser(), L)) return b(), (0, x.E)({ analyticsLocation: a.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
+                                                if (!(0, u.Z)(T, E, e, d.default.getCurrentUser(), L)) return S(), (0, x.E)({ analyticsLocation: a.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
                                                 A({
                                                     type: 'set_fps',
                                                     fps: e
@@ -203,7 +205,7 @@ function Z(e) {
                     label: j.intl.string(v.default.YSdHV1),
                     subtext: null == (t = M[null != k ? k : '']) ? void 0 : t.name,
                     subtextLineClamp: 1,
-                    children: i().map(M, (e) => {
+                    children: l().map(M, (e) => {
                         let { id: t, name: n } = e;
                         return (0, r.jsx)(
                             o.k5B,
@@ -253,14 +255,14 @@ function Z(e) {
 }
 function I(e) {
     var t;
-    let { onClose: n, onSelect: l } = e,
+    let { onClose: n, onSelect: i } = e,
         [{ notifyFriends: a, hidePreview: d, muteStreamAudio: u, sourceType: f, audioSourceId: m }, h] = (0, p.E_)(),
         x = (0, c.Z)();
     return (0, r.jsxs)(o.v2r, {
         'aria-label': j.intl.string(j.t['+1H47u']),
         navId: 'stream-options',
         onClose: n,
-        onSelect: l,
+        onSelect: i,
         children: [
             (0, r.jsx)(o.S89, {
                 id: 'stream-option-mute',
@@ -298,7 +300,7 @@ function I(e) {
                     label: j.intl.string(v.default.YSdHV1),
                     subtext: null == (t = x[null != m ? m : '']) ? void 0 : t.name,
                     subtextLineClamp: 1,
-                    children: i().map(x, (e) => {
+                    children: l().map(x, (e) => {
                         let { id: t, name: n } = e;
                         return (0, r.jsx)(
                             o.k5B,

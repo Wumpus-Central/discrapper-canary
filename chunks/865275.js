@@ -80,7 +80,7 @@ class p extends r.EventEmitter {
             (this._loaded = 0),
             (this._file = {
                 id: this.id,
-                name: e.name,
+                name: e,
                 currentSize: 0,
                 totalPreCompressionSize: 0,
                 compressionProgress: 0,

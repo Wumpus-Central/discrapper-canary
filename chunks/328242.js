@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(388685);
 var r = n(255367);
 n(73800);
-var l = n(120356),
-    i = n.n(l),
+var i = n(120356),
+    l = n.n(i),
     s = n(268146),
     o = n(481060),
     a = n(63063),
@@ -27,11 +27,11 @@ function p(e) {
           : (0, r.jsx)(o.Odl, { size: 'xs' });
 }
 function x(e) {
-    let { source: t, selected: n, twoClickVariant: l, onClick: s } = e,
+    let { source: t, selected: n, twoClickVariant: i, onClick: s } = e,
         { url: a, name: c } = t;
     return (0, r.jsxs)(o.P3F, {
         onClick: () => s(t),
-        className: i()(h.source, { [h.selectedSource]: n }),
+        className: l()(h.source, { [h.selectedSource]: n }),
         children: [
             (0, r.jsx)('div', {
                 className: h.sourcePreviewContainer,
@@ -43,7 +43,7 @@ function x(e) {
                             className: h.sourcePreviewImage,
                             alt: ''
                         }),
-                        !l &&
+                        !i &&
                             (0, r.jsx)('div', {
                                 className: h.sourceOverlay,
                                 children: (0, r.jsx)('div', {
@@ -75,17 +75,17 @@ function x(e) {
 function g(e) {
     var t;
     let { onClick: n } = e,
-        { twoClickVariant: l } = (0, c.a)({
+        { twoClickVariant: i } = (0, c.a)({
             autoTrackExposure: !1,
             location: 'sourcegrid'
         }),
-        [{ windowSources: i, deviceSources: a, screenSources: f, sourceType: m, fetchingSources: p, selectedSource: g }] = (0, u.E_)();
+        [{ windowSources: l, deviceSources: a, screenSources: f, sourceType: m, fetchingSources: p, selectedSource: g }] = (0, u.E_)();
     return p
         ? (0, r.jsx)('div', {
               className: h.loading,
               children: (0, r.jsx)(o.$jN, {})
           })
-        : ((t = m === s.vA.WINDOW ? i : m === s.vA.SCREEN ? f : a),
+        : ((t = m === s.vA.WINDOW ? l : m === s.vA.SCREEN ? f : a),
           m === s.vA.CAMERA && 0 === t.length
               ? (0, r.jsx)(_, {})
               : (0, r.jsx)('div', {
@@ -97,7 +97,7 @@ function g(e) {
                                 onClick: n,
                                 source: e,
                                 selected: null != g && 'windowHandle' in g ? (0, d.Z)(e.id, g.windowHandle) : (null == g ? void 0 : g.id) === e.id,
-                                twoClickVariant: l
+                                twoClickVariant: i
                             },
                             e.id
                         )

@@ -1,9 +1,9 @@
 n.d(t, { _: () => s }), n(388685);
 var r = n(224706),
-    l = n(594190),
-    i = n(823379);
+    i = n(594190),
+    l = n(823379);
 async function s() {
-    let e = l.ZP.getRunningGames();
+    let e = i.ZP.getRunningGames();
     return (
         await Promise.all(
             e.map(async (e) => {
@@ -15,16 +15,16 @@ async function s() {
                     return null;
                 }
                 let n = e.windowHandle,
-                    l = e.name,
-                    i = t.icon;
-                return null != n && null != l && null != i
+                    i = e.name,
+                    l = t.icon;
+                return null != n && null != i && null != l
                     ? {
                           id: 'window:'.concat(n),
-                          name: l,
-                          url: 'data:image/bmp;base64,'.concat(i)
+                          name: i,
+                          url: 'data:image/bmp;base64,'.concat(l)
                       }
                     : null;
             })
         )
-    ).filter(i.lm);
+    ).filter(l.lm);
 }

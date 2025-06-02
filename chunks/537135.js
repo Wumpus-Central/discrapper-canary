@@ -1,11 +1,11 @@
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => l });
 var r = n(255367);
 n(73800);
-var l = n(873322);
-function i(e) {
+var i = n(873322);
+function l(e) {
     let { children: t } = e;
     return (0, r.jsx)('div', {
-        className: l.card,
+        className: i.card,
         children: t
     });
 }

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => C }), n(388685);
 var r = n(255367),
-    l = n(73800),
-    i = n(442837),
+    i = n(73800),
+    l = n(442837),
     s = n(481060),
     o = n(100527),
     a = n(594174),
@@ -17,11 +17,11 @@ var r = n(255367),
     _ = n(37113),
     v = n(825107),
     j = n(388032),
-    b = n(496958);
-function S(e) {
+    S = n(496958);
+function b(e) {
     let { label: t, children: n } = e;
     return (0, r.jsxs)('div', {
-        className: b.setting,
+        className: S.setting,
         children: [
             (0, r.jsx)(s.Text, {
                 variant: 'text-sm/semibold',
@@ -36,12 +36,12 @@ function C() {
     var e, t, n;
     let [{ preset: C, fps: y, sourceType: O, resolution: Z }, I] = (0, h.E_)(),
         w = (0, m.Z)(),
-        N = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
-        [E, T] = null != (e = (0, g.Z)(_.tI.PRESET_VIDEO)) ? e : [_.LY.RESOLUTION_720, _.ws.FPS_30],
+        N = (0, l.e7)([a.default], () => a.default.getCurrentUser()),
+        [T, E] = null != (e = (0, g.Z)(_.tI.PRESET_VIDEO)) ? e : [_.LY.RESOLUTION_720, _.ws.FPS_30],
         [P, R] = null != (t = (0, g.Z)(_.tI.PRESET_DOCUMENTS)) ? t : [_.LY.RESOLUTION_SOURCE, _.ws.FPS_15],
         [k, A] = null != (n = (0, g.Z)(C)) ? n : [Z, y],
-        M = l.useMemo(() => (C === _.tI.PRESET_VIDEO ? E : C === _.tI.PRESET_DOCUMENTS ? P : Z), [C, E, P, Z]),
-        L = l.useMemo(() => (C === _.tI.PRESET_VIDEO ? T : C === _.tI.PRESET_DOCUMENTS ? R : y), [C, T, R, y]),
+        M = i.useMemo(() => (C === _.tI.PRESET_VIDEO ? T : C === _.tI.PRESET_DOCUMENTS ? P : Z), [C, T, P, Z]),
+        L = i.useMemo(() => (C === _.tI.PRESET_VIDEO ? E : C === _.tI.PRESET_DOCUMENTS ? R : y), [C, E, R, y]),
         D = C === _.tI.PRESET_DOCUMENTS,
         B = p.Vf.map((e) => {
             let { value: t } = e,
@@ -51,7 +51,7 @@ function C() {
                 name: (0, f.M)(t),
                 tooltipAriaLabel: n ? void 0 : j.intl.string(j.t.sEAnVF),
                 tooltip: n ? void 0 : (0, r.jsx)(d.W, {}),
-                className: n ? void 0 : b.premiumOption
+                className: n ? void 0 : S.premiumOption
             };
         }),
         U = p.YX.map((e) => {
@@ -61,13 +61,13 @@ function C() {
                 name: ''.concat(e, 'fps'),
                 tooltipAriaLabel: t ? void 0 : j.intl.string(j.t.sEAnVF),
                 tooltip: t ? void 0 : (0, r.jsx)(d.W, {}),
-                className: t ? void 0 : b.premiumOption
+                className: t ? void 0 : S.premiumOption
             };
         });
     return (0, r.jsxs)('div', {
-        className: b.root,
+        className: S.root,
         children: [
-            (0, r.jsx)(S, {
+            (0, r.jsx)(b, {
                 label: j.intl.string(v.default['7eHfrq']),
                 children: (0, r.jsx)(s.PhF, {
                     isSelected: (e) => C === e,
@@ -90,10 +90,10 @@ function C() {
                     })
                 })
             }),
-            (0, r.jsx)(S, {
+            (0, r.jsx)(b, {
                 label: j.intl.string(v.default.PYBXFR),
                 children: (0, r.jsx)(s.sY7, {
-                    className: b.segmentedControl,
+                    className: S.segmentedControl,
                     options: B,
                     look: 'pill',
                     disabled: D,
@@ -114,10 +114,10 @@ function C() {
                         })(e.value)
                 })
             }),
-            (0, r.jsx)(S, {
+            (0, r.jsx)(b, {
                 label: j.intl.string(v.default['/ssDMT']),
                 children: (0, r.jsx)(s.sY7, {
-                    className: b.segmentedControl,
+                    className: S.segmentedControl,
                     disabled: D,
                     options: U,
                     value: L,

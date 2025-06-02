@@ -1,8 +1,8 @@
-n.d(t, { Z: () => E }), n(35282), n(539854), n(388685), n(387201), n(642613);
+n.d(t, { Z: () => T }), n(35282), n(539854), n(388685), n(387201), n(642613);
 var r = n(255367),
-    l = n(73800),
-    i = n(120356),
-    s = n.n(i),
+    i = n(73800),
+    l = n(120356),
+    s = n.n(l),
     o = n(442837),
     a = n(481060),
     c = n(212819),
@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(430824),
     v = n(496675),
     j = n(914010),
-    b = n(594174),
-    S = n(938475),
+    S = n(594174),
+    b = n(938475),
     C = n(823379),
     y = n(102172),
     O = n(981631),
@@ -27,10 +27,10 @@ var r = n(255367),
     w = n(152965);
 function N(e) {
     let { result: t, onSelectChannel: n } = e,
-        l = (0, o.e7)([_.Z], () => _.Z.getGuild(t.record.guild_id)),
-        i = (0, o.Wu)([S.ZP, b.default], () =>
-            S.ZP.getVoiceStatesForChannel(t.record)
-                .map((e) => b.default.getUser(e.user.id))
+        i = (0, o.e7)([_.Z], () => _.Z.getGuild(t.record.guild_id)),
+        l = (0, o.Wu)([b.ZP, S.default], () =>
+            b.ZP.getVoiceStatesForChannel(t.record)
+                .map((e) => S.default.getUser(e.user.id))
                 .filter(C.lm)
         );
     return (0, r.jsxs)(a.P3F, {
@@ -42,7 +42,7 @@ function N(e) {
                 children: [
                     (0, r.jsx)('img', {
                         alt: '',
-                        src: null == l ? void 0 : l.getIconURL(32),
+                        src: null == i ? void 0 : i.getIconURL(32),
                         className: w.guildIcon
                     }),
                     (0, r.jsxs)('div', {
@@ -63,23 +63,23 @@ function N(e) {
                             (0, r.jsx)(a.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'text-muted',
-                                children: null == l ? void 0 : l.name
+                                children: null == i ? void 0 : i.name
                             })
                         ]
                     })
                 ]
             }),
             (0, r.jsx)(u.Z, {
-                users: i,
+                users: l,
                 maxUsers: 4
             })
         ]
     });
 }
-function E(e) {
+function T(e) {
     let { onSelectChannel: t, className: n } = e,
-        { search: i, query: u, results: b } = (0, m.Z)({ searchOptions: { frecencyBoosters: !0 } }),
-        S = (0, o.Wu)([j.Z, g.ZP, p.Z, _.Z, v.Z], () => {
+        { search: l, query: u, results: S } = (0, m.Z)({ searchOptions: { frecencyBoosters: !0 } }),
+        b = (0, o.Wu)([j.Z, g.ZP, p.Z, _.Z, v.Z], () => {
             let e = [],
                 t = j.Z.getGuildId();
             if (null == t) return e;
@@ -89,7 +89,7 @@ function E(e) {
             }
             return e;
         }),
-        E = (0, o.Wu)([f.Z, p.Z, x.Z, _.Z, v.Z], () => {
+        T = (0, o.Wu)([f.Z, p.Z, x.Z, _.Z, v.Z], () => {
             let e = [],
                 t = new Set();
             for (let n of f.Z.getChannelHistory()) {
@@ -99,19 +99,20 @@ function E(e) {
             for (let n of x.Z.getFrequentlyWithoutFetchingLatest()) n instanceof h.Sf && n.type === O.d4z.GUILD_VOICE && !t.has(n.id) && (0, y.JL)(n, _.Z, v.Z) && (t.add(n.id), e.push(n));
             return e;
         }),
-        P = l.useMemo(() => {
-            let e = new Set(E.map((e) => e.id)),
-                t = new Set(S.map((e) => e.id));
+        P = i.useMemo(() => {
+            let e = new Set(T.map((e) => e.id)),
+                t = new Set(b.map((e) => e.id));
             return [
-                ...S.toSorted((t, n) => (e.has(t.id) && !e.has(n.id) ? -1 : e.has(n.id) && !e.has(t.id) ? 1 : 0))
+                ...b
+                    .toSorted((t, n) => (e.has(t.id) && !e.has(n.id) ? -1 : e.has(n.id) && !e.has(t.id) ? 1 : 0))
                     .map((e) => (0, d.Z)(e.id))
                     .filter(C.lm),
-                ...E.filter((e) => !t.has(e.id))
+                ...T.filter((e) => !t.has(e.id))
                     .map((e) => (0, d.Z)(e.id))
                     .filter(C.lm)
             ];
-        }, [E, S]),
-        R = '' !== u ? b : P;
+        }, [T, b]),
+        R = '' !== u ? S : P;
     return (0, r.jsxs)('div', {
         className: s()(w.root, n),
         children: [
@@ -121,12 +122,12 @@ function E(e) {
                 query: u,
                 size: a.E1j.Sizes.MEDIUM,
                 onChange: (e) =>
-                    i({
+                    l({
                         query: e,
                         resultTypes: [c.h8.VOICE_CHANNEL]
                     }),
                 onClear: () =>
-                    i({
+                    l({
                         query: '',
                         resultTypes: [c.h8.VOICE_CHANNEL]
                     }),
@@ -146,22 +147,22 @@ function E(e) {
                       rowHeight: 48,
                       renderRow: function (e) {
                           let { rowIndex: n } = e,
-                              l = R[n];
+                              i = R[n];
                           return (0, r.jsx)(
                               N,
                               {
-                                  result: l,
+                                  result: i,
                                   onSelectChannel: t
                               },
-                              l.record.id
+                              i.record.id
                           );
                       }
                   })
-                : (0, r.jsx)(T, {})
+                : (0, r.jsx)(E, {})
         ]
     });
 }
-function T() {
+function E() {
     return (0, r.jsxs)('div', {
         className: w.emptyState,
         children: [

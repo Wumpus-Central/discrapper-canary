@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
-var l = n(442837),
-    i = n(780384),
+var i = n(442837),
+    l = n(780384),
     s = n(481060),
     o = n(210887),
     a = n(475595),
@@ -11,8 +11,8 @@ var l = n(442837),
     u = n(554431);
 let f = function (e) {
     let { quest: t } = e,
-        n = (0, l.e7)([o.Z], () => o.Z.getState().theme),
-        f = (0, i.wj)(n) ? c.BR.DARK : c.BR.LIGHT;
+        n = (0, i.e7)([o.Z], () => o.Z.getState().theme),
+        f = (0, l.wj)(n) ? c.BR.DARK : c.BR.LIGHT;
     return (0, r.jsx)('div', {
         className: u.wrapper,
         children: (0, r.jsxs)('div', {

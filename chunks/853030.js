@@ -1,14 +1,14 @@
 n.d(t, { Z: () => d });
 var r = n(255367),
-    l = n(73800),
-    i = n(120356),
-    s = n.n(i),
+    i = n(73800),
+    l = n(120356),
+    s = n.n(l),
     o = n(481060),
     a = n(812652),
     c = n(459933);
 function d(e) {
-    let { mainCTADisabled: t, mainCTAOnClick: n, align: i, ctaText: d, hideOptionsButton: u } = e,
-        f = l.useRef(null);
+    let { mainCTADisabled: t, mainCTAOnClick: n, align: l, ctaText: d, hideOptionsButton: u } = e,
+        f = i.useRef(null);
     return (0, r.jsxs)('div', {
         className: c.root,
         children: [
@@ -23,7 +23,7 @@ function d(e) {
                 (0, r.jsx)(o.yRy, {
                     targetElementRef: f,
                     position: 'top',
-                    align: i,
+                    align: l,
                     renderPopout: (e) => {
                         let { closePopout: t } = e;
                         return (0, r.jsx)(a.ZP, {

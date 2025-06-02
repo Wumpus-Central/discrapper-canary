@@ -7321,6 +7321,25 @@ let { Themes: r } = n(15202).V,
                     opacity: 0.3
                 }
             },
+            USER_PROFILE_TOOLBAR_BORDER: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'WHITE',
+                    opacity: 0.03
+                },
+                [r.LIGHT]: {
+                    raw: 'BLACK',
+                    opacity: 0.04
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'PLUM_11',
+                    opacity: 0.08
+                },
+                [r.DARKER]: {
+                    raw: 'PLUM_11',
+                    opacity: 0.06
+                }
+            },
             VOICE_VIDEO_VIDEO_TILE_BACKGROUND: {
                 category: 'generic',
                 [r.DARK]: {

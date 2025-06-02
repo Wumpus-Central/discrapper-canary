@@ -1,8 +1,8 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(255367);
 n(73800);
-var l = n(120356),
-    i = n.n(l),
+var i = n(120356),
+    l = n.n(i),
     s = n(268146),
     o = n(481060),
     a = n(925329),
@@ -23,7 +23,7 @@ function j() {
         children: '\u2022'
     });
 }
-function b(e) {
+function S(e) {
     let { source: t } = e;
     return null == t
         ? (0, r.jsx)(o.hGI, {
@@ -48,26 +48,26 @@ function b(e) {
                   className: v.sourceIcon
               });
 }
-function S(e) {
-    var t, n, l, a;
+function b(e) {
+    var t, n, i, a;
     let { nativePickerEnabled: m } = e,
-        [{ preset: S, resolution: C, fps: y, muteStreamAudio: O, selectedSource: Z, sourceType: I, audioSourceId: w }] = (0, h.E_)(),
+        [{ preset: b, resolution: C, fps: y, muteStreamAudio: O, selectedSource: Z, sourceType: I, audioSourceId: w }] = (0, h.E_)(),
         { twoClickVariant: N } = (0, d.a)({
             location: 'go_live_modal_refresh',
             autoTrackExposure: !1
         }),
-        E = (0, c.Z)(),
-        [T, P] = null != (l = (0, p.Z)(S)) ? l : [C, y],
-        R = (0, u.L)(S),
-        k = (0, f.M)(T),
+        T = (0, c.Z)(),
+        [E, P] = null != (i = (0, p.Z)(b)) ? i : [C, y],
+        R = (0, u.L)(b),
+        k = (0, f.M)(E),
         A = I === s.vA.CAMERA,
         M = null != Z || (!!N && (!m || A)),
         L = null != Z ? (null == Z || null == (t = Z.id) ? void 0 : t.startsWith(s.vA.CAMERA)) : A,
-        D = M ? void 0 : S === x.tI.PRESET_VIDEO ? _.intl.string(g.default.MuHUFR) : S === x.tI.PRESET_DOCUMENTS ? _.intl.string(g.default.y0JuYW) : void 0;
+        D = M ? void 0 : b === x.tI.PRESET_VIDEO ? _.intl.string(g.default.MuHUFR) : b === x.tI.PRESET_DOCUMENTS ? _.intl.string(g.default.y0JuYW) : void 0;
     return (0, r.jsxs)('div', {
         className: v.root,
         children: [
-            M && (0, r.jsx)(b, { source: Z }),
+            M && (0, r.jsx)(S, { source: Z }),
             (0, r.jsxs)('div', {
                 className: v.summary,
                 children: [
@@ -114,7 +114,7 @@ function S(e) {
                                             className: v.iconSummaryContainer,
                                             children: [
                                                 (0, r.jsx)(o.OyP, {
-                                                    className: i()(v.icon, v.mutedIcon),
+                                                    className: l()(v.icon, v.mutedIcon),
                                                     size: 'xxs',
                                                     color: 'currentColor'
                                                 }),
@@ -125,7 +125,7 @@ function S(e) {
                                 }),
                             L
                                 ? (0, r.jsxs)(r.Fragment, {
-                                      children: [(0, r.jsx)(j, {}), (0, r.jsx)('span', { children: null == (n = E[null != w ? w : '']) ? void 0 : n.name })]
+                                      children: [(0, r.jsx)(j, {}), (0, r.jsx)('span', { children: null == (n = T[null != w ? w : '']) ? void 0 : n.name })]
                                   })
                                 : null
                         ]

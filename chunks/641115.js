@@ -4,9 +4,9 @@ n.d(t, {
 }),
     n(388685);
 var r = n(255367),
-    l = n(73800),
-    i = n(120356),
-    s = n.n(i),
+    i = n(73800),
+    l = n(120356),
+    s = n.n(l),
     o = n(512722),
     a = n.n(o),
     c = n(442837),
@@ -21,8 +21,8 @@ var r = n(255367),
     _ = n(592125),
     v = n(944486),
     j = n(594174),
-    b = n(74538),
-    S = n(451467),
+    S = n(74538),
+    b = n(451467),
     C = n(122186),
     y = n(37113),
     O = n(981631),
@@ -30,7 +30,7 @@ var r = n(255367),
     I = n(347226),
     w = n(480197),
     N = n(20493);
-function E(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,7 +55,7 @@ function E(e) {
     }
     return e;
 }
-function T(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -77,7 +77,7 @@ function P(e) {
     let { analyticsLocation: t } = e;
     (0, d.ZDy)(async () => {
         let { default: e } = await n.e('28479').then(n.bind(n, 78865));
-        return (n) => (0, r.jsx)(e, T(E({}, n), { analyticsSource: t }));
+        return (n) => (0, r.jsx)(e, E(T({}, n), { analyticsSource: t }));
     });
 }
 function R() {
@@ -100,8 +100,8 @@ function R() {
 function k(e) {
     let t,
         n,
-        { type: l, selected: i, needsPremium: o, needsDemo: a, analyticsLocation: c, onClick: u, onClose: f, setIsHovering: m } = e,
-        { value: h, label: p } = l;
+        { type: i, selected: l, needsPremium: o, needsDemo: a, analyticsLocation: c, onClick: u, onClose: f, setIsHovering: m } = e,
+        { value: h, label: p } = i;
     return (
         o
             ? ((t = (0, r.jsx)(d.DY3, {
@@ -137,7 +137,7 @@ function k(e) {
         {
             content: t,
             className: s()(w.selectorButton, {
-                [w.selectorButtonSelected]: i,
+                [w.selectorButtonSelected]: l,
                 [w.perksDemo]: a,
                 [w.premiumUpsell]: o
             }),
@@ -146,28 +146,28 @@ function k(e) {
     );
 }
 function A(e) {
-    let { onClose: t, selectedPreset: n, selectedResolution: i, selectedFPS: s, onResolutionChange: o, onFPSChange: p, onPresetChange: R, targetGuildPremiumTier: A, captureDeviceSelected: M } = e,
+    let { onClose: t, selectedPreset: n, selectedResolution: l, selectedFPS: s, onResolutionChange: o, onFPSChange: p, onPresetChange: R, targetGuildPremiumTier: A, captureDeviceSelected: M } = e,
         L = (0, c.e7)([j.default], () => {
             let e = j.default.getCurrentUser();
             return a()(null != e, 'StreamSettings: user cannot be undefined'), e;
         }),
         D = (0, c.e7)([v.Z, _.Z], () => _.Z.getChannel(v.Z.getVoiceChannelId())),
-        B = b.ZP.canStreamQuality(b.U2.MID, L),
+        B = S.ZP.canStreamQuality(S.U2.MID, L),
         { location: U } = (0, f.O)(),
         G = (0, m.Zq)({ autoTrackExposure: !1 }),
         W = (0, x.B4)(),
         z = j.default.getUser(null == D ? void 0 : D.hdStreamingBuyerId),
         F = null != D && null != D.hdStreamingUntil && new Date(D.hdStreamingUntil) > new Date() && null != z,
         H = !B && !G,
-        [V, Y] = l.useState(!1),
+        [V, Y] = i.useState(!1),
         J = M ? y.z8 : y.WC,
-        X = T(E({}, U), { section: O.jXE.STREAM_SETTINGS }),
+        X = E(T({}, U), { section: O.jXE.STREAM_SETTINGS }),
         K = (0, r.jsx)(d.hE2, {
             buttons: J.map((e) =>
                 k({
                     type: e,
-                    selected: e.value === i,
-                    needsPremium: !(0, S.Z)(n, e.value, s, L, A, D),
+                    selected: e.value === l,
+                    needsPremium: !(0, b.Z)(n, e.value, s, L, A, D),
                     needsDemo: W && e.value !== y.LY.RESOLUTION_720,
                     analyticsLocation: X,
                     onClick: () => o(e.value),
@@ -181,7 +181,7 @@ function A(e) {
                 k({
                     type: e,
                     selected: e.value === s,
-                    needsPremium: !(0, S.Z)(n, i, e.value, L, A, D),
+                    needsPremium: !(0, b.Z)(n, l, e.value, L, A, D),
                     needsDemo: W && e.value === y.ws.FPS_60,
                     analyticsLocation: X,
                     onClick: () => p(e.value),
@@ -277,7 +277,7 @@ function A(e) {
                   });
     return (0, r.jsx)(
         u.Z,
-        T(E({}, X), {
+        E(T({}, X), {
             children: (0, r.jsx)(d.xJW, {
                 title: Z.intl.string(Z.t.ax4FnZ),
                 titleClassName: I.formItemTitle,

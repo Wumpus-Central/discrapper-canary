@@ -1,7 +1,7 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(255367),
-    l = n(73800),
-    i = n(268146),
+    i = n(73800),
+    l = n(268146),
     s = n(922770),
     o = n(481060),
     a = n(855403),
@@ -11,24 +11,24 @@ var r = n(255367),
 function f(e) {
     let { hideBackButton: t = !1 } = e,
         [{ selectedSource: n }, f] = (0, d.E_)(),
-        [m, h] = l.useState(null);
+        [m, h] = i.useState(null);
     return (
-        l.useEffect(() => {
+        i.useEffect(() => {
             var e;
             if (null != n) {
-                if (null == (e = n.id) ? void 0 : e.startsWith(i.vA.CAMERA)) {
+                if (null == (e = n.id) ? void 0 : e.startsWith(l.vA.CAMERA)) {
                     'url' in n && h(n.url);
                     return;
                 }
                 (0, c.t)({
                     width: 800,
                     height: 451,
-                    types: [i.vA.SCREEN, i.vA.WINDOW]
+                    types: [l.vA.SCREEN, l.vA.WINDOW]
                 }).then((e) => {
                     var t;
-                    let { screenSources: r, windowSources: l } = e,
-                        i = null != (t = l.find((e) => ('windowHandle' in n ? (0, a.Z)(e.id, n.windowHandle) : e.id === n.id))) ? t : r.find((e) => n.id === e.id);
-                    null != i && h(i.url);
+                    let { screenSources: r, windowSources: i } = e,
+                        l = null != (t = i.find((e) => ('windowHandle' in n ? (0, a.Z)(e.id, n.windowHandle) : e.id === n.id))) ? t : r.find((e) => n.id === e.id);
+                    null != l && h(l.url);
                 });
             }
         }, [n]),

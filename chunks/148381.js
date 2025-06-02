@@ -1,19 +1,19 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(255367),
-    l = n(73800),
-    i = n(120356),
-    s = n.n(i),
+    i = n(73800),
+    l = n(120356),
+    s = n.n(l),
     o = n(481060),
     a = n(493773),
     c = n(958707),
     d = n(347226),
     u = n(502154);
 function f(e) {
-    let { title: t, scrollerClassName: n, scrollerInnerClassName: i, children: f } = e,
-        m = l.useRef(null),
-        [h, p] = l.useState(!1),
-        [x, g] = l.useState(!1),
-        _ = l.useCallback(() => {
+    let { title: t, scrollerClassName: n, scrollerInnerClassName: l, children: f } = e,
+        m = i.useRef(null),
+        [h, p] = i.useState(!1),
+        [x, g] = i.useState(!1),
+        _ = i.useCallback(() => {
             let { current: e } = m;
             null != e && (p(!e.isScrolledToTop()), g(!e.isScrolledToBottom()));
         }, []);
@@ -35,7 +35,7 @@ function f(e) {
                     className: n,
                     children: (0, r.jsx)(o.Den, {
                         ref: m,
-                        className: s()(u.scrollerInner, i, { [u.bottomSeparator]: x }),
+                        className: s()(u.scrollerInner, l, { [u.bottomSeparator]: x }),
                         onScroll: _,
                         children: f
                     })

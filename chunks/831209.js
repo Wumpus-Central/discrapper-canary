@@ -366,6 +366,7 @@ var r = (function (e) {
         (e.USER_PROFILE_NOTE_BACKGROUND_FOCUS = 'var(--user-profile-note-background-focus)'),
         (e.USER_PROFILE_OVERLAY_BACKGROUND = 'var(--user-profile-overlay-background)'),
         (e.USER_PROFILE_OVERLAY_BACKGROUND_HOVER = 'var(--user-profile-overlay-background-hover)'),
+        (e.USER_PROFILE_TOOLBAR_BORDER = 'var(--user-profile-toolbar-border)'),
         (e.VOICE_VIDEO_VIDEO_TILE_BACKGROUND = 'var(--voice-video-video-tile-background)'),
         (e.VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK = 'var(--voice-video-video-tile-blur-fallback)'),
         (e.WHITE = 'var(--white)'),
