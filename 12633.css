@@ -27722,21 +27722,27 @@ html:not(.visual-refresh) .root_e5f3a9 {
 
 .bigCloud_c7bb69 {
     left: calc(50% - 60px);
+    opacity: .25;
     position: absolute;
     top: 39px;
-    transform: translateX(-50%)
-}
-
-.smallCloud_c7bb69 {
-    position: absolute;
-    right: 39px;
-    top: 58px
+    transform: translateX(-50%);
+    width: 120px
 }
 
 .mediumCloud_c7bb69 {
     left: 28px;
+    opacity: .35;
     position: absolute;
-    top: 22px
+    top: 22px;
+    width: 74px
+}
+
+.smallCloud_c7bb69 {
+    opacity: .25;
+    position: absolute;
+    right: 39px;
+    top: 58px;
+    width: 59px
 }
 
 .closeButtonPosition_c7bb69 {
