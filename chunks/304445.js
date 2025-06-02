@@ -95,7 +95,7 @@ let c = new (class {
             }),
             u(this, 'handleKeybindRouteChange', (e) => {
                 let { path: t } = e;
-                null != t ? (clearTimeout(this.timer), (this.timer = setTimeout(this.flushRoute, 200))) : null == t && clearTimeout(this.timer);
+                -1 !== this.timer && clearTimeout(this.timer), null != t && (this.timer = setTimeout(this.flushRoute, 200));
             }),
             u(this, 'flushRoute', () => {
                 clearTimeout(this.timer);

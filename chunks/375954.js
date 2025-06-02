@@ -88,9 +88,9 @@ function V(e) {
     (null == n ? void 0 : n.present) ? (l = l.jumpToPresent(o)) : (null == r ? void 0 : r.messageId) != null ? (l = l.focusOnMessage(r.messageId)) : (null == n ? void 0 : n.messageId) != null ? (l = l.jumpToMessage(n.messageId, n.flash, n.offset, n.returnMessageId, n.jumpType)) : (null != i || null != a) && (l = l.loadFromCache(null != i, o)), null != s && (null != i || null != a) && (null == i || null == a) && (l = l.truncate(null != i, null != a)), c.Z.commit(l);
 }
 function Z(e) {
-    let { channelId: t, isBefore: n, isAfter: r, jump: i, hasMoreBefore: a, hasMoreAfter: o, messages: s, isStale: l, truncate: u } = e,
-        d = c.Z.getOrCreate(t);
-    (d = d.loadComplete({
+    let { channelId: t, isBefore: n, isAfter: r, jump: i, hasMoreBefore: a, hasMoreAfter: o, messages: s, isStale: l, truncate: u, avoidInitialScroll: d } = e,
+        f = c.Z.getOrCreate(t);
+    (f = f.loadComplete({
         newMessages: s,
         isBefore: n,
         isAfter: r,
@@ -98,10 +98,11 @@ function Z(e) {
         hasMoreBefore: a,
         hasMoreAfter: o,
         cached: l,
-        hasFetched: !0
+        hasFetched: !0,
+        avoidInitialScroll: d
     })),
-        null != u && (n || r) && (!n || !r) && (d = d.truncate(n, r)),
-        c.Z.commit(d);
+        null != u && (n || r) && (!n || !r) && (f = f.truncate(n, r)),
+        c.Z.commit(f);
 }
 function H(e) {
     let { channelId: t } = e,

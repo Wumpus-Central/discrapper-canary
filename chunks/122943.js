@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => N });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -9,13 +9,15 @@ var r = n(255367),
     u = n(201895),
     d = n(933557),
     f = n(482798),
-    _ = n(788858),
-    p = n(814454),
-    h = n(170187),
-    m = n(556638),
-    g = n(388032),
-    E = n(843280);
-function b(e, t, n) {
+    _ = n(209698),
+    p = n(788858),
+    h = n(814454),
+    m = n(170187),
+    g = n(532657),
+    E = n(556638),
+    b = n(388032),
+    y = n(843280);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +30,7 @@ function b(e, t, n) {
         e
     );
 }
-function y(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,12 +41,12 @@ function y(e) {
                 })
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                O(e, t, n[t]);
             });
     }
     return e;
 }
-function O(e, t) {
+function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,19 +58,19 @@ function O(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : O(Object(t)).forEach(function (n) {
+            : I(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function I(e) {
-    let { channel: t, textVariant: n, textClassName: a, iconClassName: b, hideText: O = !1, hideTooltip: I = !1, canTruncate: S = !0, showChannelName: T = !1 } = e,
+function T(e) {
+    let { channel: t, textVariant: n, textClassName: a, iconClassName: _, hideText: g = !1, hideTooltip: O = !1, canTruncate: I = !0, showChannelName: T = !1 } = e,
         A = (0, l.vjg)(l.Skl.ONLINE),
         N = (0, d.ZP)(t),
         C = t.isDM() || t.isGroupDM(),
@@ -76,48 +78,77 @@ function I(e) {
         R = !P && T,
         { analyticsLocations: w } = (0, c.ZP)(),
         D = i.useCallback(() => {
-            (0, p.A)({
+            (0, h.A)({
                 analyticsLocations: w,
                 activityType: 'VOICE',
                 voiceChannelId: t.id
             });
         }, [w, t.id]),
         L = () =>
-            I || C
-                ? (0, r.jsx)(_.Z, {
+            O || C
+                ? (0, r.jsx)(p.Z, {
                       size: 'custom',
                       color: A,
                       channel: t,
-                      className: o()(E.icon, b)
+                      className: o()(y.icon, _)
                   })
                 : (0, r.jsx)(l.ua7, {
                       text: N,
                       'aria-label': (0, u.ZP)({ channel: t }),
-                      delay: m.X,
+                      delay: E.X,
                       onTooltipShow: D,
                       children: (e) =>
                           (0, r.jsx)(
-                              _.Z,
-                              v(y({}, e), {
+                              p.Z,
+                              S(v({}, e), {
                                   size: 'custom',
                                   color: s.Z.colors.STATUS_POSITIVE,
                                   channel: t,
-                                  className: o()(E.icon, b)
+                                  className: o()(y.icon, _)
                               })
                           )
                   }),
-        x = () => (P ? N : C ? g.intl.string(g.t['9FaEzs']) : t.isGuildStageVoice() ? g.intl.string(g.t.QygGCA) : g.intl.string(g.t.msxteH));
+        x = () => (P ? N : C ? b.intl.string(b.t['9FaEzs']) : t.isGuildStageVoice() ? b.intl.string(b.t.QygGCA) : b.intl.string(b.t.msxteH));
     return (0, r.jsxs)(r.Fragment, {
         children: [
             L(),
-            !O &&
-                (0, r.jsxs)(h.Z, {
+            !g &&
+                (0, r.jsxs)(m.Z, {
                     variant: n,
                     className: a,
-                    canTruncate: S,
-                    hideTooltip: I,
+                    canTruncate: I,
+                    hideTooltip: O,
                     children: [x(), R && null != N && ' ('.concat(N, ')')]
                 })
         ]
     });
+}
+function A(e) {
+    let { channel: t, textVariant: n, textClassName: i, iconClassName: a, hideText: s = !1, hideTooltip: c = !1, canTruncate: u = !0, showChannelName: _ = !1 } = e,
+        h = (0, l.vjg)(l.Skl.ONLINE),
+        m = (0, d.ZP)(t),
+        E = t.isDM() || t.isGroupDM(),
+        { enableTopNavButton: O } = (0, f.Cq)({ location: 'VoiceActivityStatusWithCombinedTooltip' }),
+        v = O && null != m ? m : E ? b.intl.string(b.t['9FaEzs']) : t.isGuildStageVoice() ? b.intl.string(b.t.QygGCA) : b.intl.string(b.t.msxteH),
+        I = null == m || O ? v : ''.concat(v, ' (').concat(m, ')'),
+        S = _ ? I : v;
+    return (0, r.jsx)(g.Z, {
+        icon: (0, r.jsx)(p.Z, {
+            size: 'custom',
+            color: h,
+            channel: t,
+            className: o()(y.icon, a)
+        }),
+        text: S,
+        tooltipText: c ? void 0 : I,
+        textVariant: n,
+        textClassName: i,
+        hideTooltip: c,
+        canTruncate: u,
+        'aria-label': I,
+        hideText: s
+    });
+}
+function N(e) {
+    return (0, _.b)({ location: 'VoiceActivityStatusExperimentWrapper' }) ? (0, r.jsx)(A, v({}, e)) : (0, r.jsx)(T, v({}, e));
 }

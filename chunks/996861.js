@@ -2,14 +2,14 @@ n.d(t, {
     $Z: () => I,
     B8: () => Z,
     F4: () => _,
-    HH: () => T,
+    HH: () => x,
     Hd: () => N,
-    Xl: () => A,
+    Xl: () => T,
     dF: () => C,
     eM: () => L,
     fB: () => P,
     gK: () => M,
-    mG: () => x,
+    mG: () => A,
     qe: () => w,
     rY: () => D,
     ts: () => R,
@@ -66,13 +66,13 @@ function D(e, t, n) {
     if (!1 === t.pinned) return void (n.shiftKey ? i.Z.pinMessage(e, t.id) : l.Z.confirmPin(e, t));
     n.shiftKey ? i.Z.unpinMessage(e, t.id) : l.Z.confirmUnpin(e, t);
 }
-function A(e, t) {
+function T(e, t) {
     (0, a.Z)(e.id, t.id);
 }
-function x(e, t) {
+function A(e, t) {
     (0, v.Z)(e, t, void 0, E.Z.getOptions(t.id));
 }
-function T(e, t, n) {
+function x(e, t, n) {
     let i = e.isPrivate(),
         r = t.author.id === f.default.getId();
     (0, c.fE)({

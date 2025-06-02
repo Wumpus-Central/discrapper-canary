@@ -1,8 +1,8 @@
 r.d(t, { I: () => O }), r(388685);
 var n = r(255367),
     a = r(73800),
-    s = r(442837),
-    l = r(481060),
+    l = r(442837),
+    s = r(481060),
     i = r(80932),
     o = r(710845),
     c = r(430824),
@@ -20,29 +20,29 @@ var n = r(255367),
 let j = new o.Z('EmojiStudio'),
     O = (e) => {
         let { userImage: t, guildId: r, back: o } = e,
-            O = (0, s.e7)([c.Z, d.Z, u.Z], () => {
+            O = (0, l.e7)([c.Z, d.Z, u.Z], () => {
                 let e = d.Z.getGuildId(),
                     t = c.Z.getGuild(e);
                 return u.Z.can(b.Plq.CREATE_GUILD_EXPRESSIONS, t) && null != t ? t.id : null;
             }),
-            [N, I] = a.useState(null != r ? r : O),
+            [E, I] = a.useState(null != r ? r : O),
             [D, y] = a.useState(null),
             [C, w] = a.useState(''),
             [S, A] = a.useState(null),
             k = async () => {
-                if ((y(null), null == N)) return void y(h.ze.MISSING_GUILD);
+                if ((y(null), null == E)) return void y(h.ze.MISSING_GUILD);
                 if (null == t || (null == t ? void 0 : t.file) == null || null == S) return void y(h.ze.MISSING_IMAGE_DATA);
                 try {
                     await (0, i.rS)({
                         image: S,
-                        guildId: N,
+                        guildId: E,
                         name: C
                     });
                 } catch (e) {
                     y((0, g.z)(e)), j.error('Failed to upload emoji.', e);
                     return;
                 }
-                (0, l.Mr3)(h.Hj);
+                (0, s.Mr3)(h.Hj);
             },
             T = a.useRef(0),
             M = a.useCallback((e) => {
@@ -52,7 +52,7 @@ let j = new o.Z('EmojiStudio'),
             }, []);
         return (0, n.jsxs)('main', {
             children: [
-                (0, n.jsx)(l.X6q, {
+                (0, n.jsx)(s.X6q, {
                     variant: 'heading-lg/semibold',
                     className: _.heading,
                     children: 'Add Custom Emoji'
@@ -86,36 +86,39 @@ let j = new o.Z('EmojiStudio'),
                                         })
                                     ]
                                 }),
-                                (0, n.jsx)(m.q, {
-                                    onChange: I,
-                                    selected: N
+                                (0, n.jsx)('div', {
+                                    className: _.selector,
+                                    children: (0, n.jsx)(m.q, {
+                                        onChange: I,
+                                        selected: E
+                                    })
                                 }),
-                                (0, n.jsx)(l.zxk, {
+                                (0, n.jsx)(s.zxk, {
                                     className: _.submit,
                                     onClick: k,
                                     fullWidth: !0,
-                                    disabled: null == t || null == N || C.length < 2,
+                                    disabled: null == t || null == E || C.length < 2,
                                     children: x.intl.string(x.t.DU0dy8)
                                 })
                             ]
                         })
                     ]
                 }),
-                (0, n.jsx)(E, { back: o })
+                (0, n.jsx)(N, { back: o })
             ]
         });
     },
-    E = (e) => {
+    N = (e) => {
         let { back: t } = e;
-        return (0, n.jsxs)(l.zxk, {
+        return (0, n.jsxs)(s.zxk, {
             'aria-label': x.intl.string(x.t['13/7kZ']),
             onClick: t,
-            look: l.zxk.Looks.BLANK,
-            size: l.zxk.Sizes.MIN,
+            look: s.zxk.Looks.BLANK,
+            size: s.zxk.Sizes.MIN,
             innerClassName: _.backButtonInnner,
             className: _.backButton,
             children: [
-                (0, n.jsx)(l.j9r, {
+                (0, n.jsx)(s.j9r, {
                     color: 'currentColor',
                     size: 'xs'
                 }),

@@ -18,7 +18,7 @@ let a = (e, t, n) => {
                               type: l.lJ.Attachment,
                               media: e
                           },
-                          (0, l.HH)(s)
+                          (0, l.PZ)(s)
                       );
         return null != (o = null == s || null == (a = s.attachments) ? void 0 : a.filter(c)) ? o : [];
     },
@@ -35,7 +35,7 @@ let a = (e, t, n) => {
                               type: l.lJ.Embed,
                               media: e
                           },
-                          (0, l.HH)(s)
+                          (0, l.PZ)(s)
                       );
         return null != (o = null == s || null == (a = s.embeds) ? void 0 : a.filter(c)) ? o : [];
     };

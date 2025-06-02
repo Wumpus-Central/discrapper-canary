@@ -227,10 +227,10 @@ function F(e) {
     function t(e) {
         return null != e;
     }
-    let n = e.filter((e) => (0, y.OR)(e) && (0, v.HH)(e)),
+    let n = e.filter((e) => (0, y.OR)(e) && (0, v.PZ)(e)),
         r = e
             .map((e) => {
-                if (null != e && 'referenced_message' in e && null != e.referenced_message && (0, y.OR)(e.referenced_message) && (0, v.HH)(e.referenced_message)) return e.referenced_message;
+                if (null != e && 'referenced_message' in e && null != e.referenced_message && (0, y.OR)(e.referenced_message) && (0, v.PZ)(e.referenced_message)) return e.referenced_message;
             })
             .filter(t);
     r.length > 0 && (n = [...n, ...r]);
@@ -247,12 +247,12 @@ function V(e) {
     function t(e) {
         return null != e;
     }
-    let n = e.filter((e) => (0, y.OR)(e) && (0, v.HH)(e)),
+    let n = e.filter((e) => (0, y.OR)(e) && (0, v.PZ)(e)),
         r = e
             .map((e) => {
                 if (N.OBS.has(e.type) && null != e.messageReference) {
                     let t = f.Z.getMessageByReference(e.messageReference);
-                    if (t.state === f.Y.LOADED && null != t.message && (0, y.OR)(t.message) && (0, v.HH)(t.message)) return t.message;
+                    if (t.state === f.Y.LOADED && null != t.message && (0, y.OR)(t.message) && (0, v.PZ)(t.message)) return t.message;
                 }
             })
             .filter(t);

@@ -2,12 +2,12 @@ n.d(t, { Z: () => c });
 var a = n(255367);
 n(73800);
 var r = n(739566),
-    i = n(421399),
-    o = n(47930);
+    o = n(421399),
+    i = n(47930);
 function c(e) {
     var t, n, c, l;
     let s = (0, r.ZP)(e.message),
-        u = (0, o.x)({
+        u = (0, i.x)({
             message: e.message,
             channel: e.channel,
             user: null != (n = null == (t = e.message) ? void 0 : t.author) ? n : e.userOverride,
@@ -16,9 +16,9 @@ function c(e) {
         }),
         d = {};
     return (
-        null != u && (d[i.a.SYSTEM_TAG] = u),
+        null != u && (d[o.a.SYSTEM_TAG] = u),
         (0, a.jsx)(
-            i.Z,
+            o.Z,
             ((c = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},

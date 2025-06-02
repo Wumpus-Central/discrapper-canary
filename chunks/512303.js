@@ -26,7 +26,7 @@ function y(e) {
         N = (0, a.e7)([b.Z], () => b.Z.getGuild(_)),
         Z = p.Z.getChannel(e.channel_id),
         D = null == Z ? void 0 : Z.getGuildId(),
-        A = (0, a.e7)([h.default], () => h.default.getUser(P));
+        T = (0, a.e7)([h.default], () => h.default.getUser(P));
     if (
         (r.useEffect(() => {
             null == I && null != j && (0, s.PR)(j);
@@ -34,11 +34,11 @@ function y(e) {
         !(0, d.a)(e))
     )
         return null;
-    null == A && (A = new m.Z(null == (v = e.interactionMetadata) ? void 0 : v.user));
-    let x = null;
+    null == T && (T = new m.Z(null == (v = e.interactionMetadata) ? void 0 : v.user));
+    let A = null;
     return (
         null != N
-            ? (x = (0, i.jsx)(o.sNh, {
+            ? (A = (0, i.jsx)(o.sNh, {
                   className: E.interactionInfoMenuItem,
                   disabled: !0,
                   iconLeft: () =>
@@ -51,7 +51,7 @@ function y(e) {
                   subtext: O.intl.formatToPlainString(O.t.ShLXXF, { application: e.author.username })
               }))
             : null != I &&
-              (x = (0, i.jsx)(o.sNh, {
+              (A = (0, i.jsx)(o.sNh, {
                   action: () =>
                       (0, g.openUserProfileModal)({
                           userId: I.id,
@@ -73,12 +73,12 @@ function y(e) {
             id: 'view-interaction-info',
             label: O.intl.string(O.t.Rjezb2),
             children: [
-                x,
-                null != A
+                A,
+                null != T
                     ? (0, i.jsx)(o.sNh, {
                           action: () =>
                               (0, g.openUserProfileModal)({
-                                  userId: A.id,
+                                  userId: T.id,
                                   guildId: D,
                                   channelId: e.channel_id,
                                   sourceAnalyticsLocations: S
@@ -86,11 +86,11 @@ function y(e) {
                           className: E.interactionInfoMenuItem,
                           iconLeft: () =>
                               (0, i.jsx)(c.Z, {
-                                  user: A,
+                                  user: T,
                                   size: o.EFr.SIZE_20
                               }),
                           id: 'interaction-user',
-                          label: A.username,
+                          label: T.username,
                           subtext: O.intl.string(O.t['04gxNj'])
                       })
                     : null

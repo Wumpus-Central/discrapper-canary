@@ -106,12 +106,12 @@ function U(e) {
 }
 function G(e) {
     let { textVariant: t, className: n, hasCustomStatusText: i, totalActivityCount: a } = e,
-        o = a - 1;
+        s = a - 1;
     return (0, r.jsx)(l.xv, {
         variant: t,
-        className: n,
+        className: o()(n, w.activityCounter),
         color: i ? 'text-positive' : 'none',
-        children: i ? '+'.concat(o) : '(+'.concat(o, ')')
+        children: i ? '+'.concat(s) : '(+'.concat(s, ')')
     });
 }
 function B(e) {
@@ -222,12 +222,15 @@ function F(e) {
                     e.push(
                         (0, r.jsx)(
                             T.Z,
-                            L(
-                                {
-                                    stream: j,
-                                    game: null == n ? void 0 : n.find(d.Z)
-                                },
-                                t
+                            k(
+                                L(
+                                    {
+                                        stream: j,
+                                        game: null == n ? void 0 : n.find(d.Z)
+                                    },
+                                    t
+                                ),
+                                { showChannelName: !0 }
                             ),
                             'stream'
                         )
@@ -240,32 +243,36 @@ function F(e) {
             );
         },
         er = () =>
+            (0, r.jsx)(G, {
+                textVariant: 'text-'.concat(O, '/medium'),
+                className: g,
+                hasCustomStatusText: z,
+                totalActivityCount: X
+            }),
+        ei = () =>
             0 === X
                 ? null
                 : J && !Y
-                  ? (0, r.jsx)(u.ua7, {
-                        tooltipContentClassName: o()(w.container, w.activitiesTooltip),
-                        delay: C.X,
-                        text: en(),
-                        'aria-label': ee,
-                        children: (e) =>
-                            (0, r.jsxs)(
-                                'div',
-                                k(L({ className: w.activityContainer }, e), {
-                                    children: [
-                                        et(!0),
-                                        (0, r.jsx)(G, {
-                                            textVariant: 'text-'.concat(O, '/medium'),
-                                            className: g,
-                                            hasCustomStatusText: z,
-                                            totalActivityCount: X
-                                        })
-                                    ]
-                                })
-                            )
-                    })
+                  ? M
+                      ? (0, r.jsxs)('div', {
+                            className: w.activityContainer,
+                            children: [et(), er()]
+                        })
+                      : (0, r.jsx)(u.ua7, {
+                            tooltipContentClassName: o()(w.container, w.activitiesTooltip),
+                            delay: C.X,
+                            text: en(),
+                            'aria-label': ee,
+                            children: (e) =>
+                                (0, r.jsxs)(
+                                    'div',
+                                    k(L({ className: w.activityContainer }, e), {
+                                        children: [et(!0), er()]
+                                    })
+                                )
+                        })
                   : et(),
-        ei = () => {
+        ea = () => {
             if (null == V) return null;
             let e = V.emoji,
                 t = V.state,
@@ -303,14 +310,14 @@ function F(e) {
             [w.textSm]: 'sm' === O
         }),
         children: [
-            er(),
+            ei(),
             null != V &&
                 X > 0 &&
                 (0, r.jsx)(B, {
                     textVariant: 'text-'.concat(O, '/normal'),
                     className: g
                 }),
-            ei(),
+            ea(),
             D && (0, r.jsx)(I.Z, {})
         ]
     });

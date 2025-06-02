@@ -150,19 +150,15 @@ let G = {
             let { socket: t } = e,
                 i = t.application;
             if (null == i.id) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'No application.');
-            let { channel: l, guild: o, contextless: c } = (0, w.T)(i),
-                u = (0, g.ZP)({
+            let { channel: l, guild: o } = (0, w.T)(),
+                s = (0, g.ZP)({
                     application: t.application,
                     channelId: null == l ? void 0 : l.id
                 }),
-                d = null != u ? E.Z.getWindow(u) : void 0;
-            (null == d ? void 0 : d.closed) && (d = void 0);
-            let p = null != d ? k.IlC.POPOUT : k.IlC.APP;
-            if (((0, j.Pr)({}, null == d ? void 0 : d.document), c)) {
-                let e = I.Z.getApplicationActivity(i.id);
-                if (null != e) (0, s.h7)(e, !1, p);
-                else throw new A.Z({ errorCode: k.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity was set using setActivity.');
-            } else
+                c = null != s ? E.Z.getWindow(s) : void 0;
+            (null == c ? void 0 : c.closed) && (c = void 0);
+            let u = null != c ? k.IlC.POPOUT : k.IlC.APP;
+            (0, j.Pr)({}, null == c ? void 0 : c.document),
                 (0, a.ZDy)(
                     async () => {
                         let { default: e } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
@@ -219,7 +215,7 @@ let G = {
                             );
                         };
                     },
-                    { contextKey: p === k.IlC.POPOUT ? a.u1M : a.z1l }
+                    { contextKey: u === k.IlC.POPOUT ? a.u1M : a.z1l }
                 );
         }
     },

@@ -151,6 +151,7 @@ function y(e, t, n) {
         height: e.height,
         placeholder: e.placeholder,
         placeholderVersion: e.placeholderVersion,
-        sourceMetadata: t
+        sourceMetadata: t,
+        contentType: e.contentType
     };
 }

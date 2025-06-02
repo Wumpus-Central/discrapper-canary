@@ -15,15 +15,15 @@ let s = 'png',
 function u(e) {
     return !((0, i.B0)(e) || (0, r.zt)(e));
 }
-function d(e) {
-    return o.ZP.canSaveImage(e) && a.Z.isDiscordAssetUrl(e) && u(e);
+function d(e, t) {
+    return o.ZP.canSaveImage(e, t) && a.Z.isDiscordAssetUrl(e) && u(e);
 }
-function f(e) {
-    return o.ZP.canCopyImage(e) && a.Z.isDiscordAssetUrl(e) && u(e);
+function f(e, t) {
+    return o.ZP.canCopyImage(e, t) && a.Z.isDiscordAssetUrl(e) && u(e);
 }
-function _(e, t) {
-    let n = a.Z.toURLSafe(e);
-    if (null == n || n.host === c) return e;
-    let r = (0, o.mD)(e);
-    return n.origin === l && ((n.host = c), n.searchParams.delete('size')), n.searchParams.delete('width'), n.searchParams.delete('height'), n.searchParams.delete('quality'), n.searchParams.delete('format'), null == r && null != t && n.searchParams.append('format', t), n.toString();
+function _(e, t, n) {
+    let r = a.Z.toURLSafe(e);
+    if (null == r || r.host === c) return e;
+    let i = (0, o.mD)(e, t);
+    return r.origin === l && ((r.host = c), r.searchParams.delete('size')), r.searchParams.delete('width'), r.searchParams.delete('height'), r.searchParams.delete('quality'), r.searchParams.delete('format'), null == i && null != n && r.searchParams.append('format', n), r.toString();
 }

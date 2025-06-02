@@ -16,7 +16,9 @@ function o(e) {
 function s(e) {
     let { items: t, renderItem: n, getItemKey: i, wrapChildren: s = o, lazyCleanUpDelay: l } = e,
         c = r.useRef(-1);
-    r.useLayoutEffect(() => () => clearTimeout(c.current));
+    r.useLayoutEffect(() => {
+        -1 !== c.current && clearTimeout(c.current);
+    }, []);
     let [, u] = r.useState(a),
         d = r.useRef(null),
         f = r.useMemo(() => {

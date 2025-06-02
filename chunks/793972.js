@@ -1,16 +1,16 @@
 r.d(t, { R: () => o });
 var n = r(255367),
     a = r(692547),
-    s = r(481060),
-    l = r(192360),
+    l = r(481060),
+    s = r(192360),
     i = r(954292);
 let o = (e) => {
         let { onChange: t, value: r } = e;
         return (0, n.jsxs)('div', {
-            className: l.nameInput,
+            className: s.nameInput,
             children: [
                 (0, n.jsxs)('div', {
-                    className: l.wrapInput,
+                    className: s.wrapInput,
                     children: [
                         (0, n.jsx)(c, {}),
                         (0, n.jsx)('input', {
@@ -24,10 +24,10 @@ let o = (e) => {
                         (0, n.jsx)(u, { value: r })
                     ]
                 }),
-                (0, n.jsx)(s.Text, {
+                (0, n.jsx)(l.Text, {
                     variant: 'text-xs/normal',
                     color: 'header-muted',
-                    className: l.inputNote,
+                    className: s.inputNote,
                     children: 'Min. 2 characters (letters, numbers & underscores only).'
                 })
             ]
@@ -35,26 +35,26 @@ let o = (e) => {
     },
     c = () =>
         (0, n.jsx)('span', {
-            className: l.bookend,
+            className: s.bookend,
             'arria-hidden': !0,
             children: ':'
         }),
     u = (e) => {
         let { value: t } = e;
-        return (0, n.jsxs)(s.Text, {
+        return (0, n.jsxs)(l.Text, {
             variant: 'text-md/semibold',
             color: 'header-muted',
-            className: l.ghost,
+            className: s.ghost,
             'aria-hidden': !0,
             children: [
                 (0, n.jsx)(c, {}),
                 (0, n.jsx)('span', {
-                    className: l.spacer,
+                    className: s.spacer,
                     children: '' === t ? 'emoji_name' : t
                 }),
                 (0, n.jsx)(c, {}),
                 '' === t &&
-                    (0, n.jsx)(s.vdY, {
+                    (0, n.jsx)(l.vdY, {
                         color: a.Z.colors.INTERACTIVE_MUTED,
                         size: 'xs'
                     })

@@ -47,7 +47,7 @@ function y(e, t, n) {
     return null != e && c.default.extractTimestamp(e) < h && (r = r && null != t && p.test(t.name)), r;
 }
 function O(e) {
-    let { url: t, proxy_url: n, width: r, height: i, placeholder: a, placeholder_version: o, description: s, flags: c } = e;
+    let { url: t, proxy_url: n, width: r, height: i, placeholder: a, placeholder_version: o, description: s, flags: c, content_type: d } = e;
     return {
         url: t,
         proxyURL: n,
@@ -57,7 +57,8 @@ function O(e) {
         placeholderVersion: o,
         description: s,
         srcIsAnimated: (0, l.yE)(null != c ? c : 0, u.FoC.IS_ANIMATED),
-        flags: null != c ? c : 0
+        flags: null != c ? c : 0,
+        contentType: null != d ? d : void 0
     };
 }
 function v(e, t, n) {

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => p });
-var r = n(255367);
+var o = n(255367);
 n(73800);
-var o = n(481060),
+var r = n(481060),
     i = n(37234),
     c = n(566898),
     l = n(769654),
@@ -14,22 +14,22 @@ function p(e) {
     let { user: t, onClose: n } = e,
         { trackUserProfileAction: p } = (0, a.KZ)(),
         { mutualGuilds: m, isFetching: b } = (0, s.Z)(t);
-    return (0, r.jsx)(o.Ttm, {
+    return (0, o.jsx)(r.Ttm, {
         className: f.scroller,
         fade: !0,
         children:
             null == m && b
                 ? Array.from({ length: 10 }).map((e, t) =>
-                      (0, r.jsxs)(
+                      (0, o.jsxs)(
                           'div',
                           {
                               className: f.loadingItem,
                               children: [
-                                  (0, r.jsx)(c.ZT, {
+                                  (0, o.jsx)(c.ZT, {
                                       width: 40,
                                       opacity: 0.08
                                   }),
-                                  (0, r.jsx)(c.ZT, {
+                                  (0, o.jsx)(c.ZT, {
                                       width: 135,
                                       opacity: 0.08
                                   })
@@ -42,20 +42,20 @@ function p(e) {
                   ? null == m
                       ? void 0
                       : m.map((e) => {
-                            let { guild: o, nick: c } = e;
-                            return (0, r.jsx)(
+                            let { guild: r, nick: c } = e;
+                            return (0, o.jsx)(
                                 d.Z,
                                 {
                                     user: t,
-                                    guild: o,
+                                    guild: r,
                                     nick: c,
                                     onSelect: () => {
-                                        p({ action: 'PRESS_MUTUAL_GUILD' }), (0, l.X)(o.id), n(), (0, i.xf)();
+                                        p({ action: 'PRESS_MUTUAL_GUILD' }), (0, l.X)(r.id), n(), (0, i.xf)();
                                     }
                                 },
-                                o.id
+                                r.id
                             );
                         })
-                  : (0, r.jsx)(u.b0, {})
+                  : (0, o.jsx)(u.b0, {})
     });
 }

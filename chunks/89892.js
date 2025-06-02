@@ -173,7 +173,7 @@ class O {
     mutate(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = new O(this.channelId);
-        return (n._array = t ? [...this._array] : this._array), (n._map = t ? p({}, this._map) : this._map), (n._after = t ? this._after.clone() : this._after), (n._before = t ? this._before.clone() : this._before), e instanceof Function ? ((n.ready = this.ready), (n.jumpType = this.jumpType), (n.jumpTargetId = this.jumpTargetId), (n.jumpTargetOffset = this.jumpTargetOffset), (n.jumpSequenceId = this.jumpSequenceId), (n.jumped = this.jumped), (n.jumpedToPresent = this.jumpedToPresent), (n.jumpFlash = this.jumpFlash), (n.jumpReturnTargetId = this.jumpReturnTargetId), (n.focusTargetId = this.focusTargetId), (n.focusSequenceId = this.focusSequenceId), (n.hasMoreBefore = this.hasMoreBefore), (n.hasMoreAfter = this.hasMoreAfter), (n.loadingMore = this.loadingMore), (n.revealedMessageId = this.revealedMessageId), (n.cached = this.cached), (n.hasFetched = this.hasFetched), (n.error = this.error), e(n)) : 'object' == typeof e && ((n.ready = void 0 !== e.ready ? !0 === e.ready : this.ready), (n.jumpType = void 0 !== e.jumpType ? e.jumpType : this.jumpType), (n.jumpTargetId = void 0 !== e.jumpTargetId ? e.jumpTargetId : this.jumpTargetId), (n.jumpTargetOffset = void 0 !== e.jumpTargetOffset ? e.jumpTargetOffset : this.jumpTargetOffset), (n.jumpSequenceId = void 0 !== e.jumpSequenceId ? e.jumpSequenceId : this.jumpSequenceId), (n.jumped = void 0 !== e.jumped ? !0 === e.jumped : this.jumped), (n.jumpedToPresent = void 0 !== e.jumpedToPresent ? !0 === e.jumpedToPresent : this.jumpedToPresent), (n.jumpFlash = void 0 !== e.jumpFlash ? !0 === e.jumpFlash : this.jumpFlash), (n.jumpReturnTargetId = void 0 !== e.jumpReturnTargetId ? e.jumpReturnTargetId : this.jumpReturnTargetId), (n.focusTargetId = void 0 !== e.focusTargetId ? e.focusTargetId : this.focusTargetId), (n.focusSequenceId = void 0 !== e.focusSequenceId ? e.focusSequenceId : this.focusSequenceId), (n.hasMoreBefore = void 0 !== e.hasMoreBefore ? !0 === e.hasMoreBefore : this.hasMoreBefore), (n.hasMoreAfter = void 0 !== e.hasMoreAfter ? !0 === e.hasMoreAfter : this.hasMoreAfter), (n.loadingMore = void 0 !== e.loadingMore ? e.loadingMore : this.loadingMore), (n.revealedMessageId = void 0 !== e.revealedMessageId ? e.revealedMessageId : this.revealedMessageId), (n.cached = void 0 !== e.cached ? e.cached : this.cached), (n.hasFetched = void 0 !== e.hasFetched ? e.hasFetched : this.hasFetched), (n.error = void 0 !== e.error ? e.error : this.error)), n;
+        return (n._array = t ? [...this._array] : this._array), (n._map = t ? p({}, this._map) : this._map), (n._after = t ? this._after.clone() : this._after), (n._before = t ? this._before.clone() : this._before), e instanceof Function ? ((n.ready = this.ready), (n.jumpType = this.jumpType), (n.jumpTargetId = this.jumpTargetId), (n.jumpTargetOffset = this.jumpTargetOffset), (n.jumpSequenceId = this.jumpSequenceId), (n.jumped = this.jumped), (n.jumpedToPresent = this.jumpedToPresent), (n.jumpFlash = this.jumpFlash), (n.jumpReturnTargetId = this.jumpReturnTargetId), (n.focusTargetId = this.focusTargetId), (n.focusSequenceId = this.focusSequenceId), (n.hasMoreBefore = this.hasMoreBefore), (n.hasMoreAfter = this.hasMoreAfter), (n.loadingMore = this.loadingMore), (n.revealedMessageId = this.revealedMessageId), (n.cached = this.cached), (n.hasFetched = this.hasFetched), (n.error = this.error), (n.initialScrollSequenceId = this.initialScrollSequenceId), e(n)) : 'object' == typeof e && ((n.ready = void 0 !== e.ready ? !0 === e.ready : this.ready), (n.jumpType = void 0 !== e.jumpType ? e.jumpType : this.jumpType), (n.jumpTargetId = void 0 !== e.jumpTargetId ? e.jumpTargetId : this.jumpTargetId), (n.jumpTargetOffset = void 0 !== e.jumpTargetOffset ? e.jumpTargetOffset : this.jumpTargetOffset), (n.jumpSequenceId = void 0 !== e.jumpSequenceId ? e.jumpSequenceId : this.jumpSequenceId), (n.jumped = void 0 !== e.jumped ? !0 === e.jumped : this.jumped), (n.jumpedToPresent = void 0 !== e.jumpedToPresent ? !0 === e.jumpedToPresent : this.jumpedToPresent), (n.jumpFlash = void 0 !== e.jumpFlash ? !0 === e.jumpFlash : this.jumpFlash), (n.jumpReturnTargetId = void 0 !== e.jumpReturnTargetId ? e.jumpReturnTargetId : this.jumpReturnTargetId), (n.focusTargetId = void 0 !== e.focusTargetId ? e.focusTargetId : this.focusTargetId), (n.focusSequenceId = void 0 !== e.focusSequenceId ? e.focusSequenceId : this.focusSequenceId), (n.hasMoreBefore = void 0 !== e.hasMoreBefore ? !0 === e.hasMoreBefore : this.hasMoreBefore), (n.hasMoreAfter = void 0 !== e.hasMoreAfter ? !0 === e.hasMoreAfter : this.hasMoreAfter), (n.loadingMore = void 0 !== e.loadingMore ? e.loadingMore : this.loadingMore), (n.revealedMessageId = void 0 !== e.revealedMessageId ? e.revealedMessageId : this.revealedMessageId), (n.cached = void 0 !== e.cached ? e.cached : this.cached), (n.hasFetched = void 0 !== e.hasFetched ? e.hasFetched : this.hasFetched), (n.error = void 0 !== e.error ? e.error : this.error), (n.initialScrollSequenceId = void 0 !== e.initialScrollSequenceId ? e.initialScrollSequenceId : this.initialScrollSequenceId)), n;
     }
     get length() {
         return this._array.length;
@@ -453,58 +453,61 @@ class O {
         });
     }
     loadComplete(e) {
-        var t, n, r, s, l, u, d, _, p, m, g;
-        let b = [...e.newMessages],
-            y = null != (t = e.isBefore) && t,
-            O = null != (n = e.isAfter) && n,
-            v = null != (r = e.jump) ? r : null,
-            I = null != (s = e.hasMoreBefore) && s,
-            S = null != (l = e.hasMoreAfter) && l,
-            T = null != (u = e.cached) && u,
-            A = i()(b)
+        var t, n, r, s, l, u, d, _, p, m, g, b;
+        let y = [...e.newMessages],
+            O = null != (t = e.isBefore) && t,
+            v = null != (n = e.isAfter) && n,
+            I = null != (r = e.jump) ? r : null,
+            S = null != (s = e.hasMoreBefore) && s,
+            T = null != (l = e.hasMoreAfter) && l,
+            A = null != (u = e.avoidInitialScroll) && u,
+            N = null != (d = e.cached) && d,
+            C = i()(y)
                 .reverse()
                 .map(a.Z.getCurrentConfig({ location: '2ecb25_2' }, { autoTrackExposure: !1 }).enabled ? (e) => (0, c.e5)(e) : (e) => E(this, e))
                 .value(),
-            N = null;
-        if ((y || O) && null == v && this.ready) N = this.merge(A, y, !0);
+            P = null;
+        if ((O || v) && null == I && this.ready) P = this.merge(C, O, !0);
         else {
             let e = this._array.filter((e) => e.state === f.yb.SENDING),
                 t = this._array.filter((e) => e.state === f.yb.SEND_FAILED),
                 n = e.length > 0 || t.length > 0;
-            (N = this.reset(A)), !n || y || O || (null == v ? void 0 : v.messageId) != null || (null == v ? void 0 : v.offset) != null ? h.info('loadComplete: resetting state for channelId='.concat(this.channelId, ', sending.length=').concat(e.length)) : (t.length > 0 && (h.info('loadComplete: merging with SEND_FAILED messages for channelId='.concat(this.channelId)), (N = N.merge(t))), e.length > 0 && (h.info('loadComplete: merging with SENDING messages for channelId='.concat(this.channelId)), (N = N.merge(e))));
+            (P = this.reset(C)), !n || O || v || (null == I ? void 0 : I.messageId) != null || (null == I ? void 0 : I.offset) != null ? h.info('loadComplete: resetting state for channelId='.concat(this.channelId, ', sending.length=').concat(e.length)) : (t.length > 0 && (h.info('loadComplete: merging with SEND_FAILED messages for channelId='.concat(this.channelId)), (P = P.merge(t))), e.length > 0 && (h.info('loadComplete: merging with SENDING messages for channelId='.concat(this.channelId)), (P = P.merge(e))));
         }
-        return N.mutate({
+        let R = !N && P.cached && !A;
+        return P.mutate({
             ready: !0,
             loadingMore: !1,
-            jumpType: null != (d = null == v ? void 0 : v.jumpType) ? d : o.SR.ANIMATED,
-            jumpFlash: null != (_ = null == v ? void 0 : v.flash) && _,
-            jumped: null != v,
-            jumpedToPresent: null != (p = null == v ? void 0 : v.present) && p,
-            jumpTargetId: null != (m = null == v ? void 0 : v.messageId) ? m : null,
-            jumpTargetOffset: null != v && null != v.messageId && null != v.offset ? v.offset : 0,
-            jumpSequenceId: null != v ? N.jumpSequenceId + 1 : N.jumpSequenceId,
-            jumpReturnTargetId: null != (g = null == v ? void 0 : v.returnMessageId) ? g : null,
-            hasMoreBefore: null == v && O ? N.hasMoreBefore : I,
-            hasMoreAfter: null == v && y ? N.hasMoreAfter : S,
-            cached: T,
+            jumpType: null != (_ = null == I ? void 0 : I.jumpType) ? _ : o.SR.ANIMATED,
+            jumpFlash: null != (p = null == I ? void 0 : I.flash) && p,
+            jumped: null != I,
+            jumpedToPresent: null != (m = null == I ? void 0 : I.present) && m,
+            jumpTargetId: null != (g = null == I ? void 0 : I.messageId) ? g : null,
+            jumpTargetOffset: null != I && null != I.messageId && null != I.offset ? I.offset : 0,
+            jumpSequenceId: null == I || A ? P.jumpSequenceId : P.jumpSequenceId + 1,
+            jumpReturnTargetId: null != (b = null == I ? void 0 : I.returnMessageId) ? b : null,
+            hasMoreBefore: null == I && v ? P.hasMoreBefore : S,
+            hasMoreAfter: null == I && O ? P.hasMoreAfter : T,
+            cached: N,
             hasFetched: e.hasFetched,
-            error: !1
+            error: !1,
+            initialScrollSequenceId: R ? P.initialScrollSequenceId + 1 : P.initialScrollSequenceId
         });
     }
     addCachedMessages(e, t) {
         (0, s.Z)(e);
         let n = e.map((e) => E(this, e)).reverse();
-        return (
-            this._array.filter((e) => !n.some((t) => t.id === e.id)).forEach((e) => d.$(n, e, (e, t) => u.default.compare(e.id, t.id))),
-            this.reset(n).mutate({
-                ready: !0,
-                cached: t,
-                error: !1
-            })
-        );
+        this._array.filter((e) => !n.some((t) => t.id === e.id)).forEach((e) => d.$(n, e, (e, t) => u.default.compare(e.id, t.id)));
+        let r = !t && this.cached;
+        return this.reset(n).mutate({
+            ready: !0,
+            cached: t,
+            error: !1,
+            initialScrollSequenceId: r ? this.initialScrollSequenceId + 1 : this.initialScrollSequenceId
+        });
     }
     constructor(e) {
-        _(this, 'channelId', void 0), _(this, 'ready', !1), _(this, 'cached', !1), _(this, 'jumpType', o.SR.ANIMATED), _(this, 'jumpTargetId', null), _(this, 'jumpTargetOffset', 0), _(this, 'jumpSequenceId', 1), _(this, 'jumped', !1), _(this, 'jumpedToPresent', !1), _(this, 'jumpFlash', !0), _(this, 'jumpReturnTargetId', null), _(this, 'focusTargetId', null), _(this, 'focusSequenceId', 1), _(this, 'hasMoreBefore', !0), _(this, 'hasMoreAfter', !1), _(this, 'loadingMore', !1), _(this, 'revealedMessageId', null), _(this, 'hasFetched', !1), _(this, 'error', !1), _(this, '_array', []), _(this, '_before', new b(!0)), _(this, '_after', new b(!1)), _(this, '_map', {}), (this.channelId = e);
+        _(this, 'channelId', void 0), _(this, 'ready', !1), _(this, 'cached', !1), _(this, 'jumpType', o.SR.ANIMATED), _(this, 'jumpTargetId', null), _(this, 'jumpTargetOffset', 0), _(this, 'jumpSequenceId', 1), _(this, 'jumped', !1), _(this, 'jumpedToPresent', !1), _(this, 'jumpFlash', !0), _(this, 'jumpReturnTargetId', null), _(this, 'focusTargetId', null), _(this, 'focusSequenceId', 1), _(this, 'initialScrollSequenceId', 0), _(this, 'hasMoreBefore', !0), _(this, 'hasMoreAfter', !1), _(this, 'loadingMore', !1), _(this, 'revealedMessageId', null), _(this, 'hasFetched', !1), _(this, 'error', !1), _(this, '_array', []), _(this, '_before', new b(!0)), _(this, '_after', new b(!1)), _(this, '_map', {}), (this.channelId = e);
     }
 }
 _(O, '_channelMessages', {});

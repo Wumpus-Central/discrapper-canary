@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(637853),
     U = n(326145),
     G = n(269675),
-    V = n(242601),
-    B = n(416568),
+    B = n(242601),
+    V = n(416568),
     H = n(613609),
     F = n(160404),
     z = n(225675),
@@ -169,7 +169,7 @@ let eL = (0, u.Un)({
         name: 'GuildPowerupsPage',
         renderLoader: ew
     }),
-    eV = (e) => {
+    eB = (e) => {
         let { match: t } = e,
             n = (0, O.l)(),
             i = (0, h.e7)([es.Z, ep.Z], () => {
@@ -255,7 +255,7 @@ let eL = (0, u.Un)({
         }
         return (0, r.jsx)(T.Z, {});
     },
-    eB = i.memo(function () {
+    eV = i.memo(function () {
         let { guildId: e, channelId: t } = (0, er.Z)(),
             { notificationCenterVariant: n } = X.L.useExperiment({ location: 'Sidebar' }),
             i = (0, h.e7)([ep.Z], () => (null != t ? t : ep.Z.getChannelId(e)));
@@ -265,7 +265,7 @@ let eL = (0, u.Un)({
               ? (0, r.jsx)(R.Z, {})
               : null != e
                 ? (0, r.jsx)(
-                      V.Z,
+                      B.Z,
                       {
                           selectedChannelId: i,
                           guildId: e
@@ -274,7 +274,7 @@ let eL = (0, u.Un)({
                   )
                 : (0, r.jsx)(ey.Z, {});
     }),
-    eH = (e) => (0, r.jsx)(eV, eZ({}, e)),
+    eH = (e) => (0, r.jsx)(eB, eZ({}, e)),
     eF = () => (0, r.jsx)(w.Z, {}),
     ez = (e) => (null != e.match.params.channelId ? eH(e) : (0, r.jsx)(Q.Z, {})),
     eW = (e) => {
@@ -451,14 +451,14 @@ function e5(e) {
                     O &&
                         s &&
                         !c &&
-                        (0, r.jsx)(B.Z, {
+                        (0, r.jsx)(V.Z, {
                             className: eA.guilds,
                             themeOverride: n
                         }),
                     !o &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(j, ex(eZ({}, Z), { children: (0, r.jsx)(eB, {}) })),
+                                (0, r.jsx)(j, ex(eZ({}, Z), { children: (0, r.jsx)(eV, {}) })),
                                 O
                                     ? (0, r.jsx)(g.P3F, {
                                           onClick: P,
@@ -542,7 +542,7 @@ function e4() {
             f &&
                 !u &&
                 !O &&
-                (0, r.jsx)(B.Z, {
+                (0, r.jsx)(V.Z, {
                     className: eA.guilds,
                     themeOverride: n
                 }),

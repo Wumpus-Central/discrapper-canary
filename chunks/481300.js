@@ -11,7 +11,7 @@ function o(e, t) {
                 type: l.lJ.GenericMedia,
                 media: t
             },
-            (0, l.HH)(e)
+            (0, l.PZ)(e)
         )
         ? (0, i.jsx)(
               r.sNh,

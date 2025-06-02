@@ -41,7 +41,7 @@ var r = n(255367),
     M = n(388032),
     U = n(941839),
     G = n(103609);
-function V(e) {
+function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -66,7 +66,7 @@ function V(e) {
     }
     return e;
 }
-function B(e, t) {
+function V(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -189,7 +189,7 @@ let z = i.memo(function () {
                                       children: [
                                           (0, r.jsx)(
                                               c.P3F,
-                                              B(V({}, e), {
+                                              V(B({}, e), {
                                                   className: G.button,
                                                   onClick: () => {
                                                       H.setState({ isOpen: !H.getState().isOpen });
@@ -217,7 +217,7 @@ let z = i.memo(function () {
                                           canShowReminder: !0,
                                           className: G.button
                                       }),
-                                      null === o && (0, r.jsx)(C.Z, B(V({}, t ? {} : e), { className: G.button })),
+                                      null === o && (0, r.jsx)(C.Z, V(B({}, t ? {} : e), { className: G.button })),
                                       n ? (0, r.jsx)(O.Z, { className: G.button }) : (0, r.jsx)(E.Z, { className: G.button }),
                                       (0, r.jsx)(y.Z, { className: G.button })
                                   ]
