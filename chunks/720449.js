@@ -8,12 +8,12 @@ var l = n(913527),
     u = n(875425),
     c = n(981631);
 function d(t) {
-    let { text: e, emojiInfo: n, clearAfter: l, analyticsContext: d, createdAtMs: m, prompt: f, customStatusLabel: h } = t,
-        b = e.trim();
-    if (!(b.length > 0) && null == n) return i.Ok.updateSetting(void 0);
+    let { text: e, emojiInfo: n, clearAfter: l, analyticsContext: d, createdAtMs: m, prompt: f, customStatusLabel: h, analyticsLocations: b } = t,
+        p = e.trim();
+    if (!(p.length > 0) && null == n) return i.Ok.updateSetting(void 0);
     {
         let t = i.Ok.updateSetting({
-            text: b.length > 0 ? b : '',
+            text: p.length > 0 ? p : '',
             expiresAtMs:
                 null != l && l !== u.FO.DONT_CLEAR
                     ? String(
@@ -32,10 +32,11 @@ function d(t) {
             o.default.track(c.rMx.CUSTOM_STATUS_UPDATED, {
                 location: null != d ? d.location : null,
                 emoji_type: null == n ? null : null != n.id ? 'custom' : 'unicode',
-                text_len: b.length,
+                text_len: p.length,
                 clear_after: null != l ? ''.concat(l) : null,
                 prompt_type: null == f ? void 0 : f.value,
-                label: null != h ? h : null
+                label: null != h ? h : null,
+                location_stack: b
             }),
             t
         );

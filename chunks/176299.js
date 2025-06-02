@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(637853),
     U = n(326145),
     G = n(269675),
-    B = n(242601),
-    V = n(416568),
+    V = n(242601),
+    B = n(416568),
     H = n(613609),
     F = n(160404),
     z = n(225675),
@@ -152,7 +152,7 @@ let eL = (0, u.Un)({
         renderLoader: ew
     }),
     eM = (0, u.Un)({
-        createPromise: () => Promise.all([n.e('44156'), n.e('58227'), n.e('72132')]).then(n.bind(n, 603072)),
+        createPromise: () => Promise.all([n.e('44156'), n.e('58227'), n.e('58121')]).then(n.bind(n, 603072)),
         webpackId: 603072,
         name: 'ChannelsAndRolesPage',
         renderLoader: ew
@@ -169,7 +169,7 @@ let eL = (0, u.Un)({
         name: 'GuildPowerupsPage',
         renderLoader: ew
     }),
-    eB = (e) => {
+    eV = (e) => {
         let { match: t } = e,
             n = (0, O.l)(),
             i = (0, h.e7)([es.Z, ep.Z], () => {
@@ -255,7 +255,7 @@ let eL = (0, u.Un)({
         }
         return (0, r.jsx)(T.Z, {});
     },
-    eV = i.memo(function () {
+    eB = i.memo(function () {
         let { guildId: e, channelId: t } = (0, er.Z)(),
             { notificationCenterVariant: n } = X.L.useExperiment({ location: 'Sidebar' }),
             i = (0, h.e7)([ep.Z], () => (null != t ? t : ep.Z.getChannelId(e)));
@@ -265,7 +265,7 @@ let eL = (0, u.Un)({
               ? (0, r.jsx)(R.Z, {})
               : null != e
                 ? (0, r.jsx)(
-                      B.Z,
+                      V.Z,
                       {
                           selectedChannelId: i,
                           guildId: e
@@ -274,7 +274,7 @@ let eL = (0, u.Un)({
                   )
                 : (0, r.jsx)(ey.Z, {});
     }),
-    eH = (e) => (0, r.jsx)(eB, eZ({}, e)),
+    eH = (e) => (0, r.jsx)(eV, eZ({}, e)),
     eF = () => (0, r.jsx)(w.Z, {}),
     ez = (e) => (null != e.match.params.channelId ? eH(e) : (0, r.jsx)(Q.Z, {})),
     eW = (e) => {
@@ -451,14 +451,14 @@ function e5(e) {
                     O &&
                         s &&
                         !c &&
-                        (0, r.jsx)(V.Z, {
+                        (0, r.jsx)(B.Z, {
                             className: eA.guilds,
                             themeOverride: n
                         }),
                     !o &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(j, ex(eZ({}, Z), { children: (0, r.jsx)(eV, {}) })),
+                                (0, r.jsx)(j, ex(eZ({}, Z), { children: (0, r.jsx)(eB, {}) })),
                                 O
                                     ? (0, r.jsx)(g.P3F, {
                                           onClick: P,
@@ -542,7 +542,7 @@ function e4() {
             f &&
                 !u &&
                 !O &&
-                (0, r.jsx)(V.Z, {
+                (0, r.jsx)(B.Z, {
                     className: eA.guilds,
                     themeOverride: n
                 }),

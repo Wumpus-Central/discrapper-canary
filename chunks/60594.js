@@ -173,8 +173,8 @@ function ef(e) {
         [e$, e1] = l.useState(eg),
         [e0, e2] = l.useState(e_),
         [e5, e3] = l.useState(ev),
-        [e7, e4] = l.useState(null != (o = P.I0.getSetting()) && o),
-        [e8, e6] = l.useState(null != ef ? ef : null),
+        [e7, e8] = l.useState(null != (o = P.I0.getSetting()) && o),
+        [e4, e6] = l.useState(null != ef ? ef : null),
         e9 = null != (d = null == eS ? void 0 : eS.id) ? d : eH,
         [te, tt] = l.useState(eM ? '' : void 0),
         tn = (0, I.Q3)('GoLiveModal');
@@ -402,9 +402,9 @@ function ef(e) {
                             onChangeAudioDevice: (e) => eK(e),
                             onChangeGuild: () => eW(0),
                             onChangeSound: (e) => e3(e),
-                            onChangePreviewDisabled: (e) => e4(e),
+                            onChangePreviewDisabled: (e) => e8(e),
                             onClose: eh,
-                            selectedGuildId: e8,
+                            selectedGuildId: e4,
                             targetGuildPremiumTier: eT,
                             selectGuild: F
                         })

@@ -1,6 +1,6 @@
 n.d(t, {
-    TB: () => v,
-    VY: () => P,
+    TB: () => P,
+    VY: () => v,
     ZP: () => S
 }),
     n(388685),
@@ -77,7 +77,7 @@ function y(e) {
 function S(e) {
     let t,
         n,
-        { planId: s, enableNoPaymentTrial: d, startingPremiumSubscriptionPlanId: c, onClose: u, followupSKUInfo: S, isDowngrade: v, hideClose: P, postSuccessGuild: b, paymentSourceType: I, startingFractionalPremiumEndsAt: T } = e,
+        { planId: s, enableNoPaymentTrial: d, startingPremiumSubscriptionPlanId: c, onClose: u, followupSKUInfo: S, isDowngrade: P, hideClose: v, postSuccessGuild: I, paymentSourceType: b, startingFractionalPremiumEndsAt: T } = e,
         { theme: M } = (0, o.TCT)(),
         Z = (0, a.e7)([x.Z], () => (null != S ? x.Z.get(S.id) : null)),
         N = (0, j.qH)(T);
@@ -86,13 +86,13 @@ function S(e) {
         let { applicationId: e, id: t } = S;
         (0, C.$N)(e, t).catch(g.VqG);
     }, [S, Z]);
-    let O = (e) => (e.skuId === _.Si.TIER_0 ? (g.X7u.has(null != I ? I : g.HeQ.UNKNOWN) ? L.intl.format(L.t.o6hBiY, {}) : L.intl.string(L.t['AGf/yc'])) : e.skuId === _.Si.TIER_1 ? (g.X7u.has(null != I ? I : g.HeQ.UNKNOWN) ? L.intl.format(L.t.o6hBiY, {}) : L.intl.string(L.t.knvOV1)) : g.X7u.has(null != I ? I : g.HeQ.UNKNOWN) ? L.intl.format(L.t.A4THYm, {}) : d ? L.intl.string(L.t['g52y/v']) : L.intl.string(L.t.aTUr3d));
+    let O = (e) => (e.skuId === _.Si.TIER_0 ? (g.X7u.has(null != b ? b : g.HeQ.UNKNOWN) ? L.intl.format(L.t.o6hBiY, {}) : L.intl.string(L.t['AGf/yc'])) : e.skuId === _.Si.TIER_1 ? (g.X7u.has(null != b ? b : g.HeQ.UNKNOWN) ? L.intl.format(L.t.o6hBiY, {}) : L.intl.string(L.t.knvOV1)) : g.X7u.has(null != b ? b : g.HeQ.UNKNOWN) ? L.intl.format(L.t.A4THYm, {}) : d ? L.intl.string(L.t['g52y/v']) : L.intl.string(L.t.aTUr3d));
     if (null != Z)
         t = (0, i.jsx)('div', {
             className: E.text,
             children: L.intl.format(L.t.tsQOs7, { skuName: Z.name })
         });
-    else if (N && !v) {
+    else if (N && !P) {
         let e = p.Z.get(s);
         r()(null != e, 'Missing plan'),
             e.skuId === _.Si.TIER_0
@@ -110,7 +110,7 @@ function S(e) {
             planId: s,
             startingPremiumSubscriptionPlanId: c
         });
-    else if (null != b) {
+    else if (null != I) {
         let e = p.Z.get(s);
         r()(null != e, 'Missing plan'),
             (t = (0, i.jsxs)(i.Fragment, {
@@ -121,7 +121,7 @@ function S(e) {
                     }),
                     (0, i.jsx)('div', {
                         className: E.text,
-                        children: L.intl.format(L.t['6aZ0NT'], { guildName: b.name })
+                        children: L.intl.format(L.t['6aZ0NT'], { guildName: I.name })
                     })
                 ]
             }));
@@ -136,7 +136,7 @@ function S(e) {
     let R = f.ZP.getPremiumType(s);
     return (
         r()(null != R, 'premium type should not be null in purchase confirmation'),
-        (n = null != Z ? L.intl.formatToPlainString(L.t['1qGgm5'], { skuName: Z.name }) : v ? L.intl.string(L.t.QJ9EyM) : null != b ? L.intl.string(L.t.ta3cXV) : L.intl.string(L.t.TkTvBw)),
+        (n = null != Z ? L.intl.formatToPlainString(L.t['1qGgm5'], { skuName: Z.name }) : P ? L.intl.string(L.t.QJ9EyM) : null != I ? L.intl.string(L.t.ta3cXV) : L.intl.string(L.t.TkTvBw)),
         (0, i.jsxs)('div', {
             className: E.confirmation,
             children: [
@@ -144,10 +144,10 @@ function S(e) {
                     className: E.banner,
                     theme: M,
                     premiumType: R,
-                    type: g.X7u.has(null != I ? I : g.HeQ.UNKNOWN) ? m.C.Types.PREMIUM_PAYMENT_STARTED : null != c ? m.C.Types.PREMIUM_UPDATED : m.C.Types.PREMIUM_ACTIVATED
+                    type: g.X7u.has(null != b ? b : g.HeQ.UNKNOWN) ? m.C.Types.PREMIUM_PAYMENT_STARTED : null != c ? m.C.Types.PREMIUM_UPDATED : m.C.Types.PREMIUM_ACTIVATED
                 }),
                 t,
-                P
+                v
                     ? null
                     : (0, i.jsx)(o.zxk, {
                           className: E.button,
@@ -158,7 +158,7 @@ function S(e) {
         })
     );
 }
-function v(e) {
+function P(e) {
     let { planId: t, onClose: n } = e,
         { giftRecipient: l, selectedGiftStyle: s, hasSentMessage: o, giftMessageError: C, isSendingMessage: x } = (0, d.wD)(),
         h = (0, a.e7)([p.Z], () => p.Z.get(t));
@@ -175,7 +175,7 @@ function v(e) {
         isSendingMessage: x
     });
 }
-function P() {
+function v() {
     return (0, i.jsxs)('div', {
         className: E.redirectConfirmation,
         children: [

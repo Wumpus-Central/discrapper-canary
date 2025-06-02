@@ -26,10 +26,10 @@ var i = n(255367),
     E = n(710094),
     y = n(293858),
     S = n(183813),
-    v = n(614223),
-    P = n(174827),
-    b = n(846464),
-    I = n(184160),
+    P = n(614223),
+    v = n(174827),
+    I = n(846464),
+    b = n(184160),
     T = n(48175),
     M = n(981631),
     Z = n(474936),
@@ -62,7 +62,7 @@ function R(e) {
 }
 let k = [f.h8.PLAN_SELECT, f.h8.ADD_PAYMENT_STEPS, f.h8.REVIEW, f.h8.CONFIRM];
 function U(e) {
-    let { analyticsLocation: t, analyticsObject: n, analyticsSourceLocation: s, onComplete: o, transitionState: d, initialPlanId: u, subscriptionTier: j, onClose: _, trialId: g, trialFooterMessageOverride: L, reviewWarningMessage: E, openInvoiceId: y, onSubscriptionConfirmation: S, renderPurchaseConfirmation: v, postSuccessGuild: P, followupSKUInfo: b, renderHeader: I, applicationId: T, guildId: N, referralTrialOfferId: O, skuId: R, returnRef: k, skipConfirm: U = !1, continueSessionToInitialStep: A } = e,
+    let { analyticsLocation: t, analyticsObject: n, analyticsSourceLocation: s, onComplete: o, transitionState: d, initialPlanId: u, subscriptionTier: j, onClose: _, trialId: g, trialFooterMessageOverride: L, reviewWarningMessage: E, openInvoiceId: y, onSubscriptionConfirmation: S, renderPurchaseConfirmation: P, postSuccessGuild: v, followupSKUInfo: I, renderHeader: b, applicationId: T, guildId: N, referralTrialOfferId: O, skuId: R, returnRef: k, skipConfirm: U = !1, continueSessionToInitialStep: A } = e,
         { analyticsLocations: w } = (0, C.ZP)();
     l.useEffect(() => {
         c.Z.isLoadedForPremiumSKUs() || r.Z.wait(() => (0, a.Y2)());
@@ -89,10 +89,10 @@ function U(e) {
         planGroup: Z.Y1,
         openInvoiceId: y,
         onSubscriptionConfirmation: S,
-        renderPurchaseConfirmation: v,
-        postSuccessGuild: P,
-        followupSKUInfo: b,
-        renderHeader: I,
+        renderPurchaseConfirmation: P,
+        postSuccessGuild: v,
+        followupSKUInfo: I,
+        renderHeader: b,
         applicationId: T,
         guildId: N,
         referralTrialOfferId: O,
@@ -114,7 +114,7 @@ function A(e) {
             skuId: o,
             referralTrialOfferId: r
         }),
-        j = (0, v.Fv)(p),
+        j = (0, P.Fv)(p),
         m = (0, d.id)(C, c, u);
     return (0, i.jsx)(
         _.J,
@@ -150,7 +150,7 @@ let w = [
     },
     {
         key: f.h8.SKU_SELECT,
-        renderStep: (e) => (0, i.jsx)(b.q, R({}, e)),
+        renderStep: (e) => (0, i.jsx)(I.q, R({}, e)),
         options: {
             renderHeader: !1,
             hideSlider: !0,
@@ -159,7 +159,7 @@ let w = [
     },
     {
         key: f.h8.WHAT_YOU_LOSE,
-        renderStep: (e) => (0, i.jsx)(I.x, R({}, e)),
+        renderStep: (e) => (0, i.jsx)(b.x, R({}, e)),
         options: {
             renderHeader: !1,
             hideSlider: !0
@@ -167,10 +167,10 @@ let w = [
     },
     {
         key: f.h8.PLAN_SELECT,
-        renderStep: (e) => (0, i.jsx)(P.x, R({}, e)),
+        renderStep: (e) => (0, i.jsx)(v.x, R({}, e)),
         options: {
             renderHeader: !0,
-            useBreadcrumbLabel: (e) => ((0, v.Fv)(e) ? null : N.intl.string(N.t['r+SebW'])),
+            useBreadcrumbLabel: (e) => ((0, P.Fv)(e) ? null : N.intl.string(N.t['r+SebW'])),
             sectionHeaderText: () => N.intl.string(N.t.UKbp1N)
         }
     },
@@ -179,7 +179,7 @@ let w = [
         renderStep: (e) => (0, i.jsx)(A, R({}, e)),
         options: {
             renderHeader: !0,
-            useBreadcrumbLabel: (e) => ((0, v.Fv)(e) ? null : N.intl.string(N.t.Sb6wIy))
+            useBreadcrumbLabel: (e) => ((0, P.Fv)(e) ? null : N.intl.string(N.t.Sb6wIy))
         }
     },
     {
@@ -195,7 +195,7 @@ let w = [
         renderStep: (e) => (0, i.jsx)(E.l, R({}, e)),
         options: {
             renderHeader: !0,
-            useBreadcrumbLabel: (e) => ((0, v.Fv)(e) ? N.intl.string(N.t.UKbp1N) : N.intl.string(N.t.QBnNHh))
+            useBreadcrumbLabel: (e) => ((0, P.Fv)(e) ? N.intl.string(N.t.UKbp1N) : N.intl.string(N.t.QBnNHh))
         }
     },
     {

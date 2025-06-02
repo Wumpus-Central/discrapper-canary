@@ -66,7 +66,7 @@ let x = function (e) {
         },
         U = (0, g.Dt)(),
         G = (0, g.Dt)(),
-        B = [
+        V = [
             {
                 id: T.pJs.ONLINE,
                 show: !E || R.filter(T.pJs.ONLINE).length > 0,
@@ -148,7 +148,7 @@ let x = function (e) {
                                 type: 'top-pill',
                                 onItemSelect: M,
                                 className: A.tabBar,
-                                children: B.filter((e) => e.show).map((e) =>
+                                children: V.filter((e) => e.show).map((e) =>
                                     (0, r.jsx)(
                                         u.njP.Item,
                                         {

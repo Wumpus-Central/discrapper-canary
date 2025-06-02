@@ -8,15 +8,15 @@ var r = n(255367),
     c = n(442837),
     u = n(481060),
     d = n(235820),
-    h = n(230711),
-    p = n(377171),
-    f = n(315174),
-    g = n(665149),
-    m = n(455199),
-    b = n(768943),
-    y = n(592125),
-    O = n(594174),
-    v = n(709054),
+    h = n(377171),
+    p = n(315174),
+    f = n(665149),
+    g = n(455199),
+    m = n(768943),
+    b = n(592125),
+    y = n(594174),
+    O = n(709054),
+    v = n(370774),
     _ = n(739340),
     C = n(207913),
     j = n(553984),
@@ -44,16 +44,16 @@ function N(e) {
         {
             messages: a,
             hasMore: d,
-            loading: p,
+            loading: h,
             hasLoadedEver: C
-        } = (0, c.cj)([m.Z], () => ({
-            messages: m.Z.getMentions(),
-            hasMore: m.Z.hasMore,
-            loading: m.Z.loading,
-            hasLoadedEver: m.Z.hasLoadedEver,
-            guildFilter: m.Z.guildFilter,
-            roleFilter: m.Z.roleFilter,
-            everyoneFilter: m.Z.everyoneFilter
+        } = (0, c.cj)([g.Z], () => ({
+            messages: g.Z.getMentions(),
+            hasMore: g.Z.hasMore,
+            loading: g.Z.loading,
+            hasLoadedEver: g.Z.hasLoadedEver,
+            guildFilter: g.Z.guildFilter,
+            roleFilter: g.Z.roleFilter,
+            everyoneFilter: g.Z.everyoneFilter
         })),
         [N, D] = i.useState(E.V5.ALL),
         [L, k] = i.useState(E.xM.UNREAD),
@@ -61,20 +61,20 @@ function N(e) {
     (0, i.useEffect)(() => {
         if (!C) return void Z(null);
     }, [C]);
-    let V = (0, c.e7)([O.default], () => O.default.getCurrentUser()),
-        H = (0, c.e7)([b.Z], () => b.Z.getSavedMessages()),
+    let V = (0, c.e7)([y.default], () => y.default.getCurrentUser()),
+        H = (0, c.e7)([m.Z], () => m.Z.getSavedMessages()),
         F = i.useMemo(() => {
             if (!B) return null;
             let e = (0, s.uniqBy)(
-                [...(null != a ? a : []), ...M.filter((e) => e.author.id !== (null == V ? void 0 : V.id))].sort((e, t) => v.default.compare(t.id, e.id)),
+                [...(null != a ? a : []), ...M.filter((e) => e.author.id !== (null == V ? void 0 : V.id))].sort((e, t) => O.default.compare(t.id, e.id)),
                 'id'
-            ).filter((e) => e.author.id !== (null == V ? void 0 : V.id) && v.default.age(e.id) < E.ib);
+            ).filter((e) => e.author.id !== (null == V ? void 0 : V.id) && O.default.age(e.id) < E.ib);
             if (N === E.V5.ALL) return e;
             if (N === E.V5.ANNOUNCEMENTS)
                 return null == e
                     ? void 0
                     : e.filter((e) => {
-                          let t = y.Z.getChannel(e.channel_id);
+                          let t = b.Z.getChannel(e.channel_id);
                           return (null == t ? void 0 : t.type) === x.d4z.GUILD_ANNOUNCEMENT;
                       });
             if (N === E.V5.MENTIONS) return null == e ? void 0 : e.filter((e) => (null == V ? void 0 : V.id) != null && e.mentioned && e.mentions.includes(null == V ? void 0 : V.id));
@@ -86,7 +86,7 @@ function N(e) {
         className: o()(I.container, { [I.panelSpacing]: l }),
         children: [
             (0, r.jsx)(
-                f.ZP,
+                p.ZP,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -120,13 +120,13 @@ function N(e) {
                 )),
                 (n = n =
                     {
-                        children: (0, r.jsx)(g.JO, {
+                        children: (0, r.jsx)(f.JO, {
                             icon: u.ewm,
                             iconClassName: I.settingsButtonIcon,
                             className: I.settingsButton,
                             'aria-hidden': !0,
                             tooltip: P.intl.string(P.t.h850Sk),
-                            onClick: () => h.Z.open(x.oAB.NOTIFICATIONS, void 0)
+                            onClick: v.j4
                         })
                     }),
                 Object.getOwnPropertyDescriptors
@@ -152,13 +152,13 @@ function N(e) {
                 className: I.messageList,
                 renderMessageGroup: R,
                 messages: F,
-                loading: p || U === _.jd.Loading,
+                loading: h || U === _.jd.Loading,
                 analyticsName: 'Notifications Inbox',
                 channel: null,
                 listName: 'notifications-inbox',
                 loadMore: function (e) {
                     let t = null != a && a.length > 0 ? a[a.length - 1].id : null;
-                    d && !p && Z(null, t), U !== _.jd.Done && U !== _.jd.Loading && G(e);
+                    d && !h && Z(null, t), U !== _.jd.Done && U !== _.jd.Loading && G(e);
                 },
                 renderEmptyState: T,
                 setInboxReadState: k,
@@ -168,14 +168,46 @@ function N(e) {
     });
 }
 function Z(e, t) {
-    let n = m.Z.guildFilter,
-        r = m.Z.roleFilter,
-        i = m.Z.everyoneFilter,
+    let n = g.Z.guildFilter,
+        r = g.Z.roleFilter,
+        i = g.Z.everyoneFilter,
         l = null;
     null != e && null != n && (l = n === x.NgX.ALL_SERVERS ? null : e.getGuildId()), d.Z.fetchRecentMentions(t, x.DJj, l, r, i);
 }
 function T() {
-    return (0, r.jsx)(u.LZC, { size: 16 });
+    return (0, r.jsx)('div', {
+        className: I.emptyStateContainer,
+        children: (0, r.jsxs)(u.Kqy, {
+            gap: 24,
+            align: 'center',
+            children: [
+                (0, r.jsxs)(u.Kqy, {
+                    gap: 16,
+                    align: 'center',
+                    children: [
+                        (0, r.jsx)(u.xx7, {
+                            size: 'custom',
+                            height: 40,
+                            width: 40,
+                            color: u.TVs.colors.BG_MOD_STRONG
+                        }),
+                        (0, r.jsx)(u.Text, {
+                            variant: 'text-sm/medium',
+                            color: x.tPk.TEXT_MUTED,
+                            style: { textAlign: 'center' },
+                            children: P.intl.string(P.t['O+racX'])
+                        })
+                    ]
+                }),
+                (0, r.jsx)(u.zxk, {
+                    onClick: v.j4,
+                    color: u.zxk.Colors.PRIMARY,
+                    style: { fontWeight: 600 },
+                    children: P.intl.string(P.t.klSpfn)
+                })
+            ]
+        })
+    });
 }
 function R(e, t) {
     return (0, r.jsx)(
@@ -198,18 +230,18 @@ function A() {
               onClick: () => t(!0),
               onMouseEnter: () => l(!0),
               onMouseLeave: () => l(!1),
-              className: I.emptyStateContainer,
+              className: I.caughtUpContainer,
               children: [
                   (0, r.jsx)(u.Text, {
                       variant: n ? 'text-sm/medium' : 'text-sm/normal',
                       color: 'text-positive',
-                      className: I.emptyStateText,
+                      className: I.caughtUpText,
                       children: P.intl.string(P.t['6XMM+P'])
                   }),
                   (0, r.jsx)(o, {
                       size: 'sm',
-                      className: I.emptyStateIcon,
-                      color: p.Z.TEXT_POSITIVE
+                      className: I.caughtUpIcon,
+                      color: h.Z.TEXT_POSITIVE
                   })
               ]
           });

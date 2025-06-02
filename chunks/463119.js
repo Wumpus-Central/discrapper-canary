@@ -1,4 +1,4 @@
-n.d(t, { i: () => Y }), n(388685);
+n.d(t, { i: () => W }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(91192),
@@ -20,17 +20,16 @@ var r = n(255367),
     y = n(744112),
     I = n(267097),
     v = n(364111),
-    C = n(594351),
-    S = n(699733),
-    N = n(681435),
-    T = n(81136),
-    P = n(302800),
-    j = n(215023),
-    A = n(981631),
-    Z = n(921944),
-    x = n(388032),
-    L = n(208801);
-function w(e) {
+    C = n(729700),
+    S = n(681435),
+    N = n(81136),
+    T = n(302800),
+    P = n(215023),
+    j = n(981631),
+    A = n(921944),
+    Z = n(388032),
+    x = n(208801);
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,7 +54,7 @@ function w(e) {
     }
     return e;
 }
-function R(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -73,7 +72,7 @@ function R(e, t) {
         e
     );
 }
-function D(e, t) {
+function R(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -92,18 +91,18 @@ function D(e, t) {
     }
     return i;
 }
-let k = (e) => {
+let D = (e) => {
         let { color: t } = e;
         return (0, r.jsx)(s.IGR, {
-            className: L.newBadge,
+            className: x.newBadge,
             color: null != t ? t : m.Z.STATUS_DANGER_BACKGROUND,
-            text: x.intl.string(x.t.y2b7CA)
+            text: Z.intl.string(Z.t.y2b7CA)
         });
     },
-    M = () => {
-        let { noCache: e, includeUnpublished: t } = (0, T.Z)();
+    k = () => {
+        let { noCache: e, includeUnpublished: t } = (0, N.Z)();
         return (
-            (0, v.E)(j.AW.HOME, {
+            (0, v.E)(P.AW.HOME, {
                 noCache: e,
                 includeUnpublished: t,
                 includeBundles: !0
@@ -111,9 +110,9 @@ let k = (e) => {
             null
         );
     },
-    U = (e) => {
+    M = (e) => {
         var { selected: t, locationState: n, icon: a, onClick: o, collectibleShopTab: c, onMouseEnter: d, onMouseLeave: p, children: g } = e,
-            m = D(e, ['selected', 'locationState', 'icon', 'onClick', 'collectibleShopTab', 'onMouseEnter', 'onMouseLeave', 'children']);
+            m = R(e, ['selected', 'locationState', 'icon', 'onClick', 'collectibleShopTab', 'onMouseEnter', 'onMouseLeave', 'children']);
         let b = (0, l.JA)('shop'),
             _ = h.Z.HOME_PAGE_SHOP_TAB,
             { analyticsLocations: E } = (0, f.ZP)(_),
@@ -133,19 +132,19 @@ let k = (e) => {
                         analyticsLocations: E
                     });
             }, [_, E, o, I, c]),
-            C = A.Z5c.COLLECTIBLES_SHOP;
+            C = j.Z5c.COLLECTIBLES_SHOP;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                y && (0, r.jsx)(M, {}),
+                y && (0, r.jsx)(k, {}),
                 (0, r.jsx)(
                     u.Qj,
-                    R(
-                        w(
+                    w(
+                        L(
                             {
                                 selected: t,
                                 route: C,
                                 icon: null != a ? a : s.EOn,
-                                text: x.intl.string(x.t.pWG4zc),
+                                text: Z.intl.string(Z.t.pWG4zc),
                                 locationState: n
                             },
                             b,
@@ -162,8 +161,8 @@ let k = (e) => {
             ]
         });
     },
-    G = (e) => (0, r.jsx)(U, R(w({}, e), { children: (0, r.jsx)(k, {}) })),
-    B = i.memo(function (e) {
+    U = (e) => (0, r.jsx)(M, w(L({}, e), { children: (0, r.jsx)(D, {}) })),
+    G = i.memo(function (e) {
         var t;
         let { displayOptions: n, assetId: i, reducedMotion: l = !1 } = e,
             a = null != i ? (0, g.Z)(i, s.EFr.SIZE_80, !l) : void 0,
@@ -171,12 +170,12 @@ let k = (e) => {
             c = null == (t = n.body) ? void 0 : t.call(n),
             u = null == c || '' === c;
         return (0, r.jsxs)('div', {
-            className: L.shopMarketingTooltipContent,
+            className: x.shopMarketingTooltipContent,
             children: [
                 (0, r.jsx)('div', {
-                    className: L.avatarContainer,
+                    className: x.avatarContainer,
                     children: (0, r.jsx)(s.qEK, {
-                        className: L.avatar,
+                        className: x.avatar,
                         src: n.imageSrc,
                         avatarDecoration: a,
                         size: s.EFr.SIZE_80,
@@ -184,7 +183,7 @@ let k = (e) => {
                     })
                 }),
                 (0, r.jsxs)('div', {
-                    className: L.shopMarketingTooltipText,
+                    className: x.shopMarketingTooltipText,
                     children: [
                         (0, r.jsx)(s.X6q, {
                             variant: u ? 'heading-sm/medium' : 'heading-sm/bold',
@@ -193,7 +192,7 @@ let k = (e) => {
                         !u &&
                             (0, r.jsx)(s.Text, {
                                 variant: 'text-xs/normal',
-                                className: L.marketingBadgeTooltipContent,
+                                className: x.marketingBadgeTooltipContent,
                                 children: c
                             })
                     ]
@@ -216,93 +215,93 @@ let k = (e) => {
             y,
             I,
             { displayOptions: v } = e,
-            C = D(e, ['displayOptions']);
+            C = R(e, ['displayOptions']);
         let S = (0, a.e7)([p.Z], () => p.Z.useReducedMotion),
             [N, T] = i.useState(0),
             [P, j] = i.useState(!1),
             A = (0, d.ZP)(),
-            Z = (0, o.wj)(A);
-        P ? (Z ? ((t = null == (l = v.entryPointBackgroundAssets) ? void 0 : l.srcDarkHovered), (n = null == (u = v.entrypointBackgroundStyle) || null == (c = u.hovered) ? void 0 : c.dark)) : ((t = null == (h = v.entryPointBackgroundAssets) ? void 0 : h.srcLightHovered), (n = null == (g = v.entrypointBackgroundStyle) || null == (f = g.hovered) ? void 0 : f.light))) : Z ? ((t = null == (m = v.entryPointBackgroundAssets) ? void 0 : m.srcDark), (n = null == (_ = v.entrypointBackgroundStyle) || null == (b = _.resting) ? void 0 : b.dark)) : ((t = null == (O = v.entryPointBackgroundAssets) ? void 0 : O.srcLight), (n = null == (I = v.entrypointBackgroundStyle) || null == (y = I.resting) ? void 0 : y.light));
-        let M = i.useCallback(
+            k = (0, o.wj)(A);
+        P ? (k ? ((t = null == (l = v.entryPointBackgroundAssets) ? void 0 : l.srcDarkHovered), (n = null == (u = v.entrypointBackgroundStyle) || null == (c = u.hovered) ? void 0 : c.dark)) : ((t = null == (h = v.entryPointBackgroundAssets) ? void 0 : h.srcLightHovered), (n = null == (g = v.entrypointBackgroundStyle) || null == (f = g.hovered) ? void 0 : f.light))) : k ? ((t = null == (m = v.entryPointBackgroundAssets) ? void 0 : m.srcDark), (n = null == (_ = v.entrypointBackgroundStyle) || null == (b = _.resting) ? void 0 : b.dark)) : ((t = null == (O = v.entryPointBackgroundAssets) ? void 0 : O.srcLight), (n = null == (I = v.entrypointBackgroundStyle) || null == (y = I.resting) ? void 0 : y.light));
+        let U = i.useCallback(
                 (e) => {
                     T((e) => (e + 1) % v.assetIds.length), j(!0), null == e || e();
                 },
                 [v.assetIds.length]
             ),
-            G = i.useCallback((e) => {
+            V = i.useCallback((e) => {
                 j(!1), null == e || e();
             }, []),
-            V = v.title();
+            B = v.title();
         return (0, r.jsx)(s.ua7, {
-            text: (0, r.jsx)(B, {
+            text: (0, r.jsx)(G, {
                 displayOptions: v,
                 assetId: v.assetIds[N],
                 reducedMotion: S
             }),
-            tooltipClassName: L.marketingBadgeTooltip,
+            tooltipClassName: x.marketingBadgeTooltip,
             position: 'right',
             delay: 100,
             allowOverflow: !0,
             hideOnClick: !1,
-            'aria-label': 'string' == typeof V ? V : x.intl.string(x.t.rSXaxc),
+            'aria-label': 'string' == typeof B ? B : Z.intl.string(Z.t.rSXaxc),
             children: (e) =>
                 (0, r.jsxs)(
-                    U,
-                    R(w(R(w({ className: null != v.entryPointClassName ? (0, E.l)(L, v.entryPointClassName) : void 0 }, C), { icon: v.entryPointIcon }), e), {
-                        onMouseEnter: () => M(e.onMouseEnter),
-                        onMouseLeave: () => G(e.onMouseLeave),
+                    M,
+                    w(L(w(L({ className: null != v.entryPointClassName ? (0, E.l)(x, v.entryPointClassName) : void 0 }, C), { icon: v.entryPointIcon }), e), {
+                        onMouseEnter: () => U(e.onMouseEnter),
+                        onMouseLeave: () => V(e.onMouseLeave),
                         children: [
                             (0, r.jsx)('div', {
-                                className: L.marketingButtonBackground,
+                                className: x.marketingButtonBackground,
                                 style: { background: n },
                                 children:
                                     null != t &&
                                     (0, r.jsx)('img', {
                                         src: t,
-                                        className: L.marketingButtonBackgroundImage,
+                                        className: x.marketingButtonBackgroundImage,
                                         alt: '',
                                         'aria-hidden': !0
                                     })
                             }),
-                            (0, r.jsx)(k, { color: v.badgeColor })
+                            (0, r.jsx)(D, { color: v.badgeColor })
                         ]
                     })
                 )
         });
     },
-    H = (e) => {
+    B = (e) => {
         var { displayOptions: t } = e,
-            n = D(e, ['displayOptions']);
+            n = R(e, ['displayOptions']);
         let l = i.useMemo(() => {
             var e;
             let n = null != t.emojiName ? (null == (e = b.ZP.getByName(t.emojiName)) ? void 0 : e.surrogates) : null;
             return (0, r.jsxs)(s.Text, {
                 variant: 'text-sm/medium',
-                className: L.marketingBadgeTooltipContent,
+                className: x.marketingBadgeTooltipContent,
                 children: [null != n && (0, r.jsx)(c.Z, { emojiName: n }), t.title()]
             });
         }, [t]);
         return (0, r.jsx)(s.ua7, {
             text: l,
-            tooltipClassName: L.marketingBadgeTooltip,
+            tooltipClassName: x.marketingBadgeTooltip,
             position: 'right',
             delay: 100,
             hideOnClick: !1,
             'aria-label': t.title(),
-            children: (e) => (0, r.jsx)(U, R(w({}, n, e), { children: (0, r.jsx)(k, { color: t.badgeColor }) }))
+            children: (e) => (0, r.jsx)(M, w(L({}, n, e), { children: (0, r.jsx)(D, { color: t.badgeColor }) }))
         });
     },
-    F = (e) => {
+    H = (e) => {
         var { listScrollerRef: t } = e,
-            n = D(e, ['listScrollerRef']);
+            n = R(e, ['listScrollerRef']);
         let l = i.useRef(null),
             a = (0, _.EQ)({ listScrollerRef: t }),
             { positionControlRef: o, onShopButtonClick: s } = a,
-            c = D(a, ['positionControlRef', 'onShopButtonClick']);
+            c = R(a, ['positionControlRef', 'onShopButtonClick']);
         return (0, r.jsx)(
             _.Rg,
-            R(
-                w(
+            w(
+                L(
                     {
                         targetElementRef: l,
                         positionControlRef: o
@@ -311,10 +310,10 @@ let k = (e) => {
                 ),
                 {
                     children: (0, r.jsx)(
-                        U,
-                        R(w({}, n), {
+                        M,
+                        w(L({}, n), {
                             listItemRef: l,
-                            collectibleShopTab: j.AW.ORBS,
+                            collectibleShopTab: P.AW.ORBS,
                             onClick: s
                         })
                     )
@@ -322,66 +321,66 @@ let k = (e) => {
             )
         );
     },
-    z = (e) => {
-        let t = i.useRef(null),
-            { shouldShowCoachmark: n, dismissCoachmark: l } = (0, S.Z)(),
-            a = i.useRef(0);
+    F = (e) => {
+        var { displayOptions: t, dismissContent: n } = e,
+            l = R(e, ['displayOptions', 'dismissContent']);
+        let a = i.useRef(null),
+            o = i.useRef(0);
         i.useLayoutEffect(() => {
-            a.current += 1;
+            o.current += 1;
         }, []);
-        let o = i.useCallback(() => {
-            var t;
-            l(Z.L.PRIMARY), null == (t = e.onClick) || t.call(e);
-        }, [l, e]);
+        let c = i.useCallback(() => {
+            n(A.L.TAKE_ACTION);
+        }, [n]);
         return (0, r.jsx)(s.yRy, {
-            targetElementRef: t,
-            renderPopout: () => (0, r.jsx)(C.Z, {}),
+            targetElementRef: a,
+            renderPopout: () => (0, r.jsx)(C.Z, { displayOptions: t }),
             position: 'right',
             align: 'top',
-            shouldShow: n,
+            shouldShow: !0,
             spacing: 12,
-            positionKey: String(a.current),
+            positionKey: String(o.current),
             animation: s.yRy.Animation.TRANSLATE,
             closeOnScroll: !0,
-            onRequestClose: () => l(Z.L.USER_DISMISS),
-            children: (n) =>
+            onRequestClose: () => n(A.L.USER_DISMISS),
+            children: (e) =>
                 (0, r.jsx)(
-                    U,
-                    R(w({}, e), {
-                        onClick: o,
-                        listItemRef: t,
-                        children: (0, r.jsx)(k, {})
+                    M,
+                    w(L({}, l), {
+                        onClick: c,
+                        listItemRef: a,
+                        children: (0, r.jsx)(D, {})
                     })
                 )
         });
     },
-    W = () => ((0, I.Z)(), null),
-    Y = (e) => {
+    z = () => ((0, I.Z)(), null),
+    W = (e) => {
         let { selected: t, onClick: n, locationState: i, listItemRef: l, listScrollerRef: a } = e,
             { shouldShow: o } = (0, _.EQ)({}),
-            { shopButtonDisplayOptions: s, dismissShopButtonDC: c } = (0, N.Z)(),
+            { shopButtonDisplayOptions: s, dismissShopButtonDC: c } = (0, S.Z)(),
             u = (0, y.b)('Collectibles Shop Button'),
-            { shouldShowCoachmark: d } = (0, S.Z)(),
-            p = {
+            d = {
                 selected: t,
                 locationState: i,
                 onClick: () => {
-                    d || o || c(), null == n || n();
+                    o || c(), null == n || n();
                 },
                 listItemRef: l
             };
-        if (o) return (0, r.jsx)(F, R(w({}, p), { listScrollerRef: a }));
-        if (d) return (0, r.jsx)(z, w({}, p));
+        if (o) return (0, r.jsx)(H, w(L({}, d), { listScrollerRef: a }));
         if (null != s)
             switch (s.type) {
-                case P.k2.TOOLTIP:
-                    return (0, r.jsx)(H, R(w({}, p), { displayOptions: s }));
-                case P.k2.COACHTIP:
-                    return (0, r.jsx)(V, R(w({}, p), { displayOptions: s }));
-                case P.k2.BADGE:
-                    return (0, r.jsx)(G, w({}, p));
+                case T.k2.TOOLTIP:
+                    return (0, r.jsx)(B, w(L({}, d), { displayOptions: s }));
+                case T.k2.COACHTIP:
+                    return (0, r.jsx)(V, w(L({}, d), { displayOptions: s }));
+                case T.k2.BADGE:
+                    return (0, r.jsx)(U, L({}, d));
+                case T.k2.COACHMARK:
+                    return (0, r.jsx)(F, w(L({ dismissContent: c }, d), { displayOptions: s }));
             }
         return (0, r.jsxs)(r.Fragment, {
-            children: [u && (0, r.jsx)(W, {}), (0, r.jsx)(U, w({}, p))]
+            children: [u && (0, r.jsx)(z, {}), (0, r.jsx)(M, L({}, d))]
         });
     };

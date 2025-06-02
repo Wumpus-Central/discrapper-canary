@@ -21,10 +21,10 @@ var i = n(255367),
     E = n(509545),
     y = n(669079),
     S = n(63063),
-    v = n(74538),
-    P = n(987209),
-    b = n(563132),
-    I = n(409813),
+    P = n(74538),
+    v = n(987209),
+    I = n(563132),
+    b = n(409813),
     T = n(107998),
     M = n(51499),
     Z = n(456251),
@@ -40,8 +40,8 @@ var i = n(255367),
 function B(e) {
     var t, n, s, B;
     let { handleStepChange: G, initialPlanId: D, planGroup: W, subscriptionTier: Y, trialId: K, referralTrialOfferId: V, handleClose: X } = e,
-        { activeSubscription: z, hasFetchedSubscriptions: q, paymentSourceId: Q, paymentSources: J, selectedSkuId: $, selectedPlan: ee, step: et, defaultPlanId: en, priceOptions: ei, isPremium: el, premiumRebrandBackgroundClassName: es } = (0, b.JL)(),
-        { isGift: er, giftRecipient: ea, giftMessage: eo, claimableRewards: eC } = (0, P.wD)(),
+        { activeSubscription: z, hasFetchedSubscriptions: q, paymentSourceId: Q, paymentSources: J, selectedSkuId: $, selectedPlan: ee, step: et, defaultPlanId: en, priceOptions: ei, isPremium: el, premiumRebrandBackgroundClassName: es } = (0, I.JL)(),
+        { isGift: er, giftRecipient: ea, giftMessage: eo, claimableRewards: eC } = (0, v.wD)(),
         { paymentModalBanner: ed } = (0, T.zb)(),
         ec = (0, p.a5)(ee),
         eu = (null == (t = (0, x.Z)()) ? void 0 : t.planSelectionBanner) != null,
@@ -58,7 +58,7 @@ function B(e) {
         ey = null != (s = e_ || eE) && s,
         eS = l.useMemo(
             () =>
-                (0, v.V7)({
+                (0, P.V7)({
                     skuId: $,
                     isPremium: el,
                     multiMonthPlans: ej ? eh : [],
@@ -67,17 +67,17 @@ function B(e) {
                 }),
             [$, el, eh, z, ej, en]
         ),
-        ev = eE && eS.includes(w.Xh.PREMIUM_MONTH_TIER_2) ? w.Xh.PREMIUM_MONTH_TIER_2 : eS[0],
-        eP = (0, a.e7)([E.Z], () => E.Z.get(ev)),
-        eb = [
+        eP = eE && eS.includes(w.Xh.PREMIUM_MONTH_TIER_2) ? w.Xh.PREMIUM_MONTH_TIER_2 : eS[0],
+        ev = (0, a.e7)([E.Z], () => E.Z.get(eP)),
+        eI = [
             {
-                planId: null == eP ? void 0 : eP.id,
+                planId: null == ev ? void 0 : ev.id,
                 quantity: 1
             }
         ],
-        [eI, eT] = l.useState(ey),
+        [eb, eT] = l.useState(ey),
         [eM, eZ] = (0, u.ED)({
-            items: eb,
+            items: eI,
             renewal: !1,
             preventFetch: !ey,
             applyEntitlements: !0,
@@ -90,7 +90,7 @@ function B(e) {
     }, [eM, ey]),
         (0, C.Z)(
             'Payment Modal Plan Select Step',
-            eI,
+            eb,
             5,
             {
                 proratedInvoicePreview: eM,
@@ -103,7 +103,7 @@ function B(e) {
         eO = ey && null == eZ,
         eR = ey && null != eZ,
         ek = eO && null == z && !!ey && (null == eM ? void 0 : eM.subscriptionPeriodEnd) == null,
-        eU = !er && (null == eP ? void 0 : eP.skuId) === w.Si.TIER_2 && (null == em ? void 0 : em.referrer_id) != null,
+        eU = !er && (null == ev ? void 0 : ev.skuId) === w.Si.TIER_2 && (null == em ? void 0 : em.referrer_id) != null,
         eA = null;
     return ((eA = null != ed ? ed : eU ? (0, i.jsx)(_.Z, {}) : (0, i.jsx)(m.Z, {})), ek)
         ? (0, i.jsx)(Z.Z, {})
@@ -153,7 +153,7 @@ function B(e) {
                               className: es,
                               children: (0, i.jsx)(g.y, {
                                   onStepChange: G,
-                                  onBackClick: () => G(I.h8.SKU_SELECT),
+                                  onBackClick: () => G(b.h8.SKU_SELECT),
                                   showBackButton: null == D && null == Y,
                                   planOptions: eS,
                                   shouldRenderUpdatedPaymentModal: eO,

@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(452081),
     U = n(46140),
     G = n(981631),
-    B = n(215023),
-    V = n(388032),
+    V = n(215023),
+    B = n(388032),
     H = n(87671),
     F = n(13299),
     z = n(843385);
@@ -114,9 +114,9 @@ let K = function () {
             if (z) return void window.open(T.Z.getArticleURL(G.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
             window.open(T.Z.getArticleURL(G.BhN.QUESTS_LEARN_MORE));
         }, [z]);
-    (0, f.Tt)({ location: V.intl.string(V.t.JALI2N) });
-    let q = z ? V.intl.format(V.t.BCBIlp, {}) : V.intl.format(V.t.lmMBf3, {}),
-        X = z ? V.intl.format(V.t.U9FY0N, {}) : V.intl.string(V.t.oWCrBg),
+    (0, f.Tt)({ location: B.intl.string(B.t.JALI2N) });
+    let q = z ? B.intl.format(B.t.BCBIlp, {}) : B.intl.format(B.t.lmMBf3, {}),
+        X = z ? B.intl.format(B.t.U9FY0N, {}) : B.intl.string(B.t.oWCrBg),
         Q = i.useRef(null);
     return (0, r.jsx)(D.k.Provider, {
         value: { onAssetLoadComplete: j },
@@ -137,7 +137,7 @@ let K = function () {
                                   children: (0, r.jsx)(N.V9, {
                                       analyticsPage: G.ZY5.GLOBAL_DISCOVERY_QUESTS,
                                       cardAlignment: N.ek.END,
-                                      ctaText: V.intl.string(V.t['J+vlIS']),
+                                      ctaText: B.intl.string(B.t['J+vlIS']),
                                       ctaOnClick: () => {
                                           (0, C.Y)({
                                               pageType: G.ZY5.GLOBAL_DISCOVERY_QUESTS,
@@ -146,7 +146,7 @@ let K = function () {
                                           }),
                                               (0, h.mK)({
                                                   openInLayer: !1,
-                                                  tab: B.AW.ORBS,
+                                                  tab: V.AW.ORBS,
                                                   analyticsLocations: [],
                                                   analyticsSource: d.Z.ORBS_BALANCE_MENU
                                               });
@@ -165,23 +165,23 @@ let K = function () {
                                                     onClick: () =>
                                                         (0, h.mK)({
                                                             openInLayer: !1,
-                                                            tab: B.AW.ORBS,
+                                                            tab: V.AW.ORBS,
                                                             analyticsLocations: [],
                                                             analyticsSource: d.Z.INTRO_TO_ORBS_QUEST_BANNER
                                                         }),
-                                                    children: V.intl.string(V.t['1Wm129'])
+                                                    children: B.intl.string(B.t['1Wm129'])
                                                 }),
                                                 (0, r.jsx)(c.zxk, {
                                                     look: c.iLD.LINK,
                                                     color: c.Ttl.CUSTOM,
                                                     className: H.orbsTermsButton,
                                                     onClick: K,
-                                                    children: V.intl.string(V.t['7kTAgI'])
+                                                    children: B.intl.string(B.t['7kTAgI'])
                                                 })
                                             ]
                                         })
                                       : (0, r.jsx)(b.u, {
-                                            text: V.intl.string(V.t.hvVgAQ),
+                                            text: B.intl.string(B.t.hvVgAQ),
                                             onClick: K
                                         }),
                                   className: a()(H.bannerContainer, { [H.orbsContainer]: z }),
@@ -207,7 +207,7 @@ let K = function () {
                                           title: q,
                                           description: X,
                                           button: (0, r.jsx)(b.u, {
-                                              text: V.intl.string(V.t.hvVgAQ),
+                                              text: B.intl.string(B.t.hvVgAQ),
                                               onClick: K
                                           }),
                                           className: a()(H.bannerContainer, { [H.orbsContainer]: z }),

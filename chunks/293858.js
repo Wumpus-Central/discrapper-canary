@@ -20,8 +20,8 @@ var i = n(255367),
     L = n(921944);
 function E(e) {
     let t,
-        { handleClose: n, planGroup: s, onSubscriptionConfirmation: E, renderPurchaseConfirmation: y, postSuccessGuild: S, followupSKUInfo: v, continueSessionToInitialStep: P } = e,
-        { activeSubscription: b, paymentSources: I, paymentSourceId: T, selectedPlan: M, selectedSkuId: Z, step: N, updatedSubscription: O, startingPremiumSubscriptionPlanIdRef: R, startingFractionalPremiumEndsAtRef: k } = (0, h.JL)(),
+        { handleClose: n, planGroup: s, onSubscriptionConfirmation: E, renderPurchaseConfirmation: y, postSuccessGuild: S, followupSKUInfo: P, continueSessionToInitialStep: v } = e,
+        { activeSubscription: I, paymentSources: b, paymentSourceId: T, selectedPlan: M, selectedSkuId: Z, step: N, updatedSubscription: O, startingPremiumSubscriptionPlanIdRef: R, startingFractionalPremiumEndsAtRef: k } = (0, h.JL)(),
         { isGift: U, giftRecipient: A, giftCode: w, hasSentMessage: H, isSendingMessage: F, sendGiftMessage: B, claimableRewards: G, selectedGiftingPromotionReward: D } = (0, x.wD)(),
         { confirmationFooter: W } = (0, f.zb)(),
         Y = null != W,
@@ -29,7 +29,7 @@ function E(e) {
         V = (0, d.Z)(),
         X = (0, C.a5)(M),
         z = (0, C.tK)(null == D ? void 0 : D.skuId),
-        q = (0, _.$)(I, T),
+        q = (0, _.$)(b, T),
         Q = U && null != D && X;
     r()(null != M, 'Expected plan to selected'), r()(null != Z, 'Expected selectedSkuId'), r()(null != N, 'Step should be set');
     let J = l.useCallback(() => {
@@ -45,7 +45,7 @@ function E(e) {
         (t =
             null != y
                 ? y(M, J, O)
-                : null != P
+                : null != v
                   ? (0, i.jsx)(c.VY, {})
                   : U
                     ? (0, i.jsx)(c.TB, {
@@ -62,11 +62,11 @@ function E(e) {
                             startingFractionalPremiumEndsAt: k.current
                         })
                       : (0, i.jsx)(c.ZP, {
-                            followupSKUInfo: v,
+                            followupSKUInfo: P,
                             startingPremiumSubscriptionPlanId: R.current,
                             planId: M.id,
                             onClose: J,
-                            isDowngrade: null != b && (0, p.GY)(b, M.id, s),
+                            isDowngrade: null != I && (0, p.GY)(I, M.id, s),
                             paymentSourceType: q,
                             hideClose: Y,
                             startingFractionalPremiumEndsAt: k.current

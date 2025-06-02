@@ -24,8 +24,8 @@ function L(e) {
         { isGift: g, claimableRewards: L } = (0, p.wD)(),
         y = g && null != L && L.length > 0,
         S = (0, C.N)(l),
-        v = (0, a.Nx)(),
-        P = (0, o.Z)({ location: 'PremiumPaymentSelect' });
+        P = (0, a.Nx)(),
+        v = (0, o.Z)({ location: 'PremiumPaymentSelect' });
     return (0, i.jsx)(E, {
         selectSku: (e) =>
             (function (e) {
@@ -58,10 +58,10 @@ function L(e) {
             }),
         onClose: n,
         isGift: g,
-        inOfferExperience: v,
+        inOfferExperience: P,
         priceOptions: _,
         showPromotionalGiftBanner: y,
-        enablePremiumRebrandDesign: P
+        enablePremiumRebrandDesign: v
     });
 }
 function E(e) {

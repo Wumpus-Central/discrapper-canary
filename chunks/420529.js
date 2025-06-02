@@ -13,7 +13,7 @@ var l = e(399606),
     g = e(721351),
     I = e(981631),
     c = e(388032);
-function E(t) {
+function T(t) {
     for (var n = 1; n < arguments.length; n++) {
         var e = null != arguments[n] ? arguments[n] : {},
             i = Object.keys(e);
@@ -38,7 +38,7 @@ function E(t) {
     }
     return t;
 }
-function T(t, n) {
+function E(t, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -74,7 +74,7 @@ function U(t) {
         n.type === I.ABu.XBOX
             ? (0, r.ZDy)(async () => {
                   let { default: n } = await Promise.all([e.e('45270'), e.e('522')]).then(e.bind(e, 200623));
-                  return (e) => (0, i.jsx)(n, T(E({}, e), { channel: t }));
+                  return (e) => (0, i.jsx)(n, E(T({}, e), { channel: t }));
               })
             : (n.type === I.ABu.PLAYSTATION || n.type === I.ABu.PLAYSTATION_STAGING) &&
               (0, r.ZDy)(async () => {
@@ -82,7 +82,7 @@ function U(t) {
                   return (e) =>
                       (0, i.jsx)(
                           l,
-                          T(E({}, e), {
+                          E(T({}, e), {
                               platform: n.type,
                               channel: t
                           })

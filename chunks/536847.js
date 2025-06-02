@@ -26,16 +26,14 @@ function h() {
             }
         ],
         [h, m, g] = (0, o.Wu)([c.Z, u.ZP, d.Z], () => [c.Z.theme, null == d.Z.gradientPreset, u.ZP.useSystemTheme === f.KW.ON]);
-    return (0, r.jsx)('div', {
+    return (0, r.jsx)(s.sY7, {
         className: p.themeSelector,
-        children: (0, r.jsx)(s.sY7, {
-            options: n,
-            value: m && !g ? h : e,
-            onChange: (e) => {
-                let { value: n } = e;
-                t(n), (0, l.ZI)({ theme: n });
-            },
-            look: 'pill'
-        })
+        options: n,
+        value: m && !g ? h : e,
+        onChange: (e) => {
+            let { value: n } = e;
+            t(n), (0, l.ZI)({ theme: n });
+        },
+        look: 'pill'
     });
 }

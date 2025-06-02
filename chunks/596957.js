@@ -143,13 +143,13 @@ let D = function (e) {
             },
             [L, c]
         ),
-        B = i.useCallback(
+        V = i.useCallback(
             (e) => {
                 U(Z(A({}, M), { [c]: e }));
             },
             [M, c]
         ),
-        V = i.useCallback(() => {
+        B = i.useCallback(() => {
             U(Z(A({}, M), { [c]: '' }));
         }, [M, c]),
         H = i.useMemo(() => c === T.pJs.PENDING && (l.filter(T.pJs.SPAM).length > 0 || l.filter(T.pJs.PENDING_IGNORED).length > 0), [l, c]),
@@ -263,8 +263,8 @@ let D = function (e) {
                 (0, r.jsx)(s.E1j, {
                     className: a()(j.searchBar, $ ? j.searchEmptyState : null),
                     query: M[c],
-                    onChange: B,
-                    onClear: V,
+                    onChange: V,
+                    onClear: B,
                     size: s.E1j.Sizes.MEDIUM
                 }),
                 (0, r.jsx)(I.Z, {

@@ -22,7 +22,7 @@ function j(e) {
         E = null != j ? (0, d.Af)(j) : null,
         y = null != E ? (0, d.gq)(E.planId) : null,
         S = null != E ? (0, d.Rd)(E.planId) : null,
-        v = (0, x.Kp)({
+        P = (0, x.Kp)({
             isTrial: !1,
             isGift: L,
             selectedSkuId: m,
@@ -39,7 +39,7 @@ function j(e) {
                 children: [
                     (0, i.jsx)(a.zxk, {
                         onClick: () => {
-                            v ? (_((0, x.nA)(m, j)), t(p.h8.REVIEW)) : t(p.h8.PLAN_SELECT);
+                            P ? (_((0, x.nA)(m, j)), t(p.h8.REVIEW)) : t(p.h8.PLAN_SELECT);
                         },
                         children: h.intl.string(h.t['3PatS0'])
                     }),

@@ -107,13 +107,13 @@ function T(e) {
         { onClose: k, transitionState: M } = n,
         U = (0, p.Dt)(),
         G = L.length % 2 == 0,
-        B = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        [V, H] = i.useState(Date.now()),
+        V = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+        [B, H] = i.useState(Date.now()),
         [F, z] = i.useState(0),
         [W, Y] = i.useState(0),
         [K, q] = i.useState(!1),
         [X, Q] = i.useState(!0),
-        J = i.useRef(V),
+        J = i.useRef(B),
         $ = i.useRef(F),
         ee = i.useRef(W),
         et = i.useRef(K),
@@ -161,8 +161,8 @@ function T(e) {
             [er]
         ),
         i.useEffect(() => {
-            (J.current = V), ($.current = F), (ee.current = W), (et.current = K), (en.current = X);
-        }, [V, F, W, K, X]),
+            (J.current = B), ($.current = F), (ee.current = W), (et.current = K), (en.current = X);
+        }, [B, F, W, K, X]),
         i.useEffect(
             () => () => {
                 if ('video' === l.type || 'embed' === l.type) {
@@ -214,7 +214,7 @@ function T(e) {
                         'video' === l.type
                             ? (0, r.jsx)(h.Z, {
                                   className: a()(y.video, S),
-                                  autoPlay: !B,
+                                  autoPlay: !V,
                                   loop: !0,
                                   muted: !0,
                                   controls: !0,

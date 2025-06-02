@@ -21,20 +21,20 @@ var i = n(255367),
 function E(e) {
     let { handleStepChange: t, handleClose: n } = e,
         { selectedPlan: s, selectedSkuId: E, step: y } = (0, f.JL)(),
-        { setSelectedGiftingPromotionReward: S, selectedGiftingPromotionReward: v, claimableRewards: P } = (0, h.wD)(),
-        b = (0, a.e7)([p.default], () => p.default.getCurrentUser());
+        { setSelectedGiftingPromotionReward: S, selectedGiftingPromotionReward: P, claimableRewards: v } = (0, h.wD)(),
+        I = (0, a.e7)([p.default], () => p.default.getCurrentUser());
     l.useEffect(() => {
-        let e = null != P && P.length > 0;
-        null == v && e && S(P[0]);
-    }, [P, v, S]);
-    let I = (e) => {
+        let e = null != v && v.length > 0;
+        null == P && e && S(v[0]);
+    }, [v, P, S]);
+    let b = (e) => {
             let t = e.skuId;
             return (0, i.jsx)(
                 d.Z,
                 {
                     skuId: t,
                     price: g.intl.string(g.t.QQsaCQ),
-                    isSelected: t === (null == v ? void 0 : v.skuId),
+                    isSelected: t === (null == P ? void 0 : P.skuId),
                     onSelect: () => S(e),
                     className: L.giftSelectItem
                 },
@@ -43,12 +43,12 @@ function E(e) {
         },
         T = (0, c.Q3)('PremiumPaymentFreeSKUSelectStep');
     r()(null != s, 'Expected plan to selected'), r()(null != E, 'Expected selectedSkuId'), r()(null != y, 'Step should be set');
-    let M = null == P ? void 0 : P.map((e) => I(e)),
+    let M = null == v ? void 0 : v.map((e) => b(e)),
         Z =
-            null != v && null != b
+            null != P && null != I
                 ? (0, i.jsx)(C.Z, {
-                      avatarDecorationOverride: { asset: v.assetId },
-                      user: b,
+                      avatarDecorationOverride: { asset: P.assetId },
+                      user: I,
                       guildId: null,
                       avatarSize: o.EFr.SIZE_152
                   })
@@ -58,11 +58,11 @@ function E(e) {
                 className: L.modalFooter,
                 children: (0, i.jsx)(u.y, {
                     onStepChange: (e) => {
-                        null != b &&
-                            null != v &&
+                        null != I &&
+                            null != P &&
                             x.default.track(_.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
-                                user_id: b.id,
-                                reward_sku_id: v.skuId
+                                user_id: I.id,
+                                reward_sku_id: P.skuId
                             }),
                             t(e);
                     },
