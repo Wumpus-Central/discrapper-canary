@@ -64,10 +64,8 @@ function P(e) {
     return H
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(c.YMn, {
-                      backdropStyle: c.fCB.DARK,
-                      onClose: D,
-                      'aria-label': S.intl.string(S.t.cpT0Cg),
+                  (0, r.jsx)(c.ZMr, {
+                      onClick: D,
                       isVisible: !0
                   }),
                   (0, r.jsxs)('div', {
@@ -143,10 +141,8 @@ function P(e) {
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(c.YMn, {
-                      backdropStyle: c.fCB.DARK,
-                      onClose: D,
-                      'aria-label': S.intl.string(S.t.cpT0Cg),
+                  (0, r.jsx)(c.ZMr, {
+                      onClick: D,
                       isVisible: !0
                   }),
                   (0, r.jsxs)('div', {

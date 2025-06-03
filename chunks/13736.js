@@ -9,7 +9,7 @@ function s(n) {
     let e = (0, l.C7)(n),
         t = (0, l.$R)(n),
         s = (0, l.Gu)(n);
-    return !e || !t || s || __OVERLAY__
+    return !e || !t || s || n.isModeratorReportChannel() || __OVERLAY__
         ? null
         : (0, i.jsx)(r.sNh, {
               id: 'edit-thread',

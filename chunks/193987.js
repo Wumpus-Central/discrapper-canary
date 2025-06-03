@@ -8,7 +8,7 @@ var r = t(481060),
 function s(n) {
     let e = (0, l.Xb)(n),
         t = n.isLockedThread();
-    if (e)
+    if (!(!e || n.isModeratorReportChannel()))
         return t
             ? (0, i.jsx)(r.sNh, {
                   id: 'unlock-thread',

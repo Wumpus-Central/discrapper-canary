@@ -12,8 +12,8 @@ var r = t(442837),
     f = t(592125),
     h = t(710352),
     v = t(388032),
-    g = t(939852);
-function p(n) {
+    p = t(939852);
+function g(n) {
     let { tag: e } = n,
         { name: t, emojiId: a, emojiName: l } = e,
         d = (0, r.e7)([s.ZP], () => (null != a ? s.ZP.getUsableCustomEmojiById(a) : null));
@@ -21,7 +21,7 @@ function p(n) {
         children: [
             null != l || null != a
                 ? (0, i.jsx)(o.Z, {
-                      className: g.emoji,
+                      className: p.emoji,
                       emojiId: a,
                       emojiName: l,
                       animated: !!(null == d ? void 0 : d.animated)
@@ -36,13 +36,13 @@ function Z(n) {
         t = (0, c.C7)(e),
         o = (0, r.e7)([f.Z], () => f.Z.getChannel(null == e ? void 0 : e.parent_id), [e]),
         s = (0, u.Vm)(o),
-        g = (0, u.eV)(e),
-        Z = g.length >= h.Cn,
-        b = (0, c.$R)(e);
+        p = (0, u.eV)(e),
+        Z = p.length >= h.Cn,
+        C = (0, c.$R)(e);
     if (null == e) return (0, l.Zy)(), null;
-    if (!t || __OVERLAY__ || !e.isForumPost() || (null == s ? void 0 : s.length) === 0 || !b) return null;
-    let C = (n) => {
-            let t = new Set(g);
+    if (!t || __OVERLAY__ || !e.isForumPost() || (null == s ? void 0 : s.length) === 0 || !C || e.isModeratorReportChannel()) return null;
+    let b = (n) => {
+            let t = new Set(p);
             if (t.has(n)) t.delete(n);
             else {
                 if (Z) return;
@@ -55,14 +55,14 @@ function Z(n) {
             null == s
                 ? void 0
                 : s.map((n) => {
-                      let e = g.includes(n);
+                      let e = p.includes(n);
                       return (0, i.jsx)(
                           a.S89,
                           {
                               id: n.id,
-                              label: (0, i.jsx)(p, { tag: n }),
+                              label: (0, i.jsx)(g, { tag: n }),
                               disabled: Z && !e,
-                              action: () => C(n),
+                              action: () => b(n),
                               checked: e
                           },
                           n.id
