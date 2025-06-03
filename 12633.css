@@ -20627,6 +20627,10 @@ span.clanTag__5d473 {
     border-radius: 50%
 }
 
+.emptyUserDimmed__183c2 {
+    background: var(--opacity-black-52)
+}
+
 .avatar__183c2 {
     border-radius: 50%;
     height: 100%;
@@ -20641,6 +20645,10 @@ span.clanTag__5d473 {
     display: flex;
     font-weight: 500;
     justify-content: center
+}
+
+.moreUsers__183c2.moreUsersDimmed__183c2 {
+    background-color: var(--opacity-black-52)
 }
 
 .size56__183c2 .moreUsers__183c2 {
