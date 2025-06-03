@@ -10,8 +10,8 @@ var r = n(255367),
     d = n(381585),
     p = n(597688),
     f = n(370039),
-    g = n(937510),
-    b = n(303952),
+    b = n(937510),
+    g = n(303952),
     h = n(38900),
     m = n(709999),
     _ = n(81136),
@@ -64,11 +64,11 @@ function I(e) {
                 ),
             [F, z, q]
         ),
-        Y = (0, g.l)(K);
+        Y = (0, b.l)(K);
     return (l.useEffect(() => {
-        (0, b.n)({
+        (0, g.n)({
             sessionId: N,
-            checkpoint: b.a.SHOP_MOUNTED,
+            checkpoint: g.a.SHOP_MOUNTED,
             tab: B,
             isFullScreen: I,
             unpublishedCategoriesShown: R,
@@ -77,9 +77,9 @@ function I(e) {
     }, []),
     l.useEffect(() => {
         n ||
-            (0, b.n)({
+            (0, g.n)({
                 sessionId: N,
-                checkpoint: b.a.SHOP_RENDERED,
+                checkpoint: g.a.SHOP_RENDERED,
                 tab: B,
                 isFullScreen: I,
                 unpublishedCategoriesShown: R,

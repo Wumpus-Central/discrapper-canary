@@ -4,18 +4,18 @@ n(73800);
 var r = n(120356),
     o = n.n(r),
     l = n(481060),
-    a = n(169525),
-    s = n(500984);
+    s = n(169525),
+    a = n(500984);
 let c = (e) => {
     let { obscureReason: t, iconClassname: n } = e;
     switch (t) {
-        case a.wk.EXPLICIT_CONTENT:
-        case a.wk.GORE_CONTENT:
+        case s.wk.EXPLICIT_CONTENT:
+        case s.wk.GORE_CONTENT:
             return (0, i.jsx)(l.fFY, {
-                className: o()(n, s.obscuredIcon),
+                className: o()(n, a.obscuredIcon),
                 color: 'white'
             });
-        case a.wk.SPOILER:
+        case s.wk.SPOILER:
             return (0, i.jsx)(l.tEF, {
                 size: 'md',
                 color: 'currentColor',

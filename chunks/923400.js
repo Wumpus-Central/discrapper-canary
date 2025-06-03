@@ -1,6 +1,6 @@
 r.d(t, { M: () => a });
 var n = r(83439),
-    A = r(100781);
+    i = r(100781);
 let a = [
     {
         name: 'cool-frog',
@@ -10,6 +10,6 @@ let a = [
     {
         name: 'cute-bunny',
         alt: 'A cute bunny',
-        data: A.Z
+        data: i.Z
     }
 ];

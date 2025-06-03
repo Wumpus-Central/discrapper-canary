@@ -6,38 +6,38 @@ var i,
     r = n(255367),
     o = n(73800),
     l = n(120356),
-    a = n.n(l),
-    s = n(500923),
-    c = n.n(s),
+    s = n.n(l),
+    a = n(500923),
+    c = n.n(a),
     u = n(570140),
     d = n(960020),
     h = n(831244),
     p = n(815605),
-    m = n(981631),
-    f = n(872333),
+    f = n(981631),
+    m = n(872333),
     g = (((i = {})[(i.NORMAL = 20)] = 'NORMAL'), (i[(i.LARGE = 32)] = 'LARGE'), i);
 let b = async (e) => {
     var t;
     let { effect: n } = e,
-        i = await (0, h.T)(n.channelId, null != (t = n.messageId) ? t : m.lds, n.emoji.name),
+        i = await (0, h.T)(n.channelId, null != (t = n.messageId) ? t : f.lds, n.emoji.name),
         r = await (0, p.aB)(''.concat(n.channelId, ':').concat(n.messageId, ':').concat(n.emoji.name), n.url, i, n.color);
     return (r.assets[0].p = n.url), r;
 };
 function O(e) {
     let { className: t, effect: n, onComplete: i, emojiSize: l = 20 } = e,
-        s = o.useRef(null),
+        a = o.useRef(null),
         h = l * p.Vz,
-        m = (h + l) / 2;
+        f = (h + l) / 2;
     return (
         o.useEffect(() => {
             let e;
             if (null != n)
                 return (
                     !(async function () {
-                        if (null != s.current) {
+                        if (null != a.current) {
                             let t = await b({ effect: n });
                             (e = c().loadAnimation({
-                                container: s.current,
+                                container: a.current,
                                 renderer: 'svg',
                                 loop: !1,
                                 autoplay: !0,
@@ -64,15 +64,15 @@ function O(e) {
                 );
         }, [i, n, l]),
         (0, r.jsx)('div', {
-            className: f.effectsWrapper,
+            className: m.effectsWrapper,
             children: (0, r.jsx)('div', {
-                className: a()(f.effect, t),
+                className: s()(m.effect, t),
                 style: {
-                    transform: 'translateY('.concat(m, 'px)'),
+                    transform: 'translateY('.concat(f, 'px)'),
                     height: h,
                     width: h
                 },
-                ref: s
+                ref: a
             })
         })
     );

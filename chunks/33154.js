@@ -1,31 +1,31 @@
 n.d(t, {
     Z: () => g,
-    s: () => f
+    s: () => m
 }),
     n(388685);
 var i,
     r = n(255367),
     o = n(73800),
     l = n(442837),
-    a = n(481060),
-    s = n(749210),
+    s = n(481060),
+    a = n(749210),
     c = n(313201),
     u = n(823379),
     d = n(41776),
     h = n(981631),
     p = n(388032),
-    m = n(695256),
-    f = (((i = {})[(i.CHAT = 0)] = 'CHAT'), (i[(i.REACTIONS = 1)] = 'REACTIONS'), i);
+    f = n(695256),
+    m = (((i = {})[(i.CHAT = 0)] = 'CHAT'), (i[(i.REACTIONS = 1)] = 'REACTIONS'), i);
 let g = (e) => {
-    let { type: t, guild: i, closePopout: f, ctaRef: g } = e,
+    let { type: t, guild: i, closePopout: m, ctaRef: g } = e,
         b = (0, c.Dt)(),
-        [O, j] = o.useState(!1),
-        v = (0, l.e7)([d.Z], () => d.Z.isLurking(i.id), [i.id]);
+        [O, v] = o.useState(!1),
+        j = (0, l.e7)([d.Z], () => d.Z.isLurking(i.id), [i.id]);
     o.useEffect(() => {
-        O && !v && f();
-    }, [O, v, f]);
+        O && !j && m();
+    }, [O, j, m]);
     let y = null,
-        T = p.intl.string(p.t.d7b1p6);
+        _ = p.intl.string(p.t.d7b1p6);
     switch (t) {
         case 0:
             y = p.intl.string(p.t.Xiwf1d);
@@ -38,48 +38,48 @@ let g = (e) => {
     }
     if (null == y) return null;
     let S = async () => {
-        j(!0);
+        v(!0);
         try {
-            await s.Z.joinGuild(i.id, { source: h.vtS.CHAT_INPUT_BLOCKER }), f();
+            await a.Z.joinGuild(i.id, { source: h.vtS.CHAT_INPUT_BLOCKER }), m();
         } catch (e) {
-            j(!1);
+            v(!1);
         }
     };
-    return (0, r.jsxs)(a.VqE, {
-        className: m.container,
+    return (0, r.jsxs)(s.VqE, {
+        className: f.container,
         'aria-labelledby': b,
         children: [
             (0, r.jsx)('img', {
                 alt: '',
-                className: m.image,
+                className: f.image,
                 src: n(64395)
             }),
             (0, r.jsxs)('div', {
-                className: m.content,
+                className: f.content,
                 children: [
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(s.X6q, {
                         variant: 'heading-md/semibold',
                         id: b,
                         children: y
                     }),
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(s.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: T
+                        children: _
                     }),
                     (0, r.jsxs)('div', {
-                        className: m.buttonContainer,
+                        className: f.buttonContainer,
                         children: [
-                            (0, r.jsx)(a.zxk, {
+                            (0, r.jsx)(s.zxk, {
                                 buttonRef: g,
                                 onClick: S,
                                 submitting: O,
                                 children: p.intl.string(p.t['9VLmlZ'])
                             }),
-                            (0, r.jsx)(a.zxk, {
-                                onClick: f,
-                                look: a.zxk.Looks.BLANK,
-                                className: m.cancel,
+                            (0, r.jsx)(s.zxk, {
+                                onClick: m,
+                                look: s.zxk.Looks.BLANK,
+                                className: f.cancel,
                                 children: p.intl.string(p.t['2m+Sqq'])
                             })
                         ]

@@ -21,7 +21,7 @@ function f() {
             return e;
         }).apply(this, arguments);
 }
-function g(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function g(e) {
     }
     return e;
 }
-function b(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -75,7 +75,7 @@ function h(e) {
         });
     let v = (0, o.ql)(t, u.tuJ.PREMIUM_TIER_2),
         O = !n && !(0, o.x6)(t),
-        S = (0, o.x6)(t) && n ? b(g({}, C), { amount: l.original }) : C,
+        S = (0, o.x6)(t) && n ? g(b({}, C), { amount: l.original }) : C,
         E = _ && n,
         x = _ && !n;
     return (0, r.jsxs)('div', {
@@ -126,8 +126,8 @@ function h(e) {
                             );
                             return (0, r.jsx)(
                                 i.SrA,
-                                b(
-                                    g(
+                                g(
+                                    b(
                                         {
                                             size: 'md',
                                             color: 'currentColor'

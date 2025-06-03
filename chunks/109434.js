@@ -1,14 +1,14 @@
 n.d(t, {
-    H: () => j,
-    v: () => v
+    H: () => v,
+    v: () => j
 }),
     n(388685);
 var i = n(512722),
     r = n.n(i),
     o = n(97519),
     l = n(313361),
-    a = n(697988),
-    s = n(683860),
+    s = n(697988),
+    a = n(683860),
     c = n(731965),
     u = n(442837),
     d = n(592125),
@@ -26,7 +26,7 @@ function p(e, t, n) {
         e
     );
 }
-function m(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -42,13 +42,13 @@ function m(e) {
     }
     return e;
 }
-let f = new Set(),
+let m = new Set(),
     g = {
         layoutType: l.X.LIST,
-        sortOrder: s.z.CREATION_DATE,
-        tagFilter: f,
+        sortOrder: a.z.CREATION_DATE,
+        tagFilter: m,
         scrollPosition: 0,
-        tagSetting: a.z.MATCH_SOME
+        tagSetting: s.z.MATCH_SOME
     };
 class b {
     constructor(e, t) {
@@ -69,8 +69,8 @@ class b {
             (this.setChannelState = (e, t) => {
                 let n = this.get(),
                     i = this.getChannelState(e),
-                    r = m({}, n.channelStates);
-                (r[e] = m({}, i, t)), (0, c.j)(() => this.set({ channelStates: r }));
+                    r = f({}, n.channelStates);
+                (r[e] = f({}, i, t)), (0, c.j)(() => this.set({ channelStates: r }));
             }),
             (this.getChannelState = (e) => {
                 if (null == e) return g;
@@ -82,7 +82,7 @@ class b {
                         (n = {
                             layoutType: t.getDefaultLayout(),
                             sortOrder: t.getDefaultSortOrder(),
-                            tagFilter: f,
+                            tagFilter: m,
                             scrollPosition: 0,
                             tagSetting: t.getDefaultTagSetting()
                         });
@@ -111,8 +111,8 @@ class b {
     }
 }
 let O = (0, o.U)((e, t) => new b(e, t)),
-    j = (e) => {
+    v = (e) => {
         let t = O();
         return null == (0, u.e7)([d.Z], () => d.Z.getChannel(e)) ? g : t.getChannelState(e);
     },
-    v = () => O;
+    j = () => O;

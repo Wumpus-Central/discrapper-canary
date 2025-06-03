@@ -1,10 +1,10 @@
-r.d(t, { Z: () => p }), r(388685);
+r.d(t, { Z: () => h }), r(388685);
 var n = r(255367),
-    A = r(73800),
+    i = r(73800),
     a = r(120356),
     l = r.n(a),
     o = r(481060),
-    i = r(813197),
+    A = r(813197),
     s = r(388032),
     c = r(887670);
 function d(e) {
@@ -50,18 +50,18 @@ function u(e, t) {
         e
     );
 }
-let g = 'custom-image',
-    f = A.forwardRef(function (e, t) {
-        let { selectedImageName: r, onChange: A, disabled: a = !1, name: i, alt: s, data: g } = e,
-            f = i === r,
-            p = (0, o.xUy)({
-                isSelected: f,
+let f = 'custom-image',
+    g = i.forwardRef(function (e, t) {
+        let { selectedImageName: r, onChange: i, disabled: a = !1, name: A, alt: s, data: f } = e,
+            g = A === r,
+            h = (0, o.xUy)({
+                isSelected: g,
                 label: s
             }),
-            h = a
+            p = a
                 ? void 0
                 : () => {
-                      A(g, i);
+                      i(f, A);
                   };
         return (0, n.jsx)(
             o.P3F,
@@ -70,17 +70,17 @@ let g = 'custom-image',
                     {
                         ref: t,
                         className: l()(c.radioOption, {
-                            [c.selected]: f,
+                            [c.selected]: g,
                             [c.disabled]: a
                         }),
-                        onClick: h,
+                        onClick: p,
                         'aria-disabled': a
                     },
-                    p
+                    h
                 ),
                 {
                     children: (0, n.jsx)('img', {
-                        src: g,
+                        src: f,
                         alt: s,
                         className: c.radioOptionImage
                     })
@@ -88,17 +88,17 @@ let g = 'custom-image',
             )
         );
     });
-function p(e) {
-    let { presetImages: t, image: r, imageName: a, savedImageName: p, onChange: h, uploadButtonLabel: m = s.intl.string(s.t['MsUY/f']), radioGroupAriaLabel: b = s.intl.string(s.t['0Q0UJi']), disabled: v = !1 } = e,
-        C = a === g,
-        [x, q] = A.useState(C ? r : null),
-        [j, O] = A.useState(null),
-        U = A.useRef(null),
-        P = A.useRef(null);
-    A.useEffect(() => {
-        p !== g && (q(null), O(null));
-    }, [p]);
-    let y = null != j ? s.intl.formatToPlainString(s.t['Kw+5YW'], { filename: j }) : s.intl.string(s.t.SNPvSk),
+function h(e) {
+    let { presetImages: t, image: r, imageName: a, savedImageName: h, onChange: p, uploadButtonLabel: m = s.intl.string(s.t['MsUY/f']), radioGroupAriaLabel: b = s.intl.string(s.t['0Q0UJi']), disabled: v = !1 } = e,
+        C = a === f,
+        [x, q] = i.useState(C ? r : null),
+        [j, O] = i.useState(null),
+        P = i.useRef(null),
+        y = i.useRef(null);
+    i.useEffect(() => {
+        h !== f && (q(null), O(null));
+    }, [h]);
+    let U = null != j ? s.intl.formatToPlainString(s.t['Kw+5YW'], { filename: j }) : s.intl.string(s.t.SNPvSk),
         V = (0, o.arW)({
             orientation: 'horizontal',
             isDisabled: v
@@ -108,33 +108,33 @@ function p(e) {
             if (null == e) return {};
             var r,
                 n,
-                A = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var r,
                         n,
-                        A = {},
+                        i = {},
                         a = Object.keys(e);
-                    for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (A[r] = e[r]);
-                    return A;
+                    for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var a = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < a.length; n++) (r = a[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (A[r] = e[r]);
+                for (n = 0; n < a.length; n++) (r = a[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
-            return A;
+            return i;
         })(V, ['ref']),
         T = () => {
             var e;
-            return null == (e = U.current) ? void 0 : e.activateUploadDialogue();
+            return null == (e = P.current) ? void 0 : e.activateUploadDialogue();
         },
         F = () => {
-            a === g && h(t[0].data, t[0].name), q(null), O(null);
+            a === f && p(t[0].data, t[0].name), q(null), O(null);
         };
     return (
-        A.useEffect(() => {
+        i.useEffect(() => {
             if (C && null != j) {
                 var e, t;
-                null == (t = P.current) || null == (e = t.ref) || e.focus();
+                null == (t = y.current) || null == (e = t.ref) || e.focus();
             }
         }, [C, j]),
         (0, n.jsxs)('div', {
@@ -160,11 +160,11 @@ function p(e) {
                                 'aria-hidden': !0,
                                 children: m
                             }),
-                            (0, n.jsx)(i.ZP, {
-                                ref: U,
+                            (0, n.jsx)(A.ZP, {
+                                ref: P,
                                 tabIndex: 0,
                                 onChange: (e, t) => {
-                                    null != t && (O(t.name), q(e), h(e, g));
+                                    null != t && (O(t.name), q(e), p(e, f));
                                 },
                                 'aria-label': m
                             })
@@ -227,22 +227,22 @@ function p(e) {
                             className: c.radioGroup,
                             children: [
                                 null != x &&
-                                    (0, n.jsx)(f, {
-                                        ref: P,
+                                    (0, n.jsx)(g, {
+                                        ref: y,
                                         selectedImageName: a,
-                                        onChange: h,
+                                        onChange: p,
                                         disabled: v,
-                                        name: g,
-                                        alt: y,
+                                        name: f,
+                                        alt: U,
                                         data: x
                                     }),
                                 t.map((e) =>
                                     (0, n.jsx)(
-                                        f,
+                                        g,
                                         d(
                                             {
                                                 selectedImageName: a,
-                                                onChange: h,
+                                                onChange: p,
                                                 disabled: v
                                             },
                                             e

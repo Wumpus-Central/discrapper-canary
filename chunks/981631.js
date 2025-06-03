@@ -4110,6 +4110,7 @@ var n_ = (function (e) {
             (e.CHANNEL_ICON_EDIT_PROGRESSED = 'channel_icon_edit_progressed'),
             (e.GDM_EDIT_INTERACTED = 'gdm_edit_interacted'),
             (e.CAN_OPEN_URL_REQUESTED = 'can_open_url_requested'),
+            (e.MASKED_LINK_MODAL_CLICKED = 'masked_link_modal_clicked'),
             e
         );
     })({}),

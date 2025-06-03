@@ -12,16 +12,16 @@ let s = (e, t, n) => {
     r.useEffect(() => {
         d(c), p !== i.f7.VISIBLE && f(i.f7.VISIBLE);
     }, [c, p]);
-    let g = (e) => new Promise((t) => setTimeout(t, e)),
-        b = (0, l.k6)();
+    let b = (e) => new Promise((t) => setTimeout(t, e)),
+        g = (0, l.k6)();
     return {
         selectedTab: u,
         transitionState: p,
         transitionToTab: r.useCallback(
             async (t, r) => {
-                r ? (f(i.f7.OUT), await g(1.1 * i.lb), d(t), n || b.push(o.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 }), f(i.f7.IN)) : (d(t), n || b.push(o.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 })), null != e.current && e.current.scrollTo({ to: 0 }), f(i.f7.VISIBLE);
+                r ? (f(i.f7.OUT), await b(1.1 * i.lb), d(t), n || g.push(o.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 }), f(i.f7.IN)) : (d(t), n || g.push(o.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 })), null != e.current && e.current.scrollTo({ to: 0 }), f(i.f7.VISIBLE);
             },
-            [b, n, e]
+            [g, n, e]
         )
     };
 };

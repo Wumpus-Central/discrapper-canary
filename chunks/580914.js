@@ -10,8 +10,8 @@ var r = n(255367),
     d = n(607070),
     p = n(70097),
     f = n(688465),
-    g = n(341907),
-    b = n(507808),
+    b = n(341907),
+    g = n(507808),
     h = n(594174),
     m = n(451478),
     _ = n(626135),
@@ -162,12 +162,12 @@ let N = {
                                                   color: u.Ttl.WHITE,
                                                   onClick: () => {
                                                       O === I.AW.ORBS
-                                                          ? ((0, b.Y)({
+                                                          ? ((0, g.Y)({
                                                                 pageType: L.ZY5.SHOP_ORBS_TAB,
                                                                 sectionType: L.jXE.ORBS_SHOP_HERO_BLOCK,
                                                                 ctaObject: L.qAy.CTA_TO_QUEST_HOME
                                                             }),
-                                                            (0, g.navigateToQuestHome)({ fromContent: o.j.ORBS_SHOP_HERO_CTA }))
+                                                            (0, b.navigateToQuestHome)({ fromContent: o.j.ORBS_SHOP_HERO_CTA }))
                                                           : (n('shop latest category hero', H.categorySkuId),
                                                             _.default.track(L.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                                 collectibles_shop_session_id: null == D ? void 0 : D.sessionId,

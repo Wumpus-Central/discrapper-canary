@@ -10,8 +10,8 @@ var r = n(255367),
     d = n(981632),
     p = n(594174),
     f = n(381585),
-    g = n(328347),
-    b = n(370039),
+    b = n(328347),
+    g = n(370039),
     h = n(937510),
     m = n(303952),
     _ = n(853748),
@@ -90,8 +90,8 @@ function T(e) {
             return l;
         })(e, ['category', 'initialItemCardRef']);
     let i = (0, h.l)(t.products),
-        s = (0, b.a)()(i),
-        c = (0, o.e7)([g.Z], () => g.Z.initialProductSkuId),
+        s = (0, g.a)()(i),
+        c = (0, o.e7)([b.Z], () => b.Z.initialProductSkuId),
         u = l.useCallback(
             (e, t) => {
                 var r;
@@ -136,15 +136,15 @@ function T(e) {
     );
 }
 function I(e) {
-    let { category: t, isPremiumUser: n, initialItemCardRef: a, isGiftEasterEggEnabled: o, setIsGiftEasterEggEnabled: p, showEasterEggToggle: f, isFullScreen: g } = e,
-        b = l.useRef(10 + 70 * Math.random()),
+    let { category: t, isPremiumUser: n, initialItemCardRef: a, isGiftEasterEggEnabled: o, setIsGiftEasterEggEnabled: p, showEasterEggToggle: f, isFullScreen: b } = e,
+        g = l.useRef(10 + 70 * Math.random()),
         [h, m] = l.useState(!1),
         v = (0, x.M7)(t.skuId),
         O = (0, c.O)(
             (e) => {
                 m(e && null != v);
             },
-            g ? 0.13 : 0.15
+            b ? 0.13 : 0.15
         );
     return (0, r.jsxs)('div', {
         className: P.categoryWrapper,
@@ -154,7 +154,7 @@ function I(e) {
                 (0, r.jsx)(s.P3F, {
                     className: i()(P.hiddenWumpus, { [P.hiddenWumpusEnabled]: o }),
                     onClick: () => p(!0),
-                    style: { left: ''.concat(b.current, '%') },
+                    style: { left: ''.concat(g.current, '%') },
                     children: (0, r.jsx)(d.Z, {
                         idleAnimationState: u.SR.IDLE,
                         giftStyle: j.Cj.BOX
@@ -176,7 +176,7 @@ function I(e) {
                     unpublishedAt: t.unpublishedAt,
                     isVisible: h,
                     displayOptions: v,
-                    isFullScreen: g
+                    isFullScreen: b
                 })
         ]
     });
@@ -185,30 +185,30 @@ function L(e) {
     var t;
     let { isFetchingCategories: n, sortedCategories: a, setCategoryRef: i, isPremiumUser: o, initialItemCardRef: s, setIsGiftEasterEggEnabled: c, isGiftEasterEggEnabled: u, isFullScreen: d } = e,
         p = (0, f.sp)(),
-        g = null != (t = null == p ? void 0 : p.sessionId) ? t : '',
-        { noCache: b, includeUnpublished: h } = (0, S.Z)();
+        b = null != (t = null == p ? void 0 : p.sessionId) ? t : '',
+        { noCache: g, includeUnpublished: h } = (0, S.Z)();
     return (l.useEffect(() => {
         (0, m.n)({
-            sessionId: g,
+            sessionId: b,
             checkpoint: m.a.SHOP_MOUNTED,
             tab: y.AW.CATALOG,
             isFullScreen: d,
             unpublishedCategoriesShown: h,
-            cacheDisabled: b
+            cacheDisabled: g
         });
     }, []),
     l.useEffect(() => {
         n ||
             0 === a.length ||
             (0, m.n)({
-                sessionId: g,
+                sessionId: b,
                 checkpoint: m.a.SHOP_RENDERED,
                 tab: y.AW.CATALOG,
                 isFullScreen: d,
                 unpublishedCategoriesShown: h,
-                cacheDisabled: b
+                cacheDisabled: g
             });
-    }, [g, d, h, b, n, a.length]),
+    }, [b, d, h, g, n, a.length]),
     n)
         ? (0, r.jsx)(v.Z, {})
         : (0, r.jsx)('div', {

@@ -10,8 +10,8 @@ var r = n(255367),
     d = n(381585),
     p = n(597688),
     f = n(297651),
-    g = n(794324),
-    b = n(981631),
+    b = n(794324),
+    g = n(981631),
     h = n(388032),
     m = n(806734);
 let _ = (e) => {
@@ -21,7 +21,7 @@ let _ = (e) => {
     null != v && (_ = null == (t = p.Z.getCategoryByStoreListingId(null == v ? void 0 : v.categoryStoreListingId)) ? void 0 : t.skuId);
     let E = null != (n = null != _ ? _ : null == C ? void 0 : C.skuId) ? n : '',
         { handleCardVisibilityChange: x } = (0, f.E)(E, 'home', 'marketing featured block'),
-        { featuredBlockBanner: y } = (0, g.YG)(C, v),
+        { featuredBlockBanner: y } = (0, b.YG)(C, v),
         j = l.useRef(null),
         P = E === o.T.NAMEPLATE,
         k = P ? h.intl.string(h.t['/Rk1dn']) : null == v ? void 0 : v.bodyText,
@@ -36,7 +36,7 @@ let _ = (e) => {
             style: { backgroundImage: 'url('.concat(y, ')') },
             onClick: () => {
                 S('shop marketing tile', E),
-                    u.default.track(b.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    u.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: null == T ? void 0 : T.sessionId,
                         sku_id: E,
                         page_type: 'home',
@@ -68,7 +68,7 @@ let _ = (e) => {
                     onClick: (e) => {
                         S('shop marketing take me there button', E),
                             e.stopPropagation(),
-                            u.default.track(b.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                            u.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                 collectibles_shop_session_id: null == T ? void 0 : T.sessionId,
                                 sku_id: E,
                                 page_type: 'home',

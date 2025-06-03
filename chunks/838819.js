@@ -10,8 +10,8 @@ var r = n(255367),
     d = n(4738),
     p = n(481060),
     f = n(150063),
-    g = n(100527),
-    b = n(906732),
+    b = n(100527),
+    g = n(906732),
     h = n(702486),
     m = n(605236),
     _ = n(977395),
@@ -75,28 +75,28 @@ let Q = (e) => {
             et = l.useMemo(() => {
                 switch (a) {
                     case q.AW.ORBS:
-                        return g.Z.COLLECTIBLES_SHOP_ORBS_TAB;
+                        return b.Z.COLLECTIBLES_SHOP_ORBS_TAB;
                     case q.AW.HOME:
-                        return g.Z.COLLECTIBLES_SHOP_HOME_SCREEN;
+                        return b.Z.COLLECTIBLES_SHOP_HOME_SCREEN;
                     case q.AW.BUNDLES:
-                        return g.Z.COLLECTIBLES_SHOP_BUNDLES_TAB;
+                        return b.Z.COLLECTIBLES_SHOP_BUNDLES_TAB;
                     case q.AW.AVATAR_DECORATIONS:
-                        return g.Z.COLLECTIBLES_SHOP_AVATAR_DECORATIONS_TAB;
+                        return b.Z.COLLECTIBLES_SHOP_AVATAR_DECORATIONS_TAB;
                     case q.AW.PROFILE_EFFECTS:
-                        return g.Z.COLLECTIBLES_SHOP_PROFILE_EFFECTS_TAB;
+                        return b.Z.COLLECTIBLES_SHOP_PROFILE_EFFECTS_TAB;
                     case q.AW.NAMEPLATES:
-                        return g.Z.COLLECTIBLES_SHOP_NAMEPLATES_TAB;
+                        return b.Z.COLLECTIBLES_SHOP_NAMEPLATES_TAB;
                     case q.AW.CATALOG:
-                        return g.Z.COLLECTIBLES_SHOP_FULLSCREEN;
+                        return b.Z.COLLECTIBLES_SHOP_FULLSCREEN;
                 }
             }, [a]),
-            { analyticsLocations: en, newestAnalyticsLocation: er } = (0, b.ZP)([...$, g.Z.COLLECTIBLES_SHOP, et]),
+            { analyticsLocations: en, newestAnalyticsLocation: er } = (0, g.ZP)([...$, b.Z.COLLECTIBLES_SHOP, et]),
             { sessionId: el, scrollerRef: ea, scrollHandler: ei } = (0, h._)(K.rMx.COLLECTIBLES_SHOP_SCROLLED, u),
             { selectedTab: eo, transitionState: es, transitionToTab: ec } = (0, A.B)(ea, a, n),
             [eu, ed] = l.useState(!1),
             ep = (0, B.R)('CollectiblesShop'),
-            [ef, eg] = l.useState(q.IV),
-            [eb, eh] = l.useState(),
+            [ef, eb] = l.useState(q.IV),
+            [eg, eh] = l.useState(),
             [em, e_] = l.useState(),
             { noCache: eC, includeUnpublished: ev } = (0, V.Z)(),
             { closeIntroToOrbsClaimedCoachmark: eO } = (0, O.Z)({ location: 'CollectiblesShop' });
@@ -148,10 +148,10 @@ let Q = (e) => {
                             source: t,
                             page_session_id: el,
                             page_type: eo === q.AW.CATALOG ? 'full' : eo,
-                            category: eo === q.AW.HOME || null == (e = k.Z.getCategory(eb)) ? void 0 : e.name
+                            category: eo === q.AW.HOME || null == (e = k.Z.getCategory(eg)) ? void 0 : e.name
                         });
                 }
-            }, [en, u, el, eb, eh, em, es, eo, et, er]),
+            }, [en, u, el, eg, eh, em, es, eo, et, er]),
             l.useEffect(() => {
                 null == ex ||
                     ey ||
@@ -225,9 +225,9 @@ let Q = (e) => {
             ),
             e0 = (0, s.e7)([k.Z], () => {
                 var e;
-                return null == (e = k.Z.getCategory(eb)) ? void 0 : e.name;
+                return null == (e = k.Z.getCategory(eg)) ? void 0 : e.name;
             });
-        return (0, r.jsx)(b.Gt, {
+        return (0, r.jsx)(g.Gt, {
             value: en,
             children: (0, r.jsx)(P.k0, {
                 newValue: {
@@ -250,7 +250,7 @@ let Q = (e) => {
                                 onScroll: () => {
                                     if ((ei(), null != ea.current)) {
                                         let e = ea.current.getDistanceFromBottom();
-                                        ef >= ep ? ed(e < 20) : e <= 200 && eg(ef + q.IV);
+                                        ef >= ep ? ed(e < 20) : e <= 200 && eb(ef + q.IV);
                                     }
                                 },
                                 children: (0, r.jsxs)('div', {

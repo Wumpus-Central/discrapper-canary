@@ -1,92 +1,92 @@
-n.d(t, { Z: () => u }), n(415506);
-var a,
-    r = n(255367);
+n.d(t, { Z: () => d }), n(415506);
+var r,
+    i = n(255367);
 n(73800);
 var l = n(120356),
-    i = n.n(l),
-    s = n(325767),
-    o = n(789700),
-    c = (((a = {}).LEFT = 'LEFT'), (a.RIGHT = 'RIGHT'), (a.UP = 'UP'), (a.DOWN = 'DOWN'), (a.UP_LEFT = 'UP_LEFT'), (a.DOWN_RIGHT = 'DOWN_RIGHT'), a);
-let d = (e) => {
+    o = n.n(l),
+    a = n(325767),
+    s = n(789700),
+    c = (((r = {}).LEFT = 'LEFT'), (r.RIGHT = 'RIGHT'), (r.UP = 'UP'), (r.DOWN = 'DOWN'), (r.UP_LEFT = 'UP_LEFT'), (r.DOWN_RIGHT = 'DOWN_RIGHT'), r);
+let u = (e) => {
     var t,
         n,
-        { width: a = 24, height: l = 24, color: c = 'currentColor', direction: d, foreground: u, className: m, title: x } = e,
+        { width: r = 24, height: l = 24, color: c = 'currentColor', direction: u, foreground: d, className: h, title: g } = e,
         p = (function (e, t) {
             if (null == e) return {};
             var n,
-                a,
-                r = (function (e, t) {
+                r,
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        a,
-                        r = {},
+                        r,
+                        i = {},
                         l = Object.keys(e);
-                    for (a = 0; a < l.length; a++) (n = l[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-                    return r;
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (a = 0; a < l.length; a++) (n = l[a]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return r;
+            return i;
         })(e, ['width', 'height', 'color', 'direction', 'foreground', 'className', 'title']);
-    return (0, r.jsxs)(
+    return (0, i.jsxs)(
         'svg',
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
-                    a = Object.keys(n);
+                    r = Object.keys(n);
                 'function' == typeof Object.getOwnPropertySymbols &&
-                    (a = a.concat(
+                    (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         })
                     )),
-                    a.forEach(function (t) {
-                        var a;
-                        (a = n[t]),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: a,
+                                      value: r,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = a);
+                                : (e[t] = r);
                     });
             }
             return e;
-        })({}, (0, s.Z)(p))),
+        })({}, (0, a.Z)(p))),
         (n = n =
             {
-                width: a,
+                width: r,
                 height: l,
-                className: i()(
-                    m,
+                className: o()(
+                    h,
                     (function (e) {
                         switch (e) {
                             case 'LEFT':
-                                return o.left;
+                                return s.left;
                             case 'RIGHT':
-                                return o.right;
+                                return s.right;
                             case 'UP':
                                 return null;
                             case 'DOWN':
-                                return o.down;
+                                return s.down;
                             case 'UP_LEFT':
-                                return o.upLeft;
+                                return s.upLeft;
                             case 'DOWN_RIGHT':
-                                return o.downRight;
+                                return s.downRight;
                             default:
                                 throw Error('Invalid Direction '.concat(e));
                         }
-                    })(d)
+                    })(u)
                 ),
                 viewBox: '0 0 24 24',
                 children: [
-                    null != x ? (0, r.jsx)('title', { children: x }) : null,
-                    (0, r.jsx)('polygon', {
-                        className: u,
+                    null != g ? (0, i.jsx)('title', { children: g }) : null,
+                    (0, i.jsx)('polygon', {
+                        className: d,
                         fill: c,
                         fillRule: 'nonzero',
                         points: '13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8'
@@ -98,8 +98,8 @@ let d = (e) => {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var a = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, a);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
                   return n;
               })(Object(n)).forEach(function (e) {
@@ -108,5 +108,5 @@ let d = (e) => {
         t)
     );
 };
-d.Directions = c;
-let u = d;
+u.Directions = c;
+let d = u;

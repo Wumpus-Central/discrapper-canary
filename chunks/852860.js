@@ -1,18 +1,18 @@
 r.d(t, { Z: () => c }), r(388685);
 var n = r(255367),
-    A = r(73800),
+    i = r(73800),
     a = r(481060),
     l = r(585483),
     o = r(981631),
-    i = r(388032),
+    A = r(388032),
     s = r(744053);
 let c = function (e) {
     var t;
-    let { message: r, errorMessage: c, submitting: d, onReset: u, onSave: g, onSaveText: f, onResetText: p, onSaveButtonColor: h, disabled: m, saveButtonTooltip: b } = e,
-        v = A.useRef(null),
-        [C, x] = A.useState(!1);
+    let { message: r, errorMessage: c, submitting: d, onReset: u, onSave: f, onSaveText: g, onResetText: h, onSaveButtonColor: p, disabled: m, saveButtonTooltip: b } = e,
+        v = i.useRef(null),
+        [C, x] = i.useState(!1);
     return (
-        A.useEffect(() => {
+        i.useEffect(() => {
             function e() {
                 x(!0), setTimeout(() => x(!1), 1000);
             }
@@ -36,7 +36,7 @@ let c = function (e) {
                             className: s.shrinkingContainer,
                             children: (0, n.jsx)('div', {
                                 className: s.message,
-                                children: null != (t = null != c ? c : r) ? t : i.intl.string(i.t.GP7JLC)
+                                children: null != (t = null != c ? c : r) ? t : A.intl.string(A.t.GP7JLC)
                             })
                         }),
                         (0, n.jsxs)('div', {
@@ -49,9 +49,9 @@ let c = function (e) {
                                         color: a.zxk.Colors.PRIMARY,
                                         look: a.zxk.Looks.LINK,
                                         onClick: u,
-                                        children: (0, n.jsx)('span', { children: null != p ? p : i.intl.string(i.t.yBZMsb) })
+                                        children: (0, n.jsx)('span', { children: null != h ? h : A.intl.string(A.t.yBZMsb) })
                                     }),
-                                null != g
+                                null != f
                                     ? (0, n.jsx)(a.ua7, {
                                           text: b,
                                           children: (e) => {
@@ -85,14 +85,14 @@ let c = function (e) {
                                                   })(
                                                       {
                                                           size: a.zxk.Sizes.SMALL,
-                                                          color: null != h ? h : a.zxk.Colors.GREEN,
+                                                          color: null != p ? p : a.zxk.Colors.GREEN,
                                                           submitting: d,
                                                           disabled: m,
-                                                          onClick: g
+                                                          onClick: f
                                                       },
                                                       e
                                                   )),
-                                                  (r = r = { children: null != f ? f : i.intl.string(i.t.K344S0) }),
+                                                  (r = r = { children: null != g ? g : A.intl.string(A.t.K344S0) }),
                                                   Object.getOwnPropertyDescriptors
                                                       ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                                                       : (function (e, t) {

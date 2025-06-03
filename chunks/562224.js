@@ -1,71 +1,71 @@
-r.d(t, { Z: () => y }), r(388685);
-var n = r(268146),
-    l = r(872810),
-    o = r(594190),
-    i = r(751571),
-    u = r(695346),
-    a = r(361291),
-    s = r(592125),
-    c = r(430824),
-    d = r(131951),
-    f = r(944486),
-    p = r(594174),
-    b = r(358085),
-    v = r(451467),
-    g = r(537413),
-    O = r(143135),
-    h = r(37113),
-    m = r(761274);
-async function y(e, t) {
-    var r, y, w, j, P, S, D, I, E, k;
-    let x = p.default.getCurrentUser(),
-        C = f.Z.getVoiceChannelId(),
-        Z = s.Z.getChannel(C),
-        M = null == Z ? void 0 : Z.getGuildId(),
-        R = null == (r = c.Z.getGuild(M)) ? void 0 : r.premiumTier;
-    if (null == x || null == Z || null == C) return [!1, 'no user or channel'];
-    let _ = null;
-    if (null == (_ = 'number' == typeof e ? o.ZP.getGameForPID(e) : e)) return [!1, 'no source'];
-    if (!d.Z.getUseSystemScreensharePicker() && !(await i.Z.hasPermission(m.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))) return [!1, 'no permission'];
-    let { preset: A, resolution: G, fps: W, soundshareEnabled: N } = a.Z.getState(),
-        U = null != (w = null == t ? void 0 : t.preset) ? w : A,
-        [L, V] = null != (j = (0, g.Z)(U, x, R)) ? j : [],
-        H = null != (P = null != L ? L : null == t ? void 0 : t.resolution) ? P : G,
-        T = null != (S = null != V ? V : null == t ? void 0 : t.fps) ? S : W,
-        F = null != (D = null == t ? void 0 : t.previewDisabled) ? D : u.I0.getSetting(),
-        Y = null != (I = null == t ? void 0 : t.soundshareEnabled) ? I : N;
+n.d(t, { Z: () => v }), n(388685);
+var r = n(268146),
+    l = n(872810),
+    i = n(594190),
+    o = n(751571),
+    a = n(695346),
+    s = n(361291),
+    c = n(592125),
+    u = n(430824),
+    d = n(131951),
+    f = n(944486),
+    h = n(594174),
+    p = n(358085),
+    g = n(451467),
+    y = n(537413),
+    O = n(143135),
+    b = n(37113),
+    N = n(761274);
+async function v(e, t) {
+    var n, v, m, x, E, C, I, T, j, S;
+    let P = h.default.getCurrentUser(),
+        _ = f.Z.getVoiceChannelId(),
+        Z = c.Z.getChannel(_),
+        A = null == Z ? void 0 : Z.getGuildId(),
+        w = null == (n = u.Z.getGuild(A)) ? void 0 : n.premiumTier;
+    if (null == P || null == Z || null == _) return [!1, 'no user or channel'];
+    let R = null;
+    if (null == (R = 'number' == typeof e ? i.ZP.getGameForPID(e) : e)) return [!1, 'no source'];
+    if (!d.Z.getUseSystemScreensharePicker() && !(await o.Z.hasPermission(N.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))) return [!1, 'no permission'];
+    let { preset: D, resolution: U, fps: k, soundshareEnabled: M } = s.Z.getState(),
+        L = null != (m = null == t ? void 0 : t.preset) ? m : D,
+        [B, G] = null != (x = (0, y.Z)(L, P, w)) ? x : [],
+        V = null != (E = null != B ? B : null == t ? void 0 : t.resolution) ? E : U,
+        F = null != (C = null != G ? G : null == t ? void 0 : t.fps) ? C : k,
+        W = null != (I = null == t ? void 0 : t.previewDisabled) ? I : a.I0.getSetting(),
+        Y = null != (T = null == t ? void 0 : t.soundshareEnabled) ? T : M;
     return (
-        (0, v.Z)(U, H, T, x, R, Z) || ((U = h.tI.PRESET_VIDEO), (H = h.LY.RESOLUTION_720), (T = h.ws.FPS_30)),
+        (0, g.Z)(L, V, F, P, w, Z) || ((L = b.tI.PRESET_VIDEO), (V = b.LY.RESOLUTION_720), (F = b.ws.FPS_30)),
         (0, l.Rc)({
-            preset: U,
-            resolution: H,
-            frameRate: T,
+            preset: L,
+            resolution: V,
+            frameRate: F,
             soundshareEnabled: Y
         }),
         (0, l.WH)(
-            M,
-            C,
-            ((E = (function (e) {
+            A,
+            _,
+            ((j = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
-                    var r = null != arguments[t] ? arguments[t] : {},
-                        n = Object.keys(r);
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
                     'function' == typeof Object.getOwnPropertySymbols &&
-                        (n = n.concat(
-                            Object.getOwnPropertySymbols(r).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             })
                         )),
-                        n.forEach(function (t) {
-                            var n;
-                            (n = r[t]),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: n,
+                                          value: r,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = n);
+                                    : (e[t] = r);
                         });
                 }
                 return e;
@@ -73,37 +73,37 @@ async function y(e, t) {
                 {},
                 (function (e) {
                     if (e.hasOwnProperty('pid')) return { pid: e.pid };
-                    let t = (0, O.Z)(void 0, e, o.ZP.getRunningGames()),
-                        r = !(0, b.isWindows)() || null == t || (null == e ? void 0 : e.id.startsWith(n.vA.CAMERA)) || null == t ? null : t.pid;
-                    return null != r
-                        ? { pid: r }
+                    let t = (0, O.Z)(void 0, e, i.ZP.getRunningGames()),
+                        n = !(0, p.isWindows)() || null == t || (null == e ? void 0 : e.id.startsWith(r.vA.CAMERA)) || null == t ? null : t.pid;
+                    return null != n
+                        ? { pid: n }
                         : {
                               sourceId: e.id,
                               sourceName: e.name,
                               sourceIcon: e.icon
                           };
-                })(_)
+                })(R)
             )),
-            (k = k =
+            (S = S =
                 {
-                    audioSourceId: (null == (y = _.id) ? void 0 : y.startsWith(n.vA.CAMERA)) ? (null == t ? void 0 : t.audioSourceId) : void 0,
+                    audioSourceId: (null == (v = R.id) ? void 0 : v.startsWith(r.vA.CAMERA)) ? (null == t ? void 0 : t.audioSourceId) : void 0,
                     sound: Y,
-                    previewDisabled: F,
+                    previewDisabled: W,
                     goLiveModalDurationMs: null == t ? void 0 : t.goLiveModalDurationMs
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(E, Object.getOwnPropertyDescriptors(k))
+                ? Object.defineProperties(j, Object.getOwnPropertyDescriptors(S))
                 : (function (e, t) {
-                      var r = Object.keys(e);
+                      var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var n = Object.getOwnPropertySymbols(e);
-                          r.push.apply(r, n);
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
                       }
-                      return r;
-                  })(Object(k)).forEach(function (e) {
-                      Object.defineProperty(E, e, Object.getOwnPropertyDescriptor(k, e));
+                      return n;
+                  })(Object(S)).forEach(function (e) {
+                      Object.defineProperty(j, e, Object.getOwnPropertyDescriptor(S, e));
                   }),
-            E)
+            j)
         ),
         [!0, void 0]
     );

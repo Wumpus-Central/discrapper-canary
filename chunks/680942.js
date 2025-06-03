@@ -10,8 +10,8 @@ var r = n(255367),
     d = n(626135),
     p = n(381585),
     f = n(884697),
-    g = n(228624),
-    b = n(67409),
+    b = n(228624),
+    g = n(67409),
     h = n(981631),
     m = n(474936),
     _ = n(231338),
@@ -84,7 +84,7 @@ let O = {
             { analyticsLocations: P } = (0, s.ZP)(),
             k = l.useRef(null),
             T = (0, o.Z)(k),
-            I = (0, g.hv)('CollectiblesShopGiftButton'),
+            I = (0, b.hv)('CollectiblesShopGiftButton'),
             L = (0, p.sp)();
         return (0, f.x6)(t)
             ? null
@@ -141,7 +141,7 @@ let O = {
                                               cta_name: 'gift button'
                                           }),
                                           (0, c.Z)({
-                                              skuId: (0, b.S)({
+                                              skuId: (0, g.S)({
                                                   product: t,
                                                   selectedVariantIndex: n
                                               }),

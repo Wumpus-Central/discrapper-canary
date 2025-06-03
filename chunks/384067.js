@@ -10,8 +10,8 @@ var r = n(255367),
     d = n(297651),
     p = n(215023),
     f = n(981631),
-    g = n(388032),
-    b = n(806734);
+    b = n(388032),
+    g = n(806734);
 let h = (e) => {
     var t, n, a;
     let { wideBannerBlock: h, handleTransition: m, tab: _ } = e,
@@ -43,27 +43,27 @@ let h = (e) => {
         threshold: 0,
         children: (0, r.jsxs)('div', {
             ref: v,
-            className: i()(b.row, b.between, b.bannerBlockContainer, b.centeredSection, { [b.extraRounded]: P }),
+            className: i()(g.row, g.between, g.bannerBlockContainer, g.centeredSection, { [g.extraRounded]: P }),
             children: [
                 (0, r.jsx)('div', {
-                    className: i()(b.wideBannerBackgroundImg, { [b.extraRounded]: P }),
+                    className: i()(g.wideBannerBackgroundImg, { [g.extraRounded]: P }),
                     children: (0, r.jsx)('img', {
                         ref: O,
                         src: j,
                         alt: h.title,
-                        className: i()(b.wideBannerArt, { [b.wideBannerArtOrbs]: P }),
+                        className: i()(g.wideBannerArt, { [g.wideBannerArtOrbs]: P }),
                         style: { height: null != S ? ''.concat(S, 'px') : 'auto' }
                     })
                 }),
                 (0, r.jsx)('div', {
-                    className: b.wideBannerContentContainer,
+                    className: g.wideBannerContentContainer,
                     style: { maxHeight: null != S ? ''.concat(S, 'px') : 'auto' },
                     children: (0, r.jsxs)('div', {
-                        className: b.wideBannerTextContainer,
+                        className: g.wideBannerTextContainer,
                         children: [
                             (0, r.jsx)(s.X6q, {
                                 style: { color: null != (n = h.bannerTextColor) ? n : 'var(--header-primary)' },
-                                className: P ? b.wideBannerOrbsHeading : void 0,
+                                className: P ? g.wideBannerOrbsHeading : void 0,
                                 variant: P ? 'heading-xl/bold' : 'heading-lg/semibold',
                                 children: h.title
                             }),
@@ -71,17 +71,17 @@ let h = (e) => {
                                 style: { color: null != (a = h.bannerTextColor) ? a : 'var(--text-muted)' },
                                 lineClamp: 2,
                                 variant: P ? 'text-md/medium' : 'text-sm/medium',
-                                children: P ? g.intl.format(g.t.SFFP7O, { helpdeskArticle: c.Z.getArticleURL(f.BhN.VIRTUAL_CURRENCY_LEARN_MORE) }) : h.body
+                                children: P ? b.intl.format(b.t.SFFP7O, { helpdeskArticle: c.Z.getArticleURL(f.BhN.VIRTUAL_CURRENCY_LEARN_MORE) }) : h.body
                             })
                         ]
                     })
                 }),
                 !0 !== h.disableCta &&
                     (0, r.jsx)(s.zxk, {
-                        className: b.wideBannerBlockButton,
+                        className: g.wideBannerBlockButton,
                         color: s.Ttl.PRIMARY,
                         onClick: () => m('shop wide banner', x),
-                        children: g.intl.string(g.t.jVcuVV)
+                        children: b.intl.string(b.t.jVcuVV)
                     })
             ]
         })

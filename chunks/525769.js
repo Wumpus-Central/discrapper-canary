@@ -153,6 +153,7 @@ var r = (function (e) {
             (e.IGNORE_USER_CONFIRMATION = 'impression_ignore_user_confirmation'),
             (e.INVITE_ACCEPT = 'impression_invite_accept'),
             (e.LOCALIZED_PRICING_UPSELL_VIEWED = 'impression_localized_pricing_upsell_viewed'),
+            (e.MASKED_LINK_MODAL = 'impression_masked_link_modal'),
             (e.MESSAGES_EMPTY_NUX = 'impression_messages_empty_nux'),
             (e.MULTI_ACCOUNT_SWITCH_LANDING = 'impression_multi_account_switch_landing'),
             (e.NEW_USER_INTENT_START = 'impression_new_user_intent_start'),

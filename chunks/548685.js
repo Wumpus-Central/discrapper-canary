@@ -10,8 +10,8 @@ var r = n(255367),
     d = n(594174),
     p = n(451478),
     f = n(626135),
-    g = n(63063),
-    b = n(74538),
+    b = n(63063),
+    g = n(74538),
     h = n(381585),
     m = n(597688),
     _ = n(315066),
@@ -28,7 +28,7 @@ let k = (e) => {
     var t;
     let { isLoading: n, sortedSkuIds: a, handleTransition: k, numVisibleItems: T, tab: I } = e,
         L = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
-        B = b.ZP.canUseCollectibles(L),
+        B = g.ZP.canUseCollectibles(L),
         w = (0, _.s)('useShopHomeSorting') && I === x.AW.HOME,
         { sortType: N, setSortType: A, sortedItems: R, sortOptions: Z, shuffleProducts: F, showRecommendationOption: D } = (0, C.N)(a, B),
         H = (0, E.St)(R),
@@ -103,7 +103,7 @@ let k = (e) => {
                                                   })({}, e)),
                                                   (n = n =
                                                       {
-                                                          onClick: () => (0, c.Z)(g.Z.getArticleURL(y.BhN.DATA_USED_FOR_RECOMMENDED)),
+                                                          onClick: () => (0, c.Z)(b.Z.getArticleURL(y.BhN.DATA_USED_FOR_RECOMMENDED)),
                                                           className: P.informationIcon,
                                                           children: (0, r.jsx)(s.d3s, { size: 'sm' })
                                                       }),

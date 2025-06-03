@@ -10,10 +10,10 @@ var r = n(73800),
     d = n(26931),
     p = n(370039),
     f = n(937510),
-    g = n(981631),
-    b = n(388032);
+    b = n(981631),
+    g = n(388032);
 let h = (e, t) => {
-    let n = (0, o.e7)([s.Z], () => s.Z.hasConsented(g.pjP.PERSONALIZATION)),
+    let n = (0, o.e7)([s.Z], () => s.Z.hasConsented(b.pjP.PERSONALIZATION)),
         l = r.useMemo(() => {
             var t;
             return null != (t = null == e ? void 0 : e[i.m.RECOMMENDED]) ? t : [];
@@ -57,22 +57,22 @@ let h = (e, t) => {
             let e = [
                 {
                     value: i.m.POPULAR,
-                    label: b.intl.string(b.t['1wQj4O'])
+                    label: g.intl.string(g.t['1wQj4O'])
                 },
                 {
                     value: i.m.RECENT,
-                    label: b.intl.string(b.t['6NZpt7'])
+                    label: g.intl.string(g.t['6NZpt7'])
                 },
                 {
                     value: i.m.PRICE_LOW_TO_HIGH,
-                    label: b.intl.string(b.t.RTG4yM)
+                    label: g.intl.string(g.t.RTG4yM)
                 }
             ];
             return (
                 m &&
                     e.unshift({
                         value: i.m.RECOMMENDED,
-                        label: b.intl.string(b.t.JrlKlp)
+                        label: g.intl.string(g.t.JrlKlp)
                     }),
                 e
             );

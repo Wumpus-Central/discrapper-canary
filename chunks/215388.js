@@ -1,22 +1,22 @@
 r.d(t, { Z: () => x }), r(388685);
 var n = r(255367),
-    A = r(73800),
+    i = r(73800),
     a = r(120356),
     l = r.n(a),
     o = r(772848),
-    i = r(481060),
+    A = r(481060),
     s = r(752305),
     c = r(893718),
     d = r(131704),
     u = r(703558),
-    g = r(981631),
-    f = r(388032),
-    p = r(3840),
-    h = r(999249);
+    f = r(981631),
+    g = r(388032),
+    h = r(3840),
+    p = r(999249);
 let m = (0, o.Z)(),
     b = (0, d.kt)({
         id: '1',
-        type: g.d4z.DM
+        type: f.d4z.DM
     });
 function v() {
     return new Promise((e) => {
@@ -28,22 +28,22 @@ function v() {
 }
 function C(e) {
     var t;
-    let { hasError: r, maxLength: A, text: a } = e;
+    let { hasError: r, maxLength: i, text: a } = e;
     return (0, n.jsxs)('div', {
-        className: l()(h.maxLength, { [h.errorOverflow]: r }),
+        className: l()(p.maxLength, { [p.errorOverflow]: r }),
         'aria-hidden': 'true',
-        children: [null != (t = null == a ? void 0 : a.length) ? t : 0, ' ', null != A && '/ '.concat(A)]
+        children: [null != (t = null == a ? void 0 : a.length) ? t : 0, ' ', null != i && '/ '.concat(i)]
     });
 }
 function x(e) {
     var t;
-    let { 'aria-labelledby': r, className: a, id: o, autoFocus: d, maxLength: g, onChange: h, onSubmit: x, showCharacterCount: q = !1, placeholder: j, required: O, value: U, enableThemedBackground: P = !1, parentModalKey: y } = e,
-        V = (0, i.Gc0)(),
-        [N, I] = A.useState(() => (0, s.JM)(U)),
-        T = A.useRef(!0 === d),
+    let { 'aria-labelledby': r, className: a, id: o, autoFocus: d, maxLength: f, onChange: p, onSubmit: x, showCharacterCount: q = !1, placeholder: j, required: O, value: P, enableThemedBackground: y = !1, parentModalKey: U } = e,
+        V = (0, A.Gc0)(),
+        [N, I] = i.useState(() => (0, s.JM)(P)),
+        T = i.useRef(!0 === d),
         F = null != r ? r : null == V ? void 0 : V.titleId,
         Z = null != (t = null == V ? void 0 : V.errorId) ? t : m,
-        K = A.useMemo(
+        S = i.useMemo(
             () => ({
                 analyticsName: 'simple',
                 autocomplete: {
@@ -64,18 +64,18 @@ function x(e) {
     return (0, n.jsxs)(c.Z, {
         'aria-describedby': Z,
         'aria-labelledby': F,
-        innerClassName: l()(a, p.textArea),
+        innerClassName: l()(a, h.textArea),
         id: o,
-        maxCharacterCount: g,
+        maxCharacterCount: f,
         onChange: function (e, t, r) {
-            h(t), I(r);
+            p(t), I(r);
         },
         placeholder: j,
         required: O,
         channel: b,
-        textValue: U,
+        textValue: P,
         richValue: N,
-        type: K,
+        type: S,
         onBlur: () => {
             T.current = !1;
         },
@@ -84,20 +84,20 @@ function x(e) {
         },
         focused: T.current,
         onSubmit: null != x ? x : v,
-        disableThemedBackground: !P,
-        parentModalKey: y,
+        disableThemedBackground: !y,
+        parentModalKey: U,
         emojiPickerCloseOnModalOuterClick: !0,
         children: [
             !0 === q &&
                 (0, n.jsx)(C, {
-                    hasError: null != V.error || (null != g && U.length > g),
-                    text: U,
-                    maxLength: g
+                    hasError: null != V.error || (null != f && P.length > f),
+                    text: P,
+                    maxLength: f
                 }),
-            null != g &&
-                (0, n.jsx)(i.nn4, {
+            null != f &&
+                (0, n.jsx)(A.nn4, {
                     id: m,
-                    children: f.intl.format(f.t['+DFxLS'], { maxLength: g })
+                    children: g.intl.format(g.t['+DFxLS'], { maxLength: f })
                 })
         ]
     });

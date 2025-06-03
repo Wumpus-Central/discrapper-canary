@@ -1,5 +1,5 @@
-r.d(t, { F: () => A });
+r.d(t, { F: () => i });
 var n = r(680287);
-function A() {
+function i() {
     return new n.Z('unused');
 }

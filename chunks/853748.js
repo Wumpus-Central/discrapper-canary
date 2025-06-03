@@ -10,8 +10,8 @@ var r = n(255367),
     d = n(388032),
     p = n(894948),
     f = n(781385),
-    g = n(585616);
-function b(e) {
+    b = n(585616);
+function g(e) {
     let { endDate: t } = e,
         { days: n, hours: l, minutes: a, seconds: i } = (0, u.Z)(t),
         o = (function (e, t, n, r) {
@@ -81,7 +81,7 @@ let h = l.memo(function (e) {
                     alt: '',
                     'aria-hidden': !0
                 }),
-            (0, r.jsx)(b, { endDate: t }),
+            (0, r.jsx)(g, { endDate: t }),
             (0, r.jsx)('img', {
                 src: f.Z,
                 className: i()(p.sparkles, p.left),
@@ -89,7 +89,7 @@ let h = l.memo(function (e) {
                 'aria-hidden': !0
             }),
             (0, r.jsx)('img', {
-                src: g.Z,
+                src: b.Z,
                 className: i()(p.sparkles, p.right),
                 alt: '',
                 'aria-hidden': !0

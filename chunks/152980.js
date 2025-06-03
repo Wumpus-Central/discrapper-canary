@@ -1,38 +1,38 @@
 r.d(t, { s: () => x }), r(388685);
 var n = r(255367),
-    A = r(73800),
+    i = r(73800),
     a = r(120356),
     l = r.n(a),
     o = r(481060),
-    i = r(205822),
+    A = r(205822),
     s = r(476326),
     c = r(377171),
     d = r(313201),
     u = r(374794),
-    g = r(587123),
-    f = r(863663),
-    p = r(731994),
-    h = r(629481),
+    f = r(587123),
+    g = r(863663),
+    h = r(731994),
+    p = r(629481),
     m = r(388032),
     b = r(48635);
 let v = (0, d.hQ)();
 function C(e) {
     var t;
-    let { upload: r, progress: a = 0, onDeleteAttachment: i } = e,
-        s = A.useCallback(() => {
-            null == i || i(r.id);
-        }, [i, r.id]),
+    let { upload: r, progress: a = 0, onDeleteAttachment: A } = e,
+        s = i.useCallback(() => {
+            null == A || A(r.id);
+        }, [A, r.id]),
         d = a >= 1,
         u = a < 0,
-        g = d || u,
-        p = null != (t = r.filename) ? t : r.id,
-        h = (0, f.kg)(a);
+        f = d || u,
+        h = null != (t = r.filename) ? t : r.id,
+        p = (0, g.kg)(a);
     return (0, n.jsx)(o.DY3, {
-        text: h,
+        text: p,
         children: (0, n.jsxs)('div', {
             className: l()(b.attachedFileCard, {
                 [b.attachedFileCardError]: u,
-                [b.attachedFileCardUploading]: !g
+                [b.attachedFileCardUploading]: !f
             }),
             children: [
                 (0, n.jsx)(o.ZKT, {
@@ -45,17 +45,17 @@ function C(e) {
                 }),
                 (0, n.jsx)(o.Text, {
                     variant: 'text-sm/normal',
-                    children: p
+                    children: h
                 }),
-                !g &&
+                !f &&
                     (0, n.jsx)(o.$jN, {
                         className: b.attachedFileCardSpinner,
                         type: o.$jN.Type.SPINNING_CIRCLE
                     }),
-                g &&
-                    null != i &&
+                f &&
+                    null != A &&
                     (0, n.jsx)(o.zxk, {
-                        'aria-label': m.intl.formatToPlainString(m.t['1o5hyc'], { attachment: p }),
+                        'aria-label': m.intl.formatToPlainString(m.t['1o5hyc'], { attachment: h }),
                         className: b.deleteButton,
                         innerClassName: b.deleteButtonInner,
                         look: o.zxk.Looks.BLANK,
@@ -73,8 +73,8 @@ function C(e) {
 }
 function x(e) {
     let { onFileAdded: t } = e,
-        { uploads: r, canAttachFiles: a, canAttachArchives: l, addAttachment: c, deleteAttachment: d, fileUploadProgresses: f } = (0, g.P)(),
-        x = A.useRef(!1);
+        { uploads: r, canAttachFiles: a, canAttachArchives: l, addAttachment: c, deleteAttachment: d, fileUploadProgresses: g } = (0, f.P)(),
+        x = i.useRef(!1);
     function q(e) {
         try {
             for (let t of e)
@@ -86,17 +86,17 @@ function x(e) {
         } catch (e) {}
     }
     return (
-        A.useEffect(() => {
+        i.useEffect(() => {
             x.current && (t(), (x.current = !1));
         }, [t]),
         (0, n.jsxs)('div', {
             className: b.container,
             children: [
-                (0, n.jsx)(i.Z, {
+                (0, n.jsx)(A.Z, {
                     className: b.uploadArea,
                     title: m.intl.string(m.t['5eTk2t']),
                     description: m.intl.string(m.t.Ecxoxs),
-                    icons: p.J6,
+                    icons: h.J6,
                     onDrop: q
                 }),
                 (0, n.jsxs)(u.Z, {
@@ -129,7 +129,7 @@ function x(e) {
                     id: v,
                     color: 'text-muted',
                     variant: 'text-xs/normal',
-                    children: l ? m.intl.formatToPlainString(m.t.lvU6sr, { fileUploadLimit: h.TR }) : m.intl.formatToPlainString(m.t.DOXzIS, { fileUploadLimit: h.TR })
+                    children: l ? m.intl.formatToPlainString(m.t.lvU6sr, { fileUploadLimit: p.TR }) : m.intl.formatToPlainString(m.t.DOXzIS, { fileUploadLimit: p.TR })
                 }),
                 r.length > 0 &&
                     (0, n.jsxs)(n.Fragment, {
@@ -145,7 +145,7 @@ function x(e) {
                                             children: (0, n.jsx)(C, {
                                                 upload: e,
                                                 onDeleteAttachment: d,
-                                                progress: f[e.id]
+                                                progress: g[e.id]
                                             })
                                         },
                                         e.id

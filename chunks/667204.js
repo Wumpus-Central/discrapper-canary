@@ -19,7 +19,7 @@ var r = n(512722),
     l = n(232567),
     c = n(911969),
     u = n(673750),
-    d = n(687294),
+    d = n(237992),
     f = n(367907),
     _ = n(465343),
     p = n(339085),
@@ -484,7 +484,7 @@ async function Q(e, t, n, r) {
         { totalSize: o, largestUploadedFileSize: s } = await q(e, !1);
     if (s > Math.max(i, M.Y1) || o > N.zz) return a(s), !1;
     try {
-        await (0, d.$)(e);
+        await (0, d.Z)(e);
     } catch (n) {
         m.yr(t, void 0, j.intl.formatToPlainString(j.t['9h1/1t'], { count: e.length }));
     }

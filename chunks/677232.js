@@ -68,8 +68,8 @@ let d = [
         }
     ],
     f = 1 / 300,
-    g = (0, a.animated)(c.Z),
-    b = (0, a.animated)(u.Z),
+    b = (0, a.animated)(c.Z),
+    g = (0, a.animated)(u.Z),
     h = (0, a.animated)(o.OgN),
     m = l.memo(function (e) {
         let {
@@ -118,11 +118,11 @@ let d = [
         return !n && a
             ? (0, r.jsx)(h, {})
             : a && m
-              ? (0, r.jsx)(b, {
+              ? (0, r.jsx)(g, {
                     isDark: (0, i.wj)(u),
                     style: C
                 })
-              : (0, r.jsx)(g, {
+              : (0, r.jsx)(b, {
                     boxColor: O.box,
                     ribbonColor: O.ribbon,
                     style: C

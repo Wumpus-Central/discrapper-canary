@@ -10,8 +10,8 @@ var r = n(255367),
     d = n(866442),
     p = n(481060),
     f = n(209613),
-    g = n(429368),
-    b = n(724994),
+    b = n(429368),
+    g = n(724994),
     h = n(388032),
     m = n(820612);
 function _(e) {
@@ -86,13 +86,13 @@ let O = s()((e) => {
     }),
     S = (e) => {
         let { variantGroupProduct: t, variant: n, variantIndex: a, totalVariants: o, selectedVariantIndex: s, onEnter: d, onLeave: f, minimal: S } = e,
-            { isPurchased: E } = (0, b.L)(n),
+            { isPurchased: E } = (0, g.L)(n),
             x = (0, c.JA)('shop-variants-group-'.concat(t.storeListingId, '-').concat(a)),
             { onFocus: y } = x,
             j = v(x, ['onFocus']),
             P = l.useCallback(
                 (e) => {
-                    e.preventDefault(), e.stopPropagation(), (0, g.$)(t, a), y();
+                    e.preventDefault(), e.stopPropagation(), (0, b.$)(t, a), y();
                 },
                 [y, t, a]
             );
@@ -148,9 +148,9 @@ let O = s()((e) => {
     },
     E = (e) => {
         var t, n;
-        let { variantGroupProduct: l, className: a, previewingVariantIndexProps: o, setIsHoveringOnSwitch: s, minimal: d, selectedVariantIndex: g, alternativeBackgroundColor: b } = e,
+        let { variantGroupProduct: l, className: a, previewingVariantIndexProps: o, setIsHoveringOnSwitch: s, minimal: d, selectedVariantIndex: b, alternativeBackgroundColor: g } = e,
             O = o.previewingVariantIndex,
-            E = null == (t = l.variants) ? void 0 : t[g],
+            E = null == (t = l.variants) ? void 0 : t[b],
             x = null !== O ? (null == (n = l.variants) ? void 0 : n[O]) : void 0,
             y = (0, f.Z)('shop-variants-group-'.concat(l.storeListingId), u.hy.HORIZONTAL);
         if (null == E) return null;
@@ -167,7 +167,7 @@ let O = s()((e) => {
                         C(_({ ref: n }, c), {
                             className: i()(m.variantsPanel, a, {
                                 [m.minimalState]: d,
-                                [m.alternativeColor]: b
+                                [m.alternativeColor]: g
                             }),
                             onMouseEnter: () => (null == s ? void 0 : s(!0)),
                             onMouseLeave: () => (null == s ? void 0 : s(!1)),
@@ -185,7 +185,7 @@ let O = s()((e) => {
                                                           variantGroupProduct: l,
                                                           variant: e,
                                                           variantIndex: t,
-                                                          selectedVariantIndex: g,
+                                                          selectedVariantIndex: b,
                                                           totalVariants: null != (a = null == (n = l.variants) ? void 0 : n.length) ? a : 0,
                                                           onEnter: () => o.handleEntering(t),
                                                           onLeave: o.handleLeaving,
