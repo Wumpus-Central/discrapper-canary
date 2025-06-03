@@ -67,7 +67,7 @@ function y(e) {
             (0, r.jsx)(o.iRW, {
                 className: g.slider,
                 initialValue: t,
-                defaultValue: 80,
+                defaultValue: d.B,
                 minValue: 0,
                 maxValue: 100,
                 onValueChange: n,

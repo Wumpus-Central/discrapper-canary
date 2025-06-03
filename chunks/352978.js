@@ -16,25 +16,25 @@ var r,
     p = (((r = {}).CONTAIN = 'contain'), (r.COVER = 'cover'), r);
 let m = i.memo(function (e) {
     let { streamId: t, onResize: n, wrapperClassName: r, videoComponent: a, className: p, fit: m = 'contain', mirror: g = !1, paused: E = !1, streamPreviewURL: h, videoSpinnerContext: v, userId: S, streamKey: b } = e,
-        [O, y] = i.useState(!0);
+        [y, O] = i.useState(!0);
     (0, c.Z)({
         location: 'VideoStream',
         videoSpinnerContext: v,
         userId: S,
         streamId: t,
-        loading: O,
+        loading: y,
         paused: E
     });
     let { onReady: Z } = (0, s.Z)({
             streamId: t,
             userId: S,
-            loading: O,
+            loading: y,
             videoSpinnerContext: v,
             streamKey: b,
             paused: E
         }),
         j = i.useCallback(() => {
-            y(!1), Z();
+            O(!1), Z();
         }, [Z]);
     return (0, l.jsxs)('div', {
         className: o()(f.wrapper, r),
@@ -50,9 +50,9 @@ let m = i.memo(function (e) {
             E
                 ? null
                 : (0, l.jsx)('div', {
-                      className: o()(f.previewWrapper, { [f.loading]: O }),
+                      className: o()(f.previewWrapper, { [f.loading]: y }),
                       children:
-                          O &&
+                          y &&
                           (0, l.jsxs)(i.Fragment, {
                               children: [
                                   null != h

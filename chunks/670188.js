@@ -114,7 +114,7 @@ function O(e) {
         ),
         D = i.useCallback(
             (e) =>
-                (null == R.current && (R.current = Date.now()), null != I)
+                ((R.current = Date.now()), null != I)
                     ? I(e, R.current)
                     : (0, r.jsx)(
                           c.Z,
@@ -145,12 +145,8 @@ function O(e) {
                     shouldShow: N,
                     preload: C ? w : void 0,
                     renderPopout: D,
-                    onRequestOpen: () => {
-                        null == R.current && (R.current = Date.now()), null == S || S();
-                    },
-                    onRequestClose: () => {
-                        (R.current = void 0), null == T || T();
-                    }
+                    onRequestOpen: S,
+                    onRequestClose: T
                 },
                 P
             ),

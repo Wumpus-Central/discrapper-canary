@@ -76,7 +76,8 @@ function $(e) {
                 guildId: a,
                 users: u,
                 max: l > 0 ? Math.min(l, 8) : 8,
-                size: Y.u.SIZE_16
+                size: Y.u.SIZE_16,
+                dimEmptyUsers: !0
             }),
             (0, r.jsx)(o.Text, {
                 variant: 'text-xs/normal',

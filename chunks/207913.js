@@ -290,10 +290,7 @@ function z(e) {
                                 null != d &&
                                     (0, r.jsx)(u.Kqy, {
                                         gap: 4,
-                                        style: {
-                                            minWidth: 0,
-                                            marginTop: 4
-                                        },
+                                        style: { minWidth: 0 },
                                         children: (null == d ? void 0 : d.length) > 0 && (0, r.jsx)(W, { overflowMessages: d })
                                     })
                             ]
@@ -320,7 +317,7 @@ function W(e) {
                 size: f.u.SIZE_16
             }),
             (0, r.jsx)(u.Text, {
-                variant: 'text-sm/normal',
+                variant: 'text-sm/medium',
                 className: B.overflowText,
                 children: G.intl.formatToPlainString(G.t.NzUuLC, { count: t.length })
             })

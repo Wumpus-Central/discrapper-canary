@@ -1,27 +1,27 @@
-n.d(t, { Z: () => u }), n(314940);
+n.d(t, { Z: () => c });
 var i = n(255367);
 n(73800);
 var r = n(120356),
     o = n.n(r),
-    l = n(278074),
-    a = n(481060),
-    s = n(169525),
-    c = n(500984);
-let u = (e) => {
+    l = n(481060),
+    a = n(169525),
+    s = n(500984);
+let c = (e) => {
     let { obscureReason: t, iconClassname: n } = e;
-    return (0, l.EQ)(t)
-        .with(s.wk.EXPLICIT_CONTENT, () =>
-            (0, i.jsx)(a.fFY, {
-                className: o()(n, c.obscuredIcon),
+    switch (t) {
+        case a.wk.EXPLICIT_CONTENT:
+        case a.wk.GORE_CONTENT:
+            return (0, i.jsx)(l.fFY, {
+                className: o()(n, s.obscuredIcon),
                 color: 'white'
-            })
-        )
-        .with(s.wk.SPOILER, () =>
-            (0, i.jsx)(a.tEF, {
+            });
+        case a.wk.SPOILER:
+            return (0, i.jsx)(l.tEF, {
                 size: 'md',
                 color: 'currentColor',
                 className: n
-            })
-        )
-        .otherwise(() => null);
+            });
+        default:
+            return null;
+    }
 };

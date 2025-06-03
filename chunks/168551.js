@@ -80,13 +80,14 @@ let m = 'data-client-themes',
                     d = 'linear-gradient('.concat(s, 'deg, ').concat(r.join(', '), ')'),
                     f = (0, c.wj)(t),
                     _ = a()(u).set('hsl.s', 1).set('hsl.l', 0.9),
-                    h = a()(l).set('hsl.s', 1).set('hsl.l', 0.05);
+                    h = a()(l).set('hsl.s', 1).set('hsl.l', 0.05),
+                    m = 100 - i;
                 return '.'
                     .concat(g, ' {\n      --custom-theme-background: ')
                     .concat(d, ';\n      --theme-bg-overlay-opacity-mix-amount: ')
-                    .concat(((30 + 0.7 * i) / 100).toFixed(2), ';\n      ')
+                    .concat(((30 + 0.7 * m) / 100).toFixed(2), ';\n      ')
                     .concat(p.LN, ': ')
-                    .concat(f ? (25 + 0.35 * i).toFixed(1) : (30 - 0.2 * i).toFixed(1), '%;\n      ')
+                    .concat(f ? (25 + 0.35 * m).toFixed(1) : (30 - 0.2 * i).toFixed(1), '%;\n      ')
                     .concat(p.Po, ': ')
                     .concat(_.css(), ';\n      ')
                     .concat(p.ej, ': ')
@@ -98,14 +99,14 @@ let m = 'data-client-themes',
                     .concat(p.uv, ': ')
                     .concat(
                         a()(u)
-                            .set('hsl.l', ((0.05 * i) / 100).toFixed(2))
+                            .set('hsl.l', ((0.05 * m) / 100).toFixed(2))
                             .css(),
                         ';\n      '
                     )
                     .concat(p.Xg, ': ')
                     .concat(
                         a()(l)
-                            .set('hsl.l', ((100 - 0.1 * i) / 100).toFixed(2))
+                            .set('hsl.l', ((100 - 0.1 * m) / 100).toFixed(2))
                             .css(),
                         ';\n      '
                     )

@@ -9,6 +9,8 @@ e.exports = {
     size32: 'size32__183c2',
     size24: 'size24__183c2',
     size16: 'size16__183c2',
+    emptyUserDimmed: 'emptyUserDimmed__183c2',
     avatar: 'avatar__183c2',
-    moreUsers: 'moreUsers__183c2'
+    moreUsers: 'moreUsers__183c2',
+    moreUsersDimmed: 'moreUsersDimmed__183c2'
 };

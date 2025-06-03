@@ -51,7 +51,7 @@ var S = (function (e) {
 function T(e, t) {
     var n, r, i, s;
     if (!t) return !1;
-    if (a.ZP.get('obscure_blur_effect_enabled')) return !0;
+    if (a.ZP.get('obscure_blur_effect_explicit_content_enabled') || a.ZP.get('obscure_blur_effect_gore_content_enabled')) return !0;
     let l = (0, g.U2)('isMediaObscured');
     switch (e.type) {
         case 1:

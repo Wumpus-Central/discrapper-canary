@@ -27,44 +27,44 @@ function h(e) {
         var b;
         t = null != (b = null == h ? void 0 : h.window) ? b : window;
     } else t = window;
-    let O = l.useRef(null),
-        y = l.useMemo(() => {
+    let y = l.useRef(null),
+        O = l.useMemo(() => {
             let e = null;
             return () => {
                 null == e &&
                     (e = t.requestAnimationFrame(() => {
                         var t, r;
-                        E(n, null != (r = null == (t = O.current) ? void 0 : t.getBoundingClientRect()) ? r : null), (e = null);
+                        E(n, null != (r = null == (t = y.current) ? void 0 : t.getBoundingClientRect()) ? r : null), (e = null);
                     }));
             };
         }, [n, t]);
     return (
         l.useEffect(
             () => (
-                t.addEventListener('resize', y),
-                s.S.subscribe(g.CkL.REMEASURE_TARGET, y),
+                t.addEventListener('resize', O),
+                s.S.subscribe(g.CkL.REMEASURE_TARGET, O),
                 () => {
-                    t.removeEventListener('resize', y), s.S.unsubscribe(g.CkL.REMEASURE_TARGET, y);
+                    t.removeEventListener('resize', O), s.S.unsubscribe(g.CkL.REMEASURE_TARGET, O);
                 }
             ),
-            [y, t]
+            [O, t]
         ),
         l.useLayoutEffect(() => {
-            let e = O.current;
+            let e = y.current;
             if (null == e) return;
             let t = e.ownerDocument.defaultView;
             if (null == t) return;
-            y();
-            let r = new t.ResizeObserver(y);
+            O();
+            let r = new t.ResizeObserver(O);
             return (
                 r.observe(e),
                 () => {
                     r.disconnect(), E(n, null);
                 }
             );
-        }, [n, y]),
+        }, [n, O]),
         (0, r.jsx)('div', {
-            ref: O,
+            ref: y,
             style: o,
             className: a
         })

@@ -72,19 +72,19 @@ function T(e) {
     });
 }
 let A = function (e) {
-    var t, n;
-    let { hideCloseButton: i = !1, hideCloseOnFullScreen: d, onClose: E, upgradeToPremiumType: b, isEligibleForTrial: y = !1, showTrialBadge: O = !1, showDiscountBadge: A = !1 } = e,
-        N = (0, o.apv)((0, s.ZP)()),
-        C = b === m.p9.TIER_2,
-        P = (0, u.Fv)(y),
-        R = (0, p.Ng)(),
-        w = null == R || null == (t = R.discount) ? void 0 : t.amount,
-        D = C ? I : v,
-        L = C ? _.Z : f.Z,
-        { step: x, breadcrumbs: k, startedPaymentFlowWithPaymentSourcesRef: M, selectedSkuId: j } = (0, l.JL)();
-    if (null == k || 0 === k.length) return null;
-    let U = k.flatMap((e) => {
-        let t = e.useBreadcrumbLabel(y),
+    var t, n, i;
+    let { hideCloseButton: d = !1, hideCloseOnFullScreen: E, onClose: b, upgradeToPremiumType: y, isEligibleForTrial: O = !1, showTrialBadge: A = !1, showDiscountBadge: N = !1 } = e,
+        C = (0, o.apv)((0, s.ZP)()),
+        P = y === m.p9.TIER_2,
+        R = (0, u.Fv)(O),
+        w = (0, p.Ng)(),
+        D = null == w || null == (t = w.discount) ? void 0 : t.amount,
+        L = P ? I : v,
+        x = P ? _.Z : f.Z,
+        { step: k, breadcrumbs: M, startedPaymentFlowWithPaymentSourcesRef: j } = (0, l.JL)();
+    if (null == M || 0 === M.length) return null;
+    let U = M.flatMap((e) => {
+        let t = e.useBreadcrumbLabel(O),
             n = e.sectionHeaderText;
         return null != t
             ? {
@@ -97,50 +97,55 @@ let A = function (e) {
     if (0 === U.length) return null;
     let G = (U = U.filter((e) => {
             let t = e.id !== c.h8.ADD_PAYMENT_STEPS,
-                n = e.id === c.h8.ADD_PAYMENT_STEPS && !M.current;
-            return !y || (y && (t || n));
-        })).find((e) => e.id === x),
-        B = null != j ? m.y7[j] : null,
-        F = null;
-    null != B && (F = null == G || null == (n = G.sectionHeaderText) ? void 0 : n.call(G));
-    let V = null != (F = null != F ? F : null == G ? void 0 : G.label) && null != x;
-    return (0, r.jsxs)(r.Fragment, {
+                n = e.id === c.h8.ADD_PAYMENT_STEPS && !j.current;
+            return !O || (O && (t || n));
+        })).find((e) => e.id === k),
+        B = null != (i = null == G || null == (n = G.sectionHeaderText) ? void 0 : n.call(G)) ? i : null == G ? void 0 : G.label,
+        F = null != B && null != k,
+        V = R && F && k === c.h8.REVIEW;
+    return (0, r.jsxs)('div', {
+        className: g.container,
         children: [
             (0, r.jsxs)('div', {
-                className: a()(g.container, C ? g.tier2Background : g.tier0Background, { [g.containerBottomPadding]: !V }),
+                className: a()(g.headerContainer, P ? g.tier2Background : g.tier0Background, { [g.containerBottomPadding]: !F }),
                 children: [
-                    (0, r.jsx)(T, { isTier2: C }),
-                    !i &&
+                    (0, r.jsx)(T, { isTier2: P }),
+                    !d &&
                         (0, r.jsx)(o.olH, {
-                            hideOnFullscreen: d,
-                            onClick: E,
+                            hideOnFullscreen: E,
+                            onClick: b,
                             className: g.closeButtonPosition
                         }),
                     (0, r.jsx)('img', {
-                        src: D,
+                        src: L,
                         alt: '',
-                        className: P && V ? g.bigWumpus : g.wumpus
+                        className: V ? g.bigWumpus : g.wumpus
                     }),
                     (0, r.jsx)('div', {
                         className: g.textContainer,
-                        children: (0, r.jsx)(L, {
-                            color: N ? 'black' : 'white',
+                        children: (0, r.jsx)(x, {
+                            color: C ? 'black' : 'white',
                             className: g.wordmark
                         })
                     })
                 ]
             }),
-            (O || A) &&
+            (A || N) &&
                 (0, r.jsx)(h.Z, {
-                    isTier2: !!C,
-                    discountAmount: w
+                    isTier2: !!P,
+                    discountAmount: D
+                }),
+            F &&
+                (0, r.jsx)(S, {
+                    isOneStepCheckout: R,
+                    headerText: B,
+                    step: k,
+                    filteredBreadcrumbs: U
                 }),
             V &&
-                (0, r.jsx)(S, {
-                    isOneStepCheckout: P,
-                    headerText: F,
-                    step: x,
-                    filteredBreadcrumbs: U
+                (0, r.jsx)('div', {
+                    className: g.bodyGradientContainer,
+                    children: (0, r.jsx)('div', { className: g.bodyGradient })
                 })
         ]
     });

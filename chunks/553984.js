@@ -1,15 +1,25 @@
-n.d(t, { Z: () => b }), n(539854), n(388685), n(361932), n(187205);
+n.d(t, {
+    Z: () => _,
+    p: () => S
+}),
+    n(539854),
+    n(388685),
+    n(361932),
+    n(187205);
 var r = n(255367),
     i = n(73800),
-    l = n(442837),
-    o = n(481060),
-    s = n(434650),
-    a = n(377171),
-    c = n(768943),
-    u = n(175006),
-    d = n(982183),
-    h = n(381231);
-function p(e) {
+    l = n(120356),
+    o = n.n(l),
+    s = n(442837),
+    a = n(481060),
+    c = n(434650),
+    u = n(377171),
+    d = n(768943),
+    h = n(175006),
+    p = n(982183),
+    f = n(388032),
+    g = n(381231);
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,7 +44,7 @@ function p(e) {
     }
     return e;
 }
-function f(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,43 +62,64 @@ function f(e, t) {
         e
     );
 }
-let g = () => {
-        let e = (0, l.e7)([c.Z], () => c.Z.getSavedMessageCount());
+function y(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = {},
+                l = Object.keys(e);
+            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+            return i;
+        })(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var l = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+let O = () => {
+        let e = (0, s.e7)([d.Z], () => d.Z.getSavedMessageCount());
         return (0, i.useMemo)(() => {
-            let t = [d.V5.ALL];
-            return ((0, u.Z)() || e > 0) && t.push(d.V5.BOOKMARKS), t.push(d.V5.MENTIONS, d.V5.ANNOUNCEMENTS), t;
+            let t = [p.V5.ALL, p.V5.MENTIONS];
+            return ((0, h.Z)() || e > 0) && t.push(p.V5.BOOKMARKS), t.push(p.V5.ANNOUNCEMENTS), t;
         }, [e]);
     },
-    m = {
-        [d.V5.ALL]: !1,
-        [d.V5.BOOKMARKS]: !1,
-        [d.V5.MENTIONS]: !1,
-        [d.V5.ANNOUNCEMENTS]: !1
+    v = {
+        [p.V5.ALL]: !1,
+        [p.V5.BOOKMARKS]: !1,
+        [p.V5.MENTIONS]: !1,
+        [p.V5.ANNOUNCEMENTS]: !1
     };
-function b(e) {
+function _(e) {
     let { selectedFilter: t, setSelectedFilter: n } = e,
-        l = d.by,
-        s = g(),
-        [a, c] = (0, i.useState)(m),
-        u = s.filter((e) => !a[e]);
+        l = p.by,
+        s = O(),
+        [c, u] = (0, i.useState)(v),
+        d = s.filter((e) => !c[e]);
     return (0, r.jsxs)('div', {
-        className: h.filters,
+        className: g.filters,
         children: [
-            (0, r.jsx)(o.njP, {
+            (0, r.jsx)(a.njP, {
                 look: 'grey',
                 orientation: 'horizontal',
                 onItemSelect: n,
                 selectedItem: t,
-                className: h.tabBar,
+                className: g.tabBar,
                 children: s.flatMap((e) =>
                     (0, r.jsx)(
-                        o.njP.Item,
+                        a.njP.Item,
                         {
                             id: e,
                             'aria-label': e,
-                            children: (0, r.jsx)(y, {
+                            className: o()(g.filterButton, { [g.selected]: t === e }),
+                            disableItemStyles: !0,
+                            children: (0, r.jsx)(C, {
                                 setIsVisible: (t) => {
-                                    c((n) => f(p({}, n), { [e]: t }));
+                                    u((n) => b(m({}, n), { [e]: t }));
                                 },
                                 children: l[e]
                             })
@@ -97,80 +128,62 @@ function b(e) {
                     )
                 )
             }),
-            (0, r.jsx)(O, {
+            (0, r.jsx)(j, {
                 setSelectedFilter: n,
-                hiddenFilters: u,
+                hiddenFilters: d,
                 selectedFilter: t
             })
         ]
     });
 }
-function y(e) {
+function C(e) {
     let { children: t, setIsVisible: n } = e,
-        i = (0, s.O)(n);
+        i = (0, c.O)(n);
     return (0, r.jsx)('span', {
         ref: i,
         children: t
     });
 }
-function O(e) {
+function j(e) {
     let { setSelectedFilter: t, hiddenFilters: n, selectedFilter: l } = e,
-        s = (0, i.useRef)(null),
-        [c, u] = (0, i.useState)(!1),
-        [g, m] = (0, i.useState)(!1),
-        b = d.by;
+        o = (0, i.useRef)(null),
+        [s, c] = (0, i.useState)(!1),
+        [d, h] = (0, i.useState)(!1),
+        f = p.by;
     return 0 === n.length
         ? null
-        : (0, r.jsx)(o.yRy, {
+        : (0, r.jsx)(a.yRy, {
               position: 'bottom',
               align: 'left',
-              shouldShow: c,
-              targetElementRef: s,
-              onRequestClose: () => u(!1),
-              onRequestOpen: () => u(!0),
+              shouldShow: s,
+              targetElementRef: o,
+              onRequestClose: () => c(!1),
+              onRequestOpen: () => c(!0),
               renderPopout: (e) => {
                   var { closePopout: i } = e,
-                      s = (function (e, t) {
-                          if (null == e) return {};
-                          var n,
-                              r,
-                              i = (function (e, t) {
-                                  if (null == e) return {};
-                                  var n,
-                                      r,
-                                      i = {},
-                                      l = Object.keys(e);
-                                  for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                                  return i;
-                              })(e, t);
-                          if (Object.getOwnPropertySymbols) {
-                              var l = Object.getOwnPropertySymbols(e);
-                              for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-                          }
-                          return i;
-                      })(e, ['closePopout']);
+                      o = y(e, ['closePopout']);
                   return (0, r.jsx)(
-                      o.v2r,
-                      f(
-                          p(
+                      a.v2r,
+                      b(
+                          m(
                               {
                                   onSelect: () => {},
                                   navId: 'notifications-sidebar-filters',
                                   'aria-label': 'Notifications Sidebar Filters'
                               },
-                              s
+                              o
                           ),
                           {
                               onClose: () => i(),
                               children: n.map((e) =>
                                   (0, r.jsx)(
-                                      o.sNh,
+                                      a.sNh,
                                       {
                                           id: e,
-                                          action: () => t((t) => (t === e ? d.V5.ALL : e)),
-                                          label: b[e],
+                                          action: () => t((t) => (t === e ? p.V5.ALL : e)),
+                                          label: f[e],
                                           dontCloseOnAction: !0,
-                                          icon: e === l ? (0, r.jsx)(o.dz2, { size: 'sm' }) : void 0
+                                          icon: e === l ? (0, r.jsx)(a.dz2, { size: 'sm' }) : void 0
                                       },
                                       e
                                   )
@@ -181,17 +194,100 @@ function O(e) {
               },
               children: (e) =>
                   (0, r.jsx)(
-                      o.P3F,
-                      f(p({}, e), {
-                          className: h.moreButton,
-                          innerRef: s,
-                          onMouseEnter: () => m(!0),
-                          onMouseLeave: () => m(!1),
-                          children: (0, r.jsx)(o.xhG, {
-                              className: h.moreButtonIcon,
-                              color: g || c ? a.Z.INTERACTIVE_HOVER : a.Z.INTERACTIVE_NORMAL
+                      a.P3F,
+                      b(m({}, e), {
+                          className: g.filterButton,
+                          innerRef: o,
+                          onMouseEnter: () => h(!0),
+                          onMouseLeave: () => h(!1),
+                          children: (0, r.jsx)(a.xhG, {
+                              className: g.moreButtonIcon,
+                              size: 'xxs',
+                              color: d || s ? u.Z.INTERACTIVE_HOVER : u.Z.INTERACTIVE_NORMAL
                           })
                       })
                   )
+          });
+}
+function S(e) {
+    let { selectedFilter: t, setSelectedFilter: n, className: l } = e,
+        o = O(),
+        s = (0, i.useRef)(null),
+        [c, d] = (0, i.useState)(!1),
+        [h, g] = (0, i.useState)(!1),
+        v = p.by;
+    return 0 === o.length
+        ? null
+        : (0, r.jsx)(a.yRy, {
+              position: 'bottom',
+              align: 'left',
+              shouldShow: c,
+              targetElementRef: s,
+              onRequestClose: () => d(!1),
+              onRequestOpen: () => d(!0),
+              autoInvert: !1,
+              renderPopout: (e) => {
+                  var { closePopout: i } = e,
+                      l = y(e, ['closePopout']);
+                  return (0, r.jsx)(
+                      a.v2r,
+                      b(
+                          m(
+                              {
+                                  onSelect: () => {},
+                                  navId: 'notifications-sidebar-filters',
+                                  'aria-label': 'Notifications Sidebar Filters'
+                              },
+                              l
+                          ),
+                          {
+                              onClose: () => i(),
+                              children: o.map((e) =>
+                                  (0, r.jsx)(
+                                      a.sNh,
+                                      {
+                                          id: e,
+                                          action: () => n((t) => (t === e ? p.V5.ALL : e)),
+                                          label: v[e],
+                                          dontCloseOnAction: !0,
+                                          icon: e === t ? (0, r.jsx)(a.dz2, { size: 'sm' }) : void 0
+                                      },
+                                      e
+                                  )
+                              )
+                          }
+                      )
+                  );
+              },
+              children: (e) =>
+                  (0, r.jsx)(a.ua7, {
+                      align: 'left',
+                      position: 'bottom',
+                      forceOpen: h,
+                      shouldShow: h && !c,
+                      text: f.intl.string(f.t['+B9e19']),
+                      children: () =>
+                          (0, r.jsx)(
+                              a.P3F,
+                              b(m({}, e), {
+                                  className: l,
+                                  innerRef: s,
+                                  onClick: (t) => {
+                                      e.onClick(t);
+                                  },
+                                  onMouseEnter: () => {
+                                      var t;
+                                      g(!0), null == (t = e.onMouseEnter) || t.call(e);
+                                  },
+                                  onMouseLeave: () => {
+                                      g(!1);
+                                  },
+                                  children: (0, r.jsx)(a.gXV, {
+                                      size: 'xs',
+                                      color: h || c ? u.Z.INTERACTIVE_HOVER : u.Z.INTERACTIVE_NORMAL
+                                  })
+                              })
+                          )
+                  })
           });
 }

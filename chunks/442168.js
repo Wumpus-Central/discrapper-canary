@@ -51,8 +51,8 @@ let E = { visibility: 'hidden' },
 function b(e) {
     let { stream: t, inPopout: n } = e,
         { reducedMotion: b } = l.useContext(o.Sf),
-        O = (0, l.useRef)(null),
-        y = d.n.getState().clipsButtonRef,
+        y = (0, l.useRef)(null),
+        O = d.n.getState().clipsButtonRef,
         Z = (0, f.V9)(t),
         j = (0, a.e7)([s.Z], () => s.Z.getActiveAnimation()),
         _ = (0, a.Wu)([s.Z], () => s.Z.getStreamClipAnimations(Z)),
@@ -65,7 +65,7 @@ function b(e) {
     );
     let w = () => {
             var e;
-            let t = null == (e = O.current) ? void 0 : e.getBoundingClientRect();
+            let t = null == (e = y.current) ? void 0 : e.getBoundingClientRect();
             return null == t || n
                 ? E
                 : {
@@ -76,7 +76,7 @@ function b(e) {
                   };
         },
         P = (e) => {
-            let t = null == y ? void 0 : y.getBoundingClientRect();
+            let t = null == O ? void 0 : O.getBoundingClientRect();
             if (((I.current = t), e.timestamp !== j || null == t || n)) return E;
             let { top: r, left: l } = t;
             return {
@@ -152,7 +152,7 @@ function b(e) {
             children: [
                 (0, r.jsx)('div', {
                     className: m.hidden,
-                    ref: O
+                    ref: y
                 }),
                 x(
                     (e, t) =>

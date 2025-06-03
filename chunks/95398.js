@@ -108,6 +108,7 @@ let v = (e) => {
             case _.wk.SPOILER:
                 return (0, r.jsx)(v, { className: n });
             case _.wk.EXPLICIT_CONTENT:
+            case _.wk.GORE_CONTENT:
                 return (0, r.jsx)(I, {
                     isSingleMosaicItem: i,
                     className: n
@@ -124,7 +125,7 @@ let v = (e) => {
     },
     T = (e) => {
         let { obscureReason: t, isVisible: n, handleToggleObscurity: i, obscurityControlClassName: a } = e;
-        return t !== _.wk.EXPLICIT_CONTENT
+        return t !== _.wk.EXPLICIT_CONTENT && t !== _.wk.GORE_CONTENT
             ? null
             : (0, r.jsx)('div', {
                   className: o()(m.obscureButtonContainer, a),
@@ -165,7 +166,7 @@ class N extends i.PureComponent {
             h = (0, r.jsx)(A.Consumer, {
                 children: (h) => {
                     let g = h || p || !a;
-                    return [_.wk.EXPLICIT_CONTENT, _.wk.POTENTIAL_EXPLICIT_CONTENT].includes(s) && !t
+                    return _.Xh.has(s) && !t
                         ? (0, r.jsxs)('div', {
                               'aria-label': g ? void 0 : this.ariaLabel,
                               'aria-expanded': g,
@@ -234,7 +235,7 @@ class N extends i.PureComponent {
         return (0, r.jsx)(A.Consumer, {
             children: (f) => {
                 let p = f || d;
-                return [_.wk.EXPLICIT_CONTENT, _.wk.POTENTIAL_EXPLICIT_CONTENT].includes(s)
+                return _.Xh.has(s)
                     ? (0, r.jsxs)('div', {
                           'aria-label': d ? void 0 : this.ariaLabel,
                           'aria-expanded': p,
@@ -339,6 +340,7 @@ class N extends i.PureComponent {
             case _.wk.SPOILER:
                 return h.intl.string(h.t['F+x38P']);
             case _.wk.EXPLICIT_CONTENT:
+            case _.wk.GORE_CONTENT:
                 return h.intl.string(h.t.mlJ8VV);
             case _.wk.POTENTIAL_EXPLICIT_CONTENT:
                 return h.intl.string(h.t['MRdR7+']);
@@ -352,6 +354,7 @@ class N extends i.PureComponent {
             case _.wk.SPOILER:
                 return h.intl.string(h.t['F+x38P']);
             case _.wk.EXPLICIT_CONTENT:
+            case _.wk.GORE_CONTENT:
                 return h.intl.string(h.t.mlJ8VV);
             case _.wk.POTENTIAL_EXPLICIT_CONTENT:
                 return h.intl.string(h.t['MRdR7+']);

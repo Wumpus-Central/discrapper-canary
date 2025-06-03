@@ -1,12 +1,15 @@
 n.d(t, {
-    As: () => O,
-    BP: () => E,
-    MC: () => I,
-    dn: () => g,
-    hL: () => v,
-    lK: () => b,
+    As: () => I,
+    BP: () => y,
+    MC: () => T,
+    Xh: () => g,
+    dn: () => b,
+    eq: () => E,
+    hL: () => S,
+    lK: () => O,
     wk: () => m
 }),
+    n(388685),
     n(997841);
 var r = n(399606),
     i = n(432877),
@@ -22,38 +25,43 @@ var r = n(399606),
     p = n(981631),
     h = n(388032),
     m = (function (e) {
-        return (e.SPOILER = 'spoiler'), (e.EXPLICIT_CONTENT = 'explicit_content'), (e.POTENTIAL_EXPLICIT_CONTENT = 'potential_explicit_content'), e;
+        return (e.SPOILER = 'spoiler'), (e.EXPLICIT_CONTENT = 'explicit_content'), (e.POTENTIAL_EXPLICIT_CONTENT = 'potential_explicit_content'), (e.GORE_CONTENT = 'gore_content'), e;
     })({});
-let g = (e, t) => {
+let g = new Set(['explicit_content', 'gore_content', 'potential_explicit_content']),
+    E = new Set(['explicit_content']),
+    b = (e, t) => {
         let { spoiler: n, flags: r = 0, content_scan_version: o } = e;
         if (t) {
             if ((0, a.Sv)(o)) return 'potential_explicit_content';
-            if ((0, f.yE)(r, p.J0y.CONTAINS_EXPLICIT_MEDIA) || i.ZP.get('obscure_blur_effect_enabled')) return 'explicit_content';
+            if ((0, f.yE)(r, p.J0y.CONTAINS_EXPLICIT_MEDIA) || i.ZP.get('obscure_blur_effect_explicit_content_enabled')) return 'explicit_content';
+            if ((0, f.yE)(r, p.J0y.CONTAINS_GORE_CONTENT) || i.ZP.get('obscure_blur_effect_gore_content_enabled')) return 'gore_content';
         }
         return n || (0, f.yE)(r, p.J0y.IS_SPOILER) ? 'spoiler' : null;
     },
-    E = (e, t, n, r, o) => {
+    y = (e, t, n, r, o) => {
         let { flags: s = 0, contentScanVersion: l } = e,
             c = u.Z.getMessage(t, n);
         if (null == c) return null;
         if (o) {
             if (!c.author.bot && (0, a.Sv)(l)) return 'potential_explicit_content';
-            if ((0, f.yE)(s, p.xPJ.CONTAINS_EXPLICIT_MEDIA) || i.ZP.get('obscure_blur_effect_enabled')) return 'explicit_content';
+            if ((0, f.yE)(s, p.xPJ.CONTAINS_EXPLICIT_MEDIA) || i.ZP.get('obscure_blur_effect_explicit_content_enabled')) return 'explicit_content';
+            if ((0, f.yE)(s, p.xPJ.CONTAINS_GORE_CONTENT) || i.ZP.get('obscure_blur_effect_gore_content_enabled')) return 'gore_content';
         }
         return r ? 'spoiler' : null;
     },
-    b = function (e, t) {
+    O = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             { contentScanMetadata: o } = e;
         if (t) {
             if (!r && (0, a.oh)(o)) return 'potential_explicit_content';
             let e = null == o ? void 0 : o.flags;
-            if ((null != e && (0, f.yE)(e, l.Cb.EXPLICIT)) || i.ZP.get('obscure_blur_effect_enabled')) return 'explicit_content';
+            if ((null != e && (0, f.yE)(e, l.Cb.EXPLICIT)) || i.ZP.get('obscure_blur_effect_explicit_content_enabled')) return 'explicit_content';
+            if ((null != e && (0, f.yE)(e, l.Cb.GORE)) || i.ZP.get('obscure_blur_effect_gore_content_enabled')) return 'gore_content';
         }
         return n ? 'spoiler' : null;
     };
-function y(e) {
+function v(e) {
     switch (e.type) {
         case s.Ah.EMBED:
             return {
@@ -74,22 +82,23 @@ function y(e) {
             return null;
     }
 }
-function O(e, t, n) {
+function I(e, t, n) {
     if (null == e) return [!1, void 0];
     if (n && (0, a.Sv)(e.contentScanVersion)) return [!0, 'potential_explicit_content'];
-    let r = y(e);
+    let r = v(e);
     return null != r && (0, a.KP)(r, n) ? [!0, 'explicit_content'] : e.spoiler ? [t, 'spoiler'] : [!1, void 0];
 }
-function v(e) {
+function S(e) {
     let { channel: t, media: n } = e,
         i = (0, r.e7)([d.Z], () => null != t && d.Z.can(p.Plq.MANAGE_MESSAGES, t)),
         a = c.cC.useSetting(),
         s = (0, o.m)();
-    return O(n, !(0, _.Z)(a, i), s);
+    return I(n, !(0, _.Z)(a, i), s);
 }
-let I = (e) => {
+let T = (e) => {
     switch (e) {
         case 'explicit_content':
+        case 'gore_content':
             return h.intl.string(h.t.SEgHFh);
         case 'spoiler':
             return h.intl.string(h.t.XpfDHx);

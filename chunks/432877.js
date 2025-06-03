@@ -27,8 +27,12 @@ let l = {
             label: 'Blur view overrides for designers to test with',
             category: 1
         },
-        obscure_blur_effect_enabled: {
-            label: 'Force obscure blur effect on for message media and embeds',
+        obscure_blur_effect_explicit_content_enabled: {
+            label: 'Force explicit content obscure blur effect on for message media and embeds',
+            category: 1
+        },
+        obscure_blur_effect_gore_content_enabled: {
+            label: 'Force gore content obscure blur effect on for message media and embeds',
             category: 1
         },
         explicit_media_redaction_ignore_pending_scan: {
