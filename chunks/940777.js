@@ -65,7 +65,7 @@ function D() {
     var e, t;
     let l = (0, s.Ie)('favorites'),
         { favoriteAdded: D, clearFavoriteAdded: L } = (0, x.up)(),
-        [k, M] = i.useState(!1),
+        [M, k] = i.useState(!1),
         { favoriteServerMuted: U, favoriteChannels: G } = (0, a.cj)([E.Z], () => ({
             favoriteChannels: E.Z.getFavoriteChannels(),
             favoriteServerMuted: E.Z.favoriteServerMuted
@@ -118,7 +118,7 @@ function D() {
         children: [
             (0, r.jsx)(g.Z, {
                 selected: H,
-                hovered: k,
+                hovered: M,
                 unread: z && !U,
                 className: T.pill
             }),
@@ -126,7 +126,7 @@ function D() {
                 onShow: q,
                 children: (0, r.jsx)(I.S, {
                     children: (0, r.jsx)(c.aRk, {
-                        selected: K || H || k,
+                        selected: K || H || M,
                         upperBadge: W,
                         lowerBadge: Y,
                         children: (0, r.jsx)(
@@ -143,9 +143,9 @@ function D() {
                                         pathname: N.Z5c.CHANNEL(N.I_8, B),
                                         state: A
                                     },
-                                    selected: H || k,
-                                    onMouseEnter: () => M(!0),
-                                    onMouseLeave: () => M(!1),
+                                    selected: H || M,
+                                    onMouseEnter: () => k(!0),
+                                    onMouseLeave: () => k(!1),
                                     onMouseDown: function () {
                                         null != V && u.Z.preload(V.guild_id, V.id);
                                     },

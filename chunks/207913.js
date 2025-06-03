@@ -33,8 +33,8 @@ var r = n(255367),
     A = n(306680),
     D = n(594174),
     L = n(709054),
-    k = n(987889),
-    M = n(586694),
+    M = n(987889),
+    k = n(586694),
     U = n(981631),
     G = n(388032),
     B = n(539499);
@@ -189,7 +189,7 @@ function z(e) {
                                 marginTop: '4px'
                             },
                             children: I
-                                ? (0, r.jsx)(M.q, {
+                                ? (0, r.jsx)(k.q, {
                                       'aria-label': 'User Avatar',
                                       src: x,
                                       size: u.EFr.SIZE_32,
@@ -198,7 +198,7 @@ function z(e) {
                                       cornerIconOffsetY: 3,
                                       avatarDecoration: j
                                   })
-                                : (0, r.jsx)(M.E, {
+                                : (0, r.jsx)(k.E, {
                                       'aria-label': 'Guild Icon',
                                       src: f.getIconURL(32),
                                       size: u.EFr.SIZE_32,
@@ -246,7 +246,7 @@ function z(e) {
                                             align: 'center',
                                             style: { width: 'fit-content' },
                                             children: [
-                                                (0, r.jsx)(k.Z, {
+                                                (0, r.jsx)(M.Z, {
                                                     message: t,
                                                     channel: n,
                                                     isUnread: a

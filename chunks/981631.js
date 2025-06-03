@@ -1383,7 +1383,8 @@ let eh = '@me',
         SCHEDULED_MESSAGES: '/users/@me/scheduled-messages',
         SCHEDULED_MESSAGE: (e) => '/users/@me/scheduled-messages/'.concat(e),
         HOLIDAY_REDEEM_PRIZE: '/holidays/redeem-prize',
-        APPLIED_BOOST_MODIFY_END_DATE: (e) => '/debug/applied-boosts/'.concat(e, '/ends-at')
+        APPLIED_BOOST_MODIFY_END_DATE: (e) => '/debug/applied-boosts/'.concat(e, '/ends-at'),
+        SAFETY_FLOWS_TASK: '/safety-flows/task'
     }),
     eS = Object.freeze({
         INDEX: '/',
@@ -2123,6 +2124,7 @@ var tk = (function (e) {
             (e.SETTINGS_CONFIRM_VIEW_BACKUP_CODES = 'Confirm View Backup Codes'),
             (e.SETTINGS_PRIVACY_AND_SAFETY = 'Privacy & Safety'),
             (e.SETTINGS_CONTENT_AND_SOCIAL = 'Content & Social'),
+            (e.SETTINGS_SENSITIVE_MEDIA_FILTERS = 'Sensitive Media Filters'),
             (e.SETTINGS_CONNECTED_GAMES = 'Connected Games'),
             (e.SETTINGS_DATA_AND_PRIVACY = 'Data & Privacy'),
             (e.SETTINGS_ACCOUNT_STANDING = 'Account Standing'),
@@ -2545,6 +2547,7 @@ let tU = {
         VOICE: 'Voice & Video',
         PRIVACY_AND_SAFETY: 'Privacy & Safety',
         CONTENT_AND_SOCIAL: 'Content & Social',
+        SENSITIVE_MEDIA_FILTERS: 'Sensitive Media Filters',
         CONNECTED_GAMES: 'Connected Games',
         DATA_AND_PRIVACY: 'Data & Privacy',
         ACCOUNT_STANDING: 'Account Standing',

@@ -59,12 +59,12 @@ function E(t, n) {
 function U(t) {
     let n = (0, l.e7)([_.Z], () => _.Z.getChannelId() === t.id),
         U = (0, p.Z)(),
-        m = (null == U ? void 0 : U.channelId) === t.id,
-        D = (0, a.V)(t) && !t.isPrivate(),
-        L = (0, a.Z)(t),
-        O = (!(0, l.e7)([s.Z], () => s.Z.isInChannel(t.id)) && L) || D,
+        D = (null == U ? void 0 : U.channelId) === t.id,
+        L = (0, a.V)(t) && !t.isPrivate(),
+        O = (0, a.Z)(t),
+        m = (!(0, l.e7)([s.Z], () => s.Z.isInChannel(t.id)) && O) || L,
         y = (0, o.Z)();
-    if (!m && 0 === y.length) return null;
+    if (!D && 0 === y.length) return null;
     let S = (n) => {
         if (!n.twoWayLink || n.revoked)
             return void (0, d.Z)({
@@ -89,7 +89,7 @@ function U(t) {
                       );
               });
     };
-    return m
+    return D
         ? (0, i.jsx)(r.sNh, {
               label: c.intl.string(c.t.PlwgdX),
               id: 'handoff',
@@ -97,7 +97,7 @@ function U(t) {
                   (0, u.F)(U);
               },
               icon: (0, g.Z)(void 0),
-              disabled: O
+              disabled: m
           })
         : y.map((t) => {
               var e, l;
@@ -108,7 +108,7 @@ function U(t) {
                       label: ((e = t.type), (l = n), e === I.ABu.XBOX ? (l ? c.intl.string(c.t['qVE/VF']) : c.intl.string(c.t.E8euSk)) : e === I.ABu.PLAYSTATION ? (l ? c.intl.string(c.t.vzfxmZ) : c.intl.string(c.t.QxEYDg)) : e === I.ABu.PLAYSTATION_STAGING ? (l ? c.intl.string(c.t.BDiXtb) : c.intl.string(c.t['bhdB9/'])) : void 0),
                       action: () => S(t),
                       icon: (0, g.Z)(t.type),
-                      disabled: O
+                      disabled: m
                   },
                   t.id
               );

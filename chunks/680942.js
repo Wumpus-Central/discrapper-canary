@@ -80,7 +80,7 @@ let O = {
         ]
     },
     S = (e) => {
-        let { product: t, selectedVariantIndex: n, returnRef: S, onSuccess: x, tooltipDelay: E, isGiftEasterEggEnabled: y, color: j = i.Ttl.BRAND } = e,
+        let { product: t, selectedVariantIndex: n, returnRef: S, onSuccess: E, tooltipDelay: x, isGiftEasterEggEnabled: y, color: j = i.Ttl.BRAND } = e,
             { analyticsLocations: P } = (0, s.ZP)(),
             k = l.useRef(null),
             T = (0, o.Z)(k),
@@ -90,7 +90,7 @@ let O = {
             ? null
             : (0, r.jsx)(i.ua7, {
                   text: C.intl.string(C.t['JCFN//']),
-                  delay: E,
+                  delay: x,
                   children: (e) => {
                       var l, o;
                       return (0, r.jsx)(
@@ -151,9 +151,9 @@ let O = {
                                               returnRef: S,
                                               variantsReturnStyle: I,
                                               onClose:
-                                                  null != x
+                                                  null != E
                                                       ? (e) => {
-                                                            e && x();
+                                                            e && E();
                                                         }
                                                       : void 0
                                           });

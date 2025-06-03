@@ -18,12 +18,12 @@ let h = (e) => {
         C = null == (t = u.Z.getCategoryByStoreListingId(h.categoryStoreListingId)) ? void 0 : t.skuId,
         v = l.useRef(null),
         O = l.useRef(null),
-        [S, x] = l.useState();
+        [S, E] = l.useState();
     l.useEffect(() => {
         let e = O.current;
         if (null == e) return;
         let t = () => {
-            e.naturalWidth > 0 && e.naturalHeight > 0 && x(1080 * (e.naturalHeight / e.naturalWidth));
+            e.naturalWidth > 0 && e.naturalHeight > 0 && E(1080 * (e.naturalHeight / e.naturalWidth));
         };
         return (
             e.complete ? t() : (e.onload = t),
@@ -32,8 +32,8 @@ let h = (e) => {
             }
         );
     }, []);
-    let E = null != C ? C : '',
-        { handleCardVisibilityChange: y } = (0, d.E)(E, 'home', 'marketing wide banner'),
+    let x = null != C ? C : '',
+        { handleCardVisibilityChange: y } = (0, d.E)(x, 'home', 'marketing wide banner'),
         j = h.bannerUrl;
     if (null == j) return null;
     let P = _ === p.AW.ORBS;
@@ -80,7 +80,7 @@ let h = (e) => {
                     (0, r.jsx)(s.zxk, {
                         className: b.wideBannerBlockButton,
                         color: s.Ttl.PRIMARY,
-                        onClick: () => m('shop wide banner', E),
+                        onClick: () => m('shop wide banner', x),
                         children: g.intl.string(g.t.jVcuVV)
                     })
             ]

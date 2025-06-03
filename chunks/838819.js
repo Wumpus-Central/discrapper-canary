@@ -19,8 +19,8 @@ var r = n(255367),
     v = n(290026),
     O = n(511050),
     S = n(819640),
-    x = n(594174),
-    E = n(626135),
+    E = n(594174),
+    x = n(626135),
     y = n(74538),
     j = n(960048),
     P = n(381585),
@@ -107,9 +107,9 @@ let Q = (e) => {
             [u, eO]
         );
         let eS = (0, s.e7)([S.Z], () => S.Z.getLayers().includes(K.S9g.COLLECTIBLES_SHOP)),
-            { onClose: ex } = (0, H.Db)(),
-            eE = (0, s.e7)([x.default], () => x.default.getCurrentUser()),
-            ey = y.ZP.canUseCollectibles(eE),
+            { onClose: eE } = (0, H.Db)(),
+            ex = (0, s.e7)([E.default], () => E.default.getCurrentUser()),
+            ey = y.ZP.canUseCollectibles(ex),
             {
                 categories: ej,
                 isFetchingCategories: eP,
@@ -143,7 +143,7 @@ let Q = (e) => {
                     var e;
                     let t;
                     (t = eo === q.AW.CATALOG ? em : u),
-                        E.default.track(K.rMx.COLLECTIBLES_SHOP_VIEWED, {
+                        x.default.track(K.rMx.COLLECTIBLES_SHOP_VIEWED, {
                             location_stack: en,
                             source: t,
                             page_session_id: el,
@@ -153,13 +153,13 @@ let Q = (e) => {
                 }
             }, [en, u, el, eb, eh, em, es, eo, et, er]),
             l.useEffect(() => {
-                null == eE ||
+                null == ex ||
                     ey ||
-                    E.default.track(K.rMx.PREMIUM_UPSELL_VIEWED, {
+                    x.default.track(K.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: X.cd.COLLECTIBLES_SHOP,
                         location_stack: en
                     });
-            }, [ey, en, eE]);
+            }, [ey, en, ex]);
         let { dismissShopButtonDC: eZ } = (0, W.Z)();
         l.useEffect(() => {
             eZ(),
@@ -237,7 +237,7 @@ let Q = (e) => {
                     pageSize: eq
                 },
                 children: (0, r.jsxs)(ee, {
-                    onClose: ex,
+                    onClose: eE,
                     shouldAddEventListener: n && !eS,
                     children: [
                         (0, r.jsx)('div', {
@@ -263,7 +263,7 @@ let Q = (e) => {
                                         (0, r.jsx)(D.I, {
                                             isFullScreen: n,
                                             isLayer: eS,
-                                            onClose: ex,
+                                            onClose: eE,
                                             handleTransition: ec,
                                             selectedTab: eo
                                         }),
@@ -275,7 +275,7 @@ let Q = (e) => {
                                                     null != ek ? e.push('shop load fetch categories error: '.concat(eB.message)) : null != eT ? e.push('shop load fetch purchase error: '.concat(eB.message)) : e.push('shop load claim error: '.concat(eB.message)),
                                                     j.Z.captureMessage(e.join('\n'), {
                                                         tags: {
-                                                            isStaff: null != (l = null == eE || null == (t = eE.isStaff()) ? void 0 : t.toString()) ? l : 'unknown',
+                                                            isStaff: null != (l = null == ex || null == (t = ex.isStaff()) ? void 0 : t.toString()) ? l : 'unknown',
                                                             preloadEnabled: e$.toString(),
                                                             disableCache: eC.toString(),
                                                             includeUnpublished: ev.toString()

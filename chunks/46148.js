@@ -47,16 +47,16 @@ let C = (e, t) => {
             A = (0, u.m)(y.p9.TIER_2),
             D = (0, f.Z)(n),
             L = T === o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
-            k = (0, i.useRef)(null),
             M = (0, i.useRef)(null),
+            k = (0, i.useRef)(null),
             U = (0, i.useRef)(null),
             [G, B] = (0, i.useState)(g.U.TOP);
         if (
             ((0, i.useLayoutEffect)(() => {
-                if (null === k.current) return;
+                if (null === M.current) return;
                 let e = () => {
                     var e, t, n;
-                    let r = null == (e = k.current) ? void 0 : e.getBoundingClientRect();
+                    let r = null == (e = M.current) ? void 0 : e.getBoundingClientRect();
                     if (null == r) return;
                     let i = null != (n = null == (t = U.current) ? void 0 : t.getBoundingClientRect().height) ? n : 0;
                     window.innerHeight - r.bottom < i ? B(g.U.BOTTOM) : B(g.U.TOP);
@@ -73,9 +73,9 @@ let C = (e, t) => {
             F = j(H),
             z = S(H);
         return (0, r.jsx)('div', {
-            ref: k,
+            ref: M,
             children: (0, r.jsx)(s.yRy, {
-                targetElementRef: M,
+                targetElementRef: k,
                 align: G,
                 position: 'right',
                 shouldShow: L,
@@ -94,7 +94,7 @@ let C = (e, t) => {
                         body: z,
                         align: G
                     }),
-                children: () => (0, i.cloneElement)(t, { ref: M })
+                children: () => (0, i.cloneElement)(t, { ref: k })
             })
         });
     };

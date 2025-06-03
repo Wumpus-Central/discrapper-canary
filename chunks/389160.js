@@ -2,18 +2,18 @@ n.d(t, { Z: () => l });
 var r = n(97519),
     i = n(982183);
 let l = (0, r.U)((e, t) => ({
-    messageGroupOpenStates: {
-        [i.dm.UNREAD]: !0,
-        [i.dm.TODAY]: !0,
-        [i.dm.YESTERDAY]: !0,
-        [i.dm.OLDER]: !0
+    messageCategoryOpenStates: {
+        [i.KZ.UNREAD]: !0,
+        [i.KZ.TODAY]: !0,
+        [i.KZ.YESTERDAY]: !0,
+        [i.KZ.OLDER]: !0
     },
-    getOpenState: (e) => t().messageGroupOpenStates[e],
+    getOpenState: (e) => t().messageCategoryOpenStates[e],
     toggleOpenState: (t) => {
         e((e) => {
             var n, r;
             return {
-                messageGroupOpenStates:
+                messageCategoryOpenStates:
                     ((n = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -38,8 +38,8 @@ let l = (0, r.U)((e, t) => ({
                                 });
                         }
                         return e;
-                    })({}, e.messageGroupOpenStates)),
-                    (r = r = { [t]: !e.messageGroupOpenStates[t] }),
+                    })({}, e.messageCategoryOpenStates)),
+                    (r = r = { [t]: !e.messageCategoryOpenStates[t] }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                         : (function (e, t) {

@@ -1,40 +1,43 @@
 n.d(t, {
-    $J: () => u,
-    F7: () => h,
-    Ty: () => m,
-    V5: () => f,
-    by: () => b,
-    dm: () => p,
-    ib: () => d,
-    xM: () => g,
-    yG: () => c
+    $J: () => d,
+    F7: () => p,
+    KZ: () => f,
+    V5: () => g,
+    Vv: () => y,
+    by: () => O,
+    fL: () => b,
+    ib: () => h,
+    xM: () => m,
+    yG: () => u
 });
 var r,
     i,
     l,
-    o = n(601964),
-    s = n(70956),
-    a = n(388032);
-let c = 'notifications_inbox_guild_id',
-    u = 88,
-    d = s.Z.Millis.WEEK,
-    h = new o.ZP({
-        id: c,
-        name: a.intl.string(a.t.HcoRu7),
+    o,
+    s = n(601964),
+    a = n(70956),
+    c = n(388032);
+let u = 'notifications_inbox_guild_id',
+    d = 88,
+    h = a.Z.Millis.WEEK,
+    p = new s.ZP({
+        id: u,
+        name: c.intl.string(c.t.HcoRu7),
         description: ''
     });
-var p = (((r = {}).UNREAD = 'UNREAD'), (r.TODAY = 'TODAY'), (r.YESTERDAY = 'YESTERDAY'), (r.OLDER = 'OLDER'), r),
-    f = (((i = {}).ALL = 'all'), (i.ANNOUNCEMENTS = 'announcements'), (i.MENTIONS = 'mentions'), (i.BOOKMARKS = 'bookmarks'), i),
-    g = (((l = {}).READ = 'READ'), (l.UNREAD = 'UNREAD'), l);
-let m = {
-        UNREAD: a.t['f1tf/v'],
-        TODAY: a.t.F4jZQk,
-        YESTERDAY: a.t.gnv4pK,
-        OLDER: a.t.exrPZm
+var f = (((r = {}).UNREAD = 'UNREAD'), (r.TODAY = 'TODAY'), (r.YESTERDAY = 'YESTERDAY'), (r.OLDER = 'OLDER'), r),
+    g = (((i = {}).ALL = 'all'), (i.ANNOUNCEMENTS = 'announcements'), (i.MENTIONS = 'mentions'), (i.BOOKMARKS = 'bookmarks'), i),
+    m = (((l = {}).READ = 'READ'), (l.UNREAD = 'UNREAD'), l),
+    b = (((o = {}).ALL_MESSAGES_CHANNEL = 'ALL_MESSAGES_CHANNEL'), (o.MENTION = 'MENTION'), (o.BOOKMARK = 'BOOKMARK'), o);
+let y = {
+        UNREAD: c.t['f1tf/v'],
+        TODAY: c.t.F4jZQk,
+        YESTERDAY: c.t.gnv4pK,
+        OLDER: c.t.exrPZm
     },
-    b = {
-        all: a.intl.string(a.t.nsv3q6),
-        bookmarks: a.intl.string(a.t['+rlGYW']),
-        announcements: a.intl.string(a.t['2qyUOz']),
-        mentions: a.intl.string(a.t['GRZF9/'])
+    O = {
+        all: c.intl.string(c.t.nsv3q6),
+        bookmarks: c.intl.string(c.t['+rlGYW']),
+        announcements: c.intl.string(c.t['2qyUOz']),
+        mentions: c.intl.string(c.t['GRZF9/'])
     };

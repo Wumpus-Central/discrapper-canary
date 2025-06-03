@@ -1,6 +1,6 @@
 n.d(t, {
     PD: () => D,
-    ZP: () => M,
+    ZP: () => k,
     aR: () => L
 }),
     n(388685);
@@ -100,11 +100,11 @@ let R = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     },
     D = 57,
     L = 57 + R,
-    k = {
+    M = {
         tension: 180,
         friction: 80
     },
-    M = (e) => {
+    k = (e) => {
         let { guild: t, withMargin: n } = e,
             l = (0, m.Q3)('GuildBoostingSidebarDisplay'),
             { analyticsLocations: u } = (0, g.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
@@ -113,26 +113,26 @@ let R = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
             R = (0, _.FZ)(b),
             D = null == R,
             L = null != R ? R : b,
-            M = (0, c.e7)([S.Z], () => {
+            k = (0, c.e7)([S.Z], () => {
                 var e;
                 return null != (e = S.Z.getCountForGuild(t.id)) ? e : 0;
             }),
             U = (0, c.e7)([O.Z], () => O.Z.can(P.Plq.MANAGE_GUILD, t));
         i.useEffect(() => {
-            M !== C && (0, j.v)(t.id, C);
-        }, [t.id, M, C]);
+            k !== C && (0, j.v)(t.id, C);
+        }, [t.id, k, C]);
         let G = D ? '100%' : ''.concat(Math.min(100, (C / P.oCV[L]) * 100), '%'),
             { current: B } = i.useRef(G),
             [V] = (0, d.q_F)(
                 () => ({
-                    from: { width: M === C ? B : '0%' },
+                    from: { width: k === C ? B : '0%' },
                     to: { width: G },
-                    config: k
+                    config: M
                 }),
                 'respect-motion-settings',
-                [M, C, B, G]
+                [k, C, B, G]
             ),
-            H = t.premiumTier < L && M >= P.oCV[L],
+            H = t.premiumTier < L && k >= P.oCV[L],
             F = () => {
                 (0, f.yw)(P.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                     location: { section: P.jXE.PREMIUM_GUILD_PROGRESS_BAR },

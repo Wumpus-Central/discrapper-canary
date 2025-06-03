@@ -77,7 +77,7 @@ function L(e, t) {
         e
     );
 }
-class k extends P.ZP {
+class M extends P.ZP {
     componentWillUnmount() {
         this.resetTextChannelPopoutTimers();
     }
@@ -262,7 +262,7 @@ class k extends P.ZP {
             });
     }
 }
-let M = (0, d.B)(k);
+let k = (0, d.B)(M);
 function U(e) {
     let { channel: t, guild: n, disableSorting: i, isFavoriteCategory: l, muted: o, selected: a } = e,
         { hasActiveThreads: c, hasMoreActiveThreads: u } = (0, O.JQ)(t),
@@ -304,7 +304,7 @@ function U(e) {
         }),
         A = (0, p.ZP)(t);
     return (0, r.jsx)(
-        M,
+        k,
         L(D({}, d, g, e), {
             hasActiveThreads: c,
             hasMoreActiveThreads: u,

@@ -19,8 +19,8 @@ var r = n(255367),
     v = n(38900),
     O = n(709999),
     S = n(328626),
-    x = n(619899),
-    E = n(215023),
+    E = n(619899),
+    x = n(215023),
     y = n(981631),
     j = n(388032),
     P = n(806734);
@@ -29,9 +29,9 @@ let k = (e) => {
     let { isLoading: n, sortedSkuIds: a, handleTransition: k, numVisibleItems: T, tab: I } = e,
         L = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
         B = b.ZP.canUseCollectibles(L),
-        w = (0, _.s)('useShopHomeSorting') && I === E.AW.HOME,
+        w = (0, _.s)('useShopHomeSorting') && I === x.AW.HOME,
         { sortType: N, setSortType: A, sortedItems: R, sortOptions: Z, shuffleProducts: F, showRecommendationOption: D } = (0, C.N)(a, B),
-        H = (0, x.St)(R),
+        H = (0, E.St)(R),
         M = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         W = (0, o.e7)([p.Z], () => p.Z.isFocused()),
         V = !M && W,
@@ -65,7 +65,7 @@ let k = (e) => {
                               children: [
                                   (0, r.jsx)(s.X6q, {
                                       variant: 'heading-lg/semibold',
-                                      children: I === E.AW.ORBS ? j.intl.string(j.t.dFgeub) : j.intl.string(j.t.NSv5KS)
+                                      children: I === x.AW.ORBS ? j.intl.string(j.t.dFgeub) : j.intl.string(j.t.NSv5KS)
                                   }),
                                   D &&
                                       (0, r.jsx)(s.ua7, {
@@ -144,7 +144,7 @@ let k = (e) => {
                                               })
                                           ]
                                       }),
-                                  I === E.AW.HOME &&
+                                  I === x.AW.HOME &&
                                       (w
                                           ? (0, r.jsx)(s.zxk, {
                                                 color: s.Ttl.PRIMARY,

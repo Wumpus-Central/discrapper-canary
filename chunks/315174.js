@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => k,
+    ZP: () => M,
     wD: () => T
 }),
     n(388685);
@@ -326,12 +326,12 @@ function L(e) {
         ]
     });
 }
-let k = i.memo(function (e) {
+let M = i.memo(function (e) {
     let { ref: t, bannerVisible: n, controller: l, className: s, onClick: c, onContextMenu: d, onMouseDown: f, disableBannerAnimation: m, 'aria-expanded': b, 'aria-controls': O, guild: _, guildBanner: j, animationOverlayHeight: S, children: E, headerClassName: Z, communityInfoVisible: T, hasSubheader: R } = e,
         D = _.hasFeature(C.oNc.ANIMATED_BANNER),
-        k = (0, p.Z)(_),
-        U = !k && _.hasCommunityInfoSubheader(),
-        G = !k && T,
+        M = (0, p.Z)(_),
+        U = !M && _.hasCommunityInfoSubheader(),
+        G = !M && T,
         B = (0, v.xR)(j) && D && !m,
         [V, H] = i.useState(!1),
         F = i.useRef(!1),
@@ -417,7 +417,7 @@ let k = i.memo(function (e) {
                                       isRefreshEnabled: Q
                                   })
                                 : null,
-                            (0, r.jsx)(M, { controller: l })
+                            (0, r.jsx)(k, { controller: l })
                         ]
                     }),
                     B && q()
@@ -434,7 +434,7 @@ let k = i.memo(function (e) {
             })
     });
 });
-function M(e) {
+function k(e) {
     let { controller: t } = e,
         n = (0, h.Q3)('GuildHeaderOverlay'),
         { theme: i } = (0, u.TCT)();

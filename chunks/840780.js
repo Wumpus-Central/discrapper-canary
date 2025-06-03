@@ -33,8 +33,8 @@ var r = n(255367),
     A = n(925329),
     D = n(102172),
     L = n(74299),
-    k = n(914923),
-    M = n(165393),
+    M = n(914923),
+    k = n(165393),
     U = n(989941),
     G = n(690221),
     B = n(231664),
@@ -147,12 +147,12 @@ class ey extends i.PureComponent {
     }
     renderScreenshare() {
         let { isStreaming: e, streamMetadata: t, streamQualityIndicator: n } = this.props,
-            { title: i, sanitizedTitle: l } = (0, k.Z)(t);
+            { title: i, sanitizedTitle: l } = (0, M.Z)(t);
         return (0, r.jsxs)('div', {
             className: ep.gameWrapper,
             children: [
                 e
-                    ? (0, r.jsx)(M.Z, {
+                    ? (0, r.jsx)(k.Z, {
                           title: l,
                           icon: null == t ? void 0 : t.sourceIcon
                       })
@@ -344,8 +344,8 @@ let eO = (0, b.Z)(function (e) {
         I = (0, C.Z)() && null != x && (0, O.R)(),
         N = (0, u.e7)([Q.Z], () => (0, L.Z)(Q.Z) && (0, ei.isWindows)()),
         A = (0, u.e7)([J.Z], () => (null != o ? J.Z.findActivity(o, (e) => e.type === ec.IIU.PLAYING) : null)),
-        k = null != f && f.ownerId === o && f.state !== ec.jm8.ENDED,
-        M = (0, u.e7)([et.default, $.Z], () => (null != h ? (0, P.F6)(h, et.default, $.Z) : void 0)),
+        M = null != f && f.ownerId === o && f.state !== ec.jm8.ENDED,
+        k = (0, u.e7)([et.default, $.Z], () => (null != h ? (0, P.F6)(h, et.default, $.Z) : void 0)),
         G = (0, B.Z)(),
         [V, H] = i.useState(!1),
         { showsActivityPopoutQuickRefocusNUX: F, markActivityPopoutQuickRefocusNUXAsDismissed: el } = (function () {
@@ -370,12 +370,12 @@ let eO = (0, b.Z)(function (e) {
             runningGame: null != S ? S : s,
             application: j,
             useReducedMotion: m,
-            isStreaming: k,
+            isStreaming: M,
             channel: h,
             canStream: v,
             stream: f,
             streamMetadata: g,
-            channelName: M,
+            channelName: k,
             guildForConnectedChannel: p,
             streamQualityIndicator: G,
             isForceShowSharingPopout: V,

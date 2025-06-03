@@ -161,9 +161,9 @@ function R(e) {
 let A = i.memo(function (e) {
     let { thread: t, isSelectedChannel: l, isSelectedVoice: w, isLast: A, withGuildIcon: D } = e,
         L = (0, a.e7)([O.ZP], () => O.ZP.getVoiceStatesForChannel(t), [t]),
-        k = (0, a.e7)([y.Z], () => y.Z.hasVideo(t.id)),
+        M = (0, a.e7)([y.Z], () => y.Z.hasVideo(t.id)),
         {
-            unread: M,
+            unread: k,
             mentionCount: U,
             isMentionLowImportance: G
         } = (0, a.cj)([b.ZP], () => ({
@@ -221,7 +221,7 @@ let A = i.memo(function (e) {
                       channelName: t.name,
                       mentionCount: U
                   })
-                : M
+                : k
                   ? x.intl.formatToPlainString(x.t.YlVvmZ, { channelName: t.name })
                   : x.intl.formatToPlainString(x.t['0nZpiI'], { channelName: t.name }),
         X = (0, p.Q3)('GuildSidebarThreadListEntry') ? T : R;
@@ -249,13 +249,13 @@ let A = i.memo(function (e) {
                     className: o()(P.iconVisibility, I.wrapper, I.typeThread, {
                         [I.modeSelected]: l,
                         [I.modeMuted]: !l && B,
-                        [I.modeUnreadImportant]: !B && !l && M,
+                        [I.modeUnreadImportant]: !B && !l && k,
                         [I.withGuildIcon]: D
                     }),
                     onMouseDown: H,
                     onContextMenu: F,
                     children: [
-                        !M || B || l ? null : (0, r.jsx)('div', { className: o()(I.unread, I.unreadImportant) }),
+                        !k || B || l ? null : (0, r.jsx)('div', { className: o()(I.unread, I.unreadImportant) }),
                         (0, r.jsx)(
                             c.P3F,
                             Z(N({}, K), {
@@ -278,7 +278,7 @@ let A = i.memo(function (e) {
                                                 z > 0 && t.userLimit > 0
                                                     ? (0, r.jsx)(_.Z, {
                                                           userCount: z,
-                                                          video: k,
+                                                          video: M,
                                                           channel: t
                                                       })
                                                     : null,

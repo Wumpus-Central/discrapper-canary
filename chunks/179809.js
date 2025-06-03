@@ -27,7 +27,7 @@ var r = n(255367),
 let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
     w = (0, a.animated)(h.Kqy),
     N = i.memo(function (e) {
-        let { folderNode: t, setNodeRef: n, selected: l, expanded: a, mediaState: d, mentionCount: m = 0, isMentionLowImportance: N, unread: Z = !1, defaultFolderName: T, draggable: R = !1, sorting: A = !1, onDragStart: D, onDragEnd: L, onExpandCollapse: k, onContextMenu: M, renderChildNode: U, folderButtonSize: G, folderButtonContent: B, 'aria-setsize': V, 'aria-posinset': H } = e,
+        let { folderNode: t, setNodeRef: n, selected: l, expanded: a, mediaState: d, mentionCount: m = 0, isMentionLowImportance: N, unread: Z = !1, defaultFolderName: T, draggable: R = !1, sorting: A = !1, onDragStart: D, onDragEnd: L, onExpandCollapse: M, onContextMenu: k, renderChildNode: U, folderButtonSize: G, folderButtonContent: B, 'aria-setsize': V, 'aria-posinset': H } = e,
             { id: F, name: z, children: W } = t,
             [Y, K] = i.useState(!1),
             [q, Q] = i.useState(!1),
@@ -55,9 +55,9 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
             }, []),
             en = i.useCallback(
                 (e) => {
-                    (('ArrowRight' === e.key && !a) || ('ArrowLeft' === e.key && a)) && k();
+                    (('ArrowRight' === e.key && !a) || ('ArrowLeft' === e.key && a)) && M();
                 },
-                [k, a]
+                [M, a]
             ),
             er = null != z && '' !== z ? z : null != T && '' !== T ? T : E.intl.string(E.t.xV9hVl),
             ei = (0, c.Ie)(''.concat(F)),
@@ -111,8 +111,8 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                       isMentionLowImportance: N,
                                       tooltipName: er,
                                       folderGroupId: el,
-                                      onClick: k,
-                                      onContextMenu: M,
+                                      onClick: M,
+                                      onContextMenu: k,
                                       onHoverChange: K,
                                       onKeyDown: en,
                                       treeItemProps: ei,

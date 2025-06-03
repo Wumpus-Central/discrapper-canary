@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -80,21 +80,21 @@ let L = {
         object: Z.qAy.CHANNEL
     }
 };
-function k(e, t) {
+function M(e, t) {
     (0, f.jW)(e, async () => {
         let { default: e } = await Promise.all([n.e('7654'), n.e('44156'), n.e('55616'), n.e('49286'), n.e('6850'), n.e('58227'), n.e('32652'), n.e('54408'), n.e('20087'), n.e('92754'), n.e('56534'), n.e('87154'), n.e('33213'), n.e('40407')]).then(n.bind(n, 545135));
         return (n) => (0, r.jsx)(e, D(A({}, n), { guild: t }));
     });
 }
-let M = i.memo(function (e) {
-    var t, n, l, f, M;
-    let { guildNode: U, setRef: G, onDragStart: B, onDragEnd: V, route: H, guild: F, animatable: z, selected: W = !1, unread: Y = !1, mediaState: K, unavailable: q = !1, badge: Q = 0, isMentionLowImportance: X, contextMenu: J = k, draggable: $ = !1, sorting: ee = !1, preloadOnClick: et = !0, guildJoinRequestStatus: en, height: er, 'aria-setsize': ei, 'aria-posinset': el } = e,
+let k = i.memo(function (e) {
+    var t, n, l, f, k;
+    let { guildNode: U, setRef: G, onDragStart: B, onDragEnd: V, route: H, guild: F, animatable: z, selected: W = !1, unread: Y = !1, mediaState: K, unavailable: q = !1, badge: Q = 0, isMentionLowImportance: X, contextMenu: J = M, draggable: $ = !1, sorting: ee = !1, preloadOnClick: et = !0, guildJoinRequestStatus: en, height: er, 'aria-setsize': ei, 'aria-posinset': el } = e,
         { id: eo, parentId: es } = U,
         ea = (0, b.Q3)('GuildItem'),
         ec = null != (t = e.upperBadge) ? t : q ? (0, N.Ny)() : null != K ? (0, N.Or)(K) : void 0,
         eu = null != (n = e.lowerBadge) ? n : void 0;
     null == eu && Q > 0 ? (eu = null != (l = (0, N.Ne)(Q, X ? m.Z.BACKGROUND_ACCENT : m.Z.STATUS_DANGER)) ? l : void 0) : null == eu && null != en && (eu = null != (f = (0, N.jt)({ guildJoinRequestStatus: en })) ? f : void 0);
-    let ed = null != (M = e.lowerBadgeSize) ? M : { width: (0, h.OVM)(Q) },
+    let ed = null != (k = e.lowerBadgeSize) ? k : { width: (0, h.OVM)(Q) },
         [{ dragging: eh }, ep] = (0, s.c)({
             type: j.eD.GUILD,
             item: () => (

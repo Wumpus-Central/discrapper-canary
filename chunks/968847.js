@@ -151,14 +151,14 @@ function L(e) {
     let r = m.Z.getGuild(t.guild_id);
     return null != r && !!r.hasFeature(j.oNc.COMMUNITY) && R(n.guild_id);
 }
-function k(e) {
+function M(e) {
     let { channelId: t } = e,
         n = g.Z.getChannel(t);
     if (null == n) return !1;
     let r = m.Z.getGuild(n.guild_id);
     return null != r && !!r.hasFeature(j.oNc.COMMUNITY) && y.Z.getGuildId() === n.guild_id && R(n.guild_id);
 }
-function M(e) {
+function k(e) {
     let { guildId: t } = e;
     return null != t && R(t);
 }
@@ -205,18 +205,18 @@ let G = new U(u.Z, {
             n
         );
     },
-    CHANNEL_ACK: k,
+    CHANNEL_ACK: M,
     CHANNEL_DELETE: L,
-    CHANNEL_LOCAL_ACK: k,
-    MESSAGE_ACK: k,
-    MESSAGE_CREATE: k,
-    MESSAGE_DELETE_BULK: k,
-    MESSAGE_DELETE: k,
+    CHANNEL_LOCAL_ACK: M,
+    MESSAGE_ACK: M,
+    MESSAGE_CREATE: M,
+    MESSAGE_DELETE_BULK: M,
+    MESSAGE_DELETE: M,
     PASSIVE_UPDATE_V2: function (e) {
         let t = m.Z.getGuild(e.guildId);
         return !!(e.channels.length > 0 && null != t && t.hasFeature(j.oNc.COMMUNITY)) && R(e.guildId);
     },
-    RESORT_THREADS: k,
+    RESORT_THREADS: M,
     THREAD_CREATE: L,
     THREAD_DELETE: L,
     THREAD_LIST_SYNC: A,
@@ -233,12 +233,12 @@ let G = new U(u.Z, {
         let r = P[n];
         return null != r && 'voice-channels' === r.bottomBar.mode && R(n);
     },
-    USER_GUILD_SETTINGS_CHANNEL_UPDATE: M,
-    USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: M,
+    USER_GUILD_SETTINGS_CHANNEL_UPDATE: k,
+    USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: k,
     USER_GUILD_SETTINGS_FULL_UPDATE: function (e) {
         let { userGuildSettings: t } = e;
         for (let e of t) null != e.guild_id && R(e.guild_id);
     },
-    USER_GUILD_SETTINGS_GUILD_UPDATE: M,
-    USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: M
+    USER_GUILD_SETTINGS_GUILD_UPDATE: k,
+    USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: k
 });

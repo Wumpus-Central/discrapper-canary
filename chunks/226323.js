@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(539854), n(388685);
+n.d(t, { Z: () => A }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -7,19 +7,21 @@ var r = n(255367),
     s = n(481060),
     c = n(239091),
     u = n(586902),
-    d = n(100527),
-    p = n(906732),
-    h = n(522651),
-    f = n(795318),
-    g = n(512384),
-    m = n(670188),
-    b = n(314897),
-    _ = n(131951),
-    E = n(51144),
-    O = n(524484),
-    y = n(388032),
-    I = n(795243);
-function v(e) {
+    d = n(393903),
+    p = n(448986),
+    h = n(100527),
+    f = n(906732),
+    g = n(522651),
+    m = n(795318),
+    b = n(512384),
+    _ = n(670188),
+    E = n(314897),
+    O = n(131951),
+    y = n(51144),
+    I = n(524484),
+    v = n(388032),
+    C = n(795243);
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +46,7 @@ function v(e) {
     }
     return e;
 }
-function C(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,47 +64,47 @@ function C(e, t) {
         e
     );
 }
-let S = { offset: 2 },
-    N = {
+let T = { offset: 2 },
+    P = {
         serverDeaf: {
             icon: s.Vm4,
             colorize: !0,
-            getStatus: () => y.intl.string(y.t.btxSdH)
+            getStatus: () => v.intl.string(v.t.btxSdH)
         },
         serverMute: {
             icon: s.v0G,
             colorize: !0,
-            getStatus: () => y.intl.string(y.t.uLddbW)
+            getStatus: () => v.intl.string(v.t.uLddbW)
         },
         deaf: {
             icon: s.wE8,
             colorize: !1,
-            getStatus: () => y.intl.string(y.t.NjmiOD)
+            getStatus: () => v.intl.string(v.t.NjmiOD)
         },
         mute: {
             icon: s.nRN,
             colorize: !1,
-            getStatus: () => y.intl.string(y.t.tjtv3N)
+            getStatus: () => v.intl.string(v.t.tjtv3N)
         },
         localMute: {
             icon: s.v0G,
             colorize: !1,
-            getStatus: () => y.intl.string(y.t['9F+xJS'])
+            getStatus: () => v.intl.string(v.t['9F+xJS'])
         }
     };
-function T(e) {
+function j(e) {
     var t, l;
-    let b = i.useRef(null),
-        { parentAnalyticsLocation: T } = (0, p.ZP)(),
-        { channel: P, user: j, nick: A, mute: Z, deaf: x, serverMute: L, serverDeaf: w } = e,
-        R = (0, o.e7)([_.Z], () => _.Z.isLocalMute(j.id)),
+    let d = i.useRef(null),
+        { parentAnalyticsLocation: p } = (0, f.ZP)(),
+        { channel: E, user: j, nick: A, mute: Z, deaf: x, serverMute: L, serverDeaf: w } = e,
+        R = (0, o.e7)([O.Z], () => O.Z.isLocalMute(j.id)),
         D = (0, u.Z)({
             userId: j.id,
             checkSoundSharing: !0
         }),
-        k = null != (t = P.getGuildId()) ? t : void 0,
-        M = j.getAvatarURL(P.guild_id, 24),
-        U = null != A ? A : E.ZP.getName(j),
+        k = null != (t = E.getGuildId()) ? t : void 0,
+        M = j.getAvatarURL(E.guild_id, 24),
+        U = null != A ? A : y.ZP.getName(j),
         {
             icon: G,
             colorize: V,
@@ -110,11 +112,11 @@ function T(e) {
         } = null !=
         (l = (function (e) {
             let { serverDeaf: t, deaf: n, serverMute: r, mute: i, localMute: l } = e;
-            if (t) return N.serverDeaf;
-            if (n) return N.deaf;
-            if (r) return N.serverMute;
-            if (l) return N.localMute;
-            if (i) return N.mute;
+            if (t) return P.serverDeaf;
+            if (n) return P.deaf;
+            if (r) return P.serverMute;
+            if (l) return P.localMute;
+            if (i) return P.mute;
         })({
             serverDeaf: w,
             deaf: x,
@@ -126,7 +128,7 @@ function T(e) {
             : {},
         H =
             null != B
-                ? y.intl.formatToPlainString(y.t['1+MVBA'], {
+                ? v.intl.formatToPlainString(v.t['1+MVBA'], {
                       userName: U,
                       status: B()
                   })
@@ -138,12 +140,12 @@ function T(e) {
                   return (t) =>
                       (0, r.jsx)(
                           e,
-                          C(v({}, t), {
+                          N(S({}, t), {
                               user: j,
                               guildId: k,
-                              channel: P,
+                              channel: E,
                               showMediaItems: !0,
-                              onInteraction: (0, f.u)('GuildChannelUserContextMenu', d.Z.RTC_PANEL, { targetUserId: j.id })
+                              onInteraction: (0, m.u)('GuildChannelUserContextMenu', h.Z.RTC_PANEL, { targetUserId: j.id })
                           })
                       );
               })
@@ -152,19 +154,19 @@ function T(e) {
                   return (t) =>
                       (0, r.jsx)(
                           e,
-                          C(v({}, t), {
+                          N(S({}, t), {
                               user: j,
                               showMediaItems: !0,
-                              onInteraction: (0, f.u)('UserGenericContextMenu', d.Z.RTC_PANEL, { targetUserId: j.id })
+                              onInteraction: (0, m.u)('UserGenericContextMenu', h.Z.RTC_PANEL, { targetUserId: j.id })
                           })
                       );
               });
     }
-    return (0, r.jsx)(m.Z, {
-        targetElementRef: b,
+    return (0, r.jsx)(_.Z, {
+        targetElementRef: d,
         user: j,
         guildId: k,
-        channelId: P.id,
+        channelId: E.id,
         position: 'top',
         clickTrap: !0,
         children: (e) =>
@@ -173,24 +175,24 @@ function T(e) {
                 children: (t) =>
                     (0, r.jsx)(
                         s.P3F,
-                        C(v({}, t, e), {
-                            innerRef: b,
+                        N(S({}, t, e), {
+                            innerRef: d,
                             onClick: (t) => {
-                                e.onClick(t), (0, h.v)(T, h.d.VOICE_USER);
+                                e.onClick(t), (0, g.v)(p, g.d.VOICE_USER);
                             },
-                            className: I.avatarContainer,
+                            className: C.avatarContainer,
                             onContextMenu: F,
-                            focusProps: S,
-                            children: (0, r.jsx)(g.Z, {
-                                shakeLocation: O.oZ.VOICE_USER,
+                            focusProps: T,
+                            children: (0, r.jsx)(b.Z, {
+                                shakeLocation: I.oZ.VOICE_USER,
                                 isShaking: D,
                                 children: (0, r.jsx)('div', {
-                                    className: a()(I.avatar, { [I.speaking]: D }),
+                                    className: a()(C.avatar, { [C.speaking]: D }),
                                     style: { backgroundImage: 'url('.concat(M, ')') },
                                     children:
                                         null != G
                                             ? (0, r.jsx)(G, {
-                                                  className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: V }),
+                                                  className: a()(C.avatarIconOverlay, { [C.avatarIconRed]: V }),
                                                   color: 'currentColor',
                                                   size: 'xs'
                                               })
@@ -202,47 +204,65 @@ function T(e) {
             })
     });
 }
-function P(e) {
+function A(e) {
     let { voiceStates: t, channel: n, className: l } = e,
         [c, u] = i.useState(!1),
-        d = c ? s.V_R : s.qJs,
-        p = (0, r.jsx)(s.M0o, {
+        h = (0, o.e7)([E.default], () => E.default.getId()),
+        { containerRef: f, maxVisibleAvatars: g } = (function (e) {
+            let [t, n] = i.useState(7),
+                r = (0, p.Z)(() => {
+                    let t = null == l ? void 0 : l.current;
+                    if (null == t) return;
+                    let r = Math.floor((t.offsetWidth + 4) / 28);
+                    n(Math.max(1, e > r ? r - 1 : r));
+                }),
+                l = (0, d.y)(r, [e], {
+                    fireOnMount: !0,
+                    fireOnDepsChange: !0
+                });
+            return {
+                containerRef: l,
+                maxVisibleAvatars: t
+            };
+        })(t.length - 1),
+        [m, b] = (function (e, t, n) {
+            let r = [];
+            for (let i of e)
+                if (i.user.id !== t && !r.some((e) => e.user.id === i.user.id)) {
+                    if (r.length >= n) return [r, !0];
+                    r.push(i);
+                }
+            return [r, !1];
+        })(t, h, g),
+        _ = c ? s.V_R : s.qJs,
+        O = (0, r.jsx)(s.M0o, {
             onClick: () => u(!c),
             color: s.YX$.PRIMARY,
             size: s.tT7.SIZE_24,
-            tooltip: c ? y.intl.string(y.t['Z/Tya2']) : y.intl.string(y.t.XR5BAQ),
-            icon: (0, r.jsx)(d, {
+            tooltip: c ? v.intl.string(v.t['Z/Tya2']) : v.intl.string(v.t.XR5BAQ),
+            icon: (0, r.jsx)(_, {
                 size: 'xs',
                 color: 'currentColor'
             }),
-            focusProps: S
+            focusProps: T
         }),
-        h = (0, o.e7)([b.default], () => b.default.getId(), []),
-        [f, g] = (function (e, t) {
-            let n = [];
-            for (let r of e)
-                if (r.user.id !== t && !n.some((e) => e.user.id === r.user.id)) {
-                    if (n.length >= 7) return [n, !0];
-                    n.push(r);
-                }
-            return [n, !1];
-        })(t, h),
-        m = g && c ? t : f;
-    return m.length <= 0
+        y = b && c ? t : m;
+    return y.length <= 0
         ? null
         : (0, r.jsx)(s.zJl, {
-              className: a()(I.scroller, l),
+              className: a()(C.scroller, l),
               fade: !0,
               children: (0, r.jsxs)('div', {
-                  className: I.voiceUsers,
+                  ref: f,
+                  className: a()(C.voiceUsers, !c && C.collapsed),
                   role: 'group',
-                  'aria-label': y.intl.string(y.t['/ZgaVV']),
+                  'aria-label': v.intl.string(v.t['/ZgaVV']),
                   children: [
-                      m.map((e) => {
+                      y.map((e) => {
                           let { user: t, nick: i, voiceState: l } = e;
                           return t.id !== h
                               ? (0, r.jsx)(
-                                    T,
+                                    j,
                                     {
                                         channel: n,
                                         user: t,
@@ -257,7 +277,7 @@ function P(e) {
                                 )
                               : null;
                       }),
-                      g ? p : null
+                      b ? O : null
                   ]
               })
           });

@@ -260,8 +260,8 @@ function Y(e) {
     (0, i.M$)() && f.default.track(v.rMx.EXPLICIT_MEDIA_OBSCURITY_TOGGLE_V2, { toggle_direction: t ? 'hide' : 'show' });
 }
 function W(e) {
-    if (null != e.attachments) return e.attachments.some((e) => null != e.flags && (0, _.yE)(e.flags, v.J0y.CONTAINS_EXPLICIT_MEDIA));
-    if (null != e.embeds) return e.embeds.some((e) => null != e.flags && (0, _.yE)(e.flags, v.xPJ.CONTAINS_EXPLICIT_MEDIA));
-    let t = e;
-    return null != t.messageSnapshots && t.messageSnapshots.some((e) => null != e.message && W(e.message));
+    let t = !1;
+    null != e.attachments && (t = t || e.attachments.some((e) => null != e.flags && (0, _.yE)(e.flags, v.J0y.CONTAINS_EXPLICIT_MEDIA))), null != e.embeds && (t = t || e.embeds.some((e) => null != e.flags && (0, _.yE)(e.flags, v.xPJ.CONTAINS_EXPLICIT_MEDIA)));
+    let n = e;
+    return null != n.messageSnapshots && (t = t || n.messageSnapshots.some((e) => null != e.message && W(e.message))), t;
 }

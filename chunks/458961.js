@@ -34,8 +34,8 @@ var n = r(255367),
     W = r(412110),
     w = r(513669),
     z = r(972797),
-    X = r(943516),
-    S = r(302463),
+    S = r(943516),
+    X = r(302463),
     k = r(981631),
     Q = r(674563),
     R = r(388032),
@@ -180,8 +180,8 @@ function _(e) {
         { changesSaving: eT, saveError: eF, saveProductWithAttachments: eZ, hasUnsavedAttachmentChanges: eK, cancelUnusedUploads: eW } = (0, y.P)(),
         ew = (null == ea ? void 0 : ea.attachments) != null && (null == ea ? void 0 : ea.attachments.length) > 0,
         ez = null != eF ? eF : eP,
-        eX = null != eT && 'published' in eT,
-        eS = null != eT && !eX,
+        eS = null != eT && 'published' in eT,
+        eX = null != eT && !eS,
         ek = null != (x = null == ea ? void 0 : ea.role_id) ? x : null,
         [eQ, eR] = A.useState(),
         eB = null != eQ || null != ek,
@@ -256,7 +256,7 @@ function _(e) {
         }, [er, eM]);
     A.useEffect(() => {
         (0, u.oav)(
-            S.Yz,
+            X.Yz,
             (e) =>
                 (0, n.jsx)(
                     $,
@@ -366,7 +366,7 @@ function _(e) {
                                         maxLength: 1500,
                                         placeholder: R.intl.string(R.t.BFwyur),
                                         showCharacterCount: eh.length > 0,
-                                        parentModalKey: S.Yz,
+                                        parentModalKey: X.Yz,
                                         required: !0
                                     })
                                 }),
@@ -424,7 +424,7 @@ function _(e) {
                                       })
                                     : null,
                                 eB
-                                    ? (0, n.jsx)(X.ZP, {
+                                    ? (0, n.jsx)(S.ZP, {
                                           error: null != (M = null == ez ? void 0 : ez.getFirstFieldErrorMessage(N.NB)) ? M : void 0,
                                           newRoleParams: eQ,
                                           setNewRoleParams: eR,
@@ -448,7 +448,7 @@ function _(e) {
                                     onClick: () => {
                                         i()(e$, 'Attempting to publish/unpublish when not allowed'), eY(el ? 'unpublish' : 'publish'), e3(D(L({}, eH), { published: !el }));
                                     },
-                                    submitting: eX
+                                    submitting: eS
                                 }),
                                 (0, n.jsx)('div', { className: B.verticalSeparator }),
                                 (0, n.jsx)(u.X6q, {
@@ -496,9 +496,9 @@ function _(e) {
                                     text: R.intl.string(R.t.YzGIVF),
                                     value: eB,
                                     onChange: (e) => {
-                                        e ? eR((0, X.YP)()) : eR(void 0);
+                                        e ? eR((0, S.YP)()) : eR(void 0);
                                     },
-                                    warning: null === eQ ? (0, n.jsx)(X.aN, {}) : void 0,
+                                    warning: null === eQ ? (0, n.jsx)(S.aN, {}) : void 0,
                                     disabled: null != ek
                                 }),
                                 (0, n.jsx)(H, {
@@ -537,7 +537,7 @@ function _(e) {
                                 ? (0, n.jsx)(u.zxk, {
                                       color: u.zxk.Colors.PRIMARY,
                                       disabled: !e_,
-                                      submitting: eS,
+                                      submitting: eX,
                                       onClick: () => {
                                           i()(e_, 'cannot save changes for published product without adding all fields'), eY('update_publish'), e3(eH);
                                       },
@@ -546,7 +546,7 @@ function _(e) {
                                 : (0, n.jsx)(u.zxk, {
                                       color: u.zxk.Colors.PRIMARY,
                                       disabled: !eJ,
-                                      submitting: eS,
+                                      submitting: eX,
                                       onClick: () => {
                                           i()(eJ, 'cannot save changes without name or price tier'), eY('draft'), e3(eH);
                                       },
@@ -569,7 +569,7 @@ function $(e) {
     return (0, n.jsx)(y.W, {
         guildId: e.guildId,
         editSkuId: null != (t = e.productId) ? t : void 0,
-        onFileSizeError: () => (0, x.Z)(S.ve),
+        onFileSizeError: () => (0, x.Z)(X.ve),
         children: (0, n.jsx)(_, L({}, e))
     });
 }

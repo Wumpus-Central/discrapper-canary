@@ -1,9 +1,9 @@
 var r = n(970711);
-e.exports = n.v(t, e.id, '030057ef84093deb', {
+e.exports = n.v(t, e.id, '7b10933be3d1e3e1', {
     './libdiscore_wasm_bg.js': {
         __wbindgen_is_undefined: r.XP,
-        __wbg_warn_2159aed0435b2f46: r.fw,
         __wbindgen_string_new: r.h4,
+        __wbg_warn_2159aed0435b2f46: r.fw,
         __wbindgen_cb_drop: r.G6,
         __wbindgen_string_get: r.qt,
         __wbindgen_is_object: r.Wl,
@@ -23,8 +23,13 @@ e.exports = n.v(t, e.id, '030057ef84093deb', {
         __wbg_newwithoptblobandinit_813b17381b1c8c7d: r.z3,
         __wbg_arrayBuffer_d1b44c4390db422f: r.H0,
         __wbg_newwithstrandinit_06c535e0a867c635: r.r3,
-        __wbg_setheaders_3b47c898e8de6d44: r.Rs,
-        __wbg_setstatus_51b4fc011091cbb3: r.Yc,
+        __wbg_newwithu8arraysequence_1e24f242a67f6fdd: r.D7,
+        __wbg_setbody_5923b78a95eedf29: r.OU,
+        __wbg_setcredentials_c3a22f1cd105a2c6: r.Wt,
+        __wbg_setheaders_834c0bdb6a8949ad: r.w7,
+        __wbg_setmethod_3c5280fe5d890842: r.pj,
+        __wbg_setmode_5dc300b865044b65: r.IU,
+        __wbg_setsignal_75b21ef3a81de905: r.R7,
         __wbg_signal_aaf9ad74119f20a4: r.Tc,
         __wbg_new_e25e5aab09ff45db: r.BQ,
         __wbg_abort_775ef1d17fc65868: r.Zk,
@@ -33,13 +38,8 @@ e.exports = n.v(t, e.id, '030057ef84093deb', {
         __wbg_match_5b6cb6a9ae1700aa: r.Vr,
         __wbg_put_75886410036f9ae5: r.jm,
         __wbg_open_97e7dd08648f7ba8: r.On,
-        __wbg_newwithu8arraysequence_1e24f242a67f6fdd: r.D7,
-        __wbg_setbody_5923b78a95eedf29: r.OU,
-        __wbg_setcredentials_c3a22f1cd105a2c6: r.Wt,
-        __wbg_setheaders_834c0bdb6a8949ad: r.w7,
-        __wbg_setmethod_3c5280fe5d890842: r.pj,
-        __wbg_setmode_5dc300b865044b65: r.IU,
-        __wbg_setsignal_75b21ef3a81de905: r.R7,
+        __wbg_setheaders_3b47c898e8de6d44: r.Rs,
+        __wbg_setstatus_51b4fc011091cbb3: r.Yc,
         __wbg_new_018dcc2d6c8c2f6a: r.iR,
         __wbg_append_8c7dd8d641a5f01b: r.pC,
         __wbg_set_11cd83f45504cedf: r.Hh,
@@ -76,9 +76,9 @@ e.exports = n.v(t, e.id, '030057ef84093deb', {
         __wbindgen_debug_string: r.fY,
         __wbindgen_throw: r.Or,
         __wbindgen_memory: r.oH,
-        __wbindgen_closure_wrapper720: r.jc,
-        __wbindgen_closure_wrapper745: r.b0,
-        __wbindgen_closure_wrapper1408: r.Cv,
+        __wbindgen_closure_wrapper709: r.IK,
+        __wbindgen_closure_wrapper763: r.s5,
+        __wbindgen_closure_wrapper1401: r.EO,
         __wbindgen_init_externref_table: r.xQ
     }
 });

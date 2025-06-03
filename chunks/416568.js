@@ -33,8 +33,8 @@ var r = n(255367),
     A = n(271383),
     D = n(430824),
     L = n(771845),
-    k = n(358085),
-    M = n(709054),
+    M = n(358085),
+    k = n(709054),
     U = n(727258),
     G = n(605951),
     B = n(257351),
@@ -121,7 +121,7 @@ function ea(e, t) {
     }
     return i;
 }
-let ec = (0, k.isWindows)() ? 4 : 12 * !(0, k.isMac)();
+let ec = (0, M.isWindows)() ? 4 : 12 * !(0, M.isMac)();
 class eu {
     setGuildsTree(e) {
         this.guildsTree = e;
@@ -234,7 +234,7 @@ function ed(e) {
         l = (0, S.Z)(),
         { pathname: o } = (0, c.TH)(),
         s = o.startsWith(en.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB('')),
-        a = (0, h.Wu)([D.Z, A.ZP], () => M.default.keys(D.Z.getGuilds()).filter((e) => A.ZP.isCurrentUserGuest(e))),
+        a = (0, h.Wu)([D.Z, A.ZP], () => k.default.keys(D.Z.getGuilds()).filter((e) => A.ZP.isCurrentUserGuest(e))),
         u = i.concat(a),
         { notificationCenterVariant: d } = P.L.useExperiment({ location: 'GuildsBar' });
     return (0, r.jsxs)(r.Fragment, {
@@ -281,7 +281,7 @@ function eh(e) {
     });
 }
 function ep(e) {
-    let { disableAppDownload: t = k.isPlatformEmbedded, isOverlay: n = !1, className: l, themeOverride: s } = e,
+    let { disableAppDownload: t = M.isPlatformEmbedded, isOverlay: n = !1, className: l, themeOverride: s } = e,
         a = (0, j.Q3)('GuildsBar'),
         [d] = (0, h.Wu)([L.ZP], () => {
             let e = L.ZP.getGuildsTree();
@@ -295,7 +295,7 @@ function ep(e) {
         I = i.useCallback(() => E(!1), []),
         A = i.useRef(!1),
         [D] = i.useState(() => new f.V7()),
-        M = i.useRef(null),
+        k = i.useRef(null),
         F = i.useRef(null),
         z = (0, u.OP)(),
         { ref: W } = z,
@@ -313,7 +313,7 @@ function ep(e) {
                     el,
                     () => {
                         var e, t;
-                        null == (e = M.current) || e.calculateState(), null == (t = F.current) || t.calculateState();
+                        null == (e = k.current) || e.calculateState(), null == (t = F.current) || t.calculateState();
                     },
                     (function (e, t, n) {
                         let r = t ? n : 8,
@@ -446,7 +446,7 @@ function ep(e) {
               )
             : ew,
         eZ = (0, r.jsx)(V.Z, {
-            ref: M,
+            ref: k,
             isVisible: eg.isItemVisible,
             onJumpTo: eg.handleJumpToGuild,
             className: ei.unreadMentionsIndicatorTop,

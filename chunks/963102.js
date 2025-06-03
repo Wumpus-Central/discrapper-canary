@@ -19,8 +19,8 @@ var r = n(255367),
     v = n(471731),
     O = n(335131),
     S = n(534517),
-    x = n(304742),
-    E = n(215023),
+    E = n(304742),
+    x = n(215023),
     y = n(981631),
     j = n(388032),
     P = n(774457);
@@ -46,58 +46,61 @@ function T(e) {
                     }, 100)
                 );
         };
-    return (0, r.jsx)(c.yRy, {
-        targetElementRef: u,
-        shouldShow: o,
-        position: 'bottom',
-        align: 'left',
-        onRequestOpen: () => g(!0),
-        onRequestClose: () => {
-            var e;
-            (0, f.Qj)(), g(!1), null == (e = u.current) || e.focus();
-        },
-        renderPopout: (e) => {
-            let { closePopout: t } = e;
-            return (0, r.jsx)(x.Z, {
-                handleTransition: i,
-                onClose: t
-            });
-        },
-        children: () =>
-            (0, r.jsxs)('div', {
-                ref: u,
-                className: P.tabWithMenu,
-                onMouseEnter: () => g(!0),
-                onMouseLeave: () => g(!1),
-                onKeyDown: (e) => {
-                    ('Enter' === e.key || ' ' === e.key) && (g(!0), e.preventDefault());
-                },
-                children: [
-                    (0, r.jsx)(
-                        k,
-                        {
-                            tab: t,
-                            displayText: a,
-                            selected: n,
-                            handleTransition: i
-                        },
-                        t
-                    ),
-                    o
-                        ? (0, r.jsx)(c.u04, {
-                              size: 'sm',
-                              color: 'currentColor'
-                          })
-                        : (0, r.jsx)(c.CJ0, {
-                              size: 'sm',
-                              color: 'currentColor'
-                          })
-                ]
-            })
+    return (0, r.jsx)('div', {
+        className: P.tabWithMenuContainer,
+        onMouseEnter: () => g(!0),
+        onMouseLeave: () => g(!1),
+        children: (0, r.jsx)(c.yRy, {
+            targetElementRef: u,
+            shouldShow: o,
+            position: 'bottom',
+            align: 'left',
+            onRequestOpen: () => g(!0),
+            onRequestClose: () => {
+                var e;
+                (0, f.Qj)(), g(!1), null == (e = u.current) || e.focus();
+            },
+            renderPopout: (e) => {
+                let { closePopout: t } = e;
+                return (0, r.jsx)(E.Z, {
+                    handleTransition: i,
+                    onClose: t
+                });
+            },
+            children: () =>
+                (0, r.jsxs)('div', {
+                    ref: u,
+                    className: P.tabWithMenu,
+                    onKeyDown: (e) => {
+                        ('Enter' === e.key || ' ' === e.key) && (g(!0), e.preventDefault());
+                    },
+                    children: [
+                        (0, r.jsx)(
+                            k,
+                            {
+                                tab: t,
+                                displayText: a,
+                                selected: n,
+                                handleTransition: i
+                            },
+                            t
+                        ),
+                        o
+                            ? (0, r.jsx)(c.u04, {
+                                  size: 'sm',
+                                  color: 'currentColor'
+                              })
+                            : (0, r.jsx)(c.CJ0, {
+                                  size: 'sm',
+                                  color: 'currentColor'
+                              })
+                    ]
+                })
+        })
     });
 }
 function I(e) {
-    let { isFullScreen: t, isLayer: n, onClose: a, selectedTab: f, handleTransition: x } = e,
+    let { isFullScreen: t, isLayer: n, onClose: a, selectedTab: f, handleTransition: E } = e,
         I = (0, p.ZP)(),
         L = (0, s.e7)([C.default], () => C.default.getCurrentUser()),
         B = (null == L ? void 0 : L.isStaff()) || (null == L ? void 0 : L.isStaffPersonal()) || !1,
@@ -105,21 +108,21 @@ function I(e) {
         N = (0, S.S)('collectibles_shop_header_bar'),
         A = [
             {
-                tab: E.AW.HOME,
+                tab: x.AW.HOME,
                 displayText: j.intl.string(j.t.ijDDw8)
             },
             {
-                tab: E.AW.CATALOG,
+                tab: x.AW.CATALOG,
                 displayText: N ? j.intl.string(j.t.Ah5sJi) : j.intl.string(j.t.xFcotb)
             }
         ];
     w &&
         A.push({
-            tab: E.AW.ORBS,
+            tab: x.AW.ORBS,
             displayText: j.intl.string(j.t['KUYR+P'])
         });
     let R = n ? O.DR : a,
-        Z = f === E.AW.ORBS ? y.ZY5.SHOP_ORBS_TAB : y.ZY5.COLLECTIBLES_SHOP,
+        Z = f === x.AW.ORBS ? y.ZY5.SHOP_ORBS_TAB : y.ZY5.COLLECTIBLES_SHOP,
         F = l.useCallback(() => {
             t && (R(), (0, u.Ou)()),
                 (0, h.Y)({
@@ -139,7 +142,7 @@ function I(e) {
                 children: [
                     (0, r.jsxs)(c.P3F, {
                         className: P.shopHomeLink,
-                        onClick: () => x(E.AW.HOME),
+                        onClick: () => E(x.AW.HOME),
                         'aria-label': j.intl.string(j.t.pWG4zc) + ' home',
                         children: [(0, r.jsx)(v.Z, { className: P.discordLogo }), (0, r.jsx)(g.Z.Title, { children: j.intl.string(j.t.pWG4zc) })]
                     }),
@@ -147,14 +150,14 @@ function I(e) {
                         className: P.tabs,
                         children: A.map((e) => {
                             let { tab: t, displayText: n } = e;
-                            return t === E.AW.CATALOG && N
+                            return t === x.AW.CATALOG && N
                                 ? (0, r.jsx)(
                                       T,
                                       {
                                           tab: t,
-                                          selected: (0, E.RE)(f) || f === t,
+                                          selected: (0, x.RE)(f) || f === t,
                                           displayText: n,
-                                          handleTransition: x
+                                          handleTransition: E
                                       },
                                       t
                                   )
@@ -164,7 +167,7 @@ function I(e) {
                                           tab: t,
                                           displayText: n,
                                           selected: f === t,
-                                          handleTransition: x
+                                          handleTransition: E
                                       },
                                       t
                                   );

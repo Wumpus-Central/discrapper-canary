@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685), n(642613), n(361932), n(187205), n(415506);
+n.d(t, { Z: () => Z }), n(388685), n(361932), n(187205), n(415506);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -58,30 +58,70 @@ function Z(e) {
         })),
         [_, j] = i.useState(x.V5.ALL),
         [I, Z] = i.useState(x.xM.UNREAD),
-        { messages: k, loadState: M, loadMore: U, hasLoadedEver: G } = (0, C.ZP)();
+        { messages: M, loadState: k, loadMore: U, hasLoadedEver: G } = (0, C.ZP)();
     (0, i.useEffect)(() => {
         if (!p) return void T(null);
     }, [p]);
     let B = (0, c.e7)([y.default], () => y.default.getCurrentUser()),
         V = (0, c.e7)([m.Z], () => m.Z.getSavedMessages()),
         H = i.useMemo(() => {
+            var e;
             if (!G) return null;
-            let e = (0, s.uniqBy)(
-                [...(null != a ? a : []), ...k.filter((e) => e.author.id !== (null == B ? void 0 : B.id))].sort((e, t) => O.default.compare(t.id, e.id)),
-                'id'
-            ).filter((e) => e.author.id !== (null == B ? void 0 : B.id) && O.default.age(e.id) < x.ib);
-            if (_ === x.V5.ALL) return e;
+            if (_ === x.V5.BOOKMARKS)
+                return V.flatMap((e) => {
+                    let { message: t } = e;
+                    return null != t
+                        ? [
+                              {
+                                  kind: x.fL.BOOKMARK,
+                                  message: t
+                              }
+                          ]
+                        : [];
+                });
+            let t = (0, s.uniqBy)(
+                [
+                    ...(null !=
+                    (e =
+                        null == a
+                            ? void 0
+                            : a.map((e) => ({
+                                  kind: x.fL.MENTION,
+                                  message: e
+                              })))
+                        ? e
+                        : []),
+                    ...M.filter((e) => e.author.id !== (null == B ? void 0 : B.id)).map((e) => ({
+                        message: e,
+                        kind: x.fL.ALL_MESSAGES_CHANNEL
+                    }))
+                ],
+                (e) => {
+                    let { message: t } = e;
+                    return t.id;
+                }
+            ).filter((e) => {
+                let { message: t } = e;
+                return t.author.id !== (null == B ? void 0 : B.id) && O.default.age(t.id) < x.ib;
+            });
+            if (_ === x.V5.ALL) return t;
             if (_ === x.V5.ANNOUNCEMENTS)
-                return null == e
+                return null == t
                     ? void 0
-                    : e.filter((e) => {
-                          let t = b.Z.getChannel(e.channel_id);
-                          return (null == t ? void 0 : t.type) === P.d4z.GUILD_ANNOUNCEMENT;
+                    : t.filter((e) => {
+                          let { message: t } = e,
+                              n = b.Z.getChannel(t.channel_id);
+                          return (null == n ? void 0 : n.type) === P.d4z.GUILD_ANNOUNCEMENT;
                       });
-            if (_ === x.V5.MENTIONS) return null == e ? void 0 : e.filter((e) => (null == B ? void 0 : B.id) != null && e.mentioned && e.mentions.includes(null == B ? void 0 : B.id));
-            if (_ === x.V5.BOOKMARKS) return V.flatMap((e) => (null != e.message ? [e.message] : []));
+            if (_ === x.V5.MENTIONS)
+                return null == t
+                    ? void 0
+                    : t.filter((e) => {
+                          let { message: t } = e;
+                          return (null == B ? void 0 : B.id) != null && t.mentioned && t.mentions.includes(null == B ? void 0 : B.id);
+                      });
             throw Error('Unknown filter: '.concat(_));
-        }, [_, a, B, V, k, G]),
+        }, [_, a, B, V, M, G]),
         F = I === x.xM.READ && _ === x.V5.ALL,
         { notificationCenterVariant: z } = v.L.useExperiment({ location: 'NotificationsInboxSidebar' });
     return (0, r.jsxs)('nav', {
@@ -160,12 +200,12 @@ function Z(e) {
                 className: w.messageList,
                 renderMessageGroup: A,
                 messages: H,
-                loading: h || M === C.jd.Loading,
+                loading: h || k === C.jd.Loading,
                 analyticsName: 'Notifications Inbox',
                 listName: 'notifications-inbox',
                 loadMore: function (e) {
                     let t = null != a && a.length > 0 ? a[a.length - 1].id : null;
-                    d && !h && T(null, t), M !== C.jd.Done && M !== C.jd.Loading && U(e);
+                    d && !h && T(null, t), k !== C.jd.Done && k !== C.jd.Loading && U(e);
                 },
                 renderEmptyState: R,
                 setInboxReadState: Z,
