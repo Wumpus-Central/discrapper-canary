@@ -62,6 +62,6 @@ class l {
         );
     }
     constructor(e) {
-        i(this, 'title', void 0), i(this, 'body', void 0), i(this, 'assetDark', void 0), i(this, 'assetLight', void 0), (this.type = r.Z.COACHMARK), (this.title = e.title), (this.body = e.body), (this.assetDark = e.assetDark), (this.assetLight = e.assetLight);
+        i(this, 'title', void 0), i(this, 'body', void 0), i(this, 'assetDark', void 0), i(this, 'assetLight', void 0), i(this, 'version', void 0), (this.type = r.Z.COACHMARK), (this.title = e.title), (this.body = e.body), (this.assetDark = e.assetDark), (this.assetLight = e.assetLight), (this.version = e.version);
     }
 }

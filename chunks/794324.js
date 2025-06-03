@@ -1,59 +1,60 @@
 n.d(t, {
-    Ac: () => h,
-    OR: () => p,
-    YG: () => f,
-    hr: () => d,
-    mB: () => m,
-    t0: () => _
+    Ac: () => m,
+    OR: () => h,
+    YG: () => _,
+    hr: () => f,
+    mB: () => g,
+    t0: () => p
 });
 var r = n(73800),
-    i = n(884697),
-    a = n(318028),
-    o = n(823941),
-    s = n(219778),
-    l = n(619899),
-    c = n(281598),
-    u = n(215023);
-let d = (e) => {
-        let t = (0, l.zL)(c.jE.HERO_LOGO),
-            n = (0, l.zL)(c.jE.HERO_BANNER_STATIC),
-            i = (0, l.zL)(c.jE.HERO_BANNER_ANIMATED),
-            a = (0, s.n)(null == e ? void 0 : e.categorySkuId);
+    i = n(264181),
+    a = n(884697),
+    o = n(318028),
+    s = n(823941),
+    l = n(219778),
+    c = n(619899),
+    u = n(281598),
+    d = n(215023);
+let f = (e) => {
+        let t = (0, c.zL)(u.jE.HERO_LOGO),
+            n = (0, c.zL)(u.jE.HERO_BANNER_STATIC),
+            i = (0, c.zL)(u.jE.HERO_BANNER_ANIMATED),
+            a = (0, l.n)(null == e ? void 0 : e.categorySkuId);
         return r.useMemo(() => {
             var r, o, s, l, c;
-            let d = (0, u.ZS)(e.categorySkuId),
+            let u = (0, d.ZS)(e.categorySkuId),
                 f = null != n || null != i;
             return {
                 isPreviewingStaticBanner: null != n && null == i,
-                bannerOverrides: d,
+                bannerOverrides: u,
                 bannerStyleOverrides: f ? void 0 : a,
                 heroLogo: null != t ? t : e.logoUrl,
                 heroBannerStatic: null != (l = null != n ? n : null == (r = e.bannerAsset) ? void 0 : r.static) ? l : e.fallbackBannerUrl,
-                heroBannerAnimated: null != (c = null != i ? i : null == d || null == (o = d.heroBanner) ? void 0 : o.animationSource) ? c : null == (s = e.bannerAsset) ? void 0 : s.animated
+                heroBannerAnimated: null != (c = null != i ? i : null == u || null == (o = u.heroBanner) ? void 0 : o.animationSource) ? c : null == (s = e.bannerAsset) ? void 0 : s.animated
             };
         }, [a, t, n, i, e]);
     },
-    f = (e, t) => {
-        let n = (0, l.zL)(c.jE.FEATURED_BLOCK);
+    _ = (e, t) => {
+        let n = (0, c.zL)(u.jE.FEATURED_BLOCK);
         return r.useMemo(() => {
             var r;
-            let a = null == e ? void 0 : e.featuredBlock,
+            let i = null == e ? void 0 : e.featuredBlock,
                 o =
-                    null != a
-                        ? (0, i.uV)(a, {
-                              size: u.J0,
+                    null != i
+                        ? (0, a.uV)(i, {
+                              size: d.J0,
                               format: 'png'
                           })
                         : void 0;
             return { featuredBlockBanner: null != (r = null != n ? n : null == t ? void 0 : t.bannerUrl) ? r : o };
         }, [n, e, t]);
     },
-    _ = (e) => {
-        let t = (0, l.zL)(c.jE.SHOP_ALL_BANNER_STATIC),
-            n = (0, l.zL)(c.jE.SHOP_ALL_BANNER_ANIMATED);
+    p = (e) => {
+        let t = (0, c.zL)(u.jE.SHOP_ALL_BANNER_STATIC),
+            n = (0, c.zL)(u.jE.SHOP_ALL_BANNER_ANIMATED);
         return r.useMemo(() => {
             var r, i, a, o, s, l;
-            let c = (0, u.ZS)(e.skuId);
+            let c = (0, d.ZS)(e.skuId);
             return {
                 bannerOverrides: c,
                 shopAllBannerStatic: null != (o = null != (a = null != t ? t : n) ? a : null == (r = e.bannerAsset) ? void 0 : r.static) ? o : e.banner,
@@ -61,46 +62,47 @@ let d = (e) => {
             };
         }, [t, n, e]);
     },
-    p = (e, t) => {
-        let n = (0, l.zL)(c.jE.PDP_BACKGROUND),
-            a = (0, l.zL)(c.jE.PDP_LOGO);
+    h = (e, t) => {
+        let n = (0, c.zL)(u.jE.PDP_BACKGROUND),
+            i = (0, c.zL)(u.jE.PDP_LOGO);
         return r.useMemo(() => {
             var r;
             return {
                 pdpBackground: null != (r = null != n ? n : e.pdpBg) ? r : t.banner,
-                logo: null != a ? a : (0, i.uV)(e.logo, { size: o.n })
+                logo: null != i ? i : (0, a.uV)(e.logo, { size: s.n })
             };
-        }, [n, a, e, t]);
+        }, [n, i, e, t]);
     },
-    h = (e) => {
-        let { category: t } = (0, a.l)(e.skuId),
-            n = (0, l.zL)(c.jE.COLLECTED_MODAL_BG);
+    m = (e) => {
+        let { category: t } = (0, o.l)(e.skuId),
+            n = (0, c.zL)(u.jE.COLLECTED_MODAL_BG);
         return r.useMemo(() => {
             var r;
             return { collectedModalBackground: null != (r = null != n ? n : null == t ? void 0 : t.successModalBg) ? r : e.banner };
         }, [n, t, e]);
     },
-    m = (e) => {
-        let t = (0, l.zL)(c.jE.SHOP_BUTTON_BG_HOVER),
-            n = (0, l.zL)(c.jE.SHOP_BUTTON_BG_HOVER_DARK),
-            i = (0, l.zL)(c.jE.SHOP_BUTTON_BG_HOVER_LIGHT),
-            a = (0, l.zL)(c.jE.SHOP_BUTTON_BG_RESTING),
-            o = (0, l.zL)(c.jE.SHOP_BUTTON_BG_RESTING_DARK),
-            s = (0, l.zL)(c.jE.SHOP_BUTTON_BG_RESTING_LIGHT),
-            u = (0, l.zL)(c.jE.COACHTIP_AVATAR);
+    g = (e) => {
+        let t = (0, c.zL)(u.jE.SHOP_BUTTON_BG_HOVER),
+            n = (0, c.zL)(u.jE.SHOP_BUTTON_BG_HOVER_DARK),
+            a = (0, c.zL)(u.jE.SHOP_BUTTON_BG_HOVER_LIGHT),
+            o = (0, c.zL)(u.jE.SHOP_BUTTON_BG_RESTING),
+            s = (0, c.zL)(u.jE.SHOP_BUTTON_BG_RESTING_DARK),
+            l = (0, c.zL)(u.jE.SHOP_BUTTON_BG_RESTING_LIGHT),
+            d = (0, c.zL)(u.jE.COACHTIP_AVATAR);
         return r.useMemo(() => {
-            var r, l, c, d, f;
-            let _ = [t, n, i, a, o, s, u].some((e) => null != e),
-                p = null == e || null == (r = e.refTargetBackground) ? void 0 : r.asset,
-                h = null == p ? void 0 : p.resting,
-                m = null == p ? void 0 : p.hovered;
+            var r, c, u, f, _;
+            let p = [t, n, a, o, s, l, d].some((e) => null != e);
+            if ((null == e ? void 0 : e.type) === i.Z.COACHMARK) return { hasPreviewAssets: !1 };
+            let h = null == e || null == (r = e.refTargetBackground) ? void 0 : r.asset,
+                m = null == h ? void 0 : h.resting,
+                g = null == h ? void 0 : h.hovered;
             return {
-                hasPreviewAssets: _,
-                buttonBGHoverDark: null != (l = null != n ? n : t) ? l : null == m ? void 0 : m.dark,
-                buttonBGHoverLight: null != (c = null != i ? i : t) ? c : null == m ? void 0 : m.light,
-                buttonBGRestingDark: null != (d = null != o ? o : a) ? d : null == h ? void 0 : h.dark,
-                buttonBGRestingLight: null != (f = null != s ? s : a) ? f : null == h ? void 0 : h.light,
-                coachtipAvatar: null != u ? u : null == e ? void 0 : e.avatar
+                hasPreviewAssets: p,
+                buttonBGHoverDark: null != (c = null != n ? n : t) ? c : null == g ? void 0 : g.dark,
+                buttonBGHoverLight: null != (u = null != a ? a : t) ? u : null == g ? void 0 : g.light,
+                buttonBGRestingDark: null != (f = null != s ? s : o) ? f : null == m ? void 0 : m.dark,
+                buttonBGRestingLight: null != (_ = null != l ? l : o) ? _ : null == m ? void 0 : m.light,
+                coachtipAvatar: null != d ? d : null == e ? void 0 : e.avatar
             };
-        }, [t, n, i, a, o, s, u, e]);
+        }, [t, n, a, o, s, l, d, e]);
     };
