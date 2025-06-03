@@ -10,7 +10,7 @@ let a = (e) => {
         a,
         s,
         { size: c = 'md', width: u, height: d, color: m = l.Z.colors.INTERACTIVE_NORMAL } = e,
-        p = (function (e, t) {
+        f = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -29,9 +29,9 @@ let a = (e) => {
             }
             return l;
         })(e, ['size', 'width', 'height', 'color']);
-    let f = (0, o.m)(c),
-        v = null != (a = null == f ? void 0 : f.width) ? a : u,
-        g = null != (s = null == f ? void 0 : f.height) ? s : d;
+    let p = (0, o.m)(c),
+        v = null != (a = null == p ? void 0 : p.width) ? a : u,
+        g = null != (s = null == p ? void 0 : p.height) ? s : d;
     return (0, r.jsxs)(
         'svg',
         ((t = (function (e) {
@@ -58,7 +58,7 @@ let a = (e) => {
                     });
             }
             return e;
-        })({}, (0, i.Z)(p))),
+        })({}, (0, i.Z)(f))),
         (n = n =
             {
                 xmlns: 'http://www.w3.org/2000/svg',

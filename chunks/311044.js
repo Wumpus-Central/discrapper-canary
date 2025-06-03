@@ -16,18 +16,18 @@ function _(e) {
     let { user: t, guildId: n, channelId: _, onClose: y } = e,
         { analyticsLocations: x } = (0, l.ZP)(),
         { context: h, trackUserProfileAction: j } = (0, s.KZ)(),
-        { mutualFriends: g, mutualFriendsCount: I } = (0, d.Z)(t),
-        v = (0, c.Z)();
+        { mutualFriends: g, mutualFriendsCount: v } = (0, d.Z)(t),
+        I = (0, c.Z)();
     return (
         r.useEffect(() => {
-            (0, u.Z)(t.id, v);
-        }, [t.id, v]),
+            (0, u.Z)(t.id, I);
+        }, [t.id, I]),
         (0, o.jsx)(i.Ttm, {
             className: b.scroller,
             fade: !0,
             children:
                 null == g
-                    ? Array.from({ length: null != I ? I : 10 }).map((e, t) =>
+                    ? Array.from({ length: null != v ? v : 10 }).map((e, t) =>
                           (0, o.jsxs)(
                               'div',
                               {

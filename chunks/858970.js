@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685), n(953529);
+n.d(t, { Z: () => I }), n(388685), n(953529);
 var o = n(255367);
 n(73800);
 var r = n(442837),
@@ -19,7 +19,7 @@ var r = n(442837),
     h = n(981631),
     j = n(388032),
     g = n(247787);
-function I(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             o = Object.keys(n);
@@ -44,17 +44,17 @@ function I(e) {
     }
     return e;
 }
-function v(e) {
-    let { user: t, guildId: n, channelId: v, messageId: O, roleId: P, transitionState: N, openedAt: A, onHide: T, sourceAnalyticsLocations: Z = [] } = e,
+function I(e) {
+    let { user: t, guildId: n, channelId: I, messageId: O, roleId: P, transitionState: N, openedAt: A, onHide: Z, sourceAnalyticsLocations: T = [] } = e,
         C = n === h.ME ? void 0 : n,
         w = (0, r.e7)([s.Z], () => s.Z.isBlocked(t.id)),
-        { analyticsLocations: S } = (0, l.ZP)([...Z, w ? c.Z.BLOCKED_PROFILE_MODAL : c.Z.IGNORED_PROFILE_MODAL]),
+        { analyticsLocations: S } = (0, l.ZP)([...T, w ? c.Z.BLOCKED_PROFILE_MODAL : c.Z.IGNORED_PROFILE_MODAL]),
         E = (0, u.ZB)({
             layout: 'MODAL_V2',
             userId: t.id,
             showGuildProfile: !0,
             guildId: C,
-            channelId: v,
+            channelId: I,
             messageId: O,
             roleId: P
         }),
@@ -106,7 +106,7 @@ function v(e) {
                                         (0, o.jsx)(i.Text, {
                                             variant: 'text-md/medium',
                                             color: 'text-normal',
-                                            children: j.intl.format(w ? j.t.T7QiLi : j.t.MnEow8, { username: d.ZP.getName(C, v, t) })
+                                            children: j.intl.format(w ? j.t.T7QiLi : j.t.MnEow8, { username: d.ZP.getName(C, I, t) })
                                         })
                                     ]
                                 }),
@@ -133,9 +133,9 @@ function v(e) {
                                             size: i.PhG.MEDIUM,
                                             isBlocked: w,
                                             onClick: () => {
-                                                T(),
+                                                Z(),
                                                     (0, f.pQ)(
-                                                        I(
+                                                        v(
                                                             {
                                                                 action: w ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
                                                                 analyticsLocations: S
@@ -148,9 +148,9 @@ function v(e) {
                                         (0, o.jsx)(_.Z, {
                                             userId: t.id,
                                             onClick: () => {
-                                                T(),
+                                                Z(),
                                                     (0, f.pQ)(
-                                                        I(
+                                                        v(
                                                             {
                                                                 action: 'DONT_SHOW_AGAIN_IGNORED_PROFILE',
                                                                 analyticsLocations: S

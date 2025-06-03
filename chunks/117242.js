@@ -46,8 +46,8 @@ function o(e, t) {
 function i(e) {
     let { getCurrentVideoTime: t, isPlaying: n, isMetadataLoaded: i, isInitialSeekComplete: a, onAnalytics: s, emitIntervalMs: c, minSegmentDurationMs: u } = e,
         [d, m] = r.useState(null),
-        p = (0, r.useRef)(null),
-        f = (0, r.useRef)(Date.now()),
+        f = (0, r.useRef)(null),
+        p = (0, r.useRef)(Date.now()),
         v = (0, r.useRef)(!1),
         g = (0, r.useCallback)(
             (e) => {
@@ -80,7 +80,7 @@ function i(e) {
             let e = t();
             if (null == e || null == d) return;
             let n = Date.now();
-            !(n - f.current < c) &&
+            !(n - p.current < c) &&
                 (e - d.segmentStartSec < u / 1000 ||
                     (g(
                         o(l({}, d), {
@@ -94,7 +94,7 @@ function i(e) {
                         segmentStartSec: e,
                         segmentEndSec: e
                     }),
-                    (f.current = n)));
+                    (p.current = n)));
         }, [d, g, c, u, t]);
     return (
         (0, r.useEffect)(() => {
@@ -103,7 +103,7 @@ function i(e) {
         (0, r.useEffect)(() => {
             if (n && i && a)
                 v.current || b(),
-                    (p.current = window.setInterval(() => {
+                    (f.current = window.setInterval(() => {
                         E();
                     }, 200));
             else {
@@ -118,10 +118,10 @@ function i(e) {
                             })
                         );
                 }
-                m(null), (v.current = !1), null != p.current && (clearInterval(p.current), (p.current = null));
+                m(null), (v.current = !1), null != f.current && (clearInterval(f.current), (f.current = null));
             }
             return () => {
-                null != p.current && (clearInterval(p.current), (p.current = null));
+                null != f.current && (clearInterval(f.current), (f.current = null));
             };
         }, [n, i, a, d, E, g, b, t]),
         {

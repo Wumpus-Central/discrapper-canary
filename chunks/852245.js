@@ -1,36 +1,36 @@
-t.d(e, { Z: () => d });
+t.d(e, { Z: () => b });
 var r = t(255367);
 t(73800);
-var i = t(442837),
-    l = t(481060),
-    a = t(787014),
-    c = t(685929),
-    o = t(496675),
-    s = t(981631),
-    u = t(388032);
-function d(n) {
+var l = t(442837),
+    i = t(481060),
+    c = t(787014),
+    o = t(685929),
+    a = t(496675),
+    u = t(981631),
+    s = t(388032);
+function b(n) {
     let {
         canManageChannels: e,
         canManageRoles: t,
-        canManageWebhooks: d,
-        canAccessChannel: f,
-        canUnlinkChannel: h
-    } = (0, i.cj)(
-        [o.Z],
+        canManageWebhooks: b,
+        canAccessChannel: d,
+        canUnlinkChannel: f
+    } = (0, l.cj)(
+        [a.Z],
         () => ({
-            canManageChannels: o.Z.can(s.Plq.MANAGE_CHANNELS, n),
-            canManageRoles: o.Z.can(s.Plq.MANAGE_ROLES, n),
-            canManageWebhooks: o.Z.can(s.Plq.MANAGE_WEBHOOKS, n),
-            canAccessChannel: o.Z.can(n.accessPermissions, n),
-            canUnlinkChannel: (0, c.C)(n, o.Z)
+            canManageChannels: a.Z.can(u.Plq.MANAGE_CHANNELS, n),
+            canManageRoles: a.Z.can(u.Plq.MANAGE_ROLES, n),
+            canManageWebhooks: a.Z.can(u.Plq.MANAGE_WEBHOOKS, n),
+            canAccessChannel: a.Z.can(n.accessPermissions, n),
+            canUnlinkChannel: (0, o.C)(n, a.Z)
         }),
         [n]
     );
-    return !__OVERLAY__ && f && (e || t || d || h)
-        ? (0, r.jsx)(l.sNh, {
+    return !__OVERLAY__ && d && (e || t || b || f)
+        ? (0, r.jsx)(i.sNh, {
               id: 'edit-channel',
-              label: n.type === s.d4z.GUILD_CATEGORY ? u.intl.string(u.t.zdPFs7) : u.intl.string(u.t['3gUsJS']),
-              action: () => a.ZP.open(n.id)
+              label: n.type === u.d4z.GUILD_CATEGORY ? s.intl.string(s.t.zdPFs7) : s.intl.string(s.t['3gUsJS']),
+              action: () => c.ZP.open(n.id)
           })
         : null;
 }

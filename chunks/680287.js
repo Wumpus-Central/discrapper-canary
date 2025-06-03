@@ -64,7 +64,7 @@ class u extends a.Z {
                 })
             );
         }
-        return this.files;
+        return this._handleComplete(), this.files;
     }
     async uploadFiles(e, t) {
         let { addFilesTo: r } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};

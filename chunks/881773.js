@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(561779),
     d = n(481060),
     m = n(607070),
-    p = n(540059),
-    f = n(184299),
+    f = n(540059),
+    p = n(184299),
     v = n(902749),
     g = n(957099),
     b = n(312729),
@@ -105,7 +105,7 @@ function x(e) {
     );
 }
 let D = l.forwardRef(function (e, t) {
-    let { iconComponent: n, animationTime: l, visible: o, ariaLabel: s, active: u, disabled: m, tooltipLabel: p, tooltipDelayMs: f = 1500, shortcut: v, onClick: g } = e,
+    let { iconComponent: n, animationTime: l, visible: o, ariaLabel: s, active: u, disabled: m, tooltipLabel: f, tooltipDelayMs: p = 1500, shortcut: v, onClick: g } = e,
         b = (e) =>
             (0, r.jsx)(
                 d.P3F,
@@ -138,11 +138,11 @@ let D = l.forwardRef(function (e, t) {
                     })
                 })
             );
-    if (null == p) return b();
+    if (null == f) return b();
     {
         let e = (0, r.jsxs)(r.Fragment, {
             children: [
-                p,
+                f,
                 '' !== (null != v ? v : '').trim() &&
                     (0, r.jsx)(d.M2$, {
                         shortcut: null != v ? v : '',
@@ -152,9 +152,9 @@ let D = l.forwardRef(function (e, t) {
         });
         return (0, r.jsx)(d.ua7, {
             text: e,
-            'aria-label': p,
+            'aria-label': f,
             tooltipContentClassName: C.videoControlsBtnTooltip,
-            delay: f,
+            delay: p,
             children: (e) => b(e)
         });
     }
@@ -162,15 +162,15 @@ let D = l.forwardRef(function (e, t) {
 function T(e) {
     var t, n;
     let { videoRef: o, playerState: O, animSpring: y, visible: T, seekForwardEnabled: P, hideCaptionBtn: N, handlePlaybackBtnClick: k, handleTranscriptBtnClick: I, handleCaptionBtnClick: w, handleFullScreenBtnClick: A, handleSeekBackBtnClick: L, handleSeekForwardBtnClick: R, handleControlBarPendingInteraction: M, onVolumeChange: V } = e,
-        B = (0, p.Q3)('ListSectionItem'),
-        F = (0, f.km)((e) => e.volume),
-        Z = (0, f.km)((e) => e.setVolume),
-        q = (0, f.km)((e) => e.muted),
-        U = (0, f.km)((e) => e.setMuted),
-        Q = (0, f.km)((e) => e.transcriptEnabled),
-        G = (0, f.km)((e) => e.captionEnabled),
-        H = (0, f.km)((e) => e.fullScreenEnabled),
-        Y = (0, s.e7)([m.Z], () => m.Z.useReducedMotion),
+        B = (0, f.Q3)('ListSectionItem'),
+        F = (0, p.km)((e) => e.volume),
+        Z = (0, p.km)((e) => e.setVolume),
+        q = (0, p.km)((e) => e.muted),
+        U = (0, p.km)((e) => e.setMuted),
+        Q = (0, p.km)((e) => e.transcriptEnabled),
+        G = (0, p.km)((e) => e.captionEnabled),
+        Y = (0, p.km)((e) => e.fullScreenEnabled),
+        H = (0, s.e7)([m.Z], () => m.Z.useReducedMotion),
         z = (0, s.e7)([m.Z], () => m.Z.keyboardModeEnabled),
         [K, W] = l.useState(q ? 0 : F),
         [X, $] = l.useState(!1),
@@ -233,13 +233,13 @@ function T(e) {
             () => (
                 en({
                     volumeAnimSpring: J || X ? 1 : 0,
-                    immediate: Y
+                    immediate: H
                 }),
                 () => {
                     et.stop();
                 }
             ),
-            [J, X, en, Y, et]
+            [J, X, en, H, et]
         ),
         l.useEffect(
             () => (
@@ -412,7 +412,7 @@ function T(e) {
                             shortcut: E.Y1.CAPTION
                         }),
                     (0, r.jsx)(D, {
-                        iconComponent: H ? d.wvt : d.NpZ,
+                        iconComponent: Y ? d.wvt : d.NpZ,
                         animationTime: y,
                         visible: T,
                         onClick: A,

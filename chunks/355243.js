@@ -9,10 +9,10 @@ var r = n(255367),
     u = n(604162),
     d = n(420212),
     m = n(650762);
-function p(e, t, n) {
+function f(e, t, n) {
     return n * (Math.max(e - t.left, 0) / t.width);
 }
-function f(e, t, n) {
+function p(e, t, n) {
     return n.left + (e / t) * n.width;
 }
 function v(e) {
@@ -26,7 +26,7 @@ function v(e) {
             (N.current = e), j(e);
         };
     l.useEffect(() => {
-        null != S && (null == E ? D(null) : D(f(E, b, S)));
+        null != S && (null == E ? D(null) : D(p(E, b, S)));
     }, [S, E, b]);
     let I = (0, c.Z)((e) => {
             k(e.contentRect);
@@ -51,9 +51,9 @@ function v(e) {
             },
             [h, C]
         ),
-        R = null != y && null != S ? p(y, S, b) : 0,
+        R = null != y && null != S ? f(y, S, b) : 0,
         M = (0, u.yv)(R),
-        V = null != S ? S.right - f((t / 100) * b, b, S) : null,
+        V = null != S ? S.right - p((t / 100) * b, b, S) : null,
         B = null != y && null != S ? S.right - y : null,
         F = null != x && null != S ? S.right - x : null;
     return (0, r.jsxs)('div', {
@@ -64,7 +64,7 @@ function v(e) {
                 className: i()(m.hitboxArea, { [m.interactionEnabled]: o }),
                 ignoreKeyPress: !0,
                 onClick: (e) => {
-                    o && null != O && O(p(e.clientX, e.currentTarget.getBoundingClientRect(), b));
+                    o && null != O && O(f(e.clientX, e.currentTarget.getBoundingClientRect(), b));
                 },
                 onMouseEnter: (e) => {
                     o && (null != w.current && k(w.current.getBoundingClientRect()), P(!0), A(e));

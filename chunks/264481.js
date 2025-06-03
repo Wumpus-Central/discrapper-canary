@@ -1,7 +1,7 @@
 n.d(t, {
-    P9: () => v,
+    P9: () => I,
     Uf: () => P,
-    b0: () => I,
+    b0: () => v,
     s_: () => g
 }),
     n(388685);
@@ -21,7 +21,7 @@ var o = n(255367),
 let _ = [() => m.intl.string(m.t.madJdH), () => m.intl.string(m.t.NYmfoK), () => m.intl.string(m.t.R2PaCg), () => m.intl.string(m.t.laSR8v), () => m.intl.string(m.t.DnsJEx)],
     y = [() => m.intl.string(m.t.nFSbeH), () => m.intl.string(m.t.gTcxOz), () => m.intl.string(m.t['8T0wYm']), () => m.intl.string(m.t.BIHl1t), () => m.intl.string(m.t.jhBm09)],
     x = [() => m.intl.string(m.t.AyMGXF), () => m.intl.string(m.t.aAFW7e), (e) => m.intl.formatToPlainString(m.t.h2g0cH, { name: e }), () => m.intl.string(m.t['rrYh5+']), () => m.intl.string(m.t['HX3K+P']), () => m.intl.string(m.t['/yW3aW']), () => m.intl.string(m.t['PmL/v7']), () => m.intl.string(m.t.IALa3t), () => m.intl.string(m.t.HRcTFB), () => m.intl.string(m.t.NuCqPj), () => m.intl.string(m.t['M1tw+/']), () => m.intl.string(m.t.UBm1y8), () => m.intl.string(m.t.Cu95PT), () => m.intl.string(m.t['R/wFur']), () => m.intl.string(m.t.HQPAVV), () => m.intl.string(m.t.YolGh4)],
-    h = [p.ABu.EPIC_GAMES, p.ABu.RIOT_GAMES, p.ABu.XBOX, p.ABu.SPOTIFY, p.ABu.PLAYSTATION, p.ABu.LEAGUE_OF_LEGENDS, p.ABu.STEAM, p.ABu.CRUNCHYROLL, p.ABu.YOUTUBE, p.ABu.REDDIT, p.ABu.BATTLENET, p.ABu.GITHUB, p.ABu.TIKTOK, p.ABu.TWITTER, p.ABu.TWITCH];
+    h = [p.ABu.STEAM, p.ABu.PLAYSTATION, p.ABu.XBOX, p.ABu.TWITCH, p.ABu.BATTLENET, p.ABu.LEAGUE_OF_LEGENDS, p.ABu.EPIC_GAMES, p.ABu.RIOT_GAMES, p.ABu.ROBLOX, p.ABu.SPOTIFY, p.ABu.YOUTUBE, p.ABu.CRUNCHYROLL, p.ABu.BUNGIE];
 function j(e) {
     let { heading: t, bodyText: n, children: r } = e;
     return (0, o.jsxs)('div', {
@@ -57,7 +57,7 @@ function g() {
         bodyText: t
     });
 }
-function I() {
+function v() {
     let e = m.intl.string(m.t.bFgqYG),
         [t] = r.useState(() => {
             var e;
@@ -68,7 +68,7 @@ function I() {
         bodyText: t
     });
 }
-function v(e) {
+function I(e) {
     let { user: t, guildId: n, channelId: a, onClose: s } = e,
         d = u.ZP.getName(n, a, t),
         p = m.intl.formatToPlainString(m.t.sjSitL, { name: d }),

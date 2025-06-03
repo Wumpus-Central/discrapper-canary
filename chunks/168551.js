@@ -1,36 +1,38 @@
 n.d(t, {
-    PQ: () => p,
-    ZP: () => E,
-    e3: () => h
+    PQ: () => m,
+    ZP: () => y,
+    e3: () => g
 }),
     n(388685),
     n(539854);
 var r = n(73800),
     i = n(688619),
     a = n.n(i),
-    o = n(691324),
-    s = n(442837),
-    l = n(780384),
-    c = n(210887),
-    u = n(233398),
-    d = n(514361),
-    f = n(629935),
-    _ = n(803038);
-let p = 'data-client-themes',
-    h = 'custom-theme-background',
-    m = () => {
-        let e = (0, s.e7)([d.Z], () => d.Z.gradientPreset);
-        return (0, r.useMemo)(() => {
+    o = n(392711),
+    s = n(691324),
+    l = n(442837),
+    c = n(780384),
+    u = n(210887),
+    d = n(581883),
+    f = n(233398),
+    _ = n(514361),
+    p = n(629935),
+    h = n(803038);
+let m = 'data-client-themes',
+    g = 'custom-theme-background',
+    E = () => {
+        let e = (0, l.e7)([_.Z], () => _.Z.gradientPreset);
+        return r.useMemo(() => {
             if (null == e) return null;
-            let t = d.Z.getLinearGradient();
+            let t = _.Z.getLinearGradient();
             if (null == t) return null;
-            let n = o.b[e.colors[0].token].hex,
-                r = o.b[e.colors[e.colors.length - 1].token].hex,
-                i = (0, f.W4)({
+            let n = s.b[e.colors[0].token].hex,
+                r = s.b[e.colors[e.colors.length - 1].token].hex,
+                i = (0, p.W4)({
                     enabled: !0,
                     primaryColor: n,
                     secondaryColor: r,
-                    isDarkTheme: (0, l.wj)(e.theme)
+                    isDarkTheme: (0, c.wj)(e.theme)
                 }),
                 a = '\n      '.concat(
                     Object.entries(i)
@@ -41,66 +43,84 @@ let p = 'data-client-themes',
                         .join('\n'),
                     '\n    '
                 );
-            return '.'.concat(h, ' {\n      --custom-theme-background: ').concat(t, ';\n      --custom-theme-primary-color: ').concat(n, ';\n      --custom-theme-secondary-color: ').concat(r, ';\n      ').concat(a, '\n    }');
+            return '.'.concat(g, ' {\n      --custom-theme-background: ').concat(t, ';\n      --custom-theme-primary-color: ').concat(n, ';\n      --custom-theme-secondary-color: ').concat(r, ';\n      ').concat(a, '\n    }');
         }, [e]);
     },
-    g = () => {
-        let e = _.M.useExperiment({ location: 'RootThemeContextProvider' }).enabled,
-            t = (0, s.e7)([c.Z], () => c.Z.theme),
-            { colors: n, chassisMixAmount: i, gradientAngle: o } = (0, u.I)();
-        return (0, r.useMemo)(() => {
-            if (!e || 0 === n.length) return null;
-            let r = n.slice();
-            1 === n.length && r.push(n[0]);
-            let s = n.map((e) => {
-                    let t = a()(e).rgb();
-                    return 0.2126 * t[0] + 0.7152 * t[1] + 0.0722 * t[2];
-                }),
-                c = a()(n[s.indexOf(Math.min(...s))]),
-                u = a()(n[s.indexOf(Math.max(...s))]),
-                d = 'linear-gradient('.concat(o, 'deg, ').concat(r.join(', '), ')'),
-                _ = (0, l.wj)(t),
-                p = a()(u).set('hsl.s', 1).set('hsl.l', 0.9),
-                m = a()(c).set('hsl.s', 1).set('hsl.l', 0.05);
-            return '.'
-                .concat(h, ' {\n      --custom-theme-background: ')
-                .concat(d, ';\n      --theme-bg-overlay-opacity-mix-amount: ')
-                .concat(((30 + 0.7 * i) / 100).toFixed(2), ';\n      ')
-                .concat(f.LN, ': ')
-                .concat(_ ? (25 + 0.35 * i).toFixed(1) : (30 - 0.2 * i).toFixed(1), '%;\n      ')
-                .concat(f.Po, ': ')
-                .concat(p.css(), ';\n      ')
-                .concat(f.ej, ': ')
-                .concat((0, f.dw)(p), ';\n      ')
-                .concat(f.jX, ': ')
-                .concat(m.css(), ';\n      ')
-                .concat(f.i4, ': ')
-                .concat((0, f.dw)(m), ';\n      --theme-border-color-amount: 15%;\n      ')
-                .concat(f.uv, ': ')
-                .concat(
-                    a()(u)
-                        .set('hsl.l', ((0.05 * i) / 100).toFixed(2))
-                        .css(),
-                    ';\n      '
-                )
-                .concat(f.Xg, ': ')
-                .concat(
-                    a()(c)
-                        .set('hsl.l', ((100 - 0.1 * i) / 100).toFixed(2))
-                        .css(),
-                    ';\n      '
-                )
-                .concat(f.ld, ': ')
-                .concat(_ ? 30 : 40, '%\n    }');
-        }, [n, i, o, e, t]);
+    b = () => {
+        let e = h.M.useExperiment({ location: 'RootThemeContextProvider' }).enabled,
+            t = (0, l.e7)([u.Z], () => u.Z.theme),
+            { colors: n, chassisMixAmount: i, gradientAngle: s } = (0, f.I)(),
+            _ = (0, l.e7)([d.Z], () => {
+                var e, t;
+                return null == (t = d.Z.settings.appearance) || null == (e = t.clientThemeSettings) ? void 0 : e.customUserThemeSettings;
+            }),
+            m = r.useRef(void 0);
+        return (
+            r.useEffect(() => {
+                if (!(0, o.isEqual)(_, m.current)) {
+                    var e, t, n;
+                    (m.current = _),
+                        f.I.setState({
+                            colors: null != (e = null == _ ? void 0 : _.colors) ? e : [],
+                            gradientAngle: null != (t = null == _ ? void 0 : _.gradientAngle) ? t : 0,
+                            chassisMixAmount: null != (n = null == _ ? void 0 : _.baseMix) ? n : 80
+                        });
+                }
+            }, [_]),
+            r.useMemo(() => {
+                if (!e || 0 === n.length) return null;
+                let r = n.slice();
+                1 === n.length && r.push(n[0]);
+                let o = n.map((e) => {
+                        let t = a()(e).rgb();
+                        return 0.2126 * t[0] + 0.7152 * t[1] + 0.0722 * t[2];
+                    }),
+                    l = a()(n[o.indexOf(Math.min(...o))]),
+                    u = a()(n[o.indexOf(Math.max(...o))]),
+                    d = 'linear-gradient('.concat(s, 'deg, ').concat(r.join(', '), ')'),
+                    f = (0, c.wj)(t),
+                    _ = a()(u).set('hsl.s', 1).set('hsl.l', 0.9),
+                    h = a()(l).set('hsl.s', 1).set('hsl.l', 0.05);
+                return '.'
+                    .concat(g, ' {\n      --custom-theme-background: ')
+                    .concat(d, ';\n      --theme-bg-overlay-opacity-mix-amount: ')
+                    .concat(((30 + 0.7 * i) / 100).toFixed(2), ';\n      ')
+                    .concat(p.LN, ': ')
+                    .concat(f ? (25 + 0.35 * i).toFixed(1) : (30 - 0.2 * i).toFixed(1), '%;\n      ')
+                    .concat(p.Po, ': ')
+                    .concat(_.css(), ';\n      ')
+                    .concat(p.ej, ': ')
+                    .concat((0, p.dw)(_), ';\n      ')
+                    .concat(p.jX, ': ')
+                    .concat(h.css(), ';\n      ')
+                    .concat(p.i4, ': ')
+                    .concat((0, p.dw)(h), ';\n      --theme-border-color-amount: 15%;\n      ')
+                    .concat(p.uv, ': ')
+                    .concat(
+                        a()(u)
+                            .set('hsl.l', ((0.05 * i) / 100).toFixed(2))
+                            .css(),
+                        ';\n      '
+                    )
+                    .concat(p.Xg, ': ')
+                    .concat(
+                        a()(l)
+                            .set('hsl.l', ((100 - 0.1 * i) / 100).toFixed(2))
+                            .css(),
+                        ';\n      '
+                    )
+                    .concat(p.ld, ': ')
+                    .concat(f ? 30 : 40, '%\n    }');
+            }, [n, i, s, e, t])
+        );
     },
-    E = () => {
-        let e = m(),
-            t = g();
+    y = () => {
+        let e = E(),
+            t = b();
         return null != t
             ? {
                   clientThemesCSS: t,
-                  clientThemesClassName: h
+                  clientThemesClassName: g
               }
             : null === e
               ? {
@@ -109,6 +129,6 @@ let p = 'data-client-themes',
                 }
               : {
                     clientThemesCSS: e,
-                    clientThemesClassName: h
+                    clientThemesClassName: g
                 };
     };

@@ -22,8 +22,8 @@ function b(e) {
             displayProfile: y,
             onClose: h
         }),
-        { gameFriends: I, hasOutgoingPendingGameFriends: v, hasIncomingPendingGameFriends: O } = (0, p.H)({ userId: t.id }),
-        P = I.length > 0 || v || O;
+        { gameFriends: v, hasOutgoingPendingGameFriends: I, hasIncomingPendingGameFriends: O } = (0, p.H)({ userId: t.id }),
+        P = v.length > 0 || I || O;
     return x === m.OGo.BLOCKED
         ? null
         : t.id === n.id
@@ -121,12 +121,12 @@ function b(e) {
                                 user: t,
                                 analyticsLocation: j,
                                 themeColor: 'secondary',
-                                gameFriends: I,
+                                gameFriends: v,
                                 tooltipPosition: 'top',
                                 tooltipAlign: 'center',
                                 shouldShowTooltip: !0,
                                 hasIncomingPendingGameFriends: O,
-                                hasOutgoingPendingGameFriends: v
+                                hasOutgoingPendingGameFriends: I
                             }),
                             (0, o.jsx)(d.Z, {
                                 type: 'icon',
