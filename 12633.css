@@ -1172,10 +1172,24 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     background-color: var(--button-filled-white-background-active)
 }
 
+.backdrop__78332 {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: var(--devtools-sidebar-width, 0);
+    top: 0;
+    transform: translateZ(0)
+}
+
+.backdrop__78332.withLayer__78332 {
+    pointer-events: all
+}
+
 .scrim_d9cec8 {
     background-color: var(--scrim-default);
     bottom: 0;
     left: 0;
+    pointer-events: auto;
     position: fixed;
     right: var(--devtools-sidebar-width, 0);
     top: 0;
@@ -46179,19 +46193,6 @@ div.mobilePushContainer__3d3b0 {
 
 .cell__5e1cf[data-focus-visible] {
     box-shadow: 0 0 0 4px var(--blue-345)
-}
-
-.backdrop__78332 {
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    right: var(--devtools-sidebar-width, 0);
-    top: 0;
-    transform: translateZ(0)
-}
-
-.backdrop__78332.withLayer__78332 {
-    pointer-events: all
 }
 
 .breadcrumbs__75013 {
