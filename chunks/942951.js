@@ -3,8 +3,8 @@ var i = n(255367),
     r = n(73800),
     o = n(481060),
     l = n(100527),
-    s = n(906732),
-    a = n(181918),
+    a = n(906732),
+    s = n(181918),
     c = n(670188),
     u = n(592125),
     d = n(91047);
@@ -34,11 +34,11 @@ function h(e) {
     return e;
 }
 function p(e) {
-    let { user: t, channelId: n, guildId: p, messageId: f, stopPropagation: m = !1, ariaLabel: g } = e,
+    let { user: t, channelId: n, guildId: p, messageId: m, stopPropagation: f = !1, ariaLabel: g } = e,
         b = r.useRef(null),
-        { analyticsLocations: O } = (0, s.ZP)(l.Z.USERNAME),
-        v = (0, a.$V)(p, 'useUsernameHook'),
-        j = r.useCallback(
+        { analyticsLocations: O } = (0, a.ZP)(l.Z.USERNAME),
+        j = (0, s.$V)(p, 'useUsernameHook'),
+        v = r.useCallback(
             (e) => {
                 let i = u.Z.getChannel(n);
                 null != i && null != t && (0, d.Pv)(e, t, i);
@@ -47,8 +47,8 @@ function p(e) {
         );
     return r.useCallback(
         (e) => (r, l) => {
-            let a = null == e ? void 0 : e.colorStrings,
-                u = v && null != a && null != a.primaryColor && null != a.secondaryColor,
+            let s = null == e ? void 0 : e.colorStrings,
+                u = j && null != s && null != s.primaryColor && null != s.secondaryColor,
                 d = (t) => {
                     var n, l;
                     return (0, i.jsx)(
@@ -57,11 +57,11 @@ function p(e) {
                         (l = l =
                             {
                                 ref: b,
-                                onContextMenu: j,
+                                onContextMenu: v,
                                 name: (0, o.qgQ)(r),
                                 color: null == e ? void 0 : e.colorString,
                                 roleName: null == e ? void 0 : e.colorRoleName,
-                                roleColors: u ? a : null,
+                                roleColors: u ? s : null,
                                 'aria-label': g
                             }),
                         Object.getOwnPropertyDescriptors
@@ -80,10 +80,10 @@ function p(e) {
                     );
                 },
                 y = (e) => (t) => {
-                    m && null != t && t.stopPropagation(), e(t);
+                    f && null != t && t.stopPropagation(), e(t);
                 };
             return (0, i.jsx)(
-                s.Gt,
+                a.Gt,
                 {
                     value: O,
                     children:
@@ -93,7 +93,7 @@ function p(e) {
                                   user: t,
                                   guildId: p,
                                   channelId: n,
-                                  messageId: f,
+                                  messageId: m,
                                   roleId: null == e ? void 0 : e.colorRoleId,
                                   clickTrap: !0,
                                   children: (e) => {
@@ -125,6 +125,6 @@ function p(e) {
                 l
             );
         },
-        [O, t, n, p, f, j, m, g, v]
+        [O, t, n, p, m, v, f, g, j]
     );
 }

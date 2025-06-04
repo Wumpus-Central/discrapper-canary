@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(857395),
@@ -46,31 +46,31 @@ function g(e) {
     return e;
 }
 let E = i.memo(function (e) {
-        let { src: t, tag: n, className: i, size: a = _.Gg.SIZE_16 } = e;
+        let { src: t, tag: n, className: i, size: o = _.Gg.SIZE_16 } = e;
         return null == t
             ? null
             : (0, r.jsx)('img', {
                   src: t,
                   alt: p.intl.formatToPlainString(p.t.uPLDZG, { tag: n }),
-                  className: o()(h.badge, i),
-                  width: a,
-                  height: a
+                  className: a()(h.badge, i),
+                  width: o,
+                  height: o
               });
     }),
     b = i.memo(function (e) {
-        let { guildId: t, guildTag: n, guildBadge: i, className: a, textClassName: s, badgeClassName: c, onClick: u, onMouseEnter: d, textVariant: p = 'text-xs/semibold', textColor: m = 'text-normal', badgeSize: g = _.Gg.SIZE_12, inline: b = !0 } = e;
+        let { guildId: t, guildTag: n, guildBadge: i, className: o, textClassName: s, badgeClassName: c, onClick: u, onMouseEnter: d, textVariant: p = 'text-xs/semibold', textColor: m = 'text-normal', badgeSize: g = _.Gg.SIZE_12, inline: b = !0 } = e;
         return (0, r.jsx)(l.P3F, {
             tag: 'span',
             tabIndex: null == u ? -1 : void 0,
             onClick: u,
             onMouseEnter: d,
-            className: o()(h.chipletContainerInner, b && h.chipletContainerInline, null != u && h.clickable, a),
+            className: a()(h.chipletContainerInner, b && h.chipletContainerInline, null != u && h.clickable, o),
             children: (0, r.jsxs)(l.Text, {
                 variant: p,
                 lineClamp: 1,
                 color: m,
                 tag: 'span',
-                className: o()(h.text, s),
+                className: a()(h.text, s),
                 children: [
                     null != i && 'string' == typeof i
                         ? (0, r.jsx)(E, {
@@ -90,19 +90,19 @@ let E = i.memo(function (e) {
     }),
     y = i.memo(function (e) {
         var t;
-        let { primaryGuild: n, userId: a, contextGuildId: _, className: p, containerClassName: m, textVariant: E, textColor: y, badgeSize: O, disableGuildProfile: v = !1, inline: I = !0, onShowProfile: S, onClose: T } = e,
+        let { primaryGuild: n, userId: o, contextGuildId: _, className: p, containerClassName: m, textVariant: E, textColor: y, badgeSize: O, disableGuildProfile: v = !1, inline: I = !0, onShowProfile: S, onClose: T } = e,
             A = i.useRef(null),
-            N = (0, s.e7)([d.default], () => d.default.getUser(a), [a]),
+            N = (0, s.e7)([d.default], () => d.default.getUser(o), [o]),
             C = (0, s.e7)([u.Z], () => u.Z.theme),
             P = null != (t = null == N ? void 0 : N.primaryGuild) ? t : n,
             { tag: R, badge: w, guildId: D } = (0, f.Pb)(P);
-        return (0, f.yF)(a, _) && null != D
+        return (0, f.yF)(o, _) && null != D
             ? v
                 ? (0, r.jsx)(b, {
                       guildId: D,
                       guildTag: R,
                       guildBadge: w,
-                      className: o()(h.noTooltip, p),
+                      className: a()(h.noTooltip, p),
                       textVariant: E,
                       textColor: y,
                       badgeSize: O,

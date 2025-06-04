@@ -1,6 +1,6 @@
 n.d(t, {
-    E: () => O,
-    Z: () => p
+    E: () => I,
+    Z: () => T
 }),
     n(388685),
     n(642613);
@@ -27,13 +27,13 @@ function E(e, t, n) {
         e
     );
 }
-let O = {
+let I = {
     DropdownSizes: c.Z.DropdownSizes,
     Sizes: c.Z.Sizes,
     Colors: c.Z.Colors,
     Looks: c.Z.Looks
 };
-class I extends i.PureComponent {
+class O extends i.PureComponent {
     render() {
         var e, t;
         let n = this.props,
@@ -131,7 +131,7 @@ class I extends i.PureComponent {
             });
     }
 }
-let p = l.ZP.connectStores([u.Z, s.Z], (e) => {
+let T = l.ZP.connectStores([u.Z, s.Z], (e) => {
     var t;
     let { applicationId: n } = e,
         r = (0, d.uF)(n, s.Z, u.Z);
@@ -139,4 +139,4 @@ let p = l.ZP.connectStores([u.Z, s.Z], (e) => {
         skus: (null != (t = u.Z.getForApplication(n)) ? t : []).sort((e, t) => (null != r && e.id === r.id ? -1 : null != r && t.id === r.id ? 1 : e.name >= t.name ? -1 : 1)),
         primarySKU: r
     };
-})(I);
+})(O);

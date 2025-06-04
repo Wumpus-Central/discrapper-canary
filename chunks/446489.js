@@ -6,8 +6,8 @@ var i,
     r,
     o = n(255367),
     l = n(73800),
-    s = n(392711),
-    a = n.n(s),
+    a = n(392711),
+    s = n.n(a),
     c = n(748780),
     u = n(451478);
 function d(e, t, n) {
@@ -57,8 +57,8 @@ function p(e, t) {
         e
     );
 }
-var f = (((i = f || {})[(i.ABOVE = 0)] = 'ABOVE'), (i[(i.VISIBLE = 1)] = 'VISIBLE'), (i[(i.BELOW = 2)] = 'BELOW'), i);
-function m(e, t) {
+var m = (((i = m || {})[(i.ABOVE = 0)] = 'ABOVE'), (i[(i.VISIBLE = 1)] = 'VISIBLE'), (i[(i.BELOW = 2)] = 'BELOW'), i);
+function f(e, t) {
     return {
         toValue: e,
         duration: null != t ? t : 300,
@@ -90,7 +90,7 @@ class b extends (r = l.PureComponent) {
     animateBetween(e, t) {
         let n,
             { forcePosition: i, animationSpeed: r } = this.props;
-        this.prevAnimate.setValue(1), null != i ? (0 === i ? (this.currAnimate.setValue(0), (n = 2)) : 2 === i && (this.currAnimate.setValue(2), (n = 0))) : e > t ? (this.currAnimate.setValue(0), (n = 2)) : (this.currAnimate.setValue(2), (n = 0)), c.Z.parallel([c.Z.timing(this.prevAnimate, m(n, r)), c.Z.timing(this.currAnimate, m(1, r))]).start(this.animateNext);
+        this.prevAnimate.setValue(1), null != i ? (0 === i ? (this.currAnimate.setValue(0), (n = 2)) : 2 === i && (this.currAnimate.setValue(2), (n = 0))) : e > t ? (this.currAnimate.setValue(0), (n = 2)) : (this.currAnimate.setValue(2), (n = 0)), c.Z.parallel([c.Z.timing(this.prevAnimate, f(n, r)), c.Z.timing(this.currAnimate, f(1, r))]).start(this.animateNext);
     }
     getAnimatedStyle(e) {
         let { animationColor: t } = this.props;
@@ -124,7 +124,7 @@ class b extends (r = l.PureComponent) {
     render() {
         let { prevValue: e, currValue: t } = this.state,
             { color: n, formatString: i } = this.props,
-            r = a().omit(this.props, ['value', 'digitWidth', 'padStartLength', 'forcePosition']);
+            r = s().omit(this.props, ['value', 'digitWidth', 'padStartLength', 'forcePosition']);
         if (null == e)
             return (0, o.jsx)(
                 'div',
@@ -188,4 +188,4 @@ class b extends (r = l.PureComponent) {
             (this.currAnimate = new c.Z.Value(1));
     }
 }
-d(b, 'Positions', f);
+d(b, 'Positions', m);

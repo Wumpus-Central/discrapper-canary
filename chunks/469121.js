@@ -1,8 +1,8 @@
 n.d(t, { Z: () => c }), n(388685);
 var r = n(73800),
     i = n(493773),
-    a = n(146779),
-    o = n(545511),
+    o = n(146779),
+    a = n(545511),
     s = n(386965),
     l = n(509571);
 function c(e) {
@@ -23,7 +23,7 @@ function c(e) {
             return;
         }
         if (null != c.current && c.current.src === e) return;
-        let t = new (await (0, o.Z)(e))();
+        let t = new (await (0, a.Z)(e))();
         (t.src = e), (c.current = t);
     }, [c, e]);
     return {
@@ -31,10 +31,10 @@ function c(e) {
         playSound: r.useCallback(
             function () {
                 var e, r;
-                let { volume: i, outputChannel: o = l.w.DEFAULT } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+                let { volume: i, outputChannel: a = l.w.DEFAULT } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 f(), null == (e = n.current) || e.pause();
                 let { current: s } = c;
-                return null != s && ((n.current = s), (s.currentTime = 0), (s.volume = null != i ? i : 1), (s.dataset.soundId = t.soundId), o === l.w.VOICE && (null == (r = s.setSinkId) || r.call(s, a.voiceSinkId)), s.play(), (s.onplay = () => d(!0)), (s.onpause = () => d(!1)), (s.onended = () => d(!1)), !0);
+                return null != s && ((n.current = s), (s.currentTime = 0), (s.volume = null != i ? i : 1), (s.dataset.soundId = t.soundId), a === l.w.VOICE && (null == (r = s.setSinkId) || r.call(s, o.voiceSinkId)), s.play(), (s.onplay = () => d(!0)), (s.onpause = () => d(!1)), (s.onended = () => d(!1)), !0);
             },
             [n, t.soundId, f]
         ),

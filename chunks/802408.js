@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(953529);
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(780384),
+    o = n(442837),
+    a = n(780384),
     s = n(481060),
     l = n(410030),
     c = n(607070),
@@ -63,14 +63,14 @@ function m(e, t) {
 }
 function g(e) {
     let { onComplete: t, onCheckItOutClick: n, config: i } = e,
-        u = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
+        u = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         _ = (0, l.ZP)();
     return (0, r.jsxs)('div', {
         className: f.container,
         children: [
             (0, r.jsx)('img', {
                 alt: d.intl.string(d.t.X4IxWF),
-                src: i.getImageUrl((0, o.wj)(_), u),
+                src: i.getImageUrl((0, a.wj)(_), u),
                 className: f.coachmark
             }),
             (0, r.jsxs)('div', {
@@ -109,7 +109,7 @@ function g(e) {
     });
 }
 function E(e) {
-    let { onComplete: t, onCheckItOutClick: n, markAsDismissed: a, config: o, children: l } = e,
+    let { onComplete: t, onCheckItOutClick: n, markAsDismissed: o, config: a, children: l } = e,
         c = i.useRef(null);
     return (0, r.jsx)(s.yRy, {
         targetElementRef: c,
@@ -122,12 +122,12 @@ function E(e) {
                 g,
                 m(p({}, e), {
                     onComplete: () => {
-                        t(), a(u.L.USER_DISMISS);
+                        t(), o(u.L.USER_DISMISS);
                     },
                     onCheckItOutClick: () => {
-                        n(), t(), a(u.L.TAKE_ACTION);
+                        n(), t(), o(u.L.TAKE_ACTION);
                     },
-                    config: o
+                    config: a
                 })
             ),
         onRequestClose: () => void 0,

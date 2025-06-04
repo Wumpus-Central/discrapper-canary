@@ -13,7 +13,7 @@ var i = n(704215),
 let E = (e) => {
     let { dismissibleContent: t, noticeType: n } = e,
         { analyticsLocations: E } = (0, o.ZP)(),
-        O = (0, c.Z)();
+        I = (0, c.Z)();
     return (0, r.jsx)(u.Xf, {
         contentType: t,
         latestVersion: (0, s.t)(t),
@@ -22,7 +22,7 @@ let E = (e) => {
         children: (e) => {
             let { visibleContent: t, markAsDismissed: o } = e;
             if (t === i.z.GIFTING_PROMOTION_REMINDER) {
-                let e = null == O ? void 0 : O.reminderNagbar;
+                let e = null == I ? void 0 : I.reminderNagbar;
                 return (0, r.jsxs)(l.qXd, {
                     color: l.DM8.PREMIUM_TIER_2,
                     children: [

@@ -5,8 +5,8 @@ n.d(t, {
     n(539854);
 var r,
     i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -61,8 +61,8 @@ class h extends (r = i.ZP.Store) {
         return c;
     }
 }
-o(h, 'displayName', 'DCFEventStore');
-let m = new h(a.Z, {
+a(h, 'displayName', 'DCFEventStore');
+let m = new h(o.Z, {
     LOGOUT: u,
     DCF_EVENT_LOGGED: f,
     DCF_HANDLE_DC_DISMISSED: _,

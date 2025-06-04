@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(570140),
     i = n(194359),
-    a = n(855796),
-    o = n(497060),
+    o = n(855796),
+    a = n(497060),
     s = n(699516),
     l = n(885149),
     c = n(981631);
@@ -59,21 +59,21 @@ function _(e, t) {
     );
 }
 function p(e) {
-    let { userId: t, applicationId: n, location: r, confirmStrangerRequest: o = !1 } = e;
+    let { userId: t, applicationId: n, location: r, confirmStrangerRequest: a = !1 } = e;
     return null != n
-        ? a.Z.acceptGameFriendRequest({
+        ? o.Z.acceptGameFriendRequest({
               userId: t,
               applicationId: n
           })
         : i.Z.acceptFriendRequest({
               userId: t,
-              confirmStrangerRequest: o,
+              confirmStrangerRequest: a,
               context: { location: r }
           });
 }
 function h(e) {
-    let { userId: t, applicationId: n, location: r, onConfirm: i, onCancel: a } = e,
-        c = (0, o.pB)('useFriendRequestActions'),
+    let { userId: t, applicationId: n, location: r, onConfirm: i, onCancel: o } = e,
+        c = (0, a.pB)('useFriendRequestActions'),
         u = s.Z.isStranger(t);
     return null == n && c && !1 !== u
         ? u && c
@@ -88,7 +88,7 @@ function h(e) {
                           null == i || i();
                   },
                   onCancel: () => {
-                      null == a || a();
+                      null == o || o();
                   }
               })
             : c
@@ -103,7 +103,7 @@ function h(e) {
                             applicationId: n,
                             location: r,
                             onConfirm: i,
-                            onCancel: a
+                            onCancel: o
                         }) ||
                             null == i ||
                             i();
@@ -114,7 +114,7 @@ function h(e) {
                             applicationId: n,
                             location: r,
                             onConfirm: i,
-                            onCancel: a
+                            onCancel: o
                         });
                     })
               : void 0
@@ -158,7 +158,7 @@ let g = {
     removeFriend: function (e) {
         let { userId: t, applicationId: n, location: r } = e;
         null != n
-            ? a.Z.removeGameFriend({
+            ? o.Z.removeGameFriend({
                   userId: t,
                   applicationId: n
               })
@@ -167,7 +167,7 @@ let g = {
     cancelFriendRequest: function (e) {
         let { userId: t, applicationId: n, location: r } = e;
         return null != n
-            ? a.Z.cancelGameFriendRequest({
+            ? o.Z.cancelGameFriendRequest({
                   userId: t,
                   applicationId: n
               })

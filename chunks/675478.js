@@ -31,8 +31,8 @@ n.d(t, {
     n(146733);
 var r = n(512722),
     i = n.n(r),
-    a = n(259443),
-    o = n(544891),
+    o = n(259443),
+    a = n(544891),
     s = n(377108),
     l = n(524437),
     c = n(433517),
@@ -88,11 +88,11 @@ class T {
         let r = this.ProtoClass.fields.find((t) => t.localName === e);
         if (null == r) throw Error('Unknown proto field name '.concat(String(e)));
         let i = r.T(),
-            a = this.getCurrentValue()[e],
-            o = null != a ? i.fromBinary(i.toBinary(a), g.Uc) : i.create();
-        if (!1 === t(o)) return;
+            o = this.getCurrentValue()[e],
+            a = null != o ? i.fromBinary(i.toBinary(o), g.Uc) : i.create();
+        if (!1 === t(a)) return;
         let s = this.ProtoClass.create();
-        (s[e] = o),
+        (s[e] = a),
             __OVERLAY__
                 ? u.Z.dispatch({
                       type: 'USER_SETTINGS_PROTO_ENQUEUE_UPDATE',
@@ -116,7 +116,7 @@ class T {
         var n;
         i()(!__OVERLAY__, 'this cannot run in the overlay');
         let { editInfo: r } = this.getEditInfo(),
-            a = { timeout: r.timeout };
+            o = { timeout: r.timeout };
         if (!r.loaded) throw Error('Cannot edit user settings proto because we have not yet loaded the stored version from the DB');
         !1 !== t.dispatch &&
             u.Z.dispatch({
@@ -128,12 +128,12 @@ class T {
                 partial: !0,
                 local: !0
             });
-        let o = null != (n = t.delaySeconds) ? n : 0;
-        if ((null != a.timeout && o < r.timeoutDelay && !r.rateLimited && (clearTimeout(a.timeout), (a.timeout = void 0)), null == a.timeout)) {
-            let e = o * _.Z.Millis.SECOND;
-            t.jitter && (e += Math.floor(Math.random() * Math.min(e, 30 * _.Z.Millis.SECOND))), this.logger.log('Scheduling save from markDirty'), (a.timeout = setTimeout(this.persistChanges, e)), (a.timeoutDelay = o);
+        let a = null != (n = t.delaySeconds) ? n : 0;
+        if ((null != o.timeout && a < r.timeoutDelay && !r.rateLimited && (clearTimeout(o.timeout), (o.timeout = void 0)), null == o.timeout)) {
+            let e = a * _.Z.Millis.SECOND;
+            t.jitter && (e += Math.floor(Math.random() * Math.min(e, 30 * _.Z.Millis.SECOND))), this.logger.log('Scheduling save from markDirty'), (o.timeout = setTimeout(this.persistChanges, e)), (o.timeoutDelay = a);
         }
-        null != t.cleanup && (a.cleanupFuncs = [...r.cleanupFuncs, ...t.cleanup]), null == r.protoToSave ? (a.protoToSave = e) : (a.protoToSave = (0, g.re)(this.ProtoClass, r.protoToSave, e)), this.dispatchChanges(a);
+        null != t.cleanup && (o.cleanupFuncs = [...r.cleanupFuncs, ...t.cleanup]), null == r.protoToSave ? (o.protoToSave = e) : (o.protoToSave = (0, g.re)(this.ProtoClass, r.protoToSave, e)), this.dispatchChanges(o);
     }
     dispatchChanges(e) {
         u.Z.dispatch({
@@ -164,7 +164,7 @@ class T {
             try {
                 let {
                         body: { settings: t }
-                    } = await o.tn.get({
+                    } = await a.tn.get({
                         url: b.ANM.USER_SETTINGS_PROTO(this.type),
                         rejectWithError: !1
                     }),
@@ -175,7 +175,7 @@ class T {
                         loaded: !0
                     });
                 let r = h.Z[this.type],
-                    { proto: i, isDirty: a, cleanupFuncs: s } = (0, g.xt)(n, r);
+                    { proto: i, isDirty: o, cleanupFuncs: s } = (0, g.xt)(n, r);
                 return (
                     await u.Z.dispatch({
                         type: 'USER_SETTINGS_PROTO_UPDATE',
@@ -183,10 +183,10 @@ class T {
                             type: this.type,
                             proto: n
                         },
-                        resetEditInfo: a || e,
+                        resetEditInfo: o || e,
                         local: !1
                     }),
-                    a && this.markDirtyFromMigration(i, s),
+                    o && this.markDirtyFromMigration(i, s),
                     n
                 );
             } catch (e) {
@@ -250,7 +250,7 @@ class T {
                 if (null == t || '' === t) return void this.logger.log('Not persisting proto because there is nothing to change');
                 try {
                     this.saveLastSendTime();
-                    let { body: n } = await o.tn.patch({
+                    let { body: n } = await a.tn.patch({
                         url: b.ANM.USER_SETTINGS_PROTO(this.type),
                         body: {
                             settings: t,
@@ -286,7 +286,7 @@ class T {
                     else throw (this.logger.log('Unknown user settings error'), e);
                 }
             }),
-            (this.logger = new a.Yd(this.ProtoClass.typeName));
+            (this.logger = new o.Yd(this.ProtoClass.typeName));
     }
 }
 let A = new T(l.o8, E.yP.PRELOADED_USER_SETTINGS),

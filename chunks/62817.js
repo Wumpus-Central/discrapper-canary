@@ -1,9 +1,9 @@
-n.d(t, { Z: () => v }), n(35282), n(388685), n(358797);
+n.d(t, { Z: () => j }), n(35282), n(388685), n(358797);
 var i,
     r = n(442837),
     o = n(570140),
     l = n(375954);
-function s(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +16,7 @@ function s(e, t, n) {
         e
     );
 }
-function a(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -27,7 +27,7 @@ function a(e) {
                 })
             )),
             i.forEach(function (t) {
-                s(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -37,8 +37,8 @@ let c = Object.freeze([]),
     d = {},
     h = {},
     p = {},
-    f = {};
-function m(e, t) {}
+    m = {};
+function f(e, t) {}
 function g(e, t) {
     let n = u[e];
     return null != n && ((u[e] = n.filter((e) => e.id !== t)), delete d[t], delete h[t], n.length !== u[e].length);
@@ -46,9 +46,9 @@ function g(e, t) {
 function b(e, t) {
     let n = u[e];
     if (null == n) return !1;
-    u[e] = n.map((e) => (e.id === t.id ? a({}, e, t) : e));
+    u[e] = n.map((e) => (e.id === t.id ? s({}, e, t) : e));
     let i = h[t.id];
-    null != i && null != p[i.id] && (p[i.id] = a({}, p[i.id], t));
+    null != i && null != p[i.id] && (p[i.id] = s({}, p[i.id], t));
 }
 class O extends (i = r.ZP.Store) {
     initialize() {
@@ -65,28 +65,28 @@ class O extends (i = r.ZP.Store) {
         return p[e];
     }
     getUploadAttachments(e) {
-        if (null != e) return f[e];
+        if (null != e) return m[e];
     }
 }
-s(O, 'displayName', 'UploadStore');
-let v = new O(o.Z, {
+a(O, 'displayName', 'UploadStore');
+let j = new O(o.Z, {
     CONNECTION_OPEN: function () {
-        f = {};
+        m = {};
     },
     LOGOUT: function () {
-        f = {};
+        m = {};
     },
     UPLOAD_START: function (e) {
         var t, n, i, r;
-        let { channelId: o, file: l, uploader: s, message: f } = e;
-        if (s._aborted || s._errored) return;
-        let m = null != (t = u[o]) ? t : c;
-        if (((d[l.id] = s), (u[o] = [...m, l]), null == f)) return;
-        h[l.id] = f;
+        let { channelId: o, file: l, uploader: a, message: m } = e;
+        if (a._aborted || a._errored) return;
+        let f = null != (t = u[o]) ? t : c;
+        if (((d[l.id] = a), (u[o] = [...f, l]), null == m)) return;
+        h[l.id] = m;
         let { items: g } = l;
         null != g &&
-            (p[f.id] =
-                ((i = a({}, l)),
+            (p[m.id] =
+                ((i = s({}, l)),
                 (r = r = { items: g }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(r))
@@ -101,7 +101,7 @@ let v = new O(o.Z, {
                           Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(r, e));
                       }),
                 i)),
-            null != (n = f.nonce) || f.id;
+            null != (n = m.nonce) || m.id;
     },
     UPLOAD_COMPRESSION_PROGRESS: function (e) {
         let { channelId: t, file: n } = e;

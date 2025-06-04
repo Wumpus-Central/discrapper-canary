@@ -1,19 +1,19 @@
 n.d(t, {
     Vk: () => s,
-    YK: () => o,
+    YK: () => a,
     ap: () => u,
     bv: () => c,
     iP: () => i,
     n0: () => l,
-    nc: () => a,
+    nc: () => o,
     wF: () => d
 });
 var r = n(358085);
 let i = r.isPlatformEmbedded && ((0, r.isWindows)() || !1);
-var a = (function (e) {
+var o = (function (e) {
     return (e[(e.WELCOME = 0)] = 'WELCOME'), (e[(e.NEWS = 1)] = 'NEWS'), (e[(e.GO_LIVE_VOICE = 2)] = 'GO_LIVE_VOICE'), (e[(e.GO_LIVE_NON_VOICE = 3)] = 'GO_LIVE_NON_VOICE'), (e[(e.KEYBIND_INDICATORS = 4)] = 'KEYBIND_INDICATORS'), (e[(e.CONTENT_INVENTORY = 5)] = 'CONTENT_INVENTORY'), (e[(e.OOP_WELCOME = 6)] = 'OOP_WELCOME'), e;
 })({});
-function o(e) {
+function a(e) {
     switch (e) {
         case 'News Nudge':
         case 'Welcome Nudge':

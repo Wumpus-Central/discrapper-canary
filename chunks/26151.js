@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(544891),
     i = n(570140),
-    a = n(985588),
-    o = n(592125),
+    o = n(985588),
+    a = n(592125),
     s = n(699516),
     l = n(594174),
     c = n(626135),
@@ -12,9 +12,9 @@ var r = n(544891),
     _ = n(981631),
     p = n(388032);
 let h = {
-    call(e, t, n, i, a) {
-        let o = (n) => {
-            f.default.selectVoiceChannel(e, t), n && this.ring(e), null == a || a(e);
+    call(e, t, n, i, o) {
+        let a = (n) => {
+            f.default.selectVoiceChannel(e, t), n && this.ring(e), null == o || o(e);
         };
         if (null != i) {
             if (s.Z.isBlocked(i)) return;
@@ -27,7 +27,7 @@ let h = {
                 })
                 .then(
                     (e) => {
-                        o(n && e.body.ringable);
+                        a(n && e.body.ringable);
                     },
                     () => {
                         c.default.track(_.rMx.OPEN_POPOUT, {
@@ -48,12 +48,12 @@ let h = {
                             });
                     }
                 );
-        } else o(n);
+        } else a(n);
     },
     ring(e, t, n) {
-        let s = o.Z.getChannel(e);
+        let s = a.Z.getChannel(e);
         if (null == s) return;
-        let l = (0, a.V)(s),
+        let l = (0, o.V)(s),
             c = _.TPd.CALLABLE.has(s.type);
         if (l) {
             r.tn.post({

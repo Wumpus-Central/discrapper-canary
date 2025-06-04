@@ -11,8 +11,8 @@ n.d(t, {
     n(539854);
 var r = n(392711),
     i = n.n(r),
-    a = n(544891),
-    o = n(381499),
+    o = n(544891),
+    a = n(381499),
     s = n(570140),
     l = n(479531),
     c = n(339085),
@@ -30,7 +30,7 @@ function y(e) {
     _.hW.updateAsync(
         'textAndImages',
         (t) => {
-            (t.diversitySurrogate = o.Gm.create()), (t.diversitySurrogate.value = e);
+            (t.diversitySurrogate = a.Gm.create()), (t.diversitySurrogate.value = e);
         },
         E.fy.FREQUENT_USER_ACTION
     );
@@ -40,7 +40,7 @@ function O(e) {
         type: 'EMOJI_FETCH',
         guildId: e
     }),
-        a.tn
+        o.tn
             .get({
                 url: g.ANM.GUILD_EMOJIS(e),
                 oldFormErrors: !0,
@@ -67,7 +67,7 @@ function v(e) {
             type: 'EMOJI_UPLOAD_START',
             guildId: t
         }),
-        a.tn
+        o.tn
             .post({
                 url: g.ANM.GUILD_EMOJIS(t),
                 body: {
@@ -101,7 +101,7 @@ function I(e, t) {
             guildId: e,
             emojiId: t
         }),
-        a.tn.del({
+        o.tn.del({
             url: g.ANM.GUILD_EMOJI(e, t),
             oldFormErrors: !0,
             rejectWithError: !1
@@ -111,7 +111,7 @@ function I(e, t) {
 async function S(e) {
     let { guildId: t, emojiId: n, name: r, roles: i } = e;
     try {
-        return await a.tn.patch({
+        return await o.tn.patch({
             url: g.ANM.GUILD_EMOJI(t, n),
             body: {
                 name: r,

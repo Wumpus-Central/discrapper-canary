@@ -7,8 +7,8 @@ n.d(t, {
     n(482853);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n.n(s),
     c = n(215569),
@@ -40,12 +40,12 @@ let v = [p.ZP, h.ZP];
 class I extends i.PureComponent {
     render() {
         let { render: e, LayerComponent: t, isTopModal: n, instant: i } = this.props,
-            a = i ? E.Dv.ENTERED : this.state.transitionState;
+            o = i ? E.Dv.ENTERED : this.state.transitionState;
         return (0, r.jsx)(t, {
             children: (0, r.jsx)('div', {
-                className: o()(y.layer, !n && y.hidden),
+                className: a()(y.layer, !n && y.hidden),
                 children: e({
-                    transitionState: a,
+                    transitionState: o,
                     onClose: this.close
                 })
             })
@@ -101,15 +101,15 @@ function A() {
     let e = S(),
         t = (0, g.s9)((t) => (void 0 !== t[e] ? t[e] : T)),
         n = (0, _.q)('Modals'),
-        a = i.useRef(void 0);
+        o = i.useRef(void 0);
     i.useLayoutEffect(() => {
-        a.current = t[t.length - 1];
+        o.current = t[t.length - 1];
     }, [t]);
-    let o = t.length > 0;
+    let a = t.length > 0;
     i.useLayoutEffect(() => {
-        if (!o) return;
+        if (!a) return;
         let e = () => {
-            let e = a.current;
+            let e = o.current;
             null != e && null != e.onCloseRequest && e.onCloseRequest();
         };
         return (
@@ -118,9 +118,9 @@ function A() {
                 m.S.unsubscribe(b.CkL.MODAL_CLOSE, e);
             }
         );
-    }, [o]);
+    }, [a]);
     let s = i.useCallback(() => {
-            let e = a.current;
+            let e = o.current;
             null != e && null != e.onCloseRequest && e.onCloseRequest();
         }, []),
         f = i.useCallback(
@@ -134,16 +134,16 @@ function A() {
         component: i.Fragment,
         children: [
             v.map((e, i) => {
-                var a;
-                let o = l().findLast(t, (t) => t.Layer === e || (null == t.Layer && e === p.ZP)),
-                    c = null != (a = null == o ? void 0 : o.backdropStyle) ? a : d.fCB.DARK;
+                var o;
+                let a = l().findLast(t, (t) => t.Layer === e || (null == t.Layer && e === p.ZP)),
+                    c = null != (o = null == a ? void 0 : a.backdropStyle) ? o : d.fCB.DARK;
                 return n && (0, d.OLG)(c)
                     ? (0, r.jsx)(
                           e,
                           {
                               children: (0, r.jsx)(d.ZMr, {
                                   variant: c === d.fCB.LIGHTBOX || c === d.fCB.IMMERSIVE ? 'lightbox' : 'default',
-                                  animationVariant: (null == o ? void 0 : o.instant) ? 'instant' : 'default',
+                                  animationVariant: (null == a ? void 0 : a.instant) ? 'instant' : 'default',
                                   isVisible: h[i],
                                   onClick: s
                               })
@@ -157,20 +157,20 @@ function A() {
                               backdropStyle: c,
                               onClose: s,
                               LayerComponent: e,
-                              backdropInstant: null == o ? void 0 : o.instant
+                              backdropInstant: null == a ? void 0 : a.instant
                           },
                           'layer-'.concat(i)
                       );
             }),
             t.map((e, n) => {
-                let { key: i, Layer: a, render: o, instant: s } = e;
+                let { key: i, Layer: o, render: a, instant: s } = e;
                 return (0, r.jsx)(
                     I,
                     {
                         modalKey: i,
-                        LayerComponent: null != a ? a : p.ZP,
+                        LayerComponent: null != o ? o : p.ZP,
                         isTopModal: n === t.length - 1,
-                        render: o,
+                        render: a,
                         closeModal: f,
                         instant: s
                     },

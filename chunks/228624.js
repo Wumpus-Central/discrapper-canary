@@ -1,12 +1,12 @@
 n.d(t, {
     ed: () => l,
     hv: () => s,
-    k: () => o
+    k: () => a
 });
 var r = n(311570),
     i = n(818083),
-    a = n(987338);
-let o = (0, i.B)({
+    o = n(987338);
+let a = (0, i.B)({
         kind: 'user',
         id: '2024-10_shop_variants',
         label: 'Shop Variants Experiment',
@@ -18,7 +18,7 @@ let o = (0, i.B)({
                 config: { variantsReturnStyle: r.v.VARIANTS_GROUP }
             }
         ],
-        commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN
+        commonTriggerPoint: o.$P.COLLECTIBLES_SHOP_OPEN
     }),
-    s = (e) => o.useExperiment({ location: e }).variantsReturnStyle,
+    s = (e) => a.useExperiment({ location: e }).variantsReturnStyle,
     l = (e) => s(e) === r.v.VARIANTS_GROUP;

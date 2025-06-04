@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(331065),
+    o = n(570140),
+    a = n(331065),
     s = n(55563),
     l = n(551428);
 function c(e, t, n) {
@@ -27,13 +27,13 @@ let u = new Map(),
 var f = (function (e) {
     return (e[(e.NONE = 0)] = 'NONE'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), (e[(e.FAILED = 3)] = 'FAILED'), e;
 })({});
-let _ = new o.Z({
+let _ = new a.Z({
     subscriptions: [],
     otps: []
 });
 function p(e) {
     let { applicationId: t, layout: n } = e;
-    u.set(t, o.Z.createFromServer(n)), d.delete(t);
+    u.set(t, a.Z.createFromServer(n)), d.delete(t);
 }
 function h(e) {
     let { applicationId: t } = e;
@@ -60,7 +60,7 @@ class g extends (r = i.ZP.Store) {
     }
 }
 c(g, 'displayName', 'ApplicationStoreDirectoryStore');
-let E = new g(a.Z, {
+let E = new g(o.Z, {
     APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS: p,
     APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED: h,
     APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING: m

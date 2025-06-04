@@ -5,31 +5,31 @@ n.d(t, {
 var r = n(404759),
     i = n.n(r);
 n(913527);
-var a = n(70956),
-    o = n(124368),
+var o = n(70956),
+    a = n(124368),
     s = n(388032);
 function l() {
     return [
         {
             label: s.intl.string(s.t.cs8A1d),
-            value: a.Z.Minutes.HOUR
+            value: o.Z.Minutes.HOUR
         },
         {
             label: s.intl.string(s.t.zFKbrK),
-            value: a.Z.Minutes.DAY
+            value: o.Z.Minutes.DAY
         },
         {
             label: s.intl.string(s.t.TmPIZW),
-            value: 3 * a.Z.Minutes.DAY
+            value: 3 * o.Z.Minutes.DAY
         },
         {
             label: s.intl.string(s.t['/7i2en']),
-            value: a.Z.Minutes.WEEK
+            value: o.Z.Minutes.WEEK
         }
     ];
 }
 function c(e, t) {
     var n;
-    return null != (n = null != t ? t : null == e ? void 0 : e.defaultAutoArchiveDuration) ? n : o.AX;
+    return null != (n = null != t ? t : null == e ? void 0 : e.defaultAutoArchiveDuration) ? n : a.AX;
 }
-a.Z.Minutes.HOUR, a.Z.Minutes.DAY, a.Z.Minutes.DAY, a.Z.Minutes.WEEK, i()(() => l().map((e) => e.value));
+o.Z.Minutes.HOUR, o.Z.Minutes.DAY, o.Z.Minutes.DAY, o.Z.Minutes.WEEK, i()(() => l().map((e) => e.value));

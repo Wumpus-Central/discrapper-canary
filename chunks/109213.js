@@ -1,13 +1,13 @@
 n.d(t, {
-    G: () => o,
-    u: () => a
+    G: () => a,
+    u: () => o
 });
 var r = n(818083),
     i = n(987338),
-    a = (function (e) {
+    o = (function (e) {
         return (e[(e.NONE = 0)] = 'NONE'), (e[(e.POPULAR = 1)] = 'POPULAR'), (e[(e.RECENT = 2)] = 'RECENT'), e;
     })({});
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: 'user',
     id: '2024-10_shop_skus_in_gift_flow',
     label: 'Gift Collectibles in DM',

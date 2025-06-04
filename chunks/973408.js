@@ -1,13 +1,13 @@
 n.d(t, { X: () => s });
 var r = n(69122),
     i = n(825842),
-    a = n(17146);
-let o = {
+    o = n(17146);
+let a = {
     writeUnknownFields: !0,
     writerFactory: () => new l()
 };
 function s(e) {
-    return e ? Object.assign(Object.assign({}, o), e) : o;
+    return e ? Object.assign(Object.assign({}, a), e) : a;
 }
 class l {
     constructor(e) {
@@ -46,11 +46,11 @@ class l {
         return this.buf.length && (this.chunks.push(new Uint8Array(this.buf)), (this.buf = [])), this.chunks.push(e), this;
     }
     uint32(e) {
-        for ((0, a.fp)(e); e > 127; ) this.buf.push((127 & e) | 128), (e >>>= 7);
+        for ((0, o.fp)(e); e > 127; ) this.buf.push((127 & e) | 128), (e >>>= 7);
         return this.buf.push(e), this;
     }
     int32(e) {
-        return (0, a.ug)(e), (0, i.fC)(e, this.buf), this;
+        return (0, o.ug)(e), (0, i.fC)(e, this.buf), this;
     }
     bool(e) {
         return this.buf.push(+!!e), this;
@@ -63,7 +63,7 @@ class l {
         return this.uint32(t.byteLength), this.raw(t);
     }
     float(e) {
-        (0, a.E_)(e);
+        (0, o.E_)(e);
         let t = new Uint8Array(4);
         return new DataView(t.buffer).setFloat32(0, e, !0), this.raw(t);
     }
@@ -72,17 +72,17 @@ class l {
         return new DataView(t.buffer).setFloat64(0, e, !0), this.raw(t);
     }
     fixed32(e) {
-        (0, a.fp)(e);
+        (0, o.fp)(e);
         let t = new Uint8Array(4);
         return new DataView(t.buffer).setUint32(0, e, !0), this.raw(t);
     }
     sfixed32(e) {
-        (0, a.ug)(e);
+        (0, o.ug)(e);
         let t = new Uint8Array(4);
         return new DataView(t.buffer).setInt32(0, e, !0), this.raw(t);
     }
     sint32(e) {
-        return (0, a.ug)(e), (e = ((e << 1) ^ (e >> 31)) >>> 0), (0, i.fC)(e, this.buf), this;
+        return (0, o.ug)(e), (e = ((e << 1) ^ (e >> 31)) >>> 0), (0, i.fC)(e, this.buf), this;
     }
     sfixed64(e) {
         let t = new Uint8Array(8),
@@ -103,9 +103,9 @@ class l {
     sint64(e) {
         let t = r.M.from(e),
             n = t.hi >> 31,
-            a = (t.lo << 1) ^ n,
-            o = ((t.hi << 1) | (t.lo >>> 31)) ^ n;
-        return (0, i._y)(a, o, this.buf), this;
+            o = (t.lo << 1) ^ n,
+            a = ((t.hi << 1) | (t.lo >>> 31)) ^ n;
+        return (0, i._y)(o, a, this.buf), this;
     }
     uint64(e) {
         let t = r.p.from(e);

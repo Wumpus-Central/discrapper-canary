@@ -1,10 +1,10 @@
-r.d(t, { B: () => o });
-var n = r(255367);
-r(73800);
-var i = r(481060),
-    a = r(120651),
-    l = r(388032);
-function o(e, t, r) {
+n.d(t, { B: () => o });
+var r = n(255367);
+n(73800);
+var A = n(481060),
+    a = n(120651),
+    l = n(388032);
+function o(e, t, n) {
     let o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     (0, a.Z)({
         title: e,
@@ -15,32 +15,32 @@ function o(e, t, r) {
                       t,
                       (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
-                              var r = null != arguments[t] ? arguments[t] : {},
-                                  n = Object.keys(r);
+                              var n = null != arguments[t] ? arguments[t] : {},
+                                  r = Object.keys(n);
                               'function' == typeof Object.getOwnPropertySymbols &&
-                                  (n = n.concat(
-                                      Object.getOwnPropertySymbols(r).filter(function (e) {
-                                          return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                  (r = r.concat(
+                                      Object.getOwnPropertySymbols(n).filter(function (e) {
+                                          return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                       })
                                   )),
-                                  n.forEach(function (t) {
-                                      var n;
-                                      (n = r[t]),
+                                  r.forEach(function (t) {
+                                      var r;
+                                      (r = n[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
-                                                    value: n,
+                                                    value: r,
                                                     enumerable: !0,
                                                     configurable: !0,
                                                     writable: !0
                                                 })
-                                              : (e[t] = n);
+                                              : (e[t] = r);
                                   });
                           }
                           return e;
                       })(
                           {
                               highlightHook: (e) =>
-                                  (0, n.jsx)(i.Text, {
+                                  (0, r.jsx)(A.Text, {
                                       variant: 'text-md/normal',
                                       color: 'text-normal',
                                       style: { display: 'inline' },
@@ -52,6 +52,6 @@ function o(e, t, r) {
                   ),
         cta: l.intl.string(l.t['NX+WJC']),
         onConfirm: () => {},
-        iconVariant: r
+        iconVariant: n
     });
 }

@@ -9,8 +9,8 @@ n.d(t, {
 });
 var r = n(772848),
     i = n(146282),
-    a = n(626135),
-    o = n(981631),
+    o = n(626135),
+    a = n(981631),
     s = n(206583),
     l = (function (e) {
         return (e[(e.FollowGame = 0)] = 'FollowGame'), (e[(e.UnfollowGame = 1)] = 'UnfollowGame'), (e[(e.ClickMessageUser = 2)] = 'ClickMessageUser'), (e[(e.SendMessageUser = 3)] = 'SendMessageUser'), (e[(e.JoinVC = 4)] = 'JoinVC'), (e[(e.WatchStream = 5)] = 'WatchStream'), (e[(e.ClickSimilarGame = 6)] = 'ClickSimilarGame'), (e[(e.WebsiteLink = 7)] = 'WebsiteLink'), (e[(e.XLink = 8)] = 'XLink'), (e[(e.YouTubeLink = 9)] = 'YouTubeLink'), (e[(e.ShowMore = 10)] = 'ShowMore'), (e[(e.ShowLess = 11)] = 'ShowLess'), (e[(e.JoinOfficialServer = 12)] = 'JoinOfficialServer'), (e[(e.ClickImage = 13)] = 'ClickImage'), e;
@@ -22,7 +22,7 @@ let u = () => (0, r.Z)(),
     d = (e) => {
         let { viewId: t, source: n, gameName: r, applicationId: l, authorId: c } = e;
         return (
-            a.default.track(o.rMx.GAME_PROFILE_OPEN, {
+            o.default.track(a.rMx.GAME_PROFILE_OPEN, {
                 view_id: t,
                 source: n,
                 game_name: r,
@@ -35,7 +35,7 @@ let u = () => (0, r.Z)(),
     },
     f = (e) => {
         let { viewId: t, gameName: n, applicationId: r, playedFriendIds: l, playedFriendsData: c, similarGames: u, officialGuildId: d } = e;
-        a.default.track(o.rMx.GAME_PROFILE_CLOSE, {
+        o.default.track(a.rMx.GAME_PROFILE_CLOSE, {
             view_id: t,
             game_name: n,
             application_id: r,
@@ -48,7 +48,7 @@ let u = () => (0, r.Z)(),
     },
     _ = (e) => {
         let { gameName: t, applicationId: n, action: r, recipientUserId: i, similarGameId: s, viewId: l, officialGuildId: c } = e;
-        a.default.track(o.rMx.GAME_PROFILE_ACTION, {
+        o.default.track(a.rMx.GAME_PROFILE_ACTION, {
             game_name: t,
             application_id: n,
             action: r,
@@ -60,7 +60,7 @@ let u = () => (0, r.Z)(),
     },
     p = (e) => {
         let { viewId: t, applicationId: n, suggestedGameName: r, suggestedGameApplicationId: i, feedback: s, submitted: l } = e;
-        return a.default.track(o.rMx.GAME_PROFILE_FEEDBACK, {
+        return o.default.track(a.rMx.GAME_PROFILE_FEEDBACK, {
             view_id: t,
             application_id: n,
             suggested_game_name: r,

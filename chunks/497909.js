@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(388685);
 var r = n(668757),
     i = n(147913),
-    a = n(818083),
-    o = n(353926),
+    o = n(818083),
+    a = n(353926),
     s = n(894276);
 function l(e, t, n) {
     return (
@@ -40,7 +40,7 @@ function d() {
 }
 function f() {
     s.o.forEach((e) => {
-        let t = (0, a.B)({
+        let t = (0, o.B)({
             kind: 'user',
             id: e.id,
             label: 'libdiscore '.concat(e.feature, ' Migration'),
@@ -67,7 +67,7 @@ class _ extends i.Z {
     }
     _terminate() {}
     constructor(...e) {
-        super(...e), l(this, 'actions', {}), l(this, 'stores', new Map().set(o.Z, d));
+        super(...e), l(this, 'actions', {}), l(this, 'stores', new Map().set(a.Z, d));
     }
 }
 let p = new _();

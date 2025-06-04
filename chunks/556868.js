@@ -1,5 +1,5 @@
 var r = n(289126),
     i = n(652715),
-    a = n(220126),
-    o = a && a.isTypedArray;
-e.exports = o ? i(o) : r;
+    o = n(220126),
+    a = o && o.isTypedArray;
+e.exports = a ? i(a) : r;

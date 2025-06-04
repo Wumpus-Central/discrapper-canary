@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(63063),
     c = n(981631),
@@ -51,10 +51,10 @@ let f = [
     ],
     p = function (e) {
         let { className: t, isGuildPowerupsExperimentEnabled: n } = e,
-            [a, l] = i.useState(null),
+            [o, l] = i.useState(null),
             c = n ? _ : f;
         return (0, r.jsxs)('div', {
-            className: o()(d.wrapper, t),
+            className: a()(d.wrapper, t),
             children: [
                 (0, r.jsx)(s.X6q, {
                     className: d.heading,
@@ -64,14 +64,14 @@ let f = [
                 (0, r.jsx)('ul', {
                     className: d.list,
                     children: c.map((e, t) => {
-                        let n = a === t;
+                        let n = o === t;
                         return (0, r.jsxs)(
                             'div',
                             {
                                 className: d.listItem,
                                 children: [
                                     (0, r.jsxs)(s.P3F, {
-                                        className: o()(d.questionWrapper, { [d.questionWrapperExpanded]: n }),
+                                        className: a()(d.questionWrapper, { [d.questionWrapperExpanded]: n }),
                                         onClick: () => l((e) => (e === t ? null : t)),
                                         tag: 'li',
                                         children: [

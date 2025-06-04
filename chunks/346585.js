@@ -1,8 +1,8 @@
 n.d(t, {
-    IE: () => m,
-    K9: () => N,
-    NX: () => T,
-    R_: () => S,
+    IE: () => A,
+    K9: () => S,
+    NX: () => p,
+    R_: () => N,
     e$: () => E,
     ti: () => f,
     zV: () => _
@@ -37,10 +37,10 @@ function E(e) {
     let t = (0, c._I)(e.username).replace(u.RN, '').replace(u.iF, '.').toLowerCase();
     return ''.concat(t).concat(e.discriminator).substring(0, 32);
 }
-let O = ['@', '#', ':'],
-    I = ['```', 'discord', 'hypesquad', 'system message', 'system mesage', 'sustem message', 'sustem mesage', 'clyde'],
-    p = ['discordtag', 'everyone', 'here', 'discord nitro', 'discord', 'snowsgiving'];
-function T(e) {
+let I = ['@', '#', ':'],
+    O = ['```', 'discord', 'hypesquad', 'system message', 'system mesage', 'sustem message', 'sustem mesage', 'clyde'],
+    T = ['discordtag', 'everyone', 'here', 'discord nitro', 'discord', 'snowsgiving'];
+function p(e) {
     var t;
     let n = e.username.toLowerCase();
     if (
@@ -51,15 +51,15 @@ function T(e) {
             .join('')).length < 2
     )
         return !0;
-    for (let e of O) if (n.includes(e)) return !0;
-    for (let e of p) if (n === e.toLowerCase()) return !0;
-    for (let e of I) if (n.includes(e.toLowerCase())) return !0;
+    for (let e of I) if (n.includes(e)) return !0;
+    for (let e of T) if (n === e.toLowerCase()) return !0;
+    for (let e of O) if (n.includes(e.toLowerCase())) return !0;
     return !1;
 }
-function S(e) {
+function N(e) {
     return e.toLowerCase().replace(/\s/g, '').replace('@', '');
 }
-function N(e) {
+function S(e) {
     let t = a.default.extractTimestamp(e);
     try {
         return i()(new Date(t)).format('MMM DD, YYYY');
@@ -93,7 +93,7 @@ function f(e) {
         }))
         .otherwise(() => void 0);
 }
-function m(e) {
+function A(e) {
     return new Date(2024, 2, 4).toLocaleDateString(e, {
         month: 'long',
         day: 'numeric',

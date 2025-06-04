@@ -1,8 +1,8 @@
 n.d(t, { Z: () => F }), n(539854), n(781311);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n(793030),
     c = n(442837),
@@ -90,10 +90,10 @@ function j(e, t) {
 function U(e) {
     let { streamActivity: t, otherActivities: n, voiceActivityChannel: r } = e,
         i = [],
-        { descriptiveTextEnabled: a } = (0, y.f)({ location: 'StackedActivityStatus' }),
-        { enableTopNavButton: o } = (0, g.Cq)({ location: 'StackedActivityStatus' }),
+        { descriptiveTextEnabled: o } = (0, y.f)({ location: 'StackedActivityStatus' }),
+        { enableTopNavButton: a } = (0, g.Cq)({ location: 'StackedActivityStatus' }),
         s = (0, _.ZP)(r),
-        l = a || o;
+        l = o || a;
     return (
         null != t && i.push(M(t)),
         n.forEach((e) => {
@@ -105,11 +105,11 @@ function U(e) {
     );
 }
 function G(e) {
-    let { textVariant: t, className: n, hasCustomStatusText: i, totalActivityCount: a } = e,
-        s = a - 1;
+    let { textVariant: t, className: n, hasCustomStatusText: i, totalActivityCount: o } = e,
+        s = o - 1;
     return (0, r.jsx)(l.xv, {
         variant: t,
-        className: o()(n, w.activityCounter),
+        className: a()(n, w.activityCounter),
         color: i ? 'text-positive' : 'none',
         children: i ? '+'.concat(s) : '(+'.concat(s, ')')
     });
@@ -118,14 +118,14 @@ function B(e) {
     let { textVariant: t, className: n } = e;
     return (0, r.jsx)(l.xv, {
         variant: t,
-        className: o()(w.dot, n),
+        className: a()(w.dot, n),
         children: C.l
     });
 }
 function F(e) {
-    let { user: t, activities: n, applicationStream: a, voiceChannel: _, textClassName: g, iconClassName: y, textSize: O = 'xs', animateEmoji: R = !0, hasQuest: D = !1, hideEmoji: x = !1, hideTooltip: M = !1 } = e;
+    let { user: t, activities: n, applicationStream: o, voiceChannel: _, textClassName: g, iconClassName: y, textSize: O = 'xs', animateEmoji: R = !0, hasQuest: D = !1, hideEmoji: x = !1, hideTooltip: M = !1 } = e;
     (0, f.Z)(null == t ? void 0 : t.id);
-    let j = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
+    let j = (null == o ? void 0 : o.discoverable) !== !1 ? o : null,
         F = (0, E.Cf)(j),
         V = i.useMemo(() => {
             var e, t;
@@ -259,7 +259,7 @@ function F(e) {
                             children: [et(), er()]
                         })
                       : (0, r.jsx)(u.ua7, {
-                            tooltipContentClassName: o()(w.container, w.activitiesTooltip),
+                            tooltipContentClassName: a()(w.container, w.activitiesTooltip),
                             delay: C.X,
                             text: en(),
                             'aria-label': ee,
@@ -272,7 +272,7 @@ function F(e) {
                                 )
                         })
                   : et(),
-        ea = () => {
+        eo = () => {
             if (null == V) return null;
             let e = V.emoji,
                 t = V.state,
@@ -282,7 +282,7 @@ function F(e) {
                     null != n &&
                         (0, r.jsx)(l.xv, {
                             variant: 'text-'.concat(O, '/medium'),
-                            className: o()(g, w.customStatusLabel),
+                            className: a()(g, w.customStatusLabel),
                             color: 'none',
                             children: ''.concat(n, ': ')
                         }),
@@ -305,7 +305,7 @@ function F(e) {
             });
         };
     return (0, r.jsxs)('div', {
-        className: o()(w.container, {
+        className: a()(w.container, {
             [w.textXs]: 'xs' === O,
             [w.textSm]: 'sm' === O
         }),
@@ -317,7 +317,7 @@ function F(e) {
                     textVariant: 'text-'.concat(O, '/normal'),
                     className: g
                 }),
-            ea(),
+            eo(),
             D && (0, r.jsx)(I.Z, {})
         ]
     });

@@ -9,8 +9,8 @@ n.d(t, {
     n(997841);
 var r = n(512722),
     i = n.n(r),
-    a = n(525769),
-    o = n(259443),
+    o = n(525769),
+    a = n(259443),
     s = n(544891),
     l = n(570140),
     c = n(881052),
@@ -18,7 +18,7 @@ var r = n(512722),
     d = n(594174),
     f = n(573261),
     _ = n(981631);
-let p = new o.Yd('UserProfileModalActionCreators');
+let p = new a.Yd('UserProfileModalActionCreators');
 function h() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { withAnalyticsToken: t = !1 } = e;
@@ -45,7 +45,7 @@ function m() {
         t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return f.Z.patch({
         url: _.ANM.USER_AGREEMENTS,
-        trackedActionData: { event: a.a.USER_ACCEPT_AGREEMENTS },
+        trackedActionData: { event: o.a.USER_ACCEPT_AGREEMENTS },
         body: {
             terms: e,
             privacy: t
@@ -89,13 +89,13 @@ function E(e) {
               );
 }
 async function b(e) {
-    let { type: t, withMutualGuilds: n, withMutualFriendsCount: r, withMutualFriends: i, guildId: a, connectionsRoleId: o, joinRequestId: u, abortSignal: d } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+    let { type: t, withMutualGuilds: n, withMutualFriendsCount: r, withMutualFriends: i, guildId: o, connectionsRoleId: a, joinRequestId: u, abortSignal: d } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         f = arguments.length > 2 ? arguments[2] : void 0,
         h = Date.now();
     l.Z.dispatch({
         type: 'USER_PROFILE_FETCH_START',
         userId: e,
-        guildId: a,
+        guildId: o,
         withMutualFriends: i
     });
     try {
@@ -106,14 +106,14 @@ async function b(e) {
                 with_mutual_guilds: n,
                 with_mutual_friends: i,
                 with_mutual_friends_count: r && (null == i || !i),
-                guild_id: a,
-                connections_role_id: o,
+                guild_id: o,
+                connections_role_id: a,
                 join_request_id: u
             },
             signal: d,
             rejectWithError: !0
         });
-        null == f || f(c.body, a),
+        null == f || f(c.body, o),
             l.Z.dispatch({
                 type: 'USER_UPDATE',
                 user: c.body.user
@@ -123,11 +123,11 @@ async function b(e) {
                 userProfile: c.body,
                 fetchStartedAt: h
             }),
-            null != a &&
+            null != o &&
                 null != c.body.guild_member &&
                 l.Z.dispatch({
                     type: 'GUILD_MEMBER_PROFILE_UPDATE',
-                    guildId: a,
+                    guildId: o,
                     guildMember: c.body.guild_member
                 });
     } catch (t) {
@@ -138,7 +138,7 @@ async function b(e) {
                 apiError: new c.Hx(t),
                 fetchStartedAt: h,
                 userId: e,
-                guildId: a
+                guildId: o
             }),
             t)
         );

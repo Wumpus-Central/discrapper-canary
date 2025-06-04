@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(657707),
-    a = n(481060),
-    o = n(44315),
+    o = n(481060),
+    a = n(44315),
     s = n(583901),
     l = n(981631),
     c = n(388032),
@@ -55,10 +55,10 @@ function f(e) {
         children: [
             (0, r.jsx)(d, {}),
             (0, r.jsx)(i.V3v, { className: u.paletteIcon }),
-            (0, r.jsx)(a.IGR, {
+            (0, r.jsx)(o.IGR, {
                 className: u.newBadge,
                 text: c.intl.string(c.t.y2b7CA),
-                color: (0, o.Sl)(l.Ilk.RED_430).hex
+                color: (0, a.Sl)(l.Ilk.RED_430).hex
             })
         ]
     });

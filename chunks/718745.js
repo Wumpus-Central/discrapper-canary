@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(981631);
+    o = n(570140),
+    a = n(981631);
 function s(e, t, n) {
     return (
         t in e
@@ -35,7 +35,7 @@ function d(e) {
     (l[t][n] = {
         loading: !1,
         results: r.map((e) => ({
-            type: o.nkL[t].type,
+            type: a.nkL[t].type,
             meta: e
         }))
     }),
@@ -59,7 +59,7 @@ class _ extends (r = i.ZP.Store) {
     }
 }
 s(_, 'displayName', 'IntegrationQueryStore');
-let p = new _(a.Z, {
+let p = new _(o.Z, {
     INTEGRATION_QUERY: u,
     INTEGRATION_QUERY_SUCCESS: d,
     INTEGRATION_QUERY_FAILURE: f

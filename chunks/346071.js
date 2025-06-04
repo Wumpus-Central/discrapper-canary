@@ -2,15 +2,15 @@ n.d(t, { n: () => u });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(886969),
-    o = n(474936),
+    o = n(886969),
+    a = n(474936),
     s = n(388032),
     l = n(429680),
     c = n(774945);
 function u(e) {
     let { fractionalPremiumInfo: t, variant: n = 'default', enablePremiumRebrandDesign: u = !1, style: d } = e,
-        f = t.fractionalState === o.a$.FP_SUB_PAUSED,
-        _ = (0, a.Z)(t.endsAt, f),
+        f = t.fractionalState === a.a$.FP_SUB_PAUSED,
+        _ = (0, o.Z)(t.endsAt, f),
         p = '',
         h = {
             trial: {

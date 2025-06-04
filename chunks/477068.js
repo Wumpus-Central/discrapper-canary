@@ -41,8 +41,8 @@ e.exports = function (e) {
             { begin: e.IDENT_RE + '\\\\' + e.IDENT_RE }
         ];
     r.contains = i;
-    let a = e.inherit(e.TITLE_MODE, { begin: n }),
-        o = '(\\(.*\\)\\s*)?\\B[-=]>',
+    let o = e.inherit(e.TITLE_MODE, { begin: n }),
+        a = '(\\(.*\\)\\s*)?\\B[-=]>',
         s = {
             className: 'params',
             begin: '\\([^\\(]',
@@ -65,10 +65,10 @@ e.exports = function (e) {
             e.COMMENT('--', '$'),
             {
                 className: 'function',
-                begin: '^\\s*' + n + '\\s*=\\s*' + o,
+                begin: '^\\s*' + n + '\\s*=\\s*' + a,
                 end: '[-=]>',
                 returnBegin: !0,
-                contains: [a, s]
+                contains: [o, s]
             },
             {
                 begin: /[\(,:=]\s*/,
@@ -76,7 +76,7 @@ e.exports = function (e) {
                 contains: [
                     {
                         className: 'function',
-                        begin: o,
+                        begin: a,
                         end: '[-=]>',
                         returnBegin: !0,
                         contains: [s]
@@ -93,9 +93,9 @@ e.exports = function (e) {
                         beginKeywords: 'extends',
                         endsWithParent: !0,
                         illegal: /[:="\[\]]/,
-                        contains: [a]
+                        contains: [o]
                     },
-                    a
+                    o
                 ]
             },
             {

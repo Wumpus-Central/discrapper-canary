@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(388685);
 var r = n(392711),
     i = n(106351),
-    a = n(904245),
-    o = n(147913),
+    o = n(904245),
+    a = n(147913),
     s = n(447003),
     l = n(592125),
     c = n(650774),
@@ -29,7 +29,7 @@ function E(e, t, n) {
 }
 let b = 50,
     y = 1000;
-class O extends o.Z {
+class O extends a.Z {
     isChannelEligible(e, t) {
         switch (e.type) {
             case i.d.DM:
@@ -49,7 +49,7 @@ class O extends o.Z {
             !m.Z.isGiftIntentMessageInCooldown(n) &&
                 e === r &&
                 f.Z.isReady(e) &&
-                (a.Z.sendGiftingPromptSystemMessage(e, {
+                (o.Z.sendGiftingPromptSystemMessage(e, {
                     giftIntentType: t,
                     recipientUserId: n,
                     giftIntentSecondaryAction: i

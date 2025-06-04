@@ -1,8 +1,8 @@
 n.d(t, { Z: () => R }), n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(481060),
-    o = n(727637),
+    o = n(481060),
+    a = n(727637),
     s = n(100527),
     l = n(906732),
     c = n(580552),
@@ -66,7 +66,7 @@ function R(e) {
             roleId: w
         }),
         F = i.useRef(null),
-        V = (0, o.Z)(F);
+        V = (0, a.Z)(F);
     i.useEffect(() => {
         null == L || L(null == F ? void 0 : F.current);
     }, [F, L]);
@@ -85,7 +85,7 @@ function R(e) {
         H = !k && (0, c.Z)(t.id),
         Y = () =>
             H
-                ? (0, r.jsx)(a.sNh, {
+                ? (0, r.jsx)(o.sNh, {
                       id: 'view-profile',
                       label: A.intl.string(A.t['+Xp3ho']),
                       action: () => {
@@ -102,7 +102,7 @@ function R(e) {
                       }
                   })
                 : null,
-        W = j ? 'div' : a.VqE;
+        W = j ? 'div' : o.VqE;
     return (0, r.jsx)(l.Gt, {
         value: G,
         children: (0, r.jsx)(_.Mt, {
@@ -146,7 +146,7 @@ function R(e) {
                                     t.isClyde() && (0, r.jsx)(u.Z, { className: N.headerTag })
                                 ]
                             }),
-                            (0, r.jsxs)(a.Ttm, {
+                            (0, r.jsxs)(o.Ttm, {
                                 fade: !0,
                                 className: N.body,
                                 children: [

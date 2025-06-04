@@ -4,11 +4,11 @@ n.d(t, {
 });
 var r = n(570140),
     i = n(317770),
-    a = n(818083),
-    o = n(638395);
+    o = n(818083),
+    a = n(638395);
 n(171393);
 var s = n(987338);
-let l = (0, a.B)({
+let l = (0, o.B)({
         kind: 'user',
         id: '2024-07_icymi',
         label: 'In-case-you-missed-it tab',
@@ -42,7 +42,7 @@ let l = (0, a.B)({
         ]
     }),
     c =
-        ((0, a.B)({
+        ((0, o.B)({
             kind: 'user',
             id: '2024-12_icymi_status_with_media',
             label: 'Shows media with custom status in ICYMI',
@@ -55,7 +55,7 @@ let l = (0, a.B)({
                 }
             ]
         }),
-        (0, a.B)({
+        (0, o.B)({
             kind: 'user',
             id: '2024-10_merge_notifications_tab',
             label: 'Merge notifications tab',
@@ -105,10 +105,10 @@ let l = (0, a.B)({
         }));
 function u(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        r = o.Z.get('hide_icymi_tab'),
+        r = a.Z.get('hide_icymi_tab'),
         i = d(t, !1),
         {
-            enabled: a,
+            enabled: o,
             tabBadgeVariant: s,
             removeHomeMentionBadges: l
         } = c.getCurrentConfig(
@@ -119,7 +119,7 @@ function u(e) {
             }
         );
     return {
-        enabled: a && !r && i,
+        enabled: o && !r && i,
         tabBadgeVariant: s,
         removeHomeMentionBadges: l
     };
@@ -134,7 +134,7 @@ function d(e) {
         }
     ).enabled;
 }
-(0, a.B)({
+(0, o.B)({
     kind: 'user',
     id: '2024-07_icymi_negative_items',
     label: 'icymi negative content (debugging only)',
@@ -147,7 +147,7 @@ function d(e) {
         }
     ]
 }),
-    (0, a.B)({
+    (0, o.B)({
         kind: 'user',
         id: '2025-04_icymi_search_experience',
         label: 'ICYMI Search Experience',

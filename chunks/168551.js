@@ -7,8 +7,8 @@ n.d(t, {
     n(539854);
 var r = n(73800),
     i = n(688619),
-    a = n.n(i),
-    o = n(392711),
+    o = n.n(i),
+    a = n(392711),
     s = n(691324),
     l = n(442837),
     c = n(780384),
@@ -34,7 +34,7 @@ let m = 'data-client-themes',
                     secondaryColor: r,
                     isDarkTheme: (0, c.wj)(e.theme)
                 }),
-                a = '\n      '.concat(
+                o = '\n      '.concat(
                     Object.entries(i)
                         .map((e) => {
                             let [t, n] = e;
@@ -43,7 +43,7 @@ let m = 'data-client-themes',
                         .join('\n'),
                     '\n    '
                 );
-            return '.'.concat(g, ' {\n      --custom-theme-background: ').concat(t, ';\n      --custom-theme-primary-color: ').concat(n, ';\n      --custom-theme-secondary-color: ').concat(r, ';\n      ').concat(a, '\n    }');
+            return '.'.concat(g, ' {\n      --custom-theme-background: ').concat(t, ';\n      --custom-theme-primary-color: ').concat(n, ';\n      --custom-theme-secondary-color: ').concat(r, ';\n      ').concat(o, '\n    }');
         }, [e]);
     },
     b = () => {
@@ -57,7 +57,7 @@ let m = 'data-client-themes',
             m = r.useRef(void 0);
         return (
             r.useEffect(() => {
-                if (!(0, o.isEqual)(_, m.current)) {
+                if (!(0, a.isEqual)(_, m.current)) {
                     var e, t, n;
                     (m.current = _),
                         f.I.setState({
@@ -71,16 +71,16 @@ let m = 'data-client-themes',
                 if (!e || 0 === n.length) return null;
                 let r = n.slice();
                 1 === n.length && r.push(n[0]);
-                let o = n.map((e) => {
-                        let t = a()(e).rgb();
+                let a = n.map((e) => {
+                        let t = o()(e).rgb();
                         return 0.2126 * t[0] + 0.7152 * t[1] + 0.0722 * t[2];
                     }),
-                    l = a()(n[o.indexOf(Math.min(...o))]),
-                    u = a()(n[o.indexOf(Math.max(...o))]),
+                    l = o()(n[a.indexOf(Math.min(...a))]),
+                    u = o()(n[a.indexOf(Math.max(...a))]),
                     d = 'linear-gradient('.concat(s, 'deg, ').concat(r.join(', '), ')'),
                     f = (0, c.wj)(t),
-                    _ = a()(u).set('hsl.s', 1).set('hsl.l', 0.9),
-                    h = a()(l).set('hsl.s', 1).set('hsl.l', 0.05),
+                    _ = o()(u).set('hsl.s', 1).set('hsl.l', 0.9),
+                    h = o()(l).set('hsl.s', 1).set('hsl.l', 0.05),
                     m = 100 - i;
                 return '.'
                     .concat(g, ' {\n      --custom-theme-background: ')
@@ -98,14 +98,14 @@ let m = 'data-client-themes',
                     .concat((0, p.dw)(h), ';\n      --theme-border-color-amount: 15%;\n      ')
                     .concat(p.uv, ': ')
                     .concat(
-                        a()(u)
+                        o()(u)
                             .set('hsl.l', ((0.05 * m) / 100).toFixed(2))
                             .css(),
                         ';\n      '
                     )
                     .concat(p.Xg, ': ')
                     .concat(
-                        a()(l)
+                        o()(l)
                             .set('hsl.l', ((100 - 0.1 * m) / 100).toFixed(2))
                             .css(),
                         ';\n      '

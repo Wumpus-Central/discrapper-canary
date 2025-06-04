@@ -1,5 +1,5 @@
 n.d(t, {
-    I: () => o,
+    I: () => a,
     o: () => s
 });
 var r = n(668757);
@@ -16,7 +16,7 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+class o {
     cachedIsEnabled() {
         return (0, r.X6)() && (0, r.Md)().isExperimentIdEnabled(this.id);
     }
@@ -27,5 +27,5 @@ class a {
         i(this, 'id', void 0), i(this, 'feature', void 0), i(this, '_discordExperiment', void 0), (this.id = e), (this.feature = t), (this.id = e), (this.feature = t), (this._discordExperiment = null);
     }
 }
-let o = new a('2025-05_libdiscore_notestore', 'NoteStore'),
-    s = [o];
+let a = new o('2025-05_libdiscore_notestore', 'NoteStore'),
+    s = [a];

@@ -13,14 +13,14 @@ var r = n(442837),
     p = n(221292),
     m = n(687158),
     b = n(316027),
-    _ = n(502762),
-    y = n(848780),
+    y = n(502762),
+    _ = n(848780),
     x = n(907179),
     h = n(228168),
     g = n(981631),
     j = n(388032),
-    v = n(247787);
-function I(e) {
+    I = n(247787);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             o = Object.keys(n);
@@ -69,29 +69,29 @@ function O(e) {
                 description: j.intl.string(S ? j.t.QxrDY2 : j.t.W6fjkZ)
             }
         ],
-        U = (0, m.ZP)(t.id, w),
-        k = u.ZP.getName(null == U ? void 0 : U.guildId, O, t),
-        L = (0, r.e7)([s.default], () => ['en-US', 'en-GB'].includes(s.default.locale)) ? j.intl.formatToPlainString(j.t.KRe1Fh, { name: k }) : j.intl.string(j.t['3N/J2t']);
+        k = (0, m.ZP)(t.id, w),
+        U = u.ZP.getName(null == k ? void 0 : k.guildId, O, t),
+        L = (0, r.e7)([s.default], () => ['en-US', 'en-GB'].includes(s.default.locale)) ? j.intl.formatToPlainString(j.t.KRe1Fh, { name: U }) : j.intl.string(j.t['3N/J2t']);
     return (0, o.jsx)(l.Gt, {
         value: E,
         children: (0, o.jsx)(f.Mt, {
             value: B,
             openedAt: Z,
-            fetchStartedAt: null == U ? void 0 : U.fetchStartedAt,
-            fetchEndedAt: null == U ? void 0 : U.fetchEndedAt,
-            isLoaded: null == U ? void 0 : U.isLoaded,
+            fetchStartedAt: null == k ? void 0 : k.fetchStartedAt,
+            fetchEndedAt: null == k ? void 0 : k.fetchEndedAt,
+            isLoaded: null == k ? void 0 : k.isLoaded,
             children: (0, o.jsx)(i.Y0X, {
                 transitionState: A,
-                className: v.root,
+                className: I.root,
                 'aria-label': L,
-                children: (0, o.jsxs)(_.Z, {
+                children: (0, o.jsxs)(y.Z, {
                     user: t,
-                    displayProfile: U,
+                    displayProfile: k,
                     themeType: h.lY.MODAL_V2,
                     children: [
-                        (0, o.jsx)('div', { className: v.background }),
+                        (0, o.jsx)('div', { className: I.background }),
                         (0, o.jsxs)('div', {
-                            className: v.content,
+                            className: I.content,
                             children: [
                                 (0, o.jsx)(b.Z, {
                                     user: t,
@@ -99,7 +99,7 @@ function O(e) {
                                     iconColor: i.TVs.colors.TEXT_NORMAL
                                 }),
                                 (0, o.jsxs)('div', {
-                                    className: v.textContainer,
+                                    className: I.textContainer,
                                     children: [
                                         (0, o.jsx)(i.X6q, {
                                             variant: 'heading-xl/bold',
@@ -109,12 +109,12 @@ function O(e) {
                                         (0, o.jsx)(i.Text, {
                                             variant: 'text-md/medium',
                                             color: 'text-normal',
-                                            children: j.intl.format(S ? j.t.T7QiLi : j.t.MnEow8, { username: k })
+                                            children: j.intl.format(S ? j.t.T7QiLi : j.t.MnEow8, { username: U })
                                         })
                                     ]
                                 }),
                                 (0, o.jsx)('div', {
-                                    className: v.safetyTable,
+                                    className: I.safetyTable,
                                     children: D.map((e, t) => {
                                         let { icon: n, description: r } = e;
                                         return (0, o.jsx)(
@@ -138,7 +138,7 @@ function O(e) {
                                             onClick: () => {
                                                 T(),
                                                     (0, p.pQ)(
-                                                        I(
+                                                        v(
                                                             {
                                                                 action: S ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
                                                                 analyticsLocations: E
@@ -148,12 +148,12 @@ function O(e) {
                                                     );
                                             }
                                         }),
-                                        (0, o.jsx)(y.Z, {
+                                        (0, o.jsx)(_.Z, {
                                             userId: t.id,
                                             onClick: () => {
                                                 T(),
                                                     (0, p.pQ)(
-                                                        I(
+                                                        v(
                                                             {
                                                                 action: 'DONT_SHOW_AGAIN_IGNORED_PROFILE',
                                                                 analyticsLocations: E

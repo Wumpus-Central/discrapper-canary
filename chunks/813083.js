@@ -2,8 +2,8 @@ n.d(t, { Z: () => u }), n(314940);
 var r = n(255367);
 n(73800);
 var i = n(278074),
-    a = n(780384),
-    o = n(481060),
+    o = n(780384),
+    a = n(481060),
     s = n(410030),
     l = n(884697),
     c = n(388032);
@@ -13,11 +13,11 @@ let u = (e) => {
     if (null == t.unpublishedAt) return null;
     let f = (0, l.OT)(t.unpublishedAt);
     function _(e) {
-        return (0, r.jsx)(o.IGR, {
+        return (0, r.jsx)(a.IGR, {
             disableColor: !0,
             text: e,
             className: u,
-            style: (0, a.wj)(d)
+            style: (0, o.wj)(d)
                 ? {
                       color: 'var(--black-500)',
                       backgroundColor: 'var(--white-500)'

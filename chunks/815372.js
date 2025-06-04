@@ -1,11 +1,11 @@
 n.d(t, {
     FL: () => s,
-    Ky: () => o
+    Ky: () => a
 }),
     n(415506);
 var r = n(81825),
     i = n(981631);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,9 +18,9 @@ function a(e, t, n) {
         e
     );
 }
-var o = (function (e) {
+var a = (function (e) {
     return (e.SHOP = 'SHOP'), (e.NITRO_HOME = 'NITRO_HOME'), (e.QUEST_HOME = 'QUEST_HOME'), (e.APPS_HOME = 'APPS_HOME'), (e.SETTINGS = 'SETTINGS'), e;
-})(o || {});
+})(a || {});
 class s extends r.Z {
     static fromType(e, t, n) {
         switch (e) {
@@ -55,6 +55,6 @@ class s extends r.Z {
         }
     }
     constructor(e) {
-        super(), a(this, 'id', void 0), a(this, 'path', void 0), a(this, 'type', void 0), a(this, 'label', void 0), (this.id = e.type), (this.path = e.path), (this.type = e.type), (this.label = e.label);
+        super(), o(this, 'id', void 0), o(this, 'path', void 0), o(this, 'type', void 0), o(this, 'label', void 0), (this.id = e.type), (this.path = e.path), (this.type = e.type), (this.label = e.label);
     }
 }

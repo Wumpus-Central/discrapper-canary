@@ -1,8 +1,8 @@
-n.d(t, { Z: () => ea }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(539854), n(49124), n(358797);
+n.d(t, { Z: () => eo }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(539854), n(49124), n(358797);
 var r = n(512722),
     i = n.n(r),
-    a = n(457854),
-    o = n(990547),
+    o = n(457854),
+    a = n(990547),
     s = n(261470),
     l = n(956067),
     c = n(286379),
@@ -89,34 +89,34 @@ function V(e, t) {
 }
 let Z = new b.Z('GatewaySocket'),
     H = new w.Z(),
-    Y = (0, o.getSuperProperties)();
+    Y = (0, a.getSuperProperties)();
 function W(e) {
     let { actuallySkipped: t, reason: n } = e,
         r = k.a(),
         i = M.Pf(),
-        a = g.Z.getState(),
-        o = i.length > 0 ? ''.concat(n, ' + ').concat(i) : n,
+        o = g.Z.getState(),
+        a = i.length > 0 ? ''.concat(n, ' + ').concat(i) : n,
         s = r ? 'paused' : 'request_state';
     I.default.track(U.rMx.GATEWAY_CONNECT_SKIPPED, {
         actually_skipped: null != t ? t : r,
-        client_app_state: a,
-        connect_reason: o,
+        client_app_state: o,
+        connect_reason: a,
         skip_context: s
     }),
         setTimeout(() => {
             I.default.track(U.rMx.POST_GATEWAY_CONNECT_SKIPPED, {
                 actually_skipped: null != t ? t : r,
-                original_client_app_state: a,
+                original_client_app_state: o,
                 client_app_state: g.Z.getState(),
                 skip_context: s,
-                original_connect_reason: o,
+                original_connect_reason: a,
                 gateway_connect_reasons: M.Pf()
             });
         }, 200);
 }
 function K(e) {
     let t,
-        { gatewayURL: n, newCallback: r, onOpen: i, onMessage: a, onError: o, onClose: s } = e;
+        { gatewayURL: n, newCallback: r, onOpen: i, onMessage: o, onError: a, onClose: s } = e;
     Z.enableNativeLogger(!0);
     let l = window._ws,
         c = !1,
@@ -130,7 +130,7 @@ function K(e) {
             let e = B({}, l.state);
             null != e.messages && (e.messages = e.messages.map((e) => (null != e.data && 'string' == typeof e.data ? V(B({}, e), { data: e.data.substring(0, 100) }) : e))), Z.log('[FAST CONNECT] successfully took over websocket, state:', V(B({}, e), { messages: null == (_ = e.messages) ? void 0 : _.length })), (c = l.state.open), (u = l.state.identify), (d = l.state.messages), (f = l.state.clientState);
         }
-    null == t && ((t = (0, j.Z)(n)).binaryType = 'arraybuffer'), r(t), c && i(u, f), null != d && d.forEach(a), (t.onopen = () => i(u, f)), (t.onmessage = a), (t.onclose = s), (t.onerror = o);
+    null == t && ((t = (0, j.Z)(n)).binaryType = 'arraybuffer'), r(t), c && i(u, f), null != d && d.forEach(o), (t.onopen = () => i(u, f)), (t.onmessage = o), (t.onclose = s), (t.onerror = a);
 }
 function z() {}
 let q = 4,
@@ -151,10 +151,10 @@ function en(e, t, n) {
     });
     let i = !1;
     return (n) => {
-        let a = n.data;
-        null != n.raw_length ? (r += n.raw_length) : (r += er(a));
+        let o = n.data;
+        null != n.raw_length ? (r += n.raw_length) : (r += er(o));
         try {
-            e.feed(a);
+            e.feed(o);
         } catch (e) {
             throw (i || ((i = !0), t(!1, 0, 'A decompression error occurred')), e);
         }
@@ -164,7 +164,7 @@ function er(e) {
     return null == e ? 0 : 'string' == typeof e ? e.length : e.byteLength;
 }
 let ei = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
-class ea extends x.Z {
+class eo extends x.Z {
     get connectionState() {
         return this.connectionState_;
     }
@@ -185,58 +185,58 @@ class ea extends x.Z {
         let n = this.compressionHandler.getAlgorithm(),
             r = H.getName(),
             i = this._getGatewayUrl(),
-            a = window.GLOBAL_ENV.API_VERSION;
+            o = window.GLOBAL_ENV.API_VERSION;
         l.Z.mark('\uD83C\uDF10', 'Socket._connect'),
-            Z.info('[CONNECT] '.concat(i, ', ') + 'encoding: '.concat(r, ', ') + 'version: '.concat(a, ', ') + 'compression: '.concat(null != n ? n : 'none')),
+            Z.info('[CONNECT] '.concat(i, ', ') + 'encoding: '.concat(r, ', ') + 'version: '.concat(o, ', ') + 'compression: '.concat(null != n ? n : 'none')),
             null !== this.webSocket && (Z.error('_connect called with already existing websocket'), this._cleanup((e) => e.close(4000))),
             (this.connectionStartTime = Date.now()),
             (this.helloTimeout = setTimeout(() => {
                 let e = Date.now() - this.connectionStartTime;
                 this._handleClose(!1, 0, 'The connection timed out after '.concat(e, ' ms - did not receive OP_HELLO in time.')), this.setResumeUrl(null);
             }, $));
-        let o = new URL(i);
-        o.searchParams.append('encoding', r),
-            o.searchParams.append('v', a.toString()),
-            null != n && o.searchParams.append('compress', n),
+        let a = new URL(i);
+        a.searchParams.append('encoding', r),
+            a.searchParams.append('v', o.toString()),
+            null != n && a.searchParams.append('compress', n),
             K({
-                gatewayURL: o.toString(),
+                gatewayURL: a.toString(),
                 newCallback: (e) => {
                     (this.webSocket = e), this.compressionHandler.bindWebSocket(e);
                 },
                 onOpen: (e) => {
                     l.Z.mark('\uD83C\uDF10', 'GatewaySocket.onOpen '.concat(e));
                     let t = Date.now() - this.connectionStartTime;
-                    Z.info('[CONNECTED] '.concat(o.toString(), ' in ').concat(t, ' ms')), (this.isFastConnect = e), e ? this._doFastConnectIdentify() : this._doResumeOrIdentify();
+                    Z.info('[CONNECTED] '.concat(a.toString(), ' in ').concat(t, ' ms')), (this.isFastConnect = e), e ? this._doFastConnectIdentify() : this._doResumeOrIdentify();
                 },
                 onMessage: en(this.compressionHandler, this._handleClose.bind(this), (e, t) => {
                     let n = Date.now(),
-                        { op: r, s: i, t: a, d: o } = H.unpack(e);
+                        { op: r, s: i, t: o, d: a } = H.unpack(e);
                     if ((r !== x.j.DISPATCH && l.Z.mark('\uD83C\uDF10', 'GatewaySocket.onMessage '.concat(r, ' ').concat(x.j[r])), v.default.isLoggingGatewayEvents)) {
                         let e = [r];
-                        r === x.j.DISPATCH && e.push(a), e.push(o), Z.verboseDangerously('<~', ...e);
+                        r === x.j.DISPATCH && e.push(o), e.push(a), Z.verboseDangerously('<~', ...e);
                     }
                     let s = Date.now() - n;
-                    switch (('READY' === a ? O.Z.parseReady.set(n, s) : 'READY_SUPPLEMENTAL' === a ? O.Z.parseReadySupplemental.set(n, s) : s > 10 && l.Z.mark('\uD83C\uDF10', 'Parse ' + a, s), null != i && (this.seq = i), r)) {
+                    switch (('READY' === o ? O.Z.parseReady.set(n, s) : 'READY_SUPPLEMENTAL' === o ? O.Z.parseReadySupplemental.set(n, s) : s > 10 && l.Z.mark('\uD83C\uDF10', 'Parse ' + o, s), null != i && (this.seq = i), r)) {
                         case x.j.HELLO:
-                            this._clearHelloTimeout(), this._handleHello(o);
+                            this._clearHelloTimeout(), this._handleHello(a);
                             break;
                         case x.j.RECONNECT:
                             this._handleReconnect();
                             break;
                         case x.j.INVALID_SESSION:
-                            this._handleInvalidSession(o);
+                            this._handleInvalidSession(a);
                             break;
                         case x.j.HEARTBEAT:
                             this._handleHeartbeatReceive();
                             break;
                         case x.j.HEARTBEAT_ACK:
-                            this._handleHeartbeatAck(o);
+                            this._handleHeartbeatAck(a);
                             break;
                         case x.j.DISPATCH:
                             this._handleDispatch(
-                                o,
                                 a,
-                                'READY' === a
+                                o,
+                                'READY' === o
                                     ? {
                                           compressed_byte_size: t,
                                           uncompressed_byte_size: er(e),
@@ -415,7 +415,7 @@ class ea extends x.Z {
         let t = Date.now();
         this.identifyStartTime = t;
         let [n, r, i] = await Promise.all([(0, E.O)() ? p.Z.getCommittedVersions() : {}, (0, E.O)() ? m.Z.getCommittedVersions() : {}, !!(0, E.O)() && h.Z.canUseGuildVersions()]),
-            o = i
+            a = i
                 ? {
                       guild_versions: n,
                       highest_last_message_id: r.highest_last_message_id,
@@ -436,10 +436,10 @@ class ea extends x.Z {
                 properties: l,
                 presence: c,
                 compress: this.compressionHandler.usesLegacyCompression(),
-                client_state: o
+                client_state: a
             },
             d = JSON.stringify(u);
-        (this.identifyUncompressedByteSize = d.length), (this.identifyCompressedByteSize = a.deflate(d).length), (this.identifyCount += 1), this.send(x.j.IDENTIFY, u, !1), I.default.track(U.rMx.SESSION_START_CLIENT, {});
+        (this.identifyUncompressedByteSize = d.length), (this.identifyCompressedByteSize = o.deflate(d).length), (this.identifyCount += 1), this.send(x.j.IDENTIFY, u, !1), I.default.track(U.rMx.SESSION_START_CLIENT, {});
     }
     _doFastConnectIdentify() {
         (this.seq = 0), (this.sessionId = null);
@@ -499,9 +499,9 @@ class ea extends x.Z {
             this.dispatcher.clear(),
             (this.connectionState = C.Z.WILL_RECONNECT),
             this.dispatchExceptionBackoff.cancel();
-        let a = e.clearCache || this.dispatchExceptionBackoff._fails > 0;
+        let o = e.clearCache || this.dispatchExceptionBackoff._fails > 0;
         0 === this.dispatchExceptionBackoff._fails ? (Z.verbose('Triggering fast reconnect'), this.dispatchExceptionBackoff.fail(() => {}), setTimeout(() => this._connect('resetSocketOnErrorImmediate'), 0)) : this.dispatchExceptionBackoff.fail(() => this._connect('resetSocketOnError')),
-            a &&
+            o &&
                 ((this.didForceClearGuildHashes = !0),
                 _.Z.dispatch({
                     type: 'CLEAR_CACHES',

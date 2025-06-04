@@ -1,16 +1,16 @@
 var r = n(48511),
     i = n(815329),
-    a = function (e, t, n) {
+    o = function (e, t, n) {
         for (var r, i = e; null != (r = i.next); i = r) if (r.key === t) return (i.next = r.next), n || ((r.next = e.next), (e.next = r)), r;
     },
-    o = function (e, t) {
+    a = function (e, t) {
         if (e) {
-            var n = a(e, t);
+            var n = o(e, t);
             return n && n.value;
         }
     },
     s = function (e, t, n) {
-        var r = a(e, t);
+        var r = o(e, t);
         r
             ? (r.value = n)
             : (e.next = {
@@ -20,10 +20,10 @@ var r = n(48511),
               });
     },
     l = function (e, t) {
-        return !!e && !!a(e, t);
+        return !!e && !!o(e, t);
     },
     c = function (e, t) {
-        if (e) return a(e, t, !0);
+        if (e) return o(e, t, !0);
     };
 e.exports = function () {
     var e,
@@ -37,7 +37,7 @@ e.exports = function () {
                 return r && n && n === r && (e = void 0), !!r;
             },
             get: function (t) {
-                return o(e, t);
+                return a(e, t);
             },
             has: function (t) {
                 return l(e, t);

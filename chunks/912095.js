@@ -7,8 +7,8 @@ n.d(t, {
     n(358797);
 var r = n(874141),
     i = n.n(r),
-    a = n(565925),
-    o = n.n(a),
+    o = n(565925),
+    a = n.n(o),
     s = n(839548),
     l = n(46973),
     c = n(886848),
@@ -98,8 +98,8 @@ class E extends s.Z {
         if (null != t.capture && null != t.capture.width && null != t.capture.height && null != e.remoteSinkWantsPixelCount && 0 !== e.remoteSinkWantsPixelCount && 0 !== t.capture.height) {
             let r = t.capture.width / t.capture.height,
                 i = Math.sqrt(e.remoteSinkWantsPixelCount * r),
-                a = t.capture.width / i;
-            n = a < 1 ? void 0 : a;
+                o = t.capture.width / i;
+            n = o < 1 ? void 0 : o;
         }
         this.logger.verbose('BaseWebRTCConnection.updateVideoQuality: resolutionScaleFactor: '.concat(n, ', ') + 'encodingVideoWidth: '.concat(e.encodingVideoWidth, ', remoteSinkWantsMaxFramerate: ').concat(e.remoteSinkWantsMaxFramerate, ', ') + 'encodingVideoMaxBitRate: '.concat(e.encodingVideoMaxBitRate, ', localWant: ').concat(this.getLocalWant())),
             this.setVideoEncoderParameters([
@@ -117,13 +117,13 @@ class E extends s.Z {
                 }
             ]);
         let i = e.encodingVideoWidth,
-            a = e.encodingVideoHeight;
+            o = e.encodingVideoHeight;
         for (let e of r.getTracks()) {
-            var o, s;
+            var a, s;
             let t = e.getConstraints(),
-                n = null == (o = t.width) ? void 0 : o.max,
+                n = null == (a = t.width) ? void 0 : a.max,
                 r = null == (s = t.height) ? void 0 : s.max;
-            (n !== i || r !== a) && (this.logger.info('BaseWebRTCConnection.updateVideoQuality: old: '.concat(n, ' x ').concat(r, ', new: ').concat(i, ' x ').concat(a)), (t.width = { max: i }), (t.height = { max: a }), e.applyConstraints(t));
+            (n !== i || r !== o) && (this.logger.info('BaseWebRTCConnection.updateVideoQuality: old: '.concat(n, ' x ').concat(r, ', new: ').concat(i, ' x ').concat(o)), (t.width = { max: i }), (t.height = { max: o }), e.applyConstraints(t));
         }
     }
     setCanHavePriority(e, t) {
@@ -152,7 +152,7 @@ class E extends s.Z {
             for (let t of this.videoStreamParameters) {
                 let r = e.findIndex((e) => e.rid === t.rid);
                 if (-1 === r) return void n(Error('Invalid rid'));
-                o()(this.videoStreamParameters[r], e[r]) || (this.videoStreamParameters[r] = m({}, e[r]));
+                a()(this.videoStreamParameters[r], e[r]) || (this.videoStreamParameters[r] = m({}, e[r]));
             }
             t();
         });

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(147913),
     i = n(626135),
-    a = n(358085),
-    o = n(998502),
+    o = n(358085),
+    a = n(998502),
     s = n(654769),
     l = n(981631);
 function c(e, t, n) {
@@ -19,9 +19,9 @@ function c(e, t, n) {
     );
 }
 async function u() {
-    if (!a.isPlatformEmbedded) return !1;
+    if (!o.isPlatformEmbedded) return !1;
     let e = await s.Z.hasPermission();
-    return o.ZP.shouldDisplayNotifications() && e;
+    return a.ZP.shouldDisplayNotifications() && e;
 }
 class d extends r.Z {
     async handlePostConnectionOpen() {

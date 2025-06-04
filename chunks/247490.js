@@ -1,10 +1,10 @@
 n.d(t, {
-    Z: () => o,
-    k: () => a
+    Z: () => a,
+    k: () => o
 });
 var r = n(818083),
     i = n(987338);
-let a = (0, r.B)({
+let o = (0, r.B)({
     kind: 'user',
     id: '2025-06_payment_modal_nitro_rebrand_experiment',
     label: 'Payment Modal Nitro Rebrand Experiment',
@@ -23,7 +23,7 @@ let a = (0, r.B)({
         }
     ]
 });
-function o(e) {
+function a(e) {
     let { location: t } = e;
-    return a.useExperiment({ location: t }, { autoTrackExposure: !0 }).enabled;
+    return o.useExperiment({ location: t }, { autoTrackExposure: !0 }).enabled;
 }

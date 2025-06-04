@@ -4,14 +4,14 @@ n.d(t, {
 });
 var r = n(73800),
     i = n(442837),
-    a = n(430824),
-    o = n(905128),
+    o = n(430824),
+    a = n(905128),
     s = n(50101);
 function l(e) {
     var t, n, r;
     let i = (0, s.gV)(e, 'getGuildPowerupsBoostCount'),
-        l = null != (r = null == (t = a.Z.getGuild(e)) ? void 0 : t.premiumSubscriberCount) ? r : 0,
-        c = null == (n = o.Z.getStateForGuild(e)) ? void 0 : n.appliedBoosts;
+        l = null != (r = null == (t = o.Z.getGuild(e)) ? void 0 : t.premiumSubscriberCount) ? r : 0,
+        c = null == (n = a.Z.getStateForGuild(e)) ? void 0 : n.appliedBoosts;
     return i
         ? null == c
             ? {
@@ -35,15 +35,15 @@ function c(e) {
     let n = (0, s.Ek)(e, 'useGuildPowerupsBoostCount'),
         l =
             null !=
-            (t = (0, i.e7)([a.Z], () => {
+            (t = (0, i.e7)([o.Z], () => {
                 var t;
-                return null == (t = a.Z.getGuild(e)) ? void 0 : t.premiumSubscriberCount;
+                return null == (t = o.Z.getGuild(e)) ? void 0 : t.premiumSubscriberCount;
             }))
                 ? t
                 : 0,
-        c = (0, i.e7)([o.Z], () => {
+        c = (0, i.e7)([a.Z], () => {
             var t;
-            return null == (t = o.Z.getStateForGuild(e)) ? void 0 : t.appliedBoosts;
+            return null == (t = a.Z.getStateForGuild(e)) ? void 0 : t.appliedBoosts;
         });
     return r.useMemo(
         () =>

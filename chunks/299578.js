@@ -1,7 +1,7 @@
 var r = n(807419),
     i = n(143283),
-    a = n(706627),
-    o = n(19235),
+    o = n(706627),
+    a = n(19235),
     s = /[\\^$.*+?()[\]{}|]/g,
     l = /^\[object .+?Constructor\]$/,
     c = Object.prototype,
@@ -16,5 +16,5 @@ var r = n(807419),
             '$'
     );
 e.exports = function (e) {
-    return !(!a(e) || i(e)) && (r(e) ? f : l).test(o(e));
+    return !(!o(e) || i(e)) && (r(e) ? f : l).test(a(e));
 };

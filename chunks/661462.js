@@ -36,9 +36,9 @@ function f(e) {
 }
 function p(e) {
     var t, n, l;
-    let { user: a, currentUser: s, displayProfile: d, guildId: p, channelId: m, items: b, initialSection: _, initialSubsection: y, onClose: x } = e,
+    let { user: a, currentUser: s, displayProfile: d, guildId: p, channelId: m, items: b, initialSection: y, initialSubsection: _, onClose: x } = e,
         { trackUserProfileAction: h } = (0, c.KZ)(),
-        [{ section: g, subsection: j, text: v }, I] = r.useState(
+        [{ section: g, subsection: j, text: I }, v] = r.useState(
             ((n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -68,12 +68,12 @@ function p(e) {
                 null !=
                     (t = b.find((e) => {
                         let { section: t } = e;
-                        return t === _;
+                        return t === y;
                     }))
                     ? t
                     : b[0]
             )),
-            (l = l = { subsection: y }),
+            (l = l = { subsection: _ }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                 : (function (e, t) {
@@ -93,14 +93,14 @@ function p(e) {
         children: [
             (0, o.jsx)(i.njP, {
                 type: 'top',
-                className: u.tabBar,
+                look: 'custom',
                 selectedItem: g,
                 onItemSelect: (e) => {
                     h({
                         action: 'PRESS_SECTION',
                         section: e
                     }),
-                        I((t) => {
+                        v((t) => {
                             var n;
                             return null != (n = b.find((t) => t.section === e)) ? n : t;
                         });
@@ -112,11 +112,7 @@ function p(e) {
                             className: u.tabBarItem,
                             id: e.section,
                             'aria-label': e.text,
-                            children: (0, o.jsx)(i.Text, {
-                                variant: 'heading-md/normal',
-                                tag: 'span',
-                                children: e.text
-                            })
+                            children: e.text
                         },
                         e.section
                     )
@@ -124,7 +120,7 @@ function p(e) {
             }),
             (0, o.jsx)(i.njP.Panel, {
                 id: g,
-                'aria-label': v,
+                'aria-label': I,
                 className: u.tabBarPanel,
                 children: (0, o.jsx)(f, {
                     user: a,

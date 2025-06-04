@@ -6,9 +6,9 @@ n.d(t, {
     n(388685);
 var r,
     i = n(255367),
-    a = n(73800),
-    o = n(120356),
-    s = n.n(o),
+    o = n(73800),
+    a = n(120356),
+    s = n.n(a),
     l = n(748780),
     c = n(692547),
     u = n(780384),
@@ -75,8 +75,8 @@ function y(e, t) {
         r,
         i = O(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -85,8 +85,8 @@ function O(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let v = Object.freeze({
@@ -106,7 +106,7 @@ let v = Object.freeze({
 var I = (function (e) {
     return (e.PREMIUM_ACTIVATED = 'PREMIUM_ACTIVATED'), (e.PREMIUM_UPDATED = 'PREMIUM_UPDATED'), (e.PREMIUM_UPGRADED = 'PREMIUM_UPGRADED'), (e.GUILD_BOOST_APPLIED = 'GUILD_BOOST_APPLIED'), (e.PREMIUM_PAYMENT_STARTED = 'PREMIUM_PAYMENT_STARTED'), e;
 })({});
-class S extends (r = a.PureComponent) {
+class S extends (r = o.PureComponent) {
     componentDidMount() {
         this.animate();
     }
@@ -339,13 +339,13 @@ function T(e) {
     var { theme: t } = e,
         n = y(e, ['theme']);
     let r = (0, d.dQu)(c.Z.unsafe_rawColors.WHITE_500).hex(),
-        a = (0, d.dQu)(c.Z.unsafe_rawColors.BRAND_500).hex(),
-        o = (0, u.wj)(t) ? r : a;
+        o = (0, d.dQu)(c.Z.unsafe_rawColors.BRAND_500).hex(),
+        a = (0, u.wj)(t) ? r : o;
     return (0, i.jsx)(
         S,
         b(g({}, n), {
             theme: t,
-            flashColor: o
+            flashColor: a
         })
     );
 }

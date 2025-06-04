@@ -1,9 +1,9 @@
 var r = n(98405),
     i = n(127849),
-    a = n(391246),
-    o = n(108015),
+    o = n(391246),
+    a = n(108015),
     s = 'ArrayBuffer',
-    l = a[s];
+    l = o[s];
 r(
     {
         global: !0,
@@ -12,4 +12,4 @@ r(
     },
     { ArrayBuffer: l }
 ),
-    o(s);
+    a(s);

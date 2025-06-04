@@ -1,8 +1,8 @@
-n.d(t, { Z: () => eo }), n(388685);
+n.d(t, { Z: () => ea }), n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(386230),
     l = n(442837),
     c = n(481060),
@@ -111,16 +111,16 @@ let $ = {
 function ei(e) {
     let { header: t } = e,
         n = D.Z.getCameraComponent(),
-        a = (0, l.e7)([D.Z], () => D.Z.getVideoDeviceId()),
-        o = (0, I.Z)();
+        o = (0, l.e7)([D.Z], () => D.Z.getVideoDeviceId()),
+        a = (0, I.Z)();
     return (
         i.useEffect(() => {
             let e = L.default.getCurrentUser();
-            if (o && null != e) {
+            if (a && null != e) {
                 let t = (0, O.P)(e);
-                (0, v.FU)(t, a, { track: !1 }).catch(Z.dG4);
+                (0, v.FU)(t, o, { track: !1 }).catch(Z.dG4);
             }
-        }, [o, a]),
+        }, [a, o]),
         (0, r.jsxs)('div', {
             className: K.previewRoot,
             children: [
@@ -129,7 +129,7 @@ function ei(e) {
                     className: K.preview,
                     children: (0, r.jsx)(n, {
                         disabled: !1,
-                        deviceId: a,
+                        deviceId: o,
                         width: et,
                         height: en
                     })
@@ -142,15 +142,15 @@ function ei(e) {
         })
     );
 }
-function ea(e) {
-    let { canVideo: t, channel: n, numVideoDevices: a } = e,
+function eo(e) {
+    let { canVideo: t, channel: n, numVideoDevices: o } = e,
         { parentAnalyticsLocation: s } = (0, m.ZP)(),
         { cameraUnavailable: l, enabled: d } = (0, S.Z)(),
         _ = (0, T.Z)(n),
         p = i.useRef(null),
-        g = a > 1;
+        g = o > 1;
     return (0, r.jsxs)('div', {
-        className: o()(K.wrapper, K.actions),
+        className: a()(K.wrapper, K.actions),
         children: [
             (0, r.jsx)(N.Z, {
                 iconComponent: c.Dio,
@@ -186,19 +186,19 @@ function ea(e) {
                     animation: c.yRy.Animation.FADE,
                     children: (e, t) => {
                         let { onClick: i } = e,
-                            { isShown: a } = t;
+                            { isShown: o } = t;
                         return (0, r.jsx)(P.C, {
                             buttonRef: p,
                             join: !0,
                             enabled: d,
-                            className: o()(K.actionButton, { [K.fullRegionDropdownButtonOverride]: g }),
+                            className: a()(K.actionButton, { [K.fullRegionDropdownButtonOverride]: g }),
                             color: 'green',
                             centerButton: !0,
                             hasPermission: _,
                             cameraUnavailable: l,
                             channel: n,
                             onPopoutClick: g ? i : null,
-                            popoutOpen: a,
+                            popoutOpen: o,
                             onCameraUnavailable: A.Z,
                             onChange: () => {
                                 var e;
@@ -239,9 +239,9 @@ function ea(e) {
         ]
     });
 }
-function eo(e) {
+function ea(e) {
     var t;
-    let { animatedStyle: n, y: a, x: f, channel: h } = e,
+    let { animatedStyle: n, y: o, x: f, channel: h } = e,
         { analyticsLocations: y } = (0, m.ZP)(p.Z.INCOMING_CALL_MODAL),
         [O, v] = i.useState(!1),
         I = (0, l.e7)([w.Z], () => w.Z.getGuild(h.guild_id)),
@@ -285,14 +285,14 @@ function eo(e) {
             children: [
                 null != I && null == S
                     ? (0, r.jsx)('div', {
-                          className: o()(K.icon, W.wrapper, W.ringingIncoming),
+                          className: a()(K.icon, W.wrapper, W.ringingIncoming),
                           children: (0, r.jsx)(b.ZP, {
                               className: K.mask,
                               mask: b.QS.AVATAR_DEFAULT,
                               width: O ? 40 : 80,
                               height: O ? 40 : 80,
                               children: (0, r.jsx)('div', {
-                                  className: o()(K.guildIcon, K.guildIconWithoutImage),
+                                  className: a()(K.guildIcon, K.guildIconWithoutImage),
                                   children: (0, r.jsx)('div', {
                                       className: K.guildAcronym,
                                       children: I.acronym
@@ -326,7 +326,7 @@ function eo(e) {
                 })
             ]
         }),
-        eo = F ? $ : ee,
+        ea = F ? $ : ee,
         es = (0, l.e7)([x.Z], () => x.Z.windowSize());
     return (0, r.jsx)(m.Gt, {
         value: y,
@@ -335,7 +335,7 @@ function eo(e) {
             selector: '.'.concat(K.root),
             initialPosition: {
                 left: f,
-                top: a
+                top: o
             },
             maxX: es.width,
             maxY: es.height,
@@ -345,11 +345,11 @@ function eo(e) {
                 theme: O ? Z.BRd.DARK : void 0,
                 children: (e) =>
                     (0, r.jsxs)(s.animated.div, {
-                        className: o()(K.root, z.elevationHigh, { [K.previewCamera]: O }, e),
+                        className: a()(K.root, z.elevationHigh, { [K.previewCamera]: O }, e),
                         style: J(Q({}, n), {
-                            width: B.value.interpolate([0, 1], [eo.width, et]),
-                            minHeight: B.value.interpolate([0, 1], [eo.height, en]),
-                            translateX: B.value.interpolate([0, 1], [0, (-1 * Math.abs(et - eo.width)) / 2])
+                            width: B.value.interpolate([0, 1], [ea.width, et]),
+                            minHeight: B.value.interpolate([0, 1], [ea.height, en]),
+                            translateX: B.value.interpolate([0, 1], [0, (-1 * Math.abs(et - ea.width)) / 2])
                         }),
                         children: [
                             O
@@ -358,7 +358,7 @@ function eo(e) {
                                       className: K.mainChannelInfo,
                                       children: X
                                   }),
-                            (0, r.jsx)(ea, {
+                            (0, r.jsx)(eo, {
                                 canVideo: F,
                                 channel: h,
                                 numVideoDevices: C

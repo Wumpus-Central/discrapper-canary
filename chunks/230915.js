@@ -10,12 +10,12 @@ function n(e) {
 }
 var r,
     i = 'https://js.stripe.com/v3',
-    a = /^https:\/\/js\.stripe\.com\/v3\/?(\?.*)?$/,
-    o = 'loadStripe.setLoadParameters was called but an existing Stripe.js script already exists in the document; existing script parameters will be used',
+    o = /^https:\/\/js\.stripe\.com\/v3\/?(\?.*)?$/,
+    a = 'loadStripe.setLoadParameters was called but an existing Stripe.js script already exists in the document; existing script parameters will be used',
     s = function () {
         for (var e = document.querySelectorAll('script[src^="'.concat(i, '"]')), t = 0; t < e.length; t++) {
             var n = e[t];
-            if (a.test(n.src)) return n;
+            if (o.test(n.src)) return n;
         }
         return null;
     },
@@ -54,11 +54,11 @@ var r,
             ? u
             : (u = new Promise(function (t, n) {
                   if ('undefined' == typeof window || 'undefined' == typeof document) return void t(null);
-                  if ((window.Stripe && e && console.warn(o), window.Stripe)) return void t(window.Stripe);
+                  if ((window.Stripe && e && console.warn(a), window.Stripe)) return void t(window.Stripe);
                   try {
                       var r,
                           i = s();
-                      i && e ? console.warn(o) : i ? i && null !== f && null !== d && (i.removeEventListener('load', f), i.removeEventListener('error', d), null == (r = i.parentNode) || r.removeChild(i), (i = l(e))) : (i = l(e)), (f = p(t, n)), (d = _(n)), i.addEventListener('load', f), i.addEventListener('error', d);
+                      i && e ? console.warn(a) : i ? i && null !== f && null !== d && (i.removeEventListener('load', f), i.removeEventListener('error', d), null == (r = i.parentNode) || r.removeChild(i), (i = l(e))) : (i = l(e)), (f = p(t, n)), (d = _(n)), i.addEventListener('load', f), i.addEventListener('error', d);
                   } catch (e) {
                       n(e);
                       return;

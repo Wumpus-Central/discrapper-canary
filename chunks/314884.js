@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y }), n(388685);
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(78839);
+    o = n(570140),
+    a = n(78839);
 function s(e, t, n) {
     return (
         t in e
@@ -79,12 +79,12 @@ function g() {
 }
 function E() {
     let e = {};
-    for (let t of Object.values(_)) (e[t.id] = t), (t.subscription = o.ZP.getSubscriptionById(t.subscriptionId));
+    for (let t of Object.values(_)) (e[t.id] = t), (t.subscription = a.ZP.getSubscriptionById(t.subscriptionId));
     _ = e;
 }
 class b extends (r = i.ZP.Store) {
     initialize() {
-        this.syncWith([o.ZP], E);
+        this.syncWith([a.ZP], E);
     }
     get hasFetched() {
         return d;
@@ -100,7 +100,7 @@ class b extends (r = i.ZP.Store) {
     }
 }
 s(b, 'displayName', 'GuildBoostSlotStore');
-let y = new b(a.Z, {
+let y = new b(o.Z, {
     GUILD_BOOST_SLOTS_FETCH: p,
     GUILD_BOOST_SLOTS_FETCH_SUCCESS: h,
     GUILD_BOOST_SLOT_UPDATE_SUCCESS: m,

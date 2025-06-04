@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(686546),
     l = n(813197),
     c = n(60034),
@@ -51,7 +51,7 @@ function E(e) {
         i = (0, _.TK)(t);
     return null != i
         ? (0, r.jsx)('div', {
-              className: a()(n, h.banner),
+              className: o()(n, h.banner),
               style: { background: i }
           })
         : (0, r.jsx)(b, {
@@ -62,15 +62,15 @@ function E(e) {
 function b(e) {
     var t;
     let { profile: n, className: i } = e,
-        o = (0, _.nv)(),
+        a = (0, _.nv)(),
         s = (0, _.qw)({
             profile: n,
-            defaultColor: o.hex(),
+            defaultColor: a.hex(),
             forceDefaultColor: null != n.brandColorPrimary
         }),
         l = null != (t = n.brandColorPrimary) ? t : s;
     return (0, r.jsx)('div', {
-        className: a()(i, h.banner),
+        className: o()(i, h.banner),
         style: { background: (0, _.dG)(l) }
     });
 }
@@ -96,11 +96,11 @@ function y(e) {
         });
     function u(e, t) {
         null != i &&
-            (0, o.ZDy)(async () => {
-                let { default: a } = await Promise.all([n.e('91689'), n.e('59732'), n.e('48389')]).then(n.bind(n, 712451));
+            (0, a.ZDy)(async () => {
+                let { default: o } = await Promise.all([n.e('91689'), n.e('59732'), n.e('48389')]).then(n.bind(n, 712451));
                 return (n) =>
                     (0, r.jsx)(
-                        a,
+                        o,
                         g(
                             {
                                 uploadType: p.pC.GUILD_ICON,
@@ -118,14 +118,14 @@ function y(e) {
     }
     return (0, r.jsx)('div', {
         className: h.avatarContainer,
-        children: (0, r.jsx)(o.tEY, {
+        children: (0, r.jsx)(a.tEY, {
             within: !0,
             children: (0, r.jsx)(s.ZP, {
                 mask: s.QS.CLAN_ICON,
                 width: 70,
                 height: 70,
                 children: (0, r.jsxs)('div', {
-                    className: a()(h.avatarWrapper, h.clickable),
+                    className: o()(h.avatarWrapper, h.clickable),
                     children: [
                         (0, r.jsx)(c.Ft, {
                             guildId: t.id,
@@ -134,7 +134,7 @@ function y(e) {
                             iconSize: 64
                         }),
                         (0, r.jsx)('div', { className: h.overlay }),
-                        (0, r.jsx)(o.vdY, {
+                        (0, r.jsx)(a.vdY, {
                             size: 'custom',
                             className: h.overlayIcon,
                             width: 20,
@@ -152,18 +152,18 @@ function y(e) {
     });
 }
 function O(e) {
-    let { profile: t, onIconChange: n, className: i, disableCTA: o, CTAOverride: s, onClose: l, disableGuildNameClick: c } = e,
+    let { profile: t, onIconChange: n, className: i, disableCTA: a, CTAOverride: s, onClose: l, disableGuildNameClick: c } = e,
         _ = null;
     return (
         null != s
             ? (_ = s)
-            : o ||
+            : a ||
               (_ = (0, r.jsx)(d.Z, {
                   profile: t,
                   onComplete: l
               })),
         (0, r.jsxs)('div', {
-            className: a()(h.container, i),
+            className: o()(h.container, i),
             children: [
                 (0, r.jsx)(E, { profile: t }),
                 (0, r.jsx)(y, {

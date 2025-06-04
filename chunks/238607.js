@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(456100),
-    o = n(841784),
+    o = n(456100),
+    a = n(841784),
     s = n(103450),
     l = n(652853),
     c = n(475413),
@@ -75,9 +75,9 @@ function g(e) {
             user: t,
             onClose: h
         }),
-        { enabled: y } = a.c.useExperiment({ location: 'ActivityButton' }, { autoTrackExposure: !0 }),
+        { enabled: y } = o.c.useExperiment({ location: 'ActivityButton' }, { autoTrackExposure: !0 }),
         O = y ? i.iWm : i.jje;
-    if (null == b && null != n && (0, o.Z)(n))
+    if (null == b && null != n && (0, a.Z)(n))
         return (0, r.jsx)(c.tG, {
             icon: O,
             text: f.intl.string(f.t.RscU7O),

@@ -14,8 +14,8 @@ n.d(t, {
     n(187205);
 var r = n(73800),
     i = n(911969),
-    a = n(292419),
-    o = n(768494),
+    o = n(292419),
+    a = n(768494),
     s = n(406432),
     l = n(144140),
     c = n(695346),
@@ -52,7 +52,7 @@ function v(e) {
               .filter(y)
               .map((e, t) => {
                   var n;
-                  let { proxy_url: r, url: i, description: a, spoiler: o, flags: l, width: c, height: u, filename: d, content_scan_version: f } = e;
+                  let { proxy_url: r, url: i, description: o, spoiler: a, flags: l, width: c, height: u, filename: d, content_scan_version: f } = e;
                   if (null == c || null == u) return null;
                   let p = (0, s.NU)(d),
                       h = null != e.flags && (0, _.yE)(e.flags, g.J0y.IS_THUMBNAIL),
@@ -67,10 +67,10 @@ function v(e) {
                       src: E,
                       width: c,
                       height: u,
-                      spoiler: null != o && o,
+                      spoiler: null != a && a,
                       flags: l,
                       contentScanVersion: f,
-                      alt: a,
+                      alt: o,
                       isVideo: p,
                       isThumbnail: h,
                       attachmentId: e.id,
@@ -86,20 +86,20 @@ function I(e) {
 function S(e, t) {
     var n, r;
     let i = c.RS.useSetting(),
-        a = c.NA.useSetting();
+        o = c.NA.useSetting();
     if (null == e) return [];
-    let o = (null == (n = e.messageSnapshots[0]) ? void 0 : n.moderatorReport) != null ? (null == (r = e.messageSnapshots[0]) ? void 0 : r.message.embeds) : e.embeds;
-    return i && a && null != o
-        ? o
+    let a = (null == (n = e.messageSnapshots[0]) ? void 0 : n.moderatorReport) != null ? (null == (r = e.messageSnapshots[0]) ? void 0 : r.message.embeds) : e.embeds;
+    return i && o && null != a
+        ? a
               .map((e, n) => {
                   var r;
                   let i = null != (r = e.image) ? r : e.thumbnail;
                   if ((null == i && null != e.images && (i = e.images[0]), null != i && null != i.url)) {
-                      let { height: r, proxyURL: a, url: o, width: l, flags: c } = i,
-                          u = null != a && (0, s.cb)(a);
+                      let { height: r, proxyURL: o, url: a, width: l, flags: c } = i,
+                          u = null != o && (0, s.cb)(o);
                       return {
                           type: 'embed',
-                          src: null != a && '' !== a ? a : o,
+                          src: null != o && '' !== o ? o : a,
                           height: r,
                           width: l,
                           spoiler: t,
@@ -119,7 +119,7 @@ function T(e) {
     if (null == e) return [];
     let n = e.components;
     return t && null != n
-        ? Array.from((0, a.kS)(n).values())
+        ? Array.from((0, o.kS)(n).values())
               .flatMap((e) => {
                   switch (e.type) {
                       case i.re.THUMBNAIL:
@@ -138,8 +138,8 @@ function T(e) {
 }
 function A(e, t) {
     var n, r, i;
-    let a = (0, o.hg)(e);
-    return 'INVALID' === a
+    let o = (0, a.hg)(e);
+    return 'INVALID' === o
         ? null
         : {
               type: 'component',
@@ -149,8 +149,8 @@ function A(e, t) {
               spoiler: t,
               contentScanVersion: null == (n = e.contentScanMetadata) ? void 0 : n.version,
               flags: 0,
-              srcIsAnimated: (0, _.yE)(e.flags, o.hR.IS_ANIMATED),
-              isVideo: 'VIDEO' === a,
+              srcIsAnimated: (0, _.yE)(e.flags, a.hR.IS_ANIMATED),
+              isVideo: 'VIDEO' === o,
               mediaIndex: 0,
               srcUnfurledMediaItem: e
           };
@@ -173,10 +173,10 @@ function C(e, t) {
 }
 function P(e, t) {
     var n, r, i;
-    let a = I(e),
-        o = S(e, t),
+    let o = I(e),
+        a = S(e, t),
         s = T(e);
-    return null != (i = null != (r = null != (n = a[0]) ? n : o[0]) ? r : s[0]) ? i : null;
+    return null != (i = null != (r = null != (n = o[0]) ? n : a[0]) ? r : s[0]) ? i : null;
 }
 function R(e, t) {
     let n = I(e),

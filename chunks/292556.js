@@ -1,8 +1,8 @@
 n.r(t), n.d(t, { default: () => u });
 var r = n(570140),
     i = n(626135),
-    a = n(981631);
-function o(e, t, n) {
+    o = n(981631);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -56,53 +56,53 @@ function c(e, t) {
 }
 let u = {
     setDesktopType(e) {
-        i.default.track(a.rMx.LOCAL_SETTINGS_UPDATED, { notifications_enabled: e === a.qrD.ALL }),
+        i.default.track(o.rMx.LOCAL_SETTINGS_UPDATED, { notifications_enabled: e === o.qrD.ALL }),
             r.Z.dispatch({
                 type: 'NOTIFICATIONS_SET_DESKTOP_TYPE',
                 desktopType: e
             });
     },
     setTTSType(e) {
-        i.default.track(a.rMx.LOCAL_SETTINGS_UPDATED, { tts_type: e.toString() }),
+        i.default.track(o.rMx.LOCAL_SETTINGS_UPDATED, { tts_type: e.toString() }),
             r.Z.dispatch({
                 type: 'NOTIFICATIONS_SET_TTS_TYPE',
                 ttsType: e
             });
     },
     setDisabledSounds(e) {
-        i.default.track(a.rMx.LOCAL_SETTINGS_UPDATED, { disabled_sounds: e }),
+        i.default.track(o.rMx.LOCAL_SETTINGS_UPDATED, { disabled_sounds: e }),
             r.Z.dispatch({
                 type: 'NOTIFICATIONS_SET_DISABLED_SOUNDS',
                 sounds: e
             });
     },
     toggleDisableAllSounds(e) {
-        i.default.track(a.rMx.LOCAL_SETTINGS_UPDATED, { all_sounds_enabled: !e }), r.Z.dispatch({ type: 'NOTIFICATIONS_TOGGLE_ALL_DISABLED' });
+        i.default.track(o.rMx.LOCAL_SETTINGS_UPDATED, { all_sounds_enabled: !e }), r.Z.dispatch({ type: 'NOTIFICATIONS_TOGGLE_ALL_DISABLED' });
     },
     setDisableUnreadBadge(e) {
-        i.default.track(a.rMx.LOCAL_SETTINGS_UPDATED, { unread_badge_enabled: !e }),
+        i.default.track(o.rMx.LOCAL_SETTINGS_UPDATED, { unread_badge_enabled: !e }),
             r.Z.dispatch({
                 type: 'NOTIFICATIONS_SET_DISABLE_UNREAD_BADGE',
                 disableUnreadBadge: e
             });
     },
     setTaskbarFlash(e) {
-        i.default.track(a.rMx.LOCAL_SETTINGS_UPDATED, { show_taskbar_flash: e }),
+        i.default.track(o.rMx.LOCAL_SETTINGS_UPDATED, { show_taskbar_flash: e }),
             r.Z.dispatch({
                 type: 'NOTIFICATIONS_SET_TASKBAR_FLASH',
                 taskbarFlash: e
             });
     },
     setNotifyMessagesInSelectedChannel(e) {
-        i.default.track(a.rMx.LOCAL_SETTINGS_UPDATED, { notify_messages_in_selected_channel: e }),
+        i.default.track(o.rMx.LOCAL_SETTINGS_UPDATED, { notify_messages_in_selected_channel: e }),
             r.Z.dispatch({
                 type: 'NOTIFICATIONS_SET_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL',
                 notify: e
             });
     },
     setPermissionsState(e, t) {
-        i.default.track(a.rMx.ENABLE_NOTIFICATIONS, {
-            enabled: e === a.$Ab.ENABLED,
+        i.default.track(o.rMx.ENABLE_NOTIFICATIONS, {
+            enabled: e === o.$Ab.ENABLED,
             source: t
         }),
             r.Z.dispatch({
@@ -111,17 +111,17 @@ let u = {
                 source: t
             });
     },
-    showNotification(e, t, n, i, a) {
+    showNotification(e, t, n, i, o) {
         r.Z.dispatch({
             type: 'NOTIFICATION_CREATE',
             icon: e,
             title: t,
             body: n,
             trackingProps: i,
-            options: c(s({}, a), {
+            options: c(s({}, o), {
                 onClick() {
                     var e;
-                    null == (e = a.onClick) || e.call(a), r.Z.dispatch({ type: 'NOTIFICATION_CLICK' });
+                    null == (e = o.onClick) || e.call(o), r.Z.dispatch({ type: 'NOTIFICATION_CLICK' });
                 }
             })
         });

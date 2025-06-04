@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(481060),
-    o = n(898531),
+    o = n(481060),
+    a = n(898531),
     s = n(314897),
     l = n(131951),
     c = n(388032),
@@ -61,34 +61,34 @@ function p(e, t) {
     );
 }
 function h(e, t) {
-    let d = (0, a.vRw)(),
+    let d = (0, o.vRw)(),
         { videoEnabled: _, hasVideoDevice: h } = (0, i.cj)([l.Z], () => ({
             videoEnabled: l.Z.isVideoEnabled(),
             hasVideoDevice: l.Z.isVideoAvailable()
         })),
         m = (0, i.e7)([s.default], () => s.default.getId() === e),
-        g = (0, o.Z)();
+        g = (0, a.Z)();
     function E() {
-        (0, a.ZDy)(
+        (0, o.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('14006'), n.e('68856'), n.e('16172'), n.e('70791'), n.e('25292'), n.e('90508'), n.e('22878'), n.e('13351'), n.e('62134'), n.e('74891'), n.e('6380'), n.e('46097'), n.e('8739'), n.e('18543'), n.e('58059'), n.e('28467'), n.e('86282'), n.e('17938'), n.e('28767'), n.e('30243'), n.e('37447'), n.e('53937'), n.e('76540'), n.e('23491'), n.e('80284'), n.e('15483'), n.e('36087'), n.e('93602'), n.e('19027'), n.e('94136'), n.e('49508'), n.e('22646'), n.e('25183'), n.e('64838'), n.e('3940'), n.e('60691'), n.e('2286'), n.e('40694'), n.e('89387'), n.e('88622'), n.e('87040'), n.e('88712'), n.e('30419'), n.e('66317'), n.e('18824'), n.e('82081'), n.e('8787'), n.e('62117'), n.e('90202'), n.e('86133'), n.e('77978'), n.e('48192'), n.e('47338')]).then(n.bind(n, 601572));
+                let { default: e } = await Promise.all([n.e('14006'), n.e('68856'), n.e('16172'), n.e('70791'), n.e('25292'), n.e('90508'), n.e('22878'), n.e('13351'), n.e('62134'), n.e('74891'), n.e('6380'), n.e('46097'), n.e('8739'), n.e('18543'), n.e('58059'), n.e('28467'), n.e('86282'), n.e('17938'), n.e('18895'), n.e('30243'), n.e('37447'), n.e('53937'), n.e('76540'), n.e('23491'), n.e('80284'), n.e('15483'), n.e('36087'), n.e('93602'), n.e('19027'), n.e('94136'), n.e('49508'), n.e('22646'), n.e('25183'), n.e('64838'), n.e('3940'), n.e('60691'), n.e('2286'), n.e('40694'), n.e('89387'), n.e('88622'), n.e('87040'), n.e('88712'), n.e('30419'), n.e('66317'), n.e('18824'), n.e('82081'), n.e('8787'), n.e('62117'), n.e('72791'), n.e('86133'), n.e('77978'), n.e('48192'), n.e('47338')]).then(n.bind(n, 601572));
                 return (t) => (0, r.jsx)(e, p(f({}, t), { videoEnabled: _ }));
             },
             {
                 modalKey: 'camera-preview',
-                contextKey: null != t ? (0, a.VnL)(t) : d
+                contextKey: null != t ? (0, o.VnL)(t) : d
             }
         );
     }
     return (!_ || g) && m && h
-        ? (0, r.jsx)(a.sNh, {
+        ? (0, r.jsx)(o.sNh, {
               id: 'change-video-background',
               label: (0, r.jsx)('div', {
                   className: u.item,
                   children: _ ? c.intl.string(c.t.mZKxHR) : c.intl.string(c.t.vkV939)
               }),
               action: E,
-              icon: _ ? a.yMH : a.tEF
+              icon: _ ? o.yMH : o.tEF
           })
         : null;
 }

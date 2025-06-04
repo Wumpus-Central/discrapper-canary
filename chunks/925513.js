@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(524437),
     i = n(695346);
 n(592125), n(699516);
-var a = n(594174);
-function o(e, t, n) {
+var o = n(594174);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -40,8 +40,8 @@ n(470734), n(721360);
 let l = (e) => {
         let { setting: t, isDm: n = !1, isFriend: i = !1 } = e;
         if (null != t && t !== r.Q4.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
-        let o = a.default.getCurrentUser();
-        return (null == o ? void 0 : o.nsfwAllowed) === !1
+        let a = o.default.getCurrentUser();
+        return (null == a ? void 0 : a.nsfwAllowed) === !1
             ? u({
                   isDm: n,
                   isFriend: i

@@ -25,8 +25,8 @@ n.d(t, {
 var r = n(286379);
 n(524437);
 var i = n(81643),
-    a = n(432877),
-    o = n(768494),
+    o = n(432877),
+    a = n(768494),
     s = n(797614),
     l = n(182274),
     c = n(592125),
@@ -51,7 +51,7 @@ var S = (function (e) {
 function T(e, t) {
     var n, r, i, s;
     if (!t) return !1;
-    if (a.ZP.get('obscure_blur_effect_explicit_content_enabled') || a.ZP.get('obscure_blur_effect_gore_content_enabled')) return !0;
+    if (o.ZP.get('obscure_blur_effect_explicit_content_enabled') || o.ZP.get('obscure_blur_effect_gore_content_enabled')) return !0;
     let l = (0, g.U2)('isMediaObscured');
     switch (e.type) {
         case 1:
@@ -59,7 +59,7 @@ function T(e, t) {
         case 0:
             return (0, _.EB)(null != (r = e.media.flags) ? r : 0, l ? v.J0y.CONTAINS_EXPLICIT_MEDIA | v.J0y.CONTAINS_GORE_CONTENT : v.J0y.CONTAINS_EXPLICIT_MEDIA);
         case 2:
-            return (0, _.EB)(null != (s = null == (i = e.media.contentScanMetadata) ? void 0 : i.flags) ? s : 0, l ? o.Cb.EXPLICIT | o.Cb.GORE : o.Cb.EXPLICIT);
+            return (0, _.EB)(null != (s = null == (i = e.media.contentScanMetadata) ? void 0 : i.flags) ? s : 0, l ? a.Cb.EXPLICIT | a.Cb.GORE : a.Cb.EXPLICIT);
         default:
             return !1;
     }
@@ -68,11 +68,11 @@ function A(e) {
     var t;
     let n = d.default.getCurrentUser();
     if (null == n || (null == (t = e.author) ? void 0 : t.id) === n.id) return !1;
-    let { explicitContentGuilds: r, explicitContentFriendDm: i, explicitContentNonFriendDm: a } = (0, E.l4)(),
-        { goreContentGuilds: o, goreContentFriendDm: s, goreContentNonFriendDm: l } = (0, b.O6)(),
+    let { explicitContentGuilds: r, explicitContentFriendDm: i, explicitContentNonFriendDm: o } = (0, E.l4)(),
+        { goreContentGuilds: a, goreContentFriendDm: s, goreContentNonFriendDm: l } = (0, b.O6)(),
         f = (0, g.U2)('shouldRedactMessageMedia'),
         _ = c.Z.getChannel(e.channel_id);
-    return null != _ && (_.isDM() || _.isGroupDM() ? (null != e.author && u.Z.getFriendIDs().includes(e.author.id) ? (0, y.v)(i) || (f && (0, y.v)(s)) : (0, y.v)(a) || (f && (0, y.v)(l))) : (0, y.v)(r) || (f && (0, y.v)(o)));
+    return null != _ && (_.isDM() || _.isGroupDM() ? (null != e.author && u.Z.getFriendIDs().includes(e.author.id) ? (0, y.v)(i) || (f && (0, y.v)(s)) : (0, y.v)(o) || (f && (0, y.v)(l))) : (0, y.v)(r) || (f && (0, y.v)(a)));
 }
 function N(e) {
     return A(e)
@@ -102,12 +102,12 @@ function N(e) {
           };
 }
 function C(e) {
-    if (a.ZP.get('explicit_media_redaction_ignore_pending_scan') || 0 === e || -1 === e) return !1;
+    if (o.ZP.get('explicit_media_redaction_ignore_pending_scan') || 0 === e || -1 === e) return !1;
     let t = (0, g.U2)('isPendingScanVersion');
     return null == e || (t && e !== m.Z.validContentScanVersion);
 }
 function P(e) {
-    if (a.ZP.get('explicit_media_redaction_ignore_pending_scan')) return !1;
+    if (o.ZP.get('explicit_media_redaction_ignore_pending_scan')) return !1;
     let t = null == e ? void 0 : e.version;
     if (0 === t || -1 === t) return !1;
     let n = (0, g.U2)('isPendingScan');
@@ -122,10 +122,10 @@ var R = (function (e) {
 function D(e) {
     let { action: t, channelId: n, messageId: r, context: i } = e;
     if (null == n || null == r) return;
-    let a = c.Z.getChannel(n);
+    let o = c.Z.getChannel(n);
     f.default.track(v.rMx.EXPLICIT_MEDIA_ACTION, {
         action: t,
-        guild_id: null == a ? void 0 : a.guild_id,
+        guild_id: null == o ? void 0 : o.guild_id,
         channel_id: n,
         message_id: r,
         user_is_underage: (0, l.U)(),
@@ -143,12 +143,12 @@ function x(e, t) {
     });
 }
 function k(e) {
-    var t, n, i, a;
-    let { channelId: o, messageId: u, attachmentIds: d, embedIds: _ } = e;
-    if (null == o || null == u || ((null != (t = null == d ? void 0 : d.length) ? t : 0) === 0 && (null != (n = null == _ ? void 0 : _.length) ? n : 0) === 0)) return;
-    let h = c.Z.getChannel(o);
+    var t, n, i, o;
+    let { channelId: a, messageId: u, attachmentIds: d, embedIds: _ } = e;
+    if (null == a || null == u || ((null != (t = null == d ? void 0 : d.length) ? t : 0) === 0 && (null != (n = null == _ ? void 0 : _.length) ? n : 0) === 0)) return;
+    let h = c.Z.getChannel(a);
     f.default.track(v.rMx.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, {
-        channel_id: o,
+        channel_id: a,
         guild_id: null == h ? void 0 : h.guild_id,
         message_id: u,
         embed_ids: _,
@@ -160,10 +160,10 @@ function k(e) {
             name: r.V.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT,
             tags: ['metricVersion:'.concat(I)]
         }),
-        s.Z.distribution({ name: r.V.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION }, (null != (i = null == d ? void 0 : d.length) ? i : 0) + (null != (a = null == _ ? void 0 : _.length) ? a : 0));
+        s.Z.distribution({ name: r.V.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION }, (null != (i = null == d ? void 0 : d.length) ? i : 0) + (null != (o = null == _ ? void 0 : _.length) ? o : 0));
 }
 function M(e) {
-    let { channelId: t, numOfAttachments: n, numOfAttachmentsPendingScan: i, numOfEmbeds: a, numOfEmbedsPendingScan: o } = e;
+    let { channelId: t, numOfAttachments: n, numOfAttachmentsPendingScan: i, numOfEmbeds: o, numOfEmbedsPendingScan: a } = e;
     if (null == t) return;
     let l = c.Z.getChannel(t);
     f.default.track(v.rMx.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED, {
@@ -171,16 +171,16 @@ function M(e) {
         guild_id: null == l ? void 0 : l.guild_id,
         num_of_attachments: n,
         num_of_attachments_pending_scan: i,
-        num_of_embeds: a,
-        num_of_embeds_pending_scan: o
+        num_of_embeds: o,
+        num_of_embeds_pending_scan: a
     });
-    let u = i + o;
+    let u = i + a;
     u > 0 && s.Z.distribution({ name: r.V.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2 }, u);
 }
 function j(e) {
-    let { messageId: t, channelId: n, numOfAttachments: r, numOfEmbeds: i, numOfGoreAttachments: a, numOfExplicitAttachments: o, numOfGoreEmbeds: s, numOfExplicitEmbeds: l } = e,
-        u = o > 0 || l > 0,
-        d = a > 0 || s > 0;
+    let { messageId: t, channelId: n, numOfAttachments: r, numOfEmbeds: i, numOfGoreAttachments: o, numOfExplicitAttachments: a, numOfGoreEmbeds: s, numOfExplicitEmbeds: l } = e,
+        u = a > 0 || l > 0,
+        d = o > 0 || s > 0;
     if (null == n || null == t || (!u && !d)) return;
     let _ = c.Z.getChannel(n);
     f.default.track(v.rMx.REDACTABLE_MESSAGE_LOADED, {
@@ -189,8 +189,8 @@ function j(e) {
         channel_type: null == _ ? void 0 : _.type,
         guild_id: null == _ ? void 0 : _.guild_id,
         num_of_attachments: r,
-        num_of_gore_attachments: a,
-        num_of_explicit_attachments: o,
+        num_of_gore_attachments: o,
+        num_of_explicit_attachments: a,
         num_of_embeds: i,
         num_of_gore_embeds: s,
         num_of_explicit_embeds: l,
@@ -199,7 +199,7 @@ function j(e) {
     });
 }
 function U(e) {
-    let { messageId: t, channelId: n, numOfAttachments: r, numOfExplicitAttachments: i, numOfEmbeds: a, numOfExplicitEmbeds: o } = e;
+    let { messageId: t, channelId: n, numOfAttachments: r, numOfExplicitAttachments: i, numOfEmbeds: o, numOfExplicitEmbeds: a } = e;
     if (null == n) return;
     let s = c.Z.getChannel(n);
     f.default.track(v.rMx.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, {
@@ -209,8 +209,8 @@ function U(e) {
         guild_id: null == s ? void 0 : s.guild_id,
         num_of_attachments: r,
         num_of_explicit_attachments: i,
-        num_of_embeds: a,
-        num_of_explicit_embeds: o
+        num_of_embeds: o,
+        num_of_explicit_embeds: a
     });
 }
 function G(e) {

@@ -1,7 +1,7 @@
 var r = n(98405),
     i = n(127849),
-    a = n(91520),
-    o = n(896471),
+    o = n(91520),
+    a = n(896471),
     s = n(338045),
     l = n(621523),
     c = n(507604);
@@ -16,7 +16,7 @@ r(
     },
     {
         queueMicrotask: function (e) {
-            s(arguments.length, 1), a(o(e));
+            s(arguments.length, 1), o(a(e));
         }
     }
 );

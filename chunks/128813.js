@@ -1,7 +1,7 @@
 n.d(t, {
     Qw: () => u,
     ZP: () => _,
-    mX: () => o,
+    mX: () => a,
     oC: () => l
 }),
     n(415506);
@@ -9,27 +9,27 @@ var r = n(252117);
 function i(e) {
     console.warn('[libdiscore] '.concat(e));
 }
-async function a() {
+async function o() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500,
-        a = null,
-        o = e;
+        o = null,
+        a = e;
     for (;;)
         try {
             await Promise.resolve().then(n.bind(n, 842321));
             return;
         } catch (e) {
             if (e instanceof ReferenceError || e instanceof WebAssembly.CompileError) throw (s(!0), i('Unsupported browser, skipping libdiscore, error: ['.concat(e.name, '] ').concat(e.message)), e);
-            if (((a = e), delete n.c[842321], 0 == --o)) throw a;
-            i('Failed to import libdiscore-wasm, retrying... ('.concat(o, ' attempts left), ').concat(a.name, ': ').concat(a.message)), await (0, r.o2)(t);
+            if (((o = e), delete n.c[842321], 0 == --a)) throw o;
+            i('Failed to import libdiscore-wasm, retrying... ('.concat(a, ' attempts left), ').concat(o.name, ': ').concat(o.message)), await (0, r.o2)(t);
         }
 }
-function o() {
+function a() {
     let e = d();
     if (null != e) return e;
     {
         let e = (async () => {
-            await a(),
+            await o(),
                 c(
                     await (0, r.wE)({
                         createPromise: () => n.e('18639').then(n.bind(n, 718493)),

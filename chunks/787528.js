@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(586502),
     i = n(474936),
-    a = n(749472),
-    o = n(860691),
+    o = n(749472),
+    a = n(860691),
     s = n(110149),
     l = n(64649),
     c = n(166870),
@@ -22,7 +22,7 @@ var r = n(586502),
     y = n(438802);
 let O = {
         [i.VU.PREMIUM_TENURE_1_MONTH]: {
-            standard: a,
+            standard: o,
             ambient: _.Z
         },
         [i.VU.PREMIUM_TENURE_3_MONTH]: {
@@ -38,7 +38,7 @@ let O = {
             ambient: m.Z
         },
         [i.VU.PREMIUM_TENURE_24_MONTH]: {
-            standard: o,
+            standard: a,
             ambient: g.Z
         },
         [i.VU.PREMIUM_TENURE_36_MONTH]: {
