@@ -1,196 +1,196 @@
-r.d(t, { default: () => b }), r(388685);
-var n = r(255367),
-    l = r(73800),
-    i = r(442837),
-    o = r(481060),
-    s = r(749210),
-    a = r(910693),
-    c = r(501517),
-    u = r(592125),
-    d = r(51144),
-    p = r(981631),
-    g = r(388032),
-    f = r(463959),
-    j = r(373283);
+n.d(t, { default: () => b }), n(388685);
+var r = n(255367),
+    l = n(73800),
+    i = n(442837),
+    s = n(481060),
+    o = n(749210),
+    a = n(910693),
+    c = n(501517),
+    u = n(592125),
+    d = n(51144),
+    g = n(981631),
+    p = n(388032),
+    f = n(463959),
+    j = n(373283);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            n.forEach(function (t) {
-                var n;
-                (n = r[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: n,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = n);
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function O(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
             : (function (e, t) {
-                  var r = Object.keys(e);
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
-                  return r;
-              })(Object(t)).forEach(function (r) {
-                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function b(e) {
-    var { guildId: t, user: r, location: b, modReportId: m } = e,
-        x = (function (e, t) {
+    var { guildId: t, user: n, location: b, modReportId: x } = e,
+        y = (function (e, t) {
             if (null == e) return {};
-            var r,
-                n,
+            var n,
+                r,
                 l = (function (e, t) {
                     if (null == e) return {};
-                    var r,
-                        n,
+                    var n,
+                        r,
                         l = {},
                         i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
         })(e, ['guildId', 'user', 'location', 'modReportId']);
-    let [y, v] = l.useState(''),
-        [P, C] = l.useState(!1),
-        k = (0, a.sE)(t, {
+    let [O, v] = l.useState(''),
+        [P, k] = l.useState(!1),
+        w = (0, a.sE)(t, {
             location: b,
-            targetUserId: r.id
+            targetUserId: n.id
         }),
-        w = (0, i.e7)([u.Z], () => {
+        C = (0, i.e7)([u.Z], () => {
             var e;
-            return null == (e = u.Z.getChannel(m)) ? void 0 : e.isArchivedThread();
+            return null == (e = u.Z.getChannel(x)) ? void 0 : e.isArchivedThread();
         }),
-        E = l.useCallback(() => {
+        S = l.useCallback(() => {
             if (
-                (s.Z.kickUser(t, r.id, y, m).then(() => {
-                    P && null != m && c.Z.resolveFlag(m);
+                (o.Z.kickUser(t, n.id, O, x).then(() => {
+                    P && null != x && c.Z.resolveFlag(x);
                 }),
-                k(a.jQ.KICK),
-                null != m)
+                w(a.jQ.KICK),
+                null != x)
             ) {
                 var e;
-                null == (e = x.onClose) || e.call(x);
+                null == (e = y.onClose) || e.call(y);
             }
-        }, [t, r.id, y, k, m, P, x]),
-        T = l.useCallback((e) => {
+        }, [t, n.id, O, w, x, P, y]),
+        N = l.useCallback((e) => {
             v(e);
         }, []);
-    return null != m
-        ? (0, n.jsxs)(
-              o.Y0X,
-              O(h({}, x), {
+    return null != x
+        ? (0, r.jsxs)(
+              s.Y0X,
+              m(h({}, y), {
                   children: [
-                      (0, n.jsx)(o.xBx, {
+                      (0, r.jsx)(s.xBx, {
                           separator: !1,
-                          children: (0, n.jsxs)(o.Kqy, {
+                          children: (0, r.jsxs)(s.Kqy, {
                               direction: 'vertical',
                               justify: 'space-between',
                               children: [
-                                  (0, n.jsx)(o.olH, {
+                                  (0, r.jsx)(s.olH, {
                                       className: j.closeButton,
-                                      onClick: x.onClose
+                                      onClick: y.onClose
                                   }),
-                                  (0, n.jsx)(o.X6q, {
+                                  (0, r.jsx)(s.X6q, {
                                       variant: 'heading-lg/semibold',
-                                      children: g.intl.formatToPlainString(g.t['1Ie87u'], { user: r.username })
+                                      children: p.intl.formatToPlainString(p.t['1Ie87u'], { user: n.username })
                                   })
                               ]
                           })
                       }),
-                      (0, n.jsxs)(o.hzk, {
+                      (0, r.jsxs)(s.hzk, {
                           children: [
-                              (0, n.jsx)(o.Text, {
+                              (0, r.jsx)(s.Text, {
                                   variant: 'text-md/normal',
                                   className: j.spacing,
-                                  children: g.intl.format(g.t['/yH0UV'], { user: '@'.concat(d.ZP.getName(r)) })
+                                  children: p.intl.format(p.t['/yH0UV'], { user: '@'.concat(d.ZP.getName(n)) })
                               }),
-                              (0, n.jsx)(o.xJW, {
+                              (0, r.jsx)(s.xJW, {
                                   titleClassName: j.title,
-                                  title: g.intl.string(null != m ? g.t.hmKy8P : g.t['+2QEPj']),
+                                  title: p.intl.string(null != x ? p.t.hmKy8P : p.t['+2QEPj']),
                                   className: j.spacing,
-                                  children: (0, n.jsx)(o.Kx8, {
-                                      maxLength: p.GNZ,
-                                      onChange: T,
-                                      value: y,
+                                  children: (0, r.jsx)(s.Kx8, {
+                                      maxLength: g.GNZ,
+                                      onChange: N,
+                                      value: O,
                                       rows: 2
                                   })
                               })
                           ]
                       }),
-                      (0, n.jsxs)(o.mzw, {
+                      (0, r.jsxs)(s.mzw, {
                           children: [
-                              (0, n.jsx)(o.zxk, {
+                              (0, r.jsx)(s.zxk, {
                                   type: 'submit',
-                                  color: o.zxk.Colors.RED,
-                                  size: o.zxk.Sizes.SMALL,
-                                  onClick: E,
-                                  children: g.intl.string(g.t['3glT6e'])
+                                  color: s.zxk.Colors.RED,
+                                  size: s.zxk.Sizes.SMALL,
+                                  onClick: S,
+                                  children: p.intl.string(p.t['3glT6e'])
                               }),
-                              !w &&
-                                  (0, n.jsx)(o.XZJ, {
+                              !C &&
+                                  (0, r.jsx)(s.XZJ, {
                                       value: P,
                                       onChange: (e, t) => {
-                                          C(t);
+                                          k(t);
                                       },
-                                      children: g.intl.string(f.default['8yIKen'])
+                                      children: p.intl.string(f.default['8yIKen'])
                                   })
                           ]
                       })
                   ]
               })
           )
-        : (0, n.jsxs)(
-              o.ConfirmModal,
-              O(
+        : (0, r.jsxs)(
+              s.ConfirmModal,
+              m(
                   h(
                       {
-                          header: g.intl.formatToPlainString(g.t['1Ie87u'], { user: r.username }),
-                          confirmText: g.intl.string(g.t['3glT6e']),
-                          cancelText: g.intl.string(g.t['ETE/oK']),
-                          onConfirm: E
+                          header: p.intl.formatToPlainString(p.t['1Ie87u'], { user: n.username }),
+                          confirmText: p.intl.string(p.t['3glT6e']),
+                          cancelText: p.intl.string(p.t['ETE/oK']),
+                          onConfirm: S
                       },
-                      x
+                      y
                   ),
                   {
                       children: [
-                          (0, n.jsx)(o.Text, {
+                          (0, r.jsx)(s.Text, {
                               variant: 'text-md/normal',
                               className: j.spacing,
-                              children: g.intl.format(g.t['/yH0UV'], { user: '@'.concat(d.ZP.getName(r)) })
+                              children: p.intl.format(p.t['/yH0UV'], { user: '@'.concat(d.ZP.getName(n)) })
                           }),
-                          (0, n.jsx)(o.xJW, {
-                              title: g.intl.string(g.t['+2QEPj']),
+                          (0, r.jsx)(s.xJW, {
+                              title: p.intl.string(p.t['+2QEPj']),
                               className: j.spacing,
-                              children: (0, n.jsx)(o.Kx8, {
-                                  maxLength: p.GNZ,
-                                  onChange: T,
-                                  value: y,
+                              children: (0, r.jsx)(s.Kx8, {
+                                  maxLength: g.GNZ,
+                                  onChange: N,
+                                  value: O,
                                   rows: 2
                               })
                           })

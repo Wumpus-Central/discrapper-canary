@@ -2,8 +2,8 @@ n.d(t, { Z: () => y });
 var r = n(255367);
 n(73800);
 var i = n(780384),
-    o = n(481060),
-    a = n(410030),
+    a = n(481060),
+    o = n(410030),
     s = n(74538),
     l = n(104494),
     c = n(639119),
@@ -46,8 +46,8 @@ function m(e, t) {
         r,
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -56,18 +56,18 @@ function g(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let E = (e) => {
-        let { showTrialCTA: t, subscriptionTier: n, trialDurationCopy: r, isPersistentCTA: i, shouldShowReferralTrialCopy: o, subscriptionTrial: a } = e;
-        return t && o
+        let { showTrialCTA: t, subscriptionTier: n, trialDurationCopy: r, isPersistentCTA: i, shouldShowReferralTrialCopy: a, subscriptionTrial: o } = e;
+        return t && a
             ? f.intl.string(f.t.bXTClZ)
             : t && (n === d.Si.TIER_2 || i)
               ? (0, s.Rt)({
-                    intervalType: null == a ? void 0 : a.interval,
-                    intervalCount: null == a ? void 0 : a.interval_count
+                    intervalType: null == o ? void 0 : o.interval,
+                    intervalCount: null == o ? void 0 : o.interval_count
                 })
               : t
                 ? f.intl.formatToPlainString(f.t.nTmm2t, { freeTrialText: r })
@@ -77,7 +77,7 @@ let E = (e) => {
     y = (e) => {
         var { textOptions: t, subscriptionTier: n, hasActivePromotion: p = !1, isPersistentCTA: g = !1, useShorterCTA: y = !1, showGradient: O, confirmationFooter: v, paymentModalBanner: I, color: S } = e,
             T = m(e, ['textOptions', 'subscriptionTier', 'hasActivePromotion', 'isPersistentCTA', 'useShorterCTA', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'color']);
-        let A = (0, a.ZP)(),
+        let A = (0, o.ZP)(),
             N = (0, c.N)(),
             C = null == N ? void 0 : N.subscription_trial,
             P = (0, s.a5)({
@@ -99,7 +99,7 @@ let E = (e) => {
                         shouldShowReferralTrialCopy: D,
                         subscriptionTrial: C
                     }),
-            x = null != S ? S : (0, i.wj)(A) ? o.Ttl.BRAND_INVERTED : o.Ttl.BRAND;
+            x = null != S ? S : (0, i.wj)(A) ? a.Ttl.BRAND_INVERTED : a.Ttl.BRAND;
         return (0, r.jsx)(
             u.Z,
             h(

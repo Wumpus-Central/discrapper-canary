@@ -1,22 +1,23 @@
-n.d(t, { Z: () => A }), n(314940);
+n.d(t, { Z: () => C }), n(314940);
 var r = n(255367);
 n(73800);
 var i = n(278074),
-    o = n(979554),
-    a = n(481060),
+    a = n(979554),
+    o = n(481060),
     s = n(1585),
     l = n(125988),
     c = n(583434),
-    u = n(479446),
-    d = n(981632),
-    f = n(731896),
-    _ = n(680295),
-    p = n(998502),
-    h = n(987209),
-    m = n(388032),
-    g = n(563967),
-    E = n(241822);
-function b(e, t, n) {
+    u = n(22267),
+    d = n(479446),
+    f = n(981632),
+    _ = n(731896),
+    p = n(680295),
+    h = n(998502),
+    m = n(987209),
+    g = n(388032),
+    E = n(563967),
+    b = n(241822);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +30,7 @@ function b(e, t, n) {
         e
     );
 }
-function y(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,12 +41,12 @@ function y(e) {
                 })
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
 }
-function O(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -57,75 +58,88 @@ function O(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : O(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let I = p.ZP.getEnableHardwareAcceleration() ? a.Xo$ : a.qEK;
-function S(e) {
+let S = h.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK;
+function T(e) {
     let { avatarDecoration: t } = e,
         {
             avatarDecorationSrc: n,
             eventHandlers: i,
-            avatarPlaceholderSrc: o
+            avatarPlaceholderSrc: a
         } = (0, l.Z)({
             avatarDecorationOverride: t,
-            size: (0, s.y9)(a.EFr.SIZE_152)
+            size: (0, s.y9)(o.EFr.SIZE_152)
         });
     return (0, r.jsx)('div', {
-        className: g.giftMainAnimationWrapper,
+        className: E.giftMainAnimationWrapper,
         children: (0, r.jsx)(
-            I,
-            v(y({}, i), {
+            S,
+            I(O({}, i), {
                 avatarDecoration: n,
-                src: o,
-                className: g.avatar,
-                size: a.EFr.SIZE_152,
-                'aria-label': m.intl.string(m.t.lqaIxM)
+                src: a,
+                className: E.avatar,
+                size: o.EFr.SIZE_152,
+                'aria-label': g.intl.string(g.t.lqaIxM)
             })
         )
     });
 }
-function T(e) {
+function A(e) {
     var t;
     let { id: n } = e,
-        i = null == (t = (0, f.V)(n)) ? void 0 : t.config;
+        i = null == (t = (0, _.V)(n)) ? void 0 : t.config;
     return (0, r.jsxs)('div', {
-        className: g.profileEffectContainer,
+        className: E.profileEffectContainer,
         children: [
             (0, r.jsx)('img', {
-                src: E,
+                src: b,
                 alt: null == i ? void 0 : i.accessibilityLabel,
-                className: g.profileEffectBackground
+                className: E.profileEffectBackground
             }),
-            (0, r.jsx)(_.Z, { profileEffectId: n })
+            (0, r.jsx)(p.Z, { profileEffectId: n })
         ]
     });
 }
-function A(e) {
+function N(e) {
+    let { nameplate: t } = e;
+    return (0, r.jsx)('div', {
+        className: E.nameplateContainer,
+        children: (0, r.jsx)(u.Z, {
+            nameplate: t,
+            className: E.nameplate,
+            isHighlighted: !0,
+            showPlaceholderUser: !0
+        })
+    });
+}
+function C(e) {
     let { sku: t } = e,
-        { selectedGiftStyle: n } = (0, h.wD)(),
-        { product: a } = (0, c.T)(null == t ? void 0 : t.id),
-        s = null == a ? void 0 : a.items[0],
+        { selectedGiftStyle: n } = (0, m.wD)(),
+        { product: o } = (0, c.T)(null == t ? void 0 : t.id),
+        s = null == o ? void 0 : o.items[0],
         l = (0, i.EQ)(s)
-            .with({ type: o.Z.AVATAR_DECORATION }, (e) => (0, r.jsx)(S, { avatarDecoration: e }))
-            .with({ type: o.Z.PROFILE_EFFECT }, (e) => (0, r.jsx)(T, { id: e.id }))
+            .with({ type: a.Z.AVATAR_DECORATION }, (e) => (0, r.jsx)(T, { avatarDecoration: e }))
+            .with({ type: a.Z.PROFILE_EFFECT }, (e) => (0, r.jsx)(A, { id: e.id }))
+            .with({ type: a.Z.NAMEPLATE }, (e) => (0, r.jsx)(N, { nameplate: e }))
             .otherwise(() => null);
     return null != n && null == l
         ? (0, r.jsx)('div', {
-              className: g.giftMainAnimationWrapper,
-              children: (0, r.jsx)(d.Z, {
-                  defaultAnimationState: u.SR.LOOP,
+              className: E.giftMainAnimationWrapper,
+              children: (0, r.jsx)(f.Z, {
+                  defaultAnimationState: d.SR.LOOP,
                   giftStyle: n,
                   shouldAnimate: !0,
-                  className: g.__invalid_giftMainAnimation
+                  className: E.__invalid_giftMainAnimation
               })
           })
         : l;

@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(570140),
-    a = n(317770),
+    a = n(570140),
+    o = n(317770),
     s = n(40851),
     l = n(594174),
     c = n(726525),
@@ -46,8 +46,8 @@ function _(e, t) {
         r,
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -56,8 +56,8 @@ function p(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let h = null;
@@ -66,9 +66,9 @@ function m(e, t) {
 }
 async function g(e) {
     var t,
-        { userId: o, section: a, subsection: d, guildId: p, channelId: g, showGuildProfile: E = !0, appContext: b, customStatusPrompt: y } = e,
+        { userId: a, section: o, subsection: d, guildId: p, channelId: g, showGuildProfile: E = !0, appContext: b, customStatusPrompt: y } = e,
         O = _(e, ['userId', 'section', 'subsection', 'guildId', 'channelId', 'showGuildProfile', 'appContext', 'customStatusPrompt']);
-    let v = l.default.getUser(o);
+    let v = l.default.getUser(a);
     if (null == v) return;
     let I = l.default.getCurrentUser();
     null != I &&
@@ -83,7 +83,7 @@ async function g(e) {
                                 user: v,
                                 currentUser: I,
                                 guildId: p,
-                                initialSection: a,
+                                initialSection: o,
                                 initialSubsection: d,
                                 channelId: g,
                                 showGuildProfile: E,
@@ -95,7 +95,7 @@ async function g(e) {
                     );
             },
             {
-                modalKey: m(o, E ? p : void 0),
+                modalKey: m(a, E ? p : void 0),
                 contextKey: (0, i.VnL)(null != (t = null != b ? b : (0, s.GB)()) ? t : u.IlC.APP)
             }
         ));
@@ -103,12 +103,12 @@ async function g(e) {
 function E() {
     null != h && (0, i.Mr3)(h), (h = null);
 }
-class b extends a.Z {
+class b extends o.Z {
     _initialize() {
-        o.Z.subscribe('USER_PROFILE_MODAL_OPEN', g), o.Z.subscribe('USER_PROFILE_MODAL_CLOSE', E);
+        a.Z.subscribe('USER_PROFILE_MODAL_OPEN', g), a.Z.subscribe('USER_PROFILE_MODAL_CLOSE', E);
     }
     _terminate() {
-        o.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', g), o.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', E);
+        a.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', g), a.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', E);
     }
 }
 let y = new b();

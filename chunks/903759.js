@@ -64,7 +64,8 @@ let d = (e) => {
                             image: n
                         }),
                         Promise.resolve(void 0)
-                    )
+                    ),
+                    title: ''
                 })
             ]
         });

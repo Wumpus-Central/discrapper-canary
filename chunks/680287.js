@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(539854), n(997841);
 var r = n(544891),
     i = n(881052),
-    o = n(476326),
-    a = n(865275),
+    a = n(476326),
+    o = n(865275),
     s = n(237992),
     l = n(45251),
     c = n(861990),
@@ -60,7 +60,7 @@ function h(e, t) {
         e
     );
 }
-class m extends a.Z {
+class m extends o.Z {
     async uploadFilesSimple(e) {
         super.upload(d.intl.string(d.t.jfKTen), e);
         let t = new Promise((e, t) => {
@@ -112,13 +112,13 @@ class m extends a.Z {
         }
     }
     async _createMessage(e, t, n) {
-        var a, s;
+        var o, s;
         let u,
             d = [];
         if (
             (this.files.forEach((e, t) => {
                 let n = (0, c.B)(e, t);
-                e.item.platform === o.ow.WEB && d.push(_({}, n));
+                e.item.platform === a.ow.WEB && d.push(_({}, n));
             }),
             null != (u = null != n && null != t ? this._addAttachmentsToPayload(t, n, d) : h(_({}, t), { attachments: d })).scheduled_timestamp)
         ) {
@@ -141,7 +141,7 @@ class m extends a.Z {
             } catch (e) {
                 if (this._raiseEndpointErrors) throw new i.Hx(e);
                 this._handleError({
-                    code: null == e || null == (a = e.body) ? void 0 : a.code,
+                    code: null == e || null == (o = e.body) ? void 0 : o.code,
                     body: null == e ? void 0 : e.body
                 });
             }

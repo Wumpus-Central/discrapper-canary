@@ -23,8 +23,8 @@ var i = n(255367),
     S = n(556296),
     v = n(808506),
     T = n(63063),
-    I = n(358085),
-    N = n(13140),
+    N = n(358085),
+    I = n(13140),
     y = n(210887),
     A = n(659947),
     P = n(981631),
@@ -92,7 +92,7 @@ let V = o()((0, f.Rv)())
 class F extends r.PureComponent {
     renderMessage() {
         let { keybind: e } = this.props,
-            t = N.BB(e.shortcut);
+            t = I.BB(e.shortcut);
         return b.Z.hasBind(t)
             ? (0, i.jsx)(u.R94, {
                   className: Z.keybindMessage,
@@ -269,12 +269,12 @@ class H extends r.PureComponent {
                     label: D.intl.string(D.t.hurHWl)
                 })),
             t &&
-                ((0, I.isWindows)() || O.Z.getUseSystemScreensharePicker()) &&
+                ((0, N.isWindows)() || O.Z.getUseSystemScreensharePicker()) &&
                 s.push({
                     value: P.kg4.TOGGLE_GO_LIVE_STREAMING,
                     label: D.intl.string(D.t.ybdjJC)
                 }),
-            (0, I.isDesktop)() &&
+            (0, N.isDesktop)() &&
                 (s.push(
                     {
                         value: P.kg4.NAVIGATE_BACK,
@@ -324,7 +324,7 @@ class H extends r.PureComponent {
                 [P.kg4.TOGGLE_VOICE_MODE]: D.intl.string(D.t.snm5YW),
                 [P.kg4.TOGGLE_STREAMER_MODE]: D.intl.string(D.t.YszLLy)
             };
-        return C.Z.getCurrentConfig({ location: 'UserSettingsKeybinds' }, { autoTrackExposure: !1 }).separateKeybind && (i[P.kg4.VAD_PRIORITY] = D.intl.string(D.t.rSe8IS)), (0, j.l)() && (i[P.kg4.TOGGLE_CAMERA] = D.intl.string(D.t.v1JBtL)), e && (i[P.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = D.intl.string(D.t.IoP5vb)), t && (0, I.isWindows)() && (i[P.kg4.TOGGLE_GO_LIVE_STREAMING] = D.intl.string(D.t.s4C239)), (0, I.isDesktop)() && ((i[P.kg4.NAVIGATE_BACK] = D.intl.string(D.t.nKDlEh)), (i[P.kg4.NAVIGATE_FORWARD] = D.intl.string(D.t.DK0FFh)), (i[P.kg4.SOUNDBOARD] = (0, I.isWindows)() ? D.intl.string(D.t['5wJefH']) : D.intl.string(D.t.gzjsSE)), (i[P.kg4.SOUNDBOARD_HOLD] = (0, I.isWindows)() ? D.intl.string(D.t.RRkZc3) : D.intl.string(D.t.laNlTk)), n && (i[P.kg4.SAVE_CLIP] = D.intl.string(D.t.z3Wbam))), i;
+        return C.Z.getCurrentConfig({ location: 'UserSettingsKeybinds' }, { autoTrackExposure: !1 }).separateKeybind && (i[P.kg4.VAD_PRIORITY] = D.intl.string(D.t.rSe8IS)), (0, j.l)() && (i[P.kg4.TOGGLE_CAMERA] = D.intl.string(D.t.v1JBtL)), e && (i[P.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = D.intl.string(D.t.IoP5vb)), t && (0, N.isWindows)() && (i[P.kg4.TOGGLE_GO_LIVE_STREAMING] = D.intl.string(D.t.s4C239)), (0, N.isDesktop)() && ((i[P.kg4.NAVIGATE_BACK] = D.intl.string(D.t.nKDlEh)), (i[P.kg4.NAVIGATE_FORWARD] = D.intl.string(D.t.DK0FFh)), (i[P.kg4.SOUNDBOARD] = (0, N.isWindows)() ? D.intl.string(D.t['5wJefH']) : D.intl.string(D.t.gzjsSE)), (i[P.kg4.SOUNDBOARD_HOLD] = (0, N.isWindows)() ? D.intl.string(D.t.RRkZc3) : D.intl.string(D.t.laNlTk)), n && (i[P.kg4.SAVE_CLIP] = D.intl.string(D.t.z3Wbam))), i;
     }
     renderKeybinds(e) {
         return e.map((e) =>
@@ -372,7 +372,7 @@ class H extends r.PureComponent {
                 (0, i.jsx)(u.hjN, {
                     tag: u.RB0.H1,
                     title: D.intl.string(D.t.T9DA2N),
-                    children: I.isPlatformEmbedded
+                    children: N.isPlatformEmbedded
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsxs)(x.Z, {
@@ -510,7 +510,7 @@ function z() {
         keybinds: e,
         canGoLive: t,
         overlaySupported: n,
-        allowSoundboard: (0, I.isWindows)(),
+        allowSoundboard: (0, N.isWindows)(),
         enableClips: r
     });
 }

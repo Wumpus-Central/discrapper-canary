@@ -23,8 +23,8 @@ var i = n(255367),
     S = n(867176),
     v = n(537006),
     T = n(483517),
-    I = n(483424),
-    N = n(681837),
+    N = n(483424),
+    I = n(681837),
     y = n(638970),
     A = n(502762),
     P = n(530),
@@ -123,7 +123,7 @@ function ee(e) {
                     )
                 );
         },
-        eI = (null == er ? void 0 : er.profileEffectId) != null && !ej.current;
+        eN = (null == er ? void 0 : er.profileEffectId) != null && !ej.current;
     return (0, i.jsx)(u.Gt, {
         value: es,
         children: (0, i.jsx)(_.Mt, {
@@ -165,7 +165,7 @@ function ee(e) {
                                     })
                                 ]
                             }),
-                            eI &&
+                            eN &&
                                 (0, i.jsx)(b.Z, {
                                     profileEffectId: null == er ? void 0 : er.profileEffectId,
                                     isHovering: eo
@@ -189,7 +189,7 @@ function ee(e) {
                                         }),
                                         nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                             children: [
-                                                (0, i.jsx)(N.Z, { userId: t.id }),
+                                                (0, i.jsx)(I.Z, { userId: t.id }),
                                                 (0, i.jsx)(R.Z, {
                                                     user: t,
                                                     isHovering: eo
@@ -214,7 +214,7 @@ function ee(e) {
                                               displayProfile: er,
                                               onOpenUserProfileModal: eT
                                           })
-                                        : (0, i.jsx)(I.Z, {
+                                        : (0, i.jsx)(N.Z, {
                                               user: t,
                                               currentUser: t,
                                               displayProfile: er,

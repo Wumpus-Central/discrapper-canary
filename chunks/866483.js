@@ -11,26 +11,26 @@ n.d(t, {
     n(981631);
 let r = ['COLD_START'],
     i = 'NO_REASONS',
-    o = !0,
-    a = new Map();
+    a = !0,
+    o = new Map();
 function s(e) {
     var t;
-    let n = null != (t = a.get(e)) ? t : 0;
-    a.set(e, n + 1);
+    let n = null != (t = o.get(e)) ? t : 0;
+    o.set(e, n + 1);
 }
 function l(e) {
     var t;
-    let n = (null != (t = a.get(e)) ? t : 0) - 1;
-    n <= 0 ? a.delete(e) : a.set(e, n);
+    let n = (null != (t = o.get(e)) ? t : 0) - 1;
+    n <= 0 ? o.delete(e) : o.set(e, n);
 }
 function c(e) {
     return 'BRIDGE:'.concat(e);
 }
 function u() {
-    return a.size > 0 || o;
+    return o.size > 0 || a;
 }
 function d() {
-    let e = [...(o ? r : []), ...a.keys()].sort();
+    let e = [...(a ? r : []), ...o.keys()].sort();
     return e.length > 0 ? e.join(',') : i;
 }
 function f(e) {
@@ -42,5 +42,5 @@ function _(e) {
     p(() => l(e));
 }
 function p(e) {
-    u(), (o = !1), e(), u();
+    u(), (a = !1), e(), u();
 }

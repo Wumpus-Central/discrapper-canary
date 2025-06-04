@@ -8,8 +8,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(692547),
+    a = n.n(i),
+    o = n(692547),
     s = n(481060),
     l = n(104494),
     c = n(63802),
@@ -20,9 +20,9 @@ var i = n(120356),
         return (e[(e.PREMIUM_TIER_0_WHITE_FILL = 0)] = 'PREMIUM_TIER_0_WHITE_FILL'), (e[(e.PREMIUM_TIER_0_GRADIENT_FILL = 1)] = 'PREMIUM_TIER_0_GRADIENT_FILL'), (e[(e.PREMIUM_TIER_2_WHITE_FILL = 2)] = 'PREMIUM_TIER_2_WHITE_FILL'), (e[(e.PREMIUM_TIER_2_NEW_GRADIENT_FILL = 3)] = 'PREMIUM_TIER_2_NEW_GRADIENT_FILL'), (e[(e.PREMIUM_TIER_2_OLD_GRADIENT_FILL = 4)] = 'PREMIUM_TIER_2_OLD_GRADIENT_FILL'), (e[(e.PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE = 5)] = 'PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE'), (e[(e.PREMIUM_TIER_2_GREY_FILL = 6)] = 'PREMIUM_TIER_2_GREY_FILL'), e;
     })({});
 function p(e) {
-    let { text: t, className: n, colorOptions: i = 2, icon: a, gap: l = !0 } = e;
+    let { text: t, className: n, colorOptions: i = 2, icon: o, gap: l = !0 } = e;
     return (0, r.jsxs)('div', {
-        className: o()(n, f.freeTrialPill, {
+        className: a()(n, f.freeTrialPill, {
             [f.freeTrialPillTier0GradientFill]: 1 === i,
             [f.freeTrialPillTier2GradientFill]: 3 === i,
             [f.freeTrialPillTier2OldGradientFill]: 4 === i,
@@ -33,14 +33,14 @@ function p(e) {
         children: [
             (0, r.jsx)(s.Text, {
                 variant: 'text-xs/bold',
-                className: o()(f.freeTrialPillText, {
+                className: a()(f.freeTrialPillText, {
                     [f.freeTrialPillTextInverted]: 0 !== i && 2 !== i,
                     [f.freeTrialPillTextTier0]: 0 === i,
                     [f.freeTrialPillTextTier2]: 2 === i || 6 === i
                 }),
                 children: t
             }),
-            a
+            o
         ]
     });
 }
@@ -49,7 +49,7 @@ function h(e) {
         { text: n, className: i, colorOptions: s = 2, isPillOnBorder: l = !0 } = e;
     switch (s) {
         case 1:
-            t = a.Z.unsafe_rawColors.PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS.css;
+            t = o.Z.unsafe_rawColors.PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS.css;
             break;
         case 3:
             t = 'url(#'.concat(c.l_, ')');
@@ -63,7 +63,7 @@ function h(e) {
     }
     return l
         ? (0, r.jsxs)('div', {
-              className: o()(i, f.freeTrialPillWithSparkles),
+              className: a()(i, f.freeTrialPillWithSparkles),
               children: [
                   (0, r.jsx)(c.R9, {
                       foreground: f.sparkleStar1,
@@ -92,7 +92,7 @@ function h(e) {
               ]
           })
         : (0, r.jsxs)('div', {
-              className: o()(i, f.freeTrialPillWithSparkles),
+              className: a()(i, f.freeTrialPillWithSparkles),
               children: [
                   (0, r.jsx)(p, {
                       text: n,

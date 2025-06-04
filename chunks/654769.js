@@ -1,9 +1,9 @@
 n.d(t, { Z: () => z }), n(388685), n(35282), n(358797), n(539854), n(997841);
 var r,
     i = n(392711),
-    o = n.n(i),
-    a = n(525654),
-    s = n.n(a),
+    a = n.n(i),
+    o = n(525654),
+    s = n.n(o),
     l = n(579806),
     c = n(933557),
     u = n(710845),
@@ -76,7 +76,7 @@ async function U(e) {
         }
     (0, p.GN)(e, t, void 0, n);
 }
-let G = o().throttle(U, 1000, { leading: !0 });
+let G = a().throttle(U, 1000, { leading: !0 });
 function B() {
     N.ZP.flashFrame(!1);
 }
@@ -127,9 +127,9 @@ if (null === l.Z || void 0 === l.Z ? void 0 : l.Z.features.supports('notificatio
         N.ZP.on('NOTIFICATIONS_RECEIVED_RESPONSE', (e, t, n) => {
             if ('dismiss' === t) delete V[n];
             else {
-                var r, i, o;
+                var r, i, a;
                 let e = V[n];
-                A.isPlatformEmbedded ? N.ZP.focus() : window.focus(), (null == e || null == (r = e.options) ? void 0 : r.omitClickTracking) || I.default.track(C.rMx.NOTIFICATION_CLICKED, null == e ? void 0 : e.trackingProps), null == e || null == (o = e.options) || null == (i = o.onClick) || i.call(o);
+                A.isPlatformEmbedded ? N.ZP.focus() : window.focus(), (null == e || null == (r = e.options) ? void 0 : r.omitClickTracking) || I.default.track(C.rMx.NOTIFICATION_CLICKED, null == e ? void 0 : e.trackingProps), null == e || null == (a = e.options) || null == (i = a.onClick) || i.call(a);
             }
         }),
             N.ZP.invoke('NOTIFICATIONS_REMOVE_ALL_NOTIFICATIONS');
@@ -180,7 +180,7 @@ function W(e) {
     e.includes('message') ? G(e, t, n) : U(e, t, n);
 }
 async function K(e, t, n, r, i) {
-    var o, a, s, l, u, p, h;
+    var a, o, s, l, u, p, h;
     let m,
         P = await k(),
         w = (null == P ? void 0 : P.authorizationStatus) === 'authorized' || (null == P ? void 0 : P.authorizationStatus) === 'provisional',
@@ -189,57 +189,57 @@ async function K(e, t, n, r, i) {
         G = O.Z.disableNotifications && null == i.overrideStreamerMode,
         B = !A.isPlatformEmbedded || ((0, A.isMac)() && U) || N.ZP.shouldDisplayNotifications();
     if (!(!G && M && B)) {
-        null != i.sound && !1 !== i.playSoundIfDisabled && W(i.sound, null != (o = i.volume) ? o : 1, i.soundpack);
+        null != i.sound && !1 !== i.playSoundIfDisabled && W(i.sound, null != (a = i.volume) ? a : 1, i.soundpack);
         return;
     }
     t.includes('\0') && (L.warn('Notification title contains null character, setting to empty string'), (t = '')), n.includes('\0') && (L.warn('Notification body contains null character, setting to empty string'), (n = ''));
-    let Z = null != (a = null == i ? void 0 : i.tag) ? a : null,
+    let Z = null != (o = null == i ? void 0 : i.tag) ? o : null,
         Y = U && (null == P ? void 0 : P.sound) === !0 && (null == P ? void 0 : P.authorizationStatus) === 'authorized',
         K = (e) => {
             var t;
             null == (t = i.onShown) || t.call(i), i.omitViewTracking || I.default.track(C.rMx.NOTIFICATION_VIEWED, r), x && setTimeout(() => e.close(), 5000);
         };
     if ((null == i.sound || Y || W(i.sound, null != (s = i.volume) ? s : 1, i.soundpack), i.isUserAvatar && null != e && (e = await (0, _.D)(e)), R && b.Z.taskbarFlash && N.ZP.flashFrame(!0), U)) {
-        let o = {
+        let a = {
             title: t,
             body: n
         };
-        null != e && (o.icon = e), (null == i ? void 0 : i.sound) != null && (o.sound = j(i.sound, i.soundpack)), (null == i ? void 0 : i.tag) != null && (o.identifier = i.tag);
-        let a = d.Z.getCurrentConfig(
+        null != e && (a.icon = e), (null == i ? void 0 : i.sound) != null && (a.sound = j(i.sound, i.soundpack)), (null == i ? void 0 : i.tag) != null && (a.identifier = i.tag);
+        let o = d.Z.getCurrentConfig(
             { location: 'showNotification' },
             {
                 autoTrackExposure: !0,
                 disable: null == i.messageRecord
             }
         );
-        if (null != i.messageRecord && a.enabled) {
+        if (null != i.messageRecord && o.enabled) {
             let e = i.messageRecord.channel_id,
                 t = i.messageRecord.author;
-            o.threadIdentifier = e;
+            a.threadIdentifier = e;
             let n = E.Z.getChannel(e);
-            null != n && (o.groupName = (0, c.F6)(n, v.default, y.Z));
+            null != n && (a.groupName = (0, c.F6)(n, v.default, y.Z));
             let r = null == n ? void 0 : n.getGuildId();
-            if (((o.senderIdentifier = t.id), (o.senderDisplayName = T.ZP.getName(r, e, t)), (o.senderAvatar = t.getAvatarURL(r, 128, !1, !1)), (o.attachments = []), a.includeStickers))
+            if (((a.senderIdentifier = t.id), (a.senderDisplayName = T.ZP.getName(r, e, t)), (a.senderAvatar = t.getAvatarURL(r, 128, !1, !1)), (a.attachments = []), o.includeStickers))
                 for (let e of (0, g.cv)(i.messageRecord)) {
                     let t = (0, g.Q6)(e, { isPreview: !0 });
                     null != t &&
-                        o.attachments.push({
+                        a.attachments.push({
                             url: t,
                             type: 'image/png'
                         });
                 }
-            if (a.includeImages)
+            if (o.includeImages)
                 for (let e of i.messageRecord.attachments)
                     !(0, S.yE)(null != (u = e.flags) ? u : 0, C.J0y.CONTAINS_EXPLICIT_MEDIA) &&
                         !(0, S.yE)(null != (p = e.flags) ? p : 0, C.J0y.IS_SPOILER) &&
                         (null == (l = e.content_type) ? void 0 : l.startsWith('image/')) &&
-                        o.attachments.push({
+                        a.attachments.push({
                             url: e.proxy_url,
                             type: e.content_type
                         });
         }
         try {
-            let e = await N.ZP.invoke('NOTIFICATIONS_SEND_NOTIFICATION', o);
+            let e = await N.ZP.invoke('NOTIFICATIONS_SEND_NOTIFICATION', a);
             V[e] = {
                 options: i,
                 trackingProps: r

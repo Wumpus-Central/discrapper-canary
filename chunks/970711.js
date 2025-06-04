@@ -6,7 +6,7 @@ n.d(t, {
     $R: () => T,
     A$: () => ee,
     AM: () => W,
-    B: () => eo,
+    B: () => ea,
     B8: () => A,
     BQ: () => ef,
     C2: () => eO,
@@ -34,7 +34,7 @@ n.d(t, {
     Tc: () => eG,
     UE: () => eE,
     V3: () => eF,
-    Vr: () => ea,
+    Vr: () => eo,
     Wl: () => e4,
     Wt: () => eD,
     XP: () => e5,
@@ -112,17 +112,17 @@ n.d(t, {
     n(824928),
     n(563775),
     n(980754);
-let o = new ('undefined' == typeof TextDecoder ? (0, module.require)('util').TextDecoder : TextDecoder)('utf-8', {
+let a = new ('undefined' == typeof TextDecoder ? (0, module.require)('util').TextDecoder : TextDecoder)('utf-8', {
     ignoreBOM: !0,
     fatal: !0
 });
-o.decode();
-let a = null;
+a.decode();
+let o = null;
 function s() {
-    return (null === a || 0 === a.byteLength) && (a = new Uint8Array(r.memory.buffer)), a;
+    return (null === o || 0 === o.byteLength) && (o = new Uint8Array(r.memory.buffer)), o;
 }
 function l(e, t) {
-    return (e >>>= 0), o.decode(s().subarray(e, e + t));
+    return (e >>>= 0), a.decode(s().subarray(e, e + t));
 }
 function c(e) {
     let t = r.__externref_table_alloc();
@@ -170,19 +170,19 @@ function h(e, t, n) {
     }
     let r = e.length,
         i = t(r, 1) >>> 0,
-        o = s(),
-        a = 0;
-    for (; a < r; a++) {
-        let t = e.charCodeAt(a);
+        a = s(),
+        o = 0;
+    for (; o < r; o++) {
+        let t = e.charCodeAt(o);
         if (t > 127) break;
-        o[i + a] = t;
+        a[i + o] = t;
     }
-    if (a !== r) {
-        0 !== a && (e = e.slice(a)), (i = n(i, r, (r = a + 3 * e.length), 1) >>> 0);
-        let t = p(e, s().subarray(i + a, i + r));
-        (a += t.written), (i = n(i, r, a, 1) >>> 0);
+    if (o !== r) {
+        0 !== o && (e = e.slice(o)), (i = n(i, r, (r = o + 3 * e.length), 1) >>> 0);
+        let t = p(e, s().subarray(i + o, i + r));
+        (o += t.written), (i = n(i, r, o, 1) >>> 0);
     }
-    return (f = a), i;
+    return (f = o), i;
 }
 let m = null;
 function g() {
@@ -198,24 +198,24 @@ let E =
               r.__wbindgen_export_5.get(e.dtor)(e.a, e.b);
           });
 function b(e, t, n, i) {
-    let o = {
+    let a = {
             a: e,
             b: t,
             cnt: 1,
             dtor: n
         },
-        a = function () {
+        o = function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            o.cnt++;
-            let a = o.a;
-            o.a = 0;
+            a.cnt++;
+            let o = a.a;
+            a.a = 0;
             try {
-                return i(a, o.b, ...t);
+                return i(o, a.b, ...t);
             } finally {
-                0 == --o.cnt ? (r.__wbindgen_export_5.get(o.dtor)(a, o.b), E.unregister(o)) : (o.a = a);
+                0 == --a.cnt ? (r.__wbindgen_export_5.get(a.dtor)(o, a.b), E.unregister(a)) : (a.a = o);
             }
         };
-    return (a.original = o), E.register(a, o, o), a;
+    return (o.original = a), E.register(o, a, a), o;
 }
 function y(e) {
     let t,
@@ -257,7 +257,7 @@ function I(e, t) {
     e >>>= 0;
     let n = g(),
         i = [];
-    for (let o = e; o < e + 4 * t; o += 4) i.push(r.__wbindgen_export_2.get(n.getUint32(o, !0)));
+    for (let a = e; a < e + 4 * t; a += 4) i.push(r.__wbindgen_export_2.get(n.getUint32(a, !0)));
     return r.__externref_drop_slice(e, t), i;
 }
 function S(e, t) {
@@ -271,8 +271,8 @@ function S(e, t) {
 function T() {
     r.crash();
 }
-function A(e, t, n, i, o) {
-    r.installLogCallback(e, t, n, i, o);
+function A(e, t, n, i, a) {
+    r.installLogCallback(e, t, n, i, a);
 }
 function N(e, t) {
     r._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h2a939e4ee92a7144(e, t);
@@ -308,8 +308,8 @@ class x {
         let t,
             n = h(e, r.__wbindgen_malloc, r.__wbindgen_realloc),
             i = f,
-            o = r.blockeddomainsstore_isBlockedDomain(n, i);
-        return 0 !== o[0] && ((t = l(o[0], o[1]).slice()), r.__wbindgen_free(o[0], +o[1], 1)), t;
+            a = r.blockeddomainsstore_isBlockedDomain(n, i);
+        return 0 !== a[0] && ((t = l(a[0], a[1]).slice()), r.__wbindgen_free(a[0], +a[1], 1)), t;
     }
     static startFetchingBlockedDomains(e) {
         let t = h(e, r.__wbindgen_malloc, r.__wbindgen_realloc),
@@ -471,10 +471,10 @@ function er(e) {
 function ei() {
     return Symbol.iterator;
 }
-function eo(e) {
+function ea(e) {
     return e.length;
 }
-function ea(e, t) {
+function eo(e, t) {
     return e.match(t);
 }
 function es() {
@@ -689,9 +689,9 @@ function e6() {
 function e8(e, t) {
     let n = t,
         i = 'string' == typeof n ? n : void 0;
-    var o = d(i) ? 0 : h(i, r.__wbindgen_malloc, r.__wbindgen_realloc),
-        a = f;
-    g().setInt32(e + 4, a, !0), g().setInt32(e + 0, o, !0);
+    var a = d(i) ? 0 : h(i, r.__wbindgen_malloc, r.__wbindgen_realloc),
+        o = f;
+    g().setInt32(e + 4, o, !0), g().setInt32(e + 0, a, !0);
 }
 function e7(e, t) {
     return l(e, t);

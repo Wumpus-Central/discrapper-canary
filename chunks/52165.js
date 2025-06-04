@@ -2,8 +2,8 @@ n.d(t, {
     BC: () => s,
     gb: () => u,
     iB: () => l,
-    kK: () => a,
-    kr: () => o
+    kK: () => o,
+    kr: () => a
 }),
     n(415506),
     n(388685);
@@ -16,10 +16,10 @@ let r = !1,
         exitContext(e) {},
         destroyContext(e) {}
     };
-function o() {
+function a() {
     return i.createContext();
 }
-function a(e) {
+function o(e) {
     return i.enterContext(e);
 }
 function s(e, t) {

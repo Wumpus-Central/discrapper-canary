@@ -11,11 +11,11 @@ e.exports = function (e) {
             end: "'",
             contains: [{ begin: "''" }]
         },
-        o = {
+        a = {
             className: 'string',
             begin: '(#\\d+)+'
         },
-        a = {
+        o = {
             beginKeywords: 'function constructor destructor procedure method',
             end: '[:;]',
             keywords: 'function constructor|10 destructor|10 procedure|10 method|10',
@@ -26,7 +26,7 @@ e.exports = function (e) {
                     begin: '\\(',
                     end: '\\)',
                     keywords: t,
-                    contains: [i, o]
+                    contains: [i, a]
                 },
                 n,
                 r
@@ -42,6 +42,6 @@ e.exports = function (e) {
         case_insensitive: !0,
         keywords: t,
         illegal: '("|\\$[G-Zg-z]|\\/\\*|</|=>|->)',
-        contains: [n, r, e.C_LINE_COMMENT_MODE, i, o, e.NUMBER_MODE, a, s]
+        contains: [n, r, e.C_LINE_COMMENT_MODE, i, a, e.NUMBER_MODE, o, s]
     };
 };

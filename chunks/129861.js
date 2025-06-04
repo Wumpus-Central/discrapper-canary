@@ -2,8 +2,8 @@ n.d(t, { Z: () => v });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(481060),
     l = n(385499),
     c = n(813549),
@@ -69,8 +69,8 @@ function E(e, t) {
         r,
         i = b(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -79,17 +79,17 @@ function b(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function y(e) {
     return e.isSystemUser() ? c.J.SYSTEM_DM : e.isClyde() ? c.J.AI : e.bot ? c.J.BOT : null;
 }
 let O = (e) => {
-        let { primary: t, secondary: n, botType: i, botVerified: a, discriminatorClass: c, className: u, usernameClass: d, color: p, botClass: m, showStreamerModeTooltip: E } = e;
+        let { primary: t, secondary: n, botType: i, botVerified: o, discriminatorClass: c, className: u, usernameClass: d, color: p, botClass: m, showStreamerModeTooltip: E } = e;
         return (0, r.jsxs)('div', {
-            className: o()(_.info, u),
+            className: a()(_.info, u),
             children: [
                 (0, r.jsx)(s.ua7, {
                     text: f.intl.string(f.t.Br1ls7),
@@ -99,7 +99,7 @@ let O = (e) => {
                         (0, r.jsx)(
                             'span',
                             g(h({}, e), {
-                                className: o()(_.__invalid_username, d),
+                                className: a()(_.__invalid_username, d),
                                 style: null != p ? { color: p } : void 0,
                                 children: t
                             })
@@ -107,23 +107,23 @@ let O = (e) => {
                 }),
                 null != n
                     ? (0, r.jsx)('span', {
-                          className: o()(_.infoSpacing, c),
+                          className: a()(_.infoSpacing, c),
                           children: n
                       })
                     : void 0,
                 null != i &&
                     (0, r.jsx)(l.Z, {
                         type: i,
-                        className: o()(_.infoSpacing, m),
-                        verified: a
+                        className: a()(_.infoSpacing, m),
+                        verified: o
                     })
             ]
         });
     },
     v = (e) => {
-        var { user: t, nick: n, forceUsername: i, showAccountIdentifier: o, overrideDiscriminator: s, forcePomelo: l, hideBotTag: f = !1, hideDiscriminator: _ = !1 } = e,
+        var { user: t, nick: n, forceUsername: i, showAccountIdentifier: a, overrideDiscriminator: s, forcePomelo: l, hideBotTag: f = !1, hideDiscriminator: _ = !1 } = e,
             p = E(e, ['user', 'nick', 'forceUsername', 'showAccountIdentifier', 'overrideDiscriminator', 'forcePomelo', 'hideBotTag', 'hideDiscriminator']);
-        let m = (0, a.e7)([u.Z], () => u.Z.hidePersonalInformation),
+        let m = (0, o.e7)([u.Z], () => u.Z.hidePersonalInformation),
             g = m || _ || t.isNonUserBot(),
             b = t.toString(),
             v = f ? null : y(t),
@@ -133,7 +133,7 @@ let O = (e) => {
             A = t.isPomelo() || l;
         if (A || T !== b) {
             let e = T === b && A && i ? d.ZP.getUserTag(t, { forcePomelo: l }) : T,
-                n = o && e !== '@'.concat(b) ? d.ZP.getUserTag(t) : void 0;
+                n = a && e !== '@'.concat(b) ? d.ZP.getUserTag(t) : void 0;
             return (0, r.jsx)(
                 O,
                 h(

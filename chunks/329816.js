@@ -1,8 +1,8 @@
-n.d(t, { Z: () => ea });
+n.d(t, { Z: () => eo });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(670481),
     l = n(873546),
     c = n(442837),
@@ -124,7 +124,7 @@ let er = (0, V.Un)({
         createPromise: () => n.e('13474').then(n.bind(n, 420541)),
         webpackId: 420541
     }),
-    eo = i.memo(function (e) {
+    ea = i.memo(function (e) {
         let t = (0, c.e7)([B.Z], () => B.Z.isFocused()),
             n = (0, c.e7)([G.Z], () => G.Z.hasLayers()),
             i = (0, d.s9z)(d.$sL);
@@ -135,9 +135,9 @@ let er = (0, V.Un)({
               })
             : (0, r.jsx)(Q.Z, en(ee({}, e), { focused: t }));
     }),
-    ea = function (e) {
+    eo = function (e) {
         let { children: t, skipsSettingDefaultPageTitle: n } = e,
-            o = (0, F.getPlatform)(),
+            a = (0, F.getPlatform)(),
             u = l.tq || l.Em,
             m = (0, c.e7)([j.Z], () => (j.Z.darkSidebar ? X.BRd.DARK : void 0)),
             U = (0, C.Q3)('AppSkeleton'),
@@ -166,14 +166,14 @@ let er = (0, V.Un)({
                                                 renderWindow: window,
                                                 children: (0, r.jsxs)(D.yP, {
                                                     children: [
-                                                        null != o
-                                                            ? (0, r.jsx)(eo, {
-                                                                  type: o,
+                                                        null != a
+                                                            ? (0, r.jsx)(ea, {
+                                                                  type: a,
                                                                   themeOverride: m
                                                               })
                                                             : null,
                                                         (0, r.jsxs)('div', {
-                                                            className: a()(J.appAsidePanelWrapper, u && J.mobileAppAsidePanelWrapper),
+                                                            className: o()(J.appAsidePanelWrapper, u && J.mobileAppAsidePanelWrapper),
                                                             children: [
                                                                 (0, r.jsx)(N.K, {}),
                                                                 (0, r.jsx)('div', {
@@ -186,7 +186,7 @@ let er = (0, V.Un)({
                                                                                 children: (0, r.jsxs)(T.p, {
                                                                                     children: [
                                                                                         (0, r.jsx)('div', {
-                                                                                            className: a()(u ? J.mobileApp : J.app),
+                                                                                            className: o()(u ? J.mobileApp : J.app),
                                                                                             children: t
                                                                                         }),
                                                                                         (0, r.jsx)(I.Z, {}),

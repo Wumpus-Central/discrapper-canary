@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(953529);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(239091),
     l = n(962293),
     c = n(555573),
@@ -63,7 +63,7 @@ function m(e, t) {
 }
 function g(e) {
     var t;
-    let o,
+    let a,
         _,
         h,
         { className: g, activeCommand: E, activeOption: b, optionStates: y, channelId: O } = e,
@@ -96,10 +96,10 @@ function g(e) {
     if (null == E) return null;
     if (null != b) {
         let e = y[b.name].lastValidationResult;
-        (o = b.displayName), (_ = b.displayDescription), (h = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error);
-    } else (o = ''.concat(u.GI).concat(E.displayName)), (_ = E.displayDescription), (h = null);
+        (a = b.displayName), (_ = b.displayDescription), (h = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error);
+    } else (a = ''.concat(u.GI).concat(E.displayName)), (_ = E.displayDescription), (h = null);
     return (0, r.jsxs)('div', {
-        className: a()(g, f.bar),
+        className: o()(g, f.bar),
         onContextMenu: v,
         children: [
             (0, r.jsxs)('div', {
@@ -107,7 +107,7 @@ function g(e) {
                 children: [
                     (0, r.jsx)('span', {
                         className: f.name,
-                        children: o
+                        children: a
                     }),
                     null != h
                         ? (0, r.jsx)('span', {

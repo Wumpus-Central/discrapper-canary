@@ -6,8 +6,8 @@ n.d(t, {
     n(415506);
 var r = n(772848),
     i = n(259443),
-    o = n(442837),
-    a = n(433517),
+    a = n(442837),
+    o = n(433517),
     s = n(570140),
     l = n(188471),
     c = n(314897),
@@ -146,7 +146,7 @@ function Z(e) {
     let t = performance.now();
     if (!(t - C < I))
         try {
-            a.K.set(S, e), (C = t);
+            o.K.set(S, e), (C = t);
         } catch (e) {
             p.Z.captureException(e);
         }
@@ -155,7 +155,7 @@ function H(e) {
     return null == e ? null : e.version !== g.EI ? (A.warn('Throwing away client session with invalid version: '.concat(e.version, ', expected ').concat(g.EI)), null) : e;
 }
 function Y() {
-    a.K.remove(S),
+    o.K.remove(S),
         (R = {
             state: 'loaded',
             session: null
@@ -181,12 +181,12 @@ function W() {
         let { state: t } = e;
         (D = t === E.$7l.ACTIVE), V();
     }
-    p.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), d.Z.addChangeListener(n), c.default.addChangeListener(e), s.Z.subscribe('WINDOW_FOCUS', r), s.Z.subscribe('APP_STATE_UPDATE', i), s.Z.subscribe('LOGOUT', t), V(), o.ZP.initialized.then(x);
+    p.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), d.Z.addChangeListener(n), c.default.addChangeListener(e), s.Z.subscribe('WINDOW_FOCUS', r), s.Z.subscribe('APP_STATE_UPDATE', i), s.Z.subscribe('LOGOUT', t), V(), a.ZP.initialized.then(x);
 }
 async function K() {
     let e = null;
     try {
-        e = 'uninitialized' === R.state ? H(await a.K.getAfterRefresh(S)) : R.session;
+        e = 'uninitialized' === R.state ? H(await o.K.getAfterRefresh(S)) : R.session;
     } catch (e) {
         p.Z.captureException(e);
     }
@@ -214,6 +214,6 @@ async function K() {
     })();
 }
 function z() {
-    let e = 'uninitialized' === R.state ? H(a.K.get(S)) : R.session;
+    let e = 'uninitialized' === R.state ? H(o.K.get(S)) : R.session;
     return null == e || (0, g.qK)(e) ? null : e;
 }

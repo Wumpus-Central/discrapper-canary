@@ -1,8 +1,8 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(358085),
     i = n(924557),
-    o = n(65154);
-function a(e) {
+    a = n(65154);
+function o(e) {
     let { ignorePlatformRestriction: t } = i.NV.getCurrentConfig({ location: 'isClipsClientCapable' }, { autoTrackExposure: !1 });
-    return t || (r.isDesktop() && e.getMediaEngine().supports(o.AN.CLIPS));
+    return t || (r.isDesktop() && e.getMediaEngine().supports(a.AN.CLIPS));
 }

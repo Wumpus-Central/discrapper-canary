@@ -1,12 +1,12 @@
 n.d(t, { T: () => I });
 var r = n(313694);
 function i(e, t, n) {
-    o(e, t), t.set(e, n);
+    a(e, t), t.set(e, n);
 }
-function o(e, t) {
+function a(e, t) {
     if (t.has(e)) throw TypeError('Cannot initialize the same private elements twice on an object');
 }
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -80,37 +80,37 @@ class I {
                 value: (e, t, n) => {
                     var r, i;
                     if (!n.backend) throw Error("You must specify a 'backend' property in your Backend entry: ".concat(JSON.stringify(n)));
-                    let o = n.backend(e, t, n.options),
-                        a = n.id,
-                        l = !n.id && o && o.constructor;
-                    if ((l && (a = o.constructor.name), a)) l && console.warn("Deprecation notice: You are using a pipeline which doesn't include backends' 'id'.\n        This might be unsupported in the future, please specify 'id' explicitely for every backend.");
+                    let a = n.backend(e, t, n.options),
+                        o = n.id,
+                        l = !n.id && a && a.constructor;
+                    if ((l && (o = a.constructor.name), o)) l && console.warn("Deprecation notice: You are using a pipeline which doesn't include backends' 'id'.\n        This might be unsupported in the future, please specify 'id' explicitely for every backend.");
                     else throw Error("You must specify an 'id' property in your Backend entry: ".concat(JSON.stringify(n), '\n        see this guide: https://github.com/louisbrunner/dnd-multi-backend/tree/master/packages/react-dnd-multi-backend#migrating-from-5xx'));
-                    if (s(this, p)[a]) throw Error("You must specify a unique 'id' property in your Backend entry:\n        ".concat(JSON.stringify(n), ' (conflicts with: ').concat(JSON.stringify(s(this, p)[a]), ')'));
+                    if (s(this, p)[o]) throw Error("You must specify a unique 'id' property in your Backend entry:\n        ".concat(JSON.stringify(n), ' (conflicts with: ').concat(JSON.stringify(s(this, p)[o]), ')'));
                     return {
-                        id: a,
-                        instance: o,
+                        id: o,
+                        instance: a,
                         preview: null != (r = n.preview) && r,
                         transition: n.transition,
                         skipDispatchOnTransition: null != (i = n.skipDispatchOnTransition) && i
                     };
                 }
             }),
-            a(this, 'setup', () => {
+            o(this, 'setup', () => {
                 if ('undefined' != typeof window) {
                     if (I.isSetUp) throw Error('Cannot have two MultiBackends at the same time.');
                     (I.isSetUp = !0), s(this, E).call(this, window), s(this, p)[s(this, f)].instance.setup();
                 }
             }),
-            a(this, 'teardown', () => {
+            o(this, 'teardown', () => {
                 'undefined' != typeof window && ((I.isSetUp = !1), s(this, b).call(this, window), s(this, p)[s(this, f)].instance.teardown());
             }),
-            a(this, 'connectDragSource', (e, t, n) => s(this, v).call(this, 'connectDragSource', e, t, n)),
-            a(this, 'connectDragPreview', (e, t, n) => s(this, v).call(this, 'connectDragPreview', e, t, n)),
-            a(this, 'connectDropTarget', (e, t, n) => s(this, v).call(this, 'connectDropTarget', e, t, n)),
-            a(this, 'profile', () => s(this, p)[s(this, f)].instance.profile()),
-            a(this, 'previewEnabled', () => s(this, p)[s(this, f)].preview),
-            a(this, 'previewsList', () => s(this, _)),
-            a(this, 'backendsList', () => s(this, h)),
+            o(this, 'connectDragSource', (e, t, n) => s(this, v).call(this, 'connectDragSource', e, t, n)),
+            o(this, 'connectDragPreview', (e, t, n) => s(this, v).call(this, 'connectDragPreview', e, t, n)),
+            o(this, 'connectDropTarget', (e, t, n) => s(this, v).call(this, 'connectDropTarget', e, t, n)),
+            o(this, 'profile', () => s(this, p)[s(this, f)].instance.profile()),
+            o(this, 'previewEnabled', () => s(this, p)[s(this, f)].preview),
+            o(this, 'previewsList', () => s(this, _)),
+            o(this, 'backendsList', () => s(this, h)),
             i(this, E, {
                 writable: !0,
                 value: (e) => {
@@ -154,12 +154,12 @@ class I {
                 writable: !0,
                 value: (e, t, n, r) => {
                     let i = ''.concat(e, '_').concat(t),
-                        o = s(this, O).call(this, e, t, n, r);
+                        a = s(this, O).call(this, e, t, n, r);
                     return (
                         (s(this, m)[i] = {
                             func: e,
                             args: [t, n, r],
-                            unsubscribe: o
+                            unsubscribe: a
                         }),
                         () => {
                             s(this, m)[i].unsubscribe(), delete s(this, m)[i];
@@ -181,4 +181,4 @@ class I {
             c(this, m, {});
     }
 }
-a(I, 'isSetUp', !1);
+o(I, 'isSetUp', !1);

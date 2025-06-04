@@ -2,8 +2,8 @@ n.d(t, { Z: () => b }), n(539854), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(704215),
-    a = n(907459),
+    a = n(704215),
+    o = n(907459),
     s = n(514361),
     l = n(662975),
     c = n(724145),
@@ -23,10 +23,10 @@ let b = function () {
         b = (0, l.g)(),
         { activePanel: y, metadata: O } = (0, m.oq)(),
         v = [];
-    !e && null == y && (n && !t && v.push(o.z.CLIENT_THEMES_COACHMARK), b && v.push(o.z.CUSTOM_THEME_COACHMARK));
+    !e && null == y && (n && !t && v.push(a.z.CLIENT_THEMES_COACHMARK), b && v.push(a.z.CUSTOM_THEME_COACHMARK));
     let [I, S] = (0, f.US)(v, E.R.SIDEBAR, !0),
-        T = I === o.z.CLIENT_THEMES_COACHMARK,
-        A = I === o.z.CUSTOM_THEME_COACHMARK;
+        T = I === a.z.CLIENT_THEMES_COACHMARK,
+        A = I === a.z.CUSTOM_THEME_COACHMARK;
     return e
         ? null
         : (0, r.jsxs)(r.Fragment, {
@@ -36,7 +36,7 @@ let b = function () {
                           markAsDismissed: T
                               ? S
                               : () => {
-                                    (0, d.EW)(o.z.CLIENT_THEMES_COACHMARK, {
+                                    (0, d.EW)(a.z.CLIENT_THEMES_COACHMARK, {
                                         dismissAction: E.L.INDIRECT_ACTION,
                                         forceTrack: !0
                                     });
@@ -44,7 +44,7 @@ let b = function () {
                           showClientThemesCoachmark: T
                       }),
                   y === m.wh.APP_ICON &&
-                      (0, r.jsx)(a.Z, {
+                      (0, r.jsx)(o.Z, {
                           isCoachmark: !1,
                           markAsDismissed: S
                       }),

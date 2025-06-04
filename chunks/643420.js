@@ -1,8 +1,8 @@
 n.d(t, { k: () => y }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(505266),
-    a = n(40851),
+    a = n(505266),
+    o = n(40851),
     s = n(745510),
     l = n(661637),
     c = n(146128),
@@ -117,10 +117,10 @@ let h = 1000 / 60,
 function y(e) {
     let { children: t } = e,
         [n, l] = i.useState(!1),
-        d = (0, a.bp)(),
+        d = (0, o.bp)(),
         [_, y] = i.useState(null),
         { confettiCanvas: O } = i.useContext(s.h),
-        v = (0, o.uR)(O, _),
+        v = (0, a.uR)(O, _),
         I = i.useMemo(
             () => ({
                 triggerAnimation: () => l(!0),
@@ -158,7 +158,7 @@ function y(e) {
               value: I,
               children: [
                   t,
-                  (0, r.jsx)(o.Ji, {
+                  (0, r.jsx)(a.Ji, {
                       ref: y,
                       colors: E,
                       sprites: b,

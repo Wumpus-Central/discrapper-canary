@@ -34,6 +34,7 @@ e.exports = {
     nameplatePreviewRootContainer: 'nameplatePreviewRootContainer_c3d04b',
     nameplatePreviewList: 'nameplatePreviewList_c3d04b',
     nameplatePreviewSampleItem: 'nameplatePreviewSampleItem_c3d04b',
+    nameplatePlaceholderAvatar: 'nameplatePlaceholderAvatar_c3d04b',
     placeholderItem: 'placeholderItem_c3d04b',
     placeholderBar: 'placeholderBar_c3d04b',
     fadeOut: 'fadeOut_c3d04b',

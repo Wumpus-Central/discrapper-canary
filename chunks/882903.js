@@ -1,10 +1,12 @@
 e.exports = {
     container: 'container__68a18',
+    containerInner: 'containerInner__68a18',
     editorBody: 'editorBody__68a18',
     headerContainer: 'headerContainer__68a18',
     closeButton: 'closeButton__68a18',
     sliderContainer: 'sliderContainer__68a18',
     slider: 'slider__68a18',
+    gradientDirectionSliderContainer: 'gradientDirectionSliderContainer__68a18',
     resetButton: 'resetButton__68a18',
     resetButtonContent: 'resetButtonContent__68a18',
     surpriseMeButton: 'surpriseMeButton__68a18',

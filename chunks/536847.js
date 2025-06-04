@@ -1,8 +1,8 @@
-n.d(t, { o: () => m }), n(388685);
+n.d(t, { o: () => g }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(657707),
-    a = n(442837),
+    a = n(657707),
+    o = n(442837),
     s = n(481060),
     l = n(153867),
     c = n(210887),
@@ -11,26 +11,27 @@ var r = n(255367),
     f = n(514361),
     _ = n(874893),
     p = n(231338),
-    h = n(531864);
-function m() {
+    h = n(388032),
+    m = n(531864);
+function g() {
     let [e, t] = i.useState(p.BR.LIGHT),
         n = [
             {
-                name: '',
+                name: h.intl.string(h.t.b8Cei4),
                 value: p.BR.DARK,
-                icon: o.Z6G
+                icon: a.Z6G
             },
             {
-                name: '',
+                name: h.intl.string(h.t.K2sFfn),
                 value: p.BR.LIGHT,
-                icon: o.chG
+                icon: a.chG
             }
         ],
-        [m, g, E] = (0, a.Wu)([c.Z, u.ZP, f.Z], () => [c.Z.theme, null == f.Z.gradientPreset, u.ZP.useSystemTheme === _.KW.ON]);
+        [g, E, b] = (0, o.Wu)([c.Z, u.ZP, f.Z], () => [c.Z.theme, null == f.Z.gradientPreset, u.ZP.useSystemTheme === _.KW.ON]);
     return (0, r.jsx)(s.sY7, {
-        className: h.themeSelector,
+        className: m.themeSelector,
         options: n,
-        value: g && !E ? m : e,
+        value: E && !b ? g : e,
         onChange: (e) => {
             let { value: n } = e;
             t(n);

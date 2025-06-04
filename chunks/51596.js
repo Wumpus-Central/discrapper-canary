@@ -59,9 +59,9 @@ function T(e) {
     }
     return e;
 }
-let I = () => Promise.resolve();
-I = n(346329).playApplication;
-let N = Object.freeze({
+let N = () => Promise.resolve();
+N = n(346329).playApplication;
+let I = Object.freeze({
         [d.xQ.USER]: d.h8.USER,
         [d.xQ.TEXT_CHANNEL]: d.h8.TEXT_CHANNEL,
         [d.xQ.VOICE_CHANNEL]: d.h8.VOICE_CHANNEL,
@@ -72,7 +72,7 @@ let N = Object.freeze({
 function A(e) {
     var t;
     let n,
-        [i, r] = ((n = null != (t = N[e.charAt(0)]) ? t : null), [e.replace(y, ''), n]);
+        [i, r] = ((n = null != (t = I[e.charAt(0)]) ? t : null), [e.replace(y, ''), n]);
     return {
         query: i,
         queryMode: r
@@ -204,7 +204,7 @@ function L(e) {
             break;
         case d.h8.APPLICATION:
             let C = _.Z.getActiveLibraryApplication(x.id);
-            I(x.id, C, {
+            N(x.id, C, {
                 analyticsParams: {
                     source: S.Sbl.QUICK_SWITCHER,
                     location: S.Sbl.QUICK_SWITCHER

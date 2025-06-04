@@ -64,7 +64,7 @@ function T(e, t) {
         e
     );
 }
-let I = r.memo((e) => {
+let N = r.memo((e) => {
     let { name: t, canReveal: n = !0, dismissibleContentType: s, forceShadow: h, cardType: x } = e,
         E = null == e ? void 0 : e.onCtaClick,
         y = (0, c.e7)([u.Z], () => u.Z.useReducedMotion),
@@ -121,11 +121,11 @@ let I = r.memo((e) => {
                           children: [
                               (0, i.jsx)('div', {
                                   className: S.flipCardFront,
-                                  children: (0, i.jsx)(N, T(v({}, e), { className: S.topCover }))
+                                  children: (0, i.jsx)(I, T(v({}, e), { className: S.topCover }))
                               }),
                               (0, i.jsx)('div', {
                                   className: S.flipCardBack,
-                                  children: (0, i.jsx)(N, T(v({}, e), { className: S.topCover }))
+                                  children: (0, i.jsx)(I, T(v({}, e), { className: S.topCover }))
                               })
                           ]
                       })
@@ -141,7 +141,7 @@ let I = r.memo((e) => {
                             [S.forceShadow]: h,
                             [S.reducedMotion]: y
                         }),
-                        children: (0, i.jsx)(N, v({}, e))
+                        children: (0, i.jsx)(I, v({}, e))
                     })
                 })
               : (0, i.jsx)('div', {
@@ -162,15 +162,15 @@ let I = r.memo((e) => {
                                 (0, i.jsx)('div', {
                                     className: S.flipCardHidden,
                                     'aria-hidden': !0,
-                                    children: (0, i.jsx)(N, v({}, e))
+                                    children: (0, i.jsx)(I, v({}, e))
                                 }),
                                 (0, i.jsx)('div', {
                                     className: S.flipCardFront,
-                                    children: (0, i.jsx)(N, T(v({}, w.upcomingDropUntimed), { pillText: '' }))
+                                    children: (0, i.jsx)(I, T(v({}, w.upcomingDropUntimed), { pillText: '' }))
                                 }),
                                 (0, i.jsx)('div', {
                                     className: S.flipCardBack,
-                                    children: (0, i.jsx)(N, T(v({}, e), { description: '' }))
+                                    children: (0, i.jsx)(I, T(v({}, e), { description: '' }))
                                 }),
                                 (0, i.jsx)('div', {
                                     className: S.flipCardButtonContainer,
@@ -183,19 +183,19 @@ let I = r.memo((e) => {
                         })
                     })
                 })
-        : (0, i.jsx)(I, T(v({}, w.upcomingDropUntimed), { forceShadow: h }));
+        : (0, i.jsx)(N, T(v({}, w.upcomingDropUntimed), { forceShadow: h }));
 });
-I.displayName = 'PremiumPerkCard';
-let N = r.forwardRef((e, t) => {
+N.displayName = 'PremiumPerkCard';
+let I = r.forwardRef((e, t) => {
     var n;
-    let { title: r, titleClassName: s = '', subtitle: a = '', description: o = '', descriptionCta: c = '', isPremiumGetCta: u, onCtaClick: m, onMouseEnter: g, className: p, perkComponent: f, cardVariant: b, cardType: C, onClick: j, backgroundImage: O, pillText: v, perkImage: T, imageOverlayText: I } = e,
-        N = C === _.gM.CARD_CAROUSEL_FIRST_ROW || C === _.gM.CARD_CAROUSEL_SECOND_ROW || C === _.gM.CARD_CAROUSEL_THIRD_ROW,
+    let { title: r, titleClassName: s = '', subtitle: a = '', description: o = '', descriptionCta: c = '', isPremiumGetCta: u, onCtaClick: m, onMouseEnter: g, className: p, perkComponent: f, cardVariant: b, cardType: C, onClick: j, backgroundImage: O, pillText: v, perkImage: T, imageOverlayText: N } = e,
+        I = C === _.gM.CARD_CAROUSEL_FIRST_ROW || C === _.gM.CARD_CAROUSEL_SECOND_ROW || C === _.gM.CARD_CAROUSEL_THIRD_ROW,
         y = '' !== o || '' !== c || ('' !== a && b === _.zW.REWARD),
         A = (0, h._)(b);
     return (0, i.jsxs)(d.P3F, {
         className: l()(S.card, p, null == (n = A.cardContainer) ? void 0 : n.className, {
             [S.clickable]: null != j,
-            [S.hideOverflow]: N
+            [S.hideOverflow]: I
         }),
         onMouseEnter: g,
         style: { backgroundImage: null != O ? 'url('.concat(O, ')') : void 0 },
@@ -213,13 +213,13 @@ let N = r.forwardRef((e, t) => {
                 titleClassName: s,
                 subtitle: a,
                 perkImage: T,
-                isCarousel: N,
+                isCarousel: I,
                 descriptionCta: c,
                 onCtaClick: m,
                 perkComponent: f,
                 subtitleClassName: S.cardSubtitle,
                 cardVariant: b,
-                imageOverlayText: I
+                imageOverlayText: N
             }),
             y &&
                 (0, i.jsx)(E.Z, {
@@ -240,5 +240,5 @@ let N = r.forwardRef((e, t) => {
         ]
     });
 });
-N.displayName = 'PerkCardContent';
-let y = I;
+I.displayName = 'PerkCardContent';
+let y = N;

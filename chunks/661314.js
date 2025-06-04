@@ -1,6 +1,6 @@
 var r = n(571078),
     i = n(744569),
-    o = r('keys');
+    a = r('keys');
 e.exports = function (e) {
-    return o[e] || (o[e] = i(e));
+    return a[e] || (a[e] = i(e));
 };

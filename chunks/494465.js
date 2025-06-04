@@ -1,7 +1,7 @@
 var r = n(46015),
     i = n(621523),
-    o = n(880181),
-    a = n(77025),
+    a = n(880181),
+    o = n(77025),
     s = n(507604),
     l = n(938373).CONFIGURABLE,
     c = n(845691),
@@ -23,20 +23,20 @@ var r = n(46015),
         'Symbol(' === h(_(t), 0, 7) && (t = '[' + m(_(t), /^Symbol\(([^)]*)\).*$/, '$1') + ']'),
             n && n.getter && (t = 'get ' + t),
             n && n.setter && (t = 'set ' + t),
-            (!a(e, 'name') || (l && e.name !== t)) &&
+            (!o(e, 'name') || (l && e.name !== t)) &&
                 (s
                     ? p(e, 'name', {
                           value: t,
                           configurable: !0
                       })
                     : (e.name = t)),
-            E && n && a(n, 'arity') && e.length !== n.arity && p(e, 'length', { value: n.arity });
+            E && n && o(n, 'arity') && e.length !== n.arity && p(e, 'length', { value: n.arity });
         try {
-            n && a(n, 'constructor') && n.constructor ? s && p(e, 'prototype', { writable: !1 }) : e.prototype && (e.prototype = void 0);
+            n && o(n, 'constructor') && n.constructor ? s && p(e, 'prototype', { writable: !1 }) : e.prototype && (e.prototype = void 0);
         } catch (e) {}
         var r = d(e);
-        return a(r, 'source') || (r.source = g(b, 'string' == typeof t ? t : '')), e;
+        return o(r, 'source') || (r.source = g(b, 'string' == typeof t ? t : '')), e;
     });
 Function.prototype.toString = y(function () {
-    return (o(this) && f(this).source) || c(this);
+    return (a(this) && f(this).source) || c(this);
 }, 'toString');

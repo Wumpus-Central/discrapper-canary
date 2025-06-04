@@ -1,8 +1,8 @@
 n.d(t, { c: () => u });
 var r = n(570140),
     i = n(680287),
-    o = n(786761);
-function a(e, t, n) {
+    a = n(786761);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -55,9 +55,9 @@ function c(e, t) {
     );
 }
 async function u(e) {
-    let { channelId: t, message: n, items: a, shouldUploadFailureSendNotification: l } = e,
+    let { channelId: t, message: n, items: o, shouldUploadFailureSendNotification: l } = e,
         u = new i.Z('missing'),
-        d = (0, o.e5)(c(s({}, n), { id: u._file.id }));
+        d = (0, a.e5)(c(s({}, n), { id: u._file.id }));
     u.on('start', (e) => {
         r.Z.dispatch({
             type: 'UPLOAD_START',
@@ -74,7 +74,7 @@ async function u(e) {
                 file: e
             });
         }),
-        u.on('error', (e, n, i, o) => {
+        u.on('error', (e, n, i, a) => {
             r.Z.dispatch({
                 type: 'UPLOAD_FAIL',
                 channelId: t,
@@ -92,7 +92,7 @@ async function u(e) {
                     aborted: !0
                 });
         });
-    let f = await u.uploadFilesSimple(a);
+    let f = await u.uploadFilesSimple(o);
     if (!u._aborted)
         return {
             attachments: f,

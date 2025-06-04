@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(600164),
-    a = n(563132),
+    a = n(600164),
+    o = n(563132),
     s = n(612853),
     l = n(388032),
     c = n(240150);
@@ -67,7 +67,7 @@ var p = (function (e) {
 })({});
 let h = (e) => {
     let { onBack: t, backText: n, primaryIcon: u, primaryCTA: f, primaryType: p, primaryText: h, primaryTooltip: m, primaryDisabled: g, primarySubmitting: E, onPrimary: b, secondaryText: y, onSecondary: O } = e,
-        { premiumRebrandBackgroundClassName: v } = (0, a.JL)(),
+        { premiumRebrandBackgroundClassName: v } = (0, o.JL)(),
         I = () => {
             if (null == f || null == h) return null;
             let e = 2 === f ? i.gtL : i.zxk,
@@ -133,8 +133,8 @@ let h = (e) => {
                       children: null != n ? n : l.intl.string(l.t['13/7kZ'])
                   });
     return (0, r.jsxs)(i.mzw, {
-        justify: o.Z.Justify.BETWEEN,
-        align: o.Z.Align.CENTER,
+        justify: a.Z.Justify.BETWEEN,
+        align: a.Z.Align.CENTER,
         className: v,
         children: [I(), S(), (0, r.jsx)(s.Z, {}), T()]
     });

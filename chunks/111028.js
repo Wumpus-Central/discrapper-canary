@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(510761);
 function c(e, t, n) {
@@ -63,8 +63,8 @@ function _(e, t) {
         r,
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -73,13 +73,13 @@ function p(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let h = 500;
 function m(e) {
-    let { children: t, 'aria-label': n, className: o, position: c } = e,
+    let { children: t, 'aria-label': n, className: a, position: c } = e,
         d = _(e, ['children', 'aria-label', 'className', 'position']),
         p = i.useRef(null),
         m = null != n ? n : 'string' == typeof t && t;
@@ -93,7 +93,7 @@ function m(e) {
             children: (n) => {
                 let { onMouseEnter: i, onMouseLeave: s } = n;
                 return (0, r.jsx)('div', {
-                    className: a()(o, l.overflow),
+                    className: o()(a, l.overflow),
                     ref: p,
                     'aria-hidden': e['aria-hidden'],
                     onMouseEnter: () => {

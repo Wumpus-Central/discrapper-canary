@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(388685);
 var r = n(179360),
     i = n(147913),
-    o = n(430824),
-    a = n(496675),
+    a = n(430824),
+    o = n(496675),
     s = n(914010),
     l = n(713081),
     c = n(905128),
@@ -27,14 +27,14 @@ class h extends i.Z {
     handleSelectedGuildChange() {
         let e = s.Z.getGuildId();
         if (null == e || e === _._ || e === f.I_8) return;
-        let t = o.Z.getGuild(e);
+        let t = a.Z.getGuild(e);
         if (null == t) return;
         u.ZP.trackExposure({
             guildId: t.id,
             location: 'GuildPowerupsManager'
         });
         let n = (0, u.gV)(t.id, 'GuildPowerupsManager'),
-            r = (0, d.D)(a.Z, t);
+            r = (0, d.D)(o.Z, t);
         n && r && (c.Z.shouldFetchCatalogForGuild(e) && (0, l.Sn)(e), c.Z.shouldFetchPowerupsForGuild(e) && (0, l.Fm)(e));
     }
     handleEntitlementUpdate(e) {
@@ -47,7 +47,7 @@ class h extends i.Z {
     }
     refreshGuildPowerups(e) {
         let t = (0, u.gV)(e, 'GuildPowerupsManager'),
-            n = (0, d.D)(a.Z, o.Z.getGuild(e));
+            n = (0, d.D)(o.Z, a.Z.getGuild(e));
         t && !0 === n && ((0, l.Fm)(e), (0, r.C0)(e));
     }
     constructor(...e) {

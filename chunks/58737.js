@@ -1,7 +1,7 @@
-n.d(t, { U: () => a });
+n.d(t, { U: () => o });
 var r = n(818083),
     i = n(504876);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: 'user',
     id: '2025-05_video_keyboard_scrubbing',
     label: 'Video keyboard scrubbing with arrow keys',
@@ -19,10 +19,10 @@ let o = (0, r.B)({
         }
     ]
 });
-function a(e) {
+function o(e) {
     let { location: t } = e,
         { isInHoldout: n } = i.Y.getCurrentConfig({ location: t });
-    return o.getCurrentConfig(
+    return a.getCurrentConfig(
         { location: t },
         {
             disable: n,

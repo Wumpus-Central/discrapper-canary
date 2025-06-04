@@ -9,8 +9,8 @@ n.d(t, {
     n(415506);
 var r = n(512722),
     i = n.n(r),
-    o = n(392711),
-    a = n(259443),
+    a = n(392711),
+    o = n(259443),
     s = n(544891),
     l = n(46973),
     c = n(570140),
@@ -78,9 +78,9 @@ function T(e, t) {
         e
     );
 }
-let A = new a.Yd('VoiceFilterActionCreators'),
+let A = new o.Yd('VoiceFilterActionCreators'),
     N = 1000,
-    C = (0, o.debounce)(
+    C = (0, a.debounce)(
         () => {
             c.Z.dispatch({ type: 'VOICE_FILTER_LAGGING' });
         },
@@ -91,15 +91,15 @@ let A = new a.Yd('VoiceFilterActionCreators'),
 function R(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         { url: n, modelId: r, fileName: i } = e,
-        o = b.Z.getModelState(r);
-    if ((null == o ? void 0 : o.status) === y.L.DOWNLOADED)
+        a = b.Z.getModelState(r);
+    if ((null == a ? void 0 : a.status) === y.L.DOWNLOADED)
         return void c.Z.dispatch(
             T(I({ type: 'VOICE_FILTER_FILE_READY' }, e), {
                 fetchedFromNetwork: !1,
                 analyticsContext: t
             })
         );
-    (null == o ? void 0 : o.status) !== y.L.DOWNLOADING &&
+    (null == a ? void 0 : a.status) !== y.L.DOWNLOADING &&
         (c.Z.dispatch(I({ type: 'VOICE_FILTER_DOWNLOAD_STARTED' }, e)),
         m.ZP.downloadVoiceFilterFile(n, i, (t) => {
             let { downloadedBytes: n, totalBytes: r } = t;
@@ -171,10 +171,10 @@ async function D(e) {
         }),
         r = n.text,
         i = n.body,
-        o = n.headers['x-discord-catalog-signature'];
+        a = n.headers['x-discord-catalog-signature'];
     if (null == i.models) throw Error('Voice filters catalog response is empty');
-    if (null == o) throw Error('Voice filters catalog signature is missing');
-    await e.setCatalog(r, o),
+    if (null == a) throw Error('Voice filters catalog signature is missing');
+    await e.setCatalog(r, a),
         await c.Z.dispatch({
             type: 'VOICE_FILTER_CATALOG_FETCH_SUCCESS',
             catalog: i

@@ -8,8 +8,8 @@ n.d(t, {
     n(35282);
 var r = n(512722),
     i = n.n(r),
-    o = n(933557),
-    a = n(660199),
+    a = n(933557),
+    o = n(660199),
     s = n(763296),
     l = n(592125),
     c = n(430824),
@@ -72,22 +72,22 @@ function E(e, t) {
 }
 function b(e, t) {
     let { mode: n, ignoreTrailingEmptyNodes: r, preventEmojiSurrogates: i } = null != t ? t : {},
-        [o, a] = (null == t ? void 0 : t.range) != null ? p.M8.edges(t.range) : [void 0, void 0];
+        [a, o] = (null == t ? void 0 : t.range) != null ? p.M8.edges(t.range) : [void 0, void 0];
     return y(e, {
         mode: n,
-        start: o,
-        end: a,
+        start: a,
+        end: o,
         ignoreTrailingEmptyNodes: r,
         preventEmojiSurrogates: i
     });
 }
 function y(e, t) {
     var n, r;
-    let { mode: i, start: o, end: a, separator: s, ignoreEmptyNodes: l, ignoreTrailingEmptyNodes: c, preventEmojiSurrogates: u } = null != t ? t : {},
+    let { mode: i, start: a, end: o, separator: s, ignoreEmptyNodes: l, ignoreTrailingEmptyNodes: c, preventEmojiSurrogates: u } = null != t ? t : {},
         d = e.length > 0 && !p.LC.isText(e[0]);
     null == s && (s = d ? '\n' : '');
-    let f = null != (n = null == o ? void 0 : o.path[0]) ? n : 0,
-        _ = null != (r = null == a ? void 0 : a.path[0]) ? r : e.length - 1;
+    let f = null != (n = null == a ? void 0 : a.path[0]) ? n : 0,
+        _ = null != (r = null == o ? void 0 : o.path[0]) ? r : e.length - 1;
     if (c)
         for (let t = _; t >= f; t--) {
             let n = e[t];
@@ -110,23 +110,23 @@ function y(e, t) {
         let n = e[t];
         if (l && p.LC.isText(n) && 0 === n.text.length) continue;
         let r =
-                null != o && t === f
+                null != a && t === f
                     ? {
-                          path: o.path.slice(1),
-                          offset: o.offset
+                          path: a.path.slice(1),
+                          offset: a.offset
                       }
                     : void 0,
             s = O(n, {
                 mode: i,
                 start: r,
                 end:
-                    null != a && t === _
+                    null != o && t === _
                         ? {
-                              path: a.path.slice(1),
-                              offset: a.offset
+                              path: o.path.slice(1),
+                              offset: o.offset
                           }
                         : void 0,
-                allowBlockQuotePrefix: null == o || null == a || (!h && (!m || g)),
+                allowBlockQuotePrefix: null == a || null == o || (!h && (!m || g)),
                 preventEmojiSurrogates: u
             });
         (!l || s.length > 0) && E.push(s);
@@ -144,8 +144,8 @@ function O(e, t) {
             return '';
         case 'blockQuote': {
             let n = y(e.children, t),
-                o = null != r && 1 === r.path.length && 0 === r.path[0] && 0 === r.offset;
-            if (i && (null == r || o)) return '> '.concat(n);
+                a = null != r && 1 === r.path.length && 0 === r.path[0] && 0 === r.offset;
+            if (i && (null == r || a)) return '> '.concat(n);
             return n;
         }
         case 'emoji': {
@@ -169,7 +169,7 @@ function O(e, t) {
             if ('raw' === n) return t;
             let r = l.Z.getChannel(e.channelId);
             if (null == r) return t;
-            return (0, o.F6)(r, f.default, u.Z, !0, !0);
+            return (0, a.F6)(r, f.default, u.Z, !0, !0);
         }
         case 'soundboard': {
             let t = '<sound:'.concat(e.guildId, ':').concat(e.soundId, '>');
@@ -198,7 +198,7 @@ function O(e, t) {
         case 'commandMention':
             return '</'.concat(e.commandName, ':').concat(e.commandId, '>');
         case 'timestamp':
-            return (0, a.He)(e.parsed.timestamp, e.parsed.format);
+            return (0, o.He)(e.parsed.timestamp, e.parsed.format);
         case 'applicationCommand':
             return y(
                 e.children,
@@ -216,6 +216,6 @@ function O(e, t) {
 }
 function v(e, t) {
     var n, r;
-    let { start: o, end: a } = null != t ? t : {};
-    return i()(null == o || 0 === o.path.length, 'Invalid start provided to serializeText'), i()(null == a || 0 === a.path.length, 'Invalid end provided to serializeText'), e.substring(null != (n = null == o ? void 0 : o.offset) ? n : 0, null != (r = null == a ? void 0 : a.offset) ? r : e.length);
+    let { start: a, end: o } = null != t ? t : {};
+    return i()(null == a || 0 === a.path.length, 'Invalid start provided to serializeText'), i()(null == o || 0 === o.path.length, 'Invalid end provided to serializeText'), e.substring(null != (n = null == a ? void 0 : a.offset) ? n : 0, null != (r = null == o ? void 0 : o.offset) ? r : e.length);
 }

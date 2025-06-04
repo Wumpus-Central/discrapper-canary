@@ -3,7 +3,7 @@ e.exports = function (e) {
         n = '[eE][-+]?' + t,
         r = t + '(\\.' + t + ')?(' + n + ')?',
         i = '\\w+',
-        o = '\\b(' + (t + '#' + i + '(\\.' + i + ')?#(' + n) + ')?|' + r + ')';
+        a = '\\b(' + (t + '#' + i + '(\\.' + i + ')?#(' + n) + ')?|' + r + ')';
     return {
         name: 'VHDL',
         case_insensitive: !0,
@@ -19,7 +19,7 @@ e.exports = function (e) {
             e.QUOTE_STRING_MODE,
             {
                 className: 'number',
-                begin: o,
+                begin: a,
                 relevance: 0
             },
             {

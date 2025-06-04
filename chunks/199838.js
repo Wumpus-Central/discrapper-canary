@@ -1,7 +1,7 @@
 var r,
     i,
-    o,
-    a = n(720561),
+    a,
+    o = n(720561),
     s = n(127849),
     l = n(434431),
     c = n(436207),
@@ -13,7 +13,7 @@ var r,
     h = s.TypeError,
     m = s.WeakMap,
     g = function (e) {
-        return o(e) ? i(e) : r(e, {});
+        return a(e) ? i(e) : r(e, {});
     },
     E = function (e) {
         return function (t) {
@@ -22,7 +22,7 @@ var r,
             return n;
         };
     };
-if (a || d.state) {
+if (o || d.state) {
     var b = d.state || (d.state = new m());
     (b.get = b.get),
         (b.has = b.has),
@@ -34,7 +34,7 @@ if (a || d.state) {
         (i = function (e) {
             return b.get(e) || {};
         }),
-        (o = function (e) {
+        (a = function (e) {
             return b.has(e);
         });
 } else {
@@ -47,14 +47,14 @@ if (a || d.state) {
         (i = function (e) {
             return u(e, y) ? e[y] : {};
         }),
-        (o = function (e) {
+        (a = function (e) {
             return u(e, y);
         });
 }
 e.exports = {
     set: r,
     get: i,
-    has: o,
+    has: a,
     enforce: g,
     getterFor: E
 };

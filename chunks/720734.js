@@ -28,8 +28,8 @@ var i = n(255367),
     S = n(634894),
     v = n(586902),
     T = n(980591),
-    I = n(468363),
-    N = n(326255),
+    N = n(468363),
+    I = n(326255),
     y = n(771173),
     A = n(963056),
     P = n(570928),
@@ -82,8 +82,8 @@ var i = n(255367),
     eS = n(184301),
     ev = n(52538),
     eT = n(670188),
-    eI = n(321614),
-    eN = n(879815),
+    eN = n(321614),
+    eI = n(879815),
     ey = n(294629),
     eA = n(875527),
     eP = n(702977),
@@ -337,7 +337,7 @@ class tp extends r.PureComponent {
                 customStatusHoverOnlyRTCEntrypointEnabled: d
             });
         if (
-            (0, N.Z)({
+            (0, I.Z)({
                 activities: t,
                 status: s,
                 applicationStream: n,
@@ -556,7 +556,7 @@ class tp extends r.PureComponent {
                 (0, E.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 659580));
                     return () => {
-                        let { enabledInputProfiles: n } = (0, eI.c)({ location: 'Account' });
+                        let { enabledInputProfiles: n } = (0, eN.c)({ location: 'Account' });
                         return (0, i.jsx)(D.Gt, {
                             value: t,
                             children: (0, i.jsx)(e, {
@@ -740,12 +740,12 @@ function tf() {
             return null != e ? eV.Z.getChannel(e) : null;
         }),
         { mute: f, selfMute: b, suppress: E } = (0, ey.Z)(h),
-        { selfDeaf: C, deaf: j } = (0, eN.Z)(h),
+        { selfDeaf: C, deaf: j } = (0, eI.Z)(h),
         T = (0, d.e7)([k.C], () => {
             var e;
             return (0, L.fD)() ? (null == (e = k.C.getCurrentBuildOverride().overrides) ? void 0 : e.discord_web) : null;
         }),
-        N = (0, d.e7)([eX.ZP], () => eX.ZP.getPremiumTypeSubscription()),
+        I = (0, d.e7)([eX.ZP], () => eX.ZP.getPremiumTypeSubscription()),
         y = (0, d.e7)([eH.Z], () => eH.Z.getSpeakingWhileMuted()),
         A = (0, d.e7)([B.Z], () => B.Z.isFullscreenInContext()),
         P = (0, d.e7)([eF.Z], () => eF.Z.hasLayers()),
@@ -757,7 +757,7 @@ function tf() {
         G = (0, O.u)(),
         F = e8.ZP.canUsePremiumGuildMemberProfile(t),
         H = (null == t || null == (e = t.avatarDecoration) ? void 0 : e.skuId) === tt.rL,
-        { voiceActivityStatusEnabled: z } = (0, I.U)({ location: 'Account' }),
+        { voiceActivityStatusEnabled: z } = (0, N.U)({ location: 'Account' }),
         Y = (0, es.m)(),
         [q, X] = (0, ei.G)(null != U ? U : null),
         { customStatusRTCEntrypointEnabled: Q, customStatusHoverOnlyRTCEntrypointEnabled: J } = (0, K.Z)({ location: 'Account' }),
@@ -832,7 +832,7 @@ function tf() {
                 userTag: g,
                 hidePrivateData: p,
                 occluded: Z,
-                premiumSubscription: N,
+                premiumSubscription: I,
                 selfDeaf: C,
                 selfMute: b,
                 serverDeaf: j,
@@ -897,14 +897,14 @@ function t_(e) {
         S = t || s || n,
         v = r.useRef(null),
         T = r.useRef(null),
-        I = (0, p.O)(S ? 'unmute' : 'mute'),
-        N = (0, h.P)(S ? 'unmute' : 'mute'),
+        N = (0, p.O)(S ? 'unmute' : 'mute'),
+        I = (0, h.P)(S ? 'unmute' : 'mute'),
         { activeVoice: y } = (0, eZ.o)(),
         { showSilentLagWarning: A } = (0, eD.Y)(),
         P = null != y,
         Z = (0, eR.z)(y),
         w = (0, d.e7)([ez.Z], () => ez.Z.isConnected()),
-        { Component: k, events: L, play: B } = P ? N : I,
+        { Component: k, events: L, play: B } = P ? I : N,
         M = n || s ? _.v0G : k,
         V = A ? tr.intl.string(tr.t.ARRV6u) : null,
         G = (0, U.Z)(t, n, s, a),

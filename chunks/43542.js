@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S });
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(358555),
     l = n(769654),
     c = n(706454),
@@ -71,8 +71,8 @@ function O(e, t) {
         r,
         i = v(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -81,15 +81,15 @@ function v(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function I(e) {
     var { profile: t, disableGuildNameClick: n } = e,
         s = O(e, ['profile', 'disableGuildNameClick']);
     let c = t.id,
-        f = (0, o.e7)(
+        f = (0, a.e7)(
             [d.ZP, u.default],
             () => {
                 var e;
@@ -105,7 +105,7 @@ function I(e) {
         );
     return !f || n
         ? (0, r.jsx)(
-              a.X6q,
+              o.X6q,
               y(E({}, s), {
                   className: m.guildName,
                   variant: 'heading-md/semibold',
@@ -114,11 +114,11 @@ function I(e) {
               })
           )
         : (0, r.jsx)(
-              a.P3F,
+              o.P3F,
               y(E({}, s), {
                   className: m.guildNameContainer,
                   onClick: _,
-                  children: (0, r.jsx)(a.X6q, {
+                  children: (0, r.jsx)(o.X6q, {
                       className: m.guildName,
                       variant: 'heading-md/semibold',
                       color: 'header-primary',
@@ -129,7 +129,7 @@ function I(e) {
 }
 function S(e) {
     let { profile: t, disableGuildNameClick: n } = e,
-        l = (0, o.e7)([c.default], () => c.default.locale),
+        l = (0, a.e7)([c.default], () => c.default.locale),
         u = (0, p.M)(_.default.extractTimestamp(t.id), l),
         d = i.useMemo(() => {
             let e = (0, f.$5)(t);
@@ -144,7 +144,7 @@ function S(e) {
             (0, r.jsxs)('div', {
                 className: m.nameContainer,
                 children: [
-                    (0, r.jsx)(a.ua7, {
+                    (0, r.jsx)(o.ua7, {
                         text: t.name,
                         overflowOnly: !0,
                         children: (e) =>
@@ -166,7 +166,7 @@ function S(e) {
                         className: m.memberCount,
                         children: [
                             (0, r.jsx)('div', { className: m.dotOnline }),
-                            (0, r.jsx)(a.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-secondary',
                                 children: h.intl.format(h.t['LC+S+v'], { membersOnline: t.onlineCount })
@@ -177,7 +177,7 @@ function S(e) {
                         className: m.memberCount,
                         children: [
                             (0, r.jsx)('div', { className: m.dot }),
-                            (0, r.jsx)(a.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-secondary',
                                 children: h.intl.format(h.t.zRl6XV, { count: t.memberCount })
@@ -188,7 +188,7 @@ function S(e) {
             }),
             (0, r.jsx)('div', {
                 className: m.established,
-                children: (0, r.jsx)(a.Text, {
+                children: (0, r.jsx)(o.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-secondary',
                     children: h.intl.format(h.t['zb2Q5+'], { createdAtDate: u })

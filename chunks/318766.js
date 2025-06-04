@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(386230),
     l = n(442837),
     c = n(704215),
@@ -91,7 +91,7 @@ let P = 20,
             className: S.premiumTooltipContainer,
             children: [
                 (0, r.jsx)(u.Fmz, {
-                    className: a()(S.premiumUnlockAnimation, { [S.reducedMotion]: e }),
+                    className: o()(S.premiumUnlockAnimation, { [S.reducedMotion]: e }),
                     loop: !1,
                     shouldAnimate: !e,
                     pauseAtFrame: e ? 149 : void 0,
@@ -113,7 +113,7 @@ function k(e, t) {
     };
 }
 let M = function (e) {
-    let { tabIndex: t, className: n, renderButtonContents: o, active: T, onClick: N, 'aria-controls': P, focusProps: R, shouldShowSoundmojiCoachmark: w = !1, ref: M } = e,
+    let { tabIndex: t, className: n, renderButtonContents: a, active: T, onClick: N, 'aria-controls': P, focusProps: R, shouldShowSoundmojiCoachmark: w = !1, ref: M } = e,
         [j, U] = i.useState(!1),
         [G, B] = i.useState(50),
         F = j || T,
@@ -136,16 +136,16 @@ let M = function (e) {
         [$, ee] = i.useState(!1),
         [et, en] = i.useState(!1),
         er = (0, m.V2)({ location: 'EmojiButton' }),
-        [ei, eo] = (0, _.US)(w && er ? [c.z.SOUNDMOJI_COACHMARK] : []),
-        ea = !$ && ei === c.z.SOUNDMOJI_COACHMARK && !et,
+        [ei, ea] = (0, _.US)(w && er ? [c.z.SOUNDMOJI_COACHMARK] : []),
+        eo = !$ && ei === c.z.SOUNDMOJI_COACHMARK && !et,
         es = i.useRef(null),
         el = null != M ? M : es;
     return (0, r.jsx)(u.yRy, {
         targetElementRef: el,
-        renderPopout: () => (0, r.jsx)(g.Z, { markAsDismissed: eo }),
+        renderPopout: () => (0, r.jsx)(g.Z, { markAsDismissed: ea }),
         position: 'top',
         align: 'right',
-        shouldShow: ea,
+        shouldShow: eo,
         animationPosition: 'bottom',
         onRequestClose: () => en(!0),
         children: (e) =>
@@ -167,7 +167,7 @@ let M = function (e) {
                             look: u.zxk.Looks.BLANK,
                             size: u.zxk.Sizes.NONE,
                             tabIndex: t,
-                            className: a()(V, n),
+                            className: o()(V, n),
                             onMouseEnter: () => {
                                 var e;
                                 H(), null == (e = i.onMouseEnter) || e.call(i), E.default.track(y.rMx.EMOJI_PICKER_BUTTON_HOVERED);
@@ -189,8 +189,8 @@ let M = function (e) {
                             focusProps: R,
                             onContextMenu: i.onContextMenu,
                             children:
-                                null != o
-                                    ? o()
+                                null != a
+                                    ? a()
                                     : (0, r.jsx)(u.AMe, {
                                           config: L,
                                           to: { value: +!!F },
@@ -201,7 +201,7 @@ let M = function (e) {
                                                   style: C(A({}, Z), {
                                                       transform: t.to([0, 1], [1, 1.14]).to((e) => 'scale('.concat(e, ')'))
                                                   }),
-                                                  children: [(0, r.jsx)('div', { className: a()(S.sprite, S.spriteColored, F ? S.active : S.inactive) }), (0, r.jsx)('div', { className: a()(S.sprite, Q ? S.spritePremiumColored : S.spriteGreyscale, F ? S.inactive : S.active, { [S.reducedMotion]: J }) })]
+                                                  children: [(0, r.jsx)('div', { className: o()(S.sprite, S.spriteColored, F ? S.active : S.inactive) }), (0, r.jsx)('div', { className: o()(S.sprite, Q ? S.spritePremiumColored : S.spriteGreyscale, F ? S.inactive : S.active, { [S.reducedMotion]: J }) })]
                                               });
                                           }
                                       })

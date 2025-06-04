@@ -1,6 +1,6 @@
 n.d(t, {
     U2: () => i,
-    pn: () => o
+    pn: () => a
 });
 let r = (0, n(818083).B)({
     kind: 'user',
@@ -19,7 +19,7 @@ function i(e) {
     let { enabled: t } = r.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
     return t;
 }
-function o(e) {
+function a(e) {
     let { enabled: t } = r.useExperiment({ location: e }, { autoTrackExposure: !0 });
     return t;
 }

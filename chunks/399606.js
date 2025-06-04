@@ -8,8 +8,8 @@ n.d(t, {
     n(388685);
 var r = n(73800),
     i = n(902704),
-    o = n(250919),
-    a = n(52165);
+    a = n(250919),
+    o = n(52165);
 function s(e, t) {
     return e === t;
 }
@@ -26,15 +26,15 @@ function c(e, t, n) {
             getStateFromStores: t,
             prevDeps: void 0,
             state: void 0,
-            libDiscoreContext: (0, a.kr)()
+            libDiscoreContext: (0, o.kr)()
         });
     let u = c.current,
         d = u.state;
     if (null == n || !(0, i.E)(n, u.prevDeps)) {
         let e;
-        void 0 !== u.libDiscoreContext && (0, a.kK)(u.libDiscoreContext), (e = t());
+        void 0 !== u.libDiscoreContext && (0, o.kK)(u.libDiscoreContext), (e = t());
         let n = !1;
-        (null != d && l(d, e)) || ((d = e), (n = !0)), void 0 !== u.libDiscoreContext && (0, a.BC)(u.libDiscoreContext, n);
+        (null != d && l(d, e)) || ((d = e), (n = !0)), void 0 !== u.libDiscoreContext && (0, o.BC)(u.libDiscoreContext, n);
     }
     (0, r.useInsertionEffect)(() => {
         (u.getStateFromStores = t), (u.prevDeps = n), (u.state = d);
@@ -44,11 +44,11 @@ function c(e, t, n) {
         (0, r.useInsertionEffect)(() => {
             let t = () => {
                     let e;
-                    void 0 !== u.libDiscoreContext && (0, a.kK)(u.libDiscoreContext), (e = u.getStateFromStores());
+                    void 0 !== u.libDiscoreContext && (0, o.kK)(u.libDiscoreContext), (e = u.getStateFromStores());
                     let t = !1;
-                    l(u.state, e) || ((u.state = e), f({}), (t = !0)), void 0 !== u.libDiscoreContext && (0, a.BC)(u.libDiscoreContext, t);
+                    l(u.state, e) || ((u.state = e), f({}), (t = !0)), void 0 !== u.libDiscoreContext && (0, o.BC)(u.libDiscoreContext, t);
                 },
-                n = new o.F(e, t, u.libDiscoreContext);
+                n = new a.F(e, t, u.libDiscoreContext);
             return n.attach('useStateFromStores'), () => n.detach();
         }, []),
         d

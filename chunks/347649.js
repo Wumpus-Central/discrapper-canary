@@ -1,6 +1,6 @@
 n.d(t, {
     CC: () => i,
-    ov: () => o
+    ov: () => a
 });
 let r = (0, n(818083).B)({
         kind: 'user',
@@ -19,7 +19,7 @@ let r = (0, n(818083).B)({
         let { enabled: e } = r.useExperiment({ location: 'force_migration' }, { autoTrackExposure: !1 });
         return e;
     },
-    o = () => {
+    a = () => {
         let { enabled: e } = r.getCurrentConfig({ location: 'force_migration' }, { autoTrackExposure: !1 });
         return e;
     };

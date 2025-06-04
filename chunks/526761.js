@@ -5,9 +5,9 @@ n.d(t, {
     JC: () => b,
     KQ: () => h,
     NB: () => c,
-    XZ: () => a,
+    XZ: () => o,
     Y_: () => d,
-    cP: () => o,
+    cP: () => a,
     f4: () => g,
     fy: () => E,
     gP: () => l,
@@ -22,8 +22,8 @@ n.d(t, {
 });
 let r = 250,
     i = 762880,
-    o = 'ROLE_SUBSCRIPTIONS',
-    a = 'APPLICATION_SUBSCRIPTION_SUBSECTION',
+    a = 'ROLE_SUBSCRIPTIONS',
+    o = 'APPLICATION_SUBSCRIPTION_SUBSECTION',
     s = 'SOUNDBOARD_SUBSECTION',
     l = 'VIDEO_SUBSECTION';
 var c = (function (e) {

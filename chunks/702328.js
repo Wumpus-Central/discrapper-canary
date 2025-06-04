@@ -23,8 +23,8 @@ var i = n(255367),
     S = n(140465),
     v = n(278605),
     T = n(585612),
-    I = n(286961),
-    N = n(91802),
+    N = n(286961),
+    I = n(91802),
     y = n(639119),
     A = n(8647),
     P = n(784238),
@@ -131,8 +131,8 @@ let ed = (e) => {
             ej = (0, T.C)('PremiumMarketingHome'),
             eO = ((eC && !eE) || (eE && ej)) && M,
             [eS, ev] = r.useState(!1),
-            [eT, eI] = r.useState(!1),
-            [eN, ey] = r.useState(!1),
+            [eT, eN] = r.useState(!1),
+            [eI, ey] = r.useState(!1),
             [eA, eP] = r.useState(!1),
             eR = (0, j.rO)(),
             [eD, eZ] = r.useState(!1),
@@ -140,7 +140,7 @@ let ed = (e) => {
             ek = null != ew ? (0, O.Af)(ew) : null,
             eL = null != ek ? O.ZP.getSkuIdForPlan(ek.planId) : null,
             eB = null !== eL && eL !== J.Si.TIER_2 ? J.Si.TIER_2 : null,
-            eM = (0, N.n)(),
+            eM = (0, I.n)(),
             eU = null != eM,
             [eV, eG] = r.useState(!1),
             eF = (0, y.N)(),
@@ -148,7 +148,7 @@ let ed = (e) => {
             ez = (0, S.Nx)(),
             eY = (0, Z.Vi)(),
             eW = null != eY && eY,
-            eK = null == (n = (0, I.Z)()) ? void 0 : n.billingSettingsMarketingBanner,
+            eK = null == (n = (0, N.Z)()) ? void 0 : n.billingSettingsMarketingBanner,
             { analyticsLocations: eq } = (0, h.ZP)(p.Z.PREMIUM_MARKETING),
             eX = 'PremiumMarketingHome';
         (0, u.j)({
@@ -352,7 +352,7 @@ let ed = (e) => {
                     }),
                     !eO && (0, i.jsx)('div', { className: s ? en.footerSpacingFullscreen : en.footerSpacing }),
                     (0, i.jsx)(G.Z, {
-                        isVisible: !eS && !eN && !eT && eD,
+                        isVisible: !eS && !eI && !eT && eD,
                         isFullscreen: s,
                         subscriptionTier: eB,
                         isMarketingPageV2: eO
@@ -379,7 +379,7 @@ let ed = (e) => {
                         (0, i.jsx)(o.$, {
                             innerRef: eh,
                             onChange: (e) => {
-                                eI(e);
+                                eN(e);
                             },
                             children: (0, i.jsx)(z.Z, {
                                 ref: eh,

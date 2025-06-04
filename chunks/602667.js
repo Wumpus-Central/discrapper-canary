@@ -1,8 +1,8 @@
 n.d(t, { A: () => m }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(434650),
+    a = n(442837),
+    o = n(434650),
     s = n(110924),
     l = n(451478),
     c = n(915750);
@@ -61,15 +61,15 @@ function _(e, t) {
 let p = (e) => {
         let [t, n] = i.useState(!1),
             r = null != e ? e : t,
-            o = r !== (0, s.Z)(r);
+            a = r !== (0, s.Z)(r);
         return {
             visible: r,
-            visibleChanged: o,
-            reference: (0, a.O)((e) => n(e), c.PI)
+            visibleChanged: a,
+            reference: (0, o.O)((e) => n(e), c.PI)
         };
     },
     h = () => {
-        let e = (0, o.e7)([l.Z], () => l.Z.isFocused()),
+        let e = (0, a.e7)([l.Z], () => l.Z.isFocused()),
             t = (0, s.Z)(e),
             n = e !== t;
         return {
@@ -79,15 +79,15 @@ let p = (e) => {
     },
     m = i.memo(function (e) {
         let { focused: t, focusedChanged: n } = h(),
-            { visible: i, visibleChanged: o, reference: a } = p(e.overrideVisibility);
+            { visible: i, visibleChanged: a, reference: o } = p(e.overrideVisibility);
         return (0, r.jsx)(
             c.ui,
             _(d({}, e), {
                 focused: t,
                 focusedChanged: n,
                 visible: i,
-                visibleChanged: o,
-                reference: a
+                visibleChanged: a,
+                reference: o
             }),
             (0, c.B5)(e.questOrQuests, e.questContent)
         );

@@ -30,11 +30,11 @@ function h(e) {
         n = e === o.L0.NSFW_SERVER || e === o.L0.NSFW_SERVER_INVITE || e === o.L0.NSFW_SERVER_INVITE_EMBED;
     return t
         ? {
-              verifyAgreementButtonText: c.intl.string(c.t['2L5V8/']),
-              verifyGateDescription: n ? c.intl.format(c.t['8yts9f'], {}) : c.intl.format(c.t.ECL1eX, {})
+              verifyAgreementButtonText: c.intl.string(c.t.PBG51t),
+              verifyGateDescription: n ? c.intl.format(c.t['7uIWQE'], {}) : c.intl.format(c.t.x1coPj, {})
           }
         : {
-              verifyAgreementButtonText: c.intl.string(c.t.SFWVER),
-              verifyGateDescription: n ? c.intl.string(c.t['+tEu6+']) : c.intl.string(c.t['NjO/s7'])
+              verifyAgreementButtonText: c.intl.string(c.t['5B+npK']),
+              verifyGateDescription: n ? c.intl.string(c.t.akjk0d) : c.intl.string(c.t['u/xqhY'])
           };
 }

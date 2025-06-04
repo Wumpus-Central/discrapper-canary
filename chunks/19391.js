@@ -1,19 +1,19 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(134632),
     i = n(823379),
-    o = n(388032);
-function a(e) {
+    a = n(388032);
+function o(e) {
     switch (e) {
         case r.w.THINK:
-            return o.intl.string(o.t['45vlm5']);
+            return a.intl.string(a.t['45vlm5']);
         case r.w.LOVE:
-            return o.intl.string(o.t.np9mf3);
+            return a.intl.string(a.t.np9mf3);
         case r.w.EXCITED:
-            return o.intl.string(o.t.G8dhaW);
+            return a.intl.string(a.t.G8dhaW);
         case r.w.RECOMMEND:
-            return o.intl.string(o.t.Zx7N1t);
+            return a.intl.string(a.t.Zx7N1t);
         case r.w.QUESTION:
-            return o.intl.string(o.t['f+PyDw']);
+            return a.intl.string(a.t['f+PyDw']);
         default:
             (0, i.vE)(e);
     }

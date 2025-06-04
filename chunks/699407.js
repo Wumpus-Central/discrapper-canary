@@ -1,4 +1,4 @@
-let r, i, o;
+let r, i, a;
 n.d(t, {
     X: () => F,
     l: () => Y
@@ -8,7 +8,7 @@ n.d(t, {
     n(388685),
     n(539854),
     n(17089);
-var a,
+var o,
     s = n(756647),
     l = n(442837),
     c = n(544891),
@@ -94,7 +94,7 @@ function U(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
     return e + t >= A ? 0 : e + t;
 }
-let G = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() => e()),
+let G = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() => e()),
     B = new u.R(),
     F = {
         handleConnectionOpen: () => {},
@@ -107,15 +107,15 @@ let G = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
     H = () => Promise.resolve({ sessionId: void 0 }),
     Y = (e) => {
         var t;
-        let { dispatcher: n, actionHandler: a, getFingerprint: u, getSessionId: p = H, TRACKING_URL: E, drainTimeoutOverride: b, waitFor: y, scheduleWhenIdle: Y = G } = e;
+        let { dispatcher: n, actionHandler: o, getFingerprint: u, getSessionId: p = H, TRACKING_URL: E, drainTimeoutOverride: b, waitFor: y, scheduleWhenIdle: Y = G } = e;
         function W(e) {
             var t;
-            if (null != o) return o;
+            if (null != a) return a;
             let n = null != (t = e.fingerprint) ? t : u();
             return null != n ? (0, s.s)(n) : null;
         }
         function K() {
-            return 0 !== V.length && (null != o ? null != i : null != u());
+            return 0 !== V.length && (null != a ? null != i : null != u());
         }
         function z(e) {
             let { shouldFlushOnNextTick: t = !1 } = e;
@@ -224,23 +224,23 @@ let G = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
         (S = null != b ? b : m),
             (F.handleConnectionOpen = function (e) {
                 let { analyticsToken: t, user: n } = e;
-                return null != t && (i = t), null != n.id && (o = n.id), $(), z({ shouldFlushOnNextTick: !1 }), !1;
+                return null != t && (i = t), null != n.id && (a = n.id), $(), z({ shouldFlushOnNextTick: !1 }), !1;
             }),
             (F.handleConnectionClosed = function () {
-                return q(), ee(), (i = null), (o = null), !1;
+                return q(), ee(), (i = null), (a = null), !1;
             }),
             (F.handleFingerprint = function () {
                 return q(), !1;
             }),
             (F.handleTrack = function (e) {
-                let { event: t, properties: n, flush: i, fingerprint: o, resolve: a } = e;
+                let { event: t, properties: n, flush: i, fingerprint: a, resolve: o } = e;
                 return (
                     p().then((e) => {
                         let { sessionId: s } = e;
                         (s !== r || T >= A) && ((T = 0), (r = s), j());
                         let l = {
                                 type: t,
-                                fingerprint: o,
+                                fingerprint: a,
                                 properties: _(
                                     {
                                         client_track_timestamp: Date.now(),
@@ -249,7 +249,7 @@ let G = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                                     },
                                     n
                                 ),
-                                resolve: a
+                                resolve: o
                             },
                             c = W(l);
                         if ((null != c && (l.properties.client_uuid = B.generate(c)), V.push(l), V.length > g)) {
@@ -269,5 +269,5 @@ let G = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                 super(...e), f(this, 'submitEventsImmediately', Q);
             }
         }
-        return f(et, 'displayName', 'AnalyticsTrackingStore'), new et(n, a);
+        return f(et, 'displayName', 'AnalyticsTrackingStore'), new et(n, o);
     };

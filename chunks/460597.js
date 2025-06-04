@@ -7,8 +7,8 @@ n.d(t, {
     n(467055);
 var r = n(754700),
     i = n(742635),
-    o = n(458708),
-    a = n(608591);
+    a = n(458708),
+    o = n(608591);
 let s = (e) => {
         let t = {};
         for (let n of Object.keys(e)) {
@@ -60,15 +60,15 @@ let s = (e) => {
                 return {
                     type: r.X.WATCH_VIDEO,
                     target: e.target,
-                    assets: (0, a._c)(e.assets),
-                    messages: (0, a.I9)(e.messages)
+                    assets: (0, o._c)(e.assets),
+                    messages: (0, o.I9)(e.messages)
                 };
             case r.X.WATCH_VIDEO_ON_MOBILE:
                 return {
                     type: r.X.WATCH_VIDEO_ON_MOBILE,
                     target: e.target,
-                    assets: (0, a.c1)(e.assets),
-                    messages: (0, a.jZ)(e.messages)
+                    assets: (0, o.c1)(e.assets),
+                    messages: (0, o.jZ)(e.messages)
                 };
             case r.X.PLAY_ON_DESKTOP:
                 return {
@@ -139,7 +139,7 @@ let s = (e) => {
         } catch (e) {
             return {
                 tasks: {},
-                joinOperator: o.r.OR
+                joinOperator: a.r.OR
             };
         }
     };

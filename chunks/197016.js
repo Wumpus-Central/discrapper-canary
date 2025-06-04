@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(685072),
-    o = n(481060),
-    a = n(287734),
+    a = n(481060),
+    o = n(287734),
     s = n(77880),
     l = n(871499),
     c = n(388032);
@@ -65,8 +65,8 @@ function p(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,8 +75,8 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function m(e) {
@@ -85,7 +85,7 @@ function m(e) {
     let m = t ? l.d : l.Z,
         { changeLeaveCallAndActivityIcons: g } = (0, s.A)({ location: 'LeaveCallButton' }),
         E = () => {
-            null == n || n(), a.default.disconnect();
+            null == n || n(), o.default.disconnect();
         },
         b = () => c.intl.string(c.t['6vrfgo']),
         { Component: y, events: O } = (0, i.K)();
@@ -94,7 +94,7 @@ function m(e) {
         _(d({}, h), {
             isTrayButton: !1,
             onClick: E,
-            iconComponent: g ? o.PBZ : y,
+            iconComponent: g ? a.PBZ : y,
             onMouseEnter: (e) => {
                 null == u || u(e), O.onMouseEnter();
             },

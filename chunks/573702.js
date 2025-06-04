@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    o = n(481060),
     s = n(639119),
     l = n(474936),
     c = n(388032),
@@ -16,8 +16,8 @@ let d = (e) => {
     return (
         void 0 !== n ? (f = c.intl.formatToPlainString(c.t.iiLbvr, { percent: n })) : d && (f = c.intl.string(c.t.gtNqJS)),
         (0, r.jsx)('div', {
-            className: o()(u.badgeContainer, t ? u.tier2 : u.tier0),
-            children: (0, r.jsx)(a.Text, {
+            className: a()(u.badgeContainer, t ? u.tier2 : u.tier0),
+            children: (0, r.jsx)(o.Text, {
                 variant: 'text-xxs/bold',
                 className: u.badgeText,
                 children: f

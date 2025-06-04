@@ -1,8 +1,8 @@
 n(65234), n(111804), n(490233), n(97749), n(388685), n(539854), n(190126), n(368063), n(35282), n(203651);
 var r = n(544891),
     i = n(857613),
-    o = n(569611),
-    a = n(547010),
+    a = n(569611),
+    o = n(547010),
     s = n(580189),
     l = n(397550),
     c = n(931619);
@@ -28,7 +28,7 @@ function b(e) {
 (0, r.lg)({
     prepareRequest(e) {
         let { default: t } = n(314897),
-            { default: a } = n(857192),
+            { default: o } = n(857192),
             { default: s } = n(706454),
             { default: l } = n(594174),
             { default: c } = n(626135),
@@ -38,8 +38,8 @@ function b(e) {
             (e.url = (0, r.K0)() + e.url), 'Authorization' in e.header || 'authorization' in e.header || e.set('Authorization', t.getToken()), (0, i.c)();
             let n = c.getSuperPropertiesBase64();
             null != n && e.set('X-Super-Properties', n);
-            let o = t.getFingerprint();
-            if ((null != o && '' !== o && e.set('X-Fingerprint', o), d)) {
+            let a = t.getFingerprint();
+            if ((null != a && '' !== a && e.set('X-Fingerprint', a), d)) {
                 let t = [];
                 null != navigator && (t = ((f = [...navigator.languages]), f));
                 let n = b(t);
@@ -48,8 +48,8 @@ function b(e) {
             e.set('X-Discord-Locale', s.locale);
             let u = (0, _.Z)();
             null != u && e.set('X-Discord-Timezone', u);
-            let h = a.getDebugOptionsHeaderValue();
-            if ((null != h && '' !== h && e.set('X-Debug-Options', h), a.isTracingRequests)) {
+            let h = o.getDebugOptionsHeaderValue();
+            if ((null != h && '' !== h && e.set('X-Debug-Options', h), o.isTracingRequests)) {
                 let t = l.getCurrentUser(),
                     n = m.generate(null != (p = null == t ? void 0 : t.id) ? p : '0');
                 e.set('x-client-trace-id', n);
@@ -64,11 +64,11 @@ function b(e) {
                 }
             }
         }
-        o.Hj('Network', 'Sending '.concat(e.method, ' to ').concat(e.url)),
+        a.Hj('Network', 'Sending '.concat(e.method, ' to ').concat(e.url)),
             e.on('response', (t) => {
                 let n = null != t && t.status >= 400 ? t.text : null,
                     r = null == n ? '' : 'and body: '.concat(n);
-                o.Hj(
+                a.Hj(
                     'Network',
                     'Completed '
                         .concat(e.method, ' to ')
@@ -79,7 +79,7 @@ function b(e) {
             }),
             e.on('error', (t, n) => {
                 if (
-                    (o.Hj(
+                    (a.Hj(
                         'Network',
                         'Failed '
                             .concat(e.method, ' to ')
@@ -108,7 +108,7 @@ function b(e) {
             });
     },
     interceptResponse(e, t, r) {
-        var i, o, c, u, d;
+        var i, a, c, u, d;
         return 400 === e.statusCode && (null == (i = e.body) ? void 0 : i.captcha_key)
             ? (Promise.all([n.e('36514').then(n.bind(n, 475271)), n.e('31177').then(n.bind(n, 353250))])
                   .then((t) => {
@@ -117,12 +117,12 @@ function b(e) {
                   })
                   .then((e) => {
                       let { captcha_key: n, captcha_rqtoken: r, captcha_session_id: i } = e,
-                          o = { 'X-Captcha-Key': n };
-                      null != r && (o['X-Captcha-Rqtoken'] = r), null != i && (o['X-Captcha-Session-Id'] = i), t(o);
+                          a = { 'X-Captcha-Key': n };
+                      null != r && (a['X-Captcha-Rqtoken'] = r), null != i && (a['X-Captcha-Session-Id'] = i), t(a);
                   })
                   .catch(r),
               !0)
-            : 401 === e.statusCode && (null == (o = e.body) ? void 0 : o.code) === p.evJ.MFA_REQUIRED && (null == (c = e.body) ? void 0 : c.mfa)
+            : 401 === e.statusCode && (null == (a = e.body) ? void 0 : a.code) === p.evJ.MFA_REQUIRED && (null == (c = e.body) ? void 0 : c.mfa)
               ? (Promise.all([n.e('52030'), n.e('36833')])
                     .then(n.bind(n, 24031))
                     .then((n) => {
@@ -138,7 +138,7 @@ function b(e) {
                               let { default: t } = e;
                               t();
                           })
-                    : (0, a.b)(e.statusCode, null == (d = e.body) ? void 0 : d.code)
+                    : (0, o.b)(e.statusCode, null == (d = e.body) ? void 0 : d.code)
                       ? n
                             .e('76731')
                             .then(n.bind(n, 626892))
@@ -159,5 +159,5 @@ function b(e) {
     }
 }),
     (0, r.Jt)(async (e) => {
-        o.Hj('Network', 'Request to '.concat(e, ' failed, will retry.')), c.Z.isOnline() || (await c.Z.awaitOnline(), o.Hj('Network', 'Network detected online, retrying '.concat(e)));
+        a.Hj('Network', 'Request to '.concat(e, ' failed, will retry.')), c.Z.isOnline() || (await c.Z.awaitOnline(), a.Hj('Network', 'Network detected online, retrying '.concat(e)));
     });

@@ -1,8 +1,8 @@
 n.r(t), n.d(t, { default: () => f }), n(49124);
 var r,
     i = n(442837),
-    o = n(668757),
-    a = n(570140);
+    a = n(668757),
+    o = n(570140);
 function s(e, t, n) {
     return (
         t in e
@@ -16,7 +16,7 @@ function s(e, t, n) {
         e
     );
 }
-let l = (0, o.I3)();
+let l = (0, a.I3)();
 function c(e) {
     l.handleAction(JSON.stringify(e));
 }
@@ -29,7 +29,7 @@ class d extends (r = i.ZP.Store) {
     }
 }
 s(d, 'displayName', 'NoteStore');
-let f = new d(a.Z, {
+let f = new d(o.Z, {
     CONNECTION_OPEN: u,
     OVERLAY_INITIALIZE: u,
     USER_NOTE_UPDATE: c,

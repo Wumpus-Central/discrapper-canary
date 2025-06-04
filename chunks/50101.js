@@ -5,13 +5,13 @@ n.d(t, {
 });
 var r = n(818083),
     i = n(981631),
-    o = n(987338),
-    a = n(647086);
+    a = n(987338),
+    o = n(647086);
 let s = (0, r.B)({
     kind: 'guild',
     id: '2025-02_skill_trees',
     label: 'Skill Trees',
-    commonTriggerPoint: o.$P.CONNECTION_OPEN,
+    commonTriggerPoint: a.$P.CONNECTION_OPEN,
     defaultConfig: { enabled: !1 },
     treatments: [
         {
@@ -22,7 +22,7 @@ let s = (0, r.B)({
     ]
 });
 function l(e, t) {
-    let n = null != e && e !== a._ && e !== i.I_8;
+    let n = null != e && e !== o._ && e !== i.I_8;
     return s.useExperiment(
         {
             guildId: e,
@@ -37,7 +37,7 @@ function l(e, t) {
 function c(e, t) {
     return (
         null != e &&
-        e !== a._ &&
+        e !== o._ &&
         e !== i.I_8 &&
         s.getCurrentConfig(
             {

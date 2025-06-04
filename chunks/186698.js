@@ -11,7 +11,7 @@
         return -1 !== e.indexOf('jaj') ? t.slice(0, -3) + 'Hu\u2019' : -1 !== e.indexOf('jar') ? t.slice(0, -3) + 'wen' : -1 !== e.indexOf('DIS') ? t.slice(0, -3) + 'ben' : t + ' ret';
     }
     function i(e, t, n, r) {
-        var i = o(e);
+        var i = a(e);
         switch (n) {
             case 'ss':
                 return i + ' lup';
@@ -27,12 +27,12 @@
                 return i + ' DIS';
         }
     }
-    function o(e) {
+    function a(e) {
         var n = Math.floor((e % 1000) / 100),
             r = Math.floor((e % 100) / 10),
             i = e % 10,
-            o = '';
-        return n > 0 && (o += t[n] + 'vatlh'), r > 0 && (o += ('' !== o ? ' ' : '') + t[r] + 'maH'), i > 0 && (o += ('' !== o ? ' ' : '') + t[i]), '' === o ? 'pagh' : o;
+            a = '';
+        return n > 0 && (a += t[n] + 'vatlh'), r > 0 && (a += ('' !== a ? ' ' : '') + t[r] + 'maH'), i > 0 && (a += ('' !== a ? ' ' : '') + t[i]), '' === a ? 'pagh' : a;
     }
     return e.defineLocale('tlh', {
         months: 'tera\u2019 jar wa\u2019_tera\u2019 jar cha\u2019_tera\u2019 jar wej_tera\u2019 jar loS_tera\u2019 jar vagh_tera\u2019 jar jav_tera\u2019 jar Soch_tera\u2019 jar chorgh_tera\u2019 jar Hut_tera\u2019 jar wa\u2019maH_tera\u2019 jar wa\u2019maH wa\u2019_tera\u2019 jar wa\u2019maH cha\u2019'.split('_'),

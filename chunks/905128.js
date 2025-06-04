@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A }), n(388685);
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(430824),
+    a = n(570140),
+    o = n(430824),
     s = n(474936),
     l = n(981631);
 function c(e, t, n) {
@@ -68,7 +68,7 @@ function m(e) {
 }
 function g(e) {
     var t;
-    let n = a.Z.getGuild(e),
+    let n = o.Z.getGuild(e),
         r = (null == n ? void 0 : n.hasFeature(l.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0 ? 0 : l.oCV[null != (t = null == n ? void 0 : n.premiumTier) ? t : l.Eu4.NONE];
     for (let [e, t] of Object.entries(s.jn)) (null == n ? void 0 : n.hasFeature(e)) && (r += t);
     return r;
@@ -157,7 +157,7 @@ class T extends (r = i.ZP.PersistedStore) {
     }
 }
 c(T, 'displayName', 'GuildPowerupsStore'), c(T, 'persistKey', 'GuildPowerupsStore');
-let A = new T(o.Z, {
+let A = new T(a.Z, {
     LOGOUT: S,
     GUILD_POWERUP_CATALOG_FETCH_SUCCESS: b,
     GUILD_UNLOCKED_POWERUPS_FETCH_SUCCESS: y,

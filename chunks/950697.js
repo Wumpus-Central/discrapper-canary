@@ -1,7 +1,7 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(36056),
     i = n(350508);
-class o {
+class a {
     constructor(e) {
         var t;
         this.fields = null != (t = e.fields) ? t : [];
@@ -36,33 +36,33 @@ class o {
         if (null == e || 'object' != typeof e) return !1;
         this.prepare();
         let r = Object.keys(e),
-            o = this.data;
-        if (r.length < o.req.length || o.req.some((e) => !r.includes(e)) || (!n && r.some((e) => !o.known.includes(e)))) return !1;
+            a = this.data;
+        if (r.length < a.req.length || a.req.some((e) => !r.includes(e)) || (!n && r.some((e) => !a.known.includes(e)))) return !1;
         if (t < 1) return !0;
-        for (let r of o.oneofs) {
-            let o = e[r];
-            if (!(0, i.Li)(o)) return !1;
-            if (void 0 === o.oneofKind) continue;
-            let a = this.fields.find((e) => e.localName === o.oneofKind);
-            if (!a || !this.field(o[o.oneofKind], a, n, t)) return !1;
+        for (let r of a.oneofs) {
+            let a = e[r];
+            if (!(0, i.Li)(a)) return !1;
+            if (void 0 === a.oneofKind) continue;
+            let o = this.fields.find((e) => e.localName === a.oneofKind);
+            if (!o || !this.field(a[a.oneofKind], o, n, t)) return !1;
         }
         for (let r of this.fields) if (void 0 === r.oneof && !this.field(e[r.localName], r, n, t)) return !1;
         return !0;
     }
     field(e, t, n, i) {
-        let o = t.repeat;
+        let a = t.repeat;
         switch (t.kind) {
             case 'scalar':
                 if (void 0 === e) return t.opt;
-                if (o) return this.scalars(e, t.T, i, t.L);
+                if (a) return this.scalars(e, t.T, i, t.L);
                 return this.scalar(e, t.T, t.L);
             case 'enum':
                 if (void 0 === e) return t.opt;
-                if (o) return this.scalars(e, r.wx.INT32, i);
+                if (a) return this.scalars(e, r.wx.INT32, i);
                 return this.scalar(e, r.wx.INT32);
             case 'message':
                 if (void 0 === e) break;
-                if (o) return this.messages(e, t.T(), n, i);
+                if (a) return this.messages(e, t.T(), n, i);
                 return this.message(e, t.T(), n, i);
             case 'map':
                 if ('object' != typeof e || null === e) return !1;

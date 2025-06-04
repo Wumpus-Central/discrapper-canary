@@ -1,8 +1,8 @@
 n.d(t, { Z: () => c }), n(415506);
 var r = n(73800),
     i = n(442837),
-    o = n(544891),
-    a = n(570140),
+    a = n(544891),
+    o = n(570140),
     s = n(432835),
     l = n(981631);
 function c(e) {
@@ -20,24 +20,24 @@ function c(e) {
     );
 }
 async function u(e) {
-    a.Z.dispatch({
+    o.Z.dispatch({
         type: 'USER_NOTE_LOAD_START',
         userId: e
     });
     try {
-        let { body: t } = await o.tn.get({
+        let { body: t } = await a.tn.get({
             url: l.ANM.NOTE(e),
             oldFormErrors: !0,
             rejectWithError: !0
         });
         if (t.note_user_id !== e) throw Error('Invalid response from server');
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'USER_NOTE_UPDATE',
             id: e,
             note: t.note
         });
     } catch (t) {
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'USER_NOTE_UPDATE',
             id: e
         });

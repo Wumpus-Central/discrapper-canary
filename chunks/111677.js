@@ -14,12 +14,12 @@ let r = (0, n(818083).B)({
 });
 function i(e) {
     let { location: t, autoTrackExposure: n, disable: i = !1 } = e,
-        { enabled: o } = r.getCurrentConfig(
+        { enabled: a } = r.getCurrentConfig(
             { location: t },
             {
                 autoTrackExposure: n,
                 disable: i
             }
         );
-    return o;
+    return a;
 }

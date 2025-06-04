@@ -2,8 +2,8 @@ n.d(t, { Z: () => u });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    o = n(481060),
     s = n(259580),
     l = n(274073);
 function c(e) {
@@ -11,9 +11,9 @@ function c(e) {
     return (0, r.jsxs)(
         'div',
         {
-            className: o()(l.breadcrumbWrapper, { [l.breadcrumbFinalWrapper]: i }),
+            className: a()(l.breadcrumbWrapper, { [l.breadcrumbFinalWrapper]: i }),
             children: [
-                (0, r.jsx)(a.Text, {
+                (0, r.jsx)(o.Text, {
                     variant: 'text-sm/medium',
                     color: n ? 'text-primary' : 'text-muted',
                     children: t.label
@@ -21,7 +21,7 @@ function c(e) {
                 i
                     ? null
                     : (0, r.jsx)(s.Z, {
-                          className: o()(l.breadcrumbArrow, c),
+                          className: a()(l.breadcrumbArrow, c),
                           direction: s.Z.Directions.RIGHT
                       })
             ]
@@ -30,9 +30,9 @@ function c(e) {
     );
 }
 let u = function (e) {
-    let { breadcrumbs: t, activeId: n, className: i, separatorClassName: a } = e;
+    let { breadcrumbs: t, activeId: n, className: i, separatorClassName: o } = e;
     return (0, r.jsx)('div', {
-        className: o()(l.breadcrumbs, i),
+        className: a()(l.breadcrumbs, i),
         children: t.map((e, i) =>
             (0, r.jsx)(
                 c,
@@ -40,7 +40,7 @@ let u = function (e) {
                     breadcrumb: e,
                     isActiveBreadcrumb: e.id === n,
                     isFinalBreadcrumb: i === t.length - 1,
-                    separatorClassName: a
+                    separatorClassName: o
                 },
                 e.id
             )

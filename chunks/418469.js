@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(481060),
-    a = n(569545),
+    a = n(481060),
+    o = n(569545),
     s = n(687516),
     l = n(314897),
     c = n(959457),
@@ -42,7 +42,7 @@ function _(e, t, d) {
     let p = (0, s.Cf)(e),
         h = (0, i.e7)([l.default], () => l.default.getId());
     if (null == e) return null;
-    let m = (0, a.V9)(e),
+    let m = (0, o.V9)(e),
         g = null != (_ = c.Z.getVideoStats(m)) ? _ : {},
         E = f(
             {
@@ -56,7 +56,7 @@ function _(e, t, d) {
         b = () => {
             null == d || d(),
                 null != e &&
-                    (0, o.ZDy)(async () => {
+                    (0, a.ZDy)(async () => {
                         let { default: t } = await n.e('18912').then(n.bind(n, 340140));
                         return (n) =>
                             (0, r.jsx)(
@@ -73,11 +73,11 @@ function _(e, t, d) {
                             );
                     });
         };
-    return (0, r.jsx)(o.sNh, {
+    return (0, r.jsx)(a.sNh, {
         id: 'report-stream-problem',
         color: 'danger',
         label: u.intl.string(u.t.sdnCxc),
         action: b,
-        icon: o.P4T
+        icon: a.P4T
     });
 }

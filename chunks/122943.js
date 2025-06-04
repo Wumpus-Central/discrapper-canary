@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(692547),
     l = n(481060),
     c = n(906732),
@@ -70,7 +70,7 @@ function S(e, t) {
     );
 }
 function T(e) {
-    let { channel: t, textVariant: n, textClassName: o, iconClassName: _, hideText: g = !1, hideTooltip: O = !1, canTruncate: I = !0, showChannelName: T = !1 } = e,
+    let { channel: t, textVariant: n, textClassName: a, iconClassName: _, hideText: g = !1, hideTooltip: O = !1, canTruncate: I = !0, showChannelName: T = !1 } = e,
         A = (0, l.vjg)(l.Skl.ONLINE),
         N = (0, d.ZP)(t),
         C = t.isDM() || t.isGroupDM(),
@@ -90,7 +90,7 @@ function T(e) {
                       size: 'custom',
                       color: A,
                       channel: t,
-                      className: a()(y.icon, _)
+                      className: o()(y.icon, _)
                   })
                 : (0, r.jsx)(l.ua7, {
                       text: N,
@@ -104,7 +104,7 @@ function T(e) {
                                   size: 'custom',
                                   color: s.Z.colors.STATUS_POSITIVE,
                                   channel: t,
-                                  className: a()(y.icon, _)
+                                  className: o()(y.icon, _)
                               })
                           )
                   }),
@@ -115,7 +115,7 @@ function T(e) {
             !g &&
                 (0, r.jsxs)(m.Z, {
                     variant: n,
-                    className: o,
+                    className: a,
                     canTruncate: I,
                     hideTooltip: O,
                     children: [x(), R && null != N && ' ('.concat(N, ')')]
@@ -124,7 +124,7 @@ function T(e) {
     });
 }
 function A(e) {
-    let { channel: t, textVariant: n, textClassName: i, iconClassName: o, hideText: s = !1, hideTooltip: c = !1, canTruncate: u = !0, showChannelName: _ = !1 } = e,
+    let { channel: t, textVariant: n, textClassName: i, iconClassName: a, hideText: s = !1, hideTooltip: c = !1, canTruncate: u = !0, showChannelName: _ = !1 } = e,
         h = (0, l.vjg)(l.Skl.ONLINE),
         m = (0, d.ZP)(t),
         E = t.isDM() || t.isGroupDM(),
@@ -137,7 +137,7 @@ function A(e) {
             size: 'custom',
             color: h,
             channel: t,
-            className: a()(y.icon, o)
+            className: o()(y.icon, a)
         }),
         text: S,
         tooltipText: c ? void 0 : I,

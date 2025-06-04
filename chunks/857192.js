@@ -1,8 +1,8 @@
 n.r(t), n.d(t, { default: () => T }), n(997841);
 var r,
     i = n(261470),
-    o = n(213919),
-    a = n(442837),
+    a = n(213919),
+    o = n(442837),
     s = n(544891),
     l = n(433517),
     c = n(570140),
@@ -47,7 +47,7 @@ let m = (() => {
                 s.tn
                     .put({
                         url: e,
-                        headers: { Authorization: o.getToken() },
+                        headers: { Authorization: a.getToken() },
                         oldFormErrors: !0,
                         rejectWithError: !0
                     })
@@ -69,7 +69,7 @@ let m = (() => {
                           (t = null),
                           s.tn.del({
                               url: e,
-                              headers: { Authorization: o.getToken() },
+                              headers: { Authorization: a.getToken() },
                               oldFormErrors: !0,
                               rejectWithError: !0
                           })));
@@ -112,7 +112,7 @@ function I(e) {
         r = n || null != e.user.personal_connection_id;
     n && m.set(b.sourceMapsEnabled), f.Z.setTags({ isStaff: r.toString() });
 }
-class S extends (r = a.ZP.Store) {
+class S extends (r = o.ZP.Store) {
     initialize() {
         let e = l.K.get(g);
         null != e && (b = h({}, E, e));

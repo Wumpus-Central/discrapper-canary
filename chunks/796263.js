@@ -6,7 +6,7 @@ var i = n(481060),
 function a(e) {
     let { text: t, icon: n, onClick: a, disabled: o, submitting: s } = e;
     return (0, r.jsx)(i.ua7, {
-        text: t,
+        text: null != t ? t : void 0,
         children: (e) => {
             var t, c;
             return (0, r.jsx)(

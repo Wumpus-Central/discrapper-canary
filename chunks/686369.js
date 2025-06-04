@@ -7,8 +7,8 @@ n.d(t, {
     n(35282);
 var r = n(73800),
     i = n(950104),
-    o = n(481060),
-    a = n(990169),
+    a = n(481060),
+    o = n(990169),
     s = n(410030),
     l = n(220082),
     c = n(768581),
@@ -17,9 +17,9 @@ var r = n(73800),
 let f = 512;
 function _() {
     let e = (0, s.ZP)(),
-        t = (0, o.dQu)(o.TVs.colors.BG_BASE_TERTIARY),
-        n = (0, o.dQu)(o.TVs.colors.BACKGROUND_ACCENT);
-    return (0, o.wjy)(e) ? t : n;
+        t = (0, a.dQu)(a.TVs.colors.BG_BASE_TERTIARY),
+        n = (0, a.dQu)(a.TVs.colors.BACKGROUND_ACCENT);
+    return (0, a.wjy)(e) ? t : n;
 }
 function p(e) {
     var t;
@@ -52,10 +52,10 @@ function m(e) {
 }
 function g(e) {
     let { profile: t, defaultColor: n, forceDefaultColor: i } = e,
-        o = i ? null : m(t),
+        a = i ? null : m(t),
         s = r.useRef(n),
-        c = (0, a.Z)(s),
-        u = (0, l.ZP)(o, c);
+        c = (0, o.Z)(s),
+        u = (0, l.ZP)(a, c);
     return (r.useEffect(() => {
         s.current = u;
     }, [u]),

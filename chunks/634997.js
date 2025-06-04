@@ -1,29 +1,29 @@
-n.d(t, { default: () => C }), n(953529);
-var o = n(255367),
-    i = n(73800),
-    s = n(772848),
-    r = n(481060),
-    l = n(600164),
-    a = n(138201),
-    c = n(63063),
-    _ = n(168107),
-    d = n(480916),
-    E = n(81643),
-    u = n(469775),
-    m = n(981631),
-    N = n(800530),
-    I = n(388032),
-    L = n(631843);
+t.d(n, { default: () => C }), t(953529);
+var o = t(255367),
+    i = t(73800),
+    s = t(772848),
+    r = t(481060),
+    l = t(600164),
+    a = t(138201),
+    c = t(63063),
+    _ = t(168107),
+    d = t(480916),
+    E = t(81643),
+    u = t(469775),
+    m = t(981631),
+    I = t(800530),
+    N = t(388032),
+    L = t(631843);
 let C = function (e) {
-    let { transitionState: t, entryPoint: n, onClose: C } = e,
-        { loading: A, initiateAgeVerification: S } = (0, E.WD)(C),
-        x = i.useMemo(() => (0, s.Z)(), []);
+    let { transitionState: n, entryPoint: t, onClose: C } = e,
+        { loading: A, initiateAgeVerification: x } = (0, E.WD)(C),
+        S = i.useMemo(() => (0, s.Z)(), []);
     return (
         i.useEffect(() => {
-            (0, d.lA)(x, d.d_.PRIMARY, n);
-        }, [x, n]),
+            (0, d.lA)(S, d.d_.PRIMARY, t);
+        }, [S, t]),
         (0, o.jsxs)(r.Y0X, {
-            transitionState: t,
+            transitionState: n,
             className: L.root,
             children: [
                 (0, o.jsxs)(r.hzk, {
@@ -34,12 +34,12 @@ let C = function (e) {
                             children: [
                                 (0, o.jsx)(r.X6q, {
                                     variant: 'heading-xl/bold',
-                                    children: I.intl.string(I.t['FQ+YOD'])
+                                    children: N.intl.string(N.t.JHNunp)
                                 }),
                                 (0, o.jsx)(r.X6q, {
                                     variant: 'heading-md/medium',
                                     color: 'text-normal',
-                                    children: I.intl.string(I.t.Cc41tb)
+                                    children: N.intl.string(N.t['+BLIGh'])
                                 }),
                                 (0, o.jsx)(r.olH, {
                                     className: L.modalClose,
@@ -47,26 +47,26 @@ let C = function (e) {
                                 })
                             ]
                         }),
-                        (0, u.u)(x).map((e, t) => {
-                            let { title: n, description: i } = e;
+                        (0, u.u)(S).map((e, n) => {
+                            let { title: t, description: i } = e;
                             return (0, o.jsx)(
                                 a.ZP,
                                 {
-                                    title: n,
+                                    title: t,
                                     description: i,
                                     listType: 'numbered',
-                                    index: t
+                                    index: n
                                 },
-                                t
+                                n
                             );
                         }),
                         (0, o.jsx)(r.Text, {
                             variant: 'text-xs/medium',
                             color: 'text-muted',
                             className: L.requestContainer,
-                            children: I.intl.format(I.t.TYfgw8, {
+                            children: N.intl.format(N.t.pJAxgY, {
                                 handleOnRequestHook: () => {
-                                    _.Z.openUrl(N.sQ.APPEALS_LINK), (0, d.x3)(x, d.d_.PRIMARY, d.sU.MANUAL_REVIEW_REQUEST);
+                                    _.Z.openUrl(I.sQ.APPEALS_LINK), (0, d.x3)(S, d.d_.PRIMARY, d.sU.MANUAL_REVIEW_REQUEST);
                                 }
                             })
                         })
@@ -83,13 +83,13 @@ let C = function (e) {
                             look: r.zxk.Looks.LINK,
                             className: L.learnMoreButton,
                             onClick: () => {
-                                _.Z.openUrl(c.Z.getArticleURL(m.BhN.TIGGER_PAWTECT_UK_AND_AUS_ONLY_LEARN_MORE)), (0, d.x3)(x, d.d_.PRIMARY, d.sU.LEARN_MORE);
+                                _.Z.openUrl(c.Z.getArticleURL(m.BhN.TIGGER_PAWTECT_LEARN_MORE)), (0, d.x3)(S, d.d_.PRIMARY, d.sU.LEARN_MORE);
                             },
                             children: [
                                 (0, o.jsx)(r.Text, {
                                     variant: 'text-sm/semibold',
                                     color: 'currentColor',
-                                    children: I.intl.string(I.t.mXpKND)
+                                    children: N.intl.string(N.t['aA6q//'])
                                 }),
                                 (0, o.jsx)(r.Gr1, {
                                     size: 'xs',
@@ -101,14 +101,14 @@ let C = function (e) {
                             innerClassName: L.button,
                             color: r.zxk.Colors.BRAND,
                             onClick: () => {
-                                (0, d.x3)(x, d.d_.PRIMARY, d.sU.GET_STARTED), S();
+                                (0, d.x3)(S, d.d_.PRIMARY, d.sU.GET_STARTED), x();
                             },
                             submitting: A,
                             children: [
                                 (0, o.jsx)(r.Text, {
                                     variant: 'text-sm/semibold',
                                     color: 'always-white',
-                                    children: I.intl.string(I.t.VLbVho)
+                                    children: N.intl.string(N.t.SJMnkZ)
                                 }),
                                 (0, o.jsx)(r.Gr1, {
                                     size: 'xs',

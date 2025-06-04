@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => N });
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -117,7 +117,7 @@ function T(e) {
         })
     );
 }
-function I() {
+function N() {
     let { analyticsLocations: e } = (0, m.ZP)(),
         t = (0, a.e7)([p.Z], () => p.Z.getMode()),
         s = [

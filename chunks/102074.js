@@ -1,9 +1,9 @@
 var r = n(660326),
     i = n(435080),
-    o = n(814640);
-function a(e) {
+    a = n(814640);
+function o(e) {
     var t = -1,
         n = null == e ? 0 : e.length;
     for (this.__data__ = new r(); ++t < n; ) this.add(e[t]);
 }
-(a.prototype.add = a.prototype.push = i), (a.prototype.has = o), (e.exports = a);
+(o.prototype.add = o.prototype.push = i), (o.prototype.has = a), (e.exports = o);

@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800),
-    o = n(772848),
-    a = n(993365),
+    a = n(772848),
+    o = n(993365),
     s = n(481060),
     l = n(245216),
     c = n(561466),
@@ -61,29 +61,29 @@ function d(e) {
 }
 function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.si,
-        { position: r = c.si.position, component: i = c.si.component, duration: a = c.si.duration } = n;
+        { position: r = c.si.position, component: i = c.si.component, duration: o = c.si.duration } = n;
     return {
         message: e,
-        id: (0, o.Z)(),
+        id: (0, a.Z)(),
         type: t,
         options: {
             position: r,
             component: i,
-            duration: a
+            duration: o
         }
     };
 }
 let _ = i.memo(function (e) {
-    let { message: t, type: n, id: i, options: { component: o = c.si.component } = c.si } = e;
-    return null != o
-        ? o
+    let { message: t, type: n, id: i, options: { component: a = c.si.component } = c.si } = e;
+    return null != a
+        ? a
         : (0, r.jsxs)('div', {
               id: i,
               className: u.toast,
               'data-type': n,
               children: [
                   d(n),
-                  (0, r.jsx)(a.x, {
+                  (0, r.jsx)(o.x, {
                       className: u.content,
                       variant: 'text-md/normal',
                       children: t

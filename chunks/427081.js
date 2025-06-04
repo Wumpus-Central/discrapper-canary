@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(388685);
 var r = n(754700),
     i = n(147913),
-    o = n(317381),
-    a = n(594190),
+    a = n(317381),
+    o = n(594190),
     s = n(569545),
     l = n(199902),
     c = n(77498),
@@ -57,7 +57,7 @@ class S extends i.Z {
     }
     getActivelyProgressingPlayOnDesktopQuestIds() {
         let e = new Set(),
-            t = a.ZP.getRunningGames(),
+            t = o.ZP.getRunningGames(),
             n = p.Z.quests;
         v.log('~ getActivelyProgressingPlayOnDesktopQuestIds -> Running games: ', t);
         let r = new Set();
@@ -67,7 +67,7 @@ class S extends i.Z {
                 r.add(e.id);
                 continue;
             }
-            let t = a.ZP.getOverrideForGame(e);
+            let t = o.ZP.getOverrideForGame(e);
             if (null == e.distributor && null != t) continue;
             let n = c.Z.getGameByName(e.name);
             if ((null == n ? void 0 : n.id) != null) {
@@ -92,7 +92,7 @@ class S extends i.Z {
     }
     getActivelyProgressingActivityQuestIds() {
         let e = new Set(),
-            t = o.ZP.getSelfEmbeddedActivities(),
+            t = a.ZP.getSelfEmbeddedActivities(),
             n = t.size > 0;
         if ((v.log('~ getActivelyProgressingActivityQuestIds -> Embedded activities: ', t), !n)) return e;
         let r = p.Z.quests;
@@ -111,8 +111,8 @@ class S extends i.Z {
                 let t = p.Z.quests.get(e);
                 if (null == t || null == t.config || null == t.userStatus) return b;
                 let { progressSeconds: n, targetSeconds: i } = (0, h.il)(t, r.T.DESKTOP),
-                    o = Math.max(0, (i - n) * d.Z.Millis.SECOND);
-                return o <= b ? o + O : b;
+                    a = Math.max(0, (i - n) * d.Z.Millis.SECOND);
+                return a <= b ? a + O : b;
             }),
             E(this, 'initiateHeartbeat', (e, t) => {
                 let n = this.heartbeats[t];
@@ -132,9 +132,9 @@ class S extends i.Z {
                                     streamKey: r
                                 });
                         } else v.log('~ initiateHeartbeat -> Sending heartbeat for questId: '.concat(e)), (0, _.m0)({ questId: e });
-                        let o = this.calculateHeartbeatDurationMs(e),
-                            a = window.setTimeout(i, o);
-                        n.set(e, a);
+                        let a = this.calculateHeartbeatDurationMs(e),
+                            o = window.setTimeout(i, a);
+                        n.set(e, o);
                     } else v.log('~ initiateHeartbeat -> Quest '.concat(e, ' is no longer actively progressing, terminating heartbeat')), this.terminateHeartbeat(e, t);
                 };
                 v.log('~ initiateHeartbeat -> Initiating heartbeat for Quest '.concat(e)), i();

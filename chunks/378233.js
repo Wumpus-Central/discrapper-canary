@@ -22,8 +22,8 @@ n.d(t, {
     n(781311);
 var r = n(606301),
     i = n(134432),
-    o = n(581883),
-    a = n(430824),
+    a = n(581883),
+    o = n(430824),
     s = n(117530),
     l = n(768581),
     c = n(358085),
@@ -78,36 +78,36 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
         if (null == e.format_type) return null;
         let r = e.format_type;
         e.format_type === d.u3.GIF && t && (r = d.u3.PNG);
-        let o = S(r),
-            a = _.ANM.STICKER_ASSET(e.id, o),
-            s = o === d.og.WEBP ? '&quality=lossless' : '';
+        let a = S(r),
+            o = _.ANM.STICKER_ASSET(e.id, a),
+            s = a === d.og.WEBP ? '&quality=lossless' : '';
         if ('development' !== m) {
-            if (e.format_type === d.u3.LOTTIE) return ''.concat(location.protocol).concat(g).concat(a);
+            if (e.format_type === d.u3.LOTTIE) return ''.concat(location.protocol).concat(g).concat(o);
             let r = e.format_type === d.u3.APNG && t && !(0, c.isAndroid)() ? '&passthrough=false' : '',
-                o = Math.min(2, (0, i.x_)());
+                a = Math.min(2, (0, i.x_)());
             return ''
                 .concat(location.protocol)
                 .concat(h)
-                .concat(a, '?size=')
-                .concat((0, i.oO)(n * o))
+                .concat(o, '?size=')
+                .concat((0, i.oO)(n * a))
                 .concat(r)
                 .concat(s);
         }
-        return ''.concat(location.protocol).concat(p).concat(a);
+        return ''.concat(location.protocol).concat(p).concat(o);
     },
     C = (e, t) => {
         let n,
             r = e.banner_asset_id;
         if (null == r) return null;
-        let o = l.$k ? 'webp' : 'png';
+        let a = l.$k ? 'webp' : 'png';
         return (
             (n =
                 null != E
-                    ? ''.concat(location.protocol, '//').concat(E, '/app-assets/').concat(f.Ks, '/store/').concat(r, '.').concat(o)
+                    ? ''.concat(location.protocol, '//').concat(E, '/app-assets/').concat(f.Ks, '/store/').concat(r, '.').concat(a)
                     : ''
                           .concat(location.protocol)
                           .concat(p)
-                          .concat(_.ANM.STORE_ASSET(f.Ks, r, o))),
+                          .concat(_.ANM.STORE_ASSET(f.Ks, r, a))),
             null != t && (n += '?size='.concat((0, i.oO)(t))),
             n
         );
@@ -128,8 +128,8 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
     D = (e, t) => (e === f.yr.ANIMATE_ON_INTERACTION ? t : e !== f.yr.NEVER_ANIMATE),
     L = (e, t, n, i) => {
         if (s.Z.getUploadCount(n, i) > 0) return !0;
-        let o = u.Z.getStickerPreview(n, i);
-        if (null != o && o.length > 0) return !0;
+        let a = u.Z.getStickerPreview(n, i);
+        if (null != a && a.length > 0) return !0;
         switch (e) {
             case d.V0.STICKER_PICKER:
                 return '' !== t.trim();
@@ -147,12 +147,12 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
     j = (e) => {
         if (null === e) return !1;
         let t = e.guild_id;
-        return void 0 !== a.Z.getGuild(t);
+        return void 0 !== o.Z.getGuild(t);
     },
     U = [];
 function G() {
     var e, t;
-    return null != (t = null == (e = o.Z.frecencyWithoutFetchingLatest.favoriteStickers) ? void 0 : e.stickerIds) ? t : U;
+    return null != (t = null == (e = a.Z.frecencyWithoutFetchingLatest.favoriteStickers) ? void 0 : e.stickerIds) ? t : U;
 }
 function B(e) {
     return G().includes(e);

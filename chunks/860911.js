@@ -27,11 +27,11 @@ function i(e) {
 n.d(t, {
     Ft: () => s,
     Ui: () => i,
-    Zn: () => o
+    Zn: () => a
 }),
     n(35282),
     n(388685);
-class o {
+class a {
     toString() {
         return this.value;
     }
@@ -39,11 +39,11 @@ class o {
         r(this, 'value', void 0), (this.value = e);
     }
 }
-function a(e, t) {
+function o(e, t) {
     return e.map((e) =>
         null == e
             ? e
-            : e instanceof o
+            : e instanceof a
               ? e.toString()
               : null == t
                 ? encodeURIComponent(e)
@@ -63,7 +63,7 @@ function s(e, t) {
         }
         n[r] = function () {
             for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
-            return i(...a(n, t));
+            return i(...o(n, t));
         };
     }
     return n;

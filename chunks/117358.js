@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l });
 var r = n(255367),
     i = n(481060),
-    o = n(339340);
-function a(e, t, n) {
+    a = n(339340);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,13 +26,13 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
 }
 function l(e) {
-    let { channel: t, sourceAnalyticsLocations: a } = e;
+    let { channel: t, sourceAnalyticsLocations: o } = e;
     (0, i.ZDy)(
         async () => {
             let { default: e } = await Promise.resolve().then(n.bind(n, 339340));
@@ -42,12 +42,12 @@ function l(e) {
                     s(
                         {
                             channel: t,
-                            sourceAnalyticsLocations: a
+                            sourceAnalyticsLocations: o
                         },
                         n
                     )
                 );
         },
-        { modalKey: o.a }
+        { modalKey: a.a }
     );
 }

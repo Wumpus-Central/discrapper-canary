@@ -1,5 +1,5 @@
 n.d(t, {
-    xs: () => o,
+    xs: () => a,
     zO: () => i
 });
 var r = n(570140);
@@ -9,7 +9,7 @@ let i = (e) => {
             presetId: e
         });
     },
-    o = () => {
+    a = () => {
         r.Z.dispatch({
             type: 'UPDATE_BACKGROUND_GRADIENT_PRESET',
             presetId: null

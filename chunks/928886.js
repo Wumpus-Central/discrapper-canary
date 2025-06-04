@@ -1,8 +1,8 @@
 n.d(t, { U: () => S });
 var r = n(255367),
     i = n(73800),
-    o = n(512722),
-    a = n.n(o),
+    a = n(512722),
+    o = n.n(a),
     s = n(481060),
     l = n(479446),
     c = n(646476),
@@ -24,14 +24,14 @@ function I(e, t) {
 }
 function S(e) {
     var t;
-    let { renderHeader: n, referralTrialOfferId: o, handleClose: S } = e,
+    let { renderHeader: n, referralTrialOfferId: a, handleClose: S } = e,
         { selectedSkuId: T, step: A, selectedPlan: N, purchaseState: C, purchaseType: P, selectedSku: R, enablePremiumRebrandDesign: w } = (0, g.JL)(),
         { isGift: D, selectedGiftStyle: L, giftRecipient: x } = (0, m.wD)(),
         k = D && (0, h.pO)(x) && A === E.h8.CONFIRM && null != L && (null == R ? void 0 : R.productLine) !== b.POd.COLLECTIBLES,
         M = null != n && null != A,
         j = [E.h8.SKU_SELECT, E.h8.SELECT_FREE_SKU],
         U = null != A && !j.includes(A) && null != T,
-        G = (0, d.N)(o),
+        G = (0, d.N)(a),
         B = !D && null != G && null != T && y.nG[G.trial_id].skus.includes(T),
         F = (0, u.Ng)(),
         V = null == F || null == (t = F.discount) ? void 0 : t.plan_ids.some((e) => y.GP[e].skuId === T),
@@ -66,7 +66,7 @@ function S(e) {
                           onClose: S
                       }))
                     : U &&
-                      (a()(I(T, y.y7), 'invalid sku id: '.concat(T)),
+                      (o()(I(T, y.y7), 'invalid sku id: '.concat(T)),
                       (e = (0, r.jsx)(_.Z, {
                           currentStep: null != A ? A : void 0,
                           purchaseState: C,

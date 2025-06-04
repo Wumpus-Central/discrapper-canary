@@ -91,36 +91,37 @@ let h = (t) => {
         });
     },
     p = (t) => {
-        let { onChange: e, multiple: s = !0, disabled: c, className: f, tabIndex: h = -1, 'aria-label': p, filters: g, setLoading: y } = t,
-            O = i.useRef(null),
+        let { onChange: e, multiple: s = !0, disabled: c, className: f, tabIndex: h = -1, 'aria-label': p, filters: g, setLoading: y, title: O } = t,
             w = i.useRef(null),
-            [b, j] = i.useState(!1);
+            b = i.useRef(null),
+            [j, m] = i.useState(!1);
         i.useEffect(() => {
-            b && m();
-        }, [b]);
-        let m = () => {
-                null !== w.current && ((0, l.Mr3)(w.current), (w.current = null));
-            },
-            v = async (t) => {
-                null == y || y(!0), await d(t, e), j(!0), null == y || y(!1);
+            j && v();
+        }, [j]);
+        let v = () => {
+                null !== b.current && ((0, l.Mr3)(b.current), (b.current = null));
             },
             P = async (t) => {
+                null == y || y(!0), await d(t, e), m(!0), null == y || y(!1);
+            },
+            _ = async (t) => {
                 var e, i, o;
                 if ((t.stopPropagation(), t.preventDefault(), (null == (e = t.currentTarget) ? void 0 : e.files) == null || (null == (o = t.currentTarget) || null == (i = o.files) ? void 0 : i.length) === 0)) return;
                 let a = t.currentTarget.files;
-                w.current = await (0, l.ZDy)(async () => {
+                b.current = await (0, l.ZDy)(async () => {
                     let { default: t } = await r.e('16169').then(r.bind(r, 935333));
-                    return (e) => (0, n.jsx)(t, u({ processFiles: () => v(a) }, e));
+                    return (e) => (0, n.jsx)(t, u({ processFiles: () => P(a) }, e));
                 });
             };
         return (0, n.jsx)(o.Z, {
-            onChange: P,
+            onChange: _,
             filters: null != g ? g : (0, a.Zj)(),
             multiple: s,
             disabled: c,
             className: f,
             tabIndex: h,
             'aria-label': p,
-            ref: O
+            ref: w,
+            title: O
         });
     };

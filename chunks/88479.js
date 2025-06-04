@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(685072),
-    o = n(481060),
-    a = n(77880),
+    a = n(481060),
+    o = n(77880),
     s = n(871499);
 function l(e, t, n) {
     return (
@@ -40,8 +40,8 @@ function u(e, t) {
         r,
         i = d(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -50,17 +50,17 @@ function d(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let f = function (e) {
     var { iconComponent: t } = e,
         n = u(e, ['iconComponent']);
-    let { changeLeaveCallAndActivityIcons: l } = (0, a.A)({ location: 'DisconnectButton' }),
+    let { changeLeaveCallAndActivityIcons: l } = (0, o.A)({ location: 'DisconnectButton' }),
         { Component: d, events: f } = (0, i.K)();
     function _() {
-        return null != t ? t : l ? o.PBZ : d;
+        return null != t ? t : l ? a.PBZ : d;
     }
     return (0, r.jsx)(
         s.d,

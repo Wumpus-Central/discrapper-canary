@@ -1,10 +1,10 @@
 n.d(t, {
-    H: () => a,
-    e: () => o
+    H: () => o,
+    e: () => a
 });
 var r = n(818083),
     i = n(987338);
-let o = (0, r.B)({
+let a = (0, r.B)({
         kind: 'user',
         id: '2025-02_nameplate_purchasing',
         label: 'Nameplate Purchase Experiment',
@@ -18,7 +18,7 @@ let o = (0, r.B)({
             }
         ]
     }),
-    a = (e) => {
-        let { canPurchase: t } = o.useExperiment({ location: e }, { autoTrackExposure: !1 });
+    o = (e) => {
+        let { canPurchase: t } = a.useExperiment({ location: e }, { autoTrackExposure: !1 });
         return t;
     };

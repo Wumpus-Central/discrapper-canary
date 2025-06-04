@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => N });
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -77,7 +77,7 @@ class T extends r.PureComponent {
               });
     }
 }
-function I() {
+function N() {
     let e = (0, s.cj)([E.default, b.Z, _.Z, f.default, h.Z, x.ZP], () => {
         let e = x.ZP.getPremiumTypeSubscription(),
             t = f.default.getCurrentUser();

@@ -1,6 +1,6 @@
 n.d(t, {
     f: () => i,
-    j: () => o
+    j: () => a
 });
 let r = (0, n(818083).B)({
     kind: 'user',
@@ -31,13 +31,13 @@ let r = (0, n(818083).B)({
 });
 function i(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { enabled: i, force: o } = r.getCurrentConfig({ location: t }, { autoTrackExposure: n });
+        { enabled: i, force: a } = r.getCurrentConfig({ location: t }, { autoTrackExposure: n });
     return {
         enabled: i,
-        force: o
+        force: a
     };
 }
-function o(e) {
+function a(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         { enabled: i } = r.getCurrentConfig({ location: t }, { autoTrackExposure: n });
     return i;

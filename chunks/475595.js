@@ -19,8 +19,8 @@ n.d(t, {
 var r = n(887003);
 n(591759);
 var i = n(918701),
-    o = n(46140),
-    a = n(151702);
+    a = n(46140),
+    o = n(151702);
 let s = /\.([a-zA-Z0-9]+)$/,
     l = ['video/mp4', 'video/webm'];
 var c = (function (e) {
@@ -29,11 +29,11 @@ var c = (function (e) {
 function u(e, t, n) {
     let r = p(e, t, n),
         i = h(t),
-        o = null != i && l.includes(i);
+        a = null != i && l.includes(i);
     return {
         url: r,
         mimetype: i,
-        isAnimated: o
+        isAnimated: a
     };
 }
 function d(e, t) {
@@ -72,7 +72,7 @@ function f(e, t, n) {
             let t = (0, i.hF)(e);
             if (t.type === r.w.VIRTUAL_CURRENCY)
                 return {
-                    url: a.Z,
+                    url: o.Z,
                     mimetype: 'video/webm',
                     isAnimated: !0
                 };
@@ -85,7 +85,7 @@ function f(e, t, n) {
         case 'logo_type':
             c = e.config.assets.logotype;
     }
-    let f = e.config.features.includes(o.S7.QUESTS_CDN);
+    let f = e.config.features.includes(a.S7.QUESTS_CDN);
     return u(e.id, c, {
         theme: n,
         newCdn: f
@@ -97,7 +97,7 @@ function _(e) {
 }
 function p(e, t, n) {
     if (t.startsWith('blob:')) return _(t);
-    let r = (null == n ? void 0 : n.newCdn) ? o.tD : o.Uo;
+    let r = (null == n ? void 0 : n.newCdn) ? a.tD : a.Uo;
     return ''
         .concat(r)
         .concat(e)
