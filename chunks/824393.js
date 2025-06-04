@@ -190,10 +190,10 @@ function M(e) {
                       separator: !1,
                       children: [
                           (0, r.jsx)(m.Z, { className: P.beta }),
-                          (0, r.jsx)(E.C, {
+                          (0, r.jsx)(E.ZP, {
                               className: P.nitroHeading,
                               premiumType: N.p9.TIER_2,
-                              type: E.C.Types.PREMIUM_ACTIVATED,
+                              type: E.ZP.Types.PREMIUM_ACTIVATED,
                               theme: a
                           }),
                           (0, r.jsx)(c.Text, {

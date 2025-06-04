@@ -1,26 +1,27 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => _ });
 var i = n(255367),
     r = n(73800),
-    s = n(780384),
-    l = n(481060),
-    a = n(37234),
-    o = n(410030),
-    c = n(626135),
-    d = n(617136),
-    u = n(497505),
-    m = n(341907),
-    g = n(981631),
-    p = n(388032),
-    h = n(31903),
-    f = n(66094);
-function b() {
-    let e = (0, s.wj)((0, o.ZP)()),
+    s = n(772848),
+    l = n(780384),
+    a = n(481060),
+    o = n(37234),
+    c = n(410030),
+    d = n(626135),
+    u = n(617136),
+    m = n(497505),
+    g = n(341907),
+    p = n(981631),
+    h = n(388032),
+    f = n(31903),
+    b = n(66094);
+function _() {
+    let e = (0, l.wj)((0, c.ZP)()),
         t = r.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []),
         n = r.useCallback(() => {
-            (0, a.xf)(),
-                (0, m.navigateToQuestHome)({ fromContent: u.jn.QUEST_HOME_MOVE_CALLOUT }),
-                c.default.track(
-                    g.rMx.QUEST_CONTENT_CLICKED,
+            (0, o.xf)(),
+                (0, g.navigateToQuestHome)({ fromContent: m.jn.QUEST_HOME_MOVE_CALLOUT }),
+                d.default.track(
+                    p.rMx.QUEST_CONTENT_CLICKED,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -47,49 +48,50 @@ function b() {
                         return e;
                     })(
                         {
-                            cta_name: d.jZ.VIEW_QUESTS,
+                            cta_name: u.jZ.VIEW_QUESTS,
+                            click_id: (0, s.Z)(),
                             is_targeted: !1
                         },
-                        (0, d.mH)(u.jn.QUEST_HOME_MOVE_CALLOUT)
+                        (0, u.mH)(m.jn.QUEST_HOME_MOVE_CALLOUT)
                     )
                 );
         }, []);
     return (0, i.jsx)('div', {
-        className: h.container,
+        className: f.container,
         style: t,
         children: (0, i.jsxs)('div', {
-            className: h.textContainer,
+            className: f.textContainer,
             children: [
                 (0, i.jsxs)('div', {
-                    className: h.headerContainer,
+                    className: f.headerContainer,
                     children: [
                         (0, i.jsx)('img', {
                             alt: '',
-                            src: f,
-                            className: h.icon
+                            src: b,
+                            className: f.icon
                         }),
-                        (0, i.jsx)(l.X6q, {
+                        (0, i.jsx)(a.X6q, {
                             variant: 'heading-lg/bold',
                             color: 'always-white',
-                            children: p.intl.string(p.t.z8YP2N)
+                            children: h.intl.string(h.t.z8YP2N)
                         })
                     ]
                 }),
-                (0, i.jsx)(l.Text, {
+                (0, i.jsx)(a.Text, {
                     variant: 'text-md/medium',
                     color: 'text-secondary',
-                    children: p.intl.string(p.t.IqmRZ2)
+                    children: h.intl.string(h.t.IqmRZ2)
                 }),
-                (0, i.jsx)(l.zxk, {
+                (0, i.jsx)(a.zxk, {
                     size: 'large',
-                    color: e ? l.Ttl.BRAND : l.Ttl.WHITE,
-                    className: h.button,
+                    color: e ? a.Ttl.BRAND : a.Ttl.WHITE,
+                    className: f.button,
                     onClick: n,
-                    innerClassName: h.innerButton,
-                    children: (0, i.jsx)(l.Text, {
+                    innerClassName: f.innerButton,
+                    children: (0, i.jsx)(a.Text, {
                         variant: 'text-md/medium',
                         color: e ? 'always-white' : 'text-normal',
-                        children: p.intl.string(p.t.GURBQk)
+                        children: h.intl.string(h.t.GURBQk)
                     })
                 })
             ]

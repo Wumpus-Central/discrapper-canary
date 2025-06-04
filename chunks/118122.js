@@ -68,8 +68,8 @@ function S(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         s = (0, l.e7)([f.Z], () => f.Z.getGuilds()),
         S = i.useMemo(() => Object.values(s), [s]),
-        E = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
-        x = i.useMemo(() => S.some((e) => e.isOwner(E)), [S, E]),
+        x = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
+        E = i.useMemo(() => S.some((e) => e.isOwner(x)), [S, x]),
         P = (0, o.s9z)((e) => (0, o.DEQ)(e, O.PU)),
         { analyticsLocations: I } = (0, a.ZP)(),
         w = (0, u.Q3)('CreateJoinGuildButton'),
@@ -98,7 +98,7 @@ function S(e) {
         : (0, r.jsx)('div', {
               className: _.tutorialContainer,
               children: (0, r.jsxs)(p.Z, {
-                  tutorialId: x ? 'create-more-servers' : 'create-first-server',
+                  tutorialId: E ? 'create-more-servers' : 'create-first-server',
                   inlineSpecs: C,
                   position: 'right',
                   children: [

@@ -21,8 +21,8 @@ var r = n(255367),
     C = n(739340),
     j = n(207913),
     S = n(553984),
-    E = n(333834),
-    x = n(982183),
+    x = n(333834),
+    E = n(982183),
     P = n(981631),
     I = n(388032),
     w = n(21678);
@@ -35,7 +35,7 @@ let N = {
     bannerVisible: !1,
     communityInfoVisible: !1,
     shouldShowSubscribeTooltip: !1,
-    bannerVisibleHeight: x.$J,
+    bannerVisibleHeight: E.$J,
     hasGuildSubheader: !1,
     disableBannerAnimation: !0
 };
@@ -56,9 +56,9 @@ function Z(e) {
             roleFilter: g.Z.roleFilter,
             everyoneFilter: g.Z.everyoneFilter
         })),
-        [_, j] = i.useState(x.V5.ALL),
-        [I, Z] = i.useState(x.xM.UNREAD),
-        { messages: M, loadState: k, loadMore: U, hasLoadedEver: G } = (0, C.ZP)();
+        [_, j] = i.useState(E.V5.ALL),
+        [I, Z] = i.useState(E.xM.UNREAD),
+        { messages: k, loadState: M, loadMore: U, hasLoadedEver: G } = (0, C.ZP)();
     (0, i.useEffect)(() => {
         if (!p) return void T(null);
     }, [p]);
@@ -67,13 +67,13 @@ function Z(e) {
         H = i.useMemo(() => {
             var e;
             if (!G) return null;
-            if (_ === x.V5.BOOKMARKS)
+            if (_ === E.V5.BOOKMARKS)
                 return V.flatMap((e) => {
                     let { message: t } = e;
                     return null != t
                         ? [
                               {
-                                  kind: x.fL.BOOKMARK,
+                                  kind: E.fL.BOOKMARK,
                                   message: t
                               }
                           ]
@@ -86,15 +86,17 @@ function Z(e) {
                         null == a
                             ? void 0
                             : a.map((e) => ({
-                                  kind: x.fL.MENTION,
+                                  kind: E.fL.MENTION,
                                   message: e
                               })))
                         ? e
                         : []),
-                    ...M.filter((e) => e.author.id !== (null == B ? void 0 : B.id)).map((e) => ({
-                        message: e,
-                        kind: x.fL.ALL_MESSAGES_CHANNEL
-                    }))
+                    ...k
+                        .filter((e) => e.author.id !== (null == B ? void 0 : B.id))
+                        .map((e) => ({
+                            message: e,
+                            kind: E.fL.ALL_MESSAGES_CHANNEL
+                        }))
                 ],
                 (e) => {
                     let { message: t } = e;
@@ -102,10 +104,10 @@ function Z(e) {
                 }
             ).filter((e) => {
                 let { message: t } = e;
-                return t.author.id !== (null == B ? void 0 : B.id) && O.default.age(t.id) < x.ib;
+                return t.author.id !== (null == B ? void 0 : B.id) && O.default.age(t.id) < E.ib;
             });
-            if (_ === x.V5.ALL) return t;
-            if (_ === x.V5.ANNOUNCEMENTS)
+            if (_ === E.V5.ALL) return t;
+            if (_ === E.V5.ANNOUNCEMENTS)
                 return null == t
                     ? void 0
                     : t.filter((e) => {
@@ -113,7 +115,7 @@ function Z(e) {
                               n = b.Z.getChannel(t.channel_id);
                           return (null == n ? void 0 : n.type) === P.d4z.GUILD_ANNOUNCEMENT;
                       });
-            if (_ === x.V5.MENTIONS)
+            if (_ === E.V5.MENTIONS)
                 return null == t
                     ? void 0
                     : t.filter((e) => {
@@ -121,8 +123,8 @@ function Z(e) {
                           return (null == B ? void 0 : B.id) != null && t.mentioned && t.mentions.includes(null == B ? void 0 : B.id);
                       });
             throw Error('Unknown filter: '.concat(_));
-        }, [_, a, B, V, M, G]),
-        F = I === x.xM.READ && _ === x.V5.ALL,
+        }, [_, a, B, V, k, G]),
+        F = I === E.xM.READ && _ === E.V5.ALL,
         { notificationCenterVariant: z } = v.L.useExperiment({ location: 'NotificationsInboxSidebar' });
     return (0, r.jsxs)('nav', {
         className: o()(w.container, { [w.panelSpacing]: l }),
@@ -156,7 +158,7 @@ function Z(e) {
                 })(
                     {
                         hasSubheader: !0,
-                        guild: x.F7
+                        guild: E.F7
                     },
                     N
                 )),
@@ -196,20 +198,20 @@ function Z(e) {
                     setSelectedFilter: j
                 }),
             F && (0, r.jsx)(D, {}),
-            (0, r.jsx)(E.Z, {
+            (0, r.jsx)(x.Z, {
                 className: w.messageList,
-                renderMessageGroup: A,
+                renderMessageGroup: R,
                 messages: H,
-                loading: h || k === C.jd.Loading,
+                loading: h || M === C.jd.Loading,
                 analyticsName: 'Notifications Inbox',
                 listName: 'notifications-inbox',
                 loadMore: function (e) {
                     let t = null != a && a.length > 0 ? a[a.length - 1].id : null;
-                    d && !h && T(null, t), k !== C.jd.Done && k !== C.jd.Loading && U(e);
+                    d && !h && T(null, t), M !== C.jd.Done && M !== C.jd.Loading && U(e);
                 },
-                renderEmptyState: R,
+                renderEmptyState: A,
                 setInboxReadState: Z,
-                ignoreGrouping: _ !== x.V5.ALL
+                ignoreGrouping: _ !== E.V5.ALL
             })
         ]
     });
@@ -221,7 +223,7 @@ function T(e, t) {
         l = null;
     null != e && null != n && (l = n === P.NgX.ALL_SERVERS ? null : e.getGuildId()), d.Z.fetchRecentMentions(t, P.DJj, l, r, i);
 }
-function R() {
+function A() {
     return (0, r.jsx)('div', {
         className: w.emptyStateContainer,
         children: (0, r.jsxs)(u.Kqy, {
@@ -256,7 +258,7 @@ function R() {
         })
     });
 }
-function A(e, t) {
+function R(e, t) {
     return (0, r.jsx)(
         j.B,
         {

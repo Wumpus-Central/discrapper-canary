@@ -21,16 +21,16 @@ var r = n(255367),
     C = n(941128),
     j = n(780570),
     S = n(278464),
-    E = n(276952),
-    x = n(682662),
+    x = n(276952),
+    E = n(682662),
     P = n(662146),
     I = n(674552),
     w = n(981631),
     N = n(474936),
     Z = n(871465),
     T = n(388032),
-    R = n(823306);
-let A = {
+    A = n(823306);
+let R = {
     origin: {
         x: -16,
         y: 0
@@ -50,8 +50,8 @@ function D(e) {
         [j, S] = i.useState(null),
         [N, D] = i.useState(0),
         L = (0, l.Ie)('home'),
-        M = (0, h.Q3)('DefaultHomeButton'),
-        k = (0, d.oq)().activePanel === d.wh.APP_ICON,
+        k = (0, h.Q3)('DefaultHomeButton'),
+        M = (0, d.oq)().activePanel === d.wh.APP_ICON,
         U = () => {
             S(null), D(0), clearTimeout(j);
         };
@@ -62,12 +62,12 @@ function D(e) {
     !o &&
         y &&
         (B = (0, r.jsx)(c.Z, {
-            className: R.downloadProgress,
+            className: A.downloadProgress,
             determineOwnVisibility: !1
         }));
-    let V = o || O || k,
+    let V = o || O || M,
         H = (0, r.jsx)(a.aRk, {
-            selected: M || V,
+            selected: k || V,
             lowerBadge: f > 0 ? (0, I.Ne)(f) : null,
             upperBadge: B,
             lowerBadgeSize: { width: (0, a.OVM)(f) },
@@ -151,17 +151,17 @@ function D(e) {
             )
         });
     return (0, r.jsx)('div', {
-        className: R.tutorialContainer,
+        className: A.tutorialContainer,
         children: (0, r.jsx)(m.Z, {
-            inlineSpecs: A,
+            inlineSpecs: R,
             tutorialId: 'friends-list',
             position: 'right',
-            children: (0, r.jsxs)(x.H, {
+            children: (0, r.jsxs)(E.H, {
                 children: [
-                    (0, r.jsx)(E.Z, {
+                    (0, r.jsx)(x.Z, {
                         selected: o,
                         hovered: O,
-                        className: R.pill
+                        className: A.pill
                     }),
                     (0, r.jsx)(P.Z, {
                         color: a.ua7.Colors.PRIMARY,

@@ -23,8 +23,8 @@ var i = n(255367),
     S = n(786761),
     v = n(3148),
     T = n(739566),
-    N = n(753206),
-    I = n(921801),
+    I = n(753206),
+    N = n(921801),
     y = n(594174),
     A = n(358085),
     P = n(210887),
@@ -86,11 +86,11 @@ function z(e, t) {
         e
     );
 }
-let W = {
+let Y = {
         COZY: 'cozy',
         COMPACT: 'compact'
     },
-    Y = (0, C.hQ)(),
+    W = (0, C.hQ)(),
     K = (0, C.hQ)(),
     q = (0, C.hQ)(),
     X = '1337',
@@ -206,7 +206,7 @@ class $ extends r.Component {
                   className: G.marginTop20,
                   children: [
                       (0, i.jsx)(u.vwX, {
-                          id: Y,
+                          id: W,
                           tag: u.RB0.H5,
                           className: l()(V.title, G.marginBottom8),
                           children: U.intl.string(U.t.i19n5O)
@@ -225,7 +225,7 @@ class $ extends r.Component {
                           stickToMarkers: !0,
                           onValueChange: this.handleZoomChange,
                           onValueRender: this.handleSliderRender,
-                          'aria-labelledby': Y
+                          'aria-labelledby': W
                       }),
                       (0, i.jsx)(u.R94, {
                           type: u.R94.Types.DESCRIPTION,
@@ -318,7 +318,7 @@ class $ extends r.Component {
                 'aria-hidden': !0,
                 children: s.map((t, n) =>
                     (0, i.jsx)(
-                        N.Z,
+                        I.Z,
                         {
                             author: (0, T.ZH)(t),
                             message: t,
@@ -377,7 +377,7 @@ class $ extends r.Component {
                     title: (0, i.jsx)(J, {}),
                     children: [
                         (0, i.jsx)(Z.i, {}),
-                        (0, i.jsx)(I.F, {
+                        (0, i.jsx)(N.F, {
                             setting: k.s6.APPEARANCE_ICON,
                             children: (0, i.jsx)(w.c, {})
                         }),
@@ -400,15 +400,15 @@ class $ extends r.Component {
                     options: [
                         {
                             name: U.intl.string(U.t.KZIadn),
-                            value: W.COZY
+                            value: Y.COZY
                         },
                         {
                             name: U.intl.string(U.t['6+nTjY']),
-                            value: W.COMPACT
+                            value: Y.COMPACT
                         }
                     ],
                     onChange: this.handleMessageDisplayModeChange,
-                    value: this.props.messageDisplayCompact ? W.COMPACT : W.COZY
+                    value: this.props.messageDisplayCompact ? Y.COMPACT : Y.COZY
                 }),
                 (0, i.jsx)(u.j7V, {
                     value: this.props.messageDisplayCompact && this.props.displayCompactAvatars,
@@ -423,7 +423,7 @@ class $ extends r.Component {
     renderListSpacing() {
         let { isRefreshEnabled: e, density: t } = this.props;
         return e
-            ? (0, i.jsxs)(I.F, {
+            ? (0, i.jsxs)(N.F, {
                   setting: k.s6.APPEARANCE_LIST_SPACING,
                   children: [
                       (0, i.jsxs)(u.xJW, {
@@ -509,20 +509,20 @@ class $ extends r.Component {
             tag: u.RB0.H1,
             title: U.intl.string(U.t['iHH+k5']),
             children: [
-                (0, i.jsxs)(I.F, {
+                (0, i.jsxs)(N.F, {
                     setting: k.s6.APPEARANCE_THEME,
                     children: [this.renderPreview(), this.renderTheme()]
                 }),
-                (0, i.jsx)(I.F, {
+                (0, i.jsx)(N.F, {
                     setting: k.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
                     children: this.renderDisplayMode()
                 }),
                 this.renderListSpacing(),
-                (0, i.jsx)(I.F, {
+                (0, i.jsx)(N.F, {
                     setting: k.s6.APPEARANCE_SCALING_SPACING,
                     children: this.renderScalingAndSpacing()
                 }),
-                (0, i.jsxs)(I.F, {
+                (0, i.jsxs)(N.F, {
                     setting: k.s6.APPEARANCE_TIMESTAMP_HOUR_CYCLE,
                     children: [this.renderTimestampHourCycle(), (0, i.jsx)(u.$i$, { className: G.marginTop8 })]
                 }),
@@ -575,7 +575,7 @@ class $ extends r.Component {
             }),
             F(this, 'handleMessageDisplayModeChange', (e) => {
                 let { value: t } = e;
-                D.jU.updateSetting(t === W.COMPACT), (0, f.ZZ)();
+                D.jU.updateSetting(t === Y.COMPACT), (0, f.ZZ)();
             }),
             F(this, 'handleUIDensityChange', (e) => {
                 let { value: t } = e;
@@ -586,11 +586,11 @@ class $ extends r.Component {
 class ee extends $ {
     render() {
         let { density: e } = this.props,
-            t = (0, i.jsxs)(I.F, {
+            t = (0, i.jsxs)(N.F, {
                 setting: k.s6.APPEARANCE_THEME,
                 children: [this.renderPreview(), this.renderTheme()]
             }),
-            n = (0, i.jsx)(I.F, {
+            n = (0, i.jsx)(N.F, {
                 setting: k.s6.APPEARANCE_ICON,
                 children: (0, i.jsx)(w.c, {})
             }),
@@ -608,7 +608,7 @@ class ee extends $ {
                     value: c.Pi.COZY
                 }
             ],
-            s = (0, i.jsxs)(I.F, {
+            s = (0, i.jsxs)(N.F, {
                 setting: k.s6.APPEARANCE_LIST_SPACING,
                 children: [
                     (0, i.jsxs)(u.xJW, {
@@ -633,7 +633,7 @@ class ee extends $ {
                     (0, i.jsx)(u.$i$, { className: V.divider })
                 ]
             }),
-            l = (0, i.jsxs)(I.F, {
+            l = (0, i.jsxs)(N.F, {
                 setting: k.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
                 children: [
                     (0, i.jsxs)(u.Kqy, {
@@ -665,15 +665,15 @@ class ee extends $ {
                                 options: [
                                     {
                                         name: U.intl.string(U.t.Jqj4cX),
-                                        value: W.COZY
+                                        value: Y.COZY
                                     },
                                     {
                                         name: U.intl.string(U.t['1JNcPT']),
-                                        value: W.COMPACT
+                                        value: Y.COMPACT
                                     }
                                 ],
                                 onChange: this.handleMessageDisplayModeChange,
-                                value: this.props.messageDisplayCompact ? W.COMPACT : W.COZY
+                                value: this.props.messageDisplayCompact ? Y.COMPACT : Y.COZY
                             }),
                             this.props.messageDisplayCompact &&
                                 (0, i.jsx)(u.j7V, {
@@ -692,7 +692,7 @@ class ee extends $ {
                     (0, i.jsx)(u.$i$, { className: V.divider })
                 ]
             }),
-            a = (0, i.jsxs)(I.F, {
+            a = (0, i.jsxs)(N.F, {
                 setting: k.s6.APPEARANCE_SCALING_SPACING,
                 children: [
                     (0, i.jsx)(u.Text, {
@@ -705,7 +705,7 @@ class ee extends $ {
                     (0, i.jsx)(u.$i$, { className: V.divider })
                 ]
             }),
-            o = (0, i.jsx)(I.F, {
+            o = (0, i.jsx)(N.F, {
                 setting: k.s6.APPEARANCE_TIMESTAMP_HOUR_CYCLE,
                 children: this.renderTimestampHourCycle()
             }),

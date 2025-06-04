@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(539854), n(388685), n(642613);
+n.d(t, { Z: () => E }), n(539854), n(388685), n(642613);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -46,12 +46,12 @@ function S(e) {
         })
     });
 }
-let E = [O.KZ.UNREAD, O.KZ.TODAY, O.KZ.YESTERDAY, O.KZ.OLDER];
-function x(e) {
-    let { analyticsName: t, messages: n, loading: l, loadMore: s, renderEmptyState: _, renderMessageGroup: x, setInboxReadState: P, scrollerClassName: I, className: w, listName: N, ignoreGrouping: Z = !1 } = e,
+let x = [O.KZ.UNREAD, O.KZ.TODAY, O.KZ.YESTERDAY, O.KZ.OLDER];
+function E(e) {
+    let { analyticsName: t, messages: n, loading: l, loadMore: s, renderEmptyState: _, renderMessageGroup: E, setInboxReadState: P, scrollerClassName: I, className: w, listName: N, ignoreGrouping: Z = !1 } = e,
         T = i.useRef(null),
-        R = (0, d.Z)(N, T),
-        { notificationCenterVariant: A } = m.L.useExperiment({ location: 'NotificationsInboxSidebarList' }),
+        A = (0, d.Z)(N, T),
+        { notificationCenterVariant: R } = m.L.useExperiment({ location: 'NotificationsInboxSidebarList' }),
         { messageCategoryOpenStates: D, toggleOpenState: L } = (0, b.Z)();
     i.useEffect(() => {
         p.default.track(v.rMx.OPEN_POPOUT, { type: t });
@@ -73,13 +73,13 @@ function x(e) {
                 }
             );
         }, []);
-    let M = i.useCallback(() => {
+    let k = i.useCallback(() => {
             var e;
             let t = null == (e = T.current) ? void 0 : e.getScrollerState(),
                 n = (0, y.s)(D);
             null != t && t.scrollHeight >= t.scrollTop + t.offsetHeight && (null == s || s(n));
         }, [s, D]),
-        k = i.useMemo(() => {
+        M = i.useMemo(() => {
             let e = {
                     [O.KZ.UNREAD]: [],
                     [O.KZ.TODAY]: [],
@@ -106,7 +106,7 @@ function x(e) {
                             l = (0, y.bl)(r);
                         i === O.fL.MENTION ? e[l].push(r) : r.channel_id in t[l] ? t[l][r.channel_id].push(r) : (t[l][r.channel_id] = [r]);
                     }),
-                    a().each(E, (n) => {
+                    a().each(x, (n) => {
                         [...Object.values(t[n]), ...e[n].map((e) => [e])]
                             .sort((e, t) => g.default.compare(t[0].id, e[0].id))
                             .forEach((e) => {
@@ -136,11 +136,11 @@ function x(e) {
                         ? e.push(
                               ...n.map((e) => {
                                   let { message: t } = e;
-                                  return x([t], 'sidebar' === A);
+                                  return E([t], 'sidebar' === R);
                               })
                           )
-                        : a().each(E, (t) => {
-                              0 !== k[t].length &&
+                        : a().each(x, (t) => {
+                              0 !== M[t].length &&
                                   (e.push(
                                       (0, r.jsx)(S, {
                                           group: t,
@@ -148,15 +148,15 @@ function x(e) {
                                           toggleOpenedState: () => L(t)
                                       })
                                   ),
-                                  D[t] && e.push(...k[t].map((e) => x(e, 'sidebar' === A))));
+                                  D[t] && e.push(...M[t].map((e) => E(e, 'sidebar' === R))));
                           }),
                 (null == n ? void 0 : n.length) !== 0 && e.push((0, r.jsx)(u.LZC, { size: 8 }, 'spacer')),
                 e
             );
-        }, [n, _, D, L, k, Z, x, A]);
+        }, [n, _, D, L, M, Z, E, R]);
     i.useEffect(() => {
-        0 === k.UNREAD.length ? P(O.xM.READ) : P(O.xM.UNREAD);
-    }, [k, P]);
+        0 === M.UNREAD.length ? P(O.xM.READ) : P(O.xM.UNREAD);
+    }, [M, P]);
     let G = null;
     return (
         null != n &&
@@ -178,11 +178,11 @@ function x(e) {
             'aria-label': e['aria-label'],
             children: (0, r.jsxs)(u.Den, {
                 className: o()(C.messagesPopout, I),
-                onScroll: M,
+                onScroll: k,
                 ref: T,
                 children: [
                     (0, r.jsx)(c.bG, {
-                        navigator: R,
+                        navigator: A,
                         children: (0, r.jsx)(c.SJ, {
                             children: (e) => {
                                 var t,

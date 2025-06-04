@@ -59,7 +59,7 @@ let C = {
                 var e;
                 (0, h.jd)(t), (0, f.Z)(t, c.Z.GUILD_POWERUPS_CHANNEL_LIST_ROW), null == j || null == (e = j.popout) || e.markAsDismissed(b.L.INDIRECT_ACTION);
             }, [t, j]),
-            E = i.useCallback(() => {
+            x = i.useCallback(() => {
                 var e;
                 switch (null == j || null == (e = j.popout) ? void 0 : e.type) {
                     case p.J.LEVEL_REACHED:
@@ -72,7 +72,7 @@ let C = {
                         return (0, r.jsx)('div', {});
                 }
             }, [t, null == j ? void 0 : j.popout]),
-            x = (0, a.s9z)(a.JQI),
+            E = (0, a.s9z)(a.JQI),
             P = (0, s.e7)([d.Z], () => d.Z.hasLayers()),
             [I, w] = i.useState(null),
             N = null == I ? 'animation' : 'LOOP';
@@ -85,11 +85,11 @@ let C = {
             T = i.useRef(null);
         return (0, r.jsx)(a.yRy, {
             targetElementRef: T,
-            shouldShow: (null == j ? void 0 : j.popout) != null && !(x || P),
+            shouldShow: (null == j ? void 0 : j.popout) != null && !(E || P),
             nudgeAlignIntoViewport: !0,
             animationPosition: 'bottom',
             position: 'right',
-            renderPopout: E,
+            renderPopout: x,
             children: (e) => {
                 var i, s;
                 return (0, r.jsx)(

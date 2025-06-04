@@ -21,20 +21,20 @@ var r = n(255367),
     C = n(501655),
     j = n(427679),
     S = n(368442),
-    E = n(201469),
-    x = n(680089),
+    x = n(201469),
+    E = n(680089),
     P = n(592125),
     I = n(430824),
     w = n(607744),
     N = n(496675),
     Z = n(306680),
     T = n(9156),
-    R = n(979651),
-    A = n(934415),
+    A = n(979651),
+    R = n(934415),
     D = n(98597),
     L = n(648501),
-    M = n(473403),
-    k = n(207055),
+    k = n(473403),
+    M = n(207055),
     U = n(981631),
     G = n(647086),
     B = n(388032),
@@ -95,7 +95,7 @@ class Y extends D.ZP {
     }
     isFull() {
         let { channel: e } = this.props;
-        return (0, A.rY)(e, R.Z, I.Z);
+        return (0, R.rY)(e, A.Z, I.Z);
     }
     getModeClass() {
         let { position: e, sortingPosition: t, isUserOver: n } = this.props;
@@ -107,7 +107,7 @@ class Y extends D.ZP {
     }
     renderVoiceUsers() {
         let { channel: e, collapsed: t, tabIndex: n, speakerVoiceStates: i, numAudience: l } = this.props;
-        return (0, r.jsx)(k.Z, {
+        return (0, r.jsx)(M.Z, {
             channel: e,
             voiceStates: i,
             collapsed: t,
@@ -159,7 +159,7 @@ class Y extends D.ZP {
                                             return i;
                                         })(l, ['onClick', 'onContextMenu']);
                                     return (0, r.jsxs)(
-                                        M.ZP,
+                                        k.ZP,
                                         W(
                                             z(
                                                 {
@@ -306,8 +306,8 @@ function q(e) {
                 unverifiedAccount: !r.canChat
             };
         }),
-        h = (0, s.e7)([x.Z], () => x.Z.isCollapsed(n.parent_id)),
-        p = (0, E.ZP)(n.id),
+        h = (0, s.e7)([E.Z], () => E.Z.isCollapsed(n.parent_id)),
+        p = (0, x.ZP)(n.id),
         f = (0, s.e7)([j.Z], () => j.Z.getStageInstanceByChannel(n.id), [n.id]),
         g = (0, _.Rk)(n.id, C.pV.AUDIENCE),
         { isSubscriptionGated: m, needSubscriptionToAccess: y } = (0, b.Z)(n.id),
@@ -322,7 +322,7 @@ function q(e) {
             needSubscriptionToAccess: y,
             enableConnectedUserLimit: v || (n.userLimit > 0 && n.userLimit < U.xGv)
         }),
-        R = e.connected && null == I;
+        A = e.connected && null == I;
     return (0, r.jsx)(
         K,
         W(
@@ -341,7 +341,7 @@ function q(e) {
             ),
             {
                 isFavoriteSuggestion: l && !O,
-                forceShowButtons: R,
+                forceShowButtons: A,
                 channelInfo: I,
                 resolvedUnreadSetting: u
             }

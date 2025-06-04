@@ -24,8 +24,8 @@ var r = n(512722),
     S = n(778825),
     v = n(52597),
     T = n(430131),
-    N = n(133484),
-    I = n(388032),
+    I = n(133484),
+    N = n(388032),
     y = n(565872);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -106,14 +106,14 @@ function R(e) {
         H = null != D ? D : G;
     s()(null != H, 'guild should not be null');
     let z = (0, o.gS)(H.id),
-        W = (0, l.e7)([x.ZP], () => (null == H.id ? null : x.ZP.getMember(H.id, Z.id))),
-        Y = (0, l.e7)([_.Z], () => _.Z.getGuildMemberProfile(Z.id, H.id)),
+        Y = (0, l.e7)([x.ZP], () => (null == H.id ? null : x.ZP.getMember(H.id, Z.id))),
+        W = (0, l.e7)([_.Z], () => _.Z.getGuildMemberProfile(Z.id, H.id)),
         K = C.ZP.canUsePremiumProfileCustomization(Z),
-        q = (0, c.gd)(w, null == W ? void 0 : W.avatar),
-        X = (0, c.f$)(L, null == Y ? void 0 : Y.banner),
-        Q = (0, v.p)(U, null == Y ? void 0 : Y.themeColors),
-        J = null != (t = null == Y ? void 0 : Y.bio) ? t : '',
-        $ = null != (n = null == Y ? void 0 : Y.pronouns) ? n : '',
+        q = (0, c.gd)(w, null == Y ? void 0 : Y.avatar),
+        X = (0, c.f$)(L, null == W ? void 0 : W.banner),
+        Q = (0, v.p)(U, null == W ? void 0 : W.themeColors),
+        J = null != (t = null == W ? void 0 : W.bio) ? t : '',
+        $ = null != (n = null == W ? void 0 : W.pronouns) ? n : '',
         ee = (e, t, n) => {
             n(null != e ? e : null != t ? null : void 0);
         };
@@ -126,7 +126,7 @@ function R(e) {
                     errors: null != (r = null == V ? void 0 : V.nick) ? r : null == z ? void 0 : z.nick,
                     username: j.ZP.getName(Z),
                     pendingNick: k,
-                    currentNick: null == W ? void 0 : W.nick,
+                    currentNick: null == Y ? void 0 : Y.nick,
                     guild: H
                 },
                 'nick'
@@ -134,7 +134,7 @@ function R(e) {
             (0, i.jsx)(
                 f.Z,
                 {
-                    sectionTitle: I.intl.string(I.t['+T3RIy']),
+                    sectionTitle: N.intl.string(N.t['+T3RIy']),
                     errors: null == V ? void 0 : V.pronouns,
                     onPronounsChange: (e) => {
                         (0, v.xs)(e, $);
@@ -144,7 +144,7 @@ function R(e) {
                 },
                 'pronouns'
             ),
-            (0, i.jsxs)(N.Z, {
+            (0, i.jsxs)(I.Z, {
                 user: Z,
                 showOverlay: !K,
                 children: [
@@ -153,9 +153,9 @@ function R(e) {
                         {
                             sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    I.intl.string(I.t.lqaIxM),
+                                    N.intl.string(N.t.lqaIxM),
                                     (0, i.jsx)(a.ua7, {
-                                        text: I.intl.string(I.t['5AFxuL']),
+                                        text: N.intl.string(N.t['5AFxuL']),
                                         children: (e) =>
                                             (0, i.jsx)(
                                                 a.SrA,
@@ -174,7 +174,7 @@ function R(e) {
                                 ]
                             }),
                             showRemoveAvatarButton: q,
-                            onAvatarChange: (e) => ee(e, null == W ? void 0 : W.avatar, O.I5),
+                            onAvatarChange: (e) => ee(e, null == Y ? void 0 : Y.avatar, O.I5),
                             errors: null == V ? void 0 : V.avatar,
                             guildId: H.id,
                             disabled: !K
@@ -186,9 +186,9 @@ function R(e) {
                         {
                             sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    I.intl.string(I.t['7v0T9P']),
+                                    N.intl.string(N.t['7v0T9P']),
                                     (0, i.jsx)(a.ua7, {
-                                        text: I.intl.string(I.t['5AFxuL']),
+                                        text: N.intl.string(N.t['5AFxuL']),
                                         children: (e) =>
                                             (0, i.jsx)(
                                                 a.SrA,
@@ -216,9 +216,9 @@ function R(e) {
                         {
                             sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    I.intl.string(I.t.wR5wOj),
+                                    N.intl.string(N.t.wR5wOj),
                                     (0, i.jsx)(a.ua7, {
-                                        text: I.intl.string(I.t['5AFxuL']),
+                                        text: N.intl.string(N.t['5AFxuL']),
                                         children: (e) =>
                                             (0, i.jsx)(
                                                 a.SrA,
@@ -246,7 +246,7 @@ function R(e) {
                         {
                             showRemoveBannerButton: X,
                             errors: null == V ? void 0 : V.banner,
-                            onBannerChange: (e) => ee(e, null == Y ? void 0 : Y.banner, O.g_),
+                            onBannerChange: (e) => ee(e, null == W ? void 0 : W.banner, O.g_),
                             guildId: null == H ? void 0 : H.id,
                             disabled: !K
                         },
@@ -257,7 +257,7 @@ function R(e) {
                         pendingAvatarSrc: F,
                         pendingColors: U,
                         onThemeColorsChange: (e) => {
-                            (0, v.ce)(e, null == Y ? void 0 : Y.themeColors);
+                            (0, v.ce)(e, null == W ? void 0 : W.themeColors);
                         },
                         guildId: null == H ? void 0 : H.id,
                         showResetThemeButton: Q
@@ -265,12 +265,12 @@ function R(e) {
                     (0, i.jsx)(
                         d.Z,
                         {
-                            placeholder: I.intl.string(I.t['/7NKgo']),
+                            placeholder: N.intl.string(N.t['/7NKgo']),
                             sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    I.intl.string(I.t.jGoPJS),
+                                    N.intl.string(N.t.jGoPJS),
                                     (0, i.jsx)(a.ua7, {
-                                        text: I.intl.string(I.t['5AFxuL']),
+                                        text: N.intl.string(N.t['5AFxuL']),
                                         children: (e) =>
                                             (0, i.jsx)(
                                                 a.SrA,

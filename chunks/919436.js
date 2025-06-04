@@ -21,8 +21,8 @@ var r,
     C = n(451478),
     j = n(276952),
     S = n(682662),
-    E = n(662146),
-    x = n(674552),
+    x = n(662146),
+    E = n(674552),
     P = n(981631),
     I = n(388032),
     w = n(223203);
@@ -73,17 +73,17 @@ function T(e, t) {
         e
     );
 }
-let R = {
+let A = {
     friction: 28,
     tension: 600
 };
-function A(e) {
+function R(e) {
     switch (e) {
         case 'height':
         case 'opacity':
-            return Z({ duration: 150 }, R);
+            return Z({ duration: 150 }, A);
         case 'scale':
-            return Z({}, R);
+            return Z({}, A);
         default:
             throw Error('DirectMessage: getSpringConfigs() - Invalid spring '.concat(String(e)));
     }
@@ -98,7 +98,7 @@ class D extends (r = l.PureComponent) {
                     height: 1,
                     opacity: 1,
                     scale: 1,
-                    config: A
+                    config: R
                 })
                 .start()
                 .then(() => this.setState({ animating: !1 }));
@@ -110,7 +110,7 @@ class D extends (r = l.PureComponent) {
             scale: 1,
             opacity: 1,
             height: 1,
-            config: A
+            config: R
         })
             .start()
             .then(e);
@@ -124,7 +124,7 @@ class D extends (r = l.PureComponent) {
                     height: 0,
                     opacity: 0,
                     scale: 0,
-                    config: A
+                    config: R
                 })
                 .start()
                 .then(e)
@@ -162,14 +162,14 @@ class D extends (r = l.PureComponent) {
                         unread: !b && d,
                         className: w.pill
                     }),
-                    (0, i.jsx)(E.Z, {
+                    (0, i.jsx)(x.Z, {
                         text: null != t ? t : '',
                         selected: n,
                         children: (0, i.jsx)(c.aRk, {
                             rounded: p,
                             selected: !p && (n || g),
-                            lowerBadge: r > 0 ? (0, x.Ne)(r, void 0, !0) : null,
-                            upperBadge: (0, x.Or)({
+                            lowerBadge: r > 0 ? (0, E.Ne)(r, void 0, !0) : null,
+                            upperBadge: (0, E.Or)({
                                 audio: l,
                                 video: s,
                                 screenshare: a,
@@ -222,7 +222,7 @@ class D extends (r = l.PureComponent) {
                     scale: 0,
                     height: 0,
                     opacity: 0,
-                    config: A
+                    config: R
                 })
             }),
             N(this, 'handleContextMenu', (e) => {
@@ -272,9 +272,9 @@ let L = l.forwardRef(function (e, t) {
         { isFacepileEnabled: C } = g.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
         j = o === n,
         S = !1,
-        E = !1;
-    j && ((S = u === P.WtW.VOICE), (E = u === P.WtW.VIDEO));
-    let x = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE),
+        x = !1;
+    j && ((S = u === P.WtW.VOICE), (x = u === P.WtW.VIDEO));
+    let E = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE),
         I = (0, f.Q3)('DirectMessage');
     return (0, i.jsx)(
         D,
@@ -285,11 +285,11 @@ let L = l.forwardRef(function (e, t) {
             selected: m === n,
             badge: _,
             audio: S,
-            video: E,
+            video: x,
             stream: h,
             isCurrentUserInThisDMCall: j,
             isGDMFacepileEnabled: C,
-            size: I ? x : 56,
+            size: I ? E : 56,
             isVisualRefreshEnabled: I,
             treeItemProps: l
         })

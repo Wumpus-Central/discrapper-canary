@@ -137,7 +137,7 @@ function v(e) {
         C = (0, l.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
         j = (0, f.Z)(),
         S = (0, s.Z)(_),
-        E = i.useMemo(() => {
+        x = i.useMemo(() => {
             let e = (0, p.qQ)({
                 folderId: h.S.PENDING_JOIN_REQUESTS_FOLDER,
                 folderName: b.intl.string(b.t['scsU+v']),
@@ -150,18 +150,18 @@ function v(e) {
     i.useEffect(() => {
         n && !C && a.Z.fetchRequestToJoinGuilds();
     }, [n, C]);
-    let x = null != _ && j.includes(_);
+    let E = null != _ && j.includes(_);
     return (i.useEffect(() => {
-        !n && x && S !== _ && v(!0);
-    }, [n, x, S, _]),
+        !n && E && S !== _ && v(!0);
+    }, [n, E, S, _]),
     0 === j.length)
         ? null
         : (0, r.jsx)(O, {
               onActivate: t,
               children: (0, r.jsx)(g.Z, {
-                  folderNode: E,
+                  folderNode: x,
                   expanded: n,
-                  selected: x,
+                  selected: E,
                   draggable: !1,
                   sorting: !1,
                   onExpandCollapse: () => {

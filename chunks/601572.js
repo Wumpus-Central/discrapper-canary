@@ -28,8 +28,8 @@ function v(e) {
         x = (0, m.Z)(),
         w = p.qF.useSetting(),
         [N, L] = r.useState((0, g.P)(S.default.getCurrentUser())),
-        R = (0, l.O)(),
-        { analyticsLocations: D } = (0, u.ZP)(s.Z.CAMERA_PREVIEW),
+        D = (0, l.O)(),
+        { analyticsLocations: R } = (0, u.ZP)(s.Z.CAMERA_PREVIEW),
         k = r.useRef(null);
     r.useEffect(() => {
         O.default.track(T.rMx.OPEN_MODAL, { type: 'Camera Preview Modal' });
@@ -68,13 +68,13 @@ function v(e) {
                                 });
                         }
                         return e;
-                    })({ page: T.ZY5.PREVIEW_CAMERA_MODAL }, R.location)
+                    })({ page: T.ZY5.PREVIEW_CAMERA_MODAL }, D.location)
                 });
             } catch (e) {}
             await A(), (0, b.Up)(N);
         };
     return (0, a.jsx)(u.Gt, {
-        value: D,
+        value: R,
         children: (0, a.jsx)(c.Z, {
             page: T.ZY5.PREVIEW_CAMERA_MODAL,
             children: (0, a.jsxs)(o.Y0X, {

@@ -27,20 +27,20 @@ var r,
     C = n(915885),
     j = n(258871),
     S = n(216306),
-    E = n(398758),
-    x = n(486311),
+    x = n(398758),
+    E = n(486311),
     P = n(220444),
     I = n(31022),
     w = n(10401),
     N = n(131704),
     Z = n(592125),
     T = n(796974),
-    R = n(984933),
-    A = n(914010),
+    A = n(984933),
+    R = n(914010),
     D = n(540126),
     L = n(734307),
-    M = n(854444),
-    k = n(761091),
+    k = n(854444),
+    M = n(761091),
     U = n(301342),
     G = n(906817),
     B = n(429122),
@@ -536,7 +536,7 @@ class ep extends (r = l.PureComponent) {
                                 j.Z,
                                 {
                                     guild: r,
-                                    channel: R.ZP.getDefaultChannel(r.id)
+                                    channel: A.ZP.getDefaultChannel(r.id)
                                 },
                                 en.z.GUILD_HUB_HEADER_OPTIONS
                             );
@@ -618,7 +618,7 @@ class ep extends (r = l.PureComponent) {
                             );
                         case en.z.GUILD_BOOSTS:
                             return (0, i.jsx)(
-                                x.Z,
+                                E.Z,
                                 {
                                     guildId: r.id,
                                     selected: s === el.oC.GUILD_BOOSTS
@@ -673,7 +673,7 @@ class ep extends (r = l.PureComponent) {
                             S
                         );
                     case ei.d4z.GUILD_STAGE_VOICE:
-                        var E, P;
+                        var x, P;
                         return (0, i.jsx)(
                             q.Z,
                             {
@@ -683,7 +683,7 @@ class ep extends (r = l.PureComponent) {
                                 selected: s === y.id,
                                 connected: c === y.id,
                                 collapsed: y.isCollapsed || b.isCollapsed,
-                                voiceStates: null != (E = d[y.id]) ? E : [],
+                                voiceStates: null != (x = d[y.id]) ? x : [],
                                 speakerVoiceStates: null != (P = p[y.id]) ? P : [],
                                 disableManageChannels: h,
                                 isFavoriteCategory: O
@@ -792,8 +792,8 @@ let ef = (e) => {
         { analyticsLocations: s } = (0, b.ZP)(m.Z.GUILD_CHANNEL_LIST),
         d = (0, u.e7)([Z.Z], () => Z.Z.getChannel(n)),
         h = (0, u.e7)([Z.Z], () => Z.Z.getChannel(r)),
-        p = (0, u.e7)([A.Z], () => A.Z.getGuildId()),
-        y = (0, E.DM)(t),
+        p = (0, u.e7)([R.Z], () => R.Z.getGuildId()),
+        y = (0, x.DM)(t),
         v = l.useRef(null),
         _ = l.useCallback((e, t) => {
             let n = v.current;
@@ -836,10 +836,10 @@ let ef = (e) => {
             scrollToStart: C,
             scrollToEnd: j
         }),
-        x = S.setFocus;
+        E = S.setFocus;
     l.useEffect(() => {
-        null != n && x(n);
-    }, [n, x]);
+        null != n && E(n);
+    }, [n, E]);
     let P = (0, I.Z)(t),
         w = (0, O.Q3)('NavigableChannels');
     return (0, i.jsx)(b.Gt, {
@@ -866,7 +866,7 @@ let ef = (e) => {
     });
 };
 function eg(e) {
-    let t = (0, M.o)(),
+    let t = (0, k.o)(),
         { isFavoritesPerk: n } = (0, v.z)('favorites-channel-list'),
         { density: r } = (0, d.TCT)();
     return (0, i.jsx)(
@@ -880,7 +880,7 @@ function eg(e) {
     );
 }
 function em(e) {
-    let t = (0, k.Z)(e.guild),
+    let t = (0, M.Z)(e.guild),
         n = (0, u.cj)([L.Z], () => L.Z.getGuild(e.guildId, { guildActionRows: t })),
         r = (0, O.Q3)('GuildChannelList'),
         { density: l } = (0, d.TCT)();

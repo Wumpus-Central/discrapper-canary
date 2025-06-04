@@ -1,6 +1,6 @@
 n.d(t, {
-    g: () => G,
-    i: () => U
+    g: () => U,
+    i: () => M
 }),
     n(388685);
 var r = n(255367),
@@ -25,41 +25,39 @@ var r = n(255367),
     I = n(104494),
     v = n(639119),
     C = n(655525),
-    S = n(314684),
-    N = n(52188),
-    T = n(346497),
-    P = n(924540),
-    j = n(474486),
-    A = n(497334),
-    Z = n(119850),
-    x = n(938736),
-    L = n(227140),
+    S = n(52188),
+    N = n(346497),
+    T = n(924540),
+    P = n(474486),
+    j = n(497334),
+    A = n(119850),
+    Z = n(938736),
+    x = n(227140),
     w = n(474936),
-    R = n(981631),
-    D = n(921944),
-    k = n(388032),
-    M = n(419720);
-let U = (e) => {
+    L = n(981631),
+    R = n(921944),
+    D = n(388032),
+    k = n(419720);
+let M = (e) => {
         let { selected: t } = e,
             n = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
             r = (0, a.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription()),
             i = (0, v.N)(),
             l = (0, I.Ng)(),
-            o = (0, T.Vi)(),
-            s = (0, S.$_)(),
-            c = (0, Z.V)(),
-            u = (0, _.Qo)(n, r),
-            d = (0, a.e7)([E.Z], () => E.Z.getCreatedAtOverride()),
-            p = t || null != i || null != l || o || null != s || null != c || u,
-            h = null != d ? d : null == n ? void 0 : n.createdAt;
-        return p || (null != n && null != h && Date.now() - h.getTime() > 1209600000);
+            o = (0, N.Vi)(),
+            s = (0, A.V)(),
+            c = (0, _.Qo)(n, r),
+            u = (0, a.e7)([E.Z], () => E.Z.getCreatedAtOverride()),
+            d = t || null != i || null != l || o || null != s || c,
+            p = null != u ? u : null == n ? void 0 : n.createdAt;
+        return d || (null != n && null != p && Date.now() - p.getTime() > 1209600000);
     },
-    G = (e) => {
-        let t, n, E, G;
-        var V,
-            B,
-            { selected: H, route: F, locationState: z } = e,
-            W = (function (e, t) {
+    U = (e) => {
+        let t, n, E, U;
+        var G,
+            V,
+            { selected: B, route: H, locationState: F } = e,
+            z = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -78,81 +76,74 @@ let U = (e) => {
                 }
                 return i;
             })(e, ['selected', 'route', 'locationState']);
-        let Y = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
-            K = (0, a.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription()),
-            q = (0, _.Qo)(Y, K),
-            X = (0, l.JA)('nitro'),
-            Q = (0, v.N)(),
-            J = (0, I.Ng)(),
-            $ = (0, O.W)(),
-            ee = (0, a.e7)([g.Z], () => g.Z.isLocalizedPromoEnabled) && null == Q,
-            et = (0, T.Vi)(),
-            en = (0, S.$_)(),
-            er = (0, Z.V)(),
-            ei = (0, x.Kn)('NitroTabButton'),
-            { fractionalState: el, startsAt: ea, endsAt: eo } = (0, d.Z)({ forceFetch: !0 }),
-            [es, ec] = (0, h.bf)(el !== w.a$.NONE ? o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
-                showAfterTimestamp: ea.valueOf(),
+        let W = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
+            Y = (0, a.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription()),
+            K = (0, _.Qo)(W, Y),
+            q = (0, l.JA)('nitro'),
+            X = (0, v.N)(),
+            Q = (0, I.Ng)(),
+            J = (0, O.W)(),
+            $ = (0, a.e7)([g.Z], () => g.Z.isLocalizedPromoEnabled) && null == X,
+            ee = (0, N.Vi)(),
+            et = (0, A.V)(),
+            en = (0, Z.Kn)('NitroTabButton'),
+            { fractionalState: er, startsAt: ei, endsAt: el } = (0, d.Z)({ forceFetch: !0 }),
+            [ea, eo] = (0, h.bf)(er !== w.a$.NONE ? o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
+                showAfterTimestamp: ei.valueOf(),
                 cooldownDurationMs: 0
             }),
-            eu = (null == Q ? void 0 : Q.trial_id) === w.a7,
-            [ed, ep] = (0, h.US)($ ? [o.z.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2] : [], void 0, !0);
+            es = (null == X ? void 0 : X.trial_id) === w.a7,
+            [ec, eu] = (0, h.US)(J ? [o.z.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2] : [], void 0, !0);
         if (
             (i.useEffect(() => {
-                !0 === H && null != ed && ep(D.L.AUTO_DISMISS);
-            }, [ep, H, ed]),
-            !U({ selected: H }))
+                !0 === B && null != ec && eu(R.L.AUTO_DISMISS);
+            }, [eu, B, ec]),
+            !M({ selected: B }))
         )
             return null;
-        el === w.a$.NONE ||
-            $ ||
-            ((G = 7),
+        er === w.a$.NONE ||
+            J ||
+            ((U = 7),
             (E = (0, r.jsx)(y.Z, {
                 className: '',
-                startsAt: ea,
-                endsAt: eo,
+                startsAt: ei,
+                endsAt: el,
                 messageStyle: u.aj.SHORT_TIME,
                 upperCase: !0
             }))),
-            et
-                ? ((E = (0, r.jsx)(C.Z, {})), (G = 0))
-                : $
-                  ? ((E = (0, r.jsx)(A.S, { expiresAt: eo })), (G = 4))
-                  : null != en
-                    ? ((E = (0, r.jsx)(L.Z, {
-                          copy: en,
+            ee
+                ? ((E = (0, r.jsx)(C.Z, {})), (U = 0))
+                : J
+                  ? ((E = (0, r.jsx)(j.S, { expiresAt: el })), (U = 4))
+                  : null != et
+                    ? ((E = (0, r.jsx)(x.Z, {
+                          copy: et,
                           showStars: !1
                       })),
-                      (G = 1))
-                    : null != er
-                      ? ((E = (0, r.jsx)(L.Z, {
-                            copy: er,
-                            showStars: !1
+                      (U = 1))
+                    : null != Q
+                      ? ((E = (0, r.jsx)(T.GN, {
+                            userDiscount: Q,
+                            isTabSelected: B,
+                            includesAmountOff: !1
                         })),
-                        (G = 1))
-                      : null != J
-                        ? ((E = (0, r.jsx)(P.GN, {
-                              userDiscount: J,
-                              isTabSelected: H,
-                              includesAmountOff: !1
+                        (U = 3))
+                      : null == X || es
+                        ? en
+                            ? ((E = (0, r.jsx)(P.l, {
+                                  isSelected: B,
+                                  onSelect: () => (0, p.EW)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: R.L.TAKE_ACTION })
+                              })),
+                              (U = 6))
+                            : $ && ((E = (0, r.jsx)(S.k, { entryPoint: S.U.PrivateMessages })), B || (t = k.localizeBadge), (U = 5))
+                        : ((E = (0, r.jsx)(T.$H, {
+                              trialOffer: X,
+                              isTabSelected: B
                           })),
-                          (G = 3))
-                        : null == Q || eu
-                          ? ei
-                              ? ((E = (0, r.jsx)(j.l, {
-                                    isSelected: H,
-                                    onSelect: () => (0, p.EW)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: D.L.TAKE_ACTION })
-                                })),
-                                (G = 6))
-                              : ee && ((E = (0, r.jsx)(N.k, { entryPoint: N.U.PrivateMessages })), H || (t = M.localizeBadge), (G = 5))
-                          : ((E = (0, r.jsx)(P.$H, {
-                                trialOffer: Q,
-                                isTabSelected: H
-                            })),
-                            (G = 4));
-        let eh = (0, r.jsx)(
+                          (U = 4));
+        let ed = (0, r.jsx)(
             c.Qj,
-            ((V = (function (e) {
+            ((G = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
@@ -178,31 +169,31 @@ let U = (e) => {
                 return e;
             })(
                 {
-                    selected: H,
-                    route: F,
+                    selected: B,
+                    route: H,
                     icon: s.SrA,
-                    text: k.intl.string(k.t.Ipxkoq),
-                    locationState: z,
+                    text: D.intl.string(D.t.Ipxkoq),
+                    locationState: F,
                     onClick: () => {
-                        es === o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && ec(D.L.TAKE_ACTION),
-                            b.default.track(R.rMx.NITRO_TAB_VISITED, {
-                                badge_decorator: G,
-                                has_premium: q
+                        ea === o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eo(R.L.TAKE_ACTION),
+                            b.default.track(L.rMx.NITRO_TAB_VISITED, {
+                                badge_decorator: U,
+                                has_premium: K
                             }),
-                            null != ed && ep(D.L.USER_DISMISS);
+                            null != ec && eu(R.L.USER_DISMISS);
                     }
                 },
-                W,
-                X
+                z,
+                q
             )),
-            (B = B =
+            (V = V =
                 {
                     className: t,
                     avatarWithTextClassName: n,
                     children: E
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(V, Object.getOwnPropertyDescriptors(B))
+                ? Object.defineProperties(G, Object.getOwnPropertyDescriptors(V))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
@@ -210,10 +201,10 @@ let U = (e) => {
                           n.push.apply(n, r);
                       }
                       return n;
-                  })(Object(B)).forEach(function (e) {
-                      Object.defineProperty(V, e, Object.getOwnPropertyDescriptor(B, e));
+                  })(Object(V)).forEach(function (e) {
+                      Object.defineProperty(G, e, Object.getOwnPropertyDescriptor(V, e));
                   }),
-            V)
+            G)
         );
-        return ei ? (0, r.jsx)(j.C, { children: eh }) : eh;
+        return en ? (0, r.jsx)(P.C, { children: ed }) : ed;
     };

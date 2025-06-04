@@ -1,20 +1,20 @@
 n.d(t, {
-    BH: () => a,
-    MH: () => s
+    BH: () => s,
+    MH: () => o
 });
-var r = n(442837),
-    i = n(524437),
+var a = n(442837),
+    r = n(524437),
     l = n(761781),
-    o = n(695346);
-function a() {
+    i = n(695346);
+function s() {
     return c(
-        o.YT.useSetting(),
-        (0, r.e7)([l.Z], () => l.Z.currentUserApplicationIds.size > 0)
+        i.YT.useSetting(),
+        (0, a.e7)([l.Z], () => l.Z.currentUserApplicationIds.size > 0)
     );
 }
-function s() {
-    return c(o.YT.getSetting(), l.Z.currentUserApplicationIds.size > 0);
+function o() {
+    return c(i.YT.getSetting(), l.Z.currentUserApplicationIds.size > 0);
 }
 function c(e, t) {
-    return e === i.Tv.ACTIVITY_NOTIFICATIONS_UNSET ? (t ? i.Tv.ONLY_GAMES_PLAYED : i.Tv.ACTIVITY_NOTIFICATIONS_ENABLED) : e !== i.Tv.ONLY_GAMES_PLAYED || t ? e : i.Tv.ACTIVITY_NOTIFICATIONS_ENABLED;
+    return e === r.Tv.ACTIVITY_NOTIFICATIONS_UNSET ? (t ? r.Tv.ONLY_GAMES_PLAYED : r.Tv.ACTIVITY_NOTIFICATIONS_ENABLED) : e !== r.Tv.ONLY_GAMES_PLAYED || t ? e : r.Tv.ACTIVITY_NOTIFICATIONS_ENABLED;
 }

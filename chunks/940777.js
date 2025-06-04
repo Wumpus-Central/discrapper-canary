@@ -21,15 +21,15 @@ var r = n(255367),
     C = n(944486),
     j = n(979651),
     S = n(709054),
-    E = n(853856),
-    x = n(593214),
+    x = n(853856),
+    E = n(593214),
     P = n(919755),
     I = n(110977),
     w = n(603274),
     N = n(981631),
     Z = n(388032),
     T = n(940751);
-function R(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,7 +54,7 @@ function R(e) {
     }
     return e;
 }
-let A = {
+let R = {
     analyticsSource: {
         page: N.ZY5.GUILD_CHANNEL,
         section: N.jXE.CHANNEL_LIST,
@@ -64,11 +64,11 @@ let A = {
 function D() {
     var e, t;
     let l = (0, s.Ie)('favorites'),
-        { favoriteAdded: D, clearFavoriteAdded: L } = (0, x.up)(),
-        [M, k] = i.useState(!1),
-        { favoriteServerMuted: U, favoriteChannels: G } = (0, a.cj)([E.Z], () => ({
-            favoriteChannels: E.Z.getFavoriteChannels(),
-            favoriteServerMuted: E.Z.favoriteServerMuted
+        { favoriteAdded: D, clearFavoriteAdded: L } = (0, E.up)(),
+        [k, M] = i.useState(!1),
+        { favoriteServerMuted: U, favoriteChannels: G } = (0, a.cj)([x.Z], () => ({
+            favoriteChannels: x.Z.getFavoriteChannels(),
+            favoriteServerMuted: x.Z.favoriteServerMuted
         })),
         B = (0, a.e7)([C.Z], () => C.Z.getChannelId(N.I_8)),
         V = (0, a.e7)([_.Z], () => _.Z.getChannel(B)),
@@ -118,7 +118,7 @@ function D() {
         children: [
             (0, r.jsx)(g.Z, {
                 selected: H,
-                hovered: M,
+                hovered: k,
                 unread: z && !U,
                 className: T.pill
             }),
@@ -126,12 +126,12 @@ function D() {
                 onShow: q,
                 children: (0, r.jsx)(I.S, {
                     children: (0, r.jsx)(c.aRk, {
-                        selected: K || H || M,
+                        selected: K || H || k,
                         upperBadge: W,
                         lowerBadge: Y,
                         children: (0, r.jsx)(
                             c.LYs,
-                            ((e = R({}, l)),
+                            ((e = A({}, l)),
                             (t = t =
                                 {
                                     ariaLabel: Z.intl.formatToPlainString(Z.t['/uzRsr'], {
@@ -141,18 +141,18 @@ function D() {
                                     'aria-selected': H,
                                     to: {
                                         pathname: N.Z5c.CHANNEL(N.I_8, B),
-                                        state: A
+                                        state: R
                                     },
-                                    selected: H || M,
-                                    onMouseEnter: () => k(!0),
-                                    onMouseLeave: () => k(!1),
+                                    selected: H || k,
+                                    onMouseEnter: () => M(!0),
+                                    onMouseLeave: () => M(!1),
                                     onMouseDown: function () {
                                         null != V && u.Z.preload(V.guild_id, V.id);
                                     },
                                     onContextMenu: function (e) {
                                         (0, d.jW)(e, async () => {
                                             let { default: e } = await n.e('3190').then(n.bind(n, 631981));
-                                            return (t) => (0, r.jsx)(e, R({}, t));
+                                            return (t) => (0, r.jsx)(e, A({}, t));
                                         });
                                     },
                                     children: (0, r.jsx)('div', {

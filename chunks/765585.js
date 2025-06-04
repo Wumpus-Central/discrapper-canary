@@ -12,13 +12,13 @@ var i = n(255367),
     g = n(388032),
     p = n(418952);
 let h = r.forwardRef(function (e, t) {
-    let { body: n, header: s, artClassName: h, headerClassName: f, contentClassName: b, tryItText: _, dismissText: x, onTryFeature: E, onClose: C, className: j, inlineArt: O = !1, isPremiumFeature: S = !1, shouldUseHorizontalButtons: v = !1, showGIFTag: T = !1, dismissibleContent: N, position: I = 'top', align: y = 'center', art: A, isPremiumEarlyAccess: P = !1, maxWidth: R = 280, hideDismissButton: D = !1, pointerClassName: Z, dismissIconClassName: w, dismissIcon: k, onDismissIconClick: L, tryItButtonColor: B } = e,
+    let { body: n, header: s, artClassName: h, headerClassName: f, contentClassName: b, tryItText: _, dismissText: x, onTryFeature: E, onClose: C, className: j, inlineArt: O = !1, isPremiumFeature: S = !1, shouldUseHorizontalButtons: v = !1, showGIFTag: T = !1, dismissibleContent: I, position: N = 'top', align: y = 'center', art: A, isPremiumEarlyAccess: P = !1, maxWidth: R = 280, hideDismissButton: D = !1, pointerClassName: Z, dismissIconClassName: w, dismissIcon: k, onDismissIconClick: L, tryItButtonColor: B } = e,
         M = v ? a.zxk.Sizes.LARGE : a.zxk.Sizes.MAX,
         [U, V] = r.useState(!1),
         { ref: G, width: F } = (0, o.ZP)();
     function H(e) {
-        if ((0, c.lg)(N)) return void (0, d.bj)(N, { dismissAction: e });
-        (0, d.EW)(N, { dismissAction: e });
+        if ((0, c.lg)(I)) return void (0, d.bj)(I, { dismissAction: e });
+        (0, d.EW)(I, { dismissAction: e });
     }
     return (
         r.useEffect(() => {
@@ -27,8 +27,8 @@ let h = r.forwardRef(function (e, t) {
             !U && n > R && V(!0);
         }, [U, F, G, R]),
         r.useEffect(() => {
-            (0, d.kk)(N);
-        }, [N]),
+            (0, d.kk)(I);
+        }, [I]),
         (0, i.jsx)('div', {
             className: j,
             ref: t,
@@ -136,10 +136,10 @@ let h = r.forwardRef(function (e, t) {
                     }),
                     (0, i.jsx)('div', {
                         className: l()(p.pointer, Z, {
-                            [p.bottomPointer]: 'top' === I,
-                            [p.centerLeftPointer]: 'right' === I && 'center' === y,
-                            [p.topLeftPointer]: 'right' === I && 'top' === y,
-                            [p.bottomLeftPointer]: 'right' === I && 'bottom' === y
+                            [p.bottomPointer]: 'top' === N,
+                            [p.centerLeftPointer]: 'right' === N && 'center' === y,
+                            [p.topLeftPointer]: 'right' === N && 'top' === y,
+                            [p.bottomLeftPointer]: 'right' === N && 'bottom' === y
                         })
                     })
                 ]

@@ -2,7 +2,7 @@ n.d(t, {
     P: () => N,
     Qo: () => Z,
     ZP: () => w,
-    kw: () => R,
+    kw: () => A,
     rj: () => T
 });
 var r = n(255367),
@@ -27,7 +27,7 @@ var r = n(255367),
     C = n(981631),
     j = n(388032),
     S = n(585523);
-function E(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +52,7 @@ function E(e) {
     }
     return e;
 }
-function x(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -77,14 +77,14 @@ let I = i.memo(function (e) {
         let t,
             { channel: l, connectChannelDragSource: h, connectChannelDropTarget: v, disableManageChannels: _, position: I, sortingPosition: w, hideIcon: N, children: Z } = e,
             T = (0, g.Q3)('CategoryChannel'),
-            R = (0, a.e7)([O.ZP], () => O.ZP.isChannelMuted(l.getGuildId(), l.id)),
-            A = (0, a.e7)([m.Z], () => m.Z.isCollapsed(l.id)),
+            A = (0, a.e7)([O.ZP], () => O.ZP.isChannelMuted(l.getGuildId(), l.id)),
+            R = (0, a.e7)([m.Z], () => m.Z.isCollapsed(l.id)),
             D = (0, a.e7)([y.Z], () => y.Z.can(C.Plq.MANAGE_CHANNELS, l));
         t = null != w ? (I > w ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
         let L = i.useCallback(() => {
-                A ? (0, u.mJ)(l.id) : (0, u.c4)(l.id);
-            }, [l.id, A]),
-            M = i.useCallback(
+                R ? (0, u.mJ)(l.id) : (0, u.c4)(l.id);
+            }, [l.id, R]),
+            k = i.useCallback(
                 (e) => {
                     if ('null' !== l.id) {
                         let t = b.Z.getGuild(l.getGuildId());
@@ -94,7 +94,7 @@ let I = i.memo(function (e) {
                                 return (n) =>
                                     (0, r.jsx)(
                                         e,
-                                        x(E({}, n), {
+                                        E(x({}, n), {
                                             channel: l,
                                             guild: t
                                         })
@@ -104,7 +104,7 @@ let I = i.memo(function (e) {
                 },
                 [l]
             ),
-            k = i.useCallback(() => {
+            M = i.useCallback(() => {
                 let e = l.type === C.d4z.GUILD_CATEGORY ? null : l.type,
                     t = l.getGuildId();
                 null != t &&
@@ -113,7 +113,7 @@ let I = i.memo(function (e) {
                         return (n) =>
                             (0, r.jsx)(
                                 i,
-                                x(E({}, n), {
+                                E(x({}, n), {
                                     channelType: e,
                                     guildId: t,
                                     categoryId: 'null' !== l.id ? l.id : null
@@ -158,16 +158,16 @@ let I = i.memo(function (e) {
                         children: (0, r.jsxs)('div', {
                             ref: F,
                             className: o()(S.iconVisibility, S.wrapper, {
-                                [S.collapsed]: A,
-                                [S.muted]: R,
+                                [S.collapsed]: R,
+                                [S.muted]: A,
                                 [S.clickable]: !0
                             }),
-                            onContextMenu: M,
+                            onContextMenu: k,
                             children: [
                                 (0, r.jsxs)(
                                     c.P3F,
-                                    x(
-                                        E(
+                                    E(
+                                        x(
                                             {
                                                 innerRef: H,
                                                 className: S.mainContent,
@@ -178,7 +178,7 @@ let I = i.memo(function (e) {
                                         {
                                             onClick: L,
                                             'aria-label': j.intl.formatToPlainString(j.t.y5l3Jy, { categoryName: l.name }),
-                                            'aria-expanded': !A,
+                                            'aria-expanded': !R,
                                             focusProps: { enabled: !1 },
                                             children: [
                                                 T || N
@@ -217,7 +217,7 @@ let I = i.memo(function (e) {
                                                           look: c.zxk.Looks.BLANK,
                                                           size: c.zxk.Sizes.NONE,
                                                           className: o()(S.addButton, S.forceVisible),
-                                                          onClick: k,
+                                                          onClick: M,
                                                           onMouseEnter: t,
                                                           onMouseLeave: n,
                                                           tabIndex: B,
@@ -347,7 +347,7 @@ let I = i.memo(function (e) {
                 : null
             : (0, r.jsx)('div', { style: { height: 16 } });
     }),
-    R = i.memo(function (e) {
+    A = i.memo(function (e) {
         let { channel: t } = e;
         return (0, r.jsx)('li', {
             className: S.containerDefault,

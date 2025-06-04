@@ -1,7 +1,7 @@
 n.d(t, {
     Sr: () => j,
     Xq: () => S,
-    Zg: () => E
+    Zg: () => x
 }),
     n(415506);
 var r = n(186070),
@@ -62,7 +62,7 @@ let j = {
         [v.EkH.QUICKSWITCHER_SHOW]: c.$
     },
     S = { [v.EkH.QUICKSWITCHER_SHOW]: c.$ };
-function E() {
+function x() {
     return [
         {
             description: _.intl.string(_.t.bx4Uy8),

@@ -1,4 +1,4 @@
-e.d(n, { Z: () => U });
+e.d(n, { Z: () => O });
 var i = e(255367);
 e(73800);
 var l = e(399606),
@@ -8,12 +8,12 @@ var l = e(399606),
     _ = e(19780),
     s = e(979651),
     u = e(951206),
-    p = e(446226),
-    o = e(937393),
-    g = e(721351),
-    I = e(981631),
-    c = e(388032);
-function T(t) {
+    o = e(446226),
+    p = e(937393),
+    E = e(721351),
+    g = e(981631),
+    I = e(388032);
+function c(t) {
     for (var n = 1; n < arguments.length; n++) {
         var e = null != arguments[n] ? arguments[n] : {},
             i = Object.keys(e);
@@ -38,7 +38,7 @@ function T(t) {
     }
     return t;
 }
-function E(t, n) {
+function T(t, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -56,33 +56,33 @@ function E(t, n) {
         t
     );
 }
-function U(t) {
+function O(t) {
     let n = (0, l.e7)([_.Z], () => _.Z.getChannelId() === t.id),
-        U = (0, p.Z)(),
-        D = (null == U ? void 0 : U.channelId) === t.id,
+        O = (0, o.Z)(),
+        D = (null == O ? void 0 : O.channelId) === t.id,
         L = (0, a.V)(t) && !t.isPrivate(),
-        O = (0, a.Z)(t),
-        m = (!(0, l.e7)([s.Z], () => s.Z.isInChannel(t.id)) && O) || L,
-        y = (0, o.Z)();
-    if (!D && 0 === y.length) return null;
+        U = (0, a.Z)(t),
+        m = (!(0, l.e7)([s.Z], () => s.Z.isInChannel(t.id)) && U) || L,
+        A = (0, p.Z)();
+    if (!D && 0 === A.length) return null;
     let S = (n) => {
         if (!n.twoWayLink || n.revoked)
             return void (0, d.Z)({
                 platformType: n.type,
                 location: 'Console Transfer Item'
             });
-        n.type === I.ABu.XBOX
+        n.type === g.ABu.XBOX
             ? (0, r.ZDy)(async () => {
                   let { default: n } = await Promise.all([e.e('45270'), e.e('522')]).then(e.bind(e, 200623));
-                  return (e) => (0, i.jsx)(n, E(T({}, e), { channel: t }));
+                  return (e) => (0, i.jsx)(n, T(c({}, e), { channel: t }));
               })
-            : (n.type === I.ABu.PLAYSTATION || n.type === I.ABu.PLAYSTATION_STAGING) &&
+            : (n.type === g.ABu.PLAYSTATION || n.type === g.ABu.PLAYSTATION_STAGING) &&
               (0, r.ZDy)(async () => {
                   let { default: l } = await e.e('638').then(e.bind(e, 543974));
                   return (e) =>
                       (0, i.jsx)(
                           l,
-                          E(T({}, e), {
+                          T(c({}, e), {
                               platform: n.type,
                               channel: t
                           })
@@ -91,23 +91,23 @@ function U(t) {
     };
     return D
         ? (0, i.jsx)(r.sNh, {
-              label: c.intl.string(c.t.PlwgdX),
+              label: I.intl.string(I.t.PlwgdX),
               id: 'handoff',
               action: () => {
-                  (0, u.F)(U);
+                  (0, u.F)(O);
               },
-              icon: (0, g.Z)(void 0),
+              icon: (0, E.Z)(void 0),
               disabled: m
           })
-        : y.map((t) => {
+        : A.map((t) => {
               var e, l;
               return (0, i.jsx)(
                   r.sNh,
                   {
                       id: 'transfer-'.concat(t.type, '-').concat(t.id),
-                      label: ((e = t.type), (l = n), e === I.ABu.XBOX ? (l ? c.intl.string(c.t['qVE/VF']) : c.intl.string(c.t.E8euSk)) : e === I.ABu.PLAYSTATION ? (l ? c.intl.string(c.t.vzfxmZ) : c.intl.string(c.t.QxEYDg)) : e === I.ABu.PLAYSTATION_STAGING ? (l ? c.intl.string(c.t.BDiXtb) : c.intl.string(c.t['bhdB9/'])) : void 0),
+                      label: ((e = t.type), (l = n), e === g.ABu.XBOX ? (l ? I.intl.string(I.t['qVE/VF']) : I.intl.string(I.t.E8euSk)) : e === g.ABu.PLAYSTATION ? (l ? I.intl.string(I.t.vzfxmZ) : I.intl.string(I.t.QxEYDg)) : e === g.ABu.PLAYSTATION_STAGING ? (l ? I.intl.string(I.t.BDiXtb) : I.intl.string(I.t['bhdB9/'])) : void 0),
                       action: () => S(t),
-                      icon: (0, g.Z)(t.type),
+                      icon: (0, E.Z)(t.type),
                       disabled: m
                   },
                   t.id

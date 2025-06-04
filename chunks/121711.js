@@ -29,8 +29,8 @@ var r = n(255367),
     A = n(833435),
     Z = n(918701),
     x = n(150560),
-    L = n(558652),
-    w = n(736683),
+    w = n(558652),
+    L = n(736683),
     R = n(879438),
     D = n(251360),
     k = n(466962),
@@ -88,7 +88,7 @@ let K = function () {
     let { selectedTab: e, onSelectTab: t, tabs: n } = (0, M.z)(),
         { onScroll: l, scrollPosition: s } = (0, m.M)(),
         u = x.Z.getState().getUtmCurrentContext(),
-        g = (0, A._)({ location: U.dr.QUEST_HOME_DESKTOP }) ? w.Z : w.j,
+        g = (0, A._)({ location: U.dr.QUEST_HOME_DESKTOP }) ? L.Z : L.j,
         j = (0, R.z)((e) => e.registerAssetLoad),
         Z = i.useRef(u);
     i.useEffect(() => {
@@ -111,7 +111,7 @@ let K = function () {
     let { enabled: F } = (0, S.WX)({ location: U.dr.QUEST_HOME_DESKTOP }),
         z = W(),
         K = i.useCallback(() => {
-            if (z) return void window.open(T.Z.getArticleURL(G.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
+            if (z) return void window.open(G.EYA.PAID_TERMS_ORBS);
             window.open(T.Z.getArticleURL(G.BhN.QUESTS_LEARN_MORE));
         }, [z]);
     (0, f.Tt)({ location: B.intl.string(B.t.JALI2N) });
@@ -187,7 +187,7 @@ let K = function () {
                                   className: a()(H.bannerContainer, { [H.orbsContainer]: z }),
                                   children: [(0, r.jsx)('div', { className: a()(H.bannerGradient, { [H.orbsGradient]: z }) }), (0, r.jsx)(Y, { onLoadComplete: j })]
                               }),
-                              (0, r.jsx)(E.Z, { children: e === P.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(L.Z, {}) })
+                              (0, r.jsx)(E.Z, { children: e === P.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(w.Z, {}) })
                           ]
                       })
                   })
@@ -223,7 +223,7 @@ let K = function () {
                                                       onTabSelect: t
                                                   })
                                               }),
-                                              e === P.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(L.Z, {})
+                                              e === P.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(w.Z, {})
                                           ]
                                       })
                                   ]

@@ -2,8 +2,8 @@ n.d(t, { Z: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(231239),
-    a = n(129293),
+    a = n(231239),
+    o = n(129293),
     s = n(388905),
     c = n(703656),
     u = n(108427),
@@ -17,8 +17,8 @@ function f(e) {
         [f, _] = i.useState(!1),
         { verifySuccess: x, verifyErrors: E, redirectGuildId: b } = (0, l.e7)([d.Z], () => d.Z.getState());
     i.useEffect(() => {
-        let e = (0, a.Z)(t);
-        o.Z.verify(e), (0, u.e)('verify_hub_email');
+        let e = (0, o.Z)(t);
+        a.Z.verify(e), (0, u.e)('verify_hub_email');
     }, [t]);
     let v = () => {
         (0, h.Z)(b), _(!0);

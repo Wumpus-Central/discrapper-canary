@@ -2,8 +2,8 @@ n.d(t, { Z: () => w }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(240894),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(447543),
     c = n(587444),
     u = n(393238),
@@ -67,7 +67,7 @@ function j(e, t) {
 function N() {
     return (0, r.jsx)('div', {
         className: S.centerFlex,
-        children: (0, r.jsx)(a.$jN, {})
+        children: (0, r.jsx)(o.$jN, {})
     });
 }
 let C = (e) => {
@@ -107,7 +107,7 @@ function T(e) {
           });
 }
 function A(e) {
-    var { children: t, cardChildren: n, startAnimHeightPx: o, innerStyle: s } = e;
+    var { children: t, cardChildren: n, startAnimHeightPx: a, innerStyle: s } = e;
     let { invite: c } = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -129,8 +129,8 @@ function A(e) {
         })(e, ['children', 'cardChildren', 'startAnimHeightPx', 'innerStyle']),
         [d, h] = i.useState(C(c)),
         { ref: g, height: p } = (0, u.ZP)(),
-        m = (0, a.q_F)({
-            height: null != p && 0 !== p ? ''.concat(p, 'px') : ''.concat(o, 'px'),
+        m = (0, o.q_F)({
+            height: null != p && 0 !== p ? ''.concat(p, 'px') : ''.concat(a, 'px'),
             config: l.config.stiff
         });
     return (
@@ -227,7 +227,7 @@ function R(e) {
 }
 function w(e) {
     let { inviteKey: t, transitionTo: n } = e,
-        l = (0, o.e7)([p.Z], () => p.Z.getInvite(t));
+        l = (0, a.e7)([p.Z], () => p.Z.getInvite(t));
     return (
         i.useEffect(() => {
             (0, h.e)('invite_mobile');
@@ -256,11 +256,11 @@ function w(e) {
                             channel_id: null == n || null == (i = n.channel) ? void 0 : i.id,
                             inviter_id: null == n || null == (l = n.inviter) ? void 0 : l.id
                         });
-                    let o = null != n && n.state !== I.r2o.EXPIRED && n.state !== I.r2o.BANNED ? t : void 0,
-                        a = g.default.getFingerprint(),
-                        c = null != a ? a : g.default.getId(),
+                    let a = null != n && n.state !== I.r2o.EXPIRED && n.state !== I.r2o.BANNED ? t : void 0,
+                        o = g.default.getFingerprint(),
+                        c = null != o ? o : g.default.getId(),
                         u = null != n && (null == n ? void 0 : n.type) != null ? Number(null == n ? void 0 : n.type) : void 0;
-                    s.ZP.openApp(o, void 0, c, void 0, u);
+                    s.ZP.openApp(a, void 0, c, void 0, u);
                 })(e, t, l);
             },
             transitionTo: n

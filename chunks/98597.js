@@ -1,7 +1,7 @@
 n.d(t, {
     CN: () => w,
     ZP: () => L,
-    eP: () => R,
+    eP: () => A,
     hR: () => T,
     jo: () => N
 });
@@ -27,8 +27,8 @@ var r,
     C = n(281029),
     j = n(981631),
     S = n(388032),
-    E = n(915887);
-function x(e, t, n) {
+    x = n(915887);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -52,7 +52,7 @@ function P(e) {
                 })
             )),
             r.forEach(function (t) {
-                x(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
@@ -79,7 +79,7 @@ function w(e, t, n) {
     return null != t && !!t && !(0, C.ig)(n, e.type);
 }
 function N(e, t) {
-    return null == t ? E.containerDefault : e > t ? E.containerDragAfter : E.containerDragBefore;
+    return null == t ? x.containerDefault : e > t ? x.containerDragAfter : x.containerDragBefore;
 }
 function Z(e) {
     let { tabIndex: t, forceShowButtons: n, hasChannelInfo: r, onContextMenu: l } = e;
@@ -88,7 +88,7 @@ function Z(e) {
         children: (e) => {
             let { onMouseEnter: o, onMouseLeave: a, onFocus: u, onBlur: d } = e;
             return (0, i.jsx)(c.P3F, {
-                className: s()(E.iconItem, n ? E.alwaysShown : void 0, r ? E.iconWithChannelInfo : E.iconNoChannelInfo),
+                className: s()(x.iconItem, n ? x.alwaysShown : void 0, r ? x.iconWithChannelInfo : x.iconNoChannelInfo),
                 onClick: l,
                 tabIndex: t,
                 'aria-label': S.intl.string(S.t.OBr7Cw),
@@ -99,7 +99,7 @@ function Z(e) {
                 children: (0, i.jsx)(c.xhG, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: E.actionIcon
+                    className: x.actionIcon
                 })
             });
         }
@@ -116,7 +116,7 @@ function T(e) {
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n, onFocus: a, onBlur: u } = e;
             return (0, i.jsx)(c.P3F, {
-                className: s()(E.iconItem, l ? E.alwaysShown : void 0, o ? E.iconWithChannelInfo : E.iconNoChannelInfo),
+                className: s()(x.iconItem, l ? x.alwaysShown : void 0, o ? x.iconWithChannelInfo : x.iconNoChannelInfo),
                 onClick: d,
                 tabIndex: r,
                 'aria-label': S.intl.string(S.t['3gUsJS']),
@@ -127,24 +127,24 @@ function T(e) {
                 children: (0, i.jsx)(c.ewm, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: E.actionIcon
+                    className: x.actionIcon
                 })
             });
         }
     });
 }
-function R(e) {
+function A(e) {
     let { channel: t, isDefaultChannel: r = !1, locked: o, tabIndex: u, forceShowButtons: f, hasChannelInfo: b = !1 } = e,
         { entrypoints: _ } = (0, h._k)({ location: 'channel_base' }),
         C = (0, a.e7)([O.Z], () => O.Z.getGuild(t.getGuildId())),
-        x = (0, a.e7)([g.Z], () => g.Z.getStageInstanceByChannel(t.id), [t.id]),
+        E = (0, a.e7)([g.Z], () => g.Z.getStageInstanceByChannel(t.id), [t.id]),
         w = (0, a.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(t.id), [t.id]),
-        N = (0, a.e7)([v.Z], () => (0, p.b)(v.Z, C, t, x)),
+        N = (0, a.e7)([v.Z], () => (0, p.b)(v.Z, C, t, E)),
         Z = (0, a.e7)([v.Z], () => (v.Z.can(j.Plq.CREATE_INSTANT_INVITE, t) ? S.intl.string(S.t.zJrgTE) : S.intl.string(S.t.Sd8Ix8))),
         T = _ ? S.intl.string(S.t['EE+P0N']) : Z,
-        R = l.useRef(null);
+        A = l.useRef(null);
     if (o || !N || t.isModeratorReportChannel()) return null;
-    function A() {
+    function R() {
         if (null != C) {
             let e = y.Z.getAllActiveStreams().filter((e) => e.state !== j.jm8.ENDED && e.channelId === t.id);
             (0, c.ZDy)(async () => {
@@ -166,18 +166,18 @@ function R(e) {
     let D = _ ? c.oLu : c.ejJ,
         L = (0, i.jsx)(D, {
             size: 'xs',
-            className: E.actionIcon,
+            className: x.actionIcon,
             'aria-hidden': !0,
             color: 'currentColor'
         });
     return (
         r &&
             (L = (0, i.jsx)(m.Z, {
-                childRef: R,
+                childRef: A,
                 tutorialId: 'instant-invite',
                 position: 'left',
                 children: (0, i.jsx)('div', {
-                    ref: R,
+                    ref: A,
                     children: L
                 })
             })),
@@ -186,8 +186,8 @@ function R(e) {
             children: (e) =>
                 (0, i.jsx)(
                     c.P3F,
-                    I(P({ className: s()(E.iconItem, f ? E.alwaysShown : void 0, b ? E.iconWithChannelInfo : E.iconNoChannelInfo) }, e), {
-                        onClick: A,
+                    I(P({ className: s()(x.iconItem, f ? x.alwaysShown : void 0, b ? x.iconWithChannelInfo : x.iconNoChannelInfo) }, e), {
+                        onClick: R,
                         tabIndex: u,
                         'aria-label': T,
                         children: L
@@ -196,7 +196,7 @@ function R(e) {
         })
     );
 }
-function A(e) {
+function R(e) {
     let { channel: t } = e,
         n = () => {
             (0, f._U)(t.guild_id, t.id);
@@ -206,13 +206,13 @@ function A(e) {
         children: (e) =>
             (0, i.jsx)(
                 c.P3F,
-                I(P({ className: E.iconItem }, e), {
+                I(P({ className: x.iconItem }, e), {
                     onClick: n,
                     'aria-label': S.intl.string(S.t.ROh4T0),
                     children: (0, i.jsx)(c.Dio, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: E.actionIcon
+                        className: x.actionIcon
                     })
                 })
             )
@@ -228,13 +228,13 @@ function D(e) {
         children: (e) =>
             (0, i.jsx)(
                 c.P3F,
-                I(P({ className: E.iconItem }, e), {
+                I(P({ className: x.iconItem }, e), {
                     onClick: n,
                     'aria-label': S.intl.string(S.t['N2c/Ul']),
                     children: (0, i.jsx)(c.dz2, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: E.actionIcon
+                        className: x.actionIcon
                     })
                 })
             )
@@ -249,10 +249,10 @@ class L extends (r = l.PureComponent) {
         return (0, i.jsx)(T, P({}, this.props));
     }
     renderInviteButton() {
-        return (0, i.jsx)(R, P({}, this.props));
+        return (0, i.jsx)(A, P({}, this.props));
     }
     renderRemoveSuggestionButton() {
-        return (0, i.jsx)(A, P({}, this.props));
+        return (0, i.jsx)(R, P({}, this.props));
     }
     renderAcceptSuggestionButton() {
         return (0, i.jsx)(D, P({}, this.props));
@@ -266,4 +266,4 @@ class L extends (r = l.PureComponent) {
         return w(e, t, n);
     }
 }
-x(L, 'defaultProps', { isDefaultChannel: !1 });
+E(L, 'defaultProps', { isDefaultChannel: !1 });

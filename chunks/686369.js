@@ -1,7 +1,8 @@
 n.d(t, {
-    dG: () => p,
+    TK: () => p,
+    dG: () => h,
     nv: () => _,
-    qw: () => m
+    qw: () => g
 }),
     n(35282);
 var r = n(73800),
@@ -20,22 +21,25 @@ function _() {
         n = (0, a.dQu)(a.TVs.colors.BACKGROUND_ACCENT);
     return (0, a.wjy)(e) ? t : n;
 }
-function p(e, t) {
-    var n;
-    let r = null == t ? void 0 : t.customBanner;
-    if (null != t && null != r && (null == (n = t.features) ? void 0 : n.includes(d.oNc.DISCOVERABLE))) {
-        if (c.ff.test(r)) return 'url('.concat(r, ') center / cover');
-        let e = c.ZP.getGuildDiscoverySplashURL({
-            id: t.id,
-            splash: r,
+function p(e) {
+    var t;
+    let n = e.customBanner;
+    if (null != n && (null == (t = e.features) ? void 0 : t.includes(d.oNc.DISCOVERABLE))) {
+        if (c.ff.test(n)) return 'url('.concat(n, ') center / cover');
+        let t = c.ZP.getGuildDiscoverySplashURL({
+            id: e.id,
+            splash: n,
             size: f * (0, u.Z)()
         });
-        if (null != e) return 'url('.concat(e, ') center / cover');
+        if (null != t) return 'url('.concat(t, ') center / cover');
     }
-    let a = (0, i.DT)(e, 1.75);
-    return 'radial-gradient(105.43% 127.05% at 50.1% 127.05%, '.concat(a, ' 20.65%, ').concat(e, ' 85.16%)');
+    return null;
 }
 function h(e) {
+    let t = (0, i.DT)(e, 1.75);
+    return 'radial-gradient(105.43% 127.05% at 50.1% 127.05%, '.concat(t, ' 20.65%, ').concat(e, ' 85.16%)');
+}
+function m(e) {
     return null == e.icon
         ? null
         : c.ff.test(e.icon)
@@ -46,15 +50,16 @@ function h(e) {
                 size: 64
             });
 }
-function m(e, t) {
-    let n = h(e),
-        i = r.useRef(t),
-        a = (0, o.Z)(i),
-        s = (0, l.ZP)(n, a);
+function g(e) {
+    let { profile: t, defaultColor: n, forceDefaultColor: i } = e,
+        a = i ? null : m(t),
+        s = r.useRef(n),
+        c = (0, o.Z)(s),
+        u = (0, l.ZP)(a, c);
     return (r.useEffect(() => {
-        i.current = s;
-    }, [s]),
-    null == e.icon)
-        ? t
-        : s;
+        s.current = u;
+    }, [u]),
+    null == t.icon)
+        ? n
+        : u;
 }

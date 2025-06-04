@@ -1,6 +1,6 @@
 n.d(t, {
     J: () => P,
-    y: () => x
+    y: () => E
 });
 var r = n(255367),
     i = n(73800),
@@ -24,8 +24,8 @@ var r = n(255367),
     C = n(870569),
     j = n(981631),
     S = n(388032),
-    E = n(390648);
-function x(e, t, n) {
+    x = n(390648);
+function E(e, t, n) {
     return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === j.IIU.PLAYING && (0, u.Z)(t, j.xjy.JOIN));
 }
 let P = i.memo(function (e) {
@@ -33,24 +33,24 @@ let P = i.memo(function (e) {
         l,
         u,
         P,
-        { stream: I, canGoLive: w, guildId: N, isStreaming: Z, channel: T, canStream: R, runningGame: A, embeddedActivity: D, activity: L, application: M, analyticsContext: k } = e,
+        { stream: I, canGoLive: w, guildId: N, isStreaming: Z, channel: T, canStream: A, runningGame: R, embeddedActivity: D, activity: L, application: k, analyticsContext: M } = e,
         { skipModalForGame: U, showRefreshedGoLiveModal: G } = (0, g.a)({
             location: 'Activity Panel',
             autoTrackExposure: !1
         }),
         { parentAnalyticsLocation: B } = (0, h.ZP)(),
         { changeLeaveCallAndActivityIcons: V } = (0, _.A)({ location: 'Activity Actions' }),
-        H = x(M, L, D),
+        H = E(k, L, D),
         F = i.useCallback(() => {
             o()(null != L, 'Received null activity'),
                 (0, p.v)(B, p.d.INVITE),
                 v.default.track(j.rMx.OPEN_MODAL, {
                     type: 'Send Join Invite',
                     application_id: L.application_id,
-                    location: k.location
+                    location: M.location
                 }),
                 (0, a.h7)(L, !1);
-        }, [L, k, B]),
+        }, [L, M, B]),
         z = i.useCallback(
             (e, t) => () => {
                 (0, p.v)(B, p.d.LEAVE_ACTIVITY),
@@ -68,8 +68,8 @@ let P = i.memo(function (e) {
         Y = i.useCallback(() => {
             let e = null != T && (0, y.vd)(T.type) ? T : null,
                 t = null != e ? e.getGuildId() : N;
-            if (U && null != A && null != O.Z.getVoiceChannelId()) {
-                (0, g.s)('Activity Panel'), (0, m.Z)(A.pid);
+            if (U && null != R && null != O.Z.getVoiceChannelId()) {
+                (0, g.s)('Activity Panel'), (0, m.Z)(R.pid);
                 return;
             }
             (0, s.ZDy)(async () => {
@@ -105,7 +105,7 @@ let P = i.memo(function (e) {
                         })({}, n)),
                         (l = l =
                             {
-                                sourcePID: null == A ? void 0 : A.pid,
+                                sourcePID: null == R ? void 0 : R.pid,
                                 selectSource: !!G && null != O.Z.getVoiceChannelId(),
                                 guildId: t,
                                 analyticsLocation: j.Sbl.ACTIVITY_PANEL
@@ -126,9 +126,9 @@ let P = i.memo(function (e) {
                     );
                 };
             });
-        }, [T, N, A, G, U]),
+        }, [T, N, R, G, U]),
         K =
-            (null != A || null == D || (0, c.R)()) && (Z || w)
+            (null != R || null == D || (0, c.R)()) && (Z || w)
                 ? (Z
                       ? ((t = !1),
                         (l = () => {
@@ -136,16 +136,16 @@ let P = i.memo(function (e) {
                         }),
                         (u = s.g5r),
                         (P = S.intl.string(S.t.S5anIS)))
-                      : R
+                      : A
                         ? ((t = !1),
                           (l = () => {
                               Y(), (0, p.v)(B, p.d.STREAM, !0);
                           }),
                           (u = s.hGI),
-                          (P = null != A ? S.intl.formatToPlainString(S.t.AB5gT0, { game: A.name }) : S.intl.string(S.t.FeUKeH)))
+                          (P = null != R ? S.intl.formatToPlainString(S.t.AB5gT0, { game: R.name }) : S.intl.string(S.t.FeUKeH)))
                         : ((t = !0), (l = null), (u = s.hGI), (P = null != T && (0, y.vd)(T.type) ? S.intl.string(S.t.uQn9Bw) : null != N ? S.intl.string(S.t.fBXEoK) : S.intl.string(S.t.n3feND))),
                   (0, r.jsx)('div', {
-                      className: E.panelButtonContainer,
+                      className: x.panelButtonContainer,
                       children: (0, r.jsx)(C.Z, {
                           tooltipText: P,
                           disabled: t,
@@ -174,7 +174,7 @@ let P = i.memo(function (e) {
     return null == K && null == q && null == Q
         ? null
         : (0, r.jsxs)('div', {
-              className: E.actions,
+              className: x.actions,
               children: [K, q, null != Q ? Q : X]
           });
 });

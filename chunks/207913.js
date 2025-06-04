@@ -21,20 +21,20 @@ var r = n(255367),
     C = n(930282),
     j = n(318713),
     S = n(47930),
-    E = n(123145),
-    x = n(25015),
+    x = n(123145),
+    E = n(25015),
     P = n(178480),
     I = n(703656),
     w = n(518950),
     N = n(592125),
     Z = n(720202),
     T = n(430824),
-    R = n(375954),
-    A = n(306680),
+    A = n(375954),
+    R = n(306680),
     D = n(594174),
     L = n(709054),
-    M = n(987889),
-    k = n(586694),
+    k = n(987889),
+    M = n(586694),
     U = n(981631),
     G = n(388032),
     B = n(539499);
@@ -86,10 +86,10 @@ function F(e) {
         { params: s } = (0, a.$B)(),
         f = (0, c.e7)([N.Z], () => N.Z.getChannel(t.channel_id)),
         g = (0, c.e7)(
-            [A.ZP],
+            [R.ZP],
             () => {
                 if (null == f) return !1;
-                let e = A.ZP.getTrackedAckMessageId(null == f ? void 0 : f.id);
+                let e = R.ZP.getTrackedAckMessageId(null == f ? void 0 : f.id);
                 return L.default.compare(t.id, e) > 0;
             },
             [f, t.id]
@@ -133,7 +133,7 @@ function z(e) {
         { nick: y, colorString: O, primaryGuild: C } = (0, _.ZP)(t),
         {
             avatarDecorationSrc: j,
-            avatarSrc: x,
+            avatarSrc: E,
             eventHandlers: P
         } = (0, w.Z)({
             user: t.author,
@@ -149,10 +149,10 @@ function z(e) {
             compact: !0,
             isRepliedMessage: !0
         }),
-        R = (0, r.jsxs)('div', {
+        A = (0, r.jsxs)('div', {
             className: B.usernameTagContainer,
             children: [
-                (0, r.jsx)(E.Z, {
+                (0, r.jsx)(x.Z, {
                     channel: n,
                     message: t,
                     hideGuildTag: !0,
@@ -189,16 +189,16 @@ function z(e) {
                                 marginTop: '4px'
                             },
                             children: I
-                                ? (0, r.jsx)(k.q, {
+                                ? (0, r.jsx)(M.q, {
                                       'aria-label': 'User Avatar',
-                                      src: x,
+                                      src: E,
                                       size: u.EFr.SIZE_32,
                                       cornerIconUrl: null != f ? f.getIconURL(24) : void 0,
                                       cornerIconOffsetX: 4,
                                       cornerIconOffsetY: 3,
                                       avatarDecoration: j
                                   })
-                                : (0, r.jsx)(k.E, {
+                                : (0, r.jsx)(M.E, {
                                       'aria-label': 'Guild Icon',
                                       src: f.getIconURL(32),
                                       size: u.EFr.SIZE_32,
@@ -227,7 +227,7 @@ function z(e) {
                                                       (0, r.jsx)('div', {
                                                           className: B.username,
                                                           style: { color: O },
-                                                          children: (0, r.jsx)(b.Z, { children: R })
+                                                          children: (0, r.jsx)(b.Z, { children: A })
                                                       }),
                                                       N
                                                   ]
@@ -246,7 +246,7 @@ function z(e) {
                                             align: 'center',
                                             style: { width: 'fit-content' },
                                             children: [
-                                                (0, r.jsx)(M.Z, {
+                                                (0, r.jsx)(k.Z, {
                                                     message: t,
                                                     channel: n,
                                                     isUnread: a
@@ -339,7 +339,7 @@ function K(e) {
     let { message: t, isUnread: n, isSelected: l } = e,
         { previewContent: s, Icon: a } = (function (e) {
             let { message: t, isUnread: n, isSelected: l } = e,
-                { content: s } = (0, x.Z)(t, {
+                { content: s } = (0, E.Z)(t, {
                     hideSimpleEmbedContent: !0,
                     allowList: !1,
                     allowHeading: !0,
@@ -349,9 +349,9 @@ function K(e) {
                     noStyleAndInteraction: !0
                 }),
                 a = (function (e) {
-                    let t = (0, c.e7)([R.Z], () => {
+                    let t = (0, c.e7)([A.Z], () => {
                             var t, n;
-                            return (null == (t = e.messageReference) ? void 0 : t.message_id) == null ? null : R.Z.getMessage(e.channel_id, null == (n = e.messageReference) ? void 0 : n.message_id);
+                            return (null == (t = e.messageReference) ? void 0 : t.message_id) == null ? null : A.Z.getMessage(e.channel_id, null == (n = e.messageReference) ? void 0 : n.message_id);
                         }),
                         n = (0, c.e7)([D.default], () => D.default.getCurrentUser());
                     return e.type === U.uaV.REPLY && null != t && t.author.id === (null == n ? void 0 : n.id);

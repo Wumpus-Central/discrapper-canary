@@ -23,8 +23,8 @@ var i = n(255367),
     S = n(594174),
     v = n(78839),
     T = n(626135),
-    N = n(111361),
-    I = n(357355),
+    I = n(111361),
+    N = n(357355),
     y = n(937579),
     A = n(91802),
     P = n(104494),
@@ -45,20 +45,20 @@ let B = function (e) {
         G = (0, R.N)(),
         F = (0, P.Ng)(),
         H = (0, b.V)(),
-        [z, W] = r.useState(!0),
-        Y = r.useRef(0),
-        K = (0, N.M5)(U, w.p9.TIER_2),
+        [z, Y] = r.useState(!0),
+        W = r.useRef(0),
+        K = (0, I.M5)(U, w.p9.TIER_2),
         q = (0, A.n)(),
         X = null == q ? void 0 : q.countryCode,
         Q = (0, a.e7)([C.Z], () => (null != U ? C.Z.getUserProfile(U.id) : null)),
-        J = (0, a.e7)([I.Z], () => I.Z.hasFetched);
+        J = (0, a.e7)([N.Z], () => N.Z.hasFetched);
     return (r.useEffect(() => {
         J || d.MH();
     }, [J]),
     r.useEffect(() => {
         c.Z.wait(async () => {
             let e = Date.now();
-            await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(X, null, k.JjL.DISCOVERY), null != V && K && (0, j.Z)(V)]), (Y.current = Date.now() - e), W(!1);
+            await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(X, null, k.JjL.DISCOVERY), null != V && K && (0, j.Z)(V)]), (W.current = Date.now() - e), Y(!1);
         });
     }, [X, V, K]),
     r.useEffect(() => {
@@ -68,7 +68,7 @@ let B = function (e) {
         z ||
             T.default.track(k.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
                 location_stack: s,
-                load_duration_ms: Y.current
+                load_duration_ms: W.current
             });
     }, [s, z]),
     (0, a.e7)([O.Z], () => O.Z.enabled))

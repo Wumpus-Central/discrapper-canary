@@ -1,6 +1,6 @@
 n.d(t, {
-    R: () => z,
-    default: () => J
+    R: () => G,
+    default: () => q
 }),
     n(388685),
     n(415506);
@@ -28,24 +28,21 @@ var i,
     S = n(74538),
     v = n(937615),
     T = n(374649),
-    N = n(140465),
-    I = n(314684),
-    y = n(811334),
-    A = n(625881),
-    P = n(440984),
-    R = n(398775),
-    D = n(807163),
-    Z = n(311821),
-    w = n(42818),
-    k = n(798769),
-    L = n(459965),
-    B = n(119269),
-    M = n(474936),
-    U = n(735825),
-    V = n(981631),
-    G = n(388032),
-    F = n(868006);
-function H(e) {
+    I = n(140465),
+    N = n(811334),
+    y = n(625881),
+    A = n(440984),
+    P = n(398775),
+    R = n(807163),
+    D = n(311821),
+    Z = n(42818),
+    w = n(798769),
+    k = n(459965),
+    L = n(474936),
+    B = n(981631),
+    M = n(388032),
+    U = n(868006);
+function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -70,11 +67,11 @@ function H(e) {
     }
     return e;
 }
-var z = (((i = {})[(i.WHAT_YOU_LOSE = 1)] = 'WHAT_YOU_LOSE'), (i[(i.CONFIRM = 2)] = 'CONFIRM'), (i[(i.PREVIEW = 3)] = 'PREVIEW'), (i[(i.CONFIRM_DISCOUNT = 4)] = 'CONFIRM_DISCOUNT'), (i[(i.DISCOUNT_APPLIED = 5)] = 'DISCOUNT_APPLIED'), (i[(i.PAUSE_SELECT = 6)] = 'PAUSE_SELECT'), (i[(i.PAUSE_CONFIRM = 7)] = 'PAUSE_CONFIRM'), i);
-async function W(e) {
+var G = (((i = {})[(i.WHAT_YOU_LOSE = 1)] = 'WHAT_YOU_LOSE'), (i[(i.CONFIRM = 2)] = 'CONFIRM'), (i[(i.PREVIEW = 3)] = 'PREVIEW'), (i[(i.CONFIRM_DISCOUNT = 4)] = 'CONFIRM_DISCOUNT'), (i[(i.DISCOUNT_APPLIED = 5)] = 'DISCOUNT_APPLIED'), (i[(i.PAUSE_SELECT = 6)] = 'PAUSE_SELECT'), (i[(i.PAUSE_CONFIRM = 7)] = 'PAUSE_CONFIRM'), i);
+async function F(e) {
     let { premiumSubscription: t, onClose: n, setHasError: i, setIsCancelling: r, analyticsLocations: s, analyticsLocation: l } = e;
     try {
-        if ((r(!0), i(!1), [V.O0b.PAST_DUE, V.O0b.PAUSED, V.O0b.BILLING_RETRY].includes(t.status))) await (0, p.EO)(t.id, s, l);
+        if ((r(!0), i(!1), [B.O0b.PAST_DUE, B.O0b.PAUSED, B.O0b.BILLING_RETRY].includes(t.status))) await (0, p.EO)(t.id, s, l);
         else {
             var a, o;
             let e = null != (o = null == (a = t.renewalMutations) ? void 0 : a.items) ? o : t.items,
@@ -96,7 +93,7 @@ async function W(e) {
         i(!0), r(!1);
     }
 }
-function Y(e) {
+function H(e) {
     var t;
     let { premiumSubscription: n, premiumType: i, setStep: l, onClose: a, whatYouLoseExperienceEnabled: o, analyticsLocation: c } = e,
         d = (0, _.Q)(),
@@ -106,59 +103,59 @@ function Y(e) {
         { analyticsLocations: j } = (0, b.ZP)(),
         v = null;
     switch (n.status) {
-        case V.O0b.PAST_DUE:
-        case V.O0b.PAUSED:
-        case V.O0b.BILLING_RETRY:
-            v = G.intl.string(G.t.FClXh4);
+        case B.O0b.PAST_DUE:
+        case B.O0b.PAUSED:
+        case B.O0b.BILLING_RETRY:
+            v = M.intl.string(M.t.FClXh4);
             break;
         default:
             switch (i) {
-                case M.p9.TIER_0:
+                case L.p9.TIER_0:
                     v = d
-                        ? G.intl.format(G.t['l+A50N'], {
+                        ? M.intl.format(M.t['l+A50N'], {
                               date: n.currentPeriodEnd,
-                              helpdeskArticle: O.Z.getArticleURL(V.BhN.BLOCKED_PAYMENTS)
+                              helpdeskArticle: O.Z.getArticleURL(B.BhN.BLOCKED_PAYMENTS)
                           })
-                        : G.intl.format(G.t.Y6Wfa2, { date: n.currentPeriodEnd });
+                        : M.intl.format(M.t.Y6Wfa2, { date: n.currentPeriodEnd });
                     break;
-                case M.p9.TIER_1:
+                case L.p9.TIER_1:
                     v = d
-                        ? G.intl.format(G.t.QN7eIi, {
+                        ? M.intl.format(M.t.QN7eIi, {
                               date: n.currentPeriodEnd,
-                              helpdeskArticle: O.Z.getArticleURL(V.BhN.BLOCKED_PAYMENTS)
+                              helpdeskArticle: O.Z.getArticleURL(B.BhN.BLOCKED_PAYMENTS)
                           })
-                        : G.intl.format(G.t.X7i9Dw, { date: n.currentPeriodEnd });
+                        : M.intl.format(M.t.X7i9Dw, { date: n.currentPeriodEnd });
                     break;
                 default:
                     v = d
-                        ? G.intl.format(G.t.vuSNho, {
+                        ? M.intl.format(M.t.vuSNho, {
                               date: n.currentPeriodEnd,
-                              helpdeskArticle: O.Z.getArticleURL(V.BhN.BLOCKED_PAYMENTS)
+                              helpdeskArticle: O.Z.getArticleURL(B.BhN.BLOCKED_PAYMENTS)
                           })
-                        : G.intl.format(G.t.fCdmNj, { date: n.currentPeriodEnd });
+                        : M.intl.format(M.t.fCdmNj, { date: n.currentPeriodEnd });
             }
     }
     let T =
             (n.items.some((e) => {
                 let { planId: t } = e;
-                return !M.dJ.has(t);
+                return !L.dJ.has(t);
             }) &&
                 null == n.renewalMutations) ||
             (null == (t = n.renewalMutations)
                 ? void 0
                 : t.items.find((e) => {
                       let { planId: t } = e;
-                      return !M.dJ.has(t);
+                      return !L.dJ.has(t);
                   })) != null
                 ? (0, r.jsx)(g.zxk, {
                       onClick: () => l(3),
-                      children: G.intl.string(G.t.PDTjLC)
+                      children: M.intl.string(M.t.PDTjLC)
                   })
                 : (0, r.jsx)(g.zxk, {
                       color: g.zxk.Colors.RED,
                       disabled: u,
                       onClick: async () => {
-                          await W({
+                          await F({
                               setHasError: E,
                               onClose: a,
                               premiumSubscription: n,
@@ -167,20 +164,20 @@ function Y(e) {
                               analyticsLocation: c
                           });
                       },
-                      children: o ? G.intl.string(G.t['cY+Ooa']) : G.intl.formatToPlainString(G.t['V3+Rpa'], { planPremiumType: S.ZP.getDisplayPremiumType(n.planId) })
+                      children: o ? M.intl.string(M.t['cY+Ooa']) : M.intl.formatToPlainString(M.t['V3+Rpa'], { planPremiumType: S.ZP.getDisplayPremiumType(n.planId) })
                   }),
-        N = (0, r.jsx)(g.zxk, {
+        I = (0, r.jsx)(g.zxk, {
             look: g.zxk.Looks.LINK,
             color: (0, m.ap)(C) ? g.zxk.Colors.PRIMARY : g.zxk.Colors.WHITE,
             onClick: a,
-            children: o ? G.intl.string(G.t.h9tkAA) : G.intl.string(G.t['ETE/oK'])
+            children: o ? M.intl.string(M.t.h9tkAA) : M.intl.string(M.t['ETE/oK'])
         });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             o
-                ? (0, r.jsx)(k.Z, {
+                ? (0, r.jsx)(w.Z, {
                       premiumType: i,
-                      className: F.cancellationHeader,
+                      className: U.cancellationHeader,
                       onClose: a
                   })
                 : (0, r.jsxs)(g.xBx, {
@@ -188,32 +185,32 @@ function Y(e) {
                       children: [
                           (0, r.jsx)(g.vwX, {
                               tag: g.RB0.H4,
-                              children: G.intl.format(G.t.ZpiGy8, { planPremiumType: S.ZP.getDisplayPremiumType(n.planId) })
+                              children: M.intl.format(M.t.ZpiGy8, { planPremiumType: S.ZP.getDisplayPremiumType(n.planId) })
                           }),
                           (0, r.jsx)(g.olH, { onClick: a })
                       ]
                   }),
             (0, r.jsxs)(g.hzk, {
-                className: F.body,
+                className: U.body,
                 children: [
                     f
                         ? (0, r.jsx)(g.kzN, {
-                              className: F.errorBlock,
-                              children: G.intl.string(G.t['5mlOCQ'])
+                              className: U.errorBlock,
+                              children: M.intl.string(M.t['5mlOCQ'])
                           })
                         : null,
-                    (0, r.jsx)('div', { className: F.cancelImage }),
+                    (0, r.jsx)('div', { className: U.cancelImage }),
                     (0, r.jsx)('div', { children: v })
                 ]
             }),
             (0, r.jsxs)(g.mzw, {
                 justify: x.Z.Justify.START,
-                children: [T, N]
+                children: [T, I]
             })
         ]
     });
 }
-function K(e) {
+function z(e) {
     var t, n;
     let { premiumSubscription: i } = e,
         { analyticsLocations: s } = (0, b.ZP)(),
@@ -225,31 +222,31 @@ function K(e) {
             analyticsLocation: f.Z.CANCEL_INVOICE_PREVIEW
         }),
         a = (0, u.e7)([E.Z], () => E.Z.get(i.planId));
-    if (null == l || null == a) return (0, r.jsx)(g.$jN, { className: F.loading });
+    if (null == l || null == a) return (0, r.jsx)(g.$jN, { className: U.loading });
     let { intervalType: o, intervalCount: c } = S.ZP.getIntervalForInvoice(l);
     return (0, r.jsxs)('div', {
-        className: F.__invalid_bodyText,
+        className: U.__invalid_bodyText,
         children: [
             (0, r.jsx)('div', {
-                className: F.renewalInvoiceDate,
+                className: U.renewalInvoiceDate,
                 children:
                     0 !== l.total
-                        ? G.intl.format(G.t.ycyeBw, {
+                        ? M.intl.format(M.t.ycyeBw, {
                               renewalDate: l.subscriptionPeriodStart,
                               rate: (0, v.og)((0, v.T4)(l.total, l.currency), o, c)
                           })
-                        : G.intl.format(G.t['+y0Tj4'], { renewalDate: l.subscriptionPeriodStart })
+                        : M.intl.format(M.t['+y0Tj4'], { renewalDate: l.subscriptionPeriodStart })
             }),
-            (0, r.jsxs)(y.aO, {
+            (0, r.jsxs)(N.aO, {
                 children: [
-                    (0, r.jsx)(y.Z9, { children: G.intl.string(G.t.iqhIp6) }),
-                    (0, r.jsx)(y.B1, {
-                        label: G.intl.formatToPlainString(G.t.r3jVZm, { planName: S.ZP.getDisplayName(a.id) }),
+                    (0, r.jsx)(N.Z9, { children: M.intl.string(M.t.iqhIp6) }),
+                    (0, r.jsx)(N.B1, {
+                        label: M.intl.formatToPlainString(M.t.r3jVZm, { planName: S.ZP.getDisplayName(a.id) }),
                         value: (0, S.PK)(a),
-                        className: F.invoiceCancelRow
+                        className: U.invoiceCancelRow
                     }),
-                    (0, r.jsx)(y.UN, {}),
-                    (0, r.jsx)(w.nd, {
+                    (0, r.jsx)(N.UN, {}),
+                    (0, r.jsx)(Z.nd, {
                         premiumSubscription: i,
                         renewalInvoice: l,
                         isUpdate: !0
@@ -259,27 +256,27 @@ function K(e) {
         ]
     });
 }
-function q(e) {
+function Y(e) {
     let { premiumSubscription: t, premiumType: n, onBack: i, onClose: l, analyticsLocation: o } = e,
         [c, d] = s.useState(!1),
         [u, m] = s.useState(!1),
         { analyticsLocations: p } = (0, b.ZP)();
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(k.Z, {
+            (0, r.jsx)(w.Z, {
                 premiumType: n,
                 onClose: l
             }),
             (0, r.jsxs)(g.hzk, {
-                className: a()(F.previewStep, F.body),
+                className: a()(U.previewStep, U.body),
                 children: [
                     u
                         ? (0, r.jsx)(g.kzN, {
-                              className: F.errorBlock,
-                              children: G.intl.string(G.t['5mlOCQ'])
+                              className: U.errorBlock,
+                              children: M.intl.string(M.t['5mlOCQ'])
                           })
                         : null,
-                    (0, r.jsx)(K, { premiumSubscription: t })
+                    (0, r.jsx)(z, { premiumSubscription: t })
                 ]
             }),
             (0, r.jsxs)(g.mzw, {
@@ -290,7 +287,7 @@ function q(e) {
                         color: g.zxk.Colors.RED,
                         disabled: c,
                         onClick: async () => {
-                            await W({
+                            await F({
                                 setHasError: m,
                                 onClose: l,
                                 premiumSubscription: t,
@@ -299,15 +296,15 @@ function q(e) {
                                 analyticsLocation: o
                             });
                         },
-                        children: G.intl.format(G.t['V3+Rpa'], { planPremiumType: S.ZP.getDisplayPremiumType(t.planId) })
+                        children: M.intl.format(M.t['V3+Rpa'], { planPremiumType: S.ZP.getDisplayPremiumType(t.planId) })
                     }),
-                    (0, r.jsx)(Z.Z, { onClick: i })
+                    (0, r.jsx)(D.Z, { onClick: i })
                 ]
             })
         ]
     });
 }
-function X(e) {
+function W(e) {
     var t;
     return {
         subscription_id: e.id,
@@ -317,7 +314,7 @@ function X(e) {
         subscription_status: e.status
     };
 }
-let Q = {
+let K = {
     1: "What You're Losing",
     2: 'Confirm Cancellation',
     3: 'Preview Updated Subscription',
@@ -326,42 +323,39 @@ let Q = {
     6: 'Select Pause Duration',
     7: 'Confirm Pause Duration'
 };
-function J(e) {
+function q(e) {
     var t;
     let n,
         { premiumSubscription: i, transitionState: l, onClose: a, analyticsLocations: c, analyticsLocation: u, initialStep: p } = e,
         _ = s.useRef(new o.qA()),
         [x, E] = s.useState(null),
-        O = (0, I.Er)(),
-        v = (null == O ? void 0 : O.showCard) === !0,
-        T = (null == O ? void 0 : O.tenureRewardType) === U.nW.AVATAR_DECO,
-        y = null == (t = (0, S.Af)(i)) ? void 0 : t.planId,
-        Z = null != y ? S.ZP.getPremiumType(y) : null;
-    d()(null != Z, 'Should not be cancelling Nitro without premiumType');
-    let w = (0, h.ZP)();
+        O = null == (t = (0, S.Af)(i)) ? void 0 : t.planId,
+        v = null != O ? S.ZP.getPremiumType(O) : null;
+    d()(null != v, 'Should not be cancelling Nitro without premiumType');
+    let T = (0, h.ZP)();
     s.useEffect(() => {
-        C.default.track(V.rMx.CANCELLATION_FLOW_STARTED, X(i));
+        C.default.track(B.rMx.CANCELLATION_FLOW_STARTED, W(i));
     }, [i]);
-    let k = Z === M.p9.TIER_0 || Z === M.p9.TIER_1 || Z === M.p9.TIER_2;
-    null == p && (p = k ? 1 : 2);
-    let { analyticsLocations: z } = (0, b.ZP)(c, f.Z.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
-        [W, K, J, $] = (function (e, t, n) {
+    let N = v === L.p9.TIER_0 || v === L.p9.TIER_1 || v === L.p9.TIER_2;
+    null == p && (p = N ? 1 : 2);
+    let { analyticsLocations: D } = (0, b.ZP)(c, f.Z.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
+        [Z, w, G, F] = (function (e, t, n) {
             let [i, r] = s.useState(e),
                 [l, a] = s.useState(Date.now()),
                 [o] = s.useState(Date.now()),
                 c = s.useCallback(
                     (e) => {
                         C.default.track(
-                            V.rMx.CANCELLATION_FLOW_STEP,
-                            H(
+                            B.rMx.CANCELLATION_FLOW_STEP,
+                            V(
                                 {
-                                    from_step: Q[i],
-                                    to_step: Q[e],
+                                    from_step: K[i],
+                                    to_step: K[e],
                                     step_duration_ms: Date.now() - l,
                                     flow_duration_ms: Date.now() - o,
                                     location_stack: n
                                 },
-                                X(t)
+                                W(t)
                             )
                         ),
                             r(e),
@@ -371,50 +365,50 @@ function J(e) {
                 );
             return [i, c, l, o];
         })(p, i, c),
-        [ee, et] = s.useState(null);
-    (0, L.w)(i, a, !1);
-    let en = (e) => {
+        [z, q] = s.useState(null);
+    (0, k.w)(i, a, !1);
+    let X = (e) => {
             a(),
                 C.default.track(
-                    V.rMx.CANCELLATION_FLOW_STEP,
-                    H(
+                    B.rMx.CANCELLATION_FLOW_STEP,
+                    V(
                         {
-                            from_step: Q[e],
+                            from_step: K[e],
                             to_step: null,
-                            step_duration_ms: Date.now() - J,
-                            flow_duration_ms: Date.now() - $,
+                            step_duration_ms: Date.now() - G,
+                            flow_duration_ms: Date.now() - F,
                             location_stack: c
                         },
-                        X(i)
+                        W(i)
                     )
                 );
         },
-        ei = (0, N.UV)(),
-        { churnUserDiscountOffer: er, isFetchingChurnDiscountOffer: es } = (0, N.WR)(!ei || 1 !== W);
-    switch (W) {
+        Q = (0, I.UV)(),
+        { churnUserDiscountOffer: J, isFetchingChurnDiscountOffer: $ } = (0, I.WR)(!Q || 1 !== Z);
+    switch (Z) {
         case 6:
-            n = (0, r.jsx)(R.of, {
+            n = (0, r.jsx)(P.of, {
                 premiumSubscription: i,
-                premiumType: Z,
-                setStep: K,
-                onClose: () => en(W),
-                pauseDuration: ee,
-                setPauseDuration: et,
+                premiumType: v,
+                setStep: w,
+                onClose: () => X(Z),
+                pauseDuration: z,
+                setPauseDuration: q,
                 footer: (0, r.jsxs)('div', {
-                    className: F.whatYouLoseButtonContainer,
+                    className: U.whatYouLoseButtonContainer,
                     children: [
                         (0, r.jsx)(g.zxk, {
-                            disabled: null === ee,
+                            disabled: null === z,
                             onClick: () => {
-                                0 === ee ? K(1) : K(7);
+                                0 === z ? w(1) : w(7);
                             },
-                            children: G.intl.string(G.t['3PatS0'])
+                            children: M.intl.string(M.t['3PatS0'])
                         }),
                         (0, r.jsx)(g.zxk, {
                             look: g.zxk.Looks.LINK,
-                            color: (0, m.wj)(w) ? g.zxk.Colors.WHITE : g.zxk.Colors.PRIMARY,
+                            color: (0, m.wj)(T) ? g.zxk.Colors.WHITE : g.zxk.Colors.PRIMARY,
                             onClick: a,
-                            children: G.intl.string(G.t.h9tkAA)
+                            children: M.intl.string(M.t.h9tkAA)
                         })
                     ]
                 }),
@@ -422,7 +416,7 @@ function J(e) {
             });
             break;
         case 7:
-            if (null == ee) {
+            if (null == z) {
                 let e = Error('No pause duration to set');
                 throw (
                     ((0, j.q2)(e, {
@@ -434,106 +428,90 @@ function J(e) {
                     e)
                 );
             }
-            n = (0, r.jsx)(R.Sz, {
+            n = (0, r.jsx)(P.Sz, {
                 premiumSubscription: i,
-                premiumType: Z,
-                setStep: K,
-                onClose: () => en(W),
+                premiumType: v,
+                setStep: w,
+                onClose: () => X(Z),
                 analyticsLocation: u,
-                pauseDuration: ee
+                pauseDuration: z
             });
             break;
         case 1:
-            n = (0, r.jsx)(D.Z, {
-                premiumType: Z,
-                titleText: G.intl.string(G.t.PWq8TE),
-                subtitleText: v ? G.intl.string(G.t.QagLCA) : G.intl.format(G.t.nsGVzs, {}),
-                subtitleClassName: v ? F.subtitleSection : void 0,
-                subtitleIcon:
-                    v &&
-                    (0, r.jsx)('div', {
-                        className: F.subtitleIcon,
-                        children: (0, r.jsx)(B.ZP, {
-                            staticPercentage: 100,
-                            iconClassName: F.iconClassName,
-                            showAnimations: !1,
-                            innerCircleClassName: F.innerCircle,
-                            progressCircleVariation: T ? B.Qo.AVATAR_DECO : B.Qo.NITRO_GEM,
-                            avatarDecoAssetDescription: G.intl.string(G.t['9o4F4+']),
-                            avatarDecoAssetId: T ? U.VA : void 0,
-                            progressCircleStrokeSize: 5,
-                            backgroundCircleSize: '38%'
-                        })
-                    }),
+            n = (0, r.jsx)(R.Z, {
+                premiumType: v,
+                titleText: M.intl.string(M.t.PWq8TE),
+                subtitleText: M.intl.format(M.t.nsGVzs, {}),
+                subtitleClassName: void 0,
                 footer: (0, r.jsxs)('div', {
-                    className: F.whatYouLoseButtonContainer,
+                    className: U.whatYouLoseButtonContainer,
                     children: [
                         (0, r.jsx)(g.zxk, {
-                            onClick: () => K(2),
-                            children: G.intl.string(G.t['3PatS0'])
+                            onClick: () => w(2),
+                            children: M.intl.string(M.t['3PatS0'])
                         }),
                         (0, r.jsx)(g.zxk, {
                             look: g.zxk.Looks.LINK,
-                            color: (0, m.wj)(w) ? g.zxk.Colors.WHITE : g.zxk.Colors.PRIMARY,
-                            onClick: () => en(W),
-                            children: G.intl.string(G.t.h9tkAA)
+                            color: (0, m.wj)(T) ? g.zxk.Colors.WHITE : g.zxk.Colors.PRIMARY,
+                            onClick: () => X(Z),
+                            children: M.intl.string(M.t.h9tkAA)
                         })
                     ]
                 }),
-                onClose: () => en(W),
-                onDiscountClaim: () => K(4),
-                onContinue: () => K(2),
-                isLoading: ei && es,
-                churnUserDiscountOffer: er,
-                analyticsLocations: z
+                onClose: () => X(Z),
+                onDiscountClaim: () => w(4),
+                onContinue: () => w(2),
+                isLoading: Q && $,
+                churnUserDiscountOffer: J,
+                analyticsLocations: D
             });
             break;
         case 2:
-            n = (0, r.jsx)(Y, {
+            n = (0, r.jsx)(H, {
                 premiumSubscription: i,
-                premiumType: Z,
-                setStep: K,
-                onClose: () => en(W),
-                whatYouLoseExperienceEnabled: k,
+                premiumType: v,
+                setStep: w,
+                onClose: () => X(Z),
+                whatYouLoseExperienceEnabled: N,
                 analyticsLocation: u
             });
             break;
         case 3:
-            n = (0, r.jsx)(q, {
+            n = (0, r.jsx)(Y, {
                 premiumSubscription: i,
-                premiumType: Z,
-                onBack: () => K(2),
-                onClose: () => en(W),
+                premiumType: v,
+                onBack: () => w(2),
+                onClose: () => X(Z),
                 analyticsLocation: u
             });
             break;
         case 4:
-            n = (0, r.jsx)(A.Z, {
+            n = (0, r.jsx)(y.Z, {
                 premiumSubscription: i,
-                premiumType: Z,
-                onClose: () => en(W),
-                onConfirm: () => K(5),
-                userDiscountOffer: er
+                premiumType: v,
+                onClose: () => X(Z),
+                onConfirm: () => w(5),
+                userDiscountOffer: J
             });
             break;
         case 5:
-            n = (0, r.jsx)(P.D, {
+            n = (0, r.jsx)(A.D, {
                 premiumSubscription: i,
-                premiumType: Z,
-                onClose: () => en(W),
+                premiumType: v,
+                onClose: () => X(Z),
                 confettiCanvas: x,
-                userDiscountOffer: er
+                userDiscountOffer: J
             });
             break;
         default:
-            throw Error('Unexpected step: '.concat(W));
+            throw Error('Unexpected step: '.concat(Z));
     }
     return (0, r.jsxs)(b.Gt, {
-        value: z,
+        value: D,
         children: [
             (0, r.jsx)(o.O_, {
                 ref: E,
-                className: F.confettiCanvas,
+                className: U.confettiCanvas,
                 environment: _.current
             }),
             (0, r.jsx)(g.Y0X, {

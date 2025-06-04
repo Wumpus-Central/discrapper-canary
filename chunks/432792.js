@@ -92,10 +92,7 @@ let C = () => (0, g.Lk)(document.body.style.getPropertyValue('--custom-app-panel
         return (0, i.jsx)(m.Z, {
             dismissibleContent: l.z.COLLECTIBLES_NAMEPLATE_SHOP_COACHMARK,
             inlineArt: !0,
-            tryItText: (0, i.jsx)(a.Text, {
-                variant: 'text-sm/medium',
-                children: r
-            }),
+            tryItText: r,
             onTryFeature: s,
             header: (0, i.jsx)(a.X6q, {
                 className: _.title,
@@ -169,16 +166,16 @@ function T(e) {
         shouldPollPositionOnMount: !0,
         targetElementRef: c
     });
-    let N = r.useMemo(() => (u ? (null != d ? d : 'bottom') : f ? 'top' : 'bottom'), [u, d, f]),
-        I = _ && !j,
-        y = r.Children.map(s, (e) => r.cloneElement(e, { align: N }));
+    let I = r.useMemo(() => (u ? (null != d ? d : 'bottom') : f ? 'top' : 'bottom'), [u, d, f]),
+        N = _ && !j,
+        y = r.Children.map(s, (e) => r.cloneElement(e, { align: I }));
     return (0, i.jsx)(a.yRy, {
         autoInvert: !1,
         renderPopout: () => y,
         position: p,
-        align: N,
+        align: I,
         nudgeAlignIntoViewport: !1,
-        shouldShow: I,
+        shouldShow: N,
         spacing: g,
         positionKey: E,
         animation: a.yRy.Animation.TRANSLATE,

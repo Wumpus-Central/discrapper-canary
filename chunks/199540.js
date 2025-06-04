@@ -86,8 +86,8 @@ function b(e) {
             onHoverChange: C,
             onKeyDown: j,
             treeItemProps: { onFocus: S },
-            'aria-setsize': E,
-            'aria-posinset': x
+            'aria-setsize': x,
+            'aria-posinset': E
         } = e,
         P = (function (e, t) {
             if (null == e) return {};
@@ -116,7 +116,7 @@ function b(e) {
             s || w(!1), null == C || C(!1);
         }, [s, C]),
         T = o || null == u ? null : (0, h.Or)(u),
-        R = !o && d > 0 ? (0, h.Ne)(d, g ? c.Z.BACKGROUND_ACCENT : c.Z.STATUS_DANGER) : null;
+        A = !o && d > 0 ? (0, h.Ne)(d, g ? c.Z.BACKGROUND_ACCENT : c.Z.STATUS_DANGER) : null;
     return (0, r.jsx)(a.tEY, {
         children: (0, r.jsx)(
             a.P3F,
@@ -160,14 +160,14 @@ function b(e) {
             (n = n =
                 {
                     role: 'treeitem',
-                    'aria-setsize': E,
-                    'aria-posinset': x,
+                    'aria-setsize': x,
+                    'aria-posinset': E,
                     'aria-expanded': o,
                     'aria-owns': y,
                     children: (0, r.jsxs)(a.aRk, {
                         isFolder: !0,
                         upperBadge: T,
-                        lowerBadge: R,
+                        lowerBadge: A,
                         lowerBadgeSize: { width: (0, a.OVM)(d) },
                         children: [
                             (0, r.jsx)(a.nn4, {

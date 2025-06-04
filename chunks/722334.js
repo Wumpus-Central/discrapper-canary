@@ -1,30 +1,31 @@
-n.d(t, { W: () => b });
+n.d(t, { W: () => E });
 var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    a = n(481060),
-    o = n(626135),
-    s = n(617136),
-    c = n(497505),
-    u = n(266843),
-    d = n(341907),
-    p = n(46140),
-    m = n(981631),
-    f = n(388032),
-    h = n(355060),
-    g = n(87181);
-function _(e) {
+    a = n(772848),
+    o = n(481060),
+    s = n(626135),
+    c = n(617136),
+    u = n(497505),
+    d = n(266843),
+    p = n(341907),
+    m = n(46140),
+    f = n(981631),
+    h = n(388032),
+    g = n(355060),
+    _ = n(87181);
+function b(e) {
     let { questId: t } = e;
     return (0, r.jsx)('div', {
-        className: h.buttonContainer,
-        children: (0, r.jsx)(a.zxk, {
-            className: h.button,
-            color: a.Ttl.BRAND,
+        className: g.buttonContainer,
+        children: (0, r.jsx)(o.zxk, {
+            className: g.button,
+            color: o.Ttl.BRAND,
             onClick: () => {
-                (0, d.navigateToQuestHome)({ fromContent: c.jn.EXCLUDED_QUEST_EMBED }),
-                    o.default.track(
-                        m.rMx.QUEST_CONTENT_CLICKED,
+                (0, p.navigateToQuestHome)({ fromContent: u.jn.EXCLUDED_QUEST_EMBED }),
+                    s.default.track(
+                        f.rMx.QUEST_CONTENT_CLICKED,
                         (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -52,54 +53,55 @@ function _(e) {
                         })(
                             {
                                 quest_id: t,
-                                cta_name: s.jZ.VIEW_QUESTS,
+                                click_id: (0, a.Z)(),
+                                cta_name: c.jZ.VIEW_QUESTS,
                                 is_targeted: !1
                             },
-                            (0, s.mH)(c.jn.EXCLUDED_QUEST_EMBED)
+                            (0, c.mH)(u.jn.EXCLUDED_QUEST_EMBED)
                         )
                     );
             },
-            children: f.intl.string(f.t.GURBQk)
+            children: h.intl.string(h.t.GURBQk)
         })
     });
 }
-function b(e) {
+function E(e) {
     let { questId: t } = e,
-        { containerRef: n, size: i } = (0, u.h)();
+        { containerRef: n, size: i } = (0, d.h)();
     return (
-        (0, s.Zk)(p.V_.EXCLUDED_QUEST, t),
+        (0, c.Zk)(m.V_.EXCLUDED_QUEST, t),
         (0, r.jsxs)('div', {
             ref: (e) => {
                 n.current = e;
             },
-            className: l()(h.container, {
-                [h.wide]: 'lg' === i,
-                [h.tall]: 'lg' !== i
+            className: l()(g.container, {
+                [g.wide]: 'lg' === i,
+                [g.tall]: 'lg' !== i
             }),
             children: [
                 (0, r.jsxs)('div', {
-                    className: h.contentContainer,
+                    className: g.contentContainer,
                     children: [
-                        (0, r.jsx)(a.X6q, {
+                        (0, r.jsx)(o.X6q, {
                             variant: 'lg' === i ? 'heading-xl/bold' : 'heading-lg/bold',
                             color: 'header-primary',
-                            children: f.intl.string(f.t.vnP31d)
+                            children: h.intl.string(h.t.vnP31d)
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(o.Text, {
                             variant: 'lg' === i ? 'text-sm/medium' : 'text-xs/medium',
                             color: 'text-normal',
-                            className: h.__invalid_mobileWebCopy,
-                            children: f.intl.string(f.t.nuWSYW)
+                            className: g.__invalid_mobileWebCopy,
+                            children: h.intl.string(h.t.nuWSYW)
                         }),
-                        (0, r.jsx)(_, { questId: t })
+                        (0, r.jsx)(b, { questId: t })
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: h.imgContainer,
+                    className: g.imgContainer,
                     children: (0, r.jsx)('img', {
-                        src: g,
+                        src: _,
                         alt: '',
-                        className: h.missingQuestImage
+                        className: g.missingQuestImage
                     })
                 })
             ]

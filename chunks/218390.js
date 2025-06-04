@@ -27,8 +27,8 @@ var i = n(255367),
     S = n(211242),
     v = n(975298),
     T = n(15640),
-    N = n(89057),
-    I = n(406128),
+    I = n(89057),
+    N = n(406128),
     y = n(703656),
     A = n(246946),
     P = n(594174),
@@ -46,8 +46,8 @@ var i = n(255367),
     F = n(533525),
     H = n(232076),
     z = n(767714),
-    W = n(382791),
-    Y = n(823188),
+    Y = n(382791),
+    W = n(823188),
     K = n(504865),
     q = n(179984),
     X = n(386733),
@@ -74,10 +74,10 @@ function ea(e) {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (l || !a) &&
-                    (0, i.jsx)(W.Cy, {
+                    (0, i.jsx)(Y.Cy, {
                         text: l ? $.intl.string($.t.qYKftb) : $.intl.string($.t.EyjDRE),
                         className: ee.topRimPillWithSparkles,
-                        colorOptions: (0, u.wj)(s) ? W.VE.PREMIUM_TIER_2_WHITE_FILL : W.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
+                        colorOptions: (0, u.wj)(s) ? Y.VE.PREMIUM_TIER_2_WHITE_FILL : Y.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                     }),
                 (l || !a) && (0, i.jsx)('div', { className: ee.rimGlowTier2 }),
                 (0, i.jsx)(m.X6q, {
@@ -131,10 +131,10 @@ function eo() {
                     g && !o
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(W.mn, {
+                                  (0, i.jsx)(Y.mn, {
                                       text: $.intl.string($.t.uXF4c3),
                                       className: ee.fractionalPremiumTopRimPill,
-                                      colorOptions: W.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
+                                      colorOptions: Y.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                                   }),
                                   (0, i.jsx)(m.X6q, {
                                       variant: 'heading-md/normal',
@@ -154,10 +154,10 @@ function eo() {
                           : o
                             ? (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, i.jsx)(W.Cy, {
+                                      (0, i.jsx)(Y.Cy, {
                                           text: $.intl.string($.t.qYKftb),
                                           className: ee.topRimPillWithSparkles,
-                                          colorOptions: (0, u.wj)(r) ? W.VE.PREMIUM_TIER_2_WHITE_FILL : W.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
+                                          colorOptions: (0, u.wj)(r) ? Y.VE.PREMIUM_TIER_2_WHITE_FILL : Y.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                                       }),
                                       (0, i.jsx)(m.X6q, {
                                           variant: 'heading-md/normal',
@@ -168,7 +168,7 @@ function eo() {
                                   ]
                               })
                             : null,
-                    (0, i.jsx)(Y.nT, { featureSet: g ? Y.uZ.FRACTIONAL_PREMIUM : Y.uZ.DEFAULT }),
+                    (0, i.jsx)(W.nT, { featureSet: g ? W.uZ.FRACTIONAL_PREMIUM : W.uZ.DEFAULT }),
                     g && !d && (0, M.C)('nitro-settings-hero', e)
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
@@ -397,11 +397,11 @@ let eu = function () {
     }, [b, E, e]);
     let [D, w] = r.useState(!1);
     if (E) return (0, i.jsx)(_.Z, {});
-    if (e) return (0, i.jsx)(N.c8, {});
+    if (e) return (0, i.jsx)(I.c8, {});
     let k = s && null !== n && l,
         L = u.fetched && u.isFractionalPremiumActive;
     if (!k && !L && !a)
-        return (0, i.jsx)(I.Z, {
+        return (0, i.jsx)(N.Z, {
             title: $.intl.string($.t.dyq9TU),
             note: null
         });

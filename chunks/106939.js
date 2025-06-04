@@ -1,5 +1,5 @@
 n.d(t, {
-    M: () => Y,
+    M: () => W,
     Z: () => K
 });
 var i = n(255367),
@@ -26,8 +26,8 @@ var i = n(255367),
     S = n(695346),
     v = n(594174),
     T = n(626135),
-    N = n(260722),
-    I = n(914788),
+    I = n(260722),
+    N = n(914788),
     y = n(841409),
     A = n(652262),
     P = n(880257),
@@ -92,7 +92,7 @@ function z(e) {
         ]
     });
 }
-function W(e) {
+function Y(e) {
     let { theme: t, section: n, handleItemSelect: r } = e,
         s = (0, _.Dt)(),
         o = (0, R.gU)();
@@ -147,11 +147,11 @@ function W(e) {
             })
     });
 }
-function Y() {
+function W() {
     let e = (0, P.Z)(),
         t = (0, R.M8)(),
         n = (0, x.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
-        s = (0, c.e7)([I.Z], () => I.Z.getIsInitialized()),
+        s = (0, c.e7)([N.Z], () => N.Z.getIsInitialized()),
         l = (0, A.M)(),
         { selectedTab: a, handleTabChange: m } = (0, y.Z)(),
         h = (0, _.Dt)(),
@@ -160,7 +160,7 @@ function Y() {
         O = s && null != f && !E;
     (0, g.ZP)(() => {
         (0, j.e)('family-center'),
-            N.ZP.initialPageLoad(),
+            I.ZP.initialPageLoad(),
             n ||
                 (0, x.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
                     dismissAction: M.L.AUTO,
@@ -220,18 +220,18 @@ function K() {
         t = (0, P.Z)(),
         n = (0, R.M8)(),
         s = (0, x.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
-        a = (0, c.e7)([I.Z], () => I.Z.getIsInitialized()),
+        a = (0, c.e7)([N.Z], () => N.Z.getIsInitialized()),
         E = (0, A.M)(),
         D = (0, c.e7)([O.Z], () => O.Z.theme),
         { selectedTab: Z, handleTabChange: w } = (0, y.Z)(),
         F = (0, _.Dt)(),
         z = v.default.getCurrentUser(),
-        Y = null != t,
-        K = a && null != z && !Y;
+        W = null != t,
+        K = a && null != z && !W;
     (0, g.ZP)(() => {
         m.Y(L.Z5c.FAMILY_CENTER),
             (0, j.e)('family-center'),
-            !I.Z.isLoading() && I.Z.canRefetch() && N.ZP.initialPageLoad(),
+            !N.Z.isLoading() && N.Z.canRefetch() && I.ZP.initialPageLoad(),
             s ||
                 (0, x.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
                     dismissAction: M.L.AUTO,
@@ -250,7 +250,7 @@ function K() {
             X.current = q;
         }),
         r.useEffect(() => {
-            if (a && Y) {
+            if (a && W) {
                 let { isConsideredAdult: e, numOfAcceptedRequests: t, selectedTab: n, selectedTeenId: i } = X.current;
                 T.default.track(L.rMx.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: e,
@@ -261,7 +261,7 @@ function K() {
                 }),
                     C.Z.increment({ name: o.V.FAMILY_CENTER_VIEW });
             }
-        }, [a, Y]),
+        }, [a, W]),
         r.useEffect(() => {
             let e = S.Ex.getSetting();
             a && t && void 0 === e && S.Ex.updateSetting(!0);
@@ -281,7 +281,7 @@ function K() {
             'aria-label': V.intl.string(U.default.RZqaJi),
             children: [
                 (0, i.jsx)(b.yY, { location: V.intl.string(U.default.RZqaJi) }),
-                (0, i.jsx)(W, {
+                (0, i.jsx)(Y, {
                     theme: D,
                     section: Q,
                     handleItemSelect: (e) => {

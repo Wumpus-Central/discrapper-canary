@@ -23,8 +23,8 @@ var i = n(255367),
     S = n(140465),
     v = n(278605),
     T = n(585612),
-    N = n(286961),
-    I = n(91802),
+    I = n(286961),
+    N = n(91802),
     y = n(639119),
     A = n(8647),
     P = n(784238),
@@ -42,8 +42,8 @@ var i = n(255367),
     F = n(179984),
     H = n(706542),
     z = n(851001),
-    W = n(304576),
-    Y = n(560223),
+    Y = n(304576),
+    W = n(560223),
     K = n(301724),
     q = n(391110),
     X = n(71363),
@@ -75,7 +75,7 @@ let ed = (e) => {
                   className: l()(en.whatsNewSectionBackground, { [en.whatsNewSectionBackgroundV2]: a }),
                   children: [
                       !a &&
-                          (0, i.jsx)(Y.Z, {
+                          (0, i.jsx)(W.Z, {
                               variant: q.gM.WHATS_NEW,
                               isFullScreen: t
                           }),
@@ -85,7 +85,7 @@ let ed = (e) => {
                               isReducedMotion: o
                           }),
                       !a &&
-                          (0, i.jsx)(Y.Z, {
+                          (0, i.jsx)(W.Z, {
                               isFullScreen: t,
                               showAllPerksButton: t
                                   ? (0, i.jsx)(Q.Z, {
@@ -116,7 +116,7 @@ let ed = (e) => {
         (0, _.z)(b.X);
         let M = L === J.EZ.ApplicationStoreHome,
             V = r.useRef(null),
-            Y = r.useRef(null),
+            W = r.useRef(null),
             K = r.useRef(null),
             Q = r.useRef(null),
             eg = r.useRef(null),
@@ -131,8 +131,8 @@ let ed = (e) => {
             ej = (0, T.C)('PremiumMarketingHome'),
             eO = ((eC && !eE) || (eE && ej)) && M,
             [eS, ev] = r.useState(!1),
-            [eT, eN] = r.useState(!1),
-            [eI, ey] = r.useState(!1),
+            [eT, eI] = r.useState(!1),
+            [eN, ey] = r.useState(!1),
             [eA, eP] = r.useState(!1),
             eR = (0, j.rO)(),
             [eD, eZ] = r.useState(!1),
@@ -140,15 +140,15 @@ let ed = (e) => {
             ek = null != ew ? (0, O.Af)(ew) : null,
             eL = null != ek ? O.ZP.getSkuIdForPlan(ek.planId) : null,
             eB = null !== eL && eL !== J.Si.TIER_2 ? J.Si.TIER_2 : null,
-            eM = (0, I.n)(),
+            eM = (0, N.n)(),
             eU = null != eM,
             [eV, eG] = r.useState(!1),
             eF = (0, y.N)(),
             eH = null == eF || null == (t = eF.subscription_trial) ? void 0 : t.sku_id,
             ez = (0, S.Nx)(),
-            eW = (0, Z.Vi)(),
-            eY = null != eW && eW,
-            eK = null == (n = (0, N.Z)()) ? void 0 : n.billingSettingsMarketingBanner,
+            eY = (0, Z.Vi)(),
+            eW = null != eY && eY,
+            eK = null == (n = (0, I.Z)()) ? void 0 : n.billingSettingsMarketingBanner,
             { analyticsLocations: eq } = (0, h.ZP)(p.Z.PREMIUM_MARKETING),
             eX = 'PremiumMarketingHome';
         (0, u.j)({
@@ -200,7 +200,7 @@ let ed = (e) => {
                                       showIcon: !1,
                                       subscriptionTier: J.Si.TIER_2,
                                       className: en.marginTopForButtons,
-                                      hasActivePromotion: eY,
+                                      hasActivePromotion: eW,
                                       textOptions: { textClassName: eO ? en.v2SubButtonText : en.subButtonText },
                                       buttonShineClassName: en.buttonShine
                                   })
@@ -255,7 +255,7 @@ let ed = (e) => {
                                       threshold: 0,
                                       active: !0,
                                       children: eO
-                                          ? (0, i.jsx)(W.Z, {
+                                          ? (0, i.jsx)(Y.Z, {
                                                 ref: Q,
                                                 subscriptionTier: eB,
                                                 isFullscreen: s || ez,
@@ -271,8 +271,8 @@ let ed = (e) => {
                                                     [en.fullscreenHero]: s,
                                                     [en.settingsHeroNoBackground]: !s && ez,
                                                     [en.trialMarketingMargin]: ez,
-                                                    [en.settingsHeroBogoHeight]: !s && eW,
-                                                    [en.settingsHeroBogoMarginFullscreen]: s && eW,
+                                                    [en.settingsHeroBogoHeight]: !s && eY,
+                                                    [en.settingsHeroBogoMarginFullscreen]: s && eY,
                                                     [en.noTopPaddingOverride]: null != ew
                                                 }),
                                                 entrypoint: L,
@@ -289,7 +289,7 @@ let ed = (e) => {
                                               poster: eo.Z,
                                               loop: !0,
                                               className: en.heroHeadingV2Art,
-                                              ref: Y,
+                                              ref: W,
                                               children: (0, i.jsx)('source', {
                                                   src: eR ? ea.Z : ec.Z,
                                                   type: eR ? ee.m.MP4 : ee.m.WEBM
@@ -352,7 +352,7 @@ let ed = (e) => {
                     }),
                     !eO && (0, i.jsx)('div', { className: s ? en.footerSpacingFullscreen : en.footerSpacing }),
                     (0, i.jsx)(G.Z, {
-                        isVisible: !eS && !eI && !eT && eD,
+                        isVisible: !eS && !eN && !eT && eD,
                         isFullscreen: s,
                         subscriptionTier: eB,
                         isMarketingPageV2: eO
@@ -379,7 +379,7 @@ let ed = (e) => {
                         (0, i.jsx)(o.$, {
                             innerRef: eh,
                             onChange: (e) => {
-                                eN(e);
+                                eI(e);
                             },
                             children: (0, i.jsx)(z.Z, {
                                 ref: eh,

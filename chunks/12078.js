@@ -61,7 +61,11 @@ function _(e, t) {
 function v(e) {
     let { profile: t, canManageGuild: n, handleClick: i, hasCustomBanner: l } = e,
         a = (0, c.nv)(),
-        u = (0, c.qw)(t, a.hex());
+        u = (0, c.qw)({
+            profile: t,
+            defaultColor: a.hex(),
+            forceDefaultColor: !1
+        });
     return (0, r.jsx)(o.ua7, {
         text: x.intl.string(x.t.W4Nd7e),
         children: (e) =>

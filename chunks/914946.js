@@ -81,7 +81,7 @@ function x(e) {
     }
     return e;
 }
-function L(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -99,9 +99,9 @@ function L(e, t) {
         e
     );
 }
-let w = null != (i = null == (r = T.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)) ? void 0 : r.host) ? i : 'localhost',
+let L = null != (i = null == (r = T.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)) ? void 0 : r.host) ? i : 'localhost',
     R = (function () {
-        let e = w.split(':')[0];
+        let e = L.split(':')[0];
         if (!e.includes('.')) return e;
         let t = e.split('.'),
             n = t[t.length - 1];
@@ -216,7 +216,7 @@ function z(e, t) {
 }
 function W(e, t) {
     var n;
-    return null == t ? e : L(x({}, e), { presence: L(x({}, e.presence), { activity: null != (n = y.Z.getApplicationActivity(e.user.id, t)) ? n : null }) });
+    return null == t ? e : w(x({}, e), { presence: w(x({}, e.presence), { activity: null != (n = y.Z.getApplicationActivity(e.user.id, t)) ? n : null }) });
 }
 function Y(e) {
     let t;

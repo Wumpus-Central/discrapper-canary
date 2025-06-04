@@ -1,187 +1,156 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => b });
 var i = n(255367),
     r = n(73800),
     s = n(120356),
     l = n.n(s),
-    a = n(505266),
-    o = n(481060),
-    c = n(975298),
-    d = n(695349),
-    u = n(314684),
-    m = n(687362),
-    g = n(675619),
-    p = n(119850),
-    h = n(22189),
-    f = n(391110),
-    b = n(75077),
-    _ = n(51636),
-    x = n(795067);
-let E = (e) => {
+    a = n(481060),
+    o = n(975298),
+    c = n(695349),
+    d = n(119850),
+    u = n(22189),
+    m = n(391110),
+    g = n(75077),
+    p = n(51636),
+    h = n(795067);
+let f = (e) => {
         let { showAllPerksButton: t, leftAlignHeaders: n, title: r, headerClassname: s } = e,
-            l = (0, i.jsx)(o.X6q, {
+            l = (0, i.jsx)(a.X6q, {
                 variant: 'heading-xxl/extrabold',
                 color: 'header-primary',
-                className: null != s ? s : x.heading,
+                className: null != s ? s : h.heading,
                 children: r
             });
         return null == t
             ? l
             : n
               ? (0, i.jsxs)('div', {
-                    className: x.sectionHeader,
+                    className: h.sectionHeader,
                     children: [
                         l,
                         null != t &&
                             (0, i.jsx)('div', {
-                                className: x.showAllPerksButton,
+                                className: h.showAllPerksButton,
                                 children: t
                             })
                     ]
                 })
               : (0, i.jsx)('div', {
-                    className: x.container,
+                    className: h.container,
                     children: (0, i.jsx)('div', {
-                        className: x.sectionHeaderSeeAll,
+                        className: h.sectionHeaderSeeAll,
                         children: l
                     })
                 });
     },
-    C = (e) => {
-        var t;
-        let { className: n, variant: s = f.gM.PERKS_DISCOVERABILITY, noBackground: C = !1, leftAlignHeaders: j = !1, showAllPerksButton: O, headerClassname: S, isFullScreen: v = !0, shouldAutoScroll: T = !1 } = e,
-            N = r.useRef(null),
-            I = (0, u.Er)(),
-            y = (0, m.v)(I),
-            A = s === f.gM.WHATS_NEW,
-            P = (0, u.IY)(),
-            R = (0, p.x)();
+    b = (e) => {
+        let { className: t, variant: n = m.gM.PERKS_DISCOVERABILITY, noBackground: s = !1, leftAlignHeaders: b = !1, showAllPerksButton: _, headerClassname: x, isFullScreen: E = !0 } = e,
+            C = r.useRef(null),
+            j = n === m.gM.WHATS_NEW,
+            O = (0, d.x)();
         r.useEffect(() => {
-            A && !y && (P(), R());
-        }, [P, R, A, y]);
-        let D = () => {
-                A && y && P();
-            },
-            Z = y && A;
-        (0, g.r)({
-            ref: N,
-            shouldScroll: Z || T,
-            onScrollEnd: D,
-            onCleanup: D
-        });
-        let w = (0, b.re)(A),
-            k = (0, h.Z)(),
-            L = (0, b.mN)(),
-            { fractionalState: B } = (0, c.Z)(),
-            M = (0, d.W)(),
-            U = (0, b.ZM)({
-                perksCards: k,
-                variant: s,
-                isFullScreen: v,
-                showTenureCard: null == I ? void 0 : I.showCard,
-                isPremiumSubscriber: L,
-                fractionalState: B,
-                isInReverseTrial: M
+            j && O();
+        }, [O, j]);
+        let S = (0, g.re)(j),
+            v = (0, u.Z)(),
+            T = (0, g.mN)(),
+            { fractionalState: I } = (0, o.Z)(),
+            N = (0, c.W)(),
+            y = (0, g.ZM)({
+                perksCards: v,
+                variant: n,
+                isFullScreen: E,
+                isPremiumSubscriber: T,
+                fractionalState: I,
+                isInReverseTrial: N
             }),
-            V = U.some((e) => null != e.pillText),
-            [G, F] = r.useState(null),
-            H = r.useRef(new a.qA());
-        return (0, i.jsxs)(i.Fragment, {
+            A = y.some((e) => null != e.pillText);
+        return (0, i.jsxs)('div', {
+            ref: C,
+            className: l()(
+                h.section,
+                {
+                    [h.centerAlignSection]: !b,
+                    [h.leftAlignSection]: b
+                },
+                t
+            ),
             children: [
-                (null == k || null == (t = k.tenureRewardCollectible) ? void 0 : t.name) === h.I.TENURE_REWARD_COLLECTIBLE &&
-                    (0, i.jsx)(a.O_, {
-                        ref: F,
-                        className: x.confettiCanvas,
-                        environment: H.current
+                (0, i.jsx)(f, {
+                    showAllPerksButton: _,
+                    leftAlignHeaders: b,
+                    title: S.title,
+                    headerClassname: x
+                }),
+                (0, i.jsx)(a.Text, {
+                    variant: 'text-lg/normal',
+                    color: 'header-primary',
+                    className: l()(h.subtitle, {
+                        [h.subtitle]: null == _ || b,
+                        [h.subtitleWithButton]: null != _ && !b,
+                        [h.fullWidth]: j || b,
+                        [h.moreSubtitleMargin]: A,
+                        [h.leftAlignSubtitle]: b,
+                        [h.centerAlignSubtitle]: !b
                     }),
-                (0, i.jsxs)('div', {
-                    ref: N,
-                    className: l()(
-                        x.section,
-                        {
-                            [x.centerAlignSection]: !j,
-                            [x.leftAlignSection]: j
-                        },
-                        n
-                    ),
-                    children: [
-                        (0, i.jsx)(E, {
-                            showAllPerksButton: O,
-                            leftAlignHeaders: j,
-                            title: w.title,
-                            headerClassname: S
-                        }),
-                        (0, i.jsx)(o.Text, {
-                            variant: 'text-lg/normal',
-                            color: 'header-primary',
-                            className: l()(x.subtitle, {
-                                [x.subtitle]: null == O || j,
-                                [x.subtitleWithButton]: null != O && !j,
-                                [x.fullWidth]: A || j,
-                                [x.moreSubtitleMargin]: V,
-                                [x.leftAlignSubtitle]: j,
-                                [x.centerAlignSubtitle]: !j
-                            }),
-                            children: w.subtitle
-                        }),
-                        !j &&
-                            null != O &&
-                            (0, i.jsx)('div', {
-                                className: x.showAllPerksButtonCenter,
-                                children: O
-                            }),
-                        (0, i.jsx)('div', {
-                            className: l()({
-                                [x.cardContainer]: v,
-                                [x.cardContainerNarrowWidth]: !v
-                            }),
-                            children: U.map((e, t) => {
-                                var n, r;
-                                return (0, i.jsx)(
-                                    _.Z,
-                                    ((n = (function (e) {
-                                        for (var t = 1; t < arguments.length; t++) {
-                                            var n = null != arguments[t] ? arguments[t] : {},
-                                                i = Object.keys(n);
-                                            'function' == typeof Object.getOwnPropertySymbols &&
-                                                (i = i.concat(
-                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                    })
-                                                )),
-                                                i.forEach(function (t) {
-                                                    var i;
-                                                    (i = n[t]),
-                                                        t in e
-                                                            ? Object.defineProperty(e, t, {
-                                                                  value: i,
-                                                                  enumerable: !0,
-                                                                  configurable: !0,
-                                                                  writable: !0
-                                                              })
-                                                            : (e[t] = i);
-                                                });
-                                        }
-                                        return e;
-                                    })({ confettiCanvas: e.name === h.I.TENURE_REWARD_COLLECTIBLE ? G : void 0 }, e)),
-                                    (r = r = { forceShadow: C }),
-                                    Object.getOwnPropertyDescriptors
-                                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
-                                        : (function (e, t) {
-                                              var n = Object.keys(e);
-                                              if (Object.getOwnPropertySymbols) {
-                                                  var i = Object.getOwnPropertySymbols(e);
-                                                  n.push.apply(n, i);
-                                              }
-                                              return n;
-                                          })(Object(r)).forEach(function (e) {
-                                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
-                                          }),
-                                    n),
-                                    ''.concat(e.name, '_').concat(t)
-                                );
-                            })
-                        })
-                    ]
+                    children: S.subtitle
+                }),
+                !b &&
+                    null != _ &&
+                    (0, i.jsx)('div', {
+                        className: h.showAllPerksButtonCenter,
+                        children: _
+                    }),
+                (0, i.jsx)('div', {
+                    className: l()({
+                        [h.cardContainer]: E,
+                        [h.cardContainerNarrowWidth]: !E
+                    }),
+                    children: y.map((e, t) => {
+                        var n, r;
+                        return (0, i.jsx)(
+                            p.Z,
+                            ((n = (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        i = Object.keys(n);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (i = i.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            })
+                                        )),
+                                        i.forEach(function (t) {
+                                            var i;
+                                            (i = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: i,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0
+                                                      })
+                                                    : (e[t] = i);
+                                        });
+                                }
+                                return e;
+                            })({}, e)),
+                            (r = r = { forceShadow: s }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var i = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, i);
+                                      }
+                                      return n;
+                                  })(Object(r)).forEach(function (e) {
+                                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                                  }),
+                            n),
+                            ''.concat(e.name, '_').concat(t)
+                        );
+                    })
                 })
             ]
         });

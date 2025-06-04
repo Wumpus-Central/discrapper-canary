@@ -1,30 +1,30 @@
-n.d(t, { Z: () => h }), n(388685);
-var r,
-    i,
+n.d(t, { Z: () => m }), n(388685);
+var a,
+    r,
     l,
-    o = n(442837),
-    a = n(570140),
-    s = n(890022);
+    i = n(442837),
+    s = n(570140),
+    o = n(890022);
 let c = new Set();
-function u(e) {
+function d(e) {
     let { userActivities: t } = e;
-    (0, s.uw)('RecentUserActivityStore') && null != t && (c = new Set(t.map((e) => e.application_id)));
+    (0, o.uw)('RecentUserActivityStore') && null != t && (c = new Set(t.map((e) => e.application_id)));
 }
-class d extends (r = o.ZP.Store) {
+class u extends (a = i.ZP.Store) {
     get currentUserApplicationIds() {
         return c;
     }
 }
 (l = 'RecentUserActivityStore'),
-    (i = 'displayName') in d
-        ? Object.defineProperty(d, i, {
+    (r = 'displayName') in u
+        ? Object.defineProperty(u, r, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (d[i] = l);
-let h = new d(a.Z, {
-    CONNECTION_OPEN_SUPPLEMENTAL: u,
-    CONNECTION_OPEN_STATE_UPDATE: u
+        : (u[r] = l);
+let m = new u(s.Z, {
+    CONNECTION_OPEN_SUPPLEMENTAL: d,
+    CONNECTION_OPEN_STATE_UPDATE: d
 });

@@ -8,7 +8,6 @@ e.exports = {
     cardImage: 'cardImage_b5493b',
     carouselCardImage: 'carouselCardImage_b5493b',
     carouselCardImageGrayscale: 'carouselCardImageGrayscale_b5493b',
-    cardComponent: 'cardComponent_b5493b',
     partialFlipCard: 'partialFlipCard_b5493b',
     reducedMotion: 'reducedMotion_b5493b',
     ultraFlipCard: 'ultraFlipCard_b5493b',

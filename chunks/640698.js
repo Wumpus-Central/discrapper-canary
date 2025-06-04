@@ -1,19 +1,19 @@
-n.d(t, { F: () => r });
-var i = n(255367);
-n(73800);
-var l = n(481060),
-    s = n(487292);
-function r(e) {
-    let { text: t } = e;
-    return (0, i.jsx)('div', {
-        className: s.pillContainer,
-        children: (0, i.jsx)('div', {
-            className: s.pill,
-            children: (0, i.jsx)(l.Text, {
+t.d(n, { F: () => s });
+var l = t(255367);
+t(73800);
+var i = t(481060),
+    r = t(487292);
+function s(e) {
+    let { text: n } = e;
+    return (0, l.jsx)('div', {
+        className: r.pillContainer,
+        children: (0, l.jsx)('div', {
+            className: r.pill,
+            children: (0, l.jsx)(i.Text, {
                 variant: 'text-xxs/bold',
                 color: 'text-primary',
-                className: s.pillText,
-                children: t
+                className: r.pillText,
+                children: n
             })
         })
     });

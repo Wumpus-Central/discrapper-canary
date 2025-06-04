@@ -1,31 +1,32 @@
 n.d(t, {
-    Ic: () => R,
-    O5: () => D,
-    Zk: () => L,
-    _3: () => P,
-    _F: () => w,
-    _b: () => I,
-    dA: () => N,
-    jZ: () => C,
-    mH: () => A,
-    uk: () => S
+    Ic: () => w,
+    O5: () => L,
+    Zk: () => x,
+    _3: () => R,
+    _F: () => D,
+    _b: () => S,
+    dA: () => C,
+    jZ: () => P,
+    mH: () => N,
+    uk: () => T
 }),
     n(388685);
 var r = n(73800),
-    i = n(930446),
-    a = n(367907),
-    o = n(857192),
-    s = n(819640),
-    l = n(626135),
-    c = n(915750),
-    u = n(569984),
-    d = n(497505),
-    f = n(918701),
-    _ = n(977156),
-    p = n(566078),
-    h = n(46140),
-    m = n(981631);
-function g(e, t, n) {
+    i = n(772848),
+    a = n(930446),
+    o = n(367907),
+    s = n(857192),
+    l = n(819640),
+    c = n(626135),
+    u = n(915750),
+    d = n(569984),
+    f = n(497505),
+    _ = n(918701),
+    p = n(977156),
+    h = n(566078),
+    m = n(46140),
+    g = n(981631);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +39,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,12 +50,12 @@ function E(e) {
                 })
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -66,124 +67,126 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let O = Object.keys(d.jn),
-    v = new Set([m.rMx.QUEST_CONTENT_VIEWED, m.rMx.QUEST_CONTENT_CLICKED]);
-function I(e) {
-    var t;
-    return null != (t = O.find((t) => d.jn[t] === e)) ? t : '';
-}
+let v = Object.keys(f.jn),
+    I = new Set([g.rMx.QUEST_CONTENT_VIEWED, g.rMx.QUEST_CONTENT_CLICKED]);
 function S(e) {
+    var t;
+    return null != (t = v.find((t) => f.jn[t] === e)) ? t : '';
+}
+function T(e) {
     var t, n, r;
     return (null == (t = e.userStatus) ? void 0 : t.claimedAt) != null ? 'COMPLETED_CLAIMED' : (null == (n = e.userStatus) ? void 0 : n.completedAt) != null ? 'COMPLETED' : (null == (r = e.userStatus) ? void 0 : r.enrolledAt) != null ? 'ENROLLED' : 'NONE';
 }
-function T(e, t) {
-    let n = p.r.build(e.config);
+function A(e, t) {
+    let n = h.r.build(e.config);
     return {
         quest_id: e.id,
         quest_type: n.questType,
         game_id: n.application.id,
         game_name: n.application.name,
-        client_ad_session_id: (0, i.Gy)(t).uuid
+        client_ad_session_id: (0, a.Gy)(t).uuid
     };
 }
-function A(e, t, n) {
+function N(e, t, n) {
     return {
         content_id: e,
-        content_name: I(e),
+        content_name: S(e),
         content_position: t,
         row_index: n
     };
 }
-function N(e) {
-    let { questId: t, event: n, properties: r, trackGuildAndChannelMetadata: i = !1, shouldExtendSession: c = !1 } = e,
-        d = u.Z.quests.get(t);
-    if (null == d || ((0, _.X7)({ location: h.dr.QUEST_PREVIEW_TOOL }) && s.Z.getLayers().includes(m.S9g.USER_SETTINGS))) return;
-    let f = E({}, T(d, c), r);
-    if ((o.default.isLoggingAnalyticsEvents && console.info('[Quest] AnalyticsUtils.track', n, f), d.preview)) return;
-    let p = v.has(n);
-    if (i) return a.ZP.trackWithMetadata(n, f, p);
-    l.default.track(n, f, { flush: p });
+function C(e) {
+    let { questId: t, event: n, properties: r, trackGuildAndChannelMetadata: i = !1, shouldExtendSession: a = !1 } = e,
+        u = d.Z.quests.get(t);
+    if (null == u || ((0, p.X7)({ location: m.dr.QUEST_PREVIEW_TOOL }) && l.Z.getLayers().includes(g.S9g.USER_SETTINGS))) return;
+    let f = b({}, A(u, a), r);
+    if ((s.default.isLoggingAnalyticsEvents && console.info('[Quest] AnalyticsUtils.track', n, f), u.preview)) return;
+    let _ = I.has(n);
+    if (i) return o.ZP.trackWithMetadata(n, f, _);
+    c.default.track(n, f, { flush: _ });
 }
-var C = (function (e) {
+var P = (function (e) {
     return (e.LEARN_MORE = 'LEARN_MORE'), (e.SHOW_REWARD = 'SHOW_REWARD'), (e.CLAIM_REWARD = 'CLAIM_REWARD'), (e.GET_REWARD_CODE = 'GET_REWARD_CODE'), (e.COPY_REWARD_CODE = 'COPY_REWARD_CODE'), (e.ACCEPT_QUEST = 'ACCEPT_QUEST'), (e.COPY_QUEST_URL = 'COPY_QUEST_URL'), (e.MOBILE_SHARESHEET = 'MOBILE_SHARESHEET'), (e.TRACK_PROGRESS = 'TRACK_PROGRESS'), (e.CONNECT_CONSOLE = 'CONNECT_CONSOLE'), (e.CONNECT_CONSOLE_LINK = 'CONNECT_CONSOLE_LINK'), (e.VIEW_CONSOLE_CONNECTIONS = 'VIEW_CONSOLE_CONNECTION'), (e.VIEW_CONSOLE_CONNECTIONS_LINK = 'VIEW_CONSOLE_CONNECTIONS_LINK'), (e.VIEW_REQUIREMENTS = 'VIEW_REQUIREMENTS'), (e.SELECT_CONSOLE_PLATFORM = 'SELECT_CONSOLE_PLATFORM'), (e.SELECT_DESKTOP_PLATFORM = 'SELECT_DESKTOP_PLATFORM'), (e.DESELECT_PLATFORM = 'DESELECT_PLATFORM'), (e.DEFIBRILLATOR = 'DEFIBRILLATOR'), (e.DEFIBRILLATOR_RECONNECT_CONSOLE = 'DEFIBRILLATOR_RECONNECT_CONSOLE'), (e.OPEN_DISCLOSURE = 'OPEN_DISCLOSURE'), (e.WATCH_STREAM = 'WATCH_STREAM'), (e.WATCH_STREAM_CONFIRM = 'WATCH_STREAM_CONFIRM'), (e.REWARD_LEARN_MORE = 'REWARD_LEARN_MORE'), (e.OPEN_GAME_LINK = 'OPEN_GAME_LINK'), (e.OPEN_CONTEXT_MENU = 'OPEN_CONTEXT_MENU'), (e.OPEN_QUEST_HOME = 'OPEN_QUEST_HOME'), (e.QUEST_BAR_COPY_LINK = 'QUEST_BAR.COPY_LINK'), (e.CONTEXT_MENU_COPY_LINK = 'CONTEXT_MENU.COPY_LINK'), (e.CONTEXT_MENU_HIDE_CONTENT = 'CONTEXT_MENU.HIDE_CONTENT'), (e.CONTEXT_MENU_OPEN_GAME_LINK = 'CONTEXT_MENU.OPEN_GAME_LINK'), (e.CONTEXT_MENU_OPEN_DISCLOSURE = 'CONTEXT_MENU.OPEN_DISCLOSURE'), (e.CONTEXT_MENU_LEARN_MORE = 'CONTEXT_MENU.LEARN_MORE'), (e.HOW_TO_HELP_ARTICLE_XBOX = 'HOW_TO_HELP_ARTICLE_XBOX'), (e.HOW_TO_HELP_ARTICLE_PLAYSTATION = 'HOW_TO_HELP_ARTICLE_PLAYSTATION'), (e.VIEW_QUESTS = 'VIEW_QUESTS'), (e.EXPAND = 'EXPAND'), (e.COLLAPSE = 'COLLAPSE'), (e.START_QUEST = 'START_QUEST'), (e.TRANSCRIPT_ENABLE = 'TRANSCRIPT_ENABLE'), (e.TRANSCRIPT_DISABLE = 'TRANSCRIPT_DISABLE'), (e.CLOSED_CAPTIONING_ENABLE = 'CLOSED_CAPTIONING_ENABLE'), (e.CLOSED_CAPTIONING_DISABLE = 'CLOSED_CAPTIONING_DISABLE'), (e.SEEK_BACKWARD = 'SEEK_BACKWARD'), (e.SEEK_FORWARD = 'SEEK_FORWARD'), (e.WATCH_VIDEO = 'WATCH_VIDEO'), (e.REDEEM_REWARD = 'REDEEM_REWARD'), (e.VISIT_REDEMPTION_LINK = 'VISIT_REDEMPTION_LINK'), e;
 })({});
-function P(e) {
-    let { questId: t, questContent: n, questContentCTA: r, questContentPosition: i, questContentRowIndex: a, impressionId: o, trackGuildAndChannelMetadata: s = !1 } = e,
-        l = (0, f.qe)(n);
-    N({
+function R(e) {
+    let { questId: t, questContent: n, questContentCTA: r, questContentPosition: a, questContentRowIndex: o, impressionId: s, trackGuildAndChannelMetadata: l = !1 } = e,
+        c = (0, _.qe)(n);
+    C({
         questId: t,
-        event: m.rMx.QUEST_CONTENT_CLICKED,
-        properties: y(E({}, l, A(n, i, a)), {
+        event: g.rMx.QUEST_CONTENT_CLICKED,
+        properties: O(b({}, c, N(n, a, o)), {
             cta_name: r,
-            impression_id: o,
-            google_advertising_id: u.Z.googleAdvertisingId
+            impression_id: s,
+            google_advertising_id: d.Z.googleAdvertisingId,
+            click_id: (0, i.Z)()
         }),
-        trackGuildAndChannelMetadata: s,
-        shouldExtendSession: (0, f.VB)(n)
+        trackGuildAndChannelMetadata: l,
+        shouldExtendSession: (0, _.VB)(n)
     });
 }
-function R(e) {
+function w(e) {
     let { questContent: t, questId: n, mode: r, prevMode: i } = e;
-    N({
+    C({
         questId: n,
-        event: m.rMx.QUEST_BAR_MODE_CHANGED,
-        properties: y(E({}, A(t)), {
+        event: g.rMx.QUEST_BAR_MODE_CHANGED,
+        properties: O(b({}, N(t)), {
             mode: r,
             previous_mode: i
         })
     });
 }
-function w() {
-    let e = (0, c.WD)();
+function D() {
+    let e = (0, u.WD)();
     function t(t) {
         let { questId: n, event: r, properties: i, trackGuildAndChannelMetadata: a = !1, shouldExtendSession: o = !1 } = t;
-        N({
+        C({
             questId: n,
             event: r,
-            properties: y(E({}, i), { impression_id: null == e ? void 0 : e.getId() }),
+            properties: O(b({}, i), { impression_id: null == e ? void 0 : e.getId() }),
             trackGuildAndChannelMetadata: a,
             shouldExtendSession: o
         });
     }
     return r.useCallback(t, [e]);
 }
-function D() {
-    let e = w();
+function L() {
+    let e = D();
     return r.useCallback(
         (t) => {
-            let { questId: n, questContent: r, questContentCTA: i, questContentPosition: a, questContentRowIndex: o, trackGuildAndChannelMetadata: s = !1 } = t;
+            let { questId: n, questContent: r, questContentCTA: a, questContentPosition: o, questContentRowIndex: s, trackGuildAndChannelMetadata: l = !1 } = t;
             e({
                 questId: n,
-                event: m.rMx.QUEST_CONTENT_CLICKED,
-                properties: y(E({}, (0, f.qe)(r), A(r, a, o)), {
-                    cta_name: i,
-                    google_advertising_id: u.Z.googleAdvertisingId
+                event: g.rMx.QUEST_CONTENT_CLICKED,
+                properties: O(b({}, (0, _.qe)(r), N(r, o, s)), {
+                    cta_name: a,
+                    click_id: (0, i.Z)(),
+                    google_advertising_id: d.Z.googleAdvertisingId
                 }),
-                trackGuildAndChannelMetadata: s,
-                shouldExtendSession: (0, f.VB)(r)
+                trackGuildAndChannelMetadata: l,
+                shouldExtendSession: (0, _.VB)(r)
             });
         },
         [e]
     );
 }
-function L(e, t) {
+function x(e, t) {
     r.useEffect(() => {
-        x(t, e);
+        k(t, e);
     }, [e, t]);
 }
-function x(e, t) {
-    a.ZP.trackWithMetadata(m.rMx.QUEST_EMBED_FALLBACK_VIEWED, {
+function k(e, t) {
+    o.ZP.trackWithMetadata(g.rMx.QUEST_EMBED_FALLBACK_VIEWED, {
         quest_id: e,
         reason: t
     });

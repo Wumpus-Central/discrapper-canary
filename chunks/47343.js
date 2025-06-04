@@ -2,8 +2,8 @@ n.d(t, { R: () => x }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    o = n(481060),
     s = n(590965),
     c = n(695346),
     u = n(51331),
@@ -22,9 +22,9 @@ let x = () => {
         C = null == (e = s.Z.getProps().invite) ? void 0 : e.is_nickname_changeable,
         T = (0, g.m4)({ location: 'InviteSettingsControls' });
     return (0, r.jsxs)('div', {
-        className: o()(_.editProfileContainer, { [_.opened]: t }),
+        className: a()(_.editProfileContainer, { [_.opened]: t }),
         children: [
-            (0, r.jsxs)(a.P3F, {
+            (0, r.jsxs)(o.P3F, {
                 className: _.header,
                 onClick: () => {
                     t ||
@@ -37,17 +37,17 @@ let x = () => {
                 children: [
                     (0, r.jsx)('div', {
                         className: _.headerIconWrapper,
-                        children: (0, r.jsx)(a.ewm, { size: 'md' })
+                        children: (0, r.jsx)(o.ewm, { size: 'md' })
                     }),
                     (0, r.jsxs)('div', {
                         className: _.title,
                         children: [
-                            (0, r.jsx)(a.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: 'eyebrow',
                                 color: 'header-secondary',
                                 children: f.intl.string(f.t.A5wHQ0)
                             }),
-                            (0, r.jsx)(a.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'interactive-normal',
                                 children: f.intl.string(f.t.UKCSER)
@@ -55,7 +55,7 @@ let x = () => {
                         ]
                     }),
                     (0, r.jsx)('div', {
-                        className: o()(_.caret, { [_.opened]: t }),
+                        className: a()(_.caret, { [_.opened]: t }),
                         children: (0, r.jsx)(d.Z, {
                             width: 18,
                             height: 18,
@@ -65,18 +65,18 @@ let x = () => {
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: o()(_.customizationSection, { [_.opened]: t }, C ? null : _.condensed),
+                className: a()(_.customizationSection, { [_.opened]: t }, C ? null : _.condensed),
                 children: [
                     C &&
                         (0, r.jsxs)('div', {
                             className: _.serverNickname,
                             children: [
-                                (0, r.jsx)(a.Text, {
+                                (0, r.jsx)(o.Text, {
                                     variant: 'eyebrow',
                                     color: 'header-secondary',
                                     children: f.intl.string(f.t.me1lRk)
                                 }),
-                                (0, r.jsx)(a.oil, {
+                                (0, r.jsx)(o.oil, {
                                     placeholder: f.intl.string(f.t['09Q8ys']),
                                     maxLength: m.l$U,
                                     value: x,

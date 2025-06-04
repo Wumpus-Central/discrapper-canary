@@ -1,57 +1,57 @@
-n.d(t, { x: () => j });
-var i = n(255367);
-n(73800);
-var l = n(512722),
-    s = n.n(l),
-    r = n(780384),
-    a = n(481060),
-    o = n(410030),
-    C = n(807163),
-    d = n(74538),
-    c = n(987209),
-    u = n(563132),
-    p = n(409813),
-    x = n(614223),
-    h = n(388032),
-    f = n(959803);
-function j(e) {
-    let { handleStepChange: t, handleClose: n } = e,
-        l = (0, o.ZP)(),
-        { activeSubscription: j, selectedSkuId: m, setSelectedPlanId: _, startedPaymentFlowWithPaymentSourcesRef: g } = (0, u.JL)(),
-        { isGift: L } = (0, c.wD)(),
-        E = null != j ? (0, d.Af)(j) : null,
-        y = null != E ? (0, d.gq)(E.planId) : null,
-        S = null != E ? (0, d.Rd)(E.planId) : null,
-        P = (0, x.Kp)({
+t.d(n, { x: () => f });
+var l = t(255367);
+t(73800);
+var i = t(512722),
+    r = t.n(i),
+    s = t(780384),
+    a = t(481060),
+    o = t(410030),
+    C = t(807163),
+    d = t(74538),
+    c = t(987209),
+    u = t(563132),
+    p = t(409813),
+    x = t(614223),
+    h = t(388032),
+    j = t(959803);
+function f(e) {
+    let { handleStepChange: n, handleClose: t } = e,
+        i = (0, o.ZP)(),
+        { activeSubscription: f, selectedSkuId: m, setSelectedPlanId: _, startedPaymentFlowWithPaymentSourcesRef: L } = (0, u.JL)(),
+        { isGift: g } = (0, c.wD)(),
+        y = null != f ? (0, d.Af)(f) : null,
+        S = null != y ? (0, d.gq)(y.planId) : null,
+        E = null != y ? (0, d.Rd)(y.planId) : null,
+        v = (0, x.Kp)({
             isTrial: !1,
-            isGift: L,
+            isGift: g,
             selectedSkuId: m,
-            startedPaymentFlowWithPaymentSources: g.current
+            startedPaymentFlowWithPaymentSources: L.current
         });
     return (
-        s()(null != S, 'Expected premium type'),
-        (0, i.jsx)(C.Z, {
-            premiumType: S,
+        r()(null != E, 'Expected premium type'),
+        (0, l.jsx)(C.Z, {
+            premiumType: E,
             titleText: h.intl.string(h.t['7VcWW1']),
-            subtitleText: h.intl.format(h.t.Qk34Ii, { subscriptionName: y }),
-            footer: (0, i.jsxs)('div', {
-                className: f.whatYouLoseButtonContainer,
+            subtitleText: h.intl.format(h.t.Qk34Ii, { subscriptionName: S }),
+            footer: (0, l.jsxs)('div', {
+                className: j.whatYouLoseButtonContainer,
                 children: [
-                    (0, i.jsx)(a.zxk, {
+                    (0, l.jsx)(a.zxk, {
                         onClick: () => {
-                            P ? (_((0, x.nA)(m, j)), t(p.h8.REVIEW)) : t(p.h8.PLAN_SELECT);
+                            v ? (_((0, x.nA)(m, f)), n(p.h8.REVIEW)) : n(p.h8.PLAN_SELECT);
                         },
                         children: h.intl.string(h.t['3PatS0'])
                     }),
-                    (0, i.jsx)(a.zxk, {
+                    (0, l.jsx)(a.zxk, {
                         look: a.zxk.Looks.LINK,
-                        color: (0, r.wj)(l) ? a.zxk.Colors.WHITE : a.zxk.Colors.PRIMARY,
-                        onClick: n,
+                        color: (0, s.wj)(i) ? a.zxk.Colors.WHITE : a.zxk.Colors.PRIMARY,
+                        onClick: t,
                         children: h.intl.string(h.t.h9tkAA)
                     })
                 ]
             }),
-            onClose: n,
+            onClose: t,
             isDowngrade: !0
         })
     );

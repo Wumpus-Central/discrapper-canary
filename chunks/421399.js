@@ -5,8 +5,8 @@ n.d(t, {
 var r,
     i = n(255367),
     l = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(873546),
     c = n(442837),
     u = n(573385),
@@ -81,10 +81,10 @@ function P(e) {
 }
 function Z(e) {
     var t;
-    let { author: n, message: r, channel: o, userOverride: f, compact: A = !1, withMentionPrefix: Z = !1, showPopout: R = !1, hideGuildTag: w = !1, hideSystemTag: L = !1, className: D, onClick: k, onContextMenu: M, onPopoutRequestClose: U, renderPopout: B, renderRemixTag: G = !1, decorations: F, previewGuildId: z, subscribeToGroupId: V } = e,
+    let { author: n, message: r, channel: a, userOverride: f, compact: A = !1, withMentionPrefix: Z = !1, showPopout: R = !1, hideGuildTag: w = !1, hideSystemTag: L = !1, className: D, onClick: k, onContextMenu: M, onPopoutRequestClose: U, renderPopout: B, renderRemixTag: G = !1, decorations: F, previewGuildId: z, subscribeToGroupId: V } = e,
         H = l.useRef(null),
         K = l.useContext(_.Z),
-        W = null != (t = null == o ? void 0 : o.guild_id) ? t : K,
+        W = null != (t = null == a ? void 0 : a.guild_id) ? t : K,
         { analyticsLocations: q } = (0, m.ZP)(p.Z.USERNAME),
         Y = Z ? '@' : '',
         { nick: J, colorString: X, colorStrings: Q, colorRoleName: $ } = n,
@@ -94,13 +94,13 @@ function Z(e) {
         er = (0, E.Z)(null != z ? z : W, 'BaseUsername'),
         ei = (0, y.Z)(r),
         el = l.useContext(u.d),
-        eo = er && null != Q && null != Q.primaryColor && null != Q.secondaryColor,
-        ea = et && eo;
+        ea = er && null != Q && null != Q.primaryColor && null != Q.secondaryColor,
+        eo = et && ea;
     l.useEffect(() => {
-        if (null == V || !ea || null == el) return;
+        if (null == V || !eo || null == el) return;
         let { setAnimate: e } = el;
         return O.S.subscribeKeyed(j.LPv.ANIMATE_CHAT_AVATAR, ''.concat(V, ':').concat(r.author.id), e), () => void O.S.unsubscribeKeyed(j.LPv.ANIMATE_CHAT_AVATAR, ''.concat(V, ':').concat(r.author.id), e);
-    }, [r.author.id, V, ea, el]);
+    }, [r.author.id, V, eo, el]);
     let { gradientStyle: es, gradientClassname: ec } = (0, h.Icv)({
             primaryColor: null == Q ? void 0 : Q.primaryColor,
             secondaryColor: null == Q ? void 0 : Q.secondaryColor,
@@ -111,9 +111,9 @@ function Z(e) {
         }),
         eu = (0, d.EJ)(Y + J),
         ed = {
-            className: a()([N.username, ea && ec]),
+            className: o()([N.username, eo && ec]),
             style: (() => {
-                if (et) return ea && null != Q ? T(C({}, es), { textDecorationColor: null == Q ? void 0 : Q.primaryColor }) : null != X ? { color: X } : void 0;
+                if (et) return eo && null != Q ? T(C({}, es), { textDecorationColor: null == Q ? void 0 : Q.primaryColor }) : null != X ? { color: X } : void 0;
             })(),
             onClick: k,
             onContextMenu: M,
@@ -187,7 +187,7 @@ function Z(e) {
                                               n,
                                               ed
                                           ),
-                                          { className: a()(ed.className, N.clickable, D) }
+                                          { className: o()(ed.className, N.clickable, D) }
                                       )
                                   ),
                                   eh
@@ -196,7 +196,7 @@ function Z(e) {
                       }
                   })
                 : (0, i.jsxs)(i.Fragment, {
-                      children: [(0, i.jsx)(h.P3F, T(C({}, ed), { className: a()(ed.className, D) })), eh]
+                      children: [(0, i.jsx)(h.P3F, T(C({}, ed), { className: o()(ed.className, D) })), eh]
                   }),
         em = null != F ? F[0] : null,
         ef = null != F ? F[1] : null;
@@ -211,7 +211,7 @@ function Z(e) {
             'dot' === ee
                 ? (0, i.jsx)(h.FhE, {
                       color: X,
-                      colors: eo ? Q : null,
+                      colors: ea ? Q : null,
                       name: $,
                       className: N.roleDot,
                       hoverOverride: null == el ? void 0 : el.animate

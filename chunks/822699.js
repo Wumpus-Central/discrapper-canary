@@ -2,8 +2,8 @@ n.r(t), n.d(t, { default: () => ej }), n(35282), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(593473),
-    o = n(990547),
-    a = n(873546),
+    a = n(990547),
+    o = n(873546),
     s = n(442837),
     c = n(570140),
     u = n(893776),
@@ -101,8 +101,8 @@ function ei(e, t) {
 }
 n(179645), s.ZP.initialize();
 let el = (0, L.Z)(H.Z),
-    eo = (0, L.Z)(K.Z),
-    ea = (0, L.Z)(V.Z),
+    ea = (0, L.Z)(K.Z),
+    eo = (0, L.Z)(V.Z),
     es = (0, L.Z)(F.Z),
     ec = (0, L.Z)(G.Z),
     eu = (0, L.Z)(S.Z),
@@ -124,15 +124,15 @@ class ey extends i.PureComponent {
     static getDerivedStateFromProps(e, t) {
         var n;
         let { invite: r, location: i } = e,
-            { backgroundId: o } = t,
-            a = null != (n = (0, l.parse)(i.search).redirect_to) ? n : null;
-        (null == a || '' === a || !(0, w.B)(a) || a.startsWith($.Z5c.ME)) && (a = null);
+            { backgroundId: a } = t,
+            o = null != (n = (0, l.parse)(i.search).redirect_to) ? n : null;
+        (null == o || '' === o || !(0, w.B)(o) || o.startsWith($.Z5c.ME)) && (o = null);
         let s = null;
-        if (null == r) s = (0, P.gK)(a);
+        if (null == r) s = (0, P.gK)(o);
         else if ((null == r ? void 0 : r.state) === $.r2o.RESOLVED) {
             let { guild: e, target_application: t } = r;
             null != t
-                ? null != o && (s = (0, A.xF)(t.id, o, 1024))
+                ? null != a && (s = (0, A.xF)(t.id, a, 1024))
                 : null != e &&
                   'string' == typeof e.splash &&
                   (s = Z.ZP.getGuildSplashURL({
@@ -141,7 +141,7 @@ class ey extends i.PureComponent {
                   }));
         }
         return {
-            redirectTo: a,
+            redirectTo: o,
             splash: s
         };
     }
@@ -215,20 +215,20 @@ class ey extends i.PureComponent {
             children: [
                 (0, r.jsx)(m.Z, {
                     path: $.Z5c.LOGIN_HANDOFF,
-                    render: (e) => (0, r.jsx)(eo, ei(er({}, e), { redirectTo: t }))
+                    render: (e) => (0, r.jsx)(ea, ei(er({}, e), { redirectTo: t }))
                 }),
                 (0, r.jsx)(m.Z, {
-                    impressionName: o.ImpressionNames.USER_LOGIN,
+                    impressionName: a.ImpressionNames.USER_LOGIN,
                     path: $.Z5c.LOGIN,
                     render: (e) => (0, r.jsx)(el, ei(er({}, e), { redirectTo: t }))
                 }),
                 (0, r.jsx)(m.Z, {
-                    impressionName: o.ImpressionNames.USER_REGISTRATION,
+                    impressionName: a.ImpressionNames.USER_REGISTRATION,
                     path: $.Z5c.REGISTER,
                     render: (e) =>
                         ee.a
                             ? (0, r.jsx)(
-                                  ea,
+                                  eo,
                                   ei(er({}, e), {
                                       redirectTo: t,
                                       inviteKey: n
@@ -255,18 +255,18 @@ class ey extends i.PureComponent {
                                 location: i,
                                 transitionTo: l
                             } = e,
-                            o = (0, O.mb)(t, i.search);
-                        return a.tq || a.Em
+                            a = (0, O.mb)(t, i.search);
+                        return o.tq || o.Em
                             ? (0, r.jsx)(
                                   eu,
                                   {
-                                      inviteKey: o,
+                                      inviteKey: a,
                                       transitionTo: l
                                   },
-                                  o
+                                  a
                               )
-                            : (0, r.jsx)(ea, {
-                                  inviteKey: o,
+                            : (0, r.jsx)(eo, {
+                                  inviteKey: a,
                                   location: i,
                                   transitionTo: l,
                                   login: n === $.Z5c.INVITE_LOGIN(':inviteCode')
@@ -284,7 +284,7 @@ class ey extends i.PureComponent {
                             location: i,
                             transitionTo: l
                         } = e;
-                        return a.tq || a.Em
+                        return o.tq || o.Em
                             ? (0, r.jsx)(z.Z, { code: t }, t)
                             : (0, r.jsx)(es, {
                                   code: t,
@@ -369,9 +369,9 @@ class ey extends i.PureComponent {
 let ej = s.ZP.connectStores([j.default, C.Z, N.Z, E.Z, b.Z], (e) => {
     var t, n, r;
     let { match: i, location: l } = e,
-        o = null == i || null == (t = i.params) ? void 0 : t.inviteCode,
-        a = ee.a ? ee.Y : void 0,
-        s = null != o ? (0, O.mb)(o, l.search) : a,
+        a = null == i || null == (t = i.params) ? void 0 : t.inviteCode,
+        o = ee.a ? ee.Y : void 0,
+        s = null != a ? (0, O.mb)(a, l.search) : o,
         c = null == i || null == (n = i.params) ? void 0 : n.giftCode,
         u = null == i || null == (r = i.params) ? void 0 : r.guildTemplateCode;
     return {

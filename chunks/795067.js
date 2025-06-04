@@ -3,7 +3,6 @@ e.exports = {
     heading: 'heading_efc71f',
     sectionHeader: 'sectionHeader_efc71f',
     sectionHeaderSeeAll: 'sectionHeaderSeeAll_efc71f',
-    confettiCanvas: 'confettiCanvas_efc71f',
     container: 'container_efc71f',
     subtitle: 'subtitle_efc71f',
     subtitleWithButton: 'subtitleWithButton_efc71f',

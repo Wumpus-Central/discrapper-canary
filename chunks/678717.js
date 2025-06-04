@@ -37,8 +37,8 @@ var _ = n(392750),
     D = n(442954),
     M = n(633001),
     z = n(702904),
-    B = n(178821),
-    U = n(891401),
+    U = n(178821),
+    B = n(891401),
     F = n(958328),
     G = n(315384),
     V = n(514866),
@@ -122,7 +122,7 @@ function er(e) {
                         id: 'performance',
                         name: 'Performance',
                         group: $.v0.DEVELOPMENT,
-                        render: () => (0, a.jsx)(B.ZP, {})
+                        render: () => (0, a.jsx)(U.ZP, {})
                     }),
                     e.push({
                         id: 'feedback',
@@ -213,7 +213,7 @@ function er(e) {
                     id: 'perks',
                     name: 'Perks',
                     group: $.v0.PREMIUM,
-                    render: () => (0, a.jsx)(U.Z, {})
+                    render: () => (0, a.jsx)(B.Z, {})
                 }),
                 e.push({
                     id: 'potions',

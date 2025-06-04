@@ -21,20 +21,20 @@ var r = n(255367),
     C = n(358221),
     j = n(540059),
     S = n(706590),
-    E = n(940777),
-    x = n(41776),
+    x = n(940777),
+    E = n(41776),
     P = n(821020),
     I = n(770858),
     w = n(905423),
     N = n(822857),
     Z = n(931928),
     T = n(431286),
-    R = n(796974),
-    A = n(271383),
+    A = n(796974),
+    R = n(271383),
     D = n(430824),
     L = n(771845),
-    M = n(358085),
-    k = n(709054),
+    k = n(358085),
+    M = n(709054),
     U = n(727258),
     G = n(605951),
     B = n(257351),
@@ -121,7 +121,7 @@ function ea(e, t) {
     }
     return i;
 }
-let ec = (0, M.isWindows)() ? 4 : 12 * !(0, M.isMac)();
+let ec = (0, k.isWindows)() ? 4 : 12 * !(0, k.isMac)();
 class eu {
     setGuildsTree(e) {
         this.guildsTree = e;
@@ -234,11 +234,11 @@ function ed(e) {
         l = (0, S.Z)(),
         { pathname: o } = (0, c.TH)(),
         s = o.startsWith(en.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB('')),
-        a = (0, h.Wu)([D.Z, A.ZP], () => k.default.keys(D.Z.getGuilds()).filter((e) => A.ZP.isCurrentUserGuest(e))),
+        a = (0, h.Wu)([D.Z, R.ZP], () => M.default.keys(D.Z.getGuilds()).filter((e) => R.ZP.isCurrentUserGuest(e))),
         u = i.concat(a),
         { notificationCenterVariant: d } = P.L.useExperiment({ location: 'GuildsBar' });
     return (0, r.jsxs)(r.Fragment, {
-        children: [(0, r.jsx)(K.u, {}), null !== d && (0, r.jsx)(I.Z, {}), l ? (0, r.jsx)(E.Z, {}) : null, (0, r.jsx)(q.Z, { isOnHubVerificationRoute: s }), !t && (0, r.jsx)(H.Z, {}), u.map((e) => (0, r.jsx)(et.Z, { guildId: e }, e)), (0, r.jsx)(ee.Z, { onActivate: n })]
+        children: [(0, r.jsx)(K.u, {}), null !== d && (0, r.jsx)(I.Z, {}), l ? (0, r.jsx)(x.Z, {}) : null, (0, r.jsx)(q.Z, { isOnHubVerificationRoute: s }), !t && (0, r.jsx)(H.Z, {}), u.map((e) => (0, r.jsx)(et.Z, { guildId: e }, e)), (0, r.jsx)(ee.Z, { onActivate: n })]
     });
 }
 function eh(e) {
@@ -281,21 +281,21 @@ function eh(e) {
     });
 }
 function ep(e) {
-    let { disableAppDownload: t = M.isPlatformEmbedded, isOverlay: n = !1, className: l, themeOverride: s } = e,
+    let { disableAppDownload: t = k.isPlatformEmbedded, isOverlay: n = !1, className: l, themeOverride: s } = e,
         a = (0, j.Q3)('GuildsBar'),
         [d] = (0, h.Wu)([L.ZP], () => {
             let e = L.ZP.getGuildsTree();
             return [e, e.version];
         }),
-        p = (0, h.e7)([x.Z], () => x.Z.lurkingGuildIds()),
+        p = (0, h.e7)([E.Z], () => E.Z.lurkingGuildIds()),
         b = i.useMemo(() => (n ? [] : p), [p, n]),
         O = (0, h.e7)([C.Z], () => C.Z.isFullscreenInContext()),
-        [S, E] = i.useState(!1),
-        P = i.useCallback(() => E(!0), []),
-        I = i.useCallback(() => E(!1), []),
-        A = i.useRef(!1),
+        [S, x] = i.useState(!1),
+        P = i.useCallback(() => x(!0), []),
+        I = i.useCallback(() => x(!1), []),
+        R = i.useRef(!1),
         [D] = i.useState(() => new f.V7()),
-        k = i.useRef(null),
+        M = i.useRef(null),
         F = i.useRef(null),
         z = (0, u.OP)(),
         { ref: W } = z,
@@ -313,7 +313,7 @@ function ep(e) {
                     el,
                     () => {
                         var e, t;
-                        null == (e = k.current) || e.calculateState(), null == (t = F.current) || t.calculateState();
+                        null == (e = M.current) || e.calculateState(), null == (t = F.current) || t.calculateState();
                     },
                     (function (e, t, n) {
                         let r = t ? n : 8,
@@ -343,20 +343,20 @@ function ep(e) {
         { pathname: eb } = (0, c.TH)(),
         ey = eb.startsWith(en.Z5c.GUILD_DISCOVERY) || eb.startsWith(en.Z5c.GLOBAL_DISCOVERY);
     (0, y.Ng)(() => {
-        if (!A.current && 0 !== d.size) {
+        if (!R.current && 0 !== d.size) {
             if (ey) eg.scrollToGuild(null, !1);
             else {
-                let { scrollTop: e } = R.Z.getGuildListDimensions();
+                let { scrollTop: e } = A.Z.getGuildListDimensions();
                 eg.scrollTo({
                     to: e,
                     animate: !1
                 });
             }
-            return (A.current = !0), () => D.stop();
+            return (R.current = !0), () => D.stop();
         }
     }),
         i.useEffect(() => {
-            if ((eg.setGuildsTree(d), A.current || 0 === d.size)) return;
+            if ((eg.setGuildsTree(d), R.current || 0 === d.size)) return;
             let e = w.Z.getState().guildId;
             eg.scrollToGuild(e, !1);
             let t = null;
@@ -420,15 +420,15 @@ function ep(e) {
             discoveryButtonRef: eC,
             scrollToBottom: eg.scrollToBottom
         }),
-        { shouldShow: eS, questId: eE, onDiscoveryButtonClick: ex } = ej,
+        { shouldShow: eS, questId: ex, onDiscoveryButtonClick: eE } = ej,
         eP = ea(ej, ['shouldShow', 'questId', 'onDiscoveryButtonClick']),
         eI = e_ && eS,
         ew = (0, r.jsx)(Y.Z, {
             ref: eC,
-            questId: eI ? eE : void 0,
+            questId: eI ? ex : void 0,
             selected: ey,
             className: ei.discoveryIcon,
-            onClick: eI ? ex : void 0
+            onClick: eI ? eE : void 0
         }),
         eN = eI
             ? (0, r.jsx)(
@@ -446,7 +446,7 @@ function ep(e) {
               )
             : ew,
         eZ = (0, r.jsx)(V.Z, {
-            ref: k,
+            ref: M,
             isVisible: eg.isItemVisible,
             onJumpTo: eg.handleJumpToGuild,
             className: ei.unreadMentionsIndicatorTop,

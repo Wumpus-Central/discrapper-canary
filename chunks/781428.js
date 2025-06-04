@@ -7,9 +7,9 @@ n.d(t, {
 var r,
     i = n(255367),
     l = n(73800),
-    o = n(533126),
-    a = n(120356),
-    s = n.n(a),
+    a = n(533126),
+    o = n(120356),
+    s = n.n(o),
     c = n(593473),
     u = n(873546),
     d = n(442837),
@@ -132,10 +132,10 @@ class $ extends (r = l.PureComponent) {
                         (0, R.us)()
                             .then((e) => {
                                 let { challenge: t, ticket: n } = e,
-                                    r = (0, o.wz)(JSON.parse(t));
+                                    r = (0, a.wz)(JSON.parse(t));
                                 return (
                                     (r.signal = this.state.conditionalMediationAbortController.signal),
-                                    (0, o.U2)(r)
+                                    (0, a.U2)(r)
                                         .then(
                                             (e) => (
                                                 this.setState({ errors: {} }),
@@ -168,10 +168,10 @@ class $ extends (r = l.PureComponent) {
     }
     componentDidUpdate(e, t) {
         let { authenticated: n, location: r, handoffAvailable: i } = this.props,
-            { checkingHandoff: l, redirecting: o } = this.state;
-        if ((!n || e.authenticated || (l && (i || o)) || (this.state.conditionalMediationAbortController.abort(), this.loginOrSSO(n, r)), t.errors !== this.state.errors)) {
-            var a, s, c;
-            this.hasError('password') ? null == (a = this.passwordRef) || a.focus() : this.hasError('email') || this.hasError('login') ? null == (s = this.loginRef) || s.focus() : this.hasError('code') && (null == (c = this.codeRef) || c.focus());
+            { checkingHandoff: l, redirecting: a } = this.state;
+        if ((!n || e.authenticated || (l && (i || a)) || (this.state.conditionalMediationAbortController.abort(), this.loginOrSSO(n, r)), t.errors !== this.state.errors)) {
+            var o, s, c;
+            this.hasError('password') ? null == (o = this.passwordRef) || o.focus() : this.hasError('email') || this.hasError('login') ? null == (s = this.loginRef) || s.focus() : this.hasError('code') && (null == (c = this.codeRef) || c.focus());
         }
     }
     get loginSource() {
@@ -365,7 +365,7 @@ class $ extends (r = l.PureComponent) {
     renderDefaultForm(e) {
         var t;
         let n,
-            { invite: r, giftCode: l, loginStatus: o, country: a, showMobileWebHandoff: c, disableAutofocusOnDefaultForm: u } = this.props,
+            { invite: r, giftCode: l, loginStatus: a, country: o, showMobileWebHandoff: c, disableAutofocusOnDefaultForm: u } = this.props,
             d = !this.hasError('email') && this.hasError('password'),
             g = (null == r ? void 0 : r.stage_instance) != null;
         return (
@@ -427,8 +427,8 @@ class $ extends (r = l.PureComponent) {
                                         className: q.marginTop20,
                                         children: [
                                             (0, i.jsx)(A.Z, {
-                                                alpha2: a.alpha2,
-                                                countryCode: a.code.split(' ')[0],
+                                                alpha2: o.alpha2,
+                                                countryCode: o.code.split(' ')[0],
                                                 className: q.marginBottom20,
                                                 label: K.intl.string(K.t.tUjnxs),
                                                 error: null != (t = this.renderError('login')) ? t : this.renderError('email'),
@@ -468,7 +468,7 @@ class $ extends (r = l.PureComponent) {
                                             }),
                                             (0, i.jsx)(E.zx, {
                                                 type: 'submit',
-                                                submitting: o === V.u34.LOGGING_IN,
+                                                submitting: a === V.u34.LOGGING_IN,
                                                 color: g ? E.zx.Colors.GREEN : E.zx.Colors.BRAND,
                                                 className: q.marginBottom8,
                                                 children: g ? K.intl.string(K.t.wvVThI) : K.intl.string(K.t.dKhVQE)
@@ -588,10 +588,10 @@ class $ extends (r = l.PureComponent) {
     }
     render() {
         let { authenticated: e, invite: t, guildTemplate: n, loginStatus: r, handoffAvailable: l } = this.props,
-            { checkingHandoff: o, redirecting: a } = this.state;
-        if (a || o) return (0, i.jsx)(Q, {});
+            { checkingHandoff: a, redirecting: o } = this.state;
+        if (o || a) return (0, i.jsx)(Q, {});
         if (l) return this.renderHandOffAvailable();
-        if (e && o) return this.renderHandOffContinue();
+        if (e && a) return this.renderHandOffContinue();
         switch (r) {
             case V.u34.LOGGING_IN_MFA_SMS:
             case V.u34.MFA_SMS_STEP:
@@ -769,9 +769,9 @@ class $ extends (r = l.PureComponent) {
             Y(this, 'handleGotoRegister', () => {
                 let e,
                     { login: t } = this.state,
-                    { invite: n, giftCode: r, guildTemplate: i, location: l, transitionTo: o, redirectTo: a } = this.props,
+                    { invite: n, giftCode: r, guildTemplate: i, location: l, transitionTo: a, redirectTo: o } = this.props,
                     s = null != l ? (0, c.parse)(l.search) : {};
-                '' !== t && (s.email = t), null != n ? ((s.mode = 'register'), (e = V.Z5c.INVITE(n.code))) : null != r ? ((s.mode = 'register'), (e = V.Z5c.GIFT_CODE(r.code))) : null != i ? (e = V.Z5c.GUILD_TEMPLATE(i.code)) : null != a ? ((e = V.Z5c.REGISTER), (s.redirect_to = a)) : (e = V.Z5c.REGISTER), this.loginReset(), o(e, { search: (0, c.stringify)(s) }), M.S.dispatch(V.CkL.WAVE_EMPHASIZE);
+                '' !== t && (s.email = t), null != n ? ((s.mode = 'register'), (e = V.Z5c.INVITE(n.code))) : null != r ? ((s.mode = 'register'), (e = V.Z5c.GIFT_CODE(r.code))) : null != i ? (e = V.Z5c.GUILD_TEMPLATE(i.code)) : null != o ? ((e = V.Z5c.REGISTER), (s.redirect_to = o)) : (e = V.Z5c.REGISTER), this.loginReset(), a(e, { search: (0, c.stringify)(s) }), M.S.dispatch(V.CkL.WAVE_EMPHASIZE);
             });
         let r = null != e.location ? (0, c.parse)(e.location.search) : {};
         this.state = {

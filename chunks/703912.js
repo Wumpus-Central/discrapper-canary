@@ -69,13 +69,13 @@ async function N(e, t, n) {
         o,
         s,
         c,
-        { client_id: u, response_type: y = 'code', redirect_uri: v, code_challenge: C, code_challenge_method: S, state: N, nonce: T, scope: P, permissions: j, guild_id: A, channel_id: Z, prompt: x, disable_guild_select: L, integration_type: w, pid: R, signal: D } = e;
+        { client_id: u, response_type: y = 'code', redirect_uri: v, code_challenge: C, code_challenge_method: S, state: N, nonce: T, scope: P, permissions: j, guild_id: A, channel_id: Z, prompt: x, disable_guild_select: w, integration_type: L, pid: R, signal: D } = e;
     if (null == D ? void 0 : D.aborted) throw new O.Z({ errorCode: I.lTL.UNKNOWN_ERROR }, 'Request aborted');
     if (null == u) throw new O.Z({ errorCode: I.lTL.OAUTH2_ERROR }, 'No Client ID provided');
     if (null != v) throw new O.Z({ errorCode: I.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
     let k = [];
     if (('string' == typeof P ? (k = P.split(' ').filter((e) => e.length > 0)) : Array.isArray(P) && (k = P), null == b.default.getCurrentUser())) throw new O.Z({ errorCode: I.lTL.OAUTH2_ERROR }, 'Client is not logged in');
-    if (null != w) l = Number(w);
+    if (null != L) l = Number(L);
     else {
         let e = (e) => {
                 var t;
@@ -143,7 +143,7 @@ async function N(e, t, n) {
             guildId: A,
             channelId: Z,
             prompt: x,
-            disableGuildSelect: L,
+            disableGuildSelect: w,
             disclosures: s,
             integrationType: l,
             pid: R

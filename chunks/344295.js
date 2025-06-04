@@ -2,8 +2,8 @@ n.d(t, { Z: () => K }), n(997841), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(533800),
+    a = n.n(l),
+    o = n(533800),
     s = n(756647),
     c = n(442837),
     u = n(298444),
@@ -95,9 +95,9 @@ class H extends i.PureComponent {
             let { channel: e } = t;
             if (null != e)
                 if (((0, v.c)(k.M5.INVITE_UNCLAIMED), null != t.guild)) {
-                    var o, c, u;
-                    let e = (0, C.yE)(null != (u = t.flags) ? u : 0, a.$.IS_APPLICATION_BYPASS),
-                        n = (null == (o = t.guild.features) ? void 0 : o.includes(L.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) && (null == (c = t.guild.features) ? void 0 : c.includes(L.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL));
+                    var a, c, u;
+                    let e = (0, C.yE)(null != (u = t.flags) ? u : 0, o.$.IS_APPLICATION_BYPASS),
+                        n = (null == (a = t.guild.features) ? void 0 : a.includes(L.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) && (null == (c = t.guild.features) ? void 0 : c.includes(L.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL));
                     i(!e && n ? L.Z5c.GUILD_MEMBER_VERIFICATION(t.guild.id) : L.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code));
                 } else d.ZP.transitionToInvite(t, i);
         }
@@ -114,7 +114,7 @@ class H extends i.PureComponent {
         let { invite: r } = this.props,
             i = this.getInviteKey(),
             l = (0, b.jX)(i),
-            o = t
+            a = t
                 ? {
                       guild_id: null != r.guild ? r.guild.id : null,
                       channel_id: null != r.channel ? r.channel.id : null,
@@ -139,7 +139,7 @@ class H extends i.PureComponent {
                         });
                 }
                 return e;
-            })({}, o, n)
+            })({}, a, n)
         );
     }
     renderSpinner(e) {
@@ -156,7 +156,7 @@ class H extends i.PureComponent {
                     className: B.marginBottom8
                 }),
                 (0, r.jsx)(m.Dx, {
-                    className: o()(B.marginTop8, B.marginBottom8),
+                    className: a()(B.marginTop8, B.marginBottom8),
                     children: U.intl.string(U.t.kux01N)
                 }),
                 (0, r.jsx)(m.DK, { children: e ? U.intl.string(U.t['5AkWAQ']) : U.intl.string(U.t['+qUJAg']) }),
@@ -258,8 +258,8 @@ class H extends i.PureComponent {
             case L.r2o.APP_OPENING:
                 return this.renderSpinner(U.intl.string(U.t['Z+hCVV']));
             case L.r2o.RESOLVED:
-                var o;
-                if (n && (0, C.yE)(null != (o = e.flags) ? o : 0, a.$.IS_GUEST_INVITE)) return d.ZP.openApp(e.code), u.x.set(E.J, e.code), this.renderAppOpened(() => i(L.Z5c.APP));
+                var a;
+                if (n && (0, C.yE)(null != (a = e.flags) ? a : 0, o.$.IS_GUEST_INVITE)) return d.ZP.openApp(e.code), u.x.set(E.J, e.code), this.renderAppOpened(() => i(L.Z5c.APP));
                 if (n || !M.KO) return this.renderAuthenticatedOrDownload();
                 if (this.getMode() === z.LOGIN)
                     return (0, r.jsx)(R.Z, {

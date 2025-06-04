@@ -21,21 +21,21 @@ var r = n(255367),
     C = n(682662),
     j = n(662146),
     S = n(981631),
-    E = n(388032),
-    x = n(728492),
+    x = n(388032),
+    E = n(728492),
     P = n(335426);
 let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
     w = (0, a.animated)(h.Kqy),
     N = i.memo(function (e) {
-        let { folderNode: t, setNodeRef: n, selected: l, expanded: a, mediaState: d, mentionCount: m = 0, isMentionLowImportance: N, unread: Z = !1, defaultFolderName: T, draggable: R = !1, sorting: A = !1, onDragStart: D, onDragEnd: L, onExpandCollapse: M, onContextMenu: k, renderChildNode: U, folderButtonSize: G, folderButtonContent: B, 'aria-setsize': V, 'aria-posinset': H } = e,
+        let { folderNode: t, setNodeRef: n, selected: l, expanded: a, mediaState: d, mentionCount: m = 0, isMentionLowImportance: N, unread: Z = !1, defaultFolderName: T, draggable: A = !1, sorting: R = !1, onDragStart: D, onDragEnd: L, onExpandCollapse: k, onContextMenu: M, renderChildNode: U, folderButtonSize: G, folderButtonContent: B, 'aria-setsize': V, 'aria-posinset': H } = e,
             { id: F, name: z, children: W } = t,
             [Y, K] = i.useState(!1),
             [q, Q] = i.useState(!1),
             X = Y || q,
             J = (0, f.Ml)('FolderItem');
         i.useEffect(() => {
-            A && K(!1);
-        }, [A]);
+            R && K(!1);
+        }, [R]);
         let [{ dragging: $ }, ee] = (0, s.c)({
                 type: b.eD.FOLDER,
                 item: () => (
@@ -55,11 +55,11 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
             }, []),
             en = i.useCallback(
                 (e) => {
-                    (('ArrowRight' === e.key && !a) || ('ArrowLeft' === e.key && a)) && M();
+                    (('ArrowRight' === e.key && !a) || ('ArrowLeft' === e.key && a)) && k();
                 },
-                [M, a]
+                [k, a]
             ),
-            er = null != z && '' !== z ? z : null != T && '' !== T ? T : E.intl.string(E.t.xV9hVl),
+            er = null != z && '' !== z ? z : null != T && '' !== T ? T : x.intl.string(x.t.xV9hVl),
             ei = (0, c.Ie)(''.concat(F)),
             el = 'folder-items-'.concat(F),
             eo = (function (e) {
@@ -86,17 +86,17 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                     }),
                     (0, r.jsx)(j.Z, {
                         text: er,
-                        disabled: A,
+                        disabled: R,
                         selected: l,
                         disableWrapper: !0,
                         children: (0, r.jsx)('div', {
-                            ref: R
+                            ref: A
                                 ? (e) => {
                                       ee(e);
                                   }
                                 : void 0,
-                            className: o()(x.folderHeader, {
-                                [x.folderHeaderSmall]: 'icon' === G || J,
+                            className: o()(E.folderHeader, {
+                                [E.folderHeaderSmall]: 'icon' === G || J,
                                 [P.wobble]: !$ && q && !a
                             }),
                             'data-dnd-name': er,
@@ -105,14 +105,14 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                 : (0, r.jsx)(O.Z, {
                                       folderNode: t,
                                       expanded: a,
-                                      sorting: A,
+                                      sorting: R,
                                       mediaState: d,
                                       mentionCount: m,
                                       isMentionLowImportance: N,
                                       tooltipName: er,
                                       folderGroupId: el,
-                                      onClick: M,
-                                      onContextMenu: k,
+                                      onClick: k,
+                                      onContextMenu: M,
                                       onHoverChange: K,
                                       onKeyDown: en,
                                       treeItemProps: ei,
@@ -122,7 +122,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                   })
                         })
                     }),
-                    R
+                    A
                         ? (0, r.jsx)(v.ZP, {
                               name: er,
                               targetNode: t,
@@ -135,14 +135,14 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
             ed = eu === S.Wyy ? void 0 : (0, u.Rf)(eu);
         return (0, r.jsxs)('div', {
             ref: ea,
-            className: o()(x.folderGroup, {
-                [x.isExpanded]: a,
-                [x.isHovering]: X
+            className: o()(E.folderGroup, {
+                [E.isExpanded]: a,
+                [E.isHovering]: X
             }),
             style: { '--custom-folder-color': null != ed ? ed : '' },
             'data-drop-hovering': q,
             children: [
-                !$ && a && (0, r.jsx)('span', { className: x.folderGroupBackground }),
+                !$ && a && (0, r.jsx)('span', { className: E.folderGroupBackground }),
                 ec,
                 es((e, n, i) => {
                     let { key: l } = i;
@@ -155,7 +155,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                 role: 'group',
                                 as: 'ul',
                                 gap: 'xs',
-                                className: x.folderGuildsList,
+                                className: E.folderGuildsList,
                                 style: { height: e.height.to((e) => e * eo) },
                                 'aria-label': t.name,
                                 children: W.map((t, n) => U(t, n, W.length, e.height))
@@ -164,7 +164,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                         )
                     );
                 }),
-                R && a
+                A && a
                     ? (0, r.jsx)(v.Zu, {
                           name: er,
                           targetNode: t
