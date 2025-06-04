@@ -25,8 +25,8 @@ var i = n(570140),
     P = n(703558),
     E = n(117530),
     C = n(62817),
-    R = n(630388),
-    I = n(226351),
+    I = n(630388),
+    R = n(226351),
     w = n(981631),
     N = n(388032);
 function Z(e) {
@@ -78,7 +78,7 @@ let M = {
         let L,
             { channelId: k, uploads: D, draftType: U, parsedMessage: F, options: B = {}, raiseEndpointErrors: V = !1 } = e,
             G = new u.Z(w.ANM.MESSAGES(k)),
-            z = new I.o(),
+            z = new R.o(),
             H = {
                 content: '',
                 nonce: '',
@@ -91,7 +91,7 @@ let M = {
             };
         null != F && (H.content = null == F ? void 0 : F.content), null != T.Z.getPendingReply(k) && ((H.type = w.uaV.REPLY), (H.message_reference = B.messageReference), (H.allowed_mentions = B.allowedMentions), (0, S.A6)(k));
         let [W, J] = (0, x.Z)(H.content);
-        W && ((H.content = J), (H.flags = (0, R.pj)(null != (n = H.flags) ? n : 0, w.iLy.SUPPRESS_NOTIFICATIONS)));
+        W && ((H.content = J), (H.flags = (0, I.pj)(null != (n = H.flags) ? n : 0, w.iLy.SUPPRESS_NOTIFICATIONS)));
         let K = null != (C = B.nonce) ? C : (0, m.r)(),
             X = (0, f.ZP)({
                 channelId: k,
@@ -128,7 +128,7 @@ let M = {
                         type: 'UPLOAD_FAIL',
                         channelId: k,
                         file: e,
-                        messageRecord: L
+                        messageId: null == L ? void 0 : L.id
                     }),
                     (0, g.x)({
                         fileItems: e.items,
@@ -188,8 +188,7 @@ let M = {
                     type: 'UPLOAD_COMPLETE',
                     channelId: k,
                     file: e,
-                    aborted: G._aborted,
-                    messageRecord: t
+                    aborted: G._aborted
                 });
                 let n = (0, j.ZC)(t);
                 null != n &&

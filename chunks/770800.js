@@ -1,4 +1,4 @@
-r.d(t, { Z: () => R }), r(784620), r(973216);
+r.d(t, { Z: () => Z }), r(784620), r(973216);
 var n = r(255367),
     a = r(73800),
     i = r(392711),
@@ -12,16 +12,16 @@ var n = r(255367),
     p = r(959457),
     h = r(246946),
     y = r(594174),
-    g = r(5192),
-    f = r(476221),
+    f = r(5192),
+    g = r(476221),
     v = r(481250),
     D = r(206314),
     b = r(513547),
     E = r(65154),
-    j = r(388032),
-    C = r(442122),
+    C = r(388032),
+    j = r(442122),
     P = r(20493);
-class Z extends a.PureComponent {
+class R extends a.PureComponent {
     render() {
         var e, t;
         let { transport: r, mediaSessionId: a, hidePersonalInformation: i, hostname: s } = this.props;
@@ -81,7 +81,7 @@ class Z extends a.PureComponent {
                 let t = Array.isArray(e.bitrate) ? (null == (n = e.bitrate.at(-1)) ? void 0 : n.value) : e.bitrate,
                     r = y.default.getUser(e.id);
                 var n,
-                    a = g.ZP.getNickname(m.Z.getGuildId(), void 0, r);
+                    a = f.ZP.getNickname(m.Z.getGuildId(), void 0, r);
                 return (
                     null == a && (a = null != r ? r.username : e.id),
                     {
@@ -92,7 +92,7 @@ class Z extends a.PureComponent {
                 );
             }),
             h = l().sortBy(p, (e) => e.displayName),
-            f = l().map(h, (e) =>
+            g = l().map(h, (e) =>
                 (function (e, t, r) {
                     let a = (0, n.jsxs)(c.Z, {
                             id: 'bitrate-'.concat(e),
@@ -127,13 +127,13 @@ class Z extends a.PureComponent {
             );
         return (0, n.jsxs)(o.hjN, {
             tag: o.RB0.H2,
-            title: j.intl.string(j.t.wU9INz) + (null != a ? ' - ' + a : ''),
-            className: C.allowSelection,
-            children: [(0, v.a)(u), 0 === f.length ? null : (0, n.jsx)(o.$i$, { className: P.marginBottom20 }), (0, v.a)(f)]
+            title: C.intl.string(C.t.wU9INz) + (null != a ? ' - ' + a : ''),
+            className: j.allowSelection,
+            children: [(0, v.a)(u), 0 === g.length ? null : (0, n.jsx)(o.$i$, { className: P.marginBottom20 }), (0, v.a)(g)]
         });
     }
 }
-let R = s.ZP.connectStores([u.ZP, d.Z, h.Z, p.Z], (e) => {
+let Z = s.ZP.connectStores([u.ZP, d.Z, h.Z, p.Z], (e) => {
     var t;
     let { context: r, index: n } = e,
         a = u.ZP.getAllStats(r)[n],
@@ -143,6 +143,6 @@ let R = s.ZP.connectStores([u.ZP, d.Z, h.Z, p.Z], (e) => {
         hidePersonalInformation: h.Z.hidePersonalInformation,
         transport: null != a ? a.transport : null,
         mediaSessionId: d.Z.getMediaSessionId(),
-        hostname: f.Z.getShortHostname(l)
+        hostname: g.Z.getShortHostname(l)
     };
-})(Z);
+})(R);

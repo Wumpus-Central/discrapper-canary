@@ -1,1 +1,1 @@
-e.exports = JSON.parse('{"xRdYAQ":"Brugerdefinerede temaer i [beta] er ikke tilgængelige på mobil.","2hAz8f":"Tilpas dit tema","23QUzs":"Nyhed! Brugerdefinerede temaer","TRCE4u":"Match dit humør med endeløse farvekombinationer. Prøv det nu \u2013 kun med Nitro."}');
+e.exports = JSON.parse('{"8ZcEfn":"Farver","AsmU8/":"Tilpas dit tema","xRdYAQ":"Brugerdefinerede temaer i [beta] er ikke tilgængelige på mobil.","2hAz8f":"Tilpas dit tema","23QUzs":"Nyhed! Brugerdefinerede temaer","TRCE4u":"Match dit humør med endeløse farvekombinationer. Prøv det nu \u2013 kun med Nitro."}');

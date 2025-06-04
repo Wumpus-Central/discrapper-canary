@@ -19,8 +19,8 @@ var a = r(120356),
     p = r(513547),
     h = r(65154),
     y = r(442122),
-    g = r(20493);
-let f = {
+    f = r(20493);
+let g = {
     [h.Z.NO_OVERRIDE]: 'None',
     [h.Z.LOW]: 'Low Quality Stream',
     [h.Z.HIGH]: 'High Quality Stream'
@@ -61,8 +61,8 @@ let D = {
     codec: 2
 };
 function b(e, t, r, a, b) {
-    return e.map((E, j) => {
-        let C = [];
+    return e.map((E, C) => {
+        let j = [];
         for (let e of Object.keys(E).sort((e, t) => {
             let r = D[e],
                 n = D[t];
@@ -71,7 +71,7 @@ function b(e, t, r, a, b) {
             let t = E[e];
             p.al[e] ||
                 void 0 === t ||
-                C.push(
+                j.push(
                     (0, n.jsx)(
                         p.ck,
                         {
@@ -86,7 +86,7 @@ function b(e, t, r, a, b) {
         return (0, n.jsxs)(
             l.hjN,
             {
-                className: g.marginBottom40,
+                className: f.marginBottom40,
                 title: E.type,
                 titleClassName: y.sectionHeader,
                 children: [
@@ -98,7 +98,7 @@ function b(e, t, r, a, b) {
                             let l = a.get(t, r, e.ssrc);
                             return null != l
                                 ? (0, n.jsx)('div', {
-                                      className: i()(y.videoWrapper, g.marginBottom40),
+                                      className: i()(y.videoWrapper, f.marginBottom40),
                                       children: (0, n.jsx)(d.Z, {
                                           streamId: l,
                                           videoComponent: u.Z.getMediaEngine().Video,
@@ -109,20 +109,20 @@ function b(e, t, r, a, b) {
                                   })
                                 : null;
                         })(E, r, a, b),
-                    v(C),
+                    v(j),
                     'video' === E.type &&
-                        j === e.length - 1 &&
+                        C === e.length - 1 &&
                         null != r &&
                         null != a &&
                         null != b &&
                         (0, n.jsx)(c.Z, {
-                            className: g.marginBottom20,
+                            className: f.marginBottom20,
                             children: (0, n.jsxs)(c.Z.Child, {
                                 basis: '100%',
                                 children: [
                                     (0, n.jsx)(l.vwX, {
                                         tag: l.RB0.H5,
-                                        className: g.marginBottom8,
+                                        className: f.marginBottom8,
                                         children: 'Simulcast Override'
                                     }),
                                     (0, n.jsx)(l.q4e, {
@@ -132,7 +132,7 @@ function b(e, t, r, a, b) {
                                         },
                                         options: Object.values(h.Z).map((e) => ({
                                             value: e,
-                                            label: f[e]
+                                            label: g[e]
                                         }))
                                     })
                                 ]

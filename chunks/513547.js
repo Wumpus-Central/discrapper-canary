@@ -50,6 +50,8 @@ let d = {
     encryptFailureCount: 'Encrypt Failures',
     encryptSuccessCount: 'Encrypt Successes',
     expandRate: 'Expand Rate',
+    fecPacketsDiscarded: 'FEC Packets Discarded',
+    fecPacketsReceived: 'FEC Packets Received',
     filter: 'Filter',
     firCount: 'FIR',
     fractionLost: 'Packet Loss',
@@ -118,6 +120,7 @@ let d = {
     renderDelay: 'Render Delay',
     resolution: 'Resolution',
     routingFailures: 'Routing Failures',
+    sampleRateMismatchPercent: 'Sample Rate Mismatch',
     screenCaptureKitFrames: 'ScreenCaptureKit frames',
     screenshareFrames: 'WebRTC Frames',
     secondaryDecodedRate: 'Secondary Decode Rate',
@@ -130,9 +133,9 @@ let d = {
     totalFramesDuration: 'Frames Duration (ms)',
     totalFreezesDuration: 'Freezes Duration (ms)',
     totalPausesDuration: 'Pauses Duration (ms)',
+    videoEntropy: 'Video Entropy',
     videohookBackend: 'Videohook Backend',
-    videohookFrames: 'Videohook Frames',
-    videoEntropy: 'Video Entropy'
+    videohookFrames: 'Videohook Frames'
 };
 function u(e) {
     return ''.concat((e / 1000).toFixed(2), ' Kbps');
@@ -149,10 +152,10 @@ function h(e) {
 function y(e) {
     return ''.concat(e.toFixed(0), '%');
 }
-function g(e) {
+function f(e) {
     return e ? 'Yes' : 'No';
 }
-function f(e) {
+function g(e) {
     return ''.concat(Math.max(e, 0).toFixed(2), ' dB');
 }
 function v(e) {
@@ -169,8 +172,8 @@ let b = {
         audioPlayoutUnderruns: !0,
         decryptAttempts: !0,
         decryptDuration: !0,
-        decryptMissingKeyCount: !0,
         decryptInvalidNonceCount: !0,
+        decryptMissingKeyCount: !0,
         encryptAttempts: !0,
         encryptDuration: !0,
         encryptMaxAttempts: !0,
@@ -193,13 +196,13 @@ let b = {
     },
     E = {
         accelerateRate: y,
-        audioDetected: g,
-        audioLevel: f,
+        audioDetected: f,
+        audioLevel: g,
         availableOutgoingBitrate: u,
         averageDecodeTime: h,
         averageEncodeTime: h,
-        bandwidthLimitedFrameRate: g,
-        bandwidthLimitedResolution: g,
+        bandwidthLimitedFrameRate: f,
+        bandwidthLimitedResolution: f,
         bitrate: u,
         bitrateTarget: u,
         bytesReceived: m,
@@ -208,12 +211,12 @@ let b = {
             let { id: t, name: r } = e;
             return (r = null != (r = '' === r ? 'unknown' : r) ? r : 'unknown'), ''.concat(r[0].toUpperCase()).concat(r.slice(1), ' (').concat(t, ')');
         },
-        cpuLimitedResolution: g,
+        cpuLimitedResolution: f,
         currentDelay: h,
         decoderImplementationName: p,
         delayEstimate: h,
         encoderImplementationName: p,
-        encoderQualityPsnr: f,
+        encoderQualityPsnr: g,
         encoderQualityVmaf: D,
         encodeUsage: y,
         expandRate: y,
@@ -237,20 +240,21 @@ let b = {
             let { width: t, height: r } = e;
             return ''.concat(t, 'x').concat(r);
         },
+        sampleRateMismatchPercent: y,
         secondaryDecodedRate: y,
         secureFramesProtocolVersion: function (e) {
             return e > 0 ? 'Version '.concat(e) : 'Disabled';
         },
         speechExpandRate: y,
         targetDelay: h,
+        videoEntropy: D,
         videohookBackend: function (e) {
             let t = ['N/A', 'Direct3D 9', 'Direct3D 10', 'Direct3D 11', 'Direct3D 12', 'OpenGL', 'Vulkan'];
             return e < t.length ? t[e] : 'Unknown';
-        },
-        videoEntropy: D
+        }
     },
-    j = (e) => e,
-    C = (e) => {
+    C = (e) => e,
+    j = (e) => {
         let [t] = a.useState([]);
         return (
             t.push({
@@ -268,7 +272,7 @@ let b = {
 function P(e) {
     var t, r, a;
     let { label: i, value: l, section: u } = e,
-        m = null != (r = E[i]) ? r : j,
+        m = null != (r = E[i]) ? r : C,
         p =
             s.Pz[i] &&
             (Array.isArray(l) && l.length > 0 && 'number' == typeof l[0].value
@@ -278,7 +282,7 @@ function P(e) {
                       height: 100
                   })
                 : 'number' == typeof l
-                  ? (0, n.jsx)(C, {
+                  ? (0, n.jsx)(j, {
                         value: l,
                         width: 300,
                         height: 100

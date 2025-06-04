@@ -17,10 +17,10 @@ class h extends a.PureComponent {
         let c = o.Z.getGuildId(),
             h = d.default.getUser(r),
             y = s.ZP.getNick(c, r),
-            g = null == h ? p.intl.string(p.t.SJmZam) : ''.concat(p.intl.string(p.t.SJmZam), ' \u2014 ').concat(null != y ? y : u.ZP.getName(h));
+            f = null == h ? p.intl.string(p.t.SJmZam) : ''.concat(p.intl.string(p.t.SJmZam), ' \u2014 ').concat(null != y ? y : u.ZP.getName(h));
         return (0, n.jsx)(l.hjN, {
             tag: l.RB0.H2,
-            title: g,
+            title: f,
             children: (0, m.V)(e, t, a, r, i)
         });
     }

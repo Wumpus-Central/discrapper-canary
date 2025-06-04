@@ -1,19 +1,19 @@
-n.d(t, { Z: () => l });
+n.d(e, { Z: () => l });
 var r = n(255367);
 n(73800);
 var a = n(481060),
-    i = n(170086);
-function l(e) {
-    var t;
-    let { attachment: n } = e,
-        l = Math.round(((null != (t = n.size) ? t : 0) / 1024 / 1024) * 100) / 100;
+    o = n(170086);
+function l(t) {
+    var e;
+    let { attachment: n } = t,
+        l = Math.round(((null != (e = n.size) ? e : 0) / 1024 / 1024) * 100) / 100;
     return (0, r.jsxs)('div', {
-        className: i.container,
+        className: o.container,
         children: [
             (0, r.jsx)(a.ZKT, {
                 size: 'xs',
                 color: 'currentColor',
-                className: i.fileIcon
+                className: o.fileIcon
             }),
             (0, r.jsx)(a.LZC, {
                 size: 8,
@@ -22,14 +22,14 @@ function l(e) {
             (0, r.jsx)(a.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-normal',
-                className: i.fileName,
+                className: o.fileName,
                 children: n.filename
             }),
             (0, r.jsx)(a.LZC, {
                 size: 8,
                 horizontal: !0
             }),
-            (0, r.jsx)('div', { className: i.dot }),
+            (0, r.jsx)('div', { className: o.dot }),
             (0, r.jsx)(a.LZC, {
                 size: 8,
                 horizontal: !0
