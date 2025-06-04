@@ -10786,6 +10786,7 @@
   "VFWjc3": "{count, plural, =0 {No ignored messages} one {!!{count}!! ignored message} other {!!{count}!! ignored messages} }",
   "+joqrK": "!!{username}!! ignored",
   "xdx6OT": "Ignore Friend Request",
+  "cwS3Ex": "Don't suggest !!{device}!! again.",
   "Hjvqr6": "[Explore feature guide](Explore feature guide)",
   "iX9qtL": "Need more info? [Explore feature guide](Explore feature guide)",
   "/FWKKC": "You can unhide them at any time",
