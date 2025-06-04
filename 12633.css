@@ -59815,6 +59815,13 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-family: ABC Ginto Nord Discord;
+    font-style: italic;
+    font-weight: 700;
+    src: url(/assets/1a1e4ba0da23278e.woff2) format("woff2")
+}
+
+@font-face {
     font-family: ABC Ginto Normal;
     font-style: normal;
     font-weight: 300;
