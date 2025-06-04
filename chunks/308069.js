@@ -25,7 +25,7 @@ let j = (e) => {
             });
         }, [t]),
         S = s.useCallback(() => {
-            (0, p.FE)(t, {
+            (0, p.nc)(t, {
                 content: u.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_GAME_LINK,
                 impressionId: C

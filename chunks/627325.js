@@ -24,10 +24,10 @@ function I(e) {
     let { columns: t, handleScroll: n, voiceListRef: i, showSectionHeaders: a = !1, query: l } = e,
         s = E(),
         c = (0, d.e7)([f.default], () => (0, p.I5)(f.default.getCurrentUser())),
-        I = S(l, c),
+        I = P(l, c),
         N = Math.ceil(I.length / t),
         {
-            isNativeModuleLoaded: P,
+            isNativeModuleLoaded: S,
             isNativeModuleLoading: w,
             catalogLastFetchTime: T
         } = (0, d.cj)([h.Z], () => ({
@@ -70,7 +70,7 @@ function I(e) {
                     (0, r.jsx)(_.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-muted',
-                        children: y.intl.format(y.t['5afO9f'], { onClick: P ? v.wV : v.r5 })
+                        children: y.intl.format(y.t['5afO9f'], { onClick: S ? v.wV : v.r5 })
                     })
                 ]
             })
@@ -157,7 +157,7 @@ let E = () =>
                   return s()(n, r);
               });
     },
-    S = (e, t) =>
+    P = (e, t) =>
         (0, d.Wu)(
             [h.Z],
             () => {

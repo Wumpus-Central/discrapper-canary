@@ -44,15 +44,15 @@ function c(e) {
 }
 function u(e, t, n, u, d) {
     var m;
-    let f = (0, o._F)(),
-        p = (0, o.O5)(),
+    let p = (0, o._F)(),
+        f = (0, o.O5)(),
         v = (0, r.useRef)(-1),
         g = (null == (m = e.userStatus) ? void 0 : m.completedAt) != null,
         b = e.id,
         E = r.useCallback(
             (e) => {
                 null != t.current &&
-                    f({
+                    p({
                         questId: b,
                         event: a.rMx.QUEST_VIDEO_LOADING_STARTED,
                         properties: s(
@@ -66,13 +66,13 @@ function u(e, t, n, u, d) {
                         )
                     });
             },
-            [b, t, d, u, n, f]
+            [b, t, d, u, n, p]
         ),
         O = r.useCallback(
             (e, r) => {
                 null != t.current &&
                     null != r &&
-                    f({
+                    p({
                         questId: b,
                         event: a.rMx.QUEST_VIDEO_LOADING_ENDED,
                         properties: s(
@@ -86,12 +86,12 @@ function u(e, t, n, u, d) {
                         )
                     });
             },
-            [b, t, d, u, n, f]
+            [b, t, d, u, n, p]
         ),
         h = r.useCallback(
             (e) => {
                 null != t.current &&
-                    f({
+                    p({
                         questId: b,
                         event: a.rMx.QUEST_VIDEO_TIME_TO_FIRST_FRAME,
                         properties: s(
@@ -104,11 +104,11 @@ function u(e, t, n, u, d) {
                         )
                     });
             },
-            [b, t, d, u, n, f]
+            [b, t, d, u, n, p]
         ),
-        C = r.useCallback(() => {
+        S = r.useCallback(() => {
             null != t.current &&
-                f({
+                p({
                     questId: b,
                     event: a.rMx.QUEST_VIDEO_PROGRESSED,
                     properties: s(
@@ -121,11 +121,11 @@ function u(e, t, n, u, d) {
                         c(n)
                     )
                 });
-        }, [b, t, u, n, f, d]),
-        S = r.useCallback(
+        }, [b, t, u, n, p, d]),
+        C = r.useCallback(
             (e) => {
                 null != t.current &&
-                    f({
+                    p({
                         questId: b,
                         event: a.rMx.QUEST_VIDEO_RESUMED,
                         properties: s(
@@ -139,13 +139,13 @@ function u(e, t, n, u, d) {
                         )
                     });
             },
-            [b, t, u, n, f, d]
+            [b, t, u, n, p, d]
         ),
         j = r.useCallback(
             (e) => {
                 null != t.current &&
                     null != e &&
-                    f({
+                    p({
                         questId: b,
                         event: a.rMx.QUEST_VIDEO_PAUSED,
                         properties: s(
@@ -159,12 +159,12 @@ function u(e, t, n, u, d) {
                         )
                     });
             },
-            [b, t, u, n, f, d]
+            [b, t, u, n, p, d]
         ),
         y = r.useCallback(
             (e, n) => {
                 null != t.current &&
-                    f({
+                    p({
                         questId: b,
                         event: e ? a.rMx.QUEST_VIDEO_APP_FOCUSED : a.rMx.QUEST_VIDEO_APP_UNFOCUSED,
                         properties: {
@@ -175,13 +175,13 @@ function u(e, t, n, u, d) {
                         }
                     });
             },
-            [b, t, u, f, d]
+            [b, t, u, p, d]
         ),
         _ = r.useCallback(
             (e) => {
                 null != t.current &&
                     ((v.current += 1),
-                    f({
+                    p({
                         questId: b,
                         event: a.rMx.QUEST_VIDEO_BUFFERING_STARTED,
                         properties: s(
@@ -195,13 +195,13 @@ function u(e, t, n, u, d) {
                         )
                     }));
             },
-            [b, t, d, u, n, f]
+            [b, t, d, u, n, p]
         ),
         x = r.useCallback(
             (e, r) => {
                 null != t.current &&
                     ((v.current += 1),
-                    f({
+                    p({
                         questId: b,
                         event: a.rMx.QUEST_VIDEO_BUFFERING_ENDED,
                         properties: s(
@@ -216,23 +216,23 @@ function u(e, t, n, u, d) {
                         )
                     }));
             },
-            [b, t, d, u, n, f]
+            [b, t, d, u, n, p]
         ),
         D = r.useCallback(
             (e, t) => {
-                p({
+                f({
                     questId: b,
                     questContent: e,
                     questContentCTA: t
                 });
             },
-            [b, p]
+            [b, f]
         ),
         T = r.useCallback(
             (e) => {
                 if (null != t.current) {
                     var r, l;
-                    f({
+                    p({
                         questId: b,
                         event: a.rMx.QUEST_VIDEO_SEGMENT_WATCHED,
                         properties: s(
@@ -263,16 +263,16 @@ function u(e, t, n, u, d) {
                     });
                 }
             },
-            [f, b, d, g, u, n, t]
+            [p, b, d, g, u, n, t]
         ),
         P = r.useCallback(
             (e, r) => {
                 var l, o;
                 if (null == t.current) return;
                 let m = null == (l = t.current) ? void 0 : l.error,
-                    p = null == (o = t.current) ? void 0 : o.networkState,
+                    f = null == (o = t.current) ? void 0 : o.networkState,
                     v = null != t.current ? (0, i.bA)(t.current.currentTime, t.current.duration) : void 0;
-                f({
+                p({
                     questId: b,
                     event: a.rMx.QUEST_VIDEO_ERROR,
                     properties: s(
@@ -284,20 +284,20 @@ function u(e, t, n, u, d) {
                             video_session_id: u,
                             video_error_code: null == m ? void 0 : m.code,
                             video_error_message: null == m ? void 0 : m.message,
-                            video_network_state: p
+                            video_network_state: f
                         },
                         c(n)
                     )
                 });
             },
-            [b, t, d, u, n, f]
+            [b, t, d, u, n, p]
         );
     return {
         trackQuestVideoLoadingStarted: E,
         trackQuestVideoLoadingEnded: O,
         trackQuestVideoTimeToFirstFrame: h,
-        trackQuestVideoProgressed: C,
-        trackQuestVideoResumed: S,
+        trackQuestVideoProgressed: S,
+        trackQuestVideoResumed: C,
         trackQuestVideoPaused: j,
         trackQuestVideoFocusChange: y,
         trackQuestContentClick: D,
@@ -307,7 +307,7 @@ function u(e, t, n, u, d) {
         trackQuestVideoFullscreenChanged: r.useCallback(
             (e) => {
                 null != t.current &&
-                    f({
+                    p({
                         questId: b,
                         event: e ? a.rMx.QUEST_VIDEO_FULLSCREEN_ENTERED : a.rMx.QUEST_VIDEO_FULLSCREEN_EXITED,
                         properties: s(
@@ -319,13 +319,13 @@ function u(e, t, n, u, d) {
                         )
                     });
             },
-            [b, t, u, n, f, d]
+            [b, t, u, n, p, d]
         ),
         trackQuestVideoError: P,
         trackQuestVideoVolumeChanged: r.useCallback(
             (e) => {
                 null != t.current &&
-                    f({
+                    p({
                         questId: b,
                         event: a.rMx.QUEST_VIDEO_VOLUME_CHANGED,
                         properties: s(
@@ -338,7 +338,7 @@ function u(e, t, n, u, d) {
                         )
                     });
             },
-            [b, t, d, u, n, f]
+            [b, t, d, u, n, p]
         )
     };
 }

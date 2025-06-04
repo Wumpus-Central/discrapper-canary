@@ -144,7 +144,7 @@ class D extends r.PureComponent {
                                   }),
                                   null == r &&
                                       (0, i.jsx)(m.Z, {
-                                          tooltipText: I.intl.string(I.t['6vrfgo']),
+                                          tooltipText: g ? I.intl.string(I.t['Hi1/aW']) : I.intl.string(I.t['6vrfgo']),
                                           onClick: this.handleDisconnect,
                                           icon: g ? c.PBZ : c.gkL
                                       })

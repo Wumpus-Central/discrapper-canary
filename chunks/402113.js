@@ -81,13 +81,13 @@ function m(e, t) {
     return i;
 }
 function g(e) {
-    var { location: t, applicationId: n, centerButton: d = !1, isActivityInCall: _ = !0 } = e,
-        m = h(e, ['location', 'applicationId', 'centerButton', 'isActivityInCall']);
-    let { parentAnalyticsLocation: g } = (0, o.ZP)(),
-        { changeLeaveCallAndActivityIcons: E } = (0, l.A)({ location: 'LeaveActivityButton' }),
-        b = d ? c.d : c.Z,
-        y = () => {
-            (0, s.v)(g, s.d.LEAVE_ACTIVITY),
+    var { location: t, applicationId: n, centerButton: d = !1 } = e,
+        _ = h(e, ['location', 'applicationId', 'centerButton']);
+    let { parentAnalyticsLocation: m } = (0, o.ZP)(),
+        { changeLeaveCallAndActivityIcons: g } = (0, l.A)({ location: 'LeaveActivityButton' }),
+        E = d ? c.d : c.Z,
+        b = () => {
+            (0, s.v)(m, s.d.LEAVE_ACTIVITY),
                 a.Z.leaveActivity({
                     location: t,
                     applicationId: n,
@@ -95,11 +95,11 @@ function g(e) {
                 });
         };
     return (0, r.jsx)(
-        b,
-        p(f({}, m), {
+        E,
+        p(f({}, _), {
             isTrayButton: !1,
-            onClick: y,
-            iconComponent: E && _ ? i.Dio : i.PBZ,
+            onClick: b,
+            iconComponent: g ? i.Dio : i.PBZ,
             label: u.intl.string(u.t['R/FK4O'])
         })
     );

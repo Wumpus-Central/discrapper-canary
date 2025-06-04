@@ -190,13 +190,16 @@ class v extends i.Z {
     }
     async handleVoiceFilterCatalogFetch(e) {
         let { catalog: t } = e,
-            n = {},
-            r = Object.keys(t.models).map((e) => ({
+            n = Object.keys(t.models).map((e) => ({
                 id: e,
                 fileName: (0, p.i)(e)
             }));
-        for (let { id: e, exists: t } of await c.ZP.checkVoiceFilterFilesExist(r)) n[e] = { status: t ? f.L.DOWNLOADED : f.L.MISSING };
-        (0, _.gf)(n);
+        if (c.ZP.canCheckVoiceFilterFilesExist()) {
+            let e = await c.ZP.checkVoiceFilterFilesExist(n),
+                t = {};
+            for (let { id: n, exists: r } of e) t[n] = { status: r ? f.L.DOWNLOADED : f.L.MISSING };
+            (0, _.gf)(t);
+        }
     }
     constructor(...e) {
         super(...e),

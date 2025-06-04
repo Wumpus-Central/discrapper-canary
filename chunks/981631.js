@@ -3673,6 +3673,7 @@ var n_ = (function (e) {
             (e.FEED_ITEM_INTERACTED = 'feed_item_interacted'),
             (e.FEED_ITEM_SEEN_BATCH = 'feed_item_seen_batch'),
             (e.FEED_ITEM_SEEN_LONG = 'feed_item_seen_long'),
+            (e.FEED_ITEM_CONTENT_GEN_FEEDBACK = 'feed_item_content_gen_feedback'),
             (e.FEED_SHOWN = 'feed_shown'),
             (e.ACTIVE_CHANNEL_CLICKED = 'active_channel_clicked'),
             (e.ACTIVE_CHANNELS_LOADED = 'active_channels_loaded'),

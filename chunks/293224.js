@@ -565,21 +565,21 @@ function ec(e) {
         align: 'center',
         position: 'top',
         animation: p.yRy.Animation.FADE,
-        children: (e, n) => {
-            let { onClick: r } = e,
-                { isShown: o } = n;
+        children: (e, t) => {
+            let { onClick: n } = e,
+                { isShown: r } = t;
             return (0, i.jsx)(ei, {
                 ref: a,
                 iconComponent: s ? (c ? p.PBZ : y) : p.Csw,
-                tooltip: null != t ? $.intl.string($.t['6vrfgo']) : $.intl.string($.t.S0W8Z2),
-                onClick: s ? u : g(r),
+                tooltip: s ? (c ? $.intl.string($.t['Hi1/aW']) : $.intl.string($.t['6vrfgo'])) : $.intl.string($.t.S0W8Z2),
+                onClick: s ? u : g(n),
                 defaultColor: s ? 'disconnect' : void 0,
                 onMouseEnter: O,
                 onMouseLeave: v,
-                onContextMenu: g(r),
-                isActive: o,
-                onPopoutClick: s ? g(r) : void 0,
-                popoutOpen: o,
+                onContextMenu: g(n),
+                isActive: r,
+                onPopoutClick: s ? g(n) : void 0,
+                popoutOpen: r,
                 isTrayButton: !1
             });
         }

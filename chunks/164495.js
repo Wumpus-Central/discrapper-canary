@@ -66,7 +66,7 @@ let C = (e) => {
             className: y.cta,
             size: i.zxk.Sizes.SMALL,
             onClick: () =>
-                (0, f.FE)(t, {
+                (0, f.nc)(t, {
                     content: m.jn.QUEST_BAR_V2,
                     ctaContent: d.jZ.OPEN_GAME_LINK,
                     impressionId: n

@@ -9,15 +9,15 @@ var r = n(255367),
     u = n(604162),
     d = n(420212),
     m = n(650762);
-function f(e, t, n) {
+function p(e, t, n) {
     return n * (Math.max(e - t.left, 0) / t.width);
 }
-function p(e, t, n) {
+function f(e, t, n) {
     return n.left + (e / t) * n.width;
 }
 function v(e) {
-    let { percent: t, animate: n, interactionEnabled: o, backgroundColor: v, preloadedBuffers: g, duration: b, maxSeekableTime: E, onClick: O, onScrubBack: h, onScrubForward: C } = e,
-        [S, j] = l.useState(null),
+    let { percent: t, animate: n, interactionEnabled: o, backgroundColor: v, preloadedBuffers: g, duration: b, maxSeekableTime: E, onClick: O, onScrubBack: h, onScrubForward: S } = e,
+        [C, j] = l.useState(null),
         [y, _] = l.useState(null),
         [x, D] = l.useState(null),
         [T, P] = l.useState(!1),
@@ -26,8 +26,8 @@ function v(e) {
             (N.current = e), j(e);
         };
     l.useEffect(() => {
-        null != S && (null == E ? D(null) : D(p(E, b, S)));
-    }, [S, E, b]);
+        null != C && (null == E ? D(null) : D(f(E, b, C)));
+    }, [C, E, b]);
     let I = (0, c.Z)((e) => {
             k(e.contentRect);
         }),
@@ -47,15 +47,15 @@ function v(e) {
         L = l.useCallback(
             (e) => {
                 let { key: t } = e;
-                t === d.mR.ArrowLeft && null != h ? (e.preventDefault(), e.stopPropagation(), h()) : t === d.mR.ArrowRight && null != C && (e.preventDefault(), e.stopPropagation(), C());
+                t === d.mR.ArrowLeft && null != h ? (e.preventDefault(), e.stopPropagation(), h()) : t === d.mR.ArrowRight && null != S && (e.preventDefault(), e.stopPropagation(), S());
             },
-            [h, C]
+            [h, S]
         ),
-        R = null != y && null != S ? f(y, S, b) : 0,
+        R = null != y && null != C ? p(y, C, b) : 0,
         M = (0, u.yv)(R),
-        V = null != S ? S.right - p((t / 100) * b, b, S) : null,
-        B = null != y && null != S ? S.right - y : null,
-        F = null != x && null != S ? S.right - x : null;
+        V = null != C ? C.right - f((t / 100) * b, b, C) : null,
+        B = null != y && null != C ? C.right - y : null,
+        F = null != x && null != C ? C.right - x : null;
     return (0, r.jsxs)('div', {
         className: m.cont,
         ref: w,
@@ -64,7 +64,7 @@ function v(e) {
                 className: i()(m.hitboxArea, { [m.interactionEnabled]: o }),
                 ignoreKeyPress: !0,
                 onClick: (e) => {
-                    o && null != O && O(f(e.clientX, e.currentTarget.getBoundingClientRect(), b));
+                    o && null != O && O(p(e.clientX, e.currentTarget.getBoundingClientRect(), b));
                 },
                 onMouseEnter: (e) => {
                     o && (null != w.current && k(w.current.getBoundingClientRect()), P(!0), A(e));

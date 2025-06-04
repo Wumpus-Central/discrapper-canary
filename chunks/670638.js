@@ -74,7 +74,7 @@ function E(e) {
         { handleComplete: S, handleProgress: P, handleResetDismissibilityClick: w, handleResetStatusClick: R, handleOverrideDeliveryClick: _ } = (0, g.kJ)(e.quest.id),
         I = s.useCallback(() => {
             if (e.quest.id === C.V6) return void window.open(d.Z.getArticleURL(v.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
-            (0, j.FE)(e.quest, {
+            (0, j.nc)(e.quest, {
                 content: e.questContent,
                 ctaContent: m.jZ.CONTEXT_MENU_OPEN_GAME_LINK,
                 impressionId: E

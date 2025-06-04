@@ -193,4 +193,17 @@ class f extends i.Z {
         d('SearchExperimentManager', !1);
     }
 }
-new f();
+new f(),
+    (0, a.B)({
+        kind: 'user',
+        id: '2025-05_icymi_new_conversation_summaries',
+        label: 'New conversation summary in ICYMI',
+        defaultConfig: { contentGenerationEnabled: !1 },
+        treatments: [
+            {
+                id: 1,
+                label: 'New conversation summary types in ICYMI',
+                config: { contentGenerationEnabled: !0 }
+            }
+        ]
+    });

@@ -136,8 +136,8 @@ let M = (0, a.animated)(d.CJ0),
     Z = (e) => {
         var t, n;
         let { isFocused: i, isQuestExpired: u, quest: h, location: f, size: v, expansionSpring: Z, isAnimating: L, isExpanded: B, contentPosition: U, toggleExpanded: Q } = e,
-            { ref: W, height: F } = (0, m.ZP)(),
-            [z, G] = s.useState(null),
+            { ref: W, height: z } = (0, m.ZP)(),
+            [F, G] = s.useState(null),
             [H, X] = s.useState(null),
             Y = (0, x.Z)((e) => {
                 let t = e.target;
@@ -193,7 +193,7 @@ let M = (0, a.animated)(d.CJ0),
                 [_.outerContainerXs]: 'xs' === v
             }),
             'aria-label': R.intl.string(R.t.dcl9MT),
-            style: { height: ee ? F : void 0 },
+            style: { height: ee ? z : void 0 },
             children: [
                 (0, r.jsx)(A, {
                     style: {
@@ -302,7 +302,7 @@ let M = (0, a.animated)(d.CJ0),
                                                     children: [
                                                         (0, r.jsx)(d.ua7, {
                                                             text: h.config.messages.questName,
-                                                            shouldShow: null != z && null != H && z < H,
+                                                            shouldShow: null != F && null != H && F < H,
                                                             children: (e) =>
                                                                 (0, r.jsx)(
                                                                     d.X6q,

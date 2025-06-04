@@ -103,8 +103,8 @@ function O(e) {
                 }
             );
         })(),
-        S = N ? c.Iy5 : c.X_q,
-        P = i.useCallback(() => (0, f.v6)(null), []),
+        P = N ? c.Iy5 : c.X_q,
+        S = i.useCallback(() => (0, f.v6)(null), []),
         w = (0, c.dQu)(c.TVs.colors.BACKGROUND_SECONDARY).hex(),
         T = (0, c.dQu)(c.TVs.colors.WHITE).hex(),
         L = i.useRef(0),
@@ -115,8 +115,8 @@ function O(e) {
     let Z = null != n,
         D = !Z,
         A = Z && null != a,
-        M = null == n && null != a,
-        F = (0, c.q_F)(
+        F = null == n && null != a,
+        M = (0, c.q_F)(
             {
                 opacity: +!!Z,
                 height: 72 * !!Z,
@@ -187,7 +187,7 @@ function O(e) {
                               duration: 200
                           }
                         : C,
-                delay: M ? 50 - 50 * e : 200 + 50 * e
+                delay: F ? 50 - 50 * e : 200 + 50 * e
             }),
             'respect-motion-settings',
             [n]
@@ -254,7 +254,7 @@ function O(e) {
                     opacity: 0,
                     translateX: 24 * (null != n),
                     translateY: 16 * (null == n),
-                    delay: M ? 100 : 50,
+                    delay: F ? 100 : 50,
                     config: (e) =>
                         'opacity' === e
                             ? {
@@ -272,7 +272,7 @@ function O(e) {
     return (0, r.jsxs)(l.animated.div, {
         className: v.voiceFilterHero,
         'aria-hidden': D,
-        style: F,
+        style: M,
         children: [
             (0, r.jsx)('div', {
                 className: o()([v.bgGradient, v.bgGradientHighlight])
@@ -361,7 +361,7 @@ function O(e) {
                                         ),
                                         {
                                             onClick: () => E(),
-                                            children: (0, r.jsx)(S, {
+                                            children: (0, r.jsx)(P, {
                                                 size: 'custom',
                                                 width: 20,
                                                 height: 20,
@@ -392,7 +392,7 @@ function O(e) {
                                             e
                                         ),
                                         {
-                                            onClick: P,
+                                            onClick: S,
                                             children: (0, r.jsx)(c.k$p, {
                                                 size: 'custom',
                                                 width: 20,

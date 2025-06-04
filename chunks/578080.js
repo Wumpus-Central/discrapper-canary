@@ -117,7 +117,7 @@ let V = s.forwardRef(function (e, t) {
             location: v.jn.QUEST_BAR
         }),
         ei = s.useCallback(() => {
-            (0, y.FE)(K, {
+            (0, y.nc)(K, {
                 content: v.jn.QUEST_BAR,
                 ctaContent: g.jZ.OPEN_GAME_LINK,
                 impressionId: G

@@ -397,6 +397,7 @@ let z = {
         stopVoiceFilterDownloads() {
             I.fileManager.stopVoiceFilterDownloads();
         },
+        canCheckVoiceFilterFilesExist: () => 'function' == typeof I.fileManager.checkVoiceFilterFilesExist,
         checkVoiceFilterFilesExist: async (e) => await I.fileManager.checkVoiceFilterFilesExist(e),
         canCopyImage() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0,

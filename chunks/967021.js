@@ -41,13 +41,13 @@ function i(e) {
     return i;
 }
 function a(e) {
-    let { location: t, autoTrackExposure: n } = e,
-        { isDownloadIconEnabled: i } = r.useExperiment(
+    let { location: t, autoTrackExposure: n, disable: i } = e,
+        { isDownloadIconEnabled: a } = r.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
-                disable: __OVERLAY__
+                disable: __OVERLAY__ || i
             }
         );
-    return i;
+    return a;
 }
