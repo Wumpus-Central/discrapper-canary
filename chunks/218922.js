@@ -1,12 +1,12 @@
-var r = t(985545);
-e.exports = t.v(n, e.id, '4289fe6c5ba369db', {
+var r = t(347074);
+e.exports = t.v(n, e.id, '1bbe6388866dd487', {
     './discord_markdown_wasm_bg.js': {
         __wbindgen_object_drop_ref: r.ug,
-        __wbindgen_string_get: r.qt,
-        __wbindgen_is_string: r.eY,
+        __wbindgen_error_new: r.hd,
         __wbindgen_is_null: r.zr,
         __wbindgen_is_undefined: r.XP,
-        __wbindgen_error_new: r.hd,
+        __wbindgen_string_get: r.qt,
+        __wbindgen_is_string: r.eY,
         __wbindgen_is_object: r.Wl,
         __wbindgen_jsval_loose_eq: r.Qr,
         __wbindgen_boolean_get: r.HT,

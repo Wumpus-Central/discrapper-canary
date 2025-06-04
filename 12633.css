@@ -34087,21 +34087,39 @@ body .headerAnimation_b54a5b {
 }
 
 .nameplatePreview_fdeafc {
+    align-items: center;
     border-radius: var(--radius-sm);
+    display: flex;
     height: 42px;
     position: relative
+}
+
+.nameplatePreview_fdeafc.large_fdeafc {
+    height: 62px
 }
 
 .visual-refresh.density-cozy .nameplatePreview_fdeafc {
     height: 48px
 }
 
+.visual-refresh.density-cozy .nameplatePreview_fdeafc.large_fdeafc {
+    height: 68px
+}
+
 .visual-refresh.density-default .nameplatePreview_fdeafc {
     height: 42px
 }
 
+.visual-refresh.density-default .nameplatePreview_fdeafc.large_fdeafc {
+    height: 62px
+}
+
 .visual-refresh.density-compact .nameplatePreview_fdeafc {
     height: 38px
+}
+
+.visual-refresh.density-compact .nameplatePreview_fdeafc.large_fdeafc {
+    height: 58px
 }
 
 .overlayContainer_fdeafc {
@@ -34113,6 +34131,7 @@ body .headerAnimation_b54a5b {
 
 .avatarContainer_fdeafc {
     display: flex;
+    height: 100%;
     max-width: 100%;
     opacity: 0;
     overflow: hidden;
@@ -34122,6 +34141,18 @@ body .headerAnimation_b54a5b {
 
 .avatarVisible_fdeafc {
     opacity: 1
+}
+
+.visual-refresh.density-cozy .avatarWithText_fdeafc {
+    height: unset
+}
+
+.visual-refresh.density-default .avatarWithText_fdeafc {
+    height: unset
+}
+
+.visual-refresh.density-compact .avatarWithText_fdeafc {
+    height: unset
 }
 
 .nameplatePurchased_fdeafc {
@@ -34134,6 +34165,11 @@ body .headerAnimation_b54a5b {
     height: 14px;
     opacity: .5;
     width: 124px
+}
+
+.placeholderUsername_fdeafc.large_fdeafc {
+    height: 18px;
+    width: 160px
 }
 
 .theme-light .placeholderUsernameColor_fdeafc {
@@ -34202,8 +34238,7 @@ body .headerAnimation_b54a5b {
 .nameplateContainer_a84142 {
     margin: var(--spacing-40) auto var(--spacing-48);
     position: relative;
-    transform: scale(1.2);
-    width: 224px
+    width: 324px
 }
 
 .nameplate_a84142 {
@@ -34881,8 +34916,8 @@ body .headerAnimation_b54a5b {
     left: 50%;
     position: absolute;
     top: 55%;
-    transform: translate(-50%, -50%) scale(1.2);
-    width: 224px
+    transform: translate(-50%, -50%);
+    width: 324px
 }
 
 .decorationBanner__78e61 {
