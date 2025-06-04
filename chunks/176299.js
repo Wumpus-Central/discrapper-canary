@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(637853),
     U = n(326145),
     G = n(269675),
-    V = n(242601),
-    B = n(416568),
+    B = n(242601),
+    V = n(416568),
     H = n(613609),
     F = n(160404),
     z = n(225675),
@@ -46,8 +46,8 @@ var r = n(255367),
     Y = n(745052),
     K = n(285865),
     q = n(659971),
-    X = n(821020),
-    Q = n(147341),
+    Q = n(821020),
+    X = n(147341),
     J = n(82409),
     $ = n(664608),
     ee = n(270759),
@@ -169,7 +169,7 @@ let ew = (0, u.Un)({
         name: 'GuildPowerupsPage',
         renderLoader: eL
     }),
-    eV = (e) => {
+    eB = (e) => {
         let { match: t } = e,
             n = (0, O.l)(),
             i = (0, h.e7)([es.Z, ep.Z], () => {
@@ -255,9 +255,9 @@ let ew = (0, u.Un)({
         }
         return (0, r.jsx)(T.Z, {});
     },
-    eB = i.memo(function () {
+    eV = i.memo(function () {
         let { guildId: e, channelId: t } = (0, er.Z)(),
-            { notificationCenterVariant: n } = X.L.useExperiment({ location: 'Sidebar' }),
+            { notificationCenterVariant: n } = Q.L.useExperiment({ location: 'Sidebar' }),
             i = (0, h.e7)([ep.Z], () => (null != t ? t : ep.Z.getChannelId(e)));
         return window.location.pathname.startsWith(eS.Z5c.NOTIFICATIONS_INBOX())
             ? ('sidebar' !== n && (0, ea.dL)(ec.Z.defaultRoute), (0, r.jsx)(J.Z, { includePanelSpacing: !0 }))
@@ -265,7 +265,7 @@ let ew = (0, u.Un)({
               ? (0, r.jsx)(R.Z, {})
               : null != e
                 ? (0, r.jsx)(
-                      V.Z,
+                      B.Z,
                       {
                           selectedChannelId: i,
                           guildId: e
@@ -274,9 +274,9 @@ let ew = (0, u.Un)({
                   )
                 : (0, r.jsx)(ey.Z, {});
     }),
-    eH = (e) => (0, r.jsx)(eV, eZ({}, e)),
+    eH = (e) => (0, r.jsx)(eB, eZ({}, e)),
     eF = () => (0, r.jsx)(L.Z, {}),
-    ez = (e) => (null != e.match.params.channelId ? eH(e) : (0, r.jsx)(Q.Z, {})),
+    ez = (e) => (null != e.match.params.channelId ? eH(e) : (0, r.jsx)(X.Z, {})),
     eW = (e) => {
         let { match: t } = e;
         return null != t.params.guildId ? (0, r.jsx)(k.Z, { guildId: t.params.guildId }) : null;
@@ -292,7 +292,7 @@ let ew = (0, u.Un)({
     },
     eK = () => (0, r.jsx)(ev.Z, {}),
     eq = () => (0, r.jsx)(eC.Z, {}),
-    eX = function () {
+    eQ = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return function (t) {
             let { tab: n } = (0, o.parse)(t.location.search);
@@ -310,7 +310,7 @@ let ew = (0, u.Un)({
                 : (0, r.jsx)(j.Z, eZ({ isFullScreen: e }, t));
         };
     },
-    eQ = (e) => (0, r.jsx)(C.Z, eZ({}, e)),
+    eX = (e) => (0, r.jsx)(C.Z, eZ({}, e)),
     eJ = () => (0, r.jsx)(ee.Z, {}),
     e$ = () => (0, r.jsx)(Y.Z, {}),
     e0 = () => (0, r.jsx)($.Z, {}),
@@ -451,14 +451,14 @@ function e5(e) {
                     O &&
                         s &&
                         !c &&
-                        (0, r.jsx)(B.Z, {
+                        (0, r.jsx)(V.Z, {
                             className: eA.guilds,
                             themeOverride: n
                         }),
                     !o &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(j, ex(eZ({}, Z), { children: (0, r.jsx)(eB, {}) })),
+                                (0, r.jsx)(j, ex(eZ({}, Z), { children: (0, r.jsx)(eV, {}) })),
                                 O
                                     ? (0, r.jsx)(g.P3F, {
                                           onClick: P,
@@ -516,7 +516,7 @@ function e4() {
             return (null == (e = (0, s.LX)(t.pathname, eS.Z5c.COLLECTIBLES_SHOP_FULLSCREEN)) ? void 0 : e.isExact) === !0;
         })(),
         f = (0, h.e7)([q.Z], () => q.Z.getIsOpen()),
-        { notificationCenterVariant: g } = X.L.useExperiment({ location: 'Sidebar' }),
+        { notificationCenterVariant: g } = Q.L.useExperiment({ location: 'Sidebar' }),
         m = (0, s.$B)([eS.Z5c.CHANNEL(eS.ME, el.Hw.channelId()), eS.Z5c.CHANNEL(el.Hw.guildId(), el.Hw.channelId({ optional: !0 }), ':messageId?')]),
         b = (null == m || null == (e = m.params) ? void 0 : e.channelId) === eN.oC.GUILD_ONBOARDING,
         _ = l || a || o || u || b,
@@ -542,7 +542,7 @@ function e4() {
             f &&
                 !u &&
                 !O &&
-                (0, r.jsx)(B.Z, {
+                (0, r.jsx)(V.Z, {
                     className: eA.guilds,
                     themeOverride: n
                 }),
@@ -581,7 +581,7 @@ function e4() {
                                                         }),
                                                         (0, r.jsx)(S.Z, {
                                                             path: eS.Z5c.ACTIVITY_DETAILS(':applicationId'),
-                                                            render: eQ,
+                                                            render: eX,
                                                             impressionName: c.ImpressionNames.ACTIVITY_DETAILS,
                                                             impressionProperties: (e) => {
                                                                 let { computedMatch: t } = e;
@@ -602,22 +602,22 @@ function e4() {
                                                         }),
                                                         (0, r.jsx)(S.Z, {
                                                             path: eS.Z5c.COLLECTIBLES_SHOP_FULLSCREEN,
-                                                            render: eX(!0),
+                                                            render: eQ(!0),
                                                             disableTrack: !0
                                                         }),
                                                         (0, r.jsx)(S.Z, {
                                                             path: eS.Z5c.COLLECTIBLES_SHOP_WITH_TAB(':tab'),
-                                                            render: eX(!1),
+                                                            render: eQ(!1),
                                                             disableTrack: !0
                                                         }),
                                                         (0, r.jsx)(S.Z, {
                                                             path: eS.Z5c.COLLECTIBLES_SHOP,
-                                                            render: eX(!1),
+                                                            render: eQ(!1),
                                                             disableTrack: !0
                                                         }),
                                                         (0, r.jsx)(S.Z, {
                                                             path: eS.Z5c.COLLECTIBLES_SHOP_PRODUCT_DETAIL(':skuId'),
-                                                            render: eX(!1),
+                                                            render: eQ(!1),
                                                             disableTrack: !0
                                                         }),
                                                         (0, r.jsx)(S.Z, {

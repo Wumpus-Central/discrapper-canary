@@ -33,8 +33,8 @@ let P = (0, i.memo)(function (e) {
         M = (0, i.useRef)(null),
         U = (0, i.useRef)(null),
         G = (0, i.useRef)(null),
-        V = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
-        { ref: B, height: H = 0 } = (0, p.ZP)(),
+        B = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
+        { ref: V, height: H = 0 } = (0, p.ZP)(),
         F = (0, h.ZP)(),
         z = (0, E.B6)(null == (t = Z.userStatus) ? void 0 : t.claimedAt, {
             month: 'numeric',
@@ -44,9 +44,9 @@ let P = (0, i.memo)(function (e) {
         Y = Z.config.rewards[W],
         K = (null == Y ? void 0 : Y.type) === s.w.FRACTIONAL_PREMIUM,
         q = (null == Y ? void 0 : Y.type) === s.w.COLLECTIBLE,
-        X = (null == Y ? void 0 : Y.type) === s.w.VIRTUAL_CURRENCY,
-        Q = null == Y || null == (P = Y.collectibleProduct) || null == (l = P.items) ? void 0 : l[0],
-        J = (null == Q ? void 0 : Q.type) === o.Z.AVATAR_DECORATION ? Q : null;
+        Q = (null == Y ? void 0 : Y.type) === s.w.VIRTUAL_CURRENCY,
+        X = null == Y || null == (P = Y.collectibleProduct) || null == (l = P.items) ? void 0 : l[0],
+        J = (null == X ? void 0 : X.type) === o.Z.AVATAR_DECORATION ? X : null;
     (0, p.PM)(M, (e) => {
         let { height: t } = e;
         if (!q || null == t || null == U.current || null == M.current || null == G.current) return;
@@ -132,7 +132,7 @@ let P = (0, i.memo)(function (e) {
                   onMouseLeave: es,
                   className: a()(T.container, { [T.hovered]: x }),
                   children: [
-                      null != V &&
+                      null != B &&
                           q &&
                           null != J &&
                           (0, r.jsx)('div', {
@@ -141,13 +141,13 @@ let P = (0, i.memo)(function (e) {
                               style: { top: L },
                               children: (0, r.jsx)(f.Z, {
                                   avatarDecorationOverride: J,
-                                  user: V,
+                                  user: B,
                                   guildId: null
                               })
                           }),
                       K
                           ? (0, r.jsx)(I.Z, { className: T.image })
-                          : X
+                          : Q
                             ? (0, r.jsx)(v.Z, { className: T.image })
                             : et.isAnimated
                               ? (0, r.jsx)(g.Z, {
@@ -182,7 +182,7 @@ let P = (0, i.memo)(function (e) {
                           })
                       }),
                       (0, r.jsxs)('div', {
-                          ref: B,
+                          ref: V,
                           className: T.details,
                           children: [
                               (0, r.jsx)(d.X6q, {

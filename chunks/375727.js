@@ -14,8 +14,8 @@ var n = r(255367),
     m = r(384694),
     f = r(273391),
     v = r(793972),
-    b = r(981631),
-    x = r(388032),
+    x = r(981631),
+    b = r(388032),
     _ = r(139797);
 let j = new o.Z('EmojiStudio'),
     O = (e) => {
@@ -23,20 +23,20 @@ let j = new o.Z('EmojiStudio'),
             O = (0, l.e7)([c.Z, d.Z, u.Z], () => {
                 let e = d.Z.getGuildId(),
                     t = c.Z.getGuild(e);
-                return u.Z.can(b.Plq.CREATE_GUILD_EXPRESSIONS, t) && null != t ? t.id : null;
+                return u.Z.can(x.Plq.CREATE_GUILD_EXPRESSIONS, t) && null != t ? t.id : null;
             }),
-            [E, I] = a.useState(null != r ? r : O),
+            [N, I] = a.useState(null != r ? r : O),
             [D, y] = a.useState(null),
-            [C, w] = a.useState(''),
-            [S, A] = a.useState(null),
+            [S, C] = a.useState(''),
+            [w, A] = a.useState(null),
             k = async () => {
-                if ((y(null), null == E)) return void y(h.ze.MISSING_GUILD);
-                if (null == t || (null == t ? void 0 : t.file) == null || null == S) return void y(h.ze.MISSING_IMAGE_DATA);
+                if ((y(null), null == N)) return void y(h.ze.MISSING_GUILD);
+                if (null == t || (null == t ? void 0 : t.file) == null || null == w) return void y(h.ze.MISSING_IMAGE_DATA);
                 try {
                     await (0, i.rS)({
-                        image: S,
-                        guildId: E,
-                        name: C
+                        image: w,
+                        guildId: N,
+                        name: S
                     });
                 } catch (e) {
                     y((0, g.z)(e)), j.error('Failed to upload emoji.', e);
@@ -44,11 +44,11 @@ let j = new o.Z('EmojiStudio'),
                 }
                 (0, s.Mr3)(h.Hj);
             },
-            T = a.useRef(0),
-            M = a.useCallback((e) => {
+            M = a.useRef(0),
+            R = a.useCallback((e) => {
                 let { imageData: t, imageDataTimestamp: r = 0, error: n } = e,
                     a = null;
-                null != t && p.ZP.isDataTooBig(t) && (a = h.ze.TOO_BIG), y(null != n ? n : a), r < T.current || (null != t && (A(t), (T.current = r)));
+                null != t && p.ZP.isDataTooBig(t) && (a = h.ze.TOO_BIG), y(null != n ? n : a), r < M.current || (null != t && (A(t), (M.current = r)));
             }, []);
         return (0, n.jsxs)('main', {
             children: [
@@ -62,7 +62,7 @@ let j = new o.Z('EmojiStudio'),
                     children: (0, n.jsx)(f.v, {
                         file: t.file,
                         imageUri: t.data,
-                        onUpdate: M
+                        onUpdate: R
                     })
                 }),
                 (0, n.jsxs)('footer', {
@@ -75,14 +75,14 @@ let j = new o.Z('EmojiStudio'),
                                     className: _.preview,
                                     children: [
                                         (0, n.jsx)('img', {
-                                            src: null != S ? S : '',
+                                            src: null != w ? w : '',
                                             alt: 'Edited'
                                         }),
                                         (0, n.jsx)(v.R, {
                                             onChange: (e) => {
-                                                w(e.length < 2 ? e : p.ZP.sanitizeEmojiName(e));
+                                                C(e.length < 2 ? e : p.ZP.sanitizeEmojiName(e));
                                             },
-                                            value: C
+                                            value: S
                                         })
                                     ]
                                 }),
@@ -90,28 +90,29 @@ let j = new o.Z('EmojiStudio'),
                                     className: _.selector,
                                     children: (0, n.jsx)(m.q, {
                                         onChange: I,
-                                        selected: E
+                                        selected: N,
+                                        onError: () => y(h.ze.NO_PERMISSIONS)
                                     })
                                 }),
                                 (0, n.jsx)(s.zxk, {
                                     className: _.submit,
                                     onClick: k,
                                     fullWidth: !0,
-                                    disabled: null == t || null == E || C.length < 2,
-                                    children: x.intl.string(x.t.DU0dy8)
+                                    disabled: null == t || null == N || S.length < 2,
+                                    children: b.intl.string(b.t.DU0dy8)
                                 })
                             ]
                         })
                     ]
                 }),
-                (0, n.jsx)(N, { back: o })
+                (0, n.jsx)(E, { back: o })
             ]
         });
     },
-    N = (e) => {
+    E = (e) => {
         let { back: t } = e;
         return (0, n.jsxs)(s.zxk, {
-            'aria-label': x.intl.string(x.t['13/7kZ']),
+            'aria-label': b.intl.string(b.t['13/7kZ']),
             onClick: t,
             look: s.zxk.Looks.BLANK,
             size: s.zxk.Sizes.MIN,

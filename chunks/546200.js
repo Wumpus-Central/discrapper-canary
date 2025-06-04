@@ -13,9 +13,11 @@ let u = (e) => {
     return (0, n.jsx)(l.Y0X, {
         transitionState: t,
         size: l.CgR.DYNAMIC,
+        fullscreenOnMobile: !1,
+        className: null == d ? c.modalRootEmpty : c.modalRootEditor,
         children: (0, n.jsxs)(l.hzk, {
             scrollbarType: 'none',
-            className: c.modalContent,
+            className: null == d ? '' : c.modalContent,
             children: [
                 null == d
                     ? (0, n.jsx)(o.u, { setUserImage: p })

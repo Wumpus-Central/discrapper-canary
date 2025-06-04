@@ -47,8 +47,8 @@ function D(e) {
         ),
         U = null == l ? void 0 : l.id,
         G = (0, o.Wu)([C.Z], () => [...new Set(C.Z.getMutableParticipants(U, S.pV.SPEAKER).map((e) => e.user))], [U]),
-        V = (0, o.e7)([C.Z], () => (null != U ? C.Z.getParticipantCount(U, S.pV.AUDIENCE) : 0), [U]),
-        B = (0, o.e7)([j.Z], () => j.Z.can(x.Plq.CONNECT, l)),
+        B = (0, o.e7)([C.Z], () => (null != U ? C.Z.getParticipantCount(U, S.pV.AUDIENCE) : 0), [U]),
+        V = (0, o.e7)([j.Z], () => j.Z.can(x.Plq.CONNECT, l)),
         H = (0, T.Z)(null == l ? void 0 : l.id),
         F = null == d ? void 0 : d.creator_id,
         z = (0, o.e7)([A.default], () => A.default.getUser(F), [F]);
@@ -60,8 +60,8 @@ function D(e) {
         title: Y,
         location: K,
         locationIcon: q,
-        canListenIn: X,
-        buttonText: Q,
+        canListenIn: Q,
+        buttonText: X,
         users: J,
         overflowUsers: $,
         onClose: ee
@@ -265,16 +265,16 @@ function D(e) {
                 guildEvent: d,
                 stageInstance: P,
                 activeChannel: l,
-                canConnect: B,
+                canConnect: V,
                 myRole: H,
                 eventCreator: z,
                 speakers: G,
-                listenerCount: V,
+                listenerCount: B,
                 isEventNoticeHidden: M,
                 isStageNoticeHidden: D,
                 isStudyRoomNotice: n
             }),
-        [d, P, l, B, H, z, G, V, M, D, n]
+        [d, P, l, V, H, z, G, B, M, D, n]
     );
     return null == W
         ? null
@@ -343,12 +343,12 @@ function D(e) {
                           })
                       ]
                   }),
-                  X || 1 === W
+                  Q || 1 === W
                       ? (0, r.jsx)(c.zxk, {
                             size: c.zxk.Sizes.SMALL,
                             color: c.zxk.Colors.GREEN,
                             onClick: () => {
-                                if (X) null != l && null != l.getGuildId() && ((0, v.Cq)(l), (0, I.XU)(l.getGuildId(), l.id));
+                                if (Q) null != l && null != l.getGuildId() && ((0, v.Cq)(l), (0, I.XU)(l.getGuildId(), l.id));
                                 else {
                                     if (null == d) return;
                                     (0, h.bO)({ eventId: d.id });
@@ -356,7 +356,7 @@ function D(e) {
                             },
                             className: R.button,
                             fullWidth: !0,
-                            children: Q
+                            children: X
                         })
                       : null
               ]

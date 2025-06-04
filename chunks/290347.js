@@ -107,17 +107,17 @@ function T(e) {
         { onClose: k, transitionState: M } = n,
         U = (0, p.Dt)(),
         G = w.length % 2 == 0,
-        V = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        [B, H] = i.useState(Date.now()),
+        B = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+        [V, H] = i.useState(Date.now()),
         [F, z] = i.useState(0),
         [W, Y] = i.useState(0),
         [K, q] = i.useState(!1),
-        [X, Q] = i.useState(!0),
-        J = i.useRef(B),
+        [Q, X] = i.useState(!0),
+        J = i.useRef(V),
         $ = i.useRef(F),
         ee = i.useRef(W),
         et = i.useRef(K),
-        en = i.useRef(X),
+        en = i.useRef(Q),
         [er, ei] = i.useState(C),
         el = i.useRef(!1);
     function ea() {
@@ -161,8 +161,8 @@ function T(e) {
             [er]
         ),
         i.useEffect(() => {
-            (J.current = B), ($.current = F), (ee.current = W), (et.current = K), (en.current = X);
-        }, [B, F, W, K, X]),
+            (J.current = V), ($.current = F), (ee.current = W), (et.current = K), (en.current = Q);
+        }, [V, F, W, K, Q]),
         i.useEffect(
             () => () => {
                 if ('video' === l.type || 'embed' === l.type) {
@@ -214,7 +214,7 @@ function T(e) {
                         'video' === l.type
                             ? (0, r.jsx)(h.Z, {
                                   className: a()(y.video, S),
-                                  autoPlay: !V,
+                                  autoPlay: !B,
                                   loop: !0,
                                   muted: !0,
                                   controls: !0,
@@ -222,16 +222,16 @@ function T(e) {
                                   src: l.src,
                                   poster: l.poster,
                                   onPlay: (e) => {
-                                      m.default.track(_.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: L }), H(Date.now()), q(!0), Q(e.currentTarget.muted);
+                                      m.default.track(_.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: L }), H(Date.now()), q(!0), X(e.currentTarget.muted);
                                   },
                                   onEnded: (e) => {
-                                      ea(), Q(e.currentTarget.muted), q(!1);
+                                      ea(), X(e.currentTarget.muted), q(!1);
                                   },
                                   onVolumeChange: (e) => {
-                                      ea(), Q(e.currentTarget.muted);
+                                      ea(), X(e.currentTarget.muted);
                                   },
                                   onPause: (e) => {
-                                      ea(), Q(e.currentTarget.muted), q(!1);
+                                      ea(), X(e.currentTarget.muted), q(!1);
                                   },
                                   disablePictureInPicture: !0,
                                   children:

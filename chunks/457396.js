@@ -55,8 +55,8 @@ let M = (e) => {
     U = (e) => {
         let t, n, E, U;
         var G,
-            V,
-            { selected: B, route: H, locationState: F } = e,
+            B,
+            { selected: V, route: H, locationState: F } = e,
             z = (function (e, t) {
                 if (null == e) return {};
                 var n,
@@ -80,10 +80,10 @@ let M = (e) => {
             Y = (0, a.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription()),
             K = (0, _.Qo)(W, Y),
             q = (0, l.JA)('nitro'),
-            X = (0, v.N)(),
-            Q = (0, I.Ng)(),
+            Q = (0, v.N)(),
+            X = (0, I.Ng)(),
             J = (0, O.W)(),
-            $ = (0, a.e7)([g.Z], () => g.Z.isLocalizedPromoEnabled) && null == X,
+            $ = (0, a.e7)([g.Z], () => g.Z.isLocalizedPromoEnabled) && null == Q,
             ee = (0, N.Vi)(),
             et = (0, A.V)(),
             en = (0, Z.Kn)('NitroTabButton'),
@@ -92,13 +92,13 @@ let M = (e) => {
                 showAfterTimestamp: ei.valueOf(),
                 cooldownDurationMs: 0
             }),
-            es = (null == X ? void 0 : X.trial_id) === w.a7,
+            es = (null == Q ? void 0 : Q.trial_id) === w.a7,
             [ec, eu] = (0, h.US)(J ? [o.z.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2] : [], void 0, !0);
         if (
             (i.useEffect(() => {
-                !0 === B && null != ec && eu(R.L.AUTO_DISMISS);
-            }, [eu, B, ec]),
-            !M({ selected: B }))
+                !0 === V && null != ec && eu(R.L.AUTO_DISMISS);
+            }, [eu, V, ec]),
+            !M({ selected: V }))
         )
             return null;
         er === w.a$.NONE ||
@@ -121,24 +121,24 @@ let M = (e) => {
                           showStars: !1
                       })),
                       (U = 1))
-                    : null != Q
+                    : null != X
                       ? ((E = (0, r.jsx)(T.GN, {
-                            userDiscount: Q,
-                            isTabSelected: B,
+                            userDiscount: X,
+                            isTabSelected: V,
                             includesAmountOff: !1
                         })),
                         (U = 3))
-                      : null == X || es
+                      : null == Q || es
                         ? en
                             ? ((E = (0, r.jsx)(P.l, {
-                                  isSelected: B,
+                                  isSelected: V,
                                   onSelect: () => (0, p.EW)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: R.L.TAKE_ACTION })
                               })),
                               (U = 6))
-                            : $ && ((E = (0, r.jsx)(S.k, { entryPoint: S.U.PrivateMessages })), B || (t = k.localizeBadge), (U = 5))
+                            : $ && ((E = (0, r.jsx)(S.k, { entryPoint: S.U.PrivateMessages })), V || (t = k.localizeBadge), (U = 5))
                         : ((E = (0, r.jsx)(T.$H, {
-                              trialOffer: X,
-                              isTabSelected: B
+                              trialOffer: Q,
+                              isTabSelected: V
                           })),
                           (U = 4));
         let ed = (0, r.jsx)(
@@ -169,7 +169,7 @@ let M = (e) => {
                 return e;
             })(
                 {
-                    selected: B,
+                    selected: V,
                     route: H,
                     icon: s.SrA,
                     text: D.intl.string(D.t.Ipxkoq),
@@ -186,14 +186,14 @@ let M = (e) => {
                 z,
                 q
             )),
-            (V = V =
+            (B = B =
                 {
                     className: t,
                     avatarWithTextClassName: n,
                     children: E
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(G, Object.getOwnPropertyDescriptors(V))
+                ? Object.defineProperties(G, Object.getOwnPropertyDescriptors(B))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
@@ -201,8 +201,8 @@ let M = (e) => {
                           n.push.apply(n, r);
                       }
                       return n;
-                  })(Object(V)).forEach(function (e) {
-                      Object.defineProperty(G, e, Object.getOwnPropertyDescriptor(V, e));
+                  })(Object(B)).forEach(function (e) {
+                      Object.defineProperty(G, e, Object.getOwnPropertyDescriptor(B, e));
                   }),
             G)
         );

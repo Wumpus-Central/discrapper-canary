@@ -5,5 +5,6 @@ e.exports = {
     giftButton: 'giftButton_e00877',
     giftIcon: 'giftIcon_e00877',
     tier1Gradient: 'tier1Gradient_e00877',
-    tier2Gradient: 'tier2Gradient_e00877'
+    tier2Gradient: 'tier2Gradient_e00877',
+    brandShine: 'brandShine_e00877'
 };

@@ -54,8 +54,8 @@ function g(e, t) {
 }
 let m = new i.Z('ImageEditor'),
     f = {
-        width: 400,
-        height: 400
+        width: 256,
+        height: 256
     },
     v = (e) => {
         let { file: t, imageUri: r, onUpdate: i } = e,
@@ -64,21 +64,21 @@ let m = new i.Z('ImageEditor'),
                 y: 0
             }),
             O = a.useRef(null),
-            [N, E] = a.useState(1),
+            [E, N] = a.useState(1),
             [I, D] = a.useState(null),
-            [y, C] = a.useState({
+            [y, S] = a.useState({
                 top: 0,
                 bottom: 0,
                 left: 0,
                 right: 0
             }),
-            [w, S] = a.useState(0),
+            [C, w] = a.useState(0),
             [A, k] = a.useState({
                 x: 0,
                 y: 0
             }),
-            [T, M] = a.useState(!1),
-            R = 'image/gif' === t.type;
+            [M, R] = a.useState(!1),
+            T = 'image/gif' === t.type;
         a.useEffect(() => {
             (0, c.Z)();
         }, []);
@@ -90,18 +90,18 @@ let m = new i.Z('ImageEditor'),
                     width: e,
                     height: t
                 }),
-                    C(
+                    S(
                         _(
                             {
                                 width: e,
                                 height: t
                             },
                             1,
-                            R
+                            T
                         )
                     );
-            }, [R]),
-            P = a.useCallback(
+            }, [T]),
+            z = a.useCallback(
                 (e) => {
                     if (null == O.current) return;
                     let { x: t, y: r } = (0, o.U$)(e.x, e.y, y);
@@ -109,27 +109,27 @@ let m = new i.Z('ImageEditor'),
                         x: t,
                         y: r
                     }),
-                        (O.current.style.transform = 'translate3d('.concat(t, 'px, ').concat(r, 'px, 0) rotate(').concat(w, 'deg)'));
+                        (O.current.style.transform = 'translate3d('.concat(t, 'px, ').concat(r, 'px, 0) rotate(').concat(C, 'deg)'));
                 },
-                [O, w, y]
+                [O, C, y]
             ),
-            z = a.useCallback(
+            P = a.useCallback(
                 (e) => {
                     if (null == I) return;
-                    let t = _(I, e, R),
+                    let t = _(I, e, T),
                         { x: r, y: n } = v.current;
-                    E(e),
-                        C(t),
-                        P({
+                    N(e),
+                        S(t),
+                        z({
                             x: r,
                             y: n
                         });
                 },
-                [I, P, R]
+                [I, z, T]
             ),
-            G = a.useCallback(() => {
+            Z = a.useCallback(() => {
                 if (null == O.current || null == I) return;
-                let e = (w + 90) % 360,
+                let e = (C + 90) % 360,
                     t = -v.current.x,
                     r = v.current.y,
                     n = I.height,
@@ -139,56 +139,56 @@ let m = new i.Z('ImageEditor'),
                             width: n,
                             height: a
                         },
-                        N,
-                        R
+                        E,
+                        T
                     );
-                P({
+                z({
                     x: r,
                     y: t
                 }),
-                    S(e),
+                    w(e),
                     D({
                         width: n,
                         height: a
                     }),
-                    C(l);
-            }, [I, w, P, N, R]),
-            Z = a.useCallback(() => {
+                    S(l);
+            }, [I, C, z, E, T]),
+            G = a.useCallback(() => {
                 if (null == I) return {};
-                let { height: e, width: t } = x(b(I, w), N);
+                let { height: e, width: t } = b(x(I, C), E);
                 return {
                     height: e,
                     width: t,
                     minHeight: e,
                     minWidth: t
                 };
-            }, [I, w, N]),
-            U = a.useCallback((e) => {
+            }, [I, C, E]),
+            B = a.useCallback((e) => {
                 k({
                     x: e.clientX - v.current.x,
                     y: e.clientY - v.current.y
                 }),
-                    M(!0);
+                    R(!0);
             }, []);
         a.useEffect(() => {
-            let e = () => M(!1);
+            let e = () => R(!1);
             return window.addEventListener('mouseup', e), () => window.removeEventListener('mouseup', e);
         }, []);
-        let B = a.useCallback(
+        let U = a.useCallback(
             (e) => {
                 let { x: t, y: r } = v.current;
-                T &&
+                M &&
                     (e.clientX !== t || e.clientY !== r) &&
-                    P({
+                    z({
                         x: (t = e.clientX - A.x),
                         y: (r = e.clientY - A.y)
                     });
             },
-            [T, A, P]
+            [M, A, z]
         );
         a.useEffect(() => {
-            if (T) return window.addEventListener('mousemove', B), () => window.removeEventListener('mousemove', B);
-        }, [B, T]);
+            if (M) return window.addEventListener('mousemove', U), () => window.removeEventListener('mousemove', U);
+        }, [U, M]);
         let W = a.useRef(null),
             F = a.useCallback(async () => {
                 let e;
@@ -200,7 +200,7 @@ let m = new i.Z('ImageEditor'),
                         width: u.eT
                     },
                     s = null;
-                if ((null != W.current && (W.current(), (W.current = null)), R))
+                if ((null != W.current && (W.current(), (W.current = null)), T))
                     try {
                         let r = j(
                                 {
@@ -209,12 +209,12 @@ let m = new i.Z('ImageEditor'),
                                     cropDimensions: f,
                                     cropOriginCoordinates: v.current,
                                     maxDimensions: a,
-                                    imageRotation: w,
+                                    imageRotation: C,
                                     resizeWidth: u.eT,
                                     resizeHeight: u.eT
                                 },
                                 I,
-                                N
+                                E
                             ),
                             { result: l, cancelFn: s } = await (0, o.$p)(r);
                         (W.current = s), (e = await l);
@@ -230,7 +230,7 @@ let m = new i.Z('ImageEditor'),
                         cropDimensions: f,
                         cropOriginCoordinates: v.current,
                         maxDimensions: a,
-                        imageRotation: w
+                        imageRotation: C
                     });
                 return (
                     i({
@@ -244,11 +244,11 @@ let m = new i.Z('ImageEditor'),
                         null == (e = W.current) || e.call(W), (W.current = null);
                     }
                 );
-            }, [t, w, R, i, I, N]);
+            }, [t, C, T, i, I, E]);
         return (
             a.useEffect(() => {
                 F();
-            }, [F, w, I, T, N]),
+            }, [F, C, I, M, E]),
             (0, n.jsxs)('div', {
                 className: p.imageEditor,
                 children: [
@@ -266,16 +266,16 @@ let m = new i.Z('ImageEditor'),
                                 style: h(
                                     {
                                         opacity: +(null != I),
-                                        transform: 'translate3d('.concat(v.current.x, 'px, ').concat(v.current.y, 'px, 0) rotate(').concat(w, 'deg)')
+                                        transform: 'translate3d('.concat(v.current.x, 'px, ').concat(v.current.y, 'px, 0) rotate(').concat(C, 'deg)')
                                     },
-                                    Z()
+                                    G()
                                 ),
                                 className: p.image,
                                 src: r,
                                 crossOrigin: 'anonymous',
                                 alt: 'avatar',
                                 ref: O,
-                                onMouseDown: U,
+                                onMouseDown: B,
                                 draggable: !1
                             }),
                             (0, n.jsx)('div', {
@@ -305,7 +305,7 @@ let m = new i.Z('ImageEditor'),
                                         minValue: 1,
                                         maxValue: 4,
                                         keyboardStep: 0.025,
-                                        asValueChanges: z,
+                                        asValueChanges: P,
                                         equidistant: !0,
                                         hideBubble: !0,
                                         'aria-label': d.intl.string(d.t.dnvZSk)
@@ -355,7 +355,7 @@ let m = new i.Z('ImageEditor'),
                                                 r
                                             ),
                                             {
-                                                onClick: G,
+                                                onClick: Z,
                                                 children: (0, n.jsx)(s.Vk2, {
                                                     size: 'md',
                                                     color: 'currentColor'
@@ -371,7 +371,7 @@ let m = new i.Z('ImageEditor'),
             })
         );
     },
-    b = (e, t) => {
+    x = (e, t) => {
         let { width: r, height: n } = e;
         return t % 180 != 0
             ? {
@@ -383,9 +383,9 @@ let m = new i.Z('ImageEditor'),
                   height: n
               };
     },
-    x = (e, t) => {
+    b = (e, t) => {
         let { width: r, height: n } = e,
-            a = 400 * t,
+            a = 256 * t,
             l = r / n;
         return (
             r > n ? (n = (r = a) / l) : (r = (n = a) * l),
@@ -396,10 +396,10 @@ let m = new i.Z('ImageEditor'),
         );
     };
 function _(e, t, r) {
-    let { width: n, height: a } = x(e, t),
-        l = Math.abs(400 - n) / 2,
-        s = Math.abs(400 - a) / 2;
-    return r && (n < 400 || a < 400)
+    let { width: n, height: a } = b(e, t),
+        l = Math.abs(256 - n) / 2,
+        s = Math.abs(256 - a) / 2;
+    return r && (n < 256 || a < 256)
         ? {
               top: 0,
               bottom: 0,
@@ -414,8 +414,8 @@ function _(e, t, r) {
           };
 }
 let j = (e, t, r) => {
-    let { height: n, width: a } = x(t, r),
-        l = (n = Math.min(n, 400)) / (a = Math.min(a, 400)),
+    let { height: n, width: a } = b(t, r),
+        l = (n = Math.min(n, 256)) / (a = Math.min(a, 256)),
         s = {
             height: n,
             width: a

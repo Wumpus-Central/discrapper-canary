@@ -457,6 +457,11 @@ function ee(e) {
     let t0 = eE === B.rq.ENDED,
         t1 = l.useCallback(
             async (e) => {
+                if (ed) {
+                    var t;
+                    let e = (0, C.fn)(null == (t = eJ.current) ? void 0 : t.parentNode, eJ.current);
+                    null != e && (e.removeEventListener(C.NO, tB), (0, C.Pr)(e), em(!1), ty(!1));
+                }
                 if ((tO(e, S.jZ.LEARN_MORE), ee.id === Q.V6)) return void window.open(h.Z.getArticleURL(G.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
                 if (null != ei) {
                     let e = w.r.build(ee.config).application.link;
@@ -473,7 +478,7 @@ function ee(e) {
                               ctaContent: S.jZ.OPEN_GAME_LINK
                           });
             },
-            [tO, ee, ei, e6, e4]
+            [tO, ee, ei, e6, e4, ed, eJ, tB, em, ty]
         ),
         t2 = l.useMemo(() => (0, I.z0)(ee, u.X.WATCH_VIDEO, I.n1.VIDEO, I.O.THUMBNAIL), [ee]),
         t8 = l.useMemo(() => (0, I.z0)(ee, u.X.WATCH_VIDEO, I.n1.VIDEO, I.O.CAPTION), [ee]),

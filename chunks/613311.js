@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(451478),
     U = n(626135),
     G = n(572004),
-    V = n(630388),
-    B = n(937615),
+    B = n(630388),
+    V = n(937615),
     H = n(73346),
     F = n(3570),
     z = n(689796),
@@ -46,8 +46,8 @@ var r = n(255367),
     Y = n(506648),
     K = n(449275),
     q = n(445986),
-    X = n(119520),
-    Q = n(450233),
+    Q = n(119520),
+    X = n(450233),
     J = n(726581),
     $ = n(74153),
     ee = n(125930),
@@ -339,7 +339,7 @@ class ed extends i.PureComponent {
             let { amount: e, currency: t } = o;
             a.offers = v.Z.Offer({
                 priceCurrency: t.toUpperCase(),
-                price: (0, B.T4)(e, t, { style: 'decimal' })
+                price: (0, V.T4)(e, t, { style: 'decimal' })
             });
         }
         let s = v.Z.ItemPage({ mainEntity: a });
@@ -397,7 +397,7 @@ class ed extends i.PureComponent {
                       children: this.renderListing()
                   });
             return (0, r.jsxs)(i.Fragment, {
-                children: [(0, r.jsx)(C.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), (0, r.jsx)(X.Z, { game: e }), n]
+                children: [(0, r.jsx)(C.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), (0, r.jsx)(Q.Z, { game: e }), n]
             });
         }
         return a
@@ -559,8 +559,8 @@ class ed extends i.PureComponent {
                                 children: [
                                     null != t ? (0, N.Z)(t) : null,
                                     null != e && null != t ? (0, r.jsx)('div', { children: 'deprecated!' }) : null,
-                                    (0, r.jsx)(Q.Z, {
-                                        messageStyle: Q.G.SHORT,
+                                    (0, r.jsx)(X.Z, {
+                                        messageStyle: X.G.SHORT,
                                         className: eo.purchaseError
                                     })
                                 ]
@@ -612,7 +612,7 @@ let ep = (0, b.Z)(
                 if (null == l) throw Error('Needs applicationId or skuId');
                 null != (r = O.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? R.Z.get(t) : null);
             }
-            (null == n ? void 0 : n.flags) != null && (0, V.yE)(n.flags, ei.l4R.STICKER_PACK) && (n = null);
+            (null == n ? void 0 : n.flags) != null && (0, B.yE)(n.flags, ei.l4R.STICKER_PACK) && (n = null);
             let c = null != l && (k.Z.inTestModeForApplication(l) || E.Z.inDevModeForApplication(l));
             return {
                 skuId: t,

@@ -3,60 +3,48 @@ var n = r(255367),
     a = r(73800),
     l = r(442837),
     s = r(481060),
-    i = r(430824),
-    o = r(496675),
-    c = r(768581),
+    i = r(565138),
+    o = r(430824),
+    c = r(496675),
     u = r(981631),
     d = r(588687);
 let p = (e) => ({
         label: e.name,
         value: e.id
     }),
-    h = (e) => o.Z.can(u.Plq.CREATE_GUILD_EXPRESSIONS, e),
+    h = (e) => c.Z.can(u.Plq.CREATE_GUILD_EXPRESSIONS, e),
     g = (e) => {
-        let { onChange: t, selected: r } = e,
-            o = (0, l.e7)([i.Z], () => i.Z.getGuilds()),
-            u = a.useMemo(() => Object.values(o).filter(h).map(p), [o]),
-            g = a.useCallback(
+        let { onChange: t, selected: r, onError: c } = e,
+            u = (0, l.e7)([o.Z], () => o.Z.getGuilds()),
+            g = a.useMemo(() => Object.values(u).filter(h).map(p), [u]),
+            m = a.useCallback(
                 (e) => {
                     let [t] = e;
                     if (null == t || null == t.value) return null;
-                    let r = o[t.value];
-                    if (null == r) return t.label;
-                    let a = c.ZP.getGuildIconURL({
-                        id: r.id,
-                        icon: r.icon,
-                        size: 24,
-                        canAnimate: !1
-                    });
-                    return a
-                        ? (0, n.jsx)('img', {
-                              src: a,
-                              alt: t.label,
-                              className: d.selectedIcon
-                          })
-                        : t.label;
+                    let r = u[t.value];
+                    return null == r
+                        ? null
+                        : (0, n.jsx)(i.Z, {
+                              guild: r,
+                              size: i.Z.Sizes.SMALLER,
+                              active: !0
+                          });
                 },
-                [o]
+                [u]
             ),
-            m = a.useCallback(
+            f = a.useCallback(
                 (e) => {
                     if (null == e || null == e.value) return null;
-                    let t = o[e.value];
-                    if (null == t) return e.label;
-                    let r = c.ZP.getGuildIconURL({
-                        id: t.id,
-                        icon: t.icon,
-                        size: 32,
-                        canAnimate: !1
-                    });
-                    return r
-                        ? (0, n.jsxs)('div', {
+                    let t = u[e.value];
+                    return null == t
+                        ? null
+                        : (0, n.jsxs)('div', {
                               className: d.guildSelectOption,
                               children: [
-                                  (0, n.jsx)('img', {
-                                      src: r,
-                                      alt: e.label
+                                  (0, n.jsx)(i.Z, {
+                                      guild: t,
+                                      size: i.Z.Sizes.SMALLER,
+                                      active: !0
                                   }),
                                   (0, n.jsx)(s.Text, {
                                       variant: 'text-sm/medium',
@@ -65,19 +53,24 @@ let p = (e) => ({
                                       children: e.label
                                   })
                               ]
-                          })
-                        : e.label;
+                          });
                 },
-                [o]
+                [u]
             );
-        return (0, n.jsx)(s.q4e, {
-            className: d.guildSelector,
-            onChange: t,
-            options: u,
-            popoutPosition: 'top',
-            popoutWidth: 240,
-            renderOptionLabel: m,
-            renderOptionValue: g,
-            value: r
-        });
+        return (a.useEffect(() => {
+            if (g.length < 1) return void c();
+            null == r && t(g[0].value);
+        }, [g, t, c, r]),
+        g.length < 1)
+            ? null
+            : (0, n.jsx)(s.q4e, {
+                  className: d.guildSelector,
+                  onChange: t,
+                  options: g,
+                  popoutPosition: 'top',
+                  popoutWidth: 240,
+                  renderOptionLabel: f,
+                  renderOptionValue: m,
+                  value: r
+              });
     };

@@ -52,8 +52,8 @@ function j(e) {
         k = i.useRef(R),
         [M, U] = i.useState(3),
         G = i.useRef(M),
-        V = i.useRef(null),
-        B = i.useCallback(
+        B = i.useRef(null),
+        V = i.useCallback(
             (e) => {
                 if (null != e && !Z && !h) 336 * (s.length / M) <= e.height && j();
             },
@@ -67,11 +67,11 @@ function j(e) {
                 n < 1024 && k.current ? ((k.current = !1), D(!1)) : n > 1024 && !k.current && ((k.current = !0), D(!0));
                 let r = 1;
                 for (n -= 450 * !!R, n -= 280; n > 0; ) (n -= 264), (r += 1);
-                r !== G.current && ((G.current = r), U(r)), B(t);
+                r !== G.current && ((G.current = r), U(r)), V(t);
             },
-            [R, B]
+            [R, V]
         ),
-        F = (0, u.y)(H, [R, B]);
+        F = (0, u.y)(H, [R, V]);
     i.useEffect(() => {
         L((0, m.PM)());
     }, [v]),
@@ -143,7 +143,7 @@ function j(e) {
             },
             [s]
         ),
-        X = i.useCallback((e) => {
+        Q = i.useCallback((e) => {
             switch (e) {
                 case 0:
                     return 320;
@@ -153,11 +153,11 @@ function j(e) {
                     throw Error('[getItemHeight] Failed for section: '.concat(e));
             }
         }, []),
-        Q = i.useCallback(
+        X = i.useCallback(
             async (e, t, n, r) => {
                 var i, a;
                 await l(e, t, n, r);
-                let o = null == (a = V.current) || null == (i = a.getScrollerState()) ? void 0 : i.scrollTop;
+                let o = null == (a = B.current) || null == (i = a.getScrollerState()) ? void 0 : i.scrollTop;
                 null != o && g.Z.setState({ scrollPosition: o });
             },
             [l]
@@ -173,7 +173,7 @@ function j(e) {
                             style: n,
                             children: (0, r.jsx)(I.ZP, {
                                 guildId: e,
-                                onClick: async (e) => await Q(e, t, A, T),
+                                onClick: async (e) => await X(e, t, A, T),
                                 onView: (e) => z(e)
                             })
                         },
@@ -181,10 +181,10 @@ function j(e) {
                     );
                 }
             },
-            [s, Q, z, A]
+            [s, X, z, A]
         );
     i.useEffect(() => {
-        let e = V.current;
+        let e = B.current;
         return () => {
             var t;
             let n = null == e || null == (t = e.getScrollerState()) ? void 0 : t.scrollTop;
@@ -196,7 +196,7 @@ function j(e) {
             null != e &&
                 setTimeout(() => {
                     var t;
-                    null == (t = V.current) ||
+                    null == (t = B.current) ||
                         t.scrollTo({
                             to: e,
                             animate: !1,
@@ -211,7 +211,7 @@ function j(e) {
                 (0, o.debounce)(
                     () => {
                         var e;
-                        let t = null == (e = V.current) ? void 0 : e.getScrollerState();
+                        let t = null == (e = B.current) ? void 0 : e.getScrollerState();
                         if (null == t) return;
                         let n = t.scrollTop + t.offsetHeight;
                         t.scrollHeight - n < 240 && j();
@@ -226,7 +226,7 @@ function j(e) {
         className: C.container,
         ref: F,
         children: (0, r.jsx)(c.GMG, {
-            ref: V,
+            ref: B,
             className: C.masonryList,
             sections: W,
             columns: M,
@@ -236,7 +236,7 @@ function j(e) {
             renderSection: Y,
             getSectionHeight: K,
             getItemKey: q,
-            getItemHeight: X,
+            getItemHeight: Q,
             chunkSize: 24,
             onScroll: $,
             renderAccessory: (e) =>

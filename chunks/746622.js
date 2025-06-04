@@ -35,6 +35,8 @@ let c = (e) => {
                 return i.intl.string(i.t.X6rtiI);
             case a.ze.IMAGE_LOAD:
                 return i.intl.string(i.t['+ITMYW']);
+            case a.ze.NO_PERMISSIONS:
+                return i.intl.string(i.t.QY7ZFR);
             case 429:
                 return i.intl.string(i.t['4rjikp']);
             case a.ze.UNKNOWN:

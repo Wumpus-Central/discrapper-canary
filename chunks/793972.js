@@ -27,7 +27,6 @@ let o = (e) => {
                 (0, n.jsx)(l.Text, {
                     variant: 'text-xs/normal',
                     color: 'header-muted',
-                    className: s.inputNote,
                     children: 'Min. 2 characters (letters, numbers & underscores only).'
                 })
             ]

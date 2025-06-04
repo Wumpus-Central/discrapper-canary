@@ -187,6 +187,7 @@ let O = function (e) {
                                         },
                                         h
                                     ),
+                                    buttonShineClassName: 'buttonShineClassName' in j ? j.buttonShineClassName : n === l.Ttl.BRAND_INVERTED ? p.brandShine : void 0,
                                     pauseAnimation: !U || T
                                 },
                                 j,

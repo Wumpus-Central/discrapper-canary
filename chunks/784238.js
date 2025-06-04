@@ -75,41 +75,40 @@ let E = (e) => {
     },
     b = (e, t, n, r) => (t || n ? f.intl.string(f.t.fkPGam) : e === d.Si.TIER_2 ? f.intl.formatToPlainString(f.t.bkQ4bG, { percent: r }) : void 0),
     y = (e) => {
-        var { textOptions: t, subscriptionTier: n, hasActivePromotion: p = !1, isPersistentCTA: g = !1, useShorterCTA: y = !1, showGradient: O, confirmationFooter: v, paymentModalBanner: I, buttonShineClassName: S, color: T } = e,
-            A = m(e, ['textOptions', 'subscriptionTier', 'hasActivePromotion', 'isPersistentCTA', 'useShorterCTA', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'buttonShineClassName', 'color']);
-        let N = (0, o.ZP)(),
-            C = (0, c.N)(),
-            P = null == C ? void 0 : C.subscription_trial,
-            R = (0, s.a5)({
-                intervalType: null == P ? void 0 : P.interval,
-                intervalCount: null == P ? void 0 : P.interval_count
+        var { textOptions: t, subscriptionTier: n, hasActivePromotion: p = !1, isPersistentCTA: g = !1, useShorterCTA: y = !1, showGradient: O, confirmationFooter: v, paymentModalBanner: I, color: S } = e,
+            T = m(e, ['textOptions', 'subscriptionTier', 'hasActivePromotion', 'isPersistentCTA', 'useShorterCTA', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'color']);
+        let A = (0, o.ZP)(),
+            N = (0, c.N)(),
+            C = null == N ? void 0 : N.subscription_trial,
+            P = (0, s.a5)({
+                intervalType: null == C ? void 0 : C.interval,
+                intervalCount: null == C ? void 0 : C.interval_count
             }),
-            w = (0, l.Ng)(),
-            D = null != P && n === P.sku_id,
-            L = (null == C ? void 0 : C.trial_id) === d.a7,
-            x = p
+            R = (0, l.Ng)(),
+            w = null != C && n === C.sku_id,
+            D = (null == N ? void 0 : N.trial_id) === d.a7,
+            L = p
                 ? f.intl.string(f.t.J61px8)
-                : null != w
-                  ? b(n, y, g, w.discount.amount)
+                : null != R
+                  ? b(n, y, g, R.discount.amount)
                   : E({
-                        showTrialCTA: D,
+                        showTrialCTA: w,
                         subscriptionTier: n,
-                        trialDurationCopy: R,
+                        trialDurationCopy: P,
                         isPersistentCTA: g,
-                        shouldShowReferralTrialCopy: L,
-                        subscriptionTrial: P
+                        shouldShowReferralTrialCopy: D,
+                        subscriptionTrial: C
                     }),
-            k = null != T ? T : (0, i.wj)(N) ? a.Ttl.BRAND_INVERTED : a.Ttl.BRAND;
+            x = null != S ? S : (0, i.wj)(A) ? a.Ttl.BRAND_INVERTED : a.Ttl.BRAND;
         return (0, r.jsx)(
             u.Z,
             h(
                 {
-                    color: k,
-                    buttonShineClassName: null != S ? S : k === a.Ttl.BRAND_INVERTED ? _.brandShine : void 0,
+                    color: x,
                     textOptions: h(
                         {
-                            textOverride: x,
-                            textClassName: D ? _.freeTrialText : void 0
+                            textOverride: L,
+                            textClassName: w ? _.freeTrialText : void 0
                         },
                         t
                     ),
@@ -119,7 +118,7 @@ let E = (e) => {
                     confirmationFooter: v,
                     paymentModalBanner: I
                 },
-                A
+                T
             )
         );
     };

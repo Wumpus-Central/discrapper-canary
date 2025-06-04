@@ -41,8 +41,8 @@ var r = n(255367),
     M = n(741764),
     U = n(388032),
     G = n(524499),
-    V = n(103609);
-function B(e) {
+    B = n(103609);
+function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -121,7 +121,7 @@ function z() {
         null != b && E && O
             ? ((e = b.name),
               (I = (0, r.jsx)('img', {
-                  className: V.appIcon,
+                  className: B.appIcon,
                   alt: U.intl.string(U.t.X4IxWF),
                   src: y,
                   'aria-hidden': !0,
@@ -136,7 +136,7 @@ function z() {
                             guild: h,
                             size: _.Z.Sizes.MINI,
                             active: !0,
-                            className: V.guildIcon
+                            className: B.guildIcon
                         })),
                   (e = h.name))
                 : null != a && (a.isDM() || a.isGroupDM())
@@ -153,7 +153,7 @@ function z() {
         null != e &&
             '' !== e &&
             (0, r.jsxs)('div', {
-                className: V.title,
+                className: B.title,
                 children: [
                     I,
                     (0, r.jsx)(c.Text, {
@@ -193,8 +193,8 @@ let W = i.memo(function () {
                                       children: [
                                           (0, r.jsx)(
                                               c.P3F,
-                                              H(B({}, e), {
-                                                  className: V.button,
+                                              H(V({}, e), {
+                                                  className: B.button,
                                                   onClick: () => {
                                                       F.setState({ isOpen: !F.getState().isOpen });
                                                   },
@@ -202,7 +202,7 @@ let W = i.memo(function () {
                                               })
                                           ),
                                           (0, r.jsx)(c.P3F, {
-                                              className: V.button,
+                                              className: B.button,
                                               onClick: () => {
                                                   u.Z.open(D.oAB.ACCOUNT);
                                               },
@@ -216,14 +216,14 @@ let W = i.memo(function () {
                               title: (0, r.jsx)(z, {}),
                               trailing: (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      (0, r.jsx)(b.Z, { className: V.button }),
+                                      (0, r.jsx)(b.Z, { className: B.button }),
                                       (0, r.jsx)(f.Z, {
                                           canShowReminder: !0,
-                                          className: V.button
+                                          className: B.button
                                       }),
-                                      null === o && (0, r.jsx)(S.Z, H(B({}, t ? {} : e), { className: V.button })),
-                                      n ? (0, r.jsx)(O.Z, { className: V.button }) : (0, r.jsx)(E.Z, { className: V.button }),
-                                      (0, r.jsx)(y.Z, { className: V.button })
+                                      null === o && (0, r.jsx)(S.Z, H(V({}, t ? {} : e), { className: B.button })),
+                                      n ? (0, r.jsx)(O.Z, { className: B.button }) : (0, r.jsx)(E.Z, { className: B.button }),
+                                      (0, r.jsx)(y.Z, { className: B.button })
                                   ]
                               })
                           })
@@ -233,7 +233,7 @@ let W = i.memo(function () {
 function Y() {
     return (0, r.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
-        className: V.icon,
+        className: B.icon,
         width: '24',
         height: '24',
         viewBox: '0 0 24 24',
