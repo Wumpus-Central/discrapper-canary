@@ -7,7 +7,7 @@ var r = t(481060),
     s = t(388032);
 function a(e) {
     var { type: n, userId: t, onClose: a } = e,
-        c = (function (e, n) {
+        u = (function (e, n) {
             if (null == e) return {};
             var t,
                 l,
@@ -26,9 +26,9 @@ function a(e) {
             }
             return r;
         })(e, ['type', 'userId', 'onClose']);
-    let u = n === o.j8.TEXT ? o.tG : o.ef;
+    let c = n === o.j8.TEXT ? o.tG : o.ef;
     return (0, l.jsx)(
-        u,
+        c,
         (function (e) {
             for (var n = 1; n < arguments.length; n++) {
                 var t = null != arguments[n] ? arguments[n] : {},
@@ -63,7 +63,7 @@ function a(e) {
                     i.Z.openPrivateChannel({ recipientIds: t }), null == a || a();
                 }
             },
-            c
+            u
         )
     );
 }

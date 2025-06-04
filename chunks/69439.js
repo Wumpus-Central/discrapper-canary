@@ -73,9 +73,9 @@ function C(e) {
             isEnrolling: m.Z.isEnrolling(w.id),
             isQuestEnrollmentBlocked: null != m.Z.questEnrollmentBlockedUntil
         })),
-        Z = (null == (t = w.userStatus) ? void 0 : t.enrolledAt) != null,
-        V = (null == (n = w.userStatus) ? void 0 : n.completedAt) != null,
-        W = V && (null == (o = w.userStatus) ? void 0 : o.claimedAt) == null,
+        V = (null == (t = w.userStatus) ? void 0 : t.enrolledAt) != null,
+        Z = (null == (n = w.userStatus) ? void 0 : n.completedAt) != null,
+        W = Z && (null == (o = w.userStatus) ? void 0 : o.claimedAt) == null,
         Q = (0, g.iQ)(w),
         H = !(0, g.zi)(w),
         U = (0, p._Q)(w),
@@ -132,7 +132,7 @@ function C(e) {
               className: y.button,
               children: eo
           }))
-        : V
+        : Z
           ? (ed = F
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
@@ -184,7 +184,7 @@ function C(e) {
                         className: y.button,
                         children: v.intl.string(v.t.BkZhUF)
                     }))
-                  : H && Z && !ec
+                  : H && V && !ec
                     ? (ed = en
                           ? (0, r.jsx)(l.PhF, {
                                 className: y.platformSelectorPrimary,
@@ -234,7 +234,7 @@ function C(e) {
                                     children: v.intl.string(v.t['9KoPyM'])
                                 }))
                     : H &&
-                      !Z &&
+                      !V &&
                       (ed = L
                           ? (0, r.jsxs)(r.Fragment, {
                                 children: [

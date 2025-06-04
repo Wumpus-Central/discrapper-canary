@@ -14,8 +14,8 @@ var r = n(481060),
     m = n(981631);
 function b(e) {
     let { user: t, currentUser: n, guildId: b, channelId: _, displayProfile: y, relationshipType: x, onClose: h } = e,
-        { newestAnalyticsLocation: j } = (0, c.ZP)(),
-        g = (0, l.Z)({
+        { newestAnalyticsLocation: g } = (0, c.ZP)(),
+        j = (0, l.Z)({
             user: t,
             guildId: b,
             channelId: _,
@@ -39,7 +39,7 @@ function b(e) {
                         type: 'icon',
                         user: t,
                         guildId: b,
-                        viewProfileItem: g,
+                        viewProfileItem: j,
                         themeColor: 'secondary'
                     })
                 ]
@@ -57,7 +57,7 @@ function b(e) {
                           type: 'icon',
                           user: t,
                           guildId: b,
-                          viewProfileItem: g,
+                          viewProfileItem: j,
                           themeColor: 'secondary'
                       })
                   ]
@@ -96,13 +96,13 @@ function b(e) {
                               relationshipType: x,
                               shouldShowTooltip: !0,
                               themeColor: 'secondary',
-                              analyticsLocation: j
+                              analyticsLocation: g
                           }),
                           (0, o.jsx)(d.Z, {
                               type: 'icon',
                               user: t,
                               guildId: b,
-                              viewProfileItem: g,
+                              viewProfileItem: j,
                               themeColor: 'secondary'
                           })
                       ]
@@ -119,7 +119,7 @@ function b(e) {
                             (0, o.jsx)(f.k9, {
                                 type: 'icon',
                                 user: t,
-                                analyticsLocation: j,
+                                analyticsLocation: g,
                                 themeColor: 'secondary',
                                 gameFriends: v,
                                 tooltipPosition: 'top',
@@ -132,7 +132,7 @@ function b(e) {
                                 type: 'icon',
                                 user: t,
                                 guildId: b,
-                                viewProfileItem: g,
+                                viewProfileItem: j,
                                 themeColor: 'secondary'
                             })
                         ]
@@ -142,7 +142,7 @@ function b(e) {
                             (0, o.jsx)(f.Z7, {
                                 type: 'text',
                                 userId: t.id,
-                                analyticsLocation: j,
+                                analyticsLocation: g,
                                 color: r.zxk.Colors.BRAND,
                                 autoFocus: !0
                             }),
@@ -156,7 +156,7 @@ function b(e) {
                                 type: 'icon',
                                 user: t,
                                 guildId: b,
-                                viewProfileItem: g,
+                                viewProfileItem: j,
                                 themeColor: 'secondary'
                             })
                         ]

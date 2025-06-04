@@ -3,7 +3,7 @@ var r = n(255367),
     s = n(73800),
     o = n(120356),
     a = n.n(o),
-    i = n(240894),
+    i = n(386230),
     l = n(278074),
     c = n(754700),
     d = n(442837),
@@ -36,8 +36,8 @@ var r = n(255367),
     D = n(95985),
     M = n(50476),
     L = n(46140),
-    Z = n(743294),
-    V = n(388032),
+    V = n(743294),
+    Z = n(388032),
     W = n(921183);
 function Q(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -173,7 +173,7 @@ function F(e) {
                 className: W.description,
                 tag: 'li',
                 variant: 'text-xs/normal',
-                children: V.intl.formatToPlainString(V.t['W8/b3d'], { rewardName: o.defaultReward.messages.name })
+                children: Z.intl.formatToPlainString(Z.t['W8/b3d'], { rewardName: o.defaultReward.messages.name })
             })
         ]
     });
@@ -220,7 +220,7 @@ function X(e) {
                                     className: W.title,
                                     color: 'header-primary',
                                     variant: 'heading-md/medium',
-                                    children: V.intl.format(V.t.EQa7oq, { questName: t.config.messages.questName })
+                                    children: Z.intl.format(Z.t.EQa7oq, { questName: t.config.messages.questName })
                                 }),
                                 C
                                     ? (0, r.jsx)(F, {
@@ -234,7 +234,7 @@ function X(e) {
                             ]
                         }),
                         (0, r.jsx)(p.ua7, {
-                            'aria-label': ''.concat(V.intl.formatToPlainString(V.t.coKAb2, { rewardsDuration: w })).concat(null != P ? ' \u2022 '.concat(P) : ''),
+                            'aria-label': ''.concat(Z.intl.formatToPlainString(Z.t.coKAb2, { rewardsDuration: w })).concat(null != P ? ' \u2022 '.concat(P) : ''),
                             text:
                                 null != w &&
                                 C &&
@@ -350,7 +350,7 @@ function Y(e) {
             (0, r.jsx)(i.animated.div, {
                 className: a()(W.postEnrollmentBackground, W.postEnrollmentBackgroundCollapsed),
                 style: {
-                    backgroundImage: 'linear-gradient(90deg, '.concat(Z.aY, ', ').concat(Z.v6, ')'),
+                    backgroundImage: 'linear-gradient(90deg, '.concat(V.aY, ', ').concat(V.v6, ')'),
                     opacity: c.to({
                         range: [0, 1],
                         output: [1, 0]
@@ -367,7 +367,7 @@ function Y(e) {
                             (0, r.jsx)(p.Text, {
                                 variant: 'text-xxs/medium',
                                 className: a()(W.flex, W.headerText),
-                                children: V.intl.format(V.t['pX+fmp'], { expirationDate: z })
+                                children: Z.intl.format(Z.t['pX+fmp'], { expirationDate: z })
                             }),
                             (0, r.jsx)(T.r, {
                                 onOpen: g,
@@ -382,7 +382,7 @@ function Y(e) {
                                         p.P3F,
                                         H(Q({}, e), {
                                             className: W.submenuWrapper,
-                                            'aria-label': V.intl.string(V.t.DEoVWV),
+                                            'aria-label': Z.intl.string(Z.t.DEoVWV),
                                             children: (0, r.jsx)(p.xhG, {
                                                 size: 'md',
                                                 color: 'currentColor',
@@ -467,7 +467,7 @@ function Y(e) {
             }),
             (0, r.jsx)('div', {
                 className: a()(W.postEnrollmentBackground, W.postEnrollmentBackgroundExpanded),
-                style: { backgroundImage: 'linear-gradient(90deg, '.concat(Z.aY, ', ').concat(Z.v6, ')') }
+                style: { backgroundImage: 'linear-gradient(90deg, '.concat(V.aY, ', ').concat(V.v6, ')') }
             })
         ]
     });

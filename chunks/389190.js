@@ -5,20 +5,20 @@ var l = t(255367),
     o = t(81897),
     s = t(906732),
     a = t(785717),
-    c = t(806729),
-    u = t(857302),
+    u = t(806729),
+    c = t(857302),
     d = t(892001),
     f = t(252417),
     p = t(388032),
     g = t(301150);
 function v(e) {
-    let { user: n, guildId: t, channelId: v, onClose: j } = e,
-        { mutualFriends: b } = (0, c.Z)(n),
-        { analyticsLocations: h } = (0, s.ZP)(),
-        { context: m, trackUserProfileAction: x } = (0, a.KZ)(),
+    let { user: n, guildId: t, channelId: v, onClose: h } = e,
+        { mutualFriends: j } = (0, u.Z)(n),
+        { analyticsLocations: m } = (0, s.ZP)(),
+        { context: b, trackUserProfileAction: x } = (0, a.KZ)(),
         O = (0, o.Z)();
     r.useEffect(() => {
-        (0, u.Z)(n.id, O);
+        (0, c.Z)(n.id, O);
     }, [n.id, O]);
     let Z = (e) => {
         var n, t;
@@ -47,11 +47,11 @@ function v(e) {
                         });
                 }
                 return e;
-            })({}, m)),
+            })({}, b)),
             (t = t =
                 {
                     userId: e,
-                    sourceAnalyticsLocations: h
+                    sourceAnalyticsLocations: m
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(t))
@@ -72,12 +72,12 @@ function v(e) {
         className: g.listScroller,
         fade: !0,
         children:
-            null == b
+            null == j
                 ? (0, l.jsx)('div', {
                       className: g.empty,
                       children: (0, l.jsx)(i.$jN, {})
                   })
-                : 0 === b.length
+                : 0 === j.length
                   ? (0, l.jsxs)('div', {
                         className: g.empty,
                         children: [
@@ -88,7 +88,7 @@ function v(e) {
                             })
                         ]
                     })
-                  : b.map((e) => {
+                  : j.map((e) => {
                         let { key: n, user: r, status: i } = e;
                         return (0, l.jsx)(
                             f.Z,
@@ -98,7 +98,7 @@ function v(e) {
                                 guildId: t,
                                 channelId: v,
                                 onSelect: () => {
-                                    null == j || j(), x({ action: 'PRESS_MUTUAL_FRIEND' }), Z(r.id);
+                                    null == h || h(), x({ action: 'PRESS_MUTUAL_FRIEND' }), Z(r.id);
                                 }
                             },
                             n

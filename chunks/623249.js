@@ -67,7 +67,7 @@ function w(e) {
         D = (0, h.Bz)(E),
         M = (0, i.e7)([p.Z], () => p.Z.getState().theme),
         L = (0, l.wj)(M) ? v.BRd.DARK : v.BRd.LIGHT,
-        { startConsoleQuest: Z, startingConsoleQuest: V } = (0, g.GI)({
+        { startConsoleQuest: V, startingConsoleQuest: Z } = (0, g.GI)({
             questId: E.id,
             beforeRequest: () => {
                 q.startAnimation(),
@@ -132,8 +132,8 @@ function w(e) {
                                 children: y.intl.string(y.t['+/hZMz'])
                             }),
                             (0, r.jsxs)(c.P3F, {
-                                className: a()(_.refreshWrapper, { [_.disabled]: V }),
-                                onClick: Z,
+                                className: a()(_.refreshWrapper, { [_.disabled]: Z }),
+                                onClick: V,
                                 children: [
                                     q.render(),
                                     (0, r.jsx)(c.Text, {

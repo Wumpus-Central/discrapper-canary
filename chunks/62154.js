@@ -1,4 +1,4 @@
-t.d(n, { Z: () => Z });
+t.d(n, { Z: () => g });
 var o = t(255367);
 t(73800);
 var c = t(442837),
@@ -9,8 +9,8 @@ var c = t(442837),
     l = t(648052),
     s = t(537006),
     u = t(681837),
-    _ = t(91433),
-    f = t(944043),
+    f = t(91433),
+    _ = t(944043),
     p = t(502762),
     m = t(530),
     I = t(740628),
@@ -18,21 +18,21 @@ var c = t(442837),
     b = t(228168),
     x = t(981631),
     y = t(405666);
-function Z(e) {
+function g(e) {
     var n;
-    let { user: t, currentUser: Z, guildId: j, channelId: g, displayProfile: v, initialSection: A, initialSubsection: N, onClose: O } = e,
+    let { user: t, currentUser: g, guildId: Z, channelId: v, displayProfile: j, initialSection: A, initialSubsection: N, onClose: O } = e,
         { relationshipType: C, originApplicationId: T } = (0, c.cj)([a.Z], () => ({
             relationshipType: a.Z.getRelationshipType(t.id),
             originApplicationId: a.Z.getOriginApplicationId(t.id)
         })),
         P = (0, i.vh)(t.id),
-        w = t.id === Z.id,
-        E = (0, d.I5)(Z),
-        S = r.ZP.useName(null == v ? void 0 : v.guildId, g, t),
+        w = t.id === g.id,
+        S = (0, d.I5)(g),
+        E = r.ZP.useName(null == j ? void 0 : j.guildId, v, t),
         M = (0, h.Z)({
             user: t,
-            currentUser: Z,
-            guildId: j,
+            currentUser: g,
+            guildId: Z,
             initialSubsection: N
         });
     return (0, o.jsxs)('div', {
@@ -41,15 +41,15 @@ function Z(e) {
             (0, o.jsx)(m.Z, {
                 className: y.username,
                 user: t,
-                nickname: S,
-                pronouns: null == v ? void 0 : v.pronouns,
+                nickname: E,
+                pronouns: null == j ? void 0 : j.pronouns,
                 nicknameVariant: 'heading-xl/bold',
                 nicknameIcons: (0, o.jsx)(u.Z, {
                     size: 'sm',
                     userId: t.id
                 }),
                 tags: (0, o.jsx)(l.Z, {
-                    displayProfile: v,
+                    displayProfile: j,
                     themeType: b.lY.MODAL,
                     onClose: O
                 })
@@ -57,11 +57,11 @@ function Z(e) {
             C === x.OGo.PENDING_INCOMING &&
                 (0, o.jsx)(p.Z.Overlay, {
                     className: y.bannerContainer,
-                    children: (0, o.jsx)(_.Z, {
+                    children: (0, o.jsx)(f.Z, {
                         user: t,
                         applicationId: T,
-                        guildId: null != (n = null == v ? void 0 : v.guildId) ? n : void 0,
-                        channelId: g,
+                        guildId: null != (n = null == j ? void 0 : j.guildId) ? n : void 0,
+                        channelId: v,
                         className: y.friendRequestBanner
                     })
                 }),
@@ -71,10 +71,10 @@ function Z(e) {
                     p.Z.Overlay,
                     {
                         className: y.bannerContainer,
-                        children: (0, o.jsx)(_.Z, {
+                        children: (0, o.jsx)(f.Z, {
                             user: t,
-                            guildId: null != (n = null == v ? void 0 : v.guildId) ? n : void 0,
-                            channelId: g,
+                            guildId: null != (n = null == j ? void 0 : j.guildId) ? n : void 0,
+                            channelId: v,
                             isGameRelationship: !0,
                             applicationId: e.applicationId,
                             className: y.friendRequestBanner
@@ -83,22 +83,22 @@ function Z(e) {
                     e.applicationId
                 );
             }),
-            (0, o.jsx)(f.Z, {
+            (0, o.jsx)(_.Z, {
                 user: t,
                 className: y.bannerContainer
             }),
             w &&
                 (0, o.jsx)(s.Z, {
                     className: y.bannerContainer,
-                    isPremiumUser: E,
+                    isPremiumUser: S,
                     onInteraction: O
                 }),
             (0, o.jsx)(I.Z, {
                 user: t,
-                currentUser: Z,
-                displayProfile: v,
-                guildId: j,
-                channelId: g,
+                currentUser: g,
+                displayProfile: j,
+                guildId: Z,
+                channelId: v,
                 items: M,
                 initialSection: A,
                 initialSubsection: N,

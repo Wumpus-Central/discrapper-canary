@@ -8,15 +8,15 @@ var o = t(442837),
     l = t(806729),
     s = t(29899),
     u = t(708108),
-    _ = t(146078),
-    f = t(228168),
+    f = t(146078),
+    _ = t(228168),
     p = t(981631),
     m = t(388032);
 function I(e) {
     let { user: n, currentUser: t, guildId: I, initialSubsection: h } = e,
         { voiceActivityStatusEnabled: b } = (0, c.U)({ location: 'useUserProfileModalTabBarItems' }),
-        { live: x, recent: y, stream: Z, outbox: j } = (0, d.Z)(n.id),
-        { voiceChannel: g, voiceActivity: v } = (0, s.Z)({
+        { live: x, recent: y, stream: g, outbox: Z } = (0, d.Z)(n.id),
+        { voiceChannel: v, voiceActivity: j } = (0, s.Z)({
             userId: n.id,
             guildId: I
         }),
@@ -25,38 +25,38 @@ function I(e) {
             let e = A ? a.Z.getStatus() : i.Z.getStatus(n.id);
             return e === p.Skl.OFFLINE || e === p.Skl.INVISIBLE;
         }),
-        O = null != Z || x.length > 0,
+        O = null != g || x.length > 0,
         C = y.length > 0,
         { mutualFriendsCount: T, mutualGuilds: P } = (0, l.Z)(n),
         w = null == P ? void 0 : P.length,
-        E = (0, r.Z)(n),
-        S = [
+        S = (0, r.Z)(n),
+        E = [
             {
-                section: f.oh.USER_INFO,
+                section: _.oh.USER_INFO,
                 text: m.intl.string(m.t.jGoPJS)
             }
         ];
     return (
-        !N && (O || (b && null == Z && null == v && null != g))
-            ? S.push({
-                  section: f.oh.ACTIVITY,
+        !N && (O || (b && null == g && null == j && null != v))
+            ? E.push({
+                  section: _.oh.ACTIVITY,
                   text: m.intl.string(m.t.chq59f)
               })
-            : (C || (null == j && h === f.Tb.RECENT_ACTIVITY)) &&
-              S.push({
-                  section: f.oh.ACTIVITY,
+            : (C || (null == Z && h === _.Tb.RECENT_ACTIVITY)) &&
+              E.push({
+                  section: _.oh.ACTIVITY,
                   text: m.intl.string(m.t.chq59f)
               }),
         !A &&
-            E &&
-            (S.push({
-                section: f.oh.MUTUAL_FRIENDS,
+            S &&
+            (E.push({
+                section: _.oh.MUTUAL_FRIENDS,
                 text: (0, u.Z)(T)
             }),
-            S.push({
-                section: f.oh.MUTUAL_GUILDS,
-                text: (0, _.Z)(w)
+            E.push({
+                section: _.oh.MUTUAL_GUILDS,
+                text: (0, f.Z)(w)
             })),
-        S
+        E
     );
 }

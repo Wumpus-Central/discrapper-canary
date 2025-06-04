@@ -3,7 +3,7 @@ var r = n(255367),
     s = n(73800),
     o = n(120356),
     a = n.n(o),
-    i = n(240894),
+    i = n(386230),
     l = n(780384),
     c = n(481060),
     d = n(393238),
@@ -184,8 +184,8 @@ function I(e) {
         D = (0, h.PB)(p),
         M = (0, u.ZP)(),
         L = ((0, l.wj)(M) ? T.BRd.DARK : T.BRd.LIGHT) === T.BRd.DARK,
-        Z = (0, g.tP)(p),
-        V = (null == (t = p.userStatus) ? void 0 : t.claimedAt) != null,
+        V = (0, g.tP)(p),
+        Z = (null == (t = p.userStatus) ? void 0 : t.claimedAt) != null,
         W = (0, g.B6)(p.config.expiresAt, {
             month: 'numeric',
             day: 'numeric'
@@ -303,7 +303,7 @@ function I(e) {
                                         color: L ? 'text-muted' : 'always-white',
                                         children: N.intl.format(N.t.buEvBw, { brandName: null != (d = null == (i = p.config.cosponsorMetadata) ? void 0 : i.name) ? d : p.config.messages.gamePublisher })
                                     }),
-                                    Z || V
+                                    V || Z
                                         ? null
                                         : (0, r.jsx)(c.Text, {
                                               variant: 'text-sm/medium',

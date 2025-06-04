@@ -458,10 +458,10 @@ function ec(e) {
                                 ec(e);
                             }
                         }
-                      : null != ev
+                      : null != ev && k
                         ? ev
                         : void 0,
-            [ev, $, ec]
+            [k, $, ec, ev]
         ),
         ej = i.useMemo(() => {
             let e = [];

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => Z }), n(953529);
+n.d(t, { Z: () => V }), n(953529);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
     a = n.n(o),
-    i = n(240894),
+    i = n(386230),
     l = n(442837),
     c = n(950104),
     d = n(780384),
@@ -93,9 +93,9 @@ function L(e) {
           })
         : null;
 }
-let Z = s.forwardRef(function (e, t) {
+let V = s.forwardRef(function (e, t) {
     var n, o;
-    let { children: _, className: Z, collapsedHeight: V, expansionSpring: W, isExpanded: Q, isExpansionAnimationComplete: H, onCtxMenuOpen: U, onCtxMenuClose: z, onCtxMenuSelect: F, quest: K, useReducedMotion: X } = e,
+    let { children: _, className: V, collapsedHeight: Z, expansionSpring: W, isExpanded: Q, isExpansionAnimationComplete: H, onCtxMenuOpen: U, onCtxMenuClose: z, onCtxMenuSelect: F, quest: K, useReducedMotion: X } = e,
         Y = (0, l.e7)([j.Z], () => j.Z.isEnrolling(K.id), [K]),
         G = (0, x.aM)(),
         J = (0, b.B6)(K.config.expiresAt),
@@ -151,7 +151,7 @@ let Z = s.forwardRef(function (e, t) {
             };
         }, [K.config.colors.primary]);
     return (0, r.jsxs)(i.animated.div, {
-        className: a()(Z, I.contentExpanded, { [I.contentInteractable]: eg }),
+        className: a()(V, I.contentExpanded, { [I.contentInteractable]: eg }),
         style: {
             backgroundColor: K.config.colors.secondary,
             transform: em
@@ -164,7 +164,7 @@ let Z = s.forwardRef(function (e, t) {
                           }),
                           W.to({
                               range: [0, 1],
-                              output: [0, V]
+                              output: [0, Z]
                           })
                       ],
                       (e, t) => 'translateY(calc('.concat(e, '% + ').concat(t, 'px))')

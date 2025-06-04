@@ -3,7 +3,7 @@ var r = n(255367),
     s = n(73800),
     o = n(120356),
     a = n.n(o),
-    i = n(240894),
+    i = n(386230),
     l = n(442837),
     c = n(481060),
     d = n(393238),
@@ -29,9 +29,9 @@ function E(e) {
     let { quest: A, questContent: R, isHovering: k, contentPosition: B, rowIndex: q, isVisibleInViewport: I, onReceiveErrorHints: D } = e,
         M = (0, g.j)({ location: O.dr.QUESTS_BAR_MOBILE }),
         L = s.useMemo(() => x.r.build(A.config), [A.config]),
-        Z = L.defaultReward.messages.name,
-        V = L.defaultReward.messages.nameWithArticle,
-        W = M ? Z : V,
+        V = L.defaultReward.messages.name,
+        Z = L.defaultReward.messages.nameWithArticle,
+        W = M ? V : Z,
         Q = (null == (t = A.userStatus) ? void 0 : t.enrolledAt) != null,
         { ref: H, scrollHeight: U } = (0, d.kE)(),
         z = 104 !== U,
@@ -104,7 +104,7 @@ function E(e) {
                     : Y
                       ? (0, r.jsx)(T, {
                             questId: A.id,
-                            children: Z
+                            children: V
                         })
                       : G
                         ? w.intl.format(w.t.ro1szc, {
@@ -127,7 +127,7 @@ function E(e) {
                                       children: W
                                   })
                           }),
-            [Z, Y, W, A.id, J, G]
+            [V, Y, W, A.id, J, G]
         ),
         er = s.useMemo(() => {
             if (null != et)
