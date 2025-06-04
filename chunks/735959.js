@@ -10,13 +10,13 @@ var a = n(255367),
     u = n(665149),
     m = n(706454),
     x = n(428530),
-    p = n(257785),
-    h = n(388032);
+    h = n(257785),
+    p = n(388032);
 function b() {
     let e = (0, c.e7)([m.default], () => m.default.locale),
         [t, n] = r.useState(),
         i = (0, l.runtimeHashMessageKey)(null != t ? t : ''),
-        b = r.useMemo(() => h.t[i], [i]);
+        b = r.useMemo(() => p.t[i], [i]);
     return (0, a.jsxs)('div', {
         children: [
             (0, a.jsxs)(u.ZP, {
@@ -28,29 +28,29 @@ function b() {
                     (0, a.jsx)(u.ZP.Title, { children: 'Locale' })
                 ]
             }),
-            (0, a.jsxs)(p.E, {
+            (0, a.jsxs)(h.E, {
                 children: [
-                    (0, a.jsx)(p.Z9, {
+                    (0, a.jsx)(h.Z9, {
                         name: 'Active System',
                         children: '@discord/intl'
                     }),
-                    (0, a.jsx)(p.Z9, {
+                    (0, a.jsx)(h.Z9, {
                         name: 'App',
                         children: e
                     }),
-                    (0, a.jsx)(p.Z9, {
+                    (0, a.jsx)(h.Z9, {
                         name: 'System',
-                        children: h.systemLocale
+                        children: p.systemLocale
                     }),
-                    (0, a.jsx)(p.Z9, {
+                    (0, a.jsx)(h.Z9, {
                         name: '@discord/intl',
-                        children: h.intl.currentLocale
+                        children: p.intl.currentLocale
                     }),
-                    (0, a.jsx)(p.Z9, {
+                    (0, a.jsx)(h.Z9, {
                         name: 'common i18n',
                         children: o.Z.getLocale()
                     }),
-                    (0, a.jsx)(p.Z9, {
+                    (0, a.jsx)(h.Z9, {
                         name: 'Moment',
                         children: s().locale()
                     })
@@ -65,10 +65,10 @@ function b() {
                     (0, a.jsx)(u.ZP.Title, { children: 'New System Messages' })
                 ]
             }),
-            (0, a.jsx)(p.E, {
-                children: (0, a.jsx)(p.Z9, {
+            (0, a.jsx)(h.E, {
+                children: (0, a.jsx)(h.Z9, {
                     name: 'Unique Rendered Main Messages',
-                    children: Object.keys(h.t).length
+                    children: Object.keys(p.t).length
                 })
             }),
             (0, a.jsx)(d.oil, {
@@ -79,13 +79,13 @@ function b() {
                 style: { margin: 16 },
                 placeholder: 'Find a message'
             }),
-            (0, a.jsxs)(p.E, {
+            (0, a.jsxs)(h.E, {
                 children: [
-                    (0, a.jsx)(p.Z9, {
+                    (0, a.jsx)(h.Z9, {
                         name: 'Hashed key',
                         children: i
                     }),
-                    (0, a.jsx)(p.Z9, {
+                    (0, a.jsx)(h.Z9, {
                         name: 'Exists?',
                         children: null != b ? 'yes' : 'no'
                     })

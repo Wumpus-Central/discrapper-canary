@@ -29,18 +29,17 @@ var r = n(392711),
     h = n(981631),
     m = n(526761),
     g = n(388032);
-let E = async (e) => {
+let E = async () => {
         try {
-            let t = (
+            let e = (
                 await a.tn.get({
                     url: h.ANM.SOUNDBOARD_DEFAULT_SOUNDS,
-                    query: { guild_ids: e },
                     rejectWithError: !1
                 })
             ).body.map((e) => (0, f.o3)(e, p.X8));
             o.Z.dispatch({
                 type: 'SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS',
-                soundboardSounds: t
+                soundboardSounds: e
             });
         } catch (e) {
             throw (o.Z.dispatch({ type: 'SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE' }), new l.Z(e));
@@ -53,11 +52,11 @@ let E = async (e) => {
             };
             o.Z.subscribe(e, n);
         }),
-    y = (e) => {
+    y = () => {
         if (!d.Z.shouldFetchDefaultSounds()) return Promise.resolve();
         o.Z.dispatch({ type: 'SOUNDBOARD_FETCH_DEFAULT_SOUNDS' });
-        let t = b('SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS');
-        return E(e), t;
+        let e = b('SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS');
+        return E(), e;
     },
     O = () => {
         let e = (0, _.D)();

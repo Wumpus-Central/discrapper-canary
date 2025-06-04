@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(451478),
     E = n(701861),
     O = n(437314),
-    y = n(696577),
-    I = n(163417),
+    I = n(696577),
+    y = n(163417),
     v = n(830880),
     C = n(492347),
     S = n(42575),
@@ -70,10 +70,10 @@ function Z(e, t) {
     );
 }
 let x = [];
-function w() {
+function L() {
     c.Z.setSection(T.pJs.ADD_FRIEND);
 }
-function L() {
+function w() {
     (0, s.ZDy)(async () => {
         let { default: e } = await n.e('36312').then(n.bind(n, 153932));
         return (t) => (0, r.jsx)(e, A({}, t));
@@ -81,7 +81,7 @@ function L() {
 }
 function R(e) {
     let { section: t, showSpamCta: n } = e,
-        l = i.useMemo(() => (n ? L : t !== T.pJs.PENDING ? w : void 0), [n, t]);
+        l = i.useMemo(() => (n ? w : t !== T.pJs.PENDING ? L : void 0), [n, t]);
     return (0, r.jsx)('div', {
         className: j.emptyStateContainer,
         children: (0, r.jsx)(
@@ -98,7 +98,7 @@ let D = function (e) {
     let { titleId: t } = e,
         { analyticsLocations: n } = (0, h.ZP)(p.Z.FRIENDS_LIST),
         { rows: l, section: c } = (0, o.cj)([b.ZP], () => b.ZP.getState()),
-        w = (0, o.e7)([_.Z], () => _.Z.isFocused()),
+        L = (0, o.e7)([_.Z], () => _.Z.isFocused()),
         { relationshipCount: D, hasBlockedOrIgnored: k } = (0, o.cj)([m.Z], () => ({
             relationshipCount: m.Z.getRelationshipCount(),
             hasBlockedOrIgnored: m.Z.getBlockedOrIgnoredIDs().length > 0
@@ -132,16 +132,16 @@ let D = function (e) {
                     })(e, ['key']);
                 switch (c) {
                     case T.pJs.PENDING:
-                        return (0, r.jsx)(y.Z, Z(A({}, n), { isFocused: w }), t);
+                        return (0, r.jsx)(I.Z, Z(A({}, n), { isFocused: L }), t);
                     case T.pJs.SUGGESTIONS:
-                        return (0, r.jsx)(S.Z, Z(A({}, n), { isFocused: w }), t);
+                        return (0, r.jsx)(S.Z, Z(A({}, n), { isFocused: L }), t);
                     case T.pJs.ONLINE:
                     case T.pJs.ALL:
                     default:
-                        return (0, r.jsx)(E.Z, Z(A({}, n), { isFocused: w }), t);
+                        return (0, r.jsx)(E.Z, Z(A({}, n), { isFocused: L }), t);
                 }
             },
-            [w, c]
+            [L, c]
         ),
         B = i.useCallback(
             (e) => {
@@ -182,13 +182,13 @@ let D = function (e) {
         }, [F, c]),
         K = i.useMemo(() => F.filter((e) => e.type === T.OGo.PENDING_INCOMING).length, [F]),
         q = c === T.pJs.PENDING && K > 0 && K >= N.yf,
-        Q = i.useCallback(
+        X = i.useCallback(
             (e) => {
                 e.stopPropagation(), u.Z.confirmClearPendingRelationships(K);
             },
             [K]
         ),
-        X = i.useCallback(
+        Q = i.useCallback(
             (e) => {
                 let n = (function (e, t, n) {
                     switch (e) {
@@ -220,7 +220,7 @@ let D = function (e) {
                                           color: s.Ttl.LINK,
                                           className: j.clearButton,
                                           size: s.zxk.Sizes.TINY,
-                                          onClick: Q,
+                                          onClick: X,
                                           'aria-label': P.intl.string(P.t.O8k7Oz),
                                           children: P.intl.string(P.t.O8k7Oz)
                                       })
@@ -240,7 +240,7 @@ let D = function (e) {
                           n
                       );
             },
-            [Y, c, t, q, Q]
+            [Y, c, t, q, X]
         );
     if (
         (i.useEffect(() => {
@@ -267,10 +267,10 @@ let D = function (e) {
                     onClear: V,
                     size: s.E1j.Sizes.MEDIUM
                 }),
-                (0, r.jsx)(I.Z, {
+                (0, r.jsx)(y.Z, {
                     rows: Y,
                     renderRow: G,
-                    renderSection: X,
+                    renderSection: Q,
                     sectionFilter: c,
                     isVirtualizedList: D >= N.nG,
                     hasSearchQuery: J,
@@ -280,7 +280,7 @@ let D = function (e) {
                                   look: s.zxk.Looks.LINK,
                                   color: j.viewSpamButtonColor,
                                   className: j.viewSpamButton,
-                                  onClick: L,
+                                  onClick: w,
                                   size: s.PhG.TINY,
                                   children: (0, r.jsx)(s.Text, {
                                       variant: 'text-xs/medium',

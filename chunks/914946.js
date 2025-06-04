@@ -11,7 +11,7 @@ n.d(t, {
     bu: () => er,
     kb: () => W,
     s9: () => Y,
-    t9: () => Q,
+    t9: () => X,
     tr: () => et,
     vv: () => $,
     zM: () => K,
@@ -45,8 +45,8 @@ var r,
     _ = n(430824),
     E = n(131951),
     O = n(375954),
-    y = n(158776),
-    I = n(594174),
+    I = n(158776),
+    y = n(594174),
     v = n(979651),
     C = n(70956),
     S = n(5192),
@@ -81,7 +81,7 @@ function x(e) {
     }
     return e;
 }
-function w(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -99,9 +99,9 @@ function w(e, t) {
         e
     );
 }
-let L = null != (i = null == (r = T.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)) ? void 0 : r.host) ? i : 'localhost',
+let w = null != (i = null == (r = T.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)) ? void 0 : r.host) ? i : 'localhost',
     R = (function () {
-        let e = L.split(':')[0];
+        let e = w.split(':')[0];
         if (!e.includes('.')) return e;
         let t = e.split('.'),
             n = t[t.length - 1];
@@ -142,7 +142,7 @@ function V(e, t) {
             ),
         Promise.all(n).then(() => {
             var n;
-            let i = (!e.isNSFW() || (null == (n = I.default.getCurrentUser()) ? void 0 : n.nsfwAllowed) === !0) && t ? O.Z.getMessages(e.id).toArray().map(H) : [],
+            let i = (!e.isNSFW() || (null == (n = y.default.getCurrentUser()) ? void 0 : n.nsfwAllowed) === !0) && t ? O.Z.getMessages(e.id).toArray().map(H) : [],
                 l = Object.values(v.Z.getVoiceStatesForChannel(e.id)).map((t) => F(r, e.id, t));
             return {
                 id: e.id,
@@ -187,7 +187,7 @@ function H(e) {
 }
 function F(e, t, n) {
     let { mute: r, deaf: i, selfMute: l, selfDeaf: a, suppress: o, userId: s } = n,
-        c = I.default.getUser(s);
+        c = y.default.getUser(s);
     if (null == c) throw Error('Invalid user id: '.concat(s));
     return {
         nick: S.ZP.getName(e, t, c),
@@ -209,14 +209,14 @@ function z(e, t) {
         type: e,
         user: (0, j.Z)(t),
         presence: {
-            status: y.Z.getStatus(t.id, null),
+            status: I.Z.getStatus(t.id, null),
             activity: null
         }
     };
 }
 function W(e, t) {
     var n;
-    return null == t ? e : w(x({}, e), { presence: w(x({}, e.presence), { activity: null != (n = y.Z.getApplicationActivity(e.user.id, t)) ? n : null }) });
+    return null == t ? e : L(x({}, e), { presence: L(x({}, e.presence), { activity: null != (n = I.Z.getApplicationActivity(e.user.id, t)) ? n : null }) });
 }
 function Y(e) {
     let t;
@@ -244,10 +244,10 @@ function q(e) {
             return e;
     }
 }
-function Q(e, t, n) {
+function X(e, t, n) {
     return e === Z.mFx.JOIN && null != t && null != t.id && null != n.join;
 }
-function X(e) {
+function Q(e) {
     return o.tn
         .get({
             url: Z.ANM.APPLICATION_RPC(e),
@@ -272,10 +272,10 @@ async function J(e, t, n) {
             let e = (0, u.ZP)(t);
             if (null == e || !B(n, [e])) throw new P.Z({ closeCode: Z.$VG.INVALID_ORIGIN }, 'Invalid Origin');
         } else {
-            let e = await X(t);
+            let e = await Q(t);
             if (((r = f.ZP.createFromServer(e)), !B(n, e.rpc_origins))) throw new P.Z({ closeCode: Z.$VG.INVALID_ORIGIN }, 'Invalid Origin');
         }
-    null == r && (r = f.ZP.createFromServer(await X(t)));
+    null == r && (r = f.ZP.createFromServer(await Q(t)));
     let { id: i, name: l, icon: a, coverImage: o, flags: s } = r;
     e.application = {
         id: i,

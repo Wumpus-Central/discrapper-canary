@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(17845),
     E = n(374939),
     O = n(233374),
-    y = n(611928),
-    I = n(763433),
+    I = n(611928),
+    y = n(763433),
     v = n(283293),
     C = n(507808),
     S = n(822857),
@@ -29,8 +29,8 @@ var r = n(255367),
     A = n(150560),
     Z = n(558652),
     x = n(736683),
-    w = n(879438),
-    L = n(251360),
+    L = n(879438),
+    w = n(251360),
     R = n(466962),
     D = n(452081),
     k = n(46140),
@@ -77,7 +77,7 @@ let z = function () {
         { onScroll: l, scrollPosition: s } = (0, m.M)(),
         u = A.Z.getState().getUtmCurrentContext(),
         g = (0, j._)({ location: k.dr.QUEST_HOME_DESKTOP }) ? x.Z : x.j,
-        V = (0, w.z)((e) => e.registerAssetLoad),
+        V = (0, L.z)((e) => e.registerAssetLoad),
         H = i.useRef(u);
     i.useEffect(() => {
         H.current = u;
@@ -105,7 +105,7 @@ let z = function () {
     let Y = z ? G.intl.format(G.t.BCBIlp, {}) : G.intl.format(G.t.lmMBf3, {}),
         K = z ? G.intl.format(G.t.U9FY0N, {}) : G.intl.string(G.t.oWCrBg),
         q = i.useRef(null);
-    return (0, r.jsx)(L.k.Provider, {
+    return (0, r.jsx)(w.k.Provider, {
         value: { onAssetLoadComplete: V },
         children: (0, r.jsx)('div', {
             className: B.container,
@@ -116,7 +116,7 @@ let z = function () {
                           onScroll: l,
                           ref: q,
                           children: [
-                              (0, r.jsx)(I.a, {
+                              (0, r.jsx)(y.a, {
                                   selectedTabId: e,
                                   handleTransition: t,
                                   tabs: n,
@@ -180,9 +180,9 @@ let z = function () {
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsxs)(y.ZP, {
-                              variant: y._6.OVERLAY,
-                              children: [(0, r.jsx)('div', { className: B.dragRegion }), (0, r.jsx)(y.z6, { scrollPosition: s }), (0, r.jsx)(y.aV, { icon: c.qDn })]
+                          (0, r.jsxs)(I.ZP, {
+                              variant: I._6.OVERLAY,
+                              children: [(0, r.jsx)('div', { className: B.dragRegion }), (0, r.jsx)(I.z6, { scrollPosition: s }), (0, r.jsx)(I.aV, { icon: c.qDn })]
                           }),
                           (0, r.jsx)(R.t.Provider, {
                               value: q,

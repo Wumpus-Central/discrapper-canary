@@ -53,8 +53,8 @@ function f(e, t) {
     );
 }
 let g = function (e) {
-    let { index: t, children: l, user: g, channel: m, onClick: b, isFocused: _, isActive: E, onOtherHover: O, className: y } = e,
-        [I, v] = i.useState(!1),
+    let { index: t, children: l, user: g, channel: m, onClick: b, isFocused: _, isActive: E, onOtherHover: O, className: I } = e,
+        [y, v] = i.useState(!1),
         [C, S] = i.useState(!1),
         N = () => {
             v(!0), !_ || E || C || null == O || O();
@@ -91,7 +91,7 @@ let g = function (e) {
                     f(
                         h(
                             {
-                                className: a()(p.messageRequestItem, y, {
+                                className: a()(p.messageRequestItem, I, {
                                     [p.active]: E || C,
                                     [p.firstItem]: 0 === t
                                 }),
@@ -106,7 +106,7 @@ let g = function (e) {
                             },
                             e
                         ),
-                        { children: l(I || E || C) }
+                        { children: l(y || E || C) }
                     )
                 )
             })

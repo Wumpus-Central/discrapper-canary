@@ -78,30 +78,12 @@ let m = new i.Z('ImageEditor'),
                 y: 0
             }),
             [M, R] = a.useState(!1),
-            T = 'image/gif' === t.type;
+            T = 'image/gif' === t.type,
+            [L, z] = a.useState(null);
         a.useEffect(() => {
             (0, c.Z)();
         }, []);
-        let L = a.useCallback(() => {
-                if (null == O.current) return;
-                let e = O.current.naturalWidth,
-                    t = O.current.naturalHeight;
-                D({
-                    width: e,
-                    height: t
-                }),
-                    S(
-                        _(
-                            {
-                                width: e,
-                                height: t
-                            },
-                            1,
-                            T
-                        )
-                    );
-            }, [T]),
-            z = a.useCallback(
+        let P = a.useCallback(
                 (e) => {
                     if (null == O.current) return;
                     let { x: t, y: r } = (0, o.U$)(e.x, e.y, y);
@@ -113,21 +95,21 @@ let m = new i.Z('ImageEditor'),
                 },
                 [O, C, y]
             ),
-            P = a.useCallback(
+            Z = a.useCallback(
                 (e) => {
                     if (null == I) return;
                     let t = _(I, e, T),
                         { x: r, y: n } = v.current;
                     N(e),
                         S(t),
-                        z({
+                        P({
                             x: r,
                             y: n
                         });
                 },
-                [I, z, T]
+                [I, P, T]
             ),
-            Z = a.useCallback(() => {
+            G = a.useCallback(() => {
                 if (null == O.current || null == I) return;
                 let e = (C + 90) % 360,
                     t = -v.current.x,
@@ -142,7 +124,7 @@ let m = new i.Z('ImageEditor'),
                         E,
                         T
                     );
-                z({
+                P({
                     x: r,
                     y: t
                 }),
@@ -152,8 +134,8 @@ let m = new i.Z('ImageEditor'),
                         height: a
                     }),
                     S(l);
-            }, [I, C, z, E, T]),
-            G = a.useCallback(() => {
+            }, [I, C, P, E, T]),
+            B = a.useCallback(() => {
                 if (null == I) return {};
                 let { height: e, width: t } = b(x(I, C), E);
                 return {
@@ -163,7 +145,7 @@ let m = new i.Z('ImageEditor'),
                     minWidth: t
                 };
             }, [I, C, E]),
-            B = a.useCallback((e) => {
+            U = a.useCallback((e) => {
                 k({
                     x: e.clientX - v.current.x,
                     y: e.clientY - v.current.y
@@ -174,23 +156,23 @@ let m = new i.Z('ImageEditor'),
             let e = () => R(!1);
             return window.addEventListener('mouseup', e), () => window.removeEventListener('mouseup', e);
         }, []);
-        let U = a.useCallback(
+        let W = a.useCallback(
             (e) => {
                 let { x: t, y: r } = v.current;
                 M &&
                     (e.clientX !== t || e.clientY !== r) &&
-                    z({
+                    P({
                         x: (t = e.clientX - A.x),
                         y: (r = e.clientY - A.y)
                     });
             },
-            [M, A, z]
+            [M, A, P]
         );
         a.useEffect(() => {
-            if (M) return window.addEventListener('mousemove', U), () => window.removeEventListener('mousemove', U);
-        }, [U, M]);
-        let W = a.useRef(null),
-            F = a.useCallback(async () => {
+            if (M) return window.addEventListener('mousemove', W), () => window.removeEventListener('mousemove', W);
+        }, [W, M]);
+        let F = a.useRef(null),
+            V = a.useCallback(async () => {
                 let e;
                 if (null == O.current || null == I) return;
                 let r = Date.now(),
@@ -200,7 +182,7 @@ let m = new i.Z('ImageEditor'),
                         width: u.eT
                     },
                     s = null;
-                if ((null != W.current && (W.current(), (W.current = null)), T))
+                if ((null != F.current && (F.current(), (F.current = null)), T))
                     try {
                         let r = j(
                                 {
@@ -217,12 +199,12 @@ let m = new i.Z('ImageEditor'),
                                 E
                             ),
                             { result: l, cancelFn: s } = await (0, o.$p)(r);
-                        (W.current = s), (e = await l);
+                        (F.current = s), (e = await l);
                     } catch (e) {
                         m.error('Error cropping GIF', e), (s = u.ze.GIF_CROPPING);
                     } finally {
                         var c;
-                        null == (c = W.current) || c.call(W), (W.current = null);
+                        null == (c = F.current) || c.call(F), (F.current = null);
                     }
                 else
                     e = (0, l.PT)({
@@ -241,135 +223,156 @@ let m = new i.Z('ImageEditor'),
                     }),
                     () => {
                         var e;
-                        null == (e = W.current) || e.call(W), (W.current = null);
+                        null == (e = F.current) || e.call(F), (F.current = null);
                     }
                 );
             }, [t, C, T, i, I, E]);
-        return (
-            a.useEffect(() => {
-                F();
-            }, [F, C, I, M, E]),
-            (0, n.jsxs)('div', {
-                className: p.imageEditor,
-                children: [
-                    (0, n.jsxs)('div', {
-                        className: p.editingContainer,
-                        children: [
-                            (0, n.jsx)('img', {
-                                onLoad: L,
-                                onError: () => {
-                                    i({
-                                        error: u.ze.IMAGE_LOAD,
-                                        loading: !1
-                                    });
-                                },
-                                style: h(
-                                    {
-                                        opacity: +(null != I),
-                                        transform: 'translate3d('.concat(v.current.x, 'px, ').concat(v.current.y, 'px, 0) rotate(').concat(C, 'deg)')
-                                    },
-                                    G()
-                                ),
-                                className: p.image,
-                                src: r,
-                                crossOrigin: 'anonymous',
-                                alt: 'avatar',
-                                ref: O,
-                                onMouseDown: B,
-                                draggable: !1
-                            }),
-                            (0, n.jsx)('div', {
-                                className: p.overlay,
-                                style: {
+        a.useEffect(() => {
+            V();
+        }, [V, C, I, M, E, L]);
+        let H = a.useCallback(() => {
+            if (null == O.current) return;
+            let e = O.current.naturalWidth,
+                t = O.current.naturalHeight;
+            D({
+                width: e,
+                height: t
+            });
+            let r = Math.min(Math.max(e, t) / Math.min(e, t), 4);
+            z(r),
+                N(r),
+                S(
+                    _(
+                        {
+                            width: e,
+                            height: t
+                        },
+                        r,
+                        T
+                    )
+                );
+        }, [T]);
+        return (0, n.jsxs)('div', {
+            className: p.imageEditor,
+            children: [
+                (0, n.jsxs)('div', {
+                    className: p.editingContainer,
+                    children: [
+                        (0, n.jsx)('img', {
+                            onLoad: H,
+                            onError: () => {
+                                i({
+                                    error: u.ze.IMAGE_LOAD,
+                                    loading: !1
+                                });
+                            },
+                            style: h(
+                                {
                                     opacity: +(null != I),
-                                    width: f.width,
-                                    height: f.height
-                                }
-                            })
-                        ]
-                    }),
-                    (0, n.jsxs)('div', {
-                        className: p.toolsContainer,
-                        children: [
-                            (0, n.jsxs)('div', {
-                                className: p.zoomControls,
-                                children: [
-                                    (0, n.jsx)(s.XBm, {
-                                        size: 'xxs',
-                                        color: 'currentColor',
-                                        className: p.zoomIcon
-                                    }),
+                                    transform: 'translate3d('.concat(v.current.x, 'px, ').concat(v.current.y, 'px, 0) rotate(').concat(C, 'deg)')
+                                },
+                                B()
+                            ),
+                            className: p.image,
+                            src: r,
+                            crossOrigin: 'anonymous',
+                            alt: 'avatar',
+                            ref: O,
+                            onMouseDown: U,
+                            draggable: !1
+                        }),
+                        (0, n.jsx)('div', {
+                            className: p.overlay,
+                            style: {
+                                opacity: +(null != I),
+                                width: f.width,
+                                height: f.height
+                            }
+                        })
+                    ]
+                }),
+                (0, n.jsxs)('div', {
+                    className: p.toolsContainer,
+                    children: [
+                        (0, n.jsxs)('div', {
+                            className: p.zoomControls,
+                            children: [
+                                (0, n.jsx)(s.XBm, {
+                                    size: 'xxs',
+                                    color: 'currentColor',
+                                    className: p.zoomIcon
+                                }),
+                                null != L &&
                                     (0, n.jsx)(s.iRW, {
                                         className: p.slider,
-                                        initialValue: 1,
+                                        initialValue: L,
                                         minValue: 1,
                                         maxValue: 4,
                                         keyboardStep: 0.025,
-                                        asValueChanges: P,
+                                        asValueChanges: Z,
                                         equidistant: !0,
                                         hideBubble: !0,
                                         'aria-label': d.intl.string(d.t.dnvZSk)
                                     }),
-                                    (0, n.jsx)(s.XBm, {
-                                        size: 'md',
-                                        color: 'currentColor',
-                                        className: p.zoomIcon
-                                    })
-                                ]
-                            }),
-                            (0, n.jsx)(s.ua7, {
-                                text: d.intl.string(d.t.E36Wd3),
-                                'aria-label': d.intl.string(d.t.LzFiKC),
-                                children: (e) => {
-                                    var { onClick: t } = e,
-                                        r = (function (e, t) {
-                                            if (null == e) return {};
-                                            var r,
-                                                n,
-                                                a = (function (e, t) {
-                                                    if (null == e) return {};
-                                                    var r,
-                                                        n,
-                                                        a = {},
-                                                        l = Object.keys(e);
-                                                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
-                                                    return a;
-                                                })(e, t);
-                                            if (Object.getOwnPropertySymbols) {
-                                                var l = Object.getOwnPropertySymbols(e);
-                                                for (n = 0; n < l.length; n++) (r = l[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
-                                            }
-                                            return a;
-                                        })(e, ['onClick']);
-                                    return (0, n.jsx)(
-                                        s.zxk,
-                                        g(
-                                            h(
-                                                {
-                                                    className: p.rotateButton,
-                                                    look: s.zxk.Looks.BLANK,
-                                                    size: s.PhG.NONE,
-                                                    color: s.zxk.Colors.TRANSPARENT,
-                                                    grow: !1
-                                                },
-                                                r
-                                            ),
+                                (0, n.jsx)(s.XBm, {
+                                    size: 'md',
+                                    color: 'currentColor',
+                                    className: p.zoomIcon
+                                })
+                            ]
+                        }),
+                        (0, n.jsx)(s.ua7, {
+                            text: d.intl.string(d.t.E36Wd3),
+                            'aria-label': d.intl.string(d.t.LzFiKC),
+                            children: (e) => {
+                                var { onClick: t } = e,
+                                    r = (function (e, t) {
+                                        if (null == e) return {};
+                                        var r,
+                                            n,
+                                            a = (function (e, t) {
+                                                if (null == e) return {};
+                                                var r,
+                                                    n,
+                                                    a = {},
+                                                    l = Object.keys(e);
+                                                for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
+                                                return a;
+                                            })(e, t);
+                                        if (Object.getOwnPropertySymbols) {
+                                            var l = Object.getOwnPropertySymbols(e);
+                                            for (n = 0; n < l.length; n++) (r = l[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+                                        }
+                                        return a;
+                                    })(e, ['onClick']);
+                                return (0, n.jsx)(
+                                    s.zxk,
+                                    g(
+                                        h(
                                             {
-                                                onClick: Z,
-                                                children: (0, n.jsx)(s.Vk2, {
-                                                    size: 'md',
-                                                    color: 'currentColor'
-                                                })
-                                            }
-                                        )
-                                    );
-                                }
-                            })
-                        ]
-                    })
-                ]
-            })
-        );
+                                                className: p.rotateButton,
+                                                look: s.zxk.Looks.BLANK,
+                                                size: s.PhG.NONE,
+                                                color: s.zxk.Colors.TRANSPARENT,
+                                                grow: !1
+                                            },
+                                            r
+                                        ),
+                                        {
+                                            onClick: G,
+                                            children: (0, n.jsx)(s.Vk2, {
+                                                size: 'md',
+                                                color: 'currentColor'
+                                            })
+                                        }
+                                    )
+                                );
+                            }
+                        })
+                    ]
+                })
+            ]
+        });
     },
     x = (e, t) => {
         let { width: r, height: n } = e;

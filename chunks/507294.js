@@ -24,8 +24,8 @@ var r = n(255367),
     _ = n(314897),
     E = n(271383),
     O = n(430824),
-    y = n(626135),
-    I = n(63063),
+    I = n(626135),
+    y = n(63063),
     v = n(134433),
     C = n(225104),
     S = n(981631),
@@ -76,15 +76,15 @@ function A(e, t) {
 let Z = function (e) {
     let { guildId: t, transitionState: l, onClose: Z } = e,
         x = (0, o.e7)([O.Z], () => O.Z.getRoles(t)),
-        w = (0, o.e7)([_.default], () => _.default.getId()),
-        L = (0, o.e7)([E.ZP], () => E.ZP.getMember(t, w)),
+        L = (0, o.e7)([_.default], () => _.default.getId()),
+        w = (0, o.e7)([E.ZP], () => E.ZP.getMember(t, L)),
         [R, D] = i.useState([]),
         k = (0, p.ZP)(),
         M = (0, m.Dt)();
     if (
         (i.useEffect(() => {
             0 !== R.length &&
-                y.default.track(
+                I.default.track(
                     S.rMx.PASSPORT_ENTRY_VIEWED,
                     j(
                         {
@@ -100,7 +100,7 @@ let Z = function (e) {
         i.useEffect(() => {
             d.Z.getGuildRoleConnectionsConfigurations(t).then((e) => D(e));
         }, [t]),
-        null == L)
+        null == w)
     )
         return null;
     let U = Object.values(x).filter((e) => {
@@ -136,12 +136,12 @@ let Z = function (e) {
                     (0, r.jsx)(c.X6q, {
                         variant: 'heading-md/semibold',
                         color: 'header-primary',
-                        children: N.intl.format(N.t['Y+TsER'], { helpdeskArticleUrl: I.Z.getArticleURL(S.BhN.CONNECTION_DETAILS) })
+                        children: N.intl.format(N.t['Y+TsER'], { helpdeskArticleUrl: y.Z.getArticleURL(S.BhN.CONNECTION_DETAILS) })
                     }),
                     (0, r.jsx)('div', {
                         className: T.verifiedRoles,
                         children: U.map((e) => {
-                            let l = L.roles.includes(e.id),
+                            let l = w.roles.includes(e.id),
                                 o = (function (e) {
                                     let n = R.find((t) => {
                                         let { role_id: n } = t;

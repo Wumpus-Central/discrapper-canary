@@ -10,8 +10,8 @@ var a = n(255367),
     u = n(129861),
     m = n(665149),
     x = n(886118),
-    p = n(301801),
-    h = n(594174),
+    h = n(301801),
+    p = n(594174),
     b = n(572004),
     f = n(55935),
     v = n(120816),
@@ -94,7 +94,7 @@ let I = [
                         loggedEvent: { event: t, properties: n, timestamp: r, fingerprint: l },
                         onClose: s
                     } = e,
-                    c = h.default.getUser(l),
+                    c = p.default.getUser(l),
                     x = o()(r);
                 return (0, a.jsxs)('div', {
                     'data-mtctest-ignore': 'true',
@@ -223,11 +223,11 @@ let I = [
             }
         }
     ],
-    w = {
+    k = {
         events: {
             label: 'Events',
             filter: (e) =>
-                Object.entries(w)
+                Object.entries(k)
                     .filter((e) => {
                         let [t] = e;
                         return 'events' !== t;
@@ -251,7 +251,7 @@ let I = [
             filter: (e) => e.event.startsWith('network_action')
         }
     },
-    k = {
+    w = {
         searchType: x.S.REGEX,
         searchStringGenerator: (e) => {
             let { event: t, properties: n } = e;
@@ -263,18 +263,18 @@ function R() {
     let e = r.useRef(null),
         [t, n] = r.useState(''),
         l = (0, c.e7)([v.Z], () => v.Z.loggedEventsVersion),
-        [s, o] = r.useState(() => Object.keys(w)),
+        [s, o] = r.useState(() => Object.keys(k)),
         [u, m] = r.useState(v.Z.loggedEvents),
         x = r.useCallback((e) => {
             m(e);
         }, []);
-    (0, p.BO)(t, v.Z.loggedEvents, x, k, [l]);
-    let h = u.filter((e) => {
-            for (let t of s) if (w[t].filter(e)) return !0;
+    (0, h.BO)(t, v.Z.loggedEvents, x, w, [l]);
+    let p = u.filter((e) => {
+            for (let t of s) if (k[t].filter(e)) return !0;
             return !1;
         }),
         [b, f] = r.useState(void 0),
-        j = h.find((e) => e.key === b),
+        j = p.find((e) => e.key === b),
         { TabBar: S, renderSelectedTab: P } = (0, C.ZP)({ tabs: I }, []);
     return (0, a.jsxs)('div', {
         ref: e,
@@ -300,7 +300,7 @@ function R() {
                     (0, a.jsx)('div', { className: O.toolbarDivider }),
                     (0, a.jsx)('div', {
                         className: O.filters,
-                        children: Object.entries(w).map((e) => {
+                        children: Object.entries(k).map((e) => {
                             let [t, n] = e;
                             return (0, a.jsx)(
                                 d.P3F,
@@ -329,7 +329,7 @@ function R() {
             }),
             (0, a.jsx)(y.Z, {
                 columns: T,
-                data: h,
+                data: p,
                 selectedRowKey: b,
                 onClickRow: (e) => f(e.key)
             }),

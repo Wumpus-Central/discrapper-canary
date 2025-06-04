@@ -1,4 +1,4 @@
-n.d(t, { b: () => I });
+n.d(t, { b: () => y });
 var r = n(255367),
     i = n(73800),
     l = n(708816),
@@ -17,7 +17,7 @@ var r = n(255367),
     _ = n(981631),
     E = n(388032),
     O = n(128654);
-function y(e) {
+function I(e) {
     var t, n;
     let { analyticsLocations: i } = (0, s.ZP)(o.Z.ACTIVITY_PANEL),
         l = (0, g.Z)((e) => {
@@ -70,7 +70,7 @@ function y(e) {
         )
     });
 }
-let I = i.memo(function () {
+let y = i.memo(function () {
     let e = (0, c.Q3)('AppPanels'),
         t = i.useRef(null);
     return (
@@ -94,7 +94,7 @@ let I = i.memo(function () {
                     (0, r.jsx)(p.Z, {}),
                     (0, r.jsx)(b.Z, {
                         section: _.jXE.ACTIVITY_PANEL,
-                        children: (0, r.jsx)(y, { className: O.activityPanel })
+                        children: (0, r.jsx)(I, { className: O.activityPanel })
                     }),
                     (0, r.jsx)(b.Z, {
                         section: _.jXE.RTC_CONNECTION_PANEL,

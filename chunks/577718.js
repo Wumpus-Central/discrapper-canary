@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(970731),
     E = n(626135),
     O = n(267642),
-    y = n(337721),
-    I = n(981631),
+    I = n(337721),
+    y = n(981631),
     v = n(921944),
     C = n(30513),
     S = n(474936),
@@ -29,16 +29,16 @@ var r = n(255367),
     A = n(829972),
     Z = n(31932),
     x = n(642301);
-function w(e) {
-    null != e && h.Z.open(e.id, I.pNK.BOOST_PERKS, { section: I.jXE.PREMIUM_GUILD_PROGRESS_BAR });
+function L(e) {
+    null != e && h.Z.open(e.id, y.pNK.BOOST_PERKS, { section: y.jXE.PREMIUM_GUILD_PROGRESS_BAR });
 }
-function L(e, t) {
+function w(e, t) {
     null != t &&
-        ((0, O.f2)(t, I.Eu4.TIER_1)
-            ? h.Z.open(t.id, I.pNK.BOOST_PERKS, { section: I.jXE.PREMIUM_GUILD_INVITE_SPLASH })
+        ((0, O.f2)(t, y.Eu4.TIER_1)
+            ? h.Z.open(t.id, y.pNK.BOOST_PERKS, { section: y.jXE.PREMIUM_GUILD_INVITE_SPLASH })
             : (0, u.Z)({
                   analyticsLocations: e,
-                  analyticsSourceLocation: I.jXE.PREMIUM_GUILD_INVITE_SPLASH,
+                  analyticsSourceLocation: y.jXE.PREMIUM_GUILD_INVITE_SPLASH,
                   guild: t,
                   perks: (0, C.o9)()
               }));
@@ -68,15 +68,15 @@ let D = i.memo(function (e) {
     let { contentTypes: t, theme: n, guild: i, renderGuildHeaderDropdownButton: o } = e,
         { analyticsLocations: u } = (0, s.ZP)(),
         C = () => {
-            E.default.track(I.rMx.TOOLTIP_VIEWED, {
+            E.default.track(y.rMx.TOOLTIP_VIEWED, {
                 type: S.cd.PREMIUM_PROGRESS_BAR,
-                location: { page: I.ZY5.GUILD_CHANNEL }
+                location: { page: y.ZY5.GUILD_CHANNEL }
             });
         },
         D = () => {
-            E.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
+            E.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: S.cd.INVITE_SPLASH_UPSELL,
-                location: { page: I.ZY5.GUILD_CHANNEL },
+                location: { page: y.ZY5.GUILD_CHANNEL },
                 location_stack: u
             });
         },
@@ -114,8 +114,8 @@ let D = i.memo(function (e) {
                             content: N.intl.format(N.t.ujItEh, {}),
                             buttonCTA: N.intl.string(N.t.UzVPra),
                             secondaryButtonCTA: N.intl.string(N.t['KkK/aG']),
-                            onSecondaryClick: () => w(),
-                            onClick: () => w(i),
+                            onSecondaryClick: () => L(),
+                            onClick: () => L(i),
                             markAsDismissed: U
                         }),
                         renderGuildHeaderDropdownButton: o
@@ -133,8 +133,8 @@ let D = i.memo(function (e) {
                             content: N.intl.format(N.t.zK1hpq, {}),
                             buttonCTA: N.intl.string(N.t.UzVPra),
                             secondaryButtonCTA: N.intl.string(N.t['KkK/aG']),
-                            onSecondaryClick: () => w(),
-                            onClick: () => w(i),
+                            onSecondaryClick: () => L(),
+                            onClick: () => L(i),
                             markAsDismissed: U
                         }),
                         renderGuildHeaderDropdownButton: o
@@ -149,15 +149,15 @@ let D = i.memo(function (e) {
                     });
                 case l.z.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL:
                     return (0, r.jsx)(R, {
-                        renderPopout: (0, r.jsx)(y.Z, {
+                        renderPopout: (0, r.jsx)(I.Z, {
                             guild: i,
                             markAsDismissed: U
                         }),
                         renderGuildHeaderDropdownButton: o
                     });
                 case l.z.GUILD_HEADER_INVITE_SPLASH:
-                    let e = (0, O.f2)(i, I.Eu4.TIER_1) ? N.intl.format(N.t.DDzEVl, {}) : N.intl.formatToPlainString(N.t.pMftkJ, { boostCount: (0, O.KK)(i, I.Eu4.TIER_1) }),
-                        t = (0, O.f2)(i, I.Eu4.TIER_1) ? N.intl.string(N.t.rOFcBg) : N.intl.string(N.t.hvVgAQ);
+                    let e = (0, O.f2)(i, y.Eu4.TIER_1) ? N.intl.format(N.t.DDzEVl, {}) : N.intl.formatToPlainString(N.t.pMftkJ, { boostCount: (0, O.KK)(i, y.Eu4.TIER_1) }),
+                        t = (0, O.f2)(i, y.Eu4.TIER_1) ? N.intl.string(N.t.rOFcBg) : N.intl.string(N.t.hvVgAQ);
                     return (0, r.jsx)(R, {
                         renderPopout: (0, r.jsx)(_.ZP, {
                             onComponentMount: D,
@@ -170,8 +170,8 @@ let D = i.memo(function (e) {
                             content: e,
                             buttonCTA: t,
                             secondaryButtonCTA: N.intl.string(N.t.hBIHLS),
-                            onSecondaryClick: () => L(u),
-                            onClick: () => L(u, i),
+                            onSecondaryClick: () => w(u),
+                            onClick: () => w(u, i),
                             markAsDismissed: U
                         }),
                         renderGuildHeaderDropdownButton: o
@@ -206,7 +206,7 @@ let D = i.memo(function (e) {
                                 className: P.fullWidthImage
                             }),
                             onClick: () => {
-                                h.Z.open(i.id, I.pNK.ROLES), h.Z.selectRole(i.getEveryoneRoleId(), N.intl.string(N.t.Bco7ND));
+                                h.Z.open(i.id, y.pNK.ROLES), h.Z.selectRole(i.getEveryoneRoleId(), N.intl.string(N.t.Bco7ND));
                             },
                             markAsDismissed: U
                         }),

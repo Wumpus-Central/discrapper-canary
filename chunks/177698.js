@@ -14,7 +14,7 @@ var i = n(481060),
 let f = (0, d.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: s, scopes: c, parsedPermissions: d, responseType: f, redirectUri: g, codeChallenge: m, codeChallengeMethod: b, state: _, guildId: E, channelId: O, prompt: y, disableGuildSelect: I, disclosures: v, integrationType: C, pid: S } = e,
+        let { clientId: n, authorizations: s, scopes: c, parsedPermissions: d, responseType: f, redirectUri: g, codeChallenge: m, codeChallengeMethod: b, state: _, guildId: E, channelId: O, prompt: I, disableGuildSelect: y, disclosures: v, integrationType: C, pid: S } = e,
             N = 'OAuth2Authorize_'.concat(n, '_').concat(E, '_').concat(O),
             T = null != C ? (null == s ? void 0 : s.get(C)) : void 0,
             P = null != (t = null == T ? void 0 : T.application) ? t : a.Z.getApplication(n);
@@ -79,8 +79,8 @@ let f = (0, d.Z)(
                                     permissions: d,
                                     guildId: E,
                                     channelId: O,
-                                    prompt: y,
-                                    disableGuildSelect: 'boolean' == typeof I ? I : 'true' === I,
+                                    prompt: I,
+                                    disableGuildSelect: 'boolean' == typeof y ? y : 'true' === y,
                                     integrationType: C
                                 }),
                             Object.getOwnPropertyDescriptors

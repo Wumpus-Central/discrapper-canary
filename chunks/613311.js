@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(666743),
     E = n(115130),
     O = n(812206),
-    y = n(770146),
-    I = n(600164),
+    I = n(770146),
+    y = n(600164),
     v = n(606081),
     C = n(252618),
     S = n(100159),
@@ -29,8 +29,8 @@ var r = n(255367),
     A = n(430824),
     Z = n(496675),
     x = n(525395),
-    w = n(558314),
-    L = n(580130),
+    L = n(558314),
+    w = n(580130),
     R = n(55563),
     D = n(551428),
     k = n(695103),
@@ -46,8 +46,8 @@ var r = n(255367),
     Y = n(506648),
     K = n(449275),
     q = n(445986),
-    Q = n(119520),
-    X = n(450233),
+    X = n(119520),
+    Q = n(450233),
     J = n(726581),
     $ = n(74153),
     ee = n(125930),
@@ -295,7 +295,7 @@ class ed extends i.PureComponent {
         if (null == l) throw Error('Rendering ApplicationStoreListing without description');
         return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(y.Z, {
+                (0, r.jsx)(I.Z, {
                     tag: 'h1',
                     children: ea.intl.format(ea.t.tluX4O, { name: n.name })
                 }),
@@ -382,9 +382,9 @@ class ed extends i.PureComponent {
             return (0, r.jsxs)(i.Fragment, {
                 children: [
                     this.renderHeader(e, t),
-                    (0, r.jsx)(I.Z, {
-                        align: I.Z.Align.CENTER,
-                        justify: I.Z.Justify.CENTER,
+                    (0, r.jsx)(y.Z, {
+                        align: y.Z.Align.CENTER,
+                        justify: y.Z.Justify.CENTER,
                         children: (0, r.jsx)(u.$jN, { className: eo.spinner })
                     })
                 ]
@@ -397,7 +397,7 @@ class ed extends i.PureComponent {
                       children: this.renderListing()
                   });
             return (0, r.jsxs)(i.Fragment, {
-                children: [(0, r.jsx)(C.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), (0, r.jsx)(Q.Z, { game: e }), n]
+                children: [(0, r.jsx)(C.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), (0, r.jsx)(X.Z, { game: e }), n]
             });
         }
         return a
@@ -559,8 +559,8 @@ class ed extends i.PureComponent {
                                 children: [
                                     null != t ? (0, N.Z)(t) : null,
                                     null != e && null != t ? (0, r.jsx)('div', { children: 'deprecated!' }) : null,
-                                    (0, r.jsx)(X.Z, {
-                                        messageStyle: X.G.SHORT,
+                                    (0, r.jsx)(Q.Z, {
+                                        messageStyle: Q.G.SHORT,
                                         className: eo.purchaseError
                                     })
                                 ]
@@ -587,9 +587,9 @@ class ed extends i.PureComponent {
             es(this, 'renderListing', () => {
                 let { application: e, storeListing: t, sku: n, pageSize: i } = this.props;
                 return null == e || null == n || null == t || t.isSlimDirectoryVersion()
-                    ? (0, r.jsx)(I.Z, {
-                          align: I.Z.Align.CENTER,
-                          justify: I.Z.Justify.CENTER,
+                    ? (0, r.jsx)(y.Z, {
+                          align: y.Z.Align.CENTER,
+                          justify: y.Z.Justify.CENTER,
                           children: (0, r.jsx)(u.$jN, {})
                       })
                     : i === er.b.SMALL
@@ -600,7 +600,7 @@ class ed extends i.PureComponent {
 }
 let ep = (0, b.Z)(
     (0, _.Z)(
-        o.ZP.connectStores([w.Z, j.Z, P.default, M.Z, D.Z, R.Z, k.Z, E.Z, O.Z, x.Z, A.Z, L.Z], (e) => {
+        o.ZP.connectStores([L.Z, j.Z, P.default, M.Z, D.Z, R.Z, k.Z, E.Z, O.Z, x.Z, A.Z, w.Z], (e) => {
             let t,
                 n,
                 r,
@@ -617,8 +617,8 @@ let ep = (0, b.Z)(
             return {
                 skuId: t,
                 application: null != l ? O.Z.getApplication(l) : null,
-                isFetchingEntitlements: null != l && L.Z.applicationIdsFetching.has(l),
-                didFetchEntitlements: null != l && L.Z.applicationIdsFetched.has(l),
+                isFetchingEntitlements: null != l && w.Z.applicationIdsFetching.has(l),
+                didFetchEntitlements: null != l && w.Z.applicationIdsFetched.has(l),
                 shouldFetchStatistics: o && null != l && x.Z.shouldFetchStatisticsForApplication(l),
                 sku: n,
                 isFocused: M.Z.isFocused(),
@@ -629,7 +629,7 @@ let ep = (0, b.Z)(
                     isTestMode: c
                 }),
                 isInTestMode: null != l && c,
-                matureAgree: w.Z.didMatureAgree,
+                matureAgree: L.Z.didMatureAgree,
                 theme: j.Z.theme,
                 locale: P.default.locale,
                 guild: null != s ? A.Z.getGuild(s.getGuildId()) : null

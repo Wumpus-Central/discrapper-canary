@@ -19,9 +19,9 @@ function i(e, t, { l: r = 2, c = 1 } = {}) {
     u >= 16 && (k = (0.040975 * u) / (1 + 0.01765 * u));
     let O = (0.0638 * d) / (1 + 0.0131 * d) + 0.638;
     Number.isNaN(h) && (h = 0);
-    let C = Math.pow(d, 4),
-        E = Math.sqrt(C / (C + 1900)),
-        j = O * (E * (h >= 164 && h <= 345 ? 0.56 + Math.abs(0.2 * Math.cos((h + 168) * o)) : 0.36 + Math.abs(0.4 * Math.cos((h + 35) * o))) + 1 - E),
-        x = (v / (r * k)) ** 2;
-    return Math.sqrt((x += (Z / (c * O)) ** 2 + (w ** 2 + M ** 2 - Z ** 2) / j ** 2));
+    let E = Math.pow(d, 4),
+        C = Math.sqrt(E / (E + 1900)),
+        x = O * (C * (h >= 164 && h <= 345 ? 0.56 + Math.abs(0.2 * Math.cos((h + 168) * o)) : 0.36 + Math.abs(0.4 * Math.cos((h + 35) * o))) + 1 - C),
+        j = (v / (r * k)) ** 2;
+    return Math.sqrt((j += (Z / (c * O)) ** 2 + (w ** 2 + M ** 2 - Z ** 2) / x ** 2));
 }

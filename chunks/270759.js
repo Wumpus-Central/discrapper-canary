@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(984370),
     E = n(518311),
     O = n(199104),
-    y = n(108427),
-    I = n(210887),
+    I = n(108427),
+    y = n(210887),
     v = n(974042),
     C = n(849862),
     S = n(666286),
@@ -51,11 +51,11 @@ let x = function (e) {
             });
     }, [l, n]),
         i.useEffect(() => {
-            p.Y(T.Z5c.FRIENDS), (0, y.e)('friends');
+            p.Y(T.Z5c.FRIENDS), (0, I.e)('friends');
         }, []);
-    let x = (0, c.e7)([I.Z], () => I.Z.theme),
-        w = (0, C.If)(),
-        { section: L, rows: R } = (0, c.cj)([v.ZP], () => v.ZP.getState()),
+    let x = (0, c.e7)([y.Z], () => y.Z.theme),
+        L = (0, C.If)(),
+        { section: w, rows: R } = (0, c.cj)([v.ZP], () => v.ZP.getState()),
         D = (0, c.e7)([b.Z], () => b.Z.getSuggestionCount()),
         k = i.useMemo(() => R.getRelationshipCounts(), [R]);
     i.useEffect(() => {
@@ -85,14 +85,14 @@ let x = function (e) {
                 content: (0, r.jsxs)(r.Fragment, {
                     children: [
                         j.intl.string(j.t.p6IHGB),
-                        w > 0 &&
+                        L > 0 &&
                             (0, r.jsx)(u.mAB, {
-                                count: w,
+                                count: L,
                                 className: A.badge
                             })
                     ]
                 }),
-                ariaLabel: j.intl.formatToPlainString(j.t.OAC0Z2, { count: w.toString() }),
+                ariaLabel: j.intl.formatToPlainString(j.t.OAC0Z2, { count: L.toString() }),
                 className: A.item
             },
             {
@@ -144,7 +144,7 @@ let x = function (e) {
                             (0, r.jsx)(_.Z.Divider, {}),
                             (0, r.jsx)(u.njP, {
                                 'aria-label': j.intl.string(j.t.TdEu5e),
-                                selectedItem: L,
+                                selectedItem: w,
                                 type: 'top-pill',
                                 onItemSelect: M,
                                 className: A.tabBar,
@@ -168,10 +168,10 @@ let x = function (e) {
                 className: A.tabBody,
                 children: [
                     (0, r.jsx)(u.njP.Panel, {
-                        id: L,
+                        id: w,
                         className: A.peopleColumn,
                         'aria-labelledby': G,
-                        children: L === T.pJs.ADD_FRIEND ? (0, r.jsx)(S.Z, {}) : (0, r.jsx)(N.Z, { titleId: G })
+                        children: w === T.pJs.ADD_FRIEND ? (0, r.jsx)(S.Z, {}) : (0, r.jsx)(N.Z, { titleId: G })
                     }),
                     (0, r.jsx)('div', {
                         className: A.nowPlayingColumn,

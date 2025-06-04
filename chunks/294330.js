@@ -23,8 +23,8 @@ var r = n(255367),
     _ = n(134432),
     E = n(768581),
     O = n(356164),
-    y = n(826946),
-    I = n(981631),
+    I = n(826946),
+    y = n(981631),
     v = n(388032),
     C = n(727615),
     S = n(129512),
@@ -37,7 +37,7 @@ function P(e) {
         [P, j] = i.useState(!1),
         [A, Z] = i.useState(!1),
         x = i.useRef(null),
-        w = i.useCallback(async () => {
+        L = i.useCallback(async () => {
             j(!0);
             try {
                 await l(t.id);
@@ -45,7 +45,7 @@ function P(e) {
                 j(!1);
             }
         }, [t.id, l]),
-        L = i.useCallback(
+        w = i.useCallback(
             (e) => {
                 e && !m && (O(!0), null == o || o(t.id));
             },
@@ -105,7 +105,7 @@ function P(e) {
             [t]
         ),
         D = (0, d.ZP)(),
-        k = t.features.has(I.oNc.HUB),
+        k = t.features.has(y.oNc.HUB),
         M = i.useMemo(() => {
             let e = E.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
@@ -115,9 +115,9 @@ function P(e) {
             if (null != e) return e;
             if (k) return T;
             switch (D) {
-                case I.BRd.DARK:
+                case y.BRd.DARK:
                     return S;
-                case I.BRd.LIGHT:
+                case y.BRd.LIGHT:
                     return N;
             }
         }, [t.discoverySplash, t.id, k, D]),
@@ -144,13 +144,13 @@ function P(e) {
                 }),
             (0, r.jsx)(s.$, {
                 innerRef: x,
-                onChange: L,
+                onChange: w,
                 active: !m,
                 threshold: 0.55,
                 children: (0, r.jsxs)(f.Z, {
                     ref: x,
                     className: C.card,
-                    onClick: w,
+                    onClick: L,
                     disabled: P,
                     onContextMenu: R,
                     'aria-label': v.intl.string(v.t['M9wQ+f']),
@@ -167,7 +167,7 @@ function P(e) {
                                         onLoad: () => Z(!0)
                                     })
                                 }),
-                                (0, r.jsx)(y.Z, {
+                                (0, r.jsx)(I.Z, {
                                     className: C.maximizeIcon,
                                     guildId: t.id
                                 }),

@@ -1,6 +1,6 @@
 r.d(t, {
     t7: () => M,
-    y7: () => C
+    y7: () => E
 });
 var a = r(279965),
     n = r(565294),
@@ -188,6 +188,6 @@ var h = o.default,
         }
         return e && Object.prototype.hasOwnProperty.call(e, 'base00') ? e : void 0;
     },
-    C = function (e) {
+    E = function (e) {
         return 'string' == typeof e ? ''.concat(e, ':inverted') : e && k(e) && e.extend ? ('string' == typeof e.extend ? d(d({}, e), {}, { extend: ''.concat(e.extend, ':inverted') }) : d(d({}, e), {}, { extend: w(e.extend) })) : e ? w(e) : e;
     };

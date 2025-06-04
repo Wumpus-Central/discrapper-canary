@@ -90,13 +90,13 @@ function T(e, t) {
     return i;
 }
 function A(e) {
-    let { initialPlanId: t, followupSKUInfo: i, onClose: y, onComplete: v, onSubscriptionConfirmation: T, analyticsLocations: A, analyticsObject: N, analyticsLocation: C, analyticsSourceLocation: P, confirmationFooter: R, paymentModalBanner: w, isGift: D = !1, giftMessage: L, giftStyle: x, giftingOrigin: k, subscriptionTier: M, trialId: j, postSuccessGuild: U, openInvoiceId: G, applicationId: B, referralTrialOfferId: F, giftRecipient: V, returnRef: Z, subscription: H, skipConfirm: Y, repeatPurchase: W } = null != e ? e : {},
-        K = !1,
-        z = (0, o.Z)(),
-        q = p.default.getCurrentUser(),
-        Q = (0, g.M5)(q, b.p9.TIER_2),
-        X = a()('payment-modal'),
-        J = (0, g.Wz)(M);
+    let { initialPlanId: t, followupSKUInfo: i, onClose: y, onComplete: v, onSubscriptionConfirmation: T, analyticsLocations: A, analyticsObject: N, analyticsLocation: C, analyticsSourceLocation: P, confirmationFooter: R, paymentModalBanner: w, isGift: D = !1, giftMessage: L, giftStyle: x, giftingOrigin: k, subscriptionTier: M, trialId: j, postSuccessGuild: U, openInvoiceId: G, applicationId: B, referralTrialOfferId: F, giftRecipient: V, returnRef: Z, subscription: H, skipConfirm: Y } = null != e ? e : {},
+        W = !1,
+        K = (0, o.Z)(),
+        z = p.default.getCurrentUser(),
+        q = (0, g.M5)(z, b.p9.TIER_2),
+        Q = a()('payment-modal'),
+        X = (0, g.Wz)(M);
     return (0, s.ZDy)(
         async () => {
             let { default: e } = await Promise.all([n.e('17938'), n.e('94136'), n.e('84992'), n.e('54433'), n.e('6794')]).then(n.bind(n, 7305));
@@ -106,9 +106,9 @@ function A(e) {
                 return (0, r.jsx)(
                     e,
                     I(O({}, o), {
-                        loadId: z,
+                        loadId: K,
                         subscriptionTier: M,
-                        skuId: J,
+                        skuId: X,
                         isGift: D,
                         giftMessage: L,
                         giftStyle: x,
@@ -119,14 +119,14 @@ function A(e) {
                         onClose: (e, t) => {
                             a(),
                                 null == y || y(e),
-                                e && (null == T || T(), (0, _.I)(D, Q, t) && m.S.dispatch(E.CkL.PREMIUM_SUBSCRIPTION_CREATED)),
+                                e && (null == T || T(), (0, _.I)(D, q, t) && m.S.dispatch(E.CkL.PREMIUM_SUBSCRIPTION_CREATED)),
                                 l.Z.dispatch({
                                     type: 'PREMIUM_PAYMENT_MODAL_CLOSE',
                                     didSucceed: e
                                 });
                         },
                         onComplete: (e) => {
-                            (K = !0), null == v || v(), (0, _.I)(D, Q, (0, g.k5)(null == e ? void 0 : e.subscription)) && (0, f.H)(!0);
+                            (W = !0), null == v || v(), (0, _.I)(D, q, (0, g.k5)(null == e ? void 0 : e.subscription)) && (0, f.H)(!0);
                         },
                         onSubscriptionConfirmation: T,
                         analyticsLocations: A,
@@ -143,24 +143,23 @@ function A(e) {
                         referralTrialOfferId: F,
                         returnRef: Z,
                         subscription: H,
-                        skipConfirm: !!Y,
-                        repeatPurchase: W
+                        skipConfirm: !!Y
                     })
                 );
             };
         },
         {
-            modalKey: X,
+            modalKey: Q,
             onCloseCallback: () => {
-                K ||
+                W ||
                     h.default.track(E.rMx.PAYMENT_FLOW_CANCELED, {
-                        load_id: z,
+                        load_id: K,
                         payment_type: E.Zuq[E.GZQ.SUBSCRIPTION],
                         location: null != C ? C : N,
                         source: P,
                         subscription_type: E.NYc.PREMIUM,
                         is_gift: D,
-                        sku_id: J,
+                        sku_id: X,
                         eligible_for_trial: null != j,
                         application_id: B,
                         location_stack: A
@@ -168,8 +167,8 @@ function A(e) {
                     (0, u.fw)(),
                     (0, c.fw)(),
                     (0, d.p)(),
-                    null == y || y(K),
-                    K && (null == T || T());
+                    null == y || y(W),
+                    W && (null == T || T());
             }
         }
     );

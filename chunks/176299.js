@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(532835),
     E = n(347469),
     O = n(169382),
-    y = n(290297),
-    I = n(317381),
+    I = n(290297),
+    y = n(317381),
     v = n(82888),
     C = n(244317),
     S = n(765717),
@@ -29,8 +29,8 @@ var r = n(255367),
     A = n(267161),
     Z = n(652515),
     x = n(544978),
-    w = n(540059),
-    L = n(724383),
+    L = n(540059),
+    w = n(724383),
     R = n(135864),
     D = n(372900),
     k = n(6039),
@@ -46,8 +46,8 @@ var r = n(255367),
     Y = n(745052),
     K = n(285865),
     q = n(659971),
-    Q = n(821020),
-    X = n(147341),
+    X = n(821020),
+    Q = n(147341),
     J = n(82409),
     $ = n(664608),
     ee = n(270759),
@@ -71,8 +71,8 @@ var r = n(255367),
     e_ = n(409292),
     eE = n(316173),
     eO = n(256638),
-    ey = n(663701),
-    eI = n(697309),
+    eI = n(663701),
+    ey = n(697309),
     ev = n(425369),
     eC = n(715702),
     eS = n(981631),
@@ -124,11 +124,11 @@ function ex(e, t) {
         e
     );
 }
-let ew = (0, u.Un)({
+let eL = (0, u.Un)({
         createPromise: () => Promise.resolve().then(n.bind(n, 267161)),
         webpackId: 267161
     }),
-    eL = () =>
+    ew = () =>
         (0, r.jsx)('div', {
             className: eA.loader,
             children: (0, r.jsx)(g.$jN, {})
@@ -137,37 +137,37 @@ let ew = (0, u.Un)({
         createPromise: () => n.e('78431').then(n.bind(n, 650788)),
         webpackId: 650788,
         name: 'GuildShopPage',
-        renderLoader: eL
+        renderLoader: ew
     }),
     eD = (0, u.Un)({
         createPromise: () => n.e('12009').then(n.bind(n, 231588)),
         webpackId: 231588,
         name: 'GuildHomePage',
-        renderLoader: eL
+        renderLoader: ew
     }),
     ek = (0, u.Un)({
         createPromise: () => Promise.all([n.e('6850'), n.e('9924')]).then(n.bind(n, 545918)),
         webpackId: 545918,
         name: 'MemberSafetyPage',
-        renderLoader: eL
+        renderLoader: ew
     }),
     eM = (0, u.Un)({
         createPromise: () => Promise.all([n.e('44156'), n.e('58227'), n.e('58121')]).then(n.bind(n, 603072)),
         webpackId: 603072,
         name: 'ChannelsAndRolesPage',
-        renderLoader: eL
+        renderLoader: ew
     }),
     eU = (0, u.Un)({
         createPromise: () => Promise.all([n.e('44156'), n.e('19878'), n.e('37709')]).then(n.bind(n, 599263)),
         webpackId: 599263,
         name: 'GuildOnboardingPage',
-        renderLoader: eL
+        renderLoader: ew
     }),
     eG = (0, u.Un)({
         createPromise: () => n.e('44799').then(n.bind(n, 393357)),
         webpackId: 393357,
         name: 'GuildPowerupsPage',
-        renderLoader: eL
+        renderLoader: ew
     }),
     eB = (e) => {
         let { match: t } = e,
@@ -257,7 +257,7 @@ let ew = (0, u.Un)({
     },
     eV = i.memo(function () {
         let { guildId: e, channelId: t } = (0, er.Z)(),
-            { notificationCenterVariant: n } = Q.L.useExperiment({ location: 'Sidebar' }),
+            { notificationCenterVariant: n } = X.L.useExperiment({ location: 'Sidebar' }),
             i = (0, h.e7)([ep.Z], () => (null != t ? t : ep.Z.getChannelId(e)));
         return window.location.pathname.startsWith(eS.Z5c.NOTIFICATIONS_INBOX())
             ? ('sidebar' !== n && (0, ea.dL)(ec.Z.defaultRoute), (0, r.jsx)(J.Z, { includePanelSpacing: !0 }))
@@ -272,11 +272,11 @@ let ew = (0, u.Un)({
                       },
                       e
                   )
-                : (0, r.jsx)(ey.Z, {});
+                : (0, r.jsx)(eI.Z, {});
     }),
     eH = (e) => (0, r.jsx)(eB, eZ({}, e)),
-    eF = () => (0, r.jsx)(L.Z, {}),
-    ez = (e) => (null != e.match.params.channelId ? eH(e) : (0, r.jsx)(X.Z, {})),
+    eF = () => (0, r.jsx)(w.Z, {}),
+    ez = (e) => (null != e.match.params.channelId ? eH(e) : (0, r.jsx)(Q.Z, {})),
     eW = (e) => {
         let { match: t } = e;
         return null != t.params.guildId ? (0, r.jsx)(k.Z, { guildId: t.params.guildId }) : null;
@@ -292,7 +292,7 @@ let ew = (0, u.Un)({
     },
     eK = () => (0, r.jsx)(ev.Z, {}),
     eq = () => (0, r.jsx)(eC.Z, {}),
-    eQ = function () {
+    eX = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return function (t) {
             let { tab: n } = (0, o.parse)(t.location.search);
@@ -310,7 +310,7 @@ let ew = (0, u.Un)({
                 : (0, r.jsx)(j.Z, eZ({ isFullScreen: e }, t));
         };
     },
-    eX = (e) => (0, r.jsx)(C.Z, eZ({}, e)),
+    eQ = (e) => (0, r.jsx)(C.Z, eZ({}, e)),
     eJ = () => (0, r.jsx)(ee.Z, {}),
     e$ = () => (0, r.jsx)(Y.Z, {}),
     e0 = () => (0, r.jsx)($.Z, {}),
@@ -368,14 +368,14 @@ function e5(e) {
     let u = 'app view user trigger debugging';
     b.R6.useExperiment({ location: u }, { autoTrackExposure: !1 }), b.R6.trackExposure({ location: u });
     let p = (0, h.e7)([N.Z], () => N.Z.isFullscreenInContext()),
-        m = (0, w.TH)('ChannelSidebar'),
-        O = (0, w.Q3)('ChannelSidebar'),
-        y = (0, A.useAppSidebarState)((e) => !e.isOpen) && m;
+        m = (0, L.TH)('ChannelSidebar'),
+        O = (0, L.Q3)('ChannelSidebar'),
+        I = (0, A.useAppSidebarState)((e) => !e.isOpen) && m;
     i.useLayoutEffect(() => {
         if (m) {
             var e;
-            let t = parseInt(null != (e = f.K.get(eI.nT)) ? e : '');
-            Number.isNaN(t) && (t = eI.qO), (t = Math.min(Math.max(t, eI.li), eI.zx)), !m && t <= eI.p8 && (t = eI.qO), e8(t);
+            let t = parseInt(null != (e = f.K.get(ey.nT)) ? e : '');
+            Number.isNaN(t) && (t = ey.qO), (t = Math.min(Math.max(t, ey.li), ey.zx)), !m && t <= ey.p8 && (t = ey.qO), e8(t);
             let n = (e) => {
                 e.metaKey && 'b' === e.key && A.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
             };
@@ -388,22 +388,22 @@ function e5(e) {
         }
     }, [m]),
         i.useLayoutEffect(() => {
-            if (y) e8(eI.p8);
+            if (I) e8(ey.p8);
             else {
                 var e;
-                let t = parseInt(null != (e = f.K.get(eI.nT)) ? e : '');
-                Number.isNaN(t) && (t = eI.qO), e8(t);
+                let t = parseInt(null != (e = f.K.get(ey.nT)) ? e : '');
+                Number.isNaN(t) && (t = ey.qO), e8(t);
             }
-        }, [y]);
-    let I = i.useRef(null),
+        }, [I]);
+    let y = i.useRef(null),
         v = i.useCallback(
             (e, t) => {
                 var n;
                 e8(e);
-                let r = t < eI.li / 3;
-                t <= eI.li ? document.body.classList.add(eA.draggingMin) : document.body.classList.remove(eA.draggingMin), t >= eI.zx ? document.body.classList.add(eA.draggingMax) : document.body.classList.remove(eA.draggingMax);
+                let r = t < ey.li / 3;
+                t <= ey.li ? document.body.classList.add(eA.draggingMin) : document.body.classList.remove(eA.draggingMin), t >= ey.zx ? document.body.classList.add(eA.draggingMax) : document.body.classList.remove(eA.draggingMax);
                 let i = t - e;
-                null == (n = I.current) || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(i / eI.p8), 0.25))), m && (A.useAppSidebarState.setState({ isOpen: !r }), r && e8(eI.p8));
+                null == (n = y.current) || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(i / ey.p8), 0.25))), m && (A.useAppSidebarState.setState({ isOpen: !r }), r && e8(ey.p8));
             },
             [m]
         ),
@@ -412,12 +412,12 @@ function e5(e) {
         }, []),
         S = i.useCallback((e) => {
             var t;
-            document.body.classList.remove(eA.dragging), document.body.classList.remove(eA.draggingMin), document.body.classList.remove(eA.draggingMax), document.body.classList.remove(eA.collapsing), null == (t = I.current) || t.style.setProperty('--custom-overdrag', '0px'), f.K.set(eI.nT, e), ef.default.track(eS.rMx.CHANNEL_SIDEBAR_RESIZED, { width: e });
+            document.body.classList.remove(eA.dragging), document.body.classList.remove(eA.draggingMin), document.body.classList.remove(eA.draggingMax), document.body.classList.remove(eA.collapsing), null == (t = y.current) || t.style.setProperty('--custom-overdrag', '0px'), f.K.set(ey.nT, e), ef.default.track(eS.rMx.CHANNEL_SIDEBAR_RESIZED, { width: e });
         }, []),
         T = (0, E.Z)({
-            minDimension: eI.li,
-            maxDimension: eI.zx,
-            resizableDomNodeRef: I,
+            minDimension: ey.li,
+            maxDimension: ey.zx,
+            resizableDomNodeRef: y,
             onElementResize: v,
             onElementResizeStart: C,
             onElementResizeEnd: S,
@@ -429,8 +429,8 @@ function e5(e) {
         }, []);
     if (
         (i.useLayoutEffect(() => {
-            y && e8(eI.p8);
-        }, [y]),
+            I && e8(ey.p8);
+        }, [I]),
         l || (!O && o))
     )
         return null;
@@ -440,8 +440,8 @@ function e5(e) {
         theme: n,
         children: (e) =>
             (0, r.jsxs)('div', {
-                ref: O ? I : void 0,
-                'data-collapsed': y,
+                ref: O ? y : void 0,
+                'data-collapsed': I,
                 className: a()(eA.sidebar, e, {
                     [eA.fullWidth]: d.tq,
                     [eA.hidden]: p,
@@ -516,13 +516,13 @@ function e4() {
             return (null == (e = (0, s.LX)(t.pathname, eS.Z5c.COLLECTIBLES_SHOP_FULLSCREEN)) ? void 0 : e.isExact) === !0;
         })(),
         f = (0, h.e7)([q.Z], () => q.Z.getIsOpen()),
-        { notificationCenterVariant: g } = Q.L.useExperiment({ location: 'Sidebar' }),
+        { notificationCenterVariant: g } = X.L.useExperiment({ location: 'Sidebar' }),
         m = (0, s.$B)([eS.Z5c.CHANNEL(eS.ME, el.Hw.channelId()), eS.Z5c.CHANNEL(el.Hw.guildId(), el.Hw.channelId({ optional: !0 }), ':messageId?')]),
         b = (null == m || null == (e = m.params) ? void 0 : e.channelId) === eN.oC.GUILD_ONBOARDING,
         _ = l || a || o || u || b,
         E = i.useCallback(() => K.Z.openSidebar(), []),
-        O = (0, w.Q3)('AppView'),
-        C = (0, w.TH)('AppView'),
+        O = (0, L.Q3)('AppView'),
+        C = (0, L.TH)('AppView'),
         T = O ? 'div' : i.Fragment,
         j = (0, A.useAppSidebarState)((e) => !e.isOpen),
         Z = (0, h.e7)([N.Z], () => N.Z.isFullscreenInContext()),
@@ -532,9 +532,9 @@ function e4() {
                   'data-collapsed': !!C && j
               }
             : {},
-        L = (0, h.e7)([I.ZP], () => {
+        w = (0, h.e7)([y.ZP], () => {
             var e;
-            return (null == (e = I.ZP.getCurrentEmbeddedActivity()) ? void 0 : e.location.kind) === p.E.CONTEXTLESS;
+            return (null == (e = y.ZP.getCurrentEmbeddedActivity()) ? void 0 : e.location.kind) === p.E.CONTEXTLESS;
         });
     return (0, r.jsxs)('div', {
         className: eA.container,
@@ -552,7 +552,7 @@ function e4() {
                     className: eA.base,
                     'data-fullscreen': Z,
                     children: [
-                        O && !Z && (0, r.jsx)(ew, {}),
+                        O && !Z && (0, r.jsx)(eL, {}),
                         d.tq ? null : (0, r.jsx)(eO.Z, {}),
                         (0, r.jsxs)('div', {
                             className: eA.content,
@@ -569,7 +569,7 @@ function e4() {
                                 (0, r.jsx)(
                                     T,
                                     ex(eZ({}, x), {
-                                        children: (0, r.jsxs)(y.Z.Provider, {
+                                        children: (0, r.jsxs)(I.Z.Provider, {
                                             value: E,
                                             children: [
                                                 (0, r.jsxs)(s.rs, {
@@ -581,7 +581,7 @@ function e4() {
                                                         }),
                                                         (0, r.jsx)(S.Z, {
                                                             path: eS.Z5c.ACTIVITY_DETAILS(':applicationId'),
-                                                            render: eX,
+                                                            render: eQ,
                                                             impressionName: c.ImpressionNames.ACTIVITY_DETAILS,
                                                             impressionProperties: (e) => {
                                                                 let { computedMatch: t } = e;
@@ -602,22 +602,22 @@ function e4() {
                                                         }),
                                                         (0, r.jsx)(S.Z, {
                                                             path: eS.Z5c.COLLECTIBLES_SHOP_FULLSCREEN,
-                                                            render: eQ(!0),
+                                                            render: eX(!0),
                                                             disableTrack: !0
                                                         }),
                                                         (0, r.jsx)(S.Z, {
                                                             path: eS.Z5c.COLLECTIBLES_SHOP_WITH_TAB(':tab'),
-                                                            render: eQ(!1),
+                                                            render: eX(!1),
                                                             disableTrack: !0
                                                         }),
                                                         (0, r.jsx)(S.Z, {
                                                             path: eS.Z5c.COLLECTIBLES_SHOP,
-                                                            render: eQ(!1),
+                                                            render: eX(!1),
                                                             disableTrack: !0
                                                         }),
                                                         (0, r.jsx)(S.Z, {
                                                             path: eS.Z5c.COLLECTIBLES_SHOP_PRODUCT_DETAIL(':skuId'),
-                                                            render: eQ(!1),
+                                                            render: eX(!1),
                                                             disableTrack: !0
                                                         }),
                                                         (0, r.jsx)(S.Z, {
@@ -703,7 +703,7 @@ function e4() {
                                                         })
                                                     ]
                                                 }),
-                                                L && (0, r.jsx)(v.Z, {})
+                                                w && (0, r.jsx)(v.Z, {})
                                             ]
                                         })
                                     })

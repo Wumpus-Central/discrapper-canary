@@ -1916,7 +1916,6 @@ var tC = (function (e) {
             (e.APP_SUBSCRIPTIONS_MANAGEMENT = 'app subscriptions management'),
             (e.CHECKOUT_RECOVERY_NAGBAR = 'Checkout Recovery Nagbar'),
             (e.E2EE_USER_VERIFY_MODAL = 'E2EE User Verify Modal'),
-            (e.REPEAT_GIFT_PURCHASE_BUTTON = 'Repeat Gift Purchase Button'),
             (e.FRIEND_ANNIVERSARIES_CHAT = 'Friend Anniversaries Chat'),
             (e.FRIEND_ANNIVERSARIES_ACTION_BUTTON = 'Friend Anniversaries Action Button'),
             (e.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK = 'Friend Anniversaries Action Button Coachmark'),

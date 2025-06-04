@@ -214,8 +214,8 @@ let R = [
 function F(e) {
     let n = (0, r.e7)([u.ZP], () => u.ZP.getPremiumTypeSubscription()),
         { analyticsLocations: t } = (0, C.ZP)(e.analyticsLocations, o.Z.PREMIUM_PAYMENT_MODAL),
-        { confirmationFooter: i, defaultPlanId: s, giftingOrigin: a, giftMessage: d, giftRecipient: c, giftStyle: p, isGift: j, loadId: m, paymentModalBanner: _, referralCode: L, repeatPurchase: g, subscriptionTier: y } = e;
-    if (null != y && !Object.values(w.Si).includes(y)) throw Error('subscriptionTier must be a premium subscription');
+        { confirmationFooter: i, defaultPlanId: s, giftingOrigin: a, giftMessage: d, giftRecipient: c, giftStyle: p, isGift: j, loadId: m, paymentModalBanner: _, referralCode: L, subscriptionTier: g } = e;
+    if (null != g && !Object.values(w.Si).includes(g)) throw Error('subscriptionTier must be a premium subscription');
     return (0, l.jsx)(C.Gt, {
         value: t,
         children: (0, l.jsx)(h.PaymentContextProvider, {
@@ -226,7 +226,6 @@ function F(e) {
             isGift: j,
             defaultPlanId: s,
             referralCode: L,
-            repeatPurchase: g,
             children: (0, l.jsx)(f.c1, {
                 confirmationFooter: i,
                 paymentModalBanner: _,

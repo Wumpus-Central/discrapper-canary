@@ -1,53 +1,53 @@
-n.d(t, { Z: () => y }), n(388685);
-var r,
-    i = n(255367),
-    l = n(73800),
-    a = n(120356),
-    o = n.n(a),
-    s = n(873546),
-    c = n(481060),
-    u = n(599857),
-    d = n(600164),
-    p = n(63063),
-    h = n(1964),
-    f = n(981631),
-    g = n(388032),
-    m = n(816676),
-    b = n(20493);
-function _(e, t, n) {
+r.d(t, { Z: () => E }), r(388685);
+var n,
+    i = r(255367),
+    c = r(73800),
+    o = r(120356),
+    l = r.n(o),
+    a = r(873546),
+    s = r(481060),
+    u = r(599857),
+    f = r(600164),
+    p = r(63063),
+    d = r(1964),
+    y = r(981631),
+    g = r(388032),
+    m = r(816676),
+    b = r(20493);
+function h(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: n,
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[t] = r),
         e
     );
 }
-let E = p.Z.getArticleURL(f.BhN.VERIFICATION_FAQ);
-class O extends (r = l.PureComponent) {
+let O = p.Z.getArticleURL(y.BhN.VERIFICATION_FAQ);
+class j extends (n = c.PureComponent) {
     renderFields() {
-        let { types: e, captchaKey: t, theme: n, onCaptchaVerify: r } = this.props;
+        let { types: e, captchaKey: t, theme: r, onCaptchaVerify: n } = this.props;
         return (0, i.jsx)(i.Fragment, {
             children: e.map((e) =>
-                e === f.PUi.CAPTCHA
+                e === y.PUi.CAPTCHA
                     ? (0, i.jsx)(
                           u.Z,
                           {
-                              onVerify: r,
-                              theme: n
+                              onVerify: n,
+                              theme: r
                           },
                           t
                       )
                     : (0, i.jsx)(
-                          c.zxk,
+                          s.zxk,
                           {
                               className: b.marginBottom20,
                               onClick: () => this.handleClick(e),
-                              children: h.Z.getButtonTitle(e)
+                              children: d.Z.getButtonTitle(e)
                           },
                           e
                       )
@@ -55,52 +55,52 @@ class O extends (r = l.PureComponent) {
         });
     }
     render() {
-        return (0, i.jsxs)(d.Z, {
+        return (0, i.jsxs)(f.Z, {
             className: m.verification,
-            align: d.Z.Align.CENTER,
-            direction: d.Z.Direction.VERTICAL,
+            align: f.Z.Align.CENTER,
+            direction: f.Z.Direction.VERTICAL,
             children: [
-                (0, i.jsxs)(d.Z, {
-                    className: o()(m.container, { [m.isMobile]: s.tq }),
-                    direction: d.Z.Direction.VERTICAL,
-                    align: d.Z.Align.CENTER,
-                    justify: d.Z.Justify.CENTER,
+                (0, i.jsxs)(f.Z, {
+                    className: l()(m.container, { [m.isMobile]: a.tq }),
+                    direction: f.Z.Direction.VERTICAL,
+                    align: f.Z.Align.CENTER,
+                    justify: f.Z.Justify.CENTER,
                     children: [
                         (0, i.jsx)('div', { className: m.image }),
                         (0, i.jsx)('div', {
-                            className: o()(m.title, b.marginTop20),
+                            className: l()(m.title, b.marginTop20),
                             children: g.intl.string(g.t.Iz0kDg)
                         }),
                         (0, i.jsx)('div', {
-                            className: o()(m.body, b.marginTop4, b.marginBottom20),
-                            children: g.intl.format(g.t['0rqMV1'], { helpCenterURL: E })
+                            className: l()(m.body, b.marginTop4, b.marginBottom20),
+                            children: g.intl.format(g.t['0rqMV1'], { helpCenterURL: O })
                         }),
-                        (0, i.jsx)(d.Z, {
+                        (0, i.jsx)(f.Z, {
                             grow: 0,
-                            direction: d.Z.Direction.VERTICAL,
-                            justify: d.Z.Justify.CENTER,
+                            direction: f.Z.Direction.VERTICAL,
+                            justify: f.Z.Justify.CENTER,
                             children: this.renderFields()
                         })
                     ]
                 }),
                 (0, i.jsx)('div', {
-                    className: o()(m.footer, b.marginTop20),
+                    className: l()(m.footer, b.marginTop20),
                     children: g.intl.string(g.t.qqYun5)
                 }),
-                (0, i.jsxs)(d.Z, {
-                    className: o()(b.marginTop4, b.marginBottom20),
+                (0, i.jsxs)(f.Z, {
+                    className: l()(b.marginTop4, b.marginBottom20),
                     grow: 0,
                     children: [
                         (0, i.jsx)('div', {
-                            className: o()(m.footer, m.footerAction),
+                            className: l()(m.footer, m.footerAction),
                             children: g.intl.format(g.t.WL51ZW, { supportURL: p.Z.getSubmitRequestURL() })
                         }),
                         (0, i.jsx)('div', {
-                            className: o()(m.footer, m.footerBullet),
+                            className: l()(m.footer, m.footerBullet),
                             children: '\u2022'
                         }),
                         (0, i.jsx)('div', {
-                            className: o()(m.footer, m.footerAction),
+                            className: l()(m.footer, m.footerAction),
                             children: g.intl.format(g.t.Hv7ztb, { logoutOnClick: this.props.onLogout })
                         })
                     ]
@@ -110,15 +110,15 @@ class O extends (r = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            _(this, 'handleClick', (e) => {
+            h(this, 'handleClick', (e) => {
                 let { onClick: t } = this.props;
                 null == t || t(e);
             });
     }
 }
-_(O, 'defaultProps', {
-    types: [f.PUi.CAPTCHA],
-    onCaptchaVerify: f.dG4,
-    onLogout: f.dG4
+h(j, 'defaultProps', {
+    types: [y.PUi.CAPTCHA],
+    onCaptchaVerify: y.dG4,
+    onLogout: y.dG4
 });
-let y = O;
+let E = j;

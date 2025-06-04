@@ -10,8 +10,8 @@ var a = n(255367),
     u = n(481060),
     m = n(411149),
     x = n(151480),
-    p = n(461762),
-    h = n(680783),
+    h = n(461762),
+    p = n(680783),
     b = n(605236),
     f = n(675478),
     v = n(944486),
@@ -69,9 +69,9 @@ function C() {
 function N() {
     var e, t;
     let n = (0, c.e7)([v.Z], () => v.Z.getChannelId()),
-        l = (0, h.Z)(n),
+        l = (0, p.Z)(n),
         s = null == l ? void 0 : l.wallpaperId,
-        d = (0, p.Z)(s),
+        d = (0, h.Z)(s),
         b = r.useCallback(
             (e) => {
                 null != s && (0, x.i)(s, { opacity: e });
@@ -99,13 +99,13 @@ function N() {
         O = r.useCallback(() => E(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         P = r.useCallback(() => S(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         I = r.useCallback(() => T(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        w = r.useCallback(
+        k = r.useCallback(
             (e) => {
                 null != s && (0, x.i)(s, { token_mix_amount: Math.round(e) });
             },
             [s]
         ),
-        k = r.useCallback(() => {
+        w = r.useCallback(() => {
             null != s && (0, x.i)(s, null);
         }, [s]),
         R = null != (e = null == d ? void 0 : d.opacity) ? e : 1,
@@ -270,7 +270,7 @@ function N() {
                                 defaultValue: 100,
                                 minValue: 0,
                                 maxValue: 100,
-                                onValueChange: w
+                                onValueChange: k
                             },
                             'tokenMixAmount-'.concat(A)
                         ),
@@ -317,7 +317,7 @@ function N() {
                         }),
                         (0, a.jsx)(u.zxk, {
                             className: j.resetButton,
-                            onClick: k,
+                            onClick: w,
                             children: 'Reset'
                         })
                     ]

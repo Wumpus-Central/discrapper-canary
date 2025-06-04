@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -12,39 +12,43 @@ var r = n(255367),
     _ = n(803038),
     p = n(877865),
     h = n(536847),
-    m = n(789549),
-    g = n(388032),
-    E = n(882903);
-function b() {
+    m = n(921944),
+    g = n(789549),
+    E = n(388032),
+    b = n(882903);
+function y(e) {
+    let { markAsDismissed: t } = e;
     return (0, r.jsxs)('div', {
-        className: E.headerContainer,
+        className: b.headerContainer,
         children: [
             (0, r.jsx)(o.Text, {
                 variant: 'text-md/bold',
-                children: g.intl.string(m.default['AsmU8/'])
+                children: E.intl.string(g.default['AsmU8/'])
             }),
             (0, r.jsx)(o.SrA, { size: 'md' }),
             (0, r.jsx)(o.zxk, {
-                className: E.closeButton,
+                className: b.closeButton,
                 size: o.zxk.Sizes.ICON,
                 look: o.zxk.Looks.BLANK,
-                onClick: () => (0, c.Ll)(),
+                onClick: () => {
+                    null == t || t(m.L.USER_DISMISS), (0, c.Ll)();
+                },
                 children: (0, r.jsx)(o.Dio, { size: 'sm' })
             })
         ]
     });
 }
-function y(e) {
+function O(e) {
     let { gradientAngle: t, setGradientAngle: n } = e;
     return (0, r.jsxs)('div', {
-        className: E.sliderContainer,
+        className: b.sliderContainer,
         children: [
             (0, r.jsx)(o.Text, {
                 variant: 'text-xs/semibold',
-                children: g.intl.string(m.default.dZkwg4)
+                children: E.intl.string(g.default.dZkwg4)
             }),
             (0, r.jsx)(o.iRW, {
-                className: E.slider,
+                className: b.slider,
                 initialValue: t,
                 defaultValue: 0,
                 minValue: 0,
@@ -56,17 +60,17 @@ function y(e) {
         ]
     });
 }
-function O(e) {
+function v(e) {
     let { chassisMixAmount: t, setChassisMixAmount: n } = e;
     return (0, r.jsxs)('div', {
-        className: E.sliderContainer,
+        className: b.sliderContainer,
         children: [
             (0, r.jsx)(o.Text, {
                 variant: 'text-xs/semibold',
-                children: g.intl.string(m.default.xlXkaG)
+                children: E.intl.string(g.default.xlXkaG)
             }),
             (0, r.jsx)(o.iRW, {
-                className: E.slider,
+                className: b.slider,
                 initialValue: t,
                 defaultValue: f.B,
                 minValue: 0,
@@ -77,19 +81,19 @@ function O(e) {
         ]
     });
 }
-function v(e) {
+function I(e) {
     let { type: t } = e;
     return (0, r.jsxs)(o.zxk, {
-        className: E.surpriseMeButton,
-        innerClassName: E.surpriseMeButtonContent,
+        className: b.surpriseMeButton,
+        innerClassName: b.surpriseMeButtonContent,
         look: o.zxk.Looks.FILLED,
         color: o.zxk.Colors.CUSTOM,
         size: 'with-text' === t ? o.zxk.Sizes.MEDIUM : o.zxk.Sizes.ICON,
         onClick: () => {},
-        children: [(0, r.jsx)(o.T$Z, { size: 'sm' }), 'with-text' === t && g.intl.string(g.t['WZ+NyM'])]
+        children: [(0, r.jsx)(o.T$Z, { size: 'sm' }), 'with-text' === t && E.intl.string(E.t['WZ+NyM'])]
     });
 }
-function I() {
+function S() {
     var e, t, n;
     let r = d.L1.getSetting().customUserThemeSettings;
     f.I.setState({
@@ -98,95 +102,96 @@ function I() {
         chassisMixAmount: null != (n = null == r ? void 0 : r.baseMix) ? n : f.B
     });
 }
-function S(e) {
-    let { handleSaveTheme: t, colors: n, metadata: i } = e;
+function T(e) {
+    let { handleSaveTheme: t, colors: n, metadata: i, markAsDismissed: a } = e;
     return (0, r.jsxs)('div', {
-        className: E.footerContainer,
+        className: b.footerContainer,
         children: [
-            (0, r.jsx)(v, { type: 'no-text' }),
+            (0, r.jsx)(I, { type: 'no-text' }),
             (0, r.jsx)(o.zxk, {
-                className: E.backButton,
+                className: b.backButton,
                 size: o.zxk.Sizes.NONE,
                 look: o.zxk.Looks.BLANK,
                 onClick: () => {
                     (null == i ? void 0 : i.from) === c.tE.SETTING ? (l.Z.open(), (0, c.Ll)()) : (null == i ? void 0 : i.from) === c.tE.CLIENT_THEMES_EDITOR ? (0, c.XO)(c.wh.CLIENT_THEMES) : (0, c.Ll)();
                 },
-                children: g.intl.string(g.t['13/7kZ'])
+                children: E.intl.string(E.t['13/7kZ'])
             }),
             (0, r.jsx)(o.zxk, {
-                className: E.applyButton,
+                className: b.applyButton,
                 size: o.zxk.Sizes.NONE,
                 onClick: () => {
-                    t(), (0, c.Ll)();
+                    t(), null == a || a(m.L.TAKE_ACTION), (0, c.Ll)();
                 },
                 disabled: 0 === n.length,
-                children: g.intl.string(g.t['1Qm829'])
+                children: E.intl.string(E.t['1Qm829'])
             })
         ]
     });
 }
-function T(e) {
+function A(e) {
     var t;
-    let { metadata: n } = e,
-        l = _.M.useExperiment({ location: 'ClientThemeColorPickerTools' }).enabled,
-        { colors: c, chassisMixAmount: d, gradientAngle: m, setColors: T, setChassisMixAmount: A, setGradientAngle: N } = (0, f.I)(),
-        [C, P] = i.useState(null != (t = c[0]) ? t : '#4394D4'),
-        [R] = (0, a.Wu)([u.Z], () => [u.Z.theme]),
-        w = () => {
+    let { metadata: n, markAsDismissed: l } = e,
+        c = _.M.useExperiment({ location: 'ClientThemeColorPickerTools' }).enabled,
+        { colors: d, chassisMixAmount: m, gradientAngle: g, setColors: A, setChassisMixAmount: N, setGradientAngle: C } = (0, f.I)(),
+        [P, R] = i.useState(null != (t = d[0]) ? t : '#4394D4'),
+        [w] = (0, a.Wu)([u.Z], () => [u.Z.theme]),
+        D = () => {
             (0, s.ZI)({
-                theme: R,
+                theme: w,
                 customUserThemeSettings: {
-                    colors: c,
+                    colors: d,
                     gradientColorStops: [],
-                    gradientAngle: m,
-                    baseMix: d
+                    gradientAngle: g,
+                    baseMix: m
                 }
             });
         };
-    return (i.useEffect(() => I, []), l)
+    return (i.useEffect(() => S, []), c)
         ? (0, r.jsxs)('div', {
-              className: E.container,
+              className: b.container,
               'data-app-right-panel': !0,
               children: [
                   (0, r.jsxs)(o.Ttm, {
-                      className: E.editorBody,
+                      className: b.editorBody,
                       children: [
-                          (0, r.jsx)(b, {}),
+                          (0, r.jsx)(y, { markAsDismissed: l }),
                           (0, r.jsx)(h.o, {}),
                           (0, r.jsx)(p.U, {
                               onChange: (e) => {
-                                  P(e), 0 === c.length && T([e]);
+                                  R(e), 0 === d.length && A([e]);
                               },
-                              value: C,
-                              colors: c,
-                              setColors: T
+                              value: P,
+                              colors: d,
+                              setColors: A
                           }),
-                          c.length > 1 &&
-                              (0, r.jsx)(y, {
-                                  gradientAngle: m,
-                                  setGradientAngle: N
+                          d.length > 1 &&
+                              (0, r.jsx)(O, {
+                                  gradientAngle: g,
+                                  setGradientAngle: C
                               }),
-                          (0, r.jsx)(O, {
-                              chassisMixAmount: d,
+                          (0, r.jsx)(v, {
+                              chassisMixAmount: m,
                               setChassisMixAmount: (e) => {
-                                  A(e), 0 === c.length && T([C]);
+                                  N(e), 0 === d.length && A([P]);
                               }
                           }),
                           (0, r.jsxs)(o.zxk, {
-                              className: E.resetButton,
-                              innerClassName: E.resetButtonContent,
+                              className: b.resetButton,
+                              innerClassName: b.resetButtonContent,
                               look: o.zxk.Looks.FILLED,
                               color: o.zxk.Colors.CUSTOM,
-                              onClick: I,
-                              children: [(0, r.jsx)(o.Oe7, { size: 'xs' }), g.intl.string(g.t.yBZMsb)]
+                              onClick: S,
+                              children: [(0, r.jsx)(o.Oe7, { size: 'xs' }), E.intl.string(E.t.yBZMsb)]
                           }),
-                          (0, r.jsx)(v, { type: 'with-text' })
+                          (0, r.jsx)(I, { type: 'with-text' })
                       ]
                   }),
-                  (0, r.jsx)(S, {
-                      handleSaveTheme: w,
-                      colors: c,
-                      metadata: n
+                  (0, r.jsx)(T, {
+                      handleSaveTheme: D,
+                      colors: d,
+                      metadata: n,
+                      markAsDismissed: l
                   })
               ]
           })

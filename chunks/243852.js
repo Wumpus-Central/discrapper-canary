@@ -17,8 +17,8 @@ var r,
     _ = n(77498),
     E = n(283595),
     O = n(19780),
-    y = n(944486),
-    I = n(981631);
+    I = n(944486),
+    y = n(981631);
 let v = 'ActivityTrackingStore',
     C = 30 * g.Z.Millis.MINUTE,
     S = 5 * g.Z.Millis.MINUTE,
@@ -37,12 +37,12 @@ function A(e) {
         r = null != e.updatedAt ? n - e.updatedAt : 0;
     r > C + S && (r = 0);
     let i = (0, m.OT)(e.applicationId, E.Z),
-        l = y.Z.getVoiceChannelId(),
+        l = I.Z.getVoiceChannelId(),
         a = b.default.getSessionId(),
         o = O.Z.getMediaSessionId();
     d.Z.updateActivity({
         applicationId: e.applicationId,
-        distributor: e.isDiscordApplication ? I.GQo.DISCORD : e.distributor,
+        distributor: e.isDiscordApplication ? y.GQo.DISCORD : e.distributor,
         shareActivity: i,
         token: e.token,
         duration: Math.floor(r / 1000),
@@ -78,7 +78,7 @@ function x() {
     for (let e of Object.keys(N)) j(N[e]);
     P = !1;
 }
-class w extends (i = o.ZP.Store) {
+class L extends (i = o.ZP.Store) {
     initialize() {
         this.waitFor(h.ZP, f.Z, E.Z), this.syncWith([f.Z], Z);
     }
@@ -87,15 +87,15 @@ class w extends (i = o.ZP.Store) {
     }
 }
 (a = 'ActivityTrackingStore'),
-    (l = 'displayName') in w
-        ? Object.defineProperty(w, l, {
+    (l = 'displayName') in L
+        ? Object.defineProperty(L, l, {
               value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (w[l] = a),
-    new w(u.Z, {
+        : (L[l] = a),
+    new L(u.Z, {
         RUNNING_GAMES_CHANGE: () => Z(),
         CONNECTION_OPEN: function () {
             if (P) return !1;

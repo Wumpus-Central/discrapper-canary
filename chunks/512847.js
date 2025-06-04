@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(292959),
     E = n(19780),
     O = n(944486),
-    y = n(606304),
-    I = n(979651),
+    I = n(606304),
+    y = n(979651),
     v = n(938475),
     C = n(823379),
     S = n(981631);
@@ -93,8 +93,8 @@ function P() {
 function j() {
     return (
         N(
-            [y.Z],
-            () => y.Z.isCurrentUserSpeaking(),
+            [I.Z],
+            () => I.Z.isCurrentUserSpeaking(),
             (e, t) => {
                 if (e !== t) {
                     let e = b.Z.isSelfMute();
@@ -137,8 +137,8 @@ function Z() {
 function x() {
     return (
         N(
-            [y.Z],
-            () => y.Z.isCurrentUserPrioritySpeaker(),
+            [I.Z],
+            () => I.Z.isCurrentUserPrioritySpeaker(),
             (e, t) => {
                 if (e !== t) {
                     let e = b.Z.isSelfMute();
@@ -149,11 +149,11 @@ function x() {
         null
     );
 }
-function w() {
+function L() {
     return (
         N(
-            [I.Z],
-            () => I.Z.userHasBeenMovedVersion,
+            [y.Z],
+            () => y.Z.userHasBeenMovedVersion,
             (e, t) => {
                 if (e !== t) return 'user_moved';
             }
@@ -161,14 +161,14 @@ function w() {
         null
     );
 }
-function L() {
+function w() {
     return (
         N(
-            [O.Z, I.Z],
+            [O.Z, y.Z],
             () => {
                 let e = O.Z.getVoiceChannelId();
                 if (null == e) return d.xO.NONE;
-                let t = I.Z.getVoiceStateForChannel(e);
+                let t = y.Z.getVoiceStateForChannel(e);
                 return (0, d.gf)(t);
             },
             (e, t) => {
@@ -181,7 +181,7 @@ function L() {
 function R() {
     return (
         N(
-            [O.Z, h.Z, f.default, I.Z, g.Z],
+            [O.Z, h.Z, f.default, y.Z, g.Z],
             () => {
                 let e,
                     t,
@@ -193,7 +193,7 @@ function R() {
                     o = h.Z.getAllActiveStreams();
                 if (null != n) {
                     let r = g.Z.getChannel(n);
-                    null != r && ((e = r.type), (t = v.ZP.countVoiceStatesForChannel(r.id) - +!!I.Z.isInChannel(r.id)), (i = h.Z.getAllApplicationStreamsForChannel(r.id).map((e) => e.ownerId)));
+                    null != r && ((e = r.type), (t = v.ZP.countVoiceStatesForChannel(r.id) - +!!y.Z.isInChannel(r.id)), (i = h.Z.getAllApplicationStreamsForChannel(r.id).map((e) => e.ownerId)));
                 }
                 let s = null;
                 return (
@@ -288,6 +288,6 @@ function D() {
 }
 function k() {
     return (0, r.jsxs)(r.Fragment, {
-        children: [(0, r.jsx)(T, {}), (0, r.jsx)(P, {}), (0, r.jsx)(j, {}), (0, r.jsx)(Z, {}), (0, r.jsx)(w, {}), (0, r.jsx)(R, {}), (0, r.jsx)(L, {}), (0, r.jsx)(D, {}), (0, r.jsx)(A, {}), (0, r.jsx)(x, {})]
+        children: [(0, r.jsx)(T, {}), (0, r.jsx)(P, {}), (0, r.jsx)(j, {}), (0, r.jsx)(Z, {}), (0, r.jsx)(L, {}), (0, r.jsx)(R, {}), (0, r.jsx)(w, {}), (0, r.jsx)(D, {}), (0, r.jsx)(A, {}), (0, r.jsx)(x, {})]
     });
 }

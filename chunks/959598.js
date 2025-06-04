@@ -4,6 +4,7 @@ var r = {
     './gg-mono/ggmono-700-bold.woff2': ['757883'],
     './gg-sans/ggsans-700-bolditalic.woff2': ['228978'],
     './noto-sans/notosans-700-bold.woff2': ['870744'],
+    './abc-ginto-nord-discord/abcgintonorddiscord-700-bolditalic.woff2': ['390070'],
     './gg-sans/ggsans-500-medium.woff2': ['5983'],
     './abc-ginto-normal/abcgintonormal-300-lightitalic.woff2': ['145934'],
     './noto-sans/notosans-600-semibolditalic.woff2': ['530636'],

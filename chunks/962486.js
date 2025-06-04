@@ -20,8 +20,8 @@ function g(e) {
         _ = (0, u.Mf)(t),
         E = (0, u.a$)(t),
         O = (0, u.QW)(t),
-        y = (0, u.lg)(t),
-        I = i.useMemo(() => {
+        I = (0, u.lg)(t),
+        y = i.useMemo(() => {
             let e = p ? 30 : n.length,
                 t = [];
             for (let a = 0; a < e; a++) {
@@ -32,15 +32,15 @@ function g(e) {
                         {
                             guildId: null != (i = n[a]) ? i : null,
                             index: a,
-                            onClick: (e) => m(e, a, y, f),
-                            onView: (e) => b(e, y)
+                            onClick: (e) => m(e, a, I, f),
+                            onView: (e) => b(e, I)
                         },
                         null != (l = n[a]) ? l : a
                     )
                 );
             }
             return t;
-        }, [y, n, p, m, b]);
+        }, [I, n, p, m, b]);
     return (0, r.jsxs)(c.Z, {
         onScroll: g,
         children: [
@@ -59,7 +59,7 @@ function g(e) {
                     }),
                     (0, r.jsx)('div', {
                         className: h.content,
-                        children: I
+                        children: y
                     })
                 ]
             })

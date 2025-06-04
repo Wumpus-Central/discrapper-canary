@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(670188),
     E = n(314897),
     O = n(131951),
-    y = n(51144),
-    I = n(524484),
+    I = n(51144),
+    y = n(524484),
     v = n(388032),
     C = n(795243);
 function S(e) {
@@ -96,7 +96,7 @@ function j(e) {
     var t, l;
     let d = i.useRef(null),
         { parentAnalyticsLocation: p } = (0, f.ZP)(),
-        { channel: E, user: j, nick: A, mute: Z, deaf: x, serverMute: w, serverDeaf: L } = e,
+        { channel: E, user: j, nick: A, mute: Z, deaf: x, serverMute: L, serverDeaf: w } = e,
         R = (0, o.e7)([O.Z], () => O.Z.isLocalMute(j.id)),
         D = (0, u.Z)({
             userId: j.id,
@@ -104,7 +104,7 @@ function j(e) {
         }),
         k = null != (t = E.getGuildId()) ? t : void 0,
         M = j.getAvatarURL(E.guild_id, 24),
-        U = null != A ? A : y.ZP.getName(j),
+        U = null != A ? A : I.ZP.getName(j),
         {
             icon: G,
             colorize: B,
@@ -118,9 +118,9 @@ function j(e) {
             if (l) return P.localMute;
             if (i) return P.mute;
         })({
-            serverDeaf: L,
+            serverDeaf: w,
             deaf: x,
-            serverMute: w,
+            serverMute: L,
             mute: Z,
             localMute: R
         }))
@@ -184,7 +184,7 @@ function j(e) {
                             onContextMenu: F,
                             focusProps: T,
                             children: (0, r.jsx)(b.Z, {
-                                shakeLocation: I.oZ.VOICE_USER,
+                                shakeLocation: y.oZ.VOICE_USER,
                                 isShaking: D,
                                 children: (0, r.jsx)('div', {
                                     className: a()(C.avatar, { [C.speaking]: D }),
@@ -246,8 +246,8 @@ function A(e) {
             }),
             focusProps: T
         }),
-        y = b && c ? t : m;
-    return y.length <= 0
+        I = b && c ? t : m;
+    return I.length <= 0
         ? null
         : (0, r.jsx)(s.zJl, {
               className: a()(C.scroller, l),
@@ -258,7 +258,7 @@ function A(e) {
                   role: 'group',
                   'aria-label': v.intl.string(v.t['/ZgaVV']),
                   children: [
-                      y.map((e) => {
+                      I.map((e) => {
                           let { user: t, nick: i, voiceState: l } = e;
                           return t.id !== h
                               ? (0, r.jsx)(

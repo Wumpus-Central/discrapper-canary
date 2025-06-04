@@ -41,7 +41,7 @@ function O(e) {
     let { channel: t } = e;
     delete g[t.id], delete m[t.id];
 }
-class y extends (a = c.ZP.Store) {
+class I extends (a = c.ZP.Store) {
     getActiveChannelsFetchStatus(e) {
         return b[e];
     }
@@ -57,7 +57,7 @@ class y extends (a = c.ZP.Store) {
     }
 }
 (l = 'ActiveChannelsStore'),
-    (i = 'displayName') in (r = y)
+    (i = 'displayName') in (r = I)
         ? Object.defineProperty(r, i, {
               value: l,
               enumerable: !0,
@@ -65,7 +65,7 @@ class y extends (a = c.ZP.Store) {
               writable: !0
           })
         : (r[i] = l),
-    new y(u.Z, {
+    new I(u.Z, {
         CHANNEL_SELECT: function (e) {
             let { channelId: t, guildId: n } = e;
             if (!(0, h.ME)(t) || null == n) return !1;

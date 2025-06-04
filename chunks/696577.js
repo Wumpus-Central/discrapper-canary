@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(170245),
     E = n(981631),
     O = n(388032),
-    y = n(53487);
-function I(e) {
+    I = n(53487);
+function y(e) {
     var t;
     let { user: n, applicationId: l, isGameRelationship: s, active: c } = e,
         u = (null == (t = h.default.getCurrentUser()) ? void 0 : t.isStaff()) && (null == n ? void 0 : n.isStaff()),
@@ -44,7 +44,7 @@ function I(e) {
         children: [
             u &&
                 (0, r.jsx)('div', {
-                    className: y.staffIndicator,
+                    className: I.staffIndicator,
                     children: (0, r.jsx)(o.IGR, {
                         color: a.Z.unsafe_rawColors.BRAND_500.css,
                         text: O.intl.string(O.t.oMx98P)
@@ -94,7 +94,7 @@ function C(e) {
         p = i.useMemo(() => (t ? O.intl.string(O.t['Uv/eT0']) : a), [t, a]),
         h = (0, l.e7)([c.Z], () => (null != n ? c.Z.getApplication(n) : null));
     return (0, r.jsxs)('div', {
-        className: y.applicationSublabel,
+        className: I.applicationSublabel,
         children: [
             !s &&
                 (0, r.jsx)(o.Text, {
@@ -158,7 +158,7 @@ function N(e) {
         onClick: h,
         children: (e) =>
             (0, r.jsxs)('div', {
-                className: y.listItemContents,
+                className: I.listItemContents,
                 children: [
                     (0, r.jsx)(S, {
                         user: t,
@@ -168,10 +168,10 @@ function N(e) {
                         applicationId: o
                     }),
                     (0, r.jsx)('div', {
-                        className: y.actions,
+                        className: I.actions,
                         children:
                             n === E.OGo.PENDING_INCOMING
-                                ? (0, r.jsx)(I, {
+                                ? (0, r.jsx)(y, {
                                       user: t,
                                       applicationId: o,
                                       isGameRelationship: c,

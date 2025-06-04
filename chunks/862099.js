@@ -1,7 +1,7 @@
 n.d(t, {
-    Co: () => X,
+    Co: () => Q,
     ZP: () => J,
-    bZ: () => Q,
+    bZ: () => X,
     gt: () => V
 }),
     n(388685);
@@ -23,8 +23,8 @@ var r,
     _ = n(501655),
     E = n(192079),
     O = n(427679),
-    y = n(448206),
-    I = n(496675),
+    I = n(448206),
+    y = n(496675),
     v = n(938475),
     C = n(626135),
     S = n(823379),
@@ -35,8 +35,8 @@ var r,
     A = n(835184),
     Z = n(725436),
     x = n(497656),
-    w = n(79874),
-    L = n(554747),
+    L = n(79874),
+    w = n(554747),
     R = n(230900),
     D = n(854698),
     k = n(139712),
@@ -138,7 +138,7 @@ function H(e) {
                       className: B.stageIcon
                   })
                 : null,
-        children: (0, i.jsx)(X, {
+        children: (0, i.jsx)(Q, {
             channel: n,
             speakers: r,
             voiceType: 1
@@ -195,7 +195,7 @@ function z(e) {
         u = null != s ? (0, Z.m)(s, !0) : null,
         p = (0, R.nE)(n),
         h = (0, d.KS)(p),
-        { startTime: g, endTime: m } = (0, w.ZP)(n),
+        { startTime: g, endTime: m } = (0, L.ZP)(n),
         { startDateTimeString: b, upcomingEvent: _, diffMinutes: E } = (0, D.ub)(g.toISOString(), null == m ? void 0 : m.toISOString()),
         O = _ ? (E > 0 ? G.intl.formatToPlainString(G.t.PQlCWl, { minutes: E }) : G.intl.string(G.t.WINqKS)) : G.intl.formatToPlainString(G.t.DC6h3N, { date: b });
     return (
@@ -360,20 +360,20 @@ function q(e) {
             className: B.stageIcon
         }),
         topic: t.topic,
-        children: (0, i.jsx)(X, {
+        children: (0, i.jsx)(Q, {
             channel: n,
             speakers: r,
             voiceType: 2
         })
     });
 }
-var Q = (((r = {})[(r.VOICE = 1)] = 'VOICE'), (r[(r.STAGE = 2)] = 'STAGE'), (r[(r.STUDY_ROOM = 3)] = 'STUDY_ROOM'), r);
-function X(e) {
+var X = (((r = {})[(r.VOICE = 1)] = 'VOICE'), (r[(r.STAGE = 2)] = 'STAGE'), (r[(r.STUDY_ROOM = 3)] = 'STUDY_ROOM'), r);
+function Q(e) {
     let { channel: t, speakers: n, voiceType: r } = e,
         a = t.getGuildId(),
         d = l.useMemo(() => n.slice(0, 3), [n]),
-        p = (0, s.e7)([I.Z], () => I.Z.can(U.Plq.CONNECT, t)),
-        h = (0, y.Z)(t.id),
+        p = (0, s.e7)([y.Z], () => y.Z.can(U.Plq.CONNECT, t)),
+        h = (0, I.Z)(t.id),
         f = G.intl.string(G.t.VJlc0d);
     switch (r) {
         case 1:
@@ -424,8 +424,8 @@ let J = l.memo(function (e) {
     let { guild: t } = e,
         { showRedesignedLiveChannelNotice: n } = (0, p.o)(!0),
         r = (0, x.y)(t.id),
-        l = (0, L.k5)(t.id),
-        a = (0, L.Vm)(t.id),
+        l = (0, w.k5)(t.id),
+        a = (0, w.Vm)(t.id),
         o = (0, s.e7)([O.Z], () => O.Z.getStageInstanceByChannel(null == r ? void 0 : r.id), [r]),
         { isStageNoticeHidden: c, isEventNoticeHidden: u } = (0, s.cj)(
             [j.Z],

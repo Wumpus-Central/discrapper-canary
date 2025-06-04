@@ -1,51 +1,58 @@
-n.d(t, { Z: () => E }), n(539854), n(388685);
+n.d(t, { Z: () => b }), n(539854), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(442837),
     a = n(704215),
     o = n(907459),
     s = n(514361),
-    l = n(724145),
-    c = n(726034),
-    u = n(605236),
-    d = n(243778),
-    f = n(819640),
-    _ = n(594174),
-    p = n(74538),
-    h = n(550385),
-    m = n(981631),
-    g = n(921944);
-let E = function () {
-    let e = (0, i.e7)([s.Z], () => s.Z.isCoachmark),
-        t = (0, i.e7)([f.Z], () => f.Z.getLayers().includes(m.S9g.USER_SETTINGS)),
-        n = (0, i.e7)([_.default], () => p.ZP.canUseClientThemes(_.default.getCurrentUser())),
-        { activePanel: E, metadata: b } = (0, h.oq)(),
-        y = [];
-    t || !e || n || null != E || y.push(a.z.CLIENT_THEMES_COACHMARK);
-    let [O, v] = (0, d.US)(y, g.R.SIDEBAR, !0),
-        I = O === a.z.CLIENT_THEMES_COACHMARK;
-    return t
+    l = n(662975),
+    c = n(724145),
+    u = n(726034),
+    d = n(605236),
+    f = n(243778),
+    _ = n(819640),
+    p = n(594174),
+    h = n(74538),
+    m = n(550385),
+    g = n(981631),
+    E = n(921944);
+let b = function () {
+    let e = (0, i.e7)([_.Z], () => _.Z.getLayers().includes(g.S9g.USER_SETTINGS)),
+        t = (0, i.e7)([p.default], () => h.ZP.canUseClientThemes(p.default.getCurrentUser())),
+        n = (0, i.e7)([s.Z], () => s.Z.isCoachmark),
+        b = (0, l.g)(),
+        { activePanel: y, metadata: O } = (0, m.oq)(),
+        v = [];
+    !e && null == y && (n && !t && v.push(a.z.CLIENT_THEMES_COACHMARK), b && v.push(a.z.CUSTOM_THEME_COACHMARK));
+    let [I, S] = (0, f.US)(v, E.R.SIDEBAR, !0),
+        T = I === a.z.CLIENT_THEMES_COACHMARK,
+        A = I === a.z.CUSTOM_THEME_COACHMARK;
+    return e
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (E === h.wh.CLIENT_THEMES || I) &&
-                      (0, r.jsx)(l.Z, {
-                          markAsDismissed: I
-                              ? v
+                  (y === m.wh.CLIENT_THEMES || T) &&
+                      (0, r.jsx)(c.Z, {
+                          markAsDismissed: T
+                              ? S
                               : () => {
-                                    (0, u.EW)(a.z.CLIENT_THEMES_COACHMARK, {
-                                        dismissAction: g.L.INDIRECT_ACTION,
+                                    (0, d.EW)(a.z.CLIENT_THEMES_COACHMARK, {
+                                        dismissAction: E.L.INDIRECT_ACTION,
                                         forceTrack: !0
                                     });
                                 },
-                          showClientThemesCoachmark: I
+                          showClientThemesCoachmark: T
                       }),
-                  E === h.wh.APP_ICON &&
+                  y === m.wh.APP_ICON &&
                       (0, r.jsx)(o.Z, {
                           isCoachmark: !1,
-                          markAsDismissed: v
+                          markAsDismissed: S
                       }),
-                  E === h.wh.CUSTOM_THEME && (0, r.jsx)(c.Z, { metadata: b })
+                  (y === m.wh.CUSTOM_THEME || A) &&
+                      (0, r.jsx)(u.Z, {
+                          metadata: null != O ? O : {},
+                          markAsDismissed: S
+                      })
               ]
           });
 };

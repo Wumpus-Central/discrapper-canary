@@ -15,7 +15,7 @@ function m() {
     let e,
         [t, n] = (0, r.useState)([]),
         [m, x] = (0, r.useState)(null),
-        [p, h] = (0, r.useState)(!1);
+        [h, p] = (0, r.useState)(!1);
     return (
         (0, r.useEffect)(
             () => (
@@ -52,7 +52,7 @@ function m() {
                                     onClick:
                                         ((e = s.D1),
                                         async () => {
-                                            h(!0);
+                                            p(!0);
                                             try {
                                                 let a = await l.tn.post({
                                                         url: d,
@@ -64,7 +64,7 @@ function m() {
                                             } catch (e) {
                                                 x('Failed to create entitlement');
                                             } finally {
-                                                h(!1);
+                                                p(!1);
                                             }
                                         }),
                                     className: c.button,
@@ -72,7 +72,7 @@ function m() {
                                     color: i.Ttl.PRIMARY,
                                     children: 'Create Confetti Entitlement'
                                 }),
-                                p && (0, a.jsx)(i.$jN, {})
+                                h && (0, a.jsx)(i.$jN, {})
                             ]
                         })
                       : (0, a.jsxs)(a.Fragment, {

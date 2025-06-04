@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(781311), n(388685);
+n.d(t, { Z: () => I }), n(781311), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -181,4 +181,4 @@ class O extends i.PureComponent {
         this.state = { selectedOperatingSystem: l };
     }
 }
-let y = O;
+let I = O;
