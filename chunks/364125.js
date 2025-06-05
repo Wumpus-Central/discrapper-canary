@@ -32,13 +32,13 @@ function d(e) {
             },
             [S, E, p]
         ),
-        y = r.useCallback(
+        O = r.useCallback(
             (e) => {
                 p && null != E && (e.stopPropagation(), g.current && S('handleMouseMove', E, e));
             },
             [S, E, p]
         ),
-        O = r.useCallback(
+        y = r.useCallback(
             (e) => {
                 p && null != E && (e.stopPropagation(), (g.current = !1), S('handleMouseUp', E, e));
             },
@@ -66,8 +66,8 @@ function d(e) {
             ),
             handleMouseDown: b,
             handleMouseEnter: Z,
-            handleMouseMove: y,
-            handleMouseUp: O
+            handleMouseMove: O,
+            handleMouseUp: y
         }
     );
 }

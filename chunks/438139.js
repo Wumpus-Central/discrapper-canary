@@ -1,9 +1,9 @@
 n.d(t, { Z: () => d });
 var r = n(255367),
-    l = n(73800),
-    i = n(846519),
-    o = n(388032);
-function a(e, t, n) {
+    i = n(73800),
+    l = n(846519),
+    a = n(388032);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -54,7 +54,7 @@ function u(e) {
     return ''.concat(e).length < 13 ? 1000 * e : e;
 }
 function d(e) {
-    return class extends l.PureComponent {
+    return class extends i.PureComponent {
         componentDidMount() {
             this._interval.start(1000, () => this.setState(this.getUpdatedTime()));
         }
@@ -84,45 +84,45 @@ function d(e) {
         getDiff(e, t) {
             let n = Math.max(t - e, 0),
                 r = Math.floor(n) % 60,
-                l = Math.floor(n / 60) % 60;
+                i = Math.floor(n / 60) % 60;
             return {
                 hours: Math.floor(n / 3600) % 24,
-                minutes: l,
+                minutes: i,
                 seconds: r
             };
         }
         render() {
             let t = this.props,
                 { timestamps: n } = t,
-                l = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        l = (function (e, t) {
+                        i = (function (e, t) {
                             if (null == e) return {};
                             var n,
                                 r,
-                                l = {},
-                                i = Object.keys(e);
-                            for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                            return l;
+                                i = {},
+                                l = Object.keys(e);
+                            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                            return i;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
-                        var i = Object.getOwnPropertySymbols(e);
-                        for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                        var l = Object.getOwnPropertySymbols(e);
+                        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                     }
-                    return l;
+                    return i;
                 })(t, ['timestamps']),
-                { hours: i, minutes: a, seconds: u } = this.state,
+                { hours: l, minutes: o, seconds: u } = this.state,
                 d = {
-                    hours: this.renderTime(i, !0),
-                    minutes: this.renderTime(a),
+                    hours: this.renderTime(l, !0),
+                    minutes: this.renderTime(o),
                     seconds: this.renderTime(u)
                 };
-            return null != n.end ? (0, r.jsx)(e, c(s({}, l), { message: o.intl.formatToPlainString(o.t['I/J7vL'], d) })) : null != n.start ? (0, r.jsx)(e, c(s({}, l), { message: o.intl.formatToPlainString(o.t.M9Fexc, d) })) : null;
+            return null != n.end ? (0, r.jsx)(e, c(s({}, i), { message: a.intl.formatToPlainString(a.t['I/J7vL'], d) })) : null != n.start ? (0, r.jsx)(e, c(s({}, i), { message: a.intl.formatToPlainString(a.t.M9Fexc, d) })) : null;
         }
         constructor(e) {
-            super(e), a(this, '_interval', void 0), (this._interval = new i.Xp()), (this.state = s({}, this.getUpdatedTime()));
+            super(e), o(this, '_interval', void 0), (this._interval = new l.Xp()), (this.state = s({}, this.getUpdatedTime()));
         }
     };
 }

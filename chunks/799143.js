@@ -1,25 +1,25 @@
 n.d(t, {
-    Y: () => h,
-    a: () => v
+    Y: () => _,
+    a: () => h
 }),
     n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(392711),
-    o = n.n(a),
-    l = n(442837),
+    l = n(392711),
+    a = n.n(l),
+    o = n(442837),
     s = n(481060),
     c = n(846027),
-    d = n(906732),
-    u = n(131951),
-    _ = n(626135),
-    m = n(981631),
-    f = n(65154),
-    p = n(521361);
-function g(e) {
+    u = n(906732),
+    d = n(131951),
+    f = n(626135),
+    p = n(981631),
+    m = n(65154),
+    g = n(521361);
+function b(e) {
     let { label: t, Icon: n } = e;
     return (0, r.jsxs)('div', {
-        className: p.selectedDevice,
+        className: g.selectedDevice,
         children: [
             (0, r.jsx)(n, {
                 size: 'custom',
@@ -36,33 +36,33 @@ function g(e) {
         ]
     });
 }
-function h() {
-    let { analyticsLocations: e } = (0, d.ZP)(),
-        { canSetInputDevice: t, inputDeviceId: n } = (0, l.cj)([u.Z], () => ({
-            canSetInputDevice: u.Z.supports(f.AN.AUDIO_INPUT_DEVICE),
-            inputDeviceId: u.Z.getInputDeviceId()
+function _() {
+    let { analyticsLocations: e } = (0, u.ZP)(),
+        { canSetInputDevice: t, inputDeviceId: n } = (0, o.cj)([d.Z], () => ({
+            canSetInputDevice: d.Z.supports(m.AN.AUDIO_INPUT_DEVICE),
+            inputDeviceId: d.Z.getInputDeviceId()
         })),
-        a = (0, l.e7)([u.Z], () => u.Z.getInputDevices()),
-        h = i.useCallback(
+        l = (0, o.e7)([d.Z], () => d.Z.getInputDevices()),
+        _ = i.useCallback(
             (t) => {
                 var n;
                 c.Z.setInputDevice(t, { analyticsLocations: e }),
-                    _.default.track(m.rMx.VOICE_FILTER_MIC_SELECTOR_INPUT_SELECTED, {
+                    f.default.track(p.rMx.VOICE_FILTER_MIC_SELECTOR_INPUT_SELECTED, {
                         input_mode: t,
-                        active_voice_filter_id: null != (n = u.Z.getActiveVoiceFilter()) ? n : null
+                        active_voice_filter_id: null != (n = d.Z.getActiveVoiceFilter()) ? n : null
                     });
             },
             [e]
         ),
-        v = i.useCallback(() => {
+        h = i.useCallback(() => {
             var e;
-            _.default.track(m.rMx.VOICE_FILTER_MIC_SELECTOR_OPENED, { active_voice_filter_id: null != (e = u.Z.getActiveVoiceFilter()) ? e : null });
+            f.default.track(p.rMx.VOICE_FILTER_MIC_SELECTOR_OPENED, { active_voice_filter_id: null != (e = d.Z.getActiveVoiceFilter()) ? e : null });
         }, []);
     return (0, r.jsx)(s.q4e, {
         value: n,
-        onOpen: v,
-        onChange: h,
-        options: o().map(a, (e) => {
+        onOpen: h,
+        onChange: _,
+        options: a().map(l, (e) => {
             let { id: t, name: n } = e;
             return {
                 value: t,
@@ -71,28 +71,28 @@ function h() {
         }),
         isDisabled: !t,
         look: s.qQH.FILLED,
-        className: p.selector,
+        className: g.selector,
         popoutPosition: 'top',
         renderOptionValue: (e) => {
             let [t] = e;
-            return (0, r.jsx)(g, {
+            return (0, r.jsx)(b, {
                 label: t.label,
                 Icon: s.S6n
             });
         }
     });
 }
-function v() {
-    let { analyticsLocations: e } = (0, d.ZP)(),
-        { canSetOutputDevice: t, outputDeviceId: n } = (0, l.cj)([u.Z], () => ({
-            canSetOutputDevice: u.Z.supports(f.AN.AUDIO_OUTPUT_DEVICE),
-            outputDeviceId: u.Z.getOutputDeviceId()
+function h() {
+    let { analyticsLocations: e } = (0, u.ZP)(),
+        { canSetOutputDevice: t, outputDeviceId: n } = (0, o.cj)([d.Z], () => ({
+            canSetOutputDevice: d.Z.supports(m.AN.AUDIO_OUTPUT_DEVICE),
+            outputDeviceId: d.Z.getOutputDeviceId()
         })),
-        i = (0, l.e7)([u.Z], () => u.Z.getOutputDevices());
+        i = (0, o.e7)([d.Z], () => d.Z.getOutputDevices());
     return (0, r.jsx)(s.q4e, {
         value: n,
         onChange: (t) => c.Z.setOutputDevice(t, { analyticsLocations: e }),
-        options: o().map(i, (e) => {
+        options: a().map(i, (e) => {
             let { id: t, name: n } = e;
             return {
                 value: t,
@@ -101,11 +101,11 @@ function v() {
         }),
         isDisabled: !t,
         look: s.qQH.FILLED,
-        className: p.selector,
+        className: g.selector,
         popoutPosition: 'top',
         renderOptionValue: (e) => {
             let [t] = e;
-            return (0, r.jsx)(g, {
+            return (0, r.jsx)(b, {
                 label: t.label,
                 Icon: s.VWR
             });

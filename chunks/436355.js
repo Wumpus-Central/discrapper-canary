@@ -1,24 +1,27 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => p });
 var r = n(255367),
     i = n(442837),
     l = n(481060),
     a = n(946273),
-    o = n(496675),
-    s = n(796263),
-    c = n(463959),
-    u = n(388032);
-function d(e) {
-    let { channel: t, user: d, member: p, guild: h } = e;
-    if (!(0, i.e7)([o.Z], () => null != d && null != h && (0, a.nX)(d, h, [o.Z]))) return null;
-    let f = null == p ? u.intl.string(c.default.Ux67nZ) : u.intl.string(c.default['snp/lJ']),
-        m = 'kick-user-'.concat(null == d ? void 0 : d.id);
+    o = n(271383),
+    s = n(496675),
+    c = n(796263),
+    u = n(463959),
+    d = n(388032);
+function p(e) {
+    let { channel: t, user: p, guild: h } = e,
+        f = (0, i.e7)([s.Z], () => null != p && null != h && (0, a.nX)(p, h, [s.Z])),
+        m = (0, i.e7)([o.ZP], () => null == p || null == o.ZP.getMember(t.guild_id, p.id));
+    if (!f) return null;
+    let g = m ? d.intl.string(u.default.Ux67nZ) : d.intl.string(u.default['snp/lJ']),
+        b = 'kick-user-'.concat(null == p ? void 0 : p.id);
     return (0, r.jsx)(
-        s.Z,
+        c.Z,
         {
-            text: f,
+            text: g,
             icon: l.I9k,
             onClick: () => {
-                null != d &&
+                null != p &&
                     (0, l.ZDy)(async () => {
                         let { default: e } = await n.e('5454').then(n.bind(n, 854360));
                         return (n) => {
@@ -53,7 +56,7 @@ function d(e) {
                                 (l = l =
                                     {
                                         guildId: t.guild_id,
-                                        user: d,
+                                        user: p,
                                         modReportId: t.id
                                     }),
                                 Object.getOwnPropertyDescriptors
@@ -73,8 +76,8 @@ function d(e) {
                         };
                     });
             },
-            disabled: null == p
+            disabled: m
         },
-        m
+        b
     );
 }

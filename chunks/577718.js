@@ -29,10 +29,10 @@ var r = n(255367),
     A = n(829972),
     x = n(31932),
     Z = n(642301);
-function L(e) {
+function w(e) {
     null != e && h.Z.open(e.id, y.pNK.BOOST_PERKS, { section: y.jXE.PREMIUM_GUILD_PROGRESS_BAR });
 }
-function w(e, t) {
+function L(e, t) {
     null != t &&
         ((0, O.f2)(t, y.Eu4.TIER_1)
             ? h.Z.open(t.id, y.pNK.BOOST_PERKS, { section: y.jXE.PREMIUM_GUILD_INVITE_SPLASH })
@@ -114,8 +114,8 @@ let D = i.memo(function (e) {
                             content: N.intl.format(N.t.ujItEh, {}),
                             buttonCTA: N.intl.string(N.t.UzVPra),
                             secondaryButtonCTA: N.intl.string(N.t['KkK/aG']),
-                            onSecondaryClick: () => L(),
-                            onClick: () => L(i),
+                            onSecondaryClick: () => w(),
+                            onClick: () => w(i),
                             markAsDismissed: U
                         }),
                         renderGuildHeaderDropdownButton: o
@@ -133,8 +133,8 @@ let D = i.memo(function (e) {
                             content: N.intl.format(N.t.zK1hpq, {}),
                             buttonCTA: N.intl.string(N.t.UzVPra),
                             secondaryButtonCTA: N.intl.string(N.t['KkK/aG']),
-                            onSecondaryClick: () => L(),
-                            onClick: () => L(i),
+                            onSecondaryClick: () => w(),
+                            onClick: () => w(i),
                             markAsDismissed: U
                         }),
                         renderGuildHeaderDropdownButton: o
@@ -170,8 +170,8 @@ let D = i.memo(function (e) {
                             content: e,
                             buttonCTA: t,
                             secondaryButtonCTA: N.intl.string(N.t.hBIHLS),
-                            onSecondaryClick: () => w(u),
-                            onClick: () => w(u, i),
+                            onSecondaryClick: () => L(u),
+                            onClick: () => L(u, i),
                             markAsDismissed: U
                         }),
                         renderGuildHeaderDropdownButton: o

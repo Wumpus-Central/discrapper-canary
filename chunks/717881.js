@@ -1,23 +1,23 @@
 n.d(t, {
-    P: () => S,
+    P: () => O,
     Z: () => j
 });
 var r = n(255367);
 n(73800);
-var l = n(442837),
-    i = n(481060),
-    o = n(620662),
-    a = n(387903),
+var i = n(442837),
+    l = n(481060),
+    a = n(620662),
+    o = n(387903),
     s = n(850827),
     c = n(812206),
     u = n(952164),
     d = n(199902),
-    p = n(592125),
-    f = n(430824),
+    f = n(592125),
+    p = n(430824),
     m = n(979651),
     g = n(153066),
     b = n(981631),
-    O = n(66569);
+    _ = n(66569);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,7 +43,7 @@ function h(e) {
     }
     return e;
 }
-function y(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,55 +61,55 @@ function y(e, t) {
         e
     );
 }
-function v(e) {
-    let { type: t, source: n, activity: l, applicationStream: o, user: a, guildId: c, channelId: u, onAction: d, actionColor: p } = e;
+function y(e) {
+    let { type: t, source: n, activity: i, applicationStream: a, user: o, guildId: c, channelId: u, onAction: d, actionColor: f } = e;
     return (0, r.jsx)(s.Z, {
-        className: (0, g.l)(O, 'actions', t),
+        className: (0, g.l)(_, 'actions', t),
         type: t,
         source: n,
-        activity: l,
-        applicationStream: o,
-        user: a,
+        activity: i,
+        applicationStream: a,
+        user: o,
         guildId: c,
-        look: i.zxk.Looks.FILLED,
-        color: null != p ? p : i.zxk.Colors.PRIMARY,
+        look: l.zxk.Looks.FILLED,
+        color: null != f ? f : l.zxk.Colors.PRIMARY,
         channelId: u,
         onAction: d
     });
 }
-let S = a.Z.Types,
+let O = o.Z.Types,
     j = function (e) {
-        var { activity: t, user: n, useStoreStream: i = !0, showActions: s = !0, hideHeader: g = !1, showChannelDetails: O = !1 } = e,
-            S = (function (e, t) {
+        var { activity: t, user: n, useStoreStream: l = !0, showActions: s = !0, hideHeader: g = !1, showChannelDetails: _ = !1 } = e,
+            O = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
-                    l = (function (e, t) {
+                    i = (function (e, t) {
                         if (null == e) return {};
                         var n,
                             r,
-                            l = {},
-                            i = Object.keys(e);
-                        for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                        return l;
+                            i = {},
+                            l = Object.keys(e);
+                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var i = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                    var l = Object.getOwnPropertySymbols(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                 }
-                return l;
+                return i;
             })(e, ['activity', 'user', 'useStoreStream', 'showActions', 'hideHeader', 'showChannelDetails']);
-        let j = (0, l.e7)([m.Z, p.Z], () => {
+        let j = (0, i.e7)([m.Z, f.Z], () => {
                 var e;
-                return p.Z.getChannel(null == (e = m.Z.getVoiceStateForUser(n.id)) ? void 0 : e.channelId);
+                return f.Z.getChannel(null == (e = m.Z.getVoiceStateForUser(n.id)) ? void 0 : e.channelId);
             }),
-            P = (0, l.e7)([d.Z], () => (i ? d.Z.getAnyStreamForUser(n.id) : null)),
-            I = (0, l.e7)([f.Z, m.Z, p.Z], () => {
+            S = (0, i.e7)([d.Z], () => (l ? d.Z.getAnyStreamForUser(n.id) : null)),
+            x = (0, i.e7)([p.Z, m.Z, f.Z], () => {
                 var e, r;
-                return (0, o.Z)(t, b.xjy.EMBEDDED) ? f.Z.getGuild(null == (e = p.Z.getChannel(null == (r = m.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) ? void 0 : r.channelId)) ? void 0 : e.getGuildId()) : null;
+                return (0, a.Z)(t, b.xjy.EMBEDDED) ? p.Z.getGuild(null == (e = f.Z.getChannel(null == (r = m.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) ? void 0 : r.channelId)) ? void 0 : e.getGuildId()) : null;
             }),
-            E = (0, l.e7)([f.Z], () => (null != P ? f.Z.getGuild(P.guildId) : null)),
-            Z = (0, l.e7)([c.Z], () => {
+            I = (0, i.e7)([p.Z], () => (null != S ? p.Z.getGuild(S.guildId) : null)),
+            P = (0, i.e7)([c.Z], () => {
                 if (null != t)
                     if (null != t.application_id) return c.Z.getApplication(t.application_id);
                     else return c.Z.getApplicationByName(t.name);
@@ -118,21 +118,21 @@ let S = a.Z.Types,
         return (null == t ? void 0 : t.type) === b.IIU.HANG_STATUS
             ? null
             : (0, r.jsx)(
-                  a.Z,
-                  y(h({}, S), {
+                  o.Z,
+                  v(h({}, O), {
                       activity: t,
                       user: n,
-                      application: Z,
+                      application: P,
                       hideHeader: g,
-                      activityGuild: null != I ? I : E,
-                      showChannelDetails: O,
-                      channel: O ? j : void 0,
+                      activityGuild: null != x ? x : I,
+                      showChannelDetails: _,
+                      channel: _ ? j : void 0,
                       renderActions: s
                           ? () =>
                                 (0, r.jsx)(
-                                    v,
-                                    y(h({}, S), {
-                                        applicationStream: P,
+                                    y,
+                                    v(h({}, O), {
+                                        applicationStream: S,
                                         activity: t,
                                         user: n
                                     })

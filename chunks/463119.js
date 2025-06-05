@@ -29,7 +29,7 @@ var r = n(255367),
     A = n(921944),
     x = n(388032),
     Z = n(208801);
-function L(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,7 +54,7 @@ function L(e) {
     }
     return e;
 }
-function w(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -138,8 +138,8 @@ let D = (e) => {
                 I && (0, r.jsx)(k, {}),
                 (0, r.jsx)(
                     u.Qj,
-                    w(
-                        L(
+                    L(
+                        w(
                             {
                                 selected: t,
                                 route: C,
@@ -161,7 +161,7 @@ let D = (e) => {
             ]
         });
     },
-    U = (e) => (0, r.jsx)(M, w(L({}, e), { children: (0, r.jsx)(D, {}) })),
+    U = (e) => (0, r.jsx)(M, L(w({}, e), { children: (0, r.jsx)(D, {}) })),
     G = i.memo(function (e) {
         var t;
         let { displayOptions: n, assetId: i, reducedMotion: l = !1 } = e,
@@ -247,7 +247,7 @@ let D = (e) => {
             children: (e) =>
                 (0, r.jsxs)(
                     M,
-                    w(L(w(L({ className: null != v.entryPointClassName ? (0, E.l)(Z, v.entryPointClassName) : void 0 }, C), { icon: v.entryPointIcon }), e), {
+                    L(w(L(w({ className: null != v.entryPointClassName ? (0, E.l)(Z, v.entryPointClassName) : void 0 }, C), { icon: v.entryPointIcon }), e), {
                         onMouseEnter: () => U(e.onMouseEnter),
                         onMouseLeave: () => B(e.onMouseLeave),
                         children: [
@@ -288,7 +288,7 @@ let D = (e) => {
             delay: 100,
             hideOnClick: !1,
             'aria-label': t.title(),
-            children: (e) => (0, r.jsx)(M, w(L({}, n, e), { children: (0, r.jsx)(D, { color: t.badgeColor }) }))
+            children: (e) => (0, r.jsx)(M, L(w({}, n, e), { children: (0, r.jsx)(D, { color: t.badgeColor }) }))
         });
     },
     H = (e) => {
@@ -300,8 +300,8 @@ let D = (e) => {
             c = R(a, ['positionControlRef', 'onShopButtonClick']);
         return (0, r.jsx)(
             _.Rg,
-            w(
-                L(
+            L(
+                w(
                     {
                         targetElementRef: l,
                         positionControlRef: o
@@ -311,7 +311,7 @@ let D = (e) => {
                 {
                     children: (0, r.jsx)(
                         M,
-                        w(L({}, n), {
+                        L(w({}, n), {
                             listItemRef: l,
                             collectibleShopTab: P.AW.ORBS,
                             onClick: s
@@ -346,7 +346,7 @@ let D = (e) => {
             children: (e) =>
                 (0, r.jsx)(
                     M,
-                    w(L({}, l), {
+                    L(w({}, l), {
                         onClick: c,
                         listItemRef: a,
                         children: (0, r.jsx)(D, {})
@@ -368,19 +368,19 @@ let D = (e) => {
                 },
                 listItemRef: l
             };
-        if (o) return (0, r.jsx)(H, w(L({}, d), { listScrollerRef: a }));
+        if (o) return (0, r.jsx)(H, L(w({}, d), { listScrollerRef: a }));
         if (null != s)
             switch (s.type) {
                 case T.k2.TOOLTIP:
-                    return (0, r.jsx)(V, w(L({}, d), { displayOptions: s }));
+                    return (0, r.jsx)(V, L(w({}, d), { displayOptions: s }));
                 case T.k2.COACHTIP:
-                    return (0, r.jsx)(B, w(L({}, d), { displayOptions: s }));
+                    return (0, r.jsx)(B, L(w({}, d), { displayOptions: s }));
                 case T.k2.BADGE:
-                    return (0, r.jsx)(U, L({}, d));
+                    return (0, r.jsx)(U, w({}, d));
                 case T.k2.COACHMARK:
-                    return (0, r.jsx)(F, w(L({ dismissContent: c }, d), { displayOptions: s }));
+                    return (0, r.jsx)(F, L(w({ dismissContent: c }, d), { displayOptions: s }));
             }
         return (0, r.jsxs)(r.Fragment, {
-            children: [u && (0, r.jsx)(z, {}), (0, r.jsx)(M, L({}, d))]
+            children: [u && (0, r.jsx)(z, {}), (0, r.jsx)(M, w({}, d))]
         });
     };

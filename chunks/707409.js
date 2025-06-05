@@ -1,13 +1,13 @@
 n.d(t, {
-    CI: () => i.CI,
-    J6: () => i.J6,
-    ZP: () => o
+    CI: () => l.CI,
+    J6: () => l.J6,
+    ZP: () => a
 });
 var r = n(255367);
 n(73800);
-var l = n(144830),
-    i = n(379649);
-let o = (0, l.Z)(function (e) {
+var i = n(144830),
+    l = n(379649);
+let a = (0, i.Z)(function (e) {
     let { children: t, className: n } = e;
     return (0, r.jsx)('span', {
         className: n,

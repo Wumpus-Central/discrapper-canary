@@ -1,25 +1,25 @@
 n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
-var l = n(442837),
-    i = n(481060),
-    o = n(846027),
-    a = n(131951),
+var i = n(442837),
+    l = n(481060),
+    a = n(846027),
+    o = n(131951),
     s = n(358085),
     c = n(981631),
     u = n(388032);
 function d(e) {
     let t = !s.isPlatformEmbedded,
-        n = (0, l.e7)([a.Z], () => a.Z.getMode()),
-        d = (t, l) =>
+        n = (0, i.e7)([o.Z], () => o.Z.getMode()),
+        d = (t, i) =>
             (0, r.jsx)(
-                i.k5B,
+                l.k5B,
                 {
                     id: t,
                     group: 'input-modes',
-                    label: l,
+                    label: i,
                     checked: n === t,
-                    action: () => o.Z.setMode(t, void 0, void 0, { analyticsLocations: e })
+                    action: () => a.Z.setMode(t, void 0, void 0, { analyticsLocations: e })
                 },
                 t
             );

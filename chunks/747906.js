@@ -1,8 +1,8 @@
-n.d(t, { P: () => l });
+n.d(t, { P: () => o });
 var r = n(255367),
     i = n(73800),
-    a = n(709014);
-let o = {
+    l = n(709014);
+let a = {
         mute: {
             name: 'mute',
             start: 0,
@@ -39,10 +39,10 @@ let o = {
             duration: 40
         }
     },
-    l = (e) => {
+    o = (e) => {
         let t = i.useRef(null),
-            l = i.useRef(e);
-        l.current = e;
+            o = i.useRef(e);
+        o.current = e;
         let s = i.useMemo(
                 () => () => {
                     null != t.current && t.current.play(e);
@@ -54,15 +54,15 @@ let o = {
                 let n = 'mute' === e ? 'hover_unmuted' : 'hover_muted';
                 t.current.play(n);
             }, [e]),
-            d = i.useCallback(() => {
+            u = i.useCallback(() => {
                 if (null == t.current) return;
                 let n = 'mute' === e ? 'hover_unmuted' : 'hover_muted';
                 t.current.stopIfPlaying(n);
             }, [e]),
-            u = i.useCallback((e) => {
+            d = i.useCallback((e) => {
                 var i, s;
                 return (0, r.jsx)(
-                    a.L,
+                    l.L,
                     ((i = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -92,8 +92,8 @@ let o = {
                         {
                             src: () => n.e('30261').then(n.t.bind(n, 414787, 19)),
                             ref: t,
-                            initialAnimation: l.current,
-                            markers: o
+                            initialAnimation: o.current,
+                            markers: a
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
@@ -114,7 +114,7 @@ let o = {
             events: {
                 onClick: s,
                 onMouseEnter: c,
-                onMouseLeave: d
+                onMouseLeave: u
             },
             play: s,
             getDuration: i.useCallback(() => {
@@ -125,6 +125,6 @@ let o = {
                 var e, n;
                 return null != (n = null == (e = t.current) ? void 0 : e.getCurrentFrame()) ? n : null;
             }, []),
-            Component: u
+            Component: d
         };
     };

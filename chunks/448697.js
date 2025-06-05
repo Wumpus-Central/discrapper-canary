@@ -1,18 +1,18 @@
-n.d(t, { R: () => f });
+n.d(t, { R: () => m });
 var r = n(255367),
     i = n(73800),
-    a = n(392711),
-    o = n(386230),
-    l = n(442837),
+    l = n(392711),
+    a = n(386230),
+    o = n(442837),
     s = n(481060),
     c = n(709706),
-    d = n(378441),
-    u = n(358820),
-    _ = n(388032),
-    m = n(690410);
-function f() {
+    u = n(378441),
+    d = n(358820),
+    f = n(388032),
+    p = n(690410);
+function m() {
     let { hasActiveDownloads: e, progress: t } = (function () {
-            let e = (0, l.cj)([c.Z], () => c.Z.getOngoingDownloads()),
+            let e = (0, o.cj)([c.Z], () => c.Z.getOngoingDownloads()),
                 t = i.useRef({});
             i.useEffect(() => {
                 0 === Object.entries(e).length && (t.current = {}), Object.assign(t.current, e);
@@ -22,21 +22,21 @@ function f() {
                     let { downloadedBytes: t } = e;
                     return (null != t ? t : 0) > 0;
                 }),
-                o = (0, a.sumBy)(n, (e) => {
+                a = (0, l.sumBy)(n, (e) => {
                     var t;
                     return null != (t = null == e ? void 0 : e.downloadedBytes) ? t : 0;
                 }),
-                s = (0, a.sumBy)(n, (e) => {
+                s = (0, l.sumBy)(n, (e) => {
                     var t;
                     return null != (t = null == e ? void 0 : e.totalBytes) ? t : 0;
                 });
             return {
                 hasActiveDownloads: r,
-                progress: 0 === s ? 0 : Math.floor((o / s) * 100)
+                progress: 0 === s ? 0 : Math.floor((a / s) * 100)
             };
         })(),
-        { activeVoice: n } = (0, d.o)(),
-        f = (0, s.dQu)(s.TVs.colors.WHITE);
+        { activeVoice: n } = (0, u.o)(),
+        m = (0, s.dQu)(s.TVs.colors.WHITE);
     return (0, s.Yzy)(
         e ? (null != n ? 'voice-on' : 'voice-off') : null,
         {
@@ -56,35 +56,35 @@ function f() {
         'respect-motion-settings'
     )((e, n) =>
         null != n
-            ? (0, r.jsx)(o.animated.div, {
+            ? (0, r.jsx)(a.animated.div, {
                   style: e,
-                  className: m.floaterWrapper,
+                  className: p.floaterWrapper,
                   children: (0, r.jsxs)('div', {
-                      className: m.visibleFloater,
+                      className: p.visibleFloater,
                       children: [
                           (0, r.jsxs)('div', {
-                              className: m.progressText,
+                              className: p.progressText,
                               children: [
                                   (0, r.jsx)(s.Text, {
                                       variant: 'text-sm/semibold',
                                       color: 'always-white',
-                                      children: _.intl.format(_.t['r+uZYW'], { progress: t })
+                                      children: f.intl.format(f.t['r+uZYW'], { progress: t })
                                   }),
                                   (0, r.jsx)(s.zxk, {
                                       look: s.zxk.Looks.LINK,
                                       size: s.zxk.Sizes.MIN,
-                                      onClick: u.ge,
+                                      onClick: d.ge,
                                       children: (0, r.jsx)(s.Text, {
                                           variant: 'text-sm/normal',
                                           color: 'always-white',
-                                          children: _.intl.string(_.t['ETE/oK'])
+                                          children: f.intl.string(f.t['ETE/oK'])
                                       })
                                   })
                               ]
                           }),
                           (0, r.jsx)(s.Exd, {
                               percent: t,
-                              foregroundColor: f.hex(),
+                              foregroundColor: m.hex(),
                               backgroundColor: 'rgba(255,255,255,0.10)',
                               size: s.Exd.Sizes.LARGE
                           })

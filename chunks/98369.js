@@ -17,7 +17,7 @@ let h = new Map(),
     v = new Map(),
     S = !1,
     b = null;
-function y() {
+function O() {
     return f.Z.getAllActiveStreamKeys().reduce((e, t) => {
         let { ownerId: n } = (0, s.my)(t),
             r = !0 === h.get(n),
@@ -25,7 +25,7 @@ function y() {
         return v.set(t, r), !!l || e;
     }, !1);
 }
-function O() {
+function y() {
     var e;
     let t = null != (e = d.Z.getUserIds()) ? e : new Set(),
         n = c.default.getId(),
@@ -51,8 +51,8 @@ function Z(e) {
                 a = i !== h.get(e);
             return h.set(e, i), a;
         })(t),
-        r = y(),
-        l = O();
+        r = O(),
+        l = y();
     return n || r || l;
 }
 function j() {
@@ -94,7 +94,7 @@ let I = new _(u.Z, {
         switch (r) {
             case o.Yn.STREAM:
                 if (null == t) return !1;
-                return v.delete(t), O();
+                return v.delete(t), y();
             case o.Yn.DEFAULT:
                 j();
         }
@@ -103,8 +103,8 @@ let I = new _(u.Z, {
         let { userIds: t } = e,
             n = c.default.getId(),
             r = t.reduce((e, t) => (n === t ? e : !!Z({ userId: t }) || e), !1),
-            l = y(),
-            i = O();
+            l = O(),
+            i = y();
         return r || l || i;
     },
     SECURE_FRAMES_TRANSIENT_KEY_CREATE: Z,

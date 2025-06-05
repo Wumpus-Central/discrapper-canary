@@ -1,8 +1,8 @@
-n.d(t, { O: () => a });
+n.d(t, { O: () => o });
 var r = n(255367),
-    l = n(73800),
-    i = n(709014);
-let o = {
+    i = n(73800),
+    l = n(709014);
+let a = {
         mute: {
             name: 'mute',
             start: 0,
@@ -24,31 +24,31 @@ let o = {
             duration: 40
         }
     },
-    a = (e) => {
-        let t = l.useRef(null),
-            a = l.useRef(e);
-        a.current = e;
-        let s = l.useMemo(
+    o = (e) => {
+        let t = i.useRef(null),
+            o = i.useRef(e);
+        o.current = e;
+        let s = i.useMemo(
                 () => () => {
                     null != t.current && t.current.play(e);
                 },
                 [e]
             ),
-            c = l.useCallback(() => {
+            c = i.useCallback(() => {
                 if (null == t.current) return;
                 let n = 'mute' === e ? 'hover_unmuted' : 'hover_muted';
                 t.current.play(n);
             }, [e]),
-            u = l.useCallback(() => {
+            u = i.useCallback(() => {
                 if (null == t.current) return;
                 let n = 'mute' === e ? 'hover_unmuted' : 'hover_muted';
                 t.current.stopIfPlaying(n);
             }, [e]),
-            d = l.useCallback((e) => {
-                var l, s;
+            d = i.useCallback((e) => {
+                var i, s;
                 return (0, r.jsx)(
-                    i.L,
-                    ((l = (function (e) {
+                    l.L,
+                    ((i = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
@@ -77,11 +77,11 @@ let o = {
                         {
                             src: () => n.e('410').then(n.t.bind(n, 992285, 19)),
                             ref: t,
-                            initialAnimation: a.current,
-                            markers: o
+                            initialAnimation: o.current,
+                            markers: a
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(s))
+                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -90,9 +90,9 @@ let o = {
                               }
                               return n;
                           })(Object(s)).forEach(function (e) {
-                              Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(s, e));
+                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
                           }),
-                    l)
+                    i)
                 );
             }, []);
         return {
@@ -102,11 +102,11 @@ let o = {
                 onMouseLeave: u
             },
             play: s,
-            getDuration: l.useCallback(() => {
+            getDuration: i.useCallback(() => {
                 var e;
                 return null == (e = t.current) ? void 0 : e.getDuration();
             }, []),
-            getCurrentFrame: l.useCallback(() => {
+            getCurrentFrame: i.useCallback(() => {
                 var e, n;
                 return null != (n = null == (e = t.current) ? void 0 : e.getCurrentFrame()) ? n : null;
             }, []),

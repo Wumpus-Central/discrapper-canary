@@ -1,9 +1,9 @@
-n.d(t, { e: () => d }), n(388685), n(35282);
+n.d(t, { e: () => u }), n(388685), n(35282);
 var r = n(772848),
     i = n(579806),
-    a = n(626135),
-    o = n(998502),
-    l = n(981631);
+    l = n(626135),
+    a = n(998502),
+    o = n(981631);
 function s(e, t, n) {
     return (
         t in e
@@ -22,8 +22,8 @@ let c = new (class {
         let t = Date.now();
         requestIdleCallback(() => {
             var n, r;
-            a.default.track(
-                l.rMx.APP_UI_VIEWED,
+            l.default.track(
+                o.rMx.APP_UI_VIEWED,
                 ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,7 +44,7 @@ let c = new (class {
                     (function () {
                         var e, t, n;
                         let r = '--campaign-id=';
-                        for (let a of null != (n = null === i.Z || void 0 === i.Z || null == (t = i.Z.processUtils) || null == (e = t.getMainArgvSync) ? void 0 : e.call(t)) ? n : []) if (a.startsWith(r)) return { referrer: a.substr(r.length) };
+                        for (let l of null != (n = null === i.Z || void 0 === i.Z || null == (t = i.Z.processUtils) || null == (e = t.getMainArgvSync) ? void 0 : e.call(t)) ? n : []) if (l.startsWith(r)) return { referrer: l.substr(r.length) };
                         return {};
                     })(),
                     (function () {
@@ -66,8 +66,8 @@ let c = new (class {
                                 window.performance.getEntries().forEach((n) => {
                                     let r = null != n.encodedBodySize ? n.encodedBodySize : n.decodedBodySize,
                                         i = null != n.decodedBodySize ? n.decodedBodySize : n.encodedBodySize,
-                                        a = n.transferSize;
-                                    null != i && null != r && ((e = !0), (t.total_compressed_byte_size += r), (t.total_uncompressed_byte_size += i), null != a && (t.total_uncompressed_byte_size += a), 'resource' === n.entryType && ('script' === n.initiatorType && null != n.name && null != n.name.match(/\.js/) && ((t.js_compressed_byte_size += r), (t.js_uncompressed_byte_size += i), null != a && (t.js_uncompressed_byte_size += a)), 'link' === n.initiatorType && null != n.name && null != n.name.match(/\.css/) && ((t.css_compressed_byte_size += r), (t.css_uncompressed_byte_size += i), null != a && (t.css_uncompressed_byte_size += a))));
+                                        l = n.transferSize;
+                                    null != i && null != r && ((e = !0), (t.total_compressed_byte_size += r), (t.total_uncompressed_byte_size += i), null != l && (t.total_uncompressed_byte_size += l), 'resource' === n.entryType && ('script' === n.initiatorType && null != n.name && null != n.name.match(/\.js/) && ((t.js_compressed_byte_size += r), (t.js_uncompressed_byte_size += i), null != l && (t.js_uncompressed_byte_size += l)), 'link' === n.initiatorType && null != n.name && null != n.name.match(/\.css/) && ((t.css_compressed_byte_size += r), (t.css_uncompressed_byte_size += i), null != l && (t.css_uncompressed_byte_size += l))));
                                 }),
                             e ? t : {}
                         );
@@ -78,7 +78,7 @@ let c = new (class {
                         load_id: this.loadId,
                         screen_name: e,
                         duration_ms_since_app_opened: t - window.GLOBAL_ENV.HTML_TIMESTAMP,
-                        app_hardware_acceleration_enabled: o.ZP.getEnableHardwareAcceleration()
+                        app_hardware_acceleration_enabled: a.ZP.getEnableHardwareAcceleration()
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -100,7 +100,7 @@ let c = new (class {
         if (!this.appUIViewed) {
             this.trackEvent(e);
             try {
-                o.ZP.appViewed();
+                a.ZP.appViewed();
             } catch (e) {}
             this.appUIViewed = !0;
         }
@@ -109,6 +109,6 @@ let c = new (class {
         s(this, 'loadId', (0, r.Z)()), s(this, 'appUIViewed', !1);
     }
 })();
-function d(e) {
+function u(e) {
     c.trackAppUIViewed(e);
 }

@@ -1,7 +1,7 @@
 n.d(t, {
     O5: () => W,
     V6: () => Y,
-    ZP: () => eD
+    ZP: () => ex
 }),
     n(35282),
     n(388685),
@@ -194,19 +194,19 @@ function Q(e) {
     e.guilds.forEach((e) => {
         var t;
         let n = e.id;
-        eb({
+        eO({
             id: n,
             members: e.members
         }),
             null == (t = e.activity_instances) ||
                 t.forEach((e) => {
-                    eE(n, e.participants);
+                    ey(n, e.participants);
                 });
     });
 }
 function X(e) {
     e.guilds.forEach((e) => {
-        eb(e);
+        eO(e);
     });
 }
 function J(e) {
@@ -387,22 +387,29 @@ function eh(e) {
     );
 }
 function em(e) {
-    let { guildId: t, user: n } = e,
-        r = P[t];
-    if (null == r || null == r[n.id]) return !1;
-    delete r[n.id], F(t, n.id), M++;
+    let { guildId: t, user: n } = e;
+    eE(t, n.id);
 }
 function eg(e) {
-    let { guild: t } = e;
-    return eb(t);
+    let { guildId: t, userId: n } = e;
+    eE(t, n);
 }
 function eE(e, t) {
-    return eb({
+    let n = P[e];
+    if (null == n || null == n[t]) return !1;
+    delete n[t], F(e, t), M++;
+}
+function eb(e) {
+    let { guild: t } = e;
+    return eO(t);
+}
+function ey(e, t) {
+    return eO({
         id: e,
         members: t.filter(c.Z).map((e) => e.member)
     });
 }
-function eb(e) {
+function eO(e) {
     let t = e.id;
     t in P || (P[e.id] = {});
     let n = v.Z.getGuild(t);
@@ -432,11 +439,11 @@ function eb(e) {
     }
     return !0;
 }
-function ey(e) {
+function ev(e) {
     let { guild: t } = e;
     delete P[t.id], delete R[t.id], F(t.id);
 }
-function eO(e) {
+function eI(e) {
     let t = P[e.guildId];
     if (null == t) return !1;
     let n = v.Z.getGuild(e.guildId);
@@ -464,7 +471,7 @@ function eO(e) {
         }
     }
 }
-function ev(e) {
+function eS(e) {
     var t, n, r;
     let { guildId: i, roles: o, addedRoleIds: s, removedRoleIds: l, flags: c } = e,
         u = y.default.getId(),
@@ -493,12 +500,12 @@ function ev(e) {
             fullProfileLoadedTimestamp: f.fullProfileLoadedTimestamp
         }));
 }
-function eI(e) {
+function eT(e) {
     let { guildId: t } = e;
     if (null == t) return !1;
     delete U[t];
 }
-function eS(e) {
+function eA(e) {
     let { guildId: t } = e,
         n = P[t];
     if (null == n) return !1;
@@ -522,12 +529,12 @@ function eS(e) {
         flags: a.flags
     });
 }
-function eT(e) {
+function eN(e) {
     var t;
     let { message: n, guildId: r } = e;
     (null == (t = n.resolved) ? void 0 : t.members) != null &&
         null != r &&
-        eb({
+        eO({
             id: r,
             members: Object.entries(n.resolved.members)
                 .map((e) => {
@@ -539,13 +546,13 @@ function eT(e) {
                 .filter((e) => null != e)
         });
 }
-function eA(e) {
+function eC(e) {
     var t;
     if ((null == (t = e.resolved) ? void 0 : t.members) == null) return;
     let n = O.Z.getChannel(e.channel_id);
     null == n ||
         n.isPrivate() ||
-        eb({
+        eO({
             id: n.guild_id,
             members: Object.entries(e.resolved.members)
                 .map((t) => {
@@ -557,27 +564,27 @@ function eA(e) {
                 .filter((e) => null != e)
         });
 }
-function eN(e) {
+function eP(e) {
     let { messages: t } = e;
-    t.forEach((e) => eA(e));
+    t.forEach((e) => eC(e));
 }
-function eC(e) {
+function eR(e) {
     let { pins: t } = e;
     t.forEach((e) => {
         let { message: t } = e;
-        return eA(t);
+        return eC(t);
     });
 }
-function eP(e) {
+function ew(e) {
     let { messages: t } = e;
-    t.forEach((e) => eN({ messages: e }));
+    t.forEach((e) => eP({ messages: e }));
 }
-function eR(e) {
+function eD(e) {
     let { location: t, participants: n } = e,
         r = (0, u.jS)(t);
-    return null == r && (r = (0, u.hu)(t)), null != r && eE(r, n);
+    return null == r && (r = (0, u.hu)(t)), null != r && ey(r, n);
 }
-class ew extends (r = s.ZP.Store) {
+class eL extends (r = s.ZP.Store) {
     initialize() {
         this.waitFor(v.Z, y.default, h.Z);
     }
@@ -690,42 +697,43 @@ class ew extends (r = s.ZP.Store) {
         return M;
     }
 }
-S(ew, 'displayName', 'GuildMemberStore');
-let eD = new ew(l.Z, {
+S(eL, 'displayName', 'GuildMemberStore');
+let ex = new eL(l.Z, {
     CONNECTION_OPEN: q,
     CONNECTION_OPEN_SUPPLEMENTAL: Q,
     OVERLAY_INITIALIZE: J,
     CACHE_LOADED: $,
     CACHE_LOADED_LAZY: ee,
-    GUILD_CREATE: eg,
-    GUILD_DELETE: ey,
+    GUILD_CREATE: eb,
+    GUILD_DELETE: ev,
     GUILD_MEMBER_ADD: er,
     GUILD_MEMBER_UPDATE: er,
-    GUILD_MEMBER_UPDATE_LOCAL: ev,
+    GUILD_MEMBER_UPDATE_LOCAL: eS,
     GUILD_MEMBERS_CHUNK_BATCH: es,
     GUILD_MEMBER_REMOVE: em,
+    GUILD_MEMBER_REMOVE_LOCAL: eg,
     THREAD_MEMBER_LIST_UPDATE: ec,
     THREAD_MEMBERS_UPDATE: ef,
     LOAD_ARCHIVED_THREADS_SUCCESS: eu,
     LOAD_FORUM_POSTS: ed,
-    GUILD_ROLE_UPDATE: eO,
-    GUILD_ROLE_DELETE: eO,
+    GUILD_ROLE_UPDATE: eI,
+    GUILD_ROLE_DELETE: eI,
     GUILD_ROLE_MEMBER_REMOVE: ea,
     GUILD_ROLE_MEMBER_ADD: ei,
     GUILD_MEMBER_PROFILE_UPDATE: eo,
-    IMPERSONATE_UPDATE: eS,
-    IMPERSONATE_STOP: eS,
+    IMPERSONATE_UPDATE: eA,
+    IMPERSONATE_STOP: eA,
     PASSIVE_UPDATE_V2: el,
-    CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES: eI,
+    CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES: eT,
     LOCAL_MESSAGES_LOADED: en,
-    MESSAGE_CREATE: eT,
-    MESSAGE_UPDATE: eT,
-    LOAD_MESSAGES_SUCCESS: eN,
-    LOAD_MESSAGES_AROUND_SUCCESS: eN,
-    LOAD_RECENT_MENTIONS_SUCCESS: eN,
-    LOAD_PINNED_MESSAGES_SUCCESS: eC,
-    SEARCH_FINISH: eP,
-    MOD_VIEW_SEARCH_FINISH: eP,
+    MESSAGE_CREATE: eN,
+    MESSAGE_UPDATE: eN,
+    LOAD_MESSAGES_SUCCESS: eP,
+    LOAD_MESSAGES_AROUND_SUCCESS: eP,
+    LOAD_RECENT_MENTIONS_SUCCESS: eP,
+    LOAD_PINNED_MESSAGES_SUCCESS: eR,
+    SEARCH_FINISH: ew,
+    MOD_VIEW_SEARCH_FINISH: ew,
     MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eh,
-    EMBEDDED_ACTIVITY_UPDATE_V2: eR
+    EMBEDDED_ACTIVITY_UPDATE_V2: eD
 });

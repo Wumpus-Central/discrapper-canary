@@ -108,7 +108,8 @@ let c = {
                               })
                             : void 0,
                         inSoundmojiExperiment: m
-                    })
+                    }),
+                    A.xU(u, O.intl.string(O.t['rrh/W1']), { showActivities: !1 })
                 ];
             case M.d4z.GUILD_FORUM:
             case M.d4z.GUILD_MEDIA:

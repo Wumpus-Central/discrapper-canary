@@ -1,20 +1,20 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(255367);
 n(73800);
-var l = n(442837),
-    i = n(481060),
-    o = n(572691),
-    a = n(287734),
+var i = n(442837),
+    l = n(481060),
+    a = n(572691),
+    o = n(287734),
     s = n(872810),
     c = n(40851),
     u = n(102172),
     d = n(199902),
-    p = n(592125),
-    f = n(585483),
+    f = n(592125),
+    p = n(585483),
     m = n(915863),
     g = n(981631),
     b = n(388032),
-    O = n(128746);
+    _ = n(128746);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,7 +40,7 @@ function h(e) {
     }
     return e;
 }
-function y(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,50 +58,50 @@ function y(e, t) {
         e
     );
 }
-function v(e) {
-    let { isCurrentUser: t, color: n, look: v, applicationStream: S, onAction: j } = e,
-        { activeStream: P, watchingOtherStream: I } = (0, l.cj)([d.Z], () => ({
-            activeStream: d.Z.getActiveStreamForApplicationStream(S),
+function y(e) {
+    let { isCurrentUser: t, color: n, look: y, applicationStream: O, onAction: j } = e,
+        { activeStream: S, watchingOtherStream: x } = (0, i.cj)([d.Z], () => ({
+            activeStream: d.Z.getActiveStreamForApplicationStream(O),
             watchingOtherStream:
-                null != S &&
-                d.Z.getAllActiveStreamsForChannel(S.channelId).filter((e) => {
+                null != O &&
+                d.Z.getAllActiveStreamsForChannel(O.channelId).filter((e) => {
                     let { ownerId: t } = e;
-                    return t !== S.ownerId;
+                    return t !== O.ownerId;
                 }).length > 0
         })),
-        E = (0, l.e7)([p.Z], () => p.Z.getChannel(null == S ? void 0 : S.channelId)),
-        [Z, x] = (0, u.wq)(E),
-        C = (0, c.Aq)(),
-        T = null != P && null != S && P.state !== g.jm8.ENDED && P.ownerId === S.ownerId,
-        A = (e) => {
-            null != S && (null == j || j(), a.default.selectVoiceChannel(S.channelId), T || (0, s.iV)(S, { forceMultiple: e }), C.dispatch(g.CkL.POPOUT_CLOSE), f.S.dispatch(g.CkL.MODAL_CLOSE), o.Z.popAll());
+        I = (0, i.e7)([f.Z], () => f.Z.getChannel(null == O ? void 0 : O.channelId)),
+        [P, C] = (0, u.wq)(I),
+        E = (0, c.Aq)(),
+        w = null != S && null != O && S.state !== g.jm8.ENDED && S.ownerId === O.ownerId,
+        T = (e) => {
+            null != O && (null == j || j(), o.default.selectVoiceChannel(O.channelId), w || (0, s.iV)(O, { forceMultiple: e }), E.dispatch(g.CkL.POPOUT_CLOSE), p.S.dispatch(g.CkL.MODAL_CLOSE), a.Z.popAll());
         };
-    if (null == S) return null;
-    let N = (0, u.P9)(x);
-    t ? (N = b.intl.string(b.t.XvBdeX)) : T && (N = b.intl.string(b.t.JH1SJy));
-    let w = {
+    if (null == O) return null;
+    let N = (0, u.P9)(C);
+    t ? (N = b.intl.string(b.t.XvBdeX)) : w && (N = b.intl.string(b.t.JH1SJy));
+    let Z = {
         color: n,
-        look: v
+        look: y
     };
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(
                 m.Z,
-                y(
+                v(
                     h(
                         {
-                            disabled: t || T || !Z,
-                            onClick: () => A(!1)
+                            disabled: t || w || !P,
+                            onClick: () => T(!1)
                         },
-                        w
+                        Z
                     ),
                     {
                         fullWidth: !0,
                         children: [
-                            (0, r.jsx)(i.hGI, {
+                            (0, r.jsx)(l.hGI, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: O.streamIcon
+                                className: _.streamIcon
                             }),
                             N
                         ]
@@ -109,29 +109,29 @@ function v(e) {
                 ),
                 'play'
             ),
-            I && !T
-                ? (0, r.jsx)(i.ua7, {
+            x && !w
+                ? (0, r.jsx)(l.ua7, {
                       text: b.intl.string(b.t.wCrzur),
                       children: (e) =>
                           (0, r.jsx)(
                               m.Z,
-                              y(
+                              v(
                                   h(
-                                      y(h({}, e), {
+                                      v(h({}, e), {
                                           onClick: () => {
                                               var t;
-                                              null == (t = e.onClick) || t.call(e), A(!0);
+                                              null == (t = e.onClick) || t.call(e), T(!0);
                                           }
                                       }),
-                                      w
+                                      Z
                                   ),
                                   {
-                                      className: O.iconButton,
-                                      size: O.iconButtonSize,
-                                      children: (0, r.jsx)(i.OgY, {
+                                      className: _.iconButton,
+                                      size: _.iconButtonSize,
+                                      children: (0, r.jsx)(l.OgY, {
                                           size: 'xs',
                                           color: 'currentColor',
-                                          className: O.iconSize
+                                          className: _.iconSize
                                       })
                                   }
                               )

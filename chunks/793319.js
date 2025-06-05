@@ -54,7 +54,7 @@ var r = n(255367),
     X = n(698877),
     Q = n(25827),
     J = n(875527),
-    $ = n(306609),
+    $ = n(540650),
     ee = n(199902),
     et = n(523746),
     en = n(131951),
@@ -529,23 +529,11 @@ let eT = function (e) {
                                           renderPopout: (e) => {
                                               let { closePopout: t } = e;
                                               return (0, r.jsx)(H.Z, {
-                                                  children: ee
-                                                      ? (0, r.jsx)($.l, {
-                                                            wide: !0,
-                                                            showOutputDevices: !0,
-                                                            onSettingsButtonClick: t
-                                                        })
-                                                      : (0, r.jsx)(E.default, {
-                                                            onClose: t,
-                                                            renderInputDevices: !0,
-                                                            renderOutputDevices: !0,
-                                                            renderInputModes: !0,
-                                                            renderInputVolume: !0,
-                                                            renderOutputVolume: !0,
-                                                            renderDeafen: !0,
-                                                            minimal: !0,
-                                                            onInteraction: eN('AudioDeviceMenu')
-                                                        })
+                                                  children: (0, r.jsx)($.R, {
+                                                      onClose: t,
+                                                      location: C.Z.VOICE_CONTROL_TRAY,
+                                                      onInteraction: eN('AudioDeviceMenu')
+                                                  })
                                               });
                                           },
                                           align: 'center',

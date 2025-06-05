@@ -29,8 +29,8 @@ var r = n(255367),
     A = n(795448),
     x = n(441623),
     Z = n(457396),
-    L = n(108989),
-    w = n(51596),
+    w = n(108989),
+    L = n(51596),
     R = n(905423),
     D = n(155409),
     k = n(210887),
@@ -161,7 +161,7 @@ let er = (e) => {
                 ),
                 h &&
                     !u &&
-                    (0, r.jsx)(L.Z, {
+                    (0, r.jsx)(w.Z, {
                         className: $.confetti,
                         wind: 0,
                         sprites: q.CA,
@@ -291,7 +291,7 @@ let er = (e) => {
                     }
                 });
     },
-    ec = () => (0, w.$Z)('DM_SEARCH');
+    ec = () => (0, L.$Z)('DM_SEARCH');
 function eu(e) {
     switch (e) {
         case K.Z5c.APPLICATION_LIBRARY:

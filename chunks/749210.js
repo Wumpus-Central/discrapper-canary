@@ -251,15 +251,23 @@ let G = {
         });
     },
     kickUser: (e, t, n, r) =>
-        a.tn.del({
-            url: A.ANM.GUILD_MEMBER(e, t),
-            query: {
-                reason: n,
-                moderator_report_id: r
-            },
-            oldFormErrors: !0,
-            rejectWithError: !1
-        }),
+        a.tn
+            .del({
+                url: A.ANM.GUILD_MEMBER(e, t),
+                query: {
+                    reason: n,
+                    moderator_report_id: r
+                },
+                oldFormErrors: !0,
+                rejectWithError: !1
+            })
+            .then(() => {
+                o.Z.dispatch({
+                    type: 'GUILD_MEMBER_REMOVE_LOCAL',
+                    guildId: e,
+                    userId: t
+                });
+            }),
     setCommunicationDisabledUntil(e) {
         let { guildId: t, userId: n, communicationDisabledUntilTimestamp: i, duration: a, reason: o, location: s, moderatorReportId: l } = e;
         return S.Z.patch({

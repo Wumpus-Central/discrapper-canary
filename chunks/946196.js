@@ -1,20 +1,20 @@
-n.d(t, { l: () => u }), n(388685);
+n.d(t, { l: () => d }), n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(386230),
-    o = n(442837),
-    l = n(481060),
+    l = n(386230),
+    a = n(442837),
+    o = n(481060),
     s = n(709706),
     c = n(388032),
-    d = n(791422);
-function u() {
-    let e = (0, o.e7)([s.Z], () => s.Z.getError());
-    return e ? (0, r.jsx)(_, { error: e }) : null;
+    u = n(791422);
+function d() {
+    let e = (0, a.e7)([s.Z], () => s.Z.getError());
+    return e ? (0, r.jsx)(f, { error: e }) : null;
 }
-let _ = (e) => {
+let f = (e) => {
     let { error: t } = e,
-        [n, o] = (0, i.useState)(!1),
-        u = (0, l.Yzy)(
+        [n, a] = (0, i.useState)(!1),
+        d = (0, o.Yzy)(
             !n,
             {
                 from: {
@@ -32,7 +32,7 @@ let _ = (e) => {
             },
             'respect-motion-settings'
         ),
-        _ = (() => {
+        f = (() => {
             switch (t) {
                 case s.r.ERROR_DOWNLOADING_DEPENDENCY:
                     return c.intl.string(c.t.D9neaG);
@@ -42,21 +42,21 @@ let _ = (e) => {
                     return c.intl.string(c.t.F8FvU1);
             }
         })();
-    return u((e) =>
+    return d((e) =>
         n
             ? null
-            : (0, r.jsx)(a.animated.div, {
+            : (0, r.jsx)(l.animated.div, {
                   style: e,
-                  className: d.floaterWrapper,
+                  className: u.floaterWrapper,
                   children: (0, r.jsxs)('div', {
-                      className: d.visibleFloater,
+                      className: u.visibleFloater,
                       children: [
-                          (0, r.jsx)(l.Text, {
+                          (0, r.jsx)(o.Text, {
                               variant: 'text-sm/semibold',
                               color: 'always-white',
-                              children: _
+                              children: f
                           }),
-                          (0, r.jsx)(l.RyX, { onClick: () => o(!0) })
+                          (0, r.jsx)(o.RyX, { onClick: () => a(!0) })
                       ]
                   })
               })

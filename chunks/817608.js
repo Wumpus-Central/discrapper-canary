@@ -1,56 +1,53 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    a = n(271383),
-    o = n(430824),
-    s = n(594174),
-    c = n(216572),
-    u = n(262746),
-    d = n(211640),
-    p = n(436355),
-    h = n(214110);
-function f(e) {
-    let { channel: t, message: n, snapshot: f } = e,
-        { moderatorReport: m } = f,
-        g = null == m ? void 0 : m.reported_user_id,
-        b = (0, l.e7)([s.default], () => (null != g ? s.default.getUser(g) : null)),
-        _ = (0, l.e7)([o.Z], () => o.Z.getGuild(t.guild_id)),
-        x = (0, l.e7)([a.ZP], () => (null != b ? a.ZP.getMember(t.guild_id, null == b ? void 0 : b.id) : null));
-    (0, c.Cv)(n);
-    let y = (0, u.Z)({
+    a = n(430824),
+    o = n(594174),
+    s = n(216572),
+    c = n(262746),
+    u = n(211640),
+    d = n(436355),
+    p = n(214110);
+function h(e) {
+    let { channel: t, message: n, snapshot: h } = e,
+        { moderatorReport: f } = h,
+        m = null == f ? void 0 : f.reported_user_id,
+        g = (0, l.e7)([o.default], () => (null != m ? o.default.getUser(m) : null)),
+        b = (0, l.e7)([a.Z], () => a.Z.getGuild(t.guild_id));
+    (0, s.Cv)(n);
+    let _ = (0, c.Z)({
             channel: t,
-            user: b,
-            guild: _
+            user: g,
+            guild: b
         }),
-        C = (0, p.Z)({
+        x = (0, d.Z)({
             channel: t,
-            user: b,
-            member: x,
-            guild: _
+            user: g,
+            guild: b
         }),
-        v = [
-            (0, d.Z)({
+        y = [
+            (0, u.Z)({
                 message: n,
-                user: b,
-                guild: _
+                user: g,
+                guild: b
             }),
-            y,
-            C,
-            (0, h.Z)({
+            _,
+            x,
+            (0, p.Z)({
                 channel: t,
-                user: b,
-                guild: _
+                user: g,
+                guild: b
             })
         ].filter((e) => null != e);
-    return t.isModeratorReportChannel() && 0 !== v.length ? (0, r.jsx)(r.Fragment, { children: v.map((e, t) => (0, r.jsx)(i.Fragment, { children: e }, t)) }) : null;
+    return t.isModeratorReportChannel() && 0 !== y.length ? (0, r.jsx)(r.Fragment, { children: y.map((e, t) => (0, r.jsx)(i.Fragment, { children: e }, t)) }) : null;
 }
-function m(e) {
+function f(e) {
     let { message: t, channel: n } = e;
     return (0, r.jsx)(r.Fragment, {
         children: t.messageSnapshots.map((e, i) =>
             (0, r.jsx)(
-                f,
+                h,
                 {
                     channel: n,
                     message: t,

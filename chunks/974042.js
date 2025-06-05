@@ -250,24 +250,24 @@ class j {
 let A = !0,
     x = !1,
     Z = O.pJs.ONLINE,
-    L = new j(),
-    w = !0,
+    w = new j(),
+    L = !0,
     R = !1;
 function D() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     A && (e || (Z !== O.pJs.ONLINE && Z !== O.pJs.ADD_FRIEND)) && !x && ((A = !1), (x = !0), s.Z.fetchRelationships());
 }
 function k() {
-    if (((A = !0), w ? (x = !1) : D(), (L = L.reset()), R)) return;
-    let e = L.getRelationshipCounts();
+    if (((A = !0), L ? (x = !1) : D(), (w = w.reset()), R)) return;
+    let e = w.getRelationshipCounts();
     Z = 0 === e[O.OGo.FRIEND] ? (0 !== e[O.OGo.PENDING_INCOMING] ? O.pJs.PENDING : O.pJs.ADD_FRIEND) : O.pJs.ONLINE;
 }
 function M() {
-    L = w ? new j() : L.reset();
+    w = L ? new j() : w.reset();
 }
 function U(e) {
     return function () {
-        return !w && !!L.update(e) && ((L = L.clone()), !0);
+        return !L && !!w.update(e) && ((w = w.clone()), !0);
     };
 }
 class G extends (r = a.ZP.Store) {
@@ -278,7 +278,7 @@ class G extends (r = a.ZP.Store) {
         return {
             fetching: x,
             section: Z,
-            rows: L
+            rows: w
         };
     }
 }
@@ -292,7 +292,7 @@ let B = new G(o.Z, {
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        return (w = null != t), M(), !w;
+        return (L = null != t), M(), !L;
     },
     LOAD_RELATIONSHIPS_SUCCESS: function () {
         x = !1;

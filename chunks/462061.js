@@ -20,8 +20,8 @@ var r = n(255367),
     v = n(518950),
     S = n(470956),
     b = n(314897),
-    y = n(271383),
-    O = n(131951),
+    O = n(271383),
+    y = n(131951),
     Z = n(451478),
     j = n(5192),
     _ = n(44136),
@@ -93,16 +93,16 @@ function T(e) {
         : (0, r.jsx)(w.Z, { userId: n.user.id });
 }
 function D(e) {
-    let { participant: t, channel: n, inCall: i, width: u, selected: S, fit: w, onVideoResize: T, blocked: D, ignored: M, noVideoRender: L = !1, pulseSpeakingIndicator: k = !1, inOverlayPopout: U = !1, paused: F = !1 } = e,
-        V = O.Z.getVideoComponent(),
+    let { participant: t, channel: n, inCall: i, width: u, selected: S, fit: w, onVideoResize: T, blocked: D, ignored: M, noVideoRender: k = !1, pulseSpeakingIndicator: L = !1, inOverlayPopout: U = !1, paused: F = !1 } = e,
+        V = y.Z.getVideoComponent(),
         W = (0, o.e7)([b.default], () => b.default.getId()),
         { user: H, streamId: Y, speaking: z } = t,
         G = H.id === W,
         K = (0, _.ZP)(t),
         B = (0, o.e7)([Z.Z], () => Z.Z.isFocused()),
         q = (0, o.e7)([h.Z], () => h.Z.getWindowFocused(P.KJ3.CHANNEL_CALL_POPOUT)),
-        J = (0, o.e7)([O.Z], () => null != H.id && O.Z.isLocalVideoDisabled(H.id, (0, f.Z)(t.type)), [H.id, t.type]),
-        X = (0, o.e7)([y.ZP], () => y.ZP.isGuestOrLurker(n.guild_id, H.id)),
+        J = (0, o.e7)([y.Z], () => null != H.id && y.Z.isLocalVideoDisabled(H.id, (0, f.Z)(t.type)), [H.id, t.type]),
+        X = (0, o.e7)([O.ZP], () => O.ZP.isGuestOrLurker(n.guild_id, H.id)),
         Q = j.ZP.getName(n.getGuildId(), n.id, H) + (X ? ' '.concat(x.intl.string(x.t['pFO/Pj'])) : ''),
         $ = z && (q || B),
         ee = u < 124 ? C : N,
@@ -128,7 +128,7 @@ function D(e) {
         let { channel: e, selectedParticipant: t, user: n } = eo.current;
         e.isGuildStageVoice() && !K && (null == t ? void 0 : t.id) === n.id && s.Z.selectParticipant(e.id, null);
     }, [K]),
-    i && !J && !L && K && !S && null != V && O.Z.supports(A.AN.VIDEO))
+    i && !J && !k && K && !S && null != V && y.Z.supports(A.AN.VIDEO))
         ? null != el && null == ei
             ? (0, r.jsx)(I.Z, {
                   avError: el,
@@ -160,7 +160,7 @@ function D(e) {
                   avatarDecoration: en,
                   backgroundSrc: H.getAvatarURL(n.guild_id, 80),
                   size: ee,
-                  pulseSpeakingIndicator: k,
+                  pulseSpeakingIndicator: L,
                   speaking: z,
                   userId: H.id
               })

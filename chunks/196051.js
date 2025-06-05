@@ -1,36 +1,36 @@
 n.d(t, {
-    Bo: () => o,
+    Bo: () => a,
     Ct: () => s,
-    LA: () => a,
-    NB: () => l,
+    LA: () => l,
+    NB: () => o,
     cP: () => i
 });
 var r = n(570140);
-function i(e, t, n, i, a) {
+function i(e, t, n, i, l) {
     r.Z.dispatch({
         type: 'SPEAK_TEXT',
         text: e,
         interrupt: t,
         maxLength: n,
         onStart: i,
-        onEnd: a
+        onEnd: l
     });
 }
-function a(e, t) {
+function l(e, t) {
     r.Z.dispatch({
         type: 'SPEAK_MESSAGE',
         channel: e,
         message: t
     });
 }
-function o(e, t) {
+function a(e, t) {
     r.Z.dispatch({
         type: 'SPEAKING_MESSAGE',
         channelId: e,
         messageId: t
     });
 }
-function l() {
+function o() {
     r.Z.dispatch({ type: 'STOP_SPEAKING' });
 }
 function s(e) {

@@ -1,16 +1,16 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => o });
 var r = n(388032);
 let i = ['a', 'b', 'c', 'd'],
-    a = (e) => e;
-function o(e, t) {
+    l = (e) => e;
+function a(e, t) {
     let n = {},
         r = Math.min(e.length, i.length);
-    for (let a = 0; a < r; ++a) n[i[a]] = (n, r) => t(e[a], r);
+    for (let l = 0; l < r; ++l) n[i[l]] = (n, r) => t(e[l], r);
     return n;
 }
-class l {
+class o {
     asString() {
-        return this.transformed(a);
+        return this.transformed(l);
     }
     isEmpty() {
         return 0 === this.items.length;
@@ -22,11 +22,11 @@ class l {
             case 1:
                 return e(this.items[0], '');
             case 2:
-                return r.intl.format(r.t.GENERIC_FORMATTED_LIST_TWO, o(this.items, e));
+                return r.intl.format(r.t.GENERIC_FORMATTED_LIST_TWO, a(this.items, e));
             case 3:
-                return r.intl.format(r.t.GENERIC_FORMATTED_LIST_THREE, o(this.items, e));
+                return r.intl.format(r.t.GENERIC_FORMATTED_LIST_THREE, a(this.items, e));
             default:
-                return r.intl.format(r.t.GENERIC_FORMATTED_LIST_FOUR, o(this.items, e));
+                return r.intl.format(r.t.GENERIC_FORMATTED_LIST_FOUR, a(this.items, e));
         }
     }
     constructor(e) {

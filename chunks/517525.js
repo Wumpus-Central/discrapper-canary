@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -17,8 +17,8 @@ var r = n(255367),
     v = n(626135),
     S = n(74538),
     b = n(557457),
-    y = n(475674),
-    O = n(981631),
+    O = n(475674),
+    y = n(981631),
     Z = n(474936),
     j = n(388032),
     _ = n(374336);
@@ -89,7 +89,7 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             i,
             { participant: o, isUpsellEnabled: u, shape: d, size: E, didTrackUpsellViewed: P, setDidTrackUpsellViewed: A, className: x, premiumIndicator: R, quality: N } = e,
             { analyticsLocations: C } = (0, m.ZP)(),
-            T = null != (0, y.Z)(o);
+            T = null != (0, O.Z)(o);
         try {
             t = (0, b.nG)(N);
         } catch (e) {
@@ -102,21 +102,21 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         }
         let D = t || i,
             { location: M } = (0, p.O)(),
-            L = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
-            k = u && !S.ZP.isPremium(L, Z.p9.TIER_1) && !S.ZP.canStreamQuality(S.ZP.StreamQuality.MID, L),
+            k = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
+            L = u && !S.ZP.isPremium(k, Z.p9.TIER_1) && !S.ZP.canStreamQuality(S.ZP.StreamQuality.MID, k),
             U = l.useCallback(() => {
-                k &&
+                L &&
                     D &&
                     (0, f.ZDy)(async () => {
                         let { default: e } = await n.e('28479').then(n.bind(n, 78865));
                         return (t) => (0, r.jsx)(e, w(I({}, t), { analyticsSource: M }));
                     });
-            }, [k, D, M]);
+            }, [L, D, M]);
         if (
             (l.useEffect(() => {
                 !P &&
                     D &&
-                    (v.default.track(O.rMx.PREMIUM_UPSELL_VIEWED, {
+                    (v.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: Z.cd.STREAM_QUALITY_INDICATOR,
                         has_premium_stream_fps: t,
                         has_premium_stream_resolution: i,
@@ -136,7 +136,7 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                     f.P3F,
                     w(I({}, e), {
                         onClick: U,
-                        className: a()(_.qualityIndicator, E, g.eE[d], T ? _.qualityIndicatorLowQuality : _.qualityIndicatorFullQuality, { [_.clickable]: k && D }),
+                        className: a()(_.qualityIndicator, E, g.eE[d], T ? _.qualityIndicatorLowQuality : _.qualityIndicatorFullQuality, { [_.clickable]: L && D }),
                         children: [
                             D
                                 ? (0, r.jsx)(f.SrA, {
@@ -161,7 +161,7 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             shape: d
         });
     },
-    L = (e) => {
+    k = (e) => {
         let { participant: t, showQuality: n, isUpsellEnabled: i = !0, size: u, className: s, premiumIndicator: c } = e,
             [d, p] = l.useState(!1),
             m = (0, b.W3)(t),
@@ -182,7 +182,7 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 },
                 'animate-always'
             ),
-            y = (0, f.q_F)(
+            O = (0, f.q_F)(
                 {
                     to: v ? T : C,
                     config: D
@@ -214,7 +214,7 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                                 : null
                         ),
                         (0, r.jsx)(o.animated.div, {
-                            style: y,
+                            style: O,
                             className: _.liveIndicator,
                             children: (0, r.jsx)(g.ZP, {
                                 look: g.jZ.RED,

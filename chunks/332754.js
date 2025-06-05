@@ -1,39 +1,45 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => O });
 var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(570140),
     a = n(84615),
     o = n(429142),
-    s = n(377656),
-    c = n(1964),
-    u = n(852758),
-    d = n(314897),
-    p = n(594174),
-    h = n(374023),
-    f = n(886162),
-    g = n(981631),
-    m = n(815660),
-    b = n(308569),
-    _ = n(231338);
-let E = {
+    s = n(886412),
+    c = n(377656),
+    u = n(1964),
+    d = n(852758),
+    p = n(314897),
+    h = n(594174),
+    f = n(374023),
+    g = n(886162),
+    m = n(981631),
+    b = n(815660),
+    _ = n(308569),
+    E = n(231338);
+let O = {
     init() {
-        l.Z.subscribe('CONNECTION_OPEN', this.handleRequiredAction), l.Z.subscribe('USER_REQUIRED_ACTION_UPDATE', this.handleRequiredAction), l.Z.subscribe('CURRENT_USER_UPDATE', this.handleCurrentUserUpdate), d.default.addChangeListener(this.handleAuthenticationStoreChanged);
+        l.Z.subscribe('CONNECTION_OPEN', this.handleRequiredAction), l.Z.subscribe('USER_REQUIRED_ACTION_UPDATE', this.handleRequiredAction), l.Z.subscribe('CURRENT_USER_UPDATE', this.handleCurrentUserUpdate), p.default.addChangeListener(this.handleAuthenticationStoreChanged);
     },
     handleRequiredAction(e) {
         let t = e.requiredAction;
-        !h.s.isDisallowPopupsSet() &&
-            null != p.default.getCurrentUser() &&
-            (t === g.c2C.REQUIRE_CAPTCHA || t === g.c2C.REQUIRE_VERIFIED_EMAIL || t === g.c2C.REQUIRE_VERIFIED_PHONE || t === g.c2C.REQUIRE_REVERIFIED_PHONE || t === g.c2C.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE || t === g.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === g.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE || c.Z.isEmailReverification(t)
-                ? (0, a.q4)(() => (0, r.jsx)(u.Z, {}), {
-                      layerKey: b.CV,
-                      Layer: o.ZP
-                  })
-                : t === g.c2C.AGREEMENTS
+        !f.s.isDisallowPopupsSet() &&
+            null != h.default.getCurrentUser() &&
+            (t === m.c2C.REQUIRE_CAPTCHA || t === m.c2C.REQUIRE_VERIFIED_EMAIL || t === m.c2C.REQUIRE_VERIFIED_PHONE || t === m.c2C.REQUIRE_REVERIFIED_PHONE || t === m.c2C.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE || t === m.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === m.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE || u.Z.isEmailReverification(t)
+                ? (0, s.VJ)({ location: 'verification-legacy' })
+                    ? (0, a.q4)(() => (0, r.jsx)(c.Z, {}), {
+                          layerKey: _.CV,
+                          Layer: o.ZP
+                      })
+                    : (0, a.q4)(() => (0, r.jsx)(d.Z, {}), {
+                          layerKey: _.CV,
+                          Layer: o.ZP
+                      })
+                : t === m.c2C.AGREEMENTS
                   ? (0, i.h7j)(
                         (e) =>
                             (0, r.jsx)(
-                                f.Z,
+                                g.Z,
                                 (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,22 +67,23 @@ let E = {
                                 })({}, e)
                             ),
                         {
-                            modalKey: b.f1,
-                            onCloseRequest: _.Vq
+                            modalKey: _.f1,
+                            onCloseRequest: E.Vq
                         }
                     )
-                  : t === g.c2C.REQUIRE_SAFETY_FLOWS
-                    ? (0, a.q4)(() => (0, r.jsx)(s.Z, {}), {
-                          layerKey: b.CV,
+                  : t === m.c2C.REQUIRE_SAFETY_FLOWS
+                    ? (0, s.VJ)({ location: 'verification-safety-flows' }) &&
+                      (0, a.q4)(() => (0, r.jsx)(c.Z, {}), {
+                          layerKey: _.CV,
                           Layer: o.ZP
                       })
-                    : null == t && ((0, a.ob)(b.CV), (0, i.nfh)(b.f1) && (0, i.Mr3)(b.f1)));
+                    : null == t && ((0, a.ob)(_.CV), (0, i.nfh)(_.f1) && (0, i.Mr3)(_.f1)));
     },
     handleAuthenticationStoreChanged() {
-        null == d.default.getId() && ((0, a.ob)(b.CV), (0, i.Mr3)(b.f1), (0, i.Mr3)(b.HR), (0, i.Mr3)(b.F0), (0, i.Mr3)(m.M));
+        null == p.default.getId() && ((0, a.ob)(_.CV), (0, i.Mr3)(_.f1), (0, i.Mr3)(_.HR), (0, i.Mr3)(_.F0), (0, i.Mr3)(b.M));
     },
     handleCurrentUserUpdate(e) {
         let { user: t } = e;
-        t.verified && (0, i.Mr3)(b.F0);
+        t.verified && (0, i.Mr3)(_.F0);
     }
 };

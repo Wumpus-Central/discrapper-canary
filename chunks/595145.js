@@ -18,8 +18,8 @@ var o = n(255367),
     h = n(680295),
     j = n(189156),
     g = n(706454),
-    v = n(430824),
-    I = n(699516),
+    I = n(430824),
+    v = n(699516),
     O = n(246946),
     P = n(5192),
     N = n(111361),
@@ -73,20 +73,20 @@ function en(e) {
             opacity: +(null != eh.interactionType),
             config: { duration: 150 }
         }),
-        eg = (0, a.e7)([v.Z], () => (null != en ? v.Z.getGuild(en) : null)),
-        ev = r.useMemo(() => (null != en ? { [en]: [n.id] } : {}), [en, n.id]);
-    (0, f.$)(ev);
-    let eI = (0, T.ZP)(n.id, ep ? en : void 0),
-        eO = P.ZP.useName(null == eI ? void 0 : eI.guildId, eo, n),
-        { relationshipType: eP, originApplicationId: eN } = (0, a.cj)([I.Z], () => ({
-            relationshipType: I.Z.getRelationshipType(n.id),
-            originApplicationId: I.Z.getOriginApplicationId(n.id)
+        eg = (0, a.e7)([I.Z], () => (null != en ? I.Z.getGuild(en) : null)),
+        eI = r.useMemo(() => (null != en ? { [en]: [n.id] } : {}), [en, n.id]);
+    (0, f.$)(eI);
+    let ev = (0, T.ZP)(n.id, ep ? en : void 0),
+        eO = P.ZP.useName(null == ev ? void 0 : ev.guildId, eo, n),
+        { relationshipType: eP, originApplicationId: eN } = (0, a.cj)([v.Z], () => ({
+            relationshipType: v.Z.getRelationshipType(n.id),
+            originApplicationId: v.Z.getOriginApplicationId(n.id)
         })),
         eA = (0, a.e7)([O.Z], () => O.Z.hidePersonalInformation),
         eZ =
-            null == eI
+            null == ev
                 ? void 0
-                : eI.getBannerURL({
+                : ev.getBannerURL({
                       canAnimate: !1,
                       size: 1024
                   }),
@@ -105,9 +105,9 @@ function en(e) {
         children: (0, o.jsx)(A.Mt, {
             value: ey,
             openedAt: eu,
-            fetchStartedAt: null == eI ? void 0 : eI.fetchStartedAt,
-            fetchEndedAt: null == eI ? void 0 : eI.fetchEndedAt,
-            isLoaded: null == eI ? void 0 : eI.isLoaded,
+            fetchStartedAt: null == ev ? void 0 : ev.fetchStartedAt,
+            fetchEndedAt: null == ev ? void 0 : ev.fetchEndedAt,
+            isLoaded: null == ev ? void 0 : ev.isLoaded,
             children: (0, o.jsx)(w.NJ, {
                 value: eh,
                 children: (0, o.jsx)(s.Y0X, {
@@ -119,7 +119,7 @@ function en(e) {
                     children: (0, o.jsxs)(F.Z, {
                         ref: e_,
                         user: n,
-                        displayProfile: eI,
+                        displayProfile: ev,
                         themeType: Q.lY.MODAL_V2,
                         children: [
                             null != eZ &&
@@ -140,7 +140,7 @@ function en(e) {
                                         children: [
                                             (0, o.jsx)(B.Z, {
                                                 user: n,
-                                                displayProfile: eI,
+                                                displayProfile: ev,
                                                 themeType: Q.lY.MODAL_V2
                                             }),
                                             (0, o.jsx)(R.Z, {
@@ -151,7 +151,7 @@ function en(e) {
                                             (0, o.jsx)(S.Z, {
                                                 location: 'UserProfileModalV2',
                                                 user: n,
-                                                displayProfile: eI,
+                                                displayProfile: ev,
                                                 guildId: en,
                                                 channelId: eo,
                                                 themeType: Q.lY.MODAL_V2
@@ -174,15 +174,15 @@ function en(e) {
                                                 user: n,
                                                 onClose: ef,
                                                 className: et.profileSection,
-                                                nickname: P.ZP.useName(null == eI ? void 0 : eI.guildId, eo, n),
+                                                nickname: P.ZP.useName(null == ev ? void 0 : ev.guildId, eo, n),
                                                 nicknameIcons: (0, o.jsx)(U.Z, {
                                                     size: 'sm',
                                                     userId: n.id
                                                 }),
                                                 nicknameVariant: 'heading-xl/semibold',
-                                                pronouns: null == eI ? void 0 : eI.pronouns,
+                                                pronouns: null == ev ? void 0 : ev.pronouns,
                                                 tags: (0, o.jsx)(E.Z, {
-                                                    displayProfile: eI,
+                                                    displayProfile: ev,
                                                     themeType: Q.lY.MODAL_V2,
                                                     onClose: ef
                                                 })
@@ -195,7 +195,7 @@ function en(e) {
                                                             children: (0, o.jsx)(M.Z, {
                                                                 user: n,
                                                                 applicationId: eN,
-                                                                guildId: null != (t = null == eI ? void 0 : eI.guildId) ? t : void 0,
+                                                                guildId: null != (t = null == ev ? void 0 : ev.guildId) ? t : void 0,
                                                                 channelId: eo,
                                                                 className: et.profileBanner
                                                             })
@@ -209,7 +209,7 @@ function en(e) {
                                                                 className: et.profileOverlay,
                                                                 children: (0, o.jsx)(M.Z, {
                                                                     user: n,
-                                                                    guildId: null != (t = null == eI ? void 0 : eI.guildId) ? t : void 0,
+                                                                    guildId: null != (t = null == ev ? void 0 : ev.guildId) ? t : void 0,
                                                                     channelId: eo,
                                                                     isGameRelationship: !0,
                                                                     applicationId: r,
@@ -253,7 +253,7 @@ function en(e) {
                                                             currentUser: i,
                                                             guildId: en,
                                                             channelId: eo,
-                                                            displayProfile: eI,
+                                                            displayProfile: ev,
                                                             relationshipType: eP,
                                                             onClose: ef
                                                         })
@@ -262,11 +262,11 @@ function en(e) {
                                                         fade: !0,
                                                         className: c()(et.profileSection, et.profileScroller),
                                                         children: [
-                                                            (null == eI ? void 0 : eI.bio) != null &&
-                                                                (null == eI ? void 0 : eI.bio) !== '' &&
+                                                            (null == ev ? void 0 : ev.bio) != null &&
+                                                                (null == ev ? void 0 : ev.bio) !== '' &&
                                                                 !eA &&
                                                                 (0, o.jsx)(D.Z, {
-                                                                    userBio: eI.bio,
+                                                                    userBio: ev.bio,
                                                                     setLineClamp: !1
                                                                 }),
                                                             eS.length > 0 &&
@@ -278,7 +278,7 @@ function en(e) {
                                                                 heading: ee.intl.string(ee.t.a6XYDw),
                                                                 children: (0, o.jsx)(G.Z, {
                                                                     userId: n.id,
-                                                                    guildId: null == eI ? void 0 : eI.guildId,
+                                                                    guildId: null == ev ? void 0 : ev.guildId,
                                                                     tooltipDelay: Q.vB
                                                                 })
                                                             }),
@@ -344,9 +344,9 @@ function en(e) {
                                             })
                                         ]
                                     }),
-                                    (null == eI ? void 0 : eI.profileEffectId) != null &&
+                                    (null == ev ? void 0 : ev.profileEffectId) != null &&
                                         (0, o.jsx)(h.Z, {
-                                            profileEffectId: null == eI ? void 0 : eI.profileEffectId,
+                                            profileEffectId: null == ev ? void 0 : ev.profileEffectId,
                                             isHovering: ex
                                         })
                                 ]
@@ -355,7 +355,7 @@ function en(e) {
                                 children: (0, o.jsx)(z.Z, {
                                     user: n,
                                     currentUser: i,
-                                    displayProfile: eI,
+                                    displayProfile: ev,
                                     guildId: en,
                                     channelId: eo,
                                     items: ew,

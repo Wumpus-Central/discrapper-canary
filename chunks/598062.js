@@ -1,14 +1,14 @@
 n.d(t, {
-    X: () => o,
-    i: () => i
+    X: () => a,
+    i: () => l
 });
 var r = n(818083),
-    l = n(987338);
-let i = (0, r.B)({
+    i = n(987338);
+let l = (0, r.B)({
         kind: 'user',
         id: '2025-02_name_plate_experiment',
         label: 'Nameplates Experiment',
-        commonTriggerPoint: l.$P.CONNECTION_OPEN,
+        commonTriggerPoint: i.$P.CONNECTION_OPEN,
         defaultConfig: { canView: !1 },
         treatments: [
             {
@@ -23,4 +23,4 @@ let i = (0, r.B)({
             }
         ]
     }),
-    o = (e) => i.useExperiment({ location: e }, { autoTrackExposure: !1 }).canView;
+    a = (e) => l.useExperiment({ location: e }, { autoTrackExposure: !1 }).canView;

@@ -43,7 +43,7 @@ function g(e) {
     }
     return e;
 }
-function v(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,24 +61,24 @@ function v(e, t) {
         e
     );
 }
-function I(e) {
+function v(e) {
     var t;
     let { account: n, theme: r, locale: i, userId: c } = e,
         a = null != (t = n.metadata) ? t : {},
         b = (0, f.FI)(a[x.PC.CREATED_AT], i),
-        I = s.Z.get((0, u.rR)(n.type));
-    return (0, o.jsxs)('div', {
+        v = s.Z.get((0, u.rR)(n.type));
+    return (0, o.jsxs)('li', {
         className: j.connection,
         children: [
             (0, o.jsx)(l.ua7, {
-                text: null == I ? void 0 : I.name,
+                text: null == v ? void 0 : v.name,
                 children: (e) =>
                     (0, o.jsx)(
                         'img',
-                        v(g({}, e), {
-                            alt: h.intl.formatToPlainString(h.t.rtm15O, { name: null == I ? void 0 : I.name }),
+                        I(g({}, e), {
+                            alt: h.intl.formatToPlainString(h.t.rtm15O, { name: null == v ? void 0 : v.name }),
                             className: j.platformIcon,
-                            src: (0, l.wjy)(r) ? (null == I ? void 0 : I.icon.darkSVG) : null == I ? void 0 : I.icon.lightSVG
+                            src: (0, l.wjy)(r) ? (null == v ? void 0 : v.icon.darkSVG) : null == v ? void 0 : v.icon.lightSVG
                         })
                     )
             }),
@@ -89,7 +89,7 @@ function I(e) {
                         children: [
                             (() => {
                                 var e;
-                                let t = null == I || null == (e = I.getPlatformUserUrl) ? void 0 : e.call(I, n);
+                                let t = null == v || null == (e = v.getPlatformUserUrl) ? void 0 : e.call(v, n);
                                 return null == t
                                     ? (0, o.jsx)(l.ua7, {
                                           overflowOnly: !0,
@@ -97,7 +97,7 @@ function I(e) {
                                           children: (e) =>
                                               (0, o.jsx)(
                                                   l.Text,
-                                                  v(g({}, e), {
+                                                  I(g({}, e), {
                                                       variant: 'text-sm/normal',
                                                       className: j.accountNameText,
                                                       children: n.name
@@ -108,7 +108,7 @@ function I(e) {
                                           href: t,
                                           className: j.platformUrlAnchor,
                                           useDefaultUnderlineStyles: !1,
-                                          'aria-label': (null == I ? void 0 : I.name) != null ? ''.concat(I.name, ', ').concat(n.name, ', ').concat(h.intl.string(h.t.q5jLJC)) : ''.concat(n.name, ', ').concat(h.intl.string(h.t.q5jLJC)),
+                                          'aria-label': (null == v ? void 0 : v.name) != null ? ''.concat(v.name, ', ').concat(n.name, ', ').concat(h.intl.string(h.t.q5jLJC)) : ''.concat(n.name, ', ').concat(h.intl.string(h.t.q5jLJC)),
                                           onClick: (e) => {
                                               (0, d.yw)(_.rMx.CONNECTED_ACCOUNT_VIEWED, {
                                                   platform_type: n.type,
@@ -117,7 +117,7 @@ function I(e) {
                                                   (0, y.q)(
                                                       {
                                                           href: t,
-                                                          trusted: (null == I ? void 0 : I.type) !== _.ABu.DOMAIN
+                                                          trusted: (null == v ? void 0 : v.type) !== _.ABu.DOMAIN
                                                       },
                                                       e
                                                   );
@@ -131,7 +131,7 @@ function I(e) {
                                                       children: (e) =>
                                                           (0, o.jsx)(
                                                               l.Text,
-                                                              v(g({}, e), {
+                                                              I(g({}, e), {
                                                                   variant: 'text-sm/normal',
                                                                   className: j.accountNameText,
                                                                   children: n.name
@@ -168,11 +168,11 @@ function O(e) {
         s = (0, c.e7)([b.default], () => b.default.locale);
     return 0 === t.length
         ? null
-        : (0, o.jsx)('div', {
+        : (0, o.jsx)('ul', {
               className: i()(j.container, r),
               children: t.map((e) =>
                   (0, o.jsx)(
-                      I,
+                      v,
                       {
                           account: e,
                           userId: n,
