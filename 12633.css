@@ -20419,7 +20419,13 @@ span.clanTag__5d473 {
     background: var(--opacity-black-52)
 }
 
-.avatar__183c2 {
+.avatarWithBackground__183c2 {
+    background-color: var(--bg-mod-strong);
+    position: relative
+}
+
+.avatar__183c2,
+.avatarWithBackground__183c2 {
     border-radius: 50%;
     height: 100%;
     width: 100%
