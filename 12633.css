@@ -34180,6 +34180,10 @@ body .headerAnimation_b54a5b {
     background-color: #706f74
 }
 
+.tagChiplet_fdeafc {
+    margin-left: var(--spacing-4)
+}
+
 .profileEffects__01370 {
     height: 100%;
     left: 0;
