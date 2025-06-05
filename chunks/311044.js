@@ -15,19 +15,19 @@ var o = n(255367),
 function y(e) {
     let { user: t, guildId: n, channelId: y, onClose: _ } = e,
         { analyticsLocations: x } = (0, l.ZP)(),
-        { context: h, trackUserProfileAction: g } = (0, s.KZ)(),
-        { mutualFriends: j, mutualFriendsCount: I } = (0, d.Z)(t),
-        v = (0, c.Z)();
+        { context: h, trackUserProfileAction: j } = (0, s.KZ)(),
+        { mutualFriends: g, mutualFriendsCount: v } = (0, d.Z)(t),
+        I = (0, c.Z)();
     return (
         r.useEffect(() => {
-            (0, u.Z)(t.id, v);
-        }, [t.id, v]),
+            (0, u.Z)(t.id, I);
+        }, [t.id, I]),
         (0, o.jsx)(i.Ttm, {
             className: b.scroller,
             fade: !0,
             children:
-                null == j
-                    ? Array.from({ length: null != I ? I : 10 }).map((e, t) =>
+                null == g
+                    ? Array.from({ length: null != v ? v : 10 }).map((e, t) =>
                           (0, o.jsxs)(
                               'div',
                               {
@@ -46,9 +46,9 @@ function y(e) {
                               t
                           )
                       )
-                    : 0 === j.length
+                    : 0 === g.length
                       ? (0, o.jsx)(m.s_, {})
-                      : j.map((e) => {
+                      : g.map((e) => {
                             let { key: t, user: r, status: i } = e;
                             return (0, o.jsx)(
                                 p.Z,
@@ -60,7 +60,7 @@ function y(e) {
                                     onSelect: () => {
                                         var e, t;
                                         null == _ || _(),
-                                            g({ action: 'PRESS_MUTUAL_FRIEND' }),
+                                            j({ action: 'PRESS_MUTUAL_FRIEND' }),
                                             (0, f.openUserProfileModal)(
                                                 ((e = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {

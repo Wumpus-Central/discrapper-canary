@@ -20,7 +20,7 @@ var c = t(442837),
     y = t(405666);
 function g(e) {
     var n;
-    let { user: t, currentUser: g, guildId: Z, channelId: v, displayProfile: j, initialSection: A, initialSubsection: N, onClose: O } = e,
+    let { user: t, currentUser: g, guildId: v, channelId: Z, displayProfile: j, initialSection: A, initialSubsection: N, onClose: O } = e,
         { relationshipType: C, originApplicationId: P } = (0, c.cj)([a.Z], () => ({
             relationshipType: a.Z.getRelationshipType(t.id),
             originApplicationId: a.Z.getOriginApplicationId(t.id)
@@ -28,11 +28,11 @@ function g(e) {
         T = (0, i.vh)(t.id),
         w = t.id === g.id,
         S = (0, d.I5)(g),
-        E = r.ZP.useName(null == j ? void 0 : j.guildId, v, t),
+        E = r.ZP.useName(null == j ? void 0 : j.guildId, Z, t),
         M = (0, h.Z)({
             user: t,
             currentUser: g,
-            guildId: Z,
+            guildId: v,
             initialSubsection: N
         });
     return (0, o.jsxs)('div', {
@@ -61,7 +61,7 @@ function g(e) {
                         user: t,
                         applicationId: P,
                         guildId: null != (n = null == j ? void 0 : j.guildId) ? n : void 0,
-                        channelId: v,
+                        channelId: Z,
                         className: y.friendRequestBanner
                     })
                 }),
@@ -74,7 +74,7 @@ function g(e) {
                         children: (0, o.jsx)(f.Z, {
                             user: t,
                             guildId: null != (n = null == j ? void 0 : j.guildId) ? n : void 0,
-                            channelId: v,
+                            channelId: Z,
                             isGameRelationship: !0,
                             applicationId: e.applicationId,
                             className: y.friendRequestBanner
@@ -97,8 +97,8 @@ function g(e) {
                 user: t,
                 currentUser: g,
                 displayProfile: j,
-                guildId: Z,
-                channelId: v,
+                guildId: v,
+                channelId: Z,
                 items: M,
                 initialSection: A,
                 initialSubsection: N,

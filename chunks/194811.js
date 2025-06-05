@@ -9,39 +9,40 @@ var i = n(120356),
     c = n(228168),
     u = n(227832);
 function d(e) {
-    let { text: t, tags: n, platformIcon: i, contextMenu: d } = e,
-        { themeType: f } = (0, l.z)();
-    return (null == t || '' === t) && null == d
+    let { text: t, textId: n, tags: i, platformIcon: d, contextMenu: f } = e,
+        { themeType: _ } = (0, l.z)();
+    return (null == t || '' === t) && null == f
         ? null
         : null == t || '' === t
           ? (0, r.jsx)('div', {
                 className: a()(u.headerContextMenu, u.absolute),
-                children: d
+                children: f
             })
-          : (0, r.jsxs)('header', {
+          : (0, r.jsxs)('div', {
                 className: u.header,
                 children: [
-                    (0, r.jsxs)(o.X6q, {
+                    (0, r.jsxs)(o.Text, {
                         className: u.headerText,
-                        variant: f === c.lY.SIDEBAR ? 'text-xs/semibold' : 'text-xs/medium',
+                        variant: _ === c.lY.SIDEBAR ? 'text-xs/semibold' : 'text-xs/medium',
                         color: 'header-primary',
+                        id: n,
                         children: [
                             (0, r.jsx)(s.Z, { children: t }),
-                            null != i &&
+                            null != d &&
                                 (0, r.jsx)('div', {
                                     className: u.platformIcon,
                                     style: {
-                                        maskImage: 'url('.concat(i.whiteSVG, ')'),
-                                        WebkitMaskImage: 'url('.concat(i.whiteSVG, ')')
+                                        maskImage: 'url('.concat(d.whiteSVG, ')'),
+                                        WebkitMaskImage: 'url('.concat(d.whiteSVG, ')')
                                     }
                                 }),
-                            n
+                            i
                         ]
                     }),
-                    null != d &&
+                    null != f &&
                         (0, r.jsx)('div', {
                             className: u.headerContextMenu,
-                            children: d
+                            children: f
                         })
                 ]
             });

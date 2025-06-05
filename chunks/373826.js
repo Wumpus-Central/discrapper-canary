@@ -1,4 +1,8 @@
-n.d(t, { Z: () => h }), n(781311);
+n.d(t, {
+    Z: () => g,
+    f: () => m
+}),
+    n(781311);
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -79,19 +83,25 @@ function p(e, t) {
     return i;
 }
 function h(e) {
-    var { text: t, onClick: n } = e,
-        c = _(e, ['text', 'onClick']);
-    let { themeType: d } = (0, o.z)(),
-        p = 'string' == typeof t ? t.trim() : t;
-    if (null == p || '' === p) return null;
-    let h = () => (d === s.lY.MODAL || d === s.lY.MODAL_V2 ? (0, r.jsx)(i.Text, f(u({ color: 'text-normal' }, c), { children: p })) : (0, r.jsx)(i.Text, f(u({ color: 'text-normal' }, c), { children: (0, r.jsx)(a.Z, { children: p }) })));
+    var { text: t, onClick: n, component: c } = e,
+        d = _(e, ['text', 'onClick', 'component']);
+    let { themeType: p } = (0, o.z)(),
+        h = 'string' == typeof t ? t.trim() : t;
+    if (null == h || '' === h) return null;
+    let m = () => (p === s.lY.MODAL || p === s.lY.MODAL_V2 ? (0, r.jsx)(c, f(u({ color: 'text-normal' }, d), { children: h })) : (0, r.jsx)(c, f(u({ color: 'text-normal' }, d), { children: (0, r.jsx)(a.Z, { children: h }) })));
     return null != n
         ? (0, r.jsx)(i.P3F, {
               onClick: (e) => {
                   e.stopPropagation(), n(e);
               },
               className: l.clickableText,
-              children: h()
+              children: m()
           })
-        : h();
+        : m();
+}
+function m(e) {
+    return (0, r.jsx)(h, u({ component: i.X6q }, e));
+}
+function g(e) {
+    return (0, r.jsx)(h, u({ component: i.Text }, e));
 }

@@ -1984,6 +1984,7 @@ var tC = (function (e) {
             (e.PREMIUM_UPSELL_SEASONAL_GIFTING_CAMPAIGN = 'Premium Upsell Modal - Seasonal Gifting Campaign'),
             (e.PREMIUM_UPSELL_VALENTINES_GIFTING_CAMPAIGN = 'Premium Upsell Modal - Valentines Gifting Campaign'),
             (e.PREMUIM_UPSELL_GIFTING_PROMOTION = 'Premium Upsell Modal - Gifting Promotion'),
+            (e.PREMIUM_UPSELL_CUSTOM_THEMES = 'Premium Upsell Modal - Custom Themes'),
             (e.PREMIUM_DOWNGRADE_TO_TIER_0_MODAL = 'Premium Downgrade To Tier 0 Modal'),
             (e.CHANGE_IDENTITY_MODAL = 'Change Identity Modal'),
             (e.GUILD_MEMBER_PROFILE_SETTINGS = 'Guild Member Profile Settings Page'),

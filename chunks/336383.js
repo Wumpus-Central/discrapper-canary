@@ -85,43 +85,15 @@ function O(e, t) {
     return i;
 }
 let v = i.forwardRef(function (e, t) {
-    var { children: n, className: i, subsection: a, onAction: m, onClose: E } = e,
-        O = y(e, ['children', 'className', 'subsection', 'onAction', 'onClose']);
-    let { themeType: v } = (0, f.z)(),
-        { analyticsLocations: I } = (0, l.ZP)(),
-        { context: S } = (0, c.KZ)();
-    return v === _.lY.MODAL || v === _.lY.MODAL_V2 || (null == S ? void 0 : S.userId) == null
-        ? (0, r.jsx)(
-              d.Z.Overlay,
-              b(
-                  g(
-                      {
-                          ref: t,
-                          className: o()(h.card, i)
-                      },
-                      O
-                  ),
-                  { children: n }
-              )
-          )
-        : (0, r.jsx)(s.kL8, {
-              className: h.clickableContainer,
-              'aria-label': p.intl.string(p.t.pD1L1t),
-              focusProps: { ringTarget: t },
-              onClick: () => {
-                  null == m || m({ action: 'PRESS_CARD' }),
-                      (0, u.openUserProfileModal)(
-                          g(
-                              {
-                                  section: _.oh.ACTIVITY,
-                                  sourceAnalyticsLocations: I,
-                                  subsection: a
-                              },
-                              S
-                          )
-                      ),
-                      null == E || E();
-              },
+    var { children: n, className: i, subsection: a, onAction: m, onClose: E, 'aria-label': O, 'aria-labelledby': v } = e,
+        I = y(e, ['children', 'className', 'subsection', 'onAction', 'onClose', 'aria-label', 'aria-labelledby']);
+    let { themeType: S } = (0, f.z)(),
+        { analyticsLocations: T } = (0, l.ZP)(),
+        { context: A } = (0, c.KZ)();
+    return S === _.lY.MODAL || S === _.lY.MODAL_V2 || (null == A ? void 0 : A.userId) == null
+        ? (0, r.jsx)('article', {
+              'aria-label': O,
+              'aria-labelledby': v,
               children: (0, r.jsx)(
                   d.Z.Overlay,
                   b(
@@ -130,10 +102,45 @@ let v = i.forwardRef(function (e, t) {
                               ref: t,
                               className: o()(h.card, i)
                           },
-                          O
+                          I
                       ),
                       { children: n }
                   )
               )
+          })
+        : (0, r.jsx)('article', {
+              'aria-labelledby': v,
+              children: (0, r.jsx)(s.kL8, {
+                  className: h.clickableContainer,
+                  'aria-label': p.intl.string(p.t.pD1L1t),
+                  focusProps: { ringTarget: t },
+                  onClick: () => {
+                      null == m || m({ action: 'PRESS_CARD' }),
+                          (0, u.openUserProfileModal)(
+                              g(
+                                  {
+                                      section: _.oh.ACTIVITY,
+                                      sourceAnalyticsLocations: T,
+                                      subsection: a
+                                  },
+                                  A
+                              )
+                          ),
+                          null == E || E();
+                  },
+                  children: (0, r.jsx)(
+                      d.Z.Overlay,
+                      b(
+                          g(
+                              {
+                                  ref: t,
+                                  className: o()(h.card, i)
+                              },
+                              I
+                          ),
+                          { children: n }
+                      )
+                  )
+              })
           });
 });

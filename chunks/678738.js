@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -6,48 +6,52 @@ var r = n(255367),
     s = n(442837),
     l = n(481060),
     c = n(607070),
-    u = n(729894);
-function d(e) {
-    let { children: t, heading: n, headingIcon: a, subheading: d, className: f, scrollIntoView: _ = !1, headingClassName: p, headingVariant: h = 'text-xs/semibold', headingColor: m = 'header-secondary' } = e,
-        g = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
-        E = i.useRef(null);
+    u = n(313201),
+    d = n(729894);
+function f(e) {
+    let { children: t, heading: n, headingIcon: a, introText: f, className: _, scrollIntoView: p = !1, headingClassName: h, headingVariant: m = 'text-xs/semibold', headingColor: g = 'header-secondary' } = e,
+        E = (0, u.Dt)(),
+        b = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
+        y = i.useRef(null);
     return (
         i.useEffect(() => {
-            let e = E.current;
+            let e = y.current;
             if (null == e) return;
             let t = requestAnimationFrame(() => {
-                e.scrollIntoView({ behavior: g ? 'auto' : 'smooth' });
+                e.scrollIntoView({ behavior: b ? 'auto' : 'smooth' });
             });
             return () => cancelAnimationFrame(t);
-        }, [g]),
+        }, [b]),
         (0, r.jsxs)('section', {
-            ref: _ ? E : void 0,
-            className: o()(u.section, f),
+            ref: p ? y : void 0,
+            className: o()(d.section, _),
+            'aria-labelledby': null != n ? E : void 0,
             children: [
                 null != n &&
                     (0, r.jsxs)('div', {
-                        className: u.headings,
+                        className: d.headings,
                         children: [
                             (0, r.jsxs)('div', {
-                                className: u.header,
+                                className: d.header,
                                 children: [
                                     (0, r.jsx)(l.X6q, {
-                                        variant: h,
-                                        color: m,
-                                        className: p,
+                                        variant: m,
+                                        color: g,
+                                        className: h,
+                                        id: E,
                                         children: n
                                     }),
                                     a
                                 ]
                             }),
-                            null != d &&
+                            null != f &&
                                 (0, r.jsx)(l.Text, {
                                     variant: 'text-xs/normal',
-                                    children: d
+                                    children: f
                                 })
                         ]
                     }),
-                t
+                (0, r.jsx)(l.y5t, { children: t })
             ]
         })
     );

@@ -182,7 +182,8 @@ function B(e) {
                           onAction: q,
                           onClose: F
                       })
-                  });
+                  }),
+        el = null != K ? k.intl.formatToPlainString(k.t['4CQq9f'], { name: K.name }) : k.intl.string(k.t['Jpkr/v']);
     return (0, r.jsx)(p.Gt, {
         value: z,
         children: (0, r.jsxs)(N.Z, {
@@ -190,9 +191,10 @@ function B(e) {
             className: B,
             onAction: q,
             onClose: F,
+            'aria-label': el,
             children: [
                 (0, r.jsx)(C.Z, {
-                    text: null != K ? k.intl.formatToPlainString(k.t['4CQq9f'], { name: K.name }) : k.intl.string(k.t['Jpkr/v']),
+                    text: el,
                     tags: (0, r.jsx)(h.ZP, { size: h.OH.SMALL }),
                     contextMenu: (0, r.jsx)(D.Z, {
                         display: 'live',

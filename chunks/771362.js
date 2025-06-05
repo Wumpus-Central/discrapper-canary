@@ -1,11 +1,11 @@
-t.d(n, { Z: () => u });
+t.d(n, { Z: () => c });
 var l = t(73800),
     r = t(442837),
     i = t(726542),
     o = t(122021),
     s = t(621853);
 let a = [];
-function u(e) {
+function c(e) {
     let n = (0, o.Xj)({ forUserProfile: !0 }),
         t = (0, r.e7)([s.Z], () => s.Z.getUserProfile(e));
     return (0, l.useMemo)(

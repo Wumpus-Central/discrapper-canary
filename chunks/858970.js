@@ -17,10 +17,10 @@ var r = n(442837),
     _ = n(848780),
     x = n(907179),
     h = n(228168),
-    g = n(981631),
-    j = n(388032),
-    I = n(247787);
-function v(e) {
+    j = n(981631),
+    g = n(388032),
+    v = n(247787);
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             o = Object.keys(n);
@@ -47,7 +47,7 @@ function v(e) {
 }
 function O(e) {
     let { user: t, guildId: n, channelId: O, messageId: P, roleId: N, transitionState: A, openedAt: Z, onHide: T, sourceAnalyticsLocations: C = [] } = e,
-        w = n === g.ME ? void 0 : n,
+        w = n === j.ME ? void 0 : n,
         S = (0, r.e7)([d.Z], () => d.Z.isBlocked(t.id)),
         { analyticsLocations: E } = (0, l.ZP)([...C, S ? c.Z.BLOCKED_PROFILE_MODAL : c.Z.IGNORED_PROFILE_MODAL]),
         B = (0, f.ZB)({
@@ -62,16 +62,16 @@ function O(e) {
         D = [
             {
                 icon: i.owK,
-                description: j.intl.string(j.t.kcuWvb)
+                description: g.intl.string(g.t.kcuWvb)
             },
             {
                 icon: i.owK,
-                description: j.intl.string(S ? j.t.QxrDY2 : j.t.W6fjkZ)
+                description: g.intl.string(S ? g.t.QxrDY2 : g.t.W6fjkZ)
             }
         ],
         U = (0, m.ZP)(t.id, w),
-        k = u.ZP.getName(null == U ? void 0 : U.guildId, O, t),
-        L = (0, r.e7)([s.default], () => ['en-US', 'en-GB'].includes(s.default.locale)) ? j.intl.formatToPlainString(j.t.KRe1Fh, { name: k }) : j.intl.string(j.t['3N/J2t']);
+        L = u.ZP.getName(null == U ? void 0 : U.guildId, O, t),
+        k = (0, r.e7)([s.default], () => ['en-US', 'en-GB'].includes(s.default.locale)) ? g.intl.formatToPlainString(g.t.KRe1Fh, { name: L }) : g.intl.string(g.t['3N/J2t']);
     return (0, o.jsx)(l.Gt, {
         value: E,
         children: (0, o.jsx)(f.Mt, {
@@ -82,17 +82,17 @@ function O(e) {
             isLoaded: null == U ? void 0 : U.isLoaded,
             children: (0, o.jsx)(i.Y0X, {
                 transitionState: A,
-                className: I.root,
-                'aria-label': L,
+                className: v.root,
+                'aria-label': k,
                 parentComponent: 'RestrictedUserProfileModalV2',
                 children: (0, o.jsxs)(y.Z, {
                     user: t,
                     displayProfile: U,
                     themeType: h.lY.MODAL_V2,
                     children: [
-                        (0, o.jsx)('div', { className: I.background }),
+                        (0, o.jsx)('div', { className: v.background }),
                         (0, o.jsxs)('div', {
-                            className: I.content,
+                            className: v.content,
                             children: [
                                 (0, o.jsx)(b.Z, {
                                     user: t,
@@ -100,22 +100,22 @@ function O(e) {
                                     iconColor: i.TVs.colors.TEXT_NORMAL
                                 }),
                                 (0, o.jsxs)('div', {
-                                    className: I.textContainer,
+                                    className: v.textContainer,
                                     children: [
                                         (0, o.jsx)(i.X6q, {
                                             variant: 'heading-xl/bold',
                                             color: 'text-normal',
-                                            children: j.intl.string(j.t.b33pLC)
+                                            children: g.intl.string(g.t.b33pLC)
                                         }),
                                         (0, o.jsx)(i.Text, {
                                             variant: 'text-md/medium',
                                             color: 'text-normal',
-                                            children: j.intl.format(S ? j.t.T7QiLi : j.t.MnEow8, { username: k })
+                                            children: g.intl.format(S ? g.t.T7QiLi : g.t.MnEow8, { username: L })
                                         })
                                     ]
                                 }),
                                 (0, o.jsx)('div', {
-                                    className: I.safetyTable,
+                                    className: v.safetyTable,
                                     children: D.map((e, t) => {
                                         let { icon: n, description: r } = e;
                                         return (0, o.jsx)(
@@ -139,7 +139,7 @@ function O(e) {
                                             onClick: () => {
                                                 T(),
                                                     (0, p.pQ)(
-                                                        v(
+                                                        I(
                                                             {
                                                                 action: S ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
                                                                 analyticsLocations: E
@@ -154,7 +154,7 @@ function O(e) {
                                             onClick: () => {
                                                 T(),
                                                     (0, p.pQ)(
-                                                        v(
+                                                        I(
                                                             {
                                                                 action: 'DONT_SHOW_AGAIN_IGNORED_PROFILE',
                                                                 analyticsLocations: E

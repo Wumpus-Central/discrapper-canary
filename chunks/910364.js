@@ -18,8 +18,8 @@ var o = t(255367),
     x = t(687158),
     y = t(510659),
     g = t(113557),
-    Z = t(867176),
-    v = t(451834),
+    v = t(867176),
+    Z = t(451834),
     j = t(502762),
     A = t(4517),
     N = t(314386),
@@ -89,12 +89,12 @@ function S(e) {
                                 }),
                                 (0, o.jsxs)('header', {
                                     children: [
-                                        (0, o.jsx)(Z.Z, {
+                                        (0, o.jsx)(v.Z, {
                                             user: n,
                                             displayProfile: z,
                                             themeType: P.lY.MODAL
                                         }),
-                                        (0, o.jsx)(v.Z, {
+                                        (0, o.jsx)(Z.Z, {
                                             userId: n.id,
                                             onClose: U,
                                             className: w.toast

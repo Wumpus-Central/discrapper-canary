@@ -5,67 +5,67 @@ var l = t(255367),
     o = t(706898),
     s = t(481060),
     a = t(246946),
-    u = t(785717),
-    c = t(786366),
+    c = t(785717),
+    u = t(786366),
     d = t(323090),
     f = t(116906),
     p = t(384816),
     g = t(389190),
     v = t(428927),
-    m = t(228168),
+    j = t(228168),
     h = t(388032),
-    j = t(301150),
+    m = t(301150),
     b = t(923243);
 function x(e) {
-    let { section: n, subsection: t, user: r, currentUser: i, displayProfile: o, guildId: s, channelId: a, onClose: u } = e;
-    return n === m.oh.ACTIVITY
+    let { section: n, subsection: t, user: r, currentUser: i, displayProfile: o, guildId: s, channelId: a, onClose: c } = e;
+    return n === j.oh.ACTIVITY
         ? (0, l.jsx)(f.Z, {
               user: r,
               currentUser: i,
               displayProfile: o,
               guildId: s,
-              onClose: u
+              onClose: c
           })
-        : n === m.oh.MUTUAL_FRIENDS
+        : n === j.oh.MUTUAL_FRIENDS
           ? (0, l.jsx)(g.Z, {
                 user: r,
                 guildId: s,
                 channelId: a,
-                onClose: u
+                onClose: c
             })
-          : n === m.oh.MUTUAL_GUILDS
+          : n === j.oh.MUTUAL_GUILDS
             ? (0, l.jsx)(v.Z, {
                   user: r,
-                  onClose: u
+                  onClose: c
               })
-            : n === m.oh.BOT_DATA_ACCESS
-              ? (0, l.jsx)(c.Z, { user: r })
-              : n === m.oh.BOT_INFO
+            : n === j.oh.BOT_DATA_ACCESS
+              ? (0, l.jsx)(u.Z, { user: r })
+              : n === j.oh.BOT_INFO
                 ? (0, l.jsx)(d.Z, {
                       user: r,
                       currentUser: i,
                       displayProfile: o,
                       guildId: s,
                       subsection: t,
-                      onClose: u
+                      onClose: c
                   })
                 : (0, l.jsx)(p.Z, {
                       user: r,
                       currentUser: i,
                       displayProfile: o,
                       subsection: t,
-                      onClose: u
+                      onClose: c
                   });
 }
 function O(e) {
-    var n, t, c;
-    let { user: d, currentUser: f, displayProfile: p, guildId: g, items: v, initialSection: O = m.oh.USER_INFO, initialSubsection: Z, onClose: y } = e,
-        { trackUserProfileAction: P } = (0, u.KZ)(),
+    var n, t, u;
+    let { user: d, currentUser: f, displayProfile: p, guildId: g, items: v, initialSection: O = j.oh.USER_INFO, initialSubsection: y, onClose: Z } = e,
+        { trackUserProfileAction: P } = (0, c.KZ)(),
         I = (0, i.e7)([a.Z], () => a.Z.hidePersonalInformation),
         [{ section: E, subsection: S }, T] = r.useState({
             section:
                 null !=
-                (c =
+                (u =
                     null ==
                     (n = v.find((e) => {
                         let { section: n } = e;
@@ -73,11 +73,11 @@ function O(e) {
                     }))
                         ? void 0
                         : n.section)
-                    ? c
+                    ? u
                     : null == (t = v[0])
                       ? void 0
                       : t.section,
-            subsection: Z
+            subsection: y
         });
     r.useEffect(() => {
         null == v.find((e) => e.section === E) &&
@@ -103,11 +103,11 @@ function O(e) {
         ? (0, l.jsx)('div', {
               className: b.container,
               children: (0, l.jsxs)('div', {
-                  className: j.empty,
+                  className: m.empty,
                   children: [
-                      (0, l.jsx)('div', { className: j.emptyIconStreamerMode }),
+                      (0, l.jsx)('div', { className: m.emptyIconStreamerMode }),
                       (0, l.jsx)('div', {
-                          className: j.emptyText,
+                          className: m.emptyText,
                           children: h.intl.string(h.t.Br1ls7)
                       })
                   ]
@@ -146,7 +146,7 @@ function O(e) {
                       currentUser: f,
                       displayProfile: p,
                       guildId: g,
-                      onClose: y
+                      onClose: Z
                   })
               ]
           });

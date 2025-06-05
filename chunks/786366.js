@@ -6,15 +6,15 @@ var r = t(597312),
     o = t(481060),
     s = t(860719),
     a = t(621853),
-    u = t(388032),
-    c = t(989421);
+    c = t(388032),
+    u = t(989421);
 function d(e) {
     let { icon: n, title: t, description: r } = e;
     return (0, l.jsxs)('div', {
-        className: c.row,
+        className: u.row,
         children: [
             (0, l.jsx)('div', {
-                className: c.rowIcon,
+                className: u.rowIcon,
                 children: (0, l.jsx)(n, {
                     size: 'custom',
                     width: 20,
@@ -23,7 +23,7 @@ function d(e) {
                 })
             }),
             (0, l.jsxs)('div', {
-                className: c.rowText,
+                className: u.rowText,
                 children: [
                     (0, l.jsx)(o.X6q, {
                         variant: 'text-xs/semibold',
@@ -47,29 +47,29 @@ function f(e) {
         { hasMessageContent: f, hasGuildPresences: p, hasGuildMembers: g } = (0, s.w)({ flags: null == t ? void 0 : t.flags });
     return (0, l.jsxs)(r.zJ, {
         fade: !0,
-        className: c.scroller,
+        className: u.scroller,
         children: [
             f &&
                 (0, l.jsx)(d, {
                     icon: o.kBi,
-                    title: u.intl.string(u.t['7Tmhfn']),
-                    description: u.intl.string(u.t['eu5x7+'])
+                    title: c.intl.string(c.t['7Tmhfn']),
+                    description: c.intl.string(c.t['eu5x7+'])
                 }),
             p &&
                 (0, l.jsx)(d, {
                     icon: o.iWm,
-                    title: u.intl.string(u.t.awYSsL),
-                    description: u.intl.string(u.t.TpsXoK)
+                    title: c.intl.string(c.t.awYSsL),
+                    description: c.intl.string(c.t.TpsXoK)
                 }),
             g &&
                 (0, l.jsx)(d, {
                     icon: o.BFJ,
-                    title: u.intl.string(u.t.WuKeSE),
-                    description: u.intl.string(u.t.wOBmtb)
+                    title: c.intl.string(c.t.WuKeSE),
+                    description: c.intl.string(c.t.wOBmtb)
                 }),
             (0, l.jsx)(o.Text, {
                 variant: 'text-xs/normal',
-                children: u.intl.format(u.t.b6nqk5, { helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975' })
+                children: c.intl.format(c.t.b6nqk5, { helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975' })
             })
         ]
     });

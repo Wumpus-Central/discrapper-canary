@@ -18,8 +18,8 @@ var o = t(255367),
     x = t(907179),
     y = t(228168),
     g = t(981631),
-    Z = t(388032),
-    v = t(829441),
+    v = t(388032),
+    Z = t(829441),
     j = t(161068);
 function A(e) {
     for (var n = 1; n < arguments.length; n++) {
@@ -63,17 +63,17 @@ function N(e) {
         B = [
             {
                 icon: a.owK,
-                description: Z.intl.string(Z.t.kcuWvb)
+                description: v.intl.string(v.t.kcuWvb)
             },
             {
                 icon: a.owK,
-                description: Z.intl.string(L ? Z.t.QxrDY2 : Z.t.W6fjkZ)
+                description: v.intl.string(L ? v.t.QxrDY2 : v.t.W6fjkZ)
             }
         ],
         G = (0, m.ZP)(n.id, S ? M : void 0),
         k = f.ZP.getName(null == G ? void 0 : G.guildId, N, n),
         F = c.useRef(null),
-        U = (0, i.e7)([s.default], () => ['en-US', 'en-GB'].includes(s.default.locale)) ? Z.intl.formatToPlainString(Z.t.KRe1Fh, { name: k }) : Z.intl.string(Z.t['3N/J2t']);
+        U = (0, i.e7)([s.default], () => ['en-US', 'en-GB'].includes(s.default.locale)) ? v.intl.formatToPlainString(v.t.KRe1Fh, { name: k }) : v.intl.string(v.t['3N/J2t']);
     return (0, o.jsx)(d.Gt, {
         value: D,
         children: (0, o.jsx)(_.Mt, {
@@ -84,7 +84,7 @@ function N(e) {
             isLoaded: null == G ? void 0 : G.isLoaded,
             children: (0, o.jsx)(a.Y0X, {
                 transitionState: P,
-                className: v.root,
+                className: Z.root,
                 hideShadow: !0,
                 'aria-label': U,
                 parentComponent: 'RestrictedUserProfileModal',
@@ -94,38 +94,38 @@ function N(e) {
                     themeType: y.lY.MODAL,
                     ref: F,
                     children: (0, o.jsxs)('div', {
-                        className: v.container,
+                        className: Z.container,
                         children: [
                             (0, o.jsx)('img', {
                                 alt: '',
                                 src: j,
-                                className: v.preview,
+                                className: Z.preview,
                                 'aria-hidden': !0
                             }),
                             (0, o.jsxs)('div', {
-                                className: v.body,
+                                className: Z.body,
                                 children: [
                                     (0, o.jsx)(I.Z, {
                                         user: n,
                                         guildId: M
                                     }),
                                     (0, o.jsxs)('div', {
-                                        className: v.headerContainer,
+                                        className: Z.headerContainer,
                                         children: [
                                             (0, o.jsx)(a.X6q, {
                                                 variant: 'heading-xl/bold',
                                                 color: 'header-primary',
-                                                children: Z.intl.string(Z.t.b33pLC)
+                                                children: v.intl.string(v.t.b33pLC)
                                             }),
                                             (0, o.jsx)(a.Text, {
                                                 variant: 'text-md/medium',
                                                 color: 'header-primary',
-                                                children: Z.intl.format(L ? Z.t['8F+WNz'] : Z.t['/cZp5u'], { username: k })
+                                                children: v.intl.format(L ? v.t['8F+WNz'] : v.t['/cZp5u'], { username: k })
                                             })
                                         ]
                                     }),
                                     (0, o.jsx)('div', {
-                                        className: v.safetyTable,
+                                        className: Z.safetyTable,
                                         children: B.map((e, n) => {
                                             let { icon: t, description: c } = e;
                                             return (0, o.jsx)(

@@ -51,7 +51,8 @@ let b = function () {
                   (y === m.wh.CUSTOM_THEME || A) &&
                       (0, r.jsx)(u.Z, {
                           metadata: null != O ? O : {},
-                          markAsDismissed: S
+                          markAsDismissed: S,
+                          isCoachmark: A
                       })
               ]
           });

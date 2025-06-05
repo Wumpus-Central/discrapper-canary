@@ -227,6 +227,7 @@ function Y(e) {
                             className: o()(Y, { [F.hoisted]: eE }),
                             onAction: ei,
                             onClose: W,
+                            'aria-label': eb,
                             children: [
                                 (0, r.jsx)(L.Z, {
                                     text: eb,
