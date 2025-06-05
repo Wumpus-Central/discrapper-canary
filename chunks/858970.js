@@ -69,17 +69,17 @@ function O(e) {
                 description: g.intl.string(S ? g.t.QxrDY2 : g.t.W6fjkZ)
             }
         ],
-        U = (0, m.ZP)(t.id, w),
-        L = u.ZP.getName(null == U ? void 0 : U.guildId, O, t),
-        k = (0, r.e7)([s.default], () => ['en-US', 'en-GB'].includes(s.default.locale)) ? g.intl.formatToPlainString(g.t.KRe1Fh, { name: L }) : g.intl.string(g.t['3N/J2t']);
+        L = (0, m.ZP)(t.id, w),
+        U = u.ZP.getName(null == L ? void 0 : L.guildId, O, t),
+        k = (0, r.e7)([s.default], () => ['en-US', 'en-GB'].includes(s.default.locale)) ? g.intl.formatToPlainString(g.t.KRe1Fh, { name: U }) : g.intl.string(g.t['3N/J2t']);
     return (0, o.jsx)(l.Gt, {
         value: E,
         children: (0, o.jsx)(f.Mt, {
             value: B,
             openedAt: Z,
-            fetchStartedAt: null == U ? void 0 : U.fetchStartedAt,
-            fetchEndedAt: null == U ? void 0 : U.fetchEndedAt,
-            isLoaded: null == U ? void 0 : U.isLoaded,
+            fetchStartedAt: null == L ? void 0 : L.fetchStartedAt,
+            fetchEndedAt: null == L ? void 0 : L.fetchEndedAt,
+            isLoaded: null == L ? void 0 : L.isLoaded,
             children: (0, o.jsx)(i.Y0X, {
                 transitionState: A,
                 className: v.root,
@@ -87,7 +87,7 @@ function O(e) {
                 parentComponent: 'RestrictedUserProfileModalV2',
                 children: (0, o.jsxs)(y.Z, {
                     user: t,
-                    displayProfile: U,
+                    displayProfile: L,
                     themeType: h.lY.MODAL_V2,
                     children: [
                         (0, o.jsx)('div', { className: v.background }),
@@ -110,7 +110,7 @@ function O(e) {
                                         (0, o.jsx)(i.Text, {
                                             variant: 'text-md/medium',
                                             color: 'text-normal',
-                                            children: g.intl.format(S ? g.t.T7QiLi : g.t.MnEow8, { username: L })
+                                            children: g.intl.format(S ? g.t.T7QiLi : g.t.MnEow8, { username: U })
                                         })
                                     ]
                                 }),

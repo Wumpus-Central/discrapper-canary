@@ -23,8 +23,8 @@ var i = n(255367),
     S = n(594174),
     v = n(78839),
     T = n(626135),
-    N = n(111361),
-    I = n(357355),
+    I = n(111361),
+    N = n(357355),
     y = n(937579),
     A = n(91802),
     P = n(104494),
@@ -47,11 +47,11 @@ let B = function (e) {
         H = (0, b.V)(),
         [z, Y] = r.useState(!0),
         W = r.useRef(0),
-        K = (0, N.M5)(U, w.p9.TIER_2),
+        K = (0, I.M5)(U, w.p9.TIER_2),
         q = (0, A.n)(),
         X = null == q ? void 0 : q.countryCode,
         Q = (0, a.e7)([C.Z], () => (null != U ? C.Z.getUserProfile(U.id) : null)),
-        J = (0, a.e7)([I.Z], () => I.Z.hasFetched);
+        J = (0, a.e7)([N.Z], () => N.Z.hasFetched);
     return (r.useEffect(() => {
         J || d.MH();
     }, [J]),

@@ -10,8 +10,8 @@ var a = n(255367),
     u = n(129861),
     m = n(665149),
     x = n(886118),
-    h = n(301801),
-    p = n(594174),
+    p = n(301801),
+    h = n(594174),
     b = n(572004),
     f = n(55935),
     v = n(120816),
@@ -94,7 +94,7 @@ let I = [
                         loggedEvent: { event: t, properties: n, timestamp: r, fingerprint: l },
                         onClose: s
                     } = e,
-                    c = p.default.getUser(l),
+                    c = h.default.getUser(l),
                     x = o()(r);
                 return (0, a.jsxs)('div', {
                     'data-mtctest-ignore': 'true',
@@ -268,13 +268,13 @@ function R() {
         x = r.useCallback((e) => {
             m(e);
         }, []);
-    (0, h.BO)(t, v.Z.loggedEvents, x, k, [l]);
-    let p = u.filter((e) => {
+    (0, p.BO)(t, v.Z.loggedEvents, x, k, [l]);
+    let h = u.filter((e) => {
             for (let t of s) if (w[t].filter(e)) return !0;
             return !1;
         }),
         [b, f] = r.useState(void 0),
-        j = p.find((e) => e.key === b),
+        j = h.find((e) => e.key === b),
         { TabBar: S, renderSelectedTab: P } = (0, C.ZP)({ tabs: I }, []);
     return (0, a.jsxs)('div', {
         ref: e,
@@ -329,7 +329,7 @@ function R() {
             }),
             (0, a.jsx)(y.Z, {
                 columns: T,
-                data: p,
+                data: h,
                 selectedRowKey: b,
                 onClickRow: (e) => f(e.key)
             }),

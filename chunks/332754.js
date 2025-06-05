@@ -1,38 +1,39 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => E });
 var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(570140),
     a = n(84615),
     o = n(429142),
-    s = n(1964),
-    c = n(852758),
-    u = n(314897),
-    d = n(594174),
-    p = n(374023),
-    h = n(886162),
-    f = n(981631),
-    g = n(815660),
-    m = n(308569),
-    b = n(231338);
-let _ = {
+    s = n(377656),
+    c = n(1964),
+    u = n(852758),
+    d = n(314897),
+    p = n(594174),
+    h = n(374023),
+    f = n(886162),
+    g = n(981631),
+    m = n(815660),
+    b = n(308569),
+    _ = n(231338);
+let E = {
     init() {
-        l.Z.subscribe('CONNECTION_OPEN', this.handleRequiredAction), l.Z.subscribe('USER_REQUIRED_ACTION_UPDATE', this.handleRequiredAction), l.Z.subscribe('CURRENT_USER_UPDATE', this.handleCurrentUserUpdate), u.default.addChangeListener(this.handleAuthenticationStoreChanged);
+        l.Z.subscribe('CONNECTION_OPEN', this.handleRequiredAction), l.Z.subscribe('USER_REQUIRED_ACTION_UPDATE', this.handleRequiredAction), l.Z.subscribe('CURRENT_USER_UPDATE', this.handleCurrentUserUpdate), d.default.addChangeListener(this.handleAuthenticationStoreChanged);
     },
     handleRequiredAction(e) {
         let t = e.requiredAction;
-        !p.s.isDisallowPopupsSet() &&
-            null != d.default.getCurrentUser() &&
-            (t === f.c2C.REQUIRE_CAPTCHA || t === f.c2C.REQUIRE_VERIFIED_EMAIL || t === f.c2C.REQUIRE_VERIFIED_PHONE || t === f.c2C.REQUIRE_REVERIFIED_PHONE || t === f.c2C.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE || t === f.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === f.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE || s.Z.isEmailReverification(t)
-                ? (0, a.q4)(() => (0, r.jsx)(c.Z, {}), {
-                      layerKey: m.CV,
+        !h.s.isDisallowPopupsSet() &&
+            null != p.default.getCurrentUser() &&
+            (t === g.c2C.REQUIRE_CAPTCHA || t === g.c2C.REQUIRE_VERIFIED_EMAIL || t === g.c2C.REQUIRE_VERIFIED_PHONE || t === g.c2C.REQUIRE_REVERIFIED_PHONE || t === g.c2C.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE || t === g.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === g.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE || c.Z.isEmailReverification(t)
+                ? (0, a.q4)(() => (0, r.jsx)(u.Z, {}), {
+                      layerKey: b.CV,
                       Layer: o.ZP
                   })
-                : t === f.c2C.AGREEMENTS
+                : t === g.c2C.AGREEMENTS
                   ? (0, i.h7j)(
                         (e) =>
                             (0, r.jsx)(
-                                h.Z,
+                                f.Z,
                                 (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -60,17 +61,22 @@ let _ = {
                                 })({}, e)
                             ),
                         {
-                            modalKey: m.f1,
-                            onCloseRequest: b.Vq
+                            modalKey: b.f1,
+                            onCloseRequest: _.Vq
                         }
                     )
-                  : null == t && ((0, a.ob)(m.CV), (0, i.nfh)(m.f1) && (0, i.Mr3)(m.f1)));
+                  : t === g.c2C.REQUIRE_SAFETY_FLOWS
+                    ? (0, a.q4)(() => (0, r.jsx)(s.Z, {}), {
+                          layerKey: b.CV,
+                          Layer: o.ZP
+                      })
+                    : null == t && ((0, a.ob)(b.CV), (0, i.nfh)(b.f1) && (0, i.Mr3)(b.f1)));
     },
     handleAuthenticationStoreChanged() {
-        null == u.default.getId() && ((0, a.ob)(m.CV), (0, i.Mr3)(m.f1), (0, i.Mr3)(m.HR), (0, i.Mr3)(m.F0), (0, i.Mr3)(g.M));
+        null == d.default.getId() && ((0, a.ob)(b.CV), (0, i.Mr3)(b.f1), (0, i.Mr3)(b.HR), (0, i.Mr3)(b.F0), (0, i.Mr3)(m.M));
     },
     handleCurrentUserUpdate(e) {
         let { user: t } = e;
-        t.verified && (0, i.Mr3)(m.F0);
+        t.verified && (0, i.Mr3)(b.F0);
     }
 };

@@ -8,7 +8,7 @@ var r = n(481060),
     o = n(416820),
     c = n(144343);
 function d(e) {
-    let { referrer: t, isMarketingPageV2Enabled: n } = e,
+    let { referrer: t, isApplicationHome: n } = e,
         d = (e) => (null != e.globalName ? e.globalName : e.username),
         { avatarSrc: u, eventHandlers: m } = (0, s.Z)({
             user: t,
@@ -18,10 +18,10 @@ function d(e) {
     return (0, i.jsx)('div', {
         className: o.attributionBannerContainer,
         children: (0, i.jsxs)('div', {
-            className: n ? o.attributionBannerContentV2 : o.attributionBannerContent,
+            className: n ? o.attributionBannerContentApplicationHome : o.attributionBannerContent,
             children: [
                 (0, i.jsx)('div', {
-                    className: n ? o.iconContainerV2 : o.iconContainer,
+                    className: n ? o.iconContainerApplicationHome : o.iconContainer,
                     children: (0, i.jsx)(
                         r.qEK,
                         (function (e) {

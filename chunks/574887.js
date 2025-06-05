@@ -108,6 +108,7 @@ function I(e) {
                                           href: t,
                                           className: j.platformUrlAnchor,
                                           useDefaultUnderlineStyles: !1,
+                                          'aria-label': (null == I ? void 0 : I.name) != null ? ''.concat(I.name, ', ').concat(n.name, ', ').concat(h.intl.string(h.t.q5jLJC)) : ''.concat(n.name, ', ').concat(h.intl.string(h.t.q5jLJC)),
                                           onClick: (e) => {
                                               (0, d.yw)(_.rMx.CONNECTED_ACCOUNT_VIEWED, {
                                                   platform_type: n.type,

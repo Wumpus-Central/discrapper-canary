@@ -53,7 +53,7 @@ let g = 24,
                 children: (0, r.jsx)(c.X6q, {
                     variant: h ? 'text-md/medium' : 'heading-md/semibold',
                     color: u ? 'header-secondary' : void 0,
-                    className: o()(t, p.title),
+                    className: o()(t, p.title, { [p.titleClickable]: null != s }),
                     id: l,
                     children: i
                 })

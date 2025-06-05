@@ -10,8 +10,8 @@ var a = n(255367),
     u = n(687058),
     m = n(131951),
     x = n(246992),
-    h = n(203759),
-    p = n(616257);
+    p = n(203759),
+    h = n(616257);
 function b(e) {
     let { recording: t } = e;
     return (0, a.jsxs)(a.Fragment, {
@@ -120,9 +120,9 @@ function v() {
             value: 'NONE'
         }),
         (0, a.jsx)(o.zJl, {
-            className: p.panel,
+            className: h.panel,
             children: (0, a.jsxs)('div', {
-                className: h.innerPanel,
+                className: p.innerPanel,
                 children: [
                     (0, a.jsx)(o.Text, {
                         variant: 'text-lg/bold',

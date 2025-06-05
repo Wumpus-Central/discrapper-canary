@@ -24,8 +24,8 @@ var r = n(120356),
     S = n(639119),
     v = n(533525),
     T = n(784238),
-    N = n(767714),
-    I = n(382791),
+    I = n(767714),
+    N = n(382791),
     y = n(184176),
     A = n(386733),
     P = n(474936),
@@ -64,7 +64,7 @@ let M = () => {
                 }),
                 (0, i.jsx)('div', {
                     className: Z.giftingContainerHighVisButtonContainer,
-                    children: (0, i.jsx)(N.Z, {
+                    children: (0, i.jsx)(I.Z, {
                         color: a.Ttl.WHITE,
                         textOptions: {
                             textOverride: D.intl.string(D.t.GyAbk5),
@@ -83,7 +83,7 @@ let M = () => {
         return t === C.XS.Control
             ? (0, i.jsx)('div', {
                   className: Z.premiumSubscribeButton,
-                  children: (0, i.jsx)(N.Z, {
+                  children: (0, i.jsx)(I.Z, {
                       showGradient: !0,
                       color: a.Ttl.BRAND,
                       textOptions: { textOverride: D.intl.string(D.t['3KomGR']) },
@@ -231,12 +231,12 @@ let M = () => {
                   location: n,
                   giftingExperimentCohort: h.cohort
               })));
-        let N = null;
+        let I = null;
         if (O === P.a$.NONE || l)
-            N = (0, i.jsx)(I.Cy, {
+            I = (0, i.jsx)(N.Cy, {
                 className: s()(Z.trialPill, { [Z.hidden]: !o }),
                 text: p,
-                colorOptions: I.VE.PREMIUM_TIER_2_WHITE_FILL
+                colorOptions: N.VE.PREMIUM_TIER_2_WHITE_FILL
             });
         else {
             o = !0;
@@ -248,7 +248,7 @@ let M = () => {
                     })
                 }),
                 t = D.intl.format(D.t['yR+oDA'], { helpCenterLink: b.Z.getArticleURL(R.BhN.FRACTIONAL_PREMIUM_ABOUT) });
-            N = (0, i.jsx)(g.Z, {
+            I = (0, i.jsx)(g.Z, {
                 text: t,
                 'aria-label': t.toString(),
                 tooltipClassName: Z.tooltip,
@@ -287,10 +287,10 @@ let M = () => {
                                 className: Z.pillContainer,
                                 children: (0, i.jsx)('div', {
                                     className: Z.flexCentered,
-                                    children: (0, i.jsx)(I.mn, {
+                                    children: (0, i.jsx)(N.mn, {
                                         className: s()(Z.trialPill, { [Z.hidden]: !o }),
                                         text: T,
-                                        colorOptions: I.VE.PREMIUM_TIER_2_WHITE_FILL,
+                                        colorOptions: N.VE.PREMIUM_TIER_2_WHITE_FILL,
                                         icon: e,
                                         gap: !1
                                     })
@@ -318,7 +318,7 @@ let M = () => {
             children: (0, i.jsx)(H.Provider, {
                 value: {
                     headingText: j,
-                    headingTop: N
+                    headingTop: I
                 },
                 children: E
             })

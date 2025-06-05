@@ -671,9 +671,9 @@ class to extends i.PureComponent {
                     : null;
             }),
             tr(this, 'renderHeaderBar', () => {
-                let { channel: e, channelName: t, parentChannel: n, guild: i, guildId: l, showCall: o, showActivityPanel: c, hasVideo: u, headerGuildBreadcrumbPosition: d, isFavorites: p } = this.props;
+                let { channel: e, channelName: t, parentChannel: n, guild: i, guildId: l, showCall: o, showActivityPanel: c, hasVideo: u, showHeaderGuildBreadcrumb: d, isFavorites: p } = this.props;
                 s()(null != e, 'Missing channel in Channel.renderHeaderBar'), s()(null != t, 'Should not be null if channel is not null.');
-                let h = e.isDM() && !e.isSystemDM() ? this.openUserProfile : void 0,
+                let h = e.isDM() && !e.isSystemDM() ? this.openUserProfile : d ? () => (0, ex.Kh)(e.id) : void 0,
                     f = (null == n ? void 0 : n.guild_id) != null && (null == n ? void 0 : n.id) != null ? this.handleTitleParentClick : void 0;
                 return (0, r.jsxs)('div', {
                     className: tn.subtitleContainer,
@@ -695,7 +695,7 @@ class to extends i.PureComponent {
                                         transparent: o || c,
                                         'aria-label': tt.intl.string(tt.t.BIYAqa),
                                         children: [
-                                            'left' === d &&
+                                            d &&
                                                 (0, r.jsx)(eo.TS, {
                                                     channel: e,
                                                     guild: i,
@@ -713,12 +713,6 @@ class to extends i.PureComponent {
                                                 handleParentClick: f,
                                                 renderFollowButton: this.renderFollowButton
                                             }),
-                                            'right' === d &&
-                                                (0, r.jsx)(eo.TS, {
-                                                    channel: e,
-                                                    guild: i,
-                                                    caretPosition: 'left'
-                                                }),
                                             (0, eo.v0)(e, i)
                                         ]
                                     },
@@ -875,7 +869,7 @@ let ts = (0, O.Z)(to),
                     nsfwAllowed: (null == K ? void 0 : K.nsfwAllowed) === !0,
                     showChannelSummaries: ed,
                     isFavorites: er,
-                    headerGuildBreadcrumbPosition: er || ei ? 'left' : 'right',
+                    showHeaderGuildBreadcrumb: er || ei,
                     premiumIndicatorEnabled: !1,
                     hasTextActivityInPanelMode: L,
                     isRefreshEnabled: eC,

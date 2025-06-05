@@ -15,7 +15,7 @@ var r = n(120356),
     h = n(993229);
 let f = function (e) {
     var t, n;
-    let { isVisible: r, isFullscreen: f, subscriptionTier: b, isMarketingPageV2: _ } = e,
+    let { isVisible: r, isFullscreen: f, subscriptionTier: b, isApplicationHome: _ } = e,
         x = null == (t = (0, d.N)()) ? void 0 : t.subscription_trial,
         E = (0, c.Ng)(),
         C = (0, c.Wp)(E, g.Si.TIER_2) ? g.Si.TIER_2 : void 0,
@@ -37,7 +37,7 @@ let f = function (e) {
         }),
         style: j,
         children: (0, i.jsxs)('div', {
-            className: _ ? h.innerWrapperV2 : h.innerWrapperV1,
+            className: _ ? h.innerWrapperApplicationHome : h.innerWrapper,
             children: [
                 (0, i.jsx)(m.Z, {
                     className: s()(h.button, { [h.subButton]: v }),

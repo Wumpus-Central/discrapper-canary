@@ -58,17 +58,17 @@ function Z(e) {
         })),
         [_, j] = i.useState(E.V5.ALL),
         [I, Z] = i.useState(E.xM.UNREAD),
-        { messages: k, loadState: M, loadMore: U, hasLoadedEver: G } = (0, C.ZP)();
+        { messages: M, loadState: U, loadMore: G, hasLoadedEver: B } = (0, C.ZP)();
     (0, i.useEffect)(() => {
         if (!p) return void T(null);
     }, [p]);
-    let B = (0, c.e7)([y.default], () => y.default.getCurrentUser()),
-        V = (0, c.e7)([m.Z], () => m.Z.getSavedMessages()),
-        H = i.useMemo(() => {
+    let V = (0, c.e7)([y.default], () => y.default.getCurrentUser()),
+        H = (0, c.e7)([m.Z], () => m.Z.getSavedMessages()),
+        F = i.useMemo(() => {
             var e;
-            if (!G) return null;
+            if (!B) return null;
             if (_ === E.V5.BOOKMARKS)
-                return V.flatMap((e) => {
+                return H.flatMap((e) => {
                     let { message: t } = e;
                     return null != t
                         ? [
@@ -91,12 +91,10 @@ function Z(e) {
                               })))
                         ? e
                         : []),
-                    ...k
-                        .filter((e) => e.author.id !== (null == B ? void 0 : B.id))
-                        .map((e) => ({
-                            message: e,
-                            kind: E.fL.ALL_MESSAGES_CHANNEL
-                        }))
+                    ...M.filter((e) => e.author.id !== (null == V ? void 0 : V.id)).map((e) => ({
+                        message: e,
+                        kind: E.fL.ALL_MESSAGES_CHANNEL
+                    }))
                 ],
                 (e) => {
                     let { message: t } = e;
@@ -104,7 +102,7 @@ function Z(e) {
                 }
             ).filter((e) => {
                 let { message: t } = e;
-                return t.author.id !== (null == B ? void 0 : B.id) && O.default.age(t.id) < E.ib;
+                return t.author.id !== (null == V ? void 0 : V.id) && O.default.age(t.id) < E.ib;
             });
             if (_ === E.V5.ALL) return t;
             if (_ === E.V5.ANNOUNCEMENTS)
@@ -120,12 +118,13 @@ function Z(e) {
                     ? void 0
                     : t.filter((e) => {
                           let { message: t } = e;
-                          return (null == B ? void 0 : B.id) != null && t.mentioned && t.mentions.includes(null == B ? void 0 : B.id);
+                          return (null == V ? void 0 : V.id) != null && t.mentioned && t.mentions.includes(null == V ? void 0 : V.id);
                       });
             throw Error('Unknown filter: '.concat(_));
-        }, [_, a, B, V, k, G]),
-        F = I === E.xM.READ && _ === E.V5.ALL,
-        { notificationCenterVariant: z } = v.L.useExperiment({ location: 'NotificationsInboxSidebar' });
+        }, [_, a, V, H, M, B]),
+        z = I === E.xM.READ && _ === E.V5.ALL && !h && B,
+        { notificationCenterVariant: W } = v.L.useExperiment({ location: 'NotificationsInboxSidebar' }),
+        Y = 'sidebar' === W && _ !== E.V5.ALL;
     return (0, r.jsxs)('nav', {
         className: o()(w.container, { [w.panelSpacing]: l }),
         children: [
@@ -168,13 +167,13 @@ function Z(e) {
                             direction: 'horizontal',
                             gap: 4,
                             children: [
-                                'sidebar' === z &&
+                                'sidebar' === W &&
                                     (0, r.jsx)(S.p, {
                                         selectedFilter: _,
                                         setSelectedFilter: j,
                                         className: w.headerButton
                                     }),
-                                (0, r.jsx)(L, {})
+                                (0, r.jsx)(k, {})
                             ]
                         })
                     }),
@@ -192,22 +191,23 @@ function Z(e) {
                       }),
                 t)
             ),
-            'popout' === z &&
+            'popout' === W &&
                 (0, r.jsx)(S.Z, {
                     selectedFilter: _,
                     setSelectedFilter: j
                 }),
-            F && (0, r.jsx)(D, {}),
+            z && (0, r.jsx)(D, {}),
+            Y && (0, r.jsx)(L, { filter: _ }),
             (0, r.jsx)(x.Z, {
                 className: w.messageList,
                 renderMessageGroup: R,
-                messages: H,
-                loading: h || M === C.jd.Loading,
+                messages: F,
+                loading: h || U === C.jd.Loading,
                 analyticsName: 'Notifications Inbox',
                 listName: 'notifications-inbox',
                 loadMore: function (e) {
                     let t = null != a && a.length > 0 ? a[a.length - 1].id : null;
-                    d && !h && T(null, t), M !== C.jd.Done && M !== C.jd.Loading && U(e);
+                    d && !h && T(null, t), U !== C.jd.Done && U !== C.jd.Loading && G(e);
                 },
                 renderEmptyState: A,
                 setInboxReadState: Z,
@@ -295,7 +295,20 @@ function D() {
               ]
           });
 }
-function L() {
+function L(e) {
+    let { filter: t } = e;
+    return (0, r.jsx)(
+        u.X6q,
+        {
+            color: 'text-primary',
+            variant: 'text-sm/semibold',
+            className: w.filterHeaderWrap,
+            children: E.by[t]
+        },
+        'filter-header'
+    );
+}
+function k() {
     let [e, t] = (0, i.useState)(!1);
     return (0, r.jsx)(u.ua7, {
         position: 'bottom',

@@ -224,11 +224,14 @@ class S extends (r = a.PureComponent) {
                         });
                     }
                 let u = (0, i.jsx)(
-                    'img',
+                    'div',
                     {
-                        src: e.getAvatarURL(a, o),
-                        alt: e.username,
-                        className: p.avatar
+                        className: p.avatarWithBackground,
+                        children: (0, i.jsx)('img', {
+                            src: e.getAvatarURL(a, o),
+                            alt: e.username,
+                            className: p.avatar
+                        })
                     },
                     e.id
                 );

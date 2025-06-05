@@ -15,6 +15,10 @@ n.r(
         titleBarTrailingAbsolute: 'titleBarTrailingAbsolute__53cea',
         titleBarMain: 'titleBarMain__53cea',
         titleBarMainCentered: 'titleBarMainCentered__53cea',
-        closeButton: 'closeButton__53cea'
+        closeButton: 'closeButton__53cea',
+        actionBar: 'actionBar__53cea',
+        actionBarLeading: 'actionBarLeading__53cea',
+        actionBarTrailing: 'actionBarTrailing__53cea',
+        actionBarTrailingFullWidth: 'actionBarTrailingFullWidth__53cea'
     })
 );

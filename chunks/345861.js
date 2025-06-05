@@ -8,7 +8,7 @@ var i = n(120356),
 function l(e) {
     var t,
         n,
-        { buttonCTA: i, onChange: l, onFileSizeError: c, 'aria-label': u, multiple: d = !1, disabled: p = !1, submitting: f = !1, maxFileSizeBytes: g, filters: b, className: m } = e,
+        { buttonCTA: i, onChange: l, onFileSizeError: c, 'aria-label': u, multiple: d = !1, disabled: p = !1, submitting: f = !1, maxFileSizeBytes: b, filters: g, className: m } = e,
         _ = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -91,8 +91,8 @@ function l(e) {
                     onChange: l,
                     onFileSizeError: c,
                     multiple: d,
-                    maxFileSizeBytes: g,
-                    filters: b,
+                    maxFileSizeBytes: b,
+                    filters: g,
                     'aria-label': null != u ? u : i,
                     disabled: p
                 })

@@ -8,7 +8,7 @@ var r = n(120356),
 function o(e) {
     var t,
         n,
-        { children: r, className: o, innerClassName: c, onChange: d, 'aria-label': u, 'aria-describedby': m, filters: x, multiple: h = !1, disabled: p = !1, submitting: b = !1 } = e,
+        { children: r, className: o, innerClassName: c, onChange: d, 'aria-label': u, 'aria-describedby': m, filters: x, multiple: p = !1, disabled: h = !1, submitting: b = !1 } = e,
         f = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -62,7 +62,7 @@ function o(e) {
                     (n = n =
                         {
                             submitting: b,
-                            disabled: p
+                            disabled: h
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -79,7 +79,7 @@ function o(e) {
                     t)
                 )
             ),
-            'aria-disabled': p,
+            'aria-disabled': h,
             children: [
                 (0, a.jsx)('span', {
                     'aria-hidden': !0,
@@ -90,10 +90,10 @@ function o(e) {
                     tabIndex: 0,
                     onChange: d,
                     filters: x,
-                    multiple: h,
+                    multiple: p,
                     'aria-label': u,
                     'aria-describedby': m,
-                    disabled: p
+                    disabled: h
                 })
             ]
         })

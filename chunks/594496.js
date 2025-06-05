@@ -24,8 +24,8 @@ var r = n(512722),
     S = n(778825),
     v = n(52597),
     T = n(430131),
-    N = n(133484),
-    I = n(388032),
+    I = n(133484),
+    N = n(388032),
     y = n(565872);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -134,7 +134,7 @@ function R(e) {
             (0, i.jsx)(
                 f.Z,
                 {
-                    sectionTitle: I.intl.string(I.t['+T3RIy']),
+                    sectionTitle: N.intl.string(N.t['+T3RIy']),
                     errors: null == V ? void 0 : V.pronouns,
                     onPronounsChange: (e) => {
                         (0, v.xs)(e, $);
@@ -144,7 +144,7 @@ function R(e) {
                 },
                 'pronouns'
             ),
-            (0, i.jsxs)(N.Z, {
+            (0, i.jsxs)(I.Z, {
                 user: Z,
                 showOverlay: !K,
                 children: [
@@ -153,9 +153,9 @@ function R(e) {
                         {
                             sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    I.intl.string(I.t.lqaIxM),
+                                    N.intl.string(N.t.lqaIxM),
                                     (0, i.jsx)(a.ua7, {
-                                        text: I.intl.string(I.t['5AFxuL']),
+                                        text: N.intl.string(N.t['5AFxuL']),
                                         children: (e) =>
                                             (0, i.jsx)(
                                                 a.SrA,
@@ -186,9 +186,9 @@ function R(e) {
                         {
                             sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    I.intl.string(I.t['7v0T9P']),
+                                    N.intl.string(N.t['7v0T9P']),
                                     (0, i.jsx)(a.ua7, {
-                                        text: I.intl.string(I.t['5AFxuL']),
+                                        text: N.intl.string(N.t['5AFxuL']),
                                         children: (e) =>
                                             (0, i.jsx)(
                                                 a.SrA,
@@ -216,9 +216,9 @@ function R(e) {
                         {
                             sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    I.intl.string(I.t.wR5wOj),
+                                    N.intl.string(N.t.wR5wOj),
                                     (0, i.jsx)(a.ua7, {
-                                        text: I.intl.string(I.t['5AFxuL']),
+                                        text: N.intl.string(N.t['5AFxuL']),
                                         children: (e) =>
                                             (0, i.jsx)(
                                                 a.SrA,
@@ -265,12 +265,12 @@ function R(e) {
                     (0, i.jsx)(
                         d.Z,
                         {
-                            placeholder: I.intl.string(I.t['/7NKgo']),
+                            placeholder: N.intl.string(N.t['/7NKgo']),
                             sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    I.intl.string(I.t.jGoPJS),
+                                    N.intl.string(N.t.jGoPJS),
                                     (0, i.jsx)(a.ua7, {
-                                        text: I.intl.string(I.t['5AFxuL']),
+                                        text: N.intl.string(N.t['5AFxuL']),
                                         children: (e) =>
                                             (0, i.jsx)(
                                                 a.SrA,

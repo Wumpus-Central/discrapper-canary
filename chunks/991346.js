@@ -35,8 +35,8 @@ var i = n(73800),
     S = n(667172),
     v = n(237292),
     T = n(314897),
-    N = n(906467),
-    I = n(283595),
+    I = n(906467),
+    N = n(283595),
     y = n(131951),
     A = n(699516),
     P = n(663389),
@@ -53,7 +53,7 @@ var i = n(73800),
     G = n(388032);
 function F(e) {
     let { shouldMergeGameSettings: t, showRedesignedThirdPartyAccessSettings: n } = e,
-        i = N.Z.isDeveloper,
+        i = I.Z.isDeveloper,
         r = [
             {
                 header: G.intl.string(G.t.cduTBA),
@@ -96,7 +96,7 @@ function F(e) {
 }
 function H() {
     var e, t, n, l;
-    let N = (0, C.YO)().length,
+    let I = (0, C.YO)().length,
         Z = (0, E.U)(),
         M = (0, r.e7)([P.Z], () => P.Z.getProps().impressionSource),
         U = (0, _.gU)(),
@@ -120,7 +120,7 @@ function H() {
         Q = (0, c.Q)(),
         J = (0, j.Zy)({ location: V.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
         { enabled: $ } = x.Z.useExperiment({ location: 'UserSettingsInventory' }, { autoTrackExposure: !0 }),
-        ee = (0, r.e7)([I.Z], () => I.Z.hasLibraryApplication()),
+        ee = (0, r.e7)([N.Z], () => N.Z.hasLibraryApplication()),
         et = (0, r.e7)([T.default], () => T.default.hasTOTPEnabled()),
         en = w.Sb.useSetting(),
         ei = (0, f.Z)(),
@@ -150,7 +150,7 @@ function H() {
     return i.useMemo(
         () =>
             (0, k.i)({
-                unseenGiftCount: N,
+                unseenGiftCount: I,
                 showPrepaidPaymentPastDueWarning: Z,
                 impressionSource: M,
                 numOfPendingFamilyRequests: U,
@@ -181,7 +181,7 @@ function H() {
                 isActivitySharingExperimentEnabled: ep,
                 isGoreContentFilteringEnabled: eh
             }),
-        [en, H, ea, eo, ee, el, et, er, M, es, J, X, q, W, G, K, ei, U, Q, Y, $, Z, N, ec, ed, eu, em, eg, ep, eh]
+        [en, H, ea, eo, ee, el, et, er, M, es, J, X, q, W, G, K, ei, U, Q, Y, $, Z, I, ec, ed, eu, em, eg, ep, eh]
     );
 }
 function z(e) {

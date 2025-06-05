@@ -14,7 +14,8 @@ let { CAPTCHA: o, EMAIL: a, PHONE: h, REVERIFY_EMAIL: c, REVERIFY_PHONE: d } = r
         [r.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE]: [a, d],
         [r.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE]: [c, d],
         [r.c2C.REQUIRE_CAPTCHA]: [o],
-        [r.c2C.AGREEMENTS]: []
+        [r.c2C.AGREEMENTS]: [],
+        [r.c2C.REQUIRE_SAFETY_FLOWS]: []
     },
     p = {
         isPhoneReverification: (e, t) => void 0 !== e && e.isPhoneVerified() && (t === r.c2C.REQUIRE_REVERIFIED_PHONE || t === r.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === r.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE),

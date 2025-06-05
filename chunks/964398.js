@@ -1,12 +1,12 @@
-n.d(t, { Z: () => y }), n(388685), n(415506);
+n.d(t, { Z: () => O }), n(388685), n(415506);
 var r = n(255367),
     l = n(73800),
     i = n(392711),
     o = n.n(i),
     a = n(481060),
     s = n(65205),
-    c = n(388032),
-    u = n(670161);
+    u = n(388032),
+    c = n(670161);
 function d(e) {
     let { className: t } = e;
     return (0, r.jsxs)('svg', {
@@ -107,43 +107,43 @@ let g = (e, t) => {
             y: Math.max(l * Math.sin((2 * Math.PI * r) / 360), 0)
         };
     },
-    y = l.memo(function (e) {
-        let { wheelWidth: t, wheelHeight: n, itemWidth: y, itemHeight: O, showDeadZoneIndicator: b, activeItem: N, onItemSelect: v, onItemAction: m, interactive: x = !0, onClose: E, children: C } = e,
+    O = l.memo(function (e) {
+        let { wheelWidth: t, wheelHeight: n, itemWidth: O, itemHeight: y, showDeadZoneIndicator: N, activeItem: b, onItemSelect: v, onItemAction: m, interactive: E = !0, onClose: C, children: x } = e,
             I = l.useRef(null),
             T = l.useRef([]),
-            j = l.useRef(!1),
-            S = l.useRef(null),
-            [P, _] = l.useState(0),
-            [Z, A] = l.useState({
+            S = l.useRef(!1),
+            P = l.useRef(null),
+            [j, Z] = l.useState(0),
+            [A, _] = l.useState({
                 x: 0,
                 y: 0
             }),
-            w = Math.abs(Z.x) + Math.abs(Z.y) > 0,
-            R = l.useMemo(() => o().chunk(C, h), [C]),
+            w = Math.abs(A.x) + Math.abs(A.y) > 0,
+            R = l.useMemo(() => o().chunk(x, h), [x]),
             D = l.useCallback(
                 (e, t) => {
-                    null == T.current[P] ? (T.current[P] = []) : (T.current[P][t] = e);
+                    null == T.current[j] ? (T.current[j] = []) : (T.current[j][t] = e);
                 },
-                [P]
+                [j]
             ),
             U = l.useCallback(
                 (e, t) => {
-                    (S.current = t), v(h * e + t);
+                    (P.current = t), v(h * e + t);
                 },
                 [v]
             ),
-            k = l.useCallback(() => {
-                (S.current = null), v(null);
+            L = l.useCallback(() => {
+                (P.current = null), v(null);
             }, [v]),
             M = l.useCallback(
                 (e) => {
-                    k(), (j.current = e);
+                    L(), (S.current = e);
                 },
-                [k]
+                [L]
             ),
-            L = l.useCallback((e, t, n) => {
-                if (j.current)
-                    return void A({
+            k = l.useCallback((e, t, n) => {
+                if (S.current)
+                    return void _({
                         x: 0,
                         y: 0
                     });
@@ -154,18 +154,18 @@ let g = (e, t) => {
                     l = r.x < 0,
                     i = r.y < 0,
                     o = g(n, r);
-                A({
+                _({
                     x: (l ? Math.max(r.x, -o.x) : Math.min(r.x, o.x)) / 2,
                     y: (i ? Math.max(r.y, -o.y) : Math.min(r.y, o.y)) / 2
                 });
             }, []),
             B = l.useCallback(
                 (e) => {
-                    null != S.current && (e.preventDefault(), e.stopPropagation(), null == m || m(h * P + S.current));
+                    null != P.current && (e.preventDefault(), e.stopPropagation(), null == m || m(h * j + P.current));
                 },
-                [m, P]
+                [m, j]
             ),
-            G = l.useMemo(
+            V = l.useMemo(
                 () =>
                     (0, i.throttle)((e) => {
                         if (null == I.current) return;
@@ -178,69 +178,69 @@ let g = (e, t) => {
                                 x: e.clientX,
                                 y: e.clientY
                             };
-                        if ((L(i, l, Math.max(t, n)), j.current)) {
-                            null != N && k();
+                        if ((k(i, l, Math.max(t, n)), S.current)) {
+                            null != b && L();
                             return;
                         }
                         let o = (0, s.ld)(l, i, Math.max(t, n));
-                        for (let e = 0; e < T.current[P].length; e++) {
-                            let t = T.current[P][e];
+                        for (let e = 0; e < T.current[j].length; e++) {
+                            let t = T.current[j][e];
                             if (null == t) continue;
                             let n = t.getBoundingClientRect();
-                            if ((0, s.Vr)(l, o, n)) return void U(P, e);
+                            if ((0, s.Vr)(l, o, n)) return void U(j, e);
                         }
-                        k();
+                        L();
                     }, 16),
-                [N, L, k, U, P, n, t]
+                [b, k, L, U, j, n, t]
             ),
-            V = l.useCallback(
+            G = l.useCallback(
                 (e) => {
-                    if (!x) return;
-                    let t = P + (e.deltaY > 0 ? 1 : -1);
-                    t >= 0 && t < R.length && (null != S.current && (R[t].length > S.current ? U(t, S.current) : k()), _(t));
+                    if (!E) return;
+                    let t = j + (e.deltaY > 0 ? 1 : -1);
+                    t >= 0 && t < R.length && (null != P.current && (R[t].length > P.current ? U(t, P.current) : L()), Z(t));
                 },
-                [x, P, R, U, k]
+                [E, j, R, U, L]
             ),
             F = l.useMemo(
                 () =>
-                    R[P].map((e, l) => {
+                    R[j].map((e, l) => {
                         let i = f[l];
-                        if (null == i) throw Error('Too many items supplied '.concat(C.length, ' expected max of ').concat(f.length));
-                        let o = p(i.x, t, y),
-                            a = p(i.y, n, O);
+                        if (null == i) throw Error('Too many items supplied '.concat(x.length, ' expected max of ').concat(f.length));
+                        let o = p(i.x, t, O),
+                            a = p(i.y, n, y);
                         return (0, r.jsx)(
                             'div',
                             {
                                 ref: (e) => D(e, l),
-                                className: u.chatWheelItem,
+                                className: c.chatWheelItem,
                                 style: {
                                     left: o,
                                     top: a,
-                                    width: y,
-                                    height: O
+                                    width: O,
+                                    height: y
                                 },
                                 children: e
                             },
                             l
                         );
                     }),
-                [R, P, t, y, n, O, C.length, D]
+                [R, j, t, O, n, y, x.length, D]
             );
         return (0, r.jsx)(a.P3F, {
-            className: u.chatWheelMouseInput,
-            onMouseMove: G,
-            onWheel: V,
+            className: c.chatWheelMouseInput,
+            onMouseMove: V,
+            onWheel: G,
             onClick: B,
             children: (0, r.jsxs)('div', {
                 ref: I,
-                className: u.chatWheel,
+                className: c.chatWheel,
                 style: {
                     width: t,
                     height: n
                 },
                 children: [
                     (0, r.jsxs)('svg', {
-                        className: u.chatWheelBackground,
+                        className: c.chatWheelBackground,
                         viewBox: '0 0 288 288',
                         xmlns: 'http://www.w3.org/2000/svg',
                         children: [
@@ -280,15 +280,15 @@ let g = (e, t) => {
                                 filter: 'url(#soundboard-wheel-background-shadow)',
                                 children: [
                                     (0, r.jsx)('circle', {
-                                        className: u.chatWheelBackground,
+                                        className: c.chatWheelBackground,
                                         cx: '144',
                                         cy: '144',
                                         r: '103.68',
                                         strokeWidth: '40.32'
                                     }),
-                                    b &&
+                                    N &&
                                         (0, r.jsx)('circle', {
-                                            className: u.chatWheelDeadZone,
+                                            className: c.chatWheelDeadZone,
                                             onMouseEnter: () => M(!0),
                                             onMouseLeave: () => M(!1),
                                             cx: 144,
@@ -297,16 +297,16 @@ let g = (e, t) => {
                                         }),
                                     w &&
                                         (0, r.jsx)('circle', {
-                                            className: u.chatWheelCenter,
-                                            cx: 144 + Z.x,
-                                            cy: 144 + Z.y,
+                                            className: c.chatWheelCenter,
+                                            cx: 144 + A.x,
+                                            cy: 144 + A.y,
                                             r: 28.8
                                         })
                                 ]
                             }),
-                            b &&
+                            N &&
                                 (0, r.jsx)('circle', {
-                                    className: u.chatWheelDeadZone,
+                                    className: c.chatWheelDeadZone,
                                     onMouseEnter: () => M(!0),
                                     onMouseLeave: () => M(!1),
                                     cx: 144,
@@ -317,18 +317,18 @@ let g = (e, t) => {
                         ]
                     }),
                     (0, r.jsxs)('div', {
-                        className: u.innerContent,
+                        className: c.innerContent,
                         children: [
-                            b &&
+                            N &&
                                 (0, r.jsx)(a.P3F, {
-                                    className: u.chatWheelDeadZoneIcon,
-                                    onClick: E,
-                                    children: (0, r.jsx)(d, { className: u.chatWheelDeadZoneIcon })
+                                    className: c.chatWheelDeadZoneIcon,
+                                    onClick: C,
+                                    children: (0, r.jsx)(d, { className: c.chatWheelDeadZoneIcon })
                                 }),
-                            x && R.length > 1
+                            E && R.length > 1
                                 ? (0, r.jsx)('div', {
-                                      className: u.paginationHint,
-                                      children: c.intl.string(c.t['Xy+S09'])
+                                      className: c.paginationHint,
+                                      children: u.intl.string(u.t['Xy+S09'])
                                   })
                                 : null
                         ]

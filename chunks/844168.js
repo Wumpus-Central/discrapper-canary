@@ -1,12 +1,12 @@
-n.d(t, { C: () => l });
-var i = n(818083),
-    r = n(987338);
-let s = (0, i.B)({
+n.d(t, { C: () => o });
+var r = n(818083),
+    i = n(987338);
+let a = (0, r.B)({
     kind: 'user',
     id: '2025-05_core_product_illustration_migration',
     label: 'Core Product Illustration Migration',
     defaultConfig: { enabled: !1 },
-    commonTriggerPoint: r.$P.CONNECTION_OPEN,
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 0,
@@ -20,7 +20,7 @@ let s = (0, i.B)({
         }
     ]
 });
-function l(e) {
-    let { enabled: t } = s.useExperiment({ location: e });
+function o(e) {
+    let { enabled: t } = a.useExperiment({ location: e });
     return t;
 }

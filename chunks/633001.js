@@ -10,8 +10,8 @@ var a = n(255367),
     u = n(13245),
     m = n(615287),
     x = n(594190),
-    h = n(306381),
-    p = n(371651),
+    p = n(306381),
+    h = n(371651),
     b = n(829907),
     f = n(610394),
     v = n(352527),
@@ -236,7 +236,7 @@ function L(e) {
 function D(e) {
     let { pid: t } = e,
         n = (0, o.cj)([_.default], () => _.default.getOverlayPIDStatuses()),
-        r = (0, o.cj)([p.default], () => p.default.getTrackedGames()),
+        r = (0, o.cj)([h.default], () => h.default.getTrackedGames()),
         l = (0, o.e7)([_.default], () => _.default.isInputLocked(t), [t]),
         i = (0, o.e7)([_.default], () => _.default.DEV_isInputLockedV3(t), [t]),
         s = (0, o.e7)([_.default], () => _.default.DEV_isInputLocked(t), [t]),
@@ -334,11 +334,11 @@ function z() {
     var e, t;
     let [n, l] = M(E.Odu.CLICK_ZONE_DEBUG),
         [s, d] = M(E.Odu.PERFORMANCE_DEBUG),
-        g = (0, o.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.ClickZones)),
-        j = (0, o.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.WidgetAreas)),
-        y = (0, o.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.DisabledGPUBoost)),
-        T = (0, o.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.ForceGPUBoost)),
-        S = (0, o.e7)([p.default], () => p.default.getForcedRenderMode()),
+        g = (0, o.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(p.G.ClickZones)),
+        j = (0, o.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(p.G.WidgetAreas)),
+        y = (0, o.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(p.G.DisabledGPUBoost)),
+        T = (0, o.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(p.G.ForceGPUBoost)),
+        S = (0, o.e7)([h.default], () => h.default.getForcedRenderMode()),
         [R, A] = r.useState({}),
         [Z, z] = r.useState(S),
         B = (e) => {
@@ -362,11 +362,11 @@ function z() {
                 value: m.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION
             }
         ].map((e) => k(w({}, e), { label: ''.concat(e.label, ' ').concat(S === e.value ? '(current)' : '') })),
-        F = (0, o.cj)([p.default], () => p.default.getTrackedGames()),
+        F = (0, o.cj)([h.default], () => h.default.getTrackedGames()),
         G = (0, o.e7)([_.default], () => _.default.getFocusedPID()),
         V = (0, o.e7)([_.default], () => _.default.isFocusedPidOutOfProcess()),
         H = (0, N.getPID)(),
-        W = (0, o.e7)([p.default], () => p.default.isOverlayOOPEnabledForPid(H), [H]),
+        W = (0, o.e7)([h.default], () => h.default.isOverlayOOPEnabledForPid(H), [H]),
         [X, K] = (0, o.Wu)([v.Z], () => [v.Z.enabled, v.Z.keepOpen]),
         Y = (0, o.e7)([x.ZP], () => x.ZP.getRunningGames());
     r.useEffect(() => {
@@ -417,16 +417,16 @@ function z() {
             u.Z.setRenderDebugMode(!f.ZP.hasRenderDebugMode(e), e);
         },
         ee = () => {
-            Q(h.G.ClickZones);
+            Q(p.G.ClickZones);
         },
         et = () => {
-            Q(h.G.WidgetAreas);
+            Q(p.G.WidgetAreas);
         },
         en = () => {
-            Q(h.G.DisabledGPUBoost);
+            Q(p.G.DisabledGPUBoost);
         },
         ea = () => {
-            Q(h.G.ForceGPUBoost);
+            Q(p.G.ForceGPUBoost);
         },
         er = (e) => {
             var t, n;

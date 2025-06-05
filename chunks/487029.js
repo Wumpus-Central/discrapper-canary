@@ -1,26 +1,26 @@
-n.d(t, { Z: () => x }), n(388685), n(642613), n(539854);
+n.d(t, { Z: () => E }), n(388685), n(642613), n(539854);
 var r = n(255367),
     l = n(73800),
     i = n(990547),
     o = n(442837),
     a = n(100527),
     s = n(906732),
-    c = n(213609),
-    u = n(675478),
+    u = n(213609),
+    c = n(675478),
     d = n(19780),
     f = n(709054),
     h = n(208049),
     p = n(763296),
     g = n(242291),
-    y = n(174470),
-    O = n(549771),
-    b = n(964398),
-    N = n(294206),
+    O = n(174470),
+    y = n(549771),
+    N = n(964398),
+    b = n(294206),
     v = n(710111),
     m = n(840558);
-function x(e) {
-    let { guildId: t, channel: n, width: x, height: E, keepOpen: C, interactive: I = !0, analyticsSource: T, onClose: j } = e,
-        S = (function (e) {
+function E(e) {
+    let { guildId: t, channel: n, width: E, height: C, keepOpen: x, interactive: I = !0, analyticsSource: T, onClose: S } = e,
+        P = (function (e) {
             let [t, n] = (0, o.Wu)([p.Z], () => [p.Z.getSounds(), p.Z.getFavorites()]);
             return l.useMemo(() => {
                 let r = [],
@@ -34,32 +34,32 @@ function x(e) {
                     };
                 return l.forEach((e) => i(e, !0)), l.forEach((e) => i(e, !1)), r;
             }, [t, n, e]);
-        })((0, O.h)(n, !0)),
-        P = (0, y.j)(),
-        _ = l.useRef(null),
-        [Z, A] = l.useState(void 0),
+        })((0, y.h)(n, !0)),
+        j = (0, O.j)(),
+        Z = l.useRef(null),
+        [A, _] = l.useState(void 0),
         w = (0, o.e7)([d.Z], () => d.Z.getMediaSessionId()),
         { analyticsLocations: R } = (0, s.ZP)(a.Z.SOUNDBOARD_WHEEL),
         D = l.useCallback(
             (e) => {
-                (0, g.GN)(e, n.id, R), j();
+                (0, g.GN)(e, n.id, R), S();
             },
-            [R, n.id, j]
+            [R, n.id, S]
         );
     l.useEffect(() => {
-        h.w(), u.DZ.loadIfNecessary();
+        h.w(), c.DZ.loadIfNecessary();
     }, []),
         l.useEffect(() => {
-            0 === S.length && 0 === P.length && j();
-        }, [S.length, P, j]),
+            0 === P.length && 0 === j.length && S();
+        }, [P.length, j, S]),
         l.useEffect(
             () => () => {
-                let e = _.current;
-                C || null == e || D(e);
+                let e = Z.current;
+                x || null == e || D(e);
             },
-            [C, D]
+            [x, D]
         ),
-        (0, c.Z)(
+        (0, u.Z)(
             {
                 type: i.ImpressionTypes.POPOUT,
                 name: i.ImpressionNames.SOUNDBOARD_POPOUT,
@@ -72,57 +72,57 @@ function x(e) {
             { disableTrack: !I }
         );
     let U = l.useCallback((e) => {
-            (_.current = e), A(null == e ? void 0 : e.soundId);
+            (Z.current = e), _(null == e ? void 0 : e.soundId);
         }, []),
-        k = l.useCallback(
+        L = l.useCallback(
             (e) => {
                 if (null == e) return void U(null);
-                let t = S[e];
+                let t = P[e];
                 null != t && U(t);
             },
-            [U, S]
+            [U, P]
         ),
         M = l.useCallback(
             (e) => {
                 if (null == e) return;
-                let t = S[e];
+                let t = P[e];
                 null != t && D(t);
             },
-            [S, D]
+            [P, D]
         ),
-        L = l.useMemo(
+        k = l.useMemo(
             () =>
-                S.map((e) =>
+                P.map((e) =>
                     (0, r.jsx)(
-                        N.ZP,
+                        b.ZP,
                         {
                             interactive: I,
                             className: m.soundButton,
                             sound: e,
-                            focused: Z === e.soundId,
+                            focused: A === e.soundId,
                             channel: n
                         },
                         e.soundId
                     )
                 ),
-            [Z, n, I, S]
+            [A, n, I, P]
         );
-    return 0 === S.length
+    return 0 === P.length
         ? null
         : (0, r.jsx)(s.Gt, {
               value: R,
-              children: (0, r.jsx)(b.Z, {
-                  wheelWidth: x,
-                  wheelHeight: E,
+              children: (0, r.jsx)(N.Z, {
+                  wheelWidth: E,
+                  wheelHeight: C,
                   itemWidth: 96,
                   itemHeight: 52,
-                  showDeadZoneIndicator: !C,
-                  activeItem: Z,
-                  onItemSelect: k,
+                  showDeadZoneIndicator: !x,
+                  activeItem: A,
+                  onItemSelect: L,
                   onItemAction: M,
-                  onClose: j,
+                  onClose: S,
                   interactive: I,
-                  children: L
+                  children: k
               })
           });
 }

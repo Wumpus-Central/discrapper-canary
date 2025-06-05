@@ -44,7 +44,7 @@ function h(e) {
     return e;
 }
 function m(e) {
-    let { smallerText: t, className: n, textColor: a, isMarketingPageV2Enabled: c } = e,
+    let { smallerText: t, className: n, textColor: a, isApplicationHome: c } = e,
         p = (0, s.e7)([u.Z], () => u.Z.affinities.slice(0, 3).reverse()),
         h = p.map((e, t) =>
             (0, r.jsx)(

@@ -3,7 +3,7 @@ var r = n(818083),
     i = n(984134);
 let a = (0, r.B)({
     kind: 'user',
-    id: '2025-03_audio_bitrate_adaptation',
+    id: '2025-06_audio_bitrate_adaptation',
     label: 'Audio Bitrate Adaptation',
     defaultConfig: { enabled: !1 },
     treatments: [

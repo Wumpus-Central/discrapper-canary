@@ -25,7 +25,7 @@ let b = {
         let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, anchorPillType: _, analyticsPage: x, isCoachmarkEnabled: E = !0, linkText: C = h.intl.string(h.t.XRdyj4), cardAlignment: j = b.START, className: O } = e,
             { balance: S } = (0, d.A)(),
             [v, T] = r.useState(u.b.DEFAULT),
-            [N, I] = r.useState(!1),
+            [I, N] = r.useState(!1),
             [y, A] = r.useState(!1),
             P = r.useRef(null),
             { shouldOpen: R } = (0, c.Mm)({
@@ -35,10 +35,10 @@ let b = {
                 onClickPill: p.dG4
             });
         r.useEffect(() => {
-            E && ((0, c.wH)() || R ? (A(!0), I(!1)) : A(!1));
+            E && ((0, c.wH)() || R ? (A(!0), N(!1)) : A(!1));
         }, [E, R]);
         let D = r.useCallback(() => {
-                let e = !N;
+                let e = !I;
                 e &&
                     null != x &&
                     (0, o.Y)({
@@ -47,11 +47,11 @@ let b = {
                         ctaObject: p.qAy.OPEN_ORB_BALANCE_MENU_FROM_PILL
                     }),
                     T(e ? u.b.SELECTED : u.b.DEFAULT),
-                    I(e);
-            }, [N, x]),
+                    N(e);
+            }, [I, x]),
             Z = r.useCallback(() => {
-                N && D();
-            }, [N, D]),
+                I && D();
+            }, [I, D]),
             w = (0, a.Z)(null, Z);
         return (0, i.jsxs)('div', {
             className: l()(f.container, O, {
@@ -70,7 +70,7 @@ let b = {
                     onClick: D,
                     showNotificationBadge: t
                 }),
-                N &&
+                I &&
                     (0, i.jsx)('div', {
                         className: l()(f.cardContainer, j, {
                             [f.hidden]: y,

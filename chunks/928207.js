@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => N });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -16,48 +16,43 @@ var i = n(120356),
     m = n(906732),
     b = n(600164),
     _ = n(984370),
-    E = n(278605),
-    O = n(585612),
-    I = n(299657),
-    y = n(594174),
-    v = n(74538),
-    C = n(981631),
-    S = n(474936),
-    N = n(388032),
-    T = n(881207);
-let P = s.ZP.connectStores([y.default], () => ({ user: y.default.getCurrentUser() }))(
+    E = n(299657),
+    O = n(594174),
+    I = n(74538),
+    y = n(981631),
+    v = n(474936),
+    C = n(388032),
+    S = n(881207);
+let N = s.ZP.connectStores([O.default], () => ({ user: O.default.getCurrentUser() }))(
     (0, h.Z)(
         (0, p.Z)((e) => {
             let { isAuthenticated: t, user: n } = e,
                 { analyticsLocations: i } = (0, m.ZP)(g.Z.HOME_PAGE_PREMIUM_TAB),
-                s = (0, E.xP)('ApplicationStoreHome'),
-                p = (0, O.C)('ApplicationStoreHome'),
-                h = (0, v.I5)(n, S.p9.TIER_2),
-                y = (s || p) && !h,
-                P = (0, f.ZP)();
+                s = (0, I.I5)(n, v.p9.TIER_2),
+                p = (0, f.ZP)();
             return t
                 ? (0, r.jsxs)('div', {
-                      className: T.homeWrapperNormal,
+                      className: S.homeWrapperNormal,
                       children: [
                           (0, r.jsx)(d.Z, {
-                              section: C.jXE.NAVIGATION,
+                              section: y.jXE.NAVIGATION,
                               children: (0, r.jsx)(u.f6W, {
-                                  theme: P,
+                                  theme: p,
                                   children: (e) =>
                                       (0, r.jsxs)(_.Z, {
                                           isAuthenticated: t,
-                                          className: l()(T.headerBar, e, {
-                                              [T.headerBarV2LightBackground]: y && !(0, c.wj)(P),
-                                              [T.headerBarV2DarkBackground]: y && (0, c.wj)(P)
+                                          className: l()(S.headerBar, e, {
+                                              [S.headerBarV2LightBackground]: !s && !(0, c.wj)(p),
+                                              [S.headerBarV2DarkBackground]: !s && (0, c.wj)(p)
                                           }),
                                           role: 'navigation',
                                           children: [
                                               (0, r.jsx)(_.Z.Icon, {
                                                   icon: u.SrA,
                                                   'aria-hidden': !0,
-                                                  color: y ? o.Z.PREMIUM_TIER_2_PINK : void 0
+                                                  color: s ? void 0 : o.Z.PREMIUM_TIER_2_PINK
                                               }),
-                                              (0, r.jsx)(_.Z.Title, { children: N.intl.string(N.t.Ipxkoq) })
+                                              (0, r.jsx)(_.Z.Title, { children: C.intl.string(C.t.Ipxkoq) })
                                           ]
                                       })
                               })
@@ -69,13 +64,13 @@ let P = s.ZP.connectStores([y.default], () => ({ user: y.default.getCurrentUser(
                                       ? (0, r.jsx)(b.Z, {
                                             align: b.Z.Align.CENTER,
                                             justify: b.Z.Justify.CENTER,
-                                            children: (0, r.jsx)(u.$jN, { className: T.spinner })
+                                            children: (0, r.jsx)(u.$jN, { className: S.spinner })
                                         })
-                                      : (0, r.jsx)(I.Z, { entrypoint: S.EZ.ApplicationStoreHome })
+                                      : (0, r.jsx)(E.Z, { entrypoint: v.EZ.ApplicationStoreHome })
                           })
                       ]
                   })
-                : (0, r.jsx)(a.l_, { to: C.Z5c.LOGIN });
+                : (0, r.jsx)(a.l_, { to: y.Z5c.LOGIN });
         })
     )
 );

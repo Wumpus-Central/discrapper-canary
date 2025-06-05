@@ -10,17 +10,17 @@ var r = n(255367),
     d = n(3148),
     p = n(753206),
     f = n(594174),
-    g = n(5192),
-    b = n(981631),
+    b = n(5192),
+    g = n(981631),
     m = n(388032),
     _ = n(264700);
 function v(e) {
     var t;
     let { guildId: n, role: s, theme: v, content: h = m.intl.string(m.t['6OSasb']), className: O } = e,
         y = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
-        j = g.ZP.useName(n, null, y),
+        j = b.ZP.useName(n, null, y),
         x = (0, c.Kz)(s),
-        C = i.useMemo(() => {
+        S = i.useMemo(() => {
             var e, t;
             return (0, u.e5)(
                 ((e = (function (e) {
@@ -61,7 +61,7 @@ function v(e) {
                 )),
                 (t = t =
                     {
-                        state: b.yb.SENT,
+                        state: g.yb.SENT,
                         id: '0'
                     }),
                 Object.getOwnPropertyDescriptors
@@ -79,7 +79,7 @@ function v(e) {
                 e)
             );
         }, [y, h]),
-        S = {
+        C = {
             nick: j,
             colorString: null != (t = s.colorString) ? t : void 0
         };
@@ -90,9 +90,9 @@ function v(e) {
                 className: o()(e, _.container, O),
                 children: (0, r.jsx)(p.Z, {
                     hideTimestamp: !0,
-                    author: S,
+                    author: C,
                     roleIcon: x,
-                    message: C,
+                    message: S,
                     isGroupStart: !0,
                     disableInteraction: !0
                 })

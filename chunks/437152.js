@@ -13,6 +13,6 @@ function c() {
 }
 function u() {
     null != i.K.get(a) && i.K.remove(a);
-    let { isDismissed: e } = (0, l.Fo)(r.z.CHANNEL_REORDER_MODAL_DISMISS_SETTING, { cooldownDurationMs: 10 * o.Z.Millis.SECOND });
+    let { isDismissed: e } = (0, l.Fo)(r.z.CHANNEL_REORDER_MODAL_DISMISS_SETTING, { cooldownDurationMs: o.Z.Millis.WEEK });
     return !e;
 }

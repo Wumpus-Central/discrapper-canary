@@ -226,13 +226,7 @@ let K = i.forwardRef(function (e, t) {
         if ((X(!0), null == j.current || null == W.current || !en)) return;
         let e = j.current.getBoundingClientRect().height,
             t = W.current.getBoundingClientRect().height;
-        et(t > e),
-            (K.current = e),
-            (z.current = t),
-            eo({
-                maxHeight: ''.concat(Math.min(J ? K.current : z.current, J ? x : k), 'px'),
-                immediate: !0
-            });
+        et(t > e), (K.current = e), (z.current = t), eo({ maxHeight: ''.concat(Math.min(J ? K.current : z.current, J ? x : k), 'px') });
     }, [en, p, _, I, eo, J, x, k]);
     let es = (e) => {
             ee &&

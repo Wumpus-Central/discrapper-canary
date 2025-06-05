@@ -341,7 +341,7 @@ class eO extends d.Z {
             let e = T.Z.workerExperimentString();
             null != e && t.push(e);
         }
-        (0, I.f)('RtcConnection').enabled && t.push('audio_transport_cc'), A.Z.getCurrentConfig({ location: '_chooseExperiments' }, { autoTrackExposure: !0 }).enabled && t.push('keyframe_on_join'), P.Z.getCurrentConfig({ location: '_chooseExperiments' }, { autoTrackExposure: !0 }).enabled && t.push('network_aware_socket'), (this._selectedExperiments = t);
+        this.context === eo.Yn.DEFAULT && (0, I.f)('RtcConnection').enabled && t.push('audio_transport_cc'), A.Z.getCurrentConfig({ location: '_chooseExperiments' }, { autoTrackExposure: !0 }).enabled && t.push('keyframe_on_join'), P.Z.getCurrentConfig({ location: '_chooseExperiments' }, { autoTrackExposure: !0 }).enabled && t.push('network_aware_socket'), (this._selectedExperiments = t);
     }
     _handleConnecting(e) {
         if (null != this.endpoint) {

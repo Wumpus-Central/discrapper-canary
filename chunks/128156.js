@@ -30,24 +30,24 @@ function O(e) {
             userId: t.id,
             guildId: P
         }),
-        U = (0, r.e7)([l.Z], () => l.Z.isFetchingUserOutbox(t.id)),
-        L = t.id === n.id,
+        L = (0, r.e7)([l.Z], () => l.Z.isFetchingUserOutbox(t.id)),
+        U = t.id === n.id,
         k = (0, r.e7)([s.Z, a.Z], () => {
-            let e = L ? s.Z.getStatus() : a.Z.getStatus(t.id);
+            let e = U ? s.Z.getStatus() : a.Z.getStatus(t.id);
             return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
         }),
         M = w.length > 0 || null != E,
         R = T && null == E && null == D && null != B,
         G = !k && (M || R),
         V = S.length > 0;
-    if (!G && !V && U)
+    if (!G && !V && L)
         return (0, o.jsx)('div', {
             className: I.spinner,
             children: (0, o.jsx)(i.$jN, {})
         });
-    if (!G && !V && !U) {
+    if (!G && !V && !L) {
         var F;
-        return L
+        return U
             ? (0, o.jsx)(x.Uf, { onClose: Z })
             : (0, o.jsx)(x.P9, {
                   user: t,
@@ -119,7 +119,7 @@ function O(e) {
             V
                 ? (0, o.jsx)(h.Z, {
                       heading: v.intl.string(v.t.jzgEoK),
-                      introText: L
+                      introText: U
                           ? v.intl.format(v.t['4bk9Ag'], {
                                 learnMoreHook: (e, t) =>
                                     (0, o.jsx)(

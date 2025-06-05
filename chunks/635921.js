@@ -1,5 +1,5 @@
 n.d(t, {
-    PK: () => N,
+    PK: () => I,
     ZP: () => A,
     _O: () => y
 }),
@@ -28,8 +28,8 @@ var i = n(255367),
     S = n(474936),
     v = n(388032),
     T = n(909176);
-let N = (e) => {
-        let { inOfferExperience: t, subscriptionTier: n, containerClassName: r, buttonClassName: s, isMarketingPageV2Enabled: a, isDarkMode: c } = e,
+let I = (e) => {
+        let { inOfferExperience: t, subscriptionTier: n, containerClassName: r, buttonClassName: s, isApplicationHome: a, isDarkMode: c } = e,
             d = (0, i.jsx)(x.Z, {
                 color: c || !a ? o.Ttl.BRAND_INVERTED : void 0,
                 className: l()(T.button, T.subButton, s, {
@@ -50,14 +50,14 @@ let N = (e) => {
             children: [d, ' ', u]
         });
     },
-    I = (e) => {
+    N = (e) => {
         let { isFullscreen: t } = e;
         return (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(u.A, { className: t ? T.fullscreenSparkleStar1 : T.settingsSparkleStar1 }), (0, i.jsx)(u.A, { className: t ? T.fullscreenSparkleStar2 : T.settingsSparkleStar2 }), (0, i.jsx)(u.A, { className: t ? T.fullscreenSparkleStar3 : T.settingsSparkleStar3 }), (0, i.jsx)(u.A, { className: t ? T.fullscreenSparkleStar4 : T.settingsSparkleStar4 })]
         });
     };
 function y(e) {
-    let { variant: t = 'text-lg/normal', withBottomMargin: n = !0, isMarketingPageV2Enabled: r } = e,
+    let { variant: t = 'text-lg/normal', withBottomMargin: n = !0, isApplicationHome: r } = e,
         s = (0, j.$)();
     return (0, i.jsx)(o.Text, {
         variant: t,
@@ -120,7 +120,7 @@ let A = r.forwardRef((e, t) => {
                                       color: o.Ttl.WHITE
                                   })
                               })
-                            : (0, i.jsx)(N, {
+                            : (0, i.jsx)(I, {
                                   subscriptionTier: null != (r = null != j ? j : null == k || null == (n = k.subscription_trial) ? void 0 : n.sku_id) ? r : w,
                                   inOfferExperience: L,
                                   buttonClassName: x,
@@ -134,7 +134,7 @@ let A = r.forwardRef((e, t) => {
                             })
                     ]
                 }),
-                !L && (0, i.jsx)(I, { isFullscreen: s })
+                !L && (0, i.jsx)(N, { isFullscreen: s })
             ]
         })
     });

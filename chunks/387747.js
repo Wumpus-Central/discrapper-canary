@@ -1,60 +1,63 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var i = n(255367);
 n(73800);
 var r = n(410575),
     s = n(100527),
-    l = n(89057),
-    a = n(347475),
-    o = n(625252),
-    c = n(921801),
-    d = n(541540),
-    u = n(29599),
-    m = n(726985),
-    g = n(981631),
-    p = n(159628);
-function h() {
-    return (0, i.jsxs)(i.Fragment, {
+    l = n(906732),
+    a = n(89057),
+    o = n(347475),
+    c = n(625252),
+    d = n(921801),
+    u = n(541540),
+    m = n(29599),
+    g = n(726985),
+    p = n(981631),
+    h = n(159628);
+function f() {
+    let { analyticsLocations: e } = (0, l.ZP)(s.Z.USER_SETTINGS_GIFT_INVENTORY);
+    return (0, i.jsxs)(l.Gt, {
+        value: e,
         children: [
-            (0, i.jsx)(c.F, {
-                setting: m.s6.GIFT_NITRO,
-                children: (0, i.jsx)(a.Z, {
+            (0, i.jsx)(d.F, {
+                setting: g.s6.GIFT_NITRO,
+                children: (0, i.jsx)(o.Z, {
                     location: s.Z.USER_SETTINGS_GIFT_INVENTORY,
-                    className: p.giftNitro,
-                    imageClassName: p.giftNitroImage,
+                    className: h.giftNitro,
+                    imageClassName: h.giftNitroImage,
                     textContainerOverrideStyles: {
                         padding: '32px',
                         width: '360px'
                     },
                     analyticsLocation: {
-                        page: g.ZY5.GIFTING_SETTINGS,
-                        section: g.jXE.GIFT_BANNER
+                        page: p.ZY5.GIFTING_SETTINGS,
+                        section: p.jXE.GIFT_BANNER
                     }
                 })
             }),
-            (0, i.jsx)(c.F, {
-                setting: m.s6.GIFT_CODE_REDEMPTION,
+            (0, i.jsx)(d.F, {
+                setting: g.s6.GIFT_CODE_REDEMPTION,
                 children: (0, i.jsx)(r.Z, {
-                    section: g.jXE.LIBRARY_INVENTORY_CODE_REDEMPTION,
-                    children: (0, i.jsx)(d.Z, {})
-                })
-            }),
-            (0, i.jsx)(c.F, {
-                setting: m.s6.GIFT_INVENTORY_QUESTS,
-                children: (0, i.jsx)(r.Z, {
-                    section: g.jXE.QUESTS,
-                    children: (0, i.jsx)(o.Z, {})
-                })
-            }),
-            (0, i.jsx)(c.F, {
-                setting: m.s6.GIFT_INVENTORY_LIST,
-                children: (0, i.jsx)(r.Z, {
-                    section: g.jXE.LIBRARY_INVENTORY_GIFTS_LIST,
+                    section: p.jXE.LIBRARY_INVENTORY_CODE_REDEMPTION,
                     children: (0, i.jsx)(u.Z, {})
                 })
             }),
-            (0, i.jsx)(c.F, {
-                setting: m.s6.GIFT_BLOCKED_PAYMENTS,
-                children: (0, i.jsx)(l.c8, {})
+            (0, i.jsx)(d.F, {
+                setting: g.s6.GIFT_INVENTORY_QUESTS,
+                children: (0, i.jsx)(r.Z, {
+                    section: p.jXE.QUESTS,
+                    children: (0, i.jsx)(c.Z, {})
+                })
+            }),
+            (0, i.jsx)(d.F, {
+                setting: g.s6.GIFT_INVENTORY_LIST,
+                children: (0, i.jsx)(r.Z, {
+                    section: p.jXE.LIBRARY_INVENTORY_GIFTS_LIST,
+                    children: (0, i.jsx)(m.Z, {})
+                })
+            }),
+            (0, i.jsx)(d.F, {
+                setting: g.s6.GIFT_BLOCKED_PAYMENTS,
+                children: (0, i.jsx)(a.c8, {})
             })
         ]
     });

@@ -1,23 +1,24 @@
-n.d(t, { O: () => b }), n(388685);
+n.d(t, { O: () => _ }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
     l = n.n(s),
     a = n(197723),
-    o = n(766646),
-    c = n(481060),
-    d = n(667137),
-    u = n(444200),
-    m = n(388032),
-    g = n(946598);
-function p() {
-    let { onClose: e } = (0, d.v)();
-    return (0, i.jsx)(c.tEY, {
+    o = n(793030),
+    c = n(84735),
+    d = n(766646),
+    u = n(667137),
+    m = n(444200),
+    g = n(388032),
+    p = n(946598);
+function h() {
+    let { onClose: e } = (0, u.v)();
+    return (0, i.jsx)(c.t, {
         children: (0, i.jsxs)('button', {
-            className: g.closeButton,
+            className: p.closeButton,
             onClick: e,
             children: [
-                (0, i.jsx)(o.n, { children: m.intl.string(u.default.WfH9io) }),
+                (0, i.jsx)(d.n, { children: g.intl.string(m.default.WfH9io) }),
                 (0, i.jsx)(a.D, {
                     size: 'md',
                     color: 'currentColor',
@@ -27,24 +28,24 @@ function p() {
         })
     });
 }
-function h(e) {
+function f(e) {
     let { leading: t, trailing: n, children: r } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             null != t &&
                 (0, i.jsx)('div', {
-                    className: g.titleBarLeading,
+                    className: p.titleBarLeading,
                     children: t
                 }),
             r,
             (0, i.jsxs)('div', {
-                className: g.titleBarTrailing,
-                children: [null != n && n, (0, i.jsx)(p, {})]
+                className: p.titleBarTrailing,
+                children: [null != n && n, (0, i.jsx)(h, {})]
             })
         ]
     });
 }
-function f(e) {
+function b(e) {
     let { leading: t, trailing: n, children: s } = e,
         [a, o] = r.useState(24),
         [c, d] = r.useState(24),
@@ -71,11 +72,11 @@ function f(e) {
             children: [
                 (0, i.jsx)('div', {
                     ref: u,
-                    className: l()(g.titleBarLeading, g.titleBarLeadingAbsolute),
+                    className: l()(p.titleBarLeading, p.titleBarLeadingAbsolute),
                     children: t
                 }),
                 (0, i.jsx)('div', {
-                    className: g.titleBarLeadingSpacer,
+                    className: p.titleBarLeadingSpacer,
                     style: {
                         height: a,
                         width: c
@@ -83,7 +84,7 @@ function f(e) {
                 }),
                 s,
                 (0, i.jsx)('div', {
-                    className: g.titleBarTrailingSpacer,
+                    className: p.titleBarTrailingSpacer,
                     style: {
                         height: a,
                         width: c
@@ -91,34 +92,34 @@ function f(e) {
                 }),
                 (0, i.jsxs)('div', {
                     ref: m,
-                    className: l()(g.titleBarTrailing, g.titleBarTrailingAbsolute),
-                    children: [null != n && n, (0, i.jsx)(p, {})]
+                    className: l()(p.titleBarTrailing, p.titleBarTrailingAbsolute),
+                    children: [null != n && n, (0, i.jsx)(h, {})]
                 })
             ]
         })
     );
 }
-function b(e) {
-    let { title: t, titleTextVariant: n, body: r, alignCenter: s = !1, leading: a, trailing: o } = e,
-        { headingId: u } = (0, d.v)();
+function _(e) {
+    let { title: t, titleTextVariant: n, body: r, alignCenter: s = !1, leading: a, trailing: c } = e,
+        { headingId: d } = (0, u.v)();
     return (0, i.jsx)('header', {
-        className: g.titleBar,
-        children: (0, i.jsx)(s ? f : h, {
+        className: p.titleBar,
+        children: (0, i.jsx)(s ? b : f, {
             leading: a,
-            trailing: o,
-            children: (0, i.jsxs)(c.Kqy, {
+            trailing: c,
+            children: (0, i.jsxs)(o.Kq, {
                 gap: 8,
-                className: l()(g.titleBarMain, { [g.titleBarMainCentered]: s }),
+                className: l()(p.titleBarMain, { [p.titleBarMainCentered]: s }),
                 children: [
                     null != t &&
-                        (0, i.jsx)(c.X6q, {
-                            id: u,
+                        (0, i.jsx)(o.X6, {
+                            id: d,
                             variant: null != n ? n : 'heading-lg/semibold',
                             color: 'text-primary',
                             children: t
                         }),
                     null != r &&
-                        (0, i.jsx)(c.Text, {
+                        (0, i.jsx)(o.xv, {
                             variant: 'text-md/normal',
                             color: 'text-secondary',
                             children: r

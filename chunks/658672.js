@@ -20,5 +20,6 @@ e.exports = {
     dot: 'dot__9293f',
     caret: 'caret__9293f',
     themed: 'themed__9293f',
-    themedMobile: 'themedMobile__9293f'
+    themedMobile: 'themedMobile__9293f',
+    titleClickable: 'titleClickable__9293f'
 };

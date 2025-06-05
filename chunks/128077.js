@@ -40,14 +40,15 @@ function i() {
             error: o,
             isSubmitting: c,
             responseMessage: e,
-            redeemVirtualCurrency: function (e, t) {
+            redeemVirtualCurrency: function (e, t, r) {
                 return (0, a.df)({
                     skuId: e,
+                    loadId: t,
                     onRedeemStart: () => {
                         s(!0), u(null);
                     },
                     onRedeemSucceed: (e) => {
-                        i(e), s(!1), null == t || t(e);
+                        i(e), s(!1), null == r || r(e);
                     },
                     onRedeemFail: (e) => {
                         u(e), s(!1);

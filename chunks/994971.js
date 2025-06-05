@@ -5,6 +5,7 @@ var r = {
     md: 'md__2723e',
     lg: 'lg__2723e',
     text: 'text__2723e',
+    fullWidth: 'fullWidth__2723e',
     primary: 'primary__2723e',
     expressive: 'expressive__2723e',
     expressiveRive: 'expressiveRive__2723e',

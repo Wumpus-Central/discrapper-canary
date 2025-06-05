@@ -49,7 +49,7 @@ function c(e, t) {
 }
 let u = i.forwardRef(function (e, t) {
     var { href: n, children: u, onClick: d, onKeyPress: p, focusProps: f } = e,
-        g = (function (e, t) {
+        b = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -68,7 +68,7 @@ let u = i.forwardRef(function (e, t) {
             }
             return i;
         })(e, ['href', 'children', 'onClick', 'onKeyPress', 'focusProps']);
-    let b = i.useCallback(
+    let g = i.useCallback(
             (e) => {
                 e.repeat || ((e.charCode === a.yXg.SPACE || e.charCode === a.yXg.ENTER) && (e.preventDefault(), null != n && (0, o.uL)(n), null == d || d()), null == p || p(e));
             },
@@ -88,9 +88,9 @@ let u = i.forwardRef(function (e, t) {
                         ref: t,
                         href: n,
                         onClick: m,
-                        onKeyPress: b
+                        onKeyPress: g
                     },
-                    g
+                    b
                 ),
                 { children: u }
             )

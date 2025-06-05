@@ -24,18 +24,18 @@ var r = n(442837),
     S = n(301812),
     v = n(988043),
     T = n(919539),
-    N = n(726985),
-    I = n(583139),
+    I = n(726985),
+    N = n(583139),
     y = n(981631),
     A = n(388032);
 let P = () =>
         (0, i.jsx)(x.Z, {
             title: A.intl.string(A.t['y62Z/f']),
-            webSetting: N.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
+            webSetting: I.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
             children: (0, i.jsxs)(_.Z, {
                 children: [
                     (0, i.jsx)(l.F, {
-                        setting: N.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
+                        setting: I.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
                         children: (0, i.jsx)(b.Z, {})
                     }),
                     (0, i.jsx)(v.Z, {}),
@@ -49,14 +49,14 @@ let P = () =>
         let { isGoreFilterEligible: t } = e;
         return (0, i.jsxs)(x.Z, {
             title: A.intl.string(A.t.xVRG4O),
-            webSetting: N.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
+            webSetting: I.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
             children: [t ? (0, i.jsx)(C.n, {}) : (0, i.jsx)(p.P, {}), (0, i.jsx)(g.Z, {}), (0, i.jsx)(f.Z, {}), (0, i.jsx)(m.Z, {}), (0, i.jsx)(d.Z, {}), (0, i.jsx)(j.Z, {})]
         });
     },
     D = () =>
         (0, i.jsxs)(x.Z, {
             title: A.intl.string(A.t['1Qn8iY']),
-            webSetting: N.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
+            webSetting: I.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
             children: [(0, i.jsx)(h.Z, {}), (0, i.jsx)(E.ZP, {})]
         }),
     Z = (e) => {
@@ -72,21 +72,21 @@ function w() {
             {
                 title: A.intl.string(A.t['/7xJCA']),
                 component: () => (0, i.jsx)(Z, { isGoreFilterEligible: t }),
-                setting: N.s6.CONTENT_SOCIAL_DISCORD_TAB
+                setting: I.s6.CONTENT_SOCIAL_DISCORD_TAB
             },
             {
                 title: A.intl.string(A.t.h1hqj4),
                 component: u.Z,
-                setting: N.s6.CONTENT_SOCIAL_CONNECTED_GAMES
+                setting: I.s6.CONTENT_SOCIAL_CONNECTED_GAMES
             }
         ];
     return (0, i.jsx)(o.N, {
         header: A.intl.string(A.t['+o1pDQ']),
         children: (0, i.jsx)(c.Z, {
-            parentSetting: N.s6.CONTENT_SOCIAL,
+            parentSetting: I.s6.CONTENT_SOCIAL,
             settingsSection: y.oAB.CONTENT_AND_SOCIAL,
             tabs: n,
-            defaultTabIndex: e === I.C ? 1 : void 0
+            defaultTabIndex: e === N.C ? 1 : void 0
         })
     });
 }

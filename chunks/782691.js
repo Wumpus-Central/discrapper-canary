@@ -69,8 +69,8 @@ let j = {
         let { effect: t, back: n, skipStore: s = !1 } = e,
             { upsertConfig: S } = (0, p.n6)(),
             v = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
-            [T, N] = r.useState(!0),
-            I = r.useRef(null),
+            [T, I] = r.useState(!0),
+            N = r.useRef(null),
             [y, A] = r.useState(!1),
             [P, R] = r.useState(!1),
             [D, Z] = r.useState([]),
@@ -273,7 +273,7 @@ let j = {
                                                   children: [
                                                       'Upload Animated Layer',
                                                       (0, i.jsx)(u.Z, {
-                                                          ref: I,
+                                                          ref: N,
                                                           onChange: (e) => {
                                                               let t = G(e);
                                                               null != t &&
@@ -300,7 +300,7 @@ let j = {
                                                   children: [
                                                       'Upload thumbnail.png',
                                                       (0, i.jsx)(u.Z, {
-                                                          ref: I,
+                                                          ref: N,
                                                           onChange: (e) => F(h.cq.THUMBNAIL, e),
                                                           multiple: !1
                                                       })
@@ -311,7 +311,7 @@ let j = {
                                                   children: [
                                                       'Upload static.png',
                                                       (0, i.jsx)(u.Z, {
-                                                          ref: I,
+                                                          ref: N,
                                                           onChange: (e) => F(h.cq.STATIC, e),
                                                           multiple: !1
                                                       })
@@ -322,7 +322,7 @@ let j = {
                                                   children: [
                                                       'Upload reduced_motion.png',
                                                       (0, i.jsx)(u.Z, {
-                                                          ref: I,
+                                                          ref: N,
                                                           onChange: (e) => F(h.cq.REDUCED_MOTION, e),
                                                           multiple: !1
                                                       })
@@ -337,7 +337,7 @@ let j = {
                                               children: (0, i.jsx)(c.zxk, {
                                                   color: c.Ttl.BRAND,
                                                   onClick: () => {
-                                                      N(!1), setTimeout(() => N(!0), 100);
+                                                      I(!1), setTimeout(() => I(!0), 100);
                                                   },
                                                   children: 'Replay Animation'
                                               })
@@ -644,7 +644,7 @@ let j = {
                                                                           children: 'Add Alternative'
                                                                       }),
                                                                       (0, i.jsx)(u.Z, {
-                                                                          ref: I,
+                                                                          ref: N,
                                                                           onChange: (e) => H(e, t),
                                                                           multiple: !1
                                                                       })

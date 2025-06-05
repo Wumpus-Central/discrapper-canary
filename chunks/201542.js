@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => C }), n(388685), n(704826), n(35282);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -189,7 +189,8 @@ let C = i.memo(function (e) {
         N(n, Y, W);
     let eE = Y ? l.fpf : l.o1U,
         eb = Y ? O.intl.string(O.t.ZcgDJS) : O.intl.string(O.t.RscU7O),
-        ey = O.intl.formatToPlainString(O.t.LgCPMj, { playbackRate: M });
+        ey = O.intl.formatToPlainString(O.t.LgCPMj, { playbackRate: M }),
+        eO = ''.concat(M.toString().replace(/^0/, ''), 'X');
     t =
         'Safari' === platform.name
             ? (0, r.jsx)(i.Suspense, {
@@ -221,14 +222,14 @@ let C = i.memo(function (e) {
                   playing: Y && !K,
                   children: (0, r.jsx)('source', { src: n })
               });
-    let eO = (0, s.e7)([c.Z], () => c.Z.useReducedMotion);
+    let ev = (0, s.e7)([c.Z], () => c.Z.useReducedMotion);
     return (0, r.jsxs)('div', {
         className: o()(v.container, { [v.playing]: Y }),
         onMouseEnter: er,
         children: [
             (0, r.jsx)('div', {
                 className: v.rippleContainer,
-                children: (0, r.jsx)('div', { className: o()(v.ripple, { [v.reducedMotion]: eO }) })
+                children: (0, r.jsx)('div', { className: o()(v.ripple, { [v.reducedMotion]: ev }) })
             }),
             (0, r.jsx)(l.P3F, {
                 className: v.playButtonContainer,
@@ -263,7 +264,7 @@ let C = i.memo(function (e) {
                 children: (0, r.jsx)(l.Text, {
                     variant: 'text-xs/semibold',
                     className: v.playbackRate,
-                    children: ''.concat(M, 'x')
+                    children: eO
                 })
             }),
             (0, r.jsx)(p.Z, {

@@ -1,26 +1,26 @@
-n.d(t, { Z: () => x }), n(388685), n(49124);
+n.d(t, { Z: () => E }), n(388685), n(49124);
 var r = n(255367),
     l = n(73800),
     i = n(120356),
     o = n.n(i),
     a = n(46973),
     s = n(481060),
-    c = n(304680),
-    u = n(706619),
+    u = n(304680),
+    c = n(706619),
     d = n(695346),
     f = n(131951),
     h = n(626135),
     p = n(572004),
     g = n(63063),
-    y = n(476221),
-    O = n(981631),
-    b = n(65154),
-    N = n(388032),
+    O = n(476221),
+    y = n(981631),
+    N = n(65154),
+    b = n(388032),
     v = n(684680);
 let m = () => {
         f.Z.getMediaEngine().once(a.aB.ConnectionStats, (e) => {
             let t = JSON.stringify(
-                Object.values(b.Yn)
+                Object.values(N.Yn)
                     .map((t) => {
                         let n = e
                             .filter((e) => {
@@ -41,16 +41,16 @@ let m = () => {
                 null,
                 2
             );
-            (0, p.JG)(t, () => (0, s.showToast)((0, s.createToast)(N.intl.string(N.t['t5VZ8/']), s.ToastType.SUCCESS)));
+            (0, p.JG)(t, () => (0, s.showToast)((0, s.createToast)(b.intl.string(b.t['t5VZ8/']), s.ToastType.SUCCESS)));
         });
     },
-    x = function (e) {
+    E = function (e) {
         (0, l.useEffect)(() => {
-            h.default.track(O.rMx.OPEN_POPOUT, { type: 'RTC Connection' });
+            h.default.track(y.rMx.OPEN_POPOUT, { type: 'RTC Connection' });
         }, []);
         let t = (0, l.useCallback)(() => {
                 let { closePopout: t } = e;
-                null != t && t(), c.bA();
+                null != t && t(), u.bA();
             }, [e]),
             n = (0, l.useCallback)(() => {
                 let { hostname: t, averagePing: n, lastPing: i, outboundLossRate: a } = e,
@@ -62,7 +62,7 @@ let m = () => {
                                 children: [
                                     (0, r.jsx)('div', {
                                         className: v.graphContainer,
-                                        children: (0, r.jsx)(u.Z, {
+                                        children: (0, r.jsx)(c.Z, {
                                             dataPoints: e.pings,
                                             width: 258,
                                             height: 80
@@ -70,32 +70,32 @@ let m = () => {
                                     }),
                                     (0, r.jsx)('div', {
                                         className: v.popoutText,
-                                        children: (0, r.jsx)('strong', { children: y.Z.getShortHostname(t) })
+                                        children: (0, r.jsx)('strong', { children: O.Z.getShortHostname(t) })
                                     })
                                 ]
                             }),
                         (0, r.jsx)('div', {
                             className: v.popoutText,
-                            children: N.intl.format(N.t['X58/lJ'], { averagePing: n.toFixed(0) })
+                            children: b.intl.format(b.t['X58/lJ'], { averagePing: n.toFixed(0) })
                         }),
                         null != i
                             ? (0, r.jsx)('div', {
                                   className: v.popoutText,
-                                  children: N.intl.format(N.t['6iv2TE'], { lastPing: i.toFixed(0) })
+                                  children: b.intl.format(b.t['6iv2TE'], { lastPing: i.toFixed(0) })
                               })
                             : null,
                         null != a
                             ? (0, r.jsx)('div', {
                                   className: v.popoutText,
-                                  children: N.intl.format(N.t.VIBJMz, { outboundLossRate: a.toFixed(1) })
+                                  children: b.intl.format(b.t.VIBJMz, { outboundLossRate: a.toFixed(1) })
                               })
                             : null,
                         (0, r.jsxs)('div', {
                             className: o()(v.popoutText, v.popoutTextDetails),
                             children: [
-                                null == a ? N.intl.formatToPlainString(N.t.vggaMj, { badPing: 250 }) : null,
+                                null == a ? b.intl.formatToPlainString(b.t.vggaMj, { badPing: 250 }) : null,
                                 null != a
-                                    ? N.intl.formatToPlainString(N.t['3pFz1N'], {
+                                    ? b.intl.formatToPlainString(b.t['3pFz1N'], {
                                           badPing: 250,
                                           badLossRate: 10
                                       })
@@ -107,25 +107,25 @@ let m = () => {
             }, [e]),
             { connectionState: i, connectionTypeText: a } = e,
             p = d.Sb.getSetting(),
-            x = {
-                [O.hes.AWAITING_ENDPOINT]: N.intl.format(N.t.Eu2vUV, { url: O.yXt.STATUS }),
-                [O.hes.CONNECTING]: N.intl.string(N.t['y+E8aG']),
-                [O.hes.AUTHENTICATING]: N.intl.string(N.t['5lGIZG']),
-                [O.hes.DISCONNECTED]: N.intl.string(N.t.fOX25O),
-                [O.hes.RTC_CONNECTING]: N.intl.string(N.t.b5Ubd3),
-                [O.hes.ICE_CHECKING]: N.intl.format(N.t.SyoYUV, { url: g.Z.getArticleURL(O.BhN.VOICE_CONNECTION_ERRORS) }),
-                [O.hes.DTLS_CONNECTING]: N.intl.format(N.t.SyoYUV, { url: g.Z.getArticleURL(O.BhN.VOICE_CONNECTION_ERRORS) }),
-                [O.hes.RTC_CONNECTED]: n,
-                [O.hes.NO_ROUTE]: N.intl.format(N.t['2tgQnp'], { url: g.Z.getArticleURL(O.BhN.VOICE_CONNECTION_ERRORS) }),
-                [O.hes.RTC_DISCONNECTED]: N.intl.string(N.t.fOX25O)
+            E = {
+                [y.hes.AWAITING_ENDPOINT]: b.intl.format(b.t.Eu2vUV, { url: y.yXt.STATUS }),
+                [y.hes.CONNECTING]: b.intl.string(b.t['y+E8aG']),
+                [y.hes.AUTHENTICATING]: b.intl.string(b.t['5lGIZG']),
+                [y.hes.DISCONNECTED]: b.intl.string(b.t.fOX25O),
+                [y.hes.RTC_CONNECTING]: b.intl.string(b.t.b5Ubd3),
+                [y.hes.ICE_CHECKING]: b.intl.format(b.t.SyoYUV, { url: g.Z.getArticleURL(y.BhN.VOICE_CONNECTION_ERRORS) }),
+                [y.hes.DTLS_CONNECTING]: b.intl.format(b.t.SyoYUV, { url: g.Z.getArticleURL(y.BhN.VOICE_CONNECTION_ERRORS) }),
+                [y.hes.RTC_CONNECTED]: n,
+                [y.hes.NO_ROUTE]: b.intl.format(b.t['2tgQnp'], { url: g.Z.getArticleURL(y.BhN.VOICE_CONNECTION_ERRORS) }),
+                [y.hes.RTC_DISCONNECTED]: b.intl.string(b.t.fOX25O)
             }[i];
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                'function' == typeof x
-                    ? x()
+                'function' == typeof E
+                    ? E()
                     : (0, r.jsx)('p', {
                           className: o()(v.popoutText, v.popoutTextDetails),
-                          children: x
+                          children: E
                       }),
                 (0, r.jsx)('hr', { className: v.separator }),
                 (0, r.jsxs)('div', {
@@ -143,7 +143,7 @@ let m = () => {
                             ]
                         }),
                         p &&
-                            f.Z.supports(b.AN.DIAGNOSTICS) &&
+                            f.Z.supports(N.AN.DIAGNOSTICS) &&
                             !__OVERLAY__ &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
@@ -151,7 +151,7 @@ let m = () => {
                                         className: o()(v.debugButton, v.textWithIcon),
                                         onClick: t,
                                         children: [
-                                            N.intl.string(N.t.KBoWg4),
+                                            b.intl.string(b.t.KBoWg4),
                                             (0, r.jsx)(s.rgF, {
                                                 size: 'xxs',
                                                 color: 'currentColor',
@@ -164,7 +164,7 @@ let m = () => {
                                         onClick: m,
                                         title: 'Copy to clipboard',
                                         children: [
-                                            N.intl.string(N.t['XEb+Sk']),
+                                            b.intl.string(b.t['XEb+Sk']),
                                             (0, r.jsx)(s.TIy, {
                                                 size: 'xxs',
                                                 color: 'currentColor',
@@ -178,8 +178,8 @@ let m = () => {
                             !__OVERLAY__ &&
                             (0, r.jsx)(s.eee, {
                                 className: v.debugButton,
-                                href: g.Z.getArticleURL(O.BhN.VOICE_VIDEO_TROUBLESHOOTING),
-                                children: N.intl.string(N.t.hvVgAQ)
+                                href: g.Z.getArticleURL(y.BhN.VOICE_VIDEO_TROUBLESHOOTING),
+                                children: b.intl.string(b.t.hvVgAQ)
                             })
                     ]
                 })

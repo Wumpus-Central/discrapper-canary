@@ -16,8 +16,8 @@ var i = n(255367),
     b = n(888723);
 let _ = (e) => {
     let { name: t, title: n, description: s, descriptionCta: _, previewImage: x, videoUrl: E, shouldLoadVideo: C, index: j, size: O, customVideoStyle: S, isReducedMotion: v, onClick: T } = e,
-        N = (0, g.rO)(),
-        I = r.useRef(null),
+        I = (0, g.rO)(),
+        N = r.useRef(null),
         y = r.useRef(0),
         A = (function (e) {
             let t;
@@ -55,10 +55,10 @@ let _ = (e) => {
             m.default.track(h.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, a.snakeCase)(t) });
         }, 800),
         w = () => {
-            null == I.current || v || ((I.current.currentTime = y.current), I.current.play());
+            null == N.current || v || ((N.current.currentTime = y.current), N.current.play());
         },
         k = () => {
-            null == I.current || v || ((y.current = I.current.currentTime), I.current.pause());
+            null == N.current || v || ((y.current = N.current.currentTime), N.current.pause());
         },
         L = () =>
             (0, i.jsxs)('div', {
@@ -117,10 +117,10 @@ let _ = (e) => {
                             [b.smallBoxVideo]: O === p.y$.SMALL,
                             [S]: null != S
                         }),
-                        ref: I,
+                        ref: N,
                         children: (0, i.jsx)('source', {
                             src: E,
-                            type: N ? f.m.MP4 : f.m.WEBM
+                            type: I ? f.m.MP4 : f.m.WEBM
                         })
                     },
                     E

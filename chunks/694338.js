@@ -1,4 +1,4 @@
-n.d(t, { a: () => p });
+n.d(t, { e: () => p });
 var i = n(255367);
 n(73800);
 var r = n(481060),
@@ -8,7 +8,7 @@ var r = n(481060),
     o = n(474936),
     c = n(981631),
     d = n(388032),
-    u = n(835826);
+    u = n(528880);
 let m = (e) => {
         let { text: t, badge: n, variant: s } = e;
         return (0, i.jsxs)(r.Text, {

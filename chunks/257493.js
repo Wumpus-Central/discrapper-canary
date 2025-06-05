@@ -40,7 +40,7 @@ let m = (0, r.createContext)({
             { redeemVirtualCurrency: _, isSubmitting: x, error: E } = (0, u.f)(),
             C = (0, r.useCallback)(
                 (e) => {
-                    _(t, (n) => {
+                    _(t, n, (n) => {
                         g({
                             entitlements: n,
                             skuId: t
@@ -48,7 +48,7 @@ let m = (0, r.createContext)({
                             e();
                     });
                 },
-                [t, _, g]
+                [t, n, _, g]
             );
         return (0, i.jsx)(m.Provider, {
             value: {

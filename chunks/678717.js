@@ -10,8 +10,8 @@ var a = n(255367),
     u = n(213609),
     m = n(213713),
     x = n(665149),
-    h = n(238246),
-    p = n(788983),
+    p = n(238246),
+    h = n(788983),
     b = n(906467),
     f = n(259580),
     v = n(31336),
@@ -312,10 +312,10 @@ function el(e) {
                                       icon: c.rgF,
                                       tooltip: 'Pop Out',
                                       onClick: () => {
-                                          (0, p.bA)(
+                                          (0, h.bA)(
                                               ee.KJ3.DEVTOOLS_POPOUT,
                                               () =>
-                                                  (0, a.jsx)(h.Z, {
+                                                  (0, a.jsx)(p.Z, {
                                                       windowKey: ee.KJ3.DEVTOOLS_POPOUT,
                                                       title: 'DevTools',
                                                       withTitleBar: !0,
