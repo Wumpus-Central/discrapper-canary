@@ -63,8 +63,8 @@ function g(e, t) {
 }
 let m = (e, t, n, i) => Math.pow(e - n, 2) + Math.pow(t - i, 2);
 var y = (((r = {}).MOVE = 'MOVE'), (r.RESIZE_NORTH = 'RESIZE_NORTH'), (r.RESIZE_WEST = 'RESIZE_WEST'), (r.RESIZE_EAST = 'RESIZE_EAST'), (r.RESIZE_SOUTH = 'RESIZE_SOUTH'), (r.RESIZE_NORTH_WEST = 'RESIZE_NORTH_WEST'), (r.RESIZE_NORTH_EAST = 'RESIZE_NORTH_EAST'), (r.RESIZE_SOUTH_WEST = 'RESIZE_SOUTH_WEST'), (r.RESIZE_SOUTH_EAST = 'RESIZE_SOUTH_EAST'), r);
-let _ = new Set(['RESIZE_NORTH', 'RESIZE_WEST', 'RESIZE_EAST', 'RESIZE_SOUTH', 'RESIZE_NORTH_WEST', 'RESIZE_NORTH_EAST', 'RESIZE_SOUTH_WEST', 'RESIZE_SOUTH_EAST']);
-function v(e, t, n) {
+let v = new Set(['RESIZE_NORTH', 'RESIZE_WEST', 'RESIZE_EAST', 'RESIZE_SOUTH', 'RESIZE_NORTH_WEST', 'RESIZE_NORTH_EAST', 'RESIZE_SOUTH_WEST', 'RESIZE_SOUTH_EAST']);
+function _(e, t, n) {
     let { width: i, height: r } = e;
     return {
         width: 'auto' === i ? 'auto' : Math.max(t, i),
@@ -141,7 +141,7 @@ class S extends (i = s.Component) {
         return !(0, c.Z)(t, this.state) || !(0, c.Z)(e, this.props, ['anchor', 'size', 'minSize', 'container']) || !(0, c.Z)(e.anchor, this.props.anchor) || !(0, c.Z)(e.size, this.props.size) || !(0, c.Z)(e.minSize, this.props.minSize) || !(0, c.Z)(e.container, this.props.container);
     }
     componentDidUpdate(e, t) {
-        null == t.operation && ((0, c.Z)(this.props.anchor, e.anchor) || this.setDOMPositions(O(this.props.anchor)), (0, c.Z)(this.props.size, e.size) || this.setDOMSize(v(this.props.size, this.props.minSize.width, this.props.minSize.height)));
+        null == t.operation && ((0, c.Z)(this.props.anchor, e.anchor) || this.setDOMPositions(O(this.props.anchor)), (0, c.Z)(this.props.size, e.size) || this.setDOMSize(_(this.props.size, this.props.minSize.width, this.props.minSize.height)));
     }
     componentWillUnmount() {
         this.handleOperationEnd();
@@ -167,12 +167,12 @@ class S extends (i = s.Component) {
         (e = Math.max(Math.min(r, e), s)), (t = Math.max(Math.min(o, t), l));
         let { width: g, height: m } = E(n, this.size),
             y = t - p,
-            _ = e - h,
-            v = (0, d.ou)(
+            v = e - h,
+            _ = (0, d.ou)(
                 (0, d.PY)(
                     {
                         top: y,
-                        left: _,
+                        left: v,
                         bottom: void 0,
                         right: void 0
                     },
@@ -182,7 +182,7 @@ class S extends (i = s.Component) {
                     m
                 )
             ),
-            O = u ? (0, d.R)(v) : x('RESIZE_SOUTH_EAST', v);
+            O = u ? (0, d.R)(_) : x('RESIZE_SOUTH_EAST', _);
         this.setDOMPositions(O), f || (null != a && a(), this.setState({ operationStarted: !0 })), null != c && c(i, 'MOVE', this.anchor, this.size);
     }
     handleResizeMove(e, t) {
@@ -360,7 +360,7 @@ class S extends (i = s.Component) {
                         dragState: { startX: i, startY: r },
                         state: { operation: o, operationStarted: s }
                     } = this;
-                !(null == o || (!s && 3 > m(i, r, t, n))) && ('MOVE' === o ? this.handleDragMove(t, n) : _.has(o) && this.handleResizeMove(t, n));
+                !(null == o || (!s && 3 > m(i, r, t, n))) && ('MOVE' === o ? this.handleDragMove(t, n) : v.has(o) && this.handleResizeMove(t, n));
             }),
             p(this, 'handleOperationStart', (e, t, n) => {
                 let {
@@ -439,7 +439,7 @@ class S extends (i = s.Component) {
                 );
             }),
             (this.anchor = O(e.anchor)),
-            (this.size = v(e.size, e.minSize.width, e.minSize.height));
+            (this.size = _(e.size, e.minSize.width, e.minSize.height));
     }
 }
 p(S, 'Operations', y),

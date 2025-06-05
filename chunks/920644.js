@@ -24,6 +24,7 @@ function f(e) {
             impressionName: i.ImpressionNames.USER_AGE_GATE_UNDERAGE,
             impressionProperties: { existing_user: !0 }
         },
+        parentComponent: 'ExistingUserAgeGateUnderage',
         children: [
             (0, r.jsx)(l.hzk, {
                 children: (0, r.jsxs)('div', {

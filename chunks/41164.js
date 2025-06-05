@@ -11,14 +11,15 @@ var a = n(481060),
     u = n(688443),
     m = n(170143);
 let p = (e) => {
-    let { transitionState: t, onClose: n, classificationId: p, source: h } = e,
-        f = (0, r.Z)(),
+    let { transitionState: t, onClose: n, classificationId: p, source: f } = e,
+        h = (0, r.Z)(),
         g = () => {
             n(), l.Z.open(s.oAB.ACCOUNT, c.s6.PRIVACY_AND_SAFETY_STANDING);
         };
     return (0, i.jsxs)(a.Y0X, {
         className: u.modalRoot,
         transitionState: t,
+        parentComponent: 'ClassificationDetailModal',
         children: [
             (0, i.jsxs)('div', {
                 className: u.modalHeader,
@@ -36,11 +37,11 @@ let p = (e) => {
             }),
             (0, i.jsx)(a.hzk, {
                 className: u.modalContent,
-                children: f
+                children: h
                     ? (0, i.jsx)(a.$jN, {})
                     : (0, i.jsx)(o.Z, {
                           classificationId: p,
-                          source: h,
+                          source: f,
                           onError: g,
                           onClose: g
                       })

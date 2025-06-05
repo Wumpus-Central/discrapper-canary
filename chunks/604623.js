@@ -1,5 +1,5 @@
 r.d(t, {
-    CreateEmojiWithRolesModal: () => C,
+    CreateEmojiWithRolesModal: () => k,
     UpdateEmojiRolesModal: () => S
 }),
     r(388685),
@@ -17,8 +17,8 @@ var n = r(255367),
     b = r(313201),
     m = r(730089),
     j = r(626135),
-    f = r(768581),
-    p = r(584825),
+    p = r(768581),
+    f = r(584825),
     x = r(46887),
     g = r(981631),
     v = r(388032),
@@ -88,11 +88,11 @@ let w = (e) => {
         })
     });
 };
-function k(e) {
+function C(e) {
     let { transitionState: t, onClose: r, initialRoleIds: l = [], listingChoices: s, emojiUrl: a, saving: c, onSave: u } = e,
         h = (0, b.Dt)(),
         [m, j] = i.useState(() => new Set(l)),
-        f = i.useMemo(
+        p = i.useMemo(
             () =>
                 o().isEqual(
                     m,
@@ -105,7 +105,7 @@ function k(e) {
                 ),
             [s, m]
         ),
-        p = m.size > 0,
+        f = m.size > 0,
         x = (e) =>
             j((t) => {
                 let r = new Set(t);
@@ -117,6 +117,7 @@ function k(e) {
     return (0, n.jsxs)(d.Y0X, {
         transitionState: t,
         'aria-labelledby': h,
+        parentComponent: 'CreateOrUpdateEmojiWithRolesModal',
         children: [
             (0, n.jsxs)(d.xBx, {
                 separator: !1,
@@ -170,9 +171,9 @@ function k(e) {
                                 className: y.selectAllCheckbox,
                                 label: v.intl.string(v.t['Ve/y5+']),
                                 textVariant: 'text-md/semibold',
-                                value: f,
+                                value: p,
                                 onChange: () => {
-                                    f
+                                    p
                                         ? j(new Set())
                                         : j(
                                               new Set(
@@ -208,7 +209,7 @@ function k(e) {
             }),
             (0, n.jsx)(d.mzw, {
                 children: (0, n.jsx)(d.ua7, {
-                    shouldShow: !p,
+                    shouldShow: !f,
                     text: v.intl.string(v.t['8aYImJ']),
                     children: (e) => {
                         var t, r;
@@ -218,7 +219,7 @@ function k(e) {
                             (r = r =
                                 {
                                     'aria-label': v.intl.string(v.t.R3BPHx),
-                                    disabled: !p,
+                                    disabled: !f,
                                     submitting: c,
                                     onClick: g,
                                     children: v.intl.string(v.t.R3BPHx)
@@ -243,7 +244,7 @@ function k(e) {
         ]
     });
 }
-function C(e) {
+function k(e) {
     var { guildId: t, data: r, file: l } = e,
         s = _(e, ['guildId', 'data', 'file']);
     let [a, o] = i.useState(!1),
@@ -268,12 +269,12 @@ function C(e) {
                 o(!1);
             }
         },
-        u = (0, p.qi)(t, {
+        u = (0, f.qi)(t, {
             includeSoftDeleted: !0,
             sortDeletedListingsLast: !0
         });
     return (0, n.jsx)(
-        k,
+        C,
         O(
             {
                 emojiUrl: r,
@@ -288,7 +289,7 @@ function C(e) {
 function S(e) {
     var { emoji: t, guildId: r } = e,
         l = _(e, ['emoji', 'guildId']);
-    let s = f.ZP.getEmojiURL({
+    let s = p.ZP.getEmojiURL({
             id: t.id,
             animated: t.animated,
             size: 40
@@ -302,7 +303,7 @@ function S(e) {
                     roles: e
                 })) && n();
         },
-        d = (0, p.qi)(r, { includeSoftDeleted: !0 });
+        d = (0, f.qi)(r, { includeSoftDeleted: !0 });
     d.sort((e, t) => Number(e.soft_deleted) - Number(t.soft_deleted));
     let b = (0, x.Z)(r),
         m = i.useMemo(() => {
@@ -315,7 +316,7 @@ function S(e) {
             return t.roles.filter((t) => e.has(t));
         }, [t.roles, b]);
     return (0, n.jsx)(
-        k,
+        C,
         O(
             {
                 emojiUrl: s,

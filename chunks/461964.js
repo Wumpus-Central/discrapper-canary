@@ -21,6 +21,7 @@ function p(e) {
             transitionState: t,
             role: 'alertdialog',
             'aria-labelledby': p,
+            parentComponent: 'KeyboardNavigationModal',
             children: [
                 (0, l.jsxs)(c.hzk, {
                     className: h.content,

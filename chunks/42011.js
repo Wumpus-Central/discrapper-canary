@@ -1,10 +1,10 @@
-e.d(n, { W: () => c });
+e.d(n, { W: () => a });
 var o = e(255367);
 e(73800);
 var i = e(376340),
     r = e(388032),
     s = e(629582);
-function c(t) {
+function a(t) {
     let { onClose: n } = t;
     return (0, o.jsx)(i.L, {
         img: (0, o.jsx)('img', {

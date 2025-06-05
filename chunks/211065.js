@@ -11,8 +11,8 @@ var l = n(255367),
     m = n(907040),
     f = n(246133),
     h = n(695346),
-    b = n(293273),
-    p = n(594174),
+    p = n(293273),
+    b = n(594174),
     S = n(626135),
     j = n(720449),
     g = n(684269),
@@ -221,6 +221,7 @@ class I extends r.PureComponent {
                     transitionState: t,
                     className: P.modalRoot,
                     'aria-label': T.intl.string(T.t['/UonHB']),
+                    parentComponent: 'CustomStatusModal',
                     children: [
                         (0, l.jsxs)(s.xBx, {
                             separator: !1,
@@ -342,13 +343,13 @@ class I extends r.PureComponent {
     }
 }
 let k = o.ZP.connectStores(
-    [b.Z, p.default],
+    [p.Z, b.default],
     () => {
-        let t = p.default.getCurrentUser();
+        let t = b.default.getCurrentUser();
         return (
             i()(null != t, 'CustomStatusModal: user cannot be null'),
             {
-                customStatus: b.Z.getCustomStatusActivity(),
+                customStatus: p.Z.getCustomStatusActivity(),
                 user: t
             }
         );

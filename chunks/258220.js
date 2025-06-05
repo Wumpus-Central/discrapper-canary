@@ -89,6 +89,7 @@ function g(e) {
         )),
         (n = n =
             {
+                parentComponent: 'ActivityHardwareAccelerationModal',
                 children: [
                     (0, r.jsxs)(l.xBx, {
                         separator: !1,

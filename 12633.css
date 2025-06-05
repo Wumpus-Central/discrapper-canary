@@ -34134,7 +34134,6 @@ body .headerAnimation_b54a5b {
     height: 100%;
     max-width: 100%;
     opacity: 0;
-    overflow: hidden;
     position: absolute;
     transition: opacity .4s ease
 }

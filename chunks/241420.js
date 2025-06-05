@@ -45,6 +45,7 @@ function g(e) {
         transitionState: n,
         size: r.CgR.SMALL,
         'aria-label': i,
+        parentComponent: 'PrivacySettings',
         children: [
             (0, a.jsx)(r.xBx, {
                 children: (0, a.jsx)(r.X6q, {

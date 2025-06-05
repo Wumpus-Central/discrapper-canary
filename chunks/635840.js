@@ -33,8 +33,8 @@ function C(e) {
     let { application: t, subscriptionId: i, onClose: C } = e,
         [u, N] = a.useState(!1),
         [x, m] = a.useState(null),
-        [h, I] = a.useState(''),
-        S = a.useCallback(() => {
+        [h, S] = a.useState(''),
+        I = a.useCallback(() => {
             null != x &&
                 (r.default.track(o.rMx.PREMIUM_APP_CANCELLATION_SURVEY_SUBMITTED, {
                     answer: x,
@@ -99,7 +99,7 @@ function C(e) {
                                 className: c.otherField,
                                 placeholder: d.intl.string(d.t.s6tM8f),
                                 value: h,
-                                onChange: I
+                                onChange: S
                             })
                     ]
                 }),
@@ -107,7 +107,7 @@ function C(e) {
                     className: c.footer,
                     children: [
                         (0, n.jsx)(s.zxk, {
-                            onClick: S,
+                            onClick: I,
                             color: s.zxk.Colors.BRAND,
                             disabled: null == x,
                             children: d.intl.string(d.t.geKm7u)

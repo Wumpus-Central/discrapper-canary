@@ -13,8 +13,8 @@ var i = n(255367),
     f = n(809206),
     E = n(118012),
     h = n(219496),
-    S = n(575681),
-    p = n(807369),
+    p = n(575681),
+    S = n(807369),
     _ = n(180529),
     v = n(25990),
     x = n(594174),
@@ -74,9 +74,9 @@ function P(e) {
         [A, I] = r.useState(''),
         [U, w] = r.useState(!1),
         Z = (0, g.e7)([v.Z], () => v.Z.getErrors()),
-        j = (0, S.n)(),
+        j = (0, p.n)(),
         G = a.isPomelo() && j,
-        F = (0, p.a)(C, G, !1, a.username),
+        F = (0, S.a)(C, G, !1, a.username),
         D = r.useRef(null),
         z = r.useMemo(() => {
             var e, t, n;
@@ -101,6 +101,7 @@ function P(e) {
     let H = r.useMemo(() => d()(P, 50), []);
     return (0, i.jsxs)(m.Y0X, {
         transitionState: n,
+        parentComponent: 'ChangeUsernameModal',
         children: [
             (0, i.jsxs)(m.xBx, {
                 separator: !1,

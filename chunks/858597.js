@@ -94,8 +94,8 @@ let C = function (t) {
         L = (0, S.Q)(),
         y = (0, x.q)(s),
         k = null != (0, p.M)(s),
-        I = (0, o.e7)([b.Z], () => b.Z.isIgnored(e), [e]),
-        M = (0, o.e7)([b.Z], () => b.Z.isBlocked(e), [e]),
+        M = (0, o.e7)([b.Z], () => b.Z.isIgnored(e), [e]),
+        I = (0, o.e7)([b.Z], () => b.Z.isBlocked(e), [e]),
         v = r.useCallback(
             (t) => {
                 (0, h.qc)({
@@ -124,21 +124,21 @@ let C = function (t) {
                     type: 0,
                     title: N.intl.string(N.t.B7ZT09),
                     subTitle: N.intl.string(N.t['fCfp4+']),
-                    buttonText: I ? N.intl.string(N.t['9e0wLi']) : N.intl.string(N.t.B7ZT09),
+                    buttonText: M ? N.intl.string(N.t['9e0wLi']) : N.intl.string(N.t.B7ZT09),
                     buttonColor: c.Ttl.PRIMARY,
-                    disabled: M,
+                    disabled: I,
                     onPress: () => {
-                        I ? (u.Z.unignoreUser(e, f.cH, s), v(h.NM.USER_SAFETY_TOOLS_UNIGNORE)) : (u.Z.ignoreUser(e, f.cH, s), v(h.NM.USER_SAFETY_TOOLS_IGNORE));
+                        M ? (u.Z.unignoreUser(e, f.cH, s), v(h.NM.USER_SAFETY_TOOLS_UNIGNORE)) : (u.Z.ignoreUser(e, f.cH, s), v(h.NM.USER_SAFETY_TOOLS_IGNORE));
                     }
                 },
                 {
                     type: 0,
                     title: N.intl.string(N.t.oDxaKy),
                     subTitle: N.intl.string(N.t.Lj37a2),
-                    buttonText: M ? N.intl.string(N.t.Hro409) : N.intl.string(N.t.oDxaKy),
+                    buttonText: I ? N.intl.string(N.t.Hro409) : N.intl.string(N.t.oDxaKy),
                     buttonColor: c.Ttl.BRAND,
                     onPress: () => {
-                        M
+                        I
                             ? (P(), _.Z.showUnblockSuccessToast(e, s))
                             : (0, c.ZDy)(async () => {
                                   let { default: t } = await n.e('41128').then(n.bind(n, 699783));
@@ -170,7 +170,7 @@ let C = function (t) {
                     }
                 }
             ],
-            [I, M, v, P, F, Z, e, s, y]
+            [M, I, v, P, F, Z, e, s, y]
         ),
         U = r.useMemo(() => {
             let t = {

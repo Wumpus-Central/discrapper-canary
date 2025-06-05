@@ -210,6 +210,7 @@ function N(e) {
         size: p.CgR.DYNAMIC,
         transitionState: o,
         className: P.root,
+        parentComponent: 'ClipsGalleryModal',
         children: (0, r.jsxs)(f.Gt, {
             value: H,
             children: [

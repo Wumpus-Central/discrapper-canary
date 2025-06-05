@@ -21,6 +21,7 @@ function p(e) {
         transitionState: n,
         size: o.CgR.SMALL,
         'aria-label': c.intl.string(c.t.WbFpq6),
+        parentComponent: 'ScheduledMessageCreateModal',
         children: [
             (0, r.jsx)(o.olH, {
                 onClick: l,

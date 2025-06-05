@@ -1,32 +1,33 @@
-i.d(e, { default: () => c }), i(953529);
-var n = i(255367),
-    s = i(73800),
-    a = i(481060),
-    l = i(388032),
-    r = i(661640);
+n.d(e, { default: () => c }), n(953529);
+var i = n(255367),
+    a = n(73800),
+    s = n(481060),
+    l = n(388032),
+    r = n(661640);
 let c = (t) => {
-    let { transitionState: e, processFiles: i, onClose: c } = t;
+    let { transitionState: e, processFiles: n, onClose: c } = t;
     return (
-        s.useEffect(() => {
+        a.useEffect(() => {
             (async () => {
-                e === a.Dvm.ENTERED && (await i(), c());
+                e === s.Dvm.ENTERED && (await n(), c());
             })();
-        }, [c, i, e]),
-        (0, n.jsx)(a.Y0X, {
+        }, [c, n, e]),
+        (0, i.jsx)(s.Y0X, {
             transitionState: e,
-            size: a.CgR.SMALL,
+            size: s.CgR.SMALL,
             'aria-label': l.intl.string(l.t['B/HSDQ']),
-            children: (0, n.jsxs)(a.hzk, {
+            parentComponent: 'ImageInputUploadModal',
+            children: (0, i.jsxs)(s.hzk, {
                 className: r.modalContent,
                 children: [
-                    (0, n.jsx)(a.$jN, { className: r.spinner }),
-                    (0, n.jsx)(a.hjN, {
-                        tag: a.RB0.H1,
+                    (0, i.jsx)(s.$jN, { className: r.spinner }),
+                    (0, i.jsx)(s.hjN, {
+                        tag: s.RB0.H1,
                         titleClassName: r.title,
                         title: l.intl.string(l.t['B/HSDQ']),
                         className: r.__invalid_content,
-                        children: (0, n.jsx)(a.R94, {
-                            type: a.geA.DESCRIPTION,
+                        children: (0, i.jsx)(s.R94, {
+                            type: s.geA.DESCRIPTION,
                             className: r.description,
                             children: l.intl.string(l.t.k7OALi)
                         })

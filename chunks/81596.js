@@ -3,8 +3,8 @@ var i = e(255367),
     r = e(73800),
     l = e(442837),
     s = e(481060),
-    d = e(230711),
-    o = e(485267),
+    o = e(230711),
+    d = e(485267),
     c = e(564990),
     a = e(353647),
     E = e(527790),
@@ -14,17 +14,18 @@ var i = e(255367),
     T = e(807069);
 function x(t) {
     let { user: n, entry: e, transitionState: x, onAction: N, onClose: R, onOpenGameSettings: f } = t,
-        [L, p] = (0, l.Wu)([a.Z], () => [a.Z.isDeletingEntryHistory, a.Z.deleteOutboxEntryError]);
+        [p, L] = (0, l.Wu)([a.Z], () => [a.Z.isDeletingEntryHistory, a.Z.deleteOutboxEntryError]);
     return (
-        r.useEffect(() => o.Bt, []),
+        r.useEffect(() => d.Bt, []),
         (0, i.jsxs)(s.Y0X, {
             size: s.CgR.SMALL,
             transitionState: x,
+            parentComponent: 'UserProfileActivityDeleteHistoryModal',
             children: [
                 (0, i.jsxs)(s.hzk, {
                     className: T.content,
                     children: [
-                        null != p
+                        null != L
                             ? (0, i.jsxs)('div', {
                                   className: T.error,
                                   children: [
@@ -53,7 +54,7 @@ function x(t) {
                                         s.eee,
                                         {
                                             onClick: () => {
-                                                null == N || N({ action: 'PRESS_CLEAR_HISTORY_DISCLAIMER' }), null != r ? r() : d.Z.open(), R();
+                                                null == N || N({ action: 'PRESS_CLEAR_HISTORY_DISCLAIMER' }), null != r ? r() : o.Z.open(), R();
                                             },
                                             children: t
                                         },
@@ -74,13 +75,13 @@ function x(t) {
                     className: T.footer,
                     children: [
                         (0, i.jsx)(s.zxk, {
-                            disabled: L,
+                            disabled: p,
                             color: s.Ttl.RED,
                             size: s.PhG.SMALL,
                             onClick: () => {
                                 null == N || N({ action: 'PRESS_CLEAR_HISTORY_BUTTON' }), (0, c.CV)(e, n.id, R);
                             },
-                            children: null != p ? h.intl.string(h.t['5911LS']) : h.intl.string(h.t.VkKicX)
+                            children: null != L ? h.intl.string(h.t['5911LS']) : h.intl.string(h.t.VkKicX)
                         }),
                         (0, i.jsx)(s.zxk, {
                             onClick: R,

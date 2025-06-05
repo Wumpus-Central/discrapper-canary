@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685), n(642613), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529);
+n.d(t, { Z: () => P }), n(388685), n(642613), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -25,7 +25,7 @@ var r = n(255367),
     I = n(388032),
     S = n(796920),
     E = n(20493);
-function P(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,14 +50,14 @@ function P(e) {
     }
     return e;
 }
-function w(e) {
+function P(e) {
     let t,
-        { guild: n, integration: l, editedIntegration: a, isExpanded: w, onToggleExpand: T, onDisable: Z, onEnable: k } = e,
+        { guild: n, integration: l, editedIntegration: a, isExpanded: P, onToggleExpand: T, onDisable: Z, onEnable: k } = e,
         A = (0, d.e7)([x.Z], () => x.Z.getRoles(n.id)),
-        [D, R] = i.useState(!1),
+        [R, D] = i.useState(!1),
         L = (0, d.e7)([j.Z], () => j.Z.hidePersonalInformation),
         M = i.useCallback(() => {
-            R(!0), k(l);
+            D(!0), k(l);
         }, [l, k]),
         B = i.useCallback(() => {
             l.syncing ||
@@ -66,7 +66,7 @@ function w(e) {
                     let i = 0 === l.expire_behavior ? I.intl.string(I.t['6kpw4u']) : I.intl.string(I.t.fQUQIC);
                     return (0, r.jsx)(
                         u.ConfirmModal,
-                        ((t = P({}, e)),
+                        ((t = w({}, e)),
                         (n = n =
                             {
                                 header: I.intl.string(I.t.emx3lJ),
@@ -171,7 +171,7 @@ function w(e) {
         }, [n.id, A, l.enable_emoticons, l.id, l.role_id]);
     if (
         (i.useEffect(() => {
-            (null == a ? void 0 : a.id) === l.id && (null == a ? void 0 : a.enabled) === !0 && R(!1);
+            (null == a ? void 0 : a.id) === l.id && (null == a ? void 0 : a.enabled) === !0 && D(!1);
         }, [a, l.id]),
         l.enabled && null != l.user)
     )
@@ -213,7 +213,7 @@ function w(e) {
                           grow: 0,
                           children: (0, r.jsx)(O.Z, {
                               className: S.expandIcon,
-                              expanded: w && !D,
+                              expanded: P && !R,
                               'aria-hidden': !0
                           })
                       })
@@ -224,8 +224,8 @@ function w(e) {
                               size: u.zxk.Sizes.SMALL,
                               color: u.zxk.Colors.PRIMARY,
                               onClick: M,
-                              disabled: D,
-                              children: D
+                              disabled: R,
+                              children: R
                                   ? (0, r.jsx)(y.Z, {
                                         width: 24,
                                         height: 24
@@ -237,8 +237,8 @@ function w(e) {
         }),
         $ = null;
     return (
-        w &&
-            !D &&
+        P &&
+            !R &&
             null != a &&
             ($ = (0, r.jsxs)(b.Z, {
                 className: S.body,
@@ -406,7 +406,7 @@ function w(e) {
                                                       children: (t) =>
                                                           (0, r.jsx)(
                                                               'img',
-                                                              P(
+                                                              w(
                                                                   {
                                                                       alt: I.intl.formatToPlainString(I.t.n6ZZn5, { name: e.name }),
                                                                       draggable: !1,
@@ -458,7 +458,7 @@ function w(e) {
                     l.enabled
                         ? (0, r.jsx)(u.P3F, {
                               className: S.expandableHeader,
-                              'aria-expanded': w && !D,
+                              'aria-expanded': P && !R,
                               onClick: T,
                               children: X
                           })

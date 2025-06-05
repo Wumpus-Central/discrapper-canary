@@ -13,8 +13,8 @@ var l = n(255367),
     h = n(984933),
     g = n(903749),
     p = n(185923),
-    y = n(388032),
-    b = n(705462);
+    b = n(388032),
+    y = n(705462);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -66,17 +66,17 @@ function j(e) {
         }),
         E = (0, s.e7)([h.ZP], () => (null != n ? h.ZP.getDefaultChannel(n) : null)),
         k = a.useRef(null),
-        Z = (0, d.Z)(k),
-        M = () => {
+        M = (0, d.Z)(k),
+        Z = () => {
             O(void 0), S(void 0);
         },
         I = (e) => (t) => {
             let { emoji: n, willClose: l } = t,
                 a = (null == n ? void 0 : n.id) == null;
-            M(), a ? O(null == n ? void 0 : n.optionallyDiverseSequence) : (C && O(null == n ? void 0 : n.name), S(null == n ? void 0 : n.id)), l && e();
+            Z(), a ? O(null == n ? void 0 : n.optionallyDiverseSequence) : (C && O(null == n ? void 0 : n.name), S(null == n ? void 0 : n.id)), l && e();
         },
         T = (e) => {
-            e.stopPropagation(), M();
+            e.stopPropagation(), Z();
         },
         R = a.useMemo(() => {
             let e = null != j && '' !== j,
@@ -92,8 +92,8 @@ function j(e) {
         }, [j, w, P]);
     return (0, l.jsx)(o.xJW, {
         required: N,
-        title: y.intl.string(y.t['3BQmiI']),
-        className: r()(t, b.section),
+        title: b.intl.string(b.t['3BQmiI']),
+        className: r()(t, y.section),
         error: i,
         children: (0, l.jsx)(o.yRy, {
             targetElementRef: k,
@@ -115,11 +115,11 @@ function j(e) {
                 return (0, l.jsxs)(
                     'div',
                     x(v({}, e), {
-                        className: b.emojiInput,
+                        className: y.emojiInput,
                         ref: k,
                         children: [
                             (0, l.jsx)(f.Z, {
-                                className: b.emojiButton,
+                                className: y.emojiButton,
                                 active: n,
                                 tabIndex: 0,
                                 renderButtonContents:
@@ -132,19 +132,19 @@ function j(e) {
                                         : null
                             }),
                             (0, l.jsx)(o.oil, {
-                                inputClassName: b.emojiText,
-                                placeholder: y.intl.string(y.t.QTK0TE),
+                                inputClassName: y.emojiText,
+                                placeholder: b.intl.string(b.t.QTK0TE),
                                 value: !R.isDeletedCustomEmoji && R.hasEmojiDisplayName ? ':'.concat(P, ':') : '',
                                 readOnly: !0
                             }),
                             !R.isDeletedCustomEmoji &&
                                 R.hasEmojiDisplayName &&
-                                Z &&
+                                M &&
                                 (0, l.jsx)(
                                     c.Z,
                                     x(v({}, e), {
                                         onClick: T,
-                                        className: b.removeButton
+                                        className: y.removeButton
                                     })
                                 )
                         ]

@@ -18,6 +18,7 @@ function u(e) {
             impressionName: i.ImpressionNames.USER_AGE_GATE,
             impressionProperties: { existing_user: !0 }
         },
+        parentComponent: 'ExistingUserAgeGateVerified',
         children: [
             (0, r.jsx)(l.hzk, {
                 children: (0, r.jsxs)('div', {

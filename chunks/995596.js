@@ -3,8 +3,8 @@ var r = n(255367),
     l = n(73800),
     i = n(120356),
     a = n.n(i),
-    s = n(442837),
-    o = n(21260),
+    o = n(442837),
+    s = n(21260),
     c = n(780384),
     d = n(481060),
     u = n(393903),
@@ -17,7 +17,7 @@ var r = n(255367),
     p = n(384433),
     g = n(388032),
     v = n(86931);
-let _ = (e) => [
+let C = (e) => [
         {
             id: p.e.ALL_MEMBERS,
             label: g.intl.string(g.t.NOOm1d)
@@ -35,7 +35,7 @@ let _ = (e) => [
             label: g.intl.string(g.t.aURgY2)
         }
     ],
-    C = (e) => {
+    _ = (e) => {
         let { tabs: t, selectedTab: n, onTabSelect: l, onClose: i } = e;
         return (0, r.jsx)(d.v2r, {
             navId: 'members-tabs-overflow-menu',
@@ -66,9 +66,9 @@ let _ = (e) => [
     };
 function T(e) {
     let { onTabSelect: t, tabs: n, selectedTab: i } = e,
-        s = l.useRef(null),
-        o = (0, x.ZP)(),
-        u = (0, c.wj)(o),
+        o = l.useRef(null),
+        s = (0, x.ZP)(),
+        u = (0, c.wj)(s),
         m = l.useMemo(
             () =>
                 null !=
@@ -81,10 +81,10 @@ function T(e) {
         h = m ? 'header-primary' : u ? 'text-muted' : 'header-primary',
         j = m ? d.TVs.colors.HEADER_PRIMARY : u ? d.TVs.colors.TEXT_MUTED : d.TVs.colors.HEADER_PRIMARY;
     return (0, r.jsx)(d.yRy, {
-        targetElementRef: s,
+        targetElementRef: o,
         renderPopout: (e) => {
             let { closePopout: l } = e;
-            return (0, r.jsx)(C, {
+            return (0, r.jsx)(_, {
                 selectedTab: i,
                 onClose: l,
                 tabs: n,
@@ -126,7 +126,7 @@ function T(e) {
                 (l = l =
                     {
                         id: 'more',
-                        clickableInnerRef: s,
+                        clickableInnerRef: o,
                         color: 'text-muted',
                         className: a()(v.more, { [v.selected]: m }),
                         'aria-label': g.intl.string(g.t.UKOtz8),
@@ -168,27 +168,27 @@ function N(e) {
     let { guildId: t, currentTab: n, onTabSelect: i } = e,
         [a, c] = l.useState(0),
         x = l.useRef(null),
-        C = l.useRef(a),
+        _ = l.useRef(a),
         N = (0, j.A)({ guildId: t }),
-        E = _(null != N ? N : 0),
+        E = C(null != N ? N : 0),
         {
             lastVisibleIndex: S,
             onItemLayout: I,
             overflowItemsRef: P
-        } = (0, o.zP)({
+        } = (0, s.zP)({
             items: E,
             itemGapPx: 16,
             maxLines: 1,
             containerWidth: a - 200
         }),
-        O = (0, s.e7)([f.ZP], () => null != f.ZP.getGuildSidebarState(t), [t]),
-        R = (0, h.L)({ guildId: t }),
-        y = l.useMemo(() => (n === p.e.ALL_MEMBERS ? O : null != R && null != R.user), [n, O, R]),
+        R = (0, o.e7)([f.ZP], () => null != f.ZP.getGuildSidebarState(t), [t]),
+        O = (0, h.L)({ guildId: t }),
+        y = l.useMemo(() => (n === p.e.ALL_MEMBERS ? R : null != O && null != O.user), [n, R, O]),
         w = l.useMemo(() => E.slice(0, S + 1), [S, E]),
         A = l.useMemo(() => E.slice(S + 1), [S, E]),
         M = (0, m.Z)((e) => {
             let t = e.contentRect.width;
-            null != t && C.current !== t && (c(t), (C.current = t));
+            null != t && _.current !== t && (c(t), (_.current = t));
         });
     return (
         (0, u.s)(x, M, [y]),
@@ -204,7 +204,7 @@ function N(e) {
                             children: [
                                 E.map((e, t) =>
                                     (0, r.jsx)(
-                                        o.AJ,
+                                        s.AJ,
                                         {
                                             index: t,
                                             onItemLayout: I,

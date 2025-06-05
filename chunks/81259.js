@@ -14,14 +14,14 @@ let d = () =>
             height: 13,
             backgroundColor: l.Z.colors.TEXT_POSITIVE.css
         }),
-    g = () =>
+    m = () =>
         (0, n.jsx)(a.k$p, {
             size: 'custom',
             width: 13,
             height: 13,
             color: l.Z.colors.TEXT_DANGER.css
         }),
-    m = () =>
+    g = () =>
         (0, n.jsx)(a.k$p, {
             size: 'custom',
             width: 13,
@@ -30,8 +30,8 @@ let d = () =>
         });
 function f(e) {
     let t = (0, s.EQ)(e.type)
-        .with('info', () => (0, n.jsx)(m, {}))
-        .with('error', () => (0, n.jsx)(g, {}))
+        .with('info', () => (0, n.jsx)(g, {}))
+        .with('error', () => (0, n.jsx)(m, {}))
         .with('success', () => (0, n.jsx)(d, {}))
         .otherwise(() => null);
     return (0, n.jsxs)(n.Fragment, {

@@ -1,57 +1,58 @@
 r.d(e, { default: () => c });
 var s = r(255367);
 r(73800);
-var i = r(481060),
-    n = r(600164),
-    l = r(458725),
+var n = r(481060),
+    l = r(600164),
+    i = r(458725),
     a = r(386146),
-    d = r(388032),
-    o = r(463672);
+    o = r(388032),
+    d = r(463672);
 function c(t) {
     var e;
     let { onClose: r, transitionState: c } = t,
         { avErrorUIEnabled: u } = (0, a.JN)({ location: 'StreamWarning' }),
-        x = null == (e = (0, l.hp)(l.u.STREAM_FULL)) ? void 0 : e.errorCode,
-        h = d.intl.formatToPlainString(d.t['ejOT9/'], { errorCode: x });
-    return (0, s.jsxs)(i.Y0X, {
-        size: i.CgR.SMALL,
+        x = null == (e = (0, i.hp)(i.u.STREAM_FULL)) ? void 0 : e.errorCode,
+        h = o.intl.formatToPlainString(o.t['ejOT9/'], { errorCode: x });
+    return (0, s.jsxs)(n.Y0X, {
+        size: n.CgR.SMALL,
         transitionState: c,
+        parentComponent: 'StreamFullModal',
         children: [
-            (0, s.jsxs)(i.xBx, {
-                justify: n.Z.Justify.BETWEEN,
+            (0, s.jsxs)(n.xBx, {
+                justify: l.Z.Justify.BETWEEN,
                 children: [
-                    (0, s.jsx)(i.vwX, {
+                    (0, s.jsx)(n.vwX, {
                         tag: 'h2',
-                        className: o.header,
-                        children: d.intl.string(d.t.GzjdOz)
+                        className: d.header,
+                        children: o.intl.string(o.t.GzjdOz)
                     }),
-                    (0, s.jsx)(i.olH, {
+                    (0, s.jsx)(n.olH, {
                         onClick: r,
-                        className: o.modalCloseButton
+                        className: d.modalCloseButton
                     })
                 ]
             }),
-            (0, s.jsxs)(i.hzk, {
+            (0, s.jsxs)(n.hzk, {
                 children: [
-                    (0, s.jsx)(i.Text, {
+                    (0, s.jsx)(n.Text, {
                         variant: 'text-md/medium',
-                        children: d.intl.string(d.t.VVZDBA)
+                        children: o.intl.string(o.t.VVZDBA)
                     }),
                     u &&
-                        (0, s.jsx)(i.Text, {
+                        (0, s.jsx)(n.Text, {
                             variant: 'text-md/medium',
                             selectable: !0,
                             color: 'text-muted',
-                            className: o.errorCode,
+                            className: d.errorCode,
                             children: h
                         }),
-                    (0, s.jsx)('div', { className: o.fullArt })
+                    (0, s.jsx)('div', { className: d.fullArt })
                 ]
             }),
-            (0, s.jsx)(i.mzw, {
-                children: (0, s.jsx)(i.zxk, {
+            (0, s.jsx)(n.mzw, {
+                children: (0, s.jsx)(n.zxk, {
                     onClick: r,
-                    children: d.intl.string(d.t.BddRzc)
+                    children: o.intl.string(o.t.BddRzc)
                 })
             })
         ]

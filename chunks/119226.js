@@ -117,6 +117,7 @@ function N(e) {
         children: (0, r.jsx)(u.Z, {
             nameplate: t,
             className: E.nameplate,
+            nameplatePreviewSize: 'large',
             isHighlighted: !0,
             showPlaceholderUser: !0
         })

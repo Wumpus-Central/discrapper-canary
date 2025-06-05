@@ -12,9 +12,9 @@ var a = n(512722),
     f = n(240864),
     m = n(598952),
     h = n(596211),
-    j = n(388032),
-    b = n(313881);
-let p = (0, l.Mg)(c.Z.GUILD_PRODUCT_DOWNLOAD_MODAL_HEADER_IMAGE_WIDTH);
+    p = n(388032),
+    j = n(313881);
+let b = (0, l.Mg)(c.Z.GUILD_PRODUCT_DOWNLOAD_MODAL_HEADER_IMAGE_WIDTH);
 function x(t) {
     let { guildProductListing: e, guildId: n, onClose: a } = t,
         o = (0, i.e7)([d.Z], () => {
@@ -22,12 +22,12 @@ function x(t) {
             return null == (t = d.Z.getGuild(n)) ? void 0 : t.name;
         });
     return (0, r.jsxs)(s.xBx, {
-        className: b.header,
+        className: j.header,
         children: [
             (0, r.jsx)(u.Z, {
-                className: b.headerImage,
+                className: j.headerImage,
                 listing: e,
-                imageSize: p,
+                imageSize: b,
                 alt: ''
             }),
             (0, r.jsx)(s.LZC, {
@@ -35,7 +35,7 @@ function x(t) {
                 horizontal: !0
             }),
             (0, r.jsxs)('div', {
-                className: b.headerTextColumn,
+                className: j.headerTextColumn,
                 children: [
                     (0, r.jsx)(s.X6q, {
                         variant: 'text-md/semibold',
@@ -46,19 +46,19 @@ function x(t) {
                     (0, r.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-muted',
-                        className: b.__invalid_description,
+                        className: j.__invalid_description,
                         children: o
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-muted',
-                        className: b.__invalid_description,
-                        children: j.intl.format(j.t['6dOuaG'], { count: e.attachments_count })
+                        className: j.__invalid_description,
+                        children: p.intl.format(p.t['6dOuaG'], { count: e.attachments_count })
                     })
                 ]
             }),
             (0, r.jsx)(s.olH, {
-                className: b.closeButton,
+                className: j.closeButton,
                 onClick: a
             })
         ]
@@ -67,11 +67,11 @@ function x(t) {
 function g(t) {
     let { attachment: e, guildId: n, productId: a } = t;
     return (0, r.jsxs)('li', {
-        className: b.attachmentRow,
+        className: j.attachmentRow,
         children: [
             (0, r.jsx)(m.Z, { attachment: e }),
             (0, r.jsx)(h.Z, {
-                className: b.attachmentDownloadButton,
+                className: j.attachmentDownloadButton,
                 guildId: n,
                 productId: a,
                 attachmentId: e.id,
@@ -90,10 +90,11 @@ function O(t) {
     o()(null != u, 'guildProductListing cannot be null');
     let d = null != (e = u.attachments) ? e : [];
     return (0, r.jsxs)(s.Y0X, {
-        className: b.modal,
+        className: j.modal,
         size: s.CgR.MEDIUM,
         transitionState: c,
-        'aria-label': j.intl.string(j.t['3jaCaW']),
+        'aria-label': p.intl.string(p.t['3jaCaW']),
+        parentComponent: 'GuildProductDownloadModal',
         children: [
             (0, r.jsx)(x, {
                 guildId: n,
@@ -102,7 +103,7 @@ function O(t) {
             }),
             (0, r.jsx)(s.hzk, {
                 children: (0, r.jsx)('ul', {
-                    className: b.__invalid_attachmentsList,
+                    className: j.__invalid_attachmentsList,
                     children: d.map((t) =>
                         (0, r.jsx)(
                             g,

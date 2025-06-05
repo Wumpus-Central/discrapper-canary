@@ -63,6 +63,7 @@ class f extends (r = a.PureComponent) {
                 : null;
         return (0, i.jsx)(l.Y0X, {
             transitionState: _,
+            parentComponent: 'MFAConfirm',
             children: (0, i.jsxs)('form', {
                 onSubmit: this.handleSubmit,
                 children: [

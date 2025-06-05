@@ -5,15 +5,15 @@ var r = e(255367),
     i = e(313201),
     s = e(556012),
     u = e(590433),
-    c = e(388032),
-    o = e(996248);
+    o = e(388032),
+    c = e(996248);
 let d = (t) => {
     var n;
     let { duration: e, onSelectDuration: l } = t,
         i = (0, u.tr)(),
         s = i.find((t) => t.value === e);
     return (0, r.jsx)(a.xJW, {
-        className: o.durationSelector,
+        className: c.durationSelector,
         required: !0,
         children: (0, r.jsx)(a.VcW, {
             value: null != (n = null == s ? void 0 : s.value) ? n : u.UK.DURATION_60_SEC,
@@ -22,7 +22,7 @@ let d = (t) => {
                 let n = i.find((n) => n.value === t);
                 null != n && l(n.value);
             },
-            placeholder: c.intl.string(c.t.k7yo6u)
+            placeholder: o.intl.string(o.t.k7yo6u)
         })
     });
 };
@@ -37,21 +37,22 @@ function j(t) {
         transitionState: N,
         'aria-labelledby': _,
         size: a.CgR.SMALL,
+        parentComponent: 'AutomodActionUserCommunicationDisabledModal',
         children: [
             (0, r.jsxs)(a.hzk, {
-                className: o.actionContentContainer,
+                className: c.actionContentContainer,
                 children: [
                     (0, r.jsx)(a.X6q, {
                         id: _,
                         color: 'header-primary',
                         variant: 'heading-lg/semibold',
-                        className: o.header,
+                        className: c.header,
                         children: L
                     }),
                     (0, r.jsx)(a.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: c.intl.string(c.t.DWGBAg)
+                        children: o.intl.string(o.t.DWGBAg)
                     }),
                     (0, r.jsx)(d, {
                         duration: S,
@@ -69,7 +70,7 @@ function j(t) {
                         },
                         color: a.zxk.Colors.BRAND,
                         size: a.zxk.Sizes.SMALL,
-                        children: j ? c.intl.string(c.t.bt75u7) : c.intl.string(c.t.R3BPHx)
+                        children: j ? o.intl.string(o.t.bt75u7) : o.intl.string(o.t.R3BPHx)
                     }),
                     (0, r.jsx)(a.zxk, {
                         onClick: () => {
@@ -77,7 +78,7 @@ function j(t) {
                         },
                         color: a.zxk.Colors.TRANSPARENT,
                         look: a.zxk.Looks.LINK,
-                        children: c.intl.string(c.t['ETE/oK'])
+                        children: o.intl.string(o.t['ETE/oK'])
                     })
                 ]
             })

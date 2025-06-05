@@ -3,8 +3,8 @@ var r,
     s = n(255367);
 n(73800);
 var i = n(481060),
-    c = n(600164),
-    o = n(390668),
+    o = n(600164),
+    c = n(390668),
     a = (((r = a || {}).UPGRADE = 'UPGRADE'), (r.CANCEL = 'CANCEL'), (r.UNVERIFIED = 'UNVERIFIED'), (r.UNCLAIMED = 'UNCLAIMED'), (r.GRANDFATHERED = 'GRANDFATHERED'), r);
 let l = {
         UPGRADE: 'imageUpgrade',
@@ -17,7 +17,7 @@ let l = {
         var t,
             n,
             { children: r } = e,
-            c = (function (e, t) {
+            o = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -62,8 +62,12 @@ let l = {
                         });
                 }
                 return e;
-            })({}, c)),
-            (n = n = { children: r }),
+            })({}, o)),
+            (n = n =
+                {
+                    parentComponent: 'PremiumModal',
+                    children: r
+                }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {
@@ -82,7 +86,7 @@ let l = {
 (u.Header = (e) => {
     let { children: t, onClose: n } = e;
     return (0, s.jsxs)(i.xBx, {
-        justify: c.Z.Justify.BETWEEN,
+        justify: o.Z.Justify.BETWEEN,
         separator: !1,
         children: [
             (0, s.jsx)(i.vwX, {
@@ -91,7 +95,7 @@ let l = {
             }),
             null != n
                 ? (0, s.jsx)(i.olH, {
-                      className: o.__invalid_closeIcon,
+                      className: c.__invalid_closeIcon,
                       onClick: n
                   })
                 : null
@@ -102,9 +106,9 @@ let l = {
         let { children: t, type: n } = e;
         return (0, s.jsxs)(i.hzk, {
             children: [
-                (0, s.jsx)('div', { className: o[l[n]] }),
+                (0, s.jsx)('div', { className: c[l[n]] }),
                 (0, s.jsx)('div', {
-                    className: o.message,
+                    className: c.message,
                     children: t
                 })
             ]
@@ -113,14 +117,14 @@ let l = {
     (u.Footer = (e) => {
         let { primary: t, primaryRenderer: n, secondary: r } = e;
         return (0, s.jsx)(i.mzw, {
-            children: (0, s.jsxs)(c.Z, {
-                justify: c.Z.Justify.END,
+            children: (0, s.jsxs)(o.Z, {
+                justify: o.Z.Justify.END,
                 children: [
                     null != r
                         ? (0, s.jsx)(i.zxk, {
                               onClick: r.onClick,
                               look: i.zxk.Looks.LINK,
-                              innerClassName: o.secondaryButton,
+                              innerClassName: c.secondaryButton,
                               children: r.label
                           })
                         : null,

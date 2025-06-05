@@ -185,6 +185,7 @@ function P(e) {
                         A(S({ className: v.__invalid_modal }, e), {
                             size: l.CgR.DYNAMIC,
                             'aria-label': O.intl.string(O.t.X4IxWF),
+                            parentComponent: 'ChannelAttachmentUpload',
                             children: h(!1, !0)
                         })
                     )

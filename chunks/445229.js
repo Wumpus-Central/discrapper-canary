@@ -1,6 +1,6 @@
 n.d(t, { Z: () => h });
-var r = n(255367),
-    a = n(73800),
+var a = n(255367),
+    r = n(73800),
     l = n(120356),
     i = n.n(l),
     o = n(442837),
@@ -14,11 +14,11 @@ var r = n(255367),
 function v(e) {
     let { user: t } = e,
         n = m.ZP.useName(null, null, t);
-    return (0, r.jsxs)('div', {
+    return (0, a.jsxs)('div', {
         className: f.userItem,
         children: [
-            (0, r.jsx)(u.Z, { user: t }),
-            (0, r.jsx)(s.Text, {
+            (0, a.jsx)(u.Z, { user: t }),
+            (0, a.jsx)(s.Text, {
                 color: 'header-primary',
                 variant: 'text-sm/medium',
                 children: n
@@ -29,32 +29,32 @@ function v(e) {
 function h(e) {
     let { clip: t, className: n } = e,
         l = (0, o.Wu)([c.default], () => t.users.map(c.default.getUser).filter(d.lm)),
-        u = a.useCallback(
+        u = r.useCallback(
             (e) => {
                 let { row: t } = e,
                     n = l[t];
-                return null == n ? null : (0, r.jsx)(v, { user: n }, t);
+                return null == n ? null : (0, a.jsx)(v, { user: n }, t);
             },
             [l]
         );
-    return (0, r.jsxs)('div', {
+    return (0, a.jsxs)('div', {
         className: i()(n, f.root),
         children: [
-            (0, r.jsx)('div', {
+            (0, a.jsx)('div', {
                 className: f.__invalid_header,
-                children: (0, r.jsxs)(s.vwX, {
+                children: (0, a.jsxs)(s.vwX, {
                     className: f.title,
                     children: [
                         p.intl.string(p.t.WTozwc),
-                        (0, r.jsxs)('div', {
+                        (0, a.jsxs)('div', {
                             className: f.userCountPill,
                             children: [
-                                (0, r.jsx)(s.Text, {
+                                (0, a.jsx)(s.Text, {
                                     color: 'text-normal',
                                     variant: 'text-xs/medium',
                                     children: l.length
                                 }),
-                                (0, r.jsx)(s.iFz, {
+                                (0, a.jsx)(s.iFz, {
                                     size: 'xs',
                                     color: 'currentColor',
                                     className: f.userCountIcon
@@ -64,7 +64,7 @@ function h(e) {
                     ]
                 })
             }),
-            (0, r.jsx)(s.aVo, {
+            (0, a.jsx)(s.aVo, {
                 className: f.__invalid_userList,
                 sectionHeight: 0,
                 rowHeight: 40,

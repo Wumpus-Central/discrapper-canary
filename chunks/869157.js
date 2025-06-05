@@ -25,8 +25,8 @@ var r = n(255367),
     I = n(399860),
     S = n(335049),
     E = n(617012),
-    P = n(981631),
-    w = n(388032),
+    w = n(981631),
+    P = n(388032),
     T = n(981263);
 function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -113,13 +113,13 @@ function A(e) {
                     }
                 });
         }, [l, p, x]),
-        P = i.useCallback(
+        w = i.useCallback(
             (e, t) => {
                 n({}, [(0, I.rE)(e, t)]);
             },
             [n]
         ),
-        w = i.useCallback(
+        P = i.useCallback(
             (e, t, r) => {
                 let i = (0, I.rE)(e, t);
                 null != p[i] &&
@@ -155,12 +155,12 @@ function A(e) {
     return E.length > 0
         ? E.map((e) =>
               (0, r.jsx)(
-                  D,
+                  R,
                   {
                       guild: h,
                       commandId: t,
-                      onChange: (t) => w(e.id, e.type, t),
-                      onRemove: () => P(e.id, e.type),
+                      onChange: (t) => P(e.id, e.type, t),
+                      onRemove: () => w(e.id, e.type),
                       overwrite: e,
                       integration: k,
                       canShowMigrationTooltip: A,
@@ -178,7 +178,7 @@ function A(e) {
               })
           });
 }
-function D(e) {
+function R(e) {
     var t, n, l;
     let o,
         { guild: a, commandId: s, onChange: c, onRemove: u, overwrite: f, integration: j, canShowMigrationTooltip: O, hasAccessToMutatePermissions: v } = e,
@@ -186,13 +186,13 @@ function D(e) {
         C = null == j || null == (n = j.application) || null == (t = n.bot) ? void 0 : t.username,
         N = !f.canWrite || !v,
         I = x.default.getId();
-    v ? f.canWrite || (f.type === m.Kw.USER ? (o = f.id === I ? w.intl.string(w.t['1VF/09']) : w.intl.string(w.t.P1GnER)) : f.type === m.Kw.ROLE && (o = w.intl.string(w.t.mcAijY))) : (o = null != s ? w.intl.string(w.t.tybdam) : w.intl.string(w.t.z2hjk5));
+    v ? f.canWrite || (f.type === m.Kw.USER ? (o = f.id === I ? P.intl.string(P.t['1VF/09']) : P.intl.string(P.t.P1GnER)) : f.type === m.Kw.ROLE && (o = P.intl.string(P.t.mcAijY))) : (o = null != s ? P.intl.string(P.t.tybdam) : P.intl.string(P.t.z2hjk5));
     let A = O && null != j && f.id === a.id && void 0 !== C && !f.permission;
     i.useEffect(() => {
         if (A) {
             var e;
             y.default.track(
-                P.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
+                w.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
                 k(Z({}, (0, p.hH)(a.id)), {
                     application_id: null == j || null == (e = j.application) ? void 0 : e.id,
                     location: 'toggle'
@@ -200,7 +200,7 @@ function D(e) {
             );
         }
     }, [a.id, null == j || null == (l = j.application) ? void 0 : l.id, A]);
-    let D = i.useRef(null),
+    let R = i.useRef(null),
         L = (0, r.jsx)(d.ua7, {
             tooltipClassName: T.tooltip,
             text: o,
@@ -211,7 +211,7 @@ function D(e) {
                 (0, r.jsx)(
                     'div',
                     k(Z({}, e), {
-                        ref: D,
+                        ref: R,
                         children: (0, r.jsx)(E.Z, {
                             isDisabled: N,
                             currentValue: f.permission,
@@ -225,7 +225,7 @@ function D(e) {
                 )
         }),
         M = (0, r.jsx)(d.yRy, {
-            targetElementRef: D,
+            targetElementRef: R,
             renderPopout: () =>
                 (0, r.jsx)(d.P3F, {
                     onClick: (e) => {
@@ -233,7 +233,7 @@ function D(e) {
                     },
                     children: (0, r.jsx)(h.ZP, {
                         className: T.tooltip,
-                        content: w.intl.format(w.t.pW4Cr6, {
+                        content: P.intl.format(P.t.pW4Cr6, {
                             botName: C,
                             link: 'https://discord.com/blog/welcome-to-the-new-era-of-discord-apps/'
                         }),
@@ -266,7 +266,7 @@ function D(e) {
                 (0, r.jsxs)('div', {
                     className: T.entryActions,
                     children: [
-                        (0, r.jsx)(R, {
+                        (0, r.jsx)(D, {
                             commandId: s,
                             isSentinel: _,
                             isDisabled: !v,
@@ -280,7 +280,7 @@ function D(e) {
         f.id
     );
 }
-function R(e) {
+function D(e) {
     let { commandId: t, isSentinel: n, isDisabled: i, onRemove: l } = e;
     return i
         ? null
@@ -290,7 +290,7 @@ function R(e) {
                 className: T.removeActions,
                 children: (0, r.jsx)(d.P3F, {
                     className: T.removeContainer,
-                    'aria-label': w.intl.string(w.t.mT0CQE),
+                    'aria-label': P.intl.string(P.t.mT0CQE),
                     onClick: l,
                     children: (0, r.jsx)(d.XHJ, {
                         size: 'md',

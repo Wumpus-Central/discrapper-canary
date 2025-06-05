@@ -1,4 +1,4 @@
-r.d(t, { default: () => u });
+r.d(t, { default: () => b });
 var n = r(255367),
     a = r(73800),
     i = r(481060),
@@ -8,13 +8,13 @@ var n = r(255367),
     l = r(296023),
     d = r(388032),
     x = r(821084);
-let u = (e) => {
-    let { channel: t, application: u, onClose: b, transitionState: m } = e,
-        p = (0, c.Q3)('IntegrationsEditLinkedLobbyModal'),
+let b = (e) => {
+    let { channel: t, application: b, onClose: p, transitionState: u } = e,
+        m = (0, c.Q3)('IntegrationsEditLinkedLobbyModal'),
         j = (0, l.w)(t),
         h = a.useCallback(
             () => (
-                b(),
+                p(),
                 (0, i.ZDy)(async () => {
                     let { default: e } = await r.e('31907').then(r.bind(r, 366854));
                     return (r) => {
@@ -49,7 +49,7 @@ let u = (e) => {
                             (i = i =
                                 {
                                     channelId: t.id,
-                                    application: u
+                                    application: b
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(i))
@@ -68,12 +68,13 @@ let u = (e) => {
                     };
                 })
             ),
-            [u, t.id, b]
+            [b, t.id, p]
         ),
         O = (0, o.ZP)(t, !0);
     return (0, n.jsxs)(i.Y0X, {
-        transitionState: m,
+        transitionState: u,
         'aria-label': d.intl.string(d.t.OJknho),
+        parentComponent: 'IntegrationsEditLinkedLobbyModal',
         children: [
             (0, n.jsx)(i.xBx, {
                 separator: !1,
@@ -86,7 +87,7 @@ let u = (e) => {
                 className: x.content,
                 children: [
                     (0, n.jsx)(s.Z, {
-                        game: u,
+                        game: b,
                         size: s.Z.Sizes.XLARGE
                     }),
                     (0, n.jsxs)('div', {
@@ -98,7 +99,7 @@ let u = (e) => {
                                     (0, n.jsx)(i.Text, {
                                         variant: 'text-md/semibold',
                                         color: 'header-primary',
-                                        children: u.name
+                                        children: b.name
                                     }),
                                     (0, n.jsx)(i.Text, {
                                         variant: 'text-sm/normal',
@@ -130,8 +131,8 @@ let u = (e) => {
                         children: d.intl.string(d.t.LLWaxc)
                     }),
                     (0, n.jsx)(i.zxk, {
-                        onClick: b,
-                        look: p ? i.zxk.Looks.FILLED : i.zxk.Looks.LINK,
+                        onClick: p,
+                        look: m ? i.zxk.Looks.FILLED : i.zxk.Looks.LINK,
                         color: i.zxk.Colors.PRIMARY,
                         className: x.cancelButton,
                         children: d.intl.string(d.t['ETE/oK'])

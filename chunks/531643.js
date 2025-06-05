@@ -56,6 +56,7 @@ function h(e) {
               size: s.Cg.DYNAMIC,
               'aria-labelledby': m,
               transitionState: o,
+              parentComponent: 'UploadError',
               children: (0, r.jsx)('div', {
                   className: a()(f.uploadDropModal, f.error),
                   children: (0, r.jsxs)('div', {

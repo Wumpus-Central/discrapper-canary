@@ -27,6 +27,7 @@ function g(e) {
             transitionState: n,
             'aria-label': u.intl.string(u.t.HcoRu7),
             size: r.CgR.DYNAMIC,
+            parentComponent: 'NotificationMigrationModal',
             children: [
                 (0, i.jsx)(d.Z, {
                     selectedTab: v,

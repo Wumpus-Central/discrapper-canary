@@ -14,8 +14,8 @@ var i = n(255367),
     g = n(77880),
     m = n(870569),
     y = n(345243),
-    _ = n(873596),
-    v = n(917405),
+    v = n(873596),
+    _ = n(917405),
     O = n(430824),
     b = n(131951),
     E = n(699516),
@@ -115,7 +115,7 @@ class D extends r.PureComponent {
                                           c.P3F,
                                           k(T({}, e), {
                                               innerRef: this.rtcConnectionStatusRef,
-                                              children: (0, i.jsx)(v.Z, {
+                                              children: (0, i.jsx)(_.Z, {
                                                   channelId: o.id,
                                                   quality: l,
                                                   lastPing: a,
@@ -173,7 +173,7 @@ class D extends r.PureComponent {
             }),
             w(this, 'renderPopout', (e) => {
                 let { lobbyId: t } = this.props;
-                return (0, i.jsx)(_.Z, {
+                return (0, i.jsx)(v.Z, {
                     channelId: e,
                     lobbyId: t,
                     isOverlay: !0

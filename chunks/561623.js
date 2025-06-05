@@ -33,7 +33,7 @@ let x = (e) => {
         A,
         F,
         N,
-        { daysLeft: E, premiumType: k, premiumSubscription: Z, analyticsSource: U } = e,
+        { daysLeft: E, premiumType: k, premiumSubscription: U, analyticsSource: Z } = e,
         M = (function (e, o) {
             if (null == e) return {};
             var r,
@@ -56,17 +56,17 @@ let x = (e) => {
     let B = (0, s.ZP)(),
         [z, R] = n.useState(!1),
         { analyticsLocations: D } = (0, d.ZP)(_.Z.PREMIUM_UNCANCEL_MODAL),
-        Y = (0, i.e7)([m.Z], () => ((null == Z ? void 0 : Z.paymentSourceId) != null ? m.Z.getPaymentSource(Z.paymentSourceId) : null), [Z]),
-        G = Z.items[0].planId,
+        Y = (0, i.e7)([m.Z], () => ((null == U ? void 0 : U.paymentSourceId) != null ? m.Z.getPaymentSource(U.paymentSourceId) : null), [U]),
+        G = U.items[0].planId,
         W = (0, y.Wz)(T.GP[G].skuId),
         { priceOptions: K } = (0, p.Z)({
             activeSubscription: null,
             skuIDs: [W],
-            paymentSourceId: null == Z ? void 0 : Z.paymentSourceId,
+            paymentSourceId: null == U ? void 0 : U.paymentSourceId,
             isGift: !1
         }),
         [V] = (0, P.ED)({
-            subscriptionId: Z.id,
+            subscriptionId: U.id,
             items: [
                 {
                     planId: G,
@@ -74,7 +74,7 @@ let x = (e) => {
                 }
             ],
             renewal: !0,
-            paymentSourceId: null == Z ? void 0 : Z.paymentSourceId,
+            paymentSourceId: null == U ? void 0 : U.paymentSourceId,
             currency: K.currency,
             analyticsLocations: (0, d.ZP)(_.Z.PREMIUM_UNCANCEL_MODAL),
             analyticsLocation: _.Z.PREMIUM_UNCANCEL_MODAL
@@ -91,9 +91,9 @@ let x = (e) => {
         n.useEffect(() => {
             b.default.track(j.rMx.OPEN_MODAL, {
                 type: 'Premium Uncancel Winback',
-                source: U
+                source: Z
             });
-        }, [U]),
+        }, [Z]),
         (0, t.jsx)(
             a.Y0X,
             ((o = (function (e) {
@@ -124,6 +124,7 @@ let x = (e) => {
             (r = r =
                 {
                     className: w.modal,
+                    parentComponent: 'UncancelModalWhatYouLose',
                     children: z
                         ? (0, t.jsxs)(t.Fragment, {
                               children: [
@@ -175,10 +176,10 @@ let x = (e) => {
                                               (0, t.jsx)(a.zxk, {
                                                   disabled: H,
                                                   onClick: () => {
-                                                      if (null != Z) {
-                                                          let e = (0, h.tD)(G, Z.currency, null == Y ? void 0 : Y.id);
-                                                          null != Y && Y.id === Z.paymentSourceId && e
-                                                              ? (c.O5(Z, D, j.Sbl.UNCANCEL_WINBACK_MODAL), R(!0))
+                                                      if (null != U) {
+                                                          let e = (0, h.tD)(G, U.currency, null == Y ? void 0 : Y.id);
+                                                          null != Y && Y.id === U.paymentSourceId && e
+                                                              ? (c.O5(U, D, j.Sbl.UNCANCEL_WINBACK_MODAL), R(!0))
                                                               : (M.onClose(),
                                                                 (0, f.Z)({
                                                                     initialPlanId: G,

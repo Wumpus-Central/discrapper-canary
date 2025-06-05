@@ -106,7 +106,7 @@ function u(e, t, n, u, d) {
             },
             [b, t, d, u, n, p]
         ),
-        S = r.useCallback(() => {
+        C = r.useCallback(() => {
             null != t.current &&
                 p({
                     questId: b,
@@ -122,7 +122,7 @@ function u(e, t, n, u, d) {
                     )
                 });
         }, [b, t, u, n, p, d]),
-        C = r.useCallback(
+        S = r.useCallback(
             (e) => {
                 null != t.current &&
                     p({
@@ -296,8 +296,8 @@ function u(e, t, n, u, d) {
         trackQuestVideoLoadingStarted: E,
         trackQuestVideoLoadingEnded: O,
         trackQuestVideoTimeToFirstFrame: h,
-        trackQuestVideoProgressed: S,
-        trackQuestVideoResumed: C,
+        trackQuestVideoProgressed: C,
+        trackQuestVideoResumed: S,
         trackQuestVideoPaused: j,
         trackQuestVideoFocusChange: y,
         trackQuestContentClick: D,

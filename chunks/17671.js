@@ -35,8 +35,8 @@ function T(e) {
         D = (0, c.e7)([v.Z], () => v.Z.getGuild(T)),
         G = (0, Z.Z)(null == D ? void 0 : D.id),
         L = (0, O.ZP)(T),
-        R = r.useRef(m.ZP.ackMessageId(T, w.W.GUILD_EVENT)),
-        M = (0, E.Z)();
+        M = r.useRef(m.ZP.ackMessageId(T, w.W.GUILD_EVENT)),
+        R = (0, E.Z)();
     return (
         r.useEffect(() => {
             L.forEach((e) => x.Z.getGuildEventUserCounts(T, e.id, [])), x.Z.getGuildEventsForCurrentUser(T);
@@ -75,6 +75,7 @@ function T(e) {
             size: a.CgR.MEDIUM,
             transitionState: n,
             'aria-labelledby': _,
+            parentComponent: 'GuildEventsModal',
             children: [
                 (0, i.jsxs)(a.xBx, {
                     className: S.header,
@@ -146,7 +147,7 @@ function T(e) {
                                                         t)
                                                     );
                                                 };
-                                            }, M);
+                                            }, R);
                                         },
                                         innerClassName: S.button,
                                         children: I.intl.string(I.t['60lJ0N'])
@@ -176,7 +177,7 @@ function T(e) {
                                           guildEvent: e,
                                           guildId: T,
                                           onActionTaken: l,
-                                          isNew: null != R.current && y.default.compare(e.id, R.current) > 0
+                                          isNew: null != M.current && y.default.compare(e.id, M.current) > 0
                                       },
                                       e.id
                                   )

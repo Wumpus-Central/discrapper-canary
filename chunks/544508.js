@@ -8,8 +8,8 @@ var n = r(255367),
     c = r(481060),
     u = r(607070),
     d = r(745510),
-    g = r(899007),
-    m = r(867176),
+    m = r(899007),
+    g = r(867176),
     f = r(51144),
     E = r(346585),
     O = r(81259),
@@ -125,12 +125,12 @@ let j = i.forwardRef(function (e, t) {
                     (0, n.jsxs)('div', {
                         className: b.profileCard,
                         children: [
-                            (0, n.jsx)(m.Z, {
+                            (0, n.jsx)(g.Z, {
                                 user: D,
                                 displayProfile: v,
                                 themeType: y.lY.SIDEBAR
                             }),
-                            (0, n.jsx)(g.Z, {
+                            (0, n.jsx)(m.Z, {
                                 user: D,
                                 displayProfile: v,
                                 themeType: y.lY.SIDEBAR

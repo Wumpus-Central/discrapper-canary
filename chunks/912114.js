@@ -177,6 +177,7 @@ let E = function (e) {
                       transitionState: l,
                       'aria-labelledby': I,
                       className: C.modal,
+                      parentComponent: 'GdmEditModal',
                       children: [
                           (0, r.jsxs)(s.xBx, {
                               separator: !0,

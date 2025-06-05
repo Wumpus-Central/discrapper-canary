@@ -1,6 +1,6 @@
 a.d(t, { default: () => h }), a(388685), a(953529);
-var i = a(255367),
-    n = a(73800),
+var n = a(255367),
+    i = a(73800),
     l = a(481060),
     s = a(479531),
     r = a(600164),
@@ -10,68 +10,69 @@ var i = a(255367),
     u = a(685554);
 function h(e) {
     var t, a;
-    let { transitionState: h, onClose: m, entry: x } = e,
-        [b, p] = n.useState(null != (t = x.description) ? t : ''),
-        [g, I] = n.useState(null != (a = x.primaryCategoryId) ? a : o.AR.UNCATEGORIZED),
-        [j, k] = n.useState(!1),
-        [N, _] = n.useState(null),
-        f = async () => {
-            if ((_(null), b !== x.description || g !== x.primaryCategoryId)) {
+    let { transitionState: h, onClose: m, entry: p } = e,
+        [x, b] = i.useState(null != (t = p.description) ? t : ''),
+        [g, I] = i.useState(null != (a = p.primaryCategoryId) ? a : o.AR.UNCATEGORIZED),
+        [j, k] = i.useState(!1),
+        [C, N] = i.useState(null),
+        _ = async () => {
+            if ((N(null), x !== p.description || g !== p.primaryCategoryId)) {
                 k(!0);
                 try {
-                    await (0, c.Dr)(x.channelId, x.guildId, b, g), k(!1), m();
+                    await (0, c.Dr)(p.channelId, p.guildId, x, g), k(!1), m();
                 } catch (e) {
-                    k(!1), _(new s.Z(e));
+                    k(!1), N(new s.Z(e));
                 }
             }
         };
-    return (0, i.jsxs)(l.Y0X, {
+    return (0, n.jsxs)(l.Y0X, {
         transitionState: h,
         'aria-label': d.intl.string(d.t.eQ2bLi),
+        parentComponent: 'UpdateEntryModal',
         children: [
-            (0, i.jsxs)(l.xBx, {
+            (0, n.jsxs)(l.xBx, {
                 direction: r.Z.Direction.VERTICAL,
                 className: u.header,
                 separator: !1,
                 children: [
-                    (0, i.jsx)(l.X6q, {
+                    (0, n.jsx)(l.X6q, {
                         className: u.title,
                         variant: 'heading-xl/semibold',
-                        children: d.intl.format(d.t.w9tsNj, { guildName: x.name })
+                        children: d.intl.format(d.t.w9tsNj, { guildName: p.name })
                     }),
-                    (0, i.jsx)(l.Text, {
+                    (0, n.jsx)(l.Text, {
                         className: u.subtitle,
                         color: 'header-secondary',
                         variant: 'text-md/normal',
                         children: d.intl.string(d.t['vEkX//'])
                     }),
                     null != m &&
-                        (0, i.jsx)(l.olH, {
+                        (0, n.jsx)(l.olH, {
                             className: u.closeButton,
                             onClick: m
                         })
                 ]
             }),
-            (0, i.jsxs)(l.hzk, {
+            (0, n.jsxs)(l.hzk, {
                 className: u.createGuild,
                 paddingFix: !1,
                 children: [
-                    (0, i.jsx)(l.xJW, {
+                    (0, n.jsx)(l.xJW, {
                         title: d.intl.string(d.t.FFFAGh),
-                        children: (0, i.jsx)(l.Kx8, {
-                            value: b,
+                        children: (0, n.jsx)(l.Kx8, {
+                            value: x,
                             maxLength: 200,
                             placeholder: d.intl.string(d.t.VzuITE),
-                            onChange: p,
-                            error: null == N ? void 0 : N.getAnyErrorMessage()
+                            onChange: b,
+                            error: null == C ? void 0 : C.getAnyErrorMessage()
                         })
                     }),
-                    (0, i.jsx)(l.xJW, {
+                    (0, n.jsx)(l.xJW, {
                         className: u.formItemSpaced,
                         title: d.intl.string(d.t.Olo8FB),
-                        children: (0, i.jsx)(l.q4e, {
+                        children: (0, n.jsx)(l.q4e, {
                             placeholder: d.intl.string(d.t.XqMe3N),
-                            options: (0, o.b7)(x.channelId),
+                            options: (0, o.b7)(p.channelId),
                             clearable: !1,
                             value: g,
                             onChange: I,
@@ -80,11 +81,11 @@ function h(e) {
                     })
                 ]
             }),
-            (0, i.jsx)(l.mzw, {
+            (0, n.jsx)(l.mzw, {
                 justify: r.Z.Justify.BETWEEN,
-                children: (0, i.jsx)(l.zxk, {
+                children: (0, n.jsx)(l.zxk, {
                     color: l.zxk.Colors.BRAND,
-                    onClick: f,
+                    onClick: _,
                     submitting: j,
                     children: d.intl.string(d.t.R3BPHx)
                 })

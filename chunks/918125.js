@@ -1,18 +1,18 @@
 n.d(a, { Z: () => h });
 var s = n(255367),
     r = n(73800),
-    c = n(120356),
-    o = n.n(c),
-    t = n(481060),
+    o = n(120356),
+    t = n.n(o),
+    c = n(481060),
     i = n(235449),
     l = n(300234),
     d = n(258033);
 function h(e) {
     let { guildId: a, goToThread: n } = e,
-        c = (0, i.nA)(a),
+        o = (0, i.nA)(a),
         h = r.useCallback(
             (e) => {
-                let a = c[e.row];
+                let a = o[e.row];
                 return (0, s.jsx)(
                     l.Z,
                     {
@@ -23,12 +23,12 @@ function h(e) {
                     ''.concat(e.section, '-').concat(e.row)
                 );
             },
-            [c, n]
+            [o, n]
         );
-    return (0, s.jsx)(t.aVo, {
-        className: o()(d.list, d.activeThreadsList),
+    return (0, s.jsx)(c.aVo, {
+        className: t()(d.list, d.activeThreadsList),
         fade: !0,
-        sections: [c.length],
+        sections: [o.length],
         renderSection: () => null,
         sectionHeight: 0,
         rowHeight: 80,

@@ -85,7 +85,7 @@ class O extends (r = l.PureComponent) {
             n,
             r,
             l,
-            { image: o, hint: s, name: c, makeURL: f, disabled: O, onChange: y, showIcon: v, showIconDisabled: _, className: C, imageClassName: N, iconClassName: I, iconWrapperClassName: S, icon: E, hideSize: P, imageStyle: w, showRemoveButton: T, maxFileSizeBytes: Z, onFileSizeError: k, onOpenImageSelectModal: A, 'aria-label': D } = this.props;
+            { image: o, hint: s, name: c, makeURL: f, disabled: O, onChange: y, showIcon: v, showIconDisabled: _, className: C, imageClassName: N, iconClassName: I, iconWrapperClassName: S, icon: E, hideSize: w, imageStyle: P, showRemoveButton: T, maxFileSizeBytes: Z, onFileSizeError: k, onOpenImageSelectModal: A, 'aria-label': R } = this.props;
         if (
             (null != (t = null != o && /^data:/.test(o) ? o : f(o))
                 ? (n = 'url("'.concat(t, '")'))
@@ -102,7 +102,7 @@ class O extends (r = l.PureComponent) {
                 className: a()(g.imageUploader, g.disabled, C),
                 children: (0, i.jsxs)('div', {
                     className: a()(g.imageUploaderInner, N),
-                    style: x(h({}, w), { backgroundImage: n }),
+                    style: x(h({}, P), { backgroundImage: n }),
                     children: [
                         r,
                         _ &&
@@ -119,12 +119,12 @@ class O extends (r = l.PureComponent) {
                   onClick: this.handleRemove,
                   children: b.intl.string(b.t.N86XcH)
               }))
-            : P ||
+            : w ||
               (l = (0, i.jsx)('small', {
                   className: g.sizeInfo,
                   children: b.intl.format(b.t.AH4c7e, { size: m.IXf })
               }));
-        let R = null != (e = null != D ? D : s) ? e : b.intl.string(b.t['Ge+94+']);
+        let D = null != (e = null != R ? R : s) ? e : b.intl.string(b.t['Ge+94+']);
         return (0, i.jsxs)('div', {
             className: a()(g.imageUploader, C),
             children: [
@@ -135,7 +135,7 @@ class O extends (r = l.PureComponent) {
                         children: [
                             (0, i.jsxs)('div', {
                                 className: a()(g.imageUploaderInner, N),
-                                style: x(h({}, w), { backgroundImage: n }),
+                                style: x(h({}, P), { backgroundImage: n }),
                                 children: [
                                     (0, i.jsx)('span', {
                                         'aria-hidden': !0,
@@ -144,14 +144,14 @@ class O extends (r = l.PureComponent) {
                                     null != A
                                         ? (0, i.jsx)(d.P3F, {
                                               className: g.imageUploaderFileInput,
-                                              'aria-label': R,
+                                              'aria-label': D,
                                               onClick: A
                                           })
                                         : (0, i.jsx)(p.ZP, {
                                               ref: this.inputRef,
                                               onChange: y,
                                               className: g.imageUploaderFileInput,
-                                              'aria-label': R,
+                                              'aria-label': D,
                                               tabIndex: 0,
                                               maxFileSizeBytes: Z,
                                               onFileSizeError: k

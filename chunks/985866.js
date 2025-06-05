@@ -406,6 +406,7 @@ function U(e) {
                 children: (0, n.jsxs)(u.Y0X, {
                     transitionState: r,
                     size: u.CgR.DYNAMIC,
+                    parentComponent: 'QuestsRewardCodeModal',
                     children: [
                         (0, n.jsxs)('div', {
                             className: M.modalBody,

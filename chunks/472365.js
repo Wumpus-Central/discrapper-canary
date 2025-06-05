@@ -17,8 +17,8 @@ var i = t(255367),
     h = t(313201),
     E = t(44609),
     I = t(731971),
-    f = t(451603),
-    v = t(885714),
+    v = t(451603),
+    f = t(885714),
     j = t(973616),
     S = t(594174),
     C = t(855981),
@@ -46,7 +46,7 @@ function U() {
         }, [n]),
         (0, i.jsxs)(c.P3F, {
             onClick: () =>
-                (0, v.Z)({
+                (0, f.Z)({
                     analyticsSource: { page: z.Sbl.EXTERNAL_INVITE_LINK_MODAL },
                     analyticsLocation: {
                         page: z.Sbl.EXTERNAL_INVITE_LINK_MODAL,
@@ -100,6 +100,7 @@ function F(e) {
         children: (0, i.jsx)(c.Y0X, {
             'aria-labelledby': t,
             transitionState: n,
+            parentComponent: 'AcceptInviteModal',
             children: (0, i.jsxs)(c.hzk, {
                 className: k.errorContent,
                 children: [
@@ -131,7 +132,7 @@ function G(e) {
         a,
         r,
         { transitionState: N } = e,
-        v = (0, E.WR)({ location: 'AcceptInviteModal' });
+        f = (0, E.WR)({ location: 'AcceptInviteModal' });
     (0, o.e7)([S.default], () => {
         var e;
         return null == (e = S.default.getCurrentUser()) ? void 0 : e.premiumType;
@@ -168,9 +169,9 @@ function G(e) {
                 splash: w.splash
             }));
     else if (((null == (t = K.name) || '' === t) && null != Y && (t = Y.username), null == t)) throw Error('no name for group DM invite');
-    let J = (0, f.yU)();
+    let J = (0, v.yU)();
     return (
-        (r = Q ? M.intl.string(M.t['5UKyUl']) : v ? M.intl.format(M.t['9sWQNT'], { usernameHook: () => (0, i.jsx)('span', { children: null != G && '' !== G.trim() ? G : C.globalName }) }) : q ? M.intl.string(M.t['e/6Ogo']) : M.intl.format(M.t.QD7BDA, { guildName: t })),
+        (r = Q ? M.intl.string(M.t['5UKyUl']) : f ? M.intl.format(M.t['9sWQNT'], { usernameHook: () => (0, i.jsx)('span', { children: null != G && '' !== G.trim() ? G : C.globalName }) }) : q ? M.intl.string(M.t['e/6Ogo']) : M.intl.format(M.t.QD7BDA, { guildName: t })),
         (0, i.jsx)(_.Gt, {
             value: W,
             children: (0, i.jsxs)(c.Y0X, {
@@ -185,6 +186,7 @@ function G(e) {
                         invite_code: A.code
                     }
                 },
+                parentComponent: 'AcceptInviteModal',
                 children: [
                     (0, i.jsx)(c.hzk, {
                         className: k.contentWrapper,
@@ -234,7 +236,7 @@ function G(e) {
                                                               : (0, i.jsxs)('div', {
                                                                     className: k.acceptAs,
                                                                     children: [
-                                                                        v &&
+                                                                        f &&
                                                                             (0, i.jsx)(d.Z, {
                                                                                 'aria-hidden': !0,
                                                                                 size: c.EFr.SIZE_16,

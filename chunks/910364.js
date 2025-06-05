@@ -25,11 +25,11 @@ var o = t(255367),
     N = t(314386),
     O = t(62154),
     C = t(277094),
-    T = t(228168),
-    P = t(388032),
+    P = t(228168),
+    T = t(388032),
     w = t(405666);
 function S(e) {
-    let { user: n, currentUser: t, guildId: S, channelId: E, messageId: M, roleId: L, sessionId: D, initialSection: B, initialSubsection: R, transitionState: G, customStatusPrompt: k, openedAt: F, onClose: U, showGuildProfile: V = !0, sourceAnalyticsLocations: Y = [] } = e,
+    let { user: n, currentUser: t, guildId: S, channelId: E, messageId: M, roleId: L, sessionId: D, initialSection: R, initialSubsection: B, transitionState: G, customStatusPrompt: k, openedAt: F, onClose: U, showGuildProfile: V = !0, sourceAnalyticsLocations: Y = [] } = e,
         { analyticsLocations: W } = (0, u.ZP)([...Y, s.Z.USER_PROFILE_MODAL]),
         q = (0, b.ZB)({
             layout: 'MODAL',
@@ -56,7 +56,7 @@ function S(e) {
     (0, l.$)(en);
     let et = c.useRef(null),
         eo = (0, d.Z)(et),
-        ec = (0, a.e7)([m.default], () => ['en-US', 'en-GB'].includes(m.default.locale)) ? P.intl.formatToPlainString(P.t.KRe1Fh, { name: J }) : P.intl.string(P.t['3N/J2t']);
+        ec = (0, a.e7)([m.default], () => ['en-US', 'en-GB'].includes(m.default.locale)) ? T.intl.formatToPlainString(T.t.KRe1Fh, { name: J }) : T.intl.string(T.t['3N/J2t']);
     return (0, o.jsx)(u.Gt, {
         value: W,
         children: (0, o.jsx)(b.Mt, {
@@ -72,11 +72,12 @@ function S(e) {
                     className: w.root,
                     hideShadow: !0,
                     'aria-label': ec,
+                    parentComponent: 'UserProfileModal',
                     children: [
                         (0, o.jsxs)(j.Z, {
                             user: n,
                             displayProfile: z,
-                            themeType: T.lY.MODAL,
+                            themeType: P.lY.MODAL,
                             ref: et,
                             children: [
                                 (0, o.jsx)(N.Z, {
@@ -91,7 +92,7 @@ function S(e) {
                                         (0, o.jsx)(Z.Z, {
                                             user: n,
                                             displayProfile: z,
-                                            themeType: T.lY.MODAL
+                                            themeType: P.lY.MODAL
                                         }),
                                         (0, o.jsx)(v.Z, {
                                             userId: n.id,
@@ -112,14 +113,14 @@ function S(e) {
                                                     displayProfile: z,
                                                     guildId: S,
                                                     channelId: E,
-                                                    themeType: T.lY.MODAL
+                                                    themeType: P.lY.MODAL
                                                 }),
                                                 (0, o.jsx)(A.Z, {
                                                     location: 'UserProfileModal',
                                                     user: n,
                                                     guildId: S,
                                                     channelId: E,
-                                                    themeType: T.lY.MODAL,
+                                                    themeType: P.lY.MODAL,
                                                     hasEntered: G === r.Dvm.ENTERED,
                                                     prompt: $ && Q ? ee : null
                                                 }),
@@ -143,8 +144,8 @@ function S(e) {
                                     guildId: S,
                                     channelId: E,
                                     displayProfile: z,
-                                    initialSection: B,
-                                    initialSubsection: R,
+                                    initialSection: R,
+                                    initialSubsection: B,
                                     onClose: U
                                 })
                             ]

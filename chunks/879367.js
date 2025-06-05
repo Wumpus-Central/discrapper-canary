@@ -1,22 +1,22 @@
 n.d(t, { default: () => N });
 var i = n(255367),
     l = n(73800),
-    s = n(120356),
-    o = n.n(s),
+    o = n(120356),
+    s = n.n(o),
     E = n(481060),
     r = n(788080),
     a = n(81643),
-    _ = n(469775),
-    c = n(388032),
+    c = n(469775),
+    _ = n(388032),
     I = n(23525);
 let N = function (e) {
-    let { onClose: t, onComplete: n, onCancel: s, transitionState: N, webviewUrl: L, useV1: S = !1 } = e,
+    let { onClose: t, onComplete: n, onCancel: o, transitionState: N, webviewUrl: L, useV1: S = !1 } = e,
         A = (0, r.GE)(),
         u = l.useCallback(() => {
             n(), t();
         }, [n, t]),
         T = l.useCallback(() => {
-            (0, E.nfh)(_.z) && u();
+            (0, E.nfh)(c.z) && u();
         }, [u]);
     (0, a.F5)(T);
     let C = l.useCallback(
@@ -46,15 +46,16 @@ let N = function (e) {
         (0, i.jsxs)(E.Y0X, {
             transitionState: N,
             className: I.root,
+            parentComponent: 'AgeVerificationModal',
             children: [
                 (0, i.jsxs)(E.hzk, {
-                    className: o()(I.content, { [I.fullbleed]: !S }),
+                    className: s()(I.content, { [I.fullbleed]: !S }),
                     scrollbarType: 'none',
                     children: [
                         S &&
                             (0, i.jsx)(E.X6q, {
                                 variant: 'heading-xl/bold',
-                                children: c.intl.string(c.t.tYNaXF)
+                                children: _.intl.string(_.t.tYNaXF)
                             }),
                         (0, i.jsx)('iframe', {
                             id: 'frame',
@@ -71,7 +72,7 @@ let N = function (e) {
                               look: E.zxk.Looks.BLANK,
                               onClick: t,
                               className: I.cancelButton,
-                              children: c.intl.string(c.t['4gTnU1'])
+                              children: _.intl.string(_.t['4gTnU1'])
                           })
                         : (0, i.jsxs)('div', {
                               className: I.footer,
@@ -82,15 +83,15 @@ let N = function (e) {
                                       onClick: t,
                                       size: E.zxk.Sizes.SMALL,
                                       className: I.footerButton,
-                                      children: c.intl.string(c.t.fjKFaW)
+                                      children: _.intl.string(_.t.fjKFaW)
                                   }),
                                   (0, i.jsx)(E.zxk, {
                                       color: E.zxk.Colors.TRANSPARENT,
                                       look: E.zxk.Looks.BLANK,
                                       size: E.zxk.Sizes.SMALL,
-                                      onClick: s,
+                                      onClick: o,
                                       className: I.footerButton,
-                                      children: c.intl.string(c.t['4gTnU1'])
+                                      children: _.intl.string(_.t['4gTnU1'])
                                   })
                               ]
                           })

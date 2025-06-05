@@ -1,56 +1,56 @@
-r.d(t, { default: () => T }), r(388685);
-var n = r(255367),
-    s = r(73800),
-    i = r(120356),
-    a = r.n(i),
-    o = r(392711),
-    l = r.n(o),
-    c = r(442837),
-    d = r(544891),
-    h = r(481060),
-    u = r(447543),
-    p = r(225433),
-    m = r(129861),
-    g = r(700582),
-    x = r(367907),
-    j = r(346486),
-    v = r(600164),
-    b = r(210887),
-    Z = r(758449),
-    w = r(598077),
-    y = r(592125),
-    C = r(246946),
-    I = r(626135),
-    f = r(981631),
-    N = r(388032),
-    O = r(612657),
-    k = r(588866),
-    E = r(20493);
-function _(e, t, r) {
+n.d(t, { default: () => T }), n(388685);
+var r = n(255367),
+    s = n(73800),
+    i = n(120356),
+    a = n.n(i),
+    o = n(392711),
+    l = n.n(o),
+    c = n(442837),
+    d = n(544891),
+    h = n(481060),
+    u = n(447543),
+    p = n(225433),
+    m = n(129861),
+    g = n(700582),
+    x = n(367907),
+    v = n(346486),
+    j = n(600164),
+    b = n(210887),
+    Z = n(758449),
+    w = n(598077),
+    C = n(592125),
+    y = n(246946),
+    I = n(626135),
+    f = n(981631),
+    N = n(388032),
+    O = n(612657),
+    k = n(588866),
+    E = n(20493);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: r,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = r),
+            : (e[t] = n),
         e
     );
 }
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            n.forEach(function (t) {
-                _(e, t, r[t]);
+            r.forEach(function (t) {
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -61,35 +61,35 @@ function R(e, t) {
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
             : (function (e, t) {
-                  var r = Object.keys(e);
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
-                  return r;
-              })(Object(t)).forEach(function (r) {
-                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-class D extends s.PureComponent {
+class S extends s.PureComponent {
     render() {
-        let { invite: e, hideDiscriminator: t, hideInviteCode: r } = this.props,
+        let { invite: e, hideDiscriminator: t, hideInviteCode: n } = this.props,
             s = new w.Z(e.inviter);
-        return (0, n.jsxs)(v.Z, {
+        return (0, r.jsxs)(j.Z, {
             className: a()(O.row, k.card),
             children: [
-                (0, n.jsxs)(v.Z, {
-                    align: v.Z.Align.CENTER,
+                (0, r.jsxs)(j.Z, {
+                    align: j.Z.Align.CENTER,
                     className: O.userColumn,
                     children: [
-                        (0, n.jsx)(g.Z, {
+                        (0, r.jsx)(g.Z, {
                             user: s,
                             size: h.EFr.SIZE_24,
                             className: O.avatar
                         }),
-                        (0, n.jsx)(m.Z, {
+                        (0, r.jsx)(m.Z, {
                             user: s,
                             hideDiscriminator: t,
                             usernameClass: O.username,
@@ -97,35 +97,35 @@ class D extends s.PureComponent {
                         })
                     ]
                 }),
-                (0, n.jsx)(v.Z, {
-                    align: v.Z.Align.CENTER,
+                (0, r.jsx)(j.Z, {
+                    align: j.Z.Align.CENTER,
                     grow: 0,
                     shrink: 0,
                     basis: 100,
                     className: O.boostZIndex,
-                    children: (0, n.jsx)(h.Text, {
+                    children: (0, r.jsx)(h.Text, {
                         className: O.code,
                         variant: 'text-sm/normal',
-                        children: r ? '...' : e.code
+                        children: n ? '...' : e.code
                     })
                 }),
-                (0, n.jsxs)(v.Z, {
+                (0, r.jsxs)(j.Z, {
                     basis: 100,
                     grow: 0,
                     shrink: 0,
-                    align: v.Z.Align.CENTER,
-                    justify: v.Z.Justify.END,
+                    align: j.Z.Align.CENTER,
+                    justify: j.Z.Justify.END,
                     className: O.boostZIndex,
                     children: [
-                        (0, n.jsx)(h.Text, {
+                        (0, r.jsx)(h.Text, {
                             className: O.countdown,
                             variant: 'text-sm/normal',
-                            children: (0, n.jsx)(j.Z, {
+                            children: (0, r.jsx)(v.Z, {
                                 deadline: e.getExpiresAt(),
                                 showDays: !1
                             })
                         }),
-                        (0, n.jsx)(p.Z, {
+                        (0, r.jsx)(p.Z, {
                             className: O.revokeInvite,
                             onClick: this.handleRevokeInvite
                         })
@@ -142,7 +142,7 @@ class D extends s.PureComponent {
             });
     }
 }
-class S extends s.PureComponent {
+class D extends s.PureComponent {
     componentDidMount() {
         let { channelId: e } = this.props;
         d.tn
@@ -170,7 +170,7 @@ class S extends s.PureComponent {
             }),
             I.default.track(
                 f.rMx.OPEN_MODAL,
-                R(P({}, (0, x.v_)(y.Z.getChannel(e))), {
+                R(P({}, (0, x.v_)(C.Z.getChannel(e))), {
                     type: 'Group DM Invites',
                     source: 'Group DM Menu'
                 })
@@ -179,29 +179,29 @@ class S extends s.PureComponent {
     renderContent() {
         let { loading: e, invites: t } = this.state;
         return e || null == t
-            ? (0, n.jsx)(h.$jN, {
+            ? (0, r.jsx)(h.$jN, {
                   className: E.marginTop20,
                   type: h.$jN.Type.SPINNING_CIRCLE
               })
             : l().isEmpty(t)
               ? this.renderEmpty()
-              : (0, n.jsxs)('div', {
+              : (0, r.jsxs)('div', {
                     className: O.container,
                     children: [this.renderHeader(), this.renderInvites()]
                 });
     }
     renderEmpty() {
-        return (0, n.jsxs)(h.ubH, {
+        return (0, r.jsxs)(h.ubH, {
             theme: this.props.theme,
             children: [
-                (0, n.jsx)(h.oxh, {
-                    darkSrc: r(914814),
-                    lightSrc: r(370392),
+                (0, r.jsx)(h.oxh, {
+                    darkSrc: n(914814),
+                    lightSrc: n(370392),
                     width: 256,
                     height: 130,
                     style: { marginBottom: 0 }
                 }),
-                (0, n.jsx)(h.OZU, {
+                (0, r.jsx)(h.OZU, {
                     className: E.marginTop20,
                     children: N.intl.string(N.t['03/rlZ'])
                 })
@@ -209,25 +209,25 @@ class S extends s.PureComponent {
         });
     }
     renderHeader() {
-        return (0, n.jsxs)(v.Z, {
+        return (0, r.jsxs)(j.Z, {
             children: [
-                (0, n.jsx)(v.Z.Child, {
+                (0, r.jsx)(j.Z.Child, {
                     wrap: !0,
-                    children: (0, n.jsx)(h.vwX, { children: N.intl.string(N.t.EgHyKy) })
+                    children: (0, r.jsx)(h.vwX, { children: N.intl.string(N.t.EgHyKy) })
                 }),
-                (0, n.jsx)(v.Z.Child, {
+                (0, r.jsx)(j.Z.Child, {
                     wrap: !0,
                     grow: 0,
                     shrink: 0,
                     basis: 100,
-                    children: (0, n.jsx)(h.vwX, { children: N.intl.string(N.t.LBlFEB) })
+                    children: (0, r.jsx)(h.vwX, { children: N.intl.string(N.t.LBlFEB) })
                 }),
-                (0, n.jsx)(v.Z.Child, {
+                (0, r.jsx)(j.Z.Child, {
                     wrap: !0,
                     grow: 0,
                     shrink: 0,
                     basis: 100,
-                    children: (0, n.jsx)(h.vwX, {
+                    children: (0, r.jsx)(h.vwX, {
                         className: O.alignRight,
                         children: N.intl.string(N.t['1aM27e'])
                     })
@@ -242,44 +242,45 @@ class S extends s.PureComponent {
                 var t;
                 return (null != (t = e.inviter.username) ? t : '').toLocaleLowerCase();
             })
-            .map((r) =>
-                (0, n.jsx)(
-                    D,
+            .map((n) =>
+                (0, r.jsx)(
+                    S,
                     {
-                        invite: r,
+                        invite: n,
                         hideDiscriminator: e,
                         hideInviteCode: t,
                         onRevoke: this.handleRevoke
                     },
-                    r.code
+                    n.code
                 )
             )
             .value();
     }
     render() {
-        return (0, n.jsxs)(h.Y0X, {
+        return (0, r.jsxs)(h.Y0X, {
             transitionState: this.props.transitionState,
             'aria-label': N.intl.string(N.t['9F90iY']),
             size: h.CgR.MEDIUM,
+            parentComponent: 'InviteSettings',
             children: [
-                (0, n.jsxs)(h.xBx, {
-                    direction: v.Z.Direction.VERTICAL,
-                    align: v.Z.Align.START,
+                (0, r.jsxs)(h.xBx, {
+                    direction: j.Z.Direction.VERTICAL,
+                    align: j.Z.Align.START,
                     separator: !1,
                     children: [
-                        (0, n.jsx)(h.vwX, {
+                        (0, r.jsx)(h.vwX, {
                             tag: h.RB0.H1,
                             children: N.intl.string(N.t['9F90iY'])
                         }),
-                        (0, n.jsx)(h.R94, {
+                        (0, r.jsx)(h.R94, {
                             type: h.geA.DESCRIPTION,
                             children: N.intl.string(N.t.WDw38P)
                         })
                     ]
                 }),
-                (0, n.jsx)(h.hzk, { children: this.renderContent() }),
-                (0, n.jsx)(h.mzw, {
-                    children: (0, n.jsx)(h.zxk, {
+                (0, r.jsx)(h.hzk, { children: this.renderContent() }),
+                (0, r.jsx)(h.mzw, {
+                    children: (0, r.jsx)(h.zxk, {
                         onClick: this.handleClose,
                         children: N.intl.string(N.t.i4jeWV)
                     })
@@ -302,8 +303,8 @@ class S extends s.PureComponent {
             });
     }
 }
-let T = c.ZP.connectStores([C.Z, b.Z], () => ({
-    hideDiscriminators: C.Z.hidePersonalInformation,
-    hideInviteCodes: C.Z.hideInstantInvites,
+let T = c.ZP.connectStores([y.Z, b.Z], () => ({
+    hideDiscriminators: y.Z.hidePersonalInformation,
+    hideInviteCodes: y.Z.hideInstantInvites,
     theme: b.Z.theme
-}))(S);
+}))(D);

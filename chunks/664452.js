@@ -65,15 +65,15 @@ function v(e) {
         N = !!(null == C ? void 0 : C.hasFeature(h.oNc.INVITES_DISABLED)),
         [I] = i.useState(!1),
         [S, E] = i.useState(f.Fl),
-        P = (0, o.e7)([b.Z], () => b.Z.getGuildIncident(t)),
-        w = (0, p.BT)(C),
-        T = (0, m.SG)(P) || N,
-        Z = (0, m.sN)(P),
+        w = (0, o.e7)([b.Z], () => b.Z.getGuildIncident(t)),
+        P = (0, p.BT)(C),
+        T = (0, m.SG)(w) || N,
+        Z = (0, m.sN)(w),
         [k, A] = i.useState(T),
-        [D, R] = i.useState(Z),
+        [R, D] = i.useState(Z),
         [L, M] = i.useState(!1),
-        B = k !== T || D !== Z || L,
-        U = N && !w;
+        B = k !== T || R !== Z || L,
+        U = N && !P;
     if (null == C) return v(), null;
     function W() {
         A((e) => !e);
@@ -81,6 +81,7 @@ function v(e) {
     return (0, r.jsxs)(a.Y0X, {
         transitionState: n,
         size: a.CgR.MEDIUM,
+        parentComponent: 'GuildRaidServerLockdownModal',
         children: [
             (0, r.jsx)(a.xBx, {
                 separator: !0,
@@ -170,9 +171,9 @@ function v(e) {
                                 (0, r.jsx)(a.rsf, {
                                     className: j.toggle,
                                     onChange: function () {
-                                        R((e) => !e);
+                                        D((e) => !e);
                                     },
-                                    checked: D
+                                    checked: R
                                 })
                             ]
                         })
@@ -183,15 +184,15 @@ function v(e) {
                 children: [
                     (0, r.jsx)(a.zxk, {
                         onClick: () => {
-                            (T || Z) && !k && !D ? ((0, u.n)(C.id, !1, !1), (0, a.ZDy)(() => Promise.resolve((e) => (0, r.jsx)(g.Z, y(O({}, e), { guildId: t }))))) : (0, u.n)(C.id, k, D, S);
+                            (T || Z) && !k && !R ? ((0, u.n)(C.id, !1, !1), (0, a.ZDy)(() => Promise.resolve((e) => (0, r.jsx)(g.Z, y(O({}, e), { guildId: t }))))) : (0, u.n)(C.id, k, R, S);
                             let { source: e, alertType: n, messageId: i } = _;
                             d.default.track(h.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
                                 guild_id: t,
                                 source: e,
                                 raid_alert_id: i,
                                 raid_alert_type: n,
-                                intervention_type_enabled: (0, m.sO)(k, D),
-                                intervention_type_disabled: (0, m.lk)(k, D),
+                                intervention_type_enabled: (0, m.sO)(k, R),
+                                intervention_type_disabled: (0, m.lk)(k, R),
                                 duration: 60 * S
                             }),
                                 v();

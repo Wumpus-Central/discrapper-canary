@@ -1,64 +1,65 @@
 t.d(i, { default: () => _ }), t(388685);
-var s = t(255367);
+var e = t(255367);
 t(73800);
-var l = t(512722),
-    e = t.n(l),
+var s = t(512722),
+    l = t.n(s),
     a = t(481060),
-    c = t(935369),
-    o = t(313201),
+    o = t(935369),
+    c = t(313201),
     r = t(53365),
     d = t(981631),
     u = t(388032),
     x = t(103858);
 function _(n) {
-    let { transitionState: i, guild: t, onClose: l } = n,
-        _ = (0, o.Dt)(),
-        [g, { loading: h, error: j }] = (0, c.Z)(r.oL),
-        m = async () => {
-            e()(null != t, 'no guild'), null != (await g(t.id)) && l();
+    let { transitionState: i, guild: t, onClose: s } = n,
+        _ = (0, c.Dt)(),
+        [g, { loading: h, error: m }] = (0, o.Z)(r.oL),
+        p = async () => {
+            l()(null != t, 'no guild'), null != (await g(t.id)) && s();
         };
-    return (0, s.jsxs)(a.Y0X, {
+    return (0, e.jsxs)(a.Y0X, {
         transitionState: i,
         'aria-labelledby': _,
+        parentComponent: 'RemoveMonetizationModal',
         children: [
-            (0, s.jsxs)(a.xBx, {
+            (0, e.jsxs)(a.xBx, {
                 children: [
-                    (0, s.jsx)(a.X6q, {
+                    (0, e.jsx)(a.X6q, {
                         id: _,
                         variant: 'heading-md/semibold',
                         children: u.intl.string(u.t.rRpcEx)
                     }),
-                    (0, s.jsx)(a.olH, {
+                    (0, e.jsx)(a.olH, {
                         className: x.closeButton,
-                        onClick: l
+                        onClick: s
                     })
                 ]
             }),
-            (0, s.jsxs)(a.hzk, {
+            (0, e.jsxs)(a.hzk, {
                 className: x.content,
                 children: [
-                    null != j
-                        ? (0, s.jsxs)(s.Fragment, {
-                              children: [(0, s.jsx)(a.kzN, { children: j.message }), (0, s.jsx)(a.LZC, { size: 24 })]
+                    null != m
+                        ? (0, e.jsxs)(e.Fragment, {
+                              children: [(0, e.jsx)(a.kzN, { children: m.message }), (0, e.jsx)(a.LZC, { size: 24 })]
                           })
                         : null,
-                    (0, s.jsx)(a.R94, {
+                    (0, e.jsx)(a.R94, {
                         type: a.R94.Types.ERROR,
                         children: u.intl.format(u.t['Oa5P6+'], {
                             guildName: t.toString(),
                             url: d.EYA.DEVELOPER_PORTAL_TEAMS
                         })
                     }),
-                    (0, s.jsx)(a.LZC, { size: 16 })
+                    (0, e.jsx)(a.LZC, { size: 16 })
                 ]
             }),
-            (0, s.jsx)(a.mzw, {
+            (0, e.jsx)(a.mzw, {
                 className: x.__invalid_footer,
-                children: (0, s.jsx)(a.zxk, {
+                children: (0, e.jsx)(a.zxk, {
                     color: a.zxk.Colors.RED,
                     className: x.__invalid_goBackButton,
                     submitting: h,
-                    onClick: m,
+                    onClick: p,
                     children: u.intl.string(u.t.R3BPHx)
                 })
             })

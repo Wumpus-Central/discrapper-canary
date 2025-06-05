@@ -5,8 +5,8 @@ var r = n(442837),
     i = n(481060),
     l = n(313201),
     a = n(271383),
-    s = n(430824),
-    c = n(594174),
+    c = n(430824),
+    s = n(594174),
     u = n(693546),
     d = n(305325),
     f = n(937111),
@@ -38,10 +38,10 @@ let g = function (e) {
         })(e, ['guildId', 'transitionState']);
     let y = (0, l.Dt)(),
         x = (0, r.e7)([f.Z], () => f.Z.getRequest(g), [g]),
-        O = (0, r.e7)([s.Z], () => s.Z.getGuild(g), [g]),
-        v = (0, r.e7)([c.default], () => {
+        O = (0, r.e7)([c.Z], () => c.Z.getGuild(g), [g]),
+        v = (0, r.e7)([s.default], () => {
             var e;
-            return null == (e = c.default.getCurrentUser()) ? void 0 : e.id;
+            return null == (e = s.default.getCurrentUser()) ? void 0 : e.id;
         }),
         P = (0, r.e7)([a.ZP], () => (null != v ? a.ZP.getMember(g, v) : null), [v, g]),
         C = async () => {
@@ -58,6 +58,7 @@ let g = function (e) {
         size: i.CgR.DYNAMIC,
         transitionState: j,
         'aria-labelledby': y,
+        parentComponent: 'MemberVerificationRejectedModal',
         children: (0, o.jsx)(
             m.Z,
             ((t = (function (e) {

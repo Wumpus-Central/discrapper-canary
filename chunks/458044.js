@@ -1,4 +1,4 @@
-n.d(e, { Z: () => x });
+n.d(e, { Z: () => p });
 var a = n(388032),
     r = n(918298),
     i = n(301745),
@@ -10,7 +10,7 @@ var a = n(388032),
     m = n(420241),
     g = n(140574),
     u = n(765434);
-function x(t) {
+function p(t) {
     return [
         {
             tags: [a.intl.string(a.t['/XjSo6']), a.intl.string(a.t['Af/56e']), a.intl.string(a.t.LNsW0N)],

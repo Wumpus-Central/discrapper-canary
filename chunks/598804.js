@@ -56,7 +56,6 @@ let v = i.memo(function (e) {
                       {
                           suppressPlaySound: !0,
                           enableSecondaryActions: !0,
-                          refreshEnabled: !0,
                           isSoundmoji: !0,
                           sound: e,
                           channel: o,

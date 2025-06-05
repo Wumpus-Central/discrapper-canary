@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C }), n(361932), n(187205);
 var s = n(255367),
     i = n(73800),
-    l = n(120356),
-    r = n.n(l),
+    r = n(120356),
+    l = n.n(r),
     o = n(658722),
     a = n.n(o),
     h = n(392711),
@@ -31,14 +31,14 @@ class C extends i.PureComponent {
     renderItems() {
         let { query: e } = this.state,
             t = d.Z.flatMap((e, t) => {
-                let { alpha2: n, phoneCountryCodes: i, name: l } = e,
-                    r = (0, E.q9)(n);
+                let { alpha2: n, phoneCountryCodes: i, name: r } = e,
+                    l = (0, E.q9)(n);
                 return i.map((e) => ({
                     key: ''.concat(t, '-').concat(e),
-                    name: l,
-                    translatedName: r,
+                    name: r,
+                    translatedName: l,
                     countryData: {
-                        name: l,
+                        name: r,
                         alpha2: n,
                         code: e
                     },
@@ -49,7 +49,7 @@ class C extends i.PureComponent {
                         children: [
                             (0, s.jsx)(p.Z.Child, {
                                 className: R.countryName,
-                                children: r
+                                children: l
                             }),
                             (0, s.jsx)(p.Z.Child, {
                                 className: R.countryCode,
@@ -114,7 +114,7 @@ class C extends i.PureComponent {
     render() {
         let { className: e } = this.props;
         return (0, s.jsxs)(u.mzC, {
-            className: r()(R.phoneFieldPopout, f.elevationBorderLow, e),
+            className: l()(R.phoneFieldPopout, f.elevationBorderLow, e),
             children: [
                 (0, s.jsx)(u.mzC.SearchBar, {
                     query: this.state.query,

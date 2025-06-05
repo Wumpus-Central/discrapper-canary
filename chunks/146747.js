@@ -181,6 +181,7 @@ function P(e) {
                 (t = t =
                     {
                         'aria-labelledby': g,
+                        parentComponent: 'GuildBoostingUpsellModal',
                         children: (0, n.jsx)(p.Z, {
                             hideBreadcrumbs: !0,
                             body: (0, n.jsx)(y, {

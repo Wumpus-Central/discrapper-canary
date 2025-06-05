@@ -1,4 +1,4 @@
-n.d(t, { default: () => R }), n(388685), n(539854), n(415506);
+n.d(t, { default: () => V }), n(388685), n(539854), n(415506);
 var l = n(255367),
     a = n(73800),
     s = n(120356),
@@ -22,11 +22,11 @@ var l = n(255367),
     T = n(918088),
     S = n(22864),
     w = n(981631),
-    b = n(388032),
-    M = n(869322),
+    M = n(388032),
+    b = n(869322),
     Z = n(144452);
-let k = _.O.VOTE;
-function P() {
+let P = _.O.VOTE;
+function k() {
     let e = (0, m.ZP)();
     return (0, l.jsxs)(o.ubH, {
         theme: e,
@@ -39,10 +39,10 @@ function P() {
                 style: { marginBottom: 10 }
             }),
             (0, l.jsx)(o.OZU, {
-                note: b.intl.string(b.t.bwytdn),
-                noteClassName: M.emptyText,
-                className: M.emptyTitle,
-                children: b.intl.string(b.t.vhQK3t)
+                note: M.intl.string(M.t.bwytdn),
+                noteClassName: b.emptyText,
+                className: b.emptyTitle,
+                children: M.intl.string(M.t.vhQK3t)
             })
         ]
     });
@@ -74,7 +74,7 @@ function I(e) {
     return (0, l.jsx)(o.njP, {
         look: 'custom',
         orientation: 'vertical',
-        'aria-label': b.intl.string(b.t['qbir+/']),
+        'aria-label': M.intl.string(M.t['qbir+/']),
         selectedItem: a,
         onItemSelect: s,
         children: t.answers.map((e) => {
@@ -82,7 +82,7 @@ function I(e) {
             let s = String(e.answer_id),
                 i = null != (t = n[s]) ? t : 0,
                 { emoji: c, text: d } = e.poll_media,
-                u = b.intl.formatToPlainString(b.t.wqBc7O, {
+                u = M.intl.formatToPlainString(M.t.wqBc7O, {
                     numVotes: i,
                     option: d
                 }),
@@ -92,8 +92,8 @@ function I(e) {
                 {
                     id: s,
                     className: r()({
-                        [M.voteDefault]: !m,
-                        [M.voteSelected]: m
+                        [b.voteDefault]: !m,
+                        [b.voteSelected]: m
                     }),
                     'aria-label': u,
                     selectedItem: a,
@@ -102,8 +102,8 @@ function I(e) {
                             ? (0, l.jsx)(y, {
                                   emoji: c,
                                   emojiSize: 16,
-                                  imageClassNames: M.emoji,
-                                  textClassNames: r()(M.emoji, M.emojiText),
+                                  imageClassNames: b.emoji,
+                                  textClassNames: r()(b.emoji, b.emojiText),
                                   'aria-hidden': !0
                               })
                             : null,
@@ -120,7 +120,7 @@ function I(e) {
                         (0, l.jsxs)(o.Text, {
                             variant: 'text-sm/semibold',
                             color: 'text-secondary',
-                            className: M.voteCount,
+                            className: b.voteCount,
                             children: ['(', i.toLocaleString(), ')']
                         })
                     ]
@@ -135,11 +135,11 @@ function E(e) {
         a = (0, i.e7)([j.default], () => j.default.getUser(t.id), [t]),
         s = g.ZP.useName(n.guild_id, n.id, t);
     return (0, l.jsxs)('div', {
-        className: M.voterDefault,
+        className: b.voterDefault,
         onContextMenu: (e) => (0, C.Pv)(e, t, n),
         children: [
             (0, l.jsx)('div', {
-                className: M.voterAvatarContainer,
+                className: b.voterAvatarContainer,
                 children: (0, l.jsx)(d.Z, {
                     user: null != a ? a : t,
                     size: o.EFr.SIZE_24,
@@ -150,18 +150,18 @@ function E(e) {
             (0, l.jsxs)(o.Text, {
                 tag: 'span',
                 variant: 'text-md/normal',
-                className: M.name,
+                className: b.name,
                 'aria-label': s,
                 children: [
                     (0, l.jsx)('span', {
-                        className: t.isPomelo() ? '' : M.nickname,
+                        className: t.isPomelo() ? '' : b.nickname,
                         children: s
                     }),
                     (0, l.jsx)(c.Z, {
                         user: t,
-                        className: M.tagFaded,
-                        usernameClass: M.username,
-                        discriminatorClass: M.discriminator,
+                        className: b.tagFaded,
+                        usernameClass: b.username,
+                        discriminatorClass: b.discriminator,
                         forceUsername: !0
                     })
                 ]
@@ -188,7 +188,7 @@ function L(e) {
                 emoji: n.emoji,
                 limit: w.pTL,
                 after: e,
-                type: k
+                type: P
             });
             (d.current = l[l.length - 1].id), h(!1);
         }, [s.id, t.id, n.emoji]);
@@ -218,10 +218,10 @@ function L(e) {
                     a = r[n];
                 return 1 === t
                     ? 0 === n
-                        ? (0, l.jsx)(o.$jN, { className: M.spinnerMore }, 'hasMore')
+                        ? (0, l.jsx)(o.$jN, { className: b.spinnerMore }, 'hasMore')
                         : null
                     : 0 === r.length && m
-                      ? (0, l.jsx)(o.$jN, { className: M.spinner }, 'loadingMore')
+                      ? (0, l.jsx)(o.$jN, { className: b.spinner }, 'loadingMore')
                       : null != a &&
                         (0, l.jsx)(
                             E,
@@ -239,9 +239,9 @@ function L(e) {
             return 0 === r.length && m ? e.push(0) : (e.push(r.length), i && e.push(1)), e;
         }, [i, m, r.length]);
     return (0, l.jsx)('div', {
-        className: M.votersListContainer,
+        className: b.votersListContainer,
         children: (0, l.jsx)(o.aVo, {
-            className: M.voters,
+            className: b.voters,
             fade: !0,
             ref: c,
             sections: f,
@@ -252,7 +252,7 @@ function L(e) {
         })
     });
 }
-function R(e) {
+function V(e) {
     var t;
     let { message: n, initialAnswerId: s, onClose: r, transitionState: c } = e,
         d = (0, i.e7)([x.Z], () => x.Z.getChannel(n.getChannelId())),
@@ -288,46 +288,47 @@ function R(e) {
                 t
             );
         }, [null == (t = n.poll) ? void 0 : t.answers]),
-        f = b.intl.formatToPlainString(b.t.wqBc7O, {
+        f = M.intl.formatToPlainString(M.t.wqBc7O, {
             numVotes: j,
             option: p[u]
         });
     if (null == d) throw Error('PollVotesModal.render: Message does not have a channelId');
     if (null == n.poll) throw Error('PollVotesModal.render: Message does not have a poll');
     return (0, l.jsxs)(o.Y0X, {
-        'aria-label': b.intl.string(b.t.H0lNmp),
+        'aria-label': M.intl.string(M.t.H0lNmp),
         transitionState: c,
         size: o.CgR.MEDIUM,
+        parentComponent: 'PollVotesModal',
         children: [
             (0, l.jsxs)(o.xBx, {
-                className: M.header,
+                className: b.header,
                 children: [
                     (0, l.jsxs)('div', {
                         children: [
                             (0, l.jsx)(o.Text, {
                                 color: 'header-primary',
                                 variant: 'text-md/semibold',
-                                className: M.question,
+                                className: b.question,
                                 children: n.poll.question.text
                             }),
                             (0, l.jsx)(o.Text, {
                                 variant: 'text-md/medium',
                                 color: 'text-normal',
-                                children: b.intl.format(b.t.XRkuoa, { count: _.toLocaleString() })
+                                children: M.intl.format(M.t.XRkuoa, { count: _.toLocaleString() })
                             })
                         ]
                     }),
                     (0, l.jsx)(o.olH, {
                         onClick: r,
-                        className: M.close
+                        className: b.close
                     })
                 ]
             }),
             (0, l.jsxs)('div', {
-                className: M.content,
+                className: b.content,
                 children: [
                     (0, l.jsx)(o.Ttm, {
-                        className: M.scroller,
+                        className: b.scroller,
                         fade: !0,
                         children: (0, l.jsx)(I, {
                             poll: n.poll,
@@ -339,7 +340,7 @@ function R(e) {
                     (0, l.jsx)(o.njP.Panel, {
                         id: u,
                         'aria-label': f,
-                        className: M.panel,
+                        className: b.panel,
                         children:
                             null != h && j > 0
                                 ? (0, l.jsx)(L, {
@@ -347,7 +348,7 @@ function R(e) {
                                       reaction: h,
                                       channel: d
                                   })
-                                : (0, l.jsx)(P, {})
+                                : (0, l.jsx)(k, {})
                     })
                 ]
             })

@@ -11,9 +11,9 @@ var l = n(255367),
     u = n(471445),
     g = n(313201),
     m = n(565138),
-    b = n(592125),
-    f = n(984933),
-    p = n(430824),
+    p = n(592125),
+    b = n(984933),
+    f = n(430824),
     x = n(496675),
     j = n(699516),
     C = n(944486),
@@ -216,6 +216,7 @@ class O extends r.PureComponent {
         return (0, l.jsxs)(o.Y0X, {
             transitionState: e,
             'aria-labelledby': this.state.headerId,
+            parentComponent: 'FollowModal',
             children: [
                 this.renderHeader(),
                 (0, l.jsxs)(o.hzk, {
@@ -305,16 +306,16 @@ class O extends r.PureComponent {
     }
 }
 let k = i.ZP.connectStores(
-    [p.Z, b.Z, f.ZP, x.Z, C.Z],
+    [f.Z, p.Z, b.ZP, x.Z, C.Z],
     (e) => {
         let { channel: t } = e,
-            n = p.Z.getGuild(t.guild_id),
-            l = Object.values(p.Z.getGuilds()).reduce((e, t) => {
-                let n = f.ZP.getChannels(t.id)
+            n = f.Z.getGuild(t.guild_id),
+            l = Object.values(f.Z.getGuilds()).reduce((e, t) => {
+                let n = b.ZP.getChannels(t.id)
                     .SELECTABLE.map((e) => e.channel)
                     .filter((e) => e.type === v.d4z.GUILD_TEXT && x.Z.can(v.Plq.MANAGE_WEBHOOKS, e))
                     .map((e) => {
-                        let t = b.Z.getChannel(e.parent_id);
+                        let t = p.Z.getChannel(e.parent_id);
                         return {
                             channel: e,
                             category: null != t ? t.name : null

@@ -229,6 +229,7 @@ function Q(e) {
             }),
             size: h.CgR.DYNAMIC,
             transitionState: l,
+            parentComponent: 'GoLiveModalV2',
             children: [
                 ex
                     ? (0, r.jsx)(M.Z, {

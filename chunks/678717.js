@@ -28,8 +28,8 @@ var _ = n(392750),
     S = n(903502),
     P = n(604776),
     I = n(912072),
-    k = n(272193),
-    w = n(685560),
+    w = n(272193),
+    k = n(685560),
     R = n(735959),
     A = n(572444),
     Z = n(246992),
@@ -257,7 +257,7 @@ function el(e) {
                     id: 'gifting_intent',
                     name: 'Gifting Intent',
                     group: Q.v0.PREMIUM,
-                    render: () => (0, a.jsx)(k.Z, {})
+                    render: () => (0, a.jsx)(w.Z, {})
                 }),
                 e.push({
                     id: 'voice_filters',
@@ -275,7 +275,7 @@ function el(e) {
                     id: 'skill_trees',
                     name: 'Skill Trees',
                     group: Q.v0.GUILDS,
-                    render: () => (0, a.jsx)(w.Z, {})
+                    render: () => (0, a.jsx)(k.Z, {})
                 }),
                 e
             );

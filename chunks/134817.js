@@ -1,14 +1,14 @@
-n.d(t, { default: () => b });
+n.d(t, { default: () => p });
 var r = n(255367),
-    s = n(73800),
-    i = n(512722),
-    l = n.n(i),
+    i = n(73800),
+    s = n(512722),
+    l = n.n(s),
     a = n(442837),
     o = n(233787),
     c = n(594174),
     u = n(74538),
     d = n(388032);
-class g extends s.Component {
+class g extends i.Component {
     render() {
         let { user: e, transitionState: t, onClose: n } = this.props;
         return (0, r.jsxs)(o.Z, {
@@ -33,7 +33,7 @@ class g extends s.Component {
         });
     }
 }
-let b = a.ZP.connectStores([c.default], () => {
+let p = a.ZP.connectStores([c.default], () => {
     let e = c.default.getCurrentUser();
     return l()(null != e, 'PremiumRequiredModal: user cannot be null'), { user: e };
 })(g);

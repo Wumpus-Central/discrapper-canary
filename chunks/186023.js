@@ -131,6 +131,7 @@ let g = (e) => {
     return (0, r.jsx)(l.Y0X, {
         transitionState: g.transitionState,
         'aria-labelledby': v,
+        parentComponent: 'InAppReportModal',
         children: (0, r.jsx)(l.MyZ, {
             width: 440,
             activeSlide: O,

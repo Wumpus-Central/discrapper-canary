@@ -32,11 +32,11 @@ var o = n(255367),
     E = n(648052),
     B = n(867176),
     D = n(280885),
-    k = n(537006),
-    U = n(681837),
+    U = n(537006),
+    k = n(681837),
     L = n(78806),
-    R = n(91433),
-    M = n(451834),
+    M = n(91433),
+    R = n(451834),
     G = n(900927),
     V = n(944043),
     F = n(502762),
@@ -115,6 +115,7 @@ function en(e) {
                     className: et.root,
                     transitionState: es,
                     'aria-label': eD,
+                    parentComponent: 'UserProfileModalV2',
                     children: (0, o.jsxs)(F.Z, {
                         ref: e_,
                         user: n,
@@ -142,7 +143,7 @@ function en(e) {
                                                 displayProfile: ev,
                                                 themeType: Q.lY.MODAL_V2
                                             }),
-                                            (0, o.jsx)(M.Z, {
+                                            (0, o.jsx)(R.Z, {
                                                 userId: n.id,
                                                 onClose: ef,
                                                 className: et.toast
@@ -174,7 +175,7 @@ function en(e) {
                                                 onClose: ef,
                                                 className: et.profileSection,
                                                 nickname: P.ZP.useName(null == ev ? void 0 : ev.guildId, eo, n),
-                                                nicknameIcons: (0, o.jsx)(U.Z, {
+                                                nicknameIcons: (0, o.jsx)(k.Z, {
                                                     size: 'sm',
                                                     userId: n.id
                                                 }),
@@ -189,7 +190,7 @@ function en(e) {
                                             eP === $.OGo.PENDING_INCOMING &&
                                                 (0, o.jsx)(F.Z.Overlay, {
                                                     className: et.profileOverlay,
-                                                    children: (0, o.jsx)(R.Z, {
+                                                    children: (0, o.jsx)(M.Z, {
                                                         user: n,
                                                         applicationId: eN,
                                                         guildId: null != (t = null == ev ? void 0 : ev.guildId) ? t : void 0,
@@ -204,7 +205,7 @@ function en(e) {
                                                     F.Z.Overlay,
                                                     {
                                                         className: et.profileOverlay,
-                                                        children: (0, o.jsx)(R.Z, {
+                                                        children: (0, o.jsx)(M.Z, {
                                                             user: n,
                                                             guildId: null != (t = null == ev ? void 0 : ev.guildId) ? t : void 0,
                                                             channelId: eo,
@@ -234,7 +235,7 @@ function en(e) {
                                                     })
                                                 }),
                                             n.id === i.id &&
-                                                (0, o.jsx)(k.Z, {
+                                                (0, o.jsx)(U.Z, {
                                                     className: et.profileSection,
                                                     isPremiumUser: (0, N.I5)(i),
                                                     onInteraction: ef

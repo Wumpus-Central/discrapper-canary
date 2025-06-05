@@ -23,7 +23,7 @@ function u(e) {
                       }),
                 l && e());
         },
-        v =
+        p =
             null == u || null == u.name
                 ? null
                 : () => {
@@ -88,7 +88,7 @@ function u(e) {
                             tabIndex: 0,
                             active: o,
                             className: t,
-                            renderButtonContents: v
+                            renderButtonContents: p
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))

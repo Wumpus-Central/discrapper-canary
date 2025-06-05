@@ -13,9 +13,9 @@ var r = t(442837),
     p = t(785717),
     g = t(250822),
     v = t(771362),
-    h = t(280885),
-    j = t(819602),
-    m = t(78806),
+    m = t(280885),
+    h = t(819602),
+    j = t(78806),
     b = t(900927),
     x = t(678738),
     O = t(179828),
@@ -40,7 +40,7 @@ function I(e) {
             (null == I ? void 0 : I.bio) != null &&
                 (null == I ? void 0 : I.bio) !== '' &&
                 !w &&
-                (0, l.jsx)(h.Z, {
+                (0, l.jsx)(m.Z, {
                     userBio: I.bio,
                     setLineClamp: !1
                 }),
@@ -64,7 +64,7 @@ function I(e) {
             _.length > 0 &&
                 (0, l.jsx)(x.Z, {
                     heading: y.intl.string(y.t['Uv/eT0']),
-                    children: (0, l.jsx)(m.Z, { applicationIds: _ })
+                    children: (0, l.jsx)(j.Z, { applicationIds: _ })
                 }),
             (0, l.jsx)(x.Z, {
                 heading: y.intl.string(y.t.a6XYDw),
@@ -78,7 +78,7 @@ function I(e) {
                 (0, l.jsx)(x.Z, {
                     heading: y.intl.string(y.t['3fe7U1']),
                     scrollIntoView: E === Z.Tb.CONNECTIONS,
-                    children: (0, l.jsx)(j.ZP, {
+                    children: (0, l.jsx)(h.ZP, {
                         connectedAccounts: R,
                         className: P.connections,
                         userId: n.id,
@@ -90,7 +90,7 @@ function I(e) {
                     heading: y.intl.string(y.t.PHjkRE),
                     children: U.map((e) =>
                         (0, l.jsx)(
-                            j.tH,
+                            h.tH,
                             {
                                 className: P.appsConnections,
                                 applicationRoleConnection: e,

@@ -26,10 +26,10 @@ function x(e) {
         })),
         [w, k] = r.useState(!1),
         [R, P] = r.useState(f.lds),
-        [y, A] = r.useState(null);
+        [A, y] = r.useState(null);
     r.useEffect(() => {
         if (w)
-            A(
+            y(
                 (0, n.jsx)(a.Wn, {
                     messageType: a.QYI.ERROR,
                     className: g.infoMessage,
@@ -40,7 +40,7 @@ function x(e) {
         else if (null != R) {
             let e = c.default.getUser(R);
             null != e &&
-                A(
+                y(
                     (0, n.jsx)(a.Wn, {
                         messageType: a.QYI.POSITIVE,
                         className: g.infoMessage,
@@ -83,7 +83,7 @@ function x(e) {
                       }),
                       (0, n.jsxs)(a.hzk, {
                           children: [
-                              y,
+                              A,
                               (0, n.jsx)(h.Z, {
                                   actionText: m.intl.string(m.t.Wf421N),
                                   onAction: (e, t) => {
@@ -130,6 +130,7 @@ function x(e) {
             transitionState: t,
             size: _[x],
             'aria-label': m.intl.string(m.t.WbFpq6),
+            parentComponent: 'SwitchAccountsModal',
             children: (0, n.jsx)(a.qBt, {
                 step: x,
                 steps: [0, 1],

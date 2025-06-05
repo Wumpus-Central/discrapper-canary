@@ -10,21 +10,21 @@ var a = n(255367),
     m = n(941848),
     g = n(710352),
     u = n(981631),
-    x = n(921944),
-    p = n(388032),
+    p = n(921944),
+    x = n(388032),
     h = n(74891);
 let f = () => [
     {
         id: 0,
-        name: p.intl.string(p.t.HTA519)
+        name: x.intl.string(x.t.HTA519)
     },
     {
         id: 1,
-        name: p.intl.string(p.t.IHjjY2)
+        name: x.intl.string(x.t.IHjjY2)
     },
     {
         id: 2,
-        name: p.intl.string(p.t.x3drh4)
+        name: x.intl.string(x.t.x3drh4)
     }
 ];
 function j(t) {
@@ -38,6 +38,7 @@ function j(t) {
         transitionState: v,
         'aria-labelledby': C,
         size: s.CgR.LARGE,
+        parentComponent: 'ForumChannelUpsellModal',
         children: [
             (0, a.jsxs)(s.xBx, {
                 separator: !1,
@@ -45,7 +46,7 @@ function j(t) {
                 children: [
                     (0, a.jsx)(s.X6q, {
                         variant: 'heading-xl/semibold',
-                        children: p.intl.string(p.t['6S6WCQ'])
+                        children: x.intl.string(x.t['6S6WCQ'])
                     }),
                     (0, a.jsx)(s.olH, { onClick: () => b() })
                 ]
@@ -57,7 +58,7 @@ function j(t) {
                         (0, a.jsx)(s.Text, {
                             color: 'header-secondary',
                             variant: 'text-md/normal',
-                            children: p.intl.string(p.t.I2BA8P)
+                            children: x.intl.string(x.t.I2BA8P)
                         }),
                         (0, a.jsx)('div', {
                             className: h.tabBar,
@@ -94,9 +95,9 @@ function j(t) {
                                 (0, a.jsx)(s.zxk, {
                                     look: s.zxk.Looks.BLANK,
                                     color: s.zxk.Colors.PRIMARY,
-                                    onClick: () => b(x.L.SECONDARY),
+                                    onClick: () => b(p.L.SECONDARY),
                                     className: h.button,
-                                    children: j ? p.intl.string(p.t.TulDPj) : p.intl.string(p.t['NX+WJC'])
+                                    children: j ? x.intl.string(x.t.TulDPj) : x.intl.string(x.t['NX+WJC'])
                                 }),
                                 j &&
                                     (0, a.jsx)(s.zxk, {
@@ -136,7 +137,7 @@ function j(t) {
                                                             {
                                                                 channelType: u.d4z.GUILD_FORUM,
                                                                 guildId: e,
-                                                                prefillChannelName: j ? p.intl.string(p.t['5z1Xam']) : void 0
+                                                                prefillChannelName: j ? x.intl.string(x.t['5z1Xam']) : void 0
                                                             }),
                                                         Object.getOwnPropertyDescriptors
                                                             ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
@@ -154,9 +155,9 @@ function j(t) {
                                                     );
                                                 };
                                             }),
-                                                b(x.L.PRIMARY);
+                                                b(p.L.PRIMARY);
                                         },
-                                        children: p.intl.string(p.t['1X8SKy'])
+                                        children: x.intl.string(x.t['1X8SKy'])
                                     })
                             ]
                         }),
@@ -166,7 +167,7 @@ function j(t) {
                             onClick: () => {
                                 open(g.V8);
                             },
-                            children: p.intl.string(p.t.hvVgAQ)
+                            children: x.intl.string(x.t.hvVgAQ)
                         })
                     ]
                 })

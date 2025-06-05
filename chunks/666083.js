@@ -39,12 +39,12 @@ function j(e) {
     let v = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
         x = o.useRef(null),
         _ = o.useRef(new l.qA()),
-        [C, h] = o.useState(null),
-        w = p.uc.has(g.skuId);
+        [C, w] = o.useState(null),
+        P = p.uc.has(g.skuId);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.O_, {
-                ref: h,
+                ref: w,
                 className: O.confettiCanvas,
                 environment: _.current
             }),
@@ -83,6 +83,7 @@ function j(e) {
                 )),
                 (n = n =
                     {
+                        parentComponent: 'GuildPowerupActivateModal',
                         children: [
                             (0, r.jsx)(a.hzk, {
                                 className: O.modalContentContainer,
@@ -107,7 +108,7 @@ function j(e) {
                                                     variant: 'text-sm/normal',
                                                     children: m.intl.formatToPlainString(b.default.y3wHoq, { perkName: g.title })
                                                 }),
-                                                w
+                                                P
                                                     ? (0, r.jsx)(d.ms, {
                                                           className: O.button,
                                                           guildId: j,

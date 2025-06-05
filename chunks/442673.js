@@ -3,8 +3,8 @@ var n = t(255367),
     o = t(73800),
     s = t(481060),
     i = t(985002),
-    c = t(880257),
-    l = t(957656),
+    l = t(880257),
+    c = t(957656),
     a = t(524499),
     d = t(388032),
     u = t(927735);
@@ -13,27 +13,27 @@ let b = (e) => {
         h = o.useCallback(() => {
             f();
         }, [f]),
-        x = (0, c.Z)(),
+        x = (0, l.Z)(),
         [j, p] = o.useState(!1),
-        [g, m] = o.useState(!1),
+        [m, g] = o.useState(!1),
         y = o.useCallback(() => {
-            m(!0), p(!1);
+            g(!0), p(!1);
         }, []),
         { disconnectLinkRequest: O, isDisconnectLoading: k } = (0, i.G)({
             onSuccess: h,
             onError: y
         });
-    return (0, n.jsx)(l.Z, {
+    return (0, n.jsx)(c.Z, {
         transitionState: b,
         children: (0, n.jsxs)('form', {
             onSubmit: (e) => {
                 e.preventDefault(), O(t);
             },
             children: [
-                (0, n.jsx)(l.Z.Error, { error: g ? d.intl.string(a.default.krIDd3) : void 0 }),
+                (0, n.jsx)(c.Z.Error, { error: m ? d.intl.string(a.default.krIDd3) : void 0 }),
                 (0, n.jsxs)(s.hzk, {
                     children: [
-                        (0, n.jsx)(l.Z.Header, {
+                        (0, n.jsx)(c.Z.Header, {
                             currentUser: r,
                             otherUser: t,
                             header: d.intl.formatToPlainString(a.default.NMSTb2, { isAdult: String(x) }),
@@ -43,13 +43,13 @@ let b = (e) => {
                                 className: u.closeIcon
                             })
                         }),
-                        (0, n.jsx)(l.Z.Notice, { notice: x ? d.intl.string(a.default.EvMGLS) : d.intl.string(a.default.f1SUeX) }),
+                        (0, n.jsx)(c.Z.Notice, { notice: x ? d.intl.string(a.default.EvMGLS) : d.intl.string(a.default.f1SUeX) }),
                         (0, n.jsx)(s.XZJ, {
                             className: u.acknowledgementCheckbox,
                             type: s.XZJ.Types.INVERTED,
                             value: j,
                             onChange: (e, r) => {
-                                p(r), m(!1);
+                                p(r), g(!1);
                             },
                             children: (0, n.jsx)(s.Text, {
                                 variant: 'text-xs/semibold',
@@ -59,7 +59,7 @@ let b = (e) => {
                     ]
                 }),
                 (0, n.jsx)(s.mzw, {
-                    children: (0, n.jsxs)(l.Z.ButtonFooter, {
+                    children: (0, n.jsxs)(c.Z.ButtonFooter, {
                         children: [
                             (0, n.jsx)(s.zxk, {
                                 type: 'button',

@@ -62,6 +62,7 @@ function j(e) {
     return (0, r.jsx)(o.Y0X, {
         size: o.CgR.DYNAMIC,
         transitionState: t,
+        parentComponent: 'HDStreamingConsumableModal',
         children: (0, r.jsx)(S, { channel: n })
     });
 }

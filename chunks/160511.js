@@ -14,7 +14,7 @@ function f(e) {
         [b, j] = l.useState(null),
         [y, x] = l.useState(!1),
         [S, v] = l.useState(null),
-        [O, C] = l.useState(''),
+        [C, O] = l.useState(''),
         w = l.useRef(null);
     l.useEffect(() => {
         g(!0),
@@ -49,7 +49,7 @@ function f(e) {
                 x(!0),
                 n({
                     mfaType: 'sms',
-                    data: O
+                    data: C
                 })
                     .catch((e) => {
                         var t, n;
@@ -74,10 +74,10 @@ function f(e) {
                                 (0, r.jsx)(o.oil, {
                                     className: d.smsInput,
                                     inputRef: w,
-                                    onChange: C,
+                                    onChange: O,
                                     placeholder: u.intl.string(u.t.tARzgo),
                                     maxLength: 10,
-                                    value: O,
+                                    value: C,
                                     autoComplete: 'one-time-code',
                                     spellCheck: 'false',
                                     disabled: y
@@ -113,7 +113,7 @@ function f(e) {
                 mfaChallenge: t,
                 setSlide: f,
                 showConfirm: !0,
-                disabled: O.length !== i.Gz,
+                disabled: C.length !== i.Gz,
                 submitting: y
             })
         ]

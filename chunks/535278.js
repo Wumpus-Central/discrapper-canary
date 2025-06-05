@@ -1,23 +1,24 @@
-i.d(e, { default: () => o });
+i.d(e, { default: () => c });
 var n = i(255367);
 i(73800);
 var r = i(481060),
     a = i(313201),
     s = i(388032),
     l = i(708121),
-    c = i(365627);
-function o(t) {
-    let { transitionState: e, onClose: i, storeListing: o, subscription: d } = t,
+    o = i(365627);
+function c(t) {
+    let { transitionState: e, onClose: i, storeListing: c, subscription: d } = t,
         u = (0, a.Dt)();
     return (0, n.jsxs)(r.Y0X, {
         transitionState: e,
         'aria-labelledby': u,
+        parentComponent: 'SubscriptionRestartedModal',
         children: [
             (0, n.jsxs)(r.hzk, {
                 className: l.contentContainer,
                 children: [
                     (0, n.jsx)('img', {
-                        src: c,
+                        src: o,
                         alt: ''
                     }),
                     (0, n.jsx)(r.X6q, {
@@ -25,7 +26,7 @@ function o(t) {
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
                         id: u,
-                        children: s.intl.format(s.t['wLFT6+'], { tier: o.summary })
+                        children: s.intl.format(s.t['wLFT6+'], { tier: c.summary })
                     }),
                     (0, n.jsx)(r.Text, {
                         className: l.subtitle,

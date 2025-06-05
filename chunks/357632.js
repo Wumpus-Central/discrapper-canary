@@ -1,60 +1,61 @@
-r.d(i, { default: () => a });
-var n = r(255367);
-r(73800);
-var l = r(106351),
-    o = r(481060),
-    s = r(933557),
-    e = r(388032);
+i.d(r, { default: () => a });
+var n = i(255367);
+i(73800);
+var o = i(106351),
+    l = i(481060),
+    e = i(933557),
+    s = i(388032);
 let a = (t) => {
-    let { channel: i, onClose: r, onConfirm: a, transitionState: c } = t,
+    let { channel: r, onClose: i, onConfirm: a, transitionState: c } = t,
         {
             title: d,
             body: h,
             confirm: x
         } = (function (t) {
-            let i = (0, s.ZP)(t, !0);
-            return t.type === l.d.GUILD_CATEGORY
+            let r = (0, e.ZP)(t, !0);
+            return t.type === o.d.GUILD_CATEGORY
                 ? {
-                      title: e.intl.string(e.t['4VpUw8']),
-                      body: e.intl.format(e.t.GuhMa2, { channelName: i }),
-                      confirm: e.intl.string(e.t.xOscRk)
+                      title: s.intl.string(s.t['4VpUw8']),
+                      body: s.intl.format(s.t.GuhMa2, { channelName: r }),
+                      confirm: s.intl.string(s.t.xOscRk)
                   }
                 : {
-                      title: e.intl.string(e.t['4VpUw8']),
-                      body: e.intl.format(e.t['2z/hBg'], { channelName: i }),
-                      confirm: e.intl.string(e.t.gGs6TU)
+                      title: s.intl.string(s.t['4VpUw8']),
+                      body: s.intl.format(s.t['2z/hBg'], { channelName: r }),
+                      confirm: s.intl.string(s.t.gGs6TU)
                   };
-        })(i);
-    return (0, n.jsxs)(o.Y0X, {
+        })(r);
+    return (0, n.jsxs)(l.Y0X, {
         transitionState: c,
         'aria-label': d,
+        parentComponent: 'RemoveFromFavoritesModal',
         children: [
-            (0, n.jsx)(o.xBx, {
+            (0, n.jsx)(l.xBx, {
                 separator: !1,
-                children: (0, n.jsx)(o.X6q, {
+                children: (0, n.jsx)(l.X6q, {
                     variant: 'heading-lg/semibold',
                     children: d
                 })
             }),
-            (0, n.jsx)(o.hzk, {
-                children: (0, n.jsx)(o.Text, {
+            (0, n.jsx)(l.hzk, {
+                children: (0, n.jsx)(l.Text, {
                     variant: 'text-md/normal',
                     color: 'header-primary',
                     children: h
                 })
             }),
-            (0, n.jsxs)(o.mzw, {
+            (0, n.jsxs)(l.mzw, {
                 children: [
-                    (0, n.jsx)(o.zxk, {
+                    (0, n.jsx)(l.zxk, {
                         onClick: a,
-                        color: o.zxk.Colors.RED,
+                        color: l.zxk.Colors.RED,
                         children: x
                     }),
-                    (0, n.jsx)(o.zxk, {
-                        onClick: r,
-                        look: o.zxk.Looks.LINK,
-                        color: o.zxk.Colors.PRIMARY,
-                        children: e.intl.string(e.t['ETE/oK'])
+                    (0, n.jsx)(l.zxk, {
+                        onClick: i,
+                        look: l.zxk.Looks.LINK,
+                        color: l.zxk.Colors.PRIMARY,
+                        children: s.intl.string(s.t['ETE/oK'])
                     })
                 ]
             })

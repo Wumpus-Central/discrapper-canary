@@ -81,6 +81,7 @@ function L(e) {
                     size: c.CgR.DYNAMIC,
                     className: o()(P.rootContainer, { [P.rootContainerLoading]: R }),
                     hideShadow: !0,
+                    parentComponent: 'QuestsNitroRewardModal',
                     children: R
                         ? (0, r.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE })
                         : 'error' === N.state

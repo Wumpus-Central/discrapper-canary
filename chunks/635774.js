@@ -9,8 +9,8 @@ var i = r(120356),
     c = r(706454),
     u = r(346585),
     d = r(347649),
-    g = r(981631),
-    m = r(388032),
+    m = r(981631),
+    g = r(388032),
     f = r(927687);
 function E(e) {
     let { onClose: t, handleStartFlow: r } = e,
@@ -23,21 +23,21 @@ function E(e) {
                 className: o()(f.finishTitle, { [f.finishTitlePadding]: i }),
                 color: 'header-primary',
                 variant: 'heading-xl/bold',
-                children: i ? m.intl.formatToPlainString(m.t.XOWfNj, { date: (0, u.IE)(E) }) : m.intl.string(m.t['3C+rbG'])
+                children: i ? g.intl.formatToPlainString(g.t.XOWfNj, { date: (0, u.IE)(E) }) : g.intl.string(g.t['3C+rbG'])
             }),
             (0, n.jsx)(l.Text, {
                 className: f.subtitleFinish,
                 color: 'header-secondary',
                 variant: 'text-md/medium',
-                children: i ? m.intl.formatToPlainString(m.t['g/gkAw'], { date: (0, u.IE)(E) }) : m.intl.string(m.t.TS1L09)
+                children: i ? g.intl.formatToPlainString(g.t['g/gkAw'], { date: (0, u.IE)(E) }) : g.intl.string(g.t.TS1L09)
             }),
             (0, n.jsx)(l.Text, {
                 className: f.promptFinish,
                 color: 'header-secondary',
                 variant: 'text-md/medium',
-                children: m.intl.format(m.t.bWE0ZG, {
+                children: g.intl.format(g.t.bWE0ZG, {
                     onClick: () => {
-                        t(), a.Z.open(g.oAB.ACCOUNT);
+                        t(), a.Z.open(m.oAB.ACCOUNT);
                     }
                 })
             }),
@@ -46,7 +46,7 @@ function E(e) {
                 type: 'button',
                 size: l.zxk.Sizes.SMALL,
                 onClick: i ? r : t,
-                children: i ? m.intl.string(m.t['Zpd+Ym']) : m.intl.string(m.t['yD/zkp'])
+                children: i ? g.intl.string(g.t['Zpd+Ym']) : g.intl.string(g.t['yD/zkp'])
             })
         ]
     });

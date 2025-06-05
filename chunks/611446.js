@@ -76,6 +76,7 @@ let x = (t) => {
         transitionState: p,
         'aria-label': S.intl.string(S.t.eXlt09),
         size: l.CgR.SMALL,
+        parentComponent: 'SafetyToolsModal',
         children: [
             (0, r.jsx)(l.xBx, {
                 separator: !1,

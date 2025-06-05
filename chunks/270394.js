@@ -25,14 +25,14 @@ var r = n(255367),
     I = n(699516),
     S = n(594174),
     E = n(630388),
-    P = n(965638),
-    w = n(757539),
+    w = n(965638),
+    P = n(757539),
     T = n(981631),
     Z = n(388032),
     k = n(541056),
     A = n(588866),
-    D = n(20493);
-function R(e) {
+    R = n(20493);
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -154,7 +154,7 @@ function U(e) {
                                                   (0, r.jsx)(
                                                       m.d3s,
                                                       L(
-                                                          R(
+                                                          D(
                                                               {
                                                                   size: 'xxs',
                                                                   color: 'currentColor'
@@ -207,8 +207,8 @@ function W(e) {
     let { invites: t, guild: l, hide: o, canCreateInvites: a, withV2Actions: c, channel: u = null, showChannel: b = !1, loading: g = !1 } = e;
     s()(null != l, 'guild is required');
     let f = (0, j.ZP)(),
-        x = (0, P.MQ)(l),
-        O = (0, P.O4)(l),
+        x = (0, w.MQ)(l),
+        O = (0, w.O4)(l),
         y = i.useMemo(
             () =>
                 null == t || g
@@ -226,7 +226,7 @@ function W(e) {
                 async () => (e) =>
                     (0, r.jsx)(
                         N.default,
-                        L(R({}, e), {
+                        L(D({}, e), {
                             channel: u,
                             guild: l,
                             source: T.t4x.SETTINGS_INVITE
@@ -241,7 +241,7 @@ function W(e) {
                 async () => (t) =>
                     (0, r.jsx)(
                         C.default,
-                        L(R({}, t), {
+                        L(D({}, t), {
                             guildId: l.id,
                             analyticsData: e
                         })
@@ -277,13 +277,13 @@ function W(e) {
                             (0, r.jsx)(v.Z.Child, {
                                 grow: M.INVITER,
                                 basis: 0,
-                                className: D.marginReset,
+                                className: R.marginReset,
                                 children: (0, r.jsx)(m.vwX, { children: Z.intl.string(Z.t.EgHyKy) })
                             }),
                             (0, r.jsx)(v.Z.Child, {
                                 basis: 0,
                                 grow: M.INVITE_CODE,
-                                className: D.marginReset,
+                                className: R.marginReset,
                                 children: (0, r.jsx)(m.vwX, { children: Z.intl.string(Z.t.LBlFEB) })
                             }),
                             (0, r.jsx)(v.Z.Child, {
@@ -316,7 +316,7 @@ function W(e) {
                         className: k.actions,
                         children: [
                             (0, r.jsx)(m.R94, {
-                                className: D.marginBottom20,
+                                className: R.marginBottom20,
                                 type: m.geA.DESCRIPTION,
                                 children: !0 === a ? Z.intl.format(Z.t['97VdNj'], { onCreateInvite: I }) : Z.intl.string(Z.t.WDw38P)
                             }),
@@ -354,7 +354,7 @@ function W(e) {
                     'header'
                 );
             if (t === B.ACTIONS_V2)
-                return (0, r.jsx)(w.Y, {
+                return (0, r.jsx)(P.Y, {
                     hasInvites: y.length > 0,
                     setHeight: E,
                     onShowDisableInvites: A,
@@ -368,7 +368,7 @@ function W(e) {
                     return (0, r.jsx)(
                         m.$jN,
                         {
-                            className: D.marginTop20,
+                            className: R.marginTop20,
                             type: m.$jN.Type.SPINNING_CIRCLE
                         },
                         'spinner'

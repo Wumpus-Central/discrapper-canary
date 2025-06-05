@@ -8,7 +8,7 @@ let l = i.forwardRef((e, t) => {
     let { muted: n = !1, highlighted: i = !1, avatar: a, decorators: l, name: c, subText: u, avatarClassName: d, innerClassName: f } = e;
     return (0, r.jsxs)('div', {
         ref: t,
-        className: o()(f, s.layout, {
+        className: o()(s.layout, f, {
             [s.muted]: n,
             [s.highlighted]: i
         }),

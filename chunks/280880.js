@@ -82,55 +82,36 @@ function g(e, t) {
     return i;
 }
 function E(e) {
-    var { guild: t, focused: n, onSelectItem: i, refreshEnabled: f } = e,
-        p = m(e, ['guild', 'focused', 'onSelectItem', 'refreshEnabled']);
-    let { canCreateExpressions: g } = (0, s.XJ)(t);
+    var { guild: t, focused: n, onSelectItem: i } = e,
+        f = m(e, ['guild', 'focused', 'onSelectItem']);
+    let { canCreateExpressions: p } = (0, s.XJ)(t);
     return (0, r.jsx)(o.ua7, {
         text: c.intl.string(c.t['fHo+z8']),
-        shouldShow: !g,
+        shouldShow: !p,
         children: (e) =>
             (0, r.jsx)(
                 'li',
                 h(_({ className: u.soundButtonWrapper }, e), {
-                    children: (0, r.jsx)(
+                    children: (0, r.jsxs)(
                         o.kL8,
-                        h(_({}, p), {
+                        h(_({}, f), {
                             'aria-label': c.intl.formatToPlainString(c.t.c1qVYm, { guildName: t.name }),
-                            className: a()(f ? d.soundAddButtonRefresh : d.soundAddButton, {
+                            className: a()(d.soundAddButton, {
                                 [d.focused]: n,
-                                [d.disabled]: !g
+                                [d.disabled]: !p
                             }),
                             onClick: () => (null != i ? i() : (0, l.Z)(t.id)),
-                            children: f
-                                ? (0, r.jsxs)('div', {
-                                      className: d.soundAddInfoRefresh,
-                                      children: [
-                                          (0, r.jsx)(o.oFk, {
-                                              size: 'md',
-                                              color: 'currentColor',
-                                              className: d.soundAddIconRefresh
-                                          }),
-                                          (0, r.jsx)(o.Text, {
-                                              variant: 'text-xs/medium',
-                                              color: g ? void 0 : 'text-muted',
-                                              className: d.soundAddTextRefresh,
-                                              children: c.intl.string(c.t['8Fu/S0'])
-                                          })
-                                      ]
-                                  })
-                                : (0, r.jsxs)(r.Fragment, {
-                                      children: [
-                                          (0, r.jsx)(o.qJs, {
-                                              size: 'sm',
-                                              color: 'currentColor'
-                                          }),
-                                          (0, r.jsx)(o.Text, {
-                                              variant: 'text-xs/semibold',
-                                              color: g ? 'currentColor' : 'text-muted',
-                                              children: c.intl.string(c.t['8Fu/S0'])
-                                          })
-                                      ]
-                                  })
+                            children: [
+                                (0, r.jsx)(o.qJs, {
+                                    size: 'sm',
+                                    color: 'currentColor'
+                                }),
+                                (0, r.jsx)(o.Text, {
+                                    variant: 'text-xs/semibold',
+                                    color: p ? 'currentColor' : 'text-muted',
+                                    children: c.intl.string(c.t['8Fu/S0'])
+                                })
+                            ]
                         })
                     )
                 })

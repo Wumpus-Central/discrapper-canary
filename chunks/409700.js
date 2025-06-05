@@ -169,59 +169,59 @@ function N(e) {
     });
 }
 function C(e) {
-    let { renderPopout: t, position: n, tooltipText: a, children: s, setTooltipShowing: l, clickableClassName: u } = e,
-        [d, f] = i.useState(!1),
-        [_, p] = i.useState(String(Date.now())),
-        h = i.useCallback(
+    let { renderPopout: t, position: n, tooltipText: a, children: o, setTooltipShowing: s, clickableClassName: l } = e,
+        [u, d] = i.useState(!1),
+        [f, _] = i.useState(String(Date.now())),
+        p = i.useCallback(
             (e) => {
-                e.stopPropagation(), f(!d);
+                e.stopPropagation(), d(!u);
             },
-            [d]
+            [u]
         ),
-        m = i.useCallback(() => {
-            p(String(Date.now()));
+        h = i.useCallback(() => {
+            _(String(Date.now()));
         }, []),
-        g = i.useRef(null);
+        m = i.useRef(null);
     i.useEffect(() => {
         var e, t;
-        d ? null == (e = g.current) || e.focus() : null == (t = g.current) || t.blur(), null == l || l(d);
-    }, [d, l]);
-    let E = !d;
+        u ? null == (e = m.current) || e.focus() : null == (t = m.current) || t.blur(), null == s || s(u);
+    }, [u, s]);
+    let g = !u;
     return (0, r.jsx)(c.yRy, {
-        targetElementRef: g,
+        targetElementRef: m,
         renderPopout: (e) =>
             (0, r.jsx)(c.P3F, {
                 onClick: (e) => e.stopPropagation(),
                 onMouseOver: (e) => e.stopPropagation(),
-                children: t(S(v({}, e), { refreshPosition: m }))
+                children: t(S(v({}, e), { refreshPosition: h }))
             }),
         align: 'center',
         nudgeAlignIntoViewport: !0,
         position: n,
-        shouldShow: d,
-        onRequestClose: () => f(!1),
+        shouldShow: u,
+        onRequestClose: () => d(!1),
         animationPosition: 'bottom',
-        positionKey: _,
+        positionKey: f,
         closeOnScroll: !0,
         children: (e) =>
             (0, r.jsx)(c.ua7, {
                 onTooltipHide: () => {
-                    E && (null == l || l(!1));
+                    g && (null == s || s(!1));
                 },
                 onTooltipShow: () => {
-                    E && (null == l || l(!0));
+                    g && (null == s || s(!0));
                 },
                 text: a,
                 position: 'top',
-                shouldShow: E,
+                shouldShow: g,
                 children: (t) =>
                     (0, r.jsx)(
                         c.P3F,
-                        S(v({ innerRef: g }, t, e), {
+                        S(v({ innerRef: m }, t, e), {
                             'aria-label': a,
-                            onClick: h,
-                            className: o()(y.secondaryButtonRefresh, u),
-                            children: s
+                            onClick: p,
+                            className: l,
+                            children: o
                         })
                     )
             })

@@ -20,7 +20,7 @@ var r = n(255367),
 function O(e) {
     var t,
         n,
-        { applicationId: h, customId: O, linkId: _, message: S, onClose: E, onCopyLink: P, onShare: Z, transitionState: L } = e,
+        { applicationId: h, customId: O, linkId: S, message: _, onClose: E, onCopyLink: P, onShare: Z, transitionState: L } = e,
         C = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -51,10 +51,10 @@ function O(e) {
                 applicationId: h,
                 referrerId: null == w ? void 0 : w.id,
                 customId: O,
-                linkId: _
+                linkId: S
             })
         );
-    }, [h, w, O, _, I]);
+    }, [h, w, O, S, I]);
     let A = l.useRef(0),
         [U, z] = l.useState([]),
         H = U.length,
@@ -100,7 +100,7 @@ function O(e) {
                         applicationName: N.name,
                         link: M
                     }),
-                    n = ''.concat(S, '\n\n').concat(t);
+                    n = ''.concat(_, '\n\n').concat(t);
                 T(!0),
                     (await Promise.all(e.map(d.qx))).filter(m.lm).forEach(async (e) => {
                         let t = b.Z.getChannel(e);
@@ -110,7 +110,7 @@ function O(e) {
                     Z(!0),
                     E();
             },
-            [S, M, E, Z, N]
+            [_, M, E, Z, N]
         ),
         K =
             W.length > 0
@@ -167,6 +167,7 @@ function O(e) {
         (n = n =
             {
                 className: j.modalRoot,
+                parentComponent: 'ActivityShareLinkModal',
                 children: [
                     (0, r.jsxs)(i.xBx, {
                         className: j.header,
@@ -186,7 +187,7 @@ function O(e) {
                                                 lineClamp: 1,
                                                 variant: 'text-sm/medium',
                                                 color: 'text-secondary',
-                                                children: S
+                                                children: _
                                             })
                                         })
                                     }),

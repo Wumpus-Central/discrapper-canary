@@ -5,8 +5,8 @@ var i = n(255367),
     a = n(442837),
     o = n(544891),
     s = n(481060),
-    u = n(53281),
-    c = n(476326),
+    c = n(53281),
+    u = n(476326),
     d = n(304761),
     m = n(273031),
     h = n(859235),
@@ -33,9 +33,9 @@ function w(e) {
         [A, R] = r.useState(''),
         [L, I] = r.useState(),
         [Z, z] = r.useState(''),
-        [J, M] = r.useState([]),
-        [q, V] = r.useState(),
-        [B, G] = r.useState(),
+        [M, J] = r.useState([]),
+        [q, B] = r.useState(),
+        [V, G] = r.useState(),
         [H, X] = r.useState(!1),
         [U, Y] = r.useState(''),
         [K, F] = r.useState(
@@ -56,8 +56,8 @@ function w(e) {
         [en, ei] = r.useState(''),
         [er, el] = r.useState(''),
         [ea, eo] = r.useState(!1),
-        [es, eu] = r.useState(!1),
-        [ec, ed] = r.useState(!1),
+        [es, ec] = r.useState(!1),
+        [eu, ed] = r.useState(!1),
         [em, eh] = r.useState(null);
     r.useEffect(() => {
         let e = Math.random().toString(16).slice(2);
@@ -68,8 +68,8 @@ function w(e) {
                 rejectWithError: !0
             })
             .then((e) => {
-                if (null != e.body && 'db78250ee2fa914c7a80667dc08084141ab4f549' !== e.body.hash) {
-                    let e = new Date('1749075127838'),
+                if (null != e.body && '0ec68276c5e1ca2225d4dd6cd682dacef5fa89ef' !== e.body.hash) {
+                    let e = new Date('1749082091653'),
                         t = new Date(),
                         n = (0, g.TD)(t, e);
                     n.hours > 6 && eh(n.hours);
@@ -88,15 +88,15 @@ function w(e) {
             null == k || k();
         },
         ev = (e) => {
-            M(J.filter((t) => t.id !== e));
+            J(M.filter((t) => t.id !== e));
         };
     async function eg() {
         var e, t;
         if ((ed(!1), '' === W || '' === A || null == L)) return void eo(!0);
-        let r = null == q || null == (e = q.features) ? void 0 : e.find((e) => (0, y.pD)(e) === B);
-        eu(!0), eo(!1);
+        let r = null == q || null == (e = q.features) ? void 0 : e.find((e) => (0, y.pD)(e) === V);
+        ec(!0), eo(!1);
         let l = (0, b.D)(
-                J.map((e) => {
+                M.map((e) => {
                     let { item: t } = e;
                     return t;
                 })
@@ -123,7 +123,7 @@ function w(e) {
                     : { overridePlatformInformation: H },
                 l
             ).catch(() => ed(!0));
-        eu(!1),
+        ec(!1),
             null != a && a.ok
                 ? (ef && window.open(a.body.permalink_url, '_blank'),
                   ex(),
@@ -179,12 +179,12 @@ function w(e) {
     }
     r.useEffect(() => {
         async function e() {
-            V(await (0, y.WG)());
+            B(await (0, y.WG)());
         }
         ef && e();
     }, [ef]),
         r.useEffect(() => {
-            if (J.length > 0) {
+            if (M.length > 0) {
                 var e;
                 null == (e = T.current) ||
                     e.scrollIntoView({
@@ -192,32 +192,33 @@ function w(e) {
                         block: 'end'
                     });
             }
-        }, [J]);
+        }, [M]);
     let ej = r.useCallback(
         (e) => {
             let t = Array.from(e.clipboardData.files)
                 .filter((e) => e.type.startsWith('image/'))
                 .at(0);
             void 0 === t ||
-                J.some((e) => {
+                M.some((e) => {
                     var n;
                     return e.filename === t.name && (null == (n = e.item.file) ? void 0 : n.size) === t.size;
                 }) ||
-                M([
-                    ...J,
-                    new c.ZP({
+                J([
+                    ...M,
+                    new u.ZP({
                         id: (0, l.Z)(),
                         file: t,
-                        platform: c.ow.WEB
+                        platform: u.ow.WEB
                     })
                 ]);
         },
-        [J]
+        [M]
     );
     return (0, i.jsxs)(s.Y0X, {
         transitionState: E,
         'aria-label': O.intl.string(O.t.mCCdws),
         size: s.CgR.MEDIUM,
+        parentComponent: 'BugReporterModal',
         children: [
             (0, i.jsx)(s.xBx, {
                 children: (0, i.jsx)(s.X6q, {
@@ -330,7 +331,7 @@ function w(e) {
                                     (0, i.jsx)(s.xJW, {
                                         title: O.intl.string(O.t['77VVd3']),
                                         children: (0, i.jsx)(s.VcW, {
-                                            value: B,
+                                            value: V,
                                             options:
                                                 null !=
                                                 (C =
@@ -428,19 +429,19 @@ function w(e) {
                                     color: s.zxk.Colors.PRIMARY,
                                     children: [
                                         O.intl.string(O.t.HVxmOD),
-                                        (0, i.jsx)(u.Z, {
+                                        (0, i.jsx)(c.Z, {
                                             ref: D,
                                             onChange: (e) => {
                                                 var t, n;
                                                 (null == (n = e.currentTarget) || null == (t = n.files) ? void 0 : t[0]) != null &&
-                                                    M([
-                                                        ...J,
+                                                    J([
+                                                        ...M,
                                                         ...Array.from(e.currentTarget.files).map(
                                                             (e) =>
-                                                                new c.ZP({
+                                                                new u.ZP({
                                                                     id: (0, l.Z)(),
                                                                     file: e,
-                                                                    platform: c.ow.WEB
+                                                                    platform: u.ow.WEB
                                                                 })
                                                         )
                                                     ]);
@@ -449,7 +450,7 @@ function w(e) {
                                         })
                                     ]
                                 }),
-                                J.length > 0
+                                M.length > 0
                                     ? (0, i.jsxs)(s.hjN, {
                                           children: [
                                               (0, i.jsx)(s.vwX, { children: 'Preview' }),
@@ -457,8 +458,8 @@ function w(e) {
                                                   ref: T,
                                                   className: S.attachments,
                                                   children:
-                                                      J.length > 0 &&
-                                                      J.map((e) =>
+                                                      M.length > 0 &&
+                                                      M.map((e) =>
                                                           (0, i.jsxs)(
                                                               'div',
                                                               {
@@ -500,7 +501,7 @@ function w(e) {
                                           ]
                                       })
                                     : null,
-                                ec
+                                eu
                                     ? (0, i.jsx)(s.Text, {
                                           color: 'text-danger',
                                           variant: 'text-sm/normal',

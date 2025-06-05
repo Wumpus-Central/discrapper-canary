@@ -57,7 +57,11 @@ let d = (e) => {
             }
             return e;
         })({ className: l }, c)),
-        (t = t = { children: s }),
+        (t = t =
+            {
+                parentComponent: 'FamilyCenterCommonModal',
+                children: s
+            }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(t))
             : (function (e, r) {

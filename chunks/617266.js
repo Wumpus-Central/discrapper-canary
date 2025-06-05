@@ -23,13 +23,13 @@ var r = n(255367),
     S = n(496675),
     P = n(158776),
     w = n(306680),
-    E = n(699516),
-    C = n(594174),
+    C = n(699516),
+    E = n(594174),
     N = n(55935),
     Z = n(823379),
     L = n(51144),
-    D = n(981631),
-    M = n(490897),
+    M = n(981631),
+    D = n(490897),
     T = n(388032),
     k = n(120575);
 function A(e) {
@@ -171,7 +171,7 @@ function q(e) {
         l = I(e, ['user', 'subLabel']);
     let i = L.ZP.useName(t),
         a = L.ZP.useUserTag(t, { decoration: 'never' }),
-        s = (0, c.e7)([E.Z], () => E.Z.getNickname(t.id)),
+        s = (0, c.e7)([C.Z], () => C.Z.getNickname(t.id)),
         o = (0, c.e7)([P.Z], () => P.Z.getStatus(t.id));
     return (0, r.jsx)(
         F,
@@ -211,11 +211,11 @@ function z(e) {
         l = I(e, ['channel', 'subLabel']);
     let i = (0, c.e7)([_.Z], () => _.Z.getGuild(null == t ? void 0 : t.guild_id)),
         a = (0, p.ZP)(t),
-        s = (0, c.e7)([O.Z, C.default, E.Z], () => {
+        s = (0, c.e7)([O.Z, E.default, C.Z], () => {
             let e = O.Z.getChannel(t.parent_id);
-            return null == e ? null : (0, p.F6)(e, C.default, E.Z, !1);
+            return null == e ? null : (0, p.F6)(e, E.default, C.Z, !1);
         }),
-        u = (0, c.e7)([w.ZP], () => w.ZP.lastMessageTimestamp(t.id, M.W.CHANNEL)),
+        u = (0, c.e7)([w.ZP], () => w.ZP.lastMessageTimestamp(t.id, D.W.CHANNEL)),
         f = null == i ? void 0 : i.name;
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? d.Mmi : d.VL1;
@@ -295,8 +295,8 @@ function H(e) {
                         null != s
                             ? (function (e, t) {
                                   if (t instanceof j.Sf && (0, j.Km)(t.type)) {
-                                      if (null != t.rateLimitPerUser && t.rateLimitPerUser > 0 && !(S.Z.can(D.Plq.MANAGE_CHANNELS, t) || S.Z.can(D.Plq.MANAGE_MESSAGES, t))) return { label: T.intl.string(T.t.Icu3bW) };
-                                      if (t.isThread() || t.isForumPost() || !S.Z.can(D.Plq.USE_APPLICATION_COMMANDS, t)) return { label: T.intl.string(T.t.v8MLq6) };
+                                      if (null != t.rateLimitPerUser && t.rateLimitPerUser > 0 && !(S.Z.can(M.Plq.MANAGE_CHANNELS, t) || S.Z.can(M.Plq.MANAGE_MESSAGES, t))) return { label: T.intl.string(T.t.Icu3bW) };
+                                      if (t.isThread() || t.isForumPost() || !S.Z.can(M.Plq.USE_APPLICATION_COMMANDS, t)) return { label: T.intl.string(T.t.v8MLq6) };
                                       let n = (0, x.dL)(t.id);
                                       if (e.id === n.id) return { label: T.intl.string(T.t.mD4gqa) };
                                   }

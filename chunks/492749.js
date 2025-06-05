@@ -12,8 +12,8 @@ var i = n(255367),
     x = n(388032),
     C = n(275017),
     h = n(36705),
-    g = n(216019);
-function p(e) {
+    p = n(216019);
+function g(e) {
     let { guild: t, onClick: n } = e;
     return (0, i.jsxs)(o.P3F, {
         className: C.clickableGuildRow,
@@ -32,7 +32,7 @@ function p(e) {
             (0, i.jsx)('img', {
                 className: C.__invalid_arrow,
                 alt: '',
-                src: g
+                src: p
             })
         ]
     });
@@ -112,7 +112,7 @@ function f(e) {
 }
 function _(e) {
     let t,
-        { directoryChannelId: n, onClose: l, onGuildChosen: a, handleChooseCreate: d, directoryGuildName: u, availableGuilds: m, addedGuilds: g, loading: _ } = e,
+        { directoryChannelId: n, onClose: l, onGuildChosen: a, handleChooseCreate: d, directoryGuildName: u, availableGuilds: m, addedGuilds: p, loading: _ } = e,
         [j, b] = s.useState(0);
     return (
         (t = _
@@ -140,7 +140,7 @@ function _(e) {
                     })
                   : m.map((e) =>
                         (0, i.jsx)(
-                            p,
+                            g,
                             {
                                 guild: e,
                                 onClick: () => a(e)
@@ -148,7 +148,7 @@ function _(e) {
                             e.id
                         )
                     )
-              : 0 === g.length
+              : 0 === p.length
                 ? (0, i.jsxs)('div', {
                       className: C.emptyContainer,
                       children: [
@@ -165,7 +165,7 @@ function _(e) {
                           })
                       ]
                   })
-                : g.map((e) =>
+                : p.map((e) =>
                       (0, i.jsx)(
                           f,
                           {

@@ -181,6 +181,7 @@ function y(e) {
         children: (0, r.jsxs)(o.Y0X, {
             transitionState: p,
             'aria-labelledby': h,
+            parentComponent: 'EditBenefitModal',
             children: [
                 (0, r.jsxs)(o.xBx, {
                     children: [

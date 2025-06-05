@@ -1,9 +1,9 @@
 o.d(i, { default: () => j }), o(388685);
 var s = o(255367),
     a = o(73800),
-    r = o(392711),
-    t = o.n(r),
-    n = o(481060),
+    n = o(392711),
+    r = o.n(n),
+    t = o(481060),
     l = o(139387),
     d = o(479531),
     c = o(895924),
@@ -16,15 +16,15 @@ var s = o(255367),
     y = o(388032),
     f = o(566670);
 function j(e) {
-    let { applicationIcon: i, applicationId: o, applicationName: r, command: u, guildId: j, onClose: E, transitionState: g } = e,
-        [v, w] = a.useState(null),
-        [C, P] = a.useState(!1),
+    let { applicationIcon: i, applicationId: o, applicationName: n, command: u, guildId: j, onClose: E, transitionState: g } = e,
+        [v, C] = a.useState(null),
+        [P, w] = a.useState(!1),
         { originalApplicationPermissions: z, originalCommandPermissions: N, editedTargetPermissions: O, hasChanges: R, selectedPermissionCount: I } = (0, x.Z)(j, o, u.id),
         _ = a.useCallback(async () => {
-            var e, i, s, a, r;
+            var e, i, s, a, n;
             if (!R) return void E();
-            let n = t().difference(Object.keys(null != (s = u.permissions) ? s : {}), Object.keys(O)),
-                l = t().omit(
+            let t = r().difference(Object.keys(null != (s = u.permissions) ? s : {}), Object.keys(O)),
+                l = r().omit(
                     (function (e) {
                         for (var i = 1; i < arguments.length; i++) {
                             var o = null != arguments[i] ? arguments[i] : {},
@@ -50,19 +50,19 @@ function j(e) {
                         }
                         return e;
                     })({}, O),
-                    n
+                    t
                 ),
                 x = (0, m.bD)(j),
                 h = (0, b.rE)(j, c.Kw.ROLE),
                 y = (0, b.rE)(x, c.Kw.CHANNEL),
                 f = null == (a = null == (e = z[h]) ? void 0 : e.permission) || a,
-                k = null == (r = null == (i = z[y]) ? void 0 : i.permission) || r,
+                k = null == (n = null == (i = z[y]) ? void 0 : i.permission) || n,
                 g = Object.values(l).map((e) => ({
                     id: e.id,
                     permission: e.permission,
                     type: e.type
                 }));
-            w(null), P(!0);
+            C(null), w(!0);
             try {
                 await p.U3({
                     defaultEveryoneValue: f,
@@ -72,13 +72,13 @@ function j(e) {
                     guildId: j,
                     permissions: g
                 }),
-                    P(!1),
+                    w(!1),
                     E();
             } catch (e) {
-                w(new d.Z(e));
+                C(new d.Z(e));
             }
-            P(!1);
-        }, [o, z, u.id, u.permissions, j, R, E, O, w, P]);
+            w(!1);
+        }, [o, z, u.id, u.permissions, j, R, E, O, C, w]);
     a.useEffect(
         () => () => {
             p.Ui(u.id), l.Z.stopEditingCommandPermissions(u.id);
@@ -86,29 +86,30 @@ function j(e) {
         [u.id]
     );
     let D = (0, b.gw)(u.type, u.displayName);
-    return (0, s.jsxs)(n.Y0X, {
+    return (0, s.jsxs)(t.Y0X, {
         'aria-label': y.intl.string(y.t['N+InBQ']),
-        size: n.CgR.MEDIUM,
+        size: t.CgR.MEDIUM,
         transitionState: g,
         className: f.modalRoot,
+        parentComponent: 'CommandPermissionsModal',
         children: [
-            (0, s.jsxs)(n.xBx, {
+            (0, s.jsxs)(t.xBx, {
                 separator: !1,
                 className: f.modalHeader,
                 children: [
                     (0, s.jsx)(k, {
                         icon: i,
                         id: o,
-                        name: r
+                        name: n
                     }),
                     (0, s.jsxs)('div', {
                         className: f.headerDescription,
                         children: [
-                            (0, s.jsx)(n.Text, {
+                            (0, s.jsx)(t.Text, {
                                 variant: 'text-md/semibold',
                                 children: D
                             }),
-                            (0, s.jsx)(n.Text, {
+                            (0, s.jsx)(t.Text, {
                                 color: 'text-muted',
                                 variant: 'text-sm/normal',
                                 children: u.displayDescription
@@ -117,10 +118,10 @@ function j(e) {
                     })
                 ]
             }),
-            (0, s.jsxs)(n.hzk, {
+            (0, s.jsxs)(t.hzk, {
                 className: f.modalBody,
                 children: [
-                    null == v || v.hasFieldErrors() ? null : (0, s.jsx)(n.kzN, { children: v.getAnyErrorMessage() }),
+                    null == v || v.hasFieldErrors() ? null : (0, s.jsx)(t.kzN, { children: v.getAnyErrorMessage() }),
                     (0, s.jsx)(h.Z, {
                         applicationId: o,
                         commandId: u.id,
@@ -133,20 +134,20 @@ function j(e) {
                     })
                 ]
             }),
-            (0, s.jsxs)(n.mzw, {
+            (0, s.jsxs)(t.mzw, {
                 className: f.modalFooter,
                 children: [
-                    (0, s.jsx)(n.zxk, {
+                    (0, s.jsx)(t.zxk, {
                         type: 'submit',
-                        disabled: C,
+                        disabled: P,
                         onClick: _,
-                        color: !0 === R ? n.zxk.Colors.GREEN : n.zxk.Colors.PRIMARY,
+                        color: !0 === R ? t.zxk.Colors.GREEN : t.zxk.Colors.PRIMARY,
                         children: y.intl.string(y.t.R3BPHx)
                     }),
-                    (0, s.jsx)(n.zxk, {
+                    (0, s.jsx)(t.zxk, {
                         onClick: E,
-                        look: n.zxk.Looks.LINK,
-                        color: n.zxk.Colors.PRIMARY,
+                        look: t.zxk.Looks.LINK,
+                        color: t.zxk.Colors.PRIMARY,
                         children: y.intl.string(y.t['ETE/oK'])
                     })
                 ]
@@ -161,9 +162,9 @@ function k(e) {
             icon: i,
             size: 40
         });
-    return (0, s.jsx)(n.qEK, {
+    return (0, s.jsx)(t.qEK, {
         src: a,
-        size: n.EFr.SIZE_40,
+        size: t.EFr.SIZE_40,
         'aria-hidden': !0
     });
 }

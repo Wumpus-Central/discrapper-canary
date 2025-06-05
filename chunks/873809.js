@@ -1,4 +1,4 @@
-n.d(s, { default: () => h }), n(388685);
+n.d(s, { default: () => d }), n(388685);
 var t = n(255367),
     i = n(73800),
     r = n(481060),
@@ -23,6 +23,7 @@ class c extends i.PureComponent {
         return (0, t.jsxs)(r.Y0X, {
             transitionState: e,
             'aria-label': s,
+            parentComponent: 'VideoDevicesWarningModal',
             children: [
                 (0, t.jsxs)(r.hzk, {
                     className: l.content,
@@ -74,4 +75,4 @@ class c extends i.PureComponent {
             });
     }
 }
-let h = c;
+let d = c;

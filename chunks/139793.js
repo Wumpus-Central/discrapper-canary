@@ -9,7 +9,7 @@ function s(e) {
         c = (0, i.e7)([o.Z], () => o.Z.isFetchingUserOutbox(t)),
         u = (0, r.useCallback)(
             (e) => {
-                e && (n({ action: 'VIEW' }), l(!0));
+                e && (n({ action: 'VIEW_ACTIVITY_CARD' }), l(!0));
             },
             [n]
         );

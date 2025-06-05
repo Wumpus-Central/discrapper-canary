@@ -1,7 +1,7 @@
 n.d(t, { default: () => C });
 var r = n(255367),
-    c = n(73800),
-    o = n(442837),
+    o = n(73800),
+    c = n(442837),
     i = n(481060),
     a = n(809206),
     s = n(410030),
@@ -13,10 +13,10 @@ var r = n(255367),
     b = n(164946),
     g = n(25990),
     O = n(594174),
-    j = n(668826),
-    y = n(120421),
-    h = n(477839),
-    m = n(760209),
+    m = n(668826),
+    j = n(120421),
+    y = n(477839),
+    h = n(760209),
     k = n(388032),
     x = n(918991),
     P = n(688401),
@@ -26,36 +26,36 @@ function C(e) {
     var t,
         n,
         { analyticsLocations: C } = e,
-        Z = (function (e, t) {
+        z = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                c = (function (e, t) {
+                o = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        c = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (c[n] = e[n]);
-                    return c;
+                        o = {},
+                        c = Object.keys(e);
+                    for (r = 0; r < c.length; r++) (n = c[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                    return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (c[n] = e[n]);
+                var c = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < c.length; r++) (n = c[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
-            return c;
+            return o;
         })(e, ['analyticsLocations']);
-    let z = (0, o.e7)([O.default], () => O.default.getCurrentUser()),
+    let Z = (0, c.e7)([O.default], () => O.default.getCurrentUser()),
         D = (0, s.ZP)(),
         { analyticsLocations: E } = (0, l.ZP)(C),
-        S = (0, o.e7)([y.Z], () => y.Z.isRedeemingPrize),
-        M = (0, o.e7)([u.Z], () => u.Z.isFetching),
+        M = (0, c.e7)([j.Z], () => j.Z.isRedeemingPrize),
+        S = (0, c.e7)([u.Z], () => u.Z.isFetching),
         N = (0, p.hv)('ClickerGameRedeemPrizeModal');
     return (
-        (0, c.useEffect)(() => {
-            null != z &&
+        (0, o.useEffect)(() => {
+            null != Z &&
                 (async () => {
-                    await (0, j.YM)(z),
+                    await (0, m.YM)(Z),
                         (0, f.qg)({
                             variantsReturnStyle: N,
                             location: 'ClickerGameRedeemPrizeModal'
@@ -88,9 +88,10 @@ function C(e) {
                         });
                 }
                 return e;
-            })({}, Z)),
+            })({}, z)),
             (n = n =
                 {
+                    parentComponent: 'ClickerGameRedeemPrizeModal',
                     children: [
                         (0, r.jsx)('img', {
                             className: x.decorationBackground,
@@ -108,11 +109,11 @@ function C(e) {
                                 (0, r.jsx)(i.X6q, {
                                     className: x.header,
                                     variant: 'heading-md/bold',
-                                    children: k.intl.string(m.default.B0jZ3t)
+                                    children: k.intl.string(h.default.B0jZ3t)
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-md/normal',
-                                    children: k.intl.string(m.default.aexiND)
+                                    children: k.intl.string(h.default.aexiND)
                                 })
                             ]
                         }),
@@ -120,9 +121,9 @@ function C(e) {
                             children: [
                                 (0, r.jsx)(i.zxk, {
                                     onClick: () => {
-                                        Z.onClose(),
+                                        z.onClose(),
                                             (0, d.ps)({
-                                                initialSelectedDecorationId: h.MH,
+                                                initialSelectedDecorationId: y.MH,
                                                 analyticsLocations: E,
                                                 onClose: () => {
                                                     let e = g.Z.getAllPending(),
@@ -131,11 +132,11 @@ function C(e) {
                                                 }
                                             });
                                     },
-                                    submitting: S || M,
+                                    submitting: M || S,
                                     children: k.intl.string(k.t.BVcYCw)
                                 }),
                                 (0, r.jsx)(i.zxk, {
-                                    onClick: Z.onClose,
+                                    onClick: z.onClose,
                                     look: i.zxk.Looks.LINK,
                                     color: i.zxk.Colors.PRIMARY,
                                     children: k.intl.string(k.t['ETE/oK'])

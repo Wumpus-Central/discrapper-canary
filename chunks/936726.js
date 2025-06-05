@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(35282), n(388685), n(539854);
+n.d(t, { Z: () => w }), n(35282), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -78,17 +78,17 @@ function E(e, t) {
               discriminator: v.fo$
           });
 }
-function P(e) {
-    let { id: t, webhook: n, editedWebhook: l, channelOptions: g, isExpanded: h, isNew: O, errors: P, onToggleExpand: w } = e,
+function w(e) {
+    let { id: t, webhook: n, editedWebhook: l, channelOptions: g, isExpanded: h, isNew: O, errors: w, onToggleExpand: P } = e,
         [T, Z] = i.useState(!1),
         [k] = i.useState(new s.V7());
     i.useEffect(() => () => k.stop(), [k]);
     let A = i.useMemo(() => E(n, n.avatar), [n]),
-        D = i.useCallback(() => {
+        R = i.useCallback(() => {
             let e = ''.concat((0, a.K0)(!1)).concat(v.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
             (0, x.JG)(e);
         }, [n]),
-        R = i.useCallback(() => {
+        D = i.useCallback(() => {
             (0, c.h7j)((e) =>
                 (0, r.jsx)(
                     c.ConfirmModal,
@@ -157,11 +157,11 @@ function P(e) {
                                             imageClassName: C.avatarUploaderInner,
                                             showIcon: !0
                                         }),
-                                        null != P.avatar && '' !== P.avatar
+                                        null != w.avatar && '' !== w.avatar
                                             ? (0, r.jsx)(c.Text, {
                                                   color: 'text-danger',
                                                   variant: 'text-sm/normal',
-                                                  children: P.avatar
+                                                  children: w.avatar
                                               })
                                             : null
                                     ]
@@ -182,7 +182,7 @@ function P(e) {
                                                             u.Z.updateWebhook({ name: e });
                                                         },
                                                         maxLength: 80,
-                                                        error: P.name
+                                                        error: w.name
                                                     })
                                                 })
                                             }),
@@ -236,7 +236,7 @@ function P(e) {
                                                         I(N({}, s), {
                                                             'aria-label': '',
                                                             onClick: () => {
-                                                                null == t || t(), Z(!0), c.uvj.announce(_.intl.string(_.t.wwdb3t)), k.start(1000, () => Z(!1)), D();
+                                                                null == t || t(), Z(!0), c.uvj.announce(_.intl.string(_.t.wwdb3t)), k.start(1000, () => Z(!1)), R();
                                                             },
                                                             size: c.zxk.Sizes.SMALL,
                                                             color: c.zxk.Colors.PRIMARY,
@@ -249,7 +249,7 @@ function P(e) {
                                                 }
                                             }),
                                             (0, r.jsx)(c.zxk, {
-                                                onClick: R,
+                                                onClick: D,
                                                 size: c.zxk.Sizes.SMALL,
                                                 color: c.zxk.Colors.RED,
                                                 look: c.zxk.Looks.LINK,
@@ -273,7 +273,7 @@ function P(e) {
                     (0, r.jsx)(c.P3F, {
                         className: C.header,
                         'aria-expanded': h,
-                        onClick: w,
+                        onClick: P,
                         children: (0, r.jsxs)(m.Z, {
                             align: m.Z.Align.CENTER,
                             children: [

@@ -125,6 +125,7 @@ function h(e) {
                         fullscreenOnMobile: !1,
                         onClick: t,
                         'aria-label': O.intl.string(O.t.AMTX3t),
+                        parentComponent: 'MediaViewerModal',
                         children: (0, a.jsxs)(g.z.Provider, {
                             value: D,
                             children: [

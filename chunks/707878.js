@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var i = n(255367),
     r = n(73800),
     o = n(442837),
@@ -66,4 +66,4 @@ class y extends r.PureComponent {
                 : (this[t] = n);
     }
 }
-let _ = o.ZP.connectStores([c.default], () => ({ opacity: c.default.getTextWidgetOpacity() }))(y);
+let v = o.ZP.connectStores([c.default], () => ({ opacity: c.default.getTextWidgetOpacity() }))(y);

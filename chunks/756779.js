@@ -1,16 +1,16 @@
 r.d(s, { default: () => L }), r(953529);
-var i = r(255367);
+var o = r(255367);
 r(73800);
-var o = r(512722),
-    n = r.n(o),
+var n = r(512722),
+    i = r.n(n),
     a = r(990547),
     t = r(442837),
     d = r(481060),
     l = r(782568),
     c = r(213609),
     p = r(357352),
-    m = r(313201),
-    u = r(70097),
+    u = r(313201),
+    m = r(70097),
     _ = r(434404),
     h = r(690221),
     b = r(695346),
@@ -18,49 +18,50 @@ var o = r(512722),
     x = r(63063),
     N = r(981631),
     S = r(921944),
-    R = r(20281),
-    C = r(476047);
+    C = r(20281),
+    R = r(476047);
 let v = [N.oNc.CREATOR_MONETIZABLE, N.oNc.CREATOR_MONETIZABLE_PROVISIONAL];
 function L(e) {
-    let { transitionState: s, onClose: r, guildId: o, markAsDismissed: L } = e,
-        j = (0, m.Dt)(),
-        I = (0, t.e7)([g.Z], () => g.Z.getGuild(o));
-    n()(null != I, 'Guild must be defined'),
+    let { transitionState: s, onClose: r, guildId: n, markAsDismissed: L } = e,
+        j = (0, u.Dt)(),
+        I = (0, t.e7)([g.Z], () => g.Z.getGuild(n));
+    i()(null != I, 'Guild must be defined'),
         (0, c.Z)({
-            type: R.n.MODAL,
+            type: C.n.MODAL,
             name: a.ImpressionNames.GUILD_SHOP_UPSELL,
-            properties: { passed_in_guild_id: o }
+            properties: { passed_in_guild_id: n }
         });
     let O = b.QK.useSetting();
-    return (0, i.jsxs)(d.Y0X, {
+    return (0, o.jsxs)(d.Y0X, {
         size: d.CgR.LARGE,
-        className: C.__invalid_root,
+        className: R.__invalid_root,
         transitionState: s,
         'aria-labelledby': j,
+        parentComponent: 'GuildProductsUpsellModal',
         children: [
-            (0, i.jsxs)(d.xBx, {
+            (0, o.jsxs)(d.xBx, {
                 separator: !1,
-                className: C.header,
+                className: R.header,
                 children: [
-                    (0, i.jsx)(d.olH, {
-                        className: C.closeButton,
+                    (0, o.jsx)(d.olH, {
+                        className: R.closeButton,
                         onClick: r
                     }),
-                    (0, i.jsx)(d.X6q, {
+                    (0, o.jsx)(d.X6q, {
                         variant: 'heading-xl/medium',
                         color: 'header-primary',
                         id: j,
                         children: 'Server Shop is now open for business!'
                     }),
-                    (0, i.jsx)(d.LZC, { size: 6 }),
-                    (0, i.jsx)(d.Text, {
+                    (0, o.jsx)(d.LZC, { size: 6 }),
+                    (0, o.jsx)(d.Text, {
                         variant: 'text-md/normal',
-                        className: C.description,
+                        className: R.description,
                         color: 'header-secondary',
                         children: 'Introducing a single place to sell downloadable products, monthly Server Subscriptions, and Premium Roles right inside Discord. From PDF guides and digital stickers to gated channels and premium roles, Server Shop gives you two new ways to engage your community\u2014and earn from your expertise.'
                     }),
-                    (0, i.jsx)(d.LZC, { size: 8 }),
-                    (0, i.jsx)(h.Z, {
+                    (0, o.jsx)(d.LZC, { size: 8 }),
+                    (0, o.jsx)(h.Z, {
                         onClick: () => {
                             L(S.L.SECONDARY);
                             let e = ''.concat(x.Z.getCreatorSupportArticleURL(N.BhN.SERVER_SUBSCRIPTION_AND_PRODUCTS), '#docs-internal-guid-918e991a-7fff-03d5-8326-5d065e5edeb1');
@@ -70,40 +71,40 @@ function L(e) {
                     })
                 ]
             }),
-            (0, i.jsx)('div', { className: C.divider }),
-            (0, i.jsxs)(d.hzk, {
-                className: C.content,
+            (0, o.jsx)('div', { className: R.divider }),
+            (0, o.jsxs)(d.hzk, {
+                className: R.content,
                 children: [
                     O
-                        ? (0, i.jsx)('img', {
+                        ? (0, o.jsx)('img', {
                               src: (0, p.b)('server_products/upsell/demo2.png'),
                               alt: '',
-                              className: C.demo
+                              className: R.demo
                           })
-                        : (0, i.jsx)(u.Z, {
+                        : (0, o.jsx)(m.Z, {
                               autoPlay: !0,
                               loop: !0,
-                              className: C.demo,
+                              className: R.demo,
                               width: 400,
                               poster: (0, p.b)('server_products/upsell/demo2.png'),
                               src: (0, p.b)('server_products/upsell/demo.mp4')
                           }),
-                    (0, i.jsx)('img', {
+                    (0, o.jsx)('img', {
                         src: (0, p.b)('server_products/upsell/new_sales.png'),
                         alt: '',
-                        className: C.earningsImage
+                        className: R.earningsImage
                     })
                 ]
             }),
-            (0, i.jsxs)(d.mzw, {
+            (0, o.jsxs)(d.mzw, {
                 children: [
-                    (0, i.jsx)(d.zxk, {
+                    (0, o.jsx)(d.zxk, {
                         onClick: () => {
-                            v.some((e) => I.hasFeature(e)) ? _.Z.open(o, N.pNK.GUILD_PRODUCTS) : _.Z.open(o, N.pNK.ROLE_SUBSCRIPTIONS), L(S.L.PRIMARY), r();
+                            v.some((e) => I.hasFeature(e)) ? _.Z.open(n, N.pNK.GUILD_PRODUCTS) : _.Z.open(n, N.pNK.ROLE_SUBSCRIPTIONS), L(S.L.PRIMARY), r();
                         },
                         children: 'Check it out'
                     }),
-                    (0, i.jsx)(d.LZC, {
+                    (0, o.jsx)(d.LZC, {
                         size: 12,
                         horizontal: !0
                     })

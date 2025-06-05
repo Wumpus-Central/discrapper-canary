@@ -49,6 +49,7 @@ function v(e) {
     return (0, i.jsxs)(u.Y0X, {
         transitionState: r,
         'aria-label': O.intl.string(O.t['E9kB4+']),
+        parentComponent: 'SubscriptionRenewalMutationNotice',
         children: [
             (0, i.jsxs)(u.xBx, {
                 justify: f.Z.Justify.BETWEEN,

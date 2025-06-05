@@ -82,12 +82,12 @@ let h = function (e) {
         h = (0, d.e)({ getOptions: c.bM }),
         p = (0, d.e)({ getOptions: c.cc }),
         x = t === O.aZ.BAD,
-        T = i.useMemo(() => {
+        S = i.useMemo(() => {
             let e = [];
             return x && e.push(h), e.push(p), e.every(c.cp);
         }, [x, p, h]),
-        S = i.useCallback(() => {
-            T &&
+        T = i.useCallback(() => {
+            S &&
                 (s.ZP.trackWithMetadata(f.rMx.SEARCH_RESULTS_FEEDBACK_SUBMITTED, {
                     rating: t,
                     unsatisfied_question_option: x ? (0, c.HO)(h) : null,
@@ -96,11 +96,12 @@ let h = function (e) {
                     describe_search_question_text: (0, c.sG)(p)
                 }),
                 r());
-        }, [h, x, T, r, t, p]);
+        }, [h, x, S, r, t, p]);
     return (0, l.jsxs)(u.Y0X, {
         size: u.CgR.MEDIUM,
         transitionState: n,
         'aria-labelledby': a,
+        parentComponent: 'SearchResultsFeedbackModal',
         children: [
             (0, l.jsxs)(u.xBx, {
                 separator: !1,
@@ -134,8 +135,8 @@ let h = function (e) {
                     }),
                     (0, l.jsx)(u.zxk, {
                         size: u.zxk.Sizes.MEDIUM,
-                        onClick: S,
-                        disabled: !T,
+                        onClick: T,
+                        disabled: !S,
                         children: v.intl.string(v.t['4Zpxtr'])
                     })
                 ]

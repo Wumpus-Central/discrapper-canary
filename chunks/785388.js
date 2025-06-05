@@ -496,6 +496,7 @@ function et(e) {
             transitionState: s,
             size: h.CgR.DYNAMIC,
             className: H.container,
+            parentComponent: 'MessageReactions',
             children: [
                 l
                     ? null

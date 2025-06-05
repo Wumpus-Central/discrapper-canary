@@ -224,6 +224,7 @@ function y(e) {
         transitionState: r,
         size: l.CgR.SMALL,
         className: b.modal,
+        parentComponent: 'DisableRiskyPermsModal',
         children: [
             (0, n.jsx)(h, { guild: t }),
             (0, n.jsx)(g, { permissions: c }),

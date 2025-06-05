@@ -2,15 +2,15 @@ n.d(t, { ActivityAgeGateModal: () => s });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    c = n(480916),
-    o = n(986035),
-    l = n(388032),
-    a = n(165862);
+    o = n(480916),
+    c = n(986035),
+    a = n(388032),
+    l = n(165862);
 function s(e) {
     var t,
         n,
-        { application: s, onAgree: u, onClose: p, onDisagree: g, channelId: f } = e,
-        d = (function (e, t) {
+        { application: s, onAgree: u, onClose: p, onDisagree: g, channelId: d } = e,
+        f = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -19,13 +19,13 @@ function s(e) {
                     var n,
                         r,
                         i = {},
-                        c = Object.keys(e);
-                    for (r = 0; r < c.length; r++) (n = c[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var c = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < c.length; r++) (n = c[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ['application', 'onAgree', 'onClose', 'onDisagree', 'channelId']);
@@ -55,24 +55,25 @@ function s(e) {
                     });
             }
             return e;
-        })({}, d)),
+        })({}, f)),
         (n = n =
             {
+                parentComponent: 'ActivityAgeGateModal',
                 children: (0, r.jsx)('div', {
-                    children: (0, r.jsx)(o.Z, {
-                        modalType: c.it.NSFW_EMBEDDED_ACTIVITY,
-                        channelId: f,
+                    children: (0, r.jsx)(c.Z, {
+                        modalType: o.it.NSFW_EMBEDDED_ACTIVITY,
+                        channelId: d,
                         onAgree: () => {
                             u(), p();
                         },
                         onDisagree: () => {
                             g(), p();
                         },
-                        title: l.intl.string(l.t.SSDPOD),
-                        description: l.intl.formatToPlainString(l.t.OgmIq6, { applicationName: s.name }),
-                        agreement: l.intl.string(l.t.wVq7ur),
-                        disagreement: l.intl.string(l.t.hg1uxs),
-                        imageClassName: a.image
+                        title: a.intl.string(a.t.SSDPOD),
+                        description: a.intl.formatToPlainString(a.t.OgmIq6, { applicationName: s.name }),
+                        agreement: a.intl.string(a.t.wVq7ur),
+                        disagreement: a.intl.string(a.t.hg1uxs),
+                        imageClassName: l.image
                     })
                 })
             }),

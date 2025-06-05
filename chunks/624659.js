@@ -29,7 +29,7 @@ function N() {
 }
 function T(e) {
     var t, n;
-    let { header: r, body: o, problems: E, transitionState: T, feedbackProblems: y = {}, otherKey: x, hasCloseButton: I, onSubmit: C, onClose: k, canDismissForever: j = !0, showHelpdeskLink: A = !0 } = e,
+    let { header: r, body: o, problems: E, transitionState: T, feedbackProblems: y = {}, otherKey: x, hasCloseButton: C, onSubmit: I, onClose: k, canDismissForever: j = !0, showHelpdeskLink: A = !0 } = e,
         R = (0, d.Z)(E),
         [L, D] = a.useState(!1),
         [P, B] = a.useState(null),
@@ -39,7 +39,7 @@ function T(e) {
         $ = (0, _.Dt)(),
         G = (0, f.Z)(L),
         Y = (0, f.Z)(P),
-        z = (0, f.Z)(C),
+        z = (0, f.Z)(I),
         K = (0, f.Z)(U),
         W = (0, f.Z)(H),
         V = null != P ? y[P] : null,
@@ -59,6 +59,7 @@ function T(e) {
         (0, l.jsxs)(u.Y0X, {
             transitionState: T,
             'aria-labelledby': $,
+            parentComponent: 'SimpleFeedbackModal',
             children: [
                 (0, l.jsx)(h.Z, {}),
                 (0, l.jsxs)(u.xBx, {
@@ -78,7 +79,7 @@ function T(e) {
                             className: i()(p.ratingBody, S.headerBody),
                             children: null != (t = null == V ? void 0 : V.subheader) ? t : o
                         }),
-                        I
+                        C
                             ? (0, l.jsx)(u.olH, {
                                   className: p.modalCloseButton,
                                   onClick: function () {

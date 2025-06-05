@@ -187,6 +187,7 @@ function G(e) {
         children: (0, r.jsxs)(m.Y0X, {
             transitionState: t,
             'aria-labelledby': _,
+            parentComponent: 'ImportBenefitsModal',
             children: [
                 (0, r.jsxs)(m.xBx, {
                     children: [
@@ -523,6 +524,7 @@ function H(e) {
     return (0, r.jsx)(m.Y0X, {
         transitionState: t,
         'aria-labelledby': null == a ? Z : D,
+        parentComponent: 'ImportBenefitsModal',
         children: (0, r.jsxs)(m.MyZ, {
             contentDisplay: 'flex',
             activeSlide: +(null != a),

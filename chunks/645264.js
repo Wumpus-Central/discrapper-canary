@@ -44,6 +44,7 @@ let b = () =>
                           size: o.CgR.DYNAMIC,
                           className: p.container,
                           hideShadow: !0,
+                          parentComponent: 'MemberVerificationModal',
                           children: [
                               (0, r.jsx)('div', {
                                   className: p.closeButton,

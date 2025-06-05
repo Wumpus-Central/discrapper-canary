@@ -4,22 +4,22 @@ var t = a(255367),
     s = a(392711),
     i = a.n(s),
     r = a(442837),
-    c = a(481060),
-    o = a(741361),
+    o = a(481060),
+    c = a(741361),
     d = a(596454),
     m = a(447003),
     x = a(471445),
     h = a(605436),
     u = a(313201),
-    j = a(633302),
-    p = a(984933),
+    p = a(633302),
+    j = a(984933),
     v = a(388032),
     C = a(319337);
 function f(e) {
     var l, n, s;
     let { onClose: i, handleReviewPermissions: r } = e,
-        o = (e) =>
-            (0, t.jsx)(c.Text, {
+        c = (e) =>
+            (0, t.jsx)(o.Text, {
                 tag: 'span',
                 variant: 'text-md/medium',
                 color: 'header-primary',
@@ -27,7 +27,7 @@ function f(e) {
             });
     return (0, t.jsxs)(t.Fragment, {
         children: [
-            (0, t.jsxs)(c.hzk, {
+            (0, t.jsxs)(o.hzk, {
                 className: C.infoContent,
                 children: [
                     (0, t.jsxs)('div', {
@@ -39,7 +39,7 @@ function f(e) {
                                 alt: '',
                                 src: a(592614)
                             }),
-                            (0, t.jsx)(c.X6q, {
+                            (0, t.jsx)(o.X6q, {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
                                 children: v.intl.string(v.t.PJOCLy)
@@ -53,12 +53,12 @@ function f(e) {
                                 children: [
                                     (0, t.jsx)('div', {
                                         className: C.iconWrapper,
-                                        children: (0, t.jsx)(d.Z, { emojiName: null == (l = j.ZP.getByName('eyes')) ? void 0 : l.surrogates })
+                                        children: (0, t.jsx)(d.Z, { emojiName: null == (l = p.ZP.getByName('eyes')) ? void 0 : l.surrogates })
                                     }),
-                                    (0, t.jsx)(c.Text, {
+                                    (0, t.jsx)(o.Text, {
                                         variant: 'text-md/normal',
                                         color: 'text-muted',
-                                        children: v.intl.format(v.t['8JzOBg'], { emphasisHook: o })
+                                        children: v.intl.format(v.t['8JzOBg'], { emphasisHook: c })
                                     })
                                 ]
                             }),
@@ -67,12 +67,12 @@ function f(e) {
                                 children: [
                                     (0, t.jsx)('div', {
                                         className: C.iconWrapper,
-                                        children: (0, t.jsx)(d.Z, { emojiName: null == (n = j.ZP.getByName('star_struck')) ? void 0 : n.surrogates })
+                                        children: (0, t.jsx)(d.Z, { emojiName: null == (n = p.ZP.getByName('star_struck')) ? void 0 : n.surrogates })
                                     }),
-                                    (0, t.jsx)(c.Text, {
+                                    (0, t.jsx)(o.Text, {
                                         variant: 'text-md/normal',
                                         color: 'text-muted',
-                                        children: v.intl.format(v.t.UcGDkp, { emphasisHook: o })
+                                        children: v.intl.format(v.t.UcGDkp, { emphasisHook: c })
                                     })
                                 ]
                             }),
@@ -81,12 +81,12 @@ function f(e) {
                                 children: [
                                     (0, t.jsx)('div', {
                                         className: C.iconWrapper,
-                                        children: (0, t.jsx)(d.Z, { emojiName: null == (s = j.ZP.getByName('books')) ? void 0 : s.surrogates })
+                                        children: (0, t.jsx)(d.Z, { emojiName: null == (s = p.ZP.getByName('books')) ? void 0 : s.surrogates })
                                     }),
-                                    (0, t.jsx)(c.Text, {
+                                    (0, t.jsx)(o.Text, {
                                         variant: 'text-md/normal',
                                         color: 'text-muted',
-                                        children: v.intl.format(v.t.kALJ5u, { emphasisHook: o })
+                                        children: v.intl.format(v.t.kALJ5u, { emphasisHook: c })
                                     })
                                 ]
                             })
@@ -94,22 +94,22 @@ function f(e) {
                     })
                 ]
             }),
-            (0, t.jsxs)(c.mzw, {
+            (0, t.jsxs)(o.mzw, {
                 children: [
-                    (0, t.jsx)(c.zxk, {
+                    (0, t.jsx)(o.zxk, {
                         onClick: r,
-                        children: (0, t.jsx)(c.Text, {
+                        children: (0, t.jsx)(o.Text, {
                             variant: 'text-md/medium',
                             color: 'always-white',
                             children: v.intl.string(v.t.bEnlen)
                         })
                     }),
-                    (0, t.jsx)(c.zxk, {
+                    (0, t.jsx)(o.zxk, {
                         className: C.__invalid_modalCancel,
-                        look: c.zxk.Looks.LINK,
-                        color: c.zxk.Colors.PRIMARY,
+                        look: o.zxk.Looks.LINK,
+                        color: o.zxk.Colors.PRIMARY,
                         onClick: i,
-                        children: (0, t.jsx)(c.Text, {
+                        children: (0, t.jsx)(o.Text, {
                             variant: 'text-md/medium',
                             children: v.intl.string(v.t['ETE/oK'])
                         })
@@ -122,15 +122,15 @@ function f(e) {
 function b(e) {
     var l;
     let { channel: a, selected: s, onChange: i } = e,
-        r = null != (l = (0, x.KS)(a)) ? l : c.VL1,
-        o = n.useCallback(() => {
+        r = null != (l = (0, x.KS)(a)) ? l : o.VL1,
+        c = n.useCallback(() => {
             i(a);
         }, [a, i]);
-    return (0, t.jsxs)(c.P3F, {
+    return (0, t.jsxs)(o.P3F, {
         'aria-label': a.name,
         'aria-checked': s,
         className: C.selectableChannelRow,
-        onClick: o,
+        onClick: c,
         children: [
             (0, t.jsxs)('div', {
                 className: C.selectableChannelCellFirst,
@@ -140,7 +140,7 @@ function b(e) {
                         size: 'xs',
                         color: 'currentColor'
                     }),
-                    (0, t.jsx)(c.Text, {
+                    (0, t.jsx)(o.Text, {
                         className: C.__invalid_channelName,
                         variant: 'text-md/medium',
                         color: 'text-normal',
@@ -151,8 +151,8 @@ function b(e) {
             }),
             (0, t.jsx)('div', {
                 className: C.selectableChannelCellSecond,
-                children: (0, t.jsx)(c.XZJ, {
-                    type: c.XZJ.Types.INVERTED,
+                children: (0, t.jsx)(o.XZJ, {
+                    type: o.XZJ.Types.INVERTED,
                     value: s,
                     displayOnly: !0
                 })
@@ -162,15 +162,15 @@ function b(e) {
 }
 function g(e) {
     let { transitionState: l, onClose: a, guildId: s, startingChannelId: d } = e,
-        x = (0, r.Wu)([p.ZP], () => {
+        x = (0, r.Wu)([j.ZP], () => {
             var e, l;
-            let a = p.ZP.getChannels(s);
-            return (null != (e = a[p.sH]) ? e : [])
-                .concat(null != (l = a[p.Zb]) ? l : [])
+            let a = j.ZP.getChannels(s);
+            return (null != (e = a[j.sH]) ? e : [])
+                .concat(null != (l = a[j.Zb]) ? l : [])
                 .filter((e) => (0, m.Z)(e.channel))
                 .map((e) => e.channel);
         }),
-        [j, g] = n.useState(0),
+        [p, g] = n.useState(0),
         k = x.find((e) => e.id === d),
         [N, _] = n.useState(null != k ? [k] : []),
         T = (0, u.Dt)(),
@@ -190,36 +190,38 @@ function g(e) {
         A = n.useCallback(() => {
             N.forEach((e) => {
                 let l = (0, h._A)(e, e.accessPermissions, !0);
-                (0, o.hw)(e.id, [l]), a();
+                (0, c.hw)(e.id, [l]), a();
             });
         }, [N, a]);
-    return 0 === j
-        ? (0, t.jsx)(c.Y0X, {
+    return 0 === p
+        ? (0, t.jsx)(o.Y0X, {
               transitionState: l,
               'aria-labelledby': T,
-              size: c.CgR.SMALL,
+              size: o.CgR.SMALL,
+              parentComponent: 'DeprivateModal',
               children: (0, t.jsx)(f, {
                   handleReviewPermissions: z,
                   onClose: a
               })
           })
-        : (0, t.jsxs)(c.Y0X, {
+        : (0, t.jsxs)(o.Y0X, {
               transitionState: l,
               'aria-labelledby': T,
-              size: c.CgR.SMALL,
+              size: o.CgR.SMALL,
+              parentComponent: 'DeprivateModal',
               children: [
-                  (0, t.jsxs)(c.hzk, {
+                  (0, t.jsxs)(o.hzk, {
                       className: C.updateContent,
                       children: [
                           (0, t.jsxs)('div', {
                               className: C.modalHeader,
                               children: [
-                                  (0, t.jsx)(c.X6q, {
+                                  (0, t.jsx)(o.X6q, {
                                       variant: 'heading-lg/semibold',
                                       color: 'header-primary',
                                       children: v.intl.string(v.t.y77PiY)
                                   }),
-                                  (0, t.jsx)(c.Text, {
+                                  (0, t.jsx)(o.Text, {
                                       className: C.__invalid_modalSubheader,
                                       variant: 'text-sm/normal',
                                       color: 'header-secondary',
@@ -230,24 +232,24 @@ function g(e) {
                           (0, t.jsxs)('div', {
                               className: C.selectAllContainer,
                               children: [
-                                  (0, t.jsx)(c.Text, {
+                                  (0, t.jsx)(o.Text, {
                                       className: C.selectAllTitle,
                                       variant: 'text-xs/semibold',
                                       color: 'text-muted',
                                       children: v.intl.format(v.t.rrYCq6, { count: x.length })
                                   }),
-                                  (0, t.jsxs)(c.P3F, {
+                                  (0, t.jsxs)(o.P3F, {
                                       'aria-label': v.intl.string(v.t.l4rqa2),
                                       className: C.selectAllButton,
                                       onClick: L,
                                       children: [
-                                          (0, t.jsx)(c.Text, {
+                                          (0, t.jsx)(o.Text, {
                                               variant: 'text-xs/normal',
                                               children: v.intl.string(v.t.l4rqa2)
                                           }),
-                                          (0, t.jsx)(c.XZJ, {
+                                          (0, t.jsx)(o.XZJ, {
                                               size: 16,
-                                              type: c.XZJ.Types.INVERTED,
+                                              type: o.XZJ.Types.INVERTED,
                                               value: y,
                                               displayOnly: !0
                                           })
@@ -271,19 +273,19 @@ function g(e) {
                           }),
                           (0, t.jsx)('div', {
                               className: C.deprivateExplainer,
-                              children: (0, t.jsx)(c.Text, {
+                              children: (0, t.jsx)(o.Text, {
                                   variant: 'text-xs/normal',
                                   color: 'text-muted',
                                   children: v.intl.format(v.t['OP/pKi'], {
                                       emphasisHook: (e) =>
-                                          (0, t.jsx)(c.Text, {
+                                          (0, t.jsx)(o.Text, {
                                               tag: 'span',
                                               variant: 'text-xs/medium',
                                               color: 'interactive-active',
                                               children: e
                                           }),
                                       brandHook: (e) =>
-                                          (0, t.jsx)(c.Text, {
+                                          (0, t.jsx)(o.Text, {
                                               tag: 'span',
                                               variant: 'text-xs/normal',
                                               color: 'text-brand',
@@ -294,23 +296,23 @@ function g(e) {
                           })
                       ]
                   }),
-                  (0, t.jsxs)(c.mzw, {
+                  (0, t.jsxs)(o.mzw, {
                       className: C.modalFooter,
                       children: [
-                          (0, t.jsx)(c.zxk, {
+                          (0, t.jsx)(o.zxk, {
                               disabled: 0 === N.length,
                               onClick: A,
-                              children: (0, t.jsx)(c.Text, {
+                              children: (0, t.jsx)(o.Text, {
                                   variant: 'text-md/medium',
                                   color: 'always-white',
                                   children: v.intl.string(v.t.PggHmp)
                               })
                           }),
-                          (0, t.jsx)(c.zxk, {
-                              look: c.zxk.Looks.LINK,
-                              color: c.zxk.Colors.PRIMARY,
+                          (0, t.jsx)(o.zxk, {
+                              look: o.zxk.Looks.LINK,
+                              color: o.zxk.Colors.PRIMARY,
                               onClick: a,
-                              children: (0, t.jsx)(c.Text, {
+                              children: (0, t.jsx)(o.Text, {
                                   variant: 'text-md/medium',
                                   children: v.intl.string(v.t['ETE/oK'])
                               })

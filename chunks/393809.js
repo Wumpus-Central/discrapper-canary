@@ -1,6 +1,6 @@
 n.d(r, { default: () => E }), n(388685);
-var i = n(255367),
-    e = n(73800),
+var e = n(255367),
+    i = n(73800),
     a = n(481060),
     o = n(53365),
     c = n(377176),
@@ -8,8 +8,8 @@ var i = n(255367),
     l = n(339500);
 function E(t) {
     let { guildId: r, transitionState: n, onClose: E } = t,
-        [T, _] = e.useState(!1),
-        [A, N] = e.useState(!1),
+        [T, _] = i.useState(!1),
+        [A, N] = i.useState(!1),
         u = async () => {
             _(!0);
             try {
@@ -19,52 +19,53 @@ function E(t) {
             }
         },
         d = s.intl.string(s.t['22itmp']);
-    return (0, i.jsxs)(a.Y0X, {
+    return (0, e.jsxs)(a.Y0X, {
         className: l.__invalid_container,
         size: a.CgR.DYNAMIC,
         transitionState: n,
         'aria-label': d,
+        parentComponent: 'TermsNotAcceptedErrorModal',
         children: [
-            (0, i.jsxs)(a.hzk, {
+            (0, e.jsxs)(a.hzk, {
                 className: l.content,
                 children: [
-                    (0, i.jsxs)('div', {
+                    (0, e.jsxs)('div', {
                         className: l.header,
                         children: [
-                            (0, i.jsx)(a.P4T, {
+                            (0, e.jsx)(a.P4T, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 20,
                                 height: 20,
                                 className: l.warningIcon
                             }),
-                            (0, i.jsx)(a.LZC, {
+                            (0, e.jsx)(a.LZC, {
                                 size: 8,
                                 horizontal: !0
                             }),
-                            (0, i.jsx)(a.X6q, {
+                            (0, e.jsx)(a.X6q, {
                                 variant: 'heading-xl/semibold',
                                 color: 'header-primary',
                                 children: d
                             })
                         ]
                     }),
-                    (0, i.jsx)(a.LZC, { size: 12 }),
-                    (0, i.jsx)(a.Text, {
+                    (0, e.jsx)(a.LZC, { size: 12 }),
+                    (0, e.jsx)(a.Text, {
                         variant: 'text-md/normal',
                         color: 'text-muted',
                         className: l.__invalid_body,
                         children: s.intl.string(s.t.kdbm9P)
                     }),
-                    (0, i.jsx)(a.LZC, { size: 28 }),
-                    (0, i.jsx)(a.XZJ, {
+                    (0, e.jsx)(a.LZC, { size: 28 }),
+                    (0, e.jsx)(a.XZJ, {
                         onChange: () => {
                             N((t) => !t);
                         },
                         size: 20,
                         type: a.XZJ.Types.INVERTED,
                         value: A,
-                        children: (0, i.jsx)(a.Text, {
+                        children: (0, e.jsx)(a.Text, {
                             variant: 'text-md/normal',
                             color: 'header-secondary',
                             children: (0, c.f)()
@@ -72,20 +73,20 @@ function E(t) {
                     })
                 ]
             }),
-            (0, i.jsxs)(a.mzw, {
+            (0, e.jsxs)(a.mzw, {
                 children: [
-                    (0, i.jsx)(a.zxk, {
+                    (0, e.jsx)(a.zxk, {
                         color: a.zxk.Colors.BRAND,
                         disabled: !A,
                         onClick: u,
                         submitting: T,
                         children: s.intl.string(s.t['cY+Ooa'])
                     }),
-                    (0, i.jsx)(a.LZC, {
+                    (0, e.jsx)(a.LZC, {
                         size: 12,
                         horizontal: !0
                     }),
-                    (0, i.jsx)(a.zxk, {
+                    (0, e.jsx)(a.zxk, {
                         color: a.zxk.Colors.PRIMARY,
                         look: a.zxk.Looks.OUTLINED,
                         onClick: E,

@@ -57,38 +57,36 @@ function d(e, t) {
     );
 }
 function f(e) {
-    let { descriptor: t, soundButtonProps: n, rowIndex: l, columnIndex: u, isUsingKeyboardNavigation: f, suppressPlaySound: _, getItemProps: p, onSelectItem: h, onItemMouseEnter: m, buttonOverlay: g, isNitroLocked: E, shouldShowUpsell: b, refreshEnabled: y, inExpressionPicker: O } = e,
-        v = i.Wq.useStore((e) => e.inspectedExpressionPosition),
-        I = ''.concat(l, '-').concat(u),
-        S = f && v.rowIndex === l && v.columnIndex === u;
+    let { descriptor: t, soundButtonProps: n, rowIndex: l, columnIndex: u, isUsingKeyboardNavigation: f, suppressPlaySound: _, getItemProps: p, onSelectItem: h, onItemMouseEnter: m, buttonOverlay: g, isNitroLocked: E, shouldShowUpsell: b, inExpressionPicker: y } = e,
+        O = i.Wq.useStore((e) => e.inspectedExpressionPosition),
+        v = ''.concat(l, '-').concat(u),
+        I = f && O.rowIndex === l && O.columnIndex === u;
     switch (t.item.type) {
         case a.vB.SOUND:
             return (0, r.createElement)(
                 o.ZP,
                 d(c({}, p(u), n), {
-                    key: I,
+                    key: v,
                     sound: t.item.sound,
                     suppressPlaySound: _,
-                    focused: S,
+                    focused: I,
                     onMouseEnter: () => m(u),
                     onSelectItem: (e) => h(t, e),
                     enableSecondaryActions: !0,
                     buttonOverlay: g,
                     inNitroLockedSection: E,
                     showLockForDisabledSound: b,
-                    refreshEnabled: y,
-                    isSoundmoji: !0 === O
+                    isSoundmoji: !0 === y
                 })
             );
         case a.vB.ADD_SOUND:
             return (0, r.createElement)(
                 s.Z,
                 d(c({}, p(u)), {
-                    key: I,
+                    key: v,
                     guild: t.item.guild,
-                    focused: S,
-                    onSelectItem: () => h(t),
-                    refreshEnabled: y
+                    focused: I,
+                    onSelectItem: () => h(t)
                 })
             );
     }

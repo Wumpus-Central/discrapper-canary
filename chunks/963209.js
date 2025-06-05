@@ -1,29 +1,29 @@
-s.d(t, { Z: () => d });
-var n = s(255367);
-s(73800);
-var o = s(120356),
-    a = s.n(o),
-    r = s(481060),
-    i = s(118012),
-    l = s(388032),
-    c = s(78704);
+n.d(t, { Z: () => d });
+var s = n(255367);
+n(73800);
+var o = n(120356),
+    a = n.n(o),
+    r = n(481060),
+    i = n(118012),
+    l = n(388032),
+    c = n(78704);
 function d(e) {
     let { onComplete: t } = e;
-    return (0, n.jsxs)(r.P3F, {
+    return (0, s.jsxs)(r.P3F, {
         className: c.container,
         onClick: t,
         children: [
-            (0, n.jsx)(i.Z, {
+            (0, s.jsx)(i.Z, {
                 size: i.Z.Sizes.SIZE_24,
                 className: c.title,
                 children: l.intl.string(l.t['Deps4+'])
             }),
-            (0, n.jsx)(i.Z, {
+            (0, s.jsx)(i.Z, {
                 size: i.Z.Sizes.SIZE_24,
                 className: a()(c.title, c.subtitle),
                 children: l.intl.string(l.t.xv5g7O)
             }),
-            (0, n.jsx)(r.zxk, {
+            (0, s.jsx)(r.zxk, {
                 color: r.zxk.Colors.WHITE,
                 onClick: t,
                 children: l.intl.string(l.t['6X9YKC'])

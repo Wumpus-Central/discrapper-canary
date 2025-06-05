@@ -33,6 +33,7 @@ class m extends s.PureComponent {
             transitionState: e,
             'aria-label': h.intl.string(h.t.Dx7im5),
             size: i.CgR.DYNAMIC,
+            parentComponent: 'GuildFolderSettings',
             children: [
                 (0, n.jsxs)(i.xBx, {
                     className: p.header,

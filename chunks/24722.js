@@ -14,51 +14,51 @@ var o = r(255367),
     f = r(434404),
     x = r(946724),
     h = r(130341),
-    g = r(494831),
-    p = r(981631),
+    p = r(494831),
+    g = r(981631),
     k = r(71080),
     y = r(377668),
     v = r(388032),
     R = r(691);
 function j(e) {
     var t = (function (e, t) {
-        if ('object' !== w(e) || null === e) return e;
+        if ('object' !== C(e) || null === e) return e;
         var r = e[Symbol.toPrimitive];
         if (void 0 !== r) {
             var o = r.call(e, t || 'default');
-            if ('object' !== w(o)) return o;
+            if ('object' !== C(o)) return o;
             throw TypeError('@@toPrimitive must return a primitive value.');
         }
         return ('string' === t ? String : Number)(e);
     })(e, 'string');
-    return 'symbol' === w(t) ? t : String(t);
-}
-function w(e) {
-    return e && 'undefined' != typeof Symbol && e.constructor === Symbol ? 'symbol' : typeof e;
+    return 'symbol' === C(t) ? t : String(t);
 }
 function C(e) {
+    return e && 'undefined' != typeof Symbol && e.constructor === Symbol ? 'symbol' : typeof e;
+}
+function w(e) {
     var t;
-    let { onClose: r, roleId: w, guildId: C, onBack: S, isCreateRoleFlow: L, focusSearchAfterReady: O, isReady: M } = e,
-        z = (0, l.e7)([x.Z], () => x.Z.getRole(w), [w]),
+    let { onClose: r, roleId: C, guildId: w, onBack: S, isCreateRoleFlow: M, focusSearchAfterReady: L, isReady: O } = e,
+        z = (0, l.e7)([x.Z], () => x.Z.getRole(C), [C]),
         [N, P] = n.useState(''),
         [T, B] = n.useState({}),
-        [I, E] = n.useState(!1);
+        [I, A] = n.useState(!1);
     n.useEffect(() => {
-        b.Z.requestMembers(C, N.trim().toLowerCase(), h._4);
-    }, [C, N]);
-    let A = n.useCallback((e) => !e.roles.includes(w), [w]),
-        Z = (0, h.lJ)(C, A),
+        b.Z.requestMembers(w, N.trim().toLowerCase(), h._4);
+    }, [w, N]);
+    let E = n.useCallback((e) => !e.roles.includes(C), [C]),
+        Z = (0, h.lJ)(w, E),
         Y = n.useMemo(() => Z.filter((e) => (0, h.eg)(N, e)), [N, Z]);
     Y = Y.filter((e) => e.id !== y.fL);
     let q = n.useCallback(async () => {
             let e = Object.values(T).map((e) => e.row.id);
-            E(!0);
+            A(!0);
             try {
-                await f.Z.bulkAddMemberRoles(C, w, e), (0, _.H)(C, w, !1), r();
+                await f.Z.bulkAddMemberRoles(w, C, e), (0, _.H)(w, C, !1), r();
             } catch (e) {
-                E(!1);
+                A(!1);
             }
-        }, [C, w, T, r]),
+        }, [w, C, T, r]),
         K = n.useCallback((e) => {
             B((t) => {
                 let r = (function (e) {
@@ -158,7 +158,7 @@ function C(e) {
                         variant: 'heading-xl/semibold',
                         children: v.intl.string(v.t['ZYOK4+'])
                     }),
-                    L
+                    M
                         ? (0, o.jsx)(i.Text, {
                               className: R.subtitle,
                               color: 'text-normal',
@@ -170,7 +170,7 @@ function C(e) {
                               children: [
                                   (0, o.jsx)(i.lZ8, {
                                       size: 'xs',
-                                      color: null != (t = null == z ? void 0 : z.colorString) ? t : (0, a.Rf)(p.p6O)
+                                      color: null != (t = null == z ? void 0 : z.colorString) ? t : (0, a.Rf)(g.p6O)
                                   }),
                                   (0, o.jsx)(i.Text, {
                                       className: R.roleName,
@@ -193,9 +193,9 @@ function C(e) {
                 members: H,
                 placeholderText: v.intl.string(v.t.vMiCaW),
                 renderEmptyText: (e) => v.intl.format(v.t.eq8a8f, { query: e }),
-                focusSearchAfterReady: O,
-                isReady: M,
-                description: v.intl.formatToPlainString(v.t['3OxP4u'], { numMembers: g.ey })
+                focusSearchAfterReady: L,
+                isReady: O,
+                description: v.intl.formatToPlainString(v.t['3OxP4u'], { numMembers: p.ey })
             }),
             (0, o.jsxs)(i.mzw, {
                 className: R.footer,
@@ -203,7 +203,7 @@ function C(e) {
                     (0, o.jsxs)('div', {
                         className: R.buttonsRight,
                         children: [
-                            L && 0 === V
+                            M && 0 === V
                                 ? (0, o.jsx)(i.zxk, {
                                       onClick: r,
                                       color: i.zxk.Colors.PRIMARY,
@@ -212,10 +212,10 @@ function C(e) {
                                 : (0, o.jsx)(i.zxk, {
                                       onClick: q,
                                       submitting: I,
-                                      disabled: 0 === V || V > g.ey,
+                                      disabled: 0 === V || V > p.ey,
                                       children: v.intl.string(v.t.OYkgVl)
                                   }),
-                            !L &&
+                            !M &&
                                 (0, o.jsx)(i.zxk, {
                                     look: i.zxk.Looks.LINK,
                                     color: i.zxk.Colors.PRIMARY,
@@ -244,7 +244,8 @@ function S(e) {
     return (0, o.jsx)(i.Y0X, {
         transitionState: t,
         size: i.CgR.SMALL,
-        children: (0, o.jsx)(C, {
+        parentComponent: 'AddRoleMembersModal',
+        children: (0, o.jsx)(w, {
             onClose: r,
             roleId: n,
             guildId: a

@@ -1,4 +1,4 @@
-n.d(e, { Z: () => x }), n(388685);
+n.d(e, { Z: () => p }), n(388685);
 var a = n(255367),
     r = n(73800),
     i = n(481060),
@@ -50,7 +50,7 @@ function d(t, e) {
 }
 function m(t) {
     let { user: e, tagId: n, title: r, messageCount: s, reactionCount: c, activeAgo: d, tags: m, attachment: g } = t,
-        { name: u, avatarSrc: x } = e;
+        { name: u, avatarSrc: p } = e;
     return (0, a.jsxs)('div', {
         className: l.post,
         children: [
@@ -65,7 +65,7 @@ function m(t) {
                                 className: l.inline,
                                 children: [
                                     (0, a.jsx)('img', {
-                                        src: x,
+                                        src: p,
                                         alt: o.intl.string(o.t.lqaIxM),
                                         width: 16,
                                         height: 16
@@ -276,11 +276,11 @@ function u(t) {
         })
     });
 }
-function x(t) {
+function p(t) {
     let { id: e } = t,
         [n, o] = r.useState(0),
         g = r.useRef(null),
-        { tags: x, posts: p, postPreview: h, ariaLabel: f } = (0, s.Z)(e);
+        { tags: p, posts: x, postPreview: h, ariaLabel: f } = (0, s.Z)(e);
     return (
         r.useEffect(() => {
             o(0);
@@ -301,7 +301,7 @@ function x(t) {
                     children: [
                         (0, a.jsx)('div', {
                             className: l.tags,
-                            children: x.map((t, e) =>
+                            children: p.map((t, e) =>
                                 (0, a.jsx)(
                                     i.Text,
                                     {
@@ -316,7 +316,7 @@ function x(t) {
                         }),
                         (0, a.jsx)('div', {
                             className: l.posts,
-                            children: p.map((t, e) => (0, a.jsx)(m, d(c({}, t), { tags: x }), e))
+                            children: x.map((t, e) => (0, a.jsx)(m, d(c({}, t), { tags: p }), e))
                         })
                     ]
                 }),

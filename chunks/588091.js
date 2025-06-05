@@ -15,8 +15,8 @@ var r = n(255367),
     j = n(495437),
     p = n(240864),
     v = n(942833),
-    g = n(598952),
-    C = n(392739),
+    C = n(598952),
+    g = n(392739),
     b = n(400916),
     Z = n(916001),
     y = n(388032),
@@ -92,14 +92,14 @@ function z(e) {
         s = i.length > 1;
     return 0 === i.length
         ? null
-        : (0, r.jsx)(C.Z, {
+        : (0, r.jsx)(g.Z, {
               label: y.intl.string(y.t.HOkHPD),
               children: (0, r.jsxs)('div', {
                   className: l()(N.attachmentsContainer, { [N.attachmentsContainerMultiple]: s }),
                   children: [
                       (0, r.jsx)('div', {
                           className: N.attachmentGrid,
-                          children: i.map((e) => (0, r.jsx)(g.Z, { attachment: e }, e.id))
+                          children: i.map((e) => (0, r.jsx)(C.Z, { attachment: e }, e.id))
                       }),
                       (0, r.jsx)('div', {
                           children: (0, r.jsx)(b.Z, {
@@ -115,7 +115,7 @@ function S(e) {
     let { role: t } = e;
     return null == t
         ? null
-        : (0, r.jsx)(C.Z, {
+        : (0, r.jsx)(g.Z, {
               label: y.intl.string(y.t.gWBNen),
               children: (0, r.jsx)(Z.Z, { role: t })
           });
@@ -133,11 +133,11 @@ function T(e) {
     let { onClose: n, transitionState: i, guildProductListingId: l, guildId: s, skuPricePreview: u } = e,
         f = (0, o.e7)([p.Z], () => p.Z.getGuildProduct(l));
     c()(null != f, 'guildProductListing cannot be null');
-    let [v, g] = a.useState(!1);
+    let [v, C] = a.useState(!1);
     a.useEffect(() => {
         !(async function () {
             try {
-                g(!0), await (0, j.cf)(s, l), g(!1);
+                C(!0), await (0, j.cf)(s, l), C(!1);
             } catch (e) {
                 n(),
                     (0, x.Z)({
@@ -149,7 +149,7 @@ function T(e) {
             }
         })();
     }, [s, l, n]);
-    let C = (null != (t = f.attachments) ? t : []).length > 0,
+    let g = (null != (t = f.attachments) ? t : []).length > 0,
         b = f.role_id,
         Z = (0, o.e7)([h.Z], () => (null != b ? h.Z.getRole(s, b) : void 0));
     return (0, r.jsx)(m.Y0X, {
@@ -157,6 +157,7 @@ function T(e) {
         size: m.CgR.DYNAMIC,
         transitionState: i,
         'aria-label': f.name,
+        parentComponent: 'GuildProductPurchaseConfirmationModal',
         children: (0, r.jsx)(m.hzk, {
             children: (0, r.jsx)('div', {
                 className: N.container,
@@ -196,7 +197,7 @@ function T(e) {
                                   variant: 'text-md/normal',
                                   color: 'text-normal',
                                   children: [
-                                      C ? y.intl.string(y.t['A/RnkJ']) + ' ' : '',
+                                      g ? y.intl.string(y.t['A/RnkJ']) + ' ' : '',
                                       null != Z
                                           ? y.intl.format(y.t.IeJDKi, {
                                                 roleName: Z.name,

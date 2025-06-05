@@ -3,20 +3,21 @@ var i = e(255367);
 e(73800);
 var r = e(481060),
     l = e(287734),
-    c = e(313201),
-    a = e(471253),
+    a = e(313201),
+    c = e(471253),
     o = e(939863),
     s = e(388032),
     d = e(548726);
 function u(t) {
     let { channel: n, transitionState: e, onClose: u } = t,
-        _ = (0, c.Dt)();
+        _ = (0, a.Dt)();
     function h() {
         l.default.disconnect(), u();
     }
     return (0, i.jsxs)(r.Y0X, {
         transitionState: e,
         'aria-labelledby': _,
+        parentComponent: 'EndStageModal',
         children: [
             (0, i.jsxs)(r.hzk, {
                 className: d.content,
@@ -53,7 +54,7 @@ function u(t) {
                     (0, i.jsx)(r.zxk, {
                         color: r.zxk.Colors.RED,
                         onClick: function () {
-                            (0, a.NZ)(n), h();
+                            (0, c.NZ)(n), h();
                         },
                         children: s.intl.string(s.t['sBP/1t'])
                     }),

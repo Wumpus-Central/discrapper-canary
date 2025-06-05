@@ -9,7 +9,7 @@ var i = e(212598),
     c = e(322539);
 function d(n) {
     let { isWaitingForConnection: t, onWaitingForConnection: e, expectedCallbackState: d, onAuthToken: u, onError: C, onClose: h } = n,
-        _ = t
+        p = t
             ? (0, o.jsx)('img', {
                   src: c,
                   width: '168',
@@ -22,7 +22,7 @@ function d(n) {
                   height: '123',
                   alt: ''
               }),
-        p = t ? l.intl.string(l.t.tZ6ze3) : l.intl.string(l.t.siPkNj),
+        _ = t ? l.intl.string(l.t.tZ6ze3) : l.intl.string(l.t.siPkNj),
         x = t ? l.intl.string(l.t.VgWnwM) : l.intl.string(l.t.oS4NEB);
     return (0, o.jsx)(i.t, {
         platformType: s.ABu.CRUNCHYROLL,
@@ -32,8 +32,8 @@ function d(n) {
         onAuthToken: u,
         onError: C,
         onClose: h,
-        img: _,
-        title: p,
+        img: p,
+        title: _,
         body: x,
         redirectDestination: r.pY
     });

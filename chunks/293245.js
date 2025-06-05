@@ -1,5 +1,5 @@
 let i, r, l;
-n.d(e, { Z: () => b }), n(388685);
+n.d(e, { Z: () => m }), n(388685);
 var o,
     a,
     s,
@@ -33,7 +33,7 @@ class g extends (o = c.ZP.Store) {
               writable: !0
           })
         : (g[a] = s);
-let b = new g(d.Z, {
+let m = new g(d.Z, {
     GAME_CLOUD_SYNC_START: function (t) {
         let { applicationId: e, branchId: n } = t,
             i = (0, f.Tu)(e, n);

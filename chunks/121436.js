@@ -1,4 +1,4 @@
-n.d(t, { default: () => P });
+n.d(t, { default: () => T });
 var l = n(255367);
 n(73800);
 var r = n(120356),
@@ -14,37 +14,37 @@ var r = n(120356),
     b = n(784238),
     f = n(553896),
     v = n(848572),
-    _ = n(787528),
-    p = n(474936),
+    p = n(787528),
+    _ = n(474936),
     E = n(981631),
     N = n(388032),
     x = n(840052);
-let P = (e) => {
+let T = (e) => {
     var t, n;
-    let { transitionState: r, onClose: P, displayProfile: T } = e,
+    let { transitionState: r, onClose: T, displayProfile: P } = e,
         { analyticsLocations: O } = (0, d.ZP)(s.Z.TIERED_TENURE_BADGES_MODAL),
         j = (0, c.Dt)(),
-        h = Object.values(p.vK),
-        S = (0, v.SI)(null == T ? void 0 : T.userId),
-        U = (0, v.Rw)(),
-        M = m.default.getCurrentUser(),
-        R = null != (n = (0, v.a1)(null != (t = null == T ? void 0 : T.userId) ? t : null == M ? void 0 : M.id)) ? n : new Date(),
-        y = (0, g.yd)(null == M ? void 0 : M.premiumType, p.p9.TIER_2),
+        h = Object.values(_.vK),
+        S = (0, v.SI)(null == P ? void 0 : P.userId),
+        M = (0, v.Rw)(),
+        U = m.default.getCurrentUser(),
+        R = null != (n = (0, v.a1)(null != (t = null == P ? void 0 : P.userId) ? t : null == U ? void 0 : U.id)) ? n : new Date(),
+        y = (0, g.yd)(null == U ? void 0 : U.premiumType, _.p9.TIER_2),
         I = h.map((e) => {
             let { id: t, nameUnformatted: n, tenureReqNumMonths: r } = e,
                 u = N.intl.string(n),
-                s = (0, _.J)(t),
+                s = (0, p.J)(t),
                 d = (0, f.q)(t, r),
-                c = null == T,
-                o = c && (null == U ? void 0 : U.id) === t,
+                c = null == P,
+                o = c && (null == M ? void 0 : M.id) === t,
                 m = !c && (null == S ? void 0 : S.id) === t,
-                g = o && (null == U ? void 0 : U.status) === v.Vq.EARNED,
-                b = o && (null == U ? void 0 : U.status) === v.Vq.UPCOMING,
-                p = m || g;
+                g = o && (null == M ? void 0 : M.status) === v.Vq.EARNED,
+                b = o && (null == M ? void 0 : M.status) === v.Vq.UPCOMING,
+                _ = m || g;
             return (0, l.jsxs)(
                 'div',
                 {
-                    className: a()(x.badge, { [x.earnedBadge]: p || b }),
+                    className: a()(x.badge, { [x.earnedBadge]: _ || b }),
                     children: [
                         (0, l.jsx)('img', {
                             src: s,
@@ -63,7 +63,7 @@ let P = (e) => {
                                     variant: 'text-xs/normal',
                                     children: d
                                 }),
-                                p &&
+                                _ &&
                                     (0, l.jsx)(i.xv, {
                                         variant: 'text-xs/normal',
                                         color: 'text-muted',
@@ -75,7 +75,7 @@ let P = (e) => {
                                         variant: 'text-xs/normal',
                                         color: 'text-muted',
                                         className: x.earnedBadgeSubSince,
-                                        children: N.intl.formatToPlainString(N.t.PPL1Ii, { days: null == U ? void 0 : U.daysLeft })
+                                        children: N.intl.formatToPlainString(N.t.PPL1Ii, { days: null == M ? void 0 : M.daysLeft })
                                     })
                             ]
                         })
@@ -89,15 +89,16 @@ let P = (e) => {
                 source: s.Z.TIERED_TENURE_BADGES_MODAL,
                 sourceLocationStack: O
             }),
-                null == P || P();
+                null == T || T();
         };
     return (0, l.jsxs)(u.Y0X, {
         transitionState: r,
         'aria-labelledby': j,
         className: a()(x.container, 'theme-dark'),
+        parentComponent: 'EvolvingTenureBadgeModal',
         children: [
             (0, l.jsx)(u.olH, {
-                onClick: P,
+                onClick: T,
                 className: x.closeButton
             }),
             (0, l.jsx)(u.hzk, {
@@ -119,8 +120,8 @@ let P = (e) => {
                                   className: x.badgeList,
                                   children: I
                               }),
-                              null != T &&
-                                  T.userId !== (null == M ? void 0 : M.id) &&
+                              null != P &&
+                                  P.userId !== (null == U ? void 0 : U.id) &&
                                   (0, l.jsx)(u.gtL, {
                                       className: x.learnMoreButton,
                                       onClick: B,
@@ -148,7 +149,7 @@ let P = (e) => {
                                   className: x.subscribeButton,
                                   premiumModalAnalyticsLocation: { page: E.ZY5.TIERED_TENURE_BADGES_MODAL },
                                   textOptions: { subscribeText: N.intl.string(N.t.JST6jo) },
-                                  subscriptionTier: p.Si.TIER_2,
+                                  subscriptionTier: _.Si.TIER_2,
                                   showGradient: !0,
                                   color: u.Ttl.BRAND
                               })

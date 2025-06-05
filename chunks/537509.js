@@ -1,47 +1,48 @@
-i.d(e, { default: () => c }), i(388685);
-var r = i(255367),
-    n = i(73800),
-    o = i(481060),
-    s = i(313201),
-    l = i(388032),
-    a = i(567351);
+n.d(e, { default: () => c }), n(388685);
+var i = n(255367),
+    o = n(73800),
+    r = n(481060),
+    s = n(313201),
+    a = n(388032),
+    l = n(567351);
 function c(t) {
-    let { transitionState: e, onConfirm: i, onClose: c } = t,
-        [d, h] = n.useState(!1),
+    let { transitionState: e, onConfirm: n, onClose: c } = t,
+        [d, h] = o.useState(!1),
         x = (0, s.Dt)();
-    return (0, r.jsxs)(o.Y0X, {
+    return (0, i.jsxs)(r.Y0X, {
         transitionState: e,
         'aria-labelledby': x,
-        size: o.CgR.DYNAMIC,
-        className: a.root,
+        size: r.CgR.DYNAMIC,
+        className: l.root,
+        parentComponent: 'AcceptRequestConfirmationModal',
         children: [
-            (0, r.jsx)(o.xBx, {
-                children: (0, r.jsx)(o.X6q, {
+            (0, i.jsx)(r.xBx, {
+                children: (0, i.jsx)(r.X6q, {
                     id: x,
                     variant: 'heading-xl/bold',
                     color: 'header-primary',
-                    children: l.intl.string(l.t.eJzSDQ)
+                    children: a.intl.string(a.t.eJzSDQ)
                 })
             }),
-            (0, r.jsx)(o.hzk, {
-                className: a.content,
-                children: (0, r.jsx)(o.Text, {
+            (0, i.jsx)(r.hzk, {
+                className: l.content,
+                children: (0, i.jsx)(r.Text, {
                     variant: 'text-md/medium',
                     color: 'header-secondary',
-                    children: l.intl.string(l.t.GB4jU1)
+                    children: a.intl.string(a.t.GB4jU1)
                 })
             }),
-            (0, r.jsxs)(o.mzw, {
-                className: a.footer,
+            (0, i.jsxs)(r.mzw, {
+                className: l.footer,
                 children: [
-                    (0, r.jsx)(o.zxk, {
+                    (0, i.jsx)(r.zxk, {
                         type: 'submit',
-                        color: o.zxk.Colors.BRAND,
+                        color: r.zxk.Colors.BRAND,
                         onClick: () => {
                             if (!d) {
                                 h(!0);
                                 try {
-                                    i();
+                                    n();
                                 } catch (t) {
                                 } finally {
                                     h(!1);
@@ -50,13 +51,13 @@ function c(t) {
                             }
                         },
                         submitting: d,
-                        children: l.intl.string(l.t.MMlhsr)
+                        children: a.intl.string(a.t.MMlhsr)
                     }),
-                    (0, r.jsx)(o.zxk, {
-                        color: o.zxk.Colors.PRIMARY,
+                    (0, i.jsx)(r.zxk, {
+                        color: r.zxk.Colors.PRIMARY,
                         onClick: c,
                         disabled: d,
-                        children: l.intl.string(l.t['ETE/oK'])
+                        children: a.intl.string(a.t['ETE/oK'])
                     })
                 ]
             })

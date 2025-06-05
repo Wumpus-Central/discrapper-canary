@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -19,6 +19,20 @@ var r = n(255367),
     y = n(388032),
     O = n(882903);
 function v(e) {
+    let [t, n] = i.useState(0),
+        [r, a] = i.useState(!1),
+        o = i.useRef(e);
+    return (
+        i.useEffect(() => {
+            e === o.current || r || n((e) => e + 1), (o.current = e), a(!1);
+        }, [e, r]),
+        {
+            key: t,
+            handleInternalChange: i.useCallback((e) => (a(!0), e), [])
+        }
+    );
+}
+function I(e) {
     let { markAsDismissed: t } = e;
     return (0, r.jsxs)('div', {
         className: O.headerContainer,
@@ -40,8 +54,9 @@ function v(e) {
         ]
     });
 }
-function I(e) {
-    let { gradientAngle: t, setGradientAngle: n } = e;
+function S(e) {
+    let { gradientAngle: t, setGradientAngle: n } = e,
+        { key: i, handleInternalChange: a } = v(t);
     return (0, r.jsxs)('div', {
         className: o()(O.sliderContainer, O.gradientDirectionSliderContainer),
         children: [
@@ -49,21 +64,28 @@ function I(e) {
                 variant: 'text-sm/medium',
                 children: y.intl.string(b.default.dZkwg4)
             }),
-            (0, r.jsx)(l.iRW, {
-                className: O.slider,
-                initialValue: t,
-                defaultValue: 0,
-                minValue: 0,
-                maxValue: 360,
-                onValueChange: n,
-                onValueRender: (e) => ''.concat(Math.round(e), '\xB0'),
-                keyboardStep: 1
-            })
+            (0, r.jsx)(
+                l.iRW,
+                {
+                    className: O.slider,
+                    initialValue: t,
+                    defaultValue: 0,
+                    minValue: 0,
+                    maxValue: 360,
+                    onValueChange: (e) => {
+                        a(e), n(e);
+                    },
+                    onValueRender: (e) => ''.concat(Math.round(e), '\xB0'),
+                    keyboardStep: 1
+                },
+                i
+            )
         ]
     });
 }
-function S(e) {
-    let { chassisMixAmount: t, setChassisMixAmount: n } = e;
+function T(e) {
+    let { chassisMixAmount: t, setChassisMixAmount: n } = e,
+        { key: i, handleInternalChange: a } = v(t);
     return (0, r.jsxs)('div', {
         className: O.sliderContainer,
         children: [
@@ -71,19 +93,25 @@ function S(e) {
                 variant: 'text-sm/medium',
                 children: y.intl.string(b.default.xlXkaG)
             }),
-            (0, r.jsx)(l.iRW, {
-                className: O.slider,
-                initialValue: t,
-                defaultValue: p.B,
-                minValue: 0,
-                maxValue: 100,
-                onValueChange: n,
-                keyboardStep: 1
-            })
+            (0, r.jsx)(
+                l.iRW,
+                {
+                    className: O.slider,
+                    initialValue: t,
+                    defaultValue: p.B,
+                    minValue: 0,
+                    maxValue: 100,
+                    onValueChange: (e) => {
+                        a(e), n(e);
+                    },
+                    keyboardStep: 1
+                },
+                i
+            )
         ]
     });
 }
-function T(e) {
+function A(e) {
     let { type: t } = e;
     return (0, r.jsxs)(l.zxk, {
         className: O.surpriseMeButton,
@@ -95,7 +123,7 @@ function T(e) {
         children: [(0, r.jsx)(l.T$Z, { size: 'sm' }), 'with-text' === t && y.intl.string(b.default.c9MBEB)]
     });
 }
-function A() {
+function N() {
     var e, t, n;
     let r = _.L1.getSetting().customUserThemeSettings;
     p.I.setState({
@@ -104,12 +132,12 @@ function A() {
         chassisMixAmount: null != (n = null == r ? void 0 : r.baseMix) ? n : p.B
     });
 }
-function N(e) {
+function C(e) {
     let { handleSaveTheme: t, colors: n, metadata: i, markAsDismissed: a } = e;
     return (0, r.jsxs)('div', {
         className: O.footerContainer,
         children: [
-            (0, r.jsx)(T, { type: 'no-text' }),
+            (0, r.jsx)(A, { type: 'no-text' }),
             (0, r.jsx)(l.zxk, {
                 className: O.backButton,
                 size: l.zxk.Sizes.NONE,
@@ -131,11 +159,11 @@ function N(e) {
         ]
     });
 }
-function C(e) {
+function P(e) {
     var t;
     let { metadata: n, markAsDismissed: a } = e,
         o = h.M.useExperiment({ location: 'ClientThemeColorPickerTools' }).enabled,
-        { colors: u, chassisMixAmount: d, gradientAngle: _, setColors: E, setChassisMixAmount: b, setGradientAngle: C } = (0, p.I)(),
+        { colors: u, chassisMixAmount: d, gradientAngle: _, setColors: E, setChassisMixAmount: b, setGradientAngle: v } = (0, p.I)(),
         [P, R] = i.useState(null != (t = u[0]) ? t : '#4394D4'),
         [w] = (0, s.Wu)([f.Z], () => [f.Z.theme]),
         D = () => {
@@ -149,7 +177,7 @@ function C(e) {
                 }
             });
         };
-    return (i.useEffect(() => A, []), o)
+    return (i.useEffect(() => N, []), o)
         ? (0, r.jsx)('div', {
               className: O.container,
               'data-app-right-panel': !0,
@@ -159,7 +187,7 @@ function C(e) {
                       (0, r.jsxs)(l.Ttm, {
                           className: O.editorBody,
                           children: [
-                              (0, r.jsx)(v, { markAsDismissed: a }),
+                              (0, r.jsx)(I, { markAsDismissed: a }),
                               (0, r.jsx)(g.o, {}),
                               (0, r.jsx)(m.U, {
                                   onChange: (e) => {
@@ -170,11 +198,11 @@ function C(e) {
                                   setColors: E
                               }),
                               u.length > 1 &&
-                                  (0, r.jsx)(I, {
+                                  (0, r.jsx)(S, {
                                       gradientAngle: _,
-                                      setGradientAngle: C
+                                      setGradientAngle: v
                                   }),
-                              (0, r.jsx)(S, {
+                              (0, r.jsx)(T, {
                                   chassisMixAmount: d,
                                   setChassisMixAmount: (e) => {
                                       b(e), 0 === u.length && E([P]);
@@ -185,13 +213,13 @@ function C(e) {
                                   innerClassName: O.resetButtonContent,
                                   look: l.zxk.Looks.FILLED,
                                   color: l.zxk.Colors.CUSTOM,
-                                  onClick: A,
+                                  onClick: N,
                                   children: [(0, r.jsx)(l.Oe7, { size: 'xs' }), y.intl.string(y.t.yBZMsb)]
                               }),
-                              (0, r.jsx)(T, { type: 'with-text' })
+                              (0, r.jsx)(A, { type: 'with-text' })
                           ]
                       }),
-                      (0, r.jsx)(N, {
+                      (0, r.jsx)(C, {
                           handleSaveTheme: D,
                           colors: u,
                           metadata: n,

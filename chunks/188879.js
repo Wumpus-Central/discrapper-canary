@@ -1,4 +1,4 @@
-n.d(t, { Z: () => U }), n(953529);
+n.d(t, { Z: () => D }), n(953529);
 var i = n(255367),
     a = n(73800),
     l = n(286379),
@@ -10,8 +10,8 @@ var i = n(255367),
     u = n(626135),
     m = n(331692),
     p = n(531441),
-    h = n(236289),
-    f = n(788080),
+    f = n(236289),
+    h = n(788080),
     g = n(451284),
     y = n(613734),
     x = n(846488),
@@ -97,7 +97,7 @@ let P = (e) => {
                       (0, i.jsxs)('ul', {
                           className: _.classificationActionsTakenList,
                           children: [
-                              t.map((e) => (0, i.jsx)(S, { action: e }, e.id)),
+                              t.map((e) => (0, i.jsx)(C, { action: e }, e.id)),
                               null != n
                                   ? (0, i.jsx)(
                                         'li',
@@ -118,7 +118,7 @@ let P = (e) => {
                   ]
               });
     },
-    S = (e) => {
+    C = (e) => {
         let { action: t } = e;
         return (0, i.jsx)(i.Fragment, {
             children: t.descriptions.map((e, t) =>
@@ -138,7 +138,7 @@ let P = (e) => {
             )
         });
     },
-    C = (e) => {
+    S = (e) => {
         let { classificationTypeText: t, policyExplainerLink: n } = e;
         return (0, i.jsxs)(o.eee, {
             href: n,
@@ -221,7 +221,7 @@ let P = (e) => {
                         communityGuidelinesLink: n
                     })
                 }),
-                (0, i.jsx)(C, {
+                (0, i.jsx)(S, {
                     classificationTypeText: a,
                     policyExplainerLink: l
                 }),
@@ -229,22 +229,22 @@ let P = (e) => {
             ]
         });
     },
-    U = (e) => {
+    D = (e) => {
         var t;
         let { classificationId: n, source: r, onError: o, onClose: d } = e,
-            { classification: E, classificationRequestState: A, isAppealEligible: w, isDsaEligible: S, violationType: C } = (0, y.YG)(n),
-            N = (0, s.e7)([h.Z], () => h.Z.getAppealEligibility()),
+            { classification: E, classificationRequestState: A, isAppealEligible: w, isDsaEligible: C, violationType: S } = (0, y.YG)(n),
+            N = (0, s.e7)([f.Z], () => f.Z.getAppealEligibility()),
             k = (0, g.P)(),
-            U = null != E && null != E.flagged_content && E.flagged_content.length > 0,
-            D = (0, x.e)(),
+            D = null != E && null != E.flagged_content && E.flagged_content.length > 0,
+            U = (0, x.e)(),
             Z = !!(null == E ? void 0 : E.is_coppa) && N.includes(p.tG.AGE_VERIFY_ELIGIBLE),
             M = {
                 accountStanding: k,
                 classificationId: n,
-                hasFlaggedContent: U,
-                isDsaEligible: S,
+                hasFlaggedContent: D,
+                isDsaEligible: C,
                 source: r,
-                violationType: C
+                violationType: S
             },
             R = a.useRef(M);
         return (a.useEffect(() => {
@@ -252,7 +252,7 @@ let P = (e) => {
         }),
         a.useEffect(() => {
             let { accountStanding: e, classificationId: t, hasFlaggedContent: n, isDsaEligible: i, source: a, violationType: l } = R.current;
-            D &&
+            U &&
                 u.default.track(O.rMx.SAFETY_HUB_ACTION, {
                     action: b.n0.ViewViolationDetail,
                     account_standing: e.state,
@@ -262,7 +262,7 @@ let P = (e) => {
                     is_dsa_eligible: i,
                     violation_type: l
                 });
-        }, [D]),
+        }, [U]),
         null == E && A === p.OY.FAILED)
             ? (o(), null)
             : null == E
@@ -277,7 +277,7 @@ let P = (e) => {
                         (0, i.jsx)(v.s, { flaggedContent: null != (t = E.flagged_content) ? t : [] }),
                         (0, i.jsx)(T, {
                             actions: E.actions,
-                            classificationExpiration: (0, f.Pu)(E)
+                            classificationExpiration: (0, h.Pu)(E)
                         }),
                         (0, i.jsx)(L, {
                             classificationTypeText: E.description,
@@ -292,9 +292,9 @@ let P = (e) => {
                                         account_standing: k.state,
                                         classification_ids: [Number(n)],
                                         source: r,
-                                        is_violative_content_shown: U,
-                                        is_dsa_eligible: S,
-                                        violation_type: C
+                                        is_violative_content_shown: D,
+                                        is_dsa_eligible: C,
+                                        violation_type: S
                                     }),
                                         Z ? m.Z.open(n, d) : w && (c.Z.increment({ name: l.V.APPEAL_INGESTION_VIEW }), j.Z.open(n));
                                 },

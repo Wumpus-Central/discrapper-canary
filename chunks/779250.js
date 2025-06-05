@@ -192,6 +192,7 @@ function G(e) {
             transitionState: h,
             'aria-labelledby': N,
             size: o.CgR.DYNAMIC,
+            parentComponent: 'ScheduleEventModal',
             children: [
                 !B && F ? (0, r.jsx)(M, { modal: Y.current }) : null,
                 (0, r.jsxs)(o.hzk, {

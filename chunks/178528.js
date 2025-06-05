@@ -14,8 +14,8 @@ var i = n(255367),
     g = n(680089),
     m = n(58468),
     y = n(796974),
-    _ = n(324067),
-    v = n(984933),
+    v = n(324067),
+    _ = n(984933),
     O = n(888369),
     b = n(430824),
     E = n(496675),
@@ -238,8 +238,8 @@ function M(e) {
     var t;
     let { guildId: n } = e,
         r = (0, s.e7)([b.Z], () => b.Z.getGuild(n)),
-        o = (0, s.e7)([v.ZP], () => v.ZP.getChannels(n)),
-        l = (0, s.e7)([_.Z], () => _.Z.getCategories(n)),
+        o = (0, s.e7)([_.ZP], () => _.ZP.getChannels(n)),
+        l = (0, s.e7)([v.Z], () => v.Z.getCategories(n)),
         { mutedChannels: d, collapseMuted: u } = (0, s.cj)([j.ZP], () => ({
             mutedChannels: j.ZP.getMutedChannels(n),
             collapseMuted: j.ZP.isGuildCollapsed(n)

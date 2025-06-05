@@ -123,7 +123,7 @@ function b(e) {
     });
 }
 let y = (e) => (e.toString() === S.Plq.MENTION_EVERYONE.toString() ? O.intl.string(O.t.yCpsQ0) : (0, p.wt)(e));
-function R(e) {
+function C(e) {
     let { permissions: t, step: n } = e;
     return 2 === n
         ? null
@@ -159,7 +159,7 @@ function R(e) {
               ]
           });
 }
-function C(e) {
+function R(e) {
     let { permissions: t, step: n } = e;
     return 0 === t.length && 2 !== n
         ? null
@@ -205,12 +205,12 @@ function j(e) {
               className: T.table,
               children: [
                   2 !== n
-                      ? (0, i.jsx)(R, {
+                      ? (0, i.jsx)(C, {
                             permissions: a,
                             step: n
                         })
                       : null,
-                  (0, i.jsx)(C, {
+                  (0, i.jsx)(R, {
                       permissions: o,
                       step: n
                   })
@@ -349,16 +349,17 @@ function U(e) {
                 e)
             ]);
         },
-        R = () => {
+        C = () => {
             _.Z.updateGuild({ defaultMessageNotifications: S.bL.ONLY_MENTIONS }), _.Z.saveGuild(t.id, { defaultMessageNotifications: S.bL.ONLY_MENTIONS });
         },
-        C = () => {
-            n && y(), s && R();
+        R = () => {
+            n && y(), s && C();
         };
     return (0, i.jsxs)(c.Y0X, {
         transitionState: l,
         size: c.CgR.SMALL,
         className: T.modal,
+        parentComponent: 'GuildSettingsDisableUnsafeDefaultPermissionsNotice',
         children: [
             (0, i.jsx)(g, {
                 guild: t,
@@ -376,7 +377,7 @@ function U(e) {
             (0, i.jsx)(v, {
                 onConfirm: () => {
                     var e, i;
-                    n || (C(), d(), (0, N.Qd)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null != (e = null == t ? void 0 : t.id) ? e : '', !0, I.L.PRIMARY)), 0 === p ? (m(1), setTimeout(() => m(2), 3000)) : 2 === p && (C(), d(), (0, N.Qd)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null != (i = null == t ? void 0 : t.id) ? i : '', !0, I.L.PRIMARY));
+                    n || (R(), d(), (0, N.Qd)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null != (e = null == t ? void 0 : t.id) ? e : '', !0, I.L.PRIMARY)), 0 === p ? (m(1), setTimeout(() => m(2), 3000)) : 2 === p && (R(), d(), (0, N.Qd)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null != (i = null == t ? void 0 : t.id) ? i : '', !0, I.L.PRIMARY));
                 },
                 onDismiss: () => {
                     d(), (0, N.Qd)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, t.id, !0, I.L.DISMISS);

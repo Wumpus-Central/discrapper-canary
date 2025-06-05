@@ -1,42 +1,43 @@
-s.d(e, { default: () => h });
-var n = s(255367);
-s(73800);
-var c = s(780384),
-    i = s(481060),
-    a = s(410030),
-    l = s(313201),
-    o = s(388032),
-    r = s(695357),
-    d = s(167969),
-    x = s(557256);
-function h(t) {
-    let { onClose: e, transitionState: s } = t,
-        h = (0, l.Dt)(),
-        m = (0, c.wj)((0, a.ZP)());
-    return (0, n.jsxs)(i.Y0X, {
-        transitionState: s,
-        'aria-labelledby': h,
+n.d(e, { default: () => m });
+var s = n(255367);
+n(73800);
+var a = n(780384),
+    i = n(481060),
+    c = n(410030),
+    l = n(313201),
+    o = n(388032),
+    r = n(695357),
+    d = n(167969),
+    u = n(557256);
+function m(t) {
+    let { onClose: e, transitionState: n } = t,
+        m = (0, l.Dt)(),
+        x = (0, a.wj)((0, c.ZP)());
+    return (0, s.jsxs)(i.Y0X, {
+        transitionState: n,
+        'aria-labelledby': m,
         size: i.CgR.SMALL,
+        parentComponent: 'UnavailableGuildProductModal',
         children: [
-            (0, n.jsxs)(i.hzk, {
+            (0, s.jsxs)(i.hzk, {
                 className: r.content,
                 children: [
-                    (0, n.jsx)(i.olH, {
+                    (0, s.jsx)(i.olH, {
                         className: r.closeButton,
                         onClick: e
                     }),
-                    (0, n.jsx)('img', {
+                    (0, s.jsx)('img', {
                         className: r.image,
-                        src: m ? d : x,
+                        src: x ? d : u,
                         alt: ''
                     }),
-                    (0, n.jsx)(i.Text, {
+                    (0, s.jsx)(i.Text, {
                         variant: 'text-lg/semibold',
                         color: 'header-primary',
                         className: r.title,
                         children: o.intl.string(o.t.wLrh09)
                     }),
-                    (0, n.jsx)(i.Text, {
+                    (0, s.jsx)(i.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
                         className: r.body,
@@ -44,8 +45,8 @@ function h(t) {
                     })
                 ]
             }),
-            (0, n.jsx)(i.mzw, {
-                children: (0, n.jsx)(i.zxk, {
+            (0, s.jsx)(i.mzw, {
+                children: (0, s.jsx)(i.zxk, {
                     className: r.button,
                     color: i.zxk.Colors.BRAND,
                     onClick: e,

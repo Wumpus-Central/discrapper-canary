@@ -135,6 +135,7 @@ let x = a(450390),
             transitionState: c,
             'aria-labelledby': n,
             hideShadow: !0,
+            parentComponent: 'AnnouncementModalV2',
             children: [
                 (0, r.jsx)(_, {
                     className: u.closeButton,

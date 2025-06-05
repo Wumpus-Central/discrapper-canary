@@ -1,8 +1,8 @@
 n.d(t, { default: () => j }), n(388685);
 var r = n(255367),
     l = n(73800),
-    a = n(658722),
-    o = n.n(a),
+    o = n(658722),
+    a = n.n(o),
     s = n(399606),
     i = n(481060),
     u = n(313201),
@@ -58,10 +58,10 @@ function v(e, t) {
     );
 }
 function j(e) {
-    var t, n, a;
+    var t, n, o;
     let { transitionState: j, onClose: k, guildId: I, welcomeMessage: _, onSave: y } = e,
         O = (0, u.Dt)(),
-        [P, C] = l.useState(b({}, _)),
+        [C, P] = l.useState(b({}, _)),
         w = (0, s.e7)([m.Z], () => m.Z.getGuild(I)),
         z = l.useCallback(
             (e) => {
@@ -72,8 +72,8 @@ function j(e) {
                             var r;
                             let l = g.default.getUser(n.userId);
                             if ((null != l && (t[n.userId] = l), null == w || null == l || !(0, p.Y)(w, l))) return !1;
-                            let a = ''.concat(null != (r = n.nick) ? r : '', ' ').concat(null == l ? void 0 : l.username);
-                            return o()(e.toLowerCase(), a.toLowerCase());
+                            let o = ''.concat(null != (r = n.nick) ? r : '', ' ').concat(null == l ? void 0 : l.username);
+                            return a()(e.toLowerCase(), o.toLowerCase());
                         })
                         .map((e) => {
                             var n, r, l;
@@ -105,33 +105,34 @@ function j(e) {
         N = l.useCallback(
             (e) => {
                 let { value: t } = e;
-                C((e) => v(b({}, e), { authorIds: null != t ? [t] : [] }));
+                P((e) => v(b({}, e), { authorIds: null != t ? [t] : [] }));
             },
-            [C]
+            [P]
         ),
         S = l.useCallback(
             (e) => {
-                C((t) => v(b({}, t), { message: null != e ? e : '' }));
+                P((t) => v(b({}, t), { message: null != e ? e : '' }));
             },
-            [C]
+            [P]
         ),
-        B = l.useCallback(() => {
+        M = l.useCallback(() => {
             y(null), k();
         }, [y, k]),
-        Z = null != (t = P.authorIds[0]) ? t : '',
-        M = (0, s.e7)([d.ZP], () => (null != I ? d.ZP.getMember(I, Z) : null)),
-        T = (0, s.e7)([g.default], () => (null != M ? g.default.getUser(M.userId) : null)),
-        R = null != (a = null != (n = null == M ? void 0 : M.nick) ? n : null == T ? void 0 : T.username) ? a : '',
+        B = null != (t = C.authorIds[0]) ? t : '',
+        Z = (0, s.e7)([d.ZP], () => (null != I ? d.ZP.getMember(I, B) : null)),
+        T = (0, s.e7)([g.default], () => (null != Z ? g.default.getUser(Z.userId) : null)),
+        R = null != (o = null != (n = null == Z ? void 0 : Z.nick) ? n : null == T ? void 0 : T.username) ? o : '',
         E = (function (e) {
             if (null == e.message || 0 === e.message.length) return null;
             if (null == e.authorIds || 0 === e.authorIds.length)
                 if (e.message.length < c.ZR) return x.intl.formatToPlainString(x.t.Lj831N, { minLength: c.ZR });
                 else return x.intl.string(x.t['4m7gtr']);
             return e.message.length < c.ZR ? x.intl.formatToPlainString(x.t.TJGHXl, { minLength: c.ZR }) : null;
-        })(P);
+        })(C);
     return (0, r.jsxs)(i.Y0X, {
         transitionState: j,
         'aria-labelledby': O,
+        parentComponent: 'WelcomeMessageModal',
         children: [
             (0, r.jsxs)('div', {
                 className: f.container,
@@ -155,7 +156,7 @@ function j(e) {
                             }),
                             (0, r.jsx)(i.VcW, {
                                 value: {
-                                    value: Z,
+                                    value: B,
                                     label: R
                                 },
                                 renderOptionPrefix: L,
@@ -182,7 +183,7 @@ function j(e) {
                             (0, r.jsx)(i.Kx8, {
                                 className: f.welcomeMessageTextInput,
                                 placeholder: x.intl.string(x.t['kX/Sb2']),
-                                value: P.message,
+                                value: C.message,
                                 onChange: S,
                                 maxLength: c.W4
                             }),
@@ -207,7 +208,7 @@ function j(e) {
                                 size: i.zxk.Sizes.SMALL,
                                 look: i.zxk.Looks.LINK,
                                 color: i.zxk.Colors.RED,
-                                onClick: B,
+                                onClick: M,
                                 children: x.intl.string(x.t.N86XcH)
                             })
                         }),
@@ -222,9 +223,9 @@ function j(e) {
                                     children: x.intl.string(x.t['ETE/oK'])
                                 }),
                                 (0, r.jsx)(i.zxk, {
-                                    disabled: 0 === P.message.length || null != E,
+                                    disabled: 0 === C.message.length || null != E,
                                     onClick: () => {
-                                        y(P), k();
+                                        y(C), k();
                                     },
                                     children: x.intl.string(x.t.R3BPHx)
                                 })

@@ -194,7 +194,7 @@ function I(e) {
         ]
     });
 }
-let k = [
+let w = [
         {
             key: 'action',
             cellClassName: N.actionColumn,
@@ -214,7 +214,7 @@ let k = [
             }
         }
     ],
-    w = {
+    k = {
         searchType: x.S.REGEX,
         searchStringGenerator: (e) => {
             let { actionLog: t } = e;
@@ -260,7 +260,7 @@ function R() {
         j = r.useCallback((e) => {
             p(e);
         }, []);
-    (0, h.BO)(t, b ? c : o, j, w);
+    (0, h.BO)(t, b ? c : o, j, k);
     let y = r.useCallback(
             (e) => {
                 m(o), f(e);
@@ -294,7 +294,7 @@ function R() {
                 ]
             }),
             (0, a.jsx)(_.Z, {
-                columns: k,
+                columns: w,
                 data: E,
                 selectedRowKey: null == v ? void 0 : v.id.toString(),
                 onClickRow: (e) => g(e.actionLog)

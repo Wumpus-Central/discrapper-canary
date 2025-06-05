@@ -12,9 +12,9 @@ var l = t(255367),
     p = t(496675),
     g = t(700785),
     v = t(785717),
-    h = t(256226),
-    j = t(678738),
-    m = t(314172),
+    m = t(256226),
+    h = t(678738),
+    j = t(314172),
     b = t(981631),
     x = t(388032),
     O = t(217919);
@@ -82,7 +82,7 @@ function P(e, n) {
 }
 function I(e) {
     let { user: n, currentUser: t, guild: a, guildMember: u, roles: c, highestRole: d, canManageRoles: f, onAddRole: p, onRemoveRole: v } = e,
-        j = f && null != u,
+        h = f && null != u,
         I = r.useRef(null),
         E = r.useMemo(() => 'roles-'.concat((0, i.Z)()), []),
         S = (0, o.ZP)({
@@ -97,7 +97,7 @@ function I(e) {
         A = c.map((e) => {
             var r;
             return (0, l.jsx)(
-                h.Z,
+                m.Z,
                 {
                     role: e,
                     guildId: a.id,
@@ -128,8 +128,8 @@ function I(e) {
                         {
                             children: [
                                 A,
-                                j &&
-                                    (0, l.jsx)(m.Z, {
+                                h &&
+                                    (0, l.jsx)(j.Z, {
                                         buttonRef: I,
                                         guild: a,
                                         guildMember: u,
@@ -149,14 +149,14 @@ function E(e) {
     var { user: n, currentUser: t, guild: i } = e,
         o = P(e, ['user', 'currentUser', 'guild']);
     let { trackUserProfileAction: s } = (0, v.KZ)(),
-        h = (0, a.e7)([d.ZP], () => d.ZP.getMember(i.id, n.id)),
-        m = (0, a.e7)([f.Z], () => f.Z.getRoles(i.id)),
-        O = null == h ? void 0 : h.roles,
+        m = (0, a.e7)([d.ZP], () => d.ZP.getMember(i.id, n.id)),
+        j = (0, a.e7)([f.Z], () => f.Z.getRoles(i.id)),
+        O = null == m ? void 0 : m.roles,
         E = r.useMemo(
             () =>
                 null == O || 0 === O.length
                     ? []
-                    : Object.values(m)
+                    : Object.values(j)
                           .filter((e) => O.includes(e.id))
                           .sort((e, n) => {
                               var t, l;
@@ -164,7 +164,7 @@ function E(e) {
                                   i = (null == (l = n.tags) ? void 0 : l.guild_connections) !== null;
                               return r && !i ? 1 : !r && i ? -1 : 0;
                           }),
-            [m, O]
+            [j, O]
         ),
         S = g.e9(i, t.id),
         [T] = (0, a.Wu)([p.Z], () => [p.Z.can(b.Plq.MANAGE_ROLES, i), null != i ? p.Z.getGuildVersion(i.id) : null]),
@@ -185,16 +185,16 @@ function E(e) {
             },
             [O, i.id, n.id, s]
         ),
-        C = T && null != h;
+        C = T && null != m;
     return 0 !== E.length || C
         ? (0, l.jsx)(
-              j.Z,
+              h.Z,
               y(Z({ heading: x.intl.string(x.t.LPJmLy) }, o), {
                   children: (0, l.jsx)(I, {
                       user: n,
                       currentUser: t,
                       guild: i,
-                      guildMember: h,
+                      guildMember: m,
                       roles: E,
                       highestRole: S,
                       canManageRoles: T,

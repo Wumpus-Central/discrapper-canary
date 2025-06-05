@@ -1,22 +1,22 @@
-let n, o;
-s.d(t, { Z: () => E }), s(388685), s(781311), s(35282);
-var a = s(255367),
-    r = s(73800),
-    i = s(120356),
-    l = s.n(i),
-    c = s(481060),
-    d = s(447543),
-    _ = s(230711),
-    u = s(881052),
-    p = s(600164),
-    f = s(118012),
-    m = s(782605),
-    b = s(981631),
-    h = s(388032),
-    x = s(145575);
-let N = ((n = window.GLOBAL_ENV.INVITE_HOST), (o = ''), null == n && ((n = location.host), (o = b.Z5c.INVITE(''))), ''.concat(location.protocol, '//').concat(n).concat(o, '/'));
+let s, o;
+n.d(t, { Z: () => E }), n(388685), n(781311), n(35282);
+var a = n(255367),
+    r = n(73800),
+    i = n(120356),
+    l = n.n(i),
+    c = n(481060),
+    d = n(447543),
+    _ = n(230711),
+    u = n(881052),
+    p = n(600164),
+    f = n(118012),
+    m = n(782605),
+    b = n(981631),
+    h = n(388032),
+    x = n(145575);
+let N = ((s = window.GLOBAL_ENV.INVITE_HOST), (o = ''), null == s && ((s = location.host), (o = b.Z5c.INVITE(''))), ''.concat(location.protocol, '//').concat(s).concat(o, '/'));
 function E(e) {
-    let { onBack: t, onComplete: s, onConnect: n, isSlideReady: o } = e,
+    let { onBack: t, onComplete: n, onConnect: s, isSlideReady: o } = e,
         [i, E] = r.useState(''),
         [C, j] = r.useState(!1),
         [T, I] = r.useState(null),
@@ -31,8 +31,8 @@ function E(e) {
             let t = i.trim();
             if ('' === t) return void I(h.intl.string(h.t.IRq5am));
             I(null), j(!0);
-            let n = t.split('/'),
-                o = n[n.length - 1];
+            let s = t.split('/'),
+                o = s[s.length - 1];
             d.ZP.resolveInvite(o, 'Join Guild', { inputValue: t }).then(
                 (e) => {
                     let { invite: t } = e;
@@ -43,7 +43,7 @@ function E(e) {
                             inviteKey: t.code,
                             context: e,
                             callback: (e) => {
-                                s(), d.ZP.transitionToInvite(e);
+                                n(), d.ZP.transitionToInvite(e);
                             }
                         }).catch((e) => {
                             e instanceof u.yZ || e instanceof u.Hx ? I((0, m.O)(e.code)) : I(h.intl.string(h.t.dDZRd3));
@@ -57,7 +57,7 @@ function E(e) {
                 }
             );
         },
-        [i, j, I, s]
+        [i, j, I, n]
     );
     return {
         content: (0, a.jsxs)(a.Fragment, {
@@ -109,7 +109,7 @@ function E(e) {
                             className: x.connectCTA,
                             children: h.intl.format(h.t['8F/who'], {
                                 onClick: () => {
-                                    n(), _.Z.open(b.oAB.CONNECTIONS);
+                                    s(), _.Z.open(b.oAB.CONNECTIONS);
                                 }
                             })
                         })

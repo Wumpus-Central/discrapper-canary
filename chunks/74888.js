@@ -80,6 +80,7 @@ function N(e) {
             size: a.CgR.MEDIUM,
             transitionState: e.transitionState,
             'aria-label': x.intl.string(x.t.h850Sk),
+            parentComponent: 'NotificationSettingsModalRedesign',
             children: [
                 (0, i.jsx)(S, { onClose: e.onClose }),
                 (0, i.jsxs)(a.hzk, {

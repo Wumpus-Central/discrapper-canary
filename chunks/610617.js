@@ -19,8 +19,8 @@ var i = n(255367),
     N = n(552958),
     f = n(213931),
     b = n(940165),
-    O = n(820408),
-    C = n(921944),
+    C = n(820408),
+    O = n(921944),
     E = n(871465),
     Z = n(388032),
     _ = n(345450);
@@ -63,7 +63,7 @@ function T(e) {
         Y = B === u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE;
     s.useEffect(
         () => () => {
-            J(C.L.AUTO_DISMISS);
+            J(O.L.AUTO_DISMISS);
         },
         [J]
     );
@@ -160,7 +160,7 @@ function T(e) {
                           ]
                       })
                   }),
-                  !z && (0, i.jsx)(O.Z, { onClose: n })
+                  !z && (0, i.jsx)(C.Z, { onClose: n })
               ]
           });
 }

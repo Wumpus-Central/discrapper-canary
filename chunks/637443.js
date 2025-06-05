@@ -18,6 +18,7 @@ let o = 'shop-assets-preview-instructions-modal',
             size: r.Cg.DYNAMIC,
             transitionState: t,
             className: s.modalRoot,
+            parentComponent: 'ShopAssetsPreviewInstructionModals',
             children: [
                 (0, a.jsx)(r.xB, {
                     className: s.modalHeader,
@@ -70,6 +71,7 @@ let o = 'shop-assets-preview-instructions-modal',
             size: r.Cg.DYNAMIC,
             transitionState: t,
             className: s.modalRoot,
+            parentComponent: 'ShopAssetsPreviewInstructionModals',
             children: [
                 (0, a.jsx)(r.xB, {
                     className: s.modalHeader,

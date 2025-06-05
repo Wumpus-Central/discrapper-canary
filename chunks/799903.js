@@ -16,6 +16,7 @@ function d(e) {
         [p, h] = i.useState(!1);
     return (0, r.jsxs)(a.Y0X, {
         transitionState: t,
+        parentComponent: 'ModeratorReportResolveConfirmModal',
         children: [
             (0, r.jsxs)(a.xBx, {
                 className: c.header,

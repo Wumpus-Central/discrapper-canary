@@ -1,34 +1,35 @@
-n.d(e, { Z: () => b });
+n.d(e, { Z: () => S });
 var i = n(255367);
 n(73800);
 var r = n(979554),
     s = n(442837),
     l = n(481060),
-    o = n(1585),
-    a = n(125988),
-    u = n(479446),
-    c = n(981632),
+    a = n(1585),
+    o = n(125988),
+    c = n(479446),
+    u = n(981632),
     d = n(876917),
     p = n(594174),
     f = n(597688),
-    h = n(609887);
-let m = l.EFr.SIZE_152,
-    g = (0, o.y9)(m),
-    y = (t) => {
+    h = n(22267),
+    m = n(609887);
+let g = l.EFr.SIZE_152,
+    y = (0, a.y9)(g),
+    O = (t) => {
         var e, n;
         let { item: r } = t,
-            o = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
+            a = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
             {
-                avatarDecorationSrc: u,
-                avatarPlaceholderSrc: c,
+                avatarDecorationSrc: c,
+                avatarPlaceholderSrc: u,
                 eventHandlers: d
-            } = (0, a.Z)({
-                user: o,
+            } = (0, o.Z)({
+                user: a,
                 avatarDecorationOverride: r,
-                size: g
+                size: y
             });
         return (0, i.jsx)('div', {
-            className: h.avatarDecorationPreview,
+            className: m.avatarDecorationPreview,
             children: (0, i.jsx)(
                 l.qEK,
                 ((e = (function (t) {
@@ -59,9 +60,9 @@ let m = l.EFr.SIZE_152,
                 (n = n =
                     {
                         'aria-label': r.label,
-                        src: c,
-                        avatarDecoration: u,
-                        size: m
+                        src: u,
+                        avatarDecoration: c,
+                        size: g
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -79,31 +80,46 @@ let m = l.EFr.SIZE_152,
             )
         });
     },
-    O = (t) => {
+    b = (t) => {
         let { item: e } = t;
         return (0, i.jsx)('div', {
-            className: h.profileEffectPreview,
+            className: m.profileEffectPreview,
             children: (0, i.jsx)(d.Z, {
                 isHovering: !0,
                 profileEffectId: null == e ? void 0 : e.id
             })
         });
     },
-    b = (t) => {
+    j = (t) => {
+        let { item: e } = t;
+        return (0, i.jsx)('div', {
+            className: m.nameplatePreview,
+            children: (0, i.jsx)(h.Z, {
+                nameplate: e,
+                className: m.nameplate,
+                nameplatePreviewSize: 'large',
+                isHighlighted: !0,
+                showPlaceholderUser: !0
+            })
+        });
+    },
+    S = (t) => {
         let { giftCode: e } = t,
             n = (0, s.e7)([f.Z], () => f.Z.getProduct(e.skuId)),
             l = null == n ? void 0 : n.items[0];
         switch (null == l ? void 0 : l.type) {
             case r.Z.AVATAR_DECORATION:
-                return (0, i.jsx)(y, { item: l });
-            case r.Z.PROFILE_EFFECT:
                 return (0, i.jsx)(O, { item: l });
+            case r.Z.PROFILE_EFFECT:
+                return (0, i.jsx)(b, { item: l });
+            case r.Z.NAMEPLATE:
+                return (0, i.jsx)(j, { item: l });
             default:
                 return null != e.giftStyle
-                    ? (0, i.jsx)(c.Z, {
-                          defaultAnimationState: u.SR.ACTION,
-                          idleAnimationState: u.SR.LOOP,
-                          className: h.giftAnimation,
+                    ? (0, i.jsx)(u.Z, {
+                          defaultAnimationState: c.SR.ACTION,
+                          idleAnimationState: c.SR.LOOP,
+                          className: m.giftAnimation,
                           giftStyle: e.giftStyle
                       })
                     : null;

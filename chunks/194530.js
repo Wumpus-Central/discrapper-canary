@@ -44,6 +44,7 @@ function p(e) {
         }, [f]),
         (0, i.jsxs)(l.Y0X, {
             transitionState: f,
+            parentComponent: 'ChangePasswordModal',
             children: [
                 (0, i.jsxs)(l.xBx, {
                     separator: !1,

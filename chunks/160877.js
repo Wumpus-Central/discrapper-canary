@@ -95,6 +95,7 @@ function v(e) {
             transitionState: p,
             'aria-labelledby': h,
             size: s.CgR.SMALL,
+            parentComponent: 'ExplicitMediaFalsePositiveModal',
             children: [
                 (0, r.jsxs)(s.hzk, {
                     children: [

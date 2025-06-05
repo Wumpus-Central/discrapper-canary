@@ -174,6 +174,7 @@ function I(e) {
                 transitionState: t,
                 className: E.modal,
                 size: p ? o.CgR.DYNAMIC : o.CgR.MEDIUM,
+                parentComponent: 'ProfileEffectModal',
                 children: p
                     ? (0, n.jsx)(o.$jN, {
                           className: E.spinner,

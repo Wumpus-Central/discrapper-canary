@@ -27,8 +27,8 @@ function I(e) {
         }),
         O = null != g || x.length > 0,
         C = y.length > 0,
-        { mutualFriendsCount: T, mutualGuilds: P } = (0, l.Z)(n),
-        w = null == P ? void 0 : P.length,
+        { mutualFriendsCount: P, mutualGuilds: T } = (0, l.Z)(n),
+        w = null == T ? void 0 : T.length,
         S = (0, r.Z)(n),
         E = [
             {
@@ -51,7 +51,7 @@ function I(e) {
             S &&
             (E.push({
                 section: _.oh.MUTUAL_FRIENDS,
-                text: (0, u.Z)(T)
+                text: (0, u.Z)(P)
             }),
             E.push({
                 section: _.oh.MUTUAL_GUILDS,

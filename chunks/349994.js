@@ -1,4 +1,4 @@
-a.d(t, { default: () => _ }), a(388685);
+a.d(t, { default: () => b }), a(388685);
 var n = a(255367),
     s = a(73800),
     o = a(481060),
@@ -9,19 +9,20 @@ var n = a(255367),
     d = a(531578),
     u = a(388032),
     m = a(398035);
-function _(e) {
-    let [t, _] = s.useState(null),
-        b = (0, r.Dt)();
+function b(e) {
+    let [t, b] = s.useState(null),
+        _ = (0, r.Dt)();
     return (0, n.jsxs)(o.Y0X, {
         transitionState: e.transitionState,
-        'aria-labelledby': b,
+        'aria-labelledby': _,
+        parentComponent: 'SafetyUserSentimentFeedbackModal',
         children: [
             (0, n.jsxs)(o.xBx, {
                 separator: !1,
                 className: m.headerContainer,
                 children: [
                     (0, n.jsx)(o.X6q, {
-                        id: b,
+                        id: _,
                         variant: 'heading-xl/extrabold',
                         color: 'none',
                         children: u.intl.string(u.t.BIbnR0)
@@ -40,7 +41,7 @@ function _(e) {
                     emojiKind: 'thumb',
                     selectedRating: t,
                     onChangeRating: function (t) {
-                        _(t),
+                        b(t),
                             null != t &&
                                 ((0, c.Z)({ rating: t }),
                                 e.onClose(),

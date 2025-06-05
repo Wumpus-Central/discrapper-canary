@@ -495,6 +495,7 @@ class em extends (l = r.PureComponent) {
                 'aria-labelledby': this._headerId,
                 transitionState: e,
                 className: ei.modal,
+                parentComponent: 'InstantInvite',
                 children: this.getModalContent()
             })
         });

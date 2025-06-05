@@ -111,6 +111,7 @@ let Z = function (e) {
         transitionState: l,
         'aria-labelledby': M,
         className: T.modal,
+        parentComponent: 'GuildRoleConnectionsModal',
         children: [
             (0, r.jsxs)(c.xBx, {
                 separator: !1,

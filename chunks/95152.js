@@ -159,6 +159,7 @@ class P extends i.Component {
             size: s.CgR.DYNAMIC,
             transitionState: t,
             className: b.uploadModal,
+            parentComponent: 'UploadAttachment',
             children: [
                 (0, r.jsxs)('div', {
                     className: b.inner,

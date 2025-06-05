@@ -1,42 +1,43 @@
-s.d(e, { default: () => r });
-var a = s(255367);
-s(73800);
-var n = s(481060),
-    i = s(388032),
-    o = s(146958);
+e.d(a, { default: () => r });
+var n = e(255367);
+e(73800);
+var s = e(481060),
+    o = e(388032),
+    i = e(146958);
 function r(t) {
-    let { transitionState: e, onClose: r } = t;
-    return (0, a.jsxs)(n.Y0X, {
-        className: o.modal,
-        transitionState: e,
-        size: n.CgR.SMALL,
+    let { transitionState: a, onClose: r } = t;
+    return (0, n.jsxs)(s.Y0X, {
+        className: i.modal,
+        transitionState: a,
+        size: s.CgR.SMALL,
+        parentComponent: 'AutomodRaidFalseAlarmConfirmationModal',
         children: [
-            (0, a.jsx)('img', {
+            (0, n.jsx)('img', {
                 'aria-hidden': !0,
                 alt: '',
-                src: s(762528),
-                className: o.image
+                src: e(762528),
+                className: i.image
             }),
-            (0, a.jsxs)(n.hzk, {
-                className: o.content,
+            (0, n.jsxs)(s.hzk, {
+                className: i.content,
                 children: [
-                    (0, a.jsx)(n.X6q, {
+                    (0, n.jsx)(s.X6q, {
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
-                        className: o.text,
-                        children: i.intl.string(i.t.pAzfrq)
+                        className: i.text,
+                        children: o.intl.string(o.t.pAzfrq)
                     }),
-                    (0, a.jsx)(n.Text, {
+                    (0, n.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        className: o.text,
-                        children: i.intl.string(i.t.oxowND)
+                        className: i.text,
+                        children: o.intl.string(o.t.oxowND)
                     }),
-                    (0, a.jsx)(n.zxk, {
+                    (0, n.jsx)(s.zxk, {
                         onClick: r,
-                        color: n.zxk.Colors.BRAND,
-                        look: n.zxk.Looks.FILLED,
-                        children: i.intl.string(i.t.o3ZlOD)
+                        color: s.zxk.Colors.BRAND,
+                        look: s.zxk.Looks.FILLED,
+                        children: o.intl.string(o.t.o3ZlOD)
                     })
                 ]
             })

@@ -160,7 +160,6 @@ let P = function (e) {
                         className: O.jumboButton,
                         sound: v,
                         channel: S,
-                        refreshEnabled: !0,
                         onSelectItem: D,
                         isPlayingSoundOverride: R,
                         isSoundmoji: !0,

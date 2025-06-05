@@ -1,47 +1,47 @@
-i.d(l, { default: () => L }), i(953529), i(539854);
-var a = i(255367),
-    n = i(73800),
-    s = i(442837),
-    o = i(481060),
-    t = i(596454),
-    c = i(471445),
-    r = i(686546),
-    d = i(313201),
-    m = i(339085),
-    u = i(633302),
-    h = i(565138),
-    j = i(372769),
-    x = i(703656),
-    N = i(592125),
-    p = i(430824),
-    _ = i(496675),
-    C = i(259580),
-    g = i(626135),
-    k = i(524329),
-    E = i(995532),
-    Z = i(845606),
-    f = i(981631),
-    v = i(231338),
-    I = i(388032),
-    S = i(62311);
+n.d(l, { default: () => L }), n(953529), n(539854);
+var a = n(255367),
+    i = n(73800),
+    s = n(442837),
+    o = n(481060),
+    t = n(596454),
+    c = n(471445),
+    r = n(686546),
+    d = n(313201),
+    m = n(339085),
+    u = n(633302),
+    h = n(565138),
+    j = n(372769),
+    x = n(703656),
+    p = n(592125),
+    N = n(430824),
+    _ = n(496675),
+    C = n(259580),
+    g = n(626135),
+    k = n(524329),
+    E = n(995532),
+    Z = n(845606),
+    f = n(981631),
+    v = n(231338),
+    I = n(388032),
+    S = n(62311);
 let P = (e) => {
         var l;
-        let { channelData: i, onClose: n, trackOptionClick: r } = e,
-            d = (0, s.e7)([N.Z], () => N.Z.getChannel(i.channel_id)),
+        let { channelData: n, onClose: i, trackOptionClick: r } = e,
+            d = (0, s.e7)([p.Z], () => p.Z.getChannel(n.channel_id)),
             h = (0, s.e7)([_.Z], () => null != d && _.Z.can(v.Pl.VIEW_CHANNEL, d)),
-            j = (0, s.e7)([m.ZP], () => (null != i.emoji_id ? m.ZP.getCustomEmojiById(i.emoji_id) : null), [i.emoji_id]),
-            p = null != i.emoji_name ? u.ZP.getByName(u.ZP.convertSurrogateToName(i.emoji_name, !1)) : null,
+            j = (0, s.e7)([m.ZP], () => (null != n.emoji_id ? m.ZP.getCustomEmojiById(n.emoji_id) : null), [n.emoji_id]),
+            N = null != n.emoji_name ? u.ZP.getByName(u.ZP.convertSurrogateToName(n.emoji_name, !1)) : null,
             g = null != (l = (0, c.KS)(d)) ? l : o.VL1;
         return null != d && h
             ? (0, a.jsxs)(o.P3F, {
                   className: S.optionContainer,
                   onClick: () => {
-                      r(), n(), (0, x.XU)(d.guild_id, d.id);
+                      r(), i(), (0, x.XU)(d.guild_id, d.id);
                   },
                   children: [
-                      null != j || null != p
+                      null != j || null != N
                           ? (0, a.jsx)(t.Z, {
-                                emojiName: null != i.emoji_id ? (null == j ? void 0 : j.name) : i.emoji_name,
+                                emojiName: null != n.emoji_id ? (null == j ? void 0 : j.name) : n.emoji_name,
                                 animated: null != j && j.animated,
                                 emojiId: null == j ? void 0 : j.id,
                                 autoplay: !0,
@@ -54,7 +54,7 @@ let P = (e) => {
                               (0, a.jsx)(o.Text, {
                                   variant: 'text-md/normal',
                                   className: S.channelDescription,
-                                  children: i.description
+                                  children: n.description
                               }),
                               (0, a.jsxs)(o.Text, {
                                   variant: 'text-xs/normal',
@@ -80,11 +80,11 @@ let P = (e) => {
     },
     L = (e) => {
         var l;
-        let { onClose: i, transitionState: t, guildId: c, isPreview: m } = e,
-            u = (0, s.e7)([p.Z], () => p.Z.getGuild(c)),
+        let { onClose: n, transitionState: t, guildId: c, isPreview: m } = e,
+            u = (0, s.e7)([N.Z], () => N.Z.getGuild(c)),
             {
                 welcomeScreen: x,
-                fetching: N,
+                fetching: p,
                 hasError: _
             } = (0, s.cj)([E.Z], () => ({
                 welcomeScreen: E.Z.get(c),
@@ -92,40 +92,40 @@ let P = (e) => {
                 hasError: E.Z.hasError()
             })),
             C = (0, d.Dt)();
-        n.useEffect(() => {
+        i.useEffect(() => {
             null == x && (0, k.RM)(c);
         }, [c, x]),
-            n.useEffect(() => {
-                !1 === N && !0 === _ && null == x && i();
-            }, [N, _, i, x]),
-            n.useEffect(() => {
-                x === E.a && !1 === N && i();
-            }, [i, x, N]),
-            n.useEffect(() => {
+            i.useEffect(() => {
+                !1 === p && !0 === _ && null == x && n();
+            }, [p, _, n, x]),
+            i.useEffect(() => {
+                x === E.a && !1 === p && n();
+            }, [n, x, p]),
+            i.useEffect(() => {
                 !0 !== m &&
                     g.default.track(f.rMx.OPEN_MODAL, {
                         type: Z._,
                         guild_id: c
                     });
             }, [c, m]);
-        let v = n.useCallback(
+        let v = i.useCallback(
             (e) => {
                 var l;
                 if (null == x || !0 === m) return;
-                let i = [],
+                let n = [],
                     a = [],
-                    n = !1;
+                    i = !1;
                 null == (l = x.welcome_channels) ||
                     l.forEach((e) => {
-                        i.push(e.description), a.push(e.channel_id), null != e.emoji_id && (n = !0);
+                        n.push(e.description), a.push(e.channel_id), null != e.emoji_id && (i = !0);
                     }),
                     g.default.track(f.rMx.GUILD_WELCOME_SCREEN_OPTION_SELECTED, {
                         index: e,
                         guild_id: c,
-                        options: i,
+                        options: n,
                         options_channel_ids: a,
                         guild_description: x.description,
-                        has_custom_emojis: n
+                        has_custom_emojis: i
                     });
             },
             [c, m, x]
@@ -137,15 +137,17 @@ let P = (e) => {
                     transitionState: t,
                     className: S.main,
                     'aria-label': I.intl.string(I.t.ZTNur6),
+                    parentComponent: 'WelcomeScreenModal',
                     children: (0, a.jsx)(o.$jN, { type: o.$jN.Type.SPINNING_CIRCLE })
                 })
               : (0, a.jsxs)(o.Y0X, {
                     transitionState: t,
                     className: S.main,
                     'aria-labelledby': C,
+                    parentComponent: 'WelcomeScreenModal',
                     children: [
                         (0, a.jsx)(o.olH, {
-                            onClick: i,
+                            onClick: n,
                             className: S.close
                         }),
                         (0, a.jsx)(r.ZP, {
@@ -211,7 +213,7 @@ let P = (e) => {
                                               {
                                                   channelData: e,
                                                   trackOptionClick: () => v(l),
-                                                  onClose: i
+                                                  onClose: n
                                               },
                                               ''.concat(e.channel_id, '-').concat(l)
                                           )
@@ -221,7 +223,7 @@ let P = (e) => {
                             look: o.zxk.Looks.LINK,
                             color: S.skipColor,
                             className: S.skip,
-                            onClick: i,
+                            onClick: n,
                             children: I.intl.string(I.t['jizr8/'])
                         })
                     ]

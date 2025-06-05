@@ -22,8 +22,8 @@ var n,
     k = s(981631),
     R = s(388032),
     P = s(472645),
-    y = s(20493);
-function A(e, t, s) {
+    A = s(20493);
+function y(e, t, s) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,7 +47,7 @@ function N(e) {
                 })
             )),
             n.forEach(function (t) {
-                A(e, t, s[t]);
+                y(e, t, s[t]);
             });
     }
     return e;
@@ -78,7 +78,7 @@ class v extends (n = o.PureComponent) {
                     (0, r.jsx)(
                         p.Dx,
                         {
-                            className: a()(y.marginBottom8, P.title),
+                            className: a()(A.marginBottom8, P.title),
                             children: R.intl.string(R.t.bPP34e)
                         },
                         'title'
@@ -101,7 +101,7 @@ class v extends (n = o.PureComponent) {
                         (0, r.jsx)(x.Z, {
                             alpha2: t.alpha2,
                             countryCode: t.code.split(' ')[0],
-                            className: y.marginBottom20,
+                            className: A.marginBottom20,
                             label: R.intl.string(R.t.tUjnxs),
                             error: null != (e = this.renderError('login')) ? e : this.renderError('email'),
                             onChange: (e, t) =>
@@ -135,7 +135,7 @@ class v extends (n = o.PureComponent) {
                             onClick: this.handleForgotPassword,
                             look: c.zxk.Looks.LINK,
                             color: c.zxk.Colors.LINK,
-                            className: y.marginTop4,
+                            className: A.marginTop4,
                             children: R.intl.string(R.t.wWIufn)
                         })
                     ]
@@ -203,11 +203,11 @@ class v extends (n = o.PureComponent) {
             theme: t,
             children: [
                 (0, r.jsx)(p.Dx, {
-                    className: y.marginBottom8,
+                    className: A.marginBottom8,
                     children: n
                 }),
                 (0, r.jsx)(p.DK, {
-                    className: y.marginBottom20,
+                    className: A.marginBottom20,
                     children: o
                 }),
                 (0, r.jsxs)(p.gO, {
@@ -219,7 +219,7 @@ class v extends (n = o.PureComponent) {
                             children: R.intl.string(R.t.JhDw5u)
                         }),
                         (0, r.jsx)('div', {
-                            className: a()(y.marginTop8, P.needAccount),
+                            className: a()(A.marginTop8, P.needAccount),
                             children: R.intl.format(R.t.js2rr6, { onClick: this.handleCancelAccountDeletion })
                         })
                     ]
@@ -249,7 +249,7 @@ class v extends (n = o.PureComponent) {
             tag: 'form',
             className: e,
             children: (0, r.jsx)('div', {
-                className: y.marginTop20,
+                className: A.marginTop20,
                 children: (0, r.jsx)(f.Z, {
                     title: R.intl.string(R.t['+xqy3d']),
                     subtitle: R.intl.format(R.t.ef4uZ2, { onResendClick: this.handleResendCode }),
@@ -282,33 +282,33 @@ class v extends (n = o.PureComponent) {
     }
     constructor(e) {
         super(e),
-            A(this, 'loginRef', void 0),
-            A(this, 'passwordRef', void 0),
-            A(this, 'codeRef', void 0),
-            A(this, 'handleAuthToken', async (e) => {
+            y(this, 'loginRef', void 0),
+            y(this, 'passwordRef', void 0),
+            y(this, 'codeRef', void 0),
+            y(this, 'handleAuthToken', async (e) => {
                 this.setState({ errors: {} }), await d.Z.loginToken(e, !1);
             }),
-            A(this, 'handleTabOrEnter', (e) => {
+            y(this, 'handleTabOrEnter', (e) => {
                 if ('Tab' === e.key && !e.shiftKey && e.target === this.loginRef) {
                     var t;
                     null == (t = this.passwordRef) || t.focus(), e.stopPropagation(), e.preventDefault();
                 }
                 'Enter' === e.key && (e.target === this.loginRef || e.target === this.passwordRef) && (this.handleLogin(), e.stopPropagation(), e.preventDefault());
             }),
-            A(this, 'setLoginRef', (e) => {
+            y(this, 'setLoginRef', (e) => {
                 this.loginRef = e;
             }),
-            A(this, 'setPasswordRef', (e) => {
+            y(this, 'setPasswordRef', (e) => {
                 this.passwordRef = e;
             }),
-            A(this, 'setCodeRef', (e) => {
+            y(this, 'setCodeRef', (e) => {
                 this.codeRef = e;
             }),
-            A(this, 'getFullLogin', () => {
+            y(this, 'getFullLogin', () => {
                 let { loginPrefix: e, login: t } = this.state;
                 return e + t;
             }),
-            A(this, 'renderError', (e) => {
+            y(this, 'renderError', (e) => {
                 let { errors: t } = this.state;
                 if (this.hasError(e)) {
                     let s = t[e];
@@ -316,7 +316,7 @@ class v extends (n = o.PureComponent) {
                 }
                 return null;
             }),
-            A(this, 'handleForgotPassword', async (e) => {
+            y(this, 'handleForgotPassword', async (e) => {
                 var t;
                 null == e || e.preventDefault(), null == (t = this.loginRef) || t.focus();
                 let s = this.getFullLogin();
@@ -362,7 +362,7 @@ class v extends (n = o.PureComponent) {
                     this.setState({ errors: e });
                 }
             }),
-            A(this, 'handleLogin', async (e) => {
+            y(this, 'handleLogin', async (e) => {
                 let { password: t, undelete: s } = this.state;
                 null == e || e.preventDefault(), this.setState({ errors: {} });
                 try {
@@ -377,7 +377,7 @@ class v extends (n = o.PureComponent) {
                     this.setState({ errors: e });
                 }
             }),
-            A(this, 'handlePasswordReset', async (e) => {
+            y(this, 'handlePasswordReset', async (e) => {
                 this.setState({
                     phoneVerifyError: null,
                     errors: {}
@@ -389,7 +389,7 @@ class v extends (n = o.PureComponent) {
                     null != e.body && null != e.body.message && this.setState({ phoneVerifyError: e.body.message });
                 }
             }),
-            A(this, 'handleTokenSubmitMFA', (e) => {
+            y(this, 'handleTokenSubmitMFA', (e) => {
                 let { mfaType: t, data: s, ticket: n } = e;
                 return d.Z.loginMFAv2({
                     code: s,
@@ -398,10 +398,10 @@ class v extends (n = o.PureComponent) {
                     isMultiAccount: !0
                 });
             }),
-            A(this, 'handleResendCode', () => {
+            y(this, 'handleResendCode', () => {
                 g.Z.resendCode(this.getFullLogin());
             }),
-            A(this, 'handleReset', (e) => {
+            y(this, 'handleReset', (e) => {
                 null == e || e.preventDefault(),
                     d.Z.loginReset(!0),
                     this.setState({
@@ -415,7 +415,7 @@ class v extends (n = o.PureComponent) {
                         errors: {}
                     });
             }),
-            A(this, 'handleCancelAccountDeletion', () => {
+            y(this, 'handleCancelAccountDeletion', () => {
                 this.setState({ undelete: !0 }, this.handleLogin);
             }),
             (this.state = {
@@ -454,7 +454,7 @@ function S(e) {
         ]
     });
 }
-A(v, 'defaultProps', {
+y(v, 'defaultProps', {
     transitionTo: (e) => s.g.location.assign(e),
     replaceWith: (e) => s.g.location.replace(e)
 });

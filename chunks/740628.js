@@ -12,13 +12,13 @@ var l = t(255367),
     p = t(384816),
     g = t(389190),
     v = t(428927),
-    h = t(228168),
-    j = t(388032),
-    m = t(301150),
+    m = t(228168),
+    h = t(388032),
+    j = t(301150),
     b = t(923243);
 function x(e) {
     let { section: n, subsection: t, user: r, currentUser: i, displayProfile: o, guildId: s, channelId: a, onClose: u } = e;
-    return n === h.oh.ACTIVITY
+    return n === m.oh.ACTIVITY
         ? (0, l.jsx)(f.Z, {
               user: r,
               currentUser: i,
@@ -26,21 +26,21 @@ function x(e) {
               guildId: s,
               onClose: u
           })
-        : n === h.oh.MUTUAL_FRIENDS
+        : n === m.oh.MUTUAL_FRIENDS
           ? (0, l.jsx)(g.Z, {
                 user: r,
                 guildId: s,
                 channelId: a,
                 onClose: u
             })
-          : n === h.oh.MUTUAL_GUILDS
+          : n === m.oh.MUTUAL_GUILDS
             ? (0, l.jsx)(v.Z, {
                   user: r,
                   onClose: u
               })
-            : n === h.oh.BOT_DATA_ACCESS
+            : n === m.oh.BOT_DATA_ACCESS
               ? (0, l.jsx)(c.Z, { user: r })
-              : n === h.oh.BOT_INFO
+              : n === m.oh.BOT_INFO
                 ? (0, l.jsx)(d.Z, {
                       user: r,
                       currentUser: i,
@@ -59,7 +59,7 @@ function x(e) {
 }
 function O(e) {
     var n, t, c;
-    let { user: d, currentUser: f, displayProfile: p, guildId: g, items: v, initialSection: O = h.oh.USER_INFO, initialSubsection: Z, onClose: y } = e,
+    let { user: d, currentUser: f, displayProfile: p, guildId: g, items: v, initialSection: O = m.oh.USER_INFO, initialSubsection: Z, onClose: y } = e,
         { trackUserProfileAction: P } = (0, u.KZ)(),
         I = (0, i.e7)([a.Z], () => a.Z.hidePersonalInformation),
         [{ section: E, subsection: S }, T] = r.useState({
@@ -103,12 +103,12 @@ function O(e) {
         ? (0, l.jsx)('div', {
               className: b.container,
               children: (0, l.jsxs)('div', {
-                  className: m.empty,
+                  className: j.empty,
                   children: [
-                      (0, l.jsx)('div', { className: m.emptyIconStreamerMode }),
+                      (0, l.jsx)('div', { className: j.emptyIconStreamerMode }),
                       (0, l.jsx)('div', {
-                          className: m.emptyText,
-                          children: j.intl.string(j.t.Br1ls7)
+                          className: j.emptyText,
+                          children: h.intl.string(h.t.Br1ls7)
                       })
                   ]
               })

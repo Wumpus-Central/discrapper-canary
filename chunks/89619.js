@@ -1,60 +1,61 @@
 a.d(i, { default: () => j }), a(388685), a(953529);
 var t = a(255367),
-    s = a(73800),
-    n = a(120356),
-    l = a.n(n),
+    n = a(73800),
+    s = a(120356),
+    l = a.n(s),
     o = a(481060),
     r = a(313201),
     m = a(309081),
     d = a(35463),
     c = a(489887),
     h = a(388032),
-    u = a(787791);
-let x = (0, r.hQ)();
+    x = a(787791);
+let u = (0, r.hQ)();
 function j(e) {
     var i;
-    let { channelId: a, answer: n, onSave: r, transitionState: j, onClose: _ } = e,
+    let { channelId: a, answer: s, onSave: r, transitionState: j, onClose: _ } = e,
         {
             emoji: g,
             hasUpload: p,
-            upload: k,
-            mediaUrl: v,
-            mediaFilename: w
+            upload: C,
+            mediaUrl: k,
+            mediaFilename: v
         } = (0, d.Z)({
             channelId: a,
-            localCreationAnswerId: n.localCreationAnswerId,
-            image: n.image
+            localCreationAnswerId: s.localCreationAnswerId,
+            image: s.image
         }),
-        [C, z] = s.useState(null != (i = null == k ? void 0 : k.description) ? i : '');
+        [w, z] = n.useState(null != (i = null == C ? void 0 : C.description) ? i : '');
     return (0, t.jsxs)(o.Y0X, {
         size: o.CgR.DYNAMIC,
-        className: l()(u.modal, {
-            [u.hasImage]: p,
-            [u.hasEmoji]: null != g
+        className: l()(x.modal, {
+            [x.hasImage]: p,
+            [x.hasEmoji]: null != g
         }),
         transitionState: j,
         'aria-label': h.intl.string(h.t.QbhHBQ),
+        parentComponent: 'PollCreationAnswerAltTextModal',
         children: [
             (0, t.jsx)(m.I, {
                 hasUpload: p,
-                mediaUrl: v,
-                mediaFilename: w,
-                imageClassName: u.imagePreview,
+                mediaUrl: k,
+                mediaFilename: v,
+                imageClassName: x.imagePreview,
                 emoji: g,
-                emojiClassName: u.emojiPreview
+                emojiClassName: x.emojiPreview
             }),
             (0, t.jsxs)(o.hzk, {
-                className: u.content,
+                className: x.content,
                 children: [
                     (0, t.jsx)(o.vwX, {
                         tag: o.RB0.LABEL,
-                        htmlFor: x,
+                        htmlFor: u,
                         children: h.intl.string(h.t['/2Gnoa'])
                     }),
                     (0, t.jsx)(o.oil, {
-                        id: x,
-                        value: C,
-                        inputClassName: u.input,
+                        id: u,
+                        value: w,
+                        inputClassName: x.input,
                         onChange: z,
                         maxLength: c.WA,
                         autoFocus: !0
@@ -62,13 +63,13 @@ function j(e) {
                 ]
             }),
             (0, t.jsxs)(o.mzw, {
-                className: u.footer,
+                className: x.footer,
                 children: [
                     (0, t.jsx)(o.zxk, {
                         look: o.iLD.FILLED,
                         size: o.zxk.Sizes.MEDIUM,
                         onClick: () => {
-                            null != C && r(C), _();
+                            null != w && r(w), _();
                         },
                         children: (0, t.jsx)(o.Text, {
                             variant: 'text-md/semibold',

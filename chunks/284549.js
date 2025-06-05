@@ -3,8 +3,8 @@ var n = i(255367),
     s = i(73800),
     a = i(442837),
     l = i(481060),
-    r = i(893776),
-    o = i(809206),
+    o = i(893776),
+    r = i(809206),
     h = i(704903),
     d = i(155433),
     c = i(23434),
@@ -21,26 +21,26 @@ let C = (e) => {
         y = (0, a.e7)([c.Z], () => c.Z.getAction()),
         R = !g.Z.isEmailReverification(y),
         [_, k] = s.useState(!0),
-        I = v === p.QZA.SUBMITTING;
-    function E(e) {
+        E = v === p.QZA.SUBMITTING;
+    function I(e) {
         var t, i;
         return null != (i = null == C || null == (t = C[e]) ? void 0 : t[0]) ? i : '';
     }
-    let b = E('email'),
-        P = E('password');
+    let b = I('email'),
+        P = I('password');
     return (0, n.jsx)(h.Z, {
         transitionState: t,
         email: null == x ? void 0 : x.email,
         emailError: b,
         passwordError: P,
-        submitting: I,
-        canResend: _ && !I && (null == x ? void 0 : x.email) != null && 0 === b.length && 0 === P.length,
+        submitting: E,
+        canResend: _ && !E && (null == x ? void 0 : x.email) != null && 0 === b.length && 0 === P.length,
         canChange: R,
         onChangeEmailClick: function () {
             k(!1);
         },
         onVerify: function (e, t) {
-            (0, o.Mn)({
+            (0, r.Mn)({
                 email: e,
                 password: t
             }).then((e) => {
@@ -52,7 +52,7 @@ let C = (e) => {
                 k(!0);
         },
         onResend: function () {
-            r.Z.verifyResend();
+            o.Z.verifyResend();
         },
         onClose: i
     });

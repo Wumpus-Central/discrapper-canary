@@ -1,51 +1,51 @@
-s.d(t, { Z: () => a }), s(953529);
-var n = s(255367);
-s(73800);
-var r = s(481060),
-    l = s(388032),
-    i = s(652297);
+n.d(t, { Z: () => a }), n(953529);
+var s = n(255367);
+n(73800);
+var r = n(481060),
+    l = n(388032),
+    i = n(652297);
 function a(e) {
-    let { email: t, onClose: s } = e;
-    return (0, n.jsxs)(n.Fragment, {
+    let { email: t, onClose: n } = e;
+    return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, n.jsxs)(r.xBx, {
+            (0, s.jsxs)(r.xBx, {
                 separator: !1,
                 className: i.header,
                 children: [
-                    (0, n.jsx)(r.X6q, {
+                    (0, s.jsx)(r.X6q, {
                         className: i.title,
                         variant: 'heading-xl/semibold',
                         children: l.intl.string(l.t['8O+nFx'])
                     }),
-                    (0, n.jsx)(r.olH, {
-                        onClick: s,
+                    (0, s.jsx)(r.olH, {
+                        onClick: n,
                         className: i.modalCloseButton
                     })
                 ]
             }),
-            (0, n.jsx)(r.hzk, {
+            (0, s.jsx)(r.hzk, {
                 className: i.content,
-                children: (0, n.jsx)(r.Text, {
+                children: (0, s.jsx)(r.Text, {
                     className: i.description,
                     variant: 'text-md/normal',
                     children: l.intl.format(l.t.Zvx0Oz, { email: t })
                 })
             }),
-            (0, n.jsx)(r.hzk, {
+            (0, s.jsx)(r.hzk, {
                 className: i.content,
-                children: (0, n.jsx)(r.Text, {
+                children: (0, s.jsx)(r.Text, {
                     className: i.tooltip,
                     variant: 'text-sm/normal',
                     children: l.intl.string(l.t.yb7itb)
                 })
             }),
-            (0, n.jsx)(r.mzw, {
+            (0, s.jsx)(r.mzw, {
                 className: i.modalFooter,
-                children: (0, n.jsx)(r.zxk, {
+                children: (0, s.jsx)(r.zxk, {
                     className: i.__invalid_submit,
                     color: r.zxk.Colors.BRAND,
                     size: r.zxk.Sizes.MEDIUM,
-                    onClick: s,
+                    onClick: n,
                     children: l.intl.string(l.t.BddRzc)
                 })
             })

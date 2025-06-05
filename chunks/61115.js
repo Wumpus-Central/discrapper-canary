@@ -105,6 +105,7 @@ function T(e) {
             transitionState: a,
             size: l.CgR.DYNAMIC,
             className: g.modalRoot,
+            parentComponent: 'QuestSurveyModal',
             children: (0, r.jsxs)(l.MyZ, {
                 activeSlide: b,
                 width: S,

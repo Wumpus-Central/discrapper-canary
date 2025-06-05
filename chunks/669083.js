@@ -14,8 +14,8 @@ var i = n(255367),
     g = n(486016),
     m = n(809357),
     y = n(624864),
-    _ = n(981631),
-    v = n(388032),
+    v = n(981631),
+    _ = n(388032),
     O = n(692369),
     b = n(20493);
 function E(e, t, n) {
@@ -33,44 +33,44 @@ function E(e, t, n) {
 }
 let x = () => [
         {
-            value: _.ipw.LARGE,
-            name: v.intl.string(v.t.YcOxtr)
+            value: v.ipw.LARGE,
+            name: _.intl.string(_.t.YcOxtr)
         },
         {
-            value: _.ipw.SMALL,
-            name: v.intl.string(v.t.BKIKq6)
+            value: v.ipw.SMALL,
+            name: _.intl.string(_.t.BKIKq6)
         }
     ],
     S = () => [
         {
-            value: _.wC$.ALWAYS,
-            name: v.intl.string(v.t.nBmDra)
+            value: v.wC$.ALWAYS,
+            name: _.intl.string(_.t.nBmDra)
         },
         {
-            value: _.wC$.ONLY_WHILE_SPEAKING,
-            name: v.intl.string(v.t['2OvIZW'])
+            value: v.wC$.ONLY_WHILE_SPEAKING,
+            name: _.intl.string(_.t['2OvIZW'])
         },
         {
-            value: _.wC$.NEVER,
-            name: v.intl.string(v.t.ekjlPD)
+            value: v.wC$.NEVER,
+            name: _.intl.string(_.t.ekjlPD)
         }
     ],
     C = () => [
         {
-            value: _.OYC.ALWAYS,
-            name: v.intl.string(v.t.nBmDra)
+            value: v.OYC.ALWAYS,
+            name: _.intl.string(_.t.nBmDra)
         },
         {
-            value: _.OYC.ONLY_WHILE_SPEAKING,
-            name: v.intl.string(v.t['2OvIZW'])
+            value: v.OYC.ONLY_WHILE_SPEAKING,
+            name: _.intl.string(_.t['2OvIZW'])
         }
     ];
 function j() {
     let e = h.default.getNotificationPositionMode(),
-        t = e !== _._vf.DISABLED,
+        t = e !== v._vf.DISABLED,
         n = u.ZP.getOverlayKeybind(),
         i = u.ZP.getOverlayChatKeybind();
-    l.Z.track(_.rMx.OVERLAY_SETTINGS_UPDATED, {
+    l.Z.track(v.rMx.OVERLAY_SETTINGS_UPDATED, {
         enabled: !0,
         notifications_enabled: t,
         notifications_position: t ? e : null,
@@ -82,7 +82,7 @@ function j() {
 }
 class Z extends r.PureComponent {
     componentDidMount() {
-        l.Z.track(_.rMx.SETTINGS_PANE_VIEWED, {
+        l.Z.track(v.rMx.SETTINGS_PANE_VIEWED, {
             settings_type: 'overlay',
             destination_pane: 'OVERLAY SETTINGS',
             origin_pane: null
@@ -115,7 +115,7 @@ class Z extends r.PureComponent {
                         (0, i.jsx)(s.vwX, {
                             className: O.headerTitle,
                             tag: 'h1',
-                            children: v.intl.string(v.t['35G2Mj'])
+                            children: _.intl.string(_.t['35G2Mj'])
                         }),
                         (0, i.jsx)(s.olH, {
                             className: O.headerClose,
@@ -145,12 +145,12 @@ class Z extends r.PureComponent {
                 (0, i.jsx)(s.njP.Item, {
                     id: 'GENERAL',
                     className: O.tabBarItem,
-                    children: v.intl.string(v.t['0FYxx8'])
+                    children: _.intl.string(_.t['0FYxx8'])
                 }),
                 (0, i.jsx)(s.njP.Item, {
                     id: 'VOICE',
                     className: O.tabBarItem,
-                    children: v.intl.string(v.t['3WeSiI'])
+                    children: _.intl.string(_.t['3WeSiI'])
                 }),
                 t
             ]
@@ -181,11 +181,11 @@ class Z extends r.PureComponent {
     renderGeneralSettings() {
         let { notificationPositionMode: e, shouldShowKeybindIndicators: t, showKeybindIndicators: n, shouldShowInviteNotification: o } = this.props,
             a = !y.Z.isNotificationDisabled(g.OverlayNotificationDisabledSetting.TEXT_CHAT),
-            d = e !== _._vf.DISABLED;
+            d = e !== v._vf.DISABLED;
         return (0, i.jsxs)(r.Fragment, {
             children: [
                 (0, i.jsx)(s.xJW, {
-                    title: v.intl.string(v.t.IQv8Eh),
+                    title: _.intl.string(_.t.IQv8Eh),
                     className: b.marginBottom20,
                     children: (0, i.jsx)(c.Z, {
                         position: e,
@@ -197,21 +197,21 @@ class Z extends r.PureComponent {
                     onChange: this.handleToggleTextChatNotifications,
                     disabled: !d,
                     hideBorder: !0,
-                    children: v.intl.string(v.t.Fy5kPj)
+                    children: _.intl.string(_.t.Fy5kPj)
                 }),
                 (0, i.jsx)(s.j7V, {
                     value: o,
                     onChange: this.handleToggleInviteNotification,
                     hideBorder: !0,
-                    note: v.intl.string(v.t.W9DVVV),
-                    children: v.intl.string(v.t['f+c48/'])
+                    note: _.intl.string(_.t.W9DVVV),
+                    children: _.intl.string(_.t['f+c48/'])
                 }),
                 n &&
                     (0, i.jsx)(s.j7V, {
                         value: t,
                         onChange: (e) => l.Z.setShowKeybindIndicators(e),
                         hideBorder: !0,
-                        children: v.intl.string(v.t.XZTl9v)
+                        children: _.intl.string(_.t.XZTl9v)
                     })
             ]
         });
@@ -221,7 +221,7 @@ class Z extends r.PureComponent {
         return (0, i.jsxs)(r.Fragment, {
             children: [
                 (0, i.jsx)(s.xJW, {
-                    title: v.intl.string(v.t.dnvZSk),
+                    title: _.intl.string(_.t.dnvZSk),
                     className: b.marginBottom20,
                     children: (0, i.jsx)(s.FXm, {
                         onChange: this.handleChangeAvatarSizeMode,
@@ -231,7 +231,7 @@ class Z extends r.PureComponent {
                     })
                 }),
                 (0, i.jsx)(s.xJW, {
-                    title: v.intl.string(v.t.J0dpcH),
+                    title: _.intl.string(_.t.J0dpcH),
                     className: b.marginBottom20,
                     children: (0, i.jsx)(s.FXm, {
                         onChange: this.handleChangeDisplayNameMode,
@@ -241,7 +241,7 @@ class Z extends r.PureComponent {
                     })
                 }),
                 (0, i.jsx)(s.xJW, {
-                    title: v.intl.string(v.t.swsWWF),
+                    title: _.intl.string(_.t.swsWWF),
                     className: b.marginBottom20,
                     children: (0, i.jsx)(s.FXm, {
                         onChange: this.handleChangeDisplayUserMode,
@@ -291,8 +291,9 @@ class Z extends r.PureComponent {
     }
     render() {
         return (0, i.jsxs)(s.Y0X, {
-            'aria-label': v.intl.string(v.t['35G2Mj']),
+            'aria-label': _.intl.string(_.t['35G2Mj']),
             transitionState: s.Dvm.ENTERED,
+            parentComponent: 'OverlaySettings',
             children: [this.renderHeader(), this.renderBody()]
         });
     }

@@ -13,8 +13,8 @@ var i = t(255367),
     h = t(981631),
     _ = t(704906);
 function C(e) {
-    let { classificationId: n, transitionState: t, initialSlide: C = u.Cs.SPEED_BUMP, onClose: N } = e,
-        [p, g] = s.useState(C),
+    let { classificationId: n, transitionState: t, initialSlide: C = u.Cs.SPEED_BUMP, onClose: p } = e,
+        [N, g] = s.useState(C),
         { classification: j, isDsaEligible: I } = (0, r.YG)(null != n ? n : h.lds),
         k = (null == j ? void 0 : j.is_spam) || !1,
         E = (null == j ? void 0 : j.is_coppa) || !1;
@@ -22,26 +22,27 @@ function C(e) {
         g(C);
     }, [g, C]);
     let T = s.useCallback(() => {
-            d.Z.close(), N();
-        }, [N]),
+            d.Z.close(), p();
+        }, [p]),
         f = s.useCallback(() => {
             var e;
-            let n = null == (e = u.JQ[p]) ? void 0 : e.next;
+            let n = null == (e = u.JQ[N]) ? void 0 : e.next;
             n ? g(n) : T();
-        }, [p, T]),
+        }, [N, T]),
         S = s.useCallback(() => {
             var e;
-            let n = null == (e = u.JQ[p]) ? void 0 : e.prev;
+            let n = null == (e = u.JQ[N]) ? void 0 : e.prev;
             n ? g(n) : T();
-        }, [p, T]);
+        }, [N, T]);
     return (0, i.jsx)(a.Y0X, {
         transitionState: t,
         disableTrack: !0,
         size: a.CgR.DYNAMIC,
+        parentComponent: 'AppealIngestionModal',
         children: (0, i.jsx)('div', {
             className: _.container,
             children: (0, i.jsxs)(a.MyZ, {
-                activeSlide: p,
+                activeSlide: N,
                 width: 500,
                 children: [
                     (0, i.jsx)(a.Mi4, {

@@ -2,16 +2,17 @@ e.d(s, { default: () => c });
 var i = e(255367);
 e(73800);
 var n = e(481060),
-    l = e(782568),
-    o = e(313201),
+    o = e(782568),
+    l = e(313201),
     a = e(388032),
     r = e(34397);
 function c(t) {
     let { href: s, onClose: c, transitionState: d } = t,
-        b = (0, o.Dt)();
+        b = (0, l.Dt)();
     return (0, i.jsxs)(n.Y0X, {
         transitionState: d,
         'aria-labelledby': b,
+        parentComponent: 'SuspiciousDownloadModal',
         children: [
             (0, i.jsx)('img', {
                 className: r.art,
@@ -51,7 +52,7 @@ function c(t) {
                         color: n.zxk.Colors.TRANSPARENT,
                         look: n.zxk.Looks.LINK,
                         onClick: () => {
-                            c(), (0, l.Z)(s, !0);
+                            c(), (0, o.Z)(s, !0);
                         },
                         children: a.intl.string(a.t['/bHu8/'])
                     })

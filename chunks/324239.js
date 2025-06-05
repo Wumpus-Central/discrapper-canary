@@ -1,7 +1,7 @@
 n.d(t, { default: () => N }), n(388685);
 var r = n(255367),
-    l = n(73800),
-    o = n(481060),
+    o = n(73800),
+    l = n(481060),
     s = n(893776),
     i = n(809206),
     c = n(600164),
@@ -14,89 +14,89 @@ var r = n(255367),
     _ = n(327342);
 function g(e) {
     let { email: t, setEmail: n, claimRequired: u, onSuccess: m, onClose: f } = e,
-        [g, S] = l.useState(),
-        [N, x] = l.useState(''),
-        [y, b] = l.useState(''),
-        [v, O] = l.useState(!1);
-    l.useEffect(() => a.Z.flowStep(d.MK.ANY, d.mx.CLAIM_ACCOUNT), []);
-    let j = async (e) => {
-        e.preventDefault(), O(!0), S(''), b('');
+        [g, S] = o.useState(),
+        [N, x] = o.useState(''),
+        [y, C] = o.useState(''),
+        [b, v] = o.useState(!1);
+    o.useEffect(() => a.Z.flowStep(d.MK.ANY, d.mx.CLAIM_ACCOUNT), []);
+    let O = async (e) => {
+        e.preventDefault(), v(!0), S(''), C('');
         try {
             await (0, i.S2)({
                 email: t,
                 password: N
             }),
-                O(!1),
+                v(!1),
                 m();
         } catch (e) {
             var n, r;
-            (null == e || null == (n = e.body) ? void 0 : n.email) && S(e.body.email), (null == e || null == (r = e.body) ? void 0 : r.password) && b(e.body.password), O(!1);
+            (null == e || null == (n = e.body) ? void 0 : n.email) && S(e.body.email), (null == e || null == (r = e.body) ? void 0 : r.password) && C(e.body.password), v(!1);
         }
     };
     return (0, r.jsxs)('div', {
         children: [
-            (0, r.jsxs)(o.xBx, {
+            (0, r.jsxs)(l.xBx, {
                 className: _.formHeader,
                 direction: c.Z.Direction.VERTICAL,
                 separator: !1,
                 children: [
                     (0, r.jsx)('div', { className: _.formImage }),
-                    (0, r.jsx)(o.X6q, {
+                    (0, r.jsx)(l.X6q, {
                         className: _.formTitle,
                         variant: 'heading-xl/semibold',
                         children: p.intl.string(p.t.uQShv7)
                     }),
-                    (0, r.jsx)(o.Text, {
+                    (0, r.jsx)(l.Text, {
                         className: _.formBody,
                         variant: 'text-md/normal',
                         color: 'header-secondary',
                         children: u ? p.intl.string(p.t.sW28gY) : p.intl.string(p.t['gP/vPT'])
                     }),
-                    (0, r.jsx)(o.olH, {
+                    (0, r.jsx)(l.olH, {
                         className: _.closeButton,
                         onClick: f
                     })
                 ]
             }),
-            (0, r.jsx)(o.hzk, {
+            (0, r.jsx)(l.hzk, {
                 children: (0, r.jsxs)('form', {
                     className: _.formContent,
-                    onSubmit: j,
+                    onSubmit: O,
                     children: [
-                        (0, r.jsx)(o.xJW, {
+                        (0, r.jsx)(l.xJW, {
                             title: p.intl.string(p.t.dI4d4e),
                             className: _.formItem,
-                            children: (0, r.jsx)(o.oil, {
+                            children: (0, r.jsx)(l.oil, {
                                 value: t,
                                 error: g,
                                 onChange: (e) => n(e),
                                 autoFocus: !0
                             })
                         }),
-                        (0, r.jsx)(o.xJW, {
+                        (0, r.jsx)(l.xJW, {
                             title: p.intl.string(p.t['CIGa+/']),
                             className: _.formItem,
-                            children: (0, r.jsx)(o.oil, {
+                            children: (0, r.jsx)(l.oil, {
                                 type: 'password',
                                 value: N,
                                 error: y,
                                 onChange: (e) => x(e)
                             })
                         }),
-                        (0, r.jsx)(o.zxk, {
+                        (0, r.jsx)(l.zxk, {
                             type: 'submit',
-                            size: o.zxk.Sizes.LARGE,
+                            size: l.zxk.Sizes.LARGE,
                             fullWidth: !0,
-                            submitting: v,
+                            submitting: b,
                             disabled: 0 === t.length || 0 === N.length,
                             children: p.intl.string(p.t.fiNVio)
                         }),
                         u &&
-                            (0, r.jsx)(o.zxk, {
+                            (0, r.jsx)(l.zxk, {
                                 className: _.logoutButton,
-                                color: o.zxk.Colors.PRIMARY,
-                                look: o.zxk.Looks.LINK,
-                                size: o.zxk.Sizes.NONE,
+                                color: l.zxk.Colors.PRIMARY,
+                                look: l.zxk.Looks.LINK,
+                                size: l.zxk.Sizes.NONE,
                                 onClick: () => {
                                     s.Z.logout('claim_account_modal'), f();
                                 },
@@ -112,24 +112,24 @@ function S(e) {
     let { email: t, claimRequired: n, onClose: s } = e,
         i = n ? p.t.D7trIC : p.t.JNWX7O;
     return (
-        l.useEffect(() => a.Z.flowStep(d.MK.ANY, d.mx.CLAIM_ACCOUNT_SUCCESS), []),
+        o.useEffect(() => a.Z.flowStep(d.MK.ANY, d.mx.CLAIM_ACCOUNT_SUCCESS), []),
         (0, r.jsxs)('div', {
             children: [
-                (0, r.jsxs)(o.hzk, {
+                (0, r.jsxs)(l.hzk, {
                     className: _.successContent,
                     children: [
                         !n &&
-                            (0, r.jsx)(o.olH, {
+                            (0, r.jsx)(l.olH, {
                                 className: _.closeButton,
                                 onClick: s
                             }),
                         (0, r.jsx)('div', { className: _.successImage }),
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(l.Text, {
                             className: _.successTitle,
                             variant: 'text-lg/semibold',
                             children: p.intl.format(i, { email: t })
                         }),
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(l.Text, {
                             className: _.successPromotion,
                             variant: 'text-md/normal',
                             children: p.intl.string(p.t.eXqM2d)
@@ -137,19 +137,19 @@ function S(e) {
                     ]
                 }),
                 n
-                    ? (0, r.jsx)(o.mzw, {
+                    ? (0, r.jsx)(l.mzw, {
                           direction: c.Z.Direction.VERTICAL,
-                          children: (0, r.jsx)(o.zxk, {
-                              size: o.zxk.Sizes.LARGE,
+                          children: (0, r.jsx)(l.zxk, {
+                              size: l.zxk.Sizes.LARGE,
                               onClick: s,
                               children: p.intl.string(p.t.BddRzc)
                           })
                       })
-                    : (0, r.jsx)(o.mzw, {
+                    : (0, r.jsx)(l.mzw, {
                           direction: c.Z.Direction.VERTICAL,
-                          children: (0, r.jsx)(o.zxk, {
-                              color: o.zxk.Colors.BRAND,
-                              size: o.zxk.Sizes.LARGE,
+                          children: (0, r.jsx)(l.zxk, {
+                              color: l.zxk.Colors.BRAND,
+                              size: l.zxk.Sizes.LARGE,
                               onClick: function () {
                                   window.open((0, m.t3)(), '_blank'),
                                       u.default.track(f.rMx.DOWNLOAD_APP, {
@@ -170,19 +170,21 @@ function S(e) {
 }
 function N(e) {
     let { onClose: t, transitionState: n, claimRequired: s = !1 } = e,
-        [i, c] = l.useState(''),
-        [a, u] = l.useState(!1);
+        [i, c] = o.useState(''),
+        [a, u] = o.useState(!1);
     return a
-        ? (0, r.jsx)(o.Y0X, {
+        ? (0, r.jsx)(l.Y0X, {
               transitionState: n,
+              parentComponent: 'ClaimAccountModal',
               children: (0, r.jsx)(S, {
                   email: i,
                   claimRequired: s,
                   onClose: t
               })
           })
-        : (0, r.jsx)(o.Y0X, {
+        : (0, r.jsx)(l.Y0X, {
               transitionState: n,
+              parentComponent: 'ClaimAccountModal',
               children: (0, r.jsx)(g, {
                   email: i,
                   setEmail: c,

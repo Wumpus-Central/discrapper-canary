@@ -198,6 +198,7 @@ function y(e) {
             transitionState: R,
             className: O.modalRoot,
             'aria-labelledby': F,
+            parentComponent: 'FeedbackModalV2',
             children: [
                 (0, n.jsxs)(c.xBx, {
                     separator: !1,

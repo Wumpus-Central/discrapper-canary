@@ -66,6 +66,7 @@ let m = (e) => {
             size: c.Cg.DYNAMIC,
             className: a()(E, h.container),
             'aria-label': A,
+            parentComponent: 'Alert',
             children: (0, r.jsxs)('form', {
                 onSubmit: D,
                 className: h.form,

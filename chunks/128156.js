@@ -30,24 +30,24 @@ function O(e) {
             userId: t.id,
             guildId: P
         }),
-        k = (0, r.e7)([l.Z], () => l.Z.isFetchingUserOutbox(t.id)),
-        U = t.id === n.id,
+        U = (0, r.e7)([l.Z], () => l.Z.isFetchingUserOutbox(t.id)),
+        k = t.id === n.id,
         L = (0, r.e7)([s.Z, a.Z], () => {
-            let e = U ? s.Z.getStatus() : a.Z.getStatus(t.id);
+            let e = k ? s.Z.getStatus() : a.Z.getStatus(t.id);
             return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
         }),
-        R = w.length > 0 || null != E,
-        M = T && null == E && null == D && null != B,
-        G = !L && (R || M),
+        M = w.length > 0 || null != E,
+        R = T && null == E && null == D && null != B,
+        G = !L && (M || R),
         V = S.length > 0;
-    if (!G && !V && k)
+    if (!G && !V && U)
         return (0, o.jsx)('div', {
             className: v.spinner,
             children: (0, o.jsx)(i.$jN, {})
         });
-    if (!G && !V && !k) {
+    if (!G && !V && !U) {
         var F;
-        return U
+        return k
             ? (0, o.jsx)(x.Uf, { onClose: Z })
             : (0, o.jsx)(x.P9, {
                   user: t,
@@ -67,7 +67,7 @@ function O(e) {
                           className: v.cards,
                           children: [
                               !C &&
-                                  M &&
+                                  R &&
                                   (0, o.jsx)(_.Z, {
                                       user: t,
                                       currentUser: n,
@@ -97,7 +97,7 @@ function O(e) {
                                   )
                               ),
                               C &&
-                                  M &&
+                                  R &&
                                   (0, o.jsx)(_.Z, {
                                       user: t,
                                       currentUser: n,
@@ -111,7 +111,7 @@ function O(e) {
             V
                 ? (0, o.jsx)(h.Z, {
                       heading: I.intl.string(I.t.jzgEoK),
-                      subheading: U
+                      subheading: k
                           ? I.intl.format(I.t['4bk9Ag'], {
                                 learnMoreHook: (e, t) =>
                                     (0, o.jsx)(

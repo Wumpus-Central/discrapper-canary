@@ -1,7 +1,7 @@
 e.d(n, { default: () => k }), e(388685);
 var l = e(255367),
-    s = e(73800),
-    a = e(442837),
+    a = e(73800),
+    s = e(442837),
     i = e(481060),
     o = e(91176),
     r = e(493773),
@@ -17,26 +17,26 @@ var l = e(255367),
     v = e(209564);
 function k(t) {
     var n, e;
-    let { guildId: k, userId: g, anaylticsLocations: _, transitionState: C, onClose: w } = t,
+    let { guildId: k, userId: g, anaylticsLocations: C, transitionState: _, onClose: w } = t,
         y = (0, d.Dt)(),
         { analyticsLocations: j } = (0, c.ZP)(),
-        D = null != (e = null != (n = null == _ ? void 0 : _[0]) ? n : null == j ? void 0 : j[0]) ? e : null,
-        T = (0, a.e7)([h.default], () => h.default.getUser(g), [g]),
+        D = null != (e = null != (n = null == C ? void 0 : C[0]) ? n : null == j ? void 0 : j[0]) ? e : null,
+        T = (0, s.e7)([h.default], () => h.default.getUser(g), [g]),
         [N, I] = (0, p.ZP)(g, k),
-        [P, z] = s.useState(!1),
-        E = s.useCallback(async () => {
+        [E, P] = a.useState(!1),
+        z = a.useCallback(async () => {
             if (null != T) {
-                z(!0);
+                P(!0);
                 try {
                     await o.Z.setCommunicationDisabledDuration(k, g, null, null, D), (0, i.showToast)((0, i.createToast)(b.intl.string(b.t['/Mmbfn']), i.ToastType.SUCCESS)), w();
                 } catch (t) {
                     (0, i.showToast)((0, i.createToast)(b.intl.string(b.t.epyCur), i.ToastType.FAILURE));
                 } finally {
-                    z(!1);
+                    P(!1);
                 }
             }
         }, [k, T, g, w, D]),
-        S = s.useCallback(() => {
+        S = a.useCallback(() => {
             I || w();
         }, [I, w]);
     return ((0, r.ZP)(() => {
@@ -47,14 +47,15 @@ function k(t) {
                 other_user_id: T.id
             });
     }),
-    s.useEffect(() => {
+    a.useEffect(() => {
         (null == T || null == k) && w();
     }),
     null == T || null == k)
         ? null
         : (0, l.jsxs)(i.Y0X, {
-              transitionState: C,
+              transitionState: _,
               'aria-labelledby': y,
+              parentComponent: 'GuildEnableCommunicationModal',
               children: [
                   (0, l.jsxs)(i.xBx, {
                       className: v.header,
@@ -107,8 +108,8 @@ function k(t) {
                       children: [
                           (0, l.jsx)(i.zxk, {
                               color: i.zxk.Colors.RED,
-                              onClick: E,
-                              submitting: P,
+                              onClick: z,
+                              submitting: E,
                               children: b.intl.string(b.t.qXtNtb)
                           }),
                           (0, l.jsx)(i.zxk, {

@@ -14,6 +14,7 @@ function d(t) {
     return (0, a.jsxs)(l.Y0X, {
         transitionState: u,
         'aria-labelledby': x,
+        parentComponent: 'BlockedDomainModal',
         children: [
             (0, a.jsx)('img', {
                 className: c.art,

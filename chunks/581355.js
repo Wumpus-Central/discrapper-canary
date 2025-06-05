@@ -143,6 +143,7 @@ function p(e) {
               (n = n =
                   {
                       size: a.CgR.SMALL,
+                      parentComponent: 'StageChannelSettingsModal',
                       children: (0, r.jsxs)(a.MyZ, {
                           activeSlide: C,
                           width: 440,

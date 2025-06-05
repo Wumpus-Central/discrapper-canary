@@ -564,6 +564,7 @@ function ec(e) {
         (0, r.jsxs)(E.Y0X, {
             transitionState: n,
             className: o()({ [ee.planSelectStep]: eq === M.h8.PLAN_SELECT }),
+            parentComponent: 'GuildBoostPurchaseModal',
             children: [td, t]
         })
     );

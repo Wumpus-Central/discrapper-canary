@@ -71,6 +71,7 @@ function h(e) {
     return (0, r.jsxs)(o.Y0X, {
         transitionState: t,
         disableTrack: !0,
+        parentComponent: 'QuestsRewardModalUnverified',
         children: [
             (0, r.jsx)('img', {
                 alt: '',

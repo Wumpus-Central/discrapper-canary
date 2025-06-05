@@ -41,6 +41,7 @@ let f = (e) => {
     }
     return (0, a.jsx)(s.Y0X, {
         transitionState: r,
+        parentComponent: 'ReferralProgramShareModal',
         children: t
     });
 };

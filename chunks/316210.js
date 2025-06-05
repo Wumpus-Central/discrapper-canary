@@ -30,7 +30,7 @@ let f = (e) => {
 function g(e) {
     let { transitionState: t, onClose: n, questContent: l, quest: g } = e,
         j = f(l),
-        h = s.useMemo(() => {
+        _ = s.useMemo(() => {
             var e;
             return (0, c.Fs)({
                 isTargetedDisclosure: null != j,
@@ -43,6 +43,7 @@ function g(e) {
         transitionState: t,
         size: a.CgR.DYNAMIC,
         className: u.modalRoot,
+        parentComponent: 'QuestsDisclosureModal',
         children: [
             (0, r.jsxs)(a.xBx, {
                 direction: o.Z.Direction.VERTICAL,
@@ -78,9 +79,9 @@ function g(e) {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
                         className: u.upperBodyText,
-                        children: h
+                        children: _
                     }),
-                    (0, r.jsx)(_, { targetedTraits: j }),
+                    (0, r.jsx)(p, { targetedTraits: j }),
                     (0, r.jsx)(a.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-muted',
@@ -104,24 +105,24 @@ function j(e) {
         className: u.targetList,
         children: [
             t &&
-                (0, r.jsx)(h, {
+                (0, r.jsx)(_, {
                     icon: a.enf,
                     children: m.intl.string(m.t.xQSdPj)
                 }),
             n &&
-                (0, r.jsx)(h, {
+                (0, r.jsx)(_, {
                     icon: a.tBG,
                     children: m.intl.string(m.t.mYt7hY)
                 }),
             s &&
-                (0, r.jsx)(h, {
+                (0, r.jsx)(_, {
                     icon: a.iWm,
                     children: m.intl.string(m.t.XAsWxc)
                 })
         ]
     });
 }
-function _(e) {
+function p(e) {
     let { targetedTraits: t } = e;
     return null != t
         ? (0, r.jsx)(
@@ -154,7 +155,7 @@ function _(e) {
           )
         : null;
 }
-function h(e) {
+function _(e) {
     let { icon: t, children: n } = e;
     return (0, r.jsxs)(a.Text, {
         variant: 'text-sm/medium',

@@ -32,6 +32,7 @@ function g(e) {
         (0, r.jsxs)(o.Y0X, {
             'aria-labelledby': _,
             transitionState: t,
+            parentComponent: 'UserAgreementsModal',
             children: [
                 (0, r.jsx)('div', { id: _ }),
                 (0, r.jsx)(o.xBx, {

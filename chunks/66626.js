@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(388032),
     d = n(685554);
 function u(e) {
-    let { directoryChannelId: t, description: n, onDescriptionChange: u, categoryId: m, onCategoryIdChange: x, onSubmit: C, onClose: h, onBack: g } = e,
-        [p, f] = s.useState(!1),
+    let { directoryChannelId: t, description: n, onDescriptionChange: u, categoryId: m, onCategoryIdChange: x, onSubmit: C, onClose: h, onBack: p } = e,
+        [g, f] = s.useState(!1),
         [_, j] = s.useState(null),
         b = async () => {
             f(!0);
@@ -79,7 +79,7 @@ function u(e) {
                     (0, i.jsx)(l.zxk, {
                         color: l.zxk.Colors.BRAND,
                         onClick: b,
-                        submitting: p,
+                        submitting: g,
                         disabled: '' === n || m === o.AR.UNCATEGORIZED,
                         children: c.intl.string(c.t.H9jxS0)
                     }),
@@ -87,7 +87,7 @@ function u(e) {
                         className: d.backButton,
                         look: l.zxk.Looks.BLANK,
                         size: l.zxk.Sizes.MIN,
-                        onClick: g,
+                        onClick: p,
                         children: c.intl.string(c.t['13/7kZ'])
                     })
                 ]

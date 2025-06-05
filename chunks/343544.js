@@ -8,10 +8,11 @@ var r = n(255367),
     c = n(824469),
     u = n(444812);
 function d(e) {
-    let { headerText: t, secondaryHeaderText: n, descriptionText: i, infoRows: d, onDismissAndStay: _, onDismissAndLeave: A, leaveButtonText: f, stayButtonText: E, transitionState: I, impression: h } = e;
+    let { headerText: t, secondaryHeaderText: n, descriptionText: i, infoRows: d, onDismissAndStay: _, onDismissAndLeave: A, leaveButtonText: f, stayButtonText: E, transitionState: I, impression: m } = e;
     return (0, r.jsxs)(l.Y0X, {
         transitionState: I,
-        impression: h,
+        impression: m,
+        parentComponent: 'BlockedUserWarningModal',
         children: [
             (0, r.jsx)('img', {
                 alt: '',

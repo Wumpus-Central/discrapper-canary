@@ -22,6 +22,7 @@ function u(e) {
         },
         children: (0, i.jsxs)(o.Y0X, {
             transitionState: u,
+            parentComponent: 'InteractionModal',
             children: [
                 (0, i.jsxs)(o.xBx, {
                     separator: !1,

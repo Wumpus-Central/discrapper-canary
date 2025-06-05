@@ -1,11 +1,11 @@
 n.d(t, { default: () => _ }), n(388685);
 var a = n(255367),
     s = n(73800),
-    l = n(481060),
-    r = n(782568),
+    r = n(481060),
+    l = n(782568),
     i = n(313201),
-    d = n(53365),
-    o = n(377176),
+    o = n(53365),
+    d = n(377176),
     c = n(577275),
     h = n(981631),
     x = n(829857),
@@ -17,20 +17,20 @@ function p(e) {
         className: u.teamSetup,
         children:
             0 === s.length
-                ? (0, a.jsx)(l.Text, {
+                ? (0, a.jsx)(r.Text, {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
                       children: m.intl.format(m.t.Jyy4pa, {})
                   })
                 : (0, a.jsxs)(a.Fragment, {
                       children: [
-                          (0, a.jsx)(l.Text, {
+                          (0, a.jsx)(r.Text, {
                               variant: 'text-md/normal',
                               className: u.teamBodyText,
                               color: 'header-secondary',
                               children: m.intl.string(m.t.U1Vz29)
                           }),
-                          (0, a.jsx)(l.q4e, {
+                          (0, a.jsx)(r.q4e, {
                               options: s,
                               placeholder: m.intl.string(m.t.QXf93N),
                               value: t,
@@ -45,71 +45,72 @@ function _(e) {
     let { guildId: t, requireTeamSetup: n, onClose: _, transitionState: g } = e,
         j = (0, i.Dt)(),
         [f, b] = s.useState(),
-        [T, y] = s.useState(!1),
-        { teams: k } = (0, c.Z)(),
-        C = k.filter((e) => e.payout_account_status === x.C.ACTIVE),
-        v = s.useMemo(
+        [C, T] = s.useState(!1),
+        { teams: y } = (0, c.Z)(),
+        k = y.filter((e) => e.payout_account_status === x.C.ACTIVE),
+        N = s.useMemo(
             () =>
-                C.map((e) => ({
+                k.map((e) => ({
                     label: e.name,
                     value: e.id
                 })),
-            [C]
+            [k]
         ),
-        N = s.useCallback(() => {
-            (0, r.Z)(h.EYA.DEVELOPER_PORTAL_TEAMS);
+        v = s.useCallback(() => {
+            (0, l.Z)(h.EYA.DEVELOPER_PORTAL_TEAMS);
         }, []);
-    return (0, a.jsxs)(l.Y0X, {
+    return (0, a.jsxs)(r.Y0X, {
         'aria-labelledby': j,
-        size: l.CgR.DYNAMIC,
+        size: r.CgR.DYNAMIC,
         transitionState: g,
+        parentComponent: 'CreatorMonetizationNewOwnerOnboardingModal',
         children: [
-            (0, a.jsx)(l.xBx, {
+            (0, a.jsx)(r.xBx, {
                 separator: !1,
                 className: u.header,
-                children: (0, a.jsx)(l.X6q, {
+                children: (0, a.jsx)(r.X6q, {
                     variant: 'heading-xl/semibold',
                     children: n ? m.intl.string(m.t.inJKQk) : m.intl.string(m.t.GfObDA)
                 })
             }),
-            (0, a.jsxs)(l.hzk, {
+            (0, a.jsxs)(r.hzk, {
                 className: u.content,
                 children: [
                     n &&
                         (0, a.jsx)(p, {
                             selectedTeamId: f,
                             onSetSelectedTeamId: b,
-                            teamOptions: v
+                            teamOptions: N
                         }),
-                    (0, a.jsx)(l.XZJ, {
+                    (0, a.jsx)(r.XZJ, {
                         onChange: () => {
-                            y((e) => !e);
+                            T((e) => !e);
                         },
                         size: 20,
-                        type: l.XZJ.Types.INVERTED,
-                        value: T,
-                        children: (0, a.jsx)(l.Text, {
+                        type: r.XZJ.Types.INVERTED,
+                        value: C,
+                        children: (0, a.jsx)(r.Text, {
                             variant: 'text-md/normal',
                             color: 'header-secondary',
-                            children: (0, o.f)()
+                            children: (0, d.f)()
                         })
                     })
                 ]
             }),
-            (0, a.jsx)(l.mzw, {
+            (0, a.jsx)(r.mzw, {
                 className: u.footer,
                 children: (0, a.jsx)('div', {
                     className: u.buttons,
                     children:
-                        n && 0 === v.length
-                            ? (0, a.jsx)(l.zxk, {
-                                  onClick: N,
+                        n && 0 === N.length
+                            ? (0, a.jsx)(r.zxk, {
+                                  onClick: v,
                                   children: m.intl.string(m.t.JddVgI)
                               })
-                            : (0, a.jsx)(l.zxk, {
-                                  disabled: !T || (n && null == f),
+                            : (0, a.jsx)(r.zxk, {
+                                  disabled: !C || (n && null == f),
                                   onClick: () => {
-                                      _(), (0, d.df)(t, f);
+                                      _(), (0, o.df)(t, f);
                                   },
                                   children: m.intl.string(m.t.geKm7u)
                               })

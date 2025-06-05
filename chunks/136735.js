@@ -22,9 +22,9 @@ var n = l(255367),
     E = l(268350),
     I = l(373228),
     O = l(378233),
-    w = l(419922),
-    S = l(611480),
-    k = l(981631),
+    S = l(419922),
+    k = l(611480),
+    w = l(981631),
     C = l(388032),
     D = l(154377),
     P = l(434227),
@@ -37,7 +37,7 @@ let R = new Set(['application/json', 'image/png', 'image/apng', 'image/gif', 'im
         }
     ];
 function z(e, t) {
-    h.default.track(k.rMx.STICKER_UPLOAD_COMPLETED, {
+    h.default.track(w.rMx.STICKER_UPLOAD_COMPLETED, {
         successful: e,
         error: null != t ? t : ''
     });
@@ -73,14 +73,14 @@ let _ = (e) => {
     A = (e) => {
         let { sticker: t, previewData: l, onStickerError: i } = e;
         if (null != t)
-            return (0, n.jsx)(w.Z, {
+            return (0, n.jsx)(S.Z, {
                 size: 160,
                 sticker: t
             });
         if (null == l) return null;
         let { id: s, formatType: a, content: r } = l;
         return (0, n.jsx)(
-            w.Z,
+            S.Z,
             {
                 assetData: r,
                 fileUri: r,
@@ -105,26 +105,26 @@ async function B(e) {
     return (0, N.Bo)(n, e.name, 'image/png');
 }
 function L(e) {
-    var t, l, s, o, w, P, Z, L;
+    var t, l, s, o, S, P, Z, L;
     let { transitionState: U, onClose: K, guildId: M, sticker: F } = e,
         Y = (0, u.e7)([j.Z], () => j.Z.theme),
         H = (0, u.e7)([f.ZP], () => ((null == F ? void 0 : F.tags) != null ? f.ZP.getCustomEmojiById(F.tags) : null)),
-        q = null != (l = null == (t = v.default.getCurrentUser()) ? void 0 : t.isStaff()) && l ? S.OC : S.Ht,
+        q = null != (l = null == (t = v.default.getCurrentUser()) ? void 0 : t.isStaff()) && l ? k.OC : k.Ht,
         [V, W] = i.useState(null),
-        [X, J] = i.useState(null != (s = null == F ? void 0 : F.name) ? s : ''),
-        [G, Q] = i.useState({
+        [X, G] = i.useState(null != (s = null == F ? void 0 : F.name) ? s : ''),
+        [J, Q] = i.useState({
             file: null,
             filename: null != (o = (0, O._V)(F)) ? o : ''
         }),
         [$, ee] = i.useState(null == H ? void 0 : H.id),
-        [et, el] = i.useState(null != (w = null == H ? void 0 : H.name) ? w : null == F ? void 0 : F.tags),
+        [et, el] = i.useState(null != (S = null == H ? void 0 : H.name) ? S : null == F ? void 0 : F.tags),
         [en, ei] = i.useState(null != (P = null == F ? void 0 : F.description) ? P : ''),
         [es, ea] = i.useState(!1),
         [er, eo] = i.useState(null),
         eu = (0, u.e7)([x.Z], () => x.Z.getGuild(M)),
-        ec = (null == eu ? void 0 : eu.hasFeature(k.oNc.PARTNERED)) || (null == eu ? void 0 : eu.hasFeature(k.oNc.VERIFIED)),
+        ec = (null == eu ? void 0 : eu.hasFeature(w.oNc.PARTNERED)) || (null == eu ? void 0 : eu.hasFeature(w.oNc.VERIFIED)),
         ed = null != F,
-        em = ed || (null == G ? void 0 : G.file) != null,
+        em = ed || (null == J ? void 0 : J.file) != null,
         ef = 0 === en.length || (en.length >= 2 && en.length <= 100),
         eg = !es && (null == er ? void 0 : er.isBlocking) !== !0 && X.length >= 2 && (null != $ || null != et || ((null == F ? void 0 : F.tags) != null && (null == F ? void 0 : F.tags) !== '')) && em && ef,
         ep = async (e) => {
@@ -140,7 +140,7 @@ function L(e) {
             if ('image/jpeg' === l || 'image/jpg' === l) n = await B(e);
             else if ('image/png' === l && e.size > q && !(await (0, N.c0)(e))) {
                 let t = (n = await B(e)).size > q;
-                h.default.track(k.rMx.STICKER_FILE_RESIZED, {
+                h.default.track(w.rMx.STICKER_FILE_RESIZED, {
                     original_file_size_bytes: e.size,
                     resized_file_size_bytes: n.size,
                     resized_file_too_big: t
@@ -149,9 +149,9 @@ function L(e) {
             if (n.size > q) {
                 eo({
                     message: C.intl.formatToPlainString(C.t['3eK7Rk'], { maxSize: (0, b.IC)(q, { useKibibytes: !0 }) }),
-                    isBlocking: null == G.file
+                    isBlocking: null == J.file
                 }),
-                    h.default.track(k.rMx.STICKER_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
+                    h.default.track(w.rMx.STICKER_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
                         size: n.size,
                         filetype: n.type
                     });
@@ -161,7 +161,7 @@ function L(e) {
             if (i === I.u3.LOTTIE) {
                 if (!ec)
                     return void eo({
-                        message: C.intl.format(C.t.RNNjy8, { articleURL: y.Z.getArticleURL(k.BhN.STICKERS_UPLOAD) }),
+                        message: C.intl.format(C.t.RNNjy8, { articleURL: y.Z.getArticleURL(w.BhN.STICKERS_UPLOAD) }),
                         isBlocking: !0
                     });
                 let e = new FileReader();
@@ -204,9 +204,9 @@ function L(e) {
                     e.append('name', X),
                         e.append('tags', r),
                         e.append('description', en),
-                        (null == G ? void 0 : G.file) != null && e.append('file', G.file),
-                        (a = null != (s = null == (i = G.file) ? void 0 : i.type) ? s : ''),
-                        h.default.track(k.rMx.STICKER_UPLOAD_STARTED, { filetype: a }),
+                        (null == J ? void 0 : J.file) != null && e.append('file', J.file),
+                        (a = null != (s = null == (i = J.file) ? void 0 : i.type) ? s : ''),
+                        h.default.track(w.rMx.STICKER_UPLOAD_STARTED, { filetype: a }),
                         await (0, E.lY)({
                             guildId: M,
                             body: e,
@@ -241,6 +241,7 @@ function L(e) {
         transitionState: U,
         'aria-labelledby': 'STICKER_UPLOAD_MODAL',
         className: D.modal,
+        parentComponent: 'GuildStickerUploadModal',
         children: [
             (0, n.jsx)(d.olH, {
                 onClick: K,
@@ -265,7 +266,7 @@ function L(e) {
                                     }),
                                     (0, n.jsx)(d.Text, {
                                         variant: 'text-md/normal',
-                                        children: C.intl.format(ev, { fileSize: (0, b.IC)(S.Ht, { useKibibytes: !0 }) })
+                                        children: C.intl.format(ev, { fileSize: (0, b.IC)(k.Ht, { useKibibytes: !0 }) })
                                     })
                                 ]
                             }),
@@ -284,12 +285,12 @@ function L(e) {
                                         children: ed
                                             ? (0, n.jsx)(d.oil, {
                                                   disabled: !0,
-                                                  value: null != (Z = null == G ? void 0 : G.filename) ? Z : ''
+                                                  value: null != (Z = null == J ? void 0 : J.filename) ? Z : ''
                                               })
                                             : (0, n.jsx)(p.Z, {
                                                   buttonText: C.intl.string(C.t.xEnDUV),
                                                   filters: T,
-                                                  filename: null != (L = null == G ? void 0 : G.filename) ? L : '',
+                                                  filename: null != (L = null == J ? void 0 : J.filename) ? L : '',
                                                   placeholder: C.intl.string(C.t.rUYLJy),
                                                   onFileSelect: ep
                                               })
@@ -311,7 +312,7 @@ function L(e) {
                                 className: D.formItem,
                                 children: (0, n.jsx)(d.oil, {
                                     value: X,
-                                    onChange: J,
+                                    onChange: G,
                                     placeholder: C.intl.string(C.t['3fGttb']),
                                     maxLength: 30
                                 })

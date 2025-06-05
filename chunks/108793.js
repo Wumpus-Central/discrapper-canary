@@ -8,8 +8,8 @@ var n = r(255367),
     c = r(63063),
     u = r(51144),
     d = r(544508),
-    g = r(801461),
-    m = r(981631),
+    m = r(801461),
+    g = r(981631),
     f = r(388032),
     E = r(927687);
 function O(e) {
@@ -39,30 +39,30 @@ function O(e) {
         j = (0, a.ZP)(S.id),
         N = (function (e, t, r) {
             switch (e) {
-                case g.Wq.EDIT_USERNAME:
+                case m.Wq.EDIT_USERNAME:
                     return {
                         header: f.intl.string(f.t['a/zCWl']),
                         subtitle: f.intl.string(f.t.gGz0sb)
                     };
-                case g.Wq.EDIT_DISPLAY_NAME:
+                case m.Wq.EDIT_DISPLAY_NAME:
                     return {
                         header: f.intl.string(f.t.SRDNcH),
                         subtitle: f.intl.string(f.t['940AS0'])
                     };
-                case g.Wq.PREVIEW:
+                case m.Wq.PREVIEW:
                     return {
                         header: f.intl.formatToPlainString(f.t.XDHrcn, { displayName: t }),
                         subtitle: f.intl.format(f.t.bWE0ZG, {
                             onClick: () => {
-                                r(), l.Z.open(m.oAB.ACCOUNT);
+                                r(), l.Z.open(g.oAB.ACCOUNT);
                             }
                         })
                     };
-                case g.Wq.SUGGESTION:
+                case m.Wq.SUGGESTION:
                     return {
                         header: f.intl.string(f.t.F7T4dX),
                         subtitle: f.intl.formatToPlainString(f.t.Z8F83d, {}),
-                        link: f.intl.format(f.t['i2vB8/'], { helpdeskArticle: c.Z.getArticleURL(m.BhN.POMELO_FAQ) })
+                        link: f.intl.format(f.t['i2vB8/'], { helpdeskArticle: c.Z.getArticleURL(g.BhN.POMELO_FAQ) })
                     };
                 default:
                     return {

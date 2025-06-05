@@ -1,8 +1,8 @@
 n.d(t, { default: () => f }), n(388685);
 var i = n(255367),
     a = n(73800),
-    l = n(481060),
-    o = n(493773),
+    o = n(481060),
+    l = n(493773),
     r = n(626135),
     d = n(326279),
     c = n(465322),
@@ -24,14 +24,14 @@ function p(e) {
 }
 function f(e) {
     let t,
-        { device: n, certifiedDeviceMetadata: f, onClose: v, transitionState: D } = e,
+        { device: n, certifiedDeviceMetadata: f, onClose: D, transitionState: v } = e,
         [_, h] = (0, a.useState)(null != n ? p(n.type) : null),
         x = (0, a.useRef)(!1),
         { optOutPerDevice: C } = (0, c.H)({ location: 'ConnectedDevice' });
     function T() {
         (x.current = !0), d.Wz(n.displayName);
     }
-    (0, o.zq)(() => {
+    (0, l.zq)(() => {
         x.current || T();
     }),
         (0, a.useEffect)(() => {
@@ -69,7 +69,7 @@ function f(e) {
                               modelName: f.model.name
                           })
                         : m.intl.format(m.t.Z7XQcn, { name: n.displayName }),
-                    (0, i.jsx)(l.FXm, {
+                    (0, i.jsx)(o.FXm, {
                         value: _,
                         className: N.options,
                         onChange: (e) => {
@@ -94,29 +94,30 @@ function f(e) {
                 ]
             });
     }
-    return (0, i.jsxs)(l.Y0X, {
-        transitionState: D,
+    return (0, i.jsxs)(o.Y0X, {
+        transitionState: v,
         'aria-label': y,
+        parentComponent: 'ConnectedDeviceDetectionModal',
         children: [
-            (0, i.jsx)(l.xBx, {
+            (0, i.jsx)(o.xBx, {
                 separator: !1,
-                children: (0, i.jsx)(l.X6q, {
+                children: (0, i.jsx)(o.X6q, {
                     variant: 'heading-lg/semibold',
                     children: y
                 })
             }),
-            (0, i.jsx)(l.hzk, {
-                children: (0, i.jsx)(l.Text, {
+            (0, i.jsx)(o.hzk, {
+                children: (0, i.jsx)(o.Text, {
                     variant: 'text-md/normal',
                     children: (0, i.jsxs)(
                         a.Fragment,
                         {
                             children: [
                                 t,
-                                (0, i.jsx)(l.zxk, {
+                                (0, i.jsx)(o.zxk, {
                                     className: N.neverShow,
-                                    look: l.zxk.Looks.LINK,
-                                    color: l.zxk.Colors.LINK,
+                                    look: o.zxk.Looks.LINK,
+                                    color: o.zxk.Colors.LINK,
                                     onClick: () => {
                                         C
                                             ? ((x.current = !0),
@@ -132,7 +133,7 @@ function f(e) {
                                                   type: null != f ? 'New Audio Device Detected - Certified' : 'New Audio Device Detected - Not Certified',
                                                   dismiss_type: 'permanent'
                                               })),
-                                            v();
+                                            D();
                                     },
                                     children: C ? m.intl.formatToPlainString(m.t.cwS3Ex, { device: n.displayName }) : m.intl.string(m.t['5E9SBw'])
                                 })
@@ -142,21 +143,21 @@ function f(e) {
                     )
                 })
             }),
-            (0, i.jsx)(l.mzw, {
+            (0, i.jsx)(o.mzw, {
                 children: (0, i.jsxs)('div', {
                     className: N.footerButtons,
                     children: [
-                        (0, i.jsx)(l.zxk, {
-                            color: l.zxk.Colors.PRIMARY,
+                        (0, i.jsx)(o.zxk, {
+                            color: o.zxk.Colors.PRIMARY,
                             onClick: () => {
-                                T(), v();
+                                T(), D();
                             },
                             className: N.cancelButton,
                             children: m.intl.string(m.t.vPBgq6)
                         }),
-                        (0, i.jsx)(l.zxk, {
+                        (0, i.jsx)(o.zxk, {
                             onClick: () => {
-                                (x.current = !0), null != _ && d.mo(n.displayName, _, 'New Audio Device Detected Modal'), v();
+                                (x.current = !0), null != _ && d.mo(n.displayName, _, 'New Audio Device Detected Modal'), D();
                             },
                             children: m.intl.string(m.t.ydkoDQ)
                         })

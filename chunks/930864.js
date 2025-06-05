@@ -290,6 +290,7 @@ function x(e) {
                 N
             ),
             {
+                parentComponent: 'ForwardModal',
                 children: [
                     (0, l.jsxs)(s.xBx, {
                         className: O.header,

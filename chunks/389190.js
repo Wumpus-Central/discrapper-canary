@@ -12,9 +12,9 @@ var l = t(255367),
     p = t(388032),
     g = t(301150);
 function v(e) {
-    let { user: n, guildId: t, channelId: v, onClose: h } = e,
-        { mutualFriends: j } = (0, u.Z)(n),
-        { analyticsLocations: m } = (0, s.ZP)(),
+    let { user: n, guildId: t, channelId: v, onClose: m } = e,
+        { mutualFriends: h } = (0, u.Z)(n),
+        { analyticsLocations: j } = (0, s.ZP)(),
         { context: b, trackUserProfileAction: x } = (0, a.KZ)(),
         O = (0, o.Z)();
     r.useEffect(() => {
@@ -51,7 +51,7 @@ function v(e) {
             (t = t =
                 {
                     userId: e,
-                    sourceAnalyticsLocations: m
+                    sourceAnalyticsLocations: j
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(t))
@@ -72,12 +72,12 @@ function v(e) {
         className: g.listScroller,
         fade: !0,
         children:
-            null == j
+            null == h
                 ? (0, l.jsx)('div', {
                       className: g.empty,
                       children: (0, l.jsx)(i.$jN, {})
                   })
-                : 0 === j.length
+                : 0 === h.length
                   ? (0, l.jsxs)('div', {
                         className: g.empty,
                         children: [
@@ -88,7 +88,7 @@ function v(e) {
                             })
                         ]
                     })
-                  : j.map((e) => {
+                  : h.map((e) => {
                         let { key: n, user: r, status: i } = e;
                         return (0, l.jsx)(
                             f.Z,
@@ -98,7 +98,7 @@ function v(e) {
                                 guildId: t,
                                 channelId: v,
                                 onSelect: () => {
-                                    null == h || h(), x({ action: 'PRESS_MUTUAL_FRIEND' }), Z(r.id);
+                                    null == m || m(), x({ action: 'PRESS_MUTUAL_FRIEND' }), Z(r.id);
                                 }
                             },
                             n

@@ -1,4 +1,4 @@
-a.d(n, { default: () => _ });
+a.d(n, { default: () => C });
 var t = a(255367),
     s = a(73800),
     r = a(120356),
@@ -11,9 +11,9 @@ var t = a(255367),
     u = a(388032),
     x = a(44534),
     p = a(73433);
-function _(e) {
-    let { channel: n, isFromComposer: a, transitionState: r, onClose: _ } = e,
-        C = (0, l.Dt)();
+function C(e) {
+    let { channel: n, isFromComposer: a, transitionState: r, onClose: C } = e,
+        m = (0, l.Dt)();
     return (
         s.useEffect(
             () => () => {
@@ -23,9 +23,10 @@ function _(e) {
         ),
         (0, t.jsxs)(c.Y0X, {
             transitionState: r,
-            'aria-labelledby': C,
+            'aria-labelledby': m,
             size: c.CgR.DYNAMIC,
             className: x.container,
+            parentComponent: 'ForumChannelGuidelinesModal',
             children: [
                 (0, t.jsxs)(c.xBx, {
                     className: x.header,
@@ -60,7 +61,7 @@ function _(e) {
                 }),
                 (0, t.jsx)(c.mzw, {
                     children: (0, t.jsx)(c.zxk, {
-                        onClick: _,
+                        onClick: C,
                         children: u.intl.string(u.t['NX+WJC'])
                     })
                 })

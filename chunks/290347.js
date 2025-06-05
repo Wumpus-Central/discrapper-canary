@@ -197,6 +197,7 @@ function T(e) {
             className: a()(I.root, t),
             transitionState: M,
             'aria-labelledby': U,
+            parentComponent: 'PremiumAnnouncementModalVariant1',
             children: [
                 (0, r.jsx)(s.olH, {
                     className: I.closeButton,

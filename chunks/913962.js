@@ -1,55 +1,56 @@
-n.d(i, { default: () => p });
-var e = n(255367);
-n(73800);
-var a = n(481060),
-    s = n(230711),
-    l = n(600164),
-    o = n(313201),
-    r = n(695346),
-    c = n(626135),
-    d = n(981631),
-    x = n(526761),
-    u = n(388032),
-    h = n(247481),
-    k = n(38880);
-function p(t) {
-    let { onClose: i, transitionState: n } = t,
-        p = (0, o.Dt)();
+i.d(n, { default: () => k });
+var e = i(255367);
+i(73800);
+var a = i(481060),
+    o = i(230711),
+    s = i(600164),
+    l = i(313201),
+    r = i(695346),
+    c = i(626135),
+    d = i(981631),
+    x = i(526761),
+    u = i(388032),
+    p = i(247481),
+    h = i(38880);
+function k(t) {
+    let { onClose: n, transitionState: i } = t,
+        k = (0, l.Dt)();
     function C() {
-        i(), s.Z.open(d.oAB.ACCESSIBILITY, null, { scrollPosition: x.rP.LEGACY_CHAT_INPUT });
+        n(), o.Z.open(d.oAB.ACCESSIBILITY, null, { scrollPosition: x.rP.LEGACY_CHAT_INPUT });
     }
     return (0, e.jsxs)(a.Y0X, {
-        transitionState: n,
-        'aria-labelledby': p,
+        transitionState: i,
+        'aria-labelledby': k,
+        parentComponent: 'LegacyChatInputExplanationModal',
         children: [
             (0, e.jsx)('img', {
-                className: h.art,
-                src: k,
+                className: p.art,
+                src: h,
                 alt: ''
             }),
             (0, e.jsx)(a.hzk, {
-                children: (0, e.jsxs)(l.Z, {
-                    direction: l.Z.Direction.VERTICAL,
-                    justify: l.Z.Justify.CENTER,
+                children: (0, e.jsxs)(s.Z, {
+                    direction: s.Z.Direction.VERTICAL,
+                    justify: s.Z.Justify.CENTER,
                     children: [
                         (0, e.jsx)(a.X6q, {
-                            id: p,
+                            id: k,
                             variant: 'heading-lg/semibold',
-                            className: h.title,
+                            className: p.title,
                             children: u.intl.string(u.t.G9HG5O)
                         }),
                         (0, e.jsx)(a.Text, {
                             variant: 'text-md/normal',
-                            className: h.body,
+                            className: p.body,
                             children: u.intl.format(u.t.ZtUieH, {
-                                openSettingsHook: (t, i) =>
+                                openSettingsHook: (t, n) =>
                                     (0, e.jsx)(
                                         a.eee,
                                         {
                                             onClick: C,
                                             children: t
                                         },
-                                        i
+                                        n
                                     )
                             })
                         })
@@ -66,7 +67,7 @@ function p(t) {
                                 location: 'LegacyChatInputExplanationModal'
                             }),
                                 r.dN.updateSetting(!1),
-                                i();
+                                n();
                         },
                         children: u.intl.string(u.t.VdzwlJ)
                     }),
@@ -75,7 +76,7 @@ function p(t) {
                         look: a.zxk.Looks.LINK,
                         size: a.zxk.Sizes.MEDIUM,
                         color: a.zxk.Colors.PRIMARY,
-                        onClick: i,
+                        onClick: n,
                         children: u.intl.string(u.t.f3Pet7)
                     })
                 ]

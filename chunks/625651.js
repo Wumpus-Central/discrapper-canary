@@ -18,7 +18,7 @@ function g(e) {
     var t,
         n,
         { guildId: g, powerup: j } = e,
-        _ = (function (e, t) {
+        v = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -37,15 +37,15 @@ function g(e) {
             }
             return o;
         })(e, ['guildId', 'powerup']);
-    let { onDeactivate: v, error: I, isLoading: O } = (0, f.ZP)(g, j),
-        { onClose: h } = _,
+    let { onDeactivate: _, error: I, isLoading: O } = (0, f.ZP)(g, j),
+        { onClose: h } = v,
         C = o.useCallback(
             (e) => {
-                v(e).then(() => {
+                _(e).then(() => {
                     null == h || h();
                 });
             },
-            [h, v]
+            [h, _]
         ),
         T = (function (e, t) {
             let n = (0, a.e7)([c.Z], () => c.Z.getMemberCount(e)),
@@ -134,10 +134,11 @@ function g(e) {
                     className: k.modal,
                     size: j.type === b.Us.LEVEL ? i.CgR.MEDIUM : i.CgR.SMALL
                 },
-                _
+                v
             )),
             (n = n =
                 {
+                    parentComponent: 'GuildPowerupDeactivateModal',
                     children: [
                         (0, r.jsxs)(i.hzk, {
                             className: k.modalContentContainer,
@@ -159,7 +160,7 @@ function g(e) {
                                                 })
                                             ]
                                         }),
-                                        (0, r.jsx)(i.olH, { onClick: _.onClose })
+                                        (0, r.jsx)(i.olH, { onClick: v.onClose })
                                     ]
                                 }),
                                 (() => {
@@ -211,7 +212,7 @@ function g(e) {
                                 (0, r.jsx)(i.zxk, {
                                     color: i.Ttl.PRIMARY,
                                     className: k.button,
-                                    onClick: _.onClose,
+                                    onClick: v.onClose,
                                     children: x.intl.string(x.t['ETE/oK'])
                                 })
                             ]

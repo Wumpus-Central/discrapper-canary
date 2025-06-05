@@ -9,10 +9,10 @@ var o = n(120356),
     l = n(906732),
     u = n(1585),
     d = n(821982),
-    _ = n(125988),
-    p = n(228624),
-    j = n(267097),
-    g = n(109213),
+    p = n(125988),
+    _ = n(228624),
+    g = n(267097),
+    j = n(109213),
     y = n(626135),
     O = n(333867),
     h = n(963249),
@@ -39,6 +39,7 @@ function v(t) {
                     size: r.CgR.DYNAMIC,
                     transitionState: n,
                     className: b.modalRoot,
+                    parentComponent: 'GiftCategorySelectModal',
                     children: [
                         (0, a.jsxs)(r.xBx, {
                             className: b.header,
@@ -75,16 +76,16 @@ function v(t) {
         })
     );
 }
-let I = () => ((0, j.Z)(), null);
+let I = () => ((0, g.Z)(), null);
 function N(t) {
     let { giftRecipient: e, analyticsObject: n, onClose: o } = t,
-        { showBothNitroSkusInCategorySelect: s } = g.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
-        u = (0, p.hv)('CategoryButtons'),
+        { showBothNitroSkusInCategorySelect: s } = j.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
+        u = (0, _.hv)('CategoryButtons'),
         { analyticsLocations: d } = (0, l.ZP)(c.Z.GIFT_CATEGORY_SELECT_MODAL),
-        _ = (t) => {
+        p = (t) => {
             t && o();
         },
-        j = (t) => {
+        g = (t) => {
             var a, o;
             let i = m.Qqv.NITRO_SKU_SELECTION;
             t === x.Si.TIER_2 ? (i = m.Qqv.NITRO_STANDARD) : t === x.Si.TIER_0 && (i = m.Qqv.NITRO_BASIC),
@@ -140,13 +141,13 @@ function N(t) {
                                   Object.defineProperty(a, t, Object.getOwnPropertyDescriptor(o, t));
                               }),
                         a),
-                    onClose: _
+                    onClose: p
                 });
         };
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(r.P3F, {
-                onClick: () => j(s ? x.Si.TIER_2 : void 0),
+                onClick: () => g(s ? x.Si.TIER_2 : void 0),
                 children: (0, a.jsxs)('div', {
                     className: i()(b.categoryButton, b.nitroButton),
                     children: [
@@ -162,7 +163,7 @@ function N(t) {
             }),
             s &&
                 (0, a.jsx)(r.P3F, {
-                    onClick: () => j(x.Si.TIER_0),
+                    onClick: () => g(x.Si.TIER_0),
                     children: (0, a.jsxs)('div', {
                         className: i()(b.nitroBasicButton, b.categoryButton),
                         children: [
@@ -184,7 +185,7 @@ function N(t) {
                         analyticsLocations: d,
                         analyticsObject: n,
                         giftRecipient: e,
-                        onClose: _,
+                        onClose: p,
                         variantsReturnStyle: u
                     });
                 },
@@ -206,7 +207,7 @@ function N(t) {
 }
 function S(t) {
     let { imageType: e } = t,
-        { avatarPlaceholderSrc: n } = (0, _.Z)({ size: (0, u.y9)(r.EFr.SIZE_80) }),
+        { avatarPlaceholderSrc: n } = (0, p.Z)({ size: (0, u.y9)(r.EFr.SIZE_80) }),
         o = (0, d.Z)('a_c3cffc19e9784f7d0b005eecdf1b566e', r.EFr.SIZE_80, !1);
     return 0 === e || 1 === e
         ? (0, a.jsx)('div', {

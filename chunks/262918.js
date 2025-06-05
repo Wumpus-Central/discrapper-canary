@@ -1,4 +1,4 @@
-n.d(t, { default: () => p }), n(388685), n(539854);
+n.d(t, { default: () => _ }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     s = n(512722),
@@ -14,11 +14,11 @@ var r = n(255367),
     b = n(986398),
     m = n(981631),
     x = n(388032),
-    _ = n(308102);
-function p(e) {
+    p = n(308102);
+function _(e) {
     var t,
         n,
-        { guildId: s, leaderboardId: p } = e,
+        { guildId: s, leaderboardId: _ } = e,
         j = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -40,22 +40,22 @@ function p(e) {
         })(e, ['guildId', 'leaderboardId']);
     let w = (0, g.Z)({
         guildId: s,
-        leaderboardId: p
+        leaderboardId: _
     });
     a()(null != w, 'Leaderboard must be loaded before opening the settings modal');
     let y = w.guild_settings,
         [v, O] = i.useState(y.sort_by_statistic_id),
         [C, S] = i.useState(y.sort_desc),
         [I, N] = i.useState(y.show_winner_crown),
-        [Z, { loading: k }] = (0, c.Z)(u._);
+        [Z, { loading: L }] = (0, c.Z)(u._);
     i.useEffect(() => {
         d.ZP.trackWithMetadata(m.rMx.OPEN_MODAL, { type: m.jXE.GUILD_LEADERBOARD_SETTINGS_MODAL });
     }, []);
-    let L = v !== y.sort_by_statistic_id || C !== y.sort_desc || I !== y.show_winner_crown,
+    let k = v !== y.sort_by_statistic_id || C !== y.sort_desc || I !== y.show_winner_crown,
         P = async () => {
             await Z({
                 guildId: s,
-                leaderboardId: p,
+                leaderboardId: _,
                 sortByStatisticId: v,
                 sortDesc: C,
                 showWinnerCrown: I
@@ -119,12 +119,12 @@ function p(e) {
                 title: x.intl.string(x.t.rv9GUV),
                 buttons: (0, r.jsx)(l.zxk, {
                     onClick: P,
-                    submitting: k,
-                    disabled: !L,
+                    submitting: L,
+                    disabled: !k,
                     children: x.intl.string(x.t.R3BPHx)
                 }),
                 children: (0, r.jsxs)(l.hzk, {
-                    className: _.content,
+                    className: p.content,
                     children: [
                         (0, r.jsx)(l.Text, {
                             variant: 'text-md/medium',
@@ -141,16 +141,16 @@ function p(e) {
                                 O(t), S(n);
                             }
                         }),
-                        (0, r.jsx)('div', { className: _.divider }),
+                        (0, r.jsx)('div', { className: p.divider }),
                         (0, r.jsx)(l.vwX, { children: x.intl.string(x.t.HU4EKC) }),
                         (0, r.jsx)(l.LZC, { size: 8 }),
                         (0, r.jsx)(l.j7V, {
                             hideBorder: !0,
                             onChange: () => N((e) => !e),
                             value: I,
-                            className: _.showWinnerCrownSwitch,
+                            className: p.showWinnerCrownSwitch,
                             children: (0, r.jsxs)('div', {
-                                className: _.showWinnerCrownTextContainer,
+                                className: p.showWinnerCrownTextContainer,
                                 children: [
                                     (0, r.jsx)(l.Text, {
                                         variant: 'text-md/medium',
@@ -158,7 +158,7 @@ function p(e) {
                                         children: x.intl.string(x.t.cH7QEx)
                                     }),
                                     (0, r.jsx)(b.Z, {
-                                        className: _.winnerImage,
+                                        className: p.winnerImage,
                                         leaderboard: w
                                     })
                                 ]

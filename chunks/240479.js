@@ -84,7 +84,6 @@ function A(e) {
                               className: S.infoExpandedSoundContainer,
                               children: [
                                   (0, r.jsx)(h.ZP, {
-                                      refreshEnabled: !0,
                                       buttonOverlay: p.Pb.NONE,
                                       sound: t,
                                       channel: void 0,

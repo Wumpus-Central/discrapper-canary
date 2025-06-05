@@ -155,6 +155,7 @@ var r = (function (e) {
             (e.LOCALIZED_PRICING_UPSELL_VIEWED = 'impression_localized_pricing_upsell_viewed'),
             (e.MASKED_LINK_MODAL = 'impression_masked_link_modal'),
             (e.MESSAGES_EMPTY_NUX = 'impression_messages_empty_nux'),
+            (e.MODAL_ROOT_LEGACY = 'impression_modal_root_legacy'),
             (e.MULTI_ACCOUNT_SWITCH_LANDING = 'impression_multi_account_switch_landing'),
             (e.NEW_USER_INTENT_START = 'impression_new_user_intent_start'),
             (e.NITRO_TAB = 'impression_nitro_tab'),

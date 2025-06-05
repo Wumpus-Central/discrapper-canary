@@ -1,6 +1,6 @@
 n.d(t, {
-    G: () => g,
-    Z: () => p
+    G: () => p,
+    Z: () => g
 }),
     n(388685);
 var i = n(255367),
@@ -16,9 +16,9 @@ var i = n(255367),
     x = n(981631),
     C = n(388032),
     h = n(685554);
-function g(e) {
+function p(e) {
     var t;
-    let { guildTemplate: n, onClose: g, onBack: p, onHubGuildInfoSet: f, onGuildCreated: _, isSlideReady: j, hasFooter: b = !0, isCommunity: L = !1 } = e,
+    let { guildTemplate: n, onClose: p, onBack: g, onHubGuildInfoSet: f, onGuildCreated: _, isSlideReady: j, hasFooter: b = !0, isCommunity: L = !1 } = e,
         [N, I] = s.useState(u.Z.getGuildNameSuggestion()),
         [y, v] = s.useState(null),
         [Z, S] = s.useState(!1),
@@ -49,7 +49,7 @@ function g(e) {
             },
             [n, f, N, y, L, O, _]
         ),
-        w = (0, i.jsxs)(i.Fragment, {
+        G = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(l.zxk, {
                     color: l.zxk.Colors.BRAND,
@@ -62,7 +62,7 @@ function g(e) {
                     className: h.backButton,
                     look: l.zxk.Looks.BLANK,
                     size: l.zxk.Sizes.MIN,
-                    onClick: p,
+                    onClick: g,
                     children: C.intl.string(C.t['13/7kZ'])
                 })
             ]
@@ -86,10 +86,10 @@ function g(e) {
                             variant: 'text-md/normal',
                             children: C.intl.string(C.t.AAfVqa)
                         }),
-                        null != g &&
+                        null != p &&
                             (0, i.jsx)(l.olH, {
                                 className: h.closeButton,
-                                onClick: g
+                                onClick: p
                             })
                     ]
                 }),
@@ -157,14 +157,14 @@ function g(e) {
                 b &&
                     (0, i.jsx)(l.mzw, {
                         justify: o.Z.Justify.BETWEEN,
-                        children: w
+                        children: G
                     })
             ]
         }),
-        footer: w
+        footer: G
     };
 }
-function p(e) {
-    let { content: t } = g(e);
+function g(e) {
+    let { content: t } = p(e);
     return t;
 }

@@ -47,11 +47,11 @@ function A(e) {
     return e;
 }
 function N(e) {
-    let { user: n, guildId: t, channelId: N, messageId: O, roleId: C, transitionState: T, openedAt: P, onHide: w, showGuildProfile: S = !0, sourceAnalyticsLocations: E = [] } = e,
+    let { user: n, guildId: t, channelId: N, messageId: O, roleId: C, transitionState: P, openedAt: T, onHide: w, showGuildProfile: S = !0, sourceAnalyticsLocations: E = [] } = e,
         M = t === g.ME ? void 0 : t,
         L = (0, i.e7)([u.Z], () => u.Z.isBlocked(n.id)),
         { analyticsLocations: D } = (0, d.ZP)([...E, L ? r.Z.BLOCKED_PROFILE_MODAL : r.Z.IGNORED_PROFILE_MODAL]),
-        B = (0, _.ZB)({
+        R = (0, _.ZB)({
             layout: 'MODAL',
             userId: n.id,
             guildId: M,
@@ -60,7 +60,7 @@ function N(e) {
             roleId: C,
             showGuildProfile: S
         }),
-        R = [
+        B = [
             {
                 icon: a.owK,
                 description: Z.intl.string(Z.t.kcuWvb)
@@ -77,16 +77,17 @@ function N(e) {
     return (0, o.jsx)(d.Gt, {
         value: D,
         children: (0, o.jsx)(_.Mt, {
-            value: B,
-            openedAt: P,
+            value: R,
+            openedAt: T,
             fetchStartedAt: null == G ? void 0 : G.fetchStartedAt,
             fetchEndedAt: null == G ? void 0 : G.fetchEndedAt,
             isLoaded: null == G ? void 0 : G.isLoaded,
             children: (0, o.jsx)(a.Y0X, {
-                transitionState: T,
+                transitionState: P,
                 className: v.root,
                 hideShadow: !0,
                 'aria-label': U,
+                parentComponent: 'RestrictedUserProfileModal',
                 children: (0, o.jsx)(h.Z, {
                     user: n,
                     displayProfile: G,
@@ -125,7 +126,7 @@ function N(e) {
                                     }),
                                     (0, o.jsx)('div', {
                                         className: v.safetyTable,
-                                        children: R.map((e, n) => {
+                                        children: B.map((e, n) => {
                                             let { icon: t, description: c } = e;
                                             return (0, o.jsx)(
                                                 l.ZP,
@@ -152,7 +153,7 @@ function N(e) {
                                                                     action: L ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
                                                                     analyticsLocations: D
                                                                 },
-                                                                B
+                                                                R
                                                             )
                                                         );
                                                 }
@@ -167,7 +168,7 @@ function N(e) {
                                                                     action: 'DONT_SHOW_AGAIN_IGNORED_PROFILE',
                                                                     analyticsLocations: D
                                                                 },
-                                                                B
+                                                                R
                                                             )
                                                         );
                                                 }

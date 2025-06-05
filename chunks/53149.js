@@ -3,18 +3,19 @@ var e = i(255367);
 i(73800);
 var s = i(442837),
     a = i(481060),
-    l = i(87051),
-    o = i(9156),
+    o = i(87051),
+    l = i(9156),
     r = i(621600),
     c = i(388032),
     d = i(278502);
 let u = (t) => {
     let { onClose: n, channelId: i, transitionState: u } = t,
-        x = (0, s.e7)([o.ZP], () => o.ZP.isChannelMuted(null, i));
+        x = (0, s.e7)([l.ZP], () => l.ZP.isChannelMuted(null, i));
     return (0, e.jsxs)(a.Y0X, {
         transitionState: u,
         size: a.CgR.SMALL,
         'aria-label': c.intl.string(c.t.uAmAiI),
+        parentComponent: 'MuteAppNotificationsModal',
         children: [
             (0, e.jsx)(a.olH, {
                 className: d.closeButton,
@@ -42,7 +43,7 @@ let u = (t) => {
                         className: d.button,
                         color: x ? a.zxk.Colors.PRIMARY : a.zxk.Colors.RED,
                         onClick: () => {
-                            l.Z.updateChannelOverrideSettings(null, i, { muted: !x }, x ? r.ZB.Unmuted : r.ZB.Muted), n();
+                            o.Z.updateChannelOverrideSettings(null, i, { muted: !x }, x ? r.ZB.Unmuted : r.ZB.Muted), n();
                         },
                         children: x ? c.intl.string(c.t.YqAjX1) : c.intl.string(c.t['w4m94+'])
                     })

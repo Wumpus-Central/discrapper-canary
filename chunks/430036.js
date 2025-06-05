@@ -14,8 +14,8 @@ var i = n(255367),
     g = n(144144),
     m = n(738619),
     y = n(744061),
-    _ = n(36311),
-    v = n(655687),
+    v = n(36311),
+    _ = n(655687),
     O = n(823748),
     b = n(25007),
     E = n(199649),
@@ -302,11 +302,11 @@ class el extends r.PureComponent {
         if (null == t) return null;
         let g = a || h,
             y = !o && null != t && t.isNSFW(),
-            v = !g || c;
+            _ = !g || c;
         return (
             (e =
                 y && null != l
-                    ? (0, i.jsx)(_.Z, {
+                    ? (0, i.jsx)(v.Z, {
                           guild: l,
                           channelId: t.id
                       })
@@ -348,7 +348,7 @@ class el extends r.PureComponent {
                         y
                             ? null
                             : (0, i.jsx)('div', {
-                                  children: v
+                                  children: _
                                       ? (0, i.jsx)(J.ZP.Background, {
                                             opacityOverride: a || h ? null : eo,
                                             children: (0, i.jsxs)('div', {
@@ -513,7 +513,7 @@ function ea(e) {
         g = null != s && s.isPrivate() ? s.getRecipientId() : null,
         m = (0, c.e7)([k.Z], () => (null != o ? k.Z.getPendingReply(o) : void 0)),
         y = (0, c.e7)([W.default], () => (null != g ? W.default.getUser(g) : null)),
-        { placeholder: _ } = (0, v.Z)({ channel: s });
+        { placeholder: v } = (0, _.Z)({ channel: s });
     return null != s && null != p && Q.TPd.GUILD_THREADS_ONLY.has(s.type)
         ? (0, i.jsx)(O.Z, {})
         : (0, i.jsx)(
@@ -530,7 +530,7 @@ function ea(e) {
                       isPreviewingInGame: h,
                       pendingReply: m,
                       contained: t,
-                      placeholder: _,
+                      placeholder: v,
                       widget: Q.Odu.TEXT
                   },
                   n

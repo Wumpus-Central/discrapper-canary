@@ -1,7 +1,7 @@
 n.d(t, {
     U: () => L,
-    default: () => M,
-    t: () => N
+    default: () => N,
+    t: () => M
 }),
     n(953529),
     n(388685),
@@ -67,15 +67,15 @@ function L(e) {
     b ? (t = []) : u ? (t = g.Wx(n, w, a, s, O)) : 0 !== (t = g.ik(n, w, a, s, O)).length || '' !== E.trim() || g.RD(n, w) || (t = g.aq());
     let L = g.iI(k, a, n, s, O),
         {
-            placeholderText: M,
+            placeholderText: N,
             hintText: P,
-            renderEmptyText: Z
+            renderEmptyText: A
         } = {
             placeholderText: T.intl.string(T.t.iezLLi),
             hintText: T.intl.string(T.t['rwFx8/']),
             renderEmptyText: (e) => T.intl.format(T.t.ErpIY2, { query: e })
         };
-    return (0, r.jsx)(N, {
+    return (0, r.jsx)(M, {
         pendingAdditions: c,
         query: E,
         onQueryChange: function (e) {
@@ -161,14 +161,14 @@ function L(e) {
         },
         roles: t,
         members: L,
-        placeholderText: M,
+        placeholderText: N,
         hintText: P,
-        renderEmptyText: Z,
+        renderEmptyText: A,
         isStageChannel: u,
         description: m
     });
 }
-function N(e) {
+function M(e) {
     let t,
         { listClassName: n, pendingAdditions: l, query: i, onQueryChange: s, onClickRow: o, onRemovePendingAddition: c, roles: d, members: u, placeholderText: m, hintText: x, renderEmptyText: h, isStageChannel: b, focusSearchAfterReady: y, isReady: f, description: p } = e;
     return (0, r.jsxs)('div', {
@@ -202,7 +202,7 @@ function N(e) {
         ]
     });
 }
-function M(e) {
+function N(e) {
     let { transitionState: t, onClose: n, channelId: o, newChannel: d, inSettings: x } = e,
         [f, p] = l.useState(!1),
         [g, j] = l.useState({}),
@@ -236,12 +236,13 @@ function M(e) {
             p(!1);
         }
     }
-    let N = (0, u.zi)(S.type) ? a.W4G : a.gjC;
+    let M = (0, u.zi)(S.type) ? a.W4G : a.gjC;
     return (0, r.jsxs)(a.Y0X, {
         transitionState: t,
         size: a.CgR.SMALL,
         'aria-labelledby': k,
         className: w.modalRoot,
+        parentComponent: 'AddMembersModal',
         children: [
             (0, r.jsxs)(a.xBx, {
                 separator: !1,
@@ -259,7 +260,7 @@ function M(e) {
                         color: 'header-secondary',
                         className: w.headerSubtitle,
                         children: [
-                            (0, r.jsx)(N, {
+                            (0, r.jsx)(M, {
                                 size: 'xs',
                                 color: 'currentColor',
                                 className: w.headerSubtitleIcon

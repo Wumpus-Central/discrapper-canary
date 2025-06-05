@@ -1,7 +1,7 @@
-n.d(t, { H: () => o });
+n.d(t, { H: () => l });
 var i = n(818083),
     a = n(984134);
-let l = (0, i.B)({
+let o = (0, i.B)({
     kind: 'user',
     id: '2025-05_per_device_detection_modal',
     label: 'Per-device detection modal experiment',
@@ -14,10 +14,10 @@ let l = (0, i.B)({
         }
     ]
 });
-function o(e) {
+function l(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         { isInHoldout: i } = a.h.useExperiment({ location: t }, { autoTrackExposure: n });
-    return l.useExperiment(
+    return o.useExperiment(
         { location: t },
         {
             disable: i,

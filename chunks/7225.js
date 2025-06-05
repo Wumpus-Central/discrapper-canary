@@ -43,6 +43,7 @@ function P(t) {
         'aria-label': y,
         size: l.CgR.DYNAMIC,
         className: g.modal,
+        parentComponent: 'AppStorefrontModal',
         children: [
             (0, n.jsxs)(l.xBx, {
                 className: g.modalHeader,

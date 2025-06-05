@@ -305,6 +305,7 @@ function ee(e) {
                                                                                                       size: a.CgR.SMALL,
                                                                                                       'aria-label': X.intl.string(X.t['3Uj+2t']),
                                                                                                       className: Q.statusPickerModal,
+                                                                                                      parentComponent: 'UserProfileAccountPopout',
                                                                                                       children: (0, i.jsx)(a.v2r, {
                                                                                                           navId: 'set-status-submenu-mobile-web',
                                                                                                           variant: 'fixed',

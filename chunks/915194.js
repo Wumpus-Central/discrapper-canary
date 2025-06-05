@@ -1,9 +1,9 @@
 i.d(n, { default: () => p });
 var r = i(255367);
 i(73800);
-var e = i(442837),
+var o = i(442837),
     t = i(481060),
-    o = i(812206),
+    e = i(812206),
     s = i(600164),
     a = i(922156),
     c = i(63063),
@@ -11,11 +11,11 @@ var e = i(442837),
     u = i(841177);
 let p = (l) => {
     let { onClose: n, transitionState: i } = l,
-        { error: p, applicationName: h } = (0, e.cj)([a.Z, o.Z], () => {
+        { error: p, applicationName: h } = (0, o.cj)([a.Z, e.Z], () => {
             let l = a.Z.getLastError(),
                 n = null;
             if (null != l && null != l.applicationId) {
-                let i = o.Z.getApplication(l.applicationId);
+                let i = e.Z.getApplication(l.applicationId);
                 null != i && (n = i.name);
             }
             return {
@@ -27,6 +27,7 @@ let p = (l) => {
         transitionState: i,
         size: t.CgR.SMALL,
         'aria-label': d.intl.string(d.t['6kHRYG']),
+        parentComponent: 'DispatchErrorModal',
         children: [
             (0, r.jsxs)(t.xBx, {
                 justify: s.Z.Justify.BETWEEN,

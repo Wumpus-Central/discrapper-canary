@@ -19,8 +19,8 @@ var s = i(255367),
     N = i(210887),
     j = i(984933),
     C = i(430824),
-    _ = i(699516),
-    S = i(594174),
+    S = i(699516),
+    _ = i(594174),
     I = i(626135),
     E = i(63063),
     O = i(700785),
@@ -667,7 +667,7 @@ let J = (e) => {
             t.type === y.d4z.GUILD_TEXT &&
                 K.push({
                     value: t.id,
-                    label: (0, x.F6)(t, S.default, _.Z, !0)
+                    label: (0, x.F6)(t, _.default, S.Z, !0)
                 });
         });
         let Q = k !== y.sFg.NONE,

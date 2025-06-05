@@ -539,6 +539,7 @@ class em extends (r = l.PureComponent) {
                 [ei.showAsPopout]: !t
             }),
             fullscreenOnMobile: !1,
+            parentComponent: 'PrivateChannelRecipientsInvite',
             children: [this.renderHeader(), this.renderSearchBar(), this.renderBody(), this.renderFooter()]
         });
     }

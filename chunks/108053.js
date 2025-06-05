@@ -20,7 +20,7 @@ function j(e) {
         { guild: n, channel: j, customWebhooks: O, editedWebhook: y, selectableWebhookChannels: v, refToScroller: _, errors: C, canNavigate: N } = e,
         I = (0, d.ZP)(),
         [S, E] = i.useState(null),
-        [P, w] = i.useState(null);
+        [w, P] = i.useState(null);
     if (null != j) t = j;
     else {
         let e = Object.values(v);
@@ -48,7 +48,7 @@ function j(e) {
                     null
                 );
             });
-            null != e && (w(e.id), E(e));
+            null != e && (P(e.id), E(e));
         }
     }, [N, t, n]);
     (0, c.ZP)(() => {

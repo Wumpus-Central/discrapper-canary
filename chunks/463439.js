@@ -1,4 +1,4 @@
-n.d(e, { Z: () => g }), n(388685);
+n.d(e, { Z: () => m }), n(388685);
 var r = n(255367),
     s = n(73800),
     i = n(481060),
@@ -14,10 +14,10 @@ var r = n(255367),
     N = n(850165),
     x = n(134612),
     b = n(388032),
-    f = n(948582),
-    p = n(149355);
-function g(t) {
-    let { senderId: e, channelId: n, hasReported: g, onReport: m, trackAnalyticsEvent: C } = t,
+    p = n(948582),
+    f = n(149355);
+function m(t) {
+    let { senderId: e, channelId: n, hasReported: m, onReport: g, trackAnalyticsEvent: C } = t,
         I = (0, o.e7)([E.Z], () => E.Z.isBlocked(e)),
         [A, T] = s.useState(I),
         S = (0, u.o)(),
@@ -41,7 +41,7 @@ function g(t) {
                 await (0, l.J7)(
                     k,
                     () => {
-                        d.Z.showReportSuccessToast(e, n), m();
+                        d.Z.showReportSuccessToast(e, n), g();
                     },
                     () => {
                         d.Z.showFailedToast();
@@ -64,18 +64,18 @@ function g(t) {
             }
         }, [M]);
     return (0, r.jsx)(N.Z, {
-        heroImageSrc: p,
+        heroImageSrc: f,
         heroImageAlt: b.intl.string(b.t.RVyYCA),
         header: b.intl.string(b.t['mWO+ys']),
         description: b.intl.string(b.t.S0XtKC),
         children: (0, r.jsxs)('div', {
-            className: f.buttonContainer,
+            className: p.buttonContainer,
             children: [
                 (0, r.jsxs)(i.zxk, {
                     color: i.zxk.Colors.BRAND,
                     size: i.zxk.Sizes.LARGE,
-                    className: f.button,
-                    innerClassName: f.buttonInner,
+                    className: p.button,
+                    innerClassName: p.buttonInner,
                     onClick: () => {
                         A ? y() : v();
                     },
@@ -84,7 +84,7 @@ function g(t) {
                             size: 'custom',
                             height: 20,
                             width: 20,
-                            className: f.buttonIcon,
+                            className: p.buttonIcon,
                             color: 'currentColor'
                         }),
                         A ? b.intl.string(b.t.XyHpKC) : b.intl.string(b.t.l4EmaW)
@@ -93,34 +93,34 @@ function g(t) {
                 (0, r.jsxs)(i.zxk, {
                     color: i.zxk.Colors.PRIMARY,
                     size: i.zxk.Sizes.LARGE,
-                    className: f.button,
-                    innerClassName: f.buttonInner,
+                    className: p.button,
+                    innerClassName: p.buttonInner,
                     onClick: z,
                     submitting: j,
-                    disabled: g,
+                    disabled: m,
                     children: [
                         (0, r.jsx)(i.U65, {
                             size: 'custom',
                             height: 20,
                             width: 20,
-                            className: f.buttonIcon,
+                            className: p.buttonIcon,
                             color: 'currentColor'
                         }),
-                        g ? b.intl.string(b.t.QvwOJy) : b.intl.string(b.t['7fHyEx'])
+                        m ? b.intl.string(b.t.QvwOJy) : b.intl.string(b.t['7fHyEx'])
                     ]
                 }),
                 (0, r.jsxs)(i.zxk, {
                     color: i.zxk.Colors.PRIMARY,
                     size: i.zxk.Sizes.LARGE,
-                    className: f.button,
-                    innerClassName: f.buttonInner,
+                    className: p.button,
+                    innerClassName: p.buttonInner,
                     onClick: () => L(M),
                     children: [
                         (0, r.jsx)(i.kBi, {
                             size: 'custom',
                             height: 20,
                             width: 20,
-                            className: f.buttonIcon,
+                            className: p.buttonIcon,
                             color: 'currentColor'
                         }),
                         w

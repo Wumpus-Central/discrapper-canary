@@ -7,8 +7,8 @@ var r = n(212598),
     a = n(250331),
     l = n(300778);
 function c(e) {
-    let { isWaitingForConnection: t, onWaitingForConnection: n, expectedCallbackState: c, onAuthToken: d, onError: u, onClose: f } = e,
-        p = t
+    let { isWaitingForConnection: t, onWaitingForConnection: n, expectedCallbackState: c, onAuthToken: d, onError: u, onClose: p } = e,
+        f = t
             ? (0, o.jsx)('img', {
                   src: l.Z,
                   width: '231',
@@ -30,8 +30,8 @@ function c(e) {
         expectedCallbackState: c,
         onAuthToken: d,
         onError: u,
-        onClose: f,
-        img: p,
+        onClose: p,
+        img: f,
         title: b,
         body: x
     });

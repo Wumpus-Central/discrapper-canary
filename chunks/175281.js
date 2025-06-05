@@ -319,6 +319,7 @@ function A(e) {
                 size: f.CgR.DYNAMIC,
                 'aria-label': j.intl.string(j.t.T9DA2N),
                 transitionState: t,
+                parentComponent: 'KeyboardShortcutsModal',
                 children: (0, r.jsx)(p.W, {
                     component: 'div',
                     children: l

@@ -10,6 +10,7 @@ function l(e) {
     return (0, r.jsxs)(o.Y0X, {
         transitionState: t,
         'aria-labelledby': a,
+        parentComponent: 'SecureFramesVerificationModal',
         children: [
             (0, r.jsx)('div', {
                 className: i.shieldIconContainer,

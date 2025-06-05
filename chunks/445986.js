@@ -132,6 +132,7 @@ class b extends a.Component {
                                     e
                                 ),
                                 {
+                                    parentComponent: 'ApplicationStoreListingCarousel',
                                     children: (0, r.jsx)(
                                         f,
                                         h(m({}, e), {

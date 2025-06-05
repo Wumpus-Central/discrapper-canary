@@ -103,6 +103,7 @@ function D(e) {
     return (0, r.jsxs)(o.Y0X, {
         className: P.bannedUserModal,
         transitionState: n,
+        parentComponent: 'GuildSettingsBansNew',
         children: [
             (0, r.jsxs)(o.xBx, {
                 className: P.header,

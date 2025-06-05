@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(885006),
     d = n(624138),
     f = n(293979),
-    b = n(674563),
-    p = n(388032),
+    p = n(674563),
+    b = n(388032),
     O = n(243114);
 let h = (0, d.Mg)(a.Z.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH),
     m = (0, d.Mg)(a.Z.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH),
@@ -56,6 +56,7 @@ function j(e) {
             {
                 size: i.CgR.DYNAMIC,
                 className: O.root,
+                parentComponent: 'InteractionIframeModal',
                 children: (0, r.jsxs)('div', {
                     style: { width: N },
                     children: [
@@ -86,7 +87,7 @@ function j(e) {
                                             ]
                                         }),
                                         (0, r.jsx)(l.Z, {
-                                            type: b.Hb.BOT,
+                                            type: p.Hb.BOT,
                                             className: O.botTag,
                                             verified: null == (t = e.application.bot) ? void 0 : t.verified
                                         })
@@ -98,7 +99,7 @@ function j(e) {
                                     className: O.closeButtonContainer,
                                     look: i.zxk.Looks.BLANK,
                                     size: i.zxk.Sizes.NONE,
-                                    'aria-label': p.intl.string(p.t.WAI6xs),
+                                    'aria-label': b.intl.string(b.t.WAI6xs),
                                     children: (0, r.jsx)(i.Dio, {
                                         size: 'md',
                                         color: 'currentColor',

@@ -1,15 +1,15 @@
-l.d(t, { default: () => h }), l(388685), l(781311);
-var n = l(255367),
-    s = l(73800),
-    i = l(481060),
-    r = l(749210),
-    a = l(70097),
-    o = l(910693),
-    c = l(70956),
-    u = l(5192),
-    d = l(981631),
-    x = l(388032),
-    m = l(221166);
+n.d(t, { default: () => h }), n(388685), n(781311);
+var l = n(255367),
+    s = n(73800),
+    i = n(481060),
+    r = n(749210),
+    o = n(70097),
+    a = n(910693),
+    c = n(70956),
+    u = n(5192),
+    d = n(981631),
+    x = n(388032),
+    m = n(221166);
 function b() {
     return [
         {
@@ -50,7 +50,7 @@ function h(e) {
         [N, L] = s.useState(''),
         [R, Z] = s.useState(0),
         [I, w] = s.useState(!1),
-        y = (0, o.sE)(t, {
+        y = (0, a.sE)(t, {
             location: h,
             targetUserId: null == c ? void 0 : c.id,
             targets: g
@@ -64,7 +64,7 @@ function h(e) {
                 if (null == c) return;
                 r.Z.banUser(t, null == c ? void 0 : c.id, S, N, z);
             }
-            y(o.jQ.BAN), f();
+            y(a.jQ.BAN), f();
         }, [j, y, f, g, v, I, N, t, S, c, z]),
         Y = s.useCallback((e) => {
             _(e);
@@ -82,10 +82,10 @@ function h(e) {
         U = s.useCallback(() => {
             L(''), Z(1);
         }, []),
-        E = s.useCallback(() => {
+        B = s.useCallback(() => {
             Z(0);
         }, []),
-        J = [
+        E = [
             {
                 name: x.intl.string(x.t.tamLhY),
                 value: x.intl.string(x.t.tamLhY)
@@ -99,76 +99,77 @@ function h(e) {
                 value: x.intl.string(x.t.EXY1d3)
             }
         ],
-        K = (() => {
+        J = (() => {
             if (null != j && null != g) return x.intl.formatToPlainString(x.t.HVJexc, { count: null == g ? void 0 : g.size });
             if (null == c) return '';
             let e = u.ZP.getName(t, null, c);
             return x.intl.formatToPlainString(x.t.jeKpoq, { username: '@'.concat(e) });
         })();
-    return (0, n.jsxs)(i.Y0X, {
+    return (0, l.jsxs)(i.Y0X, {
         transitionState: C,
+        parentComponent: 'BanConfirm',
         children: [
-            (0, n.jsx)(i.xBx, {
+            (0, l.jsx)(i.xBx, {
                 separator: !1,
-                children: (0, n.jsx)(i.X6q, {
+                children: (0, l.jsx)(i.X6q, {
                     variant: 'heading-xl/semibold',
-                    children: K
+                    children: J
                 })
             }),
-            (0, n.jsxs)(i.hzk, {
+            (0, l.jsxs)(i.hzk, {
                 className: m.modalContent,
                 children: [
-                    (0, n.jsxs)(a.Z, {
+                    (0, l.jsxs)(o.Z, {
                         autoPlay: !0,
                         loop: !0,
                         width: 400,
                         children: [
-                            (0, n.jsx)('source', {
-                                src: l(942314),
+                            (0, l.jsx)('source', {
+                                src: n(942314),
                                 type: 'video/webm'
                             }),
-                            (0, n.jsx)('source', {
-                                src: l(888322),
+                            (0, l.jsx)('source', {
+                                src: n(888322),
                                 type: 'video/mp4'
                             }),
-                            (0, n.jsx)('img', {
+                            (0, l.jsx)('img', {
                                 alt: '',
-                                src: l(860724)
+                                src: n(860724)
                             })
                         ]
                     }),
-                    (0, n.jsxs)(i.xJW, {
+                    (0, l.jsxs)(i.xJW, {
                         title: x.intl.string(x.t.w4Ivys),
                         children: [
                             I &&
-                                (0, n.jsx)(i.kzN, {
+                                (0, l.jsx)(i.kzN, {
                                     className: m.error,
                                     children: x.intl.string(x.t.IrYX19)
                                 }),
-                            (0, n.jsx)(i.qBt, {
+                            (0, l.jsx)(i.qBt, {
                                 steps: [0, 1],
                                 step: R,
                                 children: ((e) => {
                                     switch (R) {
                                         case 0:
-                                            return (0, n.jsxs)(n.Fragment, {
+                                            return (0, l.jsxs)(l.Fragment, {
                                                 children: [
-                                                    (0, n.jsx)(i.FXm, {
+                                                    (0, l.jsx)(i.FXm, {
                                                         value: N,
                                                         options: e,
                                                         onChange: A,
                                                         radioItemClassName: m.radioItemStyles
                                                     }),
-                                                    (0, n.jsxs)(i.P3F, {
+                                                    (0, l.jsxs)(i.P3F, {
                                                         onClick: U,
                                                         className: m.banReasonOtherClickable,
                                                         children: [
-                                                            (0, n.jsx)(i.Text, {
+                                                            (0, l.jsx)(i.Text, {
                                                                 variant: 'text-md/medium',
                                                                 color: 'none',
                                                                 children: x.intl.string(x.t.BcZTKi)
                                                             }),
-                                                            (0, n.jsx)(i.Fbu, {
+                                                            (0, l.jsx)(i.Fbu, {
                                                                 color: 'currentColor',
                                                                 size: 'xs'
                                                             })
@@ -177,7 +178,7 @@ function h(e) {
                                                 ]
                                             });
                                         case 1:
-                                            return (0, n.jsx)(i.Kx8, {
+                                            return (0, l.jsx)(i.Kx8, {
                                                 maxLength: d.GNZ,
                                                 onChange: O,
                                                 value: N,
@@ -185,13 +186,13 @@ function h(e) {
                                                 autoFocus: !0
                                             });
                                     }
-                                })(J)
+                                })(E)
                             })
                         ]
                     }),
-                    (0, n.jsx)(i.xJW, {
+                    (0, l.jsx)(i.xJW, {
                         title: x.intl.string(x.t['8l3W09']),
-                        children: (0, n.jsx)(i.q4e, {
+                        children: (0, l.jsx)(i.q4e, {
                             options: b(),
                             value: S,
                             onChange: Y
@@ -202,17 +203,17 @@ function h(e) {
             (() => {
                 switch (R) {
                     case 0:
-                        return (0, n.jsxs)(i.mzw, {
+                        return (0, l.jsxs)(i.mzw, {
                             className: m.footer,
                             children: [
-                                (0, n.jsx)(i.zxk, {
+                                (0, l.jsx)(i.zxk, {
                                     type: 'button',
                                     look: i.zxk.Looks.LINK,
                                     color: i.zxk.Colors.PRIMARY,
                                     onClick: f,
                                     children: x.intl.string(x.t['ETE/oK'])
                                 }),
-                                (0, n.jsx)(i.zxk, {
+                                (0, l.jsx)(i.zxk, {
                                     type: 'submit',
                                     color: i.zxk.Colors.RED,
                                     size: i.zxk.Sizes.SMALL,
@@ -222,20 +223,20 @@ function h(e) {
                             ]
                         });
                     case 1:
-                        return (0, n.jsxs)(i.mzw, {
+                        return (0, l.jsxs)(i.mzw, {
                             className: m.footerStepped,
                             children: [
-                                (0, n.jsx)(i.zxk, {
+                                (0, l.jsx)(i.zxk, {
                                     className: m.cancel,
                                     innerClassName: m.cancel,
                                     type: 'button',
                                     look: i.zxk.Looks.LINK,
                                     color: i.zxk.Colors.PRIMARY,
                                     size: i.zxk.Sizes.SMALL,
-                                    onClick: E,
+                                    onClick: B,
                                     children: x.intl.string(x.t['13/7kZ'])
                                 }),
-                                (0, n.jsx)(i.zxk, {
+                                (0, l.jsx)(i.zxk, {
                                     type: 'submit',
                                     color: i.zxk.Colors.RED,
                                     size: i.zxk.Sizes.SMALL,

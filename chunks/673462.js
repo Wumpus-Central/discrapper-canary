@@ -1,19 +1,19 @@
 n.d(t, { Z: () => c }), n(388685), n(539854);
-var r = n(255367),
-    a = n(73800),
+var a = n(255367),
+    r = n(73800),
     l = n(392711),
     i = n(98650),
     o = n(70097),
     s = n(138339);
 function u(e) {
     let { setRef: t, audioTrackLabel: n, src: l, muted: i } = e,
-        o = a.useCallback(
+        o = r.useCallback(
             (e) => {
                 t(e, n);
             },
             [t, n]
         ),
-        u = a.useCallback(
+        u = r.useCallback(
             (e) => {
                 Object.values(e.currentTarget.audioTracks).forEach((e) => {
                     e.enabled = n === e.label;
@@ -21,7 +21,7 @@ function u(e) {
             },
             [n]
         );
-    return (0, r.jsx)('audio', {
+    return (0, a.jsx)('audio', {
         id: 'ClipsPlayerAudioTrack:'.concat(n),
         className: s.hidden,
         ref: o,
@@ -31,12 +31,12 @@ function u(e) {
         onLoadedMetadata: u
     });
 }
-let c = a.forwardRef(function (e, t) {
+let c = r.forwardRef(function (e, t) {
     let { src: n, audioSrc: c, applicationAudioEnabled: d, voiceAudioEnabled: m, isLoading: p, onDoneLoading: f, startTime: v = 0, endTime: h } = e,
-        g = a.useRef({}),
-        [x, b] = a.useState([]),
-        j = a.useRef(!1),
-        y = a.useCallback(() => {
+        g = r.useRef({}),
+        [x, b] = r.useState([]),
+        j = r.useRef(!1),
+        y = r.useCallback(() => {
             let e = g.current.main;
             if (null == e) return;
             let t = (0, l.round)(e.currentTime, 3),
@@ -49,32 +49,32 @@ let c = a.forwardRef(function (e, t) {
     (0, i.Z)(() => {
         j.current && y() && _();
     });
-    let _ = a.useCallback(() => {
+    let _ = r.useCallback(() => {
             for (let e of ((j.current = !0), y(), Object.values(g.current))) null != e && e.play();
         }, [y]),
-        w = a.useCallback(() => {
+        w = r.useCallback(() => {
             for (let e of Object.values(g.current)) null != e && e.pause();
         }, []),
-        C = a.useCallback((e) => {
+        C = r.useCallback((e) => {
             var t;
             for (let n of ((null == (t = g.current.main) ? void 0 : t.paused) && (j.current = !1), Object.values(g.current))) null != n && (n.currentTime = e);
         }, []),
-        k = a.useCallback(() => {
+        k = r.useCallback(() => {
             var e;
             (null == (e = g.current.main) ? void 0 : e.paused) ? _() : w();
         }, [_, w]),
-        P = a.useCallback((e) => {
+        P = r.useCallback((e) => {
             g.current.main = e;
         }, []),
-        O = a.useCallback((e) => {
+        O = r.useCallback((e) => {
             let t = [];
             for (let n of Object.values(e.currentTarget.audioTracks)) n.label.includes(':application') ? (n.enabled = !0) : n.label.includes(':voice') ? ((n.enabled = !1), t.includes(n.label) || t.push(n.label)) : (n.enabled = !1);
             b(t);
         }, []),
-        S = a.useCallback((e, t) => {
+        S = r.useCallback((e, t) => {
             g.current[t] = e;
         }, []);
-    return (a.useImperativeHandle(t, () => ({
+    return (r.useImperativeHandle(t, () => ({
         play: _,
         seek: C,
         pause: w,
@@ -82,9 +82,9 @@ let c = a.forwardRef(function (e, t) {
     })),
     null == n)
         ? null
-        : (0, r.jsxs)(r.Fragment, {
+        : (0, a.jsxs)(a.Fragment, {
               children: [
-                  (0, r.jsx)(o.Z, {
+                  (0, a.jsx)(o.Z, {
                       onClick: k,
                       className: p ? s.hidden : s.displayVideo,
                       ref: P,
@@ -93,7 +93,7 @@ let c = a.forwardRef(function (e, t) {
                       onLoadedData: f,
                       preload: 'auto'
                   }),
-                  (0, r.jsx)('audio', {
+                  (0, a.jsx)('audio', {
                       id: 'ClipsPlayerAudioTrack:application',
                       src: c,
                       muted: !d,
@@ -103,7 +103,7 @@ let c = a.forwardRef(function (e, t) {
                       onLoadedMetadata: O
                   }),
                   x.map((e) =>
-                      (0, r.jsx)(
+                      (0, a.jsx)(
                           u,
                           {
                               audioTrackLabel: e,

@@ -52,6 +52,7 @@ function b(e) {
     return (0, i.jsxs)(l.Y0X, {
         'aria-labelledby': T,
         transitionState: n,
+        parentComponent: 'TestModeModal',
         children: [
             (0, i.jsxs)(l.xBx, {
                 justify: d.Z.Justify.BETWEEN,

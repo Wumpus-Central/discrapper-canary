@@ -1,4 +1,4 @@
-e.d(t, { default: () => I });
+e.d(t, { default: () => A });
 var r = e(255367),
     n = e(73800),
     s = e(990547),
@@ -13,12 +13,12 @@ var r = e(255367),
     x = e(300284),
     k = e(626135),
     f = e(768581),
-    v = e(335131),
-    L = e(981631),
-    h = e(388032),
-    m = e(777134),
-    p = e(749423);
-function A() {
+    m = e(335131),
+    p = e(981631),
+    v = e(388032),
+    L = e(777134),
+    h = e(749423);
+function b() {
     let a = (0, f.NZ)({
             avatarDecoration: { asset: 'a_49c479e15533fb4c02eb320c9c137433' },
             canAnimate: !1,
@@ -35,45 +35,45 @@ function A() {
             size: (0, u.y9)(c.EFr.SIZE_120)
         });
     return (0, r.jsxs)('div', {
-        className: m.avatarBackground,
+        className: L.avatarBackground,
         children: [
             (0, r.jsx)(c.qEK, {
                 size: c.EFr.SIZE_120,
-                src: p,
+                src: h,
                 avatarDecoration: a,
-                className: m.leftAvatar,
+                className: L.leftAvatar,
                 'aria-hidden': !0
             }),
             (0, r.jsx)(c.qEK, {
                 size: c.EFr.SIZE_120,
-                src: p,
+                src: h,
                 avatarDecoration: t,
-                className: m.centerAvatar,
+                className: L.centerAvatar,
                 'aria-hidden': !0
             }),
             (0, r.jsx)(c.qEK, {
                 size: c.EFr.SIZE_120,
-                src: p,
+                src: h,
                 avatarDecoration: e,
-                className: m.rightAvatar,
+                className: L.rightAvatar,
                 'aria-hidden': !0
             })
         ]
     });
 }
-function I(a) {
+function A(a) {
     let { transitionState: t, onClose: e, skuId: f } = a,
-        p = (0, E.Dt)(),
-        { analyticsLocations: I } = (0, _.ZP)(l.Z.COLLECTIBLES_EXPIRY_MODAL),
-        b = (0, x.Z)({ analyticsLocations: I }),
-        D = n.useRef(null);
+        h = (0, E.Dt)(),
+        { analyticsLocations: A } = (0, _.ZP)(l.Z.COLLECTIBLES_EXPIRY_MODAL),
+        I = (0, x.Z)({ analyticsLocations: A }),
+        C = n.useRef(null);
     return (
         n.useEffect(
             () => (
                 (0, i.Mn)({ avatarDecoration: null }),
                 () => {
-                    k.default.track(L.rMx.COLLECTIBLES_EXPIRY_MODAL_CLOSED, {
-                        reason: D.current,
+                    k.default.track(p.rMx.COLLECTIBLES_EXPIRY_MODAL_CLOSED, {
+                        reason: C.current,
                         sku_id: f
                     });
                 }
@@ -84,61 +84,62 @@ function I(a) {
             type: s.ImpressionTypes.MODAL,
             name: s.ImpressionNames.COLLECTIBLES_EXPIRY_MODAL,
             properties: {
-                location_stack: I,
+                location_stack: A,
                 sku_id: f
             }
         }),
         (0, r.jsxs)(c.Y0X, {
             transitionState: t,
-            'aria-labelledby': p,
-            className: m.container,
+            'aria-labelledby': h,
+            className: L.container,
+            parentComponent: 'CollectiblesExpiryModal',
             children: [
-                (0, r.jsx)(A, {}),
+                (0, r.jsx)(b, {}),
                 (0, r.jsx)(c.olH, {
                     onClick: () => {
-                        (D.current = 'tap_close_button'), e();
+                        (C.current = 'tap_close_button'), e();
                     },
-                    className: m.closeButton
+                    className: L.closeButton
                 }),
                 (0, r.jsxs)(c.hzk, {
-                    className: m.content,
+                    className: L.content,
                     children: [
                         (0, r.jsx)(c.X6q, {
                             variant: 'heading-xl/bold',
-                            className: m.title,
-                            children: h.intl.string(h.t.xz81o6)
+                            className: L.title,
+                            children: v.intl.string(v.t.xz81o6)
                         }),
                         (0, r.jsx)(c.Text, {
                             variant: 'text-sm/medium',
-                            className: m.body,
-                            children: h.intl.string(h.t.Vrbnnp)
+                            className: L.body,
+                            children: v.intl.string(v.t.Vrbnnp)
                         })
                     ]
                 }),
                 (0, r.jsxs)(c.mzw, {
-                    className: m.footer,
+                    className: L.footer,
                     children: [
                         (0, r.jsx)(c.zxk, {
                             look: c.zxk.Looks.LINK,
                             color: c.zxk.Colors.BRAND,
                             onClick: () => {
-                                (D.current = 'change_avatar_decoration'), e(), (0, o.xf)(), b(), (0, u.ps)({ analyticsLocations: I });
+                                (C.current = 'change_avatar_decoration'), e(), (0, o.xf)(), I(), (0, u.ps)({ analyticsLocations: A });
                             },
-                            children: h.intl.string(h.t['x8T+k5'])
+                            children: v.intl.string(v.t['x8T+k5'])
                         }),
                         (0, r.jsx)(c.zxk, {
                             look: c.zxk.Looks.FILLED,
                             color: c.zxk.Colors.BRAND,
                             onClick: () => {
-                                (D.current = 'go_to_shop'),
+                                (C.current = 'go_to_shop'),
                                     e(),
-                                    (0, v.mK)({
-                                        analyticsLocations: I,
+                                    (0, m.mK)({
+                                        analyticsLocations: A,
                                         analyticsSource: l.Z.COLLECTIBLES_EXPIRY_MODAL,
                                         openInLayer: !1
                                     });
                             },
-                            children: h.intl.string(h.t.fmqMER)
+                            children: v.intl.string(v.t.fmqMER)
                         })
                     ]
                 })

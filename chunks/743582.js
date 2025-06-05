@@ -1,56 +1,59 @@
-i.d(t, { default: () => h }), i(388685);
+i.d(t, { default: () => p }), i(388685);
 var l = i(255367),
     e = i(73800),
     s = i(512722),
     a = i.n(s),
     r = i(481060),
-    c = i(935369),
-    o = i(728345),
+    o = i(935369),
+    c = i(728345),
     d = i(313201),
     u = i(577275),
     x = i(829857),
     g = i(388032),
     m = i(103858);
-function h(n) {
+function p(n) {
     var t, i;
-    let { transitionState: s, application: h, onClose: _ } = n,
-        p = (0, d.Dt)(),
-        [j, v] = e.useState(null == h || null == (t = h.team) ? void 0 : t.id),
-        { teams: C } = (0, u.Z)(),
+    let { transitionState: s, application: p, onClose: h } = n,
+        _ = (0, d.Dt)(),
+        [j, C] = e.useState(null == p || null == (t = p.team) ? void 0 : t.id),
+        { teams: v } = (0, u.Z)(),
         b = e.useMemo(
             () =>
-                C.filter((n) => n.payout_account_status === x.C.ACTIVE).map((n) => ({
-                    label: n.name,
-                    value: n.id
-                })),
-            [C]
+                v
+                    .filter((n) => n.payout_account_status === x.C.ACTIVE)
+                    .map((n) => ({
+                        label: n.name,
+                        value: n.id
+                    })),
+            [v]
         ),
-        f = (null == h || null == (i = h.team) ? void 0 : i.id) !== j,
-        [k, { loading: N, error: w }] = (0, c.Z)(o.ZP.transferApplication),
+        f = (null == p || null == (i = p.team) ? void 0 : i.id) !== j,
+        [k, { loading: N, error: w }] = (0, o.Z)(c.ZP.transferApplication),
         z = async () => {
-            a()(null != h, 'no application'),
+            a()(null != p, 'no application'),
                 a()(null != j, 'no team selected'),
                 null !=
                     (await k({
-                        applicationId: h.id,
+                        applicationId: p.id,
                         teamId: j
-                    })) && _();
+                    })) && h();
         },
-        R = (null == h ? void 0 : h.team) != null;
+        R = (null == p ? void 0 : p.team) != null;
     return (0, l.jsxs)(r.Y0X, {
         transitionState: s,
-        'aria-labelledby': p,
+        'aria-labelledby': _,
+        parentComponent: 'TransferApplicationModal',
         children: [
             (0, l.jsxs)(r.xBx, {
                 children: [
                     (0, l.jsx)(r.X6q, {
-                        id: p,
+                        id: _,
                         variant: 'heading-md/semibold',
                         children: R ? g.intl.string(g.t['4TveVl']) : g.intl.string(g.t.feBUAQ)
                     }),
                     (0, l.jsx)(r.olH, {
                         className: m.closeButton,
-                        onClick: _
+                        onClick: h
                     })
                 ]
             }),
@@ -94,7 +97,7 @@ function h(n) {
                             placeholder: g.intl.string(g.t.QXf93N),
                             value: j,
                             isDisabled: 0 === b.length,
-                            onChange: (n) => v(n),
+                            onChange: (n) => C(n),
                             'aria-label': g.intl.string(g.t.QXf93N)
                         })
                     })

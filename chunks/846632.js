@@ -5,14 +5,14 @@ var a = n(120356),
     i = n.n(a),
     o = n(442837),
     l = n(481060),
-    s = n(840720),
-    d = n(742409),
+    d = n(840720),
+    s = n(742409),
     c = n(430824),
     u = n(594174),
     g = n(731722),
     f = n(446094),
-    b = n(388032),
-    p = n(912518),
+    p = n(388032),
+    b = n(912518),
     _ = n(288013);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -103,6 +103,7 @@ function h(e) {
                     h
                 ),
                 {
+                    parentComponent: 'GuildTagAdoptModal',
                     children: [
                         (0, r.jsxs)(l.hzk, {
                             className: _.modalContent,
@@ -118,15 +119,15 @@ function h(e) {
                                                 children: [
                                                     (0, r.jsx)(l.X6q, {
                                                         variant: 'heading-lg/bold',
-                                                        children: b.intl.string(p.default.OvKPi4)
+                                                        children: p.intl.string(b.default.OvKPi4)
                                                     }),
                                                     (0, r.jsx)(l.Text, {
                                                         variant: 'text-md/normal',
-                                                        children: b.intl.string(p.default.kHxfDw)
+                                                        children: p.intl.string(b.default.kHxfDw)
                                                     })
                                                 ]
                                             }),
-                                            (0, r.jsx)(s.Z, {
+                                            (0, r.jsx)(d.Z, {
                                                 className: _.guildRow,
                                                 guildId: j.id,
                                                 guildName: j.name,
@@ -139,7 +140,7 @@ function h(e) {
                                                 className: _.buttonContainer,
                                                 children: [
                                                     (0, r.jsx)(l.ua7, {
-                                                        text: b.intl.string(p.default.WlENZm),
+                                                        text: p.intl.string(b.default.WlENZm),
                                                         tooltipContentClassName: _.tooltip,
                                                         shouldShow: v,
                                                         children: (e) =>
@@ -150,7 +151,7 @@ function h(e) {
                                                                     onClick: y,
                                                                     submitting: O,
                                                                     disabled: v,
-                                                                    children: b.intl.string(b.t.jwEaiY)
+                                                                    children: p.intl.string(p.t.jwEaiY)
                                                                 })
                                                             )
                                                     }),
@@ -158,7 +159,7 @@ function h(e) {
                                                         color: l.Ttl.PRIMARY,
                                                         fullWidth: !0,
                                                         onClick: x,
-                                                        children: b.intl.string(b.t.s5vZlZ)
+                                                        children: p.intl.string(p.t.s5vZlZ)
                                                     })
                                                 ]
                                             })
@@ -167,7 +168,7 @@ function h(e) {
                                 }),
                                 (0, r.jsx)('div', {
                                     className: i()(_.modalContentChild, _.right),
-                                    children: (0, r.jsx)(d.Z, {
+                                    children: (0, r.jsx)(s.Z, {
                                         guildId: j.id,
                                         tag: j.profile.tag,
                                         badge: null != (n = j.profile.badge) ? n : ''

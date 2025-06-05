@@ -2,9 +2,9 @@ n.d(a, { default: () => d });
 var s = n(255367);
 n(73800);
 var r = n(481060),
-    c = n(918125),
-    o = n(488131),
-    t = n(124368),
+    o = n(918125),
+    t = n(488131),
+    c = n(124368),
     i = n(388032),
     l = n(576359);
 function d(e) {
@@ -14,6 +14,7 @@ function d(e) {
         transitionState: d,
         'aria-label': i.intl.string(i.t.B2panJ),
         size: r.CgR.DYNAMIC,
+        parentComponent: 'GuildActiveThreadsModal',
         children: (0, s.jsxs)('div', {
             className: l.container,
             children: [
@@ -42,10 +43,10 @@ function d(e) {
                         })
                     ]
                 }),
-                (0, s.jsx)(c.Z, {
+                (0, s.jsx)(o.Z, {
                     guildId: a,
                     goToThread: (e, a) => {
-                        n(), (0, o.ok)(e, !a, t.on.GUILD_ACTIVE_THREADS_MODAL);
+                        n(), (0, t.ok)(e, !a, c.on.GUILD_ACTIVE_THREADS_MODAL);
                     }
                 })
             ]

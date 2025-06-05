@@ -4,8 +4,8 @@ e(73800);
 var i = e(481060),
     r = e(864762),
     s = e(428681),
-    c = e(42338),
-    a = e(569932),
+    a = e(42338),
+    c = e(569932),
     l = e(555638),
     d = e(42011),
     u = e(798930),
@@ -17,13 +17,14 @@ function _(t) {
         className: p.modal,
         transitionState: n,
         disableTrack: !0,
+        parentComponent: 'PlayStationLinkModal',
         children: (0, o.jsxs)(i.MyZ, {
             activeSlide: C,
             width: 408,
             children: [
                 (0, o.jsx)(i.Mi4, {
                     id: u.O.LANDING,
-                    children: (0, o.jsx)(a.A, {
+                    children: (0, o.jsx)(c.A, {
                         platformType: b,
                         onContinue: T,
                         onClose: e
@@ -63,7 +64,7 @@ function _(t) {
                 }),
                 (0, o.jsx)(i.Mi4, {
                     id: u.O.ERROR,
-                    children: (0, o.jsx)(c.X, {
+                    children: (0, o.jsx)(a.X, {
                         onContinue: T,
                         onClose: e,
                         errorCode: N

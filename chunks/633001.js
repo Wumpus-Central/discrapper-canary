@@ -27,7 +27,7 @@ var a = n(255367),
     S = n(388032),
     P = n(931207),
     I = n(616257);
-function k(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -52,7 +52,7 @@ function k(e) {
     }
     return e;
 }
-function w(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,8 +72,8 @@ function w(e, t) {
 }
 let R = {
         [E.Odu.CLICK_ZONE_DEBUG]: (e) =>
-            w(
-                k(
+            k(
+                w(
                     {
                         type: E.Odu.CLICK_ZONE_DEBUG,
                         id: (0, s.Z)(),
@@ -92,8 +92,8 @@ let R = {
                 { pinned: !0 }
             ),
         [E.Odu.PERFORMANCE_DEBUG]: (e) =>
-            w(
-                k(
+            k(
+                w(
                     {
                         type: E.Odu.PERFORMANCE_DEBUG,
                         id: (0, s.Z)(),
@@ -361,7 +361,7 @@ function z() {
                 label: m.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
                 value: m.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION
             }
-        ].map((e) => w(k({}, e), { label: ''.concat(e.label, ' ').concat(S === e.value ? '(current)' : '') })),
+        ].map((e) => k(w({}, e), { label: ''.concat(e.label, ' ').concat(S === e.value ? '(current)' : '') })),
         F = (0, o.cj)([p.default], () => p.default.getTrackedGames()),
         G = (0, o.e7)([_.default], () => _.default.getFocusedPID()),
         V = (0, o.e7)([_.default], () => _.default.isFocusedPidOutOfProcess()),
@@ -405,7 +405,7 @@ function z() {
                                 e
                             );
                         },
-                        k({}, e)
+                        w({}, e)
                     )
                 );
             }, 10 * C.Z.Millis.SECOND)),
@@ -450,7 +450,7 @@ function z() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     'div',
-                                    w(k({}, e), {
+                                    k(w({}, e), {
                                         children: (0, a.jsx)(c.XZJ, {
                                             value: g,
                                             onChange: () => ee(),
@@ -473,7 +473,7 @@ function z() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     'div',
-                                    w(k({}, e), {
+                                    k(w({}, e), {
                                         children: (0, a.jsx)(c.XZJ, {
                                             value: j,
                                             onChange: () => et(),
@@ -496,7 +496,7 @@ function z() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     'div',
-                                    w(k({}, e), {
+                                    k(w({}, e), {
                                         children: (0, a.jsx)(c.XZJ, {
                                             value: y,
                                             onChange: () => en(),
@@ -519,7 +519,7 @@ function z() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     'div',
-                                    w(k({}, e), {
+                                    k(w({}, e), {
                                         children: (0, a.jsx)(c.XZJ, {
                                             value: T,
                                             onChange: () => ea(),
@@ -543,7 +543,7 @@ function z() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     'div',
-                                    w(k({}, e), {
+                                    k(w({}, e), {
                                         children: (0, a.jsx)(c.XZJ, {
                                             value: null != n,
                                             onChange: () => l(),
@@ -566,7 +566,7 @@ function z() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     'div',
-                                    w(k({}, e), {
+                                    k(w({}, e), {
                                         children: (0, a.jsx)(c.XZJ, {
                                             value: null != s,
                                             onChange: () => d(),
@@ -591,7 +591,7 @@ function z() {
                     children: (e) =>
                         (0, a.jsx)(
                             'div',
-                            w(k({}, e), {
+                            k(w({}, e), {
                                 className: P.panelGroup,
                                 children: (0, a.jsx)(c.PhF, {
                                     serialize: (e) => e,
@@ -610,7 +610,7 @@ function z() {
                         children: (e) =>
                             (0, a.jsx)(
                                 'div',
-                                w(k({}, e), {
+                                k(w({}, e), {
                                     children: (0, a.jsxs)('div', {
                                         className: P.panelGroup,
                                         children: [
@@ -641,7 +641,7 @@ function z() {
                     children: (e) =>
                         (0, a.jsx)(
                             'div',
-                            w(k({}, e), {
+                            k(w({}, e), {
                                 children: (0, a.jsxs)('div', {
                                     className: P.panelGroup,
                                     children: [
@@ -709,7 +709,7 @@ function z() {
                     children: (e) =>
                         (0, a.jsx)(
                             'div',
-                            w(k({}, e), {
+                            k(w({}, e), {
                                 children: (0, a.jsxs)('div', {
                                     className: P.panelGroup,
                                     children: [

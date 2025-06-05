@@ -14,8 +14,8 @@ var i = n(255367),
     g = n(131704),
     m = n(523746),
     y = n(592125),
-    _ = n(430824),
-    v = n(699516),
+    v = n(430824),
+    _ = n(699516),
     O = n(944486),
     b = n(707878),
     E = n(518084),
@@ -176,10 +176,10 @@ function Z(e) {
             let e = O.Z.getVoiceChannelId();
             return y.Z.getChannel(e);
         }),
-        o = (0, l.e7)([_.Z], () => _.Z.getGuild(t.guild_id)),
+        o = (0, l.e7)([v.Z], () => v.Z.getGuild(t.guild_id)),
         s = (0, l.e7)([m.Z], () => m.Z.isCallActive(t.id)),
         a = (0, u.ZP)(t),
-        c = (0, l.e7)([v.Z], () => !!t.isDM() && null != t.getRecipientId() && v.Z.isBlocked(t.getRecipientId())),
+        c = (0, l.e7)([_.Z], () => !!t.isDM() && null != t.getRecipientId() && _.Z.isBlocked(t.getRecipientId())),
         { changeLeaveCallAndActivityIcons: d } = (0, f.A)({ location: 'TextWidgetHeader' });
     return (0, i.jsx)(
         j,

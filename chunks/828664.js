@@ -1,129 +1,130 @@
-r.d(e, { default: () => b });
-var n = r(255367);
-r(73800);
-var c = r(442837),
-    l = r(481060),
-    o = r(774078),
-    i = r(569984),
-    a = r(497505),
-    s = r(602667),
-    u = r(388032),
-    f = r(842054);
-function p(t) {
-    let { transitionState: e, onClose: r, questEnrollmentBlockedUntil: c } = t,
+n.d(e, { default: () => f });
+var r = n(255367);
+n(73800);
+var c = n(442837),
+    l = n(481060),
+    o = n(774078),
+    i = n(569984),
+    a = n(497505),
+    s = n(602667),
+    u = n(388032),
+    p = n(842054);
+function d(t) {
+    let { transitionState: e, onClose: n, questEnrollmentBlockedUntil: c } = t,
         { hours: i, minutes: a, seconds: s } = (0, o.Z)(c),
-        p = String(i).padStart(2, '0'),
-        b = String(a).padStart(2, '0'),
-        d = String(s).padStart(2, '0'),
-        O = ''.concat(p, ':').concat(b, ':').concat(d);
-    return (0, n.jsxs)(l.Y0X, {
+        d = String(i).padStart(2, '0'),
+        f = String(a).padStart(2, '0'),
+        b = String(s).padStart(2, '0'),
+        O = ''.concat(d, ':').concat(f, ':').concat(b);
+    return (0, r.jsxs)(l.Y0X, {
         transitionState: e,
         size: l.CgR.DYNAMIC,
-        className: f.modal,
+        className: p.modal,
+        parentComponent: 'QuestsMinorEnrollmentBlockModal',
         children: [
-            (0, n.jsx)('div', {
-                className: f.header,
-                children: (0, n.jsx)(l.olH, {
-                    className: f.closeBtn,
-                    onClick: r
+            (0, r.jsx)('div', {
+                className: p.header,
+                children: (0, r.jsx)(l.olH, {
+                    className: p.closeBtn,
+                    onClick: n
                 })
             }),
-            (0, n.jsx)(l.X6q, {
+            (0, r.jsx)(l.X6q, {
                 variant: 'heading-lg/medium',
-                className: f.title,
+                className: p.title,
                 children: u.intl.string(u.t['g+02d3'])
             }),
-            (0, n.jsx)(l.Text, {
+            (0, r.jsx)(l.Text, {
                 variant: 'text-md/normal',
-                className: f.subtext,
+                className: p.subtext,
                 children: u.intl.string(u.t.XEHDT0)
             }),
-            (0, n.jsx)(l.Text, {
+            (0, r.jsx)(l.Text, {
                 variant: 'text-md/normal',
-                className: f.subtext,
+                className: p.subtext,
                 children: u.intl.formatToPlainString(u.t['+5XVHx'], { countdownString: O })
             }),
-            (0, n.jsx)(l.zxk, {
-                className: f.ctaBtn,
-                onClick: r,
+            (0, r.jsx)(l.zxk, {
+                className: p.ctaBtn,
+                onClick: n,
                 children: u.intl.string(u.t.cpT0Cg)
             })
         ]
     });
 }
-function b(t) {
-    var { onClose: e, quest: r } = t,
+function f(t) {
+    var { onClose: e, quest: n } = t,
         l = (function (t, e) {
             if (null == t) return {};
-            var r,
-                n,
+            var n,
+                r,
                 c = (function (t, e) {
                     if (null == t) return {};
-                    var r,
-                        n,
+                    var n,
+                        r,
                         c = {},
                         l = Object.keys(t);
-                    for (n = 0; n < l.length; n++) (r = l[n]), e.indexOf(r) >= 0 || (c[r] = t[r]);
+                    for (r = 0; r < l.length; r++) (n = l[r]), e.indexOf(n) >= 0 || (c[n] = t[n]);
                     return c;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(t);
-                for (n = 0; n < l.length; n++) (r = l[n]), !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (c[r] = t[r]);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (c[n] = t[n]);
             }
             return c;
         })(t, ['onClose', 'quest']);
     let o = (0, c.e7)([i.Z], () => i.Z.questEnrollmentBlockedUntil);
-    return null == o || null == r
+    return null == o || null == n
         ? null
-        : (0, n.jsx)(s.A, {
+        : (0, r.jsx)(s.A, {
               overrideVisibility: !0,
-              questOrQuests: r,
+              questOrQuests: n,
               questContent: a.jn.QUEST_ENROLLMENT_BLOCKED_MODAL,
               children: () => {
-                  var t, r;
-                  return (0, n.jsx)(
-                      p,
+                  var t, n;
+                  return (0, r.jsx)(
+                      d,
                       ((t = (function (t) {
                           for (var e = 1; e < arguments.length; e++) {
-                              var r = null != arguments[e] ? arguments[e] : {},
-                                  n = Object.keys(r);
+                              var n = null != arguments[e] ? arguments[e] : {},
+                                  r = Object.keys(n);
                               'function' == typeof Object.getOwnPropertySymbols &&
-                                  (n = n.concat(
-                                      Object.getOwnPropertySymbols(r).filter(function (t) {
-                                          return Object.getOwnPropertyDescriptor(r, t).enumerable;
+                                  (r = r.concat(
+                                      Object.getOwnPropertySymbols(n).filter(function (t) {
+                                          return Object.getOwnPropertyDescriptor(n, t).enumerable;
                                       })
                                   )),
-                                  n.forEach(function (e) {
-                                      var n;
-                                      (n = r[e]),
+                                  r.forEach(function (e) {
+                                      var r;
+                                      (r = n[e]),
                                           e in t
                                               ? Object.defineProperty(t, e, {
-                                                    value: n,
+                                                    value: r,
                                                     enumerable: !0,
                                                     configurable: !0,
                                                     writable: !0
                                                 })
-                                              : (t[e] = n);
+                                              : (t[e] = r);
                                   });
                           }
                           return t;
                       })({}, l)),
-                      (r = r =
+                      (n = n =
                           {
                               onClose: e,
                               questEnrollmentBlockedUntil: o
                           }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                          ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                           : (function (t, e) {
-                                var r = Object.keys(t);
+                                var n = Object.keys(t);
                                 if (Object.getOwnPropertySymbols) {
-                                    var n = Object.getOwnPropertySymbols(t);
-                                    r.push.apply(r, n);
+                                    var r = Object.getOwnPropertySymbols(t);
+                                    n.push.apply(n, r);
                                 }
-                                return r;
-                            })(Object(r)).forEach(function (e) {
-                                Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                                return n;
+                            })(Object(n)).forEach(function (e) {
+                                Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                             }),
                       t)
                   );

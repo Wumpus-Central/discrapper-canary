@@ -48,6 +48,7 @@ function b(e) {
         : (0, r.jsxs)(s.Y0X, {
               transitionState: n,
               size: s.CgR.MEDIUM,
+              parentComponent: 'GuildRaidLockdownFeedbackModal',
               children: [
                   (0, r.jsx)(s.xBx, {
                       separator: !0,

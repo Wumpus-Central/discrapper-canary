@@ -1,82 +1,83 @@
-i.d(e, { default: () => u }), i(388685), i(953529);
-var n = i(255367),
-    s = i(73800),
-    l = i(481060),
-    r = i(194359),
-    a = i(313201),
-    o = i(51144),
-    c = i(388032),
-    d = i(992089);
+n.d(e, { default: () => u }), n(388685), n(953529);
+var i = n(255367),
+    s = n(73800),
+    l = n(481060),
+    r = n(194359),
+    a = n(313201),
+    o = n(51144),
+    c = n(388032),
+    d = n(992089);
 function u(t) {
-    let { user: e, nickname: i, transitionState: u, onClose: x } = t,
-        h = (0, a.Dt)(),
-        [p, k] = s.useState(!1),
-        [g, z] = s.useState(i),
-        j = s.useRef(null),
-        m = async (t) => {
+    let { user: e, nickname: n, transitionState: u, onClose: x } = t,
+        p = (0, a.Dt)(),
+        [h, k] = s.useState(!1),
+        [m, g] = s.useState(n),
+        z = s.useRef(null),
+        j = async (t) => {
             t.preventDefault(), k(!0);
             try {
-                await r.Z.updateRelationship(e.id, g), x();
+                await r.Z.updateRelationship(e.id, m), x();
             } catch (t) {
             } finally {
                 k(!1);
             }
         },
-        f = null == i ? c.intl.string(c.t.BGYkaG) : c.intl.string(c.t['8pOYUF']);
-    return (0, n.jsx)(l.Y0X, {
+        N = null == n ? c.intl.string(c.t.BGYkaG) : c.intl.string(c.t['8pOYUF']);
+    return (0, i.jsx)(l.Y0X, {
         transitionState: u,
         size: l.CgR.SMALL,
-        'aria-labelledby': h,
-        children: (0, n.jsxs)('form', {
-            onSubmit: m,
+        'aria-labelledby': p,
+        parentComponent: 'AddFriendNicknameModal',
+        children: (0, i.jsxs)('form', {
+            onSubmit: j,
             children: [
-                (0, n.jsx)(l.xBx, {
+                (0, i.jsx)(l.xBx, {
                     separator: !1,
-                    children: (0, n.jsx)(l.X6q, {
+                    children: (0, i.jsx)(l.X6q, {
                         variant: 'heading-lg/semibold',
-                        children: f
+                        children: N
                     })
                 }),
-                (0, n.jsxs)(l.hzk, {
+                (0, i.jsxs)(l.hzk, {
                     children: [
-                        (0, n.jsx)(l.Text, {
+                        (0, i.jsx)(l.Text, {
                             variant: 'text-md/normal',
                             className: d.description,
                             children: c.intl.string(c.t['NdQ+lJ'])
                         }),
-                        (0, n.jsx)(l.xJW, {
+                        (0, i.jsx)(l.xJW, {
                             title: c.intl.string(c.t.pqG6GR),
-                            children: (0, n.jsx)(l.oil, {
-                                inputRef: j,
-                                value: null != g ? g : '',
+                            children: (0, i.jsx)(l.oil, {
+                                inputRef: z,
+                                value: null != m ? m : '',
                                 placeholder: o.ZP.getName(e),
-                                onChange: z,
+                                onChange: g,
                                 maxLength: 32,
                                 className: d.input,
                                 autoFocus: !0
                             })
                         }),
-                        (0, n.jsx)(l.zxk, {
+                        (0, i.jsx)(l.zxk, {
                             look: l.zxk.Looks.LINK,
                             color: l.zxk.Colors.LINK,
                             size: l.zxk.Sizes.NONE,
                             onClick: () => {
                                 var t;
-                                z(null), null == (t = j.current) || t.focus();
+                                g(null), null == (t = z.current) || t.focus();
                             },
                             className: d.reset,
                             children: c.intl.string(c.t['9qSBvL'])
                         })
                     ]
                 }),
-                (0, n.jsxs)(l.mzw, {
+                (0, i.jsxs)(l.mzw, {
                     children: [
-                        (0, n.jsx)(l.zxk, {
+                        (0, i.jsx)(l.zxk, {
                             type: 'submit',
-                            disabled: p,
+                            disabled: h,
                             children: c.intl.string(c.t.R3BPHx)
                         }),
-                        (0, n.jsx)(l.zxk, {
+                        (0, i.jsx)(l.zxk, {
                             onClick: x,
                             look: l.zxk.Looks.LINK,
                             color: l.zxk.Colors.PRIMARY,

@@ -14,8 +14,8 @@ var i,
     g = n(791288),
     m = n(194295),
     y = n(998033),
-    _ = n(181364),
-    v = n(435064),
+    v = n(181364),
+    _ = n(435064),
     O = n(668761),
     b = n(864060),
     E = n(86071),
@@ -193,7 +193,7 @@ let ec = new ea(a.Z, {
                     return (0, S.Z)(e);
                 case H.nc.NEWS:
                 default:
-                    return (0, _.Z)(e);
+                    return (0, v.Z)(e);
             }
         })(n[0]);
         null != i &&
@@ -292,7 +292,7 @@ let ec = new ea(a.Z, {
         es((0, O.f)(Y.intl.string(Y.t.NBMK9v)));
     },
     CLIPS_SAVE_CLIP: function () {
-        es((0, O.f)(Y.intl.formatToPlainString(Y.t.KLhk6u, { duration: (0, W.A)(v.Z.getSettings().clipsLength / 1000, !0) })));
+        es((0, O.f)(Y.intl.formatToPlainString(Y.t.KLhk6u, { duration: (0, W.A)(_.Z.getSettings().clipsLength / 1000, !0) })));
     },
     CLIPS_SAVE_CLIP_ERROR: function () {
         es((0, O.f)(Y.intl.string(Y.t['1ZbZur'])));

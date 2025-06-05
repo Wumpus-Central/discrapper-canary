@@ -123,6 +123,7 @@ function G(e) {
                 impressionName: a.ImpressionNames.CONFETTI_POTION_MODAL,
                 impressionProperties: { source: d }
             },
+            parentComponent: 'MessageConfettiConsumableModal',
             children: (0, r.jsx)(B, {
                 channel: n,
                 message: o,

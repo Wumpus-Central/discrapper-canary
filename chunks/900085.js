@@ -264,6 +264,7 @@ class q extends l.PureComponent {
             transitionState: this.props.transitionState,
             className: s()(L.container, a.tq && L.mobileContainer),
             fullscreenOnMobile: !1,
+            parentComponent: 'QuickSwitcher',
             children: (0, i.jsxs)('div', {
                 className: s()(L.quickswitcher, a.tq && L.mobileQuickswitcher),
                 onMouseMove: this.handleMouseMove,

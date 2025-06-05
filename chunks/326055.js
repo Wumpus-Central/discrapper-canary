@@ -79,6 +79,7 @@ function p(e) {
             )),
             (r = r =
                 {
+                    parentComponent: 'GuildPowerupPerkModal',
                     children: [
                         (0, n.jsxs)(a.hzk, {
                             className: d.modalContentContainer,

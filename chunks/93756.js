@@ -1,54 +1,55 @@
-t.d(i, { default: () => r });
-var l = t(255367);
-t(73800);
-var s = t(481060),
-    a = t(174767),
-    o = t(388032),
-    e = t(105195);
+e.d(t, { default: () => r });
+var i = e(255367);
+e(73800);
+var a = e(481060),
+    l = e(174767),
+    o = e(388032),
+    s = e(105195);
 function r(n) {
-    let { transitionState: i, onClose: t, onDelete: r } = n;
+    let { transitionState: t, onClose: e, onDelete: r } = n;
     async function d() {
-        await (0, a.TG)(), r();
+        await (0, l.TG)(), r();
     }
-    return (0, l.jsxs)(s.Y0X, {
-        size: s.CgR.SMALL,
-        transitionState: i,
-        className: e.__invalid_modal,
+    return (0, i.jsxs)(a.Y0X, {
+        size: a.CgR.SMALL,
+        transitionState: t,
+        className: s.__invalid_modal,
+        parentComponent: 'GameInvitesDeleteModal',
         children: [
-            (0, l.jsxs)(s.hzk, {
-                className: e.modalContent,
+            (0, i.jsxs)(a.hzk, {
+                className: s.modalContent,
                 children: [
-                    (0, l.jsxs)('div', {
-                        className: e.header,
+                    (0, i.jsxs)('div', {
+                        className: s.header,
                         children: [
-                            (0, l.jsx)(s.X6q, {
-                                className: e.__invalid_title,
+                            (0, i.jsx)(a.X6q, {
+                                className: s.__invalid_title,
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
                                 children: o.intl.string(o.t.P8nDIC)
                             }),
-                            (0, l.jsx)(s.olH, { onClick: t })
+                            (0, i.jsx)(a.olH, { onClick: e })
                         ]
                     }),
-                    (0, l.jsx)(s.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-md/normal',
                         color: 'text-normal',
-                        className: e.__invalid_body,
+                        className: s.__invalid_body,
                         children: o.intl.string(o.t.fwFcj4)
                     })
                 ]
             }),
-            (0, l.jsxs)(s.mzw, {
+            (0, i.jsxs)(a.mzw, {
                 children: [
-                    (0, l.jsx)(s.zxk, {
-                        color: s.zxk.Colors.RED,
+                    (0, i.jsx)(a.zxk, {
+                        color: a.zxk.Colors.RED,
                         onClick: d,
                         children: o.intl.string(o.t['5I4fSk'])
                     }),
-                    (0, l.jsx)(s.zxk, {
-                        look: s.zxk.Looks.LINK,
-                        color: s.zxk.Colors.PRIMARY,
-                        onClick: t,
+                    (0, i.jsx)(a.zxk, {
+                        look: a.zxk.Looks.LINK,
+                        color: a.zxk.Colors.PRIMARY,
+                        onClick: e,
                         children: o.intl.string(o.t['ETE/oK'])
                     })
                 ]

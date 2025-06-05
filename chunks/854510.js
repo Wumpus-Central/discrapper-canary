@@ -77,6 +77,7 @@ function b(e) {
         (r = r =
             {
                 size: o.CgR.SMALL,
+                parentComponent: 'StageChannelBlockedUsersModal',
                 children: [
                     (0, n.jsxs)(o.xBx, {
                         className: a.header,

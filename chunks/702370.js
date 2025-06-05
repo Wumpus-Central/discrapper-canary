@@ -752,6 +752,7 @@ let eT = {
                 returnRef: s,
                 transitionState: t,
                 size: h.CgR.DYNAMIC,
+                parentComponent: 'CollectiblesShopProductDetailsModal',
                 children: (0, r.jsxs)(h.hzk, {
                     className: eE.modalContent,
                     children: [

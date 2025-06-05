@@ -20,10 +20,10 @@ var r = n(255367),
     y = n(694095);
 function v(e) {
     var t, n, l;
-    let { name: v, icon: _, imageSrc: C, iconBackgroundColor: N, iconClassName: I, iconWrapperClassName: S, details: E, integration: P, buttonText: w, buttonDisabled: T, hasNextSection: Z, onButtonClick: k, guildId: A, isScrolling: D, canShowMigrationTooltip: R, trailing: L } = e,
+    let { name: v, icon: _, imageSrc: C, iconBackgroundColor: N, iconClassName: I, iconWrapperClassName: S, details: E, integration: w, buttonText: P, buttonDisabled: T, hasNextSection: Z, onButtonClick: k, guildId: A, isScrolling: R, canShowMigrationTooltip: D, trailing: L } = e,
         [M, B] = i.useState(!1),
         [U, W] = i.useState(!1),
-        z = R && !D && !U && void 0 !== A && null != P,
+        z = D && !R && !U && void 0 !== A && null != w,
         H = i.useRef(null),
         G = i.useRef(null),
         F = i.useCallback(
@@ -60,7 +60,7 @@ function v(e) {
                             children: e
                         }),
             [H, G]
-        )(w, T, Z, k);
+        )(P, T, Z, k);
     i.useEffect(() => {
         var e, t;
         z &&
@@ -93,7 +93,7 @@ function v(e) {
                 })({}, (0, d.hH)(A))),
                 (t = t =
                     {
-                        application_id: null == P ? void 0 : P.application.id,
+                        application_id: null == w ? void 0 : w.application.id,
                         location: 'overview'
                     }),
                 Object.getOwnPropertyDescriptors
@@ -110,14 +110,14 @@ function v(e) {
                       }),
                 e)
             );
-    }, [A, null == P ? void 0 : P.application.id, z]);
+    }, [A, null == w ? void 0 : w.application.id, z]);
     let V = z
             ? (0, r.jsx)(c.yRy, {
                   targetElementRef: Z ? G : H,
                   renderPopout: () =>
                       (0, r.jsx)(c.P3F, {
                           onClick: (e) => {
-                              e.stopPropagation(), W(!0), x.Z.dismissOverviewTooltip(A, P.integration);
+                              e.stopPropagation(), W(!0), x.Z.dismissOverviewTooltip(A, w.integration);
                           },
                           children: (0, r.jsx)(b.ZP, {
                               content: O.intl.string(O.t.TyMJwM),
@@ -133,10 +133,10 @@ function v(e) {
             : F,
         K = (0, s.Wu)([m.Z], () => {
             var e;
-            return null != P && null != A && null != (e = m.Z.getApplicationEntitlementsForGuild(P.application.id, A)) ? e : [];
+            return null != w && null != A && null != (e = m.Z.getApplicationEntitlementsForGuild(w.application.id, A)) ? e : [];
         }),
         q = (0, u.LD)(A, !0),
-        Y = (null == P ? void 0 : P.application) != null && Object.keys(null != (l = null == (n = q.result) || null == (t = n.sections[P.application.id]) ? void 0 : t.commands) ? l : {}).length > 0,
+        Y = (null == w ? void 0 : w.application) != null && Object.keys(null != (l = null == (n = q.result) || null == (t = n.sections[w.application.id]) ? void 0 : t.commands) ? l : {}).length > 0,
         X = (0, r.jsxs)(p.Z, {
             children: [
                 (0, r.jsx)(h.Z, {
@@ -214,7 +214,7 @@ function v(e) {
                                         ),
                                     l
                                 );
-                            })(P, M, Y),
+                            })(w, M, Y),
                             V,
                             L
                         ]
@@ -225,7 +225,7 @@ function v(e) {
     return Z
         ? (0, r.jsx)(c.P3F, {
               onClick: () => {
-                  R && null != A && null != P && x.Z.dismissOverviewTooltip(A, P.integration), null == k || k();
+                  D && null != A && null != w && x.Z.dismissOverviewTooltip(A, w.integration), null == k || k();
               },
               onFocus: () => B(!0),
               onBlur: () => B(!1),

@@ -3,8 +3,8 @@ var r = n(255367),
     a = n(73800),
     o = n(481060),
     i = n(881052),
-    c = n(434404),
-    l = n(78451),
+    l = n(434404),
+    c = n(78451),
     s = n(915509),
     d = n(981631),
     u = n(388032),
@@ -15,11 +15,11 @@ function p(e) {
         [g, y] = a.useState(p.verificationLevel),
         [x, h] = a.useState(null),
         f = p.hasFeature(d.oNc.COMMUNITY),
-        j = (0, l.IF)(f, _).filter((e) => !e.disabled),
+        j = (0, c.IF)(f, _).filter((e) => !e.disabled),
         C = a.useCallback(async () => {
             null != x && h(null);
             try {
-                await c.Z.saveGuild(p.id, { verificationLevel: g }), c.Z.updateGuild({ verificationLevel: g }), m();
+                await l.Z.saveGuild(p.id, { verificationLevel: g }), l.Z.updateGuild({ verificationLevel: g }), m();
             } catch (e) {
                 h(new i.Hx(e).getAnyErrorMessage());
             }

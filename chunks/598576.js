@@ -9,15 +9,16 @@ var r = n(481060),
     c = n(494801),
     d = n(319392),
     u = n(798930),
-    f = n(981631),
-    p = n(475286);
+    p = n(981631),
+    f = n(475286);
 function b(e) {
     let { transitionState: t, onClose: n, analyticsLocation: b } = e,
-        { slide: x, gotoNext: g, gotoError: C, handleWaitingForConnection: h, handleAuthToken: _, expectedCallbackState: m, callbackData: j } = (0, i.k)(b, f.ABu.XBOX);
+        { slide: x, gotoNext: g, gotoError: C, handleWaitingForConnection: h, handleAuthToken: _, expectedCallbackState: m, callbackData: j } = (0, i.k)(b, p.ABu.XBOX);
     return (0, o.jsx)(r.Y0X, {
-        className: p.modal,
+        className: f.modal,
         transitionState: t,
         disableTrack: !0,
+        parentComponent: 'XboxLinkModal',
         children: (0, o.jsxs)(r.MyZ, {
             activeSlide: x,
             width: 408,

@@ -15,6 +15,7 @@ let u = (e) => {
         size: l.CgR.DYNAMIC,
         fullscreenOnMobile: !1,
         className: null == d ? c.modalRootEmpty : c.modalRootEditor,
+        parentComponent: 'Modal',
         children: (0, n.jsxs)(l.hzk, {
             scrollbarType: 'none',
             className: null == d ? '' : c.modalContent,

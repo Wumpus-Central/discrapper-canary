@@ -298,6 +298,7 @@ function _(e) {
         size: u.CgR.DYNAMIC,
         className: B.modalRoot,
         'aria-labelledby': E,
+        parentComponent: 'GuildProductEditModal',
         children: [
             (0, r.jsxs)(u.xBx, {
                 className: B.modalHeader,

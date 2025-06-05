@@ -106,7 +106,7 @@ function C(e) {
 function N(e) {
     var t;
     let { guild: n, applicationIntegration: a, selectableWebhookChannels: c, editedWebhook: N, errors: I, canNavigate: S } = e,
-        { application: E, integration: P, webhooks: w } = a,
+        { application: E, integration: w, webhooks: P } = a,
         [T, Z] = (0, l.Wu)([p.Z], () => [p.Z.can(O.Plq.MANAGE_ROLES, n), null == E.bot || p.Z.canManageUser(O.Plq.MANAGE_GUILD, E.bot.id, n)], [E.bot, n]),
         k = (0, l.e7)([p.Z], () => p.Z.can(O.Plq.MANAGE_WEBHOOKS, n), [n]),
         A = i.useCallback(() => {
@@ -118,30 +118,30 @@ function N(e) {
                             {
                                 guild: n,
                                 application: E,
-                                integration: P
+                                integration: w
                             },
                             e
                         )
                     )
                 );
-        }, [E, S, n, P]),
-        D = i.useMemo(() => {
+        }, [E, S, n, w]),
+        R = i.useMemo(() => {
             let e = [
                 {
                     icon: o.T39,
-                    text: y.intl.formatToPlainString(y.t.gcdJ8P, { timestamp: b.default.extractTimestamp(P.id) })
+                    text: y.intl.formatToPlainString(y.t.gcdJ8P, { timestamp: b.default.extractTimestamp(w.id) })
                 }
             ];
             return (
-                null != P.user &&
+                null != w.user &&
                     e.push({
                         icon: o.tBG,
-                        text: y.intl.formatToPlainString(y.t.qE7oqq, { user: g.ZP.getUserTag(P.user) })
+                        text: y.intl.formatToPlainString(y.t.qE7oqq, { user: g.ZP.getUserTag(w.user) })
                     }),
                 e
             );
-        }, [P.id, P.user]),
-        R = i.useMemo(
+        }, [w.id, w.user]),
+        D = i.useMemo(
             () =>
                 null != E.bot
                     ? (0, r.jsx)(x.Z, {
@@ -164,7 +164,7 @@ function N(e) {
             (0, r.jsx)(f.Z, {
                 name: E.name,
                 imageSrc: null != (t = E.getIconURL(32)) ? t : m.pK['0'],
-                details: D,
+                details: R,
                 isHeader: !0
             }),
             (null == E ? void 0 : E.description) != null
@@ -192,7 +192,7 @@ function N(e) {
                               }),
                               title: y.intl.string(y.t.AOdOYm)
                           }),
-                          R
+                          D
                       ]
                   })
                 : null,
@@ -206,9 +206,9 @@ function N(e) {
                         }),
                         title: y.intl.string(y.t['t9ZX/P'])
                     }),
-                    w.length > 0
+                    P.length > 0
                         ? (0, r.jsx)(j.Z, {
-                              webhooks: w,
+                              webhooks: P,
                               editedWebhook: N,
                               selectableWebhookChannels: c,
                               errors: I,

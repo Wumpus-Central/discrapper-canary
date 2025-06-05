@@ -11,16 +11,17 @@ var d = i(481060),
     I = i(572583);
 function c(t) {
     let { channel: n, transitionState: i, onClose: c } = t,
-        E = (0, a.Dt)(),
-        o = (0, s.qY)(n.id);
-    if (null == o) return null;
+        o = (0, a.Dt)(),
+        E = (0, s.qY)(n.id);
+    if (null == E) return null;
     let T = () => {
         l.default.selectVoiceChannel(null), c();
     };
     return (0, e.jsxs)(d.Y0X, {
         transitionState: i,
-        'aria-labelledby': E,
+        'aria-labelledby': o,
         size: d.CgR.SMALL,
+        parentComponent: 'EndEventModal',
         children: [
             (0, e.jsxs)(d.hzk, {
                 className: I.content,
@@ -38,7 +39,7 @@ function c(t) {
                         })
                     }),
                     (0, e.jsx)(d.X6q, {
-                        id: E,
+                        id: o,
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
                         className: I.title,
@@ -57,7 +58,7 @@ function c(t) {
                     (0, e.jsx)(d.zxk, {
                         color: d.zxk.Colors.RED,
                         onClick: () => {
-                            _.Z.endEvent(o.id, o.guild_id), T();
+                            _.Z.endEvent(E.id, E.guild_id), T();
                         },
                         children: p.intl.string(p.t.mjB9pa)
                     }),

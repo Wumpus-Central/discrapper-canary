@@ -1,6 +1,6 @@
 n.d(t, { Z: () => d });
-var r = n(255367),
-    a = n(73800),
+var a = n(255367),
+    r = n(73800),
     l = n(481060),
     i = n(673462),
     o = n(826078),
@@ -10,41 +10,41 @@ var r = n(255367),
 function d(e) {
     let { isLoading: t, onDoneLoading: n, videoURL: d, audioURL: m, transitionState: p } = e,
         { videoPlayerRef: f, cropData: v, applicationAudioEnabled: h, voiceAudioEnabled: g } = (0, u.S)(),
-        x = a.useCallback(() => {
+        x = r.useCallback(() => {
             var e;
             null == (e = f.current) || e.seek(v.start), n();
         }, [n, v.start, f]);
     return (
-        a.useEffect(() => {
+        r.useEffect(() => {
             function e(e) {
                 var t, n;
                 if ((null == (t = document.activeElement) ? void 0 : t.tagName) === 'INPUT') return;
-                let r = f.current;
-                if (null == r) return;
-                let a = null == (n = f.current) ? void 0 : n.videoElement;
+                let a = f.current;
                 if (null == a) return;
-                let l = (0, s.Z)(a.duration, e.shiftKey),
+                let r = null == (n = f.current) ? void 0 : n.videoElement;
+                if (null == r) return;
+                let l = (0, s.Z)(r.duration, e.shiftKey),
                     i = !1;
                 switch (e.key) {
                     case ' ':
-                        (i = !0), a.paused ? r.play() : r.pause();
+                        (i = !0), r.paused ? a.play() : a.pause();
                         break;
                     case 'ArrowLeft':
-                        (i = !0), r.seek(Math.max(a.currentTime - l, v.start));
+                        (i = !0), a.seek(Math.max(r.currentTime - l, v.start));
                         break;
                     case 'ArrowRight':
-                        (i = !0), r.seek(Math.min(a.currentTime + l, v.end));
+                        (i = !0), a.seek(Math.min(r.currentTime + l, v.end));
                 }
                 i && (e.stopPropagation(), e.preventDefault());
             }
             return document.addEventListener('keydown', e), () => document.removeEventListener('keydown', e);
         }, [v.start, v.end, f]),
-        (0, r.jsxs)('div', {
+        (0, a.jsxs)('div', {
             className: c.editorPane,
             children: [
-                (0, r.jsx)('div', {
+                (0, a.jsx)('div', {
                     className: c.videoSizer,
-                    children: (0, r.jsx)(i.Z, {
+                    children: (0, a.jsx)(i.Z, {
                         applicationAudioEnabled: h,
                         voiceAudioEnabled: g,
                         ref: f,
@@ -56,7 +56,7 @@ function d(e) {
                         endTime: v.end
                     })
                 }),
-                !t && p && [l.Dvm.ENTERED, l.Dvm.HIDDEN].includes(p) ? (0, r.jsx)(o.Z, { sourceURL: d }) : null
+                !t && p && [l.Dvm.ENTERED, l.Dvm.HIDDEN].includes(p) ? (0, a.jsx)(o.Z, { sourceURL: d }) : null
             ]
         })
     );

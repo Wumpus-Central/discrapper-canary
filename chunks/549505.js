@@ -16,6 +16,7 @@ function _(e) {
         transitionState: t,
         size: n.CgR.DYNAMIC,
         className: m.modalRoot,
+        parentComponent: 'MemberListContentLearnMoreModal',
         children: [
             (0, s.jsxs)(n.xBx, {
                 separator: !1,

@@ -14,8 +14,8 @@ var i = n(255367),
     g = n(382790),
     m = n(990673),
     y = n(906037),
-    _ = n(430036),
-    v = n(839434),
+    v = n(430036),
+    _ = n(839434),
     O = n(981631);
 function b(e, t, n) {
     return (
@@ -33,7 +33,7 @@ function b(e, t, n) {
 let E = {
     [O.Odu.TEXT](e) {
         let { dragging: t, locked: n, pinned: r, dragStart: o, className: s } = e;
-        return (0, i.jsx)(_.Z, {
+        return (0, i.jsx)(v.Z, {
             dragStart: o,
             locked: n,
             pinned: r,
@@ -51,7 +51,7 @@ let E = {
     },
     [O.Odu.VOICE](e) {
         let { id: t, anchor: n, isPreviewingInGame: r, locked: o, pinned: s } = e;
-        return (0, i.jsx)(v.Z, {
+        return (0, i.jsx)(_.Z, {
             anchor: n,
             id: t,
             locked: o,
@@ -101,7 +101,7 @@ class x extends r.PureComponent {
         let { id: l, pinned: a, zIndex: d, size: u, anchor: h, minSize: f } = e,
             g = (0, p.w_)(u, n),
             m = (0, p.KR)(h, n),
-            { resizeX: _, resizeY: v, dragAnywhere: O } = t,
+            { resizeX: v, resizeY: _, dragAnywhere: O } = t,
             b = (0, y.eM)({
                 locked: r,
                 isPreviewingInGame: o,
@@ -123,8 +123,8 @@ class x extends r.PureComponent {
                   container: E,
                   minSize: f,
                   hidden: !b,
-                  resizeX: _,
-                  resizeY: v,
+                  resizeX: v,
+                  resizeY: _,
                   style: { zIndex: d },
                   dragAnywhere: O,
                   active: !r || s,

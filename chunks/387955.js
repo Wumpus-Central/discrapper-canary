@@ -9,41 +9,41 @@ var i = r(120356),
     c = r(572264),
     u = r(981631),
     d = r(388032),
-    g = r(927687),
-    m = r(849399);
+    m = r(927687),
+    g = r(849399);
 function f(e) {
     let { user: t } = e;
     return (0, n.jsxs)('div', {
-        className: g.infoContainer,
+        className: m.infoContainer,
         children: [
             (0, n.jsx)('img', {
-                className: g.infoPicture,
+                className: m.infoPicture,
                 alt: '',
-                src: m
+                src: g
             }),
             (0, n.jsx)(s.X6q, {
-                className: g.title,
+                className: m.title,
                 color: 'header-primary',
                 variant: 'heading-xl/bold',
                 children: d.intl.format(d.t['au+lPj'], { n: t.tag })
             }),
             (0, n.jsx)(s.Text, {
-                className: g.subtitleInfo,
+                className: m.subtitleInfo,
                 color: 'header-secondary',
                 variant: 'text-md/medium',
                 children: d.intl.format(d.t['5fwX5+'], {})
             }),
             (0, n.jsx)(s.Text, {
-                className: g.prompt,
+                className: m.prompt,
                 color: 'header-secondary',
                 variant: 'text-sm/medium',
                 children: d.intl.format(d.t['i2vB8/'], { helpdeskArticle: l.Z.getArticleURL(u.BhN.POMELO_FAQ) })
             }),
             (0, n.jsxs)('div', {
-                className: o()([g.infoItem, g.infoItemSpacing]),
+                className: o()([m.infoItem, m.infoItemSpacing]),
                 children: [
                     (0, n.jsx)('div', {
-                        className: g.infoIcon,
+                        className: m.infoIcon,
                         children: (0, n.jsx)(s.iFz, {
                             size: 'custom',
                             color: 'currentColor',
@@ -59,10 +59,10 @@ function f(e) {
                 ]
             }),
             (0, n.jsxs)('div', {
-                className: o()([g.infoItem, g.infoItemSpacing]),
+                className: o()([m.infoItem, m.infoItemSpacing]),
                 children: [
                     (0, n.jsx)('div', {
-                        className: g.infoIcon,
+                        className: m.infoIcon,
                         children: (0, n.jsx)(a.Z, {
                             width: 20,
                             height: 20
@@ -76,10 +76,10 @@ function f(e) {
                 ]
             }),
             (0, n.jsxs)('div', {
-                className: g.infoItem,
+                className: m.infoItem,
                 children: [
                     (0, n.jsx)('div', {
-                        className: g.infoIcon,
+                        className: m.infoIcon,
                         children: (0, n.jsx)(c.Z, {
                             width: 20,
                             height: 20

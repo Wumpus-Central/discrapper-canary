@@ -1,6 +1,6 @@
 n.d(t, {
-    Gl: () => o,
-    Wz: () => l,
+    Gl: () => l,
+    Wz: () => o,
     mo: () => a,
     oI: () => r
 });
@@ -13,13 +13,13 @@ function a(e, t, n) {
         location: n
     });
 }
-function l(e) {
+function o(e) {
     i.Z.dispatch({
         type: 'CONNECTED_DEVICE_DONT_SWITCH',
         displayName: e
     });
 }
-function o(e) {
+function l(e) {
     i.Z.dispatch({
         type: 'CONNECTED_DEVICE_IGNORE',
         displayName: e

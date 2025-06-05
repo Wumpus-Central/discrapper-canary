@@ -214,6 +214,7 @@ function I(e) {
             transitionState: t,
             size: l.CgR.MEDIUM,
             className: b.voiceModalRootContainer,
+            parentComponent: 'SwitchChannelKeybindSettings',
             children: [
                 (0, i.jsx)('div', {
                     className: b.inputWrapper,

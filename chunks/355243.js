@@ -16,8 +16,8 @@ function f(e, t, n) {
     return n.left + (e / t) * n.width;
 }
 function v(e) {
-    let { percent: t, animate: n, interactionEnabled: o, backgroundColor: v, preloadedBuffers: g, duration: b, maxSeekableTime: E, onClick: O, onScrubBack: h, onScrubForward: S } = e,
-        [C, j] = l.useState(null),
+    let { percent: t, animate: n, interactionEnabled: o, backgroundColor: v, preloadedBuffers: g, duration: b, maxSeekableTime: E, onClick: O, onScrubBack: h, onScrubForward: C } = e,
+        [S, j] = l.useState(null),
         [y, _] = l.useState(null),
         [x, D] = l.useState(null),
         [T, P] = l.useState(!1),
@@ -26,8 +26,8 @@ function v(e) {
             (N.current = e), j(e);
         };
     l.useEffect(() => {
-        null != C && (null == E ? D(null) : D(f(E, b, C)));
-    }, [C, E, b]);
+        null != S && (null == E ? D(null) : D(f(E, b, S)));
+    }, [S, E, b]);
     let I = (0, c.Z)((e) => {
             k(e.contentRect);
         }),
@@ -47,15 +47,15 @@ function v(e) {
         L = l.useCallback(
             (e) => {
                 let { key: t } = e;
-                t === d.mR.ArrowLeft && null != h ? (e.preventDefault(), e.stopPropagation(), h()) : t === d.mR.ArrowRight && null != S && (e.preventDefault(), e.stopPropagation(), S());
+                t === d.mR.ArrowLeft && null != h ? (e.preventDefault(), e.stopPropagation(), h()) : t === d.mR.ArrowRight && null != C && (e.preventDefault(), e.stopPropagation(), C());
             },
-            [h, S]
+            [h, C]
         ),
-        R = null != y && null != C ? p(y, C, b) : 0,
+        R = null != y && null != S ? p(y, S, b) : 0,
         M = (0, u.yv)(R),
-        V = null != C ? C.right - f((t / 100) * b, b, C) : null,
-        B = null != y && null != C ? C.right - y : null,
-        F = null != x && null != C ? C.right - x : null;
+        V = null != S ? S.right - f((t / 100) * b, b, S) : null,
+        B = null != y && null != S ? S.right - y : null,
+        F = null != x && null != S ? S.right - x : null;
     return (0, r.jsxs)('div', {
         className: m.cont,
         ref: w,

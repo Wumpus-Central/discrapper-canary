@@ -46,6 +46,7 @@ let u = (e) => {
     return (0, o.jsxs)(l.Y0X, {
         transitionState: x,
         'aria-label': d.intl.string(d.t.XlDE3t),
+        parentComponent: 'ChooseDefaultReactionModal',
         children: [
             (0, o.jsx)(l.xBx, {
                 separator: !1,

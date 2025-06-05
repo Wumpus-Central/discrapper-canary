@@ -17,6 +17,7 @@ let u = 'UPLOAD_ERROR_MODAL_KEY',
         return (0, a.jsx)(i.Y0, {
             size: i.Cg.DYNAMIC,
             transitionState: r,
+            parentComponent: 'ShopAssetsUploadErrorModal',
             children: (0, a.jsx)('div', {
                 className: l()(d.uploadModal, d.errorModal),
                 children: (0, a.jsxs)('div', {

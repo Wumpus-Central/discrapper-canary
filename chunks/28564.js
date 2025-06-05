@@ -1,40 +1,41 @@
-t.d(r, { default: () => o });
-var n = t(255367);
-t(73800);
-var s = t(481060),
-    l = t(388032);
-function o(i) {
-    let { onClose: r, onConfirmDelete: t, transitionState: o } = i;
-    return (0, n.jsxs)(s.Y0X, {
-        transitionState: o,
-        'aria-label': l.intl.string(l.t['u/2TkZ']),
+r.d(n, { default: () => s });
+var t = r(255367);
+r(73800);
+var l = r(481060),
+    o = r(388032);
+function s(i) {
+    let { onClose: n, onConfirmDelete: r, transitionState: s } = i;
+    return (0, t.jsxs)(l.Y0X, {
+        transitionState: s,
+        'aria-label': o.intl.string(o.t['u/2TkZ']),
+        parentComponent: 'EmojiDeleteConfirm',
         children: [
-            (0, n.jsx)(s.xBx, {
+            (0, t.jsx)(l.xBx, {
                 separator: !1,
-                children: (0, n.jsx)(s.X6q, {
+                children: (0, t.jsx)(l.X6q, {
                     variant: 'heading-lg/semibold',
-                    children: l.intl.string(l.t['u/2TkZ'])
+                    children: o.intl.string(o.t['u/2TkZ'])
                 })
             }),
-            (0, n.jsx)(s.hzk, {
-                children: (0, n.jsx)(s.Text, {
+            (0, t.jsx)(l.hzk, {
+                children: (0, t.jsx)(l.Text, {
                     variant: 'text-md/normal',
                     color: 'header-primary',
-                    children: l.intl.string(l.t['9sgGbG'])
+                    children: o.intl.string(o.t['9sgGbG'])
                 })
             }),
-            (0, n.jsxs)(s.mzw, {
+            (0, t.jsxs)(l.mzw, {
                 children: [
-                    (0, n.jsx)(s.zxk, {
-                        onClick: t,
-                        color: s.zxk.Colors.RED,
-                        children: l.intl.string(l.t.dO8DLC)
-                    }),
-                    (0, n.jsx)(s.zxk, {
+                    (0, t.jsx)(l.zxk, {
                         onClick: r,
-                        look: s.zxk.Looks.LINK,
-                        color: s.zxk.Colors.PRIMARY,
-                        children: l.intl.string(l.t['ETE/oK'])
+                        color: l.zxk.Colors.RED,
+                        children: o.intl.string(o.t.dO8DLC)
+                    }),
+                    (0, t.jsx)(l.zxk, {
+                        onClick: n,
+                        look: l.zxk.Looks.LINK,
+                        color: l.zxk.Colors.PRIMARY,
+                        children: o.intl.string(o.t['ETE/oK'])
                     })
                 ]
             })

@@ -10,8 +10,8 @@ var i = n(255367),
     u = n(786761),
     m = n(750030),
     p = n(499376),
-    h = n(3148),
-    f = n(739566),
+    f = n(3148),
+    h = n(739566),
     g = n(492593),
     y = n(219797),
     x = n(524444),
@@ -25,8 +25,8 @@ var i = n(255367),
     w = n(956664),
     P = n(709054),
     T = n(236289),
-    S = n(788080),
-    C = n(800530),
+    C = n(788080),
+    S = n(800530),
     N = n(981631),
     k = n(217702),
     I = n(966378);
@@ -55,7 +55,7 @@ function L(e) {
     }
     return e;
 }
-function U(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -73,26 +73,26 @@ function U(e, t) {
         e
     );
 }
-let D = (e, t, n, i) => {
+let U = (e, t, n, i) => {
         let a = e.attachments.map((e) => {
             var n, i, a, l;
-            let r = U(L({}, e), {
-                filename: (0, S.eS)(e),
+            let r = D(L({}, e), {
+                filename: (0, C.eS)(e),
                 size: 0,
                 proxy_url: e.url
             });
             return (0, c.CO)(e.filename) || (0, c.NU)(e.filename)
-                ? U(L({}, r), {
-                      width: null != (a = null == (n = t[e.id]) ? void 0 : n.width) ? a : C.Sv,
-                      height: null != (l = null == (i = t[e.id]) ? void 0 : i.height) ? l : C.EY
+                ? D(L({}, r), {
+                      width: null != (a = null == (n = t[e.id]) ? void 0 : n.width) ? a : S.Sv,
+                      height: null != (l = null == (i = t[e.id]) ? void 0 : i.height) ? l : S.EY
                   })
                 : r;
         });
         return (0, u.e5)(
-            U(
+            D(
                 L(
                     {},
-                    (0, h.ZP)({
+                    (0, f.ZP)({
                         author:
                             null != n
                                 ? n
@@ -121,16 +121,16 @@ let D = (e, t, n, i) => {
             { attachments: n } = t;
         if (0 === n.length) return null;
         let a = (e, t, n) => {
-                let a = C.Sv,
-                    r = C.EY;
+                let a = S.Sv,
+                    r = S.EY;
                 if (null != t.width && null != t.height) {
                     let e = (0, w.Dc)({
                         width: t.width,
                         height: t.height,
-                        maxWidth: C.Sv,
-                        maxHeight: C.EY
+                        maxWidth: S.Sv,
+                        maxHeight: S.EY
                     });
-                    (a = (0, l.clamp)(Math.round(t.width * e), 0, C.Sv)), (r = (0, l.clamp)(Math.round(t.height * e), 0, C.EY));
+                    (a = (0, l.clamp)(Math.round(t.width * e), 0, S.Sv)), (r = (0, l.clamp)(Math.round(t.height * e), 0, S.EY));
                 }
                 return (0, i.jsx)('div', {
                     style: {
@@ -193,7 +193,7 @@ let D = (e, t, n, i) => {
                         renderImageComponent: (e) =>
                             (0, i.jsx)(
                                 y.dS,
-                                U(L({}, e), {
+                                D(L({}, e), {
                                     hiddenSpoilers: !0,
                                     shouldHideMediaOptions: !0,
                                     shouldLink: !1
@@ -216,10 +216,10 @@ function M(e) {
         l = (0, r.e7)([_.default], () => _.default.getCurrentUser()),
         [s, d] = a.useState({}),
         [u, p] = a.useState(!0),
-        h = (0, r.e7)([T.Z], () => T.Z.getUsername()),
+        f = (0, r.e7)([T.Z], () => T.Z.getUsername()),
         y = n[0],
-        x = D(y, s, l, h),
-        j = (0, f.ZP)(x),
+        x = U(y, s, l, f),
+        j = (0, h.ZP)(x),
         A = (0, m.k)(x),
         w = (0, E.Z)(j),
         P = (0, v.Z)(x, {
@@ -264,7 +264,7 @@ function M(e) {
                                 width: 0,
                                 height: 0
                             });
-                    }).then((t) => d((n) => U(L({}, n), { [e.id]: t })))
+                    }).then((t) => d((n) => D(L({}, n), { [e.id]: t })))
                 )
         ).finally(() => p(!1));
     }, [y.attachments]),
@@ -277,9 +277,9 @@ function M(e) {
                   : (0, i.jsx)(g.Z, {
                         compact: !1,
                         childrenHeader: (0, O.Z)({
-                            author: U(L({}, l), {
+                            author: D(L({}, l), {
                                 colorString: '',
-                                nick: null != (t = null == l ? void 0 : l.username) ? t : h
+                                nick: null != (t = null == l ? void 0 : l.username) ? t : f
                             }),
                             message: x,
                             channel: void 0,

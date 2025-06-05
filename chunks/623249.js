@@ -85,6 +85,7 @@ function w(e) {
         transitionState: w,
         size: c.CgR.DYNAMIC,
         className: _.modalRoot,
+        parentComponent: 'QuestConsoleConnectionErrorsModal',
         children: [
             (0, r.jsxs)(c.xBx, {
                 direction: u.Z.Direction.VERTICAL,

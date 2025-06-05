@@ -69,7 +69,7 @@ function y(e) {
     switch (e.type) {
         case u.nc.GO_LIVE_VOICE: {
             let { game: t, voiceGuild: p } = e,
-                { trackView: y, trackClick: _ } = (0, c.R)(u.n0.GoLiveNudge, { notif_type: u.n0.GoLiveNudge });
+                { trackView: y, trackClick: v } = (0, c.R)(u.n0.GoLiveNudge, { notif_type: u.n0.GoLiveNudge });
             return {
                 icon: n(847881),
                 title: null,
@@ -83,7 +83,7 @@ function y(e) {
                     y();
                 },
                 onNotificationClick: (e, t) => {
-                    _('unlock'), o.Z.updateNotificationStatus(t);
+                    v('unlock'), o.Z.updateNotificationStatus(t);
                     let c = s.default.isOverlayOOPEnabledForPid((0, a.getPID)());
                     if ((c ? o.Z.setInputLocked(!1, (0, a.getPID)()) : o.Z.setInstanceLocked(!1), null == l.default.getCurrentUser())) return;
                     let u = c ? { contextKey: r.u1M } : void 0;
@@ -102,7 +102,7 @@ function y(e) {
                     }, u);
                 },
                 onDismissClick: () => {
-                    _('dismiss');
+                    v('dismiss');
                 }
             };
         }

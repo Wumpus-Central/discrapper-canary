@@ -1,4 +1,4 @@
-n.d(e, { default: () => g });
+n.d(e, { default: () => f });
 var i = n(255367);
 n(73800);
 var l = n(442837),
@@ -6,24 +6,25 @@ var l = n(442837),
     r = n(87051),
     u = n(776568),
     c = n(9156),
-    s = n(621600),
-    o = n(388032),
+    o = n(621600),
+    s = n(388032),
     d = n(908023);
-let g = (t) => {
-    let { onClose: e, channelId: n, applicationId: g, transitionState: f } = t,
-        b = (0, l.e7)([c.ZP], () => c.ZP.getChannelMuteConfig(null, n)),
-        p = (t) => {
-            r.Z.updateAppDMOverrideSettings(null, n, g, (0, u.u9)(t), s.ZB.Muted);
+let f = (t) => {
+    let { onClose: e, channelId: n, applicationId: f, transitionState: g } = t,
+        p = (0, l.e7)([c.ZP], () => c.ZP.getChannelMuteConfig(null, n)),
+        b = (t) => {
+            r.Z.updateAppDMOverrideSettings(null, n, f, (0, u.u9)(t), o.ZB.Muted);
         };
     return (0, i.jsxs)(a.Y0X, {
-        transitionState: f,
+        transitionState: g,
         size: a.CgR.SMALL,
-        'aria-label': o.intl.string(o.t.uAmAiI),
+        'aria-label': s.intl.string(s.t.uAmAiI),
+        parentComponent: 'MuteAppNotificationsModalV2',
         children: [
             (0, i.jsx)(a.hzk, {
                 className: d.content,
                 children: (0, i.jsx)(a.xJW, {
-                    title: o.intl.string(o.t.NkwaBg),
+                    title: s.intl.string(s.t.NkwaBg),
                     tag: 'h1',
                     children: (0, i.jsx)(a.FXm, {
                         options: (0, u.k)().map((t) => {
@@ -33,8 +34,8 @@ let g = (t) => {
                                 value: n
                             };
                         }),
-                        onChange: (t) => p(t.value),
-                        value: null == b ? void 0 : b.selected_time_window
+                        onChange: (t) => b(t.value),
+                        value: null == p ? void 0 : p.selected_time_window
                     })
                 })
             }),
@@ -47,7 +48,7 @@ let g = (t) => {
                     type: 'button',
                     color: a.zxk.Colors.PRIMARY,
                     onClick: e,
-                    children: o.intl.string(o.t.cpT0Cg)
+                    children: s.intl.string(s.t.cpT0Cg)
                 })
             })
         ]

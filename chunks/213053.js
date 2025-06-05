@@ -66,7 +66,8 @@ function b(e) {
                     '--profile-gradient-primary-color': e(i),
                     '--profile-gradient-secondary-color': e(_),
                     '--profile-gradient-overlay-color': O,
-                    '--profile-gradient-button-color': e((0, f.ZB)(i))
+                    '--profile-gradient-button-color': e((0, f.ZB)(i)),
+                    '--profile-gradient-modal-background-color': e((0, f.oU)(i, _, b ? t : void 0))
                 },
                 (0, u.W4)({
                     enabled: !0,
@@ -76,7 +77,7 @@ function b(e) {
                     textMixAmount: 25
                 })
             );
-        }, [i, _, y, O, t, p]),
+        }, [i, _, y, O, b, t, p]),
         profileThemeClassName: a()((0, l.QeD)(t), null != n ? { [m[n]]: !0 } : void 0, {
             [d.e3]: null != i,
             [g]: null != i

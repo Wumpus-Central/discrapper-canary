@@ -13,9 +13,9 @@ var r = t(442837),
     p = t(280885),
     g = t(900927),
     v = t(678738),
-    h = t(179828),
-    j = t(228168),
-    m = t(388032),
+    m = t(179828),
+    h = t(228168),
+    j = t(388032),
     b = t(349966);
 function x(e) {
     let { user: n, currentUser: t, displayProfile: x, guildId: O, subsection: Z, onClose: y } = e,
@@ -46,27 +46,27 @@ function x(e) {
                     onClick: y
                 }),
             null != I &&
-                (0, l.jsx)(h.Z, {
+                (0, l.jsx)(m.Z, {
                     user: n,
                     currentUser: t,
                     guild: I,
-                    scrollIntoView: Z === j.Tb.ROLES
+                    scrollIntoView: Z === h.Tb.ROLES
                 }),
             (0, l.jsx)(v.Z, {
-                heading: m.intl.string(m.t['A//N4u']),
+                heading: j.intl.string(j.t['A//N4u']),
                 children: (0, l.jsx)(g.Z, {
                     userId: n.id,
                     guildId: O,
-                    tooltipDelay: j.vB
+                    tooltipDelay: h.vB
                 })
             }),
             (0, l.jsx)(v.Z, {
-                heading: m.intl.string(m.t['mQKv+v']),
-                scrollIntoView: Z === j.Tb.NOTE,
+                heading: j.intl.string(j.t['mQKv+v']),
+                scrollIntoView: Z === h.Tb.NOTE,
                 children: (0, l.jsx)(o.Z, {
                     userId: n.id,
                     className: b.note,
-                    autoFocus: Z === j.Tb.NOTE,
+                    autoFocus: Z === h.Tb.NOTE,
                     onUpdate: () => P({ action: 'SET_NOTE' })
                 })
             })

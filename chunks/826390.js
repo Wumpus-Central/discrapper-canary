@@ -11,22 +11,23 @@ var e = i(255367),
     h = i(388032),
     k = i(367503);
 let m = function (t) {
-    let { guildId: n, submittedGuildJoinRequestsCount: i, onClose: m, transitionState: z, onConfirm: u } = t,
+    let { guildId: n, submittedGuildJoinRequestsCount: i, onClose: m, transitionState: u, onConfirm: z } = t,
         f = (0, o.Dt)(),
-        b = s.useCallback(
+        C = s.useCallback(
             (t) => {
-                m(), u(t);
+                m(), z(t);
             },
-            [m, u]
+            [m, z]
         ),
-        C = s.useCallback(() => {
+        b = s.useCallback(() => {
             m(), a.Z.close(), (0, l.uL)(x.Z5c.CHANNEL(n, d.oC.MEMBER_SAFETY));
         }, [n, m]),
         T = i > 200;
     return (0, e.jsxs)(c.Y0X, {
         className: k.container,
-        transitionState: z,
+        transitionState: u,
         'aria-labelledby': f,
+        parentComponent: 'PendingJoinRequestsWarningModal',
         children: [
             (0, e.jsxs)(c.hzk, {
                 className: k.content,
@@ -44,7 +45,7 @@ let m = function (t) {
                     }),
                     (0, e.jsx)(c.P3F, {
                         className: k.actionText,
-                        onClick: C,
+                        onClick: b,
                         children: (0, e.jsx)(c.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-link',
@@ -67,7 +68,7 @@ let m = function (t) {
                     (0, e.jsx)(c.zxk, {
                         className: k.actionButton,
                         color: c.zxk.Colors.RED,
-                        onClick: () => b(r.wB.REJECTED),
+                        onClick: () => C(r.wB.REJECTED),
                         size: c.zxk.Sizes.SMALL,
                         children: (0, e.jsx)(c.Text, {
                             variant: 'text-sm/semibold',
@@ -78,7 +79,7 @@ let m = function (t) {
                         (0, e.jsx)(c.zxk, {
                             className: k.actionButton,
                             color: c.zxk.Colors.BRAND,
-                            onClick: () => b(r.wB.APPROVED),
+                            onClick: () => C(r.wB.APPROVED),
                             size: c.zxk.Sizes.SMALL,
                             children: (0, e.jsx)(c.Text, {
                                 variant: 'text-sm/semibold',

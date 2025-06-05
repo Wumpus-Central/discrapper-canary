@@ -17,14 +17,14 @@ function g(e) {
     let { guildId: t } = e,
         a = (0, o.e7)([u.Z], () => u.Z.getGuild(t)),
         [g, _] = r.useState(null),
-        [k, p] = r.useState(''),
-        { createMultipleConfettiAt: C } = r.useContext(d.h),
+        [p, C] = r.useState(''),
+        { createMultipleConfettiAt: k } = r.useContext(d.h),
         v = (0, o.e7)([s.Z], () => s.Z.useReducedMotion, []),
         H = async (t) => {
             let { onClose: a, guildId: n } = e;
             t.preventDefault(), _(null);
             try {
-                await (0, m.e)(n, { nick: k }), null == a || a();
+                await (0, m.e)(n, { nick: p }), null == a || a();
             } catch (e) {
                 _(new l.Hx(e));
             }
@@ -34,12 +34,13 @@ function g(e) {
         S = !v && !j && (null == a ? void 0 : a.hasFeature(b.oNc.HUB)) && (0, f.b)();
     return (
         r.useEffect(() => {
-            S && C(window.innerWidth / 2, window.innerHeight / 2);
-        }, [C, S]),
+            S && k(window.innerWidth / 2, window.innerHeight / 2);
+        }, [k, S]),
         (0, n.jsxs)(i.Y0X, {
             className: x.__invalid_modalRoot,
             transitionState: N,
             'aria-label': h.intl.formatToPlainString(h.t['d+6kzs'], { guildName: null == a ? void 0 : a.name }),
+            parentComponent: 'HubRealNameModal',
             children: [
                 (0, n.jsxs)(i.xBx, {
                     separator: !1,
@@ -70,10 +71,10 @@ function g(e) {
                                 children: (0, n.jsx)(i.oil, {
                                     placeholder: h.intl.string(h.t.RfWvWF),
                                     onChange: (e) => {
-                                        p(e);
+                                        C(e);
                                     },
                                     error: null == g ? void 0 : g.getFirstFieldErrorMessage('name'),
-                                    value: k
+                                    value: p
                                 })
                             })
                         }),

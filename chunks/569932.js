@@ -3,8 +3,8 @@ var o = e(255367),
     i = e(73800),
     r = e(481060),
     s = e(63063),
-    c = e(921869),
-    a = e(981631),
+    a = e(921869),
+    c = e(981631),
     l = e(388032),
     d = e(660025);
 function u(t) {
@@ -23,9 +23,9 @@ function u(t) {
             ],
             []
         ),
-        _ = s.Z.getArticleURL(a.BhN.PS_CONNECTION),
+        _ = s.Z.getArticleURL(c.BhN.PS_CONNECTION),
         b = l.intl.format(l.t.kqZQNT, { helpdeskArticleUrl: _ });
-    return (0, o.jsx)(c.m, {
+    return (0, o.jsx)(a.m, {
         platformType: n,
         headerConnect: l.intl.string(l.t.xAWHOz),
         headerReconnect: l.intl.string(l.t['ZJ/vBg']),

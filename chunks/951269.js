@@ -1,54 +1,55 @@
 s.d(e, { default: () => d });
-var i = s(255367);
+var n = s(255367);
 s(73800);
-var n = s(481060),
+var i = s(481060),
     a = s(118012),
     l = s(313201),
-    c = s(388032),
-    o = s(701675),
+    o = s(388032),
+    c = s(701675),
     r = s(559325);
 function d(t) {
     let { onClose: e, transitionState: s, kind: d } = t,
         u = (0, l.Dt)();
-    return (0, i.jsxs)(n.Y0X, {
+    return (0, n.jsxs)(i.Y0X, {
         transitionState: s,
         'aria-labelledby': u,
-        size: n.CgR.SMALL,
+        size: i.CgR.SMALL,
+        parentComponent: 'InaccessibleLinkModal',
         children: [
-            (0, i.jsxs)(n.hzk, {
-                className: o.content,
+            (0, n.jsxs)(i.hzk, {
+                className: c.content,
                 children: [
-                    (0, i.jsx)(n.olH, {
-                        className: o.closeButton,
+                    (0, n.jsx)(i.olH, {
+                        className: c.closeButton,
                         onClick: e
                     }),
-                    (0, i.jsx)('img', {
-                        className: o.image,
+                    (0, n.jsx)('img', {
+                        className: c.image,
                         src: r,
                         alt: ''
                     }),
-                    (0, i.jsx)(a.Z, {
-                        className: o.title,
+                    (0, n.jsx)(a.Z, {
+                        className: c.title,
                         id: u,
                         size: a.Z.Sizes.SIZE_24,
                         color: a.Z.Colors.HEADER_PRIMARY,
-                        children: c.intl.string(c.t.r0DLNj)
+                        children: o.intl.string(o.t.r0DLNj)
                     }),
-                    (0, i.jsx)(n.Text, {
-                        className: o.subtitle,
+                    (0, n.jsx)(i.Text, {
+                        className: c.subtitle,
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: 'user' === d ? c.intl.string(c.t.Fqqbho) : c.intl.string(c.t['6Y0JlJ'])
+                        children: 'user' === d ? o.intl.string(o.t.Fqqbho) : o.intl.string(o.t['6Y0JlJ'])
                     })
                 ]
             }),
-            (0, i.jsx)(n.mzw, {
-                children: (0, i.jsx)(n.zxk, {
-                    className: o.button,
-                    color: n.zxk.Colors.BRAND,
+            (0, n.jsx)(i.mzw, {
+                children: (0, n.jsx)(i.zxk, {
+                    className: c.button,
+                    color: i.zxk.Colors.BRAND,
                     onClick: e,
-                    size: n.zxk.Sizes.LARGE,
-                    children: c.intl.string(c.t.BddRzc)
+                    size: i.zxk.Sizes.LARGE,
+                    children: o.intl.string(o.t.BddRzc)
                 })
             })
         ]

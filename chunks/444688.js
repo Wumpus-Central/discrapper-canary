@@ -75,6 +75,7 @@ let f = function (e) {
     let { onClose: t, transitionState: n } = e;
     return (0, r.jsxs)(o.Y0X, {
         transitionState: n,
+        parentComponent: 'UnverifiedEmailModal',
         children: [
             (0, r.jsx)(o.xBx, {
                 children: (0, r.jsx)(o.vwX, {

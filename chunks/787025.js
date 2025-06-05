@@ -119,6 +119,7 @@ function b(e) {
                 s
             ),
             {
+                parentComponent: 'OAuth2Page',
                 children: [
                     (0, r.jsx)(o.hz, {
                         paddingFix: !1,

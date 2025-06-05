@@ -14,20 +14,20 @@ var n = t(255367),
     j = t(13625);
 let x = (e) => {
     let { currentUser: r, otherUser: t, transitionState: l, onClose: x } = e,
-        p = o.useCallback(() => {
+        m = o.useCallback(() => {
             x();
         }, [x]),
-        m = (0, d.Z)(),
+        p = (0, d.Z)(),
         [y, O] = o.useState(!1),
         g = o.useCallback(() => {
             O(!0);
         }, []),
         { acceptLinkRequest: k, isAcceptLoading: v } = (0, a.G)({
             onError: g,
-            onSuccess: p
+            onSuccess: m
         });
     return (
-        s()(!m, 'FamilyCenterAcceptLinkModal should only be rendered for teens.'),
+        s()(!p, 'FamilyCenterAcceptLinkModal should only be rendered for teens.'),
         (0, n.jsxs)(u.Z, {
             transitionState: l,
             'aria-label': h.intl.string(f.default.rlNJwc),

@@ -150,6 +150,7 @@ function K(e) {
                     size: u.CgR.DYNAMIC,
                     className: o()(G.rootContainer, { [G.rootContainerLoading]: x }),
                     hideShadow: !0,
+                    parentComponent: 'QuestsRewardCollectibleModal',
                     children:
                         'error' === A
                             ? (0, r.jsx)(L.Z, { onClose: a })

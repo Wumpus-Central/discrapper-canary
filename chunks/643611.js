@@ -1,4 +1,4 @@
-e.d(n, { default: () => _ }), e(388685);
+e.d(n, { default: () => C }), e(388685);
 var l = e(255367),
     r = e(73800),
     i = e(442837),
@@ -45,25 +45,26 @@ let E = (t) => {
         })
     });
 };
-function _(t) {
-    let { action: n, triggerType: e, guildId: s, isEdit: o, onEditChannel: d, onClose: j, transitionState: _ } = t,
-        S = (0, c.Dt)(),
-        [C, x] = r.useState(n.metadata.channelId),
-        [L, I] = r.useState(null),
-        g = (0, i.e7)([u.Z], () => u.Z.getChannel(C), [C]),
+function C(t) {
+    let { action: n, triggerType: e, guildId: s, isEdit: o, onEditChannel: d, onClose: j, transitionState: C } = t,
+        _ = (0, c.Dt)(),
+        [S, x] = r.useState(n.metadata.channelId),
+        [L, g] = r.useState(null),
+        I = (0, i.e7)([u.Z], () => u.Z.getChannel(S), [S]),
         T = (0, A.c)(n.type, n, e);
     if (null == T) return null;
     let { headerText: f } = T;
     return (0, l.jsxs)(a.Y0X, {
-        transitionState: _,
-        'aria-labelledby': S,
+        transitionState: C,
+        'aria-labelledby': _,
         size: a.CgR.SMALL,
+        parentComponent: 'AutomodActionFlagToChannelModal',
         children: [
             (0, l.jsxs)(a.hzk, {
                 className: N.actionContentContainer,
                 children: [
                     (0, l.jsx)(a.X6q, {
-                        id: S,
+                        id: _,
                         color: 'header-primary',
                         variant: 'heading-lg/semibold',
                         className: N.header,
@@ -76,7 +77,7 @@ function _(t) {
                     }),
                     (0, l.jsx)(E, {
                         guildId: s,
-                        channel: g,
+                        channel: I,
                         onSelectChannel: (t) => {
                             null != t && x(t.id);
                         }
@@ -98,8 +99,8 @@ function _(t) {
                 children: [
                     (0, l.jsx)(a.zxk, {
                         onClick: () => {
-                            if (null == C) return void I(h.intl.string(h.t.lM1NLi));
-                            d(C);
+                            if (null == S) return void g(h.intl.string(h.t.lM1NLi));
+                            d(S);
                         },
                         color: a.zxk.Colors.BRAND,
                         size: a.zxk.Sizes.SMALL,

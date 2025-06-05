@@ -99,13 +99,13 @@ function N() {
         O = r.useCallback(() => E(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         P = r.useCallback(() => S(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         I = r.useCallback(() => T(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        k = r.useCallback(
+        w = r.useCallback(
             (e) => {
                 null != s && (0, x.i)(s, { token_mix_amount: Math.round(e) });
             },
             [s]
         ),
-        w = r.useCallback(() => {
+        k = r.useCallback(() => {
             null != s && (0, x.i)(s, null);
         }, [s]),
         R = null != (e = null == d ? void 0 : d.opacity) ? e : 1,
@@ -270,7 +270,7 @@ function N() {
                                 defaultValue: 100,
                                 minValue: 0,
                                 maxValue: 100,
-                                onValueChange: k
+                                onValueChange: w
                             },
                             'tokenMixAmount-'.concat(A)
                         ),
@@ -317,7 +317,7 @@ function N() {
                         }),
                         (0, a.jsx)(u.zxk, {
                             className: j.resetButton,
-                            onClick: w,
+                            onClick: k,
                             children: 'Reset'
                         })
                     ]

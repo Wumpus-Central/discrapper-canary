@@ -49,6 +49,7 @@ let s = () =>
                     transitionState: e.transitionState,
                     'aria-labelledby': c,
                     className: o.modal,
+                    parentComponent: 'MemberVerificationSuccessModal',
                     children: [
                         (0, r.jsx)('div', {
                             className: o.animationContainer,

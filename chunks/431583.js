@@ -187,6 +187,7 @@ function I(e) {
                 className: a()(v.downloadApps, w ? void 0 : e),
                 transitionState: l,
                 'aria-labelledby': A,
+                parentComponent: 'DownloadAppsModal',
                 children: [
                     (0, r.jsx)(p.olH, {
                         onClick: n,

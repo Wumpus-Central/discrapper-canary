@@ -15,6 +15,7 @@ let p = (t) => {
         transitionState: n,
         className: m.container,
         'aria-label': c.intl.string(c.t['4Y2AS0']),
+        parentComponent: 'HubStudyRoomSuppressModal',
         children: (0, r.jsxs)('form', {
             onSubmit: (t) => {
                 null == t || t.preventDefault(), o.Z.clearSuppressWarning(), null == e || e();

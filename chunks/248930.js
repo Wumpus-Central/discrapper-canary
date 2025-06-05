@@ -12,9 +12,9 @@ var l = t(255367),
     p = t(660579),
     g = t(652853),
     v = t(64621),
-    h = t(382405),
-    j = t(386019),
-    m = t(228168),
+    m = t(382405),
+    h = t(386019),
+    j = t(228168),
     b = t(227832);
 function x(e) {
     let { user: n, entry: t, profileGuildId: i, className: x, onClose: O, hideContextMenu: Z = !1 } = e,
@@ -33,7 +33,7 @@ function x(e) {
               value: P,
               children: (0, l.jsx)(v.Z, {
                   targetElementRef: y,
-                  sourceType: m.n_.ACTIVITY,
+                  sourceType: j.n_.ACTIVITY,
                   user: n,
                   children: (0, l.jsx)(f.Z, {
                       user: n,
@@ -42,31 +42,31 @@ function x(e) {
                       sourceId: t.id,
                       entry: t,
                       onAction: T,
-                      sourceType: m.n_.ACTIVITY,
+                      sourceType: j.n_.ACTIVITY,
                       children: () =>
                           (0, l.jsx)(p.Z, {
                               ref: y,
                               user: n,
                               className: b.toolbarContainer,
                               interactionSourceId: t.id,
-                              sourceType: m.n_.ACTIVITY,
+                              sourceType: j.n_.ACTIVITY,
                               onAction: T,
                               onShowToolbar: () => T({ action: 'HOVER_ACTIVITY_CARD' }),
                               renderMoreButtonPopout: Z
                                   ? void 0
                                   : (e) =>
-                                        (0, l.jsx)(j.Z, {
+                                        (0, l.jsx)(h.Z, {
                                             display: 'recent',
                                             entry: t,
                                             user: n,
                                             onClose: O,
                                             children: e
                                         }),
-                              children: (0, l.jsx)(h.Z, {
+                              children: (0, l.jsx)(m.Z, {
                                   entry: t,
                                   user: n,
                                   onClose: O,
-                                  className: o()(x, { [b.hoisted]: E === m.n_.ACTIVITY && S === t.id })
+                                  className: o()(x, { [b.hoisted]: E === j.n_.ACTIVITY && S === t.id })
                               })
                           })
                   })

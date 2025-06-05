@@ -28,8 +28,8 @@ var n = r(255367),
     A = r(715318),
     w = r(38516),
     C = r(891949),
-    R = r(252547),
-    M = r(484527),
+    M = r(252547),
+    R = r(484527),
     T = r(131033),
     L = r(296768),
     D = r(978313),
@@ -153,7 +153,7 @@ function F(e) {
     return (0, n.jsxs)('div', {
         className: K.sections,
         children: [
-            (0, n.jsx)(R.Z, {
+            (0, n.jsx)(M.Z, {
                 entries: a,
                 viewId: u,
                 officialGuildId: null == l || null == (t = l.guild) ? void 0 : t.id,
@@ -195,7 +195,7 @@ function Y(e) {
                         detectedGame: t,
                         trackAction: a
                     }),
-                    (0, n.jsx)(M.Z, {
+                    (0, n.jsx)(R.Z, {
                         detectedGame: t,
                         trackClick: a,
                         onInviteResolved: o,
@@ -224,7 +224,7 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
             }),
             [A, w] = i.useState(null),
             C = (0, P.Ns)(r),
-            [R, M] = i.useState(null),
+            [M, R] = i.useState(null),
             T = (0, f.q)(r),
             L = (0, u.e7)([h.Z], () => h.Z.getGame(r)),
             D = null != (t = null == L ? void 0 : L.name) ? t : null == T ? void 0 : T.name,
@@ -236,7 +236,7 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
                     action: e,
                     similarGameId: t,
                     viewId: S,
-                    officialGuildId: null == R || null == (n = R.guild) ? void 0 : n.id
+                    officialGuildId: null == M || null == (n = M.guild) ? void 0 : n.id
                 });
             };
         return ((0, g.ZP)(() => {
@@ -283,7 +283,7 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
                 playedFriendIds: C.map((e) => e.author_id),
                 playedFriendsData: n,
                 similarGames: U(N),
-                officialGuildId: null == R || null == (e = R.guild) ? void 0 : e.id
+                officialGuildId: null == M || null == (e = M.guild) ? void 0 : e.id
             });
         }),
         null == L || null == T)
@@ -292,6 +292,7 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
                   transitionState: o,
                   size: d.CgR.DYNAMIC,
                   className: l()(j, K.gameProfileModal),
+                  parentComponent: 'GameProfileModal',
                   children: (0, n.jsxs)(d.Ttm, {
                       orientation: 'auto',
                       children: [
@@ -310,7 +311,7 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
                                           detectedGame: L,
                                           application: T,
                                           entries: C,
-                                          officialGuildInvite: R,
+                                          officialGuildInvite: M,
                                           similarGames: N,
                                           similarGamesError: A,
                                           onClose: c,
@@ -319,7 +320,7 @@ let U = (e) => e.filter(S.z6).slice(0, 5),
                                       }),
                                       (0, n.jsx)(Y, {
                                           detectedGame: L,
-                                          setOfficialGuildInvite: M,
+                                          setOfficialGuildInvite: R,
                                           trackAction: G,
                                           onClose: c,
                                           appContext: v

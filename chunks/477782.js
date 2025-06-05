@@ -1,39 +1,40 @@
 n.d(t, { default: () => d }), n(388685);
-var s = n(255367),
-    i = n(73800),
-    l = n(481060),
-    a = n(313201),
+var i = n(255367),
+    s = n(73800),
+    a = n(481060),
+    l = n(313201),
     o = n(117984),
     r = n(388032),
     c = n(788428);
 function d(e) {
     let { onClose: t, transitionState: n } = e,
-        d = (0, a.Dt)(),
-        [h, u] = i.useState('');
-    return (0, s.jsx)('form', {
+        d = (0, l.Dt)(),
+        [h, u] = s.useState('');
+    return (0, i.jsx)('form', {
         onSubmit: function (e) {
             e.preventDefault(), (0, o.CM)(h), t();
         },
-        children: (0, s.jsxs)(l.Y0X, {
+        children: (0, i.jsxs)(a.Y0X, {
             transitionState: n,
             'aria-labelledby': d,
+            parentComponent: 'AddFavoriteCategoryModal',
             children: [
-                (0, s.jsxs)(l.hzk, {
+                (0, i.jsxs)(a.hzk, {
                     children: [
-                        (0, s.jsx)(l.X6q, {
+                        (0, i.jsx)(a.X6q, {
                             id: d,
                             className: c.header,
                             variant: 'heading-xl/semibold',
                             children: r.intl.string(r.t['ISN+ND'])
                         }),
-                        (0, s.jsx)(l.olH, {
+                        (0, i.jsx)(a.olH, {
                             onClick: t,
                             className: c.closeButton
                         }),
-                        (0, s.jsx)(l.xJW, {
+                        (0, i.jsx)(a.xJW, {
                             title: r.intl.string(r.t.OCAkGB),
                             className: c.name,
-                            children: (0, s.jsx)(l.oil, {
+                            children: (0, i.jsx)(a.oil, {
                                 value: h,
                                 onChange: u,
                                 maxLength: 100,
@@ -44,17 +45,17 @@ function d(e) {
                         })
                     ]
                 }),
-                (0, s.jsxs)(l.mzw, {
+                (0, i.jsxs)(a.mzw, {
                     children: [
-                        (0, s.jsx)(l.zxk, {
+                        (0, i.jsx)(a.zxk, {
                             type: 'submit',
                             disabled: '' === h,
                             children: r.intl.string(r.t['ISN+ND'])
                         }),
-                        (0, s.jsx)(l.zxk, {
+                        (0, i.jsx)(a.zxk, {
                             onClick: t,
-                            look: l.zxk.Looks.LINK,
-                            color: l.zxk.Colors.PRIMARY,
+                            look: a.zxk.Looks.LINK,
+                            color: a.zxk.Colors.PRIMARY,
                             children: r.intl.string(r.t['ETE/oK'])
                         })
                     ]

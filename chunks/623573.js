@@ -47,6 +47,7 @@ function h(e) {
         size: o.CgR.SMALL,
         className: g.modal,
         'aria-label': m.intl.string(m.t.eQ2bLi),
+        parentComponent: 'AddPaymentModal',
         children: (0, i.jsx)('form', {
             className: g.form,
             onSubmit: function (e) {

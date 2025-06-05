@@ -1,30 +1,31 @@
-n.d(t, { default: () => h }), n(388685), n(953529);
-var a = n(255367);
-n(73800);
-var i = n(512722),
-    r = n.n(i),
-    s = n(481060),
-    c = n(584825),
-    l = n(353254),
-    o = n(866104),
-    d = n(388032),
-    m = n(578305);
+t.d(n, { default: () => h }), t(388685), t(953529);
+var a = t(255367);
+t(73800);
+var i = t(512722),
+    r = t.n(i),
+    s = t(481060),
+    o = t(584825),
+    c = t(353254),
+    l = t(866104),
+    d = t(388032),
+    m = t(578305);
 function h(e) {
-    let { onClose: t, guildId: n, transitionState: i } = e,
-        h = (0, c.YB)(n);
+    let { onClose: n, guildId: t, transitionState: i } = e,
+        h = (0, o.YB)(t);
     r()(null != h, 'subscriptionsSettings cannot be null');
-    let u = h.cover_image_asset,
-        [x] = (0, l.Z)(null != u ? u : void 0);
+    let p = h.cover_image_asset,
+        [u] = (0, c.Z)(null != p ? p : void 0);
     return (0, a.jsxs)(s.Y0X, {
         className: m.modal,
         size: s.CgR.MEDIUM,
         transitionState: i,
         'aria-label': d.intl.string(d.t.D98gR0),
+        parentComponent: 'HeroDescriptionModal',
         children: [
             (0, a.jsx)('div', {
-                ref: x,
+                ref: u,
                 className: m.coverImageContainer,
-                children: null != u && (0, a.jsx)(o.Z, { coverImageAsset: u })
+                children: null != p && (0, a.jsx)(l.Z, { coverImageAsset: p })
             }),
             (0, a.jsx)(s.X6q, {
                 variant: 'text-lg/medium',
@@ -44,7 +45,7 @@ function h(e) {
             (0, a.jsx)(s.mzw, {
                 className: m.__invalid_footer,
                 children: (0, a.jsx)(s.zxk, {
-                    onClick: t,
+                    onClick: n,
                     children: d.intl.string(d.t.wdo1oK)
                 })
             })

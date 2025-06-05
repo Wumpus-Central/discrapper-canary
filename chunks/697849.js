@@ -151,6 +151,7 @@ let k = (e) => {
             transitionState: _,
             'aria-labelledby': V,
             className: G.root,
+            parentComponent: 'GuildScheduledEventModal',
             children: [
                 (null == k ? void 0 : k.image) != null &&
                     (0, i.jsx)(L.Z, {

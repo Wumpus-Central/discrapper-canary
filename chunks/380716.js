@@ -113,7 +113,7 @@ function z(e) {
 }
 function w(e) {
     var n, l, a, b, y;
-    let { transitionState: w, onClose: Z, guildId: M, action: L, onSave: D, onDelete: A } = e,
+    let { transitionState: w, onClose: M, guildId: Z, action: L, onSave: A, onDelete: D } = e,
         G = (0, m.Dt)(),
         R = i.useRef(null),
         U = i.useRef(null),
@@ -182,11 +182,11 @@ function w(e) {
                     icon: null != et ? et : null
                 },
                 n = ei !== er || en !== eo;
-            D(e, null != ei ? ei : null, n), Z();
-        }, [D, Z, K, $, H, en, et, ei, er, eo]),
+            A(e, null != ei ? ei : null, n), M();
+        }, [A, M, K, $, H, en, et, ei, er, eo]),
         ed = i.useCallback(() => {
-            null == A || A(), Z();
-        }, [A, Z]),
+            null == D || D(), M();
+        }, [D, M]),
         em = i.useCallback(
             (e) => {
                 Q(e),
@@ -235,20 +235,20 @@ function w(e) {
         ev = i.useCallback(
             (e) =>
                 Promise.resolve(
-                    g.ZP.getSelectableChannels(M)
+                    g.ZP.getSelectableChannels(Z)
                         .filter((n) => !J.has(n.channel.id) && (0, p.kb)(n.channel) && r()(e, n.channel.name))
                         .map((e) => ({
                             value: e.channel.id,
                             label: e.channel.name
                         }))
                 ),
-            [M, J]
+            [Z, J]
         ),
         ex = i.useCallback(
             (e) => {
-                if (null == e || null == M) return null;
+                if (null == e || null == Z) return null;
                 let n = x.Z.getChannel(e.value),
-                    l = j.Z.getGuild(M);
+                    l = j.Z.getGuild(Z);
                 if (null == n || null == l) return null;
                 let i = (0, d.KS)(n, l);
                 return null == i
@@ -259,7 +259,7 @@ function w(e) {
                           className: O.channelIcon
                       });
             },
-            [M]
+            [Z]
         ),
         eg = i.useCallback(function (e) {
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -340,13 +340,14 @@ function w(e) {
         (0, t.jsxs)(s.Y0X, {
             transitionState: w,
             'aria-labelledby': G,
+            parentComponent: 'NewMemberActionModal',
             children: [
                 (0, t.jsxs)('div', {
                     className: O.container,
                     children: [
                         (0, t.jsx)(s.olH, {
                             className: O.closeButton,
-                            onClick: Z
+                            onClick: M
                         }),
                         (0, t.jsxs)('div', {
                             className: O.formGroup,
@@ -551,7 +552,7 @@ function w(e) {
                                 className: O.rightButtons,
                                 children: [
                                     (0, t.jsx)(s.zxk, {
-                                        onClick: Z,
+                                        onClick: M,
                                         size: s.zxk.Sizes.SMALL,
                                         look: s.zxk.Looks.LINK,
                                         color: s.zxk.Colors.PRIMARY,

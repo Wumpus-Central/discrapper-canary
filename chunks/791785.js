@@ -252,6 +252,7 @@ function $(e) {
             hideShadow: eh,
             returnRef: em,
             size: eV,
+            parentComponent: 'PaymentModal',
             children: (0, r.jsx)(
                 V.ZP,
                 z(

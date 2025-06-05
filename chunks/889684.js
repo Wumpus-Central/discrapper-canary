@@ -1,57 +1,58 @@
-a.d(t, { default: () => m });
-var i = a(255367),
-    n = a(73800),
+a.d(t, { default: () => h });
+var n = a(255367),
+    i = a(73800),
     s = a(481060),
-    r = a(230711),
-    o = a(767714),
-    c = a(626135),
-    l = a(981631),
+    o = a(230711),
+    l = a(767714),
+    r = a(626135),
+    c = a(981631),
     d = a(474936),
-    x = a(388032),
-    h = a(354509);
-let m = (e) => {
+    p = a(388032),
+    m = a(354509);
+let h = (e) => {
     let { transitionState: t, onClose: a } = e;
     return (
-        n.useEffect(() => {
-            c.default.track(l.rMx.PREMIUM_UPSELL_VIEWED, { type: d.cd.EMOJI_AUTOCOMPLETE_MODAL });
+        i.useEffect(() => {
+            r.default.track(c.rMx.PREMIUM_UPSELL_VIEWED, { type: d.cd.EMOJI_AUTOCOMPLETE_MODAL });
         }, []),
-        (0, i.jsxs)(s.Y0X, {
+        (0, n.jsxs)(s.Y0X, {
             transitionState: t,
             size: s.CgR.SMALL,
             'aria-label': '',
+            parentComponent: 'ChannelAutocompleteEmojiUpsellModal',
             children: [
-                (0, i.jsxs)(s.hzk, {
-                    className: h.content,
+                (0, n.jsxs)(s.hzk, {
+                    className: m.content,
                     children: [
-                        (0, i.jsx)('div', {
+                        (0, n.jsx)('div', {
                             role: 'image',
-                            className: h.image
+                            className: m.image
                         }),
-                        (0, i.jsx)(s.X6q, {
+                        (0, n.jsx)(s.X6q, {
                             variant: 'heading-xl/semibold',
-                            className: h.header,
-                            children: x.intl.string(x.t.Uq1zJS)
+                            className: m.header,
+                            children: p.intl.string(p.t.Uq1zJS)
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, n.jsx)(s.Text, {
                             variant: 'text-md/normal',
-                            children: x.intl.format(x.t.xPaO3t, {
+                            children: p.intl.format(p.t.xPaO3t, {
                                 onLearnMore: () => {
-                                    a(), r.Z.open(l.oAB.PREMIUM);
+                                    a(), o.Z.open(c.oAB.PREMIUM);
                                 }
                             })
                         })
                     ]
                 }),
-                (0, i.jsx)(s.mzw, {
-                    children: (0, i.jsx)(o.Z, {
+                (0, n.jsx)(s.mzw, {
+                    children: (0, n.jsx)(l.Z, {
                         onClick: a,
-                        textOptions: { textOverride: x.intl.string(x.t.pj0XBA) },
+                        textOptions: { textOverride: p.intl.string(p.t.pj0XBA) },
                         subscriptionTier: d.Si.TIER_2,
-                        premiumModalAnalyticsLocation: { page: l.ZY5.CHANNEL_AUTOCOMPLETE_EMOJI_UPSELL_MODAL }
+                        premiumModalAnalyticsLocation: { page: c.ZY5.CHANNEL_AUTOCOMPLETE_EMOJI_UPSELL_MODAL }
                     })
                 }),
-                (0, i.jsx)(s.olH, {
-                    className: h.closeButton,
+                (0, n.jsx)(s.olH, {
+                    className: m.closeButton,
                     onClick: a
                 })
             ]

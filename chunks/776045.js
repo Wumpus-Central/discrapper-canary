@@ -27,6 +27,7 @@ function c(e) {
         size: l.CgR.DYNAMIC,
         transitionState: t,
         'aria-label': h,
+        parentComponent: 'WarningModal',
         children: [
             (0, A.jsxs)(l.hzk, {
                 className: i.content,

@@ -31,14 +31,15 @@ function b(e) {
                 location: v
             }
         });
-    let y = null != (t = (0, h.C)(C)) ? t : '',
-        I = (0, h.k)(C),
+    let I = null != (t = (0, h.C)(C)) ? t : '',
+        y = (0, h.k)(C),
         O = (0, l.e7)([x.Z], () => x.Z.getGuild(Z));
     return (0, r.jsxs)(o.Y0X, {
         className: g.modal,
         size: o.CgR.MEDIUM,
         transitionState: a,
         'aria-label': C.name,
+        parentComponent: 'GuildProductInfoModal',
         children: [
             (0, r.jsxs)(o.xBx, {
                 separator: !1,
@@ -70,7 +71,7 @@ function b(e) {
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
                             children: p.intl.format(p.t.xImSen, {
-                                productType: y,
+                                productType: I,
                                 personName: null != (n = null == O ? void 0 : O.name) ? n : ''
                             })
                         }),
@@ -106,7 +107,7 @@ function b(e) {
                         tag: 'div',
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        children: I
+                        children: y
                     })
                 ]
             })

@@ -1,4 +1,4 @@
-t.d(n, { Z: () => p }), t(388685);
+t.d(n, { Z: () => N }), t(388685);
 var i = t(255367),
     s = t(73800),
     l = t(120356),
@@ -13,9 +13,9 @@ var i = t(255367),
     h = t(800530),
     _ = t(388032),
     C = t(473787),
-    N = t(91463);
-function p(e) {
-    let { className: n, isDsaEligible: t = !1, onClose: l, onNext: p, onBack: g } = e,
+    p = t(91463);
+function N(e) {
+    let { className: n, isDsaEligible: t = !1, onClose: l, onNext: N, onBack: g } = e,
         j = (0, u.U0)(),
         I = (0, r.e7)([x.Z], () => x.Z.getFreeTextAppealReason()),
         [k, E] = s.useState(''),
@@ -36,7 +36,7 @@ function p(e) {
                     signal: e
                 });
         },
-        v = h.RY.map((e) => ({
+        A = h.RY.map((e) => ({
             value: e,
             name: (0, m.ox)(e)
         }));
@@ -44,23 +44,23 @@ function p(e) {
         children: [
             (0, i.jsxs)(o.xBx, {
                 direction: d.Z.Direction.VERTICAL,
-                className: N.header,
+                className: p.header,
                 separator: !1,
                 children: [
                     (0, i.jsx)(o.X6q, {
-                        className: N.title,
+                        className: p.title,
                         variant: 'heading-xl/semibold',
                         children: _.intl.string(_.t['C5q+pa'])
                     }),
                     (0, i.jsx)(o.Text, {
-                        className: N.subtitle,
+                        className: p.subtitle,
                         color: 'header-secondary',
                         variant: 'text-md/normal',
                         children: _.intl.string(_.t.VEcRh4)
                     }),
                     null != l &&
                         (0, i.jsx)(o.olH, {
-                            className: N.closeButton,
+                            className: p.closeButton,
                             onClick: l
                         })
                 ]
@@ -71,10 +71,10 @@ function p(e) {
                 children: [
                     (0, i.jsx)(o.FXm, {
                         radioPosition: 'right',
-                        radioItemClassName: N.radioItem,
+                        radioItemClassName: p.radioItem,
                         size: o.FXm.Sizes.NOT_SET,
                         value: j,
-                        options: v,
+                        options: A,
                         onChange: (e) => {
                             let { value: n } = e;
                             return S(n);
@@ -114,7 +114,7 @@ function p(e) {
                                 type: 'SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE',
                                 userInput: k
                             }),
-                                null == p || p();
+                                null == N || N();
                         },
                         color: o.zxk.Colors.BRAND,
                         children: _.intl.string(_.t.PDTjLC)

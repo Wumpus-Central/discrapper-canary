@@ -1,8 +1,8 @@
 l.d(t, { default: () => j }), l(388685);
 var n = l(255367),
-    r = l(73800),
-    s = l(442837),
-    o = l(481060),
+    o = l(73800),
+    r = l(442837),
+    s = l(481060),
     a = l(91176),
     i = l(493773),
     c = l(906732),
@@ -11,8 +11,8 @@ var n = l(255367),
     _ = l(501517),
     x = l(592125),
     h = l(594174),
-    T = l(626135),
-    m = l(5192),
+    m = l(626135),
+    T = l(5192),
     C = l(590433),
     N = l(981631),
     g = l(388032),
@@ -33,12 +33,12 @@ function j(e) {
         S = (0, u.Dt)(),
         { analyticsLocations: b } = (0, c.ZP)(),
         D = null != (l = null != (t = null == v ? void 0 : v[0]) ? t : null == b ? void 0 : b[0]) ? l : null,
-        I = (0, s.e7)([h.default], () => h.default.getUser(j), [j]),
-        [A, y] = r.useState(C.UK.DURATION_60_SEC),
-        [K, B] = r.useState(''),
-        [M, Z] = r.useState(!1),
-        [P, w] = r.useState(!1),
-        H = (0, s.e7)([x.Z], () => {
+        I = (0, r.e7)([h.default], () => h.default.getUser(j), [j]),
+        [A, y] = o.useState(C.UK.DURATION_60_SEC),
+        [K, M] = o.useState(''),
+        [B, Z] = o.useState(!1),
+        [P, w] = o.useState(!1),
+        H = (0, r.e7)([x.Z], () => {
             var e;
             return null == (e = x.Z.getChannel(k)) ? void 0 : e.isArchivedThread();
         }),
@@ -46,13 +46,13 @@ function j(e) {
             location: D,
             targetUserId: j
         }),
-        z = r.useCallback(async () => {
+        z = o.useCallback(async () => {
             if (null != I) {
                 Z(!0);
                 try {
-                    await a.Z.setCommunicationDisabledDuration(E, j, A, K, D, k), P && null != k && _.Z.resolveFlag(k), L(d.jQ.TIMEOUT), (0, o.showToast)((0, o.createToast)(g.intl.formatToPlainString(g.t.O9C3Nj, { user: m.ZP.getName(E, null, I) }), o.ToastType.SUCCESS)), f();
+                    await a.Z.setCommunicationDisabledDuration(E, j, A, K, D, k), P && null != k && _.Z.resolveFlag(k), L(d.jQ.TIMEOUT), (0, s.showToast)((0, s.createToast)(g.intl.formatToPlainString(g.t.O9C3Nj, { user: T.ZP.getName(E, null, I) }), s.ToastType.SUCCESS)), f();
                 } catch (e) {
-                    (0, o.showToast)((0, o.createToast)(g.intl.string(g.t.epyCur), o.ToastType.FAILURE));
+                    (0, s.showToast)((0, s.createToast)(g.intl.string(g.t.epyCur), s.ToastType.FAILURE));
                 } finally {
                     Z(!1);
                 }
@@ -60,100 +60,101 @@ function j(e) {
         }, [E, I, j, f, A, K, D, L, k, P]);
     return ((0, i.ZP)(() => {
         null != I &&
-            T.default.track(N.rMx.OPEN_MODAL, {
+            m.default.track(N.rMx.OPEN_MODAL, {
                 type: C.Cl,
                 guild_id: E,
                 other_user_id: I.id
             });
     }),
-    r.useEffect(() => {
+    o.useEffect(() => {
         (null == I || null == E) && f();
     }, [E, I, f]),
     null == I || null == E)
         ? null
-        : (0, n.jsxs)(o.Y0X, {
+        : (0, n.jsxs)(s.Y0X, {
               transitionState: U,
               'aria-labelledby': S,
+              parentComponent: 'GuildDisableCommunicationModal',
               children: [
-                  (0, n.jsx)(o.xBx, {
+                  (0, n.jsx)(s.xBx, {
                       separator: !1,
-                      children: (0, n.jsxs)(o.Kqy, {
+                      children: (0, n.jsxs)(s.Kqy, {
                           direction: 'vertical',
                           justify: 'space-between',
                           children: [
-                              (0, n.jsx)(o.olH, {
+                              (0, n.jsx)(s.olH, {
                                   className: O.closeButton,
                                   onClick: f
                               }),
-                              (0, n.jsx)(o.X6q, {
+                              (0, n.jsx)(s.X6q, {
                                   id: S,
                                   variant: 'heading-xl/bold',
-                                  children: g.intl.format(g.t.OhsOy8, { user: m.ZP.getName(E, null, I) })
+                                  children: g.intl.format(g.t.OhsOy8, { user: T.ZP.getName(E, null, I) })
                               })
                           ]
                       })
                   }),
-                  (0, n.jsxs)(o.hzk, {
+                  (0, n.jsxs)(s.hzk, {
                       className: O.contentContainer,
                       children: [
-                          (0, n.jsx)(o.Text, {
+                          (0, n.jsx)(s.Text, {
                               variant: 'text-md/normal',
                               color: 'interactive-normal',
                               children: g.intl.format(g.t.Ns83GR, { helpdeskArticle: C.cu })
                           }),
-                          (0, n.jsx)(o.X6q, {
+                          (0, n.jsx)(s.X6q, {
                               className: O.selectorHeader,
                               variant: 'heading-sm/semibold',
                               children: g.intl.string(g.t['9XsExs'])
                           }),
-                          (0, n.jsx)(o.hE2, {
+                          (0, n.jsx)(s.hE2, {
                               buttons: R.map((e) =>
                                   (function (e, t, l) {
-                                      let { value: r, label: s } = e;
+                                      let { value: o, label: r } = e;
                                       return {
-                                          content: (0, n.jsx)(o.Text, {
+                                          content: (0, n.jsx)(s.Text, {
                                               variant: 'text-sm/semibold',
                                               className: t ? O.selectorTextSelected : O.selectorText,
-                                              children: s
+                                              children: r
                                           }),
                                           className: t ? O.selectorButtonSelected : O.selectorButton,
-                                          onClick: () => l(r)
+                                          onClick: () => l(o)
                                       };
                                   })(e, e.value === A, y)
                               )
                           }),
-                          (0, n.jsx)(o.X6q, {
+                          (0, n.jsx)(s.X6q, {
                               className: O.selectorHeader,
                               variant: 'heading-sm/semibold',
                               children: g.intl.string(g.t.ewHW19)
                           }),
-                          (0, n.jsx)(o.Kx8, {
+                          (0, n.jsx)(s.Kx8, {
                               value: K,
-                              onChange: (e) => B(e),
+                              onChange: (e) => M(e),
                               placeholder: g.intl.string(g.t.GakiHx),
                               rows: 4,
                               maxLength: C.GN
                           })
                       ]
                   }),
-                  (0, n.jsxs)(o.mzw, {
+                  (0, n.jsxs)(s.mzw, {
                       children: [
-                          (0, n.jsx)(o.zxk, {
+                          (0, n.jsx)(s.zxk, {
                               onClick: z,
-                              color: o.zxk.Colors.BRAND,
-                              submitting: M,
+                              color: s.zxk.Colors.BRAND,
+                              submitting: B,
                               children: g.intl.string(g.t.MlPTIi)
                           }),
-                          (0, n.jsx)(o.zxk, {
+                          (0, n.jsx)(s.zxk, {
                               type: 'button',
-                              look: o.zxk.Looks.LINK,
-                              color: o.zxk.Colors.PRIMARY,
+                              look: s.zxk.Looks.LINK,
+                              color: s.zxk.Colors.PRIMARY,
                               onClick: f,
                               children: g.intl.string(g.t['ETE/oK'])
                           }),
                           null != k &&
                               !H &&
-                              (0, n.jsx)(o.XZJ, {
+                              (0, n.jsx)(s.XZJ, {
                                   value: P,
                                   onChange: (e, t) => {
                                       w(t);

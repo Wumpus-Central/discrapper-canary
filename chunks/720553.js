@@ -7,27 +7,27 @@ var l = n(990547),
     s = n(313201),
     o = n(626135),
     c = n(988158),
-    x = n(981631),
-    d = n(388032),
+    d = n(981631),
+    x = n(388032),
     m = n(946555);
 function u(t) {
-    let { url: e, trustUrl: n, isProtocol: u, onConfirm: h, onCancel: p, onClose: C, transitionState: k } = t,
+    let { url: e, trustUrl: n, isProtocol: u, onConfirm: h, onCancel: p, onClose: k, transitionState: C } = t,
         _ = (0, s.Dt)(),
         {
-            protocol: g,
-            authorityPrefix: D,
-            hostname: M,
+            protocol: M,
+            authorityPrefix: g,
+            hostname: D,
             theRestOfTheUrl: b,
             shouldTrustUrl: f,
-            setShouldTrustUrl: j,
-            handleConfirm: z,
-            handleCancel: I
+            setShouldTrustUrl: L,
+            handleConfirm: j,
+            handleCancel: z
         } = (0, c.X)({
             url: e,
             trustUrl: n,
             onConfirm: h,
             onCancel: p,
-            onClose: C
+            onClose: k
         });
     return (
         (0, i.Z)({
@@ -36,8 +36,9 @@ function u(t) {
         }),
         (0, a.jsxs)(r.Y0X, {
             size: r.CgR.DYNAMIC,
-            transitionState: k,
+            transitionState: C,
             'aria-labelledby': _,
+            parentComponent: 'MaskedLinkModal',
             children: [
                 (0, a.jsxs)(r.hzk, {
                     children: [
@@ -45,12 +46,12 @@ function u(t) {
                             id: _,
                             variant: 'heading-xl/bold',
                             className: m.title,
-                            children: d.intl.string(d.t['3w1QGh'])
+                            children: x.intl.string(x.t['3w1QGh'])
                         }),
                         (0, a.jsx)(r.Text, {
                             className: m.warningText,
                             variant: 'text-md/normal',
-                            children: u ? d.intl.format(d.t.aCYv19, {}) : d.intl.string(d.t.soRxRU)
+                            children: u ? x.intl.format(x.t.aCYv19, {}) : x.intl.string(x.t.soRxRU)
                         }),
                         (0, a.jsxs)(r.Ttm, {
                             className: m.linkCalloutContainer,
@@ -59,13 +60,13 @@ function u(t) {
                                     tag: 'span',
                                     variant: u ? 'text-md/semibold' : 'text-md/normal',
                                     color: u ? 'text-normal' : 'text-muted',
-                                    children: [g, D]
+                                    children: [M, g]
                                 }),
                                 (0, a.jsx)(r.Text, {
                                     tag: 'span',
                                     variant: u ? 'text-md/normal' : 'text-md/semibold',
                                     color: u ? 'text-muted' : 'text-normal',
-                                    children: M
+                                    children: D
                                 }),
                                 (0, a.jsx)(r.Text, {
                                     tag: 'span',
@@ -79,10 +80,10 @@ function u(t) {
                             className: m.checkbox,
                             type: r.XZJ.Types.INVERTED,
                             value: f,
-                            onChange: (t, e) => j(e),
+                            onChange: (t, e) => L(e),
                             children: (0, a.jsx)(r.Text, {
                                 variant: 'text-sm/normal',
-                                children: u ? d.intl.format(d.t['haA+X1'], { protocol: g.replace(':', '') }) : d.intl.format(d.t.ZgXDsL, { domain: M })
+                                children: u ? x.intl.format(x.t['haA+X1'], { protocol: M.replace(':', '') }) : x.intl.format(x.t.ZgXDsL, { domain: D })
                             })
                         })
                     ]
@@ -94,27 +95,27 @@ function u(t) {
                             size: r.zxk.Sizes.MEDIUM,
                             color: r.zxk.Colors.BRAND,
                             onClick: () => {
-                                z(),
-                                    o.default.track(x.rMx.MASKED_LINK_MODAL_CLICKED, {
+                                j(),
+                                    o.default.track(d.rMx.MASKED_LINK_MODAL_CLICKED, {
                                         is_trust_url_selected: f,
                                         action_type: 'confirm'
                                     });
                             },
-                            children: u ? d.intl.string(d.t.COq6kp) : d.intl.string(d.t.NcJfJC)
+                            children: u ? x.intl.string(x.t.COq6kp) : x.intl.string(x.t.NcJfJC)
                         }),
                         (0, a.jsx)(r.zxk, {
                             type: 'button',
                             size: r.zxk.Sizes.MEDIUM,
                             color: r.zxk.Colors.PRIMARY,
                             onClick: () => {
-                                I(),
-                                    o.default.track(x.rMx.MASKED_LINK_MODAL_CLICKED, {
+                                z(),
+                                    o.default.track(d.rMx.MASKED_LINK_MODAL_CLICKED, {
                                         is_trust_url_selected: f,
                                         action_type: 'cancel'
                                     });
                             },
                             look: r.iLD.LINK,
-                            children: d.intl.string(d.t['/g10LC'])
+                            children: x.intl.string(x.t['/g10LC'])
                         })
                     ]
                 })

@@ -12,20 +12,20 @@ var n = t(255367),
     f = t(570580);
 let h = (e) => {
     let { currentUser: r, otherUser: t, transitionState: s, onClose: h } = e,
-        [j, p] = o.useState(!1),
+        [p, j] = o.useState(!1),
+        m = o.useCallback(() => {
+            j(!0);
+        }, []),
         x = o.useCallback(() => {
-            p(!0);
+            j(!1);
         }, []),
         y = o.useCallback(() => {
-            p(!1);
-        }, []),
-        m = o.useCallback(() => {
             h();
         }, [h]),
         O = (0, a.Z)(),
         { cancelLinkRequest: g, isCancelLoading: v } = (0, i.G)({
-            onError: x,
-            onSuccess: m
+            onError: m,
+            onSuccess: y
         });
     return (
         l()(O, 'FamilyCenterDeclineLinkModal should only be rendered for parents.'),
@@ -37,8 +37,8 @@ let h = (e) => {
                 },
                 children: [
                     (0, n.jsx)(d.Z.Error, {
-                        error: j ? b.intl.string(u.default['6gyAQU']) : void 0,
-                        onDismiss: y
+                        error: p ? b.intl.string(u.default['6gyAQU']) : void 0,
+                        onDismiss: x
                     }),
                     (0, n.jsx)(c.hzk, {
                         children: (0, n.jsx)(d.Z.Header, {
@@ -66,7 +66,7 @@ let h = (e) => {
                                 }),
                                 (0, n.jsx)(c.zxk, {
                                     type: 'submit',
-                                    disabled: v || j,
+                                    disabled: v || p,
                                     submitting: v,
                                     color: c.Ttl.RED,
                                     size: c.zxk.Sizes.SMALL,

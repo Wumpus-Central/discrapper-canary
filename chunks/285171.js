@@ -7,10 +7,10 @@ var n = r(255367),
     s = r(237997),
     a = r(451478),
     u = r(358085),
-    b = r(998502),
-    f = r(145597),
-    d = r(981631),
-    p = r(388032);
+    p = r(998502),
+    b = r(145597),
+    f = r(981631),
+    d = r(388032);
 function O(e) {
     var t,
         r,
@@ -36,8 +36,8 @@ function O(e) {
         })(e, ['transitionState', 'onClose', 'contextKey']);
     let h = (0, c.Dt)(),
         x = (0, i.e7)([a.Z], () => a.Z.isFocused()),
-        P = y === d.IlC.APP,
-        k = (0, f.getPID)(),
+        P = y === f.IlC.APP,
+        k = (0, b.getPID)(),
         m = (0, i.e7)([s.default], () => s.default.isLocked(k));
     return (o.useEffect(() => {
         (x || P || m) && (null == j || j());
@@ -80,34 +80,35 @@ function O(e) {
               (r = r =
                   {
                       size: l.CgR.SMALL,
+                      parentComponent: 'FocusMainAppModal',
                       children: [
                           (0, n.jsx)(l.xBx, {
                               children: (0, n.jsx)(l.X6q, {
                                   variant: 'heading-xl/semibold',
-                                  children: p.intl.string(p.t.DJ8ojI)
+                                  children: d.intl.string(d.t.DJ8ojI)
                               })
                           }),
                           (0, n.jsx)(l.hzk, {
                               children: (0, n.jsx)(l.Text, {
                                   color: 'text-normal',
                                   variant: 'text-md/medium',
-                                  children: p.intl.string(p.t['E+Ph7O'])
+                                  children: d.intl.string(d.t['E+Ph7O'])
                               })
                           }),
                           (0, n.jsxs)(l.mzw, {
                               children: [
                                   (0, n.jsx)(l.zxk, {
                                       onClick: () => {
-                                          u.isPlatformEmbedded ? b.ZP.focus() : window.focus(), j();
+                                          u.isPlatformEmbedded ? p.ZP.focus() : window.focus(), j();
                                       },
                                       color: l.zxk.Colors.BRAND,
-                                      children: p.intl.string(p.t.ELRJQk)
+                                      children: d.intl.string(d.t.ELRJQk)
                                   }),
                                   (0, n.jsx)(l.zxk, {
                                       onClick: () => (null == j ? void 0 : j()),
                                       color: l.zxk.Colors.PRIMARY,
                                       look: l.zxk.Looks.LINK,
-                                      children: p.intl.string(p.t.FgK5QE)
+                                      children: d.intl.string(d.t.FgK5QE)
                                   })
                               ]
                           })

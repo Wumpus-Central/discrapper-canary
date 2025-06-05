@@ -19,8 +19,8 @@ var r = n(255367),
     x = n(131704),
     O = n(592125),
     v = n(430824),
-    _ = n(496675),
-    S = n(158776),
+    S = n(496675),
+    _ = n(158776),
     E = n(306680),
     P = n(699516),
     Z = n(594174),
@@ -159,7 +159,7 @@ function U(e) {
     let s = N.ZP.useName(t),
         i = N.ZP.useUserTag(t, { decoration: 'never' }),
         a = (0, c.e7)([P.Z], () => P.Z.getNickname(t.id)),
-        o = (0, c.e7)([S.Z], () => S.Z.getStatus(t.id));
+        o = (0, c.e7)([_.Z], () => _.Z.getStatus(t.id));
     return (0, r.jsx)(
         A,
         M(R({}, l), {
@@ -279,7 +279,7 @@ function q(e) {
                               },
                     c = (0, j.hC)(u),
                     d = (function (e) {
-                        if (e instanceof x.Sf && (0, x.Km)(e.type) && null != e.rateLimitPerUser && e.rateLimitPerUser > 0 && !(_.Z.can(w.Plq.MANAGE_CHANNELS, e) || _.Z.can(w.Plq.MANAGE_MESSAGES, e))) return { label: T.intl.string(T.t.Icu3bW) };
+                        if (e instanceof x.Sf && (0, x.Km)(e.type) && null != e.rateLimitPerUser && e.rateLimitPerUser > 0 && !(S.Z.can(w.Plq.MANAGE_CHANNELS, e) || S.Z.can(w.Plq.MANAGE_MESSAGES, e))) return { label: T.intl.string(T.t.Icu3bW) };
                     })(o),
                     b = f.includes(c),
                     h = {

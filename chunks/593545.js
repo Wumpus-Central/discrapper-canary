@@ -356,6 +356,7 @@ function P(e) {
             'aria-label': p.intl.string(p.t.qxQjc3),
             size: l.CgR.LARGE,
             className: h.modalRoot,
+            parentComponent: 'PlaintextFilePreview',
             children: (0, r.jsxs)('div', {
                 className: h.modalContent,
                 children: [

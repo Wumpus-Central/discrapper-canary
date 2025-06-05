@@ -82,6 +82,7 @@ function v(e) {
                 size: o.CgR.DYNAMIC,
                 'aria-labelledby': P,
                 transitionState: t,
+                parentComponent: 'CameraPreviewModal',
                 children: [
                     (0, a.jsxs)(o.hzk, {
                         className: x ? I.contentWithVideoBackgrounds : I.content,

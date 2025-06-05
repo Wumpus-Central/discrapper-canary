@@ -516,6 +516,7 @@ function q(e) {
             }),
             (0, r.jsx)(g.Y0X, {
                 transitionState: l,
+                parentComponent: 'PremiumSubscriptionCancellationModal',
                 children: n
             })
         ]

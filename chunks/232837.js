@@ -1,4 +1,4 @@
-n.d(t, { default: () => m });
+n.d(t, { default: () => N });
 var r = n(255367);
 n(73800);
 var s = n(990547),
@@ -15,9 +15,9 @@ var s = n(990547),
     E = n(110223),
     I = n(981631),
     g = n(388032),
-    N = n(868269);
-function m(e) {
-    let { channelId: t, userId: n, transitionState: m, onClose: S } = e,
+    m = n(868269);
+function N(e) {
+    let { channelId: t, userId: n, transitionState: N, onClose: S } = e,
         h = (0, i.e7)([c.Z], () => c.Z.isBlocked(n)),
         x = (0, i.e7)([o.Z], () => o.Z.getChannel(t));
     if (null == u.default.getUser(n)) return null;
@@ -25,15 +25,15 @@ function m(e) {
             {
                 icon: (0, f.r)([n], null == x ? void 0 : x.guild_id),
                 text: (0, f.a)([n], 1, null == x ? void 0 : x.guild_id, t),
-                className: N.row
+                className: m.row
             },
             {
                 icon: (0, r.jsx)('div', {
-                    className: N.icon,
+                    className: m.icon,
                     children: (0, r.jsx)(a.aNP, {})
                 }),
                 text: g.intl.string(g.t['+4O9nZ']),
-                className: N.row
+                className: m.row
             }
         ],
         O = h
@@ -71,7 +71,7 @@ function m(e) {
         },
         leaveButtonText: g.intl.string(g.t['Y56/oK']),
         stayButtonText: g.intl.string(g.t['Z+/hfX']),
-        transitionState: m,
+        transitionState: N,
         onClose: S,
         impression: {
             impressionName: s.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING,

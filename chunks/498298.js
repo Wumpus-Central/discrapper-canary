@@ -1,8 +1,8 @@
 r.d(t, { default: () => l });
 var n = r(255367),
     o = r(73800),
-    c = r(481060),
-    i = r(388032);
+    i = r(481060),
+    c = r(388032);
 function l(e) {
     var t,
         r,
@@ -16,21 +16,21 @@ function l(e) {
                     var r,
                         n,
                         o = {},
-                        c = Object.keys(e);
-                    for (n = 0; n < c.length; n++) (r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var c = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < c.length; n++) (r = c[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
             }
             return o;
         })(e, ['onConfirm']);
-    let p = o.useCallback(() => {
-        l(), (0, c.pTH)();
+    let a = o.useCallback(() => {
+        l(), (0, i.pTH)();
     }, [l]);
     return (0, n.jsxs)(
-        c.Y0X,
+        i.Y0X,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -55,29 +55,30 @@ function l(e) {
                     });
             }
             return e;
-        })({ size: c.CgR.SMALL }, s)),
+        })({ size: i.CgR.SMALL }, s)),
         (r = r =
             {
+                parentComponent: 'DisableLandingPageWarningModal',
                 children: [
-                    (0, n.jsx)(c.hzk, {
-                        children: (0, n.jsx)(c.Text, {
+                    (0, n.jsx)(i.hzk, {
+                        children: (0, n.jsx)(i.Text, {
                             variant: 'text-md/normal',
                             style: { marginTop: 24 },
-                            children: i.intl.string(i.t.nmBUv7)
+                            children: c.intl.string(c.t.nmBUv7)
                         })
                     }),
-                    (0, n.jsxs)(c.mzw, {
+                    (0, n.jsxs)(i.mzw, {
                         children: [
-                            (0, n.jsx)(c.zxk, {
-                                color: c.Ttl.PRIMARY,
-                                onClick: c.pTH,
-                                children: i.intl.string(i.t['ETE/oK'])
+                            (0, n.jsx)(i.zxk, {
+                                color: i.Ttl.PRIMARY,
+                                onClick: i.pTH,
+                                children: c.intl.string(c.t['ETE/oK'])
                             }),
-                            (0, n.jsx)(c.zxk, {
-                                color: c.Ttl.RED,
-                                onClick: p,
+                            (0, n.jsx)(i.zxk, {
+                                color: i.Ttl.RED,
+                                onClick: a,
                                 style: { marginRight: 8 },
-                                children: i.intl.string(i.t.R9GHyc)
+                                children: c.intl.string(c.t.R9GHyc)
                             })
                         ]
                     })

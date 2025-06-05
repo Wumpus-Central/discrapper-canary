@@ -26,6 +26,7 @@ function C(t) {
         (0, s.jsxs)(l.Y0X, {
             transitionState: C,
             size: l.CgR.DYNAMIC,
+            parentComponent: 'AppDirectoryUpsellModal',
             children: [
                 (0, s.jsxs)(l.hzk, {
                     className: _.modalContent,

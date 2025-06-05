@@ -5,22 +5,23 @@ var l = n(255367),
     s = n(981888),
     a = n(157689),
     c = n(894017),
-    d = n(854698),
-    o = n(440371),
+    o = n(854698),
+    d = n(440371),
     u = n(388032),
     x = n(806802);
 function h(e) {
     let { guildEvent: t, recurrenceId: n, transitionState: h, onClose: g } = e,
-        f = (0, c.Z)(n, t.id),
-        j = (0, d.iA)(n, t),
-        m = (0, d.x6)(j, f),
-        [b, p] = r.useState(m),
+        m = (0, c.Z)(n, t.id),
+        f = (0, o.iA)(n, t),
+        j = (0, o.x6)(f, m),
+        [p, b] = r.useState(j),
         [_, { loading: v, error: k }] = (0, s.Z)(() => {
-            let e = (0, a.Z)(t, n, b, f);
+            let e = (0, a.Z)(t, n, p, m);
             return null == k && g(), e;
         });
     return (0, l.jsxs)(i.Y0X, {
         transitionState: h,
+        parentComponent: 'EditEventExceptionModal',
         children: [
             (0, l.jsx)(i.xBx, {
                 children: (0, l.jsx)(i.X6q, {
@@ -31,18 +32,18 @@ function h(e) {
             (0, l.jsxs)(i.hzk, {
                 className: x.content,
                 children: [
-                    (0, l.jsx)(o.Z, {
+                    (0, l.jsx)(d.Z, {
                         onScheduleChange: (e) => {
                             let { startDate: t, endDate: n } = e;
                             null != t && null != n && n.isBefore(t) && (n = t.clone().add(1, 'hour')),
-                                p({
+                                b({
                                     startDate: t,
                                     endDate: n
                                 });
                         },
-                        schedule: b,
-                        showEndDate: null != b.endDate,
-                        requireEndDate: null != b.endDate,
+                        schedule: p,
+                        showEndDate: null != p.endDate,
+                        requireEndDate: null != p.endDate,
                         guildId: t.guild_id,
                         recurrenceRule: t.recurrence_rule
                     }),
@@ -64,7 +65,7 @@ function h(e) {
                         onClick: _,
                         className: x.button,
                         submitting: v,
-                        disabled: (0, d.Y4)(b, m),
+                        disabled: (0, o.Y4)(p, j),
                         children: u.intl.string(u.t.e5VEcH)
                     }),
                     (0, l.jsx)(i.zxk, {

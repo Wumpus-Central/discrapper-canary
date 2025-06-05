@@ -11,8 +11,8 @@ var c = t(255367),
     h = t(692547),
     m = t(780384),
     C = t(481060),
-    x = t(457330),
-    p = t(749210),
+    p = t(457330),
+    x = t(749210),
     f = t(230711),
     N = t(99690),
     b = t(493773),
@@ -28,12 +28,12 @@ var c = t(255367),
     O = t(314897),
     S = t(592125),
     E = t(553795),
-    P = t(271383),
-    G = t(496675),
+    G = t(271383),
+    P = t(496675),
     w = t(259580),
     R = t(626135),
-    L = t(228643),
-    M = t(275759),
+    M = t(228643),
+    L = t(275759),
     Z = t(231757),
     V = t(753194),
     B = t(225104),
@@ -153,7 +153,7 @@ function X(e) {
         }
         if (
             null ==
-            (s = (0, M.n_)({
+            (s = (0, L.n_)({
                 connectionType: t,
                 connectionMetadataField: o,
                 operator: a,
@@ -177,16 +177,16 @@ function Q(e) {
     let { eligibilityStatesGroups: n, onPlatformConnect: t, onPlatformConnected: a } = e,
         [i, s] = o.useState({}),
         [u, m] = o.useState(0),
-        [x, p] = o.useState(null),
+        [p, x] = o.useState(null),
         [f, b] = o.useState(null),
         _ = o.useMemo(() => d().flatten(n), [n]),
         v = o.useMemo(() => d().groupBy(_, (e) => ''.concat(e.connection_type).concat(null != e.application_id ? ':'.concat(e.application_id) : '')), [_]);
     o.useEffect(() => m(Date.now()), [_]),
         o.useEffect(() => {
-            if (null == x) return;
-            let e = v[''.concat(x).concat(null != f ? ':'.concat(f.id) : '')];
-            null != e && e.every((e) => e.result) && a(x, f);
-        }, [v, x, f, a]);
+            if (null == p) return;
+            let e = v[''.concat(p).concat(null != f ? ':'.concat(f.id) : '')];
+            null != e && e.every((e) => e.result) && a(p, f);
+        }, [v, p, f, a]);
     let A = (0, C.dQu)(h.Z.unsafe_rawColors.GREEN_330).hex();
     return (0, c.jsx)(c.Fragment, {
         children: Object.keys(v)
@@ -200,16 +200,16 @@ function Q(e) {
                 let d,
                     h,
                     m,
-                    x = v[e],
-                    f = x.find((e) => null == e.operator),
-                    _ = x.filter((e) => null != e.operator),
+                    p = v[e],
+                    f = p.find((e) => null == e.operator),
+                    _ = p.filter((e) => null != e.operator),
                     g = (null == f || f.result) && _.every((e) => e.result),
-                    k = x.find((e) => null != e.application),
+                    k = p.find((e) => null != e.application),
                     T = j.Z.get(e),
                     O = null == T || T.enabled,
                     S = null == k ? void 0 : k.application,
                     E = (null == S ? void 0 : S.bot) != null ? new I.Z(S.bot) : null;
-                M.SJ.includes(null != (n = null == S ? void 0 : S.id) ? n : '')
+                L.SJ.includes(null != (n = null == S ? void 0 : S.id) ? n : '')
                     ? (d = (0, c.jsx)(V.Z, {
                           className: U.botTag,
                           color: A,
@@ -220,8 +220,8 @@ function Q(e) {
                           className: U.botTag,
                           verified: E.isVerifiedBot()
                       }));
-                let P = i[null != (o = null == T ? void 0 : T.type) ? o : D.Kt],
-                    G = !g && null != P && P <= u;
+                let G = i[null != (o = null == T ? void 0 : T.type) ? o : D.Kt],
+                    P = !g && null != G && G <= u;
                 return (
                     (h = g
                         ? (0, c.jsx)(C.dz2, {
@@ -229,7 +229,7 @@ function Q(e) {
                               color: 'currentColor',
                               className: U.connectionsChecksGroupCheckmark
                           })
-                        : G
+                        : P
                           ? (0, c.jsx)(C.zxk, {
                                 size: C.zxk.Sizes.TINY,
                                 look: C.zxk.Looks.LINK,
@@ -264,14 +264,14 @@ function Q(e) {
                                                   overrideUrl: null == S ? void 0 : S.role_connections_verification_url
                                               }),
                                               s(Y(K({}, i), { [n]: Date.now() })),
-                                              p(n),
+                                              x(n),
                                               b(null != S ? S : null),
                                               t())
                                           );
                                       }
                                     : void 0,
                             children: [
-                                !g && G
+                                !g && P
                                     ? (0, c.jsx)('div', {
                                           className: U.connectionsChecksGroupRequirementsNotMet,
                                           children: (0, c.jsx)(C.Text, {
@@ -354,7 +354,7 @@ function J(e) {
         { account: l, setShowPreviewInvisibleIcon: i, setShowPreviewMetadata: r } = e,
         [s, d] = o.useState(l.friendSync),
         [u, h] = o.useState(l.showActivity),
-        [m, p] = o.useState(1 === l.metadataVisibility),
+        [m, x] = o.useState(1 === l.metadataVisibility),
         [f, N] = o.useState(1 === l.visibility);
     (0, b.ZP)(() => {
         i(!f), r(m);
@@ -367,7 +367,7 @@ function J(e) {
                 hideBorder: !0,
                 value: s,
                 onChange: (e) => {
-                    d(e), x.Z.setFriendSync(l.type, l.id, e);
+                    d(e), p.Z.setFriendSync(l.type, l.id, e);
                 },
                 children: (0, c.jsx)(C.Text, {
                     variant: 'text-sm/semibold',
@@ -380,7 +380,7 @@ function J(e) {
                 hideBorder: !0,
                 value: u,
                 onChange: (e) => {
-                    h(e), x.Z.setShowActivity(l.type, l.id, e);
+                    h(e), p.Z.setShowActivity(l.type, l.id, e);
                 },
                 children: (0, c.jsx)(C.Text, {
                     variant: 'text-sm/semibold',
@@ -394,7 +394,7 @@ function J(e) {
                 value: m,
                 disabled: !f,
                 onChange: (e) => {
-                    r(e), p(e), x.Z.setMetadataVisibility(l.type, l.id, +!!e);
+                    r(e), x(e), p.Z.setMetadataVisibility(l.type, l.id, +!!e);
                 },
                 children: (0, c.jsx)(C.Text, {
                     variant: 'text-sm/semibold',
@@ -409,7 +409,7 @@ function J(e) {
                     hideBorder: !0,
                     value: f,
                     onChange: (e) => {
-                        i(!e), N(e), x.Z.setVisibility(l.type, l.id, +!!e);
+                        i(!e), N(e), p.Z.setVisibility(l.type, l.id, +!!e);
                     },
                     children: (0, c.jsx)(C.Text, {
                         variant: 'text-sm/semibold',
@@ -427,11 +427,11 @@ function $(e) {
     let { transitionState: n, onClose: t, guildId: a, role: l } = e,
         [i, s] = o.useState(0),
         [d, h] = o.useState(null),
-        [m, x] = o.useState(!1),
+        [m, p] = o.useState(!1),
         [N, b] = o.useState(!0),
         [y, g] = o.useState(!1),
         [I, w] = o.useState(!0),
-        [M, Z] = o.useState(!1),
+        [L, Z] = o.useState(!1),
         V = (0, u.e7)([E.Z], () => E.Z.getAccounts()),
         D = (0, u.e7)([O.default], () => O.default.getId()),
         [Y, q] = o.useState(null),
@@ -439,8 +439,8 @@ function $(e) {
         [ee, en] = o.useState(null),
         et = (0, _.ZP)(),
         ec = (0, u.e7)([T.default], () => T.default.locale),
-        eo = (0, u.e7)([P.ZP], () => P.ZP.getMember(a, D)),
-        ea = Object.values((0, u.e7)([S.Z], () => S.Z.getMutableGuildChannelsForGuild(a))).filter((e) => G.Z.can(F.Plq.VIEW_CHANNEL, e) && G.Z.can(F.Plq.SEND_MESSAGES, e) && (0, A.Z)(e).includes(l));
+        eo = (0, u.e7)([G.ZP], () => G.ZP.getMember(a, D)),
+        ea = Object.values((0, u.e7)([S.Z], () => S.Z.getMutableGuildChannelsForGuild(a))).filter((e) => P.Z.can(F.Plq.VIEW_CHANNEL, e) && P.Z.can(F.Plq.SEND_MESSAGES, e) && (0, A.Z)(e).includes(l));
     function el() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         null == t || t(), e && (0, C.Mr3)(z.s$, C.z1l);
@@ -452,7 +452,7 @@ function $(e) {
         el(!0), f.Z.open(F.oAB.CONNECTIONS);
     }
     async function es() {
-        g(!0), await p.Z.assignGuildRoleConnection(a, l.id);
+        g(!0), await x.Z.assignGuildRoleConnection(a, l.id);
     }
     function ed() {
         R.default.track(F.rMx.PASSPORT_CHALLENGE_STARTED, K({ role_id: l.id }, (0, v.hH)(a)));
@@ -463,7 +463,7 @@ function $(e) {
             $(n),
             s(1),
             null != n &&
-                (0, L.nj)()
+                (0, M.nj)()
                     .then((e) => {
                         en(e);
                     })
@@ -471,8 +471,8 @@ function $(e) {
     }
     return (
         o.useEffect(() => {
-            p.Z.fetchGuildRoleConnectionsEligibility(a, l.id).then((e) => {
-                h(e), x(e.some((e) => e.every((e) => e.result))), b(!1);
+            x.Z.fetchGuildRoleConnectionsEligibility(a, l.id).then((e) => {
+                h(e), p(e.some((e) => e.every((e) => e.result))), b(!1);
             });
         }, [a, l.id, V]),
         o.useEffect(() => {
@@ -486,6 +486,7 @@ function $(e) {
             transitionState: n,
             'aria-label': H.intl.string(H.t.zOZh3d),
             className: U.modalRoot,
+            parentComponent: 'GuildRoleConnectionsConnectAccountsModal',
             children: [
                 (function () {
                     switch (i) {
@@ -628,7 +629,7 @@ function $(e) {
                                                                                         locale: ec,
                                                                                         className: U.accountConnectedPreviewConnectedUserAccount,
                                                                                         showMetadata: I,
-                                                                                        showInvisibleIcon: M
+                                                                                        showInvisibleIcon: L
                                                                                     })
                                                                                 ]
                                                                             }),

@@ -536,6 +536,7 @@ function eo(e) {
                     invite_channel_id: null == ef ? void 0 : ef.id
                 }
             },
+            parentComponent: 'InstantInviteRefreshModal',
             children: [
                 (0, l.jsxs)(g.xBx, {
                     className: Q.header,

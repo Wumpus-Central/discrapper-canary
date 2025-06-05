@@ -1,11 +1,11 @@
-r.d(t, { default: () => f });
+r.d(t, { default: () => d });
 var n = r(255367),
     o = r(73800),
     l = r(481060),
     s = r(782568),
-    c = r(690221),
+    a = r(690221),
     i = r(460181),
-    a = r(388032),
+    c = r(388032),
     u = r(835362);
 let b = [
     {
@@ -29,16 +29,17 @@ function p(e) {
         children: [t.preBold, (0, n.jsx)('b', { children: (0, n.jsx)('i', { children: t.bold }) }), t.postBold]
     });
 }
-function f(e) {
-    let { transitionState: t, onClose: r, asanaTask: f } = e;
+function d(e) {
+    let { transitionState: t, onClose: r, asanaTask: d } = e;
     o.useEffect(() => {
         (0, i.GN)('success', 0.1);
     }, []);
-    let d = o.useRef(b[Math.floor(Math.random() * b.length)]).current;
+    let f = o.useRef(b[Math.floor(Math.random() * b.length)]).current;
     return (0, n.jsx)(l.Y0X, {
         className: u.bugReporterSubmitModalRoot,
         transitionState: t,
-        'aria-label': a.intl.string(a.t.mCCdws),
+        'aria-label': c.intl.string(c.t.mCCdws),
+        parentComponent: 'BugReporterSubmitModal',
         children: (0, n.jsxs)(l.hzk, {
             style: {
                 overflow: 'hidden',
@@ -58,13 +59,13 @@ function f(e) {
                     variant: 'text-sm/normal',
                     children: [
                         'Thanks for submitting a ',
-                        (0, n.jsx)(c.Z, {
-                            onClick: () => (0, s.Z)(f.permalink_url),
+                        (0, n.jsx)(a.Z, {
+                            onClick: () => (0, s.Z)(d.permalink_url),
                             children: 'bug'
                         }),
                         '!',
                         (0, n.jsx)('br', {}),
-                        (0, n.jsx)(p, { punConfig: d })
+                        (0, n.jsx)(p, { punConfig: f })
                     ]
                 })
             ]

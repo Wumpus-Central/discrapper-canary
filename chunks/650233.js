@@ -24,6 +24,7 @@ function h(e) {
             transitionState: t,
             'aria-label': m.intl.string(m.t['3khS8P']),
             impression: { impressionName: r.ImpressionNames.HUB_EMAIL_SIGNUP },
+            parentComponent: 'HubEmailConnectionModal',
             children: (0, l.jsx)(s.hzk, {
                 style: {
                     overflow: 'hidden',

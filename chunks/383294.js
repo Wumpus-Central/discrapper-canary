@@ -19,8 +19,8 @@ var r = t(255367),
     y = t(960919),
     O = t(272008),
     j = t(497505),
-    v = t(46140),
-    C = t(981631),
+    C = t(46140),
+    v = t(981631),
     S = t(215023),
     N = t(388032),
     B = t(696693),
@@ -94,6 +94,7 @@ function k(e) {
         transitionState: n,
         size: l.CgR.DYNAMIC,
         className: B.modal,
+        parentComponent: 'QuestsOrbsRewardModal',
         children: [
             (0, r.jsx)('div', {
                 className: B.header,
@@ -142,7 +143,7 @@ function k(e) {
                                 look: l.iLD.LINK,
                                 color: l.Ttl.CUSTOM,
                                 className: B.orbsTermsButton,
-                                onClick: () => window.open(C.EYA.PAID_TERMS_ORBS),
+                                onClick: () => window.open(v.EYA.PAID_TERMS_ORBS),
                                 children: N.intl.string(N.t['7kTAgI'])
                             })
                         ]
@@ -246,15 +247,15 @@ function L(e) {
         b = a.useCallback(() => {
             o(),
                 (0, g.Y)({
-                    pageType: C.ZY5.GLOBAL_DISCOVERY_QUESTS,
-                    sectionType: C.jXE.ORBS_REWARD_MODAL,
-                    ctaObject: C.qAy.CTA_TO_ORBS_SHOP
+                    pageType: v.ZY5.GLOBAL_DISCOVERY_QUESTS,
+                    sectionType: v.jXE.ORBS_REWARD_MODAL,
+                    ctaObject: v.qAy.CTA_TO_ORBS_SHOP
                 }),
                 (0, p.mK)({
                     openInLayer: !1,
                     tab: S.AW.ORBS,
                     analyticsLocations: [],
-                    analyticsSource: c.id === v.V6 ? f.Z.INTRO_TO_ORBS_QUEST : f.Z.QUEST_HOME_PAGE
+                    analyticsSource: c.id === C.V6 ? f.Z.INTRO_TO_ORBS_QUEST : f.Z.QUEST_HOME_PAGE
                 }),
                 u({ delayMS: 300 });
         }, [o, u, c.id]);

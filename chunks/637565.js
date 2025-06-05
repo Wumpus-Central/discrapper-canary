@@ -12,7 +12,7 @@ function a(t, n, e) {
     }
     let s = n[t.getEveryoneRoleId()],
         _ = null != s && !i.e$(s.permissions, r.Plq.VIEW_CHANNEL),
-        p = (0, d.wB)(e, e.permissionOverwrites[t.id]);
-    if (_ && !p) for (let t of Object.values(n)) (0, l.Z)(t) && (0, d.MT)(t) && a.add(t);
+        o = (0, d.wB)(e, e.permissionOverwrites[t.id]);
+    if (_ && !o) for (let t of Object.values(n)) (0, l.Z)(t) && (0, d.MT)(t) && a.add(t);
     return [...a];
 }

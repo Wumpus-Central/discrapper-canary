@@ -9,21 +9,21 @@ var r = n(481060),
     c = n(981631),
     d = n(927923),
     u = n(388032),
-    f = n(544200),
-    p = n(629582);
+    p = n(544200),
+    f = n(629582);
 function b() {
     return (0, o.jsxs)('div', {
-        className: f.getXboxApp,
+        className: p.getXboxApp,
         children: [
             (0, o.jsxs)('div', {
-                className: f.getXboxAppBody,
+                className: p.getXboxAppBody,
                 children: [
                     (0, o.jsxs)(r.X6q, {
-                        className: f.getXboxAppHeading,
+                        className: p.getXboxAppHeading,
                         variant: 'text-lg/semibold',
                         children: [
                             (0, o.jsx)('div', {
-                                className: f.xboxLogoBox,
+                                className: p.xboxLogoBox,
                                 children: (0, o.jsx)('img', {
                                     src: i.Z.get(c.ABu.XBOX).icon.whiteSVG,
                                     alt: ''
@@ -49,7 +49,7 @@ function b() {
                 ]
             }),
             (0, o.jsx)(s.ZP, {
-                className: f.getXboxAppQR,
+                className: p.getXboxAppQR,
                 text: d.X3,
                 size: 90
             })
@@ -60,7 +60,7 @@ function x(e) {
     let { onClose: t } = e;
     return (0, o.jsx)(l.L, {
         img: (0, o.jsx)('img', {
-            src: p.Z,
+            src: f.Z,
             width: '124',
             height: '160',
             alt: ''

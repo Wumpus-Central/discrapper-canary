@@ -87,8 +87,8 @@ function v() {
             noiseCancellationSupported: m.Z.isNoiseCancellationSupported()
         })),
         I = E ? 'KRISP' : T ? 'STANDARD' : 'NONE',
-        k = (0, d.N)(),
-        w = r.useCallback(() => {
+        w = (0, d.N)(),
+        k = r.useCallback(() => {
             var e;
             null == (e = j.current) || e.stop(), (j.current = null), g(null);
         }, []);
@@ -96,13 +96,13 @@ function v() {
         m.Z.getMediaEngine().stopRecordingRawSamples();
     }
     function A(e) {
-        if ((t && R(), w(), null == k)) return;
-        let n = k.createBufferSource();
-        (n.buffer = e.audioBuffer), (_.current = k.createGain()), (_.current.gain.value = y), n.connect(_.current), _.current.connect(k.destination), (n.loop = !0), n.start(), (j.current = n), g(e);
+        if ((t && R(), k(), null == w)) return;
+        let n = w.createBufferSource();
+        (n.buffer = e.audioBuffer), (_.current = w.createGain()), (_.current.gain.value = y), n.connect(_.current), _.current.connect(w.destination), (n.loop = !0), n.start(), (j.current = n), g(e);
     }
     r.useEffect(() => {
-        w();
-    }, [w]);
+        k();
+    }, [k]);
     let Z = [];
     return (
         P &&
@@ -173,7 +173,7 @@ function v() {
                             onClick: t
                                 ? R
                                 : function () {
-                                      w(),
+                                      k(),
                                           n(!0),
                                           c.Z.setLoopback('krisp_test', !0),
                                           m.Z.getMediaEngine().startRecordingRawSamples((t, a, r) => {
@@ -227,7 +227,7 @@ function v() {
                                     recording: e,
                                     playing: e === v,
                                     onPlay: A,
-                                    onStop: w
+                                    onStop: k
                                 },
                                 t
                             )

@@ -21,11 +21,11 @@ var c = t(442837),
 function g(e) {
     var n;
     let { user: t, currentUser: g, guildId: Z, channelId: v, displayProfile: j, initialSection: A, initialSubsection: N, onClose: O } = e,
-        { relationshipType: C, originApplicationId: T } = (0, c.cj)([a.Z], () => ({
+        { relationshipType: C, originApplicationId: P } = (0, c.cj)([a.Z], () => ({
             relationshipType: a.Z.getRelationshipType(t.id),
             originApplicationId: a.Z.getOriginApplicationId(t.id)
         })),
-        P = (0, i.vh)(t.id),
+        T = (0, i.vh)(t.id),
         w = t.id === g.id,
         S = (0, d.I5)(g),
         E = r.ZP.useName(null == j ? void 0 : j.guildId, v, t),
@@ -59,13 +59,13 @@ function g(e) {
                     className: y.bannerContainer,
                     children: (0, o.jsx)(f.Z, {
                         user: t,
-                        applicationId: T,
+                        applicationId: P,
                         guildId: null != (n = null == j ? void 0 : j.guildId) ? n : void 0,
                         channelId: v,
                         className: y.friendRequestBanner
                     })
                 }),
-            P.map((e) => {
+            T.map((e) => {
                 var n;
                 return (0, o.jsx)(
                     p.Z.Overlay,

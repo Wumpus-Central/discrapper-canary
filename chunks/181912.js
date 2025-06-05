@@ -17,7 +17,7 @@ function m(e) {
         n = g.intl.string(g.t.ssrVzM),
         m = (0, s.x)(e),
         y = (0, c.Z)(e),
-        { trackView: _, trackClick: v } = (0, h.R)(f.n0.IncomingCall, {
+        { trackView: v, trackClick: _ } = (0, h.R)(f.n0.IncomingCall, {
             notif_type: f.n0.IncomingCall,
             notif_user_id: y,
             guild_id: e.guild_id,
@@ -32,7 +32,7 @@ function m(e) {
         confirmText: g.intl.string(g.t['0D/6R0']),
         cancelText: g.intl.string(g.t.BVN4pK),
         onNotificationShow: () => {
-            _();
+            v();
         },
         onConfirmClick: () => {
             if (p.TPd.CALLABLE.has(e.type)) r.Z.callPrivateChannel(e.id);
@@ -40,7 +40,7 @@ function m(e) {
                 if (e.type !== p.d4z.GUILD_VOICE) return;
                 o.default.selectVoiceChannel(e.id);
             }
-            v('join'),
+            _('join'),
                 r.Z.track(p.rMx.VOICE_CHANNEL_SELECTED, {
                     location: 'Overlay Notificaiton',
                     guild_id: e.guild_id,
@@ -49,10 +49,10 @@ function m(e) {
                 });
         },
         onCancelClick: () => {
-            i.Z.stopRinging(e.id), v('decline');
+            i.Z.stopRinging(e.id), _('decline');
         },
         onDismissClick: () => {
-            v('dismiss');
+            _('dismiss');
         }
     };
 }

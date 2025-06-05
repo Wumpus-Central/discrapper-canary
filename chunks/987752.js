@@ -111,6 +111,7 @@ function P(e) {
             (0, r.jsxs)(c.Y0X, {
                 className: e,
                 transitionState: t,
+                parentComponent: 'ClickerStats',
                 children: [
                     (0, r.jsxs)(c.xBx, {
                         className: x.header,

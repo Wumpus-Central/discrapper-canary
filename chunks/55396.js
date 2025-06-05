@@ -13,8 +13,8 @@ var n = a(255367),
     g = a(669764),
     x = a(925329),
     p = a(77498),
-    j = a(49012),
-    f = a(810568),
+    f = a(49012),
+    j = a(810568),
     v = a(701488),
     N = a(388032),
     _ = a(271387);
@@ -87,11 +87,11 @@ function k(e) {
                 children: (0, n.jsx)(c.zxk, {
                     fullWidth: !0,
                     onClick: () => {
-                        (0, j.q)({
+                        (0, f.q)({
                             href: (null == i ? void 0 : i.name) != null ? ''.concat('https://www.igdb.com/search?utf8=\u2713&q=').concat(encodeURIComponent(i.name)) : 'https://www.igdb.com',
                             trusted: !0
                         }),
-                            (0, f.MH)({
+                            (0, j.MH)({
                                 applicationId: t,
                                 submitted: !0,
                                 viewId: l
@@ -122,20 +122,20 @@ let b = (e) => {
         ]
     });
 };
-function w(e) {
+function C(e) {
     var t, a, i;
-    let { applicationId: x, onSubmitted: j, viewId: I } = e,
-        [k, w] = l.useState(''),
-        C = (0, o.e7)([m.Z], () => m.Z.getApplication(x)),
+    let { applicationId: x, onSubmitted: f, viewId: I } = e,
+        [k, C] = l.useState(''),
+        w = (0, o.e7)([m.Z], () => m.Z.getApplication(x)),
         [S, z] = l.useState(''),
         G = (0, o.e7)([g.Z], () => g.Z.getGame(x)),
-        L = null != (a = null != (t = null == G ? void 0 : G.name) ? t : null == C ? void 0 : C.name) ? a : '',
-        Z = null == C ? void 0 : C.getIconURL(v.Si.LARGE),
-        { primaryColor: X, secondaryColor: q } = (0, h.Z)(Z);
+        L = null != (a = null != (t = null == G ? void 0 : G.name) ? t : null == w ? void 0 : w.name) ? a : '',
+        Z = null == w ? void 0 : w.getIconURL(v.Si.LARGE),
+        { primaryColor: F, secondaryColor: X } = (0, h.Z)(Z);
     l.useEffect(() => {
         d.Z.getDetectableGames();
     }, []);
-    let B = (0, o.Wu)(
+    let q = (0, o.Wu)(
             [p.Z],
             () => {
                 let e = ((null == k ? void 0 : k.length) > 0 ? k : L).toLowerCase(),
@@ -151,11 +151,11 @@ function w(e) {
             },
             [x, S, L, k]
         ),
-        F = (0, u.Z)(B.map((e) => e.id)),
-        R = (0, r.chain)(F).compact().keyBy('id').value(),
-        T = k.length > 0 && !B.map((e) => e.name.toLowerCase()).includes(k.toLowerCase()),
+        B = (0, u.Z)(q.map((e) => e.id)),
+        R = (0, r.chain)(B).compact().keyBy('id').value(),
+        T = k.length > 0 && !q.map((e) => e.name.toLowerCase()).includes(k.toLowerCase()),
         y = S === x || (null === S && 0 === k.length),
-        A = B.map((e) => {
+        A = q.map((e) => {
             let { name: t, id: a } = e;
             return {
                 name: (0, n.jsx)(b, {
@@ -189,7 +189,7 @@ function w(e) {
                         }),
                         (0, n.jsxs)('div', {
                             className: _.gameInfoBox,
-                            style: { background: 'linear-gradient(45deg, '.concat(X, ', ').concat(q, ')') },
+                            style: { background: 'linear-gradient(45deg, '.concat(F, ', ').concat(X, ')') },
                             children: [
                                 null != Z &&
                                     (0, n.jsx)('img', {
@@ -200,7 +200,7 @@ function w(e) {
                                 (0, n.jsx)(c.X6q, {
                                     variant: 'heading-lg/semibold',
                                     className: _.gameTitle,
-                                    children: null != (i = null == G ? void 0 : G.name) ? i : null == C ? void 0 : C.name
+                                    children: null != (i = null == G ? void 0 : G.name) ? i : null == w ? void 0 : w.name
                                 })
                             ]
                         }),
@@ -214,14 +214,14 @@ function w(e) {
                                         if (0 === e.length) null === S && z(x);
                                         else {
                                             var t;
-                                            let a = B.find((t) => t.name.toLowerCase() === e.toLowerCase());
+                                            let a = q.find((t) => t.name.toLowerCase() === e.toLowerCase());
                                             z(null != (t = null == a ? void 0 : a.id) ? t : '');
                                         }
-                                        w(e);
+                                        C(e);
                                     },
                                     size: c.E1j.Sizes.MEDIUM,
                                     onClear: () => {
-                                        null === S && z(x), w('');
+                                        null === S && z(x), C('');
                                     },
                                     placeholder: N.intl.string(N.t.UedRLy)
                                 }),
@@ -247,14 +247,14 @@ function w(e) {
                         fullWidth: !0,
                         onClick: () => {
                             let e = null != S && S.length > 0;
-                            (0, f.MH)({
+                            (0, j.MH)({
                                 applicationId: x,
                                 suggestedGameApplicationId: e ? S : void 0,
                                 suggestedGameName: e ? void 0 : k,
                                 submitted: !0,
                                 viewId: I
                             }),
-                                j();
+                                f();
                         },
                         disabled: y,
                         children: N.intl.string(N.t.geKm7u)
@@ -264,7 +264,7 @@ function w(e) {
         })
     );
 }
-function C(e) {
+function w(e) {
     let { applicationId: t, onSubmitted: a, viewId: i } = e,
         [s, r] = l.useState('');
     return (0, n.jsxs)(n.Fragment, {
@@ -298,7 +298,7 @@ function C(e) {
                 children: (0, n.jsx)(c.zxk, {
                     fullWidth: !0,
                     onClick: () => {
-                        (0, f.MH)({
+                        (0, j.MH)({
                             applicationId: t,
                             submitted: !0,
                             feedback: s,
@@ -349,6 +349,7 @@ function z(e) {
     return (0, n.jsx)(c.Y0X, {
         size: c.CgR.SMALL,
         transitionState: i,
+        parentComponent: 'GameProfileFeedbackModal',
         children: (() => {
             switch (o) {
                 case 0:
@@ -357,7 +358,7 @@ function z(e) {
                         onChoice: (e) => d(e)
                     });
                 case 1:
-                    return (0, n.jsx)(w, {
+                    return (0, n.jsx)(C, {
                         applicationId: t,
                         viewId: a,
                         onSubmitted: () => d(4)
@@ -369,7 +370,7 @@ function z(e) {
                         onSubmitted: () => s()
                     });
                 case 3:
-                    return (0, n.jsx)(C, {
+                    return (0, n.jsx)(w, {
                         applicationId: t,
                         viewId: a,
                         onSubmitted: () => d(4)
