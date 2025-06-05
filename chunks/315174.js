@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => k,
+    ZP: () => M,
     wD: () => T
 }),
     n(388685);
@@ -326,31 +326,31 @@ function L(e) {
         ]
     });
 }
-let k = i.memo(function (e) {
+let M = i.memo(function (e) {
     let { ref: t, bannerVisible: n, controller: l, className: s, onClick: c, onContextMenu: d, onMouseDown: f, disableBannerAnimation: m, 'aria-expanded': b, 'aria-controls': O, guild: _, guildBanner: j, animationOverlayHeight: S, children: x, headerClassName: Z, communityInfoVisible: T, hasSubheader: A } = e,
         D = _.hasFeature(C.oNc.ANIMATED_BANNER),
-        k = (0, p.Z)(_),
-        U = !k && _.hasCommunityInfoSubheader(),
-        G = !k && T,
+        M = (0, p.Z)(_),
+        U = !M && _.hasCommunityInfoSubheader(),
+        G = !M && T,
         B = (0, v.xR)(j) && D && !m,
         [V, H] = i.useState(!1),
         F = i.useRef(!1),
         z = i.useRef(null),
         W = null != t ? t : z,
-        Y = i.useRef(void 0),
-        K = y.QK.getSetting();
+        K = i.useRef(void 0),
+        Y = y.QK.getSetting();
     i.useEffect(() => {
-        if (B && n && !F.current && K)
+        if (B && n && !F.current && Y)
             return (
                 H(!0),
-                (Y.current = setTimeout(() => {
+                (K.current = setTimeout(() => {
                     H(!1);
                 }, 5000)),
                 () => {
-                    clearTimeout(Y.current);
+                    clearTimeout(K.current);
                 }
             );
-    }, [B, n, K]),
+    }, [B, n, Y]),
         i.useEffect(() => {
             F.current = n;
         }, [n]);
@@ -417,14 +417,14 @@ let k = i.memo(function (e) {
                                       isRefreshEnabled: Q
                                   })
                                 : null,
-                            (0, r.jsx)(M, { controller: l })
+                            (0, r.jsx)(k, { controller: l })
                         ]
                     }),
                     B && q()
                         ? (0, r.jsx)('div', {
                               className: E.animatedBannerHoverLayer,
                               onMouseEnter: () => {
-                                  H(!0), clearTimeout(Y.current);
+                                  H(!0), clearTimeout(K.current);
                               },
                               onMouseLeave: () => H(!1),
                               style: { height: S }
@@ -434,7 +434,7 @@ let k = i.memo(function (e) {
             })
     });
 });
-function M(e) {
+function k(e) {
     let { controller: t } = e,
         n = (0, h.Q3)('GuildHeaderOverlay'),
         { theme: i } = (0, u.TCT)();

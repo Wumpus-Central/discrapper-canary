@@ -1,7 +1,7 @@
 n.d(t, {
     Eo: () => A,
     VD: () => P,
-    ZP: () => Z
+    ZP: () => x
 }),
     n(388685),
     n(953529);
@@ -35,8 +35,8 @@ function P(e) {
         g = (0, h.Q3)('BaseGlobalDiscoveryServersCard'),
         [m, O] = i.useState(!1),
         [P, j] = i.useState(!1),
-        [A, Z] = i.useState(!1),
-        x = i.useRef(null),
+        [A, x] = i.useState(!1),
+        Z = i.useRef(null),
         L = i.useCallback(async () => {
             j(!0);
             try {
@@ -143,12 +143,12 @@ function P(e) {
                     })
                 }),
             (0, r.jsx)(s.$, {
-                innerRef: x,
+                innerRef: Z,
                 onChange: w,
                 active: !m,
                 threshold: 0.55,
                 children: (0, r.jsxs)(f.Z, {
-                    ref: x,
+                    ref: Z,
                     className: C.card,
                     onClick: L,
                     disabled: P,
@@ -164,7 +164,7 @@ function P(e) {
                                         src: M,
                                         alt: '',
                                         className: C.bannerImage,
-                                        onLoad: () => Z(!0)
+                                        onLoad: () => x(!0)
                                     })
                                 }),
                                 (0, r.jsx)(I.Z, {
@@ -321,4 +321,4 @@ function A(e) {
         })
     });
 }
-let Z = i.memo(j);
+let x = i.memo(j);

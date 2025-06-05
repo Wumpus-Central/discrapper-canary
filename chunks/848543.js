@@ -89,10 +89,10 @@ function A(e) {
             return i;
         })(e, ['channel']);
     let A = i.useRef(null),
-        Z = (0, m.Q3)('SoundBoardRTCPanelButton'),
-        { mute: x, suppress: L } = (0, _.Z)(t),
+        x = (0, m.Q3)('SoundBoardRTCPanelButton'),
+        { mute: Z, suppress: L } = (0, _.Z)(t),
         w = (0, o.e7)([E.Z], () => E.Z.isDeaf()),
-        R = x || L || w,
+        R = Z || L || w,
         [D, k] = i.useState(!1),
         M = t.getGuildId(),
         U = (0, I.sR)({ isSoundboardButtonDisabled: R }),
@@ -174,7 +174,7 @@ function A(e) {
                                         },
                                         onContextMenu: F,
                                         fullWidth: !0,
-                                        size: Z ? u.zxk.Sizes.MEDIUM : u.zxk.Sizes.SMALL
+                                        size: x ? u.zxk.Sizes.MEDIUM : u.zxk.Sizes.SMALL
                                     }),
                                     l
                                 ),
@@ -201,7 +201,7 @@ function A(e) {
             value: V,
             children: (0, r.jsx)(u.ua7, {
                 targetElementRef: A,
-                text: x ? N.intl.string(N.t['Ox4/zc']) : L ? N.intl.string(N.t['+YBKYG']) : w ? N.intl.string(N.t.X1lQlp) : N.intl.string(N.t['6EJvHh']),
+                text: Z ? N.intl.string(N.t['Ox4/zc']) : L ? N.intl.string(N.t['+YBKYG']) : w ? N.intl.string(N.t.X1lQlp) : N.intl.string(N.t['6EJvHh']),
                 children: (e) => q(e)
             })
         })

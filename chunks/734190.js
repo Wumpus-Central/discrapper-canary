@@ -161,9 +161,9 @@ function A(e) {
 let R = i.memo(function (e) {
     let { thread: t, isSelectedChannel: l, isSelectedVoice: w, isLast: R, withGuildIcon: D } = e,
         L = (0, a.e7)([O.ZP], () => O.ZP.getVoiceStatesForChannel(t), [t]),
-        k = (0, a.e7)([y.Z], () => y.Z.hasVideo(t.id)),
+        M = (0, a.e7)([y.Z], () => y.Z.hasVideo(t.id)),
         {
-            unread: M,
+            unread: k,
             mentionCount: U,
             isMentionLowImportance: G
         } = (0, a.cj)([b.ZP], () => ({
@@ -194,8 +194,8 @@ let R = i.memo(function (e) {
         ),
         z = null == L ? 0 : L.length,
         W = (0, s.JA)(t.id),
-        { role: Y } = W,
-        K = (function (e, t) {
+        { role: K } = W,
+        Y = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -221,12 +221,12 @@ let R = i.memo(function (e) {
                       channelName: t.name,
                       mentionCount: U
                   })
-                : M
+                : k
                   ? E.intl.formatToPlainString(E.t.YlVvmZ, { channelName: t.name })
                   : E.intl.formatToPlainString(E.t['0nZpiI'], { channelName: t.name }),
         X = (0, p.Q3)('GuildSidebarThreadListEntry') ? T : A;
     return (0, r.jsxs)('li', {
-        role: Y,
+        role: K,
         className: o()(P.containerDefault, { [P.selected]: l }),
         children: [
             (0, r.jsx)(X, { withGuildIcon: D }),
@@ -249,16 +249,16 @@ let R = i.memo(function (e) {
                     className: o()(P.iconVisibility, I.wrapper, I.typeThread, {
                         [I.modeSelected]: l,
                         [I.modeMuted]: !l && B,
-                        [I.modeUnreadImportant]: !B && !l && M,
+                        [I.modeUnreadImportant]: !B && !l && k,
                         [I.withGuildIcon]: D
                     }),
                     onMouseDown: H,
                     onContextMenu: F,
                     children: [
-                        !M || B || l ? null : (0, r.jsx)('div', { className: o()(I.unread, I.unreadImportant) }),
+                        !k || B || l ? null : (0, r.jsx)('div', { className: o()(I.unread, I.unreadImportant) }),
                         (0, r.jsx)(
                             c.P3F,
-                            Z(N({}, K), {
+                            Z(N({}, Y), {
                                 innerRef: q,
                                 className: I.link,
                                 onClick: V,
@@ -278,7 +278,7 @@ let R = i.memo(function (e) {
                                                 z > 0 && t.userLimit > 0
                                                     ? (0, r.jsx)(_.Z, {
                                                           userCount: z,
-                                                          video: k,
+                                                          video: M,
                                                           channel: t
                                                       })
                                                     : null,

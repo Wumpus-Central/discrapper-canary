@@ -5,15 +5,15 @@ var l = e(399606),
     r = e(481060),
     d = e(231757),
     a = e(397639),
-    _ = e(19780),
-    s = e(979651),
+    s = e(19780),
+    _ = e(979651),
     u = e(951206),
     o = e(446226),
     p = e(937393),
     E = e(721351),
     g = e(981631),
-    I = e(388032);
-function c(t) {
+    c = e(388032);
+function I(t) {
     for (var n = 1; n < arguments.length; n++) {
         var e = null != arguments[n] ? arguments[n] : {},
             i = Object.keys(e);
@@ -57,12 +57,12 @@ function T(t, n) {
     );
 }
 function O(t) {
-    let n = (0, l.e7)([_.Z], () => _.Z.getChannelId() === t.id),
+    let n = (0, l.e7)([s.Z], () => s.Z.getChannelId() === t.id),
         O = (0, o.Z)(),
         D = (null == O ? void 0 : O.channelId) === t.id,
         L = (0, a.V)(t) && !t.isPrivate(),
-        U = (0, a.Z)(t),
-        m = (!(0, l.e7)([s.Z], () => s.Z.isInChannel(t.id)) && U) || L,
+        m = (0, a.Z)(t),
+        U = (!(0, l.e7)([_.Z], () => _.Z.isInChannel(t.id)) && m) || L,
         A = (0, p.Z)();
     if (!D && 0 === A.length) return null;
     let S = (n) => {
@@ -74,7 +74,7 @@ function O(t) {
         n.type === g.ABu.XBOX
             ? (0, r.ZDy)(async () => {
                   let { default: n } = await Promise.all([e.e('58994'), e.e('522')]).then(e.bind(e, 200623));
-                  return (e) => (0, i.jsx)(n, T(c({}, e), { channel: t }));
+                  return (e) => (0, i.jsx)(n, T(I({}, e), { channel: t }));
               })
             : (n.type === g.ABu.PLAYSTATION || n.type === g.ABu.PLAYSTATION_STAGING) &&
               (0, r.ZDy)(async () => {
@@ -82,7 +82,7 @@ function O(t) {
                   return (e) =>
                       (0, i.jsx)(
                           l,
-                          T(c({}, e), {
+                          T(I({}, e), {
                               platform: n.type,
                               channel: t
                           })
@@ -91,13 +91,13 @@ function O(t) {
     };
     return D
         ? (0, i.jsx)(r.sNh, {
-              label: I.intl.string(I.t.PlwgdX),
+              label: c.intl.string(c.t.PlwgdX),
               id: 'handoff',
               action: () => {
                   (0, u.F)(O);
               },
               icon: (0, E.Z)(void 0),
-              disabled: m
+              disabled: U
           })
         : A.map((t) => {
               var e, l;
@@ -105,10 +105,10 @@ function O(t) {
                   r.sNh,
                   {
                       id: 'transfer-'.concat(t.type, '-').concat(t.id),
-                      label: ((e = t.type), (l = n), e === g.ABu.XBOX ? (l ? I.intl.string(I.t['qVE/VF']) : I.intl.string(I.t.E8euSk)) : e === g.ABu.PLAYSTATION ? (l ? I.intl.string(I.t.vzfxmZ) : I.intl.string(I.t.QxEYDg)) : e === g.ABu.PLAYSTATION_STAGING ? (l ? I.intl.string(I.t.BDiXtb) : I.intl.string(I.t['bhdB9/'])) : void 0),
+                      label: ((e = t.type), (l = n), e === g.ABu.XBOX ? (l ? c.intl.string(c.t['qVE/VF']) : c.intl.string(c.t.E8euSk)) : e === g.ABu.PLAYSTATION ? (l ? c.intl.string(c.t.vzfxmZ) : c.intl.string(c.t.QxEYDg)) : e === g.ABu.PLAYSTATION_STAGING ? (l ? c.intl.string(c.t.BDiXtb) : c.intl.string(c.t['bhdB9/'])) : void 0),
                       action: () => S(t),
                       icon: (0, E.Z)(t.type),
-                      disabled: m
+                      disabled: U
                   },
                   t.id
               );

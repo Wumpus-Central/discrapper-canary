@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(925329),
     D = n(102172),
     L = n(74299),
-    k = n(914923),
-    M = n(165393),
+    M = n(914923),
+    k = n(165393),
     U = n(989941),
     G = n(690221),
     B = n(231664),
@@ -43,8 +43,8 @@ var r = n(255367),
     F = n(131704),
     z = n(199902),
     W = n(314897),
-    Y = n(592125),
-    K = n(984933),
+    K = n(592125),
+    Y = n(984933),
     q = n(430824),
     Q = n(131951),
     X = n(496675),
@@ -147,12 +147,12 @@ class ey extends i.PureComponent {
     }
     renderScreenshare() {
         let { isStreaming: e, streamMetadata: t, streamQualityIndicator: n } = this.props,
-            { title: i, sanitizedTitle: l } = (0, k.Z)(t);
+            { title: i, sanitizedTitle: l } = (0, M.Z)(t);
         return (0, r.jsxs)('div', {
             className: ep.gameWrapper,
             children: [
                 e
-                    ? (0, r.jsx)(M.Z, {
+                    ? (0, r.jsx)(k.Z, {
                           title: l,
                           icon: null == t ? void 0 : t.sourceIcon
                       })
@@ -330,22 +330,22 @@ let eO = (0, b.Z)(function (e) {
         })(e, ['guildId']);
     let o = (0, u.e7)([W.default], () => W.default.getId()),
         s = (0, u.e7)([A.ZP, en.Z], () => (0, U.Z)(A.ZP, en.Z)),
-        a = (0, u.e7)([ee.Z, Y.Z], () => Y.Z.getChannel(ee.Z.getVoiceChannelId())),
+        a = (0, u.e7)([ee.Z, K.Z], () => K.Z.getChannel(ee.Z.getVoiceChannelId())),
         c = (0, u.e7)([_.ZP], () => _.ZP.getConnectedActivityChannelId()),
-        h = (0, u.e7)([Y.Z], () => Y.Z.getChannel(c)),
+        h = (0, u.e7)([K.Z], () => K.Z.getChannel(c)),
         p = (0, u.e7)([q.Z], () => q.Z.getGuild(null == h ? void 0 : h.guild_id)),
         [f, g] = (0, u.Wu)([z.Z], () => [z.Z.getCurrentUserActiveStream(), z.Z.getStreamerActiveStreamMetadata()]),
         m = (0, u.e7)([y.Z], () => y.Z.useReducedMotion),
         b = (0, u.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
-        v = (0, u.e7)([q.Z, X.Z, K.ZP], () => (null != a ? D.JL(a, q.Z, X.Z, !1) : null != n && D.h_(K.ZP.getChannels(n), q.Z, X.Z).length > 0)),
+        v = (0, u.e7)([q.Z, X.Z, Y.ZP], () => (null != a ? D.JL(a, q.Z, X.Z, !1) : null != n && D.h_(Y.ZP.getChannels(n), q.Z, X.Z).length > 0)),
         [j] = (0, x.Z)([null != (t = null != g && null != g.id ? g.id : null != s && null != s.id ? s.id : null != b ? b.applicationId : void 0) ? t : '']),
         S = (0, u.e7)([w.Z], () => w.Z.getFakeGameData()),
         E = (0, u.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
         I = (0, C.Z)() && null != E && (0, O.R)(),
         N = (0, u.e7)([Q.Z], () => (0, L.Z)(Q.Z) && (0, ei.isWindows)()),
         R = (0, u.e7)([J.Z], () => (null != o ? J.Z.findActivity(o, (e) => e.type === ec.IIU.PLAYING) : null)),
-        k = null != f && f.ownerId === o && f.state !== ec.jm8.ENDED,
-        M = (0, u.e7)([et.default, $.Z], () => (null != h ? (0, P.F6)(h, et.default, $.Z) : void 0)),
+        M = null != f && f.ownerId === o && f.state !== ec.jm8.ENDED,
+        k = (0, u.e7)([et.default, $.Z], () => (null != h ? (0, P.F6)(h, et.default, $.Z) : void 0)),
         G = (0, B.Z)(),
         [V, H] = i.useState(!1),
         { showsActivityPopoutQuickRefocusNUX: F, markActivityPopoutQuickRefocusNUXAsDismissed: el } = (function () {
@@ -370,12 +370,12 @@ let eO = (0, b.Z)(function (e) {
             runningGame: null != S ? S : s,
             application: j,
             useReducedMotion: m,
-            isStreaming: k,
+            isStreaming: M,
             channel: h,
             canStream: v,
             stream: f,
             streamMetadata: g,
-            channelName: M,
+            channelName: k,
             guildForConnectedChannel: p,
             streamQualityIndicator: G,
             isForceShowSharingPopout: V,

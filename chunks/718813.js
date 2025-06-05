@@ -92,8 +92,8 @@ let S = (0, g.Un)({
         [O.S9g.COLLECTIBLES_SHOP]: () => (0, i.jsx)(T, {})
     },
     A = 'SHOWN',
-    Z = 'HIDDEN',
-    x = {
+    x = 'HIDDEN',
+    Z = {
         friction: 10,
         tension: 100
     };
@@ -113,8 +113,8 @@ class w extends (r = l.PureComponent) {
         let { mode: t } = this.props,
             { mode: n } = e;
         if (t !== n) {
-            if (t === A && n === Z) return this.animateIn();
-            if (t === Z && n === A) return this.animateUnder();
+            if (t === A && n === x) return this.animateIn();
+            if (t === x && n === A) return this.animateUnder();
         }
     }
     componentWillEnter(e) {
@@ -127,20 +127,20 @@ class w extends (r = l.PureComponent) {
     animateIn(e) {
         c.ZP.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
-        s.Z.parallel([s.Z.spring(t, v({ toValue: 1 }, x)), s.Z.spring(n, v({ toValue: 1 }, x))]).start(() => this.animateComplete(e));
+        s.Z.parallel([s.Z.spring(t, v({ toValue: 1 }, Z)), s.Z.spring(n, v({ toValue: 1 }, Z))]).start(() => this.animateComplete(e));
     }
     animateOut(e) {
         c.ZP.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
         E.S.dispatch(O.CkL.LAYER_POP_START),
-            s.Z.parallel([s.Z.spring(t, v({ toValue: 0 }, x)), s.Z.spring(n, v({ toValue: 1.1 }, x))]).start(() => {
+            s.Z.parallel([s.Z.spring(t, v({ toValue: 0 }, Z)), s.Z.spring(n, v({ toValue: 1.1 }, Z))]).start(() => {
                 e(), E.S.dispatch(O.CkL.LAYER_POP_COMPLETE);
             });
     }
     animateUnder() {
         c.ZP.Emitter.pause(500);
         let { opacity: e, scale: t } = this.state;
-        s.Z.parallel([s.Z.spring(e, v({ toValue: 0 }, x)), s.Z.spring(t, v({ toValue: 0.93 }, x))]).start(() => this.animateComplete());
+        s.Z.parallel([s.Z.spring(e, v({ toValue: 0 }, Z)), s.Z.spring(t, v({ toValue: 0.93 }, Z))]).start(() => this.animateComplete());
     }
     animateComplete(e) {
         this.setState({ animating: !1 }, e);
@@ -168,18 +168,18 @@ class w extends (r = l.PureComponent) {
                 }
                 return i;
             })(t, ['mode', 'children', 'baseLayer']),
-            c = e || n === Z ? this.getAnimatedStyle() : null,
+            c = e || n === x ? this.getAnimatedStyle() : null,
             u = (0, i.jsx)(
                 s.Z.div,
                 C(
                     v(
                         {
                             ref: (e) => (this.containerRef.current = null != e ? e.componentRef : void 0),
-                            'aria-hidden': n === Z,
+                            'aria-hidden': n === x,
                             className: o()(I.layer, {
                                 [I.baseLayer]: l,
                                 [I.animating]: e,
-                                'stop-animations': n === Z
+                                'stop-animations': n === x
                             }),
                             style: c
                         },
@@ -207,7 +207,7 @@ class w extends (r = l.PureComponent) {
         super(e), y(this, 'containerRef', l.createRef());
         let t = 1,
             n = 1;
-        e.mode === Z && ((t = 0.93), (n = 0)),
+        e.mode === x && ((t = 0.93), (n = 0)),
             (this.state = {
                 animating: !1,
                 scale: new s.Z.Value(t),
@@ -233,7 +233,7 @@ class R extends l.PureComponent {
                 (0, i.jsx)(
                     w,
                     {
-                        mode: 0 !== r || n ? Z : A,
+                        mode: 0 !== r || n ? x : A,
                         baseLayer: !0,
                         children: e
                     },
@@ -251,7 +251,7 @@ class R extends l.PureComponent {
             (0, i.jsxs)(
                 w,
                 {
-                    mode: t === n - 1 ? A : Z,
+                    mode: t === n - 1 ? A : x,
                     children: [(0, i.jsx)(L, {}), r]
                 },
                 'layer-'.concat(t)

@@ -103,7 +103,7 @@ let C = [],
         });
     };
 function T(e) {
-    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: S, modalDismissibleContent: T, modalTopExtra: P, header: j, headerClassName: A, subHeader: Z, subHeaderExtra: x, featureCards: L, changeLogId: w, button: R, body: D } = e,
+    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: S, modalDismissibleContent: T, modalTopExtra: P, header: j, headerClassName: A, subHeader: x, subHeaderExtra: Z, featureCards: L, changeLogId: w, button: R, body: D } = e,
         { onClose: k, transitionState: M } = n,
         U = (0, p.Dt)(),
         G = L.length % 2 == 0,
@@ -283,7 +283,7 @@ function T(e) {
                             variant: 'text-md/normal',
                             color: 'text-secondary',
                             className: I.subHeader,
-                            children: [Z, null == x ? void 0 : x()]
+                            children: [x, null == Z ? void 0 : Z()]
                         }),
                         null != D &&
                             (0, r.jsx)(s.X6q, {

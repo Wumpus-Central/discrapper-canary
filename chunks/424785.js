@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(934415),
     D = n(98597),
     L = n(648501),
-    k = n(473403),
-    M = n(207055),
+    M = n(473403),
+    k = n(207055),
     U = n(981631),
     G = n(647086),
     B = n(388032),
@@ -87,7 +87,7 @@ function W(e, t) {
         e
     );
 }
-class Y extends D.ZP {
+class K extends D.ZP {
     getVoiceStatesCount() {
         var e;
         let { voiceStates: t } = this.props;
@@ -107,7 +107,7 @@ class Y extends D.ZP {
     }
     renderVoiceUsers() {
         let { channel: e, collapsed: t, tabIndex: n, speakerVoiceStates: i, numAudience: l } = this.props;
-        return (0, r.jsx)(M.Z, {
+        return (0, r.jsx)(k.Z, {
             channel: e,
             voiceStates: i,
             collapsed: t,
@@ -159,7 +159,7 @@ class Y extends D.ZP {
                                             return i;
                                         })(l, ['onClick', 'onContextMenu']);
                                     return (0, r.jsxs)(
-                                        k.ZP,
+                                        M.ZP,
                                         W(
                                             z(
                                                 {
@@ -286,7 +286,7 @@ class Y extends D.ZP {
             });
     }
 }
-let K = (0, d.B)((0, h.Q)(Y));
+let Y = (0, d.B)((0, h.Q)(K));
 function q(e) {
     let { guild: t, channel: n, disableSorting: i, isFavoriteCategory: l, collapsed: o, voiceStates: a } = e,
         c = (0, s.cj)([Z.ZP], () => ({
@@ -324,7 +324,7 @@ function q(e) {
         }),
         A = e.connected && null == I;
     return (0, r.jsx)(
-        K,
+        Y,
         W(
             z(
                 {

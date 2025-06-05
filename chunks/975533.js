@@ -27,12 +27,12 @@ var i = n(570140),
     P = n(577153),
     j = n(981631),
     A = n(345655),
-    Z = n(65154);
-let x = !1;
+    x = n(65154);
+let Z = !1;
 function L(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Z.Yn.DEFAULT,
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : x.Yn.DEFAULT,
         i = performance.now();
-    if (!x && e) r = i;
+    if (!Z && e) r = i;
     else if (
         null != r &&
         (0, O.f)({
@@ -43,10 +43,10 @@ function L(e, t) {
         let e = A._M,
             { pttLatchingEnabled: t = !1 } = y.Z.getModeOptions(n);
         if (!0 === t && i < r + e) {
-            x = !0;
+            Z = !0;
             return;
         }
-        x = !1;
+        Z = !1;
     }
     y.Z.getMediaEngine().eachConnection((n) => n.setForceAudioInput(e, t), n);
 }

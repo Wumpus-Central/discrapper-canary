@@ -46,13 +46,11 @@ class g extends r.Z {
                     window.clearTimeout(this.recurringFetchTimerId),
                     (this.recurringFetchTimerId = window.setInterval(() => {
                         Date.now() - this.lastFetchAttemptedAt > f && this._fetch();
-                    }, _)),
-                    (this.initialFetchTimerId = window.setTimeout(
-                        () => {
-                            (e || 0 === o.Z.lastFetchedCurrentQuests) && this._fetch();
-                        },
-                        Math.floor(Math.random() * p)
-                    ));
+                    }, _));
+                let t = Math.floor(Math.random() * p);
+                this.initialFetchTimerId = window.setTimeout(() => {
+                    !(Date.now() - t < o.Z.lastFetchedCurrentQuests) && (e || 0 === o.Z.lastFetchedCurrentQuests) && this._fetch();
+                }, t);
             }),
             d(this, 'handleRunningGamesChange', () => {
                 this.instantiatedAt + m > Date.now() || o.Z.lastFetchedCurrentQuests + m > Date.now() || this._fetch();

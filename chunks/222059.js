@@ -50,8 +50,8 @@ function D(e) {
         [j, S] = i.useState(null),
         [N, D] = i.useState(0),
         L = (0, l.Ie)('home'),
-        k = (0, h.Q3)('DefaultHomeButton'),
-        M = (0, d.oq)().activePanel === d.wh.APP_ICON,
+        M = (0, h.Q3)('DefaultHomeButton'),
+        k = (0, d.oq)().activePanel === d.wh.APP_ICON,
         U = () => {
             S(null), D(0), clearTimeout(j);
         };
@@ -65,9 +65,9 @@ function D(e) {
             className: A.downloadProgress,
             determineOwnVisibility: !1
         }));
-    let V = o || O || M,
+    let V = o || O || k,
         H = (0, r.jsx)(a.aRk, {
-            selected: k || V,
+            selected: M || V,
             lowerBadge: f > 0 ? (0, I.Ne)(f) : null,
             upperBadge: B,
             lowerBadgeSize: { width: (0, a.OVM)(f) },

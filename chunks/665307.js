@@ -39,7 +39,7 @@ function A(e, t, n) {
         e
     );
 }
-function Z(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,7 +55,7 @@ function Z(e) {
     }
     return e;
 }
-function x(e, t) {
+function Z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -85,7 +85,7 @@ let L = (0, S.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
             a = r.libraryApplication.hasFlag(t);
         return (0, i.jsx)(p.ua7, {
             text: l,
-            children: (e) => (0, i.jsx)(n, Z({ className: o()(j.settingIcon, { [j.hidden]: !a }) }, e))
+            children: (e) => (0, i.jsx)(n, x({ className: o()(j.settingIcon, { [j.hidden]: !a }) }, e))
         });
     },
     k = [
@@ -117,7 +117,7 @@ let L = (0, S.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                           children: (e) =>
                                               (0, i.jsx)(
                                                   p.SrA,
-                                                  Z(
+                                                  x(
                                                       {
                                                           size: 'md',
                                                           color: 'currentColor',
@@ -260,7 +260,7 @@ let L = (0, S.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
             onMouseEnter: () => l(t),
             onMouseLeave: a,
             onContextMenu: (e) => s(e, t),
-            children: (0, i.jsx)('div', Z({}, u))
+            children: (0, i.jsx)('div', x({}, u))
         });
     };
 class U extends (r = l.PureComponent) {
@@ -329,7 +329,7 @@ class U extends (r = l.PureComponent) {
             }
             e.num_applications_total++;
         }
-        v.default.track(T.rMx.LIBRARY_VIEWED, x(Z({}, e), { load_id: t.loadId }));
+        v.default.track(T.rMx.LIBRARY_VIEWED, Z(x({}, e), { load_id: t.loadId }));
     }
     handleSort(e, t) {
         g.fS(e, t);
@@ -442,7 +442,7 @@ class U extends (r = l.PureComponent) {
                         return (n) =>
                             (0, i.jsx)(
                                 e,
-                                x(Z({}, n), {
+                                Z(x({}, n), {
                                     applicationId: t.libraryApplication.id,
                                     branchId: t.libraryApplication.branchId,
                                     analyticsContext: r
@@ -479,7 +479,7 @@ function G(e) {
         }));
     return (0, i.jsx)(
         U,
-        x(Z({}, e), {
+        Z(x({}, e), {
             analyticsContext: t,
             location: n,
             applicationViewItems: r,

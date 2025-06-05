@@ -1,4 +1,4 @@
-n.d(t, { B: () => F });
+n.d(t, { Z: () => W });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -30,15 +30,13 @@ var r = n(255367),
     Z = n(720202),
     T = n(430824),
     A = n(375954),
-    R = n(306680),
-    D = n(594174),
-    L = n(709054),
-    k = n(987889),
-    M = n(586694),
-    U = n(981631),
-    G = n(388032),
-    B = n(539499);
-function V(e) {
+    R = n(594174),
+    D = n(987889),
+    L = n(586694),
+    M = n(981631),
+    k = n(388032),
+    U = n(539499);
+function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,7 +61,7 @@ function V(e) {
     }
     return e;
 }
-function H(e, t) {
+function B(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,51 +79,7 @@ function H(e, t) {
         e
     );
 }
-function F(e) {
-    let { message: t, goToSidebar: i, groupedMessages: l } = e,
-        { params: s } = (0, a.$B)(),
-        f = (0, c.e7)([N.Z], () => N.Z.getChannel(t.channel_id)),
-        g = (0, c.e7)(
-            [R.ZP],
-            () => {
-                if (null == f) return !1;
-                let e = R.ZP.getTrackedAckMessageId(null == f ? void 0 : f.id);
-                return L.default.compare(t.id, e) > 0;
-            },
-            [f, t.id]
-        );
-    return null == t || null == f
-        ? null
-        : (0, r.jsx)(u.P3F, {
-              className: o()(B.messageClickableContainer, { [B.selected]: t.id === s.messageId }),
-              onClick: () => {
-                  h.Z.trackJump(f.id, t.id, 'Notifications Inbox'), g && p.In(t.channel_id, !0, void 0, t.id);
-                  let e = i ? U.Z5c.NOTIFICATIONS_INBOX(f.id, t.id) : U.Z5c.CHANNEL(f.guild_id, f.id, t.id);
-                  (0, I.uL)(e);
-              },
-              onContextMenuCapture: (e) => {
-                  e.preventDefault();
-              },
-              onContextMenu: (e) => {
-                  (0, d.jW)(
-                      e,
-                      async () => {
-                          let { default: e } = await n.e('74922').then(n.bind(n, 550265));
-                          return (t) => (0, r.jsx)(e, H(V({}, t), { channel: f }));
-                      },
-                      { disableClickTrap: !0 }
-                  );
-              },
-              children: (0, r.jsx)(z, {
-                  message: t,
-                  channel: f,
-                  isSelected: t.id === s.messageId,
-                  groupedMessages: l,
-                  isUnread: g
-              })
-          });
-}
-function z(e) {
+function V(e) {
     let { message: t, channel: n, focusProps: l, isSelected: s, isUnread: a, groupedMessages: d } = e,
         h = (0, m.KS)(n, null),
         p = (0, g.ZP)(n, !1),
@@ -141,7 +95,7 @@ function z(e) {
             guildId: null == f ? void 0 : f.id,
             animateOnHover: !0
         }),
-        I = n.type !== U.d4z.GUILD_ANNOUNCEMENT || null == f,
+        I = n.type !== M.d4z.GUILD_ANNOUNCEMENT || null == f,
         N = (0, S.x)({
             channel: n,
             message: t,
@@ -150,14 +104,14 @@ function z(e) {
             isRepliedMessage: !0
         }),
         A = (0, r.jsxs)('div', {
-            className: B.usernameTagContainer,
+            className: U.usernameTagContainer,
             children: [
                 (0, r.jsx)(x.Z, {
                     channel: n,
                     message: t,
                     hideGuildTag: !0,
                     hideSystemTag: !0,
-                    className: B.username
+                    className: U.username
                 }),
                 null != C &&
                     (0, r.jsx)(v.ZP, {
@@ -165,7 +119,7 @@ function z(e) {
                         userId: t.author.id,
                         inline: !0,
                         disableGuildProfile: !0,
-                        className: B.clanTag
+                        className: U.clanTag
                     })
             ]
         });
@@ -175,13 +129,13 @@ function z(e) {
         }, [f, t.author.id]),
         (0, r.jsx)(
             u.tEY,
-            H(V({}, l), {
+            B(G({}, l), {
                 children: (0, r.jsxs)('div', {
                     onMouseLeave: P.onMouseLeave,
                     onMouseEnter: P.onMouseEnter,
-                    className: B.messageContainer,
+                    className: U.messageContainer,
                     children: [
-                        a && (0, r.jsx)('div', { className: B.unreadDot }),
+                        a && (0, r.jsx)('div', { className: U.unreadDot }),
                         (0, r.jsx)(u.Kqy, {
                             align: 'start',
                             style: {
@@ -189,7 +143,7 @@ function z(e) {
                                 marginTop: '4px'
                             },
                             children: I
-                                ? (0, r.jsx)(M.q, {
+                                ? (0, r.jsx)(L.q, {
                                       'aria-label': 'User Avatar',
                                       src: E,
                                       size: u.EFr.SIZE_32,
@@ -198,7 +152,7 @@ function z(e) {
                                       cornerIconOffsetY: 3,
                                       avatarDecoration: j
                                   })
-                                : (0, r.jsx)(M.E, {
+                                : (0, r.jsx)(L.E, {
                                       'aria-label': 'Guild Icon',
                                       src: f.getIconURL(32),
                                       size: u.EFr.SIZE_32,
@@ -222,10 +176,10 @@ function z(e) {
                                     children: [
                                         I
                                             ? (0, r.jsxs)('div', {
-                                                  className: B.usernameOuterContainer,
+                                                  className: U.usernameOuterContainer,
                                                   children: [
                                                       (0, r.jsx)('div', {
-                                                          className: B.username,
+                                                          className: U.username,
                                                           style: { color: O },
                                                           children: (0, r.jsx)(b.Z, { children: A })
                                                       }),
@@ -236,7 +190,7 @@ function z(e) {
                                                   children: (0, r.jsx)(u.X6q, {
                                                       variant: 'text-md/semibold',
                                                       style: { color: O },
-                                                      className: B.username,
+                                                      className: U.username,
                                                       children: f.name
                                                   })
                                               }),
@@ -246,12 +200,12 @@ function z(e) {
                                             align: 'center',
                                             style: { width: 'fit-content' },
                                             children: [
-                                                (0, r.jsx)(k.Z, {
+                                                (0, r.jsx)(D.Z, {
                                                     message: t,
                                                     channel: n,
                                                     isUnread: a
                                                 }),
-                                                (0, r.jsx)(Y, { message: t })
+                                                (0, r.jsx)(F, { message: t })
                                             ]
                                         })
                                     ]
@@ -260,28 +214,28 @@ function z(e) {
                                     direction: 'horizontal',
                                     align: 'center',
                                     gap: 4,
-                                    className: o()(B.channelName, {
-                                        [B.unread]: a,
-                                        [B.selected]: s
+                                    className: o()(U.channelName, {
+                                        [U.unread]: a,
+                                        [U.selected]: s
                                     }),
                                     children: [
                                         null !== h &&
                                             (0, r.jsx)(h, {
                                                 size: 'xxs',
-                                                className: B.inlineIcon
+                                                className: U.inlineIcon
                                             }),
                                         (0, r.jsxs)(u.Text, {
                                             variant: 'text-sm/medium',
                                             lineClamp: 1,
-                                            className: o()(B.channelName, {
-                                                [B.unread]: a,
-                                                [B.selected]: s
+                                            className: o()(U.channelName, {
+                                                [U.unread]: a,
+                                                [U.selected]: s
                                             }),
                                             children: [p, !I && ' \xB7 '.concat(y)]
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)(K, {
+                                (0, r.jsx)(z, {
                                     message: t,
                                     isUnread: a,
                                     isSelected: s,
@@ -291,7 +245,7 @@ function z(e) {
                                     (0, r.jsx)(u.Kqy, {
                                         gap: 4,
                                         style: { minWidth: 0 },
-                                        children: (null == d ? void 0 : d.length) > 0 && (0, r.jsx)(W, { overflowMessages: d })
+                                        children: (null == d ? void 0 : d.length) > 0 && (0, r.jsx)(H, { overflowMessages: d })
                                     })
                             ]
                         })
@@ -301,7 +255,7 @@ function z(e) {
         )
     );
 }
-function W(e) {
+function H(e) {
     let { overflowMessages: t } = e,
         n = (0, s.uniqBy)(
             t.map((e) => e.author),
@@ -318,24 +272,24 @@ function W(e) {
             }),
             (0, r.jsx)(u.Text, {
                 variant: 'text-sm/medium',
-                className: B.overflowText,
-                children: G.intl.formatToPlainString(G.t.NzUuLC, { count: t.length })
+                className: U.overflowText,
+                children: k.intl.formatToPlainString(k.t.NzUuLC, { count: t.length })
             })
         ]
     });
 }
-function Y(e) {
+function F(e) {
     let { message: t } = e,
         n = (0, P.a3)(t.timestamp.getTime());
     return (0, r.jsx)(j.Z, {
         timestamp: t.timestamp,
-        className: B.timestamp,
+        className: U.timestamp,
         isEdited: t.isEdited(),
         isInline: !0,
         children: n
     });
 }
-function K(e) {
+function z(e) {
     let { message: t, isUnread: n, isSelected: l } = e,
         { previewContent: s, Icon: a } = (function (e) {
             let { message: t, isUnread: n, isSelected: l } = e,
@@ -353,49 +307,49 @@ function K(e) {
                             var t, n;
                             return (null == (t = e.messageReference) ? void 0 : t.message_id) == null ? null : A.Z.getMessage(e.channel_id, null == (n = e.messageReference) ? void 0 : n.message_id);
                         }),
-                        n = (0, c.e7)([D.default], () => D.default.getCurrentUser());
-                    return e.type === U.uaV.REPLY && null != t && t.author.id === (null == n ? void 0 : n.id);
+                        n = (0, c.e7)([R.default], () => R.default.getCurrentUser());
+                    return e.type === M.uaV.REPLY && null != t && t.author.id === (null == n ? void 0 : n.id);
                 })(t);
             return (0, i.useMemo)(() => {
                 let e = '' === t.content,
-                    i = t.embeds.some((e) => e.type === U.hBH.GIFV),
+                    i = t.embeds.some((e) => e.type === M.hBH.GIFV),
                     c = (function (e) {
-                        let t = e.embeds.some((e) => e.type === U.hBH.GIFV);
+                        let t = e.embeds.some((e) => e.type === M.hBH.GIFV);
                         return e.attachments.length + +!!t;
                     })(t),
                     d = (0, y.Z)(t),
                     h = t.stickerItems.length > 0,
                     p = t.isPoll(),
-                    f = t.type === U.uaV.POLL_RESULT,
-                    g = t.hasFlag(U.iLy.IS_VOICE_MESSAGE),
+                    f = t.type === M.uaV.POLL_RESULT,
+                    g = t.hasFlag(M.iLy.IS_VOICE_MESSAGE),
                     m = null;
                 1 === c ? (m = u.XBm) : c > 1 ? (m = u.Ka2) : d ? (m = O.Z) : p || f ? (m = u.QDj) : a ? (m = u.n$P) : h ? (m = u.SlE) : g && (m = u.gj8);
                 let b = !0,
                     v = null;
                 if (e)
-                    if (d) v = G.intl.string(G.t['9ddYKi']);
+                    if (d) v = k.intl.string(k.t['9ddYKi']);
                     else if (p) {
                         var _;
                         (b = !1), (v = null == (_ = t.poll) ? void 0 : _.question.text);
-                    } else v = f ? G.intl.string(G.t.sad2PD) : i ? G.intl.string(G.t.p0oZm5) : c > 1 ? G.intl.formatToPlainString(G.t.rtfTKi, { count: c }) : 1 === c ? G.intl.string(G.t.tCcq5u) : h ? G.intl.format(G.t.zY4v1N, { stickerName: t.stickerItems[0].name }) : g ? G.intl.string(G.t.slFYgo) : G.intl.string(G.t.sDqZHB);
+                    } else v = f ? k.intl.string(k.t.sad2PD) : i ? k.intl.string(k.t.p0oZm5) : c > 1 ? k.intl.formatToPlainString(k.t.rtfTKi, { count: c }) : 1 === c ? k.intl.string(k.t.tCcq5u) : h ? k.intl.format(k.t.zY4v1N, { stickerName: t.stickerItems[0].name }) : g ? k.intl.string(k.t.slFYgo) : k.intl.string(k.t.sDqZHB);
                 else
                     (b = !1),
                         (v = (0, r.jsx)(C.ZP, {
                             content: s,
                             message: t,
                             compact: !1,
-                            className: o()(B.message, {
-                                [B.unread]: n,
-                                [B.selected]: l
+                            className: o()(U.message, {
+                                [U.unread]: n,
+                                [U.selected]: l
                             })
                         }));
                 return (
                     e &&
                         (v = (0, r.jsx)('div', {
-                            className: o()(B.message, {
-                                [B.unread]: n,
-                                [B.selected]: l,
-                                [B.descriptionMessage]: b
+                            className: o()(U.message, {
+                                [U.unread]: n,
+                                [U.selected]: l,
+                                [U.descriptionMessage]: b
                             }),
                             children: v
                         })),
@@ -418,14 +372,55 @@ function K(e) {
             null != a &&
                 (0, r.jsx)(a, {
                     size: 'xxs',
-                    className: B.inlineIcon
+                    className: U.inlineIcon
                 }),
             (0, r.jsx)(u.Text, {
                 variant: 'text-sm/normal',
                 lineClamp: 1,
-                className: B.message,
+                className: U.message,
                 children: s
             })
         ]
     });
 }
+let W = (0, i.memo)(
+    function (e) {
+        let { message: t, goToSidebar: i, groupedMessages: l, isUnread: s } = e,
+            { params: f } = (0, a.$B)(),
+            g = (0, c.e7)([N.Z], () => N.Z.getChannel(t.channel_id));
+        return null == t || null == g
+            ? null
+            : (0, r.jsx)(u.P3F, {
+                  className: o()(U.messageClickableContainer, { [U.selected]: t.id === f.messageId }),
+                  onClick: () => {
+                      h.Z.trackJump(g.id, t.id, 'Notifications Inbox'), s && p.In(t.channel_id, !0, void 0, t.id);
+                      let e = i ? M.Z5c.NOTIFICATIONS_INBOX(g.id, t.id) : M.Z5c.CHANNEL(g.guild_id, g.id, t.id);
+                      (0, I.uL)(e);
+                  },
+                  onContextMenuCapture: (e) => {
+                      e.preventDefault();
+                  },
+                  onContextMenu: (e) => {
+                      (0, d.jW)(
+                          e,
+                          async () => {
+                              let { default: e } = await n.e('74922').then(n.bind(n, 550265));
+                              return (t) => (0, r.jsx)(e, B(G({}, t), { channel: g }));
+                          },
+                          { disableClickTrap: !0 }
+                      );
+                  },
+                  children: (0, r.jsx)(V, {
+                      message: t,
+                      channel: g,
+                      isSelected: t.id === f.messageId,
+                      groupedMessages: l,
+                      isUnread: s
+                  })
+              });
+    },
+    (e, t) => {
+        var n, r;
+        return e.isUnread === t.isUnread && e.message.id === t.message.id && (null == (n = e.groupedMessages) ? void 0 : n.length) === (null == (r = t.groupedMessages) ? void 0 : r.length);
+    }
+);

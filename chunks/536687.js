@@ -84,7 +84,7 @@ function L(e) {
         G = (0, E.up)(P.dr.VIDEO_MODAL),
         [Y, z] = l.useState(B.progressSeconds),
         [H, W] = l.useState(!1),
-        { completedRatio: X, completedRatioDisplay: K } = (0, f.I)(T),
+        { completedRatio: K, completedRatioDisplay: X } = (0, f.I)(T),
         [$, J] = (0, _.G6)(k.intl.string(k.t.RDE0SU), k.intl.string(k.t['+5kSoa']), 1700),
         ee = null != (0, b.LM)(T.config),
         et = (null == (t = T.userStatus) ? void 0 : t.claimedAt) != null ? (ee ? k.intl.string(k.t.WYchdX) : k.intl.string(k.t.vTgCW1)) : G,
@@ -171,8 +171,8 @@ function L(e) {
                                                     children: (0, r.jsx)(S.Z, {
                                                         quest: T,
                                                         size: 48,
-                                                        percentComplete: X,
-                                                        percentCompleteText: H ? K : void 0,
+                                                        percentComplete: K,
+                                                        percentCompleteText: H ? X : void 0,
                                                         percentCompleteTextVariant: 'text-sm/medium',
                                                         children: (0, r.jsx)(y.Z, {
                                                             className: I.questProgressRewardTile,

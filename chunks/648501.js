@@ -27,8 +27,8 @@ var i = n(442837),
 function P(e) {
     var t;
     let { channel: n, isChannelSelected: P, isChannelCollapsed: I, voiceStates: w, enableConnectedUserLimit: N, enableActivities: Z, isSubscriptionGated: T, needSubscriptionToAccess: A, isNewChannel: R, muted: D, resolvedUnreadSetting: L } = e,
-        k = (0, i.e7)([f.ZP], () => f.ZP.getMentionCount(n.id)),
-        M = (0, i.e7)([f.ZP], () => f.ZP.getIsMentionLowImportance(n.id)),
+        M = (0, i.e7)([f.ZP], () => f.ZP.getMentionCount(n.id)),
+        k = (0, i.e7)([f.ZP], () => f.ZP.getIsMentionLowImportance(n.id)),
         U = (0, s.ZP)(n),
         G = (0, i.e7)([p.Z], () => !p.Z.can(j.Plq.CONNECT, n)),
         B = (0, i.e7)([g.Z], () => g.Z.hasVideo(n.id)),
@@ -45,10 +45,10 @@ function P(e) {
             var e, t;
             return null != (t = null == (e = h.Z.getGuild(n.guild_id)) ? void 0 : e.hasFeature(j.oNc.COMMUNITY)) && t;
         });
-    if ((0, y.Z)(k))
+    if ((0, y.Z)(M))
         return (0, r.jsx)(C.Z, {
-            mentionsCount: k,
-            isMentionLowImportance: M
+            mentionsCount: M,
+            isMentionLowImportance: k
         });
     if ((0, c.O)(T)) return (0, r.jsx)(c.Z, { locked: A });
     if (R)
@@ -69,10 +69,10 @@ function P(e) {
             color: 'text-muted',
             children: (0, o.NGo)(z)
         });
-    let Y = null != (t = null == w ? void 0 : w.length) ? t : 0;
+    let K = null != (t = null == w ? void 0 : w.length) ? t : 0;
     return null != N && N && H
         ? (0, r.jsx)(_.Z, {
-              userCount: Y,
+              userCount: K,
               video: B || V,
               channel: n
           })

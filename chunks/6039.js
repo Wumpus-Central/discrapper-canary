@@ -73,7 +73,7 @@ let N = (e) => {
     let A = i.useCallback(() => {
             h(Math.max(p, y.hO.FILLING)), f.Z.removeGuildJoinRequest(t), (0, u.uL)(I.Z5c.ME);
         }, [t, p]),
-        Z = (e, t) => () => {
+        x = (e, t) => () => {
             (0, a.h7j)((n) => {
                 var i, l;
                 return (0, r.jsx)(
@@ -136,11 +136,11 @@ let N = (e) => {
                 );
             });
         },
-        x = async () => {
+        Z = async () => {
             await f.Z.resetGuildJoinRequest(t), (0, g.hk)(t);
         },
-        L = Z(v.intl.format(v.t['9ZezpK'], { name: null == j ? void 0 : j.name }), A),
-        w = Z(v.intl.format(v.t.fJwWVl, { name: null == j ? void 0 : j.name }), A);
+        L = x(v.intl.format(v.t['9ZezpK'], { name: null == j ? void 0 : j.name }), A),
+        w = x(v.intl.format(v.t.fJwWVl, { name: null == j ? void 0 : j.name }), A);
     return (0, r.jsxs)('div', {
         className: C.page,
         ref: n,
@@ -163,7 +163,7 @@ let N = (e) => {
                         case m.wB.REJECTED:
                             return (0, r.jsx)(E.Z, {
                                 reapplyText: v.intl.string(v.t.I1LYVl),
-                                onReapply: x,
+                                onReapply: Z,
                                 confirmText: v.intl.string(v.t.g9tK0t),
                                 onWithdrawApplication: L,
                                 rejectionReason: N.rejectionReason,

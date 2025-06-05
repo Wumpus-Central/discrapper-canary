@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(427679),
     j = n(695346),
     A = n(592125),
-    Z = n(77498),
-    x = n(271383),
+    x = n(77498),
+    Z = n(271383),
     L = n(430824),
     w = n(131951),
     R = n(375954),
@@ -81,7 +81,7 @@ class Q extends i.PureComponent {
     }
     componentDidUpdate(e) {
         var t, n, r, i, l, c;
-        let { voiceChannelId: E, voiceChannelGuildId: O, voiceChannelType: v, voiceChannelBitrate: x, videoEnabled: w, isScreenSharing: k, runningGame: B, runningGamePid: V, selectedChannelId: H, selectedGuildId: q, connected: Q, homeLink: J, friendsTabSection: $, isNSFWChannel: ee, isMemberPending: et, hasPreviewEnabled: en, postableChannelCount: er, isTextInVoice: ei, numMessageRequests: el } = this.props;
+        let { voiceChannelId: E, voiceChannelGuildId: O, voiceChannelType: v, voiceChannelBitrate: Z, videoEnabled: w, isScreenSharing: k, runningGame: B, runningGamePid: V, selectedChannelId: H, selectedGuildId: q, connected: Q, homeLink: J, friendsTabSection: $, isNSFWChannel: ee, isMemberPending: et, hasPreviewEnabled: en, postableChannelCount: er, isTextInVoice: ei, numMessageRequests: el } = this.props;
         if (e.voiceChannelId !== E && null != e.voiceChannelId) {
             let t = _.ZP.getCurrentGameForAnalytics(),
                 n = null != t ? t.name : '',
@@ -126,7 +126,7 @@ class Q extends i.PureComponent {
                             location: i,
                             channel_id: E,
                             channel_type: v,
-                            channel_bitrate: x,
+                            channel_bitrate: Z,
                             guild_id: O,
                             game_name: t,
                             game_platform: this.props.gamePlatform,
@@ -140,7 +140,7 @@ class Q extends i.PureComponent {
                 );
         }
         if (e.runningGame !== B && null != B && !B.isLauncher) {
-            let e = Z.Z.getGameByName(B.name),
+            let e = x.Z.getGameByName(B.name),
                 n = _.ZP.getOverrideForGame(B),
                 r = L.Z.getGuildIds(),
                 i = j.SE.getSetting(),
@@ -179,14 +179,14 @@ class Q extends i.PureComponent {
                         executable_path: a,
                         voice_channel_id: E,
                         voice_channel_type: v,
-                        voice_channel_bitrate: x,
+                        voice_channel_bitrate: Z,
                         voice_channel_guild_id: O,
                         distributor_game_id: B.sku,
                         hidden_by_distributor: B.hidden
                     }),
                         null != a && _.ZP.addExecutableTrackedByAnalytics(a);
                 }, 10000),
-                null != B.name && null != V && Z.Z.shouldReport(B.name))
+                null != B.name && null != V && x.Z.shouldReport(B.name))
             ) {
                 let e = B.name;
                 a.Z.identifyGame(V, e)
@@ -302,10 +302,10 @@ function J() {
         u = (0, l.e7)([L.Z], () => L.Z.getGuild(s), [s]),
         d = (0, l.e7)([B.default], () => B.default.getCurrentUser(), []),
         p = (0, l.e7)(
-            [x.ZP],
+            [Z.ZP],
             () => {
                 var e, t;
-                return null != d && null != s && null != (t = null == (e = x.ZP.getMember(s, d.id)) ? void 0 : e.isPending) && t;
+                return null != d && null != s && null != (t = null == (e = Z.ZP.getMember(s, d.id)) ? void 0 : e.isPending) && t;
             },
             [d, s]
         ),

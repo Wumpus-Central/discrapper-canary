@@ -30,10 +30,10 @@ function P(e) {
         P = (0, a.e7)([f.Z], () => f.Z.isConnected()),
         j = (0, p.Z)(t),
         A = (0, E.Z)(t),
-        Z = (0, a.e7)([b.Z], () => b.Z.isSubscriptionFetching),
-        x = (0, _.f)(),
+        x = (0, a.e7)([b.Z], () => b.Z.isSubscriptionFetching),
+        Z = (0, _.f)(),
         { shouldHideGuildPurchaseEntryPoints: L, restrictionsLoading: w } = (0, h.uP)(t),
-        R = null == n || !x || Z || w;
+        R = null == n || !Z || x || w;
     (0, u.Tt)({
         subsection: N.intl.string(N.t['KzCF//']),
         location: null == n ? void 0 : n.name

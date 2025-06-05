@@ -32,7 +32,7 @@ let h = 2,
     },
     g = !0,
     E = () => {
-        g = !c.ZP.canUsePremiumAppIcons(s.default.getCurrentUser());
+        (g = !c.ZP.canUsePremiumAppIcons(s.default.getCurrentUser())) && b(u.aH.DEFAULT);
     },
     b = (e) => {
         if (((m.client.desktop = e), !g)) {

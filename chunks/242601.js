@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(605236),
     j = n(243778),
     A = n(492162),
-    Z = n(43740),
-    x = n(596557),
+    x = n(43740),
+    Z = n(596557),
     L = n(817520),
     w = n(999309),
     R = n(408987),
@@ -251,7 +251,7 @@ class eN extends i.PureComponent {
                         animation: f.yRy.Animation.SCALE,
                         shouldShow: n,
                         onRequestClose: () => {
-                            (0, Z.l)(!1);
+                            (0, x.l)(!1);
                         },
                         spacing: s ? 4 : 8,
                         children: (i) => {
@@ -380,7 +380,7 @@ class eN extends i.PureComponent {
             }),
             eO(this, 'handleHeaderMenuToggle', (e) => {
                 let { isHeaderPopoutOpen: t } = this.props;
-                e.stopPropagation(), (0, Z.l)(!t), this.closeAllHeaderNotices();
+                e.stopPropagation(), (0, x.l)(!t), this.closeAllHeaderNotices();
             }),
             eO(this, 'handleContextMenu', (e) => {
                 let { guild: t } = this.props;
@@ -516,15 +516,15 @@ function eT(e) {
         eP = m && (null == o ? void 0 : o.hasFeature(ef.oNc.DISCOVERABLE)) === !0,
         ej = (0, y.Q)(),
         eA = (m || (null == o ? void 0 : o.premiumTier) === ef.Eu4.NONE) && !es.s.isDisallowPopupsSet() && !ej,
-        eZ = (0, d.e7)([D.Z, en.Z], () => null != o && null != R && m && !en.Z.hasLayers() && D.Z.shouldShowGuildTemplateDirtyTooltip(n)),
-        ex = (0, d.e7)([X.Z], () => X.Z.getChannel(a)),
-        { isPopoutOpen: eL } = (0, Z.y)(),
+        ex = (0, d.e7)([D.Z, en.Z], () => null != o && null != R && m && !en.Z.hasLayers() && D.Z.shouldShowGuildTemplateDirtyTooltip(n)),
+        eZ = (0, d.e7)([X.Z], () => X.Z.getChannel(a)),
+        { isPopoutOpen: eL } = (0, x.y)(),
         ew = null != (t = null == o ? void 0 : o.hasFeature(ef.oNc.COMMUNITY)) && t,
         eR = (0, d.e7)([z.Z], () => !s().isEmpty(z.Z.getThreadsForGuild(n))),
         eD = eo.ZP.isNewUser(R),
         ek = W && !eD,
         eM = (0, S.Z)(R);
-    (0, x.Z)(o);
+    (0, Z.Z)(o);
     let eU = (0, P.wE)(p.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
         eG = (0, G.Z)(n),
         eB = (0, L.Z)(n),
@@ -540,7 +540,7 @@ function eT(e) {
         guild: o,
         scrollToChannel: h,
         selectedChannelId: l ? null : a,
-        selectedChannel: ex,
+        selectedChannel: eZ,
         selectedVoiceChannelId: g,
         voiceStates: c,
         rtcConnectedChannelId: eV,
@@ -555,7 +555,7 @@ function eT(e) {
         showInviteSplashUpsell: eA,
         showDiscoveryLandingPageSettingsUpsell: eP,
         showGuildHeaderTutorial: eE,
-        showGuildTemplateDirtyTooltip: eZ,
+        showGuildTemplateDirtyTooltip: ex,
         showRoleSubscriptionUpsell: eS,
         showHubPrivacySettingsTooltip: eT,
         showNewUnreadsBar: ew,

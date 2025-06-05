@@ -33,24 +33,24 @@ let P = i.memo(function (e) {
         l,
         u,
         P,
-        { stream: I, canGoLive: w, guildId: N, isStreaming: Z, channel: T, canStream: A, runningGame: R, embeddedActivity: D, activity: L, application: k, analyticsContext: M } = e,
+        { stream: I, canGoLive: w, guildId: N, isStreaming: Z, channel: T, canStream: A, runningGame: R, embeddedActivity: D, activity: L, application: M, analyticsContext: k } = e,
         { skipModalForGame: U, showRefreshedGoLiveModal: G } = (0, g.a)({
             location: 'Activity Panel',
             autoTrackExposure: !1
         }),
         { parentAnalyticsLocation: B } = (0, h.ZP)(),
         { changeLeaveCallAndActivityIcons: V } = (0, _.A)({ location: 'Activity Actions' }),
-        H = E(k, L, D),
+        H = E(M, L, D),
         F = i.useCallback(() => {
             o()(null != L, 'Received null activity'),
                 (0, p.v)(B, p.d.INVITE),
                 v.default.track(j.rMx.OPEN_MODAL, {
                     type: 'Send Join Invite',
                     application_id: L.application_id,
-                    location: M.location
+                    location: k.location
                 }),
                 (0, a.h7)(L, !1);
-        }, [L, M, B]),
+        }, [L, k, B]),
         z = i.useCallback(
             (e, t) => () => {
                 (0, p.v)(B, p.d.LEAVE_ACTIVITY),
@@ -65,7 +65,7 @@ let P = i.memo(function (e) {
         W = i.useCallback(() => {
             (0, b.Z)(I);
         }, [I]),
-        Y = i.useCallback(() => {
+        K = i.useCallback(() => {
             let e = null != T && (0, y.vd)(T.type) ? T : null,
                 t = null != e ? e.getGuildId() : N;
             if (U && null != R && null != O.Z.getVoiceChannelId()) {
@@ -127,7 +127,7 @@ let P = i.memo(function (e) {
                 };
             });
         }, [T, N, R, G, U]),
-        K =
+        Y =
             (null != R || null == D || (0, c.R)()) && (Z || w)
                 ? (Z
                       ? ((t = !1),
@@ -139,7 +139,7 @@ let P = i.memo(function (e) {
                       : A
                         ? ((t = !1),
                           (l = () => {
-                              Y(), (0, p.v)(B, p.d.STREAM, !0);
+                              K(), (0, p.v)(B, p.d.STREAM, !0);
                           }),
                           (u = s.hGI),
                           (P = null != R ? S.intl.formatToPlainString(S.t.AB5gT0, { game: R.name }) : S.intl.string(S.t.FeUKeH)))
@@ -171,10 +171,10 @@ let P = i.memo(function (e) {
                       icon: V ? s.Dio : s.PBZ
                   }),
         X = null == I ? null : (0, r.jsx)(f.Z, {});
-    return null == K && null == q && null == Q
+    return null == Y && null == q && null == Q
         ? null
         : (0, r.jsxs)('div', {
               className: x.actions,
-              children: [K, q, null != Q ? Q : X]
+              children: [Y, q, null != Q ? Q : X]
           });
 });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(539854), n(388685), n(642613);
+n.d(t, { Z: () => E }), n(539854), n(583741), n(388685), n(642613);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -73,13 +73,14 @@ function E(e) {
                 }
             );
         }, []);
-    let k = i.useCallback(() => {
+    let M = i.useCallback(() => {
             var e;
             let t = null == (e = T.current) ? void 0 : e.getScrollerState(),
                 n = (0, y.s)(D);
             null != t && t.scrollHeight >= t.scrollTop + t.offsetHeight && (null == s || s(n));
         }, [s, D]),
-        M = i.useMemo(() => {
+        k = (0, y.fW)(null != n ? n : []),
+        U = i.useMemo(() => {
             let e = {
                     [O.KZ.UNREAD]: [],
                     [O.KZ.TODAY]: [],
@@ -103,11 +104,11 @@ function E(e) {
                     n.length > 0 &&
                     (a().each(n, (n) => {
                         let { message: r, kind: i } = n,
-                            l = (0, y.bl)(r);
+                            l = k(r.id);
                         i === O.fL.MENTION ? e[l].push(r) : r.channel_id in t[l] ? t[l][r.channel_id].push(r) : (t[l][r.channel_id] = [r]);
                     }),
                     a().each(x, (n) => {
-                        [...Object.values(t[n]), ...e[n].map((e) => [e])]
+                        [...Object.values(t[n]).map((e) => e.reverse()), ...e[n].map((e) => [e])]
                             .sort((e, t) => g.default.compare(t[0].id, e[0].id))
                             .forEach((e) => {
                                 r[n].push(e);
@@ -115,8 +116,8 @@ function E(e) {
                     })),
                 r
             );
-        }, [n]),
-        U = i.useMemo(() => {
+        }, [n, k]),
+        G = i.useMemo(() => {
             let e = [];
             return (
                 null == n
@@ -136,11 +137,11 @@ function E(e) {
                         ? e.push(
                               ...n.map((e) => {
                                   let { message: t } = e;
-                                  return E([t], 'sidebar' === R);
+                                  return E([t], 'sidebar' === R, k(t.id) === O.KZ.UNREAD);
                               })
                           )
                         : a().each(x, (t) => {
-                              0 !== M[t].length &&
+                              0 !== U[t].length &&
                                   (e.push(
                                       (0, r.jsx)(S, {
                                           group: t,
@@ -148,22 +149,22 @@ function E(e) {
                                           toggleOpenedState: () => L(t)
                                       })
                                   ),
-                                  D[t] && e.push(...M[t].map((e) => E(e, 'sidebar' === R))));
+                                  D[t] && e.push(...U[t].map((e) => E(e, 'sidebar' === R, k(e[0].id) === O.KZ.UNREAD))));
                           }),
                 (null == n ? void 0 : n.length) !== 0 && e.push((0, r.jsx)(u.LZC, { size: 8 }, 'spacer')),
                 e
             );
-        }, [n, _, D, L, M, Z, E, R]);
+        }, [n, _, D, L, U, Z, E, R, k]);
     i.useEffect(() => {
-        0 === M.UNREAD.length ? P(O.xM.READ) : P(O.xM.UNREAD);
-    }, [M, P]);
-    let G = null;
+        0 === U.UNREAD.length ? P(O.xM.READ) : P(O.xM.UNREAD);
+    }, [U, P]);
+    let B = null;
     return (
         null != n &&
             n.length > 0 &&
             null != s &&
             l &&
-            (G = (0, r.jsx)(
+            (B = (0, r.jsx)(
                 'div',
                 {
                     className: C.loadingMore,
@@ -178,7 +179,7 @@ function E(e) {
             'aria-label': e['aria-label'],
             children: (0, r.jsxs)(u.Den, {
                 className: o()(C.messagesPopout, I),
-                onScroll: k,
+                onScroll: M,
                 ref: T,
                 children: [
                     (0, r.jsx)(c.bG, {
@@ -240,7 +241,7 @@ function E(e) {
                                         },
                                         l
                                     )),
-                                    (n = n = { children: U }),
+                                    (n = n = { children: G }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                                         : (function (e, t) {
@@ -258,7 +259,7 @@ function E(e) {
                             }
                         })
                     }),
-                    G
+                    B
                 ]
             })
         })

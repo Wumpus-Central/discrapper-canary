@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -98,7 +98,7 @@ function A(e) {
         }
     });
 }
-let Z = (e) => {
+let x = (e) => {
     let { guild: t } = e;
     switch ((0, S.Z)(t)) {
         case S.R.ENABLE_PUBLIC_GUILD:

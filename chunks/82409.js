@@ -58,7 +58,7 @@ function Z(e) {
         })),
         [_, j] = i.useState(E.V5.ALL),
         [I, Z] = i.useState(E.xM.UNREAD),
-        { messages: M, loadState: U, loadMore: G, hasLoadedEver: B } = (0, C.ZP)();
+        { messages: k, loadState: U, loadMore: G, hasLoadedEver: B } = (0, C.ZP)();
     (0, i.useEffect)(() => {
         if (!p) return void T(null);
     }, [p]);
@@ -91,10 +91,12 @@ function Z(e) {
                               })))
                         ? e
                         : []),
-                    ...M.filter((e) => e.author.id !== (null == V ? void 0 : V.id)).map((e) => ({
-                        message: e,
-                        kind: E.fL.ALL_MESSAGES_CHANNEL
-                    }))
+                    ...k
+                        .filter((e) => e.author.id !== (null == V ? void 0 : V.id))
+                        .map((e) => ({
+                            message: e,
+                            kind: E.fL.ALL_MESSAGES_CHANNEL
+                        }))
                 ],
                 (e) => {
                     let { message: t } = e;
@@ -121,10 +123,10 @@ function Z(e) {
                           return (null == V ? void 0 : V.id) != null && t.mentioned && t.mentions.includes(null == V ? void 0 : V.id);
                       });
             throw Error('Unknown filter: '.concat(_));
-        }, [_, a, V, H, M, B]),
+        }, [_, a, V, H, k, B]),
         z = I === E.xM.READ && _ === E.V5.ALL && !h && B,
         { notificationCenterVariant: W } = v.L.useExperiment({ location: 'NotificationsInboxSidebar' }),
-        Y = 'sidebar' === W && _ !== E.V5.ALL;
+        K = 'sidebar' === W && _ !== E.V5.ALL;
     return (0, r.jsxs)('nav', {
         className: o()(w.container, { [w.panelSpacing]: l }),
         children: [
@@ -173,7 +175,7 @@ function Z(e) {
                                         setSelectedFilter: j,
                                         className: w.headerButton
                                     }),
-                                (0, r.jsx)(k, {})
+                                (0, r.jsx)(M, {})
                             ]
                         })
                     }),
@@ -197,7 +199,7 @@ function Z(e) {
                     setSelectedFilter: j
                 }),
             z && (0, r.jsx)(D, {}),
-            Y && (0, r.jsx)(L, { filter: _ }),
+            K && (0, r.jsx)(L, { filter: _ }),
             (0, r.jsx)(x.Z, {
                 className: w.messageList,
                 renderMessageGroup: R,
@@ -258,13 +260,14 @@ function A() {
         })
     });
 }
-function R(e, t) {
+function R(e, t, n) {
     return (0, r.jsx)(
-        j.B,
+        j.Z,
         {
             message: e[0],
             goToSidebar: t,
-            groupedMessages: e.slice(1)
+            groupedMessages: e.slice(1),
+            isUnread: n
         },
         e[0].id
     );
@@ -308,7 +311,7 @@ function L(e) {
         'filter-header'
     );
 }
-function k() {
+function M() {
     let [e, t] = (0, i.useState)(!1);
     return (0, r.jsx)(u.ua7, {
         position: 'bottom',

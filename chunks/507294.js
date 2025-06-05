@@ -1,5 +1,5 @@
 n.d(t, {
-    default: () => Z,
+    default: () => x,
     g: () => A
 }),
     n(388685),
@@ -73,9 +73,9 @@ function A(e, t) {
             );
     });
 }
-let Z = function (e) {
-    let { guildId: t, transitionState: l, onClose: Z } = e,
-        x = (0, o.e7)([O.Z], () => O.Z.getRoles(t)),
+let x = function (e) {
+    let { guildId: t, transitionState: l, onClose: x } = e,
+        Z = (0, o.e7)([O.Z], () => O.Z.getRoles(t)),
         L = (0, o.e7)([_.default], () => _.default.getId()),
         w = (0, o.e7)([E.ZP], () => E.ZP.getMember(t, L)),
         [R, D] = i.useState([]),
@@ -103,7 +103,7 @@ let Z = function (e) {
         null == w)
     )
         return null;
-    let U = Object.values(x).filter((e) => {
+    let U = Object.values(Z).filter((e) => {
         var t;
         return (null == (t = e.tags) ? void 0 : t.guild_connections) === null;
     });
@@ -127,7 +127,7 @@ let Z = function (e) {
                     }),
                     (0, r.jsx)(c.olH, {
                         className: T.modalCloseButton,
-                        onClick: Z
+                        onClick: x
                     })
                 ]
             }),

@@ -138,7 +138,7 @@ let D = l.forwardRef(function (e, t) {
                     })
                 })
             );
-    if (null == p) return b();
+    if (null == p || !o) return b();
     {
         let e = (0, r.jsxs)(r.Fragment, {
             children: [
@@ -172,8 +172,8 @@ function T(e) {
         Y = (0, f.km)((e) => e.fullScreenEnabled),
         z = (0, s.e7)([m.Z], () => m.Z.useReducedMotion),
         H = (0, s.e7)([m.Z], () => m.Z.keyboardModeEnabled),
-        [W, X] = l.useState(q ? 0 : F),
-        [K, $] = l.useState(!1),
+        [W, K] = l.useState(q ? 0 : F),
+        [X, $] = l.useState(!1),
         [J, ee] = l.useState(!1),
         [{ volumeAnimSpring: et }, en] = (0, d.q_F)(() => ({
             from: { volumeAnimSpring: 0 },
@@ -186,7 +186,7 @@ function T(e) {
         er = l.useRef(null),
         el = l.useCallback(
             (e) => {
-                null != o.current && (e !== o.current.volume && (o.current.volume = e), e !== W && X(e));
+                null != o.current && (e !== o.current.volume && (o.current.volume = e), e !== W && K(e));
             },
             [o, W]
         ),
@@ -232,14 +232,14 @@ function T(e) {
         l.useEffect(
             () => (
                 en({
-                    volumeAnimSpring: J || K ? 1 : 0,
+                    volumeAnimSpring: J || X ? 1 : 0,
                     immediate: z
                 }),
                 () => {
                     et.stop();
                 }
             ),
-            [J, K, en, z, et]
+            [J, X, en, z, et]
         ),
         l.useEffect(
             () => (

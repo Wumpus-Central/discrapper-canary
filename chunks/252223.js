@@ -259,7 +259,7 @@ function F(e) {
                             children: [et(), er()]
                         })
                       : (0, r.jsx)(u.ua7, {
-                            tooltipContentClassName: o()(w.container, w.activitiesTooltip),
+                            tooltipContentClassName: o()(w.container, w.activitiesTooltip, w.hasMultipleActivities),
                             delay: C.X,
                             text: en(),
                             'aria-label': ee,

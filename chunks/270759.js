@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282), n(704826);
+n.d(t, { Z: () => Z }), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282), n(704826);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -27,7 +27,7 @@ var r = n(255367),
     P = n(723359),
     j = n(388032),
     A = n(610725);
-function Z() {
+function x() {
     return (0, r.jsx)('div', {
         className: A.inviteToolbar,
         children: (0, r.jsx)(E.Z, {
@@ -36,7 +36,7 @@ function Z() {
         })
     });
 }
-let x = function (e) {
+let Z = function (e) {
     let { initialSection: t } = e,
         n = (0, o.TH)(),
         l = (0, o.k6)(),
@@ -53,7 +53,7 @@ let x = function (e) {
         i.useEffect(() => {
             p.Y(T.Z5c.FRIENDS), (0, I.e)('friends');
         }, []);
-    let x = (0, c.e7)([y.Z], () => y.Z.theme),
+    let Z = (0, c.e7)([y.Z], () => y.Z.theme),
         L = (0, C.If)(),
         { section: w, rows: R } = (0, c.cj)([v.ZP], () => v.ZP.getState()),
         D = (0, c.e7)([b.Z], () => b.Z.getSuggestionCount()),
@@ -124,11 +124,11 @@ let x = function (e) {
         children: [
             (0, r.jsx)(f.yY, { location: j.intl.string(j.t.TdEu5e) }),
             (0, r.jsx)(u.f6W, {
-                theme: x,
+                theme: Z,
                 children: (e) =>
                     (0, r.jsxs)(_.Z, {
                         className: e,
-                        toolbar: (0, r.jsx)(Z, {}),
+                        toolbar: (0, r.jsx)(x, {}),
                         scrollable: s.tq,
                         role: 'navigation',
                         'aria-labelledby': U,

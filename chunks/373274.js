@@ -39,8 +39,8 @@ var r,
     R = n(914010),
     D = n(540126),
     L = n(734307),
-    k = n(854444),
-    M = n(761091),
+    M = n(854444),
+    k = n(761091),
     U = n(301342),
     G = n(906817),
     B = n(429122),
@@ -49,8 +49,8 @@ var r,
     F = n(910595),
     z = n(120818),
     W = n(61642),
-    Y = n(848442),
-    K = n(53425),
+    K = n(848442),
+    Y = n(53425),
     q = n(424785),
     Q = n(770202),
     X = n(79556),
@@ -579,7 +579,7 @@ class ep extends (r = l.PureComponent) {
                             );
                         case en.z.GUILD_SHOP:
                             return (0, i.jsx)(
-                                Y.Z,
+                                K.Z,
                                 {
                                     guild: r,
                                     selected: s === el.oC.GUILD_SHOP
@@ -660,7 +660,7 @@ class ep extends (r = l.PureComponent) {
                                         withGuildIcon: g
                                     }),
                                     y.threadCount > 0
-                                        ? (0, i.jsx)(K.Z, {
+                                        ? (0, i.jsx)(Y.Z, {
                                               withGuildIcon: g,
                                               channel: v,
                                               sortedThreadIds: y.threadIds,
@@ -866,7 +866,7 @@ let ef = (e) => {
     });
 };
 function eg(e) {
-    let t = (0, k.o)(),
+    let t = (0, M.o)(),
         { isFavoritesPerk: n } = (0, v.z)('favorites-channel-list'),
         { density: r } = (0, d.TCT)();
     return (0, i.jsx)(
@@ -880,7 +880,7 @@ function eg(e) {
     );
 }
 function em(e) {
-    let t = (0, M.Z)(e.guild),
+    let t = (0, k.Z)(e.guild),
         n = (0, u.cj)([L.Z], () => L.Z.getGuild(e.guildId, { guildActionRows: t })),
         r = (0, O.Q3)('GuildChannelList'),
         { density: l } = (0, d.TCT)();

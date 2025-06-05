@@ -2,12 +2,12 @@ e.d(n, {
     $J: () => o,
     F7: () => E,
     KZ: () => g,
-    V5: () => I,
+    V5: () => c,
     Vv: () => O,
     by: () => D,
     fL: () => T,
     ib: () => p,
-    xM: () => c,
+    xM: () => I,
     yG: () => u
 });
 var i,
@@ -15,29 +15,29 @@ var i,
     r,
     d,
     a = e(601964),
-    _ = e(70956),
-    s = e(388032);
+    s = e(70956),
+    _ = e(388032);
 let u = 'notifications_inbox_guild_id',
     o = 88,
-    p = _.Z.Millis.WEEK,
+    p = s.Z.Millis.WEEK,
     E = new a.ZP({
         id: u,
-        name: s.intl.string(s.t.HcoRu7),
+        name: _.intl.string(_.t.HcoRu7),
         description: ''
     });
 var g = 12633 == e.j ? (((i = {}).UNREAD = 'UNREAD'), (i.TODAY = 'TODAY'), (i.YESTERDAY = 'YESTERDAY'), (i.OLDER = 'OLDER'), i) : null,
-    I = 12633 == e.j ? (((l = {}).ALL = 'all'), (l.ANNOUNCEMENTS = 'announcements'), (l.MENTIONS = 'mentions'), (l.BOOKMARKS = 'bookmarks'), l) : null,
-    c = 12633 == e.j ? (((r = {}).READ = 'READ'), (r.UNREAD = 'UNREAD'), r) : null,
+    c = 12633 == e.j ? (((l = {}).ALL = 'all'), (l.ANNOUNCEMENTS = 'announcements'), (l.MENTIONS = 'mentions'), (l.BOOKMARKS = 'bookmarks'), l) : null,
+    I = 12633 == e.j ? (((r = {}).READ = 'READ'), (r.UNREAD = 'UNREAD'), r) : null,
     T = 12633 == e.j ? (((d = {}).ALL_MESSAGES_CHANNEL = 'ALL_MESSAGES_CHANNEL'), (d.MENTION = 'MENTION'), (d.BOOKMARK = 'BOOKMARK'), d) : null;
 let O = {
-        UNREAD: s.t['f1tf/v'],
-        TODAY: s.t.F4jZQk,
-        YESTERDAY: s.t.gnv4pK,
-        OLDER: s.t.exrPZm
+        UNREAD: _.t['f1tf/v'],
+        TODAY: _.t.F4jZQk,
+        YESTERDAY: _.t.gnv4pK,
+        OLDER: _.t.exrPZm
     },
     D = {
-        all: s.intl.string(s.t.nsv3q6),
-        bookmarks: s.intl.string(s.t['+rlGYW']),
-        announcements: s.intl.string(s.t['2qyUOz']),
-        mentions: s.intl.string(s.t['GRZF9/'])
+        all: _.intl.string(_.t.nsv3q6),
+        bookmarks: _.intl.string(_.t['+rlGYW']),
+        announcements: _.intl.string(_.t['2qyUOz']),
+        mentions: _.intl.string(_.t['GRZF9/'])
     };

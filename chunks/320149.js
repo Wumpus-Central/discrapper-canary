@@ -33,12 +33,12 @@ function v(e) {
         A = i.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(O.intl.string(O.t.pIQ3h4), a.ToastType.FAILURE));
         }, []),
-        { markAsNotSpam: Z } = (0, h.m)({
+        { markAsNotSpam: x } = (0, h.m)({
             onAcceptSuccess: j,
             onError: A
         });
     if (null == t || !t.isDM()) return null;
-    let x = [
+    let Z = [
         (0, r.jsx)(
             s.ZP.Icon,
             {
@@ -52,7 +52,7 @@ function v(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.ZP, {
-                toolbar: x,
+                toolbar: Z,
                 'aria-label': O.intl.string(O.t.BIYAqa),
                 children: (0, c.ud)({
                     channel: t,
@@ -72,7 +72,7 @@ function v(e) {
                         (0, r.jsx)(a.zxk, {
                             className: y.hamBannerButton,
                             size: a.PhG.SMALL,
-                            onClick: () => Z(t, P),
+                            onClick: () => x(t, P),
                             children: O.intl.string(O.t.koqL3d)
                         })
                     ]

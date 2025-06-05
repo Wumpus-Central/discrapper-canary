@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(592125),
     D = n(430824),
     L = n(607744),
-    k = n(496675),
-    M = n(306680),
+    M = n(496675),
+    k = n(306680),
     U = n(9156),
     G = n(979651),
     B = n(934415),
@@ -43,8 +43,8 @@ var r = n(255367),
     F = n(648501),
     z = n(473403),
     W = n(830993),
-    Y = n(653577),
-    K = n(207055),
+    K = n(653577),
+    Y = n(207055),
     q = n(981631),
     Q = n(647086),
     X = n(388032),
@@ -122,7 +122,7 @@ class en extends H.ZP {
         let { channel: t, connected: n } = this.props,
             i = null == (e = (0, v.D)(this.props.subtitle)) ? void 0 : e.subtitle,
             { hovered: l } = this.state;
-        return (0, r.jsx)(Y.Z, {
+        return (0, r.jsx)(K.Z, {
             onClick: this.handleVoiceStatusClick,
             channel: t,
             connected: n,
@@ -132,7 +132,7 @@ class en extends H.ZP {
     }
     renderVoiceUsers() {
         let { channel: e, voiceStates: t, collapsed: n, withGuildIcon: i, tabIndex: l } = this.props;
-        return (0, r.jsx)(K.Z, {
+        return (0, r.jsx)(Y.Z, {
             channel: e,
             collapsed: n,
             collapsedMax: 6,
@@ -424,20 +424,20 @@ class en extends H.ZP {
 let er = (0, h.B)((0, p.Q)(en));
 function ei(e) {
     let { guild: t, channel: n, disableSorting: i, isFavoriteCategory: l, selected: o, collapsed: a, voiceStates: c } = e,
-        u = (0, s.cj)([M.ZP], () => ({
-            unread: M.ZP.hasUnread(n.id),
-            mentionCount: M.ZP.getMentionCount(n.id)
+        u = (0, s.cj)([k.ZP], () => ({
+            unread: k.ZP.hasUnread(n.id),
+            mentionCount: k.ZP.getMentionCount(n.id)
         })),
         d = (0, s.e7)([U.ZP], () => U.ZP.resolveUnreadSetting(n)),
-        h = (0, s.cj)([R.Z, L.Z, k.Z], () => {
+        h = (0, s.cj)([R.Z, L.Z, M.Z], () => {
             let e = R.Z.getChannel(n.parent_id),
                 r = L.Z.getCheck(n.guild_id);
             return {
-                canManageChannel: k.Z.can(q.Plq.MANAGE_CHANNELS, n),
-                canReorderChannel: !0 !== i && (t.id === Q._ || (null != e ? k.Z.can(q.Plq.MANAGE_CHANNELS, e) : k.Z.can(q.Plq.MANAGE_CHANNELS, t))),
-                canMoveMembers: k.Z.can(q.Plq.MOVE_MEMBERS, n),
-                locked: !k.Z.can(q.Plq.CONNECT, n),
-                bypassLimit: k.Z.can(q.Plq.MOVE_MEMBERS, n),
+                canManageChannel: M.Z.can(q.Plq.MANAGE_CHANNELS, n),
+                canReorderChannel: !0 !== i && (t.id === Q._ || (null != e ? M.Z.can(q.Plq.MANAGE_CHANNELS, e) : M.Z.can(q.Plq.MANAGE_CHANNELS, t))),
+                canMoveMembers: M.Z.can(q.Plq.MOVE_MEMBERS, n),
+                locked: !M.Z.can(q.Plq.CONNECT, n),
+                bypassLimit: M.Z.can(q.Plq.MOVE_MEMBERS, n),
                 unverifiedAccount: !r.canChat
             };
         }),

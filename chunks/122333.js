@@ -69,15 +69,15 @@ function A(e, t) {
         e
     );
 }
-function Z() {
+function x() {
     null != r && (0, l.Mr3)(r);
 }
-class x extends o.Z {
+class Z extends o.Z {
     _initialize() {
-        a.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen), a.Z.subscribe('LOGOUT', Z);
+        a.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen), a.Z.subscribe('LOGOUT', x);
     }
     _terminate() {
-        a.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen), a.Z.unsubscribe('LOGOUT', Z);
+        a.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen), a.Z.unsubscribe('LOGOUT', x);
     }
     handleConnectionOpen() {
         var e;
@@ -95,12 +95,12 @@ class x extends o.Z {
                 h.Z.flowStart(P.MK.ORGANIC_MARKETING, P.EW.NUF_STARTED);
         }
         let o = !1,
-            Z = _.Z.getGuildId();
+            x = _.Z.getGuildId();
         if (a === C.M5.INVITE_UNCLAIMED) {
-            let e = b.Z.getGuild(Z);
+            let e = b.Z.getGuild(x);
             null != e && (0, d.Dc)(e) && ((o = !0), (0, f.RM)(e.id));
         }
-        let x = () => 0 === m.Z.totalGuilds && !I.isPlatformEmbedded,
+        let Z = () => 0 === m.Z.totalGuilds && !I.isPlatformEmbedded,
             L = s.bN();
         (e = [
             {
@@ -147,12 +147,12 @@ class x extends o.Z {
                         }
                     );
                 },
-                predicate: () => x() && !T.a
+                predicate: () => Z() && !T.a
             },
             {
                 key: 'New User Age Gate',
                 open: c.i,
-                predicate: () => L && !x() && !T.a
+                predicate: () => L && !Z() && !T.a
             },
             {
                 key: 'Claim Account Modal',
@@ -164,7 +164,7 @@ class x extends o.Z {
             },
             {
                 key: 'Verification Gate with Claim Account',
-                open: (e) => (0, u.hk)(Z, null != e ? e : void 0),
+                open: (e) => (0, u.hk)(x, null != e ? e : void 0),
                 predicate: () => {
                     var e;
                     return o && !(null == (e = E.default.getCurrentUser()) ? void 0 : e.isClaimed()) && !T.a;
@@ -176,11 +176,11 @@ class x extends o.Z {
                     (0, l.ZDy)(
                         async () => {
                             let { default: e } = await n.e('77578').then(n.bind(n, 184782));
-                            return (t) => (0, i.jsx)(e, A(j({}, t), { guildId: Z }));
+                            return (t) => (0, i.jsx)(e, A(j({}, t), { guildId: x }));
                         },
                         { onCloseCallback: e }
                     ),
-                predicate: () => null != Z && null != g.Z.get(Z) && g.Z.get(Z) !== g.a
+                predicate: () => null != x && null != g.Z.get(x) && g.Z.get(x) !== g.a
             }
         ]),
             (t = () => {
@@ -195,4 +195,4 @@ class x extends o.Z {
             t();
     }
 }
-let L = new x();
+let L = new Z();

@@ -27,8 +27,8 @@ var r = n(913527),
     P = n(981631),
     j = n(388032);
 let A = [],
-    Z = null,
     x = null,
+    Z = null,
     L = null,
     w = /\|\|([\s\S]+?)\|\|/g;
 function R(e, t, n, r) {
@@ -75,11 +75,11 @@ function D() {
         L = null == (t = window.speechSynthesis) ? void 0 : t.getVoices();
     }
     let n = L.filter((t) => t.lang === e || t.lang.slice(0, e.length) === e);
-    x = n.length > 0 ? n[0] : null;
+    Z = n.length > 0 ? n[0] : null;
 }
 async function k(e, t, n, r, i) {
     let l = o.e6(e, n);
-    null !== l && (null == x && D(), t ? await (0, S.NB)() : null == Z || Z.removeEventListener('end', S.NB), l.addEventListener('end', S.NB), null != r && l.addEventListener('start', r), null != i && l.addEventListener('end', i), (Z = l), o.iq(l, x));
+    null !== l && (null == Z && D(), t ? await (0, S.NB)() : null == x || x.removeEventListener('end', S.NB), l.addEventListener('end', S.NB), null != r && l.addEventListener('start', r), null != i && l.addEventListener('end', i), (x = l), o.iq(l, Z));
 }
 function M(e, t, n, r, i) {
     k(e, t, i, () => {
@@ -91,7 +91,7 @@ function U(e) {
     k(t, n, r, i, l);
 }
 function G() {
-    return null !== Z && Z.removeEventListener('end', S.NB), o.M9(), (Z = null), !0;
+    return null !== x && x.removeEventListener('end', S.NB), o.M9(), (x = null), !0;
 }
 function B(e) {
     var t, n, r;

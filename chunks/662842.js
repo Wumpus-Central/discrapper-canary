@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(670188),
     j = n(496675),
     A = n(594174),
-    Z = n(662868),
-    x = n(981631),
+    x = n(662868),
+    Z = n(981631),
     L = n(765305),
     w = n(388032),
     R = n(29504);
@@ -48,7 +48,7 @@ function D(e) {
         U = null == l ? void 0 : l.id,
         G = (0, o.Wu)([C.Z], () => [...new Set(C.Z.getMutableParticipants(U, S.pV.SPEAKER).map((e) => e.user))], [U]),
         B = (0, o.e7)([C.Z], () => (null != U ? C.Z.getParticipantCount(U, S.pV.AUDIENCE) : 0), [U]),
-        V = (0, o.e7)([j.Z], () => j.Z.can(x.Plq.CONNECT, l)),
+        V = (0, o.e7)([j.Z], () => j.Z.can(Z.Plq.CONNECT, l)),
         H = (0, T.Z)(null == l ? void 0 : l.id),
         F = null == d ? void 0 : d.creator_id,
         z = (0, o.e7)([A.default], () => A.default.getUser(F), [F]);
@@ -296,7 +296,7 @@ function D(e) {
                   (0, r.jsxs)('div', {
                       className: R.header,
                       children: [
-                          (0, r.jsx)(Z.Z, {
+                          (0, r.jsx)(x.Z, {
                               color: s.Z.unsafe_rawColors.GREEN_230.css,
                               width: 16,
                               height: 16

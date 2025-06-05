@@ -101,9 +101,9 @@ function x(e) {
                     }
                     return !1;
                 })(),
-                k = o.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
+                M = o.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
             return (
-                f ? ((m = !0), (y = (null == r ? void 0 : r.channel_id) === c), (v = T), (_ = D), (S = A), (x = k)) : ((m = P), (y = null != r), (v = Z), (_ = I), (S = R), (x = L)),
+                f ? ((m = !0), (y = (null == r ? void 0 : r.channel_id) === c), (v = T), (_ = D), (S = A), (x = M)) : ((m = P), (y = null != r), (v = Z), (_ = I), (S = R), (x = L)),
                 {
                     audio: m,
                     video: _,

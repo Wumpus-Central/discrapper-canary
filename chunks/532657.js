@@ -69,7 +69,7 @@ function p(e) {
                     (0, r.jsx)(s.Text, {
                         variant: 'text-sm/medium',
                         color: 'none',
-                        className: o()(c.tooltip, u),
+                        className: o()(c.tooltipText, u),
                         children: e
                     })
                 ]

@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(849862),
     j = n(522558),
     A = n(795448),
-    Z = n(441623),
-    x = n(457396),
+    x = n(441623),
+    Z = n(457396),
     L = n(108989),
     w = n(51596),
     R = n(905423),
@@ -117,7 +117,7 @@ let er = (e) => {
             n = en(e, ['selected']);
         let l = (0, c.JA)('friends'),
             a = (0, P.If)(),
-            o = (0, d.e7)([Z.Z], () => Z.Z.canShowFriendsTabBadge()),
+            o = (0, d.e7)([x.Z], () => x.Z.canShowFriendsTabBadge()),
             u = (0, d.e7)([b.Z], () => b.Z.useReducedMotion),
             { enabled: p } = j.w.useExperiment({ location: 'Friends Tab' }, { autoTrackExposure: !1 }),
             h = o && p;
@@ -359,7 +359,7 @@ let ed = i.memo(function (e) {
                         d ? (0, r.jsx)(ea, { selected: null == g ? null != l && l.startsWith(K.Z5c.MESSAGE_REQUESTS) : g === K.Z5c.MESSAGE_REQUESTS }, 'message-requests') : null,
                         c
                             ? (0, r.jsx)(
-                                  x.g,
+                                  Z.g,
                                   {
                                       selected: null == g ? o : g.startsWith(K.Z5c.APPLICATION_STORE),
                                       route: K.Z5c.APPLICATION_STORE,
@@ -425,7 +425,7 @@ function eh() {
             let { channelId: t, path: n } = e;
             return [t, n];
         }, o.X),
-        p = (0, x.i)({ selected: null == u ? t : u.startsWith(K.Z5c.APPLICATION_STORE) }),
+        p = (0, Z.i)({ selected: null == u ? t : u.startsWith(K.Z5c.APPLICATION_STORE) }),
         h = (0, S.a)(),
         f = (function () {
             let e = M.Ex.useSetting(),

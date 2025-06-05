@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(46140),
     j = n(388032),
     A = n(370168);
-let Z = 15 * E.Z.Millis.MINUTE,
-    x = (0, S.Z)(function (e) {
+let x = 15 * E.Z.Millis.MINUTE,
+    Z = (0, S.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
             o = i.useRef(null),
             c = (0, r.jsx)(y.Z, {
@@ -60,7 +60,7 @@ let Z = 15 * E.Z.Millis.MINUTE,
                     games_detected: e
                 });
             }, [m, b, E, O, f]),
-            P = s()(S, Z);
+            P = s()(S, x);
         return null != c || null != d
             ? (0, r.jsx)(u.yRy, {
                   targetElementRef: o,
@@ -172,7 +172,7 @@ function w() {
                   ? e.map((e) => {
                         let { party: t } = e;
                         return (0, r.jsx)(
-                            x,
+                            Z,
                             {
                                 party: t,
                                 quest: s.get(t.id)

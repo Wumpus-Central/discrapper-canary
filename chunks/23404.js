@@ -27,7 +27,7 @@ var r = n(255367),
     P = n(981631),
     j = n(388032),
     A = n(396896);
-function Z(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +52,7 @@ function Z(e) {
     }
     return e;
 }
-function x(e) {
+function Z(e) {
     var t;
     let { quest: n } = e,
         i = (0, p.B6)(n.config.expiresAt),
@@ -162,7 +162,7 @@ function L(e) {
                   (0, r.jsxs)('div', {
                       className: A.utils,
                       children: [
-                          z ? (0, r.jsx)(x, { quest: E }) : (0, r.jsx)(y.Z, {}),
+                          z ? (0, r.jsx)(Z, { quest: E }) : (0, r.jsx)(y.Z, {}),
                           (0, r.jsx)(v.r, {
                               quest: E,
                               questContent: f.jn.ACTIVITY_PANEL,
@@ -172,7 +172,7 @@ function L(e) {
                                   var t, n;
                                   return (0, r.jsx)(
                                       s.P3F,
-                                      ((t = Z({}, e)),
+                                      ((t = x({}, e)),
                                       (n = n =
                                           {
                                               'aria-label': j.intl.string(j.t.DEoVWV),
@@ -203,7 +203,7 @@ function L(e) {
                   !z &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(x, { quest: E }),
+                              (0, r.jsx)(Z, { quest: E }),
                               (0, r.jsxs)('div', {
                                   className: A.instructions,
                                   children: [
@@ -285,6 +285,6 @@ let w = function (e) {
     return (0, r.jsx)(O.A, {
         questOrQuests: e.quest,
         questContent: f.jn.ACTIVITY_PANEL,
-        children: (t) => (0, r.jsx)(L, Z({ nodeRef: t }, e))
+        children: (t) => (0, r.jsx)(L, x({ nodeRef: t }, e))
     });
 };

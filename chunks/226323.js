@@ -96,7 +96,7 @@ function j(e) {
     var t, l;
     let d = i.useRef(null),
         { parentAnalyticsLocation: p } = (0, f.ZP)(),
-        { channel: E, user: j, nick: A, mute: Z, deaf: x, serverMute: L, serverDeaf: w } = e,
+        { channel: E, user: j, nick: A, mute: x, deaf: Z, serverMute: L, serverDeaf: w } = e,
         R = (0, o.e7)([O.Z], () => O.Z.isLocalMute(j.id)),
         D = (0, u.Z)({
             userId: j.id,
@@ -119,9 +119,9 @@ function j(e) {
             if (i) return P.mute;
         })({
             serverDeaf: w,
-            deaf: x,
+            deaf: Z,
             serverMute: L,
-            mute: Z,
+            mute: x,
             localMute: R
         }))
             ? l
