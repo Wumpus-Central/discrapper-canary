@@ -15972,19 +15972,19 @@ div.modalHeader_c28af8 {
     background-image: var(--custom-premium-colors-premium-gradient-tier-2)
 }
 
-.tier0V2Background_ac86f6 {
+.tier0ApplicationHomeBackground_ac86f6 {
     background: linear-gradient(180deg, #000, #031a3b)
 }
 
-.tier2V2Background_ac86f6 {
+.tier2ApplicationHomeBackground_ac86f6 {
     background: linear-gradient(180deg, #000, #36266d)
 }
 
-.theme-light .tier0V2Background_ac86f6 {
+.theme-light .tier0ApplicationHomeBackground_ac86f6 {
     background: linear-gradient(180deg, #f7f7fe 22.95%, #b6ddfc 153.33%)
 }
 
-.theme-light .tier2V2Background_ac86f6 {
+.theme-light .tier2ApplicationHomeBackground_ac86f6 {
     background: linear-gradient(180deg, #f7f7fe, #b6b9fc 153.33%)
 }
 
@@ -16000,7 +16000,7 @@ div.modalHeader_c28af8 {
     z-index: -1
 }
 
-.v2TextLightMode_ac86f6 {
+.applicationHomeTextLightMode_ac86f6 {
     pointer-events: inherit
 }
 
@@ -16009,7 +16009,7 @@ div.modalHeader_c28af8 {
     width: 106px
 }
 
-.tier0V2Title_ac86f6 {
+.tier0ApplicationHomeTitle_ac86f6 {
     color: var(--white);
     height: 16px;
     width: 132px
@@ -16026,7 +16026,7 @@ div.modalHeader_c28af8 {
     width: 96px
 }
 
-.tier2V2Title_ac86f6 {
+.tier2ApplicationHomeTitle_ac86f6 {
     color: var(--white);
     height: 16px;
     width: 64px
@@ -16047,16 +16047,16 @@ div.modalHeader_c28af8 {
     margin-bottom: 0
 }
 
-.tier2V2Subheader_ac86f6 {
+.tier2ApplicationHomeSubheader_ac86f6 {
     color: var(--white);
     margin-bottom: 6px
 }
 
-.itemV2_ac86f6 {
+.itemApplicationHome_ac86f6 {
     color: var(--white)
 }
 
-.v2TierCardSectionHeader_ac86f6 {
+.applicationHomeTierCardSectionHeader_ac86f6 {
     display: flex;
     font-style: italic;
     justify-content: center;
@@ -16064,11 +16064,11 @@ div.modalHeader_c28af8 {
     text-transform: uppercase
 }
 
-.theme-light .v2TextLightMode_ac86f6 {
+.theme-light .applicationHomeTextLightMode_ac86f6 {
     color: var(--black)
 }
 
-.v2starBackground_ac86f6 {
+.applicationHomeStarBackground_ac86f6 {
     height: 100%;
     overflow: hidden;
     position: absolute;
