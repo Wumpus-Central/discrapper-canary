@@ -46476,6 +46476,14 @@ div.mobilePushContainer__3d3b0 {
     background-color: Highlight
 }
 
+.titleClickable__9293f {
+    cursor: pointer
+}
+
+.titleClickable__9293f:hover {
+    color: var(--header-primary)
+}
+
 .container__459fb {
     display: flex;
     flex-wrap: wrap;
