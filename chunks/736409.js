@@ -36,7 +36,7 @@ let _ = (e) => {
             }
             return null;
         })({ isForceShowSharingPopout: n }),
-        x = (0, i.useRef)(null);
+        E = (0, i.useRef)(null);
     return ((0, i.useEffect)(() => {
         n && g.default.track(y.rMx.OPEN_POPOUT, { type: 'SharingPrivacyPopout' });
     }, [n]),
@@ -50,7 +50,7 @@ let _ = (e) => {
                           (0, a.EW)(o.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: O.L.USER_DISMISS }), _(!1), j(!1);
                       };
                       return (0, r.jsx)(s.yRy, {
-                          targetElementRef: x,
+                          targetElementRef: E,
                           shouldShow: !0,
                           spacing: 10,
                           position: 'top',
@@ -66,7 +66,7 @@ let _ = (e) => {
                           },
                           children: () =>
                               (0, r.jsx)(s.P3F, {
-                                  innerRef: x,
+                                  innerRef: E,
                                   onClick: e,
                                   children: t
                               })

@@ -33,8 +33,8 @@ function _(e) {
                             .map((e) => e.id),
             [t.roles, t.highestRoleId, n, l]
         ),
-        x = (0, o.e7)([c.Z], () => c.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]),
-        y = (0, u.zq)(x),
+        y = (0, o.e7)([c.Z], () => c.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]),
+        x = (0, u.zq)(y),
         C = (0, u.vN)(t),
         v = (0, o.e7)([h.Z], () => h.Z.can(m.Plq.MANAGE_ROLES, n), [n]);
     return null == n
@@ -60,7 +60,7 @@ function _(e) {
                                                     onMouseLeave: i,
                                                     children: (0, r.jsx)(d.Z, {
                                                         className: a()(b.roleTooltipItem, b.highestRole),
-                                                        role: y,
+                                                        role: x,
                                                         guildId: t.guildId
                                                     })
                                                 });

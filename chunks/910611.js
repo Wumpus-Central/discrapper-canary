@@ -20,8 +20,8 @@ var r = n(255367),
     g = n(370774),
     b = n(703656),
     _ = n(699516),
-    x = n(914010),
-    y = n(594174),
+    y = n(914010),
+    x = n(594174),
     C = n(768581),
     v = n(63063),
     j = n(946734),
@@ -157,7 +157,7 @@ function A(e) {
 function w(e) {
     let { channel: t, channelName: n, parentChannel: l, guild: o, inSidebar: s = !1, handleClick: u, handleContextMenu: d, handleParentClick: f, handleParentContextMenu: m, renderFollowButton: g } = e,
         b = (0, h.KS)(t, o),
-        { prefix: x, level: C } = (function (e, t) {
+        { prefix: y, level: C } = (function (e, t) {
             var n, r;
             switch (e) {
                 case S.d4z.DM:
@@ -201,9 +201,9 @@ function w(e) {
         })(t.type, o),
         v = (0, r.jsxs)(r.Fragment, {
             children: [
-                null != x
+                null != y
                     ? (0, r.jsxs)(c.nn4, {
-                          children: [x, ':']
+                          children: [y, ':']
                       })
                     : null,
                 ' ',
@@ -300,7 +300,7 @@ function w(e) {
                             onContextMenu: m,
                             onClick: f,
                             className: a()(T.parentChannelName, T.cursorPointer),
-                            children: (0, p.F6)(l, y.default, _.Z)
+                            children: (0, p.F6)(l, x.default, _.Z)
                         }),
                         (0, r.jsx)(I.Z.Caret, {})
                     ]
@@ -339,9 +339,9 @@ function w(e) {
                         onContextMenu: d,
                         onClick: u,
                         children: [
-                            null != x
+                            null != y
                                 ? (0, r.jsxs)(c.nn4, {
-                                      children: [x, ':']
+                                      children: [y, ':']
                                   })
                                 : null,
                             ' ',
@@ -356,8 +356,8 @@ function w(e) {
 }
 let R = (e) => {
     let { channel: t } = e,
-        n = (0, o.e7)([y.default], () => y.default.getCurrentUser()),
-        i = (0, o.e7)([y.default], () => y.default.getUser(t.getRecipientId()));
+        n = (0, o.e7)([x.default], () => x.default.getCurrentUser()),
+        i = (0, o.e7)([x.default], () => x.default.getUser(t.getRecipientId()));
     return t.isDM() && (null == n ? void 0 : n.isStaff()) && (null == i ? void 0 : i.isStaff()) ? (0, r.jsx)(d.Z, { type: d.Z.Types.STAFF_ONLY_DM }) : null;
 };
 function k(e, t) {
@@ -400,7 +400,7 @@ function M(e, t) {
 }
 function L(e) {
     let { guild: t, channel: n, caretPosition: i = 'left' } = e,
-        l = (0, o.e7)([x.Z], () => x.Z.getGuildId()),
+        l = (0, o.e7)([y.Z], () => y.Z.getGuildId()),
         s = (0, g.D)();
     return (l === S.I_8 || s) && null != t
         ? (0, r.jsxs)('div', {

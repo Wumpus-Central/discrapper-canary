@@ -20,8 +20,8 @@ function O(e) {
     let { onClick: g, selectedOverride: O = !1, popoutProps: v, ref: _ } = e,
         C = (0, l.Ie)('notifications-inbox'),
         [j, S] = i.useState(!1),
-        x = (0, f.D)(),
-        E = O || x,
+        E = (0, f.D)(),
+        x = O || E,
         P = (0, o.e7)([d.default], () => d.default.getTotalMentionCount(!0)),
         I = P > 0 ? (0, u.N)(P) : null,
         { notificationCenterVariant: w } = p.L.useExperiment({ location: 'NotificationsInboxButtonInner' }),
@@ -34,14 +34,14 @@ function O(e) {
         children: [
             'sidebar' === w &&
                 (0, r.jsx)(a.Z, {
-                    selected: E,
+                    selected: x,
                     hovered: j,
                     unread: P > 0,
                     className: y.pill
                 }),
             (0, r.jsx)(m.Z, {
                 children: (0, r.jsx)(s.aRk, {
-                    selected: E || j,
+                    selected: x || j,
                     lowerBadge: I,
                     children: (0, r.jsx)(
                         s.LYs,
@@ -74,7 +74,7 @@ function O(e) {
                             {
                                 onClick: g,
                                 to: Z,
-                                selected: E || j,
+                                selected: x || j,
                                 onMouseEnter: () => S(!0),
                                 onMouseLeave: () => S(!1),
                                 children: (0, r.jsx)(s.Dkj, {

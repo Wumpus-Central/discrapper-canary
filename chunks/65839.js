@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(388032),
     b = n(400816),
     _ = n(104402),
-    x = n(584354),
-    y = n(725060);
+    y = n(584354),
+    x = n(725060);
 let C = (e) => {
     let { searchQuery: t, setSearchQuery: n, handleClearSearch: i, handleSearchKeyPress: l } = e,
         { ref: o, width: u } = (0, c.ZP)(),
@@ -28,7 +28,7 @@ let C = (e) => {
             (0, r.jsx)('img', {
                 alt: '',
                 className: _.headerImage,
-                src: d ? y : x
+                src: d ? x : y
             }),
             (0, r.jsx)('div', {
                 className: _.headerContentWrapper,
@@ -120,7 +120,7 @@ function v(e) {
     });
 }
 let j = (e) => {
-    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: l, searchQuery: a, setSearchQuery: c, handleClearSearch: d, handleSearchKeyPress: p, currentCategoryId: x, handleSelectCategory: y, categoryCounts: j, allEntriesCount: O, isLoading: E } = e,
+    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: l, searchQuery: a, setSearchQuery: c, handleClearSearch: d, handleSearchKeyPress: p, currentCategoryId: y, handleSelectCategory: x, categoryCounts: j, allEntriesCount: O, isLoading: E } = e,
         I = (0, o.e7)([u.Z], () => u.Z.getGuild(t.getGuildId()));
     return null != I && I.hasFeature(m.oNc.SHARD)
         ? (0, r.jsx)(v, {
@@ -146,9 +146,9 @@ let j = (e) => {
                               className: _.tabBar,
                               type: 'top',
                               look: 'brand',
-                              selectedItem: x,
+                              selectedItem: y,
                               onItemSelect: (e) => {
-                                  y(e);
+                                  x(e);
                               },
                               children: [
                                   (0, r.jsx)(

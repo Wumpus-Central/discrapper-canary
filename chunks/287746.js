@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(166459),
     b = n(966390),
     _ = n(738619),
-    x = n(410575),
-    y = n(744061),
+    y = n(410575),
+    x = n(744061),
     C = n(410030),
     v = n(857595),
     j = n(607070),
@@ -69,8 +69,8 @@ var r = n(255367),
     eg = n(217871),
     eb = n(139577),
     e_ = n(247944),
-    ex = n(623292),
-    ey = n(807092),
+    ey = n(623292),
+    ex = n(807092),
     eC = n(773359),
     ev = n(45251),
     ej = n(705533),
@@ -247,7 +247,7 @@ class ti extends i.PureComponent {
     }
     render() {
         let { channel: e, focused: t, onBlur: n, onFocus: i, onResize: l, highlighted: a, pendingReply: o, chatInputType: c, placeholder: u, accessibilityLabel: d, shakeIntensity: h, poggermodeEnabled: f, onCommandSentinelTyped: m, renderAppLauncherButton: g, renderAppCommandButton: b, pendingScheduledMessage: _ } = this.props,
-            { contentWarningProps: x } = this.state,
+            { contentWarningProps: y } = this.state,
             C = (0, r.jsx)(V.Z, {
                 ref: this.props.refInstance,
                 textValue: this.state.textValue,
@@ -280,12 +280,12 @@ class ti extends i.PureComponent {
             position: 'top',
             onRequestClose: () => {
                 var e;
-                null == x || null == (e = x.onCancel) || e.call(x), this.setState({ contentWarningProps: null });
+                null == y || null == (e = y.onCancel) || e.call(y), this.setState({ contentWarningProps: null });
             },
-            shouldShow: null != x,
+            shouldShow: null != y,
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return s()(null != x, 'ChannelTextAreaForm > Popout > renderPopout: contentWarningProps cannot be null'), (0, r.jsx)(y.Z, e4({ onClose: t }, x));
+                return s()(null != y, 'ChannelTextAreaForm > Popout > renderPopout: contentWarningProps cannot be null'), (0, r.jsx)(x.Z, e4({ onClose: t }, y));
             },
             children: () =>
                 f
@@ -471,13 +471,13 @@ class ti extends i.PureComponent {
                                 shouldClear: !1,
                                 shouldRefocus: !1
                             };
-                    let x = (0, es.g)(t, {
+                    let y = (0, es.g)(t, {
                         channel: c,
                         isEdit: !1
                     });
-                    null != x && (null != x.content && (t = x.content), null != x.tts && (p = x.tts));
-                    let y = ec.ZP.parse(c, t);
-                    y.tts = y.tts || p;
+                    null != y && (null != y.content && (t = y.content), null != y.tts && (p = y.tts));
+                    let x = ec.ZP.parse(c, t);
+                    x.tts = x.tts || p;
                     let C = f.Z.getSendMessageOptions({
                         content: t,
                         channelId: c.id,
@@ -491,8 +491,8 @@ class ti extends i.PureComponent {
                     });
                     if (o)
                         return (
-                            f.Z.sendMessage(c.id, y, void 0, C),
-                            (0, ex.A6)(c.id),
+                            f.Z.sendMessage(c.id, x, void 0, C),
+                            (0, ey.A6)(c.id),
                             {
                                 shouldClear: !1,
                                 shouldRefocus: !0
@@ -555,7 +555,7 @@ class ti extends i.PureComponent {
                                     }
                                 );
                             }
-                        else f.Z.sendMessage(c.id, y, void 0, C);
+                        else f.Z.sendMessage(c.id, x, void 0, C);
                     } else if (null != n && n.length > 0) {
                         let e = (0, eW.KZ)(n);
                         if ((0, eW.Bf)(e, null == s ? void 0 : s.id))
@@ -571,7 +571,7 @@ class ti extends i.PureComponent {
                                 channelId: c.id,
                                 uploads: n,
                                 draftType: eT.d.ChannelMessage,
-                                parsedMessage: y,
+                                parsedMessage: x,
                                 options: C,
                                 raiseEndpointErrors: null != t
                             });
@@ -601,10 +601,10 @@ class ti extends i.PureComponent {
                                 }
                             );
                         }
-                    else null != r && r.length > 0 && '' === t ? f.Z.sendStickers(c.id, r, t, C, y.tts) : f.Z.sendMessage(c.id, y, void 0, C);
+                    else null != r && r.length > 0 && '' === t ? f.Z.sendStickers(c.id, r, t, C, x.tts) : f.Z.sendMessage(c.id, x, void 0, C);
                     return (
                         this.setState((0, G.H2)()),
-                        (0, ex.A6)(c.id),
+                        (0, ey.A6)(c.id),
                         (0, eE.qB)(c.id, d.drafts.type),
                         {
                             shouldClear: !0,
@@ -661,7 +661,7 @@ class tl extends i.PureComponent {
     render() {
         var e, t;
         let n,
-            { channel: i, guild: l, keyboardModeEnabled: o, hasModalOpen: s, pendingReply: c, chatInputType: d, placeholder: h, accessibilityLabel: f, showQuarantinedUserBanner: m, filterAfterTimestamp: g, communicationDisabledUntil: b, shakeIntensity: y, poggermodeEnabled: C, isSelectedResourceChannel: v, showAutomodUserProfileChatBlocker: j, showAppLauncherButton: O, showAppDMsUI: E, isInitialLoading: I, isRefreshChatInputEnabled: P, isRefreshEnabled: S, pendingScheduledMessage: Z, recipientUser: N, voiceChannel: T, theme: A, chatWallpaperState: w, wallpaperColorMix: R } = this.props,
+            { channel: i, guild: l, keyboardModeEnabled: o, hasModalOpen: s, pendingReply: c, chatInputType: d, placeholder: h, accessibilityLabel: f, showQuarantinedUserBanner: m, filterAfterTimestamp: g, communicationDisabledUntil: b, shakeIntensity: x, poggermodeEnabled: C, isSelectedResourceChannel: v, showAutomodUserProfileChatBlocker: j, showAppLauncherButton: O, showAppDMsUI: E, isInitialLoading: I, isRefreshChatInputEnabled: P, isRefreshEnabled: S, pendingScheduledMessage: Z, recipientUser: N, voiceChannel: T, theme: A, chatWallpaperState: w, wallpaperColorMix: R } = this.props,
             { textAreaFocused: k, textAreaHighlighted: M } = this.state,
             L = d === B.Ie.SIDEBAR;
         n = L && i.type === e2.d4z.GUILD_VOICE ? e3.t.pnnyFR : L && i.type === e2.d4z.GUILD_STAGE_VOICE ? e3.t.YInSkp : u.T.THREADS.has(i.type) ? e3.t['OkzL+f'] : e3.t.UbNmGR;
@@ -692,7 +692,7 @@ class tl extends i.PureComponent {
                             chatInputType: d,
                             placeholder: h,
                             accessibilityLabel: f,
-                            shakeIntensity: y,
+                            shakeIntensity: x,
                             poggermodeEnabled: C,
                             onCommandSentinelTyped: this.handleCommandSentinelTyped,
                             renderAppLauncherButton: this.renderAppLauncherButton,
@@ -717,7 +717,7 @@ class tl extends i.PureComponent {
             z = W.qM.getCurrentConfig({ location: 'ChannelChat' }).enabled,
             q = V && null != N && null != T && null != T.guild_id;
         return (0, r.jsx)(
-            x.Z,
+            y.Z,
             {
                 page: (0, eB.mE)(this.props.channel),
                 children: (0, r.jsx)(ea.sW, {
@@ -943,11 +943,11 @@ let ta = i.memo(function (e) {
         g = (0, d.e7)([ef.Z], () => ef.Z.isEnabled()),
         b = (0, eb.Z)(t.id),
         _ = (0, ei.Z)(t.id),
-        x = (0, N.R)({
+        y = (0, N.R)({
             channel: t,
             chatInputType: l
         }),
-        y = (0, D.h9)(t.id),
+        x = (0, D.h9)(t.id),
         v = (0, ej.k)(t.id),
         O = (0, C.ZP)(),
         P = (0, K.Z)(t.id),
@@ -986,7 +986,7 @@ let ta = i.memo(function (e) {
         hasModalOpen: (0, p.s9z)(p.JQI),
         guild: n,
         keyboardModeEnabled: (0, d.e7)([j.Z], () => j.Z.keyboardModeEnabled),
-        pendingReply: (0, d.e7)([ey.Z], () => ey.Z.getPendingReply(t.id)),
+        pendingReply: (0, d.e7)([ex.Z], () => ex.Z.getPendingReply(t.id)),
         chatInputType: l,
         placeholder: o,
         accessibilityLabel: s,
@@ -997,8 +997,8 @@ let ta = i.memo(function (e) {
         poggermodeEnabled: g,
         isSelectedResourceChannel: _,
         showAutomodUserProfileChatBlocker: h && !m,
-        showAppLauncherButton: x,
-        showAppDMsUI: y,
+        showAppLauncherButton: y,
+        showAppDMsUI: x,
         isInitialLoading: T,
         showEntryPointAppCommandButton: null != A,
         entryPointCommandButtonRef: U,

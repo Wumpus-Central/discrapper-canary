@@ -58,11 +58,11 @@ function f(e, t) {
 }
 function g(e) {
     let { children: t, size: n, onClick: l, onMouseDown: s, onKeyDown: u, onContextMenu: p, onMouseEnter: f, onMouseLeave: g, className: m, ariaHidden: b, avatarDecoration: y, specs: v, cornerIconUrl: _, cornerIconOffsetX: C, cornerIconOffsetY: j, ariaLabel: S } = e,
-        x = {
+        E = {
             width: (0, a.pxk)(n),
             height: (0, a.pxk)(n)
         },
-        E = (0, i.useId)(),
+        x = (0, i.useId)(),
         P = v.size * d.hs,
         I =
             null != y &&
@@ -74,7 +74,7 @@ function g(e) {
                 'aria-hidden': !0,
                 children: [
                     (0, r.jsxs)('mask', {
-                        id: E,
+                        id: x,
                         children: [
                             (0, r.jsx)('rect', {
                                 x: 0,
@@ -119,7 +119,7 @@ function g(e) {
                         y: 0,
                         width: P,
                         height: P,
-                        mask: 'url(#'.concat(E, ')'),
+                        mask: 'url(#'.concat(x, ')'),
                         children: (0, r.jsx)('div', {
                             className: h.avatarStack,
                             children: (0, r.jsx)('img', {
@@ -135,7 +135,7 @@ function g(e) {
     return null != l || null != s
         ? (0, r.jsxs)(a.P3F, {
               className: o()(h.wrapper, h.pointer, m),
-              style: x,
+              style: E,
               onClick: l,
               onContextMenu: p,
               onMouseDown: s,
@@ -148,7 +148,7 @@ function g(e) {
           })
         : (0, r.jsxs)('div', {
               className: o()(h.wrapper, m),
-              style: x,
+              style: E,
               onContextMenu: null != p ? p : void 0,
               onMouseEnter: null != f ? f : void 0,
               onMouseLeave: null != g ? g : void 0,
@@ -237,7 +237,7 @@ function b(e) {
         C = _.size + d,
         j = _.size + m,
         S = O(_, d, m),
-        x = y(_, d, m);
+        E = y(_, d, m);
     return (0, r.jsx)(
         g,
         f(p({}, e), {
@@ -273,9 +273,9 @@ function b(e) {
                     (0, r.jsx)('mask', {
                         id: v,
                         children: (0, r.jsx)('circle', {
-                            cx: x.x + x.width / 2,
-                            cy: x.y + x.height / 2,
-                            r: x.width / 2,
+                            cx: E.x + E.width / 2,
+                            cy: E.y + E.height / 2,
+                            r: E.width / 2,
                             fill: 'white'
                         })
                     }),
@@ -302,7 +302,7 @@ function b(e) {
                     null != a &&
                         (0, r.jsx)(
                             'foreignObject',
-                            f(p({}, x), {
+                            f(p({}, E), {
                                 mask: 'url(#'.concat(v, ')'),
                                 children: (0, r.jsx)('img', {
                                     src: a,

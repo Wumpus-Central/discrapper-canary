@@ -1,6 +1,6 @@
 n.d(t, {
     $A: () => _,
-    j8: () => x
+    j8: () => y
 });
 var r = n(255367);
 n(73800);
@@ -40,7 +40,7 @@ function _(e) {
               })
         : null;
 }
-function x(e) {
+function y(e) {
     let t = (0, a.e7)([p.Z], () => p.Z.getChannel(e), [e]);
     l()(null != t, 'useNotificationSettingsItem: channel cannot be undefined');
     let n = (0, d.Mn)('StageChannelCallOverflowMenu'),

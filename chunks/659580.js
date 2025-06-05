@@ -13,8 +13,8 @@ var i = n(990547),
     p = n(453925),
     m = n(967003),
     g = n(632304),
-    b = n(131951),
-    _ = n(358085),
+    _ = n(131951),
+    b = n(358085),
     h = n(947150),
     v = n(488021),
     y = n(822556),
@@ -33,14 +33,14 @@ function I(e) {
     let k = (0, y.Z)(A),
         M = (0, h.Z)(L, N),
         R = (0, v.Z)(L, N),
-        F = (0, l.e7)([b.Z], () => b.Z.getActiveInputProfile()),
+        F = (0, l.e7)([_.Z], () => _.Z.getActiveInputProfile()),
         U = (0, m.Z)(L),
         V = (0, f.Z)(L),
         B = (0, p.Z)(L),
-        W = (0, g.Z)(L),
-        Y = a.Yn.DEFAULT,
-        z = b.Z.isSelfDeaf(Y),
-        G = (0, l.e7)([b.Z], () => b.Z.getMode()),
+        Y = (0, g.Z)(L),
+        W = a.Yn.DEFAULT,
+        z = _.Z.isSelfDeaf(W),
+        G = (0, l.e7)([_.Z], () => _.Z.getMode()),
         H = G === O.pM4.VOICE_ACTIVITY ? O.pM4.PUSH_TO_TALK : O.pM4.VOICE_ACTIVITY;
     return (0, r.jsx)(c.Z, {
         object: O.qAy.CONTEXT_MENU,
@@ -64,7 +64,7 @@ function I(e) {
                 (0, r.jsxs)(o.kSQ, {
                     children: [
                         E ? B : null,
-                        w ? W : null,
+                        w ? Y : null,
                         N ? (0, r.jsx)(o.Clw, {}) : null,
                         N && T
                             ? (0, r.jsx)(
@@ -74,7 +74,7 @@ function I(e) {
                                       label: S.intl.string(S.t.wjcRFR),
                                       action: () =>
                                           s.Z.toggleSelfDeaf({
-                                              context: Y,
+                                              context: W,
                                               location: 'AudioDeviceMenu'
                                           }),
                                       checked: z
@@ -82,7 +82,7 @@ function I(e) {
                                   'self-deafen'
                               )
                             : null,
-                        N && I && _.isPlatformEmbedded
+                        N && I && b.isPlatformEmbedded
                             ? (0, r.jsx)(o.S89, {
                                   checked: G === O.pM4.PUSH_TO_TALK,
                                   id: 'input-mode',

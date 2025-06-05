@@ -6,15 +6,15 @@ var l = t(255367),
     a = t(442837),
     d = t(952265),
     o = t(481060),
-    _ = t(493683),
-    u = t(700582),
+    u = t(493683),
+    _ = t(700582),
     s = t(100527),
     c = t(906732),
     C = t(933557),
     A = t(471445),
     T = t(734307),
     S = t(359110),
-    I = t(814443),
+    I = t(752048),
     L = t(210887),
     D = t(131704),
     N = t(699516),
@@ -22,8 +22,8 @@ var l = t(255367),
     U = t(914010),
     P = t(594174),
     R = t(186523),
-    f = t(553826),
-    g = t(823379),
+    g = t(553826),
+    f = t(823379),
     G = t(407316),
     O = t(937784),
     m = t(388032),
@@ -37,7 +37,7 @@ function x(n) {
         className: p.channelRow,
         onClick: () => r(e.id),
         children: [
-            i ? (0, l.jsx)(f.Z, { className: p.radioIcon }) : (0, l.jsx)(R.Z, { className: p.radioIcon }),
+            i ? (0, l.jsx)(g.Z, { className: p.radioIcon }) : (0, l.jsx)(R.Z, { className: p.radioIcon }),
             (0, l.jsx)(t, {
                 className: p.icon,
                 size: 'xs',
@@ -51,20 +51,20 @@ function x(n) {
         ]
     });
 }
-function v(n) {
+function b(n) {
     let { guildId: e, selectedChannelId: t, onSelectChannelId: r } = n,
         d = (0, a.e7)([h.Z], () => h.Z.getChannelId()),
-        { guildChannels: _ } = (0, a.cj)([T.Z], () => T.Z.getGuildWithoutChangingGuildActionRows(e)),
-        u = i.useMemo(() => {
+        { guildChannels: u } = (0, a.cj)([T.Z], () => T.Z.getGuildWithoutChangingGuildActionRows(e)),
+        _ = i.useMemo(() => {
             let n = [];
             return (
-                _.forEachChannel((e) => {
+                u.forEachChannel((e) => {
                     !1 !== (0, G.W)(e.id) && ((0, D.r8)(e.type) || (0, D.bw)(e.type)) && n.push(e);
                 }),
                 n.sort((n, e) => (n.id === d ? -1 : +(e.id === d)))
             );
-        }, [_, d]);
-    return 0 === u.length
+        }, [u, d]);
+    return 0 === _.length
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
@@ -76,12 +76,12 @@ function v(n) {
                       children: m.intl.string(m.t.SOtDeX)
                   }),
                   (0, l.jsx)(o.aVo, {
-                      sections: [u.length],
+                      sections: [_.length],
                       sectionHeight: 0,
                       renderRow: (n) => {
                           let { section: e, row: i } = n;
                           if (e > 0) return null;
-                          let E = u[i],
+                          let E = _[i],
                               a = (0, A.KS)(E);
                           return null == a
                               ? null
@@ -96,7 +96,7 @@ function v(n) {
                                     E.id
                                 );
                       },
-                      rowHeight: (n, e) => (n > 0 ? 0 : 56 * (null != u[e])),
+                      rowHeight: (n, e) => (n > 0 ? 0 : 56 * (null != _[e])),
                       renderSection: () => null,
                       className: E()(p.channelList, p.contentPadding),
                       fade: !0
@@ -104,11 +104,11 @@ function v(n) {
               ]
           });
 }
-function b(n) {
+function v(n) {
     let { friends: e, searchQuery: t, disabled: r, onShareClip: d } = n,
-        _ = i.useMemo(() => (0 === t.length ? e : e.filter((n) => n.username.toLowerCase().includes(t.toLowerCase()))), [e, t]),
+        u = i.useMemo(() => (0 === t.length ? e : e.filter((n) => n.username.toLowerCase().includes(t.toLowerCase()))), [e, t]),
         s = (0, a.e7)([L.Z], () => L.Z.theme);
-    return 0 === _.length
+    return 0 === u.length
         ? (0, l.jsxs)(o.ubH, {
               theme: s,
               className: p.emptyStateContainer,
@@ -123,19 +123,19 @@ function b(n) {
               ]
           })
         : (0, l.jsx)(o.aVo, {
-              sections: [_.length],
+              sections: [u.length],
               sectionHeight: 0,
               renderRow: (n) => {
                   let { section: e, row: t } = n;
                   if (e > 0) return null;
-                  let i = _[t],
-                      E = _[t].username;
+                  let i = u[t],
+                      E = u[t].username;
                   return (0, l.jsxs)(
                       'div',
                       {
                           className: p.userRow,
                           children: [
-                              (0, l.jsx)(u.Z, { user: i }),
+                              (0, l.jsx)(_.Z, { user: i }),
                               (0, l.jsx)(o.Text, {
                                   className: p.username,
                                   variant: 'text-md/normal',
@@ -158,26 +158,26 @@ function b(n) {
                       i.id
                   );
               },
-              rowHeight: (n, e) => (n > 0 ? 0 : 52 * (null != _[e])),
+              rowHeight: (n, e) => (n > 0 ? 0 : 52 * (null != u[e])),
               renderSection: () => null,
               className: E()(p.friendsList, p.contentPadding),
               fade: !0
           });
 }
 function M(n) {
-    let { clip: e, editMetadata: t, transitionState: r, onClose: u } = n,
+    let { clip: e, editMetadata: t, transitionState: r, onClose: _ } = n,
         [C, A] = i.useState(''),
         [T, L] = i.useState(!1),
         [D, h] = i.useState(null),
         R = (0, a.Wu)([N.Z], () => N.Z.getFriendIDs()),
-        f = (0, a.Wu)(
+        g = (0, a.Wu)(
             [I.Z, P.default],
             () =>
                 R.map((n) => P.default.getUser(n))
-                    .filter(g.lm)
+                    .filter(f.lm)
                     .sort((n, e) => {
                         var t, l, i, r;
-                        return (null != (i = null == (t = I.Z.getUserAffinity(e.id)) ? void 0 : t.affinity) ? i : 0) - (null != (r = null == (l = I.Z.getUserAffinity(n.id)) ? void 0 : l.affinity) ? r : 0);
+                        return (null != (i = null == (t = I.Z.getUserAffinity(e.id)) ? void 0 : t.communicationProbability) ? i : 0) - (null != (r = null == (l = I.Z.getUserAffinity(n.id)) ? void 0 : l.communicationProbability) ? r : 0);
                     }),
             [R]
         ),
@@ -202,7 +202,7 @@ function M(n) {
         }
     }
     async function x(n) {
-        let e = await _.Z.openPrivateChannel({ recipientIds: n });
+        let e = await u.Z.openPrivateChannel({ recipientIds: n });
         await H(e);
     }
     return (0, l.jsxs)(o.Y0X, {
@@ -233,14 +233,14 @@ function M(n) {
                 placeholder: m.intl.string(m.t.CmSHY2)
             }),
             (0, l.jsx)('div', { className: E()(p.divider, p.topDivider) }),
-            (0, l.jsx)(b, {
+            (0, l.jsx)(v, {
                 searchQuery: C,
-                friends: f,
+                friends: g,
                 onShareClip: x,
                 disabled: T
             }),
             null != G &&
-                (0, l.jsx)(v, {
+                (0, l.jsx)(b, {
                     guildId: G,
                     selectedChannelId: D,
                     onSelectChannelId: h
@@ -257,7 +257,7 @@ function M(n) {
                     (0, l.jsx)(o.zxk, {
                         submitting: T,
                         look: o.iLD.LINK,
-                        onClick: u,
+                        onClick: _,
                         color: o.Ttl.PRIMARY,
                         children: m.intl.string(m.t['13/7kZ'])
                     })

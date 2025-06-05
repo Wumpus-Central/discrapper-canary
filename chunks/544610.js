@@ -15,8 +15,8 @@ var i,
     g = n(51144),
     b = n(592125),
     _ = n(480294),
-    x = n(580005),
-    y = n(699516),
+    y = n(580005),
+    x = n(699516),
     C = n(594174),
     v = n(981631);
 let j = !1,
@@ -41,7 +41,7 @@ function A() {
         return (
             null != r && r.clearQuery(),
             (t = e),
-            (n = y.Z.getFriendIDs()),
+            (n = x.Z.getFriendIDs()),
             (null == t ? void 0 : t.isPrivate()) && (n = n.filter((e) => !t.recipients.includes(e))),
             (I = n
                 .reduce((e, t) => {
@@ -71,19 +71,19 @@ function A() {
                 },
                 n,
                 (function () {
-                    let e = x.Z.getFrequentlyWithoutFetchingLatest().filter((e) => e instanceof f.mn && e.isDM()),
+                    let e = y.Z.getFrequentlyWithoutFetchingLatest().filter((e) => e instanceof f.mn && e.isDM()),
                         t = Math.max(
                             ...e.map((e) => {
                                 let { id: t } = e;
-                                return x.Z.getScoreWithoutFetchingLatest(t);
+                                return y.Z.getScoreWithoutFetchingLatest(t);
                             })
                         ),
                         n = {};
                     return (
                         e.forEach((e) => {
-                            let r = x.Z.getScoreWithoutFetchingLatest(e.id),
+                            let r = y.Z.getScoreWithoutFetchingLatest(e.id),
                                 i = e.getRecipientId(),
-                                l = 0.2 * !!y.Z.isFriend(i),
+                                l = 0.2 * !!x.Z.isFriend(i),
                                 a = 0.1 * (null != b.Z.getDMFromUserId(i));
                             n[i] = 1 + r / t + l + a;
                         }),
@@ -97,7 +97,7 @@ function A() {
 function w() {
     if (!j) return !1;
     let e = P;
-    return (P = s().some(y.Z.getRelationships(), (e) => e === v.OGo.FRIEND)) !== e;
+    return (P = s().some(x.Z.getRelationships(), (e) => e === v.OGo.FRIEND)) !== e;
 }
 function R(e, t) {
     if (_.Z.hasConsented(v.pjP.PERSONALIZATION)) {
@@ -138,7 +138,7 @@ function U() {
 }
 class B extends (i = c.ZP.Store) {
     initialize() {
-        this.waitFor(C.default, b.Z, y.Z, p.Z, _.Z), this.syncWith([C.default, b.Z], A), this.syncWith([y.Z], w);
+        this.waitFor(C.default, b.Z, x.Z, p.Z, _.Z), this.syncWith([C.default, b.Z], A), this.syncWith([x.Z], w);
     }
     getResults() {
         return I;

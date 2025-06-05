@@ -1,6 +1,6 @@
 n.d(t, {
     s4: () => o,
-    vJ: () => l
+    vJ: () => a
 }),
     n(704826),
     n(35282);
@@ -22,7 +22,7 @@ let o = (e, t) => {
                 .concat(n[1][2] / 255, ',')
         ));
     },
-    l = (0, i.memoize)((e) => {
+    a = (0, i.memoize)((e) => {
         let t = 0;
         for (let n = 0; n < e.length; n++) t = (t << 5) - t + e.charCodeAt(n);
         return Math.abs(t);

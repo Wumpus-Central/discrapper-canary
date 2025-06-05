@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(539854);
+n.d(t, { Z: () => y }), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(981631),
     b = n(388032),
     _ = n(408912);
-function x(e) {
+function y(e) {
     var { channelId: t, className: n } = e,
-        x = (function (e, t) {
+        y = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -36,7 +36,7 @@ function x(e) {
             }
             return i;
         })(e, ['channelId', 'className']);
-    let y = i.useRef(null),
+    let x = i.useRef(null),
         C = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout() === m.MI.RESIZABLE),
         v = i.useCallback(() => {
             let e = C ? m.MI.NO_CHAT : m.MI.RESIZABLE;
@@ -60,7 +60,7 @@ function x(e) {
         })(t),
         E = i.useCallback(() => {
             var e;
-            null == (e = y.current) || e.focus();
+            null == (e = x.current) || e.focus();
         }, []);
     (0, p.yp)({
         event: g.CkL.FOCUS_CHAT_BUTTON,
@@ -104,7 +104,7 @@ function x(e) {
                 })(
                     {
                         isTrayButton: !0,
-                        buttonRef: y,
+                        buttonRef: x,
                         onClick: v,
                         label: I,
                         'aria-label': P.join(', '),
@@ -113,7 +113,7 @@ function x(e) {
                         themeable: !0,
                         className: n
                     },
-                    x
+                    y
                 )
             ),
             N

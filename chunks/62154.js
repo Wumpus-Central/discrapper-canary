@@ -1,4 +1,4 @@
-t.d(n, { Z: () => g });
+t.d(n, { Z: () => v });
 var o = t(255367);
 t(73800);
 var c = t(442837),
@@ -18,21 +18,21 @@ var c = t(442837),
     b = t(228168),
     x = t(981631),
     y = t(405666);
-function g(e) {
+function v(e) {
     var n;
-    let { user: t, currentUser: g, guildId: v, channelId: Z, displayProfile: j, initialSection: A, initialSubsection: N, onClose: O } = e,
+    let { user: t, currentUser: v, guildId: g, channelId: Z, displayProfile: j, initialSection: A, initialSubsection: N, onClose: O } = e,
         { relationshipType: C, originApplicationId: P } = (0, c.cj)([a.Z], () => ({
             relationshipType: a.Z.getRelationshipType(t.id),
             originApplicationId: a.Z.getOriginApplicationId(t.id)
         })),
         T = (0, i.vh)(t.id),
-        w = t.id === g.id,
-        S = (0, d.I5)(g),
+        w = t.id === v.id,
+        S = (0, d.I5)(v),
         E = r.ZP.useName(null == j ? void 0 : j.guildId, Z, t),
         M = (0, h.Z)({
             user: t,
-            currentUser: g,
-            guildId: v,
+            currentUser: v,
+            guildId: g,
             initialSubsection: N
         });
     return (0, o.jsxs)('div', {
@@ -95,9 +95,9 @@ function g(e) {
                 }),
             (0, o.jsx)(I.Z, {
                 user: t,
-                currentUser: g,
+                currentUser: v,
                 displayProfile: j,
-                guildId: v,
+                guildId: g,
                 channelId: Z,
                 items: M,
                 initialSection: A,

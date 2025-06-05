@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(772848),
@@ -12,8 +12,8 @@ var r = n(255367),
     p = n(39127),
     m = n(981631),
     g = n(490650);
-function b(e) {
-    let { channelId: t, guildId: n, userId: b, containerDimensions: _ } = e,
+function _(e) {
+    let { channelId: t, guildId: n, userId: _, containerDimensions: b } = e,
         h = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
         [v, y] = i.useState([]),
         O = v.length < 50;
@@ -21,7 +21,7 @@ function b(e) {
         function e(e) {
             var r;
             let { channelId: i, userId: a, emoji: o, animationType: s, animationId: p } = e;
-            if ((null != b && b !== a) || (u.Z.getEnabled() && (0, d.Z)(null != (r = null == o ? void 0 : o.name) ? r : ''))) return;
+            if ((null != _ && _ !== a) || (u.Z.getEnabled() && (0, d.Z)(null != (r = null == o ? void 0 : o.name) ? r : ''))) return;
             let g = null != o && null != s && null != p;
             if (i === t && !h && O && g) {
                 let e = (0, f._r)(o),
@@ -47,7 +47,7 @@ function b(e) {
                 o.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
             }
         );
-    }, [t, n, b, h, O]);
+    }, [t, n, _, h, O]);
     let j = i.useCallback((e) => {
         y((t) => {
             let n = [...t],
@@ -59,14 +59,14 @@ function b(e) {
         ? null
         : (0, r.jsx)('div', {
               className: g.effectsWrapper,
-              style: { width: _.width },
+              style: { width: b.width },
               children: (0, r.jsx)('div', {
                   className: g.effects,
                   children: v.map((e) =>
                       (0, r.jsx)(
                           p.Z,
                           {
-                              containerDimensions: _,
+                              containerDimensions: b,
                               effect: e,
                               onComplete: j
                           },

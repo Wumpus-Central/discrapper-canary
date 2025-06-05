@@ -154,7 +154,7 @@ function S(e) {
         ]
     });
 }
-function x(e) {
+function E(e) {
     let { closePopout: t } = e;
     return (0, i.jsxs)(j, {
         closePopout: t,
@@ -169,7 +169,7 @@ function x(e) {
         ]
     });
 }
-function E(e) {
+function x(e) {
     let { closePopout: t } = e,
         n = u.G6.useSetting();
     return (0, i.jsxs)(j, {
@@ -263,9 +263,9 @@ function Z(e) {
         case 0:
             return (0, i.jsx)(S, { closePopout: n });
         case 1:
-            return (0, i.jsx)(x, { closePopout: n });
-        case 2:
             return (0, i.jsx)(E, { closePopout: n });
+        case 2:
+            return (0, i.jsx)(x, { closePopout: n });
         case 3:
             return (0, i.jsx)(P, { closePopout: n });
         case 4:

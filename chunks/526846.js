@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(906732),
     b = n(783097),
     _ = n(226026),
-    x = n(397698),
-    y = n(895924),
+    y = n(397698),
+    x = n(895924),
     C = n(471518),
     v = n(425986),
     j = n(216780),
@@ -68,7 +68,7 @@ function D(e) {
             let e = null == h ? void 0 : h.application_directory_collection_items[0];
             return null == e ? null : e.type === u.C.APPLICATION_BANNER ? e : null;
         }, [null == h ? void 0 : h.application_directory_collection_items]),
-        { trackItemImpressionRef: y } = (0, _.Z)({
+        { trackItemImpressionRef: x } = (0, _.Z)({
             applicationId: null != (t = null == g ? void 0 : g.application.id) ? t : '',
             applicationFlags: null == g ? void 0 : g.application.flags,
             sectionName: 'app_launcher_in_voice_banner',
@@ -87,10 +87,10 @@ function D(e) {
               })),
           (0, r.jsxs)(p.P3F, {
               className: k.clickableBanner,
-              innerRef: y,
+              innerRef: x,
               onClick: () => {
                   o(),
-                      (0, x.Z)({
+                      (0, y.Z)({
                           context: {
                               type: 'channel',
                               channel: l
@@ -113,7 +113,7 @@ function D(e) {
 let U = i.forwardRef(function (e, t) {
     var n;
     let { channel: l, isHovered: o, closePopout: s, onMouseEnter: c, onMouseLeave: u, onClick: b, className: _ } = e,
-        x = (0, d.e7)([f.Z], () => f.Z.useReducedMotion),
+        y = (0, d.e7)([f.Z], () => f.Z.useReducedMotion),
         { id: C, guild_id: v } = l;
     i.useEffect(() => {
         I.default.track(w.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
@@ -235,13 +235,13 @@ let U = i.forwardRef(function (e, t) {
                                                 },
                                                 aspectRatio: N.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
                                                 animatedDivClass: k.activitySuggestion,
-                                                commandOrigin: y.bB.MINI_SHELF
+                                                commandOrigin: x.bB.MINI_SHELF
                                             },
                                             e.application.id
                                         )
                                     ),
                                     (0, r.jsx)('div', {
-                                        className: a()(k.wumpusRocketOuterContainer, { [k.wumpusReducedMotion]: x }),
+                                        className: a()(k.wumpusRocketOuterContainer, { [k.wumpusReducedMotion]: y }),
                                         children: (0, r.jsx)('div', {
                                             className: k.wumpusRocketInnerContainer,
                                             children: (0, r.jsx)(T.Z, { className: k.wumpusRocket })

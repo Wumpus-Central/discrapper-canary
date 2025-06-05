@@ -16,8 +16,8 @@ var i = n(120356),
     g = n(554747),
     b = n(854698),
     _ = n(897669),
-    x = n(665149),
-    y = n(984370),
+    y = n(665149),
+    x = n(984370),
     C = n(910611),
     v = n(454585),
     j = n(134483),
@@ -127,7 +127,7 @@ function H(e) {
         null != n &&
             (t = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(x.ZP.Divider, { className: L.divider }),
+                    (0, r.jsx)(y.ZP.Divider, { className: L.divider }),
                     (0, r.jsx)(m.Z, {
                         game: n,
                         className: L.activityIcon
@@ -150,7 +150,7 @@ function H(e) {
             n = i.stream;
         t = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(x.ZP.Divider, { className: L.divider }),
+                (0, r.jsx)(y.ZP.Divider, { className: L.divider }),
                 (0, r.jsx)(F, {
                     user: e,
                     channel: l,
@@ -240,8 +240,8 @@ function V(e) {
             (0, r.jsx)(o.f6W, {
                 theme: k.BR.DARK,
                 children: (e) =>
-                    (0, r.jsxs)(x.ZP, {
-                        onDoubleClick: y.O,
+                    (0, r.jsxs)(y.ZP, {
+                        onDoubleClick: x.O,
                         transparent: !0,
                         className: e,
                         childrenBottom: F,
@@ -255,13 +255,13 @@ function V(e) {
                         }),
                         children: [
                             null != _
-                                ? (0, r.jsx)(x.ZP.Icon, {
+                                ? (0, r.jsx)(y.ZP.Icon, {
                                       icon: _,
                                       disabled: !0,
                                       'aria-label': I
                                   })
                                 : null,
-                            (0, r.jsx)(x.ZP.Title, {
+                            (0, r.jsx)(y.ZP.Title, {
                                 children: (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         b,

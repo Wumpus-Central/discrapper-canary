@@ -1,14 +1,14 @@
 n.d(t, {
     M: () => g,
-    Z: () => O
+    Z: () => j
 });
 var i,
     r = n(255367),
     o = n(73800),
-    l = n(120356),
-    a = n.n(l),
-    s = n(500923),
-    c = n.n(s),
+    a = n(120356),
+    s = n.n(a),
+    l = n(500923),
+    c = n.n(l),
     u = n(570140),
     d = n(960020),
     h = n(831244),
@@ -23,21 +23,21 @@ let b = async (e) => {
         r = await (0, p.aB)(''.concat(n.channelId, ':').concat(n.messageId, ':').concat(n.emoji.name), n.url, i, n.color);
     return (r.assets[0].p = n.url), r;
 };
-function O(e) {
-    let { className: t, effect: n, onComplete: i, emojiSize: l = 20 } = e,
-        s = o.useRef(null),
-        h = l * p.Vz,
-        m = (h + l) / 2;
+function j(e) {
+    let { className: t, effect: n, onComplete: i, emojiSize: a = 20 } = e,
+        l = o.useRef(null),
+        h = a * p.Vz,
+        m = (h + a) / 2;
     return (
         o.useEffect(() => {
             let e;
             if (null != n)
                 return (
                     !(async function () {
-                        if (null != s.current) {
+                        if (null != l.current) {
                             let t = await b({ effect: n });
                             (e = c().loadAnimation({
-                                container: s.current,
+                                container: l.current,
                                 renderer: 'svg',
                                 loop: !1,
                                 autoplay: !0,
@@ -62,17 +62,17 @@ function O(e) {
                         null != e && e.destroy();
                     }
                 );
-        }, [i, n, l]),
+        }, [i, n, a]),
         (0, r.jsx)('div', {
             className: f.effectsWrapper,
             children: (0, r.jsx)('div', {
-                className: a()(f.effect, t),
+                className: s()(f.effect, t),
                 style: {
                     transform: 'translateY('.concat(m, 'px)'),
                     height: h,
                     width: h
                 },
-                ref: s
+                ref: l
             })
         })
     );

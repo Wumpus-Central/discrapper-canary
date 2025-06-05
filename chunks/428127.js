@@ -68,14 +68,14 @@ function O(e) {
         v = (0, a.e7)([h.Z], () => h.Z.isFocused()),
         { mode: _, mentionCount: C, targetChannelId: j } = 'bottom' === t ? p : O,
         S = _ === f.x.HIDDEN,
-        x = (0, c.q_F)(
+        E = (0, c.q_F)(
             {
                 to: { transform: S ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
                 config: b
             },
             v ? 'respect-motion-settings' : 'animate-never'
         ),
-        E = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 e.preventDefault(), e.stopPropagation(), null != j && d(j);
             },
@@ -88,7 +88,7 @@ function O(e) {
         }),
         children: (0, r.jsx)(s.animated.div, {
             className: m.containerPadding,
-            style: x,
+            style: E,
             'aria-hidden': S,
             children:
                 _ === f.x.HIDDEN
@@ -96,7 +96,7 @@ function O(e) {
                     : _ === f.x.UNREAD
                       ? (0, r.jsxs)(c.P3F, {
                             className: m.bar,
-                            onClick: E,
+                            onClick: x,
                             children: [
                                 'bottom' === t
                                     ? (0, r.jsx)(c.CJ0, {
@@ -124,7 +124,7 @@ function O(e) {
                       : _ === f.x.MENTIONS
                         ? (0, r.jsx)(c.P3F, {
                               className: o()(m.bar, m.mentionsBar),
-                              onClick: E,
+                              onClick: x,
                               children: (0, r.jsx)(c.Text, {
                                   variant: 'text-xs/semibold',
                                   color: 'status-danger-text',

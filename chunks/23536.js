@@ -16,7 +16,7 @@ var r = n(255367),
 let b = [];
 function _(e) {
     let { channel: t, onJump: _ } = e,
-        { items: x, state: y } = (0, l.cj)([p.Z], () => {
+        { items: y, state: x } = (0, l.cj)([p.Z], () => {
             var e, n;
             let r = p.Z.getPins(t.id);
             return {
@@ -24,7 +24,7 @@ function _(e) {
                 state: null != (n = null == r ? void 0 : r.state) ? n : p.M.LOADING
             };
         }),
-        C = i.useMemo(() => x.map((e) => e.message), [x]),
+        C = i.useMemo(() => y.map((e) => e.message), [y]),
         v = (0, l.e7)([h.ZP], () => h.ZP.hasUnreadPins(t.id));
     i.useEffect(() => {
         v && s.Z.ackPins(t.id);
@@ -37,8 +37,8 @@ function _(e) {
         }, [t.id]),
         O = i.useCallback(() => {
             var e;
-            s.Z.fetchPins(t.id, { before: null == (e = x.at(-1)) ? void 0 : e.pinnedAt });
-        }, [t.id, x]),
+            s.Z.fetchPins(t.id, { before: null == (e = y.at(-1)) ? void 0 : e.pinnedAt });
+        }, [t.id, y]),
         E = (0, l.e7)([d.Z], () => (0, a.ap)(d.Z.theme));
     return (0, r.jsx)(o.VqE, {
         'aria-label': g.intl.string(g.t['mp1N//']),
@@ -46,11 +46,11 @@ function _(e) {
             channel: t,
             onFetch: j,
             messages: C,
-            loading: y === p.M.LOADING,
-            hasMore: y === p.M.LOADED_HAS_MORE,
+            loading: x === p.M.LOADING,
+            hasMore: x === p.M.LOADED_HAS_MORE,
             analyticsName: 'Channel Pins',
             renderEmptyState: function () {
-                if (x.length > 0) return;
+                if (y.length > 0) return;
                 let e = g.intl.string(t.isPrivate() ? g.t.rhqcbG : g.t.fmyaWF),
                     i = E ? n(306059) : n(281485);
                 return (0, r.jsx)(

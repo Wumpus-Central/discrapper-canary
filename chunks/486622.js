@@ -16,23 +16,23 @@ var r = n(73800),
 function b(e) {
     let { user: t, onAcceptSuccess: n, onRejectSuccess: i, onError: b } = e,
         _ = (0, f.Z)(),
-        [x, y] = r.useState(!1),
+        [y, x] = r.useState(!1),
         [C, v] = r.useState(!1),
         [j, O] = r.useState(!1),
         [E, I] = r.useState(!1),
         [P, S] = r.useState(!1),
-        Z = x || C || j,
+        Z = y || C || j,
         N = r.useCallback(
             async (e) => {
                 if (!Z) {
-                    y(!0);
+                    x(!0);
                     try {
                         await (0, p.e4)(e), I(!0), null == n || n();
                     } catch (t) {
                         let e = new a.Hx(t);
                         null == b || b(e);
                     } finally {
-                        y(!1);
+                        x(!1);
                     }
                 }
             },
@@ -149,7 +149,7 @@ function b(e) {
         rejectMessageRequest: T,
         rejectAll: A,
         markAsNotSpam: R,
-        isAcceptLoading: x,
+        isAcceptLoading: y,
         isRejectLoading: C,
         isUserProfileLoading: j,
         isOptimisticAccepted: E,

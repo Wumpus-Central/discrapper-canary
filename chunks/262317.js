@@ -20,8 +20,8 @@ var r = n(255367),
     g = n(257115),
     b = n(569545),
     _ = n(102172),
-    x = n(525925),
-    y = n(701362),
+    y = n(525925),
+    x = n(701362),
     C = n(670188),
     v = n(597998),
     j = n(314897),
@@ -129,7 +129,7 @@ let M = (0, p.$)(function (e) {
                 channelId: R.id,
                 guildId: R.guild_id
             };
-            j.default.getId() !== p.id && u.default.selectVoiceChannel(R.id), X ? ((0, x.Z)(e), s.Z.selectParticipant(e.channelId, (0, b.V9)(e))) : (0, d.iV)(e), null == ee || ee(p.id);
+            j.default.getId() !== p.id && u.default.selectVoiceChannel(R.id), X ? ((0, y.Z)(e), s.Z.selectParticipant(e.channelId, (0, b.V9)(e))) : (0, d.iV)(e), null == ee || ee(p.id);
         },
         eb = (e) => {
             (0, c.jW)(e, async () => {
@@ -149,14 +149,14 @@ let M = (0, p.$)(function (e) {
             });
         },
         e_ = () =>
-            (0, r.jsx)(y.Z, {
+            (0, r.jsx)(x.Z, {
                 user: p,
                 channel: R,
                 onWatch: eg,
                 previewIsOpen: en,
                 location: eo
             }),
-        ex = (e) => {
+        ey = (e) => {
             let t = S.al.has(null != er ? er : ''),
                 n = {
                     user: p,
@@ -238,7 +238,7 @@ let M = (0, p.$)(function (e) {
                     )
             });
         },
-        ey = (0, r.jsx)('div', {
+        ex = (0, r.jsx)('div', {
             className: T.draggable,
             'data-dnd-name': R.name,
             onMouseEnter: el
@@ -256,8 +256,8 @@ let M = (0, p.$)(function (e) {
                 newAnalyticsLocations: [h.Z.VOICE_USER],
                 shouldShow: ed,
                 onRequestClose: () => ep(!1),
-                children: (e) => ex(e)
+                children: (e) => ey(e)
             })
         });
-    return q ? Y(ey) : ey;
+    return q ? Y(ex) : ex;
 });

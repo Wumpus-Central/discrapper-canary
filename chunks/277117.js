@@ -16,8 +16,8 @@ var i = n(657707),
     g = n(648052),
     b = n(280885),
     _ = n(483424),
-    x = n(681837),
-    y = n(78806),
+    y = n(681837),
+    x = n(78806),
     C = n(91433),
     v = n(900927),
     j = n(944043),
@@ -58,7 +58,7 @@ function w(e) {
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(x.Z, { userId: t.id }),
+                        (0, r.jsx)(y.Z, { userId: t.id }),
                         !G &&
                             (0, r.jsx)(S.Z, {
                                 userId: t.id,
@@ -146,7 +146,7 @@ function w(e) {
                         (0, r.jsx)(O.Z, {
                             heading: T.intl.string(T.t['Uv/eT0']),
                             headingColor: 'header-primary',
-                            children: (0, r.jsx)(y.Z, { applicationIds: B })
+                            children: (0, r.jsx)(x.Z, { applicationIds: B })
                         }),
                     (0, r.jsx)(O.Z, {
                         heading: t.bot ? T.intl.string(T.t['A//N4u']) : T.intl.string(T.t.a6XYDw),

@@ -16,7 +16,7 @@ var r,
     y = n(38618),
     N = n(656063),
     b = n(761282),
-    v = n(814443),
+    v = n(752048),
     m = n(789407),
     E = n(630186),
     C = n(250889),
@@ -90,7 +90,7 @@ let B = !1,
     K = new Set();
 function Q() {
     let e = _.Z.getFriendIDs();
-    return new Set(T.Z.hasConsented(U.pjP.PERSONALIZATION) ? [...v.Z.getUserAffinitiesUserIds(), ...e] : e);
+    return new Set(T.Z.hasConsented(U.pjP.PERSONALIZATION) ? [...v.Z.getUserAffinities().map((e) => e.otherUserId), ...e] : e);
 }
 function z(e) {
     return A.Z.findActivity(e, (e) => e.type !== U.IIU.CUSTOM_STATUS);

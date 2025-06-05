@@ -5,8 +5,8 @@ var i = t(255367),
     a = t(372900),
     c = t(238246),
     l = t(788983),
-    _ = t(207035),
-    d = t(823748),
+    d = t(207035),
+    _ = t(823748),
     u = t(981631),
     s = t(683146);
 function p(e) {
@@ -19,12 +19,12 @@ function p(e) {
         contentClassName: s.popoutContent,
         children: (0, i.jsx)(a.Z.Provider, {
             value: t.guild_id,
-            children: (0, i.jsx)(d.Z, { providedChannel: t })
+            children: (0, i.jsx)(_.Z, { providedChannel: t })
         })
     });
 }
 function b(e, n) {
-    let t = (0, _.P)(n),
+    let t = (0, d.P)(n),
         a = o.useCallback(() => {
             l.bA(
                 ''.concat(u.KJ3.CHANNEL_POPOUT, '-').concat(e.id),

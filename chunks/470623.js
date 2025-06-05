@@ -1,16 +1,16 @@
 n.d(t, {
-    AF: () => v,
-    oL: () => O,
-    xH: () => j
+    AF: () => O,
+    oL: () => j,
+    xH: () => v
 }),
     n(388685),
     n(781311);
 var i = n(255367),
     r = n(73800),
     o = n(512722),
-    l = n.n(o),
-    a = n(362383),
-    s = n(731965),
+    a = n.n(o),
+    s = n(362383),
+    l = n(731965),
     c = n(430742),
     u = n(752305),
     d = n(592125),
@@ -96,7 +96,7 @@ class g {
             (this.titleFocused = !1),
             (this.bodyFocused = !1),
             (this.set = (e) => {
-                (0, s.j)(() => this._set(e));
+                (0, l.j)(() => this._set(e));
             }),
             (this.setEditorHeight = (e) => {
                 this.set({ editorHeight: e });
@@ -176,29 +176,29 @@ class g {
                     }),
                     p.Z.clearForumSearch(this.channelId);
             });
-        let l = d.Z.getChannel(e);
-        if (null == l) return;
-        let a = null != (i = h.Z.getThreadSettings(l.id)) ? i : {},
-            g = null == l.template ? '' : l.template.trim(),
-            b = h.Z.getDraft(l.id, h.d.FirstThreadMessage),
-            O = (0, u.eK)(null != b && '' !== b.trim() ? b : g);
-        (this.name = null != (r = a.name) ? r : ''), (o = new Set(a.appliedTags)), (this.appliedTags = void 0 !== o ? o : new Set()), (this.formOpen = this.name.length > 0), (this.textAreaState = O);
+        let a = d.Z.getChannel(e);
+        if (null == a) return;
+        let s = null != (i = h.Z.getThreadSettings(a.id)) ? i : {},
+            g = null == a.template ? '' : a.template.trim(),
+            b = h.Z.getDraft(a.id, h.d.FirstThreadMessage),
+            j = (0, u.eK)(null != b && '' !== b.trim() ? b : g);
+        (this.name = null != (r = s.name) ? r : ''), (o = new Set(s.appliedTags)), (this.appliedTags = void 0 !== o ? o : new Set()), (this.formOpen = this.name.length > 0), (this.textAreaState = j);
     }
 }
 let b = r.createContext(null);
-function O(e) {
+function j(e) {
     let { children: t, channel: n } = e,
-        o = r.useMemo(() => (0, a.F)((e, t) => new g(n.id, e, t)), [n]);
+        o = r.useMemo(() => (0, s.F)((e, t) => new g(n.id, e, t)), [n]);
     return (0, i.jsx)(b.Provider, {
         value: o,
         children: t
     });
 }
-function j(e, t) {
+function v(e, t) {
     let n = r.useContext(b);
-    return l()(null != n, '[useForumPostComposerStore] Context should not be null'), n(e, t);
+    return a()(null != n, '[useForumPostComposerStore] Context should not be null'), n(e, t);
 }
-function v() {
+function O() {
     let e = r.useContext(b);
-    return l()(null != e, '[useForumPostComposerStore] Context should not be null'), e;
+    return a()(null != e, '[useForumPostComposerStore] Context should not be null'), e;
 }

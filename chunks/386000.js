@@ -12,7 +12,7 @@ var r = n(255367),
     h = n(871499),
     f = n(981631);
 function m(e) {
-    var { selfMute: t, serverMute: n, suppress: m, centerButton: g = !1, awaitingRemote: b, onMouseEnter: _, onMouseLeave: x, onClick: y } = e,
+    var { selfMute: t, serverMute: n, suppress: m, centerButton: g = !1, awaitingRemote: b, onMouseEnter: _, onMouseLeave: y, onClick: x } = e,
         C = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -83,10 +83,10 @@ function m(e) {
                         null == _ || _(e), T.onMouseEnter();
                     },
                     onMouseLeave: (e) => {
-                        null == x || x(e), T.onMouseLeave();
+                        null == y || y(e), T.onMouseLeave();
                     },
                     onClick: (e) => {
-                        null == y || y(e), (0, d.v)(v, d.d.MIC, t);
+                        null == x || x(e), (0, d.v)(v, d.d.MIC, t);
                     }
                 },
                 C

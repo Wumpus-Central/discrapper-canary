@@ -64,7 +64,7 @@ function C(e) {
                         user: n,
                         displayProfile: G,
                         themeType: I.lY.MODAL,
-                        ref: F,
+                        ref: (null == G ? void 0 : G.profileEffectId) != null ? F : void 0,
                         children: [
                             (0, l.jsx)(P.Z, { children: (0, l.jsx)(Z.Z, { user: n }) }),
                             (0, l.jsxs)('header', {

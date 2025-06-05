@@ -14,7 +14,7 @@ var i = n(120356),
     f = n(900054);
 function m(e) {
     var t, n;
-    let { user: i, row: m, hideDiscriminator: g, comparator: b, selected: _, checked: x, inlineUsername: y = !0, onClick: C, onMouseEnter: v, 'aria-setsize': j, 'aria-posinset': O } = e,
+    let { user: i, row: m, hideDiscriminator: g, comparator: b, selected: _, checked: y, inlineUsername: x = !0, onClick: C, onMouseEnter: v, 'aria-setsize': j, 'aria-posinset': O } = e,
         E = (0, o.e7)([p.Z], () => p.Z.getStatus(i.id)),
         I = (0, a.JA)(String(i.id));
     return (0, r.jsx)(
@@ -59,14 +59,14 @@ function m(e) {
         (n = n =
             {
                 role: 'option',
-                'aria-selected': x,
+                'aria-selected': y,
                 'aria-setsize': j,
                 'aria-posinset': O,
                 children: (0, r.jsxs)(d.Z, {
                     align: d.Z.Align.CENTER,
                     className: l()(f.friend, {
                         [f.friendSelected]: _,
-                        [f.twoRows]: !y
+                        [f.twoRows]: !x
                     }),
                     children: [
                         (0, r.jsx)(u.Z, {
@@ -77,7 +77,7 @@ function m(e) {
                         (0, r.jsxs)(d.Z, {
                             className: f.match,
                             align: d.Z.Align.BASELINE,
-                            direction: y ? d.Z.Direction.HORIZONTAL : d.Z.Direction.VERTICAL,
+                            direction: x ? d.Z.Direction.HORIZONTAL : d.Z.Direction.VERTICAL,
                             children: [
                                 (0, r.jsx)(s.Text, {
                                     tag: 'strong',
@@ -103,7 +103,7 @@ function m(e) {
                         (0, r.jsx)(s.XZJ, {
                             displayOnly: !0,
                             size: 22,
-                            value: x,
+                            value: y,
                             className: f.checkbox
                         })
                     ]

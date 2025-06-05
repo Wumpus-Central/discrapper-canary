@@ -5,7 +5,7 @@ function i(e, t) {
         i = window.GLOBAL_ENV.CDN_HOST,
         l = window.GLOBAL_ENV.API_ENDPOINT;
     return null != i
-        ? ''.concat(location.protocol, '//').concat(i, '/app-assets/').concat(e, '/store/').concat(t, '.mp4')
+        ? 'https://'.concat(i, '/app-assets/').concat(e, '/store/').concat(t, '.mp4')
         : ''
               .concat(location.protocol)
               .concat(l)

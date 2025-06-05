@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(543241),
     b = n(407477),
     _ = n(633302),
-    x = n(856985),
-    y = n(868643),
+    y = n(856985),
+    x = n(868643),
     C = n(245216),
     v = n(223606),
     j = n(188597),
@@ -119,7 +119,7 @@ let eh = i.memo(function (e) {
                     guildId: t.guild_id
                 })
         ),
-        l = (i.length >= 3 ? i : [...(0, x.Z)(i.concat(eu)).values()]).slice(0, 3),
+        l = (i.length >= 3 ? i : [...(0, y.Z)(i.concat(eu)).values()]).slice(0, 3),
         a = n.reactions.filter((e) => e.me);
     return (0, r.jsx)(r.Fragment, {
         children: l.map((e) => {
@@ -182,7 +182,7 @@ function ef(e) {
             canEdit: p,
             canPublish: g,
             canReact: _,
-            canConfigureJoin: x,
+            canConfigureJoin: y,
             canReply: v,
             canStartThread: j,
             canViewThread: T,
@@ -206,7 +206,7 @@ function ef(e) {
                 g = D.nc.useSetting(),
                 b = D.Sb.useSetting(),
                 _ = (0, c.e7)([H.Z], () => null == t.guild_id || H.Z.canChatInGuild(t.guild_id), [t]),
-                { canManageMessages: x, canAddNewReactions: C } = (0, c.cj)(
+                { canManageMessages: y, canAddNewReactions: C } = (0, c.cj)(
                     [V.Z],
                     () => ({
                         canAddNewReactions: _ && V.Z.can(ei.Plq.ADD_REACTIONS, t),
@@ -220,10 +220,10 @@ function ef(e) {
                 I = (0, c.e7)([O.Z], () => null != t.guild_id && O.Z.isLurking(t.guild_id), [t]),
                 P = (0, c.e7)([G.ZP], () => null != t.guild_id && G.ZP.isCurrentUserGuest(t.guild_id), [t]),
                 S = s.id === d,
-                Z = (x || n.canDeleteOwnMessage(d)) && p && !ei.V$x.UNDELETABLE.has(n.type);
-            n.type === ei.uaV.AUTO_MODERATION_ACTION && (Z = Z && x);
+                Z = (y || n.canDeleteOwnMessage(d)) && p && !ei.V$x.UNDELETABLE.has(n.type);
+            n.type === ei.uaV.AUTO_MODERATION_ACTION && (Z = Z && y);
             let N = (0, K.a4)(n),
-                T = (0, Q.Z)(n, t, x),
+                T = (0, Q.Z)(n, t, y),
                 A = !t.isSystemDM() && (0, X.Z)(n, d) && p && !m,
                 { disableReactionCreates: w } = (0, J.Z)({
                     channel: t,
@@ -234,10 +234,10 @@ function ef(e) {
                     isGuest: P,
                     isActiveChannelOrUnarchivableThread: p
                 }),
-                B = t.type === ei.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(ei.oNc.NEWS) && (S || x) && (0, f.Z)(n),
+                B = t.type === ei.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(ei.oNc.NEWS) && (S || y) && (0, f.Z)(n),
                 z = t.getGuildId(),
                 Y = null != z && (n.type === ei.uaV.USER_JOIN || n.type === ei.uaV.GUILD_INVITE_REMINDER) && V.Z.canWithPartialContext(ei.Plq.MANAGE_GUILD, { guildId: z }),
-                q = (0, y.a)(n),
+                q = (0, x.a)(n),
                 { enabled: $ } = k.Z.useExperiment({ location: 'message_utilities' }),
                 ee = (0, c.e7)([M.Z], () => null != M.Z.getSavedMessage(t.id, n.id)),
                 et = (0, er.Z)(),
@@ -282,9 +282,9 @@ function ef(e) {
             ea({ emojiPicker: !Y });
         }, [Y, ea]),
         e_ = (0, L.$R)(t),
-        ex = n.hasFlag(ei.iLy.CROSSPOSTED),
-        [ey, eC] = (0, m.cv)(A ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
-        ev = ey === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
+        ey = n.hasFlag(ei.iLy.CROSSPOSTED),
+        [ex, eC] = (0, m.cv)(A ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
+        ev = ex === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
         [ej, eO] = i.useState(!1),
         eE = i.useCallback(() => {
             eO(!0);
@@ -340,7 +340,7 @@ function ef(e) {
                                     'copy-link'
                                 )
                               : null,
-                          x
+                          y
                               ? (0, r.jsx)(
                                     $.sF,
                                     {
@@ -516,10 +516,10 @@ function ef(e) {
                 ? (0, r.jsx)(
                       $.sF,
                       {
-                          label: ex ? eo.intl.string(eo.t['1kWJAg']) : eo.intl.string(eo.t['MFGE5+']),
+                          label: ey ? eo.intl.string(eo.t['1kWJAg']) : eo.intl.string(eo.t['MFGE5+']),
                           icon: d.MqZ,
                           onClick: () => (0, ee.Xl)(t, n),
-                          disabled: ex
+                          disabled: ey
                       },
                       'publish'
                   )

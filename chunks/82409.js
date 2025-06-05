@@ -21,8 +21,8 @@ var r = n(255367),
     C = n(739340),
     j = n(207913),
     S = n(553984),
-    x = n(333834),
-    E = n(982183),
+    E = n(333834),
+    x = n(982183),
     P = n(981631),
     I = n(388032),
     w = n(21678);
@@ -35,7 +35,7 @@ let N = {
     bannerVisible: !1,
     communityInfoVisible: !1,
     shouldShowSubscribeTooltip: !1,
-    bannerVisibleHeight: E.$J,
+    bannerVisibleHeight: x.$J,
     hasGuildSubheader: !1,
     disableBannerAnimation: !0
 };
@@ -56,8 +56,8 @@ function Z(e) {
             roleFilter: g.Z.roleFilter,
             everyoneFilter: g.Z.everyoneFilter
         })),
-        [_, j] = i.useState(E.V5.ALL),
-        [I, Z] = i.useState(E.xM.UNREAD),
+        [_, j] = i.useState(x.V5.ALL),
+        [I, Z] = i.useState(x.xM.UNREAD),
         { messages: k, loadState: U, loadMore: G, hasLoadedEver: B } = (0, C.ZP)();
     (0, i.useEffect)(() => {
         if (!p) return void T(null);
@@ -67,13 +67,13 @@ function Z(e) {
         F = i.useMemo(() => {
             var e;
             if (!B) return null;
-            if (_ === E.V5.BOOKMARKS)
+            if (_ === x.V5.BOOKMARKS)
                 return H.flatMap((e) => {
                     let { message: t } = e;
                     return null != t
                         ? [
                               {
-                                  kind: E.fL.BOOKMARK,
+                                  kind: x.fL.BOOKMARK,
                                   message: t
                               }
                           ]
@@ -86,7 +86,7 @@ function Z(e) {
                         null == a
                             ? void 0
                             : a.map((e) => ({
-                                  kind: E.fL.MENTION,
+                                  kind: x.fL.MENTION,
                                   message: e
                               })))
                         ? e
@@ -95,7 +95,7 @@ function Z(e) {
                         .filter((e) => e.author.id !== (null == V ? void 0 : V.id))
                         .map((e) => ({
                             message: e,
-                            kind: E.fL.ALL_MESSAGES_CHANNEL
+                            kind: x.fL.ALL_MESSAGES_CHANNEL
                         }))
                 ],
                 (e) => {
@@ -104,10 +104,10 @@ function Z(e) {
                 }
             ).filter((e) => {
                 let { message: t } = e;
-                return t.author.id !== (null == V ? void 0 : V.id) && O.default.age(t.id) < E.ib;
+                return t.author.id !== (null == V ? void 0 : V.id) && O.default.age(t.id) < x.ib;
             });
-            if (_ === E.V5.ALL) return t;
-            if (_ === E.V5.ANNOUNCEMENTS)
+            if (_ === x.V5.ALL) return t;
+            if (_ === x.V5.ANNOUNCEMENTS)
                 return null == t
                     ? void 0
                     : t.filter((e) => {
@@ -115,7 +115,7 @@ function Z(e) {
                               n = b.Z.getChannel(t.channel_id);
                           return (null == n ? void 0 : n.type) === P.d4z.GUILD_ANNOUNCEMENT;
                       });
-            if (_ === E.V5.MENTIONS)
+            if (_ === x.V5.MENTIONS)
                 return null == t
                     ? void 0
                     : t.filter((e) => {
@@ -124,9 +124,9 @@ function Z(e) {
                       });
             throw Error('Unknown filter: '.concat(_));
         }, [_, a, V, H, k, B]),
-        z = I === E.xM.READ && _ === E.V5.ALL && !h && B,
+        z = I === x.xM.READ && _ === x.V5.ALL && !h && B,
         { notificationCenterVariant: W } = v.L.useExperiment({ location: 'NotificationsInboxSidebar' }),
-        K = 'sidebar' === W && _ !== E.V5.ALL;
+        K = 'sidebar' === W && _ !== x.V5.ALL;
     return (0, r.jsxs)('nav', {
         className: o()(w.container, { [w.panelSpacing]: l }),
         children: [
@@ -159,7 +159,7 @@ function Z(e) {
                 })(
                     {
                         hasSubheader: !0,
-                        guild: E.F7
+                        guild: x.F7
                     },
                     N
                 )),
@@ -200,7 +200,7 @@ function Z(e) {
                 }),
             z && (0, r.jsx)(D, {}),
             K && (0, r.jsx)(L, { filter: _ }),
-            (0, r.jsx)(x.Z, {
+            (0, r.jsx)(E.Z, {
                 className: w.messageList,
                 renderMessageGroup: R,
                 messages: F,
@@ -213,7 +213,7 @@ function Z(e) {
                 },
                 renderEmptyState: A,
                 setInboxReadState: Z,
-                ignoreGrouping: _ !== E.V5.ALL
+                ignoreGrouping: _ !== x.V5.ALL
             })
         ]
     });
@@ -306,7 +306,7 @@ function L(e) {
             color: 'text-primary',
             variant: 'text-sm/semibold',
             className: w.filterHeaderWrap,
-            children: E.by[t]
+            children: x.by[t]
         },
         'filter-header'
     );

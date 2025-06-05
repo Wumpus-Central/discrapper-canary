@@ -1,9 +1,9 @@
-n.d(t, { Z: () => j }), n(35282), n(388685), n(358797);
-var i,
-    r = n(442837),
-    o = n(570140),
-    l = n(375954);
-function a(e, t, n) {
+n.d(t, { Z: () => y }), n(35282), n(388685), n(358797);
+var r,
+    i = n(442837),
+    l = n(570140),
+    a = n(375954);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,15 +19,15 @@ function a(e, t, n) {
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            i.forEach(function (t) {
-                a(e, t, n[t]);
+            r.forEach(function (t) {
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -35,73 +35,73 @@ function s(e) {
 let c = Object.freeze([]),
     u = {},
     d = {},
-    h = {},
     p = {},
-    m = {};
-function f(e, t) {}
+    h = {},
+    f = {};
+function m(e, t) {}
 function g(e, t) {
     let n = u[e];
-    return null != n && ((u[e] = n.filter((e) => e.id !== t)), delete d[t], delete h[t], n.length !== u[e].length);
+    return null != n && ((u[e] = n.filter((e) => e.id !== t)), delete d[t], delete p[t], n.length !== u[e].length);
 }
 function b(e, t) {
     let n = u[e];
     if (null == n) return !1;
     u[e] = n.map((e) => (e.id === t.id ? s({}, e, t) : e));
-    let i = h[t.id];
-    null != i && null != p[i.id] && (p[i.id] = s({}, p[i.id], t));
+    let r = p[t.id];
+    null != r && null != h[r.id] && (h[r.id] = s({}, h[r.id], t));
 }
-class O extends (i = r.ZP.Store) {
+class _ extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(l.Z);
+        this.waitFor(a.Z);
     }
     getFiles(e) {
         var t;
         return null != (t = u[e]) ? t : c;
     }
     getMessageForFile(e) {
-        return h[e];
-    }
-    getUploaderFileForMessageId(e) {
         return p[e];
     }
+    getUploaderFileForMessageId(e) {
+        return h[e];
+    }
     getUploadAttachments(e) {
-        if (null != e) return m[e];
+        if (null != e) return f[e];
     }
 }
-a(O, 'displayName', 'UploadStore');
-let j = new O(o.Z, {
+o(_, 'displayName', 'UploadStore');
+let y = new _(l.Z, {
     CONNECTION_OPEN: function () {
-        m = {};
+        f = {};
     },
     LOGOUT: function () {
-        m = {};
+        f = {};
     },
     UPLOAD_START: function (e) {
-        var t, n, i, r;
-        let { channelId: o, file: l, uploader: a, message: m } = e;
-        if (a._aborted || a._errored) return;
-        let f = null != (t = u[o]) ? t : c;
-        if (((d[l.id] = a), (u[o] = [...f, l]), null == m)) return;
-        h[l.id] = m;
-        let { items: g } = l;
+        var t, n, r, i;
+        let { channelId: l, file: a, uploader: o, message: f } = e;
+        if (o._aborted || o._errored) return;
+        let m = null != (t = u[l]) ? t : c;
+        if (((d[a.id] = o), (u[l] = [...m, a]), null == f)) return;
+        p[a.id] = f;
+        let { items: g } = a;
         null != g &&
-            (p[m.id] =
-                ((i = s({}, l)),
-                (r = r = { items: g }),
+            (h[f.id] =
+                ((r = s({}, a)),
+                (i = i = { items: g }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(r))
+                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var i = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, i);
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
                           }
                           return n;
-                      })(Object(r)).forEach(function (e) {
-                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(r, e));
+                      })(Object(i)).forEach(function (e) {
+                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
                       }),
-                i)),
-            null != (n = m.nonce) || m.id;
+                r)),
+            null != (n = f.nonce) || f.id;
     },
     UPLOAD_COMPRESSION_PROGRESS: function (e) {
         let { channelId: t, file: n } = e;
@@ -130,21 +130,21 @@ let j = new O(o.Z, {
     },
     UPLOAD_ITEM_CANCEL_REQUEST: function (e) {
         let { file: t, itemId: n } = e,
-            i = d[t.id];
-        if (null == i) return !1;
-        setImmediate(() => i.cancelItem(n));
+            r = d[t.id];
+        if (null == r) return !1;
+        setImmediate(() => r.cancelItem(n));
     },
     UPLOAD_FILE_UPDATE: function (e) {
         let { channelId: t, file: n } = e,
-            i = h[n.id];
-        if (null != i) {
-            var r;
-            null != (r = i.nonce) || i.id;
+            r = p[n.id];
+        if (null != r) {
+            var i;
+            null != (i = r.nonce) || r.id;
         }
         b(t, n);
     },
     UPLOAD_RESTORE_FAILED_UPLOAD: function (e) {
         let { file: t, messageId: n } = e;
-        p[n] = t;
+        h[n] = t;
     }
 });

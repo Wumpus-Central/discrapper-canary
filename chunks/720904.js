@@ -13,8 +13,8 @@ var r = n(120356),
     g = n(496675),
     m = n(768581),
     p = n(176354),
-    b = n(981631),
-    h = n(185923),
+    h = n(981631),
+    b = n(185923),
     O = n(388032),
     E = n(933070);
 function y(e) {
@@ -60,8 +60,8 @@ function v(e, t) {
         e
     );
 }
-let S = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
-function j(e) {
+let j = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
+function S(e) {
     var t;
     let { emoji: n, isFocused: r } = e,
         { animated: a, src: s, surrogates: c } = n;
@@ -112,18 +112,18 @@ function _(e, t) {
     let n = (0, s.MZ)(t.guild_id).filter((e) => {
         var n;
         return (
-            !(e.useSpriteSheet && S.indexOf(null != (n = e.uniqueName) ? n : '') >= 0) &&
+            !(e.useSpriteSheet && j.indexOf(null != (n = e.uniqueName) ? n : '') >= 0) &&
             !p.ZP.isEmojiPremiumLocked({
                 emoji: e,
                 channel: t,
-                intention: h.Hz.REACTION
+                intention: b.Hz.REACTION
             })
         );
     });
     n.length > 4 && (n.length = 4);
     let r = f.nc.useSetting(),
         l = (0, d.$R)(t),
-        m = (0, a.e7)([g.Z], () => r && l && (t.isPrivate() || g.Z.can(b.Plq.ADD_REACTIONS, t)), [t, l, r]),
+        m = (0, a.e7)([g.Z], () => r && l && (t.isPrivate() || g.Z.can(h.Plq.ADD_REACTIONS, t)), [t, l, r]),
         O = (n) => {
             (0, c.rU)(t.id, e.id, (0, u.g1)(n), c.TW.MESSAGE_CONTEXT_MENU);
         };
@@ -138,7 +138,7 @@ function _(e, t) {
                           id: 'quickreact-'.concat(null != (n = e.id) ? n : t),
                           render: (t) => {
                               let { isFocused: n } = t;
-                              return (0, i.jsx)(j, {
+                              return (0, i.jsx)(S, {
                                   emoji: e,
                                   isFocused: n
                               });

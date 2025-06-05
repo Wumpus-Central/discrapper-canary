@@ -21,8 +21,8 @@ var r,
     C = n(430824),
     j = n(306680),
     S = n(944486),
-    x = n(938475),
-    E = n(483360),
+    E = n(938475),
+    x = n(483360),
     P = n(585483),
     I = n(63063),
     w = n(51596),
@@ -122,10 +122,10 @@ let H = c.ZP.connectStores([j.ZP, v.Z], (e) => {
             category: v.Z.getChannel(t.parent_id)
         };
     })(V),
-    F = c.ZP.connectStores([x.ZP], (e) => {
+    F = c.ZP.connectStores([E.ZP], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id) throw Error('ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...');
-        return { voiceStates: x.ZP.getVoiceStates(t.guild_id)[t.id] };
+        return { voiceStates: E.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(V),
     z = c.ZP.connectStores([_.default], (e) => {
         let { guild: t } = e;
@@ -617,7 +617,7 @@ function Q(e) {
                 searchableTitles: [D.intl.string(D.t['3D5yo6'])],
                 path: R.Z5c.SETTINGS('account')
             }),
-                (0, E.gF)(e);
+                (0, x.gF)(e);
         }, [o, r]),
         (0, i.jsx)(q, k({}, t, e))
     );

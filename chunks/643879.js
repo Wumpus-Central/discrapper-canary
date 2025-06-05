@@ -23,7 +23,7 @@ function u(e) {
 function d(e) {
     let { userId: t, avatarId: n, storageHash: a, canAnimate: o = !1, allowWebp: s = !0, size: c } = e,
         { CDN_HOST: d } = window.GLOBAL_ENV,
-        f = null != d ? ''.concat(location.protocol, '//').concat(d) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT,
+        f = null != d ? 'https://'.concat(d) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT,
         _ = u({
             storageHash: a,
             canAnimate: o,

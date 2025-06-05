@@ -93,8 +93,8 @@ function y(e, t) {
             return null != (n = null == (t = h.Z.getStateForGuild(e)) ? void 0 : t.appliedBoosts) ? n : 0;
         }),
         S = (0, l.e7)([u.Z], () => u.Z.getGuild(e)),
-        x = Math.max((null != (m = null == S ? void 0 : S.premiumSubscriberCount) ? m : 0) - j, 0),
-        E = i.useCallback(
+        E = Math.max((null != (m = null == S ? void 0 : S.premiumSubscriberCount) ? m : 0) - j, 0),
+        x = i.useCallback(
             (n) => {
                 let r = n ? d.H6 : d.Th;
                 return (
@@ -115,18 +115,18 @@ function y(e, t) {
         P = i.useCallback(
             (e) => {
                 if ((e.stopPropagation(), null != S))
-                    return x < t.cost
+                    return E < t.cost
                         ? void (0, a.u)({
                               analyticsLocation: {
                                   page: f.ZY5.GUILD_POWERUPS_OVERVIEW,
                                   section: f.jXE.GUILD_POWERUPS_OVERVIEW_CARD
                               },
-                              numberOfBoostsToAdd: t.cost - x,
+                              numberOfBoostsToAdd: t.cost - E,
                               analyticsLocations: y,
                               guild: S,
                               intent: t.type === p.Us.LEVEL ? c.P.LEVEL : c.P.PERK,
                               onSubscribeComplete: () =>
-                                  E(!0).then(() => {
+                                  x(!0).then(() => {
                                       (0, o.ZDy)(async () => {
                                           let { default: e } = await n.e('13965').then(n.bind(n, 666083));
                                           return (n) =>
@@ -143,7 +143,7 @@ function y(e, t) {
                                       });
                                   })
                           })
-                        : E(!0).then(() => {
+                        : x(!0).then(() => {
                               (0, o.ZDy)(async () => {
                                   let { default: e } = await n.e('13965').then(n.bind(n, 666083));
                                   return (n) =>
@@ -160,9 +160,9 @@ function y(e, t) {
                               });
                           });
             },
-            [E, t, x, y, S]
+            [x, t, E, y, S]
         ),
-        I = i.useCallback((e) => (e.stopPropagation(), E(!1)), [E]);
+        I = i.useCallback((e) => (e.stopPropagation(), x(!1)), [x]);
     return {
         isLoading: O,
         error: _,

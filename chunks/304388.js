@@ -65,27 +65,27 @@ function d(e) {
 }
 let p = i.forwardRef(function (e, t) {
     let { renderPopout: n, popoutTargetRef: p, children: h, align: f = 'left', isPopoutBlocked: m, onPopoutOpen: g, onPopoutClose: b, onRequestClose: _ } = e,
-        [x, y] = i.useState(!1),
+        [y, x] = i.useState(!1),
         { isHovered: C, setIsHovered: v, onMouseEnter: j, onMouseLeave: O, cancelTimers: E } = (0, o.Z)(200, 300);
     function I(e) {
-        'focus' === e.type || x || j();
+        'focus' === e.type || y || j();
     }
     function P() {
-        x || O();
+        y || O();
     }
     function S(e) {
-        E(), y(!x), x ? null == b || b() : null == g || g(), (!C || x) && e();
+        E(), x(!y), y ? null == b || b() : null == g || g(), (!C || y) && e();
     }
     i.useImperativeHandle(
         t,
         () => ({
             hidePopout() {
-                v(!1), y(!1);
+                v(!1), x(!1);
             }
         }),
-        [v, y]
+        [v, x]
     );
-    let Z = (C && !m) || x;
+    let Z = (C && !m) || y;
     return (0, r.jsx)(a.yRy, {
         targetElementRef: p,
         animation: a.yRy.Animation.FADE,
@@ -96,7 +96,7 @@ let p = i.forwardRef(function (e, t) {
         spacing: 16,
         onRequestClose: () => {
             if ((null == _ ? void 0 : _()) === l.F) return l.F;
-            v(!1), y(!1), null == b || b();
+            v(!1), x(!1), null == b || b();
         },
         renderPopout: (e) =>
             (0, r.jsx)(
@@ -104,7 +104,7 @@ let p = i.forwardRef(function (e, t) {
                 u(
                     {
                         isHovered: Z,
-                        onFocus: () => y(!0),
+                        onFocus: () => x(!0),
                         onMouseEnter: j,
                         onMouseLeave: P,
                         renderPopout: n
@@ -123,7 +123,7 @@ let p = i.forwardRef(function (e, t) {
                     className: c.actionBarButton,
                     onMouseEnter: I,
                     onMouseLeave: P,
-                    isActive: x
+                    isActive: y
                 })
             });
         }

@@ -12,8 +12,8 @@ var r = n(255367),
     p = n(906732),
     m = n(659580),
     g = n(795318),
-    b = n(53691),
-    _ = n(457165),
+    _ = n(53691),
+    b = n(457165),
     h = n(594174),
     v = n(626135),
     y = n(111361),
@@ -81,7 +81,7 @@ function U(e, t) {
 function V(e) {
     let { onSettingsButtonClick: t, wide: n, showOutputDevices: l = !1 } = e,
         [V, B] = i.useState(''),
-        { analyticsLocations: W, newestAnalyticsLocation: Y } = (0, p.ZP)(f.Z.VOICE_FILTER_POPOUT),
+        { analyticsLocations: Y, newestAnalyticsLocation: W } = (0, p.ZP)(f.Z.VOICE_FILTER_POPOUT),
         z = i.useRef(null),
         G = (0, d.Z)({
             minDimension: 400,
@@ -98,7 +98,7 @@ function V(e) {
         [K, Q] = i.useState(!1),
         { activeVoice: $ } = (0, I.o)(),
         ee = (0, S.HM)({
-            location: W[0],
+            location: Y[0],
             autoTrackExposure: !0
         }),
         et = (0, c.q_F)({
@@ -137,7 +137,7 @@ function V(e) {
     let el = i.useCallback(() => B(''), [B]),
         ea = i.useRef(null);
     return (0, r.jsx)(p.Gt, {
-        value: W,
+        value: Y,
         children: (0, r.jsxs)('div', {
             ref: z,
             className: a()(R.voiceFiltersPopout, { [R.wide]: n }),
@@ -188,11 +188,11 @@ function V(e) {
                                         y: en.y,
                                         opacity: en.y.to((e) => +(50 !== e))
                                     },
-                                    children: (0, r.jsx)(b.p, {
+                                    children: (0, r.jsx)(_.p, {
                                         showUpsell: !0,
                                         text: M.intl.format(M.t['XMDm8/'], {
                                             nitroTierName: (0, O.Px)(L.p9.TIER_2),
-                                            onClick: () => (0, _.i)()
+                                            onClick: () => (0, b.i)()
                                         }),
                                         button: M.intl.string(M.t.cRCCJy),
                                         buttonAnalyticsObject: { section: A.jXE.VOICE_FILTERS_FLOATING_UPSELL },
@@ -227,7 +227,7 @@ function V(e) {
                                     renderOutputDevices: l,
                                     renderOutputVolume: l,
                                     onClose: t,
-                                    onInteraction: (0, g.u)('AudioDeviceMenu', Y, { entrypoint: D.A5.THREE_DOT }),
+                                    onInteraction: (0, g.u)('AudioDeviceMenu', W, { entrypoint: D.A5.THREE_DOT }),
                                     minimal: !0
                                 }),
                             children: (e) =>

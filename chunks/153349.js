@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(884902),
     b = n(670188),
     _ = n(271383),
-    x = n(496675),
-    y = n(158776),
+    y = n(496675),
+    x = n(158776),
     C = n(471253),
     v = n(431328),
     j = n(145834),
@@ -92,17 +92,17 @@ let A = i.memo(function (e) {
     w = i.memo(function (e) {
         let { channel: t, participant: l, tempDisableOnInit: o = !1 } = e,
             m = i.useRef(null),
-            [x, v] = i.useState(o);
+            [y, v] = i.useState(o);
         (0, h.ZP)(() => {
-            if (!x) return;
+            if (!y) return;
             let e = setTimeout(() => v(!1), 1000);
             return () => clearTimeout(e);
         });
         let E = t.getGuildId();
         s()(null != E, 'Channel cannot be guildless');
-        let { isMobile: I, status: P } = (0, c.cj)([y.Z], () => ({
-                isMobile: y.Z.isMobileOnline(l.user.id),
-                status: y.Z.getStatus(l.user.id, E)
+        let { isMobile: I, status: P } = (0, c.cj)([x.Z], () => ({
+                isMobile: x.Z.isMobileOnline(l.user.id),
+                status: x.Z.getStatus(l.user.id, E)
             })),
             A = (0, c.e7)([_.ZP], () => _.ZP.getMember(E, l.user.id)),
             w = (0, g.X)(t.guild_id, null == A ? void 0 : A.colorStrings),
@@ -195,7 +195,7 @@ let A = i.memo(function (e) {
                                 look: u.zxk.Looks.BLANK,
                                 size: u.zxk.Sizes.NONE,
                                 onClick: M,
-                                disabled: k || x,
+                                disabled: k || y,
                                 children: (0, r.jsx)(u.Lrb, {
                                     size: 'xs',
                                     color: 'currentColor'
@@ -256,7 +256,7 @@ let A = i.memo(function (e) {
 function M(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, chatOpen: i } = e,
         l = (0, v.Fd)(t.id),
-        o = [+!!(0, c.e7)([x.Z], () => x.Z.can(P.Pl.MANAGE_CHANNELS, t) || x.Z.can(P.Pl.MANAGE_ROLES, t)), Math.max(1, l.length)];
+        o = [+!!(0, c.e7)([y.Z], () => y.Z.can(P.Pl.MANAGE_CHANNELS, t) || y.Z.can(P.Pl.MANAGE_ROLES, t)), Math.max(1, l.length)];
     return (0, r.jsxs)('div', {
         className: a()(Z.container, { [Z.chatOpen]: i }),
         children: [

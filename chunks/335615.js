@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(941028),
     b = n(144144),
     _ = n(276264),
-    x = n(607070),
-    y = n(100527),
+    y = n(607070),
+    x = n(100527),
     C = n(367907),
     v = n(906732),
     j = n(493324),
@@ -127,7 +127,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
         }
     },
     er = i.memo(function (e) {
-        let { colorString: t, colorStrings: l, colorRoleName: a, colorRoleId: o, isOwner: s, nick: c, user: u, currentUser: p, activities: h, applicationStream: f, status: g, channel: x, guildId: y, isTyping: C, isMobileOnline: v, premiumSince: j, nameplate: O } = e,
+        let { colorString: t, colorStrings: l, colorRoleName: a, colorRoleId: o, isOwner: s, nick: c, user: u, currentUser: p, activities: h, applicationStream: f, status: g, channel: y, guildId: x, isTyping: C, isMobileOnline: v, premiumSince: j, nameplate: O } = e,
             E = ee(e, ['colorString', 'colorStrings', 'colorRoleName', 'colorRoleId', 'isOwner', 'nick', 'user', 'currentUser', 'activities', 'applicationStream', 'status', 'channel', 'guildId', 'isTyping', 'isMobileOnline', 'premiumSince', 'nameplate']),
             I = i.useRef(null),
             [P, S] = i.useState(!1),
@@ -142,44 +142,44 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                                 e,
                                 $(J({}, n), {
                                     user: u,
-                                    guildId: y,
-                                    channel: x,
+                                    guildId: x,
+                                    channel: y,
                                     showMediaItems: t
                                 })
                             );
                     });
                 },
-                [u, y, x]
+                [u, x, y]
             ),
             A = i.useCallback(() => {
                 let e = '@'.concat(W.ZP.getUserTag(u, { decoration: 'never' })),
                     t = '<@'.concat(u.id, '>');
-                V.S.dispatch(q.CkL.TEXTAREA_FOCUS, { channelId: x.id }),
+                V.S.dispatch(q.CkL.TEXTAREA_FOCUS, { channelId: y.id }),
                     V.S.dispatchToLastSubscribed(q.CkL.INSERT_TEXT, {
                         plainText: e,
                         rawText: t
                     }),
-                    b.Z.startTyping(x.id);
-            }, [u, x.id]),
+                    b.Z.startTyping(y.id);
+            }, [u, y.id]),
             w = i.useCallback(
                 (e) => {
-                    null != y &&
+                    null != x &&
                         (e.stopPropagation(),
                         (0, T.f)({
-                            guildId: y,
+                            guildId: x,
                             location: {
                                 section: q.jXE.MEMBER_LIST,
                                 object: q.qAy.BOOST_GEM_ICON
                             }
                         }));
                 },
-                [y]
+                [x]
             );
         return (0, r.jsx)(M.Z, {
             targetElementRef: I,
             user: u,
-            guildId: y,
-            channelId: x.id,
+            guildId: x,
+            channelId: y.id,
             roleId: o,
             position: d.tq ? 'window_center' : 'left',
             spacing: 16,
@@ -211,8 +211,8 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                             colorStrings: l,
                             colorRoleName: a,
                             isTyping: C,
-                            channel: x,
-                            guildId: y,
+                            channel: y,
+                            guildId: x,
                             isMobile: v,
                             onClickPremiumGuildIcon: w,
                             selected: P,
@@ -566,8 +566,8 @@ class eo extends i.Component {
 }
 function es(e) {
     let { channel: t, className: n } = e,
-        { analyticsLocations: l } = (0, v.ZP)(y.Z.MEMBER_LIST),
-        o = (0, h.e7)([x.Z], () => x.Z.keyboardModeEnabled),
+        { analyticsLocations: l } = (0, v.ZP)(x.Z.MEMBER_LIST),
+        o = (0, h.e7)([y.Z], () => y.Z.keyboardModeEnabled),
         s = (0, h.cj)([D.ZP], () => D.ZP.getProps(t.guild_id, t.id)),
         {
             rows: d,

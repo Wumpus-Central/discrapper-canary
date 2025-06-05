@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(704826), n(35282), n(539854), n(388685);
+n.d(t, { Z: () => b }), n(704826), n(35282), n(539854), n(388685);
 var i = n(255367);
 n(73800);
 var r = n(481060),
@@ -37,10 +37,10 @@ function p(e) {
     }
     return e;
 }
-let b = /^(tel|sms|mailto):([^?;]+)/;
-function h(e, t, n, h) {
+let h = /^(tel|sms|mailto):([^?;]+)/;
+function b(e, t, n, b) {
     let O = (0, a.Z)(null == n ? void 0 : n.getChannelId());
-    if (!u.isPlatformEmbedded || null == e || '' === e || O || (null == h ? void 0 : h.shouldHideMediaOptions) === !0 || !(0, l.Jj)(e)) return null;
+    if (!u.isPlatformEmbedded || null == e || '' === e || O || (null == b ? void 0 : b.shouldHideMediaOptions) === !0 || !(0, l.Jj)(e)) return null;
     let E = (0, o.F)(e),
         y = (e) => {
             s.default.track(g.rMx.CONTEXT_MENU_LINK_COPIED, p({ hostname: E }, (0, f.v)())), d.ZP.copy(e), (0, r.showToast)((0, r.createToast)(m.intl.string(m.t['L/PwZW']), r.ToastType.SUCCESS));
@@ -57,25 +57,25 @@ function h(e, t, n, h) {
                     n
                 );
         },
-        S = [],
-        j = e.match(b);
-    if (null != j) {
-        let e = m.intl.string('mailto' === j[1] ? m.t.ZYLVKi : m.t['3zozoa']);
-        S.push(
+        j = [],
+        S = e.match(h);
+    if (null != S) {
+        let e = m.intl.string('mailto' === S[1] ? m.t.ZYLVKi : m.t['3zozoa']);
+        j.push(
             (0, i.jsx)(
                 r.sNh,
                 {
                     id: 'copy-native-contact',
                     label: e,
                     action: () => {
-                        y(j[2]);
+                        y(S[2]);
                     }
                 },
                 'copy-native-contact'
             )
         ),
-            'tel' === j[1] &&
-                S.push(
+            'tel' === S[1] &&
+                j.push(
                     (0, i.jsx)(
                         r.sNh,
                         {
@@ -99,7 +99,7 @@ function h(e, t, n, h) {
             },
             'copy-native-link'
         ),
-        ...S,
+        ...j,
         (0, i.jsx)(
             r.sNh,
             {

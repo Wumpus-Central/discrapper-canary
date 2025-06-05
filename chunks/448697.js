@@ -35,8 +35,7 @@ function m() {
                 progress: 0 === s ? 0 : Math.floor((a / s) * 100)
             };
         })(),
-        { activeVoice: n } = (0, u.o)(),
-        m = (0, s.dQu)(s.TVs.colors.WHITE);
+        { activeVoice: n } = (0, u.o)();
     return (0, s.Yzy)(
         e ? (null != n ? 'voice-on' : 'voice-off') : null,
         {
@@ -67,7 +66,7 @@ function m() {
                               children: [
                                   (0, r.jsx)(s.Text, {
                                       variant: 'text-sm/semibold',
-                                      color: 'always-white',
+                                      color: 'text-primary',
                                       children: f.intl.format(f.t['r+uZYW'], { progress: t })
                                   }),
                                   (0, r.jsx)(s.zxk, {
@@ -76,7 +75,7 @@ function m() {
                                       onClick: d.ge,
                                       children: (0, r.jsx)(s.Text, {
                                           variant: 'text-sm/normal',
-                                          color: 'always-white',
+                                          color: 'text-primary',
                                           children: f.intl.string(f.t['ETE/oK'])
                                       })
                                   })
@@ -84,9 +83,7 @@ function m() {
                           }),
                           (0, r.jsx)(s.Exd, {
                               percent: t,
-                              foregroundColor: m.hex(),
-                              backgroundColor: 'rgba(255,255,255,0.10)',
-                              size: s.Exd.Sizes.LARGE
+                              size: s.Exd.Sizes.XSMALL
                           })
                       ]
                   })

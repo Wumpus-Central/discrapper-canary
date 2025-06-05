@@ -57,18 +57,18 @@ function b(e, t, n) {
         [h, O] = r.useState(() => [(0, u.Uu)(), (0, u.Uu)()]),
         [j, y] = r.useState(''),
         [x, w] = r.useState(a.C.DEFAULT),
-        [v, _] = r.useState(!1),
-        [P, C] = r.useState(d.lc.ONE_DAY),
-        [E, A] = r.useState({}),
-        [k, I] = r.useState(!1),
+        [v, P] = r.useState(!1),
+        [_, C] = r.useState(d.lc.ONE_DAY),
+        [E, I] = r.useState({}),
+        [k, A] = r.useState(!1),
         S = h.filter((e) => (0, u.cS)(e, x)),
         D = h.filter((e) => (0, u.uY)(e, x)),
-        N = j.length > 0 && S.length >= d.gY && 0 === D.length,
-        [R, { error: T, loading: L }] = (0, l.Z)(c.Z.createPoll),
+        R = j.length > 0 && S.length >= d.gY && 0 === D.length,
+        [N, { error: T, loading: L }] = (0, l.Z)(c.Z.createPoll),
         B = h.length < d.fw,
         Z = h.length > d.gY,
         U = r.useCallback((e) => {
-            A((e) => {
+            I((e) => {
                 let t = m({}, e);
                 return delete t.question, t;
             }),
@@ -76,7 +76,7 @@ function b(e, t, n) {
         }, []),
         M = r.useCallback((e) => {
             let { text: t, index: n, localCreationAnswerId: r } = e;
-            A((e) => {
+            I((e) => {
                 let t = m({}, e);
                 return delete t['answer-'.concat(r)], t;
             }),
@@ -116,7 +116,7 @@ function b(e, t, n) {
             },
             [h, z, W]
         ),
-        K = r.useCallback(
+        F = r.useCallback(
             (e, t) => {
                 W(b, t),
                     z(
@@ -130,7 +130,7 @@ function b(e, t, n) {
             },
             [b, z, W]
         ),
-        F = r.useCallback((e) => {
+        K = r.useCallback((e) => {
             O((t) => {
                 let n = [...t];
                 return (n[e] = p(m({}, n[e]), { image: void 0 })), n;
@@ -171,23 +171,23 @@ function b(e, t, n) {
                 h.forEach((n) => {
                     (0, u.uY)(n, x) && ((e = !1), (t['answer-'.concat(n.localCreationAnswerId)] = f.intl.string(f.t['8Qqkc3'])));
                 }),
-                A(t),
-                I(!e),
+                I(t),
+                A(!e),
                 e
             );
         }, [h, j, x]),
         G = r.useCallback(async () => {
-            await R({
+            await N({
                 channel: e,
                 question: j,
                 answers: S,
                 allowMultiSelect: v,
-                duration: P,
+                duration: _,
                 layout: x,
                 onClose: t
             });
-        }, [j, S, v, P, R, e, x, t]),
-        Q = r.useCallback(() => {
+        }, [j, S, v, _, N, e, x, t]),
+        V = r.useCallback(() => {
             !L && J() && G();
         }, [G, L, J]);
     return {
@@ -197,27 +197,27 @@ function b(e, t, n) {
         selectedLayoutType: x,
         setSelectedLayoutType: w,
         allowMultiSelect: v,
-        setAllowMultiSelect: _,
-        duration: P,
+        setAllowMultiSelect: P,
+        duration: _,
         setDuration: C,
-        canPost: N,
+        canPost: R,
         canAddMoreAnswers: B,
         canRemoveMoreAnswers: Z,
         handleQuestionChange: U,
         handleAnswerTextChange: M,
         handleGifSelect: H,
-        handleEmojiSelect: K,
+        handleEmojiSelect: F,
         handleCustomUpload: Y,
         handleAddAnswer: q,
         handleRemoveAnswer: X,
-        handleRemoveAnswerImage: F,
+        handleRemoveAnswerImage: K,
         fieldErrors: E,
         createPoll: G,
-        handleSubmitPoll: Q,
+        handleSubmitPoll: V,
         submitting: L,
         createPollError: T,
         shouldFocusOnInvalidField: k,
-        setShouldFocusOnInvalidField: I
+        setShouldFocusOnInvalidField: A
     };
 }
 function g(e, t) {

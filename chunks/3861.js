@@ -15,16 +15,16 @@ var r = n(255367),
     g = n(430371),
     b = n(236564),
     _ = n(45430),
-    x = n(981631),
-    y = n(354459),
+    y = n(981631),
+    x = n(354459),
     C = n(363987);
 let v = (0, o.Z)((e) => {
     let { participants: t, filteredParticipants: n, selectedParticipant: l, participantsVersion: o, layout: v, onSelectParticipant: j, onContextMenuParticipant: O, onFullscreenParticipant: E, channel: I, hasConnectPermission: P, className: S, inCall: Z, showParticipants: N = !0, width: T, height: A, idle: w, mode: R, popoutWindow: k, awaitingRemoteSessionInfo: M, callContainerDimensions: L } = e;
     i.useEffect(() => {
-        p.S.dispatch(x.CkL.REMEASURE_TARGET);
+        p.S.dispatch(y.CkL.REMEASURE_TARGET);
     }, [T, A, L.width, L.height]);
     let D = (0, d.Q3)('ChannelCallContent'),
-        U = i.useMemo(() => n.filter((e) => e.type !== y.fO.ACTIVITY || !e.participants.some((e) => (0, s.J)(e))), [n, o]);
+        U = i.useMemo(() => n.filter((e) => e.type !== x.fO.ACTIVITY || !e.participants.some((e) => (0, s.J)(e))), [n, o]);
     return (null == M ? void 0 : M.channelId) === I.id
         ? (0, r.jsx)(f.Z, { height: A })
         : (null == I ? void 0 : I.isGuildVocal()) && !Z
@@ -33,7 +33,7 @@ let v = (0, o.Z)((e) => {
                 participants: t,
                 hasConnectPermission: P
             })
-          : R === x.WtW.VOICE
+          : R === y.WtW.VOICE
             ? (0, r.jsx)(c.Z, {
                   guildId: I.guild_id,
                   width: T,

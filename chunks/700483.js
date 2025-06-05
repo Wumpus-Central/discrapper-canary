@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(575175),
     b = n(522651),
     _ = n(795318),
-    x = n(258609),
-    y = n(74299),
+    y = n(258609),
+    x = n(74299),
     C = n(924301),
     v = n(459502),
     j = n(856691),
@@ -110,10 +110,10 @@ function eu(e) {
         f = (0, o.e7)([q.Z], () => q.Z.getStageInstanceByChannel(t.id), [t.id]),
         m = (0, o.e7)([C.ZP], () => C.ZP.getGuildScheduledEvent(null == f ? void 0 : f.guild_scheduled_event_id)),
         g = (0, o.e7)([B.Z], () => B.Z.getVoiceChannelId() === t.id, [t.id]),
-        { suppress: x } = (0, S.Z)(t),
-        y = L.default.getId(),
+        { suppress: y } = (0, S.Z)(t),
+        x = L.default.getId(),
         [v] = (0, en.Z)(t),
-        j = Y.ZP.isModerator(y, t.id),
+        j = Y.ZP.isModerator(x, t.id),
         E = (0, z.B)(t.id),
         I = h(m),
         { parentAnalyticsLocation: P } = (0, p.ZP)(),
@@ -189,7 +189,7 @@ function eu(e) {
                   });
               }
           })
-        : (x && !E) || v
+        : (y && !E) || v
           ? (0, r.jsx)(R.Z, {
                 label: el.intl.string(el.t.SMKyio),
                 onClick: N
@@ -244,12 +244,12 @@ let eh = i.memo(function (e) {
         { parentAnalyticsLocation: n } = (0, p.ZP)(),
         { suppress: l, selfMute: a, mute: c } = (0, S.Z)(t),
         u = (0, z.B)(t.id),
-        d = (0, o.e7)([x.Z], () => null != x.Z.getAwaitingRemoteSessionInfo()),
+        d = (0, o.e7)([y.Z], () => null != y.Z.getAwaitingRemoteSessionInfo()),
         { cameraUnavailable: b, enabled: C } = (0, E.Z)(),
         v = (0, P.Z)(t),
         { limit: j, reachedLimit: O } = (0, I.Z)(t),
         w = (0, o.e7)([G.default], () => G.default.getCurrentUser()),
-        R = (0, o.e7)([D.Z], () => (0, y.Z)(D.Z)),
+        R = (0, o.e7)([D.Z], () => (0, x.Z)(D.Z)),
         L = (0, o.e7)([B.Z], () => B.Z.getVoiceChannelId() === t.id, [t.id]),
         U = (0, o.e7)([h.Z], () => h.Z.getStreamParticipants(t.id)[0], [t.id]),
         F = (0, K.PK)(t.id),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(539854);
+n.d(t, { Z: () => y }), n(388685), n(539854);
 var r,
     i,
     l,
@@ -42,7 +42,7 @@ class _ extends (r = a.ZP.Store) {
               writable: !0
           })
         : (_[i] = l);
-let x = new _(s.Z, {
+let y = new _(s.Z, {
     PRESENCE_SUBSCRIPTIONS_ADD: function (e) {
         let { subscription: t } = e,
             n = (function () {

@@ -22,8 +22,8 @@ var i = n(442837),
     C = n(25601),
     j = n(981631),
     S = n(490897),
-    x = n(388032),
-    E = n(990252);
+    E = n(388032),
+    x = n(990252);
 function P(e) {
     var t;
     let { channel: n, isChannelSelected: P, isChannelCollapsed: I, voiceStates: w, enableConnectedUserLimit: N, enableActivities: Z, isSubscriptionGated: T, needSubscriptionToAccess: A, isNewChannel: R, muted: D, resolvedUnreadSetting: L } = e,
@@ -53,15 +53,15 @@ function P(e) {
     if ((0, c.O)(T)) return (0, r.jsx)(c.Z, { locked: A });
     if (R)
         return (0, r.jsx)(o.IGR, {
-            text: x.intl.string(x.t.y2b7CA),
+            text: E.intl.string(E.t.y2b7CA),
             color: l.Z.unsafe_rawColors.BRAND_260.css,
-            className: E.newChannel
+            className: x.newChannel
         });
     if (!D && L === S.i.ALL_MESSAGES && n.isForumLikeChannel() && null != F && F > 0)
         return (0, r.jsx)(o.Text, {
             variant: 'text-xs/semibold',
             color: 'text-brand',
-            children: x.intl.format(x.t.GkAbqa, { count: (0, o.NGo)(F) })
+            children: E.intl.format(E.t.GkAbqa, { count: (0, o.NGo)(F) })
         });
     if (!D && n.isForumLikeChannel() && null != z && z > 0)
         return (0, r.jsx)(o.Text, {
@@ -78,7 +78,7 @@ function P(e) {
           })
         : I && (0, m.a)(w) && W
           ? (0, r.jsx)(o.IGR, {
-                text: x.intl.string(x.t.dI3q4u),
+                text: E.intl.string(E.t.dI3q4u),
                 color: l.Z.unsafe_rawColors.RED_400.css
             })
           : null != Z && Z && (0, b.u)(U)

@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(823379),
     b = n(5192),
     _ = n(501655),
-    x = n(856393),
-    y = n(388032),
+    y = n(856393),
+    x = n(388032),
     C = n(761325);
 let v = (e, t) => b.ZP.getName(e.getGuildId(), e.id, t.user),
     j = function (e) {
@@ -65,16 +65,16 @@ let v = (e, t) => b.ZP.getName(e.getGuildId(), e.id, t.user),
                         variant: b ? 'heading-lg/normal' : 'text-sm/normal',
                         children:
                             0 === E.length
-                                ? y.intl.string(y.t.FUVhyM)
+                                ? x.intl.string(x.t.FUVhyM)
                                 : 1 === E.length
-                                  ? y.intl.formatToPlainString(y.t.EQwZlJ, { a: v(n, E[0]) })
+                                  ? x.intl.formatToPlainString(x.t.EQwZlJ, { a: v(n, E[0]) })
                                   : 2 === E.length
-                                    ? y.intl.formatToPlainString(y.t.zBcKoK, {
+                                    ? x.intl.formatToPlainString(x.t.zBcKoK, {
                                           a: v(n, E[0]),
                                           b: v(n, E[1])
                                       })
                                     : E.length > 2
-                                      ? y.intl.formatToPlainString(y.t['3AqFaG'], {
+                                      ? x.intl.formatToPlainString(x.t['3AqFaG'], {
                                             a: v(n, E[0]),
                                             b: v(n, E[1]),
                                             n: E.length - 2
@@ -91,9 +91,9 @@ let v = (e, t) => b.ZP.getName(e.getGuildId(), e.id, t.user),
                             color: l ? (b ? s.zxk.Colors.WHITE : s.zxk.Colors.GREEN) : s.zxk.Colors.PRIMARY,
                             onClick: O,
                             size: s.zxk.Sizes.MEDIUM,
-                            children: l ? y.intl.string(y.t['7vb2cX']) : y.intl.string(y.t.TVBCKS)
+                            children: l ? x.intl.string(x.t['7vb2cX']) : x.intl.string(x.t.TVBCKS)
                         }),
-                        b && (0, r.jsx)(x.e, { channel: n })
+                        b && (0, r.jsx)(y.e, { channel: n })
                     ]
                 })
             ]

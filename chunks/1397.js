@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(305325),
     b = n(246364),
     _ = n(983736),
-    x = n(937111),
-    y = n(270801),
+    y = n(937111),
+    x = n(270801),
     C = n(652730),
     v = n(41776),
     j = n(657352),
@@ -93,11 +93,11 @@ class H extends i.PureComponent {
         r || e.shouldShowLurkerModeSuccessPopout || !t || null == n || this.setState({ shouldShowLurkerModeSuccessPopout: !0 });
     }
     render() {
-        let { isFollowable: e, isLurking: t, notClaimed: i, notPhoneVerified: l, notEmailVerified: a, newMember: o, memberDeadline: c, newAccount: u, accountDeadline: d, theme: p, children: h, canSendMessages: f, channelFollowingUsersSeen: m, showLurkerModeUpsellPopout: g, showMemberVerificationModal: _, useReducedMotion: x, isStaff: y, guildJoinRequest: C } = this.props,
+        let { isFollowable: e, isLurking: t, notClaimed: i, notPhoneVerified: l, notEmailVerified: a, newMember: o, memberDeadline: c, newAccount: u, accountDeadline: d, theme: p, children: h, canSendMessages: f, channelFollowingUsersSeen: m, showLurkerModeUpsellPopout: g, showMemberVerificationModal: _, useReducedMotion: y, isStaff: x, guildJoinRequest: C } = this.props,
             { shouldShowLurkerModeUpsellPopout: v, shouldShowLurkerModeSuccessPopout: j } = this.state,
             O = {
                 theme: p,
-                useReducedMotion: x
+                useReducedMotion: y
             };
         if (e && !f) {
             if (((O.message = D.intl.string(D.t.Hl0Mqq)), null != m && m >= 1000)) {
@@ -128,7 +128,7 @@ class H extends i.PureComponent {
                                     return t;
                                 }));
             }
-        else l && !y ? ((O.message = D.intl.string(D.t['2dThMD'])), (O.buttonText = D.intl.string(D.t['50gfOj'])), (O.onButtonClick = this.handleVerifyPhone), (O.imageSrc = n(98063))) : a ? ((O.message = D.intl.string(D.t.FkGPS0)), (O.buttonText = D.intl.string(D.t.lm1UKi)), (O.onButtonClick = this.handleResendVerification), (O.imageSrc = n(102811))) : o ? ((O.message = D.intl.formatToPlainString(D.t.IH7RMD, { min: M.YeM.MEMBER_AGE })), (O.countdown = c)) : u && ((O.message = D.intl.formatToPlainString(D.t['2JA2GB'], { min: M.YeM.ACCOUNT_AGE })), (O.countdown = d));
+        else l && !x ? ((O.message = D.intl.string(D.t['2dThMD'])), (O.buttonText = D.intl.string(D.t['50gfOj'])), (O.onButtonClick = this.handleVerifyPhone), (O.imageSrc = n(98063))) : a ? ((O.message = D.intl.string(D.t.FkGPS0)), (O.buttonText = D.intl.string(D.t.lm1UKi)), (O.onButtonClick = this.handleResendVerification), (O.imageSrc = n(102811))) : o ? ((O.message = D.intl.formatToPlainString(D.t.IH7RMD, { min: M.YeM.MEMBER_AGE })), (O.countdown = c)) : u && ((O.message = D.intl.formatToPlainString(D.t['2JA2GB'], { min: M.YeM.ACCOUNT_AGE })), (O.countdown = d));
         return (0, r.jsx)(s.yRy, {
             targetElementRef: this.textAreaContainerRef,
             position: 'top',
@@ -305,7 +305,7 @@ class H extends i.PureComponent {
                 return (0, r.jsx)(s.u_l, {
                     renderModal: (t) =>
                         (0, r.jsx)(
-                            y.Z,
+                            x.Z,
                             F(G({}, t), {
                                 onAccept: i,
                                 guildName: e.name
@@ -331,10 +331,10 @@ function V(e) {
             var e, t;
             return null != f && null != (t = null == (e = Z.ZP.getMember(a, f.id)) ? void 0 : e.isPending) && t;
         }),
-        y = !!(0, _.Dc)(s),
+        x = !!(0, _.Dc)(s),
         j = (0, o.e7)([C.Z], () => C.Z.shouldShowPopout(a)),
         O = (0, o.e7)([A.Z], () => A.Z.can(M.Plq.SEND_MESSAGES, i)),
-        E = (0, o.e7)([x.Z], () => x.Z.getRequest(a)),
+        E = (0, o.e7)([y.Z], () => y.Z.getRequest(a)),
         I = F(G({}, c), {
             guild: s,
             isLurking: h,
@@ -344,8 +344,8 @@ function V(e) {
             theme: P.Z.theme,
             canSendMessages: O,
             channelFollowingUsersSeen: null != d ? d.usersSeenEver : null,
-            hasVerificationGate: y,
-            showMemberVerificationModal: g && y,
+            hasVerificationGate: x,
+            showMemberVerificationModal: g && x,
             guildJoinRequestStatus: null != (n = null == E ? void 0 : E.applicationStatus) ? n : b.wB.STARTED,
             guildJoinRequest: E,
             useReducedMotion: p.Z.useReducedMotion,

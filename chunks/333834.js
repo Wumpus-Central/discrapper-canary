@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(539854), n(583741), n(388685), n(642613);
+n.d(t, { Z: () => x }), n(539854), n(583741), n(388685), n(642613);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -46,9 +46,9 @@ function S(e) {
         })
     });
 }
-let x = [O.KZ.UNREAD, O.KZ.TODAY, O.KZ.YESTERDAY, O.KZ.OLDER];
-function E(e) {
-    let { analyticsName: t, messages: n, loading: l, loadMore: s, renderEmptyState: _, renderMessageGroup: E, setInboxReadState: P, scrollerClassName: I, className: w, listName: N, ignoreGrouping: Z = !1 } = e,
+let E = [O.KZ.UNREAD, O.KZ.TODAY, O.KZ.YESTERDAY, O.KZ.OLDER];
+function x(e) {
+    let { analyticsName: t, messages: n, loading: l, loadMore: s, renderEmptyState: _, renderMessageGroup: x, setInboxReadState: P, scrollerClassName: I, className: w, listName: N, ignoreGrouping: Z = !1 } = e,
         T = i.useRef(null),
         A = (0, d.Z)(N, T),
         { notificationCenterVariant: R } = m.L.useExperiment({ location: 'NotificationsInboxSidebarList' }),
@@ -107,7 +107,7 @@ function E(e) {
                             l = k(r.id);
                         i === O.fL.MENTION ? e[l].push(r) : r.channel_id in t[l] ? t[l][r.channel_id].push(r) : (t[l][r.channel_id] = [r]);
                     }),
-                    a().each(x, (n) => {
+                    a().each(E, (n) => {
                         [...Object.values(t[n]).map((e) => e.reverse()), ...e[n].map((e) => [e])]
                             .sort((e, t) => g.default.compare(t[0].id, e[0].id))
                             .forEach((e) => {
@@ -137,10 +137,10 @@ function E(e) {
                         ? e.push(
                               ...n.map((e) => {
                                   let { message: t } = e;
-                                  return E([t], 'sidebar' === R, k(t.id) === O.KZ.UNREAD);
+                                  return x([t], 'sidebar' === R, k(t.id) === O.KZ.UNREAD);
                               })
                           )
-                        : a().each(x, (t) => {
+                        : a().each(E, (t) => {
                               0 !== U[t].length &&
                                   (e.push(
                                       (0, r.jsx)(S, {
@@ -149,12 +149,12 @@ function E(e) {
                                           toggleOpenedState: () => L(t)
                                       })
                                   ),
-                                  D[t] && e.push(...U[t].map((e) => E(e, 'sidebar' === R, k(e[0].id) === O.KZ.UNREAD))));
+                                  D[t] && e.push(...U[t].map((e) => x(e, 'sidebar' === R, k(e[0].id) === O.KZ.UNREAD))));
                           }),
                 (null == n ? void 0 : n.length) !== 0 && e.push((0, r.jsx)(u.LZC, { size: 8 }, 'spacer')),
                 e
             );
-        }, [n, _, D, L, U, Z, E, R, k]);
+        }, [n, _, D, L, U, Z, x, R, k]);
     i.useEffect(() => {
         0 === U.UNREAD.length ? P(O.xM.READ) : P(O.xM.UNREAD);
     }, [U, P]);

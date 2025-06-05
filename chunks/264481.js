@@ -1,7 +1,7 @@
 n.d(t, {
-    P9: () => v,
+    P9: () => I,
     Uf: () => P,
-    b0: () => I,
+    b0: () => v,
     s_: () => g
 }),
     n(388685);
@@ -57,7 +57,7 @@ function g() {
         bodyText: t
     });
 }
-function I() {
+function v() {
     let e = m.intl.string(m.t.bFgqYG),
         [t] = r.useState(() => {
             var e;
@@ -68,7 +68,7 @@ function I() {
         bodyText: t
     });
 }
-function v(e) {
+function I(e) {
     let { user: t, guildId: n, channelId: a, onClose: s } = e,
         d = u.ZP.getName(n, a, t),
         p = m.intl.formatToPlainString(m.t.sjSitL, { name: d }),

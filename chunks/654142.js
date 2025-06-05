@@ -79,8 +79,8 @@ let y = i.memo(function (e) {
     let { id: O, name: v, color: _, children: C } = t,
         j = C.map((e) => e.id),
         S = (0, a.Z)((e) => e.guildId),
-        x = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(O)),
-        E = (function (e) {
+        E = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(O)),
+        x = (function (e) {
             let t = e.children
                     .map((e) => {
                         let t = e.id,
@@ -128,13 +128,13 @@ let y = i.memo(function (e) {
         p.Z,
         b(m({}, y), {
             folderNode: t,
-            expanded: x,
+            expanded: E,
             selected: null != S && j.includes(S),
             mentionCount: I,
             isMentionLowImportance: w,
             unread: N,
             mediaState: P,
-            defaultFolderName: E,
+            defaultFolderName: x,
             onExpandCollapse: Z,
             onContextMenu: T
         })

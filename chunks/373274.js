@@ -27,8 +27,8 @@ var r,
     C = n(915885),
     j = n(258871),
     S = n(216306),
-    x = n(398758),
-    E = n(486311),
+    E = n(398758),
+    x = n(486311),
     P = n(220444),
     I = n(31022),
     w = n(10401),
@@ -618,7 +618,7 @@ class ep extends (r = l.PureComponent) {
                             );
                         case en.z.GUILD_BOOSTS:
                             return (0, i.jsx)(
-                                E.Z,
+                                x.Z,
                                 {
                                     guildId: r.id,
                                     selected: s === el.oC.GUILD_BOOSTS
@@ -673,7 +673,7 @@ class ep extends (r = l.PureComponent) {
                             S
                         );
                     case ei.d4z.GUILD_STAGE_VOICE:
-                        var x, P;
+                        var E, P;
                         return (0, i.jsx)(
                             q.Z,
                             {
@@ -683,7 +683,7 @@ class ep extends (r = l.PureComponent) {
                                 selected: s === y.id,
                                 connected: c === y.id,
                                 collapsed: y.isCollapsed || b.isCollapsed,
-                                voiceStates: null != (x = d[y.id]) ? x : [],
+                                voiceStates: null != (E = d[y.id]) ? E : [],
                                 speakerVoiceStates: null != (P = p[y.id]) ? P : [],
                                 disableManageChannels: h,
                                 isFavoriteCategory: O
@@ -793,7 +793,7 @@ let ef = (e) => {
         d = (0, u.e7)([Z.Z], () => Z.Z.getChannel(n)),
         h = (0, u.e7)([Z.Z], () => Z.Z.getChannel(r)),
         p = (0, u.e7)([R.Z], () => R.Z.getGuildId()),
-        y = (0, x.DM)(t),
+        y = (0, E.DM)(t),
         v = l.useRef(null),
         _ = l.useCallback((e, t) => {
             let n = v.current;
@@ -836,10 +836,10 @@ let ef = (e) => {
             scrollToStart: C,
             scrollToEnd: j
         }),
-        E = S.setFocus;
+        x = S.setFocus;
     l.useEffect(() => {
-        null != n && E(n);
-    }, [n, E]);
+        null != n && x(n);
+    }, [n, x]);
     let P = (0, I.Z)(t),
         w = (0, O.Q3)('NavigableChannels');
     return (0, i.jsx)(b.Gt, {

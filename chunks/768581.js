@@ -104,7 +104,7 @@ function N(e) {
     let p = null != f ? f : u && X(a) ? ei(_) : 'jpg';
     u && J(a) && (p = 'mp4');
     let h = window.GLOBAL_ENV.CDN_HOST;
-    if ((null != h ? ('jpg' === p && (p = _ ? 'webp' : 'png'), (t = ''.concat(location.protocol, '//').concat(h, '/').concat(r, '/').concat(i, '/').concat(a, '.').concat(p))) : (t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + n(i, a, p)), 'mp4' === p)) return t;
+    if ((null != h ? ('jpg' === p && (p = _ ? 'webp' : 'png'), (t = 'https://'.concat(h, '/').concat(r, '/').concat(i, '/').concat(a, '.').concat(p))) : (t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + n(i, a, p)), 'mp4' === p)) return t;
     let m = {};
     return null != s && (m.size = (0, l.oO)(s * (0, l.x_)())), null != d && (m.keep_aspect_ratio = d), c && (m.quality = 'lossless'), 'webp' === p && u && X(a) && (m.animated = !0), t + '?'.concat(o.stringify(m));
 }
@@ -159,13 +159,7 @@ function D(e) {
         { guildId: n, userId: r, avatar: i, canAnimate: a = !1, size: s = f.IXf, canWebP: c = v } = e,
         u = a && X(i) ? ei(c) : 'jpg',
         { CDN_HOST: d } = window.GLOBAL_ENV;
-    null != d
-        ? ('jpg' === u && (u = c ? 'webp' : 'png'),
-          (t = ''
-              .concat(location.protocol, '//')
-              .concat(d)
-              .concat(f.ANM.GUILD_MEMBER_AVATAR(n, r, i, u))))
-        : (t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.GUILD_MEMBER_AVATAR(n, r, i, u));
+    null != d ? ('jpg' === u && (u = c ? 'webp' : 'png'), (t = 'https://'.concat(d).concat(f.ANM.GUILD_MEMBER_AVATAR(n, r, i, u)))) : (t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.GUILD_MEMBER_AVATAR(n, r, i, u));
     let _ = { size: (0, l.oO)(s * (0, l.x_)()) };
     return 'webp' === u && a && X(i) && (_.animated = !0), (t += '?'.concat(o.stringify(_)));
 }
@@ -192,7 +186,7 @@ function k(e) {
     if (null == r) return;
     let s = window.GLOBAL_ENV.CDN_HOST,
         c = i && X(r) ? ei(v) : 'png';
-    t = null != s ? ''.concat(location.protocol, '//').concat(s, '/banners/').concat(n, '/').concat(r, '.').concat(c) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.USER_BANNER(n, r, c);
+    t = null != s ? 'https://'.concat(s, '/banners/').concat(n, '/').concat(r, '.').concat(c) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.USER_BANNER(n, r, c);
     let u = { size: (0, l.oO)(a * (0, l.x_)()) };
     return 'webp' === c && i && X(r) && (u.animated = !0), (t += '?'.concat(o.stringify(u)));
 }
@@ -205,7 +199,7 @@ function M(e) {
     let { CDN_HOST: a, API_ENDPOINT: o } = window.GLOBAL_ENV,
         c = f.ANM.AVATAR_DECORATION_PRESETS(i);
     if (/^blob:https?:\/\/[^\/]+\//i.test(i)) return i;
-    let u = new URL(null != a ? ''.concat(location.protocol, '//').concat(a).concat(c) : ''.concat(location.protocol).concat(o).concat(c));
+    let u = new URL(null != a ? 'https://'.concat(a).concat(c) : ''.concat(location.protocol).concat(o).concat(c));
     return u.searchParams.set('size', ''.concat((0, l.oO)(n * (0, l.x_)()))), u.searchParams.set('passthrough', ''.concat(r && (0, s.ae)(i))), u.toString();
 }
 function j(e) {
@@ -215,7 +209,7 @@ function j(e) {
     let c = window.GLOBAL_ENV.CDN_HOST,
         u = a && X(i) ? ei(v) : 'png',
         d = f.ANM.GUILD_MEMBER_BANNER(r, n, i, u);
-    t = null != c ? ''.concat(location.protocol, '//').concat(c).concat(d) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + d;
+    t = null != c ? 'https://'.concat(c).concat(d) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + d;
     let _ = { size: (0, l.oO)(s * (0, l.x_)()) };
     return 'webp' === u && a && X(i) && (_.animated = !0), (t += '?'.concat(o.stringify(_)));
 }
@@ -225,7 +219,7 @@ function U(e) {
     if (null == r) return null;
     null == i && (i = window.screen.width * (0, l.x_)()), (i = (0, l.oO)(i));
     let a = window.GLOBAL_ENV.CDN_HOST;
-    return (null != a ? ''.concat(location.protocol, '//').concat(a, '/splashes/').concat(n, '/').concat(r, '.jpg') : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.GUILD_SPLASH(n, r)) + '?size='.concat(i);
+    return (null != a ? 'https://'.concat(a, '/splashes/').concat(n, '/').concat(r, '.jpg') : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.GUILD_SPLASH(n, r)) + '?size='.concat(i);
 }
 function G(e) {
     return et(U(e));
@@ -239,7 +233,7 @@ function B(e) {
         s = v ? 'webp' : 'jpg',
         c = i && X(r) ? ei(v) : s,
         u = window.GLOBAL_ENV.CDN_HOST;
-    t = null != u ? ''.concat(location.protocol, '//').concat(u, '/banners/').concat(n, '/').concat(r, '.').concat(c) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.GUILD_BANNER(n, r, c);
+    t = null != u ? 'https://'.concat(u, '/banners/').concat(n, '/').concat(r, '.').concat(c) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.GUILD_BANNER(n, r, c);
     let d = { size: a };
     return 'jpg' === c && (d.quality = 'lossless'), 'webp' === c && i && X(r) && (d.animated = !0), (t += '?'.concat(o.stringify(d)));
 }
@@ -249,7 +243,7 @@ function F(e) {
     if (null == r) return null;
     let i = (0, l.oO)(T * (0, l.x_)()),
         a = window.GLOBAL_ENV.CDN_HOST;
-    return (null != a ? ''.concat(location.protocol, '//').concat(a, '/home-headers/').concat(n, '/').concat(r, '.png') : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.GUILD_HOME_HEADER(n, r)) + '?size='.concat(i);
+    return (null != a ? 'https://'.concat(a, '/home-headers/').concat(n, '/').concat(r, '.png') : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.GUILD_HOME_HEADER(n, r)) + '?size='.concat(i);
 }
 function V(e) {
     let t,
@@ -257,7 +251,7 @@ function V(e) {
     if (null == r) return null;
     null == i && (i = window.screen.width * (0, l.x_)()), (i = (0, l.oO)(i));
     let a = window.GLOBAL_ENV.CDN_HOST;
-    return (null != a ? ''.concat(location.protocol, '//').concat(a, '/discovery-splashes/').concat(n, '/').concat(r, '.jpg') : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.GUILD_DISCOVERY_SPLASH(n, r)) + '?size='.concat(i);
+    return (null != a ? 'https://'.concat(a, '/discovery-splashes/').concat(n, '/').concat(r, '.jpg') : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.GUILD_DISCOVERY_SPLASH(n, r)) + '?size='.concat(i);
 }
 function Z(e) {
     return et(V(e));

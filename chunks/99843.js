@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(769409),
     b = n(210975),
     _ = n(626135),
-    x = n(981631),
-    y = n(388032),
+    y = n(981631),
+    x = n(388032),
     C = n(791293);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -65,13 +65,13 @@ let O = (e) => {
         let { channel: t } = e;
         return (0, b.m$)({ channelId: t.id })
             ? (0, r.jsx)(o.ua7, {
-                  text: y.intl.string(y.t.QyZ4TU),
+                  text: x.intl.string(x.t.QyZ4TU),
                   children: (e) =>
                       (0, r.jsx)(
                           o.tQf,
                           j(v({}, e), {
                               size: 'xs',
-                              'aria-label': y.intl.string(y.t.VHXh8f),
+                              'aria-label': x.intl.string(x.t.VHXh8f),
                               color: o.TVs.colors.INTERACTIVE_NORMAL
                           })
                       )
@@ -131,7 +131,7 @@ let O = (e) => {
                         onDoubleClick: (e) => e.stopPropagation(),
                         onMouseEnter: () => {
                             null == u || u(),
-                                _.default.track(x.rMx.GDM_EDIT_INTERACTED, {
+                                _.default.track(y.rMx.GDM_EDIT_INTERACTED, {
                                     channel_id: t.id,
                                     action: 'entry_point_hovered',
                                     location: d.Z.HEADER_BAR
@@ -152,7 +152,7 @@ let O = (e) => {
             f = (0, p.cO)(t),
             [m, b] = i.useState(!1),
             _ = i.useCallback(() => (l ? b(u) : (0, g.B)(c, d.Z.HEADER_BAR)), [l, u, c]),
-            v = l ? y.t.pYO54e : y.t['5Q9+/P'];
+            v = l ? x.t.pYO54e : x.t['5Q9+/P'];
         return l
             ? (0, r.jsxs)('div', {
                   className: C.newWrapper,
@@ -167,7 +167,7 @@ let O = (e) => {
                                         children: [
                                             (0, r.jsxs)(E, {
                                                 channel: t,
-                                                tooltipText: y.intl.string(v),
+                                                tooltipText: x.intl.string(v),
                                                 onClick: _,
                                                 className: C.clickableTitle,
                                                 children: [
@@ -192,7 +192,7 @@ let O = (e) => {
                                         },
                                         children: (0, r.jsx)(o.oil, {
                                             autoFocus: !0,
-                                            maxLength: x.HN8,
+                                            maxLength: y.HN8,
                                             inputClassName: C.newInput,
                                             name: 'channel_name',
                                             autoComplete: 'off',
@@ -212,13 +212,13 @@ let O = (e) => {
                                   (0, r.jsx)(o.Text, {
                                       variant: 'text-xs/medium',
                                       color: 'header-muted',
-                                      children: y.intl.string(y.t.a7oCBg)
+                                      children: x.intl.string(x.t.a7oCBg)
                                   }),
                                   (0, r.jsx)(o.Text, {
                                       variant: 'text-xs/medium',
                                       color: 'header-muted',
                                       className: C.visibleLink,
-                                      children: y.intl.format(y.t.HVqAgI, { onCancel: () => b(!1) })
+                                      children: x.intl.format(x.t.HVqAgI, { onCancel: () => b(!1) })
                                   })
                               ]
                           })
@@ -226,7 +226,7 @@ let O = (e) => {
               })
             : (0, r.jsxs)(E, {
                   channel: t,
-                  tooltipText: y.intl.string(v),
+                  tooltipText: x.intl.string(v),
                   onClick: _,
                   className: a()(C.hoverableContainer, C.clickableTitle),
                   children: [
@@ -255,10 +255,10 @@ let O = (e) => {
             ),
             o = i.useCallback(
                 (e) => {
-                    _.default.track(x.rMx.GDM_EDIT_INTERACTED, {
+                    _.default.track(y.rMx.GDM_EDIT_INTERACTED, {
                         action: 'opened',
                         channel_id: t.id,
-                        channel_type: x.d4z.GROUP_DM,
+                        channel_type: y.d4z.GROUP_DM,
                         location: d.Z.HEADER_BAR
                     });
                 },
@@ -266,10 +266,10 @@ let O = (e) => {
             ),
             c = i.useCallback(
                 (e) => {
-                    _.default.track(x.rMx.GDM_EDIT_INTERACTED, {
+                    _.default.track(y.rMx.GDM_EDIT_INTERACTED, {
                         action: 'entry_point_hovered',
                         channel_id: t.id,
-                        channel_type: x.d4z.GROUP_DM,
+                        channel_type: y.d4z.GROUP_DM,
                         location: d.Z.HEADER_BAR
                     });
                 },
@@ -284,7 +284,7 @@ let O = (e) => {
                     children: [
                         (0, r.jsx)(u.Z, {
                             minLen: 1,
-                            maxLen: x.HN8,
+                            maxLen: y.HN8,
                             className: C.channelName,
                             name: 'channel_name',
                             autoComplete: 'off',

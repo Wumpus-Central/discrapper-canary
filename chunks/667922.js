@@ -12,22 +12,22 @@ var i = n(255367),
     g = n(768581),
     m = n(585483),
     p = n(176354),
-    b = n(981631),
-    h = n(185923),
+    h = n(981631),
+    b = n(185923),
     O = n(388032);
 function E(e, t) {
     let { reducedMotion: n } = r.useContext(a.Sfi),
         g = (0, u.$R)(t),
-        E = (0, l.e7)([f.Z], () => (t.isPrivate() || f.Z.can(b.Plq.ADD_REACTIONS, t)) && g, [t, g]),
+        E = (0, l.e7)([f.Z], () => (t.isPrivate() || f.Z.can(h.Plq.ADD_REACTIONS, t)) && g, [t, g]),
         v = (0, o.MZ)(t.getGuildId());
-    if (!d.nc.getSetting() || !E || e.type === b.uaV.GUILD_INVITE_REMINDER) return null;
-    let S = v
+    if (!d.nc.getSetting() || !E || e.type === h.uaV.GUILD_INVITE_REMINDER) return null;
+    let j = v
         .filter(
             (e) =>
                 !p.ZP.isEmojiFilteredOrLocked({
                     emoji: e,
                     channel: t,
-                    intention: h.Hz.REACTION
+                    intention: b.Hz.REACTION
                 })
         )
         .slice(0, 12)
@@ -100,12 +100,12 @@ function E(e, t) {
         id: 'add-reaction',
         label: O.intl.string(O.t.lfIHs7),
         action: () => {
-            m.S.dispatchKeyed(b.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+            m.S.dispatchKeyed(h.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
         },
         color: 'default',
         children: (0, i.jsxs)(i.Fragment, {
             children: [
-                S,
+                j,
                 (0, i.jsx)(a.Clw, {}),
                 (0, i.jsx)(a.sNh, {
                     color: 'default',
@@ -113,7 +113,7 @@ function E(e, t) {
                     label: O.intl.string(O.t['OBCR+v']),
                     icon: a.EO4,
                     action: () => {
-                        m.S.dispatchKeyed(b.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+                        m.S.dispatchKeyed(h.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
                     }
                 })
             ]

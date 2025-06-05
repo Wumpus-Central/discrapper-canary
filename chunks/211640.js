@@ -11,26 +11,35 @@ var r = n(255367),
     p = n(463959),
     h = n(388032);
 function f(e) {
-    let { message: t, user: n, guild: f } = e,
-        m = (0, i.e7)([u.Z], () => null != n && null != f && (0, o.CX)(n, f, [u.Z])),
-        { messageReference: g } = t,
-        b = (0, i.e7)([c.Z], () => (null != g ? c.Z.getMessage(g.channel_id, g.message_id) : null)),
-        _ = (0, i.e7)([s.Z], () => (null != b ? s.Z.getChannel(b.channel_id) : null));
-    if (!m) return null;
-    let x = null == b ? h.intl.string(p.default['0IZbwM']) : h.intl.string(p.default.Uj6oDw),
-        y = null == b,
-        C = 'delete-message-'.concat(t.id);
+    let { message: t, user: n, guild: f, channel: m } = e,
+        g = (0, i.e7)([u.Z], () => null != n && null != f && (0, o.CX)(n, f, [u.Z])),
+        { messageReference: b } = t,
+        _ = (0, i.e7)([c.Z], () => (null != b ? c.Z.getMessage(b.channel_id, b.message_id) : null)),
+        y = (0, i.e7)([s.Z], () => (null != _ ? s.Z.getChannel(_.channel_id) : null)),
+        x = (0, i.e7)([s.Z], () => {
+            var e, t;
+            return null != (t = null == (e = s.Z.getChannel(m.id)) ? void 0 : e.isArchivedThread()) && t;
+        });
+    if (!g) return null;
+    let C = null == _ ? h.intl.string(p.default['0IZbwM']) : h.intl.string(p.default.Uj6oDw),
+        v = null == _,
+        j = 'delete-message-'.concat(t.id);
     return (0, r.jsx)(
         d.Z,
         {
-            text: x,
+            text: C,
             icon: l.XHJ,
             onClick: () => {
-                null != _ && null != b && a.Z.confirmDelete(_, b);
+                null != y &&
+                    null != _ &&
+                    a.Z.confirmDelete(y, _, !1, {
+                        isFlagResolved: x,
+                        moderatorReportChannelId: m.id
+                    });
             },
-            disabled: y,
+            disabled: v,
             color: l.zxk.Colors.RED
         },
-        C
+        j
     );
 }

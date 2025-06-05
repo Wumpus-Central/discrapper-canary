@@ -19,8 +19,8 @@ var r = n(255367),
     g = n(937889),
     b = n(739566),
     _ = n(267128),
-    x = n(378233),
-    y = n(419922),
+    y = n(378233),
+    x = n(419922),
     C = n(375954),
     v = n(699516),
     j = n(768581),
@@ -74,12 +74,12 @@ function N(e) {
             leadingIconClass: S.messageContentLeadingIcon,
             iconSize: P.WW
         }),
-        R = (0, x.cv)(n),
+        R = (0, y.cv)(n),
         k =
             R.length > 0
                 ? R.map((e) =>
                       (0, r.jsx)(
-                          y.Z,
+                          x.Z,
                           {
                               className: S.sticker,
                               size: 128,
@@ -174,9 +174,9 @@ function T(e) {
         _ = i.useCallback((e, t) => {
             null == t ? delete m.current[e] : (m.current[e] = t);
         }, []),
-        x = i.useRef(g);
+        y = i.useRef(g);
     i.useLayoutEffect(() => {
-        x.current = g;
+        y.current = g;
     }),
         i.useLayoutEffect(() => {
             let e = {},
@@ -186,14 +186,14 @@ function T(e) {
                 let i = null != (n = m.current[r.id]) ? n : 0;
                 (e[r.id] = t), (t += i + 8);
             }
-            (0, o.isEqual)(e, x.current) || b(e);
+            (0, o.isEqual)(e, y.current) || b(e);
         }, [f]);
-    let y = f.map((e) => ({
+    let x = f.map((e) => ({
             message: e,
             height: m.current[e.id],
             y: g[e.id]
         })),
-        v = (0, u.Yzy)(y, {
+        v = (0, u.Yzy)(x, {
             keys: (e) => e.message.id,
             from: () => ({ opacity: 0 }),
             enter: (e) => {

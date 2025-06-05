@@ -17,17 +17,17 @@ var i,
     g = n(706454),
     m = n(592125),
     p = n(271383),
-    b = n(430824),
-    h = n(375954),
+    h = n(430824),
+    b = n(375954),
     O = n(699516),
     E = n(594174),
     y = (((r = {}).LOADING = 'LOADING'), (r.LOADED_HAS_MORE = 'LOADED_HAS_MORE'), (r.LOADED_FINISHED = 'LOADING_FINISHED'), (r.FAILED = 'FAILED'), r);
 let v = {};
-function S(e) {
+function j(e) {
     let { channel: t } = e;
     delete v[t.id];
 }
-function j() {
+function S() {
     s().forEach(v, (e) => {
         e.items.forEach((e) => {
             let { message: t } = e;
@@ -38,7 +38,7 @@ function j() {
 }
 class _ extends (i = c.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, b.Z, p.ZP, h.Z, E.default, g.default);
+        this.waitFor(m.Z, h.Z, p.ZP, b.Z, E.default, g.default);
     }
     getPins(e) {
         return v[e];
@@ -91,8 +91,8 @@ let P = new _(u.Z, {
         if (null == n) return !1;
         n.state = 'FAILED';
     },
-    CHANNEL_DELETE: S,
-    THREAD_DELETE: S,
+    CHANNEL_DELETE: j,
+    THREAD_DELETE: j,
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
         v = s()(v)
@@ -168,9 +168,9 @@ let P = new _(u.Z, {
         if (-1 === r) return !1;
         (i.items = i.items.slice()), i.items.splice(r, 1);
     },
-    RELATIONSHIP_ADD: j,
-    RELATIONSHIP_REMOVE: j,
-    RELATIONSHIP_UPDATE: j,
+    RELATIONSHIP_ADD: S,
+    RELATIONSHIP_REMOVE: S,
+    RELATIONSHIP_UPDATE: S,
     MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function (e) {
         let { messageId: t, channelId: n } = e,
             i = v[n];

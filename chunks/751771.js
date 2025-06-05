@@ -6,7 +6,7 @@ var d,
     h = n(442837),
     m = n(570140),
     p = n(823385),
-    v = n(814443),
+    v = n(752048),
     x = n(823379),
     I = n(971130),
     f = n(592125),
@@ -21,7 +21,7 @@ function O(e) {
     let t = new Set(),
         n = null == s || u === S.Iq.EMBEDDED_APPLICATION ? void 0 : s.id,
         l = (0, I.rh)(E, n);
-    for (let e of (null == l || N.Z.isBlocked(l.id) || t.add(l.id), v.Z.getUserAffinitiesUserIds())) t.add(e);
+    for (let e of (null == l || N.Z.isBlocked(l.id) || t.add(l.id), v.Z.getUserAffinities())) t.add(e.otherUserId);
     let i = new Set();
     return (
         u === S.Iq.EMBEDDED_APPLICATION &&
@@ -65,13 +65,13 @@ class C extends (d = h.ZP.Store) {
     }
     getSelectedInviteMetadata(e) {
         let t = T.get(e),
-            n = v.Z.getUserAffinitiesUserIds();
+            n = v.Z.getUserAffinities().map((e) => e.otherUserId);
         return null != t
             ? {
                   rowNum: t.index,
                   isAffinitySuggestion: e.isSuggested,
                   numTotal: b.length,
-                  numAffinityConnections: n.size,
+                  numAffinityConnections: n.length,
                   isFiltered: r
               }
             : null;

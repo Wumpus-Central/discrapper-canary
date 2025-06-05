@@ -4,8 +4,8 @@ var r = n(255367),
     o = n(442837),
     i = n(481060),
     c = n(541099),
-    a = n(827498),
-    u = n(421591),
+    u = n(827498),
+    a = n(421591),
     s = n(496977),
     f = n(314734),
     d = n(388032),
@@ -77,9 +77,9 @@ let O = l.memo(function (e) {
             (n = n =
                 {
                     parentComponent: 'AppLauncherModal',
-                    children: (0, r.jsx)(u.Z, {
+                    children: (0, r.jsx)(a.Z, {
                         context: O,
-                        entrypoint: a._b.VOICE,
+                        entrypoint: u._b.VOICE,
                         initHistory: y
                     })
                 }),

@@ -187,7 +187,7 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
         let { CDN_HOST: r, API_ENDPOINT: i } = window.GLOBAL_ENV,
             o = (0, a.oO)(t.size * (0, a.x_)()),
             s = null != (n = null == t ? void 0 : t.format) ? n : 'png';
-        if (null != r) return ''.concat(location.protocol, '//').concat(r, '/app-assets/').concat(_.XAJ, '/').concat(e, '.').concat(s, '?size=').concat(o);
+        if (null != r) return 'https://'.concat(r, '/app-assets/').concat(_.XAJ, '/').concat(e, '.').concat(s, '?size=').concat(o);
         let l = _.ANM.APPLICATION_ASSET(_.XAJ, e, s);
         return ''.concat(location.protocol).concat(i).concat(l, '?size=').concat(o);
     },

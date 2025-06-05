@@ -17,8 +17,8 @@ var o = t(255367),
     b = t(785717),
     x = t(687158),
     y = t(510659),
-    g = t(113557),
-    v = t(867176),
+    v = t(113557),
+    g = t(867176),
     Z = t(451834),
     j = t(502762),
     A = t(4517),
@@ -29,7 +29,7 @@ var o = t(255367),
     T = t(388032),
     w = t(405666);
 function S(e) {
-    let { user: n, currentUser: t, guildId: S, channelId: E, messageId: M, roleId: L, sessionId: D, initialSection: R, initialSubsection: B, transitionState: G, customStatusPrompt: k, openedAt: F, onClose: U, showGuildProfile: V = !0, sourceAnalyticsLocations: Y = [] } = e,
+    let { user: n, currentUser: t, guildId: S, channelId: E, messageId: M, roleId: L, sessionId: D, initialSection: B, initialSubsection: R, transitionState: G, customStatusPrompt: k, openedAt: F, onClose: U, showGuildProfile: V = !0, sourceAnalyticsLocations: Y = [] } = e,
         { analyticsLocations: W } = (0, u.ZP)([...Y, s.Z.USER_PROFILE_MODAL]),
         q = (0, b.ZB)({
             layout: 'MODAL',
@@ -78,7 +78,7 @@ function S(e) {
                             user: n,
                             displayProfile: z,
                             themeType: P.lY.MODAL,
-                            ref: et,
+                            ref: (null == z ? void 0 : z.profileEffectId) != null ? et : void 0,
                             children: [
                                 (0, o.jsx)(N.Z, {
                                     user: n,
@@ -89,7 +89,7 @@ function S(e) {
                                 }),
                                 (0, o.jsxs)('header', {
                                     children: [
-                                        (0, o.jsx)(v.Z, {
+                                        (0, o.jsx)(g.Z, {
                                             user: n,
                                             displayProfile: z,
                                             themeType: P.lY.MODAL
@@ -107,7 +107,7 @@ function S(e) {
                                         (0, o.jsxs)('div', {
                                             className: w.headerInner,
                                             children: [
-                                                (0, o.jsx)(g.Z, {
+                                                (0, o.jsx)(v.Z, {
                                                     location: 'UserProfileModal',
                                                     user: n,
                                                     displayProfile: z,
@@ -144,8 +144,8 @@ function S(e) {
                                     guildId: S,
                                     channelId: E,
                                     displayProfile: z,
-                                    initialSection: R,
-                                    initialSubsection: B,
+                                    initialSection: B,
+                                    initialSubsection: R,
                                     onClose: U
                                 })
                             ]

@@ -1,4 +1,4 @@
-n.d(t, { B: () => E });
+n.d(t, { B: () => x });
 var r = n(255367);
 n(73800);
 var i = n(617735),
@@ -46,7 +46,7 @@ function j(e) {
     return e;
 }
 let S = 'DRAGGABLE_GUILD_CHANNEL';
-function x(e, t) {
+function E(e, t) {
     var n, r;
     if (null == e || null == t) return null;
     if (e !== C.I_8) return f.Z.getChannel(t);
@@ -54,7 +54,7 @@ function x(e, t) {
         l = null != (r = null != (n = i[m.sH].find((e) => e.channel.id === t)) ? n : i[m.Zb].find((e) => e.channel.id === t)) ? r : i[C.d4z.GUILD_CATEGORY].find((e) => e.channel.id === t);
     return null == l ? void 0 : l.channel;
 }
-function E(e) {
+function x(e) {
     return (0, i.G)(
         S,
         {
@@ -62,14 +62,14 @@ function E(e) {
                 let n,
                     i = O.Z.getGuildId(),
                     l = t.getItem(),
-                    c = (0, v.if)(x(i, l.id), l.position, e.channel, e.position, l.channelList);
+                    c = (0, v.if)(E(i, l.id), l.position, e.channel, e.position, l.channelList);
                 if (null == c) return;
-                let d = x(i, l.id);
+                let d = E(i, l.id);
                 if (null == d) return;
                 let h = g.Z.getCategories(i),
                     p = b.Z.getGuild(i);
                 if (null == p) return;
-                let m = (0, v.Dn)(d, x(i, c.referenceId), c.parentId, h);
+                let m = (0, v.Dn)(d, E(i, c.referenceId), c.parentId, h);
                 if (0 !== m.length) {
                     if (i === C.I_8) return void (0, u.s3)(m);
                     if (

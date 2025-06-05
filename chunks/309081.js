@@ -25,11 +25,11 @@ var r = n(255367),
     x = n(885001),
     w = n(35463),
     v = n(489887),
-    _ = n(185923),
-    P = n(957825),
+    P = n(185923),
+    _ = n(957825),
     C = n(388032),
     E = n(687852);
-function A(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -73,7 +73,7 @@ function k(e, t) {
     }
     return a;
 }
-let I = {
+let A = {
     offset: {
         top: -4,
         bottom: -4,
@@ -125,15 +125,15 @@ function D(e) {
         })
     });
 }
-function N(e) {
+function R(e) {
     let { channelId: t, localCreationAnswerId: n, buttonImage: l, layout: u, onEmojiSelect: d, onEmojiRemove: f, answerIndex: m, shouldShowEmojiPicker: b, toggleEmojiPicker: h, containerRef: O } = e,
         j = a.useRef(null),
         x = (0, s.e7)([g.Z], () => g.Z.getChannel(t)),
         {
             emoji: v,
-            isLoadingMedia: I,
-            hasUpload: N,
-            mediaUrl: R,
+            isLoadingMedia: A,
+            hasUpload: R,
+            mediaUrl: N,
             mediaFilename: T
         } = (0, w.Z)({
             channelId: t,
@@ -141,13 +141,13 @@ function N(e) {
             image: l
         }),
         L = u === i.C.DEFAULT,
-        B = N || null != v,
+        B = R || null != v,
         Z = a.useCallback(() => {
             f(m);
         }, [f, m]),
         U = a.useMemo(
             () =>
-                N
+                R
                     ? C.intl.formatToPlainString(C.t.vcC7Qk, {
                           imageName: (0, y.fw)(T),
                           answerNumber: m + 1
@@ -158,7 +158,7 @@ function N(e) {
                             answerNumber: m + 1
                         })
                       : C.intl.formatToPlainString(C.t.emdpNj, { answerNumber: m + 1 }),
-            [N, v, m, T]
+            [R, v, m, T]
         ),
         M = a.useCallback(
             (e) => {
@@ -167,7 +167,7 @@ function N(e) {
                     className: E.emojiPicker,
                     children: (0, r.jsx)(p.Z, {
                         channel: x,
-                        pickerIntention: _.Hz.POLLS,
+                        pickerIntention: P.Hz.POLLS,
                         closePopout: t,
                         onNavigateAway: t,
                         onSelectEmoji: (e) => {
@@ -191,11 +191,11 @@ function N(e) {
             },
             [Z, h]
         ),
-        W = I
+        W = A
             ? (0, r.jsx)(c.$jN, { className: L ? E.spinnerWrapperDefault : E.spinnerWrapperImageOnly })
             : (0, r.jsx)(S, {
-                  hasUpload: N,
-                  mediaUrl: R,
+                  hasUpload: R,
+                  mediaUrl: N,
                   mediaFilename: T,
                   imageClassName: o()(E.media, L ? E.gifDefault : E.gifJumbo),
                   emoji: v,
@@ -206,7 +206,7 @@ function N(e) {
                       className: L ? E.expressionPickerIconDefault : E.expressionPickerIconImageOnly
                   })
               }),
-        H = o()(P.CT, u === i.C.IMAGE_ONLY_ANSWERS ? E.expressionPickerButtonImageOnly : E.expressionPickerButtonDefault, { [E.canEditMedia]: B });
+        H = o()(_.CT, u === i.C.IMAGE_ONLY_ANSWERS ? E.expressionPickerButtonImageOnly : E.expressionPickerButtonDefault, { [E.canEditMedia]: B });
     return (0, r.jsx)(c.yRy, {
         targetElementRef: O,
         renderPopout: M,
@@ -231,7 +231,7 @@ function N(e) {
                             u = k(e, ['onClick', 'aria-controls', 'aria-expanded']);
                         return (0, r.jsxs)(
                             c.P3F,
-                            ((a = A({ innerRef: j }, u)),
+                            ((a = I({ innerRef: j }, u)),
                             (l = l =
                                 {
                                     className: H,
@@ -270,7 +270,7 @@ function N(e) {
         }
     });
 }
-function R(e) {
+function N(e) {
     var t;
     let { value: n, id: a } = e,
         l = (() => {
@@ -293,13 +293,13 @@ function R(e) {
     });
 }
 let T = a.forwardRef(function (e, t) {
-    let { channelId: l, answer: d, index: p, layout: b, isLastAnswer: g, onAnswerTextChange: w, onEmojiSelect: _, onEmojiRemove: P, canRemoveAnswer: k, onRemoveAnswer: S, addAnswer: D, submitPoll: T, answerTextInputRefs: L, error: B, inputRef: Z, deleteButtonRef: U } = e,
+    let { channelId: l, answer: d, index: p, layout: b, isLastAnswer: g, onAnswerTextChange: w, onEmojiSelect: P, onEmojiRemove: _, canRemoveAnswer: k, onRemoveAnswer: S, addAnswer: D, submitPoll: T, answerTextInputRefs: L, error: B, inputRef: Z, deleteButtonRef: U } = e,
         M = a.useRef(null),
         z = (0, m.Dt)(),
         W = (0, m.Dt)(),
         H = null != B && B.length > 0,
         Y = (0, s.e7)([O.Z], () => O.Z.getUpload(l, d.localCreationAnswerId, h.d.Poll)),
-        [K, F] = a.useState(!1),
+        [F, K] = a.useState(!1),
         q = () => {
             function e(e) {
                 u.Z.update(l, d.localCreationAnswerId, h.d.Poll, { description: e });
@@ -309,7 +309,7 @@ let T = a.forwardRef(function (e, t) {
                 return (n) =>
                     (0, r.jsx)(
                         t,
-                        A(
+                        I(
                             {
                                 channelId: l,
                                 answer: d,
@@ -321,7 +321,7 @@ let T = a.forwardRef(function (e, t) {
             });
         },
         X = a.useCallback(() => {
-            F((e) => !e);
+            K((e) => !e);
         }, []),
         J = a.useCallback(
             (e) => {
@@ -338,19 +338,19 @@ let T = a.forwardRef(function (e, t) {
             },
             [D, d, L, p, g, b, T, X]
         ),
-        G = (0, r.jsx)(N, {
+        G = (0, r.jsx)(R, {
             containerRef: M,
             channelId: l,
             buttonImage: d.image,
             layout: b,
-            onEmojiSelect: _,
-            onEmojiRemove: P,
+            onEmojiSelect: P,
+            onEmojiRemove: _,
             localCreationAnswerId: d.localCreationAnswerId,
             answerIndex: p,
-            shouldShowEmojiPicker: K,
+            shouldShowEmojiPicker: F,
             toggleEmojiPicker: X
         }),
-        Q = null != Y && null != Y.description && Y.description.length > 0;
+        V = null != Y && null != Y.description && Y.description.length > 0;
     return b === i.C.DEFAULT
         ? (0, r.jsxs)('div', {
               ref: M,
@@ -377,10 +377,10 @@ let T = a.forwardRef(function (e, t) {
                               maxLength: v.WA,
                               'aria-invalid': H,
                               'aria-describedby': H ? z : W,
-                              focusProps: I,
+                              focusProps: A,
                               inputRef: Z
                           }),
-                          (0, r.jsx)(R, {
+                          (0, r.jsx)(N, {
                               value: d.text,
                               id: W
                           })
@@ -417,7 +417,7 @@ let T = a.forwardRef(function (e, t) {
                       className: E.imagePreviewContainer,
                       children: [
                           G,
-                          Q &&
+                          V &&
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       (0, r.jsx)(c.Text, {
@@ -447,7 +447,7 @@ let T = a.forwardRef(function (e, t) {
                           null != Y
                               ? (0, r.jsx)(f.Z, {
                                     tooltip: C.intl.string(C.t.QbhHBQ),
-                                    'aria-label': Q ? C.intl.formatToPlainString(C.t.d04UhI, { answerNumber: p + 1 }) : C.intl.formatToPlainString(C.t.mULZgY, { answerNumber: p + 1 }),
+                                    'aria-label': V ? C.intl.formatToPlainString(C.t.d04UhI, { answerNumber: p + 1 }) : C.intl.formatToPlainString(C.t.mULZgY, { answerNumber: p + 1 }),
                                     onClick: q,
                                     children: (0, r.jsx)(x.N, { 'aria-hidden': !0 })
                                 })

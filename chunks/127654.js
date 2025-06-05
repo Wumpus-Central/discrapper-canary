@@ -21,8 +21,8 @@ var r = n(475179),
     g = n(979956),
     b = n(981631),
     _ = n(959517),
-    x = n(474936),
-    y = n(388032);
+    y = n(474936),
+    x = n(388032);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -70,16 +70,16 @@ function v(e, t) {
             attachment_mimetypes: d
         }),
             (0, a.openUploadError)({
-                title: y.intl.string(y.t['/tGlcn']),
+                title: x.intl.string(x.t['/tGlcn']),
                 help: (0, g.BK)(n, r),
-                showPremiumUpsell: !(0, m.M5)(n, x.p9.TIER_2),
+                showPremiumUpsell: !(0, m.M5)(n, y.p9.TIER_2),
                 fileSize: s
             });
         return;
     }
     (0, a.openUploadError)({
-        title: y.intl.string(y.t['/tGlcn']),
-        help: y.intl.formatToPlainString(y.t.tUOJdH, { maxSize: f.Ng(f.OC()) })
+        title: x.intl.string(x.t['/tGlcn']),
+        help: x.intl.formatToPlainString(x.t.tUOJdH, { maxSize: f.Ng(f.OC()) })
     });
 }
 function j(e, t, n) {
@@ -90,8 +90,8 @@ function j(e, t, n) {
     if ((0, g.Bf)(e, _)) return void v(t, e);
     if (d.Z.getUploadCount(t.id, n) + e.length > b.dN1) {
         (0, a.openUploadError)({
-            title: y.intl.string(y.t.wOr6hI),
-            help: y.intl.formatToPlainString(y.t['qqyp/f'], { limit: b.dN1 })
+            title: x.intl.string(x.t.wOr6hI),
+            help: x.intl.formatToPlainString(x.t['qqyp/f'], { limit: b.dN1 })
         }),
             h.default.track(b.rMx.UPLOAD_FILE_LIMIT_ERROR, {
                 existing_count: d.Z.getUploadCount(t.id, n),

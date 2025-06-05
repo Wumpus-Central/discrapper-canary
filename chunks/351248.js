@@ -15,7 +15,7 @@ var r = n(255367),
     g = n(95072),
     b = n(893354),
     _ = n(565128);
-function x(e, t, n) {
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function x(e, t, n) {
         e
     );
 }
-let y = {
+let x = {
         STEPS: 23,
         FRAME_DURATION: 17,
         FRAME_SIZE: 26
@@ -69,11 +69,11 @@ class v extends i.PureComponent {
         let { scaleAnimation: t, spriteAnimation: n, spriteOpacity: r, widthAnimation: i } = this;
         r.setValue(1), n.setValue(0);
         let l = [];
-        for (let e = 0; e < y.STEPS; e++)
+        for (let e = 0; e < x.STEPS; e++)
             l.push(
                 o.Z.timing(n, {
-                    toValue: -y.FRAME_SIZE * e,
-                    duration: y.FRAME_DURATION
+                    toValue: -x.FRAME_SIZE * e,
+                    duration: x.FRAME_DURATION
                 })
             );
         o.Z.sequence([
@@ -144,15 +144,15 @@ class v extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), x(this, 'scaleAnimation', new o.Z.Value(0)), x(this, 'spriteAnimation', new o.Z.Value(0)), x(this, 'spriteOpacity', new o.Z.Value(0)), x(this, 'widthAnimation', new o.Z.Value(0));
+        super(...e), y(this, 'scaleAnimation', new o.Z.Value(0)), y(this, 'spriteAnimation', new o.Z.Value(0)), y(this, 'spriteOpacity', new o.Z.Value(0)), y(this, 'widthAnimation', new o.Z.Value(0));
     }
 }
 function j(e) {
     var t;
     let { participants: n, onContextMenu: i, className: l, onClick: o, width: u, guildId: b } = e,
         _ = (0, p.ZP)(),
-        x = ((t = n.length), ((0, d.pxk)(d.EFr.SIZE_80) + 16) * t > u ? d.EFr.SIZE_40 : d.EFr.SIZE_80),
-        y = (0, s.e7)([h.Z], () => h.Z.isFocused()),
+        y = ((t = n.length), ((0, d.pxk)(d.EFr.SIZE_80) + 16) * t > u ? d.EFr.SIZE_40 : d.EFr.SIZE_80),
+        x = (0, s.e7)([h.Z], () => h.Z.isFocused()),
         C = n.map((e) => {
             var t, n;
             if (e.type !== m.fO.USER) return null;
@@ -161,14 +161,14 @@ function j(e) {
                 v,
                 {
                     className: g.participant,
-                    width: (0, d.pxk)(x),
+                    width: (0, d.pxk)(y),
                     theme: _,
                     children: (0, r.jsx)(
                         f.Z,
                         {
                             userId: l.id,
-                            src: l.getAvatarURL(b, (0, d.pxk)(x), s && y),
-                            size: x,
+                            src: l.getAvatarURL(b, (0, d.pxk)(y), s && x),
+                            size: y,
                             muted: null != (t = null == a ? void 0 : a.isVoiceMuted()) && t,
                             deafen: null != (n = null == a ? void 0 : a.isVoiceDeafened()) && n,
                             speaking: s,

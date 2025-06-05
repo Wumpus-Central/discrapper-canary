@@ -11,7 +11,7 @@ var r = n(255367),
     p = n(569984),
     h = n(918701),
     f = n(93127),
-    g = n(814443),
+    g = n(752048),
     m = n(594174),
     b = n(801077),
     _ = n(626135),
@@ -132,7 +132,7 @@ let x = 15 * E.Z.Millis.MINUTE,
               })
             : null;
     }),
-    w = a().throttle(() => f.W(!1), 300000);
+    w = a().throttle(() => f._(), 300000);
 function L() {
     let {
             nowPlayingCards: e,
@@ -143,8 +143,8 @@ function L() {
         } = (0, c.cj)([b.Z, g.Z, m.default], () => ({
             nowPlayingCards: b.Z.nowPlayingCards,
             loaded: b.Z.loaded,
-            needsRefresh: g.Z.needsRefresh(),
-            fetching: g.Z.getFetching(),
+            needsRefresh: g.Z.shouldFetch(),
+            fetching: g.Z.isFetching(),
             currentUser: m.default.getCurrentUser()
         })),
         o = (0, c.e7)([p.Z], () => p.Z.quests);

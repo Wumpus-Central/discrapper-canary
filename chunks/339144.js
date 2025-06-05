@@ -1,6 +1,6 @@
 n.d(t, {
     J: () => P,
-    y: () => E
+    y: () => x
 });
 var r = n(255367),
     i = n(73800),
@@ -24,8 +24,8 @@ var r = n(255367),
     C = n(870569),
     j = n(981631),
     S = n(388032),
-    x = n(390648);
-function E(e, t, n) {
+    E = n(390648);
+function x(e, t, n) {
     return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === j.IIU.PLAYING && (0, u.Z)(t, j.xjy.JOIN));
 }
 let P = i.memo(function (e) {
@@ -40,7 +40,7 @@ let P = i.memo(function (e) {
         }),
         { parentAnalyticsLocation: B } = (0, h.ZP)(),
         { changeLeaveCallAndActivityIcons: V } = (0, _.A)({ location: 'Activity Actions' }),
-        H = E(M, L, D),
+        H = x(M, L, D),
         F = i.useCallback(() => {
             o()(null != L, 'Received null activity'),
                 (0, p.v)(B, p.d.INVITE),
@@ -145,7 +145,7 @@ let P = i.memo(function (e) {
                           (P = null != R ? S.intl.formatToPlainString(S.t.AB5gT0, { game: R.name }) : S.intl.string(S.t.FeUKeH)))
                         : ((t = !0), (l = null), (u = s.hGI), (P = null != T && (0, y.vd)(T.type) ? S.intl.string(S.t.uQn9Bw) : null != N ? S.intl.string(S.t.fBXEoK) : S.intl.string(S.t.n3feND))),
                   (0, r.jsx)('div', {
-                      className: x.panelButtonContainer,
+                      className: E.panelButtonContainer,
                       children: (0, r.jsx)(C.Z, {
                           tooltipText: P,
                           disabled: t,
@@ -174,7 +174,7 @@ let P = i.memo(function (e) {
     return null == Y && null == q && null == Q
         ? null
         : (0, r.jsxs)('div', {
-              className: x.actions,
+              className: E.actions,
               children: [Y, q, null != Q ? Q : X]
           });
 });

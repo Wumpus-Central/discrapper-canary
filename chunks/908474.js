@@ -22,9 +22,9 @@ function f(e) {
             return (0, c.fv)(t, c.jq.JOINED_AT);
         }, []),
         _ = i.useMemo(() => (null == t ? null : b(g)), [t, b, g]),
-        x = i.useMemo(() => (0, s.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
-        y = i.useMemo(() => (null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil)), [t.communicationDisabledUntil]);
-    return null != g || x
+        y = i.useMemo(() => (0, s.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
+        x = i.useMemo(() => (null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil)), [t.communicationDisabledUntil]);
+    return null != g || y
         ? (0, r.jsx)(a.xJW, {
               title: p.intl.string(p.t['7V375+']),
               titleClassName: h.infoTitle,
@@ -49,8 +49,8 @@ function f(e) {
                                   children: _
                               })
                           }),
-                      x &&
-                          null != y &&
+                      y &&
+                          null != x &&
                           (0, r.jsx)(d._2, {
                               icon: (0, r.jsx)(a.YlB, {
                                   size: 'custom',
@@ -67,7 +67,7 @@ function f(e) {
                                   variant: 'text-sm/semibold',
                                   color: 'text-normal',
                                   children: (0, r.jsx)(o.Z, {
-                                      deadline: y,
+                                      deadline: x,
                                       showUnits: !0,
                                       stopAtOneSec: !0
                                   })

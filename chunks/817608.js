@@ -21,26 +21,27 @@ function h(e) {
             user: g,
             guild: b
         }),
-        x = (0, d.Z)({
+        y = (0, d.Z)({
             channel: t,
             user: g,
             guild: b
         }),
-        y = [
+        x = [
             (0, u.Z)({
+                channel: t,
                 message: n,
                 user: g,
                 guild: b
             }),
             _,
-            x,
+            y,
             (0, p.Z)({
                 channel: t,
                 user: g,
                 guild: b
             })
         ].filter((e) => null != e);
-    return t.isModeratorReportChannel() && 0 !== y.length ? (0, r.jsx)(r.Fragment, { children: y.map((e, t) => (0, r.jsx)(i.Fragment, { children: e }, t)) }) : null;
+    return t.isModeratorReportChannel() && 0 !== x.length ? (0, r.jsx)(r.Fragment, { children: x.map((e, t) => (0, r.jsx)(i.Fragment, { children: e }, t)) }) : null;
 }
 function f(e) {
     let { message: t, channel: n } = e;

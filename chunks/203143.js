@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => V,
-    n: () => L
+    Z: () => H,
+    n: () => D
 }),
     n(415506),
     n(388685),
@@ -21,8 +21,8 @@ var r = n(512722),
     f = n(881052),
     h = n(367907),
     g = n(41776),
-    _ = n(566006),
-    b = n(48854),
+    _ = n(58873),
+    b = n(566006),
     E = n(869765),
     x = n(314897),
     y = n(592125),
@@ -31,13 +31,12 @@ var r = n(512722),
     j = n(375954),
     C = n(117530),
     S = n(553803),
-    I = n(316758),
-    N = n(467531),
-    T = n(798628),
-    P = n(918088),
-    A = n(981631),
-    w = n(388032);
-function Z(e) {
+    I = n(467531),
+    N = n(798628),
+    T = n(918088),
+    P = n(981631),
+    A = n(388032);
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,7 +61,7 @@ function Z(e) {
     }
     return e;
 }
-function R(e, t) {
+function Z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,7 +79,7 @@ function R(e, t) {
         e
     );
 }
-function k(e, t) {
+function R(e, t) {
     let n = [...t],
         r = 0,
         i = 0;
@@ -95,27 +94,27 @@ function k(e, t) {
         selectedEmojiAnswersCount: i
     };
 }
-function D(e) {
+function k(e) {
     let { guildId: t, title: n, body: r } = e;
     d.Z.show({
         title: n,
         body: r,
-        confirmText: w.intl.string(w.t['9VLmlZ']),
-        cancelText: w.intl.string(w.t['2m+Sqq']),
+        confirmText: A.intl.string(A.t['9VLmlZ']),
+        cancelText: A.intl.string(A.t['2m+Sqq']),
         onConfirm: () => {
-            p.Z.joinGuild(t, { source: A.vtS.POLL_ALERT });
+            p.Z.joinGuild(t, { source: P.vtS.POLL_ALERT });
         }
     });
 }
-function L(e) {
+function D(e) {
     let { channelId: t, messageId: n, answerId: r } = e,
         i = y.Z.getChannel(t);
     if (null == i) return;
     if (g.Z.isLurking(i.guild_id))
-        return void D({
+        return void k({
             guildId: i.guild_id,
-            title: w.intl.string(w.t['7LpysL']),
-            body: w.intl.string(w.t['5sHHo6'])
+            title: A.intl.string(A.t['7LpysL']),
+            body: A.intl.string(A.t['5sHHo6'])
         });
     let l = j.Z.getMessage(t, n);
     if (null == l || null == l.poll || 0 === l.poll.answers.length) return;
@@ -125,9 +124,9 @@ function L(e) {
         initialAnswerId: a
     });
 }
-function M(e) {
+function L(e) {
     let { channelId: t, messageId: n, isEditing: r } = e;
-    (0, T.eu)(t, n, (e) => {
+    (0, N.eu)(t, n, (e) => {
         var n;
         return {
             channelId: t,
@@ -138,14 +137,14 @@ function M(e) {
         };
     });
 }
-function U(e) {
+function M(e) {
     let { channelId: t, messageId: n } = e,
         r = j.Z.getMessage(t, n);
     return null == r ? [] : r.reactions.flatMap((e) => (!0 === e.me_vote ? e.emoji.name : []));
 }
-async function F(e) {
+async function U(e) {
     let { channelId: t, messageId: n, answerIds: r } = e,
-        i = U({
+        i = M({
             channelId: t,
             messageId: n
         }),
@@ -175,89 +174,89 @@ async function F(e) {
                     },
                     userId: c,
                     optimistic: !0,
-                    reactionType: _.O.VOTE
+                    reactionType: b.O.VOTE
                 });
             return e;
         });
     null != p && (await p);
 }
-async function B(e) {
+async function F(e) {
     let { channelId: t, messageId: n } = e,
         r = y.Z.getChannel(t);
     if (null == r) return;
     if (g.Z.isLurking(r.guild_id))
-        return void D({
+        return void k({
             guildId: r.guild_id,
-            title: w.intl.string(w.t.Qic1FB),
-            body: w.intl.string(w.t['5sHHo6'])
+            title: A.intl.string(A.t.Qic1FB),
+            body: A.intl.string(A.t['5sHHo6'])
         });
     if (!O.Z.canChatInGuild(r.guild_id))
         return void d.Z.show({
-            title: w.intl.string(w.t.p245ws),
-            body: w.intl.string(w.t['U/uodn'])
+            title: A.intl.string(A.t.p245ws),
+            body: A.intl.string(A.t['U/uodn'])
         });
-    let l = (0, T.fU)(t, n);
+    let l = (0, N.fU)(t, n);
     i()(null != l, 'Must not be able to vote without existing state!');
-    let a = U({
+    let a = M({
         channelId: t,
         messageId: n
     });
     try {
         let e = [...l.selectedAnswerIds.values()];
-        (0, T.eu)(
+        (0, N.eu)(
             t,
             n,
             (e) => (
                 i()(null != e, 'Must not be able to vote without existing state!'),
-                R(Z({}, e), {
+                Z(w({}, e), {
                     submitting: !0,
                     editing: !1
                 })
             )
         ),
-            await F({
+            await U({
                 channelId: t,
                 messageId: n,
                 answerIds: e
             }),
-            await N.B({
+            await I.B({
                 channelId: t,
                 messageId: n,
                 answerIds: e
             }),
-            (0, T.eu)(t, n, () => void 0),
-            c.uv.announce(0 === e.length ? w.intl.string(w.t['xcvy+/']) : w.intl.string(w.t.o20GSk));
+            (0, N.eu)(t, n, () => void 0),
+            c.uv.announce(0 === e.length ? A.intl.string(A.t['xcvy+/']) : A.intl.string(A.t.o20GSk));
     } catch (e) {
         var o, s, u;
         d.Z.show({
-            title: w.intl.string(w.t.iufib2),
-            body: null != (u = null != (s = null == (o = e.getAnyErrorMessage) ? void 0 : o.call(e)) ? s : e.message) ? u : w.intl.string(w.t.eAn6z8)
+            title: A.intl.string(A.t.iufib2),
+            body: null != (u = null != (s = null == (o = e.getAnyErrorMessage) ? void 0 : o.call(e)) ? s : e.message) ? u : A.intl.string(A.t.eAn6z8)
         }),
-            await F({
+            await U({
                 channelId: t,
                 messageId: n,
                 answerIds: a
             }),
-            (0, T.eu)(t, n, (e) => {
+            (0, N.eu)(t, n, (e) => {
                 if (null != e)
-                    return R(Z({}, e), {
+                    return Z(w({}, e), {
                         submitting: !1,
                         editing: !1
                     });
             });
     }
 }
-async function G(e) {
+async function B(e) {
     let { channelId: t, messageId: n } = e,
         r = y.Z.getChannel(t);
     if (null != r)
         return g.Z.isLurking(r.guild_id)
-            ? void D({
+            ? void k({
                   guildId: r.guild_id,
-                  title: w.intl.string(w.t.B9QnBg),
-                  body: w.intl.string(w.t.BVZCTk)
+                  title: A.intl.string(A.t.B9QnBg),
+                  body: A.intl.string(A.t.BVZCTk)
               })
-            : ((0, T.eu)(t, n, (e) => {
+            : ((0, N.eu)(t, n, (e) => {
                   var n;
                   return {
                       channelId: t,
@@ -267,28 +266,28 @@ async function G(e) {
                       showResults: null != (n = null == e ? void 0 : e.showResults) && n
                   };
               }),
-              await B({
+              await F({
                   channelId: t,
                   messageId: n
               }));
 }
-async function H(e) {
+async function G(e) {
     let { channelId: t, messageId: n, type: r } = e;
     switch (r) {
         case 'submit':
-            await B({
+            await F({
                 channelId: t,
                 messageId: n
             });
             break;
         case 'remove':
-            await G({
+            await B({
                 channelId: t,
                 messageId: n
             });
             break;
         case 'cancel':
-            M({
+            L({
                 channelId: t,
                 messageId: n,
                 isEditing: !1
@@ -297,7 +296,7 @@ async function H(e) {
         case 'showVotes':
             !(function (e) {
                 let { channelId: t, messageId: n } = e;
-                (0, T.eu)(t, n, (e) => {
+                (0, N.eu)(t, n, (e) => {
                     var r, i;
                     let l = null == e || !e.showResults,
                         a = j.Z.getMessage(t, n),
@@ -309,7 +308,7 @@ async function H(e) {
                                   }, 0)
                                 : 0;
                     return (
-                        h.ZP.trackWithMetadata(A.rMx.POLL_SHOW_RESULTS_CLICKED, {
+                        h.ZP.trackWithMetadata(P.rMx.POLL_SHOW_RESULTS_CLICKED, {
                             channel_id: t,
                             message_id: n,
                             show_results: l,
@@ -330,7 +329,7 @@ async function H(e) {
             });
             break;
         case 'showVoterDetails':
-            L({
+            D({
                 channelId: t,
                 messageId: n
             });
@@ -339,7 +338,7 @@ async function H(e) {
             i()(!1, 'Unknown poll action type: '.concat(r));
     }
 }
-let V = {
+let H = {
     handlePollAnswerTapped: function (e) {
         var t,
             n,
@@ -386,21 +385,21 @@ let V = {
                     return i;
                 })(e, ['answerId'])
             ),
-            { tapShouldOpenVotersModal: s } = null != (n = (0, P.Tk)(o)) ? n : {};
+            { tapShouldOpenVotersModal: s } = null != (n = (0, T.Tk)(o)) ? n : {};
         if (!0 === s)
-            return void L({
+            return void D({
                 channelId: l,
                 messageId: a,
                 answerId: r
             });
         let c = null == (t = o.poll) ? void 0 : t.allow_multiselect;
-        (0, T.eu)(l, a, (e) => {
+        (0, N.eu)(l, a, (e) => {
             var t, n;
             if (null == e) {
                 let e = new Set([r]),
-                    { analyticsSelectedAnswerIds: t, selectedTextAnswersCount: i, selectedEmojiAnswersCount: s } = k(null == (n = o.poll) ? void 0 : n.answers, e);
+                    { analyticsSelectedAnswerIds: t, selectedTextAnswersCount: i, selectedEmojiAnswersCount: s } = R(null == (n = o.poll) ? void 0 : n.answers, e);
                 return (
-                    h.ZP.trackWithMetadata(A.rMx.POLL_VOTE_SELECTED, {
+                    h.ZP.trackWithMetadata(P.rMx.POLL_VOTE_SELECTED, {
                         channel_id: l,
                         message_id: a,
                         selected_answer_ids: t,
@@ -416,16 +415,16 @@ let V = {
                     }
                 );
             }
-            let i = Z({}, e),
+            let i = w({}, e),
                 s = new Set(i.selectedAnswerIds);
             if (((i.selectedAnswerIds = s), s.has(r))) s.delete(r);
             else {
                 if (!c) for (let e of s) s.delete(e);
                 s.add(r);
             }
-            let { analyticsSelectedAnswerIds: u, selectedTextAnswersCount: d, selectedEmojiAnswersCount: p } = k(null == (t = o.poll) ? void 0 : t.answers, s);
+            let { analyticsSelectedAnswerIds: u, selectedTextAnswersCount: d, selectedEmojiAnswersCount: p } = R(null == (t = o.poll) ? void 0 : t.answers, s);
             return (
-                h.ZP.trackWithMetadata(A.rMx.POLL_VOTE_SELECTED, {
+                h.ZP.trackWithMetadata(P.rMx.POLL_VOTE_SELECTED, {
                     channel_id: l,
                     message_id: a,
                     selected_answer_ids: u,
@@ -436,9 +435,9 @@ let V = {
             );
         });
     },
-    handlePollSubmitVote: B,
-    handleUpdateVoteEditingState: M,
-    handlePollActionTapped: H,
+    handlePollSubmitVote: F,
+    handleUpdateVoteEditingState: L,
+    handlePollActionTapped: G,
     createPoll: async function (e) {
         let { channel: t, question: n, answers: r, allowMultiSelect: i, duration: l, layout: a, onClose: s } = e,
             c = C.Z.getUploads(t.id, v.d.Poll),
@@ -467,27 +466,31 @@ let V = {
                 layout_type: a
             };
         try {
-            null != c && c.length > 0
-                ? await I.sk({
-                      channel: t,
-                      items: c,
-                      poll: d,
-                      nonce: (0, b.r)()
-                  })
-                : await m.Z.sendPollMessage(t.id, d),
+            await m.Z.sendPollMessage(t.id, d, {
+                attachmentsToUpload: c,
+                onAttachmentUploadError: (e, n, r) => {
+                    (0, _.A)({
+                        file: e,
+                        guildId: t.getGuildId(),
+                        analyticsLocations: [],
+                        code: n,
+                        reason: r
+                    });
+                }
+            }),
                 null == s || s();
         } catch (e) {
-            if ('poll' === (e instanceof f.Hx ? e : new f.Hx(e)).getAnyErrorMessage() && null != e.text) throw R(Z({}, e), { body: JSON.parse(e.text) });
+            if ('poll' === (e instanceof f.Hx ? e : new f.Hx(e)).getAnyErrorMessage() && null != e.text) throw Z(w({}, e), { body: JSON.parse(e.text) });
             throw e;
         }
     },
     endPollEarly: async function (e) {
         let { channelId: t, messageId: n } = e;
         (await d.Z.confirm({
-            title: w.intl.string(w.t['+rfkTE']),
-            body: w.intl.string(w.t.H2I1gI)
+            title: A.intl.string(A.t['+rfkTE']),
+            body: A.intl.string(A.t.H2I1gI)
         })) &&
-            (await N.W({
+            (await I.W({
                 channelId: t,
                 messageId: n
             }));

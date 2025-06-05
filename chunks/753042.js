@@ -18,8 +18,8 @@ function _(e) {
     let { member: t } = e,
         n = (0, l.e7)([d.Z], () => d.Z.getGuild(t.guildId), [t.guildId]),
         _ = (0, c.mh)(t.userId, t.guildId),
-        x = (0, c.mV)(t.userId, t.guildId),
-        y = (0, c.LD)(t.userId),
+        y = (0, c.mV)(t.userId, t.guildId),
+        x = (0, c.LD)(t.userId),
         C = (0, c.wi)(t.userId, t.guildId);
     return (i.useEffect(() => {
         (0, s.zO)(t.guildId);
@@ -56,7 +56,7 @@ function _(e) {
                                     color: a.TVs.colors.INFO_DANGER_FOREGROUND
                                 })
                       }),
-                      x !== c.qc.NO_GATE &&
+                      y !== c.qc.NO_GATE &&
                           (0, r.jsx)(f._2, {
                               icon: (0, r.jsx)(a.snC, {
                                   size: 'custom',
@@ -69,7 +69,7 @@ function _(e) {
                                   children: g.intl.string(g.t['93hqlp'])
                               }),
                               description:
-                                  x === c.qc.AGREED
+                                  y === c.qc.AGREED
                                       ? (0, r.jsx)(a.sV5, {
                                             size: 'custom',
                                             width: f.Mn,
@@ -98,7 +98,7 @@ function _(e) {
                           description: (0, r.jsx)(a.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
-                              children: y
+                              children: x
                           })
                       }),
                       (0, r.jsx)(f._2, {

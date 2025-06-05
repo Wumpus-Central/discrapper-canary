@@ -66,8 +66,8 @@ let _ = i.memo(function (e) {
     let { messages: n, channel: l, compact: o = !1, unreadId: s, collapsedReason: c } = e,
         { hasJumpTarget: p = !1 } = n,
         [f, _] = i.useState(p),
-        x = i.useCallback(() => _((e) => !e), []),
-        y = n.hasUnread ? n.content.length - 1 : n.content.length;
+        y = i.useCallback(() => _((e) => !e), []),
+        x = n.hasUnread ? n.content.length - 1 : n.content.length;
     return (0, r.jsxs)('div', {
         className: a()({
             [g.groupStart]: !0,
@@ -87,10 +87,10 @@ let _ = i.memo(function (e) {
             (0, r.jsx)(
                 b,
                 {
-                    count: y,
+                    count: x,
                     compact: o,
                     expanded: f,
-                    onClick: x,
+                    onClick: y,
                     collapsedReason: c
                 },
                 'collapsed-message-item'

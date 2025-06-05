@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => x });
 var r = n(255367),
     i = n(73800),
     l = n(386230),
@@ -15,7 +15,7 @@ var r = n(255367),
     g = n(596443),
     b = n(50493),
     _ = n(981631);
-function x(e, t) {
+function y(e, t) {
     return (n) => {
         if (0 === n) return 'auto';
         let r = 'forwards' === t.current,
@@ -24,10 +24,10 @@ function x(e, t) {
         return i && r && 'left' === e && (l = !0), i && !r && 'right' === e && (l = !0), !i && r && 'right' === e && (l = !0), i || r || 'left' !== e || (l = !0), l ? 'calc('.concat(100 * Math.abs(n), '% + ').concat(Math.round(12 * Math.abs(n)), 'px)') : 'auto';
     };
 }
-function y(e) {
+function x(e) {
     var t;
-    let { userId: n, guildId: y, onClose: C, analyticsLocation: v, className: j } = e,
-        O = (0, a.e7)([p.ZP], () => p.ZP.getGuildSidebarState(y), [y]),
+    let { userId: n, guildId: x, onClose: C, analyticsLocation: v, className: j } = e,
+        O = (0, a.e7)([p.ZP], () => p.ZP.getGuildSidebarState(x), [x]),
         E = null != (t = null == O ? void 0 : O.details.modViewPanel) ? t : b.k.INFO,
         I = (0, c.Z)(n),
         P = null == E ? null : E === b.k.INFO ? 'backwards' : 'forwards',
@@ -35,9 +35,9 @@ function y(e) {
         { reducedMotion: Z } = i.useContext(o.S),
         N = i.useCallback(
             (e) => {
-                null != O && (0, h.r)(y, n, O.baseChannelId, { modViewPanel: e });
+                null != O && (0, h.r)(x, n, O.baseChannelId, { modViewPanel: e });
             },
-            [O, y, n]
+            [O, x, n]
         ),
         T = i.useMemo(
             () => ({
@@ -109,8 +109,8 @@ function y(e) {
                         Z.enabled
                             ? { opacity: null == (a = e.value) ? void 0 : a.to((e) => 1 - Math.abs(e)) }
                             : {
-                                  left: null == (o = e.value) ? void 0 : o.to(x('left', S)),
-                                  right: null == (s = e.value) ? void 0 : s.to(x('right', S))
+                                  left: null == (o = e.value) ? void 0 : o.to(y('left', S)),
+                                  right: null == (s = e.value) ? void 0 : s.to(y('right', S))
                               }
                     ),
                     children: (function (e) {
@@ -118,21 +118,21 @@ function y(e) {
                             case b.k.INFO:
                                 return (0, r.jsx)(f.Z, {
                                     userId: n,
-                                    guildId: y,
+                                    guildId: x,
                                     onNavigate: N,
                                     className: j
                                 });
                             case b.k.MESSAGE_HISTORY:
                                 return (0, r.jsx)(m.Z, {
                                     userId: n,
-                                    guildId: y,
+                                    guildId: x,
                                     onNavigate: () => N(b.k.INFO),
                                     className: j
                                 });
                             case b.k.PERMISSIONS:
                                 return (0, r.jsx)(g.Z, {
                                     userId: n,
-                                    guildId: y,
+                                    guildId: x,
                                     onNavigate: () => N(b.k.INFO),
                                     className: j
                                 });

@@ -142,7 +142,7 @@ let m = (e) => {
             children: [(0, r.jsx)('div', { className: f.tinyDot }), (0, r.jsx)('div', { className: f.tinyDot })]
         });
     },
-    b = (e) => {
+    _ = (e) => {
         let { digits: t } = e;
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -157,11 +157,11 @@ let m = (e) => {
             ]
         });
     },
-    _ = (e) => {
+    b = (e) => {
         let { countdown: t } = e;
         return (0, r.jsxs)('div', {
             className: f.digitsContainer,
-            children: [(0, r.jsx)(b, { digits: t.hours }), (0, r.jsx)(g, {}), (0, r.jsx)(b, { digits: t.minutes }), (0, r.jsx)(g, {}), (0, r.jsx)(b, { digits: t.seconds })]
+            children: [(0, r.jsx)(_, { digits: t.hours }), (0, r.jsx)(g, {}), (0, r.jsx)(_, { digits: t.minutes }), (0, r.jsx)(g, {}), (0, r.jsx)(_, { digits: t.seconds })]
         });
     };
 function h(e) {
@@ -200,7 +200,7 @@ function h(e) {
                 }),
                 (0, r.jsx)('div', {
                     className: f.digitsContainer,
-                    children: (0, r.jsx)(_, { countdown: s })
+                    children: (0, r.jsx)(b, { countdown: s })
                 })
             ]
         })

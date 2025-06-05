@@ -103,7 +103,7 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
         return (
             (n =
                 null != E
-                    ? ''.concat(location.protocol, '//').concat(E, '/app-assets/').concat(f.Ks, '/store/').concat(r, '.').concat(a)
+                    ? 'https://'.concat(E, '/app-assets/').concat(f.Ks, '/store/').concat(r, '.').concat(a)
                     : ''
                           .concat(location.protocol)
                           .concat(p)

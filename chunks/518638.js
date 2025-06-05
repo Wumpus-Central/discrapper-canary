@@ -35,7 +35,7 @@ function y(e, t) {
     let n = (0, a.wj)(t) ? 'logo-dark' : 'logo-light',
         r = window.GLOBAL_ENV.CDN_HOST,
         i = '?size=256';
-    return null != r ? ''.concat(location.protocol, '//').concat(r, '/promotions/').concat(e, '/').concat(n).concat(i) : ''.concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, '/promotions/').concat(e, '/').concat(n).concat(i);
+    return null != r ? 'https://'.concat(r, '/promotions/').concat(e, '/').concat(n).concat(i) : ''.concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, '/promotions/').concat(e, '/').concat(n).concat(i);
 }
 function O(e) {
     return {

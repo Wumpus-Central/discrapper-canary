@@ -15,14 +15,14 @@ var r = n(255367),
 function g(e) {
     let { channel: t, user: n, guild: g } = e,
         b = (0, i.e7)([p.default, u.Z, d.Z], () => null != n && null != g && (0, o.F)(g.id, n.id, [p.default, u.Z, d.Z])),
-        [_, x] = (0, s.ZP)(null == n ? void 0 : n.id, t.guild_id),
-        y = (0, i.e7)([c.ZP], () => null != g && null != n && null != c.ZP.getMember(g.id, n.id));
+        [_, y] = (0, s.ZP)(null == n ? void 0 : n.id, t.guild_id),
+        x = (0, i.e7)([c.ZP], () => null != g && null != n && null != c.ZP.getMember(g.id, n.id));
     if (!b) return null;
     let C = 'timeout-user-'.concat(null == n ? void 0 : n.id);
     return (0, r.jsx)(
         h.Z,
         {
-            text: y ? null : x ? m.intl.string(f.default['6uMZbm']) : m.intl.string(f.default['Sgg/uL']),
+            text: x ? null : y ? m.intl.string(f.default['6uMZbm']) : m.intl.string(f.default['Sgg/uL']),
             icon: l.T39,
             onClick: () => {
                 null != n &&
@@ -32,7 +32,7 @@ function g(e) {
                         modReportId: t.id
                     });
             },
-            disabled: x || !y
+            disabled: y || !x
         },
         C
     );

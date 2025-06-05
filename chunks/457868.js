@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(607070),
     b = n(100527),
     _ = n(906732),
-    x = n(82295),
-    y = n(91218),
+    y = n(82295),
+    x = n(91218),
     C = n(623624),
     v = n(518738),
     j = n(850020),
@@ -83,10 +83,10 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             ),
             b = (0, p.e7)([w.default], () => w.default.getUser(a)),
             _ = (0, p.e7)([w.default], () => w.default.getCurrentUser()),
-            x = (null == b ? void 0 : b.id) === (null == _ ? void 0 : _.id),
-            y = (0, p.e7)([N.Z, T.Z], () => (x ? T.Z.getStatus() : N.Z.getStatus(a, t.guild_id))),
+            y = (null == b ? void 0 : b.id) === (null == _ ? void 0 : _.id),
+            x = (0, p.e7)([N.Z, T.Z], () => (y ? T.Z.getStatus() : N.Z.getStatus(a, t.guild_id))),
             v = (0, p.e7)([N.Z], () => N.Z.isMobileOnline(a)),
-            O = (0, p.e7)([N.Z, T.Z], () => (x ? T.Z.getActivities() : N.Z.getActivities(a, t.guild_id))),
+            O = (0, p.e7)([N.Z, T.Z], () => (y ? T.Z.getActivities() : N.Z.getActivities(a, t.guild_id))),
             R = (0, p.e7)([P.Z], () => P.Z.getAnyStreamForUser(a)),
             k = (0, c.JA)(a),
             L = (0, p.e7)([E.Z], () => E.Z.canUserViewChannel(t.id, l, a)),
@@ -198,7 +198,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             user: b,
                             currentUser: _,
                             nick: null == h ? void 0 : h.nick,
-                            status: y,
+                            status: x,
                             activities: O,
                             colorString: null == h ? void 0 : h.colorString,
                             colorStrings: null == h ? void 0 : h.colorStrings,
@@ -240,14 +240,14 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                   className: V.membersGroup,
                   children: (0, r.jsx)('div', { className: V.memberGroupsPlaceholder })
               })
-            : (0, r.jsxs)(x.Z, {
+            : (0, r.jsxs)(y.Z, {
                   className: V.membersGroup,
                   'aria-label': F.intl.formatToPlainString(F.t.UaqbkZ, {
                       title: n,
                       count: i
                   }),
                   children: [
-                      null != a ? (0, r.jsx)(y.Z, z({ className: V.roleIcon }, a)) : null,
+                      null != a ? (0, r.jsx)(x.Z, z({ className: V.roleIcon }, a)) : null,
                       (0, r.jsxs)('span', {
                           'aria-hidden': !0,
                           children: [n, ' \u2014 ', i]
@@ -290,7 +290,7 @@ function Q(e) {
         { analyticsLocations: o } = (0, _.ZP)(b.Z.MEMBER_LIST),
         d = (0, O.D)(t.id, n),
         f = d.filter((e) => e.userIds.length > 0).reverse()[0],
-        { navigator: m, listRef: x } = (function (e, t) {
+        { navigator: m, listRef: y } = (function (e, t) {
             let n = (0, p.e7)([g.Z], () => g.Z.keyboardModeEnabled),
                 r = i.useRef(null),
                 l = i.useCallback(
@@ -347,7 +347,7 @@ function Q(e) {
                 listRef: r
             };
         })(l, Y),
-        y = 0 === d.length || d.every((e) => 0 === e.userIds.length);
+        x = 0 === d.length || d.every((e) => 0 === e.userIds.length);
     if (
         (i.useEffect(() => {
             k.default.track(G.rMx.MEMBER_LIST_VIEWED, {
@@ -356,7 +356,7 @@ function Q(e) {
                 guild_id: t.guild_id
             });
         }, [t.guild_id, t.id, t.type]),
-        y)
+        x)
     )
         return (0, r.jsx)(J, { channel: t });
     let C = s().omit(m.containerProps, ['ref']),
@@ -373,7 +373,7 @@ function Q(e) {
                             h.aVo,
                             z(
                                 {
-                                    ref: x,
+                                    ref: y,
                                     className: V.members,
                                     paddingTop: 0,
                                     sectionHeight: 40,

@@ -127,7 +127,7 @@ var o = (function (e) {
     })({});
 function d(e) {
     let { API_ENDPOINT: t, CDN_HOST: n } = window.GLOBAL_ENV;
-    return null != n ? ''.concat(location.protocol, '//').concat(n, '/badge-icons/').concat(e, '.png') : ''.concat(location.protocol).concat(t).concat(r.ANM.BADGE_ICON(e));
+    return null != n ? 'https://'.concat(n, '/badge-icons/').concat(e, '.png') : ''.concat(location.protocol).concat(t).concat(r.ANM.BADGE_ICON(e));
 }
 var f = (function (e) {
         return (e.ACTIVITY = 'ACTIVITY'), (e.AVATAR = 'AVATAR'), (e.STATUS = 'STATUS'), e;

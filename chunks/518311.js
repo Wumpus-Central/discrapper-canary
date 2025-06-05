@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => e_,
-    l: () => ex
+    l: () => ey
 }),
     n(642613),
     n(415506),
@@ -24,8 +24,8 @@ var r,
     g = n(493683),
     b = n(529103),
     _ = n(447543),
-    x = n(708690),
-    y = n(194359),
+    y = n(708690),
+    x = n(194359),
     C = n(425493),
     v = n(461745),
     j = n(493773),
@@ -249,7 +249,7 @@ class em extends (r = l.PureComponent) {
     }
     componentDidMount() {
         let { channel: e } = this.props;
-        f.Z.wait(() => x.Z.open(null == e ? void 0 : e.id));
+        f.Z.wait(() => y.Z.open(null == e ? void 0 : e.id));
         let t = (0, I.v_)(e);
         Y.default.track(
             en.rMx.OPEN_POPOUT,
@@ -263,7 +263,7 @@ class em extends (r = l.PureComponent) {
             K.S.subscribe(en.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown);
     }
     componentWillUnmount() {
-        K.S.unsubscribe(en.CkL.SCROLL_PAGE_UP, this.scrollPageUp), K.S.unsubscribe(en.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), f.Z.wait(() => x.Z.close());
+        K.S.unsubscribe(en.CkL.SCROLL_PAGE_UP, this.scrollPageUp), K.S.unsubscribe(en.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), f.Z.wait(() => y.Z.close());
     }
     isNotFriends() {
         let { channel: e } = this.props;
@@ -545,7 +545,7 @@ class em extends (r = l.PureComponent) {
     }
     handleAddFriend(e) {
         this.props.onClose(),
-            y.Z.sendRequest({
+            x.Z.sendRequest({
                 discordTag: J.ZP.getUserTag(e, { identifiable: 'always' }),
                 context: { location: 'Group DM' }
             });
@@ -633,14 +633,14 @@ class em extends (r = l.PureComponent) {
                 null == e || e.focus();
             }),
             ea(this, 'focusResult', (e) => {
-                x.Z.select(e);
+                y.Z.select(e);
             }),
             ea(this, 'handleSelect', (e, t) => {
                 let { results: n, channel: r } = this.props;
-                null == t ? x.Z.clear(null == r ? void 0 : r.id) : null != n && this.handleClick(n[t].user.id);
+                null == t ? y.Z.clear(null == r ? void 0 : r.id) : null != n && this.handleClick(n[t].user.id);
             }),
             ea(this, 'handleSelectionChange', (e, t) => {
-                x.Z.select(t);
+                y.Z.select(t);
                 let n = this.scrollerRef.current;
                 null != n &&
                     n.scrollToIndex({
@@ -652,7 +652,7 @@ class em extends (r = l.PureComponent) {
             ea(this, 'handleQueryChange', (e) => {
                 let { channel: t } = this.props,
                     n = (0, I.v_)(t);
-                x.Z.search(e, null == t ? void 0 : t.id),
+                y.Z.search(e, null == t ? void 0 : t.id),
                     null != this._existingTimeout && clearTimeout(this._existingTimeout),
                     (this._existingTimeout = setTimeout(() => {
                         Y.default.track(
@@ -668,11 +668,11 @@ class em extends (r = l.PureComponent) {
             }),
             ea(this, 'handleRemoveUser', (e) => {
                 let t = Array.from(this.props.selectedUsers);
-                x.Z.removeUser(t[e]), this.forceFocus();
+                y.Z.removeUser(t[e]), this.forceFocus();
             }),
             ea(this, 'handleClick', (e) => {
                 let { selectedUsers: t, query: n, channel: r } = this.props;
-                t.has(e) ? x.Z.removeUser(e) : (x.Z.addUser(e), n.length > 0 && x.Z.clear(null == r ? void 0 : r.id)), this.forceFocus();
+                t.has(e) ? y.Z.removeUser(e) : (y.Z.addUser(e), n.length > 0 && y.Z.clear(null == r ? void 0 : r.id)), this.forceFocus();
             }),
             ea(this, 'handleAddFriendNavigation', () => {
                 (0, k.uL)(en.Z5c.FRIENDS), b.Z.setSection(en.pJs.ADD_FRIEND), this.props.onClose();
@@ -753,7 +753,7 @@ class em extends (r = l.PureComponent) {
                 let { channel: e, selectedUsers: t, onClose: n } = this.props,
                     r = Array.from(t);
                 if (null != e) {
-                    let t = ey(Array.from(new Set([...e.recipients, ...r])));
+                    let t = ex(Array.from(new Set([...e.recipients, ...r])));
                     t.size > 0
                         ? (0, h.h7j)(
                               (n) =>
@@ -769,7 +769,7 @@ class em extends (r = l.PureComponent) {
                           )
                         : this.pushToExistingDM(e, r);
                 } else {
-                    let e = ey(r);
+                    let e = ex(r);
                     r.length > 1 && e.size > 0
                         ? (0, h.h7j)(
                               (t) =>
@@ -866,8 +866,8 @@ function e_(e) {
     let { channel: r, iconClassName: a, className: o, icon: s, tooltip: c, tooltipPosition: u = 'bottom', popoutPosition: d = 'bottom', popoutAlign: f = 'right', subscribeToGlobalHotkey: m = !1, location: g } = e,
         b = null != s ? s : null == r ? h.kL_ : h.ejJ,
         _ = (0, A.a)(g),
-        x = 'channel-invite-modal-'.concat(null == r ? void 0 : r.id),
-        y = (0, h.VXO)(x),
+        y = 'channel-invite-modal-'.concat(null == r ? void 0 : r.id),
+        x = (0, h.VXO)(y),
         C = l.useCallback(
             () =>
                 (0, h.ZDy)(
@@ -881,13 +881,13 @@ function e_(e) {
                                 })
                             )
                         ),
-                    { modalKey: x }
+                    { modalKey: y }
                 ),
-            [r, x, _]
+            [r, y, _]
         ),
         v = l.useRef(null),
         [O, E] = l.useState(null != r && r.isGroupDM() && 0 === r.recipients.length),
-        I = l.useCallback(() => (_ ? (y ? (0, h.Mr3)(x) : C()) : E((e) => !e)), [_, y, x, C]);
+        I = l.useCallback(() => (_ ? (x ? (0, h.Mr3)(y) : C()) : E((e) => !e)), [_, x, y, C]);
     l.useEffect(
         () => (
             m && K.S.subscribe(en.CkL.TOGGLE_DM_CREATE, I),
@@ -948,7 +948,7 @@ function e_(e) {
                     )
             });
 }
-function ex(e) {
+function ey(e) {
     let { channel: t, className: n, popoutPosition: r = 'bottom', popoutAlign: a = 'right' } = e;
     (0, j.ZP)(() => {
         (0, M._)();
@@ -1015,7 +1015,7 @@ function ex(e) {
                   )
           });
 }
-function ey(e) {
+function ex(e) {
     let t = eC(e);
     return new Set(
         (0, s.chain)(U.Z.getMutablePrivateChannels())

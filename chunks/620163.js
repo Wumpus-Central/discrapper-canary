@@ -116,7 +116,7 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
     },
     e3 = eZ.Z,
     e8 = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: I, impressionSource: R, numOfPendingFamilyRequests: D, isOverlaySupported: G, isClipsBetaTagShowing: e8 = !1, shouldMergeGameSettings: e2, isKeywordFilteringEnabled: e6, isStaff: e5, isInappropriateConversationWarningEnabled: e4, isInapproprateConversationsDefaultOn: e7, paymentsBlocked: e9, isEligibleForQuests: te, showGiftNitro: tt, isStricterMessageRequestsEnabled: tn, hasLibraryApplication: ti, hasTOTPEnabled: tr, developerMode: ts, isAdultUser: tl, hasSecureFramesVerifiedUserIds: ta, hypeSquadRemoved: to, hasIgnoredUsers: tc, hasBlockedUsers: td, useRefreshedVoiceAndVideo: tu, isEligibleForSensitiveContentDefaults: tm, inputMode: tg, activeInputProfile: tp, isInputProfileCustom: th, isActivitySharingExperimentEnabled: tf, isGoreContentFilteringEnabled: tb } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: I, impressionSource: R, numOfPendingFamilyRequests: D, isOverlaySupported: G, isClipsBetaTagShowing: e8 = !1, shouldMergeGameSettings: e2, isKeywordFilteringEnabled: e6, isStaff: e5, isInappropriateConversationWarningEnabled: e4, isInapproprateConversationsDefaultOn: e7, paymentsBlocked: e9, isEligibleForQuests: te, isStricterMessageRequestsEnabled: tt, hasLibraryApplication: tn, hasTOTPEnabled: ti, developerMode: tr, isAdultUser: ts, hasSecureFramesVerifiedUserIds: tl, hypeSquadRemoved: ta, hasIgnoredUsers: to, hasBlockedUsers: tc, useRefreshedVoiceAndVideo: td, isEligibleForSensitiveContentDefaults: tu, inputMode: tm, activeInputProfile: tg, isInputProfileCustom: tp, isActivitySharingExperimentEnabled: th, isGoreContentFilteringEnabled: tf } = e;
         return Object.freeze({
             [eH.s6.SEARCH_NO_RESULTS]: {
                 section: g.ID.CUSTOM,
@@ -154,7 +154,7 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eq.intl.string(eq.t['/52UY2']), eq.intl.string(eq.t.sK0dmJ), eq.intl.string(eq.t.XxRj7e), eq.intl.string(eq.t.yNGjyM), eq.intl.string(eq.t.KPGVWl)],
                 section: eY.oAB.ACCOUNT,
                 parent: eH.s6.ACCOUNT_PROFILE,
-                predicate: () => tm
+                predicate: () => tu
             },
             [eH.s6.ACCOUNT_USERNAME]: {
                 searchableTitles: [eq.intl.string(eq.t['+JkHPz'])],
@@ -190,13 +190,13 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eq.intl.string(eq.t.cDgKtb)],
                 section: eY.oAB.ACCOUNT,
                 parent: eH.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                predicate: () => !tr
+                predicate: () => !ti
             },
             [eH.s6.ACCOUNT_REMOVE_2FA]: {
                 searchableTitles: [eq.intl.string(eq.t['D+aE7u'])],
                 section: eY.oAB.ACCOUNT,
                 parent: eH.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                predicate: () => tr
+                predicate: () => ti
             },
             [eH.s6.ACCOUNT_VIEW_BACKUP_CODES]: {
                 searchableTitles: [eq.intl.string(eq.t.fZSi1N)],
@@ -390,19 +390,19 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eY.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [eq.intl.string(eq.t['Hj/Bur']), eq.intl.string(eq.t['N/oRIy']), eq.intl.string(eq.t.QVdYsL), eq.intl.string(eq.t['aWD+tr']), eq.intl.string(eq.t['5mnTa2']), eq.intl.string(eq.t.K0OWPz)],
                 parent: eH.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => tb
+                predicate: () => tf
             },
             [eH.s6.SEXUALLY_EXPLICIT_MEDIA_REDACTION]: {
                 section: eY.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [eq.intl.string(eq.t['Hj/Bur']), eq.intl.string(eq.t['N/oRIy']), eq.intl.string(eq.t.QVdYsL), eq.intl.string(eq.t['aWD+tr']), eq.intl.string(eq.t['5mnTa2'])],
                 parent: eH.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => tb
+                predicate: () => tf
             },
             [eH.s6.GORE_MEDIA_REDACTION]: {
                 section: eY.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [eq.intl.string(eq.t['Hj/Bur']), eq.intl.string(eq.t['N/oRIy']), eq.intl.string(eq.t.QVdYsL), eq.intl.string(eq.t['aWD+tr']), eq.intl.string(eq.t.K0OWPz)],
                 parent: eH.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => tb
+                predicate: () => tf
             },
             [eH.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2]: {
                 section: eY.oAB.CONTENT_AND_SOCIAL,
@@ -432,7 +432,7 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eY.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [eq.intl.string(eq.t['3o2ojo'])],
                 parent: eH.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
-                predicate: () => !tn
+                predicate: () => !tt
             },
             [eH.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_STATUS_V2]: {
                 section: eY.oAB.CONTENT_AND_SOCIAL,
@@ -479,13 +479,13 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eY.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [eq.intl.string(eq.t.qFsx5u)],
                 parent: eH.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => e4 && !tl && !e7
+                predicate: () => e4 && !ts && !e7
             },
             [eH.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2]: {
                 section: eY.oAB.DATA_AND_PRIVACY,
                 searchableTitles: [eq.intl.string(eq.t['5b3FND'])],
                 parent: eH.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
-                predicate: () => ta
+                predicate: () => tl
             },
             [eH.s6.PRIVACY_FAMILY_CENTER]: {
                 section: eY.oAB.FAMILY_CENTER,
@@ -562,7 +562,7 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 parent: eH.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
                 label: eq.intl.string(eq.t['3wRorq']),
                 element: eM.ZP,
-                predicate: () => tc || td
+                predicate: () => to || tc
             },
             [eH.s6.BLOCKED_USERS]: {
                 section: eY.oAB.CONTENT_AND_SOCIAL,
@@ -570,7 +570,7 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 label: eq.intl.string(eq.t.PFOUKS),
                 searchableTitles: [eq.intl.string(eq.t.PFOUKS)],
                 element: eM.GF,
-                predicate: () => td
+                predicate: () => tc
             },
             [eH.s6.IGNORED_USERS]: {
                 section: eY.oAB.CONTENT_AND_SOCIAL,
@@ -578,7 +578,7 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eq.intl.string(eq.t['93ZDWF'])],
                 label: eq.intl.string(eq.t['93ZDWF']),
                 element: eM.yo,
-                predicate: () => tc
+                predicate: () => to
             },
             [eH.s6.PREMIUM]: {
                 section: eY.oAB.PREMIUM,
@@ -619,12 +619,6 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 element: ej.Z,
                 ariaLabel: eq.intl.string(eq.t['jcSP+v']),
                 badgeCount: t
-            },
-            [eH.s6.GIFT_NITRO]: {
-                section: eY.oAB.INVENTORY,
-                searchableTitles: [eq.intl.string(eq.t.Ve9Ge3)],
-                parent: eH.s6.GIFT_INVENTORY,
-                predicate: () => !e9 && tt
             },
             [eH.s6.GIFT_CODE_REDEMPTION]: {
                 section: eY.oAB.INVENTORY,
@@ -839,36 +833,36 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t.K3lovL), eq.intl.string(eq.t.NiTd0d)],
                 parent: eH.s6.VOICE_AND_VIDEO,
-                predicate: () => tu
+                predicate: () => td
             },
             [eH.s6.VOICE_AND_VIDEO_VIDEO_TAB]: {
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t.FlNoSU)],
                 parent: eH.s6.VOICE_AND_VIDEO,
-                predicate: () => tu
+                predicate: () => td
             },
             [eH.s6.VOICE_AND_VIDEO_SOUNDBOARD_TAB]: {
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t.ABjMWF)],
                 parent: eH.s6.VOICE_AND_VIDEO,
-                predicate: () => tu
+                predicate: () => td
             },
             [eH.s6.VOICE_AND_VIDEO_DEBUG_TAB]: {
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t.OFpL3d)],
                 parent: eH.s6.VOICE_AND_VIDEO,
-                predicate: () => tu
+                predicate: () => td
             },
             [eH.s6.VOICE_AND_VIDEO_VIDEO_STREAMING]: {
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t.KDdjoq), eq.intl.string(eq.t.FeUKeH)],
                 parent: eH.s6.VOICE_AND_VIDEO_VIDEO_TAB,
-                predicate: () => tu
+                predicate: () => td
             },
             [eH.s6.VOICE_AND_VIDEO_VOICE]: {
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t.K3lovL), eq.intl.string(eq.t.NiTd0d)],
-                parent: tu ? eH.s6.VOICE_AND_VIDEO_VOICE_TAB : eH.s6.VOICE_AND_VIDEO
+                parent: td ? eH.s6.VOICE_AND_VIDEO_VOICE_TAB : eH.s6.VOICE_AND_VIDEO
             },
             [eH.s6.VOICE_AND_VIDEO_DEVICES]: {
                 section: eY.oAB.VOICE,
@@ -901,23 +895,23 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t['pS+K2N']), eq.intl.string(eq.t.nuFtHB)],
                 parent: eH.s6.VOICE_AND_VIDEO_VOICE,
-                predicate: () => tp !== eF._.STUDIO
+                predicate: () => tg !== eF._.STUDIO
             },
             [eH.s6.VOICE_AND_VIDEO_SENSITIVITY]: {
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t['sqUm+v']), eq.intl.string(eq.t.nuFtHB)],
                 parent: eH.s6.VOICE_AND_VIDEO_VOICE,
-                predicate: () => tg === eK.pM.VOICE_ACTIVITY && th
+                predicate: () => tm === eK.pM.VOICE_ACTIVITY && tp
             },
             [eH.s6.VOICE_AND_VIDEO_SWITCH_CHANNEL_ALERT]: {
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t.e7LIiY)],
-                parent: tu ? eH.s6.VOICE_AND_VIDEO_VOICE_ADVANCED : eH.s6.VOICE_AND_VIDEO
+                parent: td ? eH.s6.VOICE_AND_VIDEO_VOICE_ADVANCED : eH.s6.VOICE_AND_VIDEO
             },
             [eH.s6.VOICE_AND_VIDEO_SOUNDS]: {
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t.nzUc3N)],
-                parent: tu ? eH.s6.VOICE_AND_VIDEO_SOUNDBOARD_TAB : eH.s6.VOICE_AND_VIDEO
+                parent: td ? eH.s6.VOICE_AND_VIDEO_SOUNDBOARD_TAB : eH.s6.VOICE_AND_VIDEO
             },
             [eH.s6.VOICE_AND_VIDEO_SOUNDBOARD]: {
                 section: eY.oAB.VOICE,
@@ -932,7 +926,7 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
             [eH.s6.VOICE_AND_VIDEO_VIDEO]: {
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t.LKzQSE)],
-                parent: tu ? eH.s6.VOICE_AND_VIDEO_VIDEO_TAB : eH.s6.VOICE_AND_VIDEO
+                parent: td ? eH.s6.VOICE_AND_VIDEO_VIDEO_TAB : eH.s6.VOICE_AND_VIDEO
             },
             [eH.s6.VOICE_AND_VIDEO_VIDEO_CAMERA]: {
                 section: eY.oAB.VOICE,
@@ -960,24 +954,24 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t['8/udY2'])],
                 parent: eH.s6.VOICE_AND_VIDEO_VIDEO_TAB,
-                predicate: () => tu
+                predicate: () => td
             },
             [eH.s6.VOICE_AND_VIDEO_VOICE_ADVANCED]: {
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t['8/udY2'])],
                 parent: eH.s6.VOICE_AND_VIDEO_VOICE_TAB,
-                predicate: () => tu
+                predicate: () => td
             },
             [eH.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_AUDIO]: {
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t.DSGme3)],
                 parent: eH.s6.VOICE_AND_VIDEO_ADVANCED,
-                predicate: () => !tu
+                predicate: () => !td
             },
             [eH.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO]: {
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t.Tceiq6)],
-                parent: tu ? eH.s6.VOICE_AND_VIDEO_VIDEO_ADVANCED : eH.s6.VOICE_AND_VIDEO_ADVANCED
+                parent: td ? eH.s6.VOICE_AND_VIDEO_VIDEO_ADVANCED : eH.s6.VOICE_AND_VIDEO_ADVANCED
             },
             [eH.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_OPENH264]: {
                 section: eY.oAB.VOICE,
@@ -1000,7 +994,7 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t['6I6GUl'])],
                 parent: eH.s6.VOICE_AND_VIDEO_ADVANCED,
-                predicate: () => th
+                predicate: () => tp
             },
             [eH.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION]: {
                 section: eY.oAB.VOICE,
@@ -1010,12 +1004,12 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
             [eH.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_SIDECHAIN_COMPRESSION]: {
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t['/jwMtr'])],
-                parent: tu ? eH.s6.VOICE_AND_VIDEO_VIDEO_STREAMING : eH.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING
+                parent: td ? eH.s6.VOICE_AND_VIDEO_VIDEO_STREAMING : eH.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING
             },
             [eH.s6.VOICE_AND_VIDEO_STREAM_PREVIEWS]: {
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t.OBwCXF)],
-                parent: tu ? eH.s6.VOICE_AND_VIDEO_VIDEO_STREAMING : eH.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING
+                parent: td ? eH.s6.VOICE_AND_VIDEO_VIDEO_STREAMING : eH.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING
             },
             [eH.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION]: {
                 section: eY.oAB.VOICE,
@@ -1044,25 +1038,25 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
             [eH.s6.VOICE_AND_VIDEO_ADVANCED_QOS]: {
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t.uancuL)],
-                parent: tu ? eH.s6.VOICE_AND_VIDEO_VOICE_ADVANCED : eH.s6.VOICE_AND_VIDEO_ADVANCED,
+                parent: td ? eH.s6.VOICE_AND_VIDEO_VOICE_ADVANCED : eH.s6.VOICE_AND_VIDEO_ADVANCED,
                 predicate: () => Y.Z.supports(eK.AN.QOS)
             },
             [eH.s6.VOICE_AND_VIDEO_ADVANCED_ATTENUATION]: {
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t.oSdBvb)],
-                parent: tu ? eH.s6.VOICE_AND_VIDEO_VOICE_ADVANCED : eH.s6.VOICE_AND_VIDEO_ADVANCED,
+                parent: td ? eH.s6.VOICE_AND_VIDEO_VOICE_ADVANCED : eH.s6.VOICE_AND_VIDEO_ADVANCED,
                 predicate: () => Y.Z.supports(eK.AN.ATTENUATION)
             },
             [eH.s6.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM]: {
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t.wVBHr6)],
-                parent: tu ? eH.s6.VOICE_AND_VIDEO_VOICE_ADVANCED : eH.s6.VOICE_AND_VIDEO_ADVANCED,
+                parent: td ? eH.s6.VOICE_AND_VIDEO_VOICE_ADVANCED : eH.s6.VOICE_AND_VIDEO_ADVANCED,
                 predicate: () => Y.Z.shouldOfferManualSubsystemSelection()
             },
             [eH.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE]: {
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t.KDdjoq), eq.intl.string(eq.t.NMCIf3), eq.intl.string(eq.t.FeUKeH)],
-                parent: tu ? eH.s6.VOICE_AND_VIDEO_VIDEO_STREAMING : eH.s6.VOICE_AND_VIDEO_ADVANCED,
+                parent: td ? eH.s6.VOICE_AND_VIDEO_VIDEO_STREAMING : eH.s6.VOICE_AND_VIDEO_ADVANCED,
                 predicate: () => Y.Z.supportsVideoHook() || Y.Z.supportsExperimentalSoundshare() || (Y.Z.supportsSystemScreensharePicker() && (0, Q.isMac)())
             },
             [eH.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_VIDEO_HOOK]: {
@@ -1086,13 +1080,13 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
             [eH.s6.VOICE_AND_VIDEO_ADVANCED_SILENCE_WARNING]: {
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t['aP1N/v'])],
-                parent: tu ? eH.s6.VOICE_AND_VIDEO_VOICE_ADVANCED : eH.s6.VOICE_AND_VIDEO_ADVANCED,
+                parent: td ? eH.s6.VOICE_AND_VIDEO_VOICE_ADVANCED : eH.s6.VOICE_AND_VIDEO_ADVANCED,
                 predicate: () => Q.isPlatformEmbedded
             },
             [eH.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING]: {
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t.OFpL3d)],
-                parent: tu ? eH.s6.VOICE_AND_VIDEO_DEBUG_TAB : eH.s6.VOICE_AND_VIDEO_ADVANCED
+                parent: td ? eH.s6.VOICE_AND_VIDEO_DEBUG_TAB : eH.s6.VOICE_AND_VIDEO_ADVANCED
             },
             [eH.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY]: {
                 section: eY.oAB.VOICE,
@@ -1121,7 +1115,7 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
             [eH.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS]: {
                 section: eY.oAB.VOICE,
                 searchableTitles: [eq.intl.string(eq.t['/RXu6+'])],
-                parent: tu ? eH.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING : eH.s6.VOICE_AND_VIDEO_ADVANCED
+                parent: td ? eH.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING : eH.s6.VOICE_AND_VIDEO_ADVANCED
             },
             [eH.s6.CLICKER_GAME]: {
                 url: eY.Z5c.SETTINGS('clicker-game'),
@@ -1485,13 +1479,13 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eY.oAB.ADVANCED,
                 searchableTitles: [eq.intl.string(eq.t.fi3UQE)],
                 parent: eH.s6.SETTINGS_ADVANCED,
-                predicate: () => ti
+                predicate: () => tn
             },
             [eH.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE]: {
                 section: eY.oAB.ADVANCED,
                 searchableTitles: [eq.intl.string(eq.t.erOqlp)],
                 parent: eH.s6.SETTINGS_ADVANCED,
-                predicate: () => ts
+                predicate: () => tr
             },
             [eH.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN]: {
                 section: eY.oAB.ADVANCED,
@@ -1506,9 +1500,9 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
             },
             [eH.s6.ACTIVITY_PRIVACY]: {
                 section: eY.oAB.ACTIVITY_PRIVACY,
-                searchableTitles: tf ? [eq.intl.string(eq.t.Cq98yM), eq.intl.string(eq.t['6x5uWV'])] : [eq.intl.string(eq.t.Cq98yM)],
-                label: eq.intl.string(tf ? eq.t['6x5uWV'] : eq.t.Cq98yM),
-                ariaLabel: eq.intl.string(tf ? eq.t['6x5uWV'] : eq.t.Cq98yM),
+                searchableTitles: th ? [eq.intl.string(eq.t.Cq98yM), eq.intl.string(eq.t['6x5uWV'])] : [eq.intl.string(eq.t.Cq98yM)],
+                label: eq.intl.string(th ? eq.t['6x5uWV'] : eq.t.Cq98yM),
+                ariaLabel: eq.intl.string(th ? eq.t['6x5uWV'] : eq.t.Cq98yM),
                 element: ec.Z,
                 predicate: () => !e2,
                 url: eY.Z5c.SETTINGS('activity-privacy')
@@ -1575,13 +1569,13 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eq.intl.string(eq.t['k0R+4e'])],
                 label: eq.intl.string(eq.t['k0R+4e']),
                 element: eC.Z,
-                predicate: () => !to
+                predicate: () => !ta
             },
             [eH.s6.TOWNHALL]: {
                 section: eY.oAB.TOWNHALL,
                 searchableTitles: [eq.intl.string(eq.t.dnZNER)],
                 label: eq.intl.string(eq.t.dnZNER),
-                predicate: () => to,
+                predicate: () => ta,
                 onClick: () => {
                     (0, h.Z)('https://discord.gg/discord-townhall'), (0, d.xf)();
                 }

@@ -68,7 +68,7 @@ let y = i.memo(function (e) {
             },
             [C, _, m, j]
         ),
-        x = i.useMemo(
+        E = i.useMemo(
             () =>
                 (0, c.c4)({
                     channels: S,
@@ -83,22 +83,22 @@ let y = i.memo(function (e) {
             guildChannels: n,
             guildChannelsVersion: h
         });
-    let E = v ? (0, r.jsx)('div', { className: f.sectionDivider }) : null;
-    return _ && 0 !== x.length
+    let x = v ? (0, r.jsx)('div', { className: f.sectionDivider }) : null;
+    return _ && 0 !== E.length
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)('div', {
                       className: f.voiceUserSummary,
                       children: (0, r.jsx)(o.Z, {
                           renderIcon: !0,
-                          users: x,
+                          users: E,
                           max: 8,
                           showUserPopout: !0,
                           guildId: m
                       })
                   }),
-                  E
+                  x
               ]
           })
-        : E;
+        : x;
 });

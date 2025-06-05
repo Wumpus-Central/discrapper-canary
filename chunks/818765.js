@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685), n(539854);
+n.d(t, { Z: () => x }), n(388685), n(539854);
 var r = n(570140),
     i = n(317770),
     l = n(460181),
@@ -40,7 +40,7 @@ let f = (0, l.uk)('poggermode_applause', o.Z.getSoundpack()),
             n = a.Z.isConnected();
         b.push([e, t * (n ? 0.1 : 1)]), C();
     };
-class x extends i.Z {
+class E extends i.Z {
     _initialize() {
         h.ZP.addChangeListener(this.startAudio), r.Z.subscribe('RTC_CONNECTION_STATE', this.setVolume), r.Z.subscribe('TYPING_STOP', this.stopAudio), r.Z.subscribe('TYPING_STOP_LOCAL', this.stopAudio), r.Z.subscribe('CHANNEL_SELECT', this.stopAudio), r.Z.subscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio);
     }
@@ -73,4 +73,4 @@ class x extends i.Z {
         _() && S('poggermode_achievement_unlock');
     }
 }
-let E = new x();
+let x = new E();

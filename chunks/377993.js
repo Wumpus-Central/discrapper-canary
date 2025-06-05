@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(670188),
     b = n(158776),
     _ = n(699516),
-    x = n(111583),
-    y = n(594174),
+    y = n(111583),
+    x = n(594174),
     C = n(626135),
     v = n(585483),
     j = n(233870),
@@ -55,8 +55,8 @@ let T = [],
     A = E.ZP.getEnableHardwareAcceleration();
 function w(e) {
     let { user: t, channel: o, status: u, activities: d } = e,
-        p = (0, a.e7)([x.Z], () => null != x.Z.getTypingUsers(o.id)[t.id]),
-        f = (0, a.e7)([y.default], () => y.default.getCurrentUser()),
+        p = (0, a.e7)([y.Z], () => null != y.Z.getTypingUsers(o.id)[t.id]),
+        f = (0, a.e7)([x.default], () => x.default.getCurrentUser()),
         C = (0, a.e7)([b.Z], () => b.Z.isMobileOnline(t.id)),
         j = (0, a.e7)([_.Z], () => _.Z.getNickname(t.id)),
         E = (0, h.Z)(t.id),
@@ -181,17 +181,17 @@ function R(e, t) {
 }
 function k(e) {
     let { channel: t } = e,
-        n = y.default.getCurrentUser(),
+        n = x.default.getCurrentUser(),
         l = null == n ? void 0 : n.isStaff(),
         { analyticsLocations: s } = (0, d.ZP)(u.Z.MEMBER_LIST),
         { listItems: c } = (0, a.e7)(
-            [_.Z, y.default, b.Z],
+            [_.Z, x.default, b.Z],
             () => {
-                let e = (0, j.T)(t.recipients, y.default),
+                let e = (0, j.T)(t.recipients, x.default),
                     n = {};
                 for (let t of e) {
                     var r, i, l;
-                    _.Z.isFriend(t.id) || t.id === (null == (r = y.default.getCurrentUser()) ? void 0 : r.id)
+                    _.Z.isFriend(t.id) || t.id === (null == (r = x.default.getCurrentUser()) ? void 0 : r.id)
                         ? (n[t.id] = {
                               status: null != (i = b.Z.getStatus(t.id)) ? i : P.Skl.OFFLINE,
                               activities: null != (l = b.Z.getActivities(t.id)) ? l : T

@@ -19,8 +19,8 @@ var r = n(255367),
     g = n(592125),
     b = n(626135),
     _ = n(140106),
-    x = n(981631),
-    y = n(388032),
+    y = n(981631),
+    x = n(388032),
     C = n(285580);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -75,7 +75,7 @@ function O(e) {
         children: [
             (0, r.jsxs)(s.P3F, {
                 className: a()(C.iconContainer, { [C.petite]: c }),
-                'aria-label': y.intl.string(y.t['0qPSMT']),
+                'aria-label': x.intl.string(x.t['0qPSMT']),
                 onClick: () => (0, _.ND)(i, g),
                 children: [
                     null != m
@@ -105,12 +105,12 @@ function O(e) {
             null != m && f
                 ? (0, r.jsx)(s.P3F, {
                       onClick: l,
-                      'aria-label': y.intl.string(y.t['uY+Nk5']),
+                      'aria-label': x.intl.string(x.t['uY+Nk5']),
                       style: { cursor: 'pointer' },
                       children: (0, r.jsx)(s.Text, {
                           variant: 'text-sm/medium',
                           color: 'text-danger',
-                          children: y.intl.string(y.t['uY+Nk5'])
+                          children: x.intl.string(x.t['uY+Nk5'])
                       })
                   })
                 : null
@@ -140,9 +140,9 @@ let E = function (e) {
     }, [N, S, R, a]),
     (0, u.ZP)(
         () => (
-            b.default.track(x.rMx.GDM_EDIT_INTERACTED, j(v({}, M), { action: 'opened' })),
+            b.default.track(y.rMx.GDM_EDIT_INTERACTED, j(v({}, M), { action: 'opened' })),
             () => {
-                b.default.track(x.rMx.GDM_EDIT_INTERACTED, j(v({}, M), { action: 'dismissed' }));
+                b.default.track(y.rMx.GDM_EDIT_INTERACTED, j(v({}, M), { action: 'dismissed' }));
             }
         )
     ),
@@ -157,7 +157,7 @@ let E = function (e) {
                           i = void 0 !== A;
                       if (
                           (b.default.track(
-                              x.rMx.GDM_EDIT_INTERACTED,
+                              y.rMx.GDM_EDIT_INTERACTED,
                               j(v({}, M), {
                                   action: 'saved',
                                   new_name_set: '' !== N,
@@ -187,7 +187,7 @@ let E = function (e) {
                                       id: I,
                                       variant: 'heading-lg/semibold',
                                       color: 'header-primary',
-                                      children: y.intl.string(y.t['5Q9+/P'])
+                                      children: x.intl.string(x.t['5Q9+/P'])
                                   }),
                                   (0, r.jsx)(s.olH, {
                                       onClick: h,
@@ -206,7 +206,7 @@ let E = function (e) {
                                       analyticsLocations: k
                                   }),
                                   (0, r.jsx)(s.oil, {
-                                      'aria-label': y.intl.string(y.t.GEGW3N),
+                                      'aria-label': x.intl.string(x.t.GEGW3N),
                                       placeholder: null != Z ? Z : '',
                                       value: N,
                                       onChange: T,
@@ -220,14 +220,14 @@ let E = function (e) {
                                   (0, r.jsx)(s.zxk, {
                                       type: 'submit',
                                       disabled: N === S && !R,
-                                      children: y.intl.string(y.t.R3BPHx)
+                                      children: x.intl.string(x.t.R3BPHx)
                                   }),
                                   (0, r.jsx)(s.zxk, {
                                       onClick: h,
                                       look: s.zxk.Looks.LINK,
                                       color: s.zxk.Colors.PRIMARY,
                                       innerClassName: C.cancelButton,
-                                      children: y.intl.string(y.t['ETE/oK'])
+                                      children: x.intl.string(x.t['ETE/oK'])
                                   })
                               ]
                           })

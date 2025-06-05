@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(27457),
     b = n(111248),
     _ = n(312703),
-    x = n(796638),
-    y = n(981631),
+    y = n(796638),
+    x = n(981631),
     C = n(354459),
     v = n(363987),
     j = n(999976);
@@ -64,7 +64,7 @@ function E(e, t) {
     );
 }
 let I = 16 / 9,
-    P = 8 + x.cF;
+    P = 8 + y.cF;
 function S(e) {
     var t;
     let n,
@@ -82,7 +82,7 @@ function S(e) {
         et = U <= 2 * P + 144,
         en = M && !et,
         er = (0, c.Z)(en),
-        ei = B === y.AEg.MINIMUM || B === y.AEg.NORMAL,
+        ei = B === x.AEg.MINIMUM || B === x.AEg.NORMAL,
         el = !et && (!ei || J),
         ea = (0, m.Z)(el, 100),
         eo = (null != (t = (0, c.Z)(k.id)) ? t : k.id) !== k.id,
@@ -110,9 +110,9 @@ function S(e) {
                 delay: eh || !en ? 0 : 100,
                 config: E(O({}, o.config.stiff), { clamp: !0 }),
                 onStart: () => Q(!0),
-                onChange: () => f.S.dispatch(y.CkL.REMEASURE_TARGET),
+                onChange: () => f.S.dispatch(x.CkL.REMEASURE_TARGET),
                 onRest: () => {
-                    Q(!1), f.S.dispatch(y.CkL.REMEASURE_TARGET);
+                    Q(!1), f.S.dispatch(x.CkL.REMEASURE_TARGET);
                 }
             },
             em
@@ -131,14 +131,14 @@ function S(e) {
             },
             (er === en && eb.value.idle && !ea) || eo || ef ? 'animate-never' : 'animate-always'
         ),
-        ex = (0, s.q_F)(
+        ey = (0, s.q_F)(
             {
                 value: n,
                 config: E(O({}, o.config.stiff), { clamp: !0 })
             },
             em
         ),
-        ey = (0, s.Yzy)(
+        ex = (0, s.Yzy)(
             k,
             {
                 keys: (e) => (null == e ? void 0 : e.id),
@@ -154,7 +154,7 @@ function S(e) {
             W(e), K(!1);
         }, []),
         ev = en ? [] : (0, _.n3)(N, k, V),
-        { visibleParticipants: ej, participantTileWidth: eO } = (0, x.ZB)(D, T);
+        { visibleParticipants: ej, participantTileWidth: eO } = (0, y.ZB)(D, T);
     return (0, r.jsxs)('div', {
         className: a()(j.root, v.flexCenter, L),
         children: [
@@ -172,7 +172,7 @@ function S(e) {
                                 children: (0, r.jsx)('div', {
                                     className: v.videoSizer,
                                     style: { aspectRatio: ec },
-                                    children: ey((e, t, n) => {
+                                    children: ex((e, t, n) => {
                                         let { key: i } = n;
                                         return null != t
                                             ? (0, r.jsx)(
@@ -205,7 +205,7 @@ function S(e) {
                             el
                                 ? (0, r.jsx)(o.animated.div, {
                                       className: a()(j.actionRow, { [j.idle]: G }),
-                                      style: { bottom: ex.value },
+                                      style: { bottom: ey.value },
                                       children: (0, r.jsx)(d.Z, {
                                           channelId: R.id,
                                           isParticipantsOpen: M,
@@ -222,7 +222,7 @@ function S(e) {
                             opacity: eg.value,
                             visibility: eg.value.to((e) => (0 === e ? 'hidden' : 'visible'))
                         },
-                        children: (0, r.jsx)(x.ZP, {
+                        children: (0, r.jsx)(y.ZP, {
                             channel: R,
                             onClick: l,
                             onContextMenu: S,
