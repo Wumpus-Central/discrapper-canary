@@ -13213,7 +13213,8 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 }
 
 .textWithIconContainer_c9d15c {
-    max-width: 100%
+    max-width: 100%;
+    min-width: var(--custom-activity-status-icon-size)
 }
 
 .activityCounter_c9d15c {
