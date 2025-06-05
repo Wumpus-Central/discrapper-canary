@@ -8471,6 +8471,10 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     font-size: 18px
 }
 
+.fullWidth__2723e {
+    flex-grow: 1
+}
+
 .primary__2723e {
     background-color: var(--button-filled-brand-background);
     border-color: var(--button-filled-brand-border);
