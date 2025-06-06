@@ -18974,7 +18974,7 @@ span.clanTag__5d473 {
 }
 
 :where(.outer_c0bea0).custom-user-profile-theme.user-profile-modal-v2 {
-    background: linear-gradient(var(--profile-gradient-modal-background-color))
+    background: linear-gradient(var(--profile-gradient-modal-background-color), var(--profile-gradient-modal-background-color))
 }
 
 .inner_c0bea0 {
