@@ -66,8 +66,8 @@ var C = Function.prototype,
             '$'
     ),
     S = Object.create,
-    P = Math.max,
-    I = Math.min,
+    I = Math.max,
+    P = Math.min,
     D = ((n = z(Object, 'defineProperty')), (s = z.name) && s.length > 2 ? n : void 0);
 function T(e) {
     return function () {
@@ -91,9 +91,9 @@ function T(e) {
             case 7:
                 return new e(r[0], r[1], r[2], r[3], r[4], r[5], r[6]);
         }
-        var a = U((t = e.prototype)) ? S(t) : {},
+        var a = W((t = e.prototype)) ? S(t) : {},
             n = e.apply(a, r);
-        return U(n) ? n : a;
+        return W(n) ? n : a;
     };
 }
 function L(e, t, r, a, n, s, o, i, c, l) {
@@ -114,14 +114,14 @@ function L(e, t, r, a, n, s, o, i, c, l) {
         if (
             (a &&
                 (v = (function (e, t, r, a) {
-                    for (var n = -1, s = e.length, o = r.length, i = -1, c = t.length, l = P(s - o, 0), u = Array(c + l), f = !a; ++i < c; ) u[i] = t[i];
+                    for (var n = -1, s = e.length, o = r.length, i = -1, c = t.length, l = I(s - o, 0), u = Array(c + l), f = !a; ++i < c; ) u[i] = t[i];
                     for (; ++n < o; ) (f || n < s) && (u[r[n]] = e[n]);
                     for (; l--; ) u[i++] = e[n++];
                     return u;
                 })(v, a, n, d)),
             s &&
                 (v = (function (e, t, r, a) {
-                    for (var n = -1, s = e.length, o = -1, i = r.length, c = -1, l = t.length, u = P(s - i, 0), f = Array(u + l), b = !a; ++n < u; ) f[n] = e[n];
+                    for (var n = -1, s = e.length, o = -1, i = r.length, c = -1, l = t.length, u = I(s - i, 0), f = Array(u + l), b = !a; ++n < u; ) f[n] = e[n];
                     for (var d = n; ++c < l; ) f[d + c] = t[c];
                     for (; ++o < i; ) (b || n < s) && (f[d + r[o]] = e[n++]);
                     return f;
@@ -140,7 +140,7 @@ function L(e, t, r, a, n, s, o, i, c, l) {
                 ? (v = (function (e, t) {
                       for (
                           var r = e.length,
-                              a = I(t.length, r),
+                              a = P(t.length, r),
                               n = (function (e, t) {
                                   var r = -1,
                                       a = e.length;
@@ -178,8 +178,8 @@ function z(e, t) {
         a,
         n,
         s = null == e ? void 0 : e[t];
-    return !(!U(s) || ((r = s), R && R in r)) &&
-        ('[object Function]' == (n = U((a = s)) ? B.call(a) : '') ||
+    return !(!W(s) || ((r = s), R && R in r)) &&
+        ('[object Function]' == (n = W((a = s)) ? B.call(a) : '') ||
         '[object GeneratorFunction]' == n ||
         (function (e) {
             var t = !1;
@@ -255,18 +255,18 @@ var $ = D
     : function (e) {
           return e;
       };
-function W(e, t, r) {
+function U(e, t, r) {
     var a = (function (e, t, r, a, n, s, o, i) {
         var c = 2 & t;
         if (!c && 'function' != typeof e) throw TypeError('Expected a function');
         var l = a ? a.length : 0;
-        if ((l || ((t &= -97), (a = n = void 0)), (o = void 0 === o ? o : P(G(o), 0)), (i = void 0 === i ? i : G(i)), (l -= n ? n.length : 0), 64 & t)) {
+        if ((l || ((t &= -97), (a = n = void 0)), (o = void 0 === o ? o : I(G(o), 0)), (i = void 0 === i ? i : G(i)), (l -= n ? n.length : 0), 64 & t)) {
             var u = a,
                 f = n;
             a = n = void 0;
         }
         var b = [e, t, r, a, n, u, f, s, o, i];
-        if (((e = b[0]), (t = b[1]), (r = b[2]), (a = b[3]), (n = b[4]), (i = b[9] = null == b[9] ? (c ? 0 : e.length) : P(b[9] - l, 0)) || !(24 & t) || (t &= -25), t && 1 != t))
+        if (((e = b[0]), (t = b[1]), (r = b[2]), (a = b[3]), (n = b[4]), (i = b[9] = null == b[9] ? (c ? 0 : e.length) : I(b[9] - l, 0)) || !(24 & t) || (t &= -25), t && 1 != t))
             8 == t || 16 == t
                 ? (x = (function (e, t, r) {
                       var a = T(e);
@@ -313,9 +313,9 @@ function W(e, t, r) {
                     });
         return $(x, e, t);
     })(e, 8, void 0, void 0, void 0, void 0, void 0, (t = r ? void 0 : t));
-    return (a.placeholder = W.placeholder), a;
+    return (a.placeholder = U.placeholder), a;
 }
-function U(e) {
+function W(e) {
     var t = typeof e;
     return !!e && ('object' == t || 'function' == t);
 }
@@ -325,10 +325,10 @@ function G(e) {
             ? (t = (function (e) {
                   if ('number' == typeof e) return e;
                   if ('symbol' == typeof (t = e) || (t && 'object' == typeof t && '[object Symbol]' == B.call(t))) return c;
-                  if (U(e)) {
+                  if (W(e)) {
                       var t,
                           r = 'function' == typeof e.valueOf ? e.valueOf() : e;
-                      e = U(r) ? r + '' : r;
+                      e = W(r) ? r + '' : r;
                   }
                   if ('string' != typeof e) return 0 === e ? e : +e;
                   e = e.replace(u, '');
@@ -345,4 +345,4 @@ function G(e) {
         a = r % 1;
     return r == r ? (a ? r - a : r) : 0;
 }
-(W.placeholder = {}), (e.exports = W);
+(U.placeholder = {}), (e.exports = U);

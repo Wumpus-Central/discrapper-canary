@@ -1,7 +1,7 @@
 n.d(t, {
-    Yk: () => z,
-    ZP: () => er,
-    yH: () => Y
+    Yk: () => q,
+    ZP: () => ei,
+    yH: () => W
 }),
     n(314940),
     n(388685);
@@ -27,21 +27,22 @@ var r = n(255367),
     v = n(587446),
     I = n(210887),
     S = n(740492),
-    T = n(626135),
-    A = n(238302),
-    N = n(514361),
-    C = n(803038),
-    P = n(717953),
-    R = n(583901),
-    w = n(469115),
-    D = n(981631),
-    L = n(474936),
-    x = n(874893),
-    k = n(526761),
-    M = n(231338),
-    j = n(388032),
-    U = n(622581);
-function G(e, t, n) {
+    T = n(695346),
+    A = n(626135),
+    N = n(238302),
+    C = n(514361),
+    P = n(803038),
+    R = n(717953),
+    w = n(583901),
+    D = n(469115),
+    L = n(981631),
+    x = n(474936),
+    k = n(874893),
+    M = n(526761),
+    j = n(231338),
+    U = n(388032),
+    G = n(622581);
+function B(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -54,7 +55,7 @@ function G(e, t, n) {
         e
     );
 }
-function B(e) {
+function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -65,12 +66,12 @@ function B(e) {
                 })
             )),
             r.forEach(function (t) {
-                G(e, t, n[t]);
+                B(e, t, n[t]);
             });
     }
     return e;
 }
-function F(e, t) {
+function V(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -82,29 +83,29 @@ function F(e, t) {
     }
     return n;
 }
-function V(e, t) {
+function Z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : F(Object(t)).forEach(function (n) {
+            : V(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function Z(e, t) {
+function H(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = H(e, t);
+        i = Y(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function H(e, t) {
+function Y(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -113,24 +114,24 @@ function H(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-var Y = (function (e) {
+var W = (function (e) {
     return (e.EDITOR = 'EDITOR'), (e.SETTINGS = 'SETTINGS'), e;
 })({});
-let W = Object.freeze({
-        EDITOR: k.fy.SLOW_USER_ACTION,
-        SETTINGS: k.fy.INFREQUENT_USER_ACTION
+let K = Object.freeze({
+        EDITOR: M.fy.SLOW_USER_ACTION,
+        SETTINGS: M.fy.INFREQUENT_USER_ACTION
     }),
-    K = i.createContext({}),
-    z = (e) => {
+    z = i.createContext({}),
+    q = (e) => {
         let { isPersisted: t, themeName: n, analyticsLocations: r } = e;
-        T.default.track(D.rMx.CLIENT_THEME_UPDATED, {
-            feature_name: L.QP.CLIENT_THEME,
+        A.default.track(L.rMx.CLIENT_THEME_UPDATED, {
+            feature_name: x.QP.CLIENT_THEME,
             theme_name: n,
             is_persisted: t,
             location_stack: r
         });
     },
-    q = (e) => {
+    Q = (e) => {
         let { type: t, isPreview: n, isCoachmark: i } = e,
             a = (0, E.Q3)('GradientSelectorsTitle'),
             o = (0, s.EQ)({
@@ -145,34 +146,34 @@ let W = Object.freeze({
                         isCoachmark: !0,
                         isPreview: !0
                     },
-                    () => j.intl.string(j.t.D29k19)
+                    () => U.intl.string(U.t.D29k19)
                 )
                 .with(
                     {
                         type: 'EDITOR',
                         isCoachmark: !0
                     },
-                    () => j.intl.string(j.t['8+vbqa'])
+                    () => U.intl.string(U.t['8+vbqa'])
                 )
-                .with({ isVisualRefreshEnabled: !0 }, () => j.intl.string(j.t.hjV0fX))
-                .otherwise(() => j.intl.string(j.t.OCOOiI));
+                .with({ isVisualRefreshEnabled: !0 }, () => U.intl.string(U.t.hjV0fX))
+                .otherwise(() => U.intl.string(U.t.OCOOiI));
         return (0, r.jsxs)('div', {
-            className: U.title,
+            className: G.title,
             children: [
                 (0, r.jsx)(u.X6q, {
                     'aria-label': o,
-                    className: U.titleText,
+                    className: G.titleText,
                     variant: 'text-md/medium',
                     children: o
                 }),
-                (0, r.jsx)(v.Z, { className: U.premiumIcon })
+                (0, r.jsx)(v.Z, { className: G.premiumIcon })
             ]
         });
     },
-    Q = (e) => {
+    X = (e) => {
         var t, n;
         let { type: i, isPreview: a, isCoachmark: o } = e;
-        if ((null == (n = (0, y.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === L.Si.TIER_2 && a) return null;
+        if ((null == (n = (0, y.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === x.Si.TIER_2 && a) return null;
         let l = (0, s.EQ)({
             type: i,
             isPreview: a,
@@ -183,54 +184,54 @@ let W = Object.freeze({
                     type: 'EDITOR',
                     isPreview: !0
                 },
-                () => j.intl.format(j.t.G8yQXl, { onPremiumClick: () => b.z })
+                () => U.intl.format(U.t.G8yQXl, { onPremiumClick: () => b.z })
             )
             .with(
                 {
                     type: 'EDITOR',
                     isCoachmark: !0
                 },
-                () => j.intl.string(j.t.jmZiNj)
+                () => U.intl.string(U.t.jmZiNj)
             )
             .with(
                 {
                     type: 'EDITOR',
                     isPreview: !1
                 },
-                () => j.intl.string(j.t.dqDFwc)
+                () => U.intl.string(U.t.dqDFwc)
             )
-            .with({ isPreview: !0 }, () => j.intl.format(j.t.DWIjJy, { onPremiumClick: () => b.z }))
-            .otherwise(() => j.intl.string(j.t['np0X/v']));
+            .with({ isPreview: !0 }, () => U.intl.format(U.t.DWIjJy, { onPremiumClick: () => b.z }))
+            .otherwise(() => U.intl.string(U.t['np0X/v']));
         return (0, r.jsx)(u.X6q, {
             variant: 'text-sm/normal',
-            className: U.subtext,
+            className: G.subtext,
             children: l
         });
     },
-    X = (e) => {
+    J = (e) => {
         var t, n;
         let { renderCTAButtons: a, isCoachmark: o } = e,
-            { type: s } = i.useContext(K),
-            [c] = (0, l.Wu)([N.Z], () => [N.Z.isPreview]),
-            u = (null == (n = (0, y.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === L.Si.TIER_2;
+            { type: s } = i.useContext(z),
+            [c] = (0, l.Wu)([C.Z], () => [C.Z.isPreview]),
+            u = (null == (n = (0, y.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === x.Si.TIER_2;
         return 'EDITOR' === s && c && u
             ? (0, r.jsx)(O.ZP, {
-                  type: L.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
-                  subscriptionTier: L.Si.TIER_2,
-                  children: j.intl.format(j.t.G8yQXl, { onPremiumClick: () => b.z })
+                  type: x.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                  subscriptionTier: x.Si.TIER_2,
+                  children: U.intl.format(U.t.G8yQXl, { onPremiumClick: () => b.z })
               })
             : (0, r.jsxs)('div', {
-                  className: U.header,
+                  className: G.header,
                   children: [
                       (0, r.jsxs)('div', {
-                          className: U.headings,
+                          className: G.headings,
                           children: [
-                              (0, r.jsx)(q, {
+                              (0, r.jsx)(Q, {
                                   type: s,
                                   isPreview: c,
                                   isCoachmark: o
                               }),
-                              (0, r.jsx)(Q, {
+                              (0, r.jsx)(X, {
                                   type: s,
                                   isPreview: c,
                                   isCoachmark: o
@@ -241,25 +242,25 @@ let W = Object.freeze({
                   ]
               });
     },
-    J = (e) => {
+    $ = (e) => {
         let { disabled: t } = e,
-            { type: a, delay: o } = i.useContext(K),
+            { type: a, delay: o } = i.useContext(z),
             { analyticsLocations: s } = (0, h.ZP)(p.Z.CLIENT_THEMES_THEME_SELECTOR),
-            [g, E] = (0, l.Wu)([N.Z], () => {
+            [g, E] = (0, l.Wu)([C.Z], () => {
                 var e;
-                return [N.Z.isPreview, null == (e = N.Z.gradientPreset) ? void 0 : e.id];
+                return [C.Z.isPreview, null == (e = C.Z.gradientPreset) ? void 0 : e.id];
             }),
             [b, y] = i.useState(!1),
             [O, v] = i.useState(-1),
             I = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
-            S = C.M.useExperiment({ location: 'GradientSelectors' }).enabled;
+            S = P.M.useExperiment({ location: 'GradientSelectors' }).enabled;
         i.useEffect(() => {
-            ((O === w.XV.length - 2 && 'EDITOR' === a) || E === c.Us.EASTER_EGG) && y(!0);
+            ((O === D.XV.length - 2 && 'EDITOR' === a) || E === c.Us.EASTER_EGG) && y(!0);
         }, [O, a, E]);
         let T = (e, t) => {
                 if (
-                    ((0, A.zO)(e.id),
-                    z({
+                    ((0, N.zO)(e.id),
+                    q({
                         isPersisted: !g,
                         analyticsLocations: s,
                         themeName: c.Us[e.id]
@@ -268,7 +269,7 @@ let W = Object.freeze({
                         {
                             backgroundGradientPresetId: e.id,
                             theme: e.theme,
-                            useSystemTheme: g ? x.KW.OFF : void 0
+                            useSystemTheme: g ? k.KW.OFF : void 0
                         },
                         o
                     ),
@@ -278,18 +279,18 @@ let W = Object.freeze({
                     v((e) => e + 1);
                 }
             },
-            D = () => {
+            A = () => {
                 if (!b) return null;
-                let e = w.qt[c.Us.EASTER_EGG];
+                let e = D.qt[c.Us.EASTER_EGG];
                 if (null == e) return null;
                 async function t() {
                     let { default: e } = await n.e('5217').then(n.t.bind(n, 801048, 19));
                     return e;
                 }
                 return (0, r.jsxs)('div', {
-                    className: U.easterEggSelection,
+                    className: G.easterEggSelection,
                     children: [
-                        (0, r.jsx)(R.DR, {
+                        (0, r.jsx)(w.DR, {
                             preset: e,
                             isSelected: E === c.Us.EASTER_EGG,
                             onSelect: () => T(e)
@@ -297,7 +298,7 @@ let W = Object.freeze({
                         (0, r.jsx)(u.Fmz, {
                             importData: t,
                             shouldAnimate: !I,
-                            className: U.sparkles
+                            className: G.sparkles
                         })
                     ]
                 });
@@ -305,17 +306,17 @@ let W = Object.freeze({
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 S &&
-                    (0, r.jsx)(P.Z, {
+                    (0, r.jsx)(R.Z, {
                         onSelect: () => {
                             (0, m.XO)(m.wh.CUSTOM_THEME, { from: 'SETTINGS' === a ? m.tE.SETTING : m.tE.CLIENT_THEMES_EDITOR }), 'SETTINGS' === a && (0, d.xf)();
                         }
                     }),
-                w.XV.filter((e) => {
+                D.XV.filter((e) => {
                     let { id: t } = e;
                     return t !== c.Us.EASTER_EGG;
                 }).map((e, n) =>
                     (0, r.jsx)(
-                        R.DR,
+                        w.DR,
                         {
                             preset: e,
                             isSelected: E === e.id,
@@ -328,34 +329,34 @@ let W = Object.freeze({
                         e.id
                     )
                 ),
-                D()
-            ]
-        });
-    },
-    $ = (e) => {
-        let { className: t, renderCTAButtons: n, disabled: i = !1, isCoachmark: a } = e;
-        return (0, r.jsxs)('section', {
-            className: t,
-            children: [
-                (0, r.jsx)(X, {
-                    renderCTAButtons: n,
-                    isCoachmark: a
-                }),
-                (0, r.jsx)('div', {
-                    className: U.presets,
-                    children: (0, r.jsx)(J, { disabled: i })
-                })
+                A()
             ]
         });
     },
     ee = (e) => {
+        let { className: t, renderCTAButtons: n, disabled: i = !1, isCoachmark: a } = e;
+        return (0, r.jsxs)('section', {
+            className: t,
+            children: [
+                (0, r.jsx)(J, {
+                    renderCTAButtons: n,
+                    isCoachmark: a
+                }),
+                (0, r.jsx)('div', {
+                    className: G.presets,
+                    children: (0, r.jsx)($, { disabled: i })
+                })
+            ]
+        });
+    },
+    et = (e) => {
         let { systemSelectorFirst: t, hideSystemSelector: n = !1 } = e,
-            { delay: a } = i.useContext(K),
+            { delay: a } = i.useContext(z),
             { analyticsLocations: o } = (0, h.ZP)(p.Z.CLIENT_THEMES_THEME_SELECTOR),
-            [s, c, u] = (0, l.Wu)([I.Z, S.ZP, N.Z], () => [I.Z.theme, null == N.Z.gradientPreset, S.ZP.useSystemTheme === x.KW.ON]),
+            [s, c, u] = (0, l.Wu)([I.Z, S.ZP, C.Z], () => [I.Z.theme, null == C.Z.gradientPreset && null == T.L1.getSetting().customUserThemeSettings, S.ZP.useSystemTheme === k.KW.ON]),
             d = (e) => {
-                (0, A.xs)(),
-                    z({
+                (0, N.xs)(),
+                    q({
                         isPersisted: !0,
                         analyticsLocations: o,
                         themeName: 'default '.concat(e)
@@ -367,39 +368,39 @@ let W = Object.freeze({
             children: [
                 !n &&
                     t &&
-                    (0, r.jsx)(R.bD, {
+                    (0, r.jsx)(w.bD, {
                         theme: 'system',
                         isSelected: c && u,
                         onSelect: () => d('system')
                     }),
-                (0, r.jsx)(R.bD, {
-                    theme: M.BR.LIGHT,
-                    isSelected: c && !u && s === M.BR.LIGHT,
-                    onSelect: () => d(M.BR.LIGHT)
+                (0, r.jsx)(w.bD, {
+                    theme: j.BR.LIGHT,
+                    isSelected: c && !u && s === j.BR.LIGHT,
+                    onSelect: () => d(j.BR.LIGHT)
                 }),
-                (0, r.jsx)(R.bD, {
-                    theme: M.BR.DARK,
-                    isSelected: c && !u && s === M.BR.DARK,
-                    onSelect: () => d(M.BR.DARK)
+                (0, r.jsx)(w.bD, {
+                    theme: j.BR.DARK,
+                    isSelected: c && !u && s === j.BR.DARK,
+                    onSelect: () => d(j.BR.DARK)
                 }),
                 _ &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(R.bD, {
-                                theme: M.BR.DARKER,
-                                isSelected: c && !u && s === M.BR.DARKER,
-                                onSelect: () => d(M.BR.DARKER)
+                            (0, r.jsx)(w.bD, {
+                                theme: j.BR.DARKER,
+                                isSelected: c && !u && s === j.BR.DARKER,
+                                onSelect: () => d(j.BR.DARKER)
                             }),
-                            (0, r.jsx)(R.bD, {
-                                theme: M.BR.MIDNIGHT,
-                                isSelected: c && !u && s === M.BR.MIDNIGHT,
-                                onSelect: () => d(M.BR.MIDNIGHT)
+                            (0, r.jsx)(w.bD, {
+                                theme: j.BR.MIDNIGHT,
+                                isSelected: c && !u && s === j.BR.MIDNIGHT,
+                                onSelect: () => d(j.BR.MIDNIGHT)
                             })
                         ]
                     }),
                 !n &&
                     !t &&
-                    (0, r.jsx)(R.bD, {
+                    (0, r.jsx)(w.bD, {
                         theme: 'system',
                         isSelected: c && u,
                         onSelect: () => d('system')
@@ -407,31 +408,31 @@ let W = Object.freeze({
             ]
         });
     },
-    et = (e) => {
+    en = (e) => {
         let { isEditor: t, className: n, renderCTAButtons: i, isCoachmark: a } = e;
         return (0, r.jsxs)('section', {
             className: n,
             children: [
                 !t &&
-                    (0, r.jsx)(X, {
+                    (0, r.jsx)(J, {
                         renderCTAButtons: i,
                         isCoachmark: a
                     }),
                 t &&
                     a &&
                     (0, r.jsx)(u.X6q, {
-                        className: U.upsellText,
+                        className: G.upsellText,
                         variant: 'heading-sm/semibold',
-                        children: j.intl.string(j.t.POSLGR)
+                        children: U.intl.string(U.t.POSLGR)
                     }),
                 (0, r.jsxs)('div', {
-                    className: o()(U.presets, { [U.presetsJustify]: t }),
-                    children: [(0, r.jsx)(ee, { systemSelectorFirst: !0 }), (0, r.jsx)(J, { disabled: !1 })]
+                    className: o()(G.presets, { [G.presetsJustify]: t }),
+                    children: [(0, r.jsx)(et, { systemSelectorFirst: !0 }), (0, r.jsx)($, { disabled: !1 })]
                 })
             ]
         });
     },
-    en = (e) => {
+    er = (e) => {
         let { type: t, children: n } = e,
             a = (0, g.Dt)(),
             o = (0, u.arW)({
@@ -439,32 +440,32 @@ let W = Object.freeze({
                 labelledBy: a
             }),
             { ref: s } = o,
-            l = Z(o, ['ref']),
+            l = H(o, ['ref']),
             c = i.useMemo(
                 () => ({
                     type: t,
-                    delay: W[t]
+                    delay: K[t]
                 }),
                 [t]
             );
-        return (0, r.jsx)(K.Provider, {
+        return (0, r.jsx)(z.Provider, {
             value: c,
             children: (0, r.jsx)(
                 'div',
-                V(B({ ref: s }, l), {
-                    className: U.__invalid_container,
+                Z(F({ ref: s }, l), {
+                    className: G.__invalid_container,
                     children: n
                 })
             )
         });
     };
-(en.Basic = (e) => {
+(er.Basic = (e) => {
     let { className: t, hideSystemSelector: n } = e;
     return (0, r.jsx)('section', {
-        className: o()(U.presets, t),
-        children: (0, r.jsx)(ee, { hideSystemSelector: n })
+        className: o()(G.presets, t),
+        children: (0, r.jsx)(et, { hideSystemSelector: n })
     });
 }),
-    (en.Gradient = $),
-    (en.BasicAndGradient = et);
-let er = en;
+    (er.Gradient = ee),
+    (er.BasicAndGradient = en);
+let ei = er;
