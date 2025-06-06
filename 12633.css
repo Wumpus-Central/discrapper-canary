@@ -18974,7 +18974,7 @@ span.clanTag__5d473 {
 }
 
 :where(.outer_c0bea0).custom-user-profile-theme.user-profile-modal-v2 {
-    background: var(--profile-gradient-modal-background-color)
+    background: linear-gradient(var(--profile-gradient-modal-background-color))
 }
 
 .inner_c0bea0 {
@@ -19896,16 +19896,6 @@ span.clanTag__5d473 {
     animation-delay: .45s
 }
 
-:not(.keyboard-mode).full-motion .popover__2d0ab.fadeInAndOut__2d0ab {
-    animation: fadeIn__2d0ab .15s ease-in forwards, fadeOut__2d0ab .15s ease-out 2s forwards;
-    opacity: 0
-}
-
-.reduce-motion .popover__2d0ab.fadeInAndOut__2d0ab {
-    animation: fadeIn__2d0ab 0s ease-in forwards, fadeOut__2d0ab 0s ease-out 2s forwards;
-    opacity: 0
-}
-
 @keyframes fadeIn__2d0ab {
     0% {
         opacity: 0;
@@ -19921,24 +19911,6 @@ span.clanTag__5d473 {
         opacity: 1;
         pointer-events: all;
         top: -16px
-    }
-}
-
-@keyframes fadeOut__2d0ab {
-    0% {
-        opacity: 1;
-        pointer-events: all;
-        top: -16px
-    }
-
-    1% {
-        pointer-events: none
-    }
-
-    to {
-        opacity: 0;
-        pointer-events: none;
-        top: -14px
     }
 }
 
