@@ -1,0 +1,498 @@
+n.d(t, {
+    Z: () => H,
+    n: () => D
+}),
+    n(415506),
+    n(388685),
+    n(361932),
+    n(187205),
+    n(781311);
+var r = n(512722),
+    i = n.n(r),
+    l = n(392711),
+    a = n.n(l),
+    o = n(263568),
+    s = n(442837),
+    c = n(780384),
+    u = n(570140),
+    d = n(668781),
+    p = n(749210),
+    m = n(904245),
+    f = n(881052),
+    h = n(367907),
+    g = n(41776),
+    _ = n(58873),
+    b = n(566006),
+    E = n(869765),
+    x = n(314897),
+    y = n(592125),
+    v = n(703558),
+    O = n(607744),
+    j = n(375954),
+    C = n(117530),
+    S = n(553803),
+    I = n(467531),
+    N = n(798628),
+    T = n(918088),
+    P = n(981631),
+    A = n(388032);
+function w(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function Z(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function R(e, t) {
+    let n = [...t],
+        r = 0,
+        i = 0;
+    for (let t of n) {
+        var l;
+        let n = null == e || null == (l = e.find((e) => e.answer_id === parseInt(t))) ? void 0 : l.poll_media;
+        (null == n ? void 0 : n.text) != null && (r += 1), (null == n ? void 0 : n.emoji) != null && (i += 1);
+    }
+    return {
+        analyticsSelectedAnswerIds: n,
+        selectedTextAnswersCount: r,
+        selectedEmojiAnswersCount: i
+    };
+}
+function k(e) {
+    let { guildId: t, title: n, body: r } = e;
+    d.Z.show({
+        title: n,
+        body: r,
+        confirmText: A.intl.string(A.t['9VLmlZ']),
+        cancelText: A.intl.string(A.t['2m+Sqq']),
+        onConfirm: () => {
+            p.Z.joinGuild(t, { source: P.vtS.POLL_ALERT });
+        }
+    });
+}
+function D(e) {
+    let { channelId: t, messageId: n, answerId: r } = e,
+        i = y.Z.getChannel(t);
+    if (null == i) return;
+    if (g.Z.isLurking(i.guild_id))
+        return void k({
+            guildId: i.guild_id,
+            title: A.intl.string(A.t['7LpysL']),
+            body: A.intl.string(A.t['5sHHo6'])
+        });
+    let l = j.Z.getMessage(t, n);
+    if (null == l || null == l.poll || 0 === l.poll.answers.length) return;
+    let a = null != r ? r : String(l.poll.answers[0].answer_id);
+    S.A({
+        message: l,
+        initialAnswerId: a
+    });
+}
+function L(e) {
+    let { channelId: t, messageId: n, isEditing: r } = e;
+    (0, N.eu)(t, n, (e) => {
+        var n;
+        return {
+            channelId: t,
+            selectedAnswerIds: new Set(),
+            submitting: !1,
+            editing: r,
+            showResults: null != (n = null == e ? void 0 : e.showResults) && n
+        };
+    });
+}
+function M(e) {
+    let { channelId: t, messageId: n } = e,
+        r = j.Z.getMessage(t, n);
+    return null == r ? [] : r.reactions.flatMap((e) => (!0 === e.me_vote ? e.emoji.name : []));
+}
+async function U(e) {
+    let { channelId: t, messageId: n, answerIds: r } = e,
+        i = M({
+            channelId: t,
+            messageId: n
+        }),
+        l = a().difference(i, r),
+        o = a().difference(r, i),
+        c = x.default.getId(),
+        d = [
+            ...l.map((e) => ({
+                type: 'MESSAGE_REACTION_REMOVE',
+                id: e
+            })),
+            ...o.map((e) => ({
+                type: 'MESSAGE_REACTION_ADD',
+                id: e
+            }))
+        ],
+        p = s.ZP.Emitter.batched(() => {
+            let e;
+            for (let { id: r, type: i } of d)
+                e = u.Z.dispatch({
+                    type: i,
+                    channelId: t,
+                    messageId: n,
+                    emoji: {
+                        id: r,
+                        name: r
+                    },
+                    userId: c,
+                    optimistic: !0,
+                    reactionType: b.O.VOTE
+                });
+            return e;
+        });
+    null != p && (await p);
+}
+async function F(e) {
+    let { channelId: t, messageId: n } = e,
+        r = y.Z.getChannel(t);
+    if (null == r) return;
+    if (g.Z.isLurking(r.guild_id))
+        return void k({
+            guildId: r.guild_id,
+            title: A.intl.string(A.t.Qic1FB),
+            body: A.intl.string(A.t['5sHHo6'])
+        });
+    if (!O.Z.canChatInGuild(r.guild_id))
+        return void d.Z.show({
+            title: A.intl.string(A.t.p245ws),
+            body: A.intl.string(A.t['U/uodn'])
+        });
+    let l = (0, N.fU)(t, n);
+    i()(null != l, 'Must not be able to vote without existing state!');
+    let a = M({
+        channelId: t,
+        messageId: n
+    });
+    try {
+        let e = [...l.selectedAnswerIds.values()];
+        (0, N.eu)(
+            t,
+            n,
+            (e) => (
+                i()(null != e, 'Must not be able to vote without existing state!'),
+                Z(w({}, e), {
+                    submitting: !0,
+                    editing: !1
+                })
+            )
+        ),
+            await U({
+                channelId: t,
+                messageId: n,
+                answerIds: e
+            }),
+            await I.B({
+                channelId: t,
+                messageId: n,
+                answerIds: e
+            }),
+            (0, N.eu)(t, n, () => void 0),
+            c.uv.announce(0 === e.length ? A.intl.string(A.t['xcvy+/']) : A.intl.string(A.t.o20GSk));
+    } catch (e) {
+        var o, s, u;
+        d.Z.show({
+            title: A.intl.string(A.t.iufib2),
+            body: null != (u = null != (s = null == (o = e.getAnyErrorMessage) ? void 0 : o.call(e)) ? s : e.message) ? u : A.intl.string(A.t.eAn6z8)
+        }),
+            await U({
+                channelId: t,
+                messageId: n,
+                answerIds: a
+            }),
+            (0, N.eu)(t, n, (e) => {
+                if (null != e)
+                    return Z(w({}, e), {
+                        submitting: !1,
+                        editing: !1
+                    });
+            });
+    }
+}
+async function B(e) {
+    let { channelId: t, messageId: n } = e,
+        r = y.Z.getChannel(t);
+    if (null != r)
+        return g.Z.isLurking(r.guild_id)
+            ? void k({
+                  guildId: r.guild_id,
+                  title: A.intl.string(A.t.B9QnBg),
+                  body: A.intl.string(A.t.BVZCTk)
+              })
+            : ((0, N.eu)(t, n, (e) => {
+                  var n;
+                  return {
+                      channelId: t,
+                      selectedAnswerIds: new Set(),
+                      submitting: !1,
+                      editing: !1,
+                      showResults: null != (n = null == e ? void 0 : e.showResults) && n
+                  };
+              }),
+              await F({
+                  channelId: t,
+                  messageId: n
+              }));
+}
+async function G(e) {
+    let { channelId: t, messageId: n, type: r } = e;
+    switch (r) {
+        case 'submit':
+            await F({
+                channelId: t,
+                messageId: n
+            });
+            break;
+        case 'remove':
+            await B({
+                channelId: t,
+                messageId: n
+            });
+            break;
+        case 'cancel':
+            L({
+                channelId: t,
+                messageId: n,
+                isEditing: !1
+            });
+            break;
+        case 'showVotes':
+            !(function (e) {
+                let { channelId: t, messageId: n } = e;
+                (0, N.eu)(t, n, (e) => {
+                    var r, i;
+                    let l = null == e || !e.showResults,
+                        a = j.Z.getMessage(t, n),
+                        o =
+                            null != a
+                                ? a.reactions.reduce((e, t) => {
+                                      var n, r;
+                                      return e + (null != (r = null == (n = t.count_details) ? void 0 : n.vote) ? r : 0);
+                                  }, 0)
+                                : 0;
+                    return (
+                        h.ZP.trackWithMetadata(P.rMx.POLL_SHOW_RESULTS_CLICKED, {
+                            channel_id: t,
+                            message_id: n,
+                            show_results: l,
+                            votes_count: o
+                        }),
+                        {
+                            channelId: t,
+                            selectedAnswerIds: new Set(),
+                            submitting: null != (r = null == e ? void 0 : e.submitting) && r,
+                            editing: null != (i = null == e ? void 0 : e.submitting) && i,
+                            showResults: l
+                        }
+                    );
+                });
+            })({
+                channelId: t,
+                messageId: n
+            });
+            break;
+        case 'showVoterDetails':
+            D({
+                channelId: t,
+                messageId: n
+            });
+            break;
+        default:
+            i()(!1, 'Unknown poll action type: '.concat(r));
+    }
+}
+let H = {
+    handlePollAnswerTapped: function (e) {
+        var t,
+            n,
+            { answerId: r } = e;
+        let {
+                channelId: l,
+                messageId: a,
+                message: o
+            } = (function (e) {
+                let { channelId: t, messageId: n } = e,
+                    r = j.Z.getMessage(t, n);
+                if (null != r)
+                    return {
+                        message: r,
+                        channelId: t,
+                        messageId: n
+                    };
+                let l = E.Z.getMessage(t, n);
+                if (null != l.message)
+                    return {
+                        channelId: t,
+                        messageId: n,
+                        message: l.message
+                    };
+                throw (i()(null != r, 'Tapped on a non-existent poll message'), Error());
+            })(
+                (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = (function (e, t) {
+                            if (null == e) return {};
+                            var n,
+                                r,
+                                i = {},
+                                l = Object.keys(e);
+                            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                            return i;
+                        })(e, t);
+                    if (Object.getOwnPropertySymbols) {
+                        var l = Object.getOwnPropertySymbols(e);
+                        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    }
+                    return i;
+                })(e, ['answerId'])
+            ),
+            { tapShouldOpenVotersModal: s } = null != (n = (0, T.Tk)(o)) ? n : {};
+        if (!0 === s)
+            return void D({
+                channelId: l,
+                messageId: a,
+                answerId: r
+            });
+        let c = null == (t = o.poll) ? void 0 : t.allow_multiselect;
+        (0, N.eu)(l, a, (e) => {
+            var t, n;
+            if (null == e) {
+                let e = new Set([r]),
+                    { analyticsSelectedAnswerIds: t, selectedTextAnswersCount: i, selectedEmojiAnswersCount: s } = R(null == (n = o.poll) ? void 0 : n.answers, e);
+                return (
+                    h.ZP.trackWithMetadata(P.rMx.POLL_VOTE_SELECTED, {
+                        channel_id: l,
+                        message_id: a,
+                        selected_answer_ids: t,
+                        selected_text_answers_count: i,
+                        selected_emoji_answers_count: s
+                    }),
+                    {
+                        channelId: l,
+                        selectedAnswerIds: e,
+                        submitting: !1,
+                        editing: !1,
+                        showResults: !1
+                    }
+                );
+            }
+            let i = w({}, e),
+                s = new Set(i.selectedAnswerIds);
+            if (((i.selectedAnswerIds = s), s.has(r))) s.delete(r);
+            else {
+                if (!c) for (let e of s) s.delete(e);
+                s.add(r);
+            }
+            let { analyticsSelectedAnswerIds: u, selectedTextAnswersCount: d, selectedEmojiAnswersCount: p } = R(null == (t = o.poll) ? void 0 : t.answers, s);
+            return (
+                h.ZP.trackWithMetadata(P.rMx.POLL_VOTE_SELECTED, {
+                    channel_id: l,
+                    message_id: a,
+                    selected_answer_ids: u,
+                    selected_text_answers_count: d,
+                    selected_emoji_answers_count: p
+                }),
+                i
+            );
+        });
+    },
+    handlePollSubmitVote: F,
+    handleUpdateVoteEditingState: L,
+    handlePollActionTapped: G,
+    createPoll: async function (e) {
+        let { channel: t, question: n, answers: r, allowMultiSelect: i, duration: l, layout: a, onClose: s } = e,
+            c = C.Z.getUploads(t.id, v.d.Poll),
+            u = r.map((e) => {
+                var t, n;
+                let r = null == c ? void 0 : c.findIndex((t) => t.id === e.localCreationAnswerId),
+                    i = { attachment_ids: -1 !== r ? [''.concat(r)] : void 0 };
+                a === o.C.DEFAULT && (i.text = null == (n = e.text) ? void 0 : n.trim());
+                let l = null == (t = e.image) ? void 0 : t.emoji;
+                return (
+                    null != l &&
+                        (null != l.id
+                            ? (i.emoji = {
+                                  id: l.id,
+                                  name: ''
+                              })
+                            : null != l.optionallyDiverseSequence && (i.emoji = { name: l.optionallyDiverseSequence })),
+                    { poll_media: i }
+                );
+            }),
+            d = {
+                question: { text: n.trim() },
+                answers: u,
+                allow_multiselect: i,
+                duration: l,
+                layout_type: a
+            };
+        try {
+            await m.Z.sendPollMessage(t.id, d, {
+                attachmentsToUpload: c,
+                onAttachmentUploadError: (e, n, r) => {
+                    (0, _.A)({
+                        file: e,
+                        guildId: t.getGuildId(),
+                        analyticsLocations: [],
+                        code: n,
+                        reason: r
+                    });
+                }
+            }),
+                null == s || s();
+        } catch (e) {
+            if ('poll' === (e instanceof f.Hx ? e : new f.Hx(e)).getAnyErrorMessage() && null != e.text) throw Z(w({}, e), { body: JSON.parse(e.text) });
+            throw e;
+        }
+    },
+    endPollEarly: async function (e) {
+        let { channelId: t, messageId: n } = e;
+        (await d.Z.confirm({
+            title: A.intl.string(A.t['+rfkTE']),
+            body: A.intl.string(A.t.H2I1gI)
+        })) &&
+            (await I.W({
+                channelId: t,
+                messageId: n
+            }));
+    }
+};
