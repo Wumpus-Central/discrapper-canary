@@ -15556,13 +15556,12 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 
 .text__10651 {
     align-items: center;
-    display: inline-flex;
+    display: flex;
     line-height: 16px !important;
     max-width: 60px
 }
 
 .badge__10651 {
-    margin-bottom: -1px;
     margin-right: 2px;
     margin-top: 0
 }
