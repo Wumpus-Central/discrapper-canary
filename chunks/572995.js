@@ -1,7 +1,7 @@
 n.d(t, {
-    NA: () => L,
-    ZP: () => B,
-    y$: () => k
+    NA: () => Z,
+    ZP: () => w,
+    y$: () => D
 });
 var i,
     r,
@@ -11,143 +11,109 @@ var i,
     o = n(300284),
     c = n(526167),
     d = n(63063),
-    u = n(763365),
-    m = n(981631),
-    g = n(526761),
-    p = n(388032),
-    h = n(888723),
-    f = n(509614),
-    b = n(880511),
-    _ = n(985443),
-    x = n(612253),
-    E = n(872532),
-    C = n(91342),
-    j = n(181708),
-    O = n(290650),
-    S = n(751125),
-    v = n(357003),
-    T = n(904505),
-    I = n(712626),
-    N = n(386014),
-    y = n(845571),
-    A = n(220046),
-    P = n(385874),
-    R = n(371000),
-    D = n(377679),
-    Z = n(825087);
-function w(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
-            )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = i);
-            });
-    }
-    return e;
-}
-var k = (((i = {}).SMALL = 'small'), (i.MEDIUM = 'medium'), (i.LARGE = 'large'), i),
-    L = (((r = {}).NEW_APP_STYLES = 'newAppStyles'), (r.REFERRAL_PROGRAM = 'referralProgram'), (r.SERVER_PROFILES = 'serverProfiles'), (r.SHOW_YOUR_STYLE = 'showYourStyle'), (r.YOUR_SPACE = 'yourSpace'), (r.EMOJIS = 'emojis'), (r.NO_LIMITS = 'noLimits'), (r.PERMADECOS = 'permadecos'), r);
-let B = () => {
+    u = n(981631),
+    m = n(526761),
+    g = n(388032),
+    p = n(509614),
+    h = n(880511),
+    f = n(985443),
+    b = n(612253),
+    _ = n(872532),
+    x = n(91342),
+    E = n(181708),
+    C = n(290650),
+    j = n(751125),
+    O = n(357003),
+    S = n(904505),
+    v = n(712626),
+    T = n(386014),
+    I = n(845571),
+    N = n(220046),
+    y = n(385874),
+    A = n(371000),
+    P = n(377679),
+    R = n(825087),
+    D = (((i = {}).SMALL = 'small'), (i.MEDIUM = 'medium'), (i.LARGE = 'large'), i),
+    Z = (((r = {}).NEW_APP_STYLES = 'newAppStyles'), (r.REFERRAL_PROGRAM = 'referralProgram'), (r.SERVER_PROFILES = 'serverProfiles'), (r.SHOW_YOUR_STYLE = 'showYourStyle'), (r.YOUR_SPACE = 'yourSpace'), (r.EMOJIS = 'emojis'), (r.NO_LIMITS = 'noLimits'), (r.PERMADECOS = 'permadecos'), r);
+let w = () => {
     let { analyticsLocations: e } = (0, a.ZP)(l.Z.PREMIUM_MARKETING_BENTO_BOX),
         t = (0, o.Z)({
-            scrollPosition: g.Y_.TRY_IT_OUT,
+            scrollPosition: m.Y_.TRY_IT_OUT,
             analyticsLocations: e
         }),
         n = (0, c.rO)(),
-        i = d.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM),
-        { whatsNewSectionVariant: r } = u.T.useExperiment({ location: 'WhatsNewSection' });
+        i = d.Z.getArticleURL(u.BhN.REFERRAL_PROGRAM);
     return {
         whatsNewBoxes: {
             permadecos: {
                 name: 'permadecos',
-                title: p.intl.string(p.t['57ngoq']),
-                description: p.intl.string(p.t.piFFjY),
-                descriptionCta: p.intl.string(p.t.jVcuVV),
-                previewImage: v.Z,
+                title: g.intl.string(g.t['57ngoq']),
+                description: g.intl.string(g.t.piFFjY),
+                descriptionCta: g.intl.string(g.t.jVcuVV),
+                previewImage: O.Z,
                 onClick: t,
-                videoUrl: v.Z,
-                size: r === u.h.VARIANT_2 ? 'small' : 'large'
+                videoUrl: O.Z,
+                size: 'large'
             },
-            serverProfiles: w(
-                {
-                    name: 'serverProfiles',
-                    title: p.intl.string(p.t.I9TYMj),
-                    description: p.intl.string(p.t.HMSHeH),
-                    descriptionCta: p.intl.string(p.t.jVcuVV),
-                    onClick: t,
-                    previewImage: E,
-                    videoUrl: n ? y.ZP : A.ZP,
-                    size: r === u.h.VARIANT_1 ? 'medium' : r === u.h.VARIANT_2 ? 'small' : 'large'
-                },
-                r === u.h.VARIANT_2 && { customVideoStyle: h.elevateProfileVideo }
-            ),
-            referralProgram: w(
-                {
-                    name: 'referralProgram',
-                    title: p.intl.string(p.t.tPY4o6),
-                    description: p.intl.format(p.t.jRPQUF, { learnMoreLink: i }),
-                    previewImage: I.Z,
-                    videoUrl: n ? T.ZP : N.ZP,
-                    size: r === u.h.VARIANT_1 ? 'medium' : r === u.h.VARIANT_2 ? 'small' : 'large'
-                },
-                r === u.h.VARIANT_2 && { customVideoStyle: h.shareNitroVideo }
-            )
+            serverProfiles: {
+                name: 'serverProfiles',
+                title: g.intl.string(g.t.I9TYMj),
+                description: g.intl.string(g.t.HMSHeH),
+                descriptionCta: g.intl.string(g.t.jVcuVV),
+                onClick: t,
+                previewImage: _,
+                videoUrl: n ? I.ZP : N.ZP,
+                size: 'medium'
+            },
+            referralProgram: {
+                name: 'referralProgram',
+                title: g.intl.string(g.t.tPY4o6),
+                description: g.intl.format(g.t.jRPQUF, { learnMoreLink: i }),
+                previewImage: v.Z,
+                videoUrl: n ? S.ZP : T.ZP,
+                size: 'medium'
+            }
         },
         bestOfBoxes: {
             showYourStyle: {
                 name: 'showYourStyle',
-                title: p.intl.string(p.t.Ij3Zmp),
-                description: p.intl.string(p.t.UsOUxc),
-                descriptionCta: p.intl.string(p.t.jVcuVV),
-                previewImage: x,
+                title: g.intl.string(g.t.Ij3Zmp),
+                description: g.intl.string(g.t.UsOUxc),
+                descriptionCta: g.intl.string(g.t.jVcuVV),
+                previewImage: b,
                 onClick: t,
-                videoUrl: n ? P.Z : R.Z,
+                videoUrl: n ? y.Z : A.Z,
                 size: 'large'
             },
             yourSpace: {
                 name: 'yourSpace',
-                title: p.intl.string(p.t.Wme3nZ),
-                description: p.intl.string(p.t['/aAIqa']),
-                descriptionCta: p.intl.string(p.t.jVcuVV),
-                previewImage: _,
+                title: g.intl.string(g.t.Wme3nZ),
+                description: g.intl.string(g.t['/aAIqa']),
+                descriptionCta: g.intl.string(g.t.jVcuVV),
+                previewImage: f,
                 onClick: () => {
-                    s.Z.open(m.oAB.APPEARANCE, null, {
+                    s.Z.open(u.oAB.APPEARANCE, null, {
                         openWithoutBackstack: !0,
                         analyticsLocations: e
                     });
                 },
-                videoUrl: n ? D.Z : Z.Z,
+                videoUrl: n ? P.Z : R.Z,
                 size: 'large'
             },
             emojis: {
                 name: 'emojis',
-                title: p.intl.string(p.t.zY5PPT),
-                description: p.intl.string(p.t.R5Xag4),
-                previewImage: f,
-                videoUrl: n ? C.ZP : j.ZP,
+                title: g.intl.string(g.t.zY5PPT),
+                description: g.intl.string(g.t.R5Xag4),
+                previewImage: p,
+                videoUrl: n ? x.ZP : E.ZP,
                 size: 'medium'
             },
             noLimits: {
                 name: 'noLimits',
-                title: p.intl.string(p.t['6b3ydH']),
-                description: p.intl.string(p.t['Y+IJys']),
-                previewImage: b,
-                videoUrl: n ? O.ZP : S.ZP,
+                title: g.intl.string(g.t['6b3ydH']),
+                description: g.intl.string(g.t['Y+IJys']),
+                previewImage: h,
+                videoUrl: n ? C.ZP : j.ZP,
                 size: 'medium'
             }
         }

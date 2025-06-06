@@ -2751,6 +2751,7 @@ var tB = (function (e) {
             (e.SEARCH_TABS_RESET = 'SEARCH_TABS_RESET'),
             (e.SHOW_ACCOUNT_PROFILE_POPOUT = 'SHOW_ACCOUNT_PROFILE_POPOUT'),
             (e.QUEST_GAME_LINK_OPENED = 'QUEST_GAME_LINK_OPENED'),
+            (e.OPEN_VOICE_FILTER_POPOUT = 'OPEN_VOICE_FILTER_POPOUT'),
             e
         );
     })({}),

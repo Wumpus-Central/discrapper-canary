@@ -15,8 +15,6 @@ e.exports = {
     largeBoxVideo: 'largeBoxVideo_abac7b',
     mediumBoxVideo: 'mediumBoxVideo_abac7b',
     smallBoxVideo: 'smallBoxVideo_abac7b',
-    elevateProfileVideo: 'elevateProfileVideo_abac7b',
-    shareNitroVideo: 'shareNitroVideo_abac7b',
     largeTextBox: 'largeTextBox_abac7b',
     largeBoxHeader: 'largeBoxHeader_abac7b',
     bentoBoxButton: 'bentoBoxButton_abac7b',

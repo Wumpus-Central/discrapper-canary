@@ -23,16 +23,24 @@ let f = (e) => {
         return r.useMemo(() => {
             var r, o, s, l, c;
             let u = (0, d.ZS)(e.categorySkuId),
-                f = null != n || null != i;
+                f = null != n || null != i,
+                _ = null != n && null == i,
+                p =
+                    null != e.responsive || null != e.backgroundStyle
+                        ? {
+                              responsive: e.responsive,
+                              backgroundStyle: e.backgroundStyle
+                          }
+                        : void 0;
             return {
-                isPreviewingStaticBanner: null != n && null == i,
+                isPreviewingStaticBanner: _,
                 bannerOverrides: u,
-                bannerStyleOverrides: f ? void 0 : a,
+                bannerStyleOverrides: f ? void 0 : null != p ? p : a,
                 heroLogo: null != t ? t : e.logoUrl,
                 heroBannerStatic: null != (l = null != n ? n : null == (r = e.bannerAsset) ? void 0 : r.static) ? l : e.fallbackBannerUrl,
                 heroBannerAnimated: null != (c = null != i ? i : null == u || null == (o = u.heroBanner) ? void 0 : o.animationSource) ? c : null == (s = e.bannerAsset) ? void 0 : s.animated
             };
-        }, [a, t, n, i, e]);
+        }, [t, n, i, e, a]);
     },
     _ = (e, t) => {
         let n = (0, c.zL)(u.jE.FEATURED_BLOCK);

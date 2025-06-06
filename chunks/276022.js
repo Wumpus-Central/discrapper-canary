@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(539854);
+n.d(t, { Z: () => g }), n(539854);
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -8,79 +8,85 @@ var r = n(255367),
     c = n(213459),
     u = n(434404),
     d = n(795594),
-    f = n(430824),
-    _ = n(496675),
-    p = n(981631),
-    h = n(388032);
-function m(e) {
+    f = n(881998),
+    _ = n(430824),
+    p = n(496675),
+    h = n(981631),
+    m = n(388032);
+function g(e) {
     var t;
-    let { user: m, application: g, guildId: E, context: b, onItemClick: y } = e,
-        O = null != (t = null == g ? void 0 : g.id) ? t : null == m ? void 0 : m.id,
-        v = f.Z.getGuild(E),
-        I = (0, a.e7)([_.Z], () => (null != v ? _.Z.can(p.Plq.MANAGE_GUILD, v) : null)),
-        S = !0,
+    let { user: g, application: E, guildId: b, context: y, onItemClick: O } = e,
+        v = null != (t = null == E ? void 0 : E.id) ? t : null == g ? void 0 : g.id,
+        I = _.Z.getGuild(b),
+        S = (0, a.e7)([p.Z], () => (null != I ? p.Z.can(h.Plq.MANAGE_GUILD, I) : null)),
         T = !0,
-        A = (0, c.LD)(E, T),
-        N = (0, c.PL)(S, T),
-        { isUserApp: C, isGuildApp: P } = i.useMemo(() => {
+        A = !0,
+        N = (0, c.LD)(b, A),
+        C = (0, c.PL)(T, A),
+        P = (0, a.e7)([f.Z], () => {
+            var e;
+            return null != v && (null == (e = f.Z.getApps()) ? void 0 : e.find((e) => e.application.id === v)) != null;
+        }),
+        { isUserApp: R, isGuildApp: w } = i.useMemo(() => {
             var e, t, n, r;
-            if (null == O)
+            if (null == v)
                 return {
                     isGuildApp: !1,
                     isUserApp: !1
                 };
-            let i = Object.values(null != (n = null == (e = A.result) ? void 0 : e.sections) ? n : {}),
-                a = Object.values(null != (r = null == (t = N.result) ? void 0 : t.sections) ? r : {});
+            let i = Object.values(null != (n = null == (e = N.result) ? void 0 : e.sections) ? n : {}),
+                a = Object.values(null != (r = null == (t = C.result) ? void 0 : t.sections) ? r : {});
             return {
                 isGuildApp: i.some((e) => {
                     var t;
-                    return (null == (t = e.descriptor.application) ? void 0 : t.id) === O;
+                    return (null == (t = e.descriptor.application) ? void 0 : t.id) === v;
                 }),
                 isUserApp: a.some((e) => {
                     var t;
-                    return (null == (t = e.descriptor.application) ? void 0 : t.id) === O;
+                    return (null == (t = e.descriptor.application) ? void 0 : t.id) === v;
                 })
             };
-        }, [A, N, O]);
+        }, [N, C, v]);
     i.useEffect(() => {
         n(360606);
     }, []);
-    let R = i.useCallback(() => {
-            (null == v ? void 0 : v.id) != null && (u.Z.open(v.id, p.pNK.INTEGRATIONS), s.Z.setSection(p.b4C.APPLICATION, O), null == y || y());
-        }, [O, null == v ? void 0 : v.id, y]),
-        w = i.useCallback(() => {
-            l.Z.open(p.oAB.AUTHORIZED_APPS);
+    let D = i.useCallback(() => {
+            (null == I ? void 0 : I.id) != null && (u.Z.open(I.id, h.pNK.INTEGRATIONS), s.Z.setSection(h.b4C.APPLICATION, v), null == O || O());
+        }, [v, null == I ? void 0 : I.id, O]),
+        L = i.useCallback(() => {
+            l.Z.open(h.oAB.AUTHORIZED_APPS);
             let e = '';
-            null != g ? (e = g.name) : null != m && (e = m.username), '' !== e && d.J.setState({ searchQuery: e }), null == y || y();
-        }, [g, y, m]);
-    if (b === p.IlC.POPOUT) return null;
-    let D = [];
+            null != E ? (e = E.name) : null != g && (e = g.username), '' !== e && d.J.setState({ searchQuery: e }), null == O || O();
+        }, [E, O, g]);
+    if (y === h.IlC.POPOUT) return null;
+    let x = [];
     return (
-        P &&
-            I &&
-            D.push(
+        w &&
+            S &&
+            x.push(
                 (0, r.jsx)(
                     o.sNh,
                     {
                         id: 'manage-server-integration',
-                        label: h.intl.string(h.t.IuSJT0),
-                        action: R
+                        label: m.intl.string(m.t.IuSJT0),
+                        action: D
                     },
                     'manage-server-integration'
                 )
             ),
-        C &&
-            D.push(
+        R &&
+            P &&
+            x.push(
                 (0, r.jsx)(
                     o.sNh,
                     {
                         id: 'manage-authorized-app',
-                        label: h.intl.string(h.t.V8ruv7),
-                        action: w
+                        label: m.intl.string(m.t.V8ruv7),
+                        action: L
                     },
                     'manage-authorized-app'
                 )
             ),
-        D
+        x
     );
 }
