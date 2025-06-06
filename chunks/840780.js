@@ -21,8 +21,8 @@ var r = n(255367),
     C = n(889441),
     j = n(736409),
     S = n(367907),
-    E = n(835473),
-    x = n(413523),
+    x = n(835473),
+    E = n(413523),
     P = n(933557),
     I = n(194082),
     w = n(550532),
@@ -297,7 +297,7 @@ class ey extends i.PureComponent {
                         ((0, F.vd)(t.type) &&
                             f.Z.selectParticipant(
                                 t.id,
-                                (0, x.gN)({
+                                (0, E.gN)({
                                     applicationId: n.applicationId,
                                     instanceId: n.compositeInstanceId
                                 })
@@ -338,10 +338,10 @@ let eO = (0, b.Z)(function (e) {
         m = (0, u.e7)([y.Z], () => y.Z.useReducedMotion),
         b = (0, u.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
         v = (0, u.e7)([q.Z, X.Z, Y.ZP], () => (null != a ? D.JL(a, q.Z, X.Z, !1) : null != n && D.h_(Y.ZP.getChannels(n), q.Z, X.Z).length > 0)),
-        [j] = (0, E.Z)([null != (t = null != g && null != g.id ? g.id : null != s && null != s.id ? s.id : null != b ? b.applicationId : void 0) ? t : '']),
+        [j] = (0, x.Z)([null != (t = null != g && null != g.id ? g.id : null != s && null != s.id ? s.id : null != b ? b.applicationId : void 0) ? t : '']),
         S = (0, u.e7)([w.Z], () => w.Z.getFakeGameData()),
-        x = (0, u.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
-        I = (0, C.Z)() && null != x && (0, O.R)(),
+        E = (0, u.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
+        I = (0, C.Z)() && null != E && (0, O.R)(),
         N = (0, u.e7)([Q.Z], () => (0, L.Z)(Q.Z) && (0, ei.isWindows)()),
         R = (0, u.e7)([J.Z], () => (null != o ? J.Z.findActivity(o, (e) => e.type === ec.IIU.PLAYING) : null)),
         M = null != f && f.ownerId === o && f.state !== ec.jm8.ENDED,

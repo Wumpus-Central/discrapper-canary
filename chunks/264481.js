@@ -78,33 +78,18 @@ function I(e) {
         }),
         _ = r.useCallback(() => {
             l.Z.openPrivateChannel({ recipientIds: t.id }), null == s || s();
-        }, [t.id, s]),
-        h = r.useCallback(() => {
-            l.Z.openPrivateChannel({
-                recipientIds: t.id,
-                joinCall: !0
-            }),
-                null == s || s();
         }, [t.id, s]);
     return (0, o.jsx)(j, {
         heading: p,
         bodyText: y,
-        children: (0, o.jsxs)('div', {
+        children: (0, o.jsx)('div', {
             className: b.buttonRow,
-            children: [
-                (0, o.jsx)(f.tG, {
-                    icon: c.kBi,
-                    text: m.intl.string(m.t['g33r/P']),
-                    onClick: _,
-                    themeColor: 'secondary'
-                }),
-                (0, o.jsx)(f.tG, {
-                    icon: c.qWc,
-                    text: m.intl.string(m.t.JJogjo),
-                    onClick: h,
-                    themeColor: 'secondary'
-                })
-            ]
+            children: (0, o.jsx)(f.tG, {
+                icon: c.kBi,
+                text: m.intl.string(m.t['g33r/P']),
+                onClick: _,
+                themeColor: 'secondary'
+            })
         })
     });
 }

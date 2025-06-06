@@ -50,7 +50,8 @@ let m = {
         '--profile-gradient-primary-color': 'var(--background-surface-high)',
         '--profile-gradient-secondary-color': 'var(--background-surface-high)',
         '--profile-gradient-overlay-color': 'rgba(0, 0, 0, 0)',
-        '--profile-gradient-button-color': 'var(--background-mod-subtle)'
+        '--profile-gradient-button-color': 'var(--background-mod-subtle)',
+        '--profile-gradient-modal-background-color': 'var(--background-base-lower)'
     });
 function b(e) {
     let { theme: t, themeType: n, primaryColor: i, secondaryColor: _ } = e,

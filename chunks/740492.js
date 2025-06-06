@@ -190,10 +190,6 @@ class N extends (r = o.ZP.DeviceSettingsStore) {
         var e;
         return null != (e = y.listDensity) ? e : _.fx.COZY;
     }
-    get uploadRefactorEnabled() {
-        var e;
-        return null == (e = y.uploadRefactorEnabled) || e;
-    }
 }
 p(N, 'displayName', 'UnsyncedUserSettingsStore'),
     p(N, 'persistKey', 'UnsyncedUserSettingsStore'),

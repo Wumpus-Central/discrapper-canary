@@ -1,30 +1,25 @@
 n.d(t, {
-    ZP: () => R,
-    _1: () => A,
-    jd: () => N
-}),
-    n(314940),
-    n(388685);
+    ZP: () => N,
+    _1: () => I,
+    jd: () => S
+});
 var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
-    s = n(392711),
-    l = n(278074),
-    c = n(442837),
-    u = n(704215),
-    d = n(481060),
-    f = n(951394),
-    _ = n(605236),
-    p = n(314897),
-    h = n(837411),
-    m = n(369566),
-    g = n(510659),
-    E = n(652853),
-    b = n(228168),
-    y = n(388032),
-    O = n(341969);
-function v(e, t, n) {
+    s = n(442837),
+    l = n(704215),
+    c = n(481060),
+    u = n(951394),
+    d = n(605236),
+    f = n(314897),
+    _ = n(837411),
+    p = n(510659),
+    h = n(652853),
+    m = n(228168),
+    g = n(388032),
+    E = n(341969);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +32,7 @@ function v(e, t, n) {
         e
     );
 }
-function I(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,12 +43,12 @@ function I(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function S(e, t) {
+function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,146 +60,124 @@ function S(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : O(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let A = 2700,
-    N = '> -# *',
-    C = {
-        [b.n_.AVATAR]: () => y.intl.string(y.t['fEUP/v']),
-        [b.n_.STATUS]: () => y.intl.string(y.t.TKdBCw),
-        [b.n_.ACTIVITY]: () => y.intl.string(y.t.bSe71N)
+let I = 2700,
+    S = '> -# *',
+    T = {
+        [m.n_.AVATAR]: () => g.intl.string(g.t['fEUP/v']),
+        [m.n_.STATUS]: () => g.intl.string(g.t.TKdBCw),
+        [m.n_.ACTIVITY]: () => g.intl.string(g.t.bSe71N)
     },
-    P = {
-        [b.n_.AVATAR]: () => y.intl.string(y.t.xvN0fX),
-        [b.n_.STATUS]: () => y.intl.string(y.t['C/vzS0']),
-        [b.n_.ACTIVITY]: () => y.intl.string(y.t.ObfsSk)
+    A = {
+        [m.n_.AVATAR]: () => g.intl.string(g.t.xvN0fX),
+        [m.n_.STATUS]: () => g.intl.string(g.t['C/vzS0']),
+        [m.n_.ACTIVITY]: () => g.intl.string(g.t.ObfsSk)
     };
-function R(e) {
-    let { user: t, sourceType: n, isVisible: a, isExpandable: v, interactionSourceId: S, targetRef: A, onAction: N, renderMoreButtonPopout: R } = e,
-        w = i.useRef(null),
-        D = (0, c.e7)([p.default], () => p.default.getId() === t.id),
-        L = (0, h.Z)(t.id),
-        { themeType: x } = (0, E.z)(),
-        { onInteraction: k, onInteractionPopoutTargetRefChange: M } = (0, g.Xo)(),
-        { live: j, stream: U } = (0, m.Z)(t.id),
-        G =
-            !a &&
-            x !== b.lY.MODAL &&
-            x !== b.lY.MODAL_V2 &&
-            (0, l.EQ)(n)
-                .with(b.n_.STATUS, () => 0 === j.length && null == U)
-                .with(b.n_.ACTIVITY, () => !0)
-                .with(b.n_.AVATAR, () => !1)
-                .exhaustive(),
-        [B, F] = i.useState(G);
-    if (
-        (i.useEffect(() => {
-            B && !G && F(!1);
-        }, [B, G]),
-        t.bot || D || !L)
-    )
-        return null;
-    let V = () => {
-            M(A),
-                n === b.n_.AVATAR ? N({ action: 'PRESS_REACT_AVATAR' }) : n === b.n_.STATUS ? N({ action: 'PRESS_REACT_CUSTOM_STATUS' }) : N({ action: 'PRESS_REACT_ACTIVITY' }),
-                null == k ||
-                    k({
-                        interactionType: b.P.REACT,
+function N(e) {
+    let { user: t, sourceType: n, isVisible: a, isExpandable: b, interactionSourceId: O, targetRef: I, onAction: S, renderMoreButtonPopout: N } = e,
+        C = i.useRef(null),
+        P = (0, s.e7)([f.default], () => f.default.getId() === t.id),
+        R = (0, _.Z)(t.id),
+        { themeType: w } = (0, h.z)(),
+        { onInteraction: D, onInteractionPopoutTargetRefChange: L } = (0, p.Xo)();
+    if (t.bot || P || !R) return null;
+    let x = () => {
+            L(I),
+                n === m.n_.AVATAR ? S({ action: 'PRESS_REACT_AVATAR' }) : n === m.n_.STATUS ? S({ action: 'PRESS_REACT_CUSTOM_STATUS' }) : S({ action: 'PRESS_REACT_ACTIVITY' }),
+                null == D ||
+                    D({
+                        interactionType: m.P.REACT,
                         interactionSource: n,
-                        interactionSourceId: S
+                        interactionSourceId: O
                     }),
-                x === b.lY.POPOUT && (0, _.EW)(u.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
+                w === m.lY.POPOUT && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
         },
-        Z = () => {
-            M(A),
-                n === b.n_.AVATAR ? N({ action: 'PRESS_REPLY_AVATAR' }) : n === b.n_.STATUS ? N({ action: 'PRESS_REPLY_CUSTOM_STATUS' }) : N({ action: 'PRESS_REPLY_ACTIVITY' }),
-                null == k ||
-                    k({
-                        interactionType: b.P.REPLY,
+        k = () => {
+            L(I),
+                n === m.n_.AVATAR ? S({ action: 'PRESS_REPLY_AVATAR' }) : n === m.n_.STATUS ? S({ action: 'PRESS_REPLY_CUSTOM_STATUS' }) : S({ action: 'PRESS_REPLY_ACTIVITY' }),
+                null == D ||
+                    D({
+                        interactionType: m.P.REPLY,
                         interactionSource: n,
-                        interactionSourceId: S
+                        interactionSourceId: O
                     }),
-                x === b.lY.POPOUT && (0, _.EW)(u.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
-        },
-        H = (e) => {
-            e.animationName === (0, s.get)(O, 'fadeInAndOut') && F(!1);
+                w === m.lY.POPOUT && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
         };
-    return (0, r.jsxs)(f.ZP, {
-        className: o()(O.popover, {
-            [O.fadeInAndOut]: B,
-            [O.visible]: a,
-            [O.expandable]: v,
-            [O.statusPopover]: n === b.n_.STATUS,
-            [O.avatarPopover]: n === b.n_.AVATAR,
-            [O.activityPopover]: n === b.n_.ACTIVITY
+    return (0, r.jsxs)(u.ZP, {
+        className: o()(E.popover, {
+            [E.visible]: a,
+            [E.expandable]: b,
+            [E.statusPopover]: n === m.n_.STATUS,
+            [E.avatarPopover]: n === m.n_.AVATAR,
+            [E.activityPopover]: n === m.n_.ACTIVITY
         }),
-        onAnimationEnd: B ? H : void 0,
         children: [
-            (0, r.jsx)(d.DY3, {
-                text: y.intl.string(y.t.nhaI4e),
+            (0, r.jsx)(c.DY3, {
+                text: g.intl.string(g.t.nhaI4e),
                 shouldShow: a,
-                className: O.tooltipContainer,
+                className: E.tooltipContainer,
                 delay: 0,
                 'aria-label': !1,
-                children: (0, r.jsx)(f.zx, {
-                    onClick: V,
-                    className: O.button,
-                    'aria-label': C[n](),
+                children: (0, r.jsx)(u.zx, {
+                    onClick: x,
+                    className: E.button,
+                    'aria-label': T[n](),
                     'aria-haspopup': 'dialog',
-                    children: (0, r.jsx)(d.EO4, {
+                    children: (0, r.jsx)(c.EO4, {
                         size: 'xs',
-                        className: O.icon
+                        className: E.icon
                     })
                 })
             }),
-            (0, r.jsx)(d.DY3, {
-                text: y.intl.string(y.t.RmDYKC),
+            (0, r.jsx)(c.DY3, {
+                text: g.intl.string(g.t.RmDYKC),
                 shouldShow: a,
-                className: O.tooltipContainer,
+                className: E.tooltipContainer,
                 delay: 0,
                 'aria-label': !1,
-                children: (0, r.jsx)(f.zx, {
-                    onClick: Z,
-                    className: O.button,
-                    'aria-label': P[n](),
+                children: (0, r.jsx)(u.zx, {
+                    onClick: k,
+                    className: E.button,
+                    'aria-label': A[n](),
                     'aria-haspopup': 'dialog',
-                    children: (0, r.jsx)(d.n$P, {
+                    children: (0, r.jsx)(c.n$P, {
                         size: 'xs',
-                        className: O.icon
+                        className: E.icon
                     })
                 })
             }),
-            null == R
+            null == N
                 ? void 0
-                : R((e) => {
+                : N((e) => {
                       let t = () => {
                           var t;
-                          M(w), null == (t = e.onClick) || t.call(e);
+                          L(C), null == (t = e.onClick) || t.call(e);
                       };
-                      return (0, r.jsx)(d.DY3, {
-                          text: y.intl.string(y.t.UKOtz8),
+                      return (0, r.jsx)(c.DY3, {
+                          text: g.intl.string(g.t.UKOtz8),
                           shouldShow: a,
-                          className: O.tooltipContainer,
+                          className: E.tooltipContainer,
                           delay: 0,
                           'aria-label': !1,
                           children: (0, r.jsx)(
-                              f.zx,
-                              T(I({ ref: w }, e), {
+                              u.zx,
+                              v(y({ ref: C }, e), {
                                   onClick: t,
-                                  className: O.button,
-                                  'aria-label': y.intl.string(y.t.UKOtz8),
-                                  children: (0, r.jsx)(d.xhG, {
+                                  className: E.button,
+                                  'aria-label': g.intl.string(g.t.UKOtz8),
+                                  children: (0, r.jsx)(c.xhG, {
                                       size: 'xs',
-                                      className: O.icon
+                                      className: E.icon
                                   })
                               })
                           )

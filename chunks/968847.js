@@ -25,14 +25,14 @@ var r,
     C = n(734307),
     j = n(981631),
     S = (((i = {}).HIDDEN = 'hidden'), (i.UNREAD = 'unread'), (i.MENTIONS = 'mentions'), (i.VOICE_CHANNELS = 'voice-channels'), i);
-let E = {
+let x = {
         mode: 'hidden',
         mentionCount: 0,
         targetChannelId: null
     },
-    x = {
-        topBar: E,
-        bottomBar: E
+    E = {
+        topBar: x,
+        bottomBar: x
     },
     P = {},
     I = {};
@@ -86,24 +86,24 @@ function T(e) {
             if (!h && !d) break;
             (w(t.id) || a().some(t.threadIds, w)) && (null == u && (u = t.id), (S = !0)), (N(t.id) || a().some(t.threadIds, N)) && (null == c && (c = t.id), (j += b.ZP.getMentionCount(t.id)), (j += a().sumBy(t.threadIds, b.ZP.getMentionCount)));
         }
-    let x = null,
+    let E = null,
         T = null,
         A = null != (r = null == f ? void 0 : f.getChannelRecords()) ? r : [];
     d && j > 0
-        ? (x = {
+        ? (E = {
               mode: 'mentions',
               mentionCount: j,
               targetChannelId: c
           })
         : !p && a().some(A, Z)
-          ? (x = {
+          ? (E = {
                 mode: 'voice-channels',
                 mentionCount: 0,
                 targetChannelId: null
             })
           : h &&
             S &&
-            (x = {
+            (E = {
                 mode: 'unread',
                 mentionCount: 0,
                 targetChannelId: u
@@ -121,12 +121,12 @@ function T(e) {
                   mentionCount: 0,
                   targetChannelId: s
               });
-    let R = null != T && (null == x || ('mentions' !== x.mode && 'mentions' === T.mode)),
-        D = null != x && ('mentions' === x.mode || !R);
+    let R = null != T && (null == E || ('mentions' !== E.mode && 'mentions' === T.mode)),
+        D = null != E && ('mentions' === E.mode || !R);
     return (
         (P[e] = {
-            topBar: R && null != T ? T : E,
-            bottomBar: D && null != x ? x : E
+            topBar: R && null != T ? T : x,
+            bottomBar: D && null != E ? E : x
         }),
         !0
     );
@@ -168,7 +168,7 @@ class U extends (r = c.ZP.Store) {
     }
     getUnreadStateForGuildId(e) {
         var t;
-        return null != (t = P[e]) ? t : x;
+        return null != (t = P[e]) ? t : E;
     }
 }
 (o = 'ChannelListUnreadsStore'),

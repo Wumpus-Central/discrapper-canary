@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(739566),
     _ = n(267128),
     y = n(507418),
-    x = n(348238),
-    C = n(981631),
+    C = n(348238),
+    x = n(981631),
     v = n(388032);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -67,19 +67,19 @@ let E = i.memo(function (e) {
     let { baseMessage: n, referencedMessage: E, channel: I, compact: P = !1, referencedUsernameProfile: S, referencedAvatarProfile: Z, setPopout: N, isReplySpineClickable: T, showReplySpine: A } = e,
         w = E.state === h.Y.LOADED ? E.message : void 0,
         R = (0, b.Uj)(w),
-        k = (0, c.p)(),
-        M = (0, u.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
+        M = (0, c.p)(),
+        k = (0, u.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
         L = i.useMemo(() => {
             if (null == w) return null;
             let e = (0, o.Z)(w);
-            if (e.type === C.uaV.USER_JOIN)
+            if (e.type === x.uaV.USER_JOIN)
                 return (0, a.Rp)(
                     v.intl.formatToParts(m.Z.getSystemMessageUserJoin(e.id), {
                         username: null != R ? R.nick : e.author.username,
                         usernameHook: (e) => e
                     })
                 );
-            if (e.type === C.uaV.ROLE_SUBSCRIPTION_PURCHASE)
+            if (e.type === x.uaV.ROLE_SUBSCRIPTION_PURCHASE)
                 return (0, a.Rp)(
                     (0, s.PA)({
                         username: null != R ? R.nick : e.author.username,
@@ -87,33 +87,33 @@ let E = i.memo(function (e) {
                         roleSubscriptionData: e.roleSubscriptionData
                     })
                 );
-            if (e.type === C.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
+            if (e.type === x.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
                 return (0, a.Rp)(
                     (0, d.Y)({
                         application: null == e ? void 0 : e.application,
                         username: null == R ? void 0 : R.nick
                     })
                 );
-            if (e.type === C.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED)
+            if (e.type === x.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED)
                 return (0, a.Rp)(
                     (0, p.B2)({
                         application: null == e ? void 0 : e.application,
                         username: null == R ? void 0 : R.nick
                     })
                 );
-            if (e.type === C.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED)
+            if (e.type === x.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED)
                 return (0, a.Rp)(
                     (0, p.hj)({
                         application: null == e ? void 0 : e.application,
                         username: null == R ? void 0 : R.nick
                     })
                 );
-            else if (e.type === C.uaV.GUILD_DEADCHAT_REVIVE_PROMPT) return '' !== e.content ? e.content : v.intl.string(v.t.wnn1DQ);
+            else if (e.type === x.uaV.GUILD_DEADCHAT_REVIVE_PROMPT) return '' !== e.content ? e.content : v.intl.string(v.t.wnn1DQ);
             if (null != e.content && '' !== e.content) {
                 let t = {
                         formatInline: !0,
                         allowLinks: !0,
-                        shouldFilterKeywords: k
+                        shouldFilterKeywords: M
                     },
                     n = e.isFirstMessageInForumPost(I)
                         ? O(j({}, t), {
@@ -123,13 +123,13 @@ let E = i.memo(function (e) {
                           })
                         : O(j({}, t), {
                               formatInline: !0,
-                              allowHeading: M,
-                              allowList: M
+                              allowHeading: k,
+                              allowList: k
                           });
                 return (0, g.ZP)(e, n).content;
             }
             return null;
-        }, [w, R, I, M, k]),
+        }, [w, R, I, k, M]),
         { isReplyAuthorBlocked: D, isReplyAuthorIgnored: U } = (0, l.cj)(
             [f.Z],
             () => ({
@@ -138,10 +138,10 @@ let E = i.memo(function (e) {
             }),
             [w]
         ),
-        B = (0, x.wq)(null == w ? void 0 : w.author.id, I.id),
-        G = (0, x.$3)(n, w),
-        F = (0, x.Wl)(w, I, S, N),
-        H = (0, x.rY)(Z, N),
+        B = (0, C.wq)(null == w ? void 0 : w.author.id, I.id),
+        F = (0, C.$3)(n, w),
+        G = (0, C.Wl)(w, I, S, N),
+        H = (0, C.rY)(Z, N),
         V = i.useCallback(() => {
             N({
                 referencedUsernameProfile: !1,
@@ -163,8 +163,8 @@ let E = i.memo(function (e) {
         showUsernamePopout: S,
         renderPopout: y.Z,
         onClickAvatar: H,
-        onClickUsername: F,
-        onClickReply: G,
+        onClickUsername: G,
+        onClickReply: F,
         onContextMenu: B,
         onPopoutRequestClose: V,
         isReplySpineClickable: T,

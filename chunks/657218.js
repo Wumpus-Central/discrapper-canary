@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(752305),
     _ = n(893718),
     y = n(303628),
-    x = n(313201),
-    C = n(540059),
+    C = n(313201),
+    x = n(540059),
     v = n(967128),
     j = n(665149),
     O = n(294218),
@@ -31,14 +31,14 @@ var r = n(255367),
     A = n(117530),
     w = n(459273),
     R = n(838440),
-    k = n(127654),
-    M = n(241309),
+    M = n(127654),
+    k = n(241309),
     L = n(928477),
     D = n(456077),
     U = n(488131),
     B = n(602034),
-    G = n(981631),
-    F = n(388032),
+    F = n(981631),
+    G = n(388032),
     H = n(776584),
     V = n(128337);
 function z(e) {
@@ -77,7 +77,7 @@ function Y(e) {
               value: a,
               children: (0, r.jsx)(w.I3, {
                   children: (0, r.jsxs)('section', {
-                      'aria-label': F.intl.string(F.t.rBIGBA),
+                      'aria-label': G.intl.string(G.t.rBIGBA),
                       className: H.container,
                       children: [
                           (0, r.jsx)(p.Z, {
@@ -87,16 +87,16 @@ function Y(e) {
                           (0, r.jsxs)(j.ZP, {
                               toolbar: (0, r.jsx)(j.ZP.Icon, {
                                   icon: s.Dio,
-                                  tooltip: F.intl.string(F.t.cpT0Cg),
+                                  tooltip: G.intl.string(G.t.cpT0Cg),
                                   onClick: () => (0, U.NK)(t)
                               }),
                               children: [
                                   (0, r.jsx)(j.ZP.Icon, {
                                       icon: s.or_,
                                       disabled: !0,
-                                      'aria-label': F.intl.string(F.t['7Xm5QE'])
+                                      'aria-label': G.intl.string(G.t['7Xm5QE'])
                                   }),
-                                  (0, r.jsx)(j.ZP.Title, { children: F.intl.string(F.t['4WNcpq']) })
+                                  (0, r.jsx)(j.ZP.Title, { children: G.intl.string(G.t['4WNcpq']) })
                               ]
                           }),
                           (0, r.jsx)(q, {
@@ -178,7 +178,7 @@ function q(e) {
                 }
             );
         })(t, m),
-        x = (0, L.vH)(t),
+        C = (0, L.vH)(t),
         {
             nameError: j,
             messageError: O,
@@ -213,7 +213,7 @@ function q(e) {
                         let m = null != (s = r.name) ? s : '',
                             g = null == n && 0 === m.length,
                             b = '' === e && (null == i || 0 === i.length) && 0 === l.length;
-                        if ((c(g ? (0, M.V_)() : null), d(b ? (0, M.T4)() : null), g || b))
+                        if ((c(g ? (0, k.V_)() : null), d(b ? (0, k.T4)() : null), g || b))
                             return (
                                 h(!1),
                                 {
@@ -242,7 +242,7 @@ function q(e) {
                             await f(e, i, l);
                         } catch (e) {
                             return (
-                                (null == (u = e.body) ? void 0 : u.code) === G.evJ.AUTOMOD_TITLE_BLOCKED && c((0, M.Gx)(e.body, t)),
+                                (null == (u = e.body) ? void 0 : u.code) === F.evJ.AUTOMOD_TITLE_BLOCKED && c((0, k.Gx)(e.body, t)),
                                 h(!1),
                                 {
                                     shouldClear: !1,
@@ -267,12 +267,12 @@ function q(e) {
             parentChannel: t,
             parentMessageId: n,
             threadSettings: f,
-            privateThreadMode: x,
+            privateThreadMode: C,
             textAreaState: _,
             location: l
         }),
-        N = (0, L.oD)(f, x) ? s.qtY : s.or_,
-        T = (0, C.R6)('CreateThreadSidebar');
+        N = (0, L.oD)(f, C) ? s.qtY : s.or_,
+        T = (0, x.R6)('CreateThreadSidebar');
     return (0, r.jsx)('div', {
         className: H.chat,
         onMouseDown: p,
@@ -306,12 +306,12 @@ function q(e) {
                                             error: j,
                                             disabled: S
                                         }),
-                                        t.type === G.d4z.GUILD_TEXT
+                                        t.type === F.d4z.GUILD_TEXT
                                             ? (0, r.jsx)(K, {
                                                   startedFromMessage: null != n,
                                                   threadSettings: f,
                                                   updateThreadSettings: g,
-                                                  privateThreadMode: x
+                                                  privateThreadMode: C
                                               })
                                             : null
                                     ]
@@ -355,7 +355,7 @@ function K(e) {
             className: H.privateThreadFormTitle,
             children: (0, r.jsx)('span', {
                 className: H.privateThreadFormTitleText,
-                children: F.intl.string(F.t.F1zyvb)
+                children: G.intl.string(G.t.F1zyvb)
             })
         }),
         c = (0, r.jsx)(s.XZJ, {
@@ -367,7 +367,7 @@ function K(e) {
             children: (0, r.jsx)(s.Text, {
                 variant: 'text-md/normal',
                 color: 'none',
-                children: F.intl.string(F.t.TRPp3t)
+                children: G.intl.string(G.t.TRPp3t)
             })
         });
     return t || l === L.Jw.Disabled
@@ -382,7 +382,7 @@ function K(e) {
                             className: H.privateThreadDescription,
                             variant: 'text-xs/normal',
                             color: 'header-secondary',
-                            children: F.intl.string(F.t.EWXyc3)
+                            children: G.intl.string(G.t.EWXyc3)
                         })
                       : null
               ]
@@ -392,20 +392,20 @@ function X(e) {
     var t;
     let { parentChannel: n, parentMessageId: i, threadSettings: l, updateThreadSettings: a, error: o, disabled: c } = e,
         d = null != (t = l.name) ? t : '',
-        p = (0, M.Op)(o, { content: d }),
+        p = (0, k.Op)(o, { content: d }),
         h = (0, L.Od)(n, i),
         f = null != i,
-        m = (0, x.Dt)();
+        m = (0, C.Dt)();
     return (0, r.jsx)(s.hjN, {
         tag: 'label',
         htmlFor: m,
-        title: F.intl.string(f ? F.t.JPvIiI : F.t.j3XWjI),
+        title: G.intl.string(f ? G.t.JPvIiI : G.t.j3XWjI),
         className: H.formSection,
         children: (0, r.jsx)(s.oil, {
             value: d,
             id: m,
-            placeholder: '' !== h ? h : F.intl.string(F.t['Nb2/RE']),
-            maxLength: G.HN8,
+            placeholder: '' !== h ? h : G.intl.string(G.t['Nb2/RE']),
+            maxLength: F.HN8,
             onChange: (e) => {
                 a({ name: (0, D.Z)(e, !1) }), '' !== e ? u.Z.startTyping(n.id) : u.Z.stopTyping(n.id);
             },
@@ -423,7 +423,7 @@ function Q(e) {
         [f, m] = i.useState(!0),
         g = i.useCallback(() => m(!0), []),
         b = i.useCallback(() => m(!1), []),
-        x = i.useCallback(
+        C = i.useCallback(
             (e, n, r) => {
                 c.Z.saveDraft(t.id, n, Z.d.FirstThreadMessage),
                     l(
@@ -438,7 +438,7 @@ function Q(e) {
             },
             [t.id, l]
         ),
-        C = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 let { value: t, uploads: n, stickers: r } = e;
                 return d(t, r, n);
@@ -446,15 +446,15 @@ function Q(e) {
             [d]
         );
     (0, w.yp)({
-        event: G.CkL.TEXTAREA_FOCUS,
+        event: F.CkL.TEXTAREA_FOCUS,
         handler: g
     }),
         (0, w.yp)({
-            event: G.CkL.TEXTAREA_BLUR,
+            event: F.CkL.TEXTAREA_BLUR,
             handler: b
         });
-    let v = (0, o.e7)([T.Z], () => T.Z.can(G.Plq.ATTACH_FILES, t)),
-        j = (0, M.Op)(p, { content: n.textValue });
+    let v = (0, o.e7)([T.Z], () => T.Z.can(F.Plq.ATTACH_FILES, t)),
+        j = (0, k.Op)(p, { content: n.textValue });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(y.Z, {
@@ -469,7 +469,7 @@ function Q(e) {
             (0, r.jsx)(_.Z, {
                 type: W,
                 channel: t,
-                placeholder: F.intl.string(F.t.taZfIC),
+                placeholder: G.intl.string(G.t.taZfIC),
                 textValue: n.textValue,
                 richValue: n.richValue,
                 focused: f,
@@ -477,9 +477,9 @@ function Q(e) {
                 innerClassName: a()(H.channelTextAreaInner, { [H.channelTextAreaInnerError]: null != j }),
                 onFocus: g,
                 onBlur: b,
-                onChange: x,
-                onSubmit: C,
-                promptToUpload: k.d
+                onChange: C,
+                onSubmit: x,
+                promptToUpload: M.d
             })
         ]
     });

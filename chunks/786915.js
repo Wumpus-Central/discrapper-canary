@@ -41,7 +41,7 @@ function _(e) {
     return e;
 }
 function y(e) {
-    var { applicationId: t, stream: i, channel: y, exitFullScreen: x, appContext: C, analyticsLocation: v, guildScheduledEvent: j, shouldPrioritizeGroupPlusIcon: O = !1, isContextlessActivity: E = !1, iconClassName: I, look: P, size: S, buttonText: Z, color: N } = e,
+    var { applicationId: t, stream: i, channel: y, exitFullScreen: C, appContext: x, analyticsLocation: v, guildScheduledEvent: j, shouldPrioritizeGroupPlusIcon: O = !1, isContextlessActivity: E = !1, iconClassName: I, look: P, size: S, buttonText: Z, color: N } = e,
         T = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -64,14 +64,14 @@ function y(e) {
     let A = (0, c.bp)(),
         { parentAnalyticsLocation: w } = (0, u.ZP)(),
         R = null == y ? void 0 : y.getGuildId(),
-        k = (0, a.e7)([p.Z], () => (null != R ? p.Z.getGuild(R) : null), [R]),
-        M = (0, a.e7)([h.Z], () => (null != t ? h.Z.getApplicationActivity(t) : void 0)),
+        M = (0, a.e7)([p.Z], () => (null != R ? p.Z.getGuild(R) : null), [R]),
+        k = (0, a.e7)([h.Z], () => (null != t ? h.Z.getApplicationActivity(t) : void 0)),
         L = null == t || O ? o.ejJ : o.gQj,
         D = null != t ? b.intl.string(b.t['OzOM/v']) : b.intl.string(b.t['6F9ivr']);
-    return null != M && E
+    return null != k && E
         ? (0, r.jsx)(m.Z, {
               onClick: () => {
-                  null != w && (0, d.v)(w, d.d.INVITE), s.h7(M, !1, A);
+                  null != w && (0, d.v)(w, d.d.INVITE), s.h7(k, !1, A);
               },
               iconComponent: L,
               label: D,
@@ -81,13 +81,13 @@ function y(e) {
               buttonText: Z,
               color: null != N ? N : void 0
           })
-        : null != k && null != y && f.Z.can(g.Plq.CREATE_INSTANT_INVITE, y)
+        : null != M && null != y && f.Z.can(g.Plq.CREATE_INSTANT_INVITE, y)
           ? (0, r.jsx)(
                 m.Z,
                 _(
                     {
                         onClick: () => {
-                            l()(null != k, 'guild cannot be null'),
+                            l()(null != M, 'guild cannot be null'),
                                 l()(null != y, 'channel cannot be null'),
                                 null != w && (0, d.v)(w, d.d.INVITE),
                                 (function (e) {
@@ -133,12 +133,12 @@ function y(e) {
                                             }
                                         );
                                 })({
-                                    guild: k,
+                                    guild: M,
                                     channel: y,
                                     streamUserId: null == i ? void 0 : i.ownerId,
                                     applicationId: t,
-                                    appContext: null != C ? C : A,
-                                    exitFullScreen: x,
+                                    appContext: null != x ? x : A,
+                                    exitFullScreen: C,
                                     analyticsLocation: v,
                                     guildScheduledEvent: j
                                 });

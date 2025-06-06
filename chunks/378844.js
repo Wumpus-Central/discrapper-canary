@@ -47,10 +47,10 @@ let O = (e) => {
     let { type: t, guildId: r, closePopout: y } = e,
         O = (0, c.Dt)(),
         { notClaimed: v, notEmailVerified: _, notPhoneVerified: C, newAccount: j, newMember: S } = (0, l.e7)([d.Z], () => d.Z.getCheck(r), [r]),
-        E = 0 === t ? g.intl.string(g.t['6zY8BA']) : null,
-        x = null,
+        x = 0 === t ? g.intl.string(g.t['6zY8BA']) : null,
+        E = null,
         P = null;
-    return (0 === t && (v ? ((x = g.intl.string(g.t.IRxUlJ)), (P = g.intl.string(g.t.fiNVio))) : C ? ((x = g.intl.string(g.t.vW8iUF)), (P = g.intl.string(g.t['50gfOj']))) : _ ? ((x = g.intl.string(g.t.vdSOp6)), (P = g.intl.string(g.t.lm1UKi))) : S ? ((x = g.intl.formatToPlainString(g.t.v1ktYW, { min: p.YeM.MEMBER_AGE })), (P = g.intl.string(g.t.BddRzc))) : j && ((x = g.intl.formatToPlainString(g.t['sncw4+'], { min: p.YeM.ACCOUNT_AGE })), (P = g.intl.string(g.t.BddRzc)))), null == E || null == x)
+    return (0 === t && (v ? ((E = g.intl.string(g.t.IRxUlJ)), (P = g.intl.string(g.t.fiNVio))) : C ? ((E = g.intl.string(g.t.vW8iUF)), (P = g.intl.string(g.t['50gfOj']))) : _ ? ((E = g.intl.string(g.t.vdSOp6)), (P = g.intl.string(g.t.lm1UKi))) : S ? ((E = g.intl.formatToPlainString(g.t.v1ktYW, { min: p.YeM.MEMBER_AGE })), (P = g.intl.string(g.t.BddRzc))) : j && ((E = g.intl.formatToPlainString(g.t['sncw4+'], { min: p.YeM.ACCOUNT_AGE })), (P = g.intl.string(g.t.BddRzc)))), null == x || null == E)
         ? null
         : (0, i.jsxs)(o.VqE, {
               className: m.container,
@@ -67,12 +67,12 @@ let O = (e) => {
                           (0, i.jsx)(o.X6q, {
                               variant: 'heading-md/semibold',
                               id: O,
-                              children: E
+                              children: x
                           }),
                           (0, i.jsx)(o.Text, {
                               color: 'header-secondary',
                               variant: 'text-sm/normal',
-                              children: x
+                              children: E
                           }),
                           (0, i.jsxs)('div', {
                               className: m.buttonContainer,

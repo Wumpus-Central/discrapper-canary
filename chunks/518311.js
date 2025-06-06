@@ -25,8 +25,8 @@ var r,
     b = n(529103),
     _ = n(447543),
     y = n(708690),
-    x = n(194359),
-    C = n(425493),
+    C = n(194359),
+    x = n(425493),
     v = n(461745),
     j = n(493773),
     O = n(40851),
@@ -40,14 +40,14 @@ var r,
     A = n(429090),
     w = n(912114),
     R = n(366980),
-    k = n(703656),
-    M = n(93127),
+    M = n(703656),
+    k = n(93127),
     L = n(752048),
     D = n(131704),
     U = n(592125),
     B = n(341165),
-    G = n(544610),
-    F = n(19780),
+    F = n(544610),
+    G = n(19780),
     H = n(306680),
     V = n(699516),
     z = n(246946),
@@ -153,7 +153,7 @@ let eh = (e) => {
             });
         return (0, i.jsx)(h.P3F, {
             onClick: () => {
-                (0, k.XU)(en.ME, n.id), r();
+                (0, M.XU)(en.ME, n.id), r();
             },
             children: (0, i.jsxs)('div', {
                 className: ei.confirmChannelItemContainer,
@@ -545,7 +545,7 @@ class em extends (r = l.PureComponent) {
     }
     handleAddFriend(e) {
         this.props.onClose(),
-            x.Z.sendRequest({
+            C.Z.sendRequest({
                 discordTag: J.ZP.getUserTag(e, { identifiable: 'always' }),
                 context: { location: 'Group DM' }
             });
@@ -588,7 +588,7 @@ class em extends (r = l.PureComponent) {
                     children: (0, i.jsx)(h.JcV, {
                         containerRef: this._mobileCloseRef,
                         children: (0, i.jsx)('div', {
-                            children: (0, i.jsx)(C.Z, {
+                            children: (0, i.jsx)(x.Z, {
                                 className: ei.mobileToolsCloseIcon,
                                 closeAction: this.props.onClose,
                                 keybind: 'ESC'
@@ -675,7 +675,7 @@ class em extends (r = l.PureComponent) {
                 t.has(e) ? y.Z.removeUser(e) : (y.Z.addUser(e), n.length > 0 && y.Z.clear(null == r ? void 0 : r.id)), this.forceFocus();
             }),
             ea(this, 'handleAddFriendNavigation', () => {
-                (0, k.uL)(en.Z5c.FRIENDS), b.Z.setSection(en.pJs.ADD_FRIEND), this.props.onClose();
+                (0, M.uL)(en.Z5c.FRIENDS), b.Z.setSection(en.pJs.ADD_FRIEND), this.props.onClose();
             }),
             ea(this, 'handleScroll', () => {
                 let e = this.scrollerRef.current;
@@ -730,7 +730,7 @@ class em extends (r = l.PureComponent) {
             ea(this, 'pushToExistingDM', (e, t) => {
                 let n = this._searchCounter,
                     r = (0, I.v_)(e),
-                    i = F.Z.getChannelId() === e.id;
+                    i = G.Z.getChannelId() === e.id;
                 g.Z.addRecipients(e.id, t, en.Sbl.ADD_FRIENDS_TO_DM).then((n) => {
                     if (i) {
                         if (e.isDM() && n !== e.id) return void m.Z.call(n, !1, !0);
@@ -753,7 +753,7 @@ class em extends (r = l.PureComponent) {
                 let { channel: e, selectedUsers: t, onClose: n } = this.props,
                     r = Array.from(t);
                 if (null != e) {
-                    let t = ex(Array.from(new Set([...e.recipients, ...r])));
+                    let t = eC(Array.from(new Set([...e.recipients, ...r])));
                     t.size > 0
                         ? (0, h.h7j)(
                               (n) =>
@@ -769,7 +769,7 @@ class em extends (r = l.PureComponent) {
                           )
                         : this.pushToExistingDM(e, r);
                 } else {
-                    let e = ex(r);
+                    let e = eC(r);
                     r.length > 1 && e.size > 0
                         ? (0, h.h7j)(
                               (t) =>
@@ -848,11 +848,11 @@ function eg(e) {
 function eb(e) {
     var { channel: t } = e,
         n = ec(e, ['channel']);
-    let r = (0, p.cj)([G.Z, B.Z, z.Z], () => {
+    let r = (0, p.cj)([F.Z, B.Z, z.Z], () => {
         let e;
         return (
             null != t && null != (e = B.Z.getInvite(t.id)) && e.isExpired() && (e = null),
-            es(eo({}, G.Z.getState()), {
+            es(eo({}, F.Z.getState()), {
                 invite: e,
                 hideDiscriminator: z.Z.hidePersonalInformation,
                 hideInstantInvites: z.Z.hideInstantInvites
@@ -867,8 +867,8 @@ function e_(e) {
         b = null != s ? s : null == r ? h.kL_ : h.ejJ,
         _ = (0, A.a)(g),
         y = 'channel-invite-modal-'.concat(null == r ? void 0 : r.id),
-        x = (0, h.VXO)(y),
-        C = l.useCallback(
+        C = (0, h.VXO)(y),
+        x = l.useCallback(
             () =>
                 (0, h.ZDy)(
                     () =>
@@ -887,7 +887,7 @@ function e_(e) {
         ),
         v = l.useRef(null),
         [O, E] = l.useState(null != r && r.isGroupDM() && 0 === r.recipients.length),
-        I = l.useCallback(() => (_ ? (x ? (0, h.Mr3)(y) : C()) : E((e) => !e)), [_, x, y, C]);
+        I = l.useCallback(() => (_ ? (C ? (0, h.Mr3)(y) : x()) : E((e) => !e)), [_, C, y, x]);
     l.useEffect(
         () => (
             m && K.S.subscribe(en.CkL.TOGGLE_DM_CREATE, I),
@@ -899,14 +899,14 @@ function e_(e) {
     );
     let P = (0, p.e7)([W.default], () => W.default.getUser(null == r ? void 0 : r.getRecipientId()));
     return ((0, j.ZP)(() => {
-        (0, M._)();
+        (0, k._)();
     }),
     (null != (t = null == P ? void 0 : P.bot) && t) || (null != (n = null == P ? void 0 : P.isProvisional) && n))
         ? null
         : _
           ? (0, i.jsx)(ee.ZP.Icon, {
                 ref: v,
-                onClick: C,
+                onClick: x,
                 icon: b,
                 className: o,
                 iconClassName: a,
@@ -951,7 +951,7 @@ function e_(e) {
 function ey(e) {
     let { channel: t, className: n, popoutPosition: r = 'bottom', popoutAlign: a = 'right' } = e;
     (0, j.ZP)(() => {
-        (0, M._)();
+        (0, k._)();
     });
     let o = (0, A.a)('PrivateChannelRecipientsInviteTextButton'),
         s = l.useRef(null),
@@ -1015,18 +1015,18 @@ function ey(e) {
                   )
           });
 }
-function ex(e) {
-    let t = eC(e);
+function eC(e) {
+    let t = ex(e);
     return new Set(
         (0, s.chain)(U.Z.getMutablePrivateChannels())
             .values()
             .filter((e) => (0, D.bc)(e.type))
-            .filter((e) => eC(e.recipients) === t)
+            .filter((e) => ex(e.recipients) === t)
             .map((e) => e.id)
             .value()
     );
 }
-function eC(e) {
+function ex(e) {
     return JSON.stringify(e.sort());
 }
 ea(em, 'contextType', O.ZP);

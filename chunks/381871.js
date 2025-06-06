@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(594174),
     _ = n(176354),
     y = n(823379),
-    x = n(74538),
-    C = n(401062),
+    C = n(74538),
+    x = n(401062),
     v = n(696900),
     j = n(456631),
     O = n(963838),
@@ -31,8 +31,8 @@ var r = n(255367),
     A = n(474936),
     w = n(526761),
     R = n(388032),
-    k = n(934680);
-let M = T.Hz.CHAT,
+    M = n(934680);
+let k = T.Hz.CHAT,
     L = {
         section: Z.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
         openPopoutType: 'voice_channel_effect_emoji_picker'
@@ -43,9 +43,9 @@ function U(e) {
     let { channel: n, closePopout: m, onFocus: y } = e,
         T = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
         U = (0, a.e7)([b.default], () => b.default.getCurrentUser()),
-        B = x.ZP.canUseFancyVoiceChannelReactions(U),
-        G = (0, a.e7)([v.Z], () => v.Z.getState().animationType),
-        F = i.useRef(!1),
+        B = C.ZP.canUseFancyVoiceChannelReactions(U),
+        F = (0, a.e7)([v.Z], () => v.Z.getState().animationType),
+        G = i.useRef(!1),
         H = i.useRef(null),
         V = (0, f.wC)(n.guild_id),
         z = (0, l.uniqBy)([...V, ...D], 'name')
@@ -54,23 +54,23 @@ function U(e) {
                     !_.ZP.isEmojiFilteredOrLocked({
                         emoji: e,
                         channel: n,
-                        intention: M
+                        intention: k
                     })
             )
             .slice(0, N.e5),
         W = (null != (t = j.Z.recentlyUsedEmojis) ? t : []).filter((e) => !z.slice(0, N.e5 - 1).some((t) => t.name === e.name));
     W.length > 0 && z.splice(z.length - 1, 1, W[0]);
-    let Y = (0, O.Iu)(G),
+    let Y = (0, O.Iu)(F),
         q = (e) => {
             c.Z.dispatch({
                 type: 'VOICE_CHANNEL_EFFECT_RECENT_EMOJI',
                 emoji: e
             }),
-                (0, C.Lx)({
+                (0, x.Lx)({
                     channel: n,
                     emoji: e,
-                    location: C.yX.EMOJI_PICKER,
-                    animationType: G,
+                    location: x.yX.EMOJI_PICKER,
+                    animationType: F,
                     animationId: Y,
                     isPremium: B
                 });
@@ -85,7 +85,7 @@ function U(e) {
             });
         },
         X = (e) => {
-            (F.current = e),
+            (G.current = e),
                 e &&
                     p.ZP.trackWithMetadata(Z.rMx.VOICE_CHANNEL_EFFECT_EMOJI_PICKER_EXPANDED, {
                         channel_id: Q,
@@ -100,7 +100,7 @@ function U(e) {
         });
     }, [Q, J]);
     let $ = T ? [o.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
-        ee = G === S.q.PREMIUM;
+        ee = F === S.q.PREMIUM;
     return (0, r.jsx)(h.ZP, {
         contentTypes: $,
         children: (e) => {
@@ -115,7 +115,7 @@ function U(e) {
                     (0, r.jsx)('div', {
                         onMouseEnter: y,
                         children: (0, r.jsx)(g.ZP, {
-                            className: k.reducedMotionTooltip,
+                            className: M.reducedMotionTooltip,
                             header: R.intl.string(R.t['6gGHnZ']),
                             content: R.intl.string(R.t.S2RGUF),
                             onClick: () => {
@@ -156,9 +156,9 @@ function U(e) {
                                 onShowUpsell: () =>
                                     (0, I.h)({
                                         analytics: {
-                                            type: F.current ? A.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED : A.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
+                                            type: G.current ? A.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED : A.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
                                             object: Z.qAy.VOICE_CHANNEL_EFFECTS_TOGGLE,
-                                            section: F.current ? Z.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER : Z.jXE.VOICE_CHANNEL_EFFECTS_BAR
+                                            section: G.current ? Z.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER : Z.jXE.VOICE_CHANNEL_EFFECTS_BAR
                                         }
                                     })
                             })

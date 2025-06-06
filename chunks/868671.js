@@ -1,6 +1,6 @@
 n.d(t, {
     H: () => v,
-    T: () => C
+    T: () => x
 }),
     n(388685);
 var r = n(73800),
@@ -20,11 +20,11 @@ var r = n(73800),
     b = n(206583),
     _ = n(809017),
     y = n(981631),
-    x = n(388032);
-let C = 0;
+    C = n(388032);
+let x = 0;
 function v(e) {
     let {
-            memberStoreProps: { groups: t, rows: n, version: C },
+            memberStoreProps: { groups: t, rows: n, version: x },
             channelId: v,
             guildId: j
         } = e,
@@ -35,10 +35,10 @@ function v(e) {
         A = (0, i.e7)([o.Z], () => o.Z.getChannel(v)),
         w = (0, i.e7)([s.Z], () => s.Z.getGuild(j), [j]),
         R = (0, h.E)(w),
-        k = null != R && R && (null == A ? void 0 : A.isForumChannel()) === !1,
-        [M, L, D, U] = r.useMemo(() => {
+        M = null != R && R && (null == A ? void 0 : A.isForumChannel()) === !1,
+        [k, L, D, U] = r.useMemo(() => {
             let e;
-            if (null == P || 0 === P.length || null == I || !k) return [t, n, C];
+            if (null == P || 0 === P.length || null == I || !M) return [t, n, x];
             let r = O ? P.length : Z ? 4 : 3,
                 i = P.slice(0, r);
             e = N
@@ -54,7 +54,7 @@ function v(e) {
                 key: _.G,
                 count: e.length,
                 index: n.length,
-                title: x.intl.string(x.t['6gwSFR']),
+                title: C.intl.string(C.t['6gwSFR']),
                 onToggleExpand: () => {
                     E((e) => {
                         let t = !e;
@@ -73,10 +73,10 @@ function v(e) {
                 feedHeight: e.map(g.iZ).reduce((e, t) => e + t, 0)
             };
             return [[l, ...t], [...n, l, ...e], Math.random(), e];
-        }, [v, P, O, t, j, I, n, C, N, k, Z]),
+        }, [v, P, O, t, j, I, n, x, N, M, Z]),
         B = r.useRef(0),
-        G = r.useRef(P),
-        F = r.useRef(void 0),
+        F = r.useRef(P),
+        G = r.useRef(void 0),
         H = r.useRef({ impressionCappedEntryIds: S }),
         V = r.useCallback(
             (e) => {
@@ -89,7 +89,7 @@ function v(e) {
         );
     return (
         r.useEffect(() => {
-            G.current = P;
+            F.current = P;
         }, [P]),
         r.useEffect(() => {
             H.current = { impressionCappedEntryIds: S };
@@ -97,18 +97,18 @@ function v(e) {
         r.useEffect(
             () => (
                 (B.current = 0),
-                (F.current = Date.now()),
+                (G.current = Date.now()),
                 () => {
                     var e, t;
-                    if (null == I || null == F.current || Date.now() - F.current < 3000) return;
-                    let n = null != (t = null == (e = G.current) ? void 0 : e.map((e) => e.id)) ? t : [],
+                    if (null == I || null == G.current || Date.now() - G.current < 3000) return;
+                    let n = null != (t = null == (e = F.current) ? void 0 : e.map((e) => e.id)) ? t : [],
                         r = n.slice(0, B.current);
                     !N &&
                         T &&
-                        k &&
+                        M &&
                         ((0, f.e)(y.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
                             request_id: I,
-                            first_shown_at: F.current,
+                            first_shown_at: G.current,
                             item_ids: r,
                             surface_type: b.Kd.GUILD_MEMBER_LIST,
                             channel_id: v,
@@ -123,10 +123,10 @@ function v(e) {
                             }));
                 }
             ),
-            [I, v, j, N, T, k]
+            [I, v, j, N, T, M]
         ),
         {
-            groups: M,
+            groups: k,
             rows: L,
             version: D,
             updateMaxRowSeen: V

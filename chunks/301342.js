@@ -27,7 +27,7 @@ var r = n(255367),
     C = n(981631),
     j = n(388032),
     S = n(585523);
-function E(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +52,7 @@ function E(e) {
     }
     return e;
 }
-function x(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -94,7 +94,7 @@ let I = i.memo(function (e) {
                                 return (n) =>
                                     (0, r.jsx)(
                                         e,
-                                        x(E({}, n), {
+                                        E(x({}, n), {
                                             channel: l,
                                             guild: t
                                         })
@@ -113,7 +113,7 @@ let I = i.memo(function (e) {
                         return (n) =>
                             (0, r.jsx)(
                                 i,
-                                x(E({}, n), {
+                                E(x({}, n), {
                                     channelType: e,
                                     guildId: t,
                                     categoryId: 'null' !== l.id ? l.id : null
@@ -166,8 +166,8 @@ let I = i.memo(function (e) {
                             children: [
                                 (0, r.jsxs)(
                                     c.P3F,
-                                    x(
-                                        E(
+                                    E(
+                                        x(
                                             {
                                                 innerRef: H,
                                                 className: S.mainContent,

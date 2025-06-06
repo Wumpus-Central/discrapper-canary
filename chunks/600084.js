@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(621853),
     _ = n(484459),
     y = n(131704),
-    x = n(881998),
-    C = n(984933),
+    C = n(881998),
+    x = n(984933),
     v = n(496675),
     j = n(594174),
     O = n(51144),
@@ -31,21 +31,21 @@ var r = n(255367),
     A = n(734386),
     w = n(184279),
     R = n(438306),
-    k = n(544142),
-    M = n(128557),
+    M = n(544142),
+    k = n(128557),
     L = n(981631),
     D = n(176505),
     U = n(388032),
     B = n(906667),
-    G = n(20493);
-function F(e) {
+    F = n(20493);
+function G(e) {
     let { canManageRoles: t, channel: n } = e,
         i = t && (0, p.Yk)(n),
-        a = (0, l.e7)([C.ZP], () => null != n.guild_id && n === C.ZP.getDefaultChannel(n.guild_id), [n]);
+        a = (0, l.e7)([x.ZP], () => null != n.guild_id && n === x.ZP.getDefaultChannel(n.guild_id), [n]);
     if ((0, h.Z)(n.id)) return null;
     if (n.isForumPost()) return (0, r.jsx)(P.Z, { channel: n });
-    if (y.Ec.has(n.type)) return (0, r.jsx)(k.Z, { channel: n });
-    if (a) return (0, r.jsx)(M.Z, { channel: n });
+    if (y.Ec.has(n.type)) return (0, r.jsx)(M.Z, { channel: n });
+    if (a) return (0, r.jsx)(k.Z, { channel: n });
     if (i) return (0, r.jsx)(A.Z, { channel: n });
     return (0, r.jsx)(R.Z, { channel: n });
 }
@@ -53,30 +53,30 @@ function H(e) {
     var t, n;
     let { channel: p, showingBanner: h } = e,
         y = (0, d.ZP)(p),
-        { type: C } = p,
+        { type: x } = p,
         P = (0, l.e7)([j.default], () => (p.isPrivate() ? j.default.getUser(p.getRecipientId()) : null)),
         A = O.ZP.useUserTag(P),
-        { canManageRoles: R, canReadMessageHistory: k } = (0, l.cj)([v.Z], () => ({
+        { canManageRoles: R, canReadMessageHistory: M } = (0, l.cj)([v.Z], () => ({
             canManageRoles: v.Z.can(L.Plq.MANAGE_ROLES, p),
             canReadMessageHistory: v.Z.can(L.Plq.READ_MESSAGE_HISTORY, p)
         })),
-        M = (0, l.e7)([b.Z], () => (C === L.d4z.DM ? b.Z.getMutualGuilds(p.getRecipientId()) : null), [p, C]),
+        k = (0, l.e7)([b.Z], () => (x === L.d4z.DM ? b.Z.getMutualGuilds(p.getRecipientId()) : null), [p, x]),
         { systemDMRedesignEnabled: H } = g.Z.useExperiment({ location: 'bf1a4f_1' }, { autoTrackExposure: null != (t = p.isSystemDM()) && t }),
         V = (0, u.Z)(null != (n = null == P ? void 0 : P.id) ? n : L.lds),
-        { authorizedAppToken: z, authorizedAppsFetchState: W } = (0, l.cj)([x.Z], () => {
+        { authorizedAppToken: z, authorizedAppsFetchState: W } = (0, l.cj)([C.Z], () => {
             var e;
             return {
-                authorizedAppToken: null != V ? (null == (e = x.Z.getApps()) ? void 0 : e.find((e) => e.application.id === V.id)) : void 0,
-                authorizedAppsFetchState: x.Z.getFetchState()
+                authorizedAppToken: null != V ? (null == (e = C.Z.getApps()) ? void 0 : e.find((e) => e.application.id === V.id)) : void 0,
+                authorizedAppsFetchState: C.Z.getFetchState()
             };
         }),
         Y = c.Z.useExperiment({ location: 'EmptyMessages' }).enabledDesktop;
     if (
         (i.useEffect(() => {
-            C === L.d4z.DM && null == M && null != P && o.Z.wait(() => (0, _.Z)(p.getRecipientId(), P.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
-        }, [M, C, p, P]),
+            x === L.d4z.DM && null == k && null != P && o.Z.wait(() => (0, _.Z)(p.getRecipientId(), P.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
+        }, [k, x, p, P]),
         i.useEffect(() => {
-            (null == P ? void 0 : P.bot) && W === x.M.NOT_FETCHED && s.Z.fetch();
+            (null == P ? void 0 : P.bot) && W === C.M.NOT_FETCHED && s.Z.fetch();
         }, [null == P ? void 0 : P.bot, W]),
         p.isSystemDM())
     )
@@ -86,7 +86,7 @@ function H(e) {
                   channel: p,
                   children: U.intl.string(U.t.Rzvnio)
               });
-    if (C === L.d4z.DM) {
+    if (x === L.d4z.DM) {
         let e;
         return (
             null != P && null != V
@@ -127,7 +127,7 @@ function H(e) {
                         !P.isProvisional &&
                         (0, r.jsx)(a.X6q, {
                             variant: 'heading-xl/medium',
-                            className: G.marginBottom20,
+                            className: F.marginBottom20,
                             children: A
                         }),
                     U.intl.format(U.t['Qvg+6+'], { username: y }),
@@ -149,8 +149,8 @@ function H(e) {
                 channel: p,
                 children: U.intl.format(U.t.MFwcqK, { name: y })
             });
-    return k
-        ? (0, r.jsx)(F, {
+    return M
+        ? (0, r.jsx)(G, {
               channel: p,
               canManageRoles: R
           })

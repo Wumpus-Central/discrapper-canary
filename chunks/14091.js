@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(768119),
     _ = n(944486),
     y = n(585483),
-    x = n(72006),
-    C = n(965996),
+    C = n(72006),
+    x = n(965996),
     v = n(652399),
     j = n(251285),
     O = n(406326),
@@ -43,7 +43,7 @@ function A(e, t, n) {
 }
 function w(e) {
     let t = null != e ? b.Z.getEditorState(e) : null;
-    return null != t ? x.Sq(t) : null;
+    return null != t ? C.Sq(t) : null;
 }
 class R extends i.Component {
     componentDidMount() {
@@ -103,7 +103,7 @@ class R extends i.Component {
             });
     }
 }
-let k = (e) => {
+let M = (e) => {
     let { children: t } = e;
     return (0, r.jsx)('div', {
         className: T.emptyResultsWrap,
@@ -113,7 +113,7 @@ let k = (e) => {
         })
     });
 };
-class M extends i.PureComponent {
+class k extends i.PureComponent {
     componentDidMount() {
         y.S.subscribe(S.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
     }
@@ -226,7 +226,7 @@ class M extends i.PureComponent {
                         mode: e
                     });
                     let r = null != t ? b.Z.getEditorState(t) : null,
-                        l = null != r ? x.Sq(r) : null;
+                        l = null != r ? C.Sq(r) : null;
                     p.Nz(t, e, l), this.setState({ searchMode: e });
                 }
             }),
@@ -252,7 +252,7 @@ class M extends i.PureComponent {
             }),
             A(this, 'renderIndexing', () => {
                 let e = b.Z.getSearchType(this.props.searchId) === S.aib.GUILD ? N.intl.string(N.t.AXPbZm) : N.intl.string(N.t.Q0JJjo);
-                return (0, r.jsxs)(k, {
+                return (0, r.jsxs)(M, {
                     children: [
                         (0, r.jsx)(E.Z, {}),
                         (0, r.jsx)('div', {
@@ -265,7 +265,7 @@ class M extends i.PureComponent {
             A(this, 'renderNoResults', () => {
                 let { showNoResultsAlt: e } = this.props.search,
                     t = e ? N.intl.string(N.t['VrK/2d']) : N.intl.string(N.t.V6nAfH);
-                return (0, r.jsxs)(k, {
+                return (0, r.jsxs)(M, {
                     children: [
                         (0, r.jsx)('div', { className: a()(T.noResultsImage, { [T.alt]: e }) }),
                         (0, r.jsx)('div', {
@@ -276,7 +276,7 @@ class M extends i.PureComponent {
                 });
             }),
             A(this, 'renderError', () =>
-                (0, r.jsxs)(k, {
+                (0, r.jsxs)(M, {
                     children: [
                         (0, r.jsx)('div', { className: T.errorImage }),
                         (0, r.jsx)('div', {
@@ -346,14 +346,14 @@ function L(e) {
         { searchResults: s, ignoreCount: u, blockCount: d } = (0, j.Z)(t),
         p = i.useRef(null),
         [g, _] = i.useState(!1),
-        { enabled: y, force: x } = (0, C.f)({ location: 'SearchResults' });
+        { enabled: y, force: C } = (0, x.f)({ location: 'SearchResults' });
     return (
         i.useEffect(() => {
-            y && x && _(!0);
-        }, [x, y]),
+            y && C && _(!0);
+        }, [C, y]),
         i.useEffect(() => {
             y &&
-                (x ||
+                (C ||
                     (t !== p.current &&
                         ((p.current = t),
                         f.Z.possiblyShowFeedbackModal(
@@ -361,8 +361,8 @@ function L(e) {
                             () => _(!0),
                             () => _(!1)
                         ))));
-        }, [y, x, t]),
-        (0, r.jsx)(M, {
+        }, [y, C, t]),
+        (0, r.jsx)(k, {
             searchId: t,
             search: n,
             searchAnalyticsId: l,

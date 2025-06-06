@@ -1,7 +1,7 @@
 n.d(t, {
     $h: () => S,
     jG: () => j,
-    yI: () => E
+    yI: () => x
 });
 var r = n(255367);
 n(73800);
@@ -26,7 +26,7 @@ var i = n(120356),
     C = n(928381);
 function j(e) {
     let { guildId: t, powerup: n, markAsDismissed: i } = e;
-    return (0, r.jsx)(x, {
+    return (0, r.jsx)(E, {
         asset: (0, r.jsx)(g.g, { className: _.image }),
         header: v.intl.formatToPlainString(O.default['Zg/m9P'], { perkName: n.title }),
         content: v.intl.formatToPlainString(O.default['1EGXSE'], { perkName: n.title }),
@@ -38,7 +38,7 @@ function j(e) {
 function S(e) {
     let { guildId: t, markAsDismissed: n } = e,
         i = (0, p.Z)(t);
-    return (0, r.jsx)(x, {
+    return (0, r.jsx)(E, {
         asset: (0, r.jsx)('img', {
             alt: '',
             src: C.Z,
@@ -58,7 +58,7 @@ function S(e) {
         caretPosition: i ? d.DF.LEFT_TOP : d.DF.TOP_CENTER
     });
 }
-function E(e) {
+function x(e) {
     let { guildId: t, powerups: n, markAsDismissed: i } = e,
         l = (0, s.e7)([h.Z], () => {
             var e;
@@ -68,7 +68,7 @@ function E(e) {
     if (0 === n.length) return;
     let a = n.length > 1 ? ''.concat(n[0].title, ' & ').concat(n[1].title) : ''.concat(n[0].title),
         u = 1 === n.length;
-    return (0, r.jsx)(x, {
+    return (0, r.jsx)(E, {
         asset:
             1 === n.length
                 ? (0, r.jsx)(g.m, {
@@ -83,7 +83,7 @@ function E(e) {
         markAsDismissed: i
     });
 }
-function x(e) {
+function E(e) {
     var { asset: t, header: n, content: i, caretPosition: s, markAsDismissed: c } = e,
         u = (function (e, t) {
             if (null == e) return {};

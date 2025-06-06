@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(522651),
     _ = n(795318),
     y = n(258609),
-    x = n(74299),
-    C = n(924301),
+    C = n(74299),
+    x = n(924301),
     v = n(459502),
     j = n(856691),
     O = n(357156),
@@ -31,14 +31,14 @@ var r = n(255367),
     A = n(390322),
     w = n(871499),
     R = n(88479),
-    k = n(386000),
-    M = n(25827),
+    M = n(386000),
+    k = n(25827),
     L = n(314897),
     D = n(131951),
     U = n(496675),
     B = n(944486),
-    G = n(594174),
-    F = n(881824),
+    F = n(594174),
+    G = n(881824),
     H = n(471253),
     V = n(922482),
     z = n(200498),
@@ -108,12 +108,12 @@ function eu(e) {
         l = (0, u.bp)(),
         { canManageGuildEvent: h } = (0, O.XJ)(t),
         f = (0, o.e7)([q.Z], () => q.Z.getStageInstanceByChannel(t.id), [t.id]),
-        m = (0, o.e7)([C.ZP], () => C.ZP.getGuildScheduledEvent(null == f ? void 0 : f.guild_scheduled_event_id)),
+        m = (0, o.e7)([x.ZP], () => x.ZP.getGuildScheduledEvent(null == f ? void 0 : f.guild_scheduled_event_id)),
         g = (0, o.e7)([B.Z], () => B.Z.getVoiceChannelId() === t.id, [t.id]),
         { suppress: y } = (0, S.Z)(t),
-        x = L.default.getId(),
+        C = L.default.getId(),
         [v] = (0, en.Z)(t),
-        j = Y.ZP.isModerator(x, t.id),
+        j = Y.ZP.isModerator(C, t.id),
         E = (0, z.B)(t.id),
         I = h(m),
         { parentAnalyticsLocation: P } = (0, p.ZP)(),
@@ -145,7 +145,7 @@ function eu(e) {
     let N = () =>
         (function (e) {
             let { channel: t, appContext: n } = e;
-            if (((0, b.v)(d.Z.VOICE_CONTROL_TRAY, b.d.DISCONNECT), (0, $.Z)(t))) return void (0, F.Us)(t, n);
+            if (((0, b.v)(d.Z.VOICE_CONTROL_TRAY, b.d.DISCONNECT), (0, $.Z)(t))) return void (0, G.Us)(t, n);
             c.default.disconnect();
         })({
             channel: t,
@@ -166,7 +166,7 @@ function eu(e) {
                           children: (0, r.jsx)(s.sNh, {
                               id: 'end-stage',
                               color: 'danger',
-                              action: () => (0, F.Ev)(t, l),
+                              action: () => (0, G.Ev)(t, l),
                               label: el.intl.string(el.t.Fmx5y8),
                               icon: s.k$p
                           })
@@ -245,16 +245,16 @@ let eh = i.memo(function (e) {
         { suppress: l, selfMute: a, mute: c } = (0, S.Z)(t),
         u = (0, z.B)(t.id),
         d = (0, o.e7)([y.Z], () => null != y.Z.getAwaitingRemoteSessionInfo()),
-        { cameraUnavailable: b, enabled: C } = (0, E.Z)(),
+        { cameraUnavailable: b, enabled: x } = (0, E.Z)(),
         v = (0, P.Z)(t),
         { limit: j, reachedLimit: O } = (0, I.Z)(t),
-        w = (0, o.e7)([G.default], () => G.default.getCurrentUser()),
-        R = (0, o.e7)([D.Z], () => (0, x.Z)(D.Z)),
+        w = (0, o.e7)([F.default], () => F.default.getCurrentUser()),
+        R = (0, o.e7)([D.Z], () => (0, C.Z)(D.Z)),
         L = (0, o.e7)([B.Z], () => B.Z.getVoiceChannelId() === t.id, [t.id]),
         U = (0, o.e7)([h.Z], () => h.Z.getStreamParticipants(t.id)[0], [t.id]),
-        F = (0, K.PK)(t.id),
+        G = (0, K.PK)(t.id),
         H = j > 0,
-        V = (O && !F) || (null != U && U.user.id !== (null == w ? void 0 : w.id)),
+        V = (O && !G) || (null != U && U.user.id !== (null == w ? void 0 : w.id)),
         W = (0, _.u)('AudioDeviceMenu', n, { entrypoint: ei.A5.CARET }),
         Y = i.useRef(null),
         q = i.useRef(null);
@@ -278,11 +278,11 @@ let eh = i.memo(function (e) {
         children: (e, t) => {
             let { onClick: n } = e,
                 { isShown: i } = t;
-            return (0, r.jsx)(M.C, {
+            return (0, r.jsx)(k.C, {
                 ref: Y,
                 centerButton: !0,
                 hasPermission: v,
-                enabled: C,
+                enabled: x,
                 cameraUnavailable: b,
                 onChange: Z.r,
                 onCameraUnavailable: T.Z,
@@ -325,7 +325,7 @@ let eh = i.memo(function (e) {
                               children: (e, t) => {
                                   let { onClick: n } = e,
                                       { isShown: i } = t;
-                                  return (0, r.jsx)(k.Z, {
+                                  return (0, r.jsx)(M.Z, {
                                       ref: q,
                                       centerButton: !0,
                                       onPopoutClick: n,

@@ -21,8 +21,8 @@ var r = n(255367),
     C = n(305325),
     j = n(281956),
     S = n(66999),
-    E = n(554747),
-    x = n(378844),
+    x = n(554747),
+    E = n(378844),
     P = n(340541),
     I = n(335353),
     w = n(896835),
@@ -179,8 +179,8 @@ class en extends H.ZP {
               });
     }
     render() {
-        let { channel: e, selected: t, connected: n, unread: i, resolvedUnreadSetting: l, mentionCount: s, locked: a, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: y, canMoveMembers: O, showTutorial: v, hasActiveEvent: _, embeddedApps: C, isSubscriptionGated: j, isFavoriteSuggestion: S, withGuildIcon: E } = this.props,
-            { shouldShowActivities: x, shouldShowGuildVerificationPopout: w } = this.state,
+        let { channel: e, selected: t, connected: n, unread: i, resolvedUnreadSetting: l, mentionCount: s, locked: a, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: y, canMoveMembers: O, showTutorial: v, hasActiveEvent: _, embeddedApps: C, isSubscriptionGated: j, isFavoriteSuggestion: S, withGuildIcon: x } = this.props,
+            { shouldShowActivities: E, shouldShowGuildVerificationPopout: w } = this.state,
             N = (0, P.jW)({ location: 'voice_channel' }).entrypoints,
             T = this.getVoiceStatesCount(),
             A = (0, r.jsxs)('li', {
@@ -197,7 +197,7 @@ class en extends H.ZP {
                             renderPopout: this.renderPopout,
                             spacing: 0,
                             onRequestClose: this.closeGuildVerificationPopout,
-                            shouldShow: (x && !u && !d && !w) || w,
+                            shouldShow: (E && !u && !d && !w) || w,
                             children: () =>
                                 (0, r.jsx)(c.ua7, {
                                     text: this.getTooltipText(),
@@ -261,7 +261,7 @@ class en extends H.ZP {
                                                                 channel: e,
                                                                 embeddedApps: C
                                                             }),
-                                                            withGuildIcon: E
+                                                            withGuildIcon: x
                                                         },
                                                         h
                                                     ),
@@ -382,8 +382,8 @@ class en extends H.ZP {
                     });
                 }
                 if (a)
-                    return (0, r.jsx)(x.Z, {
-                        type: x.R.VOICE,
+                    return (0, r.jsx)(E.Z, {
+                        type: E.R.VOICE,
                         guildId: e.guild_id,
                         closePopout: this.closeGuildVerificationPopout
                     });
@@ -444,11 +444,11 @@ function ei(e) {
         p = (0, s.e7)([G.Z], () => G.Z.hasVideo(n.id)),
         g = (0, f.ZP)(n),
         m = (0, y.ZP)(n),
-        b = (0, E.qY)(n.id),
+        b = (0, x.qY)(n.id),
         { isSubscriptionGated: O, needSubscriptionToAccess: v } = (0, S.Z)(n.id),
         C = (0, _.Z)(),
         j = (0, s.e7)([U.ZP], () => U.ZP.isFavorite(t.id, n.id)),
-        x = e.connected || (null == C ? void 0 : C.channelId) === n.id,
+        E = e.connected || (null == C ? void 0 : C.channelId) === n.id,
         P = (0, F.Z)({
             channel: n,
             isChannelSelected: o,
@@ -459,7 +459,7 @@ function ei(e) {
             enableConnectedUserLimit: !0,
             enableActivities: !0
         }),
-        I = x && null == P;
+        I = E && null == P;
     return (0, r.jsx)(
         er,
         et(
@@ -478,7 +478,7 @@ function ei(e) {
                 e
             ),
             {
-                connected: x,
+                connected: E,
                 isFavoriteSuggestion: l && !j,
                 forceShowButtons: I,
                 channelInfo: P,

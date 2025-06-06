@@ -20,8 +20,8 @@ var r = n(255367),
     b = n(739566),
     _ = n(267128),
     y = n(378233),
-    x = n(419922),
-    C = n(375954),
+    C = n(419922),
+    x = n(375954),
     v = n(699516),
     j = n(768581),
     O = n(70956),
@@ -43,7 +43,7 @@ function N(e) {
         ),
         s = (0, b.Uj)(n),
         d = i.useContext(f.Z),
-        [C, O] = i.useState(!1),
+        [x, O] = i.useState(!1),
         E = (0, m.p)(),
         I = i.useCallback(
             (e) => {
@@ -60,7 +60,7 @@ function N(e) {
         Z =
             null != n.content && '' !== n.content
                 ? (0, g.ZP)(n, {
-                      isInteracting: C,
+                      isInteracting: x,
                       shouldFilterKeywords: E
                   }).content
                 : null,
@@ -75,16 +75,16 @@ function N(e) {
             iconSize: P.WW
         }),
         R = (0, y.cv)(n),
-        k =
+        M =
             R.length > 0
                 ? R.map((e) =>
                       (0, r.jsx)(
-                          x.Z,
+                          C.Z,
                           {
                               className: S.sticker,
                               size: 128,
                               sticker: e,
-                              isInteracting: C
+                              isInteracting: x
                           },
                           e.id
                       )
@@ -102,7 +102,7 @@ function N(e) {
         children: [
             (0, r.jsxs)('div', {
                 className: a()(S.messageContentWrapper, { [S.mentioned]: n.mentioned }),
-                children: [null != k ? null : w, null != (t = null != T ? T : k) ? t : (0, r.jsx)('span', { children: N }), null != k ? null : A]
+                children: [null != M ? null : w, null != (t = null != T ? T : M) ? t : (0, r.jsx)('span', { children: N }), null != M ? null : A]
             }),
             (0, r.jsx)('img', {
                 alt: '',
@@ -161,7 +161,7 @@ function T(e) {
             let g = null != (t = h.current) ? t : o;
             return {
                 toastsHidden: u,
-                toastMessages: (0, c.Wu)([C.Z], () => g.map((e) => C.Z.getMessage(n, e)), [n, g]).filter(E.lm)
+                toastMessages: (0, c.Wu)([x.Z], () => g.map((e) => x.Z.getMessage(n, e)), [n, g]).filter(E.lm)
             };
         })({
             channelId: t,
@@ -188,12 +188,12 @@ function T(e) {
             }
             (0, o.isEqual)(e, y.current) || b(e);
         }, [f]);
-    let x = f.map((e) => ({
+    let C = f.map((e) => ({
             message: e,
             height: m.current[e.id],
             y: g[e.id]
         })),
-        v = (0, u.Yzy)(x, {
+        v = (0, u.Yzy)(C, {
             keys: (e) => e.message.id,
             from: () => ({ opacity: 0 }),
             enter: (e) => {

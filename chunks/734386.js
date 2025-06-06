@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(185413),
     _ = n(42311),
     y = n(626786),
-    x = n(434404),
-    C = n(454585),
+    C = n(434404),
+    x = n(454585),
     v = n(430824),
     j = n(496675),
     O = n(594174),
@@ -35,11 +35,11 @@ function w(e) {
         o = (0, m.ZP)(t, !0),
         w = t.guild_id,
         R = (0, d.e7)([v.Z], () => (null != w ? v.Z.getRoles(w) : void 0)),
-        k = (0, d.e7)([O.default, v.Z], () => {
+        M = (0, d.e7)([O.default, v.Z], () => {
             var e;
             return O.default.getUser(null == (e = v.Z.getGuild(w)) ? void 0 : e.ownerId);
         }),
-        M = i.useMemo(
+        k = i.useMemo(
             () =>
                 null != w
                     ? s()(R)
@@ -51,7 +51,7 @@ function w(e) {
         ),
         L = i.useMemo(
             () =>
-                s()(M)
+                s()(k)
                     .filter((e) => {
                         if (null == w) return !1;
                         let n = E.I0({
@@ -61,13 +61,13 @@ function w(e) {
                         return c.e$(n, N.Plq.ADMINISTRATOR) || c.e$(n, N.Plq.VIEW_CHANNEL);
                     })
                     .value(),
-            [t, w, M]
+            [t, w, k]
         ),
         D = (0, d.Wu)(
             [O.default],
             () => {
                 let e = {};
-                for (let n of (null != k && (e[k.id] = k), Object.values(t.permissionOverwrites))) {
+                for (let n of (null != M && (e[M.id] = M), Object.values(t.permissionOverwrites))) {
                     if (n.type !== f.BN.MEMBER || null != e[n.id]) continue;
                     let t = O.default.getUser(n.id);
                     null != t && (e[t.id] = t);
@@ -86,7 +86,7 @@ function w(e) {
                     })
                     .value();
             },
-            [t, k]
+            [t, M]
         ),
         U = j.Z.can(N.Plq.MANAGE_CHANNELS, t) || j.Z.can(N.Plq.MANAGE_ROLES, t),
         B = i.useCallback(() => l(!1), []);
@@ -101,7 +101,7 @@ function w(e) {
             (0, r.jsx)(S.jz, {
                 children: T.intl.format(T.t.QuwqjI, {
                     channelName: o,
-                    topicHook: () => C.Z.parseTopic(t.topic, !0, { channelId: t.id })
+                    topicHook: () => x.Z.parseTopic(t.topic, !0, { channelId: t.id })
                 })
             }),
             U
@@ -180,7 +180,7 @@ function w(e) {
                                       disabled: !U,
                                       verified: s,
                                       onClick: () => {
-                                          x.Z.open(t.guild_id, N.pNK.MEMBERS), x.Z.selectRole(e.id);
+                                          C.Z.open(t.guild_id, N.pNK.MEMBERS), C.Z.selectRole(e.id);
                                       }
                                   },
                                   e.id

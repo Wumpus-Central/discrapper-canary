@@ -21,8 +21,8 @@ var r = n(255367),
     C = n(876548),
     j = n(543432),
     S = n(981631),
-    E = n(388032),
-    x = n(642317),
+    x = n(388032),
+    E = n(642317),
     P = n(656855);
 function I(e) {
     var t, l;
@@ -76,14 +76,14 @@ function I(e) {
     return N.length + j.length === 0
         ? null
         : (0, r.jsxs)(a.Ttm, {
-              className: x.container,
+              className: E.container,
               children: [
                   (0, r.jsx)(w, {
                       channel: o,
                       isChannelSelected: b,
                       voiceStatesCount: null != (l = null == g ? void 0 : g.length) ? l : 0
                   }),
-                  (0, r.jsx)('div', { className: x.headerDivider }),
+                  (0, r.jsx)('div', { className: E.headerDivider }),
                   j.map((e, t) => {
                       var n;
                       return (0, r.jsx)(
@@ -113,13 +113,13 @@ function I(e) {
                   O &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)('div', { className: x.headerDivider }),
+                              (0, r.jsx)('div', { className: E.headerDivider }),
                               (0, r.jsx)('div', {
-                                  className: x.settingNudgeText,
+                                  className: E.settingNudgeText,
                                   children: (0, r.jsx)(a.Text, {
                                       variant: 'text-xs/normal',
                                       tag: 'span',
-                                      children: E.intl.format(E.t.ePyoY2, {
+                                      children: x.intl.format(x.t.ePyoY2, {
                                           onClick: () => {
                                               (0, a.ZDy)(async () => {
                                                   let { default: e } = await n.e('59500').then(n.bind(n, 241420));
@@ -192,7 +192,7 @@ function w(e) {
     return null == (0, p.KS)(t, u)
         ? null
         : (0, r.jsxs)('div', {
-              className: o()(x.popoutHeaderContainer, P.popoutHeaderContainer),
+              className: o()(E.popoutHeaderContainer, P.popoutHeaderContainer),
               children: [
                   (0, r.jsx)(_.Z, { channel: t }),
                   c

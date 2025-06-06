@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(603074),
     _ = n(294629),
     y = n(131951),
-    x = n(390322),
-    C = n(871499),
+    C = n(390322),
+    x = n(871499),
     v = n(127379),
     j = n(388032);
 function O(e) {
@@ -30,12 +30,12 @@ function O(e) {
         } = (0, o.j)(),
         A = t.getGuildId(),
         { mute: w, suppress: R } = (0, _.Z)(t),
-        k = (0, l.e7)([y.Z], () => y.Z.isDeaf()),
-        M = w || R || k,
-        L = (0, m.sR)({ isSoundboardButtonDisabled: M }),
+        M = (0, l.e7)([y.Z], () => y.Z.isDeaf()),
+        k = w || R || M,
+        L = (0, m.sR)({ isSoundboardButtonDisabled: k }),
         [D, U] = (0, h.cv)(L),
         { analyticsLocations: B } = (0, u.ZP)(),
-        { isHovered: G, setIsHovered: F, onMouseEnter: H, onMouseLeave: V } = (0, f.Z)(200, 300);
+        { isHovered: F, setIsHovered: G, onMouseEnter: H, onMouseLeave: V } = (0, f.Z)(200, 300);
     function z(e) {
         null != A &&
             (0, c.jW)(e, async () => {
@@ -99,20 +99,20 @@ function O(e) {
     let Y = i.useRef(null);
     return (0, r.jsx)(s.y, {
         targetElementRef: Y,
-        shouldShow: (G && (E === v.D.SOUNDBOARD || null == E)) || E === v.D.SOUNDBOARD,
+        shouldShow: (F && (E === v.D.SOUNDBOARD || null == E)) || E === v.D.SOUNDBOARD,
         animation: s.y.Animation.FADE,
         animationPosition: 'top',
         position: 'top',
         align: 'center',
         spacing: 16,
         onRequestClose: () => {
-            F(!1), null == I || I(void 0);
+            G(!1), null == I || I(void 0);
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return M
+            return k
                 ? null
-                : (0, r.jsx)(x.Z, {
+                : (0, r.jsx)(C.Z, {
                       children: (0, r.jsx)('div', {
                           onMouseEnter: H,
                           onMouseLeave: V,
@@ -132,13 +132,13 @@ function O(e) {
                   });
         },
         children: () =>
-            (0, r.jsx)(C.d, {
+            (0, r.jsx)(x.d, {
                 ref: Y,
                 isTrayButton: !0,
                 themeable: O,
-                label: w ? j.intl.string(j.t['Ox4/zc']) : R ? j.intl.string(j.t['+YBKYG']) : k ? j.intl.string(j.t.X1lQlp) : void 0,
+                label: w ? j.intl.string(j.t['Ox4/zc']) : R ? j.intl.string(j.t['+YBKYG']) : M ? j.intl.string(j.t.X1lQlp) : void 0,
                 iconComponent: S,
-                disabled: M,
+                disabled: k,
                 onContextMenu: z,
                 onClick: W,
                 onMouseEnter: () => {
@@ -147,8 +147,8 @@ function O(e) {
                 onMouseLeave: () => {
                     null == E && (V(), T());
                 },
-                isActive: G || E === v.D.SOUNDBOARD,
-                color: G || E === v.D.SOUNDBOARD ? 'primaryDark' : void 0
+                isActive: F || E === v.D.SOUNDBOARD,
+                color: F || E === v.D.SOUNDBOARD ? 'primaryDark' : void 0
             })
     });
 }

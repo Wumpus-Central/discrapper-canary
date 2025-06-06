@@ -45,8 +45,8 @@ var o = n(255367),
     K = n(179828),
     W = n(993160),
     X = n(574887),
-    q = n(693408),
-    z = n(661462),
+    z = n(693408),
+    q = n(661462),
     J = n(768111),
     Q = n(228168),
     $ = n(981631),
@@ -222,7 +222,7 @@ function en(e) {
                                                     n.isProvisional &&
                                                         (0, o.jsx)(F.Z.Overlay, {
                                                             className: et.profileOverlay,
-                                                            children: (0, o.jsx)(q.Z, {
+                                                            children: (0, o.jsx)(z.Z, {
                                                                 heading: ee.intl.string(ee.t.Iyka0d),
                                                                 headingVariant: 'text-md/semibold',
                                                                 headingIcon: (0, o.jsx)(s.P4T, {
@@ -270,11 +270,11 @@ function en(e) {
                                                                     setLineClamp: !1
                                                                 }),
                                                             eS.length > 0 &&
-                                                                (0, o.jsx)(q.Z, {
+                                                                (0, o.jsx)(z.Z, {
                                                                     heading: ee.intl.string(ee.t['Uv/eT0']),
                                                                     children: (0, o.jsx)(k.Z, { applicationIds: eS })
                                                                 }),
-                                                            (0, o.jsx)(q.Z, {
+                                                            (0, o.jsx)(z.Z, {
                                                                 heading: ee.intl.string(ee.t.a6XYDw),
                                                                 children: (0, o.jsx)(G.Z, {
                                                                     userId: n.id,
@@ -293,15 +293,15 @@ function en(e) {
                                                                     scrollIntoView: ea === Q.Tb.ROLES
                                                                 }),
                                                             eB.length > 0 &&
-                                                                (0, o.jsx)(q.Z, {
-                                                                    heading: ee.intl.string(ee.t.ZZ5jS0),
+                                                                (0, o.jsx)(z.Z, {
+                                                                    heading: ee.intl.string(ee.t['3fe7U1']),
                                                                     scrollIntoView: ea === Q.Tb.CONNECTIONS,
                                                                     children: (0, o.jsx)(X.Z, {
                                                                         connections: eB,
                                                                         userId: n.id
                                                                     })
                                                                 }),
-                                                            (0, o.jsx)(q.Z, {
+                                                            (0, o.jsx)(z.Z, {
                                                                 heading: ee.intl.string(ee.t['mQKv+v']),
                                                                 scrollIntoView: ea === Q.Tb.NOTE,
                                                                 children: (0, o.jsx)(d.Z, {
@@ -352,7 +352,7 @@ function en(e) {
                                 ]
                             }),
                             (0, o.jsx)(s.y5t, {
-                                children: (0, o.jsx)(z.Z, {
+                                children: (0, o.jsx)(q.Z, {
                                     user: n,
                                     currentUser: i,
                                     displayProfile: eI,

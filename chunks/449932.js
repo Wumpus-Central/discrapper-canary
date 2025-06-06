@@ -107,7 +107,7 @@ let j = (e) => {
         });
     if (null == j) return null;
     let S = y || (0, c.Z)(n),
-        E = (0, f.vd)(t.type);
+        x = (0, f.vd)(t.type);
     return (0, r.jsxs)('div', {
         className: v.activity,
         children: [
@@ -120,9 +120,9 @@ let j = (e) => {
                           user: j,
                           channel: t,
                           sortedVoiceStates: i,
-                          onOpenSpotifyTrack: E ? h.aG : void 0,
-                          onOpenSpotifyArtist: E ? h.d$ : void 0,
-                          onOpenSpotifyAlbum: E ? h.Z5 : void 0
+                          onOpenSpotifyTrack: x ? h.aG : void 0,
+                          onOpenSpotifyArtist: x ? h.d$ : void 0,
+                          onOpenSpotifyAlbum: x ? h.Z5 : void 0
                       })
                     : (0, r.jsx)(a.Z, {
                           type: a.P.VOICE_CHANNEL,

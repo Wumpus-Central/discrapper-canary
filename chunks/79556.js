@@ -21,8 +21,8 @@ var r = n(255367),
     C = n(496675),
     j = n(306680),
     S = n(9156),
-    E = n(594174),
-    x = n(109446),
+    x = n(594174),
+    E = n(109446),
     P = n(98597),
     I = n(648501),
     w = n(473403),
@@ -94,9 +94,9 @@ class M extends P.ZP {
               });
     }
     render() {
-        let { channel: e, guild: t, selected: n, muted: i, unread: l, hasActiveThreads: s, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: p, canReorderChannel: m, isSubscriptionGated: y, isFavoriteSuggestion: O, subtitle: v, forceTopLevelThread: _, embeddedApps: C, resolvedUnreadSetting: j, withGuildIcon: S, enableActivities: E } = this.props,
-            x = (0, b.jW)({ location: 'text_channel' }).entrypoints,
-            P = E && null != C && C.length > 0,
+        let { channel: e, guild: t, selected: n, muted: i, unread: l, hasActiveThreads: s, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: p, canReorderChannel: m, isSubscriptionGated: y, isFavoriteSuggestion: O, subtitle: v, forceTopLevelThread: _, embeddedApps: C, resolvedUnreadSetting: j, withGuildIcon: S, enableActivities: x } = this.props,
+            E = (0, b.jW)({ location: 'text_channel' }).entrypoints,
+            P = x && null != C && C.length > 0,
             I = (0, g.D)(v),
             N = (0, r.jsx)('li', {
                 className: o()(this.getClassName(), {
@@ -148,8 +148,8 @@ class M extends P.ZP {
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             this.renderChannelInfo(),
-                                            x && this.renderOptionsButton({ onContextMenu: this.handleContextMenu }),
-                                            !x &&
+                                            E && this.renderOptionsButton({ onContextMenu: this.handleContextMenu }),
+                                            !E &&
                                                 (0, r.jsxs)(r.Fragment, {
                                                     children: [this.renderInviteButton(), this.renderEditButton()]
                                                 })
@@ -208,7 +208,7 @@ class M extends P.ZP {
                             onAction: this.handleActivitiesPopoutClose,
                             channel: t
                         })
-                      : (0, r.jsx)(x.Z, L(D({}, e), { channel: this.props.channel }));
+                      : (0, r.jsx)(E.Z, L(D({}, e), { channel: this.props.channel }));
             }),
             R(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props;
@@ -225,7 +225,7 @@ class M extends P.ZP {
                             );
                     });
                 if (t.type === Z.d4z.DM) {
-                    let i = E.default.getUser(t.getRecipientId());
+                    let i = x.default.getUser(t.getRecipientId());
                     null != i &&
                         (0, u.jW)(e, async () => {
                             let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('53912'), n.e('56826'), n.e('45903')]).then(n.bind(n, 131404));
@@ -280,12 +280,12 @@ function U(e) {
             };
         }),
         b = (0, s.e7)([y.Z], () => y.Z.shouldIndicateNewChannel(n.id, t.id)),
-        { needSubscriptionToAccess: _, isSubscriptionGated: x } = (0, m.Z)(t.id),
+        { needSubscriptionToAccess: _, isSubscriptionGated: E } = (0, m.Z)(t.id),
         P = (0, s.e7)([S.ZP], () => S.ZP.isFavorite(n.id, t.id)),
         w = (0, s.e7)(
-            [E.default],
+            [x.default],
             () => {
-                let e = E.default.getCurrentUser();
+                let e = x.default.getCurrentUser();
                 return null != e && (!t.isNSFW() || e.nsfwAllowed);
             },
             [t]
@@ -295,7 +295,7 @@ function U(e) {
             channel: t,
             isChannelCollapsed: !1,
             isChannelSelected: a,
-            isSubscriptionGated: x,
+            isSubscriptionGated: E,
             needSubscriptionToAccess: _,
             isNewChannel: b,
             muted: o,
@@ -308,7 +308,7 @@ function U(e) {
         L(D({}, d, g, e), {
             hasActiveThreads: c,
             hasMoreActiveThreads: u,
-            isSubscriptionGated: x,
+            isSubscriptionGated: E,
             needSubscriptionToAccess: _,
             isNewChannel: b && e.canBeNewChannel,
             isFavoriteSuggestion: l && !P,

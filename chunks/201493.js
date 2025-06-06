@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(102888),
     _ = n(65839),
     y = n(453879),
-    x = n(408310),
-    C = n(75666),
+    C = n(408310),
+    x = n(75666),
     v = n(981631),
     j = n(400816);
 let O = (e) => {
@@ -31,7 +31,7 @@ let O = (e) => {
             isLoading: N
         } = (0, l.cj)([m.Z], () => {
             let e = m.Z.getCurrentCategoryId(O.id),
-                t = m.Z.getDirectoryEntries(O.id, e === C.AR.ALL ? null : e),
+                t = m.Z.getDirectoryEntries(O.id, e === x.AR.ALL ? null : e),
                 n = m.Z.getDirectoryCategoryCounts(O.id);
             return {
                 currentCategoryId: e,
@@ -64,7 +64,7 @@ let O = (e) => {
                 searchResults: f.Z.getSearchResults(O.id, e)
             };
         }),
-        [k, M] = i.useState(A),
+        [M, k] = i.useState(A),
         L = '' !== A,
         { showHubEventsList: D } = c.Z.useExperiment(
             {
@@ -83,7 +83,7 @@ let O = (e) => {
     }),
         i.useEffect(() => {
             let { mostRecentQuery: e, showHubEventsList: t } = B.current;
-            h.c$(O.id), h.YZ(O.id), t && p.c(O.id), M(e);
+            h.c$(O.id), h.YZ(O.id), t && p.c(O.id), k(e);
         }, [O.id]),
         i.useEffect(() => {
             d.default.track(v.rMx.GUILD_DIRECTORY_CHANNEL_VIEWED, {
@@ -92,7 +92,7 @@ let O = (e) => {
                 primary_category_id: I
             });
         }, [O.id, E.id, I]);
-    let G = (0, g.G)(O)
+    let F = (0, g.G)(O)
             ? () => {
                   (0, a.ZDy)(async () => {
                       let { default: e } = await n.e('79764').then(n.bind(n, 533202));
@@ -130,7 +130,7 @@ let O = (e) => {
                                       directoryGuildName: E.name,
                                       directoryGuildId: E.id,
                                       directoryChannelId: O.id,
-                                      currentCategoryId: I === C.AR.ALL ? null : I
+                                      currentCategoryId: I === x.AR.ALL ? null : I
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -150,26 +150,26 @@ let O = (e) => {
                   });
               }
             : void 0,
-        F = (e) => {
-            0 !== k.trim().length &&
+        G = (e) => {
+            0 !== M.trim().length &&
                 e.charCode === v.yXg.ENTER &&
-                (h.Rq(O.id, k),
+                (h.Rq(O.id, M),
                 d.default.track(v.rMx.GUILD_DIRECTORY_SEARCH, {
                     directory_channel_id: O.id,
                     directory_guild_id: E.id
                 }));
         },
         H = () => {
-            M(''), h.So(O.id);
+            k(''), h.So(O.id);
         };
     return L
-        ? (0, r.jsx)(x.Z, {
-              searchQuery: k,
-              setSearchQuery: M,
+        ? (0, r.jsx)(C.Z, {
+              searchQuery: M,
+              setSearchQuery: k,
               mostRecentQuery: A,
-              handleSearchKeyPress: F,
+              handleSearchKeyPress: G,
               handleClearSearch: H,
-              handleCreateOrAddGuild: G,
+              handleCreateOrAddGuild: F,
               searchResults: R,
               searchFetching: w
           })
@@ -183,16 +183,16 @@ let O = (e) => {
                   className: j.pageContainer,
                   children: (0, r.jsx)(b.Z, {
                       guild: E,
-                      onAddGuild: G
+                      onAddGuild: F
                   })
               })
             : (0, r.jsx)(_.Z, {
                   channel: O,
-                  searchQuery: k,
-                  setSearchQuery: M,
-                  handleSearchKeyPress: F,
+                  searchQuery: M,
+                  setSearchQuery: k,
+                  handleSearchKeyPress: G,
                   handleClearSearch: H,
-                  handleCreateOrAddGuild: G,
+                  handleCreateOrAddGuild: F,
                   currentCategoryId: I,
                   handleSelectCategory: (e) => {
                       h.Su(O.id, e);

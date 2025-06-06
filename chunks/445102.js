@@ -1,19 +1,21 @@
-o.d(t, { Z: () => i });
-var n = o(131951),
-    r = o(626135);
-function i(e, t) {
-    let { rating: o, category: i, reasonCode: l, reasonDescription: a, variant: s, feedback: c, analyticsData: u } = t,
-        d = n.Z.getSettings(),
-        b = n.Z.getInputDeviceId(),
-        m = n.Z.getInputDevices()[b],
-        p = n.Z.getOutputDeviceId(),
-        _ = n.Z.getOutputDevices()[p],
-        f = n.Z.getVideoDeviceId(),
-        h = n.Z.getVideoDevices()[f],
-        g = n.Z.getNoiseCancellation(),
-        O = n.Z.getMediaEngine().getAudioSubsystem(),
-        v = n.Z.getMediaEngine().getAudioLayer();
-    r.default.track(
+o.d(t, { Z: () => l });
+var n = o(311473),
+    r = o(131951),
+    i = o(626135);
+async function l(e, t) {
+    let { rating: o, category: l, reasonCode: a, reasonDescription: s, variant: c, feedback: u, analyticsData: d } = t,
+        b = r.Z.getSettings(),
+        p = r.Z.getInputDeviceId(),
+        m = r.Z.getInputDevices()[p],
+        _ = r.Z.getOutputDeviceId(),
+        f = r.Z.getOutputDevices()[_],
+        h = r.Z.getVideoDeviceId(),
+        g = r.Z.getVideoDevices()[h],
+        O = r.Z.getNoiseCancellation(),
+        v = r.Z.getMediaEngine().getAudioSubsystem(),
+        y = r.Z.getMediaEngine().getAudioLayer(),
+        x = await n.Z.getKrispModel();
+    i.default.track(
         e,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -42,27 +44,29 @@ function i(e, t) {
         })(
             {
                 rating: null != o ? o : 'no response',
-                category: i,
-                reason_code: l,
-                reason_description: a,
-                reason_variant: s,
-                feedback: c,
-                audio_input_mode: d.mode,
-                automatic_audio_input_sensitivity_enabled: d.modeOptions.autoThreshold,
-                audio_input_sensitivity: d.modeOptions.threshold,
-                echo_cancellation_enabled: d.echoCancellation,
-                noise_suppression_enabled: d.noiseSuppression,
-                automatic_gain_control_enabled: d.automaticGainControl,
-                voice_output_volume: d.outputVolume,
-                noise_cancellation_enabled: g,
+                category: l,
+                reason_code: a,
+                reason_description: s,
+                reason_variant: c,
+                feedback: u,
+                audio_input_mode: b.mode,
+                automatic_audio_input_sensitivity_enabled: b.modeOptions.autoThreshold,
+                audio_input_sensitivity: b.modeOptions.threshold,
+                vad_use_advanced_voice_activity: b.modeOptions.vadUseKrisp,
+                echo_cancellation_enabled: b.echoCancellation,
+                noise_suppression_enabled: b.noiseSuppression,
+                automatic_gain_control_enabled: b.automaticGainControl,
+                voice_output_volume: b.outputVolume,
+                noise_cancellation_enabled: O,
                 input_device_name: null == m ? void 0 : m.name,
-                output_device_name: null == _ ? void 0 : _.name,
-                video_device_name: null == h ? void 0 : h.name,
-                audio_subsystem: O,
-                audio_layer: v,
-                automatic_audio_subsystem: d.automaticAudioSubsystem
+                output_device_name: null == f ? void 0 : f.name,
+                video_device_name: null == g ? void 0 : g.name,
+                audio_subsystem: v,
+                audio_layer: y,
+                automatic_audio_subsystem: b.automaticAudioSubsystem,
+                krisp_nc_model: x
             },
-            u
+            d
         )
     );
 }

@@ -26,8 +26,8 @@ var r = n(255367),
     C = n(624138),
     j = n(667815),
     S = n(531572),
-    E = n(26323),
-    x = n(30513),
+    x = n(26323),
+    E = n(30513),
     P = n(981631),
     I = n(388032),
     w = n(155457),
@@ -139,7 +139,7 @@ let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                     guild_id: t.id,
                     location_stack: u
                 }),
-                    (0, E.Z)({
+                    (0, x.Z)({
                         analyticsLocations: u,
                         analyticsSourceLocation: {
                             page: P.ZY5.GUILD_CHANNEL,
@@ -147,7 +147,7 @@ let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                             object: P.qAy.TOOLTIP
                         },
                         guild: t,
-                        perks: (0, x.VF)(),
+                        perks: (0, E.VF)(),
                         perkIntro: I.intl.string(I.t.ZhvSn5)
                     });
             },

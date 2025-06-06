@@ -21,8 +21,8 @@ var r = n(255367),
     C = n(682662),
     j = n(662146),
     S = n(981631),
-    E = n(388032),
-    x = n(728492),
+    x = n(388032),
+    E = n(728492),
     P = n(335426);
 let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
     w = (0, a.animated)(h.Kqy),
@@ -59,7 +59,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 },
                 [M, a]
             ),
-            er = null != z && '' !== z ? z : null != T && '' !== T ? T : E.intl.string(E.t.xV9hVl),
+            er = null != z && '' !== z ? z : null != T && '' !== T ? T : x.intl.string(x.t.xV9hVl),
             ei = (0, c.Ie)(''.concat(F)),
             el = 'folder-items-'.concat(F),
             eo = (function (e) {
@@ -95,8 +95,8 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                       ee(e);
                                   }
                                 : void 0,
-                            className: o()(x.folderHeader, {
-                                [x.folderHeaderSmall]: 'icon' === G || J,
+                            className: o()(E.folderHeader, {
+                                [E.folderHeaderSmall]: 'icon' === G || J,
                                 [P.wobble]: !$ && q && !a
                             }),
                             'data-dnd-name': er,
@@ -135,14 +135,14 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
             ed = eu === S.Wyy ? void 0 : (0, u.Rf)(eu);
         return (0, r.jsxs)('div', {
             ref: ea,
-            className: o()(x.folderGroup, {
-                [x.isExpanded]: a,
-                [x.isHovering]: X
+            className: o()(E.folderGroup, {
+                [E.isExpanded]: a,
+                [E.isHovering]: X
             }),
             style: { '--custom-folder-color': null != ed ? ed : '' },
             'data-drop-hovering': q,
             children: [
-                !$ && a && (0, r.jsx)('span', { className: x.folderGroupBackground }),
+                !$ && a && (0, r.jsx)('span', { className: E.folderGroupBackground }),
                 ec,
                 es((e, n, i) => {
                     let { key: l } = i;
@@ -155,7 +155,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                 role: 'group',
                                 as: 'ul',
                                 gap: 'xs',
-                                className: x.folderGuildsList,
+                                className: E.folderGuildsList,
                                 style: { height: e.height.to((e) => e * eo) },
                                 'aria-label': t.name,
                                 children: W.map((t, n) => U(t, n, W.length, e.height))

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => G }), n(388685);
+n.d(t, { Z: () => F }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(786915),
     _ = n(402113),
     y = n(592125),
-    x = n(271383),
-    C = n(944486),
+    C = n(271383),
+    x = n(944486),
     v = n(594174),
     j = n(585483),
     O = n(51144),
@@ -31,31 +31,31 @@ var r = n(255367),
     A = n(884338),
     w = n(719296),
     R = n(651612),
-    k = n(918559),
-    M = n(981631),
+    M = n(918559),
+    k = n(981631),
     L = n(388032),
     D = n(199570);
 let U = A.u.SIZE_32,
     B = {
-        [k.MI.NO_CHAT]: D.noChat,
-        [k.MI.RESIZABLE]: D.resizable
+        [M.MI.NO_CHAT]: D.noChat,
+        [M.MI.RESIZABLE]: D.resizable
     };
-function G(e) {
+function F(e) {
     var t, n, l;
-    let { maxHeight: G, connectedLocation: F, renderExternalHeader: H } = e,
+    let { maxHeight: F, connectedLocation: G, renderExternalHeader: H } = e,
         V = (0, N.Z)(),
-        z = (0, s.Wu)([I.ZP], () => I.ZP.getEmbeddedActivitiesForLocation(F), [F]),
-        W = (0, Z.pY)(F),
+        z = (0, s.Wu)([I.ZP], () => I.ZP.getEmbeddedActivitiesForLocation(G), [G]),
+        W = (0, Z.pY)(G),
         Y = (0, s.e7)([y.Z], () => y.Z.getChannel(W)),
         q = (0, P.gb)(z),
         K = (0, P.uF)(q),
         X = i.useCallback(() => {
-            (0, E.tg)(k.Ez.PIP);
+            (0, E.tg)(M.Ez.PIP);
         }, []),
         Q = i.useRef(null),
         J = (0, s.e7)([I.ZP], () => I.ZP.getFocusedLayout()),
-        $ = J !== k.MI.NO_CHAT,
-        [ee, et] = i.useState(null != (n = null != (t = m.ZP.activityPanelHeight) ? t : G) ? n : null),
+        $ = J !== M.MI.NO_CHAT,
+        [ee, et] = i.useState(null != (n = null != (t = m.ZP.activityPanelHeight) ? t : F) ? n : null),
         en = i.useCallback((e) => {
             d.ZP.updatedUnsyncedSettings({ activityPanelHeight: e });
         }, []),
@@ -75,23 +75,23 @@ function G(e) {
         });
         return e.observe(er.current), () => e.disconnect();
     }, []);
-    let ea = ei.width / Math.max(ei.height, 1) < k.I0,
+    let ea = ei.width / Math.max(ei.height, 1) < M.I0,
         eo = 0,
         es = 0,
         ec = (0, S.Z)(null == V ? void 0 : V.id);
     if (!ec) {
         let e = ei.width,
             t = ei.height;
-        ea ? ((t = ei.width / k.I0) > ei.height && (e = (t = ei.height) * k.I0), (es = (ei.height - t) / 2)) : ((e = Math.min(ei.height * k.I0)) > ei.width && (t = (e = ei.width) / k.I0), (eo = (ei.width - e) / 2));
+        ea ? ((t = ei.width / M.I0) > ei.height && (e = (t = ei.height) * M.I0), (es = (ei.height - t) / 2)) : ((e = Math.min(ei.height * M.I0)) > ei.width && (t = (e = ei.width) / M.I0), (eo = (ei.width - e) / 2));
     }
     let eu = K.get(null != (l = null == V ? void 0 : V.id) ? l : ''),
-        ed = F.kind === o.E.CONTEXTLESS,
-        ep = (0, s.e7)([C.Z], () => C.Z.getChannelId()),
+        ed = G.kind === o.E.CONTEXTLESS,
+        ep = (0, s.e7)([x.Z], () => x.Z.getChannelId()),
         eh = (0, s.Wu)(
-            [x.ZP],
+            [C.ZP],
             () => {
                 var e;
-                return null == Y ? [] : Array.from(null != (e = null == eu ? void 0 : eu.embeddedActivity.userIds) ? e : []).map((e) => x.ZP.getMember(Y.guild_id, e));
+                return null == Y ? [] : Array.from(null != (e = null == eu ? void 0 : eu.embeddedActivity.userIds) ? e : []).map((e) => C.ZP.getMember(Y.guild_id, e));
             },
             [eu, Y]
         ),
@@ -170,7 +170,7 @@ function G(e) {
                       r)
                     : l;
             }, [s, e, n, t]);
-        })($, ee, G);
+        })($, ee, F);
     if (null == V) return null;
     let eg = [];
     null != eu &&
@@ -201,7 +201,7 @@ function G(e) {
         );
     };
     return (0, r.jsx)(u.f6W, {
-        theme: M.BRd.DARK,
+        theme: k.BRd.DARK,
         children: (e) =>
             (0, r.jsxs)('div', {
                 className: a()(D.wrapper, B[J], e, { [D.contextlessActivityWrapper]: ed }),
@@ -239,7 +239,7 @@ function G(e) {
                                                       renderUser: eb
                                                   }),
                                                   (0, r.jsx)(b.Z, {
-                                                      appContext: M.IlC.APP,
+                                                      appContext: k.IlC.APP,
                                                       applicationId: V.id,
                                                       shouldPrioritizeGroupPlusIcon: !0,
                                                       isContextlessActivity: ed,
@@ -253,7 +253,7 @@ function G(e) {
                                           }),
                                           (0, r.jsx)(_.Z, {
                                               applicationId: V.id,
-                                              location: F,
+                                              location: G,
                                               centerButton: !0,
                                               color: 'disconnect',
                                               applyStyles: ed,
@@ -275,7 +275,7 @@ function G(e) {
                                 ref: er,
                                 children: (0, r.jsx)(T.Z, {
                                     className: D.iframe,
-                                    embedId: (0, w.Z)(F.id, V.id)
+                                    embedId: (0, w.Z)(G.id, V.id)
                                 })
                             }),
                             ed || null == ep
@@ -311,7 +311,7 @@ function G(e) {
                                                       className: D.leaveButtonContainer,
                                                       children: (0, r.jsx)(_.Z, {
                                                           applicationId: V.id,
-                                                          location: F,
+                                                          location: G,
                                                           centerButton: !0,
                                                           color: 'disconnect',
                                                           isActivityInCall: !1
@@ -324,16 +324,16 @@ function G(e) {
                                   })
                         ]
                     }),
-                    $ && null != G
+                    $ && null != F
                         ? (0, r.jsx)(f.Z, {
                               minHeight: 480,
-                              maxHeight: G,
+                              maxHeight: F,
                               resizableNode: Q,
                               onResize: (e) => {
-                                  j.S.dispatch(M.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), et(e);
+                                  j.S.dispatch(k.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), et(e);
                               },
                               onResizeEnd: (e) => {
-                                  j.S.dispatch(M.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), en(e);
+                                  j.S.dispatch(k.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), en(e);
                               }
                           })
                         : null

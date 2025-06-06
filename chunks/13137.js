@@ -9,8 +9,8 @@ var n = o(255367),
     u = o(493773),
     d = o(110924),
     b = o(600164),
-    m = o(313201),
-    p = o(572539),
+    p = o(313201),
+    m = o(572539),
     _ = o(63063),
     f = o(764920),
     h = o(531578),
@@ -78,11 +78,11 @@ function y(e) {
     r.useEffect(() => {
         s().isEqual(I, P) || Z(v(P));
     }, [P, I]);
-    let F = (0, m.Dt)(),
-        [A, M] = r.useState(!1),
+    let F = (0, p.Dt)(),
+        [M, A] = r.useState(!1),
         [T, B] = r.useState(S),
         [H, V] = r.useState(null),
-        [z, U] = r.useState(null),
+        [U, z] = r.useState(null),
         [J, X] = r.useState('');
     (0, u.ZP)(a),
         (0, u.zq)(() => {
@@ -90,8 +90,8 @@ function y(e) {
             y({
                 rating: T,
                 category: null != (e = null == H ? void 0 : H.value) ? e : null,
-                problem: z,
-                dontShowAgain: A,
+                problem: U,
+                dontShowAgain: M,
                 feedback: J
             });
         });
@@ -119,8 +119,8 @@ function y(e) {
                               children: (0, n.jsx)(c.XZJ, {
                                   type: c.XZJ.Types.INVERTED,
                                   size: 18,
-                                  value: A,
-                                  onChange: () => M(!A),
+                                  value: M,
+                                  onChange: () => A(!M),
                                   children: (0, n.jsx)(c.Text, {
                                       variant: 'text-sm/normal',
                                       children: g.intl.string(g.t['5E9SBw'])
@@ -136,7 +136,7 @@ function y(e) {
                     children: (0, n.jsx)(c.xJW, {
                         title: E,
                         className: l()(O.problemInfo, O.presetList, { [O.marginBottom16]: D }),
-                        children: (0, n.jsx)(p.Z, {
+                        children: (0, n.jsx)(m.Z, {
                             options: N,
                             onClick: V,
                             hideCaret: () => !0
@@ -144,17 +144,17 @@ function y(e) {
                     })
                 })),
                 (i = () => B(null)))
-              : null != H && null == z
+              : null != H && null == U
                 ? ((o = (0, n.jsx)(c.hzk, {
                       className: O.__invalid_content,
                       children: (0, n.jsx)(c.xJW, {
                           title: H.problemsHeader,
                           className: l()(O.problemInfo, O.presetList, { [O.marginBottom16]: D }),
-                          children: (0, n.jsx)(p.Z, {
+                          children: (0, n.jsx)(m.Z, {
                               options: H.problemOptions,
                               onClick: function (e) {
                                   var t;
-                                  U(e), null != H && null != e && (null == (t = H.freeformConfig) ? void 0 : t.value) !== e.value && x();
+                                  z(e), null != H && null != e && (null == (t = H.freeformConfig) ? void 0 : t.value) !== e.value && x();
                               },
                               hideCaret: (e) => {
                                   var t;
@@ -166,8 +166,8 @@ function y(e) {
                   })),
                   (i = () => V(null)))
                 : null != H &&
-                  null != z &&
-                  (null == (t = H.freeformConfig) ? void 0 : t.value) === z.value &&
+                  null != U &&
+                  (null == (t = H.freeformConfig) ? void 0 : t.value) === U.value &&
                   ((o = (0, n.jsx)(c.hzk, {
                       className: O.__invalid_content,
                       children: (0, n.jsxs)(c.xJW, {
@@ -190,7 +190,7 @@ function y(e) {
                       })
                   })),
                   (i = () => {
-                      X(''), U(null);
+                      X(''), z(null);
                   }),
                   (W = !0)),
         (0, n.jsxs)(c.Y0X, {

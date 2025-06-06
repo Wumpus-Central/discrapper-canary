@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(51144),
     _ = n(967128),
     y = n(981631),
-    x = n(388032),
-    C = n(128337);
+    C = n(388032),
+    x = n(128337);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,7 +65,7 @@ function O(e) {
     var t, l;
     let { userId: p, channel: _ } = e,
         y = i.useRef(null),
-        { analyticsLocations: x } = (0, d.ZP)(u.Z.USERNAME),
+        { analyticsLocations: C } = (0, d.ZP)(u.Z.USERNAME),
         O = (0, o.e7)([g.default], () => g.default.getUser(p)),
         E = (0, o.e7)([m.ZP], () => (null != p ? m.ZP.getMember(_.guild_id, p) : null)),
         I = (0, h.X)(_.guild_id, null == E ? void 0 : E.colorStrings);
@@ -88,11 +88,11 @@ function O(e) {
         Z = null == E ? void 0 : E.colorString;
     return null == O
         ? (0, r.jsx)('span', {
-              className: a()(C.threadCreatorName, C.unknownCreatorName),
+              className: a()(x.threadCreatorName, x.unknownCreatorName),
               children: S
           })
         : (0, r.jsx)(d.Gt, {
-              value: x,
+              value: C,
               children: (0, r.jsx)(f.Z, {
                   targetElementRef: y,
                   user: O,
@@ -106,7 +106,7 @@ function O(e) {
                           j(v({}, e), {
                               innerRef: y,
                               tag: 'span',
-                              className: C.threadCreatorName,
+                              className: x.threadCreatorName,
                               onContextMenu: P,
                               children: (0, r.jsx)(s.PUh, {
                                   name: S,
@@ -129,8 +129,8 @@ function E(e) {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
                       children: (0, r.jsx)('div', {
-                          className: C.subtitle,
-                          children: x.intl.format(x.t.imPXd3, {
+                          className: x.subtitle,
+                          children: C.intl.format(C.t.imPXd3, {
                               usernameHook: (e, n) =>
                                   (0, r.jsx)(
                                       O,
@@ -147,7 +147,7 @@ function E(e) {
                       ? (0, r.jsx)(s.Text, {
                             variant: 'text-md/normal',
                             color: 'header-secondary',
-                            children: x.intl.string(x.t['1awbZG'])
+                            children: C.intl.string(C.t['1awbZG'])
                         })
                       : null
               ]
@@ -161,8 +161,8 @@ function I(e) {
         channelId: n.id,
         children: [
             (0, r.jsx)('div', {
-                className: C.iconWrapper,
-                children: (0, r.jsx)(i, { className: C.icon })
+                className: x.iconWrapper,
+                children: (0, r.jsx)(i, { className: x.icon })
             }),
             (0, r.jsx)(_.Ot, { children: n.name }),
             (0, r.jsx)(E, { channel: n })

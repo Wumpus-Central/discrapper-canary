@@ -1,29 +1,30 @@
 n.d(t, {
-    G: () => v,
-    d: () => j
+    G: () => j,
+    d: () => O
 }),
     n(539854),
     n(388685),
     n(415506);
 var r = n(475179),
-    i = n(166459),
-    l = n(966390),
+    i = n(904245),
+    l = n(166459),
     a = n(531643),
     o = n(141795),
     s = n(476326),
     c = n(367907),
     u = n(358221),
-    d = n(117530),
-    p = n(594174),
-    h = n(626135),
-    f = n(403182),
-    m = n(74538),
-    g = n(979956),
-    b = n(981631),
-    _ = n(959517),
-    y = n(474936),
+    d = n(58873),
+    p = n(117530),
+    h = n(594174),
+    f = n(626135),
+    m = n(403182),
+    g = n(74538),
+    b = n(979956),
+    _ = n(981631),
+    y = n(959517),
+    C = n(474936),
     x = n(388032);
-function C(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,10 +49,10 @@ function C(e) {
     }
     return e;
 }
-function v(e, t) {
-    let n = p.default.getCurrentUser(),
+function j(e, t) {
+    let n = h.default.getCurrentUser(),
         r = e.getGuildId(),
-        i = f.dg(r),
+        i = m.dg(r),
         l = [],
         o = 0,
         s = 0,
@@ -59,82 +60,100 @@ function v(e, t) {
         d = [];
     for (let e of t) (u += 1), (o += e.size), l.push(e.size), e.size > s && (s = e.size), null != e.type ? d.push(e.type) : d.push('unknown');
     if (s > i) {
-        (0, c.yw)(b.rMx.FILE_SIZE_LIMIT_EXCEEDED, {
+        (0, c.yw)(_.rMx.FILE_SIZE_LIMIT_EXCEEDED, {
             channel_id: e.id,
             guild_id: r,
             user_individual_file_size_limit: i,
             pre_compression_file_sizes: l,
             pre_compression_aggregate_file_size: o,
             num_attachments: u,
-            error_type: _.xi.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
+            error_type: y.xi.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
             attachment_mimetypes: d
         }),
             (0, a.openUploadError)({
                 title: x.intl.string(x.t['/tGlcn']),
-                help: (0, g.BK)(n, r),
-                showPremiumUpsell: !(0, m.M5)(n, y.p9.TIER_2),
+                help: (0, b.BK)(n, r),
+                showPremiumUpsell: !(0, g.M5)(n, C.p9.TIER_2),
                 fileSize: s
             });
         return;
     }
     (0, a.openUploadError)({
         title: x.intl.string(x.t['/tGlcn']),
-        help: x.intl.formatToPlainString(x.t.tUOJdH, { maxSize: f.Ng(f.OC()) })
+        help: x.intl.formatToPlainString(x.t.tUOJdH, { maxSize: m.Ng(m.OC()) })
     });
 }
-function j(e, t, n) {
-    let { filesMetadata: c, requireConfirm: p = !0, showLargeMessageDialog: f = !1, isThumbnail: m = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+function O(e, t, n) {
+    let { filesMetadata: c, requireConfirm: h = !0, showLargeMessageDialog: m = !1, isThumbnail: g = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (e.length < 1) return;
     if (null != c && c.length !== e.length) throw Error('Unexpected mismatch between files and file metadata');
-    let _ = t.getGuildId();
-    if ((0, g.Bf)(e, _)) return void v(t, e);
-    if (d.Z.getUploadCount(t.id, n) + e.length > b.dN1) {
+    let y = t.getGuildId();
+    if ((0, b.Bf)(e, y)) return void j(t, e);
+    if (p.Z.getUploadCount(t.id, n) + e.length > _.dN1) {
         (0, a.openUploadError)({
             title: x.intl.string(x.t.wOr6hI),
-            help: x.intl.formatToPlainString(x.t['qqyp/f'], { limit: b.dN1 })
+            help: x.intl.formatToPlainString(x.t['qqyp/f'], { limit: _.dN1 })
         }),
-            h.default.track(b.rMx.UPLOAD_FILE_LIMIT_ERROR, {
-                existing_count: d.Z.getUploadCount(t.id, n),
+            f.default.track(_.rMx.UPLOAD_FILE_LIMIT_ERROR, {
+                existing_count: p.Z.getUploadCount(t.id, n),
                 new_count: e.length
             });
         return;
     }
-    if (((t.type !== b.d4z.GUILD_VOICE && t.type !== b.d4z.GUILD_STAGE_VOICE) || u.Z.getChatOpen(t.id) || r.Z.updateChatOpen(t.id, !0), p)) {
+    if (((t.type !== _.d4z.GUILD_VOICE && t.type !== _.d4z.GUILD_STAGE_VOICE) || u.Z.getChatOpen(t.id) || r.Z.updateChatOpen(t.id, !0), h)) {
         let r = Array.from(e).map((e, t) =>
-            C(
+            v(
                 {
                     file: e,
                     platform: s.ow.WEB,
-                    isThumbnail: m
+                    isThumbnail: g
                 },
                 null == c ? void 0 : c[t]
             )
         );
-        i.Z.addFiles({
+        l.Z.addFiles({
             files: r,
             channelId: t.id,
-            showLargeMessageDialog: f,
+            showLargeMessageDialog: m,
             draftType: n
         });
     } else {
-        let r = Array.from(e).map((e, n) => {
+        let n = Array.from(e).map((e, n) => {
             let r = null != c ? c[n] : {};
             return new o.n(
-                C(
+                v(
                     {
                         file: e,
                         platform: s.ow.WEB,
-                        isThumbnail: m
+                        isThumbnail: g
                     },
                     r
                 ),
                 t.id
             );
         });
-        l.Z.uploadFiles({
-            channelId: t.id,
-            uploads: r,
-            draftType: n
-        });
+        i.Z.sendMessage(
+            t.id,
+            {
+                content: '',
+                tts: !1,
+                invalidEmojis: [],
+                validNonShortcutEmojis: []
+            },
+            void 0,
+            {
+                eagerDispatch: !1,
+                attachmentsToUpload: n,
+                onAttachmentUploadError: (e, n, r) => {
+                    (0, d.A)({
+                        file: e,
+                        guildId: t.getGuildId(),
+                        analyticsLocations: [],
+                        code: n,
+                        reason: r
+                    });
+                }
+            }
+        );
     }
 }

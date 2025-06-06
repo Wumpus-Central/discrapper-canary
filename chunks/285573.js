@@ -16,16 +16,16 @@ var r = n(255367),
     b = n(915887);
 let y = (0, c.B)(function (e) {
     let { guild: t, selectedChannelId: l, position: c, disableManageChannels: y, sorting: O, sortingType: v, sortingPosition: _, connectChannelDragSource: C, connectChannelDropTarget: j, tabIndex: S } = e,
-        E = (0, s.e7)([u.Z, d.ZP], () => {
+        x = (0, s.e7)([u.Z, d.ZP], () => {
             let e = d.ZP.getDirectoryChannelIds(t.id);
             return 0 === e.length ? null : u.Z.getChannel(e[0]);
         }),
-        x = (0, s.e7)([u.Z], () => u.Z.getChannel(null == E ? void 0 : E.parent_id)),
-        P = l === (null == E ? void 0 : E.id),
-        I = (0, s.e7)([h.Z], () => (null != x ? h.Z.can(g.Plq.MANAGE_CHANNELS, x) : null != t && h.Z.can(g.Plq.MANAGE_CHANNELS, t))),
+        E = (0, s.e7)([u.Z], () => u.Z.getChannel(null == x ? void 0 : x.parent_id)),
+        P = l === (null == x ? void 0 : x.id),
+        I = (0, s.e7)([h.Z], () => (null != E ? h.Z.can(g.Plq.MANAGE_CHANNELS, E) : null != t && h.Z.can(g.Plq.MANAGE_CHANNELS, t))),
         w = i.useCallback(
             (e) => {
-                null != E &&
+                null != x &&
                     (0, a.jW)(e, async () => {
                         let { default: e } = await n.e('70623').then(n.bind(n, 99334));
                         return (t) => {
@@ -57,7 +57,7 @@ let y = (0, c.B)(function (e) {
                                     }
                                     return e;
                                 })({}, t)),
-                                (i = i = { channel: E }),
+                                (i = i = { channel: x }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                     : (function (e, t) {
@@ -75,20 +75,20 @@ let y = (0, c.B)(function (e) {
                         };
                     });
             },
-            [E]
+            [x]
         );
-    if (null == E) return null;
+    if (null == x) return null;
     let N = (0, p.jo)(c, _),
-        Z = (0, p.CN)(E, O, v),
+        Z = (0, p.CN)(x, O, v),
         T = (0, r.jsx)('div', {
             className: o()(N, {
                 [b.disabled]: Z,
                 [b.selected]: P
             }),
-            'data-dnd-name': E.name,
+            'data-dnd-name': x.name,
             children: (0, r.jsxs)(f.ZP, {
                 className: b.iconVisibility,
-                channel: E,
+                channel: x,
                 guild: t,
                 selected: P,
                 onContextMenu: w,
@@ -96,11 +96,11 @@ let y = (0, c.B)(function (e) {
                 resolvedUnreadSetting: m.i.ONLY_MENTIONS,
                 children: [
                     (0, r.jsx)(p.eP, {
-                        channel: E,
+                        channel: x,
                         tabIndex: S
                     }),
                     (0, r.jsx)(p.hR, {
-                        channel: E,
+                        channel: x,
                         disableManageChannels: y,
                         tabIndex: S
                     })

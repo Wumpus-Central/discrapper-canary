@@ -21,8 +21,8 @@ var r = n(255367),
     C = n(358221),
     j = n(540059),
     S = n(706590),
-    E = n(940777),
-    x = n(41776),
+    x = n(940777),
+    E = n(41776),
     P = n(821020),
     I = n(770858),
     w = n(905423),
@@ -237,7 +237,7 @@ function eu(e) {
         u = i.concat(a),
         { notificationCenterVariant: d } = P.L.useExperiment({ location: 'GuildsBar' });
     return (0, r.jsxs)(r.Fragment, {
-        children: [(0, r.jsx)(K.u, {}), null !== d && (0, r.jsx)(I.Z, {}), l ? (0, r.jsx)(E.Z, {}) : null, (0, r.jsx)(Y.Z, { isOnHubVerificationRoute: s }), !t && (0, r.jsx)(V.Z, {}), u.map((e) => (0, r.jsx)(ee.Z, { guildId: e }, e)), (0, r.jsx)($.Z, { onActivate: n })]
+        children: [(0, r.jsx)(K.u, {}), null !== d && (0, r.jsx)(I.Z, {}), l ? (0, r.jsx)(x.Z, {}) : null, (0, r.jsx)(Y.Z, { isOnHubVerificationRoute: s }), !t && (0, r.jsx)(V.Z, {}), u.map((e) => (0, r.jsx)(ee.Z, { guildId: e }, e)), (0, r.jsx)($.Z, { onActivate: n })]
     });
 }
 function ed(e) {
@@ -286,12 +286,12 @@ function eh(e) {
             let e = L.ZP.getGuildsTree();
             return [e, e.version];
         }),
-        p = (0, h.e7)([x.Z], () => x.Z.lurkingGuildIds()),
+        p = (0, h.e7)([E.Z], () => E.Z.lurkingGuildIds()),
         b = i.useMemo(() => (n ? [] : p), [p, n]),
         O = (0, h.e7)([C.Z], () => C.Z.isFullscreenInContext()),
-        [S, E] = i.useState(!1),
-        P = i.useCallback(() => E(!0), []),
-        I = i.useCallback(() => E(!1), []),
+        [S, x] = i.useState(!1),
+        P = i.useCallback(() => x(!0), []),
+        I = i.useCallback(() => x(!1), []),
         R = i.useRef(!1),
         [D] = i.useState(() => new f.V7()),
         k = i.useRef(null),
@@ -420,16 +420,16 @@ function eh(e) {
             scrollToBottom: ep.scrollToBottom
         }),
         { shouldShow: eC, questId: ej, onDiscoveryButtonClick: eS } = e_,
-        eE = es(e_, ['shouldShow', 'questId', 'onDiscoveryButtonClick']),
-        ex = eO && eC,
+        ex = es(e_, ['shouldShow', 'questId', 'onDiscoveryButtonClick']),
+        eE = eO && eC,
         eP = (0, r.jsx)(W.Z, {
             ref: ev,
-            questId: ex ? ej : void 0,
+            questId: eE ? ej : void 0,
             selected: em,
             className: er.discoveryIcon,
-            onClick: ex ? eS : void 0
+            onClick: eE ? eS : void 0
         }),
-        eI = ex
+        eI = eE
             ? (0, r.jsx)(
                   Z.fO,
                   eo(
@@ -438,7 +438,7 @@ function eh(e) {
                               targetElementRef: ev,
                               isGuildBarScrolling: Y
                           },
-                          eE
+                          ex
                       ),
                       { children: eP }
                   )

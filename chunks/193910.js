@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(488131),
     _ = n(375954),
     y = n(626135),
-    x = n(585483),
-    C = n(403182),
+    C = n(585483),
+    x = n(403182),
     v = n(127654),
     j = n(752305),
     O = n(951211),
@@ -54,8 +54,8 @@ function T() {
     );
 }
 function A(e) {
-    let { channel: t, options: a, onFileUpload: f, onClose: m, onSelect: _, draftType: A, editorTextContent: w, setValue: R, openClips: k } = e,
-        { analyticsLocations: M } = (0, p.ZP)(),
+    let { channel: t, options: a, onFileUpload: f, onClose: m, onSelect: _, draftType: A, editorTextContent: w, setValue: R, openClips: M } = e,
+        { analyticsLocations: k } = (0, p.ZP)(),
         L = (0, g.Dt)({ channel: t });
     function D() {
         (0, b.R6)(t, void 0, 'Plus Button');
@@ -64,9 +64,9 @@ function A(e) {
         y.default.track(E.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R('/', (0, j.JM)('/'));
     }
     function B() {
-        k();
+        M();
     }
-    function G() {
+    function F() {
         (0, h.EW)(o.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: I.L.TAKE_ACTION }),
             (0, s.ZDy)(
                 async () => {
@@ -120,7 +120,7 @@ function A(e) {
                 { modalKey: P.$z }
             );
     }
-    function F() {
+    function G() {
         y.default.track(E.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
@@ -129,7 +129,7 @@ function A(e) {
             (0, d.Z)({
                 channel: t,
                 openInPopout: !1,
-                analyticsLocations: M
+                analyticsLocations: k
             }),
             (0, u.w1)({ guildId: t.guild_id });
     }
@@ -138,7 +138,7 @@ function A(e) {
             n = 'txt',
             r = '',
             i = w.match(N);
-        null != i && ((r = i[1]), (n = i[2]), (e = i[3]), (r += i[4])), (0, v.d)([(0, C.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n), 'text/plain')], t, A), x.S.dispatchToLastSubscribed(E.CkL.CLEAR_TEXT), '' !== r && x.S.dispatchToLastSubscribed(E.CkL.INSERT_TEXT, { plainText: r });
+        null != i && ((r = i[1]), (n = i[2]), (e = i[3]), (r += i[4])), (0, v.d)([(0, x.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n), 'text/plain')], t, A), C.S.dispatchToLastSubscribed(E.CkL.CLEAR_TEXT), '' !== r && C.S.dispatchToLastSubscribed(E.CkL.INSERT_TEXT, { plainText: r });
     }
     return (
         i.useEffect(() => {
@@ -214,7 +214,7 @@ function A(e) {
                             {
                                 id: 'poll',
                                 label: i,
-                                action: G
+                                action: F
                             },
                             'poll'
                         );
@@ -232,7 +232,7 @@ function A(e) {
                                             channelId: t.id,
                                             type: E.mFx.JOIN,
                                             activity: n,
-                                            location: M[M.length - 1]
+                                            location: k[k.length - 1]
                                         })
                                     );
                                 }
@@ -253,7 +253,7 @@ function A(e) {
                                             channelId: t.id,
                                             type: E.mFx.LISTEN,
                                             activity: n,
-                                            location: M[M.length - 1]
+                                            location: k[k.length - 1]
                                         })
                                     );
                                 }
@@ -274,7 +274,7 @@ function A(e) {
                                             channelId: t.id,
                                             type: E.mFx.WATCH,
                                             activity: n,
-                                            location: M[M.length - 1]
+                                            location: k[k.length - 1]
                                         })
                                     );
                                 }
@@ -307,7 +307,7 @@ function A(e) {
                             {
                                 id: 'activity',
                                 label: i,
-                                action: F,
+                                action: G,
                                 hint: (0, r.jsx)(T, {})
                             },
                             'activity'

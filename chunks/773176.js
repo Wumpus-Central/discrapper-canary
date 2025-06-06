@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(407477),
     _ = n(633302),
     y = n(856985),
-    x = n(868643),
-    C = n(245216),
+    C = n(868643),
+    x = n(245216),
     v = n(223606),
     j = n(188597),
     O = n(41776),
@@ -31,14 +31,14 @@ var r = n(255367),
     A = n(995774),
     w = n(931651),
     R = n(280845),
-    k = n(2818),
-    M = n(768943),
+    M = n(2818),
+    k = n(768943),
     L = n(665906),
     D = n(695346),
     U = n(314897),
     B = n(323873),
-    G = n(271383),
-    F = n(430824),
+    F = n(271383),
+    G = n(430824),
     H = n(607744),
     V = n(496675),
     z = n(626135),
@@ -199,14 +199,14 @@ function ef(e) {
         } = (function (e) {
             let { channel: t, message: n, showEmojiPicker: r, showEmojiBurstPicker: i, showMoreUtilities: l, setPopout: a, isFocused: o } = e,
                 { author: s } = n,
-                u = (0, c.e7)([F.Z], () => F.Z.getGuild(t.guild_id), [t.guild_id]),
+                u = (0, c.e7)([G.Z], () => G.Z.getGuild(t.guild_id), [t.guild_id]),
                 d = (0, c.e7)([U.default], () => U.default.getId()),
                 p = (0, L.$R)(t),
                 m = (0, L.Gu)(t),
                 g = D.nc.useSetting(),
                 b = D.Sb.useSetting(),
                 _ = (0, c.e7)([H.Z], () => null == t.guild_id || H.Z.canChatInGuild(t.guild_id), [t]),
-                { canManageMessages: y, canAddNewReactions: C } = (0, c.cj)(
+                { canManageMessages: y, canAddNewReactions: x } = (0, c.cj)(
                     [V.Z],
                     () => ({
                         canAddNewReactions: _ && V.Z.can(ei.Plq.ADD_REACTIONS, t),
@@ -218,7 +218,7 @@ function ef(e) {
                 j = (0, L.NE)(t, n),
                 E = (0, L.Ek)(n),
                 I = (0, c.e7)([O.Z], () => null != t.guild_id && O.Z.isLurking(t.guild_id), [t]),
-                P = (0, c.e7)([G.ZP], () => null != t.guild_id && G.ZP.isCurrentUserGuest(t.guild_id), [t]),
+                P = (0, c.e7)([F.ZP], () => null != t.guild_id && F.ZP.isCurrentUserGuest(t.guild_id), [t]),
                 S = s.id === d,
                 Z = (y || n.canDeleteOwnMessage(d)) && p && !ei.V$x.UNDELETABLE.has(n.type);
             n.type === ei.uaV.AUTO_MODERATION_ACTION && (Z = Z && y);
@@ -229,7 +229,7 @@ function ef(e) {
                     channel: t,
                     canChat: _,
                     renderReactions: g,
-                    canAddNewReactions: C,
+                    canAddNewReactions: x,
                     isLurking: I,
                     isGuest: P,
                     isActiveChannelOrUnarchivableThread: p
@@ -237,9 +237,9 @@ function ef(e) {
                 B = t.type === ei.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(ei.oNc.NEWS) && (S || y) && (0, f.Z)(n),
                 z = t.getGuildId(),
                 Y = null != z && (n.type === ei.uaV.USER_JOIN || n.type === ei.uaV.GUILD_INVITE_REMINDER) && V.Z.canWithPartialContext(ei.Plq.MANAGE_GUILD, { guildId: z }),
-                q = (0, x.a)(n),
-                { enabled: $ } = k.Z.useExperiment({ location: 'message_utilities' }),
-                ee = (0, c.e7)([M.Z], () => null != M.Z.getSavedMessage(t.id, n.id)),
+                q = (0, C.a)(n),
+                { enabled: $ } = M.Z.useExperiment({ location: 'message_utilities' }),
+                ee = (0, c.e7)([k.Z], () => null != k.Z.getSavedMessage(t.id, n.id)),
                 et = (0, er.Z)(),
                 en = (0, c.e7)([h.Z], () => h.Z.keyboardModeEnabled);
             return {
@@ -283,8 +283,8 @@ function ef(e) {
         }, [Y, ea]),
         e_ = (0, L.$R)(t),
         ey = n.hasFlag(ei.iLy.CROSSPOSTED),
-        [ex, eC] = (0, m.cv)(A ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
-        ev = ex === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
+        [eC, ex] = (0, m.cv)(A ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
+        ev = eC === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
         [ej, eO] = i.useState(!1),
         eE = i.useCallback(() => {
             eO(!0);
@@ -294,9 +294,9 @@ function ef(e) {
         }, []),
         eP = i.useCallback(
             (e, t) => {
-                eC(el.L.TAKE_ACTION), (0, ee.ts)(e, t);
+                ex(el.L.TAKE_ACTION), (0, ee.ts)(e, t);
             },
-            [eC]
+            [ex]
         ),
         { canShowReactionsOnMessageHover: eS } = b.ZP.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
     b.Xb.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
@@ -481,7 +481,7 @@ function ef(e) {
                       $.sF,
                       {
                           label: eo.intl.string(eo.t.I3ltXF),
-                          icon: C.Z,
+                          icon: x.Z,
                           onClick: () => eP(t, n),
                           onTooltipShow: eE,
                           onTooltipHide: eI,

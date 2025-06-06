@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(415506), n(388685);
+n.d(t, { Z: () => E }), n(415506), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -122,8 +122,8 @@ class S extends m.ZP {
             });
     }
 }
-let E = (0, u.B)(S),
-    x = i.memo(function (e) {
+let x = (0, u.B)(S),
+    E = i.memo(function (e) {
         let { channel: t, guild: n, disableSorting: i } = e,
             l = (0, s.cj)([p.Z, g.Z], () => {
                 let e = p.Z.getChannel(t.parent_id);
@@ -132,5 +132,5 @@ let E = (0, u.B)(S),
                     canReorderChannel: !0 !== i && null != e ? g.Z.can(y.Plq.MANAGE_CHANNELS, e) : g.Z.can(y.Plq.MANAGE_CHANNELS, n)
                 };
             });
-        return (0, r.jsx)(E, C({}, l, e));
+        return (0, r.jsx)(x, C({}, l, e));
     });

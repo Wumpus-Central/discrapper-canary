@@ -20,8 +20,8 @@ var r = n(255367),
     b = n(626135),
     _ = n(140106),
     y = n(981631),
-    x = n(388032),
-    C = n(285580);
+    C = n(388032),
+    x = n(285580);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -71,21 +71,21 @@ function O(e) {
         { analyticsLocations: g } = (0, p.ZP)(o, d.Z.GROUP_DM_ICON_EDITOR),
         b = c ? 32 : 64;
     return (0, r.jsxs)('div', {
-        className: a()(C.iconSection, u),
+        className: a()(x.iconSection, u),
         children: [
             (0, r.jsxs)(s.P3F, {
-                className: a()(C.iconContainer, { [C.petite]: c }),
-                'aria-label': x.intl.string(x.t['0qPSMT']),
+                className: a()(x.iconContainer, { [x.petite]: c }),
+                'aria-label': C.intl.string(C.t['0qPSMT']),
                 onClick: () => (0, _.ND)(i, g),
                 children: [
                     null != m
                         ? (0, r.jsx)('img', {
                               src: m,
                               alt: '',
-                              className: C.iconImage
+                              className: x.iconImage
                           })
                         : (0, r.jsx)('div', {
-                              className: C.iconPlaceholder,
+                              className: x.iconPlaceholder,
                               children: (0, r.jsx)(s.BFJ, {
                                   size: 'custom',
                                   width: b,
@@ -94,7 +94,7 @@ function O(e) {
                               })
                           }),
                     (0, r.jsx)('div', {
-                        className: C.pencilIconWrapper,
+                        className: x.pencilIconWrapper,
                         children: (0, r.jsx)(s.vdY, {
                             color: 'currentColor',
                             size: c ? 'xs' : 'refresh_sm'
@@ -105,12 +105,12 @@ function O(e) {
             null != m && f
                 ? (0, r.jsx)(s.P3F, {
                       onClick: l,
-                      'aria-label': x.intl.string(x.t['uY+Nk5']),
+                      'aria-label': C.intl.string(C.t['uY+Nk5']),
                       style: { cursor: 'pointer' },
                       children: (0, r.jsx)(s.Text, {
                           variant: 'text-sm/medium',
                           color: 'text-danger',
-                          children: x.intl.string(x.t['uY+Nk5'])
+                          children: C.intl.string(C.t['uY+Nk5'])
                       })
                   })
                 : null
@@ -126,12 +126,12 @@ let E = function (e) {
         [N, T] = i.useState(null != S ? S : ''),
         [A, w] = i.useState(void 0),
         R = void 0 !== A,
-        { analyticsLocations: k } = (0, p.ZP)(E, d.Z.GROUP_DM_EDIT_MODAL),
-        M = {
+        { analyticsLocations: M } = (0, p.ZP)(E, d.Z.GROUP_DM_EDIT_MODAL),
+        k = {
             channel_id: t,
             channel_type: null == P ? void 0 : P.type,
             location: E,
-            location_stack: k,
+            location_stack: M,
             old_name_set: '' !== S,
             old_icon_set: (null == P ? void 0 : P.icon) != null
         };
@@ -140,16 +140,16 @@ let E = function (e) {
     }, [N, S, R, a]),
     (0, u.ZP)(
         () => (
-            b.default.track(y.rMx.GDM_EDIT_INTERACTED, j(v({}, M), { action: 'opened' })),
+            b.default.track(y.rMx.GDM_EDIT_INTERACTED, j(v({}, k), { action: 'opened' })),
             () => {
-                b.default.track(y.rMx.GDM_EDIT_INTERACTED, j(v({}, M), { action: 'dismissed' }));
+                b.default.track(y.rMx.GDM_EDIT_INTERACTED, j(v({}, k), { action: 'dismissed' }));
             }
         )
     ),
     null == P)
         ? null
         : (0, r.jsx)(p.Gt, {
-              value: k,
+              value: M,
               children: (0, r.jsx)('form', {
                   onSubmit: (e) => {
                       e.preventDefault();
@@ -158,7 +158,7 @@ let E = function (e) {
                       if (
                           (b.default.track(
                               y.rMx.GDM_EDIT_INTERACTED,
-                              j(v({}, M), {
+                              j(v({}, k), {
                                   action: 'saved',
                                   new_name_set: '' !== N,
                                   new_icon_set: (i ? A : null == P ? void 0 : P.icon) != null,
@@ -176,37 +176,37 @@ let E = function (e) {
                   children: (0, r.jsxs)(s.Y0X, {
                       transitionState: l,
                       'aria-labelledby': I,
-                      className: C.modal,
+                      className: x.modal,
                       parentComponent: 'GdmEditModal',
                       children: [
                           (0, r.jsxs)(s.xBx, {
                               separator: !0,
-                              className: C.header,
+                              className: x.header,
                               children: [
                                   (0, r.jsx)(s.X6q, {
                                       id: I,
                                       variant: 'heading-lg/semibold',
                                       color: 'header-primary',
-                                      children: x.intl.string(x.t['5Q9+/P'])
+                                      children: C.intl.string(C.t['5Q9+/P'])
                                   }),
                                   (0, r.jsx)(s.olH, {
                                       onClick: h,
-                                      className: C.closeButton
+                                      className: x.closeButton
                                   })
                               ]
                           }),
                           (0, r.jsxs)(s.hzk, {
-                              className: C.modalContent,
+                              className: x.modalContent,
                               children: [
                                   (0, r.jsx)(O, {
                                       channel: P,
                                       previewIcon: A,
                                       onIconChange: (e) => w(e.imageUri),
                                       onIconRemove: () => w(null),
-                                      analyticsLocations: k
+                                      analyticsLocations: M
                                   }),
                                   (0, r.jsx)(s.oil, {
-                                      'aria-label': x.intl.string(x.t.GEGW3N),
+                                      'aria-label': C.intl.string(C.t.GEGW3N),
                                       placeholder: null != Z ? Z : '',
                                       value: N,
                                       onChange: T,
@@ -215,19 +215,19 @@ let E = function (e) {
                               ]
                           }),
                           (0, r.jsxs)(s.mzw, {
-                              className: C.footer,
+                              className: x.footer,
                               children: [
                                   (0, r.jsx)(s.zxk, {
                                       type: 'submit',
                                       disabled: N === S && !R,
-                                      children: x.intl.string(x.t.R3BPHx)
+                                      children: C.intl.string(C.t.R3BPHx)
                                   }),
                                   (0, r.jsx)(s.zxk, {
                                       onClick: h,
                                       look: s.zxk.Looks.LINK,
                                       color: s.zxk.Colors.PRIMARY,
-                                      innerClassName: C.cancelButton,
-                                      children: x.intl.string(x.t['ETE/oK'])
+                                      innerClassName: x.cancelButton,
+                                      children: C.intl.string(C.t['ETE/oK'])
                                   })
                               ]
                           })

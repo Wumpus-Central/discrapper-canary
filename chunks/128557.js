@@ -21,8 +21,8 @@ var r = n(255367),
     b = n(330010),
     _ = n(978946),
     y = n(314897),
-    x = n(430824),
-    C = n(594174),
+    C = n(430824),
+    x = n(594174),
     v = n(259580),
     j = n(585483),
     O = n(63063),
@@ -36,8 +36,8 @@ var r = n(255367),
     A = n(881454),
     w = n(435921),
     R = n(538548),
-    k = n(753033),
-    M = n(15717);
+    M = n(753033),
+    k = n(15717);
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -122,13 +122,13 @@ function U(e) {
 }
 function B(e) {
     let { channel: t } = e,
-        l = (0, s.e7)([x.Z], () => (null != t ? x.Z.getGuild(t.getGuildId()) : null), [t]),
+        l = (0, s.e7)([C.Z], () => (null != t ? C.Z.getGuild(t.getGuildId()) : null), [t]),
         p = null != l && I.default.extractTimestamp(l.id) < Date.now() - S._8R,
         v = (0, s.e7)([y.default], () => (null == l ? void 0 : l.ownerId) === y.default.getId(), [l]),
-        { canInvite: B, canManageGuild: G, canMessage: F } = (0, m.TE)(t, l),
-        H = (0, s.e7)([C.default], () => {
+        { canInvite: B, canManageGuild: F, canMessage: G } = (0, m.TE)(t, l),
+        H = (0, s.e7)([x.default], () => {
             var e, t;
-            return (null == (e = C.default.getCurrentUser()) ? void 0 : e.desktop) === !0 || (null == (t = C.default.getCurrentUser()) ? void 0 : t.mobile) === !0;
+            return (null == (e = x.default.getCurrentUser()) ? void 0 : e.desktop) === !0 || (null == (t = x.default.getCurrentUser()) ? void 0 : t.mobile) === !0;
         }),
         { guildPopulated: V, guildMessaged: z, guildPersonalized: W } = (0, m.h_)(l),
         {
@@ -295,23 +295,6 @@ function B(e) {
                     'invite'
                 )
             ),
-        G &&
-            el.push(
-                (0, r.jsx)(
-                    o.Z.div,
-                    {
-                        className: T.cardWrapper,
-                        style: J ? { opacity: ee[el.length] } : {},
-                        children: (0, r.jsx)(U, {
-                            iconUrl: ei ? u.$_T : k,
-                            header: N.intl.string(N.t.c5kxPj),
-                            completed: W,
-                            onClick: K
-                        })
-                    },
-                    'customize'
-                )
-            ),
         F &&
             el.push(
                 (0, r.jsx)(
@@ -320,7 +303,24 @@ function B(e) {
                         className: T.cardWrapper,
                         style: J ? { opacity: ee[el.length] } : {},
                         children: (0, r.jsx)(U, {
-                            iconUrl: ei ? u.qMX : M,
+                            iconUrl: ei ? u.$_T : M,
+                            header: N.intl.string(N.t.c5kxPj),
+                            completed: W,
+                            onClick: K
+                        })
+                    },
+                    'customize'
+                )
+            ),
+        G &&
+            el.push(
+                (0, r.jsx)(
+                    o.Z.div,
+                    {
+                        className: T.cardWrapper,
+                        style: J ? { opacity: ee[el.length] } : {},
+                        children: (0, r.jsx)(U, {
+                            iconUrl: ei ? u.qMX : k,
                             header: N.intl.string(N.t['SoP7+v']),
                             completed: z,
                             onClick: q
