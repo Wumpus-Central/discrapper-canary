@@ -60842,7 +60842,7 @@ code {
 }
 
 @supports (color:color-mix(in lch, red, blue)) {
-    .custom-theme-background {
+    .custom-theme-background:not(.client-theme-color-picker) {
         --custom-app-border-frame-base: color-mix(in oklab, var(--custom-theme-primary-color) 50%, var(--custom-theme-secondary-color) 50%);
         --app-border-frame: color-mix(in oklab, var(--custom-app-border-frame-base) 24%, var(--border-subtle) 100%)
     }
