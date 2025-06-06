@@ -13341,6 +13341,10 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     width: 100%
 }
 
+.visual-refresh.align-chat-input .container__4bbc6 {
+    border-radius: unset
+}
+
 .fadeIn__4bbc6 {
     animation: fadeIn__4bbc6 .12s ease-in forwards;
     opacity: 0
@@ -22107,6 +22111,16 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     transition: color .2s ease
 }
 
+.visual-refresh.align-chat-input .cooldownWrapper_b21699 {
+    gap: 4px;
+    padding: 3px 16px 3px 8px
+}
+
+.visual-refresh.align-chat-input .cooldownText_b21699 {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px
+}
+
 .visual-refresh-chat-input .slowModeIcon_b21699 {
     display: inline;
     margin-left: auto
@@ -22179,6 +22193,35 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     display: flex;
     overflow: hidden;
     text-overflow: ellipsis
+}
+
+.visual-refresh.align-chat-input .base_b88801 {
+    bottom: unset;
+    left: 0;
+    padding-left: 16px;
+    right: 0;
+    top: -24px
+}
+
+.visual-refresh.align-chat-input .base_b88801 .typingDots_b88801 {
+    margin-left: 8px
+}
+
+.visual-refresh.align-chat-input .backgroundAnimated_b88801 {
+    height: 32px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: -8px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+.visual-refresh.align-chat-input .text_b88801 {
+    margin-left: 24px;
+    z-index: 1
 }
 
 .typing_b88801 {
@@ -25599,6 +25642,11 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     position: -webkit-sticky;
     position: sticky;
     top: 0
+}
+
+.visual-refresh.align-chat-input .buttons__74017>:hover {
+    background-color: var(--background-modifier-selected);
+    border-radius: 8px
 }
 
 .has-webkit-scrollbar .buttons__74017 {
@@ -60892,6 +60940,10 @@ img[alt] {
     --custom-guild-list-padding: min(var(--space-md), var(--space-16));
     --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding)*2);
     --custom-channel-header-height: calc(40px + var(--space-xs))
+}
+
+.visual-refresh.align-chat-input {
+    --custom-channel-textarea-text-area-height: 56px
 }
 
 .visual-refresh.density-compact {
