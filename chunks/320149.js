@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(933557),
     E = n(287746),
     O = n(388032),
-    y = n(560460),
-    I = n(46467);
+    I = n(560460),
+    y = n(46467);
 function v(e) {
     let { channel: t, baseChannelId: n } = e,
         v = (0, _.ZP)(t),
@@ -62,15 +62,15 @@ function v(e) {
             }),
             T &&
                 (0, r.jsxs)('div', {
-                    className: I.hamBanner,
+                    className: y.hamBanner,
                     children: [
                         (0, r.jsx)(a.Text, {
-                            className: I.__invalid_hamBannerText,
+                            className: y.__invalid_hamBannerText,
                             variant: 'text-sm/normal',
                             children: O.intl.string(O.t.XVOKgo)
                         }),
                         (0, r.jsx)(a.zxk, {
-                            className: I.hamBannerButton,
+                            className: y.hamBannerButton,
                             size: a.PhG.SMALL,
                             onClick: () => x(t, P),
                             children: O.intl.string(O.t.koqL3d)
@@ -78,7 +78,7 @@ function v(e) {
                     ]
                 }),
             (0, r.jsx)('div', {
-                className: y.chat,
+                className: I.chat,
                 children: (0, r.jsx)(
                     E.Z,
                     {

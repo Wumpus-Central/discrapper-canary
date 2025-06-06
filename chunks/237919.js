@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -120,7 +120,7 @@ class O extends i.Component {
             });
     }
 }
-function y() {
+function I() {
     let e = (0, o.e7)([d.Z], () => d.Z.hasLayers()),
         t = (0, s.s9z)(s.JQI);
     return (0, r.jsx)(O, {

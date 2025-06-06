@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -315,7 +315,7 @@ class O extends i.PureComponent {
             });
     }
 }
-let y = l.ZP.connectStores([d.Z], () => ({
+let I = l.ZP.connectStores([d.Z], () => ({
     installationPaths: d.Z.installationPaths,
     installationPathsMetadata: d.Z.installationPathsMetadata,
     defaultInstallationPath: d.Z.defaultInstallationPath

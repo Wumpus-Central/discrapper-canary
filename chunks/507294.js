@@ -24,8 +24,8 @@ var r = n(255367),
     _ = n(314897),
     E = n(271383),
     O = n(430824),
-    y = n(626135),
-    I = n(63063),
+    I = n(626135),
+    y = n(63063),
     v = n(134433),
     C = n(225104),
     S = n(981631),
@@ -84,7 +84,7 @@ let x = function (e) {
     if (
         (i.useEffect(() => {
             0 !== R.length &&
-                y.default.track(
+                I.default.track(
                     S.rMx.PASSPORT_ENTRY_VIEWED,
                     j(
                         {
@@ -137,7 +137,7 @@ let x = function (e) {
                     (0, r.jsx)(c.X6q, {
                         variant: 'heading-md/semibold',
                         color: 'header-primary',
-                        children: N.intl.format(N.t['Y+TsER'], { helpdeskArticleUrl: I.Z.getArticleURL(S.BhN.CONNECTION_DETAILS) })
+                        children: N.intl.format(N.t['Y+TsER'], { helpdeskArticleUrl: y.Z.getArticleURL(S.BhN.CONNECTION_DETAILS) })
                     }),
                     (0, r.jsx)('div', {
                         className: T.verifiedRoles,

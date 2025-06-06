@@ -116,7 +116,7 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
     },
     e3 = eZ.Z,
     e8 = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: I, impressionSource: R, numOfPendingFamilyRequests: D, isOverlaySupported: G, isClipsBetaTagShowing: e8 = !1, shouldMergeGameSettings: e2, isKeywordFilteringEnabled: e6, isStaff: e5, isInappropriateConversationWarningEnabled: e4, isInapproprateConversationsDefaultOn: e7, paymentsBlocked: e9, isEligibleForQuests: te, isStricterMessageRequestsEnabled: tt, hasLibraryApplication: tn, hasTOTPEnabled: ti, developerMode: tr, isAdultUser: ts, hasSecureFramesVerifiedUserIds: tl, hypeSquadRemoved: ta, hasIgnoredUsers: to, hasBlockedUsers: tc, useRefreshedVoiceAndVideo: td, isEligibleForSensitiveContentDefaults: tu, inputMode: tm, activeInputProfile: tg, isInputProfileCustom: tp, isActivitySharingExperimentEnabled: th, isGoreContentFilteringEnabled: tf } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: I, impressionSource: R, numOfPendingFamilyRequests: D, isOverlaySupported: G, isClipsBetaTagShowing: e8 = !1, shouldMergeGameSettings: e6, isKeywordFilteringEnabled: e2, isStaff: e5, isInappropriateConversationWarningEnabled: e4, isInapproprateConversationsDefaultOn: e7, paymentsBlocked: e9, isEligibleForQuests: te, isStricterMessageRequestsEnabled: tt, hasLibraryApplication: tn, hasTOTPEnabled: ti, developerMode: tr, isAdultUser: ts, hasSecureFramesVerifiedUserIds: tl, hypeSquadRemoved: ta, hasIgnoredUsers: to, hasBlockedUsers: tc, useRefreshedVoiceAndVideo: td, isEligibleForSensitiveContentDefaults: tu, inputMode: tm, activeInputProfile: tg, isInputProfileCustom: tp, isActivitySharingExperimentEnabled: th, isGoreContentFilteringEnabled: tf } = e;
         return Object.freeze({
             [eH.s6.SEARCH_NO_RESULTS]: {
                 section: g.ID.CUSTOM,
@@ -234,7 +234,7 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 label: eq.intl.string(eq.t.URyqtL),
                 ariaLabel: eq.intl.string(eq.t.URyqtL),
                 element: eB.Z,
-                predicate: () => e2
+                predicate: () => e6
             },
             [eH.s6.GAMES_MY_GAMES]: {
                 section: eY.oAB.GAMES,
@@ -473,7 +473,7 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eY.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [eq.intl.string(eq.t['1UaUy8']), eq.intl.string(eq.t['xIk/iI'])],
                 parent: eH.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => e6
+                predicate: () => e2
             },
             [eH.s6.PRIVACY_SAFETY_ALERTS_V2]: {
                 section: eY.oAB.CONTENT_AND_SOCIAL,
@@ -554,7 +554,7 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 ariaLabel: eq.intl.string(eq.t.z2jK6e),
                 icon: e8 ? (0, i.jsx)(C.Z, {}) : void 0,
                 element: j.Z,
-                predicate: () => !e2,
+                predicate: () => !e6,
                 url: eY.Z5c.SETTINGS('clips')
             },
             [eH.s6.RESTRICTED_USERS]: {
@@ -1504,23 +1504,23 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 label: eq.intl.string(th ? eq.t['6x5uWV'] : eq.t.Cq98yM),
                 ariaLabel: eq.intl.string(th ? eq.t['6x5uWV'] : eq.t.Cq98yM),
                 element: ec.Z,
-                predicate: () => !e2,
+                predicate: () => !e6,
                 url: eY.Z5c.SETTINGS('activity-privacy')
             },
             [eH.s6.ACTIVITY_PRIVACY_STATUS]: {
-                section: e2 ? eY.oAB.GAMES : eY.oAB.ACTIVITY_PRIVACY,
+                section: e6 ? eY.oAB.GAMES : eY.oAB.ACTIVITY_PRIVACY,
                 searchableTitles: [eq.intl.string(eq.t['8ka8lp'])],
-                parent: e2 ? eH.s6.GAMES_ACTIVITY_PRIVACY : eH.s6.ACTIVITY_PRIVACY
+                parent: e6 ? eH.s6.GAMES_ACTIVITY_PRIVACY : eH.s6.ACTIVITY_PRIVACY
             },
             [eH.s6.ACTIVITY_PRIVACY_RICH_PRESENCE]: {
-                section: e2 ? eY.oAB.GAMES : eY.oAB.ACTIVITY_PRIVACY,
+                section: e6 ? eY.oAB.GAMES : eY.oAB.ACTIVITY_PRIVACY,
                 searchableTitles: [eq.intl.string(eq.t.VOszPD)],
-                parent: e2 ? eH.s6.GAMES_ACTIVITY_PRIVACY : eH.s6.ACTIVITY_PRIVACY
+                parent: e6 ? eH.s6.GAMES_ACTIVITY_PRIVACY : eH.s6.ACTIVITY_PRIVACY
             },
             [eH.s6.ACTIVITY_PRIVACY_TOS]: {
-                section: e2 ? eY.oAB.GAMES : eY.oAB.ACTIVITY_PRIVACY,
+                section: e6 ? eY.oAB.GAMES : eY.oAB.ACTIVITY_PRIVACY,
                 searchableTitles: [eH.CF],
-                parent: e2 ? eH.s6.GAMES_ACTIVITY_PRIVACY : eH.s6.ACTIVITY_PRIVACY
+                parent: e6 ? eH.s6.GAMES_ACTIVITY_PRIVACY : eH.s6.ACTIVITY_PRIVACY
             },
             [eH.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY]: {
                 section: eY.oAB.ACTIVITY_PRIVACY,
@@ -1532,14 +1532,14 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eq.intl.string(eq.t.AVDyEh)],
                 label: eq.intl.string(eq.t.AVDyEh),
                 element: eE.Z,
-                predicate: () => !e2 && (0, eL.Jw)()
+                predicate: () => !e6 && (0, eL.Jw)()
             },
             [eH.s6.OVERLAY]: {
                 section: eY.oAB.OVERLAY,
                 searchableTitles: [eq.intl.string(eq.t['9cb1U1']), eq.intl.string(eq.t.HcoRu7)],
                 label: eq.intl.string(eq.t['9cb1U1']),
                 element: eT.Z,
-                predicate: () => !e2 && G
+                predicate: () => !e6 && G
             },
             [eH.s6.CHANGELOG]: {
                 section: 'changelog',
@@ -1779,6 +1779,12 @@ let e$ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
             [eH.s6.DEVELOPER_OPTIONS_PREVENT_POPOUT_CLOSE]: {
                 section: eY.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ['Prevent Popouts From Closing Automatically'],
+                parent: eH.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
+                predicate: () => H.Z.isDeveloper
+            },
+            [eH.s6.DEVELOPER_OPTIONS_DISABLE_ALIGN_CHAT_INPUT]: {
+                section: eY.oAB.DEVELOPER_OPTIONS,
+                searchableTitles: ['Disable Align Chat Input'],
                 parent: eH.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
                 predicate: () => H.Z.isDeveloper
             },

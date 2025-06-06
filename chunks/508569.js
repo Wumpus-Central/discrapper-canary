@@ -153,7 +153,7 @@ class y {
         if ((a.Z.flush(s, i), 'READY' === s)) {
             let e = (0, l.vW)(i);
             null == (t = this.getDispatchHandler(s)) || t.dispatch(i, s, u), (0, l.dm)(this.socket, i, d, c, e);
-        } else 'RESUMED' === s ? (null == (n = this.getDispatchHandler(s)) || n.dispatch(i, s, u), (0, l.uB)(this.resumeAnalytics), (this.resumeAnalytics = (0, l.zH)()), this.socket.handleResumeDispatched()) : null == (r = this.getDispatchHandler(s)) || r.dispatch(i, s, u);
+        } else 'RESUMED' === s ? (null == (n = this.getDispatchHandler(s)) || n.dispatch(i, s, u), (0, l.uB)(this.resumeAnalytics), this.socket.handleResumeDispatched(), (this.resumeAnalytics = (0, l.zH)())) : null == (r = this.getDispatchHandler(s)) || r.dispatch(i, s, u);
         this.socket.connectionState === o.Z.RESUMING && (this.resumeAnalytics.dispatchTime += performance.now() - d);
     }
     clear() {

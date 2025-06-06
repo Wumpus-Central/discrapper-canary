@@ -21,8 +21,8 @@ var r = n(255367),
     _ = n(565138),
     E = n(300986),
     O = n(314451),
-    y = n(35583),
-    I = n(821020),
+    I = n(35583),
+    y = n(821020),
     v = n(370774),
     C = n(522474),
     S = n(141321),
@@ -41,8 +41,8 @@ var r = n(255367),
     M = n(741764),
     U = n(388032),
     G = n(524499),
-    B = n(103609);
-function V(e) {
+    V = n(103609);
+function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -108,7 +108,7 @@ function z() {
                 isActivityPanelMode: d.ZP.getActivityPanelMode() === k.Ez.PANEL
             };
         }),
-        y =
+        I =
             null != b
                 ? Z.ZP.getApplicationIconURL({
                       id: b.id,
@@ -116,46 +116,46 @@ function z() {
                       bot: b.bot
                   })
                 : void 0,
-        I = null;
+        y = null;
     return (
         null != b && E && O
             ? ((e = b.name),
-              (I = (0, r.jsx)('img', {
-                  className: B.appIcon,
+              (y = (0, r.jsx)('img', {
+                  className: V.appIcon,
                   alt: U.intl.string(U.t.X4IxWF),
-                  src: y,
+                  src: I,
                   'aria-hidden': !0,
                   draggable: !1
               })))
             : g
-              ? ((e = U.intl.string(U.t.HcoRu7)), (I = (0, r.jsx)(c.Dkj, { size: 'xs' })))
+              ? ((e = U.intl.string(U.t.HcoRu7)), (y = (0, r.jsx)(c.Dkj, { size: 'xs' })))
               : null != h
-                ? ((I = f
+                ? ((y = f
                       ? (0, r.jsx)(c.r7p, { size: 'xs' })
                       : (0, r.jsx)(_.Z, {
                             guild: h,
                             size: _.Z.Sizes.MINI,
                             active: !0,
-                            className: B.guildIcon
+                            className: V.guildIcon
                         })),
                   (e = h.name))
                 : null != a && (a.isDM() || a.isGroupDM())
-                  ? ((e = U.intl.string(U.t.YUU0RE)), (I = (0, r.jsx)(c.gw7, { size: 'xs' })))
+                  ? ((e = U.intl.string(U.t.YUU0RE)), (y = (0, r.jsx)(c.gw7, { size: 'xs' })))
                   : t.pathname.startsWith(D.Z5c.GLOBAL_DISCOVERY)
-                    ? ((e = U.intl.string(U.t['4nEZLi'])), (I = (0, r.jsx)(c.Jmo, { size: 'xs' })))
+                    ? ((e = U.intl.string(U.t['4nEZLi'])), (y = (0, r.jsx)(c.Jmo, { size: 'xs' })))
                     : t.pathname.startsWith(D.Z5c.NITRO_HOME)
-                      ? ((e = U.intl.string(U.t.Ipxkoq)), (I = (0, r.jsx)(c.SrA, { size: 'xs' })))
+                      ? ((e = U.intl.string(U.t.Ipxkoq)), (y = (0, r.jsx)(c.SrA, { size: 'xs' })))
                       : t.pathname.startsWith(D.Z5c.COLLECTIBLES_SHOP)
-                        ? ((e = U.intl.string(U.t.pWG4zc)), (I = (0, r.jsx)(c.EOn, { size: 'xs' })))
+                        ? ((e = U.intl.string(U.t.pWG4zc)), (y = (0, r.jsx)(c.EOn, { size: 'xs' })))
                         : t.pathname.startsWith(D.Z5c.FRIENDS)
-                          ? ((e = U.intl.string(U.t.TdEu5e)), (I = (0, r.jsx)(c.iFz, { size: 'xs' })))
-                          : t.pathname.startsWith(D.Z5c.FAMILY_CENTER) && ((e = U.intl.string(G.default.RZqaJi)), (I = (0, r.jsx)(c.BFJ, { size: 'xs' }))),
+                          ? ((e = U.intl.string(U.t.TdEu5e)), (y = (0, r.jsx)(c.iFz, { size: 'xs' })))
+                          : t.pathname.startsWith(D.Z5c.FAMILY_CENTER) && ((e = U.intl.string(G.default.RZqaJi)), (y = (0, r.jsx)(c.BFJ, { size: 'xs' }))),
         null != e &&
             '' !== e &&
             (0, r.jsxs)('div', {
-                className: B.title,
+                className: V.title,
                 children: [
-                    I,
+                    y,
                     (0, r.jsx)(c.Text, {
                         variant: 'text-sm/medium',
                         lineClamp: 1,
@@ -177,7 +177,7 @@ let W = i.memo(function () {
     }, []);
     let l = (0, s.e7)([N.Z], () => (N.Z.darkSidebar ? D.BRd.DARK : void 0)),
         a = (0, s.e7)([x.Z, C.Z], () => (0, L.rB)()),
-        { notificationCenterVariant: o } = I.L.useExperiment({ location: 'AppTitleBar' });
+        { notificationCenterVariant: o } = y.L.useExperiment({ location: 'AppTitleBar' });
     return a
         ? null
         : (0, r.jsx)(c.Wdt, {
@@ -193,8 +193,8 @@ let W = i.memo(function () {
                                       children: [
                                           (0, r.jsx)(
                                               c.P3F,
-                                              H(V({}, e), {
-                                                  className: B.button,
+                                              H(B({}, e), {
+                                                  className: V.button,
                                                   onClick: () => {
                                                       F.setState({ isOpen: !F.getState().isOpen });
                                                   },
@@ -202,7 +202,7 @@ let W = i.memo(function () {
                                               })
                                           ),
                                           (0, r.jsx)(c.P3F, {
-                                              className: B.button,
+                                              className: V.button,
                                               onClick: () => {
                                                   u.Z.open(D.oAB.ACCOUNT);
                                               },
@@ -216,14 +216,14 @@ let W = i.memo(function () {
                               title: (0, r.jsx)(z, {}),
                               trailing: (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      (0, r.jsx)(b.Z, { className: B.button }),
+                                      (0, r.jsx)(b.Z, { className: V.button }),
                                       (0, r.jsx)(f.Z, {
                                           canShowReminder: !0,
-                                          className: B.button
+                                          className: V.button
                                       }),
-                                      null === o && (0, r.jsx)(S.Z, H(V({}, t ? {} : e), { className: B.button })),
-                                      n ? (0, r.jsx)(O.Z, { className: B.button }) : (0, r.jsx)(E.Z, { className: B.button }),
-                                      (0, r.jsx)(y.Z, { className: B.button })
+                                      null === o && (0, r.jsx)(S.Z, H(B({}, t ? {} : e), { className: V.button })),
+                                      n ? (0, r.jsx)(O.Z, { className: V.button }) : (0, r.jsx)(E.Z, { className: V.button }),
+                                      (0, r.jsx)(I.Z, { className: V.button })
                                   ]
                               })
                           })
@@ -233,7 +233,7 @@ let W = i.memo(function () {
 function Y() {
     return (0, r.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
-        className: B.icon,
+        className: V.icon,
         width: '24',
         height: '24',
         viewBox: '0 0 24 24',

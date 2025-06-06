@@ -42,12 +42,12 @@ var r = n(255367),
     H = n(974251),
     V = n(893718),
     z = n(436660),
-    W = n(436952),
-    Y = n(131565),
-    q = n(355888),
-    K = n(680783),
-    X = n(168551),
-    Q = n(540059),
+    W = n(338390),
+    Y = n(436952),
+    q = n(131565),
+    K = n(355888),
+    X = n(680783),
+    Q = n(168551),
     J = n(28546),
     $ = n(295474),
     ee = n(521476),
@@ -661,15 +661,15 @@ class tl extends i.PureComponent {
     render() {
         var e, t;
         let n,
-            { channel: i, guild: l, keyboardModeEnabled: o, hasModalOpen: s, pendingReply: c, chatInputType: d, placeholder: h, accessibilityLabel: f, showQuarantinedUserBanner: m, filterAfterTimestamp: g, communicationDisabledUntil: b, shakeIntensity: x, poggermodeEnabled: C, isSelectedResourceChannel: v, showAutomodUserProfileChatBlocker: j, showAppLauncherButton: O, showAppDMsUI: E, isInitialLoading: I, isRefreshChatInputEnabled: P, isRefreshEnabled: S, pendingScheduledMessage: Z, recipientUser: N, voiceChannel: T, theme: A, chatWallpaperState: w, wallpaperColorMix: R } = this.props,
-            { textAreaFocused: M, textAreaHighlighted: k } = this.state,
-            L = d === B.Ie.SIDEBAR;
-        n = L && i.type === e2.d4z.GUILD_VOICE ? e3.t.pnnyFR : L && i.type === e2.d4z.GUILD_STAGE_VOICE ? e3.t.YInSkp : u.T.THREADS.has(i.type) ? e3.t['OkzL+f'] : e3.t.UbNmGR;
-        let D = (0, r.jsx)('div', {
+            { channel: i, guild: l, keyboardModeEnabled: o, hasModalOpen: s, pendingReply: c, chatInputType: d, placeholder: h, accessibilityLabel: f, showQuarantinedUserBanner: m, filterAfterTimestamp: g, communicationDisabledUntil: b, shakeIntensity: x, poggermodeEnabled: C, isSelectedResourceChannel: v, showAutomodUserProfileChatBlocker: j, showAppLauncherButton: O, showAppDMsUI: E, isInitialLoading: I, pendingScheduledMessage: P, recipientUser: S, voiceChannel: Z, theme: N, chatWallpaperState: T, wallpaperColorMix: A, messagesTypingGradient: w } = this.props,
+            { textAreaFocused: R, textAreaHighlighted: M } = this.state,
+            k = d === B.Ie.SIDEBAR;
+        n = k && i.type === e2.d4z.GUILD_VOICE ? e3.t.pnnyFR : k && i.type === e2.d4z.GUILD_STAGE_VOICE ? e3.t.YInSkp : u.T.THREADS.has(i.type) ? e3.t['OkzL+f'] : e3.t.UbNmGR;
+        let L = (0, r.jsx)('div', {
                 className: e7.channelBottomBarArea,
                 children: (0, r.jsx)(eJ.Z, {})
             }),
-            U = (0, r.jsxs)('div', {
+            D = (0, r.jsxs)('div', {
                 className: e7.channelBottomBarArea,
                 children: [
                     (0, r.jsx)(eI.Z, {
@@ -679,8 +679,8 @@ class tl extends i.PureComponent {
                         offsetX: 75,
                         children: (0, r.jsx)(tr, {
                             ref: this.channelTextAreaFormRef,
-                            focused: M,
-                            highlighted: k,
+                            focused: R,
+                            highlighted: M,
                             channel: i,
                             guild: l,
                             keyboardModeEnabled: o,
@@ -697,25 +697,24 @@ class tl extends i.PureComponent {
                             onCommandSentinelTyped: this.handleCommandSentinelTyped,
                             renderAppLauncherButton: this.renderAppLauncherButton,
                             renderAppCommandButton: this.renderAppCommandButton,
-                            pendingScheduledMessage: Z
+                            pendingScheduledMessage: P
                         })
                     }),
-                    S ? null : this.renderAppLauncherButton(),
-                    P ? null : this.renderAppCommandButton()
+                    this.renderAppCommandButton()
                 ]
             }),
-            F = E && I,
-            G = F && I ? D : U,
-            H = a()({
+            U = E && I,
+            F = U && I ? L : D,
+            G = a()({
                 [e8.barWithAppLauncherButton]: O,
                 [e8.barWithAppsDMsUI]: E
             }),
-            { enabled: V } = eP.Z.getCurrentConfig({
-                guildId: null == T ? void 0 : T.guild_id,
+            { enabled: H } = eP.Z.getCurrentConfig({
+                guildId: null == Z ? void 0 : Z.guild_id,
                 location: 'ChannelChat'
             }),
-            z = W.qM.getCurrentConfig({ location: 'ChannelChat' }).enabled,
-            q = V && null != N && null != T && null != T.guild_id;
+            V = Y.qM.getCurrentConfig({ location: 'ChannelChat' }).enabled,
+            z = H && null != S && null != Z && null != Z.guild_id;
         return (0, r.jsx)(
             y.Z,
             {
@@ -742,28 +741,28 @@ class tl extends i.PureComponent {
                                     handler: this.handleOpenAppLauncher
                                 }),
                                 (0, r.jsxs)(tn, {
-                                    isSidebar: L,
+                                    isSidebar: k,
                                     className: a()(e7.chatContent, {
-                                        [e7.hasWallpaper]: null == w ? void 0 : w.isViewable,
-                                        [X.e3]: z ? (null == w ? void 0 : w.isViewable) : void 0,
-                                        [null != (e = (0, p.QeD)(A)) ? e : '']: z ? (null == w ? void 0 : w.isViewable) : void 0
+                                        [e7.hasWallpaper]: null == T ? void 0 : T.isViewable,
+                                        [Q.e3]: V ? (null == T ? void 0 : T.isViewable) : void 0,
+                                        [null != (e = (0, p.QeD)(N)) ? e : '']: V ? (null == T ? void 0 : T.isViewable) : void 0
                                     }),
                                     'aria-label': e3.intl.formatToPlainString(n, { channelName: i.name }),
                                     onMouseDown: this.handleChatInteract,
                                     onKeyDown: this.handleKeyDown,
                                     onFocus: this.handleChatInteract,
-                                    style: null != R ? R : {},
+                                    style: null != A ? A : {},
                                     children: [
-                                        (0, r.jsx)(Y.Z, { channel: i }),
-                                        q &&
+                                        (0, r.jsx)(q.Z, { channel: i }),
+                                        z &&
                                             (0, r.jsx)(e1.Z, {
-                                                recipientUser: N,
-                                                voiceChannel: T
+                                                recipientUser: S,
+                                                voiceChannel: Z
                                             }),
                                         (0, r.jsx)(eX.Z, {
                                             channel: i,
                                             guild: l,
-                                            narrow: L
+                                            narrow: k
                                         }),
                                         (0, r.jsxs)(p.y5t, {
                                             component: (0, r.jsx)(p.nn4, { children: (0, r.jsx)(p.H, { children: e3.intl.format(e3.t.eTzKk5, { channelName: i.name }) }) }),
@@ -773,7 +772,8 @@ class tl extends i.PureComponent {
                                                     forceCozy: v,
                                                     filterAfterTimestamp: g,
                                                     showingQuarantineBanner: m,
-                                                    jumpBarClassName: H
+                                                    jumpBarClassName: G,
+                                                    typingGradient: w
                                                 }),
                                                 v
                                                     ? null
@@ -789,24 +789,22 @@ class tl extends i.PureComponent {
                                                       : (0, r.jsxs)('form', {
                                                             ref: this.inputFormRef,
                                                             onSubmit: te,
-                                                            className: a()(e7.form, { [e7.formWithLoadedChatInput]: !F }),
+                                                            className: a()(e7.form, { [e7.formWithLoadedChatInput]: !U }),
                                                             children: [
                                                                 C && (0, r.jsx)(eg.Z, { channelId: i.id }),
                                                                 i.isPrivate()
                                                                     ? (0, r.jsx)(e$.Z, {
                                                                           channel: i,
-                                                                          children: G
+                                                                          children: F
                                                                       })
                                                                     : (0, r.jsx)(e0.Z, {
                                                                           channel: i,
-                                                                          children: G
+                                                                          children: F
                                                                       }),
-                                                                P
-                                                                    ? null
-                                                                    : (0, r.jsx)(_.Z, {
-                                                                          channel: i,
-                                                                          poggermodeEnabled: C
-                                                                      })
+                                                                (0, r.jsx)(_.Z, {
+                                                                    channel: i,
+                                                                    poggermodeEnabled: C
+                                                                })
                                                             ]
                                                         }),
                                                 (0, r.jsx)(ea.kw, {})
@@ -942,24 +940,24 @@ let ta = i.memo(function (e) {
         }),
         g = (0, d.e7)([ef.Z], () => ef.Z.isEnabled()),
         b = (0, eb.Z)(t.id),
-        _ = (0, ei.Z)(t.id),
-        y = (0, N.R)({
+        y = (0, ei.Z)(t.id),
+        x = (0, N.R)({
             channel: t,
             chatInputType: l
         }),
-        x = (0, D.h9)(t.id),
-        v = (0, ej.k)(t.id),
-        O = (0, C.ZP)(),
-        P = (0, K.Z)(t.id),
-        Z = (0, q.Z)(null == P ? void 0 : P.wallpaperId),
+        v = (0, D.h9)(t.id),
+        O = (0, ej.k)(t.id),
+        P = (0, C.ZP)(),
+        Z = (0, X.Z)(t.id),
+        T = (0, K.Z)(null == Z ? void 0 : Z.wallpaperId),
         {
-            isInitialLoading: T,
-            primaryEntryPointCommand: A,
-            isProfileFetching: w,
-            wasProfileFetching: R,
-            applicationId: M,
-            channelId: k,
-            commands: L
+            isInitialLoading: A,
+            primaryEntryPointCommand: w,
+            isProfileFetching: R,
+            wasProfileFetching: M,
+            applicationId: k,
+            channelId: L,
+            commands: U
         } = (0, E.Z)({
             context: {
                 channel: t,
@@ -967,19 +965,20 @@ let ta = i.memo(function (e) {
             }
         });
     (0, I.Z)({
-        isProfileFetching: w,
-        wasProfileFetching: R,
-        applicationId: M,
-        channelId: k,
-        commands: L
+        isProfileFetching: R,
+        wasProfileFetching: M,
+        applicationId: k,
+        channelId: L,
+        commands: U
     });
-    let U = i.useRef(null),
-        B = (0, d.e7)([S.Z], () => S.Z.appDMChannelsWithFailedLoads().has(t.id)),
-        F = (0, Q.R6)('ChannelChat'),
-        G = (0, Q.Q3)('ChannelChat'),
-        H = (0, d.e7)([ek.Z], () => ek.Z.getVoiceChannelId()),
-        V = (0, d.e7)([eN.Z], () => eN.Z.getChannel(H)),
-        z = (0, d.e7)([eD.default], () => (t.type !== e2.d4z.DM ? null : eD.default.getUser(t.getRecipientId())));
+    let B = i.useRef(null),
+        F = (0, d.e7)([S.Z], () => S.Z.appDMChannelsWithFailedLoads().has(t.id)),
+        G = (0, d.e7)([ek.Z], () => ek.Z.getVoiceChannelId()),
+        H = (0, d.e7)([eN.Z], () => eN.Z.getChannel(G)),
+        V = (0, d.e7)([eD.default], () => (t.type !== e2.d4z.DM ? null : eD.default.getUser(t.getRecipientId()))),
+        z = (0, d.e7)([em.ZP, eS.default], () => em.ZP.getUserCombo(eS.default.getId(), t.id)),
+        Y = (0, _.i)(t).length > 0 || t.rateLimitPerUser > 0 || null != z,
+        q = (0, W.Z)('ChannelChat');
     return (0, r.jsx)(tl, {
         channel: t,
         isEditing: null != (0, d.e7)([eA.Z], () => eA.Z.getEditingMessageId(t.id)),
@@ -995,21 +994,20 @@ let ta = i.memo(function (e) {
         communicationDisabledUntil: u,
         shakeIntensity: b,
         poggermodeEnabled: g,
-        isSelectedResourceChannel: _,
+        isSelectedResourceChannel: y,
         showAutomodUserProfileChatBlocker: h && !m,
-        showAppLauncherButton: y,
-        showAppDMsUI: x,
-        isInitialLoading: T,
-        showEntryPointAppCommandButton: null != A,
-        entryPointCommandButtonRef: U,
-        isFailedAppDMLoad: B,
-        isRefreshChatInputEnabled: F,
-        isRefreshEnabled: G,
-        pendingScheduledMessage: v,
-        recipientUser: z,
-        voiceChannel: V,
-        theme: O,
-        chatWallpaperState: P,
-        wallpaperColorMix: Z
+        showAppLauncherButton: x,
+        showAppDMsUI: v,
+        isInitialLoading: A,
+        showEntryPointAppCommandButton: null != w,
+        entryPointCommandButtonRef: B,
+        isFailedAppDMLoad: F,
+        pendingScheduledMessage: O,
+        recipientUser: V,
+        voiceChannel: H,
+        theme: P,
+        chatWallpaperState: Z,
+        wallpaperColorMix: T,
+        messagesTypingGradient: q && Y
     });
 });

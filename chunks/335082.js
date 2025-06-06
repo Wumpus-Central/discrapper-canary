@@ -13,11 +13,12 @@ var r = n(524437),
     g = n(388032),
     p = n(154947);
 function h() {
-    let e = a.Wz.useSetting(),
-        t = (e) => {
+    let e = a.G6.useSetting(),
+        t = a.Wz.useSetting(),
+        n = (e) => {
             a.Wz.updateSetting(e);
         },
-        n = [
+        l = [
             {
                 value: r.E5.ON,
                 name: g.intl.string(g.t.UzGMHx)
@@ -57,13 +58,36 @@ function h() {
                             })
                         }),
                         (0, i.jsx)(s.FXm, {
-                            options: n,
-                            value: e,
-                            onChange: (e) => t(e.value)
+                            options: l,
+                            value: t,
+                            onChange: (e) => n(e.value)
                         })
                     ]
                 }),
-                (0, i.jsx)(c.Z, {})
+                (0, i.jsxs)('div', {
+                    className: p.myServersContainer,
+                    children: [
+                        (0, i.jsxs)('div', {
+                            className: p.myServersHeaderContainer,
+                            children: [
+                                (0, i.jsx)(s.y5t, {
+                                    children: (0, i.jsx)(s.vwX, {
+                                        className: p.myServersTitle,
+                                        children: g.intl.string(g.t.TqdOvL)
+                                    })
+                                }),
+                                !e &&
+                                    (0, i.jsx)(s.Wn, {
+                                        className: p.myServersIgnoredWarning,
+                                        messageType: s.QYI.WARNING,
+                                        textColor: 'text-warning',
+                                        children: g.intl.string(m.default['xxI0/f'])
+                                    })
+                            ]
+                        }),
+                        (0, i.jsx)(c.Z, {})
+                    ]
+                })
             ]
         })
     });

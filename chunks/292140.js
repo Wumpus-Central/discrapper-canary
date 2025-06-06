@@ -19,8 +19,8 @@ function m(e) {
         _ = (0, p.Z)(t),
         E = (0, d.Z)(t),
         O = (0, u.Z)(t),
-        y = (0, o.Z)(t),
-        I = (0, s.Z)(t);
+        I = (0, o.Z)(t),
+        y = (0, s.Z)(t);
     return (
         (0, l.ZP)(() => {
             let e = t.currentActivities
@@ -45,8 +45,8 @@ function m(e) {
                     children: [_, E]
                 }),
                 (0, r.jsx)(i.kSQ, { children: O }),
-                (0, r.jsx)(i.kSQ, { children: y }),
-                I
+                (0, r.jsx)(i.kSQ, { children: I }),
+                y
             ]
         })
     );

@@ -111,8 +111,8 @@ let g = (e, t) => {
         let { wheelWidth: t, wheelHeight: n, itemWidth: O, itemHeight: y, showDeadZoneIndicator: N, activeItem: b, onItemSelect: v, onItemAction: m, interactive: E = !0, onClose: C, children: x } = e,
             I = l.useRef(null),
             T = l.useRef([]),
-            S = l.useRef(!1),
-            P = l.useRef(null),
+            P = l.useRef(!1),
+            S = l.useRef(null),
             [j, Z] = l.useState(0),
             [A, _] = l.useState({
                 x: 0,
@@ -128,21 +128,21 @@ let g = (e, t) => {
             ),
             U = l.useCallback(
                 (e, t) => {
-                    (P.current = t), v(h * e + t);
+                    (S.current = t), v(h * e + t);
                 },
                 [v]
             ),
             L = l.useCallback(() => {
-                (P.current = null), v(null);
+                (S.current = null), v(null);
             }, [v]),
             M = l.useCallback(
                 (e) => {
-                    L(), (S.current = e);
+                    L(), (P.current = e);
                 },
                 [L]
             ),
             k = l.useCallback((e, t, n) => {
-                if (S.current)
+                if (P.current)
                     return void _({
                         x: 0,
                         y: 0
@@ -161,7 +161,7 @@ let g = (e, t) => {
             }, []),
             B = l.useCallback(
                 (e) => {
-                    null != P.current && (e.preventDefault(), e.stopPropagation(), null == m || m(h * j + P.current));
+                    null != S.current && (e.preventDefault(), e.stopPropagation(), null == m || m(h * j + S.current));
                 },
                 [m, j]
             ),
@@ -178,7 +178,7 @@ let g = (e, t) => {
                                 x: e.clientX,
                                 y: e.clientY
                             };
-                        if ((k(i, l, Math.max(t, n)), S.current)) {
+                        if ((k(i, l, Math.max(t, n)), P.current)) {
                             null != b && L();
                             return;
                         }
@@ -197,7 +197,7 @@ let g = (e, t) => {
                 (e) => {
                     if (!E) return;
                     let t = j + (e.deltaY > 0 ? 1 : -1);
-                    t >= 0 && t < R.length && (null != P.current && (R[t].length > P.current ? U(t, P.current) : L()), Z(t));
+                    t >= 0 && t < R.length && (null != S.current && (R[t].length > S.current ? U(t, S.current) : L()), Z(t));
                 },
                 [E, j, R, U, L]
             ),

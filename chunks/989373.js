@@ -20,8 +20,8 @@ var p = n(998502),
     m = n(145597);
 n(371467);
 var b = n(554370),
-    h = n(371651),
-    g = n(610394),
+    g = n(371651),
+    h = n(610394),
     v = n(757744),
     I = n(981631);
 function y(e, t) {
@@ -29,17 +29,17 @@ function y(e, t) {
             var t;
             return null != (t = u.Z.getWindow(e)) ? t : window;
         }),
-        r = (0, o.e7)([g.ZP], () => {
-            let e = g.ZP.getFocusedPID();
+        r = (0, o.e7)([h.ZP], () => {
+            let e = h.ZP.getFocusedPID();
             return !f.isPlatformEmbedded || (null != e && e !== m.UNSET_PID);
         }),
         [s, b] = i.useState(r);
     (0, c.Ng)(() => {
         let e = (e) => {
-            e.data === g.Il &&
+            e.data === h.Il &&
                 n.requestAnimationFrame(() => {
                     n.requestAnimationFrame(() => {
-                        window.parent.postMessage(g.A8, '*');
+                        window.parent.postMessage(h.A8, '*');
                     });
                 });
         };
@@ -69,12 +69,12 @@ function y(e, t) {
         (0, c.Ng)(() => {
             var e;
             s && v();
-            let n = null != (e = g.ZP.getFocusedPID()) ? e : (0, m.getPID)(),
+            let n = null != (e = h.ZP.getFocusedPID()) ? e : (0, m.getPID)(),
                 r = null != _.Z.getVoiceChannelId();
             a.Z.track(I.rMx.OVERLAY_INITIALIZED, {
                 voice_widget_connected: r,
-                text_widget_connected: g.ZP.isPinned(I.Odu.TEXT),
-                overlay_render_method: l.gl[h.default.getOverlayMethod(n)],
+                text_widget_connected: h.ZP.isPinned(I.Odu.TEXT),
+                overlay_render_method: l.gl[g.default.getOverlayMethod(n)],
                 unpinned_widget_types: d.Z.getAllUnpinnedPinnedWidgets(t)
             });
         }),

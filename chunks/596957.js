@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(451478),
     E = n(701861),
     O = n(437314),
-    y = n(696577),
-    I = n(163417),
+    I = n(696577),
+    y = n(163417),
     v = n(830880),
     C = n(492347),
     S = n(42575),
@@ -132,7 +132,7 @@ let D = function (e) {
                     })(e, ['key']);
                 switch (c) {
                     case T.pJs.PENDING:
-                        return (0, r.jsx)(y.Z, x(A({}, n), { isFocused: w }), t);
+                        return (0, r.jsx)(I.Z, x(A({}, n), { isFocused: w }), t);
                     case T.pJs.SUGGESTIONS:
                         return (0, r.jsx)(S.Z, x(A({}, n), { isFocused: w }), t);
                     case T.pJs.ONLINE:
@@ -143,13 +143,13 @@ let D = function (e) {
             },
             [w, c]
         ),
-        B = i.useCallback(
+        V = i.useCallback(
             (e) => {
                 U(x(A({}, M), { [c]: e }));
             },
             [M, c]
         ),
-        V = i.useCallback(() => {
+        B = i.useCallback(() => {
             U(x(A({}, M), { [c]: '' }));
         }, [M, c]),
         H = i.useMemo(() => c === T.pJs.PENDING && (l.filter(T.pJs.SPAM).length > 0 || l.filter(T.pJs.PENDING_IGNORED).length > 0), [l, c]),
@@ -263,11 +263,11 @@ let D = function (e) {
                 (0, r.jsx)(s.E1j, {
                     className: a()(j.searchBar, $ ? j.searchEmptyState : null),
                     query: M[c],
-                    onChange: B,
-                    onClear: V,
+                    onChange: V,
+                    onClear: B,
                     size: s.E1j.Sizes.MEDIUM
                 }),
-                (0, r.jsx)(I.Z, {
+                (0, r.jsx)(y.Z, {
                     rows: Y,
                     renderRow: G,
                     renderSection: Q,

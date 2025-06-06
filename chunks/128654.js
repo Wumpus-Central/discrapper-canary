@@ -1,11 +1,11 @@
 e.exports = {
     container: 'container_c48ade',
+    panels: 'panels_c48ade',
     guilds: 'guilds_c48ade',
     base: 'base_c48ade',
     sidebar: 'sidebar_c48ade',
     hidden: 'hidden_c48ade',
     fullWidth: 'fullWidth_c48ade',
-    panels: 'panels_c48ade',
     content: 'content_c48ade',
     activityPanel: 'activityPanel_c48ade',
     loader: 'loader_c48ade',

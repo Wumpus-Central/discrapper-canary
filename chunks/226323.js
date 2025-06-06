@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(670188),
     E = n(314897),
     O = n(131951),
-    y = n(51144),
-    I = n(524484),
+    I = n(51144),
+    y = n(524484),
     v = n(388032),
     C = n(795243);
 function S(e) {
@@ -104,11 +104,11 @@ function j(e) {
         }),
         k = null != (t = E.getGuildId()) ? t : void 0,
         M = j.getAvatarURL(E.guild_id, 24),
-        U = null != A ? A : y.ZP.getName(j),
+        U = null != A ? A : I.ZP.getName(j),
         {
             icon: G,
-            colorize: B,
-            getStatus: V
+            colorize: V,
+            getStatus: B
         } = null !=
         (l = (function (e) {
             let { serverDeaf: t, deaf: n, serverMute: r, mute: i, localMute: l } = e;
@@ -127,10 +127,10 @@ function j(e) {
             ? l
             : {},
         H =
-            null != V
+            null != B
                 ? v.intl.formatToPlainString(v.t['1+MVBA'], {
                       userName: U,
-                      status: V()
+                      status: B()
                   })
                 : U;
     function F(e) {
@@ -184,7 +184,7 @@ function j(e) {
                             onContextMenu: F,
                             focusProps: T,
                             children: (0, r.jsx)(b.Z, {
-                                shakeLocation: I.oZ.VOICE_USER,
+                                shakeLocation: y.oZ.VOICE_USER,
                                 isShaking: D,
                                 children: (0, r.jsx)('div', {
                                     className: a()(C.avatar, { [C.speaking]: D }),
@@ -192,7 +192,7 @@ function j(e) {
                                     children:
                                         null != G
                                             ? (0, r.jsx)(G, {
-                                                  className: a()(C.avatarIconOverlay, { [C.avatarIconRed]: B }),
+                                                  className: a()(C.avatarIconOverlay, { [C.avatarIconRed]: V }),
                                                   color: 'currentColor',
                                                   size: 'xs'
                                               })
@@ -246,8 +246,8 @@ function A(e) {
             }),
             focusProps: T
         }),
-        y = b && c ? t : m;
-    return y.length <= 0
+        I = b && c ? t : m;
+    return I.length <= 0
         ? null
         : (0, r.jsx)(s.zJl, {
               className: a()(C.scroller, l),
@@ -258,7 +258,7 @@ function A(e) {
                   role: 'group',
                   'aria-label': v.intl.string(v.t['/ZgaVV']),
                   children: [
-                      y.map((e) => {
+                      I.map((e) => {
                           let { user: t, nick: i, voiceState: l } = e;
                           return t.id !== h
                               ? (0, r.jsx)(

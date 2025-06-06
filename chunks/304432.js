@@ -47,9 +47,10 @@ function u() {
         x = 0 !== f.length,
         [E, C] = (0, r.useState)(() => d[n](m, h)),
         j = E.map((e) => u[e.id]).filter(Boolean),
-        O = '' === e ? j : j.filter((t) => t.name.toLowerCase().includes(e.toLowerCase()));
+        O = '' === e ? j : j.filter((t) => t.name.toLowerCase().includes(e.toLowerCase())),
+        S = '' !== e;
     return {
-        guilds: g ? O : O.slice(0, 10),
+        guilds: g || S ? O : O.slice(0, 10),
         sortOrder: n,
         searchQuery: e,
         setSortOrder: (e) => {
@@ -70,6 +71,8 @@ function u() {
             p((e) => !e);
         },
         isShowingAllGuilds: g,
-        numTotalGuilds: c.length
+        numTotalGuilds: c.length,
+        numGuildsShownLimit: 10,
+        isSearching: S
     };
 }

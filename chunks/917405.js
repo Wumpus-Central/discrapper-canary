@@ -93,7 +93,7 @@ class v extends l.PureComponent {
     }
     render() {
         let e,
-            { quality: t, smallPing: n, lastPing: l, state: i, className: s, children: u } = this.props;
+            { quality: t, smallPing: n, lastPing: l, state: i, className: s, children: u, childrenAsSubtitle: c } = this.props;
         return (
             i === h.hes.RTC_CONNECTED &&
                 (e = (0, r.jsx)(a.ua7, {
@@ -105,7 +105,8 @@ class v extends l.PureComponent {
                             O(
                                 {
                                     quality: t,
-                                    smallPing: n
+                                    smallPing: !c && n,
+                                    largePing: c
                                 },
                                 e
                             )
@@ -118,13 +119,13 @@ class v extends l.PureComponent {
                         className: o()(p.rtcConnectionStatus, b[t], s),
                         children: [
                             e,
-                            (0, r.jsx)('div', {
+                            (0, r.jsxs)('div', {
                                 className: p.labelWrapper,
-                                children: this.renderStatus()
+                                children: [this.renderStatus(), c ? u : null]
                             })
                         ]
                     }),
-                    u
+                    c ? null : u
                 ]
             })
         );
@@ -156,8 +157,8 @@ class v extends l.PureComponent {
     }
 }
 function m(e) {
-    var { quality: t, smallPing: n } = e,
-        l = (function (e, t) {
+    var { quality: t, smallPing: n, largePing: l } = e,
+        i = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -175,13 +176,24 @@ function m(e) {
                 for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
-        })(e, ['quality', 'smallPing']);
-    let i = {
+        })(e, ['quality', 'smallPing', 'largePing']);
+    let s = {
         [h.IE4.FINE]: a.B_b,
         [h.IE4.AVERAGE]: a.hLg,
         [h.IE4.BAD]: a.mbS,
         [h.IE4.UNKNOWN]: a._3e
     }[t];
-    return (0, r.jsx)(i, O({ className: o()(p.ping, { [p.smallPing]: n }) }, l));
+    return (0, r.jsx)(
+        s,
+        O(
+            {
+                className: o()(p.ping, {
+                    [p.smallPing]: n,
+                    [p.largePing]: l
+                })
+            },
+            i
+        )
+    );
 }
 let E = v;

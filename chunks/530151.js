@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(112724),
     E = n(812206),
     O = n(44315),
-    y = n(600164),
-    I = n(167533),
+    I = n(600164),
+    y = n(167533),
     v = n(925329),
     C = n(707409),
     S = n(210887),
@@ -75,7 +75,7 @@ let M = (e) => {
             }
         });
     };
-function B(e, t) {
+function V(e, t) {
     switch (t) {
         case L.f07.POST_INSTALL_SCRIPTS:
         case L.f07.PLANNING:
@@ -86,7 +86,7 @@ function B(e, t) {
             return (0, A.BU)(e, { useKibibytes: !0 });
     }
 }
-let V = {
+let B = {
     [L.vxO.INSTALLING]: {
         [C.J6.NONE]: (e, t, n, r) =>
             R.intl.formatToPlainString(R.t.JfJt9f, {
@@ -176,7 +176,7 @@ let V = {
     }
 };
 function H(e, t, n, r, i) {
-    let l = V[t],
+    let l = B[t],
         a = null != l ? Object.keys(l) : [],
         { unit: o, time: s } = (0, C.CI)(null != e ? e / 60 : null, a);
     if (null != l && null != o) {
@@ -187,8 +187,8 @@ function H(e, t, n, r, i) {
 }
 function F(e) {
     let { type: t, stage: n, percent: r, progress: i, total: l, secondsRemaining: a } = e,
-        o = B(l, n),
-        s = B(i, n);
+        o = V(l, n),
+        s = V(i, n);
     switch (n) {
         case L.f07.QUEUED:
             if (0 === i) return R.intl.string(R.t.RpfBqa);
@@ -240,8 +240,8 @@ class z extends i.PureComponent {
     }
     renderBody(e) {
         let { percent: t, foregroundColor: n, foregroundGradientColor: i, message: l } = e;
-        return (0, r.jsxs)(y.Z, {
-            direction: y.Z.Direction.VERTICAL,
+        return (0, r.jsxs)(I.Z, {
+            direction: I.Z.Direction.VERTICAL,
             children: [
                 (0, r.jsx)(p.Exd, {
                     percent: t,
@@ -259,8 +259,8 @@ class z extends i.PureComponent {
     }
     renderStackedProgress(e) {
         let { percents: t, message: n } = e;
-        return (0, r.jsxs)(y.Z, {
-            direction: y.Z.Direction.VERTICAL,
+        return (0, r.jsxs)(I.Z, {
+            direction: I.Z.Direction.VERTICAL,
             children: [
                 (0, r.jsx)(p.yGy, {
                     percents: t,
@@ -292,8 +292,8 @@ class z extends i.PureComponent {
         if (null != n) {
             let { progress: r, total: i, stage: l } = n;
             if (null != r && null != i) {
-                let n = B(i, l),
-                    a = B(r, l),
+                let n = V(i, l),
+                    a = V(r, l),
                     o = Math.floor((t = x.xI(r, i)));
                 e =
                     l === L.f07.PAUSING
@@ -447,8 +447,8 @@ let W = () =>
             key: 'name',
             cellClassName: D.nameCell,
             render: (e) =>
-                (0, r.jsxs)(y.Z, {
-                    align: y.Z.Align.CENTER,
+                (0, r.jsxs)(I.Z, {
+                    align: I.Z.Align.CENTER,
                     children: [
                         (0, r.jsx)(v.Z, {
                             game: e.application,
@@ -492,8 +492,8 @@ let W = () =>
                         : null != e.state
                           ? e.state.type !== L.vxO.UP_TO_DATE && ((n = e.index > 0 ? (0, r.jsx)(K, { item: e }) : null != t && t.paused ? (0, r.jsx)(W, {}) : (0, r.jsx)(Y, { item: e })), (i = (0, r.jsx)(q, { item: e })))
                           : (i = (0, r.jsx)(q, { item: e })),
-                    (0, r.jsxs)(y.Z, {
-                        justify: y.Z.Justify.END,
+                    (0, r.jsxs)(I.Z, {
+                        justify: I.Z.Justify.END,
                         children: [n, i]
                     })
                 );
@@ -544,7 +544,7 @@ class Q extends i.PureComponent {
                               })
                           ]
                       }),
-                      (0, r.jsx)(I.Z, {
+                      (0, r.jsx)(y.Z, {
                           hasHeader: !1,
                           columns: X,
                           data: e,

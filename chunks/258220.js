@@ -41,11 +41,11 @@ function g(e) {
         })(e, ['applicationId']);
     let [_, E] = i.useState(!1),
         [O] = (0, o.Z)([m]),
-        y = null != (g = null == O ? void 0 : O.name) ? g : 'This Activity';
+        I = null != (g = null == O ? void 0 : O.name) ? g : 'This Activity';
     i.useEffect(() => {
         c.default.track(d.rMx.OPEN_MODAL, { type: f });
     }, []);
-    let I = () => {
+    let y = () => {
         let e = 'temporary';
         _ && ((e = 'permanent'), a.ZP.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
             c.default.track(d.rMx.MODAL_DISMISSED, {
@@ -100,7 +100,7 @@ function g(e) {
                                 children: p.intl.string(p.t.NQkK4u)
                             }),
                             (0, r.jsx)(l.olH, {
-                                onClick: I,
+                                onClick: y,
                                 className: h.closeButton
                             })
                         ]
@@ -110,7 +110,7 @@ function g(e) {
                         children: (0, r.jsx)(l.Text, {
                             variant: 'text-md/normal',
                             className: h.__invalid_ratingBody,
-                            children: p.intl.format(p.t.B9eiaG, { applicationName: y })
+                            children: p.intl.format(p.t.B9eiaG, { applicationName: I })
                         })
                     }),
                     (0, r.jsxs)(l.mzw, {
@@ -129,7 +129,7 @@ function g(e) {
                             }),
                             (0, r.jsx)(l.zxk, {
                                 color: l.zxk.Colors.PRIMARY,
-                                onClick: I,
+                                onClick: y,
                                 children: p.intl.string(p.t['Ibf5/v'])
                             }),
                             (0, r.jsx)(l.zxk, {

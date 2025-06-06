@@ -28,8 +28,8 @@ var r = n(255367),
     T = n(73315),
     I = n(470623),
     E = n(858543),
-    k = n(265641),
-    R = n(883728),
+    R = n(265641),
+    k = n(883728),
     Z = n(39154),
     M = n(712950),
     A = n(406432),
@@ -164,7 +164,7 @@ let ec = l.memo(function (e) {
             null == i || i(_.current, t);
         }, [_, i, t]);
     let P = l.useRef(null),
-        { handleLeftClick: T, handleRightClick: E } = (0, R.Z)({
+        { handleLeftClick: T, handleRightClick: E } = (0, k.Z)({
             facepileRef: P,
             goToThread: n,
             channel: d
@@ -190,7 +190,7 @@ let ec = l.memo(function (e) {
             }
             return l;
         })(A, ['role', 'onFocus']),
-        { isFocused: B, handleFocus: H, handleBlur: U } = (0, k.Z)(F);
+        { isFocused: B, handleFocus: H, handleBlur: U } = (0, R.Z)(F);
     return (0, r.jsxs)('div', {
         ref: _,
         'data-item-id': t,

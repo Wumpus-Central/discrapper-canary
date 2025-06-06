@@ -21,8 +21,8 @@ var r = n(255367),
     _ = n(74538),
     E = n(502087),
     O = n(695349),
-    y = n(767870),
-    I = n(104494),
+    I = n(767870),
+    y = n(104494),
     v = n(639119),
     C = n(655525),
     S = n(52188),
@@ -43,7 +43,7 @@ let M = (e) => {
             n = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
             r = (0, a.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription()),
             i = (0, v.N)(),
-            l = (0, I.Ng)(),
+            l = (0, y.Ng)(),
             o = (0, N.Vi)(),
             s = (0, A.V)(),
             c = (0, _.Qo)(n, r),
@@ -56,7 +56,7 @@ let M = (e) => {
         let t, n, E;
         var U,
             G,
-            { selected: B, route: V, locationState: H } = e,
+            { selected: V, route: B, locationState: H } = e,
             F = (function (e, t) {
                 if (null == e) return {};
                 var n,
@@ -81,7 +81,7 @@ let M = (e) => {
             Y = (0, _.Qo)(z, W),
             K = (0, l.JA)('nitro'),
             q = (0, v.N)(),
-            X = (0, I.Ng)(),
+            X = (0, y.Ng)(),
             Q = (0, O.W)(),
             J = (0, a.e7)([g.Z], () => g.Z.isLocalizedPromoEnabled) && null == q,
             $ = (0, N.Vi)(),
@@ -96,15 +96,15 @@ let M = (e) => {
             [es, ec] = (0, h.US)(Q ? [o.z.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2] : [], void 0, !0);
         if (
             (i.useEffect(() => {
-                !0 === B && null != es && ec(R.L.AUTO_DISMISS);
-            }, [ec, B, es]),
-            !M({ selected: B }))
+                !0 === V && null != es && ec(R.L.AUTO_DISMISS);
+            }, [ec, V, es]),
+            !M({ selected: V }))
         )
             return null;
         en === w.a$.NONE ||
             Q ||
             ((E = 7),
-            (n = (0, r.jsx)(y.Z, {
+            (n = (0, r.jsx)(I.Z, {
                 className: '',
                 startsAt: er,
                 endsAt: ei,
@@ -124,21 +124,21 @@ let M = (e) => {
                     : null != X
                       ? ((n = (0, r.jsx)(T.GN, {
                             userDiscount: X,
-                            isTabSelected: B,
+                            isTabSelected: V,
                             includesAmountOff: !1
                         })),
                         (E = 3))
                       : null == q || eo
                         ? et
                             ? ((n = (0, r.jsx)(P.l, {
-                                  isSelected: B,
+                                  isSelected: V,
                                   onSelect: () => (0, p.EW)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: R.L.TAKE_ACTION })
                               })),
                               (E = 6))
-                            : J && ((n = (0, r.jsx)(S.k, { entryPoint: S.U.PrivateMessages })), B || (t = k.localizeBadge), (E = 5))
+                            : J && ((n = (0, r.jsx)(S.k, { entryPoint: S.U.PrivateMessages })), V || (t = k.localizeBadge), (E = 5))
                         : ((n = (0, r.jsx)(T.$H, {
                               trialOffer: q,
-                              isTabSelected: B
+                              isTabSelected: V
                           })),
                           (E = 4));
         let eu = (0, r.jsx)(
@@ -169,8 +169,8 @@ let M = (e) => {
                 return e;
             })(
                 {
-                    selected: B,
-                    route: V,
+                    selected: V,
+                    route: B,
                     icon: s.SrA,
                     text: D.intl.string(D.t.Ipxkoq),
                     locationState: H,

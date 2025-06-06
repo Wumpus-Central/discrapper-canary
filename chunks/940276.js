@@ -1,37 +1,36 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var i = n(255367),
     r = n(442837),
     s = n(481060),
     l = n(650774),
-    a = n(304432),
-    o = n(622123),
-    c = n(388032),
-    d = n(236022);
-function u(e) {
-    let { guild: t, isActivityRestricted: n, onToggleActivityRestrictedGuild: a } = e,
-        o = (0, r.e7)([l.Z], () => l.Z.getMemberCount(t.id)),
-        u = t.toString();
+    a = n(797670),
+    o = n(304432),
+    c = n(622123),
+    d = n(388032),
+    u = n(236022);
+function m(e) {
+    let { guild: t, isActivityRestricted: n, onToggleActivityRestrictedGuild: o } = e,
+        c = (0, r.e7)([l.Z], () => l.Z.getMemberCount(t.id));
     return (0, i.jsx)(s.j7V, {
-        className: d.guildRowWrapper,
+        className: u.guildRowWrapper,
         value: !n,
         onChange: (e) =>
-            a({
+            o({
                 checked: e,
                 guildId: t.id
             }),
         hideBorder: !0,
         children: (0, i.jsxs)('div', {
-            className: d.guildRow,
+            className: u.guildRow,
             children: [
-                (0, i.jsx)(s.aRk, {
-                    children: (0, i.jsx)(s.LYs, {
-                        ariaLabel: u,
-                        name: u,
-                        icon: t.getIconURL(80, !1, !0),
-                        tabIndex: -1
+                (0, i.jsx)('div', {
+                    children: (0, i.jsx)(a.V, {
+                        guild: t,
+                        size: 48
                     })
                 }),
                 (0, i.jsxs)('div', {
+                    className: u.guildRowTextContainer,
                     children: [
                         (0, i.jsx)(s.Text, {
                             variant: 'text-md/medium',
@@ -40,13 +39,13 @@ function u(e) {
                             children: t.toString()
                         }),
                         (0, i.jsxs)('div', {
-                            className: d.memberDetailsContainer,
+                            className: u.memberDetailsContainer,
                             children: [
-                                (0, i.jsx)('div', { className: d.memberCountDot }),
+                                (0, i.jsx)('div', { className: u.memberCountDot }),
                                 (0, i.jsx)(s.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'text-secondary',
-                                    children: c.intl.format(c.t.zRl6XV, { count: o })
+                                    children: d.intl.format(d.t.zRl6XV, { count: c })
                                 })
                             ]
                         })
@@ -56,60 +55,70 @@ function u(e) {
         })
     });
 }
-let m = function () {
-    let { guilds: e, searchQuery: t, setSearchQuery: n, sortOrder: r, setSortOrder: l, hasActivityRestrictedGuilds: m, onToggleAllActivityRestrictedGuilds: g, onToggleShowAllGuilds: p, isShowingAllGuilds: h, numTotalGuilds: f, onToggleActivityRestrictedGuild: b, isActivityRestricted: _ } = (0, a.F)();
+let g = function () {
+    let { guilds: e, searchQuery: t, setSearchQuery: n, sortOrder: r, setSortOrder: l, hasActivityRestrictedGuilds: a, onToggleAllActivityRestrictedGuilds: g, onToggleShowAllGuilds: p, isShowingAllGuilds: h, numTotalGuilds: f, onToggleActivityRestrictedGuild: b, isActivityRestricted: _, numGuildsShownLimit: x, isSearching: E } = (0, o.F)();
     return (0, i.jsxs)('div', {
-        className: d.wrapper,
+        className: u.wrapper,
         children: [
             (0, i.jsx)(s.E1j, {
                 size: s.E1j.Sizes.MEDIUM,
                 query: t,
                 onChange: n,
                 onClear: () => n(''),
-                placeholder: c.intl.string(c.t['5h0QOD']),
-                'aria-label': c.intl.string(c.t['5h0QOD'])
+                placeholder: d.intl.string(d.t['H+nRY2']),
+                'aria-label': d.intl.string(d.t['5h0QOD'])
             }),
-            (0, i.jsxs)('div', {
-                className: d.controlsContainer,
-                children: [
-                    (0, i.jsx)(s.PhF, {
-                        className: d.sortOrderSelect,
-                        look: s.qQH.CUSTOM,
-                        popoutWidth: 'auto',
-                        options: [
-                            {
-                                label: c.intl.string(c.t.STMPJy),
-                                value: a.W.SERVER_ORDER
-                            },
-                            {
-                                label: c.intl.string(c.t.CbaapK),
-                                value: a.W.RECENTLY_JOINED
-                            },
-                            {
-                                label: c.intl.string(o.default.ZI51JS),
-                                value: a.W.ACTIVITY_SHARING_ON
-                            },
-                            {
-                                label: c.intl.string(o.default['+kxafn']),
-                                value: a.W.ACTIVITY_SHARING_OFF
-                            }
-                        ],
-                        select: l,
-                        isSelected: (e) => r === e,
-                        serialize: String
-                    }),
-                    (0, i.jsx)(s.zxk, {
-                        className: d.toggleAllButton,
-                        look: s.zxk.Looks.LINK,
-                        color: s.zxk.Colors.LINK,
-                        onClick: g,
-                        children: m ? c.intl.string(c.t['7lxcLC']) : c.intl.string(c.t.zh6UEh)
+            e.length > 0 &&
+                (0, i.jsxs)('div', {
+                    className: u.controlsContainer,
+                    children: [
+                        (0, i.jsx)(s.PhF, {
+                            className: u.sortOrderSelect,
+                            look: s.qQH.CUSTOM,
+                            popoutWidth: 'auto',
+                            options: [
+                                {
+                                    label: d.intl.string(d.t.STMPJy),
+                                    value: o.W.SERVER_ORDER
+                                },
+                                {
+                                    label: d.intl.string(d.t.CbaapK),
+                                    value: o.W.RECENTLY_JOINED
+                                },
+                                {
+                                    label: d.intl.string(c.default.ZI51JS),
+                                    value: o.W.ACTIVITY_SHARING_ON
+                                },
+                                {
+                                    label: d.intl.string(c.default['+kxafn']),
+                                    value: o.W.ACTIVITY_SHARING_OFF
+                                }
+                            ],
+                            select: l,
+                            isSelected: (e) => r === e,
+                            serialize: String
+                        }),
+                        (0, i.jsx)(s.zxk, {
+                            className: u.toggleAllButton,
+                            look: s.zxk.Looks.LINK,
+                            color: s.zxk.Colors.LINK,
+                            onClick: g,
+                            children: a ? d.intl.string(d.t['7lxcLC']) : d.intl.string(d.t.zh6UEh)
+                        })
+                    ]
+                }),
+            0 === e.length &&
+                (0, i.jsx)('div', {
+                    className: u.noResultsContainer,
+                    children: (0, i.jsx)(s.Text, {
+                        className: u.noResultsText,
+                        variant: 'text-lg/medium',
+                        children: d.intl.string(d.t['Xe+fJC'])
                     })
-                ]
-            }),
+                }),
             e.map((e) =>
                 (0, i.jsx)(
-                    u,
+                    m,
                     {
                         guild: e,
                         isActivityRestricted: _(e.id),
@@ -118,28 +127,30 @@ let m = function () {
                     e.id
                 )
             ),
-            (0, i.jsxs)(s.P3F, {
-                className: d.showAllButton,
-                onClick: p,
-                children: [
-                    h
-                        ? (0, i.jsx)(s.u04, {
-                              className: d.showAllIcon,
-                              size: 'md',
-                              color: s.TVs.colors.ICON_PRIMARY
-                          })
-                        : (0, i.jsx)(s.CJ0, {
-                              className: d.showAllIcon,
-                              size: 'md',
-                              color: s.TVs.colors.ICON_PRIMARY
-                          }),
-                    (0, i.jsx)(s.Text, {
-                        variant: 'text-md/semibold',
-                        color: 'text-primary',
-                        children: h ? c.intl.string(c.t['8fJE7+']) : c.intl.format(c.t.jcANeH, { count: f })
-                    })
-                ]
-            })
+            f > x &&
+                !E &&
+                (0, i.jsxs)(s.P3F, {
+                    className: u.showAllButton,
+                    onClick: p,
+                    children: [
+                        h
+                            ? (0, i.jsx)(s.u04, {
+                                  className: u.showAllIcon,
+                                  size: 'md',
+                                  color: s.TVs.colors.ICON_PRIMARY
+                              })
+                            : (0, i.jsx)(s.CJ0, {
+                                  className: u.showAllIcon,
+                                  size: 'md',
+                                  color: s.TVs.colors.ICON_PRIMARY
+                              }),
+                        (0, i.jsx)(s.Text, {
+                            variant: 'text-md/semibold',
+                            color: 'text-primary',
+                            children: h ? d.intl.string(d.t['8fJE7+']) : d.intl.format(d.t['4AUz5O'], { count: f })
+                        })
+                    ]
+                })
         ]
     });
 };

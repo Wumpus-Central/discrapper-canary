@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(532835),
     E = n(347469),
     O = n(169382),
-    y = n(290297),
-    I = n(317381),
+    I = n(290297),
+    y = n(317381),
     v = n(82888),
     C = n(244317),
     S = n(765717),
@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(637853),
     U = n(326145),
     G = n(269675),
-    B = n(242601),
-    V = n(416568),
+    V = n(242601),
+    B = n(416568),
     H = n(613609),
     F = n(160404),
     z = n(225675),
@@ -71,8 +71,8 @@ var r = n(255367),
     e_ = n(409292),
     eE = n(316173),
     eO = n(256638),
-    ey = n(663701),
-    eI = n(697309),
+    eI = n(663701),
+    ey = n(697309),
     ev = n(425369),
     eC = n(715702),
     eS = n(981631),
@@ -169,7 +169,7 @@ let ew = (0, u.Un)({
         name: 'GuildPowerupsPage',
         renderLoader: eL
     }),
-    eB = (e) => {
+    eV = (e) => {
         let { match: t } = e,
             n = (0, O.l)(),
             i = (0, h.e7)([es.Z, ep.Z], () => {
@@ -255,7 +255,7 @@ let ew = (0, u.Un)({
         }
         return (0, r.jsx)(T.Z, {});
     },
-    eV = i.memo(function () {
+    eB = i.memo(function () {
         let { guildId: e, channelId: t } = (0, er.Z)(),
             { notificationCenterVariant: n } = X.L.useExperiment({ location: 'Sidebar' }),
             i = (0, h.e7)([ep.Z], () => (null != t ? t : ep.Z.getChannelId(e)));
@@ -265,16 +265,16 @@ let ew = (0, u.Un)({
               ? (0, r.jsx)(R.Z, {})
               : null != e
                 ? (0, r.jsx)(
-                      B.Z,
+                      V.Z,
                       {
                           selectedChannelId: i,
                           guildId: e
                       },
                       e
                   )
-                : (0, r.jsx)(ey.Z, {});
+                : (0, r.jsx)(eI.Z, {});
     }),
-    eH = (e) => (0, r.jsx)(eB, ex({}, e)),
+    eH = (e) => (0, r.jsx)(eV, ex({}, e)),
     eF = () => (0, r.jsx)(L.Z, {}),
     ez = (e) => (null != e.match.params.channelId ? eH(e) : (0, r.jsx)(Q.Z, {})),
     eW = (e) => {
@@ -347,6 +347,9 @@ let ew = (0, u.Un)({
                 return (0, r.jsx)(s.l_, { to: { pathname: eS.Z5c.NITRO_HOME } });
             case 'connected-games':
                 return (0, r.jsx)(s.l_, { to: eS.Z5c.SETTINGS('content-and-social', 'connected-games') });
+            case 'boost':
+                let n = t.params.guildId;
+                return (0, r.jsx)(s.l_, { to: eS.Z5c.POWERUP_STORE(n) });
             default:
                 return (0, r.jsx)(s.l_, { to: eS.Z5c.ME });
         }
@@ -370,12 +373,12 @@ function e5(e) {
     let p = (0, h.e7)([N.Z], () => N.Z.isFullscreenInContext()),
         m = (0, w.TH)('ChannelSidebar'),
         O = (0, w.Q3)('ChannelSidebar'),
-        y = (0, A.useAppSidebarState)((e) => !e.isOpen) && m;
+        I = (0, A.useAppSidebarState)((e) => !e.isOpen) && m;
     i.useLayoutEffect(() => {
         if (m) {
             var e;
-            let t = parseInt(null != (e = f.K.get(eI.nT)) ? e : '');
-            Number.isNaN(t) && (t = eI.qO), (t = Math.min(Math.max(t, eI.li), eI.zx)), !m && t <= eI.p8 && (t = eI.qO), e8(t);
+            let t = parseInt(null != (e = f.K.get(ey.nT)) ? e : '');
+            Number.isNaN(t) && (t = ey.qO), (t = Math.min(Math.max(t, ey.li), ey.zx)), !m && t <= ey.p8 && (t = ey.qO), e8(t);
             let n = (e) => {
                 e.metaKey && 'b' === e.key && A.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
             };
@@ -388,22 +391,22 @@ function e5(e) {
         }
     }, [m]),
         i.useLayoutEffect(() => {
-            if (y) e8(eI.p8);
+            if (I) e8(ey.p8);
             else {
                 var e;
-                let t = parseInt(null != (e = f.K.get(eI.nT)) ? e : '');
-                Number.isNaN(t) && (t = eI.qO), e8(t);
+                let t = parseInt(null != (e = f.K.get(ey.nT)) ? e : '');
+                Number.isNaN(t) && (t = ey.qO), e8(t);
             }
-        }, [y]);
-    let I = i.useRef(null),
+        }, [I]);
+    let y = i.useRef(null),
         v = i.useCallback(
             (e, t) => {
                 var n;
                 e8(e);
-                let r = t < eI.li / 3;
-                t <= eI.li ? document.body.classList.add(eA.draggingMin) : document.body.classList.remove(eA.draggingMin), t >= eI.zx ? document.body.classList.add(eA.draggingMax) : document.body.classList.remove(eA.draggingMax);
+                let r = t < ey.li / 3;
+                t <= ey.li ? document.body.classList.add(eA.draggingMin) : document.body.classList.remove(eA.draggingMin), t >= ey.zx ? document.body.classList.add(eA.draggingMax) : document.body.classList.remove(eA.draggingMax);
                 let i = t - e;
-                null == (n = I.current) || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(i / eI.p8), 0.25))), m && (A.useAppSidebarState.setState({ isOpen: !r }), r && e8(eI.p8));
+                null == (n = y.current) || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(i / ey.p8), 0.25))), m && (A.useAppSidebarState.setState({ isOpen: !r }), r && e8(ey.p8));
             },
             [m]
         ),
@@ -412,12 +415,12 @@ function e5(e) {
         }, []),
         S = i.useCallback((e) => {
             var t;
-            document.body.classList.remove(eA.dragging), document.body.classList.remove(eA.draggingMin), document.body.classList.remove(eA.draggingMax), document.body.classList.remove(eA.collapsing), null == (t = I.current) || t.style.setProperty('--custom-overdrag', '0px'), f.K.set(eI.nT, e), ef.default.track(eS.rMx.CHANNEL_SIDEBAR_RESIZED, { width: e });
+            document.body.classList.remove(eA.dragging), document.body.classList.remove(eA.draggingMin), document.body.classList.remove(eA.draggingMax), document.body.classList.remove(eA.collapsing), null == (t = y.current) || t.style.setProperty('--custom-overdrag', '0px'), f.K.set(ey.nT, e), ef.default.track(eS.rMx.CHANNEL_SIDEBAR_RESIZED, { width: e });
         }, []),
         T = (0, E.Z)({
-            minDimension: eI.li,
-            maxDimension: eI.zx,
-            resizableDomNodeRef: I,
+            minDimension: ey.li,
+            maxDimension: ey.zx,
+            resizableDomNodeRef: y,
             onElementResize: v,
             onElementResizeStart: C,
             onElementResizeEnd: S,
@@ -429,8 +432,8 @@ function e5(e) {
         }, []);
     if (
         (i.useLayoutEffect(() => {
-            y && e8(eI.p8);
-        }, [y]),
+            I && e8(ey.p8);
+        }, [I]),
         l || (!O && o))
     )
         return null;
@@ -440,8 +443,8 @@ function e5(e) {
         theme: n,
         children: (e) =>
             (0, r.jsxs)('div', {
-                ref: O ? I : void 0,
-                'data-collapsed': y,
+                ref: O ? y : void 0,
+                'data-collapsed': I,
                 className: a()(eA.sidebar, e, {
                     [eA.fullWidth]: d.tq,
                     [eA.hidden]: p,
@@ -451,14 +454,14 @@ function e5(e) {
                     O &&
                         s &&
                         !c &&
-                        (0, r.jsx)(V.Z, {
+                        (0, r.jsx)(B.Z, {
                             className: eA.guilds,
                             themeOverride: n
                         }),
                     !o &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(j, eZ(ex({}, x), { children: (0, r.jsx)(eV, {}) })),
+                                (0, r.jsx)(j, eZ(ex({}, x), { children: (0, r.jsx)(eB, {}) })),
                                 O
                                     ? (0, r.jsx)(g.P3F, {
                                           onClick: P,
@@ -532,9 +535,9 @@ function e4() {
                   'data-collapsed': !!C && j
               }
             : {},
-        L = (0, h.e7)([I.ZP], () => {
+        L = (0, h.e7)([y.ZP], () => {
             var e;
-            return (null == (e = I.ZP.getCurrentEmbeddedActivity()) ? void 0 : e.location.kind) === p.E.CONTEXTLESS;
+            return (null == (e = y.ZP.getCurrentEmbeddedActivity()) ? void 0 : e.location.kind) === p.E.CONTEXTLESS;
         });
     return (0, r.jsxs)('div', {
         className: eA.container,
@@ -542,7 +545,7 @@ function e4() {
             f &&
                 !u &&
                 !O &&
-                (0, r.jsx)(V.Z, {
+                (0, r.jsx)(B.Z, {
                     className: eA.guilds,
                     themeOverride: n
                 }),
@@ -569,7 +572,7 @@ function e4() {
                                 (0, r.jsx)(
                                     T,
                                     eZ(ex({}, Z), {
-                                        children: (0, r.jsxs)(y.Z.Provider, {
+                                        children: (0, r.jsxs)(I.Z.Provider, {
                                             value: E,
                                             children: [
                                                 (0, r.jsxs)(s.rs, {
@@ -694,6 +697,12 @@ function e4() {
                                                                 let { computedMatch: t } = e;
                                                                 return { has_invite: void 0 !== t.params.inviteCode };
                                                             }
+                                                        }),
+                                                        (0, r.jsx)(S.Z, {
+                                                            path: eS.Z5c.GUILD_FEATURE(':feature', el.Hw.guildId()),
+                                                            exact: !0,
+                                                            render: e3,
+                                                            disableTrack: !0
                                                         }),
                                                         (0, r.jsx)(S.Z, {
                                                             path: eS.Z5c.FEATURE(':feature'),

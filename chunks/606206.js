@@ -69,7 +69,7 @@ function x(e) {
                 t
             );
         })),
-        P.emitChange();
+        S.emitChange();
 }
 function I() {
     (v = null), null != r && (r.destroy(), (r = null)), null != m && m();
@@ -78,7 +78,7 @@ function T() {
     let e = null != v && null != v.application_id ? f.Z.getApplicationActivity(v.application_id) : null;
     if (null != v && (null == e || null == e.party || null == e.party.id)) return I();
 }
-class S extends (l = i.ZP.Store) {
+class P extends (l = i.ZP.Store) {
     initialize() {
         this.waitFor(f.Z);
     }
@@ -93,8 +93,8 @@ class S extends (l = i.ZP.Store) {
         return C;
     }
 }
-N(S, 'displayName', 'ActivityInviteModalStore');
-let P = new S(o.Z, {
+N(P, 'displayName', 'ActivityInviteModalStore');
+let S = new P(o.Z, {
         ACTIVITY_INVITE_MODAL_OPEN: function (e) {
             (v = e.activity),
                 (m = e.resolve),
@@ -168,7 +168,7 @@ let P = new S(o.Z, {
                                     }
                                 })
                                 .filter((e) => null != e)),
-                                P.emitChange();
+                                S.emitChange();
                         },
                         b,
                         100
@@ -206,4 +206,4 @@ let P = new S(o.Z, {
         LOCAL_ACTIVITY_UPDATE: T,
         RPC_APP_DISCONNECTED: T
     }),
-    j = 12633 == n.j ? P : null;
+    j = 12633 == n.j ? S : null;

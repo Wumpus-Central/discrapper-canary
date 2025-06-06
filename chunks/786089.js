@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(617136),
     E = n(113434),
     O = n(497505),
-    y = n(475595),
-    I = n(352084),
+    I = n(475595),
+    y = n(352084),
     v = n(125011),
     C = n(685613),
     S = n(981631),
@@ -33,8 +33,8 @@ let P = (0, i.memo)(function (e) {
         M = (0, i.useRef)(null),
         U = (0, i.useRef)(null),
         G = (0, i.useRef)(null),
-        B = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
-        { ref: V, height: H = 0 } = (0, p.ZP)(),
+        V = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
+        { ref: B, height: H = 0 } = (0, p.ZP)(),
         F = (0, h.ZP)(),
         z = (0, E.B6)(null == (t = x.userStatus) ? void 0 : t.claimedAt, {
             month: 'numeric',
@@ -57,7 +57,7 @@ let P = (0, i.memo)(function (e) {
     });
     let $ = (0, u.wj)(F),
         ee = (0, i.useMemo)(() => null != x.config.cosponsorMetadata, [x]),
-        et = (0, i.useMemo)(() => (0, y.fh)(x, y.eC.REWARD), [x]),
+        et = (0, i.useMemo)(() => (0, I.fh)(x, I.eC.REWARD), [x]),
         en = Z ? H + 8 : 0,
         er = (0, _.mH)(O.jn.TROPHY_CASE_CARD),
         { content_position: ei, row_index: el } = er,
@@ -132,7 +132,7 @@ let P = (0, i.memo)(function (e) {
                   onMouseLeave: es,
                   className: a()(T.container, { [T.hovered]: Z }),
                   children: [
-                      null != B &&
+                      null != V &&
                           q &&
                           null != J &&
                           (0, r.jsx)('div', {
@@ -141,12 +141,12 @@ let P = (0, i.memo)(function (e) {
                               style: { top: L },
                               children: (0, r.jsx)(f.Z, {
                                   avatarDecorationOverride: J,
-                                  user: B,
+                                  user: V,
                                   guildId: null
                               })
                           }),
                       K
-                          ? (0, r.jsx)(I.Z, { className: T.image })
+                          ? (0, r.jsx)(y.Z, { className: T.image })
                           : X
                             ? (0, r.jsx)(v.Z, { className: T.image })
                             : et.isAnimated
@@ -182,7 +182,7 @@ let P = (0, i.memo)(function (e) {
                           })
                       }),
                       (0, r.jsxs)('div', {
-                          ref: V,
+                          ref: B,
                           className: T.details,
                           children: [
                               (0, r.jsx)(d.X6q, {

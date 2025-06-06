@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(488634),
     E = n(110287),
     O = n(355350),
-    y = n(948247),
-    I = n(125855),
+    I = n(948247),
+    y = n(125855),
     v = n(687683),
     C = n(981631),
     S = n(388032),
@@ -49,7 +49,7 @@ function T() {
                     c = null == (i = t[o + 1]) || null == (n = i.channel) ? void 0 : n.id,
                     u = s.channel.id;
                 return (0, r.jsx)(
-                    I.Z,
+                    y.Z,
                     {
                         index: o,
                         className: a()({
@@ -102,7 +102,7 @@ function T() {
             [n, Z, T]
         );
     return 0 === t.length
-        ? (0, r.jsx)(y.Z, { section: v.pS.SPAM })
+        ? (0, r.jsx)(I.Z, { section: v.pS.SPAM })
         : (0, r.jsx)(o.bG, {
               navigator: P,
               children: (0, r.jsx)(o.SJ, {

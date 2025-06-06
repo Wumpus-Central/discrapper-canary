@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(856555),
     E = n(153066),
     O = n(335131),
-    y = n(744112),
-    I = n(267097),
+    I = n(744112),
+    y = n(267097),
     v = n(364111),
     C = n(729700),
     S = n(681435),
@@ -116,7 +116,7 @@ let D = (e) => {
         let b = (0, l.JA)('shop'),
             _ = h.Z.HOME_PAGE_SHOP_TAB,
             { analyticsLocations: E } = (0, f.ZP)(_),
-            [y, I] = i.useState(!1),
+            [I, y] = i.useState(!1),
             v = i.useCallback(() => {
                 void 0 !== o && o(),
                     void 0 !== c &&
@@ -126,16 +126,16 @@ let D = (e) => {
                             analyticsLocations: E,
                             analyticsSource: _
                         }),
-                    I(!0),
+                    y(!0),
                     (0, O.Sm)({
                         analyticsSource: _,
                         analyticsLocations: E
                     });
-            }, [_, E, o, I, c]),
+            }, [_, E, o, y, c]),
             C = j.Z5c.COLLECTIBLES_SHOP;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                y && (0, r.jsx)(k, {}),
+                I && (0, r.jsx)(k, {}),
                 (0, r.jsx)(
                     u.Qj,
                     L(
@@ -200,7 +200,7 @@ let D = (e) => {
             ]
         });
     }),
-    B = (e) => {
+    V = (e) => {
         let t, n;
         var l,
             c,
@@ -212,8 +212,8 @@ let D = (e) => {
             b,
             _,
             O,
-            y,
             I,
+            y,
             { displayOptions: v } = e,
             C = R(e, ['displayOptions']);
         let S = (0, a.e7)([p.Z], () => p.Z.useReducedMotion),
@@ -221,17 +221,17 @@ let D = (e) => {
             [P, j] = i.useState(!1),
             A = (0, d.ZP)(),
             k = (0, o.wj)(A);
-        P ? (k ? ((t = null == (l = v.entryPointBackgroundAssets) ? void 0 : l.srcDarkHovered), (n = null == (u = v.entrypointBackgroundStyle) || null == (c = u.hovered) ? void 0 : c.dark)) : ((t = null == (h = v.entryPointBackgroundAssets) ? void 0 : h.srcLightHovered), (n = null == (g = v.entrypointBackgroundStyle) || null == (f = g.hovered) ? void 0 : f.light))) : k ? ((t = null == (m = v.entryPointBackgroundAssets) ? void 0 : m.srcDark), (n = null == (_ = v.entrypointBackgroundStyle) || null == (b = _.resting) ? void 0 : b.dark)) : ((t = null == (O = v.entryPointBackgroundAssets) ? void 0 : O.srcLight), (n = null == (I = v.entrypointBackgroundStyle) || null == (y = I.resting) ? void 0 : y.light));
+        P ? (k ? ((t = null == (l = v.entryPointBackgroundAssets) ? void 0 : l.srcDarkHovered), (n = null == (u = v.entrypointBackgroundStyle) || null == (c = u.hovered) ? void 0 : c.dark)) : ((t = null == (h = v.entryPointBackgroundAssets) ? void 0 : h.srcLightHovered), (n = null == (g = v.entrypointBackgroundStyle) || null == (f = g.hovered) ? void 0 : f.light))) : k ? ((t = null == (m = v.entryPointBackgroundAssets) ? void 0 : m.srcDark), (n = null == (_ = v.entrypointBackgroundStyle) || null == (b = _.resting) ? void 0 : b.dark)) : ((t = null == (O = v.entryPointBackgroundAssets) ? void 0 : O.srcLight), (n = null == (y = v.entrypointBackgroundStyle) || null == (I = y.resting) ? void 0 : I.light));
         let U = i.useCallback(
                 (e) => {
                     T((e) => (e + 1) % v.assetIds.length), j(!0), null == e || e();
                 },
                 [v.assetIds.length]
             ),
-            B = i.useCallback((e) => {
+            V = i.useCallback((e) => {
                 j(!1), null == e || e();
             }, []),
-            V = v.title();
+            B = v.title();
         return (0, r.jsx)(s.ua7, {
             text: (0, r.jsx)(G, {
                 displayOptions: v,
@@ -243,13 +243,13 @@ let D = (e) => {
             delay: 100,
             allowOverflow: !0,
             hideOnClick: !1,
-            'aria-label': 'string' == typeof V ? V : x.intl.string(x.t.rSXaxc),
+            'aria-label': 'string' == typeof B ? B : x.intl.string(x.t.rSXaxc),
             children: (e) =>
                 (0, r.jsxs)(
                     M,
                     L(w(L(w({ className: null != v.entryPointClassName ? (0, E.l)(Z, v.entryPointClassName) : void 0 }, C), { icon: v.entryPointIcon }), e), {
                         onMouseEnter: () => U(e.onMouseEnter),
-                        onMouseLeave: () => B(e.onMouseLeave),
+                        onMouseLeave: () => V(e.onMouseLeave),
                         children: [
                             (0, r.jsx)('div', {
                                 className: Z.marketingButtonBackground,
@@ -269,7 +269,7 @@ let D = (e) => {
                 )
         });
     },
-    V = (e) => {
+    B = (e) => {
         var { displayOptions: t } = e,
             n = R(e, ['displayOptions']);
         let l = i.useMemo(() => {
@@ -354,12 +354,12 @@ let D = (e) => {
                 )
         });
     },
-    z = () => ((0, I.Z)(), null),
+    z = () => ((0, y.Z)(), null),
     W = (e) => {
         let { selected: t, onClick: n, locationState: i, listItemRef: l, listScrollerRef: a } = e,
             { shouldShow: o } = (0, _.EQ)({}),
             { shopButtonDisplayOptions: s, dismissShopButtonDC: c } = (0, S.Z)(),
-            u = (0, y.b)('Collectibles Shop Button'),
+            u = (0, I.b)('Collectibles Shop Button'),
             d = {
                 selected: t,
                 locationState: i,
@@ -372,9 +372,9 @@ let D = (e) => {
         if (null != s)
             switch (s.type) {
                 case T.k2.TOOLTIP:
-                    return (0, r.jsx)(V, L(w({}, d), { displayOptions: s }));
-                case T.k2.COACHTIP:
                     return (0, r.jsx)(B, L(w({}, d), { displayOptions: s }));
+                case T.k2.COACHTIP:
+                    return (0, r.jsx)(V, L(w({}, d), { displayOptions: s }));
                 case T.k2.BADGE:
                     return (0, r.jsx)(U, w({}, d));
                 case T.k2.COACHMARK:

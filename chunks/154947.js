@@ -6,5 +6,9 @@ e.exports = {
     switchContainer: 'switchContainer_eda416',
     activitySharingSwitch: 'activitySharingSwitch_eda416',
     formSection: 'formSection_eda416',
-    joinRequestSwitch: 'joinRequestSwitch_eda416'
+    joinRequestSwitch: 'joinRequestSwitch_eda416',
+    myServersContainer: 'myServersContainer_eda416',
+    myServersHeaderContainer: 'myServersHeaderContainer_eda416',
+    myServersTitle: 'myServersTitle_eda416',
+    myServersIgnoredWarning: 'myServersIgnoredWarning_eda416'
 };

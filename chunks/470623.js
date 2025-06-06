@@ -182,7 +182,7 @@ class g {
             g = null == a.template ? '' : a.template.trim(),
             b = h.Z.getDraft(a.id, h.d.FirstThreadMessage),
             j = (0, u.eK)(null != b && '' !== b.trim() ? b : g);
-        (this.name = null != (r = s.name) ? r : ''), (o = new Set(s.appliedTags)), (this.appliedTags = void 0 !== o ? o : new Set()), (this.formOpen = this.name.length > 0), (this.textAreaState = j);
+        (this.name = null != (r = s.name) ? r : ''), (o = new Set(s.appliedTags)), (this.appliedTags = void 0 !== o ? o : new Set()), (this.formOpen = this.name.length > 0 && j.textValue.length > 0), (this.textAreaState = j);
     }
 }
 let b = r.createContext(null);

@@ -60,7 +60,7 @@ let N = {
     isDiscordUrlOrUri: (e) => T(e) || A(e),
     isAppRoute: (e) => {
         let t = e.toLowerCase();
-        return t.startsWith('/channels/') || t.startsWith(c.Z5c.APPLICATION_STORE) || t.startsWith(c.Z5c.APPLICATION_LIBRARY) || t.startsWith(c.Z5c.MESSAGE_REQUESTS) || t.startsWith(c.Z5c.FAMILY_CENTER) || t.startsWith(c.Z5c.ACTIVITIES) || t.startsWith(c.Z5c.COLLECTIBLES_SHOP) || t.startsWith(c.Z5c.ACTIVITY);
+        return t.startsWith('/channels/') || t.startsWith(c.Z5c.APPLICATION_STORE) || t.startsWith(c.Z5c.APPLICATION_LIBRARY) || t.startsWith(c.Z5c.MESSAGE_REQUESTS) || t.startsWith(c.Z5c.FAMILY_CENTER) || t.startsWith(c.Z5c.ACTIVITIES) || t.startsWith(c.Z5c.COLLECTIBLES_SHOP) || t.startsWith('/feature/boost') || t.startsWith(c.Z5c.ACTIVITY);
     },
     format: (e) => s.format(e),
     formatPathWithQuery: (e, t) =>

@@ -28,8 +28,8 @@ var r = n(255367),
     T = n(268350),
     I = n(456077),
     E = n(488131),
-    k = n(602034),
-    R = n(23750),
+    R = n(602034),
+    k = n(23750),
     Z = n(703558),
     M = n(496675),
     A = n(300429),
@@ -99,12 +99,12 @@ function ei(e, t) {
 }
 let ea = p.Ie.CREATE_FORUM_POST;
 function es(e) {
-    let { parentChannel: t, isSearchLoading: n, onChange: i, canCreatePost: s, inputRef: o } = e,
-        d = !(0, N.HL)(t) && s,
+    let { parentChannel: t, isSearchLoading: n, numResults: i, onChange: s, canCreatePost: o, inputRef: d } = e,
+        u = !(0, N.HL)(t) && o,
         {
-            textAreaState: u,
-            formOpen: m,
-            previewing: f
+            textAreaState: m,
+            formOpen: f,
+            previewing: x
         } = (0, K.xH)((e) => {
             let { textAreaState: t, formOpen: n, previewing: r } = e;
             return {
@@ -113,16 +113,16 @@ function es(e) {
                 previewing: r
             };
         }, c.X),
-        [x, p] = l.useState(null),
-        b = l.useContext(D.oo),
-        j = l.useCallback(() => {
-            b.bumpDispatchPriority();
-        }, [b]),
-        v = (0, h.e7)([M.Z], () => M.Z.can(ee.Plq.ATTACH_FILES, t)),
-        C = (0, h.Wu)([L.Z], () => L.Z.getUploads(t.id, Z.d.FirstThreadMessage)),
-        w = m && v && d,
-        S = (null == t ? void 0 : t.isMediaChannel()) === !0,
-        I = (function (e, t) {
+        [p, b] = l.useState(null),
+        j = l.useContext(D.oo),
+        v = l.useCallback(() => {
+            j.bumpDispatchPriority();
+        }, [j]),
+        C = (0, h.e7)([M.Z], () => M.Z.can(ee.Plq.ATTACH_FILES, t)),
+        w = (0, h.Wu)([L.Z], () => L.Z.getUploads(t.id, Z.d.FirstThreadMessage)),
+        S = f && C && u,
+        I = (null == t ? void 0 : t.isMediaChannel()) === !0,
+        k = (function (e, t) {
             let n = (0, K.AF)(),
                 r = (0, G.ql)(e);
             return l.useCallback(() => {
@@ -136,14 +136,14 @@ function es(e) {
                     }, 0),
                     ((o && a.length > 0) || (s.textValue.trim().length > 0 && s.textValue.trim() !== r) || L.Z.getUploads(e.id, Z.d.FirstThreadMessage).length > 0) && i());
             }, [n, e.id, r, t]);
-        })(t, o),
-        R = (function (e) {
+        })(t, d),
+        A = (function (e) {
             let { formOpen: t } = (0, K.xH)((e) => {
                     let { formOpen: t } = e;
                     return { formOpen: t };
                 }, c.X),
                 n = (0, K.AF)(),
-                r = (0, k.r)({ parentChannel: e });
+                r = (0, R.r)({ parentChannel: e });
             l.useEffect(() => {
                 let { setNameError: e, setMessageError: t } = n.getState();
                 e(null), t(null);
@@ -245,17 +245,17 @@ function es(e) {
             );
         })(t);
     return (
-        l.useLayoutEffect(i, [m, u, C, i]),
+        l.useLayoutEffect(s, [f, m, w, s]),
         (0, r.jsx)(r.Fragment, {
             children: (0, r.jsx)('div', {
-                'aria-label': d ? en.intl.string(en.t.dq7mAQ) : en.intl.string(en.t['5h0QOD']),
-                className: a()(er.container, { [er.collapsed]: !m }),
-                onClick: !m && d ? I : void 0,
+                'aria-label': u ? en.intl.string(en.t.dq7mAQ) : en.intl.string(en.t['5h0QOD']),
+                className: a()(er.container, { [er.collapsed]: !f }),
+                onClick: !f && u ? k : void 0,
                 children: (0, r.jsxs)('form', {
-                    onMouseDown: j,
-                    onFocus: j,
+                    onMouseDown: v,
+                    onFocus: v,
                     onSubmit: (e) => {
-                        e.preventDefault(), d && R();
+                        e.preventDefault(), u && A();
                     },
                     children: [
                         (0, r.jsxs)('div', {
@@ -264,41 +264,42 @@ function es(e) {
                                 (0, r.jsx)(eo, {
                                     parentChannel: t,
                                     isSearchLoading: n,
-                                    inputRef: o
+                                    inputRef: d
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: f ? er.previewForm : er.form,
+                                    className: x ? er.previewForm : er.form,
                                     children: [
                                         (0, r.jsx)(ec, {
-                                            editorRef: x,
+                                            editorRef: p,
                                             parentChannel: t,
                                             isSearchLoading: n,
-                                            inputRef: o,
-                                            canCreatePost: d
+                                            numResults: i,
+                                            inputRef: d,
+                                            canCreatePost: u
                                         }),
-                                        m &&
+                                        f &&
                                             (0, r.jsx)(em, {
-                                                editorRef: x,
-                                                setEditorRef: p,
+                                                editorRef: p,
+                                                setEditorRef: b,
                                                 parentChannel: t,
-                                                submit: R,
-                                                disabled: !d
+                                                submit: A,
+                                                disabled: !u
                                             }),
-                                        f && (0, r.jsx)(eh, {})
+                                        x && (0, r.jsx)(eh, {})
                                     ]
                                 }),
-                                w && (S ? (0, r.jsx)(y._, { parentChannel: t }) : (0, r.jsx)(X.Z, { channelId: t.id }))
+                                S && (I ? (0, r.jsx)(y._, { parentChannel: t }) : (0, r.jsx)(X.Z, { channelId: t.id }))
                             ]
                         }),
                         (0, r.jsxs)('div', {
                             className: er.form,
                             children: [
-                                w && S && (0, r.jsx)(_.Z, { parentChannel: t }),
-                                m &&
+                                S && I && (0, r.jsx)(_.Z, { parentChannel: t }),
+                                f &&
                                     (0, r.jsx)(ef, {
                                         className: er.horizontalPadding,
                                         parentChannel: t,
-                                        canCreatePost: d
+                                        canCreatePost: u
                                     })
                             ]
                         })
@@ -392,13 +393,13 @@ let eo = l.memo(function (e) {
         });
     }),
     ec = l.memo(function (e) {
-        let { parentChannel: t, inputRef: n, canCreatePost: i, editorRef: a } = e,
+        let { parentChannel: t, inputRef: n, canCreatePost: i, editorRef: a, isSearchLoading: s, numResults: d } = e,
             {
-                formOpen: s,
-                nameError: d,
-                name: u,
-                textAreaState: m,
-                previewing: f
+                formOpen: u,
+                nameError: m,
+                name: f,
+                textAreaState: x,
+                previewing: p
             } = (0, K.xH)((e) => {
                 let { formOpen: t, nameError: n, name: r, previewing: l, textAreaState: i, hasClickedForm: a, submitting: s } = e;
                 return {
@@ -411,95 +412,95 @@ let eo = l.memo(function (e) {
                     submitting: s
                 };
             }, c.X),
-            x = (0, K.AF)(),
-            p = null != t.topic && 0 !== t.topic.length,
-            b = V.Z.hasSeen(t.id),
-            j = (0, G.ql)(t),
-            v = (0, h.e7)([F.default], () => F.default.getCurrentUser());
-        o()(null != v, 'current user cannot be null'),
+            b = (0, K.AF)(),
+            j = null != t.topic && 0 !== t.topic.length,
+            v = V.Z.hasSeen(t.id),
+            C = (0, G.ql)(t),
+            _ = (0, h.e7)([F.default], () => F.default.getCurrentUser());
+        o()(null != _, 'current user cannot be null'),
             (0, D.yp)({
                 event: ee.CkL.FOCUS_COMPOSER_TITLE,
                 handler: () => {
                     var e;
                     let t = n.current instanceof g.lcI ? (null == (e = n.current) ? void 0 : e._textArea) : n.current;
-                    null == t || t.focus(), x.getState().setTitleFocused(!0), x.getState().setFormOpen(!0), x.getState().setHasClickedForm(!0);
+                    null == t || t.focus(), b.getState().setTitleFocused(!0), b.getState().setFormOpen(!0), b.getState().setHasClickedForm(!0);
                 }
             });
-        let C = l.useCallback(
+        let y = l.useCallback(
                 (e) => {
                     let n = e.clipboardData.files[0];
-                    null != n && n.type.startsWith('image/') && (e.preventDefault(), (0, B.d)([n], t, Z.d.FirstThreadMessage), x.getState().setFormOpenFromUserAction());
+                    null != n && n.type.startsWith('image/') && (e.preventDefault(), (0, B.d)([n], t, Z.d.FirstThreadMessage), b.getState().setFormOpenFromUserAction());
                 },
-                [t, x]
+                [t, b]
             ),
-            _ = (0, H.Op)(d, { content: u });
+            O = (0, H.Op)(m, { content: f });
         return (0, r.jsxs)('div', {
             className: er.titleContainer,
-            onPaste: C,
+            onPaste: y,
             children: [
-                s && f
+                u && p
                     ? (0, r.jsx)(g.X6q, {
                           variant: 'heading-md/semibold',
                           className: er.title,
-                          children: u
+                          children: f
                       })
                     : (0, r.jsx)(g.Kx8, {
-                          value: u,
-                          placeholder: i ? (s || (m.textValue.length > 0 && m.textValue.trim() !== j) ? en.intl.string(en.t.lU4dDQ) : en.intl.string(en.t.CjmivL)) : en.intl.string(en.t['5h0QOD']),
+                          value: f,
+                          placeholder: i ? (u || (x.textValue.length > 0 && x.textValue.trim() !== C) ? en.intl.string(en.t.lU4dDQ) : en.intl.string(en.t.CjmivL)) : en.intl.string(en.t['5h0QOD']),
                           flex: !0,
-                          autosize: s,
+                          autosize: u,
                           rows: 1,
                           showCharacterCount: !1,
                           showRemainingCharacterCount: !1,
                           maxLength: ee.HN8,
                           onChange: (e) => {
                               let n = (0, I.Z)(e, !1);
-                              x.getState().setName(n);
+                              b.getState().setName(n);
                               let r = 0 === n.trim().length,
-                                  l = 0 === m.textValue.trim().length,
-                                  i = m.textValue.trim() === j;
-                              r && (l || i) && x.getState().setHasClickedForm(!1), s || U.Z.updateForumSearchQuery(t.id, n);
+                                  l = 0 === x.textValue.trim().length,
+                                  i = x.textValue.trim() === C;
+                              r && (l || i) && b.getState().setHasClickedForm(!1), u || U.Z.updateForumSearchQuery(t.id, n);
                           },
                           onFocus: () => {
-                              x.getState().setTitleFocused(!0), x.getState().setBodyFocused(!1);
+                              b.getState().setTitleFocused(!0), b.getState().setBodyFocused(!1);
                           },
                           onBlur: () => {
-                              x.getState().setTitleFocused(!1);
-                              let e = (0, I.Z)(u, !0);
-                              e !== u && (x.getState().setName(e), s || U.Z.updateForumSearchQuery(t.id, e));
+                              b.getState().setTitleFocused(!1);
+                              let e = (0, I.Z)(f, !0);
+                              e !== f && (b.getState().setName(e), u || U.Z.updateForumSearchQuery(t.id, e));
                           },
                           onKeyDown: (e) => {
                               var r, l;
                               'Enter' === e.key &&
                                   (e.preventDefault(),
                                   e.stopPropagation(),
-                                  s && u.length > 0
+                                  u && f.length > 0
                                       ? null == a || a.focus()
-                                      : i &&
-                                        e.shiftKey &&
-                                        ((0, q.nH)({
-                                            guildId: t.guild_id,
-                                            channelId: t.id
-                                        }),
-                                        p && !b && x.getState().setGuidelinesOpen(!0),
-                                        x.getState().setFormOpenFromUserAction(),
-                                        u.trim().length > 0 && (x.getState().setBodyFocused(!0), null == a || a.focus())));
+                                      : i && e.shiftKey
+                                        ? ((0, q.nH)({
+                                              guildId: t.guild_id,
+                                              channelId: t.id
+                                          }),
+                                          j && !v && b.getState().setGuidelinesOpen(!0),
+                                          b.getState().setFormOpenFromUserAction(),
+                                          f.trim().length > 0 && (b.getState().setBodyFocused(!0), null == a || a.focus()))
+                                        : u || !(f.length > 0) || null != d || s || U.Z.updateForumSearchQuery(t.id, f));
                               let o = n.current instanceof g.lcI ? (null == (r = n.current) ? void 0 : r._textArea) : n.current;
                               if ('Home' === e.key || 'End' === e.key) {
                                   if (null == o) return;
                                   if ((e.preventDefault(), e.stopPropagation(), 'Home' === e.key)) o.setSelectionRange(0, 0);
                                   else {
-                                      let e = u.length;
+                                      let e = f.length;
                                       o.setSelectionRange(e, e);
                                   }
                               }
-                              'Escape' !== e.key || x.getState().submitting || (null == (l = n.current) || l.blur(), x.getState().setFormOpen(!1), x.getState().setTitleFocused(!1), x.getState().setBodyFocused(!1), x.getState().setPreviewing(!1));
+                              'Escape' !== e.key || b.getState().submitting || (null == (l = n.current) || l.blur(), b.getState().setFormOpen(!1), b.getState().setTitleFocused(!1), b.getState().setBodyFocused(!1), b.getState().setPreviewing(!1));
                           },
-                          error: _,
+                          error: O,
                           className: er.title,
                           inputRef: n
                       }),
-                s
+                u
                     ? null
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
@@ -550,7 +551,7 @@ function ed(e) {
 }
 let eu = l.memo(function (e) {
         let { parentChannel: t, textValue: n } = e,
-            l = new R.ZP({
+            l = new k.ZP({
                 channelId: t.id,
                 content: n
             }),

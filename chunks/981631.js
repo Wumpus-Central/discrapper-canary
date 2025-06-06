@@ -1507,6 +1507,7 @@ let eh = '@me',
         },
         GUILD_EVENT_DETAILS: (e, t, n) => '/events/'.concat(e, '/').concat(t) + (null != n ? '/'.concat(n) : ''),
         FEATURE: (e) => '/feature/'.concat(e),
+        GUILD_FEATURE: (e, t) => '/feature/'.concat(e, '/').concat(t),
         GUILD_JOIN_REQUEST: (e, t) => '/guilds/'.concat(e, '/requests/').concat(t),
         MOBILE_WEB_HANDOFF: '/mweb-handoff',
         APPLICATION_DIRECTORY: '/application-directory',
@@ -1530,7 +1531,8 @@ let eh = '@me',
         CHANNEL_SUMMARY: (e, t) => '/channels/'.concat(e, '/summaries/').concat(t),
         USER_SUMMARIES: '/users/@me/summaries',
         QUESTS: (e) => '/quests/'.concat(e),
-        ACCOUNT_REVERT: (e) => '/wasntme/'.concat(e)
+        ACCOUNT_REVERT: (e) => '/wasntme/'.concat(e),
+        POWERUP_STORE: (e) => '/channels/'.concat(e, '/boosts')
     }),
     eT = (0, d.Ft)(eI),
     eA = (0, d.Ft)(eS, [':', '?', '@']);

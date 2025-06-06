@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(666743),
     E = n(115130),
     O = n(812206),
-    y = n(770146),
-    I = n(600164),
+    I = n(770146),
+    y = n(600164),
     v = n(606081),
     C = n(252618),
     S = n(100159),
@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(451478),
     U = n(626135),
     G = n(572004),
-    B = n(630388),
-    V = n(937615),
+    V = n(630388),
+    B = n(937615),
     H = n(73346),
     F = n(3570),
     z = n(689796),
@@ -295,7 +295,7 @@ class ed extends i.PureComponent {
         if (null == l) throw Error('Rendering ApplicationStoreListing without description');
         return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(y.Z, {
+                (0, r.jsx)(I.Z, {
                     tag: 'h1',
                     children: ea.intl.format(ea.t.tluX4O, { name: n.name })
                 }),
@@ -339,7 +339,7 @@ class ed extends i.PureComponent {
             let { amount: e, currency: t } = o;
             a.offers = v.Z.Offer({
                 priceCurrency: t.toUpperCase(),
-                price: (0, V.T4)(e, t, { style: 'decimal' })
+                price: (0, B.T4)(e, t, { style: 'decimal' })
             });
         }
         let s = v.Z.ItemPage({ mainEntity: a });
@@ -382,9 +382,9 @@ class ed extends i.PureComponent {
             return (0, r.jsxs)(i.Fragment, {
                 children: [
                     this.renderHeader(e, t),
-                    (0, r.jsx)(I.Z, {
-                        align: I.Z.Align.CENTER,
-                        justify: I.Z.Justify.CENTER,
+                    (0, r.jsx)(y.Z, {
+                        align: y.Z.Align.CENTER,
+                        justify: y.Z.Justify.CENTER,
                         children: (0, r.jsx)(u.$jN, { className: eo.spinner })
                     })
                 ]
@@ -587,9 +587,9 @@ class ed extends i.PureComponent {
             es(this, 'renderListing', () => {
                 let { application: e, storeListing: t, sku: n, pageSize: i } = this.props;
                 return null == e || null == n || null == t || t.isSlimDirectoryVersion()
-                    ? (0, r.jsx)(I.Z, {
-                          align: I.Z.Align.CENTER,
-                          justify: I.Z.Justify.CENTER,
+                    ? (0, r.jsx)(y.Z, {
+                          align: y.Z.Align.CENTER,
+                          justify: y.Z.Justify.CENTER,
                           children: (0, r.jsx)(u.$jN, {})
                       })
                     : i === er.b.SMALL
@@ -612,7 +612,7 @@ let ep = (0, b.Z)(
                 if (null == l) throw Error('Needs applicationId or skuId');
                 null != (r = O.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? R.Z.get(t) : null);
             }
-            (null == n ? void 0 : n.flags) != null && (0, B.yE)(n.flags, ei.l4R.STICKER_PACK) && (n = null);
+            (null == n ? void 0 : n.flags) != null && (0, V.yE)(n.flags, ei.l4R.STICKER_PACK) && (n = null);
             let c = null != l && (k.Z.inTestModeForApplication(l) || E.Z.inDevModeForApplication(l));
             return {
                 skuId: t,

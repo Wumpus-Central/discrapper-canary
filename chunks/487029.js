@@ -19,8 +19,8 @@ var r = n(255367),
     v = n(710111),
     m = n(840558);
 function E(e) {
-    let { guildId: t, channel: n, width: E, height: C, keepOpen: x, interactive: I = !0, analyticsSource: T, onClose: S } = e,
-        P = (function (e) {
+    let { guildId: t, channel: n, width: E, height: C, keepOpen: x, interactive: I = !0, analyticsSource: T, onClose: P } = e,
+        S = (function (e) {
             let [t, n] = (0, o.Wu)([p.Z], () => [p.Z.getSounds(), p.Z.getFavorites()]);
             return l.useMemo(() => {
                 let r = [],
@@ -42,16 +42,16 @@ function E(e) {
         { analyticsLocations: R } = (0, s.ZP)(a.Z.SOUNDBOARD_WHEEL),
         D = l.useCallback(
             (e) => {
-                (0, g.GN)(e, n.id, R), S();
+                (0, g.GN)(e, n.id, R), P();
             },
-            [R, n.id, S]
+            [R, n.id, P]
         );
     l.useEffect(() => {
         h.w(), c.DZ.loadIfNecessary();
     }, []),
         l.useEffect(() => {
-            0 === P.length && 0 === j.length && S();
-        }, [P.length, j, S]),
+            0 === S.length && 0 === j.length && P();
+        }, [S.length, j, P]),
         l.useEffect(
             () => () => {
                 let e = Z.current;
@@ -77,22 +77,22 @@ function E(e) {
         L = l.useCallback(
             (e) => {
                 if (null == e) return void U(null);
-                let t = P[e];
+                let t = S[e];
                 null != t && U(t);
             },
-            [U, P]
+            [U, S]
         ),
         M = l.useCallback(
             (e) => {
                 if (null == e) return;
-                let t = P[e];
+                let t = S[e];
                 null != t && D(t);
             },
-            [P, D]
+            [S, D]
         ),
         k = l.useMemo(
             () =>
-                P.map((e) =>
+                S.map((e) =>
                     (0, r.jsx)(
                         b.ZP,
                         {
@@ -105,9 +105,9 @@ function E(e) {
                         e.soundId
                     )
                 ),
-            [A, n, I, P]
+            [A, n, I, S]
         );
-    return 0 === P.length
+    return 0 === S.length
         ? null
         : (0, r.jsx)(s.Gt, {
               value: R,
@@ -120,7 +120,7 @@ function E(e) {
                   activeItem: A,
                   onItemSelect: L,
                   onItemAction: M,
-                  onClose: S,
+                  onClose: P,
                   interactive: I,
                   children: k
               })

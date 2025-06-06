@@ -6,7 +6,7 @@ var r = n(255367),
     s = n(442837),
     l = n(481060),
     c = n(11769),
-    u = n(540059),
+    u = n(338390),
     d = n(496675),
     f = n(300429),
     _ = n(585483),
@@ -68,30 +68,28 @@ function O(e, t) {
 }
 function v(e) {
     let t,
-        { isEnabled: n, rateLimitPerUser: a, isBypassSlowmode: s, slowmodeCooldownGuess: u, isRefreshChatInputEnabled: d, isRefreshEnabled: f } = e,
-        [E, y] = i.useState(!1);
-    if (
-        (i.useEffect(() => {
-            function e() {
-                y(!0),
-                    setTimeout(() => {
-                        y(!1);
-                    }, 1000);
+        { isEnabled: n, rateLimitPerUser: a, isBypassSlowmode: s, slowmodeCooldownGuess: d } = e,
+        [f, E] = i.useState(!1);
+    i.useEffect(() => {
+        function e() {
+            E(!0),
+                setTimeout(() => {
+                    E(!1);
+                }, 1000);
+        }
+        return (
+            _.S.subscribe(h.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, e),
+            () => {
+                _.S.unsubscribe(h.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, e);
             }
-            return (
-                _.S.subscribe(h.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, e),
-                () => {
-                    _.S.unsubscribe(h.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, e);
-                }
-            );
-        }, []),
-        !n)
-    )
-        return null;
+        );
+    }, []);
+    let y = (0, u.Z)('SlowmodeIndicator');
+    if (!n) return null;
     let v = (0, c.k)(a);
-    if (!s && u > 0) {
-        let e = o().duration(u);
-        if (u > p.Z.Millis.HOUR) {
+    if (!s && d > 0) {
+        let e = o().duration(d);
+        if (d > p.Z.Millis.HOUR) {
             let n = ''.concat(e.minutes()).padStart(2, '0'),
                 r = ''.concat(e.seconds()).padStart(2, '0');
             t = ''.concat(e.hours(), ':').concat(n, ':').concat(r);
@@ -99,29 +97,39 @@ function v(e) {
             let n = ''.concat(e.seconds()).padStart(2, '0');
             t = ''.concat(e.minutes(), ':').concat(n);
         }
-    } else t = s ? (d ? m.intl.string(m.t['8+NidX']) : m.intl.string(m.t.SSzXvb)) : d ? '' : m.intl.string(m.t.Icu3bW);
+    } else t = s ? (y ? m.intl.string(m.t['8+NidX']) : m.intl.string(m.t.SSzXvb)) : m.intl.string(m.t.Icu3bW);
+    let I = y
+        ? (0, r.jsxs)(l.Text, {
+              className: g.cooldownText,
+              variant: 'text-xs/medium',
+              color: f ? 'text-danger' : 'text-muted',
+              tabularNumbers: !0,
+              children: [
+                  (0, r.jsx)(l.ANZ, {
+                      size: 'xxs',
+                      color: 'currentColor',
+                      className: g.slowModeIcon
+                  }),
+                  t
+              ]
+          })
+        : (0, r.jsxs)(l.Text, {
+              className: g.cooldownText,
+              variant: 'text-sm/medium',
+              color: f ? 'text-danger' : 'text-muted',
+              tabularNumbers: !0,
+              children: [
+                  t,
+                  (0, r.jsx)(l.ANZ, {
+                      size: 'xs',
+                      color: 'currentColor',
+                      className: g.slowModeIcon
+                  })
+              ]
+          });
     return (0, r.jsx)(l.ua7, {
         text: v,
-        children: (e) =>
-            (0, r.jsx)(
-                'div',
-                O(b({ className: g.cooldownWrapper }, e), {
-                    children: (0, r.jsxs)(l.Text, {
-                        className: g.cooldownText,
-                        variant: d ? 'text-xs/medium' : 'text-sm/medium',
-                        color: f ? (E ? 'text-danger' : 'text-muted') : 'interactive-normal',
-                        tabularNumbers: !0,
-                        children: [
-                            t,
-                            (0, r.jsx)(l.ANZ, {
-                                size: 'xs',
-                                color: 'currentColor',
-                                className: g.slowModeIcon
-                            })
-                        ]
-                    })
-                })
-            )
+        children: (e) => (0, r.jsx)('div', O(b({ className: g.cooldownWrapper }, e), { children: I }))
     });
 }
 function I(e) {
@@ -129,15 +137,11 @@ function I(e) {
         i = (0, s.e7)([f.Z], () => f.Z.getSlowmodeCooldownGuess(t.id, n ? f.S.CreateThread : f.S.SendMessage)),
         a = (0, s.e7)([d.Z], () => (n ? d.Z.can(h.Plq.MANAGE_THREADS, t) : d.Z.can(h.Plq.MANAGE_CHANNELS, t) || d.Z.can(h.Plq.MANAGE_MESSAGES, t))),
         { rateLimitPerUser: o } = t,
-        l = o > 0,
-        c = (0, u.R6)('SlowmodeIndicator'),
-        _ = (0, u.Q3)('SlowmodeIndicator');
+        l = o > 0;
     return (0, r.jsx)(v, {
         isEnabled: l,
         rateLimitPerUser: o,
         isBypassSlowmode: a,
-        slowmodeCooldownGuess: i,
-        isRefreshChatInputEnabled: c,
-        isRefreshEnabled: _
+        slowmodeCooldownGuess: i
     });
 }

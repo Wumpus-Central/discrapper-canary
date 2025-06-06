@@ -23,8 +23,8 @@ var r,
     x = n(199902),
     I = n(592125),
     T = n(480294),
-    S = n(831506),
-    P = n(731290),
+    P = n(831506),
+    S = n(731290),
     j = n(430824),
     Z = n(496675),
     A = n(158776),
@@ -131,7 +131,7 @@ function en(e, t, n) {
     for (let e of t) {
         let n = x.Z.getAnyStreamForUser(e.id),
             r = I.Z.getChannel(null == n ? void 0 : n.channelId);
-        if ((null == r ? void 0 : r.isNSFW()) && (!y || !P.Z.didAgree(null == r ? void 0 : r.getGuildId()))) continue;
+        if ((null == r ? void 0 : r.isNSFW()) && (!y || !S.Z.didAgree(null == r ? void 0 : r.getGuildId()))) continue;
         let f = z(e.id);
         if (
             (null != n &&
@@ -174,7 +174,7 @@ function en(e, t, n) {
         let A = [];
         (A =
             null != f && null != f.party && null != f.party.id
-                ? Array.from(null != (a = S.Z.getParty(f.party.id)) ? a : []).reduce((e, t) => {
+                ? Array.from(null != (a = P.Z.getParty(f.party.id)) ? a : []).reduce((e, t) => {
                       let n = w.default.getUser(t);
                       return null != n && e.push(n), e;
                   }, [])
@@ -311,7 +311,7 @@ function eo() {
 }
 class ea extends (r = o.ZP.Store) {
     initialize() {
-        this.syncWith([w.default, g.Z, A.Z, S.Z, R.Z, x.Z, _.Z, T.Z, v.Z], eo), this.waitFor(y.Z, j.Z, g.Z, w.default, v.Z);
+        this.syncWith([w.default, g.Z, A.Z, P.Z, R.Z, x.Z, _.Z, T.Z, v.Z], eo), this.waitFor(y.Z, j.Z, g.Z, w.default, v.Z);
     }
     get currentActivityParties() {
         return G;

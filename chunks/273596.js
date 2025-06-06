@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(746728),
     E = n(140700),
     O = n(665807),
-    y = n(188493),
-    I = n(294330),
+    I = n(188493),
+    y = n(294330),
     v = n(981631),
     C = n(984503);
 let S = Object.freeze({
@@ -52,8 +52,8 @@ function j(e) {
         k = i.useRef(R),
         [M, U] = i.useState(3),
         G = i.useRef(M),
-        B = i.useRef(null),
-        V = i.useCallback(
+        V = i.useRef(null),
+        B = i.useCallback(
             (e) => {
                 if (null != e && !x && !h) 336 * (s.length / M) <= e.height && j();
             },
@@ -67,11 +67,11 @@ function j(e) {
                 n < 1024 && k.current ? ((k.current = !1), D(!1)) : n > 1024 && !k.current && ((k.current = !0), D(!0));
                 let r = 1;
                 for (n -= 450 * !!R, n -= 280; n > 0; ) (n -= 264), (r += 1);
-                r !== G.current && ((G.current = r), U(r)), V(t);
+                r !== G.current && ((G.current = r), U(r)), B(t);
             },
-            [R, V]
+            [R, B]
         ),
-        F = (0, u.y)(H, [R, V]);
+        F = (0, u.y)(H, [R, B]);
     i.useEffect(() => {
         L((0, m.PM)());
     }, [v]),
@@ -103,7 +103,7 @@ function j(e) {
                                     !R &&
                                         (0, r.jsxs)('div', {
                                             className: C.headingFilters,
-                                            children: [(0, r.jsx)(E.Z, { loadId: t }), (0, r.jsx)(y.Z, { loadId: t })]
+                                            children: [(0, r.jsx)(E.Z, { loadId: t }), (0, r.jsx)(I.Z, { loadId: t })]
                                         }),
                                     x && (0, r.jsx)(O.Z, { loadId: t })
                                 ]
@@ -157,7 +157,7 @@ function j(e) {
             async (e, t, n, r) => {
                 var i, a;
                 await l(e, t, n, r);
-                let o = null == (a = B.current) || null == (i = a.getScrollerState()) ? void 0 : i.scrollTop;
+                let o = null == (a = V.current) || null == (i = a.getScrollerState()) ? void 0 : i.scrollTop;
                 null != o && g.Z.setState({ scrollPosition: o });
             },
             [l]
@@ -171,7 +171,7 @@ function j(e) {
                         'div',
                         {
                             style: n,
-                            children: (0, r.jsx)(I.ZP, {
+                            children: (0, r.jsx)(y.ZP, {
                                 guildId: e,
                                 onClick: async (e) => await Q(e, t, A, T),
                                 onView: (e) => z(e)
@@ -184,7 +184,7 @@ function j(e) {
             [s, Q, z, A]
         );
     i.useEffect(() => {
-        let e = B.current;
+        let e = V.current;
         return () => {
             var t;
             let n = null == e || null == (t = e.getScrollerState()) ? void 0 : t.scrollTop;
@@ -196,7 +196,7 @@ function j(e) {
             null != e &&
                 setTimeout(() => {
                     var t;
-                    null == (t = B.current) ||
+                    null == (t = V.current) ||
                         t.scrollTo({
                             to: e,
                             animate: !1,
@@ -211,7 +211,7 @@ function j(e) {
                 (0, o.debounce)(
                     () => {
                         var e;
-                        let t = null == (e = B.current) ? void 0 : e.getScrollerState();
+                        let t = null == (e = V.current) ? void 0 : e.getScrollerState();
                         if (null == t) return;
                         let n = t.scrollTop + t.offsetHeight;
                         t.scrollHeight - n < 240 && j();
@@ -226,7 +226,7 @@ function j(e) {
         className: C.container,
         ref: F,
         children: (0, r.jsx)(c.GMG, {
-            ref: B,
+            ref: V,
             className: C.masonryList,
             sections: W,
             columns: M,
@@ -249,7 +249,7 @@ function j(e) {
                               children: [
                                   (0, r.jsx)('div', {
                                       className: C.sidebarLanguageSelect,
-                                      children: (0, r.jsx)(y.Z, { loadId: t })
+                                      children: (0, r.jsx)(I.Z, { loadId: t })
                                   }),
                                   (0, r.jsx)(_.Z, { loadId: t })
                               ]

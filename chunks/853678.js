@@ -17,27 +17,27 @@ var r = n(45792),
     _ = n(452426),
     E = n(186901),
     O = n(981631),
-    y = n(701488),
-    I = n(674563);
-let v = new Set([y.Fu, y.JT]),
+    I = n(701488),
+    y = n(674563);
+let v = new Set([I.Fu, I.JT]),
     C = new Set(['www.nytimes.com', 'apps.apple.com', 'play.google.com']),
     S = new Map([
         [
-            I.Vt,
+            y.Vt,
             {
                 trustedHosts: C,
                 trustedUntilEpochMs: new Date('2027-01-15T00:00:00').valueOf()
             }
         ],
         [
-            I.fd,
+            y.fd,
             {
                 trustedHosts: C,
                 trustedUntilEpochMs: new Date('2027-01-15T00:00:00').valueOf()
             }
         ],
         [
-            I.He,
+            y.He,
             {
                 trustedHosts: C,
                 trustedUntilEpochMs: new Date('2027-01-15T00:00:00').valueOf()
