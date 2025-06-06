@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(539854);
+n.d(t, { Z: () => M }), n(539854);
 var r,
     i = n(255367),
     l = n(73800),
@@ -14,11 +14,12 @@ var r,
     g = n(663993),
     m = n(84615),
     b = n(210887),
-    _ = n(819640),
-    E = n(585483),
-    O = n(981631),
+    _ = n(526665),
+    E = n(819640),
+    O = n(585483),
+    y = n(981631),
     I = n(400709);
-function y(e, t, n) {
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +32,7 @@ function y(e, t, n) {
         e
     );
 }
-function v(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,12 +43,12 @@ function v(e) {
                 })
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
 }
-function C(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,42 +66,47 @@ function C(e, t) {
         e
     );
 }
-let S = (0, g.Un)({
+let N = (0, g.Un)({
         createPromise: () => n.e('69470').then(n.bind(n, 989804)),
         webpackId: 989804,
         name: 'UserSettings'
     }),
-    N = (0, g.Un)({
+    T = (0, g.Un)({
+        createPromise: () => n.e('36878').then(n.bind(n, 604960)),
+        webpackId: 604960,
+        name: 'UserSettingsV2'
+    }),
+    P = (0, g.Un)({
         createPromise: () => Promise.all([n.e('7654'), n.e('49286'), n.e('86915')]).then(n.bind(n, 869779)),
         webpackId: 869779,
         name: 'ChannelSettings'
     }),
-    T = (0, g.Un)({
+    j = (0, g.Un)({
         createPromise: () => Promise.all([n.e('9037'), n.e('45620')]).then(n.bind(n, 838819)),
         webpackId: 838819,
         name: 'CollectiblesShop'
     }),
-    P = (0, g.Un)({
+    A = (0, g.Un)({
         createPromise: () => Promise.all([n.e('7654'), n.e('44156'), n.e('55616'), n.e('49286'), n.e('6850'), n.e('58227'), n.e('32652'), n.e('54408'), n.e('20087'), n.e('92754'), n.e('95140')]).then(n.bind(n, 994763)),
         webpackId: 994763,
         name: 'GuildSettings'
     }),
-    j = {
-        [O.S9g.USER_SETTINGS]: () => (0, i.jsx)(S, {}),
-        [O.S9g.CHANNEL_SETTINGS]: () => (0, i.jsx)(N, {}),
-        [O.S9g.GUILD_SETTINGS]: () => (0, i.jsx)(P, {}),
-        [O.S9g.COLLECTIBLES_SHOP]: () => (0, i.jsx)(T, {})
+    x = {
+        [y.S9g.USER_SETTINGS]: () => ((0, _.yP)('Layers') ? (0, i.jsx)(T, {}) : (0, i.jsx)(N, {})),
+        [y.S9g.CHANNEL_SETTINGS]: () => (0, i.jsx)(P, {}),
+        [y.S9g.GUILD_SETTINGS]: () => (0, i.jsx)(A, {}),
+        [y.S9g.COLLECTIBLES_SHOP]: () => (0, i.jsx)(j, {})
     },
-    A = 'SHOWN',
-    x = 'HIDDEN',
-    Z = {
+    Z = 'SHOWN',
+    w = 'HIDDEN',
+    L = {
         friction: 10,
         tension: 100
     };
-function w() {
+function R() {
     return l.useEffect(() => (f.Z.enable(), f.Z.enableTemp(h.u), () => f.Z.disableTemp()), []), null;
 }
-class L extends (r = l.PureComponent) {
+class D extends (r = l.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         return e.mode !== t.mode
             ? {
@@ -113,8 +119,8 @@ class L extends (r = l.PureComponent) {
         let { mode: t } = this.props,
             { mode: n } = e;
         if (t !== n) {
-            if (t === A && n === x) return this.animateIn();
-            if (t === x && n === A) return this.animateUnder();
+            if (t === Z && n === w) return this.animateIn();
+            if (t === w && n === Z) return this.animateUnder();
         }
     }
     componentWillEnter(e) {
@@ -127,20 +133,20 @@ class L extends (r = l.PureComponent) {
     animateIn(e) {
         c.ZP.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
-        s.Z.parallel([s.Z.spring(t, v({ toValue: 1 }, Z)), s.Z.spring(n, v({ toValue: 1 }, Z))]).start(() => this.animateComplete(e));
+        s.Z.parallel([s.Z.spring(t, C({ toValue: 1 }, L)), s.Z.spring(n, C({ toValue: 1 }, L))]).start(() => this.animateComplete(e));
     }
     animateOut(e) {
         c.ZP.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
-        E.S.dispatch(O.CkL.LAYER_POP_START),
-            s.Z.parallel([s.Z.spring(t, v({ toValue: 0 }, Z)), s.Z.spring(n, v({ toValue: 1.1 }, Z))]).start(() => {
-                e(), E.S.dispatch(O.CkL.LAYER_POP_COMPLETE);
+        O.S.dispatch(y.CkL.LAYER_POP_START),
+            s.Z.parallel([s.Z.spring(t, C({ toValue: 0 }, L)), s.Z.spring(n, C({ toValue: 1.1 }, L))]).start(() => {
+                e(), O.S.dispatch(y.CkL.LAYER_POP_COMPLETE);
             });
     }
     animateUnder() {
         c.ZP.Emitter.pause(500);
         let { opacity: e, scale: t } = this.state;
-        s.Z.parallel([s.Z.spring(e, v({ toValue: 0 }, Z)), s.Z.spring(t, v({ toValue: 0.93 }, Z))]).start(() => this.animateComplete());
+        s.Z.parallel([s.Z.spring(e, C({ toValue: 0 }, L)), s.Z.spring(t, C({ toValue: 0.93 }, L))]).start(() => this.animateComplete());
     }
     animateComplete(e) {
         this.setState({ animating: !1 }, e);
@@ -168,18 +174,18 @@ class L extends (r = l.PureComponent) {
                 }
                 return i;
             })(t, ['mode', 'children', 'baseLayer']),
-            c = e || n === x ? this.getAnimatedStyle() : null,
+            c = e || n === w ? this.getAnimatedStyle() : null,
             u = (0, i.jsx)(
                 s.Z.div,
-                C(
-                    v(
+                S(
+                    C(
                         {
                             ref: (e) => (this.containerRef.current = null != e ? e.componentRef : void 0),
-                            'aria-hidden': n === x,
+                            'aria-hidden': n === w,
                             className: o()(I.layer, {
                                 [I.baseLayer]: l,
                                 [I.animating]: e,
-                                'stop-animations': n === x
+                                'stop-animations': n === w
                             }),
                             style: c
                         },
@@ -204,10 +210,10 @@ class L extends (r = l.PureComponent) {
         };
     }
     constructor(e) {
-        super(e), y(this, 'containerRef', l.createRef());
+        super(e), v(this, 'containerRef', l.createRef());
         let t = 1,
             n = 1;
-        e.mode === x && ((t = 0.93), (n = 0)),
+        e.mode === w && ((t = 0.93), (n = 0)),
             (this.state = {
                 animating: !1,
                 scale: new s.Z.Value(t),
@@ -216,13 +222,13 @@ class L extends (r = l.PureComponent) {
             });
     }
 }
-y(L, 'defaultProps', { baseLayer: !1 }), y(L, 'contextType', d.Sfi);
-class R extends l.PureComponent {
+v(D, 'defaultProps', { baseLayer: !1 }), v(D, 'contextType', d.Sfi);
+class k extends l.PureComponent {
     componentDidMount() {
-        E.S.subscribe(O.CkL.LAYER_POP_ESCAPE_KEY, p.xf);
+        O.S.subscribe(y.CkL.LAYER_POP_ESCAPE_KEY, p.xf);
     }
     componentWillUnmount() {
-        E.S.unsubscribe(O.CkL.LAYER_POP_ESCAPE_KEY, p.xf);
+        O.S.unsubscribe(y.CkL.LAYER_POP_ESCAPE_KEY, p.xf);
     }
     renderLayers() {
         let { children: e, layers: t, hasFullScreenLayer: n } = this.props,
@@ -231,9 +237,9 @@ class R extends l.PureComponent {
         return (
             l.push(
                 (0, i.jsx)(
-                    L,
+                    D,
                     {
-                        mode: 0 !== r || n ? x : A,
+                        mode: 0 !== r || n ? w : Z,
                         baseLayer: !0,
                         children: e
                     },
@@ -247,12 +253,12 @@ class R extends l.PureComponent {
     renderComponent(e, t, n) {
         let r;
         return (
-            (r = 'string' == typeof e ? j[e]() : (0, i.jsx)(e, {})),
+            (r = 'string' == typeof e ? x[e]() : (0, i.jsx)(e, {})),
             (0, i.jsxs)(
-                L,
+                D,
                 {
-                    mode: t === n - 1 ? A : x,
-                    children: [(0, i.jsx)(w, {}), r]
+                    mode: t === n - 1 ? Z : w,
+                    children: [(0, i.jsx)(R, {}), r]
                 },
                 'layer-'.concat(t)
             )
@@ -277,13 +283,13 @@ class R extends l.PureComponent {
         });
     }
 }
-function D(e) {
-    let t = (0, c.e7)([b.Z], () => b.Z.darkSidebar) ? O.BRd.DARK : void 0,
-        n = (0, c.e7)([_.Z], () => _.Z.getLayers()),
+function M(e) {
+    let t = (0, c.e7)([b.Z], () => b.Z.darkSidebar) ? y.BRd.DARK : void 0,
+        n = (0, c.e7)([E.Z], () => E.Z.getLayers()),
         r = (0, m.QP)((e) => e.fullScreenLayers.length > 0);
     return (0, i.jsx)(
-        R,
-        C(v({}, e), {
+        k,
+        S(C({}, e), {
             sidebarTheme: t,
             layers: n,
             hasFullScreenLayer: r

@@ -17,8 +17,8 @@ var r,
     _ = n(833664),
     E = n(503438),
     O = n(420660),
-    I = n(74433),
-    y = n(906732),
+    y = n(74433),
+    I = n(906732),
     v = n(812206),
     C = n(933557),
     S = n(194082),
@@ -543,7 +543,7 @@ let er = (e) => {
                     })
                 ]
             }),
-            g = null != (n = null == (t = (0, I.Z)(r, a)) ? void 0 : t.activityText) ? n : z.intl.string(z.t.eXan7O);
+            g = null != (n = null == (t = (0, y.Z)(r, a)) ? void 0 : t.activityText) ? n : z.intl.string(z.t.eXan7O);
         return (0, i.jsxs)(J, {
             children: [
                 (0, i.jsxs)('div', {
@@ -582,7 +582,7 @@ let er = (e) => {
                     .filter(B.lm)
             ),
             f = (0, h.O)(),
-            { analyticsLocations: m } = (0, y.ZP)();
+            { analyticsLocations: m } = (0, I.ZP)();
         if (null == d) return null;
         let b = v.Z.getApplication(d);
         if (null == b) return null;

@@ -59,20 +59,20 @@ function _(e, t) {
 }
 function E(e) {
     var t, n, E, O;
-    let I,
-        { content: y, renderModalProps: v, analyticsLocations: C, analyticsLocation: S, isLightTheme: N } = e,
-        T = 'AnnouncementModalVariant1_'.concat(i.z[Number(y.dismissKey)]),
+    let y,
+        { content: I, renderModalProps: v, analyticsLocations: C, analyticsLocation: S, isLightTheme: N } = e,
+        T = 'AnnouncementModalVariant1_'.concat(i.z[Number(I.dismissKey)]),
         { onClose: P } = v,
-        j = null != (O = null == (t = y.button) ? void 0 : t.copy) ? O : f.intl.string(f.t.YScQSE),
-        A = (null == (n = y.button) ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button';
-    switch (null == (E = y.button) ? void 0 : E.buttonAction) {
+        j = null != (O = null == (t = I.button) ? void 0 : t.copy) ? O : f.intl.string(f.t.YScQSE),
+        A = (null == (n = I.button) ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button';
+    switch (null == (E = I.button) ? void 0 : E.buttonAction) {
         case l.Wc.OPEN_MARKETING_PAGE:
-            I = () => {
+            y = () => {
                 (0, s.uL)(h.Z5c.APPLICATION_STORE), P();
             };
             break;
         case l.Wc.OPEN_TIER_1_PAYMENT_MODAL:
-            I = () =>
+            y = () =>
                 (0, o.Z)({
                     subscriptionTier: p.Si.TIER_1,
                     analyticsLocations: C,
@@ -88,7 +88,7 @@ function E(e) {
         case l.Wc.OPEN_TIER_2_PAYMENT_MODAL:
         case l.Wc.OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER:
         default:
-            I = () =>
+            y = () =>
                 (0, o.Z)({
                     subscriptionTier: p.Si.TIER_2,
                     analyticsLocations: C,
@@ -102,14 +102,14 @@ function E(e) {
                 });
     }
     let x =
-            '' !== y.helpArticleId
+            '' !== I.helpArticleId
                 ? () =>
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               '\xA0',
                               (0, r.jsx)(a.eee, {
                                   className: g.termsApplyAnchor,
-                                  href: u.Z.getArticleURL(y.helpArticleId),
+                                  href: u.Z.getArticleURL(I.helpArticleId),
                                   children: f.intl.string(f.t.hvVgAQ)
                               })
                           ]
@@ -117,36 +117,36 @@ function E(e) {
                 : void 0,
         Z = {
             type: 'video',
-            src: N ? y.heroArtVideoLinkLightTheme : y.videoLink
+            src: N ? I.heroArtVideoLinkLightTheme : I.videoLink
         };
-    null != y.heroArtVideoSubtitles &&
-        (Z.subtitles = y.heroArtVideoSubtitles.map((e) => ({
+    null != I.heroArtVideoSubtitles &&
+        (Z.subtitles = I.heroArtVideoSubtitles.map((e) => ({
             locale: e.locale,
             src: e.link,
             isDefault: !1
         }))),
-        ('' !== y.heroArtImageLinkDarkTheme || '' !== y.heroArtImageLinkLightTheme) &&
+        ('' !== I.heroArtImageLinkDarkTheme || '' !== I.heroArtImageLinkLightTheme) &&
             (Z = {
                 type: 'image',
-                src: N ? y.heroArtImageLinkLightTheme : y.heroArtImageLinkDarkTheme
+                src: N ? I.heroArtImageLinkLightTheme : I.heroArtImageLinkDarkTheme
             });
     let w =
-        '' !== y.modalTopPill
+        '' !== I.modalTopPill
             ? () =>
                   (0, r.jsx)(d.mn, {
-                      text: y.modalTopPill,
+                      text: I.modalTopPill,
                       className: g.modalTopPill
                   })
             : void 0;
     return {
         renderModalProps: v,
-        header: y.header,
+        header: I.header,
         modalTopExtra: w,
-        subHeader: y.subheader,
+        subHeader: I.subheader,
         subHeaderExtra: x,
-        body: y.body,
+        body: I.body,
         heroArt: Z,
-        featureCards: y.featureCards.map((e) => ({
+        featureCards: I.featureCards.map((e) => ({
             header: e.header,
             subHeader: e.body,
             imageSrc: N ? e.imageLinkLightTheme : e.imageLink,
@@ -167,7 +167,7 @@ function E(e) {
                         seconds_open: Math.round((Date.now() - e) / 1000),
                         target: T
                     }),
-                        I();
+                        y();
                 },
                 children: [
                     (0, r.jsx)('img', {
@@ -179,6 +179,6 @@ function E(e) {
                 ]
             });
         },
-        modalDismissibleContent: '' !== y.dismissKey ? Number(y.dismissKey) : void 0
+        modalDismissibleContent: '' !== I.dismissKey ? Number(I.dismissKey) : void 0
     };
 }

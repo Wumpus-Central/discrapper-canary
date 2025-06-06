@@ -25,8 +25,8 @@ var r,
     b = n(529103),
     _ = n(447543),
     y = n(708690),
-    C = n(194359),
-    x = n(425493),
+    x = n(194359),
+    C = n(425493),
     v = n(461745),
     j = n(493773),
     O = n(40851),
@@ -545,7 +545,7 @@ class em extends (r = l.PureComponent) {
     }
     handleAddFriend(e) {
         this.props.onClose(),
-            C.Z.sendRequest({
+            x.Z.sendRequest({
                 discordTag: J.ZP.getUserTag(e, { identifiable: 'always' }),
                 context: { location: 'Group DM' }
             });
@@ -588,7 +588,7 @@ class em extends (r = l.PureComponent) {
                     children: (0, i.jsx)(h.JcV, {
                         containerRef: this._mobileCloseRef,
                         children: (0, i.jsx)('div', {
-                            children: (0, i.jsx)(x.Z, {
+                            children: (0, i.jsx)(C.Z, {
                                 className: ei.mobileToolsCloseIcon,
                                 closeAction: this.props.onClose,
                                 keybind: 'ESC'
@@ -753,7 +753,7 @@ class em extends (r = l.PureComponent) {
                 let { channel: e, selectedUsers: t, onClose: n } = this.props,
                     r = Array.from(t);
                 if (null != e) {
-                    let t = eC(Array.from(new Set([...e.recipients, ...r])));
+                    let t = ex(Array.from(new Set([...e.recipients, ...r])));
                     t.size > 0
                         ? (0, h.h7j)(
                               (n) =>
@@ -769,7 +769,7 @@ class em extends (r = l.PureComponent) {
                           )
                         : this.pushToExistingDM(e, r);
                 } else {
-                    let e = eC(r);
+                    let e = ex(r);
                     r.length > 1 && e.size > 0
                         ? (0, h.h7j)(
                               (t) =>
@@ -867,8 +867,8 @@ function e_(e) {
         b = null != s ? s : null == r ? h.kL_ : h.ejJ,
         _ = (0, A.a)(g),
         y = 'channel-invite-modal-'.concat(null == r ? void 0 : r.id),
-        C = (0, h.VXO)(y),
-        x = l.useCallback(
+        x = (0, h.VXO)(y),
+        C = l.useCallback(
             () =>
                 (0, h.ZDy)(
                     () =>
@@ -887,7 +887,7 @@ function e_(e) {
         ),
         v = l.useRef(null),
         [O, E] = l.useState(null != r && r.isGroupDM() && 0 === r.recipients.length),
-        I = l.useCallback(() => (_ ? (C ? (0, h.Mr3)(y) : x()) : E((e) => !e)), [_, C, y, x]);
+        I = l.useCallback(() => (_ ? (x ? (0, h.Mr3)(y) : C()) : E((e) => !e)), [_, x, y, C]);
     l.useEffect(
         () => (
             m && K.S.subscribe(en.CkL.TOGGLE_DM_CREATE, I),
@@ -906,7 +906,7 @@ function e_(e) {
         : _
           ? (0, i.jsx)(ee.ZP.Icon, {
                 ref: v,
-                onClick: x,
+                onClick: C,
                 icon: b,
                 className: o,
                 iconClassName: a,
@@ -1015,18 +1015,18 @@ function ey(e) {
                   )
           });
 }
-function eC(e) {
-    let t = ex(e);
+function ex(e) {
+    let t = eC(e);
     return new Set(
         (0, s.chain)(U.Z.getMutablePrivateChannels())
             .values()
             .filter((e) => (0, D.bc)(e.type))
-            .filter((e) => ex(e.recipients) === t)
+            .filter((e) => eC(e.recipients) === t)
             .map((e) => e.id)
             .value()
     );
 }
-function ex(e) {
+function eC(e) {
     return JSON.stringify(e.sort());
 }
 ea(em, 'contextType', O.ZP);

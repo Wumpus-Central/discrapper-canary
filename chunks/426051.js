@@ -22,17 +22,17 @@ function b(e) {
         O = i.useCallback(() => {
             c.Z.closeChannelSidebar(u.uZ);
         }, []),
-        I = i.useCallback(() => {
+        y = i.useCallback(() => {
             c.Z.closeChannelSidebar(u.uZ), _ && (0, s.Kh)(b.id);
         }, [b.id, _]),
         {
-            acceptMessageRequest: y,
+            acceptMessageRequest: I,
             isAcceptLoading: v,
             isUserProfileLoading: C,
             isOptimisticAccepted: S
         } = (0, p.m)({
             user: n,
-            onAcceptSuccess: I,
+            onAcceptSuccess: y,
             onRejectSuccess: O,
             onError: E
         }),
@@ -54,7 +54,7 @@ function b(e) {
                         color: a.Ttl.PRIMARY,
                         size: a.zxk.Sizes.SMALL,
                         onClick: (e) => {
-                            y(b.id), e.stopPropagation();
+                            I(b.id), e.stopPropagation();
                         },
                         disabled: T,
                         submitting: N,

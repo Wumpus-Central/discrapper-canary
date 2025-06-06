@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(540059),
     _ = n(517525),
     y = n(2818),
-    C = n(954551),
-    x = n(44136),
+    x = n(954551),
+    C = n(44136),
     v = n(651183),
     j = n(853476),
     O = n(390322),
@@ -80,7 +80,7 @@ function L(e) {
             let e = Date.now();
             return s()(S.Z.getSpeakers())
                 .map((e) => Z.Z.getParticipant(t, e))
-                .filter((e) => null != e && e.type === A.fO.USER && e.speaking && !(0, x.ZP)(e))
+                .filter((e) => null != e && e.type === A.fO.USER && e.speaking && !(0, C.ZP)(e))
                 .sortBy((t) => -S.Z.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
                 .value();
@@ -116,7 +116,7 @@ function D(e) {
     let { inPopout: t, channel: n, isChatOpen: l } = e,
         o = i.useRef(null),
         { analyticsLocations: s } = (0, h.ZP)(p.Z.VOICE_CHANNEL_HEADER),
-        x = n.id,
+        C = n.id,
         {
             voiceParticipantsHidden: P,
             selectedParticipant: S,
@@ -125,12 +125,12 @@ function D(e) {
         } = (0, c.cj)(
             [Z.Z],
             () => ({
-                selectedParticipant: Z.Z.getSelectedParticipant(x),
-                voiceParticipantsHidden: Z.Z.getVoiceParticipantsHidden(x),
-                userParticipantCount: Z.Z.getUserParticipantCount(x),
-                participantsListOpen: Z.Z.getParticipantsListOpen(x)
+                selectedParticipant: Z.Z.getSelectedParticipant(C),
+                voiceParticipantsHidden: Z.Z.getVoiceParticipantsHidden(C),
+                userParticipantCount: Z.Z.getUserParticipantCount(C),
+                participantsListOpen: Z.Z.getParticipantsListOpen(C)
             }),
-            [x]
+            [C]
         ),
         U = n.isGuildVoice() && !l,
         { hasParticipantsPanel: B } = (0, T.Z)({ location: 'ChannelCallHeaderToolbar' }),
@@ -144,7 +144,7 @@ function D(e) {
                 (0, r.jsx)(
                     L,
                     {
-                        channelId: x,
+                        channelId: C,
                         guildId: n.guild_id
                     },
                     'current-speaker'
@@ -155,7 +155,7 @@ function D(e) {
                 g.Z,
                 {
                     className: R.button,
-                    channelId: x
+                    channelId: C
                 },
                 'clips-enabled-indicator'
             )
@@ -222,7 +222,7 @@ function D(e) {
                 )
             ),
         V || t || z.push((0, r.jsx)(m.Z, { className: R.button }, 'clips')),
-        G && !H && z.push((0, r.jsx)(C.Z, { className: R.button }, 'for-later')),
+        G && !H && z.push((0, r.jsx)(x.Z, { className: R.button }, 'for-later')),
         F &&
             z.push(
                 (0, r.jsx)(

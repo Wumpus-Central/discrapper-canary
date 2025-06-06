@@ -44,7 +44,7 @@ function O(e) {
     }
     return e;
 }
-function I(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,7 +62,7 @@ function I(e, t) {
         e
     );
 }
-let y = {
+let I = {
     HOST: 5,
     LISTENER: 4
 };
@@ -107,7 +107,7 @@ class v extends i.PureComponent {
                     className: _.party,
                     children: (0, r.jsx)(d.Z, {
                         users: this.props.party,
-                        max: this.isHost() ? y.HOST : y.LISTENER,
+                        max: this.isHost() ? I.HOST : I.LISTENER,
                         renderUser: this.renderPartyMember,
                         renderMoreUsers: this.renderPartyMemberOverflow
                     })
@@ -145,7 +145,7 @@ class v extends i.PureComponent {
                                         let { onMouseEnter: r, onMouseLeave: s } = n;
                                         return (0, i.createElement)(
                                             o.qEK,
-                                            I(O({}, l), {
+                                            y(O({}, l), {
                                                 key: e.id,
                                                 src: e.getAvatarURL(void 0, 24),
                                                 size: o.EFr.SIZE_24,
@@ -177,7 +177,7 @@ class v extends i.PureComponent {
                                 children: (i) =>
                                     (0, r.jsx)(
                                         'div',
-                                        I(
+                                        y(
                                             O(
                                                 {
                                                     ref: this.partyMemberOverflowRef,

@@ -40,7 +40,7 @@ function _(e) {
 function E(e) {
     return new Promise((t, n) => {
         'string' == typeof e && (e = f.net.createConnection(e));
-        let r = new I(e, 'json');
+        let r = new y(e, 'json');
         e.on('data', (t) => {
             try {
                 r.read(t);
@@ -90,7 +90,7 @@ function O(e, t) {
         i = r.Buffer.alloc(8 + n);
     return i.writeInt32LE(e, 0), i.writeInt32LE(n, 4), i.write(t, 8, n), i.buffer.slice(i.byteOffset, i.byteOffset + i.byteLength);
 }
-class I extends u.Z {
+class y extends u.Z {
     copyBuffer(e, t, n) {
         let i = r.Buffer.allocUnsafe(n - t);
         return e.copy(i, 0, t, n), i;
@@ -168,9 +168,9 @@ class I extends u.Z {
         super('ipc', p.X6Q, t), h(this, 'messageBuffer', r.Buffer.alloc(0)), h(this, 'currentHeader', null), h(this, 'MAX_BUFFER_SIZE', 5242880), h(this, 'socket', void 0), h(this, 'clientId', null), (this.socket = e), b(e, !1);
     }
 }
-class y extends i.EventEmitter {
+class I extends i.EventEmitter {
     handleConnection(e) {
-        let t = new I(e, 'json');
+        let t = new y(e, 'json');
         e.on('readable', () => {
             let n = e.read();
             null != n && t.read(r.Buffer.from(n));
@@ -220,4 +220,4 @@ class y extends i.EventEmitter {
             });
     }
 }
-let v = new y();
+let v = new I();

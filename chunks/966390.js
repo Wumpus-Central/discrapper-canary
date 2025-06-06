@@ -16,8 +16,8 @@ var r = n(570140),
     b = n(79390),
     _ = n(980463),
     y = n(992970),
-    C = n(576645),
-    x = n(317951),
+    x = n(576645),
+    C = n(317951),
     v = n(287941),
     j = n(623292),
     O = n(807092),
@@ -86,7 +86,7 @@ let M = {
                 type: T.uaV.DEFAULT,
                 sticker_ids: null == F ? void 0 : F.stickerIds,
                 poll: null == F ? void 0 : F.poll,
-                confetti_potion: (0, C.vY)(null == F ? void 0 : F.confettiPotionData),
+                confetti_potion: (0, x.vY)(null == F ? void 0 : F.confettiPotionData),
                 scheduled_timestamp: null == F ? void 0 : F.scheduledTimestamp
             };
         null != B && (z.content = null == B ? void 0 : B.content), null != O.Z.getPendingReply(L) && ((z.type = T.uaV.REPLY), (z.message_reference = F.messageReference), (z.allowed_mentions = F.allowedMentions), (0, j.A6)(L));
@@ -190,9 +190,9 @@ let M = {
                     file: e,
                     aborted: H._aborted
                 });
-                let n = (0, C.ZC)(t);
+                let n = (0, x.ZC)(t);
                 null != n &&
-                    ((0, _.gA)(x.D1),
+                    ((0, _.gA)(C.D1),
                     (0, v.I)(
                         {
                             name: n.name,

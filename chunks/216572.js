@@ -1,45 +1,45 @@
-n.d(t, {
-    Cv: () => _,
-    HL: () => s,
-    KK: () => E,
-    Q_: () => c,
+t.d(e, {
+    Cv: () => h,
+    HL: () => c,
+    KK: () => v,
+    Q_: () => u,
     nw: () => f
 });
-var i = n(73800),
-    r = n(442837),
-    l = n(904245),
-    a = n(232567),
-    o = n(430824),
-    u = n(375954),
-    d = n(982168);
-function c(e) {
+var i = t(73800),
+    r = t(442837),
+    a = t(904245),
+    l = t(232567),
+    o = t(430824),
+    s = t(375954),
+    d = t(982168);
+function u(n) {
     return (0, r.e7)([o.Z], () => {
-        if (null == e) return !1;
-        let t = o.Z.getGuild(e);
-        return null != t && t.getModeratorReportingEnabled() && null != t.getModeratorReportChannelId();
+        if (null == n) return !1;
+        let e = o.Z.getGuild(n);
+        return null != e && e.getModeratorReportingEnabled() && null != e.getModeratorReportChannelId();
     });
 }
-function s(e) {
-    return (0, d.P0)(e);
+function c(n) {
+    return (0, d.P0)(n);
 }
-function f(e) {
-    return (0, d.gT)(e);
+function f(n) {
+    return (0, d.gT)(n);
 }
-function _(e) {
-    let { messageReference: t } = e,
-        n = (0, r.e7)([u.Z], () => (null != t ? u.Z.getMessage(t.channel_id, t.message_id) : null));
+function h(n) {
+    let { messageReference: e } = n,
+        t = (0, r.e7)([s.Z], () => (null != e ? s.Z.getMessage(e.channel_id, e.message_id) : null));
     (0, i.useEffect)(() => {
-        null == n &&
-            null != t &&
-            l.Z.fetchMessages({
-                channelId: t.channel_id,
-                jump: { messageId: t.message_id },
+        null == t &&
+            null != e &&
+            a.Z.fetchMessages({
+                channelId: e.channel_id,
+                jump: { messageId: e.message_id },
                 limit: 10
             });
-    }, [n, t]);
+    }, [t, e]);
 }
-function E(e) {
-    var t, n;
-    let i = null == e || null == (n = e.messageSnapshots[0]) || null == (t = n.moderatorReport) ? void 0 : t.reported_user_id;
-    null != i && (0, a.PR)(i);
+function v(n) {
+    var e, t;
+    let i = null == n || null == (t = n.messageSnapshots[0]) || null == (e = t.moderatorReport) ? void 0 : e.reported_user_id;
+    null != i && (0, l.PR)(i);
 }

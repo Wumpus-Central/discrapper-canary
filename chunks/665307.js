@@ -17,8 +17,8 @@ var r,
     _ = n(167533),
     E = n(925329),
     O = n(707409),
-    I = n(490983),
-    y = n(799777),
+    y = n(490983),
+    I = n(799777),
     v = n(626135),
     C = n(780570),
     S = n(624138),
@@ -461,21 +461,21 @@ function G(e) {
             applicationViewItems: r,
             filterQuery: a,
             fetched: o
-        } = (0, c.cj)([I.Z], () => ({
-            applicationViewItems: I.Z.sortedFilteredLibraryApplicationViewItems,
-            filterQuery: I.Z.applicationFilterQuery,
-            fetched: I.Z.hasFetchedApplications
+        } = (0, c.cj)([y.Z], () => ({
+            applicationViewItems: y.Z.sortedFilteredLibraryApplicationViewItems,
+            filterQuery: y.Z.applicationFilterQuery,
+            fetched: y.Z.hasFetchedApplications
         })),
         {
             sortKey: u,
             sortDirection: d,
             activeRowKey: p,
             isNavigatingByKeyboard: h
-        } = (0, c.cj)([y.Z], () => ({
-            sortKey: y.Z.sortKey,
-            sortDirection: y.Z.sortDirection,
-            activeRowKey: y.Z.activeRowKey,
-            isNavigatingByKeyboard: y.Z.isNavigatingByKeyboard
+        } = (0, c.cj)([I.Z], () => ({
+            sortKey: I.Z.sortKey,
+            sortDirection: I.Z.sortDirection,
+            activeRowKey: I.Z.activeRowKey,
+            isNavigatingByKeyboard: I.Z.isNavigatingByKeyboard
         }));
     return (0, i.jsx)(
         U,

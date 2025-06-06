@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(617136),
     E = n(113434),
     O = n(497505),
-    I = n(475595),
-    y = n(352084),
+    y = n(475595),
+    I = n(352084),
     v = n(125011),
     C = n(685613),
     S = n(981631),
@@ -57,7 +57,7 @@ let P = (0, i.memo)(function (e) {
     });
     let $ = (0, u.wj)(F),
         ee = (0, i.useMemo)(() => null != x.config.cosponsorMetadata, [x]),
-        et = (0, i.useMemo)(() => (0, I.fh)(x, I.eC.REWARD), [x]),
+        et = (0, i.useMemo)(() => (0, y.fh)(x, y.eC.REWARD), [x]),
         en = Z ? H + 8 : 0,
         er = (0, _.mH)(O.jn.TROPHY_CASE_CARD),
         { content_position: ei, row_index: el } = er,
@@ -146,7 +146,7 @@ let P = (0, i.memo)(function (e) {
                               })
                           }),
                       K
-                          ? (0, r.jsx)(y.Z, { className: T.image })
+                          ? (0, r.jsx)(I.Z, { className: T.image })
                           : X
                             ? (0, r.jsx)(v.Z, { className: T.image })
                             : et.isAnimated

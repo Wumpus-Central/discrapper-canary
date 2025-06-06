@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(100527),
     _ = n(906732),
     y = n(82295),
-    C = n(91218),
-    x = n(623624),
+    x = n(91218),
+    C = n(623624),
     v = n(518738),
     j = n(850020),
     O = n(965376),
@@ -84,7 +84,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             b = (0, p.e7)([w.default], () => w.default.getUser(a)),
             _ = (0, p.e7)([w.default], () => w.default.getCurrentUser()),
             y = (null == b ? void 0 : b.id) === (null == _ ? void 0 : _.id),
-            C = (0, p.e7)([N.Z, T.Z], () => (y ? T.Z.getStatus() : N.Z.getStatus(a, t.guild_id))),
+            x = (0, p.e7)([N.Z, T.Z], () => (y ? T.Z.getStatus() : N.Z.getStatus(a, t.guild_id))),
             v = (0, p.e7)([N.Z], () => N.Z.isMobileOnline(a)),
             O = (0, p.e7)([N.Z, T.Z], () => (y ? T.Z.getActivities() : N.Z.getActivities(a, t.guild_id))),
             R = (0, p.e7)([P.Z], () => P.Z.getAnyStreamForUser(a)),
@@ -140,7 +140,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             Y = i.useCallback(
                 (e) => {
                     e.stopPropagation(),
-                        (0, x.f)({
+                        (0, C.f)({
                             guildId: t.guild_id,
                             location: {
                                 section: F.jXE.THREAD_MEMBER_LIST,
@@ -198,7 +198,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             user: b,
                             currentUser: _,
                             nick: null == h ? void 0 : h.nick,
-                            status: C,
+                            status: x,
                             activities: O,
                             colorString: null == h ? void 0 : h.colorString,
                             colorStrings: null == h ? void 0 : h.colorStrings,
@@ -247,7 +247,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                       count: i
                   }),
                   children: [
-                      null != a ? (0, r.jsx)(C.Z, z({ className: V.roleIcon }, a)) : null,
+                      null != a ? (0, r.jsx)(x.Z, z({ className: V.roleIcon }, a)) : null,
                       (0, r.jsxs)('span', {
                           'aria-hidden': !0,
                           children: [n, ' \u2014 ', i]
@@ -347,7 +347,7 @@ function Q(e) {
                 listRef: r
             };
         })(l, Y),
-        C = 0 === d.length || d.every((e) => 0 === e.userIds.length);
+        x = 0 === d.length || d.every((e) => 0 === e.userIds.length);
     if (
         (i.useEffect(() => {
             M.default.track(F.rMx.MEMBER_LIST_VIEWED, {
@@ -356,10 +356,10 @@ function Q(e) {
                 guild_id: t.guild_id
             });
         }, [t.guild_id, t.id, t.type]),
-        C)
+        x)
     )
         return (0, r.jsx)(J, { channel: t });
-    let x = s().omit(m.containerProps, ['ref']),
+    let C = s().omit(m.containerProps, ['ref']),
         v = L.iJ(n);
     return (0, r.jsx)(_.Gt, {
         value: o,
@@ -413,7 +413,7 @@ function Q(e) {
                                     sections: d.map((e) => e.userIds.length),
                                     fade: !0
                                 },
-                                x,
+                                C,
                                 e
                             ),
                             l

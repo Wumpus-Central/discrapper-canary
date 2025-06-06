@@ -26,7 +26,7 @@ function h(e) {
             user: g,
             guild: b
         }),
-        C = [
+        x = [
             (0, u.Z)({
                 channel: t,
                 message: n,
@@ -41,7 +41,7 @@ function h(e) {
                 guild: b
             })
         ].filter((e) => null != e);
-    return t.isModeratorReportChannel() && 0 !== C.length ? (0, r.jsx)(r.Fragment, { children: C.map((e, t) => (0, r.jsx)(i.Fragment, { children: e }, t)) }) : null;
+    return t.isModeratorReportChannel() && 0 !== x.length ? (0, r.jsx)(r.Fragment, { children: x.map((e, t) => (0, r.jsx)(i.Fragment, { children: e }, t)) }) : null;
 }
 function f(e) {
     let { message: t, channel: n } = e;

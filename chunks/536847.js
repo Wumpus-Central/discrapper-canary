@@ -1,4 +1,4 @@
-n.d(t, { o: () => g }), n(388685);
+n.d(t, { o: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(657707),
@@ -9,36 +9,38 @@ var r = n(255367),
     u = n(740492),
     d = n(695346),
     f = n(514361),
-    _ = n(874893),
-    p = n(231338),
-    h = n(388032),
-    m = n(531864);
-function g() {
-    let [e, t] = i.useState(p.BR.LIGHT),
+    _ = n(469115),
+    p = n(874893),
+    h = n(231338),
+    m = n(388032),
+    g = n(531864);
+function E() {
+    let [e, t] = i.useState(h.BR.LIGHT),
         n = [
             {
-                name: h.intl.string(h.t.b8Cei4),
-                value: p.BR.DARK,
+                name: m.intl.string(m.t.b8Cei4),
+                value: h.BR.DARK,
                 icon: a.Z6G
             },
             {
-                name: h.intl.string(h.t.K2sFfn),
-                value: p.BR.LIGHT,
+                name: m.intl.string(m.t.K2sFfn),
+                value: h.BR.LIGHT,
                 icon: a.chG
             }
         ],
-        [g, E, b] = (0, o.Wu)([c.Z, u.ZP, f.Z], () => [c.Z.theme, null == f.Z.gradientPreset, u.ZP.useSystemTheme === _.KW.ON]);
+        [E, b, y] = (0, o.Wu)([c.Z, u.ZP, f.Z], () => [c.Z.theme, null == f.Z.gradientPreset, u.ZP.useSystemTheme === p.KW.ON]);
     return (0, r.jsx)(s.sY7, {
-        className: m.themeSelector,
+        className: g.themeSelector,
         options: n,
-        value: E && !b ? g : e,
+        value: b && !y ? E : e,
         onChange: (e) => {
             let { value: n } = e;
             t(n);
-            let r = d.L1.getSetting();
+            let r = d.L1.getSetting(),
+                i = null != r.backgroundGradientPresetId && r.backgroundGradientPresetId in _.qt && _.qt[r.backgroundGradientPresetId].theme !== n;
             (0, l.ZI)({
                 theme: n,
-                backgroundGradientPresetId: r.backgroundGradientPresetId,
+                backgroundGradientPresetId: i ? void 0 : r.backgroundGradientPresetId,
                 customUserThemeSettings: r.customUserThemeSettings
             });
         },

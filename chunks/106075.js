@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(590771),
     E = n(273596),
     O = n(128449),
-    I = n(49898),
-    y = n(388032),
+    y = n(49898),
+    I = n(388032),
     v = n(398075);
 function C() {
     let e = i.useRef((0, h.PM)()),
@@ -97,17 +97,17 @@ function C() {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
                                 className: v.searchResultsHeader,
-                                children: y.intl.format(y.t.zHdzqa, { query: G })
+                                children: I.intl.format(I.t.zHdzqa, { query: G })
                             }),
                         j &&
                             (0, r.jsx)(u.Z, {
                                 query: A,
-                                placeholder: y.intl.string(y.t['5h0QOD']),
+                                placeholder: I.intl.string(I.t['5h0QOD']),
                                 onTextChange: x,
                                 onClear: Z,
                                 onSubmit: w,
                                 onCollapsedClick: k,
-                                state: L ? I.GlobalDiscoverySearchBarState.DEFAULT : R,
+                                state: L ? y.GlobalDiscoverySearchBarState.DEFAULT : R,
                                 onBlur: M
                             })
                     ]

@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(727429),
     _ = n(665149),
     y = n(359110),
-    C = n(585483),
-    x = n(407908),
+    x = n(585483),
+    C = n(407908),
     v = n(739830),
     j = n(488131),
     O = n(981631),
@@ -104,7 +104,7 @@ function Z(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
         b = (0, s.Z)(t, 'Sidebar Overflow'),
         _ = (0, u.Z)(t),
-        x = (0, h.Z)(t),
+        C = (0, h.Z)(t),
         v = (0, f.Z)(t),
         j = (0, a.Z)(t),
         I = (0, c.Z)(t),
@@ -136,7 +136,7 @@ function Z(e) {
                 ]
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [x, v]
+                children: [C, v]
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [S, _, P]
@@ -150,7 +150,7 @@ function Z(e) {
                         action: function () {
                             A(),
                                 setTimeout(() => {
-                                    C.S.dispatch(O.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
+                                    x.S.dispatch(O.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
                                 }, 2000);
                         }
                     }),
@@ -159,7 +159,7 @@ function Z(e) {
                         label: E.intl.string(E.t['2BSH7u']),
                         icon: l.rgF,
                         action: function () {
-                            A(), C.S.dispatch(O.CkL.TOGGLE_CHANNEL_PINS);
+                            A(), x.S.dispatch(O.CkL.TOGGLE_CHANNEL_PINS);
                         }
                     })
                 ]
@@ -176,7 +176,7 @@ function N(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             t.isForumPost() ? null : (0, r.jsx)(v.Z, { channel: t }),
-            (0, r.jsx)(x.Z, { channel: t }),
+            (0, r.jsx)(C.Z, { channel: t }),
             (0, r.jsx)(S, { channel: t }),
             (0, r.jsx)(_.ZP.Icon, {
                 icon: l.Dio,

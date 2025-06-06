@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(475595),
     E = n(566078),
     O = n(602667),
-    I = n(65443),
-    y = n(611855),
+    y = n(65443),
+    I = n(611855),
     v = n(670638),
     C = n(667105),
     S = n(860151),
@@ -162,7 +162,7 @@ function w(e) {
                   (0, r.jsxs)('div', {
                       className: A.utils,
                       children: [
-                          z ? (0, r.jsx)(Z, { quest: E }) : (0, r.jsx)(y.Z, {}),
+                          z ? (0, r.jsx)(Z, { quest: E }) : (0, r.jsx)(I.Z, {}),
                           (0, r.jsx)(v.r, {
                               quest: E,
                               questContent: f.jn.ACTIVITY_PANEL,
@@ -213,7 +213,7 @@ function w(e) {
                                           children: X
                                       }),
                                       Q &&
-                                          (0, r.jsx)(I.Z, {
+                                          (0, r.jsx)(y.Z, {
                                               quest: E,
                                               textColor: 'text-muted',
                                               withRewardName: !0

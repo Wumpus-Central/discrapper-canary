@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(284056),
     E = n(730749),
     O = n(911969),
-    I = n(40851),
-    y = n(317381),
+    y = n(40851),
+    I = n(317381),
     v = n(596040),
     C = n(588580),
     S = n(374065),
@@ -71,8 +71,8 @@ var r = n(255367),
     e_ = n(131951),
     eE = n(496675),
     eO = n(19780),
-    eI = n(699516),
-    ey = n(594174),
+    ey = n(699516),
+    eI = n(594174),
     ev = n(979651),
     eC = n(938475),
     eS = n(626135),
@@ -244,13 +244,13 @@ function eY(e) {
         c = (0, k.Q3)('ConnectedVideoButton'),
         d = (0, ei.Z)(),
         h = (0, ea.Z)(t),
-        m = (0, u.e7)([y.ZP], () => null != y.ZP.getSelfEmbeddedActivityForLocation(y.ZP.getConnectedActivityLocation())),
+        m = (0, u.e7)([I.ZP], () => null != I.ZP.getSelfEmbeddedActivityForLocation(I.ZP.getConnectedActivityLocation())),
         b = (0, K.Z)(t),
         { reachedLimit: _, limit: E } = (0, el.Z)(t),
         O = i.useCallback(() => {
             (0, es.Z)();
         }, []),
-        v = (0, I.bp)(),
+        v = (0, y.bp)(),
         C = i.useCallback(
             (e) => {
                 if (e_.Z.isVideoEnabled() === e) return;
@@ -358,12 +358,12 @@ function eY(e) {
 function eK(e) {
     let { channel: t, enableActivities: n } = e,
         i = (0, k.Q3)('ConnectedActivityButton'),
-        l = (0, I.bp)(),
+        l = (0, y.bp)(),
         { analyticsLocations: o, parentAnalyticsLocation: s } = (0, A.ZP)(),
         c = l === ew.IlC.POPOUT,
         d = (0, S.KF)(t.id),
         p = (0, S.g5)(d),
-        { userInActivity: h } = (0, u.cj)([y.ZP], () => ({ userInActivity: null != y.ZP.getSelfEmbeddedActivityForChannel(t.id) })),
+        { userInActivity: h } = (0, u.cj)([I.ZP], () => ({ userInActivity: null != I.ZP.getSelfEmbeddedActivityForChannel(t.id) })),
         g = (0, C.a)({ surface: O.eR.VOICE_LAUNCHER }),
         m = d !== S.jy.CAN_LAUNCH,
         { Component: b, events: _, play: E } = (0, x.Z)('RTCConnection');
@@ -434,18 +434,18 @@ function eq(e) {
         c = i.useRef(null),
         { parentAnalyticsLocation: p } = (0, A.ZP)(),
         h = (0, k.Q3)('ConnectedStreamButton'),
-        g = (0, u.e7)([ey.default], () => ey.default.getCurrentUser()),
+        g = (0, u.e7)([eI.default], () => eI.default.getCurrentUser()),
         m = (0, u.Wu)([eh.Z], () => eh.Z.getAllActiveStreams()),
         b = (0, ea.Z)(n),
         _ = n.getGuildId(),
-        E = (0, u.cj)([y.ZP], () => null != y.ZP.getSelfEmbeddedActivityForChannel(n.id)),
+        E = (0, u.cj)([I.ZP], () => null != I.ZP.getSelfEmbeddedActivityForChannel(n.id)),
         O = (0, K.Z)(n),
-        I = i.useCallback(() => {
+        y = i.useCallback(() => {
             (0, eu.Z)(_, n.id, ew.jXE.ACTIVITY_PANEL);
         }, [_, n.id]),
         v = m.find((e) => e.ownerId === (null == g ? void 0 : g.id)),
         C = (0, eo.E)(n, g, m);
-    t = null == v ? (l ? I : ec.Z) : () => (0, V.Z)(v);
+    t = null == v ? (l ? y : ec.Z) : () => (0, V.Z)(v);
     let S = null != v || C.length > 0,
         N = b ? eD.intl.string(eD.t.fjBNo6) : eD.intl.string(eD.t.uQn9Bw),
         T = E || o || O,
@@ -466,7 +466,7 @@ function eq(e) {
                 currentUser: g,
                 activeStreams: m,
                 onClose: t,
-                handleGoLive: l ? I : ec.Z,
+                handleGoLive: l ? y : ec.Z,
                 onInteraction: (0, L.u)('ManageStreamsMenu', p, { entrypoint: eL.A5.OTHER_BUTTON })
             });
         },
@@ -528,7 +528,7 @@ class eX extends i.PureComponent {
         let e,
             { channel: t, guild: n, rtcConnectionQuality: i, rtcConnectionState: l, rtcConnectionLastPing: a, hasVideo: o } = this.props;
         if (null == t) return null;
-        let s = (0, R.F6)(t, ey.default, eI.Z);
+        let s = (0, R.F6)(t, eI.default, ey.Z);
         return (
             null != n ? ((e = ew.Z5c.CHANNEL(n.id, t.id)), (s = ''.concat(s, ' / ').concat(n.name))) : (e = ew.Z5c.CHANNEL(ew.ME, t.id)),
             (0, r.jsx)(Y.Z, {
@@ -775,7 +775,7 @@ let eJ = (0, E.Z)(function (e) {
         { isActivityButtonHidden: n, isSoundboardButtonHidden: l } = (0, eP.S)({ location: 'RTCConnection' }),
         a = (0, U.Z)(),
         o = (0, u.e7)([M.Z], () => M.Z.getAwaitingRemoteSessionInfo()),
-        s = (0, u.e7)([ey.default], () => ey.default.getCurrentUser()),
+        s = (0, u.e7)([eI.default], () => eI.default.getCurrentUser()),
         c = (0, u.cj)([eO.Z], () =>
             null != a
                 ? {
@@ -805,9 +805,9 @@ let eJ = (0, E.Z)(function (e) {
         _ = (0, u.e7)([e_.Z, F.Z], () => F.Z.hasHotspot(eR.v.VOICE_PANEL_INTRODUCTION) && (0, eT.EO)(s) && !e_.Z.isInteractionRequired() && !(null == h ? void 0 : h.isGuildStageVoice())),
         E = (0, u.e7)([ev.Z], () => null != d && ev.Z.hasVideo(d), [d]),
         O = (0, u.e7)([eh.Z], () => eh.Z.getCurrentUserActiveStream()),
-        I = (0, u.e7)([eb.Z], () => eb.Z.hasLayers()),
-        y = (0, u.e7)([z.Z], () => z.Z.isViewingRoles(g)),
-        C = (0, u.e7)([eE.Z], () => y && !eE.Z.can(ew.Plq.VIEW_CHANNEL, h), [y, h]),
+        y = (0, u.e7)([eb.Z], () => eb.Z.hasLayers()),
+        I = (0, u.e7)([z.Z], () => z.Z.isViewingRoles(g)),
+        C = (0, u.e7)([eE.Z], () => I && !eE.Z.can(ew.Plq.VIEW_CHANNEL, h), [I, h]),
         S = er.Fg.useSetting(),
         [T, P, x] = (0, u.Wu)([eC.ZP, X.Z], () => ((null == h ? void 0 : h.isGuildStageVoice()) ? [X.Z.getMutableParticipants(h.id, Q.pV.SPEAKER), X.Z.getParticipantsVersion(h.id), null] : [null, null, null != h ? eC.ZP.getVoiceStatesForChannel(h) : null]), [h]),
         Z = i.useMemo(() => {
@@ -833,8 +833,8 @@ let eJ = (0, E.Z)(function (e) {
         }, [T, P, x]),
         [w, L] = i.useState(!1);
     i.useEffect(() => {
-        (y || C) && L(!1);
-    }, [y, C, L]);
+        (I || C) && L(!1);
+    }, [I, C, L]);
     let { analyticsLocations: R } = (0, A.ZP)(j.Z.RTC_PANEL),
         D = (0, v.Z)(null != g ? g : ew.lds, null == h ? void 0 : h.id),
         V = (0, N.Z)(null == h ? void 0 : h.id);
@@ -858,7 +858,7 @@ let eJ = (0, E.Z)(function (e) {
                         channel: h,
                         hasVideo: E,
                         selfStream: O,
-                        hasLayers: I,
+                        hasLayers: y,
                         voiceStates: Z,
                         showVoiceStates: S,
                         shouldShowVoicePanelIntroduction: _,
@@ -869,7 +869,7 @@ let eJ = (0, E.Z)(function (e) {
                         isActivityButtonHidden: n
                     })
                 ),
-                !w && y && null != g
+                !w && I && null != g
                     ? (0, r.jsxs)('div', {
                           className: ek.viewAsRolesWarning,
                           children: [

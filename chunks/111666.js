@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(482798),
     E = n(167762),
     O = n(151459),
-    I = n(981631),
-    y = n(388032),
+    y = n(981631),
+    I = n(388032),
     v = n(398435);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -102,11 +102,11 @@ function N(e) {
                                     null != i &&
                                     (function (e) {
                                         let t = e.type;
-                                        return (t === I.IIU.PLAYING && null != e.application_id) || t === I.IIU.LISTENING || t === I.IIU.WATCHING;
+                                        return (t === y.IIU.PLAYING && null != e.application_id) || t === y.IIU.LISTENING || t === y.IIU.WATCHING;
                                     })(n)
                                 ) {
                                     let l =
-                                        i === I.IIU.WATCHING || i === I.IIU.LISTENING
+                                        i === y.IIU.WATCHING || i === y.IIU.LISTENING
                                             ? ''
                                                   .concat(i, '-')
                                                   .concat(null != (c = n.name) ? c : '', '-')
@@ -251,8 +251,8 @@ function N(e) {
                             onClick: e,
                             icon: o.iFz,
                             iconSize: _ ? N : void 0,
-                            'aria-label': y.intl.string(y.t.TdEu5e),
-                            tooltip: i ? null : y.intl.string(y.t.TdEu5e),
+                            'aria-label': I.intl.string(I.t.TdEu5e),
+                            tooltip: i ? null : I.intl.string(I.t.TdEu5e),
                             selected: i,
                             showBadge: n
                         })

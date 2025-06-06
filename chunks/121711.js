@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(17845),
     E = n(374939),
     O = n(233374),
-    I = n(611928),
-    y = n(763433),
+    y = n(611928),
+    I = n(763433),
     v = n(283293),
     C = n(507808),
     S = n(822857),
@@ -116,7 +116,7 @@ let z = function () {
                           onScroll: l,
                           ref: q,
                           children: [
-                              (0, r.jsx)(y.a, {
+                              (0, r.jsx)(I.a, {
                                   selectedTabId: e,
                                   handleTransition: t,
                                   tabs: n,
@@ -180,9 +180,9 @@ let z = function () {
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsxs)(I.ZP, {
-                              variant: I._6.OVERLAY,
-                              children: [(0, r.jsx)('div', { className: B.dragRegion }), (0, r.jsx)(I.z6, { scrollPosition: s }), (0, r.jsx)(I.aV, { icon: c.qDn })]
+                          (0, r.jsxs)(y.ZP, {
+                              variant: y._6.OVERLAY,
+                              children: [(0, r.jsx)('div', { className: B.dragRegion }), (0, r.jsx)(y.z6, { scrollPosition: s }), (0, r.jsx)(y.aV, { icon: c.qDn })]
                           }),
                           (0, r.jsx)(R.t.Provider, {
                               value: q,

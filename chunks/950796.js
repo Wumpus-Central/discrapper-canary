@@ -51,10 +51,8 @@ function b(e) {
 function y(e) {
     let { leading: t, title: n, trailing: a, windowKey: s, short: l, className: c } = e,
         u = (0, d.getPlatform)(),
-        f = i.useCallback(() => g(s), [s]),
-        _ = u === d.PlatformTypes.WINDOWS;
+        f = i.useCallback(() => g(s), [s]);
     return (0, r.jsxs)('div', {
-        'data-windows': _,
         className: o()(p.bar, c, { [p.shortBar]: l }),
         onDoubleClick: f,
         children: [
@@ -90,7 +88,6 @@ function O(e) {
     return s === d.PlatformTypes.WEB
         ? null
         : (0, r.jsx)('div', {
-              'data-windows': c,
               className: o()(p.bar, p.systemBar, {
                   [p.fixed]: t,
                   [p.show]: n

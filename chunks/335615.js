@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(144144),
     _ = n(276264),
     y = n(607070),
-    C = n(100527),
-    x = n(367907),
+    x = n(100527),
+    C = n(367907),
     v = n(906732),
     j = n(493324),
     O = n(611064),
@@ -127,7 +127,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
         }
     },
     er = i.memo(function (e) {
-        let { colorString: t, colorStrings: l, colorRoleName: a, colorRoleId: o, isOwner: s, nick: c, user: u, currentUser: p, activities: h, applicationStream: f, status: g, channel: y, guildId: C, isTyping: x, isMobileOnline: v, premiumSince: j, nameplate: O } = e,
+        let { colorString: t, colorStrings: l, colorRoleName: a, colorRoleId: o, isOwner: s, nick: c, user: u, currentUser: p, activities: h, applicationStream: f, status: g, channel: y, guildId: x, isTyping: C, isMobileOnline: v, premiumSince: j, nameplate: O } = e,
             E = ee(e, ['colorString', 'colorStrings', 'colorRoleName', 'colorRoleId', 'isOwner', 'nick', 'user', 'currentUser', 'activities', 'applicationStream', 'status', 'channel', 'guildId', 'isTyping', 'isMobileOnline', 'premiumSince', 'nameplate']),
             I = i.useRef(null),
             [P, S] = i.useState(!1),
@@ -142,14 +142,14 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                                 e,
                                 $(J({}, n), {
                                     user: u,
-                                    guildId: C,
+                                    guildId: x,
                                     channel: y,
                                     showMediaItems: t
                                 })
                             );
                     });
                 },
-                [u, C, y]
+                [u, x, y]
             ),
             A = i.useCallback(() => {
                 let e = '@'.concat(W.ZP.getUserTag(u, { decoration: 'never' })),
@@ -163,22 +163,22 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
             }, [u, y.id]),
             w = i.useCallback(
                 (e) => {
-                    null != C &&
+                    null != x &&
                         (e.stopPropagation(),
                         (0, T.f)({
-                            guildId: C,
+                            guildId: x,
                             location: {
                                 section: q.jXE.MEMBER_LIST,
                                 object: q.qAy.BOOST_GEM_ICON
                             }
                         }));
                 },
-                [C]
+                [x]
             );
         return (0, r.jsx)(k.Z, {
             targetElementRef: I,
             user: u,
-            guildId: C,
+            guildId: x,
             channelId: y.id,
             roleId: o,
             position: d.tq ? 'window_center' : 'left',
@@ -210,9 +210,9 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                             colorString: t,
                             colorStrings: l,
                             colorRoleName: a,
-                            isTyping: x,
+                            isTyping: C,
                             channel: y,
-                            guildId: C,
+                            guildId: x,
                             isMobile: v,
                             onClickPremiumGuildIcon: w,
                             selected: P,
@@ -560,13 +560,13 @@ class eo extends i.Component {
                         num_users_visible_with_nameplate: 0
                     }
                 );
-                (this.lastReportedAnalyticsChannel = this.props.channel.id), x.ZP.trackWithMetadata(q.rMx.MEMBER_LIST_VIEWED, J({}, i));
+                (this.lastReportedAnalyticsChannel = this.props.channel.id), C.ZP.trackWithMetadata(q.rMx.MEMBER_LIST_VIEWED, J({}, i));
             });
     }
 }
 function es(e) {
     let { channel: t, className: n } = e,
-        { analyticsLocations: l } = (0, v.ZP)(C.Z.MEMBER_LIST),
+        { analyticsLocations: l } = (0, v.ZP)(x.Z.MEMBER_LIST),
         o = (0, h.e7)([y.Z], () => y.Z.keyboardModeEnabled),
         s = (0, h.cj)([D.ZP], () => D.ZP.getProps(t.guild_id, t.id)),
         {
@@ -581,7 +581,7 @@ function es(e) {
         }),
         b = i.useRef(null),
         _ = (0, f.UBm)('lg') + (0, f.UBm)('xxs'),
-        x = i.useCallback(
+        C = i.useCallback(
             (e, t) => {
                 let n = b.current;
                 if (null == n) return;
@@ -625,7 +625,7 @@ function es(e) {
         ),
         E = (0, u.ZP)({
             id: 'members-'.concat(t.id),
-            setFocus: x,
+            setFocus: C,
             isEnabled: o,
             scrollToStart: j,
             scrollToEnd: O

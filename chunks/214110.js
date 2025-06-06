@@ -16,13 +16,13 @@ function g(e) {
     let { channel: t, user: n, guild: g } = e,
         b = (0, i.e7)([p.default, u.Z, d.Z], () => null != n && null != g && (0, o.F)(g.id, n.id, [p.default, u.Z, d.Z])),
         [_, y] = (0, s.ZP)(null == n ? void 0 : n.id, t.guild_id),
-        C = (0, i.e7)([c.ZP], () => null != g && null != n && null != c.ZP.getMember(g.id, n.id));
+        x = (0, i.e7)([c.ZP], () => null != g && null != n && null != c.ZP.getMember(g.id, n.id));
     if (!b) return null;
-    let x = 'timeout-user-'.concat(null == n ? void 0 : n.id);
+    let C = 'timeout-user-'.concat(null == n ? void 0 : n.id);
     return (0, r.jsx)(
         h.Z,
         {
-            text: C ? null : y ? m.intl.string(f.default['6uMZbm']) : m.intl.string(f.default['Sgg/uL']),
+            text: x ? null : y ? m.intl.string(f.default['6uMZbm']) : m.intl.string(f.default['Sgg/uL']),
             icon: l.T39,
             onClick: () => {
                 null != n &&
@@ -32,8 +32,8 @@ function g(e) {
                         modReportId: t.id
                     });
             },
-            disabled: y || !C
+            disabled: y || !x
         },
-        x
+        C
     );
 }
