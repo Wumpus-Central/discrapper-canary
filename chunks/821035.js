@@ -84,22 +84,23 @@ function x(e) {
                                   })
                               ]
                           }),
-                          x &&
-                              (0, i.jsxs)('div', {
-                                  className: _.selectItemRow,
-                                  children: [
-                                      (0, i.jsx)(s.Text, {
-                                          variant: 'text-md/medium',
-                                          children: b.intl.string(b.t['FP+a4+'])
-                                      }),
-                                      (0, i.jsx)(s.q4e, {
-                                          look: s.qQH.CUSTOM,
-                                          options: v,
-                                          value: E,
-                                          onChange: (e) => O({ explicitContentGuilds: e })
-                                      })
-                                  ]
-                              }),
+                          (0, i.jsxs)('div', {
+                              className: _.selectItemRow,
+                              children: [
+                                  (0, i.jsx)(s.Text, {
+                                      variant: 'text-md/medium',
+                                      color: x ? 'text-primary' : 'text-muted',
+                                      children: b.intl.string(b.t['FP+a4+'])
+                                  }),
+                                  (0, i.jsx)(s.q4e, {
+                                      look: s.qQH.CUSTOM,
+                                      options: v,
+                                      value: E,
+                                      onChange: (e) => O({ explicitContentGuilds: e }),
+                                      isDisabled: !x
+                                  })
+                              ]
+                          }),
                           (0, i.jsx)(s.Text, {
                               variant: 'text-sm/normal',
                               color: 'text-muted',
@@ -133,17 +134,17 @@ function x(e) {
                                   onChange: (e) => O({ explicitContentNonFriendDm: e })
                               })
                           }),
-                          x &&
-                              (0, i.jsx)(s.xJW, {
-                                  tag: s.RB0.H3,
-                                  title: b.intl.string(b.t['FP+a4+']),
-                                  titleClassName: _.selectItemTitle,
-                                  children: (0, i.jsx)(s.q4e, {
-                                      options: v,
-                                      value: E,
-                                      onChange: (e) => O({ explicitContentGuilds: e })
-                                  })
+                          (0, i.jsx)(s.xJW, {
+                              tag: s.RB0.H3,
+                              title: b.intl.string(b.t['FP+a4+']),
+                              titleClassName: _.selectItemTitle,
+                              children: (0, i.jsx)(s.q4e, {
+                                  options: v,
+                                  value: E,
+                                  onChange: (e) => O({ explicitContentGuilds: e }),
+                                  isDisabled: !x
                               })
+                          })
                       ]
                   })
         })

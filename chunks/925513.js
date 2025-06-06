@@ -57,7 +57,7 @@ let l = (e) => {
     },
     u = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
-        return t && n ? r.Q4.BLUR : r.Q4.BLOCK;
+        return t && n ? r.Q4.BLUR : t ? r.Q4.BLOCK : r.Q4.BLUR;
     },
     d = () => {
         let e = i.j7.getSetting();

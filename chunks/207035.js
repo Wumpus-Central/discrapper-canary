@@ -1,5 +1,5 @@
-t.d(n, { P: () => o });
-let i = (0, t(818083).B)({
+t.d(e, { P: () => i });
+let l = (0, t(818083).B)({
     kind: 'user',
     id: '2023-08-30_open-in-popout',
     label: 'Open Channel in Popout',
@@ -12,6 +12,6 @@ let i = (0, t(818083).B)({
         }
     ]
 });
-function o(e) {
-    return i.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled;
+function i(n) {
+    return l.useExperiment({ location: n }, { autoTrackExposure: !1 }).enabled;
 }

@@ -77,22 +77,22 @@ function f() {
                         })
                     ]
                 }),
-                t &&
-                    (0, i.jsxs)('div', {
-                        className: h.selectItemRow,
-                        children: [
-                            (0, i.jsx)(s.Text, {
-                                variant: 'text-md/medium',
-                                children: p.intl.string(p.t['FP+a4+'])
-                            }),
-                            (0, i.jsx)(s.q4e, {
-                                look: s.qQH.CUSTOM,
-                                options: E,
-                                value: n,
-                                onChange: (e) => _({ goreContentGuilds: e })
-                            })
-                        ]
-                    }),
+                (0, i.jsxs)('div', {
+                    className: h.selectItemRow,
+                    children: [
+                        (0, i.jsx)(s.Text, {
+                            variant: 'text-md/medium',
+                            children: p.intl.string(p.t['FP+a4+'])
+                        }),
+                        (0, i.jsx)(s.q4e, {
+                            look: s.qQH.CUSTOM,
+                            options: E,
+                            value: n,
+                            onChange: (e) => _({ goreContentGuilds: e }),
+                            isDisabled: !t
+                        })
+                    ]
+                }),
                 (0, i.jsx)(s.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-muted',

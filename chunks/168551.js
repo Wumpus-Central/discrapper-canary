@@ -84,7 +84,7 @@ let m = 'data-client-themes',
                     m = 100 - i;
                 return '.'
                     .concat(g, ' {\n      --custom-theme-background: ')
-                    .concat(d, ';\n      --theme-bg-overlay-opacity-mix-amount: ')
+                    .concat(d, ';\n      --custom-bg-overlay-opacity-chat-base-light: 0.95;\n      --custom-bg-overlay-opacity-floating-base-light: 1.0;\n      --theme-bg-overlay-opacity-mix-amount: ')
                     .concat(((30 + 0.7 * m) / 100).toFixed(2), ';\n      ')
                     .concat(p.LN, ': ')
                     .concat(f ? (25 + 0.35 * m).toFixed(1) : (30 - 0.2 * i).toFixed(1), '%;\n      ')

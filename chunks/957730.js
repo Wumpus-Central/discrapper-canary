@@ -276,14 +276,21 @@ let U = u.Z.RULES,
         mention: {
             match: o().anyScopeRegex(B),
             parse(e, t, n) {
-                let { isNotification: r } = n,
-                    i = I.default.getUser(e[1]);
-                if (null == i) return { content: e[0] };
-                let a = A.ZP.getUserTag(i, { identifiable: r && v.Z.enabled ? 'never' : 'always' });
-                if (!r) return { content: '@'.concat(a) };
+                let { isNotification: r, guild: i } = n,
+                    a = I.default.getUser(e[1]);
+                if (null == a) return { content: e[0] };
+                let o = A.ZP.getUserTag(a, { identifiable: r && v.Z.enabled ? 'never' : 'always' });
+                if (r) {
+                    let e = A.ZP.getGlobalName(a);
+                    return { content: null != e ? '@'.concat(e) : '@'.concat(o) };
+                }
                 {
-                    let e = A.ZP.getGlobalName(i);
-                    return { content: null != e ? '@'.concat(e) : '@'.concat(a) };
+                    let e = '';
+                    if ((null == i ? void 0 : i.id) != null) {
+                        let t = b.Z.getRoles(i.id);
+                        e = null != t && Object.values(t).some((e) => o.toLowerCase().startsWith(e.name.toLowerCase())) ? '#'.concat(''.concat(a.discriminator).padStart(4, '0')) : '';
+                    }
+                    return { content: '@'.concat(o).concat(e) };
                 }
             }
         },

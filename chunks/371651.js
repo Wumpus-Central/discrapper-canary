@@ -647,6 +647,9 @@ class eN extends (r = i.ZP.Store) {
     getMostRecentOverlayRenderMethod() {
         return j;
     }
+    getOverlayRenderingTrackedGames() {
+        return Object.values(k).filter((e) => e.overlayMethod !== l.gl.Disabled && e.state === l.mM.OVERLAY_RENDERING);
+    }
 }
 I(eN, 'displayName', 'OverlayRenderStore');
 let eC = new eN(o.Z, {

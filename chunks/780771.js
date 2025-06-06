@@ -51,6 +51,16 @@ let i = {
             darkBackground: '#047B20',
             lightBackground: '#63CD5A',
             name: r.P.Clover
+        },
+        [r.P.Lemon]: {
+            darkBackground: '#F6CD12',
+            lightBackground: '#FED400',
+            name: r.P.Lemon
+        },
+        [r.P.White]: {
+            darkBackground: '#FFFFFF',
+            lightBackground: '#FFFFFF',
+            name: r.P.White
         }
     },
     a = 'invalid_palette',

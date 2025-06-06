@@ -1,8 +1,8 @@
-n.d(t, { A: () => l });
+n.d(t, { A: () => s });
 var i = n(913527),
     r = n.n(i),
     o = n(388032);
-function l(e) {
+function s(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.intl.string(o.t['Yl1D8/']),
         i = r().duration(e, 'seconds');

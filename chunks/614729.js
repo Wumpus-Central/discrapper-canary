@@ -11,8 +11,8 @@ e.exports = {
     heading: 'heading_ca1a02',
     column: 'column_ca1a02',
     bottomOfPageVisibilitySensor: 'bottomOfPageVisibilitySensor_ca1a02',
-    allPerksScroller: 'allPerksScroller_ca1a02',
     mainPageScroller: 'mainPageScroller_ca1a02',
+    allPerksScroller: 'allPerksScroller_ca1a02',
     open: 'open_ca1a02',
     openCloseReduceMotion: 'openCloseReduceMotion_ca1a02',
     cardCarousel: 'cardCarousel_ca1a02'
