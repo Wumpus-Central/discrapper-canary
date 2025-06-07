@@ -18963,6 +18963,8 @@ span.clanTag__5d473 {
     background: var(--background-base-lower);
     border-radius: var(--radius-lg);
     height: 800px;
+    max-width: 100%;
+    min-width: 800px;
     width: 960px
 }
 
