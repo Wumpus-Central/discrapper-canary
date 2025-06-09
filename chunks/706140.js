@@ -1,40 +1,42 @@
 n.d(t, {
-    EM: () => h,
-    Tt: () => m,
-    cv: () => p,
-    sx: () => g
+    EM: () => m,
+    Tt: () => g,
+    cv: () => h,
+    sx: () => E
 });
 var r = n(73800),
     i = n(442837),
-    a = n(581883),
-    o = n(914010);
+    a = n(128363),
+    o = n(581883),
+    s = n(914010);
 n(709054);
-var s = n(915486),
-    l = n(68985),
-    c = n(211644),
-    u = n(605236),
-    d = n(57207),
-    f = n(526761);
-function _(e, t, n, a, o) {
-    let s = (0, c.ZP)((t) => null != e && t.currentlyShown.has(e)),
-        d = (0, i.e7)([l.Z], () => null != e && l.Z.hasUserHitDCCap(e));
+var l = n(915486),
+    c = n(68985),
+    u = n(211644),
+    d = n(605236),
+    f = n(57207),
+    _ = n(526761);
+function p(e, t, n, o) {
+    let s = (0, u.ZP)((t) => null != e && t.currentlyShown.has(e)),
+        l = (0, a.xG)(),
+        f = (0, i.e7)([c.Z], () => null != e && c.Z.hasUserHitDCCap(e));
     return (
         r.useEffect(() => {
             if (null != e)
                 return (
-                    (0, u.kk)(
+                    (0, d.kk)(
                         e,
                         {
                             groupName: n,
                             guildId: t,
                             version: o
                         },
-                        a
+                        l
                     ),
                     () => {
                         if (null == e) return;
-                        let t = !l.Z.hasUserHitDCCap();
-                        (0, c.gE)(
+                        let t = !c.Z.hasUserHitDCCap();
+                        (0, u.gE)(
                             {
                                 content: e,
                                 groupName: n
@@ -43,114 +45,114 @@ function _(e, t, n, a, o) {
                         );
                     }
                 );
-        }, [e, n, t, d, a, o]),
+        }, [e, n, t, f, l, o]),
         s && null != e ? e : null
     );
 }
-function p(e, t, n) {
-    let l = (0, i.e7)([a.Z], () => {
+function h(e, t) {
+    let n = (0, i.e7)([o.Z], () => {
             var e;
-            return null == (e = a.Z.settings.userContent) ? void 0 : e.dismissedContents;
+            return null == (e = o.Z.settings.userContent) ? void 0 : e.dismissedContents;
         }),
-        c = (0, i.e7)([o.Z], () => o.Z.getGuildId()),
-        p = (0, d.i)(e),
-        h = null;
+        a = (0, i.e7)([s.Z], () => s.Z.getGuildId()),
+        c = (0, f.i)(e),
+        u = null;
     return (
-        a.Z.hasLoaded(f.yP.PRELOADED_USER_SETTINGS) ? (h = p.find((e) => null == l || !(0, s.jl)(l, e))) : null != l && (h = p.find((e) => !(0, s.jl)(l, e))),
+        o.Z.hasLoaded(_.yP.PRELOADED_USER_SETTINGS) ? (u = c.find((e) => null == n || !(0, l.jl)(n, e))) : null != n && (u = c.find((e) => !(0, l.jl)(n, e))),
         [
-            _(h, c, t, n),
+            p(u, a, t),
             r.useCallback(
                 (e, n) => {
-                    null != h &&
-                        (0, u.EW)(h, {
+                    null != u &&
+                        (0, d.EW)(u, {
                             dismissAction: e,
                             groupName: t,
-                            guildId: c,
+                            guildId: a,
                             forceTrack: n
                         });
                 },
-                [h, t, c]
+                [u, t, a]
             )
         ]
     );
 }
-function h(e, t, n, s) {
-    let l = (0, i.e7)([a.Z], () => {
+function m(e, t, n) {
+    let a = (0, i.e7)([o.Z], () => {
             var t, n, r;
-            return null !== e ? (null == (r = a.Z.settings.userContent) || null == (n = r.recurringDismissibleContentStates) || null == (t = n[e]) ? void 0 : t.lastDismissedVersion) : void 0;
+            return null !== e ? (null == (r = o.Z.settings.userContent) || null == (n = r.recurringDismissibleContentStates) || null == (t = n[e]) ? void 0 : t.lastDismissedVersion) : void 0;
         }),
-        c = (0, i.e7)([o.Z], () => o.Z.getGuildId()),
-        p = null;
+        l = (0, i.e7)([s.Z], () => s.Z.getGuildId()),
+        c = null;
     if (null != e) {
-        let n = !(0, d.B)(e);
-        a.Z.hasLoaded(f.yP.PRELOADED_USER_SETTINGS) ? (p = n && (null == l || l < t) ? e : null) : null != l && (p = n && l < t ? e : null);
+        let n = !(0, f.B)(e);
+        o.Z.hasLoaded(_.yP.PRELOADED_USER_SETTINGS) ? (c = n && (null == a || a < t) ? e : null) : null != a && (c = n && a < t ? e : null);
     }
     return [
-        _(p, c, n, s, t),
+        p(c, l, n, t),
         r.useCallback(
             (e, r) => {
-                null != p &&
-                    (0, u.wH)(p, t, {
+                null != c &&
+                    (0, d.wH)(c, t, {
                         dismissAction: e,
                         groupName: n,
-                        guildId: c,
+                        guildId: l,
                         forceTrack: r,
                         version: t
                     });
             },
-            [p, n, c, t]
+            [c, n, l, t]
         )
     ];
 }
-function m(e, t, n, s) {
-    let l = (0, i.e7)([a.Z], () => {
+function g(e, t, n) {
+    let a = (0, i.e7)([o.Z], () => {
             var t, n, r;
-            return null !== e ? (null == (r = a.Z.settings.userContent) || null == (n = r.recurringDismissibleContentStates) || null == (t = n[e]) ? void 0 : t.lastDismissedAtMs) : void 0;
+            return null !== e ? (null == (r = o.Z.settings.userContent) || null == (n = r.recurringDismissibleContentStates) || null == (t = n[e]) ? void 0 : t.lastDismissedAtMs) : void 0;
         }),
-        c = null != l ? (Number.isNaN(Number(l)) ? void 0 : Number(l)) : void 0,
-        p = (0, i.e7)([o.Z], () => o.Z.getGuildId()),
-        h = null;
+        l = null != a ? (Number.isNaN(Number(a)) ? void 0 : Number(a)) : void 0,
+        c = (0, i.e7)([s.Z], () => s.Z.getGuildId()),
+        u = null;
     if (null != e) {
-        let n = !(0, d.B)(e),
-            r = void 0 === c ? 0 : c + t.cooldownDurationMs,
+        let n = !(0, f.B)(e),
+            r = void 0 === l ? 0 : l + t.cooldownDurationMs,
             i = Date.now(),
-            o = null == t.showAfterTimestamp || (i >= t.showAfterTimestamp && (null != c ? c : 0) <= t.showAfterTimestamp);
-        a.Z.hasLoaded(f.yP.PRELOADED_USER_SETTINGS) ? (h = n && o && (null == c || i >= r) ? e : null) : null != c && (h = n && o && i >= r ? e : null);
+            a = null == t.showAfterTimestamp || (i >= t.showAfterTimestamp && (null != l ? l : 0) <= t.showAfterTimestamp);
+        o.Z.hasLoaded(_.yP.PRELOADED_USER_SETTINGS) ? (u = n && a && (null == l || i >= r) ? e : null) : null != l && (u = n && a && i >= r ? e : null);
     }
     return [
-        _(h, p, n, s),
+        p(u, c, n),
         r.useCallback(
             (e, t) => {
-                null != h &&
-                    (0, u.Ow)(h, {
+                null != u &&
+                    (0, d.Ow)(u, {
                         dismissAction: e,
                         groupName: n,
-                        guildId: p,
+                        guildId: c,
                         forceTrack: t
                     });
             },
-            [h, n, p]
+            [u, n, c]
         )
     ];
 }
-function g(e, t, n, a, s) {
-    let l = (0, i.e7)([o.Z], () => o.Z.getGuildId()),
-        c = null;
+function E(e, t, n, a) {
+    let o = (0, i.e7)([s.Z], () => s.Z.getGuildId()),
+        l = null;
     return (
-        null == e || (0, u.UJ)(e, n, t) || (c = e),
+        null == e || (0, d.UJ)(e, n, t) || (l = e),
         [
-            _(c, l, a, s),
+            p(l, o, a),
             r.useCallback(
                 (e, t) => {
-                    null != c &&
-                        (0, u.JO)(c, n, {
+                    null != l &&
+                        (0, d.JO)(l, n, {
                             dismissAction: e,
                             groupName: a,
-                            guildId: l,
+                            guildId: o,
                             forceTrack: t
                         });
                 },
-                [c, a, l, n]
+                [l, a, o, n]
             )
         ]
     );

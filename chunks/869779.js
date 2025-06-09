@@ -13,8 +13,8 @@ var i = n(255367),
     m = n(471445),
     p = n(351123),
     f = n(685929),
-    x = n(665906),
-    j = n(210887),
+    j = n(665906),
+    x = n(210887),
     b = n(131704),
     v = n(533947),
     y = n(277053),
@@ -23,8 +23,8 @@ var i = n(255367),
     S = n(496675),
     E = n(699516),
     O = n(594174),
-    w = n(585483),
-    Z = n(787263),
+    Z = n(585483),
+    w = n(787263),
     T = n(975316),
     R = n(428813),
     I = n(2147),
@@ -55,7 +55,7 @@ class M extends l.PureComponent {
         (s || r || a || o) && (i !== P.QZA.CLOSED || i === t) && (r || l !== P.CoT.PERMISSIONS) && (a || o || l !== P.CoT.INTEGRATIONS) ? l !== n && D(l, n) : (0, c.xf)();
     }
     render() {
-        let { theme: e, sidebarTheme: t, section: n, channel: l, category: r, canManageRoles: a, canManageChannels: h, canDeleteChannels: f, canManageWebhooks: x, canUnlinkChannel: j } = this.props;
+        let { theme: e, sidebarTheme: t, section: n, channel: l, category: r, canManageRoles: a, canManageChannels: h, canDeleteChannels: f, canManageWebhooks: j, canUnlinkChannel: x } = this.props;
         return null == l
             ? null
             : (0, i.jsx)(d.ZP, {
@@ -67,9 +67,9 @@ class M extends l.PureComponent {
                   sections: (function (e) {
                       let { channel: t, category: n, canManageRoles: l, canManageChannels: r, canDeleteChannels: a, canManageWebhooks: d, canUnlinkChannel: h } = e,
                           f = (0, m.KS)(t),
-                          { GUILD_CATEGORY: x } = P.d4z,
-                          j = b.Ec.has(t.type),
-                          N = t.type === x ? A.intl.string(A.t.ifbXnJ) : j ? (t.isForumPost() ? A.intl.string(A.t.nEOg1N) : A.intl.string(A.t.H7vTe3)) : A.intl.string(A.t['8D8Rsb']);
+                          { GUILD_CATEGORY: j } = P.d4z,
+                          x = b.Ec.has(t.type),
+                          N = t.type === j ? A.intl.string(A.t.ifbXnJ) : x ? (t.isForumPost() ? A.intl.string(A.t.nEOg1N) : A.intl.string(A.t.H7vTe3)) : A.intl.string(A.t['8D8Rsb']);
                       return [
                           {
                               section: u.ID.HEADER,
@@ -118,14 +118,14 @@ class M extends l.PureComponent {
                                   element: _.n,
                                   stores: [y.Z]
                               },
-                              predicate: () => l && !j
+                              predicate: () => l && !x
                           },
                           {
                               section: P.CoT.INSTANT_INVITES,
                               label: A.intl.string(A.t['9F90iY']),
                               element: R.Z,
                               type: u.bT.CUSTOM,
-                              predicate: () => t.type !== x && r && !j && !t.isModeratorReportChannel()
+                              predicate: () => t.type !== j && r && !x && !t.isModeratorReportChannel()
                           },
                           {
                               section: P.CoT.INTEGRATIONS,
@@ -142,8 +142,8 @@ class M extends l.PureComponent {
                           {
                               section: P.CoT.DELETE,
                               onClick() {
-                                  (0, Z.w)(t, function () {
-                                      w.S.subscribeOnce(P.CkL.LAYER_POP_COMPLETE, () => {
+                                  (0, w.w)(t, function () {
+                                      Z.S.subscribeOnce(P.CkL.LAYER_POP_COMPLETE, () => {
                                           (0, o.zz)(t.id);
                                       }),
                                           (0, c.xf)();
@@ -165,8 +165,8 @@ class M extends l.PureComponent {
                       canManageRoles: a,
                       canManageChannels: h,
                       canDeleteChannels: f,
-                      canManageWebhooks: x,
-                      canUnlinkChannel: j
+                      canManageWebhooks: j,
+                      canUnlinkChannel: x
                   })
               });
     }
@@ -175,10 +175,10 @@ function k() {
     let { channel: e, analyticsLocation: t } = (0, r.cj)([C.Z], () => C.Z.getProps()),
         n = (0, r.e7)([C.Z], () => C.Z.getFormState()),
         l = (0, r.e7)([C.Z], () => C.Z.getSection()),
-        s = (0, r.e7)([j.Z], () => j.Z.theme),
-        a = (0, r.e7)([j.Z], () => (j.Z.darkSidebar ? P.BRd.DARK : void 0)),
-        o = (0, x.C7)(e),
-        c = (0, x.Xb)(e),
+        s = (0, r.e7)([x.Z], () => x.Z.theme),
+        a = (0, r.e7)([x.Z], () => (x.Z.darkSidebar ? P.BRd.DARK : void 0)),
+        o = (0, j.C7)(e),
+        c = (0, j.Xb)(e),
         {
             canManageChannels: d,
             canManageRoles: u,

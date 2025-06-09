@@ -27,29 +27,29 @@ var i = n(255367),
     I = n(367907),
     j = n(812206),
     b = n(429673),
-    f = n(933557),
-    O = n(636816),
+    O = n(933557),
+    f = n(636816),
     v = n(605436),
     S = n(185413),
     A = n(313201),
-    y = n(540059),
-    _ = n(318766),
-    T = n(907040),
-    D = n(906411),
-    L = n(688465),
+    _ = n(540059),
+    y = n(318766),
+    L = n(907040),
+    T = n(906411),
+    D = n(688465),
     P = n(456269),
     U = n(312146),
-    z = n(703656),
-    R = n(146085),
-    G = n(60222),
-    M = n(388131),
+    R = n(703656),
+    z = n(146085),
+    M = n(60222),
+    G = n(388131),
     w = n(131704),
     Z = n(592125),
     k = n(271383),
     B = n(430824),
     F = n(496675),
-    V = n(699516),
-    H = n(594174),
+    H = n(699516),
+    V = n(594174),
     Y = n(934415),
     X = n(823379),
     W = n(63063),
@@ -117,7 +117,7 @@ function el(e) {
                   className: et.newBadge,
                   color: u.Z.BUTTON_OUTLINE_BRAND_BACKGROUND_HOVER
               }))
-            : !0 === n && (s = (0, i.jsx)(L.Z, { className: et.newBadge })),
+            : !0 === n && (s = (0, i.jsx)(D.Z, { className: et.newBadge })),
         s
     );
 }
@@ -136,7 +136,7 @@ function er(e) {
               children: (0, i.jsx)(S.U, {
                   guild: d,
                   channel: null,
-                  permission: c ? R.yP : (0, w.CG)(l),
+                  permission: c ? z.yP : (0, w.CG)(l),
                   pendingAdditions: a,
                   setPendingAdditions: o,
                   isStageChannel: c,
@@ -145,38 +145,50 @@ function er(e) {
           });
 }
 function ea(e) {
-    let { onEmojiPicked: t } = e,
-        n = s.useRef(null),
-        l = s.useCallback(
+    let { onEmojiPicked: t, guildId: n } = e,
+        l = s.useRef(null),
+        r = s.useMemo(
+            () => ({
+                popoutLocation: {
+                    page: q.ZY5.CREATE_CHANNEL_MODAL,
+                    section: q.jXE.CHANNEL_NAME,
+                    object: q.qAy.EMOJI_PICKER_BUTTON
+                }
+            }),
+            []
+        ),
+        a = s.useCallback(
             (e) => {
-                let { closePopout: n } = e;
-                return (0, i.jsx)(T.Z, {
+                let { closePopout: s } = e;
+                return (0, i.jsx)(L.Z, {
                     channel: null,
+                    guildId: n,
                     pickerIntention: J.Hz.CHANNEL_NAME,
-                    closePopout: n,
-                    onNavigateAway: n,
+                    closePopout: s,
+                    onNavigateAway: s,
                     onSelectEmoji: (e) => {
-                        let { emoji: i, willClose: s } = e;
-                        null != i && i.type === D.B.UNICODE && t(i.surrogates), s && n();
+                        let { emoji: n, willClose: i } = e;
+                        null != n && n.type === T.B.UNICODE && t(n.surrogates), i && s();
                     },
-                    showOnlyUnicode: !0
+                    showOnlyUnicode: !0,
+                    analyticsOverride: r
                 });
             },
-            [t]
+            [r, n, t]
         );
     return (0, i.jsx)(m.yRy, {
-        targetElementRef: n,
-        renderPopout: l,
+        targetElementRef: l,
+        renderPopout: a,
         animation: m.yRy.Animation.NONE,
         position: 'bottom',
         align: 'right',
         children: (e, t) => {
-            let { isShown: s } = t;
+            let { isShown: n } = t;
             return (0, i.jsx)(
-                _.Z,
+                y.Z,
                 es(ei({}, e), {
-                    ref: n,
-                    active: s,
+                    ref: l,
+                    active: n,
                     className: et.emojiButton,
                     tabIndex: 0,
                     focusProps: {
@@ -292,7 +304,7 @@ class eo extends s.PureComponent {
                     ? (0, i.jsx)(m.R94, {
                           className: et.channelNameNote,
                           type: m.R94.Types.DESCRIPTION,
-                          children: ee.intl.format(ee.t.s2ZzZW, { name: (0, f.F6)(t, H.default, V.Z, !0) })
+                          children: ee.intl.format(ee.t.s2ZzZW, { name: (0, O.F6)(t, V.default, H.Z, !0) })
                       })
                     : o === q.d4z.GUILD_FORUM
                       ? (0, i.jsx)(m.R94, {
@@ -359,7 +371,14 @@ class eo extends s.PureComponent {
                         l
                             ? (0, i.jsxs)('div', {
                                   className: et.nameInput,
-                                  children: [(0, i.jsx)(p, { id: t }), (0, i.jsx)(ea, { onEmojiPicked: this.insertEmojiAtPosition })]
+                                  children: [
+                                      (0, i.jsx)(p, { id: t }),
+                                      (0, i.jsx)(ea, {
+                                          onEmojiPicked: this.insertEmojiAtPosition,
+                                          isPrivateChannel: this.state.isPrivate,
+                                          guildId: s
+                                      })
+                                  ]
                               })
                             : (0, i.jsx)(p, { id: t }),
                         e,
@@ -737,7 +756,7 @@ class eo extends s.PureComponent {
                         this.renderType(),
                         this.renderName(),
                         e === q.d4z.GUILD_STORE ? this.renderStoreOptions() : null,
-                        (0, i.jsx)(O.Z, {
+                        (0, i.jsx)(f.Z, {
                             guildId: t,
                             channelType: e,
                             className: et.channelTypeDescription
@@ -920,7 +939,7 @@ class eo extends s.PureComponent {
                             ((t = []),
                             Object.values(p).forEach((e) => {
                                 let { row: n } = e;
-                                null != n.id && '' !== n.id && (n.rowType === K.aC.ROLE ? t.push((0, M.A)(n.id, E.BN.ROLE)) : n.rowType === K.aC.MEMBER && t.push((0, M.A)(n.id, E.BN.MEMBER)));
+                                null != n.id && '' !== n.id && (n.rowType === K.aC.ROLE ? t.push((0, G.A)(n.id, E.BN.ROLE)) : n.rowType === K.aC.MEMBER && t.push((0, G.A)(n.id, E.BN.MEMBER)));
                             }));
                     }
                     this.setState({ errors: {} });
@@ -938,7 +957,7 @@ class eo extends s.PureComponent {
                         });
                         if (null == e || 201 !== e.status) return;
                         let s = e.body;
-                        w.xL.has(m) && (0, z.XU)(s.guild_id, s.id), d();
+                        w.xL.has(m) && (0, R.XU)(s.guild_id, s.id), d();
                     } catch (e) {
                         null != e.body && 'object' == typeof e.body ? this.setState({ errors: e.body }) : this.setState({ errors: { message: ee.intl.string(ee.t.fEptJC) } });
                     }
@@ -947,7 +966,7 @@ class eo extends s.PureComponent {
         let { channelType: t, cloneChannel: n, prefillChannelName: i } = e;
         (this.state = {
             channelType: null != t ? t : q.d4z.GUILD_TEXT,
-            name: null != n ? (0, f.F6)(n, H.default, V.Z) : null != i ? i : '',
+            name: null != n ? (0, O.F6)(n, V.default, H.Z) : null != i ? i : '',
             pendingPermissionOverwrites: {},
             isPrivate: !1,
             prevGuildId: e.guildId,
@@ -964,12 +983,12 @@ class eo extends s.PureComponent {
 }
 let ed = s.forwardRef(function (e, t) {
     let { channelType: n, guildId: s, cloneChannelId: l } = e,
-        r = (0, p.cj)([B.Z, H.default, F.Z, Z.Z, k.ZP], () => {
+        r = (0, p.cj)([B.Z, V.default, F.Z, Z.Z, k.ZP], () => {
             var e, t, i;
             let r = B.Z.getGuild(s),
-                a = H.default.getCurrentUser();
+                a = V.default.getCurrentUser();
             o()(null != a, 'CreateChannel: user cannot be undefined');
-            let d = null != r && null != r.ownerId ? H.default.getUser(r.ownerId) : null,
+            let d = null != r && null != r.ownerId ? V.default.getUser(r.ownerId) : null,
                 c = F.Z.can(q.Plq.ADMINISTRATOR, r),
                 h = Z.Z.getChannel(l);
             return {
@@ -995,10 +1014,10 @@ let ed = s.forwardRef(function (e, t) {
         ),
         d = new Set(r.memberRoles),
         { canManageRoles: c, canManageChannels: h } = r,
-        u = (0, G.m)(s) && c && h,
+        u = (0, M.m)(s) && c && h,
         m = (0, P.W3)(s),
         g = (0, U.Ui)(null == r ? void 0 : r.guild),
-        C = (0, y.Q3)('CreateChannel'),
+        C = (0, _.Q3)('CreateChannel'),
         N = (0, b.sc)({
             guildId: s,
             location: 'ConnectedCreateChannel'

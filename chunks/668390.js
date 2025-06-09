@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var i = n(255367),
     l = n(73800),
     r = n(120356),
@@ -54,7 +54,7 @@ function f(e, t) {
         e
     );
 }
-function x(e) {
+function j(e) {
     let { role: t, guild: r } = e,
         [a, u] = l.useState(!1);
     return (0, d.e)(r, t)
@@ -87,8 +87,8 @@ function x(e) {
           })
         : null;
 }
-function j(e) {
-    let { color: t, id: r, role: s, guild: d, children: j, isDragging: b, selectedItem: v, onItemSelect: y, itemType: C, locked: N, lockTooltip: S, showContextMenu: E, theme: O, roleStyle: w, 'aria-label': Z } = e,
+function x(e) {
+    let { color: t, id: r, role: s, guild: d, children: x, isDragging: b, selectedItem: v, onItemSelect: y, itemType: C, locked: N, lockTooltip: S, showContextMenu: E, theme: O, roleStyle: Z, 'aria-label': w } = e,
         T = (0, h.X)(d.id, null == s ? void 0 : s.colorStrings),
         R = l.useCallback(
             (e) => {
@@ -114,11 +114,11 @@ function j(e) {
               selectedItem: v,
               onItemSelect: y,
               itemType: C,
-              'aria-label': null != S ? ''.concat(Z, ', ').concat(S) : Z,
+              'aria-label': null != S ? ''.concat(w, ', ').concat(S) : w,
               children: (0, i.jsxs)('div', {
                   className: m.roleContent,
                   children: [
-                      'dot' === w
+                      'dot' === Z
                           ? (0, i.jsx)(o.FhE, {
                                 color: null != t ? t : void 0,
                                 colors: T,
@@ -153,10 +153,10 @@ function j(e) {
                       (0, i.jsx)('div', {
                           className: m.roleInner,
                           onContextMenu: R,
-                          children: j
+                          children: x
                       }),
                       E && null != s
-                          ? (0, i.jsx)(x, {
+                          ? (0, i.jsx)(j, {
                                 guild: d,
                                 role: s
                             })

@@ -32,12 +32,12 @@ function j(e) {
     let { transitionState: t, onClose: n, channelId: g } = e,
         j = (0, u.Dt)(),
         b = (0, l.e7)([p.Z], () => p.Z.getChannel(g)),
-        f = (0, l.e7)([m.Z], () => m.Z.getGuild(null == b ? void 0 : b.getGuildId())),
-        [O, v] = s.useState({}),
+        O = (0, l.e7)([m.Z], () => m.Z.getGuild(null == b ? void 0 : b.getGuildId())),
+        [f, v] = s.useState({}),
         [S, A] = s.useState(!1),
-        [y, _] = s.useState(null);
-    if (null == b || null == f) return null;
-    let T = async () => {
+        [_, y] = s.useState(null);
+    if (null == b || null == O) return null;
+    let L = async () => {
         A(!0);
         try {
             await (function (e, t) {
@@ -51,11 +51,11 @@ function j(e) {
                         return t.rowType === N.aC.ROLE ? I(t.id, d.BN.ROLE) : I(t.id, d.BN.MEMBER);
                     });
                 return (0, a.hw)(e.id, n, !0);
-            })(b, O),
+            })(b, f),
                 n();
         } catch (t) {
             let e = new o.Hx(t);
-            A(!1), _(e);
+            A(!1), y(e);
         }
     };
     return (0, i.jsxs)(r.Y0X, {
@@ -91,24 +91,24 @@ function j(e) {
                 ]
             }),
             (0, i.jsx)(c.U, {
-                guild: f,
+                guild: O,
                 channel: b,
                 permission: C.yP,
-                pendingAdditions: O,
+                pendingAdditions: f,
                 setPendingAdditions: v
             }),
-            null != y
+            null != _
                 ? (0, i.jsx)(r.Text, {
                       className: E.error,
                       variant: 'text-xs/normal',
                       color: 'text-danger',
-                      children: y.getAnyErrorMessage()
+                      children: _.getAnyErrorMessage()
                   })
                 : null,
             (0, i.jsxs)(r.mzw, {
                 children: [
                     (0, i.jsx)(r.zxk, {
-                        onClick: T,
+                        onClick: L,
                         submitting: S,
                         children: x.intl.string(x.t.OYkgVl)
                     }),

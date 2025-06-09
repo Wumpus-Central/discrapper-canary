@@ -188,15 +188,15 @@ function M(e) {
     });
 }
 let j = i.forwardRef((e, t) => {
-    var n;
-    let { guild: a, onClose: o } = e,
-        s = (0, O.Ek)(a.id, 'GuildPowerupsMarketingPowerupCards');
+    var n, a;
+    let { guild: o, onClose: s } = e,
+        d = (0, O.Ek)(o.id, 'GuildPowerupsMarketingPowerupCards');
     i.useEffect(() => {
-        s && (y.Z.shouldFetchCatalogForGuild(a.id) && (0, b.Sn)(a.id), y.Z.shouldFetchPowerupsForGuild(a.id) && (0, b.Fm)(a.id));
-    }, [s, a.id]);
-    let d = (0, c.e7)([y.Z], () => y.Z.getStateForGuild(a.id)),
-        f = null != (n = null == d ? void 0 : d.powerupCatalog[A.Us.PERK]) ? n : [];
-    return s && 0 !== f.length
+        d && (y.Z.shouldFetchCatalogForGuild(o.id) && (0, b.Sn)(o.id), y.Z.shouldFetchPowerupsForGuild(o.id) && (0, b.Fm)(o.id));
+    }, [d, o.id]);
+    let f = (0, c.e7)([y.Z], () => y.Z.getStateForGuild(o.id)),
+        _ = null != (a = null == f || null == (n = f.powerupCatalog) ? void 0 : n[A.Us.PERK]) ? a : [];
+    return d && 0 !== _.length
         ? (0, r.jsxs)('div', {
               ref: t,
               className: R.container,
@@ -220,13 +220,13 @@ let j = i.forwardRef((e, t) => {
                   }),
                   (0, r.jsx)('div', {
                       className: R.powerupsContainer,
-                      children: f.map((e) =>
+                      children: _.map((e) =>
                           (0, r.jsx)(
                               M,
                               {
-                                  guildId: a.id,
+                                  guildId: o.id,
                                   powerup: e,
-                                  onClose: o
+                                  onClose: s
                               },
                               'guild-powerup-marketing-'.concat(e.skuId)
                           )

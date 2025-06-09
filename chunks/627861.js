@@ -406,7 +406,7 @@ function ec(e) {
                           }
                         : eb
                           ? {
-                                label: Q.intl.string(Q.t.VJlc0d),
+                                label: Q.intl.string(Q.t.KC26NT),
                                 trackingArea: g.j_.PLAY,
                                 onClick: () => {},
                                 disabledReason: Q.intl.string(Q.t.KC26NT)

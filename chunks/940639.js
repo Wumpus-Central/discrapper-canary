@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(539854), n(388685), n(413496), n(433524), n(35282), n(781311);
+n.d(t, { Z: () => x }), n(539854), n(388685), n(413496), n(433524), n(35282), n(781311);
 var i,
     l = n(255367),
     r = n(73800),
@@ -25,7 +25,7 @@ function f(e, t, n) {
         e
     );
 }
-class x extends (i = r.Component) {
+class j extends (i = r.Component) {
     getSelectedSection(e) {
         let { selectedSection: t } = this.state;
         if (null != t) return t;
@@ -216,5 +216,5 @@ class x extends (i = r.Component) {
             });
     }
 }
-f(x, 'defaultProps', { sections: [null] });
-let j = o.ZP.connectStores([d.Z], () => ({ keyboardModeEnabled: d.Z.keyboardModeEnabled }))(x);
+f(j, 'defaultProps', { sections: [null] });
+let x = o.ZP.connectStores([d.Z], () => ({ keyboardModeEnabled: d.Z.keyboardModeEnabled }))(j);
