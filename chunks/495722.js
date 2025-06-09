@@ -290,7 +290,7 @@ function X(e) {
                                       null != e.current && (v.current = e.current),
                                       (0, r.jsx)(m.Z, {
                                           ref: e,
-                                          autoPlay: !1,
+                                          autoPlay: !0,
                                           loop: !0,
                                           muted: !0,
                                           playsInline: !0,

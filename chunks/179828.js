@@ -103,7 +103,7 @@ function I(e) {
                     guildId: a.id,
                     disableBorderColor: !0,
                     onRemove: () => v(e),
-                    canRemove: f ? g.r6(a, t.id, d, e) : (null == (r = e.tags) ? void 0 : r.guild_connections) === null && n.id === t.id
+                    canRemove: (null == (r = e.tags) ? void 0 : r.guild_connections) === null ? n.id === t.id : f && g.r6(a, t.id, d, e)
                 },
                 e.id
             );

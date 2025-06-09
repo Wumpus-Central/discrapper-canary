@@ -9,7 +9,7 @@ function o(e) {
     let { leading: t, actions: n = [], actionsFullWidth: r = !1 } = e;
     if (null != t || null != n)
         return (0, i.jsxs)('footer', {
-            className: a.actionBar,
+            className: s()(a.actionBar, a.section),
             children: [
                 null != t &&
                     (0, i.jsx)('div', {

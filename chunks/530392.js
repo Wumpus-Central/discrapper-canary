@@ -48,7 +48,7 @@ function u(e) {
                     onScroll: f,
                     children: (0, i.jsx)('main', {
                         ref: h,
-                        className: d.contentInner,
+                        className: l()(d.contentInner, { [d.contentInnerShouldScroll]: m }),
                         children: n
                     })
                 }),

@@ -157,7 +157,7 @@ function L(e) {
                     disableBorderColor: !0,
                     ref: (t) => C(e.id, t),
                     onRemove: () => I(e),
-                    canRemove: _ ? m.r6(l, n.id, f, e) : (null == (a = e.tags) ? void 0 : a.guild_connections) === null && t.id === n.id
+                    canRemove: (null == (a = e.tags) ? void 0 : a.guild_connections) === null ? t.id === n.id : _ && m.r6(l, n.id, f, e)
                 },
                 e.id
             );
