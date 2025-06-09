@@ -19,8 +19,8 @@ var r = n(442837),
     h = n(228168),
     j = n(981631),
     g = n(388032),
-    v = n(247787);
-function I(e) {
+    I = n(247787);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             o = Object.keys(n);
@@ -82,7 +82,7 @@ function O(e) {
             isLoaded: null == L ? void 0 : L.isLoaded,
             children: (0, o.jsx)(i.Y0X, {
                 transitionState: A,
-                className: v.root,
+                className: I.root,
                 'aria-label': k,
                 parentComponent: 'RestrictedUserProfileModalV2',
                 children: (0, o.jsxs)(y.Z, {
@@ -90,9 +90,9 @@ function O(e) {
                     displayProfile: L,
                     themeType: h.lY.MODAL_V2,
                     children: [
-                        (0, o.jsx)('div', { className: v.background }),
+                        (0, o.jsx)('div', { className: I.background }),
                         (0, o.jsxs)('div', {
-                            className: v.content,
+                            className: I.content,
                             children: [
                                 (0, o.jsx)(b.Z, {
                                     user: t,
@@ -100,7 +100,7 @@ function O(e) {
                                     iconColor: i.TVs.colors.TEXT_NORMAL
                                 }),
                                 (0, o.jsxs)('div', {
-                                    className: v.textContainer,
+                                    className: I.textContainer,
                                     children: [
                                         (0, o.jsx)(i.X6q, {
                                             variant: 'heading-xl/bold',
@@ -115,7 +115,7 @@ function O(e) {
                                     ]
                                 }),
                                 (0, o.jsx)('div', {
-                                    className: v.safetyTable,
+                                    className: I.safetyTable,
                                     children: D.map((e, t) => {
                                         let { icon: n, description: r } = e;
                                         return (0, o.jsx)(
@@ -139,7 +139,7 @@ function O(e) {
                                             onClick: () => {
                                                 T(),
                                                     (0, p.pQ)(
-                                                        I(
+                                                        v(
                                                             {
                                                                 action: S ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
                                                                 analyticsLocations: E
@@ -154,7 +154,7 @@ function O(e) {
                                             onClick: () => {
                                                 T(),
                                                     (0, p.pQ)(
-                                                        I(
+                                                        v(
                                                             {
                                                                 action: 'DONT_SHOW_AGAIN_IGNORED_PROFILE',
                                                                 analyticsLocations: E

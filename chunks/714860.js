@@ -1,1 +1,1 @@
-s.exports = JSON.parse('{"8ZcEfn":"颜色","AsmU8/":"自定义您的主题","xRdYAQ":"移动端不支持自定义主题[测试版]\u3002","2hAz8f":"自定义您的主题","23QUzs":"新功能\uFF01自定义主题","TRCE4u":"用无穷色彩组合匹配你的心情\u3002立即体验\uFF0CNitro 用户专享\u3002"}');
+s.exports = JSON.parse('{"+tTysr":"添加颜色","8ZcEfn":"颜色","xlXkaG":"色彩强度","dZkwg4":"渐变方向","AsmU8/":"自定义您的主题","xRdYAQ":"移动端不支持自定义主题[测试版]\u3002","2hAz8f":"自定义您的主题","23QUzs":"新功能\uFF01自定义主题","TRCE4u":"用无穷色彩组合匹配你的心情\u3002立即体验\uFF0CNitro 用户专享\u3002"}');

@@ -1,152 +1,110 @@
-a.r(t), a.d(t, { default: () => h }), a(388685);
-var n = a(255367),
-    d = a(73800),
-    s = a(120356),
-    o = a.n(s),
-    r = a(990547),
-    l = a(481060),
-    i = a(213609),
+a.r(t), a.d(t, { default: () => f }), a(388685);
+var d = a(255367),
+    n = a(73800),
+    r = a(120356),
+    s = a.n(r),
+    i = a(990547),
+    o = a(481060),
+    l = a(213609),
     c = a(70097),
-    u = a(7093),
-    _ = a(553896),
-    x = a(848572),
-    T = a(483444),
-    m = a(626135),
-    g = a(981631),
-    E = a(474936),
-    f = a(388032),
-    p = a(882714);
-function h(e) {
+    u = a(553896),
+    _ = a(848572),
+    x = a(483444),
+    g = a(626135),
+    m = a(981631),
+    T = a(474936),
+    p = a(388032),
+    E = a(882714);
+function f(e) {
     var t;
     let { levelUpData: a } = e,
-        s = d.useRef(null),
-        [r, i] = d.useState(!1),
-        c = d.useCallback(() => {
-            i(!0);
-        }, []),
-        _ = d.useCallback(() => {
-            u.Z.setState({ shouldRenderTenureLevelUp: !1 });
-        }, []);
-    d.useEffect(() => _, [_]);
-    let x = {
-        '--custom-old-badge-color': 'linear-gradient(to right, '.concat(null != (t = a.prevBadgeTextGradient) ? t : 'transparent', ')'),
-        '--custom-new-badge-color': 'linear-gradient(to right, '.concat(a.currentBadgeTextGradient, ')')
-    };
-    return (0, n.jsxs)('div', {
-        ref: s,
-        className: o()(p.container, { [p.loaded]: r }),
-        style: x,
-        children: [
-            r &&
-                (0, n.jsx)(l.EqS, {
-                    containerRef: s,
-                    children: (0, n.jsx)(l.M0o, {
-                        className: p.closeButton,
-                        tooltip: f.intl.string(f.t.cpT0Cg),
-                        color: l.YX$.SECONDARY,
-                        size: l.tT7.SIZE_24,
-                        icon: (0, n.jsx)(l.Dio, {
-                            size: 'xs',
-                            color: 'currentColor'
-                        }),
-                        onClick: _
-                    })
-                }),
-            (0, n.jsx)(b, {
-                onVideoLoaded: c,
-                levelUpData: a
-            })
-        ]
-    });
-}
-function b(e) {
-    let { onVideoLoaded: t, levelUpData: a } = e,
-        [s, u] = d.useState(!1),
-        [h, b] = d.useState(!1),
-        [v, N] = d.useState(!1),
-        [C, R] = d.useState(!1),
-        j = (0, x.GG)(),
-        B = d.useRef(null),
-        L = d.useRef(null),
-        { currentBadge: U, prevBadge: k, levelUpVideoSrc: w } = a;
-    d.useEffect(() => {
-        let e = setTimeout(() => b(!0), 1000);
-        return () => clearTimeout(e);
-    }, []);
-    let y = d.useCallback(() => {
-        let e = 1000 * (U.id !== E.VU.PREMIUM_TENURE_1_MONTH);
-        (L.current.currentTime = 0),
-            setTimeout(() => {
-                R(!0), L.current.play();
-            }, e);
-    }, [U.id]);
-    d.useEffect(() => {
-        v && h && (t(), y());
-    }, [v, h, t, y]),
-        (0, i.Z)(
+        [r, f] = n.useState(!1),
+        [h, b] = n.useState(!1),
+        [v, N] = n.useState(!1),
+        w = (0, _.GG)(),
+        y = n.useRef(null),
+        B = n.useRef(null),
+        { currentBadge: L, prevBadge: R, levelUpVideoSrc: U } = a,
+        j = n.useCallback(() => {
+            let e = 1000 * (L.id !== T.VU.PREMIUM_TENURE_1_MONTH);
+            (B.current.currentTime = 0),
+                setTimeout(() => {
+                    N(!0), B.current.play();
+                }, e);
+        }, [L.id]);
+    n.useEffect(() => {
+        r && j();
+    }, [r, j]),
+        (0, l.Z)(
             {
-                type: r.ImpressionTypes.POPOUT,
-                name: r.ImpressionNames.TIERED_TENURE_BADGE_LEVEL_UP,
-                properties: { new_badge_id: U.id }
+                type: i.ImpressionTypes.POPOUT,
+                name: i.ImpressionNames.TIERED_TENURE_BADGE_LEVEL_UP,
+                properties: { new_badge_id: L.id }
             },
             { trackOnInitialLoad: !0 }
         ),
-        d.useEffect(() => {
-            null != L.current && L.current.load();
+        n.useEffect(() => {
+            null != B.current && B.current.load();
         }, []);
-    let S = d.useCallback(() => {
-        u(!1), R(!1), y(), (B.current.style.display = 'none'), B.current.offsetWidth, (B.current.style.display = ''), m.default.track(g.rMx.TIERED_TENURE_BADGE_LEVEL_UP_REPLAY_CLICKED, { new_badge_id: U.id });
-    }, [U.id, y]);
-    return (0, n.jsxs)('div', {
-        className: o()(p.content, {
-            [p.ended]: s,
-            [p.started]: C
+    let k = n.useCallback(() => {
+            b(!1), N(!1), j(), (y.current.style.display = 'none'), y.current.offsetWidth, (y.current.style.display = ''), g.default.track(m.rMx.TIERED_TENURE_BADGE_LEVEL_UP_REPLAY_CLICKED, { new_badge_id: L.id });
+        }, [L.id, j]),
+        C = {
+            '--custom-old-badge-color': 'linear-gradient(to right, '.concat(null != (t = a.prevBadgeTextGradient) ? t : 'transparent', ')'),
+            '--custom-new-badge-color': 'linear-gradient(to right, '.concat(a.currentBadgeTextGradient, ')')
+        };
+    return (0, d.jsxs)('div', {
+        className: s()(E.content, {
+            [E.ended]: h,
+            [E.loaded]: r,
+            [E.started]: v
         }),
-        ref: B,
+        style: C,
+        ref: y,
         children: [
-            (0, n.jsx)(c.Z, {
-                ref: L,
-                className: p.video,
-                src: w,
+            (0, d.jsx)(c.Z, {
+                ref: B,
+                className: E.video,
+                src: U,
                 playsInline: !0,
-                onLoadedData: () => N(!0),
-                onEnded: () => u(!0)
+                onLoadedData: () => f(!0),
+                onEnded: () => b(!0)
             }),
-            (0, n.jsx)(T.Z, {
-                className: p.nitroLogo,
+            (0, d.jsx)(x.Z, {
+                className: E.nitroLogo,
                 width: 60,
                 height: 15
             }),
-            null != k &&
-                (0, n.jsx)(l.Text, {
+            null != R &&
+                (0, d.jsx)(o.Text, {
                     variant: 'display-md',
-                    className: o()(p.badgeText, p.old),
-                    children: f.intl.string(k.nameUnformatted)
+                    className: s()(E.badgeText, E.old),
+                    children: p.intl.string(R.nameUnformatted)
                 }),
-            (0, n.jsx)(l.Text, {
+            (0, d.jsx)(o.Text, {
                 variant: 'display-md',
-                className: o()(p.badgeText, p.new),
-                children: f.intl.string(U.nameUnformatted)
+                className: s()(E.badgeText, E.new),
+                children: p.intl.string(L.nameUnformatted)
             }),
-            null != j &&
-                (0, n.jsx)(l.Text, {
+            null != w &&
+                (0, d.jsx)(o.Text, {
                     variant: 'text-xs/medium',
-                    className: p.subscribedText,
-                    children: f.intl.formatToPlainString(f.t['f/OGgI'], {
-                        timeFrame: (0, _.q)(U.id, U.tenureReqNumMonths),
-                        date: j
+                    className: E.subscribedText,
+                    children: p.intl.formatToPlainString(p.t['f/OGgI'], {
+                        timeFrame: (0, u.q)(L.id, L.tenureReqNumMonths),
+                        date: w
                     })
                 }),
-            (0, n.jsx)('div', {
-                className: p.actionButtons,
-                children: (0, n.jsx)(l.M0o, {
-                    tooltip: f.intl.string(f.t.hsvh0t),
-                    color: l.YX$.SECONDARY,
-                    icon: (0, n.jsx)(l.o1U, {
+            (0, d.jsx)('div', {
+                className: E.actionButtons,
+                children: (0, d.jsx)(o.M0o, {
+                    tooltip: p.intl.string(p.t.hsvh0t),
+                    color: o.YX$.SECONDARY,
+                    icon: (0, d.jsx)(o.o1U, {
                         size: 'xs',
                         color: 'currentColor'
                     }),
-                    onClick: S
+                    onClick: k
                 })
             })
         ]

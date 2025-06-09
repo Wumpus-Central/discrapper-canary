@@ -1,151 +1,170 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => P });
 var o = n(255367);
 n(73800);
 var r = n(442837),
     i = n(481060),
     c = n(468363),
     l = n(353647),
-    a = n(158776),
-    s = n(885110),
-    d = n(63063),
-    u = n(209698),
-    f = n(369566),
-    p = n(29899),
-    m = n(151545),
-    b = n(744802),
-    y = n(493043),
-    _ = n(864141),
-    x = n(264481),
-    h = n(693408),
-    j = n(228168),
-    g = n(981631),
+    a = n(566898),
+    s = n(158776),
+    d = n(885110),
+    u = n(63063),
+    f = n(209698),
+    p = n(369566),
+    m = n(29899),
+    b = n(151545),
+    y = n(744802),
+    _ = n(493043),
+    x = n(864141),
+    h = n(264481),
+    j = n(693408),
+    g = n(228168),
+    I = n(981631),
     v = n(388032),
-    I = n(514656);
-function O(e) {
-    let { user: t, currentUser: n, displayProfile: O, guildId: P, channelId: N, subsection: A, onClose: Z } = e,
-        { voiceActivityStatusEnabled: T } = (0, c.U)({ location: 'UserProfileModalV2Activity' }),
-        C = (0, u.b)({ location: 'UserProfileModalV2Activity' }),
-        { live: w, recent: S, stream: E } = (0, f.Z)(t.id),
-        { voiceChannel: B, voiceActivity: D } = (0, p.Z)({
+    O = n(514656);
+function P(e) {
+    let { user: t, currentUser: n, displayProfile: P, guildId: N, channelId: A, subsection: Z, onClose: T } = e,
+        { voiceActivityStatusEnabled: C } = (0, c.U)({ location: 'UserProfileModalV2Activity' }),
+        w = (0, f.b)({ location: 'UserProfileModalV2Activity' }),
+        { live: S, recent: E, stream: B } = (0, p.Z)(t.id),
+        { voiceChannel: D, voiceActivity: L } = (0, m.Z)({
             userId: t.id,
-            guildId: P
+            guildId: N
         }),
-        L = (0, r.e7)([l.Z], () => l.Z.isFetchingUserOutbox(t.id)),
-        U = t.id === n.id,
-        k = (0, r.e7)([s.Z, a.Z], () => {
-            let e = U ? s.Z.getStatus() : a.Z.getStatus(t.id);
+        U = (0, r.e7)([l.Z], () => l.Z.isFetchingUserOutbox(t.id)),
+        k = t.id === n.id,
+        M = (0, r.e7)([d.Z, s.Z], () => {
+            let e = k ? d.Z.getStatus() : s.Z.getStatus(t.id);
             return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
         }),
-        M = w.length > 0 || null != E,
-        R = T && null == E && null == D && null != B,
-        G = !k && (M || R),
-        V = S.length > 0;
-    if (!G && !V && L)
+        R = S.length > 0 || null != B,
+        G = C && null == B && null == L && null != D,
+        V = !M && (R || G),
+        F = E.length > 0;
+    if (!V && !F && U)
         return (0, o.jsx)('div', {
-            className: I.spinner,
-            children: (0, o.jsx)(i.$jN, {})
+            className: O.cards,
+            children: Array.from({ length: 8 }).map((e, t) =>
+                (0, o.jsxs)(
+                    'div',
+                    {
+                        className: O.loadingItem,
+                        children: [
+                            (0, o.jsx)(a.ZT, {
+                                width: 60,
+                                opacity: 0.08
+                            }),
+                            (0, o.jsx)(a.ZT, {
+                                width: 135,
+                                opacity: 0.08
+                            })
+                        ]
+                    },
+                    t
+                )
+            )
         });
-    if (!G && !V && !L) {
-        var F;
-        return U
-            ? (0, o.jsx)(x.Uf, { onClose: Z })
-            : (0, o.jsx)(x.P9, {
+    if (!V && !F && !U) {
+        var Y;
+        return k
+            ? (0, o.jsx)(h.Uf, { onClose: T })
+            : (0, o.jsx)(h.P9, {
                   user: t,
-                  guildId: null != (F = null == O ? void 0 : O.guildId) ? F : void 0,
-                  channelId: N,
-                  onClose: Z
+                  guildId: null != (Y = null == P ? void 0 : P.guildId) ? Y : void 0,
+                  channelId: A,
+                  onClose: T
               });
     }
     return (0, o.jsxs)(i.Ttm, {
-        className: I.scroller,
+        className: O.scroller,
         fade: !0,
         children: [
-            G
-                ? (0, o.jsx)(h.Z, {
+            V
+                ? (0, o.jsx)(j.Z, {
                       heading: v.intl.string(v.t.J6STd3),
                       children: (0, o.jsxs)('ul', {
-                          className: I.cards,
+                          className: O.cards,
                           children: [
-                              !C &&
-                                  R &&
+                              !w &&
+                                  G &&
                                   (0, o.jsx)('li', {
-                                      children: (0, o.jsx)(_.Z, {
+                                      children: (0, o.jsx)(x.Z, {
                                           user: t,
                                           currentUser: n,
-                                          voiceChannel: B,
-                                          onClose: Z
+                                          voiceChannel: D,
+                                          onClose: T
                                       })
                                   }),
-                              null != E &&
+                              null != B &&
                                   (0, o.jsx)('li', {
-                                      children: (0, o.jsx)(y.Z, {
+                                      children: (0, o.jsx)(_.Z, {
                                           location: 'UserProfileModalV2Activity',
                                           user: t,
                                           currentUser: n,
-                                          stream: E,
-                                          onClose: Z,
-                                          profileGuildId: null == O ? void 0 : O.guildId
+                                          stream: B,
+                                          onClose: T,
+                                          profileGuildId: null == P ? void 0 : P.guildId
                                       })
                                   }),
-                              w.map((e, r) =>
+                              S.map((e, r) =>
                                   (0, o.jsx)(
                                       'li',
                                       {
-                                          children: (0, o.jsx)(m.Z, {
+                                          children: (0, o.jsx)(b.Z, {
                                               user: t,
                                               currentUser: n,
                                               activity: e,
-                                              onClose: Z,
-                                              profileGuildId: null == O ? void 0 : O.guildId
+                                              onClose: T,
+                                              profileGuildId: null == P ? void 0 : P.guildId
                                           })
                                       },
                                       'live-'.concat(r)
                                   )
                               ),
-                              C &&
-                                  R &&
+                              w &&
+                                  G &&
                                   (0, o.jsx)('li', {
-                                      children: (0, o.jsx)(_.Z, {
+                                      children: (0, o.jsx)(x.Z, {
                                           user: t,
                                           currentUser: n,
-                                          voiceChannel: B,
-                                          onClose: Z
+                                          voiceChannel: D,
+                                          onClose: T
                                       })
                                   })
                           ]
                       })
                   })
                 : null,
-            V
-                ? (0, o.jsx)(h.Z, {
+            F
+                ? (0, o.jsx)(j.Z, {
                       heading: v.intl.string(v.t.jzgEoK),
-                      introText: U
+                      introText: k
                           ? v.intl.format(v.t['4bk9Ag'], {
                                 learnMoreHook: (e, t) =>
                                     (0, o.jsx)(
                                         i.eee,
                                         {
-                                            href: d.Z.getArticleURL(g.BhN.ACTIVITY_STATUS_SETTINGS),
+                                            href: u.Z.getArticleURL(I.BhN.ACTIVITY_STATUS_SETTINGS),
                                             children: e
                                         },
                                         t
                                     )
                             })
                           : void 0,
-                      scrollIntoView: A === j.Tb.RECENT_ACTIVITY,
+                      scrollIntoView: Z === g.Tb.RECENT_ACTIVITY,
                       children: (0, o.jsx)('ul', {
-                          className: I.cards,
-                          children: S.map((e) =>
+                          className: O.cards,
+                          children: E.map((e) =>
                               (0, o.jsx)(
                                   'li',
                                   {
-                                      children: (0, o.jsx)(b.Z, {
+                                      children: (0, o.jsx)(y.Z, {
                                           location: 'UserProfileModalV2Activity',
                                           user: t,
                                           currentUser: n,
                                           entry: e,
-                                          profileGuildId: null == O ? void 0 : O.guildId,
-                                          onClose: Z
+                                          profileGuildId: null == P ? void 0 : P.guildId,
+                                          onClose: T
                                       })
                                   },
                                   e.id

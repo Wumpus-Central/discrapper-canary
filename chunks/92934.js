@@ -1,1 +1,1 @@
-s.exports = JSON.parse('{"8ZcEfn":"色彩","AsmU8/":"自訂專屬主題","xRdYAQ":"行動裝置無法使用自訂主題[測試版]\u3002","2hAz8f":"自訂專屬主題","23QUzs":"新功能\u300C自訂主題\u300D上線\uFF01","TRCE4u":"用無限的色彩組合表達心情\uFF0C馬上試用 Nitro 專屬功能\u3002"}');
+s.exports = JSON.parse('{"+tTysr":"新增色彩","8ZcEfn":"色彩","xlXkaG":"色彩強度","dZkwg4":"漸層方向","AsmU8/":"自訂專屬主題","xRdYAQ":"行動裝置無法使用自訂主題[測試版]\u3002","2hAz8f":"自訂專屬主題","23QUzs":"新功能\u300C自訂主題\u300D上線\uFF01","TRCE4u":"用無限的色彩組合表達心情\uFF0C馬上試用 Nitro 專屬功能\u3002"}');

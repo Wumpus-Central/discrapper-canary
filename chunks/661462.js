@@ -38,7 +38,7 @@ function p(e) {
     var t, n, l;
     let { user: a, currentUser: s, displayProfile: d, guildId: p, channelId: m, items: b, initialSection: y, initialSubsection: _, onClose: x } = e,
         { trackUserProfileAction: h } = (0, c.KZ)(),
-        [{ section: j, subsection: g, text: v }, I] = r.useState(
+        [{ section: j, subsection: g, text: I }, v] = r.useState(
             ((n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -91,36 +91,42 @@ function p(e) {
     return (0, o.jsxs)('div', {
         className: u.container,
         children: [
-            (0, o.jsx)(i.njP, {
-                type: 'top',
-                look: 'custom',
-                selectedItem: j,
-                onItemSelect: (e) => {
-                    h({
-                        action: 'PRESS_SECTION',
-                        section: e
-                    }),
-                        I((t) => {
-                            var n;
-                            return null != (n = b.find((t) => t.section === e)) ? n : t;
-                        });
-                },
-                children: b.map((e) =>
-                    (0, o.jsx)(
-                        i.njP.Item,
-                        {
-                            className: u.tabBarItem,
-                            id: e.section,
-                            'aria-label': e.text,
-                            children: e.text
-                        },
-                        e.section
+            (0, o.jsx)(i.Ttm, {
+                orientation: 'horizontal',
+                className: u.scroller,
+                fade: !0,
+                paddingFix: !1,
+                children: (0, o.jsx)(i.njP, {
+                    type: 'top',
+                    look: 'custom',
+                    selectedItem: j,
+                    onItemSelect: (e) => {
+                        h({
+                            action: 'PRESS_SECTION',
+                            section: e
+                        }),
+                            v((t) => {
+                                var n;
+                                return null != (n = b.find((t) => t.section === e)) ? n : t;
+                            });
+                    },
+                    children: b.map((e) =>
+                        (0, o.jsx)(
+                            i.njP.Item,
+                            {
+                                className: u.tabBarItem,
+                                id: e.section,
+                                'aria-label': e.text,
+                                children: e.text
+                            },
+                            e.section
+                        )
                     )
-                )
+                })
             }),
             (0, o.jsx)(i.njP.Panel, {
                 id: j,
-                'aria-label': v,
+                'aria-label': I,
                 className: u.tabBarPanel,
                 children: (0, o.jsx)(f, {
                     user: a,

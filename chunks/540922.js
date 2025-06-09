@@ -1,1 +1,1 @@
-s.exports = JSON.parse('{"cgdAs7":"(จะเปิดในแท็บใหม่)"}');
+s.exports = JSON.parse('{"WfH9io":"ปิด","cgdAs7":"(จะเปิดในแท็บใหม่)"}');
