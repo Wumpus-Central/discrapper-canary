@@ -2216,11 +2216,6 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     padding-right: 0
 }
 
-.contentInner__53cea {
-    padding: var(--space-12) var(--custom-modal-padding);
-    padding-right: calc(var(--custom-modal-padding) - var(--space-16))
-}
-
 .contentSpacerTop__53cea {
     flex-grow: 0;
     padding-top: var(--custom-modal-padding-top)
@@ -2266,11 +2261,26 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     visibility: visible
 }
 
+.contentInner__53cea {
+    padding-left: var(--custom-modal-padding);
+    padding-right: calc(var(--custom-modal-padding) - var(--space-16))
+}
+
+.contentControls__53cea+.content__53cea .contentInner__53cea,
+.contentInnerShouldScroll__53cea {
+    padding-top: var(--space-12)
+}
+
+.contentInnerShouldScroll__53cea {
+    padding-bottom: var(--space-12)
+}
+
 .footer__53cea {
     padding-bottom: 0
 }
 
 .actionBar__53cea {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-8)
