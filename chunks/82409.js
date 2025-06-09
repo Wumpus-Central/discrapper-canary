@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685), n(361932), n(187205), n(415506);
+n.d(t, { Z: () => D }), n(388685), n(361932), n(187205), n(415506);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -8,25 +8,29 @@ var r = n(255367),
     c = n(442837),
     u = n(481060),
     d = n(235820),
-    h = n(230711),
-    p = n(377171),
-    f = n(315174),
-    g = n(455199),
-    m = n(768943),
-    b = n(592125),
-    y = n(594174),
-    O = n(709054),
-    v = n(821020),
-    _ = n(370774),
-    C = n(739340),
-    j = n(207913),
-    S = n(553984),
-    x = n(333834),
-    E = n(982183),
-    P = n(981631),
-    I = n(388032),
-    w = n(21678);
-let N = {
+    h = n(493773),
+    p = n(100527),
+    f = n(906732),
+    g = n(377171),
+    m = n(315174),
+    b = n(455199),
+    y = n(768943),
+    O = n(592125),
+    v = n(594174),
+    _ = n(70956),
+    C = n(709054),
+    j = n(821020),
+    S = n(370774),
+    x = n(862149),
+    E = n(739340),
+    P = n(207913),
+    I = n(553984),
+    w = n(333834),
+    N = n(982183),
+    Z = n(981631),
+    T = n(388032),
+    A = n(21678);
+let R = {
     controller: new a.Controller({
         value: 1,
         immediate: !0
@@ -35,45 +39,63 @@ let N = {
     bannerVisible: !1,
     communityInfoVisible: !1,
     shouldShowSubscribeTooltip: !1,
-    bannerVisibleHeight: E.$J,
+    bannerVisibleHeight: N.$J,
     hasGuildSubheader: !1,
     disableBannerAnimation: !0
 };
-function Z(e) {
+function D(e) {
     var t, n;
     let { includePanelSpacing: l } = e,
         {
             messages: a,
             hasMore: d,
-            loading: h,
-            hasLoadedEver: p
-        } = (0, c.cj)([g.Z], () => ({
-            messages: g.Z.getMentions(),
-            hasMore: g.Z.hasMore,
-            loading: g.Z.loading,
-            hasLoadedEver: g.Z.hasLoadedEver,
-            guildFilter: g.Z.guildFilter,
-            roleFilter: g.Z.roleFilter,
-            everyoneFilter: g.Z.everyoneFilter
+            loading: p,
+            hasLoadedEver: f
+        } = (0, c.cj)([b.Z], () => ({
+            messages: b.Z.getMentions(),
+            hasMore: b.Z.hasMore,
+            loading: b.Z.loading,
+            hasLoadedEver: b.Z.hasLoadedEver,
+            guildFilter: b.Z.guildFilter,
+            roleFilter: b.Z.roleFilter,
+            everyoneFilter: b.Z.everyoneFilter
         })),
-        [_, j] = i.useState(E.V5.ALL),
-        [I, Z] = i.useState(E.xM.UNREAD),
-        { messages: k, loadState: U, loadMore: G, hasLoadedEver: B } = (0, C.ZP)();
+        [g, S] = i.useState(N.V5.ALL),
+        [x, P] = i.useState(N.xM.UNREAD),
+        { messages: T, loadState: D, loadMore: V, hasLoadedEver: H } = (0, E.ZP)(),
+        F = (function (e) {
+            let [t, n] = (0, i.useState)(!0),
+                [r, l] = (0, i.useState)(!1);
+            return (
+                (0, h.ZP)(() => {
+                    let e = setTimeout(() => {
+                        l(!0);
+                    }, 0.25 * _.Z.Millis.SECOND);
+                    return () => {
+                        clearTimeout(e);
+                    };
+                }),
+                (0, i.useEffect)(() => {
+                    t && r && e && n(!1);
+                }, [e, t, r]),
+                t
+            );
+        })(H && f && !p && D !== E.jd.Loading);
     (0, i.useEffect)(() => {
-        if (!p) return void T(null);
-    }, [p]);
-    let V = (0, c.e7)([y.default], () => y.default.getCurrentUser()),
-        H = (0, c.e7)([m.Z], () => m.Z.getSavedMessages()),
-        F = i.useMemo(() => {
+        if (!f) return void L(null);
+    }, [f]);
+    let z = (0, c.e7)([v.default], () => v.default.getCurrentUser()),
+        W = (0, c.e7)([y.Z], () => y.Z.getSavedMessages()),
+        K = i.useMemo(() => {
             var e;
-            if (!B) return null;
-            if (_ === E.V5.BOOKMARKS)
-                return H.flatMap((e) => {
+            if (!H) return null;
+            if (g === N.V5.BOOKMARKS)
+                return W.flatMap((e) => {
                     let { message: t } = e;
                     return null != t
                         ? [
                               {
-                                  kind: E.fL.BOOKMARK,
+                                  kind: N.fL.BOOKMARK,
                                   message: t
                               }
                           ]
@@ -86,17 +108,15 @@ function Z(e) {
                         null == a
                             ? void 0
                             : a.map((e) => ({
-                                  kind: E.fL.MENTION,
+                                  kind: N.fL.MENTION,
                                   message: e
                               })))
                         ? e
                         : []),
-                    ...k
-                        .filter((e) => e.author.id !== (null == V ? void 0 : V.id))
-                        .map((e) => ({
-                            message: e,
-                            kind: E.fL.ALL_MESSAGES_CHANNEL
-                        }))
+                    ...T.filter((e) => e.author.id !== (null == z ? void 0 : z.id)).map((e) => ({
+                        message: e,
+                        kind: N.fL.ALL_MESSAGES_CHANNEL
+                    }))
                 ],
                 (e) => {
                     let { message: t } = e;
@@ -104,34 +124,34 @@ function Z(e) {
                 }
             ).filter((e) => {
                 let { message: t } = e;
-                return t.author.id !== (null == V ? void 0 : V.id) && O.default.age(t.id) < E.ib;
+                return t.author.id !== (null == z ? void 0 : z.id) && C.default.age(t.id) < N.ib;
             });
-            if (_ === E.V5.ALL) return t;
-            if (_ === E.V5.ANNOUNCEMENTS)
+            if (g === N.V5.ALL) return t;
+            if (g === N.V5.ANNOUNCEMENTS)
                 return null == t
                     ? void 0
                     : t.filter((e) => {
                           let { message: t } = e,
-                              n = b.Z.getChannel(t.channel_id);
-                          return (null == n ? void 0 : n.type) === P.d4z.GUILD_ANNOUNCEMENT;
+                              n = O.Z.getChannel(t.channel_id);
+                          return (null == n ? void 0 : n.type) === Z.d4z.GUILD_ANNOUNCEMENT;
                       });
-            if (_ === E.V5.MENTIONS)
+            if (g === N.V5.MENTIONS)
                 return null == t
                     ? void 0
                     : t.filter((e) => {
                           let { message: t } = e;
-                          return (null == V ? void 0 : V.id) != null && t.mentioned && t.mentions.includes(null == V ? void 0 : V.id);
+                          return (null == z ? void 0 : z.id) != null && t.mentioned && t.mentions.includes(null == z ? void 0 : z.id);
                       });
-            throw Error('Unknown filter: '.concat(_));
-        }, [_, a, V, H, k, B]),
-        z = I === E.xM.READ && _ === E.V5.ALL && !h && B,
-        { notificationCenterVariant: W } = v.L.useExperiment({ location: 'NotificationsInboxSidebar' }),
-        K = 'sidebar' === W && _ !== E.V5.ALL;
+            throw Error('Unknown filter: '.concat(g));
+        }, [g, a, z, W, T, H]),
+        Y = x === N.xM.READ && !F,
+        { notificationCenterVariant: q } = j.L.useExperiment({ location: 'NotificationsInboxSidebar' }),
+        Q = 'sidebar' === q && g !== N.V5.ALL;
     return (0, r.jsxs)('nav', {
-        className: o()(w.container, { [w.panelSpacing]: l }),
+        className: o()(A.container, { [A.panelSpacing]: l }),
         children: [
             (0, r.jsx)(
-                f.ZP,
+                m.ZP,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -159,9 +179,9 @@ function Z(e) {
                 })(
                     {
                         hasSubheader: !0,
-                        guild: E.F7
+                        guild: N.F7
                     },
-                    N
+                    R
                 )),
                 (n = n =
                     {
@@ -169,13 +189,13 @@ function Z(e) {
                             direction: 'horizontal',
                             gap: 4,
                             children: [
-                                'sidebar' === W &&
-                                    (0, r.jsx)(S.p, {
-                                        selectedFilter: _,
-                                        setSelectedFilter: j,
-                                        className: w.headerButton
+                                'sidebar' === q &&
+                                    (0, r.jsx)(I.p, {
+                                        selectedFilter: g,
+                                        setSelectedFilter: S,
+                                        className: A.headerButton
                                     }),
-                                (0, r.jsx)(M, {})
+                                (0, r.jsx)(B, {})
                             ]
                         })
                     }),
@@ -193,76 +213,44 @@ function Z(e) {
                       }),
                 t)
             ),
-            'popout' === W &&
-                (0, r.jsx)(S.Z, {
-                    selectedFilter: _,
-                    setSelectedFilter: j
+            'popout' === q &&
+                (0, r.jsx)(I.Z, {
+                    selectedFilter: g,
+                    setSelectedFilter: S
                 }),
-            z && (0, r.jsx)(D, {}),
-            K && (0, r.jsx)(L, { filter: _ }),
-            (0, r.jsx)(x.Z, {
-                className: w.messageList,
-                renderMessageGroup: R,
-                messages: F,
-                loading: h || U === C.jd.Loading,
-                analyticsName: 'Notifications Inbox',
+            g === N.V5.ALL && (0, r.jsx)(U, { canShow: Y }),
+            Q && (0, r.jsx)(G, { filter: g }),
+            (0, r.jsx)(w.Z, {
+                className: A.messageList,
+                renderMessageGroup: k,
+                messages: K,
+                loadingInitial: F,
+                loadingMore: D === E.jd.Loading || p,
                 listName: 'notifications-inbox',
                 loadMore: function (e) {
                     let t = null != a && a.length > 0 ? a[a.length - 1].id : null;
-                    d && !h && T(null, t), U !== C.jd.Done && U !== C.jd.Loading && G(e);
+                    d && !p && L(null, t), D !== E.jd.Done && D !== E.jd.Loading && V(e);
                 },
-                renderEmptyState: A,
-                setInboxReadState: Z,
-                ignoreGrouping: _ !== E.V5.ALL
+                renderLoadingState: M,
+                setInboxReadState: P,
+                ignoreGrouping: g !== N.V5.ALL
             })
         ]
     });
 }
-function T(e, t) {
-    let n = g.Z.guildFilter,
-        r = g.Z.roleFilter,
-        i = g.Z.everyoneFilter,
+function L(e, t) {
+    let n = b.Z.guildFilter,
+        r = b.Z.roleFilter,
+        i = b.Z.everyoneFilter,
         l = null;
-    null != e && null != n && (l = n === P.NgX.ALL_SERVERS ? null : e.getGuildId()), d.Z.fetchRecentMentions(t, P.DJj, l, r, i);
+    null != e && null != n && (l = n === Z.NgX.ALL_SERVERS ? null : e.getGuildId()), d.Z.fetchRecentMentions(t, Z.DJj, l, r, i);
 }
-function A() {
-    return (0, r.jsx)('div', {
-        className: w.emptyStateContainer,
-        children: (0, r.jsxs)(u.Kqy, {
-            gap: 24,
-            align: 'center',
-            children: [
-                (0, r.jsxs)(u.Kqy, {
-                    gap: 16,
-                    align: 'center',
-                    children: [
-                        (0, r.jsx)(u.xx7, {
-                            size: 'custom',
-                            height: 40,
-                            width: 40,
-                            color: u.TVs.colors.BG_MOD_STRONG
-                        }),
-                        (0, r.jsx)(u.Text, {
-                            variant: 'text-sm/medium',
-                            color: P.tPk.TEXT_MUTED,
-                            style: { textAlign: 'center' },
-                            children: I.intl.string(I.t['O+racX'])
-                        })
-                    ]
-                }),
-                (0, r.jsx)(u.zxk, {
-                    onClick: _.j4,
-                    color: u.zxk.Colors.PRIMARY,
-                    style: { fontWeight: 600 },
-                    children: I.intl.string(I.t.klSpfn)
-                })
-            ]
-        })
-    });
+function M() {
+    return (0, r.jsx)(x.Z, {});
 }
-function R(e, t, n) {
+function k(e, t, n) {
     return (0, r.jsx)(
-        j.Z,
+        P.Z,
         {
             message: e[0],
             goToSidebar: t,
@@ -272,66 +260,69 @@ function R(e, t, n) {
         e[0].id
     );
 }
-function D() {
-    let [e, t] = i.useState(!1),
+function U(e) {
+    let { canShow: t } = e,
         [n, l] = i.useState(!1),
-        o = n ? u.kSu : u.kmB;
-    return e
-        ? null
-        : (0, r.jsxs)(u.P3F, {
-              onClick: () => t(!0),
-              onMouseEnter: () => l(!0),
-              onMouseLeave: () => l(!1),
-              className: w.caughtUpContainer,
-              children: [
-                  (0, r.jsx)(u.Text, {
-                      variant: n ? 'text-sm/medium' : 'text-sm/normal',
-                      color: 'text-positive',
-                      className: w.caughtUpText,
-                      children: I.intl.string(I.t['6XMM+P'])
-                  }),
-                  (0, r.jsx)(o, {
-                      size: 'sm',
-                      className: w.caughtUpIcon,
-                      color: p.Z.TEXT_POSITIVE
-                  })
-              ]
-          });
+        [s, a] = i.useState(!1),
+        c = s ? u.kSu : u.kmB;
+    return (0, r.jsx)(u.P3F, {
+        onClick: () => l(!0),
+        onMouseEnter: () => a(!0),
+        onMouseLeave: () => a(!1),
+        className: o()(A.caughtUpContainer, { [A.hide]: !(!n && t) }),
+        children: (0, r.jsxs)('div', {
+            className: A.caughtUpContent,
+            children: [
+                (0, r.jsx)(u.Text, {
+                    variant: s ? 'text-sm/medium' : 'text-sm/normal',
+                    color: 'text-positive',
+                    className: A.caughtUpText,
+                    children: T.intl.string(T.t['6XMM+P'])
+                }),
+                (0, r.jsx)(c, {
+                    size: 'sm',
+                    className: A.caughtUpIcon,
+                    color: g.Z.TEXT_POSITIVE
+                })
+            ]
+        })
+    });
 }
-function L(e) {
+function G(e) {
     let { filter: t } = e;
     return (0, r.jsx)(
         u.X6q,
         {
             color: 'text-primary',
             variant: 'text-sm/semibold',
-            className: w.filterHeaderWrap,
-            children: E.by[t]
+            className: A.filterHeaderWrap,
+            children: N.by[t]
         },
         'filter-header'
     );
 }
-function M() {
-    let [e, t] = (0, i.useState)(!1);
+function B() {
+    let [e, t] = (0, i.useState)(!1),
+        { analyticsLocations: n } = (0, f.ZP)(p.Z.NOTIFICATIONS_INBOX);
     return (0, r.jsx)(u.ua7, {
         position: 'bottom',
         align: 'left',
-        text: I.intl.string(I.t.h850Sk),
+        text: T.intl.string(T.t.h850Sk),
         shouldShow: e,
         forceOpen: e,
         hideOnClick: !0,
-        children: (n) => {
-            let { onClick: i } = n;
+        children: (i) => {
+            let { onClick: l } = i;
             return (0, r.jsx)(u.P3F, {
-                className: w.headerButton,
+                className: A.headerButton,
                 onMouseEnter: () => t(!0),
                 onMouseLeave: () => t(!1),
                 onClick: () => {
-                    h.Z.open(P.oAB.NOTIFICATIONS, void 0), null == i || i();
+                    (0, S.j4)(n), null == l || l();
                 },
                 children: (0, r.jsx)(u.ewm, {
                     size: 'xs',
-                    color: e ? p.Z.INTERACTIVE_HOVER : p.Z.INTERACTIVE_NORMAL
+                    color: e ? g.Z.INTERACTIVE_HOVER : g.Z.INTERACTIVE_NORMAL
                 })
             });
         }

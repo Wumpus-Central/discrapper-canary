@@ -37,8 +37,8 @@ var _ = n(392750),
     D = n(496025),
     M = n(442954),
     z = n(633001),
-    B = n(702904),
-    U = n(178821),
+    U = n(702904),
+    B = n(178821),
     F = n(891401),
     G = n(958328),
     V = n(315384),
@@ -123,7 +123,7 @@ function el(e) {
                         id: 'performance',
                         name: 'Performance',
                         group: Q.v0.DEVELOPMENT,
-                        render: () => (0, a.jsx)(U.ZP, {})
+                        render: () => (0, a.jsx)(B.ZP, {})
                     }),
                     e.push({
                         id: 'feedback',
@@ -239,7 +239,7 @@ function el(e) {
                         id: 'payments',
                         name: 'Payments',
                         group: Q.v0.BILLING,
-                        render: () => (0, a.jsx)(B.Z, {})
+                        render: () => (0, a.jsx)(U.Z, {})
                     }),
                     e.push({
                         id: 'subscriptions',

@@ -10,7 +10,7 @@ var r = n(255367),
     d = n(490236),
     f = n(481060),
     _ = n(408886),
-    p = n(789549),
+    p = n(671147),
     h = n(388032),
     m = n(936631);
 function g(e, t, n) {
@@ -224,7 +224,7 @@ function A(e) {
                         children: [
                             null != g &&
                                 (0, r.jsx)(f.ua7, {
-                                    text: h.intl.string(h.t['0dU9Nz']),
+                                    text: h.intl.string(p.default['8QXO8v']),
                                     children: (e) =>
                                         (0, r.jsx)(
                                             f.zxk,
@@ -238,17 +238,32 @@ function A(e) {
                                                 ),
                                                 {
                                                     onClick: w,
-                                                    children: (0, r.jsx)(u.i, { size: 'xs' })
+                                                    className: m.iconButton,
+                                                    children: (0, r.jsx)(u.i, {
+                                                        size: 'xs',
+                                                        colorClass: m.iconWithHover
+                                                    })
                                                 }
                                             )
                                         )
                                 }),
                             k &&
-                                (0, r.jsx)(f.zxk, {
-                                    size: f.zxk.Sizes.ICON,
-                                    look: f.zxk.Looks.BLANK,
-                                    onClick: () => L(b),
-                                    children: (0, r.jsx)(d.X, { size: 'xs' })
+                                (0, r.jsx)(f.ua7, {
+                                    text: h.intl.string(p.default['rTik5+']),
+                                    children: (e) =>
+                                        (0, r.jsx)(
+                                            f.zxk,
+                                            y(E({}, e), {
+                                                size: f.zxk.Sizes.ICON,
+                                                look: f.zxk.Looks.BLANK,
+                                                onClick: () => L(b),
+                                                className: m.iconButton,
+                                                children: (0, r.jsx)(d.X, {
+                                                    size: 'xs',
+                                                    colorClass: m.iconWithHover
+                                                })
+                                            })
+                                        )
                                 })
                         ]
                     })

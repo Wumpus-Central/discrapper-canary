@@ -31,5 +31,6 @@ e.exports = {
     above: 'above_b5493b',
     below: 'below_b5493b',
     topCover: 'topCover_b5493b',
-    relative: 'relative_b5493b'
+    relative: 'relative_b5493b',
+    nitroGradientBackground: 'nitroGradientBackground_b5493b'
 };

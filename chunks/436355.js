@@ -6,7 +6,7 @@ var r = n(255367),
     o = n(271383),
     s = n(496675),
     c = n(796263),
-    u = n(463959),
+    u = n(130883),
     d = n(388032);
 function p(e) {
     let { channel: t, user: p, guild: h } = e,

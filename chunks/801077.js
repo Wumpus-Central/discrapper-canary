@@ -283,7 +283,7 @@ let ei = i().throttle(() => {
                     .orderBy([er, (e) => e.partiedMembers.length > 1, (e) => e.applicationStreams.length > 0, (e) => e.voiceChannels.length > 0, (e) => e.currentActivities.length > 0, (e) => e.isSpotifyActivity, (e) => e.priorityMembers.map((e) => e.user.username.toLowerCase()).join(' ')], ['asc', 'desc', 'desc', 'desc', 'desc', 'asc', 'asc'])
                     .value()
                     .filter((e) => {
-                        let t = e.partiedMembers.some((e) => _.Z.isBlocked(e.id)),
+                        let t = e.partiedMembers.some((e) => _.Z.isBlockedOrIgnored(e.id)),
                             n =
                                 0 !== e.voiceChannels.length &&
                                 e.voiceChannels.length > 0 &&

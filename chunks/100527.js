@@ -21,6 +21,7 @@ var r = (function (e) {
         (e.NEW_MESSAGE_COMPOSER = 'new message composer'),
         (e.NOTIFICATIONS = 'notifications'),
         (e.NOTIFICATION_CENTER = 'notification center'),
+        (e.NOTIFICATIONS_INBOX = 'notifications inbox'),
         (e.PUSH_NOTIFICATION = 'push notification'),
         (e.FRIEND_REQUEST_NOTIFICATION = 'friend request notification'),
         (e.FAMILY_CENTER = 'family center'),

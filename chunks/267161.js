@@ -40,7 +40,7 @@ var r = n(255367),
     k = n(918559),
     M = n(741764),
     U = n(388032),
-    G = n(524499),
+    G = n(916723),
     V = n(103609);
 function B(e) {
     for (var t = 1; t < arguments.length; t++) {

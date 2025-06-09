@@ -8,5 +8,7 @@ e.exports = {
     colorCircleSelectedTriangle: 'colorCircleSelectedTriangle_b29565',
     hexInputContainer: 'hexInputContainer_b29565',
     hexInput: 'hexInput_b29565',
-    trailingIcons: 'trailingIcons_b29565'
+    trailingIcons: 'trailingIcons_b29565',
+    iconWithHover: 'iconWithHover_b29565',
+    iconButton: 'iconButton_b29565'
 };

@@ -56,6 +56,6 @@ function c() {
     let { pathname: t } = (0, l.TH)();
     return t.startsWith(p.Z5c.NOTIFICATIONS_INBOX());
 }
-function I() {
-    d.Z.open(p.oAB.NOTIFICATIONS, void 0);
+function I(t) {
+    d.Z.open(p.oAB.NOTIFICATIONS, void 0, { analyticsLocations: t });
 }

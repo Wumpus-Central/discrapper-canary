@@ -69,9 +69,6 @@ function v(e, t) {
 }
 let I = new o.Z('VoiceFilterManager');
 class S extends a.Z {
-    loadNativeModule() {
-        (0, p.r5)();
-    }
     handleVoiceFilterRequestSwitch(e) {
         let { newVoiceFilterId: t, analyticsContext: n } = e;
         if (__OVERLAY__) return;
@@ -213,7 +210,6 @@ class S extends a.Z {
                 VOICE_FILTER_DOWNLOAD_FAILED: this.handleVoiceFilterDownloadFailed,
                 VOICE_FILTER_DOWNLOAD_CANCELED: this.handleVoiceFilterDownloadCanceled,
                 VOICE_FILTER_FILE_READY: this.handleVoiceFilterFileReady,
-                VOICE_FILTER_LOAD_MODULE: this.loadNativeModule,
                 VOICE_FILTER_APPLIED: this.handleVoiceFilterApplied,
                 VOICE_FILTER_APPLY_FAILED: this.handleVoiceFilterApplyFailed,
                 VOICE_FILTER_CATALOG_FETCH_SUCCESS: this.handleVoiceFilterCatalogFetch

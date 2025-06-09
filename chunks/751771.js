@@ -21,7 +21,7 @@ function O(e) {
     let t = new Set(),
         n = null == s || u === S.Iq.EMBEDDED_APPLICATION ? void 0 : s.id,
         l = (0, I.rh)(E, n);
-    for (let e of (null == l || N.Z.isBlocked(l.id) || t.add(l.id), v.Z.getUserAffinities())) t.add(e.otherUserId);
+    for (let e of (null == l || N.Z.isBlockedOrIgnored(l.id) || t.add(l.id), v.Z.getUserAffinities())) t.add(e.otherUserId);
     let i = new Set();
     return (
         u === S.Iq.EMBEDDED_APPLICATION &&

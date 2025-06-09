@@ -38,8 +38,8 @@ var l,
     Z = n(751571),
     H = n(725380),
     Y = n(581883),
-    W = n(743498),
-    K = n(875527),
+    W = n(875527),
+    K = n(420439),
     z = n(626135),
     q = n(12647),
     Q = n(70956),
@@ -958,12 +958,21 @@ function tJ(e) {
             ny());
     let t = tv();
     tk() && (tM() ? nz(em.iA.AUTOMATIC) : t.automaticAudioSubsystem && nq()),
-        (0, K.wt)({
+        (0, W.wt)({
             location: 'MediaEngineStore',
             autoTrackExposure: !1
         }) &&
             null !== t.mostRecentlyRequestedVoiceFilter &&
-            (0, W.J_)(),
+            (0, X.isDesktop)() &&
+            (K.Z.getLastInitAttemptMayHaveCrashed()
+                ? (y.Z.dispatch({
+                      type: 'AUDIO_SET_SELF_MUTE',
+                      mute: !0,
+                      context: em.Yn.DEFAULT,
+                      playSoundEffect: !0
+                  }),
+                  tG({ mostRecentlyRequestedVoiceFilter: null }))
+                : n(358820).r5()),
         tq();
 }
 function t$(e) {

@@ -23,7 +23,7 @@ function x(e) {
         },
         _ = (e, l) => {
             (0, i.ZDy)(async () => {
-                let { default: i } = await n.e('61860').then(n.bind(n, 673078));
+                let { default: i } = await n.e('95925').then(n.bind(n, 673078));
                 return (n) =>
                     (0, r.jsx)(
                         i,

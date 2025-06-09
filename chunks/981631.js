@@ -1642,7 +1642,8 @@ let e7 = 128,
         GUILD_ONBOARDING_EXAMPLES: 'https://support.discord.com/hc/en-us/articles/10394859532823',
         ROLE_SUBSCRIPTION_STORE_PAGE: (e) => 'https:'.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/servers/').concat(e),
         INVITES_HELP: 'https://support.discord.com/hc/en-us/articles/208866998-Invites-101',
-        SAFETY_CENTER: ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/safetycenter')
+        SAFETY_CENTER: ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/safetycenter'),
+        VOICE_FILTERS_BLOG: 'https://discord.com/blog/voice-filters'
     }),
     tv = Object.freeze({
         DEVELOPER_PORTAL: '/developers',
@@ -4116,6 +4117,11 @@ var n_ = (function (e) {
             (e.CHANNEL_ICON_EDIT_PROGRESSED = 'channel_icon_edit_progressed'),
             (e.GDM_EDIT_INTERACTED = 'gdm_edit_interacted'),
             (e.CAN_OPEN_URL_REQUESTED = 'can_open_url_requested'),
+            (e.NOTIFICATIONS_INBOX_OPENED = 'notifications_inbox_opened'),
+            (e.NOTIFICATIONS_INBOX_ITEM_INTERACTED = 'notifications_inbox_item_interacted'),
+            (e.NOTIFICATIONS_INBOX_SECTION_INTERACTED = 'notifications_inbox_section_interacted'),
+            (e.NOTIFICATIONS_INBOX_UNMOUNTED = 'notifications_inbox_unmounted'),
+            (e.NOTIFICATIONS_INBOX_LOADED = 'notifications_inbox_loaded'),
             (e.MASKED_LINK_MODAL_CLICKED = 'masked_link_modal_clicked'),
             e
         );

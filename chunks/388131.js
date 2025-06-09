@@ -1,43 +1,43 @@
 n.d(t, {
-    A: () => _,
+    A: () => I,
     default: () => j
 }),
     n(388685);
-var r = n(255367),
-    l = n(73800),
-    i = n(442837),
-    a = n(481060),
-    o = n(741361),
-    d = n(881052),
-    s = n(911969),
+var i = n(255367),
+    s = n(73800),
+    l = n(442837),
+    r = n(481060),
+    a = n(741361),
+    o = n(881052),
+    d = n(911969),
     c = n(185413),
-    u = n(600164),
-    h = n(313201),
-    x = n(592125),
-    g = n(430824),
-    m = n(700785),
-    p = n(146085),
-    b = n(71080),
-    k = n(388032),
-    C = n(441609);
-function _(e, t) {
+    h = n(600164),
+    u = n(313201),
+    p = n(592125),
+    m = n(430824),
+    g = n(700785),
+    C = n(146085),
+    N = n(71080),
+    x = n(388032),
+    E = n(441609);
+function I(e, t) {
     return {
         id: e,
         type: t,
-        deny: m.Hn,
-        allow: p.yP
+        deny: g.Hn,
+        allow: C.yP
     };
 }
 function j(e) {
-    let { transitionState: t, onClose: n, channelId: m } = e,
-        j = (0, h.Dt)(),
-        R = (0, i.e7)([x.Z], () => x.Z.getChannel(m)),
-        S = (0, i.e7)([g.Z], () => g.Z.getGuild(null == R ? void 0 : R.getGuildId())),
-        [E, w] = l.useState({}),
-        [y, A] = l.useState(!1),
-        [N, f] = l.useState(null);
-    if (null == R || null == S) return null;
-    let M = async () => {
+    let { transitionState: t, onClose: n, channelId: g } = e,
+        j = (0, u.Dt)(),
+        b = (0, l.e7)([p.Z], () => p.Z.getChannel(g)),
+        f = (0, l.e7)([m.Z], () => m.Z.getGuild(null == b ? void 0 : b.getGuildId())),
+        [O, v] = s.useState({}),
+        [S, A] = s.useState(!1),
+        [y, _] = s.useState(null);
+    if (null == b || null == f) return null;
+    let T = async () => {
         A(!0);
         try {
             await (function (e, t) {
@@ -48,75 +48,75 @@ function j(e) {
                     })
                     .map((e) => {
                         let { row: t } = e;
-                        return t.rowType === b.aC.ROLE ? _(t.id, s.BN.ROLE) : _(t.id, s.BN.MEMBER);
+                        return t.rowType === N.aC.ROLE ? I(t.id, d.BN.ROLE) : I(t.id, d.BN.MEMBER);
                     });
-                return (0, o.hw)(e.id, n, !0);
-            })(R, E),
+                return (0, a.hw)(e.id, n, !0);
+            })(b, O),
                 n();
         } catch (t) {
-            let e = new d.Hx(t);
-            A(!1), f(e);
+            let e = new o.Hx(t);
+            A(!1), _(e);
         }
     };
-    return (0, r.jsxs)(a.Y0X, {
+    return (0, i.jsxs)(r.Y0X, {
         transitionState: t,
         'aria-labelledby': j,
-        size: a.CgR.SMALL,
-        className: C.modalRoot,
+        size: r.CgR.SMALL,
+        className: E.modalRoot,
         parentComponent: 'AddModeratorsModal',
         children: [
-            (0, r.jsxs)(a.xBx, {
+            (0, i.jsxs)(r.xBx, {
                 separator: !1,
-                direction: u.Z.Direction.VERTICAL,
-                align: u.Z.Align.CENTER,
-                className: C.header,
+                direction: h.Z.Direction.VERTICAL,
+                align: h.Z.Align.CENTER,
+                className: E.header,
                 children: [
-                    (0, r.jsx)(a.X6q, {
+                    (0, i.jsx)(r.X6q, {
                         variant: 'heading-xl/semibold',
-                        children: k.intl.string(k.t.dMJ3Y2)
+                        children: x.intl.string(x.t.dMJ3Y2)
                     }),
-                    (0, r.jsxs)(a.Text, {
+                    (0, i.jsxs)(r.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        className: C.headerSubtitle,
+                        className: E.headerSubtitle,
                         children: [
-                            (0, r.jsx)(a.ewx, {
+                            (0, i.jsx)(r.ewx, {
                                 size: 'xs',
                                 color: 'currentColor',
-                                className: C.headerSubtitleIcon
+                                className: E.headerSubtitleIcon
                             }),
-                            R.name
+                            b.name
                         ]
                     })
                 ]
             }),
-            (0, r.jsx)(c.U, {
-                guild: S,
-                channel: R,
-                permission: p.yP,
-                pendingAdditions: E,
-                setPendingAdditions: w
+            (0, i.jsx)(c.U, {
+                guild: f,
+                channel: b,
+                permission: C.yP,
+                pendingAdditions: O,
+                setPendingAdditions: v
             }),
-            null != N
-                ? (0, r.jsx)(a.Text, {
-                      className: C.error,
+            null != y
+                ? (0, i.jsx)(r.Text, {
+                      className: E.error,
                       variant: 'text-xs/normal',
                       color: 'text-danger',
-                      children: N.getAnyErrorMessage()
+                      children: y.getAnyErrorMessage()
                   })
                 : null,
-            (0, r.jsxs)(a.mzw, {
+            (0, i.jsxs)(r.mzw, {
                 children: [
-                    (0, r.jsx)(a.zxk, {
-                        onClick: M,
-                        submitting: y,
-                        children: k.intl.string(k.t.OYkgVl)
+                    (0, i.jsx)(r.zxk, {
+                        onClick: T,
+                        submitting: S,
+                        children: x.intl.string(x.t.OYkgVl)
                     }),
-                    (0, r.jsx)(a.zxk, {
-                        look: a.zxk.Looks.LINK,
-                        color: a.zxk.Colors.PRIMARY,
+                    (0, i.jsx)(r.zxk, {
+                        look: r.zxk.Looks.LINK,
+                        color: r.zxk.Colors.PRIMARY,
                         onClick: n,
-                        children: k.intl.string(k.t['ETE/oK'])
+                        children: x.intl.string(x.t['ETE/oK'])
                     })
                 ]
             })

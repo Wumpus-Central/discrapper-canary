@@ -188,14 +188,15 @@ let I = r.memo((e) => {
 I.displayName = 'PremiumPerkCard';
 let N = r.forwardRef((e, t) => {
     var n;
-    let { title: r, titleClassName: s = '', subtitle: a = '', description: o = '', descriptionCta: c = '', isPremiumGetCta: u, onCtaClick: m, onMouseEnter: g, className: p, perkComponent: f, cardVariant: b, cardType: C, onClick: j, backgroundImage: O, pillText: v, perkImage: T, imageOverlayText: I } = e,
-        N = C === _.gM.CARD_CAROUSEL_FIRST_ROW || C === _.gM.CARD_CAROUSEL_SECOND_ROW || C === _.gM.CARD_CAROUSEL_THIRD_ROW,
-        y = '' !== o || '' !== c || ('' !== a && b === _.zW.REWARD),
-        A = (0, h._)(b);
+    let { title: r, titleClassName: s = '', subtitle: a = '', description: o = '', descriptionCta: c = '', isPremiumGetCta: u, onCtaClick: m, onMouseEnter: g, className: p, perkComponent: f, cardVariant: b, cardType: C, onClick: j, backgroundImage: O, pillText: v, perkImage: T, imageOverlayText: I, hasNitroGradientBackground: N } = e,
+        y = C === _.gM.CARD_CAROUSEL_FIRST_ROW || C === _.gM.CARD_CAROUSEL_SECOND_ROW || C === _.gM.CARD_CAROUSEL_THIRD_ROW,
+        A = '' !== o || '' !== c || ('' !== a && b === _.zW.REWARD),
+        P = (0, h._)(b);
     return (0, i.jsxs)(d.P3F, {
-        className: l()(S.card, p, null == (n = A.cardContainer) ? void 0 : n.className, {
+        className: l()(S.card, p, null == (n = P.cardContainer) ? void 0 : n.className, {
             [S.clickable]: null != j,
-            [S.hideOverflow]: N
+            [S.hideOverflow]: y,
+            [S.nitroGradientBackground]: N
         }),
         onMouseEnter: g,
         style: { backgroundImage: null != O ? 'url('.concat(O, ')') : void 0 },
@@ -213,7 +214,7 @@ let N = r.forwardRef((e, t) => {
                 titleClassName: s,
                 subtitle: a,
                 perkImage: T,
-                isCarousel: N,
+                isCarousel: y,
                 descriptionCta: c,
                 onCtaClick: m,
                 perkComponent: f,
@@ -221,7 +222,7 @@ let N = r.forwardRef((e, t) => {
                 cardVariant: b,
                 imageOverlayText: I
             }),
-            y &&
+            A &&
                 (0, i.jsx)(E.Z, {
                     title: r,
                     titleClassName: s,

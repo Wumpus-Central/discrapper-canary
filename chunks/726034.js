@@ -21,7 +21,7 @@ var r = n(255367),
     v = n(981631),
     I = n(921944),
     S = n(474936),
-    T = n(789549),
+    T = n(671147),
     A = n(388032),
     N = n(882903);
 function C(e) {
@@ -42,12 +42,15 @@ function P(e) {
     let { markAsDismissed: t } = e;
     return (0, r.jsx)(l.zxk, {
         className: N.closeButton,
-        size: l.zxk.Sizes.ICON,
+        size: l.zxk.Sizes.MIN,
         look: l.zxk.Looks.BLANK,
         onClick: () => {
             null == t || t(I.L.USER_DISMISS), (0, d.Ll)();
         },
-        children: (0, r.jsx)(l.Dio, { size: 'sm' })
+        children: (0, r.jsx)(l.Dio, {
+            size: 'xs',
+            colorClass: N.closeIconWithHover
+        })
     });
 }
 function R() {
@@ -58,7 +61,15 @@ function R() {
                 variant: 'text-md/bold',
                 children: A.intl.string(T.default['AsmU8/'])
             }),
-            (0, r.jsx)(l.SrA, { size: 'md' }),
+            (0, r.jsx)('div', {
+                className: N.nitroIconContainer,
+                children: (0, r.jsx)(l.SrA, {
+                    size: 'custom',
+                    height: 20,
+                    width: 20,
+                    colorClass: N.nitroIconWithHover
+                })
+            }),
             (0, r.jsx)(P, {})
         ]
     });

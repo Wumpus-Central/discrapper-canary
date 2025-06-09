@@ -1103,9 +1103,10 @@ function Y(e) {
     });
 }
 function W(e) {
-    let { onClose: t } = e;
-    return (0, i.jsxs)(d.I, {
-        onClose: t,
+    let { transitionState: t, onClose: n } = e;
+    return (0, i.jsxs)(d.IX, {
+        transitionState: t,
+        onClose: n,
         children: [
             (0, i.jsx)(m.O, {
                 title: 'Modal',
@@ -1116,12 +1117,12 @@ function W(e) {
                     {
                         variant: 'secondary',
                         text: 'Cancel',
-                        onClick: t
+                        onClick: n
                     },
                     {
                         variant: 'primary',
                         text: 'Submit',
-                        onClick: t
+                        onClick: n
                     }
                 ]
             })

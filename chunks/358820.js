@@ -137,7 +137,7 @@ function R(e) {
 }
 async function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-    if (!b.Z.isNativeModuleLoaded()) return void A.warn('Voice Filter apply ignored, module not loaded.');
+    await M();
     let n = performance.now();
     try {
         let r = m.ZP.getVoiceFilters();
