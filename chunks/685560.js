@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733);
+n.d(t, { Z: () => T }), n(388685), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733);
 var a = n(255367),
     r = n(913527),
     l = n.n(r),
@@ -51,7 +51,13 @@ async function O(e, t, n) {
         (0, d.C0)(e),
         (0, x.Fm)(e, !0);
 }
-function E() {
+async function E(e) {
+    await s.tn.post({
+        url: g.ANM.SEND_POWERUPS_SYSTEM_MESSAGE(e),
+        rejectWithError: !0
+    });
+}
+function T() {
     var e;
     let t = (0, i.e7)([v.Z], () => v.Z.getGuildId()),
         n = (0, i.e7)([f.Z], () => {
@@ -196,6 +202,22 @@ function E() {
                                 e
                             )
                         )
+                    ]
+                }),
+                (0, a.jsxs)('div', {
+                    className: j.section,
+                    children: [
+                        (0, a.jsx)(c.Text, {
+                            variant: 'eyebrow',
+                            className: j.header,
+                            children: 'Send Powerups System Message'
+                        }),
+                        (0, a.jsx)(c.zxk, {
+                            onClick: () => {
+                                E(t);
+                            },
+                            children: 'Send System Message'
+                        })
                     ]
                 })
             ]

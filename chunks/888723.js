@@ -9,6 +9,7 @@ e.exports = {
     noLimitsBackground: 'noLimitsBackground_abac7b',
     emojisBackground: 'emojisBackground_abac7b',
     permadecosBackground: 'permadecosBackground_abac7b',
+    voiceFiltersBackground: 'voiceFiltersBackground_abac7b',
     bentoSideGradient: 'bentoSideGradient_abac7b',
     largeBoxContainer: 'largeBoxContainer_abac7b',
     largeBoxArtContainer: 'largeBoxArtContainer_abac7b',
@@ -16,6 +17,8 @@ e.exports = {
     mediumBoxVideo: 'mediumBoxVideo_abac7b',
     smallBoxVideo: 'smallBoxVideo_abac7b',
     largeTextBox: 'largeTextBox_abac7b',
+    header: 'header_abac7b',
+    description: 'description_abac7b',
     largeBoxHeader: 'largeBoxHeader_abac7b',
     bentoBoxButton: 'bentoBoxButton_abac7b',
     bentoHeader: 'bentoHeader_abac7b',
@@ -28,5 +31,6 @@ e.exports = {
     mediumBoxHeader: 'mediumBoxHeader_abac7b',
     smallBoxHeader: 'smallBoxHeader_abac7b',
     bentoBoxButtonWhite: 'bentoBoxButtonWhite_abac7b',
-    bentoBoxButtonBrand: 'bentoBoxButtonBrand_abac7b'
+    bentoBoxButtonBrand: 'bentoBoxButtonBrand_abac7b',
+    badge: 'badge_abac7b'
 };

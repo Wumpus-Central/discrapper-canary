@@ -219,6 +219,7 @@ function I(e) {
             children: (0, r.jsx)(u.Den, {
                 className: o()(j.messagesPopout, I),
                 onScroll: M,
+                fade: !0,
                 ref: T,
                 children: (0, r.jsx)(c.bG, {
                     navigator: A,

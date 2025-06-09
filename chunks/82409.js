@@ -188,6 +188,7 @@ function D(e) {
                         children: (0, r.jsxs)(u.Kqy, {
                             direction: 'horizontal',
                             gap: 4,
+                            style: { marginRight: -4 },
                             children: [
                                 'sidebar' === q &&
                                     (0, r.jsx)(I.p, {

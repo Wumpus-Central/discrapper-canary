@@ -1382,6 +1382,7 @@ let eh = '@me',
         SCHEDULED_MESSAGE: (e) => '/users/@me/scheduled-messages/'.concat(e),
         HOLIDAY_REDEEM_PRIZE: '/holidays/redeem-prize',
         APPLIED_BOOST_MODIFY_END_DATE: (e) => '/debug/applied-boosts/'.concat(e, '/ends-at'),
+        SEND_POWERUPS_SYSTEM_MESSAGE: (e) => '/guilds/'.concat(e, '/powerups-system-message'),
         SAFETY_FLOWS_TASK: '/safety-flows/task',
         VOICE_FILTERS_CATALOG: '/voice-filters/catalog'
     }),

@@ -1,7 +1,7 @@
 n.d(t, {
-    NA: () => Z,
-    ZP: () => w,
-    y$: () => D
+    NA: () => U,
+    ZP: () => V,
+    y$: () => M
 });
 var i,
     r,
@@ -11,109 +11,182 @@ var i,
     o = n(300284),
     c = n(526167),
     d = n(63063),
-    u = n(981631),
-    m = n(526761),
-    g = n(388032),
-    p = n(509614),
-    h = n(880511),
-    f = n(985443),
-    b = n(612253),
-    _ = n(872532),
-    x = n(91342),
-    E = n(181708),
-    C = n(290650),
-    j = n(751125),
-    O = n(357003),
-    S = n(904505),
-    v = n(712626),
-    T = n(386014),
-    I = n(845571),
-    N = n(220046),
-    y = n(385874),
-    A = n(371000),
-    P = n(377679),
-    R = n(825087),
-    D = (((i = {}).SMALL = 'small'), (i.MEDIUM = 'medium'), (i.LARGE = 'large'), i),
-    Z = (((r = {}).NEW_APP_STYLES = 'newAppStyles'), (r.REFERRAL_PROGRAM = 'referralProgram'), (r.SERVER_PROFILES = 'serverProfiles'), (r.SHOW_YOUR_STYLE = 'showYourStyle'), (r.YOUR_SPACE = 'yourSpace'), (r.EMOJIS = 'emojis'), (r.NO_LIMITS = 'noLimits'), (r.PERMADECOS = 'permadecos'), r);
-let w = () => {
+    u = n(963590),
+    m = n(981631),
+    g = n(526761),
+    p = n(388032),
+    h = n(509614),
+    f = n(880511),
+    b = n(985443),
+    _ = n(612253),
+    x = n(872532),
+    E = n(91342),
+    C = n(181708),
+    j = n(290650),
+    O = n(751125),
+    S = n(357003),
+    v = n(904505),
+    T = n(712626),
+    I = n(386014),
+    N = n(845571),
+    y = n(220046),
+    A = n(385874),
+    P = n(371000),
+    R = n(310960),
+    D = n(815581),
+    Z = n(479390),
+    w = n(377679),
+    k = n(825087);
+function L(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            i = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (i = i.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: i,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = i);
+            });
+    }
+    return e;
+}
+function B(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+var M = (((i = {}).SMALL = 'small'), (i.MEDIUM = 'medium'), (i.LARGE = 'large'), i),
+    U = (((r = {}).NEW_APP_STYLES = 'newAppStyles'), (r.REFERRAL_PROGRAM = 'referralProgram'), (r.SERVER_PROFILES = 'serverProfiles'), (r.SHOW_YOUR_STYLE = 'showYourStyle'), (r.YOUR_SPACE = 'yourSpace'), (r.EMOJIS = 'emojis'), (r.NO_LIMITS = 'noLimits'), (r.PERMADECOS = 'permadecos'), (r.VOICE_FILTERS = 'voiceFilters'), r);
+let V = () => {
     let { analyticsLocations: e } = (0, a.ZP)(l.Z.PREMIUM_MARKETING_BENTO_BOX),
         t = (0, o.Z)({
-            scrollPosition: m.Y_.TRY_IT_OUT,
+            scrollPosition: g.Y_.TRY_IT_OUT,
             analyticsLocations: e
         }),
         n = (0, c.rO)(),
-        i = d.Z.getArticleURL(u.BhN.REFERRAL_PROGRAM);
+        i = d.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM),
+        r = (0, u.Z)({ location: 'WhatsNewSection' });
     return {
-        whatsNewBoxes: {
-            permadecos: {
-                name: 'permadecos',
-                title: g.intl.string(g.t['57ngoq']),
-                description: g.intl.string(g.t.piFFjY),
-                descriptionCta: g.intl.string(g.t.jVcuVV),
-                previewImage: O.Z,
-                onClick: t,
-                videoUrl: O.Z,
-                size: 'large'
-            },
-            serverProfiles: {
-                name: 'serverProfiles',
-                title: g.intl.string(g.t.I9TYMj),
-                description: g.intl.string(g.t.HMSHeH),
-                descriptionCta: g.intl.string(g.t.jVcuVV),
-                onClick: t,
-                previewImage: _,
-                videoUrl: n ? I.ZP : N.ZP,
-                size: 'medium'
-            },
-            referralProgram: {
-                name: 'referralProgram',
-                title: g.intl.string(g.t.tPY4o6),
-                description: g.intl.format(g.t.jRPQUF, { learnMoreLink: i }),
-                previewImage: v.Z,
-                videoUrl: n ? S.ZP : T.ZP,
-                size: 'medium'
+        whatsNewBoxes: B(
+            L(
+                B(
+                    L(
+                        {},
+                        r && {
+                            voiceFilters: {
+                                name: 'voiceFilters',
+                                title: p.intl.format(p.t.iAzLOj, {}),
+                                description: p.intl.format(p.t['NT0/pa'], { learnMoreLink: m.EYA.VOICE_FILTERS_BLOG }),
+                                descriptionCta: p.intl.string(p.t.jVcuVV),
+                                previewImage: D.Z,
+                                videoUrl: n ? R.Z : Z.Z,
+                                size: 'large',
+                                badgeText: p.intl.string(p.t.EYxi0t)
+                            }
+                        }
+                    ),
+                    {
+                        permadecos: {
+                            name: 'permadecos',
+                            title: p.intl.string(p.t['57ngoq']),
+                            description: p.intl.string(p.t.piFFjY),
+                            descriptionCta: p.intl.string(p.t.jVcuVV),
+                            previewImage: S.Z,
+                            onClick: t,
+                            videoUrl: S.Z,
+                            size: r ? 'medium' : 'large'
+                        }
+                    }
+                ),
+                !r && {
+                    serverProfiles: {
+                        name: 'serverProfiles',
+                        title: p.intl.string(p.t.I9TYMj),
+                        description: p.intl.string(p.t.HMSHeH),
+                        descriptionCta: p.intl.string(p.t.jVcuVV),
+                        onClick: t,
+                        previewImage: x,
+                        videoUrl: n ? N.ZP : y.ZP,
+                        size: 'medium'
+                    }
+                }
+            ),
+            {
+                referralProgram: {
+                    name: 'referralProgram',
+                    title: p.intl.string(p.t.tPY4o6),
+                    description: p.intl.format(p.t.jRPQUF, { learnMoreLink: i }),
+                    previewImage: T.Z,
+                    videoUrl: n ? v.ZP : I.ZP,
+                    size: 'medium'
+                }
             }
-        },
+        ),
         bestOfBoxes: {
             showYourStyle: {
                 name: 'showYourStyle',
-                title: g.intl.string(g.t.Ij3Zmp),
-                description: g.intl.string(g.t.UsOUxc),
-                descriptionCta: g.intl.string(g.t.jVcuVV),
-                previewImage: b,
+                title: p.intl.string(p.t.Ij3Zmp),
+                description: p.intl.string(p.t.UsOUxc),
+                descriptionCta: p.intl.string(p.t.jVcuVV),
+                previewImage: _,
                 onClick: t,
-                videoUrl: n ? y.Z : A.Z,
+                videoUrl: n ? A.Z : P.Z,
                 size: 'large'
             },
             yourSpace: {
                 name: 'yourSpace',
-                title: g.intl.string(g.t.Wme3nZ),
-                description: g.intl.string(g.t['/aAIqa']),
-                descriptionCta: g.intl.string(g.t.jVcuVV),
-                previewImage: f,
+                title: p.intl.string(p.t.Wme3nZ),
+                description: p.intl.string(p.t['/aAIqa']),
+                descriptionCta: p.intl.string(p.t.jVcuVV),
+                previewImage: b,
                 onClick: () => {
-                    s.Z.open(u.oAB.APPEARANCE, null, {
+                    s.Z.open(m.oAB.APPEARANCE, null, {
                         openWithoutBackstack: !0,
                         analyticsLocations: e
                     });
                 },
-                videoUrl: n ? P.Z : R.Z,
+                videoUrl: n ? w.Z : k.Z,
                 size: 'large'
             },
             emojis: {
                 name: 'emojis',
-                title: g.intl.string(g.t.zY5PPT),
-                description: g.intl.string(g.t.R5Xag4),
-                previewImage: p,
-                videoUrl: n ? x.ZP : E.ZP,
+                title: p.intl.string(p.t.zY5PPT),
+                description: p.intl.string(p.t.R5Xag4),
+                previewImage: h,
+                videoUrl: n ? E.ZP : C.ZP,
                 size: 'medium'
             },
             noLimits: {
                 name: 'noLimits',
-                title: g.intl.string(g.t['6b3ydH']),
-                description: g.intl.string(g.t['Y+IJys']),
-                previewImage: h,
-                videoUrl: n ? C.ZP : j.ZP,
+                title: p.intl.string(p.t['6b3ydH']),
+                description: p.intl.string(p.t['Y+IJys']),
+                previewImage: f,
+                videoUrl: n ? j.ZP : O.ZP,
                 size: 'medium'
             }
         }

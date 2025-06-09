@@ -111,7 +111,7 @@ let m = 'data-client-themes',
                         ';\n      '
                     )
                     .concat(p.ld, ': ')
-                    .concat(f ? 30 : 40, '%\n    }');
+                    .concat(f ? 30 : 40, '%;\n      --bg-overlay-selected: unset;\n      --bg-overlay-hover: unset;\n      --bg-overlay-active: unset;\n    }');
             }, [n, i, s, e, t])
         );
     },
