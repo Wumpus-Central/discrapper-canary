@@ -1,0 +1,1 @@
+e.exports = JSON.parse('{"8ZcEfn":"Culori","AsmU8/":"Personalizează-ți tema","xRdYAQ":"Temele personalizate [Beta] nu sunt disponibile pe mobil.","2hAz8f":"Personalizează-ți tema","23QUzs":"Nou! Teme personalizate","TRCE4u":"Ai combinații nesfârșite de culori pe care să le folosești cum simți tu. Încearcă-le cu Nitro."}');

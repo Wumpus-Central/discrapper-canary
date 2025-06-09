@@ -1,0 +1,1 @@
+o.exports = JSON.parse('{"8ZcEfn":"Kolory","AsmU8/":"Spersonalizuj swój motyw","xRdYAQ":"Niestandardowe motywy [beta] nie są dostępne w wersji mobilnej.","2hAz8f":"Spersonalizuj swój motyw","23QUzs":"Nowość! Niestandardowe motywy","TRCE4u":"Dopasuj motyw do nastroju dzięki niekończącym się kombinacjom kolorów. Wypróbuj teraz, tylko z Nitro."}');

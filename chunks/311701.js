@@ -1,1 +1,0 @@
-o.exports = JSON.parse('{"8ZcEfn":"Colours","AsmU8/":"Customise your theme","xRdYAQ":"Custom themes [Beta] are not available on mobile.","2hAz8f":"Customise your theme","23QUzs":"New! Custom Themes","TRCE4u":"Match your mood with endless colour combinations. Try it now, only with Nitro."}');

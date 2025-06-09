@@ -1,1 +1,0 @@
-s.exports = JSON.parse('{"8ZcEfn":"Barvy","AsmU8/":"Přizpůsob si svůj motiv","xRdYAQ":"Vlastní motivy [Beta] nejsou na mobilu dostupné.","2hAz8f":"Přizpůsob si svůj motiv","23QUzs":"Nové! Vlastní motivy","TRCE4u":"Slaď svou náladu s\xA0nekonečnými barevnými kombinacemi. Zkus to hned teď, pouze s\xA0Nitrem."}');

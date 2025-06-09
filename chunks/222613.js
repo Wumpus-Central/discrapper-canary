@@ -1,0 +1,1 @@
+t.exports = JSON.parse('{"+tTysr":"Lägg till färg","8ZcEfn":"Färger","xlXkaG":"Färgintensitet","dZkwg4":"Gradientriktning","AsmU8/":"Anpassa ditt tema","xRdYAQ":"Anpassade teman [beta] är inte tillgängligt på mobilen.","2hAz8f":"Anpassa ditt tema","23QUzs":"Nytt! Anpassade teman","TRCE4u":"Matcha ditt humör med oändliga färgkombinationer. Pröva det nu, endast med Nitro."}');
