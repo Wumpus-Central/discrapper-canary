@@ -15781,9 +15781,10 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 }
 
 .chipletContainerInner__10651 {
+    align-items: center;
     background: var(--bg-mod-strong);
     border-radius: 4px;
-    display: inline-block;
+    display: inline-flex;
     line-height: 16px !important;
     padding: 0 4px;
     transition: background .1s ease-in-out;
@@ -15810,7 +15811,6 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 }
 
 .badge__10651 {
-    margin-bottom: -1px;
     margin-right: 2px;
     margin-top: 0
 }
