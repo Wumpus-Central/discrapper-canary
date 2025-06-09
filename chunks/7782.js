@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(621853),
     _ = n(892001),
     y = n(433355),
-    x = n(699516),
-    C = n(594174),
+    C = n(699516),
+    x = n(594174),
     v = n(768581),
     j = n(525541),
     O = n(981631),
@@ -105,7 +105,7 @@ let Z = (e) => {
     N = (e) => {
         var t;
         let { relationshipType: n, userId: i, showingBanner: l } = e,
-            a = null == (t = C.default.getUser(i)) ? void 0 : t.bot,
+            a = null == (t = x.default.getUser(i)) ? void 0 : t.bot,
             c = () => {
                 s.Z.addRelationship({
                     userId: i,
@@ -224,7 +224,7 @@ let Z = (e) => {
                 isOptimisticAccepted: f,
                 isOptimisticRejected: m
             } = (0, h.m)({
-                user: C.default.getUser(n),
+                user: x.default.getUser(n),
                 onError: l,
                 onAcceptSuccess: s,
                 onRejectSuccess: a
@@ -256,7 +256,7 @@ let Z = (e) => {
         let { userId: t, channel: n, showingBanner: i } = e,
             { channelId: o } = (0, f._)(),
             s = (0, a.e7)([p.Z], () => null != o && p.Z.isSpam(o), [o]),
-            c = (0, a.e7)([x.Z], () => x.Z.getRelationshipType(t), [t]),
+            c = (0, a.e7)([C.Z], () => C.Z.getRelationshipType(t), [t]),
             u = n.id === o,
             d = !l.tq && !u,
             h = !!l.tq || u || s;

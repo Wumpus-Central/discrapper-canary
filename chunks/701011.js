@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(255367),
     o = n(73800),
     i = n(442837),
@@ -15,11 +15,11 @@ var r = n(255367),
     v = n(426419),
     O = n(16609),
     j = n(781780),
-    h = n(325749),
-    y = n(981631),
-    x = n(921944),
-    g = n(578809);
-function P(e) {
+    y = n(325749),
+    h = n(981631),
+    P = n(921944),
+    x = n(578809);
+function g(e) {
     let { children: t } = e,
         { showsNewUserExperience: i, openNewUserExperienceModal: c } = (function () {
             let e = [l.z.ACTIVITY_POPOUT_NUX_MODAL],
@@ -62,7 +62,7 @@ function P(e) {
                                     (o = o =
                                         {
                                             onClickButton: () => {
-                                                i(x.L.USER_DISMISS), t.onClose();
+                                                i(P.L.USER_DISMISS), t.onClose();
                                             }
                                         }),
                                     Object.getOwnPropertyDescriptors
@@ -96,12 +96,12 @@ function P(e) {
     let { renderWindow: s } = o.useContext(u.ZP);
     return i
         ? (0, r.jsx)('div', {
-              className: g.nuxBackground,
+              className: x.nuxBackground,
               children: (0, r.jsx)(m.Z, { eventTargetRef: { current: s.document.body } })
           })
         : t;
 }
-function Z() {
+function _() {
     let {
             embeddedActivity: e,
             channelId: t,
@@ -124,7 +124,7 @@ function Z() {
             : null != u &&
               null == e &&
               (l.current = window.setTimeout(() => {
-                  (0, f.xv)(y.KJ3.ACTIVITY_POPOUT);
+                  (0, f.xv)(h.KJ3.ACTIVITY_POPOUT);
               }, 5000));
     }, [e, u]);
     let d = (0, i.e7)([s.Z], () => {
@@ -133,25 +133,25 @@ function Z() {
         }),
         m = (0, v.P)();
     return (0, r.jsx)('div', {
-        className: g.container,
+        className: x.container,
         children:
             null == e || null == d
-                ? (0, r.jsx)(a.$jN, { className: g.iframe })
+                ? (0, r.jsx)(a.$jN, { className: x.iframe })
                 : (0, r.jsx)('div', {
-                      className: g.loadedContentContainer,
+                      className: x.loadedContentContainer,
                       children: (0, r.jsxs)('div', {
-                          className: g.iframeAndHeaderContainer,
+                          className: x.iframeAndHeaderContainer,
                           children: [
                               (0, r.jsx)('div', {
-                                  className: g.headerContainer,
-                                  children: (0, r.jsx)(h.Z, {
+                                  className: x.headerContainer,
+                                  children: (0, r.jsx)(y.Z, {
                                       applicationId: d.id,
                                       channelId: t
                                   })
                               }),
                               (0, r.jsx)('div', {
-                                  className: g.iframeContainer,
-                                  children: (0, r.jsx)(P, {
+                                  className: x.iframeContainer,
+                                  children: (0, r.jsx)(g, {
                                       children: (0, r.jsx)(j.Z, {
                                           channelId: t,
                                           guildId: n,

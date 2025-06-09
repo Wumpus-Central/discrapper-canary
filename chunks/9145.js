@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685);
+n.d(t, { Z: () => z }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -10,101 +10,105 @@ var r = n(255367),
     d = n(153867),
     p = n(110924),
     h = n(607070),
-    f = n(900211),
-    m = n(740492),
-    g = n(871499),
-    b = n(786915),
-    _ = n(402113),
-    y = n(592125),
-    x = n(271383),
-    C = n(944486),
-    v = n(594174),
-    j = n(585483),
-    O = n(51144),
-    E = n(566620),
-    I = n(317381),
-    P = n(619915),
-    S = n(988980),
-    Z = n(16609),
-    N = n(952561),
-    T = n(563218),
-    A = n(884338),
-    w = n(719296),
-    R = n(651612),
-    M = n(918559),
-    k = n(981631),
-    L = n(388032),
-    D = n(199570);
-let U = A.u.SIZE_32,
-    B = {
-        [M.MI.NO_CHAT]: D.noChat,
-        [M.MI.RESIZABLE]: D.resizable
+    f = n(367907),
+    m = n(900211),
+    g = n(740492),
+    b = n(871499),
+    _ = n(786915),
+    y = n(402113),
+    C = n(800965),
+    x = n(592125),
+    v = n(271383),
+    j = n(944486),
+    O = n(594174),
+    E = n(585483),
+    I = n(51144),
+    P = n(566620),
+    S = n(317381),
+    Z = n(619915),
+    N = n(988980),
+    T = n(16609),
+    A = n(952561),
+    w = n(563218),
+    R = n(884338),
+    M = n(617552),
+    k = n(719296),
+    L = n(225639),
+    D = n(651612),
+    U = n(918559),
+    B = n(981631),
+    F = n(388032),
+    G = n(199570);
+let H = R.u.SIZE_32,
+    V = {
+        [U.MI.NO_CHAT]: G.noChat,
+        [U.MI.RESIZABLE]: G.resizable
     };
-function F(e) {
+function z(e) {
     var t, n, l;
-    let { maxHeight: F, connectedLocation: G, renderExternalHeader: H } = e,
-        V = (0, N.Z)(),
-        z = (0, s.Wu)([I.ZP], () => I.ZP.getEmbeddedActivitiesForLocation(G), [G]),
-        W = (0, Z.pY)(G),
-        Y = (0, s.e7)([y.Z], () => y.Z.getChannel(W)),
-        q = (0, P.gb)(z),
-        K = (0, P.uF)(q),
-        X = i.useCallback(() => {
-            (0, E.tg)(M.Ez.PIP);
+    let { maxHeight: z, connectedLocation: W, renderExternalHeader: Y } = e,
+        q = (0, A.Z)(),
+        K = (0, s.Wu)([S.ZP], () => S.ZP.getEmbeddedActivitiesForLocation(W), [W]),
+        X = (0, T.pY)(W),
+        Q = (0, s.e7)([x.Z], () => x.Z.getChannel(X)),
+        J = (0, Z.gb)(K),
+        $ = (0, Z.uF)(J),
+        ee = i.useCallback(() => {
+            (0, P.tg)(U.Ez.PIP);
         }, []),
-        Q = i.useRef(null),
-        J = (0, s.e7)([I.ZP], () => I.ZP.getFocusedLayout()),
-        $ = J !== M.MI.NO_CHAT,
-        [ee, et] = i.useState(null != (n = null != (t = m.ZP.activityPanelHeight) ? t : F) ? n : null),
-        en = i.useCallback((e) => {
+        et = i.useRef(null),
+        en = (0, s.e7)([S.ZP], () => S.ZP.getFocusedLayout()),
+        er = en !== U.MI.NO_CHAT,
+        [ei, el] = i.useState(null != (n = null != (t = g.ZP.activityPanelHeight) ? t : z) ? n : null),
+        ea = i.useCallback((e) => {
             d.ZP.updatedUnsyncedSettings({ activityPanelHeight: e });
         }, []),
-        er = i.useRef(null),
-        [ei, el] = i.useState({
+        eo = i.useRef(null),
+        [es, ec] = i.useState({
             width: 0,
             height: 0
         });
     i.useLayoutEffect(() => {
-        if (null == er.current) return;
+        if (null == eo.current) return;
         let e = new ResizeObserver(() => {
             var e, t, n, r;
-            el({
-                width: null != (n = null == (e = er.current) ? void 0 : e.clientWidth) ? n : 0,
-                height: null != (r = null == (t = er.current) ? void 0 : t.clientHeight) ? r : 0
+            ec({
+                width: null != (n = null == (e = eo.current) ? void 0 : e.clientWidth) ? n : 0,
+                height: null != (r = null == (t = eo.current) ? void 0 : t.clientHeight) ? r : 0
             });
         });
-        return e.observe(er.current), () => e.disconnect();
+        return e.observe(eo.current), () => e.disconnect();
     }, []);
-    let ea = ei.width / Math.max(ei.height, 1) < M.I0,
-        eo = 0,
-        es = 0,
-        ec = (0, S.Z)(null == V ? void 0 : V.id);
-    if (!ec) {
-        let e = ei.width,
-            t = ei.height;
-        ea ? ((t = ei.width / M.I0) > ei.height && (e = (t = ei.height) * M.I0), (es = (ei.height - t) / 2)) : ((e = Math.min(ei.height * M.I0)) > ei.width && (t = (e = ei.width) / M.I0), (eo = (ei.width - e) / 2));
+    let eu = es.width / Math.max(es.height, 1) < U.I0,
+        ed = 0,
+        ep = 0,
+        eh = (0, N.Z)(null == q ? void 0 : q.id);
+    if (!eh) {
+        let e = es.width,
+            t = es.height;
+        eu ? ((t = es.width / U.I0) > es.height && (e = (t = es.height) * U.I0), (ep = (es.height - t) / 2)) : ((e = Math.min(es.height * U.I0)) > es.width && (t = (e = es.width) / U.I0), (ed = (es.width - e) / 2));
     }
-    let eu = K.get(null != (l = null == V ? void 0 : V.id) ? l : ''),
-        ed = G.kind === o.E.CONTEXTLESS,
-        ep = (0, s.e7)([C.Z], () => C.Z.getChannelId()),
-        eh = (0, s.Wu)(
-            [x.ZP],
+    let ef = $.get(null != (l = null == q ? void 0 : q.id) ? l : ''),
+        em = W.kind === o.E.CONTEXTLESS,
+        eg = (0, s.e7)([j.Z], () => j.Z.getChannelId()),
+        eb = (0, s.Wu)(
+            [v.ZP],
             () => {
                 var e;
-                return null == Y ? [] : Array.from(null != (e = null == eu ? void 0 : eu.embeddedActivity.userIds) ? e : []).map((e) => x.ZP.getMember(Y.guild_id, e));
+                return null == Q ? [] : Array.from(null != (e = null == ef ? void 0 : ef.embeddedActivity.userIds) ? e : []).map((e) => v.ZP.getMember(Q.guild_id, e));
             },
-            [eu, Y]
+            [ef, Q]
         ),
-        ef = i.useMemo(() => {
+        e_ = i.useMemo(() => {
             let e = new Map();
             return (
-                eh.forEach((t) => {
+                eb.forEach((t) => {
                     null != t && void 0 !== t && e.set(t.userId, t);
                 }),
                 e
             );
-        }, [eh]),
-        em = (function (e, t, n) {
+        }, [eb]),
+        ey = (function (e, t, n) {
             let r = (0, p.Z)(e),
                 l = e !== r,
                 [a, o] = i.useState(!1);
@@ -170,18 +174,19 @@ function F(e) {
                       r)
                     : l;
             }, [s, e, n, t]);
-        })($, ee, F);
-    if (null == V) return null;
-    let eg = [];
-    null != eu &&
-        (eg = Array.from(eu.embeddedActivity.userIds)
-            .map((e) => v.default.getUser(e))
+        })(er, ei, z),
+        eC = (0, L.y)({ location: 'Activity Panel' });
+    if (null == q) return null;
+    let ex = [];
+    null != ef &&
+        (ex = Array.from(ef.embeddedActivity.userIds)
+            .map((e) => O.default.getUser(e))
             .filter((e) => null != e && void 0 !== e));
-    let eb = (e) => {
+    let ev = (e) => {
         var t;
         if (null == e || void 0 === e) return null;
-        let n = ef.get(e.id),
-            i = null != (t = null == n ? void 0 : n.nick) ? t : O.ZP.getName(e);
+        let n = e_.get(e.id),
+            i = null != (t = null == n ? void 0 : n.nick) ? t : I.ZP.getName(e);
         return (0, r.jsx)(
             u.DY3,
             {
@@ -190,9 +195,9 @@ function F(e) {
                 children: (0, r.jsx)(
                     'img',
                     {
-                        src: e.getAvatarURL(null == Y ? void 0 : Y.guild_id, U),
+                        src: e.getAvatarURL(null == Q ? void 0 : Q.guild_id, H),
                         alt: i,
-                        className: D.avatar
+                        className: G.avatar
                     },
                     e.id
                 )
@@ -201,117 +206,115 @@ function F(e) {
         );
     };
     return (0, r.jsx)(u.f6W, {
-        theme: k.BRd.DARK,
+        theme: B.BRd.DARK,
         children: (e) =>
             (0, r.jsxs)('div', {
-                className: a()(D.wrapper, B[J], e, { [D.contextlessActivityWrapper]: ed }),
-                ref: Q,
-                style: em,
+                className: a()(G.wrapper, V[en], e, { [G.contextlessActivityWrapper]: em }),
+                ref: et,
+                style: ey,
                 children: [
-                    !ed && (null == H ? void 0 : H()),
+                    !em && (null == Y ? void 0 : Y()),
                     (0, r.jsxs)('div', {
-                        className: D.activityPanelContainer,
+                        className: G.activityPanelContainer,
                         children: [
-                            $ || ed
+                            er || em
                                 ? null
                                 : (0, r.jsx)('div', {
-                                      className: D.header,
+                                      className: G.header,
                                       children: (0, r.jsx)(c.x, {
                                           color: 'header-primary',
                                           variant: 'text-md/semibold',
-                                          className: D.headerTitle,
-                                          children: null == V ? void 0 : V.name
+                                          className: G.headerTitle,
+                                          children: null == q ? void 0 : q.name
                                       })
                                   }),
-                            ed
+                            em
                                 ? (0, r.jsxs)('div', {
-                                      className: D.contextlessHeader,
+                                      className: G.contextlessHeader,
                                       children: [
                                           (0, r.jsxs)('div', {
-                                              className: D.contextlessHeaderLeft,
+                                              className: G.contextlessHeaderLeft,
                                               children: [
-                                                  (0, r.jsx)(A.Z, {
+                                                  (0, r.jsx)(R.Z, {
                                                       renderIcon: !1,
-                                                      users: eg,
-                                                      size: U,
+                                                      users: ex,
+                                                      size: H,
                                                       max: 6,
-                                                      className: D.userAvatars,
-                                                      renderUser: eb
+                                                      renderUser: ev
                                                   }),
-                                                  (0, r.jsx)(b.Z, {
-                                                      appContext: k.IlC.APP,
-                                                      applicationId: V.id,
+                                                  (0, r.jsx)(_.Z, {
+                                                      appContext: B.IlC.APP,
+                                                      applicationId: q.id,
                                                       shouldPrioritizeGroupPlusIcon: !0,
-                                                      isContextlessActivity: ed,
-                                                      iconClassName: D.contextlessInviteButtonIcon,
+                                                      isContextlessActivity: em,
+                                                      iconClassName: G.contextlessInviteButtonIcon,
                                                       size: u.zxk.Sizes.SMALL,
                                                       look: u.zxk.Looks.FILLED,
-                                                      buttonText: L.intl.string(L.t['6F9ivr']),
+                                                      buttonText: F.intl.string(F.t['6F9ivr']),
                                                       color: u.zxk.Colors.PRIMARY
                                                   })
                                               ]
                                           }),
-                                          (0, r.jsx)(_.Z, {
-                                              applicationId: V.id,
-                                              location: G,
+                                          (0, r.jsx)(y.Z, {
+                                              applicationId: q.id,
+                                              location: W,
                                               centerButton: !0,
                                               color: 'disconnect',
-                                              applyStyles: ed,
-                                              className: D.contextlessLeaveActivityButton,
-                                              iconClassName: D.contextlessLeaveActivityButtonIcon,
+                                              applyStyles: em,
+                                              className: G.contextlessLeaveActivityButton,
+                                              iconClassName: G.contextlessLeaveActivityButtonIcon,
                                               isActivityInCall: !1
                                           })
                                       ]
                                   })
                                 : null,
                             (0, r.jsx)('div', {
-                                className: a()(D.activityContainer, { [D.activityContainerNoMargin]: ec }),
+                                className: a()(G.activityContainer, { [G.activityContainerNoMargin]: eh }),
                                 style: {
-                                    paddingLeft: eo,
-                                    paddingRight: eo,
-                                    paddingTop: es,
-                                    paddingBottom: es
+                                    paddingLeft: ed,
+                                    paddingRight: ed,
+                                    paddingTop: ep,
+                                    paddingBottom: ep
                                 },
-                                ref: er,
-                                children: (0, r.jsx)(T.Z, {
-                                    className: D.iframe,
-                                    embedId: (0, w.Z)(G.id, V.id)
+                                ref: eo,
+                                children: (0, r.jsx)(w.Z, {
+                                    className: G.iframe,
+                                    embedId: (0, k.Z)(W.id, q.id)
                                 })
                             }),
-                            ed || null == ep
+                            em || null == eg
                                 ? null
                                 : (0, r.jsxs)('div', {
-                                      className: D.footer,
+                                      className: G.footer,
                                       children: [
-                                          (0, r.jsx)(A.Z, {
+                                          (0, r.jsx)(R.Z, {
                                               renderIcon: !1,
-                                              users: eg,
-                                              size: U,
+                                              users: ex,
+                                              size: H,
                                               max: 6,
-                                              className: D.userAvatars,
-                                              renderUser: eb
+                                              renderUser: ev
                                           }),
                                           (0, r.jsxs)('div', {
-                                              className: D.footerButtons,
+                                              className: G.footerButtons,
                                               children: [
                                                   (0, r.jsxs)('div', {
-                                                      className: D.buttonSection,
+                                                      className: G.buttonSection,
                                                       children: [
-                                                          (0, r.jsx)(R.Z, { channelId: ep }),
-                                                          (0, r.jsx)(g.d, {
+                                                          (0, r.jsx)(D.Z, { channelId: eg }),
+                                                          (0, r.jsx)(b.d, {
                                                               isTrayButton: !0,
-                                                              label: L.intl.string(L.t.brPQ5e),
-                                                              onClick: X,
+                                                              label: F.intl.string(F.t.brPQ5e),
+                                                              onClick: ee,
                                                               iconComponent: u.dOc,
                                                               themeable: !0
                                                           })
                                                       ]
                                                   }),
                                                   (0, r.jsx)('div', {
-                                                      className: D.leaveButtonContainer,
-                                                      children: (0, r.jsx)(_.Z, {
-                                                          applicationId: V.id,
-                                                          location: G,
+                                                      className: G.leaveButtonContainer,
+                                                      children: (0, r.jsx)(y.Z, {
+                                                          applicationId: q.id,
+                                                          location: W,
                                                           centerButton: !0,
                                                           color: 'disconnect',
                                                           isActivityInCall: !1
@@ -319,21 +322,29 @@ function F(e) {
                                                   })
                                               ]
                                           }),
-                                          (0, r.jsx)('div', { className: D.flex })
+                                          eC
+                                              ? (0, r.jsx)(C.Z, {
+                                                    popoutOpen: !1,
+                                                    onOpenPopout: () => {
+                                                        (0, f.yw)(B.rMx.ACTIVITY_POPOUT_POP_OUT_BUTTON_CLICKED), (0, M.Z)({ onConfirm: P.Gj });
+                                                    },
+                                                    onClosePopout: () => {}
+                                                })
+                                              : null
                                       ]
                                   })
                         ]
                     }),
-                    $ && null != F
-                        ? (0, r.jsx)(f.Z, {
+                    er && null != z
+                        ? (0, r.jsx)(m.Z, {
                               minHeight: 480,
-                              maxHeight: F,
-                              resizableNode: Q,
+                              maxHeight: z,
+                              resizableNode: et,
                               onResize: (e) => {
-                                  j.S.dispatch(k.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), et(e);
+                                  E.S.dispatch(B.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), el(e);
                               },
                               onResizeEnd: (e) => {
-                                  j.S.dispatch(k.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), en(e);
+                                  E.S.dispatch(B.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), ea(e);
                               }
                           })
                         : null

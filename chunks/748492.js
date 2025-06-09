@@ -30,7 +30,7 @@ var i = n(120356),
     T = n(131951),
     A = n(636449),
     N = n(884338),
-    C = n(349619),
+    C = n(617552),
     P = n(981631),
     R = n(231338),
     w = n(388032),
@@ -62,7 +62,7 @@ function k(e) {
             B ? H(!0) : (0, g.Z)();
         },
         W = () => {
-            (0, _.v)(Z, _.d.POPOUT, !0), null != a && (0, C.Z)(() => h.hP(a));
+            (0, _.v)(Z, _.d.POPOUT, !0), null != a && (0, C.Z)({ onConfirm: () => h.hP(a) });
         };
     return (0, r.jsxs)('div', {
         className: L.videoControls,

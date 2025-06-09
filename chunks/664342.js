@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(299206),
     _ = n(727429),
     y = n(665149),
-    x = n(359110),
-    C = n(585483),
+    C = n(359110),
+    x = n(585483),
     v = n(407908),
     j = n(739830),
     O = n(488131),
@@ -119,7 +119,7 @@ function N(e) {
         }),
         w = (0, g.Z)(t);
     function R() {
-        (0, x.Kh)(t.id);
+        (0, C.Kh)(t.id);
     }
     return (0, r.jsxs)(l.v2r, {
         navId: 'thread-context',
@@ -152,7 +152,7 @@ function N(e) {
                         action: function () {
                             R(),
                                 setTimeout(() => {
-                                    C.S.dispatch(E.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
+                                    x.S.dispatch(E.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
                                 }, 2000);
                         }
                     }),
@@ -161,7 +161,7 @@ function N(e) {
                         label: I.intl.string(I.t['2BSH7u']),
                         icon: l.rgF,
                         action: function () {
-                            R(), C.S.dispatch(E.CkL.TOGGLE_CHANNEL_PINS);
+                            R(), x.S.dispatch(E.CkL.TOGGLE_CHANNEL_PINS);
                         }
                     })
                 ]

@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(404295),
     _ = n(540059),
     y = n(605236),
-    x = n(291407),
-    C = n(685006),
+    C = n(291407),
+    x = n(685006),
     v = n(61356),
     j = n(314734),
     O = n(921944),
@@ -27,21 +27,21 @@ let P = i.forwardRef(function (e, t) {
         var n, l;
         let { type: f, animateRef: m } = e,
             b = (0, o.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === f),
-            { Component: x, events: C, play: v } = (0, g.Z)('ChannelAppLauncherButton'),
+            { Component: C, events: x, play: v } = (0, g.Z)('ChannelAppLauncherButton'),
             P = (0, _.Q3)('ChannelAppLauncherButton');
         i.useImperativeHandle(
             m,
             () => ({
                 animate: () => {
-                    C.onMouseEnter();
+                    x.onMouseEnter();
                 }
             }),
-            [C]
+            [x]
         );
         let S = i.useCallback(() => {
                 b ? d.yT(h.ti.DISMISSED) : ((0, y.EW)(s.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: O.L.TAKE_ACTION }), d.__(h._b.TEXT, f), u.ux()), v();
             }, [b, f, v]),
-            Z = (0, r.jsx)(x, {
+            Z = (0, r.jsx)(C, {
                 size: P ? 'refresh_sm' : void 0,
                 color: 'currentColor'
             });
@@ -94,7 +94,7 @@ let P = i.forwardRef(function (e, t) {
                         },
                         innerClassName: I.buttonContents
                     },
-                    C
+                    x
                 )),
                 (l = l = { children: Z }),
                 Object.getOwnPropertyDescriptors
@@ -123,12 +123,12 @@ let P = i.forwardRef(function (e, t) {
             u = (0, v.Z)({ type: n }),
             d = (0, b.h9)(t.id),
             h = (0, o.e7)([p.Z], () => p.Z.appDMChannelsWithFailedLoads().has(t.id)),
-            { visible: g } = (0, C.xL)();
+            { visible: g } = (0, x.xL)();
         return c
             ? (0, r.jsxs)('div', {
                   className: I.channelAppLauncher,
                   children: [
-                      (0, r.jsx)(x.Z, {
+                      (0, r.jsx)(C.Z, {
                           channel: t,
                           animationContainerClassName: I.entrypointAnimation,
                           glowClassName: I.animationGlow,

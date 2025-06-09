@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(496977),
     _ = n(314734),
     y = n(981631),
-    x = n(149203),
-    C = n(388032),
+    C = n(149203),
+    x = n(388032),
     v = n(760420);
 let j = { height: _.lv };
 function O() {
@@ -26,7 +26,7 @@ function O() {
 function E(e) {
     let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: u } = e,
         d = i.useRef(null),
-        { renderWindow: f, windowDispatch: C } = i.useContext(s.ZP),
+        { renderWindow: f, windowDispatch: x } = i.useContext(s.ZP),
         v = null != u,
         j = (0, a.Jw)(null != u ? u : ''),
         E = i.useCallback(
@@ -39,7 +39,7 @@ function E(e) {
                     if (r === d.current) return;
                     if (r.classList.contains(_.t4) || r.classList.contains(_.Id)) return void e.preventDefault();
                     if (r.classList.contains(_.NN)) return;
-                    let t = [x.cZ, c.N];
+                    let t = [C.cZ, c.N];
                     if (r.classList.contains(_.I4) || t.includes(r.id)) return;
                     r = r.parentNode;
                 }
@@ -53,12 +53,12 @@ function E(e) {
         () => (
             f.addEventListener('mousedown', E),
             f.addEventListener('contextmenu', E),
-            C.subscribe(y.CkL.POPOUT_CLOSE, O),
+            x.subscribe(y.CkL.POPOUT_CLOSE, O),
             () => {
-                f.removeEventListener('mousedown', E), f.removeEventListener('contextmenu', E), C.unsubscribe(y.CkL.POPOUT_CLOSE, O);
+                f.removeEventListener('mousedown', E), f.removeEventListener('contextmenu', E), x.unsubscribe(y.CkL.POPOUT_CLOSE, O);
             }
         ),
-        [E, f, C]
+        [E, f, x]
     ),
         (0, o.Tbt)(d),
         i.useEffect(() => {
@@ -113,7 +113,7 @@ let I = i.memo(function (e) {
                     className: v.positionContainer,
                     role: 'dialog',
                     style: j,
-                    'aria-label': C.intl.string(C.t['3CNGLC']),
+                    'aria-label': x.intl.string(x.t['3CNGLC']),
                     children:
                         t &&
                         (0, r.jsx)(

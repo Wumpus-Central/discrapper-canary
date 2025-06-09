@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(783097),
     _ = n(226026),
     y = n(397698),
-    x = n(895924),
-    C = n(471518),
+    C = n(895924),
+    x = n(471518),
     v = n(425986),
     j = n(216780),
     O = n(390322),
@@ -42,7 +42,7 @@ function D(e) {
             let e = (0, d.e7)([E.default], () => E.default.onlyShowPreviewAppCollections) ? s.E.PREVIEW : s.E.ACTIVE;
             return (
                 i.useEffect(() => {
-                    (0, C.XK)({
+                    (0, x.XK)({
                         surface: k,
                         activeState: e
                     });
@@ -68,7 +68,7 @@ function D(e) {
             let e = null == h ? void 0 : h.application_directory_collection_items[0];
             return null == e ? null : e.type === u.C.APPLICATION_BANNER ? e : null;
         }, [null == h ? void 0 : h.application_directory_collection_items]),
-        { trackItemImpressionRef: x } = (0, _.Z)({
+        { trackItemImpressionRef: C } = (0, _.Z)({
             applicationId: null != (t = null == g ? void 0 : g.application.id) ? t : '',
             applicationFlags: null == g ? void 0 : g.application.flags,
             sectionName: 'app_launcher_in_voice_banner',
@@ -87,7 +87,7 @@ function D(e) {
               })),
           (0, r.jsxs)(p.P3F, {
               className: M.clickableBanner,
-              innerRef: x,
+              innerRef: C,
               onClick: () => {
                   o(),
                       (0, y.Z)({
@@ -114,13 +114,13 @@ let U = i.forwardRef(function (e, t) {
     var n;
     let { channel: l, isHovered: o, closePopout: s, onMouseEnter: c, onMouseLeave: u, onClick: b, className: _ } = e,
         y = (0, d.e7)([f.Z], () => f.Z.useReducedMotion),
-        { id: C, guild_id: v } = l;
+        { id: x, guild_id: v } = l;
     i.useEffect(() => {
         I.default.track(w.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
-            channel_id: C,
+            channel_id: x,
             guild_id: v
         });
-    }, [C, v]),
+    }, [x, v]),
         i.useEffect(() => {
             o || s();
         }, [s, o]);
@@ -235,7 +235,7 @@ let U = i.forwardRef(function (e, t) {
                                                 },
                                                 aspectRatio: N.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
                                                 animatedDivClass: M.activitySuggestion,
-                                                commandOrigin: x.bB.MINI_SHELF
+                                                commandOrigin: C.bB.MINI_SHELF
                                             },
                                             e.application.id
                                         )

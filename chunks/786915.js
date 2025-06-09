@@ -41,7 +41,7 @@ function _(e) {
     return e;
 }
 function y(e) {
-    var { applicationId: t, stream: i, channel: y, exitFullScreen: x, appContext: C, analyticsLocation: v, guildScheduledEvent: j, shouldPrioritizeGroupPlusIcon: O = !1, isContextlessActivity: E = !1, iconClassName: I, look: P, size: S, buttonText: Z, color: N } = e,
+    var { applicationId: t, stream: i, channel: y, exitFullScreen: C, appContext: x, analyticsLocation: v, guildScheduledEvent: j, shouldPrioritizeGroupPlusIcon: O = !1, isContextlessActivity: E = !1, iconClassName: I, look: P, size: S, buttonText: Z, color: N } = e,
         T = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -137,8 +137,8 @@ function y(e) {
                                     channel: y,
                                     streamUserId: null == i ? void 0 : i.ownerId,
                                     applicationId: t,
-                                    appContext: null != C ? C : A,
-                                    exitFullScreen: x,
+                                    appContext: null != x ? x : A,
+                                    exitFullScreen: C,
                                     analyticsLocation: v,
                                     guildScheduledEvent: j
                                 });
@@ -148,6 +148,7 @@ function y(e) {
                         iconClassName: I,
                         look: P,
                         size: S,
+                        color: N,
                         buttonText: Z
                     },
                     T
