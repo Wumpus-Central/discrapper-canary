@@ -16,7 +16,7 @@ var r = n(544891),
     h = n(981631);
 async function f() {
     if (null == i) {
-        if (!(u.isPlatformEmbedded && ((0, u.isMac)() || (0, u.isWindows)()))) return void new o.Z('CloudSyncUtils').warn('CloudSync is not supported on this platform');
+        if (!(u.isPlatformEmbedded && ((0, u.isMac)() || ((0, u.isWindows)() && 'arm64' !== p.ZP.architecture)))) return void new o.Z('CloudSyncUtils').warn('CloudSync is not supported on this platform');
         await p.ZP.ensureModule('discord_cloudsync'),
             (i = new (p.ZP.getCloudSync())()).on('state', (t) =>
                 l.Z.dispatch({

@@ -502,6 +502,7 @@ var eb = (function (e) {
             (e.LARGER_FILE_UPLOAD_UPSELL = 'larger_file_upload_upsell'),
             (e.ANIMATED_EMOJI_UPSELL = 'animated_emoji_upsell'),
             (e.CLIENT_THEMES_UPSELL = 'client_themes_upsell'),
+            (e.CUSTOM_THEMES_UPSELL = 'custom_themes_upsell'),
             (e.APP_ICON_INLINE_UPSELL = 'app_icons_inline_upsell'),
             e
         );

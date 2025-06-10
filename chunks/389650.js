@@ -20,9 +20,9 @@ var i = n(255367),
     C = n(74299),
     j = n(577153),
     O = n(365023),
-    S = n(131951),
-    v = n(556296),
-    T = n(808506),
+    S = n(610394),
+    v = n(131951),
+    T = n(556296),
     I = n(63063),
     N = n(358085),
     y = n(13140),
@@ -270,7 +270,7 @@ class z extends r.PureComponent {
                     label: Z.intl.string(Z.t.hurHWl)
                 })),
             t &&
-                ((0, N.isWindows)() || S.Z.getUseSystemScreensharePicker()) &&
+                ((0, N.isWindows)() || v.Z.getUseSystemScreensharePicker()) &&
                 s.push({
                     value: R.kg4.TOGGLE_GO_LIVE_STREAMING,
                     label: Z.intl.string(Z.t.ybdjJC)
@@ -505,9 +505,9 @@ class z extends r.PureComponent {
     }
 }
 function Y() {
-    let e = (0, c.e7)([v.ZP], () => v.ZP.getState()),
-        t = (0, c.e7)([S.Z], () => (0, C.Z)(S.Z)),
-        n = (0, c.e7)([T.default], () => T.default.isSupported()),
+    let e = (0, c.e7)([T.ZP], () => T.ZP.getState()),
+        t = (0, c.e7)([v.Z], () => (0, C.Z)(v.Z)),
+        n = (0, c.e7)([S.ZP], () => S.ZP.isSupported()),
         r = (0, x.Go)(),
         s = (0, u.C)('user-settings-keybinds');
     return (0, i.jsx)(z, {
