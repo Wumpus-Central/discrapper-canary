@@ -1,80 +1,77 @@
-n.d(t, { Z: () => O });
-var r = n(252258),
-    i = n(812206),
-    a = n(592125),
-    o = n(944486),
-    s = n(594174),
-    l = n(595519),
-    c = n(636449),
-    u = n(566620),
-    d = n(317381),
-    f = n(672181),
-    _ = n(882347),
-    p = n(16609),
-    h = n(224189),
-    m = n(574952),
-    g = n(917107),
-    E = n(89425),
-    b = n(197386),
-    y = n(701488);
-function O(e) {
-    return (0, c.C)((0, c.R)(), () => v(e));
+n.d(t, { Z: () => y });
+var r = n(812206),
+    i = n(592125),
+    a = n(944486),
+    o = n(594174),
+    s = n(595519),
+    l = n(636449),
+    c = n(566620),
+    u = n(317381),
+    d = n(672181),
+    f = n(882347),
+    _ = n(16609),
+    p = n(224189),
+    h = n(574952),
+    m = n(917107),
+    g = n(89425),
+    E = n(197386),
+    b = n(701488);
+function y(e) {
+    return (0, l.C)((0, l.R)(), () => O(e));
 }
-async function v(e) {
+async function O(e) {
     let t,
-        { applicationId: n, activityChannelId: c, locationObject: O, analyticsLocations: v, componentId: I, sectionName: S, source: T, inviterUserId: A, customId: N, referrerId: C } = e,
-        P = (0, m.Z)(),
-        R = a.Z.getChannel(c),
-        w = null == R ? void 0 : R.getGuildId(),
-        D = null == w || '' === w,
-        L = s.default.getCurrentUser();
-    if (null == L) return !1;
-    if (null == R || (D && !R.isPrivate()) || null == c) return Promise.resolve(!1);
-    let x = d.ZP.getCurrentEmbeddedActivity();
-    (null == x ? void 0 : x.applicationId) != null && (t = i.Z.getApplication(null == x ? void 0 : x.applicationId));
-    let k = (null == x ? void 0 : x.location.kind) === r.E.CONTEXTLESS;
-    if ((k || o.Z.getVoiceChannelId() === c) && null != x && x.applicationId === n && (k || (0, p.pY)(x.location) === o.Z.getVoiceChannelId())) return (0, b.Z)(w, x.location), Promise.resolve(!0);
-    let M = await (0, h.Z)(n, c);
+        { applicationId: n, activityChannelId: l, locationObject: y, analyticsLocations: O, componentId: v, sectionName: I, source: S, inviterUserId: T, customId: A, referrerId: N } = e,
+        C = (0, h.Z)(),
+        R = i.Z.getChannel(l),
+        P = null == R ? void 0 : R.getGuildId(),
+        w = null == P || '' === P,
+        D = o.default.getCurrentUser();
+    if (null == D) return !1;
+    if (null == R || (w && !R.isPrivate()) || null == l) return Promise.resolve(!1);
+    let L = u.ZP.getCurrentEmbeddedActivity();
+    if (((null == L ? void 0 : L.applicationId) != null && (t = r.Z.getApplication(null == L ? void 0 : L.applicationId)), a.Z.getVoiceChannelId() === l && null != L && L.applicationId === n && (0, _.p)(L.location) === a.Z.getVoiceChannelId())) return (0, E.Z)(P, L.location), Promise.resolve(!0);
+    let x = await (0, p.Z)(n, l);
     if (
-        !(await (0, _.p)({
+        !(await (0, f.p)({
             applicationId: n,
-            application: M,
+            application: x,
             channel: R,
             currentEmbeddedApplication: t,
-            embeddedActivitiesManager: P,
-            user: L
+            embeddedActivitiesManager: C,
+            user: D
         }))
     )
         return !1;
     if (null != R) {
-        let e = (0, g.Z)(R.id),
-            n = y.wP.includes(R.type);
+        let e = (0, m.Z)(R.id),
+            n = b.wP.includes(R.type);
         if (e) {
             if (
-                !(await (0, E.Z)({
+                !(await (0, g.Z)({
                     channelId: R.id,
                     bypassChangeModal: null != t
                 }))
             )
                 return !1;
-        } else if (!(0, l.WS)(R) || !n) return !1;
+        } else if (!(0, s.WS)(R) || !n) return !1;
     } else if (null == R) return !1;
     return (
-        null != c && (0, f.Z)(c),
-        null != x && (0, u.cG)(x.location),
-        await (0, u.G6)({
-            channelId: c,
+        null != l && (0, d.Z)(l),
+        null != L && (0, c.cG)(L.location),
+        await (0, c.G6)({
+            channelId: l,
             applicationId: n,
             isStart: !1,
-            embeddedActivitiesManager: P,
-            analyticsLocations: v,
-            locationObject: O,
-            componentId: I,
-            sectionName: S,
-            source: T,
-            inviterUserId: A,
-            customId: N,
-            referrerId: C
+            embeddedActivitiesManager: C,
+            analyticsLocations: O,
+            locationObject: y,
+            componentId: v,
+            sectionName: I,
+            source: S,
+            inviterUserId: T,
+            customId: A,
+            referrerId: N
         })
     );
 }

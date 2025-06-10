@@ -1,5 +1,5 @@
 let r, i;
-n.r(t), n.d(t, { default: () => X }), n(539854), n(388685);
+n.r(t), n.d(t, { default: () => Q }), n(539854), n(388685);
 var a,
     o = n(392711),
     s = n.n(o),
@@ -55,14 +55,14 @@ function C(e) {
     if (t !== p.pNK.INTEGRATIONS) return !1;
     if (null == r) {
         let e = _.Z.getGuildId();
-        null != e && (u.Z.fetchForGuild(e), (v = !0)), R(!1);
+        null != e && (u.Z.fetchForGuild(e), (v = !0)), P(!1);
     }
 }
-function P(e) {
+function R(e) {
     let { section: t, sectionId: n } = e;
     (i = t), (N = n);
 }
-function R(e) {
+function P(e) {
     if (null != (r = _.Z.getProps().guild) && d.Z.can(p.Plq.MANAGE_GUILD, r)) {
         let e = _.Z.getProps().integrations;
         null == e && (I = !0), (g = null != e ? e : []);
@@ -81,7 +81,7 @@ function w() {
     (r = null), (g = []), (E = []), (b = null), (y = null), (O = null), (S = p.QZA.CLOSED), (A = !1);
 }
 let D = s().debounce(() => {
-    A && (null != y ? s().isEqual(y, K(y.id)) && (A = !1) : null != O && s().isEqual(O, z(O.id)) && (A = !1), A || Q.emitChange());
+    A && (null != y ? s().isEqual(y, K(y.id)) && (A = !1) : null != O && s().isEqual(O, z(O.id)) && (A = !1), A || X.emitChange());
 }, 500);
 function L(e) {
     let { settings: t } = e;
@@ -180,10 +180,10 @@ function H() {
     (O = null), (T = {}), (A = !1);
 }
 function Y() {
-    return R(!1);
+    return P(!1);
 }
 function W() {
-    return R(!0);
+    return P(!0);
 }
 function K(e) {
     return g.find((t) => {
@@ -258,7 +258,7 @@ class q extends (a = l.ZP.Store) {
     }
 }
 h(q, 'displayName', 'GuildSettingsIntegrationsStore');
-let Q = new q(
+let X = new q(
         c.Z,
         __OVERLAY__
             ? {}
@@ -267,7 +267,7 @@ let Q = new q(
                   INTEGRATION_SETTINGS_SAVE_SUCCESS: W,
                   GUILD_SETTINGS_INIT: C,
                   GUILD_SETTINGS_SET_SECTION: C,
-                  INTEGRATION_SETTINGS_SET_SECTION: P,
+                  INTEGRATION_SETTINGS_SET_SECTION: R,
                   INTEGRATION_SETTINGS_START_EDITING_COMMAND: G,
                   INTEGRATION_SETTINGS_STOP_EDITING_COMMAND: B,
                   INTEGRATION_SETTINGS_START_EDITING_INTEGRATION: F,
@@ -283,4 +283,4 @@ let Q = new q(
                   INTEGRATION_SETTINGS_SAVE_FAILURE: M
               }
     ),
-    X = Q;
+    Q = X;

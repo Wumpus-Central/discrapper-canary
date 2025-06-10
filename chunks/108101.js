@@ -24,8 +24,8 @@ var r = n(687249),
     A = 4,
     N = '[object Arguments]',
     C = '[object Array]',
-    P = '[object Boolean]',
-    R = '[object Date]',
+    R = '[object Boolean]',
+    P = '[object Date]',
     w = '[object Error]',
     D = '[object Function]',
     L = '[object GeneratorFunction]',
@@ -45,16 +45,16 @@ var r = n(687249),
     K = '[object Int16Array]',
     z = '[object Int32Array]',
     q = '[object Uint8Array]',
-    Q = '[object Uint8ClampedArray]',
-    X = '[object Uint16Array]',
+    X = '[object Uint8ClampedArray]',
+    Q = '[object Uint16Array]',
     J = '[object Uint32Array]',
     $ = {};
-function ee(e, t, n, C, P, R) {
+function ee(e, t, n, C, R, P) {
     var w,
         x = t & S,
         k = t & T,
         j = t & A;
-    if ((n && (w = P ? n(e, C, P, R) : n(e)), void 0 !== w)) return w;
+    if ((n && (w = R ? n(e, C, R, P) : n(e)), void 0 !== w)) return w;
     if (!O(e)) return e;
     var U = E(e);
     if (U) {
@@ -63,32 +63,32 @@ function ee(e, t, n, C, P, R) {
         var G = p(e),
             B = G == D || G == L;
         if (b(e)) return l(e, x);
-        if (G == M || G == N || (B && !P)) {
+        if (G == M || G == N || (B && !R)) {
             if (((w = k || B ? {} : g(e)), !x)) return k ? d(e, s(w, e)) : u(e, o(w, e));
         } else {
-            if (!$[G]) return P ? e : {};
+            if (!$[G]) return R ? e : {};
             w = m(e, G, x);
         }
     }
-    R || (R = new r());
-    var F = R.get(e);
+    P || (P = new r());
+    var F = P.get(e);
     if (F) return F;
-    R.set(e, w),
+    P.set(e, w),
         v(e)
             ? e.forEach(function (r) {
-                  w.add(ee(r, t, n, r, e, R));
+                  w.add(ee(r, t, n, r, e, P));
               })
             : y(e) &&
               e.forEach(function (r, i) {
-                  w.set(i, ee(r, t, n, i, e, R));
+                  w.set(i, ee(r, t, n, i, e, P));
               });
     var V = j ? (k ? _ : f) : k ? keysIn : I,
         Z = U ? void 0 : V(e);
     return (
         i(Z || e, function (r, i) {
-            Z && (r = e[(i = r)]), a(w, i, ee(r, t, n, i, e, R));
+            Z && (r = e[(i = r)]), a(w, i, ee(r, t, n, i, e, P));
         }),
         w
     );
 }
-($[N] = $[C] = $[V] = $[Z] = $[P] = $[R] = $[H] = $[Y] = $[W] = $[K] = $[z] = $[x] = $[k] = $[M] = $[j] = $[U] = $[G] = $[B] = $[q] = $[Q] = $[X] = $[J] = !0), ($[w] = $[D] = $[F] = !1), (e.exports = ee);
+($[N] = $[C] = $[V] = $[Z] = $[R] = $[P] = $[H] = $[Y] = $[W] = $[K] = $[z] = $[x] = $[k] = $[M] = $[j] = $[U] = $[G] = $[B] = $[q] = $[X] = $[Q] = $[J] = !0), ($[w] = $[D] = $[F] = !1), (e.exports = ee);

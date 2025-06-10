@@ -73,8 +73,8 @@ let O = Symbol('NO GUILD ID'),
     A = 2147483647,
     N = new Map(),
     C = new Map(),
-    P = new Map(),
     R = new Map(),
+    P = new Map(),
     w = new Map(),
     D = new Map(),
     L = new Map(),
@@ -86,9 +86,9 @@ function U(e) {
     let t = N.get(e);
     if ((null == t ? void 0 : t.profileEffectExpiresAt) == null) return;
     let n = 1000 * t.profileEffectExpiresAt + h.Cm - Date.now();
-    if (n <= 0) (t.profileEffectId = void 0), (t.profileEffectExpiresAt = void 0), P.delete(e), el.emitChange();
+    if (n <= 0) (t.profileEffectId = void 0), (t.profileEffectExpiresAt = void 0), R.delete(e), el.emitChange();
     else {
-        let t = P.get(e);
+        let t = R.get(e);
         if (null == t) return;
         t.start(Math.min(A, n), () => U(e));
     }
@@ -98,7 +98,7 @@ function G(e, t) {
     if (null == n) return;
     let r = n.get(t);
     if ((null == r ? void 0 : r.profileEffectExpiresAt) == null) return;
-    let i = R.get(e),
+    let i = P.get(e),
         a = 1000 * r.profileEffectExpiresAt + h.Cm - Date.now();
     if (a <= 0)
         n.set(
@@ -145,7 +145,7 @@ function H(e) {
     I.delete(e.userId), w.set(e.userId, Z(e.mutualFriends)), D.set(e.userId, e.mutualFriends.length);
 }
 function Y(e) {
-    var t, n, r, i, s, l, c, d, f, h, g, b, A, k, M, B, F, V, H, Y, K, z, q, Q, X, J, $;
+    var t, n, r, i, s, l, c, d, f, h, g, b, A, k, M, B, F, V, H, Y, K, z, q, X, Q, J, $;
     let { userProfile: ee, fetchStartedAt: et } = e,
         en = null != (M = null == (t = ee.guild_member_profile) ? void 0 : t.guild_id) ? M : O;
     if ((null == (n = v.get(ee.user.id)) || n.delete(en), I.delete(ee.user.id), null != ee.mutual_guilds)) {
@@ -227,7 +227,7 @@ function Y(e) {
         (null == (k = ee.user_profile) || null == (A = k.profile_effect) ? void 0 : A.expires_at) != null)
     ) {
         let e = new a.V7();
-        P.set(ee.user.id, e), U(ee.user.id);
+        R.set(ee.user.id, e), U(ee.user.id);
     }
     if (null != ee.guild_member_profile) {
         let e = {
@@ -238,7 +238,7 @@ function Y(e) {
                 themeColors: null == (Y = ee.guild_member_profile) ? void 0 : Y.theme_colors,
                 popoutAnimationParticleType: null == (K = ee.guild_member_profile) ? void 0 : K.popout_animation_particle_type,
                 profileEffectId: null == (q = ee.guild_member_profile) || null == (z = q.profile_effect) ? void 0 : z.id,
-                profileEffectExpiresAt: null == (X = ee.guild_member_profile) || null == (Q = X.profile_effect) ? void 0 : Q.expires_at,
+                profileEffectExpiresAt: null == (Q = ee.guild_member_profile) || null == (X = Q.profile_effect) ? void 0 : X.expires_at,
                 bio: ee.guild_member_profile.bio,
                 pronouns: ee.guild_member_profile.pronouns,
                 badges: ee.guild_badges
@@ -251,11 +251,11 @@ function Y(e) {
         }
         if ((null == ($ = ee.guild_member_profile) || null == (J = $.profile_effect) ? void 0 : J.expires_at) != null) {
             let e = new a.V7(),
-                t = R.get(ee.user.id);
+                t = P.get(ee.user.id);
             if (null != t) t.set(ee.guild_member_profile.guild_id, e);
             else {
                 let t = new Map();
-                t.set(ee.guild_member_profile.guild_id, e), R.set(ee.user.id, t);
+                t.set(ee.guild_member_profile.guild_id, e), P.set(ee.user.id, t);
             }
             G(ee.user.id, ee.guild_member_profile.guild_id);
         }
@@ -325,10 +325,10 @@ function q(e) {
         null != u)
     ) {
         let e = new a.V7();
-        P.set(t, e), U(t);
+        R.set(t, e), U(t);
     }
 }
-function Q(e) {
+function X(e) {
     let { userId: t, guild_id: n, accent_color: r, banner: i, bio: o, pronouns: s, popout_animation_particle_type: l, theme_colors: c, profileEffectId: u, profileEffectExpiresAt: d } = e,
         f = C.get(t);
     if (null == n || null == f) return !1;
@@ -351,20 +351,20 @@ function Q(e) {
         null != d)
     ) {
         let e = new a.V7(),
-            r = R.get(t);
+            r = P.get(t);
         if (null != r) r.set(n, e);
         else {
             let r = new Map();
-            r.set(n, e), R.set(t, r);
+            r.set(n, e), P.set(t, r);
         }
         G(t, n);
     }
 }
-function X(e) {
+function Q(e) {
     M = !0;
 }
 function J(e) {
-    (M = !1), null != e.guild_id ? Q(e) : q(e);
+    (M = !1), null != e.guild_id ? X(e) : q(e);
 }
 function $(e) {
     M = !1;
@@ -460,7 +460,7 @@ class es extends f.Z {
             USER_PROFILE_FETCH_START: K,
             USER_PROFILE_FETCH_FAILURE: z,
             USER_PROFILE_FETCH_SUCCESS: Y,
-            USER_PROFILE_UPDATE_START: X,
+            USER_PROFILE_UPDATE_START: Q,
             USER_PROFILE_UPDATE_SUCCESS: J,
             USER_PROFILE_UPDATE_FAILURE: $,
             USER_PROFILE_PIN_BADGES_ON_CLIENT: ee,

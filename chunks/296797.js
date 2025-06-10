@@ -12,15 +12,14 @@ function p(e) {
     let { onTransition: t } = e;
     r.useEffect(() => {
         async function e(e) {
-            var n;
-            let { location: r } = e,
-                a = null != (n = (0, o.pY)(r)) ? n : (0, o.wq)(r);
-            if (null == a || !(0, s.Z)(a)) return;
-            l.Z.getVoiceChannelId() !== a && (await (0, c.Z)({ channelId: a }));
-            let d = i.Z.getChannel(a),
-                p = null == d ? void 0 : d.guild_id;
+            let { location: n } = e,
+                r = (0, o.p)(n);
+            if (null == r || !(0, s.Z)(r)) return;
+            l.Z.getVoiceChannelId() !== r && (await (0, c.Z)({ channelId: r }));
+            let a = i.Z.getChannel(r),
+                d = null == a ? void 0 : a.guild_id;
             setTimeout(() => {
-                (0, u.Z)(p, r), null == t || t();
+                (0, u.Z)(d, n), null == t || t();
             }, 0);
         }
         return (

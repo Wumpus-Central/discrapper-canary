@@ -99,8 +99,8 @@ function N(e) {
             orientation: 'horizontal',
             labelledBy: N
         }),
-        { ref: P } = C,
-        R = T(C, ['ref']),
+        { ref: R } = C,
+        P = T(C, ['ref']),
         w = (0, d.Q3)('AppIconSelectionGroup'),
         D = (e) => {
             c.Z.dispatch({
@@ -112,8 +112,8 @@ function N(e) {
         ref: A,
         children: (0, r.jsx)(
             'div',
-            S(v({}, R), {
-                ref: P,
+            S(v({}, P), {
+                ref: R,
                 className: b.__invalid_container,
                 children: (0, r.jsxs)('div', {
                     className: t,

@@ -43,7 +43,7 @@ let A = !0,
         }
         r = I.qt[t];
     },
-    P = (e) => {
+    R = (e) => {
         let { mobileThemesIndex: t } = e;
         if (null == t) {
             i = void 0;
@@ -51,7 +51,7 @@ let A = !0,
         }
         i = t;
     },
-    R = (e) => {
+    P = (e) => {
         r = void 0;
     },
     w = (e) => {
@@ -127,8 +127,8 @@ class M extends (a = o.ZP.PersistedStore) {
 T(M, 'displayName', 'ClientThemesBackgroundStore'), T(M, 'persistKey', 'ClientThemesBackgroundStore');
 let j = new M(l.Z, {
     UPDATE_BACKGROUND_GRADIENT_PRESET: C,
-    UPDATE_MOBILE_PENDING_THEME_INDEX: P,
-    RESET_PREVIEW_CLIENT_THEME: R,
+    UPDATE_MOBILE_PENDING_THEME_INDEX: R,
+    RESET_PREVIEW_CLIENT_THEME: P,
     CLIENT_THEMES_EDITOR_CLOSE: D,
     CHANNEL_SELECT: w,
     LOGOUT: D

@@ -67,7 +67,7 @@ function p(e) {
     });
 }
 async function h(e, t) {
-    let { name: n, type: l, position: u, topic: d, bitrate: f, userLimit: _, nsfw: p, flags: h, permissionOverwrites: m, rateLimitPerUser: g, defaultThreadRateLimitPerUser: E, defaultAutoArchiveDuration: b, template: y, defaultReactionEmoji: O, rtcRegion: v, videoQualityMode: I, autoArchiveDuration: S, locked: T, invitable: A, availableTags: N, defaultSortOrder: C, defaultForumLayout: P, defaultTagSetting: R, iconEmoji: w, themeColor: D } = t,
+    let { name: n, type: l, position: u, topic: d, bitrate: f, userLimit: _, nsfw: p, flags: h, permissionOverwrites: m, rateLimitPerUser: g, defaultThreadRateLimitPerUser: E, defaultAutoArchiveDuration: b, template: y, defaultReactionEmoji: O, rtcRegion: v, videoQualityMode: I, autoArchiveDuration: S, locked: T, invitable: A, availableTags: N, defaultSortOrder: C, defaultForumLayout: R, defaultTagSetting: P, iconEmoji: w, themeColor: D } = t,
         L = s.Z.getChannel(e);
     return (
         i.Z.dispatch({ type: 'CHANNEL_SETTINGS_SUBMIT' }),
@@ -114,8 +114,8 @@ async function h(e, t) {
                                   moderated: e.moderated
                               })),
                     default_sort_order: C,
-                    default_forum_layout: P,
-                    default_tag_setting: R,
+                    default_forum_layout: R,
+                    default_tag_setting: P,
                     icon_emoji:
                         null != w
                             ? {

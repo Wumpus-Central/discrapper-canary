@@ -80,8 +80,8 @@ let T = /\.gif($|\?|#)/i,
     A = /\.webp($|\?|#)/i,
     N = /\.avif($|\?|#)/i,
     C = /\.png($|\?|#)/i,
-    P = 400,
-    R = 300;
+    R = 400,
+    P = 300;
 class w extends (r = a.Component) {
     static isAnimated(e) {
         let { src: t, original: n, animated: r, srcIsAnimated: i } = e;
@@ -231,7 +231,7 @@ class w extends (r = a.Component) {
         });
     }
     getRatio() {
-        let { width: e, height: t, maxWidth: n = P, maxHeight: r = R, mediaLayoutType: i, useFullWidth: a } = this.props;
+        let { width: e, height: t, maxWidth: n = R, maxHeight: r = P, mediaLayoutType: i, useFullWidth: a } = this.props;
         return i === y.hV.MOSAIC && a
             ? (0, E.rn)({
                   width: e,
@@ -259,7 +259,7 @@ class w extends (r = a.Component) {
         null != i && this._cancellers.add(i);
     }
     render() {
-        let { alt: e, zoomThumbnailPlaceholder: t, onZoom: n, shouldLink: r, onContextMenu: a, autoPlay: s, original: l, className: u, imageClassName: d, children: f, animated: _, shouldAnimate: p, width: h, height: m, minWidth: g, minHeight: E, maxWidth: y, maxHeight: O, onClick: I, renderAccessory: S, tabIndex: T, limitResponsiveWidth: A, useFullWidth: N, placeholder: C, placeholderVersion: P, dataSafeSrc: R, srcIsAnimated: D } = this.props,
+        let { alt: e, zoomThumbnailPlaceholder: t, onZoom: n, shouldLink: r, onContextMenu: a, autoPlay: s, original: l, className: u, imageClassName: d, children: f, animated: _, shouldAnimate: p, width: h, height: m, minWidth: g, minHeight: E, maxWidth: y, maxHeight: O, onClick: I, renderAccessory: S, tabIndex: T, limitResponsiveWidth: A, useFullWidth: N, placeholder: C, placeholderVersion: R, dataSafeSrc: P, srcIsAnimated: D } = this.props,
             { readyState: L, hasMouseOver: x, hasFocus: k } = this.state,
             M = null != n,
             j = this.getRatio(),
@@ -282,8 +282,8 @@ class w extends (r = a.Component) {
                 height: G,
                 src: '',
                 placeholder: C,
-                placeholderVersion: P,
-                dataSafeSrc: R,
+                placeholderVersion: R,
+                dataSafeSrc: P,
                 srcIsAnimated: D,
                 children:
                     null != f

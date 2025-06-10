@@ -23,10 +23,10 @@ let A = S.QZA.CLOSED,
 function C() {
     (A = S.QZA.OPEN), (N = {});
 }
-function P() {
+function R() {
     (A = S.QZA.CLOSED), (N = {});
 }
-function R() {
+function P() {
     (A = S.QZA.SUBMITTING), (N = {});
 }
 function w(e) {
@@ -106,11 +106,11 @@ function q(e) {
     let { profileEffectId: t } = e;
     E = t;
 }
-function Q(e) {
+function X(e) {
     let { banner: t } = e;
     b = t;
 }
-function X(e) {
+function Q(e) {
     let { banner: t, themeColors: n, avatarDecoration: r } = e;
     (b = t), (h = n), (g = r);
 }
@@ -142,7 +142,7 @@ function eo() {
     p = void 0;
 }
 function es() {
-    ee(), er(), P();
+    ee(), er(), R();
 }
 class el extends (y = v.ZP.Store) {
     getFormState() {
@@ -234,9 +234,9 @@ let ec = new el(I.Z, {
     USER_SETTINGS_MODAL_INIT: C,
     USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: C,
     USER_SETTINGS_MODAL_SET_SECTION: D,
-    USER_SETTINGS_ACCOUNT_CLOSE: P,
+    USER_SETTINGS_ACCOUNT_CLOSE: R,
     USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: es,
-    USER_SETTINGS_ACCOUNT_SUBMIT: R,
+    USER_SETTINGS_ACCOUNT_SUBMIT: P,
     USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: w,
     USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: L,
     USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: x,
@@ -253,9 +253,9 @@ let ec = new el(I.Z, {
     USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR: K,
     USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION: z,
     USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PROFILE_EFFECT_ID: q,
-    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER: Q,
+    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER: X,
     USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS: W,
-    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET: X,
+    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET: Q,
     USER_SETTINGS_SET_PENDING_PRIMARY_GUILD_ID: Y,
     USER_SETTINGS_CLEAR_ERRORS: $,
     USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: et,

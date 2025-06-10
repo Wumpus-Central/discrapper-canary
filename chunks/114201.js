@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => R });
 var r = n(255367),
     i = n(73800),
     a = n(99815),
@@ -110,16 +110,16 @@ function C(e, t) {
         subtext: i
     };
 }
-function P(e) {
+function R(e) {
     let { guildId: t, leaderboardId: p } = e,
         I = (0, o.e7)([c.default], () => c.default.getId()),
         T = (0, o.e7)([u.Z], () => u.Z.getAccount(null, y.ABu.RIOT_GAMES)),
         N = (0, o.e7)([u.Z], () => u.Z.getAccount(null, y.ABu.LEAGUE_OF_LEGENDS)),
-        P = (0, g.Z)({
+        R = (0, g.Z)({
             guildId: t,
             leaderboardId: p
         }),
-        { leaderboardsDisabled: R } = (0, m.O)(t, p),
+        { leaderboardsDisabled: P } = (0, m.O)(t, p),
         w =
             null != N && null != T
                 ? () => {
@@ -133,7 +133,7 @@ function P(e) {
                           });
                   }
                 : y.dG4,
-        D = null == T || R ? O.intl.string(O.t['0yRXHx']) : O.intl.string(O.t['KWpU6+']),
+        D = null == T || P ? O.intl.string(O.t['0yRXHx']) : O.intl.string(O.t['KWpU6+']),
         { lastUpdateRequested: L, statisticLastUpdatedDate: x } = (0, E.Z)({
             userId: I,
             guildId: t,
@@ -150,7 +150,7 @@ function P(e) {
             [t]
         ),
         U = i.useRef(null);
-    return null == P
+    return null == R
         ? null
         : (0, r.jsx)(s.yRy, {
               targetElementRef: U,
@@ -168,7 +168,7 @@ function P(e) {
                       onSelect: void 0,
                       children: (0, r.jsxs)(s.kSQ, {
                           children: [
-                              P.leaderboard_id === b.z &&
+                              R.leaderboard_id === b.z &&
                                   null != T &&
                                   (0, r.jsx)(s.sNh, {
                                       id: 'refresh-my-data',
@@ -188,7 +188,7 @@ function P(e) {
                                                   e,
                                                   A(S({}, n), {
                                                       guildId: t,
-                                                      leaderboard: P
+                                                      leaderboard: R
                                                   })
                                               );
                                       }),

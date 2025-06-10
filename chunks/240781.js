@@ -99,18 +99,18 @@ let v = [
             A = (0, u.qS)(S),
             N = (0, u.G1)(g),
             C = !T && A,
-            P = (0, p.M)(!N || T),
-            R = (0, f.k)(g),
+            R = (0, p.M)(!N || T),
+            P = (0, f.k)(g),
             w = i.useMemo(
                 () =>
                     C
                         ? y.intl.string(y.t['7vkeu7'])
-                        : (0, s.EQ)([N, T, P])
+                        : (0, s.EQ)([N, T, R])
                               .with([!0, !0, !1], () => y.intl.string(y.t.hmyYKy))
                               .with([!0, !1, !0], () => y.intl.string(y.t.q0PlFh))
                               .with([!0, !1, !1], () => y.intl.string(y.t['0xs2sL']))
                               .otherwise(() => y.intl.string(y.t.fEGjVV)),
-                [C, N, T, P]
+                [C, N, T, R]
             );
         return null != g && (null == S || C)
             ? (0, r.jsxs)('div', {
@@ -129,7 +129,7 @@ let v = [
                           children: [
                               (0, r.jsx)(c.Text, {
                                   variant: 'text-sm/semibold',
-                                  children: R
+                                  children: P
                               }),
                               (0, r.jsx)(c.Text, {
                                   variant: 'text-sm/normal',

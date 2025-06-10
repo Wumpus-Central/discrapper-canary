@@ -1,4 +1,4 @@
-n.d(t, { n: () => P }), n(704826), n(35282), n(415506), n(388685);
+n.d(t, { n: () => R }), n(704826), n(35282), n(415506), n(388685);
 var r,
     i,
     a = n(255367),
@@ -235,7 +235,7 @@ m(C, 'defaultProps', {
     look: 'grey',
     disableItemStyles: !1
 });
-class P extends (i = o.Component) {
+class R extends (i = o.Component) {
     render() {
         let { className: e, children: t, type: n = 'side', style: r, 'aria-label': i, orientation: s = 'horizontal' } = this.props;
         return (0, a.jsx)('div', {
@@ -299,4 +299,4 @@ class P extends (i = o.Component) {
             });
     }
 }
-m(P, 'Header', I), m(P, 'Item', C), m(P, 'Separator', S), m(P, 'Panel', T);
+m(R, 'Header', I), m(R, 'Item', C), m(R, 'Separator', S), m(R, 'Panel', T);

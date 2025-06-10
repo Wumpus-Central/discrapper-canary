@@ -12,7 +12,7 @@ var r,
     o = n(120356),
     s = n.n(o),
     l = n(867309),
-    c = n(386230),
+    c = n(524979),
     u = n(873546),
     d = n(374470),
     f = n(846519),
@@ -100,8 +100,8 @@ var T = (function (e) {
 let A = 16,
     N = 10,
     C = 8,
-    P = Object.freeze({}),
-    R = Object.freeze({
+    R = Object.freeze({}),
+    P = Object.freeze({
         top: E.tooltipTop,
         bottom: E.tooltipBottom,
         left: E.tooltipLeft,
@@ -143,7 +143,7 @@ let D = (e) => {
                 let { position: t, nudge: _ } = e;
                 return (0, i.jsxs)(c.animated.div, {
                     onClick: l,
-                    className: s()(E.tooltip, R[null != t ? t : r], R[a], { [E.tooltipDisablePointerEvents]: h }, u),
+                    className: s()(E.tooltip, P[null != t ? t : r], P[a], { [E.tooltipDisablePointerEvents]: h }, u),
                     style: y({}, p, d),
                     children: [
                         (0, i.jsx)('div', {
@@ -234,7 +234,7 @@ class j extends (r = a.Component) {
     render() {
         let e,
             { children: t, text: n, 'aria-label': r } = this.props;
-        if (null == n) return t(P);
+        if (null == n) return t(R);
         'string' == typeof r ? (e = r) : 'string' == typeof n && !1 !== r && (e = n);
         let o = {
             onClick: this.handleClick,

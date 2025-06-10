@@ -68,8 +68,8 @@ function A(e, t) {
 }
 let N = v.QZA.CLOSED,
     C = {},
-    P = {},
-    R = !1,
+    R = {},
+    P = !1,
     w = !1,
     D = null,
     L = ['name', 'type', 'topic_', 'bitrate_', 'userLimit_', 'nsfw_', 'flags_', 'rateLimitPerUser_', 'defaultThreadRateLimitPerUser', 'defaultAutoArchiveDuration', 'template', 'defaultReactionEmoji', 'rtcRegion', 'videoQualityMode', 'threadMetadata', 'banner', 'availableTags', 'defaultSortOrder', 'defaultForumLayout', 'defaultTagSetting', 'iconEmoji', 'themeColor'];
@@ -109,7 +109,7 @@ function j(e) {
         (i = e.subsection),
         null != o &&
             r === v.CoT.INSTANT_INVITES &&
-            ((R = !0),
+            ((P = !0),
             h.tn
                 .get({
                     url: v.ANM.INSTANT_INVITES(o.id),
@@ -118,17 +118,17 @@ function j(e) {
                 })
                 .then(
                     (e) => {
-                        (R = !1),
+                        (P = !1),
                             m.Z.dispatch({
                                 type: 'CHANNEL_SETTINGS_LOADED_INVITES',
                                 invites: e.body
                             });
                     },
-                    () => (R = !1)
+                    () => (P = !1)
                 ));
 }
 function U() {
-    (w = !1), (N = v.QZA.CLOSED), (r = null), (o = a = null), (s = null), (P = {});
+    (w = !1), (N = v.QZA.CLOSED), (r = null), (o = a = null), (s = null), (R = {});
 }
 function G() {
     (N = v.QZA.SUBMITTING), (C = {});
@@ -171,16 +171,16 @@ function H(e) {
     });
 }
 function Y(e) {
-    (P = {}),
+    (R = {}),
         e.invites.forEach((e) => {
-            P[e.code] = H(e);
+            R[e.code] = H(e);
         });
 }
 function W(e) {
-    (P = S({}, P)), delete P[e.code];
+    (R = S({}, R)), delete R[e.code];
 }
 function K(e) {
-    P = A(S({}, P), { [e.invite.code]: H(e.invite) });
+    R = A(S({}, R), { [e.invite.code]: H(e.invite) });
 }
 function z(e) {
     return !!x(e) && null != o && (null != l && null == o.permissionOverwrites[l] && (l = o.getGuildId()), !0);
@@ -192,11 +192,11 @@ function q(e) {
     for (let e of t) n = z(e.id) || n;
     return n;
 }
-function Q(e) {
+function X(e) {
     let { channelId: t } = e;
     return z(t);
 }
-function X(e) {
+function Q(e) {
     let {
         channel: { id: t }
     } = e;
@@ -222,8 +222,8 @@ class $ extends (c = p.ZP.Store) {
     }
     getInvites() {
         return {
-            invites: P,
-            loading: R
+            invites: R,
+            loading: P
         };
     }
     showNotice() {
@@ -245,7 +245,7 @@ class $ extends (c = p.ZP.Store) {
             channel: o,
             section: r,
             subsection: i,
-            invites: P,
+            invites: R,
             selectedOverwriteId: l,
             hasChanges: this.hasChanges(),
             analyticsLocation: D
@@ -260,14 +260,14 @@ let ee = new $(m.Z, {
         CHANNEL_SETTINGS_SUBMIT_SUCCESS: B,
         CHANNEL_SETTINGS_SUBMIT_FAILURE: F,
         CHANNEL_SETTINGS_CLOSE: U,
-        CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: Q,
-        CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: Q,
+        CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: X,
+        CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: X,
         CHANNEL_SETTINGS_OVERWRITE_SELECT: J,
         CHANNEL_SETTINGS_UPDATE: Z,
         CHANNEL_SETTINGS_SET_SECTION: j,
         CHANNEL_SETTINGS_LOADED_INVITES: Y,
         CHANNEL_UPDATES: q,
-        CHANNEL_DELETE: X,
+        CHANNEL_DELETE: Q,
         INSTANT_INVITE_REVOKE_SUCCESS: W,
         INSTANT_INVITE_CREATE_SUCCESS: K
     }),

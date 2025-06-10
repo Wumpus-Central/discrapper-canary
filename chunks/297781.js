@@ -3,11 +3,11 @@ n.d(t, {
     An: () => W,
     E6: () => Y,
     EE: () => G,
-    Gk: () => X,
+    Gk: () => Q,
     Gt: () => D,
     OV: () => U,
     PZ: () => $,
-    Rg: () => Q,
+    Rg: () => X,
     U9: () => z,
     XF: () => B,
     Yl: () => q,
@@ -93,18 +93,18 @@ function C(e, t) {
         e
     );
 }
-function P(e, t) {
+function R(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = R(e, t);
+        i = P(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function R(e, t) {
+function P(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -117,7 +117,7 @@ let w = {
     [c.s.TOP_ARTIST]: [W],
     [c.s.PLAYED_GAME]: [U, G, j, z, F, H, K, Z, V],
     [c.s.TOP_GAME]: [Y],
-    [c.s.WATCHED_MEDIA]: [q, Q],
+    [c.s.WATCHED_MEDIA]: [q, X],
     [c.s.LAUNCHED_ACTIVITY]: [U, G, j, z, K, V]
 };
 var D = (function (e) {
@@ -129,7 +129,7 @@ function x() {
 }
 function k(e) {
     var { children: t } = e,
-        n = P(e, ['children']);
+        n = R(e, ['children']);
     return (0, r.jsx)('div', C(A({ className: S.badgeContainer }, n), { children: t }));
 }
 function M(e) {
@@ -367,7 +367,7 @@ function q(e) {
         ]
     });
 }
-function Q(e) {
+function X(e) {
     let { entry: t } = e,
         n = (0, b.ap)(t.extra.media_assets_large_text);
     return null == n
@@ -377,7 +377,7 @@ function Q(e) {
               text: n
           });
 }
-function X(e) {
+function Q(e) {
     let t,
         { location: n, children: i, className: a } = e;
     return (
@@ -434,7 +434,7 @@ function $(e) {
         a = J(t);
     return null == a
         ? null
-        : (0, r.jsx)(X, {
+        : (0, r.jsx)(Q, {
               location: n,
               className: i,
               children: a

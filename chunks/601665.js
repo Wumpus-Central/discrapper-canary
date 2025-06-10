@@ -52,15 +52,15 @@ function N(e) {
     return e;
 }
 function C(e) {
-    let { user: t, currentUser: n, guildId: A, channelId: C, messageId: P, roleId: R, openedAt: w, closePopout: D, setPopoutRef: L, disableUserProfileLink: x = __OVERLAY__, newAnalyticsLocations: k = [], disableAutoFocus: M = !1 } = e,
+    let { user: t, currentUser: n, guildId: A, channelId: C, messageId: R, roleId: P, openedAt: w, closePopout: D, setPopoutRef: L, disableUserProfileLink: x = __OVERLAY__, newAnalyticsLocations: k = [], disableAutoFocus: M = !1 } = e,
         { analyticsLocations: j } = (0, c.ZP)([...k, l.Z.USER_PROFILE_POPOUT]),
         U = (0, d.ZB)({
             layout: 'POPOUT',
             userId: t.id,
             guildId: A,
             channelId: C,
-            messageId: P,
-            roleId: R
+            messageId: R,
+            roleId: P
         }),
         G = (0, _.ZP)(t.id, A),
         B = (0, a.e7)([u.Z], () => (null != A ? u.Z.getGuild(A) : null)),

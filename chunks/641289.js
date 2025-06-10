@@ -68,7 +68,7 @@ e.exports = function (e) {
             literal: d
         },
         C = [E, S, A],
-        P = [
+        R = [
             {
                 match: r(/\./, a(...p)),
                 relevance: 0
@@ -78,12 +78,12 @@ e.exports = function (e) {
                 match: r(/\b/, a(...p), /(?=\()/)
             }
         ],
-        R = {
+        P = {
             match: /->/,
             relevance: 0
         },
         w = [
-            R,
+            P,
             {
                 className: 'operator',
                 relevance: 0,
@@ -226,10 +226,10 @@ e.exports = function (e) {
             begin: /</,
             end: />/,
             keywords: N,
-            contains: [...h, ...C, ...K, R, z]
+            contains: [...h, ...C, ...K, P, z]
         };
     z.contains.push(q);
-    let Q = {
+    let X = {
             begin: /\(/,
             end: /\)/,
             relevance: 0,
@@ -244,7 +244,7 @@ e.exports = function (e) {
                 ...h,
                 H,
                 ...C,
-                ...P,
+                ...R,
                 ...w,
                 x,
                 B,
@@ -253,7 +253,7 @@ e.exports = function (e) {
                 z
             ]
         },
-        X = {
+        Q = {
             begin: /</,
             end: />/,
             keywords: 'repeat each',
@@ -286,7 +286,7 @@ e.exports = function (e) {
                 B,
                 ...K,
                 z,
-                Q
+                X
             ],
             endsParent: !0,
             illegal: /["']/
@@ -297,13 +297,13 @@ e.exports = function (e) {
                 1: 'keyword',
                 3: 'title.function'
             },
-            contains: [X, J, t],
+            contains: [Q, J, t],
             illegal: [/\[/, /%/]
         },
         ee = {
             match: [/\b(?:subscript|init[?!]?)/, /\s*(?=[<(])/],
             className: { 1: 'keyword' },
-            contains: [X, J, t],
+            contains: [Q, J, t],
             illegal: /\[|%/
         },
         et = {
@@ -346,7 +346,7 @@ e.exports = function (e) {
             },
             keywords: N,
             contains: [
-                X,
+                Q,
                 ...C,
                 {
                     begin: /:/,
@@ -366,7 +366,7 @@ e.exports = function (e) {
     for (let e of B.variants) {
         let t = e.contains.find((e) => 'interpol' === e.label);
         t.keywords = N;
-        let n = [...C, ...P, ...w, x, B, ...W];
+        let n = [...C, ...R, ...w, x, B, ...W];
         t.contains = [
             ...n,
             {
@@ -396,14 +396,14 @@ e.exports = function (e) {
             },
             H,
             ...C,
-            ...P,
+            ...R,
             ...w,
             x,
             B,
             ...W,
             ...K,
             z,
-            Q
+            X
         ]
     };
 };

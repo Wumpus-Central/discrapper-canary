@@ -4,10 +4,10 @@ n.d(t, {
     Eo: () => m,
     Kj: () => _,
     Kr: () => b,
-    LY: () => P,
+    LY: () => R,
     XA: () => g,
     aB: () => f,
-    hm: () => R,
+    hm: () => P,
     jE: () => d
 }),
     n(388685),
@@ -187,7 +187,7 @@ let m = (e) => {
                 }
             }
     },
-    P = async (e) => {
+    R = async (e) => {
         let t = {
             collectionFiles: [],
             avatarDecorationFiles: [],
@@ -205,7 +205,7 @@ let m = (e) => {
             }
         return t.collectionFiles.sort((e, t) => e.name.localeCompare(t.name)), t.avatarDecorationFiles.sort((e, t) => e.name.localeCompare(t.name)), t.ignoredFilenames.sort((e, t) => e.localeCompare(t)), t;
     },
-    R = () => {
+    P = () => {
         let [e, t] = r.useState(() => ({
                 collectionFiles: [],
                 avatarDecorationFiles: [],
@@ -215,7 +215,7 @@ let m = (e) => {
             { upsertCollectionAsset: n, upsertAvatarDecorationAsset: i } = (0, o.N9)(),
             a = r.useCallback(
                 async (e) => {
-                    let r = await P(e);
+                    let r = await R(e);
                     t(r),
                         (0 !== r.collectionFiles.length || 0 !== r.avatarDecorationFiles.length) &&
                             (r.collectionFiles.forEach((e) => {

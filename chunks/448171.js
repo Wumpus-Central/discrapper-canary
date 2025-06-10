@@ -12,10 +12,10 @@ var r = a(967752),
     I = a(263449),
     R = a(255768),
     d = a(380132),
-    f = a(151122),
-    A = a(112797),
-    p = a(305625),
-    N = a(820754),
+    A = a(151122),
+    f = a(112797),
+    N = a(305625),
+    p = a(820754),
     T = a(822578);
 let L = "Not capturing exception because it's already been captured.";
 class h {
@@ -59,7 +59,7 @@ class h {
         return this._process(this._captureEvent(t, o, i || a)), o.event_id;
     }
     captureSession(t) {
-        'string' != typeof t.release ? R.X && n.kg.warn('Discarded session because of missing or non-string release') : (this.sendSession(t), (0, A.CT)(t, { init: !1 }));
+        'string' != typeof t.release ? R.X && n.kg.warn('Discarded session because of missing or non-string release') : (this.sendSession(t), (0, f.CT)(t, { init: !1 }));
     }
     getDsn() {
         return this._dsn;
@@ -94,7 +94,7 @@ class h {
     }
     addIntegration(t) {
         let e = this._integrations[t.name];
-        (0, f.m7)(this, t, this._integrations), e || (0, f.uf)(this, [t]);
+        (0, A.m7)(this, t, this._integrations), e || (0, A.uf)(this, [t]);
     }
     sendEvent(t, e = {}) {
         this.emit('beforeSendEvent', t, e);
@@ -133,7 +133,7 @@ class h {
     }
     _setupIntegrations() {
         let { integrations: t } = this._options;
-        (this._integrations = (0, f.q4)(this, t)), (0, f.uf)(this, t);
+        (this._integrations = (0, A.q4)(this, t)), (0, A.uf)(this, t);
     }
     _updateSessionFromEvent(t, e) {
         let a = !1,
@@ -149,7 +149,7 @@ class h {
             }
         let _ = 'ok' === t.status;
         ((_ && 0 === t.errors) || (_ && a)) &&
-            ((0, A.CT)(t, {
+            ((0, f.CT)(t, {
                 ...(a && { status: 'crashed' }),
                 errors: t.errors || Number(r || a)
             }),
@@ -190,7 +190,7 @@ class h {
                         ...t.contexts
                     }),
                         (t.sdkProcessingMetadata = {
-                            dynamicSamplingContext: _ || (0, p._l)(a, this),
+                            dynamicSamplingContext: _ || (0, N._l)(a, this),
                             ...t.sdkProcessingMetadata
                         });
                 }
@@ -213,7 +213,7 @@ class h {
             c = O(t),
             s = t.type || 'error',
             l = `before send for type \`${s}\``,
-            u = void 0 === n ? void 0 : (0, N.o)(n);
+            u = void 0 === n ? void 0 : (0, p.o)(n);
         if (c && 'number' == typeof u && Math.random() > u) return this.recordDroppedEvent('sample_rate', 'error', t), (0, i.$2)(new E.b(`Discarding event because it's not included in the random sample (sampling rate = ${n})`, 'log'));
         let I = 'replay_event' === s ? 'replay' : s,
             R = (t.sdkProcessingMetadata || {}).capturedSpanIsolationScope;

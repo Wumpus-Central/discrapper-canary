@@ -46,8 +46,8 @@ var r = n(255367),
     Y = n(339149),
     K = n(981631),
     q = n(675654),
-    X = n(474936),
-    Q = n(388032),
+    Q = n(474936),
+    X = n(388032),
     J = n(916723),
     $ = n(416350);
 function ee(e) {
@@ -126,7 +126,7 @@ let er = (e) => {
                 (0, _.h)({
                     name: s.ImpressionNames.GIFT_INTENT_BADGE,
                     type: s.ImpressionTypes.VIEW,
-                    properties: { gift_intent_type: X.hX.FRIEND_ANNIVERSARY }
+                    properties: { gift_intent_type: Q.hX.FRIEND_ANNIVERSARY }
                 });
         }, [h]);
         let [g, E] = i.useState(!1);
@@ -139,13 +139,13 @@ let er = (e) => {
                         ee(
                             {
                                 onClick: () => {
-                                    h && (H.default.track(K.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: X.hX.FRIEND_ANNIVERSARY }), m.Z.setSection(K.pJs.ALL), (0, A.Gk)());
+                                    h && (H.default.track(K.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: Q.hX.FRIEND_ANNIVERSARY }), m.Z.setSection(K.pJs.ALL), (0, A.Gk)());
                                 },
                                 interactiveClassName: h ? $.friendsBadge : void 0,
                                 selected: t,
                                 route: K.Z5c.FRIENDS,
                                 icon: f.iFz,
-                                text: Q.intl.string(Q.t.TdEu5e),
+                                text: X.intl.string(X.t.TdEu5e),
                                 onMouseEnter: () => {
                                     E(!0);
                                 },
@@ -196,7 +196,7 @@ let er = (e) => {
                         selected: t,
                         route: K.Z5c.APPLICATION_LIBRARY,
                         icon: f.vqy,
-                        text: Q.intl.string(Q.t.cw57am)
+                        text: X.intl.string(X.t.cw57am)
                     },
                     i,
                     l
@@ -223,7 +223,7 @@ let er = (e) => {
                         selected: t,
                         route: K.Z5c.MESSAGE_REQUESTS,
                         icon: f._XJ,
-                        text: Q.intl.string(Q.t.e7GWjY),
+                        text: X.intl.string(X.t.e7GWjY),
                         onClick: l
                     },
                     n
@@ -234,7 +234,7 @@ let er = (e) => {
     },
     eo = (e) => {
         let { selected: t } = e,
-            n = Q.intl.string(J.default.Rkdixs),
+            n = X.intl.string(J.default.Rkdixs),
             l = (0, c.JA)('family-center'),
             [a, o] = i.useState(!0);
         return (0, r.jsx)(
@@ -271,7 +271,7 @@ let er = (e) => {
                           return (t) => (0, r.jsx)(e, ee({}, t));
                       });
                   },
-                  'aria-label': Q.intl.string(Q.t.cpT0Cg)
+                  'aria-label': X.intl.string(X.t.cpT0Cg)
               })
             : i > 0
               ? (0, r.jsx)('div', {
@@ -284,7 +284,7 @@ let er = (e) => {
                         let { visibleContent: t } = e;
                         return t === p.z.FAMILY_CENTER_NEW_BADGE
                             ? (0, r.jsx)(f.IGR, {
-                                  text: Q.intl.string(Q.t.y2b7CA),
+                                  text: X.intl.string(X.t.y2b7CA),
                                   color: O.Z.BG_BRAND
                               })
                             : null;
@@ -310,7 +310,7 @@ let ed = i.memo(function (e) {
         _ = i.useRef(null);
     return (0, r.jsxs)('nav', {
         className: $.privateChannels,
-        'aria-label': Q.intl.string(Q.t.ZH9aPz),
+        'aria-label': X.intl.string(X.t.ZH9aPz),
         children: [
             (0, r.jsx)(D.Z, {
                 childRef: m,
@@ -327,13 +327,13 @@ let ed = i.memo(function (e) {
                               size: f.zxk.Sizes.SMALL,
                               fullWidth: !0,
                               onClick: ec,
-                              children: Q.intl.string(Q.t.LzcpeX)
+                              children: X.intl.string(X.t.LzcpeX)
                           })
                         : (0, r.jsx)('button', {
                               type: 'button',
                               className: a()($.searchBarComponent, { [$.themedSearchBarMobile]: u.tq }),
                               onClick: ec,
-                              children: Q.intl.string(Q.t.LzcpeX)
+                              children: X.intl.string(X.t.LzcpeX)
                           })
                 })
             }),

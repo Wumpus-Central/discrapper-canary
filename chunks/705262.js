@@ -31,8 +31,8 @@ var r = n(255367),
     A = n(626135),
     N = n(238302),
     C = n(514361),
-    P = n(803038),
-    R = n(717953),
+    R = n(803038),
+    P = n(717953),
     w = n(583901),
     D = n(469115),
     L = n(981631),
@@ -131,7 +131,7 @@ let K = Object.freeze({
             location_stack: r
         });
     },
-    Q = (e) => {
+    X = (e) => {
         let { type: t, isPreview: n, isCoachmark: i } = e,
             a = (0, E.Q3)('GradientSelectorsTitle'),
             o = (0, s.EQ)({
@@ -170,7 +170,7 @@ let K = Object.freeze({
             ]
         });
     },
-    X = (e) => {
+    Q = (e) => {
         var t, n;
         let { type: i, isPreview: a, isCoachmark: o } = e;
         if ((null == (n = (0, y.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === x.Si.TIER_2 && a) return null;
@@ -226,12 +226,12 @@ let K = Object.freeze({
                       (0, r.jsxs)('div', {
                           className: G.headings,
                           children: [
-                              (0, r.jsx)(Q, {
+                              (0, r.jsx)(X, {
                                   type: s,
                                   isPreview: c,
                                   isCoachmark: o
                               }),
-                              (0, r.jsx)(X, {
+                              (0, r.jsx)(Q, {
                                   type: s,
                                   isPreview: c,
                                   isCoachmark: o
@@ -253,7 +253,7 @@ let K = Object.freeze({
             [b, y] = i.useState(!1),
             [O, v] = i.useState(-1),
             I = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
-            S = P.M.useExperiment({ location: 'GradientSelectors' }).enabled;
+            S = R.M.useExperiment({ location: 'GradientSelectors' }).enabled;
         i.useEffect(() => {
             ((O === D.XV.length - 2 && 'EDITOR' === a) || E === c.Us.EASTER_EGG) && y(!0);
         }, [O, a, E]);
@@ -306,7 +306,8 @@ let K = Object.freeze({
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 S &&
-                    (0, r.jsx)(R.Z, {
+                    (0, r.jsx)(P.Z, {
+                        isDisabled: t,
                         onSelect: () => {
                             (0, m.XO)(m.wh.CUSTOM_THEME, { from: 'SETTINGS' === a ? m.tE.SETTING : m.tE.CLIENT_THEMES_EDITOR }), 'SETTINGS' === a && (0, d.xf)();
                         }

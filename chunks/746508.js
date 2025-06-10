@@ -46,8 +46,8 @@ var r = n(255367),
     Y = n(703656),
     K = n(917405),
     q = n(641015),
-    X = n(848543),
-    Q = n(565799),
+    Q = n(848543),
+    X = n(565799),
     J = n(501655),
     $ = n(368442),
     ee = n(600518),
@@ -429,7 +429,7 @@ function eq(e) {
           })
         : null;
 }
-function eX(e) {
+function eQ(e) {
     let t,
         { channel: n, canGoLive: l, enableActivities: o, disabled: s } = e,
         c = i.useRef(null),
@@ -524,7 +524,7 @@ function eX(e) {
         }
     });
 }
-class eQ extends i.PureComponent {
+class eX extends i.PureComponent {
     renderConnectionStatus() {
         let e,
             { channel: t, guild: n, rtcConnectionQuality: i, rtcConnectionState: l, rtcConnectionLastPing: a, hasVideo: o, matchAccountText: s } = this.props;
@@ -632,7 +632,7 @@ class eQ extends i.PureComponent {
                     enableActivities: d,
                     disabled: !h && p
                 }),
-                (0, r.jsx)(eX, {
+                (0, r.jsx)(eQ, {
                     channel: e,
                     canGoLive: t,
                     enableActivities: d,
@@ -645,7 +645,7 @@ class eQ extends i.PureComponent {
                       })
                     : null,
                 (0, q.Z)(e) && !s
-                    ? (0, r.jsx)(X.Z, {
+                    ? (0, r.jsx)(Q.Z, {
                           channel: e,
                           focusProps: eF
                       })
@@ -812,7 +812,7 @@ let e$ = (0, E.Z)(function (e) {
         y = (0, u.e7)([W.Z], () => W.Z.isViewingRoles(g)),
         C = (0, u.e7)([eO.Z], () => y && !eO.Z.can(eL.Plq.VIEW_CHANNEL, h), [y, h]),
         S = ei.Fg.useSetting(),
-        [T, P, x] = (0, u.Wu)([eS.ZP, Q.Z], () => ((null == h ? void 0 : h.isGuildStageVoice()) ? [Q.Z.getMutableParticipants(h.id, J.pV.SPEAKER), Q.Z.getParticipantsVersion(h.id), null] : [null, null, null != h ? eS.ZP.getVoiceStatesForChannel(h) : null]), [h]),
+        [T, P, x] = (0, u.Wu)([eS.ZP, X.Z], () => ((null == h ? void 0 : h.isGuildStageVoice()) ? [X.Z.getMutableParticipants(h.id, J.pV.SPEAKER), X.Z.getParticipantsVersion(h.id), null] : [null, null, null != h ? eS.ZP.getVoiceStatesForChannel(h) : null]), [h]),
         Z = i.useMemo(() => {
             var e, t;
             return null !=
@@ -854,7 +854,7 @@ let e$ = (0, E.Z)(function (e) {
                       })
                     : null,
                 (0, r.jsx)(
-                    eQ,
+                    eX,
                     eB(eV({}, e, b, p), {
                         enableActivities: H,
                         remoteVoiceState: a,

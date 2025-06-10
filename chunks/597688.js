@@ -35,29 +35,29 @@ let m = new Map(),
     A = y,
     N = null,
     C = !1,
-    P = new Set(),
-    R = new Map(),
+    R = new Set(),
+    P = new Map(),
     w = new Map(),
     D = {},
     L = 0,
     x = (e) => {
         let { skuId: t } = e;
-        (P = new Set(P)).add(t), (R = new Map(R)).delete(t), (w = new Map(w)).delete(t);
+        (R = new Set(R)).add(t), (P = new Map(P)).delete(t), (w = new Map(w)).delete(t);
     },
     k = (e) => {
         let { skuId: t, error: n } = e;
-        (P = new Set(P)).delete(t), (R = new Map(R)).set(t, n), (w = new Map(w)).set(t, Date.now());
+        (R = new Set(R)).delete(t), (P = new Map(P)).set(t, n), (w = new Map(w)).set(t, Date.now());
     },
     M = (e) => {
         let { skuId: t, product: n } = e;
-        v.set(t, n), (P = new Set(P)).delete(t), (R = new Map(R)).delete(t), (w = new Map(w)).delete(t);
+        v.set(t, n), (R = new Set(R)).delete(t), (P = new Map(P)).delete(t), (w = new Map(w)).delete(t);
     },
     j = (e) => {
         (C = !0), (r = void 0), (a = void 0), (D = e.options);
     },
     U = (e) => {
         let { error: t } = e;
-        (O = m), (v = g), (A = y), (C = !1), (P = new Set()), (r = t), (a = Date.now());
+        (O = m), (v = g), (A = y), (C = !1), (R = new Set()), (r = t), (a = Date.now());
     },
     G = (e) => {
         if (0 === e.categories.length) (O = m), (v = g);
@@ -96,7 +96,7 @@ let m = new Map(),
         }
     },
     V = () => {
-        (O = m), (v = g), (A = y), (i = void 0), (C = !1), (P = new Set()), (r = void 0), (a = void 0), (D = {}), (L = 0);
+        (O = m), (v = g), (A = y), (i = void 0), (C = !1), (R = new Set()), (r = void 0), (a = void 0), (D = {}), (L = 0);
     },
     Z = () => {
         if (!u.Z.hasLoadedExperiments) return;
@@ -114,7 +114,7 @@ class Y extends (o = l.ZP.Store) {
         return C;
     }
     isFetchingProduct(e) {
-        return null != e && P.has(e);
+        return null != e && R.has(e);
     }
     get error() {
         return r;
@@ -150,7 +150,7 @@ class Y extends (o = l.ZP.Store) {
         return null != e ? v.get(e) : void 0;
     }
     getProductFetchError(e) {
-        return null != e ? R.get(e) : void 0;
+        return null != e ? P.get(e) : void 0;
     }
     getProductFetchErrorTimestamp(e) {
         return null != e ? w.get(e) : void 0;

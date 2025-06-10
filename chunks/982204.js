@@ -1,6 +1,6 @@
 n.d(t, {
-    B: () => R,
-    E: () => P
+    B: () => P,
+    E: () => R
 }),
     n(953529);
 var r = n(255367);
@@ -78,7 +78,7 @@ let O = (e, t, n) => (null != n && e.productLine === E.POd.COLLECTIBLES && n.typ
             })
         });
     },
-    P = (e) => {
+    R = (e) => {
         let { sku: t, value: n } = e,
             i = (0, f.ed)('SKUInvoicePreview'),
             a = (0, c.e7)([d.Z], () => d.Z.getProduct(t.id)),
@@ -100,7 +100,7 @@ let O = (e, t, n) => (null != n && e.productLine === E.POd.COLLECTIBLES && n.typ
             })
         });
     };
-function R(e) {
+function P(e) {
     let { sku: t, skuPricePreview: n } = e;
     s()(null != n.amount, 'SKU must have a price set.'), s()(null != n.invoice_items && 1 === n.invoice_items.length, 'SKU preview must have single line item');
     let i = (0, f.ed)('SKUInvoicePreview'),

@@ -1,6 +1,6 @@
 n.d(t, {
     m: () => C,
-    n: () => R
+    n: () => P
 }),
     n(388685),
     n(415506),
@@ -83,15 +83,15 @@ let T = new s.Z('CloudUpload.tsx'),
 var C = (function (e) {
     return (e.NOT_STARTED = 'NOT_STARTED'), (e.STARTED = 'STARTED'), (e.UPLOADING = 'UPLOADING'), (e.ERROR = 'ERROR'), (e.COMPLETED = 'COMPLETED'), (e.CANCELED = 'CANCELED'), e;
 })({});
-class P {
+class R {
     constructor() {
         O(this, 'numChunks', void 0), O(this, 'totalRequestCount', void 0), O(this, 'timing', {}), O(this, 'compressAndExtractDisabled', void 0), O(this, 'fileAlreadyPrepped', void 0), O(this, 'imageCompressionQuality', void 0), O(this, 'videoCompressionQuality', void 0), O(this, 'convertedMimeType', void 0), O(this, 'sourceMediaWidth', void 0), O(this, 'sourceMediaHeight', void 0), O(this, 'sourceMediaFormat', void 0), O(this, 'sourceVideoBitrate', void 0), O(this, 'sourceVideoFramerate', void 0), O(this, 'videoDurationMs', void 0), O(this, 'sourceVideoProfile', void 0), O(this, 'sourceVideoLevel', void 0), O(this, 'targetVideoWidth', void 0), O(this, 'targetVideoHeight', void 0), O(this, 'targetVideoBitrate', void 0), O(this, 'targetVideoCodec', void 0), O(this, 'targetVideoFramerate', void 0), O(this, 'targetVideoIsHdr', void 0), O(this, 'hevcIsSupported', void 0), O(this, 'progressUpdateGranularity', void 0), O(this, 'validUploadHash', void 0);
     }
 }
-class R extends E.ZP {
+class P extends E.ZP {
     static fromJson(e) {
         let { item: t, channelId: n, showLargeMessageDialog: r, reactNativeFileIndex: i } = e,
-            a = new R(t, n, r, i);
+            a = new P(t, n, r, i);
         return (
             Object.entries(e).forEach((e) => {
                 let [t, n] = e;
@@ -435,7 +435,7 @@ class R extends E.ZP {
         T.log('Cancelled called for '.concat(this.id)), this._abortController.abort(), this.trackUploadFinished('CANCELED'), 'COMPLETED' === this.status && this.delete(), this.setStatus('CANCELED'), this.emit('complete'), this.removeAllListeners();
     }
     resetState() {
-        return (this.status = 'NOT_STARTED'), (this.uploadedFilename = void 0), (this.responseUrl = void 0), (this.error = void 0), (this.startTime = void 0), (this.uploadAnalytics = new P()), (this._abortController = new AbortController()), super.resetState();
+        return (this.status = 'NOT_STARTED'), (this.uploadedFilename = void 0), (this.responseUrl = void 0), (this.error = void 0), (this.startTime = void 0), (this.uploadAnalytics = new R()), (this._abortController = new AbortController()), super.resetState();
     }
     async delete() {
         if (null == this.uploadedFilename) return;
@@ -519,6 +519,6 @@ class R extends E.ZP {
     }
     constructor(e, t, n, r) {
         var i, a, o, s;
-        super(e, n), O(this, 'RESUME_INCOMPLETE_CODES', [308]), O(this, 'status', 'NOT_STARTED'), O(this, 'channelId', void 0), O(this, 'responseUrl', void 0), O(this, 'currentSize', void 0), O(this, 'preCompressionSize', void 0), O(this, 'postCompressionSize', void 0), O(this, 'loaded', 0), O(this, 'reactNativeFileIndex', void 0), O(this, 'error', void 0), O(this, 'reactNativeFilePrepped', !1), O(this, 'startTime', void 0), O(this, 'uploadAnalytics', new P()), O(this, 'contentHash', void 0), O(this, 'etag', void 0), O(this, '_abortController', void 0), O(this, '_xhr', void 0), O(this, '_aborted', !1), (this.channelId = t), (this.preCompressionSize = null != (o = null == (i = e.file) ? void 0 : i.size) ? o : 0), (this.currentSize = null != (s = null == (a = e.file) ? void 0 : a.size) ? s : 0), (this.reactNativeFileIndex = r), (this._abortController = new AbortController());
+        super(e, n), O(this, 'RESUME_INCOMPLETE_CODES', [308]), O(this, 'status', 'NOT_STARTED'), O(this, 'channelId', void 0), O(this, 'responseUrl', void 0), O(this, 'currentSize', void 0), O(this, 'preCompressionSize', void 0), O(this, 'postCompressionSize', void 0), O(this, 'loaded', 0), O(this, 'reactNativeFileIndex', void 0), O(this, 'error', void 0), O(this, 'reactNativeFilePrepped', !1), O(this, 'startTime', void 0), O(this, 'uploadAnalytics', new R()), O(this, 'contentHash', void 0), O(this, 'etag', void 0), O(this, '_abortController', void 0), O(this, '_xhr', void 0), O(this, '_aborted', !1), (this.channelId = t), (this.preCompressionSize = null != (o = null == (i = e.file) ? void 0 : i.size) ? o : 0), (this.currentSize = null != (s = null == (a = e.file) ? void 0 : a.size) ? s : 0), (this.reactNativeFileIndex = r), (this._abortController = new AbortController());
     }
 }

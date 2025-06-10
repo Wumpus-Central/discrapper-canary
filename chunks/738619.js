@@ -30,8 +30,8 @@ var r = n(255367),
     A = n(451478),
     N = n(626135),
     C = n(823379),
-    P = n(5192),
-    R = n(981631),
+    R = n(5192),
+    P = n(981631),
     w = n(388032),
     D = n(486850);
 function L(e, t, n) {
@@ -120,7 +120,7 @@ class B extends i.PureComponent {
         let e = this.props.activity.application_id;
         null != e &&
             -1 === G.indexOf(e) &&
-            (N.default.track(R.rMx.SHOW_TUTORIAL, {
+            (N.default.track(P.rMx.SHOW_TUTORIAL, {
                 tutorial: 'activity-invite-nux-inline',
                 application_id: e
             }),
@@ -249,7 +249,7 @@ function Z(e) {
         .reject((e) => v.Z.isBlockedOrIgnored(e))
         .map((e) => T.default.getUser(e))
         .filter(C.lm)
-        .map((t) => P.ZP.getName(e.guild_id, e.id, t))
+        .map((t) => R.ZP.getName(e.guild_id, e.id, t))
         .value();
 }
 function H(e) {

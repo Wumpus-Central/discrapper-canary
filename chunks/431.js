@@ -79,14 +79,14 @@ function I() {
 }
 function S(e) {
     let { userTrialOffer: t } = e;
-    null != t ? (v.userTrialOffers[t.trial_id] = t) : P(), (v.userOffersLastFetchedAtDate = Date.now()), (v.isFetching = !1);
+    null != t ? (v.userTrialOffers[t.trial_id] = t) : R(), (v.userOffersLastFetchedAtDate = Date.now()), (v.isFetching = !1);
 }
 function T(e) {
     let { userTrialOffer: t, userDiscount: n, userDiscountOffer: r } = e;
-    null == t && null == n && null == r && P(), null != t ? ((v.userTrialOffers[t.trial_id] = t), (v.userDiscountOffers = {})) : null != n ? ((v.userDiscountOffers[n.discount_id] = n), (v.userTrialOffers = {})) : null != r && ((v.userDiscountOffers[r.discount_id] = r), (v.userTrialOffers = {})), (v.userOffersLastFetchedAtDate = Date.now()), (v.isFetching = !1), (v.lastFetchSuccessful = !0);
+    null == t && null == n && null == r && R(), null != t ? ((v.userTrialOffers[t.trial_id] = t), (v.userDiscountOffers = {})) : null != n ? ((v.userDiscountOffers[n.discount_id] = n), (v.userTrialOffers = {})) : null != r && ((v.userDiscountOffers[r.discount_id] = r), (v.userTrialOffers = {})), (v.userOffersLastFetchedAtDate = Date.now()), (v.isFetching = !1), (v.lastFetchSuccessful = !0);
 }
 function A() {
-    P(), (v.userOffersLastFetchedAtDate = Date.now()), (v.isFetching = !1), (v.lastFetchSuccessful = !1);
+    R(), (v.userOffersLastFetchedAtDate = Date.now()), (v.isFetching = !1), (v.lastFetchSuccessful = !1);
 }
 function N(e) {
     let { userTrialOffer: t } = e;
@@ -96,10 +96,10 @@ function C(e) {
     let { userTrialOffer: t, userDiscount: n, userDiscountOffer: r } = e;
     null != t ? (v.userTrialOffers[t.trial_id] = t) : (v.userTrialOffers = {}), null != n ? (v.userDiscountOffers[n.discount_id] = n) : null != r ? (v.userDiscountOffers[r.discount_id] = r) : (v.userDiscountOffers = {}), (v.userOffersLastFetchedAtDate = Date.now());
 }
-function P() {
+function R() {
     (v.userTrialOffers = {}), (v.userDiscountOffers = {}), (v.userOffersLastFetchedAtDate = void 0), (v.isFetching = !1);
 }
-let R = () => !0;
+let P = () => !0;
 function w() {
     return null != _.ZP.getPremiumTypeSubscription() && ((v.userDiscountOffers = {}), (v.userTrialOffers = {}), !0);
 }
@@ -120,7 +120,7 @@ function L() {
 }
 class x extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (v = null != e ? e : O), this.waitFor(u.default), this.syncWith([u.default], R), this.syncWith([_.ZP], w), this.syncWith([o.Z], L);
+        (v = null != e ? e : O), this.waitFor(u.default), this.syncWith([u.default], P), this.syncWith([_.ZP], w), this.syncWith([o.Z], L);
     }
     getUserTrialOffer(e) {
         if (null !== e) return v.userTrialOffers[e];
@@ -188,7 +188,7 @@ class x extends (r = i.ZP.PersistedStore) {
         return v;
     }
     forceReset() {
-        P();
+        R();
     }
     lastFetchSuccessful() {
         return v.lastFetchSuccessful;
@@ -218,5 +218,5 @@ let k = new x(a.Z, {
     BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: D,
     BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: D,
     BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: D,
-    LOGOUT: P
+    LOGOUT: R
 });

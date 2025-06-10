@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Q }), n(388685);
+n.d(t, { Z: () => X }), n(388685);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -78,7 +78,7 @@ function T(e) {
     (v = a().omitBy(v, (t) => t.parentId === e)), delete I[e];
 }
 function A(e, t) {
-    c.AW.has(e.type) && N(P(e), t);
+    c.AW.has(e.type) && N(R(e), t);
 }
 function N(e, t) {
     var n;
@@ -87,9 +87,9 @@ function N(e, t) {
 }
 function C(e) {
     var t;
-    null == (t = e.threads) || t.forEach(R);
+    null == (t = e.threads) || t.forEach(P);
 }
-function P(e) {
+function R(e) {
     if (!(e.id in v)) {
         var t;
         v[e.id] = {
@@ -102,7 +102,7 @@ function P(e) {
     }
     return v[e.id];
 }
-function R(e) {
+function P(e) {
     A(e, (t) => {
         var n;
         null != e.messageCount && (t.count = e.messageCount);
@@ -113,7 +113,7 @@ function R(e) {
 function w(e) {
     if (null != e && !(e.id in v)) {
         let t = f.Z.getChannel(e.id);
-        if (null != t) return R(t), !0;
+        if (null != t) return P(t), !0;
     }
     return !1;
 }
@@ -137,11 +137,11 @@ function k(e) {
 }
 function M(e) {
     let { channel: t } = e;
-    R(t);
+    P(t);
 }
 function j(e) {
     let { threads: t, mostRecentMessages: n } = e;
-    t.forEach(R),
+    t.forEach(P),
         null == n ||
             n.forEach((e) => {
                 let t = f.Z.getChannel(e.channel_id);
@@ -265,7 +265,7 @@ class q extends (r = o.ZP.Store) {
     }
 }
 g(q, 'displayName', 'ThreadMessageStore');
-let Q = new q(s.Z, {
+let X = new q(s.Z, {
     CONNECTION_OPEN: D,
     OVERLAY_INITIALIZE: L,
     GUILD_CREATE: x,

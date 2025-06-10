@@ -63,7 +63,7 @@ function C(e, t) {
     }
     return n;
 }
-function P(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,14 +74,14 @@ function P(e, t) {
         e
     );
 }
-let R = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
+let P = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
     w = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
     D = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),
     L = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_UNICODE_ICON_SIZE),
     x = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
     k = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-    M = [R, R, R, R],
-    j = (w + D) * 2 + R,
+    M = [P, P, P, P],
+    j = (w + D) * 2 + P,
     U = x + 2 * k,
     G = 7,
     B = (e) => {
@@ -95,7 +95,7 @@ let R = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                         g = (null == (c = n[0]) ? void 0 : c.type) === b.Ih.FAVORITE,
                         A = +!!g,
                         C = (null == (d = n[A]) ? void 0 : d.type) === b.Ih.RECENT,
-                        R = n.length > 0,
+                        P = n.length > 0,
                         D = n.length;
                     if (0 === a && g)
                         return (0, r.jsx)(
@@ -107,7 +107,7 @@ let R = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                 children: (0, r.jsx)(l.P3F, {
                                     'aria-label': S.intl.string(S.t.y3LQCA),
                                     className: o()(T.stickerCategory, T.stickerCategoryGeneric, {
-                                        [T.stickerCategoryGenericDisabled]: R && !g,
+                                        [T.stickerCategoryGenericDisabled]: P && !g,
                                         [T.stickerCategoryGenericSelected]: !m && g && 0 === t
                                     }),
                                     onClick: s,
@@ -132,7 +132,7 @@ let R = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                 children: (0, r.jsx)(l.P3F, {
                                     'aria-label': S.intl.string(S.t.RxAmVF),
                                     className: o()(T.stickerCategory, T.stickerCategoryGeneric, {
-                                        [T.stickerCategoryGenericDisabled]: R && !C,
+                                        [T.stickerCategoryGenericDisabled]: P && !C,
                                         [T.stickerCategoryGenericSelected]: !m && C && t === A
                                     }),
                                     onClick: s,
@@ -188,7 +188,7 @@ let R = (0, m.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                             'aria-posinset': a,
                                             children: (0, r.jsx)(
                                                 l.P3F,
-                                                P(N({}, e), {
+                                                R(N({}, e), {
                                                     'aria-label': G,
                                                     className: o()(T.stickerCategory, {
                                                         [T.firstPartyCategory]: U,

@@ -4,15 +4,7 @@ function r(e) {
 function i(e) {
     if (null != e) return 'guild_id' in e ? e.guild_id : void 0;
 }
-function a(e) {
-    if (null != e) return 'starting_channel_id' in e ? e.starting_channel_id : void 0;
-}
-function o(e) {
-    if (null != e) return 'starting_guild_id' in e ? e.starting_guild_id : void 0;
-}
 n.d(t, {
-    hu: () => o,
-    jS: () => i,
-    pY: () => r,
-    wq: () => a
+    j: () => i,
+    p: () => r
 });

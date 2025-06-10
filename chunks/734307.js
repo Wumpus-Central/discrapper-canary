@@ -198,9 +198,8 @@ let Y = new z(c.Z, {
         return R.nonPositionalChannelIdUpdate(t);
     },
     EMBEDDED_ACTIVITY_UPDATE_V2: function (e) {
-        var t, n;
-        let { location: i } = e;
-        return R.updateSubtitles(null != (t = (0, u.jS)(i)) ? t : (0, u.hu)(i), null != (n = (0, u.pY)(i)) ? n : (0, u.wq)(i));
+        let { location: t } = e;
+        return R.updateSubtitles((0, u.j)(t), (0, u.p)(t));
     },
     EMBEDDED_ACTIVITY_LAUNCH_START: function (e) {
         F();

@@ -6,7 +6,7 @@ var r,
     s = n.n(o),
     l = n(392711),
     c = n.n(l),
-    u = n(386230),
+    u = n(524979),
     d = n(374470),
     f = n(143450),
     _ = n(84735),
@@ -136,7 +136,7 @@ class T extends (r = a.PureComponent) {
     render() {
         var e;
         let { value: t, active: n, focused: r, sortedMarkers: a, markerPositions: o, closestMarkerIndex: l, newClosestIndex: c, min: d, max: f } = this.state,
-            { disabled: m, stickToMarkers: E, className: y, children: v, barStyles: I, fillStyles: S, mini: T, hideBubble: N, defaultValue: C, orientation: P, onValueRender: R, renderMarker: w, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: k = {}, markerPosition: M = 0, 'aria-hidden': j, 'aria-label': U, 'aria-labelledby': G, 'aria-describedby': B } = this.props,
+            { disabled: m, stickToMarkers: E, className: y, children: v, barStyles: I, fillStyles: S, mini: T, hideBubble: N, defaultValue: C, orientation: R, onValueRender: P, renderMarker: w, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: k = {}, markerPosition: M = 0, 'aria-hidden': j, 'aria-label': U, 'aria-labelledby': G, 'aria-describedby': B } = this.props,
             F = 0;
         E ? null != o && (null != c ? (F = o[c]) : null != l && (F = o[l])) : (F = this.scaleValue(t));
         let V = ''.concat(F, '%'),
@@ -172,7 +172,7 @@ class T extends (r = a.PureComponent) {
                           );
                       })
                     : null,
-            H = null != R ? R(t) : ''.concat(F.toFixed(0), '%'),
+            H = null != P ? P(t) : ''.concat(F.toFixed(0), '%'),
             Y = null != (e = null == D ? void 0 : D(t)) ? e : void 0;
         return (0, i.jsx)(A, {
             active: n,
@@ -193,7 +193,7 @@ class T extends (r = a.PureComponent) {
                         'aria-valuemax': f,
                         'aria-valuenow': t,
                         'aria-disabled': m,
-                        'aria-orientation': P,
+                        'aria-orientation': R,
                         'aria-hidden': j,
                         'aria-label': U,
                         'aria-labelledby': G,

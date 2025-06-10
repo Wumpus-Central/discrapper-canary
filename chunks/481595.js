@@ -25,8 +25,8 @@ var r = n(255367),
     A = n(630388),
     N = n(669079),
     C = n(987209),
-    P = n(563132),
-    R = n(45572),
+    R = n(563132),
+    P = n(45572),
     w = n(435020),
     D = n(119226),
     L = n(982204),
@@ -51,7 +51,7 @@ function j(e) {
 }
 function U(e) {
     let { hasLegalTermsFlash: t, legalTermsNodeRef: n, onPaymentSourceChange: a, handlePaymentSourceAdd: m } = e,
-        { application: U, purchaseState: G, paymentSources: B, paymentSourceId: F, setHasAcceptedTerms: V, skusById: Z, skuPricePreviewsById: H, selectedSkuId: Y, isEmbeddedIAP: W, purchaseType: K, purchasePreviewError: z, devShelfFetchState: q, setPurchasePreviewError: Q, hasPaymentSources: X } = (0, P.JL)(),
+        { application: U, purchaseState: G, paymentSources: B, paymentSourceId: F, setHasAcceptedTerms: V, skusById: Z, skuPricePreviewsById: H, selectedSkuId: Y, isEmbeddedIAP: W, purchaseType: K, purchasePreviewError: z, devShelfFetchState: q, setPurchasePreviewError: X, hasPaymentSources: Q } = (0, R.JL)(),
         { isGift: J, giftRecipient: $ } = (0, C.wD)(),
         ee = J && (0, N.pO)($),
         { defaultPaymentSourceId: et, hasFetchedPaymentSources: en } = (0, l.cj)([v.Z], () => ({
@@ -68,7 +68,7 @@ function U(e) {
     let el = (0, l.e7)([h.Z, S.Z], () => S.Z.inTestModeForApplication(U.id) || h.Z.inDevModeForApplication(U.id), [U.id]),
         ec = (0, l.e7)([y.Z], () => y.Z.enabled),
         eu = s.M.EEA_COUNTRIES.has(O.Z.ipCountryCodeWithFallback),
-        ed = G === R.A.PURCHASING || G === R.A.COMPLETED,
+        ed = G === P.A.PURCHASING || G === P.A.COMPLETED,
         ef = (0, w.m)(B, F),
         e_ = null != ef ? ef.type : null;
     i.useEffect(() => {
@@ -78,13 +78,13 @@ function U(e) {
             null == es &&
             (0, u.x2)(er.applicationId, er.id, et, { isGift: J })
                 .then(() => {
-                    Q(null);
+                    X(null);
                 })
                 .catch((e) => {
-                    Q(e);
+                    X(e);
                 });
-    }, [et, en, F, er.applicationId, er.id, es, Q, J]);
-    let ep = null != ei && ei.length > 0 && (F === I.c || null === e_) && X ? E.w.SELECT_PAYMENT_METHOD : void 0;
+    }, [et, en, F, er.applicationId, er.id, es, X, J]);
+    let ep = null != ei && ei.length > 0 && (F === I.c || null === e_) && Q ? E.w.SELECT_PAYMENT_METHOD : void 0;
     return (0, r.jsxs)('div', {
         className: M.stepBody,
         children: [

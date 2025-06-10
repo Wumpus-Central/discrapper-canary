@@ -68,11 +68,11 @@ function C(e) {
         n = o.default.getId();
     return y(t).updateMembersByMemberIds([n]);
 }
-function P(e) {
+function R(e) {
     let { guildId: t, user: n } = e;
     return y(t).removeMember(n.id);
 }
-function R(e) {
+function P(e) {
     let t = !1,
         n = y(e.guildId);
     return 'GUILD_ROLE_DELETE' === e.type && (t = n.removeRoleFromSearchState(e.roleId)), n.rebuildAllMembers() || t;
@@ -219,7 +219,7 @@ function q(e) {
         r = (0, p.Qu)(t, n);
     return r && y(t).updateMembersByMemberIds(n.map((e) => e.userId)), r;
 }
-function Q(e) {
+function X(e) {
     var t, n, r, i, a, o;
     let s,
         l,
@@ -267,7 +267,7 @@ function Q(e) {
     );
     return b || O || v;
 }
-class X extends (r = i.ZP.Store) {
+class Q extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(o.default, s.ZP, c.default);
     }
@@ -323,8 +323,8 @@ class X extends (r = i.ZP.Store) {
         return y(e).lastCursorTimestamp;
     }
 }
-g(X, 'displayName', 'MemberSafetyStore');
-let J = new X(a.Z, {
+g(Q, 'displayName', 'MemberSafetyStore');
+let J = new Q(a.Z, {
     CONNECTION_OPEN: G,
     CONNECTION_OPEN_SUPPLEMENTAL: B,
     LOCAL_MESSAGES_LOADED: V,
@@ -336,9 +336,9 @@ let J = new X(a.Z, {
     GUILD_MEMBER_ADD: T,
     GUILD_MEMBER_UPDATE: T,
     GUILD_MEMBER_UPDATE_LOCAL: C,
-    GUILD_MEMBER_REMOVE: P,
-    GUILD_ROLE_UPDATE: R,
-    GUILD_ROLE_DELETE: R,
+    GUILD_MEMBER_REMOVE: R,
+    GUILD_ROLE_UPDATE: P,
+    GUILD_ROLE_DELETE: P,
     GUILD_MEMBER_PROFILE_UPDATE: M,
     GUILD_ROLE_MEMBER_REMOVE: w,
     GUILD_ROLE_MEMBER_ADD: w,
@@ -352,6 +352,6 @@ let J = new X(a.Z, {
     MEMBER_SAFETY_PAGINATION_TOKEN_UPDATE: K,
     MEMBER_SAFETY_SEARCH_STATE_UPDATE: z,
     FETCH_GUILD_MEMBER_SUPPLEMENTAL_SUCCESS: q,
-    MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: Q,
+    MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: X,
     MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH: A
 });

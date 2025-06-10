@@ -58,16 +58,16 @@ function y(e) {
     if (b && y) return null;
     let N = (null == n ? void 0 : n.name) === '' ? null : null == n ? void 0 : n.name,
         C = null != N ? g.intl.format(g.t['0wJXSk'], { name: N }) : g.intl.string(g.t.eXan7O),
-        P = !O && null != I && null != S;
+        R = !O && null != I && null != S;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             !b &&
                 (0, r.jsx)(_.Z, {
                     icon: o.ARS,
-                    tooltipText: P ? S : void 0,
-                    tooltipAriaLabel: P ? (0, l.ZP)({ channel: I }) : void 0,
+                    tooltipText: R ? S : void 0,
+                    tooltipAriaLabel: R ? (0, l.ZP)({ channel: I }) : void 0,
                     className: E,
-                    onTooltipShow: P ? A : void 0
+                    onTooltipShow: R ? A : void 0
                 }),
             !y &&
                 (0, r.jsx)(p.Z, {

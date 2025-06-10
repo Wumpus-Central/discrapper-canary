@@ -1,5 +1,5 @@
 n.d(t, {
-    fz: () => R,
+    fz: () => P,
     ge: () => k,
     gf: () => j,
     r5: () => M,
@@ -87,8 +87,8 @@ let A = new o.Yd('VoiceFilterActionCreators'),
         N,
         { leading: !0 }
     ),
-    P = !1;
-function R(e) {
+    R = !1;
+function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         { url: n, modelId: r, fileName: i } = e,
         a = b.Z.getModelState(r);
@@ -193,9 +193,9 @@ async function L(e) {
 }
 async function x() {
     if (!b.Z.isNativeModuleLoaded()) return void A.info('Voice Filter catalog refresh ignored, module not loaded.');
-    if (!P)
+    if (!R)
         try {
-            P = !0;
+            R = !0;
             let e = m.ZP.getVoiceFilters(),
                 t = null != e.getCatalogNonce && null != e.getModuleVersion && null != e.getRequestedModelIds && null != e.setCatalog;
             (0, E.t)({
@@ -214,7 +214,7 @@ async function x() {
                 h.Z.captureException(e),
                 await c.Z.dispatch({ type: 'VOICE_FILTER_CATALOG_FETCH_FAILED' });
         } finally {
-            P = !1;
+            R = !1;
         }
 }
 function k() {

@@ -1,107 +1,106 @@
 n.d(t, {
-    FI: () => V,
-    LL: () => G,
+    FI: () => k,
+    LL: () => M,
     N_: () => w,
-    Xi: () => W,
-    eF: () => k
+    Xi: () => H,
+    eF: () => G
 }),
     n(997841),
     n(953529),
     n(415506);
-var i = n(252258),
-    l = n(317381),
-    a = n(933557),
-    r = n(710845),
-    u = n(978003),
-    o = n(41776),
-    s = n(355298),
-    d = n(957730),
-    c = n(850908),
-    f = n(572804),
-    g = n(901461),
-    E = n(569471),
-    _ = n(723170),
-    T = n(695346),
-    S = n(131704),
-    p = n(433355),
-    N = n(592125),
+var i = n(317381),
+    l = n(933557),
+    a = n(710845),
+    r = n(978003),
+    u = n(41776),
+    o = n(355298),
+    s = n(957730),
+    d = n(850908),
+    c = n(572804),
+    f = n(901461),
+    g = n(569471),
+    E = n(723170),
+    _ = n(695346),
+    T = n(131704),
+    S = n(433355),
+    p = n(592125),
     I = n(430824),
-    h = n(19780),
-    C = n(699516),
-    Z = n(944486),
-    A = n(914010),
-    m = n(885110),
-    v = n(9156),
-    y = n(594174),
-    P = n(630388),
-    D = n(5192),
-    U = n(352736),
-    R = n(51144);
+    N = n(19780),
+    h = n(699516),
+    C = n(944486),
+    Z = n(914010),
+    A = n(885110),
+    m = n(9156),
+    v = n(594174),
+    y = n(630388),
+    P = n(5192),
+    D = n(352736),
+    U = n(51144);
 n(734934);
-var O = n(842619),
-    L = n(981631),
-    b = n(124368),
-    M = n(388032);
-function G(e, t, n) {
+var R = n(842619),
+    O = n(981631),
+    L = n(124368),
+    b = n(388032);
+function M(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-    if (t.hasFlag(L.xW$.SPAMMER) || n.isManaged()) return !1;
+    if (t.hasFlag(O.xW$.SPAMMER) || n.isManaged()) return !1;
     let l = n.getGuildId();
-    return !((null != l && o.Z.isLurking(l)) || (!i.ignoreSameUser && t.id === e.id) || C.Z.isBlockedOrIgnored(t.id) || (!i.ignoreStatus && m.Z.getStatus() === L.Skl.DND) || T.QZ.getSetting() || (!i.ignoreNoMessagesSetting && v.ZP.allowNoMessages(n)));
+    return !((null != l && u.Z.isLurking(l)) || (!i.ignoreSameUser && t.id === e.id) || h.Z.isBlockedOrIgnored(t.id) || (!i.ignoreStatus && A.Z.getStatus() === O.Skl.DND) || _.QZ.getSetting() || (!i.ignoreNoMessagesSetting && m.ZP.allowNoMessages(n)));
 }
-function k(e, t) {
-    var n, a;
-    let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        u = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-    if (null != e.flags && (0, P.yE)(e.flags, L.iLy.SUPPRESS_NOTIFICATIONS)) return !1;
-    let o = N.Z.getChannel(t);
-    e.type === L.uaV.THREAD_STARTER_MESSAGE && (o = N.Z.getChannel(null == o ? void 0 : o.parent_id));
-    let d = y.default.getCurrentUser(),
-        c = y.default.getUser(null == (n = e.author) ? void 0 : n.id);
+function G(e, t) {
+    var n, l;
+    let a = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+        r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+    if (null != e.flags && (0, y.yE)(e.flags, O.iLy.SUPPRESS_NOTIFICATIONS)) return !1;
+    let u = p.Z.getChannel(t);
+    e.type === O.uaV.THREAD_STARTER_MESSAGE && (u = p.Z.getChannel(null == u ? void 0 : u.parent_id));
+    let s = v.default.getCurrentUser(),
+        d = v.default.getUser(null == (n = e.author) ? void 0 : n.id);
     if (
-        null == o ||
+        null == u ||
+        null == s ||
         null == d ||
-        null == c ||
-        (o.type === L.d4z.GROUP_DM && e.type === L.uaV.RECIPIENT_REMOVE) ||
-        (O.Z.areSlayerNotificationsSuppressed() && ((a = o).type === L.d4z.DM || null != a.linkedLobby)) ||
-        !G(d, c, o, {
-            ignoreStatus: u,
-            ignoreSameUser: L.V$x.SELF_MENTIONABLE_SYSTEM.has(e.type)
+        (u.type === O.d4z.GROUP_DM && e.type === O.uaV.RECIPIENT_REMOVE) ||
+        (R.Z.areSlayerNotificationsSuppressed() && ((l = u).type === O.d4z.DM || null != l.linkedLobby)) ||
+        !M(s, d, u, {
+            ignoreStatus: r,
+            ignoreSameUser: O.V$x.SELF_MENTIONABLE_SYSTEM.has(e.type)
         }) ||
-        s.Z.isMessageRequest(t)
+        o.Z.isMessageRequest(t)
     )
         return !1;
-    if (!r) {
-        let e = Z.Z.getChannelId(A.Z.getGuildId());
-        if (e === o.id || p.ZP.getCurrentSidebarChannelId(e) === o.id) return !1;
+    if (!a) {
+        let e = C.Z.getChannelId(Z.Z.getGuildId());
+        if (e === u.id || S.ZP.getCurrentSidebarChannelId(e) === u.id) return !1;
     }
-    if (C.Z.isBlockedOrIgnoredForMessage(e) || (void 0 !== e.activity_instance && null != e.interaction && e.interaction.user.id === d.id)) return !1;
+    if (h.Z.isBlockedOrIgnoredForMessage(e) || (void 0 !== e.activity_instance && null != e.interaction && e.interaction.user.id === s.id)) return !1;
     if (null != e.application_id) {
-        let n = l.ZP.getCurrentEmbeddedActivity();
-        if ((null == n ? void 0 : n.applicationId) === e.application_id && n.location.kind !== i.E.CONTEXTLESS && n.location.channel_id === t) return !1;
+        let n = i.ZP.getCurrentEmbeddedActivity();
+        if ((null == n ? void 0 : n.applicationId) === e.application_id && n.location.channel_id === t) return !1;
     }
-    if (e.type === L.uaV.CHAT_WALLPAPER_SET || e.type === L.uaV.CHAT_WALLPAPER_REMOVED) return !1;
-    if (S.Ec.has(o.type)) {
-        if (E.Z.isMuted(o.id)) return !1;
-        let t = (0, _.J)(o);
+    if (e.type === O.uaV.CHAT_WALLPAPER_SET || e.type === O.uaV.CHAT_WALLPAPER_REMOVED) return !1;
+    if (T.Ec.has(u.type)) {
+        if (g.Z.isMuted(u.id)) return !1;
+        let t = (0, E.J)(u);
         return (
-            t !== b.iN.NO_MESSAGES &&
-            (t === b.iN.ALL_MESSAGES ||
-                (0, f.Hl)({
+            t !== L.iN.NO_MESSAGES &&
+            (t === L.iN.ALL_MESSAGES ||
+                (0, c.Hl)({
                     rawMessage: e,
-                    userId: d.id,
+                    userId: s.id,
                     suppressEveryone: !1,
                     suppressRoles: !1
                 }))
         );
     }
     {
-        let t = !S.tx.has(o.type) || h.Z.getChannelId() === o.id;
-        if (v.ZP.allowAllMessages(o) && t) return !0;
-        let n = v.ZP.isSuppressEveryoneEnabled(o.getGuildId()),
-            i = v.ZP.isSuppressRolesEnabled(o.getGuildId());
-        return (0, f.Hl)({
+        let t = !T.tx.has(u.type) || N.Z.getChannelId() === u.id;
+        if (m.ZP.allowAllMessages(u) && t) return !0;
+        let n = m.ZP.isSuppressEveryoneEnabled(u.getGuildId()),
+            i = m.ZP.isSuppressRolesEnabled(u.getGuildId());
+        return (0, c.Hl)({
             rawMessage: e,
-            userId: d.id,
+            userId: s.id,
             suppressEveryone: n,
             suppressRoles: i
         });
@@ -109,96 +108,96 @@ function k(e, t) {
 }
 function w(e, t) {
     var n;
-    if (Z.Z.getChannelId(A.Z.getGuildId()) !== t) return !1;
-    let i = N.Z.getChannel(t);
-    e.type === L.uaV.THREAD_STARTER_MESSAGE && (i = N.Z.getChannel(null == i ? void 0 : i.parent_id));
-    let l = y.default.getCurrentUser(),
-        a = y.default.getUser(null == (n = e.author) ? void 0 : n.id);
-    return !(null == i || null == l || null == a || i.isManaged() || a.hasFlag(L.xW$.SPAMMER) || C.Z.isBlockedOrIgnoredForMessage(e) || a.id === l.id || m.Z.getStatus() === L.Skl.DND || T.QZ.getSetting() || v.ZP.allowNoMessages(i)) && e.type !== L.uaV.CHAT_WALLPAPER_SET && e.type !== L.uaV.CHAT_WALLPAPER_REMOVED;
+    if (C.Z.getChannelId(Z.Z.getGuildId()) !== t) return !1;
+    let i = p.Z.getChannel(t);
+    e.type === O.uaV.THREAD_STARTER_MESSAGE && (i = p.Z.getChannel(null == i ? void 0 : i.parent_id));
+    let l = v.default.getCurrentUser(),
+        a = v.default.getUser(null == (n = e.author) ? void 0 : n.id);
+    return !(null == i || null == l || null == a || i.isManaged() || a.hasFlag(O.xW$.SPAMMER) || h.Z.isBlockedOrIgnoredForMessage(e) || a.id === l.id || A.Z.getStatus() === O.Skl.DND || _.QZ.getSetting() || m.ZP.allowNoMessages(i)) && e.type !== O.uaV.CHAT_WALLPAPER_SET && e.type !== O.uaV.CHAT_WALLPAPER_REMOVED;
 }
-function V(e, t) {
+function k(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        l = y.default.getCurrentUser(),
-        a = y.default.getUser(e.ownerId);
+        l = v.default.getCurrentUser(),
+        a = v.default.getUser(e.ownerId);
     return (
         !(
             null == t ||
             null == l ||
             null == a ||
-            !G(l, a, t, {
+            !M(l, a, t, {
                 ignoreStatus: i,
                 ignoreNoMessagesSetting: !0
             }) ||
-            v.ZP.isGuildOrCategoryOrChannelMuted(t.guild_id, t.id)
+            m.ZP.isGuildOrCategoryOrChannelMuted(t.guild_id, t.id)
         ) &&
-        (!!n || Z.Z.getChannelId(A.Z.getGuildId()) !== t.id) &&
-        v.ZP.getNewForumThreadsCreated(t)
+        (!!n || C.Z.getChannelId(Z.Z.getGuildId()) !== t.id) &&
+        m.ZP.getNewForumThreadsCreated(t)
     );
 }
-let F = (e, t, n) =>
+let V = (e, t, n) =>
     ''
         .concat(e, ' (')
-        .concat((0, a.F6)(t, y.default, C.Z, !0))
-        .concat(null != n ? ', '.concat((0, a.F6)(n, y.default, C.Z)) : '', ')');
-function H(e, t, n, i) {
+        .concat((0, l.F6)(t, v.default, h.Z, !0))
+        .concat(null != n ? ', '.concat((0, l.F6)(n, v.default, h.Z)) : '', ')');
+function F(e, t, n, i) {
     switch (e.type) {
-        case L.d4z.GUILD_ANNOUNCEMENT:
-        case L.d4z.GUILD_TEXT:
+        case O.d4z.GUILD_ANNOUNCEMENT:
+        case O.d4z.GUILD_TEXT:
             return t;
-        case L.d4z.GROUP_DM:
+        case O.d4z.GROUP_DM:
             return n;
-        case L.d4z.DM:
+        case O.d4z.DM:
         default:
             return i;
     }
 }
-function W(e, t, n) {
+function H(e, t, n) {
     let i,
-        l = D.ZP.getName(e.getGuildId(), e.id, n),
-        o = l;
+        u = P.ZP.getName(e.getGuildId(), e.id, n),
+        o = u;
     switch (e.type) {
-        case L.d4z.GUILD_ANNOUNCEMENT:
-        case L.d4z.GUILD_TEXT:
-        case L.d4z.GUILD_VOICE:
-        case L.d4z.ANNOUNCEMENT_THREAD:
-        case L.d4z.PUBLIC_THREAD:
-        case L.d4z.PRIVATE_THREAD:
-            let s = N.Z.getChannel(e.parent_id);
-            t.type === L.uaV.THREAD_STARTER_MESSAGE && null != s ? (o = F(o, s, N.Z.getChannel(s.parent_id))) : (0, g.Z)(t) ? null != I.Z.getGuild(e.getGuildId()) && (o = F(o, e, s)) : (o = F(o, e, s));
+        case O.d4z.GUILD_ANNOUNCEMENT:
+        case O.d4z.GUILD_TEXT:
+        case O.d4z.GUILD_VOICE:
+        case O.d4z.ANNOUNCEMENT_THREAD:
+        case O.d4z.PUBLIC_THREAD:
+        case O.d4z.PRIVATE_THREAD:
+            let c = p.Z.getChannel(e.parent_id);
+            t.type === O.uaV.THREAD_STARTER_MESSAGE && null != c ? (o = V(o, c, p.Z.getChannel(c.parent_id))) : (0, f.Z)(t) ? null != I.Z.getGuild(e.getGuildId()) && (o = V(o, e, c)) : (o = V(o, e, c));
             break;
-        case L.d4z.GROUP_DM:
-            (e.isManaged() && n.bot && o === (0, a.F6)(e, y.default, C.Z)) || (o = ''.concat(o, ' (').concat((0, a.F6)(e, y.default, C.Z, !0), ')'));
+        case O.d4z.GROUP_DM:
+            (e.isManaged() && n.bot && o === (0, l.F6)(e, v.default, h.Z)) || (o = ''.concat(o, ' (').concat((0, l.F6)(e, v.default, h.Z, !0), ')'));
     }
-    let f = t.content;
-    if ((0, g.Z)(t) && null == (f = U.Z.stringify(t, e))) throw (new r.Z('NotificationTextUtils').warn('SystemMessageUtils.stringify(...) could not convert', { message: t }), Error('failed to stringify system message'));
+    let g = t.content;
+    if ((0, f.Z)(t) && null == (g = D.Z.stringify(t, e))) throw (new a.Z('NotificationTextUtils').warn('SystemMessageUtils.stringify(...) could not convert', { message: t }), Error('failed to stringify system message'));
     let E = 'sticker_items' in t ? t.sticker_items : 'stickerItems' in t ? t.stickerItems : t.stickers;
-    if ('message_reference' in t ? (0, u.s)(t) : (0, u.Z)(t)) i = M.intl.string(M.t['9ddYKi']);
+    if ('message_reference' in t ? (0, r.s)(t) : (0, r.Z)(t)) i = b.intl.string(b.t['9ddYKi']);
     else if (null != t.activity && null != t.application)
         i =
-            t.activity.type === L.mFx.JOIN
-                ? M.intl.formatToPlainString(H(e, M.t.E8CgCg, M.t.c6KHWF, M.t.Fy7rJC), {
-                      user: l,
+            t.activity.type === O.mFx.JOIN
+                ? b.intl.formatToPlainString(F(e, b.t.E8CgCg, b.t.c6KHWF, b.t.Fy7rJC), {
+                      user: u,
                       game: t.application.name
                   })
-                : t.activity.type === L.mFx.JOIN_REQUEST
-                  ? M.intl.formatToPlainString(H(e, M.t['/TD0lZ'], M.t['/TD0lZ'], M.t['/TD0lZ']), {
-                        user: l,
+                : t.activity.type === O.mFx.JOIN_REQUEST
+                  ? b.intl.formatToPlainString(F(e, b.t['/TD0lZ'], b.t['/TD0lZ'], b.t['/TD0lZ']), {
+                        user: u,
                         game: t.application.name
                     })
                   : '';
-    else if (null != t.activity && t.activity.type === L.mFx.LISTEN) {
-        let t = H(e, M.t.SaDdmJ, M.t.qsODho, M.t.WeiMTU);
-        i = M.intl.formatToPlainString(t, { user: l });
-    } else if (null != E && E.length > 0) i = M.intl.formatToPlainString(M.t.zY4v1N, { stickerName: E[0].name });
-    else if (t.type === L.uaV.PREMIUM_REFERRAL) i = M.intl.formatToPlainString(M.t.lieTqa, { username: R.ZP.getName(n) });
-    else if (null != t.poll) i = M.intl.formatToPlainString(M.t.ImizdH, { question: t.poll.question.text });
-    else if (t.type === L.uaV.POLL_RESULT) {
+    else if (null != t.activity && t.activity.type === O.mFx.LISTEN) {
+        let t = F(e, b.t.SaDdmJ, b.t.qsODho, b.t.WeiMTU);
+        i = b.intl.formatToPlainString(t, { user: u });
+    } else if (null != E && E.length > 0) i = b.intl.formatToPlainString(b.t.zY4v1N, { stickerName: E[0].name });
+    else if (t.type === O.uaV.PREMIUM_REFERRAL) i = b.intl.formatToPlainString(b.t.lieTqa, { username: U.ZP.getName(n) });
+    else if (null != t.poll) i = b.intl.formatToPlainString(b.t.ImizdH, { question: t.poll.question.text });
+    else if (t.type === O.uaV.POLL_RESULT) {
         var _, T, S;
         let e = null == (S = t.embeds) || null == (T = S[0]) || null == (_ = T.fields) ? void 0 : _.find((e) => ('name' in e ? e.name : e.rawName) === 'poll_question_text'),
             n = null != e ? ('value' in e ? e.value : e.rawValue) : '';
-        i = M.intl.formatToPlainString(M.t['9WrecH'], { question: n });
-    } else i = 0 !== f.length && e.type === L.d4z.DM && !n.bot && f.startsWith('> -# *') ? (i = d.ZP.unparse(f, e.id, !0)).substring(0, 1) + i.substring(4) : d.ZP.unparse(f, e.id, !0);
+        i = b.intl.formatToPlainString(b.t['9WrecH'], { question: n });
+    } else i = 0 !== g.length && e.type === O.d4z.DM && !n.bot && g.startsWith('> -# *') ? (i = s.ZP.unparse(g, e.id, !0)).substring(0, 1) + i.substring(4) : s.ZP.unparse(g, e.id, !0);
     return (
         0 === i.length &&
             (i = (function (e) {
@@ -216,10 +215,10 @@ function W(e, t, n) {
                         return ''.concat(n, ' ').concat(i);
                     }
                 }
-                if ((0, P.yE)(null != (t = e.flags) ? t : 0, L.iLy.IS_VOICE_MESSAGE)) return M.intl.string(M.t.slFYgo);
+                if ((0, y.yE)(null != (t = e.flags) ? t : 0, O.iLy.IS_VOICE_MESSAGE)) return b.intl.string(b.t.slFYgo);
                 if (void 0 !== e.attachments && e.attachments.length > 0) {
-                    let t = (0, c.Z)(e.attachments[0]);
-                    return M.intl.formatToPlainString(M.t['51OkwM'], { filename: t });
+                    let t = (0, d.Z)(e.attachments[0]);
+                    return b.intl.formatToPlainString(b.t['51OkwM'], { filename: t });
                 }
                 return '';
             })(t)),

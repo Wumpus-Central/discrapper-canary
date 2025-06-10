@@ -86,11 +86,11 @@ let I = 2700,
 function N(e) {
     let { user: t, sourceType: n, isVisible: a, isExpandable: b, interactionSourceId: O, targetRef: I, onAction: S, renderMoreButtonPopout: N } = e,
         C = i.useRef(null),
-        P = (0, s.e7)([f.default], () => f.default.getId() === t.id),
-        R = (0, _.Z)(t.id),
+        R = (0, s.e7)([f.default], () => f.default.getId() === t.id),
+        P = (0, _.Z)(t.id),
         { themeType: w } = (0, h.z)(),
         { onInteraction: D, onInteractionPopoutTargetRefChange: L } = (0, p.Xo)();
-    if (t.bot || P || !R) return null;
+    if (t.bot || R || !P) return null;
     let x = () => {
             L(I),
                 n === m.n_.AVATAR ? S({ action: 'PRESS_REACT_AVATAR' }) : n === m.n_.STATUS ? S({ action: 'PRESS_REACT_CUSTOM_STATUS' }) : S({ action: 'PRESS_REACT_ACTIVITY' }),

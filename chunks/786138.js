@@ -27,8 +27,8 @@ function b(e) {
         A = (0, a.e7)([d.Z], () => d.Z.supports(g.AN.SOUNDSHARE)),
         N = (0, a.e7)([d.Z], () => d.Z.supportsScreenSoundshare()),
         C = (0, p.Z)(t, v),
-        P = (0, _.Z)(t, v, m.Vq),
-        R = null != I && A && (!I.startsWith('screen') || N),
+        R = (0, _.Z)(t, v, m.Vq),
+        P = null != I && A && (!I.startsWith('screen') || N),
         w = i.useCallback(() => {
             (null == I ? void 0 : I.startsWith('prepicked:'))
                 ? d.Z.getMediaEngine().eachConnection((e) => {
@@ -73,7 +73,7 @@ function b(e) {
                   children: C
               })
             : null,
-        x = R
+        x = P
             ? (0, r.jsx)(o.S89, {
                   id: 'stream-settings-audio-enable',
                   label: O ? E.intl.string(E.t.af2Tw8) : E.intl.string(E.t.ZJEHt7),
@@ -101,6 +101,6 @@ function b(e) {
               children: [M, k, L, x]
           })
         : (0, r.jsxs)(r.Fragment, {
-              children: [L, b ? P : null, x, k, M]
+              children: [L, b ? R : null, x, k, M]
           });
 }

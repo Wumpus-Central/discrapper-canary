@@ -6,8 +6,8 @@ var l = t(255367),
     a = t(442837),
     d = t(952265),
     o = t(481060),
-    u = t(493683),
-    _ = t(700582),
+    _ = t(493683),
+    u = t(700582),
     s = t(100527),
     c = t(906732),
     C = t(933557),
@@ -54,17 +54,17 @@ function x(n) {
 function b(n) {
     let { guildId: e, selectedChannelId: t, onSelectChannelId: r } = n,
         d = (0, a.e7)([h.Z], () => h.Z.getChannelId()),
-        { guildChannels: u } = (0, a.cj)([T.Z], () => T.Z.getGuildWithoutChangingGuildActionRows(e)),
-        _ = i.useMemo(() => {
+        { guildChannels: _ } = (0, a.cj)([T.Z], () => T.Z.getGuildWithoutChangingGuildActionRows(e)),
+        u = i.useMemo(() => {
             let n = [];
             return (
-                u.forEachChannel((e) => {
+                _.forEachChannel((e) => {
                     !1 !== (0, G.W)(e.id) && ((0, D.r8)(e.type) || (0, D.bw)(e.type)) && n.push(e);
                 }),
                 n.sort((n, e) => (n.id === d ? -1 : +(e.id === d)))
             );
-        }, [u, d]);
-    return 0 === _.length
+        }, [_, d]);
+    return 0 === u.length
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
@@ -76,12 +76,12 @@ function b(n) {
                       children: m.intl.string(m.t.SOtDeX)
                   }),
                   (0, l.jsx)(o.aVo, {
-                      sections: [_.length],
+                      sections: [u.length],
                       sectionHeight: 0,
                       renderRow: (n) => {
                           let { section: e, row: i } = n;
                           if (e > 0) return null;
-                          let E = _[i],
+                          let E = u[i],
                               a = (0, A.KS)(E);
                           return null == a
                               ? null
@@ -96,7 +96,7 @@ function b(n) {
                                     E.id
                                 );
                       },
-                      rowHeight: (n, e) => (n > 0 ? 0 : 56 * (null != _[e])),
+                      rowHeight: (n, e) => (n > 0 ? 0 : 56 * (null != u[e])),
                       renderSection: () => null,
                       className: E()(p.channelList, p.contentPadding),
                       fade: !0
@@ -106,9 +106,9 @@ function b(n) {
 }
 function v(n) {
     let { friends: e, searchQuery: t, disabled: r, onShareClip: d } = n,
-        u = i.useMemo(() => (0 === t.length ? e : e.filter((n) => n.username.toLowerCase().includes(t.toLowerCase()))), [e, t]),
+        _ = i.useMemo(() => (0 === t.length ? e : e.filter((n) => n.username.toLowerCase().includes(t.toLowerCase()))), [e, t]),
         s = (0, a.e7)([L.Z], () => L.Z.theme);
-    return 0 === u.length
+    return 0 === _.length
         ? (0, l.jsxs)(o.ubH, {
               theme: s,
               className: p.emptyStateContainer,
@@ -123,19 +123,19 @@ function v(n) {
               ]
           })
         : (0, l.jsx)(o.aVo, {
-              sections: [u.length],
+              sections: [_.length],
               sectionHeight: 0,
               renderRow: (n) => {
                   let { section: e, row: t } = n;
                   if (e > 0) return null;
-                  let i = u[t],
-                      E = u[t].username;
+                  let i = _[t],
+                      E = _[t].username;
                   return (0, l.jsxs)(
                       'div',
                       {
                           className: p.userRow,
                           children: [
-                              (0, l.jsx)(_.Z, { user: i }),
+                              (0, l.jsx)(u.Z, { user: i }),
                               (0, l.jsx)(o.Text, {
                                   className: p.username,
                                   variant: 'text-md/normal',
@@ -158,14 +158,14 @@ function v(n) {
                       i.id
                   );
               },
-              rowHeight: (n, e) => (n > 0 ? 0 : 52 * (null != u[e])),
+              rowHeight: (n, e) => (n > 0 ? 0 : 52 * (null != _[e])),
               renderSection: () => null,
               className: E()(p.friendsList, p.contentPadding),
               fade: !0
           });
 }
 function M(n) {
-    let { clip: e, editMetadata: t, transitionState: r, onClose: _ } = n,
+    let { clip: e, editMetadata: t, transitionState: r, onClose: u } = n,
         [C, A] = i.useState(''),
         [T, L] = i.useState(!1),
         [D, h] = i.useState(null),
@@ -202,7 +202,7 @@ function M(n) {
         }
     }
     async function x(n) {
-        let e = await u.Z.openPrivateChannel({ recipientIds: n });
+        let e = await _.Z.openPrivateChannel({ recipientIds: n });
         await H(e);
     }
     return (0, l.jsxs)(o.Y0X, {
@@ -257,7 +257,7 @@ function M(n) {
                     (0, l.jsx)(o.zxk, {
                         submitting: T,
                         look: o.iLD.LINK,
-                        onClick: _,
+                        onClick: u,
                         color: o.Ttl.PRIMARY,
                         children: m.intl.string(m.t['13/7kZ'])
                     })

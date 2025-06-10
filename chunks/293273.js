@@ -102,10 +102,10 @@ function C() {
     let S = h.Z.getActivity();
     null != S && e.push(I({ type: O.IIU.LISTENING }, S)), a()(A, e) || (A = e);
 }
-function P() {
+function R() {
     (N = {}), C();
 }
-function R(e) {
+function P(e) {
     let { socketId: t, pid: n, activity: r } = e;
     if (a()(N[t], [n, r])) return !1;
     null != r ? (N[t] = [n, r]) : delete N[t], C();
@@ -162,8 +162,8 @@ class k extends (r = l.ZP.Store) {
 v(k, 'displayName', 'LocalActivityStore');
 let M = new k(c.Z, {
     OVERLAY_INITIALIZE: D,
-    START_SESSION: P,
-    LOCAL_ACTIVITY_UPDATE: R,
+    START_SESSION: R,
+    LOCAL_ACTIVITY_UPDATE: P,
     RPC_APP_DISCONNECTED: w,
     RUNNING_GAMES_CHANGE: C,
     LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: C,

@@ -29,8 +29,8 @@ var i = n(772848),
     A = n(585483),
     N = n(358085),
     C = n(624138),
-    P = n(24933),
-    R = n(115130),
+    R = n(24933),
+    P = n(115130),
     w = n(566620),
     D = n(317381),
     L = n(969345),
@@ -65,7 +65,7 @@ function q(e) {
     var t;
     return { releasePhase: null == e || null == (t = e.activity) ? void 0 : t.client_platform_config[(0, G.Z)((0, N.getOS)())].release_phase };
 }
-function Q(e) {
+function X(e) {
     let { applicationId: t, nonce: n, locations: r, source: i } = e;
     return (
         (null != r || null != i) &&
@@ -77,16 +77,16 @@ function Q(e) {
         !0)
     );
 }
-function X(e, t) {
+function Q(e, t) {
     let n = K[e];
     if (null != n && n.nonce === t) return delete K[e], n;
 }
 function J(e, t) {
-    setTimeout(() => X(e, t), Y);
+    setTimeout(() => Q(e, t), Y);
 }
 function $(e) {
     let { applicationId: t, nonce: n, analyticsLocations: r, source: i } = e;
-    Q({
+    X({
         applicationId: t,
         nonce: n,
         locations: r,
@@ -94,134 +94,134 @@ function $(e) {
     });
 }
 async function ee(e) {
-    var t, n, r;
-    let { applicationId: i, location: o, instanceId: s } = e,
-        l = D.ZP.getEmbeddedActivityDurationMs(o.id, i),
-        c = y.default.getSessionId();
-    null != s &&
-        null != c &&
+    var t;
+    let { applicationId: n, location: r, instanceId: i } = e,
+        o = D.ZP.getEmbeddedActivityDurationMs(r.id, n),
+        s = y.default.getSessionId();
+    null != i &&
+        null != s &&
         (await a.tn.post({
-            url: V.ANM.ACTIVITY_LEAVE(i, o.id, s),
-            body: { session_id: c },
+            url: V.ANM.ACTIVITY_LEAVE(n, r.id, i),
+            body: { session_id: s },
             retries: 2,
             rejectWithError: !1
         }));
-    let u = W[i],
-        d = null != (n = (0, U.pY)(o)) ? n : (0, U.wq)(o),
-        f = null != (r = (0, U.jS)(o)) ? r : (0, U.hu)(o),
-        _ = O.Z.getChannel(d),
-        h = S.default.getCurrentUser();
-    if (null == u || null == h) return;
-    let m = D.ZP.getShelfActivities(f),
-        g = (0, L.Z)({
-            applicationId: i,
-            activityConfigs: m
+    let l = W[n],
+        c = (0, U.p)(r),
+        u = (0, U.j)(r),
+        d = O.Z.getChannel(c),
+        f = S.default.getCurrentUser();
+    if (null == l || null == f) return;
+    let _ = D.ZP.getShelfActivities(u),
+        h = (0, L.Z)({
+            applicationId: n,
+            activityConfigs: _
         }),
-        { releasePhase: E } = q(g),
-        b = p.Z.getRawThermalState();
+        { releasePhase: m } = q(h),
+        g = p.Z.getRawThermalState();
     T.default.track(V.rMx.ACTIVITY_SESSION_LEFT, {
-        channel_id: d,
-        guild_id: f,
-        media_session_id: u.mediaSessionIds[0],
-        activity_session_id: u.activitySessionId,
-        application_id: i,
-        duration_ms: l,
-        user_premium_tier: h.premiumType,
-        raw_thermal_state: b,
-        release_phase: E,
-        shelf_rank: null == g || null == (t = g.activity) ? void 0 : t.shelf_rank,
-        activity_user_session_id: u.activityUserSessionId,
-        channel_type: null == _ ? void 0 : _.type,
-        media_session_ids: u.mediaSessionIds,
-        embedded_activity_location_kind: o.kind
+        channel_id: c,
+        guild_id: u,
+        media_session_id: l.mediaSessionIds[0],
+        activity_session_id: l.activitySessionId,
+        application_id: n,
+        duration_ms: o,
+        user_premium_tier: f.premiumType,
+        raw_thermal_state: g,
+        release_phase: m,
+        shelf_rank: null == h || null == (t = h.activity) ? void 0 : t.shelf_rank,
+        activity_user_session_id: l.activityUserSessionId,
+        channel_type: null == d ? void 0 : d.type,
+        media_session_ids: l.mediaSessionIds,
+        embedded_activity_location_kind: r.kind
     }),
         T.default.track(V.rMx.ACTIVITY_IFRAME_UNMOUNT, {
-            channel_id: d,
-            guild_id: f,
-            application_id: i,
-            instance_ids: null != u.launchId ? [u.launchId] : void 0,
-            media_session_ids: u.mediaSessionIds,
-            activity_user_session_id: u.activityUserSessionId,
-            raw_thermal_state: b,
-            duration_ms: l,
-            embedded_activity_location_kind: o.kind
+            channel_id: c,
+            guild_id: u,
+            application_id: n,
+            instance_ids: null != l.launchId ? [l.launchId] : void 0,
+            media_session_ids: l.mediaSessionIds,
+            activity_user_session_id: l.activityUserSessionId,
+            raw_thermal_state: g,
+            duration_ms: o,
+            embedded_activity_location_kind: r.kind
         }),
-        delete W[i];
+        delete W[n];
 }
 function et(e) {
-    var t, n, r, a;
-    let { applicationId: o, isFirstActivityInChannel: l, isStart: c, participants: u, embeddedActivity: f, location: h, inviterUserId: m } = e,
-        g = y.default.getId(),
-        E = u.find((e) => e.userId === g),
-        b = null != (r = (0, U.pY)(h)) ? r : (0, U.wq)(h),
-        I = null != (a = (0, U.jS)(h)) ? a : (0, U.hu)(h),
-        A = O.Z.getChannel(b);
-    if ((c && null != A && A.isPrivate() && l && null == E && s.Z.selectParticipant(A.id, null), null == E)) return;
-    let N = v.Z.getMediaSessionId(),
-        R = f.compositeInstanceId,
-        w = null == N && (null == A ? void 0 : A.isVocal()) === !0 && (null == A ? void 0 : A.isPrivate()) === !1;
-    if (null == R || w) return;
-    let x = (0, i.Z)(),
-        k = 'location' in f ? 2 : 1,
-        M = S.default.getCurrentUser();
-    if (null == M) return;
-    let j = D.ZP.getShelfActivities(I),
-        G = P.Z.getState().shelfOrder,
-        B = (0, L.Z)({
-            applicationId: o,
-            activityConfigs: j
+    var t, n;
+    let { applicationId: r, isFirstActivityInChannel: a, isStart: o, participants: l, embeddedActivity: c, location: u, inviterUserId: f } = e,
+        h = y.default.getId(),
+        m = l.find((e) => e.userId === h),
+        g = (0, U.p)(u),
+        E = (0, U.j)(u),
+        b = O.Z.getChannel(g);
+    if ((o && null != b && b.isPrivate() && a && null == m && s.Z.selectParticipant(b.id, null), null == m)) return;
+    let I = v.Z.getMediaSessionId(),
+        A = c.compositeInstanceId,
+        N = null == I && (null == b ? void 0 : b.isVocal()) === !0 && (null == b ? void 0 : b.isPrivate()) === !1;
+    if (null == A || N) return;
+    let P = (0, i.Z)(),
+        w = 'location' in c ? 2 : 1,
+        x = S.default.getCurrentUser();
+    if (null == x) return;
+    let k = D.ZP.getShelfActivities(E),
+        M = R.Z.getState().shelfOrder,
+        j = (0, L.Z)({
+            applicationId: r,
+            activityConfigs: k
         }),
-        F = 1 + G.findIndex((e) => e === o),
-        { releasePhase: Z } = q(B),
-        H = p.Z.getRawThermalState(),
-        Y = null != N ? [N] : [],
-        z = {
-            activitySessionId: R,
-            activityUserSessionId: x,
-            launchId: f.launchId,
-            mediaSessionIds: Y,
-            activitiesInfraVersion: k
+        G = 1 + M.findIndex((e) => e === r),
+        { releasePhase: B } = q(j),
+        F = p.Z.getRawThermalState(),
+        Z = null != I ? [I] : [],
+        H = {
+            activitySessionId: A,
+            activityUserSessionId: P,
+            launchId: c.launchId,
+            mediaSessionIds: Z,
+            activitiesInfraVersion: w
         };
-    W[o] = z;
-    let Q = K[o];
-    (0, C.Ew)(E.nonce) || E.nonce === (null == Q ? void 0 : Q.nonce) || (Q = void 0),
+    W[r] = H;
+    let Y = K[r];
+    (0, C.Ew)(m.nonce) || m.nonce === (null == Y ? void 0 : Y.nonce) || (Y = void 0),
         T.default.track(V.rMx.ACTIVITY_SESSION_JOINED, {
-            channel_id: b,
-            guild_id: I,
-            media_session_id: Y[0],
-            activity_session_id: R,
-            application_id: o,
-            location_stack: null == Q ? void 0 : Q.locations,
-            user_premium_tier: M.premiumType,
-            raw_thermal_state: H,
-            n_participants: null != A ? _.Z.getUserParticipantCount(A.id) : null,
-            is_activity_start: c,
-            release_phase: Z,
-            shelf_rank: null == B || null == (t = B.activity) ? void 0 : t.shelf_rank,
-            shelf_sorted_rank: F > 0 ? F : null,
-            activity_user_session_id: x,
-            channel_type: null == A ? void 0 : A.type,
-            source: null == Q ? void 0 : Q.source,
-            command_context_type: null != A ? (0, d.Vh)(A, o) : null,
-            invite_inviter_id: m,
-            interaction_id: null == Q ? void 0 : Q.interactionId,
-            embedded_activity_location_kind: h.kind
+            channel_id: g,
+            guild_id: E,
+            media_session_id: Z[0],
+            activity_session_id: A,
+            application_id: r,
+            location_stack: null == Y ? void 0 : Y.locations,
+            user_premium_tier: x.premiumType,
+            raw_thermal_state: F,
+            n_participants: null != b ? _.Z.getUserParticipantCount(b.id) : null,
+            is_activity_start: o,
+            release_phase: B,
+            shelf_rank: null == j || null == (t = j.activity) ? void 0 : t.shelf_rank,
+            shelf_sorted_rank: G > 0 ? G : null,
+            activity_user_session_id: P,
+            channel_type: null == b ? void 0 : b.type,
+            source: null == Y ? void 0 : Y.source,
+            command_context_type: null != b ? (0, d.Vh)(b, r) : null,
+            invite_inviter_id: f,
+            interaction_id: null == Y ? void 0 : Y.interactionId,
+            embedded_activity_location_kind: u.kind
         }),
         T.default.track(V.rMx.ACTIVITY_IFRAME_MOUNT, {
-            location_stack: null == Q ? void 0 : Q.locations,
-            channel_id: b,
-            channel_type: null == A ? void 0 : A.type,
-            guild_id: I,
-            application_id: o,
-            instance_id: f.launchId,
-            initial_media_session_id: Y[0],
-            activity_user_session_id: x,
-            raw_thermal_state: H,
-            is_activity_start: c,
-            shelf_rank: null == B || null == (n = B.activity) ? void 0 : n.shelf_rank,
-            shelf_sorted_rank: F > 0 ? F : null,
-            activities_infra_version: k,
-            embedded_activity_location_kind: h.kind
+            location_stack: null == Y ? void 0 : Y.locations,
+            channel_id: g,
+            channel_type: null == b ? void 0 : b.type,
+            guild_id: E,
+            application_id: r,
+            instance_id: c.launchId,
+            initial_media_session_id: Z[0],
+            activity_user_session_id: P,
+            raw_thermal_state: F,
+            is_activity_start: o,
+            shelf_rank: null == j || null == (n = j.activity) ? void 0 : n.shelf_rank,
+            shelf_sorted_rank: G > 0 ? G : null,
+            activities_infra_version: w,
+            embedded_activity_location_kind: u.kind
         });
 }
 function en(e) {
@@ -239,7 +239,7 @@ class er extends c.Z {
             H(this, 'handleSelectedChannelUpdate', () => {
                 let e = I.Z.getVoiceChannelId();
                 for (let { location: t, applicationId: n } of D.ZP.getSelfEmbeddedActivities().values()) {
-                    let r = (0, U.pY)(t);
+                    let r = (0, U.p)(t);
                     null != r &&
                         (0, F.Z)(r) &&
                         r !== e &&
@@ -253,7 +253,7 @@ class er extends c.Z {
                         n = y.default.getId();
                     t.forEach((e) => {
                         if (e.userIds.has(n)) {
-                            let t = (0, U.pY)(e.location),
+                            let t = (0, U.p)(e.location),
                                 n = D.ZP.getSelfEmbeddedActivityForChannel(t);
                             null == n
                                 ? this.leaveActivity({
@@ -282,14 +282,14 @@ class er extends c.Z {
                     n,
                     r,
                     { error: i, nonce: a, channelId: o, guildId: s, applicationId: l, isStart: c, locationKind: u } = e,
-                    d = X(l, a),
+                    d = Q(l, a),
                     f = Z.intl.string(Z.t['IOy+Iy']);
                 if (i instanceof h.Z) {
                     (t = 0), (r = i.reason);
-                    let e = R.Z.getFetchState();
-                    switch ((E.Sb.getSetting() && e !== R.O.LOADED && (await (0, w.$h)()), i.reason)) {
+                    let e = P.Z.getFetchState();
+                    switch ((E.Sb.getSetting() && e !== P.O.LOADED && (await (0, w.$h)()), i.reason)) {
                         case h.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND:
-                            R.Z.inDevModeForApplication(l) && (f = Z.intl.string(Z.t.hXRXf3));
+                            P.Z.inDevModeForApplication(l) && (f = Z.intl.string(Z.t.hXRXf3));
                             break;
                         case h.Z.Reasons.INVALID_CHANNEL:
                             f = Z.intl.string(Z.t.j29zCg);
@@ -430,7 +430,7 @@ class er extends c.Z {
                 let { guild: t } = e;
                 D.ZP.getSelfEmbeddedActivities().forEach((e) => {
                     let { location: n, applicationId: r } = e,
-                        i = (0, U.jS)(n);
+                        i = (0, U.j)(n);
                     t.id === i &&
                         this.leaveActivity({
                             location: n,
@@ -452,7 +452,7 @@ class er extends c.Z {
                 if (null == K[n.applicationId]) {
                     let e;
                     n.interactionType === l.B8.APPLICATION_COMMAND ? (e = [u.Z.INTERACTION_APPLICATION_COMMAND]) : n.interactionType === l.B8.MESSAGE_COMPONENT ? (e = [u.Z.INTERACTION_MESSAGE_COMPONENT]) : n.interactionType === l.B8.MODAL_SUBMIT && (e = [u.Z.INTERACTION_MODAL_SUBMIT]),
-                        Q({
+                        X({
                             applicationId: n.applicationId,
                             nonce: t,
                             locations: e
@@ -477,7 +477,7 @@ class er extends c.Z {
                 let { nonce: t } = e;
                 if (null == t) return;
                 let n = z[t];
-                null != n && (delete z[t], X(n, t));
+                null != n && (delete z[t], Q(n, t));
             });
     }
 }

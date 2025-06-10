@@ -73,11 +73,11 @@ let I = (e) => {
         { giftRecipient: T, giftRecipientError: A } = (0, u.wD)(),
         N = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
         C = (0, h.k)(S),
-        P = i.useRef(null);
+        R = i.useRef(null);
     if (null == S) return null;
-    let [R] = S.items,
+    let [P] = S.items,
         w = () => {
-            switch (R.type) {
+            switch (P.type) {
                 case s.Z.AVATAR_DECORATION:
                     return g.intl.string(g.t['7v0T9P']);
                 case s.Z.PROFILE_EFFECT:
@@ -88,7 +88,7 @@ let I = (e) => {
                     return null;
             }
         },
-        D = null != T && T.id !== (null == N ? void 0 : N.id) && R.type !== s.Z.NAMEPLATE,
+        D = null != T && T.id !== (null == N ? void 0 : N.id) && P.type !== s.Z.NAMEPLATE,
         L = () => {
             null != t && null != b && b(t);
         };
@@ -107,7 +107,7 @@ let I = (e) => {
                             (0, r.jsx)(
                                 c.yRy,
                                 {
-                                    targetElementRef: P,
+                                    targetElementRef: R,
                                     preload: () => (0, f.Z)(T.id, T.getAvatarURL(null, 80)),
                                     renderPopout: (e) =>
                                         (0, r.jsx)(
@@ -115,8 +115,8 @@ let I = (e) => {
                                             v(y({}, e), {
                                                 user: T,
                                                 pendingAvatar: T.getAvatarURL(null, (0, c.pxk)(c.EFr.SIZE_80)),
-                                                pendingAvatarDecoration: R.type === s.Z.AVATAR_DECORATION ? R : null,
-                                                pendingProfileEffectId: R.type === s.Z.PROFILE_EFFECT ? R.id : null,
+                                                pendingAvatarDecoration: P.type === s.Z.AVATAR_DECORATION ? P : null,
+                                                pendingProfileEffectId: P.type === s.Z.PROFILE_EFFECT ? P.id : null,
                                                 canUsePremiumCustomization: !0,
                                                 disabledInputs: !0
                                             })
@@ -128,7 +128,7 @@ let I = (e) => {
                                             c.P3F,
                                             v(y({}, e), {
                                                 className: E.previewLink,
-                                                innerRef: P,
+                                                innerRef: R,
                                                 children: (0, r.jsx)(c.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-link',

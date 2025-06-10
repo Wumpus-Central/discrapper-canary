@@ -15,10 +15,10 @@ var r = a(157079),
     I = a(305625),
     R = a(64685),
     d = a(873567),
-    f = a(101284),
-    A = a(886115),
-    p = a(370541),
-    N = a(285883),
+    A = a(101284),
+    f = a(886115),
+    N = a(370541),
+    p = a(285883),
     T = a(163162);
 let L = new WeakMap(),
     h = new Map(),
@@ -31,7 +31,7 @@ function D(t, e) {
     let {
             traceFetch: a,
             traceXHR: n,
-            shouldCreateSpanForRequest: f,
+            shouldCreateSpanForRequest: A,
             enableHTTPTimings: D,
             tracePropagationTargets: P
         } = {
@@ -39,8 +39,8 @@ function D(t, e) {
             traceXHR: O.traceXHR,
             ...e
         },
-        m = 'function' == typeof f ? f : (t) => !0,
-        C = (t) =>
+        C = 'function' == typeof A ? A : (t) => !0,
+        m = (t) =>
             (function (t, e) {
                 let a = T.m9.location && T.m9.location.href;
                 if (a) {
@@ -51,11 +51,11 @@ function D(t, e) {
                         return !1;
                     }
                     let _ = r.origin === n;
-                    return e ? (0, A.U0)(r.toString(), e) || (_ && (0, A.U0)(r.pathname, e)) : _;
+                    return e ? (0, f.U0)(r.toString(), e) || (_ && (0, f.U0)(r.pathname, e)) : _;
                 }
                 {
                     let a = !!t.match(/^\/(?!\/)/);
-                    return e ? (0, A.U0)(t, e) : a;
+                    return e ? (0, f.U0)(t, e) : a;
                 }
             })(t, P),
         v = {};
@@ -80,7 +80,7 @@ function D(t, e) {
             }
         }),
         (0, R.Uf)((t) => {
-            let e = (0, _.m)(t, m, C, v);
+            let e = (0, _.m)(t, C, m, v);
             if ((t.response && t.fetchData.__span && L.set(t.response, t.fetchData.__span), e)) {
                 let a = y(t.fetchData.url),
                     r = a ? (0, d.en)(a).host : void 0;
@@ -97,25 +97,25 @@ function D(t, e) {
                     let _ = t.xhr,
                         R = _ && _[r.xU];
                     if (!_ || _.__sentry_own_request__ || !R) return;
-                    let f = (0, i.z)() && e(R.url);
-                    if (t.endTimestamp && f) {
+                    let A = (0, i.z)() && e(R.url);
+                    if (t.endTimestamp && A) {
                         let t = _.__sentry_xhr_span_id__;
                         if (!t) return;
                         let e = n[t];
                         e && void 0 !== R.status_code && ((0, c.Q0)(e, R.status_code), e.end(), delete n[t]);
                         return;
                     }
-                    let A = y(R.url),
-                        T = A ? (0, d.en)(A).host : void 0,
+                    let f = y(R.url),
+                        T = f ? (0, d.en)(f).host : void 0,
                         L = !!(0, o.HN)(),
                         h =
-                            f && L
+                            A && L
                                 ? (0, s.qp)({
                                       name: `${R.method} ${R.url}`,
                                       attributes: {
                                           type: 'xhr',
                                           'http.method': R.method,
-                                          'http.url': A,
+                                          'http.url': f,
                                           url: R.url,
                                           'server.address': T,
                                           [E.S3]: 'auto.http.browser',
@@ -140,17 +140,17 @@ function D(t, e) {
                                         ...(0, u.aF)().getPropagationContext(),
                                         ...r.getPropagationContext()
                                     },
-                                    E = a && (0, i.z)() ? (0, o.Hb)(a) : (0, p.$p)(n, _, c);
+                                    E = a && (0, i.z)() ? (0, o.Hb)(a) : (0, N.$p)(n, _, c);
                                 var l = t,
                                     R = E,
-                                    d = (0, N.IQ)(s || (a ? (0, I.jC)(a) : (0, I._l)(n, e)));
+                                    d = (0, p.IQ)(s || (a ? (0, I.jC)(a) : (0, I._l)(n, e)));
                                 try {
-                                    l.setRequestHeader('sentry-trace', R), d && l.setRequestHeader(N.bU, d);
+                                    l.setRequestHeader('sentry-trace', R), d && l.setRequestHeader(p.bU, d);
                                 } catch (t) {}
                             })(_, O, (0, i.z)() && L ? h : void 0),
                         h
                     );
-                })(t, m, C, v);
+                })(t, C, m, v);
                 D && e && g(e);
             });
 }
@@ -189,14 +189,14 @@ function g(t) {
                             );
                         })(t.nextHopProtocol),
                         r = [];
-                    return (r.push(['network.protocol.version', a], ['network.protocol.name', e]), f.Z1) ? [...r, ['http.request.redirect_start', P(t.redirectStart)], ['http.request.fetch_start', P(t.fetchStart)], ['http.request.domain_lookup_start', P(t.domainLookupStart)], ['http.request.domain_lookup_end', P(t.domainLookupEnd)], ['http.request.connect_start', P(t.connectStart)], ['http.request.secure_connection_start', P(t.secureConnectionStart)], ['http.request.connection_end', P(t.connectEnd)], ['http.request.request_start', P(t.requestStart)], ['http.request.response_start', P(t.responseStart)], ['http.request.response_end', P(t.responseEnd)]] : r;
+                    return (r.push(['network.protocol.version', a], ['network.protocol.name', e]), A.Z1) ? [...r, ['http.request.redirect_start', P(t.redirectStart)], ['http.request.fetch_start', P(t.fetchStart)], ['http.request.domain_lookup_start', P(t.domainLookupStart)], ['http.request.domain_lookup_end', P(t.domainLookupEnd)], ['http.request.connect_start', P(t.connectStart)], ['http.request.secure_connection_start', P(t.secureConnectionStart)], ['http.request.connection_end', P(t.connectEnd)], ['http.request.request_start', P(t.requestStart)], ['http.request.response_start', P(t.responseStart)], ['http.request.response_end', P(t.responseEnd)]] : r;
                 })(r).forEach((e) => t.setAttribute(...e)),
                 setTimeout(a));
         });
     });
 }
 function P(t = 0) {
-    return ((f.Z1 || performance.timeOrigin) + t) / 1000;
+    return ((A.Z1 || performance.timeOrigin) + t) / 1000;
 }
 function y(t) {
     try {

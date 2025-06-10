@@ -56,7 +56,7 @@ let Y = {
             children: e
         });
     },
-    X = function (e) {
+    Q = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         return (0, i.jsx)(u.Text, {
             className: o()(W.textContent, t),
@@ -64,7 +64,7 @@ let Y = {
             children: e
         });
     },
-    Q = (0, p.Z)((e) => {
+    X = (0, p.Z)((e) => {
         let { message: t } = e;
         return (0, i.jsx)('div', {
             className: W.__invalid_timestamp,
@@ -85,9 +85,9 @@ class $ extends l.Component {
             { timestamps: n } = t;
         return null == n || !(0, _.Z)(t) || (0, E.Z)(t)
             ? null
-            : X(
+            : Q(
                   (0, b.Z)(t)
-                      ? (0, i.jsx)(Q, { timestamps: n })
+                      ? (0, i.jsx)(X, { timestamps: n })
                       : (0, i.jsx)(x.ZP, {
                             start: n.start,
                             end: n.end,
@@ -133,7 +133,7 @@ class $ extends l.Component {
                               })
                           }),
                     (0, i.jsxs)('div', {
-                        children: [q(null != l && '' !== l ? l : z.intl.string(z.t['2TbM/P'])), null != a ? X(a) : null, this.renderTimePlayed()]
+                        children: [q(null != l && '' !== l ? l : z.intl.string(z.t['2TbM/P'])), null != a ? Q(a) : null, this.renderTimePlayed()]
                     })
                 ]
             })
@@ -369,7 +369,7 @@ let er = (e) => {
                         focusProps: { ringTarget: h },
                         children: (0, i.jsxs)('div', {
                             className: W.voiceSectionDetails,
-                            children: [q(r.toString(), W.voiceSectionText), X(f, W.voiceSectionText)]
+                            children: [q(r.toString(), W.voiceSectionText), Q(f, W.voiceSectionText)]
                         })
                     }),
                     (0, i.jsx)(H.Z, {
@@ -395,7 +395,7 @@ let er = (e) => {
                           })
                         : null,
                     (0, i.jsxs)('div', {
-                        children: [q(n), X(z.intl.formatToPlainString(z.t.C4WXvb, { memberCount: r.totalSize }))]
+                        children: [q(n), Q(z.intl.formatToPlainString(z.t.C4WXvb, { memberCount: r.totalSize }))]
                     }),
                     (0, i.jsx)(H.Z, {
                         partySize: r,
@@ -415,7 +415,7 @@ let er = (e) => {
                     (0, i.jsx)(U.Z, { className: W.xboxSectionIcon }),
                     (0, i.jsxs)('div', {
                         className: W.__invalid_xboxSectionDetails,
-                        children: [q(t), X(z.intl.string(z.t['JG9r+/']))]
+                        children: [q(t), Q(z.intl.string(z.t['JG9r+/']))]
                     })
                 ]
             })
@@ -453,7 +453,7 @@ let er = (e) => {
                           })
                         : (0, i.jsx)('div', {}),
                     (0, i.jsxs)('div', {
-                        children: [null != r ? q(r) : null, null != l ? X(l) : null]
+                        children: [null != r ? q(r) : null, null != l ? Q(l) : null]
                     }),
                     (0, i.jsx)(H.Z, {
                         minAvatarsShown: d ? 2 : 1,
@@ -506,7 +506,7 @@ let er = (e) => {
                             className: W.twitchSectionIcon
                         }),
                         (0, i.jsxs)('div', {
-                            children: [q(c), null != d ? X(d) : null]
+                            children: [q(c), null != d ? Q(d) : null]
                         }),
                         null != l
                             ? (0, i.jsx)(u.qEK, {
@@ -556,7 +556,7 @@ let er = (e) => {
                             className: W.applicationStreamingAvatar
                         }),
                         (0, i.jsxs)('div', {
-                            children: [q(B.ZP.getName(l)), X(g)]
+                            children: [q(B.ZP.getName(l)), Q(g)]
                         }),
                         (0, i.jsx)(S.ZP, { size: S.ZP.Sizes.SMALL })
                     ]
@@ -611,7 +611,7 @@ let er = (e) => {
                                   children: (0, i.jsx)(u.Text, {
                                       color: 'text-muted',
                                       variant: 'text-sm/normal',
-                                      children: (0, i.jsx)(Q, { timestamps: _ })
+                                      children: (0, i.jsx)(X, { timestamps: _ })
                                   })
                               })
                             : null

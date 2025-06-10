@@ -25,8 +25,8 @@ var r = n(255367),
     A = n(981631),
     N = n(616922),
     C = n(388032),
-    P = n(292199),
-    R = n(610220);
+    R = n(292199),
+    P = n(610220);
 function w(e, t) {
     return C.intl.formatToPlainString(C.t.h2yWWV, {
         username: t.username,
@@ -64,18 +64,18 @@ function L(e) {
     return null == s
         ? null
         : (0, r.jsxs)('div', {
-              className: P.listeningTimeline,
+              className: R.listeningTimeline,
               children: [
                   (0, r.jsx)(S.x3, { entry: n }),
                   (0, r.jsx)('div', {
-                      className: P.seekBarContainer,
+                      className: R.seekBarContainer,
                       children: (0, r.jsx)('div', {
-                          className: P.seekBarFill,
+                          className: R.seekBarFill,
                           style: s
                       })
                   }),
                   (0, r.jsx)(l.Text, {
-                      className: P.timestamp,
+                      className: R.timestamp,
                       variant: 'text-xs/normal',
                       tabularNumbers: !0,
                       color: void 0,
@@ -89,7 +89,7 @@ function x(e) {
     let n,
         m,
         S,
-        { channel: P, entry: x, closePopout: k, onReaction: M, onVoiceChannelPreview: j } = e,
+        { channel: R, entry: x, closePopout: k, onReaction: M, onVoiceChannelPreview: j } = e,
         { largeImage: U } = (0, g.rv)({ entry: x }),
         { activity: G, currentEntry: B, artist: F, title: V, user: Z } = (0, v.pi)(x),
         { primaryColor: H, secondaryColor: Y } = (0, O.Z)(null == U ? void 0 : U.src),
@@ -97,12 +97,12 @@ function x(e) {
         K = (0, o.e7)([u.Z, p.default], () => ((null == G ? void 0 : G.type) === A.IIU.LISTENING && null != Z ? (0, f.Z)(u.Z, p.default, Z, G) : void 0), [G, Z], s.Z),
         z = i.useCallback(() => {
             var e;
-            if (null == P || null == Z) return;
+            if (null == R || null == Z) return;
             let t = null == (e = G.timestamps) ? void 0 : e.start,
                 n = (0, E.T_)(null != t ? { start: t } : x, Date.now());
             return (0, b.CR)({
                 user: Z,
-                channel: P,
+                channel: R,
                 mediaImageSrc: null == U ? void 0 : U.src,
                 artist: F,
                 description: D(
@@ -110,16 +110,16 @@ function x(e) {
                         artist: F,
                         media: V
                     },
-                    P,
+                    R,
                     Z
                 ),
                 colors: [H, Y],
                 badges: (0, b.jE)({ timestamp: n })
             });
-        }, [G, F, P, x, null == U ? void 0 : U.src, H, Y, V, Z]);
+        }, [G, F, R, x, null == U ? void 0 : U.src, H, Y, V, Z]);
     if (null == G || null == B) return null;
     let q = F,
-        Q = [];
+        X = [];
     if (B.media.provider === a.p.SPOTIFY) {
         (m = () => {
             (0, c.aG)(G);
@@ -138,7 +138,7 @@ function x(e) {
             ((q = (0, r.jsx)(d.Z, {
                 artists: F,
                 canOpen: null != G.sync_id,
-                linkClassName: R.popoutTextSecondary,
+                linkClassName: P.popoutTextSecondary,
                 onOpenSpotifyArtist: e
             })),
             (null == K ? void 0 : K.syncDisabled) === !1)
@@ -146,7 +146,7 @@ function x(e) {
             let e = () => {
                 (0, _.Z)(K, N.kG.USER_ACTIVITY_SYNC), k();
             };
-            Q.push(
+            X.push(
                 (0, r.jsx)(
                     I.Ll,
                     {
@@ -159,9 +159,9 @@ function x(e) {
             );
         }
     }
-    let X = (0, r.jsx)(I.wG, {
+    let Q = (0, r.jsx)(I.wG, {
         onClickThumbnail: S,
-        channel: P,
+        channel: R,
         entry: x,
         headerIcons:
             B.media.provider === a.p.SPOTIFY
@@ -180,17 +180,17 @@ function x(e) {
     });
     return (0, r.jsxs)(I.yR, {
         children: [
-            X,
+            Q,
             (0, r.jsx)(I.St, {
                 children: (0, r.jsx)(I.WT, {
                     onReaction: M,
                     onVoiceChannelPreview: j,
                     user: Z,
-                    channel: P,
+                    channel: R,
                     generateReactionImage: z,
                     reactionImageAltText: w(F, Z),
                     entry: x,
-                    buttons: Q
+                    buttons: X
                 })
             })
         ]

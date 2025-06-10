@@ -83,8 +83,8 @@ let O = 'scientist:triggered',
     A = new u.Z('ExperimentStore'),
     N = !1,
     C = {},
-    P = new Map(),
-    R = {},
+    R = new Map(),
+    P = {},
     w = {
         rawUserExperiments: [],
         rawGuildExperiments: []
@@ -132,9 +132,9 @@ function z(e, t) {
     return !(null == n || (K ? n.time < W : Date.now() - n.time > F)) && n.hash === t;
 }
 function q(e, t) {
-    return P.get(e) === t;
+    return R.get(e) === t;
 }
-function Q(e) {
+function X(e) {
     let { experimentId: t, descriptor: n, location: r, location_stack: i, context: a, fingerprint: o, excluded: s, exposureType: l } = e,
         c = !1;
     switch (n.assignmentSource) {
@@ -227,14 +227,14 @@ function Q(e) {
             });
     }
     c
-        ? P.set(f, p)
+        ? R.set(f, p)
         : ((C[H(t, n, r, u)] = {
               time: Date.now(),
               hash: Y(n)
           }),
           e_(C));
 }
-function X(e) {
+function Q(e) {
     let [t, n] = e;
     return null != p.Z[t] ? p.Z[t](n) : null;
 }
@@ -260,7 +260,7 @@ function $(e) {
                 })
             };
         }),
-        filters: n.map(X),
+        filters: n.map(Q),
         rawFilterData: n
     };
 }
@@ -416,7 +416,7 @@ function ei(e, t) {
         a.holdoutName !== t &&
         (null == (f = ei(e, a.holdoutName)) ? void 0 : f.bucket) != null &&
         (!0 !== f.override &&
-            Q({
+            X({
                 experimentId: a.holdoutName,
                 descriptor: f
             }),
@@ -443,8 +443,8 @@ function ea(e) {
     for (let r in e) {
         var n;
         let i = e[r];
-        for (let e of ((t[r] = E({}, i)), t[r].populations)) e.filters = e.rawFilterData.map(X);
-        for (let e of null != (n = t[r].overridesFormatted) ? n : []) for (let t of e) t.filters = t.rawFilterData.map(X);
+        for (let e of ((t[r] = E({}, i)), t[r].populations)) e.filters = e.rawFilterData.map(Q);
+        for (let e of null != (n = t[r].overridesFormatted) ? n : []) for (let t of e) t.filters = t.rawFilterData.map(Q);
     }
     return t;
 }
@@ -551,7 +551,7 @@ function e_(e) {
 }
 function ep(e) {
     let { experimentId: t, experimentType: n, title: r, description: i, buckets: a, commonTriggerPoint: o } = e;
-    R[t] = {
+    P[t] = {
         type: n,
         title: r,
         description: i,
@@ -562,7 +562,7 @@ function ep(e) {
 function eh(e) {
     var t;
     let { experimentId: n, experimentBucket: r, experimentType: i, skipCleanup: a } = e,
-        o = null != i ? i : null == (t = R[n]) ? void 0 : t.type;
+        o = null != i ? i : null == (t = P[n]) ? void 0 : t.type;
     if (null == o) return !1;
     if (
         (null == r
@@ -587,7 +587,7 @@ function eh(e) {
                 })),
         !a)
     )
-        for (let e of [k, M]) for (let t in e) null == R[t] && delete k[t];
+        for (let e of [k, M]) for (let t in e) null == P[t] && delete k[t];
     ef();
 }
 function em(e) {
@@ -615,7 +615,7 @@ class eg extends f.Z {
         return N;
     }
     hasRegisteredExperiment(e) {
-        return null != R[e];
+        return null != P[e];
     }
     getUserExperimentDescriptor(e) {
         if (j) {
@@ -667,7 +667,7 @@ class eg extends f.Z {
             });
     }
     getRegisteredExperiments() {
-        return R;
+        return P;
     }
     getAllExperimentOverrideDescriptors() {
         return j ? E({}, k, M) : {};
@@ -679,7 +679,7 @@ class eg extends f.Z {
     getAllExperimentAssignments() {
         let e = {},
             t = {};
-        for (let n in (Object.keys(R).forEach((e) => {
+        for (let n in (Object.keys(P).forEach((e) => {
             t[G(''.concat(e))] = e;
         }),
         D)) {
@@ -725,7 +725,7 @@ class eg extends f.Z {
             },
             l.c.Early
         ),
-            g(this, 'trackExposure', Q);
+            g(this, 'trackExposure', X);
     }
 }
 g(eg, 'displayName', 'ExperimentStore'), g(eg, 'LATEST_SNAPSHOT_VERSION', 1);

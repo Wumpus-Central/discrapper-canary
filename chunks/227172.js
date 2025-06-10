@@ -28,8 +28,8 @@ var r = n(255367),
     A = n(297781),
     N = n(591853),
     C = n(410441),
-    P = n(797342),
-    R = n(981631),
+    R = n(797342),
+    P = n(981631),
     w = n(388032);
 function D(e, t, n) {
     return (
@@ -73,25 +73,25 @@ let x = {
     k = (e) => {
         let { channel: t, entry: n, disableGameProfileLinks: p, onReaction: h, onVoiceChannelPreview: D, onUserPopoutClosed: k, trackRankingItemInteraction: M } = e,
             { largeImage: j } = (0, g.rv)({ entry: n }),
-            { user: U, details: G, appName: B, activity: F } = (0, P.n)(n),
+            { user: U, details: G, appName: B, activity: F } = (0, R.n)(n),
             { primaryColor: V, secondaryColor: Z } = (0, S.Z)(null == j ? void 0 : j.src),
             H = (0, o.e7)([_.default], () => _.default.locale),
             { streamPreviewUrl: Y, stream: W } = (0, b.Z)(n),
-            { displayParticipants: K, participant1: z, participant2: q, numOtherParticipants: Q } = (0, E.Z)(n, 3),
-            X = n.extra.platform,
-            J = null != X ? x[X] : null,
-            $ = X === a.z.XBOX ? R.ABu.XBOX : X === a.z.PLAYSTATION ? R.ABu.PLAYSTATION : void 0,
+            { displayParticipants: K, participant1: z, participant2: q, numOtherParticipants: X } = (0, E.Z)(n, 3),
+            Q = n.extra.platform,
+            J = null != Q ? x[Q] : null,
+            $ = Q === a.z.XBOX ? P.ABu.XBOX : Q === a.z.PLAYSTATION ? P.ABu.PLAYSTATION : void 0,
             ee = (0, I.Z)($),
             et = i.useCallback(
                 (e) => {
                     if ((null == j ? void 0 : j.src) == null || null == t || null == U) return;
                     let r =
-                        Q > 0
+                        X > 0
                             ? (0, v.VY)({
                                   entry: n,
                                   channel: t,
                                   users: [z, q],
-                                  countOthers: Q
+                                  countOthers: X
                               })
                             : (0, v.HV)(n, t, U);
                     return (0, O.SO)({
@@ -104,7 +104,7 @@ let x = {
                         channelId: e
                     });
                 },
-                [null == j ? void 0 : j.src, t, K, n, H, Q, z, q, V, Z, U]
+                [null == j ? void 0 : j.src, t, K, n, H, X, z, q, V, Z, U]
             );
         if (null == U) return null;
         let en = (0, r.jsx)(A.Gk, {
@@ -144,7 +144,7 @@ let x = {
                           trackRankingItemInteraction: M
                       }),
             ei = [
-                (0, l.Z)(F, R.xjy.JOIN) || (0, c.Z)(F)
+                (0, l.Z)(F, P.xjy.JOIN) || (0, c.Z)(F)
                     ? (0, r.jsx)(d.Z, {
                           activity: F,
                           user: U,

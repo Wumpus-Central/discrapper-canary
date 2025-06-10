@@ -30,8 +30,8 @@ var r,
     A = n(58737),
     N = n(540026),
     C = n(528472),
-    P = n(455813),
-    R = n(283756),
+    R = n(455813),
+    P = n(283756),
     w = n(793148),
     D = n(981631),
     L = n(217702),
@@ -149,7 +149,7 @@ let q = (e) => {
         })
     );
 };
-class Q extends (r = o.Component) {
+class X extends (r = o.Component) {
     componentDidMount() {
         this.state.translateY.setValue(+!!this.props.autoPlay);
     }
@@ -282,7 +282,7 @@ class Q extends (r = o.Component) {
             });
     }
 }
-function X(e) {
+function Q(e) {
     let { fileName: t, fileSize: n, src: r, disabled: i, mimeType: o, hideDownloadButton: s } = e;
     return (0, a.jsxs)('div', {
         className: k.audioMetadata,
@@ -315,7 +315,7 @@ function X(e) {
         ]
     });
 }
-j(Q, 'defaultProps', { disabled: !1 });
+j(X, 'defaultProps', { disabled: !1 });
 class J extends o.Component {
     pop() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -720,7 +720,7 @@ class et extends (i = o.PureComponent) {
             } = this,
             y = this.getWidth();
         return f || n || t === Y.AUDIO
-            ? (0, a.jsx)(Q, {
+            ? (0, a.jsx)(X, {
                   buffers: c,
                   currentTime: u,
                   duration: d,
@@ -756,7 +756,7 @@ class et extends (i = o.PureComponent) {
                             })
                           : null
               })
-            : (0, a.jsx)(P.Z, {
+            : (0, a.jsx)(R.Z, {
                   onPlay: this.handleVideoClick,
                   inactive: !r
               });
@@ -766,7 +766,7 @@ class et extends (i = o.PureComponent) {
         return null == e || null == t
             ? null
             : r === Y.AUDIO
-              ? (0, a.jsx)(X, {
+              ? (0, a.jsx)(Q, {
                     fileName: e,
                     fileSize: t,
                     src: n,
@@ -818,7 +818,7 @@ class et extends (i = o.PureComponent) {
                     this.renderVideo(),
                     (0, a.jsx)('div', {
                         className: k.playCenter,
-                        children: (0, a.jsx)(R.Z, {
+                        children: (0, a.jsx)(P.Z, {
                             className: k.__invalid_playButton,
                             externalURL: n,
                             renderLinkComponent: o

@@ -2,9 +2,9 @@ n.d(t, {
     A3: () => N,
     FZ: () => A,
     Hl: () => et,
-    Je: () => R,
+    Je: () => P,
     Jh: () => M,
-    KK: () => Q,
+    KK: () => X,
     Oe: () => T,
     Qi: () => W,
     Ro: () => I,
@@ -22,7 +22,7 @@ n.d(t, {
     nL: () => z,
     nW: () => D,
     tb: () => j,
-    tl: () => X,
+    tl: () => Q,
     vx: () => G,
     y4: () => q,
     yw: () => K
@@ -75,8 +75,8 @@ let S = [b.Eu4.NONE, b.Eu4.TIER_1, b.Eu4.TIER_2, b.Eu4.TIER_3],
     },
     N = (e, t) => (null != t && t.hasFeature(b.oNc.MORE_STICKERS) && e === b.Eu4.TIER_3 ? o.D.MAX_STICKER_SLOTS : O.$8[e]),
     C = (e) => O.pH[e],
-    P = (e, t) => (null != t && t.hasFeature(b.oNc.MORE_SOUNDBOARD) ? O.w1 : O._k[e]),
-    R = (e) => {
+    R = (e, t) => (null != t && t.hasFeature(b.oNc.MORE_SOUNDBOARD) ? O.w1 : O._k[e]),
+    P = (e) => {
         if (e === b.Eu4.NONE) return O._k[e];
         let t = S[S.indexOf(e) - 1];
         return O._k[e] - O._k[t];
@@ -104,8 +104,8 @@ let S = [b.Eu4.NONE, b.Eu4.TIER_1, b.Eu4.TIER_2, b.Eu4.TIER_3],
                 },
                 {
                     title: v.intl.formatToPlainString(v.t.NRuk5u, {
-                        soundCount: R(b.Eu4.TIER_1),
-                        totalSoundCount: P(b.Eu4.TIER_1)
+                        soundCount: P(b.Eu4.TIER_1),
+                        totalSoundCount: R(b.Eu4.TIER_1)
                     }),
                     description: v.intl.string(v.t.Oq7OVl),
                     icon: 13
@@ -154,8 +154,8 @@ let S = [b.Eu4.NONE, b.Eu4.TIER_1, b.Eu4.TIER_2, b.Eu4.TIER_3],
                 },
                 {
                     title: v.intl.formatToPlainString(v.t.NRuk5u, {
-                        soundCount: R(b.Eu4.TIER_2),
-                        totalSoundCount: P(b.Eu4.TIER_2)
+                        soundCount: P(b.Eu4.TIER_2),
+                        totalSoundCount: R(b.Eu4.TIER_2)
                     }),
                     description: v.intl.string(v.t.pEYlPT),
                     icon: 13
@@ -216,8 +216,8 @@ let S = [b.Eu4.NONE, b.Eu4.TIER_1, b.Eu4.TIER_2, b.Eu4.TIER_3],
                 },
                 {
                     title: v.intl.formatToPlainString(v.t.NRuk5u, {
-                        soundCount: R(b.Eu4.TIER_3),
-                        totalSoundCount: P(b.Eu4.TIER_3)
+                        soundCount: P(b.Eu4.TIER_3),
+                        totalSoundCount: R(b.Eu4.TIER_3)
                     }),
                     description: v.intl.string(v.t['8omJSU']),
                     icon: 13
@@ -344,7 +344,7 @@ function B(e) {
             )
             .otherwise(() => null);
     if (null != c) return c;
-    let { numAvailableGuildBoostSlots: u, numCanceledGuildBoostSlots: d } = Object.values(f.Z.boostSlots).reduce((e, t) => (X(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
+    let { numAvailableGuildBoostSlots: u, numCanceledGuildBoostSlots: d } = Object.values(f.Z.boostSlots).reduce((e, t) => (Q(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
         numAvailableGuildBoostSlots: 0,
         numCanceledGuildBoostSlots: 0
     });
@@ -437,11 +437,11 @@ function q(e) {
     } else n = O.HO[e.premiumTier].limits.emoji;
     return Math.max(e.hasFeature(b.oNc.MORE_EMOJI) ? y.IE : y.xD, n);
 }
-function Q(e, t) {
+function X(e, t) {
     let n = (0, c.I)(e.id).available;
     return Math.max(0, b.oCV[t] - n);
 }
-function X(e) {
+function Q(e) {
     var t;
     return (null == (t = e.subscription) ? void 0 : t.status) === b.O0b.CANCELED || e.canceled;
 }

@@ -20,20 +20,20 @@ var r = n(255367),
     O = n(326578),
     v = n(85662);
 let I = (e) => {
-    let { user: t, nameplate: n, nameplateData: a, className: I, innerClassName: S, isHighlighted: T, showStatus: A, showPlaceholderUser: N, nameplatePreviewSize: C = 'normal', isPurchased: P = !1 } = e,
-        R = (0, s.e7)([h.Z], () => (0, l.wj)(h.Z.theme)),
+    let { user: t, nameplate: n, nameplateData: a, className: I, innerClassName: S, isHighlighted: T, showStatus: A, showPlaceholderUser: N, nameplatePreviewSize: C = 'normal', isPurchased: R = !1 } = e,
+        P = (0, s.e7)([h.Z], () => (0, l.wj)(h.Z.theme)),
         w = null != n ? (0, E.EU)(n) : a,
         D = (0, s.e7)([m.Z], () => (null != t ? m.Z.getStatus(t.id) : c.Skl.ONLINE)),
-        L = R ? '#706F74' : '#aaaab2',
+        L = P ? '#706F74' : '#aaaab2',
         x = i.useRef(null),
         k = 'large' === C,
         M = k ? c.EFr.SIZE_48 : c.EFr.SIZE_32;
     return (0, r.jsxs)('div', {
         className: o()(I, y.nameplatePreview, {
-            [y.nameplatePurchased]: P && !T,
+            [y.nameplatePurchased]: R && !T,
             [y.large]: k
         }),
-        style: { color: R ? 'white' : 'black' },
+        style: { color: P ? 'white' : 'black' },
         children: [
             null != w &&
                 (0, r.jsx)(
@@ -74,7 +74,7 @@ let I = (e) => {
                         className: o()(y.avatarContainer, N && y.avatarVisible),
                         children: (0, r.jsx)(u.Z, {
                             avatar: (0, r.jsx)(c.qEK, {
-                                src: R ? O : v,
+                                src: P ? O : v,
                                 size: M,
                                 'aria-label': b.intl.string(b.t.cqpybG),
                                 status: c.Skl.ONLINE,

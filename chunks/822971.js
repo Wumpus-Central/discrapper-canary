@@ -132,13 +132,13 @@ e.exports = function (e) {
             end: /"/,
             contains: [{ match: /\{\{/ }, { match: /\}\}/ }, e.BACKSLASH_ESCAPE, N]
         },
-        P = {
+        R = {
             scope: 'string',
             begin: /(\$@|@\$)"/,
             end: /"/,
             contains: [{ match: /\{\{/ }, { match: /\}\}/ }, { match: /""/ }, e.BACKSLASH_ESCAPE, N]
         },
-        R = {
+        P = {
             scope: 'string',
             begin: /\$"""/,
             end: /"""/,
@@ -150,7 +150,7 @@ e.exports = function (e) {
             match: i(/'/, o(/[^\\']/, /\\(?:.|\d{3}|x[a-fA-F\d]{2}|u[a-fA-F\d]{4}|U[a-fA-F\d]{8})/), /'/)
         };
     return (
-        (N.contains = [P, C, T, S, w, n, c, d, E, O, v, I, _, h]),
+        (N.contains = [R, C, T, S, w, n, c, d, E, O, v, I, _, h]),
         {
             name: 'F#',
             aliases: ['fs', 'f#'],
@@ -160,7 +160,7 @@ e.exports = function (e) {
             contains: [
                 n,
                 {
-                    variants: [R, P, C, A, T, S, w]
+                    variants: [P, R, C, A, T, S, w]
                 },
                 c,
                 d,

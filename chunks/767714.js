@@ -85,7 +85,7 @@ function y(e, t) {
     return i;
 }
 let O = function (e) {
-    var { subscriptionTier: t, onClick: n, size: i, className: h, textOptions: g, iconClassName: y, postSuccessGuild: O, onSubscribeModalClose: v, premiumModalAnalyticsLocation: I, showIcon: S = !0, disableShine: T, applicationId: A, giftMessage: N, shinyButtonClassName: C, showGradient: P = !1, confirmationFooter: R, paymentModalBanner: w, isGift: D, color: L, iconColor: x = 'currentColor', useExpressiveButton: k, giftIconClassName: M } = e,
+    var { subscriptionTier: t, onClick: n, size: i, className: h, textOptions: g, iconClassName: y, postSuccessGuild: O, onSubscribeModalClose: v, premiumModalAnalyticsLocation: I, showIcon: S = !0, disableShine: T, applicationId: A, giftMessage: N, shinyButtonClassName: C, showGradient: R = !1, confirmationFooter: P, paymentModalBanner: w, isGift: D, color: L, iconColor: x = 'currentColor', useExpressiveButton: k, giftIconClassName: M } = e,
         j = b(e, ['subscriptionTier', 'onClick', 'size', 'className', 'textOptions', 'iconClassName', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'showIcon', 'disableShine', 'applicationId', 'giftMessage', 'shinyButtonClassName', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'isGift', 'color', 'iconColor', 'useExpressiveButton', 'giftIconClassName']);
     let U = (0, o.e7)([c.Z], () => c.Z.isFocused()),
         G = (0, d.Z)({
@@ -100,7 +100,7 @@ let O = function (e) {
             onSubscribeModalClose: v,
             premiumModalAnalyticsLocation: I,
             applicationId: A,
-            confirmationFooter: R,
+            confirmationFooter: P,
             paymentModalBanner: w,
             isGift: D,
             giftMessage: N
@@ -182,8 +182,8 @@ let O = function (e) {
                                     className: C,
                                     wrapperClassName: a()(
                                         {
-                                            [p.tier2Gradient]: P && t === f.Si.TIER_2,
-                                            [p.tier1Gradient]: P && t === f.Si.TIER_1
+                                            [p.tier2Gradient]: R && t === f.Si.TIER_2,
+                                            [p.tier1Gradient]: R && t === f.Si.TIER_1
                                         },
                                         h
                                     ),

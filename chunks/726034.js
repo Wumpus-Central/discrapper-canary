@@ -38,7 +38,7 @@ function C(e) {
         }
     );
 }
-function P(e) {
+function R(e) {
     let { markAsDismissed: t } = e;
     return (0, r.jsx)(l.zxk, {
         className: N.closeButton,
@@ -53,7 +53,7 @@ function P(e) {
         })
     });
 }
-function R() {
+function P() {
     return (0, r.jsxs)('div', {
         className: N.headerContainer,
         children: [
@@ -70,7 +70,7 @@ function R() {
                     colorClass: N.nitroIconWithHover
                 })
             }),
-            (0, r.jsx)(P, {})
+            (0, r.jsx)(R, {})
         ]
     });
 }
@@ -81,7 +81,7 @@ function w(e) {
         children: [
             (0, r.jsxs)('div', {
                 className: N.badgeAndCloseRow,
-                children: [(0, r.jsx)(l.lBU, { text: A.intl.string(A.t.oW0eUV) }), (0, r.jsx)(P, { markAsDismissed: t })]
+                children: [(0, r.jsx)(l.lBU, { text: A.intl.string(A.t.oW0eUV) }), (0, r.jsx)(R, { markAsDismissed: t })]
             }),
             (0, r.jsxs)('div', {
                 className: N.coachmarkHeaderTextContainer,
@@ -266,7 +266,7 @@ function G(e) {
         { colors: f, chassisMixAmount: _, gradientAngle: p, setColors: m, setChassisMixAmount: E, setGradientAngle: v } = (0, g.I)(),
         [S, T] = i.useState(null != (t = f[0]) ? t : '#4394D4'),
         C = (0, s.e7)([h.Z], () => h.Z.theme),
-        P = () => {
+        R = () => {
             (0, c.ZI)({
                 theme: C,
                 customUserThemeSettings: {
@@ -290,7 +290,7 @@ function G(e) {
                       (0, r.jsxs)(l.Ttm, {
                           className: N.editorBody,
                           children: [
-                              o ? (0, r.jsx)(w, { markAsDismissed: a }) : (0, r.jsx)(R, {}),
+                              o ? (0, r.jsx)(w, { markAsDismissed: a }) : (0, r.jsx)(P, {}),
                               (0, r.jsx)(O.o, {}),
                               (0, r.jsx)(y.U, {
                                   onChange: (e) => {
@@ -323,11 +323,11 @@ function G(e) {
                       }),
                       o
                           ? (0, r.jsx)(j, {
-                                onSaveTheme: P,
+                                onSaveTheme: R,
                                 canApply: x
                             })
                           : (0, r.jsx)(U, {
-                                onSaveTheme: P,
+                                onSaveTheme: R,
                                 canApply: x,
                                 metadata: n
                             })

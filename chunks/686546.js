@@ -440,7 +440,7 @@ function C(e) {
         ]
     });
 }
-function P(e, t) {
+function R(e, t) {
     let n = N((0, s.UC)(t));
     return (0, r.jsx)('mask', {
         id: e,
@@ -449,7 +449,7 @@ function P(e, t) {
         children: C(n)
     });
 }
-function R(e, t) {
+function P(e, t) {
     let n = (0, s.UC)(t),
         i = N(n),
         a = i.totalSize,
@@ -912,7 +912,7 @@ function q(e) {
         ]
     });
 }
-function Q(e) {
+function X(e) {
     return (0, r.jsxs)('mask', {
         id: e,
         maskContentUnits: 'objectBoundingBox',
@@ -932,7 +932,7 @@ function Q(e) {
         ]
     });
 }
-function X(e) {
+function Q(e) {
     let t = 24;
     return (0, r.jsxs)('mask', {
         id: e,
@@ -1215,32 +1215,32 @@ let es = eo,
                     B('svg-mask-avatar-decoration-status-mobile-120', s.EF.SIZE_120),
                     j('svg-mask-avatar-status-typing-120', s.EF.SIZE_120),
                     U('svg-mask-avatar-decoration-status-typing-120', s.EF.SIZE_120),
-                    P('svg-mask-diagonal-facepile-16', s.EF.SIZE_16),
-                    R('svg-mask-diagonal-facepile-status-16', s.EF.SIZE_16),
+                    R('svg-mask-diagonal-facepile-16', s.EF.SIZE_16),
+                    P('svg-mask-diagonal-facepile-status-16', s.EF.SIZE_16),
                     w('svg-mask-diagonal-facepile-typing-16', s.EF.SIZE_16),
-                    P('svg-mask-diagonal-facepile-20', s.EF.SIZE_20),
-                    R('svg-mask-diagonal-facepile-status-20', s.EF.SIZE_20),
+                    R('svg-mask-diagonal-facepile-20', s.EF.SIZE_20),
+                    P('svg-mask-diagonal-facepile-status-20', s.EF.SIZE_20),
                     w('svg-mask-diagonal-facepile-typing-20', s.EF.SIZE_20),
-                    P('svg-mask-diagonal-facepile-24', s.EF.SIZE_24),
-                    R('svg-mask-diagonal-facepile-status-24', s.EF.SIZE_24),
+                    R('svg-mask-diagonal-facepile-24', s.EF.SIZE_24),
+                    P('svg-mask-diagonal-facepile-status-24', s.EF.SIZE_24),
                     w('svg-mask-diagonal-facepile-typing-24', s.EF.SIZE_24),
-                    P('svg-mask-diagonal-facepile-32', s.EF.SIZE_32),
-                    R('svg-mask-diagonal-facepile-status-32', s.EF.SIZE_32),
+                    R('svg-mask-diagonal-facepile-32', s.EF.SIZE_32),
+                    P('svg-mask-diagonal-facepile-status-32', s.EF.SIZE_32),
                     w('svg-mask-diagonal-facepile-typing-32', s.EF.SIZE_32),
-                    P('svg-mask-diagonal-facepile-40', s.EF.SIZE_40),
-                    R('svg-mask-diagonal-facepile-status-40', s.EF.SIZE_40),
+                    R('svg-mask-diagonal-facepile-40', s.EF.SIZE_40),
+                    P('svg-mask-diagonal-facepile-status-40', s.EF.SIZE_40),
                     w('svg-mask-diagonal-facepile-typing-40', s.EF.SIZE_40),
-                    P('svg-mask-diagonal-facepile-48', s.EF.SIZE_48),
-                    R('svg-mask-diagonal-facepile-status-48', s.EF.SIZE_48),
+                    R('svg-mask-diagonal-facepile-48', s.EF.SIZE_48),
+                    P('svg-mask-diagonal-facepile-status-48', s.EF.SIZE_48),
                     w('svg-mask-diagonal-facepile-typing-48', s.EF.SIZE_48),
-                    P('svg-mask-diagonal-facepile-56', s.EF.SIZE_56),
-                    R('svg-mask-diagonal-facepile-status-56', s.EF.SIZE_56),
+                    R('svg-mask-diagonal-facepile-56', s.EF.SIZE_56),
+                    P('svg-mask-diagonal-facepile-status-56', s.EF.SIZE_56),
                     w('svg-mask-diagonal-facepile-typing-56', s.EF.SIZE_56),
-                    P('svg-mask-diagonal-facepile-80', s.EF.SIZE_80),
-                    R('svg-mask-diagonal-facepile-status-80', s.EF.SIZE_80),
+                    R('svg-mask-diagonal-facepile-80', s.EF.SIZE_80),
+                    P('svg-mask-diagonal-facepile-status-80', s.EF.SIZE_80),
                     w('svg-mask-diagonal-facepile-typing-80', s.EF.SIZE_80),
-                    P('svg-mask-diagonal-facepile-120', s.EF.SIZE_120),
-                    R('svg-mask-diagonal-facepile-status-120', s.EF.SIZE_120),
+                    R('svg-mask-diagonal-facepile-120', s.EF.SIZE_120),
+                    P('svg-mask-diagonal-facepile-status-120', s.EF.SIZE_120),
                     w('svg-mask-diagonal-facepile-typing-120', s.EF.SIZE_120),
                     F('svg-mask-status-online-mobile'),
                     x('svg-mask-status-online'),
@@ -1255,8 +1255,8 @@ let es = eo,
                     O('svg-mask-avatar-call-icon-32', s.EF.SIZE_32, 0.5),
                     z('svg-mask-sticker-rounded-rect'),
                     q('svg-mask-chat-input-button-notification'),
-                    Q('svg-mask-sticker-shop-notification'),
-                    X('svg-mask-autocomplete-emoji-upsell-emoji'),
+                    X('svg-mask-sticker-shop-notification'),
+                    Q('svg-mask-autocomplete-emoji-upsell-emoji'),
                     J('svg-mask-event-ticket'),
                     $('svg-mask-guild-icon-with-channel-type'),
                     ee('svg-mask-content-inventory-card-face-pile-avatar'),

@@ -35,8 +35,8 @@ var r = n(392711),
     A = n(70956),
     N = n(700785),
     C = n(546416),
-    P = n(981631),
-    R = n(176505);
+    R = n(981631),
+    P = n(176505);
 function w(e, t, n) {
     return (
         t in e
@@ -92,7 +92,7 @@ function x(e) {
         guild_num_roles: L(r),
         guild_member_num_roles: null != a ? a.roles.length : 0,
         guild_member_perms: String(null != (t = m.Z.getGuildPermissions(n)) ? t : N.Hn),
-        guild_is_vip: n.hasFeature(P.oNc.VIP_REGIONS),
+        guild_is_vip: n.hasFeature(R.oNc.VIP_REGIONS),
         is_member: null != a,
         num_voice_channels_active: L(u)
     };
@@ -117,7 +117,7 @@ function j(e) {
         let t = (e) => {
             if (null == e) return !1;
             let t = e.permissionOverwrites[r];
-            return null != t && a.e$(t.deny, P.Plq.VIEW_CHANNEL);
+            return null != t && a.e$(t.deny, R.Plq.VIEW_CHANNEL);
         };
         n = t(l.Ec.has(e.type) && null != e.parent_id ? u.Z.getChannel(e.parent_id) : e);
     }
@@ -154,15 +154,15 @@ function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (T.default.isThrottled(e)) return;
-    let r = !('location' in t) || t.location !== P.Sbl.GUILD_CREATE_INVITE_SUGGESTION,
+    let r = !('location' in t) || t.location !== R.Sbl.GUILD_CREATE_INVITE_SUGGESTION,
         i = 'guild_id' in t ? t.guild_id : r ? O.Z.getGuildId() : null,
         a = 'channel_id' in t ? t.channel_id : r ? y.Z.getChannelId(i) : null,
         o = u.Z.getChannel(a),
-        s = D({}, t, x(G(o, i)), null != i && null != a && (0, R.AB)(a) ? k(i, a) : j(o));
+        s = D({}, t, x(G(o, i)), null != i && null != a && (0, P.AB)(a) ? k(i, a) : j(o));
     T.default.track(e, s, { flush: n });
 }
 function F(e) {
-    if ((0, R.AB)(e)) return { channel_static_route: e };
+    if ((0, P.AB)(e)) return { channel_static_route: e };
     let t = u.Z.getChannel(e);
     if (null == t) return { channel_id: e };
     let n = p.Z.getGuild(t.guild_id);
@@ -195,7 +195,7 @@ function F(e) {
         parent_id: t.parent_id,
         parent_channel_type: t.parentChannelThreadType,
         has_pending_member_action: (0, o.P)(t.guild_id, e),
-        can_send_message: m.Z.can(P.Plq.SEND_MESSAGES, t),
+        can_send_message: m.Z.can(R.Plq.SEND_MESSAGES, t),
         is_app_dm: !1
     };
 }
@@ -219,7 +219,7 @@ function Z(e, t) {
     let n = { custom_status_count: 0 };
     return (
         i()(S.Z.getVoiceStates(e)).forEach((e) => {
-            e.channelId === t && null != g.Z.findActivity(e.userId, (e) => e.type === P.IIU.CUSTOM_STATUS) && n.custom_status_count++;
+            e.channelId === t && null != g.Z.findActivity(e.userId, (e) => e.type === R.IIU.CUSTOM_STATUS) && n.custom_status_count++;
         }),
         n
     );

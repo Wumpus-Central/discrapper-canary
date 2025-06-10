@@ -97,8 +97,8 @@ class S extends (r = a.Component) {
     }
     render() {
         var e, t;
-        let { disabled: n, value: r, placeholder: a, autoFocus: o, minLength: l, maxLength: u, allowOverflow: f, spellCheck: E, resizeable: b, className: v, id: I, rows: S, flex: T, autosize: A, required: N, onInvalid: C, inputRef: P } = this.props,
-            R = A ? _.l : 'textarea',
+        let { disabled: n, value: r, placeholder: a, autoFocus: o, minLength: l, maxLength: u, allowOverflow: f, spellCheck: E, resizeable: b, className: v, id: I, rows: S, flex: T, autosize: A, required: N, onInvalid: C, inputRef: R } = this.props,
+            P = A ? _.l : 'textarea',
             w = this.hasError(),
             D = null != (t = this.props['aria-labelledby']) ? t : null == (e = this.context) ? void 0 : e.titleId,
             L = this.getAriaDescribedBy();
@@ -109,7 +109,7 @@ class S extends (r = a.Component) {
                     className: s()(h.inputMaxLength, { [h.flex]: T }),
                     children: [
                         (0, i.jsx)(c.t, {
-                            children: (0, i.jsx)(R, {
+                            children: (0, i.jsx)(P, {
                                 type: 'text',
                                 className: s()(m.inputDefault, h.textArea, g.scrollbarDefault, v, {
                                     [m.error]: w,
@@ -135,7 +135,7 @@ class S extends (r = a.Component) {
                                 onKeyDown: this.onKeyDown,
                                 onInvalid: C,
                                 rows: S,
-                                ref: P
+                                ref: R
                             })
                         }),
                         null != l &&

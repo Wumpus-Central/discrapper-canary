@@ -27,12 +27,12 @@ function I(e) {
         { selectedSkuId: I } = (0, p.JL)(),
         [S, T] = i.useState(n),
         [A, N] = i.useState(),
-        [C, P] = i.useState(!1),
-        R = (0, _.pO)(S),
+        [C, R] = i.useState(!1),
+        P = (0, _.pO)(S),
         w = (0, l.TX)(),
         { enabled: D } = c.O.useExperiment({ location: 'gift card' }),
         L = b;
-    R && ((L = w ? m.Cj.SEASONAL_STANDARD_BOX : null != h ? h : E), D && (L = m.Cj.NITROWEEN_STANDARD));
+    P && ((L = w ? m.Cj.SEASONAL_STANDARD_BOX : null != h ? h : E), D && (L = m.Cj.NITROWEEN_STANDARD));
     let [x, k] = i.useState(L),
         M = (0, d.iE)(),
         [j, U] = i.useState(),
@@ -42,7 +42,7 @@ function I(e) {
         Y = (0, _.E5)(I, t),
         [W, K] = i.useState(!1),
         [z, q] = i.useState(!1),
-        [Q, X] = i.useState(),
+        [X, Q] = i.useState(),
         J = i.useCallback(
             (e) => {
                 let { onSubscriptionConfirmation: t } = e;
@@ -53,11 +53,11 @@ function I(e) {
                             q(!1), null == t || t(), K(!0);
                         })
                         .catch((e) => {
-                            q(!1), X(e), K(!0);
+                            q(!1), Q(e), K(!0);
                         })
                 );
             },
-            [S, Y, q, K, X]
+            [S, Y, q, K, Q]
         ),
         $ = (0, u.x8)(),
         ee = (0, a.Wu)([o.Z], () => o.Z.recommendedGiftSkuIds);
@@ -71,7 +71,7 @@ function I(e) {
             giftRecipientError: A,
             setGiftRecipientError: N,
             validatingGiftRecipient: C,
-            setValidatingGiftRecipient: P,
+            setValidatingGiftRecipient: R,
             soundEffect: F,
             setSoundEffect: V,
             emojiConfetti: Z,
@@ -83,7 +83,7 @@ function I(e) {
             sendGiftMessage: J,
             hasSentMessage: W,
             isSendingMessage: z,
-            giftMessageError: Q,
+            giftMessageError: X,
             alreadyHasHalloweenDeco: $,
             recommendedGiftSkuIds: ee,
             giftingOrigin: O,

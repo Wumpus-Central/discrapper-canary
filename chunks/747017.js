@@ -21,7 +21,7 @@ var r = n(255367),
     v = n(981631),
     I = n(843280);
 function S(e) {
-    let { user: t, activities: n, applicationStream: a, voiceChannel: S, textClassName: T, iconClassName: A, textSize: N = 'xs', animateEmoji: C = !0, hasQuest: P = !1, hideEmoji: R = !1, hideTooltip: w = !1 } = e;
+    let { user: t, activities: n, applicationStream: a, voiceChannel: S, textClassName: T, iconClassName: A, textSize: N = 'xs', animateEmoji: C = !0, hasQuest: R = !1, hideEmoji: P = !1, hideTooltip: w = !1 } = e;
     (0, u.Z)(null == t ? void 0 : t.id);
     let D = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
         L = (0, d.Z)({ location: 'ActivityStatus' }),
@@ -97,7 +97,7 @@ function S(e) {
                             children: ''.concat(i, ': ')
                         }),
                     null != e &&
-                        !R &&
+                        !P &&
                         (0, r.jsx)(h.Z, {
                             emoji: e,
                             animate: C,
@@ -127,7 +127,7 @@ function S(e) {
                 children: O.l
             }),
             U(),
-            P && (0, r.jsx)(m.Z, {})
+            R && (0, r.jsx)(m.Z, {})
         ]
     });
 }

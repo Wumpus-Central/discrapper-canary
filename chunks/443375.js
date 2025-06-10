@@ -25,8 +25,8 @@ var r = n(255367),
     A = n(287954),
     N = n(660579),
     C = n(652853),
-    P = n(64621),
-    R = n(979038),
+    R = n(64621),
+    P = n(979038),
     w = n(448980),
     D = n(336383),
     L = n(194811),
@@ -71,7 +71,7 @@ function Y(e) {
 }
 function W(e) {
     var t;
-    let { user: n, currentUser: a, activity: H, application: W, voiceGuild: K, voiceChannel: z, profileGuildId: q, className: Q, onClose: X } = e,
+    let { user: n, currentUser: a, activity: H, application: W, voiceGuild: K, voiceChannel: z, profileGuildId: q, className: X, onClose: Q } = e,
         J = (0, g.Dt)(),
         $ = (0, g.Dt)(),
         ee = i.useRef(null),
@@ -103,7 +103,7 @@ function W(e) {
             activity: H,
             application: W,
             entry: ea,
-            onClose: X
+            onClose: Q
         }),
         e_ = () => {
             let e = (0, l.Z)(H) ? 'crunchyroll' : 'default',
@@ -163,7 +163,7 @@ function W(e) {
                     variant: 'text-xs/normal',
                     text: V.intl.formatToPlainString(V.t['hq/Qzc'], { guildName: K.name }),
                     onClick: () => {
-                        (0, E.X)(K.id), eo({ action: 'OPEN_VOICE_GUILD' }), null == X || X();
+                        (0, E.X)(K.id), eo({ action: 'OPEN_VOICE_GUILD' }), null == Q || Q();
                     }
                 });
             if ((0, u.Z)(H))
@@ -276,18 +276,18 @@ function W(e) {
                       guild: K,
                       channel: z,
                       onAction: eo,
-                      onClose: X
+                      onClose: Q
                   }),
         eO = () =>
             n.id === a.id
                 ? null
                 : (0, r.jsx)('div', {
                       className: Z.actions,
-                      children: (0, r.jsx)(R.Z, {
+                      children: (0, r.jsx)(P.Z, {
                           activity: H,
                           user: n,
                           onAction: eo,
-                          onClose: X
+                          onClose: Q
                       })
                   });
     if (null === en) return null;
@@ -295,7 +295,7 @@ function W(e) {
         eI = er === G.n_.ACTIVITY && ei === ev;
     return (0, r.jsx)(_.Gt, {
         value: et,
-        children: (0, r.jsx)(P.Z, {
+        children: (0, r.jsx)(R.Z, {
             targetElementRef: ee,
             sourceType: G.n_.ACTIVITY,
             user: n,
@@ -322,15 +322,15 @@ function W(e) {
                                 user: n,
                                 activity: H,
                                 entry: ea,
-                                onClose: X,
+                                onClose: Q,
                                 children: e
                             }),
                         onShowToolbar: () => eo({ action: 'HOVER_ACTIVITY_CARD' }),
                         children: (0, r.jsxs)(D.Z, {
                             ref: es,
-                            className: o()(Q, { [Z.hoisted]: eI }),
+                            className: o()(X, { [Z.hoisted]: eI }),
                             onAction: eo,
-                            onClose: X,
+                            onClose: Q,
                             'aria-labelledby': ec ? ''.concat($, ' ').concat(J) : J,
                             children: [
                                 (0, r.jsx)(L.Z, Y({ textId: $ }, el)),

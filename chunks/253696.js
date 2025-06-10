@@ -66,13 +66,13 @@ function b(e) {
         A = (v || I) && n === p.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.numFrequentlyItems : a.ZP.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems,
         N = S.slice(0, A),
         C = null != O ? a.ZP.getGuildEmoji(O) : [],
-        P = Object.values(null != (t = a.ZP.getDisambiguatedEmojiContext(null == y ? void 0 : y.getGuildId()).groupedCustomEmojis) ? t : {}).reduce((e, t) => (e += t.length), 0),
-        { topEmojis: R, newlyAddedEmojis: w } = (0, f._)({
+        R = Object.values(null != (t = a.ZP.getDisambiguatedEmojiContext(null == y ? void 0 : y.getGuildId()).groupedCustomEmojis) ? t : {}).reduce((e, t) => (e += t.length), 0),
+        { topEmojis: P, newlyAddedEmojis: w } = (0, f._)({
             guildId: null == y ? void 0 : y.getGuildId(),
             pickerIntention: n
         }),
         { visibleTopEmojis: D, visibleNewlyAddedEmojis: L } = (0, d.J)({
-            topEmojis: R,
+            topEmojis: P,
             newlyAddedEmojis: w,
             rowSize: m
         });
@@ -92,7 +92,7 @@ function b(e) {
                 num_custom_expressions_frecent: N.filter(u.ZP.isCustomEmoji).length,
                 num_standard_expressions_frecent: N.filter((e) => null == e.id).length,
                 num_current_guild_expressions: C.length,
-                num_custom_expressions_total: P,
+                num_custom_expressions_total: R,
                 num_expressions_top_server: D.length,
                 num_animated_expressions_top_server: D.filter((e) => e.animated).length,
                 num_expressions_newly_added: L.length,

@@ -37,22 +37,22 @@ function C(e, t, n) {
         e
     );
 }
-let P = window.DiscordNative;
+let R = window.DiscordNative;
 I.Wb.dispatcher.getDispatchHandler = T.Z;
-let R = new c.Z('ConnectionStore'),
+let P = new c.Z('ConnectionStore'),
     w = 100,
     D = 0,
     L = null,
     x = !0,
     k = null;
 function M() {
-    return I.Wb.isClosed() ? (R.verbose('Socket is reconnecting because of starting new session'), I.Wb.connect()) : (R.verbose('Socket is not reconnecting during a new session because it is not closed'), !1);
+    return I.Wb.isClosed() ? (P.verbose('Socket is reconnecting because of starting new session'), I.Wb.connect()) : (P.verbose('Socket is not reconnecting during a new session because it is not closed'), !1);
 }
 function j(e) {
-    e.isSwitchingAccount && I.RR.handleAccountSwitch(), R.verbose('Closing socket because of logout'), I.Wb.close();
+    e.isSwitchingAccount && I.RR.handleAccountSwitch(), P.verbose('Closing socket because of logout'), I.Wb.close();
 }
 function U() {
-    return R.verbose('session refresh dispatched', { isEstablished: I.Wb.isSessionEstablished() }), !!I.Wb.isSessionEstablished() && (I.Wb.close(), I.Wb.connect());
+    return P.verbose('session refresh dispatched', { isEstablished: I.Wb.isSessionEstablished() }), !!I.Wb.isSessionEstablished() && (I.Wb.close(), I.Wb.connect());
 }
 async function G(e) {
     (D = Date.now()), (L = e.sessionId), I.RR.handleConnectionOpen();
@@ -60,7 +60,7 @@ async function G(e) {
         n = E.Z.getVoiceChannelId();
     if (null != n) {
         var r, i, a, o, s, c, u, d;
-        if ((null == (s = window) || null == (o = s.performance) || null == (a = o.getEntriesByType) || null == (i = a.call(o, 'navigation')) || null == (r = i[0]) ? void 0 : r.type) !== 'reload' && (null == (c = await (null == P || null == (d = P.processUtils) || null == (u = d.getLastCrash) ? void 0 : u.call(d))) ? void 0 : c.rendererCrashReason) == null && x) m.Z.setLastSessionVoiceChannelId(null != n ? n : null), l.default.selectVoiceChannel(null);
+        if ((null == (s = window) || null == (o = s.performance) || null == (a = o.getEntriesByType) || null == (i = a.call(o, 'navigation')) || null == (r = i[0]) ? void 0 : r.type) !== 'reload' && (null == (c = await (null == R || null == (d = R.processUtils) || null == (u = d.getLastCrash) ? void 0 : u.call(d))) ? void 0 : c.rendererCrashReason) == null && x) m.Z.setLastSessionVoiceChannelId(null != n ? n : null), l.default.selectVoiceChannel(null);
         else {
             let e = p.Z.getChannel(n);
             null != e &&
@@ -73,7 +73,7 @@ async function G(e) {
     I.GC.update(t, !0), (x = !1);
 }
 function B() {
-    R.verbose('connection closed dispatched'), (D = Date.now());
+    P.verbose('connection closed dispatched'), (D = Date.now());
 }
 function F(e) {
     return e.resetSocket && (I.Wb.close(), I.Wb.dispatcher.clear(), I.Wb.connect()), !1;
@@ -141,10 +141,10 @@ function q(e) {
     if (e.state !== A.hes.DISCONNECTED) return !1;
     e.willReconnect && (null != e.streamKey ? I.Wb.streamPing(e.streamKey) : I.Wb.voiceServerPing());
 }
-function Q(e) {
+function X(e) {
     return (0, O.isIOS)() ? (f.default.isAuthenticated() && (k === A.$7l.INACTIVE && e.state === A.$7l.BACKGROUND && null == I.GC.channelId ? I.Wb.close(!0) : k === A.$7l.BACKGROUND && e.state === A.$7l.ACTIVE && I.Wb.isClosed() && (S.Y(!1), I.Wb.connect())), (k = e.state)) : e.state === A.$7l.ACTIVE && (S.Y(!1), f.default.isAuthenticated() && I.Wb.resetBackoff('App state is active')), !1;
 }
-function X() {
+function Q() {
     return I.GC.update(), !1;
 }
 function J() {
@@ -249,7 +249,7 @@ function eh(e) {
 }
 class em extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(f.default, E.Z, p.Z, _.Z, d.Z), this.syncWith([h.Z], X), this.syncWith([b.Z], J);
+        this.waitFor(f.default, E.Z, p.Z, _.Z, d.Z), this.syncWith([h.Z], Q), this.syncWith([b.Z], J);
     }
     getSocket() {
         return I.Wb;
@@ -283,7 +283,7 @@ let eg = new em(s.Z, {
     GUILD_DELETE: W,
     CHANNEL_DELETE: z,
     CALL_DELETE: K,
-    APP_STATE_UPDATE: Q,
+    APP_STATE_UPDATE: X,
     GUILD_MEMBERS_REQUEST: $,
     GUILD_SEARCH_RECENT_MEMBERS: ee,
     GUILD_SUBSCRIPTIONS_FLUSH: et,

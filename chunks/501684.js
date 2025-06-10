@@ -1,11 +1,11 @@
 let r, n, _, o, i;
 a.d(e, {
     $A: () => T,
-    PR: () => N,
+    PR: () => p,
     YF: () => O,
     _4: () => h,
     _j: () => D,
-    cN: () => G,
+    cN: () => b,
     to: () => L
 });
 var c = a(622916),
@@ -16,20 +16,20 @@ var c = a(622916),
     I = a(231550),
     R = a(428983),
     d = a(622574),
-    f = a(288570);
-let A = {},
-    p = {};
-function N(t, e = !1) {
+    A = a(288570);
+let f = {},
+    N = {};
+function p(t, e = !1) {
     return S('cls', t, P, r, e);
 }
 function T(t, e = !1) {
-    return S('lcp', t, m, _, e);
+    return S('lcp', t, C, _, e);
 }
 function L(t) {
     return S('fid', t, y, n);
 }
 function h(t) {
-    return S('ttfb', t, C, o);
+    return S('ttfb', t, m, o);
 }
 function O(t) {
     return S('inp', t, v, i);
@@ -37,7 +37,7 @@ function O(t) {
 function D(t, e) {
     return (
         U(t, e),
-        p[t] ||
+        N[t] ||
             ((function (t) {
                 let e = {};
                 'event' === t && (e.durationThreshold = 0),
@@ -49,12 +49,12 @@ function D(t, e) {
                         e
                     );
             })(t),
-            (p[t] = !0)),
-        b(t, e)
+            (N[t] = !0)),
+        G(t, e)
     );
 }
 function g(t, e) {
-    let a = A[t];
+    let a = f[t];
     if (a && a.length)
         for (let r of a)
             try {
@@ -83,7 +83,7 @@ function y() {
         g('fid', { metric: t }), (n = t);
     });
 }
-function m() {
+function C() {
     return (0, R.N)(
         (t) => {
             g('lcp', { metric: t }), (_ = t);
@@ -91,8 +91,8 @@ function m() {
         { reportAllChanges: !0 }
     );
 }
-function C() {
-    return (0, f.m)((t) => {
+function m() {
+    return (0, A.m)((t) => {
         g('ttfb', { metric: t }), (o = t);
     });
 }
@@ -103,20 +103,20 @@ function v() {
 }
 function S(t, e, a, r, n = !1) {
     let _;
-    return U(t, e), p[t] || ((_ = a()), (p[t] = !0)), r && e({ metric: r }), b(t, e, n ? _ : void 0);
+    return U(t, e), N[t] || ((_ = a()), (N[t] = !0)), r && e({ metric: r }), G(t, e, n ? _ : void 0);
 }
 function U(t, e) {
-    (A[t] = A[t] || []), A[t].push(e);
+    (f[t] = f[t] || []), f[t].push(e);
 }
-function b(t, e, a) {
+function G(t, e, a) {
     return () => {
         a && a();
-        let r = A[t];
+        let r = f[t];
         if (!r) return;
         let n = r.indexOf(e);
         -1 !== n && r.splice(n, 1);
     };
 }
-function G(t) {
+function b(t) {
     return 'duration' in t;
 }

@@ -34,20 +34,20 @@ function T(e) {
             location_stack: N
         });
     }, [N]);
-    let P = (0, f.N)(),
-        R = (0, d.Ng)(),
-        w = null != P || null != R,
-        D = (null == P || null == (t = P.subscription_trial) ? void 0 : t.sku_id) === O.Si.TIER_0;
+    let R = (0, f.N)(),
+        P = (0, d.Ng)(),
+        w = null != R || null != P,
+        D = (null == R || null == (t = R.subscription_trial) ? void 0 : t.sku_id) === O.Si.TIER_0;
     return (0, r.jsxs)('div', {
         className: o()(I.emptyState, T, { [I.unifyTrialUpsell]: w }),
         children: [
             w
                 ? (0, r.jsx)(_.ZP, {
-                      discountOffer: R,
-                      trialOffer: P,
+                      discountOffer: P,
+                      trialOffer: R,
                       onClose: A,
                       type: O.cd.EMPTY_STICKER_PICKER_UPSELL,
-                      subscriptionTier: null != (a = null == P || null == (n = P.subscription_trial) ? void 0 : n.sku_id) ? a : O.Si.TIER_2,
+                      subscriptionTier: null != (a = null == R || null == (n = R.subscription_trial) ? void 0 : n.sku_id) ? a : O.Si.TIER_2,
                       children: v.intl.string(v.t.FnNud3)
                   })
                 : (0, r.jsxs)(r.Fragment, {

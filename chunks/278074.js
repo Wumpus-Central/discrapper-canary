@@ -1,6 +1,6 @@
 n.d(t, {
     EQ: () => $,
-    P: () => X
+    P: () => Q
 });
 let r = Symbol.for('@ts-pattern/matcher'),
     i = Symbol.for('@ts-pattern/isVariadic'),
@@ -217,8 +217,8 @@ let S = f(
         }),
     N = A(b(v)),
     C = (e, t) => b((n) => O(n) && e <= n && t >= n),
-    P = (e) => b((t) => O(t) && t < e),
-    R = (e) => b((t) => O(t) && t > e),
+    R = (e) => b((t) => O(t) && t < e),
+    P = (e) => b((t) => O(t) && t > e),
     w = (e) => b((t) => O(t) && t <= e),
     D = (e) => b((t) => O(t) && t >= e),
     L = () => b((e) => O(e) && Number.isInteger(e)),
@@ -228,8 +228,8 @@ let S = f(
     j = (e) =>
         Object.assign(f(e), {
             between: (t, n) => j(g(e, C(t, n))),
-            lt: (t) => j(g(e, P(t))),
-            gt: (t) => j(g(e, R(t))),
+            lt: (t) => j(g(e, R(t))),
+            gt: (t) => j(g(e, P(t))),
             lte: (t) => j(g(e, w(t))),
             gte: (t) => j(g(e, D(t))),
             int: () => j(g(e, L())),
@@ -266,12 +266,12 @@ let S = f(
             return 'symbol' == typeof e;
         })
     ),
-    Q = f(
+    X = f(
         b(function (e) {
             return null == e;
         })
     );
-var X = {
+var Q = {
     __proto__: null,
     matcher: r,
     optional: p,
@@ -380,8 +380,8 @@ var X = {
     _: T,
     string: N,
     between: C,
-    lt: P,
-    gt: R,
+    lt: R,
+    gt: P,
     lte: w,
     gte: D,
     int: L,
@@ -399,7 +399,7 @@ var X = {
     bigint: K,
     boolean: z,
     symbol: q,
-    nullish: Q,
+    nullish: X,
     instanceOf: function (e) {
         return f(
             b(

@@ -46,11 +46,11 @@ let I = !1,
 function C() {
     return d.Z.supports(b.AN.NATIVE_SCREENSHARE_PICKER);
 }
-function P() {
+function R() {
     return d.Z.getUseSystemScreensharePicker();
 }
-function R() {
-    let e = P() && (T > 0 || (I && 0 === S));
+function P() {
+    let e = R() && (T > 0 || (I && 0 === S));
     if (e !== A) {
         var t, n;
         (A = e), null == (n = d.Z.getMediaEngine()) || null == (t = n.setNativeDesktopVideoSourcePickerActive) || t.call(n, A);
@@ -60,9 +60,9 @@ function w() {
     return (0, a.useEffect)(
         () => (
             S++,
-            R(),
+            P(),
             () => {
-                0 == --S && R();
+                0 == --S && P();
             }
         ),
         []
@@ -72,9 +72,9 @@ function D() {
     return (0, a.useEffect)(
         () => (
             T++,
-            R(),
+            P(),
             () => {
-                --T, R();
+                --T, P();
             }
         ),
         []
@@ -82,7 +82,7 @@ function D() {
 }
 function L() {
     let e = c.Z.getChannel(_.Z.getVoiceChannelId());
-    return (I = null != e && (0, h.Z)(d.Z) && (0, p.JL)(e, u.Z, f.Z, !1)), R(), !1;
+    return (I = null != e && (0, h.Z)(d.Z) && (0, p.JL)(e, u.Z, f.Z, !1)), P(), !1;
 }
 function x() {
     return null != r ? (0, g.Z)(r) : null;
@@ -106,7 +106,7 @@ class j extends (i = o.ZP.Store) {
         return C();
     }
     enabled() {
-        return P();
+        return R();
     }
     releasePickerStream() {
         (0, E.t)();

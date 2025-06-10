@@ -75,12 +75,12 @@ let A = function (e) {
     var t, n, i;
     let { hideCloseButton: d = !1, hideCloseOnFullScreen: E, onClose: b, upgradeToPremiumType: y, isEligibleForTrial: O = !1, showTrialBadge: A = !1, showDiscountBadge: N = !1 } = e,
         C = (0, o.apv)((0, s.ZP)()),
-        P = y === m.p9.TIER_2,
-        R = (0, u.Fv)(O),
+        R = y === m.p9.TIER_2,
+        P = (0, u.Fv)(O),
         w = (0, p.Ng)(),
         D = null == w || null == (t = w.discount) ? void 0 : t.amount,
-        L = P ? I : v,
-        x = P ? _.Z : f.Z,
+        L = R ? I : v,
+        x = R ? _.Z : f.Z,
         { step: k, breadcrumbs: M, startedPaymentFlowWithPaymentSourcesRef: j } = (0, l.JL)();
     if (null == M || 0 === M.length) return null;
     let U = M.flatMap((e) => {
@@ -102,14 +102,14 @@ let A = function (e) {
         })).find((e) => e.id === k),
         B = null != (i = null == G || null == (n = G.sectionHeaderText) ? void 0 : n.call(G)) ? i : null == G ? void 0 : G.label,
         F = null != B && null != k,
-        V = R && F && k === c.h8.REVIEW;
+        V = P && F && k === c.h8.REVIEW;
     return (0, r.jsxs)('div', {
         className: g.container,
         children: [
             (0, r.jsxs)('div', {
-                className: a()(g.headerContainer, P ? g.tier2Background : g.tier0Background, { [g.containerBottomPadding]: !F }),
+                className: a()(g.headerContainer, R ? g.tier2Background : g.tier0Background, { [g.containerBottomPadding]: !F }),
                 children: [
-                    (0, r.jsx)(T, { isTier2: P }),
+                    (0, r.jsx)(T, { isTier2: R }),
                     !d &&
                         (0, r.jsx)(o.olH, {
                             hideOnFullscreen: E,
@@ -132,12 +132,12 @@ let A = function (e) {
             }),
             (A || N) &&
                 (0, r.jsx)(h.Z, {
-                    isTier2: !!P,
+                    isTier2: !!R,
                     discountAmount: D
                 }),
             F &&
                 (0, r.jsx)(S, {
-                    isOneStepCheckout: R,
+                    isOneStepCheckout: P,
                     headerText: B,
                     step: k,
                     filteredBreadcrumbs: U

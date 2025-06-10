@@ -25,12 +25,12 @@ var i = n(120356),
     T = n(388032),
     A = n(997926);
 function N(e) {
-    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: o, pendingBanner: l, pendingAccentColor: m, pendingBio: g, pendingPronouns: T, pendingAvatar: N, pendingAvatarDecoration: P, pendingNickname: R, pendingGlobalName: w, pendingThemeColors: D, pendingProfileEffectId: L, pendingLegacyUsernameDisabled: x, avatarClassName: k, containerClassName: M, isTryItOutFlow: j = !1, disabledInputs: U = !1, hideCustomStatus: G = !1, hideBioSection: B = !1, hideMessageInput: F = !0, hideExampleButton: V = !1, pendingBadges: Z, shouldOpenBadgeTooltip: H, showNameplatePreview: Y = !1 } = e,
+    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: o, pendingBanner: l, pendingAccentColor: m, pendingBio: g, pendingPronouns: T, pendingAvatar: N, pendingAvatarDecoration: R, pendingNickname: P, pendingGlobalName: w, pendingThemeColors: D, pendingProfileEffectId: L, pendingLegacyUsernameDisabled: x, avatarClassName: k, containerClassName: M, isTryItOutFlow: j = !1, disabledInputs: U = !1, hideCustomStatus: G = !1, hideBioSection: B = !1, hideMessageInput: F = !0, hideExampleButton: V = !1, pendingBadges: Z, shouldOpenBadgeTooltip: H, showNameplatePreview: Y = !1 } = e,
         W = (0, d.ZP)(t.id, null == n ? void 0 : n.id),
         { avatarSrc: K, avatarDecorationSrc: z } = (0, _.Z)({
             user: t,
             guildId: null == n ? void 0 : n.id,
-            avatarDecorationOverride: P,
+            avatarDecorationOverride: R,
             avatarOverride: N,
             size: s.EFr.SIZE_80,
             showPending: !0
@@ -39,7 +39,7 @@ function N(e) {
             pendingProfileEffectId: L,
             displayProfile: W
         }),
-        { theme: Q, primaryColor: X } = (0, f.Z)({
+        { theme: X, primaryColor: Q } = (0, f.Z)({
             user: t,
             displayProfile: W,
             pendingThemeColors: D,
@@ -78,8 +78,8 @@ function N(e) {
                                 canUsePremiumCustomization: i,
                                 previewAvatar: K,
                                 previewAvatarDecoration: z,
-                                previewTheme: Q,
-                                previewPrimaryColor: X,
+                                previewTheme: X,
+                                previewPrimaryColor: Q,
                                 className: k,
                                 disabledInputs: U,
                                 isTryItOutFlow: j,
@@ -99,7 +99,7 @@ function N(e) {
                         displayProfile: W,
                         guild: n,
                         pendingAvatar: N,
-                        pendingNickname: R,
+                        pendingNickname: P,
                         pendingGlobalName: w,
                         pendingBio: g,
                         pendingPronouns: T,

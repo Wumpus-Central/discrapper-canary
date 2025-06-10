@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => R });
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -70,19 +70,19 @@ function C(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function P(e) {
+function R(e) {
     var { user: t, closePopout: n } = e,
         T = N(e, ['user', 'closePopout']);
     let C = i.useRef(null),
-        P = (0, a.e7)([y.Z], () => {
+        R = (0, a.e7)([y.Z], () => {
             var e;
             return null == (e = y.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
-        R = (0, a.e7)([h.Z], () => h.Z.getChannelId()),
-        w = (0, a.e7)([p.Z], () => p.Z.getChannel(R)),
+        P = (0, a.e7)([h.Z], () => h.Z.getChannelId()),
+        w = (0, a.e7)([p.Z], () => p.Z.getChannel(P)),
         D = (0, a.e7)([p.Z], () => {
             var e;
-            return null == (e = p.Z.getChannel(R)) ? void 0 : e.guild_id;
+            return null == (e = p.Z.getChannel(P)) ? void 0 : e.guild_id;
         }),
         L = i.useMemo(
             () =>
@@ -97,17 +97,17 @@ function P(e) {
         x = (0, s.Z)({ context: L }),
         k = t.id,
         M = i.useCallback(() => {
-            if (null != P)
+            if (null != R)
                 if (x) {
                     let e = h.Z.getCurrentlySelectedChannelId(),
                         t = p.Z.getChannel(e),
                         r = null != _.ZP.getSidebarState(e) || (null == t ? void 0 : t.isGuildVocal()) ? f.Ie.SIDEBAR : f.Ie.NORMAL;
-                    l.__(c._b.TEXT, r, { applicationId: P.id }), (0, o.Mr3)((0, O.z)(k, D)), null == n || n(), m.default.track(I.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: P.id });
-                } else (0, b.L)(A({ applicationId: P.id }, P));
-        }, [x, P, k, D, n]),
+                    l.__(c._b.TEXT, r, { applicationId: R.id }), (0, o.Mr3)((0, O.z)(k, D)), null == n || n(), m.default.track(I.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: R.id });
+                } else (0, b.L)(A({ applicationId: R.id }, R));
+        }, [x, R, k, D, n]),
         j = x ? S.intl.string(S.t['Cia+Aw']) : S.intl.string(S.t.NgXl3N);
-    if (null == P || !(0, d.Eb)(P)) return null;
-    let { customInstallUrl: U } = P,
+    if (null == R || !(0, d.Eb)(R)) return null;
+    let { customInstallUrl: U } = R,
         G = null == U || E.Z.isDiscordUrl(U) ? o.qJs : o.Gr1,
         B = x ? void 0 : G;
     return g.wS
@@ -124,7 +124,7 @@ function P(e) {
                           children: (0, r.jsx)(o.sNh, {
                               id: 'copy',
                               label: S.intl.string(S.t.XWDiho),
-                              action: () => (0, g.JG)((0, u.J)(P))
+                              action: () => (0, g.JG)((0, u.J)(R))
                           })
                       })
                   });

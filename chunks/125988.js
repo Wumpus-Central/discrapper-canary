@@ -26,7 +26,7 @@ let f = (e) => {
         A = h && void 0 !== T && void 0 !== v && v === (null == n ? void 0 : n.id),
         N = null != f && null === T,
         C = (0, u.Z)(A ? (N ? (null == I ? void 0 : I.avatarDecoration) : null != T ? T : S) : null != S ? S : null == I ? void 0 : I.avatarDecoration),
-        P = r.useMemo(
+        R = r.useMemo(
             () =>
                 (0, c.NZ)({
                     avatarDecoration: void 0 !== g ? g : C,
@@ -37,7 +37,7 @@ let f = (e) => {
         );
     return {
         avatarPlaceholderSrc: d,
-        avatarDecorationSrc: P,
+        avatarDecorationSrc: R,
         isAvatarDecorationAnimating: y,
         eventHandlers: {
             onMouseEnter: r.useCallback(() => b(!0), []),

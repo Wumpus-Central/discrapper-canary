@@ -15,8 +15,8 @@ var r = n(392711),
 function p() {
     let e = l.ZP.getCurrentEmbeddedActivity();
     if (null == e) return { participants: [] };
-    let t = (0, a.jS)(e.location),
-        n = (0, a.pY)(e.location);
+    let t = (0, a.j)(e.location),
+        n = (0, a.p)(e.location);
     return {
         participants: Array.from(e.userIds, (e) => {
             var r, i;

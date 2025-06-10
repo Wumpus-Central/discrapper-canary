@@ -52,10 +52,10 @@ function v(e) {
         { analyticsLocations: T, newestAnalyticsLocation: A } = (0, l.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
         N = c.J.useExperiment({ location: 'UserSettingsAuthedApps' }, { autoTrackExposure: !0 }).enabled,
         C = (0, a.e7)([g.Z], () => g.Z.getUserProfile(t.id)),
-        P = null == C ? void 0 : C.application,
-        R = (0, f.Z)({
+        R = null == C ? void 0 : C.application,
+        P = (0, f.Z)({
             user: t,
-            application: null != P ? P : void 0,
+            application: null != R ? R : void 0,
             guildId: n,
             onItemClick: () => {
                 S({
@@ -108,7 +108,7 @@ function v(e) {
                 })
         }),
         x = (0, d.Z)({
-            id: null == P ? void 0 : P.id,
+            id: null == R ? void 0 : R.id,
             label: b.intl.string(b.t['+NP/b2']),
             onSuccess: () =>
                 S({
@@ -118,11 +118,11 @@ function v(e) {
         }),
         k = [
             [y],
-            N ? [R] : [],
+            N ? [P] : [],
             [D, w, L],
             [
                 (0, u.Z)({
-                    application: P,
+                    application: R,
                     label: b.intl.string(b.t.WqhZsr),
                     onSuccess: () =>
                         S({

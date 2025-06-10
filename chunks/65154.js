@@ -6,13 +6,13 @@ n.d(t, {
     AS: () => Y,
     Av: () => m,
     Dg: () => z,
-    Er: () => R,
+    Er: () => P,
     Gs: () => C,
     H3: () => ee,
     JA: () => O,
     Jk: () => v,
     LD: () => D,
-    P8: () => P,
+    P8: () => R,
     QO: () => y,
     QP: () => l,
     Qx: () => d,
@@ -44,13 +44,13 @@ n.d(t, {
     pk: () => M,
     ru: () => x,
     u$: () => N,
-    uA: () => Q,
+    uA: () => X,
     ux: () => V,
     vA: () => r.vA,
     w5: () => h,
     y7: () => w,
     yf: () => G,
-    ym: () => X
+    ym: () => Q
 });
 var r = n(268146),
     i = (function (e) {
@@ -92,8 +92,8 @@ let d = 100,
     A = 5000,
     N = 15000,
     C = 30,
-    P = 20,
-    R = 12,
+    R = 20,
+    P = 12,
     w = 100,
     D = 50,
     L = 1280,
@@ -146,10 +146,10 @@ var H = (function (e) {
     q = (function (e) {
         return (e.AUDIO = 'audio'), (e.VIDEO = 'video'), (e.SCREEN = 'screen'), (e.TEST = 'test'), e;
     })({}),
-    Q = (function (e) {
+    X = (function (e) {
         return (e.FIXED = 'fixed'), (e.SOURCE = 'source'), e;
     })({}),
-    X = (function (e) {
+    Q = (function (e) {
         return (e.REMB = 'remb'), e;
     })({}),
     J = (function (e) {

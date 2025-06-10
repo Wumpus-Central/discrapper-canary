@@ -76,14 +76,14 @@ function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = P(e, t);
+        i = R(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function P(e, t) {
+function R(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -92,13 +92,13 @@ function P(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let R = 490,
+let P = 490,
     w = 490,
     D = 245,
     L = 200,
     x = 120,
     k = i.forwardRef(function (e, t) {
-        var n, a, S, A, P;
+        var n, a, S, A, R;
         let { channel: k, type: M, editorHeight: j, onVisibilityChange: U } = e,
             G = (0, h.Dt)(),
             B = (0, l.e7)(
@@ -124,7 +124,7 @@ let R = 490,
                 () => {
                     let e = d.ZP.getSelfEmbeddedActivityForChannel(k.id),
                         t = d.ZP.getActivityPanelMode();
-                    return (0, u.l5)(k) && null != e && (0, f.pY)(e.location) === k.id && t === v.Ez.PANEL;
+                    return (0, u.l5)(k) && null != e && (0, f.p)(e.location) === k.id && t === v.Ez.PANEL;
                 },
                 [k]
             ),
@@ -136,7 +136,7 @@ let R = 490,
             !V.isVisible || null == V.query || void 0 === K)
         )
             return null;
-        let Q =
+        let X =
             null !=
             (a = V.query.typeInfo.renderResults({
                 results: V.query.results,
@@ -150,20 +150,20 @@ let R = 490,
             }))
                 ? a
                 : null;
-        if (null == Q) return null;
-        let X = {
+        if (null == X) return null;
+        let Q = {
                 [I.autocompleteAttached]: null == K,
                 [I.autocompletePopout]: null != K,
                 [I.bottom]: null == K && 'bottom' === e.position,
                 [I.autocompleteTop]: z
             },
-            J = R;
+            J = P;
         null != K && (J = (null == (S = M.autocomplete) ? void 0 : S.small) ? L : (null == (A = V.query) ? void 0 : A.type) === b.eq.EMOJIS_AND_STICKERS ? w : D);
         let $ = Math.min(0.5 * window.innerHeight, j);
         J = Math.min(window.innerHeight - x - $, J);
         let ee = (0, r.jsx)(_.ZP, {
             id: G,
-            className: o()(I.autocomplete, X),
+            className: o()(I.autocomplete, Q),
             innerClassName: I.autocompleteInner,
             onMouseDown: (e) => e.preventDefault(),
             children: (0, r.jsx)(s.bG, {
@@ -190,7 +190,7 @@ let R = 490,
                                     style: { maxHeight: J },
                                     role: 'listbox',
                                     'aria-labelledby': (0, _.rp)(G),
-                                    children: Q
+                                    children: X
                                 }
                             )
                         );
@@ -204,7 +204,7 @@ let R = 490,
                       targetRef: e.targetRef,
                       overrideTargetRect: K,
                       positionKey: q,
-                      position: null != (P = e.position) ? P : 'top',
+                      position: null != (R = e.position) ? R : 'top',
                       align: 'left',
                       spacing: 8,
                       autoInvert: !0,

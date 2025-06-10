@@ -119,7 +119,7 @@ function y(e) {
                     analyticsLocations: S
                 })
         }),
-        P = (0, f.Z)({
+        R = (0, f.Z)({
             user: n,
             guildId: m,
             location: T,
@@ -131,12 +131,12 @@ function y(e) {
                     analyticsLocations: S
                 })
         }),
-        R = [
+        P = [
             [b, A],
             [
                 C,
                 N,
-                P,
+                R,
                 (0, f.T)({
                     user: n,
                     guildId: m,
@@ -162,7 +162,7 @@ function y(e) {
                 })
             ]
         ];
-    if (R.every((e) => e.every((e) => null == e))) return null;
+    if (P.every((e) => e.every((e) => null == e))) return null;
     let w = t === p.j8.BANNER ? p.oY : p.ef;
     return (0, r.jsx)(s.Gt, {
         value: S,
@@ -175,7 +175,7 @@ function y(e) {
                     onSelect: void 0,
                     onClose: t,
                     'aria-label': h.intl.string(h.t.AXIHpa),
-                    children: R.map((e, t) => (0, r.jsx)(a.kSQ, { children: e.map((e) => e) }, t))
+                    children: P.map((e, t) => (0, r.jsx)(a.kSQ, { children: e.map((e) => e) }, t))
                 });
             },
             children: (e) =>

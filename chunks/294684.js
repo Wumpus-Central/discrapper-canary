@@ -25,8 +25,8 @@ var r = n(98405),
     A = n(530575),
     N = n(533610),
     C = n(800054),
-    P = n(682564),
-    R = n(338045),
+    R = n(682564),
+    P = n(338045),
     w = n(751736),
     D = n(992914),
     L = w('iterator'),
@@ -46,8 +46,8 @@ var r = n(98405),
     K = o('String', 'fromCodePoint'),
     z = parseInt,
     q = l(''.charAt),
-    Q = l([].join),
-    X = l([].push),
+    X = l([].join),
+    Q = l([].push),
     J = l(''.replace),
     $ = l([].shift),
     ee = l([].splice),
@@ -110,7 +110,7 @@ var r = n(98405),
                             break;
                         }
                         if (c > 191 || c < 128) break;
-                        X(s, c), (r += 2), l++;
+                        Q(s, c), (r += 2), l++;
                     }
                     if (s.length !== o) {
                         n += ea;
@@ -153,15 +153,15 @@ var r = n(98405),
             var e = U(this),
                 t = e.target,
                 n = e.index++;
-            if (!t || n >= t.length) return (e.target = null), P(void 0, !0);
+            if (!t || n >= t.length) return (e.target = null), R(void 0, !0);
             var r = t[n];
             switch (e.kind) {
                 case 'keys':
-                    return P(r.key, !1);
+                    return R(r.key, !1);
                 case 'values':
-                    return P(r.value, !1);
+                    return R(r.value, !1);
             }
-            return P([r.key, r.value], !1);
+            return R([r.key, r.value], !1);
         },
         !0
     ),
@@ -186,7 +186,7 @@ em.prototype = {
         if (u)
             for (n = (t = N(e, u)).next; !(r = s(n, t)).done; ) {
                 if ((o = s((a = (i = N(v(r.value))).next), i)).done || (l = s(a, i)).done || !s(a, i).done) throw new H('Expected sequence with length 2');
-                X(c, {
+                Q(c, {
                     key: S(o.value),
                     value: S(l.value)
                 });
@@ -194,7 +194,7 @@ em.prototype = {
         else
             for (var d in e)
                 b(e, d) &&
-                    X(c, {
+                    Q(c, {
                         key: d,
                         value: S(e[d])
                     });
@@ -203,14 +203,14 @@ em.prototype = {
         if (e)
             for (var t, n, r = this.entries, i = et(e, '&'), a = 0; a < i.length; )
                 (t = i[a++]).length &&
-                    X(r, {
+                    Q(r, {
                         key: eu($((n = et(t, '=')))),
-                        value: eu(Q(n, '='))
+                        value: eu(X(n, '='))
                     });
     },
     serialize: function () {
-        for (var e, t = this.entries, n = [], r = 0; r < t.length; ) X(n, ep((e = t[r++]).key) + '=' + ep(e.value));
-        return Q(n, '&');
+        for (var e, t = this.entries, n = [], r = 0; r < t.length; ) Q(n, ep((e = t[r++]).key) + '=' + ep(e.value));
+        return X(n, '&');
     },
     update: function () {
         (this.entries.length = 0), this.parseQuery(this.url.query);
@@ -232,8 +232,8 @@ if (
         {
             append: function (e, t) {
                 var n = j(this);
-                R(arguments.length, 2),
-                    X(n.entries, {
+                P(arguments.length, 2),
+                    Q(n.entries, {
                         key: S(e),
                         value: S(t)
                     }),
@@ -241,7 +241,7 @@ if (
                     n.updateURL();
             },
             delete: function (e) {
-                for (var t = j(this), n = R(arguments.length, 1), r = t.entries, i = S(e), a = n < 2 ? void 0 : arguments[1], o = void 0 === a ? a : S(a), s = 0; s < r.length; ) {
+                for (var t = j(this), n = P(arguments.length, 1), r = t.entries, i = S(e), a = n < 2 ? void 0 : arguments[1], o = void 0 === a ? a : S(a), s = 0; s < r.length; ) {
                     var l = r[s];
                     if (l.key === i && (void 0 === o || l.value === o)) {
                         if ((ee(r, s, 1), void 0 !== o)) break;
@@ -251,18 +251,18 @@ if (
             },
             get: function (e) {
                 var t = j(this).entries;
-                R(arguments.length, 1);
+                P(arguments.length, 1);
                 for (var n = S(e), r = 0; r < t.length; r++) if (t[r].key === n) return t[r].value;
                 return null;
             },
             getAll: function (e) {
                 var t = j(this).entries;
-                R(arguments.length, 1);
-                for (var n = S(e), r = [], i = 0; i < t.length; i++) t[i].key === n && X(r, t[i].value);
+                P(arguments.length, 1);
+                for (var n = S(e), r = [], i = 0; i < t.length; i++) t[i].key === n && Q(r, t[i].value);
                 return r;
             },
             has: function (e) {
-                for (var t = j(this).entries, n = R(arguments.length, 1), r = S(e), i = n < 2 ? void 0 : arguments[1], a = void 0 === i ? i : S(i), o = 0; o < t.length; ) {
+                for (var t = j(this).entries, n = P(arguments.length, 1), r = S(e), i = n < 2 ? void 0 : arguments[1], a = void 0 === i ? i : S(i), o = 0; o < t.length; ) {
                     var s = t[o++];
                     if (s.key === r && (void 0 === a || s.value === a)) return !0;
                 }
@@ -271,10 +271,10 @@ if (
             set: function (e, t) {
                 var n,
                     r = j(this);
-                R(arguments.length, 1);
+                P(arguments.length, 1);
                 for (var i = r.entries, a = !1, o = S(e), s = S(t), l = 0; l < i.length; l++) (n = i[l]).key === o && (a ? ee(i, l--, 1) : ((a = !0), (n.value = s)));
                 a ||
-                    X(i, {
+                    Q(i, {
                         key: o,
                         value: s
                     }),

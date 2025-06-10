@@ -146,7 +146,7 @@ class I extends m.Z {
             b(this, 'handleActivityClose', (e) => {
                 let { applicationId: t, location: i, showFeedback: l } = e,
                     c = s.Z.getApplication(t),
-                    d = (0, o.pY)(i),
+                    d = (0, o.p)(i),
                     _ = f.Z.getChannel(d),
                     h = {
                         rtc_connection_id: p.Z.getRTCConnectionId(),

@@ -79,8 +79,8 @@ let m = 1500,
     A = Number.MAX_SAFE_INTEGER - 1,
     N = 0,
     C = 0,
-    P = 0,
     R = 0,
+    P = 0,
     w = null,
     D = 0,
     L = Number.MAX_SAFE_INTEGER,
@@ -88,7 +88,7 @@ let m = 1500,
     k = 0,
     M = null;
 function j() {
-    (N = 0), (C = 0), (P = 0), (D = 0), (L = Number.MAX_SAFE_INTEGER), (x = 0), (k = 0), (w = Date.now()), (R = T);
+    (N = 0), (C = 0), (R = 0), (D = 0), (L = Number.MAX_SAFE_INTEGER), (x = 0), (k = 0), (w = Date.now()), (P = T);
 }
 function U(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
@@ -127,7 +127,7 @@ let G = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
             (V = []), (D = U(D));
             let t = e.length;
             (L = Math.min(L, t)), (x = Math.max(x, t)), (k = U(k, t));
-            let n = Q(e);
+            let n = X(e);
             return (
                 n.then(
                     () => {
@@ -138,7 +138,7 @@ let G = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
                             (C = U(C));
                     },
                     (t) => {
-                        V.unshift(...e), (P = U(P));
+                        V.unshift(...e), (R = U(R));
                         let { message: n } = t.body || t;
                         console.warn('[AnalyticsTrackingStore] Track:', n);
                     }
@@ -146,7 +146,7 @@ let G = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
                 n
             );
         }
-        function Q(e) {
+        function X(e) {
             let t = Date.now(),
                 n = e.map((e) => h(_({}, e), { properties: h(_({}, e.properties), { client_send_timestamp: t }) }));
             return c.tn.post({
@@ -159,15 +159,15 @@ let G = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
                 rejectWithError: !1
             });
         }
-        function X() {
+        function Q() {
             let e = {
                 type: d.cN.CLIENT_TELEMETRY,
                 properties: {
                     client_track_timestamp: Date.now(),
                     client_heartbeat_session_id: r,
                     rpc_success_count: C,
-                    rpc_failure_count: P,
-                    first_seen_event_sequence_number: R,
+                    rpc_failure_count: R,
+                    first_seen_event_sequence_number: P,
                     last_seen_event_sequence_number: T,
                     telemetry_period_start_timestamp: w,
                     telemetry_period_end_timestamp: Date.now(),
@@ -178,7 +178,7 @@ let G = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
                     event_queue_batch_avg_size: D > 0 ? k / D : 0
                 }
             };
-            return j(), Q([e]);
+            return j(), X([e]);
         }
         function J() {
             if (null == M) return !1;
@@ -202,7 +202,7 @@ let G = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
                     type: 'timeout',
                     id: setTimeout(
                         () => {
-                            X(), e();
+                            Q(), e();
                         },
                         Math.max(O + (Math.floor(Math.random() * t * 2) - t), v)
                     )
@@ -212,7 +212,7 @@ let G = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
                 type: 'timeout',
                 id: setTimeout(
                     () => {
-                        X(), e();
+                        Q(), e();
                     },
                     Math.floor(Math.random() * (I - v) + v)
                 )
@@ -266,7 +266,7 @@ let G = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
                 null != y && this.waitFor(...y);
             }
             constructor(...e) {
-                super(...e), f(this, 'submitEventsImmediately', Q);
+                super(...e), f(this, 'submitEventsImmediately', X);
             }
         }
         return f(et, 'displayName', 'AnalyticsTrackingStore'), new et(n, o);

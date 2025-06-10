@@ -1,6 +1,6 @@
 n.d(t, {
     K: () => q,
-    Z: () => Q
+    Z: () => X
 }),
     n(361932),
     n(187205),
@@ -31,8 +31,8 @@ var r = n(255367),
     A = n(517334),
     N = n(344185),
     C = n(199902),
-    P = n(984933),
-    R = n(699516),
+    R = n(984933),
+    P = n(699516),
     w = n(9156),
     D = n(594174),
     L = n(938475),
@@ -92,10 +92,10 @@ function F(e, t) {
 function V(e) {
     let t = e.id,
         n = (0, c.Wu)(
-            [P.ZP, N.Z],
+            [R.ZP, N.Z],
             () => [
-                ...P.ZP.getChannels(t)
-                    [P.Zb].filter((e) => {
+                ...R.ZP.getChannels(t)
+                    [R.Zb].filter((e) => {
                         let { channel: t } = e;
                         return t.type === x.d4z.GUILD_VOICE;
                     })
@@ -110,7 +110,7 @@ function V(e) {
         r = (0, A.ZP)(t),
         a = i.useMemo(() => r.map((e) => e.id), [r]),
         o = (0, c.e7)([L.ZP], () => L.ZP.getVoiceStates(t), [t]),
-        s = (0, c.Wu)([R.Z], () => R.Z.getBlockedOrIgnoredIDs()),
+        s = (0, c.Wu)([P.Z], () => P.Z.getBlockedOrIgnoredIDs()),
         u = l().flatMap(n, (t) => {
             var n;
             if (t === e.afkChannelId) return [];
@@ -346,7 +346,7 @@ function q(e) {
         ]
     });
 }
-function Q(e) {
+function X(e) {
     let { guild: t, disabled: n = !1, 'aria-label': a = !1, children: o, includeActivity: s = !0 } = e,
         l = (0, h.Q3)('GuildTooltip');
     return (0, r.jsx)(u.ua7, {

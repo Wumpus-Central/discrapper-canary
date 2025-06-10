@@ -63,7 +63,7 @@ function C(e, t) {
     }
     return n;
 }
-function P(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,22 +74,22 @@ function P(e, t) {
         e
     );
 }
-let R = 250,
+let P = 250,
     w = 24;
 function D(e, t) {
     switch (t.type) {
         case 'MEASUREMENT_COMPLETE':
-            return P(N({}, e), {
+            return R(N({}, e), {
                 animationPhase: 'ready',
                 height: t.height
             });
         case 'START_EXPAND_ANIMATION':
-            return P(N({}, e), {
+            return R(N({}, e), {
                 animationPhase: 'animating',
                 height: t.height
             });
         case 'ANIMATION_COMPLETE':
-            return P(N({}, e), {
+            return R(N({}, e), {
                 animationPhase: 'done',
                 height: 'auto'
             });
@@ -103,7 +103,7 @@ let L = {
 };
 function x(e) {
     let { user: t, currentUser: n, displayProfile: a, guildId: p, onOpenUserProfileModal: A, onClose: C } = e,
-        { analyticsLocations: P } = (0, d.ZP)(),
+        { analyticsLocations: R } = (0, d.ZP)(),
         { trackUserProfileAction: x } = (0, h.KZ)(),
         { live: k, stream: M } = (0, m.Z)(t.id),
         { voiceChannel: j, voiceActivity: U } = (0, g.Z)({
@@ -123,8 +123,8 @@ function x(e) {
         W = i.useRef(null),
         K = i.useRef(null),
         z = i.useRef(null),
-        [q, Q] = i.useReducer(D, L),
-        { height: X, animationPhase: J } = q,
+        [q, X] = i.useReducer(D, L),
+        { height: Q, animationPhase: J } = q,
         $ = 'awaitingInput' !== J,
         ee = 'animating' === J || 'done' === J,
         et = [],
@@ -177,7 +177,7 @@ function x(e) {
                       onClick: () => {
                           x({
                               action: 'PRESS_VIEW_PROFILE',
-                              analyticsLocations: P
+                              analyticsLocations: R
                           }),
                               A({ section: v.oh.ACTIVITY });
                       },
@@ -192,29 +192,29 @@ function x(e) {
             if (null == Y.current || null == K.current) return;
             x({
                 action: 'PRESS_SHOW_MORE_ACTIVITY',
-                analyticsLocations: P
+                analyticsLocations: R
             });
             let e = Y.current.getBoundingClientRect().height,
                 t = K.current.getBoundingClientRect().height;
-            Q({
+            X({
                 type: 'MEASUREMENT_COMPLETE',
                 height: e
             }),
                 requestAnimationFrame(() => {
-                    Q({
+                    X({
                         type: 'START_EXPAND_ANIMATION',
                         height: e + t - w
                     }),
                         (z.current = setTimeout(() => {
                             var e;
-                            Q({
+                            X({
                                 type: 'ANIMATION_COMPLETE',
                                 height: 'auto'
                             }),
                                 null == (e = W.current) || e.focus();
-                        }, R));
+                        }, P));
                 });
-        }, [P, x]);
+        }, [R, x]);
     return ((0, c.zq)(() => {
         null != z.current && window.clearTimeout(z.current);
     }),
@@ -225,7 +225,7 @@ function x(e) {
                   (0, r.jsxs)('div', {
                       ref: Y,
                       className: T.activityContainer,
-                      style: { height: 'auto' !== X ? ''.concat(X, 'px') : X },
+                      style: { height: 'auto' !== Q ? ''.concat(Q, 'px') : Q },
                       children: [
                           (0, r.jsxs)('ul', {
                               ref: W,

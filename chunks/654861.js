@@ -157,10 +157,10 @@ var r = (function (e) {
     function C(e, t) {
         return -0.012 * e - 0.012 * t + 0.000015 * e * t > 0;
     }
-    function P(e, n, r) {
+    function R(e, n, r) {
         return e < t ? new c(T(n, e), r) : new c(S(n, _(e)), r);
     }
-    function R(e) {
+    function P(e) {
         var n,
             r,
             i,
@@ -358,10 +358,10 @@ var r = (function (e) {
         }),
         (c.prototype.times = c.prototype.multiply),
         (u.prototype._multiplyBySmall = function (e) {
-            return f(e.value * this.value) ? new u(e.value * this.value) : P(Math.abs(e.value), _(Math.abs(this.value)), this.sign !== e.sign);
+            return f(e.value * this.value) ? new u(e.value * this.value) : R(Math.abs(e.value), _(Math.abs(this.value)), this.sign !== e.sign);
         }),
         (c.prototype._multiplyBySmall = function (e) {
-            return 0 === e.value ? l[0] : 1 === e.value ? this : -1 === e.value ? this.negate() : P(Math.abs(e.value), this.value, this.sign !== e.sign);
+            return 0 === e.value ? l[0] : 1 === e.value ? this : -1 === e.value ? this.negate() : R(Math.abs(e.value), this.value, this.sign !== e.sign);
         }),
         (u.prototype.multiply = function (e) {
             return ea(e)._multiplyBySmall(this);
@@ -372,11 +372,11 @@ var r = (function (e) {
         }),
         (d.prototype.times = d.prototype.multiply),
         (c.prototype.square = function () {
-            return new c(R(this.value), !1);
+            return new c(P(this.value), !1);
         }),
         (u.prototype.square = function () {
             var e = this.value * this.value;
-            return f(e) ? new u(e) : new c(R(_(Math.abs(this.value))), !1);
+            return f(e) ? new u(e) : new c(P(_(Math.abs(this.value))), !1);
         }),
         (d.prototype.square = function (e) {
             return new d(this.value * this.value);
@@ -718,10 +718,10 @@ var r = (function (e) {
         } while (!t.isZero());
         return i.isUnit() ? e : e.multiply(i);
     }
-    function Q(e, t) {
+    function X(e, t) {
         return (e = ea(e).abs()), (t = ea(t).abs()), e.divide(q(e, t)).multiply(t);
     }
-    function X(e, n, r) {
+    function Q(e, n, r) {
         e = ea(e);
         var i = r || Math.random,
             a = z(e, (n = ea(n))),
@@ -920,11 +920,11 @@ var r = (function (e) {
         (l.max = K),
         (l.min = z),
         (l.gcd = q),
-        (l.lcm = Q),
+        (l.lcm = X),
         (l.isInstance = function (e) {
             return e instanceof c || e instanceof u || e instanceof d;
         }),
-        (l.randBetween = X),
+        (l.randBetween = Q),
         (l.fromArray = function (e, t, n) {
             return $(e.map(ea), ea(t || 10), n);
         }),

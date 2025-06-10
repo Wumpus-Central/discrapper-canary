@@ -55,10 +55,10 @@ function C(e) {
     var t;
     (b[e.invite.code] = _.Z.createFromServer(e.invite)), (r = null != (t = o()(l()(u()(Object.values(b), 'createdAt')))) ? t : null), (v = !1);
 }
-function P() {
+function R() {
     v = !1;
 }
-function R(e) {
+function P(e) {
     var t;
     null != e.invites &&
         e.invites.forEach((e) => {
@@ -109,8 +109,8 @@ let j = new M(f.Z, {
     CONNECTION_OPEN: I,
     CHANNEL_DELETE: S,
     FRIEND_INVITE_CREATE_SUCCESS: C,
-    FRIEND_INVITE_CREATE_FAILURE: P,
-    FRIEND_INVITE_REVOKE_SUCCESS: R,
+    FRIEND_INVITE_CREATE_FAILURE: R,
+    FRIEND_INVITE_REVOKE_SUCCESS: P,
     INSTANT_INVITE_CREATE_SUCCESS: T,
     INSTANT_INVITE_CREATE_FAILURE: A,
     INSTANT_INVITE_REVOKE_SUCCESS: N,

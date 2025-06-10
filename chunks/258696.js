@@ -1,5 +1,5 @@
 n.d(t, {
-    G: () => R,
+    G: () => P,
     Z: () => w
 }),
     n(539854);
@@ -48,11 +48,11 @@ function C(e) {
                 channel: n
             });
 }
-function P(e) {
+function R(e) {
     var t, n, i, _, p, h, m;
-    let { type: O, disabled: I, channel: S, handleSubmit: P, isEmpty: w, showAllButtons: D, children: L } = e,
+    let { type: O, disabled: I, channel: S, handleSubmit: R, isEmpty: w, showAllButtons: D, children: L } = e,
         x = (0, o.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
-        k = R(S.id, O, w),
+        k = P(S.id, O, w),
         { activeCommand: M, activeCommandOption: j } = (0, o.cj)([c.Z], () => ({
             activeCommand: c.Z.getActiveCommand(S.id),
             activeCommandOption: c.Z.getActiveOption(S.id)
@@ -137,7 +137,7 @@ function P(e) {
             (0, r.jsx)(
                 T.Z,
                 {
-                    onClick: P,
+                    onClick: R,
                     disabled: I || k
                 },
                 'submit'
@@ -151,11 +151,11 @@ function P(e) {
               children: G
           });
 }
-function R(e, t, n) {
+function P(e, t, n) {
     return (0, o.e7)([h.Z, m.Z], () => {
         let r = h.Z.getStickerPreview(e, t.drafts.type),
             i = null != r && r.length > 0;
         return 0 === m.Z.getUploads(e, t.drafts.type).length && n && !i;
     });
 }
-let w = i.memo(P);
+let w = i.memo(R);

@@ -65,7 +65,7 @@ let m = new i.Z('ImageEditor'),
             }),
             O = a.useRef(null),
             [E, N] = a.useState(1),
-            [I, D] = a.useState(null),
+            [D, I] = a.useState(null),
             [y, S] = a.useState({
                 top: 0,
                 bottom: 0,
@@ -97,8 +97,8 @@ let m = new i.Z('ImageEditor'),
             ),
             Z = a.useCallback(
                 (e) => {
-                    if (null == I) return;
-                    let t = _(I, e, T),
+                    if (null == D) return;
+                    let t = _(D, e, T),
                         { x: r, y: n } = v.current;
                     N(e),
                         S(t),
@@ -107,15 +107,15 @@ let m = new i.Z('ImageEditor'),
                             y: n
                         });
                 },
-                [I, P, T]
+                [D, P, T]
             ),
             G = a.useCallback(() => {
-                if (null == O.current || null == I) return;
+                if (null == O.current || null == D) return;
                 let e = (C + 90) % 360,
                     t = -v.current.x,
                     r = v.current.y,
-                    n = I.height,
-                    a = I.width,
+                    n = D.height,
+                    a = D.width,
                     l = _(
                         {
                             width: n,
@@ -129,23 +129,23 @@ let m = new i.Z('ImageEditor'),
                     y: t
                 }),
                     w(e),
-                    D({
+                    I({
                         width: n,
                         height: a
                     }),
                     S(l);
-            }, [I, C, P, E, T]),
-            B = a.useCallback(() => {
-                if (null == I) return {};
-                let { height: e, width: t } = b(x(I, C), E);
+            }, [D, C, P, E, T]),
+            U = a.useCallback(() => {
+                if (null == D) return {};
+                let { height: e, width: t } = b(x(D, C), E);
                 return {
                     height: e,
                     width: t,
                     minHeight: e,
                     minWidth: t
                 };
-            }, [I, C, E]),
-            U = a.useCallback((e) => {
+            }, [D, C, E]),
+            B = a.useCallback((e) => {
                 k({
                     x: e.clientX - v.current.x,
                     y: e.clientY - v.current.y
@@ -174,7 +174,7 @@ let m = new i.Z('ImageEditor'),
         let F = a.useRef(null),
             V = a.useCallback(async () => {
                 let e;
-                if (null == O.current || null == I) return;
+                if (null == O.current || null == D) return;
                 let r = Date.now(),
                     n = O.current,
                     a = {
@@ -195,7 +195,7 @@ let m = new i.Z('ImageEditor'),
                                     resizeWidth: u.eT,
                                     resizeHeight: u.eT
                                 },
-                                I,
+                                D,
                                 E
                             ),
                             { result: l, cancelFn: s } = await (0, o.$p)(r);
@@ -226,15 +226,15 @@ let m = new i.Z('ImageEditor'),
                         null == (e = F.current) || e.call(F), (F.current = null);
                     }
                 );
-            }, [t, C, T, i, I, E]);
+            }, [t, C, T, i, D, E]);
         a.useEffect(() => {
             V();
-        }, [V, C, I, M, E, L]);
+        }, [V, C, D, M, E, L]);
         let H = a.useCallback(() => {
             if (null == O.current) return;
             let e = O.current.naturalWidth,
                 t = O.current.naturalHeight;
-            D({
+            I({
                 width: e,
                 height: t
             });
@@ -268,23 +268,23 @@ let m = new i.Z('ImageEditor'),
                             },
                             style: h(
                                 {
-                                    opacity: +(null != I),
+                                    opacity: +(null != D),
                                     transform: 'translate3d('.concat(v.current.x, 'px, ').concat(v.current.y, 'px, 0) rotate(').concat(C, 'deg)')
                                 },
-                                B()
+                                U()
                             ),
                             className: p.image,
                             src: r,
                             crossOrigin: 'anonymous',
                             alt: 'avatar',
                             ref: O,
-                            onMouseDown: U,
+                            onMouseDown: B,
                             draggable: !1
                         }),
                         (0, n.jsx)('div', {
                             className: p.overlay,
                             style: {
-                                opacity: +(null != I),
+                                opacity: +(null != D),
                                 width: f.width,
                                 height: f.height
                             }

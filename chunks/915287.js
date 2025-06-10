@@ -161,7 +161,7 @@ function v(e, t, n, a) {
             });
         });
     return i.forwardRef(function (a, p) {
-        var { className: g, onScroll: v, onResize: I = null, onContentResize: S = null, dir: T = 'ltr', sections: A, sectionHeight: N, rowHeight: C, footerHeight: P = 0, sidebarHeight: R, listHeaderHeight: w = 0, renderSection: D, renderRow: L, renderFooter: x, renderSidebar: k, renderListHeader: M, stickyListHeader: j, wrapSection: U, getAnchorId: G, paddingTop: B, paddingBottom: F, fade: V = !1, customTheme: Z = !1, chunkSize: H, style: Y, innerId: W, innerRole: K, innerAriaLabel: z, innerAriaMultiselectable: q, innerAriaOrientation: Q, innerClassName: X, innerTag: J = 'div' } = a,
+        var { className: g, onScroll: v, onResize: I = null, onContentResize: S = null, dir: T = 'ltr', sections: A, sectionHeight: N, rowHeight: C, footerHeight: R = 0, sidebarHeight: P, listHeaderHeight: w = 0, renderSection: D, renderRow: L, renderFooter: x, renderSidebar: k, renderListHeader: M, stickyListHeader: j, wrapSection: U, getAnchorId: G, paddingTop: B, paddingBottom: F, fade: V = !1, customTheme: Z = !1, chunkSize: H, style: Y, innerId: W, innerRole: K, innerAriaLabel: z, innerAriaMultiselectable: q, innerAriaOrientation: X, innerClassName: Q, innerTag: J = 'div' } = a,
             $ = m(a, ['className', 'onScroll', 'onResize', 'onContentResize', 'dir', 'sections', 'sectionHeight', 'rowHeight', 'footerHeight', 'sidebarHeight', 'listHeaderHeight', 'renderSection', 'renderRow', 'renderFooter', 'renderSidebar', 'renderListHeader', 'stickyListHeader', 'wrapSection', 'getAnchorId', 'paddingTop', 'paddingBottom', 'fade', 'customTheme', 'chunkSize', 'style', 'innerId', 'innerRole', 'innerAriaLabel', 'innerAriaMultiselectable', 'innerAriaOrientation', 'innerClassName', 'innerTag']);
         let ee = i.useRef(null),
             et = i.useRef(null),
@@ -186,8 +186,8 @@ function v(e, t, n, a) {
                 sections: A,
                 sectionHeight: N,
                 rowHeight: C,
-                footerHeight: P,
-                sidebarHeight: R,
+                footerHeight: R,
+                sidebarHeight: P,
                 listHeaderHeight: w,
                 paddingTop: B,
                 paddingBottom: F,
@@ -295,9 +295,9 @@ function v(e, t, n, a) {
                                         role: K,
                                         'aria-label': z,
                                         'aria-multiselectable': q,
-                                        'aria-orientation': Q,
+                                        'aria-orientation': X,
                                         style: { height: el },
-                                        className: o()(d.content, X),
+                                        className: o()(d.content, Q),
                                         ref: et,
                                         children: (0, r.jsx)(c.J, {
                                             containerRef: et,
@@ -313,17 +313,17 @@ function v(e, t, n, a) {
                                             })
                                         })
                                     }),
-                                [J, W, K, z, q, Q, el, X, ec, M, j, D, L, x, U, es]
+                                [J, W, K, z, q, X, el, Q, ec, M, j, D, L, x, U, es]
                             ),
                             i.useMemo(
                                 () =>
                                     O({
                                         isSidebarVisible: eu,
                                         renderSidebar: k,
-                                        sidebarHeight: R,
+                                        sidebarHeight: P,
                                         isListVisible: 0 !== ec.length
                                     }),
-                                [eu, k, R, ec.length]
+                                [eu, k, P, ec.length]
                             )
                         ]
                     }

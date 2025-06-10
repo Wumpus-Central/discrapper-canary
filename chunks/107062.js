@@ -52,12 +52,12 @@ function C(e) {
     }
     return e;
 }
-let P = (e, t) =>
+let R = (e, t) =>
         A.intl.formatToPlainString(A.t.tAwI1t, {
             username: t.username,
             activity: e.extra.activity_name
         }),
-    R = (e, t, n) => {
+    P = (e, t, n) => {
         let r = A.t['bES+y8'],
             i = m.ZP.getName(t.guild_id, t.id, n),
             a = e.extra.activity_name;
@@ -104,7 +104,7 @@ let P = (e, t) =>
                                   users: [V, Z],
                                   countOthers: H
                               })
-                            : R(n, t, x);
+                            : P(n, t, x);
                     return (0, y.C4)({
                         entry: n,
                         applicationImageSrc: null == L ? void 0 : L.src,
@@ -135,8 +135,8 @@ let P = (e, t) =>
                 onClickSubtitle: D ? void 0 : Y,
                 onClickThumbnail: D ? void 0 : Y
             }),
-            Q = (0, l.Z)(M, T.xjy.JOIN) || (0, c.Z)(M),
-            X = Q
+            X = (0, l.Z)(M, T.xjy.JOIN) || (0, c.Z)(M),
+            Q = X
                 ? (0, r.jsx)(u.Z, {
                       embeddedActivity: j,
                       activity: M,
@@ -152,7 +152,7 @@ let P = (e, t) =>
                       IconComponent: J,
                       children: A.intl.string(A.t.GDWYR0)
                   }),
-            ee = [Q && !D ? X : $].filter(h.lm);
+            ee = [X && !D ? Q : $].filter(h.lm);
         return (0, r.jsxs)(I.yR, {
             children: [
                 q,
@@ -163,7 +163,7 @@ let P = (e, t) =>
                         user: x,
                         channel: t,
                         generateReactionImage: W,
-                        reactionImageAltText: P(n, x),
+                        reactionImageAltText: R(n, x),
                         entry: n,
                         buttons: ee
                     })

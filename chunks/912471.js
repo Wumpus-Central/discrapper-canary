@@ -57,8 +57,8 @@ let O = 21,
     A = new i.Yd('SessionHeartbeatScheduler'),
     N = null,
     C = 0,
-    P = 0,
-    R = { state: 'uninitialized' },
+    R = 0,
+    P = { state: 'uninitialized' },
     w = d.Z.getState(),
     D = (0, m.H)(),
     L = c.default.isAuthenticated();
@@ -67,7 +67,7 @@ function x() {
 }
 function k() {
     if (null != N) return;
-    let e = 0 === P ? 0 : v - (performance.now() - P);
+    let e = 0 === R ? 0 : v - (performance.now() - R);
     p.Z.addBreadcrumb({ message: 'Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: '.concat(e / 1000, ' seconds. Scheduling Heartbeat') }),
         (N = {
             type: 'timeout',
@@ -133,7 +133,7 @@ async function G() {
         (0, h.O)(),
         U()
     );
-    f.default.track(E.rMx.CLIENT_HEARTBEAT, r), (P = performance.now()), (0, l.Z)();
+    f.default.track(E.rMx.CLIENT_HEARTBEAT, r), (R = performance.now()), (0, l.Z)();
 }
 function B() {}
 function F() {
@@ -156,12 +156,12 @@ function H(e) {
 }
 function Y() {
     o.K.remove(S),
-        (R = {
+        (P = {
             state: 'loaded',
             session: null
         }),
         j(),
-        (P = 0);
+        (R = 0);
 }
 function W() {
     function e() {
@@ -186,7 +186,7 @@ function W() {
 async function K() {
     let e = null;
     try {
-        e = 'uninitialized' === R.state ? H(await o.K.getAfterRefresh(S)) : R.session;
+        e = 'uninitialized' === P.state ? H(await o.K.getAfterRefresh(S)) : P.session;
     } catch (e) {
         p.Z.captureException(e);
     }
@@ -205,7 +205,7 @@ async function K() {
                   (e.lastUsedTimestamp = t),
                   Z(e))
                 : null != e && (0, g.qK)(e) && (e = null),
-            (R = {
+            (P = {
                 state: 'loaded',
                 session: e
             }),
@@ -214,6 +214,6 @@ async function K() {
     })();
 }
 function z() {
-    let e = 'uninitialized' === R.state ? H(o.K.get(S)) : R.session;
+    let e = 'uninitialized' === P.state ? H(o.K.get(S)) : P.session;
     return null == e || (0, g.qK)(e) ? null : e;
 }

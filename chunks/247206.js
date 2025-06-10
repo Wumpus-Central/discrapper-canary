@@ -2,7 +2,7 @@ n.d(t, {
     Cm: () => S,
     Hc: () => y,
     IV: () => O,
-    JO: () => R,
+    JO: () => P,
     Jl: () => w,
     Ks: () => C,
     OP: () => b,
@@ -11,7 +11,7 @@ n.d(t, {
     UU: () => m,
     Yy: () => h,
     aP: () => g,
-    m8: () => P,
+    m8: () => R,
     xx: () => I,
     yf: () => N
 });
@@ -169,13 +169,13 @@ function C() {
         t = (0, i.sf)();
     return e && t;
 }
-function P() {
+function R() {
     let e = (0, u.UQ)('explicit_media_redaction_utils'),
         t = (0, i.L5)();
     return e && t;
 }
-function R(e) {
-    return !!P() && null != e && d.eq.has(e);
+function P(e) {
+    return !!R() && null != e && d.eq.has(e);
 }
 function w(e) {
     let { obscure: t } = e;

@@ -45,8 +45,8 @@ function g(e, t) {
         [T, A] = i.useState(null),
         N = i.useRef(null),
         C = i.useRef(null),
-        P = i.useRef(null),
-        R =
+        R = i.useRef(null),
+        P =
             'custom' === g
                 ? {
                       width: E,
@@ -61,31 +61,31 @@ function g(e, t) {
     return (
         (0, f.zq)(() => {
             var e, t;
-            null == S || S({ finalFrame: null != (t = null == (e = P.current) ? void 0 : e.currentFrame) ? t : null });
+            null == S || S({ finalFrame: null != (t = null == (e = R.current) ? void 0 : e.currentFrame) ? t : null });
         }),
         i.useImperativeHandle(
             t,
             () => ({
                 play: (e) => {
-                    if (null == P.current) return;
+                    if (null == R.current) return;
                     let t = null == C.current;
                     if (((C.current = e), x)) {
                         let t = I[e];
-                        P.current.resetSegments(!0), P.current.setSegment(t.start + t.duration, t.start + t.duration), P.current.stop();
+                        R.current.resetSegments(!0), R.current.setSegment(t.start + t.duration, t.start + t.duration), R.current.stop();
                     } else {
-                        P.current.setLoop(!w && e.includes('hover')), P.current.resetSegments(!0);
+                        R.current.setLoop(!w && e.includes('hover')), R.current.resetSegments(!0);
                         let n = t && null != v && v >= I[e].start && v <= I[e].start + I[e].duration ? v : I[e].start;
-                        P.current.playSegments([n, I[e].start + I[e].duration], !0);
+                        R.current.playSegments([n, I[e].start + I[e].duration], !0);
                     }
                 },
                 stop: () => {
-                    if (null == P.current || x) return;
+                    if (null == R.current || x) return;
                 },
                 stopIfPlaying: (e) => {
-                    null == P.current || x || (C.current === e && (P.current.resetSegments(!0), P.current.setSegment(I[e].start, I[e].start), P.current.stop()));
+                    null == R.current || x || (C.current === e && (R.current.resetSegments(!0), R.current.setSegment(I[e].start, I[e].start), R.current.stop()));
                 },
-                getDuration: (e) => (null == P.current ? null : P.current.getDuration(e)),
-                getCurrentFrame: () => (null == P.current ? null : P.current.currentFrame)
+                getDuration: (e) => (null == R.current ? null : R.current.getDuration(e)),
+                getCurrentFrame: () => (null == R.current ? null : R.current.currentFrame)
             }),
             [x, w, I, v]
         ),
@@ -107,7 +107,7 @@ function g(e, t) {
                             r = [x ? e.start : null != v ? v : e.start, e.start + e.duration];
                         }
                         null != N.current &&
-                            (P.current = i.loadAnimation({
+                            (R.current = i.loadAnimation({
                                 container: N.current,
                                 renderer: 'svg',
                                 loop: !1,
@@ -118,7 +118,7 @@ function g(e, t) {
                     }),
                 () => {
                     var e;
-                    null == (e = P.current) || e.destroy();
+                    null == (e = R.current) || e.destroy();
                 }
             ),
             [T, I, v, x]
@@ -129,7 +129,7 @@ function g(e, t) {
                     '--__lottieIconColor': null != a && 'string' == typeof a ? a : null == a ? void 0 : a.css,
                     display: 'flex'
                 },
-                R
+                P
             ),
             className: o()(p.lottieIcon, s ? void 0 : p.lottieIconColors, y),
             ref: N

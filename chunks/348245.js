@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => X }), n(388685);
+n.d(t, { Z: () => Q }), n(388685);
 var a = n(114858),
     o = n(259443),
     s = n(433517),
@@ -24,7 +24,7 @@ var a = n(114858),
     A = n(981631),
     N = n(176505),
     C = n(388032);
-function P(e, t, n) {
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,14 +37,14 @@ function P(e, t, n) {
         e
     );
 }
-let R = new o.Yd('MessageManager');
+let P = new o.Yd('MessageManager');
 function w(e) {
     let { guildId: t, channelId: n, messageId: r, forceFetch: i, isPreload: a, jumpType: o, skipLocalFetch: s, avoidInitialScroll: l } = e;
     if (null == n || (0, N.AB)(n)) return;
     let c = b.Z.getChannel(n);
     if ((null == c ? void 0 : c.type) === A.d4z.GUILD_STORE || ((null == c ? void 0 : c.type) != null && A.TPd.GUILD_THREADS_ONLY.has(c.type))) return;
     let f = _.Z.getOrCreate(n);
-    f.some(T.k5) && (R.log('Found expired attachment link, clearing messages'), _.Z.clear(n), (f = _.Z.getOrCreate(n))),
+    f.some(T.k5) && (P.log('Found expired attachment link, clearing messages'), _.Z.clear(n), (f = _.Z.getOrCreate(n))),
         null != f.jumpTargetId &&
             null == r &&
             ((f = f.mutate({
@@ -69,7 +69,7 @@ function w(e) {
         else {
             if ((null == c ? void 0 : c.isThread()) && x(n))
                 return (
-                    R.log('Jumping to start of thread '.concat(c.id)),
+                    P.log('Jumping to start of thread '.concat(c.id)),
                     u.Z.fetchMessages({
                         channelId: n,
                         limit: A.AQB,
@@ -93,7 +93,7 @@ function w(e) {
                 });
             let e = O.ZP.getTrackedAckMessageId(c.id);
             return (
-                R.log('Jumping to most recent message in thread '.concat(c.id, ' - ').concat(e)),
+                P.log('Jumping to most recent message in thread '.concat(c.id, ' - ').concat(e)),
                 u.Z.fetchMessages({
                     channelId: n,
                     limit: A.AQB,
@@ -288,7 +288,7 @@ function q(e) {
     if (null == n) return !1;
     u.Z.fetchNewLocalMessages(n, A.AQB);
 }
-class Q extends f.Z {
+class X extends f.Z {
     _initialize() {
         l.Z.subscribe('CONNECTION_OPEN', M);
     }
@@ -297,10 +297,10 @@ class Q extends f.Z {
     }
     constructor(...e) {
         super(...e),
-            P(this, 'fetchMessages', w),
-            P(this, 'loadSelectedChannelIfNecessary', j),
-            P(this, 'stores', new Map().set(E.ZP, V)),
-            P(this, 'actions', {
+            R(this, 'fetchMessages', w),
+            R(this, 'loadSelectedChannelIfNecessary', j),
+            R(this, 'stores', new Map().set(E.ZP, V)),
+            R(this, 'actions', {
                 APP_STATE_UPDATE: q,
                 OVERLAY_INITIALIZE: M,
                 CHANNEL_SELECT: U,
@@ -319,4 +319,4 @@ class Q extends f.Z {
             });
     }
 }
-let X = new Q();
+let Q = new X();

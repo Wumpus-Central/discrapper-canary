@@ -25,7 +25,7 @@ var r = n(255367),
     A = n(670451),
     N = n(228168),
     C = n(227832);
-function P(e, t, n) {
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ function P(e, t, n) {
         e
     );
 }
-function R(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,7 +49,7 @@ function R(e) {
                 })
             )),
             r.forEach(function (t) {
-                P(e, t, n[t]);
+                R(e, t, n[t]);
             });
     }
     return e;
@@ -78,7 +78,7 @@ function D(e, t) {
     );
 }
 function L(e) {
-    let { user: t, currentUser: n, activity: a, className: P, onClose: w } = e,
+    let { user: t, currentUser: n, activity: a, className: R, onClose: w } = e,
         L = (0, p.Dt)(),
         x = (0, p.Dt)(),
         { themeType: k } = (0, b.z)(),
@@ -160,14 +160,14 @@ function L(e) {
         value: B,
         children: (0, r.jsxs)(O.Z, {
             ref: V,
-            className: o()(C.card, P),
+            className: o()(C.card, R),
             onAction: F,
             onClose: w,
             'aria-labelledby': U ? ''.concat(x, ' ').concat(L) : L,
             children: [
                 (0, r.jsx)(
                     v.Z,
-                    D(R({ textId: x }, j), {
+                    D(P({ textId: x }, j), {
                         contextMenu: (0, r.jsx)(A.Z, {
                             display: 'live',
                             user: t,

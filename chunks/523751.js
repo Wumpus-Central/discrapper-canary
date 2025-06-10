@@ -52,7 +52,7 @@ function C(e) {
     }
     return e;
 }
-function P(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -64,12 +64,12 @@ function P(e, t) {
     }
     return n;
 }
-function R(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -213,7 +213,7 @@ function k(e) {
 function M(e) {
     let t, n;
     var a,
-        { guild: o, tooltipColor: l = u.ua7.Colors.BRAND, tooltipPosition: d, className: E, flowerStarClassName: b, iconClassName: y, badgeStrokeColor: I, badgeColor: T, disableBoostClick: N, 'aria-label': P = !1 } = e,
+        { guild: o, tooltipColor: l = u.ua7.Colors.BRAND, tooltipPosition: d, className: E, flowerStarClassName: b, iconClassName: y, badgeStrokeColor: I, badgeColor: T, disableBoostClick: N, 'aria-label': R = !1 } = e,
         D = w(e, ['guild', 'tooltipColor', 'tooltipPosition', 'className', 'flowerStarClassName', 'iconClassName', 'badgeStrokeColor', 'badgeColor', 'disableBoostClick', 'aria-label']);
     let x = (0, f.Q3)('GuildBadgeV2'),
         M = null != (a = D.size) ? a : x ? 18 : 16,
@@ -241,17 +241,17 @@ function M(e) {
             [F, o.id]
         );
     if (B === O.Q.NONE) return null;
-    let { IconComponent: Z, backgroundDarkColor: H, backgroundLightColor: Y, foregroundDarkColor: W, foregroundLightColor: K, premiumBackgroundColor: z, premiumForegroundColor: q, sizeAdjustment: Q } = L[B];
+    let { IconComponent: Z, backgroundDarkColor: H, backgroundLightColor: Y, foregroundDarkColor: W, foregroundLightColor: K, premiumBackgroundColor: z, premiumForegroundColor: q, sizeAdjustment: X } = L[B];
     if (null == Z) return null;
     G.premium && ((t = q), (n = z));
-    let X = (0, c.wj)(U) ? W : K,
+    let Q = (0, c.wj)(U) ? W : K,
         J = (0, c.wj)(U) ? H : Y;
-    (t = null != t ? t : X), (n = null != n ? n : J);
-    let $ = Math.floor(0.75 * M) - (null != Q ? Q : 0);
+    (t = null != t ? t : Q), (n = null != n ? n : J);
+    let $ = Math.floor(0.75 * M) - (null != X ? X : 0);
     return (0, r.jsx)(u.ua7, {
         color: l,
         position: d,
-        'aria-label': P,
+        'aria-label': R,
         text: (0, r.jsx)(k, {
             badgeType: B,
             guildTraits: G
@@ -263,7 +263,7 @@ function M(e) {
                 tabIndex: F ? 0 : -1,
                 children: (0, r.jsx)(
                     p.Z,
-                    R(C({}, e), {
+                    P(C({}, e), {
                         className: E,
                         flowerStarClassName: b,
                         allowFullSizedIcon: !0,

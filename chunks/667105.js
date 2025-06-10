@@ -11,7 +11,7 @@ n.d(t, {
     n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(386230),
+    a = n(524979),
     o = n(442837),
     s = n(481060),
     l = n(100527),
@@ -35,8 +35,8 @@ var r = n(255367),
     A = n(341907),
     N = n(46140),
     C = n(981631),
-    P = n(215023),
-    R = n(388032);
+    R = n(215023),
+    P = n(388032);
 function w(e, t, n) {
     return (
         t in e
@@ -182,11 +182,11 @@ let j = (e) => {
 function G(e) {
     return e.config.features.includes(N.S7.START_QUEST_CTA)
         ? {
-              text: R.intl.string(R.t.ToGcxM),
+              text: P.intl.string(P.t.ToGcxM),
               questContentCTA: h.jZ.START_QUEST
           }
         : {
-              text: R.intl.string(R.t.l7E81t),
+              text: P.intl.string(P.t.l7E81t),
               questContentCTA: h.jZ.ACCEPT_QUEST
           };
 }
@@ -223,7 +223,7 @@ function B(e) {
             }),
                 (0, c.mK)({
                     openInLayer: !1,
-                    tab: P.AW.ORBS,
+                    tab: R.AW.ORBS,
                     analyticsLocations: [],
                     analyticsSource: l.Z.QUEST_HOME_PAGE
                 });
@@ -233,7 +233,7 @@ function B(e) {
         B = (0, I.up)(v);
     return i.useMemo(() => {
         if ((0, O.HJ)(n) && r !== E.OH.COMPLETED && r !== E.OH.CLAIMED) {
-            let e = R.intl.string(R.t.BkZhUF);
+            let e = P.intl.string(P.t.BkZhUF);
             return {
                 text: e,
                 tooltipText: e,
@@ -242,10 +242,10 @@ function B(e) {
         }
         switch (r) {
             case E.OH.UNACCEPTED:
-                let e = R.intl.string(R.t.kUQLMD),
+                let e = P.intl.string(P.t.kUQLMD),
                     t = h.jZ.ACCEPT_QUEST;
                 return (
-                    p && ((e = R.intl.string(R.t.umdNio)), (t = h.jZ.START_QUEST)),
+                    p && ((e = P.intl.string(P.t.umdNio)), (t = h.jZ.START_QUEST)),
                     b && ({ text: e, questContentCTA: t } = G(n)),
                     {
                         text: e,
@@ -265,7 +265,7 @@ function B(e) {
             case E.OH.IN_PROGRESS:
                 if (T && _)
                     return {
-                        text: R.intl.string(R.t.Cfye4u),
+                        text: P.intl.string(P.t.Cfye4u),
                         tooltipText: null,
                         onClick: () =>
                             (0, O.gI)(
@@ -282,14 +282,14 @@ function B(e) {
                 if (p)
                     return {
                         text: (0, O.F9)(w),
-                        tooltipText: R.intl.string(R.t.hsbwjo),
+                        tooltipText: P.intl.string(P.t.hsbwjo),
                         onClick: () => (0, A.openVideoQuestModal)(n)
                     };
                 if (b && n.config.features.includes(N.S7.START_QUEST_CTA)) {
                     let { text: e } = G(n);
                     return {
                         text: e,
-                        tooltipText: R.intl.string(R.t.hsbwjo),
+                        tooltipText: P.intl.string(P.t.hsbwjo),
                         onClick: () => {
                             n.config.features.includes(N.S7.START_QUEST_CTA) && U();
                         }
@@ -297,7 +297,7 @@ function B(e) {
                 }
                 return {
                     text: B,
-                    tooltipText: R.intl.string(R.t.hsbwjo),
+                    tooltipText: P.intl.string(P.t.hsbwjo),
                     onClick: null
                 };
             case E.OH.COMPLETED:
@@ -311,21 +311,21 @@ function B(e) {
                     tooltipText: null,
                     onClick: S
                 };
-                if (a) return x(D({}, i), { text: R.intl.string(R.t.MAS7uL) });
-                if ((0, O.vQ)(n.config)) return x(D({}, i), { text: R.intl.string(R.t.vTgCW1) });
+                if (a) return x(D({}, i), { text: P.intl.string(P.t.MAS7uL) });
+                if ((0, O.vQ)(n.config)) return x(D({}, i), { text: P.intl.string(P.t.vTgCW1) });
                 if ((0, O.Bg)(n.config))
                     return {
                         tooltipText: null,
                         onClick: L,
-                        text: R.intl.string(R.t['eQX+go'])
+                        text: P.intl.string(P.t['eQX+go'])
                     };
                 else if ((0, O.xN)(n.config))
                     return {
                         tooltipText: null,
-                        text: R.intl.string(R.t.WYchdX),
+                        text: P.intl.string(P.t.WYchdX),
                         onClick: M
                     };
-                return x(D({}, i), { text: R.intl.string(R.t.bAGFz8) });
+                return x(D({}, i), { text: P.intl.string(P.t.bAGFz8) });
         }
     }, [r, p, T, _, S, a, n, o, s, u, j, w, L, M, b, U, B]);
 }

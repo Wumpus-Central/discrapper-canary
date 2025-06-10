@@ -73,10 +73,10 @@ let v = {},
     A = {},
     N = {},
     C = null,
-    P = {};
-function R() {
-    for (let e in ((v = {}), (A = {}), (I = {}), (S = {}), (T = {}), (C = f.Z.getChannelId()), P)) clearTimeout(P[e]);
-    (P = {}),
+    R = {};
+function P() {
+    for (let e in ((v = {}), (A = {}), (I = {}), (S = {}), (T = {}), (C = f.Z.getChannelId()), R)) clearTimeout(R[e]);
+    (R = {}),
         p.Z.forEachGuild((e) => {
             D(e);
         }),
@@ -99,7 +99,7 @@ function D(e) {
                         joinTimestamp: t.getTime()
                     },
                     { isUnread: r, isRelevant: i, isTimedRelevant: a } = q(e);
-                $(v, e, n, !1), $(A, e, i ? n : null, !1), $(I, e, r ? n : null, !1), a && Q(e, !0);
+                $(v, e, n, !1), $(A, e, i ? n : null, !1), $(I, e, r ? n : null, !1), a && X(e, !0);
             } else {
                 $(S, e, e, !1);
                 let t = d.ZP.isForumPostUnread(e.id);
@@ -137,7 +137,7 @@ function M(e, t, n) {
                     joinTimestamp: i.getTime()
                 },
                 { isUnread: t, isRelevant: n, isTimedRelevant: a } = q(r);
-            $(v, r, e, !0), $(A, r, n ? e : null, !0), $(I, r, t ? e : null, !0), $(S, r, null, !0), $(T, r, null, !0), Q(r, a);
+            $(v, r, e, !0), $(A, r, n ? e : null, !0), $(I, r, t ? e : null, !0), $(S, r, null, !0), $(T, r, null, !0), X(r, a);
         } else {
             let e = d.ZP.isForumPostUnread(r.id);
             $(v, r, null, !0), $(I, r, null, !0), $(A, r, null, !0), $(S, r, r, !0), $(T, r, e ? r : null, !0), J(r.id);
@@ -150,7 +150,7 @@ function j(e) {
 }
 function U(e) {
     let { channels: t } = e;
-    for (let e of t) if (e.isNSFW() !== G(e.guild_id, e.parent_id)) return void R();
+    for (let e of t) if (e.isNSFW() !== G(e.guild_id, e.parent_id)) return void P();
     return !1;
 }
 function G(e, t) {
@@ -188,7 +188,7 @@ function V(e) {
         if (null == r) return !1;
         if (et(v, t)) {
             let { isUnread: n, isRelevant: i, isTimedRelevant: a } = q(t);
-            Q(t, a);
+            X(t, a);
             let o = et(I, t),
                 s = et(A, t);
             if (n === o && i === s) return !1;
@@ -210,7 +210,7 @@ function Z() {
             for (let n in v[e][t]) {
                 let r = v[e][t][n],
                     { isUnread: i, isRelevant: a, isTimedRelevant: o } = q(r.channel);
-                i && $(I, r.channel, r, !1), a && $(A, r.channel, r, !1), Q(r.channel, o);
+                i && $(I, r.channel, r, !1), a && $(A, r.channel, r, !1), X(r.channel, o);
             }
     for (let e in ((T = {}), S))
         for (let t in S[e])
@@ -251,11 +251,11 @@ function q(e) {
         isTimedRelevant: a
     };
 }
-function Q(e, t) {
-    J(e.id), t && X(e);
+function X(e, t) {
+    J(e.id), t && Q(e);
 }
-function X(e) {
-    P[e.id] = setTimeout(
+function Q(e) {
+    R[e.id] = setTimeout(
         () => {
             let t = c.Z.getChannel(e.id);
             null != t &&
@@ -268,7 +268,7 @@ function X(e) {
     );
 }
 function J(e) {
-    e in P && (clearTimeout(P[e]), delete P[e]);
+    e in R && (clearTimeout(R[e]), delete R[e]);
 }
 function $(e, t, n, r) {
     let { guild_id: i, parent_id: o, id: s } = t;
@@ -358,16 +358,16 @@ class el extends (r = o.ZP.Store) {
 }
 E(el, 'displayName', 'ActiveJoinedThreadsStore');
 let ec = new el(s.Z, {
-    CONNECTION_OPEN: R,
-    OVERLAY_INITIALIZE: R,
+    CONNECTION_OPEN: P,
+    OVERLAY_INITIALIZE: P,
     THREAD_LIST_SYNC: W,
-    LOAD_THREADS_SUCCESS: R,
-    LOAD_ARCHIVED_THREADS_SUCCESS: R,
-    SEARCH_FINISH: R,
-    MOD_VIEW_SEARCH_FINISH: R,
+    LOAD_THREADS_SUCCESS: P,
+    LOAD_ARCHIVED_THREADS_SUCCESS: P,
+    SEARCH_FINISH: P,
+    MOD_VIEW_SEARCH_FINISH: P,
     GUILD_CREATE: Y,
-    GUILD_DELETE: R,
-    CURRENT_USER_UPDATE: R,
+    GUILD_DELETE: P,
+    CURRENT_USER_UPDATE: P,
     THREAD_CREATE: j,
     THREAD_UPDATE: j,
     THREAD_DELETE: j,

@@ -94,8 +94,8 @@ let O = 'US',
     A = (0, u.hQ)(),
     N = (0, u.hQ)(),
     C = (0, u.hQ)(),
-    P = (0, u.hQ)(),
     R = (0, u.hQ)(),
+    P = (0, u.hQ)(),
     w = (0, u.hQ)(),
     D = (0, u.hQ)();
 var L = (function (e) {
@@ -160,7 +160,7 @@ let k = {
     }),
     G = (e) => ({
         name: 'line2',
-        id: P,
+        id: R,
         title: () => _.intl.string(_.t.i2Z0gI),
         placeholder: () => _.intl.string(_.t.fKLoNj),
         autoComplete: 'address-line2',
@@ -169,7 +169,7 @@ let k = {
     }),
     B = (e) => ({
         name: 'city',
-        id: R,
+        id: P,
         title: () => _.intl.string(_.t.bUSWl5),
         autoComplete: 'address-level2',
         placeholder: () => _.intl.string(_.t['5rRx39']),

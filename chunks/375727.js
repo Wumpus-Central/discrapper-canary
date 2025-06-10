@@ -25,8 +25,8 @@ let j = new o.Z('EmojiStudio'),
                     t = c.Z.getGuild(e);
                 return u.Z.can(x.Plq.CREATE_GUILD_EXPRESSIONS, t) && null != t ? t.id : null;
             }),
-            [N, I] = a.useState(null != r ? r : O),
-            [D, y] = a.useState(null),
+            [N, D] = a.useState(null != r ? r : O),
+            [I, y] = a.useState(null),
             [S, C] = a.useState(''),
             [w, A] = a.useState(null),
             k = async () => {
@@ -51,6 +51,7 @@ let j = new o.Z('EmojiStudio'),
                 null != t && p.ZP.isDataTooBig(t) && (a = h.ze.TOO_BIG), y(null != n ? n : a), r < M.current || (null != t && (A(t), (M.current = r)));
             }, []);
         return (0, n.jsxs)('main', {
+            className: _.main,
             children: [
                 (0, n.jsx)(s.X6q, {
                     variant: 'heading-lg/semibold',
@@ -66,8 +67,9 @@ let j = new o.Z('EmojiStudio'),
                     })
                 }),
                 (0, n.jsxs)('footer', {
+                    className: _.footer,
                     children: [
-                        null != D && (0, n.jsx)(g.H, { error: D }),
+                        null != I && (0, n.jsx)(g.H, { error: I }),
                         (0, n.jsxs)('div', {
                             className: _.grid,
                             children: [
@@ -89,7 +91,7 @@ let j = new o.Z('EmojiStudio'),
                                 (0, n.jsx)('div', {
                                     className: _.selector,
                                     children: (0, n.jsx)(m.q, {
-                                        onChange: I,
+                                        onChange: D,
                                         selected: N,
                                         onError: () => y(h.ze.NO_PERMISSIONS)
                                     })
@@ -111,19 +113,15 @@ let j = new o.Z('EmojiStudio'),
     },
     E = (e) => {
         let { back: t } = e;
-        return (0, n.jsxs)(s.zxk, {
+        return (0, n.jsx)(s.zxk, {
             'aria-label': b.intl.string(b.t['13/7kZ']),
             onClick: t,
             look: s.zxk.Looks.BLANK,
-            size: s.zxk.Sizes.MIN,
             innerClassName: _.backButtonInnner,
             className: _.backButton,
-            children: [
-                (0, n.jsx)(s.j9r, {
-                    color: 'currentColor',
-                    size: 'xs'
-                }),
-                'Back'
-            ]
+            children: (0, n.jsx)(s.j9r, {
+                color: 'currentColor',
+                size: 'md'
+            })
         });
     };

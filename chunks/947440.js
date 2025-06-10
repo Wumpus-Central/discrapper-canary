@@ -261,7 +261,7 @@ function M(t, e) {
                                 label: J.intl.string(J.t['3fRyS0']),
                                 subtext: d.name,
                                 action: () => {
-                                    tl((0, w.pY)(i.location), i.applicationId);
+                                    tl((0, w.p)(i.location), i.applicationId);
                                 }
                             },
                             'self-embedded-'.concat(i.applicationId)

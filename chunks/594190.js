@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     FZ: () => eI,
-    ZP: () => eQ,
+    ZP: () => eX,
     b6: () => eE,
     ik: () => ey,
     rH: () => eg
@@ -37,8 +37,8 @@ var i,
     A = n(626135),
     N = n(70956),
     C = n(877481),
-    P = n(823379),
-    R = n(358085),
+    R = n(823379),
+    P = n(358085),
     w = n(998502),
     D = n(145597),
     L = n(370862),
@@ -210,8 +210,8 @@ let B = new m.Z('RunningGameStore'),
     K = new Set(),
     z = [],
     q = [],
-    Q = [],
-    X = null,
+    X = [],
+    Q = null,
     J = [],
     $ = {},
     ee = {},
@@ -251,23 +251,23 @@ function eh(e) {
     return H.some((t) => t.name === e.name && !0 === t.streamerTool);
 }
 function em() {
-    if (Q.length > 0) {
-        let e = X;
-        (X = Q[0]), null != e && X.pid === e.pid ? (X.start = e.start) : (X.start = Date.now());
-    } else X = null;
+    if (X.length > 0) {
+        let e = Q;
+        (Q = X[0]), null != e && Q.pid === e.pid ? (Q.start = e.start) : (Q.start = Date.now());
+    } else Q = null;
     let e = [];
-    for (let t of Q) t.pid in es || ((es[t.pid] = t), e.push(t));
+    for (let t of X) t.pid in es || ((es[t.pid] = t), e.push(t));
     let t = [];
-    for (let e of Object.values(es)) Q.some((t) => t.pid === e.pid) || (t.push(e), delete es[e.pid]);
+    for (let e of Object.values(es)) X.some((t) => t.pid === e.pid) || (t.push(e), delete es[e.pid]);
     B.info('Running Games Changed', {
-        runningGames: Q,
+        runningGames: X,
         added: e,
         removed: t,
         previousGames: es
     }),
         d.Z.dispatch({
             type: 'RUNNING_GAMES_CHANGE',
-            games: Q,
+            games: X,
             added: e,
             removed: t
         });
@@ -404,7 +404,7 @@ function eT() {
     );
 }
 function eA() {
-    if (!__OVERLAY__ && R.isPlatformEmbedded) {
+    if (!__OVERLAY__ && P.isPlatformEmbedded) {
         let e = [...z, ...o().values(et.gameOverrides)];
         w.ZP.setGameCandidateOverrides(e);
     }
@@ -436,13 +436,13 @@ function eC(e) {
         }),
         et.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused),
         ev(),
-        C.Z.setRecentGames(eP().map((e) => eI(e))));
+        C.Z.setRecentGames(eR().map((e) => eI(e))));
 }
-function eP() {
+function eR() {
     let e = o().values(et.gameOverrides);
     return et.gamesSeen.filter((e) => void 0 === et.gameOverrides[eg(e)]).concat(e);
 }
-function eR(e, t) {
+function eP(e, t) {
     if (void 0 === t) {
         let t = w.ZP.getDiscordUtils();
         if (null != t && null != t.getWindowHandleFromPid) {
@@ -454,7 +454,7 @@ function eR(e, t) {
     return '0' === t ? null : t;
 }
 function ew(e) {
-    eC(Q);
+    eC(X);
 }
 function eD(e) {
     q = e.games;
@@ -476,13 +476,13 @@ function eM() {
 function ej(e) {
     let t,
         n = e.pid,
-        r = Q.find((e) => e.pid === n);
+        r = X.find((e) => e.pid === n);
     if (null == r) {
         let e = q.find((e) => e.pid === n);
         if (null == e) return;
-        ((r = j({}, e)).hidden = !1), Q.push(r), (t = eg(r));
+        ((r = j({}, e)).hidden = !1), X.push(r), (t = eg(r));
     } else (t = eg(r)), r.hidden && (ee[t] = !0), (r.hidden = !1);
-    (null == r.lastFocused || 0 === r.lastFocused) && (r.lastFocused = Math.floor(Date.now() / 1000)), (et.gameOverrides[t] = G(j({}, r), { add: !0 })), eC(Q), eA(), ev(), em();
+    (null == r.lastFocused || 0 === r.lastFocused) && (r.lastFocused = Math.floor(Date.now() / 1000)), (et.gameOverrides[t] = G(j({}, r), { add: !0 })), eC(X), eA(), ev(), em();
 }
 function eU() {
     eA();
@@ -544,7 +544,7 @@ function eH(e) {
             eg(n) === t && (n.name = e.newName);
         });
     let i = !1;
-    Q.forEach((n) => {
+    X.forEach((n) => {
         eg(n) === t && ((n.name = e.newName), (i = !0));
     }),
         eA(),
@@ -558,7 +558,7 @@ function eY(e) {
         delete et.enableDetection[t],
         (et.gamesSeen = et.gamesSeen.filter((e) => eg(e) !== t)),
         ee[t] &&
-            (Q.forEach((e) => {
+            (X.forEach((e) => {
                 t === eg(e) && (e.hidden = !0);
             }),
             delete ee[t],
@@ -568,7 +568,7 @@ function eY(e) {
 }
 function eW(e) {
     var t;
-    if (__OVERLAY__ || !R.isPlatformEmbedded) return;
+    if (__OVERLAY__ || !P.isPlatformEmbedded) return;
     let n = w.ZP.getDiscordUtils().notifyGameLaunched;
     if (null == n) return;
     let r = I.Z.getDetectableGame(e.applicationId);
@@ -578,7 +578,7 @@ function eK() {
     g.Z.hasLoadedExperiments && Z.length > 0 && (eC(Z), (Z = []));
 }
 !__OVERLAY__ &&
-    ((0, R.isDesktop)() || k.iP) &&
+    ((0, P.isDesktop)() || k.iP) &&
     (en = function () {
         let e = [],
             t = new Set();
@@ -623,7 +623,7 @@ function eK() {
                         (e.distributor = eN(e)),
                         (e.isLauncher = e.isLauncher || t.has(e.exeName)),
                         e.isLauncher && null != e.id && (i[e.id] = e),
-                        (e.windowHandle = eR(e.pid, e.windowHandle)),
+                        (e.windowHandle = eP(e.pid, e.windowHandle)),
                         null ==
                             H.find((t) => {
                                 let { name: n } = t;
@@ -638,7 +638,7 @@ function eK() {
                         type: 'RUNNING_STREAMER_TOOLS_CHANGE',
                         count: ei
                     })),
-                    (Q = e),
+                    (X = e),
                     (J = n),
                     (r = i),
                     em();
@@ -677,31 +677,31 @@ class ez extends (i = c.ZP.Store) {
         this.waitFor(I.Z, g.Z), (Z = a.gamesSeen), this.syncWith([g.Z], eK), this.syncWith([S.Z, I.Z, T.Z], o().throttle(eT, 1000)), s && ev();
     }
     getVisibleGame() {
-        return null == X || eO(X) ? X : null;
+        return null == Q || eO(Q) ? Q : null;
     }
     getCurrentGameForAnalytics() {
-        return X;
+        return Q;
     }
     getVisibleRunningGames() {
-        return Q.filter(eO);
+        return X.filter(eO);
     }
     getRunningGames() {
-        return Q;
+        return X;
     }
     getRunningDiscordApplicationIds() {
         let e = [];
-        for (let t of Q) null != $[t.exePath] && e.push($[t.exePath]);
+        for (let t of X) null != $[t.exePath] && e.push($[t.exePath]);
         return e;
     }
     getRunningVerifiedApplicationIds() {
         return this.getRunningGames()
             .map((e) => I.Z.getGameByName(e.name))
-            .filter(P.lm)
+            .filter(R.lm)
             .map((e) => e.id);
     }
     getGameForPID(e) {
         var t;
-        return null != (t = Q.find((t) => t.pid === e)) ? t : null;
+        return null != (t = X.find((t) => t.pid === e)) ? t : null;
     }
     getLauncherForPID(e) {
         let t = this.getGameForPID(e);
@@ -722,7 +722,7 @@ class ez extends (i = c.ZP.Store) {
     }
     getGamesSeen(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            n = eP();
+            n = eR();
         if (e) {
             let e = this.getVisibleGame();
             if (null != e) {
@@ -789,4 +789,4 @@ let eq = new ez(d.Z, {
         GAME_DETECTION_DEBUGGING_STOP: eB,
         GAME_DETECTION_DEBUGGING_TICK: eF
     }),
-    eQ = eq;
+    eX = eq;

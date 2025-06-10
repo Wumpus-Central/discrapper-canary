@@ -15,7 +15,7 @@ function h(e, t) {
     let n = c.ZP.getSelfEmbeddedActivityForLocation(t);
     if (null == n) return;
     let h = i.Z.getApplication(n.applicationId),
-        m = (0, d.pY)(n.location),
+        m = (0, d.p)(n.location),
         g = (0, u.ZP)({
             application: h,
             channelId: m

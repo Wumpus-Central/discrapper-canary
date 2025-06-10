@@ -138,13 +138,13 @@ function w(e) {
         Y = (null == (l = E.userStatus) ? void 0 : l.claimedAt) != null,
         K = (null == E ? void 0 : E.userStatus) != null && (0, g.zE)(E.userStatus, f.jn.ACTIVITY_PANEL),
         q = (0, p.Rf)(E),
-        X = (0, b.DD)({
+        Q = (0, b.DD)({
             quest: E,
             taskDetails: q,
             location: T.dr.ACTIVITY_PANEL,
             questContent: f.jn.ACTIVITY_PANEL
         }),
-        Q = (0, m.j)({ location: T.dr.QUESTS_BAR_MOBILE });
+        X = (0, m.j)({ location: T.dr.QUESTS_BAR_MOBILE });
     return K || F || Y || w
         ? null
         : (0, r.jsxs)('div', {
@@ -210,9 +210,9 @@ function w(e) {
                                       (0, r.jsx)(s.Text, {
                                           variant: 'text-sm/normal',
                                           color: 'text-normal',
-                                          children: X
+                                          children: Q
                                       }),
-                                      Q &&
+                                      X &&
                                           (0, r.jsx)(I.Z, {
                                               quest: E,
                                               textColor: 'text-muted',

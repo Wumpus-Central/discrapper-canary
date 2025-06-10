@@ -167,27 +167,27 @@ function I(e) {
             };
         },
         C = N(I),
-        P = N(A(h, g), y),
-        R = O(C, P, 'RETURN_PREVIOUS_WHEN_CHANGED'),
+        R = N(A(h, g), y),
+        P = O(C, R, 'RETURN_PREVIOUS_WHEN_CHANGED'),
         w = a.Z.getChannel(g),
-        D = null != (n = R('channel_flags')) ? n : 0,
-        L = (null != (s = P.channel_flags) ? s : 0) ^ D,
+        D = null != (n = P('channel_flags')) ? n : 0,
+        L = (null != (s = R.channel_flags) ? s : 0) ^ D,
         x = 0 === (0, l.M1)(L, f.ic.FAVORITED, f.ic.OPT_IN_ENABLED),
         k = null != (d = null == (t = o.Z.getLastMessage(g)) ? void 0 : t.type) ? d : null;
     r.ZP.trackWithMetadata(
         c.rMx.NOTIFICATION_SETTINGS_UPDATED,
-        m(p({}, P, i.Z.getStats(h)), {
+        m(p({}, R, i.Z.getStats(h)), {
             location: T,
             guild_id: h,
             channel_id: g,
             update_type: _,
             label: S,
             parent_id: null != w ? w.parent_id : null,
-            channel_flags_old: R('channel_flags'),
-            channel_is_muted_old: R('channel_is_muted'),
-            channel_muted_until_old: R('channel_muted_until'),
-            channel_is_overridden_old: R('channel_is_overridden'),
-            channel_message_notification_settings_old: R('channel_message_notification_settings'),
+            channel_flags_old: P('channel_flags'),
+            channel_is_muted_old: P('channel_is_muted'),
+            channel_muted_until_old: P('channel_muted_until'),
+            channel_is_overridden_old: P('channel_is_overridden'),
+            channel_message_notification_settings_old: P('channel_message_notification_settings'),
             is_opt_in_only_change: x,
             last_message_type: k,
             application_id: E

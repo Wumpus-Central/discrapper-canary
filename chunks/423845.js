@@ -24,8 +24,8 @@ var r = n(620014),
     A = 2,
     N = 4,
     C = '[object Arguments]',
-    P = '[object Array]',
-    R = '[object Boolean]',
+    R = '[object Array]',
+    P = '[object Boolean]',
     w = '[object Date]',
     D = '[object Error]',
     L = '[object Function]',
@@ -45,17 +45,17 @@ var r = n(620014),
     K = '[object Int8Array]',
     z = '[object Int16Array]',
     q = '[object Int32Array]',
-    Q = '[object Uint8Array]',
-    X = '[object Uint8ClampedArray]',
+    X = '[object Uint8Array]',
+    Q = '[object Uint8ClampedArray]',
     J = '[object Uint16Array]',
     $ = '[object Uint32Array]',
     ee = {};
-function et(e, t, n, P, R, w) {
+function et(e, t, n, R, P, w) {
     var D,
         k = t & T,
         M = t & A,
         U = t & N;
-    if ((n && (D = R ? n(e, P, R, w) : n(e)), void 0 !== D)) return D;
+    if ((n && (D = P ? n(e, R, P, w) : n(e)), void 0 !== D)) return D;
     if (!O(e)) return e;
     var G = E(e);
     if (G) {
@@ -64,10 +64,10 @@ function et(e, t, n, P, R, w) {
         var B = p(e),
             F = B == L || B == x;
         if (b(e)) return l(e, k);
-        if (B == j || B == C || (F && !R)) {
+        if (B == j || B == C || (F && !P)) {
             if (((D = M || F ? {} : g(e)), !k)) return M ? d(e, s(D, e)) : u(e, o(D, e));
         } else {
-            if (!ee[B]) return R ? e : {};
+            if (!ee[B]) return P ? e : {};
             D = m(e, B, k);
         }
     }
@@ -92,4 +92,4 @@ function et(e, t, n, P, R, w) {
         D
     );
 }
-(ee[C] = ee[P] = ee[Z] = ee[H] = ee[R] = ee[w] = ee[Y] = ee[W] = ee[K] = ee[z] = ee[q] = ee[k] = ee[M] = ee[j] = ee[U] = ee[G] = ee[B] = ee[F] = ee[Q] = ee[X] = ee[J] = ee[$] = !0), (ee[D] = ee[L] = ee[V] = !1), (e.exports = et);
+(ee[C] = ee[R] = ee[Z] = ee[H] = ee[P] = ee[w] = ee[Y] = ee[W] = ee[K] = ee[z] = ee[q] = ee[k] = ee[M] = ee[j] = ee[U] = ee[G] = ee[B] = ee[F] = ee[X] = ee[Q] = ee[J] = ee[$] = !0), (ee[D] = ee[L] = ee[V] = !1), (e.exports = et);

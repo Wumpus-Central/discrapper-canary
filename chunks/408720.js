@@ -1,4 +1,4 @@
-a.d(e, { f: () => N });
+a.d(e, { f: () => p });
 var r = a(469359),
     n = a(157079),
     _ = a(393523),
@@ -12,10 +12,10 @@ var r = a(469359),
     I = a(467510),
     R = a(954211),
     d = a(886115),
-    f = a(873567),
-    A = a(454463),
-    p = a(163162);
-let N = (0, o._I)((t = {}) => {
+    A = a(873567),
+    f = a(454463),
+    N = a(163162);
+let p = (0, o._I)((t = {}) => {
     let e = {
         console: !0,
         dom: !0,
@@ -28,7 +28,7 @@ let N = (0, o._I)((t = {}) => {
     return {
         name: 'Breadcrumbs',
         setup(t) {
-            var a, o, N, T, L, h, O;
+            var a, o, p, T, L, h, O;
             e.console &&
                 (0, s.e)(
                     ((a = t),
@@ -55,13 +55,13 @@ let N = (0, o._I)((t = {}) => {
                 e.dom &&
                     (0, r.O)(
                         ((o = t),
-                        (N = e.dom),
+                        (p = e.dom),
                         function (t) {
                             let e, a;
                             if ((0, i.s3)() !== o) return;
-                            let r = 'object' == typeof N ? N.serializeAttribute : void 0,
-                                n = 'object' == typeof N && 'number' == typeof N.maxStringLength ? N.maxStringLength : void 0;
-                            n && n > 1024 && (A.X && u.kg.warn(`\`dom.maxStringLength\` cannot exceed 1024, but a value of ${n} was configured. Sentry will use 1024 instead.`), (n = 1024)), 'string' == typeof r && (r = [r]);
+                            let r = 'object' == typeof p ? p.serializeAttribute : void 0,
+                                n = 'object' == typeof p && 'number' == typeof p.maxStringLength ? p.maxStringLength : void 0;
+                            n && n > 1024 && (f.X && u.kg.warn(`\`dom.maxStringLength\` cannot exceed 1024, but a value of ${n} was configured. Sentry will use 1024 instead.`), (n = 1024)), 'string' == typeof r && (r = [r]);
                             try {
                                 var _;
                                 let o = t.event,
@@ -170,9 +170,9 @@ let N = (0, o._I)((t = {}) => {
                             if ((0, i.s3)() !== h) return;
                             let e = t.from,
                                 a = t.to,
-                                r = (0, f.en)(p.m9.location.href),
-                                n = e ? (0, f.en)(e) : void 0,
-                                _ = (0, f.en)(a);
+                                r = (0, A.en)(N.m9.location.href),
+                                n = e ? (0, A.en)(e) : void 0,
+                                _ = (0, A.en)(a);
                             (n && n.path) || (n = r),
                                 r.protocol === _.protocol && r.host === _.host && (a = _.relative),
                                 r.protocol === n.protocol && r.host === n.host && (e = n.relative),

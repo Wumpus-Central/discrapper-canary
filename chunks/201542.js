@@ -68,7 +68,7 @@ function N(e, t, n) {
 }
 let C = i.memo(function (e) {
     let t,
-        { src: n, volume: a = 1, onVolumeChange: _, onMute: h, waveform: b, durationSecs: y, onVolumeShow: C, onVolumeHide: P, onPlay: R, onPause: w, onError: D, playbackCacheKey: L } = e,
+        { src: n, volume: a = 1, onVolumeChange: _, onMute: h, waveform: b, durationSecs: y, onVolumeShow: C, onVolumeHide: R, onPlay: P, onPause: w, onError: D, playbackCacheKey: L } = e,
         x = i.useRef(null),
         k = i.useMemo(() => (null != L ? d.ZP.getPlaybackPosition(L) : 0), [L]),
         M = (0, s.e7)([d.ZP], () => d.ZP.getPlaybackRate(d.Ir.VOICE_MESSAGE)),
@@ -78,12 +78,12 @@ let C = i.memo(function (e) {
         [Z, H] = i.useState(!1),
         [Y, W] = i.useState(!1),
         [K, z] = i.useState(!1),
-        [q, Q] = i.useState(!1),
-        [X, J] = i.useState('none'),
+        [q, X] = i.useState(!1),
+        [Q, J] = i.useState('none'),
         [$, ee] = i.useState(() => ('function' == typeof a ? a() : a)),
         et = i.useRef(void 0),
         en = i.useCallback(() => {
-            W((e) => !e), Q(!0);
+            W((e) => !e), X(!0);
         }, []),
         er = i.useCallback(() => {
             J('metadata');
@@ -102,7 +102,7 @@ let C = i.memo(function (e) {
             W(!1),
                 null == et.current &&
                     (et.current = setTimeout(() => {
-                        U(!1), Q(!1), (et.current = void 0);
+                        U(!1), X(!1), (et.current = void 0);
                     }, 500));
         }, []),
         es = i.useCallback(() => {
@@ -149,7 +149,7 @@ let C = i.memo(function (e) {
             played: q,
             currentTime: G,
             onPause: w,
-            onPlay: R
+            onPlay: P
         },
         eg = i.useRef(em);
     i.useEffect(() => {
@@ -198,7 +198,7 @@ let C = i.memo(function (e) {
                       ref: x,
                       className: v.audioElement,
                       src: n,
-                      preload: X,
+                      preload: Q,
                       playing: Y && !K,
                       onEnded: es,
                       onLoadedMetadata: ei,
@@ -212,7 +212,7 @@ let C = i.memo(function (e) {
                   ref: x,
                   className: v.audioElement,
                   controls: !1,
-                  preload: X,
+                  preload: Q,
                   onEnded: es,
                   onLoadedMetadata: ei,
                   onError: ec,
@@ -280,7 +280,7 @@ let C = i.memo(function (e) {
                 onValueChange: eu,
                 onToggleMute: ed,
                 onVolumeShow: C,
-                onVolumeHide: P
+                onVolumeHide: R
             }),
             t
         ]

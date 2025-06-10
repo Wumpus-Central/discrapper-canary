@@ -42,25 +42,25 @@ let T = (e, t, n, r) => {
     N = (e) => {
         let { channel: t, entry: n, onReaction: a, onVoiceChannelPreview: f } = e,
             { parent_title: S, provider: N, image_url: C } = n.extra.media,
-            P = n.extra.artist.name,
-            R = (0, s.e7)([c.default], () => c.default.getUser(n.author_id)),
+            R = n.extra.artist.name,
+            P = (0, s.e7)([c.default], () => c.default.getUser(n.author_id)),
             { primaryColor: w, secondaryColor: D } = (0, m.Z)(C),
             L = (0, _.Nq)(n),
             x = i.useCallback(() => {
-                if (null == t || null == R || !(0, d.Hi)(L, g.y9)) return;
-                let e = T(n, t, R, L);
+                if (null == t || null == P || !(0, d.Hi)(L, g.y9)) return;
+                let e = T(n, t, P, L);
                 return (0, p.CR)({
-                    user: R,
+                    user: P,
                     channel: t,
                     mediaImageSrc: C,
-                    artist: P,
+                    artist: R,
                     description: e,
                     colors: [w, D],
                     badges: (0, p.UU)(n)
                 });
-            }, [C, P, t, n, w, L, D, R]),
+            }, [C, R, t, n, w, L, D, P]),
             k = (0, h.Z)(O.ABu.SPOTIFY);
-        if (null == R || !(0, d.Hi)(L, g.y9)) return null;
+        if (null == P || !(0, d.Hi)(L, g.y9)) return null;
         let M = () => {
                 let e = v.Hw.ALBUM,
                     t = l.Z.isProtocolRegistered() ? v.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : v.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
@@ -89,7 +89,7 @@ let T = (e, t, n, r) => {
                             : null,
                     userDescription: I.t.CcVI1d,
                     title: S,
-                    subtitle: P,
+                    subtitle: R,
                     badges: (0, r.jsx)(E.Gk, {
                         location: E.Gt.POPOUT,
                         children: g.Ho.map((e, t) => (0, r.jsx)(e, { entry: n }, t))
@@ -99,10 +99,10 @@ let T = (e, t, n, r) => {
                     children: (0, r.jsx)(b.WT, {
                         onReaction: a,
                         onVoiceChannelPreview: f,
-                        user: R,
+                        user: P,
                         channel: t,
                         generateReactionImage: x,
-                        reactionImageAltText: A(n, R),
+                        reactionImageAltText: A(n, P),
                         entry: n
                     })
                 })

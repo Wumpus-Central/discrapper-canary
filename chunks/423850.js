@@ -1,5 +1,5 @@
 a.d(e, {
-    D: () => A,
+    D: () => f,
     N: () => d
 });
 var r = a(263449),
@@ -20,13 +20,13 @@ function d() {
             let e,
                 a = (0, r.s3)();
             if (!a || void 0 == t.value) return;
-            let l = t.entries.find((e) => e.duration === t.value && f[e.name]);
+            let l = t.entries.find((e) => e.duration === t.value && A[e.name]);
             if (!l) return;
             let { interactionId: I } = l,
-                d = f[l.name],
-                A = a.getOptions(),
-                p = (0, u.XL)(i.Z1 + l.startTime),
-                N = (0, u.XL)(t.value),
+                d = A[l.name],
+                f = a.getOptions(),
+                N = (0, u.XL)(i.Z1 + l.startTime),
+                p = (0, u.XL)(t.value),
                 T = (0, r.nZ)(),
                 L = (0, n.HN)(),
                 h = L ? (0, n.Gx)(L) : void 0,
@@ -35,34 +35,34 @@ function d() {
                 g = T.getUser(),
                 P = a.getIntegrationByName('Replay'),
                 y = P && P.getReplayId(),
-                m = void 0 !== g ? g.email || g.id || g.ip_address : void 0;
+                C = void 0 !== g ? g.email || g.id || g.ip_address : void 0;
             try {
                 e = T.getScopeData().contexts.profile.profile_id;
             } catch (t) {}
-            let C = (0, c.Rt)(l.target),
+            let m = (0, c.Rt)(l.target),
                 v = (0, s.Jr)({
-                    release: A.release,
-                    environment: A.environment,
+                    release: f.release,
+                    environment: f.environment,
                     transaction: D,
                     [_.JQ]: t.value,
                     [_.S3]: 'auto.http.browser.inp',
-                    user: m || void 0,
+                    user: C || void 0,
                     profile_id: e || void 0,
                     replay_id: y || void 0,
                     'user_agent.original': E.m.navigator && E.m.navigator.userAgent
                 }),
                 S = (0, o.qp)({
-                    name: C,
+                    name: m,
                     op: `ui.interaction.${d}`,
                     attributes: v,
-                    startTime: p,
+                    startTime: N,
                     experimental: { standalone: !0 }
                 });
             S.addEvent('inp', {
                 [_.E1]: 'millisecond',
                 [_.Wb]: t.value
             }),
-                S.end(p + N);
+                S.end(N + p);
         });
         return () => {
             t();
@@ -70,7 +70,7 @@ function d() {
     }
     return () => void 0;
 }
-let f = {
+let A = {
     click: 'click',
     pointerdown: 'click',
     pointerup: 'click',
@@ -98,7 +98,7 @@ let f = {
     keypress: 'press',
     input: 'press'
 };
-function A(t) {
+function f(t) {
     let e = ({ entries: t }) => {
         let e = (0, n.HN)(),
             a = e && (0, n.Gx)(e);

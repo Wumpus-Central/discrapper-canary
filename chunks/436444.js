@@ -7,7 +7,7 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     a = n.n(i),
-    o = n(386230),
+    o = n(524979),
     s = n(481060),
     l = n(906732),
     c = n(975298),
@@ -92,8 +92,8 @@ let S = {
     },
     T = function (e) {
         let { children: t, confettiTriggerRef: n, guild: i, isProgressBarAnimationComplete: b, setConfettiCount: O, setShouldFireConfetti: T, tier: A, tierMarkerAnimationPosition: N, totalAvailableBoostsCount: C } = e,
-            { analyticsLocations: P } = (0, l.ZP)(),
-            R = (0, c.Z)(),
+            { analyticsLocations: R } = (0, l.ZP)(),
+            P = (0, c.Z)(),
             w = p.oCV[A],
             D = w - C,
             L = A <= N || b,
@@ -134,7 +134,7 @@ let S = {
             L &&
                 (j ||
                     (0, f.u)({
-                        analyticsLocations: P,
+                        analyticsLocations: R,
                         analyticsLocation: {
                             page: p.ZY5.PREMIUM_GUILD_USER_MODAL,
                             section: p.jXE.PREMIUM_GUILD_USER_MODAL_PROGRESS_BAR,
@@ -145,7 +145,7 @@ let S = {
                         guild: i
                     }));
         }
-        let F = !x && R.fractionalState === h.a$.NONE,
+        let F = !x && P.fractionalState === h.a$.NONE,
             V = F ? s.P3F : 'div',
             Z = F ? { onClick: B } : {};
         return (0, r.jsx)(s.ua7, {

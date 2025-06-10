@@ -1,6 +1,6 @@
 n.d(t, {
-    default: () => Q,
-    m: () => X
+    default: () => X,
+    m: () => Q
 }),
     n(457542),
     n(388685);
@@ -30,8 +30,8 @@ var r = n(255367),
     A = n(960048),
     N = n(272008),
     C = n(113434),
-    P = n(497505),
-    R = n(918701),
+    R = n(497505),
+    P = n(918701),
     w = n(475595),
     D = n(566078),
     L = n(114732),
@@ -125,11 +125,11 @@ function K(e) {
     i.useEffect(() => {
         S ||
             !0 === m ||
-            (0, N.QB)(l.id, P.y$.CROSS_PLATFORM, d)
+            (0, N.QB)(l.id, R.y$.CROSS_PLATFORM, d)
                 .then(() => C('claimed'))
                 .catch(() => C('error'));
     }, [l, d, S, m]);
-    let R = () => {
+    let P = () => {
             C('applying'), h().finally(a);
         },
         w = !0 === m && null === p && (null == f ? void 0 : f.skuId) !== '',
@@ -166,7 +166,7 @@ function K(e) {
                                     isSaving: 'applying' === A,
                                     useReducedMotion: v,
                                     onClose: a,
-                                    onConfirm: R
+                                    onConfirm: P
                                 })
                 })
             }),
@@ -183,7 +183,7 @@ function K(e) {
 function z(e) {
     let { quest: t } = e,
         n = i.useMemo(() => (0, w.fh)(t, w.eC.LOGO_TYPE, 'dark'), [t]),
-        a = D.r.build(t.config).defaultRewardRedemptionInstructionsByPlatform[P.y$.CROSS_PLATFORM];
+        a = D.r.build(t.config).defaultRewardRedemptionInstructionsByPlatform[R.y$.CROSS_PLATFORM];
     return (0, r.jsxs)('div', {
         className: G.additionalRedemptionInstructions,
         children: [
@@ -205,7 +205,7 @@ function q(e) {
         c = (0, w.fh)(t, w.eC.HERO),
         d = c.isAnimated && !o,
         f = (0, w.fh)(t, w.eC.REWARD).url,
-        _ = (0, R.f$)(t.config),
+        _ = (0, P.f$)(t.config),
         { fractionalState: p } = (0, m.Z)(),
         g = p === j.a$.FP_ONLY,
         E = (0, C.Qy)(t.config),
@@ -268,7 +268,7 @@ function q(e) {
                             onClick: l,
                             children: U.intl.string(U.t.MAS7uL)
                         }),
-                        (0, R.zK)(t, x.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, r.jsx)(z, { quest: t }),
+                        (0, P.zK)(t, x.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, r.jsx)(z, { quest: t }),
                         y &&
                             (0, r.jsx)(O.p, {
                                 className: G.upsell,
@@ -285,10 +285,10 @@ function q(e) {
         ]
     });
 }
-function Q(e) {
+function X(e) {
     var t, n;
     let { quest: a, location: o, onClose: s, transitionState: l, preview: c } = e,
-        u = i.useMemo(() => (0, R.xn)(a.config), [a]),
+        u = i.useMemo(() => (0, P.xn)(a.config), [a]),
         [d, f] = W(null != (n = null == u ? void 0 : u.skuId) ? n : null);
     return null == u
         ? null
@@ -311,7 +311,7 @@ function Q(e) {
                 preview: c
             });
 }
-function X(e, t, i) {
+function Q(e, t, i) {
     (0, u.ZDy)(async () => {
         let { default: a } = await Promise.resolve().then(n.bind(n, 920916));
         return (n) =>

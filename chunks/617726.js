@@ -1,14 +1,14 @@
 a.d(e, {
     BO: () => c,
-    Cd: () => N,
-    HY: () => p,
+    Cd: () => p,
+    HY: () => N,
     Jd: () => i,
     KQ: () => R,
     R: () => E,
     V$: () => u,
     f4: () => I,
     gv: () => s,
-    mL: () => A,
+    mL: () => f,
     zQ: () => d
 });
 var r = a(967752),
@@ -105,7 +105,7 @@ function d(t) {
         e
     ];
 }
-let f = {
+let A = {
     session: 'session',
     sessions: 'session',
     attachment: 'attachment',
@@ -122,10 +122,10 @@ let f = {
     span: 'span',
     statsd: 'metric_bucket'
 };
-function A(t) {
-    return f[t];
+function f(t) {
+    return A[t];
 }
-function p(t) {
+function N(t) {
     if (!t || !t.sdk) return;
     let { name: e, version: a } = t.sdk;
     return {
@@ -133,7 +133,7 @@ function p(t) {
         version: a
     };
 }
-function N(t, e, a, n) {
+function p(t, e, a, n) {
     let o = t.sdkProcessingMetadata && t.sdkProcessingMetadata.dynamicSamplingContext;
     return {
         event_id: t.event_id,

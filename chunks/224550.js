@@ -27,7 +27,7 @@ let g = (e, t, n, r) => {
             n,
             s,
             E,
-            { subscriptionPlan: b, isGift: y, isTrial: O, isOrbCheckout: v, isEmbeddedIAP: I, renewalInvoice: S, paymentSourceType: T, hide: A, purchaseType: N, productLine: C, proratedAmount: P, basePrice: R, currentSubscription: w, skuId: D } = e,
+            { subscriptionPlan: b, isGift: y, isTrial: O, isOrbCheckout: v, isEmbeddedIAP: I, renewalInvoice: S, paymentSourceType: T, hide: A, purchaseType: N, productLine: C, proratedAmount: R, basePrice: P, currentSubscription: w, skuId: D } = e,
             L = (0, i.e7)([o.ZP], () => o.ZP.inReverseTrial());
         if (A) return null;
         let x = null == e.planGroup ? [] : e.planGroup;
@@ -113,7 +113,7 @@ let g = (e, t, n, r) => {
                     planGroup: x,
                     isPrepaidPaymentSource: !1
                 });
-            O || (e = g(R, t, n, b.id)),
+            O || (e = g(P, t, n, b.id)),
                 (U = (null == w ? void 0 : w.isPausedAllowsResumeButNotUpdates)
                     ? h.intl.format(h.t.B6oNwM, {
                           primaryText: r,
@@ -130,9 +130,9 @@ let g = (e, t, n, r) => {
                             contactLink: f.EYA.CONTACT,
                             helpdeskArticle: l.Z.getArticleURL(f.BhN.BILLING)
                         })
-                      : L && C === f.POd.BOOST && null != R
+                      : L && C === f.POd.BOOST && null != P
                         ? h.intl.format(h.t['2nKy//'], {
-                              price: (0, u.T4)(R.amount, R.currency),
+                              price: (0, u.T4)(P.amount, P.currency),
                               paidServiceTermsArticle: f.EYA.PAID_TERMS,
                               contactUsArticle: f.EYA.CONTACT,
                               subscriptionFAQArticle: l.Z.getArticleURL(f.BhN.BILLING)
@@ -144,11 +144,11 @@ let g = (e, t, n, r) => {
                                 cancelSubscriptionArticle: l.Z.getArticleURL(f.BhN.PREMIUM_DETAILS_CANCEL_SUB),
                                 paidServiceTermsArticle: l.Z.getArticleURL(f.BhN.PAID_TERMS)
                             })
-                          : null != P && null != R
+                          : null != R && null != P
                             ? h.intl.format(h.t.Kcieh4, {
                                   primaryText: r,
-                                  proratedAmount: (0, u.T4)(P, R.currency),
-                                  renewalAmount: (0, u.T4)(R.amount, R.currency),
+                                  proratedAmount: (0, u.T4)(R, P.currency),
+                                  renewalAmount: (0, u.T4)(P.amount, P.currency),
                                   rateInterval: c.ZP.formatInterval(null == b ? void 0 : b.interval),
                                   paidURL: f.EYA.PAID_TERMS,
                                   contactLink: f.EYA.CONTACT,

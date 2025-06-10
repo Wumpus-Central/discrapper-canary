@@ -3,7 +3,7 @@ var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
-    s = n(386230),
+    s = n(524979),
     l = n(481060),
     c = n(607070),
     u = n(956664),
@@ -87,12 +87,12 @@ function E(e) {
             scale: 1,
             config: h
         })),
-        [C, P] = (0, l.q_F)(() => ({
+        [C, R] = (0, l.q_F)(() => ({
             x: 0,
             y: 0,
             config: h
         })),
-        [R, w] = i.useState(!1),
+        [P, w] = i.useState(!1),
         [D, L] = i.useState({
             x: 0,
             y: 0
@@ -109,12 +109,12 @@ function E(e) {
                   scale: 1,
                   immediate: e
               }),
-              P({
+              R({
                   x: 0,
                   y: 0,
                   immediate: e
               }));
-    }, [n, N, I, C, P]);
+    }, [n, N, I, C, R]);
     let k = (e, t) => {
             var n;
             let r = null == S ? (null == (n = v.current) ? void 0 : n.getBoundingClientRect()) : null,
@@ -153,12 +153,12 @@ function E(e) {
         ref: v,
         onMouseDown: M,
         onMouseUp: j,
-        onMouseMove: (e) => R && k(e.movementX, e.movementY),
+        onMouseMove: (e) => P && k(e.movementX, e.movementY),
         onWheel: (e) => !e.ctrlKey && k(-e.deltaX, -e.deltaY),
         onMouseLeave: () => w(!1),
         onClick: (e) => e.stopPropagation(),
         className: o()(f, d.wrapper, {
-            [d.panning]: n && R,
+            [d.panning]: n && P,
             [d.pannable]: n && x
         }),
         style: _({}, A, C),

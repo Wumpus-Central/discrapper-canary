@@ -35,12 +35,12 @@ var r = n(46015),
     C = function (e) {
         return e + 22 + 75 * (e < 26);
     },
-    P = function (e, t, n) {
+    R = function (e, t, n) {
         var r = 0;
         for (e = n ? b(e / c) : e >> 1, e += b(e / t); e > (m * s) >> 1; ) (e = b(e / m)), (r += a);
         return b(r + ((m + 1) * e) / (e + l));
     },
-    R = function (e) {
+    P = function (e) {
         var t,
             n,
             r = [],
@@ -60,13 +60,13 @@ var r = n(46015),
                 if ((n = e[t]) < c && ++_ > i) throw new g(h);
                 if (n === c) {
                     for (var T = _, A = a; ; ) {
-                        var R = A <= p ? o : A >= p + s ? s : A - p;
-                        if (T < R) break;
-                        var w = T - R,
-                            D = a - R;
-                        I(r, y(C(R + (w % D)))), (T = b(w / D)), (A += a);
+                        var P = A <= p ? o : A >= p + s ? s : A - p;
+                        if (T < P) break;
+                        var w = T - P,
+                            D = a - P;
+                        I(r, y(C(P + (w % D)))), (T = b(w / D)), (A += a);
                     }
-                    I(r, y(C(T))), (p = P(_, S, E === m)), (_ = 0), E++;
+                    I(r, y(C(T))), (p = R(_, S, E === m)), (_ = 0), E++;
                 }
             }
             _++, c++;
@@ -78,6 +78,6 @@ e.exports = function (e) {
         n,
         r = [],
         i = T(S(A(e), p, '.'), '.');
-    for (t = 0; t < i.length; t++) I(r, E(_, (n = i[t])) ? 'xn--' + R(n) : n);
+    for (t = 0; t < i.length; t++) I(r, E(_, (n = i[t])) ? 'xn--' + P(n) : n);
     return v(r, '.');
 };

@@ -25,8 +25,8 @@ var r = n(255367),
     A = n(988290),
     N = n(721359),
     C = n(640963),
-    P = n(628309),
-    R = n(461762),
+    R = n(628309),
+    P = n(461762),
     w = n(680783),
     D = n(981631),
     L = n(921944),
@@ -232,7 +232,7 @@ function K(e) {
 }
 function z(e) {
     let { isSelected: t, onSelect: n, chatWallpaperMetadata: a } = e,
-        o = (0, R.Z)(a.id),
+        o = (0, P.Z)(a.id),
         { label: s, designGroupId: l } = a,
         [c, u] = i.useState(!1);
     return (i.useEffect(() => {
@@ -289,7 +289,7 @@ function q(e) {
         })
     });
 }
-function Q(e) {
+function X(e) {
     let { canApply: t, isUpdating: n, isBlurEnabled: i, onBlurEnabledChange: a, onClose: o, onApply: s } = e;
     return (0, r.jsxs)(d.Kqy, {
         direction: 'horizontal',
@@ -332,7 +332,7 @@ function Q(e) {
         ]
     });
 }
-function X() {
+function Q() {
     return (0, r.jsxs)(d.Kqy, {
         direction: 'horizontal',
         justify: 'space-between',
@@ -369,9 +369,9 @@ let J = function (e) {
         { activePickerChannelId: c, closePicker: h, setPreviewWallpaperId: m } = (0, S.B)(),
         g = (0, w.Z)(c),
         E = (0, b.m)(x.p9.TIER_2),
-        [y, R] = i.useState(!1),
+        [y, P] = i.useState(!1),
         j = (0, A.e)(y),
-        U = (0, P.u)();
+        U = (0, R.u)();
     (0, N.W)();
     let G = (0, u.e7)([T.Z], () => T.Z.isFetchingWallpapers),
         B = (0, u.e7)([T.Z], () => T.Z.failedToFetchWallpapers),
@@ -383,7 +383,7 @@ let J = function (e) {
             Z.current = V.current;
         }, [V]),
         i.useEffect(() => {
-            null != F && R(F.isBlurred && E);
+            null != F && P(F.isBlurred && E);
         }, [F, E]);
     let H = i.useCallback(() => {
             h();
@@ -421,7 +421,7 @@ let J = function (e) {
                     var t;
                     let n = U[F.designGroupId].find((t) => t.isBlurred === e);
                     m(null != (t = null == n ? void 0 : n.id) ? t : null);
-                } else R(e);
+                } else P(e);
             },
             [null == F ? void 0 : F.designGroupId, U, m]
         ),
@@ -513,7 +513,7 @@ let J = function (e) {
                                 ]
                             }),
                             E
-                                ? (0, r.jsx)(Q, {
+                                ? (0, r.jsx)(X, {
                                       canApply: (null == g ? void 0 : g.wallpaperId) !== void 0,
                                       isUpdating: K,
                                       isBlurEnabled: y,
@@ -521,7 +521,7 @@ let J = function (e) {
                                       onClose: $,
                                       onApply: ee
                                   })
-                                : (0, r.jsx)(X, {})
+                                : (0, r.jsx)(Q, {})
                         ]
                     })),
         (0, r.jsx)(p.Gt, {

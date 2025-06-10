@@ -5,7 +5,7 @@ n.d(t, {
     Ec: () => H,
     Em: () => z,
     Gz: () => e_,
-    Km: () => R,
+    Km: () => P,
     Lr: () => L,
     Q5: () => W,
     Qm: () => G,
@@ -14,18 +14,18 @@ n.d(t, {
     Ti: () => C,
     Um: () => er,
     X_: () => et,
-    Y0: () => X,
+    Y0: () => Q,
     _H: () => eB,
     bc: () => j,
     bw: () => D,
-    dF: () => Q,
+    dF: () => X,
     hv: () => k,
     iR: () => ea,
     jD: () => eU,
     kt: () => eF,
     mn: () => eD,
     nl: () => eE,
-    oj: () => P,
+    oj: () => R,
     ov: () => $,
     q_: () => ej,
     r8: () => S,
@@ -120,9 +120,9 @@ function N(e) {
     return A.has(e);
 }
 let C = new Set([g.d4z.GUILD_TEXT, g.d4z.GUILD_ANNOUNCEMENT, g.d4z.GUILD_FORUM, g.d4z.GUILD_MEDIA, g.d4z.GUILD_VOICE, g.d4z.GUILD_STAGE_VOICE]),
-    P = new Set([g.d4z.GUILD_TEXT, g.d4z.GUILD_VOICE, g.d4z.GUILD_STAGE_VOICE, g.d4z.GUILD_CATEGORY, g.d4z.GUILD_ANNOUNCEMENT, g.d4z.GUILD_STORE, g.d4z.ANNOUNCEMENT_THREAD, g.d4z.PUBLIC_THREAD, g.d4z.PRIVATE_THREAD, g.d4z.GUILD_DIRECTORY, g.d4z.GUILD_FORUM, g.d4z.GUILD_MEDIA]);
-function R(e) {
-    return P.has(e);
+    R = new Set([g.d4z.GUILD_TEXT, g.d4z.GUILD_VOICE, g.d4z.GUILD_STAGE_VOICE, g.d4z.GUILD_CATEGORY, g.d4z.GUILD_ANNOUNCEMENT, g.d4z.GUILD_STORE, g.d4z.ANNOUNCEMENT_THREAD, g.d4z.PUBLIC_THREAD, g.d4z.PRIVATE_THREAD, g.d4z.GUILD_DIRECTORY, g.d4z.GUILD_FORUM, g.d4z.GUILD_MEDIA]);
+function P(e) {
+    return R.has(e);
 }
 g.d4z.GUILD_TEXT, g.d4z.GUILD_ANNOUNCEMENT, g.d4z.GUILD_FORUM, g.d4z.GUILD_MEDIA;
 let w = new Set([g.d4z.GUILD_VOICE, g.d4z.GUILD_STAGE_VOICE]);
@@ -160,8 +160,8 @@ function z(e) {
     return K.has(e);
 }
 let q = new Set([g.d4z.GUILD_TEXT, g.d4z.GUILD_ANNOUNCEMENT, g.d4z.GUILD_STORE, g.d4z.GUILD_VOICE, g.d4z.GUILD_STAGE_VOICE, g.d4z.ANNOUNCEMENT_THREAD, g.d4z.PUBLIC_THREAD, g.d4z.PRIVATE_THREAD, g.d4z.GUILD_DIRECTORY, g.d4z.GUILD_FORUM, g.d4z.GUILD_MEDIA]),
-    Q = new Set([g.d4z.GUILD_ANNOUNCEMENT, g.d4z.GUILD_CATEGORY, g.d4z.GUILD_STORE, g.d4z.GUILD_TEXT, g.d4z.GUILD_VOICE, g.d4z.GUILD_STAGE_VOICE, g.d4z.GUILD_DIRECTORY, g.d4z.GUILD_FORUM, g.d4z.GUILD_MEDIA]),
-    X = new Set([g.d4z.GUILD_TEXT, g.d4z.GUILD_ANNOUNCEMENT]),
+    X = new Set([g.d4z.GUILD_ANNOUNCEMENT, g.d4z.GUILD_CATEGORY, g.d4z.GUILD_STORE, g.d4z.GUILD_TEXT, g.d4z.GUILD_VOICE, g.d4z.GUILD_STAGE_VOICE, g.d4z.GUILD_DIRECTORY, g.d4z.GUILD_FORUM, g.d4z.GUILD_MEDIA]),
+    Q = new Set([g.d4z.GUILD_TEXT, g.d4z.GUILD_ANNOUNCEMENT]),
     J = new Set([g.d4z.GUILD_TEXT, g.d4z.GUILD_ANNOUNCEMENT, g.d4z.GUILD_FORUM, g.d4z.GUILD_MEDIA]),
     $ = new Set([g.d4z.GUILD_TEXT, g.d4z.GUILD_ANNOUNCEMENT, g.d4z.GUILD_FORUM, g.d4z.GUILD_MEDIA, g.d4z.GUILD_VOICE, g.d4z.GUILD_STAGE_VOICE]),
     ee = new Set([g.d4z.GUILD_ANNOUNCEMENT, g.d4z.GUILD_TEXT, g.d4z.GUILD_FORUM, g.d4z.GUILD_MEDIA, g.d4z.ANNOUNCEMENT_THREAD]),
@@ -614,7 +614,7 @@ class eC extends eg {
         super(e), (this.availableTags = null != (t = e.availableTags) ? t : []), (this.defaultAutoArchiveDuration = e.defaultAutoArchiveDuration), (this.defaultForumLayout = e.defaultForumLayout), (this.defaultReactionEmoji = e.defaultReactionEmoji), (this.defaultSortOrder = e.defaultSortOrder), (this.defaultTagSetting = e.defaultTagSetting), (this.defaultThreadRateLimitPerUser = e.defaultThreadRateLimitPerUser), (this.flags_ = e.flags_), (this.iconEmoji = e.iconEmoji), (this.lastMessageId = e.lastMessageId), (this.lastPinTimestamp = e.lastPinTimestamp), (this.memberListId = e.memberListId), (this.nsfw_ = e.nsfw_), (this.parent_id = e.parent_id), (this.permissionOverwrites_ = null != (n = e.permissionOverwrites_) ? n : {}), (this.position_ = e.position_), (this.rateLimitPerUser_ = e.rateLimitPerUser_), (this.template = e.template), (this.themeColor = e.themeColor), (this.topic_ = e.topic_), (this.version = e.version);
     }
 }
-class eP {
+class eR {
     getOrCompute(e) {
         let t = this.cache.get(e);
         if (null != t) return t;
@@ -627,11 +627,11 @@ class eP {
         b(this, 'cache', void 0), (this.cache = new (o())(e));
     }
 }
-let eR = new eP(),
-    ew = new eP();
+let eP = new eR(),
+    ew = new eR();
 class eD extends eg {
     static sortRecipients(e, t) {
-        let n = eR.getOrCompute(t);
+        let n = eP.getOrCompute(t);
         return [...(null != e ? e : [])].sort((e, t) => (ew.getOrCompute(e.id) ^ n) - (ew.getOrCompute(t.id) ^ n));
     }
     static fromServer(e) {

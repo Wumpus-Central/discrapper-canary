@@ -1,9 +1,9 @@
 a.d(e, {
-    Eg: () => m,
+    Eg: () => C,
     Jd: () => v,
     S1: () => P,
     jp: () => y,
-    lA: () => C,
+    lA: () => m,
     nV: () => g
 });
 var r = a(636361),
@@ -19,24 +19,24 @@ var r = a(636361),
     I = a(688838),
     R = a(393523),
     d = a(833772),
-    f = a(454463),
-    A = a(163162),
-    p = a(408720),
-    N = a(515737),
+    A = a(454463),
+    f = a(163162),
+    N = a(408720),
+    p = a(515737),
     T = a(804410),
     L = a(376457),
     h = a(42367),
     O = a(297117),
     D = a(387486);
 function g(t) {
-    return [(0, r.S)(), (0, n.C)(), (0, N.t)(), (0, p.f)(), (0, T.k)(), (0, h.O)(), (0, _.R)(), (0, L.s)()];
+    return [(0, r.S)(), (0, n.C)(), (0, p.t)(), (0, N.f)(), (0, T.k)(), (0, h.O)(), (0, _.R)(), (0, L.s)()];
 }
 function P(t = {}) {
     let e = (function (t = {}) {
         return {
             ...{
                 defaultIntegrations: g(),
-                release: 'string' == typeof __SENTRY_RELEASE__ ? __SENTRY_RELEASE__ : A.m9.SENTRY_RELEASE && A.m9.SENTRY_RELEASE.id ? A.m9.SENTRY_RELEASE.id : void 0,
+                release: 'string' == typeof __SENTRY_RELEASE__ ? __SENTRY_RELEASE__ : f.m9.SENTRY_RELEASE && f.m9.SENTRY_RELEASE.id ? f.m9.SENTRY_RELEASE.id : void 0,
                 autoSessionTracking: !0,
                 sendClientReports: !0
             },
@@ -45,12 +45,12 @@ function P(t = {}) {
     })(t);
     if (
         (function () {
-            let t = A.m9,
+            let t = f.m9,
                 e = t.chrome ? 'chrome' : 'browser',
                 a = t[e],
                 r = a && a.runtime && a.runtime.id,
-                n = (A.m9.location && A.m9.location.href) || '',
-                _ = !!r && A.m9 === A.m9.top && ['chrome-extension:', 'moz-extension:', 'ms-browser-extension:'].some((t) => n.startsWith(`${t}//`)),
+                n = (f.m9.location && f.m9.location.href) || '',
+                _ = !!r && f.m9 === f.m9.top && ['chrome-extension:', 'moz-extension:', 'ms-browser-extension:'].some((t) => n.startsWith(`${t}//`)),
                 o = void 0 !== t.nw;
             return !!r && !_ && !o;
         })()
@@ -58,7 +58,7 @@ function P(t = {}) {
         return void (0, l.Cf)(() => {
             console.error('[Sentry] You cannot run Sentry this way in a browser extension, check: https://docs.sentry.io/platforms/javascript/best-practices/browser-extensions/');
         });
-    f.X && !(0, u.Ak)() && l.kg.warn('No Fetch API detected. The Sentry SDK requires a Fetch API compatible environment to send events. Please add a Fetch API polyfill.');
+    A.X && !(0, u.Ak)() && l.kg.warn('No Fetch API detected. The Sentry SDK requires a Fetch API compatible environment to send events. Please add a Fetch API polyfill.');
     let a = {
             ...e,
             stackParser: (0, I.Sq)(e.stackParser || O.Dt),
@@ -69,8 +69,8 @@ function P(t = {}) {
     return (
         e.autoSessionTracking &&
             (function () {
-                if (void 0 === A.m9.document) {
-                    f.X && l.kg.warn('Session tracking in non-browser environment with @sentry/browser is not supported.');
+                if (void 0 === f.m9.document) {
+                    A.X && l.kg.warn('Session tracking in non-browser environment with @sentry/browser is not supported.');
                     return;
                 }
                 (0, s.yj)({ ignoreDuration: !0 }),
@@ -83,15 +83,15 @@ function P(t = {}) {
     );
 }
 function y(t = {}) {
-    if (!A.m9.document) {
-        f.X && l.kg.error('Global document not defined in showReportDialog call');
+    if (!f.m9.document) {
+        A.X && l.kg.error('Global document not defined in showReportDialog call');
         return;
     }
     let e = (0, c.nZ)(),
         a = e.getClient(),
         r = a && a.getDsn();
     if (!r) {
-        f.X && l.kg.error('DSN not configured for showReportDialog call');
+        A.X && l.kg.error('DSN not configured for showReportDialog call');
         return;
     }
     if (
@@ -105,7 +105,7 @@ function y(t = {}) {
         let e = (0, s.eW)();
         e && (t.eventId = e);
     }
-    let n = A.m9.document.createElement('script');
+    let n = f.m9.document.createElement('script');
     (n.async = !0), (n.crossOrigin = 'anonymous'), (n.src = (0, E.h)(r, t)), t.onLoad && (n.onload = t.onLoad);
     let { onClose: _ } = t;
     if (_) {
@@ -114,16 +114,16 @@ function y(t = {}) {
                 try {
                     _();
                 } finally {
-                    A.m9.removeEventListener('message', t);
+                    f.m9.removeEventListener('message', t);
                 }
         };
-        A.m9.addEventListener('message', t);
+        f.m9.addEventListener('message', t);
     }
-    let o = A.m9.document.head || A.m9.document.body;
-    o ? o.appendChild(n) : f.X && l.kg.error('Not injecting report dialog. No injection point found in HTML');
+    let o = f.m9.document.head || f.m9.document.body;
+    o ? o.appendChild(n) : A.X && l.kg.error('Not injecting report dialog. No injection point found in HTML');
 }
-function m() {}
-function C(t) {
+function C() {}
+function m(t) {
     t();
 }
 function v(t) {

@@ -1,5 +1,5 @@
 n.d(t, {
-    BP: () => X,
+    BP: () => Q,
     DK: () => H,
     G3: () => p,
     Ho: () => F,
@@ -11,13 +11,13 @@ n.d(t, {
     Y4: () => B,
     hn: () => b,
     iA: () => k,
-    ib: () => P,
+    ib: () => R,
     lh: () => J,
     mF: () => q,
     ub: () => D,
     v1: () => j,
     x6: () => M,
-    zi: () => Q
+    zi: () => X
 }),
     n(388685),
     n(539854);
@@ -95,15 +95,15 @@ function C(e) {
         a
     );
 }
-let P = () => {
+let R = () => {
         let e = a()().add(1, 'hour'),
             t = e.hour();
         return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0);
     },
-    R = (e, t) => (0, l.vc)(e, e.get('years') === t.get('years') ? m : g),
+    P = (e, t) => (0, l.vc)(e, e.get('years') === t.get('years') ? m : g),
     w = (e, t) => {
         let n = (0, l.wY)(e.toDate(), t.toDate());
-        return n > 1 || n < 0 ? R(e, t) : (0, l.vc)(e, e.localeData().calendar(n < 1 ? 'sameDay' : 'nextDay', e, t));
+        return n > 1 || n < 0 ? P(e, t) : (0, l.vc)(e, e.localeData().calendar(n < 1 ? 'sameDay' : 'nextDay', e, t));
     };
 function D(e, t, n) {
     null == n && (n = a()());
@@ -112,7 +112,7 @@ function D(e, t, n) {
         o = null != t && r.isSame(i, 'day');
     return {
         startDateTimeString: w(r, n),
-        endDateTimeString: null != i ? (o ? i.format(E) : R(i, n)) : void 0,
+        endDateTimeString: null != i ? (o ? i.format(E) : P(i, n)) : void 0,
         currentOrPastEvent: r <= n,
         upcomingEvent: r <= a()().add(1, 'hour'),
         withinStartWindow: r <= a()().add(15, 'minute'),
@@ -293,7 +293,7 @@ function q(e, t) {
         count: f
     };
 }
-function Q(e, t) {
+function X(e, t) {
     if (null == t) return d.z.NONE;
     let n = F(t);
     switch (n.options.freq) {
@@ -312,7 +312,7 @@ function Q(e, t) {
             return d.z.NONE;
     }
 }
-function X(e, t) {
+function Q(e, t) {
     return (null == e ? void 0 : e.scheduled_start_time) !== t.scheduledStartTime || e.scheduled_end_time !== t.scheduledEndTime || !(0, r.isEqual)(e.recurrence_rule, t.recurrenceRule);
 }
 function J(e, t, n) {

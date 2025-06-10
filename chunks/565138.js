@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R });
+n.d(t, { Z: () => P });
 var r,
     i = n(255367),
     a = n(73800),
@@ -141,8 +141,8 @@ class N extends a.PureComponent {
     renderIcon() {
         var e, t;
         let n = this.props,
-            { guild: r, className: a, showBadge: o, active: l, size: c, style: u = {}, textScale: f, showTooltip: _, tooltipPosition: p, onClick: h, to: E, badgeStrokeColor: y, animate: I, tabIndex: S, iconSrc: T, 'aria-hidden': N, lossless: C, iconSize: P } = n,
-            R = v(n, ['guild', 'className', 'showBadge', 'active', 'size', 'style', 'textScale', 'showTooltip', 'tooltipPosition', 'onClick', 'to', 'badgeStrokeColor', 'animate', 'tabIndex', 'iconSrc', 'aria-hidden', 'lossless', 'iconSize']),
+            { guild: r, className: a, showBadge: o, active: l, size: c, style: u = {}, textScale: f, showTooltip: _, tooltipPosition: p, onClick: h, to: E, badgeStrokeColor: y, animate: I, tabIndex: S, iconSrc: T, 'aria-hidden': N, lossless: C, iconSize: R } = n,
+            P = v(n, ['guild', 'className', 'showBadge', 'active', 'size', 'style', 'textScale', 'showTooltip', 'tooltipPosition', 'onClick', 'to', 'badgeStrokeColor', 'animate', 'tabIndex', 'iconSrc', 'aria-hidden', 'lossless', 'iconSize']),
             w = A[c],
             D = null != h ? d.P3F : 'div';
         return (0, i.jsxs)(
@@ -160,7 +160,7 @@ class N extends a.PureComponent {
                         onClick: null != E || null == h ? void 0 : h,
                         tabIndex: S
                     },
-                    R
+                    P
                 ),
                 {
                     children: [this.renderAcronym(), this.renderBadge()]
@@ -199,13 +199,13 @@ let C = c.ZP.connectStores([p.Z], (e) => {
     let { guild: t, animate: n, iconSrc: r, style: i, size: a, iconSize: o, lossless: s } = e;
     return { style: O(b({}, i), { backgroundImage: (0, h.rv)(null != r ? r : t.getIconURL(null != o ? o : T[a], n && p.Z.isFocused(), s)) }) };
 })((0, f.N)((e) => (0, i.jsx)(N, b({}, e))));
-class P extends (r = a.PureComponent) {
+class R extends (r = a.PureComponent) {
     render() {
         return (0, i.jsx)(C, b({}, this.props));
     }
 }
-E(P, 'Sizes', S),
-    E(P, 'defaultProps', {
+E(R, 'Sizes', S),
+    E(R, 'defaultProps', {
         size: S.LARGE,
         textScale: 1,
         showBadge: !1,
@@ -215,4 +215,4 @@ E(P, 'Sizes', S),
         badgeStrokeColor: u.Z.unsafe_rawColors.WHITE_500.css,
         animate: !1
     });
-let R = P;
+let P = R;

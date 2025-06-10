@@ -24,9 +24,9 @@ var r = 'function' == typeof Map && Map.prototype,
     A = Math.floor,
     N = 'function' == typeof BigInt ? BigInt.prototype.valueOf : null,
     C = Object.getOwnPropertySymbols,
-    P = 'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator ? Symbol.prototype.toString : null,
-    R = 'function' == typeof Symbol && 'object' == typeof Symbol.iterator,
-    w = 'function' == typeof Symbol && Symbol.toStringTag && (typeof Symbol.toStringTag === R ? 'object' : 'symbol') ? Symbol.toStringTag : null,
+    R = 'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator ? Symbol.prototype.toString : null,
+    P = 'function' == typeof Symbol && 'object' == typeof Symbol.iterator,
+    w = 'function' == typeof Symbol && Symbol.toStringTag && (typeof Symbol.toStringTag === P ? 'object' : 'symbol') ? Symbol.toStringTag : null,
     D = Object.prototype.propertyIsEnumerable,
     L =
         ('function' == typeof Reflect ? Reflect.getPrototypeOf : Object.getPrototypeOf) ||
@@ -50,7 +50,7 @@ function x(e, t) {
 }
 var k = n(706827),
     M = k.custom,
-    j = Q(M) ? M : null,
+    j = X(M) ? M : null,
     U = {
         __proto__: null,
         double: '"',
@@ -92,16 +92,16 @@ function z(e) {
 function q(e) {
     return '[object Boolean]' === ee(e) && V(e);
 }
-function Q(e) {
-    if (R) return e && 'object' == typeof e && e instanceof Symbol;
+function X(e) {
+    if (P) return e && 'object' == typeof e && e instanceof Symbol;
     if ('symbol' == typeof e) return !0;
-    if (!e || 'object' != typeof e || !P) return !1;
+    if (!e || 'object' != typeof e || !R) return !1;
     try {
-        return P.call(e), !0;
+        return R.call(e), !0;
     } catch (e) {}
     return !1;
 }
-function X(e) {
+function Q(e) {
     if (!e || 'object' != typeof e || !N) return !1;
     try {
         return N.call(e), !0;
@@ -147,9 +147,9 @@ e.exports = function e(t, r, i, s) {
             A = eg(t, y);
         return '[Function' + (v ? ': ' + v : ' (anonymous)') + ']' + (A.length > 0 ? ' { ' + S.call(A, ', ') + ' }' : '');
     }
-    if (Q(t)) {
-        var C = R ? b.call(String(t), /^(Symbol\(.*\))_[^)]*$/, '$1') : P.call(t);
-        return 'object' != typeof t || R ? C : ed(C);
+    if (X(t)) {
+        var C = P ? b.call(String(t), /^(Symbol\(.*\))_[^)]*$/, '$1') : R.call(t);
+        return 'object' != typeof t || P ? C : ed(C);
     }
     if (el(t)) {
         for (var M = '<' + O.call(String(t.nodeName)), G = t.attributes || [], V = 0; V < G.length; V++) M += ' ' + G[V].name + '=' + B(F(G[V].value), 'double', l);
@@ -192,7 +192,7 @@ e.exports = function e(t, r, i, s) {
     if (es(t)) return ef('WeakSet');
     if (ea(t)) return ef('WeakRef');
     if (z(t)) return ed(y(Number(t)));
-    if (X(t)) return ed(y(N.call(t)));
+    if (Q(t)) return ed(y(N.call(t)));
     if (q(t)) return ed(p.call(t));
     if (K(t)) return ed(y(String(t)));
     if ('undefined' != typeof window && t === window) return '{ [object Window] }';
@@ -349,13 +349,13 @@ function eg(e, t) {
         for (var a = 0; a < e.length; a++) i[a] = $(e, a) ? t(e[a], e) : '';
     }
     var o = 'function' == typeof C ? C(e) : [];
-    if (R) {
+    if (P) {
         n = {};
         for (var s = 0; s < o.length; s++) n['$' + o[s]] = o[s];
     }
     for (var l in e)
         if ($(e, l) && (!r || String(Number(l)) !== l || !(l < e.length)))
-            if (R && n['$' + l] instanceof Symbol) continue;
+            if (P && n['$' + l] instanceof Symbol) continue;
             else v.call(/[^\w$]/, l) ? i.push(t(l, e) + ': ' + t(e[l], e)) : i.push(l + ': ' + t(e[l], e));
     if ('function' == typeof C) for (var c = 0; c < o.length; c++) D.call(e, o[c]) && i.push('[' + t(o[c]) + ']: ' + t(e[o[c]], e));
     return i;

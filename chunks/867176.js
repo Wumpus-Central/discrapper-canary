@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => P,
+    Z: () => R,
     b: () => C
 }),
     n(388685);
@@ -99,7 +99,7 @@ let N = (e) => {
 };
 function C(e) {
     var t;
-    let { user: n, displayProfile: a, guildId: b, pendingBanner: O, children: v, className: I, avatarSize: S, avatarOffsetX: T, avatarOffsetY: A, bannerWidth: C, bannerHeight: P, themePadding: R, pendingAccentColor: w, animateOnHover: D = !1 } = e,
+    let { user: n, displayProfile: a, guildId: b, pendingBanner: O, children: v, className: I, avatarSize: S, avatarOffsetX: T, avatarOffsetY: A, bannerWidth: C, bannerHeight: R, themePadding: P, pendingAccentColor: w, animateOnHover: D = !1 } = e,
         L = (0, _.Dt)(),
         [x, k] = i.useState(!1),
         M = (0, l.e7)([m.Z], () => m.Z.isFocused()),
@@ -115,14 +115,14 @@ function C(e) {
         V = (0, s._i)((0, d.ZP)(F, B, !1)),
         Z = (0, f.Z)(null != (t = null != w ? w : null == a ? void 0 : a.primaryColor) ? t : V).hex,
         H = N(S),
-        Y = H + T - R,
-        W = P - A - R;
+        Y = H + T - P,
+        W = R - A - P;
     return (0, r.jsxs)('svg', {
         className: y.mask,
-        viewBox: '0 0 '.concat(C, ' ').concat(P),
+        viewBox: '0 0 '.concat(C, ' ').concat(R),
         style: {
             minWidth: C,
-            minHeight: P
+            minHeight: R
         },
         children: [
             (0, r.jsxs)('mask', {
@@ -157,8 +157,8 @@ function C(e) {
                         onMouseMove: () => k(!0),
                         onMouseLeave: () => k(!1),
                         style: {
-                            height: P,
-                            minHeight: P,
+                            height: R,
+                            minHeight: R,
                             backgroundImage: null != U ? 'url('.concat(U, ')') : void 0,
                             backgroundColor: 'COMPLETE' !== G ? c.Z.unsafe_rawColors.PRIMARY_800.css : Z
                         },
@@ -169,7 +169,7 @@ function C(e) {
         ]
     });
 }
-function P(e) {
+function R(e) {
     var { themeType: t, displayProfile: n, canUsePremiumProfileCustomization: i = !1 } = e,
         a = T(e, ['themeType', 'displayProfile', 'canUsePremiumProfileCustomization']);
     let o = b.q[t],

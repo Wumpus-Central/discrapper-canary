@@ -1,12 +1,12 @@
 n.d(t, {
-    NE: () => R,
+    NE: () => P,
     QN: () => A,
     Qf: () => w,
     RV: () => C,
     TY: () => D,
     pQ: () => N,
     te: () => S,
-    z7: () => P
+    z7: () => R
 }),
     n(539854),
     n(388685);
@@ -180,7 +180,7 @@ let v = (e) => {
             })
         );
     },
-    P = (e) => {
+    R = (e) => {
         let { guildId: t, channelId: n, analyticsLocations: i, action: a, display: o, activity: s, stream: l, entry: c, outbox: d, voiceChannelId: f } = e;
         u.default.track(
             m.rMx.USER_PROFILE_ACTIVITY_ACTION,
@@ -213,7 +213,7 @@ let v = (e) => {
             })
         );
     },
-    R = (e) => {
+    P = (e) => {
         let { guildId: t, channelId: n, analyticsLocations: i, badge: a } = e;
         u.default.track(
             m.rMx.USER_PROFILE_BADGE_PRESSED,

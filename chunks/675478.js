@@ -1,11 +1,11 @@
 n.d(t, {
     BU: () => D,
     Bn: () => x,
-    DZ: () => P,
+    DZ: () => R,
     PS: () => w,
     T6: () => A,
     Z1: () => U,
-    aj: () => R,
+    aj: () => P,
     bE: () => B,
     fy: () => b.fy,
     hW: () => C,
@@ -292,10 +292,10 @@ class N {
     }
 }
 let C = new N(l.o8, b.yP.PRELOADED_USER_SETTINGS),
-    P = new N(s.ji, b.yP.FRECENCY_AND_FAVORITES_SETTINGS),
-    R = {
+    R = new N(s.ji, b.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+    P = {
         [b.yP.PRELOADED_USER_SETTINGS]: C,
-        [b.yP.FRECENCY_AND_FAVORITES_SETTINGS]: P
+        [b.yP.FRECENCY_AND_FAVORITES_SETTINGS]: R
     };
 function w(e, t, n) {
     return C.updateAsync('guilds', (n) => (0, E.u0)(n, e, t), n);

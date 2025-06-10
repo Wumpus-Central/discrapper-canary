@@ -91,7 +91,7 @@ function A(e, t) {
 }
 let N = [8, 8, 8, 8],
     C = 40;
-function P(e) {
+function R(e) {
     var { icon: t, isSelected: n, onClick: i, listItemProps: a } = e,
         s = T(e, ['icon', 'isSelected', 'onClick', 'listItemProps']);
     return (0, r.jsx)(
@@ -106,11 +106,11 @@ function P(e) {
         })
     );
 }
-function R(e, t, n, i, a, o) {
+function P(e, t, n, i, a, o) {
     switch (e.categoryInfo.type) {
         case m.bg.FAVORITES:
             return (0, r.jsx)(
-                P,
+                R,
                 S(v({}, i), {
                     icon: c.r7p,
                     onClick: t,
@@ -121,7 +121,7 @@ function R(e, t, n, i, a, o) {
             );
         case m.bg.RECENTLY_HEARD:
             return (0, r.jsx)(
-                P,
+                R,
                 S(v({}, i), {
                     icon: c.T39,
                     onClick: t,
@@ -132,7 +132,7 @@ function R(e, t, n, i, a, o) {
             );
         case m.bg.FREQUENTLY_USED:
             return (0, r.jsx)(
-                P,
+                R,
                 S(v({}, i), {
                     icon: c.IeX,
                     onClick: t,
@@ -157,7 +157,7 @@ function R(e, t, n, i, a, o) {
             );
         case m.bg.DEFAULTS:
             return (0, r.jsx)(
-                P,
+                R,
                 S(v({}, i), {
                     icon: c.gw7,
                     onClick: t,
@@ -208,7 +208,7 @@ function L(e) {
         text: w(t),
         'aria-label': D(t),
         position: 'right',
-        children: (e) => R(t, i, a, e, l, o)
+        children: (e) => P(t, i, a, e, l, o)
     });
 }
 function x(e) {

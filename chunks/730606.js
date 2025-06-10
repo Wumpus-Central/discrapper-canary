@@ -1,6 +1,6 @@
 n.d(t, {
     Qk: () => N,
-    WG: () => R,
+    WG: () => P,
     ZP: () => w
 }),
     n(388685);
@@ -48,7 +48,7 @@ function N(e) {
 function C(e, t) {
     return ((e % t) + t) % t;
 }
-function P(e) {
+function R(e) {
     let { children: t, isObscured: n, src: a } = e,
         [s, c] = i.useState(!1),
         d = i.useCallback(() => {
@@ -76,7 +76,7 @@ function P(e) {
           })
         : (0, r.jsx)(r.Fragment, { children: t(!1) });
 }
-function R(e, t) {
+function P(e, t) {
     if ('IMAGE' === e.type) {
         if (!(0, m._H)(e)) return void (0, f.po)(e.url);
         N({
@@ -96,15 +96,15 @@ function w(e) {
         [f, _] = i.useState(a),
         p = i.useRef(a),
         { zoomed: m, setZoomed: N } = (0, E.Y)(),
-        R = i.useCallback(
+        P = i.useCallback(
             (e) => {
                 _((e = C(e, t.length))), (p.current = e), null == n || n(e), N(!1);
             },
             [n, t, N]
         );
     i.useEffect(() => {
-        let e = () => R(p.current + 1),
-            t = () => R(p.current - 1);
+        let e = () => P(p.current + 1),
+            t = () => P(p.current - 1);
         return (
             h.S.subscribe(S.CkL.MODAL_CAROUSEL_NEXT, e),
             h.S.subscribe(S.CkL.MODAL_CAROUSEL_PREV, t),
@@ -112,7 +112,7 @@ function w(e) {
                 h.S.unsubscribe(S.CkL.MODAL_CAROUSEL_NEXT, e), h.S.unsubscribe(S.CkL.MODAL_CAROUSEL_PREV, t);
             }
         );
-    }, [R, N]);
+    }, [P, N]);
     let w = t[f],
         D = (0, d.g4)(
             {
@@ -158,7 +158,7 @@ function w(e) {
                 items: t,
                 currentIndex: f,
                 children: (e, t) =>
-                    (0, r.jsx)(P, {
+                    (0, r.jsx)(R, {
                         isObscured: !m && D,
                         src: w.url,
                         children: (n) =>
@@ -177,7 +177,7 @@ function w(e) {
                         (0, r.jsx)(O.Z, {
                             items: t,
                             currentIndex: f,
-                            onGalleryItemClick: R,
+                            onGalleryItemClick: P,
                             className: e
                         })
                 })

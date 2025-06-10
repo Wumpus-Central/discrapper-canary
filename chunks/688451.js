@@ -73,7 +73,7 @@ function p(e) {
 }
 function h(e) {
     if (Array.isArray(e)) return Array.prototype.slice.call(e);
-    var t = Q(e);
+    var t = X(e);
     delete t[W];
     for (var n = q(t), r = 0; r < n.length; r++) {
         var i = n[r],
@@ -115,11 +115,11 @@ function E(e) {
     return null == e || 'object' != typeof e || Object.isFrozen(e);
 }
 function b(e) {
-    var t = X[e];
+    var t = Q[e];
     return t || r(18, e), t;
 }
 function y(e, t) {
-    X[e] || (X[e] = t);
+    Q[e] || (Q[e] = t);
 }
 function O() {
     return G;
@@ -150,7 +150,7 @@ function N(e, t) {
     t._ = t.p.length;
     var n = t.p[0],
         i = void 0 !== e && e !== n;
-    return t.h.O || b('ES5').S(t, e, i), i ? (n[W].P && (I(t), r(4)), a(e) && ((e = C(t, e)), t.l || R(t, e)), t.u && b('Patches').M(n[W].t, e, t.u, t.s)) : (e = C(t, n, [])), I(t), t.u && t.v(t.u, t.s), e !== H ? e : void 0;
+    return t.h.O || b('ES5').S(t, e, i), i ? (n[W].P && (I(t), r(4)), a(e) && ((e = C(t, e)), t.l || P(t, e)), t.u && b('Patches').M(n[W].t, e, t.u, t.s)) : (e = C(t, n, [])), I(t), t.u && t.v(t.u, t.s), e !== H ? e : void 0;
 }
 function C(e, t, n) {
     if (E(t)) return t;
@@ -160,14 +160,14 @@ function C(e, t, n) {
             o(
                 t,
                 function (i, a) {
-                    return P(e, r, t, i, a, n);
+                    return R(e, r, t, i, a, n);
                 },
                 !0
             ),
             t
         );
     if (r.A !== e) return t;
-    if (!r.P) return R(e, r.t, !0), r.t;
+    if (!r.P) return P(e, r.t, !0), r.t;
     if (!r.I) {
         (r.I = !0), r.A._--;
         var i = 4 === r.i || 5 === r.i ? (r.o = h(r.k)) : r.o,
@@ -175,14 +175,14 @@ function C(e, t, n) {
             s = !1;
         3 === r.i && ((a = new Set(i)), i.clear(), (s = !0)),
             o(a, function (t, a) {
-                return P(e, r, i, t, a, n, s);
+                return R(e, r, i, t, a, n, s);
             }),
-            R(e, i, !1),
+            P(e, i, !1),
             n && e.u && b('Patches').N(r, n, e.u, e.s);
     }
     return r.o;
 }
-function P(e, t, n, r, o, s, c) {
+function R(e, t, n, r, o, s, c) {
     if (i(o)) {
         var d = C(e, o, s && t && 3 !== t.i && !l(t.R, r) ? s.concat(r) : void 0);
         if ((u(n, r, d), !i(d))) return;
@@ -190,10 +190,10 @@ function P(e, t, n, r, o, s, c) {
     } else c && n.add(o);
     if (a(o) && !E(o)) {
         if (!e.h.D && e._ < 1) return;
-        C(e, o), (t && t.A.l) || R(e, o);
+        C(e, o), (t && t.A.l) || P(e, o);
     }
 }
-function R(e, t, n) {
+function P(e, t, n) {
     void 0 === n && (n = !1), !e.l && e.h.D && e.m && m(t, n);
 }
 function w(e, t) {
@@ -301,7 +301,7 @@ var U,
                     return Object.getOwnPropertyNames(e).concat(Object.getOwnPropertySymbols(e));
                 }
               : Object.getOwnPropertyNames,
-    Q =
+    X =
         Object.getOwnPropertyDescriptors ||
         function (e) {
             var t = {};
@@ -312,7 +312,7 @@ var U,
                 t
             );
         },
-    X = {},
+    Q = {},
     J = {
         get: function (e, t) {
             if (t === W) return e;

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => G }), n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(386230),
+    a = n(524979),
     o = n(442837),
     s = n(481060),
     l = n(727637),
@@ -25,8 +25,8 @@ var r = n(255367),
     A = n(481932),
     N = n(195387),
     C = n(664794),
-    P = n(4517),
-    R = n(978395),
+    R = n(4517),
+    P = n(978395),
     w = n(161572),
     D = n(228168),
     L = n(388032),
@@ -94,9 +94,9 @@ function G(e) {
             messageId: G,
             roleId: B
         }),
-        Q = (0, o.e7)([h.Z], () => (null != k ? h.Z.getGuild(k) : null)),
-        X = i.useMemo(() => (null != k ? { [k]: [t.id] } : {}), [k, t.id]);
-    (0, c.$)(X);
+        X = (0, o.e7)([h.Z], () => (null != k ? h.Z.getGuild(k) : null)),
+        Q = i.useMemo(() => (null != k ? { [k]: [t.id] } : {}), [k, t.id]);
+    (0, c.$)(Q);
     let J = i.useRef(null),
         $ = (0, E.ZP)(t.id, k),
         ee = (0, l.Z)(J),
@@ -219,7 +219,7 @@ function G(e) {
                                             themeType: D.lY.POPOUT,
                                             onOpenProfile: H ? void 0 : ea
                                         }),
-                                        (0, r.jsx)(P.Z, {
+                                        (0, r.jsx)(R.Z, {
                                             location: 'UserProfilePopout',
                                             user: t,
                                             guildId: k,
@@ -230,11 +230,11 @@ function G(e) {
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)(R.Z, {
+                                (0, r.jsx)(P.Z, {
                                     user: t,
                                     currentUser: n,
                                     displayProfile: $,
-                                    guild: Q,
+                                    guild: X,
                                     isHovering: null == et.interactionType && ee,
                                     onOpenProfile: H ? void 0 : ea,
                                     channelId: j,

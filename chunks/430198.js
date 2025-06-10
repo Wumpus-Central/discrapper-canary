@@ -100,11 +100,11 @@ function N(e, t) {
 function C() {
     (O = {}), v.clear();
 }
-function P(e) {
+function R(e) {
     let { guild: t } = e;
     delete O[t.id];
 }
-function R(e) {
+function P(e) {
     let { guildId: t } = e;
     delete O[t];
 }
@@ -150,14 +150,14 @@ let M = new k(o.Z, {
     CONNECTION_OPEN: C,
     OVERLAY_INITIALIZE: C,
     CACHE_LOADED_LAZY: C,
-    GUILD_CREATE: P,
-    GUILD_UPDATE: P,
-    GUILD_DELETE: P,
-    GUILD_ROLE_CREATE: R,
-    GUILD_ROLE_UPDATE: R,
-    GUILD_ROLE_DELETE: R,
-    IMPERSONATE_UPDATE: R,
-    IMPERSONATE_STOP: R,
+    GUILD_CREATE: R,
+    GUILD_UPDATE: R,
+    GUILD_DELETE: R,
+    GUILD_ROLE_CREATE: P,
+    GUILD_ROLE_UPDATE: P,
+    GUILD_ROLE_DELETE: P,
+    IMPERSONATE_UPDATE: P,
+    IMPERSONATE_STOP: P,
     CHANNEL_CREATE: w,
     CHANNEL_DELETE: w,
     CHANNEL_UPDATES: D,

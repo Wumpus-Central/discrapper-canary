@@ -12,8 +12,8 @@ n.d(t, {
     ic: () => E,
     pX: () => v,
     sq: () => p,
-    tV: () => R,
-    uu: () => P,
+    tV: () => P,
+    uu: () => R,
     wk: () => C,
     zd: () => O
 });
@@ -283,7 +283,7 @@ function C(e, t) {
             { onSubmit: t }
         );
 }
-function P(e) {
+function R(e) {
     let { application: t, entrypoint: n, contextualGuildId: i, contextualChannelId: a, onSubmit: o, appContext: s } = e;
     r.ZP.trackWithMetadata(d.rMx.REPORT_APPLICATION_CLICKED, {
         application_id: t.id,
@@ -309,7 +309,7 @@ function P(e) {
             }
         );
 }
-function R(e, t) {
+function P(e, t) {
     (0, u.m)(
         {
             name: l.xw.MESSAGE,

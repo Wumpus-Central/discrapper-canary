@@ -43,8 +43,8 @@ var r,
     A = n(367790),
     N = n(895924),
     C = n(581364),
-    P = n(807169),
-    R = n(104793),
+    R = n(807169),
+    P = n(104793),
     w = n(689079),
     D = n(981631);
 function L(e, t, n) {
@@ -161,12 +161,12 @@ function q(e, t) {
         a
     );
 }
-function Q(e) {
+function X(e) {
     let t = z(e),
         n = ep.indices[t];
     (null == n ? void 0 : n.fetchState.fetching) && n.fetchState.abort.abort(), delete ep.indices[t];
 }
-function X() {
+function Q() {
     for (let e of Object.values(ep.indices)) e.fetchState.fetching && e.fetchState.abort.abort();
     ep.indices = {};
 }
@@ -229,7 +229,7 @@ function er(e) {
             null != t ? (e.bot = t) : c.add(e.bot_id);
         } else null != e.bot && (l[e.bot.id] = e.id);
         let t = {
-            descriptor: M(x({}, (0, C.X0)(eR(e))), {
+            descriptor: M(x({}, (0, C.X0)(eP(e))), {
                 permissions: null != e.permissions ? (0, _.tk)(ex(e.permissions, o)) : void 0,
                 botId: e.bot_id
             }),
@@ -351,14 +351,14 @@ function es(e) {
 }
 function el(e) {
     let { channel: t } = e;
-    Q({
+    X({
         type: 'channel',
         channelId: t.id
     });
 }
 function ec(e) {
     let { guild: t } = e;
-    Q({
+    X({
         type: 'guild',
         guildId: t.id
     });
@@ -376,7 +376,7 @@ function ef() {
     let e = p.default.locale;
     return (
         e !== ep.oldLocale &&
-        (X(),
+        (Q(),
         (ep.collator = new Intl.Collator(e, {
             sensitivity: 'accent',
             numeric: !0
@@ -433,7 +433,7 @@ class e_ extends (r = l.ZP.Store) {
             a = this.getUserState(),
             o = this.getApplicationState(n.applicationId),
             s = this.getApplicationStates(),
-            l = (0, P.k)(r, t.commandTypes),
+            l = (0, R.k)(r, t.commandTypes),
             c = null == r || (null == l ? void 0 : l.hasBaseAccessPermissions) === !0,
             u = !1 !== t.applicationCommands,
             d = !1;
@@ -507,7 +507,7 @@ class e_ extends (r = l.ZP.Store) {
 }
 L(e_, 'displayName', 'ApplicationCommandIndexStore');
 let ep = new e_(c.Z, {
-        LOGOUT: X,
+        LOGOUT: Q,
         CONNECTION_OPEN: $,
         APPLICATION_COMMAND_INDEX_FETCH_REQUEST: ee,
         APPLICATION_COMMAND_INDEX_FETCH_SUCCESS: er,
@@ -671,7 +671,7 @@ let eI = Object.freeze({
 });
 function eS(e, t, n) {
     let r = 'channel' === e.type ? e.channel : void 0,
-        a = (0, P.Hs)(r, t.commandTypes),
+        a = (0, R.Hs)(r, t.commandTypes),
         o = !1 !== t.applicationCommands,
         s = em(e, o, n.allowFetch),
         l = eE(o, n.allowFetch),
@@ -704,14 +704,14 @@ function eT(e) {
     let { permissionContext: c, contextState: u, userState: d, applicationStates: _, text: p, builtIns: m = A.D.ALLOW, allowApplicationCommands: g = !0, singleApplicationId: b, allowEmptySections: y = !1, scoreMethod: O = A.p.NONE, sortOptions: I = eI, installOnDemand: T = !1 } = e,
         { commandTypes: N } = c,
         C = null == p ? void 0 : p.toLowerCase(),
-        P = null == C ? void 0 : C.split(' '),
-        R = m === A.D.ONLY_TEXT,
-        D = m !== A.D.DENY ? (0, v.Kh)(N, !0, R) : [],
+        R = null == C ? void 0 : C.split(' '),
+        P = m === A.D.ONLY_TEXT,
+        D = m !== A.D.DENY ? (0, v.Kh)(N, !0, P) : [],
         L = [],
         k = {
             permissionContext: c,
             query: C,
-            splitQuery: P,
+            splitQuery: R,
             allowEmptySections: y,
             scoreMethod: O,
             installOnDemand: T
@@ -818,17 +818,17 @@ function eA(e, t, n, r, i) {
     let a,
         { query: o, splitQuery: s, allowEmptySections: l, scoreMethod: c, permissionContext: u, installOnDemand: d } = i,
         { context: f, userId: _, roleIds: p, isImpersonating: h } = u,
-        m = (null == f ? void 0 : f.guild_id) != null ? R.ML(e.permissions, f.guild_id, _, p, h) : null,
-        g = (null == f ? void 0 : f.guild_id) != null ? R.ZJ(e.permissions, f, f.guild_id) : null,
+        m = (null == f ? void 0 : f.guild_id) != null ? P.ML(e.permissions, f.guild_id, _, p, h) : null,
+        g = (null == f ? void 0 : f.guild_id) != null ? P.ZJ(e.permissions, f, f.guild_id) : null,
         E = [];
     for (let i of t)
-        R.Ft(i, u, {
+        P.Ft(i, u, {
             applicationAllowedForUser: m,
             applicationAllowedForChannel: g,
             commandBotId: e.botId,
             isGuildInstalled: n,
             isUserInstalled: r || d
-        }) === R.mF.ALLOWED && E.push(i);
+        }) === P.mF.ALLOWED && E.push(i);
     return 0 !== (a = c !== A.p.NONE && null != o && null != s ? ek(o, s, E, e, c) : E).length || l
         ? ((c === A.p.NONE || c === A.p.APPLICATION_ONLY) && a.sort((e, t) => ej(e.displayName, t.displayName)),
           {
@@ -842,13 +842,13 @@ function eN(e) {
     return (null == e ? void 0 : e.guild_id) != null || (e.type === D.d4z.DM && (null == (t = b.default.getUser(e.getRecipientId())) ? void 0 : t.bot) === !0);
 }
 function eC(e) {
-    return !!eP(e) && !e.fetchState.fetching && (null == e.fetchState.retryAfter || Date.now() >= e.fetchState.retryAfter);
+    return !!eR(e) && !e.fetchState.fetching && (null == e.fetchState.retryAfter || Date.now() >= e.fetchState.retryAfter);
 }
-function eP(e) {
+function eR(e) {
     var t;
     return (null == (t = e.result) ? void 0 : t.version) !== e.serverVersion;
 }
-function eR(e) {
+function eP(e) {
     return {
         description: e.description,
         icon: e.icon,

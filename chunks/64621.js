@@ -25,17 +25,17 @@ function T(e) {
     let { sourceType: t, children: n, user: T, targetElementRef: A } = e,
         { themeType: N } = (0, h.z)(),
         C = (0, p.T)({ location: 'UserProfilePopoutInteractionCoachmark' }),
-        P = (0, a.e7)([_.default], () => {
+        R = (0, a.e7)([_.default], () => {
             var e;
             return (null == (e = _.default.getCurrentUser()) ? void 0 : e.id) === T.id;
         }),
-        R = (0, a.e7)([f.Z], () =>
+        P = (0, a.e7)([f.Z], () =>
             f.Z.findActivity(T.id, (e) => {
                 let { type: t } = e;
                 return t === g.IIU.CUSTOM_STATUS;
             })
         ),
-        w = () => !P && N === m.lY.POPOUT && (t === m.n_.AVATAR ? C && null == R : t === m.n_.STATUS ? C : t === m.n_.ACTIVITY && !C),
+        w = () => !R && N === m.lY.POPOUT && (t === m.n_.AVATAR ? C && null == P : t === m.n_.STATUS ? C : t === m.n_.ACTIVITY && !C),
         [D, L] = i.useState(!1);
     (0, l.Z)(() => L(!0), w() ? v : null);
     let {

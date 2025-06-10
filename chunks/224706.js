@@ -25,8 +25,8 @@ var r = n(664751),
     A = n(981631),
     N = n(701488),
     C = n(388032);
-let P = 3,
-    R = 20;
+let R = 3,
+    P = 20;
 function w(e) {
     let { applicationId: t, secret: n, channelId: r, intent: i = N.Ws.PLAY, embedded: a = !1, source: o, locationObject: s, analyticsLocations: c } = e;
     x({
@@ -243,7 +243,7 @@ let k = {
                 });
             }
         };
-        for (; n.length > 0; ) r(n.splice(0, R));
+        for (; n.length > 0; ) r(n.splice(0, P));
     },
     getDetectableGames() {
         if (!h.Z.canFetchDetectableGames()) return;
@@ -305,7 +305,7 @@ let k = {
                         distributor_application: D(i, a),
                         executable: c,
                         publisher: r,
-                        report_version: P
+                        report_version: R
                     },
                     retries: 1,
                     oldFormErrors: !0,

@@ -82,11 +82,11 @@ function g(e, t) {
 }
 let E = function (e) {
     var t,
-        { ref: n, avatar: a, name: f, nameplate: p, children: g, subText: E, decorators: b, onClick: y, hovered: O, selected: v, muted: I, to: S, avatarClassName: T, selectedClassName: A, innerClassName: N, wrapContent: C, highlighted: P, focusProps: R } = e,
+        { ref: n, avatar: a, name: f, nameplate: p, children: g, subText: E, decorators: b, onClick: y, hovered: O, selected: v, muted: I, to: S, avatarClassName: T, selectedClassName: A, innerClassName: N, wrapContent: C, highlighted: R, focusProps: P } = e,
         w = m(e, ['ref', 'avatar', 'name', 'nameplate', 'children', 'subText', 'decorators', 'onClick', 'hovered', 'selected', 'muted', 'to', 'avatarClassName', 'selectedClassName', 'innerClassName', 'wrapContent', 'highlighted', 'focusProps']);
     (w.className = o()(w.className, d.container, {
         [d.selected]: v,
-        [d.highlighted]: P,
+        [d.highlighted]: R,
         [null != A ? A : '']: v,
         [d.clickable]: !v && (null != S || null != y)
     })),
@@ -147,7 +147,7 @@ let E = function (e) {
     return null != S
         ? (0, r.jsx)(
               l.tEY,
-              h(_({}, R), {
+              h(_({}, P), {
                   children: (0, r.jsx)(
                       s.rU,
                       h(
@@ -174,7 +174,7 @@ let E = function (e) {
                     _(
                         {
                             onClick: y,
-                            focusProps: R
+                            focusProps: P
                         },
                         w
                     ),
@@ -187,7 +187,7 @@ let E = function (e) {
             )
           : (0, r.jsx)(
                 l.tEY,
-                h(_({}, R), {
+                h(_({}, P), {
                     children: (0, r.jsx)(
                         'div',
                         h(_({}, w), {

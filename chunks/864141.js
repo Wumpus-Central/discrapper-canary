@@ -53,7 +53,7 @@ function C(e) {
     }
     return e;
 }
-function P(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,19 +65,19 @@ function P(e, t) {
     }
     return n;
 }
-function R(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function w(e) {
-    let { user: t, currentUser: n, voiceChannel: i, className: N, onClose: P } = e,
+    let { user: t, currentUser: n, voiceChannel: i, className: N, onClose: R } = e,
         { themeType: w } = (0, m.z)(),
         { analyticsLocations: D } = (0, c.ZP)(l.Z.USER_PROFILE_VOICE_ACTIVITY_CARD),
         L = (0, p.Z)({
@@ -100,7 +100,7 @@ function w(e) {
             let e = i.isDM() || i.isGroupDM() ? T.intl.string(T.t['+DsWbW']) : T.intl.string(T.t.xOVEjY);
             return (0, r.jsx)(s.ua7, {
                 text: e,
-                children: (e) => (0, r.jsx)(s.d3s, R(C({}, e), { size: 'xxs' }))
+                children: (e) => (0, r.jsx)(s.d3s, P(C({}, e), { size: 'xxs' }))
             });
         },
         B = () =>
@@ -109,7 +109,7 @@ function w(e) {
                 children: (0, r.jsx)(v.Z, {
                     channel: i,
                     onAction: L,
-                    onClose: P
+                    onClose: R
                 })
             }),
         F = i.isDM() || i.isGroupDM() ? T.intl.string(T.t['9FaEzs']) : i.isGuildStageVoice() ? T.intl.string(T.t.QygGCA) : T.intl.string(T.t.msxteH);
@@ -119,7 +119,7 @@ function w(e) {
             ref: x,
             className: a()(A.card, N),
             onAction: L,
-            onClose: P,
+            onClose: R,
             'aria-label': ''.concat(F, ', ').concat(j),
             children: [
                 (0, r.jsx)(E.Z, {
@@ -128,7 +128,7 @@ function w(e) {
                     contextMenu: (0, r.jsx)(I.Z, {
                         display: 'voice',
                         user: t,
-                        onClose: P
+                        onClose: R
                     })
                 }),
                 (0, r.jsx)('div', {
@@ -147,14 +147,14 @@ function w(e) {
                                         channel: i,
                                         guild: k,
                                         onAction: L,
-                                        onClose: P
+                                        onClose: R
                                     }),
                                     U &&
                                         i.isGuildVoice() &&
                                         (0, r.jsx)(O.Z, {
                                             voiceChannel: i,
                                             onAction: L,
-                                            onClose: P
+                                            onClose: R
                                         }),
                                     w === S.lY.MODAL_V2 && B()
                                 ]

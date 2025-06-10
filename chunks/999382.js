@@ -16,8 +16,8 @@ var _,
     A = n(758449),
     N = n(598077),
     C = n(430824),
-    P = n(594174),
-    R = n(709054),
+    R = n(594174),
+    P = n(709054),
     w = n(372454),
     D = n(330010),
     L = n(621319),
@@ -85,8 +85,8 @@ let V = !0,
     K = k.QZA.CLOSED,
     z = {},
     q = null,
-    Q = !1,
     X = !1,
+    Q = !1,
     J = !1,
     $ = null,
     ee = null,
@@ -130,12 +130,12 @@ function em(e) {
     let p = I.Z.getProfile(n);
     (o = s = _),
         (l = c = p),
-        (J = X),
+        (J = Q),
         (ee = $),
         (K = k.QZA.OPEN),
         (z = {}),
         (q = null),
-        (u = R.default.castGuildIdAsEveryoneGuildRoleId(n)),
+        (u = P.default.castGuildIdAsEveryoneGuildRoleId(n)),
         (er = s.mfaLevel),
         (el = es),
         (f = null),
@@ -146,7 +146,7 @@ function em(e) {
         });
 }
 function eg() {
-    (W = !1), (K = k.QZA.CLOSED), (o = s = null), (Q = !1), (J = !1), (ee = null), (et = null), (en = 0), (ec = null), (ef = null), (e_ = null), (r = null), (i = null), (a = null), (er = k.BpS.NONE), (d = void 0);
+    (W = !1), (K = k.QZA.CLOSED), (o = s = null), (X = !1), (J = !1), (ee = null), (et = null), (en = 0), (ec = null), (ef = null), (e_ = null), (r = null), (i = null), (a = null), (er = k.BpS.NONE), (d = void 0);
 }
 function eE(e) {
     let { state: t } = e;
@@ -245,10 +245,10 @@ function eC(e) {
         flags: e.flags
     });
 }
-function eP(e) {
+function eR(e) {
     ef = e.invites.reduce((e, t) => ((e[t.code] = eC(t)), e), {});
 }
-function eR(e) {
+function eP(e) {
     (ef = G({}, ef)), delete ef[e.code];
 }
 function ew(e) {
@@ -317,7 +317,7 @@ function eF(e) {
     u === n && (u = null);
 }
 function eV(e) {
-    (Q = !0), (X = J = e.enabled), ($ = ee = e.channelId);
+    (X = !0), (Q = J = e.enabled), ($ = ee = e.channelId);
 }
 function eZ(e) {
     let { guildId: t, enabled: n, channelId: r } = e;
@@ -363,11 +363,11 @@ function ez(e) {
 function eq() {
     es = el = ea;
 }
-function eQ(e) {
+function eX(e) {
     let { slug: t } = e;
     f = t;
 }
-function eX(e) {
+function eQ(e) {
     let {} = e;
     f = null;
 }
@@ -437,13 +437,13 @@ function e8(e) {
 }
 class e7 extends (_ = E.ZP.Store) {
     initialize() {
-        this.waitFor(C.Z, I.Z, P.default);
+        this.waitFor(C.Z, I.Z, R.default);
     }
     getMetadata() {
         return el;
     }
     widgetHasChanges() {
-        return !1 !== Q && (J !== X || ee !== $);
+        return !1 !== X && (J !== Q || ee !== $);
     }
     hasChanges() {
         return !h().isEqual(s, o) || !h().isEqual(el, es) || !h().isEqual(c, l) || this.widgetHasChanges();
@@ -515,7 +515,7 @@ class e7 extends (_ = E.ZP.Store) {
             bansVersion: eu,
             invites: ef,
             selectedRoleId: u,
-            fetchedEmbed: Q,
+            fetchedEmbed: X,
             embedEnabled: J,
             embedChannelId: ee,
             mfaLevel: er,
@@ -552,7 +552,7 @@ let e9 = new e7(
               GUILD_SETTINGS_SET_SEARCH_QUERY: ey,
               GUILD_SETTINGS_LOADED_BANS: eD,
               GUILD_SETTINGS_LOADED_BANS_BATCH: eL,
-              GUILD_SETTINGS_LOADED_INVITES: eP,
+              GUILD_SETTINGS_LOADED_INVITES: eR,
               GUILD_SETTINGS_SET_WIDGET: eV,
               GUILD_SETTINGS_SET_VANITY_URL: eH,
               GUILD_SETTINGS_SET_MFA_SUCCESS: eY,
@@ -574,7 +574,7 @@ let e9 = new e7(
               GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: e6,
               USER_CONNECTIONS_UPDATE: eK,
               GUILD_INTEGRATIONS_UPDATE: eK,
-              INSTANT_INVITE_REVOKE_SUCCESS: eR,
+              INSTANT_INVITE_REVOKE_SUCCESS: eP,
               INSTANT_INVITE_CREATE_SUCCESS: ew,
               GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER: ez,
               GUILD_DISCOVERY_METADATA_FETCH_FAIL: eq,
@@ -583,8 +583,8 @@ let e9 = new e7(
               GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL: e0,
               GUILD_UPDATE_DISCOVERY_METADATA: e1,
               GUILD_UPDATE_DISCOVERY_METADATA_FAIL: e2,
-              GUILD_DISCOVERY_SLUG_FETCH_SUCCESS: eQ,
-              GUILD_DISCOVERY_SLUG_FETCH_FAIL: eX,
+              GUILD_DISCOVERY_SLUG_FETCH_SUCCESS: eX,
+              GUILD_DISCOVERY_SLUG_FETCH_FAIL: eQ,
               GUILD_SETTINGS_WIDGET_UPDATE: eZ
           }
 );

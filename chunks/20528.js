@@ -52,8 +52,8 @@ let T = (0, r.debounce)(o.xc, 1000),
     A = {},
     N = {},
     C = 3 * b.Z.Millis.MINUTE,
-    P = 5 * b.Z.Millis.SECOND,
-    R = 12 * b.Z.Millis.SECOND,
+    R = 5 * b.Z.Millis.SECOND,
+    P = 12 * b.Z.Millis.SECOND,
     w = null;
 function D(e) {
     var t;
@@ -81,7 +81,7 @@ function M(e, t) {
     if (g.Z.getAllActiveStreamKeys().includes(e)) return;
     let r = null != (n = N[e]) ? n : new i.V7();
     (N[e] = r),
-        r.start(t ? R : P, () => {
+        r.start(t ? P : R, () => {
             a.Z.dispatch({
                 type: 'STREAM_TIMED_OUT',
                 streamKey: e

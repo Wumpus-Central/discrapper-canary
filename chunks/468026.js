@@ -18,8 +18,8 @@ let m = (e) => {
         n,
         i,
         { body: m, cancelText: g, className: E, confirmColor: b, confirmText: y = p.intl.string(p.t.BddRzc), secondaryConfirmText: O, onCancel: v, onClose: I, onConfirm: S, onConfirmSecondary: T, title: A, transitionState: N, titleClassName: C } = e,
-        P = (0, _.Q3)('ConfirmModal'),
-        R = P ? o.zx.Sizes.MEDIUM : o.zx.Sizes.LARGE,
+        R = (0, _.Q3)('ConfirmModal'),
+        P = R ? o.zx.Sizes.MEDIUM : o.zx.Sizes.LARGE,
         w = () => {
             null == I || I(), null == v || v();
         },
@@ -34,7 +34,7 @@ let m = (e) => {
             '' !== g &&
             (t = (0, r.jsx)(o.zx, {
                 type: 'button',
-                size: R,
+                size: P,
                 color: o.zx.Colors.PRIMARY,
                 onClick: w,
                 className: h.secondaryButton,
@@ -45,7 +45,7 @@ let m = (e) => {
             (n = (0, r.jsx)(o.zx, {
                 type: 'submit',
                 color: b,
-                size: R,
+                size: P,
                 className: a()(h.primaryButton, null != t ? h.gutter : null),
                 autoFocus: !0,
                 children: y
@@ -73,7 +73,7 @@ let m = (e) => {
                 children: [
                     (0, r.jsx)(c.xB, {
                         children:
-                            null != A && P
+                            null != A && R
                                 ? (0, r.jsx)(d.X6q, {
                                       variant: 'heading-lg/semibold',
                                       className: a()(h.title, C),
@@ -89,20 +89,20 @@ let m = (e) => {
                         className: h.modalContent,
                         children: (0, r.jsx)(f.Z, {
                             direction: f.Z.Direction.VERTICAL,
-                            justify: P ? f.Z.Justify.START : f.Z.Justify.CENTER,
+                            justify: R ? f.Z.Justify.START : f.Z.Justify.CENTER,
                             className: h.content,
                             children:
                                 null != m &&
                                 (0, r.jsx)(u.x, {
                                     variant: 'text-md/normal',
                                     className: h.body,
-                                    color: P ? 'header-secondary' : 'text-normal',
+                                    color: R ? 'header-secondary' : 'text-normal',
                                     children: m
                                 })
                         })
                     }),
                     (0, r.jsxs)(c.mz, {
-                        justify: P ? void 0 : f.Z.Justify.BETWEEN,
+                        justify: R ? void 0 : f.Z.Justify.BETWEEN,
                         wrap: f.Z.Wrap.WRAP,
                         children: [n, t, i]
                     })

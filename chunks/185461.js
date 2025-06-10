@@ -18,10 +18,10 @@ let s = _.n,
     I = 'Cancel',
     R = 'Send Bug Report',
     d = 'Confirm',
-    f = 'Report a Bug',
-    A = 'your.email@example.org',
-    p = 'Email',
-    N = "What's the bug? What did you expect?",
+    A = 'Report a Bug',
+    f = 'your.email@example.org',
+    N = 'Email',
+    p = "What's the bug? What did you expect?",
     T = 'Description',
     L = 'Your Name',
     h = 'Name',
@@ -49,8 +49,8 @@ let s = _.n,
                 });
         });
     },
-    m = 'undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__;
-function C(t, e) {
+    C = 'undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__;
+function m(t, e) {
     return {
         ...t,
         ...e,
@@ -104,7 +104,7 @@ let S = 'rgba(88, 74, 192, 1)',
         outline: '1px auto var(--accent-background)',
         interactiveFilter: 'brightness(95%)'
     },
-    b = {
+    G = {
         foreground: '#ebe6ef',
         background: '#29232f',
         accentForeground: 'white',
@@ -116,7 +116,7 @@ let S = 'rgba(88, 74, 192, 1)',
         outline: '1px auto var(--accent-background)',
         interactiveFilter: 'brightness(150%)'
     };
-function G(t) {
+function b(t) {
     return `
   --foreground: ${t.foreground};
   --background: ${t.background};
@@ -139,8 +139,8 @@ let w =
         isEmailRequired: S = !1,
         isNameRequired: w = !1,
         showEmail: M = !0,
-        showName: B = !0,
-        enableScreenshot: W = !0,
+        showName: W = !0,
+        enableScreenshot: B = !0,
         useSentryUser: Y = {
             email: 'email',
             name: 'username'
@@ -152,12 +152,12 @@ let w =
         addScreenshotButtonLabel: F = g,
         cancelButtonLabel: V = I,
         confirmButtonLabel: j = d,
-        emailLabel: X = p,
-        emailPlaceholder: $ = A,
-        formTitle: q = f,
+        emailLabel: X = N,
+        emailPlaceholder: $ = f,
+        formTitle: q = A,
         isRequiredLabel: z = D,
         messageLabel: J = T,
-        messagePlaceholder: Z = N,
+        messagePlaceholder: Z = p,
         nameLabel: Q = h,
         namePlaceholder: tt = L,
         removeScreenshotButtonLabel: te = P,
@@ -178,8 +178,8 @@ let w =
                 isEmailRequired: S,
                 isNameRequired: w,
                 showEmail: M,
-                showName: B,
-                enableScreenshot: W,
+                showName: W,
+                enableScreenshot: B,
                 useSentryUser: Y,
                 tags: H,
                 colorScheme: K,
@@ -233,10 +233,10 @@ let w =
 
   ${'system' !== t ? 'color-scheme: only light;' : ''}
 
-  ${G(
+  ${b(
       'dark' === t
           ? {
-                ...b,
+                ...G,
                 ...e
             }
           : {
@@ -251,8 +251,8 @@ ${
         ? `
 @media (prefers-color-scheme: dark) {
   :host {
-    ${G({
-        ...b,
+    ${b({
+        ...G,
         ...e
     })}
   }
@@ -275,12 +275,12 @@ ${
                 let i = ((a && a()) || (await t(n)))();
                 return _ && _.addIntegration(i), i;
             },
-            tf = async (t) => {
+            tA = async (t) => {
                 let r = t.enableScreenshot && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(l.userAgent) || (/Macintosh/i.test(l.userAgent) && l.maxTouchPoints && l.maxTouchPoints > 1)) && !!isSecureContext,
                     [n, _] = await Promise.all([td('FeedbackModal', e, 'feedbackModalIntegration'), r ? td('FeedbackScreenshot', a, 'feedbackScreenshotIntegration') : void 0]);
-                if (!n) throw (m && i.kg.error('[Feedback] Missing feedback modal integration. Try using `feedbackSyncIntegration` in your `Sentry.init`.'), Error('[Feedback] Missing feedback modal integration!'));
+                if (!n) throw (C && i.kg.error('[Feedback] Missing feedback modal integration. Try using `feedbackSyncIntegration` in your `Sentry.init`.'), Error('[Feedback] Missing feedback modal integration!'));
                 return (
-                    r && !_ && m && i.kg.error('[Feedback] Missing feedback screenshot integration. Proceeding without screenshots.'),
+                    r && !_ && C && i.kg.error('[Feedback] Missing feedback screenshot integration. Proceeding without screenshots.'),
                     n.createDialog({
                         options: t,
                         screenshotIntegration: r ? _ : void 0,
@@ -289,14 +289,14 @@ ${
                     })
                 );
             },
-            tA = (t, e = {}) => {
-                let a = C(tl, e),
+            tf = (t, e = {}) => {
+                let a = m(tl, e),
                     r = 'string' == typeof t ? E.querySelector(t) : 'function' == typeof t.addEventListener ? t : null;
-                if (!r) throw (m && i.kg.error('[Feedback] Unable to attach to target element'), Error('Unable to attach to target element'));
+                if (!r) throw (C && i.kg.error('[Feedback] Unable to attach to target element'), Error('Unable to attach to target element'));
                 let n = null,
                     _ = async () => {
                         n ||
-                            (n = await tf({
+                            (n = await tA({
                                 ...a,
                                 onFormClose: () => {
                                     n && n.close(), a.onFormClose && a.onFormClose();
@@ -314,8 +314,8 @@ ${
                 };
                 return tI.push(o), o;
             },
-            tp = (t = {}) => {
-                let e = C(tl, t),
+            tN = (t = {}) => {
+                let e = m(tl, t),
                     a = tR(e),
                     r = (function ({ triggerLabel: t, triggerAriaLabel: e, shadow: a }) {
                         let r = E.createElement('button');
@@ -434,7 +434,7 @@ ${
                         shadow: a
                     });
                 return (
-                    tA(r.el, {
+                    tf(r.el, {
                         ...e,
                         onFormOpen() {
                             r.hide();
@@ -452,14 +452,14 @@ ${
         return {
             name: 'Feedback',
             setupOnce() {
-                (0, c.j)() && tl.autoInject && ('loading' === E.readyState ? E.addEventListener('DOMContentLoaded', () => tp().appendToDom()) : tp().appendToDom());
+                (0, c.j)() && tl.autoInject && ('loading' === E.readyState ? E.addEventListener('DOMContentLoaded', () => tN().appendToDom()) : tN().appendToDom());
             },
-            attachTo: tA,
+            attachTo: tf,
             createWidget(t = {}) {
-                let e = tp(C(tl, t));
+                let e = tN(m(tl, t));
                 return e.appendToDom(), e;
             },
-            createForm: async (t = {}) => tf(C(tl, t)),
+            createForm: async (t = {}) => tA(m(tl, t)),
             remove() {
                 tu && (tu.parentElement && tu.parentElement.remove(), (tu = null)), tI.forEach((t) => t()), (tI = []);
             }
@@ -469,8 +469,8 @@ function M() {
     let t = (0, r.s3)();
     return t && t.getIntegrationByName('Feedback');
 }
-var B,
-    W,
+var W,
+    B,
     Y,
     H,
     K,
@@ -494,7 +494,7 @@ function z(t, e, a) {
         _,
         o = {};
     for (_ in e) 'key' == _ ? (r = e[_]) : 'ref' == _ ? (n = e[_]) : (o[_] = e[_]);
-    if ((arguments.length > 2 && (o.children = arguments.length > 3 ? B.call(arguments, 2) : a), 'function' == typeof t && null != t.defaultProps)) for (_ in t.defaultProps) void 0 === o[_] && (o[_] = t.defaultProps[_]);
+    if ((arguments.length > 2 && (o.children = arguments.length > 3 ? W.call(arguments, 2) : a), 'function' == typeof t && null != t.defaultProps)) for (_ in t.defaultProps) void 0 === o[_] && (o[_] = t.defaultProps[_]);
     return J(t, o, r, n, null);
 }
 function J(t, e, a, r, n) {
@@ -514,7 +514,7 @@ function J(t, e, a, r, n) {
         __i: -1,
         __u: 0
     };
-    return null == n && null != W.vnode && W.vnode(_), _;
+    return null == n && null != B.vnode && B.vnode(_), _;
 }
 function Z(t) {
     return t.children;
@@ -528,7 +528,7 @@ function tt(t, e) {
     return 'function' == typeof t.type ? tt(t) : null;
 }
 function te(t) {
-    ((!t.__d && (t.__d = !0) && H.push(t) && !ta.__r++) || K !== W.debounceRendering) && ((K = W.debounceRendering) || k)(ta);
+    ((!t.__d && (t.__d = !0) && H.push(t) && !ta.__r++) || K !== B.debounceRendering) && ((K = B.debounceRendering) || k)(ta);
 }
 function ta() {
     var t,
@@ -548,7 +548,7 @@ function ta() {
                     if (o)
                         return (
                             ((r = $({}, n)).__v = n.__v + 1),
-                            W.vnode && W.vnode(r),
+                            B.vnode && B.vnode(r),
                             tc(o, r, n, t.__n, void 0 !== o.ownerSVGElement, 32 & n.__u ? [_] : null, e, null == _ ? tt(n) : _, !!(32 & n.__u), a),
                             (r.__.__k[r.__i] = r),
                             (r.__d = void 0),
@@ -567,7 +567,7 @@ function ta() {
                             r
                         );
                 })(t, r, n) || e),
-            0 === a || H.length > a ? (ts(r, e, n), (n.length = r.length = 0), (e = void 0), H.sort(x)) : e && W.__c && W.__c(e, V));
+            0 === a || H.length > a ? (ts(r, e, n), (n.length = r.length = 0), (e = void 0), H.sort(x)) : e && B.__c && B.__c(e, V));
     e && ts(r, e, n), (ta.__r = 0);
 }
 function tr(t, e, a, r, n, _, o, i, c, s, E) {
@@ -576,8 +576,8 @@ function tr(t, e, a, r, n, _, o, i, c, s, E) {
         I,
         R,
         d,
-        f = (r && r.__k) || V,
-        A = e.length;
+        A = (r && r.__k) || V,
+        f = e.length;
     for (
         a.__d = c,
             (function (t, e, a) {
@@ -620,16 +620,16 @@ function tr(t, e, a, r, n, _, o, i, c, s, E) {
                           null == _ || null === _.__v ? (-1 == i && l--, 'function' != typeof n.type && (n.__u |= 65536)) : i !== o && (i === o + 1 ? l++ : i > o ? (E > c - o ? (l += i - o) : l--) : (l = i < o && i == o - 1 ? i - o : 0), i !== r + l && (n.__u |= 65536)))
                         : (_ = a[r]) && null == _.key && _.__e && (_.__e == t.__d && (t.__d = tt(_)), tl(_, _, !1), (a[r] = null), E--);
                 if (E) for (r = 0; r < s; r++) null != (_ = a[r]) && 0 == (131072 & _.__u) && (_.__e == t.__d && (t.__d = tt(_)), tl(_, _));
-            })(a, e, f),
+            })(a, e, A),
             c = a.__d,
             l = 0;
-        l < A;
+        l < f;
         l++
     )
         null != (I = a.__k[l]) &&
             'boolean' != typeof I &&
             'function' != typeof I &&
-            ((u = -1 === I.__i ? F : f[I.__i] || F),
+            ((u = -1 === I.__i ? F : A[I.__i] || F),
             (I.__i = l),
             tc(t, I, u, n, _, o, i, c, s, E),
             (R = I.__e),
@@ -682,11 +682,11 @@ function to(t) {
         if (t.t) {
             if (t.t <= e.u) return;
         } else t.t = Date.now();
-        return e(W.event ? W.event(t) : t);
+        return e(B.event ? B.event(t) : t);
     }
 }
 function ti(t) {
-    if (this.l) return this.l[t.type + !0](W.event ? W.event(t) : t);
+    if (this.l) return this.l[t.type + !0](B.event ? B.event(t) : t);
 }
 function tc(t, e, a, r, n, _, o, i, c, s) {
     var E,
@@ -695,10 +695,10 @@ function tc(t, e, a, r, n, _, o, i, c, s) {
         I,
         R,
         d,
-        f,
         A,
-        p,
+        f,
         N,
+        p,
         T,
         L,
         h,
@@ -706,14 +706,14 @@ function tc(t, e, a, r, n, _, o, i, c, s) {
         D,
         g = e.type;
     if (void 0 !== e.constructor) return null;
-    128 & a.__u && ((c = !!(32 & a.__u)), (_ = [(i = e.__e = a.__e)])), (E = W.__b) && E(e);
+    128 & a.__u && ((c = !!(32 & a.__u)), (_ = [(i = e.__e = a.__e)])), (E = B.__b) && E(e);
     e: if ('function' == typeof g)
         try {
-            if (((A = e.props), (p = (E = g.contextType) && r[E.__c]), (N = E ? (p ? p.props.value : E.__) : r), a.__c ? (f = (l = e.__c = a.__c).__ = l.__E) : ('prototype' in g && g.prototype.render ? (e.__c = l = new g(A, N)) : ((e.__c = l = new Q(A, N)), (l.constructor = g), (l.render = tu)), p && p.sub(l), (l.props = A), l.state || (l.state = {}), (l.context = N), (l.__n = r), (u = l.__d = !0), (l.__h = []), (l._sb = [])), null == l.__s && (l.__s = l.state), null != g.getDerivedStateFromProps && (l.__s == l.state && (l.__s = $({}, l.__s)), $(l.__s, g.getDerivedStateFromProps(A, l.__s))), (I = l.props), (R = l.state), (l.__v = e), u)) null == g.getDerivedStateFromProps && null != l.componentWillMount && l.componentWillMount(), null != l.componentDidMount && l.__h.push(l.componentDidMount);
+            if (((f = e.props), (N = (E = g.contextType) && r[E.__c]), (p = E ? (N ? N.props.value : E.__) : r), a.__c ? (A = (l = e.__c = a.__c).__ = l.__E) : ('prototype' in g && g.prototype.render ? (e.__c = l = new g(f, p)) : ((e.__c = l = new Q(f, p)), (l.constructor = g), (l.render = tu)), N && N.sub(l), (l.props = f), l.state || (l.state = {}), (l.context = p), (l.__n = r), (u = l.__d = !0), (l.__h = []), (l._sb = [])), null == l.__s && (l.__s = l.state), null != g.getDerivedStateFromProps && (l.__s == l.state && (l.__s = $({}, l.__s)), $(l.__s, g.getDerivedStateFromProps(f, l.__s))), (I = l.props), (R = l.state), (l.__v = e), u)) null == g.getDerivedStateFromProps && null != l.componentWillMount && l.componentWillMount(), null != l.componentDidMount && l.__h.push(l.componentDidMount);
             else {
-                if ((null == g.getDerivedStateFromProps && A !== I && null != l.componentWillReceiveProps && l.componentWillReceiveProps(A, N), !l.__e && ((null != l.shouldComponentUpdate && !1 === l.shouldComponentUpdate(A, l.__s, N)) || e.__v === a.__v))) {
+                if ((null == g.getDerivedStateFromProps && f !== I && null != l.componentWillReceiveProps && l.componentWillReceiveProps(f, p), !l.__e && ((null != l.shouldComponentUpdate && !1 === l.shouldComponentUpdate(f, l.__s, p)) || e.__v === a.__v))) {
                     for (
-                        e.__v !== a.__v && ((l.props = A), (l.state = l.__s), (l.__d = !1)),
+                        e.__v !== a.__v && ((l.props = f), (l.state = l.__s), (l.__d = !1)),
                             e.__e = a.__e,
                             e.__k = a.__k,
                             e.__k.forEach(function (t) {
@@ -727,21 +727,21 @@ function tc(t, e, a, r, n, _, o, i, c, s) {
                     (l._sb = []), l.__h.length && o.push(l);
                     break e;
                 }
-                null != l.componentWillUpdate && l.componentWillUpdate(A, l.__s, N),
+                null != l.componentWillUpdate && l.componentWillUpdate(f, l.__s, p),
                     null != l.componentDidUpdate &&
                         l.__h.push(function () {
                             l.componentDidUpdate(I, R, d);
                         });
             }
-            if (((l.context = N), (l.props = A), (l.__P = t), (l.__e = !1), (L = W.__r), (h = 0), 'prototype' in g && g.prototype.render)) {
+            if (((l.context = p), (l.props = f), (l.__P = t), (l.__e = !1), (L = B.__r), (h = 0), 'prototype' in g && g.prototype.render)) {
                 for (l.state = l.__s, l.__d = !1, L && L(e), E = l.render(l.props, l.state, l.context), O = 0; O < l._sb.length; O++) l.__h.push(l._sb[O]);
                 l._sb = [];
             } else
                 do (l.__d = !1), L && L(e), (E = l.render(l.props, l.state, l.context)), (l.state = l.__s);
                 while (l.__d && ++h < 25);
-            (l.state = l.__s), null != l.getChildContext && (r = $($({}, r), l.getChildContext())), u || null == l.getSnapshotBeforeUpdate || (d = l.getSnapshotBeforeUpdate(I, R)), tr(t, X((D = null != E && E.type === Z && null == E.key ? E.props.children : E)) ? D : [D], e, a, r, n, _, o, i, c, s), (l.base = e.__e), (e.__u &= -161), l.__h.length && o.push(l), f && (l.__E = l.__ = null);
+            (l.state = l.__s), null != l.getChildContext && (r = $($({}, r), l.getChildContext())), u || null == l.getSnapshotBeforeUpdate || (d = l.getSnapshotBeforeUpdate(I, R)), tr(t, X((D = null != E && E.type === Z && null == E.key ? E.props.children : E)) ? D : [D], e, a, r, n, _, o, i, c, s), (l.base = e.__e), (e.__u &= -161), l.__h.length && o.push(l), A && (l.__E = l.__ = null);
         } catch (t) {
-            (e.__v = null), c || null != _ ? ((e.__e = i), (e.__u |= c ? 160 : 32), (_[_.indexOf(i)] = null)) : ((e.__e = a.__e), (e.__k = a.__k)), W.__e(t, e, a);
+            (e.__v = null), c || null != _ ? ((e.__e = i), (e.__u |= c ? 160 : 32), (_[_.indexOf(i)] = null)) : ((e.__e = a.__e), (e.__k = a.__k)), B.__e(t, e, a);
         }
     else
         null == _ && e.__v === a.__v
@@ -754,36 +754,36 @@ function tc(t, e, a, r, n, _, o, i, c, s) {
                       I,
                       R,
                       d,
-                      f = a.props,
-                      A = e.props,
-                      p = e.type;
-                  if (('svg' === p && (n = !0), null != _)) {
+                      A = a.props,
+                      f = e.props,
+                      N = e.type;
+                  if (('svg' === N && (n = !0), null != _)) {
                       for (s = 0; s < _.length; s++)
-                          if ((I = _[s]) && 'setAttribute' in I == !!p && (p ? I.localName === p : 3 === I.nodeType)) {
+                          if ((I = _[s]) && 'setAttribute' in I == !!N && (N ? I.localName === N : 3 === I.nodeType)) {
                               (t = I), (_[s] = null);
                               break;
                           }
                   }
                   if (null == t) {
-                      if (null === p) return document.createTextNode(A);
-                      (t = n ? document.createElementNS('http://www.w3.org/2000/svg', p) : document.createElement(p, A.is && A)), (_ = null), (i = !1);
+                      if (null === N) return document.createTextNode(f);
+                      (t = n ? document.createElementNS('http://www.w3.org/2000/svg', N) : document.createElement(N, f.is && f)), (_ = null), (i = !1);
                   }
-                  if (null === p) f === A || (i && t.data === A) || (t.data = A);
+                  if (null === N) A === f || (i && t.data === f) || (t.data = f);
                   else {
-                      if (((_ = _ && B.call(t.childNodes)), (f = a.props || F), !i && null != _)) for (f = {}, s = 0; s < t.attributes.length; s++) f[(I = t.attributes[s]).name] = I.value;
-                      for (s in f) (I = f[s]), 'children' == s || ('dangerouslySetInnerHTML' == s ? (l = I) : 'key' === s || s in A || t_(t, s, null, I, n));
-                      for (s in A) (I = A[s]), 'children' == s ? (u = I) : 'dangerouslySetInnerHTML' == s ? (E = I) : 'value' == s ? (R = I) : 'checked' == s ? (d = I) : 'key' === s || (i && 'function' != typeof I) || f[s] === I || t_(t, s, I, f[s], n);
+                      if (((_ = _ && W.call(t.childNodes)), (A = a.props || F), !i && null != _)) for (A = {}, s = 0; s < t.attributes.length; s++) A[(I = t.attributes[s]).name] = I.value;
+                      for (s in A) (I = A[s]), 'children' == s || ('dangerouslySetInnerHTML' == s ? (l = I) : 'key' === s || s in f || t_(t, s, null, I, n));
+                      for (s in f) (I = f[s]), 'children' == s ? (u = I) : 'dangerouslySetInnerHTML' == s ? (E = I) : 'value' == s ? (R = I) : 'checked' == s ? (d = I) : 'key' === s || (i && 'function' != typeof I) || A[s] === I || t_(t, s, I, A[s], n);
                       if (E) i || (l && (E.__html === l.__html || E.__html === t.innerHTML)) || (t.innerHTML = E.__html), (e.__k = []);
-                      else if ((l && (t.innerHTML = ''), tr(t, X(u) ? u : [u], e, a, r, n && 'foreignObject' !== p, _, o, _ ? _[0] : a.__k && tt(a, 0), i, c), null != _)) for (s = _.length; s--; ) null != _[s] && q(_[s]);
-                      i || ((s = 'value'), void 0 === R || (R === t[s] && ('progress' !== p || R) && ('option' !== p || R === f[s])) || t_(t, s, R, f[s], !1), (s = 'checked'), void 0 !== d && d !== t[s] && t_(t, s, d, f[s], !1));
+                      else if ((l && (t.innerHTML = ''), tr(t, X(u) ? u : [u], e, a, r, n && 'foreignObject' !== N, _, o, _ ? _[0] : a.__k && tt(a, 0), i, c), null != _)) for (s = _.length; s--; ) null != _[s] && q(_[s]);
+                      i || ((s = 'value'), void 0 === R || (R === t[s] && ('progress' !== N || R) && ('option' !== N || R === A[s])) || t_(t, s, R, A[s], !1), (s = 'checked'), void 0 !== d && d !== t[s] && t_(t, s, d, A[s], !1));
                   }
                   return t;
               })(a.__e, e, a, r, n, _, o, c, s));
-    (E = W.diffed) && E(e);
+    (E = B.diffed) && E(e);
 }
 function ts(t, e, a) {
     for (var r = 0; r < a.length; r++) tE(a[r], a[++r], a[++r]);
-    W.__c && W.__c(e, t),
+    B.__c && B.__c(e, t),
         t.some(function (e) {
             try {
                 (t = e.__h),
@@ -792,7 +792,7 @@ function ts(t, e, a) {
                         t.call(e);
                     });
             } catch (t) {
-                W.__e(t, e.__v);
+                B.__e(t, e.__v);
             }
         });
 }
@@ -800,17 +800,17 @@ function tE(t, e, a) {
     try {
         'function' == typeof t ? t(e) : (t.current = e);
     } catch (t) {
-        W.__e(t, a);
+        B.__e(t, a);
     }
 }
 function tl(t, e, a) {
     var r, n;
-    if ((W.unmount && W.unmount(t), (r = t.ref) && ((r.current && r.current !== t.__e) || tE(r, null, e)), null != (r = t.__c))) {
+    if ((B.unmount && B.unmount(t), (r = t.ref) && ((r.current && r.current !== t.__e) || tE(r, null, e)), null != (r = t.__c))) {
         if (r.componentWillUnmount)
             try {
                 r.componentWillUnmount();
             } catch (t) {
-                W.__e(t, e);
+                B.__e(t, e);
             }
         (r.base = r.__P = null), (t.__c = void 0);
     }
@@ -820,8 +820,8 @@ function tl(t, e, a) {
 function tu(t, e, a) {
     return this.constructor(t, a);
 }
-(B = V.slice),
-    (W = {
+(W = V.slice),
+    (B = {
         __e: function (t, e, a, r) {
             for (var n, _, o; (e = e.__); )
                 if ((n = e.__c) && !n.__)
@@ -851,11 +851,11 @@ function tu(t, e, a) {
 var tI,
     tR,
     td,
-    tf,
-    tA = 0,
-    tp = [],
+    tA,
+    tf = 0,
     tN = [],
-    tT = W,
+    tp = [],
+    tT = B,
     tL = tT.__b,
     th = tT.__r,
     tO = tT.diffed,
@@ -863,25 +863,25 @@ var tI,
     tg = tT.unmount,
     tP = tT.__;
 function ty(t, e) {
-    tT.__h && tT.__h(tR, t, tA || e), (tA = 0);
+    tT.__h && tT.__h(tR, t, tf || e), (tf = 0);
     var a =
         tR.__H ||
         (tR.__H = {
             __: [],
             __h: []
         });
-    return t >= a.__.length && a.__.push({ __V: tN }), a.__[t];
+    return t >= a.__.length && a.__.push({ __V: tp }), a.__[t];
 }
-function tm(t) {
-    return (tA = 1), tC(tW, t);
+function tC(t) {
+    return (tf = 1), tm(tB, t);
 }
-function tC(t, e, a) {
+function tm(t, e, a) {
     var r = ty(tI++, 2);
     if (
         ((r.t = t),
         !r.__c &&
             ((r.__ = [
-                a ? a(e) : tW(void 0, e),
+                a ? a(e) : tB(void 0, e),
                 function (t) {
                     var e = r.__N ? r.__N[0] : r.__[0],
                         a = r.t(e, t);
@@ -929,22 +929,22 @@ function tC(t, e, a) {
 }
 function tv(t, e) {
     var a = ty(tI++, 4);
-    !tT.__s && tB(a.__H, e) && ((a.__ = t), (a.i = e), tR.__h.push(a));
+    !tT.__s && tW(a.__H, e) && ((a.__ = t), (a.i = e), tR.__h.push(a));
 }
 function tS(t, e) {
     var a = ty(tI++, 7);
-    return tB(a.__H, e) ? ((a.__V = t()), (a.i = e), (a.__h = t), a.__V) : a.__;
+    return tW(a.__H, e) ? ((a.__V = t()), (a.i = e), (a.__h = t), a.__V) : a.__;
 }
 function tU(t, e) {
     return (
-        (tA = 8),
+        (tf = 8),
         tS(function () {
             return t;
         }, e)
     );
 }
-function tb() {
-    for (var t; (t = tp.shift()); )
+function tG() {
+    for (var t; (t = tN.shift()); )
         if (t.__P && t.__H)
             try {
                 t.__H.__h.forEach(tw), t.__H.__h.forEach(tM), (t.__H.__h = []);
@@ -966,7 +966,7 @@ function tb() {
                 ? ((e.__h = []),
                   (tR.__h = []),
                   e.__.forEach(function (t) {
-                      t.__N && (t.__ = t.__N), (t.__V = tN), (t.__N = t.i = void 0);
+                      t.__N && (t.__ = t.__N), (t.__V = tp), (t.__N = t.i = void 0);
                   }))
                 : (e.__h.forEach(tw), e.__h.forEach(tM), (e.__h = []), (tI = 0))),
             (td = tR);
@@ -977,20 +977,20 @@ function tb() {
         e &&
             e.__H &&
             (e.__H.__h.length &&
-                ((1 !== tp.push(e) && tf === tT.requestAnimationFrame) ||
+                ((1 !== tN.push(e) && tA === tT.requestAnimationFrame) ||
                     (
-                        (tf = tT.requestAnimationFrame) ||
+                        (tA = tT.requestAnimationFrame) ||
                         function (t) {
                             var e,
                                 a = function () {
-                                    clearTimeout(r), tG && cancelAnimationFrame(e), setTimeout(t);
+                                    clearTimeout(r), tb && cancelAnimationFrame(e), setTimeout(t);
                                 },
                                 r = setTimeout(a, 100);
-                            tG && (e = requestAnimationFrame(a));
+                            tb && (e = requestAnimationFrame(a));
                         }
-                    )(tb)),
+                    )(tG)),
             e.__H.__.forEach(function (t) {
-                t.i && (t.__H = t.i), t.__V !== tN && (t.__ = t.__V), (t.i = void 0), (t.__V = tN);
+                t.i && (t.__H = t.i), t.__V !== tp && (t.__ = t.__V), (t.i = void 0), (t.__V = tp);
             })),
             (td = tR = null);
     }),
@@ -1027,7 +1027,7 @@ function tb() {
             (a.__H = void 0),
             e && tT.__e(e, a.__v));
     });
-var tG = 'function' == typeof requestAnimationFrame;
+var tb = 'function' == typeof requestAnimationFrame;
 function tw(t) {
     var e = tR,
         a = t.__c;
@@ -1037,7 +1037,7 @@ function tM(t) {
     var e = tR;
     (t.__c = t.__()), (tR = e);
 }
-function tB(t, e) {
+function tW(t, e) {
     return (
         !t ||
         t.length !== e.length ||
@@ -1046,7 +1046,7 @@ function tB(t, e) {
         })
     );
 }
-function tW(t, e) {
+function tB(t, e) {
     return 'function' == typeof e ? e(t) : e;
 }
 let tY = {
@@ -1062,11 +1062,11 @@ let tY = {
         },
         useEffect: function (t, e) {
             var a = ty(tI++, 3);
-            !tT.__s && tB(a.__H, e) && ((a.__ = t), (a.i = e), tR.__H.__h.push(a));
+            !tT.__s && tW(a.__H, e) && ((a.__ = t), (a.i = e), tR.__H.__h.push(a));
         },
         useErrorBoundary: function (t) {
             var e = ty(tI++, 10),
-                a = tm();
+                a = tC();
             return (
                 (e.__ = t),
                 tR.componentDidCatch ||
@@ -1091,7 +1091,7 @@ let tY = {
             return t.__;
         },
         useImperativeHandle: function (t, e, a) {
-            (tA = 6),
+            (tf = 6),
                 tv(
                     function () {
                         return 'function' == typeof t
@@ -1111,16 +1111,16 @@ let tY = {
         },
         useLayoutEffect: tv,
         useMemo: tS,
-        useReducer: tC,
+        useReducer: tm,
         useRef: function (t) {
             return (
-                (tA = 5),
+                (tf = 5),
                 tS(function () {
                     return { current: t };
                 }, [])
             );
         },
-        useState: tm
+        useState: tC
     },
     tH = '/home/runner/work/sentry-javascript/sentry-javascript/packages/feedback/src/modal/components/DialogHeader.tsx';
 function tK({ options: t }) {
@@ -1177,29 +1177,29 @@ function tx(t, e) {
     return 'string' == typeof a ? a.trim() : '';
 }
 function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSubmit: n, onSubmitSuccess: _, onSubmitError: o, showEmail: c, showName: s, screenshotInput: E }) {
-    let { tags: l, addScreenshotButtonLabel: u, removeScreenshotButtonLabel: I, cancelButtonLabel: R, emailLabel: d, emailPlaceholder: f, isEmailRequired: A, isNameRequired: p, messageLabel: N, messagePlaceholder: T, nameLabel: L, namePlaceholder: h, submitButtonLabel: O, isRequiredLabel: D } = t,
-        [g, P] = tm(null),
-        [y, C] = tm(!1),
+    let { tags: l, addScreenshotButtonLabel: u, removeScreenshotButtonLabel: I, cancelButtonLabel: R, emailLabel: d, emailPlaceholder: A, isEmailRequired: f, isNameRequired: N, messageLabel: p, messagePlaceholder: T, nameLabel: L, namePlaceholder: h, submitButtonLabel: O, isRequiredLabel: D } = t,
+        [g, P] = tC(null),
+        [y, m] = tC(!1),
         v = E && E.input,
-        [S, U] = tm(null),
-        b = tU((t) => {
-            U(t), C(!1);
+        [S, U] = tC(null),
+        G = tU((t) => {
+            U(t), m(!1);
         }, []),
-        G = tU(
+        b = tU(
             (t) => {
                 let e = (function (t, e) {
                     let a = [];
                     return e.isNameRequired && !t.name && a.push(e.nameLabel), e.isEmailRequired && !t.email && a.push(e.emailLabel), t.message || a.push(e.messageLabel), a;
                 })(t, {
                     emailLabel: d,
-                    isEmailRequired: A,
-                    isNameRequired: p,
-                    messageLabel: N,
+                    isEmailRequired: f,
+                    isNameRequired: N,
+                    messageLabel: p,
                     nameLabel: L
                 });
                 return e.length > 0 ? P(`Please enter in the following required fields: ${e.join(', ')}`) : P(null), 0 === e.length;
             },
-            [d, A, p, N, L]
+            [d, f, N, p, L]
         );
     return z(
         'form',
@@ -1217,7 +1217,7 @@ function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                                 message: tx(e, 'message'),
                                 attachments: a ? [a] : void 0
                             };
-                        if (!G(r)) return;
+                        if (!b(r)) return;
                         try {
                             await n(
                                 {
@@ -1231,7 +1231,7 @@ function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                             ),
                                 _(r);
                         } catch (t) {
-                            m && i.kg.error(t), P(t), o(t);
+                            C && i.kg.error(t), P(t), o(t);
                         }
                     } catch (t) {}
                 },
@@ -1245,7 +1245,7 @@ function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
         },
         v && y
             ? z(v, {
-                  onError: b,
+                  onError: G,
                   __self: this,
                   __source: {
                       fileName: tk,
@@ -1303,7 +1303,7 @@ function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                           z(tV, {
                               label: L,
                               isRequiredLabel: D,
-                              isRequired: p,
+                              isRequired: N,
                               __self: this,
                               __source: {
                                   fileName: tk,
@@ -1316,7 +1316,7 @@ function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                               id: 'name',
                               name: 'name',
                               placeholder: h,
-                              required: p,
+                              required: N,
                               type: 'text',
                               __self: this,
                               __source: {
@@ -1351,7 +1351,7 @@ function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                           z(tV, {
                               label: d,
                               isRequiredLabel: D,
-                              isRequired: A,
+                              isRequired: f,
                               __self: this,
                               __source: {
                                   fileName: tk,
@@ -1363,8 +1363,8 @@ function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                               defaultValue: e,
                               id: 'email',
                               name: 'email',
-                              placeholder: f,
-                              required: A,
+                              placeholder: A,
+                              required: f,
                               type: 'email',
                               __self: this,
                               __source: {
@@ -1396,7 +1396,7 @@ function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                         }
                     },
                     z(tV, {
-                        label: N,
+                        label: p,
                         isRequiredLabel: D,
                         isRequired: !0,
                         __self: this,
@@ -1438,7 +1438,7 @@ function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                                   class: 'btn btn--default',
                                   type: 'button',
                                   onClick: () => {
-                                      U(null), C((t) => !t);
+                                      U(null), m((t) => !t);
                                   },
                                   __self: this,
                                   __source: {
@@ -1567,7 +1567,7 @@ function tX({ open: t, onFormSubmitted: e, ...a }) {
             }),
             []
         ),
-        [_, o] = tm(null),
+        [_, o] = tC(null),
         i = tU(() => {
             _ && (clearTimeout(_), o(null)), e();
         }, [_]),
@@ -2031,11 +2031,11 @@ ${tZ}
                             lineNumber: 67
                         }
                     })),
-                        W.__ && W.__(r, i),
+                        B.__ && B.__(r, i),
                         (c = (n && n.__k) || i.__k),
                         (s = []),
                         (E = []),
-                        tc(i, (r = (n || i).__k = z(Z, null, [r])), c || F, F, void 0 !== i.ownerSVGElement, n ? [n] : c ? null : i.firstChild ? B.call(i.childNodes) : null, s, n ? n : c ? c.__e : i.firstChild, !1, E),
+                        tc(i, (r = (n || i).__k = z(Z, null, [r])), c || F, F, void 0 !== i.ownerSVGElement, n ? [n] : c ? null : i.firstChild ? W.call(i.childNodes) : null, s, n ? n : c ? c.__e : i.firstChild, !1, E),
                         (r.__d = void 0),
                         ts(s, r, E);
                 };
@@ -2223,8 +2223,8 @@ ${tZ}
                                 endX: 0,
                                 endY: 0
                             }),
-                            [f, A] = e.useState(!1),
-                            [p, N] = e.useState(!1);
+                            [A, f] = e.useState(!1),
+                            [N, p] = e.useState(!1);
                         function T() {
                             let t = I.current,
                                 e = t2(t3(a));
@@ -2243,10 +2243,10 @@ ${tZ}
                                 });
                         }
                         function L(t, e) {
-                            A(!1), N(!0);
+                            f(!1), p(!0);
                             let a = h(e),
                                 r = () => {
-                                    E.removeEventListener('mousemove', a), E.removeEventListener('mouseup', r), A(!0), N(!1);
+                                    E.removeEventListener('mousemove', a), E.removeEventListener('mouseup', r), f(!0), p(!1);
                                 };
                             E.addEventListener('mouseup', r), E.addEventListener('mousemove', a);
                         }
@@ -2374,7 +2374,7 @@ ${tZ}
                                         },
                                         t('canvas', {
                                             onMouseDown: function (t) {
-                                                if (p) return;
+                                                if (N) return;
                                                 O.current = {
                                                     initialX: t.clientX,
                                                     initialY: t.clientY
@@ -2408,7 +2408,7 @@ ${tZ}
                                             },
                                             style: {
                                                 position: 'absolute',
-                                                cursor: f ? 'move' : 'auto'
+                                                cursor: A ? 'move' : 'auto'
                                             },
                                             ref: I,
                                             __self: this,
@@ -2467,7 +2467,7 @@ ${tZ}
                                                 style: {
                                                     left: Math.max(0, R.endX - 191),
                                                     top: Math.max(0, R.endY + 8),
-                                                    display: f ? 'flex' : 'none'
+                                                    display: A ? 'flex' : 'none'
                                                 },
                                                 class: 'editor__crop-btn-group',
                                                 __self: this,
@@ -2488,7 +2488,7 @@ ${tZ}
                                                                     endX: I.current.width / t1,
                                                                     endY: I.current.height / t1
                                                                 }),
-                                                            A(!1);
+                                                            f(!1);
                                                     },
                                                     class: 'btn btn--default',
                                                     __self: this,
@@ -2514,7 +2514,7 @@ ${tZ}
                                                                 let _ = a.getContext('2d');
                                                                 _ && (_.clearRect(0, 0, a.width, a.height), (a.width = t.width), (a.height = t.height), (a.style.width = `${r.width}px`), (a.style.height = `${r.height}px`), _.drawImage(t, 0, 0), T());
                                                             })(),
-                                                            A(!1);
+                                                            f(!1);
                                                     },
                                                     class: 'btn btn--primary',
                                                     __self: this,

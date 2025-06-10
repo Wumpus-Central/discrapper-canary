@@ -7,7 +7,7 @@ var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
-    s = n(386230),
+    s = n(524979),
     l = n(442837),
     c = n(704215),
     u = n(481060),
@@ -77,8 +77,8 @@ function C(e, t) {
         e
     );
 }
-let P = 20,
-    R = 24,
+let R = 20,
+    P = 24,
     w = 18,
     D = 77,
     L = {
@@ -107,13 +107,13 @@ let P = 20,
     };
 function k(e, t) {
     return {
-        '--custom-emoji-sprite-size': ''.concat(t ? w : R, 'px'),
-        '--custom-emoji-sprite-row': Math.floor(e / P),
-        '--custom-emoji-sprite-col': e % P
+        '--custom-emoji-sprite-size': ''.concat(t ? w : P, 'px'),
+        '--custom-emoji-sprite-row': Math.floor(e / R),
+        '--custom-emoji-sprite-col': e % R
     };
 }
 let M = function (e) {
-    let { tabIndex: t, className: n, renderButtonContents: a, active: T, onClick: N, 'aria-controls': P, focusProps: R, shouldShowSoundmojiCoachmark: w = !1, ref: M } = e,
+    let { tabIndex: t, className: n, renderButtonContents: a, active: T, onClick: N, 'aria-controls': R, focusProps: P, shouldShowSoundmojiCoachmark: w = !1, ref: M } = e,
         [j, U] = i.useState(!1),
         [G, B] = i.useState(50),
         F = j || T,
@@ -130,8 +130,8 @@ let M = function (e) {
         W = i.useCallback(() => (0, p.x)(v.qR.EmojiButtonFocused), []),
         K = (0, h.B4)(),
         [z, q] = (0, _.US)(K ? [c.z.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
-        Q = z === c.z.TRIAL_NUX_EMOJI_BUTTON,
-        X = !T && Q,
+        X = z === c.z.TRIAL_NUX_EMOJI_BUTTON,
+        Q = !T && X,
         J = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         [$, ee] = i.useState(!1),
         [et, en] = i.useState(!1),
@@ -154,9 +154,9 @@ let M = function (e) {
                 text: () => (0, r.jsx)(x, {}),
                 'aria-label': I.intl.formatToMarkdownString(I.t['/7R4q6'], {}),
                 position: 'top',
-                shouldShow: X,
+                shouldShow: Q,
                 onTooltipHide: () => ee(!1),
-                onTooltipShow: () => ee(X),
+                onTooltipShow: () => ee(Q),
                 tooltipClassName: S.premiumTooltip,
                 tooltipContentClassName: S.premiumTooltipContainer,
                 children: (i) =>
@@ -175,7 +175,7 @@ let M = function (e) {
                             onMouseOver: H,
                             onMouseLeave: () => {
                                 var e;
-                                Y(), null == (e = i.onMouseLeave) || e.call(i), Q && q(O.L.USER_DISMISS);
+                                Y(), null == (e = i.onMouseLeave) || e.call(i), X && q(O.L.USER_DISMISS);
                             },
                             onFocus: W,
                             onClick: (e) => {
@@ -183,10 +183,10 @@ let M = function (e) {
                                 null == N || N(e), null == (t = i.onClick) || t.call(i);
                             },
                             'aria-label': I.intl.string(I.t['59QgaG']),
-                            'aria-controls': P,
+                            'aria-controls': R,
                             'aria-expanded': T,
                             'aria-haspopup': 'dialog',
-                            focusProps: R,
+                            focusProps: P,
                             onContextMenu: i.onContextMenu,
                             children:
                                 null != a
@@ -201,7 +201,7 @@ let M = function (e) {
                                                   style: C(A({}, Z), {
                                                       transform: t.to([0, 1], [1, 1.14]).to((e) => 'scale('.concat(e, ')'))
                                                   }),
-                                                  children: [(0, r.jsx)('div', { className: o()(S.sprite, S.spriteColored, F ? S.active : S.inactive) }), (0, r.jsx)('div', { className: o()(S.sprite, Q ? S.spritePremiumColored : S.spriteGreyscale, F ? S.inactive : S.active, { [S.reducedMotion]: J }) })]
+                                                  children: [(0, r.jsx)('div', { className: o()(S.sprite, S.spriteColored, F ? S.active : S.inactive) }), (0, r.jsx)('div', { className: o()(S.sprite, X ? S.spritePremiumColored : S.spriteGreyscale, F ? S.inactive : S.active, { [S.reducedMotion]: J }) })]
                                               });
                                           }
                                       })

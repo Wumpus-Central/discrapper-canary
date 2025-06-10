@@ -50,7 +50,7 @@ function C(e) {
     }
     return e;
 }
-function P(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -62,12 +62,12 @@ function P(e, t) {
     }
     return n;
 }
-function R(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -173,11 +173,11 @@ function q(e, t, n) {
         a = !1;
     s === e && ((s = null), (a = !0)), x[U(i)] === e && ((x[U(i)] = r && null != n ? n : B(U(i))), S.Z.getGuildId() === i && (0, m.dL)(T.Z5c.CHANNEL(t, x[U(i)])), (a = !0)), null != i && M[i] === e && (delete M[i], (a = !0)), a && G();
 }
-function Q(e) {
+function X(e) {
     let { type: t, channel: n } = e;
     q(n.id, n.guild_id, n.parent_id, 'THREAD_DELETE' === t);
 }
-function X(e) {
+function Q(e) {
     let { channels: t } = e;
     for (let e of t)
         if (e.isScheduledForDeletion()) {
@@ -260,7 +260,7 @@ class ei extends (u = _.ZP.Store) {
                           selectedChannelIds: x,
                           mostRecentSelectedTextChannelIds: M
                       };
-            null != n.knownThreadIds && (j = new Set(n.knownThreadIds)), (s = n.selectedVoiceChannelId), (o = n.lastChannelFollowingDestination), (l = n.lastConnectedTime), (M = null != (t = n.mostRecentSelectedTextChannelIds) ? t : {}), null != n.selectedChannelIds && (x = R(C({}, n.selectedChannelIds), { null: null }));
+            null != n.knownThreadIds && (j = new Set(n.knownThreadIds)), (s = n.selectedVoiceChannelId), (o = n.lastChannelFollowingDestination), (l = n.lastConnectedTime), (M = null != (t = n.mostRecentSelectedTextChannelIds) ? t : {}), null != n.selectedChannelIds && (x = P(C({}, n.selectedChannelIds), { null: null }));
         }
         this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type && 'VOICE_STATE_UPDATES' !== e.type), this.waitFor(v.Z, y.Z, S.Z, O.ZP, I.Z);
     }
@@ -297,9 +297,9 @@ let ea = new ei(h.Z, {
     CONNECTION_CLOSED: W,
     CHANNEL_SELECT: K,
     CHANNEL_CREATE: er,
-    CHANNEL_DELETE: Q,
-    CHANNEL_UPDATES: X,
-    THREAD_DELETE: Q,
+    CHANNEL_DELETE: X,
+    CHANNEL_UPDATES: Q,
+    THREAD_DELETE: X,
     GUILD_CREATE: J,
     GUILD_DELETE: $,
     VOICE_CHANNEL_SELECT: z,

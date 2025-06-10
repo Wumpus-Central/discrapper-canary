@@ -59,7 +59,7 @@ function _(e, t) {
     );
 }
 function p(e) {
-    let { categories: t, collapsedCategories: n, containerWidth: u, store: f, onSelectItem: p, onSearchExpressions: h, hasSearchResults: m, defaultSearchPlaceholder: g, emptySearchPlaceholder: E, renderEmptyState: b, renderRow: y, renderSection: O, renderSectionHeader: v, renderSectionFooter: I, renderInspector: S, renderEmptySearchState: T, renderCategoryList: A, renderHeaderAccessories: N, rowHeight: C, sectionHeaderHeight: P, sectionFooterHeight: R, itemNodeWidth: w, listPaddingRight: D, itemNodeMargin: L, listPadding: x, gridNavigatorId: k, gridNotice: M, renderHeader: j, renderUpsell: U, setShowUpsell: G } = e,
+    let { categories: t, collapsedCategories: n, containerWidth: u, store: f, onSelectItem: p, onSearchExpressions: h, hasSearchResults: m, defaultSearchPlaceholder: g, emptySearchPlaceholder: E, renderEmptyState: b, renderRow: y, renderSection: O, renderSectionHeader: v, renderSectionFooter: I, renderInspector: S, renderEmptySearchState: T, renderCategoryList: A, renderHeaderAccessories: N, rowHeight: C, sectionHeaderHeight: R, sectionFooterHeight: P, itemNodeWidth: w, listPaddingRight: D, itemNodeMargin: L, listPadding: x, gridNavigatorId: k, gridNotice: M, renderHeader: j, renderUpsell: U, setShowUpsell: G } = e,
         B = i.useRef(null),
         F = i.useRef(null),
         V = i.useRef(null),
@@ -75,8 +75,8 @@ function p(e) {
             expressionsGrid: K,
             rowCount: z,
             rowCountBySection: q,
-            columnCounts: Q,
-            gutterWidth: X
+            columnCounts: X,
+            gutterWidth: Q
         } = (0, o.yi)({
             categories: t,
             collapsedCategories: n,
@@ -92,7 +92,7 @@ function p(e) {
             handleGridContainerKeyDown: et,
             isUsingKeyboardNavigation: en
         } = (0, o.t$)({
-            columnCounts: Q,
+            columnCounts: X,
             expressionsListRef: F,
             expressionsGrid: K,
             onSelectItem: p,
@@ -106,7 +106,7 @@ function p(e) {
                     $(e),
                     {
                         isUsingKeyboardNavigation: en.current,
-                        gutterWidth: X,
+                        gutterWidth: Q,
                         rowIndex: e,
                         totalRowCount: z,
                         sectionIndex: t.sectionIndex
@@ -114,7 +114,7 @@ function p(e) {
                     (t) => J(e, t),
                     (t) => f.setInspectedExpressionPosition(t, e)
                 ),
-            [K, J, $, X, en, y, f, z]
+            [K, J, $, Q, en, y, f, z]
         ),
         ei = i.useCallback((e) => (null == O ? void 0 : O(t[e])), [t, O]),
         ea = i.useCallback((e) => (null == v ? void 0 : v(t[e], e)), [t, v]),
@@ -197,8 +197,8 @@ function p(e) {
                                                     rowCount: z,
                                                     rowCountBySection: q,
                                                     rowHeight: C,
-                                                    sectionHeaderHeight: P,
-                                                    sectionFooterHeight: R,
+                                                    sectionHeaderHeight: R,
+                                                    sectionFooterHeight: P,
                                                     renderUpsell: U,
                                                     setShowUpsell: G
                                                 })

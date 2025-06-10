@@ -89,13 +89,13 @@ function C(e) {
         delete e[n];
     }
 }
-function P(e) {
+function R(e) {
     return o.JY.create({
         muted: !1,
         volume: A(e)
     });
 }
-function R() {
+function P() {
     s.K.get(T(f.default.getId())) ||
         g.hW.updateAsync(
             'audioContextSettings',
@@ -142,10 +142,10 @@ function w(e, t, n, r) {
         o = (0, m.z)(n);
     if (null == o) return !1;
     let s = e[o];
-    return (s[t] = null != (i = s[t]) ? i : P(n)), r(s[t]), (s[t].modifiedAt = String(Date.now())), a && N(s, t, n), C(s), !0;
+    return (s[t] = null != (i = s[t]) ? i : R(n)), r(s[t]), (s[t].modifiedAt = String(Date.now())), a && N(s, t, n), C(s), !0;
 }
 function D() {
-    R();
+    P();
 }
 let L = i().debounce(() => {
     U();

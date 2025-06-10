@@ -32,13 +32,13 @@ function u(e) {
             },
             [h]
         ),
-        P = r.useCallback(
+        R = r.useCallback(
             (e) => {
                 T.current && (null != m ? m : N)(e);
             },
             [m]
         ),
-        R = r.useCallback(
+        P = r.useCallback(
             (e) => {
                 if (((v.current = e), null == e)) return void (0, a.h)(t, null, g);
                 let n = (0, l.P1)(e),
@@ -85,7 +85,7 @@ function u(e) {
                     (L(!1),
                     requestAnimationFrame(() => {
                         let e = v.current;
-                        null !== e && null == A((0, l.P1)(e)) && P((0, l.P1)(t, l.kn));
+                        null !== e && null == A((0, l.P1)(e)) && R((0, l.P1)(t, l.kn));
                     }));
             }
             async function i() {
@@ -101,12 +101,12 @@ function u(e) {
                     }
                 }
                 let r = await (0, o.KG)(e, c(t, S));
-                null !== r && R(r);
+                null !== r && P(r);
             }
             function a() {
                 I.current = !0;
             }
-        }, [u, t, g, C, m, P, R]);
+        }, [u, t, g, C, m, R, P]);
     let k = r.useMemo(
             () => ({
                 wrap: b,
@@ -125,13 +125,13 @@ function u(e) {
         M = r.useCallback(async () => {
             let e = await w.getNextFocusableElement(k),
                 t = null == e ? void 0 : e.getAttribute(l.ie);
-            null != t ? R(t) : null == e && null != p && p();
-        }, [w, k, p, R]),
+            null != t ? P(t) : null == e && null != p && p();
+        }, [w, k, p, P]),
         j = r.useCallback(async () => {
             let e = await w.getPreviousFocusableElement(k),
                 t = null == e ? void 0 : e.getAttribute(l.ie);
-            null != t ? R(t) : null == e && null != _ && _();
-        }, [w, k, _, R]),
+            null != t ? P(t) : null == e && null != _ && _();
+        }, [w, k, _, P]),
         U = r.useCallback(
             (e) => {
                 if (!T.current || (!E && !x.current)) return;
@@ -150,7 +150,7 @@ function u(e) {
                             d().then(() => {
                                 var e;
                                 let n = null == (e = c(t, S)[0]) ? void 0 : e.getAttribute(l.ie);
-                                null != n && R(n);
+                                null != n && P(n);
                             });
                         return;
                     case s.R8.END:
@@ -160,7 +160,7 @@ function u(e) {
                                 var e;
                                 let n = c(t, S),
                                     r = null == (e = n[n.length - 1]) ? void 0 : e.getAttribute(l.ie);
-                                null != r && R(r);
+                                null != r && P(r);
                             });
                         return;
                     case s.R8.SPACE:
@@ -177,7 +177,7 @@ function u(e) {
                     }
                 }
             },
-            [M, j, t, y, f, d, R, E]
+            [M, j, t, y, f, d, P, E]
         ),
         G = r.useCallback(
             (e) => {
@@ -198,12 +198,12 @@ function u(e) {
             async focusLastVisibleItem() {
                 var e;
                 let n = await (0, o.jo)(null != (e = S.current) ? e : document.body, c(t, S));
-                null !== n && R(n);
+                null !== n && P(n);
             },
             async focusFirstVisibleItem() {
                 var e;
                 let n = await (0, o.KG)(null != (e = S.current) ? e : document.body, c(t, S));
-                null !== n && R(n);
+                null !== n && P(n);
             },
             focusPreviousItem: j,
             focusNextItem: M,
@@ -212,6 +212,6 @@ function u(e) {
                 return e ? (0, l.x3)(e) : null;
             }
         }),
-        [t, U, y, D, g, G, j, M, R]
+        [t, U, y, D, g, G, j, M, P]
     );
 }

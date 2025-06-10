@@ -1,12 +1,12 @@
 a.d(e, {
-    $X: () => m,
+    $X: () => C,
     AJ: () => O,
     Ei: () => y,
     GC: () => U,
     WU: () => P,
     db: () => h,
-    dz: () => b,
-    nm: () => C,
+    dz: () => G,
+    nm: () => m,
     ph: () => S,
     x5: () => L
 });
@@ -23,10 +23,10 @@ var r = a(559508),
 let I = String(0),
     R = '',
     d = '',
-    f = '',
-    A = (u.m9.navigator && u.m9.navigator.userAgent) || '',
-    p = '',
-    N = (u.m9.navigator && u.m9.navigator.language) || (u.m9.navigator && u.m9.navigator.languages && u.m9.navigator.languages['0']) || '',
+    A = '',
+    f = (u.m9.navigator && u.m9.navigator.userAgent) || '',
+    N = '',
+    p = (u.m9.navigator && u.m9.navigator.language) || (u.m9.navigator && u.m9.navigator.languages && u.m9.navigator.languages['0']) || '',
     T = u.m9.navigator && u.m9.navigator.userAgentData;
 function L(t) {
     return 'pageload' === (0, n.XU)(t).op;
@@ -54,9 +54,9 @@ function O(t) {
     'getHighEntropyValues' in T &&
     T.getHighEntropyValues(['architecture', 'model', 'platform', 'platformVersion', 'fullVersionList'])
         .then((t) => {
-            if (((R = t.platform || ''), (f = t.architecture || ''), (p = t.model || ''), (d = t.platformVersion || ''), t.fullVersionList && t.fullVersionList.length > 0)) {
+            if (((R = t.platform || ''), (A = t.architecture || ''), (N = t.model || ''), (d = t.platformVersion || ''), t.fullVersionList && t.fullVersionList.length > 0)) {
                 let e = t.fullVersionList[t.fullVersionList.length - 1];
-                A = `${e.brand} ${e.version}`;
+                f = `${e.brand} ${e.version}`;
             }
         })
         .catch((t) => void 0);
@@ -79,7 +79,7 @@ function y() {
         l.X && (o.kg.log("[Profiling] Failed to initialize the Profiling constructor, this is likely due to a missing 'Document-Policy': 'js-profiling' header."), o.kg.log('[Profiling] Disabling profiling for current user session.')), (g = !0);
     }
 }
-function m(t) {
+function C(t) {
     if (g) return l.X && o.kg.log('[Profiling] Profiling has been disabled for the duration of the current user session.'), !1;
     if (!t.isRecording()) return l.X && o.kg.log('[Profiling] Discarding profile because transaction was not sampled.'), !1;
     let e = (0, _.s3)(),
@@ -88,7 +88,7 @@ function m(t) {
     let r = a.profilesSampleRate;
     return (('number' != typeof r && 'boolean' != typeof r) || ('number' == typeof r && isNaN(r)) ? (l.X && o.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be a boolean or a number between 0 and 1. Got ${JSON.stringify(r)} of type ${JSON.stringify(typeof r)}.`), 1) : !0 !== r && !1 !== r && (r < 0 || r > 1) && (l.X && o.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be between 0 and 1. Got ${r}.`), 1)) ? (l.X && o.kg.warn('[Profiling] Discarding profile because of invalid sample rate.'), !1) : r ? !!(!0 === r || Math.random() < r) || (l.X && o.kg.log(`[Profiling] Discarding profile because it's not included in the random sample (sampling rate = ${Number(r)})`), !1) : (l.X && o.kg.log('[Profiling] Discarding profile because a negative sampling decision was inherited or profileSampleRate is set to 0'), !1);
 }
-function C(t, e, a, n) {
+function m(t, e, a, n) {
     var s;
     if (!(a.samples.length < 2 ? (l.X && o.kg.log('[Profiling] Discarding profile because it contains less than 2 samples'), !1) : !!a.frames.length || (l.X && o.kg.log('[Profiling] Discarding profile because it contains no frames'), !1))) return null;
     if ('transaction' !== n.type) throw TypeError('Profiling events may only be attached to transactions, this should never occur.');
@@ -166,13 +166,13 @@ function C(t, e, a, n) {
         os: {
             name: R,
             version: d,
-            build_number: A
+            build_number: f
         },
         device: {
-            locale: N,
-            model: p,
-            manufacturer: A,
-            architecture: f,
+            locale: p,
+            model: N,
+            manufacturer: f,
+            architecture: A,
             is_emulator: !1
         },
         debug_meta: {
@@ -233,7 +233,7 @@ function U(t) {
     let e = v.get(t);
     return e && v.delete(t), e;
 }
-function b(t, e) {
+function G(t, e) {
     if ((v.set(t, e), v.size > 30)) {
         let t = v.keys().next().value;
         v.delete(t);

@@ -240,7 +240,7 @@
                 };
             return u.every(_);
         },
-        P = function (e, t, n) {
+        R = function (e, t, n) {
             return S(e)
                 ? Object.keys(e).reduce(function (i, o) {
                       var s = !S(t) || !C(e[o], t[o]);
@@ -248,14 +248,14 @@
                   }, null)
                 : null;
         },
-        R = 'Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
+        P = 'Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
         w = function (e) {
-            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : R;
+            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : P;
             if (null === e || A(e)) return e;
             throw Error(t);
         },
         D = function (e) {
-            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : R;
+            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : P;
             if (T(e))
                 return {
                     tag: 'async',
@@ -350,7 +350,7 @@
                 t.useEffect(
                     function () {
                         if (s.elements) {
-                            var e = P(r, d, ['clientSecret', 'fonts']);
+                            var e = R(r, d, ['clientSecret', 'fonts']);
                             e && s.elements.update(e);
                         }
                     },
@@ -515,11 +515,11 @@
             if (!e) throw Error('Could not find CustomCheckout Context; You need to wrap the part of your app that calls useCustomCheckout() in an <CustomCheckoutProvider> provider.');
             return e;
         },
-        Q = function (e) {
+        X = function (e) {
             return e.charAt(0).toUpperCase() + e.slice(1);
         },
-        X = function (e, n) {
-            var r = ''.concat(Q(e), 'Element'),
+        Q = function (e, n) {
+            var r = ''.concat(X(e), 'Element'),
                 i = function (n) {
                     var i,
                         a = n.id,
@@ -543,30 +543,30 @@
                         A = 'elements' in T ? T.elements : null,
                         N = 'customCheckoutSdk' in T ? T.customCheckoutSdk : null,
                         C = l(t.useState(null), 2),
-                        R = C[0],
+                        P = C[0],
                         w = C[1],
                         D = t.useRef(null),
                         L = t.useRef(null);
-                    v(R, 'blur', u),
-                        v(R, 'focus', d),
-                        v(R, 'escape', p),
-                        v(R, 'click', h),
-                        v(R, 'loaderror', m),
-                        v(R, 'loaderstart', g),
-                        v(R, 'networkschange', E),
-                        v(R, 'confirm', b),
-                        v(R, 'cancel', y),
-                        v(R, 'shippingaddresschange', O),
-                        v(R, 'shippingratechange', S),
-                        v(R, 'change', _),
+                    v(P, 'blur', u),
+                        v(P, 'focus', d),
+                        v(P, 'escape', p),
+                        v(P, 'click', h),
+                        v(P, 'loaderror', m),
+                        v(P, 'loaderstart', g),
+                        v(P, 'networkschange', E),
+                        v(P, 'confirm', b),
+                        v(P, 'cancel', y),
+                        v(P, 'shippingaddresschange', O),
+                        v(P, 'shippingratechange', S),
+                        v(P, 'change', _),
                         f &&
                             (i =
                                 'expressCheckout' === e
                                     ? f
                                     : function () {
-                                          f(R);
+                                          f(P);
                                       }),
-                        v(R, 'ready', i),
+                        v(P, 'ready', i),
                         t.useLayoutEffect(
                             function () {
                                 if (null === D.current && null !== L.current && (A || N)) {
@@ -581,7 +581,7 @@
                         t.useEffect(
                             function () {
                                 if (D.current) {
-                                    var e = P(c, x, ['paymentRequest']);
+                                    var e = R(c, x, ['paymentRequest']);
                                     e && D.current.update(e);
                                 }
                             },
@@ -763,24 +763,24 @@
         eo = function () {
             return z('calls useStripe()').stripe;
         },
-        es = X('auBankAccount', J),
-        el = X('card', J),
-        ec = X('cardNumber', J),
-        eu = X('cardExpiry', J),
-        ed = X('cardCvc', J),
-        ef = X('fpxBank', J),
-        e_ = X('iban', J),
-        ep = X('idealBank', J),
-        eh = X('p24Bank', J),
-        em = X('epsBank', J),
-        eg = X('payment', J),
-        eE = X('expressCheckout', J),
-        eb = X('paymentRequestButton', J),
-        ey = X('linkAuthentication', J),
-        eO = X('address', J),
-        ev = X('shippingAddress', J),
-        eI = X('paymentMethodMessaging', J),
-        eS = X('affirmMessage', J),
-        eT = X('afterpayClearpayMessage', J);
+        es = Q('auBankAccount', J),
+        el = Q('card', J),
+        ec = Q('cardNumber', J),
+        eu = Q('cardExpiry', J),
+        ed = Q('cardCvc', J),
+        ef = Q('fpxBank', J),
+        e_ = Q('iban', J),
+        ep = Q('idealBank', J),
+        eh = Q('p24Bank', J),
+        em = Q('epsBank', J),
+        eg = Q('payment', J),
+        eE = Q('expressCheckout', J),
+        eb = Q('paymentRequestButton', J),
+        ey = Q('linkAuthentication', J),
+        eO = Q('address', J),
+        ev = Q('shippingAddress', J),
+        eI = Q('paymentMethodMessaging', J),
+        eS = Q('affirmMessage', J),
+        eT = Q('afterpayClearpayMessage', J);
     (e.AddressElement = eO), (e.AffirmMessageElement = eS), (e.AfterpayClearpayMessageElement = eT), (e.AuBankAccountElement = es), (e.CardCvcElement = ed), (e.CardElement = el), (e.CardExpiryElement = eu), (e.CardNumberElement = ec), (e.CustomCheckoutProvider = W), (e.Elements = M), (e.ElementsConsumer = G), (e.EmbeddedCheckout = ea), (e.EmbeddedCheckoutProvider = en), (e.EpsBankElement = em), (e.ExpressCheckoutElement = eE), (e.FpxBankElement = ef), (e.IbanElement = e_), (e.IdealBankElement = ep), (e.LinkAuthenticationElement = ey), (e.P24BankElement = eh), (e.PaymentElement = eg), (e.PaymentMethodMessagingElement = eI), (e.PaymentRequestButtonElement = eb), (e.ShippingAddressElement = ev), (e.useCustomCheckout = q), (e.useElements = U), (e.useStripe = eo);
 });

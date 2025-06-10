@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => Q,
-    f: () => P
+    Z: () => X,
+    f: () => R
 }),
     n(361932),
     n(187205),
@@ -69,10 +69,10 @@ function C(e, t) {
     var n, r;
     return (null != (n = t.created_at) ? n : 0) - (null != (r = e.created_at) ? r : 0);
 }
-function P(e, t) {
+function R(e, t) {
     return T(e, t) || N(e, t) || C(e, t);
 }
-function R(e) {
+function P(e) {
     if ((delete E[e], delete b[e], delete y[e], delete O[e], null == g[e])) return;
     let t = Object.values(g[e]),
         n = t.reduce((e, t) => {
@@ -142,7 +142,7 @@ function L(e) {
             processedAtTimestamp: l
         };
     else {
-        let e = o.length > 1 ? [...o].sort(P) : o,
+        let e = o.length > 1 ? [...o].sort(R) : o,
             n = u[t];
         (o = null != n && a()(n.activities, e) ? n.activities : e),
             (u[t] = {
@@ -153,7 +153,7 @@ function L(e) {
                 processedAtTimestamp: l
             });
     }
-    return delete v[n], R(n), !0;
+    return delete v[n], P(n), !0;
 }
 function x(e) {
     let { guildId: t, userId: n, status: r, clientStatus: i, activities: a, hiddenActivities: o, processedAtTimestamp: s } = e;
@@ -173,7 +173,7 @@ function x(e) {
             processedAtTimestamp: s
         };
     else {
-        let e = a.length > 1 ? [...a].sort(P) : a;
+        let e = a.length > 1 ? [...a].sort(R) : a;
         c[t] = {
             status: r,
             clientStatus: i,
@@ -187,7 +187,7 @@ function k(e, t) {
     if (t === f.default.getId()) return !1;
     let n = g[t];
     if (null == n || null == n[e]) return !1;
-    delete n[e], 0 === Object.keys(n).length && delete g[t], R(t);
+    delete n[e], 0 === Object.keys(n).length && delete g[t], P(t);
 }
 function M(e) {
     for (let t of d.default.keys(g)) k(e, t);
@@ -327,7 +327,7 @@ function W(e) {
 function K(e) {
     let t = f.default.getId();
     if (E[t] === e.status && b[t] === e.activities && y[t] === e.hiddenActivities) return !1;
-    (E[t] = e.status), (b[t] = [...e.activities].sort(P)), (y[t] = [...e.hiddenActivities].sort(P)), delete v[t];
+    (E[t] = e.status), (b[t] = [...e.activities].sort(R)), (y[t] = [...e.hiddenActivities].sort(R)), delete v[t];
 }
 function z(e) {
     let { userId: t, metadata: n } = e;
@@ -338,7 +338,7 @@ class q extends (r = l.ZP.Store) {
         this.waitFor(f.default);
     }
     setCurrentUserOnConnectionOpen(e, t) {
-        (E[f.default.getId()] = e), (b[f.default.getId()] = [...t].sort(P));
+        (E[f.default.getId()] = e), (b[f.default.getId()] = [...t].sort(R));
     }
     getStatus(e) {
         var t, n;
@@ -415,7 +415,7 @@ class q extends (r = l.ZP.Store) {
     }
 }
 h(q, 'displayName', 'PresenceStore');
-let Q = new q(c.Z, {
+let X = new q(c.Z, {
     CONNECTION_OPEN: j,
     CONNECTION_OPEN_SUPPLEMENTAL: U,
     OVERLAY_INITIALIZE: G,

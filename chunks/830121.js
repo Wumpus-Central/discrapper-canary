@@ -41,8 +41,8 @@ var y = n(807675),
 let A = 10,
     N = /^\/([a-zA-Z0-9-]+)$/,
     C = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
-    P = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?\.?$/,
-    R = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'),
+    R = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?\.?$/,
+    P = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'),
     w = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/?((about|images|privacy)\/?)?$/,
     D = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/store\/?([0-9-]+)?\/?$/,
     L = /^\/activities\/([0-9-]+)\/?$/,
@@ -79,10 +79,10 @@ function q(e) {
         pathPrefix: null
     };
 }
-let Q = (e) => e.replaceAll(J, ' $2 '),
-    X = null == (a = h().defaultRules.link) || null == (i = a.match) || null == (r = i.regex) ? void 0 : r.source;
-_()(X, 'SimpleMarkdown link regex is not set.'), '^' === X[0] && (X = X.substring(1));
-let J = RegExp(X, 'g');
+let X = (e) => e.replaceAll(J, ' $2 '),
+    Q = null == (a = h().defaultRules.link) || null == (i = a.match) || null == (r = i.regex) ? void 0 : r.source;
+_()(Q, 'SimpleMarkdown link regex is not set.'), '^' === Q[0] && (Q = Q.substring(1));
+let J = RegExp(Q, 'g');
 function $(e, t) {
     var n, r, i;
     if ((null == (n = t.host) ? void 0 : n.replace(/^www[.]/i, '')) !== e.host) return null;
@@ -98,7 +98,7 @@ function ee(e) {
 }
 function et(e) {
     if (null == e) return null;
-    let t = e.match(R);
+    let t = e.match(P);
     return null != t && t.length >= 4
         ? {
               guildId: t[1],
@@ -131,7 +131,7 @@ function er(e) {
     if (null == e) return [];
     let t = new Set(),
         n = [],
-        r = Q((e = e.replace(z, (e, t, n, r) => (null == n ? ''.concat(t, 'http://').concat(r) : e)))).match(I.Z.URL_REGEX),
+        r = X((e = e.replace(z, (e, t, n, r) => (null == n ? ''.concat(t, 'http://').concat(r) : e)))).match(I.Z.URL_REGEX),
         i = e.match(G);
     if (null == (r = (null != r ? r : []).concat(null != i ? i : [])) || 0 === r.length) return [];
     for (let e of r) {
@@ -153,7 +153,7 @@ function er(e) {
             O.Z.getInvite(e), u(S.g.INVITE, e);
         }
         (null == l ? void 0 : l.match(N)) != null && u(S.g.TEMPLATE, l.substring(1));
-        let d = null == c ? void 0 : c.match(P);
+        let d = null == c ? void 0 : c.match(R);
         if (null != d) {
             let e = d[1].toUpperCase();
             if (e === S.g.INVITE) {

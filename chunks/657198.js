@@ -115,11 +115,11 @@ let I = (e) => {
         A = (0, l.e7)([f.Z], () => f.Z.getUpload(n, a.optionName, d.d.SlashCommand), [n, a.optionName]),
         N = a.children[a.children.length - 1],
         C = null != N && h.LC.isText(N) && N.text.endsWith('\n'),
-        P = o()(g.inlineElement, g.optionPill, {
+        R = o()(g.inlineElement, g.optionPill, {
             [g.selectedPill]: v && y,
             [g.erroredPill]: (!v || !y) && T
         }),
-        R = i.useCallback(() => {
+        P = i.useCallback(() => {
             h.bN.isVoid(I, a) || p.Q.selectCommandOption(I, a.optionName, !0);
         }, [I, a]);
     return (
@@ -151,12 +151,12 @@ let I = (e) => {
         (0, r.jsxs)(
             'span',
             O(b({}, _), {
-                className: P,
+                className: R,
                 children: [
                     (0, r.jsxs)('span', {
                         className: g.optionPillKey,
                         contentEditable: !1,
-                        onClick: R,
+                        onClick: P,
                         children: [a.optionDisplayName, '\u200B']
                     }),
                     t,

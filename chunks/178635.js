@@ -138,7 +138,7 @@ let y = 200,
             hotspot: o.v6.SEARCH_RESULTS_FEEDBACK,
             storageKey: 'searchResultsFeedback',
             feedbackType: h.nw.SEARCH_RESULTS,
-            eligibilityChecks: [P]
+            eligibilityChecks: [R]
         })
     };
 function I(e) {
@@ -192,10 +192,10 @@ function N(e) {
 function C(e) {
     return !u.Z.getWasEverRtcConnected() || u.Z.getWasEverMultiParticipant();
 }
-function P(e) {
+function R(e) {
     return (0, l.j)({ location: 'FeedbackManager' });
 }
-function R(e) {
+function P(e) {
     let { persistToBackend: t } = (0, f.O)({ location: 'FeedbackManager/'.concat(e) });
     if (t) c.A2.updateSetting((t) => b(g({}, t), { [e]: b(g({}, t[e]), { lastImpressionTime: Date.now() }) }));
     else {
@@ -218,7 +218,7 @@ class w extends a.Z {
                 this,
                 'showFeedbackModalDebounced',
                 (0, r.debounce)((e, t) => {
-                    null != this.feedbackTypeToShow ? (R(this.feedbackTypeToShow), (this.feedbackTypeToShow = null), e()) : null == t || t();
+                    null != this.feedbackTypeToShow ? (P(this.feedbackTypeToShow), (this.feedbackTypeToShow = null), e()) : null == t || t();
                 }, y)
             );
     }

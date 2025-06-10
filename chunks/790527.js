@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R });
+n.d(t, { Z: () => P });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -43,7 +43,7 @@ function C(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function P(e) {
+function R(e) {
     switch (e) {
         case v.cd.ANIMATED_AVATAR_MODAL_UPSELL:
         case v.cd.ANIMATED_BANNER_MODAL_UPSELL:
@@ -57,11 +57,11 @@ function P(e) {
             return !1;
     }
 }
-function R(e) {
+function P(e) {
     var t,
         n,
         a,
-        { title: C, type: R, guildBoostProps: w, analyticsSource: D, analyticsLocation: L, body: x, context: k, glowUp: M, modalClassName: j, modalContentClassName: U, artContainerClassName: G, artClassName: B, headerClassName: F, bodyClassName: V, transitionState: Z, onClose: H, onSubscribeClick: Y, onSubscribeFinish: W, onSecondaryClick: K, secondaryCTA: z, secondaryCTAClassName: q, subscribeButtonText: Q, showNewBadge: X = !1, showBetaBadge: J = !1, enableArtBoxShadow: $ = !0, subscriptionTier: ee = v.Si.TIER_2, isLoading: et = !1, hideBackButton: en, backButtonText: er, showEnhancedUpsell: ei, useSubscribeButtonGradient: ea, subscribeButtonClassname: eo, hidePremiumOfferUpsell: es, children: el, LeadingComponent: ec, backgroundElements: eu, smallText: ed = !1, footerClassName: ef } = e,
+        { title: C, type: P, guildBoostProps: w, analyticsSource: D, analyticsLocation: L, body: x, context: k, glowUp: M, modalClassName: j, modalContentClassName: U, artContainerClassName: G, artClassName: B, headerClassName: F, bodyClassName: V, transitionState: Z, onClose: H, onSubscribeClick: Y, onSubscribeFinish: W, onSecondaryClick: K, secondaryCTA: z, secondaryCTAClassName: q, subscribeButtonText: X, showNewBadge: Q = !1, showBetaBadge: J = !1, enableArtBoxShadow: $ = !0, subscriptionTier: ee = v.Si.TIER_2, isLoading: et = !1, hideBackButton: en, backButtonText: er, showEnhancedUpsell: ei, useSubscribeButtonGradient: ea, subscribeButtonClassname: eo, hidePremiumOfferUpsell: es, children: el, LeadingComponent: ec, backgroundElements: eu, smallText: ed = !1, footerClassName: ef } = e,
         e_ = N(e, ['title', 'type', 'guildBoostProps', 'analyticsSource', 'analyticsLocation', 'body', 'context', 'glowUp', 'modalClassName', 'modalContentClassName', 'artContainerClassName', 'artClassName', 'headerClassName', 'bodyClassName', 'transitionState', 'onClose', 'onSubscribeClick', 'onSubscribeFinish', 'onSecondaryClick', 'secondaryCTA', 'secondaryCTAClassName', 'subscribeButtonText', 'showNewBadge', 'showBetaBadge', 'enableArtBoxShadow', 'subscriptionTier', 'isLoading', 'hideBackButton', 'backButtonText', 'showEnhancedUpsell', 'useSubscribeButtonGradient', 'subscribeButtonClassname', 'hidePremiumOfferUpsell', 'children', 'LeadingComponent', 'backgroundElements', 'smallText', 'footerClassName']);
     let ep = null != w,
         eh = (0, E.N)(),
@@ -73,7 +73,7 @@ function R(e) {
             analyticsLocations: eE,
             analyticsSource: D,
             guildBoostProps: w,
-            type: R
+            type: P
         },
         ey = i.useRef(eb);
     i.useEffect(() => {
@@ -99,7 +99,7 @@ function R(e) {
                   });
         }, [ep, ee, et]);
     let eO = (0, s.e7)([m.Z], () => m.Z.affinities),
-        ev = eO.length > 1 && P(R),
+        ev = eO.length > 1 && R(P),
         eI = (0, s.e7)([m.Z], () => m.Z.hasFetched);
     i.useEffect(() => {
         eI || c.MH();
@@ -131,7 +131,7 @@ function R(e) {
                     null == Y || Y(), H();
                 },
                 onSubscribeModalClose: W,
-                textOptions: { textOverride: null != Q ? Q : e }
+                textOptions: { textOverride: null != X ? X : e }
             });
         },
         eT = $ ? o()(T.artContainer, T.artContainerBoxShadow, G) : o()(T.artContainer, G),
@@ -155,7 +155,7 @@ function R(e) {
                         className: eT,
                         children: [
                             eA,
-                            X
+                            Q
                                 ? (0, r.jsx)('img', {
                                       className: T.sparkleBadge,
                                       alt: '',
@@ -172,7 +172,7 @@ function R(e) {
                         : eg
                           ? (0, r.jsx)(y.ZP, {
                                 onClose: H,
-                                type: R,
+                                type: P,
                                 subscriptionTier: null != (a = null == eh || null == (n = eh.subscription_trial) ? void 0 : n.sku_id) ? a : v.Si.TIER_2,
                                 headingText: C,
                                 context: k,

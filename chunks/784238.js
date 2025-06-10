@@ -80,21 +80,21 @@ let E = (e) => {
         let A = (0, o.ZP)(),
             N = (0, c.N)(),
             C = null == N ? void 0 : N.subscription_trial,
-            P = (0, s.a5)({
+            R = (0, s.a5)({
                 intervalType: null == C ? void 0 : C.interval,
                 intervalCount: null == C ? void 0 : C.interval_count
             }),
-            R = (0, l.Ng)(),
+            P = (0, l.Ng)(),
             w = null != C && n === C.sku_id,
             D = (null == N ? void 0 : N.trial_id) === d.a7,
             L = p
                 ? f.intl.string(f.t.J61px8)
-                : null != R
-                  ? b(n, y, g, R.discount.amount)
+                : null != P
+                  ? b(n, y, g, P.discount.amount)
                   : E({
                         showTrialCTA: w,
                         subscriptionTier: n,
-                        trialDurationCopy: P,
+                        trialDurationCopy: R,
                         isPersistentCTA: g,
                         shouldShowReferralTrialCopy: D,
                         subscriptionTrial: C

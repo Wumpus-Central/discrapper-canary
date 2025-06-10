@@ -93,8 +93,8 @@ function A(e) {
     });
 }
 function N(e) {
-    let { className: t, userId: d, channelId: v, parsedUserId: S, content: N, inlinePreview: C = !1, viewingChannelId: P } = e,
-        R = i.useRef(null),
+    let { className: t, userId: d, channelId: v, parsedUserId: S, content: N, inlinePreview: C = !1, viewingChannelId: R } = e,
+        P = i.useRef(null),
         { analyticsLocations: w } = (0, c.ZP)(l.Z.USER_MENTION),
         D = (0, o.e7)([E.default], () => E.default.getUser(d)),
         L = (0, o.e7)([p.Z], () => p.Z.getChannel(v)),
@@ -110,7 +110,7 @@ function N(e) {
                                   (0, r.jsx)(
                                       e,
                                       T(I({}, t), {
-                                          viewingChannelId: P,
+                                          viewingChannelId: R,
                                           user: D,
                                           channel: L,
                                           guildId: x
@@ -134,7 +134,7 @@ function N(e) {
             T(
                 I(
                     {
-                        ref: R,
+                        ref: P,
                         className: t,
                         onContextMenu: k,
                         color: G
@@ -152,7 +152,7 @@ function N(e) {
         : (0, r.jsx)(c.Gt, {
               value: w,
               children: (0, r.jsx)(_.Z, {
-                  targetElementRef: R,
+                  targetElementRef: P,
                   user: D,
                   guildId: null != x ? x : void 0,
                   channelId: v,

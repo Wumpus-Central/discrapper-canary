@@ -65,7 +65,7 @@ let v = new Set([I.Fu, I.JT]),
                         p.Z.focus(e, !0);
                     }
                     let i = d.Z.getApplication(null == r ? void 0 : r.applicationId),
-                        o = (0, u.pY)(null == r ? void 0 : r.location),
+                        o = (0, u.p)(null == r ? void 0 : r.location),
                         c = (null == i ? void 0 : i.id) !== void 0 ? S.get(i.id) : void 0;
                     if (void 0 !== c && c.trustedUntilEpochMs >= Date.now() && c.trustedHosts.has(e.host)) return (0, l.Z)(t), Promise.resolve({ opened: !0 });
                     return new Promise((e) =>

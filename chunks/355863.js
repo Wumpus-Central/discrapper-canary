@@ -420,11 +420,11 @@ function C(e) {
     let { widgetId: t, anchor: n, size: r, opacity: i, minSize: a } = e;
     return N(t, (e, t) => x(e, n, r, i, a));
 }
-function P(e) {
+function R(e) {
     let { widgetId: t } = e;
-    return N(t, (e, t) => R(t, e.id));
+    return N(t, (e, t) => P(t, e.id));
 }
-function R(e, t) {
+function P(e, t) {
     let n = B(e);
     n.sort((e, t) => e.zIndex - t.zIndex);
     let r = n.findIndex((e) => e.id === t);
@@ -777,7 +777,7 @@ let Y = new H(d.Z, {
     LAYOUT_CREATE: T,
     LAYOUT_SET_PINNED: L,
     LAYOUT_UPDATE_WIDGET: C,
-    LAYOUT_SET_TOP_WIDGET: P,
+    LAYOUT_SET_TOP_WIDGET: R,
     LAYOUT_DELETE_WIDGET: k,
     LAYOUT_DELETE_ALL_WIDGETS: M,
     LAYOUT_CREATE_WIDGETS: j,

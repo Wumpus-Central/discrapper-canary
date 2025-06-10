@@ -29,8 +29,8 @@ function v(e) {
             currentWindow: A,
             fontScale: N,
             fontScaleClass: C,
-            keyboardModeEnabled: P,
-            saturation: R,
+            keyboardModeEnabled: R,
+            saturation: P,
             desaturateUserColors: w,
             useForcedColors: D,
             systemForcedColors: L,
@@ -58,7 +58,7 @@ function v(e) {
         }),
         j = (0, f.Z)(A, __OVERLAY__ || T),
         U = 0;
-    1 !== R && (U = (0, l.OdO)(U, l.bgu.REDUCE_SATURATION_ENABLED));
+    1 !== P && (U = (0, l.OdO)(U, l.bgu.REDUCE_SATURATION_ENABLED));
     let G = (0, y.A)(),
         B = (0, _.Ml)('RootThemeContextProvider'),
         F = (0, _.CL)('RootThemeContextProvider'),
@@ -68,7 +68,7 @@ function v(e) {
     return (0, r.jsx)(l.wMY, {
         theme: S,
         flags: U,
-        saturation: R,
+        saturation: P,
         density: G,
         children: (0, r.jsx)(O.cE, {
             lang: I,
@@ -77,9 +77,9 @@ function v(e) {
             focused: T,
             fontScale: N,
             fontScaleClass: C,
-            keyboardModeEnabled: P,
+            keyboardModeEnabled: R,
             mouseMode: j,
-            saturation: R,
+            saturation: P,
             desaturateUserColors: w,
             useForcedColors: D,
             systemForcedColors: L,

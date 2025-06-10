@@ -30,17 +30,17 @@ function E(e) {
         C = i.useCallback(() => {
             A(), S({ action: b ? 'ACCEPT_GAME_FRIEND_REQUEST' : 'ACCEPT_FRIEND_REQUEST' });
         }, [A, b, S]),
-        P = i.useCallback(() => {
+        R = i.useCallback(() => {
             N(), S({ action: b ? 'IGNORE_GAME_FRIEND_REQUEST' : 'IGNORE_FRIEND_REQUEST' });
         }, [N, b, S]),
-        R = null != E,
+        P = null != E,
         w = (0, c.q)(E);
-    return R && null == w
+    return P && null == w
         ? null
         : (0, r.jsxs)('div', {
               className: o()(g.container, y),
               children: [
-                  R
+                  P
                       ? (0, r.jsx)(s.Text, {
                             variant: 'text-sm/normal',
                             children: m.intl.format(b ? m.t.syHjLC : m.t.V15uUF, {
@@ -78,7 +78,7 @@ function E(e) {
                               color: s.zxk.Colors.PRIMARY,
                               size: s.zxk.Sizes.SMALL,
                               className: g.button,
-                              onClick: P,
+                              onClick: R,
                               children: m.intl.string(m.t.xuio0N)
                           })
                       ]

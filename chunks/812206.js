@@ -128,11 +128,11 @@ function C(e) {
     }
     return n;
 }
-function P(e) {
+function R(e) {
     let { libraryApplications: t } = e;
     for (let e of t) b(o.ZP.createFromServer(e.application));
 }
-function R(e) {
+function P(e) {
     let { applications: t } = e;
     for (let e of t) b(o.ZP.createFromServer(e));
 }
@@ -307,7 +307,7 @@ let K = new W(a.Z, {
     APPLICATION_FETCH_SUCCESS: S,
     APPLICATION_FETCH_FAIL: N,
     APPLICATIONS_FETCH: C,
-    APPLICATIONS_FETCH_SUCCESS: R,
+    APPLICATIONS_FETCH_SUCCESS: P,
     APPLICATIONS_FETCH_FAIL: x,
     APPLICATION_UPDATE: I,
     APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: k,
@@ -318,7 +318,7 @@ let K = new W(a.Z, {
     PAYMENT_UPDATE: U,
     INVITE_RESOLVE_SUCCESS: B,
     GIFT_CODE_RESOLVE_SUCCESS: G,
-    LIBRARY_FETCH_SUCCESS: P,
+    LIBRARY_FETCH_SUCCESS: R,
     STORE_LISTING_FETCH_SUCCESS: F,
     LOAD_MESSAGES_SUCCESS: V,
     APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: w,

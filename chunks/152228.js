@@ -1,6 +1,6 @@
 a.d(e, {
     GK: () => O,
-    Iw: () => m,
+    Iw: () => C,
     V0: () => D,
     _d: () => y,
     qp: () => g,
@@ -19,10 +19,10 @@ var r = a(370541),
     I = a(99342),
     R = a(696486),
     d = a(305625),
-    f = a(966497),
-    A = a(787659),
-    p = a(789112),
-    N = a(275689),
+    A = a(966497),
+    f = a(787659),
+    N = a(789112),
+    p = a(275689),
     T = a(793373),
     L = a(881243);
 let h = '__SENTRY_SUPPRESS_TRACING__';
@@ -32,13 +32,13 @@ function O(t, e) {
     let r = v(t),
         { forceTransaction: n, parentSpan: _ } = t;
     return (0, i.$e)(t.scope, () =>
-        G(_)(() => {
+        b(_)(() => {
             let a = (0, i.nZ)(),
-                _ = b(a),
+                _ = G(a),
                 o =
                     t.onlyIfParent && !_
-                        ? new p.b()
-                        : C({
+                        ? new N.b()
+                        : m({
                               parentSpan: _,
                               spanArguments: r,
                               forceTransaction: n,
@@ -69,13 +69,13 @@ function D(t, e) {
     let r = v(t),
         { forceTransaction: n, parentSpan: _ } = t;
     return (0, i.$e)(t.scope, () =>
-        G(_)(() => {
+        b(_)(() => {
             let a = (0, i.nZ)(),
-                _ = b(a),
+                _ = G(a),
                 o =
                     t.onlyIfParent && !_
-                        ? new p.b()
-                        : C({
+                        ? new N.b()
+                        : m({
                               parentSpan: _,
                               spanArguments: r,
                               forceTransaction: n,
@@ -109,10 +109,10 @@ function g(t) {
         { forceTransaction: r, parentSpan: n } = t;
     return (t.scope ? (e) => (0, i.$e)(t.scope, e) : void 0 !== n ? (t) => y(n, t) : (t) => t())(() => {
         let e = (0, i.nZ)(),
-            n = b(e);
+            n = G(e);
         return t.onlyIfParent && !n
-            ? new p.b()
-            : C({
+            ? new N.b()
+            : m({
                   parentSpan: n,
                   spanArguments: a,
                   forceTransaction: r,
@@ -129,25 +129,25 @@ function y(t, e) {
     let a = S();
     return a.withActiveSpan ? a.withActiveSpan(t, e) : (0, i.$e)((a) => ((0, I.D)(a, t || void 0), e(a)));
 }
-function m(t) {
+function C(t) {
     return (0, i.$e)((e) => (e.setPropagationContext((0, n.Q)()), s.X && _.kg.info(`Starting a new trace with id ${e.getPropagationContext().traceId}`), y(null, t)));
 }
-function C({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
+function m({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
     let n;
-    if (!(0, u.z)()) return new p.b();
+    if (!(0, u.z)()) return new N.b();
     let _ = (0, i.aF)();
     if (t && !a)
         (n = (function (t, e, a) {
             let { spanId: r, traceId: n } = t.spanContext(),
                 _ = !e.getScopeData().sdkProcessingMetadata[h] && (0, R.Tt)(t),
                 o = _
-                    ? new N.s({
+                    ? new p.s({
                           ...a,
                           parentSpanId: r,
                           traceId: n,
                           sampled: _
                       })
-                    : new p.b({ traceId: n });
+                    : new N.b({ traceId: n });
             (0, R.j5)(t, o);
             let c = (0, i.s3)();
             return c && (c.emit('spanStart', o), a.endTimestamp && c.emit('spanEnd', o)), o;
@@ -188,7 +188,7 @@ function C({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
         )),
             a && (0, d.Lh)(n, a);
     }
-    return (0, f.Z)(n), (0, L.YJ)(n, r, _), n;
+    return (0, A.Z)(n), (0, L.YJ)(n, r, _), n;
 }
 function v(t) {
     let e = {
@@ -211,7 +211,7 @@ function U(t, e, a) {
         { name: _ = '', attributes: o } = t,
         [c, s] = e.getScopeData().sdkProcessingMetadata[h]
             ? [!1]
-            : (0, A.R)(n, {
+            : (0, f.R)(n, {
                   name: _,
                   parentSampled: a,
                   attributes: o,
@@ -220,7 +220,7 @@ function U(t, e, a) {
                       parentSampled: a
                   }
               }),
-        l = new N.s({
+        l = new p.s({
             ...t,
             attributes: {
                 [E.Zj]: 'custom',
@@ -230,12 +230,12 @@ function U(t, e, a) {
         });
     return void 0 !== s && l.setAttribute(E.TE, s), r && r.emit('spanStart', l), l;
 }
-function b(t) {
+function G(t) {
     let e = (0, I.Y)(t);
     if (!e) return;
     let a = (0, i.s3)();
     return (a ? a.getOptions() : {}).parentSpanIsAlwaysRootSpan ? (0, R.Gx)(e) : e;
 }
-function G(t) {
+function b(t) {
     return void 0 !== t ? (e) => y(t, e) : (t) => t();
 }

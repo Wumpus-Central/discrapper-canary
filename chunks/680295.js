@@ -56,8 +56,8 @@ let v = (e) => {
         (0, g.Z)(E);
         let [T, A] = i.useState(0),
             [N, C] = i.useState(0),
-            { accessibilityLabel: P } = E,
-            [R, w] = i.useState(-O),
+            { accessibilityLabel: R } = E,
+            [P, w] = i.useState(-O),
             {
                 stop: D,
                 reset: L,
@@ -105,7 +105,7 @@ let v = (e) => {
                                         left: null != (l = null == (o = e.position) ? void 0 : o.x) ? l : 0
                                     },
                                     src: n,
-                                    alt: P
+                                    alt: R
                                 },
                                 e.src + i
                             );
@@ -116,8 +116,8 @@ let v = (e) => {
                                 layerConfig: e,
                                 animationType: E.animationType,
                                 ticking: x.current,
-                                time: R,
-                                accessibilityLabel: P,
+                                time: P,
+                                accessibilityLabel: R,
                                 hasPlayedThrough: M,
                                 setHasPlayedThrough: j,
                                 urlQueryString: m,

@@ -77,7 +77,7 @@ function C(e, t) {
     }
     return n;
 }
-function P(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -88,7 +88,7 @@ function P(e, t) {
         e
     );
 }
-let R = 'in-app',
+let P = 'in-app',
     w = 'Discord Widget';
 function D(e) {
     let { questId: t, location: i, questContentPosition: a, preview: o = !1, previewQuest: l = null } = e;
@@ -97,7 +97,7 @@ function D(e) {
         return (n) =>
             (0, r.jsx)(
                 e,
-                P(N({}, n), {
+                R(N({}, n), {
                     questId: t,
                     questContentPosition: a,
                     location: i,
@@ -115,7 +115,7 @@ function L(e, t) {
               return (n) =>
                   (0, r.jsx)(
                       i,
-                      P(N({}, n), {
+                      R(N({}, n), {
                           quest: e,
                           location: t
                       })
@@ -129,7 +129,7 @@ function x(e, t) {
         return (n) =>
             (0, r.jsx)(
                 i,
-                P(N({}, n), {
+                R(N({}, n), {
                     quest: e,
                     location: t
                 })
@@ -142,7 +142,7 @@ function k(e, t) {
         return (n) =>
             (0, r.jsx)(
                 i,
-                P(N({}, n), {
+                R(N({}, n), {
                     quest: e,
                     location: t
                 })
@@ -155,7 +155,7 @@ function M(e, t) {
         return (n) =>
             (0, r.jsx)(
                 i,
-                P(N({}, n), {
+                R(N({}, n), {
                     quest: e,
                     location: t
                 })
@@ -175,7 +175,7 @@ function j(e, t) {
             return (n) =>
                 (0, r.jsx)(
                     i,
-                    P(N({}, n), {
+                    R(N({}, n), {
                         questContent: t.content,
                         quest: e
                     })
@@ -186,7 +186,7 @@ function U() {
     let { fromContent: e, questId: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     (0, v.Z.getState().setUtmCurrentContext)({
         utmSourceCurrent: w,
-        utmMediumCurrent: R,
+        utmMediumCurrent: P,
         utmCampaignCurrent: t,
         utmContentCurrent: Object.keys(m.jn).find((t) => m.jn[t] === e)
     });
@@ -216,7 +216,7 @@ function F(e) {
             return (a) =>
                 (0, r.jsx)(
                     i,
-                    P(N({}, a), {
+                    R(N({}, a), {
                         openStartClockTime: performance.now(),
                         questId: e.id,
                         autoplay: t,

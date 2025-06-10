@@ -6,9 +6,9 @@ n.d(t, {
     Wf: () => N,
     XU: () => y,
     dL: () => v,
-    eH: () => R,
+    eH: () => P,
     m1: () => A,
-    op: () => P,
+    op: () => R,
     s1: () => I,
     uL: () => b,
     uv: () => O
@@ -151,9 +151,9 @@ function N(e) {
 function C() {
     return h;
 }
-function P() {
+function R() {
     g() && ((i = null), r.goBack());
 }
-function R() {
+function P() {
     g() && ((i = null), r.goForward());
 }

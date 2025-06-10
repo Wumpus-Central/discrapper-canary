@@ -164,13 +164,13 @@ var m = {
             }, [])
             .reverse();
     },
-    P = function (e, t) {
+    R = function (e, t) {
         if (Array.isArray(e) && e.length) {
             for (var n = 0; n < e.length; n += 1) if (e[n][t]) return !0;
         }
         return !1;
     },
-    R = function (e) {
+    P = function (e) {
         return Array.isArray(e) ? e.join('') : e;
     },
     w = function (e, t) {
@@ -240,7 +240,7 @@ var m = {
                     toString: function () {
                         return (function (e, t, n, r) {
                             var i = k(n),
-                                a = R(t);
+                                a = P(t);
                             return i ? '<' + e + ' data-rh="true" ' + i + '>' + x(a, r) + '</' + e + '>' : '<' + e + ' data-rh="true">' + x(a, r) + '</' + e + '>';
                         })(e, t.title, t.titleAttributes, n);
                     }
@@ -471,7 +471,7 @@ var W = function (e, t) {
         K(m.BODY, e.bodyAttributes),
             K(m.HTML, r),
             (function (e, t) {
-                void 0 !== e && document.title !== e && (document.title = R(e)), K(m.TITLE, t);
+                void 0 !== e && document.title !== e && (document.title = P(e)), K(m.TITLE, t);
             })(u, d);
         var f = {
                 baseTag: W(m.BASE, n),
@@ -493,7 +493,7 @@ var W = function (e, t) {
             s(e, _, p);
     },
     q = null,
-    Q = (function (e) {
+    X = (function (e) {
         function t() {
             for (var t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
             return ((t = e.call.apply(e, [this].concat(r)) || this).rendered = !1), t;
@@ -536,7 +536,7 @@ var W = function (e, t) {
                         styleTags: C(m.STYLE, ['cssText'], e),
                         title: S(e),
                         titleAttributes: A('titleAttributes', e),
-                        prioritizeSeoTags: P(e, 'prioritizeSeoTags')
+                        prioritizeSeoTags: R(e, 'prioritizeSeoTags')
                     };
                 Y.canUseDOM
                     ? ((t = a),
@@ -560,8 +560,8 @@ var W = function (e, t) {
             t
         );
     })(r.Component);
-(Q.propTypes = { context: Z.isRequired }), (Q.displayName = 'HelmetDispatcher');
-var X = ['children'],
+(X.propTypes = { context: Z.isRequired }), (X.displayName = 'HelmetDispatcher');
+var Q = ['children'],
     J = ['children'],
     $ = (function (e) {
         function t() {
@@ -647,7 +647,7 @@ var X = ['children'],
                         if (e && e.props) {
                             var r = e.props,
                                 a = r.children,
-                                o = h(r, X),
+                                o = h(r, Q),
                                 s = Object.keys(o).reduce(function (e, t) {
                                     return (e[v[t] || t] = o[t]), e;
                                 }, {}),
@@ -692,14 +692,14 @@ var X = ['children'],
                     !a || a instanceof F || (a = new F(a.context, a.instances)),
                     a
                         ? r.createElement(
-                              Q,
+                              X,
                               f({}, i, {
                                   context: a.value,
                                   helmetData: void 0
                               })
                           )
                         : r.createElement(V.Consumer, null, function (e) {
-                              return r.createElement(Q, f({}, i, { context: e }));
+                              return r.createElement(X, f({}, i, { context: e }));
                           })
                 );
             }),

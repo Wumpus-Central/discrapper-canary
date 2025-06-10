@@ -87,7 +87,7 @@ function S(e, t) {
 }
 function T(e) {
     var t;
-    let { legalTermsNodeRef: n, invoiceError: i, planError: a, disablePurchase: d, flashLegalTerms: f, isSubmitting: h, premiumSubscription: b, isGift: O, planGroup: T, isPrepaid: A, isTrial: N, makePurchase: C, needsPaymentSource: P, inReverseTrial: R, onNext: w, onPaymentSourceAdd: D } = e,
+    let { legalTermsNodeRef: n, invoiceError: i, planError: a, disablePurchase: d, flashLegalTerms: f, isSubmitting: h, premiumSubscription: b, isGift: O, planGroup: T, isPrepaid: A, isTrial: N, makePurchase: C, needsPaymentSource: R, inReverseTrial: P, onNext: w, onPaymentSourceAdd: D } = e,
         { application: L, selectedPlan: x, hasAcceptedTerms: k, purchaseType: M, paymentSourceId: j, activeSubscription: U, devShelfFetchState: G, hasPaymentSources: B } = (0, c.JL)(),
         F = I({
             purchaseType: M,
@@ -96,7 +96,7 @@ function T(e) {
             isGift: O,
             planGroup: T,
             isPrepaidPaymentSource: A,
-            inReverseTrial: R,
+            inReverseTrial: P,
             paymentSourceId: j,
             hasPaymentSources: B
         }),
@@ -107,7 +107,7 @@ function T(e) {
             disabled: !0,
             children: F
         });
-    if (P && B)
+    if (R && B)
         return (0, r.jsx)(o.ua7, {
             text: m.intl.string(m.t.L7jbQU),
             children: (e) =>
@@ -122,7 +122,7 @@ function T(e) {
                     })
                 )
         });
-    if (P && !B)
+    if (R && !B)
         return (0, r.jsx)(o.ua7, {
             text: m.intl.string(m.t.L7jbQU),
             children: (e) =>
@@ -183,7 +183,7 @@ function T(e) {
                     })
                 )
         });
-    else if (R && null != U && null != j)
+    else if (P && null != U && null != j)
         return (0, r.jsx)(_.Z, {
             activeSubscription: U,
             onNext: w,

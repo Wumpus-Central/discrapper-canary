@@ -4,7 +4,7 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800),
-    a = n(386230),
+    a = n(524979),
     o = n(990547),
     s = n(873546),
     l = n(186325),
@@ -125,8 +125,8 @@ function T(e) {
     });
     let N = S.activeSlide,
         C = (0, d.Z)(S.activeSlide),
-        P = null != (t = S.directionOverride) ? t : v(null != C ? T[C] : null, T[N]),
-        { reducedMotion: R } = i.useContext(l.S),
+        R = null != (t = S.directionOverride) ? t : v(null != C ? T[C] : null, T[N]),
+        { reducedMotion: P } = i.useContext(l.S),
         w = i.useContext(f.Z),
         D = T[N].impressionName,
         L = E(m({}, T[N].impressionProperties), { location_stack: A });
@@ -137,7 +137,7 @@ function T(e) {
         _stackContext: { isSlide: !0 }
     });
     let { ref: x, width: k = 0, height: M = 0 } = (0, u.ZP)(N),
-        j = m({}, O, S.springConfig, R.enabled ? { clamp: !0 } : null),
+        j = m({}, O, S.springConfig, P.enabled ? { clamp: !0 } : null),
         U = (0, c.q_F)(
             {
                 width: null != (n = S.width) ? n : k,
@@ -161,7 +161,7 @@ function T(e) {
             },
             null == C ? 'animate-never' : 'respect-motion-settings'
         ),
-        B = (0, p.Z)(P),
+        B = (0, p.Z)(R),
         { width: F, centered: V = !0 } = S,
         Z = s.tq ? '100%' : U.width.to((e) => ('string' == typeof e ? e : Math.round(e))),
         H = s.tq ? '100%' : U.height.to((e) => Math.round(e)),
@@ -199,7 +199,7 @@ function T(e) {
                             width: s.tq ? '100%' : F
                         },
                         Y,
-                        R.enabled
+                        P.enabled
                             ? o
                             : m(
                                   {

@@ -1,6 +1,6 @@
 n.d(t, {
     B1: () => j,
-    DR: () => P,
+    DR: () => R,
     F$: () => L,
     Ov: () => G,
     R2: () => U,
@@ -9,7 +9,7 @@ n.d(t, {
     fi: () => B,
     jr: () => k,
     mK: () => C,
-    oK: () => R,
+    oK: () => P,
     oc: () => D,
     p8: () => F,
     qg: () => x
@@ -93,10 +93,10 @@ let N = (e) => {
         var { openInLayer: t = !0, tab: n } = e;
         N(T(e, ['openInLayer', 'tab'])), t ? (0, l.jN)(v.S9g.COLLECTIBLES_SHOP) : (0, d.uL)(n ? v.Z5c.COLLECTIBLES_SHOP_WITH_TAB(n) : v.Z5c.COLLECTIBLES_SHOP);
     },
-    P = () => {
+    R = () => {
         s.Z.dispatch({ type: 'COLLECTIBLES_SHOP_CLOSE' }), (0, l.xf)();
     },
-    R = (e) => {
+    P = (e) => {
         s.Z.dispatch({
             type: 'COLLECTIBLES_PRODUCT_DETAILS_OPEN',
             item: e

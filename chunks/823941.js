@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => D,
-    n: () => P
+    n: () => R
 }),
     n(35282);
 var r = n(255367),
@@ -29,8 +29,8 @@ var r = n(255367),
     A = n(544348);
 let N = 90,
     C = 28,
-    P = (0, E.IC)(N),
-    R = (e) => {
+    R = (0, E.IC)(N),
+    P = (e) => {
         let { category: t } = e,
             { analyticsLocations: n } = (0, d.ZP)(),
             a = i.useRef(null),
@@ -111,7 +111,7 @@ function D(e) {
             (null == _ ? void 0 : _.addLogo)
                 ? (0, r.jsx)('img', {
                       className: A.categoryLogo,
-                      src: (0, E.uV)(t.logo, { size: P }),
+                      src: (0, E.uV)(t.logo, { size: R }),
                       alt: t.name,
                       style: { maxWidth: null == _ ? void 0 : _.logoMaxWidth }
                   })
@@ -120,7 +120,7 @@ function D(e) {
                 className: o()(A.summary, { [A.blackSummary]: S }),
                 style: null != t.bannerTextColor ? { color: t.bannerTextColor } : void 0,
                 variant: 'text-md/normal',
-                children: t.skuId === s.T.DISXCORE ? (0, r.jsx)(R, { category: t }) : t.summary
+                children: t.skuId === s.T.DISXCORE ? (0, r.jsx)(P, { category: t }) : t.summary
             }),
             !i &&
                 (0, r.jsx)(O.Z, {

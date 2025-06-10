@@ -64,7 +64,7 @@ function E(e, t) {
     );
 }
 function b(e) {
-    let { color: t = 'default', label: n, icon: a, iconLeft: h, iconLeftSize: g = 'md', hint: b, subtext: y, subtextLineClamp: O, hasSubmenu: v, disabled: I, isFocused: S, menuItemProps: T, action: A, onClose: N, onFocus: C, className: P, focusedClassName: R, subMenuIconClassName: w, dontCloseOnActionIfHoldingShiftKey: D, dontCloseOnAction: L, iconProps: x, sparkle: k } = e,
+    let { color: t = 'default', label: n, icon: a, iconLeft: h, iconLeftSize: g = 'md', hint: b, subtext: y, subtextLineClamp: O, hasSubmenu: v, disabled: I, isFocused: S, menuItemProps: T, action: A, onClose: N, onFocus: C, className: R, focusedClassName: P, subMenuIconClassName: w, dontCloseOnActionIfHoldingShiftKey: D, dontCloseOnAction: L, iconProps: x, sparkle: k } = e,
         { onSelect: M, onInteraction: j } = i.useContext(c.p),
         U = i.useRef(null),
         G = i.useCallback(
@@ -85,10 +85,10 @@ function b(e) {
                 m(
                     {
                         innerRef: U,
-                        className: o()(p.item, p.labelContainer, _._[t], P, {
+                        className: o()(p.item, p.labelContainer, _._[t], R, {
                             [p.disabled]: I,
                             [p.focused]: S,
-                            [null != R ? R : '']: S
+                            [null != P ? P : '']: S
                         }),
                         onClick: I ? void 0 : G,
                         'aria-disabled': I

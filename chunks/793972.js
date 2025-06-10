@@ -35,7 +35,7 @@ let o = (e) => {
     c = () =>
         (0, n.jsx)('span', {
             className: s.bookend,
-            'arria-hidden': !0,
+            'aria-hidden': !0,
             children: ':'
         }),
     u = (e) => {

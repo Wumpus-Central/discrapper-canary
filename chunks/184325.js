@@ -26,8 +26,8 @@ var i = n(120356),
     A = n(687158),
     N = n(228168),
     C = n(981631),
-    P = n(215023),
-    R = n(474936),
+    R = n(215023),
+    P = n(474936),
     w = n(681642),
     D = n(388032),
     L = n(286020);
@@ -100,7 +100,7 @@ function G(e) {
         { analyticsLocations: B } = (0, c.ZP)(l.Z.BADGE),
         { context: F, trackUserProfileAction: V } = (0, I.KZ)(),
         Z = b.default.getCurrentUser(),
-        H = (0, O.yd)(null == Z ? void 0 : Z.premiumType, R.p9.TIER_2),
+        H = (0, O.yd)(null == Z ? void 0 : Z.premiumType, P.p9.TIER_2),
         Y = (0, A.Of)(null != (t = null == Z ? void 0 : Z.id) ? t : null),
         W = (0, T.Z)(Y).some((e) => e.id === g.l.ORB_PROFILE_BADGE);
     return (0, r.jsx)('div', {
@@ -128,7 +128,7 @@ function G(e) {
                     )
                         return void (0, u.mK)({
                             openInLayer: !1,
-                            tab: P.AW.ORBS,
+                            tab: R.AW.ORBS,
                             analyticsLocations: B,
                             analyticsSource: l.Z.VIRTUAL_CURRENCY_ORB_PROFILE_BADGE
                         });

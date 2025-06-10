@@ -86,8 +86,8 @@ function T(e) {
         { guildId: h, nick: m, colorString: v, colorStrings: T, colorRoleName: A } = (0, u.ZP)(a),
         N = (0, d.X)(h, T),
         C = I(i, a),
-        P = (0, p.NE)(i, a),
-        R = n.showThreadPromptOnReply && C >= O && P,
+        R = (0, p.NE)(i, a),
+        P = n.showThreadPromptOnReply && C >= O && R,
         w = () => (0, _.uL)(E.Z5c.CHANNEL(i.getGuildId(), i.id, a.id));
     function D(e) {
         e.stopPropagation(), (0, f.qx)(i.id, !s);
@@ -179,7 +179,7 @@ function T(e) {
                         })
                     ]
                 }),
-                R &&
+                P &&
                     (0, r.jsx)(S, {
                         channel: i,
                         message: a,

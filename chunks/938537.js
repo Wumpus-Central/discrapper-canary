@@ -62,10 +62,10 @@ function N(e, t, n, r, a, o) {
 function C(e, t) {
     return N(e.type, t, void 0, void 0, void 0, e.props);
 }
-function P(e) {
+function R(e) {
     return 'object' == typeof e && null !== e && e.$$typeof === i;
 }
-function R(e) {
+function P(e) {
     var t = {
         '=': '=0',
         ':': '=2'
@@ -79,7 +79,7 @@ function R(e) {
 }
 var w = /\/+/g;
 function D(e, t) {
-    return 'object' == typeof e && null !== e && null != e.key ? R('' + e.key) : t.toString(36);
+    return 'object' == typeof e && null !== e && null != e.key ? P('' + e.key) : t.toString(36);
 }
 function L() {}
 function x(e) {
@@ -143,7 +143,7 @@ function k(e, t, n, r, o) {
                   k(o, t, n, '', function (e) {
                       return e;
                   }))
-                : null != o && (P(o) && (o = C(o, n + (null == o.key || (e && e.key === o.key) ? '' : ('' + o.key).replace(w, '$&/') + '/') + l)), t.push(o)),
+                : null != o && (R(o) && (o = C(o, n + (null == o.key || (e && e.key === o.key) ? '' : ('' + o.key).replace(w, '$&/') + '/') + l)), t.push(o)),
             1
         );
     l = 0;
@@ -227,7 +227,7 @@ function G() {}
         );
     },
     only: function (e) {
-        if (!P(e)) throw Error('React.Children.only expected to receive a single React element child.');
+        if (!R(e)) throw Error('React.Children.only expected to receive a single React element child.');
         return e;
     }
 }),
@@ -300,7 +300,7 @@ function G() {}
             render: e
         };
     }),
-    (t.isValidElement = P),
+    (t.isValidElement = R),
     (t.lazy = function (e) {
         return {
             $$typeof: p,

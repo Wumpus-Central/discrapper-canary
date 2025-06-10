@@ -73,12 +73,12 @@ let m = 300000,
     A = 0,
     N = 0,
     C = 0,
-    P = 0,
-    R = 0;
+    R = 0,
+    P = 0;
 function w() {
     C = Object.values(g).length;
     let { [d.OGo.PENDING_INCOMING]: e = 0, [d.OGo.PENDING_OUTGOING]: t = 0, [d.OGo.FRIEND]: n = 0 } = a().countBy(Object.values(g), (e) => e);
-    (A = t), (N = n), (P = y.size), (R = v.size), (T = Math.max(e - P - R, 0));
+    (A = t), (N = n), (R = y.size), (P = v.size), (T = Math.max(e - R - P, 0));
 }
 function D(e) {
     (g = {}),
@@ -175,10 +175,10 @@ class G extends (r = o.ZP.Store) {
         return T;
     }
     getSpamCount() {
-        return P;
+        return R;
     }
     getPendingIgnoredCount() {
-        return R;
+        return P;
     }
     getOutgoingCount() {
         return A;

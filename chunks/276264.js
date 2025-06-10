@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => Q,
+    Z: () => X,
     x: () => F
 }),
     n(388685);
@@ -29,8 +29,8 @@ var r = n(255367),
     A = n(594174),
     N = n(709586),
     C = n(624138),
-    P = n(51144),
-    R = n(981631),
+    R = n(51144),
+    P = n(981631),
     w = n(674563),
     D = n(524484),
     L = n(388032),
@@ -197,9 +197,9 @@ let F = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
     }),
     z = i.memo(function (e) {
         let { user: t, shouldAnimateStatus: n, activities: i, status: a, eventHandlers: o, avatarSrc: s, isMobile: l, isTyping: d, avatarDecorationSrc: f, handleSetTypingRef: _, typingRef: p, currentUser: h } = e,
-            m = a === R.Skl.OFFLINE,
+            m = a === P.Skl.OFFLINE,
             g = n ? c.Xo$ : c.qEK,
-            E = (0, u.Z)(i) ? R.Skl.STREAMING : a;
+            E = (0, u.Z)(i) ? P.Skl.STREAMING : a;
         return (
             (E = m ? void 0 : E),
             (0, r.jsxs)(r.Fragment, {
@@ -247,7 +247,7 @@ let F = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                 ? void 0
                                 : a.find((e) => {
                                       let { type: t } = e;
-                                      return t === R.IIU.CUSTOM_STATUS;
+                                      return t === P.IIU.CUSTOM_STATUS;
                                   }),
                         user: c,
                         channel: u
@@ -268,11 +268,11 @@ let F = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                   hideTooltip: n
               });
     }),
-    Q = i.memo(function (e) {
+    X = i.memo(function (e) {
         var t;
-        let { selected: n = !1, colorString: a, colorStrings: l, colorRoleName: u, isOwner: f, ownerTooltipText: p, lostPermissionTooltipText: h, isTyping: E = !1, nick: b, user: y, currentUser: N, activities: C, applicationStream: w, status: D, shouldAnimateStatus: L = !1, isMobile: k, premiumSince: j, channel: B, guildId: F, className: Z, nameplate: H, hideClanTag: Y = !1, hideSubtext: Q = !1, hideTooltip: X = !1, onMouseDown: J, onKeyDown: $, onClick: ee, onContextMenu: et, onClickPremiumGuildIcon: en, 'aria-controls': er, 'aria-expanded': ei, 'aria-posinset': ea, 'aria-setsize': eo, id: es, tabIndex: el, itemProps: ec, ref: eu } = e,
+        let { selected: n = !1, colorString: a, colorStrings: l, colorRoleName: u, isOwner: f, ownerTooltipText: p, lostPermissionTooltipText: h, isTyping: E = !1, nick: b, user: y, currentUser: N, activities: C, applicationStream: w, status: D, shouldAnimateStatus: L = !1, isMobile: k, premiumSince: j, channel: B, guildId: F, className: Z, nameplate: H, hideClanTag: Y = !1, hideSubtext: X = !1, hideTooltip: Q = !1, onMouseDown: J, onKeyDown: $, onClick: ee, onContextMenu: et, onClickPremiumGuildIcon: en, 'aria-controls': er, 'aria-expanded': ei, 'aria-posinset': ea, 'aria-setsize': eo, id: es, tabIndex: el, itemProps: ec, ref: eu } = e,
             ed = null == y ? void 0 : y.id,
-            ef = P.ZP.useName(y),
+            ef = R.ZP.useName(y),
             e_ = (null == (t = A.default.getCurrentUser()) ? void 0 : t.id) === ed,
             ep = i.useRef(null),
             eh = null != eu ? eu : ep,
@@ -296,8 +296,8 @@ let F = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 guildId: F
             }),
             eC = null != ec ? ec : {},
-            { onFocus: eP } = eC,
-            eR = G(eC, ['onFocus']),
+            { onFocus: eR } = eC,
+            eP = G(eC, ['onFocus']),
             ew = (0, O.X)(F, l),
             eD = (0, s.e7)([I.Z], () => null != I.Z.questEnrollmentBlockedUntil, []),
             [eL, ex] = i.useState(!1);
@@ -313,8 +313,8 @@ let F = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 eg(!1);
             }, []),
             eG = i.useCallback(() => {
-                eb(!0), null == eP || eP();
-            }, [eP]),
+                eb(!0), null == eR || eR();
+            }, [eR]),
             eB = i.useCallback(() => {
                 eb(!1);
             }, []),
@@ -363,7 +363,7 @@ let F = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                   ref: eh,
                                   selected: n,
                                   className: o()(x.member, Z, {
-                                      [x.offline]: D === R.Skl.OFFLINE && !n,
+                                      [x.offline]: D === P.Skl.OFFLINE && !n,
                                       [x.flatBottom]: eM
                                   }),
                                   innerClassName: x.memberInner,
@@ -426,7 +426,7 @@ let F = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                   }),
                                   nameplate: H,
                                   subText: (0, r.jsx)(q, {
-                                      hideSubtext: Q,
+                                      hideSubtext: X,
                                       activities: C,
                                       status: D,
                                       applicationStream: w,
@@ -435,7 +435,7 @@ let F = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                       channel: B,
                                       isHoveringOrFocusing: em || eE,
                                       quest: ek,
-                                      hideTooltip: X
+                                      hideTooltip: Q
                                   }),
                                   decorators: (0, r.jsx)(W, {
                                       user: y,
@@ -461,7 +461,7 @@ let F = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                       }
                                   }
                               },
-                              eR
+                              eP
                           )
                       )
               });

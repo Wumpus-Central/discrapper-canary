@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => R });
 var r,
     i = n(442837),
     a = n(46973),
@@ -113,7 +113,7 @@ class C extends (r = i.ZP.Store) {
     }
 }
 f(C, 'displayName', 'VideoBackgroundStore');
-let P = new C(o.Z, {
+let R = new C(o.Z, {
     VIDEO_FILTER_ASSETS_FETCH_SUCCESS: y,
     VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: O,
     VIDEO_FILTER_ASSET_DELETE_SUCCESS: v,

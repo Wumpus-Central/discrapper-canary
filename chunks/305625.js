@@ -38,11 +38,11 @@ function u(t) {
     if (I) return I;
     let R = (0, c.XU)(r),
         d = R.data || {},
-        f = d[i.TE];
-    null != f && (a.sample_rate = `${f}`);
-    let A = d[i.Zj],
-        p = R.description;
-    return 'url' !== A && p && (a.transaction = p), (a.sampled = String((0, c.Tt)(r))), e.emit('createDsc', a, r), a;
+        A = d[i.TE];
+    null != A && (a.sample_rate = `${A}`);
+    let f = d[i.Zj],
+        N = R.description;
+    return 'url' !== f && N && (a.transaction = N), (a.sampled = String((0, c.Tt)(r))), e.emit('createDsc', a, r), a;
 }
 function I(t) {
     let e = u(t);

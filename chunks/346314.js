@@ -103,8 +103,8 @@ function O(e) {
         N = S && A,
         {
             gradientStyle: C,
-            gradientClassname: P,
-            gradientGlowClassname: R
+            gradientClassname: R,
+            gradientGlowClassname: P
         } = (0, f.Ic)({
             primaryColor: null == c ? void 0 : c.primaryColor,
             secondaryColor: null == c ? void 0 : c.secondaryColor,
@@ -116,12 +116,12 @@ function O(e) {
         D = {
             className: o()(p.name, {
                 [p.username]: S,
-                [P]: N
+                [R]: N
             }),
             children: w
         },
         L = {
-            className: o()(p.nameGlow, R),
+            className: o()(p.nameGlow, P),
             children: n
         },
         x = T

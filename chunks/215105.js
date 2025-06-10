@@ -55,8 +55,8 @@ let S = (0, f.kt)({
         }
     };
 function N(e) {
-    let { user: t, guildId: n, channelId: a, sourceType: s, sourceDetails: f, setPopoutRef: _, modalKey: E, onAction: N, onClose: C, entry: P } = e,
-        { resetInteraction: R, setInteractionToast: w } = (0, g.Xo)(),
+    let { user: t, guildId: n, channelId: a, sourceType: s, sourceDetails: f, setPopoutRef: _, modalKey: E, onAction: N, onClose: C, entry: R } = e,
+        { resetInteraction: P, setInteractionToast: w } = (0, g.Xo)(),
         { primaryColor: D } = (0, b.z)(),
         [L, x] = i.useState(''),
         [k, M] = i.useState((0, u.JM)(L)),
@@ -64,9 +64,9 @@ function N(e) {
         U = i.useRef(null),
         G = i.useCallback(
             (e) => {
-                e.key === O.vn.ESCAPE && (e.stopPropagation(), R());
+                e.key === O.vn.ESCAPE && (e.stopPropagation(), P());
             },
-            [R]
+            [P]
         );
     i.useEffect(() => {
         null == _ || _(null == U ? void 0 : U.current);
@@ -88,7 +88,7 @@ function N(e) {
                     location: 'UserProfileReplyPopout',
                     openChannel: !1,
                     whenReady: !1,
-                    entry: P
+                    entry: R
                 });
             } catch (e) {}
             w(y.P.REPLY);
@@ -132,7 +132,7 @@ function N(e) {
                     try {
                         return (
                             await B(n),
-                            R(),
+                            P(),
                             null == C || C(),
                             {
                                 shouldClear: !0,

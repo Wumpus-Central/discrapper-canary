@@ -17,12 +17,12 @@ function _(e, t) {
         N = Date.now() - (null != (h = null == A ? void 0 : A.fetchEndedAt) ? h : 0) >= f;
     if (((null == A || null == (n = A.fetchError) ? void 0 : n.status) === 404 || (null == A || null == (_ = A.fetchError) ? void 0 : _.status) === 429) && !N) return Promise.resolve();
     let C = u.Z.getGuildMemberProfile(e, v),
-        P = u.Z.getMutualGuilds(e),
-        R = u.Z.getMutualFriends(e),
+        R = u.Z.getMutualGuilds(e),
+        P = u.Z.getMutualFriends(e),
         w = u.Z.getMutualFriendsCount(e),
-        D = null == R && b,
+        D = null == P && b,
         L = null == w && E,
-        x = (null == P && g) || D || L,
+        x = (null == R && g) || D || L,
         k = null == v ? null == A : null == C,
         M = !k && (N || x);
     if (!k && !M) return Promise.resolve();

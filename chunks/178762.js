@@ -2,7 +2,7 @@ n.d(t, {
     Ir: () => z,
     J: () => K,
     YN: () => V,
-    ZP: () => Q,
+    ZP: () => X,
     iZ: () => H
 }),
     n(388685);
@@ -32,8 +32,8 @@ var r = n(255367),
     A = n(678869),
     N = n(278399),
     C = n(886217),
-    P = n(555672),
-    R = n(644548),
+    R = n(555672),
+    P = n(644548),
     w = n(335326),
     D = n(268010),
     L = n(797342),
@@ -125,7 +125,7 @@ let Y = (e) => {
             case l.s.WATCHED_MEDIA:
                 return (0, r.jsx)(w.Z, G(j({}, n), { entry: t }));
             case l.s.TOP_GAME:
-                return (0, r.jsx)(P.ZP, G(j({}, n), { entry: t }));
+                return (0, r.jsx)(R.ZP, G(j({}, n), { entry: t }));
             case l.s.TOP_ARTIST:
                 return (0, r.jsx)(N.ZP, G(j({}, n), { entry: t }));
             case l.s.LISTENED_SESSION:
@@ -174,7 +174,7 @@ let Y = (e) => {
             case l.s.WATCHED_MEDIA:
                 return (0, r.jsx)(D.Z, G(j({}, i), { entry: n }));
             case l.s.TOP_GAME:
-                return (0, r.jsx)(R.Z, G(j({}, i), { entry: n }));
+                return (0, r.jsx)(P.Z, G(j({}, i), { entry: n }));
             case l.s.TOP_ARTIST:
                 return (0, r.jsx)(C.Z, G(j({}, i), { entry: n }));
             case l.s.LISTENED_SESSION:
@@ -215,8 +215,8 @@ let Y = (e) => {
                 [T, m.channel.guild_id, m.channel.id, m.entry, m.requestId, S]
             ),
             N = i.useRef(!1),
-            [C, P] = i.useState(!1),
-            [R, w] = i.useState(!1),
+            [C, R] = i.useState(!1),
+            [P, w] = i.useState(!1),
             D = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled);
         i.useEffect(() => {
             C && D && w(!0);
@@ -262,7 +262,7 @@ let Y = (e) => {
             H = () => {
                 (N.current = !1),
                     setTimeout(() => {
-                        N.current || (P(!1), w(D));
+                        N.current || (R(!1), w(D));
                     }, 100);
             };
         return (0, r.jsx)('div', {
@@ -271,7 +271,7 @@ let Y = (e) => {
                 m.entry.content_type !== l.s.LEADERBOARD || (0, h.un)(u.z.LEADERBOARD_NUX_COACHMARK) || (0, h.EW)(u.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: k.L.SECONDARY }),
                     (N.current = !0),
                     setTimeout(() => {
-                        N.current && P(!0), V(A);
+                        N.current && R(!0), V(A);
                     }, 100);
             },
             onMouseLeave: H,
@@ -299,7 +299,7 @@ let Y = (e) => {
                 positionKey: E,
                 onRequestOpen: () => V(A),
                 onRequestClose: () => {
-                    R && H();
+                    P && H();
                 },
                 spacing: 8,
                 children: (e, t) => {
@@ -317,7 +317,7 @@ let Y = (e) => {
                                 }
                             },
                             onClick: () => {
-                                C || P(!0);
+                                C || R(!0);
                             },
                             onContextMenu: M,
                             children: (0, r.jsx)(
@@ -333,4 +333,4 @@ let Y = (e) => {
             })
         });
     },
-    Q = i.memo(q);
+    X = i.memo(q);

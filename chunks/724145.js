@@ -25,8 +25,8 @@ var r = n(255367),
     A = n(572397),
     N = n(705262),
     C = n(981631),
-    P = n(921944),
-    R = n(474936),
+    R = n(921944),
+    P = n(474936),
     w = n(388032),
     D = n(595532);
 let L = () =>
@@ -48,7 +48,7 @@ let L = () =>
         let { markAsDismissed: t } = e,
             n = (0, A.q)(),
             i = () => {
-                null != t && t(P.L.DISMISS), n(C.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, T.C)();
+                null != t && t(R.L.DISMISS), n(C.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, T.C)();
             };
         return (0, r.jsxs)('div', {
             className: D.editorHeader,
@@ -82,7 +82,7 @@ let L = () =>
             y = (e) => {
                 e &&
                     (null == a || a(),
-                    null != o && o(P.L.PRIMARY),
+                    null != o && o(R.L.PRIMARY),
                     null != f &&
                         ((0, N.Yk)({
                             isPersisted: !0,
@@ -96,8 +96,8 @@ let L = () =>
             };
         return (0, r.jsx)(b.Z, {
             size: u.zxk.Sizes.MEDIUM,
-            textOptions: { textOverride: _ ? w.intl.string(w.t.IJI7ys) : (null == p || null == (i = p.subscription_trial) ? void 0 : i.sku_id) === R.Si.TIER_2 ? g : w.intl.string(w.t.mr4K7O) },
-            subscriptionTier: R.Si.TIER_2,
+            textOptions: { textOverride: _ ? w.intl.string(w.t.IJI7ys) : (null == p || null == (i = p.subscription_trial) ? void 0 : i.sku_id) === P.Si.TIER_2 ? g : w.intl.string(w.t.mr4K7O) },
+            subscriptionTier: P.Si.TIER_2,
             onSubscribeModalClose: y
         });
     },
@@ -107,7 +107,7 @@ let L = () =>
             [o, c] = i.useState(!1),
             d = (0, A.q)(),
             _ = () => {
-                null != t && t(P.L.DISMISS), d(C.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, T.C)(), n || f.Z.open();
+                null != t && t(R.L.DISMISS), d(C.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, T.C)(), n || f.Z.open();
             },
             p = (0, s.EQ)({
                 isPreview: a,
@@ -150,7 +150,7 @@ function j(e) {
         i.useEffect(() => {
             s &&
                 v.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
-                    type: R.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                    type: P.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                     location_stack: a
                 });
         }, [s, a]);

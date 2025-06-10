@@ -37,8 +37,8 @@ function T(e, t, n) {
 let A = {},
     N = {},
     C = {},
-    P = 0;
-function R(e) {
+    R = 0;
+function P(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = A[e];
     if (null != n) return n;
@@ -63,7 +63,7 @@ function w(e) {
     let o = i.getGuildId(),
         s = null != o && (u.Z.isLurking(o) || (null == (t = y.ZP.getMember(o, r.id)) ? void 0 : t.isPending));
     return !i.isScheduledForDeletion() && !s && a().isEmpty(i.permissionOverwrites) && null != o
-        ? R(o)
+        ? P(o)
         : E.uB({
               user: r,
               context: i,
@@ -83,7 +83,7 @@ function L(e) {
 }
 function x() {
     for (let e in ((A = {}), (N = {}), C)) C[e] += 1;
-    P += 1;
+    R += 1;
 }
 function k() {
     x();
@@ -112,7 +112,7 @@ function G(e) {
             context: n
         });
     if (N[n.id] === i) return !1;
-    (N[n.id] = i), (P += 1), L(n.getGuildId());
+    (N[n.id] = i), (R += 1), L(n.getGuildId());
 }
 function B(e) {
     let { channels: t } = e,
@@ -127,7 +127,7 @@ function B(e) {
             });
         N[t.id] !== i && ((N[t.id] = i), L(t.getGuildId()), (n = !0));
     }
-    return !!n && ((P += 1), n);
+    return !!n && ((R += 1), n);
 }
 function F() {
     return !0;
@@ -149,7 +149,7 @@ function Y(e) {
 }
 function W(e) {
     let { channel: t } = e;
-    return delete N[t.id], (P += 1), L(t.guild_id), !1;
+    return delete N[t.id], (R += 1), L(t.guild_id), !1;
 }
 function K(e) {
     let { guildId: t } = e;
@@ -158,7 +158,7 @@ function K(e) {
     a().forEach(n, (e) => {
         delete N[e.id];
     }),
-        (P += 1),
+        (R += 1),
         L(t);
 }
 function z(e) {
@@ -171,7 +171,7 @@ function z(e) {
             context: n
         });
     if (i === N[n.id]) return !1;
-    (N[n.id] = i), (P += 1);
+    (N[n.id] = i), (R += 1);
 }
 function q(e) {
     let { guildId: t } = e;
@@ -180,18 +180,18 @@ function q(e) {
     a().forEach(n, (e) => {
         delete N[e.id];
     }),
-        (P += 1),
+        (R += 1),
         L(t);
 }
-function Q(e, t, n, r) {
+function X(e, t, n, r) {
     let i = E.Hn;
     if (e instanceof p.Sf) {
         if (p.Ec.has(e.type)) {
             let i = b.Z.getChannel(e.parent_id);
-            return null == i ? E.Hn : E.Og(e, Q(i, t, n, r), f.Z.hasJoined(e.id));
+            return null == i ? E.Hn : E.Og(e, X(i, t, n, r), f.Z.hasJoined(e.id));
         }
         i = D(e.id);
-    } else e instanceof h.ZP && (i = R(e.id));
+    } else e instanceof h.ZP && (i = P(e.id));
     return void 0 !== t || void 0 !== n || void 0 !== r
         ? E.uB({
               user: v.default.getCurrentUser(),
@@ -203,7 +203,7 @@ function Q(e, t, n, r) {
           })
         : i;
 }
-class X extends (r = s.ZP.Store) {
+class Q extends (r = s.ZP.Store) {
     initialize() {
         this.waitFor(v.default, O.Z, b.Z, y.ZP, f.Z, d.Z, c.Z);
     }
@@ -211,7 +211,7 @@ class X extends (r = s.ZP.Store) {
         return p.Ec.has(e.type) ? w(e.id) : D(e.id);
     }
     getGuildPermissions(e) {
-        return R(e.id);
+        return P(e.id);
     }
     getGuildPermissionProps(e) {
         let t = v.default.getCurrentUser();
@@ -234,26 +234,26 @@ class X extends (r = s.ZP.Store) {
         };
     }
     canAccessMemberSafetyPage(e) {
-        return o.Db(R(e.id), S.N);
+        return o.Db(P(e.id), S.N);
     }
     canAccessGuildSettings(e) {
-        return o.Db(R(e.id), E.ym);
+        return o.Db(P(e.id), E.ym);
     }
     canWithPartialContext(e, t) {
         return 'channelId' in t && 'string' == typeof t.channelId ? this.can(e, b.Z.getChannel(t.channelId)) : 'guildId' in t && 'string' == typeof t.guildId && this.can(e, O.Z.getGuild(t.guildId));
     }
     can(e, t, n, r, i) {
-        let a = Q(t, n, r, i);
+        let a = X(t, n, r, i);
         return o.e$(a, e);
     }
     canBasicChannel(e, t, n, r, i) {
-        return 'basicPermissions' in t ? g.Z.has(t.basicPermissions, e) : o.e$(Q(t, n, r, i), g.Z.asBigFlag(e));
+        return 'basicPermissions' in t ? g.Z.has(t.basicPermissions, e) : o.e$(X(t, n, r, i), g.Z.asBigFlag(e));
     }
     computePermissions(e, t, n, r) {
-        return Q(e, t, n, r);
+        return X(e, t, n, r);
     }
     computeBasicPermissions(e) {
-        return 'basicPermissions' in e ? e.basicPermissions : g.Z.asBasicFlag(Q(e));
+        return 'basicPermissions' in e ? e.basicPermissions : g.Z.asBasicFlag(X(e));
     }
     canManageUser(e, t, n) {
         let r = t instanceof m.Z ? t.id : t;
@@ -284,14 +284,14 @@ class X extends (r = s.ZP.Store) {
         return null != (t = C[e]) ? t : 0;
     }
     getChannelsVersion() {
-        return P;
+        return R;
     }
 }
 function J() {
-    (N = {}), (A = {}), (C = {}), (P = 0);
+    (N = {}), (A = {}), (C = {}), (R = 0);
 }
-T(X, 'displayName', 'PermissionStore');
-let $ = new X(l.Z, {
+T(Q, 'displayName', 'PermissionStore');
+let $ = new Q(l.Z, {
     BACKGROUND_SYNC: k,
     CONNECTION_OPEN: k,
     OVERLAY_INITIALIZE: k,

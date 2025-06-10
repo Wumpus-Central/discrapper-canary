@@ -20,7 +20,7 @@ function u(e, t, n) {
     if ('string' == typeof e) return p(e, t);
     if (ArrayBuffer.isView(e)) return h(e);
     if (null == e) throw TypeError('The first argument must be one of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received type ' + typeof e);
-    if (X(e, ArrayBuffer) || (e && X(e.buffer, ArrayBuffer)) || ('undefined' != typeof SharedArrayBuffer && (X(e, SharedArrayBuffer) || (e && X(e.buffer, SharedArrayBuffer))))) return m(e, t, n);
+    if (Q(e, ArrayBuffer) || (e && Q(e.buffer, ArrayBuffer)) || ('undefined' != typeof SharedArrayBuffer && (Q(e, SharedArrayBuffer) || (e && Q(e.buffer, SharedArrayBuffer))))) return m(e, t, n);
     if ('number' == typeof e) throw TypeError('The "value" argument must not be of type number. Received type number');
     var r = e.valueOf && e.valueOf();
     if (null != r && r !== e) return c.from(r, t, n);
@@ -73,7 +73,7 @@ function b(e) {
 }
 function y(e, t) {
     if (c.isBuffer(e)) return e.length;
-    if (ArrayBuffer.isView(e) || X(e, ArrayBuffer)) return e.byteLength;
+    if (ArrayBuffer.isView(e) || Q(e, ArrayBuffer)) return e.byteLength;
     if ('string' != typeof e) throw TypeError('The "string" argument must be one of type string, Buffer, or ArrayBuffer. Received type ' + typeof e);
     var n = e.length,
         r = arguments.length > 2 && !0 === arguments[2];
@@ -192,19 +192,19 @@ function T(e, t, n, r) {
     return o;
 }
 function A(e, t, n, r) {
-    return Q(W(t, e.length - n), e, n, r);
+    return X(W(t, e.length - n), e, n, r);
 }
 function N(e, t, n, r) {
-    return Q(K(t), e, n, r);
+    return X(K(t), e, n, r);
 }
 function C(e, t, n, r) {
     return N(e, t, n, r);
 }
-function P(e, t, n, r) {
-    return Q(q(t), e, n, r);
-}
 function R(e, t, n, r) {
-    return Q(z(t, e.length - n), e, n, r);
+    return X(q(t), e, n, r);
+}
+function P(e, t, n, r) {
+    return X(z(t, e.length - n), e, n, r);
 }
 function w(e, t, n) {
     return 0 === t && n === e.length ? i.fromByteArray(e) : i.fromByteArray(e.slice(t, n));
@@ -283,7 +283,7 @@ function D(e, t, n) {
         return null != e && !0 === e._isBuffer && e !== c.prototype;
     }),
     (c.compare = function (e, t) {
-        if ((X(e, Uint8Array) && (e = c.from(e, e.offset, e.byteLength)), X(t, Uint8Array) && (t = c.from(t, t.offset, t.byteLength)), !c.isBuffer(e) || !c.isBuffer(t))) throw TypeError('The "buf1", "buf2" arguments must be one of type Buffer or Uint8Array');
+        if ((Q(e, Uint8Array) && (e = c.from(e, e.offset, e.byteLength)), Q(t, Uint8Array) && (t = c.from(t, t.offset, t.byteLength)), !c.isBuffer(e) || !c.isBuffer(t))) throw TypeError('The "buf1", "buf2" arguments must be one of type Buffer or Uint8Array');
         if (e === t) return 0;
         for (var n = e.length, r = t.length, i = 0, a = Math.min(n, r); i < a; ++i)
             if (e[i] !== t[i]) {
@@ -319,7 +319,7 @@ function D(e, t, n) {
             i = 0;
         for (n = 0; n < e.length; ++n) {
             var a = e[n];
-            if ((X(a, Uint8Array) && (a = c.from(a)), !c.isBuffer(a))) throw TypeError('"list" argument must be an Array of Buffers');
+            if ((Q(a, Uint8Array) && (a = c.from(a)), !c.isBuffer(a))) throw TypeError('"list" argument must be an Array of Buffers');
             a.copy(r, i), (i += a.length);
         }
         return r;
@@ -366,7 +366,7 @@ function D(e, t, n) {
     }),
     o && (c.prototype[o] = c.prototype.inspect),
     (c.prototype.compare = function (e, t, n, r, i) {
-        if ((X(e, Uint8Array) && (e = c.from(e, e.offset, e.byteLength)), !c.isBuffer(e))) throw TypeError('The "target" argument must be one of type Buffer or Uint8Array. Received type ' + typeof e);
+        if ((Q(e, Uint8Array) && (e = c.from(e, e.offset, e.byteLength)), !c.isBuffer(e))) throw TypeError('The "target" argument must be one of type Buffer or Uint8Array. Received type ' + typeof e);
         if ((void 0 === t && (t = 0), void 0 === n && (n = e ? e.length : 0), void 0 === r && (r = 0), void 0 === i && (i = this.length), t < 0 || n > e.length || r < 0 || i > this.length)) throw RangeError('out of range index');
         if (r >= i && t >= n) return 0;
         if (r >= i) return -1;
@@ -409,12 +409,12 @@ function D(e, t, n) {
                 case 'binary':
                     return C(this, e, t, n);
                 case 'base64':
-                    return P(this, e, t, n);
+                    return R(this, e, t, n);
                 case 'ucs2':
                 case 'ucs-2':
                 case 'utf16le':
                 case 'utf-16le':
-                    return R(this, e, t, n);
+                    return P(this, e, t, n);
                 default:
                     if (a) throw TypeError('Unknown encoding: ' + r);
                     (r = ('' + r).toLowerCase()), (a = !0);
@@ -714,11 +714,11 @@ function z(e, t) {
 function q(e) {
     return i.toByteArray(Y(e));
 }
-function Q(e, t, n, r) {
+function X(e, t, n, r) {
     for (var i = 0; i < r && !(i + n >= t.length) && !(i >= e.length); ++i) t[i + n] = e[i];
     return i;
 }
-function X(e, t) {
+function Q(e, t) {
     return e instanceof t || (null != e && null != e.constructor && null != e.constructor.name && e.constructor.name === t.name);
 }
 function J(e) {

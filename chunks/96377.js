@@ -37,8 +37,8 @@ let p = {
                 altBoundary: O
             }),
             C = (0, i.Z)(t.placement),
-            P = (0, d.Z)(t.placement),
-            R = !P,
+            R = (0, d.Z)(t.placement),
+            P = !R,
             w = (0, a.Z)(C),
             D = (0, o.Z)(w),
             L = t.modifiersData.popperOffsets,
@@ -73,12 +73,12 @@ let p = {
                     Y = H + N[F],
                     W = H - N[V],
                     K = S ? -k[Z] / 2 : 0,
-                    z = P === r.BL ? x[Z] : k[Z],
-                    q = P === r.BL ? -k[Z] : -x[Z],
-                    Q = t.elements.arrow,
-                    X =
-                        S && Q
-                            ? (0, l.Z)(Q)
+                    z = R === r.BL ? x[Z] : k[Z],
+                    q = R === r.BL ? -k[Z] : -x[Z],
+                    X = t.elements.arrow,
+                    Q =
+                        S && X
+                            ? (0, l.Z)(X)
                             : {
                                   width: 0,
                                   height: 0
@@ -86,9 +86,9 @@ let p = {
                     J = t.modifiersData['arrow#persistent'] ? t.modifiersData['arrow#persistent'].padding : (0, f.Z)(),
                     $ = J[F],
                     ee = J[V],
-                    et = (0, s.u)(0, x[Z], X[Z]),
-                    en = R ? x[Z] / 2 - K - et - $ - j.mainAxis : z - et - $ - j.mainAxis,
-                    er = R ? -x[Z] / 2 + K + et + ee + j.mainAxis : q + et + ee + j.mainAxis,
+                    et = (0, s.u)(0, x[Z], Q[Z]),
+                    en = P ? x[Z] / 2 - K - et - $ - j.mainAxis : z - et - $ - j.mainAxis,
+                    er = P ? -x[Z] / 2 + K + et + ee + j.mainAxis : q + et + ee + j.mainAxis,
                     ei = t.elements.arrow && (0, c.Z)(t.elements.arrow),
                     ea = ei ? ('y' === w ? ei.clientTop || 0 : ei.clientLeft || 0) : 0,
                     eo = null != (B = null == U ? void 0 : U[w]) ? B : 0,

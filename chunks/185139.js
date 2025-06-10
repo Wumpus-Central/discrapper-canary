@@ -19,9 +19,9 @@ var h = n(122289),
     b = n(106194);
 let y = new Set([p.h8.SKU_SELECT, p.h8.AWAITING_AUTHENTICATION, p.h8.AWAITING_PURCHASE_TOKEN_AUTH, p.h8.CONFIRM]);
 function O(e) {
-    let { steps: t, currentStep: n, body: o, paymentError: O, header: v, footer: I, isGift: S = !1, giftMessage: T = E.intl.string(E.t.DrgnS0), hideBreadcrumbs: A = !1, isLoading: N = !1, purchaseError: C, purchaseErrorBlockRef: P, planError: R, onScroll: w, scrollerClassName: D, hasCurrencies: L = !1 } = e,
+    let { steps: t, currentStep: n, body: o, paymentError: O, header: v, footer: I, isGift: S = !1, giftMessage: T = E.intl.string(E.t.DrgnS0), hideBreadcrumbs: A = !1, isLoading: N = !1, purchaseError: C, purchaseErrorBlockRef: R, planError: P, onScroll: w, scrollerClassName: D, hasCurrencies: L = !1 } = e,
         x = null;
-    null != O && null == (0, p.ly)(O) ? (x = O) : null != C ? (x = C) : null != R && (x = R);
+    null != O && null == (0, p.ly)(O) ? (x = O) : null != C ? (x = C) : null != P && (x = P);
     let k = null != x ? x.message : '';
     null != x && x instanceof d.HF && (x.code === f.SM.CARD_DECLINED && L && (k += ' '.concat(E.intl.string(E.t.iWvwQU))), x.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (k = E.intl.string(E.t.ypuSd3)), x.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (k = E.intl.string(E.t.mXMmWF)));
     let { stripe: M } = (0, _.JL)();
@@ -81,7 +81,7 @@ function O(e) {
                                 : (0, r.jsx)('div', {
                                       className: b.errorBlockWrapper,
                                       children: (0, r.jsx)(c.kzN, {
-                                          ref: P,
+                                          ref: R,
                                           children: k
                                       })
                                   }),

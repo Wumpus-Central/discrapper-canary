@@ -1,5 +1,5 @@
 let r;
-a.d(e, { m: () => G });
+a.d(e, { m: () => b });
 var n,
     _,
     o,
@@ -57,7 +57,7 @@ function I(t, e, a, r, n = window) {
                 ? a
                 : {
                       set(t) {
-                          N(() => {
+                          p(() => {
                               a.set.call(this, t);
                           }, 0),
                               _ && _.set && _.set.call(this, t);
@@ -104,9 +104,9 @@ function d(t, e, a, r, n) {
     return !(i < 0) && (r && (c = s(_, E(null, r))), (i > -1 && c < 0) || i < c);
 }
 'undefined' != typeof window && window.Proxy && window.Reflect && (u = new Proxy(u, { get: (t, e, a) => ('map' === e && console.error(l), Reflect.get(t, e, a)) })), /[1-9][0-9]{12}/.test(Date.now().toString());
-let f = {};
-function A(t) {
-    let e = f[t];
+let A = {};
+function f(t) {
+    let e = A[t];
     if (e) return e;
     let a = window.document,
         r = window[t];
@@ -117,13 +117,13 @@ function A(t) {
             let n = e.contentWindow;
             n && n[t] && (r = n[t]), a.head.removeChild(e);
         } catch (t) {}
-    return (f[t] = r.bind(window));
-}
-function p(...t) {
-    return A('requestAnimationFrame')(...t);
+    return (A[t] = r.bind(window));
 }
 function N(...t) {
-    return A('setTimeout')(...t);
+    return f('requestAnimationFrame')(...t);
+}
+function p(...t) {
+    return f('setTimeout')(...t);
 }
 var T = (((_ = T || {})[(_['2D'] = 0)] = '2D'), (_[(_.WebGL = 1)] = 'WebGL'), (_[(_.WebGL2 = 2)] = 'WebGL2'), _);
 let L = (t) =>
@@ -149,13 +149,13 @@ var g = function (t) {
 let P = new Map(),
     y = (t, e, a) => {
         let r;
-        if (!t || !(C(t, e) || 'object' == typeof t)) return;
+        if (!t || !(m(t, e) || 'object' == typeof t)) return;
         let n = t.constructor.name,
             _ = ((r = P.get(a)) || ((r = new Map()), P.set(a, r)), r.has(n) || r.set(n, []), r.get(n)),
             o = _.indexOf(t);
         return -1 === o && ((o = _.length), _.push(t)), o;
     },
-    m = (t, e, a) =>
+    C = (t, e, a) =>
         t.map((t) =>
             (function t(e, a, r) {
                 if (e instanceof Array) return e.map((e) => t(e, a, r));
@@ -192,7 +192,7 @@ let P = new Map(),
                         rr_type: e.constructor.name,
                         args: [t(e.data, a, r), e.width, e.height]
                     };
-                else if (C(e, a) || 'object' == typeof e)
+                else if (m(e, a) || 'object' == typeof e)
                     return {
                         rr_type: e.constructor.name,
                         index: y(e, a, r)
@@ -200,7 +200,7 @@ let P = new Map(),
                 return e;
             })(t, e, a)
         ),
-    C = (t, e) => !!['WebGLActiveInfo', 'WebGLBuffer', 'WebGLFramebuffer', 'WebGLProgram', 'WebGLRenderbuffer', 'WebGLShader', 'WebGLShaderPrecisionFormat', 'WebGLTexture', 'WebGLUniformLocation', 'WebGLVertexArrayObject', 'WebGLVertexArrayObjectOES'].filter((t) => 'function' == typeof e[t]).find((a) => t instanceof e[a]);
+    m = (t, e) => !!['WebGLActiveInfo', 'WebGLBuffer', 'WebGLFramebuffer', 'WebGLProgram', 'WebGLRenderbuffer', 'WebGLShader', 'WebGLShaderPrecisionFormat', 'WebGLTexture', 'WebGLUniformLocation', 'WebGLVertexArrayObject', 'WebGLVertexArrayObjectOES'].filter((t) => 'function' == typeof e[t]).find((a) => t instanceof e[a]);
 function v(t, e, a, r, n) {
     let _ = [];
     try {
@@ -235,7 +235,7 @@ function S(t, e, a, r, n, _, o, i) {
                     return function (...c) {
                         let s = t.apply(this, c);
                         if ((y(s, i, this), 'tagName' in this.canvas && !d(this.canvas, r, n, _, !0))) {
-                            let t = m(c, i, this),
+                            let t = C(c, i, this),
                                 r = {
                                     type: e,
                                     property: o,
@@ -407,8 +407,8 @@ class U {
                             return function (...i) {
                                 return (
                                     d(this.canvas, a, r, n, !0) ||
-                                        N(() => {
-                                            let a = m(i, e, this);
+                                        p(() => {
+                                            let a = C(i, e, this);
                                             t(this.canvas, {
                                                 type: T['2D'],
                                                 property: o,
@@ -482,7 +482,7 @@ class U {
             },
             I = (e) => {
                 if (this.windows.length) {
-                    if (l && e - l < E) return void p(I);
+                    if (l && e - l < E) return void N(I);
                     (l = e),
                         u(c).forEach((e) => {
                             if (!this.mirror.hasNode(e)) return;
@@ -522,26 +522,26 @@ class U {
                                     });
                             }
                         }),
-                        p(I);
+                        N(I);
                 }
             };
-        return p(I);
+        return N(I);
     }
     startPendingCanvasMutationFlusher() {
-        p(() => this.flushPendingCanvasMutations());
+        N(() => this.flushPendingCanvasMutations());
     }
     startRAFTimestamping() {
         let t = (e) => {
-            (this.rafStamps.latestId = e), p(t);
+            (this.rafStamps.latestId = e), N(t);
         };
-        p(t);
+        N(t);
     }
     flushPendingCanvasMutations() {
         this.pendingCanvasMutations.forEach((t, e) => {
             let a = this.mirror.getId(e);
             this.flushPendingCanvasMutationFor(e, a);
         }),
-            p(() => this.flushPendingCanvasMutations());
+            N(() => this.flushPendingCanvasMutations());
     }
     flushPendingCanvasMutationFor(t, e) {
         if (this.frozen || this.locked) return;
@@ -560,7 +560,7 @@ class U {
             this.pendingCanvasMutations.delete(t);
     }
 }
-let b = {
+let G = {
         low: {
             sampling: { canvas: 1 },
             dataURLOptions: {
@@ -583,7 +583,7 @@ let b = {
             }
         }
     },
-    G = (0, c._I)((t = {}) => {
+    b = (0, c._I)((t = {}) => {
         let e,
             [a, r] = t.maxCanvasSize || [],
             n = {
@@ -612,7 +612,7 @@ let b = {
                         });
                         return e(n), n;
                     },
-                    ...(b[t || 'medium'] || b.medium)
+                    ...(G[t || 'medium'] || G.medium)
                 };
             },
             async snapshot(t) {

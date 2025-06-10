@@ -32,8 +32,8 @@ var r = n(98405),
     A = T && T.prototype,
     N = S.prototype,
     C = b.set,
-    P = b.getterFor(v),
-    R = 'stack' in new S(v),
+    R = b.getterFor(v),
+    P = 'stack' in new S(v),
     w = function (e) {
         return f(g, e) && g[e].m ? g[e].c : 0;
     },
@@ -51,7 +51,7 @@ var r = n(98405),
                 code: r
             }),
             y || ((this.name = n), (this.message = t), (this.code = r)),
-            R)
+            P)
         ) {
             var i = new S(t);
             (i.name = v), c(this, 'stack', l(1, E(i.stack, 1)));
@@ -67,7 +67,7 @@ var r = n(98405),
     },
     k = function (e) {
         return x(function () {
-            return P(this)[e];
+            return R(this)[e];
         });
     };
 y && (d(L, 'code', k('code')), d(L, 'message', k('message')), d(L, 'name', k('name'))), c(L, 'constructor', l(1, D));

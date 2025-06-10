@@ -1,70 +1,69 @@
-n.d(t, { Z: () => eO }), n(388685), n(539854);
+n.d(t, { Z: () => ey }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
     s = n(512722),
     a = n.n(s),
-    c = n(252258),
-    u = n(442837),
-    d = n(704215),
-    h = n(481060),
-    p = n(570140),
-    f = n(475179),
-    g = n(925549),
-    m = n(438139),
-    b = n(730749),
-    y = n(607070),
-    O = n(636449),
-    v = n(566620),
-    _ = n(317381),
-    C = n(889441),
-    j = n(736409),
-    S = n(367907),
-    x = n(835473),
-    E = n(413523),
-    P = n(933557),
-    I = n(194082),
-    w = n(550532),
-    N = n(436774),
-    Z = n(605236),
-    T = n(243778),
-    A = n(594190),
-    R = n(925329),
-    D = n(102172),
-    L = n(74299),
-    M = n(914923),
-    k = n(165393),
-    U = n(989941),
-    G = n(690221),
-    B = n(231664),
-    V = n(759198),
-    H = n(970731),
-    F = n(131704),
-    z = n(199902),
-    W = n(314897),
-    K = n(592125),
-    Y = n(984933),
-    q = n(430824),
-    Q = n(131951),
-    X = n(496675),
-    J = n(158776),
-    $ = n(699516),
-    ee = n(944486),
-    et = n(594174),
-    en = n(449224),
-    er = n(451478),
-    ei = n(358085),
-    el = n(345243),
-    eo = n(115530),
-    es = n(339144),
-    ea = n(441248),
-    ec = n(981631),
-    eu = n(918559),
-    ed = n(921944),
-    eh = n(388032),
-    ep = n(864989);
-function ef(e, t, n) {
+    c = n(442837),
+    u = n(704215),
+    d = n(481060),
+    h = n(570140),
+    p = n(475179),
+    f = n(925549),
+    g = n(438139),
+    m = n(730749),
+    b = n(607070),
+    y = n(636449),
+    O = n(566620),
+    v = n(317381),
+    _ = n(889441),
+    C = n(736409),
+    j = n(367907),
+    S = n(835473),
+    x = n(413523),
+    E = n(933557),
+    P = n(194082),
+    I = n(550532),
+    w = n(436774),
+    N = n(605236),
+    Z = n(243778),
+    T = n(594190),
+    A = n(925329),
+    R = n(102172),
+    D = n(74299),
+    L = n(914923),
+    M = n(165393),
+    k = n(989941),
+    U = n(690221),
+    G = n(231664),
+    B = n(759198),
+    V = n(970731),
+    H = n(131704),
+    F = n(199902),
+    z = n(314897),
+    W = n(592125),
+    K = n(984933),
+    Y = n(430824),
+    q = n(131951),
+    Q = n(496675),
+    X = n(158776),
+    J = n(699516),
+    $ = n(944486),
+    ee = n(594174),
+    et = n(449224),
+    en = n(451478),
+    er = n(358085),
+    ei = n(345243),
+    el = n(115530),
+    eo = n(339144),
+    es = n(441248),
+    ea = n(981631),
+    ec = n(918559),
+    eu = n(921944),
+    ed = n(388032),
+    eh = n(864989);
+function ep(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -77,7 +76,7 @@ function ef(e, t, n) {
         e
     );
 }
-function eg(e) {
+function ef(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -88,12 +87,12 @@ function eg(e) {
                 })
             )),
             r.forEach(function (t) {
-                ef(e, t, n[t]);
+                ep(e, t, n[t]);
             });
     }
     return e;
 }
-function em(e, t) {
+function eg(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -111,11 +110,11 @@ function em(e, t) {
         e
     );
 }
-let eb = (0, m.Z)(function (e) {
+let em = (0, g.Z)(function (e) {
     let { message: t } = e;
-    return (0, r.jsx)(el.Z, { children: t });
+    return (0, r.jsx)(ei.Z, { children: t });
 });
-class ey extends i.PureComponent {
+class eb extends i.PureComponent {
     renderSparkles() {
         let { useReducedMotion: e } = this.props;
         async function t() {
@@ -123,20 +122,20 @@ class ey extends i.PureComponent {
             return e;
         }
         return (0, r.jsx)('div', {
-            className: ep.sparkleContainer,
-            children: (0, r.jsx)(h.Fmz, {
+            className: eh.sparkleContainer,
+            children: (0, r.jsx)(d.Fmz, {
                 importData: t,
                 shouldAnimate: !e,
-                className: ep.sparkles
+                className: eh.sparkles
             })
         });
     }
     renderActions() {
-        return (0, r.jsx)(es.J, eg({}, this.props));
+        return (0, r.jsx)(eo.J, ef({}, this.props));
     }
     renderGame() {
         let { isStreaming: e, application: t, runningGame: n, isForceShowSharingPopout: i, setIsForceShowSharingPopout: l } = this.props;
-        return (0, r.jsx)(ea.k, {
+        return (0, r.jsx)(es.k, {
             isStreaming: e,
             application: t,
             game: n,
@@ -147,34 +146,34 @@ class ey extends i.PureComponent {
     }
     renderScreenshare() {
         let { isStreaming: e, streamMetadata: t, streamQualityIndicator: n } = this.props,
-            { title: i, sanitizedTitle: l } = (0, M.Z)(t);
+            { title: i, sanitizedTitle: l } = (0, L.Z)(t);
         return (0, r.jsxs)('div', {
-            className: ep.gameWrapper,
+            className: eh.gameWrapper,
             children: [
                 e
-                    ? (0, r.jsx)(k.Z, {
+                    ? (0, r.jsx)(M.Z, {
                           title: l,
                           icon: null == t ? void 0 : t.sourceIcon
                       })
-                    : (0, r.jsx)(I.ZP, {
-                          look: I.ZP.Looks.GRAY,
-                          size: I.ZP.Sizes.SMALL,
-                          className: ep.liveIndicator
+                    : (0, r.jsx)(P.ZP, {
+                          look: P.ZP.Looks.GRAY,
+                          size: P.ZP.Sizes.SMALL,
+                          className: eh.liveIndicator
                       }),
                 (0, r.jsxs)('div', {
-                    className: ep.info,
+                    className: eh.info,
                     children: [
-                        (0, r.jsx)(eo.Z, { children: i }),
+                        (0, r.jsx)(el.Z, { children: i }),
                         null != n &&
                             (0, r.jsxs)('div', {
-                                className: ep.perksDemoContainer,
+                                className: eh.perksDemoContainer,
                                 children: [
-                                    (0, r.jsx)(h.SrA, {
+                                    (0, r.jsx)(d.SrA, {
                                         size: 'xxs',
-                                        color: N.JX.PREMIUM_TIER_2
+                                        color: w.JX.PREMIUM_TIER_2
                                     }),
-                                    (0, r.jsx)(V.Z, {
-                                        className: ep.perksDemoText,
+                                    (0, r.jsx)(B.Z, {
+                                        className: eh.perksDemoText,
                                         variant: 'text-xxs/semibold',
                                         children: n
                                     })
@@ -188,95 +187,95 @@ class ey extends i.PureComponent {
     renderEmbeddedActivity() {
         let e,
             t,
-            { application: n, embeddedActivity: i, channel: l, channelName: s, guildForConnectedChannel: a, showsActivityPopoutQuickRefocusNUX: c, markActivityPopoutQuickRefocusNUXAsDismissed: u, isForceShowSharingPopout: d, setIsForceShowSharingPopout: f } = this.props;
+            { application: n, embeddedActivity: i, channel: l, channelName: s, guildForConnectedChannel: a, showsActivityPopoutQuickRefocusNUX: c, markActivityPopoutQuickRefocusNUXAsDismissed: u, isForceShowSharingPopout: p, setIsForceShowSharingPopout: f } = this.props;
         if (null == i || null == n) return null;
         let g = { start: i.connectedSince },
-            m = (0, O.R)(),
+            m = (0, y.R)(),
             b = s;
-        null != a && null != l ? ((e = ec.Z5c.CHANNEL(a.id, l.id)), (b = ''.concat(b, ' / ').concat(a.name))) : null != l && (e = ec.Z5c.CHANNEL(ec.ME, l.id));
-        let y = (0, r.jsx)(G.Z, {
+        null != a && null != l ? ((e = ea.Z5c.CHANNEL(a.id, l.id)), (b = ''.concat(b, ' / ').concat(a.name))) : null != l && (e = ea.Z5c.CHANNEL(ea.ME, l.id));
+        let O = (0, r.jsx)(U.Z, {
             href: e,
             onClick: this.handleApplicationOrChannelLinkClick,
-            children: (0, r.jsx)(el.Z, {
-                className: ep.channel,
+            children: (0, r.jsx)(ei.Z, {
+                className: eh.channel,
                 children: b
             })
         });
         t = m
-            ? (0, r.jsx)(eo.Z, { children: n.name })
-            : (0, r.jsx)(G.Z, {
+            ? (0, r.jsx)(el.Z, { children: n.name })
+            : (0, r.jsx)(U.Z, {
                   href: e,
                   onClick: this.handleApplicationOrChannelLinkClick,
-                  children: (0, r.jsx)(eo.Z, {
-                      className: ep.underlineOnHover,
+                  children: (0, r.jsx)(el.Z, {
+                      className: eh.underlineOnHover,
                       children: n.name
                   })
               });
         let v = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(R.Z, {
-                    className: ep.gameIcon,
+                (0, r.jsx)(A.Z, {
+                    className: eh.gameIcon,
                     game: n,
-                    size: R.Z.Sizes.SMALL
+                    size: A.Z.Sizes.SMALL
                 }),
-                (0, r.jsx)(j.j, {
-                    isForceShowSharingPopout: d,
+                (0, r.jsx)(C.j, {
+                    isForceShowSharingPopout: p,
                     setIsForceShowSharingPopout: f,
                     children: (0, r.jsxs)('div', {
-                        className: ep.info,
-                        children: [t, null != l && (0, F.Qm)(l.type) ? y : (0, r.jsx)(eb, { timestamps: g })]
+                        className: eh.info,
+                        children: [t, null != l && (0, H.Qm)(l.type) ? O : (0, r.jsx)(em, { timestamps: g })]
                     })
                 })
             ]
         });
         return m
-            ? (0, r.jsx)(h.yRy, {
+            ? (0, r.jsx)(d.yRy, {
                   targetElementRef: this.activityPopoutTargetRef,
                   position: 'top',
                   align: 'center',
                   spacing: 16,
                   shouldShow: c,
                   renderPopout: () =>
-                      (0, r.jsx)(H.ZP, {
-                          color: H.BD.PRIMARY,
-                          header: eh.intl.string(eh.t.ON4pBg),
-                          content: eh.intl.string(eh.t['8PAfND']),
-                          buttonCTA: eh.intl.string(eh.t.WAI6xs),
+                      (0, r.jsx)(V.ZP, {
+                          color: V.BD.PRIMARY,
+                          header: ed.intl.string(ed.t.ON4pBg),
+                          content: ed.intl.string(ed.t['8PAfND']),
+                          buttonCTA: ed.intl.string(ed.t.WAI6xs),
                           buttonProps: {
-                              color: h.zxk.Colors.PRIMARY,
-                              look: h.zxk.Looks.LINK,
-                              size: h.zxk.Sizes.TINY
+                              color: d.zxk.Colors.PRIMARY,
+                              look: d.zxk.Looks.LINK,
+                              size: d.zxk.Sizes.TINY
                           },
                           onClick: () => {
-                              u(ed.L.USER_DISMISS);
+                              u(eu.L.USER_DISMISS);
                           },
-                          caretPosition: H.DF.BOTTOM_CENTER
+                          caretPosition: V.DF.BOTTOM_CENTER
                       }),
                   children: (e) =>
                       (0, r.jsx)(
-                          h.P3F,
-                          em(eg({}, e), {
+                          d.P3F,
+                          eg(ef({}, e), {
                               innerRef: this.activityPopoutTargetRef,
-                              className: o()(ep.gameWrapper, ep.clickableGameWrapper, { [ep.clickableGameWrapperForceHover]: c }),
+                              className: o()(eh.gameWrapper, eh.clickableGameWrapper, { [eh.clickableGameWrapperForceHover]: c }),
                               onClick: () => {
-                                  p.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }), c && u(ed.L.TAKE_ACTION), (0, S.yw)(ec.rMx.ACTIVITY_PANEL_GAME_CARD_ACTIVITY_POPOUT_REFOCUS_CLICKED);
+                                  h.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }), c && u(eu.L.TAKE_ACTION), (0, j.yw)(ea.rMx.ACTIVITY_PANEL_GAME_CARD_ACTIVITY_POPOUT_REFOCUS_CLICKED);
                               },
                               children: v
                           })
                       )
               })
             : (0, r.jsx)('div', {
-                  className: ep.gameWrapper,
+                  className: eh.gameWrapper,
                   children: v
               });
     }
     render() {
         let { canGoLive: e, embeddedActivity: t, runningGame: n, isStreaming: i, streamMetadata: l, application: s, activity: a, className: c } = this.props;
-        return i || (((0, es.y)(s, a, t) || e) && (null != n || null != t))
+        return i || (((0, eo.y)(s, a, t) || e) && (null != n || null != t))
             ? (0, r.jsx)('div', {
-                  className: o()(ep.panel, c),
+                  className: o()(eh.panel, c),
                   children: (0, r.jsxs)('div', {
-                      className: ep.body,
+                      className: eh.body,
                       children: [null == n || (i && (null == l ? void 0 : l.pid) == null) ? (null != t ? this.renderEmbeddedActivity() : this.renderScreenshare()) : this.renderGame(), this.renderActions()]
                   })
               })
@@ -284,29 +283,27 @@ class ey extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            ef(this, 'activityPopoutTargetRef', i.createRef()),
-            ef(this, 'handleApplicationOrChannelLinkClick', () => {
+            ep(this, 'activityPopoutTargetRef', i.createRef()),
+            ep(this, 'handleApplicationOrChannelLinkClick', () => {
                 var e;
                 let { channel: t, embeddedActivity: n } = this.props;
-                a()(null != n, 'Activity cannot be null during navigation click');
-                let r = n.location.kind === c.E.CONTEXTLESS;
-                if (!(0, O.R)() && r) return void (0, v.tg)(eu.Ez.PANEL);
-                a()(null != t, 'Channel cannot be null during navigation click'),
-                    g.Z.channelListScrollTo(null != (e = t.guild_id) ? e : ec.ME, t.id),
-                    !(0, O.R)() &&
-                        ((0, F.vd)(t.type) &&
-                            f.Z.selectParticipant(
+                a()(null != n, 'Activity cannot be null during navigation click'),
+                    a()(null != t, 'Channel cannot be null during navigation click'),
+                    f.Z.channelListScrollTo(null != (e = t.guild_id) ? e : ea.ME, t.id),
+                    !(0, y.R)() &&
+                        ((0, H.vd)(t.type) &&
+                            p.Z.selectParticipant(
                                 t.id,
-                                (0, E.gN)({
+                                (0, x.gN)({
                                     applicationId: n.applicationId,
                                     instanceId: n.compositeInstanceId
                                 })
                             ),
-                        (0, F.Qm)(t.type) && (0, v.tg)(eu.Ez.PANEL));
+                        (0, H.Qm)(t.type) && (0, O.tg)(ec.Ez.PANEL));
             });
     }
 }
-let eO = (0, b.Z)(function (e) {
+let ey = (0, m.Z)(function (e) {
     var t,
         { guildId: n } = e,
         l = (function (e, t) {
@@ -328,59 +325,59 @@ let eO = (0, b.Z)(function (e) {
             }
             return i;
         })(e, ['guildId']);
-    let o = (0, u.e7)([W.default], () => W.default.getId()),
-        s = (0, u.e7)([A.ZP, en.Z], () => (0, U.Z)(A.ZP, en.Z)),
-        a = (0, u.e7)([ee.Z, K.Z], () => K.Z.getChannel(ee.Z.getVoiceChannelId())),
-        c = (0, u.e7)([_.ZP], () => _.ZP.getConnectedActivityChannelId()),
-        h = (0, u.e7)([K.Z], () => K.Z.getChannel(c)),
-        p = (0, u.e7)([q.Z], () => q.Z.getGuild(null == h ? void 0 : h.guild_id)),
-        [f, g] = (0, u.Wu)([z.Z], () => [z.Z.getCurrentUserActiveStream(), z.Z.getStreamerActiveStreamMetadata()]),
-        m = (0, u.e7)([y.Z], () => y.Z.useReducedMotion),
-        b = (0, u.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
-        v = (0, u.e7)([q.Z, X.Z, Y.ZP], () => (null != a ? D.JL(a, q.Z, X.Z, !1) : null != n && D.h_(Y.ZP.getChannels(n), q.Z, X.Z).length > 0)),
-        [j] = (0, x.Z)([null != (t = null != g && null != g.id ? g.id : null != s && null != s.id ? s.id : null != b ? b.applicationId : void 0) ? t : '']),
-        S = (0, u.e7)([w.Z], () => w.Z.getFakeGameData()),
-        E = (0, u.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
-        I = (0, C.Z)() && null != E && (0, O.R)(),
-        N = (0, u.e7)([Q.Z], () => (0, L.Z)(Q.Z) && (0, ei.isWindows)()),
-        R = (0, u.e7)([J.Z], () => (null != o ? J.Z.findActivity(o, (e) => e.type === ec.IIU.PLAYING) : null)),
-        M = null != f && f.ownerId === o && f.state !== ec.jm8.ENDED,
-        k = (0, u.e7)([et.default, $.Z], () => (null != h ? (0, P.F6)(h, et.default, $.Z) : void 0)),
-        G = (0, B.Z)(),
+    let o = (0, c.e7)([z.default], () => z.default.getId()),
+        s = (0, c.e7)([T.ZP, et.Z], () => (0, k.Z)(T.ZP, et.Z)),
+        a = (0, c.e7)([$.Z, W.Z], () => W.Z.getChannel($.Z.getVoiceChannelId())),
+        d = (0, c.e7)([v.ZP], () => v.ZP.getConnectedActivityChannelId()),
+        h = (0, c.e7)([W.Z], () => W.Z.getChannel(d)),
+        p = (0, c.e7)([Y.Z], () => Y.Z.getGuild(null == h ? void 0 : h.guild_id)),
+        [f, g] = (0, c.Wu)([F.Z], () => [F.Z.getCurrentUserActiveStream(), F.Z.getStreamerActiveStreamMetadata()]),
+        m = (0, c.e7)([b.Z], () => b.Z.useReducedMotion),
+        O = (0, c.e7)([v.ZP], () => v.ZP.getCurrentEmbeddedActivity()),
+        C = (0, c.e7)([Y.Z, Q.Z, K.ZP], () => (null != a ? R.JL(a, Y.Z, Q.Z, !1) : null != n && R.h_(K.ZP.getChannels(n), Y.Z, Q.Z).length > 0)),
+        [j] = (0, S.Z)([null != (t = null != g && null != g.id ? g.id : null != s && null != s.id ? s.id : null != O ? O.applicationId : void 0) ? t : '']),
+        x = (0, c.e7)([I.Z], () => I.Z.getFakeGameData()),
+        P = (0, c.e7)([v.ZP], () => v.ZP.getCurrentEmbeddedActivity()),
+        w = (0, _.Z)() && null != P && (0, y.R)(),
+        A = (0, c.e7)([q.Z], () => (0, D.Z)(q.Z) && (0, er.isWindows)()),
+        L = (0, c.e7)([X.Z], () => (null != o ? X.Z.findActivity(o, (e) => e.type === ea.IIU.PLAYING) : null)),
+        M = null != f && f.ownerId === o && f.state !== ea.jm8.ENDED,
+        U = (0, c.e7)([ee.default, J.Z], () => (null != h ? (0, E.F6)(h, ee.default, J.Z) : void 0)),
+        B = (0, G.Z)(),
         [V, H] = i.useState(!1),
-        { showsActivityPopoutQuickRefocusNUX: F, markActivityPopoutQuickRefocusNUXAsDismissed: el } = (function () {
+        { showsActivityPopoutQuickRefocusNUX: ei, markActivityPopoutQuickRefocusNUXAsDismissed: el } = (function () {
             let e = [],
-                t = (0, Z.wE)(d.z.ACTIVITY_POPOUT_NUX_MODAL),
-                n = (0, u.e7)([er.Z], () => er.Z.isFocused());
-            (0, O.R)() && t && n && e.push(d.z.ACTIVITY_POPOUT_NUX_QUICK_REFOCUS_TOOLTIP);
-            let [r, i] = (0, T.US)(e);
+                t = (0, N.wE)(u.z.ACTIVITY_POPOUT_NUX_MODAL),
+                n = (0, c.e7)([en.Z], () => en.Z.isFocused());
+            (0, y.R)() && t && n && e.push(u.z.ACTIVITY_POPOUT_NUX_QUICK_REFOCUS_TOOLTIP);
+            let [r, i] = (0, Z.US)(e);
             return {
-                showsActivityPopoutQuickRefocusNUX: r === d.z.ACTIVITY_POPOUT_NUX_QUICK_REFOCUS_TOOLTIP,
+                showsActivityPopoutQuickRefocusNUX: r === u.z.ACTIVITY_POPOUT_NUX_QUICK_REFOCUS_TOOLTIP,
                 markActivityPopoutQuickRefocusNUXAsDismissed: i
             };
         })();
     return (0, r.jsx)(
-        ey,
-        em(eg({}, l), {
+        eb,
+        eg(ef({}, l), {
             guildId: n,
-            canGoLive: N || I || void 0 !== S,
-            activity: R,
-            embeddedActivity: b,
+            canGoLive: A || w || void 0 !== x,
+            activity: L,
+            embeddedActivity: O,
             userId: o,
-            runningGame: null != S ? S : s,
+            runningGame: null != x ? x : s,
             application: j,
             useReducedMotion: m,
             isStreaming: M,
             channel: h,
-            canStream: v,
+            canStream: C,
             stream: f,
             streamMetadata: g,
-            channelName: k,
+            channelName: U,
             guildForConnectedChannel: p,
-            streamQualityIndicator: G,
+            streamQualityIndicator: B,
             isForceShowSharingPopout: V,
             setIsForceShowSharingPopout: H,
-            showsActivityPopoutQuickRefocusNUX: F,
+            showsActivityPopoutQuickRefocusNUX: ei,
             markActivityPopoutQuickRefocusNUXAsDismissed: el
         })
     );

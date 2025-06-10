@@ -108,8 +108,8 @@ function _() {
             guildId: n
         } = (0, i.cj)([b.ZP], () => {
             let e = b.ZP.getCurrentEmbeddedActivity(),
-                t = (0, O.pY)(null == e ? void 0 : e.location),
-                n = (0, O.jS)(null == e ? void 0 : e.location);
+                t = (0, O.p)(null == e ? void 0 : e.location),
+                n = (0, O.j)(null == e ? void 0 : e.location);
             return {
                 embeddedActivity: e,
                 channelId: t,

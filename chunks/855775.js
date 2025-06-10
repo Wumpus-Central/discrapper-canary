@@ -76,15 +76,15 @@ let _ = 'no_payment_source',
     A = !1,
     N = null,
     C = new Set();
-function P(e) {
+function R(e) {
     null != r && null != y ? r(y) : null != i && i(e), (r = null), (i = null);
 }
-function R(e) {
-    P(), (p = e.skuId), (m = e.applicationId), (S = e.isIAP), (g = e.analyticsLocation), (N = e.context), (A = e.isGift), (T = !0), (I = !1), (r = e.resolve), (i = e.reject), (v = null), (y = null), (E = e.promotionId);
+function P(e) {
+    R(), (p = e.skuId), (m = e.applicationId), (S = e.isIAP), (g = e.analyticsLocation), (N = e.context), (A = e.isGift), (T = !0), (I = !1), (r = e.resolve), (i = e.reject), (v = null), (y = null), (E = e.promotionId);
 }
 function w(e) {
     let { error: t } = e;
-    (T = !1), (N = null), P(t);
+    (T = !1), (N = null), R(t);
 }
 function D(e) {
     let { skuId: t } = e;
@@ -126,7 +126,7 @@ function F(e) {
 function V(e) {
     let { locked: t } = e;
     if (!t || null == N) return !1;
-    (T = !1), (N = null), P();
+    (T = !1), (N = null), R();
 }
 class Z extends (a = o.ZP.Store) {
     getPricesForSku(e) {
@@ -172,7 +172,7 @@ class Z extends (a = o.ZP.Store) {
 }
 c(Z, 'displayName', 'SKUPaymentModalStore');
 let H = new Z(s.Z, {
-    SKU_PURCHASE_MODAL_OPEN: R,
+    SKU_PURCHASE_MODAL_OPEN: P,
     SKU_PURCHASE_MODAL_CLOSE: w,
     SKU_PURCHASE_PREVIEW_FETCH: D,
     SKU_PURCHASE_PREVIEW_FETCH_SUCCESS: L,

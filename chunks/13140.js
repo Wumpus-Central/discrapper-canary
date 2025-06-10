@@ -175,7 +175,7 @@ function C(e) {
     return null != t ? t : null;
 }
 (0, c.isMac)() || (y['223'] = '`'), Object.freeze(y);
-let P = [
+let R = [
         ['META', '\u2318'],
         ['RIGHT META', 'RIGHT \u2318'],
         ['SHIFT', '\u21E7'],
@@ -199,12 +199,12 @@ let P = [
         ['TAB', '\u21E5'],
         ['SPACE', '\u2423']
     ],
-    R = (e) => {
-        for (let [t, n] of P) if (t === e.toUpperCase()) return n;
+    P = (e) => {
+        for (let [t, n] of R) if (t === e.toUpperCase()) return n;
         return e;
     },
     w = (e) => {
-        for (let [t, n] of P) if (n === e.toUpperCase()) return t.toLowerCase();
+        for (let [t, n] of R) if (n === e.toUpperCase()) return t.toLowerCase();
         return e;
     },
     D = /shift|meta|ctrl|alt$/;
@@ -264,5 +264,5 @@ function j(e) {
                 return t === d.MoX.MOUSE_BUTTON ? 'mouse'.concat(n) : t === d.MoX.GAMEPAD_BUTTON ? 'gamepad'.concat(n) : 'dev'.concat(t, ',').concat(n);
             })
             .filter(l.lm);
-    return t ? (-1 !== n.g.navigator.appVersion.indexOf('Mac OS X') ? r.map(R) : r).join(' + ').toUpperCase() : r.join('+');
+    return t ? (-1 !== n.g.navigator.appVersion.indexOf('Mac OS X') ? r.map(P) : r).join(' + ').toUpperCase() : r.join('+');
 }

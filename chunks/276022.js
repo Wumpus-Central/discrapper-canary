@@ -23,11 +23,11 @@ function g(e) {
         A = !0,
         N = (0, c.LD)(b, A),
         C = (0, c.PL)(T, A),
-        P = (0, a.e7)([f.Z], () => {
+        R = (0, a.e7)([f.Z], () => {
             var e;
             return null != v && (null == (e = f.Z.getApps()) ? void 0 : e.find((e) => e.application.id === v)) != null;
         }),
-        { isUserApp: R, isGuildApp: w } = i.useMemo(() => {
+        { isUserApp: P, isGuildApp: w } = i.useMemo(() => {
             var e, t, n, r;
             if (null == v)
                 return {
@@ -74,8 +74,8 @@ function g(e) {
                     'manage-server-integration'
                 )
             ),
-        R &&
-            P &&
+        P &&
+            R &&
             x.push(
                 (0, r.jsx)(
                     o.sNh,

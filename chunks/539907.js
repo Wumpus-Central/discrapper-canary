@@ -133,7 +133,7 @@ function C(e) {
             throw Error();
     }
 }
-function P(e, t, n) {
+function R(e, t, n) {
     if (null != e && e < 0 && ('top' === n.position || 'bottom' === n.position) && null != t && Math.abs(e) < (null == t ? void 0 : t.offsetHeight) && null != n.style) {
         let t = 'top' === n.position ? 'bottom' : 'top',
             r = n.style[t];
@@ -141,13 +141,13 @@ function P(e, t, n) {
     }
     return n;
 }
-function R(e) {
+function P(e) {
     let { targetRef: t, overrideTargetRect: n } = e;
     return null != n ? n : (c()(null != t.current, 'Invalid ref'), t.current.getBoundingClientRect());
 }
 function w(e, t) {
-    let n = R(e),
-        r = R(t);
+    let n = P(e),
+        r = P(t);
     return n.top === r.top && n.left === r.left;
 }
 class D extends (r = a.Component) {
@@ -249,7 +249,7 @@ class D extends (r = a.Component) {
     }
     calculatePositionStyle(e, t, n, r) {
         let { spacing: i = 0 } = this.props,
-            a = R(this.props),
+            a = P(this.props),
             o = n.getBoundingClientRect(),
             s = N(a, o.left, o.top);
         switch (e) {
@@ -312,7 +312,7 @@ class D extends (r = a.Component) {
                 }
             }
         }
-        return P(l, n, o);
+        return R(l, n, o);
     }
     componentDidMount() {
         var e, t;

@@ -130,10 +130,10 @@ function A(e) {
                 (t[b] = e), s(t);
             }
         },
-        P = i.useCallback((e) => {
+        R = i.useCallback((e) => {
             N(e.hex);
         }, []),
-        R = (e) => {
+        P = (e) => {
             if ((n(e.hex), o.length > 0)) {
                 let t = [...o];
                 (t[b] = e.hex), s(t);
@@ -203,8 +203,8 @@ function A(e) {
             (0, r.jsx)(i.Suspense, {
                 fallback: null,
                 children: (0, r.jsx)(O, {
-                    onChange: P,
-                    onChangeComplete: R,
+                    onChange: R,
+                    onChangeComplete: P,
                     color: A
                 })
             }),

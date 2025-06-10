@@ -73,8 +73,8 @@ let S = (e) => {
         { onClose: n, channel: y, emojiDescriptor: v, pickerIntention: S, analyticsLocation: T, containerContext: A } = e,
         N = (0, a.e7)([f.Z], () => f.Z.theme) === m.BRd.LIGHT ? 'light' : 'dark',
         C = 'https://cdn.discordapp.com/assets/premium/roadblocks/emoji_'.concat(N, '.png'),
-        P = (0, c.Iu)((e) => e.searchQuery),
-        { analyticsLocations: R } = (0, l.ZP)(s.Z.EMOJI_PICKER);
+        R = (0, c.Iu)((e) => e.searchQuery),
+        { analyticsLocations: P } = (0, l.ZP)(s.Z.EMOJI_PICKER);
     t = S === g.Hz.REACTION ? E.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == v ? E.cd.EMOJI_PICKER_FLOATING_UPSELL : v.subCategory === h.t0.TOP_GUILD_EMOJI ? E.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : v.subCategory === h.t0.NEWLY_ADDED_EMOJI ? E.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : E.cd.EMOJI_PICKER_EMOJI_CLICKED;
     let w = null != v ? v.emoji : void 0,
         D = null != w && w.animated,
@@ -101,9 +101,9 @@ let S = (e) => {
                 type: t,
                 is_external: L,
                 location: I(O({}, T), { object: x }),
-                location_stack: R,
+                location_stack: P,
                 sku_id: (0, p.Wz)(p.ZP.getSkuIdForPremiumType(E.p9.TIER_2)),
-                has_search_query: null != P && '' !== P,
+                has_search_query: null != R && '' !== R,
                 is_animated: D
             },
             isEmojiPickerOverlay: !0

@@ -76,14 +76,14 @@ function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = P(e, t);
+        i = R(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function P(e, t) {
+function R(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -92,7 +92,7 @@ function P(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function R(e) {
+function P(e) {
     let { className: t } = e;
     return (0, r.jsx)(o.ewm, {
         size: 'md',
@@ -107,7 +107,7 @@ function w(e) {
             (0, r.jsx)(u.ZP, {
                 className: t,
                 mask: u.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
-                children: (0, r.jsx)(R, {})
+                children: (0, r.jsx)(P, {})
             }),
             (0, r.jsx)(h.Z, { className: I.badgeUpgrade })
         ]
@@ -119,13 +119,13 @@ function D(e) {
     let I = i.useRef(null),
         { parentAnalyticsLocation: S } = (0, s.ZP)(),
         A = (0, a.e7)([p.default], () => m.ZP.isPremium(p.default.getCurrentUser(), O.p9.TIER_1)),
-        P = (0, a.e7)([_.Z], () => _.Z.getChannel(null == n ? void 0 : n.channelId)),
+        R = (0, a.e7)([_.Z], () => _.Z.getChannel(null == n ? void 0 : n.channelId)),
         D = i.useMemo(() => (null != n ? [n] : []), [n]),
         L = i.useCallback(() => {
-            null != P && (0, f.Z)(P.getGuildId(), P.id, b.jXE.STREAM_SETTINGS);
-        }, [P]);
-    if (null == n || null == P) return null;
-    let x = R;
+            null != R && (0, f.Z)(R.getGuildId(), R.id, b.jXE.STREAM_SETTINGS);
+        }, [R]);
+    if (null == n || null == R) return null;
+    let x = P;
     return (
         t || A || (x = w),
         (0, r.jsx)(o.yRy, {
@@ -135,7 +135,7 @@ function D(e) {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(g.Z, {
                     children: (0, r.jsx)(d.Z, {
-                        channel: P,
+                        channel: R,
                         currentUser: p.default.getCurrentUser(),
                         activeStreams: D,
                         onClose: t,

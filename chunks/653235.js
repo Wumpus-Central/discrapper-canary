@@ -73,7 +73,7 @@ function N(e, t) {
     );
 }
 let C = (e, t) => (0, r.jsx)(b.G0, { columns: e }, t);
-function P(e) {
+function R(e) {
     var t;
     let n = l().sample(l().values(e));
     return {
@@ -84,7 +84,7 @@ function P(e) {
         format: null != (t = null == n ? void 0 : n.format) ? t : u.EO.IMAGE
     };
 }
-class R extends i.PureComponent {
+class P extends i.PureComponent {
     componentDidMount() {
         0 === this.props.trendingCategories.length && (0, _.Tg)();
     }
@@ -131,7 +131,7 @@ class R extends i.PureComponent {
         super(...e),
             S(this, '_masonryRef', i.createRef()),
             S(this, 'state', {
-                favoritesTile: P(this.props.favorites),
+                favoritesTile: R(this.props.favorites),
                 selectedIndex: {
                     column: 0,
                     row: 0
@@ -227,7 +227,7 @@ function w(e) {
         n = (0, g.gG)(),
         i = (0, y.PY)();
     return (0, r.jsx)(
-        R,
+        P,
         N(T({}, e, i), {
             trendingCategories: t,
             favorites: n

@@ -177,7 +177,7 @@ function k(e) {
         { analyticsLocations: s } = (0, Z.ZP)(y.Z.ACTIVITY_TILE),
         { applicationId: c } = t,
         d = (0, g.Z)(),
-        f = null != d && (0, p.pY)(d.location) === u.id && d.applicationId === c,
+        f = null != d && (0, p.p)(d.location) === u.id && d.applicationId === c,
         [m] = (0, _.Z)([c]),
         { url: S } = (0, E.Z)({
             applicationId: c,

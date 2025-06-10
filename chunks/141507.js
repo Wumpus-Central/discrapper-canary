@@ -25,12 +25,12 @@ var r = n(255367),
     A = n(388032),
     N = n(466988);
 let C = 250;
-function P(e) {
+function R(e) {
     return null != e && 'animated' in e;
 }
-let R = (e) => {
+let P = (e) => {
         let { inspectedEmoji: t, guild: n } = e,
-            r = P(t);
+            r = R(t);
         return null != n && r ? A.intl.format(A.t.KFW2aW, { guildName: n.name }) : null;
     },
     w = i.memo(function (e) {
@@ -71,7 +71,7 @@ let R = (e) => {
             V = (0, a.e7)([E.Z], () => E.Z.isFocused()),
             Z = (0, a.e7)([l.Z], () => l.Z.useReducedMotion, []),
             H = m.Yk.useSetting(),
-            Y = (0, O.C1)(k, P(t) ? t : null),
+            Y = (0, O.C1)(k, R(t) ? t : null),
             W = (0, a.e7)([c.ZP], () => c.ZP.expandedSectionsByGuildIds),
             { newlyAddedEmojis: K } = (0, v.Z)(k, M),
             z = (null == B ? void 0 : B.type) === S.ld.EMOJI ? B.subCategory : T.t0.NONE;
@@ -80,7 +80,7 @@ let R = (e) => {
                 let e = Date.now();
                 return () => {
                     Date.now() - e >= C &&
-                        P(t) &&
+                        R(t) &&
                         z !== T.t0.NONE &&
                         (z === T.t0.NEWLY_ADDED_EMOJI && null !== t && t.type === u.B.GUILD && (0, f.Zg)(t.guildId, K[0].id),
                         null != G.source &&
@@ -96,8 +96,8 @@ let R = (e) => {
         )
             return null;
         let q = h.Z.theme;
-        if (P(t)) {
-            var Q;
+        if (R(t)) {
+            var X;
             let e =
                 null != t.id
                     ? b.ZP.getEmojiURL({
@@ -114,7 +114,7 @@ let R = (e) => {
                           children: 'surrogates' in t ? t.surrogates : null
                       })
                     : (0, r.jsx)('img', {
-                          alt: null != (Q = t.allNamesString) ? Q : '',
+                          alt: null != (X = t.allNamesString) ? X : '',
                           src: e,
                           className: N.emoji
                       });
@@ -142,7 +142,7 @@ let R = (e) => {
                       alt: ''
                   });
         }
-        let X =
+        let Q =
             null != F
                 ? (0, r.jsx)(I.Z, {
                       className: N.__invalid_guildIcon,
@@ -154,7 +154,7 @@ let R = (e) => {
         let J =
             U && 'CREATE_EMOJI' === t.type
                 ? A.intl.string(A.t['Z/r7IS'])
-                : R({
+                : P({
                       inspectedEmoji: t,
                       channel: j,
                       guildId: k,
@@ -164,7 +164,7 @@ let R = (e) => {
         return (0, r.jsx)(p.Z, {
             className: L,
             graphicPrimary: w,
-            graphicSecondary: X,
+            graphicSecondary: Q,
             titlePrimary: D,
             titleSecondary: J,
             isFavorite: Y,

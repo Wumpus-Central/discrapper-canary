@@ -25,8 +25,8 @@ var r = n(278074),
     A = n(826581),
     N = n(409059),
     C = n(264229),
-    P = n(413605),
-    R = n(366980),
+    R = n(413605),
+    P = n(366980),
     w = n(467512),
     D = n(779832),
     L = n(786761),
@@ -46,9 +46,9 @@ var r = n(278074),
     K = n(317951),
     z = n(287941),
     q = n(643266),
-    Q = n(617136);
+    X = n(617136);
 n(807092);
-var X = n(869765),
+var Q = n(869765),
     J = n(926491),
     $ = n(467798),
     ee = n(346479),
@@ -130,8 +130,8 @@ function eN(e, t) {
     );
 }
 let eC = new b.Z('MessageActionCreators'),
-    eP = new b.Z('MessageQueue'),
-    eR = !1;
+    eR = new b.Z('MessageQueue'),
+    eP = !1;
 class ew {
     markComplete() {
         this.completed = !0;
@@ -180,7 +180,7 @@ function eD(e) {
         else if (t === g.g.GUILD_PRODUCT);
         else if (t === g.g.SERVER_SHOP);
         else if (t === g.g.QUESTS_EMBED)
-            (0, Q.dA)({
+            (0, X.dA)({
                 questId: l,
                 event: ey.rMx.QUEST_LINK_SHARED,
                 trackGuildAndChannelMetadata: !0
@@ -196,7 +196,7 @@ function eL(e) {
         u = er.default.getId(),
         d = ea.Z.getInvite(r),
         f = (0, C.fU)(r),
-        _ = null != d && (0, P.P1)(d),
+        _ = null != d && (0, R.P1)(d),
         p = null == d || null == (t = d.target_application) ? void 0 : t.id;
     null != p && _ && (0, h.z$)(p, h.Un.ACTIVITY_INVITE, u);
     let m = ei.Z.getChannel(i);
@@ -268,8 +268,8 @@ function ex(e, t, n, r, i) {
 function ek(e, t) {
     let n = eo.Z.getMessage(e, t);
     if (null == n || n.type !== ey.uaV.REPLY) return;
-    let r = X.Z.getMessageByReference(n.messageReference);
-    if (r.state === X.Y.LOADED && !n.mentions.includes(r.message.author.id))
+    let r = Q.Z.getMessageByReference(n.messageReference);
+    if (r.state === Q.Y.LOADED && !n.mentions.includes(r.message.author.id))
         return {
             parse: Object.values(ey.hCA),
             replied_user: !1
@@ -738,10 +738,10 @@ let eM = {
             return (x.Z.recordMessageSendAttempt(e, o), eo.Z.isReady(e))
                 ? l()
                 : r && e !== m.V
-                  ? (eP.info('Waiting for channel '.concat(e, ' to be ready before sending.')),
+                  ? (eR.info('Waiting for channel '.concat(e, ' to be ready before sending.')),
                     new Promise((t, n) => {
                         eo.Z.whenReady(e, () => {
-                            eP.info('Channel '.concat(e, ' is ready for sending now.')), l().then(t, n);
+                            eR.info('Channel '.concat(e, ' is ready for sending now.')), l().then(t, n);
                         });
                     }))
                   : l();
@@ -791,7 +791,7 @@ let eM = {
             return eT({}, t, n, r, i);
         },
         sendInvite(e, t, n, r, i) {
-            let a = (0, R.Z)(t);
+            let a = (0, P.Z)(t);
             return (
                 null != i && (a = ''.concat(i, '\n').concat(a)),
                 ej._sendMessage(
@@ -905,38 +905,38 @@ let eM = {
                 c = (0, q.Z)(e);
             if (null != c)
                 return (
-                    eP.info('Converting channel to a private channel'),
+                    eR.info('Converting channel to a private channel'),
                     c.then((e) => {
-                        eP.info('Finished converting channel to a private channel'), ej._sendMessage(e, t, n);
+                        eR.info('Finished converting channel to a private channel'), ej._sendMessage(e, t, n);
                     })
                 );
             let u = t.content,
                 { invalidEmojis: d, validNonShortcutEmojis: f, tts: _ = !1 } = t,
-                { activityAction: p, location: h, suggestedInvite: m, stickerIds: g, confettiPotionData: E, messageReference: b, allowedMentions: O, poll: v, contentInventoryEntry: I, attachments: N, attachmentsToUpload: C, onAttachmentUploadError: P } = n,
-                R = null != (i = n.flags) ? i : 0,
+                { activityAction: p, location: h, suggestedInvite: m, stickerIds: g, confettiPotionData: E, messageReference: b, allowedMentions: O, poll: v, contentInventoryEntry: I, attachments: N, attachmentsToUpload: C, onAttachmentUploadError: R } = n,
+                P = null != (i = n.flags) ? i : 0,
                 [D, L] = (0, $.Z)(u);
-            D && ((u = L), (R = (0, e_.pj)(R, ey.iLy.SUPPRESS_NOTIFICATIONS)));
+            D && ((u = L), (P = (0, e_.pj)(P, ey.iLy.SUPPRESS_NOTIFICATIONS)));
             let G = !1,
                 H = (null == (r = n.messageReference) ? void 0 : r.type) === ey.Uvt.FORWARD;
             if ('' === u && null == p && null == g && null == v && null == I && !H && (null == N || 0 === N.length))
                 if (null == C || !(C.length > 0)) return Promise.resolve();
                 else G = !0;
-            let Q = null != b ? ey.uaV.REPLY : ey.uaV.DEFAULT,
-                X = null != (a = n.nonce) ? a : (0, j.r)(),
-                ee = X,
+            let X = null != b ? ey.uaV.REPLY : ey.uaV.DEFAULT,
+                Q = null != (a = n.nonce) ? a : (0, j.r)(),
+                ee = Q,
                 et = (0, M.ZP)({
                     channelId: e,
                     content: u,
                     tts: _,
-                    type: Q,
+                    type: X,
                     messageReference: b,
                     allowedMentions: O,
-                    flags: 0 !== R ? R : void 0,
-                    nonce: X,
+                    flags: 0 !== P ? P : void 0,
+                    nonce: Q,
                     poll: (0, V.x9)(v)
                 });
-            if ((!1 !== n.eagerDispatch && ((0, B.EL)(e, et.id), null != g && (et.sticker_items = g.map((e) => J.Z.getStickerById(e)).filter((e) => null != e)), ej.receiveMessage(e, et, !0, n)), !eR && null != d && d.length > 0)) {
-                eR = !0;
+            if ((!1 !== n.eagerDispatch && ((0, B.EL)(e, et.id), null != g && (et.sticker_items = g.map((e) => J.Z.getStickerById(e)).filter((e) => null != e)), ej.receiveMessage(e, et, !0, n)), !eP && null != d && d.length > 0)) {
+                eP = !0;
                 let t = ed.default.getCurrentUser(),
                     { errorMessage: n, errorMessageName: r } = ej.validateMessage(d, t, e);
                 ej.sendBotMessage(e, n, r);
@@ -946,11 +946,11 @@ let eM = {
                 message: {
                     channelId: e,
                     content: u,
-                    nonce: X,
+                    nonce: Q,
                     tts: _,
                     message_reference: b,
                     allowed_mentions: O,
-                    flags: R
+                    flags: P
                 }
             };
             if (null != p) {
@@ -969,7 +969,7 @@ let eM = {
                 try {
                     let t = await (0, w.c)({
                         channelId: e,
-                        nonce: X,
+                        nonce: Q,
                         items: C,
                         message: et,
                         shouldUploadFailureSendNotification: !n.doNotNotifyOnError && void 0
@@ -985,14 +985,14 @@ let eM = {
                         failureCode: t,
                         errorMessage: null == n ? void 0 : n.msg
                     }),
-                        null == P || P(e, t, n, r);
+                        null == R || R(e, t, n, r);
                     return;
                 }
             return new Promise((t, r) => {
                 let i = Date.now(),
                     a = l.ZP.length,
                     c = Math.floor(10000 * Math.random());
-                eP.info('Queueing message to be sent LogId:'.concat(c)),
+                eR.info('Queueing message to be sent LogId:'.concat(c)),
                     l.ZP.enqueue(
                         en,
                         (c) => {
@@ -1030,7 +1030,7 @@ let eM = {
                                         joinRequestUserId: n
                                     });
                                 }
-                                x.Z.recordMessageSendApiResponse(X),
+                                x.Z.recordMessageSendApiResponse(Q),
                                     o.Z.dispatch({
                                         type: 'SLOWMODE_RESET_COOLDOWN',
                                         slowmodeType: eu.S.SendMessage,

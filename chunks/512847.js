@@ -250,7 +250,7 @@ function D() {
                 let e = O.Z.getVoiceChannelId(),
                     t = O.Z.getChannelId(),
                     n = a.ZP.getConnectedActivityLocation(),
-                    r = (0, o.pY)(n),
+                    r = (0, o.p)(n),
                     i = f.default.getId(),
                     l = (0, C.lm)(t) ? a.ZP.getEmbeddedActivitiesForChannel(t) : a.i6,
                     s = (0, C.lm)(e) ? a.ZP.getEmbeddedActivitiesForChannel(e) : a.i6,

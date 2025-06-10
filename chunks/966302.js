@@ -3,7 +3,7 @@ var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
-    s = n(386230),
+    s = n(524979),
     l = n(442837),
     c = n(481060),
     u = n(26151),
@@ -25,8 +25,8 @@ var r = n(255367),
     A = n(560688),
     N = n(88479),
     C = n(136995),
-    P = n(25827),
-    R = n(163612),
+    R = n(25827),
+    P = n(163612),
     w = n(430824),
     D = n(131951),
     L = n(594174),
@@ -58,7 +58,7 @@ function q(e, t, n) {
         e
     );
 }
-function Q(e) {
+function X(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -74,7 +74,7 @@ function Q(e) {
     }
     return e;
 }
-function X(e, t) {
+function Q(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -91,7 +91,7 @@ function J(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : X(Object(t)).forEach(function (n) {
+            : Q(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -160,7 +160,7 @@ function ea(e) {
                     (0, B.v)(s, B.d.DISCONNECT),
                         k.default.track(
                             Z.rMx.RING_CALL_DECLINED,
-                            Q(
+                            X(
                                 {
                                     location: s,
                                     guild_id: n.guild_id
@@ -187,7 +187,7 @@ function ea(e) {
                     children: (e, t) => {
                         let { onClick: i } = e,
                             { isShown: a } = t;
-                        return (0, r.jsx)(P.C, {
+                        return (0, r.jsx)(R.C, {
                             buttonRef: p,
                             join: !0,
                             enabled: d,
@@ -205,7 +205,7 @@ function ea(e) {
                                 (0, B.v)(s, B.d.JOIN_VIDEO_CALL),
                                     k.default.track(
                                         Z.rMx.RING_CALL_ACCEPTED,
-                                        Q(
+                                        X(
                                             {
                                                 location: s,
                                                 guild_id: n.guild_id
@@ -226,7 +226,7 @@ function ea(e) {
                 onCallJoined: () =>
                     k.default.track(
                         Z.rMx.RING_CALL_ACCEPTED,
-                        Q(
+                        X(
                             {
                                 location: s,
                                 guild_id: n.guild_id
@@ -256,7 +256,7 @@ function eo(e) {
         T = null != (t = (0, g.x)(h, er, !0)) ? t : S,
         A = (0, E.ZP)(h),
         [N, C] = (0, l.Wu)([D.Z], () => [D.Z.supports(H.AN.VIDEO), Object.keys(D.Z.getVideoDevices()).length]),
-        P = null != I ? ''.concat(A, ', ').concat(I.name) : A,
+        R = null != I ? ''.concat(A, ', ').concat(I.name) : A,
         L = (0, l.e7)([x.Z], () => x.Z.isFocused()),
         k = (0, l.e7)([j.Z], () => j.Z.getMode(h.id)),
         G = i.useCallback((e) => {
@@ -265,7 +265,7 @@ function eo(e) {
         B = (0, c.q_F)(
             {
                 value: +!!O,
-                config: J(Q({}, s.config.stiff), { clamp: !0 })
+                config: J(X({}, s.config.stiff), { clamp: !0 })
             },
             'animate-always'
         );
@@ -276,12 +276,12 @@ function eo(e) {
         return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
     }, [h]);
     let F = k === Z.WtW.VIDEO && N && C > 0,
-        { enabled: V } = R.Z.useExperiment({
+        { enabled: V } = P.Z.useExperiment({
             guildId: null == h ? void 0 : h.guild_id,
             location: 'IncomingCallModal'
         }),
         q = k === Z.WtW.VOICE || (V && h.type === Z.d4z.GUILD_VOICE) ? Y.intl.string(Y.t.Js8cKy) : Y.intl.string(Y.t.KcnWCA),
-        X = (0, r.jsxs)(r.Fragment, {
+        Q = (0, r.jsxs)(r.Fragment, {
             children: [
                 null != I && null == S
                     ? (0, r.jsx)('div', {
@@ -314,7 +314,7 @@ function eo(e) {
                             className: K.title,
                             color: 'header-primary',
                             variant: O ? 'text-md/semibold' : 'text-lg/semibold',
-                            children: P
+                            children: R
                         }),
                         (0, r.jsx)(c.Text, {
                             color: 'header-secondary',
@@ -346,17 +346,17 @@ function eo(e) {
                 children: (e) =>
                     (0, r.jsxs)(s.animated.div, {
                         className: o()(K.root, z.elevationHigh, { [K.previewCamera]: O }, e),
-                        style: J(Q({}, n), {
+                        style: J(X({}, n), {
                             width: B.value.interpolate([0, 1], [eo.width, et]),
                             minHeight: B.value.interpolate([0, 1], [eo.height, en]),
                             translateX: B.value.interpolate([0, 1], [0, (-1 * Math.abs(et - eo.width)) / 2])
                         }),
                         children: [
                             O
-                                ? (0, r.jsx)(ei, { header: X })
+                                ? (0, r.jsx)(ei, { header: Q })
                                 : (0, r.jsx)('div', {
                                       className: K.mainChannelInfo,
-                                      children: X
+                                      children: Q
                                   }),
                             (0, r.jsx)(ea, {
                                 canVideo: F,

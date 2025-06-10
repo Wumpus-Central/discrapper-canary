@@ -30,8 +30,8 @@ var r = n(255367),
     A = n(960048),
     N = n(735521),
     C = n(583046),
-    P = n(897829),
-    R = n(74179),
+    R = n(897829),
+    P = n(74179),
     w = n(896246),
     D = n(320317),
     L = n(994427),
@@ -98,10 +98,10 @@ function Y(e, t) {
 let [W, K, z] = (0, I.Z)();
 function q(e) {
     var t, n, o;
-    let { loadId: I, activeSubscription: V, stepConfigs: H, breadcrumbs: K = [], skuIDs: z, isGift: q = !1, children: Q, defaultPlanId: X, purchaseType: J = G.GZQ.SUBSCRIPTION, applicationId: $, referralCode: ee, excludeSubscriptionPlansBySKU: et = !1, excludeSKUPurchasePreviews: en = !1 } = e,
+    let { loadId: I, activeSubscription: V, stepConfigs: H, breadcrumbs: K = [], skuIDs: z, isGift: q = !1, children: X, defaultPlanId: Q, purchaseType: J = G.GZQ.SUBSCRIPTION, applicationId: $, referralCode: ee, excludeSubscriptionPlansBySKU: et = !1, excludeSKUPurchasePreviews: en = !1 } = e,
         er = (0, j.Z)(),
         ei = (0, h.Q)(),
-        ea = (0, P.Z)(),
+        ea = (0, R.Z)(),
         eo = z[0],
         es = (0, c.e7)([O.Z], () => O.Z.get(eo), [eo]),
         el = null == es ? void 0 : es.eligiblePaymentGateways,
@@ -111,7 +111,7 @@ function q(e) {
             paymentSourceId: ed,
             setPaymentSourceId: ef,
             hasFetchedPaymentSources: e_
-        } = (0, R.Z)({
+        } = (0, P.Z)({
             isGift: q,
             activeSubscription: V,
             eligiblePaymentGateways: el
@@ -142,8 +142,8 @@ function q(e) {
             stepConfigs: H,
             breadcrumbs: K
         }),
-        [eC, eP] = (0, L.Z)(eI),
-        { paymentError: eR, paymentAuthenticationState: ew } = (0, w.Z)(),
+        [eC, eR] = (0, L.Z)(eI),
+        { paymentError: eP, paymentAuthenticationState: ew } = (0, w.Z)(),
         { purchaseError: eD, purchaseErrorBlockRef: eL, setPurchaseError: ex } = (0, D.Z)(),
         ek = (0, u.Z)(() => {
             let e = null != I ? I : (0, l.Z)();
@@ -159,7 +159,7 @@ function q(e) {
         [eV, eZ] = (0, c.Wu)([b.Z], () => [b.Z.purchaseTokenAuthState, b.Z.purchaseTokenHash]),
         [eH, eY, eW, eK] = (0, c.Wu)([U.Z], () => [U.Z.browserCheckoutState, U.Z.loadId, U.Z.skuId, U.Z.planId]),
         [ez, eq] = i.useState(null),
-        [eQ, eX] = i.useState(null),
+        [eX, eQ] = i.useState(null),
         [eJ, e$] = i.useState(null),
         [e0, e1] = i.useState(null),
         [e2, e3] = i.useState(null),
@@ -253,9 +253,9 @@ function q(e) {
                 breadcrumbs: eA,
                 previousStepRef: eN,
                 purchaseState: eC,
-                setPurchaseState: eP,
+                setPurchaseState: eR,
                 paymentAuthenticationState: ew,
-                paymentError: eR,
+                paymentError: eP,
                 purchaseError: eD,
                 setPurchaseError: ex,
                 purchasePreviewError: tl,
@@ -269,8 +269,8 @@ function q(e) {
                 browserCheckoutStatePlanId: eK,
                 bodyNode: ez,
                 setBodyNode: eq,
-                footerNode: eQ,
-                setFooterNode: eX,
+                footerNode: eX,
+                setFooterNode: eQ,
                 modalOverlayNode: eJ,
                 setModalOverlayNode: e$,
                 selectedSkuId: eM,
@@ -283,7 +283,7 @@ function q(e) {
                 setSelectedPlanNotification: eF,
                 readySlideId: e4,
                 setReadySlideId: e5,
-                defaultPlanId: X,
+                defaultPlanId: Q,
                 isPremium: e7,
                 startingFractionalPremiumEndsAtRef: tt,
                 startedPaymentFlowWithPaymentSourcesRef: ep,
@@ -310,7 +310,7 @@ function q(e) {
         children: (0, r.jsx)(a.Elements, {
             options: G.OBo,
             stripe: er,
-            children: Q
+            children: X
         })
     });
 }

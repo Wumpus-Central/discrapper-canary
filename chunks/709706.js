@@ -221,14 +221,14 @@ function C(e) {
         downloadedBytes: 0
     });
 }
-function P(e) {
+function R(e) {
     let { modelId: t, downloadedBytes: n, totalBytes: r } = e;
     g.modelState[t] = p(f({}, g.modelState[t]), {
         downloadedBytes: n,
         totalBytes: r
     });
 }
-function R(e) {
+function P(e) {
     var t;
     let { modelId: n, error: r } = e;
     (null == (t = g.modelState[n]) ? void 0 : t.status) !== c.L.DOWNLOADED && ((g.modelState[n] = p(f({}, g.modelState[n]), { status: c.L.MISSING })), 'USER_CANCELED_DOWNLOAD' in (null != r ? r : {}) || (g.error = 'ERROR_DOWNLOADING_DEPENDENCY'));
@@ -259,8 +259,8 @@ function M() {
 d(A, 'displayName', 'VoiceFilterStore');
 let j = new A(l.Z, {
     VOICE_FILTER_DOWNLOAD_STARTED: C,
-    VOICE_FILTER_DOWNLOAD_PROGRESS: P,
-    VOICE_FILTER_DOWNLOAD_FAILED: R,
+    VOICE_FILTER_DOWNLOAD_PROGRESS: R,
+    VOICE_FILTER_DOWNLOAD_FAILED: P,
     VOICE_FILTER_FILE_READY: w,
     VOICE_FILTER_CATALOG_FETCH_SUCCESS: I,
     VOICE_FILTER_CATALOG_FETCH_FAILED: S,

@@ -81,8 +81,8 @@ let M = (e) => {
             Y = (0, _.Qo)(z, W),
             K = (0, l.JA)('nitro'),
             q = (0, v.N)(),
-            X = (0, y.Ng)(),
-            Q = (0, O.W)(),
+            Q = (0, y.Ng)(),
+            X = (0, O.W)(),
             J = (0, a.e7)([g.Z], () => g.Z.isLocalizedPromoEnabled) && null == q,
             $ = (0, N.Vi)(),
             ee = (0, A.V)(),
@@ -93,7 +93,7 @@ let M = (e) => {
                 cooldownDurationMs: 0
             }),
             eo = (null == q ? void 0 : q.trial_id) === w.a7,
-            [es, ec] = (0, h.US)(Q ? [o.z.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2] : [], void 0, !0);
+            [es, ec] = (0, h.US)(X ? [o.z.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2] : [], void 0, !0);
         if (
             (i.useEffect(() => {
                 !0 === V && null != es && ec(R.L.AUTO_DISMISS);
@@ -102,7 +102,7 @@ let M = (e) => {
         )
             return null;
         en === w.a$.NONE ||
-            Q ||
+            X ||
             ((E = 7),
             (n = (0, r.jsx)(I.Z, {
                 className: '',
@@ -113,7 +113,7 @@ let M = (e) => {
             }))),
             $
                 ? ((n = (0, r.jsx)(C.Z, {})), (E = 0))
-                : Q
+                : X
                   ? ((n = (0, r.jsx)(j.S, { expiresAt: ei })), (E = 4))
                   : null != ee
                     ? ((n = (0, r.jsx)(Z.Z, {
@@ -121,9 +121,9 @@ let M = (e) => {
                           showStars: !1
                       })),
                       (E = 1))
-                    : null != X
+                    : null != Q
                       ? ((n = (0, r.jsx)(T.GN, {
-                            userDiscount: X,
+                            userDiscount: Q,
                             isTabSelected: V,
                             includesAmountOff: !1
                         })),

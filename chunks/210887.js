@@ -101,10 +101,10 @@ class C extends (r = i.ZP.PersistedStore) {
         return I[e];
     }
 }
-function P() {
+function R() {
     return (0, c.O_)('ThemeStore') && 0 === v && ((I = O(b({}, I), { [m.zd.DARK]: g.BRd.DARKER })), (v = 1)), N();
 }
-function R() {
+function P() {
     return (0, a.ap)(A());
 }
 function w(e) {
@@ -128,7 +128,7 @@ E(C, 'displayName', 'ThemeStore'),
     ]);
 let x = new C(o.Z, {
     CACHE_LOADED: N,
-    CONNECTION_OPEN: P,
+    CONNECTION_OPEN: R,
     LOGOUT: w,
     OVERLAY_INITIALIZE: N,
     SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: N,
@@ -136,6 +136,6 @@ let x = new C(o.Z, {
     USER_SETTINGS_PROTO_UPDATE: N,
     RESET_PREVIEW_CLIENT_THEME: N,
     SYSTEM_THEME_CHANGE: D,
-    ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: R,
+    ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: P,
     UPDATE_THEME_PREFERENCES: L
 });

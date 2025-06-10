@@ -25,8 +25,8 @@ var r = n(255367),
     A = n(139793),
     N = n(510659),
     C = n(287954),
-    P = n(660579),
-    R = n(652853),
+    R = n(660579),
+    P = n(652853),
     w = n(64621),
     D = n(336383),
     L = n(194811),
@@ -44,8 +44,8 @@ var r = n(255367),
 function Y(e) {
     let { user: t, currentUser: n, stream: a, className: Y, onClose: W, profileGuildId: K } = e,
         z = i.useRef(null),
-        { themeType: q, theme: Q } = (0, R.z)(),
-        { interactionSource: X, interactionSourceId: J } = (0, N.Xo)(),
+        { themeType: q, theme: X } = (0, P.z)(),
+        { interactionSource: Q, interactionSourceId: J } = (0, N.Xo)(),
         $ = (0, s.e7)([O.Z], () => O.Z.getGuild(null == a ? void 0 : a.guildId)),
         ee = (0, s.e7)([y.Z], () => y.Z.getChannel(null == a ? void 0 : a.channelId)),
         et = (0, s.Wu)([S.ZP], () =>
@@ -93,7 +93,7 @@ function Y(e) {
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
-                                src: Q === G.BRd.LIGHT ? H : Z
+                                src: X === G.BRd.LIGHT ? H : Z
                             }),
                             q !== U.lY.MODAL &&
                                 q !== U.lY.MODAL_V2 &&
@@ -194,7 +194,7 @@ function Y(e) {
                       })
                   }),
         eg = el,
-        eE = X === U.n_.ACTIVITY && J === eg,
+        eE = Q === U.n_.ACTIVITY && J === eg,
         eb = null != en ? B.intl.formatToPlainString(B.t['4CQq9f'], { name: en.name }) : B.intl.string(B.t['Jpkr/v']);
     return (0, r.jsx)(h.Gt, {
         value: er,
@@ -211,7 +211,7 @@ function Y(e) {
                 sourceType: U.n_.ACTIVITY,
                 onAction: ei,
                 children: () =>
-                    (0, r.jsx)(P.Z, {
+                    (0, r.jsx)(R.Z, {
                         ref: z,
                         user: t,
                         className: F.toolbarContainer,

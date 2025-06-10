@@ -92,7 +92,7 @@ let T = __OVERLAY__ ? () => (0, s.e7)([p.default], () => p.default.isInstanceFoc
 function A(e) {
     var t,
         n,
-        { src: a, alt: s, className: c, emojiId: f, emojiName: p, channelId: g, messageId: b, animated: O, size: S = 'default', isInteracting: A = !1, shouldAnimate: N, onMouseEnter: C, onMouseLeave: P, canSelect: R = !0, autoplay: w, registerInnerRef: D, registerAnimatedElementRef: L } = e,
+        { src: a, alt: s, className: c, emojiId: f, emojiName: p, channelId: g, messageId: b, animated: O, size: S = 'default', isInteracting: A = !1, shouldAnimate: N, onMouseEnter: C, onMouseLeave: R, canSelect: P = !0, autoplay: w, registerInnerRef: D, registerAnimatedElementRef: L } = e,
         x = I(e, ['src', 'alt', 'className', 'emojiId', 'emojiName', 'channelId', 'messageId', 'animated', 'size', 'isInteracting', 'shouldAnimate', 'onMouseEnter', 'onMouseLeave', 'canSelect', 'autoplay', 'registerInnerRef', 'registerAnimatedElementRef']);
     let [k, M] = i.useState(!1),
         [j, U] = i.useState(void 0),
@@ -128,25 +128,25 @@ function A(e) {
             },
             [O, p, C, B, f]
         ),
-        Q = i.useCallback(
+        X = i.useCallback(
             (e) => {
-                O && M(!1), null == f && F(p), null == P || P(e);
+                O && M(!1), null == f && F(p), null == R || R(e);
             },
-            [O, f, p, P, F]
+            [O, f, p, R, F]
         ),
-        X = i.useMemo(() => {
+        Q = i.useMemo(() => {
             let e = null != f && '' !== f ? { 'data-id': f } : { 'data-name': p };
             return y(
                 v(y({}, x), {
                     className: o()('emoji', c, { jumboable: 'jumbo' === S }),
                     onError: z,
                     onMouseEnter: q,
-                    onMouseLeave: Q,
+                    onMouseLeave: X,
                     'data-type': 'emoji'
                 }),
                 e
             );
-        }, [c, f, p, q, Q, z, x, S]);
+        }, [c, f, p, q, X, z, x, S]);
     i.useEffect(
         () => () => {
             var e;
@@ -175,10 +175,10 @@ function A(e) {
                       disable: !1 === H || !1 === V,
                       emojiRef: $
                   }),
-                  R
+                  P
                       ? (0, r.jsx)(
                             'img',
-                            v(y({}, X), {
+                            v(y({}, Q), {
                                 ref: J,
                                 src: K,
                                 alt: null != (t = null != s ? s : p) ? t : void 0,
@@ -188,7 +188,7 @@ function A(e) {
                         )
                       : (0, r.jsx)(
                             'div',
-                            v(y({}, X), {
+                            v(y({}, Q), {
                                 ref: J,
                                 role: 'img',
                                 'aria-label': null != (n = null != s ? s : p) ? n : void 0,

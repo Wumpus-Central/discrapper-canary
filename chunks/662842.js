@@ -60,8 +60,8 @@ function D(e) {
         title: Y,
         location: K,
         locationIcon: q,
-        canListenIn: X,
-        buttonText: Q,
+        canListenIn: Q,
+        buttonText: X,
         users: J,
         overflowUsers: $,
         onClose: ee
@@ -343,12 +343,12 @@ function D(e) {
                           })
                       ]
                   }),
-                  X || 1 === W
+                  Q || 1 === W
                       ? (0, r.jsx)(c.zxk, {
                             size: c.zxk.Sizes.SMALL,
                             color: c.zxk.Colors.GREEN,
                             onClick: () => {
-                                if (X) null != l && null != l.getGuildId() && ((0, v.Cq)(l), (0, y.XU)(l.getGuildId(), l.id));
+                                if (Q) null != l && null != l.getGuildId() && ((0, v.Cq)(l), (0, y.XU)(l.getGuildId(), l.id));
                                 else {
                                     if (null == d) return;
                                     (0, h.bO)({ eventId: d.id });
@@ -356,7 +356,7 @@ function D(e) {
                             },
                             className: R.button,
                             fullWidth: !0,
-                            children: Q
+                            children: X
                         })
                       : null
               ]

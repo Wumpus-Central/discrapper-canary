@@ -120,15 +120,15 @@ function A(e) {
                 e
             );
         }),
-        P = d.ZP.canUseSoundboardEverywhere(o),
-        R = (0, i.e7)([s.Z], () => s.Z.getGuild(null == e ? void 0 : e.guild_id)),
+        R = d.ZP.canUseSoundboardEverywhere(o),
+        P = (0, i.e7)([s.Z], () => s.Z.getGuild(null == e ? void 0 : e.guild_id)),
         w = (0, i.e7)(
             [l.Z],
             () => {
-                let { canCreateExpressions: e } = (0, a.Gw)(R);
+                let { canCreateExpressions: e } = (0, a.Gw)(P);
                 return e;
             },
-            [R]
+            [P]
         ),
         { canSeeRecentlyHeard: D, canSeeFrequentlyPlayed: L } = (0, _.k)({
             location: 'soundboard-useSoundGrid',
@@ -181,19 +181,19 @@ function A(e) {
                     sectionType: g.bg.FREQUENTLY_USED,
                     sortById: !1
                 }),
-            void 0 !== R &&
-                S(i, R, {
+            void 0 !== P &&
+                S(i, P, {
                     currentGuildHasAddPermissions: w,
                     allSounds: f,
                     filterOutEmptyCurrentGuild: t
                 });
-        let a = P || M.enabled;
+        let a = R || M.enabled;
         return (
             a || T(i, f),
             I({
                 sections: i,
                 guilds: N,
-                currentGuildId: null == R ? void 0 : R.id,
+                currentGuildId: null == P ? void 0 : P.id,
                 allSounds: f,
                 hasNitro: u
             }),
@@ -212,7 +212,7 @@ function A(e) {
                 }
             }
         );
-    }, [A, f, b, k, x, L, D, R, w, t, P, N, n, O, u, M.enabled]);
+    }, [A, f, b, k, x, L, D, P, w, t, R, N, n, O, u, M.enabled]);
 }
 function N(e, t, n) {
     return r.useMemo(

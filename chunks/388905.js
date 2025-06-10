@@ -4,11 +4,11 @@ n.d(t, {
     EJ: () => L,
     Ee: () => S,
     Hh: () => D,
-    II: () => P,
+    II: () => R,
     MC: () => C,
     Vj: () => N,
     ZP: () => M,
-    gO: () => R,
+    gO: () => P,
     i_: () => w,
     jQ: () => x,
     qE: () => A,
@@ -161,7 +161,7 @@ let C = (e) => {
     });
 };
 C.Sizes = o.EFr;
-let P = (e) => {
+let R = (e) => {
         let { label: t, error: n, placeholder: i, value: s, className: l, inputClassName: c, setRef: d, type: f = 'text', onChange: _, autoComplete: p, autoFocus: h, maxLength: g, spellCheck: E, name: b, description: y, required: O, onFocus: v, onBlur: I } = e,
             S = (0, u.Dt)();
         return (0, r.jsxs)(o.xJW, {
@@ -199,7 +199,7 @@ let P = (e) => {
             ]
         });
     },
-    R = (e) => {
+    P = (e) => {
         let { className: t, children: n } = e;
         return (0, r.jsx)('div', {
             className: a()(m.block, t),
@@ -295,7 +295,7 @@ let P = (e) => {
     },
     k = (e) => {
         let { className: t } = e;
-        return (0, r.jsxs)(R, {
+        return (0, r.jsxs)(P, {
             className: t,
             children: [
                 (0, r.jsx)(T, {

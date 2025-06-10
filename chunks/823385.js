@@ -25,8 +25,8 @@ var i,
     A = n(483360),
     N = n(823379),
     C = n(981631),
-    P = n(388032);
-function R(e, t, n) {
+    R = n(388032);
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -118,15 +118,15 @@ function K() {
         let t = W(Z[e]);
         null != t && ((t.type !== u.h8.TEXT_CHANNEL && t.type !== u.h8.VOICE_CHANNEL) || O.Z.can(C.Plq.VIEW_CHANNEL, t.record)) && a.push(t);
     }
-    a.length > 0 && i.push((0, u.o6)(P.intl.string(P.t['80lOZ2'])), ...a);
+    a.length > 0 && i.push((0, u.o6)(R.intl.string(R.t['80lOZ2'])), ...a);
     let s = Y((e) => e === r || Z.includes(e));
-    s.length > 0 && i.push((0, u.o6)(P.intl.string(P.t['4B63jY'])), ...s);
+    s.length > 0 && i.push((0, u.o6)(R.intl.string(R.t['4B63jY'])), ...s);
     let l = v.ZP.getMentionChannelIds()
         .filter((e) => e !== r && !Z.includes(e))
         .map((e) => W(e))
         .filter(N.lm)
         .reverse();
-    if ((l.length > 0 && (i.push((0, u.o6)(P.intl.string(P.t['61Df19']))), (i = i.concat(l))), null != n)) {
+    if ((l.length > 0 && (i.push((0, u.o6)(R.intl.string(R.t['61Df19']))), (i = i.concat(l))), null != n)) {
         let e = E.ZP.getSelectableChannelIds(n)
             .filter((e) => {
                 let t = m.Z.getChannel(e);
@@ -140,7 +140,7 @@ function K() {
                 null != t && e.push(t);
             }
         }),
-            e.length > 0 && (i.push((0, u.o6)(P.intl.string(P.t.ieCAhI))), (i = i.concat(e)));
+            e.length > 0 && (i.push((0, u.o6)(R.intl.string(R.t.ieCAhI))), (i = i.concat(e)));
     }
     return o()(i)
         .uniqBy((e) => e.record.id)
@@ -150,20 +150,20 @@ function z(e, t) {
     switch (U) {
         case u.h8.USER: {
             let t = y.Z.getGuild(S.Z.getGuildId());
-            e.unshift((0, u.o6)(null != t ? P.intl.formatToPlainString(P.t.FREzQk, { name: t.name }) : P.intl.string(P.t.XFYW1t))), (G = e);
+            e.unshift((0, u.o6)(null != t ? R.intl.formatToPlainString(R.t.FREzQk, { name: t.name }) : R.intl.string(R.t.XFYW1t))), (G = e);
             break;
         }
         case u.h8.TEXT_CHANNEL:
-            e.unshift((0, u.o6)(P.intl.string(P.t.W26k4e))), (G = e);
+            e.unshift((0, u.o6)(R.intl.string(R.t.W26k4e))), (G = e);
             break;
         case u.h8.VOICE_CHANNEL:
-            e.unshift((0, u.o6)(P.intl.string(P.t.zUoI5O))), (G = e);
+            e.unshift((0, u.o6)(R.intl.string(R.t.zUoI5O))), (G = e);
             break;
         case u.h8.GUILD:
-            e.unshift((0, u.o6)(P.intl.string(P.t.olADPj))), (G = e);
+            e.unshift((0, u.o6)(R.intl.string(R.t.olADPj))), (G = e);
             break;
         case u.h8.APPLICATION:
-            e.unshift((0, u.o6)(P.intl.string(P.t.VwK1lZ))), (G = e);
+            e.unshift((0, u.o6)(R.intl.string(R.t.VwK1lZ))), (G = e);
             break;
         default:
             G = e;
@@ -193,12 +193,12 @@ function q(e) {
         (U = i),
         r.search(n);
 }
-function Q(e) {
+function X(e) {
     let { channelId: t } = e;
     if (null == t) return !1;
     (Z = Z.filter((e) => e !== t)).unshift(t), Z.length > 4 && (Z.length = 4);
 }
-function X(e, t) {
+function Q(e, t) {
     if (e.length !== t.length) return !1;
     for (let n = 0; n < e.length; n++) {
         let r = e[n],
@@ -208,7 +208,7 @@ function X(e, t) {
     return !0;
 }
 function J(e, t) {
-    X((e = '' === (t = t.trim()).trim() ? K() : e), V) || ((V = e), z(e, t));
+    Q((e = '' === (t = t.trim()).trim() ? K() : e), V) || ((V = e), z(e, t));
 }
 function $() {
     (B = null), (F = 0), (V = []), null != r && (r.destroy(), (r = null));
@@ -289,7 +289,7 @@ class er extends (i = s.ZP.PersistedStore) {
         };
     }
 }
-R(er, 'displayName', 'QuickSwitcherStore'), R(er, 'persistKey', 'QuickSwitcherStore');
+P(er, 'displayName', 'QuickSwitcherStore'), P(er, 'persistKey', 'QuickSwitcherStore');
 let ei = new er(c.Z, {
         CONNECTION_OPEN: H,
         CONNECTION_OPEN_SUPPLEMENTAL: H,
@@ -301,6 +301,6 @@ let ei = new er(c.Z, {
         QUICKSWITCHER_SEARCH: ee,
         QUICKSWITCHER_SELECT: et,
         QUICKSWITCHER_SWITCH_TO: en,
-        CHANNEL_SELECT: Q
+        CHANNEL_SELECT: X
     }),
     ea = ei;

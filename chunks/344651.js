@@ -26,8 +26,8 @@ var a = n(442837),
     A = n(509545),
     N = n(78839),
     C = n(936101),
-    P = n(868158),
-    R = n(483012),
+    R = n(868158),
+    P = n(483012),
     w = n(955132);
 function D(e, t, n) {
     return (
@@ -102,7 +102,7 @@ function j(e, t) {
     return i;
 }
 let U = new d.Z('ConnectionStore'),
-    G = new R.Z(
+    G = new P.Z(
         w.Wb,
         (e, t) => {
             var n;
@@ -128,7 +128,7 @@ let U = new d.Z('ConnectionStore'),
         },
         (e) => 'CHANNEL_UPDATE' !== e
     ),
-    B = new R.Z(
+    B = new P.Z(
         w.Wb,
         (e, t) => (
             (e =
@@ -154,7 +154,7 @@ let U = new d.Z('ConnectionStore'),
         ),
         (e) => 'SOUNDBOARD_SOUNDS' !== e
     ),
-    F = new R.Z(
+    F = new P.Z(
         w.Wb,
         (e, t) => (
             (e =
@@ -168,7 +168,7 @@ let U = new d.Z('ConnectionStore'),
         ),
         (e) => 'GUILD_MEMBERS_CHUNK' !== e
     ),
-    V = new R.Z(
+    V = new P.Z(
         w.Wb,
         (e, t) => (
             (e =
@@ -240,7 +240,7 @@ function q(e) {
                 }
             });
 }
-function Q(e) {
+function X(e) {
     return e.map((e) => {
         var t;
         return {
@@ -254,7 +254,7 @@ function Q(e) {
         };
     });
 }
-function X(e) {
+function Q(e) {
     let { guildId: t, user: n, status: r, activities: i, hiddenActivities: a, clientStatus: o, processedAtTimestamp: s } = e;
     V.add({
         guildId: t,
@@ -272,7 +272,7 @@ Y(
     (e) => {
         m.Z.initialGuild.measure(() => {
             a.ZP.Emitter.batched(() => {
-                let t = P.Fx(e, w.Wb.identifyStartTime);
+                let t = R.Fx(e, w.Wb.identifyStartTime);
                 null != S.default.getCurrentUser() &&
                     (K({
                         type: 'GUILD_CREATE',
@@ -308,7 +308,7 @@ Y(
         m.Z.readySupplemental.measure(() => {
             a.ZP.Emitter.batched(() => {
                 var t, n;
-                e = m.Z.hydrateReadySupplemental.measure(() => P.r$(e, w.Wb.identifyStartTime));
+                e = m.Z.hydrateReadySupplemental.measure(() => R.r$(e, w.Wb.identifyStartTime));
                 let r = (e) =>
                         e.map((e) => ({
                             user: e.user,
@@ -371,7 +371,7 @@ Y(
         ['READY'],
         (e) => {
             var t;
-            let n = P.Eb(),
+            let n = R.Eb(),
                 r = e.guilds
                     .filter((e) => {
                         var t, n;
@@ -387,7 +387,7 @@ Y(
             if (e.user.bot) return void K({ type: 'LOGOUT' });
             m.Z.ready.measure(() => {
                 a.ZP.Emitter.batched(() => {
-                    let t = (e = m.Z.hydrateReady.measure(() => P.IM(e, w.Wb.identifyStartTime, n))).private_channels.map((e) => (0, E.q_)(e)),
+                    let t = (e = m.Z.hydrateReady.measure(() => R.IM(e, w.Wb.identifyStartTime, n))).private_channels.map((e) => (0, E.q_)(e)),
                         r = e.guilds.filter((e) => !0 === e.unavailable && !0 !== e.geo_restricted).map((e) => e.id),
                         i = e.guilds.filter((e) => !0 !== e.unavailable),
                         a = e.guilds.filter((e) => !0 === e.geo_restricted);
@@ -421,7 +421,7 @@ Y(
                             apexUserExperiments: null != (n = e.apex_user_experiments) ? n : void 0,
                             requiredAction: e.required_action,
                             consents: e.consents,
-                            sessions: Q(e.sessions || []),
+                            sessions: X(e.sessions || []),
                             pendingPayments: e.pending_payments,
                             countryCode: null != (s = e.country_code) ? s : void 0,
                             guildJoinRequests: e.guild_join_requests || [],
@@ -741,7 +741,7 @@ Y(
                     guildId: e.id
                 });
             else {
-                let t = P.J2(e);
+                let t = R.J2(e);
                 s.Z.createGuild(t),
                     K({
                         type: 'VOICE_STATE_UPDATES',
@@ -806,7 +806,7 @@ Y(
                 null != e.presences &&
                     e.presences.forEach((t) => {
                         let { user: n, status: r, client_status: i, activities: a, hidden_activities: o, processed_at_timestamp: s } = t;
-                        return X({
+                        return Q({
                             guildId: e.guild_id,
                             user: n,
                             status: r,
@@ -816,7 +816,7 @@ Y(
                             processedAtTimestamp: s
                         });
                     }),
-                R.Z.flush('GUILD_MEMBERS_CHUNK');
+                P.Z.flush('GUILD_MEMBERS_CHUNK');
         });
     }),
     H(['THREAD_MEMBER_LIST_UPDATE'], (e) => {
@@ -830,7 +830,7 @@ Y(
                 null != e.presences &&
                     e.presences.forEach((t) => {
                         let { user: n, status: r, client_status: i, activities: a, hidden_activities: o, processed_at_timestamp: s } = t;
-                        return X({
+                        return Q({
                             guildId: e.guild_id,
                             user: n,
                             status: r,
@@ -840,7 +840,7 @@ Y(
                             processedAtTimestamp: s
                         });
                     }),
-                R.Z.flush();
+                P.Z.flush();
         });
     }),
     H(['GUILD_BAN_ADD', 'GUILD_BAN_REMOVE', 'GUILD_MEMBER_ADD', 'GUILD_MEMBER_UPDATE', 'GUILD_MEMBER_REMOVE'], (e, t) => {
@@ -1024,7 +1024,7 @@ Y(
         });
     }),
     H(['PRESENCE_UPDATE'], (e) => {
-        X({
+        Q({
             guildId: e.guild_id,
             user: e.user,
             status: e.status,
@@ -1043,7 +1043,7 @@ Y(
     H(['SESSIONS_REPLACE'], (e) => {
         K({
             type: 'SESSIONS_REPLACE',
-            sessions: Q(e)
+            sessions: X(e)
         });
     }),
     H(['VOICE_STATE_UPDATE'], (e) => {
@@ -1284,7 +1284,7 @@ Y(
                 let { member: n } = t;
                 if ((z(e.guild_id, n.user, n), null == n.presence)) return;
                 let { presence: r } = n;
-                X({
+                Q({
                     guildId: e.guild_id,
                     user: r.user,
                     status: r.status,
@@ -1305,7 +1305,7 @@ Y(
                         t(i);
                 }
             }),
-                R.Z.flush(),
+                P.Z.flush(),
                 K({
                     type: 'GUILD_MEMBER_LIST_UPDATE',
                     guildId: e.guild_id,

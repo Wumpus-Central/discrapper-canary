@@ -25,8 +25,8 @@ var r = n(255367),
     A = n(453070),
     N = n(926491),
     C = n(373228),
-    P = n(462109),
-    R = n(422195),
+    R = n(462109),
+    P = n(422195),
     w = n(657795),
     D = n(489762),
     L = n(31543),
@@ -94,9 +94,9 @@ let Z = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     K = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
     z = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
     q = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
-    Q = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
-    X = z + 2 * Q,
-    J = q + 2 * Q,
+    X = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
+    Q = z + 2 * X,
+    J = q + 2 * X,
     $ = 8,
     ee = 200,
     et = o()(T.Iw, ee),
@@ -107,7 +107,7 @@ let Z = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             { location: F } = (0, d.O)(),
             { analyticsLocations: z } = (0, _.ZP)(f.Z.STICKER_PICKER),
             q = (null == (a = (0, E.N)()) ? void 0 : a.subscription_trial) != null,
-            Q = i.useRef(null),
+            X = i.useRef(null),
             ee = i.useRef(null),
             er = i.useRef(null),
             ei = (0, I.Q)((e) => e.showPremiumUpsell),
@@ -117,7 +117,7 @@ let Z = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
         let el = (0, A.Sd)(c),
             ec = 0 === el.filter((e) => e.type !== C.Ih.EMPTY_GUILD_UPSELL).length,
             eu = (0, m.ep)({
-                gridWrapperRef: Q,
+                gridWrapperRef: X,
                 containerWidth: o,
                 showingEmptyState: ec,
                 listPaddingLeft: H,
@@ -152,7 +152,7 @@ let Z = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 listWidth: eu,
                 listPaddingRight: Y,
                 stickerNodeMargin: ev ? W : K,
-                stickerNodeWidth: ev ? X : J
+                stickerNodeWidth: ev ? Q : J
             }),
             eC = i.useCallback(
                 (e, t) => {
@@ -175,12 +175,12 @@ let Z = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 [F, e_, c, eO]
             ),
             {
-                getItemProps: eP,
-                getRowProps: eR,
+                getItemProps: eR,
+                getRowProps: eP,
                 gridContainerProps: ew,
                 handleGridContainerKeyDown: eD,
                 isUsingKeyboardNavigation: eL
-            } = (0, P.t)({
+            } = (0, R.t)({
                 columnCounts: eN,
                 stickersListRef: ee,
                 stickersGrid: eT,
@@ -248,7 +248,7 @@ let Z = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                   V(
                                       B(
                                           {
-                                              ref: Q,
+                                              ref: X,
                                               className: U.listWrapper,
                                               id: M.Vr
                                           },
@@ -261,8 +261,8 @@ let Z = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                                         ref: ee,
                                                         collapsedStickersCategories: ef,
                                                         filteredStickers: ep,
-                                                        getStickerItemProps: eP,
-                                                        getStickerRowProps: eR,
+                                                        getStickerItemProps: eR,
+                                                        getStickerRowProps: eP,
                                                         gridWidth: eu,
                                                         gutterWidth: eA,
                                                         isUsingKeyboardNavigation: eL,
@@ -277,7 +277,7 @@ let Z = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                       }
                                   )
                               ),
-                              (0, r.jsx)(R.Z, {
+                              (0, r.jsx)(P.Z, {
                                   stickersListRef: ee,
                                   channel: c
                               })

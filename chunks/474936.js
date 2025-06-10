@@ -1,12 +1,12 @@
 n.d(t, {
     $7: () => k,
-    $8: () => eP,
+    $8: () => eR,
     $e: () => d,
-    $n: () => eQ,
+    $n: () => eX,
     A5: () => U,
     AU: () => z,
     Bo: () => e2,
-    C2: () => Q,
+    C2: () => X,
     CL: () => f,
     CR: () => ei,
     Cj: () => eB,
@@ -53,10 +53,10 @@ n.d(t, {
     YQ: () => p,
     Z1: () => y,
     Zh: () => c,
-    _k: () => eR,
+    _k: () => eP,
     a$: () => e6,
     a1: () => eV,
-    a7: () => X,
+    a7: () => Q,
     b6: () => u,
     bg: () => ej,
     cb: () => L,
@@ -72,7 +72,7 @@ n.d(t, {
     gh: () => G,
     h1: () => ex,
     h8: () => ea,
-    hX: () => eX,
+    hX: () => eQ,
     hs: () => es,
     i_: () => Y,
     ih: () => ef,
@@ -321,8 +321,8 @@ let N = Object.freeze({
         }
     }),
     C = new Set(['511651880837840896']),
-    P = 16,
-    R = 8,
+    R = 16,
+    P = 8,
     w = 5,
     D = 30,
     L = 2,
@@ -342,15 +342,15 @@ let N = Object.freeze({
     K = '983601860436819968',
     z = '983601860436819969',
     q = '984244797441048577',
-    Q = '1004850445463584768',
-    X = '1073698058383917056',
+    X = '1004850445463584768',
+    Q = '1073698058383917056',
     J = '1070132870233980928',
     $ = '1267968635301789696',
     ee = '1267969164312576000',
     et = '1268347360493174784',
     en = '1271484512081285191',
     er = '1161363847311785984',
-    ei = [Y, W, K, z, q, Q, X, J, $, ee, et, en, er],
+    ei = [Y, W, K, z, q, X, Q, J, $, ee, et, en, er],
     ea = [$, ee, en],
     eo = [$, en],
     es = '1150904354090532864',
@@ -385,16 +385,16 @@ let N = Object.freeze({
             id: q,
             skus: ['521847234246082599']
         },
-        [Q]: {
-            id: Q,
+        [X]: {
+            id: X,
             skus: ['521847234246082599']
         },
         [J]: {
             id: J,
             skus: ['978380684370378762']
         },
-        [X]: {
-            id: X,
+        [Q]: {
+            id: Q,
             skus: ['521847234246082599']
         },
         [et]: {
@@ -527,13 +527,13 @@ let eO = Object.freeze({
         [i.Eu4.TIER_2]: 15,
         [i.Eu4.TIER_3]: 30
     },
-    eP = {
+    eR = {
         [i.Eu4.NONE]: eC[i.Eu4.NONE],
         [i.Eu4.TIER_1]: eC[i.Eu4.NONE] + eC[i.Eu4.TIER_1],
         [i.Eu4.TIER_2]: eC[i.Eu4.NONE] + eC[i.Eu4.TIER_1] + eC[i.Eu4.TIER_2],
         [i.Eu4.TIER_3]: eC[i.Eu4.NONE] + eC[i.Eu4.TIER_1] + eC[i.Eu4.TIER_2] + eC[i.Eu4.TIER_3]
     },
-    eR = {
+    eP = {
         [i.Eu4.NONE]: em,
         [i.Eu4.TIER_1]: 24,
         [i.Eu4.TIER_2]: 36,
@@ -548,8 +548,8 @@ let eO = Object.freeze({
                 fileSize: i.mBz,
                 screenShareQualityFramerate: 30,
                 screenShareQualityResolution: '720p',
-                soundboardSounds: eR[i.Eu4.NONE],
-                stickers: eP[i.Eu4.NONE],
+                soundboardSounds: eP[i.Eu4.NONE],
+                stickers: eR[i.Eu4.NONE],
                 stageVideoUsers: i.B9o
             }
         },
@@ -561,8 +561,8 @@ let eO = Object.freeze({
                 fileSize: i.mBz,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '720p',
-                soundboardSounds: eR[i.Eu4.TIER_1],
-                stickers: eP[i.Eu4.TIER_1],
+                soundboardSounds: eP[i.Eu4.TIER_1],
+                stickers: eR[i.Eu4.TIER_1],
                 stageVideoUsers: i.B9o
             }
         },
@@ -574,8 +574,8 @@ let eO = Object.freeze({
                 fileSize: eT,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '1080p',
-                soundboardSounds: eR[i.Eu4.TIER_2],
-                stickers: eP[i.Eu4.TIER_2],
+                soundboardSounds: eP[i.Eu4.TIER_2],
+                stickers: eR[i.Eu4.TIER_2],
                 stageVideoUsers: i.eez
             }
         },
@@ -587,8 +587,8 @@ let eO = Object.freeze({
                 fileSize: eA,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '1080p',
-                soundboardSounds: eR[i.Eu4.TIER_3],
-                stickers: eP[i.Eu4.TIER_3],
+                soundboardSounds: eP[i.Eu4.TIER_3],
+                stickers: eR[i.Eu4.TIER_3],
                 stageVideoUsers: i.RcX
             }
         }
@@ -601,10 +601,10 @@ var eL = (function (e) {
         return (e.FREE = 'free'), (e.PREMIUM_STANDARD = 'premium-standard'), e;
     })({});
 let ek = {
-    '1024422698568122368': P,
-    '511651876987469824': P,
-    '511651885459963904': P,
-    '944037208325619722': R,
+    '1024422698568122368': R,
+    '511651876987469824': R,
+    '511651885459963904': R,
+    '944037208325619722': P,
     '642251038925127690': w
 };
 var eM = (function (e) {
@@ -642,8 +642,8 @@ let eH = new Set(['PL', 'TR']),
     eK = [12, 5, 7, 6],
     ez = [8, 9, 11, 10],
     eq = ez.concat(eY),
-    eQ = 190;
-var eX = (function (e) {
+    eX = 190;
+var eQ = (function (e) {
         return (e[(e.FRIEND_ANNIVERSARY = 0)] = 'FRIEND_ANNIVERSARY'), e;
     })({}),
     eJ = (function (e) {

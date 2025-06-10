@@ -7,7 +7,7 @@ var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
-    s = n(386230),
+    s = n(524979),
     l = n(481060),
     c = n(493773),
     u = n(600164),
@@ -81,7 +81,7 @@ function T(e) {
             from: { width: '0%' },
             config: { duration: I }
         })),
-        P = (e) => {
+        R = (e) => {
             f(),
                 O(1),
                 null != p &&
@@ -93,7 +93,7 @@ function T(e) {
                         })
                     );
         },
-        R = async (e) => {
+        P = async (e) => {
             1 === e && (await N({ width: '100%' }), o());
         };
     return (
@@ -109,7 +109,7 @@ function T(e) {
             children: (0, r.jsxs)(l.MyZ, {
                 activeSlide: b,
                 width: S,
-                onSlideReady: R,
+                onSlideReady: P,
                 children: [
                     (0, r.jsxs)(l.Mi4, {
                         id: 0,
@@ -146,7 +146,7 @@ function T(e) {
                                         A,
                                         {
                                             choice: e,
-                                            onClick: P
+                                            onClick: R
                                         },
                                         e.key
                                     )

@@ -124,11 +124,11 @@ if ('function' == typeof y)
         y(C);
     };
 else if ('undefined' != typeof MessageChannel) {
-    var P = new MessageChannel(),
-        R = P.port2;
-    (P.port1.onmessage = C),
+    var R = new MessageChannel(),
+        P = R.port2;
+    (R.port1.onmessage = C),
         (o = function () {
-            R.postMessage(null);
+            P.postMessage(null);
         });
 } else
     o = function () {

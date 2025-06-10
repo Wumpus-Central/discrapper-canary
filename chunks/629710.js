@@ -36,7 +36,7 @@ let _ = -1,
         }),
     h = (e) => {
         let { channelId: t, authorId: n } = x(e);
-        return null == t ? 0 : m(t, n);
+        return null == t || null == e ? f.qn.NONE : m(t, n);
     },
     m = (e, t) => {
         var n;
@@ -54,7 +54,7 @@ function E(e) {
 }
 function b(e, t) {
     var n, r;
-    if (t === f.qn.NONE) return !1;
+    if (t === f.qn.NONE || null == e) return !1;
     if (
         (null == (n = e.attachments)
             ? void 0
@@ -174,9 +174,9 @@ function S(e, t) {
     if (0 === n.length) return !1;
     switch (e.type) {
         case u.l.Embed:
-            return P(e.media, n);
-        case u.l.Attachment:
             return R(e.media, n);
+        case u.l.Attachment:
+            return P(e.media, n);
         case u.l.GenericMedia:
             return w(e.media, n);
         default:
@@ -223,11 +223,12 @@ function C(e, t) {
         s = r.getChannel(e);
     return null == s ? null : s.isDM() || s.isGroupDM() ? (null != t && i.getFriendIDs().includes(t) ? u.n.FRIEND_DM : u.n.NON_FRIEND_DM) : u.n.GUILD;
 }
-function P(e, t) {
+function R(e, t) {
     var n, r, i, a, o, s, l;
     return (
         !(
             0 === t.length ||
+            null == e ||
             0 ===
                 t.filter(
                     (t) =>
@@ -243,7 +244,7 @@ function P(e, t) {
         ) && D(k(e), t)
     );
 }
-function R(e, t) {
+function P(e, t) {
     var n;
     return (
         0 !== t.length &&
@@ -284,8 +285,7 @@ function x(e) {
     let t = null,
         n = null;
     return (
-        'channel_id' in e && (t = e.channel_id),
-        'author_id' in e && (n = e.author_id),
+        null == e || ('channel_id' in e && (t = e.channel_id), 'author_id' in e && (n = e.author_id)),
         {
             channelId: t,
             authorId: n

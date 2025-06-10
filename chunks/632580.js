@@ -65,7 +65,7 @@ function b(e, t) {
     );
 }
 async function y(e) {
-    let { setPurchaseState: t, setHasAcceptedTerms: n, setIsSubmitting: r, setPurchaseError: m, hasRedirectURL: E, setHasRedirectURL: y, isGift: O, baseAnalyticsData: v, analyticsLocation: I, analyticsLocations: S, flowStartTime: T, subscriptionPlan: A, planGroup: N, trialId: C, priceOptions: P, paymentSource: R, isPrepaidPaymentPastDue: w, openInvoiceId: D, premiumSubscription: L, onNext: x, metadata: k, sku: M, skuPricePreview: j, purchaseType: U, referralCode: G, loadId: B, giftInfoOptions: F, invoicePreview: V } = e;
+    let { setPurchaseState: t, setHasAcceptedTerms: n, setIsSubmitting: r, setPurchaseError: m, hasRedirectURL: E, setHasRedirectURL: y, isGift: O, baseAnalyticsData: v, analyticsLocation: I, analyticsLocations: S, flowStartTime: T, subscriptionPlan: A, planGroup: N, trialId: C, priceOptions: R, paymentSource: P, isPrepaidPaymentPastDue: w, openInvoiceId: D, premiumSubscription: L, onNext: x, metadata: k, sku: M, skuPricePreview: j, purchaseType: U, referralCode: G, loadId: B, giftInfoOptions: F, invoicePreview: V } = e;
     t(_.A.PURCHASING), n(!0), r(!0), a.Z.wait(s.fw), m(null);
     try {
         let e, n, r;
@@ -90,7 +90,7 @@ async function y(e) {
                     expectedAmount: j.amount,
                     expectedCurrency: j.currency,
                     isGift: O,
-                    paymentSource: R,
+                    paymentSource: P,
                     loadId: B,
                     giftInfoOptions: F
                 }));
@@ -100,10 +100,10 @@ async function y(e) {
                     amount: V.total,
                     currency: V.currency
                 },
-                n = (0, f.BK)((0, f.aS)(A.id, !1, !1, P));
+                n = (0, f.BK)((0, f.aS)(A.id, !1, !1, R));
             if (null != L) {
                 let e = (0, f.al)(L, A.id, 1, new Set(N));
-                (e = (0, f.gB)(e)), (n = (0, f.UX)(e, P.currency.toLowerCase(), P.paymentSourceId));
+                (e = (0, f.gB)(e)), (n = (0, f.UX)(e, R.currency.toLowerCase(), R.paymentSourceId));
             }
             if (O) {
                 let t = V.total,
@@ -111,20 +111,20 @@ async function y(e) {
                 e = await (0, c.ZZ)(h.CL, A.skuId, {
                     expectedAmount: t,
                     expectedCurrency: n,
-                    paymentSource: R,
+                    paymentSource: P,
                     subscriptionPlanId: A.id,
                     isGift: !0,
                     loadId: B,
                     giftInfoOptions: F
                 });
-            } else if (w && null != D && null != R && null != L)
-                e = p.Uk1.has(R.type)
-                    ? await (0, o.G)(L, D, R, P.currency)
+            } else if (w && null != D && null != P && null != L)
+                e = p.Uk1.has(P.type)
+                    ? await (0, o.G)(L, D, P, R.currency)
                     : await (0, o.Mg)(
                           L,
                           {
-                              paymentSource: R,
-                              currency: P.currency
+                              paymentSource: P,
+                              currency: R.currency
                           },
                           t,
                           n,
@@ -135,15 +135,15 @@ async function y(e) {
             else if (null != L) {
                 let r = (0, f.al)(L, A.id, 1, new Set(N)),
                     i = {
-                        paymentSource: R,
-                        currency: P.currency
+                        paymentSource: P,
+                        currency: R.currency
                     };
                 L.status === p.O0b.PAUSED && (i.status = p.O0b.ACTIVE), L.isPausedAllowsResumeButNotUpdates || (i.items = r), (e = await (0, o.Mg)(L, i, t, n, S, I, B));
             } else
                 e = await (0, l.Ld)({
                     planId: A.id,
-                    currency: P.currency,
-                    paymentSource: R,
+                    currency: R.currency,
+                    paymentSource: P,
                     trialId: C,
                     metadata: k,
                     referralCode: G,
@@ -161,8 +161,8 @@ async function y(e) {
                 p.rMx.PAYMENT_FLOW_FAILED,
                 b(g({}, v), {
                     payment_error_code: null == e ? void 0 : e.code,
-                    payment_source_id: null == R ? void 0 : R.id,
-                    payment_source_type: null == R ? void 0 : R.type,
+                    payment_source_id: null == P ? void 0 : P.id,
+                    payment_source_type: null == P ? void 0 : P.type,
                     duration_ms: Date.now() - T
                 })
             );

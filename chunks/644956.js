@@ -25,8 +25,8 @@ var r = n(255367),
     A = n(271383),
     N = n(430824),
     C = n(594174),
-    P = n(51144),
-    R = n(388032),
+    R = n(51144),
+    P = n(388032),
     w = n(73433),
     D = n(83902);
 function L(e, t, n) {
@@ -190,7 +190,7 @@ function G(e) {
                     .filter((e) => null != C.default.getUser(e.userId))
                     .sortBy((e) => {
                         var t;
-                        return null != (t = e.nick) ? t : P.ZP.getName(C.default.getUser(e.userId));
+                        return null != (t = e.nick) ? t : R.ZP.getName(C.default.getUser(e.userId));
                     })
                     .value();
             },
@@ -227,7 +227,7 @@ function G(e) {
     let O =
         null == E
             ? m.name
-            : R.intl.formatToPlainString(R.t.CuAQkJ, {
+            : P.intl.formatToPlainString(P.t.CuAQkJ, {
                   title: m.name,
                   count: E
               });
@@ -249,7 +249,7 @@ function G(e) {
                         children: [
                             (0, r.jsx)(g.Z, {
                                 className: w.roleHeader,
-                                'aria-label': R.intl.formatToPlainString(R.t.UaqbkZ, {
+                                'aria-label': P.intl.formatToPlainString(P.t.UaqbkZ, {
                                     title: m.name,
                                     count: y.length
                                 }),
@@ -263,7 +263,7 @@ function G(e) {
                                 ? null
                                 : (0, r.jsx)(g.Z, {
                                       className: w.roleHeader,
-                                      children: R.intl.formatToPlainString(R.t['9oMmZG'], { count: E - y.length })
+                                      children: P.intl.formatToPlainString(P.t['9oMmZG'], { count: E - y.length })
                                   })
                         ]
                     })
@@ -282,7 +282,7 @@ function B(e) {
         A = S && 'username' === E,
         N = b && null != n && null != n.secondaryColor ? (0, v.f)(n) : null,
         C = i.useRef(null),
-        P = (e) =>
+        R = (e) =>
             (0, r.jsxs)(
                 O.Z,
                 M(
@@ -311,11 +311,11 @@ function B(e) {
                     }
                 )
             ),
-        { enabled: R } = j.getCurrentConfig({ location: '2ec235_1' }, { autoTrackExposure: !1 });
-    return !R || _ || null == o || null == d || (null == a && '@everyone' !== c)
+        { enabled: P } = j.getCurrentConfig({ location: '2ec235_1' }, { autoTrackExposure: !1 });
+    return !P || _ || null == o || null == d || (null == a && '@everyone' !== c)
         ? (0, r.jsx)(m.Gt, {
               value: g,
-              children: P()
+              children: R()
           })
         : (0, r.jsx)(m.Gt, {
               value: g,
@@ -332,7 +332,7 @@ function B(e) {
                           popoutProps: e
                       }),
                   position: 'right',
-                  children: P
+                  children: R
               })
           });
 }

@@ -73,10 +73,10 @@ function N(e) {
 function C() {
     r = !0;
 }
-function P() {
+function R() {
     r = !1;
 }
-function R(e) {
+function P(e) {
     let { games: t, etag: n } = e;
     for (let e of (null != n && v !== n && (v = n), t)) A(S(e));
     (r = void 0), (I = Date.now());
@@ -178,6 +178,6 @@ p(w, 'displayName', 'GameStore'),
 let D = new w(l.Z, {
     OVERLAY_INITIALIZE: N,
     GAMES_DATABASE_FETCH: C,
-    GAMES_DATABASE_FETCH_FAIL: P,
-    GAMES_DATABASE_UPDATE: R
+    GAMES_DATABASE_FETCH_FAIL: R,
+    GAMES_DATABASE_UPDATE: P
 });

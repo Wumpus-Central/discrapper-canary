@@ -26,8 +26,8 @@ var i = n(120356),
     A = n(336383),
     N = n(194811),
     C = n(373826),
-    P = n(668700),
-    R = n(262210),
+    R = n(668700),
+    P = n(262210),
     w = n(670451),
     D = n(881530),
     L = n(228168),
@@ -93,20 +93,20 @@ function V(e) {
         K = (0, m.Dt)(),
         { analyticsLocations: z } = (0, f.ZP)(d.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         { themeType: q } = (0, I.z)(),
-        Q = (0, h.Z)({
+        X = (0, h.Z)({
             activity: i,
             user: t
         }),
-        X = (0, b.Z)({
+        Q = (0, b.Z)({
             display: 'live',
             user: t,
             activity: i,
-            entry: Q,
+            entry: X,
             analyticsLocations: z
         }),
         J = (0, y.Z)({
             userId: t.id,
-            onAction: X
+            onAction: Q
         }),
         $ = (0, O.Z)(i),
         ee = null != $.text && '' !== $.text,
@@ -117,7 +117,7 @@ function V(e) {
             currentUser: n,
             activity: i,
             application: U,
-            entry: Q,
+            entry: X,
             onClose: H
         }),
         ei = () => {
@@ -138,7 +138,7 @@ function V(e) {
                       className: j.clickableImage,
                       aspectRatio: e,
                       onClick: (e) => {
-                          X({ action: 'PRESS_IMAGE' }), er(e);
+                          Q({ action: 'PRESS_IMAGE' }), er(e);
                       }
                   });
         },
@@ -178,7 +178,7 @@ function V(e) {
                     variant: 'text-xs/normal',
                     text: M.intl.formatToPlainString(M.t['hq/Qzc'], { guildName: B.name }),
                     onClick: () => {
-                        (0, g.X)(B.id), X({ action: 'OPEN_VOICE_GUILD' }), null == H || H();
+                        (0, g.X)(B.id), Q({ action: 'OPEN_VOICE_GUILD' }), null == H || H();
                     }
                 });
             if ((0, c.Z)(i))
@@ -266,7 +266,7 @@ function V(e) {
         ec = () => {
             if (!(0, v.Z)(i)) return null;
             let { start: e, end: t } = i.timestamps;
-            return (0, r.jsx)(R.Z, {
+            return (0, r.jsx)(P.Z, {
                 start: e,
                 end: t
             });
@@ -279,18 +279,18 @@ function V(e) {
                 : (0, r.jsxs)(o.P3F, {
                       className: j.clickableText,
                       onClick: (e) => {
-                          X({ action: 'PRESS_TEXT' }), er(e);
+                          Q({ action: 'PRESS_TEXT' }), er(e);
                       },
                       children: [ea(), eo(), es()]
                   }),
         ed = () =>
             null == B || null == V
                 ? null
-                : (0, r.jsx)(P.Z, {
+                : (0, r.jsx)(R.Z, {
                       user: t,
                       guild: B,
                       channel: V,
-                      onAction: X,
+                      onAction: Q,
                       onClose: H
                   }),
         ef = () =>
@@ -301,7 +301,7 @@ function V(e) {
                       children: (0, r.jsx)(S.Z, {
                           activity: i,
                           user: t,
-                          onAction: X,
+                          onAction: Q,
                           onClose: H
                       })
                   });
@@ -310,7 +310,7 @@ function V(e) {
         children: (0, r.jsxs)(A.Z, {
             ref: J,
             className: a()(j.card, Z),
-            onAction: X,
+            onAction: Q,
             onClose: H,
             'aria-labelledby': ee ? ''.concat(K, ' ').concat(W) : W,
             children: [
@@ -321,7 +321,7 @@ function V(e) {
                             display: 'live',
                             user: t,
                             activity: i,
-                            entry: Q,
+                            entry: X,
                             onClose: H,
                             appContext: Y
                         })

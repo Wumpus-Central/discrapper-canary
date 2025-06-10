@@ -93,7 +93,7 @@ function T(e, t, n, g) {
     var E = String(e),
         O = String(t),
         v = (0, p.j)(),
-        T = null != (P = null != (R = null == g ? void 0 : g.locale) ? R : v.locale) ? P : r.Z;
+        T = null != (R = null != (P = null == g ? void 0 : g.locale) ? P : v.locale) ? R : r.Z;
     if (!T.match) throw RangeError('locale must contain match property');
     var N = (0, u.Z)(null != (w = null != (D = null != (L = null != (x = null == g ? void 0 : g.firstWeekContainsDate) ? x : null == g || null == (k = g.locale) || null == (M = k.options) ? void 0 : M.firstWeekContainsDate) ? L : v.firstWeekContainsDate) ? D : null == (j = v.locale) || null == (U = j.options) ? void 0 : U.firstWeekContainsDate) ? w : 1);
     if (!(N >= 1 && N <= 7)) throw RangeError('firstWeekContainsDate must be between 1 and 7 inclusively');
@@ -102,8 +102,8 @@ function T(e, t, n, g) {
     if ('' === O)
         if ('' === E) return (0, a.default)(n);
         else return new Date(NaN);
-    var P,
-        R,
+    var R,
+        P,
         w,
         D,
         L,
@@ -127,15 +127,15 @@ function T(e, t, n, g) {
             locale: T
         },
         q = [new f.GT()],
-        Q = O.match(y)
+        X = O.match(y)
             .map(function (e) {
                 var t = e[0];
                 return t in s.Z ? (0, s.Z[t])(e, T.formatLong) : e;
             })
             .join('')
             .match(b),
-        X = [],
-        J = m(Q);
+        Q = [],
+        J = m(X);
     try {
         var $ = function () {
             var t = K.value;
@@ -145,12 +145,12 @@ function T(e, t, n, g) {
             if (r) {
                 var i = r.incompatibleTokens;
                 if (Array.isArray(i)) {
-                    var a = X.find(function (e) {
+                    var a = Q.find(function (e) {
                         return i.includes(e.token) || e.token === n;
                     });
                     if (a) throw RangeError("The format string mustn't contain `".concat(a.fullToken, '` and `').concat(t, '` at the same time'));
-                } else if ('*' === r.incompatibleTokens && X.length > 0) throw RangeError("The format string mustn't contain `".concat(t, '` and any other token at the same time'));
-                X.push({
+                } else if ('*' === r.incompatibleTokens && Q.length > 0) throw RangeError("The format string mustn't contain `".concat(t, '` and any other token at the same time'));
+                Q.push({
                     token: n,
                     fullToken: t
                 });

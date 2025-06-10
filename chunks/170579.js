@@ -51,7 +51,7 @@ let I = (e) => {
     S = function (e) {
         var t;
         let n,
-            { hideCloseButton: i = !1, hideCloseOnFullScreen: p, shouldShowPrice: h, plan: g, renderAnimation: y, onClose: S, isGift: T, upgradeToPremiumType: A, headerTheme: N = b.nL.DEFAULT, className: C, showTrialBadge: P = !1, showDiscountBadge: R = !1 } = e,
+            { hideCloseButton: i = !1, hideCloseOnFullScreen: p, shouldShowPrice: h, plan: g, renderAnimation: y, onClose: S, isGift: T, upgradeToPremiumType: A, headerTheme: N = b.nL.DEFAULT, className: C, showTrialBadge: R = !1, showDiscountBadge: P = !1 } = e,
             w = A === b.p9.TIER_2;
         n = A === b.p9.TIER_0 ? d.Z : A === b.p9.TIER_1 ? f.Z : u.Z;
         let D = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
@@ -73,7 +73,7 @@ let I = (e) => {
                           className: O.snow,
                           wind: 5
                       }),
-                (P || R) && (0, r.jsx)(_.Z, { className: O.trialBadgeSparkles }),
+                (R || P) && (0, r.jsx)(_.Z, { className: O.trialBadgeSparkles }),
                 y(),
                 (0, r.jsxs)(c.Z, {
                     align: c.Z.Align.START,
@@ -83,10 +83,10 @@ let I = (e) => {
                         (0, r.jsxs)('div', {
                             children: [
                                 (0, r.jsx)(n, { className: a()(O.headerIcon, { [O.nonTier2]: !w }) }),
-                                (P || R) &&
+                                (R || P) &&
                                     (0, r.jsx)(I, {
                                         isTier0: A === b.p9.TIER_0,
-                                        discountAmount: R ? x : void 0
+                                        discountAmount: P ? x : void 0
                                     })
                             ]
                         }),

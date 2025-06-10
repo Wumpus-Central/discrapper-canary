@@ -25,8 +25,8 @@ var r = n(255367),
     A = n(280930),
     N = n(606301),
     C = n(278754),
-    P = n(981631),
-    R = n(388032),
+    R = n(981631),
+    P = n(388032),
     w = n(813567);
 function D(e, t, n) {
     return (
@@ -189,13 +189,13 @@ let Y = i.memo(function (e) {
         [V, Y] = i.useState(''),
         [W, K] = i.useState(''),
         [z, q] = i.useState(!1),
-        [Q, X] = i.useState(!1),
+        [X, Q] = i.useState(!1),
         J = (0, A.Z)(V, D, a),
         { analyticsLocations: $ } = (0, p.ZP)(_.Z.EXPRESSION_SUGGESTIONS),
         { handleTextChange: ee, debouncedSetTextInputValue: et } = (0, A.m)({
             setTextInputValue: Y,
             setHasDismissed: x,
-            setHasSelection: X,
+            setHasSelection: Q,
             setFocusedSuggestionType: I
         });
     i.useEffect(() => {
@@ -204,7 +204,7 @@ let Y = i.memo(function (e) {
             },
             t = (e) => {
                 let t = '' !== e && null != e;
-                if ((X(t), t)) {
+                if ((Q(t), t)) {
                     var r;
                     I(null), null == (r = n.current) || r.focus();
                 }
@@ -229,7 +229,7 @@ let Y = i.memo(function (e) {
         });
     }, [l]);
     let ei = J.length > 0,
-        ea = en && !G && !z && !D && !Q && ei,
+        ea = en && !G && !z && !D && !X && ei,
         { stickersNavigator: eo } = H({
             editorRef: n,
             hasStickerResults: ei,
@@ -243,7 +243,7 @@ let Y = i.memo(function (e) {
         es = (e, t) => {
             if (ea) {
                 if (
-                    (T.default.track(P.rMx.AUTO_SUGGEST_EXPRESSION_SELECTED, {
+                    (T.default.track(R.rMx.AUTO_SUGGEST_EXPRESSION_SELECTED, {
                         sticker_id: e.id,
                         suggestion_trigger: W
                     }),
@@ -347,8 +347,8 @@ let Y = i.memo(function (e) {
                                             variant: 'text-sm/normal',
                                             children:
                                                 null != j
-                                                    ? R.intl.format(R.t['5gglIi'], { stickerName: null == (t = J[+j]) ? void 0 : t.sticker.name })
-                                                    : R.intl.format(R.t['8DjNnJ'], {
+                                                    ? P.intl.format(P.t['5gglIi'], { stickerName: null == (t = J[+j]) ? void 0 : t.sticker.name })
+                                                    : P.intl.format(P.t['8DjNnJ'], {
                                                           upHook: (e, t) =>
                                                               (0, r.jsx)(
                                                                   f.M2$,
@@ -362,14 +362,14 @@ let Y = i.memo(function (e) {
                                         }),
                                         (0, r.jsx)(f.P3F, {
                                             onClick: () => {
-                                                T.default.track(P.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
+                                                T.default.track(R.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
                                                     enabled: !1,
-                                                    location: { section: P.jXE.EXPRESSION_PICKER }
+                                                    location: { section: R.jXE.EXPRESSION_PICKER }
                                                 }),
                                                     (0, C.AW)(!1);
                                             },
                                             children: (0, r.jsx)(f.ua7, {
-                                                text: R.intl.string(R.t.XNMs5u),
+                                                text: P.intl.string(P.t.XNMs5u),
                                                 children: (e) =>
                                                     (0, r.jsx)(
                                                         f.Dio,

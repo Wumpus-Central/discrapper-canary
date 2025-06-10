@@ -23,8 +23,8 @@ var r = n(255367),
     S = n(981631),
     T = n(843856);
 function A(e) {
-    let { premiumSubscription: t, setPurchaseState: n, onBack: a, onNext: A, legalTermsNodeRef: N, flashLegalTerms: C, invoiceError: P, planError: R, onPurchaseError: w, baseAnalyticsData: D, flowStartTime: L, trialId: x, planGroup: k, analyticsLocation: M, purchaseTokenAuthState: j, openInvoiceId: U, metadata: G, backButtonEligible: B, disablePurchase: F, isTrial: V = !1, onPaymentSourceAdd: Z } = e,
-        { selectedPlan: H, priceOptions: Y, setHasAcceptedTerms: W, setPurchaseError: K, purchaseType: z, paymentSourceId: q, paymentSources: Q, selectedSkuId: X, skusById: J, skuPricePreviewsById: $, referralCode: ee, contextMetadata: et, invoicePreview: en, inReverseTrial: er, premiumRebrandBackgroundClassName: ei } = (0, b.JL)(),
+    let { premiumSubscription: t, setPurchaseState: n, onBack: a, onNext: A, legalTermsNodeRef: N, flashLegalTerms: C, invoiceError: R, planError: P, onPurchaseError: w, baseAnalyticsData: D, flowStartTime: L, trialId: x, planGroup: k, analyticsLocation: M, purchaseTokenAuthState: j, openInvoiceId: U, metadata: G, backButtonEligible: B, disablePurchase: F, isTrial: V = !1, onPaymentSourceAdd: Z } = e,
+        { selectedPlan: H, priceOptions: Y, setHasAcceptedTerms: W, setPurchaseError: K, purchaseType: z, paymentSourceId: q, paymentSources: X, selectedSkuId: Q, skusById: J, skuPricePreviewsById: $, referralCode: ee, contextMetadata: et, invoicePreview: en, inReverseTrial: er, premiumRebrandBackgroundClassName: ei } = (0, b.JL)(),
         { isGift: ea, selectedGiftStyle: eo, customGiftMessage: es, emojiConfetti: el, soundEffect: ec, giftRecipient: eu, selectedGiftingPromotionReward: ed } = (0, E.wD)(),
         ef = (0, u.a5)(H),
         e_ = (0, m.MY)(eu),
@@ -33,7 +33,7 @@ function A(e) {
     let eh = null == H ? void 0 : H.id,
         em = (0, O.sE)(x, Y.paymentSourceId, eh),
         { analyticsLocations: eg } = (0, l.ZP)(),
-        eE = (0, v.m)(Q, q),
+        eE = (0, v.m)(X, q),
         [eb, ey] = i.useState(em),
         [eO, ev] = i.useState(!1),
         { hasEntitlements: eI } = (0, _.H)(eh, ea),
@@ -43,13 +43,13 @@ function A(e) {
         eN = null,
         eC = null;
     if (z === S.GZQ.ONE_TIME) {
-        var eP;
-        o()(null != X, 'SKU must be selected for one-time purchases'), (eN = null != (eP = J[X]) ? eP : null), o()(null != eN, 'SKU must exist and be fetched.');
-        let e = $[X],
+        var eR;
+        o()(null != Q, 'SKU must be selected for one-time purchases'), (eN = null != (eR = J[Q]) ? eR : null), o()(null != eN, 'SKU must exist and be fetched.');
+        let e = $[Q],
             t = null != q ? q : h.c;
         eC = null != e ? e[t] : null;
     }
-    let eR = async () => {
+    let eP = async () => {
             await (0, y.H)({
                 setPurchaseState: n,
                 setHasAcceptedTerms: W,
@@ -84,7 +84,7 @@ function A(e) {
         ew = {
             baseAnalyticsData: D,
             flowStartTime: L,
-            makePurchase: eR,
+            makePurchase: eP,
             onNext: A,
             onPurchaseError: w,
             paymentSource: eE,
@@ -109,8 +109,8 @@ function A(e) {
               children: [
                   (0, r.jsx)(p.Z, {
                       legalTermsNodeRef: N,
-                      invoiceError: P,
-                      planError: R,
+                      invoiceError: R,
+                      planError: P,
                       disablePurchase: F,
                       flashLegalTerms: C,
                       isSubmitting: eb,
@@ -119,7 +119,7 @@ function A(e) {
                       planGroup: k,
                       isPrepaid: eS,
                       isTrial: V,
-                      makePurchase: eR,
+                      makePurchase: eP,
                       needsPaymentSource: null == eE && !eT,
                       onNext: A,
                       inReverseTrial: er,

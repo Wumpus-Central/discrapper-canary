@@ -91,7 +91,7 @@ function g(e, t, n) {
         });
     return (0, i.forwardRef)(function (n, m) {
         var g,
-            { onScroll: E, dir: b = 'ltr', sections: y, columns: O, getItemKey: v, getItemHeight: I, getSectionHeight: S, chunkSize: T, renderSection: A, renderItem: N, getSectionProps: C, itemGutter: P, removeEdgeItemGutters: R, sectionGutter: w, padding: D, paddingVertical: L, paddingHorizontal: x, fade: k = !1, className: M, style: j, maxContentWidth: U, renderAccessory: G, onItemVisibilityChange: B } = n,
+            { onScroll: E, dir: b = 'ltr', sections: y, columns: O, getItemKey: v, getItemHeight: I, getSectionHeight: S, chunkSize: T, renderSection: A, renderItem: N, getSectionProps: C, itemGutter: R, removeEdgeItemGutters: P, sectionGutter: w, padding: D, paddingVertical: L, paddingHorizontal: x, fade: k = !1, className: M, style: j, maxContentWidth: U, renderAccessory: G, onItemVisibilityChange: B } = n,
             F = h(n, ['onScroll', 'dir', 'sections', 'columns', 'getItemKey', 'getItemHeight', 'getSectionHeight', 'chunkSize', 'renderSection', 'renderItem', 'getSectionProps', 'itemGutter', 'removeEdgeItemGutters', 'sectionGutter', 'padding', 'paddingVertical', 'paddingHorizontal', 'fade', 'className', 'style', 'maxContentWidth', 'renderAccessory', 'onItemVisibilityChange']);
         let V = i.useRef(null),
             Z = i.useRef(null),
@@ -106,8 +106,8 @@ function g(e, t, n) {
             dir: b
         });
         let {
-            forceUpdateOnChunkChange: Q,
-            coordsMap: X,
+            forceUpdateOnChunkChange: X,
+            coordsMap: Q,
             gridData: J,
             visibleSections: $,
             totalHeight: ee,
@@ -120,8 +120,8 @@ function g(e, t, n) {
             getItemHeight: I,
             getSectionHeight: S,
             chunkSize: T,
-            itemGutter: P,
-            removeEdgeItemGutters: R,
+            itemGutter: R,
+            removeEdgeItemGutters: P,
             sectionGutter: w,
             padding: D,
             paddingVertical: L,
@@ -136,9 +136,9 @@ function g(e, t, n) {
         let er = (0, i.useCallback)(
                 function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-                    e > z.current.dirty && (z.current.dirty = e), 2 === e ? et() : Q(1);
+                    e > z.current.dirty && (z.current.dirty = e), 2 === e ? et() : X(1);
                 },
-                [Q, z, et]
+                [X, z, et]
             ),
             ei = (0, c.t2)(K),
             ea = (0, i.useCallback)(() => en.itemGrid, [en]),
@@ -210,9 +210,9 @@ function g(e, t, n) {
                                             children: Object.keys($).map((e) => {
                                                 var t;
                                                 let n = (0, c.t$)(e),
-                                                    i = X[e],
+                                                    i = Q[e],
                                                     a = $[e],
-                                                    o = X[(0, c.DP)(n)],
+                                                    o = Q[(0, c.DP)(n)],
                                                     s = null == C ? void 0 : C(n);
                                                 return null != i && null != a
                                                     ? (0, r.jsxs)(
@@ -223,7 +223,7 @@ function g(e, t, n) {
                                                                   null != A && null != o && A(n, o, e),
                                                                   a.map((e) => {
                                                                       let [t, n, r] = e,
-                                                                          i = X[t];
+                                                                          i = Q[t];
                                                                       return null != i ? N(n, r, i, t, J) : null;
                                                                   })
                                                               ]
@@ -234,7 +234,7 @@ function g(e, t, n) {
                                             })
                                         })
                                     }),
-                                [$, N, A, X, ee, C, J]
+                                [$, N, A, Q, ee, C, J]
                             )
                         ]
                     }

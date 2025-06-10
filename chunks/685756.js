@@ -101,7 +101,7 @@ function C(e) {
         decode: e.decode
     }));
 }
-function P(e) {
+function R(e) {
     return null == e
         ? void 0
         : e.map((e) => ({
@@ -123,7 +123,7 @@ function P(e) {
                       : void 0
           }));
 }
-function R(e) {
+function P(e) {
     return 'audio' === e ? f.Tr.AUDIO : 'test' === e ? f.Tr.TEST : 'screen' === e ? f.Tr.SCREEN : f.Tr.VIDEO;
 }
 function w(e) {
@@ -133,7 +133,7 @@ function w(e) {
             null == e
                 ? void 0
                 : e.map((e) => ({
-                      type: R(e.type),
+                      type: P(e.type),
                       rid: e.rid,
                       ssrc: e.ssrc,
                       rtxSsrc: e.rtx_ssrc,
@@ -428,7 +428,7 @@ class L extends o.Z {
                 token: i,
                 max_dave_protocol_version: a,
                 video: o,
-                streams: P(s)
+                streams: R(s)
             });
     }
     expeditedHeartbeat(e) {
@@ -513,7 +513,7 @@ class L extends o.Z {
             audio_ssrc: e,
             video_ssrc: t,
             rtx_ssrc: n,
-            streams: P(r)
+            streams: R(r)
         });
     }
     mediaSinkWants(e) {

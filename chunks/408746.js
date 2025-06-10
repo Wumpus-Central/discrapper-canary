@@ -24,9 +24,9 @@ var r = n(903425),
     A = '[object Uint8ClampedArray]',
     N = '[object Uint16Array]',
     C = '[object Uint32Array]',
-    P = {};
-(P['[object Float32Array]'] = P[O] = P[v] = P[I] = P[S] = P[T] = P[A] = P[N] = P[C] = !0),
-    (P[o] = P[s] = P[b] = P[l] = P[y] = P[c] = P[u] = P[d] = P[f] = P[_] = P[p] = P[h] = P[m] = P[g] = P[E] = !1),
+    R = {};
+(R['[object Float32Array]'] = R[O] = R[v] = R[I] = R[S] = R[T] = R[A] = R[N] = R[C] = !0),
+    (R[o] = R[s] = R[b] = R[l] = R[y] = R[c] = R[u] = R[d] = R[f] = R[_] = R[p] = R[h] = R[m] = R[g] = R[E] = !1),
     (e.exports = function (e) {
-        return a(e) && i(e.length) && !!P[r(e)];
+        return a(e) && i(e.length) && !!R[r(e)];
     });

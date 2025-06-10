@@ -9,7 +9,7 @@ var r = n(255367),
     a = n(505266),
     o = n(512722),
     s = n.n(o),
-    l = n(386230),
+    l = n(524979),
     c = n(278074),
     u = n(979554),
     d = n(314794),
@@ -30,8 +30,8 @@ var r = n(255367),
     A = n(341907),
     N = n(350327),
     C = n(507808),
-    P = n(594174),
-    R = n(626135),
+    R = n(594174),
+    P = n(626135),
     w = n(585483),
     D = n(597688),
     L = n(1870),
@@ -51,8 +51,8 @@ var r = n(255367),
     K = n(755419),
     z = n(616066),
     q = n(216541),
-    Q = n(22267),
-    X = n(58201),
+    X = n(22267),
+    Q = n(58201),
     J = n(794324),
     $ = n(302800),
     ee = n(215023),
@@ -119,8 +119,8 @@ let eu = 880,
         let { product: t, pairedProduct: n } = e,
             [i] = t.items,
             a = null == n ? void 0 : n.items[0],
-            o = (0, f.e7)([P.default], () => {
-                let e = P.default.getCurrentUser();
+            o = (0, f.e7)([R.default], () => {
+                let e = R.default.getCurrentUser();
                 return s()(null != e, 'User cannot be undefined'), e;
             });
         return (0, c.EQ)(t.type)
@@ -171,7 +171,7 @@ let eu = 880,
             .with(u.Z.NAMEPLATE, () =>
                 (0, r.jsx)('div', {
                     className: ea.nameplate,
-                    children: (0, r.jsx)(Q.Z, {
+                    children: (0, r.jsx)(X.Z, {
                         nameplate: i,
                         user: o,
                         nameplatePreviewSize: 'large',
@@ -270,17 +270,17 @@ let eu = 880,
     eh = (e) => {
         let { product: t, onClose: n, confettiTarget: a, confettiCanvas: o, hideConfetti: s = !1, analyticsLocations: l, overrideTitle: c, overrideDescription: p, selectedVariantIndex: E, shouldShowPromotionalExperience: b, itemConsumed: v = !0, purchaseType: I = ee.o8.FIAT } = e,
             S = (0, M.o)('CollectiblesCollectedModal'),
-            A = (0, X.W)(t, E),
-            N = (0, f.e7)([P.default], () => {
+            A = (0, Q.W)(t, E),
+            N = (0, f.e7)([R.default], () => {
                 var e, t;
-                return null != (t = null == (e = P.default.getCurrentUser()) ? void 0 : e.isStaff()) && t;
+                return null != (t = null == (e = R.default.getCurrentUser()) ? void 0 : e.isStaff()) && t;
             }),
             C = i.useMemo(() => {
                 if (!S) return;
                 let e = A.type === u.Z.AVATAR_DECORATION ? (0, $.R9)(A.skuId, N) : null;
                 return null != e ? D.Z.getProduct(e) : void 0;
             }, [S, A.skuId, A.type, N]),
-            { confettiColors: R } = (0, F.Z)(A.styles),
+            { confettiColors: P } = (0, F.Z)(A.styles),
             w = (0, f.e7)([h.Z], () => h.Z.useReducedMotion),
             L = i.useRef(null),
             { analyticsLocations: x } = (0, g.ZP)([...l, m.Z.COLLECTIBLES_COLLECTED_MODAL]),
@@ -357,7 +357,7 @@ let eu = 880,
                         confettiTarget: null != a ? a : L.current,
                         confettiCanvas: o,
                         sprites: (0, H.vK)(A.categorySkuId),
-                        colors: null == R ? void 0 : R.map((e) => e.toHexString())
+                        colors: null == P ? void 0 : P.map((e) => e.toHexString())
                     })
             ]
         });
@@ -382,7 +382,7 @@ let eu = 880,
         i.useEffect(() => {
             ee.Vt.ORB_PROFILE_BADGE === n.skuId && (0, N.Ls)([(0, K.X)()], em);
         }, [n.skuId]);
-        let P = i.useMemo(
+        let R = i.useMemo(
                 () =>
                     null != l
                         ? l
@@ -398,7 +398,7 @@ let eu = 880,
                               : ei.intl.format(ei.t.YNaxMj, { itemName: h }),
                 [l, n.skuId, g, p, f, h, m]
             ),
-            R = i.useMemo(
+            P = i.useMemo(
                 () =>
                     null != d
                         ? d
@@ -460,11 +460,11 @@ let eu = 880,
                     children: [
                         (0, r.jsx)(_.X6q, {
                             variant: 'heading-lg/bold',
-                            children: P
+                            children: R
                         }),
                         (0, r.jsx)(_.Text, {
                             variant: 'text-sm/normal',
-                            children: R
+                            children: P
                         })
                     ]
                 }),
@@ -558,7 +558,7 @@ let eu = 880,
         let { transitionState: t, product: n, onClose: o, analyticsLocations: s, overrideTitle: l, overrideDescription: c, shouldShowPromotionalExperience: u, itemConsumed: d, purchaseType: p = ee.o8.FIAT } = e,
             h = (0, f.e7)([L.Z], () => L.Z.purchases),
             E = (0, x.o)(n, h),
-            b = (0, X.W)(n, E),
+            b = (0, Q.W)(n, E),
             y = i.useRef(new a.qA()),
             [O, v] = i.useState(null),
             I = (0, $.UY)({
@@ -569,7 +569,7 @@ let eu = 880,
             T = i.useMemo(() => (0, k.jm)(b.type, b.skuId), [b.type, b.skuId]);
         return (
             i.useEffect(() => {
-                R.default.track(et.rMx.OPEN_MODAL, {
+                P.default.track(et.rMx.OPEN_MODAL, {
                     type: et.jXE.COLLECTIBLES_SHOP_COLLECTED_MODAL,
                     location_stack: S,
                     sku_id: b.skuId,

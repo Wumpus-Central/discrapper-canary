@@ -23,7 +23,7 @@ function h(e) {
         h = (0, i.e7)([u.Z], () => u.Z.getWindow(g.KJ3.CHANNEL_CALL_POPOUT)),
         v = (0, p.Z)(),
         S = (0, i.e7)([c.ZP], () => c.ZP.getActivityPanelMode());
-    if (null == v || (0, f.Z)((0, d.pY)(v.location)) || S !== m.Ez.PANEL) {
+    if (null == v || (0, f.Z)((0, d.p)(v.location)) || S !== m.Ez.PANEL) {
         var b;
         t = null != (b = null == h ? void 0 : h.window) ? b : window;
     } else t = window;

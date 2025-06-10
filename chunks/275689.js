@@ -1,4 +1,4 @@
-a.d(e, { s: () => A });
+a.d(e, { s: () => f });
 var r = a(394798),
     n = a(101284),
     _ = a(370336),
@@ -12,8 +12,8 @@ var r = a(394798),
     I = a(305625),
     R = a(966497),
     d = a(241225),
-    f = a(881243);
-class A {
+    A = a(881243);
+class f {
     constructor(t = {}) {
         (this._traceId = t.traceId || (0, r.DM)()),
             (this._spanId = t.spanId || (0, r.DM)().substring(16)),
@@ -90,8 +90,8 @@ class A {
     }
     addEvent(t, e, a) {
         c.X && o.kg.log('[Tracing] Adding an event to span:', t);
-        let r = p(e) ? e : a || (0, n.ph)(),
-            _ = p(e) ? {} : e || {},
+        let r = N(e) ? e : a || (0, n.ph)(),
+            _ = N(e) ? {} : e || {},
             i = {
                 name: t,
                 time: (0, u.$k)(r),
@@ -120,12 +120,12 @@ class A {
                   })((0, s.uE)([this], t))
                 : (c.X && o.kg.log('[Tracing] Discarding standalone span because its trace was not chosen to be sampled.'), t && t.recordDroppedEvent('sample_rate', 'span')));
         let e = this._convertSpanToTransaction();
-        e && ((0, f.I1)(this).scope || (0, i.nZ)()).captureEvent(e);
+        e && ((0, A.I1)(this).scope || (0, i.nZ)()).captureEvent(e);
     }
     _convertSpanToTransaction() {
-        if (!N((0, u.XU)(this))) return;
+        if (!p((0, u.XU)(this))) return;
         this._name || (c.X && o.kg.warn('Transaction has no name, falling back to `<unlabeled transaction>`.'), (this._name = '<unlabeled transaction>'));
-        let { scope: t, isolationScope: e } = (0, f.I1)(this),
+        let { scope: t, isolationScope: e } = (0, A.I1)(this),
             a = (t || (0, i.nZ)()).getClient() || (0, i.s3)();
         if (!0 !== this._sampled) {
             c.X && o.kg.log('[Tracing] Discarding transaction because its trace was not chosen to be sampled.'), a && a.recordDroppedEvent('sample_rate', 'transaction');
@@ -134,10 +134,10 @@ class A {
         let r = (0, u.Dp)(this)
                 .filter((t) => {
                     var e;
-                    return t !== this && !((e = t) instanceof A && e.isStandaloneSpan());
+                    return t !== this && !((e = t) instanceof f && e.isStandaloneSpan());
                 })
                 .map((t) => (0, u.XU)(t))
-                .filter(N),
+                .filter(p),
             n = this._attributes[l.Zj],
             s = {
                 contexts: { trace: (0, u.HR)(this) },
@@ -158,9 +158,9 @@ class A {
         return R && Object.keys(R).length && (c.X && o.kg.log('[Measurements] Adding measurements to transaction event', JSON.stringify(R, void 0, 2)), (s.measurements = R)), s;
     }
 }
-function p(t) {
+function N(t) {
     return (t && 'number' == typeof t) || t instanceof Date || Array.isArray(t);
 }
-function N(t) {
+function p(t) {
     return !!t.start_timestamp && !!t.timestamp && !!t.span_id && !!t.trace_id;
 }

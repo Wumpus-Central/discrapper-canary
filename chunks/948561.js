@@ -29,8 +29,8 @@ var r = n(952639),
     A = n(629710),
     N = n(590773),
     C = n(799525),
-    P = n(981631),
-    R = n(526761);
+    R = n(981631),
+    P = n(526761);
 function w(e, t, n) {
     return (
         t in e
@@ -271,7 +271,7 @@ function Y(e) {
     let n = e.filter((e) => (0, y.O)(e) && 0 !== (0, A.rb)(e)),
         r = e
             .map((e) => {
-                if (P.OBS.has(e.type) && null != e.messageReference) {
+                if (R.OBS.has(e.type) && null != e.messageReference) {
                     let t = f.Z.getMessageByReference(e.messageReference);
                     if (t.state === f.Y.LOADED && null != t.message && (0, y.O)(t.message) && 0 !== (0, A.rb)(t.message)) return t.message;
                 }
@@ -374,14 +374,14 @@ function q(e) {
         f = (null == u ? void 0 : u.memberCount) == null || (null == u ? void 0 : u.memberCount) > 100;
     return W([i], { jitter: d && f });
 }
-function Q(e) {
+function X(e) {
     let { channelId: t, messages: n } = e;
     if (null == t || null == n) return !1;
     let r = g.Z.getChannelId(),
         i = p.ZP.getCurrentSidebarChannelId(r);
     return (t === r || t === i) && W(n);
 }
-function X(e) {
+function Q(e) {
     let { messages: t } = e;
     if (null == t) return !1;
     let n = i()(t);
@@ -414,7 +414,7 @@ function en(e) {
 }
 function er(e) {
     let { settings: t, local: n } = e;
-    if (!n || t.type !== R.yP.PRELOADED_USER_SETTINGS) return !1;
+    if (!n || t.type !== P.yP.PRELOADED_USER_SETTINGS) return !1;
     let r = g.Z.getChannelId();
     return null != r && ea(r);
 }
@@ -430,7 +430,7 @@ class eo extends c.Z {
     constructor(...e) {
         super(...e),
             w(this, 'actions', {
-                LOAD_MESSAGES_SUCCESS: Q,
+                LOAD_MESSAGES_SUCCESS: X,
                 LOAD_FORUM_POSTS: $,
                 LOAD_THREADS_SUCCESS: ee,
                 LOAD_ARCHIVED_THREADS_SUCCESS: ee,
@@ -438,8 +438,8 @@ class eo extends c.Z {
                 MESSAGE_CREATE: q,
                 MESSAGE_UPDATE: z,
                 LOGOUT: M,
-                SEARCH_FINISH: X,
-                MOD_VIEW_SEARCH_FINISH: X,
+                SEARCH_FINISH: Q,
+                MOD_VIEW_SEARCH_FINISH: Q,
                 CHANNEL_SELECT: en,
                 LOAD_PINNED_MESSAGES_SUCCESS: J,
                 USER_SETTINGS_PROTO_UPDATE: er,

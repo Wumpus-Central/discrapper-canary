@@ -198,7 +198,7 @@ function C(e) {
         i
     );
 }
-function P(e) {
+function R(e) {
     let { quest: t, taskDetails: n, thirdPartyTaskDetails: r, withoutMarkdown: i, withSimplifiedCopy: a, currentUser: s } = e;
     if (a)
         switch (L(t)) {
@@ -275,23 +275,23 @@ function P(e) {
               collectibleRewardDuration: d
           });
 }
-let R = (e) => {
+let P = (e) => {
     try {
         let t = '';
         if ('string' == typeof e) return e;
         if (Array.isArray(e)) {
-            for (let n of e) t += R(n.content);
+            for (let n of e) t += P(n.content);
             return t;
         }
-        return R(e.content);
+        return P(e.content);
     } catch (e) {
         return y.error('Failed to convert ASTNode to string', e), '';
     }
 };
 function w(e) {
     var t;
-    let n = P(b(g({}, e), { currentUser: null != (t = e.currentUser) ? t : a.default.getCurrentUser() }));
-    return e.withoutMarkdown ? R(n) : n;
+    let n = R(b(g({}, e), { currentUser: null != (t = e.currentUser) ? t : a.default.getCurrentUser() }));
+    return e.withoutMarkdown ? P(n) : n;
 }
 function D(e) {
     let { quest: t, location: n, questContent: r } = e,

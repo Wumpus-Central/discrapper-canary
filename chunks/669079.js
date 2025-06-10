@@ -13,7 +13,7 @@ n.d(t, {
     dM: () => W,
     dQ: () => z,
     e$: () => J,
-    iM: () => X,
+    iM: () => Q,
     pO: () => U,
     xr: () => M,
     z2: () => $
@@ -82,11 +82,11 @@ let O = ['discordapp.com/gifts', 'discord.com/gifts'],
             .fill(void 0)
             .map(() => '['.concat(N, ']{').concat(e, '}'))
             .join('-?'),
-    P = C(4, 4),
-    R = C(4, 6),
+    R = C(4, 4),
+    P = C(4, 6),
     w = C(5, 3),
     D = 'WUMP-?',
-    L = [P, R, w, '[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}'].join('|'),
+    L = [R, P, w, '[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}'].join('|'),
     x = new RegExp('^('.concat(D, ')?(').concat(L, ')$')),
     k = '-';
 var M = (function (e) {
@@ -203,7 +203,7 @@ function q(e, t, n) {
             return t.isSubscription ? E.intl.string(E.t.wQ1FHx) : E.intl.string(E.t.OgpR0d);
     }
 }
-function Q(e) {
+function X(e) {
     return (0, r.EQ)(e)
         .with(
             {
@@ -235,13 +235,13 @@ function Q(e) {
         )
         .otherwise(() => E.intl.string(E.t['5ayf7+']));
 }
-function X(e) {
+function Q(e) {
     let { step: t, sku: n, libraryApplication: r, error: i, accepted: a, accepting: o, onGoToLibrary: s, subscriptionPlan: l = null } = e;
     switch (t) {
         case m.wZ8.ERROR:
             return J(r, i, a, o, s);
         case m.wZ8.SUCCESS:
-            if (null != l) return Q(l);
+            if (null != l) return X(l);
             return E.intl.formatToPlainString(E.t['3CPsbm'], { skuName: n.name });
         case m.wZ8.CONFIRM:
         default:

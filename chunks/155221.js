@@ -30,8 +30,8 @@ var r = n(255367),
     A = n(358085),
     N = n(998502),
     C = n(981631),
-    P = n(188785),
-    R = n(436620);
+    R = n(188785),
+    P = n(436620);
 function w(e, t, n) {
     return (
         t in e
@@ -126,7 +126,7 @@ let k = (0, h.Un)({
         name: 'LinkAuthorize'
     }),
     Z = (0, h.Un)({
-        createPromise: () => Promise.all([n.e('58994'), n.e('69773')]).then(n.bind(n, 197528)),
+        createPromise: () => Promise.all([n.e('36160'), n.e('69773')]).then(n.bind(n, 197528)),
         webpackId: 197528,
         name: 'ActivateDevice'
     }),
@@ -138,7 +138,7 @@ let k = (0, h.Un)({
         id: 457094
     }),
     Y = (0, h.Un)({
-        createPromise: () => Promise.all([n.e('14006'), n.e('68856'), n.e('85214'), n.e('70791'), n.e('58994'), n.e('6583'), n.e('75492'), n.e('25292'), n.e('90508'), n.e('22878'), n.e('13351'), n.e('62134'), n.e('74891'), n.e('85372'), n.e('6380'), n.e('8739'), n.e('18543'), n.e('58059'), n.e('28467'), n.e('86282'), n.e('17938'), n.e('22173'), n.e('30243'), n.e('37447'), n.e('53937'), n.e('76540'), n.e('23491'), n.e('80284'), n.e('15483'), n.e('36087'), n.e('80767'), n.e('19027'), n.e('94136'), n.e('49508'), n.e('22646'), n.e('25183'), n.e('64838'), n.e('3940'), n.e('60691'), n.e('2286'), n.e('57931'), n.e('88622'), n.e('25026'), n.e('88712'), n.e('30419'), n.e('66317'), n.e('18824'), n.e('82081'), n.e('22472'), n.e('62117'), n.e('31622'), n.e('56714'), n.e('58527'), n.e('52030'), n.e('1337'), n.e('86383'), n.e('10778'), n.e('56782'), n.e('27978')]).then(n.bind(n, 822699)),
+        createPromise: () => Promise.all([n.e('14006'), n.e('68856'), n.e('85214'), n.e('70791'), n.e('36160'), n.e('6583'), n.e('75492'), n.e('25292'), n.e('90508'), n.e('22878'), n.e('13351'), n.e('62134'), n.e('74891'), n.e('85372'), n.e('6380'), n.e('8739'), n.e('18543'), n.e('58059'), n.e('28467'), n.e('86282'), n.e('17938'), n.e('22173'), n.e('30243'), n.e('37447'), n.e('53937'), n.e('76540'), n.e('23491'), n.e('80284'), n.e('15483'), n.e('36087'), n.e('80767'), n.e('19027'), n.e('94136'), n.e('49508'), n.e('22646'), n.e('25183'), n.e('64838'), n.e('3940'), n.e('60691'), n.e('2286'), n.e('57931'), n.e('88622'), n.e('25026'), n.e('88712'), n.e('30419'), n.e('66317'), n.e('18824'), n.e('82081'), n.e('22472'), n.e('62117'), n.e('31622'), n.e('56714'), n.e('58527'), n.e('52030'), n.e('1337'), n.e('86383'), n.e('10778'), n.e('56782'), n.e('27978')]).then(n.bind(n, 822699)),
         webpackId: 822699,
         name: 'ViewsWithAuth'
     }),
@@ -162,12 +162,12 @@ let k = (0, h.Un)({
         webpackId: 290161,
         name: 'Overlay'
     }),
-    Q = (0, h.Un)({
+    X = (0, h.Un)({
         createPromise: () => Promise.all([n.e('3940'), n.e('18824'), n.e('75347')]).then(n.bind(n, 430075)),
         webpackId: 430075,
         name: 'SuspendedUserSafetyHubPage'
     }),
-    X = (0, h.Un)({
+    Q = (0, h.Un)({
         createPromise: () => Promise.all([n.e('19878'), n.e('10125')]).then(n.bind(n, 630107)),
         webpackId: 630107,
         name: 'QuestsLandingPage'
@@ -206,7 +206,7 @@ class ei extends i.Component {
             (e =
                 n === g.P.IN_PROGRESS
                     ? null
-                    : !R.KO || d
+                    : !P.KO || d
                       ? (0, r.jsx)(o.rs, { children: (0, r.jsx)(p.Z, { component: k }) })
                       : A.isPlatformEmbedded
                         ? (0, r.jsxs)(o.rs, {
@@ -215,7 +215,7 @@ class ei extends i.Component {
                                       ? null
                                       : (0, r.jsx)(o.AW, {
                                             path: C.Z5c.ACCOUNT_STANDING,
-                                            component: Q
+                                            component: X
                                         }),
                                   (0, r.jsx)(o.AW, {
                                       exact: !0,
@@ -228,7 +228,7 @@ class ei extends i.Component {
                                       component: M
                                   }),
                                   (0, r.jsx)(o.AW, {
-                                      path: er([C.Z5c.LOGIN, C.Z5c.REGISTER, C.Z5c.INVITE(':inviteCode'), C.Z5c.INVITE_LOGIN(':inviteCode'), C.Z5c.GIFT_CODE(':giftCode'), C.Z5c.GIFT_CODE_LOGIN(':giftCode'), C.Z5c.RESET], P.a),
+                                      path: er([C.Z5c.LOGIN, C.Z5c.REGISTER, C.Z5c.INVITE(':inviteCode'), C.Z5c.INVITE_LOGIN(':inviteCode'), C.Z5c.GIFT_CODE(':giftCode'), C.Z5c.GIFT_CODE_LOGIN(':giftCode'), C.Z5c.RESET], R.a),
                                       component: Y
                                   }),
                                   (0, r.jsx)(p.Z, {
@@ -254,7 +254,7 @@ class ei extends i.Component {
                                       render: () => (0, r.jsx)(_.Z, {})
                                   }),
                                   (0, r.jsx)(o.AW, {
-                                      path: er([C.Z5c.LOGIN, C.Z5c.LOGIN_HANDOFF, C.Z5c.REGISTER, C.Z5c.BILLING_PREFIX, C.Z5c.BILLING_PROMOTION_REDEMPTION(':code'), C.Z5c.INVITE(':inviteCode'), C.Z5c.INVITE_LOGIN(':inviteCode'), C.Z5c.GIFT_CODE(':giftCode'), C.Z5c.GIFT_CODE_LOGIN(':giftCode'), C.Z5c.GUILD_TEMPLATE(':guildTemplateCode'), C.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode'), C.Z5c.DISABLE_EMAIL_NOTIFICATIONS, C.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, C.Z5c.RESET, C.Z5c.REPORT, C.Z5c.REPORT_SECOND_LOOK, C.Z5c.ACCOUNT_REVERT(':token')], P.a),
+                                      path: er([C.Z5c.LOGIN, C.Z5c.LOGIN_HANDOFF, C.Z5c.REGISTER, C.Z5c.BILLING_PREFIX, C.Z5c.BILLING_PROMOTION_REDEMPTION(':code'), C.Z5c.INVITE(':inviteCode'), C.Z5c.INVITE_LOGIN(':inviteCode'), C.Z5c.GIFT_CODE(':giftCode'), C.Z5c.GIFT_CODE_LOGIN(':giftCode'), C.Z5c.GUILD_TEMPLATE(':guildTemplateCode'), C.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode'), C.Z5c.DISABLE_EMAIL_NOTIFICATIONS, C.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, C.Z5c.RESET, C.Z5c.REPORT, C.Z5c.REPORT_SECOND_LOOK, C.Z5c.ACCOUNT_REVERT(':token')], R.a),
                                       component: Y
                                   }),
                                   t
@@ -283,7 +283,7 @@ class ei extends i.Component {
                                   }),
                                   (0, r.jsx)(p.Z, {
                                       path: C.Z5c.QUESTS(':questId'),
-                                      component: X,
+                                      component: Q,
                                       impressionName: s.ImpressionNames.QUESTS_LANDING_PAGE,
                                       impressionProperties: (e) => {
                                           let { computedMatch: t } = e;
@@ -385,7 +385,7 @@ class ei extends i.Component {
                                       ? null
                                       : (0, r.jsx)(o.AW, {
                                             path: [C.Z5c.ACCOUNT_STANDING],
-                                            component: Q
+                                            component: X
                                         }),
                                   t
                                       ? null

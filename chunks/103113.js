@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(481060),
@@ -37,7 +37,7 @@ function C(e, t, n) {
         e
     );
 }
-function P(e) {
+function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,8 +53,8 @@ function P(e) {
     }
     return e;
 }
-function R(e) {
-    let { user: t, guildId: n, channelId: C, messageId: R, roleId: w, openedAt: D, setPopoutRef: L, closePopout: x, disableUserProfileLink: k = __OVERLAY__, newAnalyticsLocations: M = [], disableAutoFocus: j = !1 } = e,
+function P(e) {
+    let { user: t, guildId: n, channelId: C, messageId: P, roleId: w, openedAt: D, setPopoutRef: L, closePopout: x, disableUserProfileLink: k = __OVERLAY__, newAnalyticsLocations: M = [], disableAutoFocus: j = !1 } = e,
         U = (0, h.ZP)(t.id, n),
         { analyticsLocations: G } = (0, l.ZP)([...M, s.Z.USER_PROFILE_POPOUT]),
         B = (0, _.ZB)({
@@ -62,7 +62,7 @@ function R(e) {
             userId: t.id,
             guildId: n,
             channelId: C,
-            messageId: R,
+            messageId: P,
             roleId: w
         }),
         F = i.useRef(null),
@@ -73,7 +73,7 @@ function R(e) {
     let Z = () => {
             null == x || x(),
                 (0, m.openUserProfileModal)(
-                    P(
+                    R(
                         {
                             sourceAnalyticsLocations: G,
                             hideRestrictedProfile: !0
@@ -91,7 +91,7 @@ function R(e) {
                       action: () => {
                           Z(),
                               (0, p.pQ)(
-                                  P(
+                                  R(
                                       {
                                           action: 'PRESS_VIEW_PROFILE',
                                           analyticsLocations: G

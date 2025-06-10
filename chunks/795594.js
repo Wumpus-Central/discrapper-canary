@@ -34,8 +34,8 @@ var r = n(255367),
     A = n(317381),
     N = n(513202),
     C = n(367907),
-    P = n(162685),
-    R = n(445446),
+    R = n(162685),
+    P = n(445446),
     w = n(979200),
     D = n(870822),
     L = n(600164),
@@ -55,8 +55,8 @@ var r = n(255367),
     K = n(49012),
     z = n(621600),
     q = n(709054),
-    Q = n(706454),
-    X = n(210887),
+    X = n(706454),
+    Q = n(210887),
     J = n(675478),
     $ = n(581883),
     ee = n(436267),
@@ -120,7 +120,7 @@ function ef(e, t) {
         e
     );
 }
-let e_ = _.ZP.connectStores([X.Z], () => ({ theme: X.Z.theme }))(E.ubH);
+let e_ = _.ZP.connectStores([Q.Z], () => ({ theme: Q.Z.theme }))(E.ubH);
 function ep(e) {
     let { application: t, className: n } = e;
     return (0, r.jsxs)('div', {
@@ -433,10 +433,10 @@ let eh = (e) => {
                 },
                 [b]
             ),
-            T = P.w.useExperiment({ location: 'oauth2_authorize' }),
+            T = R.w.useExperiment({ location: 'oauth2_authorize' }),
             A = a.bot,
             N = (0, _.e7)([F.Z], () => F.Z.getDMFromUserId(null == A ? void 0 : A.id)),
-            { appDMChannelMuteConfig: R, dmChannelMuted: D } = (0, _.cj)([H.ZP], () =>
+            { appDMChannelMuteConfig: P, dmChannelMuted: D } = (0, _.cj)([H.ZP], () =>
                 null == N
                     ? {
                           appDMChannelMuteConfig: null,
@@ -525,7 +525,7 @@ let eh = (e) => {
                         }
                     });
             },
-            Q = i.useMemo(() => {
+            X = i.useMemo(() => {
                 if (null != a.description && '' !== a.description)
                     return (0, r.jsx)(E.Text, {
                         className: es.markup,
@@ -534,7 +534,7 @@ let eh = (e) => {
                         children: (0, j.parseBioReact)(a.description)
                     });
             }, [a.description]),
-            X = () => {
+            Q = () => {
                 let e = null != a.description && '' !== a.description,
                     t = null != a.terms_of_service_url || null != a.privacy_policy_url;
                 return e || t
@@ -544,7 +544,7 @@ let eh = (e) => {
                           collapsibleContent: (0, r.jsxs)('div', {
                               className: eo.appDetailsContent,
                               children: [
-                                  e && Q,
+                                  e && X,
                                   t &&
                                       (0, r.jsx)(eE, {
                                           application: a,
@@ -677,9 +677,9 @@ let eh = (e) => {
                                         onChange: ed,
                                         className: eo.dmSettingsSwitch,
                                         note:
-                                            (null == R ? void 0 : R.end_time) != null
+                                            (null == P ? void 0 : P.end_time) != null
                                                 ? ea.intl.format(ea.t.j7h4AA, {
-                                                      endTime: new Date(R.end_time).toLocaleString(ea.intl.currentLocale, {
+                                                      endTime: new Date(P.end_time).toLocaleString(ea.intl.currentLocale, {
                                                           month: 'numeric',
                                                           day: 'numeric',
                                                           hour: 'numeric',
@@ -739,7 +739,7 @@ let eh = (e) => {
                 component: et(),
                 children: (0, r.jsxs)('div', {
                     className: eo.appDetailsContainer,
-                    children: [X(), K(), ef(), em()]
+                    children: [Q(), K(), ef(), em()]
                 })
             })
         });
@@ -748,11 +748,11 @@ let eh = (e) => {
     ev = () => {
         let e = (0, _.e7)([Z.Z], () => Z.Z.hidePersonalInformation),
             t = (0, _.e7)([B.Z], () => B.Z.getApps()),
-            a = (0, _.e7)([Q.default], () => Q.default.locale),
+            a = (0, _.e7)([X.default], () => X.default.locale),
             o = (0, _.e7)([A.ZP], () => A.ZP.getSelfEmbeddedActivities()),
             s = (0, _.e7)([F.Z, V.Z], () => F.Z.getChannel(V.Z.getChannelId())),
             c = null == s ? void 0 : s.getGuildId(),
-            u = R.G.useExperiment({ location: 'UserSettingsAuthedApps' }, { autoTrackExposure: !0 }).enabled,
+            u = P.G.useExperiment({ location: 'UserSettingsAuthedApps' }, { autoTrackExposure: !0 }).enabled,
             d = (0, g.C)('user-settings-authed-apps');
         i.useEffect(() => {
             b.Z.fetch();

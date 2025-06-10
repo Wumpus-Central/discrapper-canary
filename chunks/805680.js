@@ -25,8 +25,8 @@ var r = n(255367),
     A = n(314910),
     N = n(125900),
     C = n(603074),
-    P = n(453070),
-    R = n(926491),
+    R = n(453070),
+    P = n(926491),
     w = n(457040),
     D = n(740492),
     L = n(574254),
@@ -97,14 +97,14 @@ function q(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = Q(e, t);
+        i = X(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function Q(e, t) {
+function X(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -113,7 +113,7 @@ function Q(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let X = j.Om + B.Su.MEDIUM,
+let Q = j.Om + B.Su.MEDIUM,
     J = i.memo(function (e) {
         var { isActive: t, className: n, viewType: i, autoFocus: a = !1, 'aria-controls': s } = e,
             l = q(e, ['isActive', 'className', 'viewType', 'autoFocus', 'aria-controls']);
@@ -202,7 +202,7 @@ let X = j.Om + B.Su.MEDIUM,
     };
 function ee(e) {
     var t, n, a, s;
-    let { positionTargetRef: l, hideGifFavorites: m, includeCreateEmojiButton: D, onSelectGIF: Y, onSelectEmoji: W, onSelectSticker: K, onSelectSound: z, channel: q, type: Q, position: ee, align: et, positionLayerClassName: en, closeOnModalOuterClick: er = !1, parentModalKey: ei } = e,
+    let { positionTargetRef: l, hideGifFavorites: m, includeCreateEmojiButton: D, onSelectGIF: Y, onSelectEmoji: W, onSelectSticker: K, onSelectSound: z, channel: q, type: X, position: ee, align: et, positionLayerClassName: en, closeOnModalOuterClick: er = !1, parentModalKey: ei } = e,
         ea = i.useRef(null),
         eo = i.useRef(!1),
         es = i.useRef(null),
@@ -213,9 +213,9 @@ function ee(e) {
             orientation: 'left' === et ? E.y.HORIZONTAL_RIGHT : E.y.HORIZONTAL_LEFT
         }),
         ed = (0, M.Iu)((e) => e.activeView),
-        ef = (0, P.fQ)(q),
+        ef = (0, R.fQ)(q),
         { renderWindow: e_, windowDispatch: ep } = i.useContext(b.ZP),
-        eh = (0, f.e7)([R.Z], () => !R.Z.hasLoadedStickerPacks),
+        eh = (0, f.e7)([P.Z], () => !P.Z.hasLoadedStickerPacks),
         em = (0, N.V2)({ location: 'expression_picker' }),
         eg = (0, f.e7)([L.Z], () => L.Z.isOpen()),
         eE = null != ei,
@@ -290,12 +290,12 @@ function ee(e) {
                         (eo.current = !0));
             }
         });
-    let eN = (null == (t = Q.gifs) ? void 0 : t.allowSending) && !c.tq && null != Y,
-        eC = (null == (n = Q.stickers) ? void 0 : n.allowSending) && null != K,
-        eP = i.useCallback((e, t) => (null == z ? void 0 : z(e, 'emoji_picker', t)), [z]),
-        eR = i.useCallback((e, t) => (null == z ? void 0 : z(e, 'soundboard_picker', t)), [z]),
-        ew = (null == (a = Q.soundmoji) ? void 0 : a.allowSending) === !0 && null != z,
-        eD = !(null == (s = Q.expressionPicker) ? void 0 : s.onlyEmojis) && (eN || eC),
+    let eN = (null == (t = X.gifs) ? void 0 : t.allowSending) && !c.tq && null != Y,
+        eC = (null == (n = X.stickers) ? void 0 : n.allowSending) && null != K,
+        eR = i.useCallback((e, t) => (null == z ? void 0 : z(e, 'emoji_picker', t)), [z]),
+        eP = i.useCallback((e, t) => (null == z ? void 0 : z(e, 'soundboard_picker', t)), [z]),
+        ew = (null == (a = X.soundmoji) ? void 0 : a.allowSending) === !0 && null != z,
+        eD = !(null == (s = X.expressionPicker) ? void 0 : s.onlyEmojis) && (eN || eC),
         eL = 'left' === et ? 'right' : 'left',
         ex = null != en ? en : 'left' === et ? H.positionLayerDefaultAlignLeft : H.positionLayerDefaultAlignRight;
     return (0, r.jsx)(g.Z, {
@@ -431,15 +431,15 @@ function ee(e) {
                                                     channel: q,
                                                     containerWidth: ec,
                                                     includeCreateEmojiButton: D,
-                                                    emojiSize: null != ec && ec < X ? B.Su.MEDIUM : B.Su.LARGE,
+                                                    emojiSize: null != ec && ec < Q ? B.Su.MEDIUM : B.Su.LARGE,
                                                     pickerIntention: F.Hz.CHAT,
                                                     closePopout: ev,
                                                     onSelectEmoji: W,
-                                                    onSelectSoundmoji: eP,
+                                                    onSelectSoundmoji: eR,
                                                     ref: (e) => {
                                                         es.current = e;
                                                     },
-                                                    shouldShowSoundmojiInEmojiPicker: (null == (t = Q.soundmoji) ? void 0 : t.allowSending) === !0
+                                                    shouldShowSoundmojiInEmojiPicker: (null == (t = X.soundmoji) ? void 0 : t.allowSending) === !0
                                                 })
                                               : null,
                                           ed === j.X1.SOUNDBOARD
@@ -450,7 +450,7 @@ function ee(e) {
                                                         channel: q,
                                                         containerWidth: ec,
                                                         onClose: ev,
-                                                        onSelect: eR,
+                                                        onSelect: eP,
                                                         analyticsSource: 'expression-picker',
                                                         renderHeader: (e) =>
                                                             (0, r.jsx)('div', {

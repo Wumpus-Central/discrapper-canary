@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => R }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -73,8 +73,8 @@ function N(e, t) {
     );
 }
 let C = h.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
-function P(e) {
-    let { user: t, displayProfile: n, guildId: a, channelId: h, themeType: S, animateOnHover: A, onOpenProfile: P, className: R, previewStatus: w } = e,
+function R(e) {
+    let { user: t, displayProfile: n, guildId: a, channelId: h, themeType: S, animateOnHover: A, onOpenProfile: R, className: P, previewStatus: w } = e,
         { theme: D } = (0, b.z)(),
         { analyticsLocations: L } = (0, d.ZP)(u.Z.AVATAR),
         { trackUserProfileAction: x } = (0, m.KZ)(),
@@ -88,7 +88,7 @@ function P(e) {
         })),
         F = void 0 !== w ? w : G,
         V = [y.lY.MODAL, y.lY.MODAL_V2].includes(S) ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
-        Z = o()(I.avatar, R),
+        Z = o()(I.avatar, P),
         {
             avatarDecorationSrc: H,
             avatarSrc: Y,
@@ -104,14 +104,14 @@ function P(e) {
             avatarDecoration: H,
             size: V,
             'aria-label': t.username,
-            imageClassName: null != P ? I.overlay : void 0,
+            imageClassName: null != R ? I.overlay : void 0,
             status: M ? O.Skl.UNKNOWN : F,
             statusBackdropColor: k && !M ? (0, l.QFD)(D) : void 0,
             isMobile: B,
             statusTooltip: !0,
             statusTooltipDelay: y.vB
         });
-    return null == P
+    return null == R
         ? (0, r.jsx)(
               'div',
               N(T({}, W), {
@@ -129,7 +129,7 @@ function P(e) {
                           action: 'PRESS_VIEW_PROFILE',
                           analyticsLocations: L
                       }),
-                          null == P || P();
+                          null == R || R();
                   },
                   children: K
               })

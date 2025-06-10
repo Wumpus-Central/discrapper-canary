@@ -1,5 +1,5 @@
 n.d(t, {
-    C: () => P,
+    C: () => R,
     Z: () => k
 }),
     n(953529),
@@ -10,7 +10,7 @@ var r = n(255367),
     o = n.n(a),
     s = n(512722),
     l = n.n(s),
-    c = n(386230),
+    c = n(524979),
     u = n(442837),
     d = n(622535),
     f = n(481060),
@@ -41,11 +41,11 @@ function C(e, t) {
         'data-id': t
     });
 }
-function P(e) {
+function R(e) {
     let t = 'description' in e && null != e.description ? ''.concat(e.name, ', ').concat(e.description) : e.name;
     return y.intl.formatToPlainString(y.t.rk6pOz, { stickerName: t });
 }
-let R = (e) => {
+let P = (e) => {
         let { children: t, hasError: n, isLoading: i, maskAsset: a, size: s, withLoadingIndicator: l = !0 } = e,
             c = s >= S;
         return (0, r.jsxs)('div', {
@@ -129,9 +129,9 @@ let R = (e) => {
             : (0, r.jsx)('div', {
                   role: 'img',
                   className: d,
-                  'aria-label': S ? y.intl.string(y.t.yEvsKy) : P(o),
+                  'aria-label': S ? y.intl.string(y.t.yEvsKy) : R(o),
                   ref: _,
-                  children: (0, r.jsx)(R, {
+                  children: (0, r.jsx)(P, {
                       hasError: S,
                       isLoading: v,
                       maskAsset: f,
@@ -187,7 +187,7 @@ let R = (e) => {
                   children: (0, r.jsx)('div', {
                       className: o()(l, O.__invalid_pngImageWrapper),
                       ref: u,
-                      children: (0, r.jsx)(R, {
+                      children: (0, r.jsx)(P, {
                           hasError: E,
                           isLoading: m,
                           maskAsset: c,
@@ -196,7 +196,7 @@ let R = (e) => {
                           children: C(
                               (0, r.jsx)('img', {
                                   className: O.pngImage,
-                                  alt: P(n),
+                                  alt: R(n),
                                   src: A,
                                   draggable: !1,
                                   onError: w,

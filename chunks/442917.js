@@ -25,8 +25,8 @@ var r = n(255367),
     A = n(569545),
     N = n(74299),
     C = n(863908),
-    P = n(803647),
-    R = n(266910),
+    R = n(803647),
+    P = n(266910),
     w = n(788983),
     D = n(703656),
     L = n(937995),
@@ -46,8 +46,8 @@ var r = n(255367),
     K = n(451478),
     z = n(626135),
     q = n(5192),
-    Q = n(51144),
-    X = n(484286),
+    X = n(51144),
+    Q = n(484286),
     J = n(822296),
     $ = n(916771),
     ee = n(792517),
@@ -191,7 +191,7 @@ class ep extends i.PureComponent {
         let { channel: e, participantOnScreen: t } = this.props;
         if ((null == t ? void 0 : t.type) === es.fO.STREAM || (null == t ? void 0 : t.type) === es.fO.USER) {
             var n;
-            let i = null != (n = q.ZP.getNickname(e.getGuildId(), e.id, t.user)) ? n : Q.ZP.getName(t.user);
+            let i = null != (n = q.ZP.getNickname(e.getGuildId(), e.id, t.user)) ? n : X.ZP.getName(t.user);
             return (0, r.jsx)(d.Text, {
                 variant: 'text-md/normal',
                 color: 'always-white',
@@ -214,12 +214,12 @@ class ep extends i.PureComponent {
                 (null != l
                     ? (u = l)
                     : ((null == n ? void 0 : n.type) === es.fO.USER || (null == n ? void 0 : n.type) === es.fO.STREAM) &&
-                      (u = (0, r.jsx)(X.Z, {
+                      (u = (0, r.jsx)(Q.Z, {
                           paused: this.streamerPaused,
                           streamId: t,
                           component: V.Z.getVideoComponent(),
                           mirror: s,
-                          children: (0, r.jsx)(R.Z, {
+                          children: (0, r.jsx)(P.Z, {
                               size: d.EFr.SIZE_80,
                               src: null == n ? void 0 : n.user.getAvatarURL(e.guild_id, 80),
                               'aria-label': null == n ? void 0 : n.user.username
@@ -283,7 +283,7 @@ class ep extends i.PureComponent {
             }),
             eu(this, 'handleStopStream', () => {
                 let { participantOnScreen: e } = this.props;
-                o()((0, es._5)(e), 'cannot stop stream for non streamer'), (0, v.v)(g.Z.VIDEO_PIP, v.d.STREAM, !1), (0, P.Z)(e.stream);
+                o()((0, es._5)(e), 'cannot stop stream for non streamer'), (0, v.v)(g.Z.VIDEO_PIP, v.d.STREAM, !1), (0, R.Z)(e.stream);
             }),
             eu(this, 'handleHidePIP', () => {
                 let { channel: e } = this.props;

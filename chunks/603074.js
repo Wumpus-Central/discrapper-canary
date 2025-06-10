@@ -15,20 +15,20 @@ var r = n(255367),
     m = n(268365);
 function g(e) {
     let { guildId: t, channel: n, containerWidth: a, onClose: g, onSelect: E, analyticsSource: b, suppressPlaySound: y, shouldValidateSelectedSound: O, shouldShowUpsell: v = !0, gridNotice: I, inExpressionPicker: S, soundButtonOverlay: T, listPadding: A, renderHeader: N, defaultSoundsOnly: C } = e,
-        P = (0, s.e7)([p.Z], () => p.Z.isFetchingSounds() || p.Z.isFetchingDefaultSounds()),
-        { analyticsLocations: R } = (0, u.ZP)(c.Z.SOUNDBOARD_POPOUT);
+        R = (0, s.e7)([p.Z], () => p.Z.isFetchingSounds() || p.Z.isFetchingDefaultSounds()),
+        { analyticsLocations: P } = (0, u.ZP)(c.Z.SOUNDBOARD_POPOUT);
     return (
         i.useEffect(() => {
             _.w(), f.DZ.loadIfNecessary(), S || (0, d.ql)('');
         }, [S]),
         (0, r.jsx)(u.Gt, {
-            value: R,
+            value: P,
             children: (0, r.jsx)(l.VqE, {
                 className: o()(m.picker, {
-                    [m.fetching]: P,
+                    [m.fetching]: R,
                     [m.inExpressionPicker]: S
                 }),
-                children: P
+                children: R
                     ? (0, r.jsx)(l.$jN, {})
                     : (0, r.jsx)(h.Z, {
                           guildId: t,

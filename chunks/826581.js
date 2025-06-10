@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Q }), n(388685), n(539854);
+n.d(t, { Z: () => X }), n(388685), n(539854);
 var r,
     i = n(913527),
     a = n.n(i),
@@ -102,11 +102,11 @@ function N(e) {
 function C() {
     T = !1;
 }
-let P = (e) => 'guild-join-request='.concat(e),
-    R = (e, t) => 'guild-'.concat(e, '-').concat(t);
+let R = (e) => 'guild-join-request='.concat(e),
+    P = (e, t) => 'guild-'.concat(e, '-').concat(t);
 function w(e) {
     let t = [];
-    return t.push(P(e.joinRequestId)), t.push(R(e.guildId, e.applicationStatus)), t;
+    return t.push(R(e.joinRequestId)), t.push(P(e.guildId, e.applicationStatus)), t;
 }
 let D = new s.h(w, (e) => ''.concat(e.joinRequestId)),
     L = new s.h(w, (e) => ''.concat(e.joinRequestId)),
@@ -136,7 +136,7 @@ function G(e) {
 }
 function B(e) {
     let { guildId: t, action: n } = e;
-    D.values(R(t, f.wB.SUBMITTED)).forEach((e) => {
+    D.values(P(t, f.wB.SUBMITTED)).forEach((e) => {
         j(g(h({}, e), { applicationStatus: n }));
     }),
         v(t, 0);
@@ -167,7 +167,7 @@ class q extends (r = o.ZP.Store) {
         return K[e];
     }
     getRequests(e, t) {
-        let n = R(e, t);
+        let n = P(e, t);
         return (0, d.bk)(t) ? x.values(n) : (0, d.Nd)(t) ? L.values(n) : D.values(n);
     }
     getSubmittedGuildJoinRequestTotal(e) {
@@ -196,7 +196,7 @@ class q extends (r = o.ZP.Store) {
     }
 }
 p(q, 'displayName', 'GuildJoinRequestStoreV2');
-let Q = new q(l.Z, {
+let X = new q(l.Z, {
     GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS: S,
     GUILD_JOIN_REQUESTS_FETCH_SUCCESS: N,
     GUILD_JOIN_REQUESTS_FETCH_START: A,

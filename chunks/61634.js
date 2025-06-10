@@ -29,7 +29,7 @@ function x(e) {
     let n = (0, i.e7)([v.ZP], () => v.ZP.isMuted(e)),
         r = (0, c.k5)(e),
         j = (0, i.Wu)([o.ZP, y.Z], () => o.ZP.getEmbeddedActivitiesForGuild(e).filter((e) => !(0, a.BA)([...e.userIds], y.Z.getBlockedOrIgnoredIDs()))),
-        x = (0, s.pY)(null == (t = j[0]) ? void 0 : t.location),
+        x = (0, s.p)(null == (t = j[0]) ? void 0 : t.location),
         E = (0, l.NX)(x),
         {
             guildHasVoice: P,
@@ -96,7 +96,7 @@ function x(e) {
                 L = (() => {
                     if (E) return j.length > 0;
                     for (let e of j) {
-                        let t = g.Z.getChannel((0, s.pY)(e.location));
+                        let t = g.Z.getChannel((0, s.p)(e.location));
                         if (null != t && (0, h.vd)(t.type)) return !0;
                     }
                     return !1;

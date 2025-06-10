@@ -498,7 +498,7 @@ function C(e) {
         }
     })(f(f({}, e), { valueType: 'Vector3' }));
 }
-function P(e, t, n, r, i) {
+function R(e, t, n, r, i) {
     var a = (function (e, t) {
             return f(f({ id: t }, l), e);
         })(t, e),
@@ -544,7 +544,7 @@ function P(e, t, n, r, i) {
         spriteHeight: n.spriteHeight
     });
 }
-function R() {
+function P() {
     var e = r.useRef(!1),
         t = r.useRef({}),
         n = r.useCallback(function (e) {
@@ -602,7 +602,7 @@ var w = r.forwardRef(function (e, t) {
                 return n;
             })(e, ['className', 'environment', 'onClick', 'onMouseDown', 'onMouseMove', 'onMouseUp', 'onBeforeRender', 'onAfterRender', 'requestAnimationFrame', 'cancelAnimationFrame']),
             y = r.useRef(null),
-            O = R(),
+            O = P(),
             v = O.isReady,
             I = O.addReadyListener,
             S = O.removeReadyListener,
@@ -652,7 +652,7 @@ var w = r.forwardRef(function (e, t) {
             x = r.useCallback(
                 function (e, t, n, r, a) {
                     var o,
-                        s = P(null != (o = e.id) ? o : (0, i.Z)(), e, n, r, a);
+                        s = R(null != (o = e.id) ? o : (0, i.Z)(), e, n, r, a);
                     return L(s, t), s;
                 },
                 [L]
@@ -825,7 +825,7 @@ var w = r.forwardRef(function (e, t) {
             c = e.spriteHeight,
             u = r.useRef(null),
             d = r.useRef([]),
-            f = R(),
+            f = P(),
             h = f.isReady,
             m = f.addReadyListener,
             g = f.removeReadyListener,

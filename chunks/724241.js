@@ -17,8 +17,8 @@ function p(e) {
         A = (0, i.e7)([c.ZP], () => (null == h ? null : c.ZP.getMember(h.id, n.id))),
         N = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
         C = null == p || null == (t = p.getPreviewBio(b)) ? void 0 : t.value,
-        P = null != y ? y : null == p ? void 0 : p.pronouns,
-        R = (0, d.Ly)({
+        R = null != y ? y : null == p ? void 0 : p.pronouns,
+        P = (0, d.Ly)({
             pendingNickname: g,
             pendingGlobalName: E,
             user: n,
@@ -28,7 +28,7 @@ function p(e) {
             if (null != A && null !== m && (null != A.avatar || null != m))
                 return (0, r.jsx)(l.Z, {
                     user: n,
-                    nickname: R
+                    nickname: P
                 });
         };
     return (0, r.jsxs)('div', {
@@ -38,8 +38,8 @@ function p(e) {
             (0, r.jsx)(o.Z, {
                 user: n,
                 usernameIcon: w(),
-                nickname: R,
-                pronouns: P,
+                nickname: P,
+                pronouns: R,
                 isTryItOut: I,
                 tags: (0, r.jsx)(a.Z, {
                     displayProfile: p,

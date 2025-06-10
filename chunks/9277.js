@@ -77,7 +77,7 @@ function S(e, t) {
         }),
         [T, A, N] = (0, f.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], s.X),
         C = i.useRef(0),
-        P = i.useCallback(() => {
+        R = i.useCallback(() => {
             v(!0),
                 clearTimeout(C.current),
                 (C.current = setTimeout(() => {
@@ -86,9 +86,9 @@ function S(e, t) {
         }, []);
     (0, p.yp)({
         event: m.CkL.FAVORITE_GIF,
-        handler: P
+        handler: R
     });
-    let R = i.useCallback(() => {
+    let P = i.useCallback(() => {
             (0, f.RO)(g.X1.GIF, a);
         }, [a]),
         { Component: w, events: D, play: L } = (0, c.V)(),
@@ -115,7 +115,7 @@ function S(e, t) {
                             onMouseEnter: D.onMouseEnter,
                             onMouseLeave: D.onMouseLeave,
                             onClick: () => {
-                                R(), L();
+                                P(), L();
                             },
                             isActive: k,
                             pulse: y,

@@ -152,7 +152,7 @@ function S(e) {
                 })
             };
         }),
-        P = I(
+        R = I(
             p,
             i.useMemo(() => n.find((e) => e.id === t), [n, t])
         );
@@ -174,7 +174,7 @@ function S(e) {
                       value: t,
                       onChange: N,
                       isDisabled: g,
-                      className: o()({ [m.paymentSourceHasWarning]: null != P }, E),
+                      className: o()({ [m.paymentSourceHasWarning]: null != R }, E),
                       optionClassName: b,
                       placeholder: h.intl.string(h.t['8lqkf3']),
                       renderOptionValue: (e) => {
@@ -182,7 +182,7 @@ function S(e) {
                           return S ? (0, r.jsx)(l.$jN, { type: l.RAz.SPINNING_CIRCLE }) : t.label;
                       }
                   }),
-            null != P
+            null != R
                 ? (0, r.jsxs)('div', {
                       className: m.paymentSourceWarning,
                       children: [
@@ -195,7 +195,7 @@ function S(e) {
                           }),
                           (0, r.jsx)(l.Text, {
                               variant: 'text-xs/normal',
-                              children: P
+                              children: R
                           })
                       ]
                   })

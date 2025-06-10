@@ -40,7 +40,7 @@ function I(t, e, a, r) {
     return (0, o.EG)(n), (n.level = 'error'), a && a.event_id && (n.event_id = a.event_id), (0, i.WD)(n);
 }
 function R(t, e, a = 'info', r, n) {
-    let _ = f(t, e, (r && r.syntheticException) || void 0, n);
+    let _ = A(t, e, (r && r.syntheticException) || void 0, n);
     return (_.level = a), r && r.event_id && (_.event_id = r.event_id), (0, i.WD)(_);
 }
 function d(t, e, a, i, u) {
@@ -51,7 +51,7 @@ function d(t, e, a, i, u) {
         else {
             let r = e.name || ((0, _.TX)(e) ? 'DOMError' : 'DOMException'),
                 n = e.message ? `${r}: ${e.message}` : r;
-            (I = f(t, n, a, i)), (0, o.Db)(I, n);
+            (I = A(t, n, a, i)), (0, o.Db)(I, n);
         }
         return (
             'code' in e &&
@@ -112,11 +112,11 @@ function d(t, e, a, i, u) {
                     }
                     return R;
                 })(t, e, a, u))
-              : ((I = f(t, e, a, i)), (0, o.Db)(I, `${e}`, void 0)),
+              : ((I = A(t, e, a, i)), (0, o.Db)(I, `${e}`, void 0)),
           (0, o.EG)(I, { synthetic: !0 }),
           I);
 }
-function f(t, e, a, r) {
+function A(t, e, a, r) {
     let n = {};
     if (r && a) {
         let r = l(t, a);

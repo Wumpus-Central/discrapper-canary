@@ -1,7 +1,7 @@
 n.d(t, {
-    U2: () => X,
+    U2: () => Q,
     ZP: () => em,
-    wL: () => Q
+    wL: () => X
 }),
     n(388685),
     n(997841);
@@ -79,8 +79,8 @@ function T(e, t) {
 let A = {},
     N = {},
     C = !1,
-    P = !1,
-    R = { flags: 0 },
+    R = !1,
+    P = { flags: 0 },
     w = new l.ZP(),
     D = new l.ZP(),
     L = {
@@ -112,8 +112,8 @@ function V(e, t) {
     var n;
     let r = A[e],
         i = null != (n = null == r ? void 0 : r.channel_overrides) ? n : {},
-        o = X(t.channel_overrides),
-        s = T(I({}, Q(e), r, t), { channel_overrides: o });
+        o = Q(t.channel_overrides),
+        s = T(I({}, X(e), r, t), { channel_overrides: o });
     w.clearTimer(e),
         a().forEach(i, (e) => {
             D.clearTimer(e.channel_id);
@@ -201,17 +201,17 @@ function q(e, t, n) {
         n
     );
 }
-function Q(e) {
+function X(e) {
     let t = m.Z.getGuild(e);
     return x[null != t ? t.defaultMessageNotifications : E.bL.ALL_MESSAGES];
 }
-function X() {
+function Q() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return e instanceof Array ? a().keyBy(e, 'channel_id') : e;
 }
 function J(e) {
     var t;
-    return null != (t = A[e]) ? t : Q(e);
+    return null != (t = A[e]) ? t : X(e);
 }
 function $(e) {
     null != e.userGuildSettings &&
@@ -260,7 +260,7 @@ function en(e) {
     er(t);
 }
 function er(e) {
-    (C = _.yE(e.flags, b.c.USE_NEW_NOTIFICATIONS)), (P = _.yE(e.flags, b.c.MENTION_ON_ALL_MESSAGES)), (R = e);
+    (C = _.yE(e.flags, b.c.USE_NEW_NOTIFICATIONS)), (R = _.yE(e.flags, b.c.MENTION_ON_ALL_MESSAGES)), (P = e);
 }
 function ei(e) {
     let { userGuildSettings: t } = e;
@@ -298,7 +298,7 @@ function eu(e) {
 }
 function ed(e) {
     let { guildId: t } = e,
-        n = null == A[t] ? Q(t) : A[t];
+        n = null == A[t] ? X(t) : A[t];
     A[t] = T(I({}, n), {
         guild_id: t,
         hide_muted_channels: !0 !== n.hide_muted_channels
@@ -337,7 +337,7 @@ class eh extends (r = o.ZP.PersistedStore) {
         return { useNewNotifications: C };
     }
     get mentionOnAllMessages() {
-        return P;
+        return R;
     }
     isSuppressEveryoneEnabled(e) {
         return J(e).suppress_everyone;
@@ -512,7 +512,7 @@ class eh extends (r = o.ZP.PersistedStore) {
         return null != (e = M[j]) ? e : G;
     }
     get accountNotificationSettings() {
-        return R;
+        return P;
     }
     get useNewNotifications() {
         return C;

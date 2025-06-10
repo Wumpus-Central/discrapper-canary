@@ -2,7 +2,7 @@ n.d(t, {
     A8: () => w,
     Il: () => D,
     ZP: () => eY,
-    zS: () => R
+    zS: () => P
 }),
     n(388685),
     n(415506);
@@ -44,7 +44,7 @@ function C(e, t, n) {
         e
     );
 }
-function P(e) {
+function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function P(e) {
     }
     return e;
 }
-var R = (function (e) {
+var P = (function (e) {
     return (e.HARDWARE_ACCELERATED_GPU_SCHEDULING_ENABLED = 'HARDWARE_ACCELERATED_GPU_SCHEDULING_ENABLED'), (e.OVERLAY_UNLOCKED = 'OVERLAY_UNLOCKED'), (e.OVERLAY_VIDEO_STREAM_RENDERING = 'OVERLAY_VIDEO_STREAM_RENDERING'), (e.OVERLAY_RENDERING = 'OVERLAY_RENDERING'), (e.DEV_FORCED_GPU_BOOST = 'DEV_FORCED_GPU_BOOST'), e;
 })({});
 let w = 'repaint-complete',
@@ -110,7 +110,7 @@ let x = new c.Z('OverlayStoreV3'),
     K = !1,
     z = s.R5.UNSET,
     q = 30000;
-class Q {
+class X {
     _setCaptureZones(e) {
         try {
             let t = e.map((e) => ({
@@ -177,7 +177,7 @@ class Q {
         C(this, 'clickZones', []), C(this, 'focusLostStoredClickZones', []), C(this, 'clickZoneTimers', {});
     }
 }
-let X = new Q(),
+let Q = new X(),
     J = new Set();
 function $(e) {
     var t;
@@ -187,7 +187,7 @@ function ee(e, t) {
     var n, r;
     let i = null == (n = j[e]) ? void 0 : n.error,
         a = null == (r = j[e]) ? void 0 : r.error_description;
-    (j[e] = P({}, j[e], t)), null != i && (j[e].error = i), null != a && (j[e].error_description = a);
+    (j[e] = R({}, j[e], t)), null != i && (j[e].error = i), null != a && (j[e].error_description = a);
 }
 function et(e) {
     var t, n, r;
@@ -217,7 +217,7 @@ function en(e, t) {
             error: t.message,
             error_description: t.stack
         }),
-        X.clearClickZones());
+        Q.clearClickZones());
 }
 function er(e, t) {
     e !== g.UNSET_PID &&
@@ -226,7 +226,7 @@ function er(e, t) {
             error: t.message,
             error_description: t.stack
         }),
-        X.clearClickZones());
+        Q.clearClickZones());
 }
 function ei(e, t) {
     try {
@@ -341,7 +341,7 @@ function ep(e) {
                 }),
             r = 0,
             i = () => {
-                15 === r ? (X.clearClickZones(), null == G || G.readyToShow(e), o.Z.updateOverlayState(e, s.mM.OVERLAY_RENDERING), x.verbose('Showing overlay v3 for pid '.concat(e))) : ((r += 1), n().then(i));
+                15 === r ? (Q.clearClickZones(), null == G || G.readyToShow(e), o.Z.updateOverlayState(e, s.mM.OVERLAY_RENDERING), x.verbose('Showing overlay v3 for pid '.concat(e))) : ((r += 1), n().then(i));
             };
         i();
     } catch (e) {
@@ -366,7 +366,7 @@ function eh(e, t, n, r) {
     l.dispatchEvent(s);
 }
 function em(e) {
-    if ((null == e ? X.storeClickZones() : X.refreshClickZones(), null != e)) {
+    if ((null == e ? Q.storeClickZones() : Q.refreshClickZones(), null != e)) {
         let t = W[e] === s.gl.OutOfProcessLimitedInteraction;
         if (t !== Z) {
             Z = t;
@@ -428,10 +428,10 @@ function eN(e) {}
 async function eC(e) {
     e.overlayMethod === s.gl.OutOfProcess || e.overlayMethod === s.gl.OutOfProcessLimitedInteraction ? (null == G && (await ev()), ei(e.pid, e.overlayMethod)) : ea(e.pid), eH.emitChange();
 }
-function eP(e) {
+function eR(e) {
     x.verbose('Updating OverlayMethod', e), eC(e);
 }
-function eR(e) {
+function eP(e) {
     let { pid: t, error: n } = e;
     if (k.has(t)) {
         let e = 'string' == typeof n ? Error(n) : n;
@@ -450,7 +450,7 @@ function eL(e) {
 }
 function ex(e) {
     let { zones: t } = e;
-    X.setClickZones(t);
+    Q.setClickZones(t);
 }
 function ek(e) {
     Y[e.pid] = e.overlayState;
@@ -564,10 +564,10 @@ let eH = new eZ(a.Z, {
         OVERLAY_ACTIVATE_REGION: ej,
         OVERLAY_DEACTIVATE_ALL_REGIONS: eU,
         OVERLAY_RENDER_DEBUG_MODE: eG,
-        OVERLAY_UPDATE_OVERLAY_METHOD: eP,
+        OVERLAY_UPDATE_OVERLAY_METHOD: eR,
         OVERLAY_UPDATE_OVERLAY_STATE: ek,
         OVERLAY_SET_GPU_BOOST_REQUESTED: ew,
-        OVERLAY_CRASHED: eR,
+        OVERLAY_CRASHED: eP,
         OVERLAY_FOCUSED: ey
     }),
     eY = eH;

@@ -25,8 +25,8 @@ var r = n(392711),
     A = n(51144),
     N = n(981631),
     C = n(185923),
-    P = n(388032);
-function R(e, t, n) {
+    R = n(388032);
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,7 +50,7 @@ function w(e) {
                 })
             )),
             r.forEach(function (t) {
-                R(e, t, n[t]);
+                P(e, t, n[t]);
             });
     }
     return e;
@@ -331,7 +331,7 @@ let U = u.Z.RULES,
         },
         spoiler: {
             match: o().anyScopeRegex(N.$92),
-            parse: () => ({ content: '<'.concat(P.intl.string(P.t['F+x38P']).toLowerCase(), '>') })
+            parse: () => ({ content: '<'.concat(R.intl.string(R.t['F+x38P']).toLowerCase(), '>') })
         },
         staticRouteLink: {
             match: o().anyScopeRegex(N.PEY),
@@ -363,7 +363,7 @@ function q(e, t, n) {
         }
     }
 }
-function Q(e, t, n, r) {
+function X(e, t, n, r) {
     let i = '';
     return (
         e.forEach((e) => {
@@ -380,13 +380,13 @@ function Q(e, t, n, r) {
                     default:
                         i += n(e.content);
                 }
-            else e.content.constructor === Array ? (i += Q(e.content, t, n, r)) : console.warn('Unknown message item type: ', e);
+            else e.content.constructor === Array ? (i += X(e.content, t, n, r)) : console.warn('Unknown message item type: ', e);
         }),
         i
     );
 }
-function X(e, t, n) {
-    return Q(K(e, t), t, c.ZP.translateInlineEmojiToSurrogates, n);
+function Q(e, t, n) {
+    return X(K(e, t), t, c.ZP.translateInlineEmojiToSurrogates, n);
 }
 function J(e) {
     let t,
@@ -488,7 +488,7 @@ let ee = {
                 validNonShortcutEmojis: []
             };
         return (
-            (i.content = X(i.content, r, (t, n) => {
+            (i.content = Q(i.content, r, (t, n) => {
                 T.ZP.isEmojiPremiumLocked({
                     emoji: t,
                     channel: e,
@@ -513,6 +513,6 @@ let ee = {
                 guild: s,
                 isNotification: n
             };
-        return Q(d(e, f), f, u);
+        return X(d(e, f), f, u);
     }
 };

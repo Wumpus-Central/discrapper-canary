@@ -40,8 +40,8 @@ let I = (e, t, n) => {
         let { channel: t, entry: n, onReaction: u, onVoiceChannelPreview: T } = e,
             A = (0, a.e7)([l.default], () => l.default.getUser(n.author_id)),
             { largeImage: N } = (0, f.rv)({ entry: n }),
-            { primaryColor: C, secondaryColor: P } = (0, m.Z)(null == N ? void 0 : N.src),
-            R = (0, a.e7)([s.default], () => s.default.locale),
+            { primaryColor: C, secondaryColor: R } = (0, m.Z)(null == N ? void 0 : N.src),
+            P = (0, a.e7)([s.default], () => s.default.locale),
             w = (0, h.Z)(O.ABu.CRUNCHYROLL),
             D = (0, _.ap)(n.extra.media_assets_large_text),
             L = i.useCallback(
@@ -52,13 +52,13 @@ let I = (e, t, n) => {
                             mediaImageSrc: null == N ? void 0 : N.src,
                             avatarSrc: A.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
                             description: I(n, t, A),
-                            timestamp: (0, _.yh)(n, R),
+                            timestamp: (0, _.yh)(n, P),
                             episodeDescription: D,
-                            colors: [C, P],
+                            colors: [C, R],
                             channelId: e
                         });
                 },
-                [t, n, D, R, null == N ? void 0 : N.src, C, P, A]
+                [t, n, D, P, null == N ? void 0 : N.src, C, R, A]
             ),
             x = () => {
                 if (null == n.extra.url) return;
