@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => N }), n(388685), n(467055);
 var r,
     i = n(442837),
     a = n(570140),
@@ -60,34 +60,36 @@ function f(e, t) {
 let _ = 86400000,
     p = 3600000,
     h = {};
-function m(e) {
+function m() {
+    return {
+        allPowerups: {},
+        powerupCatalog: {},
+        unlockedPowerups: {}
+    };
+}
+function g(e) {
     let {
         guild: { id: t }
     } = e;
-    h[t] = f(u({}, E(t)), { appliedBoosts: g(t) });
+    h[t] = f(u({}, b(t)), { appliedBoosts: E(t) });
 }
-function g(e) {
+function E(e) {
     var t;
     let n = o.Z.getGuild(e),
         r = (null == n ? void 0 : n.hasFeature(l.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0 ? 0 : l.oCV[null != (t = null == n ? void 0 : n.premiumTier) ? t : l.Eu4.NONE];
     for (let [e, t] of Object.entries(s.jn)) (null == n ? void 0 : n.hasFeature(e)) && (r += t);
     return r;
 }
-function E(e) {
+function b(e) {
     if (null == h[e]) {
-        let t = g(e);
-        h[e] = {
-            allPowerups: {},
-            unlockedPowerups: {},
-            powerupCatalog: {},
-            appliedBoosts: t
-        };
+        let t = E(e);
+        h[e] = f(u({}, m()), { appliedBoosts: t });
     }
     return h[e];
 }
-function b(e) {
+function y(e) {
     let { guildId: t, allPowerups: n, powerupCatalog: r } = e,
-        i = E(t);
+        i = b(t);
     h = f(u({}, h), {
         [t]: f(u({}, i), {
             allPowerups: n,
@@ -97,10 +99,10 @@ function b(e) {
         })
     });
 }
-function y(e) {
+function O(e) {
     let { guildId: t, unlockedPowerups: n } = e,
-        r = E(t),
-        i = g(t);
+        r = b(t),
+        i = E(t);
     h = f(u({}, h), {
         [t]: f(u({}, r), {
             unlockedPowerups: n,
@@ -110,24 +112,24 @@ function y(e) {
         })
     });
 }
-function O(e, t) {
+function v(e, t) {
     let { guildId: n, entitlements: r } = e,
-        i = E(n);
+        i = b(n);
     r.forEach((e) => {
         t ? (i.unlockedPowerups[e.sku_id] = e) : delete i.unlockedPowerups[e.sku_id];
     }),
-        (h = f(u({}, h), { [n]: f(u({}, i), { appliedBoosts: g(n) }) }));
-}
-function v(e) {
-    O(e, !0);
+        (h = f(u({}, h), { [n]: f(u({}, i), { appliedBoosts: E(n) }) }));
 }
 function I(e) {
-    O(e, !1);
+    v(e, !0);
 }
-function S() {
+function S(e) {
+    v(e, !1);
+}
+function T() {
     h = {};
 }
-class T extends (r = i.ZP.PersistedStore) {
+class A extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         null != e && (h = e);
     }
@@ -156,12 +158,38 @@ class T extends (r = i.ZP.PersistedStore) {
         return null != e && (null == (t = h[e]) ? void 0 : t.hasFetchedUnlockedPowerups) === !0;
     }
 }
-c(T, 'displayName', 'GuildPowerupsStore'), c(T, 'persistKey', 'GuildPowerupsStore');
-let A = new T(a.Z, {
-    LOGOUT: S,
-    GUILD_POWERUP_CATALOG_FETCH_SUCCESS: b,
-    GUILD_UNLOCKED_POWERUPS_FETCH_SUCCESS: y,
-    GUILD_POWERUP_ENTITLEMENTS_CREATE: v,
-    GUILD_POWERUP_ENTITLEMENTS_DELETE: I,
-    GUILD_UPDATE: m
+c(A, 'displayName', 'GuildPowerupsStore'),
+    c(A, 'persistKey', 'GuildPowerupsStore'),
+    c(A, 'migrations', [
+        (e) =>
+            null == e
+                ? e
+                : Object.fromEntries(
+                      Object.entries(e)
+                          .filter((e) => {
+                              let [t, n] = e;
+                              return null != n && 'object' == typeof n;
+                          })
+                          .map((e) => {
+                              var t, n, r;
+                              let [i, a] = e,
+                                  o = a;
+                              return [
+                                  i,
+                                  f(u({}, o), {
+                                      allPowerups: null != (t = o.allPowerups) ? t : {},
+                                      powerupCatalog: null != (n = o.powerupCatalog) ? n : {},
+                                      unlockedPowerups: null != (r = o.unlockedPowerups) ? r : {}
+                                  })
+                              ];
+                          })
+                  )
+    ]);
+let N = new A(a.Z, {
+    LOGOUT: T,
+    GUILD_POWERUP_CATALOG_FETCH_SUCCESS: y,
+    GUILD_UNLOCKED_POWERUPS_FETCH_SUCCESS: O,
+    GUILD_POWERUP_ENTITLEMENTS_CREATE: I,
+    GUILD_POWERUP_ENTITLEMENTS_DELETE: S,
+    GUILD_UPDATE: g
 });

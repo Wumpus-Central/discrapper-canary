@@ -17,13 +17,13 @@ var r = n(442837),
     _ = n(493043),
     x = n(864141),
     h = n(264481),
-    j = n(693408),
-    g = n(228168),
+    g = n(693408),
+    j = n(228168),
     I = n(981631),
     v = n(388032),
     O = n(514656);
 function P(e) {
-    let { user: t, currentUser: n, displayProfile: P, guildId: N, channelId: A, subsection: Z, onClose: T } = e,
+    let { user: t, currentUser: n, displayProfile: P, guildId: N, channelId: A, subsection: T, onClose: Z } = e,
         { voiceActivityStatusEnabled: C } = (0, c.U)({ location: 'UserProfileModalV2Activity' }),
         w = (0, f.b)({ location: 'UserProfileModalV2Activity' }),
         { live: S, recent: E, stream: B } = (0, p.Z)(t.id),
@@ -67,12 +67,12 @@ function P(e) {
     if (!V && !F && !U) {
         var Y;
         return k
-            ? (0, o.jsx)(h.Uf, { onClose: T })
+            ? (0, o.jsx)(h.Uf, { onClose: Z })
             : (0, o.jsx)(h.P9, {
                   user: t,
                   guildId: null != (Y = null == P ? void 0 : P.guildId) ? Y : void 0,
                   channelId: A,
-                  onClose: T
+                  onClose: Z
               });
     }
     return (0, o.jsxs)(i.Ttm, {
@@ -80,7 +80,7 @@ function P(e) {
         fade: !0,
         children: [
             V
-                ? (0, o.jsx)(j.Z, {
+                ? (0, o.jsx)(g.Z, {
                       heading: v.intl.string(v.t.J6STd3),
                       children: (0, o.jsxs)('ul', {
                           className: O.cards,
@@ -92,7 +92,7 @@ function P(e) {
                                           user: t,
                                           currentUser: n,
                                           voiceChannel: D,
-                                          onClose: T
+                                          onClose: Z
                                       })
                                   }),
                               null != B &&
@@ -102,7 +102,7 @@ function P(e) {
                                           user: t,
                                           currentUser: n,
                                           stream: B,
-                                          onClose: T,
+                                          onClose: Z,
                                           profileGuildId: null == P ? void 0 : P.guildId
                                       })
                                   }),
@@ -114,7 +114,7 @@ function P(e) {
                                               user: t,
                                               currentUser: n,
                                               activity: e,
-                                              onClose: T,
+                                              onClose: Z,
                                               profileGuildId: null == P ? void 0 : P.guildId
                                           })
                                       },
@@ -128,7 +128,7 @@ function P(e) {
                                           user: t,
                                           currentUser: n,
                                           voiceChannel: D,
-                                          onClose: T
+                                          onClose: Z
                                       })
                                   })
                           ]
@@ -136,7 +136,7 @@ function P(e) {
                   })
                 : null,
             F
-                ? (0, o.jsx)(j.Z, {
+                ? (0, o.jsx)(g.Z, {
                       heading: v.intl.string(v.t.jzgEoK),
                       introText: k
                           ? v.intl.format(v.t['4bk9Ag'], {
@@ -151,7 +151,7 @@ function P(e) {
                                     )
                             })
                           : void 0,
-                      scrollIntoView: Z === g.Tb.RECENT_ACTIVITY,
+                      scrollIntoView: T === j.Tb.RECENT_ACTIVITY,
                       children: (0, o.jsx)('ul', {
                           className: O.cards,
                           children: E.map((e) =>
@@ -164,7 +164,7 @@ function P(e) {
                                           currentUser: n,
                                           entry: e,
                                           profileGuildId: null == P ? void 0 : P.guildId,
-                                          onClose: T
+                                          onClose: Z
                                       })
                                   },
                                   e.id

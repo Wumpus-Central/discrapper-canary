@@ -404,7 +404,7 @@ let eM = {
                         })
                     )
                     .otherwise(() => ({
-                        message: eI.intl.string(eI.t.bNMQVF),
+                        message: eI.intl.string(eI.t.i4AbAQ),
                         messageName: 'BOT_GUILD_EXPLICIT_CONTENT'
                     })),
                 l = (0, j.r)();

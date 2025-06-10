@@ -17,8 +17,8 @@ var r = n(442837),
     _ = n(848780),
     x = n(907179),
     h = n(228168),
-    j = n(981631),
-    g = n(388032),
+    g = n(981631),
+    j = n(388032),
     I = n(247787);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -46,8 +46,8 @@ function v(e) {
     return e;
 }
 function O(e) {
-    let { user: t, guildId: n, channelId: O, messageId: P, roleId: N, transitionState: A, openedAt: Z, onHide: T, sourceAnalyticsLocations: C = [] } = e,
-        w = n === j.ME ? void 0 : n,
+    let { user: t, guildId: n, channelId: O, messageId: P, roleId: N, transitionState: A, openedAt: T, onHide: Z, sourceAnalyticsLocations: C = [] } = e,
+        w = n === g.ME ? void 0 : n,
         S = (0, r.e7)([d.Z], () => d.Z.isBlocked(t.id)),
         { analyticsLocations: E } = (0, l.ZP)([...C, S ? c.Z.BLOCKED_PROFILE_MODAL : c.Z.IGNORED_PROFILE_MODAL]),
         B = (0, f.ZB)({
@@ -62,21 +62,21 @@ function O(e) {
         D = [
             {
                 icon: i.owK,
-                description: g.intl.string(g.t.kcuWvb)
+                description: j.intl.string(j.t.kcuWvb)
             },
             {
                 icon: i.owK,
-                description: g.intl.string(S ? g.t.QxrDY2 : g.t.W6fjkZ)
+                description: j.intl.string(S ? j.t.QxrDY2 : j.t.W6fjkZ)
             }
         ],
         L = (0, m.ZP)(t.id, w),
         U = u.ZP.getName(null == L ? void 0 : L.guildId, O, t),
-        k = (0, r.e7)([s.default], () => ['en-US', 'en-GB'].includes(s.default.locale)) ? g.intl.formatToPlainString(g.t.KRe1Fh, { name: U }) : g.intl.string(g.t['3N/J2t']);
+        k = (0, r.e7)([s.default], () => ['en-US', 'en-GB'].includes(s.default.locale)) ? j.intl.formatToPlainString(j.t.KRe1Fh, { name: U }) : j.intl.string(j.t['3N/J2t']);
     return (0, o.jsx)(l.Gt, {
         value: E,
         children: (0, o.jsx)(f.Mt, {
             value: B,
-            openedAt: Z,
+            openedAt: T,
             fetchStartedAt: null == L ? void 0 : L.fetchStartedAt,
             fetchEndedAt: null == L ? void 0 : L.fetchEndedAt,
             isLoaded: null == L ? void 0 : L.isLoaded,
@@ -105,12 +105,12 @@ function O(e) {
                                         (0, o.jsx)(i.X6q, {
                                             variant: 'heading-xl/bold',
                                             color: 'text-normal',
-                                            children: g.intl.string(g.t.b33pLC)
+                                            children: j.intl.string(j.t.b33pLC)
                                         }),
                                         (0, o.jsx)(i.Text, {
                                             variant: 'text-md/medium',
                                             color: 'text-normal',
-                                            children: g.intl.format(S ? g.t.T7QiLi : g.t.MnEow8, { username: U })
+                                            children: j.intl.format(S ? j.t.T7QiLi : j.t.MnEow8, { username: U })
                                         })
                                     ]
                                 }),
@@ -137,7 +137,7 @@ function O(e) {
                                             size: i.PhG.MEDIUM,
                                             isBlocked: S,
                                             onClick: () => {
-                                                T(),
+                                                Z(),
                                                     (0, p.pQ)(
                                                         v(
                                                             {
@@ -152,7 +152,7 @@ function O(e) {
                                         (0, o.jsx)(_.Z, {
                                             userId: t.id,
                                             onClick: () => {
-                                                T(),
+                                                Z(),
                                                     (0, p.pQ)(
                                                         v(
                                                             {

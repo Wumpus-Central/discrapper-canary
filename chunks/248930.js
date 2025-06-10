@@ -19,18 +19,18 @@ var l = t(255367),
 function x(e) {
     let { user: n, entry: t, profileGuildId: i, className: x, onClose: O, hideContextMenu: y = !1 } = e,
         Z = r.useRef(null),
-        { analyticsLocations: P } = (0, a.ZP)(s.Z.USER_PROFILE_RECENT_ACTIVITY_CARD),
-        { themeType: I } = (0, g.z)(),
+        { analyticsLocations: I } = (0, a.ZP)(s.Z.USER_PROFILE_RECENT_ACTIVITY_CARD),
+        { themeType: P } = (0, g.z)(),
         { interactionSource: E, interactionSourceId: S } = (0, d.Xo)(),
         T = (0, u.Z)({
             display: 'recent',
             user: n,
             entry: t,
-            analyticsLocations: P
+            analyticsLocations: I
         });
-    return null != I && (0, c.Rh)(t)
+    return null != P && (0, c.Rh)(t)
         ? (0, l.jsx)(a.Gt, {
-              value: P,
+              value: I,
               children: (0, l.jsx)(v.Z, {
                   targetElementRef: Z,
                   sourceType: m.n_.ACTIVITY,
@@ -38,7 +38,7 @@ function x(e) {
                   children: (0, l.jsx)(f.Z, {
                       user: n,
                       guildId: i,
-                      themeType: I,
+                      themeType: P,
                       sourceId: t.id,
                       entry: t,
                       onAction: T,

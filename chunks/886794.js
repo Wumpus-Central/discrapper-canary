@@ -20,8 +20,8 @@ var l = t(255367),
     O = t(502762),
     y = t(530),
     Z = t(679332),
-    P = t(544989),
-    I = t(228168),
+    I = t(544989),
+    P = t(228168),
     E = t(981631),
     S = t(388032),
     T = t(405666),
@@ -43,8 +43,8 @@ function C(e) {
             roleId: w
         }),
         F = r.useRef(null),
-        z = (0, s.Z)(F),
-        W = (0, i.e7)([d.default], () => ['en-US', 'en-GB'].includes(d.default.locale)) ? S.intl.formatToPlainString(S.t.KRe1Fh, { name: k }) : S.intl.string(S.t['3N/J2t']);
+        W = (0, s.Z)(F),
+        z = (0, i.e7)([d.default], () => ['en-US', 'en-GB'].includes(d.default.locale)) ? S.intl.formatToPlainString(S.t.KRe1Fh, { name: k }) : S.intl.string(S.t['3N/J2t']);
     return (0, l.jsx)(c.Gt, {
         value: V,
         children: (0, l.jsx)(p.Mt, {
@@ -57,22 +57,22 @@ function C(e) {
                 transitionState: R,
                 className: T.root,
                 hideShadow: !0,
-                'aria-label': W,
+                'aria-label': z,
                 parentComponent: 'NonUserBotProfileModal',
                 children: [
                     (0, l.jsxs)(O.Z, {
                         user: n,
                         displayProfile: G,
-                        themeType: I.lY.MODAL,
+                        themeType: P.lY.MODAL,
                         ref: (null == G ? void 0 : G.profileEffectId) != null ? F : void 0,
                         children: [
-                            (0, l.jsx)(P.Z, { children: (0, l.jsx)(Z.Z, { user: n }) }),
+                            (0, l.jsx)(I.Z, { children: (0, l.jsx)(Z.Z, { user: n }) }),
                             (0, l.jsxs)('header', {
                                 children: [
                                     (0, l.jsx)(h.Z, {
                                         user: n,
                                         displayProfile: G,
-                                        themeType: I.lY.MODAL
+                                        themeType: P.lY.MODAL
                                     }),
                                     (0, l.jsx)('div', {
                                         className: T.headerInner,
@@ -81,7 +81,7 @@ function C(e) {
                                             displayProfile: G,
                                             guildId: B,
                                             channelId: C,
-                                            themeType: I.lY.MODAL
+                                            themeType: P.lY.MODAL
                                         })
                                     })
                                 ]
@@ -97,7 +97,7 @@ function C(e) {
                                         nicknameVariant: 'heading-xl/bold',
                                         tags: (0, l.jsx)(j.Z, {
                                             displayProfile: G,
-                                            themeType: I.lY.MODAL,
+                                            themeType: P.lY.MODAL,
                                             onClose: L
                                         })
                                     }),
@@ -107,20 +107,20 @@ function C(e) {
                                             (0, l.jsx)(o.njP, {
                                                 className: A.tabBar,
                                                 type: 'top',
-                                                selectedItem: I.oh.BOT_INFO,
+                                                selectedItem: P.oh.BOT_INFO,
                                                 onItemSelect: E.dG4,
                                                 children: (0, l.jsx)(
                                                     o.njP.Item,
                                                     {
                                                         className: A.tabBarItem,
-                                                        id: I.oh.BOT_INFO,
+                                                        id: P.oh.BOT_INFO,
                                                         'aria-label': S.intl.string(S.t.jGoPJS),
                                                         children: (0, l.jsx)(o.Text, {
                                                             variant: 'text-sm/normal',
                                                             children: S.intl.string(S.t.jGoPJS)
                                                         })
                                                     },
-                                                    I.oh.BOT_INFO
+                                                    P.oh.BOT_INFO
                                                 )
                                             }),
                                             (0, l.jsxs)(o.zJl, {
@@ -137,7 +137,7 @@ function C(e) {
                                                         children: (0, l.jsx)(b.Z, {
                                                             userId: n.id,
                                                             guildId: B,
-                                                            tooltipDelay: I.vB
+                                                            tooltipDelay: P.vB
                                                         })
                                                     })
                                                 ]
@@ -151,7 +151,7 @@ function C(e) {
                     (null == G ? void 0 : G.profileEffectId) != null &&
                         (0, l.jsx)(u.Z, {
                             profileEffectId: null == G ? void 0 : G.profileEffectId,
-                            isHovering: z
+                            isHovering: W
                         })
                 ]
             })

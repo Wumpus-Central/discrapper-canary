@@ -2,7 +2,7 @@ e.exports = {
     content: 'content__2a3ed',
     loaded: 'loaded__2a3ed',
     video: 'video__2a3ed',
-    nitroLogo: 'nitroLogo__2a3ed',
+    textContainer: 'textContainer__2a3ed',
     badgeText: 'badgeText__2a3ed',
     oldBadgeText: 'oldBadgeText__2a3ed',
     newBadgeText: 'newBadgeText__2a3ed',

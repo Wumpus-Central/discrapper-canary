@@ -17,8 +17,8 @@ var r = n(120356),
     _ = n(981631),
     x = n(856651),
     h = n(388032),
-    j = n(738873);
-function g(e) {
+    g = n(738873);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             o = Object.keys(n);
@@ -68,22 +68,22 @@ function v(e) {
         b = (0, f.FI)(a[x.PC.CREATED_AT], i),
         v = s.Z.get((0, u.rR)(n.type));
     return (0, o.jsxs)('li', {
-        className: j.connection,
+        className: g.connection,
         children: [
             (0, o.jsx)(l.ua7, {
                 text: null == v ? void 0 : v.name,
                 children: (e) =>
                     (0, o.jsx)(
                         'img',
-                        I(g({}, e), {
+                        I(j({}, e), {
                             alt: h.intl.formatToPlainString(h.t.rtm15O, { name: null == v ? void 0 : v.name }),
-                            className: j.platformIcon,
+                            className: g.platformIcon,
                             src: (0, l.wjy)(r) ? (null == v ? void 0 : v.icon.darkSVG) : null == v ? void 0 : v.icon.lightSVG
                         })
                     )
             }),
             (0, o.jsxs)('div', {
-                className: j.connectionInfo,
+                className: g.connectionInfo,
                 children: [
                     (0, o.jsxs)('div', {
                         children: [
@@ -97,16 +97,16 @@ function v(e) {
                                           children: (e) =>
                                               (0, o.jsx)(
                                                   l.Text,
-                                                  I(g({}, e), {
+                                                  I(j({}, e), {
                                                       variant: 'text-sm/normal',
-                                                      className: j.accountNameText,
+                                                      className: g.accountNameText,
                                                       children: n.name
                                                   })
                                               )
                                       })
                                     : (0, o.jsx)(l.eee, {
                                           href: t,
-                                          className: j.platformUrlAnchor,
+                                          className: g.platformUrlAnchor,
                                           useDefaultUnderlineStyles: !1,
                                           'aria-label': (null == v ? void 0 : v.name) != null ? ''.concat(v.name, ', ').concat(n.name, ', ').concat(h.intl.string(h.t.q5jLJC)) : ''.concat(n.name, ', ').concat(h.intl.string(h.t.q5jLJC)),
                                           onClick: (e) => {
@@ -123,7 +123,7 @@ function v(e) {
                                                   );
                                           },
                                           children: (0, o.jsxs)('div', {
-                                              className: j.accountName,
+                                              className: g.accountName,
                                               children: [
                                                   (0, o.jsx)(l.ua7, {
                                                       overflowOnly: !0,
@@ -131,15 +131,15 @@ function v(e) {
                                                       children: (e) =>
                                                           (0, o.jsx)(
                                                               l.Text,
-                                                              I(g({}, e), {
+                                                              I(j({}, e), {
                                                                   variant: 'text-sm/normal',
-                                                                  className: j.accountNameText,
+                                                                  className: g.accountNameText,
                                                                   children: n.name
                                                               })
                                                           )
                                                   }),
                                                   (0, o.jsx)(m.Z, {
-                                                      className: j.platformUrlIcon,
+                                                      className: g.platformUrlIcon,
                                                       direction: m.Z.Directions.RIGHT
                                                   })
                                               ]
@@ -154,7 +154,7 @@ function v(e) {
                         ]
                     }),
                     (0, o.jsx)('div', {
-                        className: j.metadata,
+                        className: g.metadata,
                         children: n.type === _.ABu.REDDIT ? (0, p.oP)(a) : n.type === _.ABu.STEAM ? (0, p.Dq)(a) : n.type === _.ABu.BLUESKY || n.type === _.ABu.MASTODON || n.type === _.ABu.TWITTER ? (0, p.rJ)(a) : n.type === _.ABu.PAYPAL ? (0, p.li)(a) : n.type === _.ABu.EBAY ? (0, p.ul)(a) : n.type === _.ABu.TIKTOK ? (0, p.hf)(a) : null
                     })
                 ]
@@ -169,7 +169,7 @@ function O(e) {
     return 0 === t.length
         ? null
         : (0, o.jsx)('ul', {
-              className: i()(j.container, r),
+              className: i()(g.container, r),
               children: t.map((e) =>
                   (0, o.jsx)(
                       v,

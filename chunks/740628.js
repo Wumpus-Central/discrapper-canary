@@ -60,8 +60,8 @@ function x(e) {
 function O(e) {
     var n, t, u;
     let { user: d, currentUser: f, displayProfile: p, guildId: g, items: v, initialSection: O = j.oh.USER_INFO, initialSubsection: y, onClose: Z } = e,
-        { trackUserProfileAction: P } = (0, c.KZ)(),
-        I = (0, i.e7)([a.Z], () => a.Z.hidePersonalInformation),
+        { trackUserProfileAction: I } = (0, c.KZ)(),
+        P = (0, i.e7)([a.Z], () => a.Z.hidePersonalInformation),
         [{ section: E, subsection: S }, T] = r.useState({
             section:
                 null !=
@@ -88,7 +88,7 @@ function O(e) {
     }, [v, E]);
     let N = r.useCallback(
         (e) => {
-            P({
+            I({
                 action: 'PRESS_SECTION',
                 section: e
             }),
@@ -97,9 +97,9 @@ function O(e) {
                     subsection: void 0
                 });
         },
-        [P, T]
+        [I, T]
     );
-    return I
+    return P
         ? (0, l.jsx)('div', {
               className: b.container,
               children: (0, l.jsxs)('div', {

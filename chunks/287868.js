@@ -1,1 +1,1 @@
-i.exports = JSON.parse('{"yfwZu7":"Rozetimi Görüntüle","UnPGio":"Rozet profiline eklendi.","nvaTQk":"Küre Profil Rozeti\'ni Topladın!"}');
+i.exports = JSON.parse('{"yfwZu7":"Rozetimi Görüntüle","UnPGio":"Rozet profiline eklendi.","nvaTQk":"Orbs Profil Rozeti\'ni Topladın!"}');

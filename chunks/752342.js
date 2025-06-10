@@ -21,8 +21,8 @@ var r = t(442837),
     O = t(53558),
     y = t(544989),
     Z = t(30556),
-    P = t(4517),
-    I = t(740628),
+    I = t(4517),
+    P = t(740628),
     E = t(398145),
     S = t(228168),
     T = t(981631),
@@ -33,8 +33,8 @@ function C(e) {
         V = C === T.ME ? void 0 : C,
         Y = (0, f.ZP)(n.id, V),
         F = u.ZP.getName(V, _, n),
-        { analyticsLocations: z } = (0, a.ZP)([...k, s.Z.USER_PROFILE_MODAL]),
-        W = (0, d.ZB)({
+        { analyticsLocations: W } = (0, a.ZP)([...k, s.Z.USER_PROFILE_MODAL]),
+        z = (0, d.ZB)({
             layout: 'MODAL',
             userId: n.id,
             sourceSessionId: R,
@@ -46,9 +46,9 @@ function C(e) {
         J = (0, E.Z)(n),
         K = (0, r.e7)([c.default], () => ['en-US', 'en-GB'].includes(c.default.locale)) ? N.intl.formatToPlainString(N.t.KRe1Fh, { name: F }) : N.intl.string(N.t['3N/J2t']);
     return (0, l.jsx)(a.Gt, {
-        value: z,
+        value: W,
         children: (0, l.jsx)(d.Mt, {
-            value: W,
+            value: z,
             openedAt: B,
             fetchStartedAt: null == Y ? void 0 : Y.fetchStartedAt,
             fetchEndedAt: null == Y ? void 0 : Y.fetchEndedAt,
@@ -88,7 +88,7 @@ function C(e) {
                                             channelId: _,
                                             themeType: S.lY.MODAL
                                         }),
-                                        (0, l.jsx)(P.Z, {
+                                        (0, l.jsx)(I.Z, {
                                             location: 'BotUserProfileModal',
                                             user: n,
                                             themeType: S.lY.MODAL,
@@ -141,7 +141,7 @@ function C(e) {
                                         onClose: G
                                     })
                                 }),
-                                (0, l.jsx)(I.Z, {
+                                (0, l.jsx)(P.Z, {
                                     user: n,
                                     currentUser: t,
                                     displayProfile: Y,

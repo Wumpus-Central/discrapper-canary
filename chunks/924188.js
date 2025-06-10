@@ -28,7 +28,7 @@ function c(t) {
                     variant: 'text-md/normal',
                     color: 'header-secondary',
                     className: l.__invalid_subheader,
-                    children: s.intl.string(s.t.bNMQVF)
+                    children: s.intl.string(s.t.i4AbAQ)
                 }),
                 (0, a.jsxs)('div', {
                     className: l.buttonContainer,

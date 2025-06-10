@@ -520,5 +520,12 @@ let T = {
                     type: 'MEDIA_ENGINE_SET_ENABLE_HARDWARE_MUTE_NOTICE',
                     enabled: e
                 });
+        },
+        setKrispSuppressionLevel(e) {
+            N() ||
+                r.Z.dispatch({
+                    type: 'AUDIO_SET_KRISP_SUPPRESSION_LEVEL',
+                    level: e
+                });
         }
     };
