@@ -20,7 +20,7 @@ var r = n(255367),
     O = n(981631),
     v = n(388032),
     I = n(49633);
-function S(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function S(e, t, n) {
         e
     );
 }
-function T(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function T(e) {
                 })
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
@@ -129,8 +129,8 @@ class P extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            S(this, '_masonryRef', i.createRef()),
-            S(this, 'state', {
+            T(this, '_masonryRef', i.createRef()),
+            T(this, 'state', {
                 favoritesTile: R(this.props.favorites),
                 selectedIndex: {
                     column: 0,
@@ -138,7 +138,7 @@ class P extends i.PureComponent {
                 },
                 focusedId: null
             }),
-            S(this, 'handleFocus', (e) => {
+            T(this, 'handleFocus', (e) => {
                 let { current: t } = this._masonryRef;
                 if (null == t) return;
                 let n = t.getCoordsMap()[e];
@@ -149,17 +149,17 @@ class P extends i.PureComponent {
                     }),
                     this.setState({ focusedId: e }));
             }),
-            S(this, 'handleSelect', (e) => {
+            T(this, 'handleSelect', (e) => {
                 let { onSelectItem: t } = this.props,
                     n = this.getData().find((t) => t.name === e);
                 null != n && null != t && t(n.type, n.name);
             }),
-            S(this, 'getItemKey', (e, t) => {
+            T(this, 'getItemKey', (e, t) => {
                 if (e > 0) return null;
                 let n = this.getData()[t];
                 return null != n ? n.name : null;
             }),
-            S(
+            T(
                 this,
                 'memoizedData',
                 (0, m.oH)(function (e, t) {
@@ -167,7 +167,7 @@ class P extends i.PureComponent {
                     return n ? [...t] : [e, ...t];
                 })
             ),
-            S(this, 'renderItem', (e, t, n, i) => {
+            T(this, 'renderItem', (e, t, n, i) => {
                 if (e > 0) return null;
                 let a = this.getData()[t];
                 if (null == a) return;
@@ -191,7 +191,7 @@ class P extends i.PureComponent {
                     i
                 );
             }),
-            S(this, 'renderContent', (e, t, n) => {
+            T(this, 'renderContent', (e, t, n) => {
                 let { className: i, trendingCategories: a } = this.props;
                 return 0 === a.length
                     ? (0, r.jsx)(b.u$, {
@@ -212,11 +212,11 @@ class P extends i.PureComponent {
                           chunkSize: 50
                       });
             }),
-            S(this, 'getItemGrid', () => {
+            T(this, 'getItemGrid', () => {
                 let { current: e } = this._masonryRef;
                 return null != e ? e.getItemGrid() : [];
             }),
-            S(this, 'getCoordsMap', () => {
+            T(this, 'getCoordsMap', () => {
                 let { current: e } = this._masonryRef;
                 return null != e ? e.getCoordsMap() : {};
             });
@@ -228,7 +228,7 @@ function w(e) {
         i = (0, y.PY)();
     return (0, r.jsx)(
         P,
-        N(T({}, e, i), {
+        N(S({}, e, i), {
             trendingCategories: t,
             favorites: n
         })

@@ -87,7 +87,7 @@ let b = 'payment-modal',
     O = new Set([u.h8.REVIEW, u.h8.CONFIRM, u.h8.GIFT_CUSTOMIZATION]);
 function v(e) {
     let t,
-        { skuId: n, isGift: u = !1, giftMessage: _, giftingOrigin: h, onClose: E, onComplete: v, analyticsLocations: I, analyticsObject: S, giftRecipient: T, variantsReturnStyle: A } = e,
+        { skuId: n, isGift: u = !1, giftMessage: _, giftingOrigin: h, onClose: E, onComplete: v, analyticsLocations: I, analyticsObject: T, giftRecipient: S, variantsReturnStyle: A } = e,
         N = !1,
         C = (0, i.Z)(),
         R = (e) => {
@@ -107,7 +107,7 @@ function v(e) {
                     giftMessage: _,
                     giftingOrigin: h,
                     analyticsLocations: I,
-                    giftRecipient: T,
+                    giftRecipient: S,
                     onClose: (e) => {
                         t(), null == E || E(e);
                     },
@@ -126,7 +126,7 @@ function v(e) {
                     c.default.track(f.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: C,
                         payment_type: f.Zuq[f.GZQ.ONE_TIME],
-                        location: S,
+                        location: T,
                         is_gift: u,
                         sku_id: n,
                         location_stack: I

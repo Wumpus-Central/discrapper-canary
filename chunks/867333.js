@@ -67,24 +67,24 @@ function y(e, t) {
 }
 function O(e) {
     let { color: t = 'default', label: n, checked: a, subtext: g, disabled: b, isFocused: O, menuItemProps: v, action: I } = e,
-        { onInteraction: S } = i.useContext(c.p),
-        T = i.useRef(null),
+        { onInteraction: T } = i.useContext(c.p),
+        S = i.useRef(null),
         A = (0, f.Q3)('MenuRadioItem');
     i.useEffect(() => {
-        O && (0, u.F)(T);
+        O && (0, u.F)(S);
     }, [O]);
     let N = i.useCallback(
         (e) => {
-            I(e), null == S || S({ type: c.U.RADIO });
+            I(e), null == T || T({ type: c.U.RADIO });
         },
-        [I, S]
+        [I, T]
     );
     return (0, r.jsxs)(
         s.P,
         y(
             E(
                 {
-                    innerRef: T,
+                    innerRef: S,
                     className: o()(m.item, m.labelContainer, h._[t], {
                         [m.disabled]: b,
                         [m.focused]: O

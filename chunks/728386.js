@@ -70,8 +70,8 @@ function y(e, t) {
         y = i.useContext(c.ZP),
         O = !1,
         [v, I] = i.useState(!1),
-        S = m === _.X1.STICKER,
-        T = !1,
+        T = m === _.X1.STICKER,
+        S = !1,
         A = i.useCallback(() => {
             (0, d.RO)(_.X1.STICKER, a);
         }, [a]);
@@ -103,17 +103,17 @@ function y(e, t) {
         ref: t,
         children: (0, r.jsx)(
             f.Z,
-            b(g({ innerClassName: o()(h.button, h.stickerButton, { [h.stickerButtonTilted]: w && !S }) }, C), {
+            b(g({ innerClassName: o()(h.button, h.stickerButton, { [h.stickerButtonTilted]: w && !T }) }, C), {
                 onClick: () => {
                     A(), R();
                 },
-                isActive: S,
+                isActive: T,
                 'aria-label': p.intl.string(p.t.rZpidX),
-                'aria-expanded': S,
+                'aria-expanded': T,
                 'aria-haspopup': 'dialog',
                 'aria-controls': E,
                 sparkle: O,
-                notification: T ? f.j.UPDATE : null,
+                notification: S ? f.j.UPDATE : null,
                 children: (0, r.jsx)(N, {
                     size: P ? 'refresh_sm' : void 0,
                     color: 'currentColor'

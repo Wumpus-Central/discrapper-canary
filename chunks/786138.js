@@ -22,8 +22,8 @@ function b(e) {
             let { desktopSource: t } = null != (e = d.Z.getGoLiveSource()) ? e : {};
             return { desktopSourceId: null == t ? void 0 : t.id };
         }),
-        S = (0, a.e7)([u.Z], () => u.Z.getState().soundshareEnabled),
-        T = d.Z.supports(g.AN.DESKTOP_CAPTURE_APPLICATIONS),
+        T = (0, a.e7)([u.Z], () => u.Z.getState().soundshareEnabled),
+        S = d.Z.supports(g.AN.DESKTOP_CAPTURE_APPLICATIONS),
         A = (0, a.e7)([d.Z], () => d.Z.supports(g.AN.SOUNDSHARE)),
         N = (0, a.e7)([d.Z], () => d.Z.supportsScreenSoundshare()),
         C = (0, p.Z)(t, v),
@@ -49,16 +49,16 @@ function b(e) {
             null != I &&
                 (r.desktopSettings = {
                     sourceId: I,
-                    sound: !S
+                    sound: !T
                 }),
                 (0, l.Rc)({
                     preset: e,
                     resolution: t,
                     frameRate: n,
-                    soundshareEnabled: !S
+                    soundshareEnabled: !T
                 }),
                 s.Z.setGoLiveSource(r);
-        }, [I, S]);
+        }, [I, T]);
     if (null == t)
         return (0, r.jsx)(o.sNh, {
             id: 'share-your-screen',
@@ -77,12 +77,12 @@ function b(e) {
             ? (0, r.jsx)(o.S89, {
                   id: 'stream-settings-audio-enable',
                   label: O ? E.intl.string(E.t.af2Tw8) : E.intl.string(E.t.ZJEHt7),
-                  checked: S,
+                  checked: T,
                   action: D
               })
             : null,
-        k =
-            T && !y
+        M =
+            S && !y
                 ? (0, r.jsx)(o.sNh, {
                       id: 'change-windows',
                       label: O ? E.intl.string(E.t.eAktHh) : E.intl.string(E.t.qntSam),
@@ -90,7 +90,7 @@ function b(e) {
                       action: w
                   })
                 : null,
-        M = (0, r.jsx)(o.sNh, {
+        k = (0, r.jsx)(o.sNh, {
             id: 'stop-streaming',
             label: E.intl.string(E.t.S5anIS),
             icon: o.g5r,
@@ -98,9 +98,9 @@ function b(e) {
         });
     return O
         ? (0, r.jsxs)(r.Fragment, {
-              children: [M, k, L, x]
+              children: [k, M, L, x]
           })
         : (0, r.jsxs)(r.Fragment, {
-              children: [L, b ? R : null, x, k, M]
+              children: [L, b ? R : null, x, M, k]
           });
 }

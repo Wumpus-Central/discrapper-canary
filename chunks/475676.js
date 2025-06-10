@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -43,7 +43,7 @@ function I(e) {
         ]
     });
 }
-function S(e) {
+function T(e) {
     let { leaderboard: t, guildId: n } = e,
         r = null == t ? void 0 : t.leaderboard_id;
     i.useEffect(() => {
@@ -54,11 +54,11 @@ function S(e) {
             });
     }, [r, n]);
 }
-function T(e) {
+function S(e) {
     var t, n, f, E, b;
     let y,
-        { selected: v, channel: T, entry: N } = e,
-        C = T.guild_id,
+        { selected: v, channel: S, entry: N } = e,
+        C = S.guild_id,
         R = (0, p.Z)({
             guildId: C,
             leaderboardId: N.extra.leaderboard_id,
@@ -78,16 +78,16 @@ function T(e) {
             return [n, r];
         }, [R, P, w]),
         x = (0, a.e7)([d.default], () => d.default.getUser(null == D ? void 0 : D.userId)),
-        k = _.ZP.getName(C, void 0, x);
-    S({
+        M = _.ZP.getName(C, void 0, x);
+    T({
         leaderboard: R,
         guildId: C
     });
-    let M = (0, s.q)(null == R || null == (t = R.settings) ? void 0 : t.application_id);
-    if (null == R || null == M) return null;
+    let k = (0, s.q)(null == R || null == (t = R.settings) ? void 0 : t.application_id);
+    if (null == R || null == k) return null;
     if (0 === R.users.length || null == D || null == x)
         return (0, r.jsx)(A, {
-            application: M,
+            application: k,
             selected: v
         });
     let { sort_by_statistic_id: j } = R.guild_settings,
@@ -99,14 +99,14 @@ function T(e) {
                 ? O.intl.formatToPlainString(O.t['eU+JxM'], { rank: G })
                 : O.intl.formatToPlainString(O.t['8BLSQ0'], {
                       rank: G,
-                      username: k
+                      username: M
                   })),
         (0, r.jsxs)(c.Zb, {
             selected: v,
             children: [
                 (0, r.jsxs)(c.e$, {
                     children: [
-                        (0, r.jsx)(I, { application: M }),
+                        (0, r.jsx)(I, { application: k }),
                         (0, r.jsx)(o.LZC, { size: 2 }),
                         (0, r.jsx)(c.ll, { children: y }),
                         (0, r.jsx)(l.Gk, {

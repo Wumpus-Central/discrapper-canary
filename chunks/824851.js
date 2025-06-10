@@ -1,23 +1,23 @@
 a.d(e, { V: () => o });
 var r = a(899517),
-    n = a(578346);
-let _ = null;
+    _ = a(578346);
+let n = null;
 function o(t) {
     let e = 'error';
-    (0, n.Hj)(e, t), (0, n.D2)(e, i);
+    (0, _.Hj)(e, t), (0, _.D2)(e, i);
 }
 function i() {
-    (_ = r.n.onerror),
+    (n = r.n.onerror),
         (r.n.onerror = function (t, e, a, r, o) {
             return (
-                (0, n.rK)('error', {
+                (0, _.rK)('error', {
                     column: r,
                     error: o,
                     line: a,
                     msg: t,
                     url: e
                 }),
-                !!_ && !_.__SENTRY_LOADER__ && _.apply(this, arguments)
+                !!n && !n.__SENTRY_LOADER__ && n.apply(this, arguments)
             );
         }),
         (r.n.onerror.__SENTRY_INSTRUMENTED__ = !0);

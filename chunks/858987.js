@@ -1,6 +1,6 @@
 n.d(t, {
     K: () => I,
-    Z: () => T
+    Z: () => S
 }),
     n(997841);
 var r = n(255367);
@@ -82,19 +82,19 @@ function I(e) {
     if ((0, d.PV)(n.id)) return l ? m.intl.string(m.t.cRCCJy) : null != r ? (r.isPausedAllowsResumeButNotUpdates ? m.intl.string(m.t.zpi5pq) : (0, f.R4)(r, n.id, s) ? m.intl.string(m.t.IJI7ys) : m.intl.string(m.t.VPuTc3)) : (0, d.W_)(null, n);
     return m.intl.string(m.t.YScQSE);
 }
-function S(e, t) {
+function T(e, t) {
     null != e.current && (e.current.scrollIntoView({ behavior: 'smooth' }), t());
 }
-function T(e) {
+function S(e) {
     var t;
-    let { legalTermsNodeRef: n, invoiceError: i, planError: a, disablePurchase: d, flashLegalTerms: f, isSubmitting: h, premiumSubscription: b, isGift: O, planGroup: T, isPrepaid: A, isTrial: N, makePurchase: C, needsPaymentSource: R, inReverseTrial: P, onNext: w, onPaymentSourceAdd: D } = e,
-        { application: L, selectedPlan: x, hasAcceptedTerms: k, purchaseType: M, paymentSourceId: j, activeSubscription: U, devShelfFetchState: G, hasPaymentSources: B } = (0, c.JL)(),
+    let { legalTermsNodeRef: n, invoiceError: i, planError: a, disablePurchase: d, flashLegalTerms: f, isSubmitting: h, premiumSubscription: b, isGift: O, planGroup: S, isPrepaid: A, isTrial: N, makePurchase: C, needsPaymentSource: R, inReverseTrial: P, onNext: w, onPaymentSourceAdd: D } = e,
+        { application: L, selectedPlan: x, hasAcceptedTerms: M, purchaseType: k, paymentSourceId: j, activeSubscription: U, devShelfFetchState: G, hasPaymentSources: B } = (0, c.JL)(),
         F = I({
-            purchaseType: M,
+            purchaseType: k,
             plan: x,
             premiumSubscription: b,
             isGift: O,
-            planGroup: T,
+            planGroup: S,
             isPrepaidPaymentSource: A,
             inReverseTrial: P,
             paymentSourceId: j,
@@ -155,8 +155,8 @@ function T(e) {
     if (N)
         return (0, r.jsxs)(o.gtL, {
             innerClassName: g.innerButton,
-            'data-testid': k ? 'purchase' : 'submitButton',
-            onClick: k ? C : () => S(n, f),
+            'data-testid': M ? 'purchase' : 'submitButton',
+            onClick: M ? C : () => T(n, f),
             color: o.zxk.Colors.GREEN,
             submitting: h,
             children: [
@@ -168,7 +168,7 @@ function T(e) {
                 F
             ]
         });
-    else if (!k)
+    else if (!M)
         return (0, r.jsx)(o.ua7, {
             text: m.intl.string(m.t.XdvBLS),
             children: (e) =>
@@ -177,7 +177,7 @@ function T(e) {
                     v(y({}, e), {
                         color: o.zxk.Colors.GREEN,
                         type: 'submit',
-                        onClick: () => S(n, f),
+                        onClick: () => T(n, f),
                         'data-testid': 'submitButton',
                         children: F
                     })

@@ -14,19 +14,19 @@ var r = n(255367),
     h = n(526617),
     m = n(268365);
 function g(e) {
-    let { guildId: t, channel: n, containerWidth: a, onClose: g, onSelect: E, analyticsSource: b, suppressPlaySound: y, shouldValidateSelectedSound: O, shouldShowUpsell: v = !0, gridNotice: I, inExpressionPicker: S, soundButtonOverlay: T, listPadding: A, renderHeader: N, defaultSoundsOnly: C } = e,
+    let { guildId: t, channel: n, containerWidth: a, onClose: g, onSelect: E, analyticsSource: b, suppressPlaySound: y, shouldValidateSelectedSound: O, shouldShowUpsell: v = !0, gridNotice: I, inExpressionPicker: T, soundButtonOverlay: S, listPadding: A, renderHeader: N, defaultSoundsOnly: C } = e,
         R = (0, s.e7)([p.Z], () => p.Z.isFetchingSounds() || p.Z.isFetchingDefaultSounds()),
         { analyticsLocations: P } = (0, u.ZP)(c.Z.SOUNDBOARD_POPOUT);
     return (
         i.useEffect(() => {
-            _.w(), f.DZ.loadIfNecessary(), S || (0, d.ql)('');
-        }, [S]),
+            _.w(), f.DZ.loadIfNecessary(), T || (0, d.ql)('');
+        }, [T]),
         (0, r.jsx)(u.Gt, {
             value: P,
             children: (0, r.jsx)(l.VqE, {
                 className: o()(m.picker, {
                     [m.fetching]: R,
-                    [m.inExpressionPicker]: S
+                    [m.inExpressionPicker]: T
                 }),
                 children: R
                     ? (0, r.jsx)(l.$jN, {})
@@ -40,11 +40,11 @@ function g(e) {
                           suppressPlaySound: y,
                           shouldShowUpsell: v,
                           gridNotice: I,
-                          soundButtonOverlay: T,
+                          soundButtonOverlay: S,
                           listPadding: A,
                           renderHeader: N,
                           defaultSoundsOnly: C,
-                          inExpressionPicker: S,
+                          inExpressionPicker: T,
                           analyticsSource: b
                       })
             })

@@ -136,7 +136,7 @@ function I(e) {
         renderFallback: () => a()
     });
 }
-function S(e) {
+function T(e) {
     let { expanded: t, setExpanded: n, isWholeFile: i, numLines: a } = e,
         o = p.intl.formatToPlainString(i ? p.t.Go5Vvr : p.t.yJcYam, { lines: a });
     return (0, r.jsx)(l.ua7, {
@@ -154,7 +154,7 @@ function S(e) {
             )
     });
 }
-function T(e) {
+function S(e) {
     let { url: t, fileName: n, fileSize: i } = e,
         a = ''.concat(n, ' (').concat((0, _.IC)(i), ')');
     return (0, r.jsxs)(r.Fragment, {
@@ -313,7 +313,7 @@ function C(e) {
                     w
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(S, {
+                                  (0, r.jsx)(T, {
                                       expanded: c,
                                       setExpanded: d,
                                       isWholeFile: v,
@@ -331,7 +331,7 @@ function C(e) {
                           })
                         : null,
                     (0, r.jsx)('div', { className: h.footerGap }),
-                    (0, r.jsx)(T, {
+                    (0, r.jsx)(S, {
                         url: n,
                         fileName: i,
                         fileSize: a
@@ -376,7 +376,7 @@ function R(e) {
                         variant: 'text-sm/normal',
                         children: [
                             (0, r.jsx)('div', { className: h.footerGap }),
-                            (0, r.jsx)(T, {
+                            (0, r.jsx)(S, {
                                 url: t,
                                 fileName: n,
                                 fileSize: a

@@ -90,7 +90,7 @@ let E = i.memo(function (e) {
     }),
     y = i.memo(function (e) {
         var t;
-        let { primaryGuild: n, userId: a, contextGuildId: _, className: p, containerClassName: m, textVariant: E, textColor: y, badgeSize: O, disableGuildProfile: v = !1, inline: I = !0, onShowProfile: S, onClose: T } = e,
+        let { primaryGuild: n, userId: a, contextGuildId: _, className: p, containerClassName: m, textVariant: E, textColor: y, badgeSize: O, disableGuildProfile: v = !1, inline: I = !0, onShowProfile: T, onClose: S } = e,
             A = i.useRef(null),
             N = (0, s.e7)([d.default], () => d.default.getUser(a), [a]),
             C = (0, s.e7)([u.Z], () => u.Z.theme),
@@ -112,8 +112,8 @@ let E = i.memo(function (e) {
                       theme: C,
                       children: (0, r.jsx)(c.Z, {
                           guildId: D,
-                          onRequestOpen: S,
-                          onClose: T,
+                          onRequestOpen: T,
+                          onClose: S,
                           targetElementRef: A,
                           children: (e) =>
                               (0, r.jsx)('span', {

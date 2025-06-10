@@ -72,7 +72,7 @@ function I(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -83,7 +83,7 @@ function S(e, t) {
         e
     );
 }
-function T() {
+function S() {
     return new Set(
         l()
             .months()
@@ -127,8 +127,8 @@ function w() {
 let D = '([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})',
     L = '\\d{4}',
     x = '([0-9]{4})-([0-9]{1,2})',
-    k = '([^\\d\\s]+)',
-    M = RegExp('(?:\\s*('.concat(D, '|').concat(x, '|').concat(L, '|').concat(k, '))'), 'i'),
+    M = '([^\\d\\s]+)',
+    k = RegExp('(?:\\s*('.concat(D, '|').concat(x, '|').concat(L, '|').concat(M, '))'), 'i'),
     j = RegExp('\\s*(true|false)', 'i');
 function U(e) {
     return ''.concat(e, ':');
@@ -147,7 +147,7 @@ function F(e, t) {
         r,
         i = e.getFullMatch().trim().toLowerCase(),
         a = w()[i];
-    return null != a ? ([n, r] = a()) : T().has(i) ? ([n, r] = P(i, 'MMMM', 'month')) : A().has(i) ? ([n, r] = P(i, 'dddd', 'day')) : N().has(i) ? ([n, r] = P(i, 'YYYY', 'year')) : ([n, r] = P(i, b.b2L, 'day')), !!(n.isValid() && r.isValid()) && ('before' === t ? ((r = n), (n = null)) : 'after' === t && ((n = r), (r = null)), e.setData('start', n), e.setData('end', r), !0);
+    return null != a ? ([n, r] = a()) : S().has(i) ? ([n, r] = P(i, 'MMMM', 'month')) : A().has(i) ? ([n, r] = P(i, 'dddd', 'day')) : N().has(i) ? ([n, r] = P(i, 'YYYY', 'year')) : ([n, r] = P(i, b.b2L, 'day')), !!(n.isValid() && r.isValid()) && ('before' === t ? ((r = n), (n = null)) : 'after' === t && ((n = r), (r = null)), e.setData('start', n), e.setData('end', r), !0);
 }
 function V(e) {
     let t = e.getMatch(1),
@@ -182,14 +182,14 @@ function Z(e) {
     return null != t && '' !== t && (e.setData('has', t), !0);
 }
 function H() {
-    return [...Array.from(T()), ...Array.from(A()), ...Array.from(N()), ...Object.keys(w())];
+    return [...Array.from(S()), ...Array.from(A()), ...Array.from(N()), ...Object.keys(w())];
 }
 function Y() {
     return o().sample(H());
 }
 function W(e, t, n) {
     return K(e, t, H()).map((e) =>
-        S(v({}, e), {
+        T(v({}, e), {
             group: n,
             key: ''.concat(n, '-').concat(e.text)
         })
@@ -215,10 +215,10 @@ function z(e, t) {
         };
     switch (a) {
         case b.aib.GUILD:
-            n = m.ZP.queryGuildUsers(S(v({}, o), { guildId: t }));
+            n = m.ZP.queryGuildUsers(T(v({}, o), { guildId: t }));
             break;
         case b.aib.CHANNEL:
-            n = m.ZP.queryChannelUsers(S(v({}, o), { channelId: t }));
+            n = m.ZP.queryChannelUsers(T(v({}, o), { channelId: t }));
             break;
         case b.aib.DMS:
             n = m.ZP.queryUsers(e, r, !0, i, () => !0);
@@ -357,21 +357,21 @@ function $() {
             getAutocompletions: (e, t, n) => W(e, n, b.dCx.FILTER_AFTER)
         },
         [b.dCx.ANSWER_BEFORE]: {
-            regex: M,
+            regex: k,
             follows: [b.dCx.FILTER_BEFORE],
             componentType: 'ANSWER',
             mutable: !0,
             validator: (e) => F(e, 'before')
         },
         [b.dCx.ANSWER_ON]: {
-            regex: M,
+            regex: k,
             follows: [b.dCx.FILTER_ON],
             componentType: 'ANSWER',
             mutable: !0,
             validator: (e) => F(e, 'on')
         },
         [b.dCx.ANSWER_AFTER]: {
-            regex: M,
+            regex: k,
             follows: [b.dCx.FILTER_AFTER],
             componentType: 'ANSWER',
             mutable: !0,

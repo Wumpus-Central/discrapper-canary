@@ -32,7 +32,7 @@ function I(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function S(e) {
     }
     return e;
 }
-let T = 100,
+let S = 100,
     A = 1000,
     N = 0.2,
     C = 0.1,
@@ -120,7 +120,7 @@ class L {
     }
     setOptions(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        t ? (this.options = S({}, this.options, e)) : (this.options = e),
+        t ? (this.options = T({}, this.options, e)) : (this.options = e),
             null != this.options.blacklist
                 ? (this._userBlacklist = Array.from(this.options.blacklist)
                       .map((e) => (e.startsWith('user:') ? e.replace('user:', '') : ''))
@@ -253,7 +253,7 @@ class L {
               })
             : [];
     }
-    constructor(e, t, n = T, r = R) {
+    constructor(e, t, n = S, r = R) {
         I(this, 'query', ''),
             I(this, 'options', R),
             I(this, 'results', []),

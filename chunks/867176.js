@@ -62,7 +62,7 @@ function I(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -73,7 +73,7 @@ function S(e, t) {
         e
     );
 }
-function T(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -99,23 +99,23 @@ let N = (e) => {
 };
 function C(e) {
     var t;
-    let { user: n, displayProfile: a, guildId: b, pendingBanner: O, children: v, className: I, avatarSize: S, avatarOffsetX: T, avatarOffsetY: A, bannerWidth: C, bannerHeight: R, themePadding: P, pendingAccentColor: w, animateOnHover: D = !1 } = e,
+    let { user: n, displayProfile: a, guildId: b, pendingBanner: O, children: v, className: I, avatarSize: T, avatarOffsetX: S, avatarOffsetY: A, bannerWidth: C, bannerHeight: R, themePadding: P, pendingAccentColor: w, animateOnHover: D = !1 } = e,
         L = (0, _.Dt)(),
-        [x, k] = i.useState(!1),
-        M = (0, l.e7)([m.Z], () => m.Z.isFocused()),
+        [x, M] = i.useState(!1),
+        k = (0, l.e7)([m.Z], () => m.Z.isFocused()),
         j = h.QK.getSetting(),
         { bannerSrc: U, status: G } = (0, E.Z)({
             displayProfile: a,
             pendingBanner: O,
             size: C,
-            canAnimate: D || !j ? x : M
+            canAnimate: D || !j ? x : k
         }),
         B = (0, u.dQu)(c.Z.unsafe_rawColors.PRIMARY_800).hex(),
-        F = n.getAvatarURL(b, (0, u.pxk)(S)),
+        F = n.getAvatarURL(b, (0, u.pxk)(T)),
         V = (0, s._i)((0, d.ZP)(F, B, !1)),
         Z = (0, f.Z)(null != (t = null != w ? w : null == a ? void 0 : a.primaryColor) ? t : V).hex,
-        H = N(S),
-        Y = H + T - P,
+        H = N(T),
+        Y = H + S - P,
         W = R - A - P;
     return (0, r.jsxs)('svg', {
         className: y.mask,
@@ -154,8 +154,8 @@ function C(e) {
                     v,
                     (0, r.jsxs)('div', {
                         className: o()(y.banner, I),
-                        onMouseMove: () => k(!0),
-                        onMouseLeave: () => k(!1),
+                        onMouseMove: () => M(!0),
+                        onMouseLeave: () => M(!1),
                         style: {
                             height: R,
                             minHeight: R,
@@ -171,12 +171,12 @@ function C(e) {
 }
 function R(e) {
     var { themeType: t, displayProfile: n, canUsePremiumProfileCustomization: i = !1 } = e,
-        a = T(e, ['themeType', 'displayProfile', 'canUsePremiumProfileCustomization']);
+        a = S(e, ['themeType', 'displayProfile', 'canUsePremiumProfileCustomization']);
     let o = b.q[t],
         s = i || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1;
     return (0, r.jsx)(
         C,
-        S(v({}, a, o), {
+        T(v({}, a, o), {
             displayProfile: n,
             themePadding: s ? o.themePadding : 0
         })

@@ -19,8 +19,8 @@ var r = n(620014),
     O = n(706627),
     v = n(822480),
     I = n(58834),
-    S = n(453342),
-    T = 1,
+    T = n(453342),
+    S = 1,
     A = 2,
     N = 4,
     C = '[object Arguments]',
@@ -30,8 +30,8 @@ var r = n(620014),
     D = '[object Error]',
     L = '[object Function]',
     x = '[object GeneratorFunction]',
-    k = '[object Map]',
-    M = '[object Number]',
+    M = '[object Map]',
+    k = '[object Number]',
     j = '[object Object]',
     U = '[object RegExp]',
     G = '[object Set]',
@@ -52,23 +52,23 @@ var r = n(620014),
     ee = {};
 function et(e, t, n, R, P, w) {
     var D,
-        k = t & T,
-        M = t & A,
+        M = t & S,
+        k = t & A,
         U = t & N;
     if ((n && (D = P ? n(e, R, P, w) : n(e)), void 0 !== D)) return D;
     if (!O(e)) return e;
     var G = E(e);
     if (G) {
-        if (((D = h(e)), !k)) return c(e, D);
+        if (((D = h(e)), !M)) return c(e, D);
     } else {
         var B = p(e),
             F = B == L || B == x;
-        if (b(e)) return l(e, k);
+        if (b(e)) return l(e, M);
         if (B == j || B == C || (F && !P)) {
-            if (((D = M || F ? {} : g(e)), !k)) return M ? d(e, s(D, e)) : u(e, o(D, e));
+            if (((D = k || F ? {} : g(e)), !M)) return k ? d(e, s(D, e)) : u(e, o(D, e));
         } else {
             if (!ee[B]) return P ? e : {};
-            D = m(e, B, k);
+            D = m(e, B, M);
         }
     }
     w || (w = new r());
@@ -83,7 +83,7 @@ function et(e, t, n, R, P, w) {
               e.forEach(function (r, i) {
                   D.set(i, et(r, t, n, i, e, w));
               });
-    var Z = U ? (M ? _ : f) : M ? S : I,
+    var Z = U ? (k ? _ : f) : k ? T : I,
         H = G ? void 0 : Z(e);
     return (
         i(H || e, function (r, i) {
@@ -92,4 +92,4 @@ function et(e, t, n, R, P, w) {
         D
     );
 }
-(ee[C] = ee[R] = ee[Z] = ee[H] = ee[P] = ee[w] = ee[Y] = ee[W] = ee[K] = ee[z] = ee[q] = ee[k] = ee[M] = ee[j] = ee[U] = ee[G] = ee[B] = ee[F] = ee[X] = ee[Q] = ee[J] = ee[$] = !0), (ee[D] = ee[L] = ee[V] = !1), (e.exports = et);
+(ee[C] = ee[R] = ee[Z] = ee[H] = ee[P] = ee[w] = ee[Y] = ee[W] = ee[K] = ee[z] = ee[q] = ee[M] = ee[k] = ee[j] = ee[U] = ee[G] = ee[B] = ee[F] = ee[X] = ee[Q] = ee[J] = ee[$] = !0), (ee[D] = ee[L] = ee[V] = !1), (e.exports = et);

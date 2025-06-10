@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => T }), n(997841);
+n.r(t), n.d(t, { default: () => S }), n(997841);
 var r,
     i = n(261470),
     a = n(213919),
@@ -112,7 +112,7 @@ function I(e) {
         r = n || null != e.user.personal_connection_id;
     n && m.set(b.sourceMapsEnabled), f.Z.setTags({ isStaff: r.toString() });
 }
-class S extends (r = o.ZP.Store) {
+class T extends (r = o.ZP.Store) {
     initialize() {
         let e = l.K.get(g);
         null != e && (b = h({}, E, e));
@@ -174,8 +174,8 @@ class S extends (r = o.ZP.Store) {
         );
     }
 }
-p(S, 'displayName', 'DeveloperOptionsStore');
-let T = new S(c.Z, {
+p(T, 'displayName', 'DeveloperOptionsStore');
+let S = new T(c.Z, {
     LOGOUT: v,
     CONNECTION_OPEN: I,
     DEVELOPER_OPTIONS_UPDATE_SETTINGS: O

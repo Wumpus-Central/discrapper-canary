@@ -24,8 +24,8 @@ var i = n(772848),
     O = n(592125),
     v = n(19780),
     I = n(944486),
-    S = n(594174),
-    T = n(626135),
+    T = n(594174),
+    S = n(626135),
     A = n(585483),
     N = n(358085),
     C = n(624138),
@@ -35,8 +35,8 @@ var i = n(772848),
     D = n(317381),
     L = n(969345),
     x = n(155268),
-    k = n(148720),
-    M = n(122613),
+    M = n(148720),
+    k = n(122613),
     j = n(790920),
     U = n(16609),
     G = n(761122),
@@ -110,7 +110,7 @@ async function ee(e) {
         c = (0, U.p)(r),
         u = (0, U.j)(r),
         d = O.Z.getChannel(c),
-        f = S.default.getCurrentUser();
+        f = T.default.getCurrentUser();
     if (null == l || null == f) return;
     let _ = D.ZP.getShelfActivities(u),
         h = (0, L.Z)({
@@ -119,7 +119,7 @@ async function ee(e) {
         }),
         { releasePhase: m } = q(h),
         g = p.Z.getRawThermalState();
-    T.default.track(V.rMx.ACTIVITY_SESSION_LEFT, {
+    S.default.track(V.rMx.ACTIVITY_SESSION_LEFT, {
         channel_id: c,
         guild_id: u,
         media_session_id: l.mediaSessionIds[0],
@@ -135,7 +135,7 @@ async function ee(e) {
         media_session_ids: l.mediaSessionIds,
         embedded_activity_location_kind: r.kind
     }),
-        T.default.track(V.rMx.ACTIVITY_IFRAME_UNMOUNT, {
+        S.default.track(V.rMx.ACTIVITY_IFRAME_UNMOUNT, {
             channel_id: c,
             guild_id: u,
             application_id: n,
@@ -163,15 +163,15 @@ function et(e) {
     if (null == A || N) return;
     let P = (0, i.Z)(),
         w = 'location' in c ? 2 : 1,
-        x = S.default.getCurrentUser();
+        x = T.default.getCurrentUser();
     if (null == x) return;
-    let k = D.ZP.getShelfActivities(E),
-        M = R.Z.getState().shelfOrder,
+    let M = D.ZP.getShelfActivities(E),
+        k = R.Z.getState().shelfOrder,
         j = (0, L.Z)({
             applicationId: r,
-            activityConfigs: k
+            activityConfigs: M
         }),
-        G = 1 + M.findIndex((e) => e === r),
+        G = 1 + k.findIndex((e) => e === r),
         { releasePhase: B } = q(j),
         F = p.Z.getRawThermalState(),
         Z = null != I ? [I] : [],
@@ -185,7 +185,7 @@ function et(e) {
     W[r] = H;
     let Y = K[r];
     (0, C.Ew)(m.nonce) || m.nonce === (null == Y ? void 0 : Y.nonce) || (Y = void 0),
-        T.default.track(V.rMx.ACTIVITY_SESSION_JOINED, {
+        S.default.track(V.rMx.ACTIVITY_SESSION_JOINED, {
             channel_id: g,
             guild_id: E,
             media_session_id: Z[0],
@@ -207,7 +207,7 @@ function et(e) {
             interaction_id: null == Y ? void 0 : Y.interactionId,
             embedded_activity_location_kind: u.kind
         }),
-        T.default.track(V.rMx.ACTIVITY_IFRAME_MOUNT, {
+        S.default.track(V.rMx.ACTIVITY_IFRAME_MOUNT, {
             location_stack: null == Y ? void 0 : Y.locations,
             channel_id: g,
             channel_type: null == b ? void 0 : b.type,
@@ -326,7 +326,7 @@ class er extends c.Z {
                 this.showLaunchErrorModal(f);
                 let b = O.Z.getChannel(o),
                     y = p.Z.getRawThermalState();
-                T.default.track(V.rMx.ACTIVITY_SESSION_JOIN_FAILED, {
+                S.default.track(V.rMx.ACTIVITY_SESSION_JOIN_FAILED, {
                     channel_id: o,
                     guild_id: null != s ? s : null == b ? void 0 : b.getGuildId(),
                     application_id: l,
@@ -352,7 +352,7 @@ class er extends c.Z {
                                 applicationId: r
                             });
                     t.code !== V.$VG.CLOSE_NORMAL &&
-                        (T.default.track(V.rMx.ACTIVITY_CLOSED_RPC_ERROR, {
+                        (S.default.track(V.rMx.ACTIVITY_CLOSED_RPC_ERROR, {
                             rpc_close_code: t.code,
                             rpc_message: t.message,
                             application_id: r
@@ -410,7 +410,7 @@ class er extends c.Z {
                 }
                 let m = D.ZP.getEmbeddedActivitiesForChannel(i).find((e) => e.applicationId === a);
                 (null != (r = null == m ? void 0 : m.userIds.size) ? r : 0) > 0
-                    ? await (0, k.k)({
+                    ? await (0, M.k)({
                           channelId: i,
                           applicationId: a,
                           launchId: null == m ? void 0 : m.launchId,
@@ -418,7 +418,7 @@ class er extends c.Z {
                           analyticsLocations: o,
                           inviterUserId: l
                       })
-                    : await (0, M.Z)({
+                    : await (0, k.Z)({
                           targetApplicationId: a,
                           channelId: i,
                           analyticsLocations: o,

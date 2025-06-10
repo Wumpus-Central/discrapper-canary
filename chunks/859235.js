@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => T,
+    Z: () => S,
     q: () => v
 });
 var r = n(255367),
@@ -93,8 +93,8 @@ var v = (function (e) {
 function I(e) {
     e.stopPropagation();
 }
-function S(e, t) {
-    let { id: n, channelId: i, className: a, children: m, actions: E, handleEditModal: O, keyboardModeEnabled: v, onKeyDown: S, draftType: T, size: A = 1 } = e,
+function T(e, t) {
+    let { id: n, channelId: i, className: a, children: m, actions: E, handleEditModal: O, keyboardModeEnabled: v, onKeyDown: T, draftType: S, size: A = 1 } = e,
         N = (0, s.JA)(n),
         { onFocus: C } = N,
         R = y(N, ['onFocus']),
@@ -105,20 +105,20 @@ function S(e, t) {
             if (v) {
                 switch (e.which) {
                     case _.yXg.D:
-                        e.preventDefault(), c.Z.remove(i, n, T);
+                        e.preventDefault(), c.Z.remove(i, n, S);
                         return;
                     case _.yXg.E:
                         null != O && (e.preventDefault(), O(e));
                         return;
                     case _.yXg.BACKSPACE:
-                        e.ctrlKey ? (e.preventDefault(), c.Z.clearAll(i, T)) : (e.preventDefault(), c.Z.remove(i, n, T));
+                        e.ctrlKey ? (e.preventDefault(), c.Z.clearAll(i, S)) : (e.preventDefault(), c.Z.remove(i, n, S));
                         return;
                     case _.yXg.ARROW_UP:
                         let t = e.shiftKey || e.altKey || e.ctrlKey || e.metaKey;
                         if (t) return;
                         e.preventDefault(), d.S.dispatchToLastSubscribed(_.CkL.FOCUS_MESSAGES, { atEnd: !0 });
                 }
-                null == S || S(e);
+                null == T || T(e);
             }
         };
     return (0, r.jsx)(l.tEY, {
@@ -154,4 +154,4 @@ function S(e, t) {
         )
     });
 }
-let T = i.forwardRef(S);
+let S = i.forwardRef(T);

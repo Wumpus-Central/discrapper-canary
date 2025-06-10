@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => k,
+    Z: () => M,
     v: () => x
 });
 var r = n(255367),
@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(919394),
     v = n(438226),
     I = n(31074),
-    S = n(206295),
-    T = n(91140),
+    T = n(206295),
+    S = n(91140),
     A = n(297781),
     N = n(591853),
     C = n(410441),
@@ -70,11 +70,11 @@ let x = {
         [a.z.XBOX]: h.Z,
         [a.z.PLAYSTATION]: p.Z
     },
-    k = (e) => {
-        let { channel: t, entry: n, disableGameProfileLinks: p, onReaction: h, onVoiceChannelPreview: D, onUserPopoutClosed: k, trackRankingItemInteraction: M } = e,
+    M = (e) => {
+        let { channel: t, entry: n, disableGameProfileLinks: p, onReaction: h, onVoiceChannelPreview: D, onUserPopoutClosed: M, trackRankingItemInteraction: k } = e,
             { largeImage: j } = (0, g.rv)({ entry: n }),
             { user: U, details: G, appName: B, activity: F } = (0, R.n)(n),
-            { primaryColor: V, secondaryColor: Z } = (0, S.Z)(null == j ? void 0 : j.src),
+            { primaryColor: V, secondaryColor: Z } = (0, T.Z)(null == j ? void 0 : j.src),
             H = (0, o.e7)([_.default], () => _.default.locale),
             { streamPreviewUrl: Y, stream: W } = (0, b.Z)(n),
             { displayParticipants: K, participant1: z, participant2: q, numOtherParticipants: X } = (0, E.Z)(n, 3),
@@ -109,7 +109,7 @@ let x = {
         if (null == U) return null;
         let en = (0, r.jsx)(A.Gk, {
                 location: null == Y ? A.Gt.POPOUT : A.Gt.STREAMING_POPOUT,
-                children: T.W.map((e, t) => (0, r.jsx)(e, { entry: n }, t))
+                children: S.W.map((e, t) => (0, r.jsx)(e, { entry: n }, t))
             }),
             er =
                 null == W
@@ -129,8 +129,8 @@ let x = {
                           badges: en,
                           entry: n,
                           disableGameProfileLinks: p,
-                          onUserPopoutClosed: k,
-                          trackRankingItemInteraction: M
+                          onUserPopoutClosed: M,
+                          trackRankingItemInteraction: k
                       })
                     : (0, r.jsx)(N.jL, {
                           channel: t,
@@ -140,8 +140,8 @@ let x = {
                           userDescription: w.t['6oWFUF'],
                           entry: n,
                           stream: W,
-                          onUserPopoutClosed: k,
-                          trackRankingItemInteraction: M
+                          onUserPopoutClosed: M,
+                          trackRankingItemInteraction: k
                       }),
             ei = [
                 (0, l.Z)(F, P.xjy.JOIN) || (0, c.Z)(F)

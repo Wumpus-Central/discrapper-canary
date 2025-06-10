@@ -73,11 +73,11 @@ let _ = [],
             ]),
             v());
     },
-    S = (e) => {
+    T = (e) => {
         let { emoji: t } = e;
         null != t && (_.unshift(t), (_ = (0, a.uniqBy)(_, 'name')).length > d.e5 + 1 && _.pop());
     },
-    T = (e) => {
+    S = (e) => {
         let { userId: t } = e;
         null != p[t] && delete p[t];
     };
@@ -97,8 +97,8 @@ class A extends (i = o.ZP.Store) {
 }
 f(A, 'displayName', 'VoiceChannelEffectsStore');
 let N = new A(l.Z, {
-    VOICE_CHANNEL_EFFECT_CLEAR: T,
-    VOICE_CHANNEL_EFFECT_RECENT_EMOJI: S,
+    VOICE_CHANNEL_EFFECT_CLEAR: S,
+    VOICE_CHANNEL_EFFECT_RECENT_EMOJI: T,
     VOICE_CHANNEL_EFFECT_SEND: I,
     VOICE_CHANNEL_EFFECT_SENT_LOCAL: y,
     VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: O

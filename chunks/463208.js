@@ -1,5 +1,5 @@
 n.d(t, {
-    o: () => S,
+    o: () => T,
     p: () => I
 });
 var r,
@@ -153,7 +153,7 @@ function I(e) {
         })
     });
 }
-class S extends (r = a.Component) {
+class T extends (r = a.Component) {
     componentDidMount() {
         var e, t, n, r;
         null == (e = (t = this.context).setHasValue) || e.call(t, (null != this.props.defaultValue && '' !== this.props.defaultValue) || (null != this.props.value && '' !== this.props.value)), null == (n = (r = this.context).setIsFocused) || n.call(r, !1);
@@ -248,9 +248,9 @@ class S extends (r = a.Component) {
             (this.state = { dirty: null != (t = e.defaultDirty) && t });
     }
 }
-m(S, 'Sizes', v),
-    m(S, 'contextType', u.q3),
-    m(S, 'defaultProps', {
+m(T, 'Sizes', v),
+    m(T, 'contextType', u.q3),
+    m(T, 'defaultProps', {
         name: '',
         size: v.DEFAULT,
         disabled: !1,

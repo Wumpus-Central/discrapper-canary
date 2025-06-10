@@ -43,17 +43,17 @@ function _(e) {
 function p(e) {
     let t,
         n,
-        { header: a, children: f, confirmText: _, cancelText: p, className: h, onConfirm: m, onCancel: g, onClose: E, onCloseCallback: b, bodyClassName: y, transitionState: O, loading: v = !1, confirmButtonColor: I = s.zx.Colors.RED, focusCancel: S = !1, impression: T } = e,
+        { header: a, children: f, confirmText: _, cancelText: p, className: h, onConfirm: m, onCancel: g, onClose: E, onCloseCallback: b, bodyClassName: y, transitionState: O, loading: v = !1, confirmButtonColor: I = s.zx.Colors.RED, focusCancel: T = !1, impression: S } = e,
         A = i.useRef(null),
         N = (0, c.Q3)('ConfirmModal');
     return (
         i.useEffect(() => {
-            S ||
+            T ||
                 setTimeout(() => {
                     var e;
                     return null == (e = A.current) ? void 0 : e.focus();
                 }, 0);
-        }, [S]),
+        }, [T]),
         i.useLayoutEffect(() => () => (null == b ? void 0 : b())),
         null != p &&
             (t = (0, r.jsx)(s.zx, {
@@ -66,7 +66,7 @@ function p(e) {
                 onClick: () => {
                     null == g || g(), E();
                 },
-                autoFocus: S,
+                autoFocus: T,
                 children: p
             })),
         null != _ &&
@@ -83,13 +83,13 @@ function p(e) {
                         throw e;
                     }
                 },
-                autoFocus: !S,
+                autoFocus: !T,
                 children: _
             })),
         (0, r.jsxs)(u.Y0, {
             className: h,
             transitionState: O,
-            impression: T,
+            impression: S,
             parentComponent: 'ConfirmModal',
             children: [
                 null != a

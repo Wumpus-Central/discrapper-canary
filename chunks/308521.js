@@ -276,9 +276,9 @@ function b(e) {
         O = y.height,
         v = y.width,
         I = b[1],
-        S = r.useState(!0),
-        T = S[0],
-        A = S[1],
+        T = r.useState(!0),
+        S = T[0],
+        A = T[1],
         N = d.fitCanvasToArtboardHeight,
         C = d.shouldResizeCanvasToContainer,
         R = d.useDevicePixelRatio,
@@ -287,8 +287,8 @@ function b(e) {
         D = u(P),
         L = null != c ? c : {},
         x = L.maxX,
-        k = L.maxY,
-        M = r.useCallback(
+        M = L.maxY,
+        k = r.useCallback(
             function () {
                 var e,
                     t,
@@ -306,12 +306,12 @@ function b(e) {
                           height: o
                       };
             },
-            [a, N, x, k]
+            [a, N, x, M]
         );
     r.useEffect(
         function () {
             if (C && a.current && n) {
-                var e = M(),
+                var e = k(),
                     t = e.width,
                     r = e.height,
                     o = !1;
@@ -345,10 +345,10 @@ function b(e) {
                         height: r
                     });
                 }
-                l && (T || o) && l && l(), T && A(!1);
+                l && (S || o) && l && l(), S && A(!1);
             }
         },
-        [i, a, w, D, M, T, A, O, v, p, h, l, C, N, R, n]
+        [i, a, w, D, k, S, A, O, v, p, h, l, C, N, R, n]
     ),
         r.useEffect(
             function () {
@@ -388,10 +388,10 @@ var y,
             e
         );
     })(),
-    S = function () {
+    T = function () {
         return y || (y = new I()), y;
     };
-function T(e) {
+function S(e) {
     var t = e.setContainerRef,
         n = e.setCanvasRef,
         r = e.className,
@@ -490,10 +490,10 @@ function A(e, t) {
         }, []),
         v = {
             observe: r.useCallback(function (e, t) {
-                S().registerCallback(e, t);
+                T().registerCallback(e, t);
             }, []),
             unobserve: r.useCallback(function (e) {
-                S().removeCallback(e);
+                T().removeCallback(e);
             }, [])
         },
         I = v.observe,
@@ -539,7 +539,7 @@ function A(e, t) {
     var C = r.useCallback(
         function (e) {
             return a.default.createElement(
-                T,
+                S,
                 o(
                     {
                         setContainerRef: O,

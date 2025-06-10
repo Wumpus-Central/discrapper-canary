@@ -61,11 +61,11 @@ function I(e) {
     let { applicationId: t, error: n } = e;
     g.delete(t), (a = n);
 }
-function S(e) {
+function T(e) {
     let { testModeApplicationId: t } = e;
     r = t;
 }
-class T extends (o = s.ZP.PersistedStore) {
+class S extends (o = s.ZP.PersistedStore) {
     initialize(e) {
         (r = (m = p({}, null != e ? e : h)).applicationId),
             (i = m.originURL),
@@ -111,12 +111,12 @@ class T extends (o = s.ZP.PersistedStore) {
         });
     }
 }
-_(T, 'displayName', 'TestModeStore'), _(T, 'persistKey', 'TestModeStore');
-let A = new T(l.Z, {
+_(S, 'displayName', 'TestModeStore'), _(S, 'persistKey', 'TestModeStore');
+let A = new S(l.Z, {
     DEVELOPER_TEST_MODE_AUTHORIZATION_START: O,
     DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS: v,
     DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: I,
-    OVERLAY_INITIALIZE: S,
+    OVERLAY_INITIALIZE: T,
     DEVELOPER_TEST_MODE_RESET_ERROR: b,
     LOGOUT: y,
     DEVELOPER_TEST_MODE_RESET: y

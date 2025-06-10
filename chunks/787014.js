@@ -38,7 +38,7 @@ function _(e) {
     });
 }
 function p(e) {
-    let { name: t, type: n, topic: r, bitrate: a, userLimit: o, nsfw: s, flags: l, rateLimitPerUser: c, defaultThreadRateLimitPerUser: u, defaultAutoArchiveDuration: d, template: f, defaultReactionEmoji: _, rtcRegion: p, videoQualityMode: h, autoArchiveDuration: m, locked: g, invitable: E, availableTags: b, defaultSortOrder: y, defaultForumLayout: O, defaultTagSetting: v, iconEmoji: I, themeColor: S } = e;
+    let { name: t, type: n, topic: r, bitrate: a, userLimit: o, nsfw: s, flags: l, rateLimitPerUser: c, defaultThreadRateLimitPerUser: u, defaultAutoArchiveDuration: d, template: f, defaultReactionEmoji: _, rtcRegion: p, videoQualityMode: h, autoArchiveDuration: m, locked: g, invitable: E, availableTags: b, defaultSortOrder: y, defaultForumLayout: O, defaultTagSetting: v, iconEmoji: I, themeColor: T } = e;
     i.Z.dispatch({
         type: 'CHANNEL_SETTINGS_UPDATE',
         name: t,
@@ -63,11 +63,11 @@ function p(e) {
         defaultForumLayout: O,
         defaultTagSetting: v,
         iconEmoji: I,
-        themeColor: S
+        themeColor: T
     });
 }
 async function h(e, t) {
-    let { name: n, type: l, position: u, topic: d, bitrate: f, userLimit: _, nsfw: p, flags: h, permissionOverwrites: m, rateLimitPerUser: g, defaultThreadRateLimitPerUser: E, defaultAutoArchiveDuration: b, template: y, defaultReactionEmoji: O, rtcRegion: v, videoQualityMode: I, autoArchiveDuration: S, locked: T, invitable: A, availableTags: N, defaultSortOrder: C, defaultForumLayout: R, defaultTagSetting: P, iconEmoji: w, themeColor: D } = t,
+    let { name: n, type: l, position: u, topic: d, bitrate: f, userLimit: _, nsfw: p, flags: h, permissionOverwrites: m, rateLimitPerUser: g, defaultThreadRateLimitPerUser: E, defaultAutoArchiveDuration: b, template: y, defaultReactionEmoji: O, rtcRegion: v, videoQualityMode: I, autoArchiveDuration: T, locked: S, invitable: A, availableTags: N, defaultSortOrder: C, defaultForumLayout: R, defaultTagSetting: P, iconEmoji: w, themeColor: D } = t,
         L = s.Z.getChannel(e);
     return (
         i.Z.dispatch({ type: 'CHANNEL_SETTINGS_SUBMIT' }),
@@ -91,8 +91,8 @@ async function h(e, t) {
                     template: y,
                     rtc_region: v,
                     video_quality_mode: I,
-                    auto_archive_duration: S,
-                    locked: T,
+                    auto_archive_duration: T,
+                    locked: S,
                     invitable: A,
                     default_reaction_emoji:
                         null != O

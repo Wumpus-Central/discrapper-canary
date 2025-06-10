@@ -2,18 +2,18 @@ n.d(t, {
     DK: () => I,
     Dx: () => v,
     EJ: () => L,
-    Ee: () => S,
+    Ee: () => T,
     Hh: () => D,
     II: () => R,
     MC: () => C,
     Vj: () => N,
-    ZP: () => M,
+    ZP: () => k,
     gO: () => P,
     i_: () => w,
     jQ: () => x,
     qE: () => A,
-    v6: () => k,
-    zx: () => T
+    v6: () => M,
+    zx: () => S
 }),
     n(953529),
     n(472816),
@@ -103,7 +103,7 @@ let v = (e) => {
             children: n
         });
     },
-    S = (e) => {
+    T = (e) => {
         let { className: t, src: n } = e;
         return (0, r.jsx)('img', {
             alt: '',
@@ -111,7 +111,7 @@ let v = (e) => {
             className: a()(m.image, t)
         });
     },
-    T = (e) => {
+    S = (e) => {
         var { className: t } = e,
             n = b(e, ['className']);
         let i = n.look === o.zxk.Looks.LINK;
@@ -130,7 +130,7 @@ let v = (e) => {
             )
         );
     };
-(T.Looks = o.zxk.Looks), (T.Colors = o.zxk.Colors), (T.Sizes = o.zxk.Sizes);
+(S.Looks = o.zxk.Looks), (S.Colors = o.zxk.Colors), (S.Sizes = o.zxk.Sizes);
 let A = (e) => {
         let { className: t, src: n, size: i } = e;
         return (0, r.jsx)(O, {
@@ -163,14 +163,14 @@ let C = (e) => {
 C.Sizes = o.EFr;
 let R = (e) => {
         let { label: t, error: n, placeholder: i, value: s, className: l, inputClassName: c, setRef: d, type: f = 'text', onChange: _, autoComplete: p, autoFocus: h, maxLength: g, spellCheck: E, name: b, description: y, required: O, onFocus: v, onBlur: I } = e,
-            S = (0, u.Dt)();
+            T = (0, u.Dt)();
         return (0, r.jsxs)(o.xJW, {
             title: t,
             error: n,
             className: l,
             required: O,
             tag: 'label',
-            htmlFor: S,
+            htmlFor: T,
             children: [
                 (0, r.jsx)(o.oil, {
                     name: b,
@@ -185,7 +185,7 @@ let R = (e) => {
                     autoFocus: h,
                     maxLength: g,
                     spellCheck: E,
-                    id: S,
+                    id: T,
                     onFocus: v,
                     onBlur: I
                 }),
@@ -293,12 +293,12 @@ let R = (e) => {
                   ]
               });
     },
-    k = (e) => {
+    M = (e) => {
         let { className: t } = e;
         return (0, r.jsxs)(P, {
             className: t,
             children: [
-                (0, r.jsx)(T, {
+                (0, r.jsx)(S, {
                     onClick: () => window.open((0, f.t3)()),
                     children: h.intl.format(h.t.JoS1i4, { platform: (0, f.DW)() })
                 }),
@@ -309,7 +309,7 @@ let R = (e) => {
             ]
         });
     },
-    M = (e) => {
+    k = (e) => {
         let { className: t, contentClassName: n, tag: i = 'section', onSubmit: s, children: l, expanded: c = !1, theme: u = p.BRd.DARK, style: d } = e;
         return (0, r.jsx)(o.f6W, {
             theme: u,

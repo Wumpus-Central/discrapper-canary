@@ -82,7 +82,7 @@ function v(e) {
             return null == (n = d.Z.getStateForGuild(t.id)) || null == (e = n.powerupCatalog) ? void 0 : e[_.Us.PERK];
         }),
         [v, I] = i.useState(!1),
-        [S, T] = (0, u.q_F)(() => ({
+        [T, S] = (0, u.q_F)(() => ({
             scale: 0.8,
             config: {
                 tension: 500,
@@ -91,10 +91,10 @@ function v(e) {
         }));
     i.useEffect(() => {
         let e = setTimeout(() => {
-            T({ scale: 1 }), I(!0);
+            S({ scale: 1 }), I(!0);
         }, 300);
         return () => clearTimeout(e);
-    }, [T]);
+    }, [S]);
     let A = i.useMemo(() => {
         let e;
         if (null == b || 0 === b.length) return '';
@@ -116,7 +116,7 @@ function v(e) {
     return g && null != b && 0 !== b.length
         ? (0, r.jsxs)(s.animated.div, {
               className: o()(m.container, { [m.themeResponsiveContainer]: n }),
-              style: y(E({}, S), { opacity: +!!v }),
+              style: y(E({}, T), { opacity: +!!v }),
               children: [
                   (0, r.jsx)(l.xv, {
                       tag: 'span',

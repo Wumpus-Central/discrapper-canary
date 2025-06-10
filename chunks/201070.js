@@ -75,10 +75,10 @@ function O(e, t) {
 }
 let v = -1,
     I = new s.Yd('MemberSafetySearchManager');
-function S(e) {
+function T(e) {
     return 'guild_'.concat(e);
 }
-function T(e) {
+function S(e) {
     return {
         requestState: e,
         abortController: null,
@@ -94,7 +94,7 @@ let A = (0, o.U)((e) => ({}));
 function N(e, t) {
     let n = A.getState()[e];
     return (
-        null == n && (n = T(1)),
+        null == n && (n = S(1)),
         (n = b({}, n, t)),
         (0, l.j)(() => {
             A.setState((t) => O(b({}, t), { [e]: n }));
@@ -107,7 +107,7 @@ function C(e) {
 }
 function R(e) {
     let t = C(e);
-    return null == t && N(e, (t = T(1))), t;
+    return null == t && N(e, (t = S(1))), t;
 }
 function P(e) {
     (0, l.j)(() => {
@@ -157,17 +157,17 @@ function x(e) {
         lastUpdated: Date.now()
     });
 }
-function k(e) {
-    P(S(e));
-}
 function M(e) {
+    P(T(e));
+}
+function k(e) {
     return null != e && e.length > 1;
 }
 function j(e) {
     let t = {},
         n = {},
         { query: r } = e;
-    if (M(r)) {
+    if (k(r)) {
         let [e, n] = (0, p.C)(r);
         e.length > 0 && (t.usernames = { or_query: e }), n.length > 0 && (t.user_id = { or_query: n });
     }
@@ -227,7 +227,7 @@ function B(e) {
 function F(e, t) {
     var n;
     let { currentPageChunkNumber: r, previousPageChunkNumber: i, nextPageChunkNumber: a } = B(t),
-        { previousPagination: o } = R(S(e)),
+        { previousPagination: o } = R(T(e)),
         s = t.currentPage,
         l = null != (n = null == o ? void 0 : o.currentPage) ? n : 0,
         c = g.Z.getElasticSearchPaginationByGuildId(e);
@@ -290,7 +290,7 @@ async function H(e) {
     var t, n, r;
     let i = g.Z.getSearchStateByGuildId(e),
         o = g.Z.getPaginationStateByGuildId(e),
-        s = S(e),
+        s = T(e),
         l = R(s),
         [c, u] = V(e, l, o),
         d = U(j(i), u),
@@ -317,23 +317,23 @@ async function H(e) {
 function Y(e) {
     return A((t) => {
         var n;
-        return (null == (n = t[S(e)]) ? void 0 : n.requestState) === 2;
+        return (null == (n = t[T(e)]) ? void 0 : n.requestState) === 2;
     });
 }
 function W(e) {
     return A((t) => {
         var n;
-        return (null == (n = t[S(e)]) ? void 0 : n.requestState) === 4;
+        return (null == (n = t[T(e)]) ? void 0 : n.requestState) === 4;
     });
 }
 class K extends u.Z {
     handleInitialize(e) {
         let { guildId: t } = e;
-        return k(t), H(t);
+        return M(t), H(t);
     }
     handleGuildDelete(e) {
         let { guild: t } = e;
-        return k(t.id);
+        return M(t.id);
     }
     handleSearchStateUpdate(e) {
         let { guildId: t } = e;
@@ -345,11 +345,11 @@ class K extends u.Z {
     }
     handleGuildMemberSearchSuccess(e) {
         let { guildId: t } = e;
-        return L(S(t));
+        return L(T(t));
     }
     handleGuildMemberSearchStillIndexing(e) {
         let { guildId: t } = e;
-        return x(S(t));
+        return x(T(t));
     }
     handleNewMemberTimestampRefresh(e) {
         let { guildId: t } = e;

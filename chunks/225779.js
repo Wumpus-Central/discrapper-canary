@@ -2,8 +2,8 @@ n.d(t, {
     DM: () => E,
     Ey: () => b,
     No: () => v,
-    Ry: () => S,
-    qX: () => T,
+    Ry: () => T,
+    qX: () => S,
     u3: () => I
 });
 var r = n(255367);
@@ -139,7 +139,7 @@ function I(e) {
         })
     );
 }
-function S(e) {
+function T(e) {
     let { onClick: t, noticeType: n } = e;
     return (0, r.jsx)(s.P3F, {
         focusProps: { offset: 6 },
@@ -155,7 +155,7 @@ function S(e) {
         })
     });
 }
-function T(e) {
+function S(e) {
     let { color: t = E.DEFAULT, className: n, style: i, children: s } = e;
     return (0, r.jsx)('div', {
         className: a()(d.notice, { [d.isMobile]: o.tq }, n, t),

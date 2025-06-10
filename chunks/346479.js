@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(997841);
+n.d(t, { Z: () => T }), n(997841);
 var r = n(697988),
     i = n(544891),
     a = n(570140),
@@ -50,7 +50,7 @@ function I(e, t) {
         isJoining: t
     });
 }
-let S = {
+let T = {
     archiveThread(e, t) {
         let n = { archived: !0 };
         return t && (n.locked = !0), v(e, n);

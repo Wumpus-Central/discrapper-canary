@@ -75,12 +75,12 @@ let O = function (e) {
             guildId: t,
             leaderboardId: g
         }),
-        S = g === _.z;
-    if ((!S || (null != O && null != v)) && !b) return null;
-    let T = s.Z.get(p.ABu.RIOT_GAMES),
-        A = S && null == O && null == v,
-        N = S && null != O && null == v,
-        C = S && null == O && null != v,
+        T = g === _.z;
+    if ((!T || (null != O && null != v)) && !b) return null;
+    let S = s.Z.get(p.ABu.RIOT_GAMES),
+        A = T && null == O && null == v,
+        N = T && null != O && null == v,
+        C = T && null == O && null != v,
         R = N || C;
     function P() {
         null != I &&
@@ -132,11 +132,11 @@ let O = function (e) {
                 innerClassName: m.joinLeaderboardButtonInner,
                 onClick: w,
                 children: [
-                    S &&
+                    T &&
                         !b &&
                         (0, r.jsx)('img', {
                             alt: 'Riot Games',
-                            src: T.icon.whiteSVG,
+                            src: S.icon.whiteSVG,
                             className: m.riotIcon
                         }),
                     D()

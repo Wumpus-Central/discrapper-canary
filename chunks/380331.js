@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(543241),
     v = n(883661),
     I = n(880949),
-    S = n(784222),
-    T = n(149203),
+    T = n(784222),
+    S = n(149203),
     A = n(981631),
     N = n(957825),
     C = n(388032),
@@ -79,24 +79,24 @@ function L(e, t) {
     );
 }
 let x = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
-    k = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL),
-    M = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
+    M = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL),
+    k = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
     j = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL),
     U = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_PADDING),
     G = (0, y.Mg)(R.__invalid_unicodeCategoryShortcutHeight),
     B = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
     F = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-    V = M + k + 2 * U,
-    Z = x + k,
+    V = k + M + 2 * U,
+    Z = x + M,
     H = Z + (B + 2 * F),
-    Y = M + j + 2 * U,
+    Y = k + j + 2 * U,
     W = 7;
 function K(e) {
     let { activeIndex: t, categoryIndex: n, analyticsContext: a, categories: s, category: l, handleCategorySelect: u, isWindowFocused: d, useReducedMotion: _ } = e,
         p = (0, c.JA)('expression-guild-'.concat(n)),
-        h = l.type === T.En.GUILD ? null : l.id,
+        h = l.type === S.En.GUILD ? null : l.id,
         m = t === n,
-        E = l.type === T.En.GUILD ? l.guild : null,
+        E = l.type === S.En.GUILD ? l.guild : null,
         y = (0, r.jsxs)(
             f.P3F,
             L(w({}, p), {
@@ -105,7 +105,7 @@ function K(e) {
                     [R.categoryItemGuildCategory]: null != E,
                     [R.categoryItemDefaultCategory]: null == E,
                     [R.categoryItemDefaultCategorySelected]: null == E && m,
-                    [R.categoryItemRecentEmoji]: l.type === T.En.RECENT
+                    [R.categoryItemRecentEmoji]: l.type === S.En.RECENT
                 }),
                 onClick: () => {
                     null != E &&
@@ -129,16 +129,16 @@ function K(e) {
                         ? (0, r.jsx)(v.Z, {
                               categoryId: h,
                               className: R.categoryIcon,
-                              height: M,
-                              width: M,
+                              height: k,
+                              width: k,
                               size: 'custom'
                           })
                         : null
                 ]
             })
         ),
-        S = s[n + 1],
-        C = null != S && l.type === T.En.GUILD && S.type !== T.En.GUILD;
+        T = s[n + 1],
+        C = null != T && l.type === S.En.GUILD && T.type !== S.En.GUILD;
     return null != E
         ? (0, r.jsxs)(i.Fragment, {
               children: [
@@ -155,7 +155,7 @@ function K(e) {
 let z = (e) => {
     let { className: t, emojiListRef: n, sectionDescriptors: a, intention: s, channel: c, shouldShowSoundmojiInEmojiPicker: d = !1, showOnlyUnicode: g = !1 } = e,
         b = h.kJ.useStore((e) => e.activeCategoryIndex),
-        y = (0, S.Ni)({
+        y = (0, T.Ni)({
             sectionDescriptors: a,
             emojiListRef: n
         }),
@@ -191,10 +191,10 @@ let z = (e) => {
         x = i.useCallback(
             (e, t) => {
                 let n = A[t];
-                if (n.type === T.En.RECENT) return V;
-                if (n.type === T.En.GUILD) {
+                if (n.type === S.En.RECENT) return V;
+                if (n.type === S.En.GUILD) {
                     let e = A[t + 1];
-                    return null != e && e.type !== T.En.GUILD ? H : Z;
+                    return null != e && e.type !== S.En.GUILD ? H : Z;
                 }
                 return Y;
             },
@@ -211,7 +211,7 @@ let z = (e) => {
                 n = 0,
                 r = 0;
             A.forEach((i) => {
-                i.type === T.En.GUILD ? ((t += 1), (n += 1)) : i.type === T.En.UNICODE ? (r += 1) : ((e += 1), (t += 1));
+                i.type === S.En.GUILD ? ((t += 1), (n += 1)) : i.type === S.En.UNICODE ? (r += 1) : ((e += 1), (t += 1));
             });
             let i = V + t * Z + H;
             return {
@@ -245,12 +245,12 @@ let z = (e) => {
                 let n = A[e];
                 if (null == n) return 0;
                 let r = Q ? G : 0;
-                if (n.type === T.En.RECENT) return t ? 0 : j;
-                if (n.type === T.En.GUILD) {
+                if (n.type === S.En.RECENT) return t ? 0 : j;
+                if (n.type === S.En.GUILD) {
                     let n = A[e + 1];
-                    return null != n && n.type !== T.En.GUILD ? (t ? B + -2 * F + k + r : k) : t ? r : k;
+                    return null != n && n.type !== S.En.GUILD ? (t ? B + -2 * F + M + r : M) : t ? r : M;
                 }
-                return t ? k + r : 2 * k;
+                return t ? M + r : 2 * M;
             },
             [A, Q]
         ),
@@ -289,8 +289,8 @@ let z = (e) => {
                     children: (0, r.jsx)(f.EO4, {
                         size: 'custom',
                         color: 'currentColor',
-                        height: M,
-                        width: M
+                        height: k,
+                        width: k
                     })
                 },
                 er

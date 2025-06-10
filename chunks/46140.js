@@ -1,6 +1,6 @@
 n.d(t, {
     Dp: () => E,
-    Jp: () => T,
+    Jp: () => S,
     Lv: () => I,
     NH: () => m,
     Ot: () => u,
@@ -16,7 +16,7 @@ n.d(t, {
     dr: () => c,
     l$: () => v,
     tD: () => p,
-    tt: () => S,
+    tt: () => T,
     v6: () => O
 }),
     n(388685);
@@ -57,5 +57,5 @@ let y = '1333839522189938740',
     O = new Set([o.Ok.DESKTOP_ACCOUNT_PANEL_AREA, o.Ok.MOBILE_HOME_DOCK_AREA]),
     v = new Set([r.X.STREAM_ON_DESKTOP, r.X.PLAY_ON_DESKTOP, r.X.PLAY_ON_XBOX, r.X.PLAY_ON_PLAYSTATION, r.X.PLAY_ON_DESKTOP_V2]),
     I = new Set([r.X.STREAM_ON_DESKTOP, r.X.PLAY_ON_DESKTOP, r.X.PLAY_ON_XBOX, r.X.PLAY_ON_PLAYSTATION, r.X.PLAY_ON_DESKTOP_V2]),
-    S = new Set([r.X.STREAM_ON_DESKTOP, r.X.PLAY_ON_DESKTOP, r.X.PLAY_ON_XBOX, r.X.PLAY_ON_PLAYSTATION, r.X.PLAY_ON_DESKTOP_V2]),
-    T = { is_targeted: !1 };
+    T = new Set([r.X.STREAM_ON_DESKTOP, r.X.PLAY_ON_DESKTOP, r.X.PLAY_ON_XBOX, r.X.PLAY_ON_PLAYSTATION, r.X.PLAY_ON_DESKTOP_V2]),
+    S = { is_targeted: !1 };

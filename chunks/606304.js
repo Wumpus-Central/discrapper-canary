@@ -71,7 +71,7 @@ function I(e) {
     let { user: t, sessionId: n } = e;
     (h = t.id), (m = n), (g = null);
 }
-function S(e) {
+function T(e) {
     let { context: t, userId: n, speakingFlags: r } = e;
     if ((r & f.Dg.PRIORITY) === f.Dg.PRIORITY) {
         let e = s.Z.getChannel(u.Z.getVoiceChannelId());
@@ -86,7 +86,7 @@ function S(e) {
     }
     return (r & f.Dg.HIDDEN) === f.Dg.HIDDEN && (r = 0), v(t, n, r);
 }
-function T(e) {
+function S(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         let { userId: n, channelId: r, sessionId: i } = t,
@@ -147,6 +147,6 @@ _(A, 'displayName', 'SpeakingStore');
 let N = new A(a.Z, {
     CONNECTION_OPEN: I,
     OVERLAY_INITIALIZE: I,
-    SPEAKING: S,
-    VOICE_STATE_UPDATES: T
+    SPEAKING: T,
+    VOICE_STATE_UPDATES: S
 });

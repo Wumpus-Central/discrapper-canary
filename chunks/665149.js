@@ -74,7 +74,7 @@ let g = 24,
               });
     },
     b = i.forwardRef(function (e, t) {
-        let { className: n, iconClassName: i, children: a, selected: s = !1, disabled: l = !1, showBadge: u = !1, badgePosition: _ = 'bottom', color: h, foreground: E, background: b, icon: y, iconSize: O = g, onClick: v, onContextMenu: I, tooltip: S = null, tooltipColor: T, tooltipPosition: A = 'bottom', tooltipDisabled: N, tooltipSpacing: C, hideOnClick: R = !0, role: P, 'aria-label': w, 'aria-hidden': D, 'aria-checked': L, 'aria-expanded': x, 'aria-haspopup': k, 'data-jump-section': M } = e,
+        let { className: n, iconClassName: i, children: a, selected: s = !1, disabled: l = !1, showBadge: u = !1, badgePosition: _ = 'bottom', color: h, foreground: E, background: b, icon: y, iconSize: O = g, onClick: v, onContextMenu: I, tooltip: T = null, tooltipColor: S, tooltipPosition: A = 'bottom', tooltipDisabled: N, tooltipSpacing: C, hideOnClick: R = !0, role: P, 'aria-label': w, 'aria-hidden': D, 'aria-checked': L, 'aria-expanded': x, 'aria-haspopup': M, 'data-jump-section': k } = e,
             j = (0, f.Q3)('BaseHeaderBar'),
             U = null != b ? { secondaryColorClass: b } : {},
             G = (0, r.jsx)(
@@ -95,16 +95,16 @@ let g = 24,
             ),
             B = w;
         return (
-            null == B && 'string' == typeof S && (B = S),
+            null == B && 'string' == typeof T && (B = T),
             (0, r.jsx)(c.ua7, {
-                text: S,
-                color: T,
+                text: T,
+                color: S,
                 position: A,
                 hideOnClick: R,
                 shouldShow: !N,
                 spacing: C,
                 children: (e) => {
-                    let { onMouseEnter: f, onMouseLeave: g, onFocus: b, onBlur: S } = e;
+                    let { onMouseEnter: f, onMouseLeave: g, onFocus: b, onBlur: T } = e;
                     return null == v
                         ? (0, r.jsx)('div', {
                               ref: t,
@@ -125,7 +125,7 @@ let g = 24,
                                           onMouseEnter: f,
                                           onMouseLeave: g,
                                           onFocus: b,
-                                          onBlur: S
+                                          onBlur: T
                                       },
                                       U
                                   )
@@ -139,7 +139,7 @@ let g = 24,
                               onMouseEnter: f,
                               onMouseLeave: g,
                               onFocus: b,
-                              onBlur: S,
+                              onBlur: T,
                               className: o()(n, {
                                   [p.iconWrapper]: !0,
                                   [p.clickable]: !l && null != v,
@@ -150,10 +150,10 @@ let g = 24,
                               'aria-label': B,
                               'aria-hidden': D,
                               'aria-checked': L,
-                              'aria-haspopup': k,
+                              'aria-haspopup': M,
                               'aria-expanded': x,
                               tabIndex: l || null == v ? -1 : 0,
-                              'data-jump-section': M,
+                              'data-jump-section': k,
                               children: [
                                   u
                                       ? (0, r.jsx)(d.ZP, {

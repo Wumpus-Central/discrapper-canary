@@ -1,6 +1,6 @@
 n.d(t, {
     M: () => f,
-    Z: () => S
+    Z: () => T
 });
 var r,
     i = n(392711),
@@ -140,7 +140,7 @@ class I extends (r = o.ZP.Store) {
     }
 }
 l(I, 'displayName', void 0);
-let S = new I(s.Z, {
+let T = new I(s.Z, {
     APPLICATION_DIRECTORY_FETCH_COLLECTIONS: E,
     APPLICATION_DIRECTORY_FETCH_COLLECTIONS_SUCCESS: O,
     APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE: v

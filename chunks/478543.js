@@ -88,7 +88,7 @@ function I(e) {
         ]
     });
 }
-function S(e) {
+function T(e) {
     let t,
         n,
         r,
@@ -96,7 +96,7 @@ function S(e) {
         _ = ['discord_web'];
     h.isPlatformEmbedded || _.push('discord_marketing', 'discord_developers');
     let p = (0, m.Z)(a, _);
-    if (!p.valid) return T(p.reason);
+    if (!p.valid) return S(p.reason);
     l()(null != a, 'BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved');
     let { discord_web: g, discord_developers: b } = a.targetBuildOverride,
         O = null != g ? g : b;
@@ -121,7 +121,7 @@ function S(e) {
         submitting: f
     });
 }
-function T(e) {
+function S(e) {
     return I({
         subHead: E.intl.string(E.t.ODXApK),
         buttonColor: c.zxk.Colors.TRANSPARENT,
@@ -172,7 +172,7 @@ let N = (e) => {
                     (0, r.jsx)(f.Z, { className: b.icon }),
                     t
                         ? v()
-                        : S({
+                        : T({
                               currentOverrides: n,
                               linkMeta: a,
                               applyBuildOverride: d,

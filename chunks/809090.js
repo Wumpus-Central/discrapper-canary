@@ -83,18 +83,18 @@ function g(e, t) {
 function E(e) {
     var { section: t, isSelected: n, width: a, height: f, className: p, selectable: g = !1, isSquircle: E, onFocus: b, onBlur: y, onMouseOver: O, onMouseLeave: v } = e,
         I = m(e, ['section', 'isSelected', 'width', 'height', 'className', 'selectable', 'isSquircle', 'onFocus', 'onBlur', 'onMouseOver', 'onMouseLeave']);
-    let [S, T] = i.useState(!1),
+    let [T, S] = i.useState(!1),
         A = i.useCallback(() => {
-            T(!0), null == b || b();
+            S(!0), null == b || b();
         }, [b]),
         N = i.useCallback(() => {
-            T(!1), null == y || y();
+            S(!1), null == y || y();
         }, [y]),
         C = i.useCallback(() => {
-            T(!0), null == O || O();
+            S(!0), null == O || O();
         }, [O]),
         R = i.useCallback(() => {
-            T(!1), null == v || v();
+            S(!1), null == v || v();
         }, [v]),
         P = i.useMemo(() => {
             var e;
@@ -121,7 +121,7 @@ function E(e) {
             onMouseLeave: R,
             children: (0, r.jsx)(s.ZP, {
                 className: u.mask,
-                mask: E || (g && (n || S)) ? s.QS.SQUIRCLE : s.QS.AVATAR_DEFAULT,
+                mask: E || (g && (n || T)) ? s.QS.SQUIRCLE : s.QS.AVATAR_DEFAULT,
                 width: a,
                 height: f,
                 children: (0, r.jsx)('img', {

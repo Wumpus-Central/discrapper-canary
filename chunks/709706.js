@@ -136,10 +136,10 @@ function I(e) {
             }));
     (g.voiceFilters = n), (g.sortedVoiceFilters = v(g.voiceFilters)), (g.catalogLastFetchTime = new Date());
 }
-function S() {
+function T() {
     g.catalogFetchFailed = !0;
 }
-function T(e) {
+function S(e) {
     let { modelState: t } = e;
     g.modelState = t;
 }
@@ -250,10 +250,10 @@ function L(e) {
 function x() {
     g.error = 'ERROR_ACTIVATING_VOICE_FILTER';
 }
-function k() {
+function M() {
     g.error = null;
 }
-function M() {
+function k() {
     E = Date.now();
 }
 d(A, 'displayName', 'VoiceFilterStore');
@@ -263,12 +263,12 @@ let j = new A(l.Z, {
     VOICE_FILTER_DOWNLOAD_FAILED: P,
     VOICE_FILTER_FILE_READY: w,
     VOICE_FILTER_CATALOG_FETCH_SUCCESS: I,
-    VOICE_FILTER_CATALOG_FETCH_FAILED: S,
-    VOICE_FILTER_SET_MODEL_STATE: T,
+    VOICE_FILTER_CATALOG_FETCH_FAILED: T,
+    VOICE_FILTER_SET_MODEL_STATE: S,
     VOICE_FILTER_UPDATE_LIMITED_TIME_VOICES: N,
     VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME: D,
     VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE: L,
     VOICE_FILTER_APPLY_FAILED: x,
-    VOICE_FILTER_REQUEST_SWITCH: k,
-    VOICE_FILTER_LAGGING: M
+    VOICE_FILTER_REQUEST_SWITCH: M,
+    VOICE_FILTER_LAGGING: k
 });

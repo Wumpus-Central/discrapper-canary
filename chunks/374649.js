@@ -1,6 +1,6 @@
 n.d(t, {
-    ED: () => S,
-    Ox: () => T,
+    ED: () => T,
+    Ox: () => S,
     hz: () => b,
     o5: () => I,
     pV: () => A
@@ -217,7 +217,7 @@ function I(e) {
         (0, r.useCallback)(() => y(t.current), [n])
     );
 }
-function S(e) {
+function T(e) {
     if ('subscriptionId' in e && null == e.subscriptionId) {
         let { subscriptionId: t } = e;
         e = m(e, ['subscriptionId']);
@@ -233,7 +233,7 @@ function S(e) {
         }, [n]);
     return v(e, i);
 }
-function T(e) {
+function S(e) {
     let t = (0, r.useRef)(e);
     (0, r.useEffect)(() => {
         t.current = e;

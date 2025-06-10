@@ -116,7 +116,7 @@ function I(e) {
     if (o && !f) return !1;
     (p[n] = d({}, c)), 'MESSAGE_REACTION_ADD' === t ? (p[n].firstMessage = c.firstMessage.addReaction(a, f, e.colors, s)) : (p[n].firstMessage = c.firstMessage.removeReaction(a, f, s));
 }
-function S(e) {
+function T(e) {
     let { channelId: t, messageId: n, reactions: r } = e,
         i = p[t];
     if (null == i || null == i.firstMessage || n !== i.firstMessage.id) return !1;
@@ -124,7 +124,7 @@ function S(e) {
         o = i.firstMessage.addReactionBatch(r, null == a ? void 0 : a.id);
     p[t] = _(d({}, i), { firstMessage: o });
 }
-function T(e) {
+function S(e) {
     let { channelId: t, messageId: n } = e,
         r = p[t];
     if (null == r || null == r.firstMessage || n !== r.firstMessage.id) return !1;
@@ -174,9 +174,9 @@ let R = new C(a.Z, {
     THREAD_CREATE: v,
     MESSAGE_REACTION_ADD: I,
     MESSAGE_REACTION_REMOVE: I,
-    MESSAGE_REACTION_REMOVE_ALL: T,
+    MESSAGE_REACTION_REMOVE_ALL: S,
     MESSAGE_REACTION_REMOVE_EMOJI: A,
-    MESSAGE_REACTION_ADD_MANY: S,
+    MESSAGE_REACTION_ADD_MANY: T,
     LOAD_FORUM_POSTS: m,
     LOAD_THREADS_SUCCESS: g,
     LOAD_ARCHIVED_THREADS_SUCCESS: g,

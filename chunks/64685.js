@@ -1,26 +1,26 @@
 a.d(e, {
-    Uf: () => s,
-    cf: () => E
+    Uf: () => E,
+    cf: () => s
 });
 var r = a(573736),
-    n = a(370336),
-    _ = a(694043),
+    _ = a(370336),
+    n = a(694043),
     o = a(101284),
     i = a(899517),
     c = a(578346);
-function s(t, e) {
+function E(t, e) {
     let a = 'fetch';
     (0, c.Hj)(a, t), (0, c.D2)(a, () => l(void 0, e));
 }
-function E(t) {
+function s(t) {
     let e = 'fetch-body-resolved';
     (0, c.Hj)(e, t), (0, c.D2)(e, () => l(u));
 }
 function l(t, e = !1) {
-    (!e || (0, _.t$)()) &&
-        (0, n.hl)(i.n, 'fetch', function (e) {
+    (!e || (0, n.t$)()) &&
+        (0, _.hl)(i.n, 'fetch', function (e) {
             return function (...a) {
-                let { method: _, url: s } = (function (t) {
+                let { method: n, url: E } = (function (t) {
                         if (0 === t.length)
                             return {
                                 method: 'GET',
@@ -39,22 +39,22 @@ function l(t, e = !1) {
                             method: I(e, 'method') ? String(e.method).toUpperCase() : 'GET'
                         };
                     })(a),
-                    E = {
+                    s = {
                         args: a,
                         fetchData: {
-                            method: _,
-                            url: s
+                            method: n,
+                            url: E
                         },
                         startTimestamp: 1000 * (0, o.ph)()
                     };
-                t || (0, c.rK)('fetch', { ...E });
+                t || (0, c.rK)('fetch', { ...s });
                 let l = Error().stack;
                 return e.apply(i.n, a).then(
                     async (e) => {
                         if (t) t(e);
                         else {
                             let t = {
-                                ...E,
+                                ...s,
                                 endTimestamp: 1000 * (0, o.ph)(),
                                 response: e
                             };
@@ -65,11 +65,11 @@ function l(t, e = !1) {
                     (e) => {
                         if (!t) {
                             let t = {
-                                ...E,
+                                ...s,
                                 endTimestamp: 1000 * (0, o.ph)(),
                                 error: e
                             };
-                            throw ((0, c.rK)('fetch', t), (0, r.VZ)(e) && void 0 === e.stack && ((e.stack = l), (0, n.xp)(e, 'framesToPop', 1)), e);
+                            throw ((0, c.rK)('fetch', t), (0, r.VZ)(e) && void 0 === e.stack && ((e.stack = l), (0, _.xp)(e, 'framesToPop', 1)), e);
                         }
                     }
                 );

@@ -1,11 +1,11 @@
-a.d(e, { x: () => s });
+a.d(e, { x: () => E });
 var r = a(696486),
-    n = a(151122),
-    _ = a(622916),
+    _ = a(151122),
+    n = a(622916),
     o = a(454463),
     i = a(243309),
     c = a(748688);
-let s = (0, n._I)(() => ({
+let E = (0, _._I)(() => ({
     name: 'BrowserProfiling',
     setup(t) {
         let e = (0, r.HN)(),
@@ -22,19 +22,19 @@ let s = (0, n._I)(() => ({
                 for (let t of e) {
                     let e = t && t.contexts,
                         r = e && e.profile && e.profile.profile_id,
-                        n = e && e.profile && e.profile.start_timestamp;
+                        _ = e && e.profile && e.profile.start_timestamp;
                     if ('string' != typeof r || !r) {
-                        o.X && _.kg.log('[Profiling] cannot find profile for a span without a profile context');
+                        o.X && n.kg.log('[Profiling] cannot find profile for a span without a profile context');
                         continue;
                     }
                     e && e.profile && delete e.profile;
                     let i = (0, c.GC)(r);
                     if (!i) {
-                        o.X && _.kg.log(`[Profiling] Could not retrieve profile for span: ${r}`);
+                        o.X && n.kg.log(`[Profiling] Could not retrieve profile for span: ${r}`);
                         continue;
                     }
-                    let s = (0, c.nm)(r, n, i, t);
-                    s && a.push(s);
+                    let E = (0, c.nm)(r, _, i, t);
+                    E && a.push(E);
                 }
                 (0, c.db)(t, a);
             });

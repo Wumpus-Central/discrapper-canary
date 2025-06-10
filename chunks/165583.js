@@ -24,8 +24,8 @@ var r = n(255367),
     O = n(424218),
     v = n(74538),
     I = n(960048),
-    S = n(861990),
-    T = n(98278),
+    T = n(861990),
+    S = n(98278),
     A = n(639119),
     N = n(767714),
     C = n(382791),
@@ -46,7 +46,7 @@ function x(e) {
     let r = t.diff(u()(), 'minutes');
     return w.intl.formatToPlainString(w.t['XtQ+Ag'], { numMinutes: r });
 }
-function k(e) {
+function M(e) {
     var t, n, i;
     let { className: a, children: s, withBottomMargin: l, discountOffer: c, trialOffer: u } = e,
         d = null != (t = null == u ? void 0 : u.expires_at) ? t : null == c ? void 0 : c.expires_at,
@@ -89,7 +89,7 @@ function k(e) {
         ]
     });
 }
-function M(e) {
+function k(e) {
     var t, n;
     let { className: a, onClose: o, subscriptionTier: s, analyticsLocationObject: l, trialOffer: c, discountOffer: u } = e,
         [d, f] = i.useState(!1),
@@ -145,7 +145,7 @@ function U(e) {
                 className: D.cancelButton,
                 children: w.intl.string(w.t.cpT0Cg)
             }),
-            (0, r.jsx)(M, {
+            (0, r.jsx)(k, {
                 className: D.subscribeButton,
                 subscriptionTier: t,
                 analyticsLocationObject: i,
@@ -170,9 +170,9 @@ function G(e) {
             (0, r.jsx)(p.X6q, {
                 variant: 'heading-md/semibold',
                 color: 'text-normal',
-                children: w.intl.format(w.t['fF+cgY'], { onClick: () => (0, T.z)() })
+                children: w.intl.format(w.t['fF+cgY'], { onClick: () => (0, S.z)() })
             }),
-            (0, r.jsx)(M, {
+            (0, r.jsx)(k, {
                 trialOffer: i,
                 className: D.subscribeButtonWide,
                 subscriptionTier: R.Si.TIER_2,
@@ -202,7 +202,7 @@ function B(e) {
                     variant: 'text-md/normal',
                     children: n
                 }),
-            (0, r.jsx)(k, {
+            (0, r.jsx)(M, {
                 trialOffer: a,
                 discountOffer: o,
                 children: i
@@ -211,10 +211,10 @@ function B(e) {
     });
 }
 function F(e) {
-    let { headingText: t, context: i, children: a, onClose: s, type: c, subscriptionTier: u, analyticsLocationObject: b, trialOffer: y, discountOffer: T } = e,
+    let { headingText: t, context: i, children: a, onClose: s, type: c, subscriptionTier: u, analyticsLocationObject: b, trialOffer: y, discountOffer: S } = e,
         A = (0, d.e7)([m.Z], () => m.Z.useReducedMotion),
         N = (0, h.ZP)(),
-        C = (0, O.BU)(S.zz / O.XD, { useKibibytes: !0 });
+        C = (0, O.BU)(T.zz / O.XD, { useKibibytes: !0 });
     switch (c) {
         case R.cd.EMPTY_STICKER_PICKER_UPSELL:
             return (0, r.jsxs)(r.Fragment, {
@@ -240,9 +240,9 @@ function F(e) {
                                 color: 'header-primary',
                                 children: w.intl.string(w.t.HEm04O)
                             }),
-                            (0, r.jsx)(k, {
+                            (0, r.jsx)(M, {
                                 trialOffer: y,
-                                discountOffer: T,
+                                discountOffer: S,
                                 children: w.intl.format(w.t['2HoFKC'], {
                                     planName: (0, v.jP)(u),
                                     onClick: () => (0, E.uL)(P.Z5c.APPLICATION_STORE)
@@ -258,7 +258,7 @@ function F(e) {
                             object: P.qAy.BUTTON_CTA
                         },
                         trialOffer: y,
-                        discountOffer: T
+                        discountOffer: S
                     })
                 ]
             });
@@ -280,9 +280,9 @@ function F(e) {
                                     color: 'header-primary',
                                     children: w.intl.string(w.t.jJG1pq)
                                 }),
-                                (0, r.jsx)(k, {
+                                (0, r.jsx)(M, {
                                     trialOffer: y,
-                                    discountOffer: T,
+                                    discountOffer: S,
                                     children: w.intl.format(w.t['2HoFKC'], {
                                         planName: (0, v.jP)(u),
                                         onClick: () => (0, E.uL)(P.Z5c.APPLICATION_STORE)
@@ -298,7 +298,7 @@ function F(e) {
                                 object: P.qAy.BUTTON_CTA
                             },
                             trialOffer: y,
-                            discountOffer: T
+                            discountOffer: S
                         })
                     ]
                 })
@@ -321,9 +321,9 @@ function F(e) {
                                 color: 'header-primary',
                                 children: w.intl.string(w.t['1SsvhY'])
                             }),
-                            (0, r.jsx)(k, {
+                            (0, r.jsx)(M, {
                                 trialOffer: y,
-                                discountOffer: T,
+                                discountOffer: S,
                                 children: w.intl.format(w.t.md4nPz, {
                                     planName: (0, v.jP)(u),
                                     onClick: () => (0, E.uL)(P.Z5c.APPLICATION_STORE)
@@ -339,7 +339,7 @@ function F(e) {
                             object: P.qAy.BUTTON_CTA
                         },
                         trialOffer: y,
-                        discountOffer: T
+                        discountOffer: S
                     })
                 ]
             });
@@ -395,9 +395,9 @@ function F(e) {
                             variant: 'text-md/normal',
                             children: i
                         }),
-                        (0, r.jsx)(k, {
+                        (0, r.jsx)(M, {
                             trialOffer: y,
-                            discountOffer: T,
+                            discountOffer: S,
                             children: j
                         })
                     ]
@@ -416,30 +416,30 @@ function F(e) {
                         variant: 'text-md/normal',
                         children: i
                     }),
-                    (0, r.jsx)(k, {
+                    (0, r.jsx)(M, {
                         trialOffer: y,
-                        discountOffer: T,
+                        discountOffer: S,
                         children: w.intl.format(w.t.poib9P, {
                             planName: (0, v.jP)(u),
                             onClick: () => (0, E.uL)(P.Z5c.APPLICATION_STORE)
                         })
                     }),
-                    (0, r.jsx)(M, {
+                    (0, r.jsx)(k, {
                         className: D.upsellButton,
                         subscriptionTier: u,
                         analyticsLocationObject: b,
                         onClose: s,
                         trialOffer: y,
-                        discountOffer: T
+                        discountOffer: S
                     })
                 ]
             });
         case R.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT:
             return (
                 l()(null != a, 'You must specify children for this upsell type'),
-                (0, r.jsx)(k, {
+                (0, r.jsx)(M, {
                     trialOffer: y,
-                    discountOffer: T,
+                    discountOffer: S,
                     children: w.intl.format(w.t['5KMAnJ'], {
                         onClick: () => {
                             (0, E.uL)(P.Z5c.APPLICATION_STORE), (0, g.C)();
@@ -463,9 +463,9 @@ function F(e) {
                         children: w.intl.string(w.t.ZvHg3N)
                     }),
                     (0, r.jsx)('div', { className: D.divider }),
-                    (0, r.jsx)(k, {
+                    (0, r.jsx)(M, {
                         trialOffer: y,
-                        discountOffer: T,
+                        discountOffer: S,
                         className: D.messageLengthBrandedContainer,
                         subscriptionTier: u,
                         children: w.intl.format(w.t.GUHtEx, {
@@ -475,12 +475,12 @@ function F(e) {
                             }
                         })
                     }),
-                    (0, r.jsx)(M, {
+                    (0, r.jsx)(k, {
                         subscriptionTier: u,
                         analyticsLocationObject: b,
                         onClose: s,
                         trialOffer: y,
-                        discountOffer: T
+                        discountOffer: S
                     })
                 ]
             });
@@ -501,7 +501,7 @@ function F(e) {
         case R.cd.VOICE_FILTERS_UPSELL:
             return (0, r.jsx)(B, {
                 trialOffer: y,
-                discountOffer: T,
+                discountOffer: S,
                 headingText: t,
                 context: i,
                 children: a
@@ -514,7 +514,7 @@ function F(e) {
                     context: i,
                     children: a,
                     trialOffer: y,
-                    discountOffer: T
+                    discountOffer: S
                 })
             );
     }

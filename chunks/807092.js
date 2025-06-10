@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => T });
 var r,
     i = n(442837),
     a = n(570140),
@@ -131,7 +131,7 @@ class I extends (r = i.ZP.Store) {
     }
 }
 s(I, 'displayName', 'PendingReplyStore');
-let S = new I(a.Z, {
+let T = new I(a.Z, {
     CREATE_PENDING_REPLY: p,
     CREATE_SHALLOW_PENDING_REPLY: h,
     SET_PENDING_REPLY_SHOULD_MENTION: m,

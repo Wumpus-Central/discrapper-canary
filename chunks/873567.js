@@ -13,10 +13,10 @@ function r(t) {
         relative: e[5] + a + r
     };
 }
-function n(t) {
+function _(t) {
     return t.split(/[?#]/, 1)[0];
 }
 a.d(e, {
     en: () => r,
-    rt: () => n
+    rt: () => _
 });

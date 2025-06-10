@@ -18,14 +18,14 @@ var r = n(255367),
 let m = 200;
 function g(e) {
     let { transitionState: t, animationVariant: n = 'default', size: a = 'md', fullScreenOnMobile: g = !0, returnRef: E, role: b = 'dialog', 'aria-label': y, onClose: O, contentOutsideContainer: v, children: I } = e,
-        S = i.useId(),
-        T = i.useMemo(
+        T = i.useId(),
+        S = i.useMemo(
             () => ({
-                id: S,
-                headingId: 'heading-'.concat(S),
+                id: T,
+                headingId: 'heading-'.concat(T),
                 onClose: O
             }),
-            [S, O]
+            [T, O]
         ),
         A = 0 === t || 1 === t,
         { reducedMotion: N } = i.useContext(f.S),
@@ -42,12 +42,12 @@ function g(e) {
             'animate-always'
         );
     return (0, r.jsx)(p.t.Provider, {
-        value: T,
+        value: S,
         children: (0, r.jsx)(_.V, {
-            id: S,
+            id: T,
             role: b,
             'aria-label': y,
-            'aria-labelledby': null != y ? void 0 : T.headingId,
+            'aria-labelledby': null != y ? void 0 : S.headingId,
             returnRef: E,
             impressionType: l.ImpressionTypes.MODAL,
             children: (0, r.jsx)(u.y5, {

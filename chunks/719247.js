@@ -60,7 +60,7 @@ function v(e) {
 function I() {
     E.clear();
 }
-function S() {
+function T() {
     let e = !1,
         t = Array.from(E.keys()),
         n = new Set(),
@@ -74,9 +74,9 @@ function S() {
     for (let n of a().difference(t, [...r])) E.delete(n), (e = !0);
     return e;
 }
-class T extends (r = l.ZP.Store) {
+class S extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z, u.Z), this.syncWith([u.Z], S);
+        this.waitFor(d.Z, u.Z), this.syncWith([u.Z], T);
     }
     getMatchingActivity(e) {
         return (0, p.n2)(e) ? null : E.get(b(e));
@@ -85,8 +85,8 @@ class T extends (r = l.ZP.Store) {
         super(...e), m(this, 'canRenderContent', (e) => !(0, p.n2)(e) && (!g.has(e.content_type) || null != this.getMatchingActivity(e)));
     }
 }
-m(T, 'displayName', 'ContentInventoryActivityStore');
-let A = new T(c.Z, {
+m(S, 'displayName', 'ContentInventoryActivityStore');
+let A = new S(c.Z, {
     CONNECTION_OPEN: I,
     CONTENT_INVENTORY_SET_FEED: v
 });

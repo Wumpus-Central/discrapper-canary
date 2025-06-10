@@ -1,8 +1,8 @@
 n.d(t, {
     B5: () => D,
     PI: () => C,
-    WD: () => k,
-    aM: () => M,
+    WD: () => M,
+    aM: () => k,
     ui: () => j
 }),
     n(388685),
@@ -56,7 +56,7 @@ function I(e) {
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,12 +68,12 @@ function S(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -94,7 +94,7 @@ class w {
         return this.questContentPosition;
     }
     constructor({ questOrQuests: e, questContent: t, adDecisionData: n, triggeredByStatusChange: r, trackGuildAndChannelMetadata: i, questContentPosition: s, questContentRowIndex: l, minViewTimeSeconds: c = N, isQuestEnrollmentBlocked: h }) {
-        var S = this;
+        var T = this;
         v(this, 'id', void 0),
             v(this, 'quests', void 0),
             v(this, 'questContent', void 0),
@@ -148,15 +148,15 @@ class w {
             }),
             v(this, 'beat', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                S.quests.forEach((t) => {
-                    if (null != S.lastBeatTime) {
-                        let n = Math.round(Date.now() - S.lastBeatTime);
+                T.quests.forEach((t) => {
+                    if (null != T.lastBeatTime) {
+                        let n = Math.round(Date.now() - T.lastBeatTime);
                         (0, b.T)().info(
                             ''
                                 .concat(t.config.messages.questName, ' Quest impression ')
                                 .concat(e ? 'terminal ' : '', 'heartbeat: ')
                                 .concat(n, 'ms since last heartbeat'),
-                            { impressionId: S.id }
+                            { impressionId: T.id }
                         ),
                             (0, p.dA)({
                                 questId: t.id,
@@ -165,19 +165,19 @@ class w {
                                     {
                                         is_termination_beat: e,
                                         viewed_time_ms: n,
-                                        triggered_by_status_change: S.triggeredByStatusChange
+                                        triggered_by_status_change: T.triggeredByStatusChange
                                     },
-                                    S.commonProperties(t)
+                                    T.commonProperties(t)
                                 ),
-                                trackGuildAndChannelMetadata: S.trackGuildAndChannelMetadata
+                                trackGuildAndChannelMetadata: T.trackGuildAndChannelMetadata
                             });
                     }
                 }),
-                    (S.lastBeatTime = Date.now());
+                    (T.lastBeatTime = Date.now());
             }),
             v(this, 'commonProperties', (e) =>
                 I(
-                    T(I({ impression_id: this.id }, this.adDecisionData), {
+                    S(I({ impression_id: this.id }, this.adDecisionData), {
                         is_quest_enrollment_blocked: this.isQuestEnrollmentBlocked,
                         quest_status: (0, p.uk)(e)
                     }),
@@ -223,7 +223,7 @@ class w {
             }),
             v(this, 'stop', function () {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-                e && S.beat(!0), (S.lastBeatTime = void 0), clearInterval(S.heartbeatTimeoutId), clearTimeout(S.minViewTimeReachedTimeoutId), (S.isRunning = !1);
+                e && T.beat(!0), (T.lastBeatTime = void 0), clearInterval(T.heartbeatTimeoutId), clearTimeout(T.minViewTimeReachedTimeoutId), (T.isRunning = !1);
             }),
             (this.id = (0, a.Z)()),
             (this.adDecisionData = null != n ? n : y.Jp),
@@ -253,13 +253,13 @@ let D = (e, t) => {
         return t !== n;
     },
     x = i.createContext(void 0);
-function k() {
+function M() {
     let e = i.useContext(x);
     return null == e ? void 0 : e.current;
 }
-function M() {
+function k() {
     var e;
-    return null == (e = k()) ? void 0 : e.getId();
+    return null == (e = M()) ? void 0 : e.getId();
 }
 function j(e) {
     let { visible: t, visibleChanged: n, focused: a, reference: o, focusedChanged: c } = e,

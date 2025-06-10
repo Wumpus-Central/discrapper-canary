@@ -3,7 +3,7 @@ n.d(t, {
     OQ: () => O,
     RE: () => I,
     Xe: () => C,
-    dv: () => S,
+    dv: () => T,
     rS: () => v,
     t0: () => y
 }),
@@ -108,7 +108,7 @@ function I(e, t) {
         })
     );
 }
-async function S(e) {
+async function T(e) {
     let { guildId: t, emojiId: n, name: r, roles: i } = e;
     try {
         return await a.tn.patch({
@@ -124,7 +124,7 @@ async function S(e) {
         throw new l.Z(e);
     }
 }
-function T(e) {
+function S(e) {
     if (p.Z.totalUnavailableGuilds > 0 || !f.Z.isConnected()) return e;
     let t = e
         .map((e) => {
@@ -144,7 +144,7 @@ function N(e) {
         _.DZ.updateAsync(
             'favoriteEmojis',
             (e) =>
-                ((e.emojis = T(e.emojis)), i().size(e.emojis) >= E.oX)
+                ((e.emojis = S(e.emojis)), i().size(e.emojis) >= E.oX)
                     ? (m.Z.show({
                           title: b.intl.string(b.t['+XYXtb']),
                           body: b.intl.formatToPlainString(b.t.JaIyFh, { count: E.oX })
@@ -160,7 +160,7 @@ function C(e) {
         _.DZ.updateAsync(
             'favoriteEmojis',
             (e) => {
-                if (((e.emojis = T(e.emojis)), !e.emojis.includes(t))) return !1;
+                if (((e.emojis = S(e.emojis)), !e.emojis.includes(t))) return !1;
                 e.emojis = e.emojis.filter((e) => t !== e);
             },
             E.fy.INFREQUENT_USER_ACTION

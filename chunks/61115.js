@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => N,
-    default: () => T
+    default: () => S
 }),
     n(388685);
 var r = n(255367),
@@ -72,12 +72,12 @@ function v(e, t) {
     );
 }
 let I = 2500,
-    S = 467;
-function T(e) {
+    T = 467;
+function S(e) {
     let { questId: t, survey: n, transitionState: a, onClose: o, onSubmit: f } = e,
         p = (0, _.B4)(t),
         [b, O] = i.useState(0),
-        [T, N] = (0, l.q_F)(() => ({
+        [S, N] = (0, l.q_F)(() => ({
             from: { width: '0%' },
             config: { duration: I }
         })),
@@ -108,7 +108,7 @@ function T(e) {
             parentComponent: 'QuestSurveyModal',
             children: (0, r.jsxs)(l.MyZ, {
                 activeSlide: b,
-                width: S,
+                width: T,
                 onSlideReady: P,
                 children: [
                     (0, r.jsxs)(l.Mi4, {
@@ -186,7 +186,7 @@ function T(e) {
                                         }),
                                         (0, r.jsx)(s.animated.div, {
                                             className: g.progressOverlay,
-                                            style: T
+                                            style: S
                                         })
                                     ]
                                 })

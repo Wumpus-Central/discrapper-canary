@@ -75,7 +75,7 @@ function c(e, n) {
         seen: [],
         stylize: d
     };
-    return arguments.length >= 3 && (r.depth = arguments[2]), arguments.length >= 4 && (r.colors = arguments[3]), y(n) ? (r.showHidden = n) : n && t._extend(r, n), S(r.showHidden) && (r.showHidden = !1), S(r.depth) && (r.depth = 2), S(r.colors) && (r.colors = !1), S(r.customInspect) && (r.customInspect = !0), r.colors && (r.stylize = u), _(r, e, r.depth);
+    return arguments.length >= 3 && (r.depth = arguments[2]), arguments.length >= 4 && (r.colors = arguments[3]), y(n) ? (r.showHidden = n) : n && t._extend(r, n), T(r.showHidden) && (r.showHidden = !1), T(r.depth) && (r.depth = 2), T(r.colors) && (r.colors = !1), T(r.customInspect) && (r.customInspect = !0), r.colors && (r.stylize = u), _(r, e, r.depth);
 }
 function u(e, t) {
     var n = c.styles[t];
@@ -109,16 +109,16 @@ function _(e, n, r) {
             var c = n.name ? ': ' + n.name : '';
             return e.stylize('[Function' + c + ']', 'special');
         }
-        if (T(n)) return e.stylize(RegExp.prototype.toString.call(n), 'regexp');
+        if (S(n)) return e.stylize(RegExp.prototype.toString.call(n), 'regexp');
         if (N(n)) return e.stylize(Date.prototype.toString.call(n), 'date');
         if (C(n)) return h(n);
     }
     var u = '',
         d = !1,
         y = ['{', '}'];
-    if ((b(n) && ((d = !0), (y = ['[', ']'])), R(n) && (u = ' [Function' + (n.name ? ': ' + n.name : '') + ']'), T(n) && (u = ' ' + RegExp.prototype.toString.call(n)), N(n) && (u = ' ' + Date.prototype.toUTCString.call(n)), C(n) && (u = ' ' + h(n)), 0 === s.length && (!d || 0 == n.length))) return y[0] + u + y[1];
+    if ((b(n) && ((d = !0), (y = ['[', ']'])), R(n) && (u = ' [Function' + (n.name ? ': ' + n.name : '') + ']'), S(n) && (u = ' ' + RegExp.prototype.toString.call(n)), N(n) && (u = ' ' + Date.prototype.toUTCString.call(n)), C(n) && (u = ' ' + h(n)), 0 === s.length && (!d || 0 == n.length))) return y[0] + u + y[1];
     if (r < 0)
-        if (T(n)) return e.stylize(RegExp.prototype.toString.call(n), 'regexp');
+        if (S(n)) return e.stylize(RegExp.prototype.toString.call(n), 'regexp');
         else return e.stylize('[Object]', 'special');
     return (
         e.seen.push(n),
@@ -132,7 +132,7 @@ function _(e, n, r) {
     );
 }
 function p(e, t) {
-    if (S(t)) return e.stylize('undefined', 'undefined');
+    if (T(t)) return e.stylize('undefined', 'undefined');
     if (I(t)) {
         var n = "'" + JSON.stringify(t).replace(/^"|"$/g, '').replace(/'/g, "\\'").replace(/\\"/g, '"') + "'";
         return e.stylize(n, 'string');
@@ -175,7 +175,7 @@ function g(e, t, n, r, i, a) {
                             })
                             .join('\n'))
                 : (s = e.stylize('[Circular]', 'special'))),
-        S(o))
+        T(o))
     ) {
         if (a && i.match(/^\d+$/)) return s;
         (o = JSON.stringify('' + i)).match(/^"([a-zA-Z_][a-zA-Z_0-9]*)"$/)
@@ -211,10 +211,10 @@ function v(e) {
 function I(e) {
     return 'string' == typeof e;
 }
-function S(e) {
+function T(e) {
     return void 0 === e;
 }
-function T(e) {
+function S(e) {
     return A(e) && '[object RegExp]' === P(e);
 }
 function A(e) {
@@ -284,9 +284,9 @@ function w(e) {
     (t.isSymbol = function (e) {
         return 'symbol' == typeof e;
     }),
-    (t.isUndefined = S),
-    (t.isRegExp = T),
-    (t.types.isRegExp = T),
+    (t.isUndefined = T),
+    (t.isRegExp = S),
+    (t.types.isRegExp = S),
     (t.isObject = A),
     (t.isDate = N),
     (t.types.isDate = N),
@@ -315,8 +315,8 @@ function x(e, t) {
         for (var n = Object.keys(t), r = n.length; r--; ) e[n[r]] = t[n[r]];
         return e;
     });
-var k = 'undefined' != typeof Symbol ? Symbol('util.promisify.custom') : void 0;
-function M(e, t) {
+var M = 'undefined' != typeof Symbol ? Symbol('util.promisify.custom') : void 0;
+function k(e, t) {
     if (!e) {
         var n = Error('Promise was rejected with a falsy value');
         (n.reason = e), (e = n);
@@ -325,11 +325,11 @@ function M(e, t) {
 }
 (t.promisify = function (e) {
     if ('function' != typeof e) throw TypeError('The "original" argument must be of type Function');
-    if (k && e[k]) {
-        var t = e[k];
+    if (M && e[M]) {
+        var t = e[M];
         if ('function' != typeof t) throw TypeError('The "util.promisify.custom" argument must be of type Function');
         return (
-            Object.defineProperty(t, k, {
+            Object.defineProperty(t, M, {
                 value: t,
                 enumerable: !1,
                 writable: !1,
@@ -363,8 +363,8 @@ function M(e, t) {
     }
     return (
         Object.setPrototypeOf(t, Object.getPrototypeOf(e)),
-        k &&
-            Object.defineProperty(t, k, {
+        M &&
+            Object.defineProperty(t, M, {
                 value: t,
                 enumerable: !1,
                 writable: !1,
@@ -373,7 +373,7 @@ function M(e, t) {
         Object.defineProperties(t, i(e))
     );
 }),
-    (t.promisify.custom = k),
+    (t.promisify.custom = M),
     (t.callbackify = function (e) {
         if ('function' != typeof e) throw TypeError('The "original" argument must be of type Function');
         function t() {
@@ -389,7 +389,7 @@ function M(e, t) {
                     r.nextTick(o.bind(null, null, e));
                 },
                 function (e) {
-                    r.nextTick(M.bind(null, e, o));
+                    r.nextTick(k.bind(null, e, o));
                 }
             );
         }

@@ -7,7 +7,7 @@ n.d(t, {
     Z3: () => u,
     ZR: () => s,
     am: () => p,
-    av: () => S,
+    av: () => T,
     cq: () => E,
     j: () => C,
     k3: () => A,
@@ -17,7 +17,7 @@ n.d(t, {
     pw: () => I,
     rk: () => v,
     tB: () => y,
-    uo: () => T,
+    uo: () => S,
     vD: () => b,
     x3: () => m
 }),
@@ -144,12 +144,12 @@ let v = (e) => {
 function I(e) {
     return null == e || ((null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)));
 }
-function S(e) {
+function T(e) {
     return null == e || (!!I(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)));
 }
-function T(e) {
+function S(e) {
     var t, n;
-    return null != e && (!!S(e) || ((null == (t = e.welcomeMessage) ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < s) && (null == (n = e.welcomeMessage) ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < d)));
+    return null != e && (!!T(e) || ((null == (t = e.welcomeMessage) ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < s) && (null == (n = e.welcomeMessage) ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < d)));
 }
 function A(e) {
     return e.type === o.d4z.GUILD_TEXT && !a.Uu(o.Plq.SEND_MESSAGES, e) && a.Uu(o.Plq.VIEW_CHANNEL, e);

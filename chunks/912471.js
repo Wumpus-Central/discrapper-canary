@@ -52,8 +52,8 @@ function y(e) {
 let O = 21,
     v = 15 * _.Z.Millis.MINUTE,
     I = _.Z.Millis.SECOND,
-    S = 'LAST_CLIENT_HEARTBEAT_SESSION',
-    T = 'user',
+    T = 'LAST_CLIENT_HEARTBEAT_SESSION',
+    S = 'user',
     A = new i.Yd('SessionHeartbeatScheduler'),
     N = null,
     C = 0,
@@ -65,7 +65,7 @@ let O = 21,
 function x() {
     (w = d.Z.getState()), (D = (0, m.H)()), (L = c.default.isAuthenticated()), V();
 }
-function k() {
+function M() {
     if (null != N) return;
     let e = 0 === R ? 0 : v - (performance.now() - R);
     p.Z.addBreadcrumb({ message: 'Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: '.concat(e / 1000, ' seconds. Scheduling Heartbeat') }),
@@ -82,7 +82,7 @@ function k() {
             }, e)
         });
 }
-function M() {
+function k() {
     if (null == N) return !1;
     switch (N.type) {
         case 'timeout':
@@ -97,9 +97,9 @@ function M() {
     return (N = null), !0;
 }
 function j() {
-    M() &&
+    k() &&
         (p.Z.addBreadcrumb({
-            category: T,
+            category: S,
             message: 'Stopping Analytics Heartbeat'
         }),
         (0, l.Z)());
@@ -121,7 +121,7 @@ async function G() {
         n = Date.now();
     if (null == t) return void p.Z.captureException(Error('Null session when tracking session heartbeat. Waited '.concat(n - e, 'ms')));
     p.Z.addBreadcrumb({
-        category: T,
+        category: S,
         message: 'Tracking Heartbeat',
         data: { initialized: t.createdAtTimestamp }
     });
@@ -140,13 +140,13 @@ function F() {
     return L && (D || (w !== E.hes.DISCONNECTED && w !== E.hes.RTC_DISCONNECTED));
 }
 function V() {
-    F() ? k() : j();
+    F() ? M() : j();
 }
 function Z(e) {
     let t = performance.now();
     if (!(t - C < I))
         try {
-            o.K.set(S, e), (C = t);
+            o.K.set(T, e), (C = t);
         } catch (e) {
             p.Z.captureException(e);
         }
@@ -155,7 +155,7 @@ function H(e) {
     return null == e ? null : e.version !== g.EI ? (A.warn('Throwing away client session with invalid version: '.concat(e.version, ', expected ').concat(g.EI)), null) : e;
 }
 function Y() {
-    o.K.remove(S),
+    o.K.remove(T),
         (P = {
             state: 'loaded',
             session: null
@@ -186,7 +186,7 @@ function W() {
 async function K() {
     let e = null;
     try {
-        e = 'uninitialized' === P.state ? H(await o.K.getAfterRefresh(S)) : P.session;
+        e = 'uninitialized' === P.state ? H(await o.K.getAfterRefresh(T)) : P.session;
     } catch (e) {
         p.Z.captureException(e);
     }
@@ -214,6 +214,6 @@ async function K() {
     })();
 }
 function z() {
-    let e = 'uninitialized' === P.state ? H(o.K.get(S)) : P.session;
+    let e = 'uninitialized' === P.state ? H(o.K.get(T)) : P.session;
     return null == e || (0, g.qK)(e) ? null : e;
 }

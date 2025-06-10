@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(213609),
     v = n(613413),
     I = n(559407),
-    S = n(556766),
-    T = n(195302),
+    T = n(556766),
+    S = n(195302),
     A = n(260035),
     N = n(482215),
     C = n(540059),
@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(314910),
     L = n(84615),
     x = n(429142),
-    k = n(813744),
-    M = n(746106),
+    M = n(813744),
+    k = n(746106),
     j = n(210887),
     U = n(526665),
     G = n(314897),
@@ -153,7 +153,7 @@ let ei = (0, Z.Un)({
             (0, R.G)(),
             (0, w.G)('AppSkeleton'),
             (0, r.jsx)(
-                M.w,
+                k.w,
                 {
                     children: (0, r.jsxs)(b.Z, {
                         children: [
@@ -188,7 +188,7 @@ let ei = (0, Z.Un)({
                                                                         children: (0, r.jsx)(x.OR, {
                                                                             children: (0, r.jsx)(y.Z.Provider, {
                                                                                 value: O.Z,
-                                                                                children: (0, r.jsxs)(T.p, {
+                                                                                children: (0, r.jsxs)(S.p, {
                                                                                     children: [
                                                                                         (0, r.jsx)('div', {
                                                                                             className: o()(u ? $.mobileApp : $.app),
@@ -203,7 +203,7 @@ let ei = (0, Z.Un)({
                                                                                         (0, r.jsx)(x.ot, {}),
                                                                                         (0, r.jsx)(d.Ixi, {}),
                                                                                         (0, r.jsx)(v.Z, {}),
-                                                                                        (0, r.jsx)(k.Z, {}),
+                                                                                        (0, r.jsx)(M.Z, {}),
                                                                                         (0, r.jsx)(ei, {}),
                                                                                         (0, r.jsx)(ea, {})
                                                                                     ]
@@ -212,7 +212,7 @@ let ei = (0, Z.Un)({
                                                                         })
                                                                     })
                                                                 }),
-                                                                (0, r.jsx)(S.Z, {}),
+                                                                (0, r.jsx)(T.Z, {}),
                                                                 (0, r.jsx)(f.Z, {}),
                                                                 (0, r.jsx)(W.Z, {}),
                                                                 (0, r.jsx)(H.Z, {}),

@@ -190,14 +190,14 @@ function* _(e) {
         O = a.bN.richValue(e),
         v = m ? -1 : 1,
         I = null != (r = null == (t = b.path) ? void 0 : t[0]) ? r : 0,
-        S = null != (i = null == (n = y.path) ? void 0 : n[0]) ? i : O.length - 1,
-        T = m ? S : I,
-        A = m ? I : S,
-        N = T;
+        T = null != (i = null == (n = y.path) ? void 0 : n[0]) ? i : O.length - 1,
+        S = m ? T : I,
+        A = m ? I : T,
+        N = S;
     for (;;) {
         let t = O[N],
             n = null != (u = N === I ? (null == (o = b.path) ? void 0 : o[1]) : null) ? u : 0,
-            r = null != (d = N === S ? (null == (l = y.path) ? void 0 : l[1]) : null) ? d : t.children.length - 1,
+            r = null != (d = N === T ? (null == (l = y.path) ? void 0 : l[1]) : null) ? d : t.children.length - 1,
             i = m ? r : n,
             p = m ? n : r,
             h = i;

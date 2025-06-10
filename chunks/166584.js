@@ -32,7 +32,7 @@ function I(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function S(e) {
     }
     return e;
 }
-function T(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,7 +65,7 @@ function A(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -101,12 +101,12 @@ let R = 4,
     };
 function L(e) {
     let { user: t, currentUser: n, guild: l, guildMember: u, roles: d, highestRole: f, canManageRoles: _, onAddRole: p, onRemoveRole: I } = e,
-        T = i.useRef({}),
+        S = i.useRef({}),
         C = (e, t) => {
-            null != t ? (T.current[e] = t) : delete T.current[e];
+            null != t ? (S.current[e] = t) : delete S.current[e];
         },
         [L, x] = i.useState(d),
-        [k, M] = i.useState(P),
+        [M, k] = i.useState(P),
         [j, U] = i.useState(!1),
         G = i.useRef(null),
         B = i.useRef(null),
@@ -124,7 +124,7 @@ function L(e) {
                 let t = e === w - 1 ? r : P;
                 for (let e = 0, r = n.length; r < d.length; r++) {
                     let i = d[r],
-                        a = T.current[i.id];
+                        a = S.current[i.id];
                     if (null == a) {
                         0 === F.current && n.push(i);
                         continue;
@@ -134,7 +134,7 @@ function L(e) {
                     (e += o + R), n.push(i);
                 }
             }
-            x(n.length === L.length ? L : n), M(r), F.current++;
+            x(n.length === L.length ? L : n), k(r), F.current++;
         }, [d, L, j]);
     let V = i.useMemo(() => 'roles-'.concat((0, a.Z)()), []),
         Z = (0, o.ZP)({
@@ -153,7 +153,7 @@ function L(e) {
                 {
                     role: e,
                     guildId: l.id,
-                    style: { maxWidth: j || i !== L.length - 1 ? P : k },
+                    style: { maxWidth: j || i !== L.length - 1 ? P : M },
                     disableBorderColor: !0,
                     ref: (t) => C(e.id, t),
                     onRemove: () => I(e),
@@ -178,7 +178,7 @@ function L(e) {
                 return (0, r.jsxs)(
                     'div',
                     A(
-                        S(
+                        T(
                             {
                                 className: v.root,
                                 'aria-label': Y,
@@ -273,8 +273,8 @@ function x(e) {
             },
             [h, a.id, t.id, o]
         ),
-        S = O && null != s;
-    return 0 !== E.length || S
+        T = O && null != s;
+    return 0 !== E.length || T
         ? (0, r.jsx)(L, {
               user: t,
               currentUser: n,

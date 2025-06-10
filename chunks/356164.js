@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685), n(539854);
+n.d(t, { Z: () => S }), n(388685), n(539854);
 var r,
     i = n(442837),
     a = n(570140),
@@ -148,7 +148,7 @@ function I(e) {
         })
     );
 }
-class S extends (r = i.ZP.Store) {
+class T extends (r = i.ZP.Store) {
     getGuild(e) {
         return _.get(e);
     }
@@ -180,8 +180,8 @@ class S extends (r = i.ZP.Store) {
         });
     }
 }
-l(S, 'displayName', 'GlobalDiscoveryServersSearchResultsStore');
-let T = new S(a.Z, {
+l(T, 'displayName', 'GlobalDiscoveryServersSearchResultsStore');
+let S = new T(a.Z, {
     CONNECTION_OPEN: E,
     GLOBAL_DISCOVERY_SERVERS_SEARCH_START: b,
     GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS: y,

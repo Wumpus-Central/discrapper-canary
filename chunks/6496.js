@@ -1,10 +1,10 @@
 n.d(t, {
     RR: () => A,
-    WW: () => S,
+    WW: () => T,
     bE: () => C,
-    n4: () => k,
+    n4: () => M,
     q8: () => N,
-    t$: () => T,
+    t$: () => S,
     xl: () => x
 }),
     n(415506),
@@ -79,10 +79,10 @@ function I(e, t) {
         e
     );
 }
-function S(e) {
+function T(e) {
     return m.Z.getForumChannelSessionId(e);
 }
-function T(e) {
+function S(e) {
     switch (e) {
         case r.z.CREATION_DATE:
             return b.SX.CREATION_DATE;
@@ -154,7 +154,7 @@ function x(e) {
               forum_channel_can_create_post: u.Z.can(g.Plq.SEND_MESSAGES, s),
               forum_channel_filter_tag_ids: p.Z.getFilterTagIdsAnalytics(),
               forum_channel_sort_order: p.Z.getSortOrderAnalytics(s.id),
-              forum_channel_session_id: null != o ? o : S(s.id),
+              forum_channel_session_id: null != o ? o : T(s.id),
               forum_channel_layout: p.Z.getLayoutAnalytics(s.id),
               forum_channel_default_sort_order: s.defaultSortOrder,
               forum_channel_tag_setting: p.Z.getTagSettingAnalytics(s.id),
@@ -163,7 +163,7 @@ function x(e) {
           }
         : null;
 }
-function k(e) {
+function M(e) {
     var t, n, r, i, c, u, d;
     let { channelId: _, sessionId: p } = e,
         m = l.Z.getChannel(_);

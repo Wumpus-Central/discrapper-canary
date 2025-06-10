@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(243778),
     v = n(907040),
     I = n(556019),
-    S = n(748523),
-    T = n(455708),
+    T = n(748523),
+    S = n(455708),
     A = n(314910),
     N = n(125900),
     C = n(603074),
@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(740492),
     L = n(574254),
     x = n(585483),
-    k = n(5967),
-    M = n(28546),
+    M = n(5967),
+    k = n(28546),
     j = n(957825),
     U = n(981631),
     G = n(921944),
@@ -134,7 +134,7 @@ let Q = j.Om + B.Su.MEDIUM,
                             tab: i,
                             badged: !1
                         }),
-                            (0, M.hr)(i);
+                            (0, k.hr)(i);
                     },
                     'aria-current': t ? 'page' : void 0,
                     className: o()(n, H.navButton, H.navItem, { [H.navButtonActive]: t }),
@@ -212,7 +212,7 @@ function ee(e) {
             drawerRef: el,
             orientation: 'left' === et ? E.y.HORIZONTAL_RIGHT : E.y.HORIZONTAL_LEFT
         }),
-        ed = (0, M.Iu)((e) => e.activeView),
+        ed = (0, k.Iu)((e) => e.activeView),
         ef = (0, R.fQ)(q),
         { renderWindow: e_, windowDispatch: ep } = i.useContext(b.ZP),
         eh = (0, f.e7)([P.Z], () => !P.Z.hasLoadedStickerPacks),
@@ -227,25 +227,25 @@ function ee(e) {
         eO = i.useCallback(
             (e) => {
                 var t;
-                if ((!eE && (0, p.$s)()) || (eE && !(eb && er)) || eg) return;
+                if ((!eE && (0, p.$s)()) || (eE && !(eb && er)) || eg || e.defaultPrevented) return;
                 let { target: n } = e;
                 if ((0, u.k)(n) && null != n.closest('.' + j.CT)) return;
                 for (; (0, u.k)(n); ) {
                     if (n === el.current || 'true' === n.getAttribute('data-menu-item') || 'true' === n.getAttribute('data-premium-tutorial-expression-picker-tooltip') || 'true' === n.getAttribute('data-premium-tutorial-persistent-coachmark-emoji-step')) return;
                     n = n.parentNode;
                 }
-                (0, M._Q)();
-                let r = null == (t = (0, k.uB)(e)) ? void 0 : t.activeElement;
+                (0, k._Q)();
+                let r = null == (t = (0, M.uB)(e)) ? void 0 : t.activeElement;
                 (null == r || 'BODY' === r.tagName) && x.S.dispatchToLastSubscribed(U.CkL.TEXTAREA_FOCUS);
             },
             [er, eb, eE, eg]
         ),
         ev = i.useCallback(() => {
-            (0, M._Q)();
+            (0, k._Q)();
         }, []);
     i.useLayoutEffect(() => {
         let e = () => {
-            ed === j.X1.GIF && (0, M._Q)();
+            ed === j.X1.GIF && (0, k._Q)();
         };
         return (
             e_.addEventListener('mousedown', eO),
@@ -258,22 +258,22 @@ function ee(e) {
         );
     }, [ed, ev, eO, e_, ep]),
         (0, h.Tbt)(ea);
-    let [eI, eS] = (0, O.US)(em ? [_.z.SOUNDMOJI_BADGE] : [], void 0, !1),
-        [eT, eA] = i.useState(!1);
+    let [eI, eT] = (0, O.US)(em ? [_.z.SOUNDMOJI_BADGE] : [], void 0, !1),
+        [eS, eA] = i.useState(!1);
     i.useEffect(() => {
         ed === j.X1.SOUNDBOARD && eA(!0);
     }, [ed]),
         i.useEffect(
             () => () => {
-                eT && eS(G.L.TAKE_ACTION);
+                eS && eT(G.L.TAKE_ACTION);
             },
-            [eT, eS]
+            [eS, eT]
         ),
         i.useEffect(() => {
-            (0, M.ql)('');
+            (0, k.ql)('');
         }, []),
         i.useEffect(() => {
-            ((!eE && (0, p.$s)()) || (eE && !eb)) && (0, M._Q)();
+            ((!eE && (0, p.$s)()) || (eE && !eb)) && (0, k._Q)();
         }, [eb, eE]),
         i.useEffect(() => {
             if (null != el.current && !eo.current) {
@@ -391,7 +391,7 @@ function ee(e) {
                                                                 (0, r.jsxs)(h.zxk, {
                                                                     className: H.addEmojiButton,
                                                                     size: h.PhG.SMALL,
-                                                                    onClick: () => (0, S.i)(),
+                                                                    onClick: () => (0, T.i)(),
                                                                     children: [
                                                                         (0, r.jsx)(d.S, {
                                                                             size: 'xs',
@@ -417,7 +417,7 @@ function ee(e) {
                                                 })
                                               : null,
                                           ed === j.X1.GIF && eN
-                                              ? (0, r.jsx)(T.Z, {
+                                              ? (0, r.jsx)(S.Z, {
                                                     onSelectGIF: Y,
                                                     hideFavorites: m,
                                                     persistSearch: !0

@@ -77,14 +77,14 @@ function I(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = S(e, t);
+        i = T(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -93,7 +93,7 @@ function S(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let T = {
+let S = {
     NOT_SET: '',
     NONE: '0',
     SMALL: '7px 10px',
@@ -352,7 +352,7 @@ function P(e) {
     };
 }
 function w(e) {
-    let { itemInfoClassName: t, itemTitleClassName: n, radioItemClassName: r, collapsibleClassName: a, className: o, value: s = null, size: l = T.MEDIUM, radioPosition: c = 'left', onChange: u = g.dG4, disabled: f = !1, options: _ = [], 'aria-labelledby': p, orientation: h, withTransparentBackground: m } = e,
+    let { itemInfoClassName: t, itemTitleClassName: n, radioItemClassName: r, collapsibleClassName: a, className: o, value: s = null, size: l = S.MEDIUM, radioPosition: c = 'left', onChange: u = g.dG4, disabled: f = !1, options: _ = [], 'aria-labelledby': p, orientation: h, withTransparentBackground: m } = e,
         E = (0, d.Gc)(),
         b = R({
             labelledBy: null != p ? p : E.titleId,
@@ -360,11 +360,11 @@ function w(e) {
             isDisabled: f
         }),
         { ref: O } = b,
-        S = I(b, ['ref']),
+        T = I(b, ['ref']),
         A = _.some((e) => e.value === s);
     return (0, i.jsx)(
         'div',
-        v(y({}, S), {
+        v(y({}, T), {
             ref: O,
             className: o,
             children: _.map((e) =>
@@ -396,4 +396,4 @@ b(C, 'defaultProps', {
     withTransparentBackground: !1,
     radioPosition: 'left'
 }),
-    (w.Sizes = T);
+    (w.Sizes = S);

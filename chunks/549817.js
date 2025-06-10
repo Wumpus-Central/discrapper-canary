@@ -20,8 +20,8 @@ var r = n(392711),
     O = n(45966),
     v = n(637853),
     I = n(816436),
-    S = n(981631),
-    T = n(372897),
+    T = n(981631),
+    S = n(372897),
     A = n(490897);
 function N(e, t, n) {
     return (
@@ -89,7 +89,7 @@ function w(e) {
     t)
         ? a.tn
               .post({
-                  url: S.ANM.GUILD_ONBOARDING_RESPONSES(e),
+                  url: T.ANM.GUILD_ONBOARDING_RESPONSES(e),
                   body: {
                       onboarding_responses: i.map((e) => e.id),
                       onboarding_prompts_seen: s,
@@ -110,7 +110,7 @@ function w(e) {
               .catch((e) => b.Z.captureException(e))
         : a.tn
               .put({
-                  url: S.ANM.GUILD_ONBOARDING_RESPONSES(e),
+                  url: T.ANM.GUILD_ONBOARDING_RESPONSES(e),
                   body: {
                       onboarding_responses: i.map((e) => e.id),
                       onboarding_prompts_seen: s,
@@ -174,7 +174,7 @@ let L = {
             D = null == n ? [] : n.options.map((e) => e.id);
         if (
             (m.default.track(
-                S.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
+                T.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
                 P(C({}, (0, l.hH)(e)), {
                     step: t.length - 1,
                     options_selected: null == n ? 0 : r.filter((e) => D.includes(e.id)).length,
@@ -197,13 +197,13 @@ let L = {
             if (null != t) {
                 var L, x;
                 let n = null != (x = null == (L = p.ZP.getMember(e, t.id)) ? void 0 : L.flags) ? x : 0;
-                (0, u.aq)(e, { memberOptions: { flags: (0, g.mB)(n, T.q.COMPLETED_ONBOARDING, !0) } });
+                (0, u.aq)(e, { memberOptions: { flags: (0, g.mB)(n, S.q.COMPLETED_ONBOARDING, !0) } });
             }
         }
     },
     onboardExistingMember(e, t) {
         let n = new Set(t);
-        (O.Z.getEnabled(e) ? O.Z.getDefaultChannelIds(e) : []).forEach((e) => n.add(e)), n.size > 0 && (0, f.Mo)(e, Array.from(n), !0, { page: S.ZY5.GUILD_ONBOARDING });
+        (O.Z.getEnabled(e) ? O.Z.getDefaultChannelIds(e) : []).forEach((e) => n.add(e)), n.size > 0 && (0, f.Mo)(e, Array.from(n), !0, { page: T.ZY5.GUILD_ONBOARDING });
     },
     finishOnboarding(e) {
         o.Z.dispatch({
@@ -223,7 +223,7 @@ let L = {
         if (null != t) {
             var n, r;
             let i = null != (r = null == (n = p.ZP.getMember(e, t.id)) ? void 0 : n.flags) ? r : 0;
-            await (0, c.e)(e, { flags: (0, g.mB)(i, T.q.COMPLETED_ONBOARDING, !1) });
+            await (0, c.e)(e, { flags: (0, g.mB)(i, S.q.COMPLETED_ONBOARDING, !1) });
         }
     }
 };

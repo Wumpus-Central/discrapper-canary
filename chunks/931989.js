@@ -75,12 +75,12 @@ let u = i.forwardRef(function (e, t) {
                 }),
                 v.setupRiveListeners());
         }, [v, a, b, h]);
-    let S = i.useRef(0);
+    let T = i.useRef(0);
     i.useEffect(() => {
         if (null == v) return;
         v.play();
         let e = (t) => {
-            null != t.data && 'number' == typeof t.data && ((S.current = t.data), t.data > 0 && ('halt' === m && g.reducedMotion.enabled && v.isPlaying && v.pause(), v.off(o.EventType.Advance, e)));
+            null != t.data && 'number' == typeof t.data && ((T.current = t.data), t.data > 0 && ('halt' === m && g.reducedMotion.enabled && v.isPlaying && v.pause(), v.off(o.EventType.Advance, e)));
         };
         return (
             v.on(o.EventType.Advance, e),
@@ -89,14 +89,14 @@ let u = i.forwardRef(function (e, t) {
             }
         );
     }, [v, g.reducedMotion.enabled, m]);
-    let T = i.useRef(!1);
+    let S = i.useRef(!1);
     return (
         i.useEffect(() => {
             if (null != v)
                 return (
-                    !E && T.current && v.isPlaying && S.current > 0 ? v.pause() : E && !v.isPlaying && T.current && v.play(),
+                    !E && S.current && v.isPlaying && T.current > 0 ? v.pause() : E && !v.isPlaying && S.current && v.play(),
                     () => {
-                        null != v && E && (T.current = null != v.frameRequestId);
+                        null != v && E && (S.current = null != v.frameRequestId);
                     }
                 );
         }, [v, E]),

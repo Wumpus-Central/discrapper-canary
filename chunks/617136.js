@@ -1,10 +1,10 @@
 n.d(t, {
     Ic: () => D,
     O5: () => x,
-    Zk: () => k,
+    Zk: () => M,
     _3: () => w,
     _F: () => L,
-    _b: () => T,
+    _b: () => S,
     dA: () => R,
     jZ: () => P,
     mH: () => C,
@@ -80,8 +80,8 @@ function v(e, t) {
     );
 }
 let I = Object.keys(_.jn),
-    S = new Set([E.rMx.QUEST_CONTENT_VIEWED, E.rMx.QUEST_CONTENT_CLICKED]);
-function T(e) {
+    T = new Set([E.rMx.QUEST_CONTENT_VIEWED, E.rMx.QUEST_CONTENT_CLICKED]);
+function S(e) {
     var t;
     return null != (t = I.find((t) => _.jn[t] === e)) ? t : '';
 }
@@ -102,7 +102,7 @@ function N(e, t) {
 function C(e, t, n) {
     return {
         content_id: e,
-        content_name: T(e),
+        content_name: S(e),
         content_position: t,
         row_index: n
     };
@@ -113,7 +113,7 @@ function R(e) {
     if (null == s || ((0, h.X7)({ location: g.dr.QUEST_PREVIEW_TOOL }) && c.Z.getLayers().includes(E.S9g.USER_SETTINGS))) return;
     let d = y({}, N(s, a), r);
     if ((l.default.isLoggingAnalyticsEvents && console.info('[Quest] AnalyticsUtils.track', n, d), s.preview)) return;
-    let _ = S.has(n);
+    let _ = T.has(n);
     if (i) return o.ZP.trackWithMetadata(n, d, _);
     u.default.track(n, d, { flush: _ });
 }
@@ -185,12 +185,12 @@ function x() {
         [e]
     );
 }
-function k(e, t) {
+function M(e, t) {
     r.useEffect(() => {
-        M(t, e);
+        k(t, e);
     }, [e, t]);
 }
-function M(e, t) {
+function k(e, t) {
     o.ZP.trackWithMetadata(E.rMx.QUEST_EMBED_FALLBACK_VIEWED, {
         quest_id: e,
         reason: t

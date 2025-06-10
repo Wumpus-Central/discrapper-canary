@@ -117,29 +117,29 @@ function I(e, t) {
         b = p(t, ['toValueMin', 'toValueMax', 'tension', 'friction', 'loop', 'reverse', 'invert', 'callback', 'type', 'shouldLoop', 'durationMin', 'durationMax']),
         y = e._value,
         O = v(t.duration, g, E),
-        S = v(t.toValue, i, a),
-        T = r[h](
+        T = v(t.toValue, i, a),
+        S = r[h](
             e,
             _(d({}, b), {
-                toValue: S,
+                toValue: T,
                 tension: o,
                 friction: s,
                 duration: O
             })
         ),
-        A = T;
+        A = S;
     if (c || u) {
         let i = v(t.duration, g, E);
         (n = r[h](
             e,
             _(d({}, b), {
-                toValue: c ? y : -S,
+                toValue: c ? y : -T,
                 tension: o,
                 friction: s,
                 duration: i
             })
         )),
-            (A = r.sequence([T, n]));
+            (A = r.sequence([S, n]));
     }
     l
         ? A.start(() => {
@@ -147,7 +147,7 @@ function I(e, t) {
           })
         : A.start(f);
 }
-function S(e) {
+function T(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
     return e.interpolate({
         inputRange: [0, 1],
@@ -155,13 +155,13 @@ function S(e) {
     });
 }
 r.inject.ApplyAnimatedValues(y, (e) => e);
-let T = { CLAMP: 'clamp' },
+let S = { CLAMP: 'clamp' },
     A = _(d({}, r), {
         Easing: a(),
         accelerate: O,
         animate: I,
-        interpolate: S,
-        Extrapolate: T,
+        interpolate: T,
+        Extrapolate: S,
         div: r.createAnimatedComponent('div'),
         span: r.createAnimatedComponent('span'),
         img: r.createAnimatedComponent('img'),

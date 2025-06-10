@@ -128,7 +128,7 @@ function y(e) {
             }),
             []
         ),
-        S = i.useCallback(() => {
+        T = i.useCallback(() => {
             let e = null == O ? void 0 : O.getCanvas();
             if (null == e) return;
             let t = e.getBoundingClientRect();
@@ -149,9 +149,9 @@ function y(e) {
             );
         }, [v, O]);
     return (i.useEffect(() => {
-        let e = n ? setInterval(S, h) : null;
+        let e = n ? setInterval(T, h) : null;
         return () => clearInterval(e);
-    }, [n, S]),
+    }, [n, T]),
     d === u.IlC.OVERLAY)
         ? t
         : (0, r.jsxs)(c.Rm.Provider, {

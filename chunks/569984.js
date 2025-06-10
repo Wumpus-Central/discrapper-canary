@@ -1,4 +1,4 @@
-let r, i, a, o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, S, T;
+let r, i, a, o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S;
 n.d(t, { Z: () => eB }), n(388685);
 var A,
     N = n(392711),
@@ -9,8 +9,8 @@ var A,
     D = n(497505),
     L = n(918701),
     x = n(184299),
-    k = n(5881),
-    M = n(46140);
+    M = n(5881),
+    k = n(46140);
 function j(e, t, n) {
     return (
         t in e
@@ -67,7 +67,7 @@ let F = new Map(),
     V = null,
     Z = 1000;
 function H() {
-    (r = !1), (i = !1), (a = !1), (o = new Map()), (s = new Map()), (l = new Map()), (c = 0), (u = 0), (d = new Set()), (f = new Set()), (_ = new Set()), (p = new Set()), (F = new Map()), (m = new Map()), (g = new Map()), (E = new Map()), (b = null), (y = new Map()), (h = new Set()), (O = new Map()), (v = new Map()), eL(), (I = null), (S = null), (T = !1);
+    (r = !1), (i = !1), (a = !1), (o = new Map()), (s = new Map()), (l = new Map()), (c = 0), (u = 0), (d = new Set()), (f = new Set()), (_ = new Set()), (p = new Set()), (F = new Map()), (m = new Map()), (g = new Map()), (E = new Map()), (b = null), (y = new Map()), (h = new Set()), (O = new Map()), (v = new Map()), eL(), (I = null), (T = null), (S = !1);
 }
 function Y(e, t) {
     var n, r, i, a;
@@ -126,7 +126,7 @@ function ee(e) {
     let { quests: t, excludedQuests: n, questEnrollmentBlockedUntil: i } = e;
     (c = Date.now()), (r = !1), (o = new Map());
     let a = new Map();
-    for (let e of t) o.set(e.id, e), a.set(e.id, (0, L.zi)(e)), e.targetedContent.includes(D.jn.QUEST_BAR) && (0, k.T)({ location: M.dr.QUESTS_STORE }).log('Delivered '.concat(e.config.messages.questName, ' (').concat(e.id, ')'));
+    for (let e of t) o.set(e.id, e), a.set(e.id, (0, L.zi)(e)), e.targetedContent.includes(D.jn.QUEST_BAR) && (0, M.T)({ location: k.dr.QUESTS_STORE }).log('Delivered '.concat(e.config.messages.questName, ' (').concat(e.id, ')'));
     for (let e of ((v = a), (s = new Map()), n)) s.set(e.id, e);
     eD(), (I = null != i ? new Date(i) : null);
 }
@@ -232,9 +232,9 @@ function eI(e) {
     let { streamKey: t } = e;
     Q(t);
 }
-function eS(e) {
+function eT(e) {
     let { user_status: t } = e,
-        n = (0, k.T)({ location: M.dr.QUESTS_STORE });
+        n = (0, M.T)({ location: k.dr.QUESTS_STORE });
     n.log('Received user status update for '.concat(t.quest_id), t);
     let r = (0, L.U3)(t);
     W(t.quest_id, { userStatus: r });
@@ -245,7 +245,7 @@ function eS(e) {
     }
     0 === Object.keys(r.progress).length && F.has(r.questId) && (n.log('Removing optimistic progress for '.concat(r.questId)), F.delete(r.questId));
 }
-function eT(e) {
+function eS(e) {
     let { previewQuestUserStatus: t } = e;
     W(t.questId, { userStatus: t }), null == t.claimedAt && (m = new Map(m)).delete(t.questId), null == t.enrolledAt && ((y = new Map(y)).delete(t.questId), x.ZP.getState().resetQuest(t.questId));
     let n = o.get(t.questId);
@@ -305,20 +305,20 @@ function ex(e) {
     let { quest_enrollment_blocked_until: t } = e;
     I = null != t ? new Date(t) : null;
 }
-function ek() {
-    T = !0;
+function eM() {
+    S = !0;
 }
-function eM(e) {
+function ek(e) {
     let { googleAdvertisingId: t, isLimitAdTrackingEnabled: n } = e;
-    (T = !1),
-        (S = {
+    (S = !1),
+        (T = {
             googleAdvertisingId: t,
             isLimitAdTrackingEnabled: n
         });
 }
 function ej() {
-    (T = !1),
-        (S = {
+    (S = !1),
+        (T = {
             googleAdvertisingId: null,
             isLimitAdTrackingEnabled: !0
         });
@@ -401,10 +401,10 @@ class eU extends (A = P.ZP.Store) {
         return null != (t = v.get(e)) && t;
     }
     get googleAdvertisingId() {
-        return null === S || S.isLimitAdTrackingEnabled ? null : S.googleAdvertisingId;
+        return null === T || T.isLimitAdTrackingEnabled ? null : T.googleAdvertisingId;
     }
     get isFetchingMobileAdData() {
-        return T;
+        return S;
     }
 }
 j(eU, 'displayName', 'QuestsStore');
@@ -433,16 +433,16 @@ let eG = new eU(w.Z, {
         QUESTS_DISMISS_CONTENT_BEGIN: ey,
         QUESTS_DISMISS_CONTENT_SUCCESS: eO,
         QUESTS_DISMISS_CONTENT_FAILURE: ev,
-        QUESTS_USER_STATUS_UPDATE: eS,
+        QUESTS_USER_STATUS_UPDATE: eT,
         STREAM_CLOSE: el,
         QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE: eI,
-        QUESTS_PREVIEW_UPDATE_SUCCESS: eT,
+        QUESTS_PREVIEW_UPDATE_SUCCESS: eS,
         QUESTS_DELIVERY_OVERRIDE: eA,
         QUESTS_SELECT_TASK_PLATFORM: eN,
         QUESTS_UPDATE_OPTIMISTIC_PROGRESS: eC,
         QUESTS_USER_COMPLETION_UPDATE: ex,
-        FETCH_MOBILE_AD_DATA_BEGIN: ek,
-        FETCH_MOBILE_AD_DATA_SUCCESS: eM,
+        FETCH_MOBILE_AD_DATA_BEGIN: eM,
+        FETCH_MOBILE_AD_DATA_SUCCESS: ek,
         FETCH_MOBILE_AD_DATA_FAILURE: ej
     }),
     eB = eG;

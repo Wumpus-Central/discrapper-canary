@@ -61,11 +61,11 @@ function I(e) {
     if (null == t.store_listing) return !1;
     g(t.store_listing.sku);
 }
-function S(e) {
+function T(e) {
     let { sku: t } = e;
     E(t);
 }
-function T(e) {
+function S(e) {
     let { guildId: t, skus: n } = e;
     for (let e of n) E(e);
     null != t && m.set(t, new Set(n.map((e) => e.id)));
@@ -125,9 +125,9 @@ let L = new D(o.Z, {
     STORE_LISTING_FETCH_SUCCESS: C,
     GIFT_CODE_RESOLVE_SUCCESS: I,
     SKU_FETCH_START: y,
-    SKU_FETCH_SUCCESS: S,
+    SKU_FETCH_SUCCESS: T,
     SKU_FETCH_FAIL: v,
-    SKUS_FETCH_SUCCESS: T,
+    SKUS_FETCH_SUCCESS: S,
     ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: R,
     APPLICATION_STORE_CLEAR_DATA: P,
     APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: R,

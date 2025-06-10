@@ -78,13 +78,13 @@ function I(e) {
     if (n.type !== l.uaV.CHAT_WALLPAPER_SET) return !1;
     s.default.compare(n.id, p[t]) > 0 && (p[t] = n.id);
 }
-function S(e) {
+function T(e) {
     let { channelId: t, messages: n } = e,
         r = n.find((e) => e.type === l.uaV.CHAT_WALLPAPER_SET);
     if (null == r) return !1;
     p[t] = r.id;
 }
-class T extends (r = a.ZP.Store) {
+class S extends (r = a.ZP.Store) {
     get isFetchingWallpapers() {
         return 1 === f;
     }
@@ -111,12 +111,12 @@ class T extends (r = a.ZP.Store) {
         return p[e];
     }
 }
-c(T, 'displayName', 'ChatWallpaperStore');
-let A = new T(o.Z, {
+c(S, 'displayName', 'ChatWallpaperStore');
+let A = new S(o.Z, {
     FETCH_CHAT_WALLPAPERS_START: m,
     FETCH_CHAT_WALLPAPERS_SUCCESS: g,
     FETCH_CHAT_WALLPAPERS_FAILURE: E,
-    LOAD_MESSAGES_SUCCESS: S,
+    LOAD_MESSAGES_SUCCESS: T,
     MESSAGE_CREATE: I,
     UPDATE_CHAT_WALLPAPER_FLAG_START: y,
     UPDATE_CHAT_WALLPAPER_FLAG_COMPLETE: O,

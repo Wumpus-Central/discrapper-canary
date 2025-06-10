@@ -122,11 +122,11 @@ function I(e) {
     if (t > d.yqN.FONT_SIZE_MAX || t < d.yqN.FONT_SIZE_MIN || y.fontSize === t) return !1;
     (y = p({}, y)).fontSize = t;
 }
-function S(e) {
+function T(e) {
     if (e.zoom < d.yqN.ZOOM_MIN || e.zoom > d.yqN.ZOOM_MAX || y.zoom === e.zoom) return !1;
     ((y = p({}, y)).zoom = e.zoom), u.Z.setZoomFactor(y.zoom);
 }
-function T() {
+function S() {
     let e = y.fontSize !== d.yqN.FONT_SIZE_DEFAULT,
         t = y.zoom !== d.yqN.ZOOM_DEFAULT;
     if (!e && !t) return !1;
@@ -161,10 +161,10 @@ function L(e) {
 function x() {
     (y = p({}, y)).submitButtonEnabled = !y.submitButtonEnabled;
 }
-function k() {
+function M() {
     (y = p({}, y)).syncProfileThemeWithUserTheme = !y.syncProfileThemeWithUserTheme;
 }
-function M(e) {
+function k(e) {
     if (y.systemPrefersReducedMotion === e.systemPrefersReducedMotion) return !1;
     y = m(p({}, y), { systemPrefersReducedMotion: e.systemPrefersReducedMotion });
 }
@@ -384,8 +384,8 @@ _(W, 'displayName', 'AccessibilityStore'),
     ]);
 let K = new W(s.Z, {
     ACCESSIBILITY_SET_FONT_SIZE: I,
-    ACCESSIBILITY_SET_ZOOM: S,
-    ACCESSIBILITY_RESET_TO_DEFAULT: T,
+    ACCESSIBILITY_SET_ZOOM: T,
+    ACCESSIBILITY_RESET_TO_DEFAULT: S,
     ACCESSIBILITY_KEYBOARD_MODE_ENABLE: A,
     ACCESSIBILITY_KEYBOARD_MODE_DISABLE: N,
     ACCESSIBILITY_COLORBLIND_TOGGLE: C,
@@ -394,7 +394,7 @@ let K = new W(s.Z, {
     ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: D,
     ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: F,
     ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: G,
-    ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: M,
+    ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: k,
     ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: j,
     ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: U,
     ACCESSIBILITY_SET_SYNC_FORCED_COLORS: P,
@@ -404,6 +404,6 @@ let K = new W(s.Z, {
     KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN: Z,
     ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: H,
     ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: x,
-    ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: k,
+    ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: M,
     ACCESSIBILITY_SET_CONTRAST: Y
 });

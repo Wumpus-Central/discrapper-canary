@@ -1,6 +1,6 @@
 n.d(t, {
     M: () => I,
-    a: () => S
+    a: () => T
 }),
     n(190126),
     n(368063),
@@ -56,7 +56,7 @@ function v(e, t, n, r, i) {
 let I = (e) => {
         let t,
             { step: n, onPurchaseComplete: a, onHandoffFailure: o } = e,
-            { selectedPlan: u, setSelectedPlanId: d, setSelectedSkuId: f, browserCheckoutState: I, browserCheckoutStateLoadId: S, browserCheckoutStateSkuId: T, browserCheckoutStatePlanId: A, contextMetadata: N } = (0, p.JL)(),
+            { selectedPlan: u, setSelectedPlanId: d, setSelectedSkuId: f, browserCheckoutState: I, browserCheckoutStateLoadId: T, browserCheckoutStateSkuId: S, browserCheckoutStatePlanId: A, contextMetadata: N } = (0, p.JL)(),
             { isGift: C } = (0, _.wD)(),
             [R, P] = i.useState(!1);
         switch (n) {
@@ -75,8 +75,8 @@ let I = (e) => {
                 return () => clearTimeout(e);
             }, [u, C, N, o, P, R, t]),
             i.useEffect(() => {
-                null !== T && (E.YQ.includes(T) && ((0, c.GZ)(T), (0, l.jg)()), f(T)), null !== A && d(A), S === N.loadId && I === m.Y.DONE && a();
-            }, [f, d, I, S, T, A, N, a]),
+                null !== S && (E.YQ.includes(S) && ((0, c.GZ)(S), (0, l.jg)()), f(S)), null !== A && d(A), T === N.loadId && I === m.Y.DONE && a();
+            }, [f, d, I, T, S, A, N, a]),
             (0, r.jsxs)('div', {
                 className: y.body,
                 children: [
@@ -93,7 +93,7 @@ let I = (e) => {
             })
         );
     },
-    S = (e) => {
+    T = (e) => {
         let { onPrimaryClick: t, onBackClick: n } = e;
         return (0, r.jsx)('div', {
             children: (0, r.jsxs)(s.mzw, {

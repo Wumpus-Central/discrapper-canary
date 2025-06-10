@@ -30,8 +30,8 @@ var r = n(73800),
     O = n(630388),
     v = n(823379),
     I = n(960048),
-    S = n(709054),
-    T = n(223683),
+    T = n(709054),
+    S = n(223683),
     A = n(630114),
     N = n(506712),
     C = n(468788),
@@ -53,7 +53,7 @@ function x(e, t, n) {
         e
     );
 }
-function k(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -69,7 +69,7 @@ function k(e) {
     }
     return e;
 }
-function M(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -86,7 +86,7 @@ function j(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : M(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -108,7 +108,7 @@ function U(e, t) {
         {
             guildPlans: u,
             overrideGuild: r.useCallback((e, t) => {
-                s((n) => j(k({}, n), { [e]: t }));
+                s((n) => j(M({}, n), { [e]: t }));
             }, []),
             setThresholds: i,
             getDebug: () => V(Object.values(u), t)
@@ -259,19 +259,19 @@ function Y(e) {
                 };
             }),
         n = {
-            num_unread_guilds_before: S.default.keys(e).filter((e) => m.default.hasUnread(e)).length,
+            num_unread_guilds_before: T.default.keys(e).filter((e) => m.default.hasUnread(e)).length,
             unmuted_server_ids: t.filter((e) => b.ZP.isMuted(e.plan.guildId)).map((e) => e.plan.guildId)
         };
     return () => {
         y.default.track(
             P.rMx.NOTIFICATION_MIGRATION_COMPLETED,
-            j(k({}, n), {
+            j(M({}, n), {
                 auto_migrated: !0,
                 pre_selected_server_ids: Object.values(e)
                     .filter((e) => e.mode === R.AR.UseGreyDot)
                     .map((e) => e.guildId),
                 final_selected_server_ids: t.map((e) => e.plan.guildId),
-                num_unread_guids_after: S.default.keys(e).filter((e) => m.default.hasUnread(e)).length,
+                num_unread_guids_after: T.default.keys(e).filter((e) => m.default.hasUnread(e)).length,
                 num_tiny_servers_selected: t.filter((e) => e.memberCount <= 20).length,
                 num_small_servers_selected: t.filter((e) => e.memberCount > 20 && e.memberCount <= 200).length,
                 num_medium_servers_selected: t.filter((e) => e.memberCount > 200 && e.memberCount <= 1000).length,
@@ -303,8 +303,8 @@ async function K(e) {
     return await e();
 }
 async function z() {
-    let e = await (0, T.Tn)();
-    e.length > 0 ? (await q()) && (0, T.dt)(e) : (0, T.$U)('Backup from '.concat(new Date().toLocaleDateString()));
+    let e = await (0, S.Tn)();
+    e.length > 0 ? (await q()) && (0, S.dt)(e) : (0, S.$U)('Backup from '.concat(new Date().toLocaleDateString()));
 }
 function q() {
     return new Promise((e) => {
@@ -320,7 +320,7 @@ function q() {
 }
 async function X() {
     s.K.set('turnedOffNewNotifications', !0), y.default.track(P.rMx.NOTIFICATION_MIGRATION_OPTOUT, { num_guilds_with_new_setting: Object.values(g.Z.getGuilds()).filter((e) => b.ZP.resolveGuildUnreadSetting(e) === w.i.ONLY_MENTIONS).length });
-    let e = await (0, T.Tn)(),
+    let e = await (0, S.Tn)(),
         t = a().sortBy(e, (e) => new Date(e.recorded_at).getTime());
     if (t.length > 0) {
         let e = t[t.length - 1];
@@ -333,7 +333,7 @@ async function X() {
                 onCancel: () => {}
             })
         ),
-            await (0, T.xx)(e.id),
+            await (0, S.xx)(e.id),
             await u.Z.setAccountFlag(C.c.USE_NEW_NOTIFICATIONS, !1);
     } else await u.Z.setAccountFlag(C.c.USE_NEW_NOTIFICATIONS, !1);
 }

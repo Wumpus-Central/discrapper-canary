@@ -1,24 +1,24 @@
 a.d(e, {
     RA: () => o,
     U4: () => i,
-    vK: () => s
+    vK: () => E
 });
 var r = a(176984),
-    n = a(622916);
-let _ = /^(?:(\w+):)\/\/(?:(\w+)(?::(\w+)?)?@)([\w.-]+)(?::(\d+))?\/(.+)/;
+    _ = a(622916);
+let n = /^(?:(\w+):)\/\/(?:(\w+)(?::(\w+)?)?@)([\w.-]+)(?::(\d+))?\/(.+)/;
 function o(t, e = !1) {
-    let { host: a, path: r, pass: n, port: _, projectId: i, protocol: c, publicKey: s } = t;
-    return `${c}://${s}${e && n ? `:${n}` : ''}@${a}${_ ? `:${_}` : ''}/${r ? `${r}/` : r}${i}`;
+    let { host: a, path: r, pass: _, port: n, projectId: i, protocol: c, publicKey: E } = t;
+    return `${c}://${E}${e && _ ? `:${_}` : ''}@${a}${n ? `:${n}` : ''}/${r ? `${r}/` : r}${i}`;
 }
 function i(t) {
-    let e = _.exec(t);
+    let e = n.exec(t);
     if (!e)
-        return void (0, n.Cf)(() => {
+        return void (0, _.Cf)(() => {
             console.error(`Invalid Sentry Dsn: ${t}`);
         });
-    let [a, r, o = '', i = '', s = '', E = ''] = e.slice(1),
+    let [a, r, o = '', i = '', E = '', s = ''] = e.slice(1),
         l = '',
-        u = E,
+        u = s,
         I = u.split('/');
     if ((I.length > 1 && ((l = I.slice(0, -1).join('/')), (u = I.pop())), u)) {
         let t = u.match(/^\d+/);
@@ -29,7 +29,7 @@ function i(t) {
         pass: o,
         path: l,
         projectId: u,
-        port: s,
+        port: E,
         protocol: a,
         publicKey: r
     });
@@ -45,14 +45,14 @@ function c(t) {
         projectId: t.projectId
     };
 }
-function s(t) {
+function E(t) {
     let e = 'string' == typeof t ? i(t) : c(t);
     if (
         e &&
         (function (t) {
             if (!r.X) return !0;
-            let { port: e, projectId: a, protocol: _ } = t;
-            return !['protocol', 'publicKey', 'host', 'projectId'].find((e) => !t[e] && (n.kg.error(`Invalid Sentry Dsn: ${e} missing`), !0)) && (a.match(/^\d+$/) ? ('http' !== _ && 'https' !== _ ? (n.kg.error(`Invalid Sentry Dsn: Invalid protocol ${_}`), !1) : !(e && isNaN(parseInt(e, 10))) || (n.kg.error(`Invalid Sentry Dsn: Invalid port ${e}`), !1)) : (n.kg.error(`Invalid Sentry Dsn: Invalid projectId ${a}`), !1));
+            let { port: e, projectId: a, protocol: n } = t;
+            return !['protocol', 'publicKey', 'host', 'projectId'].find((e) => !t[e] && (_.kg.error(`Invalid Sentry Dsn: ${e} missing`), !0)) && (a.match(/^\d+$/) ? ('http' !== n && 'https' !== n ? (_.kg.error(`Invalid Sentry Dsn: Invalid protocol ${n}`), !1) : !(e && isNaN(parseInt(e, 10))) || (_.kg.error(`Invalid Sentry Dsn: Invalid port ${e}`), !1)) : (_.kg.error(`Invalid Sentry Dsn: Invalid projectId ${a}`), !1));
         })(e)
     )
         return e;

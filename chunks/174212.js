@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -135,7 +135,7 @@ function I(e, t) {
         r = _.get(e);
     return null != r && (t !== r.commandId || n !== r.optionName) && (null != t && t !== r.commandId && (r.optionNameToLastResults.clear(), r.optionNameToNonce.clear(), r.optionNameToLastQuery.clear(), r.optionNameToAutocompleteQueries.clear()), (r.lastErrored = !1), (r.commandId = t), (r.optionName = n), !0);
 }
-class S extends (r = i.ZP.Store) {
+class T extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(c.Z);
     }
@@ -153,8 +153,8 @@ class S extends (r = i.ZP.Store) {
         return h(e).lastResponseNonce;
     }
 }
-d(S, 'displayName', 'ApplicationCommandAutocompleteStore');
-let T = new S(a.Z, {
+d(T, 'displayName', 'ApplicationCommandAutocompleteStore');
+let S = new T(a.Z, {
     CONNECTION_OPEN: m,
     LOGOUT: m,
     CHANNEL_SELECT: m,

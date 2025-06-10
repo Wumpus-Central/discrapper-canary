@@ -20,8 +20,8 @@ var i = n(512722),
     O = n(70722),
     v = n(981631),
     I = n(65154);
-let S = 300000,
-    T = 60000,
+let T = 300000,
+    S = 60000,
     A = {},
     N = new f.V7(),
     C = !1,
@@ -34,7 +34,7 @@ function L() {
     N.stop(), null != r && (u.Z.removeSink(r, A), (r = null));
 }
 let x = s().debounce((e, t, n, r) => {
-    M(
+    k(
         e,
         (0, y.V9)({
             streamType: null != t ? O.lo.GUILD : O.lo.CALL,
@@ -44,7 +44,7 @@ let x = s().debounce((e, t, n, r) => {
         })
     );
 }, 500);
-function k(e) {
+function M(e) {
     let t = Math.min(P / e.width, w / e.height),
         n = e.width * t,
         r = e.height * t;
@@ -60,13 +60,13 @@ function k(e) {
         })
     );
 }
-async function M(e, t) {
+async function k(e, t) {
     if (r !== e || ((0, E.isWeb)() && h.I0.getSetting()) || m.Z.getIsActiveStreamPreviewDisabled(t)) return;
-    let n = () => M(e, t);
+    let n = () => k(e, t);
     if (!C)
         try {
             let n = await j(e, 60);
-            await k(n);
+            await M(n);
             let r = R.toDataURL('image/jpeg');
             if (
                 (_.Z.dispatch({
@@ -94,10 +94,10 @@ async function M(e, t) {
                     rejectWithError: !1
                 });
         } catch (t) {
-            new p.Z('ApplicationStreamPreviewUploadManager').error('Failed to post stream preview', t), r === e && N.start(T, n);
+            new p.Z('ApplicationStreamPreviewUploadManager').error('Failed to post stream preview', t), r === e && N.start(S, n);
             return;
         }
-    r === e && (C ? N.start(T, n) : N.start(S, n));
+    r === e && (C ? N.start(S, n) : N.start(T, n));
 }
 function j(e, t) {
     let n = 0;

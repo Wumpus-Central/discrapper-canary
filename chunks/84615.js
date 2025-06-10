@@ -85,7 +85,7 @@ let v = (0, p.Mg)(d.Z.FULL_SCREEN_LAYER_ANIMATION_DURATION),
                 });
             })
     }));
-function S(e) {
+function T(e) {
     let { item: t, containerRef: n } = e;
     return (
         (0, f.Tbt)(n),
@@ -114,7 +114,7 @@ function S(e) {
         })
     );
 }
-let T = {
+let S = {
         enter: g.enter,
         enterActive: g.enterActive,
         enterDone: g.enterDone,
@@ -132,7 +132,7 @@ let T = {
     };
 function N() {
     let { reducedMotion: e } = i.useContext(f.Sfi),
-        t = e.enabled ? A : T,
+        t = e.enabled ? A : S,
         n = I((e) => e.fullScreenLayers),
         a = n.map((e) => ({
             item: e,
@@ -153,7 +153,7 @@ function N() {
                         });
                     },
                     unmountOnExit: !0,
-                    children: (0, r.jsx)(S, {
+                    children: (0, r.jsx)(T, {
                         containerRef: a,
                         item: i
                     })

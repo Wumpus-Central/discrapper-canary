@@ -4,8 +4,8 @@ a.d(e, {
     cW: () => c
 });
 var r,
-    n,
-    _ = a(573736);
+    _,
+    n = a(573736);
 function o(t) {
     return new c((e) => {
         e(t);
@@ -16,10 +16,10 @@ function i(t) {
         a(t);
     });
 }
-((r = n || (n = {}))[(r.PENDING = 0)] = 'PENDING'), (r[(r.RESOLVED = 1)] = 'RESOLVED'), (r[(r.REJECTED = 2)] = 'REJECTED');
+((r = _ || (_ = {}))[(r.PENDING = 0)] = 'PENDING'), (r[(r.RESOLVED = 1)] = 'RESOLVED'), (r[(r.REJECTED = 2)] = 'REJECTED');
 class c {
     constructor(t) {
-        c.prototype.__init.call(this), c.prototype.__init2.call(this), c.prototype.__init3.call(this), c.prototype.__init4.call(this), (this._state = n.PENDING), (this._handlers = []);
+        c.prototype.__init.call(this), c.prototype.__init2.call(this), c.prototype.__init3.call(this), c.prototype.__init4.call(this), (this._state = _.PENDING), (this._handlers = []);
         try {
             t(this._resolve, this._reject);
         } catch (t) {
@@ -57,45 +57,45 @@ class c {
     }
     finally(t) {
         return new c((e, a) => {
-            let r, n;
+            let r, _;
             return this.then(
                 (e) => {
-                    (n = !1), (r = e), t && t();
+                    (_ = !1), (r = e), t && t();
                 },
                 (e) => {
-                    (n = !0), (r = e), t && t();
+                    (_ = !0), (r = e), t && t();
                 }
             ).then(() => {
-                if (n) return void a(r);
+                if (_) return void a(r);
                 e(r);
             });
         });
     }
     __init() {
         this._resolve = (t) => {
-            this._setResult(n.RESOLVED, t);
+            this._setResult(_.RESOLVED, t);
         };
     }
     __init2() {
         this._reject = (t) => {
-            this._setResult(n.REJECTED, t);
+            this._setResult(_.REJECTED, t);
         };
     }
     __init3() {
         this._setResult = (t, e) => {
-            if (this._state === n.PENDING) {
-                if ((0, _.J8)(e)) return void e.then(this._resolve, this._reject);
+            if (this._state === _.PENDING) {
+                if ((0, n.J8)(e)) return void e.then(this._resolve, this._reject);
                 (this._state = t), (this._value = e), this._executeHandlers();
             }
         };
     }
     __init4() {
         this._executeHandlers = () => {
-            if (this._state === n.PENDING) return;
+            if (this._state === _.PENDING) return;
             let t = this._handlers.slice();
             (this._handlers = []),
                 t.forEach((t) => {
-                    t[0] || (this._state === n.RESOLVED && t[1](this._value), this._state === n.REJECTED && t[2](this._value), (t[0] = !0));
+                    t[0] || (this._state === _.RESOLVED && t[1](this._value), this._state === _.REJECTED && t[2](this._value), (t[0] = !0));
                 });
         };
     }

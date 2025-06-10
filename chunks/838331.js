@@ -91,8 +91,8 @@ function v(e, t) {
     return i;
 }
 let I = 'data-listbox-item-id',
-    S = 40,
-    T = Object.freeze({
+    T = 40,
+    S = Object.freeze({
         STANDARD: m.selected,
         BRAND: m.selectedBrand
     });
@@ -118,11 +118,11 @@ let C = i.createContext({
     itemToString: N
 });
 function R(e) {
-    let { placeholder: t, children: n, value: a, onChange: c, className: u, listClassName: g, 'aria-label': b, multiSelect: v = !1, autoFocus: T = !1, maxVisibleItems: A = 5, itemToString: R = N, showScrollbar: P = !1 } = e,
+    let { placeholder: t, children: n, value: a, onChange: c, className: u, listClassName: g, 'aria-label': b, multiSelect: v = !1, autoFocus: S = !1, maxVisibleItems: A = 5, itemToString: R = N, showScrollbar: P = !1 } = e,
         [w, D] = i.useState(''),
         [L] = i.useState(!0),
-        [x, k] = i.useState(null),
-        M = i.useId(),
+        [x, M] = i.useState(null),
+        k = i.useId(),
         j = i.useRef(null);
     i.useLayoutEffect(() => {
         let e = document.querySelector('['.concat(I, '="').concat(x, '"]')),
@@ -156,7 +156,7 @@ function R(e) {
             []
         ),
         Z = i.useCallback((e, t) => {
-            k(t);
+            M(t);
             let n = document.querySelector(e),
                 r = j.current;
             null != r && null != n && r.scrollIntoViewNode({ node: n });
@@ -181,19 +181,19 @@ function R(e) {
                     role: 'combobox',
                     'aria-label': b,
                     'aria-expanded': L,
-                    'aria-controls': L ? M : void 0,
-                    'aria-owns': M,
+                    'aria-controls': L ? k : void 0,
+                    'aria-owns': k,
                     'aria-haspopup': 'listbox',
                     className: o()(m.combobox, u),
                     children: [
                         (0, r.jsx)(f.E, {
-                            autoFocus: T,
+                            autoFocus: S,
                             size: f.E.Sizes.MEDIUM,
                             placeholder: t,
                             query: w,
                             onChange: D,
                             onKeyDown: i,
-                            onBlur: () => k(null),
+                            onBlur: () => M(null),
                             onClear: () => D(''),
                             className: o()({ [m.searchWithScrollbar]: P }),
                             inputProps: {
@@ -229,14 +229,14 @@ function R(e) {
                                           children: (0, r.jsx)(
                                               Y,
                                               y(E({}, s), {
-                                                  style: { maxHeight: A * (S + 6) },
+                                                  style: { maxHeight: A * (T + 6) },
                                                   'aria-multiselectable': v,
-                                                  id: M,
+                                                  id: k,
                                                   ref: j,
                                                   className: o()(m.list, g, { [m.scroller]: P }),
                                                   sections: [U.length],
                                                   sectionHeight: 0,
-                                                  rowHeight: S,
+                                                  rowHeight: T,
                                                   renderRow: (e) => {
                                                       let { row: t } = e;
                                                       return U[t];
@@ -255,13 +255,13 @@ function R(e) {
 let P = i.createContext(null);
 function w(e) {
     var t,
-        { value: n, children: a, disabled: s = !1, selectedColor: c = T.STANDARD } = e,
+        { value: n, children: a, disabled: s = !1, selectedColor: c = S.STANDARD } = e,
         d = O(e, ['value', 'children', 'disabled', 'selectedColor']);
     let { activeDescendant: f, selected: _, setSelected: p, itemToString: h } = i.useContext(C),
         g = h(n),
         b = f === g,
         v = null != (t = null == d ? void 0 : d.selected) ? t : _.has(n),
-        S = (0, l.JA)(g);
+        T = (0, l.JA)(g);
     return (0, r.jsx)(
         u.P,
         y(
@@ -277,7 +277,7 @@ function w(e) {
                         [m.disabled]: s
                     })
                 },
-                S
+                T
             ),
             {
                 role: 'option',
@@ -291,7 +291,7 @@ function w(e) {
         )
     );
 }
-(w.Colors = T),
+(w.Colors = S),
     (w.Label = function (e) {
         let { children: t } = e;
         return (0, r.jsx)('span', {

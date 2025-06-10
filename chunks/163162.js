@@ -1,8 +1,8 @@
 a.d(e, {
-    Wz: () => E,
+    Wz: () => s,
     m9: () => c,
     re: () =>
-        function t(e, a = {}, _) {
+        function t(e, a = {}, n) {
             if ('function' != typeof e) return e;
             try {
                 let t = e.__sentry_wrapped__;
@@ -14,14 +14,14 @@ a.d(e, {
             let c = function () {
                 let o = Array.prototype.slice.call(arguments);
                 try {
-                    _ && 'function' == typeof _ && _.apply(this, arguments);
+                    n && 'function' == typeof n && n.apply(this, arguments);
                     let r = o.map((e) => t(e, a));
                     return e.apply(this, r);
                 } catch (t) {
                     throw (
-                        (s++,
+                        (E++,
                         setTimeout(() => {
-                            s--;
+                            E--;
                         }),
                         (0, r.$e)((e) => {
                             e.addEventProcessor(
@@ -34,7 +34,7 @@ a.d(e, {
                                     t
                                 )
                             ),
-                                (0, n.Tb)(t);
+                                (0, _.Tb)(t);
                         }),
                         t)
                     );
@@ -51,12 +51,12 @@ a.d(e, {
         }
 });
 var r = a(263449),
-    n = a(233517),
-    _ = a(899517),
+    _ = a(233517),
+    n = a(899517),
     o = a(370336),
     i = a(394798);
-let c = _.n,
-    s = 0;
-function E() {
-    return s > 0;
+let c = n.n,
+    E = 0;
+function s() {
+    return E > 0;
 }

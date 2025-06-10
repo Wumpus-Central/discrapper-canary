@@ -90,7 +90,7 @@ function O(e) {
         O = _.n_.AVATAR,
         { trackUserProfileAction: v } = (0, s.KZ)(),
         { interactionSource: I } = (0, l.Xo)(),
-        S = o()(p.avatar, { [p.hoisted]: I === _.n_.AVATAR || I === _.n_.STATUS });
+        T = o()(p.avatar, { [p.hoisted]: I === _.n_.AVATAR || I === _.n_.STATUS });
     return (0, r.jsx)(f.Z, {
         targetElementRef: y,
         sourceType: _.n_.AVATAR,
@@ -101,7 +101,7 @@ function O(e) {
                 m(
                     {
                         user: t,
-                        className: S,
+                        className: T,
                         themeType: n,
                         sourceType: O,
                         onAction: v
@@ -112,7 +112,7 @@ function O(e) {
                     children: () =>
                         (0, r.jsx)(d.Z, {
                             ref: y,
-                            className: S,
+                            className: T,
                             user: t,
                             sourceType: O,
                             onAction: v,

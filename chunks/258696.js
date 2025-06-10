@@ -24,8 +24,8 @@ var r = n(255367),
     O = n(58995),
     v = n(655678),
     I = n(897291),
-    S = n(466711),
-    T = n(319417),
+    T = n(466711),
+    S = n(319417),
     A = n(728386),
     N = n(302195);
 function C(e) {
@@ -38,7 +38,7 @@ function C(e) {
               channel: n
           })
         : null != a
-          ? (0, r.jsx)(S.Z, {
+          ? (0, r.jsx)(T.Z, {
                 giftingPromotionConfig: a,
                 disabled: t,
                 channel: n
@@ -50,22 +50,22 @@ function C(e) {
 }
 function R(e) {
     var t, n, i, _, p, h, m;
-    let { type: O, disabled: I, channel: S, handleSubmit: R, isEmpty: w, showAllButtons: D, children: L } = e,
+    let { type: O, disabled: I, channel: T, handleSubmit: R, isEmpty: w, showAllButtons: D, children: L } = e,
         x = (0, o.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
-        k = P(S.id, O, w),
-        { activeCommand: M, activeCommandOption: j } = (0, o.cj)([c.Z], () => ({
-            activeCommand: c.Z.getActiveCommand(S.id),
-            activeCommandOption: c.Z.getActiveOption(S.id)
+        M = P(T.id, O, w),
+        { activeCommand: k, activeCommandOption: j } = (0, o.cj)([c.Z], () => ({
+            activeCommand: c.Z.getActiveCommand(T.id),
+            activeCommandOption: c.Z.getActiveOption(T.id)
         })),
         { paymentsBlocked: U } = u.Z.useExperiment({ location: 'dc120b_3' }, { autoTrackExposure: !1 }),
         G = [],
-        B = !S.isDM() || void 0 === S.recipients || S.recipients.length > 1,
-        F = (0, o.e7)([g.default], () => (B ? null : g.default.getUser(S.recipients[0]))),
+        B = !T.isDM() || void 0 === T.recipients || T.recipients.length > 1,
+        F = (0, o.e7)([g.default], () => (B ? null : g.default.getUser(T.recipients[0]))),
         V = (0, d.R6)('ChannelTextAreaButtons'),
         Z = (0, f.Nt)() && (null == (t = O.confetti) ? void 0 : t.button) != null;
     return (a.tq ||
         ((null == (p = O.gifts) ? void 0 : p.button) != null &&
-            null == M &&
+            null == k &&
             !U &&
             (null == F || E.ZP.isPremiumEligible(F)) &&
             G.push(
@@ -73,13 +73,13 @@ function R(e) {
                     C,
                     {
                         disabled: I,
-                        channel: S
+                        channel: T
                     },
                     'gift'
                 )
             ),
         (null == (h = O.gifs) ? void 0 : h.button) != null &&
-            null == M &&
+            null == k &&
             D &&
             G.push(
                 (0, r.jsx)(
@@ -92,20 +92,20 @@ function R(e) {
                 )
             ),
         Z &&
-            null == M &&
+            null == k &&
             G.push(
                 (0, r.jsx)(
                     v.Z,
                     {
                         disabled: I,
-                        channel: S
+                        channel: T
                     },
                     'confetti'
                 )
             ),
         !Z &&
             (null == (m = O.stickers) ? void 0 : m.button) != null &&
-            null == M &&
+            null == k &&
             D &&
             G.push(
                 (0, r.jsx)(
@@ -118,7 +118,7 @@ function R(e) {
                 )
             )),
     (null == (n = O.emojis) ? void 0 : n.button) != null &&
-        (null == M || (null != j && j.type !== s.jw.ATTACHMENT)) &&
+        (null == k || (null != j && j.type !== s.jw.ATTACHMENT)) &&
         G.push(
             (0, r.jsx)(
                 b.Z,
@@ -135,10 +135,10 @@ function R(e) {
         !V &&
         G.push(
             (0, r.jsx)(
-                T.Z,
+                S.Z,
                 {
                     onClick: R,
-                    disabled: I || k
+                    disabled: I || M
                 },
                 'submit'
             )

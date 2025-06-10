@@ -24,7 +24,7 @@ var r = n(255367),
     O = n(185923),
     v = n(420212),
     I = n(105085);
-function S(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function S(e, t, n) {
         e
     );
 }
-function T(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function T(e) {
                 })
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
@@ -131,11 +131,11 @@ function w(e) {
     });
 }
 function D(e) {
-    let { channel: t, title: n, closePopout: a, onFocus: l, onSelectEmoji: u, onSelectDisabledEmoji: d, onExpandedToggle: p, emojiSearchProps: m, recentlyUsedEmojis: b, analyticsOverride: S, ref: A } = e,
+    let { channel: t, title: n, closePopout: a, onFocus: l, onSelectEmoji: u, onSelectDisabledEmoji: d, onExpandedToggle: p, emojiSearchProps: m, recentlyUsedEmojis: b, analyticsOverride: T, ref: A } = e,
         D = (0, f.Dt)(),
         [L, x] = i.useState(!1),
-        k = (0, _.wC)(t.guild_id),
-        M = (0, s.uniqBy)([...k, ...R], 'name')
+        M = (0, _.wC)(t.guild_id),
+        k = (0, s.uniqBy)([...M, ...R], 'name')
             .filter(
                 (e) =>
                     !E.ZP.isEmojiFilteredOrLocked({
@@ -145,7 +145,7 @@ function D(e) {
                     })
             )
             .slice(0, y.e5);
-    null != b && b.length > 0 && M.splice(M.length - 1, 1, b[0]);
+    null != b && b.length > 0 && k.splice(k.length - 1, 1, b[0]);
     let j = (e) => {
             x(e), null == p || p(e);
         },
@@ -174,7 +174,7 @@ function D(e) {
                 className: I.container,
                 children: [
                     (0, r.jsx)(h.Z, {
-                        analyticsOverride: S,
+                        analyticsOverride: T,
                         channel: t,
                         className: o()(I.animatedPicker, { [I.animatedPickerTall]: L }),
                         headerClassName: o()(I.emojiPickerHeader, { [I.emojiPickerHeaderExpanded]: L }),
@@ -183,7 +183,7 @@ function D(e) {
                         shouldHidePickerActions: !L,
                         wrapper: 'div',
                         pickerIntention: C,
-                        searchProps: N(T({}, m), {
+                        searchProps: N(S({}, m), {
                             accessory: (0, r.jsx)(w, {
                                 otherAccessories: null == m ? void 0 : m.accessory,
                                 isEmojiPickerExpanded: L,
@@ -197,7 +197,7 @@ function D(e) {
                         className: I.slotsContainer,
                         children: (0, r.jsx)('div', {
                             className: o()(I.slots, I.slotsWide),
-                            children: M.map((e) => {
+                            children: k.map((e) => {
                                 let n = E.ZP.isEmojiDisabled({
                                     emoji: e,
                                     channel: t,

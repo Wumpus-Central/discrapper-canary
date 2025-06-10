@@ -204,7 +204,7 @@ class b extends i.Z {
               };
     }
     constructor(e) {
-        var t, n, i, a, s, l, c, u, d, _, p, m, g, E, b, y, O, v, I, S, T, A, N, C, R, P, w, D, L, x, k, M;
+        var t, n, i, a, s, l, c, u, d, _, p, m, g, E, b, y, O, v, I, T, S, A, N, C, R, P, w, D, L, x, M, k;
         super(), h(this, 'id', void 0), h(this, 'username', void 0), h(this, 'discriminator', void 0), h(this, 'avatar', void 0), h(this, 'avatarDecorationData', void 0), h(this, 'banner', void 0), h(this, 'email', void 0), h(this, 'verified', void 0), h(this, 'bot', void 0), h(this, 'system', void 0), h(this, 'mfaEnabled', void 0), h(this, 'mobile', void 0), h(this, 'desktop', void 0), h(this, 'premiumType', void 0), h(this, 'flags', void 0), h(this, 'publicFlags', void 0), h(this, 'purchasedFlags', void 0), h(this, 'premiumUsageFlags', void 0), h(this, 'phone', void 0), h(this, 'nsfwAllowed', void 0), h(this, 'ageVerificationStatus', void 0), h(this, 'guildMemberAvatars', void 0), h(this, 'hasBouncedEmail', void 0), h(this, 'personalConnectionId', void 0), h(this, 'globalName', void 0), h(this, 'primaryGuild', void 0), h(this, 'collectibles', void 0), h(this, 'hasFlag', (e) => !1), h(this, 'isStaff', () => !1), h(this, 'isStaffPersonal', () => !1), h(this, 'hasAnyStaffLevel', () => !1);
         let j = null != (n = e.premium_type) ? n : e.premiumType;
         (this.id = e.id),
@@ -223,7 +223,7 @@ class b extends i.Z {
             (this.flags = null != (b = e.flags) ? b : 0),
             (this.publicFlags = null != (O = null != (y = e.public_flags) ? y : e.publicFlags) ? O : 0),
             (this.purchasedFlags = null != (I = null != (v = e.purchased_flags) ? v : e.purchasedFlags) ? I : 0),
-            (this.premiumUsageFlags = null != (T = null != (S = e.premium_usage_flags) ? S : e.premiumUsageFlags) ? T : 0),
+            (this.premiumUsageFlags = null != (S = null != (T = e.premium_usage_flags) ? T : e.premiumUsageFlags) ? S : 0),
             (this.phone = null != (A = e.phone) ? A : null),
             (this.nsfwAllowed = null != (N = e.nsfw_allowed) ? N : e.nsfwAllowed),
             (this.ageVerificationStatus = null != (C = e.age_verification_status) ? C : e.ageVerificationStatus),
@@ -232,7 +232,7 @@ class b extends i.Z {
             (this.personalConnectionId = null != (L = null != (D = e.personal_connection_id) ? D : e.personalConnectionId) ? L : null),
             (this.globalName = null != (x = e.global_name) ? x : e.globalName),
             (this.banner = e.banner),
-            (this.primaryGuild = (0, o.l)(null != (M = null != (k = e.primary_guild) ? k : e.primaryGuild) ? M : null)),
+            (this.primaryGuild = (0, o.l)(null != (k = null != (M = e.primary_guild) ? M : e.primaryGuild) ? k : null)),
             (this.collectibles = e.collectibles),
             Object.defineProperties(this, {
                 hasFlag: {

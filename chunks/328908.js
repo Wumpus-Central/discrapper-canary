@@ -3,8 +3,8 @@ n.d(t, {
     Hb: () => p,
     Hi: () => E,
     LN: () => g,
-    OG: () => T,
-    Qj: () => S,
+    OG: () => S,
+    Qj: () => T,
     Qy: () => v,
     Rg: () => h,
     q5: () => y,
@@ -146,13 +146,13 @@ function v() {
 function I(e, t, n) {
     n ? O(e) : E(e, t);
 }
-function S(e, t) {
+function T(e, t) {
     return f((n) => {
         var r;
         return t ? n.messageReactionConfetti : null == (r = n.messageSendConfetti[e]) ? void 0 : r.emoji;
     });
 }
-function T(e) {
+function S(e) {
     return f((t) => {
         let n = t.messageSendConfetti[e];
         if ((null == n ? void 0 : n.state) === 0) return n.hasAutoPopped;

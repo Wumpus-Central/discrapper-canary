@@ -21,15 +21,15 @@ e.exports = function (e, t, n, m) {
         var v = O.prototype;
         if ((!h && i(v, 'cause') && delete v.cause, !n)) return O;
         var I = r('Error'),
-            S = t(function (e, t) {
+            T = t(function (e, t) {
                 var n = d(m ? t : e, void 0),
                     r = m ? new O(e) : new O();
-                return void 0 !== n && a(r, 'message', n), _(r, S, r.stack, 2), this && o(v, this) && u(r, this, S), arguments.length > E && f(r, arguments[E]), r;
+                return void 0 !== n && a(r, 'message', n), _(r, T, r.stack, 2), this && o(v, this) && u(r, this, T), arguments.length > E && f(r, arguments[E]), r;
             });
-        if (((S.prototype = v), 'Error' !== y ? (s ? s(S, I) : l(S, I, { name: !0 })) : p && g in O && (c(S, O, g), c(S, O, 'prepareStackTrace')), l(S, O), !h))
+        if (((T.prototype = v), 'Error' !== y ? (s ? s(T, I) : l(T, I, { name: !0 })) : p && g in O && (c(T, O, g), c(T, O, 'prepareStackTrace')), l(T, O), !h))
             try {
-                v.name !== y && a(v, 'name', y), (v.constructor = S);
+                v.name !== y && a(v, 'name', y), (v.constructor = T);
             } catch (e) {}
-        return S;
+        return T;
     }
 };

@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(427774);
 let v = (e) => {
     let { className: t, guildId: n, channel: a, shouldTrackUpsellViewed: v, setTrackedUpsellViewed: I } = e,
-        { location: S } = (0, c.O)(),
-        { analyticsLocations: T } = (0, d.ZP)(),
+        { location: T } = (0, c.O)(),
+        { analyticsLocations: S } = (0, d.ZP)(),
         A = (0, s.e7)([m.Z], () => m.Z.getGuild(n)),
         { canManageAllExpressions: N } = (0, h.XJ)(A),
         C = null != A && 0 === (0, g.A3)(A.premiumTier) && !A.hasFeature(E.oNc.MORE_STICKERS);
@@ -31,22 +31,22 @@ let v = (e) => {
                 C &&
                 v &&
                 ((0, u.yw)(E.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
-                    location: S,
+                    location: T,
                     guild_id: null == A ? void 0 : A.id,
                     channel_id: null == a ? void 0 : a.id,
                     type: 'Expression Picker Inline Sticker Upsell',
-                    location_stack: T
+                    location_stack: S
                 }),
                 I(!0));
-        }, [C, A, a, S, v, I, T, N]),
+        }, [C, A, a, T, v, I, S, N]),
         null == A || !N)
     )
         return null;
     if (C) {
         let e = () => {
             (0, _.Z)({
-                analyticsLocations: T,
-                analyticsSourceLocation: S,
+                analyticsLocations: S,
+                analyticsSourceLocation: T,
                 guild: A,
                 perks: (0, b.hC)()
             });
@@ -76,7 +76,7 @@ let v = (e) => {
     }
     {
         let e = () => {
-            (0, f._Q)(), p.Z.open(n, E.pNK.STICKERS, S);
+            (0, f._Q)(), p.Z.open(n, E.pNK.STICKERS, T);
         };
         return (0, r.jsxs)('div', {
             className: o()(O.upsell, t),

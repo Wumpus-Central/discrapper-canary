@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => T });
 var r,
     i = n(442837),
     a = n(570140),
@@ -75,7 +75,7 @@ class I extends (r = i.ZP.PersistedStore) {
     }
 }
 p(I, 'displayName', 'AppIconPersistedStoreState'), p(I, 'persistKey', 'AppIconPersistedStoreState');
-let S = new I(a.Z, {
+let T = new I(a.Z, {
     APP_ICON_UPDATED: y,
     APP_ICON_EDITOR_RESET: O,
     APP_ICON_TRACK_IMPRESSION: v,

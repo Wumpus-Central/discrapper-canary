@@ -23,7 +23,7 @@ var r = n(512722),
     })({});
 function g(e, t, n) {
     var r;
-    let { context: l, commandTypes: m, allowNsfw: g, computedPermissions: v, userId: I, roleIds: S, isImpersonating: T, hasBaseAccessPermissions: A } = t,
+    let { context: l, commandTypes: m, allowNsfw: g, computedPermissions: v, userId: I, roleIds: T, isImpersonating: S, hasBaseAccessPermissions: A } = t,
         { applicationAllowedForUser: N, applicationAllowedForChannel: C, isGuildInstalled: R, isUserInstalled: P, commandBotId: w } = n;
     if (!m.includes(e.type)) return 2;
     if (e.nsfw && !g) return 1;
@@ -50,7 +50,7 @@ function g(e, t, n) {
         let t = y(e.permissions, l, L);
         if (b(t) || (!E(t) && b(C))) return 6;
     }
-    let x = O(e.permissions, L, I, S, T);
+    let x = O(e.permissions, L, I, T, S);
     if (E(x)) return 0;
     if (b(x) || b(N)) return 7;
     if (null != e.defaultMemberPermissions && !(!o.fS(e.defaultMemberPermissions, f.BO) && o.e$(v, e.defaultMemberPermissions))) return 7;

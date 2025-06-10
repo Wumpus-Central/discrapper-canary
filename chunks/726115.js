@@ -2,13 +2,13 @@ n.d(t, {
     Ew: () => y,
     Iv: () => v,
     Mf: () => m,
-    PM: () => T,
+    PM: () => S,
     QW: () => E,
     Uv: () => O,
     Xp: () => I,
     a$: () => g,
     lg: () => b,
-    vL: () => S,
+    vL: () => T,
     vb: () => h
 }),
     n(415506),
@@ -218,7 +218,7 @@ function I() {
         r = t.locale;
     return (null != (e = n.find((e) => e.code === r)) ? e : n[0]).code;
 }
-async function S(e) {
+async function T(e) {
     let { loadId: t, guildId: n, index: r, categoryId: i, analyticsLocation: o, options: l } = e,
         u = p(f({}, l), { loadId: t });
     await s.Ub(n, o, u),
@@ -230,6 +230,6 @@ async function S(e) {
             location: o
         });
 }
-function T() {
+function S() {
     return (0, r.Z)().replace(/-/g, '');
 }

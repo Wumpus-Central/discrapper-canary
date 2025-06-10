@@ -58,7 +58,7 @@ function I(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -69,7 +69,7 @@ function S(e, t) {
         e
     );
 }
-let T = 104,
+let S = 104,
     A = 16;
 function N(e) {
     var t, n, a;
@@ -95,23 +95,23 @@ function N(e) {
                     let t = Math.max(0.66, Math.min(e.naturalWidth / e.naturalHeight, 4));
                     1 === t
                         ? p({
-                              width: T,
-                              height: T
+                              width: S,
+                              height: S
                           })
                         : t > 1
                           ? p({
-                                width: T * t,
+                                width: S * t,
                                 height: void 0
                             })
                           : p({
                                 width: void 0,
-                                height: T / t
+                                height: S / t
                             }),
                         f(!0);
                 });
         }, []);
     let m = (0, c.Z)(h),
-        g = Math.max(16, (A + T - (null != (t = null == m ? void 0 : m.width) ? t : 0)) / 2);
+        g = Math.max(16, (A + S - (null != (t = null == m ? void 0 : m.width) ? t : 0)) / 2);
     return (0, r.jsx)('img', {
         ref: h,
         src: l,
@@ -120,10 +120,10 @@ function N(e) {
         alt: '',
         style: {
             width: null != (n = _.width) ? n : 'initial',
-            height: null != (a = _.height) ? a : T,
+            height: null != (a = _.height) ? a : S,
             marginLeft: g,
             marginRight: g,
-            marginTop: null != _.height ? T - _.height - 33 : -33
+            marginTop: null != _.height ? S - _.height - 33 : -33
         }
     });
 }
@@ -283,7 +283,7 @@ class R extends i.Component {
                     t();
             });
         let s = e.ignoreDraft ? '' : _.Z.getDraft(this.props.channelId, e.draftType);
-        this.state = S(v({}, (0, d.eK)(s)), {
+        this.state = T(v({}, (0, d.eK)(s)), {
             textFocused: !0,
             hasSpoiler: null != (i = null == (t = e.upload) ? void 0 : t.spoiler) && i,
             filename: null != (a = null == (n = e.upload) ? void 0 : n.filename) ? a : '',
@@ -298,7 +298,7 @@ function P(e) {
         ? null
         : (0, r.jsx)(
               R,
-              S(v({}, e), {
+              T(v({}, e), {
                   file: e.upload.item.file,
                   messageMaxLength: t
               })

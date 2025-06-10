@@ -1,7 +1,7 @@
 n.d(t, {
     $H: () => F,
     AB: () => U,
-    JS: () => M,
+    JS: () => k,
     ZP: () => H,
     hH: () => x,
     kO: () => V,
@@ -30,8 +30,8 @@ var r = n(392711),
     O = n(914010),
     v = n(9156),
     I = n(594174),
-    S = n(979651),
-    T = n(626135),
+    T = n(979651),
+    S = n(626135),
     A = n(70956),
     N = n(700785),
     C = n(546416),
@@ -82,7 +82,7 @@ function x(e) {
         o = d.ZP.getChannels(e),
         s = o[d.sH].length,
         l = o[d.Zb].length,
-        u = S.Z.getVoiceStates(e);
+        u = T.Z.getVoiceStates(e);
     return {
         guild_id: n.id,
         guild_size_total: f.Z.getMemberCount(e),
@@ -97,13 +97,13 @@ function x(e) {
         num_voice_channels_active: L(u)
     };
 }
-function k(e, t) {
+function M(e, t) {
     return {
         channel_static_route: t,
         channel_hidden: !1
     };
 }
-function M(e) {
+function k(e) {
     if (null == e) return null;
     let t = u.Z.getChannel(e);
     return null == t ? null : j(t);
@@ -153,13 +153,13 @@ function G(e, t) {
 function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    if (T.default.isThrottled(e)) return;
+    if (S.default.isThrottled(e)) return;
     let r = !('location' in t) || t.location !== R.Sbl.GUILD_CREATE_INVITE_SUGGESTION,
         i = 'guild_id' in t ? t.guild_id : r ? O.Z.getGuildId() : null,
         a = 'channel_id' in t ? t.channel_id : r ? y.Z.getChannelId(i) : null,
         o = u.Z.getChannel(a),
-        s = D({}, t, x(G(o, i)), null != i && null != a && (0, P.AB)(a) ? k(i, a) : j(o));
-    T.default.track(e, s, { flush: n });
+        s = D({}, t, x(G(o, i)), null != i && null != a && (0, P.AB)(a) ? M(i, a) : j(o));
+    S.default.track(e, s, { flush: n });
 }
 function F(e) {
     if ((0, P.AB)(e)) return { channel_static_route: e };
@@ -206,7 +206,7 @@ function V(e, t, n) {
         video_enabled: n
     };
     return (
-        i()(S.Z.getVoiceStates(e))
+        i()(T.Z.getVoiceStates(e))
             .filter((e) => e.channelId === t)
             .filter((e) => e.userId !== c.default.getId())
             .forEach((e) => {
@@ -218,7 +218,7 @@ function V(e, t, n) {
 function Z(e, t) {
     let n = { custom_status_count: 0 };
     return (
-        i()(S.Z.getVoiceStates(e)).forEach((e) => {
+        i()(T.Z.getVoiceStates(e)).forEach((e) => {
             e.channelId === t && null != g.Z.findActivity(e.userId, (e) => e.type === R.IIU.CUSTOM_STATUS) && n.custom_status_count++;
         }),
         n

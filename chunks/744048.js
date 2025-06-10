@@ -24,34 +24,34 @@ let b = function () {
         { activePanel: y, metadata: O } = (0, m.oq)(),
         v = [];
     !e && null == y && (n && !t && v.push(a.z.CLIENT_THEMES_COACHMARK), b && v.push(a.z.CUSTOM_THEME_COACHMARK));
-    let [I, S] = (0, f.US)(v, E.R.SIDEBAR, !0),
-        T = I === a.z.CLIENT_THEMES_COACHMARK,
+    let [I, T] = (0, f.US)(v, E.R.SIDEBAR, !0),
+        S = I === a.z.CLIENT_THEMES_COACHMARK,
         A = I === a.z.CUSTOM_THEME_COACHMARK;
     return e
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (y === m.wh.CLIENT_THEMES || T) &&
+                  (y === m.wh.CLIENT_THEMES || S) &&
                       (0, r.jsx)(c.Z, {
-                          markAsDismissed: T
-                              ? S
+                          markAsDismissed: S
+                              ? T
                               : () => {
                                     (0, d.EW)(a.z.CLIENT_THEMES_COACHMARK, {
                                         dismissAction: E.L.INDIRECT_ACTION,
                                         forceTrack: !0
                                     });
                                 },
-                          showClientThemesCoachmark: T
+                          showClientThemesCoachmark: S
                       }),
                   y === m.wh.APP_ICON &&
                       (0, r.jsx)(o.Z, {
                           isCoachmark: !1,
-                          markAsDismissed: S
+                          markAsDismissed: T
                       }),
                   (y === m.wh.CUSTOM_THEME || A) &&
                       (0, r.jsx)(u.Z, {
                           metadata: null != O ? O : {},
-                          markAsDismissed: S,
+                          markAsDismissed: T,
                           isCoachmark: A
                       })
               ]

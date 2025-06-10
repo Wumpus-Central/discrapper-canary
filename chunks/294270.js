@@ -35,8 +35,8 @@ let p = 15 * c.Z.Millis.SECOND,
     O = [],
     v = {},
     I = (0, s.tu)('highfive_whistle', 'highfive_whistle', 0.6),
-    S = (0, s.tu)('highfive_clap', 'highfive_clap', 0.6);
-function T(e) {
+    T = (0, s.tu)('highfive_clap', 'highfive_clap', 0.6);
+function S(e) {
     let { emoji: t, channelId: n, userId: r } = e,
         a = l.default.getId(),
         o = d.Z.getEnabled();
@@ -65,7 +65,7 @@ function N(e, t, n) {
         }))
             ? r
             : [];
-    if (null != o && null != s) s.cancel(), S.play(), delete v[o], (0, u.Ym)(o.split(':')[0], t, n, e);
+    if (null != o && null != s) s.cancel(), T.play(), delete v[o], (0, u.Ym)(o.split(':')[0], t, n, e);
     else {
         (0, u._g)(e, t, n), I.play();
         let r = new a.sW(h, () => {
@@ -81,7 +81,7 @@ class C extends o.Z {
     constructor(...e) {
         super(...e),
             _(this, 'actions', {
-                VOICE_CHANNEL_EFFECT_SEND: T,
+                VOICE_CHANNEL_EFFECT_SEND: S,
                 HIGH_FIVE_COMPLETE: A
             });
     }

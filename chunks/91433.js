@@ -19,20 +19,20 @@ function E(e) {
         { themeType: O } = (0, p.z)(),
         v = O === h.lY.MODAL_V2,
         I = f.ZP.getName(n, a, t),
-        { trackUserProfileAction: S } = (0, _.KZ)(),
-        { newestAnalyticsLocation: T } = (0, l.ZP)(),
+        { trackUserProfileAction: T } = (0, _.KZ)(),
+        { newestAnalyticsLocation: S } = (0, l.ZP)(),
         { acceptFriendRequest: A, cancelFriendRequest: N } = (0, d.u)({
             userId: t.id,
             applicationId: E,
             isGameRelationship: b,
-            location: T
+            location: S
         }),
         C = i.useCallback(() => {
-            A(), S({ action: b ? 'ACCEPT_GAME_FRIEND_REQUEST' : 'ACCEPT_FRIEND_REQUEST' });
-        }, [A, b, S]),
+            A(), T({ action: b ? 'ACCEPT_GAME_FRIEND_REQUEST' : 'ACCEPT_FRIEND_REQUEST' });
+        }, [A, b, T]),
         R = i.useCallback(() => {
-            N(), S({ action: b ? 'IGNORE_GAME_FRIEND_REQUEST' : 'IGNORE_FRIEND_REQUEST' });
-        }, [N, b, S]),
+            N(), T({ action: b ? 'IGNORE_GAME_FRIEND_REQUEST' : 'IGNORE_FRIEND_REQUEST' });
+        }, [N, b, T]),
         P = null != E,
         w = (0, c.q)(E);
     return P && null == w

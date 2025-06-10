@@ -34,9 +34,9 @@ let d = {
                     O = void 0 === y || y,
                     v = n.allowedAutoPlacements,
                     I = t.options.placement,
-                    S = (0, i.Z)(I),
-                    T = S === I,
-                    A = h || (T || !O ? [(0, r.Z)(I)] : u(I)),
+                    T = (0, i.Z)(I),
+                    S = T === I,
+                    A = h || (S || !O ? [(0, r.Z)(I)] : u(I)),
                     N = [I].concat(A).reduce(function (e, n) {
                         return e.concat(
                             (0, i.Z)(n) === l.d7
@@ -61,9 +61,9 @@ let d = {
                 L++
             ) {
                 var x = N[L],
-                    k = (0, i.Z)(x),
-                    M = (0, c.Z)(x) === l.BL,
-                    j = [l.we, l.I].indexOf(k) >= 0,
+                    M = (0, i.Z)(x),
+                    k = (0, c.Z)(x) === l.BL,
+                    j = [l.we, l.I].indexOf(M) >= 0,
                     U = j ? 'width' : 'height',
                     G = (0, o.Z)(t, {
                         placement: x,
@@ -72,12 +72,12 @@ let d = {
                         altBoundary: b,
                         padding: m
                     }),
-                    B = j ? (M ? l.F2 : l.t$) : M ? l.I : l.we;
+                    B = j ? (k ? l.F2 : l.t$) : k ? l.I : l.we;
                 C[U] > R[U] && (B = (0, r.Z)(B));
                 var F = (0, r.Z)(B),
                     V = [];
                 if (
-                    (f && V.push(G[k] <= 0),
+                    (f && V.push(G[M] <= 0),
                     p && V.push(G[B] <= 0, G[F] <= 0),
                     V.every(function (e) {
                         return e;

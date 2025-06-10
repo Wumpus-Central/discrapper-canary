@@ -3,14 +3,14 @@ a.d(e, {
     YJ: () => o
 });
 var r = a(370336);
-let n = '_sentryScope',
-    _ = '_sentryIsolationScope';
+let _ = '_sentryScope',
+    n = '_sentryIsolationScope';
 function o(t, e, a) {
-    t && ((0, r.xp)(t, _, a), (0, r.xp)(t, n, e));
+    t && ((0, r.xp)(t, n, a), (0, r.xp)(t, _, e));
 }
 function i(t) {
     return {
-        scope: t[n],
-        isolationScope: t[_]
+        scope: t[_],
+        isolationScope: t[n]
     };
 }

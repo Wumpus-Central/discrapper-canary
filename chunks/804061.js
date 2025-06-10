@@ -30,8 +30,8 @@ r(
                 p,
                 v,
                 I,
-                S,
                 T,
+                S,
                 A,
                 N = o(this),
                 C = 0,
@@ -41,7 +41,7 @@ r(
                 if ((r = d(e, m))) return i(r, e, N, t);
                 if (h && n) return b(u(N), e, t);
             }
-            for (a = u(N), p = u(e), (v = s(t)) || (t = u(t)), S = O(1, (I = p.length)), T = E(a, p); -1 !== T; ) (A = v ? u(t(p, T, a)) : _(p, a, T, [], void 0, t)), (R += y(a, C, T) + A), (C = T + I), (T = T + S > a.length ? -1 : E(a, p, T + S));
+            for (a = u(N), p = u(e), (v = s(t)) || (t = u(t)), T = O(1, (I = p.length)), S = E(a, p); -1 !== S; ) (A = v ? u(t(p, S, a)) : _(p, a, S, [], void 0, t)), (R += y(a, C, S) + A), (C = S + I), (S = S + T > a.length ? -1 : E(a, p, S + T));
             return C < a.length && (R += y(a, C)), R;
         }
     }

@@ -1,11 +1,11 @@
 a.d(e, {
     L2: () => c,
-    _6: () => s,
-    iK: () => E
+    _6: () => E,
+    iK: () => s
 });
 var r = a(694043),
-    n = a(622916),
-    _ = a(665909),
+    _ = a(622916),
+    n = a(665909),
     o = a(395848);
 let i = {};
 function c(t) {
@@ -21,13 +21,13 @@ function c(t) {
             let r = e.contentWindow;
             r && r[t] && (a = r[t]), c.head.removeChild(e);
         } catch (e) {
-            _.X && n.kg.warn(`Could not create sandbox iframe for ${t} check, bailing to window.${t}: `, e);
+            n.X && _.kg.warn(`Could not create sandbox iframe for ${t} check, bailing to window.${t}: `, e);
         }
     return a ? (i[t] = a.bind(o.m)) : a;
 }
-function s(t) {
+function E(t) {
     i[t] = void 0;
 }
-function E(...t) {
+function s(...t) {
     return c('setTimeout')(...t);
 }

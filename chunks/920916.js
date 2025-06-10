@@ -25,8 +25,8 @@ var r = n(255367),
     O = n(732389),
     v = n(164946),
     I = n(369111),
-    S = n(25990),
-    T = n(594174),
+    T = n(25990),
+    S = n(594174),
     A = n(960048),
     N = n(272008),
     C = n(113434),
@@ -36,8 +36,8 @@ var r = n(255367),
     D = n(566078),
     L = n(114732),
     x = n(46140),
-    k = n(981631),
-    M = n(675654),
+    M = n(981631),
+    k = n(675654),
     j = n(474936),
     U = n(388032),
     G = n(335626);
@@ -94,12 +94,12 @@ function Z(e, t) {
     );
 }
 function H() {
-    let e = S.Z.getAllPending(),
+    let e = T.Z.getAllPending(),
         t = (0, v.ED)(e);
     return (0, d.Mn)(t).finally(d.si);
 }
 function Y() {
-    f.Z.open(k.oAB.PREMIUM, null, {});
+    f.Z.open(M.oAB.PREMIUM, null, {});
 }
 function W(e) {
     let { product: t, isFetching: n } = (0, g.T)(e),
@@ -119,23 +119,23 @@ function K(e) {
         [b, y] = i.useState(null),
         O = i.useRef(new s.qA()),
         v = (0, c.e7)([_.Z], () => _.Z.useReducedMotion),
-        I = (0, c.e7)([T.default], () => T.default.getCurrentUser()),
-        S = (null == (t = l.userStatus) ? void 0 : t.claimedAt) != null,
-        [A, C] = i.useState(!0 === m || S ? 'claimed' : 'loading');
+        I = (0, c.e7)([S.default], () => S.default.getCurrentUser()),
+        T = (null == (t = l.userStatus) ? void 0 : t.claimedAt) != null,
+        [A, C] = i.useState(!0 === m || T ? 'claimed' : 'loading');
     i.useEffect(() => {
-        S ||
+        T ||
             !0 === m ||
             (0, N.QB)(l.id, R.y$.CROSS_PLATFORM, d)
                 .then(() => C('claimed'))
                 .catch(() => C('error'));
-    }, [l, d, S, m]);
+    }, [l, d, T, m]);
     let P = () => {
             C('applying'), h().finally(a);
         },
         w = !0 === m && null === p && (null == f ? void 0 : f.skuId) !== '',
         D = null == p && !0 !== m,
         x = null == I || D || w || 'loading' === A,
-        k = !v && !S && 'claimed' === A;
+        M = !v && !T && 'claimed' === A;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.O_, {
@@ -170,12 +170,12 @@ function K(e) {
                                 })
                 })
             }),
-            k &&
+            M &&
                 (0, r.jsx)(E.Z, {
                     confettiTarget: g.current,
                     confettiCanvas: b,
-                    sprites: M.CA,
-                    colors: M.Br
+                    sprites: k.CA,
+                    colors: k.Br
                 })
         ]
     });
@@ -277,7 +277,7 @@ function q(e) {
                                         Y(), s();
                                     }
                                 }),
-                                buttonAnalyticsObject: { section: k.jXE.PERMADECOS_MARKETING_UPSELL }
+                                buttonAnalyticsObject: { section: M.jXE.PERMADECOS_MARKETING_UPSELL }
                             })
                     ]
                 })

@@ -7,7 +7,7 @@ n.d(t, {
     ZP: () => eh,
     em: () => em,
     un: () => eU,
-    v1: () => eS
+    v1: () => eT
 }),
     n(953529),
     n(388685),
@@ -38,8 +38,8 @@ var r,
     O = n(226351),
     v = n(254711),
     I = n(700089),
-    S = n(654455),
-    T = n(963456),
+    T = n(654455),
+    S = n(963456),
     A = n(367790),
     N = n(895924),
     C = n(581364),
@@ -76,7 +76,7 @@ function x(e) {
     }
     return e;
 }
-function k(e, t) {
+function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -88,12 +88,12 @@ function k(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : M(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -211,7 +211,7 @@ async function en(e) {
         },
         !0
     ),
-        await (0, T.a)(e, t).then(n.resolve).catch(n.reject);
+        await (0, S.a)(e, t).then(n.resolve).catch(n.reject);
 }
 function er(e) {
     var t, n;
@@ -229,7 +229,7 @@ function er(e) {
             null != t ? (e.bot = t) : c.add(e.bot_id);
         } else null != e.bot && (l[e.bot.id] = e.id);
         let t = {
-            descriptor: M(x({}, (0, C.X0)(eP(e))), {
+            descriptor: k(x({}, (0, C.X0)(eP(e))), {
                 permissions: null != e.permissions ? (0, _.tk)(ex(e.permissions, o)) : void 0,
                 botId: e.bot_id
             }),
@@ -314,7 +314,7 @@ function eo(e, t) {
             if (null == n) return;
             let r = i.sections[n];
             o()(null != r, 'Bot has no matching index section'), o()(null != r.descriptor.application, "Bot's index section has no application info");
-            let s = (0, C.X0)(M(x({}, r.descriptor.application), { bot: t }));
+            let s = (0, C.X0)(k(x({}, r.descriptor.application), { bot: t }));
             (r.descriptor = x({}, r.descriptor, s)), (a = !0);
         }),
         a
@@ -449,24 +449,24 @@ class e_ extends (r = l.ZP.Store) {
                 eC(i) &&
                     null != r &&
                     (null != r.guild_id
-                        ? (0, T.j)({
+                        ? (0, S.j)({
                               type: 'guild',
                               guildId: r.guild_id
                           })
-                        : (0, T.j)({
+                        : (0, S.j)({
                               type: 'channel',
                               channelId: r.id
                           }),
                     (d = !0))),
-            eC(a) && ((0, T.j)({ type: 'user' }), (d = !0)),
+            eC(a) && ((0, S.j)({ type: 'user' }), (d = !0)),
             eC(o) &&
                 null != n.applicationId &&
-                ((0, T.j)({
+                ((0, S.j)({
                     type: 'application',
                     applicationId: n.applicationId
                 }),
                 (d = !0)));
-        let f = eT({
+        let f = eS({
             permissionContext: l,
             text: t.text,
             allowApplicationCommands: u,
@@ -528,7 +528,7 @@ function em(e, t, n) {
         i.useEffect(() => {
             if (r) {
                 if ('contextless' === e.type) {
-                    n && eC(o) && (0, T.j)({ type: 'user' });
+                    n && eC(o) && (0, S.j)({ type: 'user' });
                     return;
                 }
                 n &&
@@ -540,11 +540,11 @@ function em(e, t, n) {
                     }),
                     eC(o) &&
                         (null != e.channel.guild_id
-                            ? (0, T.j)({
+                            ? (0, S.j)({
                                   type: 'guild',
                                   guildId: e.channel.guild_id
                               })
-                            : (0, T.j)({
+                            : (0, S.j)({
                                   type: 'channel',
                                   channelId: e.channel.id
                               }))),
@@ -570,7 +570,7 @@ function eg(e, t) {
                         size: Object.keys(ep.indices).length
                     }),
                     eC(a) &&
-                        (0, T.j)({
+                        (0, S.j)({
                             type: 'guild',
                             guildId: e
                         })),
@@ -584,7 +584,7 @@ function eE(e, t) {
         a = (0, l.cj)([ep], () => ep.getUserState());
     return (
         i.useEffect(() => {
-            n && (t && eC(a) && e && (0, T.j)({ type: 'user' }), r(!1));
+            n && (t && eC(a) && e && (0, S.j)({ type: 'user' }), r(!1));
         }, [a, t, e, n]),
         a
     );
@@ -597,7 +597,7 @@ function eb(e, t) {
             (t &&
                 eC(a) &&
                 null != e &&
-                (0, T.j)({
+                (0, S.j)({
                     type: 'application',
                     applicationId: e
                 }),
@@ -611,7 +611,7 @@ function eO() {
     return (0, l.e7)([ep], () => ep.applicationIndicesVersion);
 }
 function ev(e, t, n, r) {
-    let { descriptors: a, commands: o, sectionedCommands: s, loading: l } = eS(e, n, r),
+    let { descriptors: a, commands: o, sectionedCommands: s, loading: l } = eT(e, n, r),
         c = i.useMemo(
             () =>
                 'channel' === e.type
@@ -634,8 +634,8 @@ function ev(e, t, n, r) {
         let e = o
             .filter((e) => u.includes(e.id))
             .sort((e, t) => {
-                let n = S.ZP.getScoreWithoutLoadingLatest(c, e);
-                return S.ZP.getScoreWithoutLoadingLatest(c, t) - n;
+                let n = T.ZP.getScoreWithoutLoadingLatest(c, e);
+                return T.ZP.getScoreWithoutLoadingLatest(c, t) - n;
             })
             .splice(0, w.hz);
         return 0 === e.length
@@ -669,7 +669,7 @@ let eI = Object.freeze({
         useScore: !0
     }
 });
-function eS(e, t, n) {
+function eT(e, t, n) {
     let r = 'channel' === e.type ? e.channel : void 0,
         a = (0, R.Hs)(r, t.commandTypes),
         o = !1 !== t.applicationCommands,
@@ -681,7 +681,7 @@ function eS(e, t, n) {
         eb(n.applicationId, n.allowFetch),
         i.useMemo(
             () =>
-                eT({
+                eS({
                     permissionContext: a,
                     text: t.text,
                     allowApplicationCommands: o,
@@ -699,22 +699,22 @@ function eS(e, t, n) {
         )
     );
 }
-function eT(e) {
+function eS(e) {
     var t, n, r, i, a, s, l;
-    let { permissionContext: c, contextState: u, userState: d, applicationStates: _, text: p, builtIns: m = A.D.ALLOW, allowApplicationCommands: g = !0, singleApplicationId: b, allowEmptySections: y = !1, scoreMethod: O = A.p.NONE, sortOptions: I = eI, installOnDemand: T = !1 } = e,
+    let { permissionContext: c, contextState: u, userState: d, applicationStates: _, text: p, builtIns: m = A.D.ALLOW, allowApplicationCommands: g = !0, singleApplicationId: b, allowEmptySections: y = !1, scoreMethod: O = A.p.NONE, sortOptions: I = eI, installOnDemand: S = !1 } = e,
         { commandTypes: N } = c,
         C = null == p ? void 0 : p.toLowerCase(),
         R = null == C ? void 0 : C.split(' '),
         P = m === A.D.ONLY_TEXT,
         D = m !== A.D.DENY ? (0, v.Kh)(N, !0, P) : [],
         L = [],
-        k = {
+        M = {
             permissionContext: c,
             query: C,
             splitQuery: R,
             allowEmptySections: y,
             scoreMethod: O,
-            installOnDemand: T
+            installOnDemand: S
         },
         j = null != (i = null == (t = u.result) ? void 0 : t.sections) ? i : {},
         U = null != (a = null == (n = d.result) ? void 0 : n.sections) ? a : {},
@@ -756,7 +756,7 @@ function eT(e) {
                 }
         } else null != r ? ((t = r.descriptor), (n = Object.values(r.commands))) : null != i ? ((t = i.descriptor), (n = Object.values(i.commands))) : null != a && ((t = a.descriptor), (n = Object.values(a.commands)));
         o()(null != t, 'Failed to select application descriptor'), o()(null != n, 'Failed to select list of application commands');
-        let c = eA(t, n, s, l, k);
+        let c = eA(t, n, s, l, M);
         null != c && L.push(c);
     }
     if (
@@ -777,10 +777,10 @@ function eT(e) {
         }),
         D.length > 0 || !0 === y)
     ) {
-        let e = eA(v.Tm[w.bi.BUILT_IN], D, !0, !0, k);
+        let e = eA(v.Tm[w.bi.BUILT_IN], D, !0, !0, M);
         null != e && L.push(e);
     }
-    let F = L.flatMap((e) => e.data.map((t) => M(x({}, t), { section: e.section })));
+    let F = L.flatMap((e) => e.data.map((t) => k(x({}, t), { section: e.section })));
     if (O === A.p.COMMAND_ONLY || O === A.p.COMMAND_OR_APPLICATION) {
         let e = c.context,
             t = E.Z.getGuild(null == c || null == (l = c.context) ? void 0 : l.guild_id);
@@ -800,8 +800,8 @@ function eT(e) {
                 if (n !== a) return n - a;
             }
             if (I.commands.useFrecency) {
-                let r = S.ZP.getScoreWithoutLoadingLatest(n, e),
-                    i = S.ZP.getScoreWithoutLoadingLatest(n, t);
+                let r = T.ZP.getScoreWithoutLoadingLatest(n, e),
+                    i = T.ZP.getScoreWithoutLoadingLatest(n, t);
                 if (r !== i) return i - r;
             }
             return ej(e.displayName, t.displayName);
@@ -829,7 +829,7 @@ function eA(e, t, n, r, i) {
             isGuildInstalled: n,
             isUserInstalled: r || d
         }) === P.mF.ALLOWED && E.push(i);
-    return 0 !== (a = c !== A.p.NONE && null != o && null != s ? ek(o, s, E, e, c) : E).length || l
+    return 0 !== (a = c !== A.p.NONE && null != o && null != s ? eM(o, s, E, e, c) : E).length || l
         ? ((c === A.p.NONE || c === A.p.APPLICATION_ONLY) && a.sort((e, t) => ej(e.displayName, t.displayName)),
           {
               section: e,
@@ -860,7 +860,7 @@ function eP(e) {
 }
 function ew(e, t) {
     var n, r, i, a, o;
-    let s = M(x({}, e), {
+    let s = k(x({}, e), {
         description: null != (i = null != (r = e.description_default) ? r : e.description) ? i : '',
         dm_permission: e.dm_permission,
         name: null != (a = e.name_default) ? a : e.name,
@@ -871,7 +871,7 @@ function ew(e, t) {
 }
 function eD(e) {
     var t, n, r, i;
-    let a = M(x({}, e), {
+    let a = k(x({}, e), {
         choices: null == (t = e.choices) ? void 0 : t.map(eL),
         description: null != (r = e.description_default) ? r : e.description,
         name: null != (i = e.name_default) ? i : e.name,
@@ -881,7 +881,7 @@ function eD(e) {
 }
 function eL(e) {
     var t;
-    let n = M(x({}, e), { name: null != (t = e.name_default) ? t : e.name });
+    let n = k(x({}, e), { name: null != (t = e.name_default) ? t : e.name });
     return e.name !== e.name_default && (n.name_localized = e.name), n;
 }
 function ex(e, t) {
@@ -910,7 +910,7 @@ function ex(e, t) {
             });
     return n;
 }
-function ek(e, t, n, r, i) {
+function eM(e, t, n, r, i) {
     let a,
         o = [];
     if (i === A.p.APPLICATION_ONLY || i === A.p.COMMAND_OR_APPLICATION) {
@@ -927,11 +927,11 @@ function ek(e, t, n, r, i) {
         u = t.slice(1).join(' ');
     for (let t of n) {
         let n;
-        (i === A.p.COMMAND_ONLY || i === A.p.COMMAND_OR_APPLICATION) && (n = eM(t, e, c, u)), (void 0 === n || (void 0 !== a && a < n)) && (n = a), void 0 !== n && o.push(M(x({}, t), { score: n }));
+        (i === A.p.COMMAND_ONLY || i === A.p.COMMAND_OR_APPLICATION) && (n = ek(t, e, c, u)), (void 0 === n || (void 0 !== a && a < n)) && (n = a), void 0 !== n && o.push(k(x({}, t), { score: n }));
     }
     return o;
 }
-function eM(e, t, n, r) {
+function ek(e, t, n, r) {
     var i;
     let a = e.untranslatedName,
         o = e.displayName;

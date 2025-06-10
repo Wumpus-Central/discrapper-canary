@@ -21,7 +21,7 @@ var i = n(120356),
     O = n(381126),
     v = n(997892),
     I = n(234286);
-function S(e) {
+function T(e) {
     let { isOneStepCheckout: t, headerText: n, step: i, filteredBreadcrumbs: a } = e;
     if (t)
         return (0, r.jsx)('div', {
@@ -47,7 +47,7 @@ function S(e) {
         ]
     });
 }
-function T(e) {
+function S(e) {
     let { isTier2: t } = e,
         n = t ? y : E,
         i = t ? O : b;
@@ -81,9 +81,9 @@ let A = function (e) {
         D = null == w || null == (t = w.discount) ? void 0 : t.amount,
         L = R ? I : v,
         x = R ? _.Z : f.Z,
-        { step: k, breadcrumbs: M, startedPaymentFlowWithPaymentSourcesRef: j } = (0, l.JL)();
-    if (null == M || 0 === M.length) return null;
-    let U = M.flatMap((e) => {
+        { step: M, breadcrumbs: k, startedPaymentFlowWithPaymentSourcesRef: j } = (0, l.JL)();
+    if (null == k || 0 === k.length) return null;
+    let U = k.flatMap((e) => {
         let t = e.useBreadcrumbLabel(O),
             n = e.sectionHeaderText;
         return null != t
@@ -99,17 +99,17 @@ let A = function (e) {
             let t = e.id !== c.h8.ADD_PAYMENT_STEPS,
                 n = e.id === c.h8.ADD_PAYMENT_STEPS && !j.current;
             return !O || (O && (t || n));
-        })).find((e) => e.id === k),
+        })).find((e) => e.id === M),
         B = null != (i = null == G || null == (n = G.sectionHeaderText) ? void 0 : n.call(G)) ? i : null == G ? void 0 : G.label,
-        F = null != B && null != k,
-        V = P && F && k === c.h8.REVIEW;
+        F = null != B && null != M,
+        V = P && F && M === c.h8.REVIEW;
     return (0, r.jsxs)('div', {
         className: g.container,
         children: [
             (0, r.jsxs)('div', {
                 className: a()(g.headerContainer, R ? g.tier2Background : g.tier0Background, { [g.containerBottomPadding]: !F }),
                 children: [
-                    (0, r.jsx)(T, { isTier2: R }),
+                    (0, r.jsx)(S, { isTier2: R }),
                     !d &&
                         (0, r.jsx)(o.olH, {
                             hideOnFullscreen: E,
@@ -136,10 +136,10 @@ let A = function (e) {
                     discountAmount: D
                 }),
             F &&
-                (0, r.jsx)(S, {
+                (0, r.jsx)(T, {
                     isOneStepCheckout: P,
                     headerText: B,
-                    step: k,
+                    step: M,
                     filteredBreadcrumbs: U
                 }),
             V &&

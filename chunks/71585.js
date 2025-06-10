@@ -79,10 +79,10 @@ function v() {
 function I() {
     return console.log('Item impressions:', _.itemImpressions), !1;
 }
-function S() {
+function T() {
     E = !E;
 }
-function T() {
+function S() {
     _.hidden = !_.hidden;
 }
 class A extends (r = i.ZP.PersistedStore) {
@@ -110,6 +110,6 @@ let N = new A(a.Z, {
     CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS: O,
     CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS: v,
     CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS: I,
-    CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING: S,
-    CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: T
+    CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING: T,
+    CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: S
 });

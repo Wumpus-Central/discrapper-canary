@@ -27,15 +27,15 @@ let g = (e, t, n, r) => {
             n,
             s,
             E,
-            { subscriptionPlan: b, isGift: y, isTrial: O, isOrbCheckout: v, isEmbeddedIAP: I, renewalInvoice: S, paymentSourceType: T, hide: A, purchaseType: N, productLine: C, proratedAmount: R, basePrice: P, currentSubscription: w, skuId: D } = e,
+            { subscriptionPlan: b, isGift: y, isTrial: O, isOrbCheckout: v, isEmbeddedIAP: I, renewalInvoice: T, paymentSourceType: S, hide: A, purchaseType: N, productLine: C, proratedAmount: R, basePrice: P, currentSubscription: w, skuId: D } = e,
             L = (0, i.e7)([o.ZP], () => o.ZP.inReverseTrial());
         if (A) return null;
         let x = null == e.planGroup ? [] : e.planGroup;
-        if (null != S) {
-            let e = c.ZP.getIntervalForInvoice(S);
-            (t = e.intervalType), (n = e.intervalCount), (s = (0, u.og)((0, u.T4)(S.total, S.currency), t, n)), (E = (0, u.og)((0, u.T4)(S.subtotal, S.currency), t, n));
+        if (null != T) {
+            let e = c.ZP.getIntervalForInvoice(T);
+            (t = e.intervalType), (n = e.intervalCount), (s = (0, u.og)((0, u.T4)(T.total, T.currency), t, n)), (E = (0, u.og)((0, u.T4)(T.subtotal, T.currency), t, n));
         } else null != b && ((t = b.interval), (n = b.intervalCount));
-        let k = (0, a.K)({
+        let M = (0, a.K)({
                 purchaseType: N || f.GZQ.SUBSCRIPTION,
                 plan: b,
                 premiumSubscription: null == w ? null : w,
@@ -44,12 +44,12 @@ let g = (e, t, n, r) => {
                 planGroup: x,
                 isPrepaidPaymentSource: !1
             }),
-            M = h.intl.format(h.t.Y2Rkqa, {
-                primaryText: k,
+            k = h.intl.format(h.t.Y2Rkqa, {
+                primaryText: M,
                 paidURL: f.EYA.PAID_TERMS
             }),
             j = h.intl.format(h.t.H2uH5e, {
-                primaryText: k,
+                primaryText: M,
                 paidURL: f.EYA.PAID_TERMS
             }),
             U = '',
@@ -62,7 +62,7 @@ let g = (e, t, n, r) => {
             let e = '';
             (e = D === _.Vt.ORB_PROFILE_BADGE ? h.intl.string(h.t.APcKRk) : D === _.Vt.FRACTIONAL_PREMIUM ? h.intl.string(h.t.FhJ74u) : h.intl.string(h.t.jCRYDw)), Array.isArray(U) ? (U = [...U, ' '.concat(e)]) : (U += ' '.concat(e));
         } else if (I)
-            if (null != s && (null == S ? void 0 : S.subscriptionPeriodEnd) != null) U = h.intl.format(h.t['2VPTa2'], { subtotalRate: E });
+            if (null != s && (null == T ? void 0 : T.subscriptionPeriodEnd) != null) U = h.intl.format(h.t['2VPTa2'], { subtotalRate: E });
             else
                 switch (t) {
                     case p.rV.MONTH:
@@ -80,16 +80,16 @@ let g = (e, t, n, r) => {
         else if (N === f.GZQ.ONE_TIME)
             switch (C) {
                 case f.POd.COLLECTIBLES:
-                    (G = M), (U = y ? h.intl.format(h.t.ofqyUl, { paidURL: f.EYA.PAID_TERMS }) : h.intl.format(h.t.G3l0s7, { paidURL: f.EYA.PAID_TERMS }));
+                    (G = k), (U = y ? h.intl.format(h.t.ofqyUl, { paidURL: f.EYA.PAID_TERMS }) : h.intl.format(h.t.G3l0s7, { paidURL: f.EYA.PAID_TERMS }));
                     break;
                 case f.POd.GUILD_PRODUCT:
-                    (G = M), (U = h.intl.format(h.t['GEAQ+v'], { paidURL: f.EYA.PAID_TERMS }));
+                    (G = k), (U = h.intl.format(h.t['GEAQ+v'], { paidURL: f.EYA.PAID_TERMS }));
                     break;
                 default:
                     (G = j), (U = h.intl.string(h.t['9/siSU']));
             }
         else if (null == b || y)
-            switch ((y && (G = M), t)) {
+            switch ((y && (G = k), t)) {
                 case p.rV.MONTH:
                     (U = y ? h.intl.string(h.t.IjNapq) : h.intl.string(h.t['/sGXPj'])), (U = y ? h.intl.string(h.t.IjNapq) : 1 === n ? h.intl.string(h.t['/sGXPj']) : h.intl.formatToPlainString(h.t.Fqjiho, { intervalCount: n }));
                     break;
@@ -169,12 +169,12 @@ let g = (e, t, n, r) => {
                         children: [(0, r.jsx)('div', { children: G }), (0, r.jsx)('div', { className: m.divider })]
                     }),
                 '' !== U && (0, r.jsx)('div', { children: U }),
-                T === f.HeQ.PAYSAFE_CARD &&
+                S === f.HeQ.PAYSAFE_CARD &&
                     (0, r.jsx)('div', {
                         className: m.paymentSourceNoticeCopy,
                         children: h.intl.string(h.t.kj9VLC)
                     }),
-                T === f.HeQ.SOFORT &&
+                S === f.HeQ.SOFORT &&
                     (0, r.jsxs)('div', {
                         className: m.paymentSourceNoticeCopy,
                         children: [h.intl.string(h.t['UYy1/v']), ' ']

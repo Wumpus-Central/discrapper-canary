@@ -13,7 +13,7 @@ var i = n(442837),
     _ = n(388032),
     p = n(451316);
 function h(e) {
-    let { currentStep: t, className: n, purchaseState: h, premiumType: m, useWinterTheme: g = !1, onClose: E, hideCloseButton: b, showTrialBadge: y, showDiscountBadge: O, isGift: v, giftRecipient: I, isEligibleForTrial: S, enablePremiumRebrandDesign: T } = e,
+    let { currentStep: t, className: n, purchaseState: h, premiumType: m, useWinterTheme: g = !1, onClose: E, hideCloseButton: b, showTrialBadge: y, showDiscountBadge: O, isGift: v, giftRecipient: I, isEligibleForTrial: T, enablePremiumRebrandDesign: S } = e,
         A = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
         N = g ? f.nL.WINTER : f.nL.DEFAULT,
         C = () => {
@@ -44,13 +44,13 @@ function h(e) {
                   })
               ]
           })
-        : T
+        : S
           ? (0, r.jsx)(u.Z, {
                 hideCloseOnFullScreen: !0,
                 hideCloseButton: b,
                 upgradeToPremiumType: m,
                 onClose: E,
-                isEligibleForTrial: S,
+                isEligibleForTrial: T,
                 showTrialBadge: y,
                 showDiscountBadge: O
             })

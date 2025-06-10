@@ -3,9 +3,9 @@ n.d(t, {
     FZ: () => A,
     Hl: () => et,
     Je: () => P,
-    Jh: () => M,
+    Jh: () => k,
     KK: () => X,
-    Oe: () => T,
+    Oe: () => S,
     Qi: () => W,
     Ro: () => I,
     Vx: () => V,
@@ -17,7 +17,7 @@ n.d(t, {
     ee: () => J,
     f2: () => U,
     gZ: () => Y,
-    ge: () => k,
+    ge: () => M,
     ig: () => C,
     nL: () => z,
     nW: () => D,
@@ -67,8 +67,8 @@ Object.freeze({
 var I = (function (e) {
     return (e[(e.EMOJI = 1)] = 'EMOJI'), (e[(e.AUDIO = 2)] = 'AUDIO'), (e[(e.ANIMATED = 3)] = 'ANIMATED'), (e[(e.CUSTOMIZATION = 4)] = 'CUSTOMIZATION'), (e[(e.UPLOAD = 5)] = 'UPLOAD'), (e[(e.VANITY = 6)] = 'VANITY'), (e[(e.STREAM = 7)] = 'STREAM'), (e[(e.STICKER = 8)] = 'STICKER'), (e[(e.CUSTOM_ROLE_ICON = 11)] = 'CUSTOM_ROLE_ICON'), (e[(e.STAGE_VIDEO = 12)] = 'STAGE_VIDEO'), (e[(e.SOUNDBOARD = 13)] = 'SOUNDBOARD'), e;
 })({});
-let S = [b.Eu4.NONE, b.Eu4.TIER_1, b.Eu4.TIER_2, b.Eu4.TIER_3],
-    T = S.slice().reverse(),
+let T = [b.Eu4.NONE, b.Eu4.TIER_1, b.Eu4.TIER_2, b.Eu4.TIER_3],
+    S = T.slice().reverse(),
     A = (e) => {
         var t;
         return e === b.Eu4.NONE ? b.Eu4.TIER_1 : null == (t = H.find((t) => t.tier === e)) ? void 0 : t.nextTier;
@@ -78,7 +78,7 @@ let S = [b.Eu4.NONE, b.Eu4.TIER_1, b.Eu4.TIER_2, b.Eu4.TIER_3],
     R = (e, t) => (null != t && t.hasFeature(b.oNc.MORE_SOUNDBOARD) ? O.w1 : O._k[e]),
     P = (e) => {
         if (e === b.Eu4.NONE) return O._k[e];
-        let t = S[S.indexOf(e) - 1];
+        let t = T[T.indexOf(e) - 1];
         return O._k[e] - O._k[t];
     },
     w = (e) => [
@@ -283,8 +283,8 @@ function L(e) {
     }
 }
 let x = i().memoize((e) => (O.HO[b.Eu4.TIER_1].features.includes(e) ? b.Eu4.TIER_1 : O.HO[b.Eu4.TIER_2].features.includes(e) ? b.Eu4.TIER_2 : O.HO[b.Eu4.TIER_3].features.includes(e) ? b.Eu4.TIER_3 : null)),
-    k = (e) => (e === b.Eu4.NONE ? b.Qqv.NONE : e === b.Eu4.TIER_1 ? b.Qqv.TIER_1 : e === b.Eu4.TIER_2 ? b.Qqv.TIER_2 : e === b.Eu4.TIER_3 ? b.Qqv.TIER_3 : null);
-function M(e) {
+    M = (e) => (e === b.Eu4.NONE ? b.Qqv.NONE : e === b.Eu4.TIER_1 ? b.Qqv.TIER_1 : e === b.Eu4.TIER_2 ? b.Qqv.TIER_2 : e === b.Eu4.TIER_3 ? b.Qqv.TIER_3 : null);
+function k(e) {
     var t;
     let n = null == (t = d.Z.getGuild(e)) ? void 0 : t.premiumTier;
     return null != n ? n : b.Eu4.NONE;
@@ -365,7 +365,7 @@ function V(e, t) {
 function Z(e, t) {
     var n;
     if ((null == (n = d.Z.getGuild(t)) ? void 0 : n.hasFeature(b.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0) return 0;
-    let r = M(t),
+    let r = k(t),
         i = b.oCV[r],
         a = e.filter((e) => null != e.endsAt);
     return i - (e.length - a.length);
@@ -398,7 +398,7 @@ function Y(e, t) {
                 message: 'Negative index while checking grace period ending date.',
                 data: {
                     subscriptionLength: e.length,
-                    subscriptionsNeededForPremiumTier: b.oCV[M(t)],
+                    subscriptionsNeededForPremiumTier: b.oCV[k(t)],
                     endingSubscriptionLength: r.length
                 }
             });
@@ -409,15 +409,15 @@ function Y(e, t) {
 }
 function W(e, t) {
     let n = C(t),
-        r = S.indexOf(t);
+        r = T.indexOf(t);
     if (-1 === r) return 0;
-    let i = S[r - 1],
+    let i = T[r - 1],
         a = null != i ? N(i) : 0,
         o = N(t);
     return Math.max(0, n - e.slice(a, o).length);
 }
 function K(e, t, n) {
-    return -1 === S.indexOf(n) ? 0 : Math.max(0, z(e) - t.length);
+    return -1 === T.indexOf(n) ? 0 : Math.max(0, z(e) - t.length);
 }
 function z(e) {
     let t = (0, l.gV)(e.id, 'GuildRecord'),
@@ -447,11 +447,11 @@ function Q(e) {
 }
 function J(e) {
     var t;
-    return null != (t = T.find((t) => e >= b.oCV[t])) ? t : b.Eu4.NONE;
+    return null != (t = S.find((t) => e >= b.oCV[t])) ? t : b.Eu4.NONE;
 }
 function $(e) {
     var t;
-    return null != (t = S.find((t) => e < b.oCV[t])) ? t : b.Eu4.TIER_3;
+    return null != (t = T.find((t) => e < b.oCV[t])) ? t : b.Eu4.TIER_3;
 }
 let ee = {
     [b.Eu4.NONE]: 0,

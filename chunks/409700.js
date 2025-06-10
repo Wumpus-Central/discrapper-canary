@@ -2,7 +2,7 @@ n.d(t, {
     Dp: () => N,
     Hh: () => C,
     ZP: () => R,
-    hq: () => T
+    hq: () => S
 }),
     n(388685);
 var r = n(255367),
@@ -64,7 +64,7 @@ function I(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -75,7 +75,7 @@ function S(e, t) {
         e
     );
 }
-function T() {
+function S() {
     let { volume: e, onVolumeChange: t } = (0, h.Z)();
     return (0, r.jsxs)(c.P3F, {
         className: b.sliderContainer,
@@ -193,7 +193,7 @@ function C(e) {
             (0, r.jsx)(c.P3F, {
                 onClick: (e) => e.stopPropagation(),
                 onMouseOver: (e) => e.stopPropagation(),
-                children: t(S(v({}, e), { refreshPosition: h }))
+                children: t(T(v({}, e), { refreshPosition: h }))
             }),
         align: 'center',
         nudgeAlignIntoViewport: !0,
@@ -217,7 +217,7 @@ function C(e) {
                 children: (t) =>
                     (0, r.jsx)(
                         c.P3F,
-                        S(v({ innerRef: m }, t, e), {
+                        T(v({ innerRef: m }, t, e), {
                             'aria-label': a,
                             onClick: p,
                             className: l,
@@ -233,7 +233,7 @@ function R(e) {
         children: [
             (0, r.jsx)(C, {
                 setTooltipShowing: i,
-                renderPopout: () => (0, r.jsx)(T, {}),
+                renderPopout: () => (0, r.jsx)(S, {}),
                 tooltipText: E.intl.string(E.t['19lt29']),
                 position: 'top',
                 children: (0, r.jsx)(c.gj8, {

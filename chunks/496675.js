@@ -20,8 +20,8 @@ var r,
     O = n(430824),
     v = n(594174),
     I = n(981631),
-    S = n(478743);
-function T(e, t, n) {
+    T = n(478743);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -85,10 +85,10 @@ function x() {
     for (let e in ((A = {}), (N = {}), C)) C[e] += 1;
     R += 1;
 }
-function k() {
+function M() {
     x();
 }
-function M() {
+function k() {
     J();
 }
 function j() {
@@ -234,7 +234,7 @@ class Q extends (r = s.ZP.Store) {
         };
     }
     canAccessMemberSafetyPage(e) {
-        return o.Db(P(e.id), S.N);
+        return o.Db(P(e.id), T.N);
     }
     canAccessGuildSettings(e) {
         return o.Db(P(e.id), E.ym);
@@ -290,14 +290,14 @@ class Q extends (r = s.ZP.Store) {
 function J() {
     (N = {}), (A = {}), (C = {}), (R = 0);
 }
-T(Q, 'displayName', 'PermissionStore');
+S(Q, 'displayName', 'PermissionStore');
 let $ = new Q(l.Z, {
-    BACKGROUND_SYNC: k,
-    CONNECTION_OPEN: k,
-    OVERLAY_INITIALIZE: k,
-    CACHE_LOADED: k,
-    CACHE_LOADED_LAZY: k,
-    CONNECTION_CLOSED: M,
+    BACKGROUND_SYNC: M,
+    CONNECTION_OPEN: M,
+    OVERLAY_INITIALIZE: M,
+    CACHE_LOADED: M,
+    CACHE_LOADED_LAZY: M,
+    CONNECTION_CLOSED: k,
     GUILD_CREATE: j,
     GUILD_UPDATE: j,
     GUILD_DELETE: j,

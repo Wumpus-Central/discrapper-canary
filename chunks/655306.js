@@ -38,8 +38,8 @@ let b = 100,
     O = { any: 100 },
     v = 100,
     I = 3,
-    S = 30 * _.Z.Millis.SECOND,
-    T = 120 * _.Z.Millis.SECOND,
+    T = 30 * _.Z.Millis.SECOND,
+    S = 120 * _.Z.Millis.SECOND,
     A = -1 !== (0, f.hY)();
 var N = (function (e) {
     return (e.UserSSRCUpdate = 'user-ssrc-update'), (e.Update = 'update'), e;
@@ -145,7 +145,7 @@ class C extends a.Z {
         return e;
     }
     getOffscreenTimeoutMs() {
-        return this.isStageChannel ? T : S;
+        return this.isStageChannel ? S : T;
     }
     getSimulcastOverrideQuality(e) {
         return this.simulcastDebugOverrides.has(e) ? this.simulcastDebugOverrides.get(e) : g.Z.NO_OVERRIDE;

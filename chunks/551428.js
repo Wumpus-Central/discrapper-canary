@@ -61,13 +61,13 @@ function v(e) {
 function I() {
     (d = {}), (p = {}), (_ = {}), (f = {}), (h = new Set());
 }
-function S() {
+function T() {
     if (r === s.default.locale) return !1;
     I(), (r = s.default.locale);
 }
-class T extends (i = a.ZP.Store) {
+class S extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(s.default), this.syncWith([s.default], S), (r = s.default.locale);
+        this.waitFor(s.default), this.syncWith([s.default], T), (r = s.default.locale);
     }
     get(e) {
         return d[e];
@@ -104,13 +104,13 @@ class T extends (i = a.ZP.Store) {
         return null != n ? this.getForSKU(n) : null;
     }
 }
-u(T, 'displayName', 'StoreListingStore');
-let A = new T(o.Z, {
+u(S, 'displayName', 'StoreListingStore');
+let A = new S(o.Z, {
     STORE_LISTINGS_FETCH_START: O,
     STORE_LISTINGS_FETCH_FAIL: v,
     STORE_LISTINGS_FETCH_SUCCESS: E,
     STORE_LISTING_FETCH_SUCCESS: b,
-    USER_SETTINGS_PROTO_UPDATE: S,
+    USER_SETTINGS_PROTO_UPDATE: T,
     APPLICATION_STORE_CLEAR_DATA: I,
     GIFT_CODE_RESOLVE_SUCCESS: y
 });

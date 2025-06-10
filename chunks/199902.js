@@ -15,8 +15,8 @@ var c,
     O = n(430824),
     v = n(131951),
     I = n(496675),
-    S = n(19780),
-    T = n(944486),
+    T = n(19780),
+    S = n(944486),
     A = n(979651),
     N = n(981631),
     C = n(70722);
@@ -74,8 +74,8 @@ function D(e, t) {
 }
 let L = null,
     x = {},
-    k = null;
-function M() {
+    M = null;
+function k() {
     (r = new Map()), (i = {}), (a = {}), (o = {});
 }
 function j(e) {
@@ -119,7 +119,7 @@ function V(e) {
             );
         {
             let t = b.default.getSessionId();
-            return n === b.default.getId() && a !== t && null != S.Z.getChannelId() ? e : U(n, r) || e;
+            return n === b.default.getId() && a !== t && null != T.Z.getChannelId() ? e : U(n, r) || e;
         }
     }, !1);
 }
@@ -257,7 +257,7 @@ function ee(e) {
 }
 function et(e) {
     let { intent: t } = e;
-    k = t;
+    M = t;
 }
 function en(e, t) {
     let n = y.Z.getBasicChannel(t);
@@ -268,7 +268,7 @@ function er(e) {
     let t = y.Z.getBasicChannel(e.channelId);
     return null != t && (0, h.p9)(t, A.Z, O.Z, I.Z, f.Z)[0];
 }
-M();
+k();
 class ei extends (c = u.ZP.PersistedStore) {
     initialize(e) {
         this.syncWith([I.Z], () => !0), this.waitFor(_.ZP, I.Z), (null == e ? void 0 : e.selfStreamParticipantsHidden) !== void 0 && Object.assign(x, null == e ? void 0 : e.selfStreamParticipantsHidden);
@@ -301,7 +301,7 @@ class ei extends (c = u.ZP.PersistedStore) {
         return null != (t = this.getActiveStreamForStreamKey(n)) ? t : null;
     }
     getCurrentUserActiveStream() {
-        let e = T.Z.getVoiceChannelId(),
+        let e = S.Z.getVoiceChannelId(),
             t = y.Z.getChannel(e);
         return null == t ? null : this.getActiveStreamForUser(b.default.getId(), t.getGuildId());
     }
@@ -312,7 +312,7 @@ class ei extends (c = u.ZP.PersistedStore) {
     }
     getStreamerActiveStreamMetadata() {
         var e;
-        let t = T.Z.getVoiceChannelId(),
+        let t = S.Z.getVoiceChannelId(),
             n = y.Z.getChannel(t);
         if (null == n) return null;
         let r = this.getActiveStreamForUser(b.default.getId(), n.getGuildId());
@@ -362,7 +362,7 @@ class ei extends (c = u.ZP.PersistedStore) {
         return null != n ? n.viewerIds : [];
     }
     getCurrentAppIntent() {
-        return k;
+        return M;
     }
     getStreamingState() {
         return (0, m.Z)(v.Z)
@@ -397,7 +397,7 @@ let ea = new ei(d.Z, {
     SET_STREAM_APP_INTENT: et,
     RTC_CONNECTION_STATE: $,
     CHANNEL_RTC_SELECT_PARTICIPANT: X,
-    CONNECTION_OPEN: M,
-    CONNECTION_CLOSED: M,
-    LOGOUT: M
+    CONNECTION_OPEN: k,
+    CONNECTION_CLOSED: k,
+    LOGOUT: k
 });

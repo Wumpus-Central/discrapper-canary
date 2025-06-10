@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => k,
+    Z: () => M,
     d: () => E
 }),
     n(388685),
@@ -92,14 +92,14 @@ function v(e) {
             timestamp: Date.now(),
             draft: r
         };
-    } else T(n, i);
+    } else S(n, i);
     return 'DRAFT_SAVE' === t;
 }
 function I(e) {
     let { channelId: t, draftType: n } = e;
-    return T(t, n);
+    return S(t, n);
 }
-function S(e) {
+function T(e) {
     let { channelId: t, draft: n } = e,
         r = u.default.getId();
     if (null == r) return;
@@ -107,7 +107,7 @@ function S(e) {
         a = i[t];
     null == a && (a = i[t] = {}), (a[1] = m(p({ timestamp: Date.now() }, a[1], n), { parentChannelId: t }));
 }
-function T(e, t) {
+function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.default.getId();
     if (null == n) return !1;
     let r = O(n),
@@ -158,8 +158,8 @@ function P(e) {
                     draft: n
                 }
             }),
-            T(t.parent_id, 1),
-            T(t.parent_id, 2);
+            S(t.parent_id, 1),
+            S(t.parent_id, 2);
     }
 }
 function w(e) {
@@ -172,7 +172,7 @@ function L() {
     for (let [e, t] of c.default.entries(b))
         for (let [n, r] of c.default.entries(t)) {
             let t = r[0];
-            null != t && ('' === t.draft || '' === t.draft.trim()) && T(n, 0, e);
+            null != t && ('' === t.draft || '' === t.draft.trim()) && S(n, 0, e);
         }
 }
 class x extends (r = o.ZP.PersistedStore) {
@@ -248,7 +248,7 @@ _(x, 'displayName', 'DraftStore'),
             return n;
         }
     ]);
-let k = new x(s.Z, {
+let M = new x(s.Z, {
     CONNECTION_OPEN: N,
     LOGOUT: w,
     MULTI_ACCOUNT_REMOVE_ACCOUNT: D,
@@ -259,5 +259,5 @@ let k = new x(s.Z, {
     DRAFT_SAVE: v,
     DRAFT_CHANGE: v,
     DRAFT_CLEAR: I,
-    THREAD_SETTINGS_DRAFT_CHANGE: S
+    THREAD_SETTINGS_DRAFT_CHANGE: T
 });

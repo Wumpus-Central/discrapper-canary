@@ -1,5 +1,5 @@
 n.d(t, {
-    DR: () => S,
+    DR: () => T,
     S4: () => v,
     bD: () => I,
     oK: () => O
@@ -185,7 +185,7 @@ function I(e) {
             })
     });
 }
-function S(e) {
+function T(e) {
     let { preset: t, isSelected: n, disabled: i, tabIndex: o, onSelect: s, showBadge: l, showLockedBadge: u } = e,
         { colors: d, angle: f, theme: p } = t,
         h = (0, _.VK)({

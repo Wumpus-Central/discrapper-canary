@@ -6,14 +6,14 @@ n.d(t, {
     Dd: () => C,
     Ft: () => D,
     TK: () => B,
-    X0: () => M,
+    X0: () => k,
     XA: () => j,
     Z8: () => v,
     bD: () => P,
     nG: () => A,
     qJ: () => U,
     t0: () => G,
-    tI: () => k
+    tI: () => M
 }),
     n(388685),
     n(953529),
@@ -135,7 +135,7 @@ function I(e) {
         : e.map((e) => {
               var t, n;
               let r = O(b({}, e), {
-                  choices: S(e.choices),
+                  choices: T(e.choices),
                   options: I(e.options),
                   serverLocalizedName: e.name_localized,
                   displayName: null != (t = e.name_localized) ? t : e.name,
@@ -156,7 +156,7 @@ function I(e) {
                       : r;
           });
 }
-function S(e) {
+function T(e) {
     return null == e
         ? void 0
         : e.map((e) => {
@@ -164,7 +164,7 @@ function S(e) {
               return O(b({}, e), { displayName: null != (t = e.name_localized) ? t : e.name });
           });
 }
-function T(e) {
+function S(e) {
     var t, n;
     let { rootCommand: r, command: i, applicationId: a, subCommandPath: o, useKeyedPermissions: s } = e;
     if (i.hasOwnProperty('id')) {
@@ -193,7 +193,7 @@ function T(e) {
     let c = i.options.filter((e) => e.type === u.jw.SUB_COMMAND_GROUP);
     for (let e = 0; e < c.length; e++)
         l.push(
-            ...T({
+            ...S({
                 rootCommand: r,
                 command: c[e],
                 applicationId: a,
@@ -244,7 +244,7 @@ function A(e, t) {
         e,
         (e) => (
             o()(null != e.id, 'Missing command id'),
-            T({
+            S({
                 rootCommand: e,
                 command: e,
                 applicationId: e.application_id,
@@ -330,13 +330,13 @@ function x(e) {
             return _.d.SlashCommand;
     }
 }
-function k(e) {
+function M(e) {
     if (null != e)
         if (e.id === h.bi.BUILT_IN) return p.ub.BUILT_IN;
         else if (e.id === h.bi.FRECENCY) return p.ub.FRECENCY;
         else return p.ub.APP;
 }
-function M(e, t) {
+function k(e, t) {
     var n, r;
     return {
         type: p.Qi.APPLICATION,

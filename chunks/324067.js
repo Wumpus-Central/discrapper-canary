@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(539854), n(388685);
+n.d(t, { Z: () => k }), n(539854), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -77,14 +77,14 @@ function I(e) {
     } = e;
     delete h[t];
 }
-function S(e) {
+function T(e) {
     let {
         channel: { guild_id: t }
     } = e;
     if (null == t) return !1;
     (h[t] = void 0), p === t && y(t);
 }
-function T(e) {
+function S(e) {
     let { channels: t } = e,
         n = !1;
     for (let { guild_id: e } of t) null != e && ((h[e] = void 0), (n = !0), p === e && y(e));
@@ -131,7 +131,7 @@ function x(e) {
     let t = h[e];
     return null != t ? t : y(e);
 }
-class k extends (r = i.ZP.Store) {
+class M extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(u.ZP, d.Z, l.default, c.Z, s.Z), this.syncWith([s.Z], L);
     }
@@ -139,8 +139,8 @@ class k extends (r = i.ZP.Store) {
         return null != e ? x(e) : E;
     }
 }
-_(k, 'displayName', 'GuildCategoryStore');
-let M = new k(a.Z, {
+_(M, 'displayName', 'GuildCategoryStore');
+let k = new M(a.Z, {
     CHANNEL_SELECT: D,
     CONNECTION_OPEN: O,
     OVERLAY_INITIALIZE: O,
@@ -148,9 +148,9 @@ let M = new k(a.Z, {
     GUILD_CREATE: v,
     GUILD_UPDATE: v,
     GUILD_DELETE: I,
-    CHANNEL_CREATE: S,
-    CHANNEL_DELETE: S,
-    CHANNEL_UPDATES: T,
+    CHANNEL_CREATE: T,
+    CHANNEL_DELETE: T,
+    CHANNEL_UPDATES: S,
     GUILD_MEMBER_UPDATE: A,
     CURRENT_USER_UPDATE: N,
     GUILD_ROLE_CREATE: C,

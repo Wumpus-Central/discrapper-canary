@@ -50,7 +50,7 @@ function I(e) {
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -62,12 +62,12 @@ function S(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -139,10 +139,10 @@ let R = function (e) {
             var e;
             return null != (e = (0, f.Z)(t, n, a, o)) ? e : y;
         }, [t, n, a, o, y]),
-        S = (0, s.e7)([b.Z], () => b.Z.getChannel(t)),
+        T = (0, s.e7)([b.Z], () => b.Z.getChannel(t)),
         N = (0, u.X0)({ location: 'SoundboardMention' }),
         R = i.useRef(null),
-        { isPlaying: P, playSound: w } = (0, p.Z)(v, S),
+        { isPlaying: P, playSound: w } = (0, p.Z)(v, T),
         D = i.useCallback(async () => {
             if (await w()) {
                 var e;
@@ -159,7 +159,7 @@ let R = function (e) {
                         containerClassName: O.jumboContainer,
                         className: O.jumboButton,
                         sound: v,
-                        channel: S,
+                        channel: T,
                         onSelectItem: D,
                         isPlayingSoundOverride: P,
                         isSoundmoji: !0,
@@ -181,7 +181,7 @@ let R = function (e) {
                     children: (e) =>
                         (0, r.jsx)(
                             'span',
-                            T(I({}, e), {
+                            S(I({}, e), {
                                 children: (0, r.jsx)(C, {
                                     sound: v,
                                     playSound: D,

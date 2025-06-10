@@ -1,14 +1,14 @@
-a.d(e, { s: () => _ });
+a.d(e, { s: () => n });
 var r = a(151122),
-    n = a(163162);
-let _ = (0, r._I)(() => ({
+    _ = a(163162);
+let n = (0, r._I)(() => ({
     name: 'HttpContext',
     preprocessEvent(t) {
-        if (!n.m9.navigator && !n.m9.location && !n.m9.document) return;
-        let e = (t.request && t.request.url) || (n.m9.location && n.m9.location.href),
-            { referrer: a } = n.m9.document || {},
-            { userAgent: r } = n.m9.navigator || {},
-            _ = {
+        if (!_.m9.navigator && !_.m9.location && !_.m9.document) return;
+        let e = (t.request && t.request.url) || (_.m9.location && _.m9.location.href),
+            { referrer: a } = _.m9.document || {},
+            { userAgent: r } = _.m9.navigator || {},
+            n = {
                 ...(t.request && t.request.headers),
                 ...(a && { Referer: a }),
                 ...(r && { 'User-Agent': r })
@@ -16,7 +16,7 @@ let _ = (0, r._I)(() => ({
             o = {
                 ...t.request,
                 ...(e && { url: e }),
-                headers: _
+                headers: n
             };
         t.request = o;
     }

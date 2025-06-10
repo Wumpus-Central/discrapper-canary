@@ -87,10 +87,10 @@ function O(e, t) {
 let v = i.forwardRef(function (e, t) {
     var { children: n, className: i, subsection: a, onAction: m, onClose: E, 'aria-label': O, 'aria-labelledby': v } = e,
         I = y(e, ['children', 'className', 'subsection', 'onAction', 'onClose', 'aria-label', 'aria-labelledby']);
-    let { themeType: S } = (0, f.z)(),
-        { analyticsLocations: T } = (0, l.ZP)(),
+    let { themeType: T } = (0, f.z)(),
+        { analyticsLocations: S } = (0, l.ZP)(),
         { context: A } = (0, c.KZ)();
-    return S === _.lY.MODAL || S === _.lY.MODAL_V2 || (null == A ? void 0 : A.userId) == null
+    return T === _.lY.MODAL || T === _.lY.MODAL_V2 || (null == A ? void 0 : A.userId) == null
         ? (0, r.jsx)('article', {
               'aria-label': O,
               'aria-labelledby': v,
@@ -120,7 +120,7 @@ let v = i.forwardRef(function (e, t) {
                               g(
                                   {
                                       section: _.oh.ACTIVITY,
-                                      sourceAnalyticsLocations: T,
+                                      sourceAnalyticsLocations: S,
                                       subsection: a
                                   },
                                   A

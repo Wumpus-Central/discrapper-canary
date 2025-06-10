@@ -7,7 +7,7 @@ n.d(t, {
     XN: () => v,
     _H: () => g,
     c0: () => R,
-    fD: () => T,
+    fD: () => S,
     kD: () => C,
     rn: () => m,
     rv: () => E,
@@ -108,8 +108,8 @@ function v(e, t, n) {
         c = l()(s, t);
     return 'boolean' == typeof c ? y : c.palette();
 }
-let I = (e) => ('number' == typeof e ? null : S(e)),
-    S = o().memoize(
+let I = (e) => ('number' == typeof e ? null : T(e)),
+    T = o().memoize(
         (e) =>
             new Promise((t, n) => {
                 let r = new Image();
@@ -123,7 +123,7 @@ let I = (e) => ('number' == typeof e ? null : S(e)),
                     (r.src = e);
             })
     );
-function T(e) {
+function S(e) {
     return new Promise((t, n) => {
         let r = new FileReader();
         r.readAsDataURL(e),

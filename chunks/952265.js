@@ -2,7 +2,7 @@ n.d(t, {
     $s: () => N,
     Ay: () => w,
     DE: () => D,
-    Fv: () => S,
+    Fv: () => T,
     Gw: () => E,
     JQ: () => A,
     Jw: () => R,
@@ -13,7 +13,7 @@ n.d(t, {
     f9: () => C,
     h7: () => v,
     nf: () => L,
-    o: () => T,
+    o: () => S,
     pT: () => P,
     s9: () => y
 }),
@@ -131,7 +131,7 @@ async function O(e) {
             (o = !0), v(m, _(d({}, r), { modalKey: a }), n);
         }, 300),
         l = await e();
-    return clearTimeout(s), o ? L(a, n) && T(a, l, r.onCloseRequest, r.onCloseCallback, n) : v(l, _(d({}, r), { modalKey: a }), n), a;
+    return clearTimeout(s), o ? L(a, n) && S(a, l, r.onCloseRequest, r.onCloseCallback, n) : v(l, _(d({}, r), { modalKey: a }), n), a;
 }
 function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
@@ -191,7 +191,7 @@ function I(e) {
     }),
         null != r && null != r.onCloseCallback && r.onCloseCallback();
 }
-function S(e) {
+function T(e) {
     let t = y.getState(),
         n = g
             .map((e) => {
@@ -232,7 +232,7 @@ function S(e) {
             null == e || null == (t = e.onCloseCallback) || t.call(e);
         }));
 }
-function T(e, t, n, r) {
+function S(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : E();
     (0, o.j)(() => {
         y.setState((a) =>

@@ -24,8 +24,8 @@ function v(e) {
         [v] = i.useState(() => b.ZP.getEnableHardwareAcceleration()),
         {
             locale: I,
-            theme: S,
-            focused: T,
+            theme: T,
+            focused: S,
             currentWindow: A,
             fontScale: N,
             fontScaleClass: C,
@@ -35,8 +35,8 @@ function v(e) {
             useForcedColors: D,
             systemForcedColors: L,
             useReducedMotion: x,
-            alwaysShowLinkDecorations: k,
-            confettiMode: M
+            alwaysShowLinkDecorations: M,
+            confettiMode: k
         } = (0, s.cj)([m.default, c.Z, g.Z, E.Z, p.Z, h.Z], () => {
             var e;
             return {
@@ -56,7 +56,7 @@ function v(e) {
                 confettiMode: h.Z.confettiMode
             };
         }),
-        j = (0, f.Z)(A, __OVERLAY__ || T),
+        j = (0, f.Z)(A, __OVERLAY__ || S),
         U = 0;
     1 !== P && (U = (0, l.OdO)(U, l.bgu.REDUCE_SATURATION_ENABLED));
     let G = (0, y.A)(),
@@ -66,15 +66,15 @@ function v(e) {
         Z = d.M.useExperiment({ location: 'RootThemeContextProvider' }).enabled,
         H = (0, u.Z)('RootThemeContextProvider');
     return (0, r.jsx)(l.wMY, {
-        theme: S,
+        theme: T,
         flags: U,
         saturation: P,
         density: G,
         children: (0, r.jsx)(O.cE, {
             lang: I,
-            theme: S,
+            theme: T,
             density: G,
-            focused: T,
+            focused: S,
             fontScale: N,
             fontScaleClass: C,
             keyboardModeEnabled: R,
@@ -84,10 +84,10 @@ function v(e) {
             useForcedColors: D,
             systemForcedColors: L,
             useReducedMotion: x,
-            alwaysShowLinkDecorations: k,
+            alwaysShowLinkDecorations: M,
             hardwareAccelerationEnabled: v,
             rootClassName: o()({
-                'confetti-mode': M,
+                'confetti-mode': k,
                 'refresh-fast-follow-avatars': B && !H,
                 'refresh-fast-follow-guild-bg': F,
                 'refresh-fast-follow-distinct-borders': V,

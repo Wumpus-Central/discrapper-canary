@@ -68,18 +68,18 @@ function I(e, t) {
         e
     );
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = T(e, t);
+        i = S(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function T(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -95,7 +95,7 @@ let A = 3,
     P = () => N,
     w = (e) => {
         var { children: t, className: n, onSelect: i, isSelected: a = !1 } = e,
-            s = S(e, ['children', 'className', 'onSelect', 'isSelected']);
+            s = T(e, ['children', 'className', 'onSelect', 'isSelected']);
         return (0, r.jsx)(
             u.P3F,
             I(O({ className: o()(b.decorationGridItem, a ? b.selected : void 0, n) }, s), {
@@ -106,14 +106,14 @@ let A = 3,
     },
     D = (e) => {
         var { user: t, avatarDecoration: n, innerRef: a, section: o, isSelected: s = !1 } = e,
-            h = S(e, ['user', 'avatarDecoration', 'innerRef', 'section', 'isSelected']);
+            h = T(e, ['user', 'avatarDecoration', 'innerRef', 'section', 'isSelected']);
         let y = (0, c.e7)([f.Z], () => {
                 let e = f.Z.getProduct(n.skuId);
                 return (0, _.G1)(e);
             }),
             v = (0, _.Yq)(n.skuId),
-            T = p.ZP.canUseCollectibles(t),
-            A = o === m.$0.PREMIUM_PURCHASE && !T,
+            S = p.ZP.canUseCollectibles(t),
+            A = o === m.$0.PREMIUM_PURCHASE && !S,
             C = i.useRef(null),
             R = (0, d.Z)(null != a ? a : C),
             { avatarDecorationSrc: P } = (0, g.Z)({
@@ -123,7 +123,7 @@ let A = 3,
                 onlyAnimateOnHover: !R
             }),
             D = () =>
-                o === m.$0.PURCHASE || (o === m.$0.PREMIUM_PURCHASE && T)
+                o === m.$0.PURCHASE || (o === m.$0.PREMIUM_PURCHASE && S)
                     ? null
                     : v
                       ? (0, r.jsx)(u.lBU, {

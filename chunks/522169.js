@@ -22,9 +22,9 @@ e.exports = function (e) {
         O = o(e),
         v = arguments.length,
         I = v > 1 ? arguments[1] : void 0,
-        S = void 0 !== I,
-        T = c(O);
-    if (T && !u(T)) for (b = (E = l(O, T)).next, O = []; !(g = i(b, E)).done; ) O.push(g.value);
-    for (S && v > 2 && (I = r(I, arguments[2])), n = s(O), h = d((p = new (f(y))(n))), t = 0; n > t; t++) (m = S ? I(O[t], t) : O[t]), (p[t] = h ? _(m) : +m);
+        T = void 0 !== I,
+        S = c(O);
+    if (S && !u(S)) for (b = (E = l(O, S)).next, O = []; !(g = i(b, E)).done; ) O.push(g.value);
+    for (T && v > 2 && (I = r(I, arguments[2])), n = s(O), h = d((p = new (f(y))(n))), t = 0; n > t; t++) (m = T ? I(O[t], t) : O[t]), (p[t] = h ? _(m) : +m);
     return p;
 };

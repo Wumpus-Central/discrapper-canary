@@ -21,8 +21,8 @@ var i = n(120356),
     O = n(849755),
     v = n(384298),
     I = n(670451),
-    S = n(228168),
-    T = n(388032),
+    T = n(228168),
+    S = n(388032),
     A = n(227832);
 function N(e, t, n) {
     return (
@@ -91,13 +91,13 @@ function w(e) {
             userId: t.id,
             onAction: L
         }),
-        k = (0, o.e7)([d.Z], () => d.Z.getGuild(i.guild_id)),
-        M = (0, _.Z)(i),
+        M = (0, o.e7)([d.Z], () => d.Z.getGuild(i.guild_id)),
+        k = (0, _.Z)(i),
         j = (0, u.ZP)(i),
         { channelStatusEnabled: U } = (0, f.D)({ location: 'UserProfileVoiceActivityCard' }),
         G = () => {
             if (t.id !== n.id) return null;
-            let e = i.isDM() || i.isGroupDM() ? T.intl.string(T.t['+DsWbW']) : T.intl.string(T.t.xOVEjY);
+            let e = i.isDM() || i.isGroupDM() ? S.intl.string(S.t['+DsWbW']) : S.intl.string(S.t.xOVEjY);
             return (0, r.jsx)(s.ua7, {
                 text: e,
                 children: (e) => (0, r.jsx)(s.d3s, P(C({}, e), { size: 'xxs' }))
@@ -112,7 +112,7 @@ function w(e) {
                     onClose: R
                 })
             }),
-        F = i.isDM() || i.isGroupDM() ? T.intl.string(T.t['9FaEzs']) : i.isGuildStageVoice() ? T.intl.string(T.t.QygGCA) : T.intl.string(T.t.msxteH);
+        F = i.isDM() || i.isGroupDM() ? S.intl.string(S.t['9FaEzs']) : i.isGuildStageVoice() ? S.intl.string(S.t.QygGCA) : S.intl.string(S.t.msxteH);
     return (0, r.jsx)(c.Gt, {
         value: D,
         children: (0, r.jsxs)(g.Z, {
@@ -137,7 +137,7 @@ function w(e) {
                         className: A.content,
                         children: [
                             (0, r.jsx)(y.Z, {
-                                users: M,
+                                users: k,
                                 channel: i
                             }),
                             (0, r.jsxs)('div', {
@@ -145,7 +145,7 @@ function w(e) {
                                 children: [
                                     (0, r.jsx)(b.Z, {
                                         channel: i,
-                                        guild: k,
+                                        guild: M,
                                         onAction: L,
                                         onClose: R
                                     }),
@@ -156,14 +156,14 @@ function w(e) {
                                             onAction: L,
                                             onClose: R
                                         }),
-                                    w === S.lY.MODAL_V2 && B()
+                                    w === T.lY.MODAL_V2 && B()
                                 ]
                             }),
-                            w === S.lY.MODAL && B()
+                            w === T.lY.MODAL && B()
                         ]
                     })
                 }),
-                w !== S.lY.MODAL && w !== S.lY.MODAL_V2 && B()
+                w !== T.lY.MODAL && w !== T.lY.MODAL_V2 && B()
             ]
         })
     });

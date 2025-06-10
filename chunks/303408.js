@@ -720,13 +720,13 @@ e.exports = function (e) {
                 l.FUNCTION_DISPATCH
             ]
         },
-        S = {
+        T = {
             begin: u + ':(:)?' + `(${c.join('|')})`,
             returnBegin: !0,
             contains: [I]
         };
     return (
-        f.push(e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, O, v, S, y, I, b, l.FUNCTION_DISPATCH),
+        f.push(e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, O, v, T, y, I, b, l.FUNCTION_DISPATCH),
         {
             name: 'Less',
             case_insensitive: !0,

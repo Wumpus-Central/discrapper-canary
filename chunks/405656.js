@@ -9,7 +9,7 @@ n.d(t, {
     cl: () => I,
     g9: () => b,
     jW: () => g,
-    kG: () => T,
+    kG: () => S,
     qc: () => y,
     zV: () => O
 }),
@@ -219,12 +219,12 @@ function v(e) {
 function I(e) {
     return null == e ? '' : e.map((e) => e.getFullMatch()).join('');
 }
-let S = new a.ZP();
-function T(e) {
-    return S.tokenize(e);
+let T = new a.ZP();
+function S(e) {
+    return T.tokenize(e);
 }
 function A() {
-    return S.clearCache();
+    return T.clearCache();
 }
 function N(e) {
     return null != e ? h[e] : null;
@@ -234,5 +234,5 @@ function C(e, t) {
     return (null != t || !n) && (null == t || !n || !!u.KA4.test(t.type));
 }
 function R() {
-    (0, o.Pe)(), S.reset(), i()(o.ZP).forOwn((e, t) => S.addRule(_({ type: t }, e)));
+    (0, o.Pe)(), T.reset(), i()(o.ZP).forOwn((e, t) => T.addRule(_({ type: t }, e)));
 }

@@ -22,7 +22,7 @@ function h(e) {
     let I = (e) => {
             null == e || e.stopPropagation(), null == b || b({ action: 'PRESS_PLAY_ON_SPOTIFY_BUTTON' }), O.onClick();
         },
-        S = (e) => {
+        T = (e) => {
             e.stopPropagation(), null == b || b({ action: 'PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON' }), v.onClick();
         };
     return y === d.lY.MODAL_V2
@@ -36,7 +36,7 @@ function h(e) {
                           submitting: v.loading,
                           size: i.PhG.TINY,
                           themeColor: 'secondary',
-                          onClick: S
+                          onClick: T
                       })
                   }),
                   (0, r.jsx)(i.DY3, {
@@ -75,7 +75,7 @@ function h(e) {
                       submitting: v.loading,
                       themeColor: 'secondary',
                       fullWidth: !0,
-                      onClick: S
+                      onClick: T
                   })
               ]
           });

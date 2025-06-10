@@ -90,13 +90,13 @@ let g = (e) => {
             roleStyle: 'username',
             animateGradient: y
         }),
-        S = i.useCallback(
+        T = i.useCallback(
             (e) => {
                 O(!0), null == g || g(e);
             },
             [O, g]
         ),
-        T = i.useCallback(
+        S = i.useCallback(
             (e) => {
                 O(!1), null == E || E(e);
             },
@@ -118,8 +118,8 @@ let g = (e) => {
                     [u.wrapper]: !0,
                     interactive: b.onClick
                 }),
-                onMouseEnter: S,
-                onMouseLeave: T,
+                onMouseEnter: T,
+                onMouseLeave: S,
                 style: A,
                 tabIndex: null != b.onClick ? 0 : -1,
                 children:

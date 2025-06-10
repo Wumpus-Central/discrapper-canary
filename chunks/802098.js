@@ -43,7 +43,7 @@ function I(e) {
     let { config: t, latestChangelogId: n } = e;
     (p = n), (m = t);
 }
-function S(e) {
+function T(e) {
     let { id: t, changelog: n } = e;
     null == f[t] && (f[t] = {}),
         (f[t][n.locale] = {
@@ -57,7 +57,7 @@ function S(e) {
         null == _[t] && (_[t] = {}),
         (_[t][n.locale] = u.LU.LOADED_SUCCESS);
 }
-function T(e) {
+function S(e) {
     let { id: t, locale: n } = e;
     if (null != f[t] && null != f[t][n]) return !1;
     null == _[t] && (_[t] = {}), (_[t][n] = u.LU.LOADED_FAILURE);
@@ -127,8 +127,8 @@ let P = new R(o.Z, {
     CHANGE_LOG_LOCK: O,
     CHANGE_LOG_UNLOCK: v,
     CHANGE_LOG_SET_CONFIG: I,
-    CHANGE_LOG_FETCH_SUCCESS: S,
-    CHANGE_LOG_FETCH_FAILED: T,
+    CHANGE_LOG_FETCH_SUCCESS: T,
+    CHANGE_LOG_FETCH_FAILED: S,
     CHANGE_LOG_SET_OVERRIDE: A,
     CHANGE_LOG_MARK_SEEN: N
 });

@@ -3,7 +3,7 @@ n.d(t, {
     Tt: () => y,
     iL: () => b,
     nY: () => I,
-    zx: () => S
+    zx: () => T
 });
 var r = n(255367),
     i = n(73800),
@@ -138,8 +138,8 @@ function I() {
         [f.submitting]: a && !s
     });
 }
-function S(e) {
-    var { look: t = b.FILLED, color: n = y.BRAND, size: a = O.MEDIUM, fullWidth: s = !1, grow: _ = !0, disabled: h = !1, submitting: E = !1, type: S = 'button', style: T, wrapperClassName: A, className: N, innerClassName: C, onClick: R, onDoubleClick: P, onMouseDown: w, onMouseUp: D, onMouseEnter: L, onMouseLeave: x, onKeyDown: k, children: M, rel: j, buttonRef: U, focusProps: G, 'aria-label': B, submittingStartedLabel: F, submittingFinishedLabel: V } = e,
+function T(e) {
+    var { look: t = b.FILLED, color: n = y.BRAND, size: a = O.MEDIUM, fullWidth: s = !1, grow: _ = !0, disabled: h = !1, submitting: E = !1, type: T = 'button', style: S, wrapperClassName: A, className: N, innerClassName: C, onClick: R, onDoubleClick: P, onMouseDown: w, onMouseUp: D, onMouseEnter: L, onMouseLeave: x, onKeyDown: M, children: k, rel: j, buttonRef: U, focusProps: G, 'aria-label': B, submittingStartedLabel: F, submittingFinishedLabel: V } = e,
         Z = g(e, ['look', 'color', 'size', 'fullWidth', 'grow', 'disabled', 'submitting', 'type', 'style', 'wrapperClassName', 'className', 'innerClassName', 'onClick', 'onDoubleClick', 'onMouseDown', 'onMouseUp', 'onMouseEnter', 'onMouseLeave', 'onKeyDown', 'children', 'rel', 'buttonRef', 'focusProps', 'aria-label', 'submittingStartedLabel', 'submittingFinishedLabel']);
     let H = h || E,
         Y = H && (null != L || null != x),
@@ -165,10 +165,10 @@ function S(e) {
                     onMouseDown: h ? void 0 : w,
                     onMouseEnter: L,
                     onMouseLeave: x,
-                    onKeyDown: h ? void 0 : k,
-                    type: S,
+                    onKeyDown: h ? void 0 : M,
+                    type: T,
                     disabled: h,
-                    style: T,
+                    style: S,
                     rel: j,
                     className: o()(
                         N,
@@ -193,7 +193,7 @@ function S(e) {
                             : null,
                         (0, r.jsx)('div', {
                             className: o()(f.contents, C),
-                            children: M
+                            children: k
                         })
                     ]
                 })
@@ -217,21 +217,21 @@ function S(e) {
           })
         : q;
 }
-(S.Looks = b),
-    (S.Colors = y),
-    (S.Sizes = O),
-    (S.Link = function (e) {
-        var { look: t = b.FILLED, color: n = y.BRAND, size: i = O.MEDIUM, fullWidth: a = !1, grow: l = !0, style: c, className: u, innerClassName: d, to: _, onClick: h, onMouseDown: E, onMouseUp: v, children: I, rel: S } = e,
-            T = g(e, ['look', 'color', 'size', 'fullWidth', 'grow', 'style', 'className', 'innerClassName', 'to', 'onClick', 'onMouseDown', 'onMouseUp', 'children', 'rel']);
+(T.Looks = b),
+    (T.Colors = y),
+    (T.Sizes = O),
+    (T.Link = function (e) {
+        var { look: t = b.FILLED, color: n = y.BRAND, size: i = O.MEDIUM, fullWidth: a = !1, grow: l = !0, style: c, className: u, innerClassName: d, to: _, onClick: h, onMouseDown: E, onMouseUp: v, children: I, rel: T } = e,
+            S = g(e, ['look', 'color', 'size', 'fullWidth', 'grow', 'style', 'className', 'innerClassName', 'to', 'onClick', 'onMouseDown', 'onMouseUp', 'children', 'rel']);
         return (0, r.jsx)(
             s.rU,
-            m(p({}, T), {
+            m(p({}, S), {
                 to: _,
                 onClick: h,
                 onMouseUp: v,
                 onMouseDown: E,
                 style: c,
-                rel: S,
+                rel: T,
                 className: o()(u, f.button, t, n, i, {
                     [f.fullWidth]: a,
                     [f.grow]: l

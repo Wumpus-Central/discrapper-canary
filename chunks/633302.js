@@ -39,11 +39,11 @@ let c = null,
     m = /[\u200d\ud800-\udfff\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff\ufe0e\ufe0f\u270b\u2b50\u2728\u26a1\u26c5\u26c4\u2614\u2615\u26bd\u26be\u26f3\u26f5\u2693\u26fd\u26f2\u26fa\u26ea\u231a\u23f0\u231b\u23f3\u26ce\u2648\u2649\u264a\u264b\u264c\u264d\u264e\u264f\u2650\u2651\u2652\u2653\u270a\u274c\u2b55\u26d4\u2757\u2755\u2753\u2754\u2705\u274e\u267f\u23e9\u23ea\u23eb\u23ec\u2795\u2796\u2797\u27b0\u27bf\u26aa\u26ab\u25fe\u25fd\u2b1b\u2b1c\u26a7]/,
     g = /\ud83c[\udffb-\udfff](?=\ud83c[\udffb-\udfff])|(?:[^\ud800-\udfff][\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]?|[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\ud800-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?(?:\u200d(?:[^\ud800-\udfff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?)*/g,
     { emojis: E, emojisByCategory: b, nameToEmoji: y, surrogateToEmoji: O, numDiversitySprites: v, numNonDiversitySprites: I } = n(382342);
-function S(e) {
+function T(e) {
     let t = y[e];
     return null == t ? null : E[t];
 }
-function T(e) {
+function S(e) {
     let t = O[e];
     return null == t ? null : E[t];
 }
@@ -90,7 +90,7 @@ class A {
     get name() {
         if (this.hasDiversity && null != c) {
             var e;
-            return ''.concat(this.uniqueName, '::').concat(null == (e = T(c)) ? void 0 : e.names[0]);
+            return ''.concat(this.uniqueName, '::').concat(null == (e = S(c)) ? void 0 : e.names[0]);
         }
         return this.uniqueName;
     }
@@ -135,7 +135,7 @@ function w() {
     return Object.keys(b);
 }
 function D(e) {
-    let t = S(e);
+    let t = T(e);
     return null != t ? N(t) : null;
 }
 let L = new Map();
@@ -147,15 +147,15 @@ function x(e) {
     }
     return t;
 }
-function k(e) {
+function M(e) {
     return m.test(e);
 }
-function M(e) {
+function k(e) {
     return e.replace(_, (e, t) => H(t, e));
 }
 function j(e) {
     var t;
-    let n = null == (t = T(e)) ? void 0 : t.names[0];
+    let n = null == (t = S(e)) ? void 0 : t.names[0];
     return null != n
         ? {
               type: 'emoji',
@@ -172,7 +172,7 @@ let U = String.fromCodePoint(917631),
     B = RegExp('^[\\u{E0061}-\\u{E007A}]$', 'u');
 function F(e, t) {
     var n;
-    if (!0 !== t && !k(e))
+    if (!0 !== t && !M(e))
         return [
             {
                 type: 'text',
@@ -212,7 +212,7 @@ function V(e) {
         .join('');
 }
 function Z(e) {
-    if (!k(e)) return null;
+    if (!M(e)) return null;
     let t = F(e, !0)
         .map((e) => ('text' === e.type ? e.text : e.emojiName))
         .join('');
@@ -221,13 +221,13 @@ function Z(e) {
 function H(e) {
     var t, n;
     let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '';
-    return null != (n = null == (t = S(e)) ? void 0 : t.surrogates) ? n : r;
+    return null != (n = null == (t = T(e)) ? void 0 : t.surrogates) ? n : r;
 }
 function Y(e) {
     var t, n;
     let r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : '',
-        a = null != (n = null == (t = T(e)) ? void 0 : t.names[0]) ? n : i;
+        a = null != (n = null == (t = S(e)) ? void 0 : t.names[0]) ? n : i;
     return r ? ':'.concat(a, ':') : a;
 }
 function W(e) {
@@ -244,8 +244,8 @@ let K = {
     getCategories: w,
     getByName: D,
     getByCategory: x,
-    contentHasUnicodeOrEmoji: k,
-    translateInlineEmojiToSurrogates: M,
+    contentHasUnicodeOrEmoji: M,
+    translateInlineEmojiToSurrogates: k,
     maybeTranslateSurrogatesToInlineEmoji: Z,
     findInlineEmojisFromSurrogates: F,
     translateSurrogatesToInlineEmoji: V,

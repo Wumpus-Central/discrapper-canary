@@ -85,7 +85,7 @@ function h(e) {
     var n = m(t[1]),
         i = m(t[2]),
         a = m(t[3]);
-    return S(n, i, a) ? n * r.vh + i * r.yJ + 1000 * a : NaN;
+    return T(n, i, a) ? n * r.vh + i * r.yJ + 1000 * a : NaN;
 }
 function m(e) {
     return (e && parseFloat(e.replace(',', '.'))) || 0;
@@ -97,7 +97,7 @@ function g(e) {
     var n = '+' === t[1] ? -1 : 1,
         i = parseInt(t[2]),
         a = (t[3] && parseInt(t[3])) || 0;
-    return T(i, a) ? n * (i * r.vh + a * r.yJ) : NaN;
+    return S(i, a) ? n * (i * r.vh + a * r.yJ) : NaN;
 }
 function E(e, t, n) {
     var r = new Date(0);
@@ -118,9 +118,9 @@ function v(e, t) {
 function I(e, t, n) {
     return t >= 1 && t <= 53 && n >= 0 && n <= 6;
 }
-function S(e, t, n) {
+function T(e, t, n) {
     return 24 === e ? 0 === t && 0 === n : n >= 0 && n < 60 && t >= 0 && t < 60 && e >= 0 && e < 25;
 }
-function T(e, t) {
+function S(e, t) {
     return t >= 0 && t <= 59;
 }

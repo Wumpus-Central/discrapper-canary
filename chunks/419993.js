@@ -1,4 +1,4 @@
-n.d(t, { K: () => S }), n(539854);
+n.d(t, { K: () => T }), n(539854);
 var r,
     i = n(255367),
     a = n(73800),
@@ -32,7 +32,7 @@ let b = (0, l.Z)(),
     O = (0, l.Z)(),
     v = 10,
     I = 7.23;
-class S extends (r = a.Component) {
+class T extends (r = a.Component) {
     getPaddingRight() {
         let { maxLength: e, showCharacterCountFullPadding: t } = this.props;
         if (null == e) return v;
@@ -97,16 +97,16 @@ class S extends (r = a.Component) {
     }
     render() {
         var e, t;
-        let { disabled: n, value: r, placeholder: a, autoFocus: o, minLength: l, maxLength: u, allowOverflow: f, spellCheck: E, resizeable: b, className: v, id: I, rows: S, flex: T, autosize: A, required: N, onInvalid: C, inputRef: R } = this.props,
+        let { disabled: n, value: r, placeholder: a, autoFocus: o, minLength: l, maxLength: u, allowOverflow: f, spellCheck: E, resizeable: b, className: v, id: I, rows: T, flex: S, autosize: A, required: N, onInvalid: C, inputRef: R } = this.props,
             P = A ? _.l : 'textarea',
             w = this.hasError(),
             D = null != (t = this.props['aria-labelledby']) ? t : null == (e = this.context) ? void 0 : e.titleId,
             L = this.getAriaDescribedBy();
         return (0, i.jsxs)('div', {
-            className: s()(m.inputWrapper, { [h.flex]: T }),
+            className: s()(m.inputWrapper, { [h.flex]: S }),
             children: [
                 (0, i.jsxs)('div', {
-                    className: s()(h.inputMaxLength, { [h.flex]: T }),
+                    className: s()(h.inputMaxLength, { [h.flex]: S }),
                     children: [
                         (0, i.jsx)(c.t, {
                             children: (0, i.jsx)(P, {
@@ -134,7 +134,7 @@ class S extends (r = a.Component) {
                                 onFocus: this.onFocus,
                                 onKeyDown: this.onKeyDown,
                                 onInvalid: C,
-                                rows: S,
+                                rows: T,
                                 ref: R
                             })
                         }),
@@ -185,8 +185,8 @@ class S extends (r = a.Component) {
             (this.state = { dirty: null != (t = e.defaultDirty) && t });
     }
 }
-E(S, 'contextType', u.q3),
-    E(S, 'defaultProps', {
+E(T, 'contextType', u.q3),
+    E(T, 'defaultProps', {
         name: '',
         disabled: !1,
         placeholder: '',

@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(124072),
     v = n(850568),
     I = n(181918),
-    S = n(670188),
-    T = n(592125),
+    T = n(670188),
+    S = n(592125),
     A = n(271383),
     N = n(430824),
     C = n(594174),
@@ -58,7 +58,7 @@ function x(e) {
     }
     return e;
 }
-function k(e, t) {
+function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -70,12 +70,12 @@ function k(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : M(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -106,11 +106,11 @@ function U(e) {
             [a]
         ),
         _ = (0, l.e7)([C.default], () => C.default.getUser(t.userId), [t.userId]),
-        p = (0, l.e7)([T.Z], () => T.Z.getChannel(o), [o]);
+        p = (0, l.e7)([S.Z], () => S.Z.getChannel(o), [o]);
     return null == _ || null == p
         ? null
         : (0, r.jsx)(
-              S.Z,
+              T.Z,
               {
                   targetElementRef: c,
                   userId: t.userId,
@@ -142,7 +142,7 @@ function U(e) {
                                           return (t) =>
                                               (0, r.jsx)(
                                                   e,
-                                                  M(x({}, t), {
+                                                  k(x({}, t), {
                                                       user: _,
                                                       guildId: a,
                                                       channel: p,
@@ -235,7 +235,7 @@ function G(e) {
         value: void 0,
         children: (0, r.jsx)(
             'div',
-            M(
+            k(
                 x(
                     {
                         className: w.rolePopout,
@@ -277,15 +277,15 @@ function B(e) {
         { analyticsLocations: g } = (0, m.ZP)(h.Z.ROLE_MENTION),
         E = (0, l.e7)([p.Z], () => p.Z.roleStyle),
         b = (0, I.$V)(d, 'RoleMention'),
-        S = ((null != t && 0 !== t) || (null != n && null != n.primaryColor)) && !_,
-        T = S && 'dot' === E,
-        A = S && 'username' === E,
+        T = ((null != t && 0 !== t) || (null != n && null != n.primaryColor)) && !_,
+        S = T && 'dot' === E,
+        A = T && 'username' === E,
         N = b && null != n && null != n.secondaryColor ? (0, v.f)(n) : null,
         C = i.useRef(null),
         R = (e) =>
             (0, r.jsxs)(
                 O.Z,
-                M(
+                k(
                     x(
                         {
                             ref: C,
@@ -297,7 +297,7 @@ function B(e) {
                     ),
                     {
                         children: [
-                            T &&
+                            S &&
                                 null != t &&
                                 (0, r.jsx)(u.FhE, {
                                     color: (0, s.Rf)(t),

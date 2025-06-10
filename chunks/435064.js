@@ -68,8 +68,8 @@ function y(e, t) {
 let O = 'default',
     v = [],
     I = [],
-    S = [],
-    T = 0,
+    T = [],
+    S = 0,
     A = null,
     N = null,
     C = {},
@@ -108,14 +108,14 @@ async function x() {
     let e = await o.Z.remoteApp.getPath('documents');
     (L.clipsSettings.storageLocation = e), ei.emitChange();
 }
-function k(e) {
+function M(e) {
     let { classification: t } = e,
         n = L.hardwareClassification;
     (L.hardwareClassificationVersion = p.WM), (L.hardwareClassification = t), L.hardwareClassification === _.x.MEETS_AUTO_ENABLE && n !== _.x.MEETS_AUTO_ENABLE && (L.clipsSettings.clipsEnabled = !0);
     let r = L.hardwareClassificationForDecoupled;
     (L.hardwareClassificationForDecoupled = t), L.hardwareClassificationForDecoupled === _.x.MEETS_AUTO_ENABLE && r !== _.x.MEETS_AUTO_ENABLE && L.clipsSettings.clipsEnabled && (L.clipsSettings.decoupledClipsEnabled = !0);
 }
-function M(e) {
+function k(e) {
     let { clip: t } = e;
     for (let [e, n] of I.entries())
         if (n.id === t.id) {
@@ -129,7 +129,7 @@ function j(e) {
 }
 function U(e) {
     let { clipType: t, streamKey: n, thumbnail: r } = e;
-    if (((T += 1), (L.hasTakenDecoupledClip = L.hasTakenDecoupledClip || t === p.X9.DECOUPLED), null != n && null != r)) {
+    if (((S += 1), (L.hasTakenDecoupledClip = L.hasTakenDecoupledClip || t === p.X9.DECOUPLED), null != n && null != r)) {
         var i;
         let e = Date.now();
         (P = null != P ? P : e),
@@ -147,12 +147,12 @@ function G(e) {
     P === n && (P = null), null == n ? (w[t] = []) : (w[t] = w[t].filter((e) => e.timestamp !== n));
 }
 function B() {
-    T = Math.max(T - 1, 0);
+    S = Math.max(S - 1, 0);
 }
 function F(e) {
     var t, n;
     let { clip: r } = e;
-    (T = Math.max(T - 1, 0)),
+    (S = Math.max(S - 1, 0)),
         (N = y(
             E(
                 {
@@ -168,7 +168,7 @@ function F(e) {
         (L = y(E({}, L), {
             newClipIds: [...(null != (n = L.newClipIds) ? n : []), r.id]
         })),
-        (S = S.filter((e) => {
+        (T = T.filter((e) => {
             let { id: t } = e;
             return t !== r.id;
         })),
@@ -177,11 +177,11 @@ function F(e) {
 }
 function V(e) {
     let { clip: t } = e;
-    S = [t, ...S];
+    T = [t, ...T];
 }
 function Z(e) {
     let { clipId: t } = e;
-    S = S.filter((e) => {
+    T = T.filter((e) => {
         let { id: n } = e;
         return n !== t;
     });
@@ -275,7 +275,7 @@ class er extends (r = i.ZP.DeviceSettingsStore) {
         return I;
     }
     getPendingClips() {
-        return S;
+        return T;
     }
     getUserAgnosticState() {
         return L;
@@ -309,7 +309,7 @@ class er extends (r = i.ZP.DeviceSettingsStore) {
         return L.hardwareClassificationVersion;
     }
     getIsAtMaxSaveClipOperations() {
-        return T >= p.Kw;
+        return S >= p.Kw;
     }
     getLastClipsError() {
         return R;
@@ -417,11 +417,11 @@ let ei = new er(a.Z, {
         CLIPS_CLEAR_NEW_CLIP_IDS: $,
         CLIPS_LOAD_DIRECTORY_SUCCESS: X,
         CLIPS_DELETE_CLIP: Q,
-        CLIPS_UPDATE_METADATA: M,
+        CLIPS_UPDATE_METADATA: k,
         RTC_CONNECTION_FLAGS: ee,
         CLIPS_SHOW_CALL_WARNING: H,
         VOICE_CHANNEL_SELECT: Y,
-        CLIPS_CLASSIFY_HARDWARE: k,
+        CLIPS_CLASSIFY_HARDWARE: M,
         CLIPS_INIT: W,
         CLIPS_INIT_FAILURE: K,
         CLIPS_DISMISS_EDUCATION: en,

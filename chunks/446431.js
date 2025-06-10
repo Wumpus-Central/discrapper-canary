@@ -86,7 +86,7 @@ var m = {
         }
         return null;
     },
-    S = function (e) {
+    T = function (e) {
         var t = I(e, m.TITLE),
             n = I(e, 'titleTemplate');
         if ((Array.isArray(t) && (t = t.join('')), n && t))
@@ -96,7 +96,7 @@ var m = {
         var r = I(e, 'defaultTitle');
         return t || r || void 0;
     },
-    T = function (e) {
+    S = function (e) {
         return I(e, 'onChangeClientState') || function () {};
     },
     A = function (e, t) {
@@ -202,13 +202,13 @@ var m = {
     x = function (e, t) {
         return void 0 === t && (t = !0), !1 === t ? String(e) : String(e).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#x27;');
     },
-    k = function (e) {
+    M = function (e) {
         return Object.keys(e).reduce(function (t, n) {
             var r = void 0 !== e[n] ? n + '="' + e[n] + '"' : '' + n;
             return t ? t + ' ' + r : r;
         }, '');
     },
-    M = function (e, t) {
+    k = function (e, t) {
         return (
             void 0 === t && (t = {}),
             Object.keys(e).reduce(function (t, n) {
@@ -235,11 +235,11 @@ var m = {
                 return {
                     toComponent: function () {
                         var e, n, i, a;
-                        return (n = t.titleAttributes), ((i = { key: (e = t.title) })['data-rh'] = !0), (a = M(n, i)), [r.createElement(m.TITLE, a, e)];
+                        return (n = t.titleAttributes), ((i = { key: (e = t.title) })['data-rh'] = !0), (a = k(n, i)), [r.createElement(m.TITLE, a, e)];
                     },
                     toString: function () {
                         return (function (e, t, n, r) {
-                            var i = k(n),
+                            var i = M(n),
                                 a = P(t);
                             return i ? '<' + e + ' data-rh="true" ' + i + '>' + x(a, r) + '</' + e + '>' : '<' + e + ' data-rh="true">' + x(a, r) + '</' + e + '>';
                         })(e, t.title, t.titleAttributes, n);
@@ -249,10 +249,10 @@ var m = {
             case 'htmlAttributes':
                 return {
                     toComponent: function () {
-                        return M(t);
+                        return k(t);
                     },
                     toString: function () {
-                        return k(t);
+                        return M(t);
                     }
                 };
             default:
@@ -531,10 +531,10 @@ var W = function (e, t) {
                         linkTags: C(m.LINK, ['rel', 'href'], e),
                         metaTags: C(m.META, ['name', 'charset', 'http-equiv', 'property', 'itemprop'], e),
                         noscriptTags: C(m.NOSCRIPT, ['innerHTML'], e),
-                        onChangeClientState: T(e),
+                        onChangeClientState: S(e),
                         scriptTags: C(m.SCRIPT, ['src', 'innerHTML'], e),
                         styleTags: C(m.STYLE, ['cssText'], e),
-                        title: S(e),
+                        title: T(e),
                         titleAttributes: A('titleAttributes', e),
                         prioritizeSeoTags: R(e, 'prioritizeSeoTags')
                     };

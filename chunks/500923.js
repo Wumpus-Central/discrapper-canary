@@ -1329,7 +1329,7 @@
                     var n;
                     for (n = r - 1; n >= 0; n -= 1) t[n].animation.destroy(e);
                 }
-                function S(e, t, n) {
+                function T(e, t, n) {
                     var r,
                         i = [].concat([].slice.call(document.getElementsByClassName('lottie')), [].slice.call(document.getElementsByClassName('bodymovin'))),
                         a = i.length;
@@ -1342,7 +1342,7 @@
                         (s.style.width = '100%'), (s.style.height = '100%'), s.setAttribute('data-bm-type', n), o.appendChild(s), l(s, e);
                     }
                 }
-                function T() {
+                function S() {
                     var e;
                     for (e = 0; e < r; e += 1) t[e].animation.resize();
                 }
@@ -1367,7 +1367,7 @@
                     var n;
                     for (n = 0; n < r; n += 1) t[n].animation.unmute(e);
                 }
-                return (e.registerAnimation = l), (e.loadAnimation = _), (e.setSpeed = p), (e.setDirection = h), (e.play = m), (e.pause = b), (e.stop = O), (e.togglePause = v), (e.searchAnimations = S), (e.resize = T), (e.goToAndStop = y), (e.destroy = I), (e.freeze = N), (e.unfreeze = C), (e.setVolume = R), (e.mute = P), (e.unmute = w), (e.getRegisteredAnimations = c), e;
+                return (e.registerAnimation = l), (e.loadAnimation = _), (e.setSpeed = p), (e.setDirection = h), (e.play = m), (e.pause = b), (e.stop = O), (e.togglePause = v), (e.searchAnimations = T), (e.resize = S), (e.goToAndStop = y), (e.destroy = I), (e.freeze = N), (e.unfreeze = C), (e.setVolume = R), (e.mute = P), (e.unmute = w), (e.getRegisteredAnimations = c), e;
             })(),
             BezierFactory = (function () {
                 var e = {};
@@ -1617,15 +1617,15 @@
                         O = d * p * h + p * d * h + p * p * f,
                         v = d * d * h + p * d * f + d * p * f,
                         I = d * d * f,
-                        S = p * h * h,
-                        T = d * h * h + p * f * h + p * h * f,
+                        T = p * h * h,
+                        S = d * h * h + p * f * h + p * h * f,
                         A = d * f * h + p * f * f + d * h * f,
                         N = d * f * f,
                         C = h * h * h,
                         R = f * h * h + h * f * h + h * h * f,
                         P = f * f * h + h * f * f + f * h * f,
                         w = f * f * f;
-                    for (c = 0; c < _; c += 1) (u[4 * c] = e.round((m * t[c] + g * r[c] + E * i[c] + b * n[c]) * 1000) / 1000), (u[4 * c + 1] = e.round((y * t[c] + O * r[c] + v * i[c] + I * n[c]) * 1000) / 1000), (u[4 * c + 2] = e.round((S * t[c] + T * r[c] + A * i[c] + N * n[c]) * 1000) / 1000), (u[4 * c + 3] = e.round((C * t[c] + R * r[c] + P * i[c] + w * n[c]) * 1000) / 1000);
+                    for (c = 0; c < _; c += 1) (u[4 * c] = e.round((m * t[c] + g * r[c] + E * i[c] + b * n[c]) * 1000) / 1000), (u[4 * c + 1] = e.round((y * t[c] + O * r[c] + v * i[c] + I * n[c]) * 1000) / 1000), (u[4 * c + 2] = e.round((T * t[c] + S * r[c] + A * i[c] + N * n[c]) * 1000) / 1000), (u[4 * c + 3] = e.round((C * t[c] + R * r[c] + P * i[c] + w * n[c]) * 1000) / 1000);
                     return u;
                 },
                 getPointInSegment: c,
@@ -1666,7 +1666,7 @@
                     var h = e >= f ? p.points.length - 1 : 0;
                     for (y = 0, O = p.points[h].point.length; y < O; y += 1) m[y] = p.points[h].point[y];
                 } else {
-                    b.__fnct ? (S = b.__fnct) : (b.__fnct = S = BezierFactory.getBezierEasing(g.o.x, g.o.y, g.i.x, g.i.y, g.n).get);
+                    b.__fnct ? (T = b.__fnct) : (b.__fnct = T = BezierFactory.getBezierEasing(g.o.x, g.o.y, g.i.x, g.i.y, g.n).get);
                     var m,
                         g,
                         E,
@@ -1675,10 +1675,10 @@
                         O,
                         v,
                         I,
-                        S,
                         T,
+                        S,
                         A,
-                        N = S((e - _) / (f - _)),
+                        N = T((e - _) / (f - _)),
                         C = p.segmentLength * N,
                         R = t.lastFrame < e && t._lastKeyframeIndex === c ? t._lastAddedLength : 0;
                     for (I = t.lastFrame < e && t._lastKeyframeIndex === c ? t._lastPoint : 0, d = !0, v = p.points.length; d; ) {
@@ -1694,8 +1694,8 @@
                     }
                     (t._lastPoint = I), (t._lastAddedLength = R - p.points[I].partialLength), (t._lastKeyframeIndex = c);
                 }
-            } else if (((u = g.s.length), (T = E.s || g.e), this.sh && 1 !== g.h)) e >= f ? ((m[0] = T[0]), (m[1] = T[1]), (m[2] = T[2])) : e <= _ ? ((m[0] = g.s[0]), (m[1] = g.s[1]), (m[2] = g.s[2])) : quaternionToEuler(m, slerp(createQuaternion(g.s), createQuaternion(T), (e - _) / (f - _)));
-            else for (c = 0; c < u; c += 1) 1 !== g.h && (e >= f ? (N = 1) : e < _ ? (N = 0) : (g.o.x.constructor === Array ? (b.__fnct || (b.__fnct = []), b.__fnct[c] ? (S = b.__fnct[c]) : ((n = void 0 === g.o.x[c] ? g.o.x[0] : g.o.x[c]), (r = void 0 === g.o.y[c] ? g.o.y[0] : g.o.y[c]), (i = void 0 === g.i.x[c] ? g.i.x[0] : g.i.x[c]), (a = void 0 === g.i.y[c] ? g.i.y[0] : g.i.y[c]), (S = BezierFactory.getBezierEasing(n, r, i, a).get), (b.__fnct[c] = S))) : b.__fnct ? (S = b.__fnct) : ((n = g.o.x), (r = g.o.y), (i = g.i.x), (a = g.i.y), (S = BezierFactory.getBezierEasing(n, r, i, a).get), (g.keyframeMetadata = S)), (N = S((e - _) / (f - _))))), (T = E.s || g.e), (o = 1 === g.h ? g.s[c] : g.s[c] + (T[c] - g.s[c]) * N), 'multidimensional' === this.propType ? (m[c] = o) : (m = o);
+            } else if (((u = g.s.length), (S = E.s || g.e), this.sh && 1 !== g.h)) e >= f ? ((m[0] = S[0]), (m[1] = S[1]), (m[2] = S[2])) : e <= _ ? ((m[0] = g.s[0]), (m[1] = g.s[1]), (m[2] = g.s[2])) : quaternionToEuler(m, slerp(createQuaternion(g.s), createQuaternion(S), (e - _) / (f - _)));
+            else for (c = 0; c < u; c += 1) 1 !== g.h && (e >= f ? (N = 1) : e < _ ? (N = 0) : (g.o.x.constructor === Array ? (b.__fnct || (b.__fnct = []), b.__fnct[c] ? (T = b.__fnct[c]) : ((n = void 0 === g.o.x[c] ? g.o.x[0] : g.o.x[c]), (r = void 0 === g.o.y[c] ? g.o.y[0] : g.o.y[c]), (i = void 0 === g.i.x[c] ? g.i.x[0] : g.i.x[c]), (a = void 0 === g.i.y[c] ? g.i.y[0] : g.i.y[c]), (T = BezierFactory.getBezierEasing(n, r, i, a).get), (b.__fnct[c] = T))) : b.__fnct ? (T = b.__fnct) : ((n = g.o.x), (r = g.o.y), (i = g.i.x), (a = g.i.y), (T = BezierFactory.getBezierEasing(n, r, i, a).get), (g.keyframeMetadata = T)), (N = T((e - _) / (f - _))))), (S = E.s || g.e), (o = 1 === g.h ? g.s[c] : g.s[c] + (S[c] - g.s[c]) * N), 'multidimensional' === this.propType ? (m[c] = o) : (m = o);
             return (t.lastIndex = l), m;
         }
         function slerp(e, t, n) {
@@ -2229,8 +2229,8 @@
                         O = m[4],
                         v = m[5],
                         I = m[6],
-                        S = m[7],
-                        T = m[8],
+                        T = m[7],
+                        S = m[8],
                         A = m[9],
                         N = m[10],
                         C = m[11],
@@ -2238,7 +2238,7 @@
                         P = m[13],
                         w = m[14],
                         D = m[15];
-                    return (m[0] = g * e + E * i + b * l + y * f), (m[1] = g * t + E * a + b * c + y * _), (m[2] = g * n + E * o + b * u + y * p), (m[3] = g * r + E * s + b * d + y * h), (m[4] = O * e + v * i + I * l + S * f), (m[5] = O * t + v * a + I * c + S * _), (m[6] = O * n + v * o + I * u + S * p), (m[7] = O * r + v * s + I * d + S * h), (m[8] = T * e + A * i + N * l + C * f), (m[9] = T * t + A * a + N * c + C * _), (m[10] = T * n + A * o + N * u + C * p), (m[11] = T * r + A * s + N * d + C * h), (m[12] = R * e + P * i + w * l + D * f), (m[13] = R * t + P * a + w * c + D * _), (m[14] = R * n + P * o + w * u + D * p), (m[15] = R * r + P * s + w * d + D * h), (this._identityCalculated = !1), this;
+                    return (m[0] = g * e + E * i + b * l + y * f), (m[1] = g * t + E * a + b * c + y * _), (m[2] = g * n + E * o + b * u + y * p), (m[3] = g * r + E * s + b * d + y * h), (m[4] = O * e + v * i + I * l + T * f), (m[5] = O * t + v * a + I * c + T * _), (m[6] = O * n + v * o + I * u + T * p), (m[7] = O * r + v * s + I * d + T * h), (m[8] = S * e + A * i + N * l + C * f), (m[9] = S * t + A * a + N * c + C * _), (m[10] = S * n + A * o + N * u + C * p), (m[11] = S * r + A * s + N * d + C * h), (m[12] = R * e + P * i + w * l + D * f), (m[13] = R * t + P * a + w * c + D * _), (m[14] = R * n + P * o + w * u + D * p), (m[15] = R * r + P * s + w * d + D * h), (this._identityCalculated = !1), this;
                 }
                 function m(e) {
                     var t = e.props;
@@ -2276,10 +2276,10 @@
                 function I(e, t, n) {
                     return e * this.props[1] + t * this.props[5] + n * this.props[9] + this.props[13];
                 }
-                function S(e, t, n) {
+                function T(e, t, n) {
                     return e * this.props[2] + t * this.props[6] + n * this.props[10] + this.props[14];
                 }
-                function T() {
+                function S() {
                     var e = this.props[0] * this.props[5] - this.props[1] * this.props[4],
                         t = this.props[5] / e,
                         n = -this.props[1] / e,
@@ -2336,7 +2336,7 @@
                     return 'matrix(' + D(e[0]) + ',' + D(e[1]) + ',' + D(e[4]) + ',' + D(e[5]) + ',' + D(e[12]) + ',' + D(e[13]) + ')';
                 }
                 return function () {
-                    (this.reset = i), (this.rotate = a), (this.rotateX = o), (this.rotateY = s), (this.rotateZ = l), (this.skew = u), (this.skewFromAxis = d), (this.shear = c), (this.scale = f), (this.setTransform = _), (this.translate = p), (this.transform = h), (this.multiply = m), (this.applyToPoint = O), (this.applyToX = v), (this.applyToY = I), (this.applyToZ = S), (this.applyToPointArray = R), (this.applyToTriplePoints = C), (this.applyToPointStringified = P), (this.toCSS = w), (this.to2dCSS = L), (this.clone = b), (this.cloneFromProps = y), (this.equals = E), (this.inversePoints = N), (this.inversePoint = A), (this.getInverseMatrix = T), (this._t = this.transform), (this.isIdentity = g), (this._identity = !0), (this._identityCalculated = !1), (this.props = createTypedArray('float32', 16)), this.reset();
+                    (this.reset = i), (this.rotate = a), (this.rotateX = o), (this.rotateY = s), (this.rotateZ = l), (this.skew = u), (this.skewFromAxis = d), (this.shear = c), (this.scale = f), (this.setTransform = _), (this.translate = p), (this.transform = h), (this.multiply = m), (this.applyToPoint = O), (this.applyToX = v), (this.applyToY = I), (this.applyToZ = T), (this.applyToPointArray = R), (this.applyToTriplePoints = C), (this.applyToPointStringified = P), (this.toCSS = w), (this.to2dCSS = L), (this.clone = b), (this.cloneFromProps = y), (this.equals = E), (this.inversePoints = N), (this.inversePoint = A), (this.getInverseMatrix = S), (this._t = this.transform), (this.isIdentity = g), (this._identity = !0), (this._identityCalculated = !1), (this.props = createTypedArray('float32', 16)), this.reset();
                 };
             })();
         function _typeof$3(e) {
@@ -3495,12 +3495,12 @@
             function I(e) {
                 return e === s;
             }
-            function S(e) {
+            function T(e) {
                 var t = O(e);
                 return !!(t >= c) && !!(t <= u);
             }
-            function T(e) {
-                return S(e.substr(0, 2)) && S(e.substr(2, 2));
+            function S(e) {
+                return T(e.substr(0, 2)) && T(e.substr(2, 2));
             }
             function A(e) {
                 return -1 !== n.indexOf(e);
@@ -3527,8 +3527,8 @@
                     return -1 !== d.indexOf(n);
                 }),
                 (R.isZeroWidthJoiner = v),
-                (R.isFlagEmoji = T),
-                (R.isRegionalCode = S),
+                (R.isFlagEmoji = S),
+                (R.isRegionalCode = T),
                 (R.isCombinedCharacter = A),
                 (R.isRegionalFlag = N),
                 (R.isVariationSelector = I),
@@ -4843,11 +4843,11 @@
                 (e.fWeight = p.weight), (e.fStyle = p.style), (e.finalSize = e.s), (e.finalText = this.buildFinalText(e.t)), (g = e.finalText.length), (e.finalLineHeight = e.lh);
                 var h = (e.tr / 1000) * e.finalSize;
                 if (e.sz)
-                    for (var m, g, E, b, y, O, v, I, S, T, A = !0, N = e.sz[0], C = e.sz[1]; A; ) {
-                        (T = this.buildFinalText(e.t)), (S = 0), (u = 0), (g = T.length), (h = (e.tr / 1000) * e.finalSize);
+                    for (var m, g, E, b, y, O, v, I, T, S, A = !0, N = e.sz[0], C = e.sz[1]; A; ) {
+                        (S = this.buildFinalText(e.t)), (T = 0), (u = 0), (g = S.length), (h = (e.tr / 1000) * e.finalSize);
                         var R = -1;
-                        for (m = 0; m < g; m += 1) (I = T[m].charCodeAt(0)), (E = !1), ' ' === T[m] ? (R = m) : (13 === I || 3 === I) && ((u = 0), (E = !0), (S += e.finalLineHeight || 1.2 * e.finalSize)), t.chars ? ((v = t.getCharData(T[m], f.fStyle, f.fFamily)), (_ = E ? 0 : (v.w * e.finalSize) / 100)) : (_ = t.measureText(T[m], e.f, e.finalSize)), u + _ > N && ' ' !== T[m] ? (-1 === R ? (g += 1) : (m = R), (S += e.finalLineHeight || 1.2 * e.finalSize), T.splice(m, +(R === m), '\r'), (R = -1), (u = 0)) : ((u += _), (u += h));
-                        (S += (f.ascent * e.finalSize) / 100), this.canResize && e.finalSize > this.minimumFontSize && C < S ? ((e.finalSize -= 1), (e.finalLineHeight = (e.finalSize * e.lh) / e.s)) : ((e.finalText = T), (g = e.finalText.length), (A = !1));
+                        for (m = 0; m < g; m += 1) (I = S[m].charCodeAt(0)), (E = !1), ' ' === S[m] ? (R = m) : (13 === I || 3 === I) && ((u = 0), (E = !0), (T += e.finalLineHeight || 1.2 * e.finalSize)), t.chars ? ((v = t.getCharData(S[m], f.fStyle, f.fFamily)), (_ = E ? 0 : (v.w * e.finalSize) / 100)) : (_ = t.measureText(S[m], e.f, e.finalSize)), u + _ > N && ' ' !== S[m] ? (-1 === R ? (g += 1) : (m = R), (T += e.finalLineHeight || 1.2 * e.finalSize), S.splice(m, +(R === m), '\r'), (R = -1), (u = 0)) : ((u += _), (u += h));
+                        (T += (f.ascent * e.finalSize) / 100), this.canResize && e.finalSize > this.minimumFontSize && C < T ? ((e.finalSize -= 1), (e.finalLineHeight = (e.finalSize * e.lh) / e.s)) : ((e.finalText = S), (g = e.finalText.length), (A = !1));
                     }
                 (u = -h), (_ = 0);
                 var P = 0;
@@ -4896,16 +4896,16 @@
                 O = w.length;
                 var D = [];
                 for (y = 0; y < O; y += 1) {
-                    for ((x = w[y]).a.sc && (e.strokeColorAnim = !0), x.a.sw && (e.strokeWidthAnim = !0), (x.a.fc || x.a.fh || x.a.fs || x.a.fb) && (e.fillColorAnim = !0), j = 0, M = x.s.b, m = 0; m < g; m += 1) ((k = r[m]).anIndexes[y] = j), ((1 == M && '' !== k.val) || (2 == M && '' !== k.val && ' ' !== k.val) || (3 == M && (k.n || ' ' == k.val || m == g - 1)) || (4 == M && (k.n || m == g - 1))) && (1 === x.s.rn && D.push(j), (j += 1));
+                    for ((x = w[y]).a.sc && (e.strokeColorAnim = !0), x.a.sw && (e.strokeWidthAnim = !0), (x.a.fc || x.a.fh || x.a.fs || x.a.fb) && (e.fillColorAnim = !0), j = 0, k = x.s.b, m = 0; m < g; m += 1) ((M = r[m]).anIndexes[y] = j), ((1 == k && '' !== M.val) || (2 == k && '' !== M.val && ' ' !== M.val) || (3 == k && (M.n || ' ' == M.val || m == g - 1)) || (4 == k && (M.n || m == g - 1))) && (1 === x.s.rn && D.push(j), (j += 1));
                     n.a[y].s.totalChars = j;
                     var L,
                         x,
-                        k,
                         M,
+                        k,
                         j,
                         U,
                         G = -1;
-                    if (1 === x.s.rn) for (m = 0; m < g; m += 1) G != (k = r[m]).anIndexes[y] && ((G = k.anIndexes[y]), (U = D.splice(Math.floor(Math.random() * D.length), 1)[0])), (k.anIndexes[y] = U);
+                    if (1 === x.s.rn) for (m = 0; m < g; m += 1) G != (M = r[m]).anIndexes[y] && ((G = M.anIndexes[y]), (U = D.splice(Math.floor(Math.random() * D.length), 1)[0])), (M.anIndexes[y] = U);
                 }
                 (e.yOffset = e.finalLineHeight || 1.2 * e.finalSize), (e.ls = e.ls || 0), (e.ascent = (f.ascent * e.finalSize) / 100);
             }),
@@ -5060,8 +5060,8 @@
                         O = this._animatorsData,
                         v = this._textData,
                         I = this.mHelper,
-                        S = this._renderType,
-                        T = this.renderedLetters.length,
+                        T = this._renderType,
+                        S = this.renderedLetters.length,
                         A = e.l;
                     if (this._hasMaskedPath) {
                         if (((Y = this._pathData.m), !this._pathData.n || this._pathData._mdf)) {
@@ -5073,8 +5073,8 @@
                                 D,
                                 L,
                                 x,
-                                k,
                                 M,
+                                k,
                                 j,
                                 U,
                                 G,
@@ -5101,8 +5101,8 @@
                                 (W = bez.buildBezierData(K.v[R], K.v[R + 1], [K.o[R][0] - K.v[R][0], K.o[R][1] - K.v[R][1]], [K.i[R + 1][0] - K.v[R + 1][0], K.i[R + 1][1] - K.v[R + 1][1]])), (w.tLength += W.segmentLength), w.segments.push(W), (V += W.segmentLength);
                             (R = P), Y.v.c && ((W = bez.buildBezierData(K.v[R], K.v[0], [K.o[R][0] - K.v[R][0], K.o[R][1] - K.v[R][1]], [K.i[0][0] - K.v[0][0], K.i[0][1] - K.v[0][1]])), (w.tLength += W.segmentLength), w.segments.push(W), (V += W.segmentLength)), (this._pathData.pi = w);
                         }
-                        if (((w = this._pathData.pi), (D = this._pathData.f.v), (j = 0), (M = 1), (x = 0), (k = !0), (B = w.segments), D < 0 && Y.v.c)) for (w.tLength < Math.abs(D) && (D = -Math.abs(D) % w.tLength), j = B.length - 1, M = (G = B[j].points).length - 1; D < 0; ) (D += G[M].partialLength), (M -= 1) < 0 && ((j -= 1), (M = (G = B[j].points).length - 1));
-                        (U = (G = B[j].points)[M - 1]), (F = (L = G[M]).partialLength);
+                        if (((w = this._pathData.pi), (D = this._pathData.f.v), (j = 0), (k = 1), (x = 0), (M = !0), (B = w.segments), D < 0 && Y.v.c)) for (w.tLength < Math.abs(D) && (D = -Math.abs(D) % w.tLength), j = B.length - 1, k = (G = B[j].points).length - 1; D < 0; ) (D += G[k].partialLength), (k -= 1) < 0 && ((j -= 1), (k = (G = B[j].points).length - 1));
+                        (U = (G = B[j].points)[k - 1]), (F = (L = G[k]).partialLength);
                     }
                     (P = A.length), (N = 0), (C = 0);
                     var z = 1.2 * e.finalSize * 0.714,
@@ -5111,7 +5111,7 @@
                     var X = -1,
                         Q = D,
                         J = j,
-                        $ = M,
+                        $ = k,
                         ee = -1,
                         et = '',
                         en = this.defaultPropsArray;
@@ -5132,7 +5132,7 @@
                         for (er && (er += ei); eo < R; ) (A[eo].animatorJustifyOffset = er), (eo += 1);
                     }
                     for (R = 0; R < P; R += 1) {
-                        if ((I.reset(), (d = 1), A[R].n)) (N = 0), (C += e.yOffset), (C += +!!q), (D = Q), (q = !1), this._hasMaskedPath && ((j = J), (M = $), (U = (G = B[j].points)[M - 1]), (F = (L = G[M]).partialLength), (x = 0)), (et = ''), (E = ''), (m = ''), (b = ''), (en = this.defaultPropsArray);
+                        if ((I.reset(), (d = 1), A[R].n)) (N = 0), (C += e.yOffset), (C += +!!q), (D = Q), (q = !1), this._hasMaskedPath && ((j = J), (k = $), (U = (G = B[j].points)[k - 1]), (F = (L = G[k]).partialLength), (x = 0)), (et = ''), (E = ''), (m = ''), (b = ''), (en = this.defaultPropsArray);
                         else {
                             if (this._hasMaskedPath) {
                                 if (ee !== A[R].line) {
@@ -5148,7 +5148,7 @@
                                 X !== A[R].ind && (A[X] && (D += A[X].extra), (D += A[R].an / 2), (X = A[R].ind)), (D += y[0] * A[R].an * 0.005);
                                 var el = 0;
                                 for (i = 0; i < a; i += 1) (n = O[i].a).p.propType && ((s = (r = O[i].s).getMult(A[R].anIndexes[i], v.a[i].s.totalChars)).length ? (el += n.p.v[0] * s[0]) : (el += n.p.v[0] * s)), n.a.propType && ((s = (r = O[i].s).getMult(A[R].anIndexes[i], v.a[i].s.totalChars)).length ? (el += n.a.v[0] * s[0]) : (el += n.a.v[0] * s));
-                                for (k = !0, this._pathData.a.v && (D = 0.5 * A[0].an + ((V - this._pathData.f.v - 0.5 * A[0].an - 0.5 * A[A.length - 1].an) * X) / (P - 1) + this._pathData.f.v); k; ) x + F >= D + el || !G ? ((Z = (D + el - x) / L.partialLength), (c = U.point[0] + (L.point[0] - U.point[0]) * Z), (u = U.point[1] + (L.point[1] - U.point[1]) * Z), I.translate(-y[0] * A[R].an * 0.005, -(0.01 * (y[1] * z))), (k = !1)) : G && ((x += L.partialLength), (M += 1) >= G.length && ((M = 0), B[(j += 1)] ? (G = B[j].points) : Y.v.c ? ((M = 0), (G = B[(j = 0)].points)) : ((x -= L.partialLength), (G = null))), G && ((U = L), (F = (L = G[M]).partialLength)));
+                                for (M = !0, this._pathData.a.v && (D = 0.5 * A[0].an + ((V - this._pathData.f.v - 0.5 * A[0].an - 0.5 * A[A.length - 1].an) * X) / (P - 1) + this._pathData.f.v); M; ) x + F >= D + el || !G ? ((Z = (D + el - x) / L.partialLength), (c = U.point[0] + (L.point[0] - U.point[0]) * Z), (u = U.point[1] + (L.point[1] - U.point[1]) * Z), I.translate(-y[0] * A[R].an * 0.005, -(0.01 * (y[1] * z))), (M = !1)) : G && ((x += L.partialLength), (k += 1) >= G.length && ((k = 0), B[(j += 1)] ? (G = B[j].points) : Y.v.c ? ((k = 0), (G = B[(j = 0)].points)) : ((x -= L.partialLength), (G = null))), G && ((U = L), (F = (L = G[k]).partialLength)));
                                 (l = A[R].an / 2 - A[R].add), I.translate(-l, 0, 0);
                             } else (l = A[R].an / 2 - A[R].add), I.translate(-l, 0, 0), I.translate(-y[0] * A[R].an * 0.005, -y[1] * z * 0.01, 0);
                             for (i = 0; i < a; i += 1) (n = O[i].a).t.propType && ((s = (r = O[i].s).getMult(A[R].anIndexes[i], v.a[i].s.totalChars)), (0 !== N || 0 !== e.j) && (this._hasMaskedPath ? (s.length ? (D += n.t.v * s[0]) : (D += n.t.v * s)) : s.length ? (N += n.t.v * s[0]) : (N += n.t.v * s)));
@@ -5178,9 +5178,9 @@
                                 }
                                 I.translate(0, -e.ls), I.translate(l, 0, 0), I.translate(y[0] * A[R].an * 0.005, y[1] * z * 0.01, 0), (N += A[R].l + 0.001 * e.tr * e.finalSize);
                             }
-                            'html' === S ? (et = I.toCSS()) : 'svg' === S ? (et = I.to2dCSS()) : (en = [I.props[0], I.props[1], I.props[2], I.props[3], I.props[4], I.props[5], I.props[6], I.props[7], I.props[8], I.props[9], I.props[10], I.props[11], I.props[12], I.props[13], I.props[14], I.props[15]]), (b = d);
+                            'html' === T ? (et = I.toCSS()) : 'svg' === T ? (et = I.to2dCSS()) : (en = [I.props[0], I.props[1], I.props[2], I.props[3], I.props[4], I.props[5], I.props[6], I.props[7], I.props[8], I.props[9], I.props[10], I.props[11], I.props[12], I.props[13], I.props[14], I.props[15]]), (b = d);
                         }
-                        T <= R ? ((o = new LetterProps(b, m, g, E, et, en)), this.renderedLetters.push(o), (T += 1), (this.lettersChangedFlag = !0)) : ((o = this.renderedLetters[R]), (this.lettersChangedFlag = o.update(b, m, g, E, et, en) || this.lettersChangedFlag));
+                        S <= R ? ((o = new LetterProps(b, m, g, E, et, en)), this.renderedLetters.push(o), (S += 1), (this.lettersChangedFlag = !0)) : ((o = this.renderedLetters[R]), (this.lettersChangedFlag = o.update(b, m, g, E, et, en) || this.lettersChangedFlag));
                     }
                 }
             }),
@@ -5395,9 +5395,9 @@
                             I = 'start';
                     }
                     v.setAttribute('text-anchor', I), v.setAttribute('letter-spacing', f);
-                    var S = this.buildTextContents(e.finalText);
-                    for (h = 0, m = S.length, u = e.ps ? e.ps[1] + e.ascent : 0; h < m; h += 1)
-                        ((g = this.textSpans[h].span || createNS('tspan')).textContent = S[h]),
+                    var T = this.buildTextContents(e.finalText);
+                    for (h = 0, m = T.length, u = e.ps ? e.ps[1] + e.ascent : 0; h < m; h += 1)
+                        ((g = this.textSpans[h].span || createNS('tspan')).textContent = T[h]),
                             g.setAttribute('x', 0),
                             g.setAttribute('y', u),
                             (g.style.display = 'inherit'),
@@ -6245,11 +6245,11 @@
                     I = 0;
                 for (e = 0; e < t; e += 1) {
                     (r = ((n = this.globalData.fontManager.getCharData(f.finalText[e], h.fStyle, this.globalData.fontManager.getFontByName(f.f).fFamily)) && n.data) || {}), g.reset(), E && m[e].n && ((y = -b), (O += f.yOffset), (O += +!!v), (v = !1)), (l = (o = r.shapes ? r.shapes[0].it : []).length), g.scale(f.finalSize / 100, f.finalSize / 100), E && this.applyTextPropertiesToMatrix(f, g, m[e].line, y, O), (u = createSizedArray(l - 1));
-                    var S = 0;
+                    var T = 0;
                     for (s = 0; s < l; s += 1)
                         if ('sh' === o[s].ty) {
                             for (i = 1, a = o[s].ks.k.i.length, c = o[s].ks.k, d = []; i < a; i += 1) 1 === i && d.push(g.applyToX(c.v[0][0], c.v[0][1], 0), g.applyToY(c.v[0][0], c.v[0][1], 0)), d.push(g.applyToX(c.o[i - 1][0], c.o[i - 1][1], 0), g.applyToY(c.o[i - 1][0], c.o[i - 1][1], 0), g.applyToX(c.i[i][0], c.i[i][1], 0), g.applyToY(c.i[i][0], c.i[i][1], 0), g.applyToX(c.v[i][0], c.v[i][1], 0), g.applyToY(c.v[i][0], c.v[i][1], 0));
-                            d.push(g.applyToX(c.o[i - 1][0], c.o[i - 1][1], 0), g.applyToY(c.o[i - 1][0], c.o[i - 1][1], 0), g.applyToX(c.i[0][0], c.i[0][1], 0), g.applyToY(c.i[0][0], c.i[0][1], 0), g.applyToX(c.v[0][0], c.v[0][1], 0), g.applyToY(c.v[0][0], c.v[0][1], 0)), (u[S] = d), (S += 1);
+                            d.push(g.applyToX(c.o[i - 1][0], c.o[i - 1][1], 0), g.applyToY(c.o[i - 1][0], c.o[i - 1][1], 0), g.applyToX(c.i[0][0], c.i[0][1], 0), g.applyToY(c.i[0][0], c.i[0][1], 0), g.applyToX(c.v[0][0], c.v[0][1], 0), g.applyToY(c.v[0][0], c.v[0][1], 0)), (u[T] = d), (T += 1);
                         }
                     E && ((y += m[e].l), (y += b)), this.textSpans[I] ? (this.textSpans[I].elem = u) : (this.textSpans[I] = { elem: u }), (I += 1);
                 }

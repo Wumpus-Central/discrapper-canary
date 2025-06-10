@@ -57,7 +57,7 @@ function I(e) {
         t
     );
 }
-function S(e, t) {
+function T(e, t) {
     let n = [];
     return (
         e.forEach((e) => {
@@ -67,7 +67,7 @@ function S(e, t) {
         n
     );
 }
-class T {
+class S {
     setLimit(e) {
         (this._limit = e), null != this._nextQuery && (this._nextQuery.limit = e);
     }
@@ -179,7 +179,7 @@ class A extends o.Z {
         this.initialize();
         let { _worker: n } = this;
         if (null == n) throw Error('SearchContextManager: No webworker initialized');
-        return new T(n, e, t);
+        return new S(n, e, t);
     }
     constructor(...e) {
         super(...e),
@@ -228,7 +228,7 @@ class A extends o.Z {
             b(this, '_handleConnectionOpenSupplemental', (e) => {
                 let { guilds: t } = e;
                 setTimeout(() => {
-                    let e = i().flatMap(t, (e) => S(e.members, e.id)),
+                    let e = i().flatMap(t, (e) => T(e.members, e.id)),
                         n = i().flatMap(t, (e) => {
                             var t;
                             let n = [];
@@ -272,12 +272,12 @@ class A extends o.Z {
             b(this, '_handleGuildCreate', (e) => {
                 let { guild: t } = e,
                     { members: n } = t;
-                this.updateUsers(S(n, t.id), 'guild_create');
+                this.updateUsers(T(n, t.id), 'guild_create');
             }),
             b(this, '_handleGuildMembersChunkBatch', (e) => {
                 let { chunks: t } = e,
                     n = [];
-                for (let e of t) n.push(...S(e.members, e.guildId));
+                for (let e of t) n.push(...T(e.members, e.guildId));
                 this.updateUsers(n, 'guild_members_chunk_batch');
             }),
             b(this, '_handleGuildMemberUpdate', (e) => {
@@ -286,7 +286,7 @@ class A extends o.Z {
                 null != i && (v(i, t, r), this.updateUsers([i], 'guild_member_update'));
             }),
             b(this, '_handlePassiveUpdateV2', (e) => {
-                this.updateUsers(S(e.members, e.guildId), 'passive_update_v2');
+                this.updateUsers(T(e.members, e.guildId), 'passive_update_v2');
             }),
             b(this, '_handleRelationshipAdd', (e) => {
                 let t = O(e.relationship.user);

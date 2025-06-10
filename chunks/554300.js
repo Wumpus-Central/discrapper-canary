@@ -82,13 +82,13 @@ function g(e, t) {
 }
 let E = function (e) {
     var t,
-        { ref: n, avatar: a, name: f, nameplate: p, children: g, subText: E, decorators: b, onClick: y, hovered: O, selected: v, muted: I, to: S, avatarClassName: T, selectedClassName: A, innerClassName: N, wrapContent: C, highlighted: R, focusProps: P } = e,
+        { ref: n, avatar: a, name: f, nameplate: p, children: g, subText: E, decorators: b, onClick: y, hovered: O, selected: v, muted: I, to: T, avatarClassName: S, selectedClassName: A, innerClassName: N, wrapContent: C, highlighted: R, focusProps: P } = e,
         w = m(e, ['ref', 'avatar', 'name', 'nameplate', 'children', 'subText', 'decorators', 'onClick', 'hovered', 'selected', 'muted', 'to', 'avatarClassName', 'selectedClassName', 'innerClassName', 'wrapContent', 'highlighted', 'focusProps']);
     (w.className = o()(w.className, d.container, {
         [d.selected]: v,
         [d.highlighted]: R,
         [null != A ? A : '']: v,
-        [d.clickable]: !v && (null != S || null != y)
+        [d.clickable]: !v && (null != T || null != y)
     })),
         (w['aria-selected'] = null != (t = w['aria-selected']) ? t : v);
     let D = i.useRef(null),
@@ -110,7 +110,7 @@ let E = function (e) {
                     }),
                     children: [
                         (0, r.jsx)('div', {
-                            className: o()(d.avatar, T),
+                            className: o()(d.avatar, S),
                             children: a
                         }),
                         (0, r.jsxs)('div', {
@@ -144,7 +144,7 @@ let E = function (e) {
                 })
             ]
         });
-    return null != S
+    return null != T
         ? (0, r.jsx)(
               l.tEY,
               h(_({}, P), {
@@ -153,7 +153,7 @@ let E = function (e) {
                       h(
                           _(
                               {
-                                  to: S,
+                                  to: T,
                                   onClick: y
                               },
                               w

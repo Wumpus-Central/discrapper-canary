@@ -32,7 +32,7 @@ function I(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function S(e) {
     }
     return e;
 }
-function T(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,7 +65,7 @@ function A(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -163,7 +163,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
                 (e) =>
                     i.tn.post({
                         url: O.ANM.GUILD_MFA(t),
-                        body: S({ level: n }, e),
+                        body: T({ level: n }, e),
                         oldFormErrors: !0,
                         rejectWithError: !1
                     }),
@@ -213,12 +213,12 @@ let R = new s.Z('GuildSettingsActionCreators'),
         updateGuild(e) {
             var t,
                 { safetyAlertsChannelId: n, profile: r } = e;
-            let i = S({}, N(e, ['safetyAlertsChannelId', 'profile']));
-            null != r && (i.profile = S({}, null != (t = i.profile) ? t : {}, r)), null != y.Z.getGuildId() && null != n && (i.safetyAlertsChannelId = n), a.Z.dispatch(S({ type: 'GUILD_SETTINGS_UPDATE' }, i));
+            let i = T({}, N(e, ['safetyAlertsChannelId', 'profile']));
+            null != r && (i.profile = T({}, null != (t = i.profile) ? t : {}, r)), null != y.Z.getGuildId() && null != n && (i.safetyAlertsChannelId = n), a.Z.dispatch(T({ type: 'GUILD_SETTINGS_UPDATE' }, i));
         },
         updateGuildProfile(e, t) {
             a.Z.dispatch(
-                S(
+                T(
                     {
                         type: 'GUILD_SETTINGS_PROFILE_UPDATE',
                         guildId: e
@@ -228,10 +228,10 @@ let R = new s.Z('GuildSettingsActionCreators'),
             );
         },
         saveGuild(e, t) {
-            let { name: n, description: r, icon: o, splash: s, banner: u, homeHeader: d, afkChannelId: f, afkTimeout: _, systemChannelId: p, verificationLevel: h, defaultMessageNotifications: m, explicitContentFilter: g, features: E, systemChannelFlags: b, preferredLocale: y, rulesChannelId: v, safetyAlertsChannelId: I, discoverySplash: T, publicUpdatesChannelId: N, premiumProgressBarEnabled: C, profile: P } = t,
+            let { name: n, description: r, icon: o, splash: s, banner: u, homeHeader: d, afkChannelId: f, afkTimeout: _, systemChannelId: p, verificationLevel: h, defaultMessageNotifications: m, explicitContentFilter: g, features: E, systemChannelFlags: b, preferredLocale: y, rulesChannelId: v, safetyAlertsChannelId: I, discoverySplash: S, publicUpdatesChannelId: N, premiumProgressBarEnabled: C, profile: P } = t,
                 w = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
                 D = A(
-                    S(
+                    T(
                         {
                             name: n,
                             description: r,
@@ -249,7 +249,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
                             explicit_content_filter: g,
                             system_channel_flags: b,
                             rules_channel_id: v,
-                            discovery_splash: T,
+                            discovery_splash: S,
                             public_updates_channel_id: N,
                             safety_alerts_channel_id: I
                         },
@@ -308,7 +308,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
                 (a) =>
                     b.Z.patch({
                         url: O.ANM.GUILD(e),
-                        body: S(
+                        body: T(
                             {
                                 owner_id: t,
                                 code: i

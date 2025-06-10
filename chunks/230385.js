@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(704215),
     i = n(283693),
     a = n(147913),
@@ -68,7 +68,7 @@ function v(e, t) {
     );
 }
 let I = new o.Z('VoiceFilterManager');
-class S extends a.Z {
+class T extends a.Z {
     handleVoiceFilterRequestSwitch(e) {
         let { newVoiceFilterId: t, analyticsContext: n } = e;
         if (__OVERLAY__) return;
@@ -216,4 +216,4 @@ class S extends a.Z {
             });
     }
 }
-let T = new S();
+let S = new T();

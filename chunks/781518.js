@@ -4,10 +4,10 @@ n.d(t, {
     Tu: () => N,
     am: () => O,
     hP: () => y,
-    hY: () => S,
+    hY: () => T,
     k1: () => A,
     rC: () => b,
-    wO: () => T
+    wO: () => S
 }),
     n(358797);
 var r = n(544891),
@@ -163,7 +163,7 @@ function I(e, t) {
         )
     );
 }
-function S(e, t, n, r) {
+function T(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
         o = u.C7.PLAYER_OPEN(r, n, !1),
         { deviceId: s, position: l, contextUri: c, repeat: d } = i;
@@ -200,7 +200,7 @@ function S(e, t, n, r) {
             )
         );
 }
-function T(e, t) {
+function S(e, t) {
     return b.put(e, t, { url: u.C7.PLAYER_PAUSE }).then((e) => (a.Z.dispatch({ type: 'SPOTIFY_PLAYER_PAUSE' }), e));
 }
 function A() {

@@ -82,7 +82,7 @@ function E(e) {
     let { children: t, active: n, onClick: a, className: f, width: E, height: b, maxWidth: y, maxHeight: O } = e,
         v = i.useRef(null),
         I = (0, u.vV)(E, b, y, O),
-        { width: S, height: T } = g(E, b, y, O, n),
+        { width: T, height: S } = g(E, b, y, O, n),
         [A, N] = (0, l.q_F)(() => ({
             scale: 1,
             config: h
@@ -97,7 +97,7 @@ function E(e) {
             x: 0,
             y: 0
         }),
-        x = (null != S ? S : 0) > window.innerWidth || (null != T ? T : 0) > window.innerHeight;
+        x = (null != T ? T : 0) > window.innerWidth || (null != S ? S : 0) > window.innerHeight;
     i.useEffect(() => {
         let e = c.Z.useReducedMotion;
         n
@@ -115,12 +115,12 @@ function E(e) {
                   immediate: e
               }));
     }, [n, N, I, C, R]);
-    let k = (e, t) => {
+    let M = (e, t) => {
             var n;
-            let r = null == S ? (null == (n = v.current) ? void 0 : n.getBoundingClientRect()) : null,
+            let r = null == T ? (null == (n = v.current) ? void 0 : n.getBoundingClientRect()) : null,
                 i = m({
-                    width: null != S ? S : r.width,
-                    height: null != T ? T : r.height,
+                    width: null != T ? T : r.width,
+                    height: null != S ? S : r.height,
                     offset: {
                         x: C.x.goal,
                         y: C.y.goal
@@ -132,7 +132,7 @@ function E(e) {
                 });
             C.x.set(i.x), C.y.set(i.y);
         },
-        M = (e) => {
+        k = (e) => {
             n &&
                 0 === e.button &&
                 (e.preventDefault(),
@@ -151,10 +151,10 @@ function E(e) {
         };
     return (0, r.jsx)(s.animated.div, {
         ref: v,
-        onMouseDown: M,
+        onMouseDown: k,
         onMouseUp: j,
-        onMouseMove: (e) => P && k(e.movementX, e.movementY),
-        onWheel: (e) => !e.ctrlKey && k(-e.deltaX, -e.deltaY),
+        onMouseMove: (e) => P && M(e.movementX, e.movementY),
+        onWheel: (e) => !e.ctrlKey && M(-e.deltaX, -e.deltaY),
         onMouseLeave: () => w(!1),
         onClick: (e) => e.stopPropagation(),
         className: o()(f, d.wrapper, {

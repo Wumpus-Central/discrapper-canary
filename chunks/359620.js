@@ -49,7 +49,7 @@ e.exports = function (e) {
             keywords: E,
             contains: []
         },
-        S = {
+        T = {
             begin: '.?html`',
             end: '',
             starts: {
@@ -59,7 +59,7 @@ e.exports = function (e) {
                 subLanguage: 'xml'
             }
         },
-        T = {
+        S = {
             begin: '.?css`',
             end: '',
             starts: {
@@ -125,7 +125,7 @@ e.exports = function (e) {
                 e.C_LINE_COMMENT_MODE
             ]
         },
-        R = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, S, T, A, N, { match: /\$\d+/ }, v];
+        R = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, T, S, A, N, { match: /\$\d+/ }, v];
     I.contains = R.concat({
         begin: /\{/,
         end: /\}/,
@@ -178,13 +178,13 @@ e.exports = function (e) {
                 _: [...i, ...a]
             }
         },
-        k = {
+        M = {
             label: 'use_strict',
             className: 'meta',
             relevance: 10,
             begin: /^\s*['"]use (strict|asm)['"]/
         },
-        M = {
+        k = {
             variants: [
                 {
                     match: [/function/, /\s+/, d, /(?=\s*\()/]
@@ -255,11 +255,11 @@ e.exports = function (e) {
                 binary: 'node',
                 relevance: 5
             }),
-            k,
+            M,
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
-            S,
             T,
+            S,
             A,
             N,
             C,
@@ -342,7 +342,7 @@ e.exports = function (e) {
                     }
                 ]
             },
-            M,
+            k,
             { beginKeywords: 'while if switch catch for' },
             {
                 begin: '\\b(?!function)' + e.UNDERSCORE_IDENT_RE + '\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{',

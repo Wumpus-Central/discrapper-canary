@@ -3,7 +3,7 @@ function i(e) {
     r = e;
 }
 n.d(t, {
-    $R: () => T,
+    $R: () => S,
     A$: () => ee,
     AM: () => W,
     B: () => ea,
@@ -19,9 +19,9 @@ n.d(t, {
     H0: () => V,
     Hh: () => eC,
     IK: () => e$,
-    IU: () => eM,
+    IU: () => ek,
     KD: () => Y,
-    KE: () => eS,
+    KE: () => eT,
     Mc: () => Q,
     OU: () => ew,
     On: () => ey,
@@ -51,7 +51,7 @@ n.d(t, {
     dN: () => ei,
     eD: () => e_,
     eW: () => v,
-    ej: () => eT,
+    ej: () => eS,
     ex: () => ep,
     fY: () => e1,
     fw: () => eX,
@@ -74,7 +74,7 @@ n.d(t, {
     of: () => eK,
     p0: () => ez,
     pC: () => F,
-    pj: () => ek,
+    pj: () => eM,
     qb: () => en,
     qt: () => e8,
     r3: () => em,
@@ -82,7 +82,7 @@ n.d(t, {
     s5: () => e0,
     sB: () => eY,
     up: () => eN,
-    vz: () => M,
+    vz: () => k,
     w7: () => ex,
     xQ: () => e2,
     xb: () => eq,
@@ -260,7 +260,7 @@ function I(e, t) {
     for (let a = e; a < e + 4 * t; a += 4) i.push(r.__wbindgen_export_2.get(n.getUint32(a, !0)));
     return r.__externref_drop_slice(e, t), i;
 }
-function S(e, t) {
+function T(e, t) {
     let n = t(4 * e.length, 4) >>> 0;
     for (let t = 0; t < e.length; t++) {
         let r = c(e[t]);
@@ -268,7 +268,7 @@ function S(e, t) {
     }
     return (f = e.length), n;
 }
-function T() {
+function S() {
     r.crash();
 }
 function A(e, t, n, i, a) {
@@ -317,17 +317,17 @@ class x {
         r.blockeddomainsstore_startFetchingBlockedDomains(t, n);
     }
 }
-let k =
+let M =
     'undefined' == typeof FinalizationRegistry
         ? {
               register: () => {},
               unregister: () => {}
           }
         : new FinalizationRegistry((e) => r.__wbg_experimentcacher_free(e >>> 0, 1));
-class M {
+class k {
     __destroy_into_raw() {
         let e = this.__wbg_ptr;
-        return (this.__wbg_ptr = 0), k.unregister(this), e;
+        return (this.__wbg_ptr = 0), M.unregister(this), e;
     }
     free() {
         let e = this.__destroy_into_raw();
@@ -344,7 +344,7 @@ class M {
         return r.__wbindgen_free(e[0], 4 * e[1], 4), t;
     }
     static flushToCache(e) {
-        let t = S(e, r.__wbindgen_malloc),
+        let t = T(e, r.__wbindgen_malloc),
             n = f;
         r.experimentcacher_flushToCache(t, n);
     }
@@ -557,10 +557,10 @@ function ev(e, t, n) {
 function eI(e) {
     queueMicrotask(e);
 }
-function eS(e) {
+function eT(e) {
     return e.queueMicrotask;
 }
-function eT(e) {
+function eS(e) {
     return Promise.resolve(e);
 }
 function eA(e, t) {
@@ -594,10 +594,10 @@ function eL(e, t) {
 function ex(e, t) {
     e.headers = t;
 }
-function ek(e, t, n) {
+function eM(e, t, n) {
     e.method = l(t, n);
 }
-function eM(e, t) {
+function ek(e, t) {
     e.mode = D[t];
 }
 function ej(e, t) {

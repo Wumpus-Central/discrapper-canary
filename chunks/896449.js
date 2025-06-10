@@ -71,12 +71,12 @@ function y(e) {
     var t;
     let { user: n, guildId: h, channel: g, entry: y, onSelect: O, disableGameProfileLinks: v } = e,
         I = i.useRef(null),
-        S = i.useContext(f.Ir),
-        T = (0, u.Z)({
+        T = i.useContext(f.Ir),
+        S = (0, u.Z)({
             userId: n.id,
             guildId: h,
             channelId: null == g ? void 0 : g.id,
-            onAction: S
+            onAction: T
         }),
         A = (0, s.Z)({
             id: n.id,
@@ -113,13 +113,13 @@ function y(e) {
                     children: [
                         (0, r.jsxs)(a.kSQ, {
                             children: [
-                                T,
+                                S,
                                 null != P &&
                                     (0, r.jsx)(a.sNh, {
                                         id: 'game-profile',
                                         label: _.intl.string(_.t.f7aVGh),
                                         action: (e) => {
-                                            P(e), null == S || S();
+                                            P(e), null == T || T();
                                         }
                                     })
                             ]

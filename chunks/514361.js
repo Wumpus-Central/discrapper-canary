@@ -19,8 +19,8 @@ var a,
     O = n(47760),
     v = n(866419),
     I = n(469115),
-    S = n(874893);
-function T(e, t, n) {
+    T = n(874893);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -81,10 +81,10 @@ let L = () => {
             r = t;
         }
     },
-    k = () => {
+    M = () => {
         if (!u.Z.shouldSync('appearance') || (0, v.z)()) return !1;
         let e = p.L1.getSetting().backgroundGradientPresetId;
-        if ((_.ZP.useSystemTheme === S.KW.ON && null != e && (0, d.hi)(S.KW.OFF), null == e)) {
+        if ((_.ZP.useSystemTheme === T.KW.ON && null != e && (0, d.hi)(T.KW.OFF), null == e)) {
             null != r && (r = void 0);
             return;
         }
@@ -92,9 +92,9 @@ let L = () => {
             n = (null == r ? void 0 : r.id) === (null == t ? void 0 : t.id);
         null == t || n || (r = t);
     };
-class M extends (a = o.ZP.PersistedStore) {
+class k extends (a = o.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? I.qt[e.gradientPresetId] : void 0), this.waitFor(E.default, f.Z, g.Z, u.Z, h.Z), this.syncWith([E.default], L), this.syncWith([u.Z], x), this.syncWith([h.Z], k);
+        null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? I.qt[e.gradientPresetId] : void 0), this.waitFor(E.default, f.Z, g.Z, u.Z, h.Z), this.syncWith([E.default], L), this.syncWith([u.Z], x), this.syncWith([h.Z], M);
     }
     getState() {
         return A ? {} : { gradientPresetId: null == r ? void 0 : r.id };
@@ -116,7 +116,7 @@ class M extends (a = o.ZP.PersistedStore) {
     }
     constructor(...e) {
         super(...e),
-            T(this, 'migrations', [
+            S(this, 'migrations', [
                 (e) => {
                     var t;
                     return { gradientPresetId: null == e || null == (t = e.gradientPreset) ? void 0 : t.id };
@@ -124,8 +124,8 @@ class M extends (a = o.ZP.PersistedStore) {
             ]);
     }
 }
-T(M, 'displayName', 'ClientThemesBackgroundStore'), T(M, 'persistKey', 'ClientThemesBackgroundStore');
-let j = new M(l.Z, {
+S(k, 'displayName', 'ClientThemesBackgroundStore'), S(k, 'persistKey', 'ClientThemesBackgroundStore');
+let j = new k(l.Z, {
     UPDATE_BACKGROUND_GRADIENT_PRESET: C,
     UPDATE_MOBILE_PENDING_THEME_INDEX: R,
     RESET_PREVIEW_CLIENT_THEME: P,

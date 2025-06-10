@@ -27,15 +27,15 @@ var r = n(98405),
     O = 'stack' in new g(m),
     v = 'stack' in new E(1, 2),
     I = E && p && Object.getOwnPropertyDescriptor(i, m),
-    S = !!I && !(I.writable && I.configurable),
-    T = O && !S && !v;
+    T = !!I && !(I.writable && I.configurable),
+    S = O && !T && !v;
 r(
     {
         global: !0,
         constructor: !0,
-        forced: h || T
+        forced: h || S
     },
-    { DOMException: T ? b : E }
+    { DOMException: S ? b : E }
 );
 var A = a(m),
     N = A.prototype;

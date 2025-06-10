@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
-    Jc: () => M,
-    dx: () => k,
+    Jc: () => k,
+    dx: () => M,
     tE: () => G
 });
 var i,
@@ -206,10 +206,10 @@ function O(e) {
 }
 let v = '--__adaptive-focus-ring-color',
     I = '--__adaptive-focus-ring-radius';
-function S(e) {
+function T(e) {
     e !== r && (null == r || r.hide(), (r = e));
 }
-function T(e) {
+function S(e) {
     if (e) return parseInt(e) > 0 ? e : void 0;
 }
 class A {
@@ -224,7 +224,7 @@ class A {
     }
     showElement(e, t = {}) {
         var n;
-        (this.targetElement = e), (this.targetAncestry = this.getElementAncestors(this.targetElement)), (this.boundingBox = void 0), (this.className = t.className), (this.offset = null != (n = t.offset) ? n : 0), (this.zIndex = t.zIndex), S(this), this.invalidate();
+        (this.targetElement = e), (this.targetAncestry = this.getElementAncestors(this.targetElement)), (this.boundingBox = void 0), (this.className = t.className), (this.offset = null != (n = t.offset) ? n : 0), (this.zIndex = t.zIndex), T(this), this.invalidate();
     }
     hide() {
         (this.targetElement = void 0), (this.targetAncestry = void 0), (this.boundingBox = void 0), (this.className = void 0), (this.offset = 0), (this.zIndex = void 0), this.invalidate();
@@ -257,10 +257,10 @@ class A {
     }
     getBorderRadius(e) {
         var t, n, r, i, a, o, s, l;
-        let c = null != (n = T(null == (t = e.styles[0]) ? void 0 : t.borderTopLeftRadius)) ? n : '0',
-            u = null != (i = T(null == (r = e.styles[0]) ? void 0 : r.borderTopRightRadius)) ? i : '0',
-            d = null != (o = T(null == (a = e.styles[0]) ? void 0 : a.borderBottomRightRadius)) ? o : '0',
-            f = null != (l = T(null == (s = e.styles[0]) ? void 0 : s.borderBottomLeftRadius)) ? l : '0';
+        let c = null != (n = S(null == (t = e.styles[0]) ? void 0 : t.borderTopLeftRadius)) ? n : '0',
+            u = null != (i = S(null == (r = e.styles[0]) ? void 0 : r.borderTopRightRadius)) ? i : '0',
+            d = null != (o = S(null == (a = e.styles[0]) ? void 0 : a.borderBottomRightRadius)) ? o : '0',
+            f = null != (l = S(null == (s = e.styles[0]) ? void 0 : s.borderBottomLeftRadius)) ? l : '0';
         if ('0' !== c || '0' !== u || '0' !== d || '0' !== f) return `${c} ${u} ${d} ${f}`;
     }
     makePositionFromDOMRect(e) {
@@ -333,7 +333,7 @@ function L() {
     null == e || R(e, D) ? null != w && cancelAnimationFrame(w) : ((D = e), null == r || r.invalidate()), (w = requestAnimationFrame(L));
 }
 let x = !1,
-    k = {
+    M = {
         get ringsEnabled() {
             return x;
         },
@@ -347,7 +347,7 @@ let x = !1,
             (P = !1), null != w && cancelAnimationFrame(w);
         }
     };
-function M(e) {
+function k(e) {
     let { containerRef: t, children: n, themeOptions: r } = e,
         i = a.useRef(new A());
     return (
@@ -373,7 +373,7 @@ function j() {
             ),
             [e]
         ),
-        k.ringsEnabled && e.visible
+        M.ringsEnabled && e.visible
             ? (0, o.jsx)('div', {
                   className: d('focus-rings-ring', e.className),
                   style: e.getStyle()
@@ -444,7 +444,7 @@ function G(e) {
             },
             [b, g]
         ),
-        S = a.useCallback(
+        T = a.useCallback(
             (e) => {
                 let n = null == s ? void 0 : s.current;
                 e.currentTarget === e.target ? ((p.current = !0), g.showElement(null != n ? n : e.currentTarget, v)) : (m(!0), t && g.showElement(null != n ? n : e.currentTarget, v)), null == y || y(e);
@@ -456,7 +456,7 @@ function G(e) {
               ...O,
               className: d(O.className, p.current ? c : void 0, h ? u : void 0),
               onBlur: I,
-              onFocus: S
+              onFocus: T
           })
         : E;
 }

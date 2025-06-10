@@ -19,13 +19,13 @@ var r = n(466293),
     O = '[object DataView]',
     v = r ? r.prototype : void 0,
     I = v ? v.valueOf : void 0;
-e.exports = function (e, t, n, r, v, S, T) {
+e.exports = function (e, t, n, r, v, T, S) {
     switch (n) {
         case O:
             if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset) break;
             (e = e.buffer), (t = t.buffer);
         case y:
-            if (e.byteLength != t.byteLength || !S(new i(e), new i(t))) break;
+            if (e.byteLength != t.byteLength || !T(new i(e), new i(t))) break;
             return !0;
         case d:
         case f:
@@ -41,11 +41,11 @@ e.exports = function (e, t, n, r, v, S, T) {
         case g:
             var N = r & c;
             if ((A || (A = l), e.size != t.size && !N)) break;
-            var C = T.get(e);
+            var C = S.get(e);
             if (C) return C == t;
-            (r |= u), T.set(e, t);
-            var R = o(A(e), A(t), r, v, S, T);
-            return T.delete(e), R;
+            (r |= u), S.set(e, t);
+            var R = o(A(e), A(t), r, v, T, S);
+            return S.delete(e), R;
         case b:
             if (I) return I.call(e) == I.call(t);
     }

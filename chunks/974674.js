@@ -75,18 +75,18 @@ function I(e, t) {
         e
     );
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = T(e, t);
+        i = S(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function T(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -104,7 +104,7 @@ function N() {
 }
 function C(e) {
     var { size: t, isMobile: n, isTyping: i } = e,
-        a = S(e, ['size', 'isMobile', 'isTyping']);
+        a = T(e, ['size', 'isMobile', 'isTyping']);
     let o = (0, h.UC)(t),
         s = o.status * (n && !i ? h.EW : 1),
         l = o.status * (i ? h.D6 : 1),
@@ -334,7 +334,7 @@ function x(e, t, n, i) {
         rx: n.stroke
     });
 }
-function k(e) {
+function M(e) {
     let { status: t, isMobile: n, isTyping: r, size: i } = e,
         a = n && !r && t === m.Skl.ONLINE,
         o = (0, h.UC)(i);
@@ -351,14 +351,14 @@ function k(e) {
         })
     );
 }
-function M(e) {
-    let { children: t, size: n, onClick: i, onMouseDown: a, onKeyDown: s, onContextMenu: c, onMouseEnter: u, onMouseLeave: d, className: f, tabIndex: _, ariaLabel: p, ariaHidden: m, status: E, isMobile: y = !1, isTyping: O = !1, avatarDecoration: v, typingOffset: I, specs: S } = e,
-        T = {
+function k(e) {
+    let { children: t, size: n, onClick: i, onMouseDown: a, onKeyDown: s, onContextMenu: c, onMouseEnter: u, onMouseLeave: d, className: f, tabIndex: _, ariaLabel: p, ariaHidden: m, status: E, isMobile: y = !1, isTyping: O = !1, avatarDecoration: v, typingOffset: I, specs: T } = e,
+        S = {
             width: (0, h.px)(n),
             height: (0, h.px)(n)
         },
         A = null == p || m ? void 0 : R(p, E, y),
-        N = S.size * g.hs,
+        N = T.size * g.hs,
         C = P(E, n, y, O),
         w =
             null != v &&
@@ -388,7 +388,7 @@ function M(e) {
     return null != i || null != a
         ? (0, r.jsxs)(l.P, {
               className: o()(b.wrapper, b.pointer, f),
-              style: T,
+              style: S,
               onClick: i,
               tabIndex: _,
               onContextMenu: c,
@@ -402,7 +402,7 @@ function M(e) {
           })
         : (0, r.jsxs)('div', {
               className: o()(b.wrapper, f),
-              style: T,
+              style: S,
               onContextMenu: null != c ? c : void 0,
               onMouseEnter: null != u ? u : void 0,
               onMouseLeave: null != d ? d : void 0,
@@ -433,17 +433,17 @@ let j = i.forwardRef((e, t) => {
     );
 });
 function U(e) {
-    let { src: t, status: n, size: i, statusColor: a, isMobile: s = !1, isTyping: l = !1, typingIndicatorRef: f, avatarContentRef: _, isSpeaking: g = !1, statusTooltip: E = !1, statusTooltipDelay: y, statusBackdropColor: v, 'aria-hidden': S = !1, 'aria-label': T, imageClassName: A, ref: N } = e,
+    let { src: t, status: n, size: i, statusColor: a, isMobile: s = !1, isTyping: l = !1, typingIndicatorRef: f, avatarContentRef: _, isSpeaking: g = !1, statusTooltip: E = !1, statusTooltipDelay: y, statusBackdropColor: v, 'aria-hidden': T = !1, 'aria-label': S, imageClassName: A, ref: N } = e,
         C = n !== m.Skl.UNKNOWN ? n : null,
         R = (0, h.UC)(i),
         P = null != C ? Math.ceil((R.status * h.D6 - R.status) / 2) : 0,
         L = R.size + P,
-        k = (0, u.vj)(C, a);
+        M = (0, u.vj)(C, a);
     return (0, r.jsx)(
-        M,
+        k,
         I(O({}, e), {
-            ariaLabel: T,
-            ariaHidden: S,
+            ariaLabel: S,
+            ariaHidden: T,
             status: C,
             specs: R,
             typingOffset: P,
@@ -482,7 +482,7 @@ function U(e) {
                                           (0, r.jsx)(
                                               'rect',
                                               I(O({}, e, D(R, C, s, l)), {
-                                                  fill: k,
+                                                  fill: M,
                                                   mask: 'url(#'.concat((0, u.rs)(C, s, l), ')'),
                                                   className: b.pointerEvents
                                               })
@@ -519,14 +519,14 @@ function B(e, t, n) {
     return 'translate('.concat(l, ', ').concat(c, ')');
 }
 function F(e) {
-    let { fromIsMobile: t = !0, fromStatus: n, fromColor: a, isMobile: l = !1, isTyping: _ = !1, typingIndicatorRef: m, isSpeaking: g = !1, size: E, src: y, status: v, statusColor: T, statusTooltip: R = !1, statusTooltipDelay: P, statusBackdropColor: w, 'aria-hidden': D = !1, 'aria-label': L, imageClassName: U, pulseStatusIcon: F } = e,
-        V = (0, u.vj)(v, T),
+    let { fromIsMobile: t = !0, fromStatus: n, fromColor: a, isMobile: l = !1, isTyping: _ = !1, typingIndicatorRef: m, isSpeaking: g = !1, size: E, src: y, status: v, statusColor: S, statusTooltip: R = !1, statusTooltipDelay: P, statusBackdropColor: w, 'aria-hidden': D = !1, 'aria-label': L, imageClassName: U, pulseStatusIcon: F } = e,
+        V = (0, u.vj)(v, S),
         Z = i.useId(),
         H = i.useId(),
         [Y] = i.useState(() =>
             O(
                 { fill: a },
-                k({
+                M({
                     size: E,
                     status: n,
                     isMobile: t,
@@ -538,7 +538,7 @@ function F(e) {
             () =>
                 O(
                     { fill: V },
-                    k({
+                    M({
                         size: E,
                         status: v,
                         isMobile: l,
@@ -556,7 +556,7 @@ function F(e) {
             N() ? 'animate-always' : 'animate-never'
         ),
         { avatarCutoutX: z, avatarCutoutY: q, avatarCutoutWidth: X, avatarCutoutHeight: Q, avatarCutoutRadius: J, fill: $ } = K,
-        ee = S(K, ['avatarCutoutX', 'avatarCutoutY', 'avatarCutoutWidth', 'avatarCutoutHeight', 'avatarCutoutRadius', 'fill']),
+        ee = T(K, ['avatarCutoutX', 'avatarCutoutY', 'avatarCutoutWidth', 'avatarCutoutHeight', 'avatarCutoutRadius', 'fill']),
         et = (0, h.px)(E),
         en = (0, h.UC)(E),
         er = en.status * h.D6,
@@ -577,7 +577,7 @@ function F(e) {
             [F, v]
         );
     return (0, r.jsx)(
-        M,
+        k,
         I(O({}, e), {
             ariaLabel: L,
             ariaHidden: D,
@@ -684,7 +684,7 @@ function V(e, t, n, r, i) {
 j.displayName = 'AvatarImg';
 let Z = i.memo(function (e) {
     var { statusColor: t, status: n } = e,
-        a = S(e, ['statusColor', 'status']);
+        a = T(e, ['statusColor', 'status']);
     let { isMobile: o = !1, isTyping: s = !1 } = a,
         l = i.useRef(n),
         c = i.useRef(o),

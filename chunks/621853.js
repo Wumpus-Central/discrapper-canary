@@ -68,8 +68,8 @@ function y(e, t) {
 let O = Symbol('NO GUILD ID'),
     v = new Map(),
     I = new Set(),
-    S = 'premium',
-    T = 'guild_booster_lvl',
+    T = 'premium',
+    S = 'guild_booster_lvl',
     A = 2147483647,
     N = new Map(),
     C = new Map(),
@@ -79,8 +79,8 @@ let O = Symbol('NO GUILD ID'),
     D = new Map(),
     L = new Map(),
     x = [],
-    k = [],
-    M = !1,
+    M = [],
+    k = !1,
     j = null;
 function U(e) {
     let t = N.get(e);
@@ -118,7 +118,7 @@ function G(e, t) {
     }
 }
 function B() {
-    v.clear(), I.clear(), N.clear(), C.clear(), w.clear(), D.clear(), L.clear(), (M = !1);
+    v.clear(), I.clear(), N.clear(), C.clear(), w.clear(), D.clear(), L.clear(), (k = !1);
 }
 function F(e) {
     let { userId: t } = e;
@@ -145,9 +145,9 @@ function H(e) {
     I.delete(e.userId), w.set(e.userId, Z(e.mutualFriends)), D.set(e.userId, e.mutualFriends.length);
 }
 function Y(e) {
-    var t, n, r, i, s, l, c, d, f, h, g, b, A, k, M, B, F, V, H, Y, K, z, q, X, Q, J, $;
+    var t, n, r, i, s, l, c, d, f, h, g, b, A, M, k, B, F, V, H, Y, K, z, q, X, Q, J, $;
     let { userProfile: ee, fetchStartedAt: et } = e,
-        en = null != (M = null == (t = ee.guild_member_profile) ? void 0 : t.guild_id) ? M : O;
+        en = null != (k = null == (t = ee.guild_member_profile) ? void 0 : t.guild_id) ? k : O;
     if ((null == (n = v.get(ee.user.id)) || n.delete(en), I.delete(ee.user.id), null != ee.mutual_guilds)) {
         let e = {};
         ee.mutual_guilds.forEach((t) => {
@@ -181,11 +181,11 @@ function Y(e) {
             null != ee.badges
                 ? ee.badges.map((e) => {
                       let t = (0, p.fv)(e.id);
-                      if ((e.id === S || null != t) && null != er) {
+                      if ((e.id === T || null != t) && null != er) {
                           let n = m.intl.formatToPlainString(m.t['8zbGNT'], { date: er });
                           return null != t && (n = m.intl.formatToPlainString(m.t.Hu4jfn, { date: er })), y(E({}, e), { description: n });
                       }
-                      return e.id.startsWith(T) && null != ei ? y(E({}, e), { description: m.intl.formatToPlainString(m.t.IWkAq6, { date: ei }) }) : e;
+                      return e.id.startsWith(S) && null != ei ? y(E({}, e), { description: m.intl.formatToPlainString(m.t.IWkAq6, { date: ei }) }) : e;
                   })
                 : [];
     if (
@@ -224,7 +224,7 @@ function Y(e) {
                     : null,
             badges: eo
         }),
-        (null == (k = ee.user_profile) || null == (A = k.profile_effect) ? void 0 : A.expires_at) != null)
+        (null == (M = ee.user_profile) || null == (A = M.profile_effect) ? void 0 : A.expires_at) != null)
     ) {
         let e = new a.V7();
         R.set(ee.user.id, e), U(ee.user.id);
@@ -302,7 +302,7 @@ function z(e) {
                   fetchEndedAt: 0,
                   fetchError: void 0
               };
-    (s.fetchStartedAt = o), (s.fetchEndedAt = Date.now()), (s.fetchError = a), N.set(r, s), (null == a ? void 0 : a.status) === 404 && (D.set(r, 0), w.set(r, x), L.set(r, k));
+    (s.fetchStartedAt = o), (s.fetchEndedAt = Date.now()), (s.fetchError = a), N.set(r, s), (null == a ? void 0 : a.status) === 404 && (D.set(r, 0), w.set(r, x), L.set(r, M));
 }
 function q(e) {
     let { userId: t, accent_color: n, banner: r, bio: i, pronouns: o, popout_animation_particle_type: s, theme_colors: l, profileEffectId: c, profileEffectExpiresAt: u } = e,
@@ -361,13 +361,13 @@ function X(e) {
     }
 }
 function Q(e) {
-    M = !0;
+    k = !0;
 }
 function J(e) {
-    (M = !1), null != e.guild_id ? X(e) : q(e);
+    (k = !1), null != e.guild_id ? X(e) : q(e);
 }
 function $(e) {
-    M = !1;
+    k = !1;
 }
 function ee(e) {
     let { badges: t, ttlInSeconds: n, userId: r } = e;
@@ -418,7 +418,7 @@ class es extends f.Z {
         return I.has(e);
     }
     get isSubmitting() {
-        return M;
+        return k;
     }
     getUserProfile(e) {
         return N.get(e);

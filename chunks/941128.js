@@ -32,8 +32,8 @@ let y = [E.ff.AUTHENTICATION_FAILED, E.ff.NOT_ENTITLED],
     O = 'DispatchManagerStore',
     v = [],
     I = [],
-    S = !1,
-    T = null,
+    T = !1,
+    S = null,
     A = null,
     N = !1,
     C = new Map(),
@@ -42,13 +42,13 @@ let y = [E.ff.AUTHENTICATION_FAILED, E.ff.NOT_ENTITLED],
 function w() {
     let e = {
         queue: v,
-        paused: S,
+        paused: T,
         userActions: Array.from(C)
     };
     s.K.set(O, e);
 }
 function D(e, t) {
-    return (null != T && T.applicationId === e && T.branchId === t) || (null != A && A.applicationId === e && A.branchId === t);
+    return (null != S && S.applicationId === e && S.branchId === t) || (null != A && A.applicationId === e && A.branchId === t);
 }
 function L() {
     let e = v[0];
@@ -67,7 +67,7 @@ function x(e, t) {
     let n = (0, _.Tu)(e, t);
     return v.findIndex((e) => e.comboId === n);
 }
-function k(e, t, n, r) {
+function M(e, t, n, r) {
     let i = (0, _.Tu)(e, t),
         a = {
             comboId: i,
@@ -76,9 +76,9 @@ function k(e, t, n, r) {
         o = I.indexOf(i);
     -1 !== o && I.splice(o, 1);
     let s = x(e, t);
-    0 !== s && (n ? -1 === s && (v.push(a), L()) : (s > 0 && v.splice(s, 1), v.unshift(a), L())), !n && S && p.Z.resume(), w();
+    0 !== s && (n ? -1 === s && (v.push(a), L()) : (s > 0 && v.splice(s, 1), v.unshift(a), L())), !n && T && p.Z.resume(), w();
 }
-function M(e, t) {
+function k(e, t) {
     let n = (0, _.Tu)(e, t),
         r = I.indexOf(n);
     -1 !== r && I.splice(r, 1);
@@ -87,28 +87,28 @@ function M(e, t) {
 }
 function j(e) {
     let { applicationId: t, branchId: n } = e;
-    C.set((0, _.Tu)(t, n), 'Install'), k(t, n, !1, 'Patch');
+    C.set((0, _.Tu)(t, n), 'Install'), M(t, n, !1, 'Patch');
 }
 function U(e) {
     F(e), Z(e);
 }
 function G(e) {
     let { applicationId: t, branchId: n } = e;
-    C.set((0, _.Tu)(t, n), 'Repair'), k(t, n, !1, 'Repair');
+    C.set((0, _.Tu)(t, n), 'Repair'), M(t, n, !1, 'Repair');
 }
 function B(e) {
     let { applicationId: t, branchId: n, automatic: r } = e;
-    k(t, n, r, 'Patch');
+    M(t, n, r, 'Patch');
 }
 function F(e) {
     let { applicationId: t, branchId: n } = e;
-    M(t, n);
+    k(t, n);
 }
 function V(e) {
     let { applicationId: t, branchId: n } = e,
         r = x(t, n);
     if (r < 1) return !1;
-    v.splice(0, 0, v.splice(r, 1)[0]), L(), S && p.Z.resume(), w();
+    v.splice(0, 0, v.splice(r, 1)[0]), L(), T && p.Z.resume(), w();
 }
 function Z(e) {
     let { applicationId: t, branchId: n } = e,
@@ -118,9 +118,9 @@ function Z(e) {
 }
 function H(e) {
     let { state: t } = e;
-    !N && ((N = !0), L(), S || p.Z.resume());
-    let n = S;
-    (S = t.paused), (T = t.currentTask), (A = t.nextTask);
+    !N && ((N = !0), L(), T || p.Z.resume());
+    let n = T;
+    (T = t.paused), (S = t.currentTask), (A = t.nextTask);
     let r = !1;
     (v = v.filter((e) => {
         let { comboId: t } = e,
@@ -144,7 +144,7 @@ function H(e) {
         return !0;
     })),
         L(),
-        (r || n !== S) && w();
+        (r || n !== T) && w();
 }
 function Y() {
     let e = d.default.getToken(),
@@ -160,7 +160,7 @@ function W(e) {
             let { context: e } = t;
             if (null != e) {
                 let { application_id: t, branch_id: n } = e;
-                M(t, n);
+                k(t, n);
             }
         }
     }
@@ -168,7 +168,7 @@ function W(e) {
 function K() {
     for (let e of u.ZP.getRunningDiscordApplicationIds()) c.al(e, e);
     let e = u.ZP.getVisibleGame();
-    return S || null == e || e.pid === P || c.wO(), (P = null == e ? null : e.pid), !1;
+    return T || null == e || e.pid === P || c.wO(), (P = null == e ? null : e.pid), !1;
 }
 function z() {
     (0, h.isDesktop)() && Y();
@@ -197,7 +197,7 @@ class Q extends (r = o.ZP.Store) {
                       paused: null,
                       userActions: null
                   };
-        null != t.queue && (v = X(t.queue)), null != t.paused && (S = t.paused), null != t.userActions && (C = new Map(Array.from(t.userActions))), this.waitFor(m.Z, u.ZP), this.syncWith([u.ZP], K), this.waitFor(m.Z);
+        null != t.queue && (v = X(t.queue)), null != t.paused && (T = t.paused), null != t.userActions && (C = new Map(Array.from(t.userActions))), this.waitFor(m.Z, u.ZP), this.syncWith([u.ZP], K), this.waitFor(m.Z);
     }
     get activeItems() {
         return v.map((e) => {
@@ -209,7 +209,7 @@ class Q extends (r = o.ZP.Store) {
         return I.map(_.CP);
     }
     get paused() {
-        return S;
+        return T;
     }
     getQueuePosition(e, t) {
         return x(e, t);

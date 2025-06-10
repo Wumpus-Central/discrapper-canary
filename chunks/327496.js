@@ -93,8 +93,8 @@ function b(e, t) {
 }
 let y = (e) => {
     let t, n;
-    var { backgroundStyle: a = 'always', children: d, icon: _, name: m, ariaLabel: g, className: y, style: O, to: v, onClick: I, selected: S = !1 } = e,
-        T = h(e, ['backgroundStyle', 'children', 'icon', 'name', 'ariaLabel', 'className', 'style', 'to', 'onClick', 'selected']);
+    var { backgroundStyle: a = 'always', children: d, icon: _, name: m, ariaLabel: g, className: y, style: O, to: v, onClick: I, selected: T = !1 } = e,
+        S = h(e, ['backgroundStyle', 'children', 'icon', 'name', 'ariaLabel', 'className', 'style', 'to', 'onClick', 'selected']);
     let A = (0, s.k6)();
     null == _ && null != m && (n = E((t = (0, c.Zg)(m))));
     let N = i.useCallback(
@@ -112,9 +112,9 @@ let y = (e) => {
         C = (0, l.dQu)(l.TVs.modules.guildbar.AVATAR_SIZE);
     return (0, r.jsxs)(
         l.P3F,
-        p(f({}, T), {
+        p(f({}, S), {
             onClick: N,
-            className: o()(y, u.wrapper, { [u.selected]: S }),
+            className: o()(y, u.wrapper, { [u.selected]: T }),
             style: p(f({}, O), { fontSize: n }),
             focusProps: { enabled: !1 },
             children: [

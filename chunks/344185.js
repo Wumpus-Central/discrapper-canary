@@ -99,11 +99,11 @@ function I(e) {
     let { guild: t } = e;
     E(t.id), b(t);
 }
-function S(e) {
+function T(e) {
     let { guild: t } = e;
     E(t.id);
 }
-function T(e) {
+function S(e) {
     var t, n;
     let { channel: r } = e;
     if (!l.AW.has(r.type)) return !1;
@@ -165,9 +165,9 @@ let D = new w(s.Z, {
     CONNECTION_OPEN: O,
     OVERLAY_INITIALIZE: v,
     GUILD_CREATE: I,
-    GUILD_DELETE: S,
-    THREAD_CREATE: T,
-    THREAD_UPDATE: T,
+    GUILD_DELETE: T,
+    THREAD_CREATE: S,
+    THREAD_UPDATE: S,
     THREAD_LIST_SYNC: A,
     THREAD_DELETE: C,
     CHANNEL_DELETE: R

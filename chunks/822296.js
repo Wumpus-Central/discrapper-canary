@@ -27,7 +27,7 @@ function E(e) {
     });
     let v = () => (0, l.aP)((0, d.V9)(t)),
         I = h.intl.string(h.t['4EGMWF']),
-        S = O(n);
+        T = O(n);
     return y
         ? (0, r.jsx)(s.f6W, {
               disableAdaptiveTheme: !0,
@@ -39,20 +39,20 @@ function E(e) {
                           className: m.content,
                           children: [
                               (0, r.jsx)('div', {
-                                  className: a()(m.artContainer, m[S]),
-                                  children: (0, r.jsx)('div', { className: a()(m.art, m[S]) })
+                                  className: a()(m.artContainer, m[T]),
+                                  children: (0, r.jsx)('div', { className: a()(m.art, m[T]) })
                               }),
                               (0, r.jsxs)('div', {
                                   className: m.cta,
                                   children: [
                                       (0, r.jsx)(s.X6q, {
                                           color: 'none',
-                                          variant: 'small' === S ? 'heading-md/normal' : 'heading-lg/normal',
+                                          variant: 'small' === T ? 'heading-md/normal' : 'heading-lg/normal',
                                           className: m.header,
                                           children: h.intl.formatToMarkdownString(h.t.Kb4Ukp, {})
                                       }),
                                       (0, r.jsx)(s.zxk, {
-                                          size: 'small' === S ? s.zxk.Sizes.MEDIUM : s.zxk.Sizes.LARGE,
+                                          size: 'small' === T ? s.zxk.Sizes.MEDIUM : s.zxk.Sizes.LARGE,
                                           color: s.zxk.Colors.PRIMARY,
                                           onClick: (e) => {
                                               e.stopPropagation(), v();

@@ -32,13 +32,13 @@ let E = new Map(),
     O = 0,
     v = 0,
     I = new Set(),
-    S = new Map(),
-    T = !1;
+    T = new Map(),
+    S = !1;
 function A() {
-    E.clear(), b.clear(), S.clear(), (T = !1), (v = 0), (O = 0);
+    E.clear(), b.clear(), T.clear(), (S = !1), (v = 0), (O = 0);
 }
 function N() {
-    b.clear(), S.clear();
+    b.clear(), T.clear();
 }
 function C() {
     v = 1;
@@ -74,23 +74,23 @@ function L(e) {
 function x() {
     O = 1;
 }
-function k(e) {
+function M(e) {
     let { soundboardSounds: t } = e;
     E.set(p.X8, t), (O = 2);
 }
-function M(e) {
+function k(e) {
     var t, n, r;
     let { soundId: i, userId: a } = e,
         o = (null != (n = b.get(i)) ? n : 0) + 1,
-        s = (null != (r = S.get(a)) ? r : 0) + 1;
-    b.set(i, o), S.set(a, s), a !== (null == (t = u.default.getCurrentUser()) ? void 0 : t.id) && (T = !0);
+        s = (null != (r = T.get(a)) ? r : 0) + 1;
+    b.set(i, o), T.set(a, s), a !== (null == (t = u.default.getCurrentUser()) ? void 0 : t.id) && (S = !0);
 }
 function j(e) {
     var t, n;
     let { soundId: r, userId: i } = e,
         a = (null != (t = b.get(r)) ? t : 0) - 1,
-        o = (null != (n = S.get(i)) ? n : 0) - 1;
-    a <= 0 ? b.delete(r) : b.set(r, a), o <= 0 ? S.delete(i) : S.set(i, o);
+        o = (null != (n = T.get(i)) ? n : 0) - 1;
+    a <= 0 ? b.delete(r) : b.set(r, a), o <= 0 ? T.delete(i) : T.set(i, o);
 }
 let U = a().debounce((e, t) => {
     d.default.track(h.rMx.UPDATE_SOUNDBOARD_SETTINGS, {
@@ -167,7 +167,7 @@ class H extends (r = o.ZP.Store) {
         return 2 === O;
     }
     isUserPlayingSounds(e) {
-        let t = S.get(e);
+        let t = T.get(e);
         return null != t && t > 0;
     }
     isPlayingSound(e) {
@@ -183,7 +183,7 @@ class H extends (r = o.ZP.Store) {
         return y.has(e);
     }
     hasHadOtherUserPlaySoundInSession() {
-        return T;
+        return S;
     }
     hasFetchedAllSounds() {
         return 2 === v && 2 === O;
@@ -196,14 +196,14 @@ let Y = new H(s.Z, {
     GUILD_SOUNDBOARD_SOUND_CREATE: w,
     GUILD_SOUNDBOARD_SOUND_UPDATE: w,
     GUILD_SOUNDBOARD_SOUND_DELETE: L,
-    GUILD_SOUNDBOARD_SOUND_PLAY_START: M,
+    GUILD_SOUNDBOARD_SOUND_PLAY_START: k,
     GUILD_SOUNDBOARD_SOUND_PLAY_END: j,
     GUILD_SOUNDBOARD_SOUNDS_UPDATE: D,
     USER_SOUNDBOARD_SET_VOLUME: G,
     VOICE_CHANNEL_SELECT: N,
     USER_SETTINGS_PROTO_UPDATE: F,
     SOUNDBOARD_FETCH_DEFAULT_SOUNDS: x,
-    SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: k,
+    SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: M,
     SOUNDBOARD_SOUNDS_RECEIVED: R,
     GUILD_DELETE: P,
     AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: V,

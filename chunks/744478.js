@@ -1,5 +1,5 @@
-a.d(e, { T: () => n });
+a.d(e, { T: () => _ });
 var r = a(859502);
-function n() {
+function _() {
     (0, r.a)();
 }

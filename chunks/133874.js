@@ -255,17 +255,17 @@ var i = n(698091),
                         ref:
                             o &&
                             function (e) {
-                                a.current = S(r, e);
+                                a.current = T(r, e);
                             }
                     })
                 )
             );
         });
     };
-function S(e, t) {
+function T(e, t) {
     return e && (i.is.fun(e) ? e(t) : (e.current = t)), t;
 }
-var T = Symbol.for('AnimatedComponent'),
+var S = Symbol.for('AnimatedComponent'),
     A = function (e, t) {
         var n = void 0 === t ? {} : t,
             r = n.applyAnimatedValues,
@@ -295,7 +295,7 @@ var T = Symbol.for('AnimatedComponent'),
             },
             u = function (e) {
                 var t = N(e) || 'Anonymous';
-                return ((e = i.is.str(e) ? I(e, c) : e[T] || (e[T] = I(e, c))).displayName = 'Animated(' + t + ')'), e;
+                return ((e = i.is.str(e) ? I(e, c) : e[S] || (e[S] = I(e, c))).displayName = 'Animated(' + t + ')'), e;
             };
         return (
             i.each(e, function (e, t) {

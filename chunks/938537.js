@@ -42,8 +42,8 @@ function v(e, t, n) {
     (O.prototype = y.prototype);
 var I = (v.prototype = new O());
 (I.constructor = v), E(I, y.prototype), (I.isPureReactComponent = !0);
-var S = Array.isArray,
-    T = {
+var T = Array.isArray,
+    S = {
         H: null,
         A: null,
         T: null,
@@ -111,7 +111,7 @@ function x(e) {
     }
     throw e;
 }
-function k(e, t, n, r, o) {
+function M(e, t, n, r, o) {
     var s = typeof e;
     ('undefined' === s || 'boolean' === s) && (e = null);
     var l = !1;
@@ -130,17 +130,17 @@ function k(e, t, n, r, o) {
                         l = !0;
                         break;
                     case p:
-                        return k((l = e._init)(e._payload), t, n, r, o);
+                        return M((l = e._init)(e._payload), t, n, r, o);
                 }
         }
     if (l)
         return (
             (o = o(e)),
             (l = '' === r ? '.' + D(e, 0) : r),
-            S(o)
+            T(o)
                 ? ((n = ''),
                   null != l && (n = l.replace(w, '$&/') + '/'),
-                  k(o, t, n, '', function (e) {
+                  M(o, t, n, '', function (e) {
                       return e;
                   }))
                 : null != o && (R(o) && (o = C(o, n + (null == o.key || (e && e.key === o.key) ? '' : ('' + o.key).replace(w, '$&/') + '/') + l)), t.push(o)),
@@ -148,20 +148,20 @@ function k(e, t, n, r, o) {
         );
     l = 0;
     var c = '' === r ? '.' : r + ':';
-    if (S(e)) for (var u = 0; u < e.length; u++) (s = c + D((r = e[u]), u)), (l += k(r, t, n, s, o));
-    else if ('function' == typeof (u = m(e))) for (e = u.call(e), u = 0; !(r = e.next()).done; ) (s = c + D((r = r.value), u++)), (l += k(r, t, n, s, o));
+    if (T(e)) for (var u = 0; u < e.length; u++) (s = c + D((r = e[u]), u)), (l += M(r, t, n, s, o));
+    else if ('function' == typeof (u = m(e))) for (e = u.call(e), u = 0; !(r = e.next()).done; ) (s = c + D((r = r.value), u++)), (l += M(r, t, n, s, o));
     else if ('object' === s) {
-        if ('function' == typeof e.then) return k(x(e), t, n, r, o);
+        if ('function' == typeof e.then) return M(x(e), t, n, r, o);
         throw Error('Objects are not valid as a React child (found: ' + ('[object Object]' === (t = String(e)) ? 'object with keys {' + Object.keys(e).join(', ') + '}' : t) + '). If you meant to render a collection of children, use an array instead.');
     }
     return l;
 }
-function M(e, t, n) {
+function k(e, t, n) {
     if (null == e) return e;
     var r = [],
         i = 0;
     return (
-        k(e, r, '', '', function (e) {
+        M(e, r, '', '', function (e) {
             return t.call(n, e, i++);
         }),
         r
@@ -200,9 +200,9 @@ var U =
           };
 function G() {}
 (t.Children = {
-    map: M,
+    map: k,
     forEach: function (e, t, n) {
-        M(
+        k(
             e,
             function () {
                 t.apply(this, arguments);
@@ -213,7 +213,7 @@ function G() {}
     count: function (e) {
         var t = 0;
         return (
-            M(e, function () {
+            k(e, function () {
                 t++;
             }),
             t
@@ -221,7 +221,7 @@ function G() {}
     },
     toArray: function (e) {
         return (
-            M(e, function (e) {
+            k(e, function (e) {
                 return e;
             }) || []
         );
@@ -237,7 +237,7 @@ function G() {}
     (t.PureComponent = v),
     (t.StrictMode = s),
     (t.Suspense = f),
-    (t.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = T),
+    (t.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = S),
     (t.act = function () {
         throw Error('act(...) is not supported in production builds of React.');
     }),
@@ -319,72 +319,72 @@ function G() {}
         };
     }),
     (t.startTransition = function (e) {
-        var t = T.T,
+        var t = S.T,
             n = {};
-        T.T = n;
+        S.T = n;
         try {
             var r = e(),
-                i = T.S;
+                i = S.S;
             null !== i && i(n, r), 'object' == typeof r && null !== r && 'function' == typeof r.then && r.then(G, U);
         } catch (e) {
             U(e);
         } finally {
-            T.T = t;
+            S.T = t;
         }
     }),
     (t.unstable_useCacheRefresh = function () {
-        return T.H.useCacheRefresh();
+        return S.H.useCacheRefresh();
     }),
     (t.use = function (e) {
-        return T.H.use(e);
+        return S.H.use(e);
     }),
     (t.useActionState = function (e, t, n) {
-        return T.H.useActionState(e, t, n);
+        return S.H.useActionState(e, t, n);
     }),
     (t.useCallback = function (e, t) {
-        return T.H.useCallback(e, t);
+        return S.H.useCallback(e, t);
     }),
     (t.useContext = function (e) {
-        return T.H.useContext(e);
+        return S.H.useContext(e);
     }),
     (t.useDebugValue = function () {}),
     (t.useDeferredValue = function (e, t) {
-        return T.H.useDeferredValue(e, t);
+        return S.H.useDeferredValue(e, t);
     }),
     (t.useEffect = function (e, t) {
-        return T.H.useEffect(e, t);
+        return S.H.useEffect(e, t);
     }),
     (t.useId = function () {
-        return T.H.useId();
+        return S.H.useId();
     }),
     (t.useImperativeHandle = function (e, t, n) {
-        return T.H.useImperativeHandle(e, t, n);
+        return S.H.useImperativeHandle(e, t, n);
     }),
     (t.useInsertionEffect = function (e, t) {
-        return T.H.useInsertionEffect(e, t);
+        return S.H.useInsertionEffect(e, t);
     }),
     (t.useLayoutEffect = function (e, t) {
-        return T.H.useLayoutEffect(e, t);
+        return S.H.useLayoutEffect(e, t);
     }),
     (t.useMemo = function (e, t) {
-        return T.H.useMemo(e, t);
+        return S.H.useMemo(e, t);
     }),
     (t.useOptimistic = function (e, t) {
-        return T.H.useOptimistic(e, t);
+        return S.H.useOptimistic(e, t);
     }),
     (t.useReducer = function (e, t, n) {
-        return T.H.useReducer(e, t, n);
+        return S.H.useReducer(e, t, n);
     }),
     (t.useRef = function (e) {
-        return T.H.useRef(e);
+        return S.H.useRef(e);
     }),
     (t.useState = function (e) {
-        return T.H.useState(e);
+        return S.H.useState(e);
     }),
     (t.useSyncExternalStore = function (e, t, n) {
-        return T.H.useSyncExternalStore(e, t, n);
+        return S.H.useSyncExternalStore(e, t, n);
     }),
     (t.useTransition = function () {
-        return T.H.useTransition();
+        return S.H.useTransition();
     }),
     (t.version = '19.0.0');

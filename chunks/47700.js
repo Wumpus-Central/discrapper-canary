@@ -73,11 +73,11 @@ function v(e) {
         }
 }
 var I = !1,
-    S = -1,
-    T = 5,
+    T = -1,
+    S = 5,
     A = -1;
 function N() {
-    return !(t.unstable_now() - A < T);
+    return !(t.unstable_now() - A < S);
 }
 function C() {
     if (I) {
@@ -86,7 +86,7 @@ function C() {
         var n = !0;
         try {
             e: {
-                (m = !1), g && ((g = !1), b(S), (S = -1)), (h = !0);
+                (m = !1), g && ((g = !1), b(T), (T = -1)), (h = !0);
                 var a = p;
                 try {
                     a: {
@@ -138,7 +138,7 @@ function w() {
     I || ((I = !0), o());
 }
 function D(e, n) {
-    S = E(function () {
+    T = E(function () {
         e(t.unstable_now());
     }, n);
 }
@@ -155,7 +155,7 @@ function D(e, n) {
         m || h || ((m = !0), w());
     }),
     (t.unstable_forceFrameRate = function (e) {
-        0 > e || 125 < e ? console.error('forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported') : (T = 0 < e ? Math.floor(1000 / e) : 5);
+        0 > e || 125 < e ? console.error('forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported') : (S = 0 < e ? Math.floor(1000 / e) : 5);
     }),
     (t.unstable_getCurrentPriorityLevel = function () {
         return p;
@@ -230,7 +230,7 @@ function D(e, n) {
                 expirationTime: s,
                 sortIndex: -1
             }),
-            a > o ? ((e.sortIndex = a), n(d, e), null === r(u) && e === r(d) && (g ? (b(S), (S = -1)) : (g = !0), D(v, a - o))) : ((e.sortIndex = s), n(u, e), m || h || ((m = !0), w())),
+            a > o ? ((e.sortIndex = a), n(d, e), null === r(u) && e === r(d) && (g ? (b(T), (T = -1)) : (g = !0), D(v, a - o))) : ((e.sortIndex = s), n(u, e), m || h || ((m = !0), w())),
             e
         );
     }),

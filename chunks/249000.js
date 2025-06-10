@@ -200,8 +200,8 @@ class E extends (r = a.PureComponent) {
                 )
                     return;
                 E = !0;
-                let { clientWidth: I, clientHeight: S } = r,
-                    T = m(
+                let { clientWidth: I, clientHeight: T } = r,
+                    S = m(
                         d(
                             {
                                 top: n - this._offsetY,
@@ -210,28 +210,28 @@ class E extends (r = a.PureComponent) {
                             i,
                             a,
                             I,
-                            S
+                            T
                         )
                     );
                 if (g) {
-                    let e = _((T = p(T)));
+                    let e = _((S = p(S)));
                     (y = e[0]), (O = e[1]);
                 } else
-                    T = {
-                        top: T.top,
-                        left: T.left
+                    S = {
+                        top: S.top,
+                        left: S.left
                     };
                 2 === s && O !== this.state.horizontalOrientation && ((this._offsetX = I - this._offsetX), (v = !0)),
-                    2 === o && y !== this.state.verticalOrientation && ((this._offsetY = S - this._offsetY), (v = !0)),
-                    this.setDOMPositions(T),
-                    b || null == u || u(T, r),
-                    null == f || f(T, r),
+                    2 === o && y !== this.state.verticalOrientation && ((this._offsetY = T - this._offsetY), (v = !0)),
+                    this.setDOMPositions(S),
+                    b || null == u || u(S, r),
+                    null == f || f(S, r),
                     v && (null == h || h([y, O])),
                     this.setState({
                         dragging: E,
                         verticalOrientation: y,
                         horizontalOrientation: O,
-                        atTopEdge: 0 === T.top
+                        atTopEdge: 0 === S.top
                     });
             }),
             s(this, 'handleMouseUp', () => {

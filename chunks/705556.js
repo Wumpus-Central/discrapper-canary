@@ -47,7 +47,7 @@ function g(e) {
         O = (0, l.Z)({ guild: y }),
         v = (0, l.Z)({}),
         { trackUserProfileAction: I } = (0, d.KZ)(),
-        S = i.useRef(null);
+        T = i.useRef(null);
     return b
         ? null == y
             ? (0, r.jsx)(f.tG, {
@@ -61,7 +61,7 @@ function g(e) {
                   }
               })
             : (0, r.jsx)(o.yRy, {
-                  targetElementRef: S,
+                  targetElementRef: T,
                   renderPopout: (e) => {
                       let { closePopout: t } = e;
                       return (0, r.jsxs)(o.v2r, {
@@ -97,7 +97,7 @@ function g(e) {
                           f.tG,
                           m(
                               {
-                                  ref: S,
+                                  ref: T,
                                   text: _.intl.string(_.t.s5vZlZ),
                                   icon: o.vdY,
                                   autoFocus: !0,

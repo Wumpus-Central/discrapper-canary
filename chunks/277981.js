@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(35282), n(781311);
+n.d(t, { Z: () => T }), n(35282), n(781311);
 var r = n(255367),
     i = n(73800),
     a = n(392711),
@@ -38,7 +38,7 @@ function v(e, t, n) {
 function I(e) {
     return e.meta.url;
 }
-let S = {
+let T = {
     stores: [d.Z, h.Z],
     matches(e, t, n, r, i) {
         var a;

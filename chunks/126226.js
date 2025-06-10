@@ -28,8 +28,8 @@ var i = n(693789),
     O = n(761652),
     v = n(689079),
     I = n(388032),
-    S = n(270764);
-function T(e, t, n) {
+    T = n(270764);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -53,7 +53,7 @@ function A(e) {
                 })
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
@@ -167,7 +167,7 @@ let P = {
                 };
             },
             key: 'commands',
-            headerClassName: d ? S.legacyInputCommandHeader : null,
+            headerClassName: d ? T.legacyInputCommandHeader : null,
             headerTrailingContent: d
                 ? (0, r.jsx)(i.zx, {
                       type: 'button',

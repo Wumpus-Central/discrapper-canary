@@ -1,7 +1,7 @@
 a.d(e, { j: () => c });
 var r = a(696486),
-    n = a(793373),
-    _ = a(622916),
+    _ = a(793373),
+    n = a(622916),
     o = a(454463),
     i = a(163162);
 function c() {
@@ -13,15 +13,15 @@ function c() {
               if (i.m9.document.hidden && e) {
                   let t = 'cancelled',
                       { op: a, status: i } = (0, r.XU)(e);
-                  o.X && _.kg.log(`[Tracing] Transaction: ${t} -> since tab moved to the background, op: ${a}`),
+                  o.X && n.kg.log(`[Tracing] Transaction: ${t} -> since tab moved to the background, op: ${a}`),
                       i ||
                           e.setStatus({
-                              code: n.jt,
+                              code: _.jt,
                               message: t
                           }),
                       e.setAttribute('sentry.cancellation_reason', 'document.hidden'),
                       e.end();
               }
           })
-        : o.X && _.kg.warn('[Tracing] Could not set up background tab detection due to lack of global document');
+        : o.X && n.kg.warn('[Tracing] Could not set up background tab detection due to lack of global document');
 }

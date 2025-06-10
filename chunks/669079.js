@@ -15,7 +15,7 @@ n.d(t, {
     e$: () => J,
     iM: () => Q,
     pO: () => U,
-    xr: () => M,
+    xr: () => k,
     z2: () => $
 }),
     n(388685),
@@ -73,9 +73,9 @@ function y(e) {
 let O = ['discordapp.com/gifts', 'discord.com/gifts'],
     v = 3,
     I = [p.Z.escape(window.GLOBAL_ENV.GIFT_CODE_HOST), ...O.map((e) => p.Z.escape(e))].join('|'),
-    S = RegExp('(?: |^|https?://)(?:'.concat(I, ')/([a-z0-9-]+)'), 'gi'),
-    T = [...['discord.com/billing/promotions', 'promos.discord.gg'].map((e) => p.Z.escape(e))].join('|'),
-    A = RegExp('(?: |^|https?://)(?:'.concat(T, ')(/|(/)?\\?code=)([a-z0-9-]+)'), 'gi'),
+    T = RegExp('(?: |^|https?://)(?:'.concat(I, ')/([a-z0-9-]+)'), 'gi'),
+    S = [...['discord.com/billing/promotions', 'promos.discord.gg'].map((e) => p.Z.escape(e))].join('|'),
+    A = RegExp('(?: |^|https?://)(?:'.concat(S, ')(/|(/)?\\?code=)([a-z0-9-]+)'), 'gi'),
     N = 'abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789',
     C = (e, t) =>
         Array(t)
@@ -88,8 +88,8 @@ let O = ['discordapp.com/gifts', 'discord.com/gifts'],
     D = 'WUMP-?',
     L = [R, P, w, '[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}'].join('|'),
     x = new RegExp('^('.concat(D, ')?(').concat(L, ')$')),
-    k = '-';
-var M = (function (e) {
+    M = '-';
+var k = (function (e) {
     return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.CUSTOM_STYLE = 1)] = 'CUSTOM_STYLE'), (e[(e.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD = 2)] = 'CUSTOM_MESSAGE_EMOJI_SOUNDBOARD'), e;
 })({});
 let j = (e, t) => (i.tq || i.Em ? 0 : null != e || t ? 2 : 1),
@@ -118,7 +118,7 @@ let V = (e) => (null == e ? void 0 : e.type) === m.uaV.CUSTOM_GIFT && (null == e
         let t;
         if (null == e || l.l.getCurrentConfig({ location: 'findGiftCodes' }).enabled) return [];
         let n = new Set();
-        for (; null != (t = S.exec(e)) && n.size < v; ) n.add(F(t[1]));
+        for (; null != (t = T.exec(e)) && n.size < v; ) n.add(F(t[1]));
         for (; null != (t = A.exec(e)) && n.size < v; ) n.add(F(t[t.length - 1]));
         return Array.from(n);
     };
@@ -270,7 +270,7 @@ function ee(e) {
     let t = e.trim().split('/').pop().match(x);
     if (null == t) return null;
     let [n, r, i] = t;
-    return null == i ? null : i.replace(RegExp(k, 'g'), '');
+    return null == i ? null : i.replace(RegExp(M, 'g'), '');
 }
 let et = (e, t) =>
     (0, a.e7)([c.Z], () => {

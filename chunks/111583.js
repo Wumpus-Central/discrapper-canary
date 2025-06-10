@@ -99,7 +99,7 @@ function O(e) {
             timeout: c,
             prevSend: i
         }),
-        T({
+        S({
             channelId: t,
             userId: n
         })
@@ -125,7 +125,7 @@ function I(e) {
         }))
     );
 }
-function S(e, t) {
+function T(e, t) {
     return setTimeout(() => {
         s.Z.dispatch({
             type: 'TYPING_STOP',
@@ -134,10 +134,10 @@ function S(e, t) {
         });
     }, h);
 }
-function T(e) {
+function S(e) {
     let { channelId: t, userId: n } = e,
         r = p({}, y(t));
-    clearTimeout(r[n]), (r[n] = S(t, n)), (E[t] = r);
+    clearTimeout(r[n]), (r[n] = T(t, n)), (E[t] = r);
 }
 function A(e) {
     let { channelId: t, userId: n } = e,
@@ -178,7 +178,7 @@ class P extends (i = a.ZP.Store) {
 }
 _(P, 'displayName', 'TypingStore');
 let w = new P(s.Z, {
-    TYPING_START: T,
+    TYPING_START: S,
     TYPING_STOP: A,
     TYPING_START_LOCAL: O,
     TYPING_STOP_LOCAL: I,

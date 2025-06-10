@@ -1,31 +1,31 @@
 a.d(e, {
     Qy: () => O,
     TM: () => g,
-    Tb: () => E,
-    YA: () => f,
-    av: () => N,
+    Tb: () => s,
+    YA: () => A,
+    av: () => f,
     cg: () => y,
     dk: () => h,
     eN: () => u,
-    eW: () => p,
-    mG: () => A,
+    eW: () => T,
+    mG: () => N,
     rJ: () => R,
     sU: () => d,
     uT: () => l,
     v: () => I,
     xv: () => L,
     yj: () => D,
-    yl: () => T
+    yl: () => p
 });
 var r = a(622916),
-    n = a(899517),
-    _ = a(559508),
+    _ = a(899517),
+    n = a(559508),
     o = a(263449),
     i = a(255768),
     c = a(112797),
-    s = a(822578);
-function E(t, e) {
-    return (0, o.nZ)().captureException(t, (0, s.U0)(e));
+    E = a(822578);
+function s(t, e) {
+    return (0, o.nZ)().captureException(t, (0, E.U0)(e));
 }
 function l(t, e) {
     let a = 'string' == typeof e ? e : void 0,
@@ -44,19 +44,19 @@ function R(t) {
 function d(t, e) {
     (0, o.aF)().setExtra(t, e);
 }
-function A(t) {
+function N(t) {
     (0, o.aF)().setTags(t);
 }
-function f(t, e) {
+function A(t, e) {
     (0, o.aF)().setTag(t, e);
 }
-function N(t) {
+function f(t) {
     (0, o.aF)().setUser(t);
 }
-function p() {
+function T() {
     return (0, o.aF)().lastEventId();
 }
-async function T(t) {
+async function p(t) {
     let e = (0, o.s3)();
     return e ? e.flush(t) : (i.X && r.kg.warn('Cannot flush events. No client defined.'), Promise.resolve(!1));
 }
@@ -74,13 +74,13 @@ function D(t) {
     let e = (0, o.s3)(),
         a = (0, o.aF)(),
         r = (0, o.nZ)(),
-        { release: i, environment: s = _.J } = (e && e.getOptions()) || {},
-        { userAgent: E } = n.n.navigator || {},
+        { release: i, environment: E = n.J } = (e && e.getOptions()) || {},
+        { userAgent: s } = _.n.navigator || {},
         l = (0, c.Hv)({
             release: i,
-            environment: s,
+            environment: E,
             user: r.getUser() || a.getUser(),
-            ...(E && { userAgent: E }),
+            ...(s && { userAgent: s }),
             ...t
         }),
         u = a.getSession();

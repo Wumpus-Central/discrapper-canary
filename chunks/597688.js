@@ -30,8 +30,8 @@ let m = new Map(),
     O = m,
     v = g,
     I = E,
-    S = [],
-    T = b,
+    T = [],
+    S = b,
     A = y,
     N = null,
     C = !1,
@@ -44,11 +44,11 @@ let m = new Map(),
         let { skuId: t } = e;
         (R = new Set(R)).add(t), (P = new Map(P)).delete(t), (w = new Map(w)).delete(t);
     },
-    k = (e) => {
+    M = (e) => {
         let { skuId: t, error: n } = e;
         (R = new Set(R)).delete(t), (P = new Map(P)).set(t, n), (w = new Map(w)).set(t, Date.now());
     },
-    M = (e) => {
+    k = (e) => {
         let { skuId: t, product: n } = e;
         v.set(t, n), (R = new Set(R)).delete(t), (P = new Map(P)).delete(t), (w = new Map(w)).delete(t);
     },
@@ -67,9 +67,9 @@ let m = new Map(),
             O.forEach((e, r) => {
                 !t.has(r) && (null == e.unpublishedAt || e.unpublishedAt > n) && t.set(r, e);
             }),
-                (T = new Map([...(O = t).values()].map((e) => [e.storeListingId, e]))),
+                (S = new Map([...(O = t).values()].map((e) => [e.storeListingId, e]))),
                 (v = new Map((0, _.Cs)(O, !0).map((e) => [e.skuId, e]))),
-                (S = [...(I = new Map((0, _.Cs)(O, !1).map((e) => [e.storeListingId, e]))).values()]);
+                (T = [...(I = new Map((0, _.Cs)(O, !1).map((e) => [e.storeListingId, e]))).values()]);
         }
         F(e.categories, v), (i = Date.now()), (C = !1), (r = void 0), (a = void 0);
     },
@@ -135,7 +135,7 @@ class Y extends (o = l.ZP.Store) {
         return v;
     }
     get productsWithVariantsAsGroup() {
-        return S;
+        return T;
     }
     get recommendedGiftSkuIds() {
         return A;
@@ -159,7 +159,7 @@ class Y extends (o = l.ZP.Store) {
         return null != e ? I.get(e) : void 0;
     }
     getCategoryByStoreListingId(e) {
-        return null != e ? T.get(e) : void 0;
+        return null != e ? S.get(e) : void 0;
     }
     getCategoryForProduct(e) {
         let t = this.getProduct(e);
@@ -172,8 +172,8 @@ let W = new Y(c.Z, {
     COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: G,
     COLLECTIBLES_CATEGORIES_FETCH_FAILURE: U,
     COLLECTIBLES_PRODUCT_FETCH: x,
-    COLLECTIBLES_PRODUCT_FETCH_SUCCESS: M,
-    COLLECTIBLES_PRODUCT_FETCH_FAILURE: k,
+    COLLECTIBLES_PRODUCT_FETCH_SUCCESS: k,
+    COLLECTIBLES_PRODUCT_FETCH_FAILURE: M,
     COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: B,
     COLLECTIBLES_SKIP_NUM_CATEGORIES: H,
     LOGOUT: V

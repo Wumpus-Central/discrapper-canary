@@ -80,7 +80,7 @@ function O(e) {
         g = (0, o.e7)([f.default], () => f.default.getUser(l)),
         { displayParticipants: E, participant1: b, participant2: O, numOtherParticipants: v } = (0, p.Z)(i, a),
         I = (0, o.e7)([u.ZP], () => u.ZP.getMember(t, l)),
-        S = (0, o.e7)(
+        T = (0, o.e7)(
             [d.Z],
             () => {
                 var e;
@@ -88,7 +88,7 @@ function O(e) {
             },
             [t, I]
         ),
-        T = (0, c.X)(t, null == I ? void 0 : I.colorStrings);
+        S = (0, c.X)(t, null == I ? void 0 : I.colorStrings);
     if (null == g) return null;
     let A = null == I ? void 0 : I.colorString,
         N = _.ZP.getName(t, n, g);
@@ -102,8 +102,8 @@ function O(e) {
             }),
             (0, r.jsx)(s.PUh, {
                 color: null != A ? A : void 0,
-                roleName: S,
-                roleColors: T,
+                roleName: T,
+                roleColors: S,
                 name: N,
                 className: m.userName,
                 'aria-hidden': !0

@@ -112,7 +112,7 @@ function O(e) {
         O = E(e, ['enabled', 'join', 'channel', 'onChange', 'onCameraUnavailable', 'cameraUnavailable', 'hasPermission', 'className', 'channelLimitReached', 'channelLimit', 'centerButton', 'onPopoutClick']);
     let v = m ? d.d : d.Z,
         I = () => (n ? 'join' : t ? 'green' : 'primaryDark'),
-        S = (e) => (n ? 'join' : e ? 'green' : O.color);
+        T = (e) => (n ? 'join' : e ? 'green' : O.color);
     return (0, r.jsx)(y, {
         enabled: t,
         join: n,
@@ -129,7 +129,7 @@ function O(e) {
             return (0, r.jsx)(
                 v,
                 g(h({}, l, O), {
-                    color: S(s),
+                    color: T(s),
                     caretColor: I(),
                     isActive: s,
                     onMouseEnter: (e) => {

@@ -82,16 +82,16 @@ function O(e) {
     null != r && ((b[n] = r.map((e) => (e.messageId === t ? _(d({}, e), { reportSubmit: !0 }) : e))), (E[t] = _(d({}, E[t]), { reportSubmit: !0 })));
 }
 function v() {
-    S();
+    T();
 }
 function I(e) {
     let { explicitContentScanVersion: t } = e;
-    (r = t), S();
+    (r = t), T();
 }
-function S() {
+function T() {
     (E = {}), (b = {});
 }
-class T extends (i = a.ZP.Store) {
+class S extends (i = a.ZP.Store) {
     getFpMessageInfo(e) {
         return E[e];
     }
@@ -107,8 +107,8 @@ class T extends (i = a.ZP.Store) {
         return (0, c.U2)('ExplicitMediaStore.validContentScanVersion') ? h : null != r ? r : p;
     }
 }
-u(T, 'displayName', 'FalsePositiveStore');
-let A = new T(o.Z, {
+u(S, 'displayName', 'FalsePositiveStore');
+let A = new S(o.Z, {
     LOGOUT: v,
     CONNECTION_OPEN: I,
     MESSAGE_EXPLICIT_CONTENT_FP_CREATE: y,

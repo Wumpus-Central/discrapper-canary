@@ -16,7 +16,7 @@ function _(e) {
         O = p || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1,
         v = O ? i.vdY : i.SrA,
         I = (0, o.M)(O),
-        S = () => {
+        T = () => {
             if (!O && !I) {
                 null == b || b();
                 return;
@@ -39,7 +39,7 @@ function _(e) {
         children:
             !E &&
             (0, r.jsxs)(i.P3F, {
-                onClick: S,
+                onClick: T,
                 className: f.clickable,
                 children: [
                     (0, r.jsx)(v, {

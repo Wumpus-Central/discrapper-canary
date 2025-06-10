@@ -102,13 +102,13 @@ e.exports = function (e) {
         I = {
             variants: [e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]
         },
-        S = {
+        T = {
             scope: 'string',
             begin: /"/,
             end: /"/,
             contains: [e.BACKSLASH_ESCAPE]
         },
-        T = {
+        S = {
             scope: 'string',
             begin: /@"/,
             end: /"/,
@@ -150,7 +150,7 @@ e.exports = function (e) {
             match: i(/'/, o(/[^\\']/, /\\(?:.|\d{3}|x[a-fA-F\d]{2}|u[a-fA-F\d]{4}|U[a-fA-F\d]{8})/), /'/)
         };
     return (
-        (N.contains = [R, C, T, S, w, n, c, d, E, O, v, I, _, h]),
+        (N.contains = [R, C, S, T, w, n, c, d, E, O, v, I, _, h]),
         {
             name: 'F#',
             aliases: ['fs', 'f#'],
@@ -160,7 +160,7 @@ e.exports = function (e) {
             contains: [
                 n,
                 {
-                    variants: [P, R, C, A, T, S, w]
+                    variants: [P, R, C, A, S, T, w]
                 },
                 c,
                 d,
@@ -170,7 +170,7 @@ e.exports = function (e) {
                     begin: /\[</,
                     end: />\]/,
                     relevance: 2,
-                    contains: [d, A, T, S, w, I]
+                    contains: [d, A, S, T, w, I]
                 },
                 b,
                 E,

@@ -25,8 +25,8 @@ var r = n(255367),
     O = n(286961),
     v = n(300284),
     I = n(876917),
-    S = n(642619),
-    T = n(824393),
+    T = n(642619),
+    S = n(824393),
     A = n(341907),
     N = n(350327),
     C = n(507808),
@@ -36,8 +36,8 @@ var r = n(255367),
     D = n(597688),
     L = n(1870),
     x = n(429368),
-    k = n(884697),
-    M = n(587792),
+    M = n(884697),
+    k = n(587792),
     j = n(228624),
     U = n(635552),
     G = n(905357),
@@ -269,33 +269,33 @@ let eu = 880,
     },
     eh = (e) => {
         let { product: t, onClose: n, confettiTarget: a, confettiCanvas: o, hideConfetti: s = !1, analyticsLocations: l, overrideTitle: c, overrideDescription: p, selectedVariantIndex: E, shouldShowPromotionalExperience: b, itemConsumed: v = !0, purchaseType: I = ee.o8.FIAT } = e,
-            S = (0, M.o)('CollectiblesCollectedModal'),
+            T = (0, k.o)('CollectiblesCollectedModal'),
             A = (0, Q.W)(t, E),
             N = (0, f.e7)([R.default], () => {
                 var e, t;
                 return null != (t = null == (e = R.default.getCurrentUser()) ? void 0 : e.isStaff()) && t;
             }),
             C = i.useMemo(() => {
-                if (!S) return;
+                if (!T) return;
                 let e = A.type === u.Z.AVATAR_DECORATION ? (0, $.R9)(A.skuId, N) : null;
                 return null != e ? D.Z.getProduct(e) : void 0;
-            }, [S, A.skuId, A.type, N]),
+            }, [T, A.skuId, A.type, N]),
             { confettiColors: P } = (0, F.Z)(A.styles),
             w = (0, f.e7)([h.Z], () => h.Z.useReducedMotion),
             L = i.useRef(null),
             { analyticsLocations: x } = (0, g.ZP)([...l, m.Z.COLLECTIBLES_COLLECTED_MODAL]),
-            { collectedModalBackground: k } = (0, J.Ac)(A),
+            { collectedModalBackground: M } = (0, J.Ac)(A),
             j = (0, O.Z)();
         function U() {
             var e;
             if (A.skuId === d.a.PREMIUM_TIER_2_3_DAY) {
                 let e = ei.intl.formatToPlainString(ei.t['Cz1G9/'], { days: 3 });
                 return v
-                    ? (0, r.jsx)(T.j, {
+                    ? (0, r.jsx)(S.j, {
                           duration: e,
                           onClose: n
                       })
-                    : (0, r.jsx)(T.h, {
+                    : (0, r.jsx)(S.h, {
                           duration: e,
                           onClose: n
                       });
@@ -312,7 +312,7 @@ let eu = 880,
                                       style: t
                                   })
                                 : (0, r.jsx)(Z.Z, {
-                                      asset: k,
+                                      asset: M,
                                       size: (0, H.ML)(eu),
                                       className: ea.decorationBanner,
                                       categoryBannerOverride: (0, ee.ZS)(A.categorySkuId)
@@ -377,8 +377,8 @@ let eu = 880,
                 onSuccess: o,
                 onError: o
             }),
-            { firstAvatarDecoration: I, firstProfileEffect: S } = (0, B.Rj)(n),
-            T = (0, k.x6)(n) ? null != I && null != S : null != I || null != S || n.type === u.Z.NAMEPLATE;
+            { firstAvatarDecoration: I, firstProfileEffect: T } = (0, B.Rj)(n),
+            S = (0, M.x6)(n) ? null != I && null != T : null != I || null != T || n.type === u.Z.NAMEPLATE;
         i.useEffect(() => {
             ee.Vt.ORB_PROFILE_BADGE === n.skuId && (0, N.Ls)([(0, K.X)()], em);
         }, [n.skuId]);
@@ -482,10 +482,10 @@ let eu = 880,
                               : (0, r.jsx)(eb, {
                                     product: n,
                                     onClose: o,
-                                    isPrimary: T,
+                                    isPrimary: S,
                                     analyticsLocations: s
                                 }),
-                        T
+                        S
                             ? (0, r.jsx)(_.zxk, {
                                   onClick: y,
                                   submitting: v,
@@ -543,7 +543,7 @@ let eu = 880,
                     return;
                 }
                 t.type === u.Z.PROFILE_EFFECT &&
-                    (0, S.H)({
+                    (0, T.H)({
                         initialSelectedEffectId: d.id,
                         analyticsLocations: o
                     });
@@ -565,17 +565,17 @@ let eu = 880,
                 purchaseType: p,
                 skuId: b.skuId
             }),
-            { analyticsLocations: S } = (0, g.ZP)([...s, m.Z.COLLECTIBLES_COLLECTED_MODAL]),
-            T = i.useMemo(() => (0, k.jm)(b.type, b.skuId), [b.type, b.skuId]);
+            { analyticsLocations: T } = (0, g.ZP)([...s, m.Z.COLLECTIBLES_COLLECTED_MODAL]),
+            S = i.useMemo(() => (0, M.jm)(b.type, b.skuId), [b.type, b.skuId]);
         return (
             i.useEffect(() => {
                 P.default.track(et.rMx.OPEN_MODAL, {
                     type: et.jXE.COLLECTIBLES_SHOP_COLLECTED_MODAL,
-                    location_stack: S,
+                    location_stack: T,
                     sku_id: b.skuId,
-                    product_type: T
+                    product_type: S
                 });
-            }, [S, b.skuId, b.items, T]),
+            }, [T, b.skuId, b.items, S]),
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(a.O_, {
@@ -598,7 +598,7 @@ let eu = 880,
                                 onClose: o,
                                 confettiCanvas: O,
                                 hideConfetti: null != I,
-                                analyticsLocations: S,
+                                analyticsLocations: T,
                                 overrideTitle: l,
                                 overrideDescription: c,
                                 selectedVariantIndex: E,

@@ -26,8 +26,8 @@ var r = n(990547),
     O = n(626135),
     v = n(700785),
     I = n(74538),
-    S = n(573261),
-    T = n(668781),
+    T = n(573261),
+    S = n(668781),
     A = n(981631),
     N = n(388032);
 function C(e, t, n) {
@@ -103,19 +103,19 @@ function L(e, t) {
     return i;
 }
 let x = (e) => {
-        T.Z.show({
+        S.Z.show({
             title: N.intl.string(N.t.cTaRxM),
             body: N.intl.formatToPlainString(N.t['VSd+Ag'], { quantity: e })
         });
     },
-    k = (e) => {
+    M = (e) => {
         o.Z.dispatch({
             type: 'GUILD_DELETE',
             guild: { id: e }
         });
     },
-    M = () => {
-        T.Z.show({
+    k = () => {
+        S.Z.show({
             title: N.intl.string(N.t.ZZlox8),
             body: N.intl.string(N.t.ZUEGFh)
         });
@@ -201,7 +201,7 @@ let G = {
                 let e = y.default.getCurrentUser();
                 I.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? x(A.tHP) : x(A.DZw);
             }
-            throw ((null == (s = t.body) ? void 0 : s.code) === A.evJ.GUILD_AT_CAPACITY && M(), m && (null == (l = t.body) ? void 0 : l.code) === A.evJ.UNKNOWN_GUILD && k(e), t);
+            throw ((null == (s = t.body) ? void 0 : s.code) === A.evJ.GUILD_AT_CAPACITY && k(), m && (null == (l = t.body) ? void 0 : l.code) === A.evJ.UNKNOWN_GUILD && M(e), t);
         }
     },
     waitForGuild: j,
@@ -210,7 +210,7 @@ let G = {
             a = t;
         (null == t ? void 0 : t.hasOwnProperty('welcomeModalChannelId')) && null == t.welcomeModalChannelId && (a = w(R({}, t), { welcomeModalChannelId: null != i ? i : void 0 })), (0, c.Z)(A.Z5c.CHANNEL(e, i, r), a), await new Promise(setImmediate);
     },
-    deleteGuild: k,
+    deleteGuild: M,
     selectGuild(e) {
         (0, u.a)(e);
     },
@@ -270,7 +270,7 @@ let G = {
             }),
     setCommunicationDisabledUntil(e) {
         let { guildId: t, userId: n, communicationDisabledUntilTimestamp: i, duration: a, reason: o, location: s, moderatorReportId: l } = e;
-        return S.Z.patch({
+        return T.Z.patch({
             url: A.ANM.GUILD_MEMBER(t, n),
             reason: o,
             body: {

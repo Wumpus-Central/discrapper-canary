@@ -19,8 +19,8 @@ var r = n(754675),
     O = '[object Int16Array]',
     v = '[object Int32Array]',
     I = '[object Uint8Array]',
-    S = '[object Uint8ClampedArray]',
-    T = '[object Uint16Array]',
+    T = '[object Uint8ClampedArray]',
+    S = '[object Uint16Array]',
     A = '[object Uint32Array]';
 e.exports = function (e, t, n) {
     var N = e.constructor;
@@ -38,8 +38,8 @@ e.exports = function (e, t, n) {
         case O:
         case v:
         case I:
-        case S:
         case T:
+        case S:
         case A:
             return s(e, n);
         case u:

@@ -70,9 +70,9 @@ function y(e) {
     if (null == y) return null;
     let v = (0, d.a)(y.buckets, y.description).find((e) => e.value === i),
         I = +(null != v),
-        S = null != O && null != v && O.bucket === v.value,
-        T = () => {
-            null != v && (S ? (0, u.rX)(n, null) : (0, u.rX)(n, v.value));
+        T = null != O && null != v && O.bucket === v.value,
+        S = () => {
+            null != v && (T ? (0, u.rX)(n, null) : (0, u.rX)(n, v.value));
         },
         A = (0, r.jsx)(b, { url: t }),
         N = null;
@@ -131,9 +131,9 @@ function y(e) {
                                     justify: 'end',
                                     children: (0, r.jsx)(o.zxk, {
                                         fullWidth: !0,
-                                        onClick: T,
-                                        color: S ? o.zxk.Colors.RED : o.zxk.Colors.BRAND,
-                                        children: S ? 'Clear Treatment '.concat(v.value) : 'Apply Treatment '.concat(v.value)
+                                        onClick: S,
+                                        color: T ? o.zxk.Colors.RED : o.zxk.Colors.BRAND,
+                                        children: T ? 'Clear Treatment '.concat(v.value) : 'Apply Treatment '.concat(v.value)
                                     })
                                 })
                               : (0, r.jsx)('div', {

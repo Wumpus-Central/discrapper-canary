@@ -3,9 +3,9 @@ n.d(t, {
     IZ: () => b,
     PP: () => g,
     Ub: () => m,
-    c6: () => S,
+    c6: () => T,
     m9: () => v,
-    mT: () => T,
+    mT: () => S,
     qn: () => O,
     rC: () => I,
     tI: () => y
@@ -175,7 +175,7 @@ function I(e) {
     let { categoryId: t } = e;
     u.default.track(d.rMx.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: t });
 }
-function S(e) {
+function T(e) {
     let { loadId: t, searchId: n, query: r, guildResults: i, analyticsContext: a, categoryId: o, isTagSearch: s } = e;
     u.default.track(d.rMx.SEARCH_RESULT_VIEWED, {
         search_type: s ? d.aib.GUILD_DISCOVERY_TAG : d.aib.GUILD_DISCOVERY,
@@ -188,7 +188,7 @@ function S(e) {
         category_id: o
     });
 }
-function T(e) {
+function S(e) {
     let t = a.Z.getLoadId(e);
     u.default.track(d.rMx.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
         guild_id: e,

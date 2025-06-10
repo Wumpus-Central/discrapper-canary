@@ -1,8 +1,8 @@
 n.d(t, {
-    Vh: () => T,
+    Vh: () => S,
     f: () => I,
     hR: () => R,
-    xF: () => S
+    xF: () => T
 }),
     n(35282),
     n(190126),
@@ -78,7 +78,7 @@ function I(e, t) {
     let n = E[e].serialize(t);
     return n ? ''.concat(e, ':').concat(n.toString()) : null;
 }
-function S(e, t, n) {
+function T(e, t, n) {
     if (null != t && t.includes(':')) {
         let [e, r] = t.split(':');
         return e === u.ABu.TWITCH ? (null == n || 'number' == typeof n ? void new l.Z('ApplicationAssetUtils').warn('getAssetImage: size must === [number, number] for Twitch') : E[u.ABu.TWITCH].deserialize(r, n)) : Object.prototype.hasOwnProperty.call(E, e) ? E[e].deserialize(r) : void 0;
@@ -94,7 +94,7 @@ function S(e, t, n) {
               .concat(t, '.png')
               .concat(i);
 }
-async function T(e) {
+async function S(e) {
     let t = await v(e);
     return null == t ? void 0 : t.assets;
 }
@@ -153,7 +153,7 @@ async function R(e, t) {
             }),
             r
         );
-    let a = await T(e);
+    let a = await S(e);
     return (o.Z.dispatch({
         type: 'APPLICATION_ASSETS_UPDATE',
         applicationId: e,

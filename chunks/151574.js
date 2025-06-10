@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(378233),
     v = n(419922),
     I = n(490095),
-    S = n(652136),
-    T = n(626135),
+    T = n(652136),
+    S = n(626135),
     A = n(280930),
     N = n(606301),
     C = n(278754),
@@ -69,7 +69,7 @@ function x(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,7 +80,7 @@ function k(e, t) {
         e
     );
 }
-function M(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -109,10 +109,10 @@ function Z(e) {
     let { isFocused: t, isHidden: n, sendability: i, listIndex: a, sticker: l, onMouseOver: c, onSelectSticker: u } = e,
         d = (0, s.JA)(''.concat(a)),
         { tabIndex: _ } = d,
-        p = M(d, ['tabIndex']);
+        p = k(d, ['tabIndex']);
     return (0, r.jsxs)(
         f.P3F,
-        k(L({}, p), {
+        M(L({}, p), {
             tabIndex: n ? -1 : _,
             className: o()(w.suggestedExpression, { [w.suggestedExpressionFocused]: t }),
             focusProps: { enabled: !1 },
@@ -243,7 +243,7 @@ let Y = i.memo(function (e) {
         es = (e, t) => {
             if (ea) {
                 if (
-                    (T.default.track(R.rMx.AUTO_SUGGEST_EXPRESSION_SELECTED, {
+                    (S.default.track(R.rMx.AUTO_SUGGEST_EXPRESSION_SELECTED, {
                         sticker_id: e.id,
                         suggestion_trigger: W
                     }),
@@ -253,7 +253,7 @@ let Y = i.memo(function (e) {
                 else if ((0, O.jl)(e)) {
                     let t = b.Z.getStickerPack(e.pack_id);
                     null != t &&
-                        (0, S.Z)({
+                        (0, T.Z)({
                             stickerPack: t,
                             analyticsLocations: $
                         });
@@ -292,10 +292,10 @@ let Y = i.memo(function (e) {
                             children: (0, r.jsx)(s.SJ, {
                                 children: (e) => {
                                     var { ref: t, tabIndex: n } = e,
-                                        i = M(e, ['ref', 'tabIndex']);
+                                        i = k(e, ['ref', 'tabIndex']);
                                     return (0, r.jsx)(
                                         'div',
-                                        k(
+                                        M(
                                             L(
                                                 {
                                                     className: w.stickerResults,
@@ -362,7 +362,7 @@ let Y = i.memo(function (e) {
                                         }),
                                         (0, r.jsx)(f.P3F, {
                                             onClick: () => {
-                                                T.default.track(R.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
+                                                S.default.track(R.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
                                                     enabled: !1,
                                                     location: { section: R.jXE.EXPRESSION_PICKER }
                                                 }),
@@ -373,7 +373,7 @@ let Y = i.memo(function (e) {
                                                 children: (e) =>
                                                     (0, r.jsx)(
                                                         f.Dio,
-                                                        k(
+                                                        M(
                                                             L(
                                                                 {
                                                                     size: 'md',

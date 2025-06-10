@@ -126,10 +126,10 @@ function I(e) {
     for (let e = 0, s = a.length; e < s; ++e) -1 !== (t = (n = a[e]).indexOf(':')) && ((r = n.slice(0, t).toLowerCase()), (i = b(n.slice(t + 1))), (o[r] = i));
     return o;
 }
-function S(e) {
+function T(e) {
     return /[/+]json($|[^-\w])/i.test(e);
 }
-function T(e) {
+function S(e) {
     (this.req = e), (this.xhr = this.req.xhr), (this.text = ('HEAD' !== this.req.method && ('' === this.xhr.responseType || 'text' === this.xhr.responseType)) || void 0 === this.xhr.responseType ? this.xhr.responseText : null), (this.statusText = this.req.xhr.statusText);
     let t = this.xhr.status;
     1223 === t && (t = 204), this._setStatusProperties(t), (this.headers = I(this.xhr.getAllResponseHeaders())), (this.header = this.headers), (this.header['content-type'] = this.xhr.getResponseHeader('content-type')), this._setHeaderProperties(this.header), null === this.text && e._responseType ? (this.body = this.xhr.response) : (this.body = 'HEAD' === this.req.method ? null : this._parseBody(this.text ? this.text : this.xhr.response));
@@ -146,7 +146,7 @@ function A(e, t) {
                 t = null,
                 r = null;
             try {
-                r = new T(n);
+                r = new S(n);
             } catch (e) {
                 return ((t = Error('Parser is unable to parse the response')).parse = !0), (t.original = e), n.xhr ? ((t.rawResponse = void 0 === n.xhr.responseType ? n.xhr.responseText : n.xhr.response), (t.status = n.xhr.status ? n.xhr.status : null), (t.statusCode = t.status)) : ((t.rawResponse = null), (t.status = null)), n.callback(t);
             }
@@ -177,19 +177,19 @@ function A(e, t) {
         'application/x-www-form-urlencoded': v,
         'application/json': JSON.parse
     }),
-    _(T.prototype, h.prototype),
-    (T.prototype._parseBody = function (e) {
+    _(S.prototype, h.prototype),
+    (S.prototype._parseBody = function (e) {
         let t = E.parse[this.type];
-        return this.req._parser ? this.req._parser(this, e) : (!t && S(this.type) && (t = E.parse['application/json']), t && e && (e.length > 0 || e instanceof Object) ? t(e) : null);
+        return this.req._parser ? this.req._parser(this, e) : (!t && T(this.type) && (t = E.parse['application/json']), t && e && (e.length > 0 || e instanceof Object) ? t(e) : null);
     }),
-    (T.prototype.toError = function () {
+    (S.prototype.toError = function () {
         let e = this.req,
             t = e.method,
             n = e.url,
             r = Error(`cannot ${t} ${n} (${this.status})`);
         return (r.status = this.status), (r.method = t), (r.url = n), r;
     }),
-    (E.Response = T),
+    (E.Response = S),
     s(A.prototype),
     _(A.prototype, u.prototype),
     (A.prototype.type = function (e) {
@@ -292,7 +292,7 @@ function A(e, t) {
         if ((this._withCredentials && (t.withCredentials = !0), !this._formData && 'GET' !== this.method && 'HEAD' !== this.method && 'string' != typeof n && !this._isHost(n))) {
             let e = this._header['content-type'],
                 t = this._serializer || E.serialize[e ? e.split(';')[0] : ''];
-            !t && S(e) && (t = E.serialize['application/json']), t && (n = t(n));
+            !t && T(e) && (t = E.serialize['application/json']), t && (n = t(n));
         }
         for (let e in this.header) null !== this.header[e] && p(this.header, e) && t.setRequestHeader(e, this.header[e]);
         this._responseType && (t.responseType = this._responseType), this.emit('request', this), t.send(void 0 === n ? null : n);

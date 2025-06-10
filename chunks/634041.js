@@ -84,11 +84,11 @@ function I(e) {
     let r = null != e ? e : (0, d.Gx)(null == (t = s.Z.settings.voiceAndVideo) ? void 0 : t.videoBackgroundFilterDesktop, n.id);
     return null != c.Z.getVoiceChannelId() && l.Z.isVideoEnabled() && null != r;
 }
-function S(e) {
+function T(e) {
     let { backgroundOption: t } = e;
     I(t) && (E = !0);
 }
-function T(e) {
+function S(e) {
     let { settings: t } = e;
     a.TO.CAMERA_BACKGROUND_LIVE in t && (m = !0);
 }
@@ -117,7 +117,7 @@ let R = new C(o.Z, {
     VIDEO_FILTER_ASSETS_FETCH_SUCCESS: y,
     VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: O,
     VIDEO_FILTER_ASSET_DELETE_SUCCESS: v,
-    VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: S,
-    MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: T,
+    VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: T,
+    MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: S,
     LOGOUT: N
 });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(539854), n(388685);
+n.d(t, { Z: () => S }), n(539854), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -68,7 +68,7 @@ function I(e, t) {
         e
     );
 }
-function S(e) {
+function T(e) {
     let { closePopout: t, idle: n, pipWindows: i, voiceChannelId: o, onSelect: h } = e;
     n && t();
     let b = (0, a.e7)([u.ZP], () => u.ZP.getCurrentEmbeddedActivity()),
@@ -80,7 +80,7 @@ function S(e) {
         let t = e.participant;
         null != t && t.type !== g.fO.ACTIVITY && l.Z.selectParticipant(o, t.id);
     }
-    function S(e) {
+    function T(e) {
         if (e.pipWindow.component === m.NYg.EMBED_IFRAME && null != b) {
             var t;
             let e = null == (t = d.Z.getApplication(b.applicationId)) ? void 0 : t.name;
@@ -88,7 +88,7 @@ function S(e) {
         }
         return null == e.participant || e.participant.type !== g.fO.STREAM ? E.intl.string(E.t['ng/Kws']) : E.intl.formatToPlainString(E.t.sqmFRk, { username: e.participant.userNick });
     }
-    function T() {
+    function S() {
         let e = [],
             t = i.find((e) => e.component === m.NYg.VIDEO);
         return (
@@ -111,7 +111,7 @@ function S(e) {
         var t;
         let n = e.pipWindow.id,
             i = null == (t = e.participant) ? void 0 : t.id,
-            a = S(e),
+            a = T(e),
             o = ''.concat(n).concat(null != i ? i : '');
         return (0, r.jsx)(
             s.sNh,
@@ -128,10 +128,10 @@ function S(e) {
         'aria-label': 'switch PIP',
         onClose: t,
         onSelect: h,
-        children: T().map(A)
+        children: S().map(A)
     });
 }
-let T = function (e) {
+let S = function (e) {
     let { voiceChannelId: t, idle: n } = e,
         l = i.useRef(null),
         c = Array.from((0, a.e7)([p.Z], () => p.Z.pipWindows).values()).filter((e) => e.component !== m.NYg.EMBED_IFRAME),
@@ -148,7 +148,7 @@ let T = function (e) {
               position: 'bottom',
               renderPopout: (e) =>
                   (0, r.jsx)(
-                      S,
+                      T,
                       O(
                           {
                               voiceChannelId: t,

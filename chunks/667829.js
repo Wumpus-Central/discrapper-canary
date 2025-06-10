@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(403182),
     v = n(541716),
     I = n(752305),
-    S = n(30465),
-    T = n(140963),
+    T = n(30465),
+    S = n(140963),
     A = n(4484),
     N = n(925994),
     C = n(981631),
@@ -80,10 +80,10 @@ function x(e, t) {
     );
 }
 new E.Z('ChannelEditor.tsx');
-let k = function () {
+let M = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
-    M = {
+    k = {
         12: P.fontSize12Padding,
         14: P.fontSize14Padding,
         15: P.fontSize15Padding,
@@ -200,7 +200,7 @@ class j extends i.Component {
     }
     render() {
         var e, t, n, i, a, s;
-        let { textValue: l, richValue: c, disabled: u, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, fontSize: E, useSlate: b, spellcheckEnabled: O, useNewSlashCommands: S, canOnlyUseTextCommands: N, className: R, id: w, required: L, maxCharacterCount: k, allowNewLines: j, 'aria-describedby': U, 'aria-labelledby': G, accessibilityLabel: B } = this.props,
+        let { textValue: l, richValue: c, disabled: u, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, fontSize: E, useSlate: b, spellcheckEnabled: O, useNewSlashCommands: T, canOnlyUseTextCommands: N, className: R, id: w, required: L, maxCharacterCount: M, allowNewLines: j, 'aria-describedby': U, 'aria-labelledby': G, accessibilityLabel: B } = this.props,
             { submitting: F, popup: V } = this.state,
             Z = {
                 channel: m,
@@ -228,7 +228,7 @@ class j extends i.Component {
                 onResize: p,
                 onKeyDown: _,
                 onSubmit: h,
-                textAreaPaddingClassName: o()(M[E], {
+                textAreaPaddingClassName: o()(k[E], {
                     [P.textAreaWithoutAttachmentButton]: g !== v.Ie.NORMAL && g !== v.Ie.OVERLAY && g !== v.Ie.THREAD_CREATION && g !== v.Ie.SIDEBAR,
                     [P.textAreaForPostCreation]: g === v.Ie.CREATE_FORUM_POST,
                     [P.textAreaCustomGift]: g === v.Ie.CUSTOM_GIFT,
@@ -236,14 +236,14 @@ class j extends i.Component {
                     [P.textAreaForOverlayInlineReply]: g === v.Ie.OVERLAY_INLINE_REPLY
                 }),
                 spellcheckEnabled: O,
-                useNewSlashCommands: S,
+                useNewSlashCommands: T,
                 disableAutoFocus: f.tq || (null != (n = g.disableAutoFocus) && n),
                 disableEnterToSubmit: null != (i = null == (e = g.submit) ? void 0 : e.disableEnterToSubmit) && i,
                 'aria-controls': null != (a = V.id) ? a : void 0,
                 'aria-haspopup': 'listbox',
                 'aria-expanded': null !== V.id || void 0,
                 'aria-activedescendant': null != (s = V.activeDescendant) ? s : void 0,
-                'aria-invalid': l.length > k,
+                'aria-invalid': l.length > M,
                 'aria-describedby': U,
                 'aria-labelledby': G,
                 'aria-autocomplete': 'list'
@@ -258,7 +258,7 @@ class j extends i.Component {
                           canOnlyUseTextCommands: N
                       })
                   )
-                : (0, r.jsx)(T.Z, x(D({ ref: this.ref }, Z), { value: u ? '' : l }));
+                : (0, r.jsx)(S.Z, x(D({ ref: this.ref }, Z), { value: u ? '' : l }));
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(y.d9, {
@@ -381,7 +381,7 @@ class j extends i.Component {
                     l = null != r ? r : a,
                     { files: c } = U(e.clipboardData, o.uploadLongMessages ? l : null);
                 return (
-                    k(
+                    M(
                         'onPaste',
                         [...e.clipboardData.items].map((e) => {
                             if ('file' !== e.kind)
@@ -403,7 +403,7 @@ class j extends i.Component {
                     0 !== c.length && (e.preventDefault(), e.stopPropagation(), this.saveCurrentText(), s(c), this.focus(), !0)
                 );
             }),
-            (this._unsubscribe = S.p8.subscribe((e) => {
+            (this._unsubscribe = T.p8.subscribe((e) => {
                 requestAnimationFrame(() => {
                     this.setState({ popup: e });
                 });
@@ -411,7 +411,7 @@ class j extends i.Component {
             (this.state = {
                 focused: !1,
                 submitting: !1,
-                popup: S.p8.getState()
+                popup: T.p8.getState()
             });
     }
 }

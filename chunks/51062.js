@@ -68,7 +68,7 @@ function v(e, t) {
     );
 }
 function I(e, t, n) {
-    var b, O, I, S, T, A, N;
+    var b, O, I, T, S, A, N;
     let { channel: C, type: R } = e,
         [P, w] = r.useState(() => (0, p.P)()),
         D = (0, i.Z)(),
@@ -80,18 +80,18 @@ function I(e, t, n) {
             return !1;
         }),
         x = (0, c.Ib)(e.guild, e.channel) && !L && !(0, c.g0)(e.guild),
-        k = (0, a.e7)([u.ZP, _.default], () => {
+        M = (0, a.e7)([u.ZP, _.default], () => {
             var e, t;
             let n = _.default.getCurrentUser();
             return null != (t = null != C.guild_id && null != n ? (null == (e = u.ZP.getMember(C.guild_id, n.id)) ? void 0 : e.isPending) : null) && t;
         }),
-        { canMentionEveryone: M, hidePersonalInformation: j } = (0, a.cj)(
+        { canMentionEveryone: k, hidePersonalInformation: j } = (0, a.cj)(
             [d.Z, f.Z],
             () => ({
-                canMentionEveryone: C.isPrivate() || k || R === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, C),
+                canMentionEveryone: C.isPrivate() || M || R === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, C),
                 hidePersonalInformation: f.Z.hidePersonalInformation
             }),
-            [C, R, k]
+            [C, R, M]
         ),
         { activeCommand: U, activeCommandOption: G } = (0, a.cj)([s.Z], () => ({
             activeCommand: s.Z.getActiveCommand(C.id),
@@ -108,8 +108,8 @@ function I(e, t, n) {
             navigator: B,
             activeCommand: U,
             activeCommandOption: G,
-            canMentionUsers: null != (T = null == (O = R.users) ? void 0 : O.allowMentioning) && T,
-            canMentionEveryone: M,
+            canMentionUsers: null != (S = null == (O = R.users) ? void 0 : O.allowMentioning) && S,
+            canMentionEveryone: k,
             canMentionClyde: x,
             hidePersonalInformation: j,
             hideMentionDescription: R === l.Ie.RULES_INPUT,
@@ -144,7 +144,7 @@ function I(e, t, n) {
                     for (let n of t) n.removeChangeListener(e);
                 };
             }
-        }, [Z, null == (S = P.query) ? void 0 : S.typeInfo]),
+        }, [Z, null == (T = P.query) ? void 0 : T.typeInfo]),
         [P, Z, B]
     );
 }

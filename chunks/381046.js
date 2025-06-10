@@ -48,8 +48,8 @@ var r = n(260674),
         return 'string' == typeof e || 'number' == typeof e || 'boolean' == typeof e || 'symbol' == typeof e || 'bigint' == typeof e;
     },
     h = {},
-    m = function e(t, n, a, o, s, c, d, f, m, g, E, b, y, O, v, I, S, T) {
-        for (var A, N = t, C = T, R = 0, P = !1; void 0 !== (C = C.get(h)) && !P; ) {
+    m = function e(t, n, a, o, s, c, d, f, m, g, E, b, y, O, v, I, T, S) {
+        for (var A, N = t, C = S, R = 0, P = !1; void 0 !== (C = C.get(h)) && !P; ) {
             var w = C.get(t);
             if (((R += 1), void 0 !== w))
                 if (w === R) throw RangeError('Cyclic object value');
@@ -68,10 +68,10 @@ var r = n(260674),
                     })),
             null === N)
         ) {
-            if (c) return m && !I ? m(n, _.encoder, S, 'key', O) : n;
+            if (c) return m && !I ? m(n, _.encoder, T, 'key', O) : n;
             N = '';
         }
-        if (p(N) || i.isBuffer(N)) return m ? [v(I ? n : m(n, _.encoder, S, 'key', O)) + '=' + v(m(N, _.encoder, S, 'value', O))] : [v(n) + '=' + v(String(N))];
+        if (p(N) || i.isBuffer(N)) return m ? [v(I ? n : m(n, _.encoder, T, 'key', O)) + '=' + v(m(N, _.encoder, T, 'value', O))] : [v(n) + '=' + v(String(N))];
         var D = [];
         if (void 0 === N) return D;
         if ('comma' === a && l(N)) I && m && (N = i.maybeMap(N, m)), (A = [{ value: N.length > 0 ? N.join(',') || null : void 0 }]);
@@ -81,17 +81,17 @@ var r = n(260674),
             A = E ? L.sort(E) : L;
         }
         var x = f ? String(n).replace(/\./g, '%2E') : String(n),
-            k = o && l(N) && 1 === N.length ? x + '[]' : x;
-        if (s && l(N) && 0 === N.length) return k + '[]';
-        for (var M = 0; M < A.length; ++M) {
-            var j = A[M],
+            M = o && l(N) && 1 === N.length ? x + '[]' : x;
+        if (s && l(N) && 0 === N.length) return M + '[]';
+        for (var k = 0; k < A.length; ++k) {
+            var j = A[k],
                 U = 'object' == typeof j && j && void 0 !== j.value ? j.value : N[j];
             if (!d || null !== U) {
                 var G = b && f ? String(j).replace(/\./g, '%2E') : String(j),
-                    B = l(N) ? ('function' == typeof a ? a(k, G) : k) : k + (b ? '.' + G : '[' + G + ']');
-                T.set(t, R);
+                    B = l(N) ? ('function' == typeof a ? a(M, G) : M) : M + (b ? '.' + G : '[' + G + ']');
+                S.set(t, R);
                 var F = r();
-                F.set(h, T), u(D, e(U, B, a, o, s, c, d, f, 'comma' === a && I && l(N) ? null : m, g, E, b, y, O, v, I, S, F));
+                F.set(h, S), u(D, e(U, B, a, o, s, c, d, f, 'comma' === a && I && l(N) ? null : m, g, E, b, y, O, v, I, T, F));
             }
         }
         return D;

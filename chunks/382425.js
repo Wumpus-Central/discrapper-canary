@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(430824),
     v = n(496675),
     I = n(158776),
-    S = n(938475),
-    T = n(960870),
+    T = n(938475),
+    S = n(960870),
     A = n(139793),
     N = n(510659),
     C = n(287954),
@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(336383),
     L = n(194811),
     x = n(265386),
-    k = n(668700),
-    M = n(384298),
+    M = n(668700),
+    k = n(384298),
     j = n(386019),
     U = n(228168),
     G = n(981631),
@@ -48,9 +48,9 @@ function Y(e) {
         { interactionSource: Q, interactionSourceId: J } = (0, N.Xo)(),
         $ = (0, s.e7)([O.Z], () => O.Z.getGuild(null == a ? void 0 : a.guildId)),
         ee = (0, s.e7)([y.Z], () => y.Z.getChannel(null == a ? void 0 : a.channelId)),
-        et = (0, s.Wu)([S.ZP], () =>
+        et = (0, s.Wu)([T.ZP], () =>
             null != ee
-                ? S.ZP.getVoiceStatesForChannel(ee).map((e) => {
+                ? T.ZP.getVoiceStatesForChannel(ee).map((e) => {
                       let { user: t } = e;
                       return t;
                   })
@@ -58,7 +58,7 @@ function Y(e) {
         ),
         en = (0, s.e7)([I.Z], () => I.Z.findActivity(t.id, (e) => (0, f.Z)(e) && !(0, _.Z)(e))),
         { analyticsLocations: er } = (0, h.ZP)(p.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        ei = (0, T.Z)({
+        ei = (0, S.Z)({
             display: 'live',
             voiceChannelId: null == ee ? void 0 : ee.id,
             user: t,
@@ -160,7 +160,7 @@ function Y(e) {
                               users: et,
                               guildId: $.id,
                               channelId: ee.id,
-                              maxUsers: k.W,
+                              maxUsers: M.W,
                               size: l.EFr.SIZE_16,
                               onClick: (e) => {
                                   null == e || e.stopPropagation(), null == ei || ei({ action: 'PRESS_VOICE_CHANNEL_AVATARS' });
@@ -175,7 +175,7 @@ function Y(e) {
         eh = () =>
             q === U.lY.MODAL || q === U.lY.MODAL_V2
                 ? null
-                : (0, r.jsx)(k.Z, {
+                : (0, r.jsx)(M.Z, {
                       user: t,
                       guild: $,
                       channel: ee,
@@ -187,7 +187,7 @@ function Y(e) {
                 ? null
                 : (0, r.jsx)('div', {
                       className: F.actions,
-                      children: (0, r.jsx)(M.Z, {
+                      children: (0, r.jsx)(k.Z, {
                           channel: ee,
                           onAction: ei,
                           onClose: W

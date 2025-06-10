@@ -68,8 +68,8 @@ function I(e, t) {
         e
     );
 }
-let S = 200,
-    T = 200,
+let T = 200,
+    S = 200,
     A = +_.Z.Millis.MINUTE,
     N = {},
     C = 'content',
@@ -79,8 +79,8 @@ let S = 200,
     D = 0,
     L = 0,
     x = [],
-    k = [],
     M = [],
+    k = [],
     j = !1;
 function U() {
     P = !1;
@@ -189,13 +189,13 @@ function Z(e) {
     return e.type === b.vxO.INSTALLING || e.type === b.vxO.UPDATING || e.type === b.vxO.REPAIRING ? e.readerProgress : null;
 }
 function H(e) {
-    k = (k = [
+    M = (M = [
         {
             bytes: e,
             timestamp: Date.now()
         },
-        ...k
-    ]).slice(0, T);
+        ...M
+    ]).slice(0, S);
 }
 function Y(e) {
     let t = Date.now(),
@@ -207,24 +207,24 @@ function Y(e) {
         },
         ...x
     ])
-        .slice(0, T)
+        .slice(0, S)
         .filter((e) => {
             let { timestamp: t } = e;
             return t >= n;
         });
 }
 function W(e) {
-    M = (M = [
+    k = (k = [
         {
             bytes: e,
             timestamp: Date.now()
         },
-        ...M
-    ]).slice(0, T);
+        ...k
+    ]).slice(0, S);
 }
-let K = a().throttle(H, S),
-    z = a().throttle(Y, S),
-    q = a().throttle(W, S);
+let K = a().throttle(H, T),
+    z = a().throttle(Y, T),
+    q = a().throttle(W, T);
 function X(e, t, n) {
     let r = n(N[t]),
         i = n(e[t]);
@@ -329,10 +329,10 @@ class J extends (r = o.ZP.Store) {
         return x;
     }
     getHistoricalTotalBytesDownloaded() {
-        return k;
+        return M;
     }
     getHistoricalTotalBytesWritten() {
-        return M;
+        return k;
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {

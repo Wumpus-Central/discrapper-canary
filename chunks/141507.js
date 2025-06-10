@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(543241),
     v = n(199257),
     I = n(880949),
-    S = n(784222),
-    T = n(149203),
+    T = n(784222),
+    S = n(149203),
     A = n(388032),
     N = n(466988);
 let C = 250;
@@ -37,7 +37,7 @@ let P = (e) => {
         let t,
             w,
             D,
-            { className: L, emojiGrid: x, guildId: k, pickerIntention: M, channel: j } = e,
+            { className: L, emojiGrid: x, guildId: M, pickerIntention: k, channel: j } = e,
             { enabled: U } = y.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
             G = _.kJ.useStore((e) => e.inspectedExpressionPosition),
             B = i.useMemo(() => {
@@ -46,20 +46,20 @@ let P = (e) => {
                 return null == (e = x[t]) ? void 0 : e[n];
             }, [x, G]);
         switch (null == B ? void 0 : B.type) {
-            case S.ld.EMOJI:
+            case T.ld.EMOJI:
                 t = null == B ? void 0 : B.emoji;
                 break;
-            case S.ld.EXPAND_OR_COLLAPSE_EMOJIS:
+            case T.ld.EXPAND_OR_COLLAPSE_EMOJIS:
                 t = {
                     type: 'EXPAND_OR_COLLAPSE_EMOJI',
                     guildId: null == B ? void 0 : B.guildId,
                     allNamesString: null == B ? void 0 : B.name
                 };
                 break;
-            case S.ld.SOUNDMOJI:
+            case T.ld.SOUNDMOJI:
                 t = null;
                 break;
-            case S.ld.CREATE_EMOJI:
+            case T.ld.CREATE_EMOJI:
             default:
                 t = {
                     type: 'CREATE_EMOJI',
@@ -71,24 +71,24 @@ let P = (e) => {
             V = (0, a.e7)([E.Z], () => E.Z.isFocused()),
             Z = (0, a.e7)([l.Z], () => l.Z.useReducedMotion, []),
             H = m.Yk.useSetting(),
-            Y = (0, O.C1)(k, R(t) ? t : null),
+            Y = (0, O.C1)(M, R(t) ? t : null),
             W = (0, a.e7)([c.ZP], () => c.ZP.expandedSectionsByGuildIds),
-            { newlyAddedEmojis: K } = (0, v.Z)(k, M),
-            z = (null == B ? void 0 : B.type) === S.ld.EMOJI ? B.subCategory : T.t0.NONE;
+            { newlyAddedEmojis: K } = (0, v.Z)(M, k),
+            z = (null == B ? void 0 : B.type) === T.ld.EMOJI ? B.subCategory : S.t0.NONE;
         if (
             (i.useEffect(() => {
                 let e = Date.now();
                 return () => {
                     Date.now() - e >= C &&
                         R(t) &&
-                        z !== T.t0.NONE &&
-                        (z === T.t0.NEWLY_ADDED_EMOJI && null !== t && t.type === u.B.GUILD && (0, f.Zg)(t.guildId, K[0].id),
+                        z !== S.t0.NONE &&
+                        (z === S.t0.NEWLY_ADDED_EMOJI && null !== t && t.type === u.B.GUILD && (0, f.Zg)(t.guildId, K[0].id),
                         null != G.source &&
                             (0, O.Gn)({
                                 emoji: t,
                                 subCategory: z,
                                 position: B.columnIndex + 1,
-                                newlyAddedHighlight: z === T.t0.NEWLY_ADDED_EMOJI && d.Z.isNewerThanLastSeen(k, t.id)
+                                newlyAddedHighlight: z === S.t0.NEWLY_ADDED_EMOJI && d.Z.isNewerThanLastSeen(M, t.id)
                             }));
                 };
             }),
@@ -157,8 +157,8 @@ let P = (e) => {
                 : P({
                       inspectedEmoji: t,
                       channel: j,
-                      guildId: k,
-                      intention: M,
+                      guildId: M,
+                      intention: k,
                       guild: F
                   });
         return (0, r.jsx)(p.Z, {

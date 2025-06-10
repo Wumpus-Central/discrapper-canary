@@ -32,8 +32,8 @@ function I(e, t, n) {
         e
     );
 }
-let S = !1,
-    T = v.Skl.ONLINE,
+let T = !1,
+    S = v.Skl.ONLINE,
     A = v.Skl.UNKNOWN,
     N = 0,
     C = [],
@@ -45,11 +45,11 @@ let S = !1,
 function x(e) {
     return (0, h.OT)(e, E.Z);
 }
-function k(e) {
+function M(e) {
     let t = m.Z.getGameByName(e);
     return null != t ? x(t.id) : f.G6.getSetting();
 }
-function M(e) {
+function k(e) {
     var t;
     if ((0, p.yE)(null != (t = e.flags) ? t : 0, v.xjy.CONTEXTLESS)) return !0;
     switch (e.type) {
@@ -58,7 +58,7 @@ function M(e) {
             if (null != e.application_id) return x(e.application_id);
             return !1;
         case v.IIU.PLAYING:
-            return null != e.application_id ? x(e.application_id) : k(e.name);
+            return null != e.application_id ? x(e.application_id) : M(e.name);
         case v.IIU.STREAMING:
         case v.IIU.WATCHING:
         default:
@@ -66,19 +66,19 @@ function M(e) {
     }
 }
 function j() {
-    (P = !0), (A = T), U();
+    (P = !0), (A = S), U();
 }
 function U() {
     var e;
-    if (((N = null != (e = g.Z.getIdleSince()) ? e : 0), (R = g.Z.isAFK()), P)) T = A;
-    else if (S) T = v.Skl.INVISIBLE;
+    if (((N = null != (e = g.Z.getIdleSince()) ? e : 0), (R = g.Z.isAFK()), P)) S = A;
+    else if (T) S = v.Skl.INVISIBLE;
     else {
         let e = f.co.getSetting();
-        T = e !== v.Skl.UNKNOWN ? e : v.Skl.ONLINE;
+        S = e !== v.Skl.UNKNOWN ? e : v.Skl.ONLINE;
     }
-    T === v.Skl.ONLINE && N > 0 && (T = v.Skl.IDLE);
+    S === v.Skl.ONLINE && N > 0 && (S = v.Skl.IDLE);
     let t = !1,
-        n = P || T === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(M);
+        n = P || S === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(k);
     a()(C, n) || ((C = n), (t = !0));
     let r = O.Z.getRemoteActivities();
     w !== r && ((w = r), (t = !0));
@@ -90,13 +90,13 @@ function U() {
                 .value());
 }
 function G(e) {
-    return (S = e.invisible), U();
+    return (T = e.invisible), U();
 }
 function B() {
-    return (S = !1), U();
+    return (T = !1), U();
 }
 function F() {
-    (P = !1), (A = v.Skl.UNKNOWN), U(), y.Z.setCurrentUserOnConnectionOpen(T, L);
+    (P = !1), (A = v.Skl.UNKNOWN), U(), y.Z.setCurrentUserOnConnectionOpen(S, L);
 }
 function V() {
     F();
@@ -107,14 +107,14 @@ class Z extends (r = l.ZP.Store) {
     }
     getLocalPresence() {
         return {
-            status: T,
+            status: S,
             since: N,
             activities: C,
             afk: R
         };
     }
     getStatus() {
-        return T;
+        return S;
     }
     getActivities() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];

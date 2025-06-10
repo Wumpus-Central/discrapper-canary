@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685), n(704826), n(35282), n(539854), n(781311);
+n.d(t, { Z: () => S }), n(388685), n(704826), n(35282), n(539854), n(781311);
 var r = n(879443),
     i = n.n(r),
     a = n(360038),
@@ -29,7 +29,7 @@ function v(e) {
 function I(e, t) {
     return (n, r) => (l.default.track(u.rMx.KEYBOARD_SHORTCUT_USED, { shortcut_name: e }), t(n, r));
 }
-function S(e) {
+function T(e) {
     for (let [t, n] of Object.entries(e)) {
         if (null == n) continue;
         let e = b();
@@ -45,7 +45,7 @@ function S(e) {
     }
 }
 (0, c.isDesktop)() && new (i())(document.documentElement).bind('backspace', (e) => e.preventDefault());
-let T = {
+let S = {
     combokeys: p,
     modKey: h,
     altKey: m,
@@ -63,10 +63,10 @@ let T = {
         d = e;
     },
     enable() {
-        _ || ((_ = !0), this.checkDupes(d), S(d));
+        _ || ((_ = !0), this.checkDupes(d), T(d));
     },
     enableTemp(e) {
-        f.push(d), (d = e), S(e), (_ = !0);
+        f.push(d), (d = e), T(e), (_ = !0);
     },
     disableTemp() {
         let e = f.pop();

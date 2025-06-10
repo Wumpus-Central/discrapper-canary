@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => R,
-    Z: () => k
+    Z: () => M
 }),
     n(953529),
     n(388685);
@@ -25,8 +25,8 @@ var r = n(255367),
     O = n(161492);
 let v = (e) => e.preventDefault(),
     I = 0.7,
-    S = 33,
-    T = 1.55,
+    T = 33,
+    S = 1.55,
     A = {
         tension: 1100,
         friction: 40
@@ -47,7 +47,7 @@ function R(e) {
 }
 let P = (e) => {
         let { children: t, hasError: n, isLoading: i, maskAsset: a, size: s, withLoadingIndicator: l = !0 } = e,
-            c = s >= S;
+            c = s >= T;
         return (0, r.jsxs)('div', {
             className: o()(O.assetWrapper, { [O.assetWrapperMasked]: n || a }),
             style: {
@@ -85,7 +85,7 @@ let P = (e) => {
             g = i.useRef(null),
             E = i.useRef(null),
             [v, I] = i.useState(!0),
-            [S, T] = i.useState(!1),
+            [T, S] = i.useState(!1),
             A = i.useRef(!1);
         A.current = t && u;
         let N = null == s ? (0, b.Q6)(o) : s;
@@ -108,7 +108,7 @@ let P = (e) => {
                                 t || I(!1);
                             },
                             onError: () => {
-                                t || (I(!1), T(!0), null == m || m());
+                                t || (I(!1), S(!0), null == m || m());
                             }
                         })),
                         A.current && E.current.setState(!0));
@@ -129,10 +129,10 @@ let P = (e) => {
             : (0, r.jsx)('div', {
                   role: 'img',
                   className: d,
-                  'aria-label': S ? y.intl.string(y.t.yEvsKy) : R(o),
+                  'aria-label': T ? y.intl.string(y.t.yEvsKy) : R(o),
                   ref: _,
                   children: (0, r.jsx)(P, {
-                      hasError: S,
+                      hasError: T,
                       isLoading: v,
                       maskAsset: f,
                       size: a,
@@ -152,8 +152,8 @@ let P = (e) => {
             [p, h] = i.useState(!1),
             [m, g] = i.useState(!0),
             [E, y] = i.useState(!1),
-            S = i.useRef(null),
             T = i.useRef(null),
+            S = i.useRef(null),
             A =
                 null != _
                     ? _
@@ -168,20 +168,20 @@ let P = (e) => {
                 y(!0);
             }, []);
         return (i.useEffect(() => {
-            if (null != S.current) {
-                let { isVisible: e } = S.current;
+            if (null != T.current) {
+                let { isVisible: e } = T.current;
                 h(e);
             }
         }, []),
         i.useLayoutEffect(() => {
             var e;
-            (null == (e = T.current) ? void 0 : e.complete) === !0 && g(!1);
+            (null == (e = S.current) ? void 0 : e.complete) === !0 && g(!1);
         }, []),
         null == A)
             ? null
             : (0, r.jsx)(d.$, {
                   innerRef: u,
-                  ref: S,
+                  ref: T,
                   onChange: h,
                   threshold: I,
                   children: (0, r.jsx)('div', {
@@ -202,7 +202,7 @@ let P = (e) => {
                                   onError: w,
                                   onLoad: N,
                                   onContextMenu: v,
-                                  ref: T
+                                  ref: S
                               }),
                               n.id
                           )
@@ -284,7 +284,7 @@ let P = (e) => {
         );
     },
     x = (e) => {
-        let { isInteracting: t = !1, disableAnimation: n = !1, enlargeOnInteraction: a = !1, enlargeWithName: o = !0, enlargeScaleFactor: s = T, maskAsset: l = !1, size: c, sticker: u, className: d, withLoadingIndicator: f, assetData: _, fileUri: p, onError: h } = e,
+        let { isInteracting: t = !1, disableAnimation: n = !1, enlargeOnInteraction: a = !1, enlargeWithName: o = !0, enlargeScaleFactor: s = S, maskAsset: l = !1, size: c, sticker: u, className: d, withLoadingIndicator: f, assetData: _, fileUri: p, onError: h } = e,
             b = (0, m.n)(),
             y = (0, g.t$)(t) && !n,
             O = i.useRef(null);
@@ -322,4 +322,4 @@ let P = (e) => {
             ''.concat(u.id, ',').concat(c)
         );
     },
-    k = x;
+    M = x;

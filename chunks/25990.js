@@ -4,8 +4,8 @@ var y,
     O = n(979554),
     v = n(442837),
     I = n(570140),
-    S = n(981631);
-function T(e, t, n) {
+    T = n(981631);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,25 +18,25 @@ function T(e, t, n) {
         e
     );
 }
-let A = S.QZA.CLOSED,
+let A = T.QZA.CLOSED,
     N = {};
 function C() {
-    (A = S.QZA.OPEN), (N = {});
+    (A = T.QZA.OPEN), (N = {});
 }
 function R() {
-    (A = S.QZA.CLOSED), (N = {});
+    (A = T.QZA.CLOSED), (N = {});
 }
 function P() {
-    (A = S.QZA.SUBMITTING), (N = {});
+    (A = T.QZA.SUBMITTING), (N = {});
 }
 function w(e) {
     var t;
-    if (A !== S.QZA.SUBMITTING) return !1;
-    (A = S.QZA.OPEN), (N = null != (t = e.errors) ? t : {});
+    if (A !== T.QZA.SUBMITTING) return !1;
+    (A = T.QZA.OPEN), (N = null != (t = e.errors) ? t : {});
 }
 function D(e) {
     let { section: t } = e;
-    return t === S.oAB.ACCOUNT && C();
+    return t === T.oAB.ACCOUNT && C();
 }
 function L(e) {
     let { avatar: t } = e;
@@ -46,11 +46,11 @@ function x(e) {
     let { globalName: t } = e;
     i = t;
 }
-function k(e) {
+function M(e) {
     let { legacyUsernameDisabled: t } = e;
     _ = t;
 }
-function M(e) {
+function k(e) {
     let { avatarDecoration: t } = e;
     a = t;
 }
@@ -155,7 +155,7 @@ class el extends (y = v.ZP.Store) {
         return void 0 !== r || void 0 !== l || void 0 !== c || void 0 !== u || void 0 !== d || void 0 !== f || void 0 !== a || void 0 !== o || void 0 !== i || void 0 !== s || void 0 !== _ || void 0 !== p;
     }
     getIsSubmitDisabled() {
-        return void 0 !== c && c.length > S.tPV;
+        return void 0 !== c && c.length > T.tPV;
     }
     getPendingAvatar() {
         return r;
@@ -228,7 +228,7 @@ class el extends (y = v.ZP.Store) {
         };
     }
 }
-T(el, 'displayName', 'UserSettingsAccountStore');
+S(el, 'displayName', 'UserSettingsAccountStore');
 let ec = new el(I.Z, {
     USER_SETTINGS_ACCOUNT_INIT: C,
     USER_SETTINGS_MODAL_INIT: C,
@@ -240,8 +240,8 @@ let ec = new el(I.Z, {
     USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: w,
     USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: L,
     USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: x,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_LEGACY_USERNAME_DISABLED: k,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION: M,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_LEGACY_USERNAME_DISABLED: M,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION: k,
     USER_SETTINGS_ACCOUNT_SET_PENDING_NAMEPLATE: j,
     USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM: G,
     USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: U,

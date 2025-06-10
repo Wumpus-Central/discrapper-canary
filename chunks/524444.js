@@ -39,8 +39,8 @@ var r = n(255367),
     O = n(540059),
     v = n(688465),
     I = n(425886),
-    S = n(80966),
-    T = n(593545),
+    T = n(80966),
+    S = n(593545),
     A = n(479313),
     N = n(765104),
     C = n(505953),
@@ -50,8 +50,8 @@ var r = n(255367),
     D = n(594174),
     L = n(259580),
     x = n(626135),
-    k = n(823379),
-    M = n(589530),
+    M = n(823379),
+    k = n(589530),
     j = n(709054),
     U = n(217702),
     G = n(981631),
@@ -136,10 +136,10 @@ let X = {
         position: 'top'
     },
     Q = (e) => (t) => {
-        null == e || e(t), (0, M.jA)(t);
+        null == e || e(t), (0, k.jA)(t);
     },
     J = (e) => (t) => {
-        null == e || e(t), (0, M.Zj)(t);
+        null == e || e(t), (0, k.Zj)(t);
     };
 function $(e) {
     var { onVolumeChange: t, onMute: n, volume: a, autoMute: o, alt: s, renderAdjacentContent: l, renderOverlayContent: c } = e,
@@ -147,12 +147,12 @@ function $(e) {
     let d = Q(t),
         f = J(n);
     return (
-        (a = null == a ? M.FC : a),
-        (o = null == o ? M.rs : o),
+        (a = null == a ? k.FC : a),
+        (o = null == o ? k.rs : o),
         (0, r.jsxs)(i.Fragment, {
             children: [
                 (0, r.jsx)(
-                    S.Z,
+                    T.Z,
                     K(Y({}, u), {
                         alt: s,
                         volume: a,
@@ -173,7 +173,7 @@ function ee(e) {
         c = z(e, ['onVolumeChange', 'volume', 'onMute', 'onVolumeShow', 'onVolumeHide', 'renderAdjacentContent']);
     let u = Q(t),
         d = J(a);
-    n = null == n ? M.FC : n;
+    n = null == n ? k.FC : n;
     let f = () => !1;
     return (0, r.jsxs)(i.Fragment, {
         children: [
@@ -199,7 +199,7 @@ function et(e) {
     let o = Q(t),
         s = J(i);
     return (
-        (n = null == n ? M.FC : n),
+        (n = null == n ? k.FC : n),
         (0, r.jsx)(
             P.Z,
             K(Y({}, a), {
@@ -287,7 +287,7 @@ function ei(e) {
     var { renderAdjacentContent: t } = e,
         n = z(e, ['renderAdjacentContent']);
     return (0, r.jsxs)(i.Fragment, {
-        children: [(0, r.jsx)(T.Z, Y({}, n)), null != t && t()]
+        children: [(0, r.jsx)(S.Z, Y({}, n)), null != t && t()]
     });
 }
 function ea(e) {
@@ -303,7 +303,7 @@ function es(e) {
         case 1:
             return V.intl.string(V.t['1J6Xq6']);
         default:
-            return (0, k.vE)(e);
+            return (0, M.vE)(e);
     }
 }
 function el(e) {
@@ -313,7 +313,7 @@ function el(e) {
         case 1:
             return V.intl.string(V.t['k3RM8/']);
         default:
-            return (0, k.vE)(e);
+            return (0, M.vE)(e);
     }
 }
 let ec = (e) => {
@@ -460,7 +460,7 @@ function ef(e) {
         { disableInteractions: E } = i.useContext(b.G),
         [y, O] = i.useState(null),
         I = i.useRef(null),
-        [S, T] = i.useState(null),
+        [T, S] = i.useState(null),
         R = i.useRef(null),
         P = (0, u.Wu)(
             [N.Z],
@@ -470,9 +470,9 @@ function ef(e) {
             },
             [s]
         ),
-        M = (0, g.Z)(P);
+        k = (0, g.Z)(P);
     i.useEffect(() => {
-        l().isEqual(M, P) ||
+        l().isEqual(k, P) ||
             x.default.track(G.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: P.length,
                 message_counts: P.map((e) => e.count),
@@ -483,7 +483,7 @@ function ef(e) {
                 channel_id: s.id,
                 channel_type: s.type
             });
-    }, [P, M, s.guild_id, s.id, s.type]);
+    }, [P, k, s.guild_id, s.id, s.type]);
     let U = (0, u.e7)(
             [D.default],
             () => {
@@ -501,7 +501,7 @@ function ef(e) {
                                                 var t;
                                                 return null != (t = D.default.getUser(e)) ? t : null;
                                             })
-                                            .filter(k.lm);
+                                            .filter(M.lm);
                               }))
                     ? e
                     : [];
@@ -588,14 +588,14 @@ function ef(e) {
             var t;
             q(e);
             let n = null == (t = R.current) ? void 0 : t.scrollTop;
-            null != n && T(n);
+            null != n && S(n);
         }, []);
     i.useEffect(() => {
-        if (null != S && z) {
+        if (null != T && z) {
             var e;
-            null == (e = R.current) || e.scrollTo({ top: S });
+            null == (e = R.current) || e.scrollTo({ top: T });
         }
-    }, [S, z]);
+    }, [T, z]);
     let $ = i.useCallback(
         (e) => {
             var t;
@@ -790,8 +790,8 @@ function eh(e) {
         [h, E] = i.useState(null),
         y = i.useRef(null),
         [O, I] = i.useState(null),
-        S = i.useRef(null),
-        T = (0, u.Wu)(
+        T = i.useRef(null),
+        S = (0, u.Wu)(
             [N.Z],
             () => {
                 var e;
@@ -799,29 +799,29 @@ function eh(e) {
             },
             [s]
         ),
-        R = (0, g.Z)(T);
+        R = (0, g.Z)(S);
     i.useEffect(() => {
-        l().isEqual(R, T) ||
+        l().isEqual(R, S) ||
             x.default.track(G.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
-                num_summaries: T.length,
-                message_counts: T.map((e) => e.count),
-                start_message_ids: T.map((e) => e.startId),
-                end_message_ids: T.map((e) => e.endId),
-                num_participants: T.map((e) => e.people.length),
+                num_summaries: S.length,
+                message_counts: S.map((e) => e.count),
+                start_message_ids: S.map((e) => e.startId),
+                end_message_ids: S.map((e) => e.endId),
+                num_participants: S.map((e) => e.people.length),
                 guild_id: s.guild_id,
                 channel_id: s.id,
                 channel_type: s.type
             });
-    }, [T, R, s.guild_id, s.id, s.type]);
+    }, [S, R, s.guild_id, s.id, s.type]);
     let P = (0, u.e7)(
             [D.default],
             () => {
                 var e;
                 return null !=
                     (e =
-                        null == T
+                        null == S
                             ? void 0
-                            : T.map((e) => {
+                            : S.map((e) => {
                                   var t;
                                   return null == (t = e.people)
                                       ? void 0
@@ -830,19 +830,19 @@ function eh(e) {
                                                 var t;
                                                 return null != (t = D.default.getUser(e)) ? t : null;
                                             })
-                                            .filter(k.lm);
+                                            .filter(M.lm);
                               }))
                     ? e
                     : [];
             },
-            [T],
+            [S],
             ep
         ),
         w = null != (n = (0, u.e7)([N.Z], () => N.Z.visibleSummaryIndex())) ? n : -1,
-        M = null == T || null == (t = T[w]) ? void 0 : t.topic;
-    null == M && null == h && (null == T ? void 0 : T.length) >= 1 && (M = null == (a = T[0]) ? void 0 : a.topic);
-    let j = i.useMemo(() => l().get(T, w - 1), [w, T]),
-        U = i.useMemo(() => l().get(T, w + 1), [w, T]),
+        k = null == S || null == (t = S[w]) ? void 0 : t.topic;
+    null == k && null == h && (null == S ? void 0 : S.length) >= 1 && (k = null == (a = S[0]) ? void 0 : a.topic);
+    let j = i.useMemo(() => l().get(S, w - 1), [w, S]),
+        U = i.useMemo(() => l().get(S, w + 1), [w, S]),
         B = i.useMemo(
             () =>
                 l().debounce((e) => {
@@ -872,21 +872,21 @@ function eh(e) {
         z = i.useCallback(() => {
             x.default.track(G.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !W,
-                num_summaries: T.length,
-                message_counts: T.map((e) => e.count),
-                start_message_ids: T.map((e) => e.startId),
-                end_message_ids: T.map((e) => e.endId),
-                num_participants: T.map((e) => e.people.length),
+                num_summaries: S.length,
+                message_counts: S.map((e) => e.count),
+                start_message_ids: S.map((e) => e.startId),
+                end_message_ids: S.map((e) => e.endId),
+                num_participants: S.map((e) => e.people.length),
                 guild_id: s.guild_id,
                 channel_id: s.id,
                 channel_type: s.type
             }),
                 K(!W);
-        }, [W, T, K, s]),
+        }, [W, S, K, s]),
         q = i.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : F.DZ.PILL_DROPDOWN,
-                    n = T[e];
+                    n = S[e];
                 if (null == n) return;
                 (0, A.wv)(s.id, n.id), (0, A.yK)(s.id, n.id);
                 let r = () => {
@@ -913,7 +913,7 @@ function eh(e) {
                         context: 'Summary Jump'
                     });
             },
-            [T, s, Y, _]
+            [S, s, Y, _]
         ),
         X = i.useCallback(() => {
             q(w - 1, F.DZ.PILL_NEXT_ARROW);
@@ -924,13 +924,13 @@ function eh(e) {
         J = i.useCallback((e) => {
             var t;
             K(e);
-            let n = null == (t = S.current) ? void 0 : t.scrollTop;
+            let n = null == (t = T.current) ? void 0 : t.scrollTop;
             null != n && I(n);
         }, []);
     i.useEffect(() => {
         if (null != O && W) {
             var e;
-            null == (e = S.current) || e.scrollTo({ top: O });
+            null == (e = T.current) || e.scrollTo({ top: O });
         }
     }, [O, W]);
     let $ = i.useCallback(
@@ -940,18 +940,18 @@ function eh(e) {
                 (W &&
                     x.default.track(G.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                         topics_dropdown_open: !1,
-                        num_summaries: T.length,
-                        message_counts: T.map((e) => e.count),
-                        start_message_ids: T.map((e) => e.startId),
-                        end_message_ids: T.map((e) => e.endId),
-                        num_participants: T.map((e) => e.people.length),
+                        num_summaries: S.length,
+                        message_counts: S.map((e) => e.count),
+                        start_message_ids: S.map((e) => e.startId),
+                        end_message_ids: S.map((e) => e.endId),
+                        num_participants: S.map((e) => e.people.length),
                         guild_id: s.guild_id,
                         channel_id: s.id,
                         channel_type: s.type
                     }),
                 J(!1));
         },
-        [W, T, s, J]
+        [W, S, s, J]
     );
     i.useEffect(
         () => (
@@ -978,17 +978,17 @@ function eh(e) {
         () =>
             (0, r.jsx)(C.Z, {
                 channel: s,
-                summaries: T,
+                summaries: S,
                 summariesMembers: P,
                 selectTopic: q,
                 setOpen: J
             }),
-        [T, P, q, J, s]
+        [S, P, q, J, s]
     );
     if (!(0, u.e7)([N.Z], () => N.Z.shouldShowTopicsBar())) return null;
     let et = V.intl.string(V.t['38qwgI']);
     return (
-        T.length > 0 && (et = '' === M || null == M ? V.intl.string(V.t.DwnFuL) : M),
+        S.length > 0 && (et = '' === k || null == k ? V.intl.string(V.t.DwnFuL) : k),
         p
             ? null
             : (0, r.jsxs)('div', {
@@ -1092,7 +1092,7 @@ function eh(e) {
                                       ]
                                   }),
                                   (0, r.jsx)(d.Ttm, {
-                                      ref: S,
+                                      ref: T,
                                       className: Z.topicsScroller,
                                       fade: !0,
                                       children: ee

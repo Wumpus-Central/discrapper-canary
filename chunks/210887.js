@@ -68,18 +68,18 @@ function O(e, t) {
 }
 let v = 0,
     I = (0, c.O_)('ThemeStore') ? m.K2 : m.o5,
-    S = (0, u.Z)(),
-    T = I[S];
+    T = (0, u.Z)(),
+    S = I[T];
 function A() {
-    return (0, d.Z)(S, I, T);
+    return (0, d.Z)(T, I, S);
 }
 function N() {
     let e = A();
-    return e === T || ((T = e), (0, f.Z)(T), !0);
+    return e === S || ((S = e), (0, f.Z)(S), !0);
 }
 class C extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (null == e ? void 0 : e.theme) != null && ((v = 1), (T = e.theme), (0, f.Z)(T), null != e.preferences && (I = e.preferences), (0, a.wj)(T) && (I[m.zd.DARK] = T)), this.waitFor(p.ZP, _.Z, h.Z, s.Z);
+        (null == e ? void 0 : e.theme) != null && ((v = 1), (S = e.theme), (0, f.Z)(S), null != e.preferences && (I = e.preferences), (0, a.wj)(S) && (I[m.zd.DARK] = S)), this.waitFor(p.ZP, _.Z, h.Z, s.Z);
     }
     getState() {
         return {
@@ -95,7 +95,7 @@ class C extends (r = i.ZP.PersistedStore) {
         return A();
     }
     get systemTheme() {
-        return S;
+        return T;
     }
     themePreferenceForSystemTheme(e) {
         return I[e];
@@ -108,11 +108,11 @@ function P() {
     return (0, a.ap)(A());
 }
 function w(e) {
-    return !e.isSwitchingAccount && T !== g.BRd.DARK && ((T = g.BRd.DARK), (0, f.Z)(T), N());
+    return !e.isSwitchingAccount && S !== g.BRd.DARK && ((S = g.BRd.DARK), (0, f.Z)(S), N());
 }
 function D(e) {
     let { systemTheme: t } = e;
-    return (S = t), N();
+    return (T = t), N();
 }
 function L(e) {
     return (I = b({}, I, e.preferences)), N();

@@ -20,8 +20,8 @@ var r,
     O = n(314897),
     v = n(592125),
     I = n(796974),
-    S = n(984933),
-    T = n(271383),
+    T = n(984933),
+    S = n(271383),
     A = n(430824),
     N = n(496675),
     C = n(699516),
@@ -43,8 +43,8 @@ function L(e, t, n) {
     );
 }
 let x = new Set(),
-    k = new d.Z('MessageStore'),
-    M = !1;
+    M = new d.Z('MessageStore'),
+    k = !1;
 function j() {
     c.Z.forEach((e) => {
         c.Z.commit(
@@ -63,7 +63,7 @@ function U(e) {
         if (null == n) continue;
         let r = !1;
         if (!(n.cached || !r)) {
-            k.log('Skipping background message sync for '.concat(e, ' cached:').concat(n.cached, ' ') + 'ready:'.concat(n.ready, ' hasMoreAfter:').concat(n.hasMoreAfter, ' ') + 'isConnected:'.concat(r));
+            M.log('Skipping background message sync for '.concat(e, ' cached:').concat(n.cached, ' ') + 'ready:'.concat(n.ready, ' hasMoreAfter:').concat(n.hasMoreAfter, ' ') + 'isConnected:'.concat(r));
             continue;
         }
         n.mergeDelta(t[e].new_messages, t[e].modified_messages, t[e].deleted_message_ids);
@@ -74,13 +74,13 @@ function G() {
 }
 function B(e) {
     let { channelId: t, truncateBottom: n, truncateTop: r } = e;
-    k.log('Truncating messages for '.concat(t, ' bottom:').concat(n, ' top:').concat(r));
+    M.log('Truncating messages for '.concat(t, ' bottom:').concat(n, ' top:').concat(r));
     let i = c.Z.getOrCreate(t);
     (i = i.truncate(n, r)), c.Z.commit(i);
 }
 function F(e) {
     let { channelId: t } = e;
-    k.log('Clearing messages for '.concat(t)), c.Z.clear(t), x.clear();
+    M.log('Clearing messages for '.concat(t)), c.Z.clear(t), x.clear();
 }
 function V(e) {
     let { channelId: t, jump: n, focus: r, before: i, after: a, limit: o, truncate: s } = e,
@@ -130,7 +130,7 @@ function K(e) {
     let { channelId: t, message: n, isPushNotification: r } = e,
         i = c.Z.getOrCreate(t);
     if (r) {
-        k.log('Inserting message tapped on from a push notification', n.id, n.channel_id), c.Z.commit(i.receivePushNotification(n));
+        M.log('Inserting message tapped on from a push notification', n.id, n.channel_id), c.Z.commit(i.receivePushNotification(n));
         return;
     }
     if (!i.ready) return !1;
@@ -277,11 +277,11 @@ function e_(e) {
 function ep(e) {
     let { message: t } = e,
         n = w.default.getCurrentUser();
-    null != t && null != t.author && null != n && t.author.id === n.id && (M = !0);
+    null != t && null != t.author && null != n && t.author.id === n.id && (k = !0);
 }
 class eh extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(w.default, v.Z, I.Z, T.ZP, E.default, R.Z, P.Z, A.Z, C.Z, S.ZP), this.syncWith([p.Z], () => {});
+        this.waitFor(w.default, v.Z, I.Z, S.ZP, E.default, R.Z, P.Z, A.Z, C.Z, T.ZP), this.syncWith([p.Z], () => {});
     }
     getMessages(e) {
         if (p.Z.hasViewingRoles()) {
@@ -347,7 +347,7 @@ class eh extends (r = o.ZP.Store) {
         return null != this.getMessages(e).findNewest((e) => e.author.id === (null == t ? void 0 : t.id));
     }
     hasCurrentUserSentMessageSinceAppStart() {
-        return M;
+        return k;
     }
 }
 L(eh, 'displayName', 'MessageStore');

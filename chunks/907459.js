@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(874926),
     v = n(737604),
     I = n(539873),
-    S = n(981631),
-    T = n(921944),
+    T = n(981631),
+    S = n(921944),
     A = n(474936),
     N = n(388032),
     C = n(362450);
@@ -48,7 +48,7 @@ let R = () => {
     P = (e) => {
         let { markAsDismissed: t } = e,
             n = () => {
-                null == t || t(T.L.DISMISS), (0, p.Ll)(), (0, O.O)();
+                null == t || t(S.L.DISMISS), (0, p.Ll)(), (0, O.O)();
             };
         return (0, r.jsxs)('div', {
             className: C.editorHeader,
@@ -79,7 +79,7 @@ let R = () => {
         let { isCoachmark: t, markAsDismissed: n } = e,
             i = (0, s.e7)([v.Z], () => v.Z.isUpsellPreview),
             a = () => {
-                null == n || n(T.L.DISMISS), (0, p.Ll)(), (0, O.O)(), t || c.Z.open();
+                null == n || n(S.L.DISMISS), (0, p.Ll)(), (0, O.O)(), t || c.Z.open();
             };
         return (0, r.jsxs)('div', {
             className: C.editorFooter,
@@ -106,12 +106,12 @@ function D(e) {
         g = p.oq.getState().activePanel === p.wh.APP_ICON;
     i.useEffect(() => {
         h &&
-            b.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
+            b.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: A.cd.APP_ICON_UPSELL,
                 location_stack: a
             });
     }, [h, a]);
-    let y = (0, u.Z)(null, h ? O.O : S.dG4);
+    let y = (0, u.Z)(null, h ? O.O : T.dG4);
     return (i.useEffect(() => {
         if (h && !g) return O.O;
     }, [h, g]),

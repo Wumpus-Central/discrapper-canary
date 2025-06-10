@@ -36,8 +36,8 @@ function E(e) {
     let { channel: n, currentUser: i, activeStreams: a, hideSelfOptions: l = !1, showReportOption: f = !1, handleGoLive: _, onClose: p, onSelect: E, appContext: b = h.IlC.APP, disableChangeWindows: y = !1, onInteraction: O } = e,
         v = null != (t = a.find((e) => e.ownerId === (null == i ? void 0 : i.id))) ? t : null,
         I = g(n, i, a),
-        S = (0, c.Z)(v, b),
-        T = (0, u.b)({
+        T = (0, c.Z)(v, b),
+        S = (0, u.b)({
             disableChangeWindows: y,
             stream: v,
             showReportOption: f,
@@ -69,14 +69,14 @@ function E(e) {
                         );
                     })
                 }),
-                l ? null : T,
+                l ? null : S,
                 l
                     ? null
                     : (0, r.jsx)(o.kSQ, {
                           children: (0, r.jsx)(o.sNh, {
                               id: 'more-options',
                               label: m.intl.string(m.t.PdRCRk),
-                              children: S
+                              children: T
                           })
                       })
             ]

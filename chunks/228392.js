@@ -2,7 +2,7 @@ n.d(t, {
     B: () => D,
     B5: () => R,
     Do: () => w,
-    GX: () => M,
+    GX: () => k,
     HR: () => V,
     Hr: () => C,
     Je: () => A,
@@ -10,9 +10,9 @@ n.d(t, {
     KR: () => P,
     MO: () => U,
     N3: () => j,
-    Oq: () => T,
+    Oq: () => S,
     P_: () => v,
-    Vn: () => S,
+    Vn: () => T,
     ab: () => N,
     e5: () => L,
     e7: () => O,
@@ -22,7 +22,7 @@ n.d(t, {
     qs: () => E,
     qz: () => F,
     ws: () => x,
-    xI: () => k,
+    xI: () => M,
     zI: () => y
 }),
     n(781311);
@@ -165,7 +165,7 @@ function I(e) {
         })
     );
 }
-function S(e) {
+function T(e) {
     var t, n, i, a;
     let { guildId: l, channelId: c } = e,
         u = o.Z.getChannel(c);
@@ -187,7 +187,7 @@ function S(e) {
             })
         );
 }
-function T(e) {
+function S(e) {
     let { guildId: t, channelId: n } = e;
     r.ZP.trackWithMetadata(
         _.rMx.FORUM_CHANNEL_NEW_POST_DRAFT_CLEARED,
@@ -286,11 +286,11 @@ function x(e) {
     let { forumDemoId: t } = e;
     r.ZP.trackWithMetadata(_.rMx.FORUM_UPSELL_MODAL_CLICKED, { forum_demo_id: t });
 }
-function k(e) {
+function M(e) {
     let { added: t } = e;
     r.ZP.trackWithMetadata(_.rMx.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_CLICKED, { added: t });
 }
-function M(e) {
+function k(e) {
     let { readGuideCta: t } = e;
     r.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_HELPER_CARD_CLICKED, { read_guide_cta: t });
 }

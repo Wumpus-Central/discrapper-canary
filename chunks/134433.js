@@ -21,14 +21,14 @@ function m(e) {
         O = (0, o.ho)((0, o._i)(y), !1, g ? E : null),
         v = (0, c.dQu)(p).hex(),
         I = (0, c.dQu)(h).hex(),
-        S =
+        T =
             null != i
                 ? i
                 : (0, d.B)({
                       backgroundColor: y,
                       colors: [v, I]
                   }),
-        T = n / 8;
+        S = n / 8;
     return (0, r.jsx)('div', {
         style: {
             background: O,
@@ -40,11 +40,11 @@ function m(e) {
         className: l,
         children: (0, r.jsx)(c.xPt, {
             size: 'custom',
-            color: S,
+            color: T,
             className: a()(f.linkIcon, m),
-            width: n - 2 * T,
-            height: n - 2 * T,
-            style: { margin: T }
+            width: n - 2 * S,
+            height: n - 2 * S,
+            style: { margin: S }
         })
     });
 }

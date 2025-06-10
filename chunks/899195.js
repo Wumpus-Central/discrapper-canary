@@ -1,24 +1,24 @@
 a.d(e, {
     V: () => o,
-    y: () => _
+    y: () => n
 });
 var r = a(370336);
-let n = '_sentryMetrics';
-function _(t) {
-    let e = t[n];
+let _ = '_sentryMetrics';
+function n(t) {
+    let e = t[_];
     if (!e) return;
     let a = {};
-    for (let [, [t, n]] of e) (a[t] || (a[t] = [])).push((0, r.Jr)(n));
+    for (let [, [t, _]] of e) (a[t] || (a[t] = [])).push((0, r.Jr)(_));
     return a;
 }
-function o(t, e, a, r, _, o, i) {
-    let c = t[n] || (t[n] = new Map()),
-        s = `${e}:${a}@${_}`,
-        E = c.get(i);
-    if (E) {
-        let [, t] = E;
+function o(t, e, a, r, n, o, i) {
+    let c = t[_] || (t[_] = new Map()),
+        E = `${e}:${a}@${n}`,
+        s = c.get(i);
+    if (s) {
+        let [, t] = s;
         c.set(i, [
-            s,
+            E,
             {
                 min: Math.min(t.min, r),
                 max: Math.max(t.max, r),
@@ -29,7 +29,7 @@ function o(t, e, a, r, _, o, i) {
         ]);
     } else
         c.set(i, [
-            s,
+            E,
             {
                 min: r,
                 max: r,

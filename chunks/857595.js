@@ -9,14 +9,14 @@ n.d(t, {
     cq: () => f,
     eN: () => A,
     f1: () => h,
-    gs: () => S,
+    gs: () => T,
     lq: () => m,
     o2: () => b,
     oL: () => u,
     qz: () => O,
     r_: () => g,
     rf: () => p,
-    u1: () => T
+    u1: () => S
 });
 var r = n(570140),
     i = n(153867),
@@ -113,13 +113,13 @@ function I(e) {
         systemPrefersContrast: e
     });
 }
-function S(e) {
+function T(e) {
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS',
         alwaysShowLinkDecorations: e
     });
 }
-function T(e) {
+function S(e) {
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SET_ROLE_STYLE',
         roleStyle: e

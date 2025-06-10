@@ -83,7 +83,7 @@ function I(e) {
               return null == e ? [] : Array.isArray(e) ? I(e) : e.type === i.Fragment ? (null != (t = I(e.props.children)) ? t : []) : [e];
           });
 }
-function S(e) {
+function T(e) {
     return I(e).reduce((e, t) => {
         var n, r;
         if (t.type === h.Cl)
@@ -95,7 +95,7 @@ function S(e) {
                 e
             );
         if (t.type === h.kS) {
-            let n = S(t.props.children);
+            let n = T(t.props.children);
             return (
                 n.length > 0 &&
                     (e.push({
@@ -130,7 +130,7 @@ function S(e) {
                               key: t.props.id,
                               navigable: !0,
                               label: t.props.label,
-                              children: t.props.children ? S(t.props.children) : void 0,
+                              children: t.props.children ? T(t.props.children) : void 0,
                               onChildrenScroll: t.props.onChildrenScroll,
                               props: t.props,
                               childRowHeight: t.props.childRowHeight,
@@ -183,13 +183,13 @@ function S(e) {
         throw Error('Menu API only allows Items and groups of Items as children. Received '.concat(null != (r = null != (n = null == t ? void 0 : t.type) ? n : t) ? r : typeof t, ' (').concat(typeof t, ') instead'));
     }, []);
 }
-function T(e) {
+function S(e) {
     return e.reduce(
         (e, t) => (
             t.navigable &&
                 e.push({
                     key: t.key,
-                    children: 'item' === t.type && null != t.children ? T(t.children) : void 0
+                    children: 'item' === t.type && null != t.children ? S(t.children) : void 0
                 }),
             e
         ),
@@ -364,8 +364,8 @@ function A(e, t, n, i) {
 function N(e) {
     var t;
     let { navId: n, variant: a = 'flexible', hideScroller: s = !1, className: f, children: h, onClose: b, onSelect: O, onInteraction: I } = e,
-        N = S(h),
-        C = T(N),
+        N = T(h),
+        C = S(N),
         P = i.useRef([]);
     l()(P.current, C) || (P.current = C);
     let w = null == (t = N.find((e) => null != e.key)) ? void 0 : t.key,
@@ -381,7 +381,7 @@ function N(e) {
     let L = i.useRef(null);
     (0, u.T)(L);
     let x = s ? d.u2 : d.zJ,
-        k = i.useMemo(
+        M = i.useMemo(
             () => ({
                 onSelect: O,
                 onInteraction: I
@@ -389,7 +389,7 @@ function N(e) {
             [O, I]
         );
     return (0, r.jsx)(m.p.Provider, {
-        value: k,
+        value: M,
         children: (0, r.jsx)(
             'div',
             v(y({ className: o()(E.menu, E[a], f) }, D.getContainerProps()), {

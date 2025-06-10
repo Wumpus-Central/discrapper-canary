@@ -20,7 +20,7 @@ var r = n(512722),
     O = n(927923),
     v = n(65154),
     I = n(388032);
-function S(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function S(e, t, n) {
         e
     );
 }
-let T = new c.Z('GameConsoleManager'),
+let S = new c.Z('GameConsoleManager'),
     A = 3000,
     N = 60000,
     C = 180000;
@@ -53,9 +53,9 @@ function P(e) {
 class w extends l.Z {
     constructor(...e) {
         super(...e),
-            S(this, 'rollbackCommandTimeout', new a.V7()),
-            S(this, 'awaitRemoteTimeout', new a.V7()),
-            S(this, 'actions', {
+            T(this, 'rollbackCommandTimeout', new a.V7()),
+            T(this, 'awaitRemoteTimeout', new a.V7()),
+            T(this, 'actions', {
                 WAIT_FOR_REMOTE_SESSION: () => this.handleWaitForRemoteSession(),
                 POST_CONNECTION_OPEN: () => this.handleSessionsChanged(),
                 SESSIONS_REPLACE: () => this.handleSessionsChanged(),
@@ -66,14 +66,14 @@ class w extends l.Z {
                 PASSIVE_UPDATE_V2: (e) => this.handleVoiceStateUpdates(e),
                 REMOTE_SESSION_DISCONNECT: () => this.handleRemoteSessionDisconnect()
             }),
-            S(this, 'maybeConnect', (e) => {
+            T(this, 'maybeConnect', (e) => {
                 let t = P(e);
                 if (null == t) return null;
                 this.awaitRemoteTimeout.stop(), (0, m.ef)(t.sessionId);
                 let n = p.Z.getVoiceStateForSession(u.default.getId(), t.sessionId);
                 null != n && R(n);
             }),
-            S(this, 'handleAudioStateToggle', (e) => {
+            T(this, 'handleAudioStateToggle', (e) => {
                 let { syncRemote: t, context: n } = e;
                 if (!t || n !== v.Yn.DEFAULT) return;
                 let r = d.Z.isSelfDeaf(),
@@ -92,7 +92,7 @@ class w extends l.Z {
                         R(s);
                     }));
             }),
-            S(this, 'handleVoiceStateUpdates', (e) => {
+            T(this, 'handleVoiceStateUpdates', (e) => {
                 let t = e.voiceStates,
                     n = E.Z.getRemoteSessionId();
                 if (null == n) {
@@ -110,11 +110,11 @@ class w extends l.Z {
                 });
                 null != r && (this.rollbackCommandTimeout.stop(), R(r));
             }),
-            S(this, 'handleSessionsChanged', () => {
+            T(this, 'handleSessionsChanged', () => {
                 let e = E.Z.getRemoteSessionId();
                 null != e && null == _.Z.getSessionById(e) && (0, m.s6)(), null == e && this.maybeConnect(Object.values(_.Z.getSessions()));
             }),
-            S(this, 'handleWaitForRemoteSession', () => {
+            T(this, 'handleWaitForRemoteSession', () => {
                 this.awaitRemoteTimeout.start(N, () => {
                     (0, m.s6)(),
                         o.Z.show({
@@ -123,11 +123,11 @@ class w extends l.Z {
                         });
                 });
             }),
-            S(this, 'handleConsoleCommandUpdate', (e) => {
+            T(this, 'handleConsoleCommandUpdate', (e) => {
                 var t;
                 let { id: n, result: r, error: i } = e;
                 if (('failed' !== r && 'n/a' !== r) || null == i) return;
-                T.info('Console command Error result:', r, i);
+                S.info('Console command Error result:', r, i);
                 let a = E.Z.getAwaitingRemoteSessionInfo();
                 if ((null == a ? void 0 : a.commandId) !== n) return;
                 let o = E.Z.getDevice(a.type, null != (t = a.deviceId) ? t : ''),
@@ -151,7 +151,7 @@ class w extends l.Z {
                     }),
                     O.e8.has(i.code) && this.awaitRemoteTimeout.isStarted() ? this.awaitRemoteTimeout.start(C, () => (0, m.s6)(), !0) : 'failed' === r && (0, m.s6)();
             }),
-            S(this, 'handleRemoteSessionDisconnect', () => {
+            T(this, 'handleRemoteSessionDisconnect', () => {
                 this.awaitRemoteTimeout.stop();
             });
     }

@@ -32,7 +32,7 @@ function I(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function S(e) {
     }
     return e;
 }
-function T(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,14 +65,14 @@ function A(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function N(e) {
-    let { summary: t, channel: f, members: b, guildId: I, unread: T, onClick: N } = e,
+    let { summary: t, channel: f, members: b, guildId: I, unread: S, onClick: N } = e,
         [C, R] = i.useState(!1),
         P = (0, u.Ye)(h.default.extractTimestamp(t.startId)),
         w = (0, a.e7)([m.Z], () => m.Z.summaryFeedback(t)),
@@ -89,7 +89,7 @@ function N(e) {
             L &&
                 (0, s.jW)(e, async () => {
                     let { default: e } = await n.e('12891').then(n.bind(n, 519620));
-                    return (n) => (0, r.jsx)(e, A(S({}, n), { summary: t }));
+                    return (n) => (0, r.jsx)(e, A(T({}, n), { summary: t }));
                 });
         };
     return (0, r.jsxs)(o.P3F, {
@@ -101,7 +101,7 @@ function N(e) {
         children: [
             (0, r.jsx)(c.Z, {
                 hovered: C,
-                unread: T,
+                unread: S,
                 className: v.unreadPill
             }),
             (0, r.jsx)('div', {

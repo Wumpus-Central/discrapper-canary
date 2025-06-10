@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -112,7 +112,7 @@ class I extends (r = i.ZP.Store) {
     }
 }
 l(I, 'displayName', 'GuildTemplateStore');
-let S = new I(a.Z, {
+let T = new I(a.Z, {
     GUILD_TEMPLATE_RESOLVE: _,
     GUILD_TEMPLATE_CREATE_SUCCESS: p,
     GUILD_TEMPLATE_SYNC_SUCCESS: p,

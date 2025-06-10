@@ -1,7 +1,7 @@
 n.d(t, {
     FD: () => h,
     I5: () => O,
-    KP: () => T,
+    KP: () => S,
     Mn: () => b,
     OU: () => L,
     P6: () => w,
@@ -11,7 +11,7 @@ n.d(t, {
     W3: () => P,
     Zy: () => m,
     b9: () => C,
-    cV: () => S,
+    cV: () => T,
     e1: () => I,
     iR: () => D,
     s4: () => N,
@@ -191,13 +191,13 @@ function I(e) {
         legacyUsernameDisabled: e
     });
 }
-function S(e) {
+function T(e) {
     o.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION',
         avatarDecoration: e
     });
 }
-function T(e) {
+function S(e) {
     o.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_NAMEPLATE',
         nameplate: e

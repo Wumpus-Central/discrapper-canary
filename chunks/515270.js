@@ -103,7 +103,7 @@ function v(e) {
             let e = t.map((e) => (0, c.sg)(e.blockEntry[0])).join('\n'),
                 n = t[0].lang;
             if (null != n && null != r.Z.getLanguage(n)) {
-                let r = T(e, n);
+                let r = S(e, n);
                 if (null != r && r.length === t.length) {
                     let e = [];
                     for (let n = 0; n < t.length; n++) {
@@ -153,15 +153,15 @@ let I = {
         maxAge: +o.Z.Millis.MINUTE,
         updateAgeOnGet: !0
     },
-    S = new (a())(I);
-function T(e, t) {
+    T = new (a())(I);
+function S(e, t) {
     let n = ''.concat(e, '-').concat(t),
-        r = S.get(n);
+        r = T.get(n);
     if (null != r) return r;
     let i = s.default.highlight(t, e, !1);
     if (null == i || i.illegal) return null;
     let a = i.value.split('\n');
-    return S.set(n, a), a;
+    return T.set(n, a), a;
 }
 function A(e) {
     let t,

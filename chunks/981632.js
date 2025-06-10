@@ -17,22 +17,22 @@ function u(e) {
         I = () => {
             (m.current = (0, l._)(t, p)), v((e) => e + 1);
         },
-        S = () => {
+        T = () => {
             E(!1), y(!0), v(-1), h(d);
         };
     i.useEffect(() => {
         null == f && h(d);
     }, [f, d]);
-    let T = {
+    let S = {
             applyAnimation: I,
             idleAnimationState: f,
             isChanging: b,
-            resetAnimation: S,
+            resetAnimation: T,
             versionKey: O
         },
-        A = i.useRef(T);
+        A = i.useRef(S);
     i.useEffect(() => {
-        A.current = T;
+        A.current = S;
     }),
         i.useEffect(() => {
             let { resetAnimation: e, versionKey: t, applyAnimation: n } = A.current;

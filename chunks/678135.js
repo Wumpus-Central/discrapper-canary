@@ -21,11 +21,11 @@ var i = n(120356),
     O = n(724241),
     v = n(890876),
     I = n(981631),
-    S = n(228168),
-    T = n(388032),
+    T = n(228168),
+    S = n(388032),
     A = n(997926);
 function N(e) {
-    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: o, pendingBanner: l, pendingAccentColor: m, pendingBio: g, pendingPronouns: T, pendingAvatar: N, pendingAvatarDecoration: R, pendingNickname: P, pendingGlobalName: w, pendingThemeColors: D, pendingProfileEffectId: L, pendingLegacyUsernameDisabled: x, avatarClassName: k, containerClassName: M, isTryItOutFlow: j = !1, disabledInputs: U = !1, hideCustomStatus: G = !1, hideBioSection: B = !1, hideMessageInput: F = !0, hideExampleButton: V = !1, pendingBadges: Z, shouldOpenBadgeTooltip: H, showNameplatePreview: Y = !1 } = e,
+    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: o, pendingBanner: l, pendingAccentColor: m, pendingBio: g, pendingPronouns: S, pendingAvatar: N, pendingAvatarDecoration: R, pendingNickname: P, pendingGlobalName: w, pendingThemeColors: D, pendingProfileEffectId: L, pendingLegacyUsernameDisabled: x, avatarClassName: M, containerClassName: k, isTryItOutFlow: j = !1, disabledInputs: U = !1, hideCustomStatus: G = !1, hideBioSection: B = !1, hideMessageInput: F = !0, hideExampleButton: V = !1, pendingBadges: Z, shouldOpenBadgeTooltip: H, showNameplatePreview: Y = !1 } = e,
         W = (0, d.ZP)(t.id, null == n ? void 0 : n.id),
         { avatarSrc: K, avatarDecorationSrc: z } = (0, _.Z)({
             user: t,
@@ -52,9 +52,9 @@ function N(e) {
             (0, r.jsxs)(p.Z, {
                 user: t,
                 displayProfile: W,
-                themeType: S.lY.POPOUT,
+                themeType: T.lY.POPOUT,
                 pendingThemeColors: D,
-                className: a()(A.container, M),
+                className: a()(A.container, k),
                 forceShowPremium: i,
                 children: [
                     (0, r.jsxs)('header', {
@@ -80,7 +80,7 @@ function N(e) {
                                 previewAvatarDecoration: z,
                                 previewTheme: X,
                                 previewPrimaryColor: Q,
-                                className: k,
+                                className: M,
                                 disabledInputs: U,
                                 isTryItOutFlow: j,
                                 onUpsellClick: () => (null == o ? void 0 : o({ object: I.qAy.AVATAR }))
@@ -89,7 +89,7 @@ function N(e) {
                                 (0, r.jsx)(h.Z, {
                                     location: 'UserProfilePreview',
                                     user: t,
-                                    themeType: S.lY.POPOUT,
+                                    themeType: T.lY.POPOUT,
                                     disableToolbar: U
                                 })
                         ]
@@ -102,7 +102,7 @@ function N(e) {
                         pendingNickname: P,
                         pendingGlobalName: w,
                         pendingBio: g,
-                        pendingPronouns: T,
+                        pendingPronouns: S,
                         pendingLegacyUsernameDisabled: x,
                         isTryItOutFlow: j,
                         hideBioSection: B,
@@ -132,7 +132,7 @@ function C(e) {
               children: [
                   (0, r.jsx)(s.Text, {
                       variant: 'eyebrow',
-                      children: T.intl.string(T.t['7KRt6e']).toLocaleUpperCase()
+                      children: S.intl.string(S.t['7KRt6e']).toLocaleUpperCase()
                   }),
                   (0, r.jsx)(l.Z, {
                       user: n,

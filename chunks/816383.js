@@ -46,10 +46,10 @@ var s = (function () {
         h.push(_[_.length - 1]);
         for (var O = [], v = [], I = 0; I < h.length - 1; I++) {
             s = _[I];
-            var S = h[I],
-                T = 1 / f[I],
-                A = S + h[I + 1] - s - s;
-            O.push((s - S - A) * T), v.push(A * T * T);
+            var T = h[I],
+                S = 1 / f[I],
+                A = T + h[I + 1] - s - s;
+            O.push((s - T - A) * S), v.push(A * S * S);
         }
         (this.xs = t), (this.ys = n), (this.c1s = h), (this.c2s = O), (this.c3s = v);
     }

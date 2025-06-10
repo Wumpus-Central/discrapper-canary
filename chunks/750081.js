@@ -21,8 +21,8 @@ var d = n(155458),
     O = n(960048),
     v = n(63063),
     I = n(240849),
-    S = n(998502),
-    T = n(513566),
+    T = n(998502),
+    S = n(513566),
     A = n(534713),
     N = n(358085),
     C = n(703656),
@@ -32,15 +32,15 @@ var d = n(155458),
     D = n(579806),
     L = n(896361),
     x = n(746106),
-    k = n(177692);
+    M = n(177692);
 n(635153);
-var M = n(857192),
+var k = n(857192),
     j = n(891086),
     U = n(44163),
     G = n(710845),
     B = n(70956),
     F = n(378799);
-M.default.cssDebuggingEnabled && n.e('34600').then(n.bind(n, 671996)), (0, F.s5)();
+k.default.cssDebuggingEnabled && n.e('34600').then(n.bind(n, 671996)), (0, F.s5)();
 let V = 5 * B.Z.Millis.MINUTE,
     Z = document.getElementById('app-mount');
 _()(null != Z, 'Could not find app-mount'), (Z.className = __OVERLAY__ ? '' : j.appMount);
@@ -59,7 +59,7 @@ if (null != D.Z) {
                 throw (O.Z.captureCrash(e), e);
             });
         }),
-        S.ZP.appLoaded();
+        T.ZP.appLoaded();
     let e = null == (i = (a = D.Z.remoteApp).getVersion) ? void 0 : i.call(a),
         t = null == (o = (s = D.Z.remoteApp).getBuildNumber) ? void 0 : o.call(s),
         n = {};
@@ -75,24 +75,24 @@ if (null != D.Z) {
         .join(', ');
     new G.Z().log('[NATIVE INFO] host '.concat(e, ', modules: ').concat(u, ', build: ').concat(t));
     let d = null == (l = (c = D.Z.remoteApp).getReleaseChannel) ? void 0 : l.call(c);
-    ('canary' === d || 'development' === d) && S.ZP.pauseFrameEvictor(), S.ZP.initializeExitHook(), S.ZP.initializeWERHandler();
+    ('canary' === d || 'development' === d) && T.ZP.pauseFrameEvictor(), T.ZP.initializeExitHook(), T.ZP.initializeWERHandler();
 }
 if (((0, P.O)(window), __OVERLAY__)) K(p.Z.Overlay);
 else if (null != window.require && null == window.DiscordNative) K(p.Z.OutdatedClient);
 else {
     if ((document.addEventListener('scroll', (e) => e.preventDefault()), N.isPlatformEmbedded)) {
-        (window.onbeforeunload = () => S.ZP.beforeUnload()), S.ZP.on('HELP_OPEN', () => window.open(v.Z.getCommunityURL()));
-        let e = new w.sW(V, () => S.ZP.purgeMemory());
-        S.ZP.on('MAIN_WINDOW_BLUR', () => {
-            e.delay(), S.ZP.setFocused(!1), (0, R.T_)(window, !1);
+        (window.onbeforeunload = () => T.ZP.beforeUnload()), T.ZP.on('HELP_OPEN', () => window.open(v.Z.getCommunityURL()));
+        let e = new w.sW(V, () => T.ZP.purgeMemory());
+        T.ZP.on('MAIN_WINDOW_BLUR', () => {
+            e.delay(), T.ZP.setFocused(!1), (0, R.T_)(window, !1);
         }),
-            S.ZP.on('MAIN_WINDOW_FOCUS', () => {
-                e.cancel(), S.ZP.setFocused(!0), (0, R.T_)(window, !0);
+            T.ZP.on('MAIN_WINDOW_FOCUS', () => {
+                e.cancel(), T.ZP.setFocused(!0), (0, R.T_)(window, !0);
             }),
-            S.ZP.on('MAIN_WINDOW_PATH', W),
-            S.ZP.on('MAIN_WINDOW_HIDDEN', () => {
+            T.ZP.on('MAIN_WINDOW_PATH', W),
+            T.ZP.on('MAIN_WINDOW_HIDDEN', () => {
                 (0, R.al)(window);
             });
     }
-    E.Z.initialize(), h.Z.initialize(), m.Z.init(), y.Z.init(), U.Z.init(), g.Z.initialize(), I.Z.initialize(), T.Z.initialize(), b.j(), (0, k.Mn)(), K(p.Z.App);
+    E.Z.initialize(), h.Z.initialize(), m.Z.init(), y.Z.init(), U.Z.init(), g.Z.initialize(), I.Z.initialize(), S.Z.initialize(), b.j(), (0, M.Mn)(), K(p.Z.App);
 }

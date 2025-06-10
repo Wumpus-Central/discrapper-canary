@@ -91,17 +91,17 @@ function v(e, t) {
     return i;
 }
 let I = new l.Z('PaymentRequest'),
-    S = Object.values({
+    T = Object.values({
         applePay: 'applePay',
         googlePay: 'googlePay',
         link: 'link',
         browserCard: 'browserCard'
     });
-class T extends i.Component {
+class S extends i.Component {
     componentDidMount() {
         if (!(0, f.isDesktop)()) {
             if (!this.isBrowserCompatible()) return void this.onPaymentRequestFailure();
-            (this.disableWallets = S.filter((e) => e !== this.paymentRequestWallet).sort()),
+            (this.disableWallets = T.filter((e) => e !== this.paymentRequestWallet).sort()),
                 (0, _.d2)().then((e) => {
                     this.initPaymentRequest(e);
                 });
@@ -293,7 +293,7 @@ class T extends i.Component {
             });
     }
 }
-class A extends T {
+class A extends S {
     isBrowserCompatible() {
         return (0, d.vu)() >= 61;
     }
@@ -364,7 +364,7 @@ class A extends T {
         super(...e), g(this, 'state', E({}, this.initialState)), g(this, 'paymentRequestWallet', 'googlePay');
     }
 }
-class N extends T {
+class N extends S {
     isBrowserCompatible() {
         return (0, d.G6)();
     }

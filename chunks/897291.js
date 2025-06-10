@@ -70,12 +70,12 @@ function O(e) {
         { analyticsLocations: g } = (0, l.ZP)(s.Z.GIFT_BUTTON),
         b = (0, f.Ft)(i),
         { Component: O, events: v, play: I } = (0, a.$)(),
-        { enabled: S } = d.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
-        T = (0, c.Q3)('ChannelPremiumGiftButton'),
+        { enabled: T } = d.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
+        S = (0, c.Q3)('ChannelPremiumGiftButton'),
         A = i.type === p.d4z.DM;
     if (t) return null;
     let N = () => {
-        S && A && null != b
+        T && A && null != b
             ? (0, o.ZDy)(async () => {
                   let { default: e } = await n.e('59207').then(n.bind(n, 435626));
                   return (t) =>
@@ -129,7 +129,7 @@ function O(e) {
                     ),
                     {
                         children: (0, r.jsx)(O, {
-                            size: T ? 'refresh_sm' : void 0,
+                            size: S ? 'refresh_sm' : void 0,
                             color: 'currentColor'
                         })
                     }

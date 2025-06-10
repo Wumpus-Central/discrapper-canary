@@ -79,12 +79,12 @@ function I(e) {
     }),
         b(t, r, i);
 }
-function S(e) {
+function T(e) {
     let { channelId: t, id: n, filename: r, description: i, spoiler: a, thumbnail: o, draftType: s } = e,
         l = [...g(t, s)].map((e) => (e.id === n && (void 0 !== r && (e.filename = r), void 0 !== a && (e.spoiler = a), void 0 !== i && (e.description = i), void 0 !== o && (e.isThumbnail = o)), e));
     b(t, s, l);
 }
-function T(e) {
+function S(e) {
     let { channelId: t, id: n, file: r, draftType: i } = e,
         a = [...g(t, i)].filter((e) => e.id !== n),
         o = new c.n(r, t);
@@ -129,11 +129,11 @@ p(R, 'displayName', 'UploadAttachmentStore');
 let P = new R(s.Z, {
     UPLOAD_ATTACHMENT_POP_FILE: y,
     UPLOAD_ATTACHMENT_ADD_FILES: O,
-    UPLOAD_ATTACHMENT_UPDATE_FILE: S,
+    UPLOAD_ATTACHMENT_UPDATE_FILE: T,
     UPLOAD_ATTACHMENT_REMOVE_FILE: v,
     UPLOAD_ATTACHMENT_REMOVE_FILES: I,
     UPLOAD_ATTACHMENT_CLEAR_ALL_FILES: N,
     UPLOAD_ATTACHMENT_SET_UPLOADS: A,
-    UPLOAD_ATTACHMENT_SET_FILE: T,
+    UPLOAD_ATTACHMENT_SET_FILE: S,
     SIDEBAR_CLOSE: C
 });

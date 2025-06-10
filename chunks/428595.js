@@ -20,8 +20,8 @@ var r = n(392711),
     O = n(143223),
     v = n(945884),
     I = n(594199),
-    S = n(97734),
-    T = n(303694),
+    T = n(97734),
+    S = n(303694),
     A = n(660199),
     N = n(364458),
     C = n(981631),
@@ -69,7 +69,7 @@ function x(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,7 +80,7 @@ function k(e, t) {
         e
     );
 }
-let M = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
+let k = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
     j = /^$|\n *$/,
     U = /^ *>>> ?/,
     G = /^ *> ?/gm,
@@ -113,15 +113,15 @@ let V = (e) => {
     H = {
         newline: o().defaultRules.newline,
         paragraph: o().defaultRules.paragraph,
-        escape: k(L({}, o().defaultRules.escape), { match: (e, t, n) => (!1 === t.allowEscape ? null : o().defaultRules.escape.match(e, t, n)) }),
-        blockQuote: k(L({}, o().defaultRules.blockQuote), {
+        escape: M(L({}, o().defaultRules.escape), { match: (e, t, n) => (!1 === t.allowEscape ? null : o().defaultRules.escape.match(e, t, n)) }),
+        blockQuote: M(L({}, o().defaultRules.blockQuote), {
             requiredFirstCharacters: [' ', '>'],
             match(e, t) {
                 let { prevCapture: n, inQuote: r, nested: i } = t;
                 if (r || i) return null;
-                if (null == n) return M.exec(e);
+                if (null == n) return k.exec(e);
                 let a = n[0];
-                return j.test(a) ? M.exec(e) : null;
+                return j.test(a) ? k.exec(e) : null;
             },
             parse(e, t, n) {
                 let r = e[0],
@@ -148,12 +148,12 @@ let V = (e) => {
             }
         }),
         link: b.ZP,
-        autolink: k(L({}, o().defaultRules.autolink), { parse: F }),
-        mailto: k(L({}, o().defaultRules.mailto), {
+        autolink: M(L({}, o().defaultRules.autolink), { parse: F }),
+        mailto: M(L({}, o().defaultRules.mailto), {
             match: o().inlineRegex(/^<([^\s<>@]+@[^\s<>@]+\.[^\s<>@]+)>/),
             requiredFirstCharacters: ['<']
         }),
-        tel: k(L({}, o().defaultRules.mailto), {
+        tel: M(L({}, o().defaultRules.mailto), {
             requiredFirstCharacters: ['<'],
             match: o().inlineRegex(/^<((?:(?:tel|sms):\+?|\+)(?:(?:[0-9]|\([0-9]+\)))(?:[- .\/]?(?:[0-9]|\([0-9]+\)))+)>/),
             parse(e) {
@@ -174,7 +174,7 @@ let V = (e) => {
                 );
             }
         }),
-        url: k(L({}, o().defaultRules.url), {
+        url: M(L({}, o().defaultRules.url), {
             requiredFirstCharacters: ['h', 's'],
             match(e, t) {
                 if (!t.inline) return null;
@@ -201,10 +201,10 @@ let V = (e) => {
         u: o().defaultRules.u,
         br: o().defaultRules.br,
         text: I.ZP,
-        inlineCode: k(L({}, o().defaultRules.inlineCode), {
+        inlineCode: M(L({}, o().defaultRules.inlineCode), {
             parse(e, t, n) {
                 let r = o().defaultRules.inlineCode.parse(e, t, n);
-                return !0 === n.parseInlineCodeChildContent ? k(L({}, r), { validationChildContent: t(r.content, n) }) : r;
+                return !0 === n.parseInlineCodeChildContent ? M(L({}, r), { validationChildContent: t(r.content, n) }) : r;
             }
         }),
         emoticon: {
@@ -430,8 +430,8 @@ let V = (e) => {
             parse(e, t, n) {
                 var r;
                 let [, i, a] = e,
-                    o = (0, T.l)(i),
-                    s = (0, T.W)(i, a, null == (r = Z(n)) ? void 0 : r.id);
+                    o = (0, S.l)(i),
+                    s = (0, S.W)(i, a, null == (r = Z(n)) ? void 0 : r.id);
                 function l(e) {
                     return null == e
                         ? null
@@ -457,7 +457,7 @@ let V = (e) => {
         list: y.Z,
         subtext: v.Z
     },
-    Y = (0, N.Z)([H, S.Z]),
+    Y = (0, N.Z)([H, T.Z]),
     W = i().omit(Y, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'subtext', 'soundboard']),
     K = i().omit(Y, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'autolink', 'url', 'attachmentLink', 'mention', 'roleMention', 'channelMention', 'channelOrMessageUrl', 'mediaPostLink', 'subtext', 'soundboard']),
     z = i().omit(Y, ['codeBlock', 'br', 'mention', 'channel', 'roleMention', 'attachmentLink', 'subtext', 'soundboard']),
@@ -505,7 +505,7 @@ let et = 10,
                 parse(e, t, n) {
                     var r;
                     let i = null != (r = n.parseDepth) ? r : 0,
-                        a = k(L({}, n), { parseDepth: i + 1 }),
+                        a = M(L({}, n), { parseDepth: i + 1 }),
                         o = t(e[2], a),
                         s = t(e[3], a);
                     return [

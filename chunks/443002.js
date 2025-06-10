@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(245004),
     v = n(383881),
     I = n(981631),
-    S = n(388032),
-    T = n(871146);
+    T = n(388032),
+    S = n(871146);
 let A = function (e) {
     let { analyticsLocation: t, guild: n, onClose: A } = e,
         [N, C] = i.useState(!0),
@@ -31,7 +31,7 @@ let A = function (e) {
         D = i.useRef(null),
         L = i.useRef(null),
         x = i.useRef(null),
-        k = i.useCallback(() => {
+        M = i.useCallback(() => {
             null != x.current &&
                 null != L.current &&
                 L.current.scrollTo({
@@ -39,7 +39,7 @@ let A = function (e) {
                     animate: !0
                 });
         }, []),
-        M = (0, u.Ek)(n.id, 'GuildBoostingMarketing'),
+        k = (0, u.Ek)(n.id, 'GuildBoostingMarketing'),
         j = i.useCallback(() => {
             null == A || A(),
                 _.default.track(I.rMx.MODAL_DISMISSED, {
@@ -91,9 +91,9 @@ let A = function (e) {
             children: [
                 null != A &&
                     (0, r.jsx)('div', {
-                        className: T.closeIconWrapper,
+                        className: S.closeIconWrapper,
                         children: (0, r.jsx)(s.Z, {
-                            className: T.closeIcon,
+                            className: S.closeIcon,
                             closeAction: j,
                             keybind: 'ESC',
                             variant: s.Z.Variants.BOLD
@@ -101,25 +101,25 @@ let A = function (e) {
                     }),
                 (0, r.jsxs)(o.yWw, {
                     ref: L,
-                    className: T.scroller,
+                    className: S.scroller,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: T.header,
+                            className: S.header,
                             children: [
                                 (0, r.jsxs)('div', {
-                                    className: T.headerContentWrapper,
+                                    className: S.headerContentWrapper,
                                     children: [
-                                        M &&
+                                        k &&
                                             (0, r.jsx)(d.Z, {
                                                 guild: e.guild,
                                                 themeResponsive: !1,
-                                                onButtonClick: k
+                                                onButtonClick: M
                                             }),
                                         (0, r.jsx)(o.X6q, {
-                                            className: T.heading,
+                                            className: S.heading,
                                             color: 'always-white',
                                             variant: 'display-lg',
-                                            children: S.intl.string(S.t.N4sqzM)
+                                            children: T.intl.string(T.t.N4sqzM)
                                         }),
                                         (0, r.jsx)(h.Z, {
                                             guild: n,
@@ -134,10 +134,10 @@ let A = function (e) {
                             ]
                         }),
                         (0, r.jsxs)('div', {
-                            className: T.middleBodyContentWrapper,
+                            className: S.middleBodyContentWrapper,
                             children: [
                                 (0, r.jsx)(O.ZP, { guild: e.guild }),
-                                M &&
+                                k &&
                                     (0, r.jsx)(f.Z, {
                                         ref: x,
                                         guild: e.guild,
@@ -146,21 +146,21 @@ let A = function (e) {
                             ]
                         }),
                         (0, r.jsxs)('div', {
-                            className: T.lowerBody,
+                            className: S.lowerBody,
                             children: [
                                 (0, r.jsxs)('div', {
-                                    className: T.lowerBodyContentWrapper,
+                                    className: S.lowerBodyContentWrapper,
                                     children: [
                                         (0, r.jsx)(y.Z, {
-                                            className: T.tierComparisonTable,
+                                            className: S.tierComparisonTable,
                                             guild: n
                                         }),
                                         (0, r.jsx)(p.Z, {}),
-                                        (0, r.jsx)(m.Z, { isGuildPowerupsExperimentEnabled: M })
+                                        (0, r.jsx)(m.Z, { isGuildPowerupsExperimentEnabled: k })
                                     ]
                                 }),
                                 (0, r.jsx)(v.A, {}),
-                                (0, r.jsx)('div', { className: T.lowerBodyBackgroundImage })
+                                (0, r.jsx)('div', { className: S.lowerBodyBackgroundImage })
                             ]
                         }),
                         (0, r.jsx)(a.$, {
@@ -168,7 +168,7 @@ let A = function (e) {
                             onChange: U,
                             children: (0, r.jsx)('div', {
                                 ref: D,
-                                className: T.persistentCtaSpacer
+                                className: S.persistentCtaSpacer
                             })
                         })
                     ]

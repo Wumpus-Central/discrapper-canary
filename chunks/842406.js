@@ -42,7 +42,7 @@ function v(e) {
 function I(e) {
     return '[object DataView]' === u(e);
 }
-function S(e) {
+function T(e) {
     return 'undefined' != typeof DataView && (I.working ? I(e) : e instanceof DataView);
 }
 (t.isArgumentsObject = r),
@@ -52,7 +52,7 @@ function S(e) {
         return ('undefined' != typeof Promise && e instanceof Promise) || (null !== e && 'object' == typeof e && 'function' == typeof e.then && 'function' == typeof e.catch);
     }),
     (t.isArrayBufferView = function (e) {
-        return 'undefined' != typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : o(e) || S(e);
+        return 'undefined' != typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : o(e) || T(e);
     }),
     (t.isUint8Array = function (e) {
         return 'Uint8Array' === a(e);
@@ -106,13 +106,13 @@ function S(e) {
     (O.working = 'undefined' != typeof ArrayBuffer && O(new ArrayBuffer())),
     (t.isArrayBuffer = v),
     (I.working = 'undefined' != typeof ArrayBuffer && 'undefined' != typeof DataView && I(new DataView(new ArrayBuffer(1), 0, 1))),
-    (t.isDataView = S);
-var T = 'undefined' != typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
+    (t.isDataView = T);
+var S = 'undefined' != typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
 function A(e) {
     return '[object SharedArrayBuffer]' === u(e);
 }
 function N(e) {
-    return void 0 !== T && (void 0 === A.working && (A.working = A(new T())), A.working ? A(e) : e instanceof T);
+    return void 0 !== S && (void 0 === A.working && (A.working = A(new S())), A.working ? A(e) : e instanceof S);
 }
 function C(e) {
     return m(e, d);

@@ -45,8 +45,8 @@ function m(e) {
             }) || b,
         O = y ? _ : f,
         [v, I] = i.useState(!1),
-        S = i.useCallback(() => I(!0), []),
-        T = i.useMemo(
+        T = i.useCallback(() => I(!0), []),
+        S = i.useMemo(
             () =>
                 O.map((e) => {
                     let { applicationId: t } = e;
@@ -55,7 +55,7 @@ function m(e) {
             [O]
         ),
         A = (0, a.e7)([c.Z], () => c.Z.getRelationshipType(E), [E]),
-        N = p(T, v || 1 === O.length);
+        N = p(S, v || 1 === O.length);
     if (y || 0 === O.length || A === d.OGo.FRIEND) return null;
     if (1 === O.length) {
         let { applicationId: e } = O[0],
@@ -67,7 +67,7 @@ function m(e) {
                   id: t,
                   label: s,
                   subtext: (0, r.jsx)(h, { application: n }),
-                  onFocus: S,
+                  onFocus: T,
                   action: () => m(n)
               });
     }
@@ -98,7 +98,7 @@ function m(e) {
               color: g,
               id: t,
               label: s,
-              onFocus: S,
+              onFocus: T,
               children: C
           });
 }

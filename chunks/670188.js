@@ -96,7 +96,7 @@ let E = (0, o.pxk)(o.EFr.SIZE_80),
         position: void 0
     };
 function O(e) {
-    var { children: t, user: n, currentUser: a, guildId: s, channelId: d, messageId: f, roleId: p, disableUserProfileLink: g, newAnalyticsLocations: b, appContext: y, avatarUrl: O, preload: v, renderPopout: I, onRequestOpen: S, onRequestClose: T, onClosePopout: A, shouldShow: N, shouldPreload: C = !0 } = e,
+    var { children: t, user: n, currentUser: a, guildId: s, channelId: d, messageId: f, roleId: p, disableUserProfileLink: g, newAnalyticsLocations: b, appContext: y, avatarUrl: O, preload: v, renderPopout: I, onRequestOpen: T, onRequestClose: S, onClosePopout: A, shouldShow: N, shouldPreload: C = !0 } = e,
         R = m(e, ['children', 'user', 'currentUser', 'guildId', 'channelId', 'messageId', 'roleId', 'disableUserProfileLink', 'newAnalyticsLocations', 'appContext', 'avatarUrl', 'preload', 'renderPopout', 'onRequestOpen', 'onRequestClose', 'onClosePopout', 'shouldShow', 'shouldPreload']);
     let P = i.useRef(void 0),
         w = i.useCallback(
@@ -145,8 +145,8 @@ function O(e) {
                     shouldShow: N,
                     preload: C ? w : void 0,
                     renderPopout: D,
-                    onRequestOpen: S,
-                    onRequestClose: T
+                    onRequestOpen: T,
+                    onRequestClose: S
                 },
                 R
             ),

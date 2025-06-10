@@ -61,8 +61,8 @@ var r,
     }),
     v = !1,
     I = !1,
-    S = /^[A-Z]{3}$/,
-    T = /-u(?:-[0-9a-z]{2,8})+/gi,
+    T = /^[A-Z]{3}$/,
+    S = /-u(?:-[0-9a-z]{2,8})+/gi,
     A = {
         tags: {
             'art-lojban': 'jbo',
@@ -424,7 +424,7 @@ function P() {
 }
 function w(e) {
     var t = eh(String(e));
-    return !1 !== S.test(t);
+    return !1 !== T.test(t);
 }
 function D(e) {
     if (void 0 === e) return new e_();
@@ -452,27 +452,27 @@ function L(e, t) {
 function x(e, t) {
     for (var n, r = 0, i = t.length; r < i && !n; ) {
         var a = t[r],
-            o = String(a).replace(T, ''),
+            o = String(a).replace(S, ''),
             n = L(e, o);
         r++;
     }
     var s = new ef();
     if (void 0 !== n) {
         if (((s['[[locale]]'] = n), String(a) !== String(o))) {
-            var l = a.match(T)[0],
+            var l = a.match(S)[0],
                 c = a.indexOf('-u-');
             (s['[[extension]]'] = l), (s['[[extensionIndex]]'] = c);
         }
     } else s['[[locale]]'] = P();
     return s;
 }
-function k(e, t) {
+function M(e, t) {
     return x(e, t);
 }
-function M(e, t, n, r, i) {
+function k(e, t, n, r, i) {
     if (0 === e.length) throw ReferenceError('No locale data has been provided for this object yet.');
     if ('lookup' === n['[[localeMatcher]]']) var a = x(e, t);
-    else var a = k(e, t);
+    else var a = M(e, t);
     var o = a['[[locale]]'];
     if (c.call(a, '[[extension]]'))
         var s = a['[[extension]]'],
@@ -492,14 +492,14 @@ function M(e, t, n, r, i) {
             var I = v.call(f, E);
             if (-1 !== I)
                 if (I + 1 < _ && f[I + 1].length > 2) {
-                    var S = f[I + 1],
-                        T = v.call(b, S);
-                    if (-1 !== T)
-                        var y = S,
+                    var T = f[I + 1],
+                        S = v.call(b, T);
+                    if (-1 !== S)
+                        var y = T,
                             O = '-' + E + '-' + y;
                 } else {
-                    var T = v(b, 'true');
-                    if (-1 !== T) var y = 'true';
+                    var S = v(b, 'true');
+                    if (-1 !== S) var y = 'true';
                 }
         }
         if (c.call(n, '[[' + E + ']]')) {
@@ -517,7 +517,7 @@ function M(e, t, n, r, i) {
 function j(e, t) {
     for (var n = t.length, r = new e_(), i = 0; i < n; ) {
         var a = t[i];
-        void 0 !== L(e, String(a).replace(T, '')) && h.call(r, a), i++;
+        void 0 !== L(e, String(a).replace(S, '')) && h.call(r, a), i++;
     }
     return _.call(r);
 }
@@ -578,7 +578,7 @@ function Z(e, t, n) {
         s = B(n, 'localeMatcher', 'string', new e_('lookup', 'best fit'), 'best fit');
     o['[[localeMatcher]]'] = s;
     var c = b.NumberFormat['[[localeData]]'],
-        d = M(b.NumberFormat['[[availableLocales]]'], a, o, b.NumberFormat['[[relevantExtensionKeys]]'], c);
+        d = k(b.NumberFormat['[[availableLocales]]'], a, o, b.NumberFormat['[[relevantExtensionKeys]]'], c);
     (r['[[locale]]'] = d['[[locale]]']), (r['[[numberingSystem]]'] = d['[[nu]]']), (r['[[dataLocale]]'] = d['[[dataLocale]]']);
     var f = d['[[dataLocale]]'],
         _ = B(n, 'style', 'string', new e_('decimal', 'percent', 'currency'), 'decimal');
@@ -600,10 +600,10 @@ function Z(e, t, n) {
         v = F(n, 'maximumFractionDigits', E, 20, O);
     r['[[maximumFractionDigits]]'] = v;
     var I = n.minimumSignificantDigits,
-        S = n.maximumSignificantDigits;
-    (void 0 !== I || void 0 !== S) && ((I = F(n, 'minimumSignificantDigits', 1, 21, 1)), (S = F(n, 'maximumSignificantDigits', I, 21, 21)), (r['[[minimumSignificantDigits]]'] = I), (r['[[maximumSignificantDigits]]'] = S));
-    var T = B(n, 'useGrouping', 'boolean', void 0, !0);
-    r['[[useGrouping]]'] = T;
+        T = n.maximumSignificantDigits;
+    (void 0 !== I || void 0 !== T) && ((I = F(n, 'minimumSignificantDigits', 1, 21, 1)), (T = F(n, 'maximumSignificantDigits', I, 21, 21)), (r['[[minimumSignificantDigits]]'] = I), (r['[[maximumSignificantDigits]]'] = T));
+    var S = B(n, 'useGrouping', 'boolean', void 0, !0);
+    r['[[useGrouping]]'] = S;
     var A = c[f].patterns[_];
     return (r['[[positivePattern]]'] = A.positivePattern), (r['[[negativePattern]]'] = A.negativePattern), (r['[[boundFormat]]'] = void 0), (r['[[initializedNumberFormat]]'] = !0), l && (e.format = Y.call(e)), i.exp.test(i.input), e;
 }
@@ -657,10 +657,10 @@ function W(e, t) {
     }
     var I = i[!0 === u ? '[[negativePattern]]' : '[[positivePattern]]'];
     if (((I = I.replace('{number}', n)), 'currency' === i['[[style]]'])) {
-        var S,
-            T = i['[[currency]]'],
-            A = s.currencies[T];
-        (S = ('symbol' === i['[[currencyDisplay]]'] && A) || T), (I = I.replace('{currency}', S));
+        var T,
+            S = i['[[currency]]'],
+            A = s.currencies[S];
+        (T = ('symbol' === i['[[currencyDisplay]]'] && A) || S), (I = I.replace('{currency}', T));
     }
     return r.exp.test(r.input), I;
 }
@@ -756,7 +756,7 @@ function Q(e, t, n) {
     (v = B(n, 'localeMatcher', 'string', new e_('lookup', 'best fit'), 'best fit')), (o['[[localeMatcher]]'] = v);
     var s = b.DateTimeFormat,
         d = s['[[localeData]]'],
-        f = M(s['[[availableLocales]]'], a, o, s['[[relevantExtensionKeys]]'], d);
+        f = k(s['[[availableLocales]]'], a, o, s['[[relevantExtensionKeys]]'], d);
     (r['[[locale]]'] = f['[[locale]]']), (r['[[calendar]]'] = f['[[ca]]']), (r['[[numberingSystem]]'] = f['[[nu]]']), (r['[[dataLocale]]'] = f['[[dataLocale]]']);
     var _ = f['[[dataLocale]]'],
         p = n.timeZone;
@@ -775,15 +775,15 @@ function Q(e, t, n) {
             var I = g[h];
             r['[[' + h + ']]'] = I;
         }
-    var S,
-        T = B(n, 'hour12', 'boolean');
+    var T,
+        S = B(n, 'hour12', 'boolean');
     if (r['[[hour]]'])
-        if (((T = void 0 === T ? E.hour12 : T), (r['[[hour12]]'] = T), !0 === T)) {
+        if (((S = void 0 === S ? E.hour12 : S), (r['[[hour12]]'] = S), !0 === S)) {
             var A = E.hourNo0;
-            (r['[[hourNo0]]'] = A), (S = g.pattern12);
-        } else S = g.pattern;
-    else S = g.pattern;
-    return (r['[[pattern]]'] = S), (r['[[boundFormat]]'] = void 0), (r['[[initializedDateTimeFormat]]'] = !0), l && (e.format = ei.call(e)), i.exp.test(i.input), e;
+            (r['[[hourNo0]]'] = A), (T = g.pattern12);
+        } else T = g.pattern;
+    else T = g.pattern;
+    return (r['[[pattern]]'] = T), (r['[[boundFormat]]'] = void 0), (r['[[initializedDateTimeFormat]]'] = !0), l && (e.format = ei.call(e)), i.exp.test(i.input), e;
 }
 u(o.NumberFormat.prototype, 'resolvedOptions', {
     configurable: !0,

@@ -23,9 +23,9 @@ function f(e, t) {
         O = void 0 === y ? l.k5 : y,
         v = n.altBoundary,
         I = void 0 !== v && v,
-        S = n.padding,
-        T = void 0 === S ? 0 : S,
-        A = (0, u.Z)('number' != typeof T ? T : (0, d.Z)(T, l.mv)),
+        T = n.padding,
+        S = void 0 === T ? 0 : T,
+        A = (0, u.Z)('number' != typeof S ? S : (0, d.Z)(S, l.mv)),
         N = O === l.k5 ? l.YP : l.k5,
         C = e.rects.popper,
         R = e.elements[I ? N : O],
@@ -39,20 +39,20 @@ function f(e, t) {
         }),
         L = (0, s.Z)(Object.assign({}, C, D)),
         x = O === l.k5 ? L : w,
-        k = {
+        M = {
             top: P.top - x.top + A.top,
             bottom: x.bottom - P.bottom + A.bottom,
             left: P.left - x.left + A.left,
             right: x.right - P.right + A.right
         },
-        M = e.modifiersData.offset;
-    if (O === l.k5 && M) {
-        var j = M[_];
-        Object.keys(k).forEach(function (e) {
+        k = e.modifiersData.offset;
+    if (O === l.k5 && k) {
+        var j = k[_];
+        Object.keys(M).forEach(function (e) {
             var t = [l.F2, l.I].indexOf(e) >= 0 ? 1 : -1,
                 n = [l.we, l.I].indexOf(e) >= 0 ? 'y' : 'x';
-            k[e] += j[n] * t;
+            M[e] += j[n] * t;
         });
     }
-    return k;
+    return M;
 }

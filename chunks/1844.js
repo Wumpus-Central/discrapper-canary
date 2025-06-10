@@ -61,12 +61,12 @@ function I() {
     let e = v();
     null != e && (E = e);
 }
-function S() {
+function T() {
     if (0 === g.length) return !1;
     let e = v();
     null != e && ((E = e), (c.lastSeenOutboundPromotionStartDate = e));
 }
-function T() {
+function S() {
     (c = l()), (h = !1), (m = null), (u = !1), (d = null), (g = []);
 }
 function A() {
@@ -120,6 +120,6 @@ let C = new N(a.Z, {
     ACTIVE_BOGO_PROMOTION_FETCH: f,
     ACTIVE_BOGO_PROMOTION_FETCH_FAIL: _,
     OUTBOUND_PROMOTION_NOTICE_DISMISS: I,
-    OUTBOUND_PROMOTIONS_SEEN: S,
-    LOGOUT: T
+    OUTBOUND_PROMOTIONS_SEEN: T,
+    LOGOUT: S
 });

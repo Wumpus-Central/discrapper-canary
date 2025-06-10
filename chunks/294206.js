@@ -24,8 +24,8 @@ var r = n(255367),
     O = n(763296),
     v = n(697426),
     I = n(242291),
-    S = n(830253),
-    T = n(286654),
+    T = n(830253),
+    S = n(286654),
     A = n(675654),
     N = n(509571),
     C = n(388032),
@@ -86,14 +86,14 @@ function x(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = k(e, t);
+        i = M(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function k(e, t) {
+function M(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -102,7 +102,7 @@ function k(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let M = '1',
+let k = '1',
     j = 0.01,
     U = 0.1,
     G = 0.01,
@@ -176,7 +176,7 @@ function Z(e) {
 }
 function H(e, t) {
     return i.useMemo(() => {
-        if (null == t || e !== M)
+        if (null == t || e !== k)
             return {
                 x: 0,
                 y: 0
@@ -195,34 +195,34 @@ let Y = i.forwardRef(function (e, t) {
         y,
         O,
         P,
-        { sound: D, channel: k, containerClassName: F, className: Y, focused: W, forceSecondaryActions: K = !1, interactive: z = !0, enableSecondaryActions: q = !1, suppressPlaySound: X, onMouseEnter: Q, onSelectItem: J, analyticsLocations: $, buttonOverlay: ee = v.Pb.PLAY, showLockForDisabledSound: et = !0, inNitroLockedSection: en = !1, isAnimated: er = !0, isPlayingSoundOverride: ei, isSoundmoji: ea, soundmojiVisualEffectRef: eo, tooltipOverride: es, tooltipClassName: el, tooltipContentClassName: ec } = e,
+        { sound: D, channel: M, containerClassName: F, className: Y, focused: W, forceSecondaryActions: K = !1, interactive: z = !0, enableSecondaryActions: q = !1, suppressPlaySound: X, onMouseEnter: Q, onSelectItem: J, analyticsLocations: $, buttonOverlay: ee = v.Pb.PLAY, showLockForDisabledSound: et = !0, inNitroLockedSection: en = !1, isAnimated: er = !0, isPlayingSoundOverride: ei, isSoundmoji: ea, soundmojiVisualEffectRef: eo, tooltipOverride: es, tooltipClassName: el, tooltipContentClassName: ec } = e,
         eu = x(e, ['sound', 'channel', 'containerClassName', 'className', 'focused', 'forceSecondaryActions', 'interactive', 'enableSecondaryActions', 'suppressPlaySound', 'onMouseEnter', 'onSelectItem', 'analyticsLocations', 'buttonOverlay', 'showLockForDisabledSound', 'inNitroLockedSection', 'isAnimated', 'isPlayingSoundOverride', 'isSoundmoji', 'soundmojiVisualEffectRef', 'tooltipOverride', 'tooltipClassName', 'tooltipContentClassName']);
     let { name: ed, emojiId: ef, emojiName: e_ } = D,
         ep = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
-        eh = (0, T.z)(D, null == k ? void 0 : k.guild_id),
-        { playSoundboardSound: em, previewSound: eg, isPlayingSound: eE } = (0, S.Z)(D, null != (u = null == k ? void 0 : k.id) ? u : null, null != (y = ea ? E.AY.getSetting() : null == (n = E.kU.getSetting()) ? void 0 : n.volume) ? y : 100, !ea && (null == k ? void 0 : k.isVocal()) ? N.w.VOICE : N.w.DEFAULT),
+        eh = (0, S.z)(D, null == M ? void 0 : M.guild_id),
+        { playSoundboardSound: em, previewSound: eg, isPlayingSound: eE } = (0, T.Z)(D, null != (u = null == M ? void 0 : M.id) ? u : null, null != (y = ea ? E.AY.getSetting() : null == (n = E.kU.getSetting()) ? void 0 : n.volume) ? y : 100, !ea && (null == M ? void 0 : M.isVocal()) ? N.w.VOICE : N.w.DEFAULT),
         { createMultipleConfettiAt: eb } = i.useContext(p.h),
         ey = i.useRef(null),
         eO = H(D.soundId, ey.current),
         ev = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
         eI = i.useRef(j),
-        eS = i.useRef(new c.Xp()),
-        eT = D.soundId === M,
+        eT = i.useRef(new c.Xp()),
+        eS = D.soundId === k,
         eA = 'sound-'.concat(D.soundId),
         eN = (0, s.JA)(eA),
         eC = null != ef || null != e_,
-        eR = !(0, I.Nq)(ep, D, k) && !ea,
+        eR = !(0, I.Nq)(ep, D, M) && !ea,
         eP = K || (q && !eR),
         ew = null != (O = h.Wq.useStore().bottomPosition) ? O : 0,
         eD = (null != (P = null == (a = ey.current) ? void 0 : a.getBoundingClientRect().bottom) ? P : 0) + 50 > ew ? 'top' : 'bottom',
         [eL, ex] = i.useState(!1),
-        ek = eR && et;
-    function eM() {
+        eM = eR && et;
+    function ek() {
         X || em($);
     }
     function ej(e) {
-        if ((eT && !ev && ((eI.current = Math.min(eI.current + G, U)), Math.random() < eI.current && eb(eO.x, eO.y, void 0, void 0, { sprite: A.vv })), null != J)) return void J(e);
-        eM();
+        if ((eS && !ev && ((eI.current = Math.min(eI.current + G, U)), Math.random() < eI.current && eb(eO.x, eO.y, void 0, void 0, { sprite: A.vv })), null != J)) return void J(e);
+        ek();
     }
     let eU = V({
             sound: D,
@@ -231,7 +231,7 @@ let Y = i.forwardRef(function (e, t) {
         }),
         eG = (e) =>
             X || eR
-                ? ek
+                ? eM
                     ? (0, r.jsx)(d.mBM, {
                           size: 'xs',
                           color: 'currentColor',
@@ -248,7 +248,7 @@ let Y = i.forwardRef(function (e, t) {
             disabled: !z && !K
         }),
         eF = () =>
-            ek && !en
+            eM && !en
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)('div', { className: R.buttonOverlayBackground }),
@@ -272,7 +272,7 @@ let Y = i.forwardRef(function (e, t) {
                                   ee === v.Pb.SOUNDMOJI
                                       ? (0, r.jsx)(m.ZP, {
                                             sound: D,
-                                            channel: k,
+                                            channel: M,
                                             setTooltipShowing: ex
                                         })
                                       : (0, r.jsxs)(r.Fragment, {
@@ -321,15 +321,15 @@ let Y = i.forwardRef(function (e, t) {
         }
     }
     i.useEffect(() => {
-        let e = eS.current;
+        let e = eT.current;
         return (
-            eT &&
+            eS &&
                 e.start(B, () => {
                     eI.current = Math.max(eI.current - G, j);
                 }),
             () => e.stop()
         );
-    }, [eT]);
+    }, [eS]);
     let eZ = (0, g.a)(ey.current);
     return (0, r.jsxs)('li', {
         ref: t,

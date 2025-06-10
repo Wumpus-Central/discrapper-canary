@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -107,7 +107,7 @@ function I(e) {
             })
     });
 }
-function S(e) {
+function T(e) {
     let { icon: t, isSelected: n, disabled: i, tabIndex: a, onSelect: o, locked: s } = e;
     return (0, r.jsx)(I, {
         onSelect: i ? void 0 : o,

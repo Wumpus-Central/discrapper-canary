@@ -93,16 +93,16 @@ let b = ['http:', 'https:', 'discord:', 'tel:', 'sms:', 'mailto:'],
     O = [...y, d.b.EMOJI, d.b.CUSTOM_EMOJI],
     v = [d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT],
     I = [d.b.TEXT],
-    S = [d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP, d.b.EMOJI, d.b.CUSTOM_EMOJI, d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT];
-function T(e, t) {
+    T = [d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP, d.b.EMOJI, d.b.CUSTOM_EMOJI, d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT];
+function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     for (let r of (Array.isArray(e) || (e = [e]), e)) {
         if (void 0 === r || !t.includes(r.type)) return null;
         if (r.type === d.b.INLINE_CODE) {
             let e = [...t, ...n];
-            if (null == T(r.validationChildContent, e)) return null;
+            if (null == S(r.validationChildContent, e)) return null;
         }
-        if (Array.isArray(r.content) && null == T(r.content, t)) return null;
+        if (Array.isArray(r.content) && null == S(r.content, t)) return null;
     }
     return e;
 }
@@ -188,10 +188,10 @@ let C = m(p({}, l().defaultRules.link), {
                 parseInlineCodeChildContent: !0
             }),
             x = n.allowEmojiLinks ? O : y,
-            k = [...x, ...v],
-            M = [...I, ...S],
-            j = T(t(b, L), k, [d.b.EMOJI]),
-            U = T(t(C, L), M);
+            M = [...x, ...v],
+            k = [...I, ...T],
+            j = S(t(b, L), M, [d.b.EMOJI]),
+            U = S(t(C, L), k);
         if (null == j || null == U || 0 === A(j).trim().length) return u();
         let G = i().pick(t.rules, x),
             B = l().parserFor(G)(_.whitespaceSanitized, L),

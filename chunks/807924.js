@@ -33,11 +33,11 @@ let _ = {
                 O = n.rects.reference[m] + n.rects.reference[h] - _[h] - n.rects.popper[m],
                 v = _[h] - n.rects.reference[h],
                 I = (0, o.Z)(u),
-                S = I ? ('y' === h ? I.clientHeight || 0 : I.clientWidth || 0) : 0,
-                T = O / 2 - v / 2,
+                T = I ? ('y' === h ? I.clientHeight || 0 : I.clientWidth || 0) : 0,
+                S = O / 2 - v / 2,
                 A = g[b],
-                N = S - E[m] - g[y],
-                C = S / 2 - E[m] / 2 + T,
+                N = T - E[m] - g[y],
+                C = T / 2 - E[m] / 2 + S,
                 R = (0, l.u)(A, C, N),
                 P = h;
             n.modifiersData[a] = ((t = {}), (t[P] = R), (t.centerOffset = R - C), t);

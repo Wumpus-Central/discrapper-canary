@@ -20,7 +20,7 @@ var r,
     O = n(9156),
     v = n(594174),
     I = n(981631);
-function S(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function S(e, t, n) {
         e
     );
 }
-function T(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function T(e) {
                 })
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
@@ -62,8 +62,8 @@ let A = 'recentMentionFilterSettings',
     }),
     L = !1,
     x = 0,
-    k = !1;
-function M(e) {
+    M = !1;
+function k(e) {
     (C = {}),
         e.forEach((e) => {
             null == C[e.getChannelId()] && (C[e.getChannelId()] = 0), C[e.getChannelId()]++;
@@ -122,7 +122,7 @@ function V(e) {
         suppressEveryone: i,
         suppressRoles: a
     })
-        ? (k &&
+        ? (M &&
               E.ZP.ackMessageId(n.id) !== e.id &&
               (0, d.ZP)({
                   message: e,
@@ -130,7 +130,7 @@ function V(e) {
                   suppressEveryone: O.ZP.isSuppressEveryoneEnabled(n.getGuildId()),
                   suppressRoles: O.ZP.isSuppressRolesEnabled(n.getGuildId())
               }) &&
-              (k = !1),
+              (M = !1),
           e)
         : null;
 }
@@ -184,7 +184,7 @@ function K(e) {
     a().forEach(t, Y);
 }
 function z(e) {
-    let t = T({}, D);
+    let t = S({}, D);
     (D = a().defaults(a().pick(e, ['guildFilter', 'roleFilter', 'everyoneFilter']), D)), s.K.set(A, D);
     let n = (e, n) => t[e] !== D[e] && D[e] === n,
         r = n('guildFilter', I.NgX.THIS_SERVER) || n('everyoneFilter', !1) || n('roleFilter', !1);
@@ -195,7 +195,7 @@ function z(e) {
             let t = V(e);
             null != t && (i.push(t), (R[t.id] = !0));
         }),
-        M((N = i)),
+        k((N = i)),
         0 === N.length && (L = !1);
 }
 function q() {
@@ -203,7 +203,7 @@ function q() {
     L = !1;
 }
 function X() {
-    (N = []), (R = {}), (L = !1), (k = !1), (C = {});
+    (N = []), (R = {}), (L = !1), (M = !1), (C = {});
 }
 function Q(e) {
     let { guild: t } = e,
@@ -232,7 +232,7 @@ function et(e) {
     N.length > (N = N.slice(0, t)).length && (w = !0);
 }
 function en(e) {
-    k = !0;
+    M = !0;
 }
 class er extends (r = o.ZP.Store) {
     initialize() {
@@ -266,7 +266,7 @@ class er extends (r = o.ZP.Store) {
         return D.roleFilter;
     }
     get mentionsAreStale() {
-        return k;
+        return M;
     }
     get mentionCountByChannel() {
         return C;
@@ -276,7 +276,7 @@ class er extends (r = o.ZP.Store) {
         return null != (t = C[e]) ? t : 0;
     }
 }
-S(er, 'displayName', 'RecentMentionsStore');
+T(er, 'displayName', 'RecentMentionsStore');
 let ei = new er(c.Z, {
     LOAD_RECENT_MENTIONS: U,
     LOAD_RECENT_MENTIONS_SUCCESS: B,

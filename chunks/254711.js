@@ -1,6 +1,6 @@
 n.d(t, {
     Kh: () => G,
-    Tm: () => k
+    Tm: () => M
 }),
     n(388685),
     n(781311),
@@ -26,8 +26,8 @@ var r = n(512722),
     O = n(594174),
     v = n(70956),
     I = n(51144),
-    S = n(895924),
-    T = n(689079),
+    T = n(895924),
+    S = n(689079),
     A = n(981631),
     N = n(590433),
     C = n(388032);
@@ -88,31 +88,31 @@ let L = n(227419).Z,
         var n;
         return null == (n = e.find((e) => e.name === t)) ? void 0 : n.value;
     },
-    k = {
-        [T.bi.BUILT_IN]: {
-            id: T.bi.BUILT_IN,
-            type: S.Qi.BUILT_IN,
+    M = {
+        [S.bi.BUILT_IN]: {
+            id: S.bi.BUILT_IN,
+            type: T.Qi.BUILT_IN,
             get name() {
                 return C.intl.string(C.t.fI5MTU);
             }
         },
-        [T.bi.FRECENCY]: {
-            id: T.bi.FRECENCY,
-            type: S.Qi.BUILT_IN,
+        [S.bi.FRECENCY]: {
+            id: S.bi.FRECENCY,
+            type: T.Qi.BUILT_IN,
             get name() {
                 return C.intl.string(C.t['+cGVV1']);
             }
         }
     },
-    M = [
+    k = [
         ...L,
         {
             id: '-1',
             untranslatedName: 'shrug',
             displayName: 'shrug',
             type: f.yU.CHAT,
-            inputType: S.iw.BUILT_IN_TEXT,
-            applicationId: T.bi.BUILT_IN,
+            inputType: T.iw.BUILT_IN_TEXT,
+            applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.intl.string(C.t.j5xUSU);
             },
@@ -143,8 +143,8 @@ let L = n(227419).Z,
             untranslatedName: 'tableflip',
             displayName: 'tableflip',
             type: f.yU.CHAT,
-            inputType: S.iw.BUILT_IN_TEXT,
-            applicationId: T.bi.BUILT_IN,
+            inputType: T.iw.BUILT_IN_TEXT,
+            applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.intl.string(C.t.nrQRcX);
             },
@@ -175,8 +175,8 @@ let L = n(227419).Z,
             untranslatedName: 'unflip',
             displayName: 'unflip',
             type: f.yU.CHAT,
-            inputType: S.iw.BUILT_IN_TEXT,
-            applicationId: T.bi.BUILT_IN,
+            inputType: T.iw.BUILT_IN_TEXT,
+            applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.intl.string(C.t.pnnn8f);
             },
@@ -207,8 +207,8 @@ let L = n(227419).Z,
             untranslatedName: 'tts',
             displayName: 'tts',
             type: f.yU.CHAT,
-            inputType: S.iw.BUILT_IN_TEXT,
-            applicationId: T.bi.BUILT_IN,
+            inputType: T.iw.BUILT_IN_TEXT,
+            applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.intl.string(C.t.jZcIiY);
             },
@@ -246,8 +246,8 @@ let L = n(227419).Z,
             untranslatedName: 'me',
             displayName: 'me',
             type: f.yU.CHAT,
-            inputType: S.iw.BUILT_IN_TEXT,
-            applicationId: T.bi.BUILT_IN,
+            inputType: T.iw.BUILT_IN_TEXT,
+            applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.intl.string(C.t.UGO8fX);
             },
@@ -279,8 +279,8 @@ let L = n(227419).Z,
             untranslatedName: 'spoiler',
             displayName: 'spoiler',
             type: f.yU.CHAT,
-            inputType: S.iw.BUILT_IN_TEXT,
-            applicationId: T.bi.BUILT_IN,
+            inputType: T.iw.BUILT_IN_TEXT,
+            applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.intl.string(C.t.v0eDdX);
             },
@@ -312,8 +312,8 @@ let L = n(227419).Z,
             untranslatedName: 'nick',
             displayName: 'nick',
             type: f.yU.CHAT,
-            inputType: S.iw.BUILT_IN,
-            applicationId: T.bi.BUILT_IN,
+            inputType: T.iw.BUILT_IN,
+            applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.intl.string(C.t.jiHfS0);
             },
@@ -350,8 +350,8 @@ let L = n(227419).Z,
             untranslatedName: 'thread',
             displayName: 'thread',
             type: f.yU.CHAT,
-            inputType: S.iw.BUILT_IN,
-            applicationId: T.bi.BUILT_IN,
+            inputType: T.iw.BUILT_IN,
+            applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.intl.string(C.t.t6ZAS0);
             },
@@ -402,8 +402,8 @@ let L = n(227419).Z,
             untranslatedName: 'kick',
             displayName: 'kick',
             type: f.yU.CHAT,
-            inputType: S.iw.BUILT_IN,
-            applicationId: T.bi.BUILT_IN,
+            inputType: T.iw.BUILT_IN,
+            applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.intl.string(C.t['03N0UF']);
             },
@@ -461,8 +461,8 @@ let L = n(227419).Z,
             untranslatedName: 'ban',
             displayName: 'ban',
             type: f.yU.CHAT,
-            inputType: S.iw.BUILT_IN,
-            applicationId: T.bi.BUILT_IN,
+            inputType: T.iw.BUILT_IN,
+            applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.intl.string(C.t.HWuskp);
             },
@@ -573,8 +573,8 @@ let L = n(227419).Z,
             untranslatedName: 'timeout',
             displayName: 'timeout',
             type: f.yU.CHAT,
-            inputType: S.iw.BUILT_IN,
-            applicationId: T.bi.BUILT_IN,
+            inputType: T.iw.BUILT_IN,
+            applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.intl.string(C.t.KkPcen);
             },
@@ -666,8 +666,8 @@ let L = n(227419).Z,
             untranslatedName: 'msg',
             displayName: 'msg',
             type: f.yU.CHAT,
-            inputType: S.iw.BUILT_IN,
-            applicationId: T.bi.BUILT_IN,
+            inputType: T.iw.BUILT_IN,
+            applicationId: S.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.intl.string(C.t.Dg8XZ2);
             },
@@ -721,8 +721,8 @@ let L = n(227419).Z,
             }
         }
     ],
-    U = M.filter((e) => ['gif', 'tenor', 'tts', 'me', 'tableflip', 'unflip', 'shrug', 'spoiler', 'nick'].includes(e.untranslatedName)),
+    U = k.filter((e) => ['gif', 'tenor', 'tts', 'me', 'tableflip', 'unflip', 'shrug', 'spoiler', 'nick'].includes(e.untranslatedName)),
     G = (e, t, n) => {
-        let r = t ? M : U;
-        return r.filter((t) => e.includes(t.type) && (!n || t.inputType === S.iw.BUILT_IN_TEXT || t.inputType === S.iw.BUILT_IN_INTEGRATION));
+        let r = t ? k : U;
+        return r.filter((t) => e.includes(t.type) && (!n || t.inputType === T.iw.BUILT_IN_TEXT || t.inputType === T.iw.BUILT_IN_INTEGRATION));
     };

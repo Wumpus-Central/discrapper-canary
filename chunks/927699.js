@@ -19,11 +19,11 @@ let g = (0, f.kt)({
 });
 function E(e) {
     let { sectionTitle: t, errors: n, onTextChange: a, pendingText: f, placeholder: p, currentText: E, className: b, innerClassName: y, disabled: O = !1, disableThemedBackground: v = !1 } = e,
-        [I, S] = i.useState(null != f ? f : E),
-        [T, A] = i.useState((0, c.JM)(I)),
+        [I, T] = i.useState(null != f ? f : E),
+        [S, A] = i.useState((0, c.JM)(I)),
         N = i.useRef(!1);
     function C(e, t, n) {
-        t !== I && (S(t), A(n), a(t));
+        t !== I && (T(t), A(n), a(t));
     }
     function R() {
         return new Promise((e) => {
@@ -40,7 +40,7 @@ function E(e) {
         i.useEffect(() => {
             if (void 0 === f) {
                 let e = (0, c.JM)(E);
-                S(E), A(e);
+                T(E), A(e);
             }
         }, [f, E]),
         (0, r.jsx)('div', {
@@ -58,7 +58,7 @@ function E(e) {
                         placeholder: p,
                         channel: g,
                         textValue: I,
-                        richValue: T,
+                        richValue: S,
                         type: l.Ie.CUSTOM_GIFT,
                         onBlur: () => {
                             N.current = !1;

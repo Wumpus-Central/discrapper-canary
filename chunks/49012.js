@@ -23,19 +23,19 @@ var r = n(159635),
     O = n(902676),
     v = n(375954),
     I = n(699516),
-    S = n(944486),
-    T = n(626135),
+    T = n(944486),
+    S = n(626135),
     A = n(981631),
     N = n(388032);
 function C(e, t) {
     var n;
-    let r = E.Z.getChannel(S.Z.getChannelId());
+    let r = E.Z.getChannel(T.Z.getChannelId());
     return (null == r || r.type !== A.d4z.DM || !!I.Z.isFriend(null != (n = r.getRecipientId()) ? n : '')) && e === t;
 }
 function R(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         I = arguments.length > 3 ? arguments[3] : void 0,
-        { trusted: S, onClick: C, onConfirm: R, onCancel: P, shouldConfirm: w, messageId: D, channelId: L } = e,
+        { trusted: T, onClick: C, onConfirm: R, onCancel: P, shouldConfirm: w, messageId: D, channelId: L } = e,
         x = i().sanitizeUrl(e.href);
     if (null == x) {
         null != t && t.preventDefault(),
@@ -47,13 +47,13 @@ function R(e, t) {
             });
         return;
     }
-    let k = x;
+    let M = x;
     try {
         decodeURI(x);
     } catch (e) {
-        k = encodeURI(x);
+        M = encodeURI(x);
     }
-    let M = null,
+    let k = null,
         j = !1,
         U = D,
         G = L,
@@ -62,10 +62,10 @@ function R(e, t) {
         var F, V, Z;
         let e = v.Z.getMessage(L, D),
             t = E.Z.getBasicChannel(L);
-        M = null != (Z = null == t ? void 0 : t.guild_id) ? Z : null;
-        let n = b.Z.getGuild(M),
-            r = (null == e || null == (F = e.messageReference) ? void 0 : F.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(A.iLy.IS_CROSSPOST)) && null != M;
-        r && (null == e || null == (V = e.messageReference) ? void 0 : V.guild_id) != null ? ((U = e.messageReference.message_id), (G = e.messageReference.channel_id), (B = e.messageReference.guild_id)) : (B = M);
+        k = null != (Z = null == t ? void 0 : t.guild_id) ? Z : null;
+        let n = b.Z.getGuild(k),
+            r = (null == e || null == (F = e.messageReference) ? void 0 : F.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(A.iLy.IS_CROSSPOST)) && null != k;
+        r && (null == e || null == (V = e.messageReference) ? void 0 : V.guild_id) != null ? ((U = e.messageReference.message_id), (G = e.messageReference.channel_id), (B = e.messageReference.guild_id)) : (B = k);
         let i = (null == t ? void 0 : t.type) === A.d4z.GUILD_ANNOUNCEMENT && (null == n ? void 0 : n.hasFeature(A.oNc.COMMUNITY)) === !0,
             a = (null == e ? void 0 : e.hasFlag(A.iLy.EPHEMERAL)) === !0;
         j = null != e && !a && (r || i);
@@ -76,22 +76,22 @@ function R(e, t) {
         null != e &&
             null != t &&
             t.hasFeature(A.oNc.DISCOVERABLE) &&
-            T.default.track(A.rMx.URL_CLICKED, {
-                url_domain: (0, O.F)(k),
+            S.default.track(A.rMx.URL_CLICKED, {
+                url_domain: (0, O.F)(M),
                 guild_id: t.id,
                 channel_id: e.id
             }),
             (0, u.Z)(L) &&
-                T.default.track(A.rMx.CHANGE_LOG_CTA_CLICKED, {
+                S.default.track(A.rMx.CHANGE_LOG_CTA_CLICKED, {
                     cta_type: 'inline_link',
-                    target: k
+                    target: M
                 });
     }
-    if ((_.Z.trackLinkClicked(k), null != C)) {
+    if ((_.Z.trackLinkClicked(M), null != C)) {
         if (C(t)) return;
     } else {
         let { default: e } = n(315263),
-            i = e(k, {
+            i = e(M, {
                 skipExtensionCheck: void 0,
                 analyticsLocations: r
             });
@@ -103,45 +103,45 @@ function R(e, t) {
                     _.Z.trackAnnouncementMessageLinkClicked({
                         messageId: U,
                         channelId: L,
-                        guildId: M,
+                        guildId: k,
                         sourceChannelId: G,
                         sourceGuildId: B
                     }),
                 null != R)
             )
                 return void R();
-            (0, s.Z)(k);
+            (0, s.Z)(M);
         },
         Y = null != P ? P : () => {};
-    if (null !== c.Z.isBlockedDomain(k)) {
-        null == t || t.preventDefault(), l.Z.show(k);
+    if (null !== c.Z.isBlockedDomain(M)) {
+        null == t || t.preventDefault(), l.Z.show(M);
         return;
     }
-    if (null != (0, g.v)(k)) {
-        null == t || t.preventDefault(), m.Z.show(k);
+    if (null != (0, g.v)(M)) {
+        null == t || t.preventDefault(), m.Z.show(M);
         return;
     }
-    if ((0, f.I)(k)) {
-        null == t || t.preventDefault(), d.Z.show(k);
+    if ((0, f.I)(M)) {
+        null == t || t.preventDefault(), d.Z.show(M);
         return;
     }
-    let W = 'function' == typeof S ? S() : S,
-        K = (0, O.E)(k),
+    let W = 'function' == typeof T ? T() : T,
+        K = (0, O.E)(M),
         z = 'http:' !== K && 'https:' !== K;
-    if ((!z && (W || y.Z.isTrustedDomain(k))) || (z && y.Z.isTrustedProtocol(k)))
+    if ((!z && (W || y.Z.isTrustedDomain(M))) || (z && y.Z.isTrustedProtocol(M)))
         return void (null == t || (null != w && w)
             ? H()
             : j &&
               _.Z.trackAnnouncementMessageLinkClicked({
                   messageId: U,
                   channelId: L,
-                  guildId: M,
+                  guildId: k,
                   sourceChannelId: G,
                   sourceGuildId: B
               }));
     if ((null != t && t.preventDefault(), z))
         h.Z.show({
-            url: k,
+            url: M,
             trustUrl: o.u,
             onConfirm: H,
             onCancel: Y,
@@ -149,8 +149,8 @@ function R(e, t) {
             contextKey: I
         });
     else {
-        let e = (0, p.yw)(k),
-            t = null != e ? e.displayTarget : k;
+        let e = (0, p.yw)(M),
+            t = null != e ? e.displayTarget : M;
         h.Z.show({
             url: t,
             trustUrl: o.o,

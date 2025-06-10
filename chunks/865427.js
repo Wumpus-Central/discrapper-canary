@@ -7,7 +7,7 @@ n.d(t, {
     fD: () => h,
     mG: () => y,
     pU: () => f,
-    r4: () => T
+    r4: () => S
 }),
     n(35282),
     n(853839),
@@ -105,15 +105,15 @@ function O(e) {
 }
 let v = 's',
     I = new Set(['canary.discord.com', 'ptb.discord.com', 'discord.com', 'canary.discordapp.com', 'ptb.discordapp.com', 'discordapp.com']),
-    S = new Set(['/__development/link', '/__development/link/']);
-function T(e) {
+    T = new Set(['/__development/link', '/__development/link/']);
+function S(e) {
     if (y(e))
         return {
             payload: null,
             url: e
         };
     let t = s.Z.safeParseWithQuery(e);
-    if (null == t || !I.has(t.hostname) || !(v in t.query) || !S.has(t.pathname)) return null;
+    if (null == t || !I.has(t.hostname) || !(v in t.query) || !T.has(t.pathname)) return null;
     for (let e in t.query) e !== v && delete t.query[e];
     return {
         payload: t.query[v],

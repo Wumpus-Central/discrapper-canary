@@ -1,31 +1,31 @@
 a.d(e, {
     QV: () => c,
-    XL: () => s,
+    XL: () => E,
     Y: () => i,
     nl: () => o
 });
 var r = a(696486),
-    n = a(152228),
-    _ = a(395848);
+    _ = a(152228),
+    n = a(395848);
 function o(t) {
     return 'number' == typeof t && isFinite(t);
 }
-function i(t, e, a, { ..._ }) {
+function i(t, e, a, { ...n }) {
     let o = (0, r.XU)(t).start_timestamp;
     return (
         o && o > e && 'function' == typeof t.updateStartTime && t.updateStartTime(e),
-        (0, n._d)(t, () => {
-            let t = (0, n.qp)({
+        (0, _._d)(t, () => {
+            let t = (0, _.qp)({
                 startTime: e,
-                ..._
+                ...n
             });
             return t && t.end(a), t;
         })
     );
 }
 function c() {
-    return _.m && _.m.addEventListener && _.m.performance;
+    return n.m && n.m.addEventListener && n.m.performance;
 }
-function s(t) {
+function E(t) {
     return t / 1000;
 }

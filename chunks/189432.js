@@ -70,8 +70,8 @@ function b(e, t, n) {
     let O = null != (h = y.modViewPanel) ? h : f.k.INFO,
         v = null != (g = y.sourceLocation) ? g : r.Z.MEMBER_SAFETY_PAGE,
         I = c.Z.getCurrentlySelectedChannelId(),
-        S = null != I ? s.Z.getChannel(I) : null;
-    if (n !== p.oC.MEMBER_SAFETY && (null == S || S.getGuildId() !== e)) {
+        T = null != I ? s.Z.getChannel(I) : null;
+    if (n !== p.oC.MEMBER_SAFETY && (null == T || T.getGuildId() !== e)) {
         let t = l.ZP.getDefaultChannel(e);
         null == t || t.isNSFW() || (0, i.uL)(_.Z5c.CHANNEL(e, t.id));
     }

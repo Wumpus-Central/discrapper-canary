@@ -19,13 +19,13 @@ n.d(t, {
     bA: () => W,
     e5: () => Y,
     eN: () => K,
-    eQ: () => eT,
+    eQ: () => eS,
     fN: () => el,
     iO: () => es,
     kJ: () => eu,
     me: () => ey,
     pe: () => J,
-    qI: () => eS,
+    qI: () => eT,
     qb: () => eO,
     sf: () => eI,
     t5: () => eo,
@@ -62,8 +62,8 @@ var r = n(73800),
     O = n(930153),
     v = n(358085),
     I = n(74538),
-    S = n(617136),
-    T = n(915750),
+    T = n(617136),
+    S = n(915750),
     A = n(272008),
     N = n(569984),
     C = n(497505),
@@ -73,8 +73,8 @@ var r = n(73800),
     D = n(475595),
     L = n(566078),
     x = n(46140),
-    k = n(981631),
-    M = n(474936),
+    M = n(981631),
+    k = n(474936),
     j = n(388032);
 let U = -1,
     G = 1;
@@ -236,14 +236,14 @@ function ei(e) {
 let ea = (e) => {
     let { quest: t, questContent: n } = e,
         r = e_({ quest: t }),
-        i = (0, T.WD)();
+        i = (0, S.WD)();
     return () => {
         r
             ? (0, R.gI)(
                   { quest: t },
                   {
                       content: n,
-                      ctaContent: S.jZ.CONNECT_CONSOLE_LINK,
+                      ctaContent: T.jZ.CONNECT_CONSOLE_LINK,
                       impressionId: null == i ? void 0 : i.getId()
                   }
               )
@@ -251,7 +251,7 @@ let ea = (e) => {
                   { quest: t },
                   {
                       content: n,
-                      ctaContent: S.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
+                      ctaContent: T.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
                       impressionId: null == i ? void 0 : i.getId()
                   }
               );
@@ -356,8 +356,8 @@ function ed() {
             xboxAndPlaystationAccounts: a
         } = r.useMemo(() => {
             let e = t.filter((e) => !1 === e.revoked),
-                n = e.filter((e) => e.type === k.ABu.XBOX),
-                r = e.filter((e) => e.type === k.ABu.PLAYSTATION),
+                n = e.filter((e) => e.type === M.ABu.XBOX),
+                r = e.filter((e) => e.type === M.ABu.PLAYSTATION),
                 i = n.concat(r);
             return {
                 xboxAccounts: n,
@@ -410,8 +410,8 @@ let ef = (e) => {
             n = e.length > 0,
             r = t.length > 0,
             i = (n && !r) || (!n && r),
-            a = y.Z.getArticleURL(k.BhN.QUEST_HOW_TO_PLAYSTATION),
-            o = y.Z.getArticleURL(k.BhN.QUEST_HOW_TO_XBOX),
+            a = y.Z.getArticleURL(M.BhN.QUEST_HOW_TO_PLAYSTATION),
+            o = y.Z.getArticleURL(M.BhN.QUEST_HOW_TO_XBOX),
             s = j.intl.format(j.t.beN4DA, {
                 psHelpdeskArticle: a,
                 xboxHelpdeskArticle: o
@@ -569,13 +569,13 @@ function eI(e) {
     let t = (0, u.e7)([N.Z], () => N.Z.getQuest(e), [e]);
     return a()(null != t, 'Unknown quest ID '.concat(e)), t;
 }
-function eS(e) {
+function eT(e) {
     let { mode: t, questContent: n, questId: i } = e,
         a = r.useRef(null);
     r.useEffect(() => {
         null != i &&
             a.current !== t &&
-            ((0, S.Ic)({
+            ((0, T.Ic)({
                 mode: t,
                 prevMode: a.current,
                 questContent: n,
@@ -586,7 +586,7 @@ function eS(e) {
         r.useEffect(() => {
             if (null != i)
                 return () => {
-                    (0, S.Ic)({
+                    (0, T.Ic)({
                         mode: null,
                         prevMode: a.current,
                         questContent: n,
@@ -595,7 +595,7 @@ function eS(e) {
                 };
         }, [i, n]);
 }
-function eT(e) {
+function eS(e) {
     var t, n;
     let r = (0, u.e7)([m.default], () => m.default.locale),
         i = er(e),
@@ -648,7 +648,7 @@ function eN(e, t) {
             (null == n ? void 0 : n.config.cosponsorMetadata) == null
                 ? null
                 : (0, D.Rt)(e, n.config.cosponsorMetadata.logotype, {
-                      theme: null != t ? t : (0, c.wj)(i) ? k.BRd.DARK : k.BRd.LIGHT,
+                      theme: null != t ? t : (0, c.wj)(i) ? M.BRd.DARK : M.BRd.LIGHT,
                       newCdn: a
                   }),
         [i, t, e, null == n ? void 0 : n.config.cosponsorMetadata, a]
@@ -661,7 +661,7 @@ function eC(e) {
         i = (0, R._p)(e),
         a = (0, R.f$)(e),
         o = (0, u.e7)([E.default], () => E.default.getCurrentUser()),
-        s = (0, I.I5)(o, M.p9.TIER_2);
+        s = (0, I.I5)(o, k.p9.TIER_2);
     if (null == n) return j.intl.formatToPlainString(j.t.l9uXLy, { decorationName: t });
     let l = j.intl.formatToPlainString(j.t.o97tNj, { rewardName: t }),
         c = j.intl.formatToPlainString(j.t.PkyRZm, {
@@ -693,7 +693,7 @@ function eP(e) {
     let t = (0, u.e7)([f.ZP], () => f.ZP.getCurrentEmbeddedActivity());
     return {
         launchInGameActivity: r.useCallback(() => {
-            null != t && t.applicationId === e.config.application.id ? (0, _.Z)('guild_id' in t.location ? t.location.guild_id : null, t.location) : (0, h.uL)(k.Z5c.ACTIVITY_DETAILS(e.config.application.id));
+            null != t && t.applicationId === e.config.application.id ? (0, _.Z)('guild_id' in t.location ? t.location.guild_id : null, t.location) : (0, h.uL)(M.Z5c.ACTIVITY_DETAILS(e.config.application.id));
         }, [t, e.config.application.id])
     };
 }

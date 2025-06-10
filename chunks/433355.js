@@ -36,8 +36,8 @@ let y = 'message_requests',
     O = !1,
     v = !1,
     I = !0,
-    S = !1,
-    T = {},
+    T = !1,
+    S = {},
     A = {};
 function N(e) {
     if (null == e) return null;
@@ -52,9 +52,9 @@ function C(e) {
 }
 function R(e) {
     let t = !1;
-    S && ((S = !1), (t = !0));
+    T && ((T = !1), (t = !0));
     let n = N(_.Z.getChannelId());
-    return null != n && n in T && (delete T[n], (t = !0)), t && e ? e : !e;
+    return null != n && n in S && (delete S[n], (t = !0)), t && e ? e : !e;
 }
 function P() {
     v && (v = R(v)), (O = R(O));
@@ -67,7 +67,7 @@ function D() {
 }
 function L(e) {
     let { sidebarType: t, guildId: n, baseChannelId: r, details: i } = e;
-    S = !1;
+    T = !1;
     let a = N(r);
     return (
         null != a &&
@@ -84,13 +84,13 @@ function x(e) {
     let { guildId: t } = e;
     return null != A[t] && (delete A[t], !0);
 }
-function k(e) {
+function M(e) {
     let { sidebarType: t, baseChannelId: n, channelId: r, details: i } = e;
-    S = !1;
+    T = !1;
     let a = N(n);
     return (
         null != a &&
-        ((T[a] = {
+        ((S[a] = {
             type: t,
             channelId: r,
             details: i
@@ -98,12 +98,12 @@ function k(e) {
         !0)
     );
 }
-function M(e) {
+function k(e) {
     let { parentChannelId: t, parentMessageId: n, location: r } = e;
-    S = !1;
+    T = !1;
     let i = N(t);
     null != i &&
-        (T[i] = {
+        (S[i] = {
             type: s.tI.CREATE_THREAD,
             parentChannelId: t,
             parentMessageId: n,
@@ -112,40 +112,40 @@ function M(e) {
 }
 function j(e) {
     let { channel: t } = e;
-    if (t.id in T) return delete T[t.id], !0;
+    if (t.id in S) return delete S[t.id], !0;
     let n = !1;
-    for (let e in T) {
-        let r = T[e];
-        null != r && r.type === s.tI.VIEW_CHANNEL && r.channelId === t.id && (delete T[e], (n = !0));
+    for (let e in S) {
+        let r = S[e];
+        null != r && r.type === s.tI.VIEW_CHANNEL && r.channelId === t.id && (delete S[e], (n = !0));
     }
     return n;
 }
 function U(e) {
     let { channel: t } = e,
-        n = T[t.parent_id];
+        n = S[t.parent_id];
     if (null == n || n.type !== s.tI.VIEW_THREAD || n.channelId !== t.id) return !1;
-    delete T[t.parent_id];
+    delete S[t.parent_id];
 }
 function G(e) {
     var t;
     let { channel: n } = e;
     if (n.ownerId === (null == (t = h.default.getCurrentUser()) ? void 0 : t.id)) return !1;
-    let r = T[n.parent_id];
+    let r = S[n.parent_id];
     null != r &&
         r.type === s.tI.CREATE_THREAD &&
         r.parentMessageId === c.default.castChannelIdAsMessageId(n.id) &&
-        (T[n.parent_id] = {
+        (S[n.parent_id] = {
             type: s.tI.VIEW_THREAD,
             channelId: n.id
         });
 }
 function B() {
     let e = !1;
-    for (let t in T) {
-        let n = T[t];
+    for (let t in S) {
+        let n = S[t];
         if (n.type === s.tI.VIEW_THREAD || n.type === s.tI.VIEW_CHANNEL) {
             let r = u.Z.getChannel(n.channelId);
-            (null != r && d.Z.can(E.Pl.VIEW_CHANNEL, r)) || (delete T[t], (e = !0));
+            (null != r && d.Z.can(E.Pl.VIEW_CHANNEL, r)) || (delete S[t], (e = !0));
         }
     }
     return e;
@@ -153,11 +153,11 @@ function B() {
 function F(e) {
     let { baseChannelId: t } = e,
         n = N(t);
-    null != n && delete T[n];
+    null != n && delete S[n];
 }
 function V() {
-    if (S === f.Z.isActive()) return !1;
-    S = f.Z.isActive();
+    if (T === f.Z.isActive()) return !1;
+    T = f.Z.isActive();
 }
 function Z() {
     i.tq && O && ((O = !1), (v = !1));
@@ -166,7 +166,7 @@ class H extends (r = a.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var t, n, r, i, a;
-            (O = null != (t = e.isMembersOpen) && t), (v = null != (n = e.isSummariesOpen) && n), (I = null == (r = e.isProfileOpen) || r), (T = null != (i = e.sidebars) ? i : {}), (A = null != (a = e.guildSidebars) ? a : {});
+            (O = null != (t = e.isMembersOpen) && t), (v = null != (n = e.isSummariesOpen) && n), (I = null == (r = e.isProfileOpen) || r), (S = null != (i = e.sidebars) ? i : {}), (A = null != (a = e.guildSidebars) ? a : {});
         }
         this.syncWith([f.Z], V), this.syncWith([d.Z], B);
     }
@@ -175,33 +175,33 @@ class H extends (r = a.ZP.PersistedStore) {
             isMembersOpen: O,
             isSummariesOpen: v,
             isProfileOpen: I,
-            sidebars: T,
+            sidebars: S,
             guildSidebars: A
         };
     }
     getSection(e, t) {
-        if (S) return m.ULH.SEARCH;
+        if (T) return m.ULH.SEARCH;
         let n = N(e);
-        return null != n && null != T[n] ? m.ULH.SIDEBAR_CHAT : t && I ? m.ULH.PROFILE : v ? m.ULH.SUMMARIES : O ? m.ULH.MEMBERS : m.ULH.NONE;
+        return null != n && null != S[n] ? m.ULH.SIDEBAR_CHAT : t && I ? m.ULH.PROFILE : v ? m.ULH.SUMMARIES : O ? m.ULH.MEMBERS : m.ULH.NONE;
     }
     getSidebarState(e) {
         let t = N(e);
-        return null == t ? void 0 : T[t];
+        return null == t ? void 0 : S[t];
     }
     getGuildSidebarState(e) {
         return null == e ? void 0 : A[e];
     }
     getCurrentSidebarChannelId(e) {
         let t = N(e);
-        if (null == t || S) return null;
-        let n = T[t];
+        if (null == t || T) return null;
+        let n = S[t];
         return null == n ? null : n.type === s.tI.VIEW_THREAD || n.type === s.tI.VIEW_CHANNEL ? n.channelId : null;
     }
     getCurrentSidebarMessageId(e) {
         var t;
         let n = N(e);
-        if (null == n || S) return null;
-        let r = T[n];
+        if (null == n || T) return null;
+        let r = S[n];
         return null == r ? null : r.type === s.tI.VIEW_THREAD || r.type === s.tI.VIEW_CHANNEL ? (null == (t = r.details) ? void 0 : t.initialMessageId) : null;
     }
 }
@@ -210,9 +210,9 @@ let Y = new H(o.Z, {
     CHANNEL_TOGGLE_MEMBERS_SECTION: P,
     USER_PROFILE_SIDEBAR_TOGGLE_SECTION: D,
     CHANNEL_TOGGLE_SUMMARIES_SECTION: w,
-    SIDEBAR_VIEW_CHANNEL: k,
+    SIDEBAR_VIEW_CHANNEL: M,
     SIDEBAR_VIEW_GUILD: L,
-    SIDEBAR_CREATE_THREAD: M,
+    SIDEBAR_CREATE_THREAD: k,
     SIDEBAR_CLOSE: F,
     SIDEBAR_CLOSE_GUILD: x,
     CHANNEL_DELETE: j,

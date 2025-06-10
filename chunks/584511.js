@@ -42,10 +42,10 @@ var _ = (function (e) {
 })(_ || {});
 function p(e) {
     let { userId: t, size: n, speaking: i = !1, muted: d = !1, deafen: _ = !1, src: p, disabled: h = !1, ringing: m, ringingType: g = 0, avatarClassName: E, renderIcon: b, style: y, onClick: O, onContextMenu: v, className: I } = e,
-        S = (0, o.e7)([c.Z], () => null != t && c.Z.isLocalMute(t)),
-        T = () => {
-            let e = S ? s.v0G : _ ? s.wE8 : s.nRN;
-            return d || _ || S
+        T = (0, o.e7)([c.Z], () => null != t && c.Z.isLocalMute(t)),
+        S = () => {
+            let e = T ? s.v0G : _ ? s.wE8 : s.nRN;
+            return d || _ || T
                 ? (0, r.jsx)('div', {
                       className: u.statusContainer,
                       children: (0, r.jsx)(
@@ -63,10 +63,10 @@ function p(e) {
         N = () =>
             d && i
                 ? (0, r.jsxs)(r.Fragment, {
-                      children: [A(), T()]
+                      children: [A(), S()]
                   })
-                : d || _ || S
-                  ? (0, r.jsx)(r.Fragment, { children: T() })
+                : d || _ || T
+                  ? (0, r.jsx)(r.Fragment, { children: S() })
                   : (0, r.jsx)(r.Fragment, { children: A() }),
         C = () => {
             let e = (0, s.pxk)(n),
@@ -78,7 +78,7 @@ function p(e) {
             if (h) return t;
             let i = l.QS.AVATAR_DEFAULT;
             return (
-                null != b ? (i = n === s.EFr.SIZE_32 ? l.QS.AVATAR_CALL_ICON_32 : l.QS.AVATAR_CALL_ICON) : (d || _ || S) && (i = l.QS.AVATAR_VOICE_CALL_80),
+                null != b ? (i = n === s.EFr.SIZE_32 ? l.QS.AVATAR_CALL_ICON_32 : l.QS.AVATAR_CALL_ICON) : (d || _ || T) && (i = l.QS.AVATAR_VOICE_CALL_80),
                 (0, r.jsxs)('div', {
                     className: u.callAvatarMaskContainer,
                     children: [

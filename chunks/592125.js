@@ -28,7 +28,7 @@ var r,
     O = n(430824),
     v = n(594174),
     I = n(981631);
-function S(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function S(e, t, n) {
         e
     );
 }
-function T(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +52,7 @@ function T(e) {
                 })
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
@@ -87,8 +87,8 @@ let C = new h.Z('ChannelStore'),
     D = {},
     L = null,
     x = {},
-    k = {},
-    M = 0,
+    M = {},
+    k = 0,
     j = {},
     U = {},
     G = new Set(),
@@ -192,7 +192,7 @@ function J(e) {
 }
 function $(e) {
     if (null != e.recipients.find((e) => (0, p.Z)(e))) return !1;
-    (D[e.id] = e), e.type === I.d4z.DM && (k[e.getRecipientId()] = e.id), (M += 1);
+    (D[e.id] = e), e.type === I.d4z.DM && (M[e.getRecipientId()] = e.id), (k += 1);
 }
 function ee(e) {
     let t = P[e.parent_id];
@@ -215,7 +215,7 @@ function en(e) {
     et(e);
 }
 function er(e) {
-    if (null == e.guild_id || g.Ec.has(e.type)) (0, g.hv)(e.type) && (M += 1);
+    if (null == e.guild_id || g.Ec.has(e.type)) (0, g.hv)(e.type) && (k += 1);
     else {
         var t;
         j[e.guild_id] = (null != (t = j[e.guild_id]) ? t : 0) + 1;
@@ -223,7 +223,7 @@ function er(e) {
 }
 function ei(e) {
     let t = w;
-    for (let n of ((k = {}), (P = {}), (w = {}), (x = {}), (j = {}), (V = {}), (B = {}), (F = Date.now()), (L = e.initialPrivateChannels), e.initialPrivateChannels.forEach($), e.guilds)) 'partial' === n.dataMode && (a().forEach(t[n.id], et), C.fileOnly('Restoring guild channels for '.concat(n.id, ' #:').concat(eL(n.id)))), ea(n);
+    for (let n of ((M = {}), (P = {}), (w = {}), (x = {}), (j = {}), (V = {}), (B = {}), (F = Date.now()), (L = e.initialPrivateChannels), e.initialPrivateChannels.forEach($), e.guilds)) 'partial' === n.dataMode && (a().forEach(t[n.id], et), C.fileOnly('Restoring guild channels for '.concat(n.id, ' #:').concat(eL(n.id)))), ea(n);
     eP();
 }
 function ea(e) {
@@ -260,7 +260,7 @@ function el(e) {
     return !1;
 }
 function ec() {
-    C.fileOnly('initializeClear()'), (k = {}), (P = {}), (w = {}), (j = {}), (D = {}), (V = {}), (x = {}), (G = new Set()), (B = {}), (F = Date.now());
+    C.fileOnly('initializeClear()'), (M = {}), (P = {}), (w = {}), (j = {}), (D = {}), (V = {}), (x = {}), (G = new Set()), (B = {}), (F = Date.now());
 }
 function eu(e) {
     var t;
@@ -285,7 +285,7 @@ function ep(e) {
     if (null == t) t = e.channel;
     else {
         var n;
-        t = t.merge(N(T({}, e.channel.toJS()), { bitrate: null != (n = e.channel.bitrate) ? n : t.bitrate }));
+        t = t.merge(N(S({}, e.channel.toJS()), { bitrate: null != (n = e.channel.bitrate) ? n : t.bitrate }));
     }
     J(t);
 }
@@ -293,13 +293,13 @@ function eh(e) {
     let { channelId: t, overwrite: n } = e,
         r = Q(t);
     if (null == r) return !1;
-    J(r.set('permissionOverwrites', N(T({}, r.permissionOverwrites), { [n.id]: n })));
+    J(r.set('permissionOverwrites', N(S({}, r.permissionOverwrites), { [n.id]: n })));
 }
 function em(e) {
     let { channelId: t, overwriteId: n } = e,
         r = Q(t);
     if (null == r) return !1;
-    let i = T({}, r.permissionOverwrites);
+    let i = S({}, r.permissionOverwrites);
     delete i[n], J(r.set('permissionOverwrites', i));
 }
 function eg(e) {
@@ -326,7 +326,7 @@ function eb(e) {
 function ey(e) {
     if ('basicPermissions' in e || e.type !== I.d4z.DM) return;
     let t = e.getRecipientId();
-    k[t] === e.id && delete k[t];
+    M[t] === e.id && delete M[t];
 }
 function eO(e) {
     if (null == e) return;
@@ -343,10 +343,10 @@ function ev(e) {
 function eI(e) {
     ea(e.guild);
 }
-function eS(e) {
+function eT(e) {
     C.fileOnly('GuildDelete of '.concat(e.guild.id)), q(e.guild.id), G.delete(e.guild.id), f.Z.invalidate(e.guild.id);
 }
-function eT(e) {
+function eS(e) {
     let t = Q(e.channelId),
         n = y.default.getId();
     return null != t && !!t.isPrivate() && (J(t.addRecipient(e.user.id, e.nick, n)), !0);
@@ -398,7 +398,7 @@ class eD extends (r = s.ZP.Store) {
     }
     loadAllGuildAndPrivateChannelsFromDisk() {
         for (let e of O.Z.getGuildIds()) K(e, 1, 'loadAllGuildAndPrivateChannelsFromDisk');
-        return T({}, P, D);
+        return S({}, P, D);
     }
     getChannelIds(e) {
         var t, n;
@@ -423,19 +423,19 @@ class eD extends (r = s.ZP.Store) {
             .value();
     }
     getDMFromUserId(e) {
-        if (null != e) return k[e];
+        if (null != e) return M[e];
     }
     getDMChannelFromUserId(e) {
-        if (null != e) return this.getChannel(k[e]);
+        if (null != e) return this.getChannel(M[e]);
     }
     getMutableDMsByUserIds() {
-        return k;
+        return M;
     }
     getDMUserIds() {
-        return b.default.keys(k);
+        return b.default.keys(M);
     }
     getPrivateChannelsVersion() {
-        return M;
+        return k;
     }
     getGuildChannelsVersion(e) {
         var t;
@@ -452,7 +452,7 @@ class eD extends (r = s.ZP.Store) {
             .filter((t) => t.guild_id === e);
     }
     getInitialOverlayState() {
-        return T({}, P, D, x);
+        return S({}, P, D, x);
     }
     getDebugInfo() {
         return {
@@ -467,14 +467,14 @@ class eD extends (r = s.ZP.Store) {
 function eL(e) {
     return null == w[e] ? null : Object.keys(w[e]).length;
 }
-S(eD, 'displayName', 'ChannelStore');
+T(eD, 'displayName', 'ChannelStore');
 let ex = new eD(l.Z, {
     BACKGROUND_SYNC: es,
     CACHE_LOADED_LAZY: ef,
     CACHE_LOADED: eu,
     CHANNEL_CREATE: e_,
     CHANNEL_DELETE: ev,
-    CHANNEL_RECIPIENT_ADD: eT,
+    CHANNEL_RECIPIENT_ADD: eS,
     CHANNEL_RECIPIENT_REMOVE: eA,
     CHANNEL_UPDATES: eg,
     CONNECTION_OPEN_SUPPLEMENTAL: eo,
@@ -482,7 +482,7 @@ let ex = new eD(l.Z, {
     CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: eh,
     CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: em,
     GUILD_CREATE: eI,
-    GUILD_DELETE: eS,
+    GUILD_DELETE: eT,
     LOAD_ARCHIVED_THREADS_SUCCESS: eb,
     LOAD_CHANNELS: el,
     LOAD_MESSAGES_AROUND_SUCCESS: eN,

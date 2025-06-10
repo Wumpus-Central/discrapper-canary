@@ -27,7 +27,7 @@ function g(e) {
         I = i.useCallback(async () => {
             await (0, d.Ub)(t, { object: p.qAy.GUILD_PROFILE });
         }, [t]),
-        { text: S, onClick: T } = i.useMemo(() => {
+        { text: T, onClick: S } = i.useMemo(() => {
             switch (n) {
                 case _.sE.IS_MEMBER:
                     return {
@@ -70,15 +70,15 @@ function g(e) {
             async (e) => {
                 e.stopPropagation(), y(!0);
                 try {
-                    await (null == T ? void 0 : T());
+                    await (null == S ? void 0 : S());
                 } catch (e) {
                 } finally {
                     null == g || g(), y(!1);
                 }
             },
-            [T, g]
+            [S, g]
         );
-    return null == S
+    return null == T
         ? null
         : (0, r.jsx)(a.zxk, {
               color: E ? a.zxk.Colors.GREEN : a.zxk.Colors.BRAND,
@@ -86,7 +86,7 @@ function g(e) {
               fullWidth: !0,
               submitting: b || o,
               onClick: A,
-              children: S
+              children: T
           });
 }
 function E(e) {

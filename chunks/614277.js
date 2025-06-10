@@ -45,7 +45,7 @@ function m(e) {
 function g(e) {
     var t, n, a, s, c, p;
     let { header: h, isLargeModal: g, stepProps: E } = m(e),
-        { step: b, stepConfigs: y, setBodyNode: O, setFooterNode: v, setModalOverlayNode: I, setReadySlideId: S, premiumRebrandBackgroundClassName: T } = (0, d.JL)(),
+        { step: b, stepConfigs: y, setBodyNode: O, setFooterNode: v, setModalOverlayNode: I, setReadySlideId: T, premiumRebrandBackgroundClassName: S } = (0, d.JL)(),
         A = y.find((e) => e.key === b);
     i.useEffect(() => {
         I(null);
@@ -65,11 +65,11 @@ function g(e) {
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(u.hzk, {
-                                  className: o()(C, _.body, _.noRoundedCorners, T, { [_.reviewStep]: b === f.h8.REVIEW }),
+                                  className: o()(C, _.body, _.noRoundedCorners, S, { [_.reviewStep]: b === f.h8.REVIEW }),
                                   children: (0, r.jsx)(u.MyZ, {
                                       activeSlide: b,
                                       centered: !1,
-                                      onSlideReady: (e) => S(e),
+                                      onSlideReady: (e) => T(e),
                                       width: b === f.h8.ADD_PAYMENT_STEPS ? 408 : void 0,
                                       children: y
                                           .filter((e) => null != e.key)

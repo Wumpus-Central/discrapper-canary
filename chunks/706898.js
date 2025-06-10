@@ -107,14 +107,14 @@ let v = {
             })
         });
     });
-function S(e) {
+function T(e) {
     let { style: t } = e;
     return (0, a.jsx)('div', {
         className: h.separator,
         style: t
     });
 }
-let T = o.forwardRef(function (e, t) {
+let S = o.forwardRef(function (e, t) {
     var { children: n, id: r } = e,
         i = y(e, ['children', 'id']);
     return (0, a.jsx)(
@@ -299,4 +299,4 @@ class R extends (i = o.Component) {
             });
     }
 }
-m(R, 'Header', I), m(R, 'Item', C), m(R, 'Separator', S), m(R, 'Panel', T);
+m(R, 'Header', I), m(R, 'Item', C), m(R, 'Separator', T), m(R, 'Panel', S);

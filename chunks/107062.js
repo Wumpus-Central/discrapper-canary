@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(206295),
     v = n(297781),
     I = n(591853),
-    S = n(797342),
-    T = n(981631),
+    T = n(797342),
+    S = n(981631),
     A = n(388032);
 function N(e, t, n) {
     return (
@@ -86,7 +86,7 @@ let R = (e, t) =>
                 entry: n,
                 showCoverImage: !1
             }),
-            { user: x, details: k, activity: M, embeddedActivity: j } = (0, S.n)(n),
+            { user: x, details: M, activity: k, embeddedActivity: j } = (0, T.n)(n),
             { primaryColor: U, secondaryColor: G } = (0, O.Z)(null == L ? void 0 : L.src),
             B = (0, a.e7)([p.default], () => p.default.locale),
             { displayParticipants: F, participant1: V, participant2: Z, numOtherParticipants: H } = (0, E.Z)(n, 3),
@@ -127,7 +127,7 @@ let R = (e, t) =>
                 channel: t,
                 userDescription: (0, b.kr)(n) ? A.t.vPg1JS : A.t.rPqqtr,
                 title: n.extra.activity_name,
-                subtitle: k,
+                subtitle: M,
                 badges: z,
                 entry: n,
                 showCoverImage: !1,
@@ -135,11 +135,11 @@ let R = (e, t) =>
                 onClickSubtitle: D ? void 0 : Y,
                 onClickThumbnail: D ? void 0 : Y
             }),
-            X = (0, l.Z)(M, T.xjy.JOIN) || (0, c.Z)(M),
+            X = (0, l.Z)(k, S.xjy.JOIN) || (0, c.Z)(k),
             Q = X
                 ? (0, r.jsx)(u.Z, {
                       embeddedActivity: j,
-                      activity: M,
+                      activity: k,
                       user: x,
                       ButtonComponent: (e) => (0, r.jsx)(I.Ll, C({ IconComponent: o.YVR }, e))
                   })

@@ -1,7 +1,7 @@
-a.d(e, { b: () => _ });
+a.d(e, { b: () => n });
 var r = a(394798),
-    n = a(696486);
-class _ {
+    _ = a(696486);
+class n {
     constructor(t = {}) {
         (this._traceId = t.traceId || (0, r.DM)()), (this._spanId = t.spanId || (0, r.DM)().substring(16));
     }
@@ -9,7 +9,7 @@ class _ {
         return {
             spanId: this._spanId,
             traceId: this._traceId,
-            traceFlags: n.ve
+            traceFlags: _.ve
         };
     }
     end(t) {}

@@ -55,9 +55,9 @@ class b extends i.Component {
         return (null == e.eulaId || t.hasAcceptedEULA) && (!e.showWithdrawalWaiver || t.hasAcceptedWithdrawalWaiver);
     }
     render() {
-        let { eulaId: e, applicationName: t, hasPreviouslyAcceptedEULA: i, forceShow: a, disabled: s, className: c, checkboxClassname: d, checkboxLabelClassname: g, finePrint: b, showPricingLink: y, showWithdrawalWaiver: O, isTrial: v, inReverseTrial: I, isDiscount: S, subscriptionPlan: T, finePrintClassname: A } = this.props,
+        let { eulaId: e, applicationName: t, hasPreviouslyAcceptedEULA: i, forceShow: a, disabled: s, className: c, checkboxClassname: d, checkboxLabelClassname: g, finePrint: b, showPricingLink: y, showWithdrawalWaiver: O, isTrial: v, inReverseTrial: I, isDiscount: T, subscriptionPlan: S, finePrintClassname: A } = this.props,
             { hasAcceptedEULA: N, hasAcceptedWithdrawalWaiver: C } = this.state;
-        return (l()(!v || null != T, 'subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true'), a || (null != e && !i) || O)
+        return (l()(!v || null != S, 'subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true'), a || (null != e && !i) || O)
             ? (0, r.jsxs)('div', {
                   className: c,
                   children: [
@@ -122,37 +122,37 @@ class b extends i.Component {
                               children: ['*', h.intl.format(h.t['5zmY3N'], { documentationLink: f.Z.getArticleURL(p.BhN.LOCALIZED_PRICING) })]
                           }),
                       v &&
-                          null != T &&
+                          null != S &&
                           (0, r.jsx)(u.Text, {
                               variant: 'text-xs/medium',
                               color: 'interactive-normal',
                               children: h.intl.format(h.t['Hvo/Z2'], {
-                                  buttonText: (0, _.W_)(null, T),
-                                  interval: _.ZP.formatInterval(null == T ? void 0 : T.interval),
+                                  buttonText: (0, _.W_)(null, S),
+                                  interval: _.ZP.formatInterval(null == S ? void 0 : S.interval),
                                   cancelSubscriptionArticle: f.Z.getArticleURL(p.BhN.PREMIUM_DETAILS_CANCEL_SUB),
                                   paidServiceTermsArticle: f.Z.getArticleURL(p.BhN.PAID_TERMS)
                               })
                           }),
                       I &&
-                          null != T &&
+                          null != S &&
                           (0, r.jsx)(u.Text, {
                               variant: 'text-xs/medium',
                               color: 'interactive-normal',
                               children: h.intl.format(h.t.Oo2FeX, {
-                                  buttonText: (0, _.W_)(null, T),
-                                  interval: _.ZP.formatInterval(null == T ? void 0 : T.interval),
+                                  buttonText: (0, _.W_)(null, S),
+                                  interval: _.ZP.formatInterval(null == S ? void 0 : S.interval),
                                   cancelSubscriptionArticle: f.Z.getArticleURL(p.BhN.PREMIUM_DETAILS_CANCEL_SUB),
                                   paidServiceTermsArticle: f.Z.getArticleURL(p.BhN.PAID_TERMS)
                               })
                           }),
-                      S &&
-                          null != T &&
+                      T &&
+                          null != S &&
                           (0, r.jsx)(u.Text, {
                               variant: 'text-xs/medium',
                               color: 'interactive-normal',
                               children: h.intl.format(h.t['Z2c+aW'], {
-                                  buttonText: (0, _.W_)(null, T),
-                                  interval: _.ZP.formatInterval(null == T ? void 0 : T.interval),
+                                  buttonText: (0, _.W_)(null, S),
+                                  interval: _.ZP.formatInterval(null == S ? void 0 : S.interval),
                                   cancelSubscriptionArticle: f.Z.getArticleURL(p.BhN.PREMIUM_DETAILS_CANCEL_SUB),
                                   paidServiceTermsArticle: f.Z.getArticleURL(p.BhN.PAID_TERMS)
                               })

@@ -23,8 +23,8 @@ function b(e, t, n) {
         O,
         v,
         I,
-        S,
         T,
+        S,
         A,
         N,
         C,
@@ -34,13 +34,13 @@ function b(e, t, n) {
         D,
         L,
         x,
-        k,
-        M = String(t),
+        M,
+        k = String(t),
         j = (0, f.j)(),
         U = null != (m = null != (g = null == n ? void 0 : n.locale) ? g : j.locale) ? m : _.Z,
-        G = (0, u.Z)(null != (b = null != (O = null != (v = null != (I = null == n ? void 0 : n.firstWeekContainsDate) ? I : null == n || null == (S = n.locale) || null == (T = S.options) ? void 0 : T.firstWeekContainsDate) ? v : j.firstWeekContainsDate) ? O : null == (A = j.locale) || null == (N = A.options) ? void 0 : N.firstWeekContainsDate) ? b : 1);
+        G = (0, u.Z)(null != (b = null != (O = null != (v = null != (I = null == n ? void 0 : n.firstWeekContainsDate) ? I : null == n || null == (T = n.locale) || null == (S = T.options) ? void 0 : S.firstWeekContainsDate) ? v : j.firstWeekContainsDate) ? O : null == (A = j.locale) || null == (N = A.options) ? void 0 : N.firstWeekContainsDate) ? b : 1);
     if (!(G >= 1 && G <= 7)) throw RangeError('firstWeekContainsDate must be between 1 and 7 inclusively');
-    var B = (0, u.Z)(null != (C = null != (R = null != (P = null != (w = null == n ? void 0 : n.weekStartsOn) ? w : null == n || null == (D = n.locale) || null == (L = D.options) ? void 0 : L.weekStartsOn) ? P : j.weekStartsOn) ? R : null == (x = j.locale) || null == (k = x.options) ? void 0 : k.weekStartsOn) ? C : 0);
+    var B = (0, u.Z)(null != (C = null != (R = null != (P = null != (w = null == n ? void 0 : n.weekStartsOn) ? w : null == n || null == (D = n.locale) || null == (L = D.options) ? void 0 : L.weekStartsOn) ? P : j.weekStartsOn) ? R : null == (x = j.locale) || null == (M = x.options) ? void 0 : M.weekStartsOn) ? C : 0);
     if (!(B >= 0 && B <= 6)) throw RangeError('weekStartsOn must be between 0 and 6 inclusively');
     if (!U.localize) throw RangeError('locale must contain localize property');
     if (!U.formatLong) throw RangeError('locale must contain formatLong property');
@@ -54,7 +54,8 @@ function b(e, t, n) {
             locale: U,
             _originalDate: F
         };
-    return M.match(h)
+    return k
+        .match(h)
         .map(function (e) {
             var t = e[0];
             return 'p' === t || 'P' === t ? (0, s.Z[t])(e, U.formatLong) : e;

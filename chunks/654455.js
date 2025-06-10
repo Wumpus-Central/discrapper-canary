@@ -109,7 +109,7 @@ function I(e) {
         b.track(r),
         b.compute();
 }
-function S() {
+function T() {
     var e, t;
     let n = null != (t = null == (e = u.Z.frecencyWithoutFetchingLatest.applicationCommandFrecency) ? void 0 : e.applicationCommands) ? t : {};
     b.overwriteHistory(
@@ -117,9 +117,9 @@ function S() {
         E.pendingUsages
     );
 }
-class T extends (r = o.ZP.PersistedStore) {
+class S extends (r = o.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (E = e), this.syncWith([u.Z], S);
+        null != e && (E = e), this.syncWith([u.Z], T);
     }
     getState() {
         return E;
@@ -138,8 +138,8 @@ class T extends (r = o.ZP.PersistedStore) {
         return b.frequently;
     }
 }
-_(T, 'displayName', 'ApplicationCommandFrecencyStore'), _(T, 'persistKey', 'ApplicationCommandFrecencyV2');
-let A = new T(s.Z, {
+_(S, 'displayName', 'ApplicationCommandFrecencyStore'), _(S, 'persistKey', 'ApplicationCommandFrecencyV2');
+let A = new S(s.Z, {
     APPLICATION_COMMAND_USED: I,
     USER_SETTINGS_PROTO_UPDATE: v
 });

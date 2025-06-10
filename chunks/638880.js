@@ -21,7 +21,7 @@ function y(e) {
 }
 async function O(e) {
     let t,
-        { applicationId: n, activityChannelId: l, locationObject: y, analyticsLocations: O, componentId: v, sectionName: I, source: S, inviterUserId: T, customId: A, referrerId: N } = e,
+        { applicationId: n, activityChannelId: l, locationObject: y, analyticsLocations: O, componentId: v, sectionName: I, source: T, inviterUserId: S, customId: A, referrerId: N } = e,
         C = (0, h.Z)(),
         R = i.Z.getChannel(l),
         P = null == R ? void 0 : R.getGuildId(),
@@ -68,8 +68,8 @@ async function O(e) {
             locationObject: y,
             componentId: v,
             sectionName: I,
-            source: S,
-            inviterUserId: T,
+            source: T,
+            inviterUserId: S,
             customId: A,
             referrerId: N
         })

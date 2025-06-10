@@ -1,6 +1,6 @@
 n.d(t, {
     F: () => N,
-    X: () => T
+    X: () => S
 }),
     n(583741),
     n(388685);
@@ -78,11 +78,11 @@ let I = {
         ROUND: m.round,
         SMALL_BOX: m.smallBox
     },
-    S = {
+    T = {
         top: m.alignTop,
         center: m.alignCenter
     };
-class T extends (r = a.PureComponent) {
+class S extends (r = a.PureComponent) {
     render() {
         let { disabled: e, readOnly: t, value: n, align: r = 'center', className: a, innerClassName: o, children: l, size: c, reverse: u, displayOnly: d, type: _, onClick: p } = this.props,
             g =
@@ -96,7 +96,7 @@ class T extends (r = a.PureComponent) {
             b = d ? 'span' : 'label',
             y = this.props.disabled ? m.inputDisabled : this.props.readOnly ? m.inputReadonly : m.inputDefault;
         return (0, i.jsxs)(b, {
-            className: s()(e ? m.checkboxWrapperDisabled : m.checkboxWrapper, S[r], a, {
+            className: s()(e ? m.checkboxWrapperDisabled : m.checkboxWrapper, T[r], a, {
                 [m.row]: 'row' === _,
                 [m.checked]: n
             }),
@@ -195,10 +195,10 @@ function C(e) {
         n = b(e, ['isVisualRefreshEnabled']);
     return t ? (0, i.jsx)(_.kSu, E({}, n)) : (0, i.jsx)(_.dz2, E({}, n));
 }
-g(T, 'Types', O),
-    g(T, 'Shapes', I),
-    g(T, 'Aligns', v),
-    g(T, 'defaultProps', {
+g(S, 'Types', O),
+    g(S, 'Shapes', I),
+    g(S, 'Aligns', v),
+    g(S, 'defaultProps', {
         size: 24,
         disabled: !1,
         readOnly: !1,

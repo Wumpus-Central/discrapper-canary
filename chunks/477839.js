@@ -1,12 +1,12 @@
 n.d(t, {
     EC: () => ex,
     FK: () => eD,
-    Ly: () => eM,
+    Ly: () => ek,
     MH: () => eB,
     SZ: () => ey,
     U8: () => ev,
     VU: () => eG,
-    Vx: () => ek,
+    Vx: () => eM,
     Wq: () => ej,
     YG: () => eP,
     ZJ: () => ew,
@@ -18,8 +18,8 @@ n.d(t, {
     oK: () => eF,
     r7: () => eN,
     tH: () => eO,
-    uv: () => eS,
-    w2: () => eT,
+    uv: () => eT,
+    w2: () => eS,
     yN: () => eI
 });
 var r = n(562858),
@@ -43,8 +43,8 @@ var r = n(562858),
     O = n(306340),
     v = n(940415),
     I = n(550376),
-    S = n(99321),
-    T = n(407239),
+    T = n(99321),
+    S = n(407239),
     A = n(29823),
     N = n(516038),
     C = n(590227),
@@ -54,8 +54,8 @@ var r = n(562858),
     D = n(483873),
     L = n(438390),
     x = n(426174),
-    k = n(527065),
-    M = n(664567),
+    M = n(527065),
+    k = n(664567),
     j = n(9917),
     U = n(997278),
     G = n(835613),
@@ -99,10 +99,10 @@ let eb = '1344176506041139230',
 var eI = (function (e) {
         return (e[(e.CLICKER_BUTTON = 0)] = 'CLICKER_BUTTON'), (e[(e.RAIN = 1)] = 'RAIN'), (e[(e.SUN = 2)] = 'SUN'), (e[(e.STATS = 3)] = 'STATS'), (e[(e.RATE = 4)] = 'RATE'), (e[(e.ACHIEVEMENTS = 5)] = 'ACHIEVEMENTS'), (e[(e.SNEK = 6)] = 'SNEK'), (e[(e.WEEDS = 7)] = 'WEEDS'), (e[(e.PET_WUMPUS = 8)] = 'PET_WUMPUS'), (e[(e.BOUNCING_LOGO = 9)] = 'BOUNCING_LOGO'), (e[(e.NAGBAR = 10)] = 'NAGBAR'), (e[(e.ANT = 11)] = 'ANT'), (e[(e.SNAIL = 12)] = 'SNAIL'), (e[(e.BEE = 13)] = 'BEE'), (e[(e.WORM = 14)] = 'WORM'), (e[(e.BUTTERFLY = 15)] = 'BUTTERFLY'), (e[(e.TULIP = 16)] = 'TULIP'), (e[(e.SUNFLOWER = 17)] = 'SUNFLOWER'), (e[(e.ORCHID = 18)] = 'ORCHID'), (e[(e.LOOTBOXES = 19)] = 'LOOTBOXES'), (e[(e.MESSAGES = 20)] = 'MESSAGES'), (e[(e.AT_SOMEONE = 21)] = 'AT_SOMEONE'), (e[(e.CURSORS = 22)] = 'CURSORS'), (e[(e.POURING_WATER = 23)] = 'POURING_WATER'), (e[(e.WATERING_CAN = 24)] = 'WATERING_CAN'), (e[(e.LEVELING = 25)] = 'LEVELING'), (e[(e.MUSIC = 26)] = 'MUSIC'), (e[(e.LAWNMOWER = 27)] = 'LAWNMOWER'), (e[(e.COMPLETE_GAME = 28)] = 'COMPLETE_GAME'), e;
     })({}),
-    eS = (function (e) {
+    eT = (function (e) {
         return (e[(e.CLICKER_BUTTON_STRONGER = 0)] = 'CLICKER_BUTTON_STRONGER'), (e[(e.WEED_KILLER = 1)] = 'WEED_KILLER'), (e[(e.BOUNCING_LOGO_MORE_LOGOS = 2)] = 'BOUNCING_LOGO_MORE_LOGOS'), (e[(e.BOUNCING_LOGO_CORNERS = 3)] = 'BOUNCING_LOGO_CORNERS'), (e[(e.BOUNCING_LOGO_SPEED = 4)] = 'BOUNCING_LOGO_SPEED'), (e[(e.BOUNCING_LOGO_COLORS = 5)] = 'BOUNCING_LOGO_COLORS'), (e[(e.CLICKER_BUTTON_AFFIRMATIONS = 6)] = 'CLICKER_BUTTON_AFFIRMATIONS'), (e[(e.SUN_RAISE = 7)] = 'SUN_RAISE'), (e[(e.FULLSCREEN_AT_SOMEONE = 8)] = 'FULLSCREEN_AT_SOMEONE'), (e[(e.CLICKER_BUTTON_RAINBOW = 9)] = 'CLICKER_BUTTON_RAINBOW'), (e[(e.MUSIC_CHANGE = 10)] = 'MUSIC_CHANGE'), e;
     })({});
-let eT = () => ({
+let eS = () => ({
     0: {
         name: s.intl.string(o.default['1pCxsL']),
         description: s.intl.string(o.default['1pCxsL']),
@@ -360,7 +360,7 @@ let eN = () => ({
                 let { numAlreadyPurchased: t } = e;
                 return t < 1;
             },
-            purchaseIconSrc: M
+            purchaseIconSrc: k
         },
         4: {
             itemId: 9,
@@ -387,7 +387,7 @@ let eN = () => ({
                 let { numAlreadyPurchased: t } = e;
                 return t < 1;
             },
-            purchaseIconSrc: k
+            purchaseIconSrc: M
         },
         6: {
             itemId: 0,
@@ -636,7 +636,7 @@ let eL = {
         4: 3,
         5: 6,
         6: 9,
-        7: Object.values(eI).length + Object.values(eS).length - 1,
+        7: Object.values(eI).length + Object.values(eT).length - 1,
         8: 5,
         9: 10,
         10: 15,
@@ -668,12 +668,12 @@ let eL = {
             description: s.intl.formatToPlainString(o.default['87JVSk'], { count: eL[2] })
         },
         3: {
-            icon: S,
+            icon: T,
             name: s.intl.string(o.default['3FgleX']),
             description: s.intl.formatToPlainString(o.default.ttVnXV, { count: eL[3] })
         },
         4: {
-            icon: T,
+            icon: S,
             name: s.intl.string(o.default.dWrQpq),
             description: s.intl.formatToPlainString(o.default.ttVnXV, { count: eL[4] })
         },
@@ -758,10 +758,10 @@ let eL = {
             description: s.intl.formatToPlainString(o.default['59Cedn'], { count: eL[20] })
         }
     });
-var ek = (function (e) {
+var eM = (function (e) {
     return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.CAT = 1)] = 'CAT'), (e[(e.SWORD = 2)] = 'SWORD'), (e[(e.PIZZA = 3)] = 'PIZZA'), e;
 })({});
-let eM = () => ({
+let ek = () => ({
         0: {
             name: s.intl.string(o.default.jcJhmZ),
             src: W,

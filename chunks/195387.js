@@ -19,9 +19,9 @@ function E(e) {
     let { user: t, guildId: n, channelId: E, onClose: b, appContext: y, shouldShowTooltip: O } = e,
         { newestAnalyticsLocation: v } = (0, s.ZP)(),
         I = (0, i.e7)([f.default], () => f.default.getId() === (null == t ? void 0 : t.id)),
-        S = (0, c.m)(null != n ? n : null),
-        T = (0, i.e7)([_.Z], () => (null != E ? E : _.Z.getChannelId(n, !0)), [E, n]);
-    return null == n || !S || I
+        T = (0, c.m)(null != n ? n : null),
+        S = (0, i.e7)([_.Z], () => (null != E ? E : _.Z.getChannelId(n, !0)), [E, n]);
+    return null == n || !T || I
         ? null
         : (0, r.jsx)(p.oY, {
               action: 'PRESS_MOD_VIEW',
@@ -30,9 +30,9 @@ function E(e) {
               tooltipText: g.intl.string(g.t.kj3tz8),
               onClick: () => {
                   u.Z.close(),
-                      null != T && (0, d.Kh)(T),
+                      null != S && (0, d.Kh)(S),
                       (0, o.i)(y),
-                      (0, l.r)(n, t.id, null != T ? T : h.oC.MEMBER_SAFETY, {
+                      (0, l.r)(n, t.id, null != S ? S : h.oC.MEMBER_SAFETY, {
                           modViewPanel: m.k.INFO,
                           sourceLocation: v
                       }),

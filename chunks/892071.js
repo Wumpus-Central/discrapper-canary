@@ -21,8 +21,8 @@ function d() {
     return e;
 }
 function f(e) {
-    let { rootClassName: t, lang: n, theme: a, density: d, focused: f, fontScale: _, fontScaleClass: p, mouseMode: h, keyboardModeEnabled: m, saturation: g, desaturateUserColors: E, useForcedColors: b, systemForcedColors: y, useReducedMotion: O, alwaysShowLinkDecorations: v, hardwareAccelerationEnabled: I, children: S } = e,
-        T = window.CSS.supports('selector(::-webkit-scrollbar)'),
+    let { rootClassName: t, lang: n, theme: a, density: d, focused: f, fontScale: _, fontScaleClass: p, mouseMode: h, keyboardModeEnabled: m, saturation: g, desaturateUserColors: E, useForcedColors: b, systemForcedColors: y, useReducedMotion: O, alwaysShowLinkDecorations: v, hardwareAccelerationEnabled: I, children: T } = e,
+        S = window.CSS.supports('selector(::-webkit-scrollbar)'),
         A = 'font-size: '.concat(_, '%; --saturation-factor: ').concat(g, ';'),
         N = o()(
             (0, c.Z)(),
@@ -33,8 +33,8 @@ function f(e) {
                 'low-saturation': g <= l.AEw,
                 'keyboard-mode': m,
                 'decorate-links': v,
-                'no-webkit-scrollbar': !T,
-                'has-webkit-scrollbar': T,
+                'no-webkit-scrollbar': !S,
+                'has-webkit-scrollbar': S,
                 'mouse-mode': h,
                 'reduce-motion': O,
                 'full-motion': !O,
@@ -59,6 +59,6 @@ function f(e) {
         );
     return (0, r.jsx)(u.Provider, {
         value: C,
-        children: S
+        children: T
     });
 }

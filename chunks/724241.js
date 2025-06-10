@@ -13,7 +13,7 @@ var i = n(442837),
     _ = n(200669);
 function p(e) {
     var t;
-    let { user: n, displayProfile: p, guild: h, pendingAvatar: m, pendingNickname: g, pendingGlobalName: E, pendingBio: b, pendingPronouns: y, pendingLegacyUsernameDisabled: O, pendingBadges: v, isTryItOutFlow: I, hideBioSection: S, shouldOpenBadgeTooltip: T } = e,
+    let { user: n, displayProfile: p, guild: h, pendingAvatar: m, pendingNickname: g, pendingGlobalName: E, pendingBio: b, pendingPronouns: y, pendingLegacyUsernameDisabled: O, pendingBadges: v, isTryItOutFlow: I, hideBioSection: T, shouldOpenBadgeTooltip: S } = e,
         A = (0, i.e7)([c.ZP], () => (null == h ? null : c.ZP.getMember(h.id, n.id))),
         N = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
         C = null == p || null == (t = p.getPreviewBio(b)) ? void 0 : t.value,
@@ -46,10 +46,10 @@ function p(e) {
                     themeType: f.lY.POPOUT,
                     pendingLegacyUsernameDisabled: O,
                     pendingBadges: v,
-                    shouldOpenBadgeTooltip: T
+                    shouldOpenBadgeTooltip: S
                 })
             }),
-            !S &&
+            !T &&
                 null != C &&
                 '' !== C &&
                 (0, r.jsx)(s.Z, {

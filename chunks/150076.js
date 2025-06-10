@@ -23,10 +23,10 @@ function f(e, t) {
         var O = b.getdayset(o)(E.year, E.month, E.day),
             v = O[0],
             I = O[1],
-            S = O[2],
-            T = m(v, I, S, b, t);
+            T = O[2],
+            S = m(v, I, T, b, t);
         if ((0, l.Dw)(f))
-            for (var A = (0, u.f)(f, y, I, S, b, v), N = 0; N < A.length; N++) {
+            for (var A = (0, u.f)(f, y, I, T, b, v), N = 0; N < A.length; N++) {
                 var C = A[N];
                 if (c && C > c) return h(e);
                 if (C >= n) {
@@ -35,7 +35,7 @@ function f(e, t) {
                 }
             }
         else
-            for (var N = I; N < S; N++) {
+            for (var N = I; N < T; N++) {
                 var P = v[N];
                 if ((0, l.EN)(P))
                     for (var w = (0, i.zU)(b.yearordinal + P), D = 0; D < y.length; D++) {
@@ -48,7 +48,7 @@ function f(e, t) {
                         }
                     }
             }
-        if (0 === t.interval || (E.add(t, T), E.year > i.VQ)) return h(e);
+        if (0 === t.interval || (E.add(t, S), E.year > i.VQ)) return h(e);
         (0, r.e)(o) || (y = b.gettimeset(o)(E.hour, E.minute, E.second, 0)), b.rebuild(E.year, E.month);
     }
 }

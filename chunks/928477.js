@@ -1,7 +1,7 @@
 n.d(t, {
-    JA: () => M,
+    JA: () => k,
     Jw: () => w,
-    Od: () => k,
+    Od: () => M,
     Wj: () => U,
     gK: () => j,
     oD: () => L,
@@ -32,8 +32,8 @@ var r = n(73800),
     O = n(70956),
     v = n(630388),
     I = n(709054),
-    S = n(861990),
-    T = n(968437),
+    T = n(861990),
+    S = n(968437),
     A = n(665906),
     N = n(456077),
     C = n(124368),
@@ -53,7 +53,7 @@ function L(e, t) {
 function x(e, t) {
     return e.length > t ? e.substring(0, t) + '...' : e;
 }
-function k(e, t) {
+function M(e, t) {
     var n, r, i, a, o, s, l;
     let c = null == t ? null : b.Z.getMessage(e.id, t),
         u = null != (o = null == c || null == (r = c.embeds) || null == (n = r[0]) ? void 0 : n.rawTitle) ? o : '',
@@ -82,7 +82,7 @@ function k(e, t) {
         return x(i, 40);
     }
 }
-function M(e) {
+function k(e) {
     let { parentChannel: t, parentMessageId: n, threadSettings: a, privateThreadMode: o, location: l, onThreadCreated: u, useDefaultThreadName: d, uploadHandler: f } = e;
     return r.useCallback(
         async (e, r, _) => {
@@ -91,10 +91,10 @@ function M(e) {
                 m = L(a, o),
                 b = null != (p = a.name) ? p : '';
             if ('' === b && d) {
-                let e = k(t, n);
+                let e = M(t, n);
                 b = '' !== e ? e : P.intl.string(P.t['7Xm5QE']);
             }
-            let y = (0, T.WD)(t),
+            let y = (0, S.WD)(t),
                 O = g.Z.getChannel(I.default.castMessageIdAsChannelId(n)),
                 v = await B(t, [], void 0, () => {
                     let e = null != n ? R.ANM.CHANNEL_MESSAGE_THREADS(t.id, n) : R.ANM.CHANNEL_THREADS(t.id);
@@ -136,7 +136,7 @@ function U(e) {
                 h = 0,
                 [g, b] = (0, m.Z)(e);
             g && ((e = b), (h = (0, v.pj)(h, R.iLy.SUPPRESS_NOTIFICATIONS)));
-            let y = (0, T.WD)(t, null),
+            let y = (0, S.WD)(t, null),
                 O = R.ANM.CHANNEL_THREADS(t.id) + '?use_nested_fields=true',
                 I = {
                     name: n,
@@ -151,7 +151,7 @@ function U(e) {
             if (null != d && d.length > 0)
                 try {
                     let e = await u(d);
-                    (p = e.uploaderFile), (I.message.attachments = e.files.map((e, t) => (0, S.B)(e, t)));
+                    (p = e.uploaderFile), (I.message.attachments = e.files.map((e, t) => (0, T.B)(e, t)));
                 } catch (i) {
                     let { file: e, code: n, reason: r } = i;
                     throw (
@@ -213,7 +213,7 @@ async function B(e, t, n, r) {
                       channelId: i.body.id
                   }));
     } catch (r) {
-        var c, f, p, m, E, b, v, I, S;
+        var c, f, p, m, E, b, v, I, T;
         if ((null == (c = r.body) ? void 0 : c.code) === R.evJ.TOO_MANY_THREADS)
             o.Z.show({
                 title: s ? P.intl.string(P.t.vWNFk5) : P.intl.string(P.t['1KEdvL']),
@@ -258,7 +258,7 @@ async function B(e, t, n, r) {
                         guildId: e.getGuildId(),
                         analyticsLocations: null != t ? t : [],
                         code: null == (I = r.body) ? void 0 : I.code,
-                        reason: null == (S = r.body) ? void 0 : S.reason
+                        reason: null == (T = r.body) ? void 0 : T.reason
                     });
             return new Promise((e, t) => {
                 null == r.body && t(),
@@ -281,7 +281,7 @@ async function B(e, t, n, r) {
                 body: P.intl.string(P.t.fEptJC)
             });
     }
-    let T = await new Promise((e, t) => {
+    let S = await new Promise((e, t) => {
         null == i.body && t(),
             g.Z.addConditionalChangeListener(() => {
                 let t = g.Z.getChannel(i.body.id);
@@ -296,9 +296,9 @@ async function B(e, t, n, r) {
     });
     try {
         await l.Z.fetchMessages({
-            channelId: T.id,
+            channelId: S.id,
             limit: R.AQB
         });
     } catch (e) {}
-    return T;
+    return S;
 }

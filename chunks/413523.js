@@ -55,7 +55,7 @@ function I(e) {
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -67,12 +67,12 @@ function S(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -170,7 +170,7 @@ class P {
                                       t && (this.lastSpoke[e] = Date.now()),
                                       this.participantByIndex.set(
                                           n.id,
-                                          T(I({}, n), {
+                                          S(I({}, n), {
                                               speaking: t,
                                               lastSpoke: this.lastSpoke[e],
                                               soundsharing: _.Z.isSoundSharing(e)
@@ -195,7 +195,7 @@ class P {
                                   r.type === b.fO.STREAM
                                       ? (this.participantByIndex.set(
                                             r.id,
-                                            T(I({}, r), {
+                                            S(I({}, r), {
                                                 maxResolution: t,
                                                 maxFrameRate: n
                                             })
@@ -237,16 +237,16 @@ class P {
         let E,
             y,
             v = [],
-            S = p.default.getUser(e);
-        if (null == S) return v;
+            T = p.default.getUser(e);
+        if (null == T) return v;
         let A = m.Z.getVoiceStateForChannel(this.channelId, e),
             N = m.Z.getVoicePlatformForChannel(this.channelId, e),
             C = d.Z.getChannel(this.channelId),
             R = null != (r = (null == (n = this.call) || null == (t = n.ringing) ? void 0 : t.includes(e)) || this.guildRingingUsers.has(e)) && r;
         (null != A || R) &&
-            ((E = T(I({ type: b.fO.USER }, h.Z.getUserStreamData(e, null == C ? void 0 : C.getGuildId())), {
-                user: S,
-                id: S.id,
+            ((E = S(I({ type: b.fO.USER }, h.Z.getUserStreamData(e, null == C ? void 0 : C.getGuildId())), {
+                user: T,
+                id: T.id,
                 voiceState: A,
                 voicePlatform: N,
                 speaking: (0, a.O)({
@@ -256,8 +256,8 @@ class P {
                 lastSpoke: null != (i = this.lastSpoke[e]) ? i : 0,
                 soundsharing: _.Z.isSoundSharing(e),
                 ringing: R,
-                userNick: g.ZP.getName(null == C ? void 0 : C.getGuildId(), this.channelId, S),
-                localVideoDisabled: f.Z.isLocalVideoDisabled(S.id)
+                userNick: g.ZP.getName(null == C ? void 0 : C.getGuildId(), this.channelId, T),
+                localVideoDisabled: f.Z.isLocalVideoDisabled(T.id)
             })),
             v.push(E));
         let P = null != (o = l.Z.getStreamForUser(e, null == C ? void 0 : C.getGuildId())) ? o : l.Z.getActiveStreamForUser(e, null == C ? void 0 : C.getGuildId());
@@ -272,12 +272,12 @@ class P {
                               maxFrameRate: n.maxFrameRate
                           }
                         : null;
-            (y = T(I({}, h.Z.getUserStreamData(e, null == C ? void 0 : C.getGuildId(), O.Yn.STREAM), i), {
+            (y = S(I({}, h.Z.getUserStreamData(e, null == C ? void 0 : C.getGuildId(), O.Yn.STREAM), i), {
                 type: r ? b.fO.HIDDEN_STREAM : b.fO.STREAM,
                 id: t,
                 userVideo: null != (u = null == A ? void 0 : A.selfVideo) && u,
-                user: S,
-                userNick: g.ZP.getName(null == C ? void 0 : C.getGuildId(), this.channelId, S),
+                user: T,
+                userNick: g.ZP.getName(null == C ? void 0 : C.getGuildId(), this.channelId, T),
                 stream: P
             })),
                 v.push(y);

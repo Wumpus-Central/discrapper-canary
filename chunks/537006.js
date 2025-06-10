@@ -20,17 +20,17 @@ var r = n(255367),
     O = n(981631),
     v = n(921944),
     I = n(474936),
-    S = n(388032),
-    T = n(869310);
+    T = n(388032),
+    S = n(869310);
 function A(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(c.P3F, {
-        'aria-label': S.intl.string(S.t.WAI6xs),
+        'aria-label': T.intl.string(T.t.WAI6xs),
         onClick: t,
-        className: T.upsellCloseIconWrapper,
+        className: S.upsellCloseIconWrapper,
         children: (0, r.jsx)(c.Dio, {
             size: 'xs',
-            className: T.upsellCloseIcon,
+            className: S.upsellCloseIcon,
             color: 'currentColor'
         })
     });
@@ -40,19 +40,19 @@ function N(e) {
         { analyticsLocations: a, newestAnalyticsLocation: o } = (0, u.ZP)(),
         { trackUserProfileAction: s } = (0, g.KZ)();
     return (0, r.jsxs)('div', {
-        className: T.upsellButtons,
+        className: S.upsellButtons,
         children: [
             (0, r.jsx)('div', {
-                className: T.upsellButtonWrapper,
+                className: S.upsellButtonWrapper,
                 children: n
                     ? (0, r.jsxs)(c.gtL, {
                           onlyShineOnHover: !0,
                           size: t ? c.zxk.Sizes.TINY : c.zxk.Sizes.SMALL,
                           look: c.zxk.Looks.FILLED,
                           color: c.zxk.Colors.PRIMARY,
-                          className: T.upsellButton,
-                          innerClassName: T.viewPremiumPerksButtonInner,
-                          buttonShineClassName: T.viewPremiumPerksButtonShine,
+                          className: S.upsellButton,
+                          innerClassName: S.viewPremiumPerksButtonInner,
+                          buttonShineClassName: S.viewPremiumPerksButtonShine,
                           onClick: () => {
                               s({ action: y.yM.VIEW_PREMIUM_PERKS }), (0, h.uL)(O.Z5c.APPLICATION_STORE), null == i || i();
                           },
@@ -61,17 +61,17 @@ function N(e) {
                                   size: 'xs',
                                   color: 'currentColor'
                               }),
-                              S.intl.string(S.t['0Q61kJ'])
+                              T.intl.string(T.t['0Q61kJ'])
                           ]
                       })
                     : (0, r.jsx)(p.Z, {
                           onClick: () => {
                               s({ action: y.yM.GET_PREMIUM }), null == i || i();
                           },
-                          textOptions: { textOverride: S.intl.string(S.t.x6rkDg) },
+                          textOptions: { textOverride: T.intl.string(T.t.x6rkDg) },
                           subscriptionTier: I.Si.TIER_2,
                           premiumModalAnalyticsLocation: { section: O.jXE.USER_PROFILE },
-                          className: T.upsellButton,
+                          className: S.upsellButton,
                           size: t ? c.zxk.Sizes.TINY : c.zxk.Sizes.SMALL,
                           look: c.zxk.Looks.FILLED,
                           color: c.zxk.Colors.PRIMARY,
@@ -79,16 +79,16 @@ function N(e) {
                       })
             }),
             (0, r.jsx)('div', {
-                className: T.upsellButtonWrapper,
+                className: S.upsellButtonWrapper,
                 children: (0, r.jsx)(b.tG, {
                     icon: c.EOn,
                     action: y.yM.VISIT_SHOP,
-                    text: S.intl.string(S.t.b2d0Nz),
+                    text: T.intl.string(T.t.b2d0Nz),
                     look: c.zxk.Looks.FILLED,
                     color: c.zxk.Colors.PRIMARY,
                     themeColor: 'none',
                     size: t ? c.zxk.Sizes.TINY : c.zxk.Sizes.SMALL,
-                    className: T.upsellButton,
+                    className: S.upsellButton,
                     onClick: () => {
                         (0, d.mK)({
                             analyticsLocations: a,
@@ -124,7 +124,7 @@ function C(e) {
     let g = (0, r.jsx)('div', {
             children: (0, r.jsx)(c.Text, {
                 variant: 'text-sm/normal',
-                children: S.intl.string(S.t.EIYbj4)
+                children: T.intl.string(T.t.EIYbj4)
             })
         }),
         b = (0, r.jsx)(A, {
@@ -143,25 +143,25 @@ function C(e) {
         });
     return d
         ? (0, r.jsx)('div', {
-              className: o()(T.upsellContainer, a),
+              className: o()(S.upsellContainer, a),
               children: (0, r.jsxs)('div', {
-                  className: o()(T.upsellContent, T.upsellRowContent),
+                  className: o()(S.upsellContent, S.upsellRowContent),
                   children: [
                       g,
                       (0, r.jsxs)('div', {
-                          className: T.upsellRowRight,
+                          className: S.upsellRowRight,
                           children: [(0, r.jsx)('div', { children: O }), (0, r.jsx)('div', { children: b })]
                       })
                   ]
               })
           })
         : (0, r.jsx)('div', {
-              className: o()(T.upsellContainer, a),
+              className: o()(S.upsellContainer, a),
               children: (0, r.jsxs)('div', {
-                  className: o()(T.upsellContent, T.upsellDefaultContent),
+                  className: o()(S.upsellContent, S.upsellDefaultContent),
                   children: [
                       (0, r.jsxs)('div', {
-                          className: T.upsellHeader,
+                          className: S.upsellHeader,
                           children: [g, (0, r.jsx)('div', { children: b })]
                       }),
                       O

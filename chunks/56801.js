@@ -87,8 +87,8 @@ let b = [16, 8, 8, 8],
     v = 8;
 function I(e) {
     let { className: t, channel: n, sections: a, activeCategoryIndex: _, filteredSectionId: h, onSectionClick: E, applicationCommandListRef: I } = e,
-        S = i.useRef(null),
-        T = i.useCallback(
+        T = i.useRef(null),
+        S = i.useCallback(
             (e, t) => {
                 var n;
                 let r = 2 * O;
@@ -161,14 +161,14 @@ function I(e) {
         : (0, r.jsx)('div', {
               className: o()(t, f.wrapper),
               children: (0, r.jsx)(c.Z, {
-                  categoryListRef: S,
+                  categoryListRef: T,
                   expressionsListRef: I,
                   store: l.Xn,
                   categories: a,
                   className: f.list,
                   renderCategoryListItem: N,
                   rowCount: a.length,
-                  categoryHeight: T,
+                  categoryHeight: S,
                   listPadding: b,
                   getScrollOffsetForIndex: A
               })

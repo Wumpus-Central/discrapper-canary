@@ -60,9 +60,9 @@ function u(e, t, n, a, s) {
         },
         v = s.offsetX,
         I = s.offsetY,
-        S = 0 === I || I;
+        T = 0 === I || I;
     return {
         x: 0 === v || v ? v : O(),
-        y: S ? I : y()
+        y: T ? I : y()
     };
 }

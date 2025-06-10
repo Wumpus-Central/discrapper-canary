@@ -269,7 +269,7 @@ let y = new i.Yd('OverlayActionCreators'),
                     right: 0,
                     bottom: 0
                 },
-                S = {
+                T = {
                     width: 0,
                     height: 0
                 };
@@ -284,15 +284,15 @@ let y = new i.Yd('OverlayActionCreators'),
                             (O = (0, f.vS)(r, i, E)), (v = (0, f.w_)(i, E)), (0, p.E9)(n);
                             break;
                         case h.Odu.GUILDS_TEXT:
-                            (I = (0, f.vS)(r, i, E)), (S = (0, f.w_)(i, E)), (0, p.E9)(n);
+                            (I = (0, f.vS)(r, i, E)), (T = (0, f.w_)(i, E)), (0, p.E9)(n);
                     }
                 }),
                 e)
             ) {
-                let e = 'auto' === S.width ? l.minSize.width : S.width;
+                let e = 'auto' === T.width ? l.minSize.width : T.width;
                 e -= u.minSize.width;
-                let [n, i] = (0, f.o4)(I, b(g({}, S), { width: u.minSize.width }), E),
-                    [a, o] = (0, f.uq)(I, b(g({}, S), { width: e }), E, {
+                let [n, i] = (0, f.o4)(I, b(g({}, T), { width: u.minSize.width }), E),
+                    [a, o] = (0, f.uq)(I, b(g({}, T), { width: e }), E, {
                         x: 10,
                         y: 10
                     }),

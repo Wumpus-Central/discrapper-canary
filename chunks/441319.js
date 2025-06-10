@@ -25,8 +25,8 @@ var r = n(997945),
     O = n(328259),
     v = n(19009),
     I = n(234912),
-    S = n(405571),
-    T = n(730886),
+    T = n(405571),
+    S = n(730886),
     A = n(473974),
     N = n(563856);
 let C = 60;
@@ -66,13 +66,13 @@ function P() {
         },
         {
             id: r.Ru.PASTEL,
-            iconSource: S,
+            iconSource: T,
             isPremium: !0,
             name: i.intl.string(i.t.mTSkLS)
         },
         {
             id: r.Ru.PIRATE,
-            iconSource: T,
+            iconSource: S,
             isPremium: !0,
             name: i.intl.string(i.t.EgWTY2)
         },

@@ -66,13 +66,13 @@ if (n(738146)() || n(247131)()) {
             v = f('Set.prototype.forEach', !0);
         if (void 0 === r || !r.versions || !r.versions.node)
             var I = f('Map.prototype.iterator', !0),
-                S = f('Set.prototype.iterator', !0);
-        var T = f('Map.prototype.@@iterator', !0) || f('Map.prototype._es6-shim iterator_', !0),
+                T = f('Set.prototype.iterator', !0);
+        var S = f('Map.prototype.@@iterator', !0) || f('Map.prototype._es6-shim iterator_', !0),
             A = f('Set.prototype.@@iterator', !0) || f('Set.prototype._es6-shim iterator_', !0),
             N = function (e) {
                 if (b(e)) {
                     if (I) return a(I(e));
-                    if (T) return T(e);
+                    if (S) return S(e);
                     if (O) {
                         var t = [];
                         return (
@@ -84,7 +84,7 @@ if (n(738146)() || n(247131)()) {
                     }
                 }
                 if (y(e)) {
-                    if (S) return a(S(e));
+                    if (T) return a(T(e));
                     if (A) return A(e);
                     if (v) {
                         var n = [];

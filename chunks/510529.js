@@ -3,8 +3,8 @@ a.d(e, {
     h: () => i
 });
 var r = a(370336),
-    n = a(967752);
-function _(t) {
+    _ = a(967752);
+function n(t) {
     let e = t.protocol ? `${t.protocol}:` : '',
         a = t.port ? `:${t.port}` : '';
     return `${e}//${t.host}${a}${t.path ? `/${t.path}` : ''}/api/`;
@@ -12,7 +12,7 @@ function _(t) {
 function o(t, e, a) {
     return (
         e ||
-        `${_(t)}${t.projectId}/envelope/?${(0, r._j)({
+        `${n(t)}${t.projectId}/envelope/?${(0, r._j)({
             sentry_key: t.publicKey,
             sentry_version: '7',
             ...(a && { sentry_client: `${a.name}/${a.version}` })
@@ -20,10 +20,10 @@ function o(t, e, a) {
     );
 }
 function i(t, e) {
-    let a = (0, n.vK)(t);
+    let a = (0, _.vK)(t);
     if (!a) return '';
-    let r = `${_(a)}embed/error-page/`,
-        o = `dsn=${(0, n.RA)(a)}`;
+    let r = `${n(a)}embed/error-page/`,
+        o = `dsn=${(0, _.RA)(a)}`;
     for (let t in e)
         if ('dsn' !== t && 'onClose' !== t)
             if ('user' === t) {

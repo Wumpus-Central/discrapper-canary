@@ -51,8 +51,8 @@ let d = (e) => {
                 },
                 [n, c]
             ),
-            S = i.useCallback((e) => b(a[e], e, () => I(e), v === e), [v, a, I, b]),
-            T = i.useMemo(() => ('function' == typeof g ? (e) => g(a[e], e) : g), [a, g]);
+            T = i.useCallback((e) => b(a[e], e, () => I(e), v === e), [v, a, I, b]),
+            S = i.useMemo(() => ('function' == typeof g ? (e) => g(a[e], e) : g), [a, g]);
         return (0, r.jsxs)('div', {
             className: o()(u.wrapper, _),
             children: [
@@ -60,9 +60,9 @@ let d = (e) => {
                     listPadding: p,
                     onScroll: E,
                     ref: t,
-                    renderRow: S,
+                    renderRow: T,
                     rowCount: h,
-                    rowHeight: T,
+                    rowHeight: S,
                     hideScrollbar: !0,
                     rowCountBySection: y,
                     renderSection: O

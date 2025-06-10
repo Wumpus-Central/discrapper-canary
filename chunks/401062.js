@@ -1,5 +1,5 @@
 n.d(t, {
-    Lx: () => S,
+    Lx: () => T,
     kq: () => I,
     vy: () => v,
     yX: () => y
@@ -78,7 +78,7 @@ function I(e, t, n, r) {
             }),
         (0, u.Z)(null != r ? r : [], n, t, c.jy.DEFAULT);
 }
-let S = async (e) => {
+let T = async (e) => {
         let { channel: t, emoji: n, location: r, animationType: o, animationId: s, isPremium: l } = e;
         if (null == n || h.Z.isOnCooldown) return;
         let c = l && null != o ? o : g.q.BASIC;
@@ -114,13 +114,13 @@ let S = async (e) => {
             }
         }
     },
-    T = {
+    S = {
         [g.q.BASIC]: 'Basic',
         [g.q.PREMIUM]: 'Premium'
     },
     A = (e, t, n, r) => {
         let { unicode: i, custom: a, customExternal: o, managed: l, managedExternal: c, animated: u } = (0, _.sp)([t], e.getGuildId()),
-            d = T[r];
+            d = S[r];
         s.ZP.trackWithMetadata(E.rMx.VOICE_CHANNEL_EFFECT_SENT, {
             channel_id: e.id,
             guild_id: e.getGuildId(),

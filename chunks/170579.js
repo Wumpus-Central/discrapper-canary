@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => T });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -48,10 +48,10 @@ let I = (e) => {
             })
         );
     },
-    S = function (e) {
+    T = function (e) {
         var t;
         let n,
-            { hideCloseButton: i = !1, hideCloseOnFullScreen: p, shouldShowPrice: h, plan: g, renderAnimation: y, onClose: S, isGift: T, upgradeToPremiumType: A, headerTheme: N = b.nL.DEFAULT, className: C, showTrialBadge: R = !1, showDiscountBadge: P = !1 } = e,
+            { hideCloseButton: i = !1, hideCloseOnFullScreen: p, shouldShowPrice: h, plan: g, renderAnimation: y, onClose: T, isGift: S, upgradeToPremiumType: A, headerTheme: N = b.nL.DEFAULT, className: C, showTrialBadge: R = !1, showDiscountBadge: P = !1 } = e,
             w = A === b.p9.TIER_2;
         n = A === b.p9.TIER_0 ? d.Z : A === b.p9.TIER_1 ? f.Z : u.Z;
         let D = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
@@ -93,7 +93,7 @@ let I = (e) => {
                         !i &&
                             (0, r.jsx)(s.olH, {
                                 hideOnFullscreen: p,
-                                onClick: S,
+                                onClick: T,
                                 className: O.closeButton
                             })
                     ]
@@ -101,7 +101,7 @@ let I = (e) => {
                 h && null != g
                     ? (0, r.jsx)('div', {
                           className: O.price,
-                          children: v(g, T)
+                          children: v(g, S)
                       })
                     : null
             ]

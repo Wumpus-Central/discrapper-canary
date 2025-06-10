@@ -33,11 +33,11 @@ let p = 0,
 function I(e, t) {
     return ''.concat(e, ':').concat(t);
 }
-function S(e, t) {
+function T(e, t) {
     let n = e[t];
     return null == n && ((n = {}), (e[t] = n)), n;
 }
-function T(e) {
+function S(e) {
     var t;
     let n = null != (t = m[d.ME]) ? t : {},
         r = {};
@@ -59,10 +59,10 @@ function C(e, t) {
     n.has(t) && ((n = new Set(n)).delete(t), 0 === n.size ? E.delete(e) : E.set(e, n));
 }
 function R(e, t, n) {
-    let r = S(m, null != e ? e : d.ME),
+    let r = T(m, null != e ? e : d.ME),
         i = r[t],
         a = n(i);
-    return i === a ? [!1, a, i] : (null != i && (delete r[t], null != i.channelId && (delete S(b, i.channelId)[t], delete S(y, i.channelId)[t]), null != i.sessionId && delete S(O, t)[i.sessionId], C(null != e ? e : d.ME, t)), null != a && ((r[t] = a), null != a.channelId && ((S(b, a.channelId)[t] = a), a.selfVideo && ((S(y, a.channelId)[t] = a), N(null != e ? e : d.ME, t))), null != a.sessionId && (S(O, t)[a.sessionId] = a)), [!0, a, i]);
+    return i === a ? [!1, a, i] : (null != i && (delete r[t], null != i.channelId && (delete T(b, i.channelId)[t], delete T(y, i.channelId)[t]), null != i.sessionId && delete T(O, t)[i.sessionId], C(null != e ? e : d.ME, t)), null != a && ((r[t] = a), null != a.channelId && ((T(b, a.channelId)[t] = a), a.selfVideo && ((T(y, a.channelId)[t] = a), N(null != e ? e : d.ME, t))), null != a.sessionId && (T(O, t)[a.sessionId] = a)), [!0, a, i]);
 }
 function P(e) {
     let { voiceStates: t } = e;
@@ -111,12 +111,12 @@ function x(e) {
         [i] = R(t, r, (e) => (null == e ? void 0 : e.set('channelId', n)));
     return i;
 }
-function k(e) {
+function M(e) {
     let { user: t, sessionId: n } = e,
         a = null != r && r !== t.id;
     return a && ((m = {}), (b = {}), (O = {}), (y = {}), E.clear()), (r = t.id), (i = n), a;
 }
-function M() {
+function k() {
     (m = {}), (b = {}), (O = {}), (y = {}), E.clear();
 }
 function j(e) {
@@ -133,11 +133,11 @@ function U(e) {
 }
 function G(e) {
     let { channel: t } = e;
-    T(t.id);
+    S(t.id);
 }
 function B(e) {
     let { channelId: t } = e;
-    T(t);
+    S(t);
 }
 class F extends (a = l.ZP.Store) {
     getAllVoiceStates() {
@@ -147,13 +147,13 @@ class F extends (a = l.ZP.Store) {
         return h;
     }
     getVoiceStates(e) {
-        return S(m, null != e ? e : d.ME);
+        return T(m, null != e ? e : d.ME);
     }
     getVoiceStatesForChannel(e) {
-        return S(b, e);
+        return T(b, e);
     }
     getVideoVoiceStatesForChannel(e) {
-        return S(y, e);
+        return T(y, e);
     }
     getVoiceState(e, t) {
         return this.getVoiceStates(e)[t];
@@ -165,17 +165,17 @@ class F extends (a = l.ZP.Store) {
     getVoiceStateForChannel(e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r;
-        return null == (t = S(b, e)) ? void 0 : t[n];
+        return null == (t = T(b, e)) ? void 0 : t[n];
     }
     getVoiceStateForUser(e) {
-        return Object.values(S(O, e))[0];
+        return Object.values(T(O, e))[0];
     }
     getDiscoverableVoiceStateForUser(e) {
-        return Object.values(S(O, e)).find((e) => !1 !== e.discoverable);
+        return Object.values(T(O, e)).find((e) => !1 !== e.discoverable);
     }
     getVoiceStateForSession(e, t) {
         var n;
-        return null != t ? (null == (n = S(O, e)) ? void 0 : n[t]) : null;
+        return null != t ? (null == (n = T(O, e)) ? void 0 : n[t]) : null;
     }
     getUserVoiceChannelId(e, t) {
         var n;
@@ -200,7 +200,7 @@ class F extends (a = l.ZP.Store) {
         return null != n && (t !== r || (null != i && n.sessionId === i));
     }
     hasVideo(e) {
-        return Object.values(S(y, e)).length > 0;
+        return Object.values(T(y, e)).length > 0;
     }
     getVoicePlatformForChannel(e, t) {
         var n, a;
@@ -213,8 +213,8 @@ class F extends (a = l.ZP.Store) {
 }
 _(F, 'displayName', 'VoiceStateStore');
 let V = new F(c.Z, {
-    CONNECTION_OPEN: k,
-    CONNECTION_OPEN_SUPPLEMENTAL: M,
+    CONNECTION_OPEN: M,
+    CONNECTION_OPEN_SUPPLEMENTAL: k,
     OVERLAY_INITIALIZE: j,
     VOICE_CHANNEL_SELECT: x,
     VOICE_STATE_UPDATES: P,

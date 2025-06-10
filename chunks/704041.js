@@ -132,7 +132,7 @@ let I = (e) => {
             leaderboardId: s,
             intervalOffset: 0
         }),
-        S = (0, u.Z)({
+        T = (0, u.Z)({
             guildId: n,
             leaderboardId: s,
             intervalOffset: -1
@@ -143,8 +143,8 @@ let I = (e) => {
             leaderboardId: s,
             source: c
         });
-    let T = (0, o.q)(null == I || null == (t = I.settings) ? void 0 : t.application_id);
-    return null == I || null == T
+    let S = (0, o.q)(null == I || null == (t = I.settings) ? void 0 : t.application_id);
+    return null == I || null == S
         ? null
         : (0, r.jsx)(y, {
               children: (0, r.jsxs)('div', {
@@ -156,7 +156,7 @@ let I = (e) => {
                           children: [
                               (0, r.jsx)(v, {
                                   leaderboard: I,
-                                  application: T
+                                  application: S
                               }),
                               (0, r.jsx)(p.Z, {
                                   leaderboard: I,
@@ -167,11 +167,11 @@ let I = (e) => {
                                   ? null
                                   : (0, r.jsxs)(r.Fragment, {
                                         children: [
-                                            null != S &&
+                                            null != T &&
                                                 (0, r.jsx)(_.Z, {
                                                     className: b.previousChampion,
                                                     guildId: n,
-                                                    leaderboard: S
+                                                    leaderboard: T
                                                 }),
                                             (0, r.jsx)(d.Z, {
                                                 guildId: n,

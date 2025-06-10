@@ -16,7 +16,7 @@ function f(e) {
         b = null != f ? f : _,
         { ref: y, height: O = 0 } = (0, c.ZP)(),
         { ref: v, height: I = 0 } = (0, c.ZP)(),
-        S = (0, l.q_F)(
+        T = (0, l.q_F)(
             {
                 height: b ? O + I : I,
                 config: s.config.stiff,
@@ -24,7 +24,7 @@ function f(e) {
             },
             h ? 'animate-never' : 'respect-motion-settings'
         ),
-        T = i.useCallback(() => {
+        S = i.useCallback(() => {
             p(!_);
         }, [_, p]);
     return (
@@ -38,12 +38,12 @@ function f(e) {
             className: o()(u.collapseable, { [u.toggled]: b }, n),
             children: (0, r.jsxs)(s.animated.div, {
                 className: o()(u.contentExpandContainer, { [u.showOverflow]: b && g }),
-                style: S,
+                style: T,
                 children: [
                     (0, r.jsx)('div', {
                         ref: v,
                         className: o()(u.header, { [u.toggled]: b }),
-                        children: t({ onClick: T })
+                        children: t({ onClick: S })
                     }),
                     (0, r.jsx)('div', {
                         ref: y,

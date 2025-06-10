@@ -20,8 +20,8 @@ var r = n(512722),
     O = n(857192),
     v = n(626135),
     I = n(12647),
-    S = n(70956),
-    T = n(358085),
+    T = n(70956),
+    S = n(358085),
     A = n(960048),
     N = n(138859),
     C = n(14639),
@@ -31,8 +31,8 @@ var r = n(512722),
     D = n(508569),
     L = n(183139),
     x = n(645436),
-    k = n(866483),
-    M = n(833508),
+    M = n(866483),
+    k = n(833508),
     j = n(981631);
 function U(e, t, n) {
     return (
@@ -91,7 +91,7 @@ let V = new E.Z('GatewaySocket'),
 function H(e) {
     let { actuallySkipped: t, reason: n } = e,
         r = x.a(),
-        i = k.Pf(),
+        i = M.Pf(),
         a = m.Z.getState(),
         o = i.length > 0 ? ''.concat(n, ' + ').concat(i) : n,
         s = r ? 'paused' : 'request_state';
@@ -108,7 +108,7 @@ function H(e) {
                 client_app_state: m.Z.getState(),
                 skip_context: s,
                 original_connect_reason: o,
-                gateway_connect_reasons: k.Pf()
+                gateway_connect_reasons: M.Pf()
             });
         }, 200);
 }
@@ -128,16 +128,16 @@ function Y(e) {
             let e = G({}, l.state);
             null != e.messages && (e.messages = e.messages.map((e) => (null != e.data && 'string' == typeof e.data ? F(G({}, e), { data: e.data.substring(0, 100) }) : e))), V.log('[FAST CONNECT] successfully took over websocket, state:', F(G({}, e), { messages: null == (_ = e.messages) ? void 0 : _.length })), (c = l.state.open), (u = l.state.identify), (d = l.state.messages), (f = l.state.clientState);
         }
-    null == t && ((t = (0, M.Z)(n)).binaryType = 'arraybuffer'), r(t), c && i(u, f), null != d && d.forEach(a), (t.onopen = () => i(u, f)), (t.onmessage = a), (t.onclose = s), (t.onerror = o);
+    null == t && ((t = (0, k.Z)(n)).binaryType = 'arraybuffer'), r(t), c && i(u, f), null != d && d.forEach(a), (t.onopen = () => i(u, f)), (t.onmessage = a), (t.onclose = s), (t.onerror = o);
 }
 function W() {}
 let K = 4,
     z = 1001,
     q = 'Stream end encountered',
     X = 4004,
-    Q = 30 * S.Z.Millis.SECOND,
-    J = 3 * S.Z.Millis.MINUTE,
-    $ = +S.Z.Millis.MINUTE;
+    Q = 30 * T.Z.Millis.SECOND,
+    J = 3 * T.Z.Millis.MINUTE,
+    $ = +T.Z.Millis.MINUTE;
 function ee(e, t, n) {
     let r = 0;
     e.dataReady((e) => {
@@ -178,7 +178,7 @@ class er extends L.Z {
     _connect(e) {
         if (!this.willReconnect()) return void V.verbose('Skipping _connect because willReconnect is false');
         let t = x.a();
-        if ((t || !k.RZ()) && (V.info('Skipping _connect because socket is paused'), H({ reason: e }), t)) return;
+        if ((t || !M.RZ()) && (V.info('Skipping _connect because socket is paused'), H({ reason: e }), t)) return;
         (this.connectionState = N.Z.CONNECTING), (this.nextReconnectIsImmediate = !1);
         let n = this.compressionHandler.getAlgorithm(),
             r = Z.getName(),
@@ -326,7 +326,7 @@ class er extends L.Z {
         }
     }
     _tryDetectInvalidIOSToken(e, t, n) {
-        (0, T.isIOS)() &&
+        (0, S.isIOS)() &&
             null != this.token &&
             e === z &&
             t === q &&
@@ -531,7 +531,7 @@ class er extends L.Z {
     }
     networkStateChange(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-        k.RZ() ||
+        M.RZ() ||
             H({
                 reason: t,
                 actuallySkipped: !1

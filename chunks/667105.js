@@ -3,10 +3,10 @@ n.d(t, {
     Ks: () => B,
     Ws: () => Z,
     g2: () => j,
-    hf: () => k,
+    hf: () => M,
     k3: () => U,
     qN: () => V,
-    tP: () => M
+    tP: () => k
 }),
     n(388685);
 var r = n(255367),
@@ -30,8 +30,8 @@ var r = n(255367),
     O = n(918701),
     v = n(977156),
     I = n(373370),
-    S = n(920916),
-    T = n(669041),
+    T = n(920916),
+    S = n(669041),
     A = n(341907),
     N = n(46140),
     C = n(981631),
@@ -89,7 +89,7 @@ function x(e, t) {
         e
     );
 }
-function k(e) {
+function M(e) {
     let { quest: t, location: n, questContentPosition: r, questContentRowIndex: a } = e,
         s = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
         l = null == s ? void 0 : s.hasVerifiedEmailOrPhone(),
@@ -105,12 +105,12 @@ function k(e) {
                 questContentRowIndex: a
             }),
             (0, O.xN)(t.config) && !c
-                ? (0, T.B)()
+                ? (0, S.B)()
                 : l
                   ? (0, O.Bg)(t.config)
                       ? (0, A.openQuestsNitroRewardModal)(t, n)
                       : (0, O.Xv)(t.config)
-                        ? (0, S.m)(t, n)
+                        ? (0, T.m)(t, n)
                         : (0, O.vQ)(t.config)
                           ? (0, A.openQuestInGameRewardModal)(t, n)
                           : (0, O.xN)(t.config)
@@ -120,10 +120,10 @@ function k(e) {
                                   location: n,
                                   questContentPosition: r
                               })
-                  : (0, T.B)());
+                  : (0, S.B)());
     }, [t, u, n, r, a, l, c]);
 }
-function M(e) {
+function k(e) {
     var t;
     let n = (0, o.Wu)([u.ZP], () => u.ZP.getGamesSeen(!1)).find((t) => (null == t ? void 0 : t.id) === e);
     return null != n && Date.now() - 25920000000 <= (null != (t = n.lastLaunched) ? t : 0);
@@ -204,18 +204,18 @@ function B(e) {
         default:
             v = N.dr.CONFLICT_CHECKS;
     }
-    let S = k({
+    let T = M({
             quest: n,
             location: o,
             questContentPosition: s,
             questContentRowIndex: u
         }),
-        T = (0, E._s)({ quest: n }),
+        S = (0, E._s)({ quest: n }),
         w = (0, E.Rf)(n),
         L = i.useCallback(() => {
             (0, d.$)();
         }, []),
-        M = i.useCallback(() => {
+        k = i.useCallback(() => {
             (0, f.Y)({
                 pageType: C.ZY5.GLOBAL_DISCOVERY_QUESTS,
                 sectionType: C.jXE.QUEST_TILE_CTA,
@@ -263,7 +263,7 @@ function B(e) {
                 );
             case E.OH.ACCEPTED:
             case E.OH.IN_PROGRESS:
-                if (T && _)
+                if (S && _)
                     return {
                         text: P.intl.string(P.t.Cfye4u),
                         tooltipText: null,
@@ -304,12 +304,12 @@ function B(e) {
                 return {
                     text: B,
                     tooltipText: null,
-                    onClick: S
+                    onClick: T
                 };
             case E.OH.CLAIMED:
                 let i = {
                     tooltipText: null,
-                    onClick: S
+                    onClick: T
                 };
                 if (a) return x(D({}, i), { text: P.intl.string(P.t.MAS7uL) });
                 if ((0, O.vQ)(n.config)) return x(D({}, i), { text: P.intl.string(P.t.vTgCW1) });
@@ -323,11 +323,11 @@ function B(e) {
                     return {
                         tooltipText: null,
                         text: P.intl.string(P.t.WYchdX),
-                        onClick: M
+                        onClick: k
                     };
                 return x(D({}, i), { text: P.intl.string(P.t.bAGFz8) });
         }
-    }, [r, p, T, _, S, a, n, o, s, u, j, w, L, M, b, U, B]);
+    }, [r, p, S, _, T, a, n, o, s, u, j, w, L, k, b, U, B]);
 }
 function F() {
     return (0, o.e7)([b.Z], () => {

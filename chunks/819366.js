@@ -47,7 +47,7 @@ function I(e) {
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -59,12 +59,12 @@ function S(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -80,7 +80,7 @@ function A(e) {
                 null != t &&
                     (0, s.jW)(e, async () => {
                         let { default: e } = await n.e('25073').then(n.bind(n, 80742));
-                        return (n) => (0, r.jsx)(e, T(I({}, n), { userId: t }));
+                        return (n) => (0, r.jsx)(e, S(I({}, n), { userId: t }));
                     });
             },
             [t]
@@ -93,13 +93,13 @@ function A(e) {
     });
 }
 function N(e) {
-    let { className: t, userId: d, channelId: v, parsedUserId: S, content: N, inlinePreview: C = !1, viewingChannelId: R } = e,
+    let { className: t, userId: d, channelId: v, parsedUserId: T, content: N, inlinePreview: C = !1, viewingChannelId: R } = e,
         P = i.useRef(null),
         { analyticsLocations: w } = (0, c.ZP)(l.Z.USER_MENTION),
         D = (0, o.e7)([E.default], () => E.default.getUser(d)),
         L = (0, o.e7)([p.Z], () => p.Z.getChannel(v)),
         x = null != L ? L.getGuildId() : null,
-        k =
+        M =
             C || null == D || null == x || null == v
                 ? void 0
                 : (e) => {
@@ -109,7 +109,7 @@ function N(e) {
                               return (t) =>
                                   (0, r.jsx)(
                                       e,
-                                      T(I({}, t), {
+                                      S(I({}, t), {
                                           viewingChannelId: R,
                                           user: D,
                                           channel: L,
@@ -118,30 +118,30 @@ function N(e) {
                                   );
                           });
                   },
-        M = y.ZP.useName(D),
+        k = y.ZP.useName(D),
         j = (0, o.e7)([p.Z, h.ZP, g.Z], () => b.ZP.getNickname(x, v, D)),
         U = m.Z.getGuild(x),
         G = (0, u.Ib)(U, L) && d === O.fL ? O.jM : null;
     if (null == D)
         return (0, r.jsx)(A, {
-            userId: S,
+            userId: T,
             className: t,
             children: N
         });
     let B = (e) =>
         (0, r.jsx)(
             f.Z,
-            T(
+            S(
                 I(
                     {
                         ref: P,
                         className: t,
-                        onContextMenu: k,
+                        onContextMenu: M,
                         color: G
                     },
                     e
                 ),
-                { children: '@'.concat(null != j ? j : M) }
+                { children: '@'.concat(null != j ? j : k) }
             )
         );
     return C

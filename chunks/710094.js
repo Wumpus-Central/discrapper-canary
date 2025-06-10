@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(698708),
     v = n(844068),
     I = n(614223),
-    S = n(481595),
-    T = n(435020),
+    T = n(481595),
+    S = n(435020),
     A = n(51499),
     N = n(678334),
     C = n(614277),
@@ -33,15 +33,15 @@ let L = 500;
 function x(e) {
     var t, n;
     let a,
-        { handleStepChange: x, trialId: k, trialFooterMessageOverride: M, reviewWarningMessage: j, planGroup: U, openInvoiceId: G, analyticsData: B, analyticsLocation: F, referralTrialOfferId: V, initialPlanId: Z, subscriptionTier: H, handleClose: Y } = e,
+        { handleStepChange: x, trialId: M, trialFooterMessageOverride: k, reviewWarningMessage: j, planGroup: U, openInvoiceId: G, analyticsData: B, analyticsLocation: F, referralTrialOfferId: V, initialPlanId: Z, subscriptionTier: H, handleClose: Y } = e,
         { activeSubscription: W, setUpdatedSubscription: K, contextMetadata: z, currencies: q, paymentSourceId: X, paymentSources: Q, priceOptions: J, purchaseError: $, purchasePreviewError: ee, purchaseTokenAuthState: et, selectedPlan: en, selectedSkuId: er, setCurrency: ei, setPaymentSourceId: ea, setPurchaseState: eo, setPurchaseError: es, step: el, purchaseState: ec, isPremium: eu, setHasAcceptedTerms: ed, purchaseType: ef, setEntitlementsGranted: e_, startedPaymentFlowWithPaymentSourcesRef: ep, invoicePreview: eh, inReverseTrial: em, enablePremiumRebrandDesign: eg } = (0, g.JL)(),
         { isGift: eE, giftMessage: eb, giftRecipient: ey, claimableRewards: eO } = (0, m.wD)(),
         { paymentModalBanner: ev } = (0, b.zb)();
     o()(null != el, 'Step should be set');
     let eI = i.useRef(null),
-        [eS, eT] = (0, s.Z)(!1, L);
+        [eT, eS] = (0, s.Z)(!1, L);
     (0, p.t)();
-    let eA = null != (n = null != k ? k : V) ? n : null,
+    let eA = null != (n = null != M ? M : V) ? n : null,
         eN = null != eA && (!eu || R.nG[eA].skus.includes(er)) ? eA : null,
         eC = (0, d.N)(V),
         eR = (0, u.Ng)(),
@@ -62,10 +62,10 @@ function x(e) {
             },
             [x, K, e_]
         ),
-        eD = (0, T.m)(Q, X),
+        eD = (0, S.m)(Q, X),
         eL = null != en && R.o4.has(en.id) && null != eD && !(0, l.aQ)(eD) ? Error(w.intl.string(w.t['2ik8io'])) : null,
         ex = i.useRef(null),
-        [ek, eM] = i.useState(null),
+        [eM, ek] = i.useState(null),
         ej = !eE && null != eC && null != er && R.nG[eC.trial_id].skus.includes(er),
         eU = null == eR || null == (t = eR.discount) ? void 0 : t.plan_ids,
         eG = !eE && null != eR && null != eU && null != en && eU.includes(en.id),
@@ -88,8 +88,8 @@ function x(e) {
     return (
         ef === P.GZ.ONE_TIME
             ? ((eK = null != ee),
-              (a = (0, r.jsx)(S.Z, {
-                  hasLegalTermsFlash: eS,
+              (a = (0, r.jsx)(T.Z, {
+                  hasLegalTermsFlash: eT,
                   legalTermsNodeRef: ex,
                   onPaymentSourceChange: (e) => ea(null != e ? e.id : null),
                   handlePaymentSourceAdd: () => x(E.h8.ADD_PAYMENT_STEPS)
@@ -108,13 +108,13 @@ function x(e) {
                         handlePaymentSourceAdd: () => x(E.h8.ADD_PAYMENT_STEPS),
                         setHasAcceptedTerms: ed,
                         legalTermsNodeRef: ex,
-                        hasLegalTermsFlash: eS,
+                        hasLegalTermsFlash: eT,
                         trialId: eN,
-                        trialFooterMessageOverride: M,
+                        trialFooterMessageOverride: k,
                         reviewWarningMessage: j,
                         purchaseState: ec,
                         referralTrialOfferId: V,
-                        isTrial: ej || (null != k && null != M),
+                        isTrial: ej || (null != M && null != k),
                         isDiscount: eG,
                         handleClose: Y
                     })))
@@ -130,8 +130,8 @@ function x(e) {
                         planId: en.id,
                         setHasAcceptedTerms: ed,
                         legalTermsNodeRef: ex,
-                        hasLegalTermsFlash: eS,
-                        onInvoiceError: (e) => eM(e),
+                        hasLegalTermsFlash: eT,
+                        onInvoiceError: (e) => ek(e),
                         planGroup: U,
                         currencies: q,
                         onCurrencyChange: (e) => ei(e),
@@ -154,8 +154,8 @@ function x(e) {
                         onNext: ew,
                         onPurchaseError: (e) => es(e),
                         legalTermsNodeRef: ex,
-                        flashLegalTerms: () => eT(!0),
-                        invoiceError: ek,
+                        flashLegalTerms: () => eS(!0),
+                        invoiceError: eM,
                         planError: eL,
                         analyticsLocation: F,
                         baseAnalyticsData: B,

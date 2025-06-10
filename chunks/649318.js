@@ -1,6 +1,6 @@
 n.d(t, {
     $6: () => P,
-    MP: () => T,
+    MP: () => S,
     Mg: () => O,
     Nl: () => C,
     Ns: () => b,
@@ -136,7 +136,7 @@ function I(e) {
         media: e
     });
 }
-function S(e) {
+function T(e) {
     let { mid: t, type: n, setup: r, direction: a, baseSDP: o, codec: s, payload: l, bitrate: c, ssrcs: f, extensions: h, rtxPayload: E, sendingVideo: b, enableAudioNack: O } = e;
     if ('inactive' === a && !p.WS)
         return {
@@ -232,10 +232,10 @@ function S(e) {
                     payload: l,
                     rate: 90000
                 });
-            let S = 'x-google-max-bitrate='.concat(c);
-            s === _.ad.H264 && (S += ';level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f'),
+            let T = 'x-google-max-bitrate='.concat(c);
+            s === _.ad.H264 && (T += ';level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f'),
                 v.fmtp.push({
-                    config: S,
+                    config: T,
                     payload: l
                 }),
                 (v.rtcpFb = [
@@ -276,7 +276,7 @@ function S(e) {
     }
     return v;
 }
-function T(e) {
+function S(e) {
     let { type: t, baseSDP: n, direction: r, audioCodec: i, audioPayloadType: a, audioBitRate: o, videoCodec: s, videoPayloadType: l, videoBitRate: c, rtxPayloadType: d, ssrcs: f, extensions: _ } = e,
         p = [];
     if ((E.info('generateSessionDescription: '.concat(JSON.stringify(f))), 'Firefox' === u().name)) {
@@ -288,7 +288,7 @@ function T(e) {
                 E = 'audio' === f ? a : l,
                 b = 'audio' === f ? o : c;
             p.push(
-                S({
+                T({
                     mid: m,
                     type: f,
                     setup: e,
@@ -315,7 +315,7 @@ function T(e) {
                 });
         if (
             (p.push(
-                S({
+                T({
                     mid: 'audio',
                     type: 'audio',
                     setup: e,
@@ -340,7 +340,7 @@ function T(e) {
                     return v(n, t, 'v');
                 });
             p.push(
-                S({
+                T({
                     mid: 'video',
                     type: 'video',
                     setup: e,
@@ -373,9 +373,9 @@ function A(e) {
             let y = 'audio' === g ? r : o,
                 O = 'audio' === g ? i : s,
                 I = 'audio' === g ? null : u,
-                T = 'audio' === g ? a : l;
+                S = 'audio' === g ? a : l;
             p.push(
-                S({
+                T({
                     mid: b,
                     type: g,
                     setup: h,
@@ -383,7 +383,7 @@ function A(e) {
                     baseSDP: n,
                     codec: y,
                     payload: O,
-                    bitrate: T,
+                    bitrate: S,
                     ssrcs: t,
                     extensions: f,
                     rtxPayload: I,

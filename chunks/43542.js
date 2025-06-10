@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => T });
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -127,7 +127,7 @@ function I(e) {
               })
           );
 }
-function S(e) {
+function T(e) {
     let { profile: t, disableGuildNameClick: n } = e,
         l = (0, a.e7)([c.default], () => c.default.locale),
         u = (0, p.M)(_.default.extractTimestamp(t.id), l),

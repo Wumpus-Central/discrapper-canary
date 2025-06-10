@@ -72,7 +72,7 @@ function m(e) {
             },
             [O]
         ),
-        { isIgnored: I, isBlocked: S } = (0, i.cj)(
+        { isIgnored: I, isBlocked: T } = (0, i.cj)(
             [s.Z],
             () => ({
                 isIgnored: s.Z.isIgnored(O),
@@ -80,7 +80,7 @@ function m(e) {
             }),
             [O]
         );
-    return v || S
+    return v || T
         ? null
         : (0, r.jsx)(a.sNh, {
               id: 'ignore',

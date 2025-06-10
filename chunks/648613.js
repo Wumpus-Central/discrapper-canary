@@ -86,7 +86,7 @@ function O(e, t) {
     return i;
 }
 function v(e) {
-    let { onClick: t, subscriptionTier: m, postSuccessGuild: E, onSubscribeModalClose: O, premiumModalAnalyticsLocation: v, applicationId: I, giftMessage: S, confirmationFooter: T, paymentModalBanner: A, isGift: N, children: C } = e,
+    let { onClick: t, subscriptionTier: m, postSuccessGuild: E, onSubscribeModalClose: O, premiumModalAnalyticsLocation: v, applicationId: I, giftMessage: T, confirmationFooter: S, paymentModalBanner: A, isGift: N, children: C } = e,
         R = (0, i.e7)([d.default], () => d.default.getCurrentUser()),
         P = (0, i.e7)([f.ZP], () => f.ZP.getPremiumTypeSubscription()),
         { analyticsLocations: w } = (0, s.ZP)(),
@@ -137,8 +137,8 @@ function v(e) {
                     postSuccessGuild: E,
                     onClose: O,
                     applicationId: I,
-                    giftMessage: S,
-                    confirmationFooter: T,
+                    giftMessage: T,
+                    confirmationFooter: S,
                     paymentModalBanner: A
                 });
         }

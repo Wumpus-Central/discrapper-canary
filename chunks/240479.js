@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(981631),
     v = n(710111),
     I = n(388032),
-    S = n(367753);
-function T(e) {
+    T = n(367753);
+function S(e) {
     let { discoverableGuildId: t, closePopout: n, buttonType: a } = e,
         o = i.useCallback(async () => {
             if ((n(), null != t))
@@ -70,18 +70,18 @@ function A(e) {
                 }));
     }, [g, P, t.guildId, t.soundId]);
     let { buttonType: L, description: x } = (0, b.Z)(t, n, A, N),
-        k = L === b.y.JOIN_GUILD,
-        M = !y && w,
+        M = L === b.y.JOIN_GUILD,
+        k = !y && w,
         j = i.useMemo(() => (A ? u.JO.createFromGuildRecord(O) : null != N ? u.JO.createFromDiscoverableGuild(N) : void 0), [O, A, N]);
-    return M
+    return k
         ? (0, r.jsx)(f.SE, {})
         : (0, r.jsxs)('div', {
-              className: S.infoContainer,
+              className: T.infoContainer,
               children: [
                   (0, r.jsxs)(f.W_, {
                       children: [
                           (0, r.jsxs)('div', {
-                              className: S.infoExpandedSoundContainer,
+                              className: T.infoExpandedSoundContainer,
                               children: [
                                   (0, r.jsx)(h.ZP, {
                                       buttonOverlay: p.Pb.NONE,
@@ -98,23 +98,23 @@ function A(e) {
                           }),
                           null != j &&
                               (0, r.jsxs)('div', {
-                                  className: S.infoExpandedGuildContainer,
+                                  className: T.infoExpandedGuildContainer,
                                   children: [
                                       (0, r.jsx)(o.xv, {
                                           variant: 'eyebrow',
                                           color: 'header-muted',
-                                          className: S.infoExpandedGuildTitle,
+                                          className: T.infoExpandedGuildTitle,
                                           children: A ? I.intl.string(I.t.tGDabm) : I.intl.string(I.t.rnOmOT)
                                       }),
                                       (0, r.jsx)('div', {
-                                          className: S.infoExpandedGuildInfo,
+                                          className: T.infoExpandedGuildInfo,
                                           children: (0, r.jsx)(d.Oe, {
                                               expressionSourceGuild: j,
                                               hasJoinedExpressionSourceGuild: A,
-                                              isDisplayingJoinGuildButtonInPopout: k
+                                              isDisplayingJoinGuildButtonInPopout: M
                                           })
                                       }),
-                                      (0, r.jsx)(T, {
+                                      (0, r.jsx)(S, {
                                           buttonType: L,
                                           discoverableGuildId: null == N ? void 0 : N.id,
                                           closePopout: c
@@ -126,7 +126,7 @@ function A(e) {
                   (0, r.jsx)(l.IGR, {
                       text: 'BETA',
                       color: a.Z.BG_BRAND,
-                      className: S.betaBadge
+                      className: T.betaBadge
                   })
               ]
           });

@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(249268),
     v = n(864138),
     I = n(473188),
-    S = n(169080),
-    T = n(986398),
+    T = n(169080),
+    S = n(986398),
     A = n(463031),
     N = n(206583),
     C = n(388032),
@@ -79,8 +79,8 @@ function L(e, t) {
     );
 }
 let x = 10,
-    k = 15,
-    M = 'leaderboard.png';
+    M = 15,
+    k = 'leaderboard.png';
 function j(e) {
     let { leaderboard: t, previewMode: n = !1, trackRankingItemInteraction: s } = e,
         f = (0, a.e7)([d.default], () => d.default.getId()),
@@ -111,13 +111,13 @@ function j(e) {
         { primaryColor: v } = (0, l.Z)(g),
         I = i.useMemo(() => {
             let e = (0, p.oo)(v),
-                t = L(w({}, (0, p.pz)(e.r, e.g, e.b)), { l: k });
+                t = L(w({}, (0, p.pz)(e.r, e.g, e.b)), { l: M });
             return (0, p.ZJ)(t.h, t.s, t.l);
         }, [v]),
-        T = i.useMemo(() => null == m.find((e) => e.userId === f) && m.length <= x, [m, f]);
+        S = i.useMemo(() => null == m.find((e) => e.userId === f) && m.length <= x, [m, f]);
     if (
         (i.useEffect(() => {
-            S.M.forEach((e) => (0, c.po)(e));
+            T.M.forEach((e) => (0, c.po)(e));
         }),
         0 === t.users.length)
     )
@@ -176,7 +176,7 @@ function j(e) {
                                           })
                                       )
                                   ),
-                                  T ? (0, r.jsx)(B, { leaderboard: t }) : null
+                                  S ? (0, r.jsx)(B, { leaderboard: t }) : null
                               ]
                           })
                       ]
@@ -198,7 +198,7 @@ function U(e) {
                     className: R.emptyTitle,
                     children: C.intl.string(C.t.BfRGk5)
                 }),
-                (0, r.jsx)(T.Z, {
+                (0, r.jsx)(S.Z, {
                     className: R.emptyWinnerImage,
                     leaderboard: t
                 })
@@ -216,10 +216,10 @@ function G(e) {
             let e = f.Z.getPrimaryActivity(t);
             return (null == e ? void 0 : e.application_id) != null && A.T.includes(e.application_id);
         }),
-        { generatingImage: x, generateImage: k } = (0, s.d)({
+        { generatingImage: x, generateImage: M } = (0, s.d)({
             renderComponent: (e) =>
                 (0, r.jsx)(
-                    S.Z,
+                    T.Z,
                     L(w({}, e), {
                         userId: t,
                         leaderboard: p,
@@ -230,8 +230,8 @@ function G(e) {
         }),
         j = async () => {
             try {
-                let e = await k();
-                await g.ZP.copyImageBlob(e, M), P('copied'), null == E || E(N.xP.COPIED_LEADERBOARD_ROW);
+                let e = await M();
+                await g.ZP.copyImageBlob(e, k), P('copied'), null == E || E(N.xP.COPIED_LEADERBOARD_ROW);
             } catch (e) {
                 P('error');
             }
@@ -303,7 +303,7 @@ function G(e) {
                                       size: 4,
                                       horizontal: !0
                                   }),
-                                  (0, r.jsx)(T.Z, {
+                                  (0, r.jsx)(S.Z, {
                                       className: R.userWinnerImage,
                                       leaderboard: p
                                   })
@@ -367,7 +367,7 @@ function B(e) {
                 variant: 'text-xs/normal',
                 children: C.intl.string(C.t.BfRGk5)
             }),
-            (0, r.jsx)(T.Z, {
+            (0, r.jsx)(S.Z, {
                 className: R.joinLeaderboardCTAWinnerImage,
                 leaderboard: t
             })

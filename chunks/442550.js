@@ -65,9 +65,9 @@ function m(e) {
         b = (0, c.ZP)(),
         y = ''.concat(n, 'px'),
         [O, v] = i.useState(!1),
-        [I, S] = i.useState(!1),
-        T = null == m || I;
-    if (null == t || (O && T))
+        [I, T] = i.useState(!1),
+        S = null == m || I;
+    if (null == t || (O && S))
         return (0, r.jsx)(l.IMN, {
             size: 'custom',
             width: '100%',
@@ -101,7 +101,7 @@ function m(e) {
                         src: O && null != m ? m : t,
                         'aria-hidden': g,
                         alt: null != p ? p : g ? void 0 : u.intl.string(u.t['2B/phI']),
-                        onError: (e) => (O ? S(!0) : v(!0))
+                        onError: (e) => (O ? T(!0) : v(!0))
                     })
                 )
         },

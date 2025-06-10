@@ -1,25 +1,25 @@
 a.d(e, { R: () => l });
 var r = a(448171),
-    n = a(78355),
-    _ = a(747677),
+    _ = a(78355),
+    n = a(747677),
     o = a(622916),
     i = a(454463),
     c = a(878719),
-    s = a(163162),
-    E = a(463461);
+    E = a(163162),
+    s = a(463461);
 class l extends r.W {
     constructor(t) {
         let e = {
                 parentSpanIsAlwaysRootSpan: !0,
                 ...t
             },
-            a = s.m9.SENTRY_SDK_SOURCE || (0, _.S)();
-        (0, n.V)(e, 'browser', ['browser'], a),
+            a = E.m9.SENTRY_SDK_SOURCE || (0, n.S)();
+        (0, _.V)(e, 'browser', ['browser'], a),
             super(e),
             e.sendClientReports &&
-                s.m9.document &&
-                s.m9.document.addEventListener('visibilitychange', () => {
-                    'hidden' === s.m9.document.visibilityState && this._flushOutcomes();
+                E.m9.document &&
+                E.m9.document.addEventListener('visibilitychange', () => {
+                    'hidden' === E.m9.document.visibilityState && this._flushOutcomes();
                 });
     }
     eventFromException(t, e) {
@@ -33,7 +33,7 @@ class l extends r.W {
             i.X && o.kg.warn('SDK not enabled, will not capture user feedback.');
             return;
         }
-        let e = (0, E.r)(t, {
+        let e = (0, s.r)(t, {
             metadata: this.getSdkMetadata(),
             dsn: this.getDsn(),
             tunnel: this.getOptions().tunnel

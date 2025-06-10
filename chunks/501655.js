@@ -1,5 +1,5 @@
 n.d(t, {
-    Ui: () => S,
+    Ui: () => T,
     ZP: () => R,
     pV: () => I
 }),
@@ -76,10 +76,10 @@ function v(e, t) {
 var I = (function (e) {
         return (e.SPEAKER = 'SPEAKER'), (e.AUDIENCE = 'AUDIENCE'), (e.NO_ROLE = 'NO_ROLE'), (e.ALL_REQUESTED_TO_SPEAK = 'ALL_REQUESTED_TO_SPEAK'), (e.REQUESTED_TO_SPEAK_ONLY = 'REQUESTED_TO_SPEAK_ONLY'), (e.BLOCKED = 'BLOCKED'), (e.IGNORED = 'IGNORED'), (e.FRIEND = 'FRIEND'), (e.SELECTED = 'SELECTED'), (e.MEDIA = 'MEDIA'), e;
     })({}),
-    S = (function (e) {
+    T = (function (e) {
         return (e.VOICE = 'VOICE'), (e.STREAM = 'STREAM'), e;
     })({});
-function T(e) {
+function S(e) {
     var t;
     let { speaker: n, role: r, user: a, userNick: o, connectedOn: s, voiceState: l, type: c } = e,
         u = n ? '\0' : '\x01',
@@ -118,9 +118,9 @@ class R {
         if (null == O) return b;
         let I = d.default.getUser(e);
         if (null == I) return null != this.guildId && m.Z.isPublic(this.channelId) && l.Z.requestMember(this.guildId, e), b;
-        let S = null != t ? t[0] : null,
-            T = null != this.guildId ? c.ZP.getMember(this.guildId, e) : null,
-            A = null != (n = null == T ? void 0 : T.nick) ? n : p.ZP.getName(this.guildId, this.channelId, I),
+        let T = null != t ? t[0] : null,
+            S = null != this.guildId ? c.ZP.getMember(this.guildId, e) : null,
+            A = null != (n = null == S ? void 0 : S.nick) ? n : p.ZP.getName(this.guildId, this.channelId, I),
             N = {
                 user: I,
                 userNick: p.ZP.getName(this.guildId, this.channelId, I),
@@ -129,11 +129,11 @@ class R {
                 voiceState: O,
                 role: (0, E.H)(this.guildId, e),
                 speaker: h.ZP.isSpeaker(e, this.channelId),
-                member: T,
+                member: S,
                 blocked: u.Z.isBlocked(I.id),
                 ignored: u.Z.isIgnored(I.id),
                 isFriend: u.Z.isFriend(I.id),
-                connectedOn: null != (r = null == S ? void 0 : S.connectedOn) ? r : Date.now()
+                connectedOn: null != (r = null == T ? void 0 : T.connectedOn) ? r : Date.now()
             },
             C = v(y({}, N), {
                 type: 'VOICE',
@@ -196,6 +196,6 @@ class R {
     }
     constructor(e) {
         var t;
-        b(this, 'channelId', void 0), b(this, 'guildId', void 0), b(this, 'participants', {}), b(this, '_participantsIndex', new r.h(C, T)), b(this, '_requestToSpeakIndex', new r.h(() => [], A)), (this.channelId = e), (this.guildId = null == (t = s.Z.getChannel(e)) ? void 0 : t.getGuildId());
+        b(this, 'channelId', void 0), b(this, 'guildId', void 0), b(this, 'participants', {}), b(this, '_participantsIndex', new r.h(C, S)), b(this, '_requestToSpeakIndex', new r.h(() => [], A)), (this.channelId = e), (this.guildId = null == (t = s.Z.getChannel(e)) ? void 0 : t.getGuildId());
     }
 }

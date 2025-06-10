@@ -88,7 +88,7 @@ function v(e) {
     let { value: t, onSelect: n, dateFormat: a = O, minDate: h, maxDate: g, disabled: y = !1 } = e,
         v = (0, f.Q3)('DateInput'),
         I = i.useRef(null);
-    function S(e) {
+    function T(e) {
         let { closePopout: i } = e;
         return (0, r.jsx)(c.V, {
             children: (0, r.jsx)(s.CalendarPicker, {
@@ -106,7 +106,7 @@ function v(e) {
     }
     return (0, r.jsx)(u.y, {
         targetElementRef: I,
-        renderPopout: S,
+        renderPopout: T,
         position: 'bottom',
         children: (e) => {
             var { onClick: n } = e,

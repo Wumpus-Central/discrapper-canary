@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => T });
+n.r(t), n.d(t, { default: () => S });
 var r = n(393655),
     i = n(465735),
     a = n(528734),
@@ -87,15 +87,15 @@ var b = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g,
     O = /^'([^]*?)'?$/,
     v = /''/g,
     I = /\S/,
-    S = /[a-zA-Z]/;
-function T(e, t, n, g) {
+    T = /[a-zA-Z]/;
+function S(e, t, n, g) {
     (0, d.Z)(3, arguments);
     var E = String(e),
         O = String(t),
         v = (0, p.j)(),
-        T = null != (R = null != (P = null == g ? void 0 : g.locale) ? P : v.locale) ? R : r.Z;
-    if (!T.match) throw RangeError('locale must contain match property');
-    var N = (0, u.Z)(null != (w = null != (D = null != (L = null != (x = null == g ? void 0 : g.firstWeekContainsDate) ? x : null == g || null == (k = g.locale) || null == (M = k.options) ? void 0 : M.firstWeekContainsDate) ? L : v.firstWeekContainsDate) ? D : null == (j = v.locale) || null == (U = j.options) ? void 0 : U.firstWeekContainsDate) ? w : 1);
+        S = null != (R = null != (P = null == g ? void 0 : g.locale) ? P : v.locale) ? R : r.Z;
+    if (!S.match) throw RangeError('locale must contain match property');
+    var N = (0, u.Z)(null != (w = null != (D = null != (L = null != (x = null == g ? void 0 : g.firstWeekContainsDate) ? x : null == g || null == (M = g.locale) || null == (k = M.options) ? void 0 : k.firstWeekContainsDate) ? L : v.firstWeekContainsDate) ? D : null == (j = v.locale) || null == (U = j.options) ? void 0 : U.firstWeekContainsDate) ? w : 1);
     if (!(N >= 1 && N <= 7)) throw RangeError('firstWeekContainsDate must be between 1 and 7 inclusively');
     var C = (0, u.Z)(null != (G = null != (B = null != (F = null != (V = null == g ? void 0 : g.weekStartsOn) ? V : null == g || null == (Z = g.locale) || null == (H = Z.options) ? void 0 : H.weekStartsOn) ? F : v.weekStartsOn) ? B : null == (Y = v.locale) || null == (W = Y.options) ? void 0 : W.weekStartsOn) ? G : 0);
     if (!(C >= 0 && C <= 6)) throw RangeError('weekStartsOn must be between 0 and 6 inclusively');
@@ -108,8 +108,8 @@ function T(e, t, n, g) {
         D,
         L,
         x,
-        k,
         M,
+        k,
         j,
         U,
         G,
@@ -124,13 +124,13 @@ function T(e, t, n, g) {
         z = {
             firstWeekContainsDate: N,
             weekStartsOn: C,
-            locale: T
+            locale: S
         },
         q = [new f.GT()],
         X = O.match(y)
             .map(function (e) {
                 var t = e[0];
-                return t in s.Z ? (0, s.Z[t])(e, T.formatLong) : e;
+                return t in s.Z ? (0, s.Z[t])(e, S.formatLong) : e;
             })
             .join('')
             .match(b),
@@ -154,11 +154,11 @@ function T(e, t, n, g) {
                     token: n,
                     fullToken: t
                 });
-                var o = r.run(E, t, T.match, z);
+                var o = r.run(E, t, S.match, z);
                 if (!o) return { v: new Date(NaN) };
                 q.push(o.setter), (E = o.rest);
             } else {
-                if (n.match(S)) throw RangeError('Format string contains an unescaped latin alphabet character `' + n + '`');
+                if (n.match(T)) throw RangeError('Format string contains an unescaped latin alphabet character `' + n + '`');
                 if (("''" === t ? (t = "'") : "'" === n && (t = A(t)), 0 !== E.indexOf(t))) return { v: new Date(NaN) };
                 E = E.slice(t.length);
             }

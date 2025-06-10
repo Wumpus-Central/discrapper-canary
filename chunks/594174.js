@@ -3,7 +3,7 @@ n.r(t),
         ASSISTANT_WUMPUS_VOICE_USER: () => O,
         default: () => ew,
         mergeUser: () => N,
-        transformUser: () => T,
+        transformUser: () => S,
         users: () => b
     }),
     n(388685),
@@ -54,7 +54,7 @@ function I(e, t) {
     let n = b[e];
     return !(null == n || (0, l.d)(n.primaryGuild, t.primary_guild)) && (null == n.primaryGuild || null != t.primary_guild) && ((n.primaryGuild = (0, l.l)(t.primary_guild)), (b[n.id] = n), y++, !0);
 }
-function S(e, t) {
+function T(e, t) {
     switch (!0) {
         case null == e.primaryGuild && null == t.primary_guild:
             break;
@@ -67,7 +67,7 @@ function S(e, t) {
     }
     return t;
 }
-function T(e) {
+function S(e) {
     let t = e.mfa_enabled;
     null != t && ((e.mfaEnabled = t), delete e.mfa_enabled);
     let n = (0, u.G)(e.premium_type);
@@ -102,8 +102,8 @@ function N(e) {
     if (null == r) void 0 !== (t = (r = new d.Z(e)).premiumType) && i && (r.premiumType = R((0, u.QI)(r), r.premiumType));
     else if (n) {
         var a;
-        let n = T(e);
-        void 0 !== (t = null != (a = n.premium_type) ? a : n.premiumType) && i && (0, u.VR)(n) && (n = C(n)), (n = S(r, n)), (r = r.merge(n));
+        let n = S(e);
+        void 0 !== (t = null != (a = n.premium_type) ? a : n.premiumType) && i && (0, u.VR)(n) && (n = C(n)), (n = T(r, n)), (r = r.merge(n));
     }
     (0, u.jX)((0, u.QI)(r), t, r.premiumType);
     let o = b[e.id] !== r;
@@ -195,11 +195,11 @@ function L(e) {
 function x(e) {
     if (null != e.users) for (let t of e.users) (t.id in b && L(t)) || (b[t.id] = new d.Z(t));
 }
-function k(e) {
+function M(e) {
     let { user: t } = e;
     t.id !== p.default.getId() && N(t);
 }
-function M(e) {
+function k(e) {
     let { user: t } = e;
     N(t);
 }
@@ -453,12 +453,12 @@ function eI(e) {
     let { users: n } = t;
     return n.reduce((e, t) => N(t) || e, !1);
 }
-function eS(e) {
+function eT(e) {
     let { familyCenterTeenActivity: t } = e,
         { users: n } = t;
     return n.reduce((e, t) => N(t) || e, !1);
 }
-function eT(e) {
+function eS(e) {
     let { members: t } = e,
         n = p.default.getId();
     return t.reduce((e, t) => (t.member.user.id === n ? e : N(t.member.user) || e), !1);
@@ -541,8 +541,8 @@ class eP extends h.Z {
             UPDATE_CLIENT_PREMIUM_TYPE: j,
             OVERLAY_INITIALIZE: x,
             CACHE_LOADED: (e) => this.handleLoadCache(e),
-            USER_UPDATE: k,
-            CURRENT_USER_UPDATE: M,
+            USER_UPDATE: M,
+            CURRENT_USER_UPDATE: k,
             PRESENCE_UPDATES: J,
             SEARCH_FINISH: F,
             MOD_VIEW_SEARCH_FINISH: F,
@@ -591,9 +591,9 @@ class eP extends h.Z {
             FAMILY_CENTER_INITIAL_LOAD: ey,
             FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: eO,
             FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eI,
-            FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eS,
+            FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eT,
             FAMILY_CENTER_REQUEST_LINK_SUCCESS: ev,
-            MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eT,
+            MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eS,
             LOAD_GRAVITY_HYDRATED: eA,
             EMBEDDED_ACTIVITY_UPDATE_V2: eN,
             INITIATE_AGE_VERIFICATION: eC,

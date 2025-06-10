@@ -186,7 +186,7 @@ let I = {
         END: 375
     }
 };
-class S extends l.PureComponent {
+class T extends l.PureComponent {
     getStyle(e) {
         let { animation: t } = this.props;
         return {
@@ -223,7 +223,7 @@ class S extends l.PureComponent {
         });
     }
 }
-let T = Object.freeze({
+let S = Object.freeze({
         IDLE_ENTRY: {
             toValue: 1,
             duration: 1500
@@ -289,10 +289,10 @@ class N extends (a = l.PureComponent) {
         ]).start();
     }
     animateIdleEntry() {
-        this.animateEntry(T.IDLE_ENTRY);
+        this.animateEntry(S.IDLE_ENTRY);
     }
     animateError() {
-        this.animateEntry(T.ERROR);
+        this.animateEntry(S.ERROR);
     }
     animateIdleLoop() {
         this.animateIdleLoopBackground(), this.animateIdleLoopForeground();
@@ -300,14 +300,14 @@ class N extends (a = l.PureComponent) {
     animateBoostStart() {
         f.Z.parallel([
             f.Z.timing(this.foregroundAnimation.y, {
-                toValue: T.BOOST_START.toValue,
-                duration: T.BOOST_START.duration,
-                delay: T.BOOST_START.delay
+                toValue: S.BOOST_START.toValue,
+                duration: S.BOOST_START.duration,
+                delay: S.BOOST_START.delay
             }),
             f.Z.timing(this.backgroundAnimation.y, {
-                toValue: T.BOOST_START.toValue,
-                duration: T.BOOST_START.duration * A,
-                delay: T.BOOST_START.delay
+                toValue: S.BOOST_START.toValue,
+                duration: S.BOOST_START.duration * A,
+                delay: S.BOOST_START.delay
             })
         ]).start();
     }
@@ -323,11 +323,11 @@ class N extends (a = l.PureComponent) {
                       })
                     : (0, s.jsxs)(s.Fragment, {
                           children: [
-                              (0, s.jsx)(S, {
+                              (0, s.jsx)(T, {
                                   className: p.tier2Background,
                                   animation: this.backgroundAnimation
                               }),
-                              (0, s.jsx)(S, {
+                              (0, s.jsx)(T, {
                                   className: p.tier2Foreground,
                                   animation: this.foregroundAnimation
                               })
@@ -369,8 +369,8 @@ class N extends (a = l.PureComponent) {
                 this.didUnmount ||
                     (this.backgroundAnimation.x.setValue(0),
                     f.Z.timing(this.backgroundAnimation.x, {
-                        toValue: T.IDLE_LOOP.toValue,
-                        duration: T.IDLE_LOOP.duration * A,
+                        toValue: S.IDLE_LOOP.toValue,
+                        duration: S.IDLE_LOOP.duration * A,
                         easing: f.Z.Easing.linear
                     }).start(this.animateIdleLoopBackground));
             }),
@@ -378,9 +378,9 @@ class N extends (a = l.PureComponent) {
                 this.didUnmount ||
                     (this.foregroundAnimation.x.setValue(0),
                     f.Z.timing(this.foregroundAnimation.x, {
-                        toValue: T.IDLE_LOOP.toValue,
-                        duration: T.IDLE_LOOP.duration,
-                        easing: T.IDLE_LOOP.easing
+                        toValue: S.IDLE_LOOP.toValue,
+                        duration: S.IDLE_LOOP.duration,
+                        easing: S.IDLE_LOOP.easing
                     }).start(this.animateIdleLoopForeground));
             }),
             h(this, 'handleScenePlay', (e) => {

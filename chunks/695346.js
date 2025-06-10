@@ -5,13 +5,13 @@ n.d(t, {
     CW: () => ew,
     Cr: () => ep,
     DC: () => ea,
-    Ex: () => ek,
+    Ex: () => eM,
     Fg: () => J,
     G6: () => ed,
     H1: () => L,
-    I0: () => M,
+    I0: () => k,
     JG: () => eU,
-    L1: () => eT,
+    L1: () => eS,
     NA: () => eb,
     OW: () => el,
     Ok: () => eh,
@@ -21,10 +21,10 @@ n.d(t, {
     QZ: () => N,
     R$: () => b,
     RS: () => eE,
-    R_: () => eM,
+    R_: () => ek,
     Rt: () => eY,
     SE: () => eP,
-    Sb: () => eS,
+    Sb: () => eT,
     Sh: () => eB,
     T4: () => D,
     UP: () => ec,
@@ -51,7 +51,7 @@ n.d(t, {
     ev: () => $,
     fq: () => O,
     fv: () => C,
-    fz: () => T,
+    fz: () => S,
     gR: () => q,
     gw: () => eV,
     h2: () => X,
@@ -65,12 +65,12 @@ n.d(t, {
     l4: () => eH,
     mX: () => W,
     nc: () => ey,
-    qF: () => k,
+    qF: () => M,
     rN: () => eO,
     tU: () => em,
     uL: () => U,
     up: () => y,
-    vF: () => S,
+    vF: () => T,
     x4: () => eg,
     xM: () => eo,
     xq: () => Q,
@@ -147,7 +147,7 @@ let E = (0, d.Zc)(
         },
         (e) => o.Gm.create({ value: e })
     ),
-    S = (0, d.Zc)(
+    T = (0, d.Zc)(
         'textAndImages',
         'useThreadSidebar',
         (e) => {
@@ -165,7 +165,7 @@ let E = (0, d.Zc)(
     },
     (e) => o.D5.create({ value: e })
 );
-let T = (0, d.Zc)(
+let S = (0, d.Zc)(
     'notifications',
     'reactionNotifications',
     (e) => (null != e ? e : a.Ns.NOTIFICATIONS_ENABLED),
@@ -235,7 +235,7 @@ let A = (0, d.Zc)(
         },
         (e) => o.D5.create({ value: e })
     ),
-    k = (0, d.Zc)(
+    M = (0, d.Zc)(
         'voiceAndVideo',
         'alwaysPreviewVideo',
         (e) => {
@@ -244,7 +244,7 @@ let A = (0, d.Zc)(
         },
         (e) => o.D5.create({ value: e })
     ),
-    M = (0, d.Zc)(
+    k = (0, d.Zc)(
         'voiceAndVideo',
         'disableStreamPreviews',
         (e) => (null == e ? void 0 : e.value),
@@ -638,7 +638,7 @@ let eI = new Set([s.Z.ALL, s.Z.UNREADS, s.Z.NONE]);
     (e) => (null != e && eI.has(e.value) ? e.value : s.Z.ALL),
     (e) => o.Gm.create({ value: e })
 );
-let eS = (0, d.KM)(
+let eT = (0, d.KM)(
         (0, d.Zc)(
             'appearance',
             'developerMode',
@@ -648,7 +648,7 @@ let eS = (0, d.KM)(
         'appearance',
         'developerMode'
     ),
-    eT = (0, d.Zc)(
+    eS = (0, d.Zc)(
         'appearance',
         'clientThemeSettings',
         (e) => {
@@ -787,13 +787,13 @@ let eS = (0, d.KM)(
         ineligibleDefault: a.E5.OFF,
         eligibleDefault: () => a.E5.ON
     }),
-    ek = (0, d.Zc)(
+    eM = (0, d.Zc)(
         'privacy',
         'familyCenterEnabledV2',
         (e) => (null == e ? void 0 : e.value),
         (e) => o.D5.create({ value: e })
     ),
-    eM = (0, d.Zc)(
+    ek = (0, d.Zc)(
         'privacy',
         'hideLegacyUsername',
         (e) => {

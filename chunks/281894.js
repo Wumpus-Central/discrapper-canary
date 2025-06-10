@@ -1,7 +1,7 @@
-a.d(e, { O1: () => s });
+a.d(e, { O1: () => E });
 var r = a(349812),
-    n = a(617726),
-    _ = a(387486);
+    _ = a(617726),
+    n = a(387486);
 function o(t) {
     return new Promise((e, a) => {
         (t.oncomplete = t.onsuccess = () => e(t.result)), (t.onabort = t.onerror = () => a(t.error));
@@ -27,26 +27,26 @@ function c(t) {
     return {
         push: async (e) => {
             try {
-                var r, _;
-                let c = await (0, n.V$)(e);
+                var r, n;
+                let c = await (0, _.V$)(e);
                 await ((r = a()),
-                (_ = t.maxQueueSize || 30),
+                (n = t.maxQueueSize || 30),
                 r((t) =>
                     i(t).then((e) => {
-                        if (!(e.length >= _)) return t.put(c, Math.max(...e, 0) + 1), o(t.transaction);
+                        if (!(e.length >= n)) return t.put(c, Math.max(...e, 0) + 1), o(t.transaction);
                     })
                 ));
             } catch (t) {}
         },
         unshift: async (e) => {
             try {
-                var r, _;
-                let c = await (0, n.V$)(e);
+                var r, n;
+                let c = await (0, _.V$)(e);
                 await ((r = a()),
-                (_ = t.maxQueueSize || 30),
+                (n = t.maxQueueSize || 30),
                 r((t) =>
                     i(t).then((e) => {
-                        if (!(e.length >= _)) return t.put(c, Math.min(...e, 0) - 1), o(t.transaction);
+                        if (!(e.length >= n)) return t.put(c, Math.min(...e, 0) - 1), o(t.transaction);
                     })
                 ));
             } catch (t) {}
@@ -59,12 +59,12 @@ function c(t) {
                         if (null != a) return o(t.get(a)).then((e) => (t.delete(a), o(t.transaction).then(() => e)));
                     })
                 );
-                if (t) return (0, n.f4)(t);
+                if (t) return (0, _.f4)(t);
             } catch (t) {}
         }
     };
 }
-function s(t = _.f) {
+function E(t = n.f) {
     var e;
     return (
         (e = (0, r.Pd)(t)),

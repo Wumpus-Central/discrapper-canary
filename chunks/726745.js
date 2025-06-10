@@ -125,11 +125,11 @@ function I(e, t) {
         });
     null != r && ((r.tokenStatus = t), (g = n));
 }
-function S(e) {
+function T(e) {
     let { from: t, to: n } = e;
     g = (0, c.aB)(g, t, n);
 }
-function T(e) {
+function S(e) {
     let { multiAccountMobileExperimentEnabled: t } = e;
     i = t;
 }
@@ -206,9 +206,9 @@ let R = new C(l.Z, {
     MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: (e) => I(e.userId, 2),
     MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: (e) => I(e.userId, 0),
     MULTI_ACCOUNT_REMOVE_ACCOUNT: (e) => O(e.userId),
-    MULTI_ACCOUNT_MOVE_ACCOUNT: S,
+    MULTI_ACCOUNT_MOVE_ACCOUNT: T,
     CURRENT_USER_UPDATE: v,
-    MULTI_ACCOUNT_MOBILE_EXPERIMENT_UPDATE: T,
+    MULTI_ACCOUNT_MOBILE_EXPERIMENT_UPDATE: S,
     MULTI_ACCOUNT_UPDATE_PUSH_SYNC_TOKEN: A,
     MULTI_ACCOUNT_INVALIDATE_PUSH_SYNC_TOKENS: N
 });

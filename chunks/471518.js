@@ -30,14 +30,14 @@ let y = 1000,
     O = 5000,
     v = 10,
     I = 86400000,
-    S = 600000,
-    T = new Map();
+    T = 600000,
+    S = new Map();
 async function A(e) {
     var t;
     let n = Date.now(),
-        i = null != (t = T.get(e)) ? t : 0;
-    if (_.Z.getApplicationFetchState(e) === _.M.FETCHING || _.Z.isInvalidApplication(e) || n < i + S) return;
-    T.set(e, n),
+        i = null != (t = S.get(e)) ? t : 0;
+    if (_.Z.getApplicationFetchState(e) === _.M.FETCHING || _.Z.isInvalidApplication(e) || n < i + T) return;
+    S.set(e, n),
         c.Z.dispatch({
             type: 'APPLICATION_DIRECTORY_FETCH_APPLICATION',
             applicationId: e
@@ -78,7 +78,7 @@ async function N(e) {
         r = _.Z.getApplicationFetchState(e),
         i = _.Z.getApplicationLastFetchTime(e),
         { dontRefetchMs: a, noCache: o } = t,
-        s = null != i && i + (null != a ? a : S) > n;
+        s = null != i && i + (null != a ? a : T) > n;
     if (r !== _.M.FETCHING && !s) {
         c.Z.dispatch({
             type: 'APPLICATION_DIRECTORY_FETCH_APPLICATION',
@@ -109,7 +109,7 @@ async function N(e) {
 async function C() {
     let e = Date.now(),
         t = p.Z.getLastFetchTimeMs();
-    if (null != t && t + S > e) return;
+    if (null != t && t + T > e) return;
     let n = await l.tn.get({
         url: b.ANM.APPLICATION_DIRECTORY_CATEGORIES,
         query: { locale: u.default.locale },
@@ -137,7 +137,7 @@ async function R(e) {
             }))
                 ? t
                 : {};
-    if (s !== g.M.FETCHING && (null == d || !(d + S > o))) {
+    if (s !== g.M.FETCHING && (null == d || !(d + T > o))) {
         c.Z.dispatch({
             type: 'APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS',
             applicationId: n,
@@ -198,7 +198,7 @@ async function P(e) {
             }))
                 ? t
                 : {};
-    if (v !== m.M.FETCHING && (null == I || !(I + S > O))) {
+    if (v !== m.M.FETCHING && (null == I || !(I + T > O))) {
         c.Z.dispatch({
             type: 'APPLICATION_DIRECTORY_FETCH_SEARCH',
             query: n,
@@ -290,7 +290,7 @@ async function D() {
         });
     if (a === h.M.FETCHING) return;
     let f = !n && t === i.E.ACTIVE;
-    if (!f || null == s || !(s + S > r)) {
+    if (!f || null == s || !(s + T > r)) {
         c.Z.dispatch({
             type: 'APPLICATION_DIRECTORY_FETCH_COLLECTIONS',
             surface: e,

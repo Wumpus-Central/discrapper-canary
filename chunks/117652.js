@@ -21,8 +21,8 @@ var i = n(442837),
     O = n(937615),
     v = n(987209),
     I = n(563132),
-    S = n(409813),
-    T = n(614277),
+    T = n(409813),
+    S = n(614277),
     A = n(981631),
     N = n(474936),
     C = n(388032),
@@ -58,8 +58,8 @@ function D(e) {
     return e;
 }
 let L = {
-    key: S.h8.GIFT_CUSTOMIZATION,
-    renderStep: (e) => (0, r.jsx)(k, D({}, e)),
+    key: T.h8.GIFT_CUSTOMIZATION,
+    renderStep: (e) => (0, r.jsx)(M, D({}, e)),
     options: {
         isLargeModal: !0,
         useBreadcrumbLabel: () => C.intl.string(C.t['W685+f'])
@@ -68,7 +68,7 @@ let L = {
 function x(e) {
     let { onStepChange: t, onBackClick: n, showBackButton: i = !1, disabled: o = !1, loading: s = !1 } = e,
         { hasPaymentSources: l } = (0, I.JL)(),
-        c = l ? S.h8.REVIEW : S.h8.ADD_PAYMENT_STEPS;
+        c = l ? T.h8.REVIEW : T.h8.ADD_PAYMENT_STEPS;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(a.zxk, {
@@ -81,16 +81,16 @@ function x(e) {
         ]
     });
 }
-function k(e) {
+function M(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        { customGiftMessage: s = '', setCustomGiftMessage: l, giftRecipientError: m, setGiftRecipientError: S, validatingGiftRecipient: w, giftRecipient: D, recommendedGiftSkuIds: L, giftingOrigin: k, setValidatingGiftRecipient: j } = (0, v.wD)(),
+        { customGiftMessage: s = '', setCustomGiftMessage: l, giftRecipientError: m, setGiftRecipientError: T, validatingGiftRecipient: w, giftRecipient: D, recommendedGiftSkuIds: L, giftingOrigin: M, setValidatingGiftRecipient: j } = (0, v.wD)(),
         { selectedSkuId: U, setSelectedSkuId: G, selectedSkuPricePreview: B, paymentSourceId: F, skuPricePreviewsById: V } = (0, I.JL)(),
         Z = (0, i.e7)([E.default], () => E.default.getCurrentUser()),
         { enabled: H, giftRecommendationAlgorithm: Y } = _.G.useExperiment({ location: 'CollectiblesPaymentModalGiftCustomizationStep' }, { autoTrackExposure: !1 }),
-        W = H && k === N.Wt.DM_CHANNEL,
+        W = H && M === N.Wt.DM_CHANNEL,
         K = Y === _.u.POPULAR ? C.intl.string(C.t.Kwgrrq) : C.intl.string(C.t.r1huYW),
         z = async (e, t) => {
-            j(!0), null != m && S(), (await (0, c.B1)(e.id, t)) || S(C.intl.string(C.t['4kgVqa'])), j(!1);
+            j(!0), null != m && T(), (await (0, c.B1)(e.id, t)) || T(C.intl.string(C.t['4kgVqa'])), j(!1);
         };
     (0, o.ZP)(() => {
         null != U && null != D && (y.default.track(A.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: U }), z(D, U));
@@ -141,7 +141,7 @@ function k(e) {
                               children: K.toLocaleUpperCase()
                           }),
                           L.map((e) => X(e)),
-                          (0, r.jsx)(M, { handleClose: n })
+                          (0, r.jsx)(k, { handleClose: n })
                       ]
                   })
                 : (0, r.jsx)('div', {
@@ -185,13 +185,13 @@ function k(e) {
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(T.C3, {
+            (0, r.jsx)(S.C3, {
                 children: (0, r.jsxs)('div', {
                     className: R.stepBody,
                     children: [J(), $()]
                 })
             }),
-            (0, r.jsx)(T.O3, {
+            (0, r.jsx)(S.O3, {
                 children: (0, r.jsx)(a.mzw, {
                     justify: f.Z.Justify.BETWEEN,
                     align: f.Z.Align.CENTER,
@@ -206,7 +206,7 @@ function k(e) {
         ]
     });
 }
-function M(e) {
+function k(e) {
     let { handleClose: t } = e,
         { analyticsLocations: n } = (0, l.ZP)(s.Z.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
     function i() {

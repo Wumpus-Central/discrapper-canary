@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => T });
 var r = n(255367),
     i = n(73800),
     a = n(657707),
@@ -54,7 +54,7 @@ function v(e) {
         { descriptiveTextEnabled: y } = (0, f.f)({ location: 'PresenceActivityStatus' }),
         { enableTopNavButton: v } = (0, c.Cq)({ location: 'PresenceActivityStatus' }),
         { analyticsLocations: I } = (0, l.ZP)(),
-        S = i.useCallback(() => {
+        T = i.useCallback(() => {
             (0, p.A)({
                 analyticsLocations: I,
                 activityType: t.type,
@@ -62,7 +62,7 @@ function v(e) {
             });
         }, [I, t.application_id, t.type]);
     if (u && d) return null;
-    let { text: T, tooltip: A } = (0, _.Z)(t, y || v),
+    let { text: S, tooltip: A } = (0, _.Z)(t, y || v),
         N = O(t, b),
         C = d && !g && null != A;
     return (0, r.jsxs)(r.Fragment, {
@@ -73,7 +73,7 @@ function v(e) {
                     icon: N,
                     tooltipText: C ? A : void 0,
                     className: s,
-                    onTooltipShow: C ? S : void 0
+                    onTooltipShow: C ? T : void 0
                 }),
             !d &&
                 (0, r.jsx)(m.Z, {
@@ -81,7 +81,7 @@ function v(e) {
                     className: a,
                     canTruncate: E,
                     hideTooltip: g,
-                    children: T
+                    children: S
                 })
         ]
     });
@@ -110,6 +110,6 @@ function I(e) {
         hideText: l
     });
 }
-function S(e) {
+function T(e) {
     return (0, d.b)({ location: 'VoiceActivityStatusExperimentWrapper' }) ? (0, r.jsx)(I, y({}, e)) : (0, r.jsx)(v, y({}, e));
 }

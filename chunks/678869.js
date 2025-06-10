@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(206295),
     v = n(551228),
     I = n(591853),
-    S = n(371991),
-    T = n(410441),
+    T = n(371991),
+    S = n(410441),
     A = n(981631),
     N = n(616922),
     C = n(388032),
@@ -48,7 +48,7 @@ let D = (e, t, n) => {
 function L(e) {
     let { activity: t } = e,
         n = t.timestamps,
-        { now: a } = (0, S.tS)(),
+        { now: a } = (0, T.tS)(),
         { durationTimestamp: o, seekBarStyles: s } = i.useMemo(() => {
             var e;
             let { start: n, end: r } = null != (e = t.timestamps) ? e : {};
@@ -66,7 +66,7 @@ function L(e) {
         : (0, r.jsxs)('div', {
               className: R.listeningTimeline,
               children: [
-                  (0, r.jsx)(S.x3, { entry: n }),
+                  (0, r.jsx)(T.x3, { entry: n }),
                   (0, r.jsx)('div', {
                       className: R.seekBarContainer,
                       children: (0, r.jsx)('div', {
@@ -88,8 +88,8 @@ function x(e) {
     var t;
     let n,
         m,
-        S,
-        { channel: R, entry: x, closePopout: k, onReaction: M, onVoiceChannelPreview: j } = e,
+        T,
+        { channel: R, entry: x, closePopout: M, onReaction: k, onVoiceChannelPreview: j } = e,
         { largeImage: U } = (0, g.rv)({ entry: x }),
         { activity: G, currentEntry: B, artist: F, title: V, user: Z } = (0, v.pi)(x),
         { primaryColor: H, secondaryColor: Y } = (0, O.Z)(null == U ? void 0 : U.src),
@@ -124,7 +124,7 @@ function x(e) {
         (m = () => {
             (0, c.aG)(G);
         }),
-            (S = () => {
+            (T = () => {
                 (0, c.Z5)(G, Z.id);
             }),
             (n = () => {
@@ -144,7 +144,7 @@ function x(e) {
             (null == K ? void 0 : K.syncDisabled) === !1)
         ) {
             let e = () => {
-                (0, _.Z)(K, N.kG.USER_ACTIVITY_SYNC), k();
+                (0, _.Z)(K, N.kG.USER_ACTIVITY_SYNC), M();
             };
             X.push(
                 (0, r.jsx)(
@@ -160,12 +160,12 @@ function x(e) {
         }
     }
     let Q = (0, r.jsx)(I.wG, {
-        onClickThumbnail: S,
+        onClickThumbnail: T,
         channel: R,
         entry: x,
         headerIcons:
             B.media.provider === a.p.SPOTIFY
-                ? (0, r.jsx)(T.Z, {
+                ? (0, r.jsx)(S.Z, {
                       onClick: n,
                       'aria-label': C.intl.string(C.t.rRffNz),
                       Icon: h.Z
@@ -183,7 +183,7 @@ function x(e) {
             Q,
             (0, r.jsx)(I.St, {
                 children: (0, r.jsx)(I.WT, {
-                    onReaction: M,
+                    onReaction: k,
                     onVoiceChannelPreview: j,
                     user: Z,
                     channel: R,

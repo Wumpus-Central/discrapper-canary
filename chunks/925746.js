@@ -1,9 +1,9 @@
 a.d(e, { L: () => i });
 var r = a(617726),
-    n = a(688838),
-    _ = a(151122),
+    _ = a(688838),
+    n = a(151122),
     o = a(166394);
-let i = (0, _._I)((t) => ({
+let i = (0, n._I)((t) => ({
         name: 'ThirdPartyErrorsFilter',
         setup(t) {
             t.on('beforeEnvelope', (t) => {
@@ -22,7 +22,7 @@ let i = (0, _._I)((t) => ({
         },
         processEvent(e) {
             let a = (function (t) {
-                let e = (0, n.Fr)(t);
+                let e = (0, _.Fr)(t);
                 if (e)
                     return e
                         .filter((t) => !!t.filename)

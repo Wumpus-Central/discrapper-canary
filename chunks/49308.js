@@ -1,4 +1,4 @@
-n.d(t, { x: () => S });
+n.d(t, { x: () => T });
 var r = n(255367),
     i = n(73800),
     a = n(512722),
@@ -70,13 +70,13 @@ function I(e) {
               ]
           });
 }
-function S(e) {
+function T(e) {
     let { isGift: t, giftCode: n, selectedGiftStyle: a, hasSentMessage: o, giftRecipient: u, giftMessageError: d, isSendingMessage: p } = (0, m.wD)(),
         b = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
         y = i.useRef(null),
         { selectedSkuId: O } = (0, g.JL)(),
-        S = (0, s.e7)([c.Z], () => c.Z.getProduct(O)),
-        { confettiColors: T } = (0, f.Z)(null == S ? void 0 : S.styles);
+        T = (0, s.e7)([c.Z], () => c.Z.getProduct(O)),
+        { confettiColors: S } = (0, f.Z)(null == T ? void 0 : T.styles);
     return t
         ? (0, r.jsxs)('div', {
               ref: y,
@@ -95,8 +95,8 @@ function S(e) {
                       (0, r.jsx)(_.Z, {
                           confettiTarget: y.current,
                           confettiCanvas: e.confettiCanvas,
-                          sprites: (0, h.vK)(null == S ? void 0 : S.categorySkuId),
-                          colors: null == T ? void 0 : T.map((e) => e.toHexString())
+                          sprites: (0, h.vK)(null == T ? void 0 : T.categorySkuId),
+                          colors: null == S ? void 0 : S.map((e) => e.toHexString())
                       })
               ]
           })

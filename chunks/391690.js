@@ -80,7 +80,7 @@ function O(e) {
     null == r.installations[t] && (r.installations[t] = {}),
         (r.installations[t][n] = { installationPath: i }),
         r.installationPaths.has(i) ||
-            S({
+            T({
                 path: i,
                 metadata: {}
             });
@@ -101,13 +101,13 @@ function I(e) {
     if (null == r.installations[t]) return !1;
     delete r.installations[t][n], 0 === Object.keys(r.installations[t]).length && delete r.installations[t];
 }
-function S(e) {
+function T(e) {
     if (r.installationPaths.has(e.path)) return !1;
     g(e.path, e.metadata);
     let t = new Set(r.installationPaths);
     t.add(e.path), (r.installationPaths = t);
 }
-function T(e) {
+function S(e) {
     let { path: t } = e;
     if (!r.installationPaths.has(t) || r.defaultInstallationPath === t) return !1;
     let n = new Set(r.installationPaths);
@@ -174,8 +174,8 @@ let R = new C(o.Z, {
     DISPATCH_APPLICATION_INSTALL: O,
     DISPATCH_APPLICATION_UNINSTALL: I,
     DISPATCH_APPLICATION_CANCEL: v,
-    INSTALLATION_LOCATION_ADD: S,
-    INSTALLATION_LOCATION_REMOVE: T,
+    INSTALLATION_LOCATION_ADD: T,
+    INSTALLATION_LOCATION_REMOVE: S,
     INSTALLATION_LOCATION_UPDATE: A,
     INSTALLATION_LOCATION_FETCH_METADATA: N,
     DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS: O

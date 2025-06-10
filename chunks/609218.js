@@ -24,16 +24,16 @@ var r = n(255367),
     O = n(302945),
     v = n(474936),
     I = n(981631),
-    S = n(388032),
-    T = n(520303),
+    T = n(388032),
+    S = n(520303),
     A = n(229191),
     N = n(308362),
     C = (function (e) {
         return (e[(e.NONE = 0)] = 'NONE'), (e[(e.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (e[(e.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER'), e;
     })({});
 function R(e) {
-    let { containerContext: t, image: n, title: a, description: C, enableSocialProof: R, analyticsLocationSection: P, upsellViewedTrackingData: w, onClose: D, onDisplay: L, onLearnMore: x, isEmojiPickerOverlay: k = !1 } = e,
-        M = (0, s.e7)([g.Z], () => g.Z.affinities),
+    let { containerContext: t, image: n, title: a, description: C, enableSocialProof: R, analyticsLocationSection: P, upsellViewedTrackingData: w, onClose: D, onDisplay: L, onLearnMore: x, isEmojiPickerOverlay: M = !1 } = e,
+        k = (0, s.e7)([g.Z], () => g.Z.affinities),
         j = (0, s.e7)([g.Z], () => g.Z.hasFetched);
     i.useEffect(() => {
         !j && R && u.MH();
@@ -41,7 +41,7 @@ function R(e) {
         i.useEffect(() => {
             h.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, w), null == L || L();
         }, [L, w]);
-    let U = M.length > 1 && R,
+    let U = k.length > 1 && R,
         G = () => (2 === t ? A.hasTabParentContainer : 1 === t ? A.hasParentContainer : A.noParentContainer),
         B = () => {
             h.default.track(I.rMx.PREMIUM_PROMOTION_OPENED, {
@@ -57,10 +57,10 @@ function R(e) {
         F = (0, b.N)(),
         V = i.useCallback(() => {
             var e;
-            return null != (e = (0, m.fr)(F)) ? e : S.intl.string(S.t.pj0XBA);
+            return null != (e = (0, m.fr)(F)) ? e : T.intl.string(T.t.pj0XBA);
         }, [F]),
         Z = (0, l.ap)((0, f.ZP)()),
-        H = (0, E.Z)({ location: 'PremiumUpsellPickerOverlay' }) && k;
+        H = (0, E.Z)({ location: 'PremiumUpsellPickerOverlay' }) && M;
     return H
         ? (0, r.jsxs)(r.Fragment, {
               children: [
@@ -69,25 +69,25 @@ function R(e) {
                       isVisible: !0
                   }),
                   (0, r.jsxs)('div', {
-                      className: o()(T.container, G()),
+                      className: o()(S.container, G()),
                       children: [
                           (0, r.jsxs)('div', {
-                              className: T.content,
+                              className: S.content,
                               children: [
                                   (0, r.jsx)(c.olH, {
                                       onClick: D,
-                                      className: T.closeButton
+                                      className: S.closeButton
                                   }),
                                   (0, r.jsxs)('div', {
-                                      className: T.contentContainer,
+                                      className: S.contentContainer,
                                       children: [
                                           (0, r.jsx)('img', {
-                                              className: T.image,
+                                              className: S.image,
                                               src: N,
                                               alt: 'Nitro Perk'
                                           }),
                                           (0, r.jsx)(c.X6q, {
-                                              className: T.title,
+                                              className: S.title,
                                               variant: 'heading-xl/bold',
                                               color: 'header-primary',
                                               children: a
@@ -95,7 +95,7 @@ function R(e) {
                                           (0, r.jsx)(c.Text, {
                                               variant: 'text-md/medium',
                                               color: 'text-secondary',
-                                              className: T.body,
+                                              className: S.body,
                                               children: C
                                           })
                                       ]
@@ -103,9 +103,9 @@ function R(e) {
                               ]
                           }),
                           (0, r.jsx)('div', {
-                              className: T.footer,
+                              className: S.footer,
                               children: (0, r.jsxs)('div', {
-                                  className: T.buttonContainer,
+                                  className: S.buttonContainer,
                                   children: [
                                       (0, r.jsx)(c.zxk, {
                                           color: Z ? c.zxk.Colors.PRIMARY : c.zxk.Colors.WHITE,
@@ -114,7 +114,7 @@ function R(e) {
                                           children: (0, r.jsx)(c.Text, {
                                               variant: 'text-md/medium',
                                               color: 'text-primary',
-                                              children: S.intl.string(S.t.ZnqyZ2)
+                                              children: T.intl.string(T.t.ZnqyZ2)
                                           })
                                       }),
                                       (0, r.jsx)(y.Z, {
@@ -167,7 +167,7 @@ function R(e) {
                                       variant: 'heading-xl/bold',
                                       children: a
                                   }),
-                                  U && (0, r.jsx)(O.Z, { affinities: M }),
+                                  U && (0, r.jsx)(O.Z, { affinities: k }),
                                   (0, r.jsx)(c.Text, {
                                       variant: 'text-sm/medium',
                                       className: A.body,
@@ -184,7 +184,7 @@ function R(e) {
                                       color: c.zxk.Colors.CUSTOM,
                                       look: c.zxk.Looks.LINK,
                                       onClick: B,
-                                      children: S.intl.string(S.t.ZnqyZ2)
+                                      children: T.intl.string(T.t.ZnqyZ2)
                                   }),
                                   (0, r.jsx)(y.Z, {
                                       showGradient: !0,

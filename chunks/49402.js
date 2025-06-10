@@ -81,8 +81,8 @@ function h(e, t) {
 function m(e, t, n) {
     let a = (0, c.G6)(e);
     return i.forwardRef(function (u, f) {
-        var { children: h, className: m, dir: g = 'ltr', orientation: E = 'vertical', fade: b = !1, customTheme: y = !1, paddingFix: O = !0, style: v, gap: I, experimental_useStack: S } = u,
-            T = p(u, ['children', 'className', 'dir', 'orientation', 'fade', 'customTheme', 'paddingFix', 'style', 'gap', 'experimental_useStack']);
+        var { children: h, className: m, dir: g = 'ltr', orientation: E = 'vertical', fade: b = !1, customTheme: y = !1, paddingFix: O = !0, style: v, gap: I, experimental_useStack: T } = u,
+            S = p(u, ['children', 'className', 'dir', 'orientation', 'fade', 'customTheme', 'paddingFix', 'style', 'gap', 'experimental_useStack']);
         let { scrollerRef: A, getScrollerState: N } = (0, c.Ke)(),
             C = (0, c.t2)(A, E);
         i.useImperativeHandle(
@@ -105,7 +105,7 @@ function m(e, t, n) {
             scrollerRef: A,
             specs: a
         });
-        return S
+        return T
             ? (0, r.jsx)(
                   l.K,
                   _(
@@ -121,7 +121,7 @@ function m(e, t, n) {
                               style: (0, c.uT)(v, E),
                               dir: g
                           },
-                          T
+                          S
                       ),
                       {
                           children: (0, r.jsxs)(s.Jc, {
@@ -145,7 +145,7 @@ function m(e, t, n) {
                               style: (0, c.uT)(v, E),
                               dir: g
                           },
-                          T
+                          S
                       ),
                       {
                           children: (0, r.jsxs)(s.Jc, {

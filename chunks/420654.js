@@ -68,10 +68,10 @@ let E = 57.75,
             { context: b } = (0, c.KZ)(),
             { analyticsLocations: y } = (0, l.ZP)(),
             [O, v] = i.useState(!1),
-            [I, S] = i.useState(!1),
-            T = i.useRef(null),
+            [I, T] = i.useState(!1),
+            S = i.useRef(null),
             A = (e) => {
-                (T.current = e), null != e && (v(!I && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > E && S(!0));
+                (S.current = e), null != e && (v(!I && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > E && T(!0));
             },
             N = () => {
                 null == n || n(),
@@ -83,7 +83,7 @@ let E = 57.75,
                     );
             },
             C = (e) => {
-                null == T.current || T.current.contains(e.relatedTarget) || (T.current.scrollTop = 0);
+                null == S.current || S.current.contains(e.relatedTarget) || (S.current.scrollTop = 0);
             };
         return p || null == a || '' === a
             ? null

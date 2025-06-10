@@ -47,7 +47,7 @@ function I(e) {
     }
     return e;
 }
-let S = (e) => {
+let T = (e) => {
         let { avatarDecoration: t, fallbackLabel: n } = e,
             i = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
             { avatarDecorationSrc: a, eventHandlers: o } = (0, f.Z)({
@@ -70,7 +70,7 @@ let S = (e) => {
                   )
               );
     },
-    T = (e) => {
+    S = (e) => {
         var t;
         let { profileEffect: n, fallbackLabel: i } = e,
             a = (0, h.V)(null == n ? void 0 : n.id);
@@ -127,7 +127,7 @@ let S = (e) => {
                       l.Z.AVATAR_DECORATION,
                       () => (
                           o()(_.type === l.Z.AVATAR_DECORATION, 'ts-match checked the type'),
-                          (0, r.jsx)(S, {
+                          (0, r.jsx)(T, {
                               avatarDecoration: _,
                               fallbackLabel: a
                           })
@@ -137,7 +137,7 @@ let S = (e) => {
                       l.Z.PROFILE_EFFECT,
                       () => (
                           o()(_.type === l.Z.PROFILE_EFFECT, 'ts-match checked the type'),
-                          (0, r.jsx)(T, {
+                          (0, r.jsx)(S, {
                               profileEffect: _,
                               fallbackLabel: a
                           })

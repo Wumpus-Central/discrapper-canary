@@ -27,9 +27,9 @@ let p = {
             O = n.altBoundary,
             v = n.padding,
             I = n.tether,
-            S = void 0 === I || I,
-            T = n.tetherOffset,
-            A = void 0 === T ? 0 : T,
+            T = void 0 === I || I,
+            S = n.tetherOffset,
+            A = void 0 === S ? 0 : S,
             N = (0, u.Z)(t, {
                 boundary: b,
                 rootBoundary: y,
@@ -43,20 +43,20 @@ let p = {
             D = (0, o.Z)(w),
             L = t.modifiersData.popperOffsets,
             x = t.rects.reference,
-            k = t.rects.popper,
-            M = 'function' == typeof A ? A(Object.assign({}, t.rects, { placement: t.placement })) : A,
+            M = t.rects.popper,
+            k = 'function' == typeof A ? A(Object.assign({}, t.rects, { placement: t.placement })) : A,
             j =
-                'number' == typeof M
+                'number' == typeof k
                     ? {
-                          mainAxis: M,
-                          altAxis: M
+                          mainAxis: k,
+                          altAxis: k
                       }
                     : Object.assign(
                           {
                               mainAxis: 0,
                               altAxis: 0
                           },
-                          M
+                          k
                       ),
             U = t.modifiersData.offset ? t.modifiersData.offset[t.placement] : null,
             G = {
@@ -72,12 +72,12 @@ let p = {
                     H = L[w],
                     Y = H + N[F],
                     W = H - N[V],
-                    K = S ? -k[Z] / 2 : 0,
-                    z = R === r.BL ? x[Z] : k[Z],
-                    q = R === r.BL ? -k[Z] : -x[Z],
+                    K = T ? -M[Z] / 2 : 0,
+                    z = R === r.BL ? x[Z] : M[Z],
+                    q = R === r.BL ? -M[Z] : -x[Z],
                     X = t.elements.arrow,
                     Q =
-                        S && X
+                        T && X
                             ? (0, l.Z)(X)
                             : {
                                   width: 0,
@@ -94,7 +94,7 @@ let p = {
                     eo = null != (B = null == U ? void 0 : U[w]) ? B : 0,
                     es = H + en - eo - ea,
                     el = H + er - eo,
-                    ec = (0, s.u)(S ? (0, _.VV)(Y, es) : Y, H, S ? (0, _.Fp)(W, el) : W);
+                    ec = (0, s.u)(T ? (0, _.VV)(Y, es) : Y, H, T ? (0, _.Fp)(W, el) : W);
                 (L[w] = ec), (G[w] = ec - H);
             }
             if (E) {
@@ -107,9 +107,9 @@ let p = {
                     em = e_ - N[ef],
                     eg = -1 !== [r.we, r.t$].indexOf(C),
                     eE = null != (eu = null == U ? void 0 : U[D]) ? eu : 0,
-                    eb = eg ? eh : e_ - x[ep] - k[ep] - eE + j.altAxis,
-                    ey = eg ? e_ + x[ep] + k[ep] - eE - j.altAxis : em,
-                    eO = S && eg ? (0, s.q)(eb, e_, ey) : (0, s.u)(S ? eb : eh, e_, S ? ey : em);
+                    eb = eg ? eh : e_ - x[ep] - M[ep] - eE + j.altAxis,
+                    ey = eg ? e_ + x[ep] + M[ep] - eE - j.altAxis : em,
+                    eO = T && eg ? (0, s.q)(eb, e_, ey) : (0, s.u)(T ? eb : eh, e_, T ? ey : em);
                 (L[D] = eO), (G[D] = eO - e_);
             }
             t.modifiersData[p] = G;

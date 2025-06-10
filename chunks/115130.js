@@ -1,6 +1,6 @@
 n.d(t, {
     O: () => _,
-    Z: () => S
+    Z: () => T
 }),
     n(997841);
 var r,
@@ -112,7 +112,7 @@ class I extends (r = i.ZP.PersistedStore) {
     }
 }
 c(I, 'displayName', 'DeveloperActivityShelfStore'), c(I, 'persistKey', 'DeveloperActivityShelfStore'), c(I, 'migrations', [(e) => (delete e.isEnabled, u({}, e))]);
-let S = new I(a.Z, {
+let T = new I(a.Z, {
     LOGOUT: m,
     DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE: g,
     DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE: E,

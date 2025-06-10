@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => T });
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -68,23 +68,23 @@ function I(e, t) {
         e
     );
 }
-let S = (e) => {
+let T = (e) => {
     let t,
-        { onClose: n, channel: y, emojiDescriptor: v, pickerIntention: S, analyticsLocation: T, containerContext: A } = e,
+        { onClose: n, channel: y, emojiDescriptor: v, pickerIntention: T, analyticsLocation: S, containerContext: A } = e,
         N = (0, a.e7)([f.Z], () => f.Z.theme) === m.BRd.LIGHT ? 'light' : 'dark',
         C = 'https://cdn.discordapp.com/assets/premium/roadblocks/emoji_'.concat(N, '.png'),
         R = (0, c.Iu)((e) => e.searchQuery),
         { analyticsLocations: P } = (0, l.ZP)(s.Z.EMOJI_PICKER);
-    t = S === g.Hz.REACTION ? E.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == v ? E.cd.EMOJI_PICKER_FLOATING_UPSELL : v.subCategory === h.t0.TOP_GUILD_EMOJI ? E.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : v.subCategory === h.t0.NEWLY_ADDED_EMOJI ? E.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : E.cd.EMOJI_PICKER_EMOJI_CLICKED;
+    t = T === g.Hz.REACTION ? E.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == v ? E.cd.EMOJI_PICKER_FLOATING_UPSELL : v.subCategory === h.t0.TOP_GUILD_EMOJI ? E.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : v.subCategory === h.t0.NEWLY_ADDED_EMOJI ? E.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : E.cd.EMOJI_PICKER_EMOJI_CLICKED;
     let w = null != v ? v.emoji : void 0,
         D = null != w && w.animated,
         L = null != w && !_.ZP.isInternalEmojiForGuildId(w, null == y ? void 0 : y.getGuildId()),
         x = null != w ? m.qAy.EMOJI : m.qAy.EMOJI_PICKER_FLOATING_UPSELL,
-        k = (0, a.e7)([u.Z], () => u.Z.hasFetched);
+        M = (0, a.e7)([u.Z], () => u.Z.hasFetched);
     return (
         i.useEffect(() => {
-            k || o.MH();
-        }, [k]),
+            M || o.MH();
+        }, [M]),
         (0, r.jsx)(d.Z, {
             containerContext: A,
             image: {
@@ -100,7 +100,7 @@ let S = (e) => {
             upsellViewedTrackingData: {
                 type: t,
                 is_external: L,
-                location: I(O({}, T), { object: x }),
+                location: I(O({}, S), { object: x }),
                 location_stack: P,
                 sku_id: (0, p.Wz)(p.ZP.getSkuIdForPremiumType(E.p9.TIER_2)),
                 has_search_query: null != R && '' !== R,

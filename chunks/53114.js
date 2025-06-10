@@ -418,15 +418,15 @@ class y extends a.Z {
                 },
                 h
             ),
-            { bytes: b, framesDropped: y, framesCodecError: O, framesCodec: v, framesNetwork: I, packets: S, packetsLost: T, nackCount: A, pliCount: N, qpSum: C, pauseCount: R, freezeCount: P, totalPausesDuration: w, totalFreezesDuration: D, totalFramesDuration: L, keyframes: x, passthroughCount: k, cryptorSuccessCount: M, cryptorFailureCount: j, cryptorDuration: U, cryptorAttempts: G, cryptorMissingKeyCount: B, cryptorInvalidNonceCount: F, qualityDecodeErrors: V, qualityDecoderReboots: Z, qualityScoreErrors: H, qualityFrameDrops: Y, qualitySizeMismatches: W } = e.aggregatedProperties;
+            { bytes: b, framesDropped: y, framesCodecError: O, framesCodec: v, framesNetwork: I, packets: T, packetsLost: S, nackCount: A, pliCount: N, qpSum: C, pauseCount: R, freezeCount: P, totalPausesDuration: w, totalFreezesDuration: D, totalFramesDuration: L, keyframes: x, passthroughCount: M, cryptorSuccessCount: k, cryptorFailureCount: j, cryptorDuration: U, cryptorAttempts: G, cryptorMissingKeyCount: B, cryptorInvalidNonceCount: F, qualityDecodeErrors: V, qualityDecoderReboots: Z, qualityScoreErrors: H, qualityFrameDrops: Y, qualitySizeMismatches: W } = e.aggregatedProperties;
         return (
             e instanceof f.nt ? ((E.sender_freeze_count = P), (E.sender_total_freezes_duration = D), (E.sender_total_frames_duration = L)) : ((E.receiver_freeze_count = P), (E.receiver_total_freezes_duration = D), (E.receiver_total_frames_duration = L), (E.receiver_pause_count = R), (E.receiver_total_pauses_duration = w)),
             m(p({}, E), {
                 avg_bitrate: r > 0 ? Math.round(((null != b ? b : 0) * 8) / r) : 0,
                 avg_fps: r > 0 ? Math.round((null != v ? v : 0) / r) : 0,
                 num_bytes: b,
-                num_packets_lost: T,
-                num_packets: S,
+                num_packets_lost: S,
+                num_packets: T,
                 num_frames: I,
                 num_frames_codec_error: O,
                 time_to_first_frame_ms: e.timeToFirstFrame,
@@ -435,8 +435,8 @@ class y extends a.Z {
                 num_plis: N,
                 qp_sum: C,
                 num_keyframes: x,
-                cryptor_passthrough_count: k,
-                cryptor_success_count: M,
+                cryptor_passthrough_count: M,
+                cryptor_success_count: k,
                 cryptor_failure_count: j,
                 cryptor_duration: U,
                 cryptor_attempts: G,
@@ -468,9 +468,9 @@ class y extends a.Z {
                 let r = t;
                 if (null != r) {
                     let t = r.ssrc,
-                        S = this.outboundStats[t];
-                    null == S && (console.warn('Unknown outbound video stream with SSRC: '.concat(t)), (S = new f.nt(this.timestampProducer)), (this.outboundStats[t] = S)), null == S.timeToFirstFrame && (r.framesEncoded > 0 || (null != (i = r.frameRateInput) ? i : 0) > 0) && (S.timeToFirstFrame = Math.max(0, e - S.startTime)), null != m && m >= 0 && this.videoEntropy.addSample(m);
-                    let T = n.find((e) => e.ssrc === t);
+                        T = this.outboundStats[t];
+                    null == T && (console.warn('Unknown outbound video stream with SSRC: '.concat(t)), (T = new f.nt(this.timestampProducer)), (this.outboundStats[t] = T)), null == T.timeToFirstFrame && (r.framesEncoded > 0 || (null != (i = r.frameRateInput) ? i : 0) > 0) && (T.timeToFirstFrame = Math.max(0, e - T.startTime)), null != m && m >= 0 && this.videoEntropy.addSample(m);
+                    let S = n.find((e) => e.ssrc === t);
                     var i,
                         a,
                         l,
@@ -486,13 +486,13 @@ class y extends a.Z {
                         v = !0;
                     if (this.connection.context === o.Yn.STREAM) {
                         var I = this.connection.getRemoteVideoSinkWants(t);
-                        (null == I || 0 === I) && (null == T ? void 0 : T.quality) === p && (I = this.connection.getRemoteVideoSinkWants('any')), (v = (null != I ? I : 0) > 0);
+                        (null == I || 0 === I) && (null == S ? void 0 : S.quality) === p && (I = this.connection.getRemoteVideoSinkWants('any')), (v = (null != I ? I : 0) > 0);
                     }
                     let A = this.videoStopped.value || !v;
-                    if ((A !== S.isVideoStopped && S.setVideoStopped(A, f.Mq.SenderStopped), !A)) {
-                        S.appendAndIncrementStats(f.z4.parseOutboundStats(r, e)), S.encoderCodec !== f.u7.UNKNOWN && u.add(S.encoderCodec);
-                        let t = null == T ? void 0 : T.maxBitrate;
-                        S.appendTargetRates(null == T ? void 0 : T.maxFrameRate, null != (l = r.bitrateTarget) ? l : Math.min(null != (a = s.availableOutgoingBitrate) ? a : 0, null != t ? t : 0), t, s.availableOutgoingBitrate), (S.averageEncodeTime = null != (c = r.averageEncodeTime) ? c : 0), (S.framesDroppedRateLimiter = null != (d = r.framesDroppedRateLimiter) ? d : null), (S.framesDroppedEncoderQueue = null != (_ = r.framesDroppedEncoderQueue) ? _ : null), (S.framesDroppedCongestionWindow = null != (h = r.framesDroppedCongestionWindow) ? h : null), (S.framesDroppedEncoder = null != (g = r.framesDroppedEncoder) ? g : null), (this.hqSimulcastStreamEncoded.value = null != (E = r.hqSimulcastStreamEncoded) && E), (this.lqSimulcastStreamEncoded.value = null != (b = r.lqSimulcastStreamEncoded) && b), (this.bothSimulcastStreamsEncoded.value = this.hqSimulcastStreamEncoded.value && this.lqSimulcastStreamEncoded.value), (this.bandwidthLimitedResolution.value = null != (y = r.bandwidthLimitedResolution) && y), (this.bandwidthLimitedFramerate.value = null != (O = r.bandwidthLimitedFrameRate) && O);
+                    if ((A !== T.isVideoStopped && T.setVideoStopped(A, f.Mq.SenderStopped), !A)) {
+                        T.appendAndIncrementStats(f.z4.parseOutboundStats(r, e)), T.encoderCodec !== f.u7.UNKNOWN && u.add(T.encoderCodec);
+                        let t = null == S ? void 0 : S.maxBitrate;
+                        T.appendTargetRates(null == S ? void 0 : S.maxFrameRate, null != (l = r.bitrateTarget) ? l : Math.min(null != (a = s.availableOutgoingBitrate) ? a : 0, null != t ? t : 0), t, s.availableOutgoingBitrate), (T.averageEncodeTime = null != (c = r.averageEncodeTime) ? c : 0), (T.framesDroppedRateLimiter = null != (d = r.framesDroppedRateLimiter) ? d : null), (T.framesDroppedEncoderQueue = null != (_ = r.framesDroppedEncoderQueue) ? _ : null), (T.framesDroppedCongestionWindow = null != (h = r.framesDroppedCongestionWindow) ? h : null), (T.framesDroppedEncoder = null != (g = r.framesDroppedEncoder) ? g : null), (this.hqSimulcastStreamEncoded.value = null != (E = r.hqSimulcastStreamEncoded) && E), (this.lqSimulcastStreamEncoded.value = null != (b = r.lqSimulcastStreamEncoded) && b), (this.bothSimulcastStreamsEncoded.value = this.hqSimulcastStreamEncoded.value && this.lqSimulcastStreamEncoded.value), (this.bandwidthLimitedResolution.value = null != (y = r.bandwidthLimitedResolution) && y), (this.bandwidthLimitedFramerate.value = null != (O = r.bandwidthLimitedFrameRate) && O);
                     }
                 }
             }),

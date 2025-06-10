@@ -19,8 +19,8 @@ var r = n(46015),
     O = r(''.charCodeAt),
     v = r([].join),
     I = r([].push),
-    S = r(''.replace),
-    T = r(''.split),
+    T = r(''.replace),
+    S = r(''.split),
     A = r(''.toLowerCase),
     N = function (e) {
         for (var t = [], n = 0, r = e.length; n < r; ) {
@@ -54,19 +54,19 @@ var r = n(46015),
         for (m && I(r, f); E < l; ) {
             var O = i;
             for (t = 0; t < e.length; t++) (n = e[t]) >= c && n < O && (O = n);
-            var S = E + 1;
-            if (O - c > b((i - _) / S)) throw new g(h);
-            for (_ += (O - c) * S, c = O, t = 0; t < e.length; t++) {
+            var T = E + 1;
+            if (O - c > b((i - _) / T)) throw new g(h);
+            for (_ += (O - c) * T, c = O, t = 0; t < e.length; t++) {
                 if ((n = e[t]) < c && ++_ > i) throw new g(h);
                 if (n === c) {
-                    for (var T = _, A = a; ; ) {
+                    for (var S = _, A = a; ; ) {
                         var P = A <= p ? o : A >= p + s ? s : A - p;
-                        if (T < P) break;
-                        var w = T - P,
+                        if (S < P) break;
+                        var w = S - P,
                             D = a - P;
-                        I(r, y(C(P + (w % D)))), (T = b(w / D)), (A += a);
+                        I(r, y(C(P + (w % D)))), (S = b(w / D)), (A += a);
                     }
-                    I(r, y(C(T))), (p = R(_, S, E === m)), (_ = 0), E++;
+                    I(r, y(C(S))), (p = R(_, T, E === m)), (_ = 0), E++;
                 }
             }
             _++, c++;
@@ -77,7 +77,7 @@ e.exports = function (e) {
     var t,
         n,
         r = [],
-        i = T(S(A(e), p, '.'), '.');
+        i = S(T(A(e), p, '.'), '.');
     for (t = 0; t < i.length; t++) I(r, E(_, (n = i[t])) ? 'xn--' + P(n) : n);
     return v(r, '.');
 };

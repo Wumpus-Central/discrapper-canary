@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => N,
     _1: () => I,
-    jd: () => S
+    jd: () => T
 });
 var r = n(255367),
     i = n(73800),
@@ -72,8 +72,8 @@ function v(e, t) {
     );
 }
 let I = 2700,
-    S = '> -# *',
-    T = {
+    T = '> -# *',
+    S = {
         [m.n_.AVATAR]: () => g.intl.string(g.t['fEUP/v']),
         [m.n_.STATUS]: () => g.intl.string(g.t.TKdBCw),
         [m.n_.ACTIVITY]: () => g.intl.string(g.t.bSe71N)
@@ -84,7 +84,7 @@ let I = 2700,
         [m.n_.ACTIVITY]: () => g.intl.string(g.t.ObfsSk)
     };
 function N(e) {
-    let { user: t, sourceType: n, isVisible: a, isExpandable: b, interactionSourceId: O, targetRef: I, onAction: S, renderMoreButtonPopout: N } = e,
+    let { user: t, sourceType: n, isVisible: a, isExpandable: b, interactionSourceId: O, targetRef: I, onAction: T, renderMoreButtonPopout: N } = e,
         C = i.useRef(null),
         R = (0, s.e7)([f.default], () => f.default.getId() === t.id),
         P = (0, _.Z)(t.id),
@@ -93,7 +93,7 @@ function N(e) {
     if (t.bot || R || !P) return null;
     let x = () => {
             L(I),
-                n === m.n_.AVATAR ? S({ action: 'PRESS_REACT_AVATAR' }) : n === m.n_.STATUS ? S({ action: 'PRESS_REACT_CUSTOM_STATUS' }) : S({ action: 'PRESS_REACT_ACTIVITY' }),
+                n === m.n_.AVATAR ? T({ action: 'PRESS_REACT_AVATAR' }) : n === m.n_.STATUS ? T({ action: 'PRESS_REACT_CUSTOM_STATUS' }) : T({ action: 'PRESS_REACT_ACTIVITY' }),
                 null == D ||
                     D({
                         interactionType: m.P.REACT,
@@ -102,9 +102,9 @@ function N(e) {
                     }),
                 w === m.lY.POPOUT && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
         },
-        k = () => {
+        M = () => {
             L(I),
-                n === m.n_.AVATAR ? S({ action: 'PRESS_REPLY_AVATAR' }) : n === m.n_.STATUS ? S({ action: 'PRESS_REPLY_CUSTOM_STATUS' }) : S({ action: 'PRESS_REPLY_ACTIVITY' }),
+                n === m.n_.AVATAR ? T({ action: 'PRESS_REPLY_AVATAR' }) : n === m.n_.STATUS ? T({ action: 'PRESS_REPLY_CUSTOM_STATUS' }) : T({ action: 'PRESS_REPLY_ACTIVITY' }),
                 null == D ||
                     D({
                         interactionType: m.P.REPLY,
@@ -131,7 +131,7 @@ function N(e) {
                 children: (0, r.jsx)(u.zx, {
                     onClick: x,
                     className: E.button,
-                    'aria-label': T[n](),
+                    'aria-label': S[n](),
                     'aria-haspopup': 'dialog',
                     children: (0, r.jsx)(c.EO4, {
                         size: 'xs',
@@ -146,7 +146,7 @@ function N(e) {
                 delay: 0,
                 'aria-label': !1,
                 children: (0, r.jsx)(u.zx, {
-                    onClick: k,
+                    onClick: M,
                     className: E.button,
                     'aria-label': A[n](),
                     'aria-haspopup': 'dialog',

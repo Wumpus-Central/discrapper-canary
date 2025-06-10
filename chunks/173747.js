@@ -32,8 +32,8 @@ let y = new Set(),
     O = {},
     v = new Set(),
     I = {},
-    S = new Set(),
-    T = {},
+    T = new Set(),
+    S = {},
     A = 10 * m.Z.Millis.MINUTE,
     N = 6 * m.Z.Millis.HOUR,
     C = 10 * m.Z.Millis.MINUTE,
@@ -48,15 +48,15 @@ function D() {
     if (!(0, E.Q)()) return !1;
     let e = _.Z.entitledBranchIds,
         t = [];
-    for (let n of e) T.hasOwnProperty(n) || ((T[n] = null), t.push(n));
+    for (let n of e) S.hasOwnProperty(n) || ((S[n] = null), t.push(n));
     if (0 === t.length) return !1;
     l.Z.wait(() => c.o(t));
 }
 function L() {
     if (!(0, E.Q)()) return !1;
-    for (let e of S) {
+    for (let e of T) {
         let { applicationId: t, branchId: n } = (0, g.CP)(e);
-        null != f.Z.getApplication(t) && (S.delete(e), x(t, n));
+        null != f.Z.getApplication(t) && (T.delete(e), x(t, n));
     }
 }
 function x(e, t) {
@@ -69,15 +69,15 @@ function x(e, t) {
             (i.buildId !== n.id || !a().isEqual(i.manifestIds, r)) &&
             l.Z.wait(() => {
                 let i = f.Z.getApplication(e);
-                null != i ? (S.delete((0, g.Tu)(e, t)), (0, d.li)(i, t, n.id, r, !0)) : S.add((0, g.Tu)(e, t));
+                null != i ? (T.delete((0, g.Tu)(e, t)), (0, d.li)(i, t, n.id, r, !0)) : T.add((0, g.Tu)(e, t));
             });
     }
 }
-function k(e) {
+function M(e) {
     let { branchId: t } = e;
     y.add(t);
 }
-function M(e) {
+function k(e) {
     let { applicationId: t, branchId: n, locale: r, build: i } = e;
     y.delete(n);
     let a = i.manifests.map((e) => {
@@ -120,11 +120,11 @@ function F(e) {
     }
     for (let e of t) {
         let { id: t, liveBuildId: r } = e;
-        if (r !== T[t]) {
+        if (r !== S[t]) {
             let e = n[t];
             null != e && l.Z.wait(() => u.l(e.id, e.branchId, !0));
         }
-        T[t] = r;
+        S[t] = r;
     }
     P(N);
 }
@@ -171,8 +171,8 @@ b(Y, 'displayName', 'ApplicationBuildStore');
 let W = new Y(l.Z, {
     CONNECTION_OPEN: w,
     GAMES_DATABASE_UPDATE: L,
-    APPLICATION_BUILD_FETCH_START: k,
-    APPLICATION_BUILD_FETCH_SUCCESS: M,
+    APPLICATION_BUILD_FETCH_START: M,
+    APPLICATION_BUILD_FETCH_SUCCESS: k,
     APPLICATION_BUILD_NOT_FOUND: j,
     APPLICATION_BUILD_SIZE_FETCH_START: U,
     APPLICATION_BUILD_SIZE_FETCH_SUCCESS: G,

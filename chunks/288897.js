@@ -20,7 +20,7 @@ var r = n(255367),
     O = n(981631),
     v = n(508928),
     I = n(73433);
-function S(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function S(e, t, n) {
         e
     );
 }
-function T(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function T(e) {
                 })
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
@@ -114,16 +114,16 @@ class P extends i.PureComponent {
         var t;
         let { guildId: n, channelId: i, renderExtraElement: a } = this.props,
             { attributes: o, children: s } = e;
-        'rtl' === o.dir && (o.style = N(T({}, o.style), { textAlign: 'right' }));
+        'rtl' === o.dir && (o.style = N(S({}, o.style), { textAlign: 'right' }));
         let l = null != (t = null == a ? void 0 : a(e)) ? t : (0, b.Z)(e, n, i);
-        return null != l ? l : (0, r.jsx)('div', N(T({}, o), { children: s }));
+        return null != l ? l : (0, r.jsx)('div', N(S({}, o), { children: s }));
     }
     renderLeaf(e) {
         var t;
         let { editor: n, renderExtraLeaf: i } = this.props,
             { attributes: a, children: o } = e,
             s = null != (t = null == i ? void 0 : i(e)) ? t : (0, y.Z)(n, e);
-        return null != s ? s : (0, r.jsx)('span', N(T({}, a), { children: o }));
+        return null != s ? s : (0, r.jsx)('span', N(S({}, a), { children: o }));
     }
     handleOnChange() {
         var e, t;
@@ -317,7 +317,7 @@ class P extends i.PureComponent {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            N(T({}, n), {
+                            N(S({}, n), {
                                 editor: t,
                                 text: m.bN.getSelectedText(t, !0)
                             })
@@ -354,7 +354,7 @@ class P extends i.PureComponent {
                     value: [...this.state.initialValue],
                     children: (0, r.jsx)(
                         s.CX,
-                        N(T({}, y), {
+                        N(S({}, y), {
                             className: o()(I.markup, v.editor, n),
                             decorate: this.decorate,
                             renderElement: this.renderElement,
@@ -381,8 +381,8 @@ class P extends i.PureComponent {
     }
     constructor(e) {
         super(e),
-            S(this, 'containerRef', i.createRef()),
-            S(this, 'state', void 0),
+            T(this, 'containerRef', i.createRef()),
+            T(this, 'state', void 0),
             (this.decorate = this.decorate.bind(this)),
             (this.renderElement = this.renderElement.bind(this)),
             (this.renderLeaf = this.renderLeaf.bind(this)),

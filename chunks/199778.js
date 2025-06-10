@@ -73,10 +73,10 @@ function v(e) {
         v = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
         I = (0, l.ZP)(y, l.aj.LONG_TIME_LEFT);
     if (!0 === t || !(0, d.y)('guild_boosting_fractional_premium_pill', v, E)) return null;
-    let S = m.intl.format(m.t['4RgA6O'], { helpCenterLink: p.Z.getArticleURL(h.BhN.FRACTIONAL_PREMIUM_ABOUT) });
+    let T = m.intl.format(m.t['4RgA6O'], { helpCenterLink: p.Z.getArticleURL(h.BhN.FRACTIONAL_PREMIUM_ABOUT) });
     return (0, r.jsx)(u.Z, {
-        text: S,
-        'aria-label': null == S ? void 0 : S.toString(),
+        text: T,
+        'aria-label': null == T ? void 0 : T.toString(),
         tooltipClassName: g.tooltip,
         className: a()(g.unavailableCounterContainer, i),
         children: (e) =>

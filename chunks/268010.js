@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(804061), n(704826), n(35282);
+n.d(t, { Z: () => S }), n(804061), n(704826), n(35282);
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -31,13 +31,13 @@ let I = (e, t, n) => {
             })
             .replaceAll('*', '');
     },
-    S = (e, t) =>
+    T = (e, t) =>
         v.intl.formatToPlainString(v.t.kCbfbG, {
             username: t.username,
             activity: e.extra.media_title
         }),
-    T = (e) => {
-        let { channel: t, entry: n, onReaction: u, onVoiceChannelPreview: T } = e,
+    S = (e) => {
+        let { channel: t, entry: n, onReaction: u, onVoiceChannelPreview: S } = e,
             A = (0, a.e7)([l.default], () => l.default.getUser(n.author_id)),
             { largeImage: N } = (0, f.rv)({ entry: n }),
             { primaryColor: C, secondaryColor: R } = (0, m.Z)(null == N ? void 0 : N.src),
@@ -96,11 +96,11 @@ let I = (e, t, n) => {
                       (0, r.jsx)(b.St, {
                           children: (0, r.jsx)(b.WT, {
                               onReaction: u,
-                              onVoiceChannelPreview: T,
+                              onVoiceChannelPreview: S,
                               user: A,
                               channel: t,
                               generateReactionImage: L,
-                              reactionImageAltText: S(n, A),
+                              reactionImageAltText: T(n, A),
                               entry: n
                           })
                       })

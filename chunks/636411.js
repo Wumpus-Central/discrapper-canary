@@ -24,8 +24,8 @@ function y(e) {
         O = m.intl.string(m.t['eikz4+']),
         v = (0, d.N)(),
         I = (0, u.Ng)(),
-        S = (null == v ? void 0 : v.subscription_trial) != null || null != I,
-        T = {
+        T = (null == v ? void 0 : v.subscription_trial) != null || null != I,
+        S = {
             object: p.qAy.BUTTON_CTA,
             section: p.jXE.SUPER_REACTION_PICKER
         };
@@ -47,7 +47,7 @@ function y(e) {
                     (0, r.jsx)('div', {
                         className: g.contentFill,
                         children: (0, r.jsx)(c.Z, {
-                            className: a()(g.banner, { [g.hasTrialOffer]: S }),
+                            className: a()(g.banner, { [g.hasTrialOffer]: T }),
                             src: E,
                             loop: !0,
                             autoPlay: !y,
@@ -55,12 +55,12 @@ function y(e) {
                             controls: !0
                         })
                     }),
-                    S
+                    T
                         ? (0, r.jsx)(_.ZP, {
                               type: h.cd.BURST_REACTION_QUICK_ACTION_UPSELL,
                               subscriptionTier: null != (n = null == v || null == (t = v.subscription_trial) ? void 0 : t.sku_id) ? n : h.Si.TIER_2,
                               headingText: m.intl.string(m.t.Wfl5zs),
-                              analyticsLocationObject: T,
+                              analyticsLocationObject: S,
                               discountOffer: I,
                               trialOffer: v,
                               children: O

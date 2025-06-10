@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -94,7 +94,7 @@ class I extends (r = i.ZP.DeviceSettingsStore) {
     }
 }
 l(I, 'displayName', 'GameConsoleStore'), l(I, 'persistKey', 'GameConsoleStore');
-let S = new I(a.Z, {
+let T = new I(a.Z, {
     REMOTE_SESSION_CONNECT: h,
     REMOTE_SESSION_DISCONNECT: m,
     WAIT_FOR_REMOTE_SESSION: g,

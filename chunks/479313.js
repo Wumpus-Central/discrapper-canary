@@ -5,7 +5,7 @@ n.d(t, {
     U$: () => N,
     ZP: () => D,
     e7: () => I,
-    wv: () => S,
+    wv: () => T,
     yK: () => v
 }),
     n(35282);
@@ -93,7 +93,7 @@ function v(e, t) {
 function I() {
     l.Z.dispatch({ type: 'TOGGLE_TOPICS_BAR' });
 }
-function S(e, t) {
+function T(e, t) {
     null != e && null != t && y(e, t),
         l.Z.dispatch({
             type: 'SET_SELECTED_SUMMARY',
@@ -101,7 +101,7 @@ function S(e, t) {
             summaryId: null != t ? t : null
         });
 }
-function T(e, t) {
+function S(e, t) {
     l.Z.dispatch({
         type: 'SET_GRAVITY_SELECTED_SUMMARY',
         channelId: e,
@@ -232,8 +232,8 @@ async function w(e) {
 let D = {
     setSummaryFeedback: N,
     updateVisibleMessages: A,
-    setSelectedSummary: S,
-    setGravitySelectedSummary: T,
+    setSelectedSummary: T,
+    setGravitySelectedSummary: S,
     setHighlightedSummary: v,
     fetchSummaries: O,
     fetchSummariesBulk: R,

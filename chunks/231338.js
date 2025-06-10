@@ -12,11 +12,11 @@ n.d(t, {
     EK: () => em,
     ET: () => eE,
     Et: () => q,
-    GZ: () => M,
+    GZ: () => k,
     H0: () => A,
     He: () => I,
     Il: () => o.I,
-    Jj: () => k,
+    Jj: () => M,
     MA: () => eb,
     NY: () => L,
     OL: () => g,
@@ -24,7 +24,7 @@ n.d(t, {
     Pl: () => G,
     Py: () => D,
     Q: () => eh,
-    QL: () => S,
+    QL: () => T,
     RG: () => eg,
     RK: () => ea,
     S7: () => U,
@@ -42,7 +42,7 @@ n.d(t, {
     XM: () => et,
     Zu: () => j,
     aO: () => ey,
-    aV: () => T,
+    aV: () => S,
     am: () => ec,
     cN: () => ef,
     dG: () => B,
@@ -145,7 +145,7 @@ var v = (function (e) {
     I = (function (e) {
         return (e[(e.UNKNOWN = 0)] = 'UNKNOWN'), (e[(e.CARD = 1)] = 'CARD'), (e[(e.PAYPAL = 2)] = 'PAYPAL'), (e[(e.GIROPAY = 3)] = 'GIROPAY'), (e[(e.SOFORT = 4)] = 'SOFORT'), (e[(e.PRZELEWY24 = 5)] = 'PRZELEWY24'), (e[(e.SEPA_DEBIT = 6)] = 'SEPA_DEBIT'), (e[(e.PAYSAFE_CARD = 7)] = 'PAYSAFE_CARD'), (e[(e.GCASH = 8)] = 'GCASH'), (e[(e.GRABPAY_MY = 9)] = 'GRABPAY_MY'), (e[(e.MOMO_WALLET = 10)] = 'MOMO_WALLET'), (e[(e.VENMO = 11)] = 'VENMO'), (e[(e.GOPAY_WALLET = 12)] = 'GOPAY_WALLET'), (e[(e.KAKAOPAY = 13)] = 'KAKAOPAY'), (e[(e.BANCONTACT = 14)] = 'BANCONTACT'), (e[(e.EPS = 15)] = 'EPS'), (e[(e.IDEAL = 16)] = 'IDEAL'), (e[(e.CASH_APP = 17)] = 'CASH_APP'), (e[(e.APPLE = 18)] = 'APPLE'), (e[(e.PAYMENT_REQUEST = 99)] = 'PAYMENT_REQUEST'), e;
     })({});
-let S = new Map([
+let T = new Map([
         [7, 'paysafecard'],
         [8, 'gcash'],
         [9, 'grabpay_MY'],
@@ -154,7 +154,7 @@ let S = new Map([
         [12, 'gopay_wallet'],
         [17, 'cashapp']
     ]),
-    T = new Map([
+    S = new Map([
         [14, 'bancontact'],
         [3, 'giropay'],
         [16, 'ideal']
@@ -180,10 +180,10 @@ Object.freeze({
     CONSTANT: 1,
     APPLE_STICKER: 2
 });
-var k = (function (e) {
+var M = (function (e) {
         return (e[(e.DISCOVERY = 0)] = 'DISCOVERY'), (e[(e.CHECKOUT = 1)] = 'CHECKOUT'), e;
     })({}),
-    M = (function (e) {
+    k = (function (e) {
         return (e[(e.SUBSCRIPTION = 0)] = 'SUBSCRIPTION'), (e[(e.ONE_TIME = 1)] = 'ONE_TIME'), e;
     })({});
 let j = Object.freeze({

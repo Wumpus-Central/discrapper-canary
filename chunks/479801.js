@@ -73,7 +73,7 @@ function m(e, t, n) {
     let f = (0, i.e7)([o.Z], () => o.Z.hasLoadedExperiments),
         m = null == e ? void 0 : e.includeBundles,
         g = (0, c.hv)('useMaybeFetchCollectiblesCategoriesShared'),
-        [E, b, y, O, v, I, S] = (0, i.Wu)([l.Z], () => {
+        [E, b, y, O, v, I, T] = (0, i.Wu)([l.Z], () => {
             var e, t;
             return [l.Z.isFetchingCategories, l.Z.lastFetchOptions, l.Z.error, null != (e = l.Z.lastErrorTimestamp) ? e : 0, null != (t = l.Z.lastSuccessfulFetch) ? t : 0, l.Z.categories, l.Z.skipNumCategories];
         });
@@ -85,12 +85,12 @@ function m(e, t, n) {
             let i = _(d({}, e), {
                     includeBundles: m,
                     variantsReturnStyle: g,
-                    skipNumCategories: S
+                    skipNumCategories: T
                 }),
                 a = !(0, s.oc)(b, i),
                 o = Date.now() - v < p;
             (a || !o) && (0, s.F$)(i, t, n);
-        }, [f, E, b, v, e, y, m, O, g, t, n, S]),
+        }, [f, E, b, v, e, y, m, O, g, t, n, T]),
         {
             isFetching: E,
             categories: I,
@@ -98,10 +98,10 @@ function m(e, t, n) {
             refreshCategories: (0, r.useCallback)(() => {
                 let t = _(d({}, e), {
                     includeBundles: m,
-                    skipNumCategories: S
+                    skipNumCategories: T
                 });
                 (0, s.F$)(t, void 0, n);
-            }, [e, m, n, S])
+            }, [e, m, n, T])
         }
     );
 }

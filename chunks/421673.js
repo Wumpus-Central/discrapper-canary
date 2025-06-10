@@ -18,16 +18,16 @@ let f = 100,
     b = 2,
     y = 1,
     O = 350,
-    v = o()(S, O),
-    I = o()(T, O);
-function S(e, t) {
+    v = o()(T, O),
+    I = o()(S, O);
+function T(e, t) {
     c.default.track(d.rMx.SEARCH_STARTED, {
         channel_id: t,
         search_type: d.aib.SOUNDBOARD,
         location_stack: e
     });
 }
-function T(e, t, n, r) {
+function S(e, t, n, r) {
     c.default.track(d.rMx.SEARCH_RESULT_VIEWED, {
         search_type: d.aib.SOUNDBOARD,
         channel_id: n,

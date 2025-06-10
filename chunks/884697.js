@@ -11,14 +11,14 @@ n.d(t, {
     Yq: () => Y,
     bl: () => G,
     eu: () => z,
-    f_: () => T,
+    f_: () => S,
     gc: () => v,
-    iC: () => k,
+    iC: () => M,
     jm: () => $,
     mO: () => B,
     ne: () => J,
     qS: () => b,
-    ql: () => S,
+    ql: () => T,
     rN: () => N,
     uV: () => D,
     x0: () => q,
@@ -95,7 +95,7 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
     b = (e) => (null == e ? void 0 : e.purchaseType) === _.qc2.PREMIUM_PURCHASE,
     y = (e, t, n) => {
         let r;
-        return S(e, (r = n ? (t ? _.tuJ.MOBILE_PREMIUM_TIER_2 : _.tuJ.MOBILE) : t ? _.tuJ.PREMIUM_TIER_2 : _.tuJ.DEFAULT));
+        return T(e, (r = n ? (t ? _.tuJ.MOBILE_PREMIUM_TIER_2 : _.tuJ.MOBILE) : t ? _.tuJ.PREMIUM_TIER_2 : _.tuJ.DEFAULT));
     },
     O = (e, t, n) => {
         let r = y(e, t, n);
@@ -108,25 +108,25 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
         let n = v(!1);
         return t.reduce((e, t) => {
             var r;
-            let i = S(t, n);
+            let i = T(t, n);
             return e + (null != (r = null == i ? void 0 : i.amount) ? r : 0);
         }, 0);
     },
-    S = (e, t) => {
+    T = (e, t) => {
         var n, r, i;
         let a = null != (i = e.prices[t]) ? i : null;
         return null != a ? (null == (r = a.countryPrices) || null == (n = r.prices) ? void 0 : n[0]) : null;
     },
-    T = {
+    S = {
         original: -1,
         discountPercentage: -1
     },
     A = (e, t) => {
         let n = I(e);
-        if (n <= 0) return T;
-        let r = S(e, v(t));
+        if (n <= 0) return S;
+        let r = T(e, v(t));
         return null == r
-            ? T
+            ? S
             : {
                   original: n,
                   discountPercentage: Math.round(((n - r.amount) / n) * 100)
@@ -134,7 +134,7 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
     },
     N = (e) => {
         var t;
-        return (null == (t = S(e, _.tuJ.DEFAULT)) ? void 0 : t.amount) === 0;
+        return (null == (t = T(e, _.tuJ.DEFAULT)) ? void 0 : t.amount) === 0;
     },
     C = (e) =>
         e.reduce(
@@ -193,12 +193,12 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
     },
     L = (e) => P(e, i.Z.AVATAR_DECORATION),
     x = (e) => w(e, i.Z.AVATAR_DECORATION),
-    k = (e, t) => (0, r.uniqBy)([...L(e), ...x(t)], 'id'),
-    M = (e) => P(e, i.Z.PROFILE_EFFECT),
+    M = (e, t) => (0, r.uniqBy)([...L(e), ...x(t)], 'id'),
+    k = (e) => P(e, i.Z.PROFILE_EFFECT),
     j = (e) => w(e, i.Z.PROFILE_EFFECT),
-    U = (e, t) => (0, r.uniqBy)([...M(e), ...j(t)], 'id'),
+    U = (e, t) => (0, r.uniqBy)([...k(e), ...j(t)], 'id'),
     G = (e, t) => {
-        let n = M(t),
+        let n = k(t),
             r = j(e).filter((e) => {
                 let { id: t } = e;
                 return !n.some((e) => e.id === t);
@@ -228,7 +228,7 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
     K = (e) => (null == e ? void 0 : e.type) === i.Z.BUNDLE,
     z = (e, t, n) => {
         if (K(e)) return I(e);
-        let r = S(e, t ? (n ? _.tuJ.MOBILE : _.tuJ.DEFAULT) : n ? _.tuJ.MOBILE_PREMIUM_TIER_2 : _.tuJ.PREMIUM_TIER_2);
+        let r = T(e, t ? (n ? _.tuJ.MOBILE : _.tuJ.DEFAULT) : n ? _.tuJ.MOBILE_PREMIUM_TIER_2 : _.tuJ.PREMIUM_TIER_2);
         return null == r ? void 0 : r.amount;
     },
     q = (e, t) => {

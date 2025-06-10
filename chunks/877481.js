@@ -68,8 +68,8 @@ let y = new i.Z('Games'),
     O = {},
     v = 0,
     I = null,
-    S = 250,
-    T = 120000,
+    T = 250,
+    S = 120000,
     A = 3600000;
 function N() {
     return null != I
@@ -125,8 +125,8 @@ function w(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
     if (e()) return void t();
     setTimeout(() => {
-        r * S <= T ? w(e, t, n, r + 1) : n();
-    }, S);
+        r * T <= S ? w(e, t, n, r + 1) : n();
+    }, T);
 }
 function D(e) {
     return (

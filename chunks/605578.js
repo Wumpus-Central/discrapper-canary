@@ -57,11 +57,11 @@ function u(e, t) {
 }
 let d = i.forwardRef(function (e, t) {
     let { tag: n = 'div', children: s, className: c, style: d, focusProps: f, onClick: _, onDoubleClick: p, onContextMenu: h, onKeyDown: m, onFocus: g, onBlur: E, onMouseOver: b, onMouseDown: y, onMouseLeave: O, buttonProps: v, 'aria-label': I } = e,
-        S = i.useRef(null);
+        T = i.useRef(null);
     return (
-        i.useImperativeHandle(t, () => S.current),
+        i.useImperativeHandle(t, () => T.current),
         (0, r.jsxs)(n, {
-            ref: S,
+            ref: T,
             className: c,
             style: d,
             onClick: _,
@@ -74,7 +74,7 @@ let d = i.forwardRef(function (e, t) {
                 (0, r.jsx)(
                     a.P,
                     u(l({}, v), {
-                        focusProps: l({ ringTarget: S }, f),
+                        focusProps: l({ ringTarget: T }, f),
                         className: o.focusTarget,
                         'aria-label': I,
                         onClick: (e) => {

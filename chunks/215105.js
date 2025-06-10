@@ -20,11 +20,11 @@ var r = n(255367),
     O = n(420212),
     v = n(388032),
     I = n(42328);
-let S = (0, f.kt)({
+let T = (0, f.kt)({
         id: '1',
         type: s.d.DM
     }),
-    T = (e) => {
+    S = (e) => {
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
             case y.n_.ACTIVITY:
@@ -59,7 +59,7 @@ function N(e) {
         { resetInteraction: P, setInteractionToast: w } = (0, g.Xo)(),
         { primaryColor: D } = (0, b.z)(),
         [L, x] = i.useState(''),
-        [k, M] = i.useState((0, u.JM)(L)),
+        [M, k] = i.useState((0, u.JM)(L)),
         j = i.useRef(!1),
         U = i.useRef(null),
         G = i.useCallback(
@@ -74,7 +74,7 @@ function N(e) {
     let B = async (e) => {
             if (null == e) return;
             s === y.n_.AVATAR ? N({ action: 'SEND_REPLY_AVATAR' }) : s === y.n_.STATUS ? N({ action: 'SEND_REPLY_CUSTOM_STATUS' }) : N({ action: 'SEND_REPLY_ACTIVITY' });
-            let n = T({
+            let n = S({
                 input: e,
                 username: h.ZP.getName(t),
                 sourceType: s,
@@ -111,11 +111,11 @@ function N(e) {
                 editorClassName: I.editor,
                 type: c.Ie.USER_PROFILE_REPLY,
                 placeholder: v.intl.formatToPlainString(A(s), { username: p.ZP.getName(n, a, t) }),
-                channel: S,
+                channel: T,
                 textValue: L,
-                richValue: k,
+                richValue: M,
                 onChange: (e, t, n) => {
-                    t !== L && (x(t), M(n));
+                    t !== L && (x(t), k(n));
                 },
                 focused: j.current,
                 onFocus: () => {

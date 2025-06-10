@@ -59,13 +59,13 @@ function I() {
               idle: !1
           });
 }
-function S() {
+function T() {
     I(), v();
 }
-function T() {
+function S() {
     var e;
     let t = (e) => {
-        (h = Math.max(Date.now() - e, h)), S(), setTimeout(T, 10 * c.Z.Millis.SECOND);
+        (h = Math.max(Date.now() - e, h)), T(), setTimeout(S, 10 * c.Z.Millis.SECOND);
     };
     if ((null === s.Z || void 0 === s.Z || null == (e = s.Z.remotePowerMonitor) ? void 0 : e.getSystemIdleTimeMs) != null) {
         let e = s.Z.remotePowerMonitor.getSystemIdleTimeMs();
@@ -84,7 +84,7 @@ function C(e) {
 }
 function R(e) {
     let { state: t } = e;
-    return (y = t === f.$7l.BACKGROUND), (h = Date.now()), S(), !1;
+    return (y = t === f.$7l.BACKGROUND), (h = Date.now()), T(), !1;
 }
 function P(e) {
     let { timestamp: t, type: n } = e,
@@ -97,13 +97,13 @@ function P(e) {
                   type: 'OVERLAY_SET_NOT_IDLE',
                   timestamp: h
               })
-            : S(),
+            : T(),
         !1)
     );
 }
 __OVERLAY__ ||
     (u.isPlatformEmbedded && (null === s.Z || void 0 === s.Z ? void 0 : s.Z.remotePowerMonitor) != null
-        ? (T(),
+        ? (S(),
           s.Z.remotePowerMonitor.on('resume', () => {
               (E = !1), P({});
           }),
@@ -116,7 +116,7 @@ __OVERLAY__ ||
           s.Z.remotePowerMonitor.on('unlock-screen', () => {
               (b = !1), P({});
           }))
-        : setInterval(S, 30 * c.Z.Millis.SECOND));
+        : setInterval(T, 30 * c.Z.Millis.SECOND));
 class w extends (r = i.ZP.Store) {
     isIdle() {
         return m;

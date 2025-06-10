@@ -15,11 +15,11 @@ function p(e) {
         { blockedPayments: p, hasFetchedSkus: h, paymentSources: m, hasFetchedPaymentSources: g, application: E, skusById: b, selectedSkuId: y } = (0, c.JL)(),
         { isGift: O } = (0, l.wD)(),
         [v, I] = i.useState(!0),
-        [S, T] = (0, a.Wu)([s.Z], () => [s.Z.isFetchingCategories, s.Z.error]);
+        [T, S] = (0, a.Wu)([s.Z], () => [s.Z.isFetchingCategories, s.Z.error]);
     return (i.useEffect(() => {
         let e = null != E;
-        h && g && e && I(S);
-    }, [h, g, E, S]),
+        h && g && e && I(T);
+    }, [h, g, E, T]),
     i.useEffect(() => {
         if (v || p || null == y) return;
         let e = b[y];
@@ -29,7 +29,7 @@ function p(e) {
         ? (0, r.jsx)(f.Z, {})
         : p
           ? (0, r.jsx)(o.Vq, { onClose: n })
-          : null != T
+          : null != S
             ? (0, r.jsx)(d.Z, { onClose: n })
             : null;
 }

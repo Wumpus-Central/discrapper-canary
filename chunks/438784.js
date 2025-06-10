@@ -1,6 +1,6 @@
 n.d(t, {
     I: () => I,
-    b: () => S
+    b: () => T
 }),
     n(388685);
 var r = n(255367),
@@ -149,7 +149,7 @@ let I = i.memo(function (e) {
             })
         });
     }),
-    S = i.memo(
+    T = i.memo(
         i.forwardRef(function (e, t) {
             let { dotRadius: n, x: i, y: a, hide: u = !1, themed: f = !1, className: p } = e;
             return (0, l.Yzy)(

@@ -27,8 +27,8 @@ var r,
     O = n(926491),
     v = n(378233),
     I = n(695346),
-    S = n(430824),
-    T = n(699516),
+    T = n(430824),
+    S = n(699516),
     A = n(594174),
     N = n(768581),
     C = n(51144),
@@ -50,7 +50,7 @@ function x(e, t, n) {
         e
     );
 }
-function k(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -66,7 +66,7 @@ function k(e) {
     }
     return e;
 }
-function M(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -83,7 +83,7 @@ function j(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : M(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -132,7 +132,7 @@ class Z extends a.PureComponent {
             l = this.isSelectable();
         return (0, i.jsx)(
             d.P3F,
-            j(k({}, e), {
+            j(M({}, e), {
                 className: s()(L.clickable, r, n),
                 id: null != (t = B(a)) ? t : void 0,
                 onClick: l ? this.handleClick : void 0,
@@ -227,7 +227,7 @@ class z extends Z {
     renderContent() {
         var e;
         let { user: t, nick: n, status: r, hidePersonalInformation: a, guildId: o } = this.props,
-            s = null == o ? T.Z.getNickname(t.id) : null;
+            s = null == o ? S.Z.getNickname(t.id) : null;
         return (0, i.jsxs)(R.RX, {
             children: [
                 (0, i.jsx)(R.Tw, {
@@ -273,7 +273,7 @@ class q extends Z {
                 roleStyle: 'username',
                 includeConvenienceGlow: !0
             }),
-            h = l ? k({}, u ? _ : { color: null != r ? r : void 0 }) : void 0;
+            h = l ? M({}, u ? _ : { color: null != r ? r : void 0 }) : void 0;
         return (0, i.jsxs)(R.RX, {
             children: [
                 (0, i.jsx)(R.z5, {
@@ -305,7 +305,7 @@ class X extends Z {
         let { channel: e, category: t } = this.props,
             n = e.type === P.d4z.GUILD_CATEGORY ? d.ROc : (0, g.KS)(e);
         return (0, i.jsxs)(R.RX, {
-            children: [null != n && (0, i.jsx)(R.Tw, { children: (0, i.jsx)(n, { className: L.icon }) }), (0, i.jsx)(R.z5, { children: (0, i.jsx)(R.BR, { children: (0, m.F6)(e, A.default, T.Z) }) }), null != t ? (0, i.jsx)(R.dY, { children: t.name }) : null]
+            children: [null != n && (0, i.jsx)(R.Tw, { children: (0, i.jsx)(n, { className: L.icon }) }), (0, i.jsx)(R.z5, { children: (0, i.jsx)(R.BR, { children: (0, m.F6)(e, A.default, S.Z) }) }), null != t ? (0, i.jsx)(R.dY, { children: t.name }) : null]
         });
     }
 }
@@ -394,7 +394,7 @@ class ee extends Z {
             { queryMatch: r, renderSticker: a, selected: o, sticker: s } = this.props,
             { hovered: l } = this.state;
         return (
-            (0, v.jl)(s) ? (n = null == (e = O.Z.getStickerPack(s.pack_id)) ? void 0 : e.name) : (0, v.J8)(s) && (n = null == (t = S.Z.getGuild(s.guild_id)) ? void 0 : t.name),
+            (0, v.jl)(s) ? (n = null == (e = O.Z.getStickerPack(s.pack_id)) ? void 0 : e.name) : (0, v.J8)(s) && (n = null == (t = T.Z.getGuild(s.guild_id)) ? void 0 : t.name),
             (0, i.jsxs)(R.RX, {
                 children: [
                     (0, i.jsx)(R.Tw, { children: a(s, l || !0 === o) }),
@@ -431,7 +431,7 @@ class en extends Z {
 }
 class er extends Z {
     renderContent() {
-        return (0, i.jsx)(y.Z, k({}, this.props));
+        return (0, i.jsx)(y.Z, M({}, this.props));
     }
 }
 class ei extends (r = a.PureComponent) {
@@ -444,7 +444,7 @@ class ei extends (r = a.PureComponent) {
                   value: { id: null != o ? o : '' },
                   children: (0, i.jsx)('div', {
                       className: s()(L.autocomplete, n),
-                      children: (0, i.jsx)('div', j(k({ className: s()(L.autocompleteInner, r) }, l), { children: t }))
+                      children: (0, i.jsx)('div', j(M({ className: s()(L.autocompleteInner, r) }, l), { children: t }))
                   })
               })
             : null;

@@ -52,7 +52,7 @@ function I() {
     let e = d.Z.getInputDevices()[d.Z.getInputDeviceId()];
     return null != e ? e.name : '';
 }
-function S(e, t, n, r) {
+function T(e, t, n, r) {
     let { location: i, analyticsLocations: a } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
     if (t === n) return;
     let o = f.Z.getVoiceChannelId(),
@@ -73,13 +73,13 @@ function S(e, t, n, r) {
         audio_layer: g
     });
 }
-let T = {
+let S = {
         isNotSupported: () => !1,
         enable: (e) => Promise.resolve(!0),
         trackToggleSelfMute(e) {},
         trackToggleSelfDeaf(e) {}
     },
-    { enable: A, isNotSupported: N, trackToggleSelfMute: C, trackToggleSelfDeaf: R } = (T = n(929782)),
+    { enable: A, isNotSupported: N, trackToggleSelfMute: C, trackToggleSelfDeaf: R } = (S = n(929782)),
     P = {
         enable: A,
         toggleSelfMute() {
@@ -277,7 +277,7 @@ let T = {
             let { location: t, analyticsLocations: n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             N() ||
                 ((null != t || null != n) &&
-                    S(d.Z.getInputDevices(), d.Z.getInputDeviceId(), e, 'Audio Input', {
+                    T(d.Z.getInputDevices(), d.Z.getInputDeviceId(), e, 'Audio Input', {
                         location: t,
                         analyticsLocations: n
                     }),
@@ -291,7 +291,7 @@ let T = {
             let { location: t, analyticsLocations: n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             N() ||
                 ((null != t || null != n) &&
-                    S(d.Z.getOutputDevices(), d.Z.getOutputDeviceId(), e, 'Audio Output', {
+                    T(d.Z.getOutputDevices(), d.Z.getOutputDeviceId(), e, 'Audio Output', {
                         location: t,
                         analyticsLocations: n
                     }),
@@ -305,7 +305,7 @@ let T = {
             let { location: t, analyticsLocations: n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             N() ||
                 ((null != t || null != n) &&
-                    S(d.Z.getVideoDevices(), d.Z.getVideoDeviceId(), e, 'Video', {
+                    T(d.Z.getVideoDevices(), d.Z.getVideoDeviceId(), e, 'Video', {
                         location: t,
                         analyticsLocations: n
                     }),

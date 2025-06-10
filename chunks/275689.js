@@ -1,23 +1,23 @@
-a.d(e, { s: () => f });
+a.d(e, { s: () => A });
 var r = a(394798),
-    n = a(101284),
-    _ = a(370336),
+    _ = a(101284),
+    n = a(370336),
     o = a(622916),
     i = a(263449),
     c = a(255768),
-    s = a(380132),
-    E = a(899195),
+    E = a(380132),
+    s = a(899195),
     l = a(988097),
     u = a(696486),
     I = a(305625),
     R = a(966497),
     d = a(241225),
-    A = a(881243);
-class f {
+    N = a(881243);
+class A {
     constructor(t = {}) {
         (this._traceId = t.traceId || (0, r.DM)()),
             (this._spanId = t.spanId || (0, r.DM)().substring(16)),
-            (this._startTime = t.startTimestamp || (0, n.ph)()),
+            (this._startTime = t.startTimestamp || (0, _.ph)()),
             (this._attributes = {}),
             this.setAttributes({
                 [l.S3]: 'manual',
@@ -66,7 +66,7 @@ class f {
         this._endTime || ((this._endTime = (0, u.$k)(t)), (0, R.w)(this), this._onSpanEnded());
     }
     getSpanJSON() {
-        return (0, _.Jr)({
+        return (0, n.Jr)({
             data: this._attributes,
             description: this._name,
             op: this._attributes[l.$J],
@@ -77,7 +77,7 @@ class f {
             timestamp: this._endTime,
             trace_id: this._traceId,
             origin: this._attributes[l.S3],
-            _metrics_summary: (0, E.y)(this),
+            _metrics_summary: (0, s.y)(this),
             profile_id: this._attributes[l.p6],
             exclusive_time: this._attributes[l.JQ],
             measurements: (0, d.l)(this._events),
@@ -90,12 +90,12 @@ class f {
     }
     addEvent(t, e, a) {
         c.X && o.kg.log('[Tracing] Adding an event to span:', t);
-        let r = N(e) ? e : a || (0, n.ph)(),
-            _ = N(e) ? {} : e || {},
+        let r = f(e) ? e : a || (0, _.ph)(),
+            n = f(e) ? {} : e || {},
             i = {
                 name: t,
                 time: (0, u.$k)(r),
-                attributes: _
+                attributes: n
             };
         return this._events.push(i), this;
     }
@@ -117,15 +117,15 @@ class f {
                           r.send(t).then(null, (t) => {
                               c.X && o.kg.error('Error while sending span:', t);
                           });
-                  })((0, s.uE)([this], t))
+                  })((0, E.uE)([this], t))
                 : (c.X && o.kg.log('[Tracing] Discarding standalone span because its trace was not chosen to be sampled.'), t && t.recordDroppedEvent('sample_rate', 'span')));
         let e = this._convertSpanToTransaction();
-        e && ((0, A.I1)(this).scope || (0, i.nZ)()).captureEvent(e);
+        e && ((0, N.I1)(this).scope || (0, i.nZ)()).captureEvent(e);
     }
     _convertSpanToTransaction() {
-        if (!p((0, u.XU)(this))) return;
+        if (!T((0, u.XU)(this))) return;
         this._name || (c.X && o.kg.warn('Transaction has no name, falling back to `<unlabeled transaction>`.'), (this._name = '<unlabeled transaction>'));
-        let { scope: t, isolationScope: e } = (0, A.I1)(this),
+        let { scope: t, isolationScope: e } = (0, N.I1)(this),
             a = (t || (0, i.nZ)()).getClient() || (0, i.s3)();
         if (!0 !== this._sampled) {
             c.X && o.kg.log('[Tracing] Discarding transaction because its trace was not chosen to be sampled.'), a && a.recordDroppedEvent('sample_rate', 'transaction');
@@ -134,12 +134,12 @@ class f {
         let r = (0, u.Dp)(this)
                 .filter((t) => {
                     var e;
-                    return t !== this && !((e = t) instanceof f && e.isStandaloneSpan());
+                    return t !== this && !((e = t) instanceof A && e.isStandaloneSpan());
                 })
                 .map((t) => (0, u.XU)(t))
-                .filter(p),
-            n = this._attributes[l.Zj],
-            s = {
+                .filter(T),
+            _ = this._attributes[l.Zj],
+            E = {
                 contexts: { trace: (0, u.HR)(this) },
                 spans: r.length > 1000 ? r.sort((t, e) => t.start_timestamp - e.start_timestamp).slice(0, 1000) : r,
                 start_timestamp: this._startTime,
@@ -149,18 +149,18 @@ class f {
                 sdkProcessingMetadata: {
                     capturedSpanScope: t,
                     capturedSpanIsolationScope: e,
-                    ...(0, _.Jr)({ dynamicSamplingContext: (0, I.jC)(this) })
+                    ...(0, n.Jr)({ dynamicSamplingContext: (0, I.jC)(this) })
                 },
-                _metrics_summary: (0, E.y)(this),
-                ...(n && { transaction_info: { source: n } })
+                _metrics_summary: (0, s.y)(this),
+                ...(_ && { transaction_info: { source: _ } })
             },
             R = (0, d.l)(this._events);
-        return R && Object.keys(R).length && (c.X && o.kg.log('[Measurements] Adding measurements to transaction event', JSON.stringify(R, void 0, 2)), (s.measurements = R)), s;
+        return R && Object.keys(R).length && (c.X && o.kg.log('[Measurements] Adding measurements to transaction event', JSON.stringify(R, void 0, 2)), (E.measurements = R)), E;
     }
 }
-function N(t) {
+function f(t) {
     return (t && 'number' == typeof t) || t instanceof Date || Array.isArray(t);
 }
-function p(t) {
+function T(t) {
     return !!t.start_timestamp && !!t.timestamp && !!t.span_id && !!t.trace_id;
 }

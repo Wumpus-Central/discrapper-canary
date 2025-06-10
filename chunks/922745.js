@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => T,
-    r: () => S
+    Z: () => S,
+    r: () => T
 });
 var r = n(255367);
 n(73800);
@@ -69,7 +69,7 @@ function I(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function S(e) {
+function T(e) {
     let { title: t, onJumpToChannel: n, onHide: i, idle: a, preventIdleComponent: l } = e,
         u = (0, o.e7)([p.Z], () => p.Z.getChannelId()),
         _ =
@@ -113,9 +113,9 @@ function S(e) {
         ]
     });
 }
-function T(e) {
+function S(e) {
     var { children: t, idle: n, onJumpToChannel: i, onHide: o, backgroundKey: s, onActive: c, onForceIdle: d, renderBottomLeftControls: f, renderBottomRightControls: p, screenMessage: h, hideControls: g = !1, className: E, innerClassName: y, videoControlsClassName: I } = e,
-        T = v(e, ['children', 'idle', 'onJumpToChannel', 'onHide', 'backgroundKey', 'onActive', 'onForceIdle', 'renderBottomLeftControls', 'renderBottomRightControls', 'screenMessage', 'hideControls', 'className', 'innerClassName', 'videoControlsClassName']);
+        S = v(e, ['children', 'idle', 'onJumpToChannel', 'onHide', 'backgroundKey', 'onActive', 'onForceIdle', 'renderBottomLeftControls', 'renderBottomRightControls', 'screenMessage', 'hideControls', 'className', 'innerClassName', 'videoControlsClassName']);
     return (0, r.jsxs)('div', {
         onMouseMove: c,
         onMouseDown: c,
@@ -141,14 +141,14 @@ function T(e) {
                         (0, r.jsx)('div', {
                             className: b.topControls,
                             children: (0, r.jsx)(
-                                S,
+                                T,
                                 O(
                                     {
                                         idle: n,
                                         onJumpToChannel: i,
                                         onHide: o
                                     },
-                                    T
+                                    S
                                 )
                             )
                         }),

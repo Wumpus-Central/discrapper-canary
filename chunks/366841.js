@@ -1,4 +1,4 @@
-n.d(t, { G: () => T }), n(388685);
+n.d(t, { G: () => S }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -47,21 +47,21 @@ function I(e) {
     }
     return e;
 }
-let S = 1000;
-function T() {
+let T = 1000;
+function S() {
     let [e, t] = i.useState(!1),
         v = (0, l.VXO)(b.Xd),
-        T = (0, E.Q3)('useDesktopRefreshOnboarding'),
-        A = i.useMemo(() => (T ? [o.z.DESKTOP_REFRESH_ONBOARDING_MODAL] : []), [T]),
+        S = (0, E.Q3)('useDesktopRefreshOnboarding'),
+        A = i.useMemo(() => (S ? [o.z.DESKTOP_REFRESH_ONBOARDING_MODAL] : []), [S]),
         [N, C] = (0, _.US)(A),
         R = N === o.z.DESKTOP_REFRESH_ONBOARDING_MODAL,
         P = (0, a.e7)([h.default], () => h.default.getId());
     i.useLayoutEffect(() => {
-        T && null != P && g.default.age(P) < m.Z.Millis.DAY && (0, f.EW)(o.z.DESKTOP_REFRESH_ONBOARDING_MODAL);
+        S && null != P && g.default.age(P) < m.Z.Millis.DAY && (0, f.EW)(o.z.DESKTOP_REFRESH_ONBOARDING_MODAL);
         let e = 'desktop_refresh_theme_migration_key',
             t = 'true' === s.K.get(e);
-        R && T && !t && p.Z.theme === O.BR.DARK && null == d.Z.gradientPreset && !t && (s.K.set(e, 'true'), (0, u.ZI)({ theme: O.BR.DARKER }));
-    }, [R, T, P]),
+        R && S && !t && p.Z.theme === O.BR.DARK && null == d.Z.gradientPreset && !t && (s.K.set(e, 'true'), (0, u.ZI)({ theme: O.BR.DARKER }));
+    }, [R, S, P]),
         i.useLayoutEffect(() => {
             function e() {
                 t(!0);
@@ -74,7 +74,7 @@ function T() {
             );
         }, []);
     let w = i.useCallback(() => {
-        T &&
+        S &&
             (0, l.ZDy)(
                 async () => {
                     let { DesktopRefreshOnboardingModal: e } = await n.e('49910').then(n.bind(n, 239191));
@@ -87,13 +87,13 @@ function T() {
                     }
                 }
             );
-    }, [T, C]);
+    }, [S, C]);
     i.useEffect(() => {
-        if (T && R && !v && e) {
+        if (S && R && !v && e) {
             let e = setTimeout(() => {
                 w();
-            }, S);
+            }, T);
             return () => clearTimeout(e);
         }
-    }, [e, v, R, T, w]);
+    }, [e, v, R, S, w]);
 }

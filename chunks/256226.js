@@ -58,7 +58,7 @@ function I(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -69,7 +69,7 @@ function S(e, t) {
         e
     );
 }
-function T(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -94,8 +94,8 @@ let N = i.forwardRef(function (e, t) {
     let A,
         { canRemove: N, className: C, role: R, onRemove: P, guildId: w, disableBorderColor: D, onMouseDown: L } = e,
         x = (0, s.JA)(R.id),
-        { tabIndex: k } = x,
-        M = T(x, ['tabIndex']),
+        { tabIndex: M } = x,
+        k = S(x, ['tabIndex']),
         j = (0, g.p9)({
             roleId: R.id,
             size: 16,
@@ -110,7 +110,7 @@ let N = i.forwardRef(function (e, t) {
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            S(v({}, t), {
+                            T(v({}, t), {
                                 id: R.id,
                                 label: b.intl.string(b.t.sMsaLi)
                             })
@@ -157,7 +157,7 @@ let N = i.forwardRef(function (e, t) {
                       children: (0, r.jsxs)(d.P3F, {
                           className: o()(y.roleRemoveButtonCanRemove, y.roleRemoveButton),
                           onClick: P,
-                          tabIndex: k,
+                          tabIndex: M,
                           focusProps: { focusClassName: y.roleRemoveIconFocused },
                           'aria-hidden': !1,
                           'aria-label': b.intl.formatToPlainString(b.t.QrxwhY, { roleName: R.name }),
@@ -183,7 +183,7 @@ let N = i.forwardRef(function (e, t) {
     return (0, r.jsx)(d.tEY, {
         children: (0, r.jsxs)(
             'div',
-            S(
+            T(
                 v(
                     {
                         ref: t,
@@ -192,14 +192,14 @@ let N = i.forwardRef(function (e, t) {
                         onContextMenu: B,
                         onMouseDown: L,
                         'aria-label': R.name,
-                        tabIndex: k
+                        tabIndex: M
                     },
-                    M
+                    k
                 ),
                 {
                     children: [
                         z(),
-                        null != j ? (0, r.jsx)(m.Z, S(v({ className: y.roleIcon }, j), { enableTooltip: !1 })) : null,
+                        null != j ? (0, r.jsx)(m.Z, T(v({ className: y.roleIcon }, j), { enableTooltip: !1 })) : null,
                         (0, r.jsx)('div', {
                             'aria-hidden': !0,
                             className: y.roleName,

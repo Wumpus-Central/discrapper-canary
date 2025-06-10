@@ -19,8 +19,8 @@ var r = n(127849),
     O = n(992174),
     v = n(176682),
     I = n(190289),
-    S = n(25124),
-    T = n(199838),
+    T = n(25124),
+    S = n(199838),
     A = s.PROPER,
     N = s.CONFIGURABLE,
     C = 'ArrayBuffer',
@@ -28,11 +28,11 @@ var r = n(127849),
     P = 'prototype',
     w = 'Wrong length',
     D = 'Wrong index',
-    L = T.getterFor(C),
-    x = T.getterFor(R),
-    k = T.set,
-    M = r[C],
-    j = M,
+    L = S.getterFor(C),
+    x = S.getterFor(R),
+    M = S.set,
+    k = r[C],
+    j = k,
     U = j && j[P],
     G = r[R],
     B = G && G[P],
@@ -88,22 +88,22 @@ var r = n(127849),
         for (var u = o.bytes, d = s + o.byteOffset, f = 0; f < t; f++) u[d + f] = l[c ? f : t - f - 1];
     };
 if (o) {
-    var er = A && M.name !== C;
+    var er = A && k.name !== C;
     !d(function () {
-        M(1);
+        k(1);
     }) ||
     !d(function () {
-        new M(-1);
+        new k(-1);
     }) ||
     d(function () {
-        return new M(), new M(1.5), new M(NaN), 1 !== M.length || (er && !N);
+        return new k(), new k(1.5), new k(NaN), 1 !== k.length || (er && !N);
     })
         ? (((j = function (e) {
-              return f(this, U), v(new M(h(e)), this, j);
+              return f(this, U), v(new k(h(e)), this, j);
           })[P] = U),
           (U.constructor = j),
-          I(j, M))
-        : er && N && l(M, 'name', C),
+          I(j, k))
+        : er && N && l(k, 'name', C),
         b && E(B) !== F && b(B, F);
     var ei = new G(new j(2)),
         ea = i(B.setInt8);
@@ -126,7 +126,7 @@ if (o) {
     (U = (j = function (e) {
         f(this, U);
         var t = h(e);
-        k(this, {
+        M(this, {
             type: C,
             bytes: H(V(t), 0),
             byteLength: t
@@ -140,7 +140,7 @@ if (o) {
                 o = _(t);
             if (o < 0 || o > i) throw new Z('Wrong offset');
             if (((n = void 0 === n ? i - o : p(n)), o + n > i)) throw new Z(w);
-            k(this, {
+            M(this, {
                 type: R,
                 buffer: e,
                 byteLength: n,
@@ -202,8 +202,8 @@ if (o) {
                 en(this, 8, e, $, t, arguments.length > 2 && arguments[2]);
             }
         });
-S(j, C),
-    S(G, R),
+T(j, C),
+    T(G, R),
     (e.exports = {
         ArrayBuffer: j,
         DataView: G

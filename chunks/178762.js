@@ -27,8 +27,8 @@ var r = n(255367),
     O = n(370370),
     v = n(107062),
     I = n(91140),
-    S = n(227172),
-    T = n(551228),
+    T = n(227172),
+    S = n(551228),
     A = n(678869),
     N = n(278399),
     C = n(886217),
@@ -38,8 +38,8 @@ var r = n(255367),
     D = n(268010),
     L = n(797342),
     x = n(206583),
-    k = n(921944);
-function M(e, t, n) {
+    M = n(921944);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -63,7 +63,7 @@ function j(e) {
                 })
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -129,7 +129,7 @@ let Y = (e) => {
             case l.s.TOP_ARTIST:
                 return (0, r.jsx)(N.ZP, G(j({}, n), { entry: t }));
             case l.s.LISTENED_SESSION:
-                return (0, r.jsx)(T.ZP, G(j({}, n), { entry: t }));
+                return (0, r.jsx)(S.ZP, G(j({}, n), { entry: t }));
             case l.s.LAUNCHED_ACTIVITY:
                 return (0, r.jsx)(O.Z, G(j({}, n), { entry: t }));
             case l.s.LEADERBOARD:
@@ -170,7 +170,7 @@ let Y = (e) => {
             i = B(e, ['entry']);
         switch (n.content_type) {
             case l.s.PLAYED_GAME:
-                return (0, r.jsx)(S.Z, G(j({}, i), { entry: n }));
+                return (0, r.jsx)(T.Z, G(j({}, i), { entry: n }));
             case l.s.WATCHED_MEDIA:
                 return (0, r.jsx)(D.Z, G(j({}, i), { entry: n }));
             case l.s.TOP_GAME:
@@ -203,16 +203,16 @@ let Y = (e) => {
             [E, O] = i.useState('default'),
             v = (0, s.JA)(''.concat(a)),
             I = null == (t = b.default.getCurrentUser()) ? void 0 : t.isStaff(),
-            { isRich: S, appName: T } = (0, L.n)(m.entry),
+            { isRich: T, appName: S } = (0, L.n)(m.entry),
             A = i.useMemo(
                 () => ({
                     entry: m.entry,
                     channelId: m.channel.id,
                     guildId: m.channel.guild_id,
                     requestId: m.requestId,
-                    richPresenceName: S ? T : void 0
+                    richPresenceName: T ? S : void 0
                 }),
-                [T, m.channel.guild_id, m.channel.id, m.entry, m.requestId, S]
+                [S, m.channel.guild_id, m.channel.id, m.entry, m.requestId, T]
             ),
             N = i.useRef(!1),
             [C, R] = i.useState(!1),
@@ -221,7 +221,7 @@ let Y = (e) => {
         i.useEffect(() => {
             C && D && w(!0);
         }, [C, D]);
-        let M = i.useCallback(
+        let k = i.useCallback(
                 (e) => {
                     I &&
                         (0, f.jW)(e, async () => {
@@ -268,7 +268,7 @@ let Y = (e) => {
         return (0, r.jsx)('div', {
             ref: p,
             onMouseEnter: () => {
-                m.entry.content_type !== l.s.LEADERBOARD || (0, h.un)(u.z.LEADERBOARD_NUX_COACHMARK) || (0, h.EW)(u.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: k.L.SECONDARY }),
+                m.entry.content_type !== l.s.LEADERBOARD || (0, h.un)(u.z.LEADERBOARD_NUX_COACHMARK) || (0, h.EW)(u.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: M.L.SECONDARY }),
                     (N.current = !0),
                     setTimeout(() => {
                         N.current && R(!0), V(A);
@@ -319,7 +319,7 @@ let Y = (e) => {
                             onClick: () => {
                                 C || R(!0);
                             },
-                            onContextMenu: M,
+                            onContextMenu: k,
                             children: (0, r.jsx)(
                                 Y,
                                 G(j({}, m), {

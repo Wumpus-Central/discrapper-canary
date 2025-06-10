@@ -105,11 +105,11 @@ function I(e) {
     let i = new Date().toISOString();
     p[t] = r.map((e) => (n.includes(e.id) ? c(s({}, e), { dismiss_timestamp: i }) : e));
 }
-function S(e) {
+function T(e) {
     let { channelId: t } = e;
     h.add(t);
 }
-function T() {
+function S() {
     (p = {}),
         Object.values(a.Z.getMutablePrivateChannels()).forEach((e) => {
             g(e);
@@ -138,10 +138,10 @@ let C = new N(i.Z, {
     CHANNEL_CREATE: E,
     CHANNEL_DELETE: y,
     CHANNEL_UPDATES: b,
-    CONNECTION_OPEN: T,
-    CONNECTION_OPEN_SUPPLEMENTAL: T,
+    CONNECTION_OPEN: S,
+    CONNECTION_OPEN_SUPPLEMENTAL: S,
     CHANNEL_SAFETY_WARNING_FEEDBACK: O,
     CLEAR_CHANNEL_SAFETY_WARNINGS: v,
     DISMISS_CHANNEL_SAFETY_WARNINGS: I,
-    ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP: S
+    ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP: T
 });

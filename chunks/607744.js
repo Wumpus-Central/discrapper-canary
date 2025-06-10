@@ -106,10 +106,10 @@ function I(e) {
     if (r.id !== (null == (t = u.default.getCurrentUser()) ? void 0 : t.id)) return !1;
     h.delete(n);
 }
-function S() {
+function T() {
     h.clear();
 }
-function T(e) {
+function S(e) {
     let { guildId: t } = e;
     g(t);
 }
@@ -129,10 +129,10 @@ _(A, 'displayName', 'GuildVerificationStore');
 let N = new A(a.Z, {
     CONNECTION_OPEN: b,
     CONNECTION_CLOSED: y,
-    CURRENT_USER_UPDATE: S,
+    CURRENT_USER_UPDATE: T,
     GUILD_CREATE: O,
     GUILD_UPDATE: O,
     GUILD_DELETE: v,
     GUILD_MEMBER_UPDATE: I,
-    GUILD_VERIFICATION_CHECK: T
+    GUILD_VERIFICATION_CHECK: S
 });

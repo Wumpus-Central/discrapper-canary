@@ -68,8 +68,8 @@ function v(e, t) {
     );
 }
 let I = 300,
-    S = 2000,
-    T = (e) => 'AudioContextSettingsMigrated:'.concat(e),
+    T = 2000,
+    S = (e) => 'AudioContextSettingsMigrated:'.concat(e),
     A = (e) => (e === E.Yn.STREAM ? a.h.STREAM : a.h.USER);
 function N(e, t, n) {
     return e[t].volume !== A(n) || e[t].muted || e[t].soundboardMuted || delete e[t], e;
@@ -96,7 +96,7 @@ function R(e) {
     });
 }
 function P() {
-    s.K.get(T(f.default.getId())) ||
+    s.K.get(S(f.default.getId())) ||
         g.hW.updateAsync(
             'audioContextSettings',
             (e) => {
@@ -131,7 +131,7 @@ function P() {
                         null == a[n] && ((t = !0), (a[n] = r));
                     }
                 }
-                return s.K.set(T(f.default.getId()), !0), t;
+                return s.K.set(S(f.default.getId()), !0), t;
             },
             g.fy.AUTOMATED
         );
@@ -149,14 +149,14 @@ function D() {
 }
 let L = i().debounce(() => {
     U();
-}, S);
+}, T);
 function x(e, t, n) {
     (0, h.RF)(e, t, { volume: n }), L();
 }
-function k(e, t, n) {
+function M(e, t, n) {
     (0, h.RF)(e, t, { muted: n }), L.cancel(), U();
 }
-function M(e, t, n) {
+function k(e, t, n) {
     (0, h.RF)(e, t, { soundboardMuted: n }), L.cancel(), U();
 }
 let j = i().debounce(c.On, 500, { maxWait: 500 });
@@ -191,11 +191,11 @@ function G(e) {
 }
 function B(e) {
     let { context: t, userId: n } = e;
-    n !== f.default.getId() && k(t, n, _.Z.isLocalMute(n, t));
+    n !== f.default.getId() && M(t, n, _.Z.isLocalMute(n, t));
 }
 function F(e) {
     let { context: t, userId: n } = e;
-    n !== f.default.getId() && M(t, n, d.Z.isLocalSoundboardMuted(n));
+    n !== f.default.getId() && k(t, n, d.Z.isLocalSoundboardMuted(n));
 }
 class V extends l.Z {
     constructor(...e) {

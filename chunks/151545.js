@@ -19,8 +19,8 @@ function E(e) {
     let { user: t, currentUser: n, activity: E, className: b, onClose: y, profileGuildId: O } = e,
         v = (0, f.T)({ location: 'UserProfileActivityCardWrapper' }),
         I = t.id === n.id,
-        S = v && !I && !t.bot,
-        { voiceGuild: T, voiceChannel: A } = (0, i.cj)([u.Z, d.Z, c.Z], () => {
+        T = v && !I && !t.bot,
+        { voiceGuild: S, voiceChannel: A } = (0, i.cj)([u.Z, d.Z, c.Z], () => {
             var e;
             if (!(0, a.Z)(E)) return {};
             let n = null == (e = d.Z.getVoiceStateForSession(t.id, null == E ? void 0 : E.session_id)) ? void 0 : e.channelId,
@@ -35,7 +35,7 @@ function E(e) {
     return (null == E ? void 0 : E.type) === g.IIU.CUSTOM_STATUS || (null == E ? void 0 : E.type) === g.IIU.HANG_STATUS
         ? null
         : (0, o.Z)(E)
-          ? S
+          ? T
               ? (0, r.jsx)(m.Z, {
                     user: t,
                     currentUser: n,
@@ -51,13 +51,13 @@ function E(e) {
                     className: b,
                     onClose: y
                 })
-          : S
+          : T
             ? (0, r.jsx)(p.Z, {
                   user: t,
                   currentUser: n,
                   activity: E,
                   application: N,
-                  voiceGuild: T,
+                  voiceGuild: S,
                   voiceChannel: A,
                   profileGuildId: O,
                   className: b,
@@ -68,7 +68,7 @@ function E(e) {
                   currentUser: n,
                   activity: E,
                   application: N,
-                  voiceGuild: T,
+                  voiceGuild: S,
                   voiceChannel: A,
                   className: b,
                   onClose: y

@@ -37,7 +37,7 @@ let y = (e, t, n, r) => {
     v = (e) => {
         let { channel: t, entry: n, disableGameProfileLinks: a, onReaction: s, onVoiceChannelPreview: b } = e,
             { largeImage: v } = (0, l.rv)({ entry: n }),
-            { user: I, details: S, appName: T } = (0, g.n)(n),
+            { user: I, details: T, appName: S } = (0, g.n)(n),
             { primaryColor: A, secondaryColor: N } = (0, d.Z)(null == v ? void 0 : v.src),
             C = (0, c.yA)(n),
             R = (0, c.Nq)(n),
@@ -71,8 +71,8 @@ let y = (e, t, n, r) => {
                               }),
                     entry: n,
                     userDescription: E.t.rPqqtr,
-                    title: T,
-                    subtitle: S,
+                    title: S,
+                    subtitle: T,
                     badges: (0, r.jsx)(p.Gk, {
                         location: p.Gt.POPOUT,
                         children: _.Hs.map((e, t) => (0, r.jsx)(e, { entry: n }, t))

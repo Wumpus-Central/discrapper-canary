@@ -1,8 +1,8 @@
 n.d(t, {
-    PC: () => h,
-    o_: () => p,
-    sO: () => _,
-    xo: () => f
+    PC: () => m,
+    o_: () => h,
+    sO: () => p,
+    xo: () => _
 }),
     n(388685),
     n(953529);
@@ -57,7 +57,10 @@ function d(e) {
           }, {});
 }
 function f(e) {
-    var t, n, r, i, a;
+    return null == e || '' === e ? null : e;
+}
+function _(e) {
+    var t, n, r, i;
     return {
         id: e.id,
         name: e.name,
@@ -66,12 +69,12 @@ function f(e) {
         customBanner: e.custom_banner_hash,
         onlineCount: e.online_count,
         memberCount: e.member_count,
-        brandColorPrimary: null != (n = e.brand_color_primary) ? n : null,
+        brandColorPrimary: f(e.brand_color_primary),
         visibility: e.visibility,
-        traits: u(e.id, null != (r = e.traits) ? r : []),
-        gameApplicationIds: null != (i = e.game_application_ids) ? i : [],
+        traits: u(e.id, null != (n = e.traits) ? n : []),
+        gameApplicationIds: null != (r = e.game_application_ids) ? r : [],
         gameActivity: d(e.game_activity),
-        features: null != (a = e.features) ? a : [],
+        features: null != (i = e.features) ? i : [],
         tag: e.tag,
         badge: e.badge,
         badgeColorPrimary: e.badge_color_primary,
@@ -81,7 +84,7 @@ function f(e) {
         premiumTier: e.premium_tier
     };
 }
-function _(e) {
+function p(e) {
     let t = {};
     return (
         null != e.name && (t.name = e.name),
@@ -113,7 +116,7 @@ function _(e) {
         t
     );
 }
-function p(e) {
+function h(e) {
     return e.reduce(
         (e, t) => (
             (e[t.game_application_id] = {
@@ -125,10 +128,10 @@ function p(e) {
         {}
     );
 }
-function h(e) {
+function m(e) {
     var t, n, r, i, a, o;
     let { guild: l, profile: c } = e,
-        u = null != c ? f(c) : null;
+        u = null != c ? _(c) : null;
     return null != u
         ? u
         : null == l

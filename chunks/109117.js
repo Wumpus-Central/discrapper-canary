@@ -84,10 +84,10 @@ async function y() {
 }
 function O(e, t, n) {
     var i, a, o, s, l, c, u, d, f, p, h, m, g, E, b, y, O, v, I;
-    function S(e) {
+    function T(e) {
         return (null == n ? void 0 : n.storedInformation) != null && 1 === n.storedInformation[e];
     }
-    function T(e) {
+    function S(e) {
         return (null == n ? void 0 : n.storedInformation) == null || null == n.storedInformation[e] ? null : n.storedInformation[e];
     }
     let A = {
@@ -97,13 +97,13 @@ function O(e, t, n) {
         child_process_crash_type: null,
         child_process_crash_reason: null,
         child_process_crash_exit_code: null,
-        had_rtc_connection: S(r.X4.HasRTCConnection),
-        was_sending_video: S(r.X4.IsSendingVideo),
-        was_sending_stream: S(r.X4.IsSendingStream),
-        was_receiving_video: S(r.X4.IsReceivingVideo),
-        was_receiving_stream: S(r.X4.IsReceivingStream),
-        video_media_session_id: T(r.X4.VideoMediaSessionId),
-        stream_media_session_id: T(r.X4.StreamMediaSessionId),
+        had_rtc_connection: T(r.X4.HasRTCConnection),
+        was_sending_video: T(r.X4.IsSendingVideo),
+        was_sending_stream: T(r.X4.IsSendingStream),
+        was_receiving_video: T(r.X4.IsReceivingVideo),
+        was_receiving_stream: T(r.X4.IsReceivingStream),
+        video_media_session_id: S(r.X4.VideoMediaSessionId),
+        stream_media_session_id: S(r.X4.StreamMediaSessionId),
         last_memory_usage_kb: null != (f = null == n || null == (i = n.lastMemoryInformation) ? void 0 : i.memoryUsageKB) ? f : null,
         last_used_js_heap_size_kb: null != (p = null == n || null == (a = n.lastMemoryInformation) ? void 0 : a.usedJSHeapSizeKB) ? p : null,
         last_memory_usage_uptime: null != (h = null == n || null == (o = n.lastMemoryInformation) ? void 0 : o.uptimeSeconds) ? h : null,

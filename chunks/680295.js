@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => S,
+    Z: () => T,
     n: () => v
 }),
     n(388685);
@@ -52,9 +52,9 @@ function O(e) {
 let v = (e) => {
         let { bannerAdjustment: t = 0, maxLoops: n, resetOnHover: a = !1, isHovering: s = !1, useOpacityOnHover: l = !0, autoPlay: c = !0, restartMethod: u, urlQueryString: m, profileEffectConfig: E, noBorderRadius: y = !1, introDelay: O = d.lG } = e,
             v = i.useRef(null),
-            [I, S] = i.useState([]);
+            [I, T] = i.useState([]);
         (0, g.Z)(E);
-        let [T, A] = i.useState(0),
+        let [S, A] = i.useState(0),
             [N, C] = i.useState(0),
             { accessibilityLabel: R } = E,
             [P, w] = i.useState(-O),
@@ -65,12 +65,12 @@ let v = (e) => {
             } = (0, _.Z)((e) => {
                 w((t) => t + e);
             }),
-            k = i.useRef(O);
+            M = i.useRef(O);
         i.useEffect(() => {
-            k.current = O;
+            M.current = O;
         }),
             i.useEffect(() => {
-                w(-k.current), S((0, p.H)(E.effects));
+                w(-M.current), T((0, p.H)(E.effects));
             }, [E]),
             i.useEffect(() => {
                 let e = 0,
@@ -82,11 +82,11 @@ let v = (e) => {
                     A(t),
                     C(e);
             }, [C, I]);
-        let [M, j] = i.useState(!1);
+        let [k, j] = i.useState(!1);
         return (
             i.useEffect(() => {
-                !0 === c || s || (D(), w(0)), !s && M && x.current && (D(), w(0)), a && s && !x.current && (L(), E.animationType === f.Q.PERSISTENT ? w(u === f.j.FromStart ? 0 : T) : w(0));
-            }, [s, M, T, a, D, L, x, E.animationType, c, u]),
+                !0 === c || s || (D(), w(0)), !s && k && x.current && (D(), w(0)), a && s && !x.current && (L(), E.animationType === f.Q.PERSISTENT ? w(u === f.j.FromStart ? 0 : S) : w(0));
+            }, [s, k, S, a, D, L, x, E.animationType, c, u]),
             (0, r.jsx)('div', {
                 ref: v,
                 className: o()(b.profileEffects, { [b.hovered]: s && l }),
@@ -118,7 +118,7 @@ let v = (e) => {
                                 ticking: x.current,
                                 time: P,
                                 accessibilityLabel: R,
-                                hasPlayedThrough: M,
+                                hasPlayedThrough: k,
                                 setHasPlayedThrough: j,
                                 urlQueryString: m,
                                 maxLoops: n,
@@ -148,7 +148,7 @@ let v = (e) => {
             })
         });
     },
-    S = (e) => {
+    T = (e) => {
         let t = (0, s.e7)([u.Z], () => u.Z.isFocused()),
             n = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
             [a, o] = i.useState(!1),

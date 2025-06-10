@@ -46,10 +46,10 @@ let u = new Map(),
     I = (e) => {
         f.delete(e.skuId), p.set(e.skuId, e.entitlement), null != e.numPotions && h.set(e.skuId, e.numPotions);
     },
-    S = (e) => {
+    T = (e) => {
         _.add(e.skuId), f.delete(e.skuId);
     },
-    T = (e) => {
+    S = (e) => {
         f.add(e.skuId);
     },
     A = (e) => {
@@ -109,8 +109,8 @@ let w = new P(o.Z, {
     CONSUMABLES_CLEAR_ERROR: O,
     CONSUMABLES_ENTITLEMENT_FETCH_COMPLETED: I,
     SKU_PURCHASE_SUCCESS: v,
-    CONSUMABLES_ENTITLEMENT_FETCH_FAILED: S,
-    CONSUMABLES_ENTITLEMENT_FETCH_STARTED: T,
+    CONSUMABLES_ENTITLEMENT_FETCH_FAILED: T,
+    CONSUMABLES_ENTITLEMENT_FETCH_STARTED: S,
     SET_PREVIOUS_GO_LIVE_SETTINGS: A,
     CLEAR_CONSUMED_ENTITLEMENT: N,
     POTIONS_TRIGGER_MESSAGE_CONFETTI: C,

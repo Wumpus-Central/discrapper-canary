@@ -73,8 +73,8 @@ let g = null,
     O = null,
     v = !1,
     I = !1,
-    S = null,
-    T = !1,
+    T = null,
+    S = !1,
     A = !1,
     N = null,
     C = null,
@@ -157,7 +157,7 @@ function L(e) {
 }
 function x(e) {
     let { subscription: t } = e;
-    if (((T = !0), null != t)) {
+    if (((S = !0), null != t)) {
         let e = c.default.getId();
         if (t.user_id !== e && !I) {
             R.log('[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
@@ -168,17 +168,17 @@ function x(e) {
                         subscriptionUserId: t.user_id
                     }
                 }),
-                (T = !1),
+                (S = !1),
                 (I = !0);
             return;
         }
-        S = l.Q.createFromServer(t);
+        T = l.Q.createFromServer(t);
     }
 }
-function k() {
+function M() {
     A = !0;
 }
-function M(e) {
+function k(e) {
     let { eligible: t } = e;
     (N = t), (A = !1);
 }
@@ -187,7 +187,7 @@ function j(e) {
     (N = !1), (A = !1);
 }
 function U() {
-    (g = null), (E = null), (b = null), (y = null), (O = null), (v = !1), (I = !1), (S = null), (T = !1), (A = !1), (C = null);
+    (g = null), (E = null), (b = null), (y = null), (O = null), (v = !1), (I = !1), (T = null), (S = !1), (A = !1), (C = null);
 }
 function G(e) {
     return e.status !== d.O0b.UNPAID;
@@ -229,7 +229,7 @@ class V extends (r = i.ZP.Store) {
         return v;
     }
     hasFetchedPreviousPremiumTypeSubscription() {
-        return T;
+        return S;
     }
     getPremiumSubscription() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
@@ -268,7 +268,7 @@ class V extends (r = i.ZP.Store) {
         return b;
     }
     getPreviousPremiumTypeSubscription() {
-        return S;
+        return T;
     }
     getIsSubscriptionEligibleForReward() {
         return N;
@@ -287,8 +287,8 @@ let Z = new V(a.Z, {
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: L,
     BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: x,
     BILLING_SUBSCRIPTION_RESET: U,
-    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_START: k,
-    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: M,
+    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_START: M,
+    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: k,
     BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: j,
     LOGOUT: U
 });

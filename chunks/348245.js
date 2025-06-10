@@ -19,8 +19,8 @@ var a = n(114858),
     O = n(306680),
     v = n(944486),
     I = n(914010),
-    S = n(70956),
-    T = n(198620),
+    T = n(70956),
+    S = n(198620),
     A = n(981631),
     N = n(176505),
     C = n(388032);
@@ -44,7 +44,7 @@ function w(e) {
     let c = b.Z.getChannel(n);
     if ((null == c ? void 0 : c.type) === A.d4z.GUILD_STORE || ((null == c ? void 0 : c.type) != null && A.TPd.GUILD_THREADS_ONLY.has(c.type))) return;
     let f = _.Z.getOrCreate(n);
-    f.some(T.k5) && (P.log('Found expired attachment link, clearing messages'), _.Z.clear(n), (f = _.Z.getOrCreate(n))),
+    f.some(S.k5) && (P.log('Found expired attachment link, clearing messages'), _.Z.clear(n), (f = _.Z.getOrCreate(n))),
         null != f.jumpTargetId &&
             null == r &&
             ((f = f.mutate({
@@ -109,7 +109,7 @@ function w(e) {
             );
         }
 }
-let D = 90 * S.Z.Millis.DAY,
+let D = 90 * T.Z.Millis.DAY,
     L = 'viewedThreadIds';
 function x(e) {
     if (O.ZP.hasOpenedThread(e)) return !1;
@@ -123,7 +123,7 @@ function x(e) {
     for (let e in i) i[e] < n && delete i[e];
     return s.K.set(L, i), !0;
 }
-function k(e) {
+function M(e) {
     var t;
     if (null != r && r.channelId === e) return r;
     let n = (0, a.LX)(location.pathname, {
@@ -135,12 +135,12 @@ function k(e) {
         messageId: null == n || null == (t = n.params) ? void 0 : t.message
     };
 }
-function M() {
+function k() {
     let e = v.Z.getChannelId();
     if (null == e) return;
     let t = b.Z.getChannel(e);
     if (null == t) return;
-    let n = k(t.id);
+    let n = M(t.id);
     (r = void 0),
         w({
             guildId: t.getGuildId(),
@@ -255,7 +255,7 @@ function K(e) {
     let { channelId: n, jump: r, isStale: i, isPreview: a = !1 } = e;
     if (a) return;
     let o = null != (t = W[n]) ? t : 0;
-    if (Date.now() - o < 10 * S.Z.Millis.SECOND) return;
+    if (Date.now() - o < 10 * T.Z.Millis.SECOND) return;
     W[n] = Date.now();
     let s = v.Z.getChannelId(),
         l = E.ZP.getCurrentSidebarChannelId(s),
@@ -290,10 +290,10 @@ function q(e) {
 }
 class X extends f.Z {
     _initialize() {
-        l.Z.subscribe('CONNECTION_OPEN', M);
+        l.Z.subscribe('CONNECTION_OPEN', k);
     }
     _terminate() {
-        l.Z.unsubscribe('CONNECTION_OPEN', M);
+        l.Z.unsubscribe('CONNECTION_OPEN', k);
     }
     constructor(...e) {
         super(...e),
@@ -302,7 +302,7 @@ class X extends f.Z {
             R(this, 'stores', new Map().set(E.ZP, V)),
             R(this, 'actions', {
                 APP_STATE_UPDATE: q,
-                OVERLAY_INITIALIZE: M,
+                OVERLAY_INITIALIZE: k,
                 CHANNEL_SELECT: U,
                 VOICE_CHANNEL_SELECT: G,
                 THREAD_CREATE: H,

@@ -1,7 +1,7 @@
 n.d(t, {
-    $p: () => S,
+    $p: () => T,
     FQ: () => I,
-    Il: () => T,
+    Il: () => S,
     Jf: () => R,
     SA: () => L,
     Um: () => N,
@@ -96,7 +96,7 @@ let I = async (e, t) => {
             n
         );
     },
-    S = async function () {
+    T = async function () {
         let { locale: e = c.default.locale } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         if (h.Z.isFetchingStickerPacks || h.Z.hasLoadedStickerPacks) return;
         o.Z.wait(() => {
@@ -114,7 +114,7 @@ let I = async (e, t) => {
             packs: t
         });
     },
-    T = async (e) => {
+    S = async (e) => {
         let { body: t } = await a.tn.get({
             url: m.ANM.STICKER(e),
             rejectWithError: !1

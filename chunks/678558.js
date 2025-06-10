@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(981631),
     v = n(474936),
     I = n(388032),
-    S = n(412439);
-function T(e, t, n) {
+    T = n(412439);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function A(e) {
                 })
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
@@ -94,7 +94,7 @@ function P(e, t) {
     return i;
 }
 let w = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: T, targetBoostedGuildTier: N, onClose: P = () => {}, closeLayer: w = () => {}, pauseAnimation: D = !1, applicationId: L, handleSubscribeModalClose: x, withHighlight: k = !1, icon: M, intent: j } = e,
+    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: S, targetBoostedGuildTier: N, onClose: P = () => {}, closeLayer: w = () => {}, pauseAnimation: D = !1, applicationId: L, handleSubscribeModalClose: x, withHighlight: M = !1, icon: k, intent: j } = e,
         U = R(e, ['analyticsLocation', 'analyticsSourceLocation', 'guild', 'buttonText', 'targetBoostedGuildTier', 'onClose', 'closeLayer', 'pauseAnimation', 'applicationId', 'handleSubscribeModalClose', 'withHighlight', 'icon', 'intent']),
         { analyticsLocations: G } = (0, d.ZP)(),
         B = (0, u.bp)() === O.IlC.POPOUT,
@@ -128,18 +128,18 @@ let w = (e) => {
         },
         Q = E.ZP.getPremiumTypeSubscription(),
         J = (0, r.jsxs)('div', {
-            className: S.button,
-            children: [M, null != T ? T : I.intl.string(I.t.gKmQ1N)]
+            className: T.button,
+            children: [k, null != S ? S : I.intl.string(I.t.gKmQ1N)]
         }),
         $ = (0, h.o)('GuildBoostingSubscribeButton', Z, H),
         ee = !1;
     return ((ee = null !== Q && !(K.length > 0) && (null == Q ? void 0 : Q.isPausedOrPausePending) && (H === v.a$.NONE || $)) &&
         ((J = (0, r.jsxs)('div', {
-            className: S.button,
+            className: T.button,
             children: [
                 (0, r.jsx)(l.mBM, {
                     size: 'xs',
-                    className: S.buttonIcon
+                    className: T.buttonIcon
                 }),
                 ' ',
                 J
@@ -169,7 +169,7 @@ let w = (e) => {
         : (0, r.jsx)(
               l.gtL,
               C(A({ size: l.zxk.Sizes.SMALL }, U), {
-                  className: o()(U.className, { [S.buttonHighlighted]: k }),
+                  className: o()(U.className, { [T.buttonHighlighted]: M }),
                   submitting: F,
                   onClick: X,
                   pauseAnimation: D,

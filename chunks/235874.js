@@ -109,7 +109,7 @@ function b(e) {
 }
 class y extends (r = a.Component) {
     render() {
-        let { children: e, shouldShow: t, onRequestOpen: n, onRequestClose: r, align: a, fixed: o, useRawTargetDimensions: s, onShiftClick: c, positionKey: u, popoutKey: d, preload: f, disablePointerEvents: _, ignoreModalClicks: p, closeOnScroll: h, useMouseEnter: m, renderPopout: g, layerContext: E, position: y = 'right', autoInvert: O = !0, nudgeAlignIntoViewport: v = !0, spacing: I = 8, clickTrap: S = !1 } = this.props;
+        let { children: e, shouldShow: t, onRequestOpen: n, onRequestClose: r, align: a, fixed: o, useRawTargetDimensions: s, onShiftClick: c, positionKey: u, popoutKey: d, preload: f, disablePointerEvents: _, ignoreModalClicks: p, closeOnScroll: h, useMouseEnter: m, renderPopout: g, layerContext: E, position: y = 'right', autoInvert: O = !0, nudgeAlignIntoViewport: v = !0, spacing: I = 8, clickTrap: T = !1 } = this.props;
         return (0, i.jsx)(l.H, {
             ref: this.ref,
             targetElementRef: this.props.targetElementRef,
@@ -133,7 +133,7 @@ class y extends (r = a.Component) {
             closeOnScroll: h,
             useMouseEnter: m,
             layerContext: E,
-            clickTrap: S,
+            clickTrap: T,
             children: e
         });
     }

@@ -123,13 +123,13 @@ function v(e, t) {
 function I(e) {
     return (0, s.wj)(e) ? f.VZ.BLACK : f.VZ.WHITE;
 }
-function S(e, t, n, r) {
+function T(e, t, n, r) {
     return 'scale('
         .concat(t, ') translate(')
         .concat(0.5625 * e + r, ' ')
         .concat(0.75 * e + n, ')');
 }
-function T(e, t, n) {
+function S(e, t, n) {
     return ''.concat(0.5625 * e + n, 'px ').concat(0.75 * e + t, 'px');
 }
 function A(e) {
@@ -148,8 +148,8 @@ function A(e) {
             cutoutWidth: 0,
             cutoutHeight: 0,
             cutoutRadius: 0,
-            polygonScale: S(t, 0, s, l),
-            polygonOrigin: T(t, s, l),
+            polygonScale: T(t, 0, s, l),
+            polygonOrigin: S(t, s, l),
             dotY: 0.75 * t + s,
             dotX: 0.5 * t + l,
             dotRadius: 0
@@ -168,8 +168,8 @@ function A(e) {
                     cutoutWidth: 0.75 * t,
                     cutoutHeight: 0.75 * t,
                     cutoutRadius: 0,
-                    polygonScale: S(t, 0, s, l),
-                    polygonOrigin: T(t, s, l),
+                    polygonScale: T(t, 0, s, l),
+                    polygonOrigin: S(t, s, l),
                     dotY: 1.25 * t,
                     dotX: 0.5 * t + l,
                     dotRadius: 0.125 * t
@@ -185,8 +185,8 @@ function A(e) {
                 cutoutWidth: 0,
                 cutoutHeight: 0,
                 cutoutRadius: 0,
-                polygonScale: S(t, 0, s, l),
-                polygonOrigin: T(t, s, l),
+                polygonScale: T(t, 0, s, l),
+                polygonOrigin: S(t, s, l),
                 dotY: 0.75 * t + s,
                 dotX: 0.5 * t + l,
                 dotRadius: 0
@@ -203,8 +203,8 @@ function A(e) {
                 cutoutWidth: 0.75 * t,
                 cutoutHeight: 0.75 * t,
                 cutoutRadius: 0.375 * t,
-                polygonScale: S(t, 0, s, l),
-                polygonOrigin: T(t, s, l),
+                polygonScale: T(t, 0, s, l),
+                polygonOrigin: S(t, s, l),
                 dotY: 0.75 * t + s,
                 dotX: 0.5 * t + l,
                 dotRadius: 0
@@ -221,8 +221,8 @@ function A(e) {
                 cutoutWidth: 0.75 * t,
                 cutoutHeight: 0.25 * t,
                 cutoutRadius: 0.125 * t,
-                polygonScale: S(t, 0, s, l),
-                polygonOrigin: T(t, s, l),
+                polygonScale: T(t, 0, s, l),
+                polygonOrigin: S(t, s, l),
                 dotY: 0.75 * t + s,
                 dotX: 0.5 * t + l,
                 dotRadius: 0
@@ -239,8 +239,8 @@ function A(e) {
                 cutoutWidth: 0,
                 cutoutHeight: 0,
                 cutoutRadius: 0.25 * t,
-                polygonScale: S(t, 1, s, l),
-                polygonOrigin: T(t, s, l),
+                polygonScale: T(t, 1, s, l),
+                polygonOrigin: S(t, s, l),
                 dotY: 0.75 * t + s,
                 dotX: 0.5 * t + l,
                 dotRadius: 0
@@ -260,8 +260,8 @@ function A(e) {
                 cutoutWidth: 0.5 * t,
                 cutoutHeight: 0.5 * t,
                 cutoutRadius: 0.25 * t,
-                polygonScale: S(t, 0, s, l),
-                polygonOrigin: T(t, s, l),
+                polygonScale: T(t, 0, s, l),
+                polygonOrigin: S(t, s, l),
                 dotY: 0.75 * t + s,
                 dotX: 0.5 * t + l,
                 dotRadius: 0

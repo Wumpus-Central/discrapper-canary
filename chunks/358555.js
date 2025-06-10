@@ -59,7 +59,7 @@ function I(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -70,7 +70,7 @@ function S(e, t) {
         e
     );
 }
-function T(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -131,7 +131,7 @@ function N(e) {
             children: (e) =>
                 (0, r.jsx)(
                     s.P3F,
-                    S(v({}, e), {
+                    T(v({}, e), {
                         className: y.__invalid_premiumGuildIcon,
                         onClick: p,
                         children: (0, r.jsx)(_.Z, {
@@ -175,7 +175,7 @@ function C(e) {
 }
 function R(e) {
     var { guild: t, disableBoostClick: n } = e,
-        i = T(e, ['guild', 'disableBoostClick']);
+        i = S(e, ['guild', 'disableBoostClick']);
     let a = !(0, l.Q3)('GuildHeaderGuildBadge') && i.isBannerVisible;
     return (0, c.Z)(t)
         ? (0, r.jsx)(C, {

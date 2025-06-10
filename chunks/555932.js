@@ -74,9 +74,9 @@ function O(e) {
         [g, E] = i.useState(0),
         O = i.useRef(null),
         v = s || n,
-        { fillFactor: I, totalAvailableBoostsCount: S } = i.useMemo(() => (0, c.Hl)(t), [t]),
+        { fillFactor: I, totalAvailableBoostsCount: T } = i.useMemo(() => (0, c.Hl)(t), [t]),
         {
-            progressBarFillWidthFactor: T,
+            progressBarFillWidthFactor: S,
             isProgressBarAnimationComplete: A,
             setShouldFireConfetti: N,
             shouldFireConfetti: C,
@@ -86,7 +86,7 @@ function O(e) {
             isRevealed: v,
             useReducedMotion: n,
             premiumTier: t.premiumTier,
-            guildBoostCount: S
+            guildBoostCount: T
         });
     return (
         i.useEffect(() => {
@@ -100,12 +100,12 @@ function O(e) {
         (0, r.jsxs)('div', {
             className: p.progressBar,
             role: 'progressbar',
-            'aria-valuenow': S,
+            'aria-valuenow': T,
             'aria-valuetext':
                 t.premiumTier === f.Eu4.NONE
-                    ? _.intl.formatToPlainString(_.t.Ukqm9v, { numSubscriptionsApplied: S })
+                    ? _.intl.formatToPlainString(_.t.Ukqm9v, { numSubscriptionsApplied: T })
                     : _.intl.formatToPlainString(_.t.qWunaW, {
-                          numSubscriptionsApplied: S,
+                          numSubscriptionsApplied: T,
                           tierName: (0, c.nW)(t.premiumTier, { useLevels: !1 })
                       }),
             children: [
@@ -115,7 +115,7 @@ function O(e) {
                         (0, r.jsx)(a.animated.div, {
                             className: p.progressBarFill,
                             style: {
-                                width: T.to({
+                                width: S.to({
                                     range: [0, 1],
                                     output: [0, 100]
                                 }).to((e) => ''.concat(e, '%'))
@@ -135,7 +135,7 @@ function O(e) {
                             setShouldFireConfetti: N,
                             tier: e,
                             tierMarkerAnimationPosition: R,
-                            totalAvailableBoostsCount: S,
+                            totalAvailableBoostsCount: T,
                             children: (0, c.nW)(e)
                         },
                         e

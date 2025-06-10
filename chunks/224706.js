@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685), n(35282), n(415506);
+n.d(t, { Z: () => M }), n(388685), n(35282), n(415506);
 var r = n(664751),
     i = n(990547),
     a = n(243814),
@@ -20,8 +20,8 @@ var r = n(664751),
     O = n(358085),
     v = n(573261),
     I = n(278323),
-    S = n(58642),
-    T = n(254854),
+    T = n(58642),
+    S = n(254854),
     A = n(981631),
     N = n(701488),
     C = n(388032);
@@ -142,7 +142,7 @@ async function x(e) {
                   });
               })
               .catch((e) => {
-                  T.Z.show(A.kVF.LAUNCH_GAME_FAILURE, C.intl.string(C.t.YZEBdn)),
+                  S.Z.show(A.kVF.LAUNCH_GAME_FAILURE, C.intl.string(C.t.YZEBdn)),
                       l.Z.dispatch({
                           type: 'GAME_LAUNCH_FAIL',
                           applicationId: t,
@@ -156,7 +156,7 @@ async function x(e) {
           }),
           Promise.reject(f));
 }
-let k = {
+let M = {
     addGame(e, t) {
         l.Z.dispatch({
             type: 'RUNNING_GAME_ADD_OVERRIDE',
@@ -173,7 +173,7 @@ let k = {
                     i = b.yE(r, A.eHb.OVERLAY_DISABLED);
                 t && i !== t && (r = b.x9(r, A.eHb.OVERLAY_DISABLED));
                 let a = b.yE(r, A.eHb.OVERLAY_V3_DISABLED);
-                null != n && n !== a && (r = b.x9(r, A.eHb.OVERLAY_V3_DISABLED)), S.h(e.id, e.branchId, r);
+                null != n && n !== a && (r = b.x9(r, A.eHb.OVERLAY_V3_DISABLED)), T.h(e.id, e.branchId, r);
                 return;
             }
         }

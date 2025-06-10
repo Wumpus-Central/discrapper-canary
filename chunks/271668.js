@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(367790),
     v = n(895924),
     I = n(581364),
-    S = n(56801),
-    T = n(342687),
+    T = n(56801),
+    S = n(342687),
     A = n(826298),
     N = n(689079),
     C = n(981631),
@@ -31,8 +31,8 @@ var r = n(255367),
 let D = 512,
     L = 7,
     x = 56,
-    k = 16,
-    M = 32,
+    M = 16,
+    k = 32,
     j = 20,
     U = 420,
     G = [8, 8, 0, 8],
@@ -91,7 +91,7 @@ let D = 512,
                 searchQuery: ''
             }),
             er = (e) => {
-                let t = q.length * (M + k) + (X.reduce((e, t) => e + t.data.length, 0) - (Q ? L : 0)) * x - D;
+                let t = q.length * (k + M) + (X.reduce((e, t) => e + t.data.length, 0) - (Q ? L : 0)) * x - D;
                 Q && e + U > t && ee(), en(e), B(), (l.current = e);
             },
             ei = i.useRef(er);
@@ -101,7 +101,7 @@ let D = 512,
             i.useEffect(() => {
                 ei.current(l.current);
             }, [J]);
-        let ea = i.useCallback((e) => (e !== q.length - 1 || Q ? k : 0), [q.length, Q]),
+        let ea = i.useCallback((e) => (e !== q.length - 1 || Q ? M : 0), [q.length, Q]),
             eo = X.map((e) => e.data.length);
         i.useEffect(() => {
             null != H.current && Y && null != F && H.current.scrollRowIntoView(F);
@@ -216,7 +216,7 @@ let D = 512,
                     let a = X[t.sectionIndex],
                         o = a.data[t.sectionRowIndex],
                         s = ''.concat(a.section.id, ':').concat(null != (i = null == o ? void 0 : o.id) ? i : e);
-                    if (null == o || (a.section.id !== o.applicationId && a.section.id !== N.bi.FRECENCY) || o.inputType === v.iw.PLACEHOLDER) return (0, r.jsx)(T.Z, {}, s);
+                    if (null == o || (a.section.id !== o.applicationId && a.section.id !== N.bi.FRECENCY) || o.inputType === v.iw.PLACEHOLDER) return (0, r.jsx)(S.Z, {}, s);
                     let l = z.find((e) => e.id === o.applicationId);
                     return (0, r.jsx)(
                         f.ZP.NewCommand,
@@ -253,7 +253,7 @@ let D = 512,
                 innerClassName: P.wrapper,
                 onMouseDown: V,
                 children: [
-                    (0, r.jsx)(S.Z, {
+                    (0, r.jsx)(T.Z, {
                         className: P.rail,
                         channel: n,
                         sections: z,
@@ -273,7 +273,7 @@ let D = 512,
                         rowCount: q.length,
                         rowCountBySection: eo,
                         rowHeight: x,
-                        sectionHeaderHeight: M,
+                        sectionHeaderHeight: k,
                         sectionMarginBottom: ea,
                         ref: H,
                         stickyHeaders: !0

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(147913),
     i = n(460181),
     a = n(474873),
@@ -53,7 +53,7 @@ function O(e, t, n) {
 }
 let v = (0, i.uk)('call_calling', a.Z.getSoundpack());
 var I = new WeakMap();
-class S extends r.Z {
+class T extends r.Z {
     _initialize() {
         this.stores = new Map().set(o.Z, this.handleRingUpdate).set(l.Z, this.handleRingUpdate).set(u.Z, this.handleRingUpdate).set(d.Z, this.handleRingUpdate).set(_.Z, this.handleChannelRTCStoreChange).set(a.Z, this.handleSoundpackUpdate);
     }
@@ -115,4 +115,4 @@ class S extends r.Z {
             });
     }
 }
-let T = new S();
+let S = new T();

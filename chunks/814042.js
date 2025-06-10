@@ -30,20 +30,20 @@ let v = () => (0, h.f)(!1),
                 location_stack: I
             });
         }, [I]);
-        let S = (0, d.N)(),
-            T = (0, u.Ng)(),
-            A = (null == S || null == (t = S.subscription_trial) ? void 0 : t.sku_id) === E.Si.TIER_0,
-            N = null != S || null != T;
+        let T = (0, d.N)(),
+            S = (0, u.Ng)(),
+            A = (null == T || null == (t = T.subscription_trial) ? void 0 : t.sku_id) === E.Si.TIER_0,
+            N = null != T || null != S;
         return (0, r.jsxs)('div', {
             className: o()(y.upsellWrapper, { [y.unifyTrialUpsell]: N }),
             children: [
                 N
                     ? (0, r.jsx)(f.ZP, {
-                          trialOffer: S,
-                          discountOffer: T,
+                          trialOffer: T,
+                          discountOffer: S,
                           onClose: v,
                           type: E.cd.STICKER_PICKER_UPSELL,
-                          subscriptionTier: null != (a = null == S || null == (n = S.subscription_trial) ? void 0 : n.sku_id) ? a : E.Si.TIER_2,
+                          subscriptionTier: null != (a = null == T || null == (n = T.subscription_trial) ? void 0 : n.sku_id) ? a : E.Si.TIER_2,
                           children: A
                               ? b.intl.format(b.t.MAGag4, {
                                     planName: (0, p.aq)(E.Xh.PREMIUM_MONTH_TIER_0),

@@ -8,7 +8,7 @@ n.d(t, {
     _U: () => m,
     fL: () => E,
     gG: () => s,
-    gv: () => S,
+    gv: () => T,
     j8: () => p,
     nz: () => h,
     p: () => a,
@@ -57,6 +57,6 @@ let b = 100,
 var I = (function (e) {
         return (e.NEW_EVENT = 'Upcoming Event Notice'), (e.EVENT_STARTING_SOON = 'Event Starting Soon Notice'), e;
     })({}),
-    S = (function (e) {
+    T = (function (e) {
         return (e[(e.UNINTERESTED = 0)] = 'UNINTERESTED'), (e[(e.INTERESTED = 1)] = 'INTERESTED'), e;
     })({});

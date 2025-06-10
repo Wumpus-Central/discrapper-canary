@@ -14,7 +14,7 @@ function _(e) {
         O = i.useRef(null),
         v = i.useRef(null),
         I = i.useId(),
-        S = (0, r.jsx)(l.r, {
+        T = (0, r.jsx)(l.r, {
             id: I,
             checked: t,
             onChange: p,
@@ -47,9 +47,9 @@ function _(e) {
                                 null != _
                                     ? (0, r.jsx)(c.DY, {
                                           text: _,
-                                          children: S
+                                          children: T
                                       })
-                                    : S
+                                    : T
                         })
                     ]
                 })

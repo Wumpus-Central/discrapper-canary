@@ -1,7 +1,7 @@
 n.d(t, {
     default: () => U,
     h: () => j,
-    j: () => M
+    j: () => k
 }),
     n(388685);
 var r = n(255367),
@@ -25,8 +25,8 @@ var r = n(255367),
     O = n(63063),
     v = n(74538),
     I = n(272008),
-    S = n(497505),
-    T = n(981631),
+    T = n(497505),
+    S = n(981631),
     A = n(675654),
     N = n(474936),
     C = n(388032),
@@ -41,11 +41,11 @@ function L(e) {
         [b, y] = i.useState(null),
         O = i.useRef(new s.qA()),
         v = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
-        T = (null == (t = m.userStatus) ? void 0 : t.claimedAt) != null,
+        S = (null == (t = m.userStatus) ? void 0 : t.claimedAt) != null,
         [N, C] = i.useState({ state: 'loading' });
     i.useEffect(() => {
-        T ||
-            (0, I.QB)(m.id, S.y$.CROSS_PLATFORM, g)
+        S ||
+            (0, I.QB)(m.id, T.y$.CROSS_PLATFORM, g)
                 .then((e) => {
                     if ((null == e ? void 0 : e.claimedAt) != null)
                         return void C({
@@ -63,9 +63,9 @@ function L(e) {
                         errorReason: 0
                     });
                 });
-    }, [m, g, T]);
+    }, [m, g, S]);
     let P = 'loading' === N.state,
-        w = !v && !T && 'claimed' === N.state,
+        w = !v && !S && 'claimed' === N.state,
         D = 'claimed' === N.state && null != N.entitlements && N.entitlements.items.some((e) => e.consumed);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -90,12 +90,12 @@ function L(e) {
                                 onClose: p
                             })
                           : D
-                            ? (0, r.jsx)(M, {
-                                  duration: k(null != (u = null == (n = N.entitlements) ? void 0 : n.items) ? u : []),
+                            ? (0, r.jsx)(k, {
+                                  duration: M(null != (u = null == (n = N.entitlements) ? void 0 : n.items) ? u : []),
                                   onClose: p
                               })
                             : (0, r.jsx)(j, {
-                                  duration: k(null != (d = null == (a = N.entitlements) ? void 0 : a.items) ? d : []),
+                                  duration: M(null != (d = null == (a = N.entitlements) ? void 0 : a.items) ? d : []),
                                   onClose: p
                               })
                 })
@@ -149,11 +149,11 @@ function x(e) {
         ]
     });
 }
-function k(e) {
+function M(e) {
     let t = (0, v.xG)(e.map((e) => e.skuId));
     return t % 24 == 0 ? C.intl.formatToPlainString(C.t['Cz1G9/'], { days: t / 24 }) : C.intl.formatToPlainString(C.t.J9Lu4u, { hours: t });
 }
-function M(e) {
+function k(e) {
     let { duration: t, onClose: n } = e,
         { theme: a } = (0, c.TCT)(),
         o = (0, p.Z)({ forceFetch: !0 }),
@@ -201,7 +201,7 @@ function M(e) {
                               variant: 'text-md/normal',
                               className: R.text,
                               children: C.intl.format(C.t.tgc1oq, {
-                                  helpCenterLink: O.Z.getArticleURL(T.BhN.FRACTIONAL_PREMIUM_ABOUT),
+                                  helpCenterLink: O.Z.getArticleURL(S.BhN.FRACTIONAL_PREMIUM_ABOUT),
                                   duration: t,
                                   expirationDate: s
                               })
@@ -221,7 +221,7 @@ function j(e) {
         a = (0, p.Z)({ forceFetch: !0 }),
         s = (0, f.ZP)(),
         l = i.useCallback(() => {
-            u.Z.open(T.oAB.SUBSCRIPTIONS, null, {}), n();
+            u.Z.open(S.oAB.SUBSCRIPTIONS, null, {}), n();
         }, [n]);
     if (!a.fetched)
         return (0, r.jsx)('div', {
@@ -231,7 +231,7 @@ function j(e) {
     let d = a.isFractionalPremiumActive
         ? C.intl.string(C.t['1ku8i4'])
         : C.intl.format(C.t.fI1nLy, {
-              helpCenterLink: O.Z.getArticleURL(T.BhN.FRACTIONAL_PREMIUM_ABOUT),
+              helpCenterLink: O.Z.getArticleURL(S.BhN.FRACTIONAL_PREMIUM_ABOUT),
               duration: t
           });
     return (0, r.jsx)(c.f6W, {

@@ -147,13 +147,13 @@ function I(e) {
     let { overrideEligibility: r } = (0, _.j)({ location: 'FeedbackManager' });
     if (r) return !0;
     let i = null != (t = d.Z.getFeedbackConfig(e)) ? t : v[e],
-        a = [T, S],
+        a = [S, T],
         { doGroupEligibilityCheck: o } = (0, p.T)({ location: 'FeedbackManager' });
     o ? a.push(N) : a.push((e) => A(e, e));
     let s = null != (n = i.eligibilityChecks) ? n : [];
     return a.every((e) => e(i)) && s.every((e) => e(i));
 }
-function S(e) {
+function T(e) {
     let { persistToBackend: t } = (0, f.O)({ location: 'FeedbackManager/'.concat(e.feedbackType) });
     if (!t) return s.Z.hasHotspot(e.hotspot);
     {
@@ -164,7 +164,7 @@ function S(e) {
         return i && !r && c.A2.updateSetting((t) => b(g({}, t), { [e.feedbackType]: b(g({}, t[e.feedbackType]), { optOutExpiryTime: h.uf }) })), !r && !i;
     }
 }
-function T(e) {
+function S(e) {
     return Math.random() < e.chance;
 }
 function A(e, t) {

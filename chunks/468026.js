@@ -17,17 +17,17 @@ let m = (e) => {
     let t,
         n,
         i,
-        { body: m, cancelText: g, className: E, confirmColor: b, confirmText: y = p.intl.string(p.t.BddRzc), secondaryConfirmText: O, onCancel: v, onClose: I, onConfirm: S, onConfirmSecondary: T, title: A, transitionState: N, titleClassName: C } = e,
+        { body: m, cancelText: g, className: E, confirmColor: b, confirmText: y = p.intl.string(p.t.BddRzc), secondaryConfirmText: O, onCancel: v, onClose: I, onConfirm: T, onConfirmSecondary: S, title: A, transitionState: N, titleClassName: C } = e,
         R = (0, _.Q3)('ConfirmModal'),
         P = R ? o.zx.Sizes.MEDIUM : o.zx.Sizes.LARGE,
         w = () => {
             null == I || I(), null == v || v();
         },
         D = (e) => {
-            null != e && e.preventDefault(), null == I || I(), null == S || S();
+            null != e && e.preventDefault(), null == I || I(), null == T || T();
         },
         L = () => {
-            null == I || I(), null == T || T();
+            null == I || I(), null == S || S();
         };
     return (
         null != g &&

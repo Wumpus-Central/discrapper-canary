@@ -32,13 +32,13 @@ let m = {},
     O = !1,
     v = !1,
     I = new Set(),
-    S = new Set(),
-    T = {};
+    T = new Set(),
+    S = {};
 function A() {
-    (m = {}), (E = {}), (b = {}), (y = !1), (O = !1), (v = !1), (I = new Set()), (S = new Set());
+    (m = {}), (E = {}), (b = {}), (y = !1), (O = !1), (v = !1), (I = new Set()), (T = new Set());
 }
 function N(e) {
-    (m[e.id] = c.Z.createFromServer(e)), null == E[e.sku_id] && (E[e.sku_id] = new Set()), null == b[e.application_id] && (b[e.application_id] = new Set()), null != e.subscription_id && (null == T[e.subscription_id] && (T[e.subscription_id] = new Set()), T[e.subscription_id].add(e.id)), b[e.application_id].add(e.id), E[e.sku_id].add(e.id);
+    (m[e.id] = c.Z.createFromServer(e)), null == E[e.sku_id] && (E[e.sku_id] = new Set()), null == b[e.application_id] && (b[e.application_id] = new Set()), null != e.subscription_id && (null == S[e.subscription_id] && (S[e.subscription_id] = new Set()), S[e.subscription_id].add(e.id)), b[e.application_id].add(e.id), E[e.sku_id].add(e.id);
 }
 function C(e) {
     g[e.id] = c.Z.createFromServer(e);
@@ -49,7 +49,7 @@ function R(e) {
     null != t && t.delete(e.id);
     let n = E[e.sku_id];
     if ((null != n && n.delete(e.id), null != e.subscription_id)) {
-        let t = T[e.subscription_id];
+        let t = S[e.subscription_id];
         null != t && t.delete(e.id);
     }
 }
@@ -59,7 +59,7 @@ function P(e) {
 }
 function w(e) {
     let { applicationId: t, entitlements: n } = e;
-    for (let e of (I.delete(t), S.add(t), n)) !0 !== e.consumed && N(e);
+    for (let e of (I.delete(t), T.add(t), n)) !0 !== e.consumed && N(e);
 }
 function D(e) {
     let { entitlements: t } = e;
@@ -69,11 +69,11 @@ function L() {}
 function x() {
     y = !0;
 }
-function k(e) {
+function M(e) {
     let { entitlements: t, excludeEnded: n } = e;
     for (let e of ((O = !0), (y = !1), (v = !n), t)) N(e);
 }
-function M() {
+function k() {
     (O = !1), (y = !1), (v = !1);
 }
 function j(e) {
@@ -127,7 +127,7 @@ class F extends (r = s.yh) {
         return I;
     }
     get applicationIdsFetched() {
-        return S;
+        return T;
     }
     isFetchingForApplication(e) {
         return this.fetchingAllEntitlements || (null != e && this.applicationIdsFetching.has(e));
@@ -136,7 +136,7 @@ class F extends (r = s.yh) {
         return this.fetchedAllEntitlements || (null != e && this.applicationIdsFetched.has(e));
     }
     getForSubscription(e) {
-        let t = T[e];
+        let t = S[e];
         if (null == t) return null;
         let n = new Set();
         for (let e of t) n.add(m[e]);
@@ -150,12 +150,12 @@ class F extends (r = s.yh) {
                 let n = m[t];
                 if (null != n && n.isValid(e, f.Z, r)) return !0;
             }
-        if (S.has(n)) return !1;
+        if (T.has(n)) return !1;
         let a = null != r ? u.Z.getLibraryApplication(n, r) : u.Z.getActiveLibraryApplication(n);
         return !!(null != a && a.sku.id === t && (0, d.Je)(a)) || null;
     }
     hasFetchedForApplicationIds(e) {
-        return e.every((e) => S.has(e));
+        return e.every((e) => T.has(e));
     }
     getReverseTrialEntitlement(e) {
         let t = new Date(),
@@ -218,6 +218,6 @@ let V = new F(l.Z, {
     ENTITLEMENT_DELETE: B,
     LOGOUT: A,
     ENTITLEMENTS_FETCH_FOR_USER_START: x,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: k,
-    ENTITLEMENTS_FETCH_FOR_USER_FAIL: M
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: M,
+    ENTITLEMENTS_FETCH_FOR_USER_FAIL: k
 });

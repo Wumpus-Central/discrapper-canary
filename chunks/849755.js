@@ -22,8 +22,8 @@ function v(e) {
     let { voiceChannel: t, onAction: n, onClose: a } = e,
         { themeType: v } = (0, m.z)(),
         { analyticsLocations: I } = (0, c.ZP)(),
-        S = (0, p.W)(t),
-        T = (0, u.ZP)(t, !0),
+        T = (0, p.W)(t),
+        S = (0, u.ZP)(t, !0),
         A = (0, s.e7)([f.Z], () => f.Z.getChannelStatus(t)),
         N = i.useMemo(() => (null == A || '' === A ? null : _.Z.parseVoiceChannelStatus(A, !0, { channelId: t.id })), [A, t.id]);
     i.useEffect(() => {
@@ -43,7 +43,7 @@ function v(e) {
                 sourceAnalyticsLocations: I
             });
     };
-    return T && S
+    return S && T
         ? (0, r.jsxs)(l.P3F, {
               className: O.clickable,
               onClick: C,

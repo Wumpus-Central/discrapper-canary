@@ -118,7 +118,7 @@ function v(e, t) {
         return r('SemVer.compare', this.version, this.options, e), e instanceof y || (e = new y(e, this.options)), this.compareMain(e) || this.comparePre(e);
     }),
     (y.prototype.compareMain = function (e) {
-        return e instanceof y || (e = new y(e, this.options)), S(this.major, e.major) || S(this.minor, e.minor) || S(this.patch, e.patch);
+        return e instanceof y || (e = new y(e, this.options)), T(this.major, e.major) || T(this.minor, e.minor) || T(this.patch, e.patch);
     }),
     (y.prototype.comparePre = function (e) {
         if ((e instanceof y || (e = new y(e, this.options)), this.prerelease.length && !e.prerelease.length)) return -1;
@@ -132,7 +132,7 @@ function v(e, t) {
             if (void 0 === i) return 1;
             if (void 0 === n) return -1;
             else if (n === i) continue;
-            else return S(n, i);
+            else return T(n, i);
         } while (++t);
     }),
     (y.prototype.compareBuild = function (e) {
@@ -145,7 +145,7 @@ function v(e, t) {
             if (void 0 === i) return 1;
             if (void 0 === n) return -1;
             else if (n === i) continue;
-            else return S(n, i);
+            else return T(n, i);
         } while (++t);
     }),
     (y.prototype.inc = function (e, t) {
@@ -186,15 +186,15 @@ function v(e, t) {
     }),
     (t.inc = O),
     (t.diff = v),
-    (t.compareIdentifiers = S);
+    (t.compareIdentifiers = T);
 var I = /^[0-9]+$/;
-function S(e, t) {
+function T(e, t) {
     var n = I.test(e),
         r = I.test(t);
     return n && r && ((e *= 1), (t *= 1)), e === t ? 0 : n && !r ? -1 : r && !n ? 1 : e < t ? -1 : 1;
 }
-function T(e, t) {
-    return S(t, e);
+function S(e, t) {
+    return T(t, e);
 }
 function A(e, t) {
     return new y(e, t).major;
@@ -229,10 +229,10 @@ function x(e, n) {
         return t.compareBuild(r, e, n);
     });
 }
-function k(e, t, n) {
+function M(e, t, n) {
     return R(e, t, n) > 0;
 }
-function M(e, t, n) {
+function k(e, t, n) {
     return 0 > R(e, t, n);
 }
 function j(e, t, n) {
@@ -260,11 +260,11 @@ function F(e, t, n, r) {
         case '!=':
             return U(e, n, r);
         case '>':
-            return k(e, n, r);
+            return M(e, n, r);
         case '>=':
             return G(e, n, r);
         case '<':
-            return M(e, n, r);
+            return k(e, n, r);
         case '<=':
             return B(e, n, r);
         default:
@@ -285,7 +285,7 @@ function V(e, t) {
     if (!(this instanceof V)) return new V(e, t);
     r('comparator', e, t), (this.options = t), (this.loose = !!t.loose), this.parse(e), this.semver === Z ? (this.value = '') : (this.value = this.operator + this.semver.version), r('comp', this);
 }
-(t.rcompareIdentifiers = T), (t.major = A), (t.minor = N), (t.patch = C), (t.compare = R), (t.compareLoose = P), (t.compareBuild = w), (t.rcompare = D), (t.sort = L), (t.rsort = x), (t.gt = k), (t.lt = M), (t.eq = j), (t.neq = U), (t.gte = G), (t.lte = B), (t.cmp = F), (t.Comparator = V);
+(t.rcompareIdentifiers = S), (t.major = A), (t.minor = N), (t.patch = C), (t.compare = R), (t.compareLoose = P), (t.compareBuild = w), (t.rcompare = D), (t.sort = L), (t.rsort = x), (t.gt = M), (t.lt = k), (t.eq = j), (t.neq = U), (t.gte = G), (t.lte = B), (t.cmp = F), (t.Comparator = V);
 var Z = {};
 function H(e, t) {
     if (
@@ -468,7 +468,7 @@ function es(e, t) {
                     0 === t.prerelease.length ? t.patch++ : t.prerelease.push(0), (t.raw = t.format());
                 case '':
                 case '>=':
-                    (!n || k(n, t)) && (n = t);
+                    (!n || M(n, t)) && (n = t);
                     break;
                 case '<':
                 case '<=':
@@ -495,10 +495,10 @@ function eu(e, t, n) {
 function ed(e, t, n, r) {
     switch (((e = new y(e, r)), (t = new H(t, r)), n)) {
         case '>':
-            (i = k), (a = B), (o = M), (s = '>'), (l = '>=');
+            (i = M), (a = B), (o = k), (s = '>'), (l = '>=');
             break;
         case '<':
-            (i = M), (a = G), (o = k), (s = '<'), (l = '<=');
+            (i = k), (a = G), (o = M), (s = '<'), (l = '<=');
             break;
         default:
             throw TypeError('Must provide a hilo val of "<" or ">"');

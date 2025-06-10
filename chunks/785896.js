@@ -29,14 +29,14 @@ let u = (e, t, n) => {
             b = null != s ? l.JO.createFromGuildRecord(s) : null,
             [y, O] = r.useState(b),
             [v, I] = r.useState(null),
-            S = r.useRef(n);
+            T = r.useRef(n);
         return (
             r.useEffect(() => {
-                S.current = n;
+                T.current = n;
             }),
             r.useEffect(() => {
                 var e, n;
-                null == (e = S.current) || e.call(S);
+                null == (e = T.current) || e.call(T);
                 let r = async () => {
                     var e;
                     let n = null != t ? await (0, l.Fi)(t) : null;
@@ -48,10 +48,10 @@ let u = (e, t, n) => {
                             case l.w6.GUILD:
                                 O(n.guild);
                         }
-                    m(!1), null == (e = S.current) || e.call(S);
+                    m(!1), null == (e = T.current) || e.call(T);
                 };
                 if (p) return void r();
-                null == (n = S.current) || n.call(S);
+                null == (n = T.current) || n.call(T);
             }, [t, p]),
             {
                 expressionSourceGuild: y,

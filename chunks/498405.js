@@ -99,11 +99,11 @@ function m(e) {
         });
     }, [n]);
     let { focusPath: v } = b,
-        [I, S] = r.useState(!1),
-        [T, A] = r.useState(!1),
+        [I, T] = r.useState(!1),
+        [S, A] = r.useState(!1),
         [{ onItemFocusMemoizer: N, onItemMouseEnterMemoizer: C }] = r.useState(() => ({
             onItemFocusMemoizer: new o.$o((e) => () => {
-                S(!0),
+                T(!0),
                     y({
                         type: i.B.SET_FOCUS_PATH,
                         path: e.split(d)
@@ -140,11 +140,11 @@ function m(e) {
             [O, t, v, c, g]
         ),
         P = r.useCallback(() => {
-            I || S(!0);
+            I || T(!0);
         }, [I]),
         w = r.useCallback(
             (e) => {
-                e.target !== e.currentTarget && !e.currentTarget.contains(e.relatedTarget) && I && S(!1);
+                e.target !== e.currentTarget && !e.currentTarget.contains(e.relatedTarget) && I && T(!1);
             },
             [I]
         ),
@@ -153,7 +153,7 @@ function m(e) {
                 type: i.B.SET_FOCUS_PATH,
                 path: []
             }),
-                S(!1);
+                T(!1);
         }, []),
         L = r.useCallback((e) => e.every((e, t) => v[t] === e), [v]),
         x = r.useCallback(
@@ -169,7 +169,7 @@ function m(e) {
             }),
             [t, R, P, w, D, v]
         ),
-        k = r.useCallback(
+        M = r.useCallback(
             (e) => {
                 let { path: n } = e;
                 return {
@@ -177,12 +177,12 @@ function m(e) {
                     tabIndex: -1,
                     'aria-activedescendant': L(n) ? (0, o.qR)(t, v.join(d)) : void 0,
                     focusIndex: b.focusIndex,
-                    isUsingKeyboardNavigation: T
+                    isUsingKeyboardNavigation: S
                 };
             },
-            [t, v, L, b.focusIndex, T]
+            [t, v, L, b.focusIndex, S]
         ),
-        M = r.useCallback(
+        k = r.useCallback(
             (e) => {
                 let { path: n, hasSubmenu: r = !1, navigable: i = !0, role: a = 'menuitem' } = e,
                     s = n.join(d);
@@ -211,11 +211,11 @@ function m(e) {
         () => ({
             dispatch: O,
             getContainerProps: x,
-            getSubmenuProps: k,
-            getItemProps: M,
+            getSubmenuProps: M,
+            getItemProps: k,
             isFocused: L,
-            isUsingKeyboardNavigation: T
+            isUsingKeyboardNavigation: S
         }),
-        [O, x, k, M, L, T]
+        [O, x, M, k, L, S]
     );
 }

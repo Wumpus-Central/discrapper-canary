@@ -101,7 +101,7 @@ function I() {
         g.pendingUsages
     );
 }
-function S(e) {
+function T(e) {
     let {
         settings: { type: t },
         wasSaved: n
@@ -109,7 +109,7 @@ function S(e) {
     if (t !== f.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
     g.pendingUsages = [];
 }
-class T extends (r = o.ZP.PersistedStore) {
+class S extends (r = o.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(d.Z), null != e && (g = e), this.syncWith([d.Z], v), this.syncWith([c.Z], I);
     }
@@ -123,8 +123,8 @@ class T extends (r = o.ZP.PersistedStore) {
         return b;
     }
 }
-_(T, 'displayName', 'StickersPersistedStore'), _(T, 'persistKey', 'StickersPersistedStoreV2');
-let A = new T(s.Z, {
+_(S, 'displayName', 'StickersPersistedStore'), _(S, 'persistKey', 'StickersPersistedStoreV2');
+let A = new S(s.Z, {
     STICKER_TRACK_USAGE: O,
-    USER_SETTINGS_PROTO_UPDATE: S
+    USER_SETTINGS_PROTO_UPDATE: T
 });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => S });
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -68,7 +68,7 @@ function I(e, t) {
         e
     );
 }
-function S(e, t) {
+function T(e, t) {
     (0, o.ZDy)(
         async () => {
             let { default: e } = await n.e('28479').then(n.bind(n, 78865));
@@ -77,9 +77,9 @@ function S(e, t) {
         { contextKey: e === m.IlC.POPOUT ? o.u1M : o.z1l }
     );
 }
-function T(e, t) {
+function S(e, t) {
     let { preset: n, resolution: y, fps: v } = (0, a.cj)([u.Z], () => u.Z.getState()),
-        T = (0, a.e7)([_.Z], () => _.Z.getGoLiveSource()),
+        S = (0, a.e7)([_.Z], () => _.Z.getGoLiveSource()),
         A = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
         N = (0, a.e7)([f.Z], () => {
             var t;
@@ -90,7 +90,7 @@ function T(e, t) {
         P = i.useCallback(
             (e, n, r, i) => {
                 if (e) {
-                    if (null != T) {
+                    if (null != S) {
                         let e = {
                             qualityOptions: {
                                 preset: g.tI.PRESET_CUSTOM,
@@ -99,20 +99,20 @@ function T(e, t) {
                             },
                             context: E.Yn.STREAM
                         };
-                        null != T.desktopSource
+                        null != S.desktopSource
                             ? (e.desktopSettings = {
-                                  sourceId: T.desktopSource.id,
+                                  sourceId: S.desktopSource.id,
                                   sound: !0
                               })
-                            : null != T.cameraSource &&
+                            : null != S.cameraSource &&
                               (e.cameraSettings = {
-                                  videoDeviceGuid: T.cameraSource.videoDeviceGuid,
-                                  audioDeviceGuid: T.cameraSource.audioDeviceGuid
+                                  videoDeviceGuid: S.cameraSource.videoDeviceGuid,
+                                  audioDeviceGuid: S.cameraSource.audioDeviceGuid
                               }),
                             s.Z.setGoLiveSource(e);
                     }
                 } else
-                    S(
+                    T(
                         t,
                         I(O({}, C), {
                             object: m.qAy.RADIO_ITEM,
@@ -120,7 +120,7 @@ function T(e, t) {
                         })
                     );
             },
-            [t, C, T]
+            [t, C, S]
         );
     if (null == e) return null;
     let w = n === g.tI.PRESET_DOCUMENTS ? g.ws.FPS_30 : v,

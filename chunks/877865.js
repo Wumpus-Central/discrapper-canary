@@ -70,7 +70,7 @@ let O = i.lazy(() => Promise.all([n.e('21153'), n.e('24530')]).then(n.bind(n, 93
 function I(e, t) {
     return e.length < 1 ? 0 : (t / (e.length - 1)) * 80 + 10;
 }
-function S(e) {
+function T(e) {
     let { colors: t, selectedIndex: n, onColorSelect: a } = e,
         [o, s] = i.useMemo(() => {
             let e = t.map((e, n) => I(t, n)),
@@ -108,7 +108,7 @@ function S(e) {
         })
     });
 }
-function T(e) {
+function S(e) {
     if (!(0, c.FX)(e)) return e;
     let t = o()(e);
     return t.set('hsl.h', (t.get('hsl.h') + 15) % 360).hex();
@@ -149,7 +149,7 @@ function A(e) {
         D = () => {
             if (o.length === v) return;
             let e = o.length > 0 ? o[o.length - 1] : A,
-                t = o.length > 0 ? T(e) : e,
+                t = o.length > 0 ? S(e) : e,
                 n = [...o, t];
             s(n), I(n.length - 1);
         },
@@ -162,7 +162,7 @@ function A(e) {
         x = (e) => {
             I(e);
         },
-        k = o.length > 1;
+        M = o.length > 1;
     return (0, r.jsxs)('div', {
         className: l()(m.container, a),
         children: [
@@ -194,8 +194,8 @@ function A(e) {
                     })
                 ]
             }),
-            k &&
-                (0, r.jsx)(S, {
+            M &&
+                (0, r.jsx)(T, {
                     colors: o,
                     selectedIndex: b,
                     onColorSelect: x
@@ -247,7 +247,7 @@ function A(e) {
                                             )
                                         )
                                 }),
-                            k &&
+                            M &&
                                 (0, r.jsx)(f.ua7, {
                                     text: h.intl.string(p.default['rTik5+']),
                                     children: (e) =>

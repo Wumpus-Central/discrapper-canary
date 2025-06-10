@@ -27,8 +27,8 @@ var r = n(525654),
     O = n(281956),
     v = n(931261),
     I = n(15274),
-    S = n(924301),
-    T = n(461014),
+    T = n(924301),
+    S = n(461014),
     A = n(82085),
     N = n(264229),
     C = n(652898),
@@ -38,8 +38,8 @@ var r = n(525654),
     D = n(922482),
     L = n(131704),
     x = n(314897),
-    k = n(592125),
-    M = n(984933),
+    M = n(592125),
+    k = n(984933),
     j = n(271383),
     U = n(430824),
     G = n(341165),
@@ -135,8 +135,8 @@ function eu(e, t, n) {
     var r, i;
     if ((null == n ? void 0 : n.targetType) === ee.Iq.ROLE_SUBSCRIPTIONS_PURCHASE) return J.oC.ROLE_SUBSCRIPTIONS;
     if ((null == n ? void 0 : n.targetType) == null && !L.tx.has(t.type) && (0, v.s)(e)) return J.oC.GUILD_HOME;
-    let a = k.Z.getChannel(t.id);
-    return B.Z.can(Q.Plq.VIEW_CHANNEL, a) ? t.id : null != (i = null == (r = M.ZP.getDefaultChannel(e, !0, Q.Plq.CREATE_INSTANT_INVITE)) ? void 0 : r.id) ? i : t.id;
+    let a = M.Z.getChannel(t.id);
+    return B.Z.can(Q.Plq.VIEW_CHANNEL, a) ? t.id : null != (i = null == (r = k.ZP.getDefaultChannel(e, !0, Q.Plq.CREATE_INSTANT_INVITE)) ? void 0 : r.id) ? i : t.id;
 }
 function ed(e, t) {
     let { type: n } = e,
@@ -155,10 +155,10 @@ function ef(e) {
         { targetUserId: l, targetType: c, targetApplicationId: u, isGuestInvite: f, isApplicationBypassInvite: _ } = null != i ? i : {};
     if (!f && !_ && !(null == i ? void 0 : i.forceTransition) && s && F.Z.getGuildId() !== t) return;
     let { type: p } = r,
-        E = k.Z.getChannel(r.id),
+        E = M.Z.getChannel(r.id),
         v = eu(t, r, i),
         I = p === Q.d4z.GUILD_STAGE_VOICE,
-        S = Q.Z5c.CHANNEL(t, v);
+        T = Q.Z5c.CHANNEL(t, v);
     L.tx.has(p)
         ? (0, b.h)(() => {
               Promise.resolve()
@@ -167,7 +167,7 @@ function ef(e) {
                       let { default: n } = e,
                           o = () => {
                               if (I) {
-                                  (0, D.Cq)(r instanceof L.Sf ? r : (0, L.kt)(r)), (0, w.uL)(S);
+                                  (0, D.Cq)(r instanceof L.Sf ? r : (0, L.kt)(r)), (0, w.uL)(T);
                                   return;
                               }
                               (null == i ? void 0 : i.muteOnJoinVoiceChannel) && z.Z.setSelfMute(d.Yn.DEFAULT, !0),
@@ -207,7 +207,7 @@ function ef(e) {
               analyticsLocations: a,
               commandOrigin: g.bB.CHAT
           })),
-        ed(r, i)(S);
+        ed(r, i)(T);
 }
 function e_(e) {
     let { guildScheduledEvent: t, welcomeModalChannelId: n } = e;
@@ -247,9 +247,9 @@ function ep(e, t, n) {
 }
 let eh = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-        k.Z.addConditionalChangeListener(() => {
+        M.Z.addConditionalChangeListener(() => {
             var r;
-            let i = k.Z.getChannel(e),
+            let i = M.Z.getChannel(e),
                 a = V.default.getCurrentUser();
             return (
                 null == i ||
@@ -269,7 +269,7 @@ let eh = function (e, t) {
     },
     em = async (e) => {
         let { guild_id: t, channel_id: n } = e;
-        (0, S.xt)(e) && null != n ? eh(n) : await q.Z.transitionToGuildSync(t);
+        (0, T.xt)(e) && null != n ? eh(n) : await q.Z.transitionToGuildSync(t);
     };
 function eg(e, t) {
     var n;
@@ -466,7 +466,7 @@ let eb = {
                               invite: e.body,
                               code: l
                           });
-                          let i = S.ZP.getGuildScheduledEvent(s.guildScheduledEventId),
+                          let i = T.ZP.getGuildScheduledEvent(s.guildScheduledEventId),
                               c = ea(er({}, e.body), { guild_scheduled_event: i }),
                               u = null != (r = null == c ? void 0 : c.guild_id) ? r : null == c || null == (t = c.guild) ? void 0 : t.id;
                           if (!o && null != u && c.new_member) {
@@ -511,7 +511,7 @@ let eb = {
         let { channel: a, guild: s } = e;
         if (null != s && (null == (r = s.features) ? void 0 : r.includes(Q.oNc.HUB))) return void A.Z.onOpenHubInvite(e);
         let l = (0, Y.yE)(null != (i = e.flags) ? i : 0, o.$.IS_APPLICATION_BYPASS);
-        if (null != s && !l && (0, T.u)(s)) return void (0, T._)(s.id);
+        if (null != s && !l && (0, S.u)(s)) return void (0, S._)(s.id);
         if (null == a) return;
         let c = el(e);
         null != t && (c.transitionTo = t),

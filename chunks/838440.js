@@ -72,9 +72,9 @@ function E(e) {
             failureReason: _.zYc.EMPTY_MESSAGE
         });
     let I = O ? _.en1 : _.J6R,
-        S = !O;
+        T = !O;
     if (u.length > I) {
-        S && null != E
+        T && null != E
             ? a.Z.dispatch({
                   type: 'MESSAGE_LENGTH_UPSELL',
                   channel: E,

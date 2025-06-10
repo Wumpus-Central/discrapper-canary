@@ -25,8 +25,8 @@
             },
             v = 35,
             I = Math.floor,
-            S = String.fromCharCode;
-        function T(e) {
+            T = String.fromCharCode;
+        function S(e) {
             throw RangeError(O[e]);
         }
         function A(e, t) {
@@ -45,7 +45,7 @@
         function R(e) {
             return A(e, function (e) {
                 var t = '';
-                return e > 65535 && ((e -= 65536), (t += S(((e >>> 10) & 1023) | 55296)), (e = 56320 | (1023 & e))), (t += S(e));
+                return e > 65535 && ((e -= 65536), (t += T(((e >>> 10) & 1023) | 55296)), (e = 56320 | (1023 & e))), (t += T(e));
             }).join('');
         }
         function P(e) {
@@ -75,10 +75,10 @@
                 y = 0,
                 O = m,
                 v = h;
-            for ((n = e.lastIndexOf(g)) < 0 && (n = 0), r = 0; r < n; ++r) e.charCodeAt(r) >= 128 && T('not-basic'), E.push(e.charCodeAt(r));
+            for ((n = e.lastIndexOf(g)) < 0 && (n = 0), r = 0; r < n; ++r) e.charCodeAt(r) >= 128 && S('not-basic'), E.push(e.charCodeAt(r));
             for (i = n > 0 ? n + 1 : 0; i < b; ) {
-                for (a = y, o = 1, s = u; i >= b && T('invalid-input'), ((l = P(e.charCodeAt(i++))) >= u || l > I((c - y) / o)) && T('overflow'), (y += l * o), !(l < (_ = s <= v ? d : s >= v + f ? f : s - v)); s += u) o > I(c / (p = u - _)) && T('overflow'), (o *= p);
-                (v = D(y - a, (t = E.length + 1), 0 == a)), I(y / t) > c - O && T('overflow'), (O += I(y / t)), (y %= t), E.splice(y++, 0, O);
+                for (a = y, o = 1, s = u; i >= b && S('invalid-input'), ((l = P(e.charCodeAt(i++))) >= u || l > I((c - y) / o)) && S('overflow'), (y += l * o), !(l < (_ = s <= v ? d : s >= v + f ? f : s - v)); s += u) o > I(c / (p = u - _)) && S('overflow'), (o *= p);
+                (v = D(y - a, (t = E.length + 1), 0 == a)), I(y / t) > c - O && S('overflow'), (O += I(y / t)), (y %= t), E.splice(y++, 0, O);
             }
             return R(E);
         }
@@ -99,24 +99,24 @@
                 O,
                 v,
                 A = [];
-            for (o = 0, b = (e = C(e)).length, t = m, n = 0, a = h; o < b; ++o) (E = e[o]) < 128 && A.push(S(E));
+            for (o = 0, b = (e = C(e)).length, t = m, n = 0, a = h; o < b; ++o) (E = e[o]) < 128 && A.push(T(E));
             for (r = i = A.length, i && A.push(g); r < b; ) {
                 for (s = c, o = 0; o < b; ++o) (E = e[o]) >= t && E < s && (s = E);
-                for (s - t > I((c - n) / (y = r + 1)) && T('overflow'), n += (s - t) * y, t = s, o = 0; o < b; ++o)
-                    if (((E = e[o]) < t && ++n > c && T('overflow'), E == t)) {
-                        for (l = n, _ = u; !(l < (p = _ <= a ? d : _ >= a + f ? f : _ - a)); _ += u) (v = l - p), (O = u - p), A.push(S(w(p + (v % O), 0))), (l = I(v / O));
-                        A.push(S(w(l, 0))), (a = D(n, y, r == i)), (n = 0), ++r;
+                for (s - t > I((c - n) / (y = r + 1)) && S('overflow'), n += (s - t) * y, t = s, o = 0; o < b; ++o)
+                    if (((E = e[o]) < t && ++n > c && S('overflow'), E == t)) {
+                        for (l = n, _ = u; !(l < (p = _ <= a ? d : _ >= a + f ? f : _ - a)); _ += u) (v = l - p), (O = u - p), A.push(T(w(p + (v % O), 0))), (l = I(v / O));
+                        A.push(T(w(l, 0))), (a = D(n, y, r == i)), (n = 0), ++r;
                     }
                 ++n, ++t;
             }
             return A.join('');
         }
-        function k(e) {
+        function M(e) {
             return N(e, function (e) {
                 return E.test(e) ? L(e.slice(4).toLowerCase()) : e;
             });
         }
-        function M(e) {
+        function k(e) {
             return N(e, function (e) {
                 return b.test(e) ? 'xn--' + x(e) : e;
             });
@@ -130,8 +130,8 @@
                 },
                 decode: L,
                 encode: x,
-                toASCII: M,
-                toUnicode: k
+                toASCII: k,
+                toUnicode: M
             }),
             'function' == typeof define && 'object' == typeof define.amd && define.amd)
         )

@@ -25,10 +25,10 @@ function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return null != e && (u.test(e) || (t && v(e)));
 }
-function S(e) {
+function T(e) {
     return null != e && 'discord:' === e;
 }
-function T(e) {
+function S(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (null != e) {
         var n;
@@ -38,7 +38,7 @@ function T(e) {
     return !1;
 }
 function A(e) {
-    return null != e && S(s.parse(e).protocol);
+    return null != e && T(s.parse(e).protocol);
 }
 let N = {
     URL_REGEX: b,
@@ -46,8 +46,8 @@ let N = {
     isDiscordLocalhost: function (e, t) {
         return null != e && null != t && window.location.host === e;
     },
-    isDiscordProtocol: S,
-    isDiscordUrl: T,
+    isDiscordProtocol: T,
+    isDiscordUrl: S,
     isDiscordUri: A,
     isDiscordCdnUrl: function (e) {
         return null != e && s.parse(e).hostname === window.GLOBAL_ENV.CDN_HOST;
@@ -57,7 +57,7 @@ let N = {
         let t = l.Z.toURLSafe(e);
         return null != t && (t.hostname === window.GLOBAL_ENV.CDN_HOST || d.test(t.hostname));
     },
-    isDiscordUrlOrUri: (e) => T(e) || A(e),
+    isDiscordUrlOrUri: (e) => S(e) || A(e),
     isAppRoute: (e) => {
         let t = e.toLowerCase();
         return t.startsWith('/channels/') || t.startsWith(c.Z5c.APPLICATION_STORE) || t.startsWith(c.Z5c.APPLICATION_LIBRARY) || t.startsWith(c.Z5c.MESSAGE_REQUESTS) || t.startsWith(c.Z5c.FAMILY_CENTER) || t.startsWith(c.Z5c.ACTIVITIES) || t.startsWith(c.Z5c.COLLECTIBLES_SHOP) || t.startsWith('/feature/boost') || t.startsWith(c.Z5c.ACTIVITY);

@@ -60,19 +60,19 @@ function v(e) {
     t.unableToSyncDeletes && I(t.id);
 }
 function I(e) {
-    setTimeout(() => S(e), Math.ceil(Math.random() * g));
+    setTimeout(() => T(e), Math.ceil(Math.random() * g));
 }
-function S(e) {
+function T(e) {
     var t, n, r;
     let i = null == (t = _.Z.getGuild(e)) ? void 0 : t.name;
     E.fileOnly('requesting deleted guild entities (id: '.concat(e, ', name: ').concat(i, ')'));
-    let a = T(Object.keys(f.Z.getMutableBasicGuildChannelsForGuild(e))),
-        o = T(Object.keys(_.Z.getRoles(e))),
-        s = T(u.ZP.getGuildEmoji(e).map((e) => e.id)),
-        l = T(null != (r = null == (n = d.Z.getStickersByGuildId(e)) ? void 0 : n.map((e) => e.id)) ? r : []);
+    let a = S(Object.keys(f.Z.getMutableBasicGuildChannelsForGuild(e))),
+        o = S(Object.keys(_.Z.getRoles(e))),
+        s = S(u.ZP.getGuildEmoji(e).map((e) => e.id)),
+        l = S(null != (r = null == (n = d.Z.getStickersByGuildId(e)) ? void 0 : n.map((e) => e.id)) ? r : []);
     h.Z.getSocket().getDeletedEntityIdsNotMatchingHash(e, a, o, s, l);
 }
-function T(e) {
+function S(e) {
     return i().v3(e.sort().join(',')).toString();
 }
 function A(e, t) {

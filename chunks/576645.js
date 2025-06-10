@@ -1,10 +1,10 @@
 n.d(t, {
-    J: () => k,
+    J: () => M,
     Nt: () => Z,
     Ou: () => G,
     R2: () => L,
     T$: () => w,
-    Uu: () => M,
+    Uu: () => k,
     ZC: () => V,
     Zm: () => D,
     bK: () => j,
@@ -35,8 +35,8 @@ var r = n(73800),
     O = n(823961),
     v = n(317951),
     I = n(111810),
-    S = n(896835),
-    T = n(477931),
+    T = n(896835),
+    S = n(477931),
     A = n(981631),
     N = n(37113);
 let C = 3500000,
@@ -79,7 +79,7 @@ let C = 3500000,
                 return null == (e = g.default.getCurrentUser()) ? void 0 : e.id;
             }),
             r = (0, s.Wu)([f.Z], () => (null == e ? [] : f.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== n))),
-            i = (0, S.j)(t),
+            i = (0, T.j)(t),
             a = w(e);
         return i && a && r.length > 0;
     };
@@ -111,7 +111,7 @@ function x(e) {
         }
     );
 }
-function k(e, t) {
+function M(e, t) {
     let n = (0, r.useRef)(!0),
         i = null == e ? void 0 : e.hdStreamingUntil,
         a = (0, r.useRef)(t);
@@ -126,8 +126,8 @@ function k(e, t) {
             if (null != i && new Date(i) > new Date()) return a.current();
         }, [i]);
 }
-function M(e) {
-    k(e, () => {
+function k(e) {
+    M(e, () => {
         let t = f.Z.getCurrentUserActiveStream();
         if (null != t && t.channelId === e.id) {
             let e = p.Z.getState().goLiveSource;
@@ -149,7 +149,7 @@ function U(e) {
 }
 function G(e) {
     let t = (0, s.e7)([_.Z], () => _.Z.getGuild(null == e ? void 0 : e.guild_id)),
-        n = (0, S.j)('VoiceEffectsActionBar');
+        n = (0, T.j)('VoiceEffectsActionBar');
     return ((null == t ? void 0 : t.premiumTier) === A.Eu4.NONE || (null == t ? void 0 : t.premiumTier) === A.Eu4.TIER_1) && (null == e ? void 0 : e.type) === A.d4z.GUILD_VOICE && !(null == e ? void 0 : e.isHDStreamSplashed) && n;
 }
 function B(e, t, n, r) {
@@ -168,7 +168,7 @@ function V(e) {
     if (null == e || null == e.potions || 0 === e.potions.length) return null;
     for (let r of e.potions) {
         var t, n;
-        if (r.type === T.B.CONFETTI && r.used_by === (null == (t = g.default.getCurrentUser()) ? void 0 : t.id) && (null == (n = r.emoji) ? void 0 : n.length) > 0) return r.emoji[0];
+        if (r.type === S.B.CONFETTI && r.used_by === (null == (t = g.default.getCurrentUser()) ? void 0 : t.id) && (null == (n = r.emoji) ? void 0 : n.length) > 0) return r.emoji[0];
     }
     return null;
 }

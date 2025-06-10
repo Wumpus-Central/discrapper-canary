@@ -137,7 +137,7 @@ class v extends (r = a.PureComponent) {
     }
     render() {
         let e = this.props,
-            { query: t, autoFocus: n, onClear: r, className: a, placeholder: o = f.intl.string(f.t['5h0QOD']), iconClassName: l, onKeyDown: u, onKeyUp: d, onKeyPress: p, isLoading: m, size: b, disabled: y, onChange: v, onBlur: I, onFocus: S, autoComplete: T, inputProps: A, hideSearchIcon: N, 'aria-label': C = f.intl.string(f.t['5h0QOD']) } = e,
+            { query: t, autoFocus: n, onClear: r, className: a, placeholder: o = f.intl.string(f.t['5h0QOD']), iconClassName: l, onKeyDown: u, onKeyUp: d, onKeyPress: p, isLoading: m, size: b, disabled: y, onChange: v, onBlur: I, onFocus: T, autoComplete: S, inputProps: A, hideSearchIcon: N, 'aria-label': C = f.intl.string(f.t['5h0QOD']) } = e,
             R = E(e, ['query', 'autoFocus', 'onClear', 'className', 'placeholder', 'iconClassName', 'onKeyDown', 'onKeyUp', 'onKeyPress', 'isLoading', 'size', 'disabled', 'onChange', 'onBlur', 'onFocus', 'autoComplete', 'inputProps', 'hideSearchIcon', 'aria-label']);
         return (0, i.jsx)(c.t, {
             focusTarget: this.inputRef,
@@ -159,7 +159,7 @@ class v extends (r = a.PureComponent) {
                                 (0, i.jsx)(
                                     'input',
                                     g(h({}, A), {
-                                        onFocus: S,
+                                        onFocus: T,
                                         onBlur: I,
                                         className: _.input,
                                         value: t,
@@ -170,7 +170,7 @@ class v extends (r = a.PureComponent) {
                                         placeholder: o,
                                         disabled: y,
                                         autoFocus: n,
-                                        autoComplete: T,
+                                        autoComplete: S,
                                         'aria-label': C,
                                         ref: this.inputRef
                                     })

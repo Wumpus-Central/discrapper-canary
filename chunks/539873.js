@@ -58,7 +58,7 @@ function I(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -69,7 +69,7 @@ function S(e, t) {
         e
     );
 }
-function T(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -100,7 +100,7 @@ function N(e) {
             labelledBy: N
         }),
         { ref: R } = C,
-        P = T(C, ['ref']),
+        P = S(C, ['ref']),
         w = (0, d.Q3)('AppIconSelectionGroup'),
         D = (e) => {
             c.Z.dispatch({
@@ -112,7 +112,7 @@ function N(e) {
         ref: A,
         children: (0, r.jsx)(
             'div',
-            S(v({}, P), {
+            T(v({}, P), {
                 ref: R,
                 className: b.__invalid_container,
                 children: (0, r.jsxs)('div', {

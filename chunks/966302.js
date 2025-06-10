@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(932724),
     v = n(672339),
     I = n(898531),
-    S = n(923973),
-    T = n(189771),
+    T = n(923973),
+    S = n(189771),
     A = n(560688),
     N = n(88479),
     C = n(136995),
@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(131951),
     L = n(594174),
     x = n(451478),
-    k = n(626135),
-    M = n(768581),
+    M = n(626135),
+    k = n(768581),
     j = n(358221),
     U = n(584511),
     G = n(793865),
@@ -145,8 +145,8 @@ function ei(e) {
 function ea(e) {
     let { canVideo: t, channel: n, numVideoDevices: a } = e,
         { parentAnalyticsLocation: s } = (0, m.ZP)(),
-        { cameraUnavailable: l, enabled: d } = (0, S.Z)(),
-        _ = (0, T.Z)(n),
+        { cameraUnavailable: l, enabled: d } = (0, T.Z)(),
+        _ = (0, S.Z)(n),
         p = i.useRef(null),
         g = a > 1;
     return (0, r.jsxs)('div', {
@@ -158,7 +158,7 @@ function ea(e) {
                 className: K.actionButton,
                 onClick: () => {
                     (0, B.v)(s, B.d.DISCONNECT),
-                        k.default.track(
+                        M.default.track(
                             Z.rMx.RING_CALL_DECLINED,
                             X(
                                 {
@@ -203,7 +203,7 @@ function ea(e) {
                             onChange: () => {
                                 var e;
                                 (0, B.v)(s, B.d.JOIN_VIDEO_CALL),
-                                    k.default.track(
+                                    M.default.track(
                                         Z.rMx.RING_CALL_ACCEPTED,
                                         X(
                                             {
@@ -224,7 +224,7 @@ function ea(e) {
                 color: 'join',
                 centerButton: !0,
                 onCallJoined: () =>
-                    k.default.track(
+                    M.default.track(
                         Z.rMx.RING_CALL_ACCEPTED,
                         X(
                             {
@@ -245,20 +245,20 @@ function eo(e) {
         { analyticsLocations: y } = (0, m.ZP)(p.Z.INCOMING_CALL_MODAL),
         [O, v] = i.useState(!1),
         I = (0, l.e7)([w.Z], () => w.Z.getGuild(h.guild_id)),
-        S =
+        T =
             null != I
-                ? M.ZP.getGuildIconURL({
+                ? k.ZP.getGuildIconURL({
                       id: I.id,
                       icon: I.icon,
                       size: er
                   })
                 : null,
-        T = null != (t = (0, g.x)(h, er, !0)) ? t : S,
+        S = null != (t = (0, g.x)(h, er, !0)) ? t : T,
         A = (0, E.ZP)(h),
         [N, C] = (0, l.Wu)([D.Z], () => [D.Z.supports(H.AN.VIDEO), Object.keys(D.Z.getVideoDevices()).length]),
         R = null != I ? ''.concat(A, ', ').concat(I.name) : A,
         L = (0, l.e7)([x.Z], () => x.Z.isFocused()),
-        k = (0, l.e7)([j.Z], () => j.Z.getMode(h.id)),
+        M = (0, l.e7)([j.Z], () => j.Z.getMode(h.id)),
         G = i.useCallback((e) => {
             null != e.top && null != e.left && d.Z.move(e.left, e.top);
         }, []),
@@ -275,15 +275,15 @@ function eo(e) {
         };
         return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
     }, [h]);
-    let F = k === Z.WtW.VIDEO && N && C > 0,
+    let F = M === Z.WtW.VIDEO && N && C > 0,
         { enabled: V } = P.Z.useExperiment({
             guildId: null == h ? void 0 : h.guild_id,
             location: 'IncomingCallModal'
         }),
-        q = k === Z.WtW.VOICE || (V && h.type === Z.d4z.GUILD_VOICE) ? Y.intl.string(Y.t.Js8cKy) : Y.intl.string(Y.t.KcnWCA),
+        q = M === Z.WtW.VOICE || (V && h.type === Z.d4z.GUILD_VOICE) ? Y.intl.string(Y.t.Js8cKy) : Y.intl.string(Y.t.KcnWCA),
         Q = (0, r.jsxs)(r.Fragment, {
             children: [
-                null != I && null == S
+                null != I && null == T
                     ? (0, r.jsx)('div', {
                           className: o()(K.icon, W.wrapper, W.ringingIncoming),
                           children: (0, r.jsx)(b.ZP, {
@@ -303,7 +303,7 @@ function eo(e) {
                     : (0, r.jsx)(U.Z, {
                           className: K.icon,
                           ringing: L,
-                          src: null != T ? T : '',
+                          src: null != S ? S : '',
                           ringingType: U.Z.RingingType.INCOMING,
                           size: O ? c.EFr.SIZE_40 : c.EFr.SIZE_80
                       }),

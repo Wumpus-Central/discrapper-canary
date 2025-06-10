@@ -37,8 +37,8 @@ let O = (e) => {
     }
 };
 function v(e) {
-    let { user: t, guildId: n, entry: c, sourceType: _, sourceDetails: b, setPopoutRef: v, onAction: I, onClose: S } = e,
-        { resetInteraction: T, setInteractionToast: A } = (0, f.Xo)(),
+    let { user: t, guildId: n, entry: c, sourceType: _, sourceDetails: b, setPopoutRef: v, onAction: I, onClose: T } = e,
+        { resetInteraction: S, setInteractionToast: A } = (0, f.Xo)(),
         { theme: N } = (0, p.z)(),
         C = (0, a.e7)([l.Z], () => l.Z.theme),
         R = (0, o.wj)(C) ? !(0, o.wj)(N) : (0, o.wj)(N),
@@ -48,7 +48,7 @@ function v(e) {
     }, [P, v]),
         i.useEffect(() => {
             let e = (e) => {
-                e.key === g.vn.ESCAPE && (e.stopPropagation(), T());
+                e.key === g.vn.ESCAPE && (e.stopPropagation(), S());
             };
             return (
                 document.addEventListener('keydown', e),
@@ -56,7 +56,7 @@ function v(e) {
                     document.removeEventListener('keydown', e);
                 }
             );
-        }, [S, T]);
+        }, [T, S]);
     let w = async (e) => {
         if (null == e) return;
         _ === h.n_.AVATAR ? I({ action: 'SEND_REACT_AVATAR' }) : _ === h.n_.STATUS ? I({ action: 'SEND_REACT_CUSTOM_STATUS' }) : I({ action: 'SEND_REACT_ACTIVITY' });
@@ -85,7 +85,7 @@ function v(e) {
         closePopout: E.dG,
         onSelectEmoji: async (e) => {
             let { emoji: t, willClose: n } = e;
-            await w(t), n && (T(), null == S || S());
+            await w(t), n && (S(), null == T || T());
         },
         pickerIntention: m.Hz.PROFILE
     });

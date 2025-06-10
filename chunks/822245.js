@@ -83,13 +83,13 @@ function v(e) {
     var t;
     let { command: n } = e;
     if (!E.includes(n.type) || (null == (t = u.ZP.getLaunchState(n.applicationId)) ? void 0 : t.isLaunching)) return !1;
-    S(n.applicationId);
+    T(n.applicationId);
 }
 function I(e) {
     let { applicationId: t } = e;
-    S(t);
+    T(t);
 }
-function S(e) {
+function T(e) {
     b.pendingUsages.push({
         key: e,
         timestamp: Date.now()
@@ -97,7 +97,7 @@ function S(e) {
         y.track(e),
         y.compute();
 }
-function T() {
+function S() {
     var e, t;
     let n = null != (t = null == (e = d.Z.frecencyWithoutFetchingLatest.applicationFrecency) ? void 0 : e.applications) ? t : {};
     y.overwriteHistory(
@@ -107,7 +107,7 @@ function T() {
 }
 class A extends (r = o.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (b = e), this.waitFor(u.ZP), this.syncWith([d.Z], T);
+        null != e && (b = e), this.waitFor(u.ZP), this.syncWith([d.Z], S);
     }
     getState() {
         return b;

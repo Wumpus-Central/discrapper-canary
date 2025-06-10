@@ -1,5 +1,5 @@
 let r;
-n.r(t), n.d(t, { default: () => eT }), n(388685), n(415506);
+n.r(t), n.d(t, { default: () => eS }), n(388685), n(415506);
 var i,
     a = n(442837),
     o = n(433517),
@@ -20,7 +20,7 @@ var i,
     O = n(451478),
     v = n(981631),
     I = n(987650);
-function S(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function S(e, t, n) {
         e
     );
 }
-function T(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function T(e) {
                 })
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
@@ -112,17 +112,17 @@ let P = Object.freeze({
     D = {},
     L = null,
     x = new Set(),
-    k = !1,
     M = !1,
+    k = !1,
     j = !1,
     U = new Set(),
     G = !1,
     B = new u.Z('OverlayStore');
 function F(e) {
     let t = D[e];
-    return null == t && (t = D[e] = T({}, P)), t;
+    return null == t && (t = D[e] = S({}, P)), t;
 }
-let V = T({}, P),
+let V = S({}, P),
     Z = new Set(['AUDIO_SET_INPUT_DEVICE', 'AUDIO_SET_INPUT_VOLUME', 'AUDIO_SET_LOCAL_VIDEO_DISABLED', 'AUDIO_SET_LOCAL_VOLUME', 'AUDIO_SET_MODE', 'AUDIO_SET_NOISE_CANCELLATION', 'AUDIO_SET_NOISE_SUPPRESSION', 'AUDIO_SET_OUTPUT_DEVICE', 'AUDIO_SET_OUTPUT_VOLUME', 'AUDIO_TOGGLE_LOCAL_MUTE', 'AUDIO_TOGGLE_SELF_DEAF', 'AUDIO_TOGGLE_SELF_MUTE', 'BILLING_SUBSCRIPTION_UPDATE_SUCCESS', 'CATEGORY_COLLAPSE', 'CATEGORY_EXPAND', 'CHANNEL_ACK', 'CHANNEL_PRELOAD', 'GIFT_CODE_REDEEM', 'GIFT_CODE_REDEEM_FAILURE', 'GIFT_CODE_REDEEM_SUCCESS', 'HOTSPOT_HIDE', 'INVITE_MODAL_CLOSE', 'LAYOUT_CREATE', 'LAYOUT_CREATE_WIDGETS', 'LAYOUT_DELETE_ALL_WIDGETS', 'LAYOUT_DELETE_WIDGET', 'LAYOUT_SET_PINNED', 'LAYOUT_SET_TOP_WIDGET', 'LAYOUT_UPDATE_WIDGET', 'LOAD_MESSAGES', 'LOAD_MESSAGES_FAILURE', 'LOAD_MESSAGES_SUCCESS', 'MEDIA_ENGINE_SET_GO_LIVE_SOURCE', 'OVERLAY_ACTIVATE_REGION', 'OVERLAY_DEACTIVATE_ALL_REGIONS', 'OVERLAY_MESSAGE_EVENT_ACTION', 'OVERLAY_SET_AVATAR_SIZE_MODE', 'OVERLAY_SET_CLICK_ZONES', 'OVERLAY_SET_DISPLAY_NAME_MODE', 'OVERLAY_SET_DISPLAY_USER_MODE', 'OVERLAY_SET_INPUT_LOCKED', 'OVERLAY_SET_NOTIFICATION_POSITION_MODE', 'OVERLAY_SET_DISABLE_CLICKABLE_REGIONS', 'OVERLAY_SET_SHOW_KEYBIND_INDICATORS', 'OVERLAY_SET_GAME_INVITE_NOTIFICATION', 'OVERLAY_SET_INVITE_MESSAGE', 'OVERLAY_SET_TEXT_WIDGET_OPACITY', 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', 'PREMIUM_PAYMENT_ERROR_CLEAR', 'PREMIUM_PAYMENT_MODAL_CLOSE', 'PREMIUM_PAYMENT_MODAL_OPEN', 'PREMIUM_PAYMENT_SUBSCRIBE_FAIL', 'PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS', 'PREMIUM_PAYMENT_UPDATE_FAIL', 'PREMIUM_PAYMENT_UPDATE_SUCCESS', 'PREMIUM_REQUIRED_MODAL_CLOSE', 'PREMIUM_REQUIRED_MODAL_OPEN', 'PURCHASE_CONFIRMATION_MODAL_CLOSE', 'PURCHASE_CONFIRMATION_MODAL_OPEN', 'SKU_PURCHASE_CLEAR_ERROR', 'SKU_PURCHASE_FAIL', 'SKU_PURCHASE_MODAL_CLOSE', 'SKU_PURCHASE_MODAL_OPEN', 'SKU_PURCHASE_PREVIEW_FETCH_SUCCESS', 'SKU_PURCHASE_SHOW_CONFIRMATION_STEP', 'SKU_PURCHASE_START', 'SKU_PURCHASE_SUCCESS', 'STREAM_CLOSE', 'STREAM_START', 'VOICE_CHANNEL_SELECT', 'USER_SETTINGS_PROTO_ENQUEUE_UPDATE', 'USER_SETTINGS_PROTO_LOAD_IF_NECESSARY']),
     H = new Set([...Z.values(), 'ACTIVITY_INVITE_MODAL_CLOSE', 'CALL_DELETE', 'CHANNEL_COLLAPSE', 'CHANNEL_SELECT', 'GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY', 'OVERLAY_CALL_PRIVATE_CHANNEL', 'OVERLAY_JOIN_GAME', 'OVERLAY_NOTIFICATION_EVENT', 'OVERLAY_SELECT_CALL', 'OVERLAY_SET_NOT_IDLE', 'OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', 'OVERLAY_WIDGET_CHANGED', 'SOUNDBOARD_SET_OVERLAY_ENABLED', 'STREAM_STOP']);
 function Y(e) {
@@ -154,7 +154,7 @@ function W(e) {
                 (e.lazyPrivateChannels = (null != (t = e.lazyPrivateChannels) ? t : []).map((e) => (0, f.kt)(e))), s.Z.dispatch(e);
                 break;
             case 'THREAD_LIST_SYNC':
-                s.Z.dispatch(N(T({}, e), { threads: e.threads.map((e) => (0, f.kt)(e)) }));
+                s.Z.dispatch(N(S({}, e), { threads: e.threads.map((e) => (0, f.kt)(e)) }));
                 break;
             case 'GUILD_CREATE':
                 let l = (e) => (0, f.kt)(e),
@@ -169,7 +169,7 @@ function W(e) {
                 break;
             case 'USER_SETTINGS_PROTO_UPDATE':
                 s.Z.dispatch(
-                    N(T({}, e), {
+                    N(S({}, e), {
                         settings: {
                             proto: (0, d.kI)(e.settings.type, e.settings.proto),
                             type: e.settings.type
@@ -291,11 +291,11 @@ function eE() {
     V.disableExternalLinkAlert = !0;
 }
 function eb() {
-    k = !0;
+    M = !0;
 }
 function ey() {
     s.Z.addInterceptor((e) => {
-        if (M || !H.has(e.type)) return !1;
+        if (k || !H.has(e.type)) return !1;
         if ('CHANNEL_SELECT' === e.type) {
             let { guildId: t, channelId: n } = e;
             return (
@@ -340,7 +340,7 @@ function eO(e) {
                 a.ZP.PersistedStore.initializeAll(e.states);
                 break;
             case v.BmY.DISPATCH:
-                null != e.payloads && ((M = !0), e.payloads.forEach((e) => W(e)), (M = !1));
+                null != e.payloads && ((k = !0), e.payloads.forEach((e) => W(e)), (k = !1));
         }
 }
 function ev() {
@@ -356,13 +356,13 @@ function ev() {
 function eI(e) {
     x.delete(e.previousAssociatedGamePID);
 }
-class eS extends (i = a.ZP.PersistedStore) {
+class eT extends (i = a.ZP.PersistedStore) {
     initialize(e) {
         if (
             (this.waitFor(_.default),
             this.syncWith([_.default], () => {
                 let e = _.default.getId();
-                V = null != e ? F(e) : T({}, P);
+                V = null != e ? F(e) : S({}, P);
             }),
             __OVERLAY__)
         ) {
@@ -450,7 +450,7 @@ class eS extends (i = a.ZP.PersistedStore) {
         return j;
     }
     get incompatibleApp() {
-        return k;
+        return M;
     }
     getActiveRegions() {
         return U;
@@ -462,21 +462,21 @@ class eS extends (i = a.ZP.PersistedStore) {
         return G;
     }
 }
-S(eS, 'displayName', 'OverlayStore'),
-    S(eS, 'persistKey', 'OverlayStoreV2'),
-    S(eS, 'migrations', [
+T(eT, 'displayName', 'OverlayStore'),
+    T(eT, 'persistKey', 'OverlayStoreV2'),
+    T(eT, 'migrations', [
         () => {
-            let e = T({}, o.K.get('OverlayStore')),
+            let e = S({}, o.K.get('OverlayStore')),
                 { pinnedWidgets: t, positions: n, sizes: r, v: i } = e,
                 a = C(e, ['pinnedWidgets', 'positions', 'sizes', 'v']);
-            return T({}, P, 5 === i ? a : null);
+            return S({}, P, 5 === i ? a : null);
         },
         (e) => {
             let t = _.default.getId();
-            return null == e || null == t ? {} : { [t]: T({}, e) };
+            return null == e || null == t ? {} : { [t]: S({}, e) };
         }
     ]);
-let eT = new eS(s.Z, {
+let eS = new eT(s.Z, {
     LOGOUT: K,
     MULTI_ACCOUNT_REMOVE_ACCOUNT: z,
     CONNECTION_CLOSED: q,

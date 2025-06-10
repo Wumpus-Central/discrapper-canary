@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685), n(539854);
+n.d(t, { Z: () => S }), n(388685), n(539854);
 var r,
     i = n(442837),
     a = n(570140),
@@ -46,10 +46,10 @@ function m(e, t, n, r, i) {
     )
         return n;
     let I = h(v) ? (null != (o = v.packetsSent) ? o : 0) : null != (s = v.packetsReceived) ? s : 0,
-        S = h(v) ? (null != (l = v.packetsLost) ? l : 0) : null != (c = v.packetsLost) ? c : 0,
-        T = h(v) ? (null != (u = v.frameRateEncode) ? u : 0) : null != (d = v.frameRateDecode) ? d : 0,
+        T = h(v) ? (null != (l = v.packetsLost) ? l : 0) : null != (c = v.packetsLost) ? c : 0,
+        S = h(v) ? (null != (u = v.frameRateEncode) ? u : 0) : null != (d = v.frameRateDecode) ? d : 0,
         A = null != (f = null == (a = v.resolution) ? void 0 : a.height) ? f : 0;
-    (n.numDatapoints += 1), (n.frameRateAggregated += T), (n.resolutionAggregated += A);
+    (n.numDatapoints += 1), (n.frameRateAggregated += S), (n.resolutionAggregated += A);
     let N = null == i ? void 0 : i.find((e) => 'video' === e.type);
     if (null != N && t >= n.minVersion) {
         n.numDatapoints -= 1;
@@ -57,8 +57,8 @@ function m(e, t, n, r, i) {
             t = h(N) ? (null != (g = N.packetsLost) ? g : 0) : null != (E = N.packetsLost) ? E : 0,
             r = h(N) ? (null != (b = N.frameRateEncode) ? b : 0) : null != (y = N.frameRateDecode) ? y : 0,
             i = null != (O = null == (_ = N.resolution) ? void 0 : _.height) ? O : 0;
-        (n.frameRateAggregated -= r), (n.resolutionAggregated -= i), (n.packetsSentOrReceived = I - e), (n.packetsLost = S - t);
-    } else (n.packetsSentOrReceived = I), (n.packetsLost = S);
+        (n.frameRateAggregated -= r), (n.resolutionAggregated -= i), (n.packetsSentOrReceived = I - e), (n.packetsLost = T - t);
+    } else (n.packetsSentOrReceived = I), (n.packetsLost = T);
     return (n.frameRate = n.frameRateAggregated / n.numDatapoints), (n.resolution = n.resolutionAggregated / n.numDatapoints), (n.packetLossRate = n.packetsLost / (n.packetsSentOrReceived + n.packetsLost)), n;
 }
 function g(e, t, n, r) {
@@ -103,7 +103,7 @@ function I(e, t) {
     let n = f[e];
     return null == n || n.length <= t ? null : n[n.length - t - 1];
 }
-class S extends (r = i.ZP.Store) {
+class T extends (r = i.ZP.Store) {
     getConnectionStats(e) {
         return I(e, 0);
     }
@@ -119,8 +119,8 @@ class S extends (r = i.ZP.Store) {
         return null == e ? null : null != (i = null == (r = ('long' === n ? _ : p)[e]) ? void 0 : r[t]) ? i : null;
     }
 }
-c(S, 'displayName', 'MediaEngineStatsStore');
-let T = new S(a.Z, {
+c(T, 'displayName', 'MediaEngineStatsStore');
+let S = new T(a.Z, {
     MEDIA_ENGINE_CONNECTION_STATS: E,
     MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET: y,
     STREAM_UPDATE: v,

@@ -209,11 +209,11 @@ function I(e) {
               })
           );
 }
-function S(e) {
+function T(e) {
     let { channel: t } = e;
     t.type === s.d4z.GUILD_ANNOUNCEMENT && null != t.guild_id && _.delete(t.guild_id);
 }
-function T(e) {
+function S(e) {
     let { guildId: t, enabled: n } = e;
     null != t && n && _.delete(t);
 }
@@ -263,8 +263,8 @@ let C = new N(a.Z, {
     MEMBER_VERIFICATION_FORM_UPDATE: v,
     INVITE_RESOLVE_SUCCESS: I,
     INSTANT_INVITE_CREATE_SUCCESS: I,
-    CHANNEL_CREATE: S,
-    GUILD_SETTINGS_SET_WIDGET: T,
+    CHANNEL_CREATE: T,
+    GUILD_SETTINGS_SET_WIDGET: S,
     GUILD_UPDATE: A,
     GUILD_PROFILE_UPDATE_VISIBILITY: E,
     GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS: O,

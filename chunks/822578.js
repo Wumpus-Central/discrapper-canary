@@ -3,50 +3,50 @@ a.d(e, {
     U0: () => d
 });
 var r = a(394798),
-    n = a(101284),
-    _ = a(886115),
+    _ = a(101284),
+    n = a(886115),
     o = a(899517),
     i = a(202811),
     c = a(559508),
-    s = a(263449),
-    E = a(574054),
+    E = a(263449),
+    s = a(574054),
     l = a(307854),
     u = a(396234);
-function I(t, e, a, I, d, A) {
-    var f, N;
-    let { normalizeDepth: p = 3, normalizeMaxBreadth: T = 1000 } = t,
+function I(t, e, a, I, d, N) {
+    var A, f;
+    let { normalizeDepth: T = 3, normalizeMaxBreadth: p = 1000 } = t,
         L = {
             ...e,
             event_id: e.event_id || a.event_id || (0, r.DM)(),
-            timestamp: e.timestamp || (0, n.yW)()
+            timestamp: e.timestamp || (0, _.yW)()
         },
         h = a.integrations || t.integrations.map((t) => t.name);
     (function (t, e) {
-        let { environment: a, release: r, dist: n, maxValueLength: o = 250 } = e;
-        'environment' in t || (t.environment = 'environment' in e ? a : c.J), void 0 === t.release && void 0 !== r && (t.release = r), void 0 === t.dist && void 0 !== n && (t.dist = n), t.message && (t.message = (0, _.$G)(t.message, o));
+        let { environment: a, release: r, dist: _, maxValueLength: o = 250 } = e;
+        'environment' in t || (t.environment = 'environment' in e ? a : c.J), void 0 === t.release && void 0 !== r && (t.release = r), void 0 === t.dist && void 0 !== _ && (t.dist = _), t.message && (t.message = (0, n.$G)(t.message, o));
         let i = t.exception && t.exception.values && t.exception.values[0];
-        i && i.value && (i.value = (0, _.$G)(i.value, o));
-        let s = t.request;
-        s && s.url && (s.url = (0, _.$G)(s.url, o));
+        i && i.value && (i.value = (0, n.$G)(i.value, o));
+        let E = t.request;
+        E && E.url && (E.url = (0, n.$G)(E.url, o));
     })(L, t),
-        (f = L),
-        (N = h).length > 0 && ((f.sdk = f.sdk || {}), (f.sdk.integrations = [...(f.sdk.integrations || []), ...N])),
+        (A = L),
+        (f = h).length > 0 && ((A.sdk = A.sdk || {}), (A.sdk.integrations = [...(A.sdk.integrations || []), ...f])),
         d && d.emit('applyFrameMetadata', e),
         void 0 === e.type &&
             (function (t, e) {
                 let a,
                     r = o.n._sentryDebugIds;
                 if (!r) return;
-                let n = R.get(e);
-                n ? (a = n) : ((a = new Map()), R.set(e, a));
-                let _ = Object.entries(r).reduce((t, [r, n]) => {
-                    let _,
+                let _ = R.get(e);
+                _ ? (a = _) : ((a = new Map()), R.set(e, a));
+                let n = Object.entries(r).reduce((t, [r, _]) => {
+                    let n,
                         o = a.get(r);
-                    o ? (_ = o) : ((_ = e(r)), a.set(r, _));
-                    for (let e = _.length - 1; e >= 0; e--) {
-                        let a = _[e];
+                    o ? (n = o) : ((n = e(r)), a.set(r, n));
+                    for (let e = n.length - 1; e >= 0; e--) {
+                        let a = n[e];
                         if (a.filename) {
-                            t[a.filename] = n;
+                            t[a.filename] = _;
                             break;
                         }
                     }
@@ -55,7 +55,7 @@ function I(t, e, a, I, d, A) {
                 try {
                     t.exception.values.forEach((t) => {
                         t.stacktrace.frames.forEach((t) => {
-                            t.filename && (t.debug_id = _[t.filename]);
+                            t.filename && (t.debug_id = n[t.filename]);
                         });
                     });
                 } catch (t) {}
@@ -67,9 +67,9 @@ function I(t, e, a, I, d, A) {
     })(I, a.captureContext);
     a.mechanism && (0, r.EG)(L, a.mechanism);
     let D = d ? d.getEventProcessors() : [],
-        g = (0, s.lW)().getScopeData();
-    if (A) {
-        let t = A.getScopeData();
+        g = (0, E.lW)().getScopeData();
+    if (N) {
+        let t = N.getScopeData();
         (0, u.yo)(g, t);
     }
     if (O) {
@@ -79,7 +79,7 @@ function I(t, e, a, I, d, A) {
     let P = [...(a.attachments || []), ...g.attachments];
     P.length && (a.attachments = P), (0, u.gi)(L, g);
     let y = [...D, ...g.eventProcessors];
-    return (0, E.R)(y, L, a).then((t) =>
+    return (0, s.R)(y, L, a).then((t) =>
         (t &&
             (function (t) {
                 let e = {};
@@ -101,7 +101,7 @@ function I(t, e, a, I, d, A) {
                     });
                 });
             })(t),
-        'number' == typeof p && p > 0)
+        'number' == typeof T && T > 0)
             ? (function (t, e, a) {
                   if (!t) return null;
                   let r = {
@@ -125,7 +125,7 @@ function I(t, e, a, I, d, A) {
                           }))),
                       r
                   );
-              })(t, p, T)
+              })(t, T, p)
             : t
     );
 }
@@ -133,7 +133,7 @@ let R = new WeakMap();
 function d(t) {
     if (t) {
         var e;
-        return (e = t) instanceof l.s || 'function' == typeof e || Object.keys(t).some((t) => A.includes(t)) ? { captureContext: t } : t;
+        return (e = t) instanceof l.s || 'function' == typeof e || Object.keys(t).some((t) => N.includes(t)) ? { captureContext: t } : t;
     }
 }
-let A = ['user', 'level', 'extra', 'contexts', 'tags', 'fingerprint', 'requestSession', 'propagationContext'];
+let N = ['user', 'level', 'extra', 'contexts', 'tags', 'fingerprint', 'requestSession', 'propagationContext'];

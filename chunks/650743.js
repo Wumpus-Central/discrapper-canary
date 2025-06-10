@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => T });
 var r = n(255367);
 n(73800);
 var i = n(399606),
@@ -48,15 +48,15 @@ function I(e) {
     }
     return e;
 }
-function S(e) {
+function T(e) {
     let { soundboardSound: t, closePicker: v } = e,
-        S = (0, d.Iu)((e) => e.searchQuery),
-        T = (0, i.e7)([E.Z], () => null != t && E.Z.isFavoriteSound(t.soundId)),
+        T = (0, d.Iu)((e) => e.searchQuery),
+        S = (0, i.e7)([E.Z], () => null != t && E.Z.isFavoriteSound(t.soundId)),
         A = (0, i.e7)([_.Z], () => _.Z.getGuild(null == t ? void 0 : t.guildId)),
         N = (0, i.e7)([l.Z], () => l.Z.useReducedMotion, []),
         C = (0, i.e7)([h.Z], () => h.Z.isFocused()),
         R = (0, i.e7)([p.ZP], () => p.ZP.getKeybindForAction(b.kg4.SOUNDBOARD_HOLD));
-    if (null != t && S.length > 0)
+    if (null != t && T.length > 0)
         return (0, r.jsx)(f.Z, {
             graphicPrimary:
                 null != t.emojiId || null != t.emojiName
@@ -79,7 +79,7 @@ function S(e) {
                     : null,
             titlePrimary: t.name,
             titleSecondary: null == A ? void 0 : A.name,
-            isFavorite: T
+            isFavorite: S
         });
     let P = () => {
             v(),

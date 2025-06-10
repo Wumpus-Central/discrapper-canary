@@ -61,10 +61,10 @@ function b(e) {
             autoTrackExposure: !0
         });
     s.Xb.trackExposure({ location: 'trackOnEmojiPickerOpened' });
-    let S = (v || I) && n === p.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.frequently.slice() : a.ZP.emojiFrecencyWithoutFetchingLatest.frequently.slice(),
-        T = null != y ? a.ZP.getDisambiguatedEmojiContext(y.getGuildId()).favoriteEmojisWithoutFetchingLatest : [],
+    let T = (v || I) && n === p.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.frequently.slice() : a.ZP.emojiFrecencyWithoutFetchingLatest.frequently.slice(),
+        S = null != y ? a.ZP.getDisambiguatedEmojiContext(y.getGuildId()).favoriteEmojisWithoutFetchingLatest : [],
         A = (v || I) && n === p.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.numFrequentlyItems : a.ZP.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems,
-        N = S.slice(0, A),
+        N = T.slice(0, A),
         C = null != O ? a.ZP.getGuildEmoji(O) : [],
         R = Object.values(null != (t = a.ZP.getDisambiguatedEmojiContext(null == y ? void 0 : y.getGuildId()).groupedCustomEmojis) ? t : {}).reduce((e, t) => (e += t.length), 0),
         { topEmojis: P, newlyAddedEmojis: w } = (0, f._)({
@@ -83,10 +83,10 @@ function b(e) {
                 width: r,
                 tab: h.X1.EMOJI,
                 badged: !1,
-                num_expressions_favorites: T.length,
-                num_animated_expressions_favorites: T.filter((e) => (null == e ? void 0 : e.animated)).length,
-                num_custom_expressions_favorites: T.filter(u.ZP.isCustomEmoji).length,
-                num_standard_expressions_favorites: T.filter((e) => null == e.id).length,
+                num_expressions_favorites: S.length,
+                num_animated_expressions_favorites: S.filter((e) => (null == e ? void 0 : e.animated)).length,
+                num_custom_expressions_favorites: S.filter(u.ZP.isCustomEmoji).length,
+                num_standard_expressions_favorites: S.filter((e) => null == e.id).length,
                 num_expressions_frecent: N.length,
                 num_animated_expressions_frecent: N.filter((e) => (null == e ? void 0 : e.animated)).length,
                 num_custom_expressions_frecent: N.filter(u.ZP.isCustomEmoji).length,

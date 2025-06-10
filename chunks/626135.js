@@ -1,9 +1,9 @@
 n.r(t),
     n.d(t, {
         AnalyticEventConfigs: () => j,
-        AnalyticsContext: () => S,
+        AnalyticsContext: () => T,
         AnalyticsSchema: () => d,
-        addExtraAnalyticsDecorator: () => M,
+        addExtraAnalyticsDecorator: () => k,
         clearAnalyticsEventsRecording: () => Q,
         debugLogEvent: () => Y,
         default: () => er,
@@ -105,8 +105,8 @@ function v(e, t) {
     return i;
 }
 let I = { location: {} },
-    S = r.createContext(I),
-    T = {},
+    T = r.createContext(I),
+    S = {},
     A = 10000,
     N = 60000,
     C = 120000,
@@ -116,9 +116,9 @@ let I = { location: {} },
     D = 86400000,
     L = 0.001,
     x = performance.now(),
-    k = [];
-function M(e) {
-    k.push(e);
+    M = [];
+function k(e) {
+    M.push(e);
 }
 let j = {
     [p.rMx.APP_OPENED]: {
@@ -365,7 +365,7 @@ let V = (0, a.trackMaker)({
     TRACK_ACTION_NAME: 'TRACK'
 });
 function Z(e) {
-    return (T = e);
+    return (S = e);
 }
 function H(e) {
     var t, n, r, i;
@@ -381,8 +381,8 @@ function H(e) {
     (a.client_performance_cpu = f.Z.getCurrentCPUUsagePercent()), (a.client_performance_memory = f.Z.getCurrentMemoryUsageKB()), (a.cpu_core_count = f.Z.getCPUCoreCount()), (a.accessibility_features = B()), (a.rendered_locale = m.intl.currentLocale), (a.uptime_app = Math.floor((performance.now() - x) / 1000));
     let o = f.Z.getProcessUptime();
     null != o && (a.uptime_process_renderer = Math.floor(o));
-    let { utmSource: s, utmMedium: l, utmCampaign: c, utmContent: u } = T;
-    return (a.utm_source = null != (t = a.utm_source) ? t : s), (a.utm_medium = null != (n = a.utm_medium) ? n : l), (a.utm_campaign = null != (r = a.utm_campaign) ? r : c), (a.utm_content = null != (i = a.utm_content) ? i : u), k.forEach((e) => e(a)), a;
+    let { utmSource: s, utmMedium: l, utmCampaign: c, utmContent: u } = S;
+    return (a.utm_source = null != (t = a.utm_source) ? t : s), (a.utm_medium = null != (n = a.utm_medium) ? n : l), (a.utm_campaign = null != (r = a.utm_campaign) ? r : c), (a.utm_content = null != (i = a.utm_content) ? i : u), M.forEach((e) => e(a)), a;
 }
 function Y(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];

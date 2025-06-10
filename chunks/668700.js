@@ -23,8 +23,8 @@ var i = n(442837),
     y = n(227832);
 let O = 3;
 function v(e) {
-    let { user: t, guild: n, channel: v, onAction: I, onClose: S } = e,
-        { themeType: T } = (0, m.z)(),
+    let { user: t, guild: n, channel: v, onAction: I, onClose: T } = e,
+        { themeType: S } = (0, m.z)(),
         A = (0, p.Z)(v),
         N = (0, s.ZP)(v),
         { canViewChannel: C, canConnect: R } = (0, i.cj)([_.Z], () => ({
@@ -34,7 +34,7 @@ function v(e) {
     if (!C) return null;
     let P = () => {
             let e = (e) => {
-                e.stopPropagation(), (0, f.X)(n.id), null == I || I({ action: 'OPEN_VOICE_GUILD' }), null == S || S();
+                e.stopPropagation(), (0, f.X)(n.id), null == I || I({ action: 'OPEN_VOICE_GUILD' }), null == T || T();
             };
             return (0, r.jsx)(a.DY3, {
                 text: n.name,
@@ -56,7 +56,7 @@ function v(e) {
                     children: (0, r.jsx)(l.Z, { children: N })
                 });
             let e = (e) => {
-                e.stopPropagation(), o.default.selectVoiceChannel(v.id), (0, d.Kh)(v.id), null == I || I({ action: 'OPEN_VOICE_CHANNEL' }), null == S || S();
+                e.stopPropagation(), o.default.selectVoiceChannel(v.id), (0, d.Kh)(v.id), null == I || I({ action: 'OPEN_VOICE_CHANNEL' }), null == T || T();
             };
             return (0, r.jsx)(a.P3F, {
                 onClick: e,
@@ -69,7 +69,7 @@ function v(e) {
                 })
             });
         },
-        D = T !== E.lY.MODAL && T !== E.lY.MODAL_V2 && T !== E.lY.SIDEBAR;
+        D = S !== E.lY.MODAL && S !== E.lY.MODAL_V2 && S !== E.lY.SIDEBAR;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(h.Z, { className: y.voiceChannelDivider }),

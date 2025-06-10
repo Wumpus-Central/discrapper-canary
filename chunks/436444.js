@@ -1,6 +1,6 @@
 n.d(t, {
-    P: () => S,
-    Z: () => T
+    P: () => T,
+    Z: () => S
 }),
     n(415506);
 var r = n(255367);
@@ -84,22 +84,22 @@ function I(e) {
             throw Error('Unsupported Boosting tier: '.concat(e));
     }
 }
-let S = {
+let T = {
         [p.Eu4.NONE]: 0,
         [p.Eu4.TIER_1]: 1 / 3,
         [p.Eu4.TIER_2]: 2 / 3,
         [p.Eu4.TIER_3]: 1
     },
-    T = function (e) {
-        let { children: t, confettiTriggerRef: n, guild: i, isProgressBarAnimationComplete: b, setConfettiCount: O, setShouldFireConfetti: T, tier: A, tierMarkerAnimationPosition: N, totalAvailableBoostsCount: C } = e,
+    S = function (e) {
+        let { children: t, confettiTriggerRef: n, guild: i, isProgressBarAnimationComplete: b, setConfettiCount: O, setShouldFireConfetti: S, tier: A, tierMarkerAnimationPosition: N, totalAvailableBoostsCount: C } = e,
             { analyticsLocations: R } = (0, l.ZP)(),
             P = (0, c.Z)(),
             w = p.oCV[A],
             D = w - C,
             L = A <= N || b,
             x = L && A <= i.premiumTier,
-            k = L && A < i.premiumTier,
-            M = L && A === i.premiumTier,
+            M = L && A < i.premiumTier,
+            k = L && A === i.premiumTier,
             j = i.premiumTier < A && C >= w,
             { scaleFactor: U } = (0, s.q_F)({
                 from: { scaleFactor: 0 },
@@ -168,10 +168,10 @@ let S = {
                                 className: a()(E.progressBarMarker, {
                                     [E.progressBarMarkerUnlocked]: x,
                                     [E.progressBarMarkerLocked]: F,
-                                    [E.progressBarMarkerLower]: k,
-                                    [E.progressBarMarkerCurrent]: M
+                                    [E.progressBarMarkerLower]: M,
+                                    [E.progressBarMarkerCurrent]: k
                                 }),
-                                style: { left: ''.concat(100 * S[A], '%') }
+                                style: { left: ''.concat(100 * T[A], '%') }
                             },
                             e,
                             Z
@@ -183,7 +183,7 @@ let S = {
                                     ? (0, r.jsx)(_.m, {
                                           confettiTriggerRef: n,
                                           setConfettiCount: O,
-                                          setShouldFireConfetti: T,
+                                          setShouldFireConfetti: S,
                                           children: G
                                       })
                                     : G,

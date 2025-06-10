@@ -85,7 +85,7 @@ function y(e, t) {
     return i;
 }
 let O = function (e) {
-    var { subscriptionTier: t, onClick: n, size: i, className: h, textOptions: g, iconClassName: y, postSuccessGuild: O, onSubscribeModalClose: v, premiumModalAnalyticsLocation: I, showIcon: S = !0, disableShine: T, applicationId: A, giftMessage: N, shinyButtonClassName: C, showGradient: R = !1, confirmationFooter: P, paymentModalBanner: w, isGift: D, color: L, iconColor: x = 'currentColor', useExpressiveButton: k, giftIconClassName: M } = e,
+    var { subscriptionTier: t, onClick: n, size: i, className: h, textOptions: g, iconClassName: y, postSuccessGuild: O, onSubscribeModalClose: v, premiumModalAnalyticsLocation: I, showIcon: T = !0, disableShine: S, applicationId: A, giftMessage: N, shinyButtonClassName: C, showGradient: R = !1, confirmationFooter: P, paymentModalBanner: w, isGift: D, color: L, iconColor: x = 'currentColor', useExpressiveButton: M, giftIconClassName: k } = e,
         j = b(e, ['subscriptionTier', 'onClick', 'size', 'className', 'textOptions', 'iconClassName', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'showIcon', 'disableShine', 'applicationId', 'giftMessage', 'shinyButtonClassName', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'isGift', 'color', 'iconColor', 'useExpressiveButton', 'giftIconClassName']);
     let U = (0, o.e7)([c.Z], () => c.Z.isFocused()),
         G = (0, d.Z)({
@@ -105,7 +105,7 @@ let O = function (e) {
             isGift: D,
             giftMessage: N
         };
-    if (k && (null == g ? void 0 : g.expressiveButtonText) != null)
+    if (M && (null == g ? void 0 : g.expressiveButtonText) != null)
         return (0, r.jsx)(
             u.Z,
             E(m({}, B), {
@@ -144,11 +144,11 @@ let O = function (e) {
                             ),
                             {
                                 children: [
-                                    S &&
+                                    T &&
                                         (0, r.jsx)(l.OgN, {
                                             size: 'md',
                                             color: 'currentColor',
-                                            className: a()(p.giftIcon, M)
+                                            className: a()(p.giftIcon, k)
                                         }),
                                     (0, r.jsx)('span', {
                                         className: a()(p.buttonText, null == g ? void 0 : g.textClassName),
@@ -188,14 +188,14 @@ let O = function (e) {
                                         h
                                     ),
                                     buttonShineClassName: 'buttonShineClassName' in j ? j.buttonShineClassName : n === l.Ttl.BRAND_INVERTED ? p.brandShine : void 0,
-                                    pauseAnimation: !U || T
+                                    pauseAnimation: !U || S
                                 },
                                 j,
                                 e
                             ),
                             {
                                 children: [
-                                    S &&
+                                    T &&
                                         (0, r.jsx)(l.SrA, {
                                             size: 'md',
                                             color: x,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(754700),
     i = n(147913),
     a = n(317381),
@@ -34,7 +34,7 @@ let b = +d.Z.Millis.MINUTE,
 function I(e) {
     return !(0, h.zi)(e) && null != e.userStatus && null != e.userStatus.enrolledAt && null == e.userStatus.completedAt;
 }
-class S extends i.Z {
+class T extends i.Z {
     syncHeartbeats(e, t) {
         for (let n of ('VOICE_STATE_UPDATES' !== t && 'PASSIVE_UPDATE_V2' !== t && v.log('~ syncHeartbeats -> syncing heartbeats for taskTypes: '.concat(e.join(', '), ' (triggered by: ').concat(t, ')')), e)) {
             let e = this.heartbeats[n],
@@ -179,4 +179,4 @@ class S extends i.Z {
             });
     }
 }
-let T = new S();
+let S = new T();

@@ -71,14 +71,14 @@ let y = !1,
     O = {},
     v = {},
     I = new Set(),
-    S = {},
     T = {},
+    S = {},
     A = !1;
 function N() {
-    s.K.set(E, g(h({}, b()), { activeLaunchOptionIds: T }));
+    s.K.set(E, g(h({}, b()), { activeLaunchOptionIds: S }));
 }
 function C() {
-    s.K.set(E, g(h({}, b()), { activeLibraryApplicationBranchIds: S }));
+    s.K.set(E, g(h({}, b()), { activeLibraryApplicationBranchIds: T }));
 }
 function R(e) {
     for (let t of e) {
@@ -109,14 +109,14 @@ function x(e) {
         r = (0, d.Tu)(n.id, n.branchId);
     (O[r] = n), I.delete(r);
 }
-function k(e) {
-    let { applicationId: t, branchId: n, launchOptionId: r } = e;
-    (T[(0, d.Tu)(t, n)] = r), N();
-}
 function M(e) {
+    let { applicationId: t, branchId: n, launchOptionId: r } = e;
+    (S[(0, d.Tu)(t, n)] = r), N();
+}
+function k(e) {
     let { applicationId: t, branchId: n } = e;
-    if (S[t] === n) return !1;
-    (S[t] = n), C();
+    if (T[t] === n) return !1;
+    (T[t] = n), C();
 }
 function j(e) {
     let { libraryApplications: t } = e;
@@ -146,7 +146,7 @@ class V extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(f.default);
         let e = s.K.get(E);
-        null != e && (null == e.activeLaunchOptionIds ? N() : (T = e.activeLaunchOptionIds), null == e.activeLibraryApplicationBranchIds ? C() : (S = e.activeLibraryApplicationBranchIds));
+        null != e && (null == e.activeLaunchOptionIds ? N() : (S = e.activeLaunchOptionIds), null == e.activeLibraryApplicationBranchIds ? C() : (T = e.activeLibraryApplicationBranchIds));
     }
     get libraryApplications() {
         return G((e) => !e.isHidden());
@@ -169,7 +169,7 @@ class V extends (r = o.ZP.Store) {
     }
     getActiveLibraryApplication(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = S[e];
+            n = T[e];
         if (null != n) {
             var r;
             let i = (0, d.Tu)(e, n),
@@ -187,7 +187,7 @@ class V extends (r = o.ZP.Store) {
         return I.has((0, d.Tu)(e, t));
     }
     getActiveLaunchOptionId(e, t) {
-        return T[(0, d.Tu)(e, t)];
+        return S[(0, d.Tu)(e, t)];
     }
     get fetched() {
         return y;
@@ -216,8 +216,8 @@ let Z = new V(l.Z, {
     LIBRARY_APPLICATION_FLAGS_UPDATE_START: L,
     LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: x,
     LIBRARY_APPLICATION_UPDATE: x,
-    LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: k,
-    LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: M,
+    LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: M,
+    LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: k,
     LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: j,
     DEVELOPER_TEST_MODE_RESET: U
 });

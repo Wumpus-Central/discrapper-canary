@@ -128,11 +128,11 @@ let O = (e) => {
             b = t.toString(),
             v = f ? null : y(t),
             I = t.isVerifiedBot(),
-            S = d.ZP.getName(t),
-            T = i ? b : null != n ? n : S,
+            T = d.ZP.getName(t),
+            S = i ? b : null != n ? n : T,
             A = t.isPomelo() || l;
-        if (A || T !== b) {
-            let e = T === b && A && i ? d.ZP.getUserTag(t, { forcePomelo: l }) : T,
+        if (A || S !== b) {
+            let e = S === b && A && i ? d.ZP.getUserTag(t, { forcePomelo: l }) : S,
                 n = a && e !== '@'.concat(b) ? d.ZP.getUserTag(t) : void 0;
             return (0, r.jsx)(
                 O,
@@ -152,10 +152,10 @@ let O = (e) => {
             c.Z,
             h(
                 {
-                    name: T,
+                    name: S,
                     botType: v,
                     botVerified: I,
-                    discriminator: g || T !== b ? null : null != s ? s : t.discriminator
+                    discriminator: g || S !== b ? null : null != s ? s : t.discriminator
                 },
                 p
             )

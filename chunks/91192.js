@@ -3,7 +3,7 @@ n.d(t, {
     JA: () => g,
     OP: () => O,
     SJ: () => I,
-    bG: () => S,
+    bG: () => T,
     eg: () => y,
     f$: () => m,
     l2: () => v,
@@ -146,7 +146,7 @@ function I(e) {
     let { children: t } = e;
     return t(O());
 }
-function S(e) {
+function T(e) {
     let { children: t, navigator: n } = e,
         {
             id: a,

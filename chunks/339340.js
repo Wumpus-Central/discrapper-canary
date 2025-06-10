@@ -1,5 +1,5 @@
 n.d(t, {
-    a: () => T,
+    a: () => S,
     default: () => N
 }),
     n(388685),
@@ -26,8 +26,8 @@ var r = n(255367),
     O = n(626135),
     v = n(981631),
     I = n(388032),
-    S = n(823150);
-let T = 'VoiceChannelStatusModal',
+    T = n(823150);
+let S = 'VoiceChannelStatusModal',
     A = 500;
 function N(e) {
     let { channel: t, transitionState: n, sourceAnalyticsLocations: a, onClose: N } = e,
@@ -35,8 +35,8 @@ function N(e) {
         R = (0, s.e7)([b.Z], () => b.Z.getMediaSessionId()),
         [P, w] = i.useState(null != C ? C : ''),
         [D, L] = i.useState(!1),
-        [x, k] = i.useState(null),
-        M = (0, s.e7)([y.default], () => y.default.getCurrentUser()),
+        [x, M] = i.useState(null),
+        k = (0, s.e7)([y.default], () => y.default.getCurrentUser()),
         j = P.length > A,
         U = (0, g.Q3)('VoiceChannelStatusModal');
     i.useEffect(() => {
@@ -47,18 +47,18 @@ function N(e) {
         });
     }, [t.guild_id, a]);
     let G = (e) => {
-            k(new l.Hx(e, e.status).getAnyErrorMessage());
+            M(new l.Hx(e, e.status).getAnyErrorMessage());
         },
         B = (e) => {
             let { invalidEmojis: n } = e;
             if (null != n && n.length > 0) {
-                let { errorMessage: e } = d.Z.validateMessage(n, M, t.id);
-                return k(e), L(!1), { hasErrors: !0 };
+                let { errorMessage: e } = d.Z.validateMessage(n, k, t.id);
+                return M(e), L(!1), { hasErrors: !0 };
             }
             return { hasErrors: !1 };
         },
         F = async (e) => {
-            P === C && N(), null == e || e.preventDefault(), k(null), L(!0);
+            P === C && N(), null == e || e.preventDefault(), M(null), L(!0);
             let n = P.length,
                 r = P.replace(/<(a)?:[^:]+:[0-9]+>/g, '--').length,
                 i = E.ZP.parse(void 0, P),
@@ -96,29 +96,29 @@ function N(e) {
         );
     return (0, r.jsx)('form', {
         onSubmit: F,
-        className: S.form,
+        className: T.form,
         children: (0, r.jsxs)(c.Y0X, {
             transitionState: n,
             size: c.CgR.SMALL,
-            className: o()(S.modal, S.gradientBorder),
+            className: o()(T.modal, T.gradientBorder),
             parentComponent: 'VoiceChannelStatusModal',
             children: [
                 (0, r.jsxs)(c.hzk, {
-                    className: S.container,
+                    className: T.container,
                     children: [
                         (0, r.jsxs)(c.xBx, {
                             direction: m.Z.Direction.VERTICAL,
-                            className: S.modalHeader,
+                            className: T.modalHeader,
                             separator: !1,
                             children: [
                                 (0, r.jsx)(c.olH, {
-                                    className: S.closeButton,
+                                    className: T.closeButton,
                                     onClick: N
                                 }),
-                                (0, r.jsx)('div', { className: S.headerImage }),
+                                (0, r.jsx)('div', { className: T.headerImage }),
                                 (0, r.jsx)(c.vwX, {
                                     tag: 'h1',
-                                    className: S.title,
+                                    className: T.title,
                                     children: I.intl.string(I.t['5CyJBQ'])
                                 }),
                                 (0, r.jsx)(c.Text, {
@@ -129,11 +129,11 @@ function N(e) {
                             ]
                         }),
                         (0, r.jsxs)(c.hjN, {
-                            className: S.inputSection,
+                            className: T.inputSection,
                             title: I.intl.string(I.t.Fq5lwM),
                             children: [
                                 (0, r.jsx)(h.Z, {
-                                    innerClassName: S.textArea,
+                                    innerClassName: T.textArea,
                                     textValue: P,
                                     richValue: V,
                                     placeholder: I.intl.formatToPlainString(I.t.DUXxBg, { channelName: t.name }),
@@ -145,14 +145,14 @@ function N(e) {
                                     canMentionRoles: !1,
                                     canMentionChannels: !1,
                                     allowNewLines: !1,
-                                    parentModalKey: T,
+                                    parentModalKey: S,
                                     maxCharacterCount: A,
                                     showRemainingCharsAfterCount: A / 2,
                                     emojiPickerCloseOnModalOuterClick: !0
                                 }),
                                 null != x
                                     ? (0, r.jsx)(c.kzN, {
-                                          className: S.error,
+                                          className: T.error,
                                           children: x
                                       })
                                     : null
@@ -163,19 +163,19 @@ function N(e) {
                 (0, r.jsxs)(c.mzw, {
                     justify: U ? m.Z.Justify.END : m.Z.Justify.BETWEEN,
                     direction: m.Z.Direction.HORIZONTAL,
-                    className: S.modalFooter,
+                    className: T.modalFooter,
                     children: [
                         (0, r.jsx)(c.zxk, {
                             look: c.zxk.Looks.FILLED,
                             color: c.zxk.Colors.PRIMARY,
-                            className: S.cancelButton,
+                            className: T.cancelButton,
                             onClick: N,
                             children: I.intl.string(I.t['ETE/oK'])
                         }),
                         (0, r.jsx)(c.zxk, {
                             onClick: F,
                             submitting: D,
-                            className: S.button,
+                            className: T.button,
                             disabled: j,
                             children: I.intl.string(I.t.XqK2Iy)
                         })

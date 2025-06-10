@@ -16,11 +16,11 @@ var r = n(255367),
     g = n(441533);
 function E(e) {
     let { id: t, user: n, application: E, bot: b, accountScopes: y, showLogout: O, location: v, scopes: I } = e,
-        S = u.ZP.getApplicationIconURL({
+        T = u.ZP.getApplicationIconURL({
             id: E.id,
             icon: E.icon
         }),
-        T = u.ZP.getUserAvatarURL(n),
+        S = u.ZP.getUserAvatarURL(n),
         A = i.useMemo(
             () =>
                 I.some((e) => (0, _.sg)(e))
@@ -77,7 +77,7 @@ function E(e) {
                 children: [
                     (0, r.jsx)(o.qE, {
                         className: g.avatar,
-                        src: S,
+                        src: T,
                         size: h.EF.SIZE_80,
                         'aria-label': E.name
                     }),
@@ -87,7 +87,7 @@ function E(e) {
                     }),
                     (0, r.jsx)(o.qE, {
                         className: g.avatar,
-                        src: T,
+                        src: S,
                         size: h.EF.SIZE_80,
                         'aria-label': n.username
                     })

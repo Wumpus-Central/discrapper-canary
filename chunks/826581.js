@@ -83,24 +83,24 @@ function I(e, t, n) {
         }
     }
 }
-function S(e) {
+function T(e) {
     let { joinRequest: t } = e;
     j(t);
 }
-let T = !1;
+let S = !1;
 function A() {
-    T = !0;
+    S = !0;
 }
 function N(e) {
     let { status: t, requests: n, total: r, guildId: i } = e;
-    (T = !1),
+    (S = !1),
         t === f.wB.SUBMITTED && v(i, r),
         n.forEach((e) => {
             j(e);
         });
 }
 function C() {
-    T = !1;
+    S = !1;
 }
 let R = (e) => 'guild-join-request='.concat(e),
     P = (e, t) => 'guild-'.concat(e, '-').concat(t);
@@ -111,10 +111,10 @@ function w(e) {
 let D = new s.h(w, (e) => ''.concat(e.joinRequestId)),
     L = new s.h(w, (e) => ''.concat(e.joinRequestId)),
     x = new s.h(w, (e) => ''.concat(e.actionedAt));
-function k(e) {
+function M(e) {
     return D.get(e);
 }
-function M(e) {
+function k(e) {
     delete K[e], D.delete(e), L.delete(e), x.delete(e);
 }
 function j(e) {
@@ -126,13 +126,13 @@ function U(e) {
         i = (0, _.j)(r),
         a = c.default.getCurrentUser();
     if (null == a || i.userId === a.id) return !1;
-    let o = null == (t = k(i.joinRequestId)) ? void 0 : t.applicationStatus;
+    let o = null == (t = M(i.joinRequestId)) ? void 0 : t.applicationStatus;
     return I(n, i.applicationStatus, o), j(i), !0;
 }
 function G(e) {
     let { id: t, guildId: n } = e,
-        r = k(t);
-    null != r && (I(n, E, r.applicationStatus), M(t));
+        r = M(t);
+    null != r && (I(n, E, r.applicationStatus), k(t));
 }
 function B(e) {
     let { guildId: t, action: n } = e;
@@ -174,7 +174,7 @@ class q extends (r = o.ZP.Store) {
         return y[e];
     }
     isFetching() {
-        return T;
+        return S;
     }
     hasFetched(e) {
         if (!b.has(e)) return !1;
@@ -192,12 +192,12 @@ class q extends (r = o.ZP.Store) {
     }
     getSelectedGuildJoinRequest(e) {
         let t = Y[e];
-        return null != t ? k(t.joinRequestId) : null;
+        return null != t ? M(t.joinRequestId) : null;
     }
 }
 p(q, 'displayName', 'GuildJoinRequestStoreV2');
 let X = new q(l.Z, {
-    GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS: S,
+    GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS: T,
     GUILD_JOIN_REQUESTS_FETCH_SUCCESS: N,
     GUILD_JOIN_REQUESTS_FETCH_START: A,
     GUILD_JOIN_REQUESTS_FETCH_FAILURE: C,

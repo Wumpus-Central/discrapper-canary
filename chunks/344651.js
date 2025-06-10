@@ -21,8 +21,8 @@ var a = n(442837),
     O = n(592125),
     v = n(271383),
     I = n(819640),
-    S = n(594174),
-    T = n(979651),
+    T = n(594174),
+    S = n(979651),
     A = n(509545),
     N = n(78839),
     C = n(936101),
@@ -70,7 +70,7 @@ function x(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,7 +81,7 @@ function k(e, t) {
         e
     );
 }
-function M(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -119,7 +119,7 @@ let U = new d.Z('ConnectionStore'),
                     null == i
                         ? void 0
                         : i.merge(
-                              k(L({}, r), {
+                              M(L({}, r), {
                                   recipients: i.recipients,
                                   bitrate: null != (n = r.bitrate) ? n : i.bitrate
                               })
@@ -273,7 +273,7 @@ Y(
         m.Z.initialGuild.measure(() => {
             a.ZP.Emitter.batched(() => {
                 let t = R.Fx(e, w.Wb.identifyStartTime);
-                null != S.default.getCurrentUser() &&
+                null != T.default.getCurrentUser() &&
                     (K({
                         type: 'GUILD_CREATE',
                         guild: t
@@ -648,7 +648,7 @@ Y(
         (e) => O.o.loadGuildIds([e.guild_id]),
         (e, t) => {
             let { newly_created: n } = e,
-                r = M(e, ['newly_created']);
+                r = k(e, ['newly_created']);
             K({
                 type: t,
                 isNewlyCreated: n,
@@ -1066,7 +1066,7 @@ Y(
                         selfStream: e.self_stream || !1,
                         requestToSpeakTimestamp: null != (t = e.request_to_speak_timestamp) ? t : null,
                         discoverable: null == (n = e.discoverable) || n,
-                        oldChannelId: T.Z.getUserVoiceChannelId(e.guild_id, e.user_id)
+                        oldChannelId: S.Z.getUserVoiceChannelId(e.guild_id, e.user_id)
                     }
                 ]
             });

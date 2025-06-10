@@ -19,13 +19,13 @@ var r = n(98405),
     O = /[\uD800-\uDFFF]/g,
     v = /^[\uD800-\uDBFF]$/,
     I = /^[\uDC00-\uDFFF]$/,
-    S =
+    T =
         !_ ||
         l(function () {
             var e = i('Symbol')('stringify detection');
             return '[null]' !== h([e]) || '{}' !== h({ a: e }) || '{}' !== h(Object(e));
         }),
-    T = l(function () {
+    S = l(function () {
         return '"\uDF06\uD834"' !== h('\uDF06\uD834') || '"\uDEAD"' !== h('\uDEAD');
     }),
     A = function (e, t) {
@@ -50,13 +50,13 @@ h &&
             target: 'JSON',
             stat: !0,
             arity: 3,
-            forced: S || T
+            forced: T || S
         },
         {
             stringify: function (e, t, n) {
                 var r = d(arguments),
-                    i = a(S ? A : h, null, r);
-                return T && 'string' == typeof i ? b(i, O, N) : i;
+                    i = a(T ? A : h, null, r);
+                return S && 'string' == typeof i ? b(i, O, N) : i;
             }
         }
     );

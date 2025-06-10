@@ -43,20 +43,20 @@ function g() {
                     : [...t, e]
             );
         }, []),
-        S = l.ZP.isPremiumExactly(t, h.p9.TIER_2),
-        T =
+        T = l.ZP.isPremiumExactly(t, h.p9.TIER_2),
+        S =
             d.g.useExperiment(
                 { location: 'useOutboundPromotions' },
                 {
                     autoTrackExposure: !1,
-                    disable: S
+                    disable: T
                 }
-            ).enabled || S;
+            ).enabled || T;
     r.useEffect(() => {
         a.Z.wait(() => {
-            T && (null == e || E) && _.ZP.fetchActiveOutboundPromotions();
+            S && (null == e || E) && _.ZP.fetchActiveOutboundPromotions();
         });
-    }, [e, T, E]),
+    }, [e, S, E]),
         r.useEffect(() => {
             a.Z.wait(() => {
                 (0, f.t8)()
@@ -78,7 +78,7 @@ function g() {
             })
         );
     return {
-        promotionsLoaded: b && (!T || null != e || E),
+        promotionsLoaded: b && (!S || null != e || E),
         activeOutboundPromotions: N,
         claimedEndedOutboundPromotions: O.filter((e) => {
             let { promotion: t } = e;

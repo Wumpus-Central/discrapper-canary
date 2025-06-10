@@ -17,8 +17,8 @@ var s,
     O = n(594174),
     v = n(70956),
     I = n(709054),
-    S = n(418088),
-    T = n(814249);
+    T = n(418088),
+    S = n(814249);
 function A(e, t, n) {
     return (
         t in e
@@ -76,17 +76,17 @@ let P = {},
     D = {},
     L = [],
     x = {},
-    k = {
+    M = {
         status: 'ok',
         lastRequest: null,
         lastResponse: null
     },
-    M = [],
+    k = [],
     j = [],
     U = 75,
     G = 25;
 function B() {
-    M = h.Z.getProps()
+    k = h.Z.getProps()
         .results.filter((e) => e.type === _.h8.TEXT_CHANNEL && 0 === e.record.type)
         .map((e) => e.record.id);
 }
@@ -139,7 +139,7 @@ class F extends (s = u.ZP.PersistedStore) {
         if (null != t) {
             let e = null != (n = null == i ? void 0 : i.summaryIdLastRequestedAt) ? n : 0,
                 r = Date.now() - e;
-            return t !== (null == i ? void 0 : i.summaryId) || r > T.cS;
+            return t !== (null == i ? void 0 : i.summaryId) || r > S.cS;
         }
         let o = null != (r = null == i ? void 0 : i.lastReceivedAt) ? r : 0;
         return !(null == i ? void 0 : i.fetching) && 0 === o;
@@ -151,16 +151,16 @@ class F extends (s = u.ZP.PersistedStore) {
         return x;
     }
     channelAffinitiesStatus() {
-        return k;
+        return M;
     }
     shouldFetchChannelAffinities() {
-        return !('fetching' === k.status || (null != k.lastResponse && Date.now() - k.lastResponse < 30 * v.Z.Millis.SECOND));
+        return !('fetching' === M.status || (null != M.lastResponse && Date.now() - M.lastResponse < 30 * v.Z.Millis.SECOND));
     }
     defaultChannelIds(e) {
         let { withQuickSwitcher: t, withChannelAffinities: n, withUnreads: r, numChannels: i = G } = e,
             a = [];
         return (
-            t && (a = a.concat(M)),
+            t && (a = a.concat(k)),
             n && (a = a.concat(L.map((e) => e.channel_id))),
             r &&
                 (a = a.filter((e) => {
@@ -195,7 +195,7 @@ let Z = new F(d.Z, {
         var t, n;
         let { summary: r, channelId: i, error: a, receivedAt: o } = e;
         if (null != r && Object.keys(r).length > 0) {
-            let e = (0, S.b)(r, i),
+            let e = (0, T.b)(r, i),
                 n = [...(null != (t = P[i]) ? t : [])],
                 a = n.findIndex((t) => t.id === (null == e ? void 0 : e.id));
             a > -1 ? (n[a] = e) : n.push(e), (P[i] = n);
@@ -217,7 +217,7 @@ let Z = new F(d.Z, {
     },
     RECEIVE_CHANNEL_SUMMARIES(e) {
         let { summaries: t, channelId: n, error: r, receivedAt: i } = e,
-            a = t.filter((e) => Object.keys(e).length > 0).map((e) => (0, S.b)(e, n));
+            a = t.filter((e) => Object.keys(e).length > 0).map((e) => (0, T.b)(e, n));
         if (null != o && o.channelId === n && !a.some((e) => e.id === (null == o ? void 0 : o.summaryId))) {
             var s;
             let e = (null != (s = P[n]) ? s : []).find((e) => e.id === (null == o ? void 0 : o.summaryId));
@@ -284,7 +284,7 @@ let Z = new F(d.Z, {
         null != n ? (D[t.id] = n) : delete D[t.id];
     },
     REQUEST_CHANNEL_AFFINITIES() {
-        k = R(N({}, k), {
+        M = R(N({}, M), {
             status: 'fetching',
             lastRequest: Date.now()
         });
@@ -295,7 +295,7 @@ let Z = new F(d.Z, {
         if (null != r) {
             (L = []),
                 (x = {}),
-                (k = R(N({}, k), {
+                (M = R(N({}, M), {
                     status: 'error',
                     lastResponse: Date.now()
                 }));
@@ -303,7 +303,7 @@ let Z = new F(d.Z, {
         }
         (L = null != n ? n : []),
             (x = null != (t = null == n ? void 0 : n.reduce((e, t) => ((e[t.channel_id] = t.affinity), e), {})) ? t : {}),
-            (k = R(N({}, k), {
+            (M = R(N({}, M), {
                 status: 'ok',
                 lastResponse: Date.now()
             }));
@@ -336,7 +336,7 @@ let Z = new F(d.Z, {
                 .reduce((e, t) => {
                     let [n, r] = t,
                         i = c()
-                            .chain(r.map((e) => (0, S.b)(e, n)))
+                            .chain(r.map((e) => (0, T.b)(e, n)))
                             .sortBy((e) => I.default.extractTimestamp(e.startId))
                             .takeRight(U)
                             .reverse()
@@ -374,7 +374,7 @@ let Z = new F(d.Z, {
                 .chain(a)
                 .sortBy((e) => I.default.extractTimestamp(e.start_id))
                 .filter((e) => Object.keys(e).length > 0)
-                .map((e) => (0, S.b)(e, i))
+                .map((e) => (0, T.b)(e, i))
                 .reverse()
                 .value(),
             u = null != (n = P[i]) ? n : [],

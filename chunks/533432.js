@@ -16,7 +16,7 @@ let m = i.forwardRef(function (e, t) {
         let { emojiListRef: n, gridNavigatorId: a, isFullRow: m, onKeyDown: g, onFocus: E, autoFocus: b, className: y, defaultSearchPlaceholder: O } = e,
             v = i.useRef(null),
             I = (0, d.Iu)((e) => e.searchQuery),
-            [S, T] = u.kJ.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], s.X),
+            [T, S] = u.kJ.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], s.X),
             A = i.useCallback(
                 (e) => {
                     var t;
@@ -49,7 +49,7 @@ let m = i.forwardRef(function (e, t) {
                 query: I,
                 ref: v,
                 size: c.E1j.Sizes.MEDIUM,
-                placeholder: null != T ? T : O,
+                placeholder: null != S ? S : O,
                 onClear: N,
                 onKeyDown: C,
                 onFocus: E,
@@ -60,7 +60,7 @@ let m = i.forwardRef(function (e, t) {
                     'aria-haspopup': 'grid',
                     'aria-controls': a,
                     'aria-expanded': !0,
-                    'aria-activedescendant': (0, l.NE)(a, S.columnIndex, S.rowIndex)
+                    'aria-activedescendant': (0, l.NE)(a, T.columnIndex, T.rowIndex)
                 }
             })
         );

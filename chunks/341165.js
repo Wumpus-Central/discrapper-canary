@@ -34,11 +34,11 @@ let m = {},
 function I() {
     (m = {}), (g = {}), (E = {}), (b = {}), (r = null), (O = !1), (v = !1), (y = !1);
 }
-function S(e) {
+function T(e) {
     let { channel: t } = e;
     delete m[t.id], delete g[t.id], delete E[t.id];
 }
-function T(e) {
+function S(e) {
     let { channelId: t, invite: n } = e,
         r = _.Z.createFromServer(n);
     r.targetType === p.Iq.STREAM && null != r.targetUser ? (null == g[t] && (g[t] = {}), (g[t][String(r.targetUser.id)] = r)) : r.targetType === p.Iq.EMBEDDED_APPLICATION && null != r.targetApplication ? (null == E[t] && (E[t] = {}), (E[t][r.targetApplication.id] = r)) : (m[t] = r);
@@ -85,10 +85,10 @@ function x(e) {
         (r = null != (t = o()(l()(u()(Object.values(b), 'createdAt')))) ? t : null),
         (y = !1);
 }
-function k(e) {
+function M(e) {
     delete m[e.channelId];
 }
-class M extends (i = d.ZP.Store) {
+class k extends (i = d.ZP.Store) {
     getInvite(e) {
         var t, n;
         let { targetType: r, targetUserId: i, targetApplicationId: a } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -104,19 +104,19 @@ class M extends (i = d.ZP.Store) {
         return null != r && !O && !v;
     }
 }
-h(M, 'displayName', 'InstantInviteStore');
-let j = new M(f.Z, {
+h(k, 'displayName', 'InstantInviteStore');
+let j = new k(f.Z, {
     CONNECTION_OPEN: I,
-    CHANNEL_DELETE: S,
+    CHANNEL_DELETE: T,
     FRIEND_INVITE_CREATE_SUCCESS: C,
     FRIEND_INVITE_CREATE_FAILURE: R,
     FRIEND_INVITE_REVOKE_SUCCESS: P,
-    INSTANT_INVITE_CREATE_SUCCESS: T,
+    INSTANT_INVITE_CREATE_SUCCESS: S,
     INSTANT_INVITE_CREATE_FAILURE: A,
     INSTANT_INVITE_REVOKE_SUCCESS: N,
     FRIEND_INVITE_REVOKE_REQUEST: w,
     FRIEND_INVITE_CREATE_REQUEST: D,
     FRIEND_INVITES_FETCH_REQUEST: L,
     FRIEND_INVITES_FETCH_RESPONSE: x,
-    INSTANT_INVITE_CLEAR: k
+    INSTANT_INVITE_CLEAR: M
 });

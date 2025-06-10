@@ -51,7 +51,7 @@ function E(e, t) {
                   };
         }),
         I = (0, s.Z)(),
-        S = r.useMemo(() => {
+        T = r.useMemo(() => {
             if (y) {
                 let r = null == b ? void 0 : b.primaryGuild,
                     i = (null == r ? void 0 : r.identityGuildId) === n && (null == r ? void 0 : r.identityEnabled) === !0;
@@ -61,7 +61,7 @@ function E(e, t) {
         }, [y, I, n, m, O, e.visibility, e.tag, v, null == b ? void 0 : b.primaryGuild, t, E]);
     return {
         guildId: n,
-        ctaType: S,
+        ctaType: T,
         validInviteKey: O
     };
 }

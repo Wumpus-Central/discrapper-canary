@@ -3,10 +3,10 @@ function r(t) {
         a = t[0],
         r = 1;
     for (; r < t.length; ) {
-        let n = t[r],
-            _ = t[r + 1];
-        if (((r += 2), ('optionalAccess' === n || 'optionalCall' === n) && null == a)) return;
-        'access' === n || 'optionalAccess' === n ? ((e = a), (a = _(a))) : ('call' === n || 'optionalCall' === n) && ((a = _((...t) => a.call(e, ...t))), (e = void 0));
+        let _ = t[r],
+            n = t[r + 1];
+        if (((r += 2), ('optionalAccess' === _ || 'optionalCall' === _) && null == a)) return;
+        'access' === _ || 'optionalAccess' === _ ? ((e = a), (a = n(a))) : ('call' === _ || 'optionalCall' === _) && ((a = n((...t) => a.call(e, ...t))), (e = void 0));
     }
     return a;
 }

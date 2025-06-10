@@ -169,12 +169,12 @@ function v(e) {
         }, [u, c]),
         I = null != u ? (null == g ? void 0 : g[u]) : null;
     s = null != I && (null == (t = I.lastValidationResult) ? void 0 : t.success) === !1 ? (null != (n = I.lastValidationResult.error) ? n : '') : null;
-    let S = m && null != b ? (0, d.ky)(b) : null;
+    let T = m && null != b ? (0, d.ky)(b) : null;
     return (0, r.jsxs)('div', {
         className: o()(p.wrapper, y ? null : p.disabled),
         children: [
-            null != S
-                ? (0, r.jsx)(S, {
+            null != T
+                ? (0, r.jsx)(T, {
                       className: p.image,
                       channel: _,
                       section: b,

@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(502762),
     v = n(530),
     I = n(679332),
-    S = n(544989),
-    T = n(228168),
+    T = n(544989),
+    S = n(228168),
     A = n(388032),
     N = n(200669);
 function C(e, t, n) {
@@ -54,9 +54,9 @@ function R(e) {
     return e;
 }
 function P(e) {
-    let { user: t, guildId: n, channelId: C, messageId: P, roleId: w, openedAt: D, setPopoutRef: L, closePopout: x, disableUserProfileLink: k = __OVERLAY__, newAnalyticsLocations: M = [], disableAutoFocus: j = !1 } = e,
+    let { user: t, guildId: n, channelId: C, messageId: P, roleId: w, openedAt: D, setPopoutRef: L, closePopout: x, disableUserProfileLink: M = __OVERLAY__, newAnalyticsLocations: k = [], disableAutoFocus: j = !1 } = e,
         U = (0, h.ZP)(t.id, n),
-        { analyticsLocations: G } = (0, l.ZP)([...M, s.Z.USER_PROFILE_POPOUT]),
+        { analyticsLocations: G } = (0, l.ZP)([...k, s.Z.USER_PROFILE_POPOUT]),
         B = (0, _.ZB)({
             layout: 'POPOUT',
             userId: t.id,
@@ -82,7 +82,7 @@ function P(e) {
                     )
                 );
         },
-        H = !k && (0, c.Z)(t.id),
+        H = !M && (0, c.Z)(t.id),
         Y = () =>
             H
                 ? (0, r.jsx)(a.sNh, {
@@ -118,9 +118,9 @@ function P(e) {
                     (0, r.jsxs)(O.Z, {
                         user: t,
                         displayProfile: U,
-                        themeType: T.lY.POPOUT,
+                        themeType: S.lY.POPOUT,
                         children: [
-                            (0, r.jsx)(S.Z, {
+                            (0, r.jsx)(T.Z, {
                                 children: (0, r.jsx)(I.Z, {
                                     user: t,
                                     viewProfileItem: Y()
@@ -133,14 +133,14 @@ function P(e) {
                                         user: t,
                                         displayProfile: U,
                                         guildId: n,
-                                        themeType: T.lY.POPOUT
+                                        themeType: S.lY.POPOUT
                                     }),
                                     (0, r.jsx)(g.Z, {
                                         user: t,
                                         displayProfile: U,
                                         guildId: n,
                                         channelId: C,
-                                        themeType: T.lY.POPOUT,
+                                        themeType: S.lY.POPOUT,
                                         onOpenProfile: H ? Z : void 0
                                     }),
                                     t.isClyde() && (0, r.jsx)(u.Z, { className: N.headerTag })
@@ -156,7 +156,7 @@ function P(e) {
                                         onOpenProfile: H ? Z : void 0,
                                         tags: (0, r.jsx)(E.Z, {
                                             displayProfile: U,
-                                            themeType: T.lY.POPOUT,
+                                            themeType: S.lY.POPOUT,
                                             onClose: x
                                         })
                                     }),

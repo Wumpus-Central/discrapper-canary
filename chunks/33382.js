@@ -21,17 +21,17 @@ function a(e, t) {
         var O = null != h && null != p && p !== h,
             v = '+' === b || '*' === b,
             I = '?' === b || '*' === b,
-            S = n[2] || l,
-            T = g || E;
+            T = n[2] || l,
+            S = g || E;
         r.push({
             name: m || a++,
             prefix: h || '',
-            delimiter: S,
+            delimiter: T,
             optional: I,
             repeat: v,
             partial: O,
             asterisk: !!y,
-            pattern: T ? d(T) : y ? '.*' : '[^' + u(S) + ']+?'
+            pattern: S ? d(S) : y ? '.*' : '[^' + u(T) + ']+?'
         });
     }
     return o < e.length && (s += e.substr(o)), s && r.push(s), r;

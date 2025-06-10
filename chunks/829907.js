@@ -1,13 +1,13 @@
 n.d(t, {
     DH: () => N,
-    H8: () => T,
+    H8: () => S,
     HD: () => d,
     PD: () => C,
     P_: () => g,
     X8: () => f,
     hj: () => I,
     qT: () => R,
-    qc: () => S,
+    qc: () => T,
     sS: () => m,
     tY: () => _
 }),
@@ -89,14 +89,14 @@ async function I(e) {
     let s = b[a];
     return null != s ? s(e, i, r) : r;
 }
-function S(e) {
+function T(e) {
     var t;
     let n = null == (t = l.Z.getGameByName(e.name)) ? void 0 : t.id;
     return null != n && y.has(n);
 }
-function T(e) {
+function S(e) {
     let t = o.ZP.getGameForPID(e);
-    return null != t && null != t.name && S(t);
+    return null != t && null != t.name && T(t);
 }
 let A = new Set([i.Jx.UNKNOWN, i.Jx.FULLSCREEN]);
 function N(e, t, n) {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(781311);
+n.d(t, { Z: () => T }), n(781311);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(556638),
     v = n(981631),
     I = n(843280);
-function S(e) {
-    let { user: t, activities: n, applicationStream: a, voiceChannel: S, textClassName: T, iconClassName: A, textSize: N = 'xs', animateEmoji: C = !0, hasQuest: R = !1, hideEmoji: P = !1, hideTooltip: w = !1 } = e;
+function T(e) {
+    let { user: t, activities: n, applicationStream: a, voiceChannel: T, textClassName: S, iconClassName: A, textSize: N = 'xs', animateEmoji: C = !0, hasQuest: R = !1, hideEmoji: P = !1, hideTooltip: w = !1 } = e;
     (0, u.Z)(null == t ? void 0 : t.id);
     let D = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
         L = (0, d.Z)({ location: 'ActivityStatus' }),
@@ -39,18 +39,18 @@ function S(e) {
             return null == ('' === i ? null : i) && null == r.emoji ? null : r;
         }, [n]);
     if ((0, l.e7)([p.Z], () => p.Z.isBlockedOrIgnored(null == t ? void 0 : t.id))) return null;
-    let k = (null == t ? void 0 : t.bot) === !0,
-        M = (null == x ? void 0 : x.state) != null && 'xs' === N,
+    let M = (null == t ? void 0 : t.bot) === !0,
+        k = (null == x ? void 0 : x.state) != null && 'xs' === N,
         j = () => {
             if (null != D)
                 return (0, r.jsx)(E.Z, {
                     stream: D,
                     game: null == n ? void 0 : n.find(c.Z),
                     textVariant: 'text-'.concat(N, '/medium'),
-                    textClassName: T,
+                    textClassName: S,
                     iconClassName: A,
-                    hideText: M,
-                    hideIcon: k,
+                    hideText: k,
+                    hideIcon: M,
                     hideTooltip: w
                 });
             let e =
@@ -64,19 +64,19 @@ function S(e) {
                 ? (0, r.jsx)(b.Z, {
                       activity: e,
                       textVariant: 'text-'.concat(N, '/medium'),
-                      textClassName: T,
+                      textClassName: S,
                       iconClassName: A,
-                      hideText: M,
-                      hideIcon: k,
+                      hideText: k,
+                      hideIcon: M,
                       hideTooltip: w
                   })
-                : null != S
+                : null != T
                   ? (0, r.jsx)(y.Z, {
-                        channel: S,
+                        channel: T,
                         textVariant: 'text-'.concat(N, '/medium'),
-                        textClassName: T,
+                        textClassName: S,
                         iconClassName: A,
-                        hideText: M,
+                        hideText: k,
                         hideTooltip: w
                     })
                   : null;
@@ -92,7 +92,7 @@ function S(e) {
                     null != i &&
                         (0, r.jsx)(s.xv, {
                             variant: 'text-'.concat(N, '/medium'),
-                            className: o()(T, I.customStatusLabel),
+                            className: o()(S, I.customStatusLabel),
                             color: 'none',
                             children: ''.concat(i, ': ')
                         }),
@@ -107,7 +107,7 @@ function S(e) {
                     null != t &&
                         (0, r.jsx)(g.Z, {
                             variant: 'text-'.concat(N, '/medium'),
-                            className: T,
+                            className: S,
                             hideTooltip: w,
                             children: t
                         })
@@ -123,7 +123,7 @@ function S(e) {
             j(),
             (0, r.jsx)(s.xv, {
                 variant: 'text-'.concat(N, '/normal'),
-                className: o()(I.truncated, I.dot, T),
+                className: o()(I.truncated, I.dot, S),
                 children: O.l
             }),
             U(),

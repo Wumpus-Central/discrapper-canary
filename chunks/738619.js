@@ -25,8 +25,8 @@ var r = n(255367),
     O = n(430824),
     v = n(699516),
     I = n(885110),
-    S = n(111583),
-    T = n(594174),
+    T = n(111583),
+    S = n(594174),
     A = n(451478),
     N = n(626135),
     C = n(823379),
@@ -63,7 +63,7 @@ function x(e) {
     }
     return e;
 }
-function k(e, t) {
+function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -75,12 +75,12 @@ function k(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : M(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -187,22 +187,22 @@ function V(e) {
                   guild: g
               });
     let [y, v, I] = s,
-        S = '';
+        T = '';
     return (
         1 === s.length
-            ? (S = w.intl.format(w.t.lJ9sZW, { a: y }))
+            ? (T = w.intl.format(w.t.lJ9sZW, { a: y }))
             : 2 === s.length
-              ? (S = w.intl.format(w.t.rB0CUV, {
+              ? (T = w.intl.format(w.t.rB0CUV, {
                     a: y,
                     b: v
                 }))
               : 3 === s.length
-                ? (S = w.intl.format(w.t.StKTho, {
+                ? (T = w.intl.format(w.t.StKTho, {
                       a: y,
                       b: v,
                       c: I
                   }))
-                : s.length > 3 && (S = w.intl.string(w.t.uVDhqa)),
+                : s.length > 3 && (T = w.intl.string(w.t.uVDhqa)),
         (0, r.jsxs)('div', {
             className: o()(
                 D.typing,
@@ -227,7 +227,7 @@ function V(e) {
                             className: D.text,
                             'aria-live': 'polite',
                             'aria-atomic': !0,
-                            children: S
+                            children: T
                         })
                     ]
                 }),
@@ -241,13 +241,13 @@ function V(e) {
     );
 }
 function Z(e) {
-    let t = (0, c.e7)([S.Z], () => S.Z.getTypingUsers(e.id)),
-        n = (0, c.e7)([T.default], () => T.default.getCurrentUser());
+    let t = (0, c.e7)([T.Z], () => T.Z.getTypingUsers(e.id)),
+        n = (0, c.e7)([S.default], () => S.default.getCurrentUser());
     return l()(t)
         .keys()
         .filter((e) => e !== (null == n ? void 0 : n.id))
         .reject((e) => v.Z.isBlockedOrIgnored(e))
-        .map((e) => T.default.getUser(e))
+        .map((e) => S.default.getUser(e))
         .filter(C.lm)
         .map((t) => R.ZP.getName(e.guild_id, e.id, t))
         .value();
@@ -259,7 +259,7 @@ function H(e) {
         o = (0, c.e7)([g.ZP, y.default], () => g.ZP.getUserCombo(y.default.getId(), t.id)),
         s = (0, c.e7)([b.Z, p.Z, v.Z], () => (0, _.Z)(t, a, b.Z, p.Z, v.Z)),
         l = Z(t),
-        f = M(x({}, i), {
+        f = k(x({}, i), {
             baseTextColor: (0, d.dQu)(u.Z.colors.INTERACTIVE_NORMAL).hex(),
             activeTextColor: (0, d.dQu)(u.Z.colors.INTERACTIVE_NORMAL).hex(),
             showInviteEducation: s,

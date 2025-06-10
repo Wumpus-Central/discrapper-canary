@@ -68,18 +68,18 @@ function I(e, t) {
         e
     );
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = T(e, t);
+        i = S(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function T(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -90,15 +90,15 @@ function T(e, t) {
 }
 let A = (e) => {
     let { isShopGift: t, className: n, optionsContainerClassName: a } = e,
-        { giftRecipient: y, selectedGiftStyle: v, setSelectedGiftStyle: T, emojiConfetti: A, soundEffect: N, setEmojiConfetti: C, setSoundEffect: R } = (0, l.wD)(),
+        { giftRecipient: y, selectedGiftStyle: v, setSelectedGiftStyle: S, emojiConfetti: A, soundEffect: N, setEmojiConfetti: C, setSoundEffect: R } = (0, l.wD)(),
         [P, w] = i.useState(!1),
         D = i.useRef(null),
         L = (0, s.arW)({ orientation: 'horizontal' }),
         { ref: x } = L,
-        k = S(L, ['ref']),
-        M = (0, u.MY)(y, t),
-        j = M === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        U = M !== u.xr.DEFAULT,
+        M = T(L, ['ref']),
+        k = (0, u.MY)(y, t),
+        j = k === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        U = k !== u.xr.DEFAULT,
         G = (0, f.rK)(),
         { enabled: B } = f.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: G }),
         { enabled: F } = _.O.useExperiment({ location: 'gift card' }),
@@ -158,7 +158,7 @@ let A = (e) => {
                             'aria-label': E.intl.string(E.t.v54NrK),
                             ref: x
                         },
-                        k
+                        M
                     ),
                     {
                         children:
@@ -169,7 +169,7 @@ let A = (e) => {
                                     {
                                         isSelected: v === e,
                                         giftStyle: e,
-                                        setSelectedGiftStyle: T,
+                                        setSelectedGiftStyle: S,
                                         ref: 0 === t ? D : null,
                                         onFocus: () => w(!0),
                                         onBlur: () => w(!1)

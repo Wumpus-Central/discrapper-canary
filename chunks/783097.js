@@ -6,14 +6,14 @@ n.d(t, {
     L1: () => K,
     Ow: () => W,
     PZ: () => z,
-    WA: () => M,
+    WA: () => k,
     Wx: () => R,
     XZ: () => H,
     Y$: () => G,
     Yn: () => Z,
     dF: () => j,
     jD: () => D,
-    lf: () => k,
+    lf: () => M,
     pF: () => Y,
     sl: () => B,
     vJ: () => x,
@@ -60,7 +60,7 @@ function I(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -76,7 +76,7 @@ function S(e) {
     }
     return e;
 }
-function T(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -93,7 +93,7 @@ function A(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -137,11 +137,11 @@ function x(e) {
     var t;
     return P(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PARTNER);
 }
-function k(e) {
+function M(e) {
     var t;
     return P(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PROMOTED);
 }
-function M(e) {
+function k(e) {
     let t = U(e),
         n = null == t ? void 0 : t.client_platform_config[(0, s.Z)((0, g.getOS)())];
     if ((null == n ? void 0 : n.label_until) != null && Date.now() < Date.parse(null == n ? void 0 : n.label_until)) {
@@ -151,7 +151,7 @@ function M(e) {
     return o.ww.NONE;
 }
 function j(e) {
-    switch (M(e)) {
+    switch (k(e)) {
         case o.ww.NEW:
             return 'New';
         case o.ww.UPDATED:
@@ -204,7 +204,7 @@ function B(e) {
     return P(e)
         ? {
               iconURL: h.ZP.getApplicationIconURL(
-                  A(S({}, r), {
+                  A(T({}, r), {
                       id: e.id,
                       icon: e.icon
                   })
@@ -235,7 +235,7 @@ function Y(e) {
     let t = [];
     for (let n of e) {
         let e = n.application_directory_collection_items.filter((e) => e.type === r.C.APPLICATION && L(e.application));
-        0 !== e.length && t.push(A(S({}, n), { application_directory_collection_items: e }));
+        0 !== e.length && t.push(A(T({}, n), { application_directory_collection_items: e }));
     }
     return t;
 }

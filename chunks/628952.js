@@ -69,13 +69,13 @@ function v(e, t) {
 }
 let I = (e) => {
     let { skuId: t, isSelected: n, price: a, onSelect: b, shouldDisplayHeader: O = !1, className: I } = e,
-        { product: S } = (0, p.T)(t),
-        { giftRecipient: T, giftRecipientError: A } = (0, u.wD)(),
+        { product: T } = (0, p.T)(t),
+        { giftRecipient: S, giftRecipientError: A } = (0, u.wD)(),
         N = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
-        C = (0, h.k)(S),
+        C = (0, h.k)(T),
         R = i.useRef(null);
-    if (null == S) return null;
-    let [P] = S.items,
+    if (null == T) return null;
+    let [P] = T.items,
         w = () => {
             switch (P.type) {
                 case s.Z.AVATAR_DECORATION:
@@ -88,7 +88,7 @@ let I = (e) => {
                     return null;
             }
         },
-        D = null != T && T.id !== (null == N ? void 0 : N.id) && P.type !== s.Z.NAMEPLATE,
+        D = null != S && S.id !== (null == N ? void 0 : N.id) && P.type !== s.Z.NAMEPLATE,
         L = () => {
             null != t && null != b && b(t);
         };
@@ -108,13 +108,13 @@ let I = (e) => {
                                 c.yRy,
                                 {
                                     targetElementRef: R,
-                                    preload: () => (0, f.Z)(T.id, T.getAvatarURL(null, 80)),
+                                    preload: () => (0, f.Z)(S.id, S.getAvatarURL(null, 80)),
                                     renderPopout: (e) =>
                                         (0, r.jsx)(
                                             d.Z,
                                             v(y({}, e), {
-                                                user: T,
-                                                pendingAvatar: T.getAvatarURL(null, (0, c.pxk)(c.EFr.SIZE_80)),
+                                                user: S,
+                                                pendingAvatar: S.getAvatarURL(null, (0, c.pxk)(c.EFr.SIZE_80)),
                                                 pendingAvatarDecoration: P.type === s.Z.AVATAR_DECORATION ? P : null,
                                                 pendingProfileEffectId: P.type === s.Z.PROFILE_EFFECT ? P.id : null,
                                                 canUsePremiumCustomization: !0,
@@ -137,7 +137,7 @@ let I = (e) => {
                                             })
                                         )
                                 },
-                                T.id
+                                S.id
                             )
                     ]
                 }),
@@ -153,7 +153,7 @@ let I = (e) => {
                         className: E.giftInfoContainer,
                         children: [
                             (0, r.jsx)(m.O, {
-                                product: S,
+                                product: T,
                                 fallbackLabel: null
                             }),
                             (0, r.jsxs)('div', {

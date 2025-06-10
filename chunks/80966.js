@@ -81,7 +81,7 @@ function h(e, t) {
 class m extends i.Component {
     render() {
         let e = this.props,
-            { src: t, fileSize: n, className: i, mediaPlayerClassName: u, poster: f, fileName: h, naturalWidth: m, naturalHeight: g, playable: E, downloadable: b = !0, volume: y, autoPlay: O, autoMute: v, responsive: I, mediaLayoutType: S, mimeType: T, renderOverlayContent: A, renderLinkComponent: N, onClick: C, onPlay: R, onPause: P, onEnded: w, onControlsShow: D, onControlsHide: L, onVolumeChange: x, onMute: k, disableArrowKeySeek: M, alt: j = c.intl.string(c.t.FlNoSU) } = e,
+            { src: t, fileSize: n, className: i, mediaPlayerClassName: u, poster: f, fileName: h, naturalWidth: m, naturalHeight: g, playable: E, downloadable: b = !0, volume: y, autoPlay: O, autoMute: v, responsive: I, mediaLayoutType: T, mimeType: S, renderOverlayContent: A, renderLinkComponent: N, onClick: C, onPlay: R, onPause: P, onEnded: w, onControlsShow: D, onControlsHide: L, onVolumeChange: x, onMute: M, disableArrowKeySeek: k, alt: j = c.intl.string(c.t.FlNoSU) } = e,
             U = p(e, ['src', 'fileSize', 'className', 'mediaPlayerClassName', 'poster', 'fileName', 'naturalWidth', 'naturalHeight', 'playable', 'downloadable', 'volume', 'autoPlay', 'autoMute', 'responsive', 'mediaLayoutType', 'mimeType', 'renderOverlayContent', 'renderLinkComponent', 'onClick', 'onPlay', 'onPause', 'onEnded', 'onControlsShow', 'onControlsHide', 'onVolumeChange', 'onMute', 'disableArrowKeySeek', 'alt']);
         return (0, r.jsx)(
             o.ZP,
@@ -99,7 +99,7 @@ class m extends i.Component {
                     minHeight: s.ZP.minHeight,
                     shouldLink: !1,
                     shouldAnimate: !1,
-                    mediaLayoutType: S,
+                    mediaLayoutType: T,
                     responsive: I,
                     children: (e) => {
                         let {
@@ -119,7 +119,7 @@ class m extends i.Component {
                             autoPlay: null != O && O,
                             autoMute: null != v && v,
                             type: s.ZP.Types.VIDEO,
-                            mediaLayoutType: S,
+                            mediaLayoutType: T,
                             fileName: h,
                             fileSize: null == n ? void 0 : (0, a.Ng)(n),
                             fileSizeBytes: null == n ? void 0 : n,
@@ -131,12 +131,12 @@ class m extends i.Component {
                             onPause: P,
                             onEnded: w,
                             onVolumeChange: x,
-                            onMute: k,
+                            onMute: M,
                             onControlsShow: D,
                             onControlsHide: L,
-                            mimeType: T,
+                            mimeType: S,
                             downloadable: b,
-                            disableArrowKeySeek: M
+                            disableArrowKeySeek: k
                         });
                     }
                 }

@@ -69,18 +69,18 @@ function I(e, t) {
         e
     );
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = T(e, t);
+        i = S(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function T(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -90,36 +90,36 @@ function T(e, t) {
     return i;
 }
 function A(e) {
-    let { initialPlanId: t, followupSKUInfo: i, onClose: y, onComplete: v, onSubscriptionConfirmation: T, analyticsLocations: A, analyticsObject: N, analyticsLocation: C, analyticsSourceLocation: R, confirmationFooter: P, paymentModalBanner: w, isGift: D = !1, giftMessage: L, giftStyle: x, giftingOrigin: k, subscriptionTier: M, trialId: j, postSuccessGuild: U, openInvoiceId: G, applicationId: B, referralTrialOfferId: F, giftRecipient: V, returnRef: Z, subscription: H, skipConfirm: Y } = null != e ? e : {},
+    let { initialPlanId: t, followupSKUInfo: i, onClose: y, onComplete: v, onSubscriptionConfirmation: S, analyticsLocations: A, analyticsObject: N, analyticsLocation: C, analyticsSourceLocation: R, confirmationFooter: P, paymentModalBanner: w, isGift: D = !1, giftMessage: L, giftStyle: x, giftingOrigin: M, subscriptionTier: k, trialId: j, postSuccessGuild: U, openInvoiceId: G, applicationId: B, referralTrialOfferId: F, giftRecipient: V, returnRef: Z, subscription: H, skipConfirm: Y } = null != e ? e : {},
         W = !1,
         K = (0, o.Z)(),
         z = p.default.getCurrentUser(),
         q = (0, g.M5)(z, b.p9.TIER_2),
         X = a()('payment-modal'),
-        Q = (0, g.Wz)(M);
+        Q = (0, g.Wz)(k);
     return (0, s.ZDy)(
         async () => {
             let { default: e } = await Promise.all([n.e('17938'), n.e('94136'), n.e('84992'), n.e('54433'), n.e('6794')]).then(n.bind(n, 7305));
             return (n) => {
                 var { onClose: a } = n,
-                    o = S(n, ['onClose']);
+                    o = T(n, ['onClose']);
                 return (0, r.jsx)(
                     e,
                     I(O({}, o), {
                         loadId: K,
-                        subscriptionTier: M,
+                        subscriptionTier: k,
                         skuId: Q,
                         isGift: D,
                         giftMessage: L,
                         giftStyle: x,
-                        giftingOrigin: k,
+                        giftingOrigin: M,
                         giftRecipient: V,
                         initialPlanId: t,
                         followupSKUInfo: i,
                         onClose: (e, t) => {
                             a(),
                                 null == y || y(e),
-                                e && (null == T || T(), (0, _.I)(D, q, t) && m.S.dispatch(E.CkL.PREMIUM_SUBSCRIPTION_CREATED)),
+                                e && (null == S || S(), (0, _.I)(D, q, t) && m.S.dispatch(E.CkL.PREMIUM_SUBSCRIPTION_CREATED)),
                                 l.Z.dispatch({
                                     type: 'PREMIUM_PAYMENT_MODAL_CLOSE',
                                     didSucceed: e
@@ -128,7 +128,7 @@ function A(e) {
                         onComplete: (e) => {
                             (W = !0), null == v || v(), (0, _.I)(D, q, (0, g.k5)(null == e ? void 0 : e.subscription)) && (0, f.H)(!0);
                         },
-                        onSubscriptionConfirmation: T,
+                        onSubscriptionConfirmation: S,
                         analyticsLocations: A,
                         analyticsObject: N,
                         analyticsLocation: C,
@@ -168,7 +168,7 @@ function A(e) {
                     (0, c.fw)(),
                     (0, d.p)(),
                     null == y || y(W),
-                    W && (null == T || T());
+                    W && (null == S || S());
             }
         }
     );

@@ -186,13 +186,13 @@ let v = new c.Z('MarkdownToSlate'),
             after: ''
         }
     },
-    S = new Set(['*', '_', '\\']),
-    T = {},
+    T = new Set(['*', '_', '\\']),
+    S = {},
     A = {};
 for (let e in d.Z.RULES) {
     if (!(e in I)) throw Error('Slate: Unknown markdown rule: '.concat(e, '.  If you have just added a new markdown rule ') + 'then you probably need to add it to this file so that the rich chat box understands it.');
     let t = I[e];
-    'skip' !== t.type && (T[e] = N(d.Z.RULES[e])), 'skip' !== t.type && 'inlineObject' !== t.type && (A[e] = N('text' === e ? f.ZP : d.Z.RULES[e]));
+    'skip' !== t.type && (S[e] = N(d.Z.RULES[e])), 'skip' !== t.type && 'inlineObject' !== t.type && (A[e] = N('text' === e ? f.ZP : d.Z.RULES[e]));
 }
 function N(e) {
     i()(null != e.parse, 'Slate: rule must have a parse function');
@@ -263,17 +263,17 @@ let R = {
         }
     },
     P = /(-# +)/,
-    w = (0, _.Z)([T, R]),
+    w = (0, _.Z)([S, R]),
     D = (0, _.Z)([A, R]),
     L = l._p(w),
     x = l._p(D),
-    k = {
+    M = {
         max: 1 / 0,
         maxAge: +p.Z.Millis.MINUTE,
         updateAgeOnGet: !0
     },
-    M = new (o())(k),
-    j = new (o())(k);
+    k = new (o())(M),
+    j = new (o())(M);
 function U(e, t, n) {
     let r = [],
         i = {
@@ -283,7 +283,7 @@ function U(e, t, n) {
             isSlate: !0
         },
         a = n ? x : L,
-        o = n ? j : M,
+        o = n ? j : k,
         s = o.get(e);
     if (null != s) return s;
     let l =
@@ -529,12 +529,12 @@ function W(e, t) {
     return t;
 }
 function K(e, t, n) {
-    if (t.split('').some((e) => S.has(e))) return v.error(e), n;
+    if (t.split('').some((e) => T.has(e))) return v.error(e), n;
     throw Error(e);
 }
 function z(e, t, n, r) {
     for (; n < r; )
-        if (S.has(t[n])) (n = H(e, t, t[n], n, 'syntaxBefore')), (n = W(t, n));
+        if (T.has(t[n])) (n = H(e, t, t[n], n, 'syntaxBefore')), (n = W(t, n));
         else break;
     return n;
 }

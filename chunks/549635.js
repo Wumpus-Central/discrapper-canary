@@ -73,18 +73,18 @@ function I(e, t) {
         e
     );
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = T(e, t);
+        i = S(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function T(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -108,16 +108,16 @@ function N(e) {
 function C(e) {
     let t,
         { media: n, obscured: i = !1, maxWidth: a, maxHeight: s, onContextMenu: d } = e,
-        { width: _, height: p, url: m, proxyUrl: y, alt: v, type: T, maxWidth: A, maxHeight: C } = n,
-        R = S(n, ['width', 'height', 'url', 'proxyUrl', 'alt', 'type', 'maxWidth', 'maxHeight']),
+        { width: _, height: p, url: m, proxyUrl: y, alt: v, type: S, maxWidth: A, maxHeight: C } = n,
+        R = T(n, ['width', 'height', 'url', 'proxyUrl', 'alt', 'type', 'maxWidth', 'maxHeight']),
         { zoomed: w, setZoomed: D } = (0, E.Y)(),
         L = P(w, m, y),
         x = null != _ && 0 !== _ && null != p && 0 !== p;
-    if ('VIDEO' === T && x && null != y) {
-        var k;
+    if ('VIDEO' === S && x && null != y) {
+        var M;
         let e = N(y);
         if (null == e) return null;
-        let t = null != (k = n.renderLinkComponent) ? k : f.iT;
+        let t = null != (M = n.renderLinkComponent) ? M : f.iT;
         return (0, r.jsx)(
             c.Z,
             I(O({}, R), {
@@ -142,7 +142,7 @@ function C(e) {
         );
     }
     return (
-        'IMAGE' === T &&
+        'IMAGE' === S &&
             (t = x
                 ? (0, r.jsx)(
                       l.ZP,

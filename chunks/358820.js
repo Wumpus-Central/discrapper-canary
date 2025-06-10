@@ -1,8 +1,8 @@
 n.d(t, {
     fz: () => P,
-    ge: () => k,
+    ge: () => M,
     gf: () => j,
-    r5: () => M,
+    r5: () => k,
     rk: () => w,
     wV: () => x
 }),
@@ -55,7 +55,7 @@ function I(e) {
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -67,12 +67,12 @@ function S(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -94,7 +94,7 @@ function P(e) {
         a = b.Z.getModelState(r);
     if ((null == a ? void 0 : a.status) === y.L.DOWNLOADED)
         return void c.Z.dispatch(
-            T(I({ type: 'VOICE_FILTER_FILE_READY' }, e), {
+            S(I({ type: 'VOICE_FILTER_FILE_READY' }, e), {
                 fetchedFromNetwork: !1,
                 analyticsContext: t
             })
@@ -104,7 +104,7 @@ function P(e) {
         m.ZP.downloadVoiceFilterFile(n, i, (t) => {
             let { downloadedBytes: n, totalBytes: r } = t;
             c.Z.dispatch(
-                T(I({ type: 'VOICE_FILTER_DOWNLOAD_PROGRESS' }, e), {
+                S(I({ type: 'VOICE_FILTER_DOWNLOAD_PROGRESS' }, e), {
                     downloadedBytes: n,
                     totalBytes: r
                 })
@@ -112,7 +112,7 @@ function P(e) {
         })
             .then((n) => {
                 c.Z.dispatch(
-                    T(I({ type: 'VOICE_FILTER_FILE_READY' }, e), {
+                    S(I({ type: 'VOICE_FILTER_FILE_READY' }, e), {
                         fetchedFromNetwork: n.fetchedFromNetwork,
                         analyticsContext: t
                     })
@@ -132,12 +132,12 @@ function P(e) {
                             extra: { reason: t }
                         });
                 }
-                c.Z.dispatch(T(I({ type: 'VOICE_FILTER_DOWNLOAD_FAILED' }, e), { error: t }));
+                c.Z.dispatch(S(I({ type: 'VOICE_FILTER_DOWNLOAD_FAILED' }, e), { error: t }));
             }));
 }
 async function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-    await M();
+    await k();
     let n = performance.now();
     try {
         let r = m.ZP.getVoiceFilters();
@@ -217,10 +217,10 @@ async function x() {
             R = !1;
         }
 }
-function k() {
+function M() {
     c.Z.dispatch({ type: 'VOICE_FILTER_DOWNLOAD_CANCELED' });
 }
-async function M() {
+async function k() {
     if (!(b.Z.isNativeModuleLoaded() || b.Z.isNativeModuleLoading()) && !__OVERLAY__) {
         if (!(0, p.isWindows)() && !(0, p.isMac)())
             return void c.Z.dispatch({

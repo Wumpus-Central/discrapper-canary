@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => ec,
-    Zb: () => T,
-    sH: () => S
+    Zb: () => S,
+    sH: () => T
 }),
     n(642613),
     n(539854),
@@ -39,8 +39,8 @@ function I(e, t, n) {
         e
     );
 }
-let S = 'SELECTABLE',
-    T = 'VOCAL',
+let T = 'SELECTABLE',
+    S = 'VOCAL',
     A = null,
     N = {},
     C = {},
@@ -55,14 +55,14 @@ let S = 'SELECTABLE',
             name: 'Uncategorized'
         })
     },
-    L = M(v.kod),
+    L = k(v.kod),
     x = [],
-    k = {};
-function M(e) {
+    M = {};
+function k(e) {
     return {
         id: e,
-        [S]: [],
         [T]: [],
+        [S]: [],
         [v.d4z.GUILD_CATEGORY]: [D],
         count: 0
     };
@@ -77,10 +77,10 @@ function U(e, t) {
     return n - r;
 }
 function G(e) {
-    e[S].sort(U), e[T].sort(U), e[v.d4z.GUILD_CATEGORY].sort(U);
+    e[T].sort(U), e[S].sort(U), e[v.d4z.GUILD_CATEGORY].sort(U);
 }
 function B(e) {
-    return (0, _.r8)(e) ? S : (0, _.bw)(e) ? T : e;
+    return (0, _.r8)(e) ? T : (0, _.bw)(e) ? S : e;
 }
 function F() {
     let e = {},
@@ -125,13 +125,13 @@ function H() {
     (N = {}), (w = {}), (C = {}), (R = {}), null != A && Y(A);
 }
 function Y(e) {
-    let t = M(e);
+    let t = k(e);
     return (N[e] = t), (w[e] = []), Z(t), G(t), W(t), en(e), t;
 }
 function W(e) {
     let t = (C[e.id] = {}),
         n = {};
-    e[S].forEach((e) => {
+    e[T].forEach((e) => {
         let { channel: r } = e,
             i = (0, u.F6)(r, O.default, y.Z),
             a = Object.prototype.hasOwnProperty.call(n, i) ? n[i] : null;
@@ -199,7 +199,7 @@ function et(e, t) {
     if (null != n && ee(e, n)) return !0;
     let r = N[t];
     null == r && (r = Y(t));
-    let { [S]: i, [T]: a } = r;
+    let { [T]: i, [S]: a } = r;
     for (let { channel: t } of i) if (ee(e, t)) return !0;
     for (let { channel: t } of a) if (ee(e, t)) return !0;
     return !1;
@@ -250,7 +250,7 @@ class el extends (r = s.ZP.Store) {
     getFirstChannel(e, t) {
         var n;
         let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        return null != (n = this.getFirstChannelOfType(e, t, S)) ? n : r ? this.getFirstChannelOfType(e, t, T) : null;
+        return null != (n = this.getFirstChannelOfType(e, t, T)) ? n : r ? this.getFirstChannelOfType(e, t, S) : null;
     }
     getDefaultChannel(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -263,16 +263,16 @@ class el extends (r = s.ZP.Store) {
         return this.getFirstChannel(e, (e) => b.Z.can(n, e.channel) && !e.channel.nsfw, t);
     }
     getSelectableChannelIds(e) {
-        return this.getChannels(e)[S].map((e) => {
+        return this.getChannels(e)[T].map((e) => {
             let { channel: t } = e;
             return t.id;
         });
     }
     getSelectableChannels(e) {
-        return this.getChannels(e)[S];
+        return this.getChannels(e)[T];
     }
     getVocalChannelIds(e) {
-        return this.getChannels(e)[T].map((e) => {
+        return this.getChannels(e)[S].map((e) => {
             let { channel: t } = e;
             return t.id;
         });
@@ -304,7 +304,7 @@ class el extends (r = s.ZP.Store) {
     }
     getTextChannelNameDisambiguations(e) {
         var t;
-        return null != e && null != (t = C[e]) ? t : k;
+        return null != e && null != (t = C[e]) ? t : M;
     }
 }
 I(el, 'displayName', 'GuildChannelStore');

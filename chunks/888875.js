@@ -32,7 +32,7 @@ let y = 10 + Math.random() * (10 * _.Z.Millis.SECOND),
     O = 2 * _.Z.Millis.HOUR + Math.floor(Math.random() * (10 * _.Z.Millis.MINUTE)),
     v = null,
     I = !1;
-class S extends o.Z {
+class T extends o.Z {
     _initialize() {
         p.DZ.beforeSendCallbacks.push({
             hasChanges: () => !1,
@@ -80,14 +80,14 @@ class S extends o.Z {
     constructor(...e) {
         super(...e),
             b(this, 'actions', {
-                POST_CONNECTION_OPEN: T,
-                CONNECTION_RESUMED: T,
+                POST_CONNECTION_OPEN: S,
+                CONNECTION_RESUMED: S,
                 CONNECTION_CLOSED: N,
                 APP_STATE_UPDATE: A
             });
     }
 }
-function T() {
+function S() {
     (I = !0), R(y, !0);
 }
 function A(e) {
@@ -106,4 +106,4 @@ async function C(e) {
 function R(e, t) {
     null != v && clearTimeout(v), (v = setTimeout(() => C(t), e));
 }
-let P = new S();
+let P = new T();

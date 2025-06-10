@@ -90,8 +90,8 @@ function m(e, t) {
     return i.forwardRef(function (t, u) {
         var { children: f, className: h, onResize: m, contentClassName: g, onScroll: E, dir: b = 'ltr', fade: y = !1, customTheme: O = !1, style: v } = t,
             I = p(t, ['children', 'className', 'onResize', 'contentClassName', 'onScroll', 'dir', 'fade', 'customTheme', 'style']);
-        let S = i.useRef(null),
-            T = i.useRef(null),
+        let T = i.useRef(null),
+            S = i.useRef(null),
             [A, N] = i.useState(!1),
             { scrollerRef: C, getScrollerState: R } = (0, l.Ke)(),
             P = (0, l.t2)(C);
@@ -101,7 +101,7 @@ function m(e, t) {
                 d(
                     {
                         getScrollerNode: () => C.current,
-                        isScrolling: () => null != S.current,
+                        isScrolling: () => null != T.current,
                         getScrollerState: R
                     },
                     (0, l.Ue)(C, R, P)
@@ -110,16 +110,16 @@ function m(e, t) {
         );
         let w = i.useCallback(
             (e) => {
-                null == S.current ? N(!0) : clearTimeout(S.current),
-                    (S.current = setTimeout(() => {
-                        (S.current = null), N(!1);
+                null == T.current ? N(!0) : clearTimeout(T.current),
+                    (T.current = setTimeout(() => {
+                        (T.current = null), N(!1);
                     }, 200)),
                     null != E && E(e);
             },
             [E]
         );
         return (
-            i.useEffect(() => () => clearTimeout(S.current), []),
+            i.useEffect(() => () => clearTimeout(T.current), []),
             (0, l.zn)({
                 ref: C,
                 key: 'container',
@@ -128,7 +128,7 @@ function m(e, t) {
                 listenerMap: n
             }),
             (0, l.zn)({
-                ref: T,
+                ref: S,
                 key: 'content',
                 onUpdate: m,
                 resizeObserver: a,
@@ -155,9 +155,9 @@ function m(e, t) {
                     ),
                     {
                         children: (0, r.jsx)(s.J, {
-                            containerRef: T,
+                            containerRef: S,
                             children: (0, r.jsxs)('div', {
-                                ref: T,
+                                ref: S,
                                 className: o()(g, c.content),
                                 children: [f, A && (0, r.jsx)('div', { className: c.pointerCover })]
                             })

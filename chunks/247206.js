@@ -1,5 +1,5 @@
 n.d(t, {
-    Cm: () => S,
+    Cm: () => T,
     Hc: () => y,
     IV: () => O,
     JO: () => P,
@@ -132,8 +132,8 @@ function I(e) {
         num_of_explicit_embeds: o
     });
 }
-function S(e) {
-    let { attachments: t, embeds: n } = T(e),
+function T(e) {
+    let { attachments: t, embeds: n } = S(e),
         r = A(e);
     return (e = e.merge({
         attachments: t,
@@ -141,7 +141,7 @@ function S(e) {
         messageSnapshots: r
     }));
 }
-function T(e) {
+function S(e) {
     return {
         attachments: e.attachments.map((e) => ((e.content_scan_version = -1), e)),
         embeds: e.embeds.map((e) => ((e.contentScanVersion = -1), e))
@@ -153,7 +153,7 @@ function A(e) {
         ? t
         : t.map((e) => {
               let { message: t } = e,
-                  { attachments: n, embeds: r } = T(t);
+                  { attachments: n, embeds: r } = S(t);
               return (
                   (t = t.merge({
                       attachments: n,

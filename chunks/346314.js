@@ -97,10 +97,10 @@ function O(e) {
         I = i.useCallback(() => {
             O(!1);
         }, []),
-        S = 'username' === t,
-        T = 'dot' === t,
+        T = 'username' === t,
+        S = 'dot' === t,
         A = null != c && null != c.primaryColor && null != c.secondaryColor,
-        N = S && A,
+        N = T && A,
         {
             gradientStyle: C,
             gradientClassname: R,
@@ -115,7 +115,7 @@ function O(e) {
         w = (0, f.EJ)(n),
         D = {
             className: o()(p.name, {
-                [p.username]: S,
+                [p.username]: T,
                 [R]: N
             }),
             children: w
@@ -124,7 +124,7 @@ function O(e) {
             className: o()(p.nameGlow, P),
             children: n
         },
-        x = T
+        x = S
             ? (0, r.jsx)(_.F, {
                   color: a,
                   colors: A ? c : null,
@@ -141,7 +141,7 @@ function O(e) {
             'left' === d && x,
             (0, r.jsxs)('span', {
                 className: p.nameContainer,
-                style: m({ color: S && !A && null != a ? a : void 0 }, N ? C : {}),
+                style: m({ color: T && !A && null != a ? a : void 0 }, N ? C : {}),
                 children: [
                     null != E
                         ? (0, r.jsx)(

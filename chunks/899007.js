@@ -20,7 +20,7 @@ var r = n(255367),
     O = n(981631),
     v = n(474936),
     I = n(487784);
-function S(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function S(e, t, n) {
         e
     );
 }
-function T(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function T(e) {
                 })
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
@@ -74,12 +74,12 @@ function N(e, t) {
 }
 let C = h.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
 function R(e) {
-    let { user: t, displayProfile: n, guildId: a, channelId: h, themeType: S, animateOnHover: A, onOpenProfile: R, className: P, previewStatus: w } = e,
+    let { user: t, displayProfile: n, guildId: a, channelId: h, themeType: T, animateOnHover: A, onOpenProfile: R, className: P, previewStatus: w } = e,
         { theme: D } = (0, b.z)(),
         { analyticsLocations: L } = (0, d.ZP)(u.Z.AVATAR),
         { trackUserProfileAction: x } = (0, m.KZ)(),
-        k = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.p9.TIER_2),
-        M = i.useMemo(() => t.isNonUserBot() || (0, f.W)(t, h), [t, h]),
+        M = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.p9.TIER_2),
+        k = i.useMemo(() => t.isNonUserBot() || (0, f.W)(t, h), [t, h]),
         { live: j } = (0, g.Z)(t.id),
         [U] = j,
         { status: G, isMobileOnline: B } = (0, s.cj)([_.Z], () => ({
@@ -87,7 +87,7 @@ function R(e) {
             isMobileOnline: _.Z.isMobileOnline(t.id)
         })),
         F = void 0 !== w ? w : G,
-        V = [y.lY.MODAL, y.lY.MODAL_V2].includes(S) ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
+        V = [y.lY.MODAL, y.lY.MODAL_V2].includes(T) ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
         Z = o()(I.avatar, P),
         {
             avatarDecorationSrc: H,
@@ -105,8 +105,8 @@ function R(e) {
             size: V,
             'aria-label': t.username,
             imageClassName: null != R ? I.overlay : void 0,
-            status: M ? O.Skl.UNKNOWN : F,
-            statusBackdropColor: k && !M ? (0, l.QFD)(D) : void 0,
+            status: k ? O.Skl.UNKNOWN : F,
+            statusBackdropColor: M && !k ? (0, l.QFD)(D) : void 0,
             isMobile: B,
             statusTooltip: !0,
             statusTooltipDelay: y.vB
@@ -114,14 +114,14 @@ function R(e) {
     return null == R
         ? (0, r.jsx)(
               'div',
-              N(T({}, W), {
+              N(S({}, W), {
                   className: Z,
                   children: K
               })
           )
         : (0, r.jsx)(
               l.P3F,
-              N(T({}, W), {
+              N(S({}, W), {
                   className: o()(Z, I.clickable),
                   focusProps: { ringClassName: I.focusRing },
                   onClick: () => {

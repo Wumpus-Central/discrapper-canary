@@ -95,8 +95,8 @@ let y = {
         lg: 'md'
     };
 function v(e) {
-    var { role: t = 'button', variant: n = 'primary', size: a = 'md', fullWidth: c = !1, text: p, icon: m, iconPosition: b = 'start', iconOpticalOffsetMargin: v = 0, focusProps: S } = e,
-        T = E(e, ['role', 'variant', 'size', 'fullWidth', 'text', 'icon', 'iconPosition', 'iconOpticalOffsetMargin', 'focusProps']);
+    var { role: t = 'button', variant: n = 'primary', size: a = 'md', fullWidth: c = !1, text: p, icon: m, iconPosition: b = 'start', iconOpticalOffsetMargin: v = 0, focusProps: T } = e,
+        S = E(e, ['role', 'variant', 'size', 'fullWidth', 'text', 'icon', 'iconPosition', 'iconOpticalOffsetMargin', 'focusProps']);
     function A() {
         if (0 === v) return {};
         switch (b) {
@@ -122,7 +122,7 @@ function v(e) {
         w = (0, d.a)((0, f.ZP)()),
         D = (0, r.jsx)(
             l.t,
-            g(h({}, S), {
+            g(h({}, T), {
                 children: (0, r.jsxs)(
                     'button',
                     g(
@@ -132,7 +132,7 @@ function v(e) {
                                 className: o()(_.button, _[a], _[n], { [_.fullWidth]: c }),
                                 ref: C
                             },
-                            T
+                            S
                         ),
                         {
                             children: [

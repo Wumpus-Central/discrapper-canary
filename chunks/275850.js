@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => S }), n(415506), n(388685);
+n.d(t, { ZP: () => T }), n(415506), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -114,8 +114,8 @@ function I(e, t) {
     let n = null;
     return e && null != t && !t.canRedeemTrial() ? (n = h.intl.string(h.t.SvheW1)) : e && null != t && t.hasFlag(p.Cw.NEW) && (n = h.intl.format(h.t.d7ZLKC, { helpDeskArticle: f.Z.getArticleURL(_.BhN.PAYMENT_AUTHORIZATION_CHARGE) })), n;
 }
-function S(e) {
-    let { selectedPaymentSourceId: t, paymentSources: n, prependOption: a, hidePersonalInformation: c, onChange: f, onPaymentSourceAdd: _, isTrial: p = !1, disabled: g = !1, className: E, optionClassName: b, dropdownLoading: S, paymentGatewayRestrictions: T } = e,
+function T(e) {
+    let { selectedPaymentSourceId: t, paymentSources: n, prependOption: a, hidePersonalInformation: c, onChange: f, onPaymentSourceAdd: _, isTrial: p = !1, disabled: g = !1, className: E, optionClassName: b, dropdownLoading: T, paymentGatewayRestrictions: S } = e,
         A = 0 === n.length,
         N = (e) => {
             if (e === y) null != _ && _();
@@ -127,7 +127,7 @@ function S(e) {
         C = [...(null != a ? [a] : []), ...n, O].map((e, t) => {
             if (e instanceof d.ZP) {
                 let { brand: t, label: n } = v(e, c),
-                    i = e === O || null == T || (null == T ? void 0 : T.includes(e.paymentGateway));
+                    i = e === O || null == S || (null == S ? void 0 : S.includes(e.paymentGateway));
                 return {
                     value: e.id,
                     label: (0, r.jsxs)('div', {
@@ -156,8 +156,8 @@ function S(e) {
             p,
             i.useMemo(() => n.find((e) => e.id === t), [n, t])
         );
-    if (null == t && null != T && T.length > 0) {
-        let e = n.filter((e) => T.includes(e.paymentGateway));
+    if (null == t && null != S && S.length > 0) {
+        let e = n.filter((e) => S.includes(e.paymentGateway));
         t = 0 === e.length ? y : e[0].id;
     }
     return (0, r.jsxs)(r.Fragment, {
@@ -179,7 +179,7 @@ function S(e) {
                       placeholder: h.intl.string(h.t['8lqkf3']),
                       renderOptionValue: (e) => {
                           let [t] = e;
-                          return S ? (0, r.jsx)(l.$jN, { type: l.RAz.SPINNING_CIRCLE }) : t.label;
+                          return T ? (0, r.jsx)(l.$jN, { type: l.RAz.SPINNING_CIRCLE }) : t.label;
                       }
                   }),
             null != R

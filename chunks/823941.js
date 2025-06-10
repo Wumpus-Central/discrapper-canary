@@ -24,8 +24,8 @@ var r = n(255367),
     O = n(813083),
     v = n(372654),
     I = n(794324),
-    S = n(474936),
-    T = n(388032),
+    T = n(474936),
+    S = n(388032),
     A = n(544348);
 let N = 90,
     C = 28,
@@ -37,14 +37,14 @@ let N = 90,
             o = (0, l.e7)([p.default], () => p.default.getCurrentUser());
         return g.ZP.canUseCollectibles(o)
             ? t.summary
-            : T.intl.format(T.t['9hafRk'], {
+            : S.intl.format(S.t['9hafRk'], {
                   getPremium: (e) =>
                       (0, r.jsx)(c.P3F, {
                           innerRef: a,
                           className: A.getPremiumHook,
                           onClick: () => {
                               (0, _.Z)({
-                                  subscriptionTier: S.Si.TIER_2,
+                                  subscriptionTier: T.Si.TIER_2,
                                   analyticsLocations: n,
                                   returnRef: a
                               });
@@ -80,7 +80,7 @@ function D(e) {
         d = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         f = (0, l.e7)([h.Z], () => h.Z.isFocused()),
         { bannerOverrides: _, shopAllBannerStatic: p, shopAllBannerAnimated: g } = (0, I.t0)(t),
-        S = !!(null == _ ? void 0 : _.showDarkBannerText);
+        T = !!(null == _ ? void 0 : _.showDarkBannerText);
     return (0, r.jsxs)(y.Z, {
         asset: p,
         className: o()(A.shopBanner, n),
@@ -117,7 +117,7 @@ function D(e) {
                   })
                 : (0, r.jsx)(c.LZC, { size: N }),
             (0, r.jsx)(c.Text, {
-                className: o()(A.summary, { [A.blackSummary]: S }),
+                className: o()(A.summary, { [A.blackSummary]: T }),
                 style: null != t.bannerTextColor ? { color: t.bannerTextColor } : void 0,
                 variant: 'text-md/normal',
                 children: t.skuId === s.T.DISXCORE ? (0, r.jsx)(P, { category: t }) : t.summary

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -88,7 +88,7 @@ class I extends (r = i.ZP.PersistedStore) {
     }
 }
 d(I, 'displayName', 'CategoryCollapseStore'), d(I, 'persistKey', 'collapsedCategories');
-let S = new I(a.Z, {
+let T = new I(a.Z, {
     CONNECTION_OPEN: E,
     USER_GUILD_SETTINGS_FULL_UPDATE: b,
     CATEGORY_COLLAPSE: m,

@@ -115,13 +115,13 @@ function I(e) {
         mediaContext: i
     };
 }
-function S(e) {
+function T(e) {
     let { mediaContext: t, userId: n } = e,
         r = m(t, n);
     if (null == h[r]) return !1;
     delete h[r];
 }
-class T extends (r = i.ZP.Store) {
+class S extends (r = i.ZP.Store) {
     getStreamId(e, t) {
         var n, r, i;
         let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Yn.DEFAULT;
@@ -139,12 +139,12 @@ class T extends (r = i.ZP.Store) {
         return h[m(e, t)];
     }
 }
-l(T, 'displayName', 'VideoStreamStore');
-let A = new T(a.Z, {
+l(S, 'displayName', 'VideoStreamStore');
+let A = new S(a.Z, {
     CONNECTION_OPEN: b,
     OVERLAY_INITIALIZE: y,
     RTC_CONNECTION_VIDEO: O,
     VOICE_STATE_UPDATES: v,
     VIDEO_STREAM_READY_TIMEOUT: I,
-    CLEAR_VIDEO_STREAM_READY_TIMEOUT: S
+    CLEAR_VIDEO_STREAM_READY_TIMEOUT: T
 });

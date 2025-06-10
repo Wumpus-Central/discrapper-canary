@@ -24,10 +24,10 @@ function p(e) {
             let e = v ? s.Z.getStatus() : o.Z.getStatus(t.id, h);
             return e === _.Sk.OFFLINE || e === _.Sk.INVISIBLE;
         }),
-        { voiceActivityStatusEnabled: S } = (0, a.U)({ location: 'UserProfileFeaturedActivity' });
+        { voiceActivityStatusEnabled: T } = (0, a.U)({ location: 'UserProfileFeaturedActivity' });
     return I || null == b
         ? I || null == y
-            ? S && !I && null != O
+            ? T && !I && null != O
                 ? (0, r.jsx)(f.Z, {
                       user: t,
                       currentUser: n,

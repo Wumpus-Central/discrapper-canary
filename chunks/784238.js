@@ -75,8 +75,8 @@ let E = (e) => {
     },
     b = (e, t, n, r) => (t || n ? f.intl.string(f.t.fkPGam) : e === d.Si.TIER_2 ? f.intl.formatToPlainString(f.t.bkQ4bG, { percent: r }) : void 0),
     y = (e) => {
-        var { textOptions: t, subscriptionTier: n, hasActivePromotion: p = !1, isPersistentCTA: g = !1, useShorterCTA: y = !1, showGradient: O, confirmationFooter: v, paymentModalBanner: I, color: S } = e,
-            T = m(e, ['textOptions', 'subscriptionTier', 'hasActivePromotion', 'isPersistentCTA', 'useShorterCTA', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'color']);
+        var { textOptions: t, subscriptionTier: n, hasActivePromotion: p = !1, isPersistentCTA: g = !1, useShorterCTA: y = !1, showGradient: O, confirmationFooter: v, paymentModalBanner: I, color: T } = e,
+            S = m(e, ['textOptions', 'subscriptionTier', 'hasActivePromotion', 'isPersistentCTA', 'useShorterCTA', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'color']);
         let A = (0, o.ZP)(),
             N = (0, c.N)(),
             C = null == N ? void 0 : N.subscription_trial,
@@ -99,7 +99,7 @@ let E = (e) => {
                         shouldShowReferralTrialCopy: D,
                         subscriptionTrial: C
                     }),
-            x = null != S ? S : (0, i.wj)(A) ? a.Ttl.BRAND_INVERTED : a.Ttl.BRAND;
+            x = null != T ? T : (0, i.wj)(A) ? a.Ttl.BRAND_INVERTED : a.Ttl.BRAND;
         return (0, r.jsx)(
             u.Z,
             h(
@@ -118,7 +118,7 @@ let E = (e) => {
                     confirmationFooter: v,
                     paymentModalBanner: I
                 },
-                T
+                S
             )
         );
     };

@@ -52,7 +52,7 @@ function v(e, t) {
 function I() {
     for (let e in E) clearTimeout(E.get(e)), E.delete(e);
 }
-function S() {
+function T() {
     var e;
     I();
     let t = l.Z.getGuildId();
@@ -60,7 +60,7 @@ function S() {
     let n = d.Z.getLeaderboardResponse(t, p),
         r = setTimeout(
             () =>
-                T({
+                S({
                     guildId: t,
                     leaderboardId: p
                 }),
@@ -69,7 +69,7 @@ function S() {
         i = O(t, p);
     E.set(i, r);
 }
-async function T(e) {
+async function S(e) {
     let { guildId: t, leaderboardId: n, force: r = !1 } = e;
     if (!(v(t, n) || r)) return;
     let a = O(t, n);
@@ -103,7 +103,7 @@ async function T(e) {
             }),
                 y.delete(a),
                 b.delete(a),
-                S();
+                T();
         } catch (i) {
             var o;
             let e = (null != (o = y.get(a)) ? o : 0) + 1;
@@ -113,7 +113,7 @@ async function T(e) {
                 a,
                 setTimeout(
                     () =>
-                        T({
+                        S({
                             guildId: t,
                             leaderboardId: n,
                             force: !0
@@ -124,14 +124,14 @@ async function T(e) {
         }
 }
 function A() {
-    S();
+    T();
 }
 function N() {
     I(), (E = new Map()), (b = new Set()), (y = new Map()), A();
 }
 class C extends a.Z {
     fetchLeaderboard(e) {
-        return T(e);
+        return S(e);
     }
     constructor(...e) {
         super(...e),

@@ -1,8 +1,8 @@
 n.d(t, {
     Ds: () => j,
-    YB: () => k,
+    YB: () => M,
     of: () => U,
-    q5: () => M
+    q5: () => k
 });
 var r = n(255367);
 n(73800);
@@ -26,8 +26,8 @@ var i = n(120356),
     O = n(402113),
     v = n(800965),
     I = n(157813),
-    S = n(25827),
-    T = n(131951),
+    T = n(25827),
+    S = n(131951),
     A = n(636449),
     N = n(884338),
     C = n(617552),
@@ -45,12 +45,12 @@ function x(e) {
         label: n ? w.intl.string(w.t['2TiKgY']) : w.intl.string(w.t.oN8bqa)
     });
 }
-function k(e) {
+function M(e) {
     var t, n, i;
-    let { channel: a, applicationId: s, onMouseDown: y, onMouseMove: I, onMouseLeave: N, onJumpToChannel: w, idle: x, selectedParticipant: k, embeddedActivity: M } = e,
+    let { channel: a, applicationId: s, onMouseDown: y, onMouseMove: I, onMouseLeave: N, onJumpToChannel: w, idle: x, selectedParticipant: M, embeddedActivity: k } = e,
         j = (0, c.bp)() === R.IlC.POPOUT,
-        U = (0, o.e7)([T.Z], () => T.Z.isVideoEnabled()),
-        G = (0, o.e7)([T.Z], () => Object.values(T.Z.getVideoDevices())[0]),
+        U = (0, o.e7)([S.Z], () => S.Z.isVideoEnabled()),
+        G = (0, o.e7)([S.Z], () => Object.values(S.Z.getVideoDevices())[0]),
         B = !1 === (null == (t = null == G ? void 0 : G.disabled) || t),
         F = (0, d.Z)([s])[0],
         V = (0, m.Z)(a),
@@ -88,7 +88,7 @@ function k(e) {
                         basis: '50%',
                         align: p.Z.Align.CENTER,
                         children: [
-                            (0, r.jsx)(S.C, {
+                            (0, r.jsx)(T.C, {
                                 className: D.leftPipIcon,
                                 enabled: U,
                                 cameraUnavailable: !B,
@@ -102,7 +102,7 @@ function k(e) {
                                         channelId: a.id,
                                         guildId: a.getGuildId(),
                                         className: L.__invalid_leftTrayIcon,
-                                        participant: k,
+                                        participant: M,
                                         compact: !0
                                     })
                                 })
@@ -125,7 +125,7 @@ function k(e) {
                                   }),
                             (0, r.jsx)(O.Z, {
                                 applicationId: s,
-                                location: M.location,
+                                location: k.location,
                                 className: D.rightPipIcon
                             })
                         ]
@@ -135,7 +135,7 @@ function k(e) {
         ]
     });
 }
-function M(e) {
+function k(e) {
     var t, n;
     let { channel: i, applicationId: o, onMouseDown: l, onMouseMove: c, onMouseLeave: u, onJumpToChannel: f, idle: _, users: p, embeddedActivity: h } = e,
         m = (0, d.Z)([o])[0];

@@ -32,7 +32,7 @@ function I(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function S(e) {
     }
     return e;
 }
-function T(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,7 +65,7 @@ function A(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -674,7 +674,7 @@ class L extends _.Z {
                 let r = e.findIndex((e) => e.rid === t.rid);
                 if (-1 === r) return void n(Error('Invalid rid'));
                 let i = [];
-                l()(this.videoStreamParameters[r], e[r]) || ((this.videoStreamParameters[r] = S({}, e[r])), i.push(S({}, e[r]))), this.conn.setTransportOptions({ streamParameters: i });
+                l()(this.videoStreamParameters[r], e[r]) || ((this.videoStreamParameters[r] = T({}, e[r])), i.push(T({}, e[r]))), this.conn.setTransportOptions({ streamParameters: i });
             }
             t();
         });
@@ -787,7 +787,7 @@ class L extends _.Z {
             };
             this.experimentFlags.has(O.V8.RESET_DECODER_ON_ERRORS) && (n.params['reset-on-errors'] = '1'), this.experimentFlags.has(O.V8.SOFTWARE_FALLBACK_ON_ERRORS) && (n.params['fallback-after-errors'] = '3'), this.experimentFlags.has(O.V8.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS) && (n.params['fallback-on-consecutive-errors'] = '1'), this.experimentFlags.has(O.V8.SIGNAL_AV1_HARDWARE_DECODE) && (n.params['hardware-av1-decode'] = '1');
             let r = this.hardwareH264 && this.useElectronVideo ? '1' : '0';
-            (n.params['hardware-h264'] = r), u.push(n), s.name === t && ((d = A(S({}, n), { params: this.getCodecParams(s.name, !1) })), this.experimentFlags.has(O.V8.VIDEOTOOLBOX_RATE_CONTROL) && (d.params['fixed-rate-presentation-timestamps'] = '1'), (d.params['hardware-h264'] = r));
+            (n.params['hardware-h264'] = r), u.push(n), s.name === t && ((d = A(T({}, n), { params: this.getCodecParams(s.name, !1) })), this.experimentFlags.has(O.V8.VIDEOTOOLBOX_RATE_CONTROL) && (d.params['fixed-rate-presentation-timestamps'] = '1'), (d.params['hardware-h264'] = r));
         }
         return {
             videoEncoder: d,
@@ -801,7 +801,7 @@ class L extends _.Z {
     }
     getConnectionTransportOptions() {
         let e = A(
-            S(
+            T(
                 {
                     selfMute: this.selfMute,
                     inputMode: v.GO[this.inputMode],
@@ -978,7 +978,7 @@ class L extends _.Z {
                               i.forEach((t, n) => {
                                   if (t.rid === e.rid) {
                                       let r = this.simulcastLQDisabledSsrc !== e.ssrc && e.active;
-                                      i[n] = A(S({}, t), {
+                                      i[n] = A(T({}, t), {
                                           ssrc: e.ssrc,
                                           rtxSsrc: e.rtxSsrc,
                                           active: r

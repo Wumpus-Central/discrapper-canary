@@ -11,7 +11,7 @@ var r = n(570140),
 let f = 60000;
 function _(e, t) {
     var n, _, p, h;
-    let { type: m, withMutualGuilds: g = !1, withMutualFriendsCount: E = !1, withMutualFriends: b = !1, dispatchWait: y = !1, waitForRefetch: O = !0, guildId: v, channelId: I, joinRequestId: S, abortSignal: T } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    let { type: m, withMutualGuilds: g = !1, withMutualFriendsCount: E = !1, withMutualFriends: b = !1, dispatchWait: y = !1, waitForRefetch: O = !0, guildId: v, channelId: I, joinRequestId: T, abortSignal: S } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     if ('' === e || u.Z.isFetchingProfile(e, v)) return Promise.resolve();
     let A = u.Z.getUserProfile(e),
         N = Date.now() - (null != (h = null == A ? void 0 : A.fetchEndedAt) ? h : 0) >= f;
@@ -23,9 +23,9 @@ function _(e, t) {
         D = null == P && b,
         L = null == w && E,
         x = (null == R && g) || D || L,
-        k = null == v ? null == A : null == C,
-        M = !k && (N || x);
-    if (!k && !M) return Promise.resolve();
+        M = null == v ? null == A : null == C,
+        k = !M && (N || x);
+    if (!M && !k) return Promise.resolve();
     (0, s.z)(), null != t && (0, a.vM)(t);
     let j = {
         type: m,
@@ -33,8 +33,8 @@ function _(e, t) {
         withMutualFriends: b,
         withMutualFriendsCount: E,
         guildId: v,
-        joinRequestId: S,
-        abortSignal: T,
+        joinRequestId: T,
+        abortSignal: S,
         connectionsRoleId:
             null == v ||
             null ==
@@ -47,5 +47,5 @@ function _(e, t) {
     };
     if (y) return r.Z.wait(() => (0, i.In)(e, j, d.Z)), Promise.resolve();
     let U = (0, i.In)(e, j, d.Z);
-    return M && !O ? Promise.resolve() : U;
+    return k && !O ? Promise.resolve() : U;
 }

@@ -106,10 +106,10 @@ function g(e) {
     var { user: t, guildId: n, channelId: u, themeType: f, onClose: h, children: g } = e,
         E = p(e, ['user', 'guildId', 'channelId', 'themeType', 'onClose', 'children']);
     let { interactionType: b, interactionSource: y, resetInteraction: O, interactionSourceId: v, interactionPopoutTargetRef: I } = (0, a.Xo)(),
-        S = [c.lY.MODAL, c.lY.MODAL_V2].includes(f) ? (0, o.z)(t.id, n) : void 0,
-        T = y === E.sourceType && b === c.P.REACT,
+        T = [c.lY.MODAL, c.lY.MODAL_V2].includes(f) ? (0, o.z)(t.id, n) : void 0,
+        S = y === E.sourceType && b === c.P.REACT,
         A = y === E.sourceType && b === c.P.REPLY,
-        N = (T || A) && v === E.sourceId;
+        N = (S || A) && v === E.sourceId;
     return (0, r.jsx)(
         i.yRy,
         _(
@@ -118,7 +118,7 @@ function g(e) {
                     targetElementRef: null != I ? I : void 0,
                     renderPopout: (e) => {
                         let { setPopoutRef: i } = e,
-                            a = T ? s.Z : l.Z;
+                            a = S ? s.Z : l.Z;
                         return (0, r.jsx)(
                             a,
                             d(
@@ -128,7 +128,7 @@ function g(e) {
                                     channelId: u,
                                     themeType: f,
                                     onClose: h,
-                                    modalKey: S,
+                                    modalKey: T,
                                     setPopoutRef: i
                                 },
                                 E

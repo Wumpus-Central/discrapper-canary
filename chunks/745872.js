@@ -24,7 +24,7 @@ var r,
     I = function () {
         throw new u();
     },
-    S = O
+    T = O
         ? (function () {
               try {
                   return arguments.callee, I;
@@ -37,7 +37,7 @@ var r,
               }
           })()
         : I,
-    T = n(738146)(),
+    S = n(738146)(),
     A = n(143988),
     N = n(764459),
     C = n(138676),
@@ -50,7 +50,7 @@ var r,
         '%AggregateError%': 'undefined' == typeof AggregateError ? r : AggregateError,
         '%Array%': Array,
         '%ArrayBuffer%': 'undefined' == typeof ArrayBuffer ? r : ArrayBuffer,
-        '%ArrayIteratorPrototype%': T && A ? A([][Symbol.iterator]()) : r,
+        '%ArrayIteratorPrototype%': S && A ? A([][Symbol.iterator]()) : r,
         '%AsyncFromSyncIteratorPrototype%': r,
         '%AsyncFunction%': w,
         '%AsyncGenerator%': w,
@@ -81,10 +81,10 @@ var r,
         '%Int32Array%': 'undefined' == typeof Int32Array ? r : Int32Array,
         '%isFinite%': isFinite,
         '%isNaN%': isNaN,
-        '%IteratorPrototype%': T && A ? A(A([][Symbol.iterator]())) : r,
+        '%IteratorPrototype%': S && A ? A(A([][Symbol.iterator]())) : r,
         '%JSON%': 'object' == typeof JSON ? JSON : r,
         '%Map%': 'undefined' == typeof Map ? r : Map,
-        '%MapIteratorPrototype%': 'undefined' != typeof Map && T && A ? A(new Map()[Symbol.iterator]()) : r,
+        '%MapIteratorPrototype%': 'undefined' != typeof Map && S && A ? A(new Map()[Symbol.iterator]()) : r,
         '%Math%': Math,
         '%Number%': Number,
         '%Object%': i,
@@ -98,13 +98,13 @@ var r,
         '%Reflect%': 'undefined' == typeof Reflect ? r : Reflect,
         '%RegExp%': RegExp,
         '%Set%': 'undefined' == typeof Set ? r : Set,
-        '%SetIteratorPrototype%': 'undefined' != typeof Set && T && A ? A(new Set()[Symbol.iterator]()) : r,
+        '%SetIteratorPrototype%': 'undefined' != typeof Set && S && A ? A(new Set()[Symbol.iterator]()) : r,
         '%SharedArrayBuffer%': 'undefined' == typeof SharedArrayBuffer ? r : SharedArrayBuffer,
         '%String%': String,
-        '%StringIteratorPrototype%': T && A ? A(''[Symbol.iterator]()) : r,
-        '%Symbol%': T ? Symbol : r,
+        '%StringIteratorPrototype%': S && A ? A(''[Symbol.iterator]()) : r,
+        '%Symbol%': S ? Symbol : r,
         '%SyntaxError%': c,
-        '%ThrowTypeError%': S,
+        '%ThrowTypeError%': T,
         '%TypedArray%': D,
         '%TypeError%': u,
         '%Uint8Array%': 'undefined' == typeof Uint8Array ? r : Uint8Array,
@@ -135,7 +135,7 @@ if (A)
         var x = A(A(e));
         L['%Error.prototype%'] = x;
     }
-var k = function e(t) {
+var M = function e(t) {
         var n;
         if ('%AsyncFunction%' === t) n = y('async function () {}');
         else if ('%GeneratorFunction%' === t) n = y('function* () {}');
@@ -149,7 +149,7 @@ var k = function e(t) {
         }
         return (L[t] = n), n;
     },
-    M = {
+    k = {
         __proto__: null,
         '%ArrayBufferPrototype%': ['ArrayBuffer', 'prototype'],
         '%ArrayPrototype%': ['Array', 'prototype'],
@@ -228,9 +228,9 @@ var k = function e(t) {
     K = function (e, t) {
         var n,
             r = e;
-        if ((U(M, r) && (r = '%' + (n = M[r])[0] + '%'), U(L, r))) {
+        if ((U(k, r) && (r = '%' + (n = k[r])[0] + '%'), U(L, r))) {
             var i = L[r];
-            if ((i === w && (i = k(r)), void 0 === i && !t)) throw new u('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
+            if ((i === w && (i = M(r)), void 0 === i && !t)) throw new u('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
             return {
                 alias: n,
                 name: r,

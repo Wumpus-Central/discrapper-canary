@@ -21,8 +21,8 @@ var i = n(120356),
     O = n(111361),
     v = n(291175),
     I = n(785717),
-    S = n(221292),
-    T = n(485341),
+    T = n(221292),
+    S = n(485341),
     A = n(687158),
     N = n(228168),
     C = n(981631),
@@ -44,7 +44,7 @@ function x(e, t, n) {
         e
     );
 }
-function k(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function k(e) {
     }
     return e;
 }
-function M(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,7 +77,7 @@ function j(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : M(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -96,13 +96,13 @@ let U = (e) => {
 };
 function G(e) {
     var t;
-    let { badges: n, className: i, badgeClassName: d, displayProfile: E, onClose: x, shouldOpenBadgeTooltip: M, shouldGlowTenureBadge: G } = e,
+    let { badges: n, className: i, badgeClassName: d, displayProfile: E, onClose: x, shouldOpenBadgeTooltip: k, shouldGlowTenureBadge: G } = e,
         { analyticsLocations: B } = (0, c.ZP)(l.Z.BADGE),
         { context: F, trackUserProfileAction: V } = (0, I.KZ)(),
         Z = b.default.getCurrentUser(),
         H = (0, O.yd)(null == Z ? void 0 : Z.premiumType, P.p9.TIER_2),
         Y = (0, A.Of)(null != (t = null == Z ? void 0 : Z.id) ? t : null),
-        W = (0, T.Z)(Y).some((e) => e.id === g.l.ORB_PROFILE_BADGE);
+        W = (0, S.Z)(Y).some((e) => e.id === g.l.ORB_PROFILE_BADGE);
     return (0, r.jsx)('div', {
         className: a()(L.container, i),
         'aria-label': D.intl.string(D.t.VWV0y8),
@@ -115,8 +115,8 @@ function G(e) {
                 O = (t) => {
                     if (
                         (V({ action: 'PRESS_BADGE' }),
-                        (0, S.NE)(
-                            k(
+                        (0, T.NE)(
+                            M(
                                 {
                                     badge: e.id,
                                     analyticsLocations: B
@@ -168,17 +168,17 @@ function G(e) {
                     if (null != n) return null == x || x(), n(t);
                 },
                 I = () => {
-                    e.id === T.i &&
+                    e.id === S.i &&
                         y.default.track(
                             C.rMx.QUEST_CONTENT_VIEWED,
-                            j(k({}, (0, _.mH)(h.jn.QUEST_BADGE)), {
+                            j(M({}, (0, _.mH)(h.jn.QUEST_BADGE)), {
                                 google_advertising_id: p.Z.googleAdvertisingId,
                                 is_targeted: !1
                             })
                         ),
                         V({ action: 'HOVER_BADGE' }),
-                        (0, S.Qf)(
-                            k(
+                        (0, T.Qf)(
+                            M(
                                 {
                                     badge: e.id,
                                     analyticsLocations: B
@@ -197,7 +197,7 @@ function G(e) {
                 {
                     text: A,
                     'aria-label': e.description,
-                    forceOpen: null != M && M(e.id),
+                    forceOpen: null != k && k(e.id),
                     delay: N.vB,
                     children: (0, r.jsx)(o.eee, {
                         onClick: O,

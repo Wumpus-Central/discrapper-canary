@@ -1,7 +1,7 @@
 n.d(t, {
-    CR: () => k,
+    CR: () => M,
     DD: () => D,
-    mK: () => M,
+    mK: () => k,
     up: () => j
 }),
     n(953529),
@@ -115,7 +115,7 @@ function I(e) {
         i
     );
 }
-function S(e) {
+function T(e) {
     let t,
         { quest: n, taskDetails: r, withoutMarkdown: i, hasNitro: a, collectibleRewardDuration: o } = e,
         s = f.r.build(n.config).defaultReward.messages.nameWithArticle,
@@ -135,7 +135,7 @@ function S(e) {
         i
     );
 }
-function T(e) {
+function S(e) {
     let { quest: t, taskDetails: n, withoutMarkdown: r } = e,
         { targetMinutes: i } = n,
         a = t.config.messages.gameTitle;
@@ -245,7 +245,7 @@ function R(e) {
             collectibleRewardDuration: d
         });
     if ((0, l.$H)(t))
-        return S({
+        return T({
             quest: t,
             taskDetails: n,
             withoutMarkdown: i,
@@ -253,7 +253,7 @@ function R(e) {
             collectibleRewardDuration: d
         });
     if ((0, l.oo)({ quest: t }))
-        return T({
+        return S({
             quest: t,
             taskDetails: n,
             withoutMarkdown: i
@@ -317,7 +317,7 @@ function L(e) {
 function x(e) {
     return r.useMemo(() => L(e), [e]);
 }
-function k(e) {
+function M(e) {
     let { quest: t, location: n, autoTrackExposure: r = !0 } = e,
         i = x(t),
         a = (0, c.j)({
@@ -335,7 +335,7 @@ function k(e) {
             return t.config.features.includes(_.S7.START_QUEST_CTA) ? h.intl.string(h.t.ToGcxM) : h.intl.string(h.t.l7E81t);
     }
 }
-function M(e) {
+function k(e) {
     let t = r.useMemo(() => (0, l.f$)(e), [e]),
         n = r.useMemo(() => (0, l._p)(e), [e]);
     return t ? (n ? h.intl.string(h.t.hh7Rb2) : h.intl.string(h.t.GYGb3N)) : null;

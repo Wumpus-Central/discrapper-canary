@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685), n(539854);
+n.d(t, { Z: () => k }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(709054),
     v = n(51144),
     I = n(443603),
-    S = n(981631),
-    T = n(921944),
+    T = n(981631),
+    S = n(921944),
     A = n(388032),
     N = n(870751),
     C = n(302195);
@@ -108,17 +108,17 @@ function x(e) {
         ]
     });
 }
-function k(e) {
+function M(e) {
     let { disabled: t, channel: n } = e,
         { analyticsLocations: a } = (0, f.ZP)(d.Z.GIFT_BUTTON),
         [o, u] = i.useState(!1),
         y = (0, s.e7)([E.Z], () => !(null === E.Z || void 0 === E.Z ? void 0 : E.Z.hasLayers())),
         R = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
         w = null != R ? O.default.age(R.id) : 0,
-        k = !t && y && w >= L,
-        { enabled: M } = m.O.useExperiment({ location: 'gift-button' }),
+        M = !t && y && w >= L,
+        { enabled: k } = m.O.useExperiment({ location: 'gift-button' }),
         j = [];
-    M && k && j.push(l.z.NITROWEEN_COACHMARKS);
+    k && M && j.push(l.z.NITROWEEN_COACHMARKS);
     let [U, G] = (0, p.US)(j),
         B = null != U,
         F = (0, v.Ft)(n),
@@ -132,10 +132,10 @@ function k(e) {
             initialPlanId: null,
             analyticsLocations: a,
             analyticsObject: {
-                page: n.isPrivate() ? S.ZY5.DM_CHANNEL : S.ZY5.GUILD_CHANNEL,
-                section: S.jXE.CHANNEL_TEXT_AREA,
-                object: S.qAy.NITROWEEN_BUTTON_ICON,
-                objectType: S.Qqv.GIFT
+                page: n.isPrivate() ? T.ZY5.DM_CHANNEL : T.ZY5.GUILD_CHANNEL,
+                section: T.jXE.CHANNEL_TEXT_AREA,
+                object: T.qAy.NITROWEEN_BUTTON_ICON,
+                objectType: T.Qqv.GIFT
             }
         });
     };
@@ -163,7 +163,7 @@ function k(e) {
                             'aria-label': A.intl.string(A.t.Z1RnTk),
                             isActive: !1,
                             onClick: () => {
-                                H(), u(!1), (0, _.EW)(l.z.NITROWEEN_ANIMATED_GIFTING_ICON, { dismissAction: T.L.TAKE_ACTION }), Y();
+                                H(), u(!1), (0, _.EW)(l.z.NITROWEEN_ANIMATED_GIFTING_ICON, { dismissAction: S.L.TAKE_ACTION }), Y();
                             }
                         },
                         Z
@@ -180,4 +180,4 @@ function k(e) {
         ]
     });
 }
-let M = i.memo(k);
+let k = i.memo(M);

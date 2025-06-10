@@ -71,8 +71,8 @@ let _ = 'no_payment_source',
     O = !1,
     v = null,
     I = !1,
-    S = !1,
     T = !1,
+    S = !1,
     A = !1,
     N = null,
     C = new Set();
@@ -80,11 +80,11 @@ function R(e) {
     null != r && null != y ? r(y) : null != i && i(e), (r = null), (i = null);
 }
 function P(e) {
-    R(), (p = e.skuId), (m = e.applicationId), (S = e.isIAP), (g = e.analyticsLocation), (N = e.context), (A = e.isGift), (T = !0), (I = !1), (r = e.resolve), (i = e.reject), (v = null), (y = null), (E = e.promotionId);
+    R(), (p = e.skuId), (m = e.applicationId), (T = e.isIAP), (g = e.analyticsLocation), (N = e.context), (A = e.isGift), (S = !0), (I = !1), (r = e.resolve), (i = e.reject), (v = null), (y = null), (E = e.promotionId);
 }
 function w(e) {
     let { error: t } = e;
-    (T = !1), (N = null), R(t);
+    (S = !1), (N = null), R(t);
 }
 function D(e) {
     let { skuId: t } = e;
@@ -98,10 +98,10 @@ function x(e) {
     let { skuId: t } = e;
     C.delete(t);
 }
-function k() {
+function M() {
     O = !0;
 }
-function M(e) {
+function k(e) {
     let { entitlements: t, giftCode: n } = e;
     (O = !1), (y = t), (h = n);
 }
@@ -126,7 +126,7 @@ function F(e) {
 function V(e) {
     let { locked: t } = e;
     if (!t || null == N) return !1;
-    (T = !1), (N = null), R();
+    (S = !1), (N = null), R();
 }
 class Z extends (a = o.ZP.Store) {
     getPricesForSku(e) {
@@ -134,7 +134,7 @@ class Z extends (a = o.ZP.Store) {
     }
     isOpen() {
         let e = __OVERLAY__ ? l.IlC.OVERLAY : l.IlC.APP;
-        return N === e && T;
+        return N === e && S;
     }
     get isPurchasingSKU() {
         return O;
@@ -158,7 +158,7 @@ class Z extends (a = o.ZP.Store) {
         return E;
     }
     get isIAP() {
-        return S;
+        return T;
     }
     get giftCode() {
         return h;
@@ -177,8 +177,8 @@ let H = new Z(s.Z, {
     SKU_PURCHASE_PREVIEW_FETCH: D,
     SKU_PURCHASE_PREVIEW_FETCH_SUCCESS: L,
     SKU_PURCHASE_PREVIEW_FETCH_FAILURE: x,
-    SKU_PURCHASE_START: k,
-    SKU_PURCHASE_SUCCESS: M,
+    SKU_PURCHASE_START: M,
+    SKU_PURCHASE_SUCCESS: k,
     SKU_PURCHASE_FAIL: U,
     SKU_PURCHASE_SHOW_CONFIRMATION_STEP: G,
     SKU_PURCHASE_CLEAR_ERROR: B,

@@ -48,8 +48,8 @@ function I(e) {
     }
     return e;
 }
-let S = 8,
-    T = 4,
+let T = 8,
+    S = 4,
     A = 4,
     N = 40,
     C = 6;
@@ -100,7 +100,7 @@ let D = {
         if (r.allowStickers) {
             (0, c.$p)();
             let t = h.ZP.queryStickers([n], !0, [e, (e, t) => t === l.eb.SENDABLE]),
-                r = Math.max(T, S - d.length);
+                r = Math.max(S, T - d.length);
             (f = t.slice(0, r)), '-' === n[0] && (f = t.filter((e) => e.sticker.name === n));
         }
         let _ = [];

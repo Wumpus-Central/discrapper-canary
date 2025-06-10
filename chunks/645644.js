@@ -20,8 +20,8 @@ var r = n(772848),
     O = n(145597),
     v = n(830917),
     I = n(554174),
-    S = n(938038),
-    T = n(981631),
+    T = n(938038),
+    S = n(981631),
     A = n(987650);
 function N(e, t, n) {
     return (
@@ -102,7 +102,7 @@ class x {
         });
     }
 }
-class k {
+class M {
     static makeEmptyGroupAnalytics() {
         return {
             [A.Vk.Nudge]: 0,
@@ -157,8 +157,8 @@ class k {
             [A.bv.Clicked]: 0
         }),
             N(this, 'groupCounters', {
-                [A.bv.Viewed]: k.makeEmptyGroupAnalytics(),
-                [A.bv.Clicked]: k.makeEmptyGroupAnalytics()
+                [A.bv.Viewed]: M.makeEmptyGroupAnalytics(),
+                [A.bv.Clicked]: M.makeEmptyGroupAnalytics()
             }),
             N(this, 'counters', {
                 [A.n0.NewsNudge]: new x(),
@@ -179,7 +179,7 @@ class k {
             });
     }
 }
-class M {
+class k {
     static makeEmptyAnalytics() {
         return {
             initialized: !1,
@@ -193,9 +193,9 @@ class M {
     }
     getByWidget(e) {
         switch (e) {
-            case T.Odu.VOICE:
+            case S.Odu.VOICE:
                 return this.getByType(0);
-            case T.Odu.TEXT:
+            case S.Odu.TEXT:
                 return this.getByType(1);
             default:
                 return null;
@@ -215,8 +215,8 @@ class M {
     }
     constructor() {
         N(this, 'types', {
-            0: M.makeEmptyAnalytics(),
-            1: M.makeEmptyAnalytics()
+            0: k.makeEmptyAnalytics(),
+            1: k.makeEmptyAnalytics()
         });
     }
 }
@@ -248,8 +248,8 @@ class j {
             a = parseInt(i[0], 10),
             o = isNaN(a) ? l.Jx.UNKNOWN : a;
         isNaN(a) && L.error('ScreenTypeAnalytics: Unknown most used screen type: '.concat(i), r);
-        let s = S.c.getGameDisplayMode(null != (e = this.game.name) ? e : this.game.id);
-        S.c.setGameDisplayMode(null != (t = this.game.name) ? t : this.game.id, o);
+        let s = T.c.getGameDisplayMode(null != (e = this.game.name) ? e : this.game.id);
+        T.c.setGameDisplayMode(null != (t = this.game.name) ? t : this.game.id, o);
         let c = {
             screentype_unknown_duration: r[l.Jx.UNKNOWN],
             screentype_windowed_duration: r[l.Jx.WINDOWED],
@@ -367,7 +367,7 @@ class G {
         if (null != n) {
             n.screenAnalytics.destroy();
             let t = await n.getAnalytics();
-            for (let e of (b.default.track(T.rMx.OVERLAY_USAGE_STATS, t.usage), t.notifications)) b.default.track(T.rMx.OVERLAY_USAGE_NOTIFICATION_STATS, e);
+            for (let e of (b.default.track(S.rMx.OVERLAY_USAGE_STATS, t.usage), t.notifications)) b.default.track(S.rMx.OVERLAY_USAGE_NOTIFICATION_STATS, e);
             L.verbose('OVERLAY_USAGE_STATS: '.concat(e.name), t), delete G.gamesByPid[e.pid];
         }
         delete G.gamesByName[t];
@@ -495,7 +495,7 @@ class G {
     }
     constructor(e) {
         var t, n;
-        N(this, 'game', void 0), N(this, 'uuid', void 0), N(this, 'overlayStatus', void 0), N(this, 'overlayMethod', void 0), N(this, 'overlayMethodStats', void 0), N(this, 'notificationAnalytics', void 0), N(this, 'widgetAnalytics', void 0), N(this, 'screenAnalytics', void 0), N(this, 'uiUnlockedCount', void 0), N(this, 'uiLockedCount', void 0), N(this, 'gameFocusChangedCount', void 0), N(this, 'gameConcurrentGameCount', void 0), N(this, 'overlayMessageAckCount', void 0), N(this, 'overlayMessageCreateCount', void 0), N(this, 'gameTimer', void 0), N(this, 'gameFocusedTimer', void 0), N(this, 'unlockedTimer', void 0), N(this, 'rtcConnectionTimer', void 0), N(this, 'desktopFocusedTimer', void 0), N(this, 'desktopFocusChangedCount', void 0), N(this, 'desktopMessageAckCount', void 0), N(this, 'desktopMessageCreateCount', void 0), N(this, 'soundboardShownTimer', void 0), N(this, 'soundboardShownCount', void 0), N(this, 'soundboardKeepOpenCount', void 0), N(this, 'muteToggledCount', void 0), N(this, '_successfullyShown', void 0), (this.game = e), (this.uuid = U()), (this.overlayMethod = null), (this.overlayMethodStats = null), (this.notificationAnalytics = new k()), (this.widgetAnalytics = new M()), (this.uiUnlockedCount = 0), (this.uiLockedCount = 0), (this.gameFocusChangedCount = 0), (this.gameConcurrentGameCount = 0), (this.overlayMessageAckCount = 0), (this.overlayMessageCreateCount = 0), (this.gameTimer = a.G9.startNew()), (this.gameFocusedTimer = new a.G9()), (this.unlockedTimer = new a.G9()), (this.rtcConnectionTimer = new a.G9()), (this.desktopFocusedTimer = new a.G9()), (this.desktopFocusChangedCount = 0), (this.desktopMessageAckCount = 0), (this.desktopMessageCreateCount = 0), (this.soundboardShownTimer = new a.G9()), (this.soundboardShownCount = 0), (this.soundboardKeepOpenCount = 0), (this.muteToggledCount = 0), (this._successfullyShown = !1), (this.screenAnalytics = new j(e)), (this.overlayStatus = (0, f.b6)(e)), (this.overlayMethod = null != (n = null == (t = this.overlayStatus) ? void 0 : t.overlayMethod) ? n : null), (this.overlayMethodStats = this.buildOverlayMethodStats(this.overlayMethod, e)), G.desktopMainWindowHasFocus && this.desktopFocusedTimer.start(), $.hasConnection() && this.rtcConnectionTimer.start();
+        N(this, 'game', void 0), N(this, 'uuid', void 0), N(this, 'overlayStatus', void 0), N(this, 'overlayMethod', void 0), N(this, 'overlayMethodStats', void 0), N(this, 'notificationAnalytics', void 0), N(this, 'widgetAnalytics', void 0), N(this, 'screenAnalytics', void 0), N(this, 'uiUnlockedCount', void 0), N(this, 'uiLockedCount', void 0), N(this, 'gameFocusChangedCount', void 0), N(this, 'gameConcurrentGameCount', void 0), N(this, 'overlayMessageAckCount', void 0), N(this, 'overlayMessageCreateCount', void 0), N(this, 'gameTimer', void 0), N(this, 'gameFocusedTimer', void 0), N(this, 'unlockedTimer', void 0), N(this, 'rtcConnectionTimer', void 0), N(this, 'desktopFocusedTimer', void 0), N(this, 'desktopFocusChangedCount', void 0), N(this, 'desktopMessageAckCount', void 0), N(this, 'desktopMessageCreateCount', void 0), N(this, 'soundboardShownTimer', void 0), N(this, 'soundboardShownCount', void 0), N(this, 'soundboardKeepOpenCount', void 0), N(this, 'muteToggledCount', void 0), N(this, '_successfullyShown', void 0), (this.game = e), (this.uuid = U()), (this.overlayMethod = null), (this.overlayMethodStats = null), (this.notificationAnalytics = new M()), (this.widgetAnalytics = new k()), (this.uiUnlockedCount = 0), (this.uiLockedCount = 0), (this.gameFocusChangedCount = 0), (this.gameConcurrentGameCount = 0), (this.overlayMessageAckCount = 0), (this.overlayMessageCreateCount = 0), (this.gameTimer = a.G9.startNew()), (this.gameFocusedTimer = new a.G9()), (this.unlockedTimer = new a.G9()), (this.rtcConnectionTimer = new a.G9()), (this.desktopFocusedTimer = new a.G9()), (this.desktopFocusChangedCount = 0), (this.desktopMessageAckCount = 0), (this.desktopMessageCreateCount = 0), (this.soundboardShownTimer = new a.G9()), (this.soundboardShownCount = 0), (this.soundboardKeepOpenCount = 0), (this.muteToggledCount = 0), (this._successfullyShown = !1), (this.screenAnalytics = new j(e)), (this.overlayStatus = (0, f.b6)(e)), (this.overlayMethod = null != (n = null == (t = this.overlayStatus) ? void 0 : t.overlayMethod) ? n : null), (this.overlayMethodStats = this.buildOverlayMethodStats(this.overlayMethod, e)), G.desktopMainWindowHasFocus && this.desktopFocusedTimer.start(), $.hasConnection() && this.rtcConnectionTimer.start();
     }
 }
 function B(e) {
@@ -557,7 +557,7 @@ function K(e) {
     L.verbose('MESSAGE_ACKED', e), G.desktopMessageEvent('ack');
 }
 function z(e) {
-    e.message.state === T.yb.SENDING && G.desktopMessageEvent('created');
+    e.message.state === S.yb.SENDING && G.desktopMessageEvent('created');
 }
 function q(e) {
     let t = (0, I.Z)();
@@ -593,10 +593,10 @@ class $ {
         var t;
         let n = (null != (t = e.channelId) ? t : 'unknown') + e.context;
         switch (e.state) {
-            case T.hes.RTC_CONNECTED:
+            case S.hes.RTC_CONNECTED:
                 $.connections.add(n);
                 break;
-            case T.hes.DISCONNECTED:
+            case S.hes.DISCONNECTED:
                 $.connections.delete(n);
         }
         let r = $.hasConnection();
@@ -617,7 +617,7 @@ class ee {
         });
     }
     static handleMessageCreate(e) {
-        if (e.message.state !== T.yb.SENDING) return;
+        if (e.message.state !== S.yb.SENDING) return;
         L.verbose('MESSAGE_CREATE', e, Error().stack);
         let t = m.Z.getGame();
         if (null == t) return void L.error('Game not found.');

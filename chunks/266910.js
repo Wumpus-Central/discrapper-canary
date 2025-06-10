@@ -87,8 +87,8 @@ let O = function (e) {
     var { style: t, src: n, backgroundSrc: h, userId: g, pulseSpeakingIndicator: y = !1, speaking: O = !1 } = e,
         v = b(e, ['style', 'src', 'backgroundSrc', 'userId', 'pulseSpeakingIndicator', 'speaking']);
     let I = null != h ? h : n,
-        S = (0, s.ZP)(I, a.Z.unsafe_rawColors.PRIMARY_800.css),
-        T = (0, l.c)(!0, 'VideoBackground-web').enabled,
+        T = (0, s.ZP)(I, a.Z.unsafe_rawColors.PRIMARY_800.css),
+        S = (0, l.c)(!0, 'VideoBackground-web').enabled,
         A = (0, u.ZP)(null != g ? g : _.lds),
         N =
             null == A
@@ -99,8 +99,8 @@ let O = function (e) {
                   });
     if (
         (i.useEffect(() => {
-            null != g && T && (0, d.Z)(g, void 0, { dispatchWait: !0 });
-        }, [T, g]),
+            null != g && S && (0, d.Z)(g, void 0, { dispatchWait: !0 });
+        }, [S, g]),
         null == n)
     )
         return null;
@@ -114,9 +114,9 @@ let O = function (e) {
                 v
             )
         ),
-        R = E(m({}, t), { backgroundColor: S });
+        R = E(m({}, t), { backgroundColor: T });
     return (
-        null != N && O && T && ((R.backgroundImage = 'url('.concat(N, ')')), (R.backgroundSize = 'cover')),
+        null != N && O && S && ((R.backgroundImage = 'url('.concat(N, ')')), (R.backgroundSize = 'cover')),
         (0, r.jsx)('div', {
             style: R,
             className: p.background,

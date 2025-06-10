@@ -6,7 +6,7 @@ n.d(t, {
     hz: () => j,
     mz: () => U,
     ol: () => G,
-    xB: () => k
+    xB: () => M
 });
 var r = n(255367),
     i = n(73800),
@@ -29,8 +29,8 @@ var r = n(255367),
     O = n(602091),
     v = n(231338),
     I = n(388032),
-    S = n(423931);
-function T(e, t, n) {
+    T = n(423931);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -54,7 +54,7 @@ function A(e) {
                 })
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
@@ -106,9 +106,9 @@ var w = (function (e) {
     return (e.SMALL = 'small'), (e.MEDIUM = 'medium'), (e.LARGE = 'large'), (e.DYNAMIC = 'dynamic'), e;
 })({});
 let D = Object.freeze({
-    small: S.small,
-    medium: S.medium,
-    large: S.large,
+    small: T.small,
+    medium: T.medium,
+    large: T.large,
     dynamic: null
 });
 var L = (function (e) {
@@ -116,7 +116,7 @@ var L = (function (e) {
 })({});
 function x(e) {
     var t,
-        { transitionState: n, children: a, size: u = 'small', role: _ = 'dialog', className: m, fullscreenOnMobile: g = !0, hideShadow: E = !1, onAnimationEnd: y = v.dG, returnRef: I, animation: T = 'default', parentComponent: N } = e,
+        { transitionState: n, children: a, size: u = 'small', role: _ = 'dialog', className: m, fullscreenOnMobile: g = !0, hideShadow: E = !1, onAnimationEnd: y = v.dG, returnRef: I, animation: S = 'default', parentComponent: N } = e,
         P = R(e, ['transitionState', 'children', 'size', 'role', 'className', 'fullscreenOnMobile', 'hideShadow', 'onAnimationEnd', 'returnRef', 'animation', 'parentComponent']);
     let w = n === O.Dv.ENTERING || n === O.Dv.ENTERED;
     i.useContext(b.Z)({
@@ -128,7 +128,7 @@ function x(e) {
         x = (0, d.q)(
             {
                 opacity: +!!w,
-                transform: w || L.enabled || 'subtle' === T ? 'scale(1)' : 'scale(0.7)',
+                transform: w || L.enabled || 'subtle' === S ? 'scale(1)' : 'scale(0.7)',
                 config: {
                     duration: 200,
                     easing: c.Z.Easing.out(c.Z.Easing.quad),
@@ -138,8 +138,8 @@ function x(e) {
             },
             'animate-always'
         ),
-        k = i.useRef(null),
-        M = null != P['aria-label'],
+        M = i.useRef(null),
+        k = null != P['aria-label'],
         j = null != P['aria-labelledby'],
         U = i.useId(),
         G = null != (t = P['aria-labelledby']) ? t : U,
@@ -157,24 +157,24 @@ function x(e) {
             C(
                 A(
                     {
-                        className: S.focusLock,
+                        className: T.focusLock,
                         role: _,
                         returnRef: I,
                         impressionType: l.ImpressionTypes.MODAL,
-                        'aria-labelledby': M ? void 0 : B.headerId
+                        'aria-labelledby': k ? void 0 : B.headerId
                     },
                     P
                 ),
                 {
                     children: (0, r.jsx)(s.animated.div, {
-                        className: o()(m, S.root, D[u], {
-                            [S.fullscreenOnMobile]: g,
-                            [S.rootWithShadow]: !E
+                        className: o()(m, T.root, D[u], {
+                            [T.fullscreenOnMobile]: g,
+                            [T.rootWithShadow]: !E
                         }),
-                        ref: k,
+                        ref: M,
                         style: x,
                         children: (0, r.jsx)(h.J, {
-                            containerRef: k,
+                            containerRef: M,
                             children: a
                         })
                     })
@@ -183,7 +183,7 @@ function x(e) {
         )
     });
 }
-function k(e) {
+function M(e) {
     var t, n, a, s, l;
     let { headerId: c, headerIdIsManaged: u } = i.useContext(O.zM);
     return (0, r.jsx)(y.Z, {
@@ -193,12 +193,12 @@ function k(e) {
         justify: null != (n = e.justify) ? n : y.Z.Justify.START,
         align: null != (a = e.align) ? a : y.Z.Align.CENTER,
         wrap: null != (s = e.wrap) ? s : y.Z.Wrap.NO_WRAP,
-        className: o()(S.header, e.className, { [S.separator]: null == (l = e.separator) || l }),
+        className: o()(T.header, e.className, { [T.separator]: null == (l = e.separator) || l }),
         id: u ? void 0 : c,
         children: e.children
     });
 }
-function M(e) {
+function k(e) {
     switch (null != e ? e : 'thin') {
         case 'auto':
             return g.yW;
@@ -211,13 +211,13 @@ function M(e) {
 function j(e) {
     let { className: t, children: n, scrollerRef: i, scrollbarType: a } = e,
         s = R(e, ['className', 'children', 'scrollerRef', 'scrollbarType']),
-        l = M(a);
+        l = k(a);
     return (0, r.jsx)(
         l,
         C(
             A(
                 {
-                    className: o()(S.content, t),
+                    className: o()(T.content, t),
                     ref: i
                 },
                 s
@@ -235,7 +235,7 @@ function U(e) {
         justify: null != (n = e.justify) ? n : y.Z.Justify.START,
         align: null != (i = e.align) ? i : y.Z.Align.STRETCH,
         wrap: null != (a = e.wrap) ? a : y.Z.Wrap.NO_WRAP,
-        className: o()(S.footer, e.className, { [S.footerSeparator]: null == (s = e.separator) || s }),
+        className: o()(T.footer, e.className, { [T.footerSeparator]: null == (s = e.separator) || s }),
         children: (0, r.jsx)(E.y5t, { children: e.children })
     });
 }
@@ -246,15 +246,15 @@ function G(e) {
         look: _.zx.Looks.BLANK,
         size: _.zx.Sizes.NONE,
         onClick: e.onClick,
-        innerClassName: o()(e.innerClassName, { [S.closeWithCircleBackground]: e.withCircleBackground }),
+        innerClassName: o()(e.innerClassName, { [T.closeWithCircleBackground]: e.withCircleBackground }),
         className: o()(e.className, {
-            [S.hideOnFullscreen]: e.hideOnFullscreen,
-            [S.close]: !e.withCircleBackground
+            [T.hideOnFullscreen]: e.hideOnFullscreen,
+            [T.close]: !e.withCircleBackground
         }),
         children: (0, r.jsx)(u.D, {
             size: 'md',
             color: 'currentColor',
-            className: o()(e.innerClassName, S.closeIcon)
+            className: o()(e.innerClassName, T.closeIcon)
         })
     });
 }

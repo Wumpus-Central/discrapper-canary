@@ -84,10 +84,10 @@ function I(e) {
     let { lurkingGuildId: t, lurkingSource: n } = e;
     return m(t), (_ = n), !0;
 }
-function S() {
+function T() {
     d = Object.values(s.Z.getGuilds()).reduce((e, t) => (t.isLurker() ? [...e, t.id] : e), []);
 }
-class T extends (r = i.ZP.Store) {
+class S extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(s.Z, l.default);
     }
@@ -110,9 +110,9 @@ class T extends (r = i.ZP.Store) {
         return null != e ? f[e] : null;
     }
 }
-u(T, 'displayName', 'LurkingStore');
-let A = new T(a.Z, {
-    CONNECTION_OPEN: S,
+u(S, 'displayName', 'LurkingStore');
+let A = new S(a.Z, {
+    CONNECTION_OPEN: T,
     GUILD_JOIN: E,
     GUILD_STOP_LURKING: v,
     GUILD_STOP_LURKING_FAILURE: I,

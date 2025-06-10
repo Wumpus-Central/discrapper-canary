@@ -7,11 +7,11 @@ n.d(t, {
     WD: () => D,
     X_: () => P,
     Zt: () => I,
-    Zv: () => T,
+    Zv: () => S,
     _V: () => A,
-    cv: () => M,
+    cv: () => k,
     gM: () => B,
-    jl: () => k,
+    jl: () => M,
     sM: () => C,
     z: () => w
 }),
@@ -43,7 +43,7 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
         }
         return e.stickers[0];
     },
-    S = (e) => {
+    T = (e) => {
         switch (e) {
             case d.u3.PNG:
                 return l.$k ? d.og.WEBP : d.og.PNG;
@@ -57,7 +57,7 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
                 throw Error('Unexpected format type: '.concat(e));
         }
     },
-    T = (e) => {
+    S = (e) => {
         switch (e) {
             case 'application/json':
                 return d.u3.LOTTIE;
@@ -72,13 +72,13 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
                 throw Error('Unexpected file type: '.concat(e));
         }
     },
-    A = (e) => (null == e ? null : ''.concat(e.name, '.').concat(S(e.format_type))),
+    A = (e) => (null == e ? null : ''.concat(e.name, '.').concat(T(e.format_type))),
     N = function (e) {
         let { isPreview: t = !1, size: n = f.lE } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         if (null == e.format_type) return null;
         let r = e.format_type;
         e.format_type === d.u3.GIF && t && (r = d.u3.PNG);
-        let a = S(r),
+        let a = T(r),
             o = _.ANM.STICKER_ASSET(e.id, a),
             s = a === d.og.WEBP ? '&quality=lossless' : '';
         if ('development' !== m) {
@@ -142,8 +142,8 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
         }
     },
     x = (e) => e.type === d.n0.GUILD,
-    k = (e) => e.type === d.n0.STANDARD,
-    M = (e) => (e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : []),
+    M = (e) => e.type === d.n0.STANDARD,
+    k = (e) => (e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : []),
     j = (e) => {
         if (null === e) return !1;
         let t = e.guild_id;

@@ -69,8 +69,8 @@ function I(e, t) {
         e
     );
 }
-let S = h.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK;
-function T(e) {
+let T = h.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK;
+function S(e) {
     let { avatarDecoration: t } = e,
         {
             avatarDecorationSrc: n,
@@ -83,7 +83,7 @@ function T(e) {
     return (0, r.jsx)('div', {
         className: E.giftMainAnimationWrapper,
         children: (0, r.jsx)(
-            S,
+            T,
             I(O({}, i), {
                 avatarDecoration: n,
                 src: a,
@@ -129,7 +129,7 @@ function C(e) {
         { product: o } = (0, c.T)(null == t ? void 0 : t.id),
         s = null == o ? void 0 : o.items[0],
         l = (0, i.EQ)(s)
-            .with({ type: a.Z.AVATAR_DECORATION }, (e) => (0, r.jsx)(T, { avatarDecoration: e }))
+            .with({ type: a.Z.AVATAR_DECORATION }, (e) => (0, r.jsx)(S, { avatarDecoration: e }))
             .with({ type: a.Z.PROFILE_EFFECT }, (e) => (0, r.jsx)(A, { id: e.id }))
             .with({ type: a.Z.NAMEPLATE }, (e) => (0, r.jsx)(N, { nameplate: e }))
             .otherwise(() => null);

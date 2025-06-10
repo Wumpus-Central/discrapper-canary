@@ -66,7 +66,7 @@ function I(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -77,7 +77,7 @@ function S(e, t) {
         e
     );
 }
-function T(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -159,7 +159,7 @@ class D extends m.Z {
     handleSend(e, t) {
         let n,
             { channelId: r } = e,
-            i = T(e, ['channelId']),
+            i = S(e, ['channelId']),
             o = (0, u.d)(),
             s = v({ mobile_network_type: _.Z.getType() }, i, null != o && { signal_strength: o });
         if (c.ZP.get('send_fail_100')) {
@@ -180,7 +180,7 @@ class D extends m.Z {
             p = new AbortController();
         this.startQueueMetricTimers(e.nonce),
             a.tn.post(
-                S(
+                T(
                     v(
                         {
                             url: b.ANM.MESSAGES(r),
@@ -203,7 +203,7 @@ class D extends m.Z {
     }
     handleEdit(e, t) {
         var { channelId: n, messageId: r } = e,
-            i = T(e, ['channelId', 'messageId']);
+            i = S(e, ['channelId', 'messageId']);
         let o = new AbortController();
         a.tn.patch(
             {

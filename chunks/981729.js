@@ -1,7 +1,7 @@
 n.d(t, {
     Cy: () => D,
     DY: () => U,
-    FG: () => T,
+    FG: () => S,
     u: () => j
 }),
     n(415506),
@@ -78,14 +78,14 @@ function I(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = S(e, t);
+        i = T(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -94,7 +94,7 @@ function S(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-var T = (function (e) {
+var S = (function (e) {
     return (e.PRIMARY = 'primary'), (e.NESTED = 'nested'), (e.BLACK = 'black'), (e.GREY = 'grey'), (e.BRAND = 'brand'), (e.GREEN = 'green'), (e.YELLOW = 'yellow'), (e.RED = 'red'), (e.PREMIUM = 'premium'), e;
 })({});
 let A = 16,
@@ -171,11 +171,11 @@ let D = (e) => {
         scale: 1,
         opacity: 0
     },
-    k = {
+    M = {
         scale: 1,
         opacity: 1
     },
-    M = (e) => {
+    k = (e) => {
         var { isVisible: t, onAnimationRest: n, targetElementRef: r } = e,
             o = I(e, ['isVisible', 'onAnimationRest', 'targetElementRef']);
         let { reducedMotion: s } = a.useContext(p.S);
@@ -185,7 +185,7 @@ let D = (e) => {
                 keys: (e) => (e ? 'tooltip' : 'empty'),
                 config: _.F,
                 from: s.enabled ? x : L,
-                enter: k,
+                enter: M,
                 leave: s.enabled ? x : L,
                 onRest: n
             },
@@ -271,7 +271,7 @@ class j extends (r = a.Component) {
             b = null;
         return (
             (b = e instanceof Function ? (E ? e() : null) : e),
-            (0, i.jsx)(M, {
+            (0, i.jsx)(k, {
                 disableTooltipPointerEvents: g,
                 targetElementRef: this.domElementRef,
                 tooltipStyle: s,
@@ -338,7 +338,7 @@ class j extends (r = a.Component) {
             });
     }
 }
-b(j, 'Colors', T),
+b(j, 'Colors', S),
     b(j, 'defaultProps', {
         hideOnClick: !0,
         position: 'top',

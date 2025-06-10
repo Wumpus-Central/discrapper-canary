@@ -74,7 +74,7 @@ let y = function (e) {
             country: '',
             postalCode: ''
         }),
-        [S, T] = i.useState({}),
+        [T, S] = i.useState({}),
         [A, N] = i.useState({}),
         { setFocusLockDisabled: C } = i.useContext(s.M);
     i.useEffect(() => () => {
@@ -90,9 +90,9 @@ let y = function (e) {
         function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                 t = {};
-            return (e || S.name) && '' === v.name && (t.name = _.intl.string(_.t.lIkVsr)), t;
+            return (e || T.name) && '' === v.name && (t.name = _.intl.string(_.t.lIkVsr)), t;
         },
-        [S, v]
+        [T, v]
     );
     function D() {
         N(w());
@@ -166,11 +166,11 @@ let y = function (e) {
     function x(e, t) {
         if ('name' !== t && 'country' !== t && 'postalCode' !== t) return;
         let n = g({}, v),
-            r = g({}, S),
+            r = g({}, T),
             i = { name: A.name };
-        S[t] || '' === e || (r[t] = !0), (n[t] = e), r[t] && '' === e ? 'name' === t && (i.name = _.intl.string(_.t.lIkVsr)) : delete i[t], I(n), T(r), N(i);
+        T[t] || '' === e || (r[t] = !0), (n[t] = e), r[t] && '' === e ? 'name' === t && (i.name = _.intl.string(_.t.lIkVsr)) : delete i[t], I(n), S(r), N(i);
     }
-    function k() {
+    function M() {
         var e;
         return (null == (e = u.default.getCurrentUser()) ? void 0 : e.nsfwAllowed)
             ? (0, r.jsxs)('div', {
@@ -184,7 +184,7 @@ let y = function (e) {
     }
     return (0, r.jsxs)('div', {
         children: [
-            k(),
+            M(),
             (0, r.jsx)(d.Z, {
                 form: L,
                 errors: A,

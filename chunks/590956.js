@@ -1,5 +1,5 @@
 n.d(t, {
-    Y: () => S,
+    Y: () => T,
     c: () => I
 }),
     n(388685);
@@ -107,7 +107,7 @@ let I = (e) => {
                             shouldShow: !g,
                             onTooltipShow: () => {
                                 s &&
-                                    T({
+                                    S({
                                         emojiNode: n,
                                         isCustomEmoji: !1
                                     });
@@ -133,7 +133,7 @@ let I = (e) => {
                     )
                 );
         if (!s) return I();
-        let S = (e) => (0, r.jsx)(_.Az, v(y({}, e), { node: n }));
+        let T = (e) => (0, r.jsx)(_.Az, v(y({}, e), { node: n }));
         return (0, r.jsx)(l.yRy, {
             animation: l.yRy.Animation.TRANSLATE,
             align: 'center',
@@ -143,15 +143,15 @@ let I = (e) => {
             onRequestClose: () => {
                 b(!1);
             },
-            renderPopout: S,
+            renderPopout: T,
             targetElementRef: f,
             children: I
         });
     },
-    S = (e) => {
+    T = (e) => {
         let { node: t, isInteracting: n, tooltipPosition: a = p.b_.position, enableClick: u = !0, channelId: g, messageId: b } = e,
             [O, I] = i.useState(String(Date.now())),
-            [S, A] = i.useState(!1),
+            [T, A] = i.useState(!1),
             [N, C] = i.useState(!1),
             R = i.useRef(null),
             P = function () {
@@ -187,7 +187,7 @@ let I = (e) => {
                             onTooltipShow: () => {
                                 A(!0),
                                     u &&
-                                        (T({
+                                        (S({
                                             emojiNode: t,
                                             isCustomEmoji: !0,
                                             nonce: w
@@ -210,7 +210,7 @@ let I = (e) => {
                                               }
                                             : void 0,
                                         onMouseLeave: () => {
-                                            S && (f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), A(!1));
+                                            T && (f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), A(!1));
                                         },
                                         tag: 'span',
                                         className: o()(E.emojiContainer, {
@@ -248,7 +248,7 @@ let I = (e) => {
             children: D
         });
     },
-    T = (e) => {
+    S = (e) => {
         let { emojiNode: t, isCustomEmoji: n, nonce: r } = e;
         u.ZP.trackWithMetadata(h.rMx.EXPRESSION_TOOLTIP_VIEWED, {
             type: g.cd.EMOJI_IN_MESSAGE_HOVER,

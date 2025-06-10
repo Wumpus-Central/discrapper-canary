@@ -68,8 +68,8 @@ function I(e, t) {
         e
     );
 }
-let S = 'max_uses',
-    T = 'User Invite Context Menu',
+let T = 'max_uses',
+    S = 'User Invite Context Menu',
     A = 'context_menu';
 function N(e, t) {
     s.Z.ensurePrivateChannel(e).then((e) => {
@@ -102,10 +102,10 @@ function C(e) {
             l.ZP.createInvite(
                 n.id,
                 {
-                    [S]: 1,
+                    [T]: 1,
                     unique: !0
                 },
-                T
+                S
             ).then((e) => N(t, e.code));
         }
     }

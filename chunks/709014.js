@@ -41,8 +41,8 @@ function m(e) {
     return e;
 }
 function g(e, t) {
-    let { color: a, useLottieDefaultColors: s, src: h, size: g = 'md', width: E, height: b, className: y, initialAnimation: O, initialFrame: v, markers: I, onBeforeDismount: S } = e,
-        [T, A] = i.useState(null),
+    let { color: a, useLottieDefaultColors: s, src: h, size: g = 'md', width: E, height: b, className: y, initialAnimation: O, initialFrame: v, markers: I, onBeforeDismount: T } = e,
+        [S, A] = i.useState(null),
         N = i.useRef(null),
         C = i.useRef(null),
         R = i.useRef(null),
@@ -57,11 +57,11 @@ function g(e, t) {
         D = i.useContext(c.S).reducedMotion.enabled,
         { enabled: L } = d.Z.useExperiment({ location: 'LottieIcon web entry point' }),
         x = D || !L,
-        k = i.useRef(O);
+        M = i.useRef(O);
     return (
         (0, f.zq)(() => {
             var e, t;
-            null == S || S({ finalFrame: null != (t = null == (e = R.current) ? void 0 : e.currentFrame) ? t : null });
+            null == T || T({ finalFrame: null != (t = null == (e = R.current) ? void 0 : e.currentFrame) ? t : null });
         }),
         i.useImperativeHandle(
             t,
@@ -90,8 +90,8 @@ function g(e, t) {
             [x, w, I, v]
         ),
         i.useEffect(() => {
-            null == T && h().then((e) => A(e.default));
-        }, [T, h]),
+            null == S && h().then((e) => A(e.default));
+        }, [S, h]),
         i.useEffect(
             () => (
                 Promise.resolve()
@@ -101,7 +101,7 @@ function g(e, t) {
                         let r,
                             { default: i } = e,
                             a = 1 === Object.keys(I).length ? Object.values(I)[0].name : void 0,
-                            o = null != (n = null != (t = C.current) ? t : k.current) ? n : a;
+                            o = null != (n = null != (t = C.current) ? t : M.current) ? n : a;
                         if (null != o && null != I[o]) {
                             let e = I[o];
                             r = [x ? e.start : null != v ? v : e.start, e.start + e.duration];
@@ -112,7 +112,7 @@ function g(e, t) {
                                 renderer: 'svg',
                                 loop: !1,
                                 autoplay: !1,
-                                animationData: l()(T),
+                                animationData: l()(S),
                                 initialSegment: r
                             }));
                     }),
@@ -121,7 +121,7 @@ function g(e, t) {
                     null == (e = R.current) || e.destroy();
                 }
             ),
-            [T, I, v, x]
+            [S, I, v, x]
         ),
         (0, r.jsx)('div', {
             style: m(

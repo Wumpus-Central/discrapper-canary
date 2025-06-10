@@ -60,7 +60,7 @@ function v(e) {
             var e, t;
             return null == (t = p.Z.settings.appearance) || null == (e = t.clientThemeSettings) ? void 0 : e.customUserThemeSettings;
         }),
-        [S, T] = (0, _.US)([c.z.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE]),
+        [T, S] = (0, _.US)([c.z.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE]),
         A = (0, d.ZP)(),
         N = null != I,
         C = (0, u.wjy)(A) ? y.darkOverlay : y.lightOverlay,
@@ -78,9 +78,9 @@ function v(e) {
         D = (0, f.Sl)(g.Il.RED_430).hex,
         L = N ? w : void 0,
         x = i.useCallback(() => {
-            S === c.z.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE && T(m.L.TAKE_ACTION), null == v || v();
-        }, [S, T, v]),
-        k = S === c.z.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE;
+            T === c.z.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE && S(m.L.TAKE_ACTION), null == v || v();
+        }, [T, S, v]),
+        M = T === c.z.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE;
     return (0, r.jsxs)(h.S4, {
         onSelect: a ? void 0 : x,
         isSelected: !1,
@@ -97,7 +97,7 @@ function v(e) {
                 color: L,
                 className: y.paletteIcon
             }),
-            k &&
+            M &&
                 (0, r.jsx)(u.IGR, {
                     className: y.newBadge,
                     text: b.intl.string(b.t.y2b7CA),

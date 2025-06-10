@@ -59,7 +59,7 @@ function _(e, t) {
     );
 }
 function p(e) {
-    let { categories: t, collapsedCategories: n, containerWidth: u, store: f, onSelectItem: p, onSearchExpressions: h, hasSearchResults: m, defaultSearchPlaceholder: g, emptySearchPlaceholder: E, renderEmptyState: b, renderRow: y, renderSection: O, renderSectionHeader: v, renderSectionFooter: I, renderInspector: S, renderEmptySearchState: T, renderCategoryList: A, renderHeaderAccessories: N, rowHeight: C, sectionHeaderHeight: R, sectionFooterHeight: P, itemNodeWidth: w, listPaddingRight: D, itemNodeMargin: L, listPadding: x, gridNavigatorId: k, gridNotice: M, renderHeader: j, renderUpsell: U, setShowUpsell: G } = e,
+    let { categories: t, collapsedCategories: n, containerWidth: u, store: f, onSelectItem: p, onSearchExpressions: h, hasSearchResults: m, defaultSearchPlaceholder: g, emptySearchPlaceholder: E, renderEmptyState: b, renderRow: y, renderSection: O, renderSectionHeader: v, renderSectionFooter: I, renderInspector: T, renderEmptySearchState: S, renderCategoryList: A, renderHeaderAccessories: N, rowHeight: C, sectionHeaderHeight: R, sectionFooterHeight: P, itemNodeWidth: w, listPaddingRight: D, itemNodeMargin: L, listPadding: x, gridNavigatorId: M, gridNotice: k, renderHeader: j, renderUpsell: U, setShowUpsell: G } = e,
         B = i.useRef(null),
         F = i.useRef(null),
         V = i.useRef(null),
@@ -97,7 +97,7 @@ function p(e) {
             expressionsGrid: K,
             onSelectItem: p,
             store: f,
-            gridNavigatorId: k
+            gridNavigatorId: M
         }),
         er = i.useCallback(
             (e, t) =>
@@ -121,8 +121,8 @@ function p(e) {
         eo = i.useCallback((e) => (null == I ? void 0 : I(t[e], e)), [t, I]),
         es = i.useCallback(() => {
             var e;
-            return null == S ? void 0 : S(null == K || null == (e = K[Y.rowIndex]) ? void 0 : e[Y.columnIndex]);
-        }, [K, Y.columnIndex, Y.rowIndex, S]);
+            return null == T ? void 0 : T(null == K || null == (e = K[Y.rowIndex]) ? void 0 : e[Y.columnIndex]);
+        }, [K, Y.columnIndex, Y.rowIndex, T]);
     i.useEffect(() => {
         h(H);
     }, [h, H]),
@@ -143,7 +143,7 @@ function p(e) {
                 hasSendableExpressions: !0,
                 onKeyDown: et,
                 expressionsListRef: F,
-                gridNavigatorId: k,
+                gridNavigatorId: M,
                 defaultSearchPlaceholder: g,
                 emptySearchPlaceholder: E
             }),
@@ -163,10 +163,10 @@ function p(e) {
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           A(F),
-                          null != M &&
+                          null != k &&
                               (0, r.jsx)('div', {
                                   className: c.gridNoticeWrapper,
-                                  children: M
+                                  children: k
                               }),
                           (0, r.jsx)(
                               'div',
@@ -175,7 +175,7 @@ function p(e) {
                                       {
                                           ref: B,
                                           className: c.listWrapper,
-                                          id: k
+                                          id: M
                                       },
                                       ee
                                   ),
@@ -192,8 +192,8 @@ function p(e) {
                                                     renderSection: null != O ? ei : void 0,
                                                     renderSectionHeader: null != v ? ea : void 0,
                                                     renderSectionFooter: null != I ? eo : void 0,
-                                                    renderInspector: null != S ? es : void 0,
-                                                    renderEmptySearchState: T,
+                                                    renderInspector: null != T ? es : void 0,
+                                                    renderEmptySearchState: S,
                                                     rowCount: z,
                                                     rowCountBySection: q,
                                                     rowHeight: C,

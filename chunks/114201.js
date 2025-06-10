@@ -32,7 +32,7 @@ function I(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function S(e) {
     }
     return e;
 }
-function T(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,7 +65,7 @@ function A(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -113,7 +113,7 @@ function C(e, t) {
 function R(e) {
     let { guildId: t, leaderboardId: p } = e,
         I = (0, o.e7)([c.default], () => c.default.getId()),
-        T = (0, o.e7)([u.Z], () => u.Z.getAccount(null, y.ABu.RIOT_GAMES)),
+        S = (0, o.e7)([u.Z], () => u.Z.getAccount(null, y.ABu.RIOT_GAMES)),
         N = (0, o.e7)([u.Z], () => u.Z.getAccount(null, y.ABu.LEAGUE_OF_LEGENDS)),
         R = (0, g.Z)({
             guildId: t,
@@ -121,26 +121,26 @@ function R(e) {
         }),
         { leaderboardsDisabled: P } = (0, m.O)(t, p),
         w =
-            null != N && null != T
+            null != N && null != S
                 ? () => {
                       _.default.track(y.rMx.LEADERBOARD_USER_DATA_REFRESH_REQUESTED, {
                           leaderboard_id: p,
                           guild_id: t
                       }),
                           (0, h._7)({
-                              riotConnectionId: T.id,
+                              riotConnectionId: S.id,
                               lolConnectionId: N.id
                           });
                   }
                 : y.dG4,
-        D = null == T || P ? O.intl.string(O.t['0yRXHx']) : O.intl.string(O.t['KWpU6+']),
+        D = null == S || P ? O.intl.string(O.t['0yRXHx']) : O.intl.string(O.t['KWpU6+']),
         { lastUpdateRequested: L, statisticLastUpdatedDate: x } = (0, E.Z)({
             userId: I,
             guildId: t,
             leaderboardId: p,
             statisticId: a.E.LOL_TOTAL_KILLS
         }),
-        { disabled: k, subtext: M } = C(L, x),
+        { disabled: M, subtext: k } = C(L, x),
         j = (0, o.e7)(
             [f.Z, d.Z],
             () => {
@@ -169,13 +169,13 @@ function R(e) {
                       children: (0, r.jsxs)(s.kSQ, {
                           children: [
                               R.leaderboard_id === b.z &&
-                                  null != T &&
+                                  null != S &&
                                   (0, r.jsx)(s.sNh, {
                                       id: 'refresh-my-data',
                                       label: O.intl.string(O.t.iopWUV),
                                       action: w,
-                                      disabled: k,
-                                      subtext: M
+                                      disabled: M,
+                                      subtext: k
                                   }),
                               (0, r.jsx)(s.sNh, {
                                   id: 'leaderboard-modal',
@@ -186,7 +186,7 @@ function R(e) {
                                           return (n) =>
                                               (0, r.jsx)(
                                                   e,
-                                                  A(S({}, n), {
+                                                  A(T({}, n), {
                                                       guildId: t,
                                                       leaderboard: R
                                                   })
@@ -205,7 +205,7 @@ function R(e) {
                                                 return (n) =>
                                                     (0, r.jsx)(
                                                         e,
-                                                        A(S({}, n), {
+                                                        A(T({}, n), {
                                                             guildId: t,
                                                             leaderboardId: p
                                                         })
@@ -226,7 +226,7 @@ function R(e) {
                       children: (t) =>
                           (0, r.jsx)(
                               s.P3F,
-                              A(S(A(S({}, t), { className: v.menuIcon }), e), {
+                              A(T(A(T({}, t), { className: v.menuIcon }), e), {
                                   innerRef: U,
                                   children: (0, r.jsx)(s.xhG, {
                                       color: 'currentColor',

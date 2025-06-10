@@ -144,14 +144,14 @@ let m = (e) => {
         }
         return t;
     },
-    S = (e, t, n) => {
+    T = (e, t, n) => {
         if (!O(t) && !t.name.endsWith('.txt')) return void n.ignoredFilenames.push(y(e, t.name));
         e in n.profileEffectFilesMap || (n.profileEffectFilesMap[e] = []), n.profileEffectFilesMap[e].push(t);
     },
-    T = (e, t, n, r) => {
+    S = (e, t, n, r) => {
         if (t.name === p) return;
         let i = y(e, t.name);
-        'profile_effects' === n ? S(e, t, r) : O(t) ? ('collection' === n || null === n ? (t.name in _ ? r.collectionFiles.push(t) : r.ignoredFilenames.push(i)) : 'avatar_decorations' === n ? r.avatarDecorationFiles.push(t) : r.ignoredFilenames.push(i)) : r.ignoredFilenames.push(i);
+        'profile_effects' === n ? T(e, t, r) : O(t) ? ('collection' === n || null === n ? (t.name in _ ? r.collectionFiles.push(t) : r.ignoredFilenames.push(i)) : 'avatar_decorations' === n ? r.avatarDecorationFiles.push(t) : r.ignoredFilenames.push(i)) : r.ignoredFilenames.push(i);
     },
     A = async (e, t, n) => {
         let r = e.createReader();
@@ -159,7 +159,7 @@ let m = (e) => {
             if (i.isFile) {
                 let r = i,
                     a = await new Promise((e) => r.file(e));
-                T(e.name, a, t, n);
+                S(e.name, a, t, n);
             } else {
                 let e = await I(i);
                 n.ignoredFilenames.push(...e.map((e) => y(i.name, e.name)));
@@ -201,7 +201,7 @@ let m = (e) => {
                 'collection' === r || 'avatar_decorations' === r ? await A(e, r, t) : 'profile_effects' === r ? await N(e, t) : await C(e, t);
             } else if (n.isFile) {
                 let e = n;
-                T('', await new Promise((t) => e.file(t)), null, t);
+                S('', await new Promise((t) => e.file(t)), null, t);
             }
         return t.collectionFiles.sort((e, t) => e.name.localeCompare(t.name)), t.avatarDecorationFiles.sort((e, t) => e.name.localeCompare(t.name)), t.ignoredFilenames.sort((e, t) => e.localeCompare(t)), t;
     },

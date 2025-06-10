@@ -20,8 +20,8 @@ var r = n(255367),
     O = n(221888),
     v = n(522651),
     I = n(933557),
-    S = n(502053),
-    T = n(965048),
+    T = n(502053),
+    S = n(965048),
     A = n(569545),
     N = n(74299),
     C = n(863908),
@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(703656),
     L = n(937995),
     x = n(618158),
-    k = n(922745),
-    M = n(197016),
+    M = n(922745),
+    k = n(197016),
     j = n(800965),
     U = n(445062),
     G = n(7188),
@@ -230,7 +230,7 @@ class ep extends i.PureComponent {
                 children: (e) => {
                     var t;
                     return (0, r.jsx)(
-                        k.Z,
+                        M.Z,
                         e_(
                             ed(
                                 {
@@ -304,7 +304,7 @@ class ep extends i.PureComponent {
                 });
             }),
             eu(this, 'renderDisconnectButton', () =>
-                (0, r.jsx)(M.Z, {
+                (0, r.jsx)(k.Z, {
                     className: el.rightTrayIcon,
                     onClick: () => (0, v.v)(g.Z.VIDEO_PIP, v.d.DISCONNECT)
                 })
@@ -368,8 +368,8 @@ function eh(e) {
         h = (0, c.e7)([F.default], () => F.default.getId()),
         m = (0, c.e7)([B.Z], () => B.Z.getCurrentUserActiveStream()),
         g = null != a && 'user' in a ? a.user.id : '',
-        E = (0, T.Z)((null == a ? void 0 : a.type) === es.fO.STREAM ? u.Yn.STREAM : u.Yn.DEFAULT, g),
-        O = (0, S.Z)(g),
+        E = (0, S.Z)((null == a ? void 0 : a.type) === es.fO.STREAM ? u.Yn.STREAM : u.Yn.DEFAULT, g),
+        O = (0, T.Z)(g),
         v = (0, c.Wu)([B.Z], () => B.Z.getAllActiveStreams());
     return (0, r.jsx)(ep, {
         channel: t,

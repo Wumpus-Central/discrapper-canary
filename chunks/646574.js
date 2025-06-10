@@ -58,8 +58,8 @@ function v(e) {
     let { checked: t, onClick: n, id: a = 'burst-reaction-toggle-button' } = e,
         v = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         I = _.default.getCurrentUser(),
-        S = null == I || (0, p.I5)(I) ? [c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
-        [T, A] = (0, f.US)(S),
+        T = null == I || (0, p.I5)(I) ? [c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
+        [S, A] = (0, f.US)(T),
         [N, C] = i.useState(!1),
         [R, P] = (0, u.q_F)(() => ({})),
         w = (0, s.animated)(u.Pt5);
@@ -73,9 +73,9 @@ function v(e) {
             C(!1);
     }
     i.useEffect(() => {
-        let e = T === c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
+        let e = S === c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
         e && (A(h.L.DISMISS), setTimeout(() => C(e), 200));
-    }, [T, A]);
+    }, [S, A]);
     let L = N ? m.intl.string(m.t['Osi/u7']) : O(t),
         x = N ? m.intl.string(m.t.ORK94u) : void 0;
     return (0, r.jsxs)(u.DY3, {

@@ -67,9 +67,9 @@ function i() {
     f(I, c, function () {
         return this;
     });
-    var S = Object.getPrototypeOf,
-        T = S && S(S(x([])));
-    T && T !== a && o.call(T, c) && (I = T);
+    var T = Object.getPrototypeOf,
+        S = T && T(T(x([])));
+    S && S !== a && o.call(S, c) && (I = S);
     var A = (v.prototype = y.prototype = Object.create(I));
     function N(e) {
         ['next', 'throw', 'return'].forEach(function (t) {

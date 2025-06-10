@@ -23,8 +23,8 @@ e.exports = function (e) {
         v = void 0 !== O;
     v && (O = r(O, y > 2 ? arguments[2] : void 0));
     var I = f(E),
-        S = 0;
-    if (I && !(this === _ && s(I))) for (n = b ? new this() : [], m = (h = d(E, I)).next; !(p = i(m, h)).done; S++) (g = v ? o(h, O, [p.value, S], !0) : p.value), u(n, S, g);
-    else for (t = c(E), n = b ? new this(t) : _(t); t > S; S++) (g = v ? O(E[S], S) : E[S]), u(n, S, g);
-    return (n.length = S), n;
+        T = 0;
+    if (I && !(this === _ && s(I))) for (n = b ? new this() : [], m = (h = d(E, I)).next; !(p = i(m, h)).done; T++) (g = v ? o(h, O, [p.value, T], !0) : p.value), u(n, T, g);
+    else for (t = c(E), n = b ? new this(t) : _(t); t > T; T++) (g = v ? O(E[T], T) : E[T]), u(n, T, g);
+    return (n.length = T), n;
 };

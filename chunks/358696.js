@@ -110,7 +110,7 @@ function b(e) {
             className: a()(u.contentImage, h[null != _ ? _ : 'default'], y),
             constrain: 'width'
         });
-    let S = (0, r.jsx)(l.f, {
+    let T = (0, r.jsx)(l.f, {
         src: i.src,
         alt: null != (n = null != (t = i.alt) ? t : i.text) ? n : c.intl.string(c.t['2B/phI']),
         size: O,
@@ -134,14 +134,14 @@ function b(e) {
                                           mask: I,
                                           width: O,
                                           height: O,
-                                          children: S
+                                          children: T
                                       })
                                   )
                                 : (0, r.jsx)(
                                       'div',
                                       p(f({}, e), {
                                           className: u.imageContainer,
-                                          children: S
+                                          children: T
                                       })
                                   )
                     })

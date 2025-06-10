@@ -3,12 +3,12 @@ a.d(e, {
     Gf: () => o
 });
 let r = /^(\S+:\\|\/?)([\s\S]*?)((?:\.{1,2}|[^/\\]+?|)(\.[^./\\]*|))(?:[/\\]*)$/;
-function n(...t) {
+function _(...t) {
     let e = '',
         a = !1;
     for (let r = t.length - 1; r >= -1 && !a; r--) {
-        let n = r >= 0 ? t[r] : '/';
-        n && ((e = `${n}/${e}`), (a = '/' === n.charAt(0)));
+        let _ = r >= 0 ? t[r] : '/';
+        _ && ((e = `${_}/${e}`), (a = '/' === _.charAt(0)));
     }
     return (
         (e = (function (t, e) {
@@ -26,7 +26,7 @@ function n(...t) {
         (a ? '/' : '') + e || '.'
     );
 }
-function _(t) {
+function n(t) {
     let e = 0;
     for (; e < t.length && '' === t[e]; e++);
     let a = t.length - 1;
@@ -34,9 +34,9 @@ function _(t) {
     return e > a ? [] : t.slice(e, a - e + 1);
 }
 function o(t, e) {
-    (t = n(t).slice(1)), (e = n(e).slice(1));
-    let a = _(t.split('/')),
-        r = _(e.split('/')),
+    (t = _(t).slice(1)), (e = _(e).slice(1));
+    let a = n(t.split('/')),
+        r = n(e.split('/')),
         o = Math.min(a.length, r.length),
         i = o;
     for (let t = 0; t < o; t++)

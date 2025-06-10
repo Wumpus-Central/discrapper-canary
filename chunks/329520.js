@@ -46,25 +46,25 @@ function b(e) {
 function y(e) {
     let { stream: t, game: n, textVariant: u, textClassName: h, iconClassName: E, hideIcon: b = !1, hideText: y = !1, hideTooltip: O = !1, canTruncate: v = !0 } = e,
         I = (0, a.e7)([d.Z], () => d.Z.getChannel(t.channelId)),
-        S = (0, c.ZP)(I),
-        { analyticsLocations: T } = (0, s.ZP)(),
+        T = (0, c.ZP)(I),
+        { analyticsLocations: S } = (0, s.ZP)(),
         A = i.useCallback(() => {
             (0, f.A)({
-                analyticsLocations: T,
+                analyticsLocations: S,
                 activityType: m.IIU.STREAMING,
                 voiceChannelId: t.channelId
             });
-        }, [T, t.channelId]);
+        }, [S, t.channelId]);
     if (b && y) return null;
     let N = (null == n ? void 0 : n.name) === '' ? null : null == n ? void 0 : n.name,
         C = null != N ? g.intl.format(g.t['0wJXSk'], { name: N }) : g.intl.string(g.t.eXan7O),
-        R = !O && null != I && null != S;
+        R = !O && null != I && null != T;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             !b &&
                 (0, r.jsx)(_.Z, {
                     icon: o.ARS,
-                    tooltipText: R ? S : void 0,
+                    tooltipText: R ? T : void 0,
                     tooltipAriaLabel: R ? (0, l.ZP)({ channel: I }) : void 0,
                     className: E,
                     onTooltipShow: R ? A : void 0
@@ -87,13 +87,13 @@ function O(e) {
         O = (null == n ? void 0 : n.name) === '' ? null : null == n ? void 0 : n.name,
         v = null != O ? g.intl.format(g.t['0wJXSk'], { name: O }) : g.intl.string(g.t.eXan7O),
         I = null != O ? g.intl.formatToPlainString(g.t['0wJXSk'], { name: O }) : g.intl.string(g.t.eXan7O),
-        S =
+        T =
             null != y
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [v, ' (', y, ')']
                   })
                 : v,
-        T = E ? S : v,
+        S = E ? T : v,
         A = null != y ? ''.concat(I, ' (').concat(y, ')') : I;
     return (0, r.jsx)(h.Z, {
         icon: u
@@ -102,8 +102,8 @@ function O(e) {
                   icon: o.ARS,
                   className: l
               }),
-        text: T,
-        tooltipText: p ? void 0 : S,
+        text: S,
+        tooltipText: p ? void 0 : T,
         textVariant: i,
         className: s,
         canTruncate: m,

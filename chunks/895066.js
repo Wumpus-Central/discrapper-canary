@@ -314,8 +314,8 @@ class p {
                         i().forEach(t, (t) => {
                             if ('audio' === t.type) {
                                 var r, a, o, s, l, c, d, f, _, p, h, m, g, E, b, y, O, v, I;
-                                let S = null != (r = e.transport.ping) ? r : 0,
-                                    T = t.packetsReceived,
+                                let T = null != (r = e.transport.ping) ? r : 0,
+                                    S = t.packetsReceived,
                                     A = t.packetsLost,
                                     N = t.bytesReceived,
                                     C = t.nackCount,
@@ -348,14 +348,14 @@ class p {
                                         decryptInvalidNonceCount: null != (h = t.decryptInvalidNonceCount) ? h : 0
                                     };
                                 if (null != this.inboundStats[n]) {
-                                    let e = T - this.inboundStats[n].packetsReceived,
+                                    let e = S - this.inboundStats[n].packetsReceived,
                                         r = A - this.inboundStats[n].packetsLost,
                                         a = 0,
                                         o = this.inboundStats[n].mosBuckets;
-                                    e > 0 && r >= 0 && ((a = this.calculateMos(S + w, i().clamp(r / (e + r), 0, 1))), o[Math.floor(a)]++),
+                                    e > 0 && r >= 0 && ((a = this.calculateMos(T + w, i().clamp(r / (e + r), 0, 1))), o[Math.floor(a)]++),
                                         (this.inboundStats[n] = u(
                                             {
-                                                packetsReceived: T,
+                                                packetsReceived: S,
                                                 bytesReceived: N,
                                                 packetsLost: A,
                                                 nackCount: null != C ? C : 0,
@@ -384,7 +384,7 @@ class p {
                                 } else
                                     (this.inboundStats[n] = u(
                                         {
-                                            packetsReceived: T,
+                                            packetsReceived: S,
                                             bytesReceived: N,
                                             packetsLost: A,
                                             nackCount: null != C ? C : 0,
