@@ -4882,6 +4882,8 @@
   "8lQ2ra": "Delete Account",
   "FB4H1N": "Are you sure that you want to delete your account? This will immediately log you out of your account and you will not be able to log in again.",
   "LX0nT0": "Error Deleting Your Account",
+  "UNGZDA": "You Own Teams!",
+  "alpAUl": "In order to delete or disable your account you must first transfer ownership of all developer teams that you own.",
   "I5UrbW": "You Own Servers!",
   "UyVVam": "In order to delete or disable your account you must first transfer ownership of all servers that you own.",
   "8ZsNv7": "Cancel all Events",
