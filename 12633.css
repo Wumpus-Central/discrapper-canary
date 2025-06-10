@@ -20672,7 +20672,9 @@ span.clanTag__5d473 {
     color: var(--text-normal);
     display: flex;
     font-weight: 500;
-    justify-content: center
+    justify-content: center;
+    line-height: 1;
+    text-align: center
 }
 
 .moreUsers__183c2.moreUsersDimmed__183c2 {
