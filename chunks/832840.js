@@ -3,7 +3,7 @@ let { createLoader: i } = n(515149),
     r = i(
         {
             bg: () => n.e('18340').then(n.t.bind(n, 74685, 19)),
-            cs: () => n.e('88818').then(n.t.bind(n, 971072, 19)),
+            cs: () => n.e('66085').then(n.t.bind(n, 971072, 19)),
             da: () => n.e('88411').then(n.t.bind(n, 521133, 19)),
             de: () => n.e('25641').then(n.t.bind(n, 585482, 19)),
             el: () => n.e('69296').then(n.t.bind(n, 198390, 19)),
