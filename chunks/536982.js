@@ -6,10 +6,10 @@ var r = n(255367),
     a = n(388032),
     o = n(283902);
 function c(e) {
-    let { onChange: t, initialValue: n, maxWordCount: c, collapsed: u = !1 } = e,
-        [d, m] = i.useState(!u);
+    let { onChange: t, initialValue: n, maxWordCount: c, collapsed: d = !1 } = e,
+        [u, m] = i.useState(!d);
     return (0, r.jsx)(l.zF9, {
-        isExpanded: d,
+        isExpanded: u,
         collapsibleContent: (0, r.jsx)(s.Z, {
             onChangeText: t,
             maxWordCount: c,
@@ -23,7 +23,7 @@ function c(e) {
             let { onClick: t } = e;
             return (0, r.jsx)(l.P3F, {
                 onClick: (e) => {
-                    m(!d), t(e);
+                    m(!u), t(e);
                 },
                 children: (0, r.jsxs)('div', {
                     className: o.header,
@@ -32,7 +32,7 @@ function c(e) {
                             variant: 'text-sm/medium',
                             children: a.intl.string(a.t.lbE2Nj)
                         }),
-                        d
+                        u
                             ? (0, r.jsx)(l.u04, {
                                   size: 'md',
                                   color: 'currentColor',

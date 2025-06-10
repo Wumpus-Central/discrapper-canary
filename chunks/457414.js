@@ -17,7 +17,7 @@ let c = (e) => {
                 return !1;
         }
     },
-    u = (e) => {
+    d = (e) => {
         switch (e) {
             case a.fX.KEYWORD:
             case a.fX.ML_SPAM:
@@ -30,7 +30,7 @@ let c = (e) => {
                 return !1;
         }
     },
-    d = (e, t) => {
+    u = (e, t) => {
         var n;
         return null != (n = null == t ? void 0 : t.name) ? n : s.I6[e].getDefaultRuleName();
     },
@@ -77,9 +77,9 @@ let c = (e) => {
     };
 function h(e, t) {
     var n, i, l, s, a;
-    return null != e && u(e)
+    return null != e && d(e)
         ? {
-              headerText: null != (n = d(e, t)) ? n : '',
+              headerText: null != (n = u(e, t)) ? n : '',
               headerSubtext: null != (i = m(e, t)) ? i : '',
               descriptionText: null != (l = g(e)) ? l : '',
               descriptionSubtext: null != (s = p(e)) ? s : '',

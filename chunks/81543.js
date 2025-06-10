@@ -9,8 +9,8 @@ var r,
     a = n.n(s),
     o = n(748780),
     c = n(215569),
-    u = n(65187);
-function d(e, t, n) {
+    d = n(65187);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function m(e) {
                 })
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
@@ -76,19 +76,19 @@ class f extends l.PureComponent {
     render() {
         return (0, i.jsx)(o.Z.div, {
             style: this.getStyle(),
-            className: u.item,
+            className: d.item,
             children: this.props.children
         });
     }
     constructor(e) {
-        super(e), d(this, '_animated', void 0), (this._animated = new o.Z.Value(-1 * e.direction));
+        super(e), u(this, '_animated', void 0), (this._animated = new o.Z.Value(-1 * e.direction));
     }
 }
 let h = (e) => {
     let { children: t, step: n, direction: r, className: l, onAnimationStart: s, onAnimationEnd: o } = e;
     return (0, i.jsx)(c.W, {
         component: 'div',
-        className: a()(u.animator, l),
+        className: a()(d.animator, l),
         children: (0, i.jsx)(
             f,
             {

@@ -18,11 +18,11 @@ function o(e, t, n) {
     );
 }
 let c = ['pct_retained', 'new_members', 'visitors', 'communicators'],
-    u = {},
-    d = null;
+    d = {},
+    u = null;
 function m(e) {
     let { guildId: t, stats: n } = e;
-    d = null;
+    u = null;
     let r = {},
         i = {},
         s = n[0],
@@ -34,7 +34,7 @@ function m(e) {
                 null != a && 0 !== a[e] && (r[''.concat(t, 'Change')] = ((s[e] - a[e]) * 100) / a[e]), (i[t] = s[e]);
             }
         }),
-        (u[t] = (function (e) {
+        (d[t] = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
@@ -49,18 +49,18 @@ function m(e) {
                     });
             }
             return e;
-        })({}, i, r, u[t]));
+        })({}, i, r, d[t]));
 }
 function g(e) {
     let { error: t } = e;
-    d = t.code;
+    u = t.code;
 }
 class p extends (r = s.ZP.Store) {
     getOverviewAnalytics(e) {
-        return u[e];
+        return d[e];
     }
     getError() {
-        return d;
+        return u;
     }
 }
 o(p, 'displayName', 'GuildSettingsAnalyticsStore');

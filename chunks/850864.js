@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(481060),
     o = n(210887),
     c = n(430824),
-    u = n(999382),
-    d = n(8426),
+    d = n(999382),
+    u = n(8426),
     m = n(969632),
     g = n(998164),
     p = n(340189),
@@ -23,7 +23,7 @@ var r = n(255367),
     y = n(847950);
 function N(e) {
     let { guild: t, saveOnClose: n } = e,
-        [c, u] = i.useState('new'),
+        [c, d] = i.useState('new'),
         N = i.useMemo(
             () => [
                 {
@@ -41,7 +41,7 @@ function N(e) {
     i.useEffect(
         () => () => {
             let e = m.Z.getSettings();
-            (0, d.oo)(t.id, e);
+            (0, u.oo)(t.id, e);
         },
         [n, t.id]
     );
@@ -160,7 +160,7 @@ function N(e) {
                     (0, r.jsx)(a.sY7, {
                         options: N,
                         value: c,
-                        onChange: (e) => u(e.value),
+                        onChange: (e) => d(e.value),
                         look: 'pill'
                     })
                 ]
@@ -170,8 +170,8 @@ function N(e) {
 }
 function I(e) {
     let { saveOnClose: t } = e,
-        n = (0, l.e7)([u.Z, c.Z], () => {
-            let e = u.Z.getGuildId();
+        n = (0, l.e7)([d.Z, c.Z], () => {
+            let e = d.Z.getGuildId();
             return c.Z.getGuild(e);
         });
     return null == n

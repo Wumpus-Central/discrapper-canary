@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(807582),
     o = n(26323),
     c = n(516129),
-    u = n(345861),
-    d = n(709586),
+    d = n(345861),
+    u = n(709586),
     m = n(768581),
     g = n(434404),
     p = n(981631),
@@ -138,7 +138,7 @@ let _ = function (e) {
                                       color: 'header-secondary',
                                       children: b.intl.string(b.t.Vwintr)
                                   }),
-                                  (0, r.jsx)(u.Z, {
+                                  (0, r.jsx)(d.Z, {
                                       color: l.Ttl.BRAND,
                                       className: j.uploadButton,
                                       buttonCTA: b.intl.string(b.t.yG2pUl),
@@ -187,7 +187,7 @@ let _ = function (e) {
                                       color: l.zxk.Colors.GREEN,
                                       onClick: O,
                                       children: [
-                                          (0, r.jsx)(d.Z, {
+                                          (0, r.jsx)(u.Z, {
                                               height: 16,
                                               width: 16
                                           }),

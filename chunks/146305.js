@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(37234),
     o = n(493544),
     c = n(688465),
-    u = n(749681),
-    d = n(258971),
+    d = n(749681),
+    u = n(258971),
     m = n(676317),
     g = n(874993),
     p = n(45966),
@@ -60,8 +60,8 @@ var r = n(255367),
     ea = n(845995),
     eo = n(708510),
     ec = n(237245),
-    eu = n(658666),
-    ed = n(224726),
+    ed = n(658666),
+    eu = n(224726),
     em = n(308619),
     eg = n(254925),
     ep = n(209402),
@@ -141,7 +141,7 @@ let eO = {
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_PROFILE,
                     label: eb.intl.string(eb.t.txdaxc),
                     ariaLabel: eb.intl.string(eb.t.txdaxc),
-                    element: ed.Z,
+                    element: eu.Z,
                     type: o.bT.SCROLLABLE_CUSTOM,
                     notice: {
                         stores: [R.Z],
@@ -259,7 +259,7 @@ let eO = {
                     label: eb.intl.string(eb.t.YJlvBA),
                     element: eo.O,
                     notice: {
-                        stores: [eu.Z],
+                        stores: [ed.Z],
                         element: ec.w
                     },
                     predicate: () => t.canManageGuild,
@@ -284,12 +284,12 @@ let eO = {
                     label: eb.intl.string(eb.t.AKcFUl),
                     ariaLabel: eb.intl.string(eb.t.AKcFUl),
                     onClick() {
-                        (0, u.transitionToGlobalDiscovery)({
+                        (0, d.transitionToGlobalDiscovery)({
                             tab: eh.GlobalDiscoveryTab.APPS,
                             newSessionState: {
                                 guildId: t.guild.id,
                                 entrypoint: {
-                                    name: d.xF.GUILD_SETTINGS,
+                                    name: u.xF.GUILD_SETTINGS,
                                     guildSettingsSection: e
                                 }
                             }

@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(884858),
     o = n(813197),
     c = n(434404),
-    u = n(70086),
-    d = n(949640),
+    d = n(70086),
+    u = n(949640),
     m = n(981631),
     g = n(30513),
     p = n(200299),
@@ -24,7 +24,7 @@ function h(e) {
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
-                    (0, d.E6)({
+                    (0, u.E6)({
                         guild: t,
                         analyticsLocations: x,
                         analyticsSection: m.jXE.GUILD_INVITE_BACKGROUND,
@@ -49,7 +49,7 @@ function h(e) {
                   })
               ]
           })
-        : (0, r.jsx)(u.P, {
+        : (0, r.jsx)(d.P, {
               className: h,
               onClick: v
           });

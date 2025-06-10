@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(481060),
     o = n(603211),
     c = n(734893),
-    u = n(592125),
-    d = n(768581),
+    d = n(592125),
+    u = n(768581),
     m = n(8426),
     g = n(969632),
     p = n(388032),
@@ -58,11 +58,11 @@ function x(e, t) {
 let b = function (e) {
     let { guildId: t, resourceChannel: l, index: b, onDragComplete: j, onDragStart: _, onDragReset: v } = e,
         { title: O, channelId: C, description: y } = l,
-        N = u.Z.getChannel(C),
+        N = d.Z.getChannel(C),
         I = null;
     (null != N && (0, c.k3)(N)) || (I = p.intl.string(p.t.kTdL8f));
     let E = null == y || 0 === y.length,
-        S = d.ZP.getResourceChannelIconURL({
+        S = u.ZP.getResourceChannelIconURL({
             channelId: l.channelId,
             icon: l.icon
         }),

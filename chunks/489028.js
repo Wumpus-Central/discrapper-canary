@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(782568),
     o = n(223892),
     c = n(203498),
-    u = n(641806),
-    d = n(690221),
+    d = n(641806),
+    u = n(690221),
     m = n(30624),
     g = n(577275),
     p = n(594174),
@@ -40,7 +40,7 @@ function S(e) {
 function T(e) {
     let { guild: t, eligibleTeams: n, isGuildOwner: l } = e,
         [a, o] = i.useState(),
-        { enableGuildMonetizationForTeam: u, submitting: d, error: m } = (0, c.Z)(),
+        { enableGuildMonetizationForTeam: d, submitting: u, error: m } = (0, c.Z)(),
         { fetchSubscriptionsSettings: g } = (0, x.JH)(),
         p = (0, b.mY)(),
         f = i.useMemo(
@@ -52,7 +52,7 @@ function T(e) {
             [n]
         ),
         h = async () => {
-            (await u(t, a, y.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
+            (await d(t, a, y.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
                 (g(t.id),
                 (0, j.B)({
                     Icon: O.Z,
@@ -77,7 +77,7 @@ function T(e) {
                     (0, r.jsx)(s.zxk, {
                         onClick: h,
                         className: E.enableTicketingButton,
-                        submitting: d,
+                        submitting: u,
                         disabled: null == a || p || !l,
                         children: I.intl.string(I.t['9HU3ZW'])
                     })
@@ -115,13 +115,13 @@ let P = (e) => {
                 guild_id: t.id,
                 is_owner: c
             });
-            let e = await (0, u.$)(C.E07.DEVELOPER_PORTAL_TEAMS);
+            let e = await (0, d.$)(C.E07.DEVELOPER_PORTAL_TEAMS);
             (0, a.Z)(e);
         }, [t, c, x, P]),
         R = i.useCallback(
             (e) =>
                 c
-                    ? (0, r.jsx)(d.Z, {
+                    ? (0, r.jsx)(u.Z, {
                           onClick: w,
                           children: e
                       })

@@ -7,8 +7,8 @@ var i = n(481060),
     a = n(290348),
     o = n(783454),
     c = n(893729),
-    u = n(619326),
-    d = n(553204),
+    d = n(619326),
+    u = n(553204),
     m = n(388032),
     g = n(301849),
     p = n(181517);
@@ -88,7 +88,7 @@ function f() {
             (0, r.jsx)(i.hjN, {
                 title: m.intl.string(m.t['6OUqDQ']),
                 disabled: _,
-                children: (0, r.jsx)(u.Z, {
+                children: (0, r.jsx)(d.Z, {
                     value: h,
                     onChange: x,
                     disabled: _
@@ -110,7 +110,7 @@ function f() {
                         (0, r.jsxs)('div', {
                             className: p.iconUploaderContainer,
                             children: [
-                                (0, r.jsx)(d.Z, {
+                                (0, r.jsx)(u.Z, {
                                     role: b,
                                     'aria-label': m.intl.string(m.t.mD1oGB),
                                     onClick: j,

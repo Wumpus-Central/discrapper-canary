@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(477690),
     o = n(481060),
     c = n(91218),
-    u = n(518738),
-    d = n(208567),
+    d = n(518738),
+    u = n(208567),
     m = n(624138),
     g = n(388032),
     p = n(973217);
@@ -15,7 +15,7 @@ let f = (0, m.Mg)(a.Z.ROLE_ICON_UPLOADER_ICON_SIZE);
 function h(e) {
     let { role: t, 'aria-label': n = g.intl.string(g.t['MsUY/f']), className: l, onClick: a, disabled: m = !1 } = e,
         h = i.useRef(null),
-        x = i.useMemo(() => (null != t ? (0, u.Kz)(t, f) : null), [t]),
+        x = i.useMemo(() => (null != t ? (0, d.Kz)(t, f) : null), [t]),
         b =
             null != x
                 ? (0, r.jsx)(
@@ -70,7 +70,7 @@ function h(e) {
                     className: p.preview,
                     children: b
                 }),
-                null != x ? (0, r.jsx)(d.S, { className: p.uploaderIcon }) : null
+                null != x ? (0, r.jsx)(u.S, { className: p.uploaderIcon }) : null
             ]
         })
     });

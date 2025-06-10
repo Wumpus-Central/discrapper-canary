@@ -6,12 +6,12 @@ var r,
     a = n(570140);
 let o = null,
     c = 0,
-    u = null,
     d = null,
+    u = null,
     m = !1;
 class g extends (l = s.ZP.Store) {
     hasChanges() {
-        return o !== u;
+        return o !== d;
     }
     showNotice() {
         return this.hasChanges();
@@ -20,16 +20,16 @@ class g extends (l = s.ZP.Store) {
         return o;
     }
     get originalVanityURLCode() {
-        return u;
+        return d;
     }
     get vanityURLUses() {
         return c;
     }
     hasError() {
-        return null != d;
+        return null != u;
     }
     get errorDetails() {
-        return d;
+        return u;
     }
     get fetchedVanityURL() {
         return m;
@@ -47,18 +47,18 @@ class g extends (l = s.ZP.Store) {
 let p = new g(a.Z, {
     GUILD_SETTINGS_SET_VANITY_URL: function (e) {
         var t, n;
-        (u = o = null != (t = e.code) ? t : ''), (c = e.uses), (d = null != (n = e.error) ? n : null), (m = !0);
+        (d = o = null != (t = e.code) ? t : ''), (c = e.uses), (u = null != (n = e.error) ? n : null), (m = !0);
     },
     GUILD_SETTINGS_CLOSE: function () {
-        (u = o = null), (c = 0), (d = null), (m = !1);
+        (d = o = null), (c = 0), (u = null), (m = !1);
     },
     GUILD_SETTINGS_VANITY_URL_RESET: function () {
-        (o = u), (c = 0), (d = null);
+        (o = d), (c = 0), (u = null);
     },
     GUILD_SETTINGS_VANITY_URL_SET: function (e) {
         (o = e.code), (c = 0);
     },
     GUILD_SETTINGS_VANITY_URL_ERROR: function (e) {
-        d = e.error;
+        u = e.error;
     }
 });

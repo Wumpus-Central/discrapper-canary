@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(481060),
     o = n(700582),
     c = n(330726),
-    u = n(51144),
-    d = n(268350),
+    d = n(51144),
+    u = n(268350),
     m = n(419922),
     g = n(388032),
     p = n(646084);
@@ -58,12 +58,12 @@ let f = (e) => {
         O = async () => {
             _(null), b(!0);
             try {
-                await (0, d.Um)(f);
+                await (0, u.Um)(f);
             } catch (e) {
                 _(e.body.message), b(!1);
             }
         },
-        C = u.ZP.useUserTag(f.user);
+        C = d.ZP.useUserTag(f.user);
     return (0, r.jsx)(a.ua7, {
         color: a.ua7.Colors.RED,
         forceOpen: null != j,

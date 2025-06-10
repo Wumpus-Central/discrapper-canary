@@ -10,8 +10,8 @@ var i = n(120356),
     a = n(442837),
     o = n(481060),
     c = n(430824),
-    u = n(496675),
-    d = n(700785),
+    d = n(496675),
+    u = n(700785),
     m = n(647086),
     g = n(135899),
     p = n(388032),
@@ -60,14 +60,14 @@ function x(e, t) {
     );
 }
 function b(e) {
-    return g.$X.filter((t) => (null == e ? void 0 : e.id) !== m._ && d.oz(t, e));
+    return g.$X.filter((t) => (null == e ? void 0 : e.id) !== m._ && u.oz(t, e));
 }
 function j(e) {
     let { guild: t } = e,
         i = (0, a.e7)([c.Z], () => c.Z.getRole(t.id, t.getEveryoneRoleId())),
-        d = b(t),
-        m = d.length > 0,
-        j = g.$X.some((e) => !u.Z.can(e, t, null, { [i.id]: x(h({}, i), { permissions: s.Od(i.permissions, e) }) })),
+        u = b(t),
+        m = u.length > 0,
+        j = g.$X.some((e) => !d.Z.can(e, t, null, { [i.id]: x(h({}, i), { permissions: s.Od(i.permissions, e) }) })),
         _ = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)('div', {
@@ -81,7 +81,7 @@ function j(e) {
                         (0, r.jsx)(o.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
-                            children: p.intl.format(p.t.RXAtdH, { numPerms: d.length })
+                            children: p.intl.format(p.t.RXAtdH, { numPerms: u.length })
                         })
                     ]
                 }),

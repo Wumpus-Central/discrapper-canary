@@ -7,8 +7,8 @@ var i = n(481060),
     a = n(290348),
     o = n(764163),
     c = n(861345),
-    u = n(293810),
-    d = n(388032);
+    d = n(293810),
+    u = n(388032);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,7 +63,7 @@ function p() {
                 description: i,
                 emoji_id: l,
                 emoji_name: s,
-                ref_type: u.Qs.INTANGIBLE,
+                ref_type: d.Qs.INTANGIBLE,
                 ref_id: void 0
             };
         null != t ? (a[t] = o) : a.push(o), p(a);
@@ -111,7 +111,7 @@ function p() {
                     );
                 },
                 disabled: h,
-                children: d.intl.string(d.t['6dwqo6'])
+                children: u.intl.string(u.t['6dwqo6'])
             })
         ]
     });

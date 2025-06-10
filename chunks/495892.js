@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(239091),
     o = n(132580),
     c = n(688465),
-    u = n(236413),
-    d = n(727072),
+    d = n(236413),
+    u = n(727072),
     m = n(85960),
     g = n(65912),
     p = n(457414),
@@ -200,7 +200,7 @@ function S(e) {
     let { rule: t, isDefaultRule: n, onContextMenu: a } = e,
         o = (0, p.w)(t.triggerType, t),
         { isLoading: c, saveRule: m } = (0, g.w)(),
-        { updateRule: f } = (0, d.pH)(t.guildId),
+        { updateRule: f } = (0, u.pH)(t.guildId),
         [h, x] = i.useState(t.enabled),
         C = (0, l.throttle)(async (e, n) => {
             if ((n.preventDefault(), n.stopPropagation(), !c)) {
@@ -215,7 +215,7 @@ function S(e) {
         };
     if (null == o) return null;
     let { headerText: S, headerSubtext: T, descriptionText: P, icon: w } = o,
-        R = !(0, u.Vb)(t);
+        R = !(0, d.Vb)(t);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
@@ -336,7 +336,7 @@ function T(e) {
     });
 }
 function P(e) {
-    let { rule: t, triggerType: i, isEditMode: l, isDefaultRule: o, forceSetup: c, onSetupRule: u, onChangeRule: d } = e,
+    let { rule: t, triggerType: i, isEditMode: l, isDefaultRule: o, forceSetup: c, onSetupRule: d, onChangeRule: u } = e,
         m = (e) => {
             null != t &&
                 (e.preventDefault(),
@@ -348,7 +348,7 @@ function P(e) {
         },
         g = (0, r.jsx)(T, {
             triggerType: i,
-            onSetupRule: u
+            onSetupRule: d
         });
     return (
         null == t ||
@@ -356,7 +356,7 @@ function P(e) {
             (g = l
                 ? (0, r.jsx)(I, {
                       rule: t,
-                      onChangeRule: d,
+                      onChangeRule: u,
                       onContextMenu: m
                   })
                 : (0, r.jsx)(S, {

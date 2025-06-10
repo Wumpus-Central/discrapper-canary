@@ -22,8 +22,8 @@ let c = {
         channels: [],
         enabled: !1
     },
-    u = c,
-    d = !1,
+    d = c,
+    u = !1,
     m = !1,
     g = c;
 function p(e) {
@@ -31,12 +31,12 @@ function p(e) {
         r = s.Z.getGuild(n);
     if (null != t) {
         var i, l;
-        g = u = {
+        g = d = {
             description: null != (i = t.description) ? i : '',
             channels: null != (l = t.welcome_channels) ? l : [],
             enabled: null == r ? void 0 : r.hasFeature(a.oNc.WELCOME_SCREEN_ENABLED)
         };
-    } else g = u = c;
+    } else g = d = c;
     m = !1;
 }
 class f extends (r = i.ZP.Store) {
@@ -51,10 +51,10 @@ class f extends (r = i.ZP.Store) {
     }
     getSettingsProps() {
         return {
-            submitting: d,
+            submitting: u,
             hasErrors: m,
             welcomeSettings: g,
-            originalWelcomeSettings: u
+            originalWelcomeSettings: d
         };
     }
 }
@@ -63,10 +63,10 @@ let h = new f(l.Z, {
     WELCOME_SCREEN_FETCH_SUCCESS: p,
     WELCOME_SCREEN_UPDATE: p,
     WELCOME_SCREEN_SETTINGS_RESET: function () {
-        (g = u), (m = !1);
+        (g = d), (m = !1);
     },
     WELCOME_SCREEN_SETTINGS_CLEAR: function () {
-        (g = c), (u = c);
+        (g = c), (d = c);
     },
     WELCOME_SCREEN_SETTINGS_UPDATE: function (e) {
         let { settings: t } = e;
@@ -88,12 +88,12 @@ let h = new f(l.Z, {
         })({}, g, t);
     },
     WELCOME_SCREEN_SUBMIT: function () {
-        d = !0;
+        u = !0;
     },
     WELCOME_SCREEN_SUBMIT_SUCCESS: function (e) {
-        p(e), (d = !1);
+        p(e), (u = !1);
     },
     WELCOME_SCREEN_SUBMIT_FAILURE: function () {
-        (m = !0), (d = !1);
+        (m = !0), (u = !1);
     }
 });

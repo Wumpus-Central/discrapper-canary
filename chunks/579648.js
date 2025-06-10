@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(570140),
     o = n(596454),
     c = n(524329),
-    u = n(823379),
-    d = n(999382),
+    d = n(823379),
+    u = n(999382),
     m = n(413584),
     g = n(388032),
     p = n(673305),
@@ -134,7 +134,7 @@ let h = (e) => {
         });
     },
     x = () => {
-        let { guild: e } = (0, l.e7)([d.Z], () => d.Z.getProps()),
+        let { guild: e } = (0, l.e7)([u.Z], () => u.Z.getProps()),
             [t, n] = i.useState(0),
             [o, g] = i.useState(!1);
         switch (
@@ -161,6 +161,6 @@ let h = (e) => {
                     showCreateModal: o
                 });
             default:
-                return (0, u.vE)(t);
+                return (0, d.vE)(t);
         }
     };

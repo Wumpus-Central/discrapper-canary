@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(481060),
     o = n(558324),
     c = n(456268),
-    u = n(681460),
-    d = n(345861),
+    d = n(681460),
+    u = n(345861),
     m = n(650774),
     g = n(434404),
     p = n(999382),
@@ -37,7 +37,7 @@ function E(e) {
         c = i.useCallback((e) => {
             g.Z.updateGuild({ discoverySplash: e });
         }, []),
-        u = i.useCallback(() => {
+        d = i.useCallback(() => {
             g.Z.updateGuild({ discoverySplash: null });
         }, []),
         p = i.useCallback((e) => {
@@ -84,7 +84,7 @@ function E(e) {
                             (0, r.jsxs)('div', {
                                 className: N.buttonList,
                                 children: [
-                                    (0, r.jsx)(d.Z, {
+                                    (0, r.jsx)(u.Z, {
                                         size: a.zxk.Sizes.SMALL,
                                         color: a.zxk.Colors.PRIMARY,
                                         className: N.editableSection,
@@ -97,7 +97,7 @@ function E(e) {
                                               color: a.zxk.Colors.RED,
                                               look: a.zxk.Looks.LINK,
                                               className: N.editableSection,
-                                              onClick: u,
+                                              onClick: d,
                                               children: y.intl.string(y.t.N86XcH)
                                           })
                                         : null
@@ -215,7 +215,7 @@ function S(e) {
 }
 function T(e) {
     let { guildId: t, guildMetadata: n, requireTag: l, error: s } = e,
-        [d, m] = i.useState(null),
+        [u, m] = i.useState(null),
         g = i.useCallback(
             (e) => {
                 let r = [...n.keywords];
@@ -245,7 +245,7 @@ function T(e) {
                     }),
             [n.keywords, n.primaryCategoryId, p]
         ),
-        h = null != s ? s : d;
+        h = null != s ? s : u;
     return (0, r.jsxs)('div', {
         className: N.sectionContainer,
         children: [
@@ -293,7 +293,7 @@ function T(e) {
                           }),
                           (0, r.jsx)('div', {
                               className: N.editableSection,
-                              children: (0, r.jsx)(u.j, { pills: f })
+                              children: (0, r.jsx)(d.j, { pills: f })
                           })
                       ]
                   })

@@ -6,32 +6,32 @@ var r,
     a = n(570140),
     o = n(999382),
     c = n(740903),
-    u = n(981631);
-let d = c.u.OVERVIEW,
+    d = n(981631);
+let u = c.u.OVERVIEW,
     m = null;
 function g(e) {
     let { subsection: t } = e;
     switch (t) {
-        case u.KsC.SAFETY_AUTOMOD:
-            d = c.u.AUTOMOD;
+        case d.KsC.SAFETY_AUTOMOD:
+            u = c.u.AUTOMOD;
             break;
-        case u.KsC.SAFETY_DM_AND_SPAM_PROTECTION:
-            d = c.u.DM_AND_SPAM_PROTECTION;
+        case d.KsC.SAFETY_DM_AND_SPAM_PROTECTION:
+            u = c.u.DM_AND_SPAM_PROTECTION;
             break;
-        case u.KsC.SAFETY_CAPTCHA_AND_RAID_PROTECTION:
-            d = c.u.CAPTCHA_AND_RAID_PROTECTION;
+        case d.KsC.SAFETY_CAPTCHA_AND_RAID_PROTECTION:
+            u = c.u.CAPTCHA_AND_RAID_PROTECTION;
             break;
-        case u.KsC.SAFETY_PERMISSIONS:
-            d = c.u.PERMISSIONS;
+        case d.KsC.SAFETY_PERMISSIONS:
+            u = c.u.PERMISSIONS;
             break;
-        case u.KsC.SAFETY_OVERVIEW:
+        case d.KsC.SAFETY_OVERVIEW:
         default:
-            d = c.u.OVERVIEW;
+            u = c.u.OVERVIEW;
     }
 }
 class p extends (l = s.ZP.Store) {
     getCurrentPage() {
-        return d;
+        return u;
     }
 }
 (i = 'GuildSettingsSafetyStore'),
@@ -52,6 +52,6 @@ let f = new p(a.Z, {
     GUILD_SETTINGS_SAFETY_SET_SUBSECTION: g,
     GUILD_SETTINGS_SAFETY_PAGE: function (e) {
         let { page: t } = e;
-        d = t;
+        u = t;
     }
 });

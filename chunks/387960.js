@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(481060),
     o = n(734893),
     c = n(984933),
-    u = n(430824),
-    d = n(700785),
+    d = n(430824),
+    u = n(700785),
     m = n(8426),
     g = n(969632),
     p = n(824990),
@@ -17,7 +17,7 @@ var r = n(255367),
 let b = [],
     j = function (e) {
         let { guildId: t } = e,
-            n = (0, s.e7)([u.Z], () => u.Z.getGuild(t)),
+            n = (0, s.e7)([d.Z], () => d.Z.getGuild(t)),
             j = (0, s.Wu)([g.Z], () => {
                 var e, t;
                 return null != (t = null == (e = g.Z.getSettings().resourceChannels) ? void 0 : e.map((e) => e.channelId)) ? t : b;
@@ -27,7 +27,7 @@ let b = [],
             O = i.useMemo(
                 () =>
                     (0, l.chain)(v)
-                        .filter((e) => e.channel.type === f.d4z.GUILD_TEXT && e.channel.id !== (null == n ? void 0 : n.rulesChannelId) && !_.includes(e.channel.id) && !j.includes(e.channel.id) && d.Uu(f.Plq.VIEW_CHANNEL, e.channel) && !d.Uu(f.Plq.SEND_MESSAGES, e.channel))
+                        .filter((e) => e.channel.type === f.d4z.GUILD_TEXT && e.channel.id !== (null == n ? void 0 : n.rulesChannelId) && !_.includes(e.channel.id) && !j.includes(e.channel.id) && u.Uu(f.Plq.VIEW_CHANNEL, e.channel) && !u.Uu(f.Plq.SEND_MESSAGES, e.channel))
                         .take(5)
                         .value(),
                 [v, _, null == n ? void 0 : n.rulesChannelId, j]

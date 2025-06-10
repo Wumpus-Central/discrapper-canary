@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -6,15 +6,15 @@ var r = n(255367),
     a = n(434404),
     o = n(999382),
     c = n(388032);
-function u(e) {
+function d(e) {
     let { profile: t, canManageGuild: n } = e,
-        u = t.id,
-        d = (0, l.e7)([o.Z], () => o.Z.getError('name')),
+        d = t.id,
+        u = (0, l.e7)([o.Z], () => o.Z.getError('name')),
         m = i.useCallback(
             (e) => {
-                a.Z.updateGuild({ name: e }), a.Z.updateGuildProfile(u, { name: e });
+                a.Z.updateGuild({ name: e }), a.Z.updateGuildProfile(d, { name: e });
             },
-            [u]
+            [d]
         );
     return (0, r.jsx)(s.xJW, {
         title: c.intl.string(c.t.X56QcH),
@@ -24,7 +24,7 @@ function u(e) {
             value: t.name,
             maxLength: 100,
             onChange: m,
-            error: d
+            error: u
         })
     });
 }

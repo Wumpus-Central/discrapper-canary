@@ -6,16 +6,16 @@ var r = n(255367),
     a = n(516129),
     o = n(768581),
     c = n(949640),
-    u = n(981631),
-    d = n(30513),
+    d = n(981631),
+    u = n(30513),
     m = n(486324),
     g = n(200299),
     p = n(388032),
     f = n(615511);
 function h(e) {
     let { guild: t, canManageGuild: n } = e,
-        h = t.hasFeature(u.oNc.BANNER),
-        x = t.hasFeature(u.oNc.ANIMATED_BANNER),
+        h = t.hasFeature(d.oNc.BANNER),
+        x = t.hasFeature(d.oNc.ANIMATED_BANNER),
         b = h && n,
         { analyticsLocations: j } = (0, s.ZP)(),
         _ = i.useCallback(
@@ -31,9 +31,9 @@ function h(e) {
                     (0, c.E6)({
                         guild: t,
                         analyticsLocations: j,
-                        analyticsSection: u.jXE.GUILD_BANNER,
-                        analyticsObject: u.qAy.UPLOAD_IMAGE,
-                        perks: (0, d.XO)()
+                        analyticsSection: d.jXE.GUILD_BANNER,
+                        analyticsObject: d.qAy.UPLOAD_IMAGE,
+                        perks: (0, u.XO)()
                     });
             },
             [j, t]
@@ -62,8 +62,8 @@ function h(e) {
                         return _(t, n);
                     },
                     analyticsLocation: {
-                        page: u.ZY5.GUILD_SETTINGS,
-                        section: u.jXE.GUILD_BANNER
+                        page: d.ZY5.GUILD_SETTINGS,
+                        section: d.jXE.GUILD_BANNER
                     },
                     analyticsLocations: j
                 }),

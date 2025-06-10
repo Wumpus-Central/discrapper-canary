@@ -1,4 +1,4 @@
-n.d(t, { c: () => u });
+n.d(t, { c: () => d });
 var r = n(255367),
     i = n(73800),
     l = n(793030),
@@ -6,7 +6,7 @@ var r = n(255367),
     a = n(66511),
     o = n(388032),
     c = n(857742);
-function u(e) {
+function d(e) {
     let { guildId: t } = e,
         n = i.useCallback(() => {
             a.Z.openMemberVerificationPreviewModal(t);

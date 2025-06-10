@@ -10,8 +10,8 @@ var i = n(392711),
     a = n(405545),
     o = n(382574),
     c = n(279988),
-    u = n(786127),
-    d = n(388032);
+    d = n(786127),
+    u = n(388032);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -102,7 +102,7 @@ function p(e) {
                 m(
                     {
                         channelId: f.rulesChannelId,
-                        title: N === s.it.COMPACT ? d.intl.string(d.t['55+giY']) : d.intl.string(d.t['53vNcH']),
+                        title: N === s.it.COMPACT ? u.intl.string(u.t['55+giY']) : u.intl.string(u.t['53vNcH']),
                         formField: p
                     },
                     w
@@ -111,7 +111,7 @@ function p(e) {
         case s.QJ.PARAGRAPH:
             return (0, r.jsx)(o.Z, m({ formField: p }, w));
         case s.QJ.TEXT_INPUT:
-            return (0, r.jsx)(u.Z, m({ formField: p }, w));
+            return (0, r.jsx)(d.Z, m({ formField: p }, w));
         case s.QJ.MULTIPLE_CHOICE:
             return (0, r.jsx)(a.Z, m({ formField: p }, w));
         default:

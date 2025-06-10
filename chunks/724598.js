@@ -7,8 +7,8 @@ var i = n(120356),
     a = n(367907),
     o = n(357352),
     c = n(434404),
-    u = n(626135),
-    d = n(629481),
+    d = n(626135),
+    u = n(629481),
     m = n(981631),
     g = n(388032),
     p = n(765214);
@@ -67,7 +67,7 @@ function h(e) {
                                         shineSize: s.gtL.ShineSizes.SMALL,
                                         onClick: () => {
                                             var e, n;
-                                            u.default.track(
+                                            d.default.track(
                                                 m.rMx.GUILD_SHOP_PREVIEW_CLICK,
                                                 ((e = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
@@ -94,7 +94,7 @@ function h(e) {
                                                     }
                                                     return e;
                                                 })({}, (0, a.hH)(t))),
-                                                (n = n = { action_taken: d.mz.GET_STARTED_CLICK }),
+                                                (n = n = { action_taken: u.mz.GET_STARTED_CLICK }),
                                                 Object.getOwnPropertyDescriptors
                                                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
                                                     : (function (e, t) {

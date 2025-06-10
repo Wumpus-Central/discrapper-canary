@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(263145),
     o = n(366980),
     c = n(621319),
-    u = n(770270),
-    d = n(70086),
+    d = n(770270),
+    u = n(70086),
     m = n(949640),
     g = n(981631),
     p = n(30513),
@@ -20,7 +20,7 @@ function x(e) {
             variant: 'text-md/normal',
             color: 'text-danger',
             className: h.vanityInfo,
-            children: (0, u.i)(null == t ? void 0 : t.code)
+            children: (0, d.i)(null == t ? void 0 : t.code)
         });
     if (null != n && n.length > 0) {
         let e = (0, o.Z)(n);
@@ -37,8 +37,8 @@ function x(e) {
     return null;
 }
 function b(e) {
-    let { guild: t, vanityURLCode: n, vanityURLUses: s, originalVanityURLCode: o, hasError: u } = e,
-        d = (null == t ? void 0 : t.hasFeature(g.oNc.VANITY_URL)) === !0,
+    let { guild: t, vanityURLCode: n, vanityURLUses: s, originalVanityURLCode: o, hasError: d } = e,
+        u = (null == t ? void 0 : t.hasFeature(g.oNc.VANITY_URL)) === !0,
         m = i.useCallback(() => {
             (0, c.Gy)('');
         }, []),
@@ -73,8 +73,8 @@ function b(e) {
                       value: n,
                       onChange: p,
                       maxLength: 25,
-                      error: u,
-                      disabled: !d
+                      error: d,
+                      disabled: !u
                   }),
                   null != o && o.length > 0
                       ? (0, r.jsx)(l.zxk, {
@@ -109,7 +109,7 @@ function j(e) {
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, u.p)(t)
+            (0, d.p)(t)
                 ? (0, r.jsx)(b, {
                       guild: t,
                       vanityURLCode: n,
@@ -117,7 +117,7 @@ function j(e) {
                       originalVanityURLCode: a,
                       hasError: null != o
                   })
-                : (0, r.jsx)(d.P, {
+                : (0, r.jsx)(u.P, {
                       onClick: f,
                       className: h.upsellButton
                   }),

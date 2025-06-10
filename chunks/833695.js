@@ -7,8 +7,8 @@ var i = n(399606),
     a = n(755930),
     o = n(909667),
     c = n(968820),
-    u = n(200472),
-    d = n(489028),
+    d = n(200472),
+    u = n(489028),
     m = n(277369),
     g = n(215124),
     p = n(999382),
@@ -30,8 +30,8 @@ function _(e) {
     return _.loading || null == O
         ? (0, r.jsx)(l.$jN, {})
         : null == _.application
-          ? (0, r.jsx)(d.Z, { guild: O })
-          : (0, r.jsxs)(u.Z, {
+          ? (0, r.jsx)(u.Z, { guild: O })
+          : (0, r.jsxs)(d.Z, {
                 children: [
                     (0, r.jsx)(c.Z, {
                         revenue: _.metrics.revenue,

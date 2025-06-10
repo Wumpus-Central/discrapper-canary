@@ -6,11 +6,11 @@ var r = n(255367),
     a = n(623691),
     o = n(494831);
 function c(e) {
-    let { setEditRoleId: t, guild: n, everyoneRole: c, otherRoles: u, setSelectedSection: d } = e,
+    let { setEditRoleId: t, guild: n, everyoneRole: c, otherRoles: d, setSelectedSection: u } = e,
         [m, g] = i.useState(''),
         [p, f] = i.useState(o.Cl),
         h = m.trim(),
-        x = i.useMemo(() => u.filter((e) => (0, l.uo)(e, h)), [u, h]),
+        x = i.useMemo(() => d.filter((e) => (0, l.uo)(e, h)), [d, h]),
         b = i.useCallback(
             () =>
                 (0, r.jsx)(
@@ -32,8 +32,8 @@ function c(e) {
         setEditRoleId: t,
         guild: n,
         everyoneRole: c,
-        otherRoles: u,
-        setSelectedSection: d,
+        otherRoles: d,
+        setSelectedSection: u,
         renderHeader: b,
         headerHeight: p,
         query: m

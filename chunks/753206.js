@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => b });
 var r = n(255367),
     i = n(73800),
     s = n(120356),
@@ -10,10 +10,10 @@ var r = n(255367),
     d = n(25015),
     p = n(963550),
     f = n(845080),
-    b = n(30804);
-let g = i.memo(function (e) {
+    g = n(30804);
+let b = i.memo(function (e) {
     var t;
-    let { message: n, channel: s, compact: g, className: m, isGroupStart: _, hideSimpleEmbedContent: v = !0, disableInteraction: h, previewGuildId: O, preview: y, author: j } = e,
+    let { message: n, channel: s, compact: b, className: m, isGroupStart: _, hideSimpleEmbedContent: v = !0, disableInteraction: h, previewGuildId: O, preview: y, author: j } = e,
         x = null != O ? O : (0, c.k)(n),
         S = (0, l.Z)(j),
         C = (0, a.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
@@ -73,11 +73,11 @@ let g = i.memo(function (e) {
             );
         }, [e, s, x]);
     return (0, r.jsx)(u.Z, {
-        compact: g,
+        compact: b,
         className: o()(m, {
-            [b.message]: !0,
-            [b.cozyMessage]: !g,
-            [b.groupStart]: _
+            [g.message]: !0,
+            [g.cozyMessage]: !b,
+            [g.groupStart]: _
         }),
         childrenHeader: w,
         childrenMessageContent: (0, p.Z)(e, P),

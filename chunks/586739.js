@@ -1,7 +1,7 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => s });
 var r = n(544891),
     i = n(981631);
-let l = {
+let s = {
     fetchTeams() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return r.tn.get({

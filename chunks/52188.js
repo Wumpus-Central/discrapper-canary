@@ -15,8 +15,8 @@ var s = n(120356),
     d = n(981631),
     p = n(689105),
     f = n(500052),
-    b = n(375832),
-    g = n(992171),
+    g = n(375832),
+    b = n(992171),
     m = n(937064),
     _ = n(434336),
     v = n(128955),
@@ -39,8 +39,8 @@ var s = n(120356),
     B = n(993855),
     R = n(701497),
     M = n(937717),
-    A = n(165194),
-    Z = n(208802),
+    Z = n(165194),
+    A = n(208802),
     U = n(145905),
     W = n(335302),
     H = n(956172),
@@ -79,10 +79,10 @@ let en = new Map([
     ['EE', x],
     ['IS', I],
     ['IE', D],
-    ['LV', Z],
+    ['LV', A],
     ['LI', R],
     ['LT', M],
-    ['LU', A],
+    ['LU', Z],
     ['MT', U],
     ['SK', J],
     ['SI', Q],
@@ -90,8 +90,8 @@ let en = new Map([
     ['FI', C],
     ['PT', q],
     ['NO', F],
-    ['BE', g],
-    ['AT', b],
+    ['BE', b],
+    ['AT', g],
     ['CH', _],
     ['FR', P],
     ['DE', j],
@@ -107,12 +107,12 @@ function er(e) {
         s = (0, c.n)(),
         f = null == s ? void 0 : s.countryCode;
     if (((0, u.U)(d.jXE.SETTINGS_PREMIUM, f), null == f || !en.has(f) || r)) return null;
-    let b = en.get(f),
-        g = 'badgeIcon' + et[t];
+    let g = en.get(f),
+        b = 'badgeIcon' + et[t];
     return (0, i.jsx)('img', {
-        className: o()(n, p[g]),
+        className: o()(n, p[b]),
         'aria-hidden': !0,
         alt: 'Wumpus holding a country-specific flag',
-        src: b
+        src: g
     });
 }

@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(442837),
     o = n(481060),
     c = n(496675),
-    u = n(63063),
-    d = n(384632),
+    d = n(63063),
+    u = n(384632),
     m = n(981631),
     g = n(388032),
     p = n(109303);
@@ -16,11 +16,11 @@ function f(e) {
         f = l.hasFeature(m.oNc.COMMUNITY),
         h = (0, a.e7)([c.Z], () => c.Z.can(m.Plq.ADMINISTRATOR, l)),
         x = i.useMemo(() => {
-            let e = t === d.A.DISCOVERABLE && !h,
-                n = f && (t === d.A.DISCOVERABLE || h);
+            let e = t === u.A.DISCOVERABLE && !h,
+                n = f && (t === u.A.DISCOVERABLE || h);
             return [
                 {
-                    id: d.A.INVITE,
+                    id: u.A.INVITE,
                     title: g.intl.string(g.t['HQVS/P']),
                     body: g.intl.string(g.t.KzXzFR),
                     icon: o.mBM,
@@ -28,7 +28,7 @@ function f(e) {
                     ineligibleText: g.intl.string(g.t.LIZgwM)
                 },
                 {
-                    id: d.A.APPLY,
+                    id: u.A.APPLY,
                     title: g.intl.string(g.t.LrFEYW),
                     body: g.intl.string(g.t.kJj2oK),
                     icon: o._XJ,
@@ -36,7 +36,7 @@ function f(e) {
                     ineligibleText: g.intl.string(g.t.LIZgwM)
                 },
                 {
-                    id: d.A.DISCOVERABLE,
+                    id: u.A.DISCOVERABLE,
                     title: g.intl.string(g.t.lhOHLy),
                     body: g.intl.string(g.t.pqQylZ),
                     icon: o.enf,
@@ -56,7 +56,7 @@ function f(e) {
                 color: 'text-secondary',
                 variant: 'text-sm/medium',
                 className: p.bodyText,
-                children: g.intl.format(g.t['Y/jYws'], { helpdeskArticle: u.Z.getArticleURL(m.BhN.MEMBER_APPLICATIONS) })
+                children: g.intl.format(g.t['Y/jYws'], { helpdeskArticle: d.Z.getArticleURL(m.BhN.MEMBER_APPLICATIONS) })
             }),
             (0, r.jsx)(o.njP, {
                 selectedItem: t,

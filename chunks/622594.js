@@ -37,8 +37,8 @@ let h = a.memo(function (e) {
             }
             return e;
         })({}, f.nl),
-        { audio: b } = (0, u.p)(),
-        y = null != b,
+        { audio: y } = (0, u.p)(),
+        b = null != y,
         v = a.useRef(null),
         x = a.useRef(null),
         j = a.useRef(null),
@@ -52,10 +52,10 @@ let h = a.memo(function (e) {
         [_, F] = a.useState(-1),
         z = a.useMemo(() => R / p.fineTuningScale, [p.fineTuningScale, R]);
     a.useEffect(() => {
-        if (null == b) return;
-        let e = b.duration * o.Z.Millis.SECOND;
+        if (null == y) return;
+        let e = y.duration * o.Z.Millis.SECOND;
         N(0), S(0), P(e), D(e);
-    }, [b]);
+    }, [y]);
     let A = a.useCallback(
             (e, t) => {
                 if ((n(), 0 === e.button))
@@ -87,53 +87,53 @@ let h = a.memo(function (e) {
         }, []),
         L = a.useCallback(
             (e) => {
-                if (null == b || !E) return;
+                if (null == y || !E) return;
                 let t = parseInt(e.target.value),
                     n = t > O ? O : t;
                 i((0, c.my)(n)), N(n), S(n);
             },
-            [b, i, O, E]
+            [y, i, O, E]
         ),
         U = a.useCallback(
             (e) => {
-                if (null == b || !M) return;
+                if (null == y || !M) return;
                 let t = parseInt(e.target.value);
                 t < w ? (i((0, c.my)(w)), S(w)) : t > O ? (i((0, c.my)(O)), S(O)) : (i((0, c.my)(t)), S(t));
             },
-            [b, i, O, M, w]
+            [y, i, O, M, w]
         ),
         G = a.useCallback(
             (e) => {
-                if (null == b || !I) return;
+                if (null == y || !I) return;
                 let t = parseInt(e.target.value),
                     n = t > w ? t : w;
                 i((0, c.my)(w)), S(w), P(n);
             },
-            [b, i, I, w]
+            [y, i, I, w]
         );
     return (
         a.useEffect(() => {
             null != h &&
-                y &&
+                b &&
                 h({
                     startPositionMs: w,
                     endPositionMs: O,
                     playheadPositionMs: C
                 });
-        }, [w, O, h, y, C]),
+        }, [w, O, h, b, C]),
         a.useEffect(() => {
             let e;
-            if (null != b)
+            if (null != y)
                 return (
                     t &&
                         (e = setInterval(() => {
-                            b.currentTime < (0, c.my)(O) ? b.currentTime >= (0, c.my)(C) && S(b.currentTime * o.Z.Millis.SECOND) : (n((0, c.my)(w)), S(w));
+                            y.currentTime < (0, c.my)(O) ? y.currentTime >= (0, c.my)(C) && S(y.currentTime * o.Z.Millis.SECOND) : (n((0, c.my)(w)), S(w));
                         }, 16)),
                     () => {
                         clearInterval(e);
                     }
                 );
-        }, [b, O, n, C, t, w]),
+        }, [y, O, n, C, t, w]),
         a.useEffect(() => {
             if (p.fineTuningDelay <= 0) return;
             let e = setTimeout(() => {
@@ -144,7 +144,7 @@ let h = a.memo(function (e) {
             };
         }, [p.fineTuningDelay, I, O, _, M, C, E, w]),
         (0, l.jsxs)('div', {
-            className: r()(m.timeline, { [m.initialized]: y }),
+            className: r()(m.timeline, { [m.initialized]: b }),
             children: [
                 (0, l.jsxs)('div', {
                     className: m.rangeHandleContainer,
@@ -162,7 +162,7 @@ let h = a.memo(function (e) {
                                     onChange: L,
                                     onMouseDown: (e) => A(e, 0),
                                     onMouseUp: () => B(0),
-                                    disabled: !y || g
+                                    disabled: !b || g
                                 }),
                                 (0, l.jsx)('input', {
                                     ref: j,
@@ -174,7 +174,7 @@ let h = a.memo(function (e) {
                                     onChange: G,
                                     onMouseDown: (e) => A(e, 2),
                                     onMouseUp: () => B(2),
-                                    disabled: !y || g
+                                    disabled: !b || g
                                 })
                             ]
                         }),
@@ -190,7 +190,7 @@ let h = a.memo(function (e) {
                                 onChange: U,
                                 onMouseDown: (e) => A(e, 1),
                                 onMouseUp: () => B(1),
-                                disabled: !y || g
+                                disabled: !b || g
                             })
                         })
                     ]

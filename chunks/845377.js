@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(498607),
     o = n.n(a),
     c = n(913527),
-    u = n.n(c),
-    d = n(442837),
+    d = n.n(c),
+    u = n(442837),
     m = n(692547),
     g = n(481060),
     p = n(984933),
@@ -64,40 +64,40 @@ function C(e, t) {
 let y = (e) => {
     let { name: t, failingName: n, description: i, checked: l, pending: s, pendingDescription: a, failingDescription: o } = e,
         c = t,
-        u = null,
-        d = null;
+        d = null,
+        u = null;
     return (
         s
-            ? ((u = (0, r.jsx)(g.P4T, {
+            ? ((d = (0, r.jsx)(g.P4T, {
                   size: 'custom',
                   color: m.Z.unsafe_rawColors.YELLOW_300.css,
                   width: 20,
                   height: 20
               })),
-              (d = null != a ? a : i))
+              (u = null != a ? a : i))
             : l
-              ? ((u = (0, r.jsx)(g.XZJ, {
+              ? ((d = (0, r.jsx)(g.XZJ, {
                     readOnly: !0,
                     shape: g.XZJ.Shapes.ROUND,
                     size: 20,
                     type: g.XZJ.Types.INVERTED,
                     value: !0
                 })),
-                (d = i))
-              : ((u = (0, r.jsx)(g.k$p, {
+                (u = i))
+              : ((d = (0, r.jsx)(g.k$p, {
                     size: 'custom',
                     color: m.Z.unsafe_rawColors.RED_400.css,
                     width: 20,
                     height: 20
                 })),
                 (c = null != n ? n : t),
-                (d = null != o ? o : i)),
+                (u = null != o ? o : i)),
         (0, r.jsxs)('div', {
             className: v.checklistItem,
             children: [
                 (0, r.jsx)('div', {
                     className: v.checklistIcon,
-                    children: u
+                    children: d
                 }),
                 (0, r.jsxs)('div', {
                     className: v.checklistText,
@@ -109,7 +109,7 @@ let y = (e) => {
                         (0, r.jsx)(g.Text, {
                             color: 'text-muted',
                             variant: 'text-sm/normal',
-                            children: d
+                            children: u
                         })
                     ]
                 })
@@ -135,11 +135,11 @@ function N(e, t) {
 }
 let I = (e) => {
     let { guild: t, guildId: l, className: a, headerContent: o, failedItemsOnly: c = !1 } = e,
-        [m, I] = (0, d.Wu)([b.ZP], () => [b.ZP.getDiscoveryChecklist(l), b.ZP.isLoading()], [l]),
+        [m, I] = (0, u.Wu)([b.ZP], () => [b.ZP.getDiscoveryChecklist(l), b.ZP.isLoading()], [l]),
         { nsfwProperties: E } = null != m ? m : {},
         S = null == t ? void 0 : t.hasFeature(j.oNc.PARTNERED),
         T = null == E ? void 0 : E.channels_banned_keywords,
-        P = (0, d.e7)(
+        P = (0, u.e7)(
             [p.ZP],
             () => {
                 var e, n, r;
@@ -194,7 +194,7 @@ let I = (e) => {
                 description: _.intl.formatToPlainString(_.t.VT0bQE, { minimumGuildAge: Math.ceil(m.minimumGuildAge / 7) }),
                 failingDescription: _.intl.formatToPlainString(_.t.jYwM1d, {
                     minimumGuildAge: Math.ceil(m.minimumGuildAge / 7),
-                    passDate: u()(h.default.extractTimestamp(l)).add(m.minimumGuildAge, 'days').format('LL')
+                    passDate: d()(h.default.extractTimestamp(l)).add(m.minimumGuildAge, 'days').format('LL')
                 }),
                 checked: null == m ? void 0 : m.age
             },

@@ -6,14 +6,14 @@ var r = n(255367),
     a = n(481060),
     o = n(110924),
     c = n(347469),
-    u = n(853276),
-    d = n(596390),
+    d = n(853276),
+    u = n(596390),
     m = n(870472),
     g = n(673569);
 function p(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: i } = e,
         l = (0, c.Z)({
-            minDimension: d.tq,
+            minDimension: u.tq,
             resizableDomNodeRef: t,
             onElementResize: n,
             onElementResizeEnd: i,
@@ -28,7 +28,7 @@ function p(e) {
 let f = i.forwardRef(function (e, t) {
     let { children: n, onFocus: l, onBlur: s, onClick: o } = e,
         c = i.useRef(null),
-        [u, m] = i.useState(d.tq);
+        [d, m] = i.useState(u.tq);
     return (0, r.jsxs)(a.P3F, {
         className: g.textArea,
         onFocus: l,
@@ -36,11 +36,11 @@ let f = i.forwardRef(function (e, t) {
         onClick: o,
         innerRef: c,
         ignoreKeyPress: !0,
-        style: { minHeight: u },
+        style: { minHeight: d },
         children: [
             (0, r.jsx)(a.Den, {
                 className: g.innerScroller,
-                style: { minHeight: u - 2 },
+                style: { minHeight: d - 2 },
                 ref: t,
                 children: n
             }),
@@ -56,7 +56,7 @@ let f = i.forwardRef(function (e, t) {
 });
 function h(e) {
     var t;
-    let { initialValue: n, onChangeTags: l, onChangeNewTagValue: c, tagErrors: d = {}, placeholder: p, className: h, maxTags: x } = e,
+    let { initialValue: n, onChangeTags: l, onChangeNewTagValue: c, tagErrors: u = {}, placeholder: p, className: h, maxTags: x } = e,
         b = i.useRef(null),
         j = i.useRef(null),
         _ = i.useRef(null),
@@ -132,7 +132,7 @@ function h(e) {
                 children: [
                     Z.map((e, t) =>
                         (0, r.jsx)(
-                            u.Z,
+                            d.Z,
                             {
                                 value: e,
                                 onChange: E(t),
@@ -141,7 +141,7 @@ function h(e) {
                                 onRemove: () => I(t),
                                 isSelected: D.includes(e),
                                 isSelecting: k,
-                                error: d[e],
+                                error: u[e],
                                 forceShowErrorTooltip: !L && t === Z.length - 1
                             },
                             t

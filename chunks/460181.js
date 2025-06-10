@@ -1,42 +1,37 @@
 let r;
 n.d(t, {
-    GN: () => _,
-    tu: () => f,
-    uk: () => d
+    GN: () => f,
+    tu: () => d,
+    uk: () => u
 });
 var i = n(259443),
-    a = n(292619),
-    o = n(474873),
-    s = n(135906),
-    l = n(246946),
-    c = n(509571);
-{
-    let e = (0, a.w)({ location: 'SoundUtils' }),
-        t = n(146779);
-    r = e ? t.WebAudioAPISound : t.WebAudioSound;
-}
-let u = new i.Yd('SoundUtils');
-function d(e, t) {
+    a = n(474873),
+    o = n(135906),
+    s = n(246946),
+    l = n(509571);
+r = n(146779).WebAudioSound;
+let c = new i.Yd('SoundUtils');
+function u(e, t) {
     var n;
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-        i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : c.w.DEFAULT;
-    return f(null != (n = (0, s.Z)(t)[e]) ? n : e, e, r, i);
+        i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.w.DEFAULT;
+    return d(null != (n = (0, o.Z)(t)[e]) ? n : e, e, r, i);
 }
-function f(e, t) {
+function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-        i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : c.w.DEFAULT;
+        i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.w.DEFAULT;
     return new r(e, t, n, i);
 }
-function _(e) {
+function f(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         r = arguments.length > 2 ? arguments[2] : void 0,
         i = arguments.length > 3 ? arguments[3] : void 0,
-        a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : c.w.DEFAULT;
-    if (l.Z.disableSounds) return;
-    let d = (0, s.Z)(null != i ? i : o.Z.getSoundpack());
-    null == d && u.log('Unable to find sound for pack name: '.concat(i));
-    let _ = f(null != (t = d[e]) ? t : e, e, n, a);
+        u = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : l.w.DEFAULT;
+    if (s.Z.disableSounds) return;
+    let f = (0, o.Z)(null != i ? i : a.Z.getSoundpack());
+    null == f && c.log('Unable to find sound for pack name: '.concat(i));
+    let _ = d(null != (t = f[e]) ? t : e, e, n, u);
     return (
         null != r
             ? _.playWithListener().then((e) => {

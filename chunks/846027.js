@@ -527,5 +527,13 @@ let T = {
                     type: 'AUDIO_SET_KRISP_SUPPRESSION_LEVEL',
                     level: e
                 });
+        },
+        setKrispModelOverride(e) {
+            !N() &&
+                (r.Z.dispatch({
+                    type: 'AUDIO_SET_KRISP_MODEL_OVERRIDE',
+                    model: e
+                }),
+                d.Z.getNoiseCancellation() && (this.setNoiseCancellation(!1), this.setNoiseCancellation(!0)));
         }
     };

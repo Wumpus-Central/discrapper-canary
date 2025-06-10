@@ -6,22 +6,22 @@ var r = n(255367),
     a = n(139387),
     o = n(726542),
     c = n(690221),
-    u = n(434404),
-    d = n(999382),
+    d = n(434404),
+    u = n(999382),
     m = n(981631),
     g = n(388032);
 function p(e) {
-    let t = (0, s.e7)([d.Z], () => d.Z.getProps().integrations);
+    let t = (0, s.e7)([u.Z], () => u.Z.getProps().integrations);
     return i.useMemo(
         () =>
             (function (e, t) {
-                var n, i, s, d;
+                var n, i, s, u;
                 let p;
                 if (!e.managed) return null;
                 let f = null == (n = e.tags) ? void 0 : n.bot_id,
                     h = null == (i = e.tags) ? void 0 : i.integration_id,
                     x = (null == (s = e.tags) ? void 0 : s.premium_subscriber) !== void 0,
-                    b = (null == (d = e.tags) ? void 0 : d.guild_connections) !== void 0;
+                    b = (null == (u = e.tags) ? void 0 : u.guild_connections) !== void 0;
                 if (
                     (null != f
                         ? (p =
@@ -46,7 +46,7 @@ function p(e) {
                         t = p.name;
                     [l.b.TWITCH, l.b.YOUTUBE].includes(p.type) && (t = ''.concat(o.Z.get(p.type).name, ' - ').concat(t));
                     let n = () => {
-                        u.Z.setSection(m.pNK.INTEGRATIONS), a.Z.setSection(m.b4C.APPLICATION, e);
+                        d.Z.setSection(m.pNK.INTEGRATIONS), a.Z.setSection(m.b4C.APPLICATION, e);
                     };
                     return g.intl.format(g.t.FuXsWl, {
                         name: t,

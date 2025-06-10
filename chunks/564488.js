@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(65912),
     o = n(572456),
     c = n(59192),
-    u = n(11265),
-    d = n(495892);
+    d = n(11265),
+    u = n(495892);
 let m = i.memo(function (e) {
     let { rule: t, persistEdit: n = !1, initWithEdit: m = !1 } = e,
         { hasChanges: g, editingRule: p, createNewEditingRule: f, setEditingRule: h } = (0, a.V)(),
@@ -38,8 +38,8 @@ let m = i.memo(function (e) {
                 })
               : h(t);
     }, [j, g, O, t, h]);
-    return (0, r.jsx)(u.Z, {
-        renderHeader: (0, r.jsx)(d.Z, {
+    return (0, r.jsx)(d.Z, {
+        renderHeader: (0, r.jsx)(u.Z, {
             rule: v,
             forceSetup: b && !j && !_,
             triggerType: t.triggerType,

@@ -6,7 +6,7 @@ var r = n(255367),
     a = n(524979),
     o = n(481060),
     c = n(386476);
-class u extends i.Component {
+class d extends i.Component {
     render() {
         var e, t;
         let n = this.props,
@@ -74,7 +74,7 @@ class u extends i.Component {
         );
     }
 }
-let d = (0, a.animated)(u),
+let u = (0, a.animated)(d),
     m = function (e) {
         let { className: t, name: n, icon: i, iconClassName: l } = e,
             a = (0, o.Yzy)(
@@ -96,7 +96,7 @@ let d = (0, a.animated)(u),
             className: s()(c.crossfade, t),
             children: a((e, t) => {
                 let { icon: n, iconClassName: i } = t;
-                return (0, r.jsx)(d, {
+                return (0, r.jsx)(u, {
                     icon: n,
                     className: s()(c.icon, i),
                     style: e

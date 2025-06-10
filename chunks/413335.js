@@ -8,7 +8,7 @@ function s(e) {
         n,
         s,
         a,
-        { size: o = 'sm', color: c = '#FF73FA', width: u, height: d } = e,
+        { size: o = 'sm', color: c = '#FF73FA', width: d, height: u } = e,
         m = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -29,8 +29,8 @@ function s(e) {
             return i;
         })(e, ['size', 'color', 'width', 'height']);
     let g = (0, l.m)(o),
-        p = null != (s = null == g ? void 0 : g.width) ? s : u,
-        f = null != (a = null == g ? void 0 : g.height) ? a : d;
+        p = null != (s = null == g ? void 0 : g.width) ? s : d,
+        f = null != (a = null == g ? void 0 : g.height) ? a : u;
     return (0, r.jsxs)(
         'svg',
         ((t = (function (e) {

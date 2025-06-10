@@ -16,8 +16,8 @@ var r,
     d = n(873546),
     p = n(215569),
     f = n(481060),
-    b = n(110924),
-    g = n(358085),
+    g = n(110924),
+    b = n(358085),
     m = n(425493),
     _ = n(319586);
 function v(e, t, n) {
@@ -146,7 +146,7 @@ function C(e) {
                   [_.mobileToolsContainer]: t,
                   [_.mobileSidebarTools]: t,
                   [_.closeIconOnly]: !n,
-                  [_.isMobileAndroid]: !n && !0 === (0, g.isAndroidWeb)()
+                  [_.isMobileAndroid]: !n && !0 === (0, b.isAndroidWeb)()
               }),
               ref: i,
               children: (0, s.jsx)(f.JcV, {
@@ -163,10 +163,10 @@ function C(e) {
           });
 }
 let P = function (e) {
-    let { sidebar: t, content: n, notice: r, section: i, closeAction: a, sidebarTheme: g, contentType: m, scrollerRef: v, mobileSidebarOpen: h, toggleSidebar: y, hideSidebar: j = !1 } = e,
+    let { sidebar: t, content: n, notice: r, section: i, closeAction: a, sidebarTheme: b, contentType: m, scrollerRef: v, mobileSidebarOpen: h, toggleSidebar: y, hideSidebar: j = !1 } = e,
         x = o.useRef(null),
         P = o.useRef(null),
-        w = (0, b.Z)(i),
+        w = (0, g.Z)(i),
         E = (0, f.Yzy)(
             j,
             {
@@ -216,7 +216,7 @@ let P = function (e) {
                         (null == t
                             ? null
                             : (0, s.jsx)(f.f6W, {
-                                  theme: g,
+                                  theme: b,
                                   children: (e) =>
                                       (0, s.jsx)('div', {
                                           className: l()(_.sidebarRegion, e, {

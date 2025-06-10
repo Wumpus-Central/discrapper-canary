@@ -6,8 +6,8 @@ var r,
     a = n(570140),
     o = n(40572),
     c = n(914010);
-let u = {},
-    d = {},
+let d = {},
+    u = {},
     m = 0;
 class g extends (l = s.ZP.Store) {
     initialize() {
@@ -18,10 +18,10 @@ class g extends (l = s.ZP.Store) {
     }
     getEmojiRevision(e) {
         var t;
-        return null != (t = u[e]) ? t : 0;
+        return null != (t = d[e]) ? t : 0;
     }
     getEmojis(e) {
-        return d[e];
+        return u[e];
     }
 }
 (i = 'GuildSettingsEmojiStore'),
@@ -36,15 +36,15 @@ class g extends (l = s.ZP.Store) {
 let p = new g(a.Z, {
     EMOJI_DELETE: function (e) {
         let { guildId: t, emojiId: n } = e;
-        d[t] = d[t].filter((e) => e.id !== n);
+        u[t] = u[t].filter((e) => e.id !== n);
     },
     EMOJI_FETCH_SUCCESS: function (e) {
         let { guildId: t, emojis: n } = e;
-        d[t] = n.map((e) => new o.Z(e));
+        u[t] = n.map((e) => new o.Z(e));
     },
     EMOJI_FETCH_FAILURE: function (e) {
         let { guildId: t } = e;
-        d[t] = [];
+        u[t] = [];
     },
     EMOJI_UPLOAD_START: function () {
         m++;
@@ -55,6 +55,6 @@ let p = new g(a.Z, {
     GUILD_EMOJIS_UPDATE: function (e) {
         var t;
         let { guildId: n } = e;
-        u[n] = (null != (t = u[n]) ? t : 0) + 1;
+        d[n] = (null != (t = d[n]) ? t : 0) + 1;
     }
 });

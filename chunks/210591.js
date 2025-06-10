@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(524979),
     o = n(692547),
     c = n(481060),
-    u = n(259580),
-    d = n(293810),
+    d = n(259580),
+    u = n(293810),
     m = n(388032),
     g = n(218801);
 function p(e) {
@@ -39,7 +39,7 @@ function f(e) {
         o = s.filter((e) => e).length / s.length,
         f = 1 === o,
         h = (0, c.q_F)({ width: ''.concat(100 * o, '%') }),
-        x = [m.intl.format(m.t.wtQtXl, { promoPageGuideUrl: d.iv.PROMO_PAGE_GUIDE }), m.intl.format(m.t['0Fo0wc'], { caseStudiesUrl: d.iv.CASE_STUDIES }), m.intl.format(m.t['7JdzjI'], { subscriptionOfferingGuideUrl: d.iv.SUBSCRIPTION_OFFERING_GUIDE }), m.intl.format(m.t.zkXN6O, { tierStructureGuideUrl: d.iv.TIER_STRUCTURE_GUIDE })],
+        x = [m.intl.format(m.t.wtQtXl, { promoPageGuideUrl: u.iv.PROMO_PAGE_GUIDE }), m.intl.format(m.t['0Fo0wc'], { caseStudiesUrl: u.iv.CASE_STUDIES }), m.intl.format(m.t['7JdzjI'], { subscriptionOfferingGuideUrl: u.iv.SUBSCRIPTION_OFFERING_GUIDE }), m.intl.format(m.t.zkXN6O, { tierStructureGuideUrl: u.iv.TIER_STRUCTURE_GUIDE })],
         b = n
             ? null
             : (0, r.jsxs)(r.Fragment, {
@@ -105,8 +105,8 @@ function f(e) {
                             className: g.headerText,
                             children: m.intl.string(m.t['2Xbd/P'])
                         }),
-                        (0, r.jsx)(u.Z, {
-                            direction: n ? u.Z.Directions.DOWN : u.Z.Directions.UP,
+                        (0, r.jsx)(d.Z, {
+                            direction: n ? d.Z.Directions.DOWN : d.Z.Directions.UP,
                             className: g.headerCaret
                         })
                     ]

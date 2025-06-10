@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(692547),
     o = n(481060),
     c = n(239091),
-    u = n(111028),
-    d = n(977258),
+    d = n(111028),
+    u = n(977258),
     m = n(637853),
     g = n(473403),
     p = n(216306),
@@ -91,7 +91,7 @@ function C(e) {
               },
               onClick: (e) => (
                   e.stopPropagation(),
-                  (0, d.s)(t.id, i.id)
+                  (0, u.s)(t.id, i.id)
                       ? (0, f.pt)(i.id)
                       : (0, o.ZDy)(async () => {
                             let { default: e } = await n.e('35641').then(n.bind(n, 89216));
@@ -151,7 +151,7 @@ let y = i.memo(function () {
                 if (!S)
                     return (
                         e.stopPropagation(),
-                        (0, d.s)(l.id, t.id)
+                        (0, u.s)(l.id, t.id)
                             ? (0, f.pt)(t.id)
                             : (0, o.ZDy)(async () => {
                                   let { default: e } = await n.e('35641').then(n.bind(n, 89216));
@@ -225,7 +225,7 @@ let y = i.memo(function () {
                                                         channel: t,
                                                         guild: l
                                                     }),
-                                                    (0, r.jsx)(u.Z, {
+                                                    (0, r.jsx)(d.Z, {
                                                         className: _.__invalid_name,
                                                         children: (0, r.jsx)(o.Text, {
                                                             className: _.channelText,
@@ -253,7 +253,7 @@ let y = i.memo(function () {
                                         }),
                                         (0, r.jsx)('div', {
                                             className: _.channelActions,
-                                            children: (0, d.s)(t.guild_id, t.id)
+                                            children: (0, u.s)(t.guild_id, t.id)
                                                 ? (0, r.jsx)(o.XZJ, {
                                                       'aria-checked': E,
                                                       value: E,

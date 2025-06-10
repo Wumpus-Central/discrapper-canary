@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(481060),
     o = n(933557),
     c = n(984933),
-    u = n(496675),
-    d = n(699516),
+    d = n(496675),
+    u = n(699516),
     m = n(594174),
     g = n(434404),
     p = n(800223),
@@ -26,13 +26,13 @@ function j(e) {
                 })
                 .filter((e) => {
                     let { channel: t } = e;
-                    return t.id === l || u.Z.can(b, t);
+                    return t.id === l || d.Z.can(b, t);
                 })
                 .map((e) => {
                     let { channel: t } = e;
                     return {
                         value: t.id,
-                        label: (0, o.F6)(t, m.default, d.Z, !0)
+                        label: (0, o.F6)(t, m.default, u.Z, !0)
                     };
                 });
             return (

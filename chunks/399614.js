@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(710344),
     o = n(734893),
     c = n(8426),
-    u = n(969632),
-    d = n(922112),
+    d = n(969632),
+    u = n(922112),
     m = n(388032),
     g = n(773100);
 function p(e) {
@@ -56,15 +56,15 @@ function f(e, t) {
 let h = [],
     x = function (e) {
         let { guildId: t } = e,
-            x = (0, l.Wu)([u.Z], () => {
+            x = (0, l.Wu)([d.Z], () => {
                 var e;
-                return null != (e = u.Z.getSettings().resourceChannels) ? e : h;
+                return null != (e = d.Z.getSettings().resourceChannels) ? e : h;
             }),
             b = i.useMemo(() => x.map((e) => f(p({}, e), { id: e.channelId })), [x]),
             { handleDragStart: j, handleDragReset: _, handleDragComplete: v } = (0, a.Z)(b, c.lq),
             O = i.useCallback(
                 (e, n) => {
-                    let r = u.Z.getSettings();
+                    let r = d.Z.getSettings();
                     null != r &&
                         ((0, c.r2)(e),
                         (0, c.oo)(t, r).then(() => {
@@ -93,7 +93,7 @@ let h = [],
             children: [
                 x.map((e, n) =>
                     (0, r.jsx)(
-                        d.Z,
+                        u.Z,
                         {
                             guildId: t,
                             resourceChannel: e,

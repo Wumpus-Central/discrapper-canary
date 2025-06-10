@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(481060),
     o = n(510231),
     c = n(434404),
-    u = n(383124),
-    d = n(795691),
+    d = n(383124),
+    u = n(795691),
     m = n(388032),
     g = n(210530),
     p = n(381109);
@@ -38,7 +38,7 @@ function x(e) {
               className: g.selectedGames,
               children: t.map((e) =>
                   (0, r.jsx)(
-                      u.Z,
+                      d.Z,
                       {
                           applicationId: e,
                           selected: !0,
@@ -55,7 +55,7 @@ function j(e) {
     var t;
     let { profile: n, canManageGuild: l } = e,
         o = n.id,
-        u = null != (t = null == n ? void 0 : n.gameApplicationIds) ? t : b,
+        d = null != (t = null == n ? void 0 : n.gameApplicationIds) ? t : b,
         f = i.useCallback(
             (e) => {
                 c.Z.updateGuildProfile(o, { gameApplicationIds: e });
@@ -64,13 +64,13 @@ function j(e) {
         ),
         j = i.useCallback(
             (e) => {
-                let t = u.filter((t) => t !== e);
+                let t = d.filter((t) => t !== e);
                 c.Z.updateGuildProfile(o, { gameApplicationIds: t });
             },
-            [o, u]
+            [o, d]
         ),
-        _ = i.useRef(u),
-        v = i.useMemo(() => (s().isEqual(new Set(u), new Set(_.current)) || (_.current = [...u]), _.current), [u]);
+        _ = i.useRef(d),
+        v = i.useMemo(() => (s().isEqual(new Set(d), new Set(_.current)) || (_.current = [...d]), _.current), [d]);
     return (0, r.jsxs)(a.hjN, {
         className: p.section,
         children: [
@@ -88,7 +88,7 @@ function j(e) {
                 className: g.sectionBody,
                 children: [
                     (0, r.jsx)(h, {
-                        gameApplicationIds: u,
+                        gameApplicationIds: d,
                         handleChange: f,
                         disabled: !l
                     }),
@@ -97,9 +97,9 @@ function j(e) {
                         onRemoveGame: j,
                         disabled: !l
                     }),
-                    (0, r.jsx)(d.Z, {
+                    (0, r.jsx)(u.Z, {
                         guildId: o,
-                        selectedGameApplicationIds: u,
+                        selectedGameApplicationIds: d,
                         onUpdateGames: f,
                         disabled: !l
                     })

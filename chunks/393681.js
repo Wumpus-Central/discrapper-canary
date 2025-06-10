@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Q }), n(388685);
+n.d(t, { Z: () => J }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -21,30 +21,31 @@ var i = n(255367),
     j = n(303172),
     O = n(518560),
     S = n(921801),
-    v = n(484459),
-    T = n(430824),
-    I = n(325067),
-    N = n(246946),
-    y = n(663389),
-    A = n(594174),
-    P = n(626135),
-    R = n(709054),
-    D = n(706454),
-    Z = n(210887),
-    w = n(418632),
-    k = n(10298),
-    L = n(526156),
-    B = n(730820),
-    M = n(888256),
-    U = n(2719),
-    V = n(194530),
-    G = n(726985),
-    F = n(981631),
-    H = n(801461),
-    z = n(388032),
-    Y = n(951839),
-    W = n(20493);
-function K(e) {
+    v = n(577275),
+    T = n(484459),
+    I = n(430824),
+    N = n(325067),
+    y = n(246946),
+    A = n(663389),
+    P = n(594174),
+    R = n(626135),
+    D = n(709054),
+    Z = n(706454),
+    w = n(210887),
+    k = n(418632),
+    L = n(10298),
+    B = n(526156),
+    M = n(730820),
+    U = n(888256),
+    V = n(2719),
+    G = n(194530),
+    F = n(726985),
+    H = n(981631),
+    z = n(801461),
+    Y = n(388032),
+    W = n(951839),
+    K = n(20493);
+function q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -69,7 +70,7 @@ function K(e) {
     }
     return e;
 }
-function q(e, t) {
+function X(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -87,10 +88,10 @@ function q(e, t) {
         e
     );
 }
-class X extends r.PureComponent {
+class Q extends r.PureComponent {
     componentDidMount() {
         let { currentUser: e } = this.props;
-        (0, v.Z)(e.id, e.getAvatarURL(void 0, 80));
+        (0, T.Z)(e.id, e.getAvatarURL(void 0, 80));
     }
     componentWillUnmount() {
         m.Z.clearBackupCodes(), (0, g.Zy)();
@@ -101,27 +102,27 @@ class X extends r.PureComponent {
             let e = (0, i.jsxs)('section', {
                 children: [
                     (0, i.jsx)('div', {
-                        className: Y.accountWarningBodyText,
-                        children: z.intl.string(z.t.qKs3vr)
+                        className: W.accountWarningBodyText,
+                        children: Y.intl.string(Y.t.qKs3vr)
                     }),
                     (0, i.jsx)(u.zxk, {
                         look: u.iLD.OUTLINED,
                         size: u.PhG.SMALL,
                         color: u.zxk.Colors.WHITE,
                         onClick: () => f.Z.openClaimAccountModal(),
-                        children: z.intl.string(z.t['7psymp'])
+                        children: Y.intl.string(Y.t['7psymp'])
                     })
                 ]
             });
             return (0, i.jsx)(u.ToO, {
                 type: u.ToO.Types.DANGER,
-                className: W.marginBottom20,
+                className: K.marginBottom20,
                 imageData: {
                     src: n(418558),
                     width: 60,
                     height: 60
                 },
-                title: z.intl.string(z.t['/3qnLy']),
+                title: Y.intl.string(Y.t['/3qnLy']),
                 body: e
             });
         }
@@ -130,10 +131,10 @@ class X extends r.PureComponent {
             let e = (0, i.jsxs)('section', {
                 children: [
                     (0, i.jsx)('div', {
-                        className: Y.accountWarningBodyText,
-                        children: z.intl.string(z.t.NAzplJ)
+                        className: W.accountWarningBodyText,
+                        children: Y.intl.string(Y.t.NAzplJ)
                     }),
-                    (0, i.jsx)(w.Z, {
+                    (0, i.jsx)(k.Z, {
                         size: u.PhG.SMALL,
                         color: u.zxk.Colors.PRIMARY
                     })
@@ -141,13 +142,13 @@ class X extends r.PureComponent {
             });
             return (0, i.jsx)(u.ToO, {
                 type: u.ToO.Types.PRIMARY,
-                className: W.marginBottom20,
+                className: K.marginBottom20,
                 imageData: {
                     src: n(449125),
                     width: 60,
                     height: 60
                 },
-                title: z.intl.string(z.t.tuGzBQ),
+                title: Y.intl.string(Y.t.tuGzBQ),
                 body: e
             });
         }
@@ -155,16 +156,16 @@ class X extends r.PureComponent {
     renderPomeloWarning() {
         return this.props.shouldRenderPomeloWarning
             ? (0, i.jsxs)(u.Wn, {
-                  className: Y.accountWarningBodyText,
+                  className: W.accountWarningBodyText,
                   messageType: u.QYI.WARNING,
                   children: [
-                      this.props.forceMigrationExperiment ? z.intl.format(z.t.zT1hgo, { date: (0, x.IE)(this.props.locale) }) : z.intl.format(z.t.pdYZys, {}),
+                      this.props.forceMigrationExperiment ? Y.intl.format(Y.t.zT1hgo, { date: (0, x.IE)(this.props.locale) }) : Y.intl.format(Y.t.pdYZys, {}),
                       ' ',
                       '',
                       (0, i.jsx)(_.Z, {
-                          className: Y.noticeTextButton,
-                          onClick: () => (0, j.Z)(H.Kq.USER_SETTINGS),
-                          children: z.intl.string(z.t.LhlgY2)
+                          className: W.noticeTextButton,
+                          onClick: () => (0, j.Z)(z.Kq.USER_SETTINGS),
+                          children: Y.intl.string(Y.t.LhlgY2)
                       })
                   ]
               })
@@ -173,12 +174,12 @@ class X extends r.PureComponent {
     renderAccountSettings() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
             t = (0, i.jsxs)(i.Fragment, {
-                children: [this.renderPomeloWarning(), this.renderAccountWarning(), (0, i.jsx)(U.Z, {})]
+                children: [this.renderPomeloWarning(), this.renderAccountWarning(), (0, i.jsx)(V.Z, {})]
             });
         return e
             ? (0, i.jsx)(u.hjN, {
                   tag: u.RB0.H1,
-                  title: z.intl.string(z.t['JAIM/v']),
+                  title: Y.intl.string(Y.t['JAIM/v']),
                   children: t
               })
             : t;
@@ -187,44 +188,44 @@ class X extends r.PureComponent {
         let { backupCodes: e, currentUser: t, theme: r } = this.props,
             s = (0, d.wj)(r) ? n(555702) : n(610802);
         return (0, i.jsxs)(u.hjN, {
-            className: l()(Y.userSettingsSecurity, W.marginTop40),
-            title: z.intl.string(z.t.pKSjEh),
+            className: l()(W.userSettingsSecurity, K.marginTop40),
+            title: Y.intl.string(Y.t.pKSjEh),
             tag: 'h1',
             children: [
                 t.mfaEnabled
                     ? (0, i.jsx)(u.hjN, {
                           children: (0, i.jsxs)(u.vwX, {
-                              className: l()(Y.isEnabled, W.marginBottom20),
+                              className: l()(W.isEnabled, K.marginBottom20),
                               children: [
                                   (0, i.jsx)('img', {
                                       alt: '',
-                                      className: Y.lockIcon,
+                                      className: W.lockIcon,
                                       src: n(511391)
                                   }),
-                                  z.intl.string(z.t.FsmBy8)
+                                  Y.intl.string(Y.t.FsmBy8)
                               ]
                           })
                       })
                     : null,
                 (0, i.jsx)(S.F, {
-                    setting: G.s6.ACCOUNT_CHANGE_PASSWORD,
+                    setting: F.s6.ACCOUNT_CHANGE_PASSWORD,
                     children: (0, i.jsx)('div', {
                         children: (0, i.jsx)(u.zxk, {
                             size: u.zxk.Sizes.SMALL,
-                            className: Y.changePasswordButton,
-                            onClick: () => (0, u.h7j)((e) => (0, i.jsx)(V.default, q(K({}, e), { onSuccess: e.onClose }))),
-                            children: z.intl.string(z.t['FRep5+'])
+                            className: W.changePasswordButton,
+                            onClick: () => (0, u.h7j)((e) => (0, i.jsx)(G.default, X(q({}, e), { onSuccess: e.onClose }))),
+                            children: Y.intl.string(Y.t['FRep5+'])
                         })
                     })
                 }),
                 (0, i.jsx)(S.F, {
-                    setting: G.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
+                    setting: F.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
                     children: (0, i.jsxs)(b.Z, {
                         align: b.Z.Align.STRETCH,
                         children: [
                             (0, i.jsx)(b.Z.Child, {
                                 wrap: !0,
-                                children: (0, i.jsx)(B.Z, { backupCodes: e })
+                                children: (0, i.jsx)(M.Z, { backupCodes: e })
                             }),
                             t.mfaEnabled
                                 ? null
@@ -234,7 +235,7 @@ class X extends r.PureComponent {
                                       grow: 0,
                                       children: (0, i.jsx)('img', {
                                           src: s,
-                                          className: Y.userSettingsSecurityImage,
+                                          className: W.userSettingsSecurityImage,
                                           alt: ''
                                       })
                                   })
@@ -245,19 +246,34 @@ class X extends r.PureComponent {
         });
     }
     renderConfirmModals() {
-        let { shouldRenderOwnedGuildsModal: e, shouldRenderDeleteAccountConfirmModal: t, shouldRenderDisableAccountErrorModal: n, disableAccountErrorMessage: r } = this.state;
-        if (e) {
-            let e = () => this.setState({ shouldRenderOwnedGuildsModal: !1 });
+        let { shouldRenderOwnedGuildsModal: e, shouldRenderDeleteAccountConfirmModal: t, shouldRenderDisableAccountErrorModal: n, shouldRenderOwnedTeamsModal: r, disableAccountErrorMessage: s } = this.state;
+        if (r) {
+            let e = () => this.setState({ shouldRenderOwnedTeamsModal: !1 });
             return (0, i.jsx)(u.sYh, {
                 dismissable: !0,
-                header: z.intl.string(z.t.I5UrbW),
-                confirmText: z.intl.string(z.t.BddRzc),
+                header: Y.intl.string(Y.t.UNGZDA),
+                confirmText: Y.intl.string(Y.t.BddRzc),
                 confirmButtonColor: u.Ttl.BRAND,
                 onCancel: e,
                 onConfirm: e,
                 children: (0, i.jsx)(u.Text, {
                     variant: 'text-md/normal',
-                    children: z.intl.string(z.t.UyVVam)
+                    children: Y.intl.string(Y.t.alpAUl)
+                })
+            });
+        }
+        if (e) {
+            let e = () => this.setState({ shouldRenderOwnedGuildsModal: !1 });
+            return (0, i.jsx)(u.sYh, {
+                dismissable: !0,
+                header: Y.intl.string(Y.t.I5UrbW),
+                confirmText: Y.intl.string(Y.t.BddRzc),
+                confirmButtonColor: u.Ttl.BRAND,
+                onCancel: e,
+                onConfirm: e,
+                children: (0, i.jsx)(u.Text, {
+                    variant: 'text-md/normal',
+                    children: Y.intl.string(Y.t.UyVVam)
                 })
             });
         }
@@ -265,14 +281,14 @@ class X extends r.PureComponent {
             let e = () => this.setState({ shouldRenderDeleteAccountConfirmModal: !1 });
             return (0, i.jsx)(u.sYh, {
                 dismissable: !0,
-                header: z.intl.string(z.t['8lQ2ra']),
-                confirmText: z.intl.string(z.t['8lQ2ra']),
-                cancelText: z.intl.string(z.t['ETE/oK']),
+                header: Y.intl.string(Y.t['8lQ2ra']),
+                confirmText: Y.intl.string(Y.t['8lQ2ra']),
+                cancelText: Y.intl.string(Y.t['ETE/oK']),
                 onCancel: e,
                 onConfirm: () => (0, g.ss)('', !0).then(e),
                 children: (0, i.jsx)(u.Text, {
                     variant: 'text-md/normal',
-                    children: z.intl.string(z.t.FB4H1N)
+                    children: Y.intl.string(Y.t.FB4H1N)
                 })
             });
         }
@@ -284,24 +300,25 @@ class X extends r.PureComponent {
                 });
             return (0, i.jsx)(u.sYh, {
                 dismissable: !0,
-                header: z.intl.string(z.t.LX0nT0),
-                confirmText: z.intl.string(z.t.BddRzc),
+                header: Y.intl.string(Y.t.LX0nT0),
+                confirmText: Y.intl.string(Y.t.BddRzc),
                 confirmButtonColor: u.Ttl.BRAND,
                 onCancel: e,
                 onConfirm: e,
                 children: (0, i.jsx)(u.Text, {
                     variant: 'text-md/normal',
-                    children: r
+                    children: s
                 })
             });
         }
         return null;
     }
     renderAccountRemovalSettings() {
-        let { currentUser: e } = this.props;
-        return (0, i.jsx)(M.Z, {
-            className: W.marginTop40,
+        let { currentUser: e, userTeamsLoading: t } = this.props;
+        return (0, i.jsx)(U.Z, {
+            className: K.marginTop40,
             currentUser: e,
+            disabled: t,
             handleDisableAccount: () => this.handleDisableAccount(!1),
             handleDeleteAccount: () => this.handleDisableAccount(!0)
         });
@@ -311,15 +328,15 @@ class X extends r.PureComponent {
             children: [
                 this.renderConfirmModals(),
                 (0, i.jsx)(S.F, {
-                    setting: G.s6.ACCOUNT_PROFILE,
+                    setting: F.s6.ACCOUNT_PROFILE,
                     children: this.renderAccountSettings(!1)
                 }),
                 (0, i.jsx)(S.F, {
-                    setting: G.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
+                    setting: F.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
                     children: this.renderSecuritySettings()
                 }),
                 (0, i.jsx)(S.F, {
-                    setting: G.s6.ACCOUNT_REMOVAL,
+                    setting: F.s6.ACCOUNT_REMOVAL,
                     children: this.renderAccountRemovalSettings()
                 })
             ]
@@ -327,26 +344,26 @@ class X extends r.PureComponent {
     }
     renderUnhidden() {
         let { subsection: e } = this.props;
-        return (0, i.jsx)(k.N, {
-            header: z.intl.string(z.t['JAIM/v']),
-            children: (0, i.jsx)(L.Z, {
-                parentSetting: G.s6.ACCOUNT,
-                settingsSection: F.oAB.ACCOUNT,
-                panelClassName: Y.tabPanel,
+        return (0, i.jsx)(L.N, {
+            header: Y.intl.string(Y.t['JAIM/v']),
+            children: (0, i.jsx)(B.Z, {
+                parentSetting: F.s6.ACCOUNT,
+                settingsSection: H.oAB.ACCOUNT,
+                panelClassName: W.tabPanel,
                 onTabChange: (e) => {
-                    P.default.track(F.rMx.MY_ACCOUNT_PAGE_TAB_NAVIGATE, { target_tab_name: e === G.s6.ACCOUNT_SECURITY_TAB ? 'SECURITY' : 'STANDING' });
+                    R.default.track(H.rMx.MY_ACCOUNT_PAGE_TAB_NAVIGATE, { target_tab_name: e === F.s6.ACCOUNT_SECURITY_TAB ? 'SECURITY' : 'STANDING' });
                 },
                 defaultTabIndex: 'ACCOUNT_STANDING' === e ? 1 : void 0,
                 tabs: [
                     {
-                        title: z.intl.string(z.t.Am9YHh),
+                        title: Y.intl.string(Y.t.Am9YHh),
                         component: () => this.renderSecuritySettingsRedesign(),
-                        setting: G.s6.ACCOUNT_SECURITY_TAB
+                        setting: F.s6.ACCOUNT_SECURITY_TAB
                     },
                     {
-                        title: z.intl.string(z.t['Vov/9v']),
+                        title: Y.intl.string(Y.t['Vov/9v']),
                         component: O.Z,
-                        setting: G.s6.PRIVACY_AND_SAFETY_STANDING
+                        setting: F.s6.PRIVACY_AND_SAFETY_STANDING
                     }
                 ]
             })
@@ -356,33 +373,38 @@ class X extends r.PureComponent {
         return this.props.hide ? (0, i.jsx)(p.Z, {}) : this.renderUnhidden();
     }
     handleDisableAccountError(e) {
-        if (e.body.code === F.evJ.INVALID_PASSWORD) throw e;
+        if (e.body.code === H.evJ.INVALID_PASSWORD) throw e;
         this.setState({
             shouldRenderDisableAccountErrorModal: !0,
             disableAccountErrorMessage: e.body.message
         });
     }
     handleSubmitDisableAccount(e, t) {
-        return (0, g.ss)(e, t).then(F.dG4, this.handleDisableAccountError);
+        return (0, g.ss)(e, t).then(H.dG4, this.handleDisableAccountError);
     }
     handleDisableAccount() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-            { currentUser: t } = this.props,
-            n = T.Z.getGuilds();
-        if (R.default.keys(n).filter((e) => n[e].ownerId === t.id).length > 0) return void this.setState({ shouldRenderOwnedGuildsModal: !0 });
-        t.isClaimed()
-            ? (0, u.h7j)((t) =>
-                  (0, i.jsx)(
-                      h.Z,
-                      q(K({}, t), {
-                          handleSubmit: (t) => this.handleSubmitDisableAccount(t, e),
-                          title: e ? z.intl.string(z.t['8lQ2ra']) : z.intl.string(z.t.jf5GGR),
-                          actionText: e ? z.intl.string(z.t['8lQ2ra']) : z.intl.string(z.t.jf5GGR),
-                          children: e ? z.intl.string(z.t.FB4H1N) : z.intl.string(z.t.gk7h39)
-                      })
-                  )
-              )
-            : this.setState({ shouldRenderDeleteAccountConfirmModal: !0 });
+        var e;
+        let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+            { currentUser: n, userTeams: r } = this.props,
+            s = I.Z.getGuilds(),
+            l = D.default.keys(s).filter((e) => s[e].ownerId === n.id);
+        return (null != (e = null == r ? void 0 : r.filter((e) => e.owner_user_id === n.id)) ? e : []).length > 0
+            ? void this.setState({ shouldRenderOwnedTeamsModal: !0 })
+            : l.length > 0
+              ? void this.setState({ shouldRenderOwnedGuildsModal: !0 })
+              : void (n.isClaimed()
+                    ? (0, u.h7j)((e) =>
+                          (0, i.jsx)(
+                              h.Z,
+                              X(q({}, e), {
+                                  handleSubmit: (e) => this.handleSubmitDisableAccount(e, t),
+                                  title: t ? Y.intl.string(Y.t['8lQ2ra']) : Y.intl.string(Y.t.jf5GGR),
+                                  actionText: t ? Y.intl.string(Y.t['8lQ2ra']) : Y.intl.string(Y.t.jf5GGR),
+                                  children: t ? Y.intl.string(Y.t.FB4H1N) : Y.intl.string(Y.t.gk7h39)
+                              })
+                          )
+                      )
+                    : this.setState({ shouldRenderDeleteAccountConfirmModal: !0 }));
     }
     constructor(e) {
         super(e),
@@ -390,23 +412,25 @@ class X extends r.PureComponent {
                 disableAccountErrorMessage: null,
                 shouldRenderOwnedGuildsModal: !1,
                 shouldRenderDeleteAccountConfirmModal: !1,
-                shouldRenderDisableAccountErrorModal: !1
+                shouldRenderDisableAccountErrorModal: !1,
+                shouldRenderOwnedTeamsModal: !1
             });
     }
 }
-let Q = () => {
-    let e = (0, c.e7)([A.default], () => {
-            let e = A.default.getCurrentUser();
+let J = () => {
+    let e = (0, c.e7)([P.default], () => {
+            let e = P.default.getCurrentUser();
             return o()(null != e, 'ConnectedUserAccountSettings: currentUser cannot be undefined'), e;
         }),
-        t = (0, c.e7)([I.Z], () => I.Z.getBackupCodes()),
-        n = (0, c.e7)([N.Z], () => N.Z.hidePersonalInformation),
-        r = (0, c.e7)([Z.Z], () => Z.Z.theme),
+        t = (0, c.e7)([N.Z], () => N.Z.getBackupCodes()),
+        n = (0, c.e7)([y.Z], () => y.Z.hidePersonalInformation),
+        r = (0, c.e7)([w.Z], () => w.Z.theme),
         s = (0, C.b)(),
         l = (0, E.CC)(),
-        a = (0, c.e7)([D.default], () => D.default.locale),
-        d = (0, c.e7)([y.Z], () => y.Z.getSubsection());
-    return (0, i.jsx)(X, {
+        a = (0, c.e7)([Z.default], () => Z.default.locale),
+        d = (0, c.e7)([A.Z], () => A.Z.getSubsection()),
+        { teams: u, loading: m } = (0, v.Z)({ refreshOnDepChange: !0 });
+    return (0, i.jsx)(Q, {
         theme: r,
         currentUser: e,
         backupCodes: t,
@@ -414,6 +438,8 @@ let Q = () => {
         shouldRenderPomeloWarning: s,
         forceMigrationExperiment: l,
         locale: a,
-        subsection: d
+        subsection: d,
+        userTeams: u,
+        userTeamsLoading: m
     });
 };

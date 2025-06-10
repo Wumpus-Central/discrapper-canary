@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(953529);
+n.d(t, { Z: () => u }), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -6,28 +6,28 @@ var r = n(255367),
     a = n(699553),
     o = n(314852),
     c = n(434404),
-    u = n(999382);
-function d() {
-    let e = (0, l.e7)([u.Z], () => u.Z.getGuild()),
+    d = n(999382);
+function u() {
+    let e = (0, l.e7)([d.Z], () => d.Z.getGuild()),
         t = null == e ? void 0 : e.id,
-        n = (0, l.e7)([u.Z], () => u.Z.getProfileError()),
-        d = (0, l.e7)([u.Z], () => u.Z.getGuildProfile()),
+        n = (0, l.e7)([d.Z], () => d.Z.getProfileError()),
+        u = (0, l.e7)([d.Z], () => d.Z.getGuildProfile()),
         m = (0, l.e7)([o.Z], () => o.Z.getIsUpdating(t)),
         g = i.useMemo(() => (null == n ? void 0 : n.getAnyErrorMessage()), [n]),
         p = i.useCallback(() => {
-            if (null == e || null == d) return;
+            if (null == e || null == u) return;
             let t = {
-                name: d.name,
-                description: d.description,
-                icon: d.icon,
-                brandColorPrimary: d.brandColorPrimary,
-                traits: d.traits,
-                visibility: d.visibility,
-                gameApplicationIds: d.gameApplicationIds,
-                customBanner: d.customBanner
+                name: u.name,
+                description: u.description,
+                icon: u.icon,
+                brandColorPrimary: u.brandColorPrimary,
+                traits: u.traits,
+                visibility: u.visibility,
+                gameApplicationIds: u.gameApplicationIds,
+                customBanner: u.customBanner
             };
             (0, a.pV)(e.id, t);
-        }, [e, d]),
+        }, [e, u]),
         f = i.useCallback(() => {
             null != t && c.Z.init(t);
         }, [t]);

@@ -7,7 +7,7 @@ var t = '\uD800-\uDFFF',
     a = '(?:' + n + '|' + r + ')?',
     o = '[\\ufe0e\\ufe0f]?',
     c = '(?:\\u200d(?:' + [i, l, s].join('|') + ')' + o + a + ')*',
-    u = RegExp(r + '(?=' + r + ')|' + ('(?:' + [i + n + '?', n, l, s, '[' + t + ']'].join('|')) + ')' + (o + a + c), 'g');
+    d = RegExp(r + '(?=' + r + ')|' + ('(?:' + [i + n + '?', n, l, s, '[' + t + ']'].join('|')) + ')' + (o + a + c), 'g');
 e.exports = function (e) {
-    return e.match(u) || [];
+    return e.match(d) || [];
 };

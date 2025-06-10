@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(456677),
@@ -7,7 +7,7 @@ var i = n(456677),
     a = n(620436),
     o = n(388032),
     c = n(461367);
-function u(e) {
+function d(e) {
     let { rule: t, onChangeRule: n } = e;
     return (0, r.jsxs)('div', {
         className: c.cardContentsContainer,

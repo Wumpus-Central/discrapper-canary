@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685), n(457542), n(642613);
+n.d(t, { Z: () => d }), n(388685), n(457542), n(642613);
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(383124),
     o = n(388032),
     c = n(955373);
-function u(e) {
-    let { guildId: t, selectedGameApplicationIds: n, onUpdateGames: u, disabled: d } = e,
+function d(e) {
+    let { guildId: t, selectedGameApplicationIds: n, onUpdateGames: d, disabled: u } = e,
         { topGames: m, tryFetchTopGames: g } = (0, s.I)(),
         p = m.get(t),
         [f, h] = i.useState(!1);
@@ -28,9 +28,9 @@ function u(e) {
         ),
         b = i.useCallback(
             (e) => {
-                n.includes(e) ? u(n.filter((t) => t !== e)) : u([...n, e]);
+                n.includes(e) ? d(n.filter((t) => t !== e)) : d([...n, e]);
             },
-            [u, n]
+            [d, n]
         );
     return f && null == p
         ? (0, r.jsx)(l.$jN, {})
@@ -56,7 +56,7 @@ function u(e) {
                                             applicationId: e,
                                             selected: !1,
                                             onClick: b,
-                                            disabled: d
+                                            disabled: u
                                         },
                                         e
                                     )

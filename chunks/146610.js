@@ -7,14 +7,14 @@ var i = n(120356),
     a = n(73346),
     o = n(169903),
     c = n(67152),
-    u = n(388032),
-    d = n(414510),
+    d = n(388032),
+    u = n(414510),
     m = n(769570);
 let g = [
         {
             key: 'tier_name',
-            cellClassName: d.tierNameColumn,
-            renderHeader: () => u.intl.string(u.t['2Uiha2']),
+            cellClassName: u.tierNameColumn,
+            renderHeader: () => d.intl.string(d.t['2Uiha2']),
             render(e) {
                 let t,
                     { subscriptionListing: n } = e;
@@ -25,28 +25,28 @@ let g = [
                             (0, r.jsx)('img', {
                                 src: e,
                                 alt: '',
-                                className: d.tierImage
+                                className: u.tierImage
                             }),
                             n.name
                         ]
                     });
                 }
                 return (0, r.jsx)(c.bL, {
-                    className: d.tierNameCell,
+                    className: u.tierNameCell,
                     children: t
                 });
             }
         },
         {
             key: 'subscribers',
-            cellClassName: l()(d.subscribersColumn, m.cellAlignRight),
-            renderHeader: () => u.intl.string(u.t.zu8go6),
+            cellClassName: l()(u.subscribersColumn, m.cellAlignRight),
+            renderHeader: () => d.intl.string(d.t.zu8go6),
             render: (e) => (0, r.jsx)(c.av, { children: e.roleMemberCount })
         },
         {
             key: 'price',
-            cellClassName: l()(d.priceColumn, m.cellAlignRight),
-            renderHeader: () => u.intl.string(u.t.NcrbWF),
+            cellClassName: l()(u.priceColumn, m.cellAlignRight),
+            renderHeader: () => d.intl.string(d.t.NcrbWF),
             render(e) {
                 let { subscriptionListing: t } = e,
                     n = null == t ? void 0 : t.subscription_plans[0],
@@ -63,9 +63,9 @@ let g = [
             children: (0, r.jsx)(s.Z, {
                 columns: g,
                 data: a,
-                className: l()(m.table, d.table),
-                rowClassName: d.row,
-                headerClassName: l()(m.header, d.header)
+                className: l()(m.table, u.table),
+                rowClassName: u.row,
+                headerClassName: l()(m.header, u.header)
             })
         });
     };

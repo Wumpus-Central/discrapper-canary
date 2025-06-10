@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(580685),
     o = n(442837),
     c = n(481060),
-    u = n(314852),
-    d = n(330705),
+    d = n(314852),
+    u = n(330705),
     m = n(323220),
     g = n(434404),
     p = n(436879),
@@ -20,17 +20,17 @@ function b(e) {
         b = n.id,
         j = a.Y.VISIBLE.has(n.visibility),
         _ = (0, o.e7)(
-            [u.Z],
+            [d.Z],
             () => {
                 var e;
-                return (null == (e = u.Z.getProfile(b)) ? void 0 : e.visibility) === d.k.PUBLIC_WITH_RECRUITMENT;
+                return (null == (e = d.Z.getProfile(b)) ? void 0 : e.visibility) === u.k.PUBLIC_WITH_RECRUITMENT;
             },
             [b]
         ),
         v = i.useRef(null);
     (0, p.Z)(v, f.KsC.PROFILE_VISIBILITY);
     let O = i.useCallback(() => {
-            j ? g.Z.updateGuildProfile(b, { visibility: d.k.RESTRICTED }) : g.Z.updateGuildProfile(b, { visibility: _ ? d.k.PUBLIC_WITH_RECRUITMENT : d.k.PUBLIC });
+            j ? g.Z.updateGuildProfile(b, { visibility: u.k.RESTRICTED }) : g.Z.updateGuildProfile(b, { visibility: _ ? u.k.PUBLIC_WITH_RECRUITMENT : u.k.PUBLIC });
         }, [b, _, j]),
         C = i.useCallback(() => {
             g.Z.setSection(f.pNK.ACCESS, f.KsC.ACCESS_DISCOVERABLE);

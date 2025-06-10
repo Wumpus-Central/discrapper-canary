@@ -7,8 +7,8 @@ var i = n(120356),
     a = n(100527),
     o = n(906732),
     c = n(678558),
-    u = n(388032),
-    d = n(669116);
+    d = n(388032),
+    u = n(669116);
 let m = (e) => {
     let {
             guild: t,
@@ -16,40 +16,40 @@ let m = (e) => {
             className: i,
             buttonProps: l = {
                 color: s.Ttl.BRAND_INVERTED,
-                text: u.intl.string(u.t.oqweNz)
+                text: d.intl.string(d.t.oqweNz)
             }
         } = e,
         { color: a, text: o } = l,
-        d = t.premiumTier + 1;
+        u = t.premiumTier + 1;
     return (0, r.jsx)(c.Z, {
         color: a,
         analyticsLocation: n,
         guild: t,
         buttonText: o,
-        targetBoostedGuildTier: d,
+        targetBoostedGuildTier: u,
         className: i
     });
 };
 function g(e) {
-    let { header: t, text: i, analyticsLocation: c, guild: u, className: g, textColor: p, headerColor: f, buttonProps: h } = e,
+    let { header: t, text: i, analyticsLocation: c, guild: d, className: g, textColor: p, headerColor: f, buttonProps: h } = e,
         { analyticsLocations: x } = (0, o.ZP)(a.Z.GUILD_BOOSTING_UPSELL_BANNER);
     return (0, r.jsx)(o.Gt, {
         value: x,
         children: (0, r.jsxs)('div', {
-            className: l()(d.banner, g),
+            className: l()(u.banner, g),
             children: [
                 (0, r.jsx)('img', {
-                    className: d.__invalid_headerGraphic,
+                    className: u.__invalid_headerGraphic,
                     alt: '',
                     src: n(322393)
                 }),
                 (0, r.jsxs)('div', {
-                    className: d.content,
+                    className: u.content,
                     children: [
                         (0, r.jsx)(s.Text, {
                             variant: 'text-lg/semibold',
                             color: null != f ? f : 'always-white',
-                            className: d.header,
+                            className: u.header,
                             children: t
                         }),
                         (0, r.jsx)(s.Text, {
@@ -60,11 +60,11 @@ function g(e) {
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: d.ctaContainer,
+                    className: u.ctaContainer,
                     children: (0, r.jsx)(m, {
-                        guild: u,
+                        guild: d,
                         analyticsLocation: c,
-                        className: d.button,
+                        className: u.button,
                         buttonProps: h
                     })
                 })

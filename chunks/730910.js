@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(524979),
     o = n(442837),
     c = n(692547),
-    u = n(215569),
-    d = n(780384),
+    d = n(215569),
+    u = n(780384),
     m = n(481060),
     g = n(410030),
     p = n(367907),
@@ -120,7 +120,7 @@ function M(e) {
     }, [W]);
     let V = (0, m.dQu)(c.Z.colors.BACKGROUND_FLOATING).hex(),
         Y = (0, m.dQu)(c.Z.unsafe_rawColors.PRIMARY_160).hex(),
-        K = (0, d.wj)(F) ? V : Y,
+        K = (0, u.wj)(F) ? V : Y,
         X = H.to({
             range: [0, 1],
             output: [(0, m.dQu)(c.Z.unsafe_rawColors.WHITE_500).hex(), (0, m.dQu)(c.Z.colors.TEXT_NORMAL).hex()]
@@ -212,7 +212,7 @@ function M(e) {
                 ]
             })
         });
-    return (0, r.jsx)(u.W, {
+    return (0, r.jsx)(d.W, {
         component: 'div',
         children: (0, r.jsx)(m.oXn, {
             className: D.noticeRegion,

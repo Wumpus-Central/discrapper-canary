@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(442837),
     o = n(692547),
     c = n(481060),
-    u = n(142497),
-    d = n(338327),
+    d = n(142497),
+    u = n(338327),
     m = n(496675),
     g = n(63063),
     p = n(981631),
@@ -189,13 +189,13 @@ let S = () => [
     },
     w = (e) => {
         let { iconSrc: t, name: n, position: i, faded: l, rightAlign: a, imageCoordinates: o } = e,
-            u = {
+            d = {
                 [a ? 'right' : 'left']: o[0] + i[0],
                 top: o[1] + i[1]
             };
         return (0, r.jsxs)('div', {
             className: s()(x.guildDetails, { [x.faded]: l }),
-            style: u,
+            style: d,
             children: [
                 (0, r.jsx)('div', {
                     className: x.guildIcon,
@@ -225,10 +225,10 @@ let S = () => [
             null != C && l(C / 2), null != y && o(y / 2);
         }, [C, y, l, o]),
             i.useEffect(() => {
-                (0, u.Kw)(f.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
+                (0, d.Kw)(f.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
             }, []);
         let N = () => {
-            d.Z.open();
+            u.Z.open();
         };
         return (0, r.jsxs)('div', {
             className: x.container,

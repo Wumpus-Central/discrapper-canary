@@ -7,8 +7,8 @@ var i = n(793030),
     a = n(906732),
     o = n(496675),
     c = n(999382),
-    u = n(92533),
-    d = n(249363),
+    d = n(92533),
+    u = n(249363),
     m = n(464865),
     g = n(888125),
     p = n(981631),
@@ -38,12 +38,12 @@ function x() {
                           premiumProgressBarEnabled: t.premiumProgressBarEnabled
                       }),
                       (0, r.jsx)('div', { className: h.divider }),
-                      (0, r.jsx)(u.A, {
+                      (0, r.jsx)(d.A, {
                           guild: t,
                           canManageGuild: x
                       }),
                       (0, r.jsx)('div', { className: h.divider }),
-                      (0, r.jsx)(d.A, {
+                      (0, r.jsx)(u.A, {
                           guild: t,
                           canManageGuild: x
                       }),

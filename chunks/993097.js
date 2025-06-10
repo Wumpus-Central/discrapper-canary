@@ -6,21 +6,21 @@ var r = n(255367),
     a = n(434404),
     o = n(999382),
     c = n(621319),
-    u = n(44550),
-    d = n(770270),
+    d = n(44550),
+    u = n(770270),
     m = n(203377);
 function g() {
     let {
             vanityURLCode: e,
             hasChanges: t,
             errorDetails: n
-        } = (0, l.cj)([u.Z], () => ({
-            vanityURLCode: u.Z.vanityURLCode,
-            hasChanges: u.Z.hasChanges(),
-            errorDetails: u.Z.errorDetails
+        } = (0, l.cj)([d.Z], () => ({
+            vanityURLCode: d.Z.vanityURLCode,
+            hasChanges: d.Z.hasChanges(),
+            errorDetails: d.Z.errorDetails
         })),
         { guild: g, submitting: p, errors: f, hasChanges: h } = (0, l.cj)([o.Z], () => o.Z.getProps()),
-        x = i.useMemo(() => (null != n ? (0, d.i)(null == n ? void 0 : n.code) : (0, m.LG)(f)), [f, n]),
+        x = i.useMemo(() => (null != n ? (0, u.i)(null == n ? void 0 : n.code) : (0, m.LG)(f)), [f, n]),
         b = i.useCallback(async () => {
             if (null != g && (t && (await (0, c.en)(g.id, e, { throwErr: !0 })), h)) {
                 let e = {

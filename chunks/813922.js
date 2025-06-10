@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(951665),
     o = n(428760),
     c = n(55889),
-    u = n(300453),
-    d = n(620436),
+    d = n(300453),
+    u = n(620436),
     m = n(273504),
     g = n(388032),
     p = n(461367);
@@ -72,7 +72,7 @@ function x(e) {
     return (0, r.jsxs)('div', {
         className: p.cardContentsContainer,
         children: [
-            (0, r.jsxs)(u.Z, {
+            (0, r.jsxs)(d.Z, {
                 step: 1,
                 header: g.intl.string(g.t['ue+tnZ']),
                 children: [
@@ -94,8 +94,8 @@ function x(e) {
                     })
                 ]
             }),
-            (0, r.jsx)(d.Z, { type: d.Z.Type.ARROW_DOWN }),
-            (0, r.jsx)(u.Z, {
+            (0, r.jsx)(u.Z, { type: u.Z.Type.ARROW_DOWN }),
+            (0, r.jsx)(d.Z, {
                 step: 2,
                 header: g.intl.string(g.t['18TOiY']),
                 children: (0, r.jsx)(s.Z, {
@@ -103,8 +103,8 @@ function x(e) {
                     onChangeRule: O
                 })
             }),
-            (0, r.jsx)(d.Z, { type: d.Z.Type.CROSS }),
-            (0, r.jsx)(u.Z, {
+            (0, r.jsx)(u.Z, { type: u.Z.Type.CROSS }),
+            (0, r.jsx)(d.Z, {
                 step: 3,
                 header: g.intl.string(g.t.u5xPPT),
                 children: (0, r.jsx)(c.Z, {

@@ -53,20 +53,20 @@ function c(e, t) {
         e
     );
 }
-function u(e) {
+function d(e) {
     var t = (function (e, t) {
-        if ('object' !== d(e) || null === e) return e;
+        if ('object' !== u(e) || null === e) return e;
         var n = e[Symbol.toPrimitive];
         if (void 0 !== n) {
             var r = n.call(e, t || 'default');
-            if ('object' !== d(r)) return r;
+            if ('object' !== u(r)) return r;
             throw TypeError('@@toPrimitive must return a primitive value.');
         }
         return ('string' === t ? String : Number)(e);
     })(e, 'string');
-    return 'symbol' === d(t) ? t : String(t);
+    return 'symbol' === u(t) ? t : String(t);
 }
-function d(e) {
+function u(e) {
     return e && 'undefined' != typeof Symbol && e.constructor === Symbol ? 'symbol' : typeof e;
 }
 let m = '_errors',
@@ -105,7 +105,7 @@ async function p(e, t) {
                                       for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                                   }
                                   return i;
-                              })(e, [m].map(u))
+                              })(e, [m].map(d))
                           ).map((e) => {
                               var t;
                               let [n, r] = e,
@@ -145,14 +145,14 @@ let f = (0, i.throttle)(p, 1000, { leading: !1 });
 function h(e, t) {
     var n, l;
     let [s, a] = r.useState([]),
-        [u, d] = r.useState(null),
+        [d, u] = r.useState(null),
         [m, g] = r.useState(null != (l = null == e || null == (n = e.triggerMetadata) ? void 0 : n.regexPatterns) ? l : []),
         h = r.useCallback(
             (t) => {
                 t.length < 3 ||
                     f(c(o({}, e), { triggerMetadata: c(o({}, e.triggerMetadata), { regexPatterns: [t] }) }), (e) => {
                         var t;
-                        return d(null != (t = e[0]) ? t : null);
+                        return u(null != (t = e[0]) ? t : null);
                     });
             },
             [e]
@@ -160,13 +160,13 @@ function h(e, t) {
     return {
         patterns: m,
         errors: s,
-        valueError: u,
+        valueError: d,
         validatePatternsChanged: r.useCallback(
             (n, r) => {
                 (0, i.isEqual)(n, r) ||
                     (f.cancel(),
                     p(c(o({}, e), { triggerMetadata: c(o({}, e.triggerMetadata), { regexPatterns: n }) }), (e) => {
-                        a(e), 0 === e.length && d(null);
+                        a(e), 0 === e.length && u(null);
                     }),
                     g(n),
                     null == t || t(n));

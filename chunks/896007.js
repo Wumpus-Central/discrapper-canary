@@ -10,8 +10,8 @@ var r = n(223892),
     a = n(144507),
     o = n(823379),
     c = n(146305),
-    u = n(981631),
-    d = n(388032);
+    d = n(981631),
+    u = n(388032);
 let { getSectionDefinition: m } = c.Z,
     g = {
         HEADER: 'HEADER',
@@ -74,52 +74,52 @@ function p(e) {
         N = [];
     N.push({
         section: g.HEADER,
-        label: '' !== c.toString() ? c.toString() : d.intl.string(d.t['154/bG'])
+        label: '' !== c.toString() ? c.toString() : u.intl.string(u.t['154/bG'])
     }),
-        N.push(m(u.pNK.PROFILE, y)),
-        N.push(m(u.pNK.TAG, y)),
-        N.push(m(u.pNK.ENGAGEMENT, y)),
-        N.push(m(u.pNK.BOOST_PERKS, y)),
+        N.push(m(d.pNK.PROFILE, y)),
+        N.push(m(d.pNK.TAG, y)),
+        N.push(m(d.pNK.ENGAGEMENT, y)),
+        N.push(m(d.pNK.BOOST_PERKS, y)),
         O &&
             (N.push({ section: g.DIVIDER }),
             N.push({
                 section: g.HEADER,
-                label: d.intl.string(d.t.m6lkGx)
+                label: u.intl.string(u.t.m6lkGx)
             }),
-            N.push(m(u.pNK.EMOJI, y)),
-            N.push(m(u.pNK.STICKERS, y)),
-            N.push(m(u.pNK.SOUNDBOARD, y))),
+            N.push(m(d.pNK.EMOJI, y)),
+            N.push(m(d.pNK.STICKERS, y)),
+            N.push(m(d.pNK.SOUNDBOARD, y))),
         (p || h || b || v) &&
             (N.push({ section: g.DIVIDER }),
             N.push({
                 section: g.HEADER,
-                label: d.intl.string(d.t.bMAKMD)
+                label: u.intl.string(u.t.bMAKMD)
             }),
-            N.push(m(u.pNK.MEMBERS, y)),
-            N.push(m(u.pNK.ROLES, y)),
-            N.push(m(u.pNK.INVITES, y)),
-            N.push(m(u.pNK.ACCESS, y))),
+            N.push(m(d.pNK.MEMBERS, y)),
+            N.push(m(d.pNK.ROLES, y)),
+            N.push(m(d.pNK.INVITES, y)),
+            N.push(m(d.pNK.ACCESS, y))),
         N.push({ section: g.DIVIDER }),
         N.push({
             section: g.HEADER,
-            label: d.intl.string(d.t.wF3KJy)
+            label: u.intl.string(u.t.wF3KJy)
         }),
-        N.push(m(u.pNK.INTEGRATIONS, y)),
-        N.push(m(u.pNK.APP_DIRECTORY, y));
-    let I = !c.hasFeature(u.oNc.COMMUNITY) && ((0, l.Nb)(c.id) || (0, l.ze)(c.id));
+        N.push(m(d.pNK.INTEGRATIONS, y)),
+        N.push(m(d.pNK.APP_DIRECTORY, y));
+    let I = !c.hasFeature(d.oNc.COMMUNITY) && ((0, l.Nb)(c.id) || (0, l.ze)(c.id));
     (p || f || x || I) &&
         (N.push({ section: g.DIVIDER }),
         N.push({
             section: g.HEADER,
-            label: d.intl.string(d.t['5tbTdX'])
+            label: u.intl.string(u.t['5tbTdX'])
         }),
-        N.push(m(u.pNK.SAFETY, y)),
-        N.push(m(u.pNK.MODERATION, y)),
-        N.push(m(u.pNK.AUDIT_LOG, y)),
-        N.push(m(u.pNK.BANS, y)),
-        N.push(m(u.pNK.GUILD_AUTOMOD, y)));
-    let E = c.hasFeature(u.oNc.COMMUNITY) && j,
+        N.push(m(d.pNK.SAFETY, y)),
+        N.push(m(d.pNK.MODERATION, y)),
+        N.push(m(d.pNK.AUDIT_LOG, y)),
+        N.push(m(d.pNK.BANS, y)),
+        N.push(m(d.pNK.GUILD_AUTOMOD, y)));
+    let E = c.hasFeature(d.oNc.COMMUNITY) && j,
         S = C();
-    return (p || E || S) && (N.push({ section: g.DIVIDER }), N.push(m(u.pNK.COMMUNITY, y)), N.push(m(u.pNK.ONBOARDING, y)), N.push(m(u.pNK.ANALYTICS, y)), N.push(m(u.pNK.COMMUNITY_WELCOME, y)), N.push(m(u.pNK.DISCOVERY_LANDING_PAGE, y)), N.push(m(u.pNK.ROLE_SUBSCRIPTIONS, y)), N.push(m(u.pNK.GUILD_PRODUCTS, y)), N.push(m(u.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE, y))), N.push({ section: g.DIVIDER }), N.push(m(u.pNK.GUILD_PREMIUM, y)), N.push(m(u.pNK.GUILD_TEMPLATES, y)), N.push(m(u.pNK.DELETE, y)), N.filter(o.lm);
+    return (p || E || S) && (N.push({ section: g.DIVIDER }), N.push(m(d.pNK.COMMUNITY, y)), N.push(m(d.pNK.ONBOARDING, y)), N.push(m(d.pNK.ANALYTICS, y)), N.push(m(d.pNK.COMMUNITY_WELCOME, y)), N.push(m(d.pNK.DISCOVERY_LANDING_PAGE, y)), N.push(m(d.pNK.ROLE_SUBSCRIPTIONS, y)), N.push(m(d.pNK.GUILD_PRODUCTS, y)), N.push(m(d.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE, y))), N.push({ section: g.DIVIDER }), N.push(m(d.pNK.GUILD_PREMIUM, y)), N.push(m(d.pNK.GUILD_TEMPLATES, y)), N.push(m(d.pNK.DELETE, y)), N.filter(o.lm);
 }
 let f = { generateSections: p };

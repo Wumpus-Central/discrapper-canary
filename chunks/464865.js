@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(497321),
     o = n(246946),
     c = n(63063),
-    u = n(621319),
-    d = n(44550),
+    d = n(621319),
+    u = n(44550),
     m = n(586382),
     g = n(859481),
     p = n(981631),
@@ -22,16 +22,16 @@ function x(e) {
             originalVanityURLCode: j,
             errorDetails: _,
             fetched: v
-        } = (0, l.cj)([d.Z], () => ({
-            vanityURLCode: d.Z.vanityURLCode,
-            vanityURLUses: d.Z.vanityURLUses,
-            originalVanityURLCode: d.Z.originalVanityURLCode,
-            errorDetails: d.Z.errorDetails,
-            fetched: d.Z.fetchedVanityURL
+        } = (0, l.cj)([u.Z], () => ({
+            vanityURLCode: u.Z.vanityURLCode,
+            vanityURLUses: u.Z.vanityURLUses,
+            originalVanityURLCode: u.Z.originalVanityURLCode,
+            errorDetails: u.Z.errorDetails,
+            fetched: u.Z.fetchedVanityURL
         })),
         O = null == t ? void 0 : t.id;
     return (i.useEffect(() => {
-        null == O || v || (0, u.U5)(O);
+        null == O || v || (0, d.U5)(O);
     }, [v, O]),
     null == t)
         ? null

@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(562075),
     o = n(539202),
     c = n(866442),
-    u = n(442837),
-    d = n(481060),
+    d = n(442837),
+    u = n(481060),
     m = n(239091),
     g = n(749210),
     p = n(493773),
@@ -73,12 +73,12 @@ let R = 'DRAGGABLE_ROLE';
 function Z(e) {
     var t, i;
     let l,
-        { guild: u, role: g, highestRole: p, selectedItem: f, onClick: b, currentPosition: _, onDragStart: v, onDragReset: O, onDragComplete: y, roleStyle: N } = e,
-        I = (0, C.T)(u, p, g),
-        S = (0, h.pM)(u.id, g.id),
+        { guild: d, role: g, highestRole: p, selectedItem: f, onClick: b, currentPosition: _, onDragStart: v, onDragReset: O, onDragComplete: y, roleStyle: N } = e,
+        I = (0, C.T)(d, p, g),
+        S = (0, h.pM)(d.id, g.id),
         Z = null == I && !S,
         D = (null == (t = g.tags) ? void 0 : t.guild_connections) !== void 0,
-        k = (0, j.X)(u.id, g.colorStrings),
+        k = (0, j.X)(d.id, g.colorStrings),
         [, A] = (0, a.c)({
             type: R,
             item: () => (
@@ -113,17 +113,17 @@ function Z(e) {
                   className: T.verifiedRoleIcon
               })
             : 'dot' === N
-              ? (0, r.jsx)(d.FhE, {
+              ? (0, r.jsx)(u.FhE, {
                     color: G,
                     colors: k,
                     background: !1,
                     tooltip: !1
                 })
-              : (0, r.jsx)(d.xko, {
+              : (0, r.jsx)(u.xko, {
                     color: G,
                     colors: k
                 })),
-        (0, r.jsxs)(d.njP.Item, {
+        (0, r.jsxs)(u.njP.Item, {
             className: s()(T.row, {
                 [T.dragBefore]: null !== L && _ < L,
                 [T.dragAfter]: null !== L && _ > L
@@ -140,7 +140,7 @@ function Z(e) {
                             e,
                             w(P({}, t), {
                                 role: g,
-                                guild: u
+                                guild: d
                             })
                         );
                 });
@@ -158,7 +158,7 @@ function Z(e) {
                           tooltipText: I
                       })
                     : null,
-                (0, r.jsx)(d.Text, {
+                (0, r.jsx)(u.Text, {
                     variant: 'text-sm/medium',
                     color: S ? 'header-primary' : 'interactive-active',
                     lineClamp: 1,
@@ -170,9 +170,9 @@ function Z(e) {
 }
 function D(e) {
     let { guild: t, currentRoleId: n, setCurrentRoleId: l, setSelectedSection: a } = e,
-        o = (0, u.e7)([O.Z], () => O.Z.roles),
-        c = (0, u.e7)([_.Z], () => _.Z.getHighestRole(t)),
-        m = (0, u.e7)([f.Z], () => f.Z.roleStyle),
+        o = (0, d.e7)([O.Z], () => O.Z.roles),
+        c = (0, d.e7)([_.Z], () => _.Z.getHighestRole(t)),
+        m = (0, d.e7)([f.Z], () => f.Z.roleStyle),
         [h, x] = i.useState(o.length),
         { scrolledToTop: j, handleScroll: C } = (0, N.V)(),
         { handleDragStart: E, handleDragReset: R, handleDragComplete: D } = (0, y.Z)(o),
@@ -202,12 +202,12 @@ function D(e) {
                 (0, r.jsxs)('div', {
                     className: s()(T.titleContainer, { [T.titleElevated]: !j }),
                     children: [
-                        (0, r.jsxs)(d.P3F, {
+                        (0, r.jsxs)(u.P3F, {
                             className: T.title,
                             onClick: () => l(null),
                             children: [
                                 (0, r.jsx)(v.Z, { direction: v.Z.Directions.LEFT }),
-                                (0, r.jsx)(d.Text, {
+                                (0, r.jsx)(u.Text, {
                                     className: T.titleText,
                                     variant: 'text-md/semibold',
                                     color: 'none',
@@ -215,20 +215,20 @@ function D(e) {
                                 })
                             ]
                         }),
-                        (0, r.jsx)(d.ua7, {
+                        (0, r.jsx)(u.ua7, {
                             position: 'top',
                             'aria-label': S.intl.string(S.t.AbxKtr),
-                            text: (0, r.jsx)(d.Text, {
+                            text: (0, r.jsx)(u.Text, {
                                 className: T.tooltip,
                                 variant: 'text-sm/normal',
                                 children: S.intl.string(S.t.AbxKtr)
                             }),
                             children: (e) =>
                                 (0, r.jsx)(
-                                    d.P3F,
+                                    u.P3F,
                                     w(P({ className: T.addRole }, e), {
                                         onClick: L,
-                                        children: (0, r.jsx)(d.qJs, {
+                                        children: (0, r.jsx)(u.qJs, {
                                             size: 'custom',
                                             color: 'currentColor',
                                             width: 20,
@@ -239,11 +239,11 @@ function D(e) {
                         })
                     ]
                 }),
-                (0, r.jsx)(d.Den, {
+                (0, r.jsx)(u.Den, {
                     className: T.list,
                     ref: k,
                     onScroll: C,
-                    children: (0, r.jsx)(d.njP, {
+                    children: (0, r.jsx)(u.njP, {
                         selectedItem: n,
                         onItemSelect: (e) => l(e),
                         orientation: 'vertical',

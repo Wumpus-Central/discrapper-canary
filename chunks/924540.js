@@ -1,5 +1,5 @@
 n.d(t, {
-    $H: () => g,
+    $H: () => b,
     GN: () => m
 });
 var r = n(255367),
@@ -13,14 +13,14 @@ var r = n(255367),
     d = n(639119),
     p = n(388032),
     f = n(952849);
-function b(e) {
+function g(e) {
     let { isTabSelected: t, expiresAt: n, trialDuration: s, className: u } = e,
         d = i.useMemo(() => Date.parse(n), [n]),
-        b = (0, l.Z)(d, 60000);
-    return Object.values(b).every((e) => 0 === e)
+        g = (0, l.Z)(d, 60000);
+    return Object.values(g).every((e) => 0 === e)
         ? null
         : (0, r.jsx)(a.ua7, {
-              text: (0, c.QX)(b, {
+              text: (0, c.QX)(g, {
                   days: p.t.qVGNkZ,
                   hours: p.t.wyg9a2,
                   minutes: p.t.IzmIlZ
@@ -88,7 +88,7 @@ function b(e) {
               }
           });
 }
-function g(e) {
+function b(e) {
     var t;
     let { isTabSelected: n, trialOffer: i } = e,
         s = null == (t = (0, d.N)()) ? void 0 : t.subscription_trial,
@@ -114,7 +114,7 @@ function m(e) {
 function _(e) {
     let { isTabSelected: t, badgeCopy: n, offerExpiresAt: i } = e;
     return null != i
-        ? (0, r.jsx)(b, {
+        ? (0, r.jsx)(g, {
               expiresAt: i,
               isTabSelected: t,
               trialDuration: n

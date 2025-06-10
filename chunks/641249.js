@@ -7,8 +7,8 @@ var i = n(442837),
     a = n(723047),
     o = n(727843),
     c = n(290348),
-    u = n(971792),
-    d = n(861345),
+    d = n(971792),
+    u = n(861345),
     m = n(331146),
     g = n(798680),
     p = n(388032),
@@ -59,7 +59,7 @@ function x(e, t) {
 function b() {
     let { editStateId: e, guildId: t } = (0, o.N)(),
         [b, j] = c.XZ(e, t),
-        _ = (0, u.Z)(t, e),
+        _ = (0, d.Z)(t, e),
         { setCurrentTab: v } = (0, g.dw)(),
         O = () => v(g.ue.EMOJIS),
         C = (0, i.e7)([s.Z], () => s.Z.getGuild(t)),
@@ -103,7 +103,7 @@ function b() {
                 }
             }),
             null != b && b.size > 0 ? (0, r.jsx)(l.LZC, { size: 8 }) : null,
-            (0, r.jsx)(d.s, {
+            (0, r.jsx)(u.s, {
                 onClick: function () {
                     (0, l.ZDy)(async () => {
                         let { EmojiAddModal: e } = await n.e('21112').then(n.bind(n, 301160));

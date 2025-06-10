@@ -7,8 +7,8 @@ var i = n(442837),
     a = n(367907),
     o = n(45966),
     c = n(734893),
-    u = n(661824),
-    d = n(430824),
+    d = n(661824),
+    u = n(430824),
     m = n(626135),
     g = n(983135),
     p = n(8426),
@@ -68,7 +68,7 @@ function N(e) {
         l = (0, i.e7)([o.Z], () => o.Z.getEnabled(t)),
         { location: c } = (0, s.O)();
     c.object = n ? _.qAy.ONBOARDING_EDIT : _.qAy.ONBOARDING_REVIEW;
-    let d = async function () {
+    let u = async function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
             l
                 ? (await (0, h.$y)(t, !1),
@@ -125,7 +125,7 @@ function N(e) {
                     },
                     disableGoodStatus: n
                 }),
-                (0, r.jsx)(u.Z, { className: O.divider }),
+                (0, r.jsx)(d.Z, { className: O.divider }),
                 (0, r.jsx)(j.ap, {
                     guildId: t,
                     onEdit: () => {
@@ -140,7 +140,7 @@ function N(e) {
                     },
                     disableGoodStatus: n
                 }),
-                (0, r.jsx)(u.Z, { className: O.divider }),
+                (0, r.jsx)(d.Z, { className: O.divider }),
                 (0, r.jsx)(j.P_, {
                     guildId: t,
                     onEdit: () => {
@@ -170,7 +170,7 @@ function N(e) {
                       children: [
                           (0, r.jsx)(S, {
                               guildId: t,
-                              handleOnboardingToggle: d
+                              handleOnboardingToggle: u
                           }),
                           b
                       ]
@@ -184,7 +184,7 @@ function N(e) {
                       children: [
                           (0, r.jsx)(T, {
                               guildId: t,
-                              handleOnboardingToggle: d,
+                              handleOnboardingToggle: u,
                               handlePreview: f
                           }),
                           b
@@ -304,7 +304,7 @@ function T(e) {
     let { guildId: t, handleOnboardingToggle: n, handlePreview: s } = e,
         a = (0, j.$$)(t),
         o = (0, i.e7)([f.Z], () => f.Z.getSettings()),
-        u = (0, c.uo)(o);
+        d = (0, c.uo)(o);
     return (0, r.jsxs)('div', {
         className: O.reviewHeader,
         children: [
@@ -334,7 +334,7 @@ function T(e) {
                     (0, r.jsx)(l.zxk, {
                         size: l.zxk.Sizes.SMALL,
                         color: l.zxk.Colors.BRAND,
-                        onClick: () => n(u),
+                        onClick: () => n(d),
                         disabled: !a,
                         children: v.intl.string(v.t.Yz7hsL)
                     })
@@ -345,7 +345,7 @@ function T(e) {
 }
 function P(e) {
     let { guildId: t } = e,
-        n = (0, i.e7)([d.Z], () => d.Z.getGuild(t));
+        n = (0, i.e7)([u.Z], () => u.Z.getGuild(t));
     return null == n || n.verificationLevel < _.sFg.VERY_HIGH
         ? null
         : (0, r.jsxs)('div', {

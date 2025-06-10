@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(224706),
     o = n(100527),
     c = n(906732),
-    u = n(314852),
-    d = n(65361),
+    d = n(314852),
+    u = n(65361),
     m = n(910200),
     g = n(496675),
     p = n(434404),
@@ -27,7 +27,7 @@ let E = function () {
     let { analyticsLocations: e } = (0, c.ZP)(o.Z.GUILD_SETTINGS_PROFILE_PAGE),
         t = (0, l.e7)([f.Z], () => f.Z.getGuild(), []),
         n = null == t ? void 0 : t.id,
-        { fetchGuildProfile: E, fetchStatus: S } = (0, d.u)(null == t ? void 0 : t.id),
+        { fetchGuildProfile: E, fetchStatus: S } = (0, u.u)(null == t ? void 0 : t.id),
         T = (0, l.e7)([f.Z], () => f.Z.getGuildProfile(), []),
         P = (0, l.e7)([g.Z], () => g.Z.can(y.Plq.MANAGE_GUILD, t)),
         w = i.useCallback(
@@ -51,9 +51,9 @@ let E = function () {
     return (i.useEffect(() => {
         a.Z.getDetectableGames();
     }, []),
-    S === u.a.FETCHED && null == T)
+    S === d.a.FETCHED && null == T)
         ? (0, r.jsx)(v.g, { forceFetchGuildProfile: Z })
-        : S === u.a.NOT_FETCHED || S === u.a.FETCHING
+        : S === d.a.NOT_FETCHED || S === d.a.FETCHING
           ? (0, r.jsx)('main', {
                 className: I.spinner,
                 children: (0, r.jsx)(s.$jN, {})

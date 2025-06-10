@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(884858),
     o = n(516129),
     c = n(768581),
-    u = n(434404),
-    d = n(949640),
+    d = n(434404),
+    u = n(949640),
     m = n(981631),
     g = n(30513),
     p = n(200299),
@@ -19,13 +19,13 @@ function x(e) {
         b = n && x,
         { analyticsLocations: j } = (0, s.ZP)(),
         _ = i.useCallback((e) => {
-            u.Z.updateGuild({ splash: e });
+            d.Z.updateGuild({ splash: e });
         }, []),
         v = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
-                    (0, d.E6)({
+                    (0, u.E6)({
                         guild: t,
                         analyticsLocations: j,
                         analyticsSection: m.jXE.GUILD_INVITE_BACKGROUND,

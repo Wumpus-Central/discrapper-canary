@@ -7,11 +7,11 @@ var r = n(73800),
     o = n(198139);
 function c(e, t) {
     let n = null == t ? void 0 : t.team,
-        { payoutsByPeriod: c, loading: u } = (0, l.Z)(null == t ? void 0 : t.id, {
+        { payoutsByPeriod: c, loading: d } = (0, l.Z)(null == t ? void 0 : t.id, {
             groupType: o.uw.SERVER_ROLE_SUBSCRIPTION,
             teamId: null == n ? void 0 : n.id
         }),
-        d = (0, s.f)('useEarningMetrics'),
+        u = (0, s.f)('useEarningMetrics'),
         m = (0, a.Z)(e),
         {
             currentPeriod: g,
@@ -71,7 +71,7 @@ function c(e, t) {
             };
         }, [c, m]);
     return {
-        loading: u || !d,
+        loading: d || !u,
         team: n,
         currentPeriod: g,
         previousPeriods: p,

@@ -7,8 +7,8 @@ var i = n(793030),
     a = n(100527),
     o = n(906732),
     c = n(34586),
-    u = n(496675),
-    d = n(999382),
+    d = n(496675),
+    u = n(999382),
     m = n(723914),
     g = n(30818),
     p = n(997698),
@@ -20,8 +20,8 @@ var i = n(793030),
     _ = n(515636);
 let v = function () {
     let { analyticsLocations: e } = (0, o.ZP)(a.Z.GUILD_SETTINGS_ENGAGEMENT_PAGE),
-        t = (0, l.e7)([d.Z], () => d.Z.getProps().guild, []),
-        n = (0, l.e7)([u.Z], () => null != t && u.Z.can(b.Plq.MANAGE_GUILD, t)),
+        t = (0, l.e7)([u.Z], () => u.Z.getProps().guild, []),
+        n = (0, l.e7)([d.Z], () => null != t && d.Z.can(b.Plq.MANAGE_GUILD, t)),
         v = (0, c.E)(t),
         O = (0, s.l9)(null != t ? t : void 0);
     return null == t

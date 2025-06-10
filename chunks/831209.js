@@ -208,6 +208,7 @@ var r = (function (e) {
         (e.EMBED_BACKGROUND = 'var(--embed-background)'),
         (e.EMBED_BACKGROUND_ALTERNATE = 'var(--embed-background-alternate)'),
         (e.EMBED_TITLE = 'var(--embed-title)'),
+        (e.EXPERIMENTAL_AVATAR_EMBED_BG = 'var(--experimental-avatar-embed-bg)'),
         (e.EXPRESSION_PICKER_BG = 'var(--expression-picker-bg)'),
         (e.FOCUS_PRIMARY = 'var(--focus-primary)'),
         (e.FORUM_POST_EXTRA_MEDIA_COUNT_CONTAINER_BACKGROUND = 'var(--forum-post-extra-media-count-container-background)'),

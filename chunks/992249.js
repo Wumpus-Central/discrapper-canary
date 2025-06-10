@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685);
+n.d(t, { Z: () => d }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(481060),
     o = n(717251),
     c = n(313795);
-function u(e) {
-    var { action: t, children: n, className: l, onExpandChange: u, loading: d } = e,
+function d(e) {
+    var { action: t, children: n, className: l, onExpandChange: d, loading: u } = e,
         m = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -29,7 +29,7 @@ function u(e) {
         })(e, ['action', 'children', 'className', 'onExpandChange', 'loading']);
     let [g, p] = i.useState(!1),
         f = (e) => {
-            p(e), null == u || u(e);
+            p(e), null == d || d(e);
         };
     return (0, r.jsx)(a.zF9, {
         className: s()(c.groupContainer, l),
@@ -71,7 +71,7 @@ function u(e) {
                 (i = i =
                     {
                         className: c.groupHeaderRow,
-                        action: d ? (0, r.jsx)(a.$jN, { type: a.$jN.Type.PULSING_ELLIPSIS }) : t,
+                        action: u ? (0, r.jsx)(a.$jN, { type: a.$jN.Type.PULSING_ELLIPSIS }) : t,
                         onClick: (e) => {
                             f(!g), l(e);
                         }

@@ -7,15 +7,15 @@ var i = n(120356),
     a = n(137158),
     o = n(664305);
 let c = function (e) {
-    let { formField: t, index: n, isDragEnabled: i, isDropHovered: c, onDrop: u, onEdit: d, onRemove: m, canRemove: g, actionsLocation: p, fieldStyle: f } = e,
+    let { formField: t, index: n, isDragEnabled: i, isDropHovered: c, onDrop: d, onEdit: u, onRemove: m, canRemove: g, actionsLocation: p, fieldStyle: f } = e,
         { label: h } = t;
     return (0, r.jsx)(a.Z, {
         field: t,
         index: n,
         isDragEnabled: i,
         isDropHovered: c,
-        onDrop: u,
-        onEdit: d,
+        onDrop: d,
+        onEdit: u,
         onRemove: m,
         title: h,
         canRemove: g,

@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(70086),
     o = n(949640),
     c = n(981631),
-    u = n(30513),
-    d = n(486324),
+    d = n(30513),
+    u = n(486324),
     m = n(200299),
     g = n(388032);
 function p(e) {
@@ -30,7 +30,7 @@ function p(e) {
                         analyticsLocations: f,
                         analyticsSection: c.jXE.GUILD_BANNER,
                         analyticsObject: c.qAy.BUTTON_CTA,
-                        perks: (0, u.XO)()
+                        perks: (0, d.XO)()
                     });
             },
             [f, t]
@@ -42,7 +42,7 @@ function p(e) {
               className: p,
               onClick: () =>
                   (0, o.mw)({
-                      uploadType: d.pC.GUILD_BANNER,
+                      uploadType: u.pC.GUILD_BANNER,
                       maxFileSizeBytes: m.B,
                       onComplete: x,
                       analyticsLocation: {

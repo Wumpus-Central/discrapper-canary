@@ -1,11 +1,11 @@
 n.d(t, {
     Gf: () => x,
     Jf: () => g,
-    OW: () => d,
+    OW: () => u,
     S1: () => a,
     TW: () => m,
     TY: () => c,
-    Uv: () => u,
+    Uv: () => d,
     _l: () => f,
     d_: () => h,
     lO: () => o,
@@ -40,14 +40,14 @@ function c(e) {
         id: e
     });
 }
-function u(e, t) {
+function d(e, t) {
     r.Z.dispatch({
         type: 'GUILD_SETTINGS_ROLES_UPDATE_NAME',
         id: e,
         name: t
     });
 }
-function d(e, t) {
+function u(e, t) {
     r.Z.dispatch({
         type: 'GUILD_SETTINGS_ROLES_UPDATE_COLOR',
         id: e,

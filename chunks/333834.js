@@ -206,6 +206,19 @@ function I(e) {
                 },
                 'loading-more-after'
             )),
+        (function (e) {
+            let { loadingInitial: t, messagesByCategory: n } = e,
+                r = i.useRef(!1),
+                l = null != n && n.UNREAD.length > 0,
+                o = null == n || t,
+                { setOpenStateFromUnreads: s } = (0, y.Z)();
+            i.useEffect(() => {
+                o || r.current || (s(l), (r.current = !0));
+            }, [s, l, o]);
+        })({
+            messagesByCategory: U,
+            loadingInitial: n
+        }),
         (0, b.vU)({
             notificationCenterVariant: R,
             wrappedMessages: t,

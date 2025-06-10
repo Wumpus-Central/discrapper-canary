@@ -10,8 +10,8 @@ var i = n(990547),
     a = n(605288),
     o = n(787051),
     c = n(346163),
-    u = n(587431),
-    d = n(271267),
+    d = n(587431),
+    u = n(271267),
     m = n(320893),
     g = n(81509),
     p = n(662379),
@@ -69,11 +69,11 @@ function j(e) {
         : p.actionRequired
           ? (0, r.jsx)(f.Z, { guild: t })
           : null != g
-            ? (0, r.jsx)(u.Z, { children: g.message })
+            ? (0, r.jsx)(d.Z, { children: g.message })
             : (0, r.jsxs)('div', {
                   className: x.container,
                   children: [
-                      (0, r.jsx)(d.Z, {
+                      (0, r.jsx)(u.Z, {
                           guild: t,
                           monetizationEligibility: n
                       }),

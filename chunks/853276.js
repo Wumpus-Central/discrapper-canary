@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(442837),
     o = n(481060),
     c = n(393238),
-    u = n(607070),
-    d = n(596390),
+    d = n(607070),
+    u = n(596390),
     m = n(576932);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -54,7 +54,7 @@ function p(e, t) {
 }
 let f = i.forwardRef(function (e, t) {
     var n, l;
-    let { value: a, isSelected: c, isEditing: u, forceShowErrorTooltip: d = !1, error: f } = e,
+    let { value: a, isSelected: c, isEditing: d, forceShowErrorTooltip: u = !1, error: f } = e,
         [h, x, b] = i.useMemo(() => {
             if (null == f) return [];
             let { erroringCharacterOffset: e = 0, erroringCharacterLength: t = a.length } = null != f ? f : {},
@@ -64,7 +64,7 @@ let f = i.forwardRef(function (e, t) {
     return null == f
         ? (0, r.jsx)('div', {
               className: s()(m.chipletValue, {
-                  [m.isEditing]: u,
+                  [m.isEditing]: d,
                   [m.isSelected]: c
               }),
               ref: t,
@@ -88,7 +88,7 @@ let f = i.forwardRef(function (e, t) {
                 tooltipClassName: m.errorTooltip,
                 color: o.ua7.Colors.RED,
                 position: 'left',
-                forceOpen: d || void 0,
+                forceOpen: u || void 0,
                 children: (e) =>
                     (0, r.jsxs)(
                         'div',
@@ -97,9 +97,9 @@ let f = i.forwardRef(function (e, t) {
                                 {
                                     ref: t,
                                     className: s()(m.chipletValue, {
-                                        [m.isEditing]: u,
-                                        [m.isError]: null != f && !u,
-                                        [m.isOverflowing]: null != f && !u
+                                        [m.isEditing]: d,
+                                        [m.isError]: null != f && !d,
+                                        [m.isOverflowing]: null != f && !d
                                     })
                                 },
                                 e
@@ -120,8 +120,8 @@ let f = i.forwardRef(function (e, t) {
           : (0, r.jsxs)('div', {
                 ref: t,
                 className: s()(m.chipletValue, {
-                    [m.isEditing]: u,
-                    [m.isError]: null != f && !u
+                    [m.isEditing]: d,
+                    [m.isError]: null != f && !d
                 }),
                 children: [
                     (0, r.jsx)('span', { children: h }),
@@ -129,7 +129,7 @@ let f = i.forwardRef(function (e, t) {
                         text: f.message,
                         color: o.ua7.Colors.RED,
                         position: 'top',
-                        forceOpen: d || void 0,
+                        forceOpen: u || void 0,
                         children: (e) =>
                             (0, r.jsx)(
                                 'span',
@@ -150,7 +150,7 @@ function h(e) {
         [O, C] = i.useState(!1),
         { ref: y, width: N = 0 } = (0, c.ZP)(O),
         { ref: I, width: E = 0 } = (0, c.ZP)(O),
-        S = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
+        S = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
         [T, P] = i.useState(j),
         w = i.useRef(null),
         R = N > E ? N : E;
@@ -159,7 +159,7 @@ function h(e) {
             ? (P(!0),
               (w.current = setTimeout(() => {
                   P(!1), (w.current = null);
-              }, d.I5)))
+              }, u.I5)))
             : P(!1);
     }, [j]),
         i.useEffect(
@@ -188,7 +188,7 @@ function h(e) {
         k = i.useCallback(
             (e) => {
                 let n = t.trim().length <= 0;
-                d.ye.has(e.key) ? (e.preventDefault(), e.stopPropagation(), D(!0)) : 'Backspace' === e.key && n && (e.preventDefault(), e.stopPropagation(), D(!0));
+                u.ye.has(e.key) ? (e.preventDefault(), e.stopPropagation(), D(!0)) : 'Backspace' === e.key && n && (e.preventDefault(), e.stopPropagation(), D(!0));
             },
             [D, t]
         ),

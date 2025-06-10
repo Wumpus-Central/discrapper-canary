@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(481060),
     o = n(999382),
     c = n(279542),
-    u = n(823379),
-    d = n(63063),
+    d = n(823379),
+    u = n(63063),
     m = n(426563),
     g = n(727072),
     p = n(85960),
@@ -37,7 +37,7 @@ function y(e) {
             () =>
                 Object.values(null != Z ? Z : {})
                     .flat()
-                    .filter(u.lm),
+                    .filter(d.lm),
             [Z]
         ),
         A = {
@@ -116,7 +116,7 @@ function y(e) {
                             (0, r.jsx)(a.Text, {
                                 variant: 'text-sm/medium',
                                 className: C.helpUrl,
-                                children: O.intl.format(O.t['B+sgGh'], { helpUrl: d.Z.getArticleURL(v.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
+                                children: O.intl.format(O.t['B+sgGh'], { helpUrl: u.Z.getArticleURL(v.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
                             })
                         ]
                     }),

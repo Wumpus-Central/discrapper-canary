@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(442837),
     o = n(481060),
     c = n(367907),
-    u = n(605436),
-    d = n(228643),
+    d = n(605436),
+    u = n(228643),
     m = n(496675),
     g = n(626135),
     p = n(823379),
@@ -86,7 +86,7 @@ function E(e) {
                 })(
                     {
                         tab_opened: i,
-                        is_everyone: (0, u.pM)(T.id, r),
+                        is_everyone: (0, d.pM)(T.id, r),
                         role_id: r,
                         role_mentionable: null == n ? void 0 : n.mentionable,
                         role_hoist: null == n ? void 0 : n.hoist,
@@ -98,7 +98,7 @@ function E(e) {
             );
         }, [E, T.id, null == P ? void 0 : P.id]),
         i.useEffect(() => {
-            (null == P ? void 0 : P.id) != null && (0, d.sE)(T.id, P.id);
+            (null == P ? void 0 : P.id) != null && (0, u.sE)(T.id, P.id);
         }, [T.id, null == P ? void 0 : P.id]),
         null == P)
     )

@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(852860),
     o = n(881052),
     c = n(456268),
-    u = n(863249),
-    d = n(246364),
+    d = n(863249),
+    u = n(246364),
     m = n(983736),
     g = n(571728),
     p = n(699553),
@@ -94,7 +94,7 @@ function I(e) {
         G = i.useCallback(
             async (e, t, n) => {
                 try {
-                    await u.ZP.updateVerificationForm(T, e, t, n);
+                    await d.ZP.updateVerificationForm(T, e, t, n);
                 } catch (e) {
                     throw (Z(new o.Hx(e).getAnyErrorMessage()), e);
                 }
@@ -107,7 +107,7 @@ function I(e) {
                     t.length > 0
                         ? [
                               {
-                                  field_type: d.QJ.TERMS,
+                                  field_type: u.QJ.TERMS,
                                   label: C.intl.string(C.t['9suSIC']),
                                   values: t,
                                   required: !0

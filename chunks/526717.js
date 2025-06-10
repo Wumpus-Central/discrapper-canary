@@ -5,8 +5,8 @@ var r = n(73800),
     s = n(981631);
 function a(e, t, n) {
     var a, o;
-    let { isLoading: c, error: u, highlightedCreatorDetails: d } = (0, l.Z)(e),
-        m = null == d ? void 0 : d.store_page,
+    let { isLoading: c, error: d, highlightedCreatorDetails: u } = (0, l.Z)(e),
+        m = null == u ? void 0 : u.store_page,
         g = r.useMemo(() => {
             var e, t;
             let n = (function (e) {
@@ -34,7 +34,7 @@ function a(e, t, n) {
         }),
         h = r.useMemo(() => (null != g && g.length > t ? g.slice(0, t) : g), [g, t]),
         x = null != g && g.length > t ? g.length - t : null,
-        b = null == d ? void 0 : d.slug,
+        b = null == u ? void 0 : u.slug,
         j = null != b ? s.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(b) : void 0,
         _ = null == m || null == (a = m.guild) ? void 0 : a.name,
         v = null == m || null == (o = m.role_subscription) ? void 0 : o.subscriber_count,
@@ -56,6 +56,6 @@ function a(e, t, n) {
         : {
               hasAllImperativeDetails: O,
               isLoading: c,
-              error: u
+              error: d
           };
 }

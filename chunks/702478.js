@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(442837),
     o = n(544891),
     c = n(481060),
-    u = n(497321),
-    d = n(841470),
+    d = n(497321),
+    u = n(841470),
     m = n(142497),
     g = n(706454),
     p = n(650774),
@@ -135,7 +135,7 @@ let I = function (e, t, n) {
                           className: y.overviewData,
                           children: [
                               (0, r.jsx)(
-                                  d.Z,
+                                  u.Z,
                                   N(
                                       {
                                           title: C.intl.string(C.t.i0Nora),
@@ -145,7 +145,7 @@ let I = function (e, t, n) {
                                   )
                               ),
                               (0, r.jsx)(
-                                  d.Z,
+                                  u.Z,
                                   N(
                                       {
                                           title: C.intl.string(C.t.DDAHdX),
@@ -154,9 +154,9 @@ let I = function (e, t, n) {
                                       I(s.communicators, s.communicatorsChange, l)
                                   )
                               ),
-                              (0, r.jsx)(d.Z, N({ title: C.intl.string(C.t.hYeOqK) }, I(s.newMembers, s.newMembersChange, l))),
+                              (0, r.jsx)(u.Z, N({ title: C.intl.string(C.t.hYeOqK) }, I(s.newMembers, s.newMembersChange, l))),
                               (0, r.jsx)(
-                                  d.Z,
+                                  u.Z,
                                   N(
                                       {
                                           title: C.intl.string(C.t.jj7OPz),
@@ -193,7 +193,7 @@ let I = function (e, t, n) {
                 x
                     ? (0, r.jsx)('div', {
                           className: y.streamerMode,
-                          children: (0, r.jsx)(u.Z, {})
+                          children: (0, r.jsx)(d.Z, {})
                       })
                     : P
             ]

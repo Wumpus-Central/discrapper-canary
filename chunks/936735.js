@@ -6,18 +6,18 @@ var r = n(255367),
     a = n(339085),
     o = n(231053),
     c = n(183023),
-    u = n(650774),
-    d = n(231338);
+    d = n(650774),
+    u = n(231338);
 function m(e) {
     let { guild: t, discoverableGuild: n } = e,
         m = null == t ? void 0 : t.id,
         { memberCount: g, onlineCount: p } = (0, s.cj)(
-            [u.Z],
+            [d.Z],
             () => {
                 var e, t;
                 return {
-                    memberCount: null != (e = u.Z.getMemberCount(m)) ? e : 1234,
-                    onlineCount: null != (t = u.Z.getOnlineCount(m)) ? t : 1234
+                    memberCount: null != (e = d.Z.getMemberCount(m)) ? e : 1234,
+                    onlineCount: null != (t = d.Z.getOnlineCount(m)) ? t : 1234
                 };
             },
             [m]
@@ -95,7 +95,7 @@ function m(e) {
               expressionSourceApplication: null,
               expressionSourceGuild: h,
               node: x,
-              closePopout: d.dG,
+              closePopout: u.dG,
               nonce: f.current,
               demoMode: !0
           })

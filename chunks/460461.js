@@ -22,8 +22,8 @@ var r = n(255367),
     a = n(481060),
     o = n(225433),
     c = n(484614),
-    u = n(852860),
-    d = n(688465),
+    d = n(852860),
+    u = n(688465),
     m = n(970061),
     g = n(456268),
     p = n(134432),
@@ -52,7 +52,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             guild: v.Z.getGuild(),
             guildMetadata: v.Z.getMetadata()
         }));
-        return (0, r.jsx)(u.Z, {
+        return (0, r.jsx)(d.Z, {
             submitting: n,
             onReset: () => {
                 null != e && _.Z.init(e.id);
@@ -81,15 +81,15 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
     w = () => {
         var e;
         let t = i.useRef(null),
-            u = (0, l.e7)([v.Z], () => v.Z.getGuild()),
+            d = (0, l.e7)([v.Z], () => v.Z.getGuild()),
             [P, w] = i.useState(!1);
         i.useEffect(() => {
-            P || null == u || ((0, g.le)(), (0, g.aC)(u.id), (0, g.i3)(u.id), w(!0));
-        }, [u, P]);
-        let { canManageGuild: R } = (0, l.cj)([x.Z], () => ({ canManageGuild: x.Z.can(I.Plq.MANAGE_GUILD, u) })),
+            P || null == d || ((0, g.le)(), (0, g.aC)(d.id), (0, g.i3)(d.id), w(!0));
+        }, [d, P]);
+        let { canManageGuild: R } = (0, l.cj)([x.Z], () => ({ canManageGuild: x.Z.can(I.Plq.MANAGE_GUILD, d) })),
             Z = (0, l.e7)([v.Z], () => v.Z.isGuildMetadataLoaded()),
-            D = (0, l.e7)([v.Z], () => (null != u ? v.Z.getMetadata() : null)),
-            k = (0, l.e7)([v.Z], () => (null != u && (null == D ? void 0 : D.isPublished) ? v.Z.getSlug() : null)),
+            D = (0, l.e7)([v.Z], () => (null != d ? v.Z.getMetadata() : null)),
+            k = (0, l.e7)([v.Z], () => (null != d && (null == D ? void 0 : D.isPublished) ? v.Z.getSlug() : null)),
             [A, L] = i.useState([!0]),
             [M, G] = i.useState(!0),
             [U, B] = i.useState([!1]),
@@ -135,17 +135,17 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                     G(e.every((e) => !0 === e));
             }
         }, [D]);
-        let V = (0, l.e7)([v.Z], () => (null != u ? v.Z.getErrors() : null));
-        if (null == u || null == D) return null;
+        let V = (0, l.e7)([v.Z], () => (null != d ? v.Z.getErrors() : null));
+        if (null == d || null == D) return null;
         let Y = (e) => {
                 _.Z.updateGuild({ discoverySplash: e });
             },
             K = (e) => {
                 let t = () => {
-                    (0, g.W1)(u.id, e),
+                    (0, g.W1)(d.id, e),
                         e
                             ? (0, g.Vv)({
-                                  guildId: u.id,
+                                  guildId: d.id,
                                   primaryCategoryId: D.primaryCategoryId,
                                   keywords: D.keywords,
                                   emojiDiscoverabilityEnabled: D.emojiDiscoverabilityEnabled,
@@ -157,7 +157,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                   about: D.about
                               })
                             : (0, g.Vv)({
-                                  guildId: u.id,
+                                  guildId: d.id,
                                   primaryCategoryId: D.primaryCategoryId,
                                   keywords: D.keywords,
                                   emojiDiscoverabilityEnabled: D.emojiDiscoverabilityEnabled,
@@ -168,13 +168,13 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                   socialLinks: D.socialLinks,
                                   about: D.about
                               }),
-                        _.Z.saveGuild(u.id, {
-                            discoverySplash: u.discoverySplash,
-                            description: u.description
+                        _.Z.saveGuild(d.id, {
+                            discoverySplash: d.discoverySplash,
+                            description: d.description
                         });
                 };
                 if (e) return void t();
-                null != u.vanityURLCode
+                null != d.vanityURLCode
                     ? n
                           .e('66731')
                           .then(n.bind(n, 241485))
@@ -187,13 +187,13 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                 let n = [...D.socialLinks],
                     r = [...F],
                     i = [...A];
-                (r[t] = e), (n[t] = N.z[e].baseUrl), (i[t] = !0), L(i), z(r), G(i.every((e) => !0 === e)), (0, g.t$)(u.id, n);
+                (r[t] = e), (n[t] = N.z[e].baseUrl), (i[t] = !0), L(i), z(r), G(i.every((e) => !0 === e)), (0, g.t$)(d.id, n);
             },
             q = (e, t) => {
                 let n = [...D.socialLinks],
                     r = n[t],
                     i = e;
-                0 === r.length && i.length > 1 && !1 === RegExp('^https?:').test(i) && (i = 'https://' + i), /\.(zip|exe|pdf|dmg|msi|apk|rar|7z|tar|gz|iso|docx?|xlsx?|pptx?|mp4|mp3)$/i.test(i) || ((n[t] = i), (0, g.t$)(u.id, n));
+                0 === r.length && i.length > 1 && !1 === RegExp('^https?:').test(i) && (i = 'https://' + i), /\.(zip|exe|pdf|dmg|msi|apk|rar|7z|tar|gz|iso|docx?|xlsx?|pptx?|mp4|mp3)$/i.test(i) || ((n[t] = i), (0, g.t$)(d.id, n));
             },
             Q = (e) => {
                 let t = [...U];
@@ -203,7 +203,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                 let r = [...F];
                 r.splice(e, 1), z(r);
                 let i = [...D.socialLinks];
-                i.splice(e, 1), (0, g.t$)(u.id, i);
+                i.splice(e, 1), (0, g.t$)(d.id, i);
             },
             J = (e) => {
                 let { reason: t = '', emoji_name: n = '' } = e;
@@ -219,11 +219,11 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                     items: [
                         {
                             description: E.intl.string(E.t.DU8jFx),
-                            completed: null !== u.discoverySplash && '' !== u.discoverySplash
+                            completed: null !== d.discoverySplash && '' !== d.discoverySplash
                         },
                         {
                             description: E.intl.string(E.t.SW5OHx),
-                            completed: null !== u.description && '' !== u.description
+                            completed: null !== d.description && '' !== d.description
                         },
                         {
                             description: E.intl.string(E.t.m3b3WF),
@@ -257,7 +257,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                     (0, r.jsxs)(a.hjN, {
                                         className: S.mainContent,
                                         title: (0, r.jsxs)('div', {
-                                            children: [E.intl.string(E.t.kGlQGB), ' ', (0, r.jsx)(d.Z, { className: S.betaTag })]
+                                            children: [E.intl.string(E.t.kGlQGB), ' ', (0, r.jsx)(u.Z, { className: S.betaTag })]
                                         }),
                                         tag: a.RB0.H1,
                                         children: [
@@ -289,7 +289,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                             })(),
                                             (0, r.jsx)(a.$i$, { className: S.divider }),
                                             (() => {
-                                                if (null != u)
+                                                if (null != d)
                                                     return (0, r.jsxs)(r.Fragment, {
                                                         children: [
                                                             (0, r.jsxs)(a.hjN, {
@@ -306,7 +306,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                 ]
                                                             }),
                                                             (0, r.jsx)(O.E, {
-                                                                guildId: u.id,
+                                                                guildId: d.id,
                                                                 guildMetadata: D,
                                                                 isDisabled: !R
                                                             }),
@@ -318,7 +318,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                         children: E.intl.string(E.t.oOPlPD)
                                                                     }),
                                                                     (0, r.jsx)(C.Z, {
-                                                                        guild: u,
+                                                                        guild: d,
                                                                         guildMetadata: D,
                                                                         disabled: !R
                                                                     })
@@ -337,7 +337,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                             })(),
                                             (0, r.jsx)(a.$i$, { className: S.divider }),
                                             (() => {
-                                                if (null != u)
+                                                if (null != d)
                                                     return (0, r.jsxs)(r.Fragment, {
                                                         children: [
                                                             (0, r.jsxs)(a.hjN, {
@@ -368,10 +368,10 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                         ]
                                                                     }),
                                                                     (0, r.jsx)(h.Z, {
-                                                                        image: u.discoverySplash,
+                                                                        image: d.discoverySplash,
                                                                         makeURL: (e) =>
                                                                             b.ZP.getGuildDiscoverySplashURL({
-                                                                                id: u.id,
+                                                                                id: d.id,
                                                                                 splash: e,
                                                                                 size: 512 * (0, p.x_)()
                                                                             }),
@@ -406,7 +406,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                         children: E.intl.string(E.t.IBi6h4)
                                                     }),
                                                     (0, r.jsx)(a.Kx8, {
-                                                        value: null !== u.description ? u.description : '',
+                                                        value: null !== d.description ? d.description : '',
                                                         placeholder: E.intl.string(E.t.rFa9Ul),
                                                         onChange: (e) => {
                                                             var t;
@@ -443,7 +443,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                             children: (0, r.jsx)(y.Z, {
                                                                 reasonMinLength: 10,
                                                                 reasonMaxLength: 128,
-                                                                guildId: u.id,
+                                                                guildId: d.id,
                                                                 reasons: e
                                                             })
                                                         }),
@@ -479,7 +479,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                     value: D.about,
                                                                     placeholder: E.intl.string(E.t.TduTbm),
                                                                     onChange: (e) => {
-                                                                        (0, g.mA)(u.id, e);
+                                                                        (0, g.mA)(d.id, e);
                                                                     },
                                                                     minLength: 300,
                                                                     maxLength: 2400,
@@ -595,7 +595,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                         onClick: () => {
                                                             if (D.socialLinks.length < 9) {
                                                                 let e = [...D.socialLinks];
-                                                                (0, g.t$)(u.id, e.concat('')), z(F.concat(''));
+                                                                (0, g.t$)(d.id, e.concat('')), z(F.concat(''));
                                                             }
                                                         },
                                                         disabled: !R || D.socialLinks.length >= 9,

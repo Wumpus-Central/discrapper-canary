@@ -91,49 +91,51 @@ function j() {
         _ = r.useRef(null),
         y = r.useRef(null),
         [C, N] = r.useState(0.5),
-        O = (0, c.e7)([p.Z], () => p.Z.getInputDeviceId()),
-        E = (0, c.e7)([p.Z], () => p.Z.getEchoCancellation()),
+        O = (0, c.e7)([p.Z], () => p.Z.getKrispModels()),
+        E = (0, c.e7)([p.Z], () => p.Z.getKrispModelOverride()),
+        T = (0, c.e7)([p.Z], () => p.Z.getInputDeviceId()),
+        S = (0, c.e7)([p.Z], () => p.Z.getEchoCancellation()),
         {
-            noiseCancellation: T,
-            noiseSuppression: S,
-            noiseSuppressionSupported: P,
-            noiseCancellationSupported: I
+            noiseCancellation: P,
+            noiseSuppression: I,
+            noiseSuppressionSupported: w,
+            noiseCancellationSupported: k
         } = (0, c.cj)([p.Z], () => ({
             noiseCancellation: p.Z.getNoiseCancellation(),
             noiseSuppression: p.Z.getNoiseSuppression(),
             noiseSuppressionSupported: p.Z.isNoiseSuppressionSupported(),
             noiseCancellationSupported: p.Z.isNoiseCancellationSupported()
         })),
-        w = T ? 'KRISP' : S ? 'STANDARD' : 'NONE',
-        k = (0, m.N)(),
-        R = r.useCallback(() => {
+        R = P ? 'KRISP' : I ? 'STANDARD' : 'NONE',
+        A = (0, m.N)(),
+        Z = r.useCallback(() => {
             var e;
             null == (e = _.current) || e.stop(), (_.current = null), j(null);
         }, []);
-    function A() {
+    function L() {
         p.Z.getMediaEngine().stopRecordingRawSamples();
     }
-    function Z(e) {
-        if ((t && A(), R(), null == k)) return;
-        let n = k.createBufferSource();
-        (n.buffer = e.audioBuffer), (y.current = k.createGain()), (y.current.gain.value = C), n.connect(y.current), y.current.connect(k.destination), (n.loop = !0), n.start(), (_.current = n), j(e);
+    function D(e) {
+        if ((t && L(), Z(), null == A)) return;
+        let n = A.createBufferSource();
+        (n.buffer = e.audioBuffer), (y.current = A.createGain()), (y.current.gain.value = C), n.connect(y.current), y.current.connect(A.destination), (n.loop = !0), n.start(), (_.current = n), j(e);
     }
     r.useEffect(() => {
-        R();
-    }, [R]);
-    let L = [];
+        Z();
+    }, [Z]);
+    let M = [];
     return (
-        I &&
-            L.push({
+        k &&
+            M.push({
                 label: 'Krisp',
                 value: 'KRISP'
             }),
-        P &&
-            L.push({
+        w &&
+            M.push({
                 label: 'Standard',
                 value: 'STANDARD'
             }),
-        L.push({
+        M.push({
             label: 'Disabled',
             value: 'NONE'
         }),
@@ -150,7 +152,7 @@ function j() {
                         title: 'Input Device',
                         tag: d.RB0.H3,
                         children: (0, a.jsx)(d.q4e, {
-                            value: O,
+                            value: T,
                             onChange: (e) => u.Z.setInputDevice(e),
                             options: o().map(e, (e) => {
                                 let { id: t, name: n } = e;
@@ -166,29 +168,54 @@ function j() {
                         title: 'Noise Cancellation',
                         tag: d.RB0.H3,
                         children: (0, a.jsx)(d.q4e, {
-                            value: w,
+                            value: R,
                             onChange: (e) => {
                                 u.Z.setNoiseCancellation('KRISP' === e), u.Z.setNoiseSuppression('STANDARD' === e);
                             },
-                            options: L,
+                            options: M,
                             popoutLayerContext: h.O$
                         })
                     }),
-                    (0, a.jsx)(d.hjN, {
-                        title: 'Krisp Suppression Level',
-                        tag: d.RB0.H3,
-                        children: (0, a.jsx)(d.iRW, {
-                            initialValue: s,
-                            onValueChange: u.Z.setKrispSuppressionLevel,
-                            minValue: 0,
-                            maxValue: 100
-                        })
-                    }),
+                    'KRISP' === R &&
+                        (0, a.jsxs)(a.Fragment, {
+                            children: [
+                                (0, a.jsx)(d.hjN, {
+                                    title: 'Krisp Suppression Level',
+                                    tag: d.RB0.H3,
+                                    children: (0, a.jsx)(d.iRW, {
+                                        initialValue: s,
+                                        onValueChange: u.Z.setKrispSuppressionLevel,
+                                        minValue: 0,
+                                        maxValue: 100
+                                    })
+                                }),
+                                (0, a.jsx)(d.hjN, {
+                                    title: 'Krisp Model Override',
+                                    tag: d.RB0.H3,
+                                    children: (0, a.jsx)(d.PhF, {
+                                        clearable: !0,
+                                        clear: () => {
+                                            u.Z.setKrispModelOverride('');
+                                        },
+                                        isSelected: (e) => e === E,
+                                        options: O.map((e) => ({
+                                            label: e,
+                                            value: e
+                                        })),
+                                        select: (e) => {
+                                            u.Z.setKrispModelOverride(e);
+                                        },
+                                        popoutLayerContext: h.O$,
+                                        serialize: (e) => e
+                                    })
+                                })
+                            ]
+                        }),
                     (0, a.jsx)(d.hjN, {
                         tag: d.RB0.H3,
                         children: (0, a.jsx)(d.j7V, {
                             hideBorder: !0,
-                            value: E,
+                            value: S,
                             onChange: (e) => u.Z.setEchoCancellation(e),
                             children: 'Echo Cancellation'
                         })
@@ -199,9 +226,9 @@ function j() {
                         children: (0, a.jsx)(d.zxk, {
                             color: t ? d.zxk.Colors.RED : d.zxk.Colors.BRAND,
                             onClick: t
-                                ? A
+                                ? L
                                 : function () {
-                                      R(),
+                                      Z(),
                                           n(!0),
                                           u.Z.setLoopback('krisp_test', !0),
                                           p.Z.getMediaEngine().startRecordingRawSamples((t, a, r) => {
@@ -217,15 +244,15 @@ function j() {
                                                   for (let r = 0; r < t.length / a; r++) n[r] = t[r * a + e] / 32768;
                                                   o.copyToChannel(n, e);
                                               }
-                                              let c = null == (l = e[O]) ? void 0 : l.name;
+                                              let c = null == (l = e[T]) ? void 0 : l.name;
                                               i((e) => [
                                                   ...e,
                                                   {
                                                       inputName: c,
                                                       audioBuffer: o,
                                                       createdAt: Date.now(),
-                                                      suppression: w,
-                                                      echoCancellation: E,
+                                                      suppression: R,
+                                                      echoCancellation: S,
                                                       krispSuppressionLevel: s
                                                   }
                                               ]);
@@ -255,8 +282,8 @@ function j() {
                                 {
                                     recording: e,
                                     playing: e === v,
-                                    onPlay: Z,
-                                    onStop: R
+                                    onPlay: D,
+                                    onStop: Z
                                 },
                                 t
                             )

@@ -7,8 +7,8 @@ var i = n(215569),
     a = n(236413),
     o = n(727072),
     c = n(65912),
-    u = n(388032),
-    d = n(11532);
+    d = n(388032),
+    u = n(11532);
 function m(e) {
     let { guildId: t, existingRules: n } = e,
         { cancelEditingRule: m, isLoading: g, hasChanges: p, editingRule: f, errorMessage: h, saveEditingRule: x } = (0, c.w)(),
@@ -30,19 +30,19 @@ function m(e) {
                 null != e && b(e);
             }
         },
-        C = u.intl.string(u.t['ETE/oK']),
-        y = !p && j ? u.intl.formatToPlainString(u.t.nula39, { ruleName: null == f ? void 0 : f.name }) : void 0;
+        C = d.intl.string(d.t['ETE/oK']),
+        y = !p && j ? d.intl.formatToPlainString(d.t.nula39, { ruleName: null == f ? void 0 : f.name }) : void 0;
     return (
         null != h &&
             (y = (0, r.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'text-danger',
-                className: d.message,
+                className: u.message,
                 children: h
             })),
         (0, r.jsx)(i.W, {
             component: 'div',
-            className: d.saveNoticeContainer,
+            className: u.saveNoticeContainer,
             children:
                 v &&
                 (0, r.jsx)(l.oXn, {

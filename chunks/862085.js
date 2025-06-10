@@ -7,10 +7,10 @@ var i = n(481060),
     a = n(467397);
 function o(e) {
     let { action: t, triggerType: n, toggled: o, onToggleAction: c } = e,
-        u = (e) => () => c(e),
-        d = (0, l.c)(t.type, t, n);
-    if (null == d) return null;
-    let { headerText: m, descriptionText: g, icon: p } = d;
+        d = (e) => () => c(e),
+        u = (0, l.c)(t.type, t, n);
+    if (null == u) return null;
+    let { headerText: m, descriptionText: g, icon: p } = u;
     return (0, r.jsxs)('div', {
         className: a.actionContainer,
         children: [
@@ -41,7 +41,7 @@ function o(e) {
                               children: [
                                   s.intl.string(s.t.Oa9oWF),
                                   (0, r.jsx)(i.P3F, {
-                                      onClick: u(!0),
+                                      onClick: d(!0),
                                       className: a.editChannel,
                                       tag: 'span',
                                       role: 'link',
@@ -56,7 +56,7 @@ function o(e) {
                 children: (0, r.jsx)(i.XZJ, {
                     type: i.XZJ.Types.INVERTED,
                     value: o,
-                    onChange: u(!1),
+                    onChange: d(!1),
                     className: a.__invalid_actionCheckbox
                 })
             })

@@ -18,38 +18,38 @@ let g = {
     },
     p = a.memo(function (e) {
         let { className: t, volume: n, disabled: i = !1, onChange: p } = e,
-            { audio: b } = (0, c.p)(),
-            [y, v] = a.useState(!1),
+            { audio: y } = (0, c.p)(),
+            [b, v] = a.useState(!1),
             [x, j] = a.useState(g),
             { playheadPositionMs: w, endPositionMs: N, startPositionMs: C } = x,
-            S = null != b,
+            S = null != y,
             O = N - C,
             P = O > m.YW * o.Z.Millis.SECOND;
         a.useEffect(() => {
-            if (null != b)
+            if (null != y)
                 return (
                     j({
                         playheadPositionMs: 0,
-                        endPositionMs: b.duration * o.Z.Millis.SECOND,
+                        endPositionMs: y.duration * o.Z.Millis.SECOND,
                         startPositionMs: 0
                     }),
                     () => {
-                        b.pause(), v(!1);
+                        y.pause(), v(!1);
                     }
                 );
-        }, [b]);
+        }, [y]);
         let E = a.useCallback(
                 (e) => {
-                    null != b && (b.pause(), null != e && (b.currentTime = e), v(!1));
+                    null != y && (y.pause(), null != e && (y.currentTime = e), v(!1));
                 },
-                [b]
+                [y]
             ),
             k = a.useCallback(() => {
-                if (null != b) {
-                    if (y) return void E();
-                    w >= N ? (b.currentTime = (0, f.my)(C)) : (b.currentTime = (0, f.my)(w)), (b.volume = (0, u.Z)(n)), b.play(), v(!0);
+                if (null != y) {
+                    if (b) return void E();
+                    w >= N ? (y.currentTime = (0, f.my)(C)) : (y.currentTime = (0, f.my)(w)), (y.volume = (0, u.Z)(n)), y.play(), v(!0);
                 }
-            }, [b, N, E, w, y, C, n]),
+            }, [y, N, E, w, b, C, n]),
             M = a.useCallback(
                 (e) => {
                     j(e),
@@ -63,9 +63,9 @@ let g = {
             ),
             Z = a.useCallback(
                 (e) => {
-                    null != b && (b.currentTime = e);
+                    null != y && (y.currentTime = e);
                 },
-                [b]
+                [y]
             );
         return (0, l.jsxs)('div', {
             className: r()(
@@ -83,7 +83,7 @@ let g = {
                         (0, l.jsx)(s.P3F, {
                             className: h.playButton,
                             onClick: S ? k : void 0,
-                            children: y
+                            children: b
                                 ? (0, l.jsx)(s.wNq, {
                                       size: 'xs',
                                       color: 'currentColor',
@@ -107,7 +107,7 @@ let g = {
                     ]
                 }),
                 (0, l.jsx)(d.Z, {
-                    playing: y,
+                    playing: b,
                     onPlaybackChange: Z,
                     onPausePlayback: E,
                     onChangePosition: M,

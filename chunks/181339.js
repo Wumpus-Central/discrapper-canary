@@ -10,8 +10,8 @@ var r = n(255367),
     a = n(106351),
     o = n(442837),
     c = n(481060),
-    u = n(367907),
-    d = n(933557),
+    d = n(367907),
+    u = n(933557),
     m = n(369994),
     g = n(162157),
     p = n(177862),
@@ -32,7 +32,7 @@ function I(e) {
         x = t.canHaveRaidActivityAlerts(),
         [b, j] = i.useState(x),
         _ = (0, o.e7)([h.Z], () => h.Z.getChannel(l), [l]),
-        v = (0, d.ZP)(_),
+        v = (0, u.ZP)(_),
         I = async () => {
             j(!b);
             try {
@@ -47,7 +47,7 @@ function I(e) {
                         guild_id: t.id,
                         channel_id: n
                     };
-                    (0, u.yw)(C.rMx.GUILD_RAID_ALERTS_SETUP, e);
+                    (0, d.yw)(C.rMx.GUILD_RAID_ALERTS_SETUP, e);
                 }
             } catch (e) {
                 (0, c.showToast)((0, c.createToast)(y.intl.string(y.t['46Rs3t']), c.ToastType.FAILURE)), j(!x);
@@ -110,7 +110,7 @@ function E(e) {
                         let { channel: t } = e;
                         return {
                             value: t.id,
-                            label: (0, d.F6)(t, _.default, j.Z, !0)
+                            label: (0, u.F6)(t, _.default, j.Z, !0)
                         };
                     });
                 return null != g ? e : [...e];
@@ -128,7 +128,7 @@ function E(e) {
                         guild_id: n.id,
                         channel_id: e
                     };
-                    (0, u.yw)(C.rMx.GUILD_RAID_ALERTS_SETUP, t);
+                    (0, d.yw)(C.rMx.GUILD_RAID_ALERTS_SETUP, t);
                 }
             } catch (e) {
                 (0, c.showToast)((0, c.createToast)(y.intl.string(y.t['46Rs3t']), c.ToastType.FAILURE)), l(g);
@@ -161,7 +161,7 @@ function S(e) {
     let { guild: l } = e,
         [s, a] = i.useState(!1),
         o = null != (t = l.safetyAlertsChannelId) ? t : null,
-        [c, u] = i.useState(null != o ? o : null != (n = null == l ? void 0 : l.publicUpdatesChannelId) ? n : null);
+        [c, d] = i.useState(null != o ? o : null != (n = null == l ? void 0 : l.publicUpdatesChannelId) ? n : null);
     return (0, r.jsx)(f.Z, {
         renderHeader: (0, r.jsx)(I, {
             isExpanded: s,
@@ -173,7 +173,7 @@ function S(e) {
         children: (0, r.jsx)(E, {
             guild: l,
             selectedChannelId: c,
-            setSelectedChannelId: u
+            setSelectedChannelId: d
         })
     });
 }

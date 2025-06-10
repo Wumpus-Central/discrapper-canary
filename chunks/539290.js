@@ -17,10 +17,10 @@ let p = {
     BOTTOM: d.verticalStatusWarningBlock
 };
 function f(e) {
-    let { className: t, color: n = c.W.YELLOW, buttonPosition: i = p.BOTTOM, notice: f, ctaLabel: b, ctaLoading: g, ctaDisabled: m, ctaClassName: _, onClick: v } = e,
+    let { className: t, color: n = c.W.YELLOW, buttonPosition: i = p.BOTTOM, notice: f, ctaLabel: g, ctaLoading: b, ctaDisabled: m, ctaClassName: _, onClick: v } = e,
         h = (0, l.ZP)();
     return (0, r.jsx)(u.Z, {
-        className: s()(d.statusWarningBlock, { [d.statusWarningBlockWithCta]: null != b }, t),
+        className: s()(d.statusWarningBlock, { [d.statusWarningBlockWithCta]: null != g }, t),
         color: (0, o.wj)(h) ? n : c.W.BROWN,
         children: (0, r.jsxs)('div', {
             className: i,
@@ -30,7 +30,7 @@ function f(e) {
                     color: 'interactive-active',
                     children: f
                 }),
-                null != b &&
+                null != g &&
                     null != v &&
                     (0, r.jsx)('div', {
                         className: d.ctaButtonContainer,
@@ -40,11 +40,11 @@ function f(e) {
                             size: a.PhG.MEDIUM,
                             onClick: v,
                             disabled: m,
-                            submitting: g,
+                            submitting: b,
                             children: (0, r.jsx)(a.Text, {
                                 className: d.ctaButtonText,
                                 variant: 'text-sm/medium',
-                                children: b
+                                children: g
                             })
                         })
                     })

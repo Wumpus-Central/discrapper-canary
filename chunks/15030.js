@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(481060),
     o = n(725803),
     c = n(605236),
-    u = n(999382),
-    d = n(614342),
+    d = n(999382),
+    u = n(614342),
     m = n(303737),
     g = n(618748),
     p = n(500395),
@@ -17,10 +17,10 @@ var r = n(255367),
     b = n(94072);
 function j() {
     let e,
-        t = (0, l.e7)([u.Z], () => u.Z.getGuild()),
+        t = (0, l.e7)([d.Z], () => d.Z.getGuild()),
         { application: n, loading: j } = (0, o.Z)(null == t ? void 0 : t.id, x.wW.GUILD_ROLE_SUBSCRIPTIONS),
         _ = i.useRef(null),
-        v = (0, d.Z)(null != t ? t : void 0);
+        v = (0, u.Z)(null != t ? t : void 0);
     i.useEffect(() => {
         null != t && (0, m.sO)(t) && (0, c.EW)(s.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE);
     }, [t]);

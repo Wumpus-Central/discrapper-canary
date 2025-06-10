@@ -10,8 +10,8 @@ var r = n(255367),
     a = n(587431),
     o = n(756066),
     c = n(388032),
-    u = n(601781),
-    d = n(270395);
+    d = n(601781),
+    u = n(270395);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,8 +42,8 @@ function p(e) {
     let { guild: t, eligibility: i, eligibilityLoading: s, eligibilityError: a, refreshEligibility: o } = e;
     return (0, r.jsxs)(l.zxk, {
         color: l.Ttl.CUSTOM,
-        className: u.ineligibleButton,
-        innerClassName: u.ineligibleButtonContent,
+        className: d.ineligibleButton,
+        innerClassName: d.ineligibleButtonContent,
         grow: !0,
         onClick: function () {
             (0, l.ZDy)(
@@ -93,7 +93,7 @@ function p(e) {
 }
 function f(e) {
     let { guild: t, checkboxText: n } = e,
-        { canSubmitAcceptance: o, error: d, loading: m, submitAcceptTermsRequest: g } = (0, s.Z)(t.id),
+        { canSubmitAcceptance: o, error: u, loading: m, submitAcceptTermsRequest: g } = (0, s.Z)(t.id),
         [p, f] = i.useState(!1);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -112,7 +112,7 @@ function f(e) {
             }),
             (0, r.jsx)(l.LZC, { size: 24 }),
             (0, r.jsx)(l.zxk, {
-                className: u.ctaButton,
+                className: d.ctaButton,
                 disabled: !p || !o,
                 grow: !0,
                 onClick: g,
@@ -120,22 +120,22 @@ function f(e) {
                 submitting: m,
                 children: c.intl.string(c.t.NL5ZNT)
             }),
-            null != d &&
+            null != u &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(l.LZC, { size: 24 }), (0, r.jsx)(a.Z, { children: d.getAnyErrorMessage() })]
+                    children: [(0, r.jsx)(l.LZC, { size: 24 }), (0, r.jsx)(a.Z, { children: u.getAnyErrorMessage() })]
                 })
         ]
     });
 }
 function h(e) {
     let { guild: t, monetizationEligibility: n } = e,
-        { eligibilityLoading: i, eligibilityError: l, refreshEligibility: s, eligibility: a, eligibleForMonetization: c, acceptTermsCheckboxText: u, wasRejectedInV1: d } = n;
+        { eligibilityLoading: i, eligibilityError: l, refreshEligibility: s, eligibility: a, eligibleForMonetization: c, acceptTermsCheckboxText: d, wasRejectedInV1: u } = n;
     return c
-        ? d
+        ? u
             ? (0, r.jsx)(o.Z, m({}, n))
             : (0, r.jsx)(f, {
                   guild: t,
-                  checkboxText: u
+                  checkboxText: d
               })
         : (0, r.jsx)(p, {
               guild: t,
@@ -148,15 +148,15 @@ function h(e) {
 function x(e) {
     let { guild: t, monetizationEligibility: n } = e;
     return (0, r.jsxs)('div', {
-        className: u.ctaContainer,
+        className: d.ctaContainer,
         children: [
             (0, r.jsx)('img', {
-                className: u.heroBanner,
-                src: d,
+                className: d.heroBanner,
+                src: u,
                 alt: c.intl.string(c.t.Af4klJ)
             }),
             (0, r.jsxs)('div', {
-                className: u.ctaContent,
+                className: d.ctaContent,
                 children: [
                     (0, r.jsx)(l.X6q, {
                         variant: 'heading-xl/semibold',

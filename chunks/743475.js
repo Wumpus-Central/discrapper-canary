@@ -11,8 +11,8 @@ var r = n(570140),
     a = n(637853),
     o = n(592125),
     c = n(823379),
-    u = n(889369),
-    d = n(570961),
+    d = n(889369),
+    u = n(570961),
     m = n(208665),
     g = n(290511),
     p = n(388032);
@@ -26,7 +26,7 @@ function h(e) {
     });
 }
 async function x(e) {
-    let t = Array.from(u.Z.editedDefaultChannelIds).filter((e) => null != o.Z.getChannel(e)),
+    let t = Array.from(d.Z.editedDefaultChannelIds).filter((e) => null != o.Z.getChannel(e)),
         n = m.Z.advancedMode,
         [f, h] = (0, a.d9)(e.id, [...t]),
         x = (0, a.kl)(e.id, t, m.Z.editedOnboardingPrompts),
@@ -36,10 +36,10 @@ async function x(e) {
             title: p.intl.string(p.t.iLdiqa),
             body: p.intl.string(p.t.JOT74e)
         });
-    if (u.Z.hasChanges()) {
+    if (d.Z.hasChanges()) {
         r.Z.dispatch({ type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT' });
         try {
-            await (0, d.n_)(e.id, { default_channel_ids: t }),
+            await (0, u.n_)(e.id, { default_channel_ids: t }),
                 r.Z.dispatch({
                     type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS',
                     guildId: e.id,

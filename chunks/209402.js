@@ -6,16 +6,16 @@ var r = n(255367),
     a = n(699553),
     o = n(314852),
     c = n(434404),
-    u = n(999382),
-    d = n(195196),
+    d = n(999382),
+    u = n(195196),
     m = n(388032);
 function g() {
-    let e = (0, l.e7)([u.Z], () => u.Z.getGuild()),
+    let e = (0, l.e7)([d.Z], () => d.Z.getGuild()),
         t = null == e ? void 0 : e.id,
-        n = (0, l.e7)([u.Z], () => u.Z.getProfileError()),
-        g = (0, l.e7)([u.Z], () => u.Z.getGuildProfile()),
+        n = (0, l.e7)([d.Z], () => d.Z.getProfileError()),
+        g = (0, l.e7)([d.Z], () => d.Z.getGuildProfile()),
         p = (0, l.e7)([o.Z], () => o.Z.getIsUpdating(t)),
-        f = i.useMemo(() => ((null == n ? void 0 : n.status) === 429 ? m.intl.string(d.default['bFRS/v']) : null == n ? void 0 : n.getAnyErrorMessage()), [n]),
+        f = i.useMemo(() => ((null == n ? void 0 : n.status) === 429 ? m.intl.string(u.default['bFRS/v']) : null == n ? void 0 : n.getAnyErrorMessage()), [n]),
         h = i.useCallback(() => {
             if (null == e || null == g) return;
             let t = {

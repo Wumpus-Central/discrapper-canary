@@ -8,8 +8,8 @@ var r = n(255367),
 function c(e) {
     let { rule: t, onChangeRule: n } = e,
         c = i.useMemo(() => (0, s.V9)(t.triggerType), [t.triggerType]),
-        u = a.km(t.guildId),
-        d = i.useMemo(() => (0, l.U5)(), []),
+        d = a.km(t.guildId),
+        u = i.useMemo(() => (0, l.U5)(), []),
         m = (e, r) => {
             var i, l;
             if (null == r) return;
@@ -64,10 +64,10 @@ function c(e) {
         g = (e) => async (n) => {
             let r = t.actions.find((t) => t.type === e),
                 i = null != r,
-                l = d[e],
+                l = u[e],
                 s = n ? r : l;
             if (null != s && (!i || n)) {
-                let n = u[e];
+                let n = d[e];
                 null != n ? m(!0, await n(t, s)) : m(!0, s);
             } else m(!1, i ? r : l);
         };
@@ -79,7 +79,7 @@ function c(e) {
                 {
                     guildId: t.guildId,
                     triggerType: t.triggerType,
-                    action: null != n ? n : d[e],
+                    action: null != n ? n : u[e],
                     toggled: null != n,
                     onToggleAction: g(e)
                 },

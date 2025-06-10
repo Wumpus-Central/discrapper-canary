@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(456268),
     o = n(863249),
     c = n(999382),
-    u = n(209054),
-    d = n(96788),
+    d = n(209054),
+    u = n(96788),
     m = n(217472),
     g = n(202905),
     p = n(44867),
@@ -24,7 +24,7 @@ function v(e) {
             async (e) => {
                 if (!n.current)
                     try {
-                        await (0, u.k)(e), (0, d.V)(e), (0, a.le)(), (0, a.aC)(e);
+                        await (0, d.k)(e), (0, u.V)(e), (0, a.le)(), (0, a.aC)(e);
                     } finally {
                         n.current = !0;
                     }

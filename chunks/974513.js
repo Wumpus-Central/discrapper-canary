@@ -11,8 +11,8 @@ var r = n(255367),
     a = n(45966),
     o = n(637853),
     c = n(983135),
-    u = n(208665),
-    d = n(290511),
+    d = n(208665),
+    u = n(290511),
     m = n(388032);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -58,8 +58,8 @@ function p(e, t) {
     );
 }
 function f(e, t) {
-    let n = (0, l.Wu)([u.Z], () => (0, o.kl)(e, t, u.Z.editedOnboardingPrompts));
-    return [(0, l.Wu)([u.Z], () => (0, o.kl)(e, t, u.Z.editedOnboardingPrompts, o.V7)), n];
+    let n = (0, l.Wu)([d.Z], () => (0, o.kl)(e, t, d.Z.editedOnboardingPrompts));
+    return [(0, l.Wu)([d.Z], () => (0, o.kl)(e, t, d.Z.editedOnboardingPrompts, o.V7)), n];
 }
 function h(e) {
     let t = (0, l.e7)([a.Z], () => a.Z.isAdvancedMode(e)),
@@ -67,13 +67,13 @@ function h(e) {
             let t = (0, l.Wu)([a.Z], () => (0, o.kl)(e, a.Z.getDefaultChannelIds(e), a.Z.getOnboardingPrompts(e)));
             return [(0, l.Wu)([a.Z], () => (0, o.kl)(e, a.Z.getDefaultChannelIds(e), a.Z.getOnboardingPrompts(e), o.V7)), t];
         })(e);
-    return !!t && r.length >= d.md && n.length >= d.X;
+    return !!t && r.length >= u.md && n.length >= u.X;
 }
 function x(e) {
     let { guildId: t, className: n } = e,
         o = (0, l.e7)([a.Z], () => a.Z.isAdvancedMode(t)),
-        u = i.useCallback(() => {
-            let e = o ? d.Un.ONBOARDING_DEFAULT : d.Un.ONBOARDING_ADVANCED;
+        d = i.useCallback(() => {
+            let e = o ? u.Un.ONBOARDING_DEFAULT : u.Un.ONBOARDING_ADVANCED;
             o
                 ? (0, s.h7j)((n) =>
                       (0, r.jsx)(
@@ -125,7 +125,7 @@ function x(e) {
     return (0, r.jsx)('div', {
         className: n,
         children: (0, r.jsx)(s.eee, {
-            onClick: u,
+            onClick: d,
             children: (0, r.jsx)(s.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-link',

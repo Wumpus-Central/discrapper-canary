@@ -7,8 +7,8 @@ var i = n(442837),
     a = n(715796),
     o = n(434404),
     c = n(999382),
-    u = n(962086),
-    d = n(225675),
+    d = n(962086),
+    u = n(225675),
     m = n(703656),
     g = n(577275),
     p = n(430824),
@@ -39,15 +39,15 @@ function k(e) {
         a = s.some((e) => null != e.name && null != e.subscription_plans[0] && null != e.description && null != e.image_asset),
         o = (0, i.e7)([p.Z], () => p.Z.getRoles(n.id)),
         c = s.map((e) => o[e.role_id]).some((e) => null != e && 0 !== e.color),
-        u = s.some((e) => e.role_benefits.benefits.length > 0),
-        d = null != t && n.hasFeature(P.oNc.ROLE_SUBSCRIPTIONS_ENABLED),
+        d = s.some((e) => e.role_benefits.benefits.length > 0),
+        u = null != t && n.hasFeature(P.oNc.ROLE_SUBSCRIPTIONS_ENABLED),
         m = [
             {
                 title: Z.intl.string(Z.t.p2Rsdn),
                 items: [
                     {
                         description: Z.intl.string(Z.t.zbO7fX),
-                        completed: d
+                        completed: u
                     }
                 ]
             },
@@ -81,7 +81,7 @@ function k(e) {
                     },
                     {
                         description: Z.intl.string(Z.t['/P03Cw']),
-                        completed: u
+                        completed: d
                     }
                 ]
             }
@@ -140,8 +140,8 @@ function M(e) {
             if (null == e) return;
             o.Z.close();
             let t = { [e.id]: e };
-            (0, u.iD)(n.id, {
-                type: d.z.SERVER_SHOP,
+            (0, d.iD)(n.id, {
+                type: u.z.SERVER_SHOP,
                 roles: t,
                 initialTab: 'role_subscriptions',
                 returnToSection: P.pNK.ROLE_SUBSCRIPTIONS

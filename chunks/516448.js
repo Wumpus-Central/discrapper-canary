@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(723047),
     o = n(727843),
     c = n(290348),
-    u = n(164000),
-    d = n(783454),
+    d = n(164000),
+    u = n(783454),
     m = n(862319),
     g = n(140285),
     p = n(390583),
@@ -22,10 +22,10 @@ function _(e) {
         [v, O] = c.UE(n),
         [C, y] = c.R7(n),
         N = i.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
-        { isFullServerGating: I } = (0, u.Z)(_),
+        { isFullServerGating: I } = (0, d.Z)(_),
         E = (0, s.Dt)(),
         S = (0, a.mY)();
-    return (0, r.jsxs)(d.Z, {
+    return (0, r.jsxs)(u.Z, {
         title: b.intl.string(b.t.YNw2Sk),
         description: b.intl.string(b.t.zMW5r6),
         children: [

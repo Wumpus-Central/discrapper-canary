@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(85960),
     o = n(676317),
     c = n(823379),
-    u = n(84613),
-    d = n(740903),
+    d = n(84613),
+    u = n(740903),
     m = n(598622),
     g = n(388032),
     p = n(902893);
@@ -45,7 +45,7 @@ function f(e) {
                 size: l.zxk.Sizes.SMALL,
                 color: l.zxk.Colors.PRIMARY,
                 look: l.zxk.Looks.OUTLINED,
-                onClick: () => (0, u.K)(s),
+                onClick: () => (0, d.K)(s),
                 children: g.intl.string(g.t.bt75u7)
             })
         ]
@@ -54,14 +54,14 @@ function f(e) {
 function h(e) {
     let { guild: t } = e;
     (0, s.RD)(t.id);
-    let u = (0, a.Z6)(t.id),
+    let d = (0, a.Z6)(t.id),
         { rulesByTriggerType: h } = (0, s.pH)(t.id),
         { numEnabledRules: x, numRules: b } = i.useMemo(() => {
             let e = 0,
                 t = 0;
             return (
                 null == h ||
-                    Object.values(u)
+                    Object.values(d)
                         .flat()
                         .forEach((n) => {
                             var r;
@@ -76,11 +76,11 @@ function h(e) {
                     numRules: t
                 }
             );
-        }, [u, h]),
+        }, [d, h]),
         j = (0, m.Q)(t),
-        _ = j[d.u.CAPTCHA_AND_RAID_PROTECTION],
-        v = j[d.u.DM_AND_SPAM_PROTECTION],
-        O = j[d.u.PERMISSIONS],
+        _ = j[u.u.CAPTCHA_AND_RAID_PROTECTION],
+        v = j[u.u.DM_AND_SPAM_PROTECTION],
+        O = j[u.u.PERMISSIONS],
         C = (0, o.pr)(t.id);
     return (0, r.jsxs)('div', {
         children: [
@@ -100,7 +100,7 @@ function h(e) {
                             enabled: _.filter((e) => e.enabled).length,
                             total: _.length
                         }),
-                        page: d.u.CAPTCHA_AND_RAID_PROTECTION
+                        page: u.u.CAPTCHA_AND_RAID_PROTECTION
                     }),
                     (0, r.jsx)('div', { className: p.divider }),
                     (0, r.jsx)(f, {
@@ -110,7 +110,7 @@ function h(e) {
                             enabled: v.filter((e) => e.enabled).length,
                             total: v.length
                         }),
-                        page: d.u.DM_AND_SPAM_PROTECTION
+                        page: u.u.DM_AND_SPAM_PROTECTION
                     }),
                     (0, r.jsx)('div', { className: p.divider }),
                     C &&
@@ -123,7 +123,7 @@ function h(e) {
                                         enabled: x,
                                         total: b
                                     }),
-                                    page: d.u.AUTOMOD
+                                    page: u.u.AUTOMOD
                                 }),
                                 (0, r.jsx)('div', { className: p.divider })
                             ]
@@ -135,7 +135,7 @@ function h(e) {
                             enabled: O.filter((e) => e.enabled).length,
                             total: O.length
                         }),
-                        page: d.u.PERMISSIONS
+                        page: u.u.PERMISSIONS
                     })
                 ]
             })

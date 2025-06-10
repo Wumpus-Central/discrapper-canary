@@ -341,10 +341,10 @@ function z() {
         S = (0, o.e7)([h.default], () => h.default.getForcedRenderMode()),
         [R, A] = r.useState({}),
         [Z, z] = r.useState(S),
-        U = (e) => {
+        B = (e) => {
             z(e), u.Z.forceRenderMode(e);
         },
-        B = [
+        U = [
             {
                 label: m.R5.UNSET,
                 value: m.R5.UNSET
@@ -367,7 +367,7 @@ function z() {
         V = (0, o.e7)([_.default], () => _.default.isFocusedPidOutOfProcess()),
         H = (0, N.getPID)(),
         W = (0, o.e7)([h.default], () => h.default.isOverlayOOPEnabledForPid(H), [H]),
-        [X, K] = (0, o.Wu)([v.Z], () => [v.Z.enabled, v.Z.keepOpen]),
+        [K, X] = (0, o.Wu)([v.Z], () => [v.Z.enabled, v.Z.keepOpen]),
         Y = (0, o.e7)([x.ZP], () => x.ZP.getRunningGames());
     r.useEffect(() => {
         A((e) => {
@@ -596,8 +596,8 @@ function z() {
                                 children: (0, a.jsx)(c.PhF, {
                                     serialize: (e) => e,
                                     isSelected: (e) => e === Z,
-                                    options: B,
-                                    select: U,
+                                    options: U,
+                                    select: B,
                                     popoutLayerContext: O.O$
                                 })
                             })
@@ -692,12 +692,12 @@ function z() {
                                 (0, a.jsxs)(c.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: ['SoundboardOverlay.enabled: ', X ? 'Yes' : 'No']
+                                    children: ['SoundboardOverlay.enabled: ', K ? 'Yes' : 'No']
                                 }),
                                 (0, a.jsxs)(c.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: ['SoundboardOverlay.keepOpen: ', K ? 'Yes' : 'No']
+                                    children: ['SoundboardOverlay.keepOpen: ', X ? 'Yes' : 'No']
                                 })
                             ]
                         })

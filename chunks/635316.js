@@ -1,14 +1,14 @@
-n.d(t, {
-    K: () => a,
-    v: () => i
+r.d(t, {
+    K: () => o,
+    v: () => l
 });
-var r = n(818083),
-    l = n(987338);
-let a = (0, r.B)({
+var n = r(818083),
+    i = r(987338);
+let o = (0, n.B)({
         kind: 'user',
         id: '2025-04_nameplate_gifting',
         label: 'Nameplates Gifting',
-        commonTriggerPoint: l.$P.COLLECTIBLES_SHOP_OPEN,
+        commonTriggerPoint: i.$P.COLLECTIBLES_SHOP_OPEN,
         defaultConfig: { canGiftNameplates: !1 },
         treatments: [
             {
@@ -18,4 +18,4 @@ let a = (0, r.B)({
             }
         ]
     }),
-    i = (e) => a.useExperiment({ location: e }, { autoTrackExposure: !0 }).canGiftNameplates;
+    l = (e) => o.useExperiment({ location: e }, { autoTrackExposure: !0 }).canGiftNameplates;

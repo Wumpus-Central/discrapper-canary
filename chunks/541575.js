@@ -7,8 +7,8 @@ var i = n(780384),
     a = n(367907),
     o = n(906732),
     c = n(91218),
-    u = n(807582),
-    d = n(518738),
+    d = n(807582),
+    u = n(518738),
     m = n(26323),
     g = n(764260),
     p = n(981631),
@@ -61,7 +61,7 @@ function j(e, t) {
 let _ = function (e) {
     let { guild: t, disabled: _, role: v } = e,
         O = (0, s.ZP)(),
-        C = (0, d.oC)(t.id, v),
+        C = (0, u.oC)(t.id, v),
         { analyticsLocations: y } = (0, o.ZP)(),
         N = () => {
             (0, l.ZDy)(async () => {
@@ -96,7 +96,7 @@ let _ = function (e) {
                     perks: (0, f.Yp)()
                 }));
         },
-        S = (0, r.jsx)(u.Z, {
+        S = (0, r.jsx)(d.Z, {
             className: x.availabilityIndicator,
             guild: t,
             guildFeature: p.oNc.ROLE_ICONS,

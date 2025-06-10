@@ -7,8 +7,8 @@ var i = n(392711),
     a = n(230711),
     o = n(496675),
     c = n(594174),
-    u = n(434404),
-    d = n(449226),
+    d = n(434404),
+    u = n(449226),
     m = n(981631),
     g = n(388032),
     p = n(296205);
@@ -24,7 +24,7 @@ function f(e) {
         v = b && j,
         O = (0, i.throttle)(async (e) => {
             v &&
-                (await u.Z.updateMFALevel({
+                (await d.Z.updateMFALevel({
                     guildId: n.id,
                     level: e ? m.BpS.ELEVATED : m.BpS.NONE,
                     isEnabled: !e
@@ -55,7 +55,7 @@ function f(e) {
                 ? (0, r.jsx)(s.ua7, {
                       text: C ? g.intl.string(g.t['KG1V/P']) : b ? g.intl.string(g.t.NmsheX) : g.intl.string(g.t.LieBtb),
                       children: (e) =>
-                          (0, r.jsx)(d.Z, {
+                          (0, r.jsx)(u.Z, {
                               checked: _,
                               disabled: !0,
                               onChange: O,
@@ -63,7 +63,7 @@ function f(e) {
                               tooltipProps: e
                           })
                   })
-                : (0, r.jsx)(d.Z, {
+                : (0, r.jsx)(u.Z, {
                       checked: _,
                       onChange: O,
                       className: p.bringToFront

@@ -1,5 +1,5 @@
 n.d(t, {
-    H: () => d,
+    H: () => u,
     Z: () => m
 });
 var r = n(255367);
@@ -10,18 +10,18 @@ var i = n(120356),
     a = n(264451),
     o = n(75775),
     c = n(388032),
-    u = n(243110);
-let d = (e) => {
+    d = n(243110);
+let u = (e) => {
         let { value: t, isPercent: n } = e;
         if (null == t) return null;
-        let { formattedValue: i, isPositive: d } = (0, a.m5)(t, n);
+        let { formattedValue: i, isPositive: u } = (0, a.m5)(t, n);
         return (0, r.jsxs)('div', {
-            className: u.trendContainer,
+            className: d.trendContainer,
             children: [
-                (0, r.jsx)(o.Z, { className: l()(u.chartLineIcon, { [u.chartLineIconNegative]: !d }) }),
+                (0, r.jsx)(o.Z, { className: l()(d.chartLineIcon, { [d.chartLineIconNegative]: !u }) }),
                 (0, r.jsx)(s.Text, {
                     variant: 'text-md/normal',
-                    className: u.trendDescription,
+                    className: d.trendDescription,
                     children: c.intl.format(c.t.OTHOvb, { value: i })
                 })
             ]
@@ -30,16 +30,16 @@ let d = (e) => {
     m = (e) => {
         let { label: t, sublabel: n, value: i, additionalContent: l, tooltip: a } = e;
         return (0, r.jsxs)('div', {
-            className: u.container,
+            className: d.container,
             children: [
                 (0, r.jsxs)('div', {
                     children: [
                         (0, r.jsxs)('div', {
-                            className: u.labelContainer,
+                            className: d.labelContainer,
                             children: [
                                 (0, r.jsx)(s.Text, {
                                     variant: 'text-xs/medium',
-                                    className: u.label,
+                                    className: d.label,
                                     children: t
                                 }),
                                 null != a &&
@@ -76,7 +76,7 @@ let d = (e) => {
                                                     {
                                                         size: 'xs',
                                                         color: 'currentColor',
-                                                        className: u.labelTooltipIcon
+                                                        className: d.labelTooltipIcon
                                                     },
                                                     e
                                                 )
@@ -85,14 +85,14 @@ let d = (e) => {
                                 null != n
                                     ? (0, r.jsx)(s.Text, {
                                           variant: 'text-xs/normal',
-                                          className: u.sublabel,
+                                          className: d.sublabel,
                                           children: n
                                       })
                                     : null
                             ]
                         }),
                         (0, r.jsx)(s.Text, {
-                            className: u.value,
+                            className: d.value,
                             variant: 'text-sm/normal',
                             children: i
                         })
