@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(451478),
     U = n(626135),
     G = n(572004),
-    V = n(630388),
-    B = n(937615),
+    B = n(630388),
+    V = n(937615),
     H = n(73346),
     F = n(3570),
     z = n(689796),
@@ -339,7 +339,7 @@ class ed extends i.PureComponent {
             let { amount: e, currency: t } = o;
             a.offers = v.Z.Offer({
                 priceCurrency: t.toUpperCase(),
-                price: (0, B.T4)(e, t, { style: 'decimal' })
+                price: (0, V.T4)(e, t, { style: 'decimal' })
             });
         }
         let s = v.Z.ItemPage({ mainEntity: a });
@@ -612,7 +612,7 @@ let ep = (0, b.Z)(
                 if (null == l) throw Error('Needs applicationId or skuId');
                 null != (r = O.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? R.Z.get(t) : null);
             }
-            (null == n ? void 0 : n.flags) != null && (0, V.yE)(n.flags, ei.l4R.STICKER_PACK) && (n = null);
+            (null == n ? void 0 : n.flags) != null && (0, B.yE)(n.flags, ei.l4R.STICKER_PACK) && (n = null);
             let c = null != l && (k.Z.inTestModeForApplication(l) || E.Z.inDevModeForApplication(l));
             return {
                 skuId: t,

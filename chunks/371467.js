@@ -15,8 +15,8 @@ var i,
     g = n(592125),
     y = n(375954),
     O = n(292959),
-    v = n(649974),
-    b = n(158776),
+    b = n(649974),
+    v = n(158776),
     E = n(699516),
     _ = n(944486),
     x = n(885110),
@@ -181,7 +181,7 @@ function eh(e, t) {
 }
 function ef() {
     if (!(0, T.Yo)('OverlayNotificationStore') || D.Z.isNotificationDisabled(P.OverlayNotificationDisabledSetting.NOW_PLAYING)) return !1;
-    let e = v.Z.usersPlaying,
+    let e = b.Z.usersPlaying,
         t = new Set(),
         n = (function () {
             let e = [];
@@ -197,7 +197,7 @@ function ef() {
                 if (!E.Z.isFriend(e)) return !1;
                 let r = t.gameId;
                 if (null == r) return !1;
-                let o = null == (n = v.Z.getNowPlaying(r)[e]) ? void 0 : n.activity;
+                let o = null == (n = b.Z.getNowPlaying(r)[e]) ? void 0 : n.activity;
                 if (
                     null == o ||
                     o.type !== H.IIU.PLAYING ||
@@ -250,7 +250,7 @@ function ef() {
     for (let e of r)
         if (
             !(function (e) {
-                let t = b.Z.getActivities(e);
+                let t = v.Z.getActivities(e);
                 if (0 === t.length) return !1;
                 let n = (0, L.pL)();
                 return null != n && null != t.find((e) => e.application_id === n.id);
@@ -294,7 +294,7 @@ function em(e) {
 }
 class eg extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, I.default, v.Z, D.Z), this.syncWith([v.Z], ef);
+        this.waitFor(g.Z, I.default, b.Z, D.Z), this.syncWith([b.Z], ef);
     }
     getNotifications() {
         return en;
@@ -349,7 +349,7 @@ let ey = new eg(s.Z, {
                 if (null == a || null == s) return !1;
                 switch (t.activity.type) {
                     case H.mFx.JOIN:
-                        if (null == (r = b.Z.getApplicationActivity(n.id, s)) || null == r.party || r.party.id !== t.activity.party_id) return !1;
+                        if (null == (r = v.Z.getApplicationActivity(n.id, s)) || null == r.party || r.party.id !== t.activity.party_id) return !1;
                         l = (0, M.Z)(e, t, n, a, r);
                         break;
                     case H.mFx.JOIN_REQUEST:

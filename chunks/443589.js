@@ -11,7 +11,7 @@ var r = n(255367),
     p = n(213609),
     h = n(963249),
     f = n(579185),
-    g = n(814443),
+    g = n(752048),
     m = n(626135),
     b = n(479446),
     _ = n(522558),
@@ -39,7 +39,7 @@ function P(e) {
             type: s.ImpressionTypes.VIEW,
             properties: {
                 gift_intent_type: n,
-                affinity: null == e ? void 0 : e.affinity
+                affinity: null == e ? void 0 : e.communicationProbability
             }
         });
     }, [t, n]);
@@ -54,7 +54,7 @@ function P(e) {
             let r = g.Z.getUserAffinity(t.id);
             m.default.track(v.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
                 gift_intent_type: n,
-                affinity: null == r ? void 0 : r.affinity
+                affinity: null == r ? void 0 : r.communicationProbability
             }),
                 (0, h.Z)({
                     isGift: !0,

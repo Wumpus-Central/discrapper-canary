@@ -17,12 +17,12 @@ function y(e, t, n) {
     var y;
     let O = d.default.getUser(e);
     if (null == O) return null;
-    let v = u.Z.getCurrentlySelectedChannelId(),
-        b = c.Z.getChannel(v),
+    let b = u.Z.getCurrentlySelectedChannelId(),
+        v = c.Z.getChannel(b),
         E = l.Z.getApplication(t),
         _ = a.ZP.getRunningGames().find((e) => e.id === t),
         x = null != (y = null == _ ? void 0 : _.name) ? y : null == E ? void 0 : E.name,
-        S = (0, p.oY)(null == b ? void 0 : b.guild_id, null == b ? void 0 : b.id, O),
+        S = (0, p.oY)(null == v ? void 0 : v.guild_id, null == v ? void 0 : v.id, O),
         I = (0, i.jsxs)('div', {
             className: g.nowPlayingNotification,
             children: [

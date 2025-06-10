@@ -7,7 +7,7 @@ var i = n(255367),
     o = n(243778),
     c = n(7093),
     d = n(667105),
-    u = n(663389),
+    u = n(819640),
     m = n(585483),
     g = n(553896),
     p = n(101966),
@@ -24,7 +24,7 @@ function O(e) {
         r = (0, h.Z)(),
         m = (0, p.Z)({ location: 'TenureLevelUpCoachmark' }),
         g = (0, c.Z)((e) => e.isOpen),
-        f = (0, s.e7)([u.Z], () => u.Z.isOpen()),
+        f = (0, s.e7)([u.Z], () => u.Z.getLayers().includes(_.S9g.USER_SETTINGS)),
         b = (0, d.Ws)({ location: E.dr.CONFLICT_CHECKS });
     return !m || null == r || g || f || !b
         ? null

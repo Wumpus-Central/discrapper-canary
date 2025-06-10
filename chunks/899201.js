@@ -79,7 +79,7 @@ function q(e) {
         [D, M] = i.useState(''),
         [U, q] = i.useState([]),
         [V, X] = i.useState(null),
-        [Q, W] = i.useState(null);
+        [Q, Y] = i.useState(null);
     i.useEffect(() => {
         (async () => {
             let e = k.Z.toURLSafe(r);
@@ -91,12 +91,12 @@ function q(e) {
             let i = new FileReader();
             (i.onload = () => {
                 var e;
-                return W(null == i || null == (e = i.result) ? void 0 : e.toString());
+                return Y(null == i || null == (e = i.result) ? void 0 : e.toString());
             }),
                 i.readAsDataURL(n);
         })();
     }, [r, X]);
-    let Y = (0, d.Wu)([x.Z, C.Z], () => x.Z.getInviteSuggestionRows().filter((e) => e.type === P.bm.FRIEND || e.type === P.bm.DM || C.Z.can(L.Plq.ATTACH_FILES, e.item)));
+    let W = (0, d.Wu)([x.Z, C.Z], () => x.Z.getInviteSuggestionRows().filter((e) => e.type === P.bm.FRIEND || e.type === P.bm.DM || C.Z.can(L.Plq.ATTACH_FILES, e.item)));
     i.useEffect(() => {
         (0, f.x)({
             omitUserIds: new Set(),
@@ -108,14 +108,14 @@ function q(e) {
     let J = i.useCallback(async () => {
         await Promise.all(
             U.map(async (e) => {
-                let t = Y.find((t) => t.item.id === e);
+                let t = W.find((t) => t.item.id === e);
                 if (null != t) {
                     let e = await z(t);
                     g.Z.clearAll(e, v.d.ChannelMessage);
                 }
             })
         );
-    }, [U, Y]);
+    }, [U, W]);
     i.useEffect(() => {
         y === u.Dvm.EXITING && J();
     }, [J, y]);
@@ -277,7 +277,7 @@ function q(e) {
                                       onChange: (e) => M(e),
                                       onClear: () => M('')
                                   }),
-                                  Y.map((e, t) =>
+                                  W.map((e, t) =>
                                       (0, n.jsxs)(
                                           i.Fragment,
                                           {

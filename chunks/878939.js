@@ -18,10 +18,10 @@ function m(e) {
         g = null == n ? void 0 : n.altId,
         y = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
         O = null != g ? g : m,
-        [v, b] = r.useState(new Set()),
+        [b, v] = r.useState(new Set()),
         [E, _] = r.useState(new Set()),
         x = r.useCallback((e, t, n) => {
-            b((n) => {
+            v((n) => {
                 if (t) {
                     if (n.has(e)) return n;
                     n.add(e);
@@ -42,7 +42,7 @@ function m(e) {
                     return new Set(i);
                 });
         }, []),
-        S = (0, u.ee)(() => v, [v]),
+        S = (0, u.ee)(() => b, [b]),
         I = (0, u.ee)(() => E, [E]),
         j = (0, l.h)(u.zi, 3000, []);
     r.useEffect(() => {

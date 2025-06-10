@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(981631),
     U = n(215023),
     G = n(388032),
-    V = n(87671),
-    B = n(13299),
+    B = n(87671),
+    V = n(13299),
     H = n(843385);
 function F(e) {
     let { onLoadComplete: t } = e,
@@ -56,7 +56,7 @@ function F(e) {
               loop: !0,
               muted: !0,
               playsInline: !0,
-              className: a()(V.bannerAsset, V.orbsBannerAsset),
+              className: a()(B.bannerAsset, B.orbsBannerAsset),
               onProgress: t,
               'data-mtctest-ignore': 'true',
               controls: !1,
@@ -66,8 +66,8 @@ function F(e) {
               })
           })
         : (0, r.jsx)('img', {
-              src: B.ZP,
-              className: a()(V.bannerAsset, V.oversizedImg),
+              src: V.ZP,
+              className: a()(B.bannerAsset, B.oversizedImg),
               alt: '',
               onLoad: t
           });
@@ -77,7 +77,7 @@ let z = function () {
         { onScroll: l, scrollPosition: s } = (0, m.M)(),
         u = A.Z.getState().getUtmCurrentContext(),
         g = (0, j._)({ location: k.dr.QUEST_HOME_DESKTOP }) ? Z.Z : Z.j,
-        B = (0, w.z)((e) => e.registerAssetLoad),
+        V = (0, w.z)((e) => e.registerAssetLoad),
         H = i.useRef(u);
     i.useEffect(() => {
         H.current = u;
@@ -106,9 +106,9 @@ let z = function () {
         K = z ? G.intl.format(G.t.U9FY0N, {}) : G.intl.string(G.t.oWCrBg),
         q = i.useRef(null);
     return (0, r.jsx)(L.k.Provider, {
-        value: { onAssetLoadComplete: B },
+        value: { onAssetLoadComplete: V },
         children: (0, r.jsx)('div', {
-            className: V.container,
+            className: B.container,
             children: z
                 ? (0, r.jsx)(R.t.Provider, {
                       value: q,
@@ -161,7 +161,7 @@ let z = function () {
                                                 (0, r.jsx)(c.zxk, {
                                                     look: c.iLD.LINK,
                                                     color: c.Ttl.CUSTOM,
-                                                    className: V.orbsTermsButton,
+                                                    className: B.orbsTermsButton,
                                                     onClick: W,
                                                     children: G.intl.string(G.t['7kTAgI'])
                                                 })
@@ -171,8 +171,8 @@ let z = function () {
                                             text: G.intl.string(G.t.hvVgAQ),
                                             onClick: W
                                         }),
-                                  className: a()(V.bannerContainer, { [V.orbsContainer]: z }),
-                                  children: [(0, r.jsx)('div', { className: a()(V.bannerGradient, { [V.orbsGradient]: z }) }), (0, r.jsx)(F, { onLoadComplete: B })]
+                                  className: a()(B.bannerContainer, { [B.orbsContainer]: z }),
+                                  children: [(0, r.jsx)('div', { className: a()(B.bannerGradient, { [B.orbsGradient]: z }) }), (0, r.jsx)(F, { onLoadComplete: V })]
                               }),
                               (0, r.jsx)(E.Z, { children: e === P.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(x.Z, {}) })
                           ]
@@ -182,7 +182,7 @@ let z = function () {
                       children: [
                           (0, r.jsxs)(I.ZP, {
                               variant: I._6.OVERLAY,
-                              children: [(0, r.jsx)('div', { className: V.dragRegion }), (0, r.jsx)(I.z6, { scrollPosition: s }), (0, r.jsx)(I.aV, { icon: c.qDn })]
+                              children: [(0, r.jsx)('div', { className: B.dragRegion }), (0, r.jsx)(I.z6, { scrollPosition: s }), (0, r.jsx)(I.aV, { icon: c.qDn })]
                           }),
                           (0, r.jsx)(R.t.Provider, {
                               value: q,
@@ -197,13 +197,13 @@ let z = function () {
                                               text: G.intl.string(G.t.hvVgAQ),
                                               onClick: W
                                           }),
-                                          className: a()(V.bannerContainer, { [V.orbsContainer]: z }),
-                                          children: [(0, r.jsx)('div', { className: a()(V.bannerGradient, { [V.orbsGradient]: z }) }), (0, r.jsx)(F, { onLoadComplete: B })]
+                                          className: a()(B.bannerContainer, { [B.orbsContainer]: z }),
+                                          children: [(0, r.jsx)('div', { className: a()(B.bannerGradient, { [B.orbsGradient]: z }) }), (0, r.jsx)(F, { onLoadComplete: V })]
                                       }),
                                       (0, r.jsxs)(E.Z, {
                                           children: [
                                               (0, r.jsx)('div', {
-                                                  className: V.tabs,
+                                                  className: B.tabs,
                                                   children: (0, r.jsx)(O.Z, {
                                                       tabs: n,
                                                       selectedTab: e,

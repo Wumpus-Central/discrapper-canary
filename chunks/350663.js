@@ -1,8 +1,8 @@
 n.d(t, {
     IV: () => _,
     ZP: () => S,
-    bt: () => v,
-    fd: () => b
+    bt: () => b,
+    fd: () => v
 }),
     n(388685);
 var i = n(255367),
@@ -62,8 +62,8 @@ function O(e, t) {
         e
     );
 }
-let v = 256,
-    b = 144,
+let b = 256,
+    v = 144,
     E = (e) => {
         let { participant: t, width: n, locked: r, widgetId: o, pinned: l } = e;
         return (0, i.jsx)('div', {
@@ -83,16 +83,16 @@ let v = 256,
     };
 function _(e, t, n) {
     if (e === f.C5.VERTICAL) {
-        let e = Math.max(t, v),
-            n = Math.max((9 / 16) * e, b);
+        let e = Math.max(t, b),
+            n = Math.max((9 / 16) * e, v);
         return {
             tileWidth: e,
             tileHeight: n
         };
     }
-    let i = Math.max(n, b);
+    let i = Math.max(n, v);
     return {
-        tileWidth: Math.max((16 / 9) * i, v),
+        tileWidth: Math.max((16 / 9) * i, b),
         tileHeight: i
     };
 }
@@ -103,20 +103,20 @@ let x = {
         clamp: !0
     },
     S = r.memo(function (e) {
-        let { widgetId: t, tileWidth: n, tileHeight: o, layout: h, locked: v, activeStreams: b, streamParticipants: _, participantsVersion: S, pinned: I, padding: j, sizeOffset: C } = e,
+        let { widgetId: t, tileWidth: n, tileHeight: o, layout: h, locked: b, activeStreams: v, streamParticipants: _, participantsVersion: S, pinned: I, padding: j, sizeOffset: C } = e,
             N = _.map((e) => ({
                 participant: e,
                 key: e.user.id,
                 width: n,
                 height: o,
-                locked: v,
+                locked: b,
                 widgetId: t,
                 pinned: I
             })),
             w = (0, c.Z)(n),
-            Z = (0, c.Z)(v),
+            Z = (0, c.Z)(b),
             P = h === f.C5.VERTICAL,
-            T = v || Z !== v || w !== n,
+            T = b || Z !== b || w !== n,
             k = 0,
             D = 0,
             A = (0, s.Yzy)(
@@ -168,7 +168,7 @@ let x = {
                 T ? 'animate-never' : 'respect-motion-settings'
             ),
             R = (0, p.ee)(() => new Set(_.map((e) => e.user.id)), [_, S]),
-            L = (0, p.ee)(() => new Set(_.filter((e) => b.has((0, u.V9)(e.stream))).map((e) => e.user.id)), [_, b, S]);
+            L = (0, p.ee)(() => new Set(_.filter((e) => v.has((0, u.V9)(e.stream))).map((e) => e.user.id)), [_, v, S]);
         return (
             r.useEffect(() => {
                 0 !== R.size &&

@@ -117,14 +117,15 @@ function N(e) {
                     null != q && (0, r.jsx)(u.Z, { profileEffectId: q })
                 ]
             }),
-            J && Y && (0, r.jsx)(C, {})
+            J && Y && (0, r.jsx)(C, { pendingGlobalName: w })
         ]
     });
 }
-function C() {
-    let e = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
-        t = (0, o.e7)([m.Z], () => m.Z.getPendingNameplate());
-    return null == e
+function C(e) {
+    let { pendingGlobalName: t } = e,
+        n = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
+        i = (0, o.e7)([m.Z], () => m.Z.getPendingNameplate());
+    return null == n
         ? null
         : (0, r.jsxs)('div', {
               className: A.nameplatePreviewSection,
@@ -134,9 +135,10 @@ function C() {
                       children: T.intl.string(T.t['7KRt6e']).toLocaleUpperCase()
                   }),
                   (0, r.jsx)(l.Z, {
-                      user: e,
-                      nameplate: t,
-                      nameplateData: void 0 === t ? e.nameplate : void 0,
+                      user: n,
+                      nameplate: i,
+                      nameplateData: void 0 === i ? n.nameplate : void 0,
+                      pendingGlobalName: t,
                       isHighlighted: !0,
                       className: A.nameplate
                   })

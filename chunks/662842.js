@@ -47,8 +47,8 @@ function D(e) {
         ),
         U = null == l ? void 0 : l.id,
         G = (0, o.Wu)([C.Z], () => [...new Set(C.Z.getMutableParticipants(U, S.pV.SPEAKER).map((e) => e.user))], [U]),
-        V = (0, o.e7)([C.Z], () => (null != U ? C.Z.getParticipantCount(U, S.pV.AUDIENCE) : 0), [U]),
-        B = (0, o.e7)([j.Z], () => j.Z.can(Z.Plq.CONNECT, l)),
+        B = (0, o.e7)([C.Z], () => (null != U ? C.Z.getParticipantCount(U, S.pV.AUDIENCE) : 0), [U]),
+        V = (0, o.e7)([j.Z], () => j.Z.can(Z.Plq.CONNECT, l)),
         H = (0, T.Z)(null == l ? void 0 : l.id),
         F = null == d ? void 0 : d.creator_id,
         z = (0, o.e7)([A.default], () => A.default.getUser(F), [F]);
@@ -265,16 +265,16 @@ function D(e) {
                 guildEvent: d,
                 stageInstance: P,
                 activeChannel: l,
-                canConnect: B,
+                canConnect: V,
                 myRole: H,
                 eventCreator: z,
                 speakers: G,
-                listenerCount: V,
+                listenerCount: B,
                 isEventNoticeHidden: M,
                 isStageNoticeHidden: D,
                 isStudyRoomNotice: n
             }),
-        [d, P, l, B, H, z, G, V, M, D, n]
+        [d, P, l, V, H, z, G, B, M, D, n]
     );
     return null == W
         ? null

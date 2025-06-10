@@ -21,8 +21,8 @@ function m(e) {
         [o, a] = r.useState(0),
         [m, g] = r.useState(0),
         [y, O] = r.useState(0),
-        v = r.useRef(0),
-        [b, E] = r.useState(0),
+        b = r.useRef(0),
+        [v, E] = r.useState(0),
         { timeToLiveMs: _, reappearTimeMs: x } = d.ZP.useState(
             (e) => ({
                 timeToLiveMs: e.timeToLiveMs,
@@ -40,7 +40,7 @@ function m(e) {
     }),
         r.useEffect(
             () => (
-                (v.current = setInterval(() => {
+                (b.current = setInterval(() => {
                     let e = Date.now();
                     g(e),
                         O((t) => {
@@ -52,7 +52,7 @@ function m(e) {
                         });
                 }, 100)),
                 () => {
-                    clearInterval(v.current);
+                    clearInterval(b.current);
                 }
             ),
             []
@@ -70,8 +70,8 @@ function m(e) {
         [w, Z] = r.useState(!1);
     if (
         (r.useEffect(() => {
-            b > 10 && Z(!0);
-        }, [b]),
+            v > 10 && Z(!0);
+        }, [v]),
         w)
     )
         throw Error('ClickZoneDebugWidget crashed, too many clicks');
@@ -92,7 +92,7 @@ function m(e) {
                                   children: (0, i.jsxs)(u.Text, {
                                       variant: 'text-md/semibold',
                                       color: 'always-white',
-                                      children: ['Click Me (', b, ')']
+                                      children: ['Click Me (', v, ')']
                                   })
                               })
                           })

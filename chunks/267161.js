@@ -1,6 +1,6 @@
 n.r(t),
     n.d(t, {
-        default: () => V,
+        default: () => B,
         useAppSidebarState: () => U
     });
 var r = n(255367),
@@ -130,7 +130,7 @@ function G() {
             })
     );
 }
-let V = i.memo(function () {
+let B = i.memo(function () {
     i.useLayoutEffect(() => {
         j.ZP.setMinimumSize(w.J, w.N);
     }, []);
@@ -163,7 +163,7 @@ let V = i.memo(function () {
                                                   onClick: () => {
                                                       U.setState({ isOpen: !U.getState().isOpen });
                                                   },
-                                                  children: (0, r.jsx)(B, {})
+                                                  children: (0, r.jsx)(V, {})
                                               })
                                           ),
                                           (0, r.jsx)(s.P3F, {
@@ -195,7 +195,7 @@ let V = i.memo(function () {
                   })
           });
 });
-function B() {
+function V() {
     return (0, r.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
         className: D.icon,

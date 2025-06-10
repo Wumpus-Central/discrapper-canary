@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => V }), n(539854), n(388685);
+n.d(t, { ZP: () => B }), n(539854), n(388685);
 var r,
     i = n(392711),
     l = n.n(i),
@@ -283,7 +283,7 @@ class G extends (r = a.ZP.Store) {
     }
 }
 y(G, 'displayName', 'FriendsStore');
-let V = new G(o.Z, {
+let B = new G(o.Z, {
     CONNECTION_OPEN: function () {
         k();
     },

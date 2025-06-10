@@ -331,7 +331,7 @@ function ee(e) {
                                       style: { [eL]: -2 }
                                   }),
                                   (0, r.jsxs)('div', {
-                                      className: H.contentWrapper,
+                                      className: o()(H.contentWrapper, { [H.emojiStudioActive]: ey }),
                                       children: [
                                           eD
                                               ? (0, r.jsx)('nav', {

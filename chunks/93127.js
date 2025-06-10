@@ -1,45 +1,17 @@
-n.d(t, {
-    W: () => c,
-    _: () => u
-});
+n.d(t, { _: () => l });
 var r = n(544891),
     i = n(570140),
-    a = n(480294),
-    o = n(814443),
-    s = n(752048),
-    l = n(981631);
-function c() {
+    a = n(480294);
+n(814443);
+var o = n(752048),
+    s = n(981631);
+function l() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return o.Z.needsRefresh()
-        ? (i.Z.dispatch({ type: 'LOAD_USER_AFFINITIES' }),
-          r.tn
-              .get({
-                  url: l.ANM.USER_AFFINITIES,
-                  retries: 3 * !!e,
-                  oldFormErrors: !0,
-                  rejectWithError: !1
-              })
-              .then(
-                  (e) => {
-                      let { body: t } = e;
-                      i.Z.dispatch({
-                          type: 'LOAD_USER_AFFINITIES_SUCCESS',
-                          affinities: t
-                      });
-                  },
-                  () => {
-                      i.Z.dispatch({ type: 'LOAD_USER_AFFINITIES_FAILURE' });
-                  }
-              ))
-        : Promise.resolve();
-}
-function u() {
-    let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return s.Z.shouldFetch() && a.Z.hasConsented(l.pjP.PERSONALIZATION)
+    return o.Z.shouldFetch() && a.Z.hasConsented(s.pjP.PERSONALIZATION)
         ? (i.Z.dispatch({ type: 'LOAD_USER_AFFINITIES_V2' }),
           r.tn
               .get({
-                  url: l.ANM.USER_AFFINITIES_V2,
+                  url: s.ANM.USER_AFFINITIES_V2,
                   retries: 3 * !!e,
                   oldFormErrors: !0,
                   rejectWithError: !1

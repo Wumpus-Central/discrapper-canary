@@ -131,7 +131,7 @@ class _ extends o.Z {
             }),
             y(this, '_maybeFetchUserAffinities', () => {
                 let { enabled: e } = m.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
-                e && (0, c.W)();
+                e && (0, c._)();
             }),
             y(this, '_trackCustomNotificationSoundsExposure', () => {
                 b.Y.trackExposure({ location: 'PremiumManager' });

@@ -1,8 +1,8 @@
 n.d(t, {
-    $x: () => S,
+    $x: () => C,
     ZP: () => N,
-    d7: () => P,
-    w6: () => C
+    d7: () => E,
+    w6: () => S
 }),
     n(539854),
     n(361932),
@@ -77,10 +77,10 @@ let x = Object.freeze({
         onPreventNavigation: null,
         sidebarOpen: !0
     }),
-    S = 1.4,
-    C = 15,
-    P = 2;
-function w(e) {
+    C = 1.4,
+    S = 15,
+    E = 2;
+function P(e) {
     var t, n;
     let { section: i, setPreventNavigation: o, scrollerRef: a } = e;
     (0, l.Z)({
@@ -101,7 +101,7 @@ function w(e) {
         )
     });
 }
-class E extends i.PureComponent {
+class w extends i.PureComponent {
     componentDidMount() {
         this.getPredicateSections().forEach((e) => {
             let { notice: t } = e;
@@ -115,7 +115,7 @@ class E extends i.PureComponent {
     }
     componentDidUpdate(e) {
         let { section: t } = e;
-        t !== this.props.section && (this._intensity = S);
+        t !== this.props.section && (this._intensity = C);
     }
     componentWillUnmount() {
         (this._unmounted = !0),
@@ -137,10 +137,10 @@ class E extends i.PureComponent {
                   duration: 300,
                   intensity: this._intensity
               }),
-              (this._intensity = Math.min(this._intensity + P, C)),
+              (this._intensity = Math.min(this._intensity + E, S)),
               f.S.dispatch(_.CkL.EMPHASIZE_NOTICE),
               !1)
-            : ((this._intensity = S), !0);
+            : ((this._intensity = C), !0);
     }
     renderSidebar(e) {
         let { section: t, title: n, showUserSettingsSearch: i } = this.props,
@@ -201,7 +201,7 @@ class E extends i.PureComponent {
                     scrollerRef: this.scrollerRef,
                     section: n,
                     sidebar: this.renderSidebar(a),
-                    content: (0, r.jsx)(w, {
+                    content: (0, r.jsx)(P, {
                         section: l,
                         setPreventNavigation: this.setPreventNavigation,
                         scrollerRef: this.scrollerRef
@@ -219,7 +219,7 @@ class E extends i.PureComponent {
     constructor(...e) {
         super(...e),
             O(this, '_unmounted', !1),
-            O(this, '_intensity', S),
+            O(this, '_intensity', C),
             O(this, '_subscribedStores', []),
             O(this, 'scrollerRef', i.createRef()),
             O(this, 'state', j(y({}, x), { sidebarOpen: this.props.section !== _.oAB.SUBSCRIPTIONS && this.props.section !== _.oAB.PROFILE_CUSTOMIZATION })),
@@ -259,7 +259,7 @@ class E extends i.PureComponent {
                 }
             }),
             O(this, 'handleNoticeStoreUpdate', () => {
-                this._unmounted || ((this._intensity = S), this.forceUpdate());
+                this._unmounted || ((this._intensity = C), this.forceUpdate());
             }),
             O(this, 'renderSettingsSectionTabBarItem', (e, t, n) => {
                 let { section: i, label: s = null, ariaLabel: l, onClick: c, variant: u, icon: p, className: f, newIndicator: g, newIndicatorDismissibleContentTypes: b, badgeCount: m } = e,
@@ -310,4 +310,4 @@ class E extends i.PureComponent {
             });
     }
 }
-let N = E;
+let N = w;

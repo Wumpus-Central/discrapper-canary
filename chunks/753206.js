@@ -15,16 +15,16 @@ let b = i.memo(function (e) {
     var t;
     let { message: n, channel: s, compact: b, className: m, isGroupStart: _, hideSimpleEmbedContent: v = !0, disableInteraction: h, previewGuildId: O, preview: y, author: j } = e,
         x = null != O ? O : (0, c.k)(n),
-        S = (0, l.Z)(j),
-        C = (0, a.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
-        { content: P } = (0, d.Z)(n, {
+        C = (0, l.Z)(j),
+        S = (0, a.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
+        { content: E } = (0, d.Z)(n, {
             hideSimpleEmbedContent: v,
-            allowList: C,
-            allowHeading: C,
+            allowList: S,
+            allowHeading: S,
             allowLinks: !0,
             previewLinkTarget: !0
         }),
-        w = i.useMemo(() => {
+        P = i.useMemo(() => {
             var t, n;
             return (0, f.Z)(
                 ((t = (function (e) {
@@ -79,10 +79,10 @@ let b = i.memo(function (e) {
             [g.cozyMessage]: !b,
             [g.groupStart]: _
         }),
-        childrenHeader: w,
-        childrenMessageContent: (0, p.Z)(e, P),
+        childrenHeader: P,
+        childrenMessageContent: (0, p.Z)(e, E),
         disableInteraction: h,
-        authorHasGradientRole: S,
+        authorHasGradientRole: C,
         guildId: x,
         preview: y
     });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => x }), n(388685), n(642613);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -15,7 +15,7 @@ var r = n(255367),
     m = n(717401),
     g = n(286961),
     E = n(93127),
-    b = n(814443),
+    b = n(752048),
     y = n(590783),
     O = n(699516),
     v = n(246946),
@@ -189,16 +189,16 @@ function x(e) {
 let k = (e) => {
     let { giftCode: t, onClose: n } = e;
     i.useEffect(() => {
-        f.Z.fetchRelationships(), (0, E.W)();
+        f.Z.fetchRelationships(), (0, E._)();
     }, []);
     let [a, o] = i.useState(),
         [s, p] = i.useState(!1),
         [m, g] = i.useState(!1),
         { userAffinities: y, isLoading: v } = (0, c.cj)([b.Z], () => ({
-            userAffinities: b.Z.getUserAffinitiesUserIds(),
-            isLoading: b.Z.getFetching()
+            userAffinities: b.Z.getUserAffinitiesMap(),
+            isLoading: b.Z.isFetching()
         })),
-        S = Array.from(y.values()),
+        S = Array.from(y.keys()).sort((e, t) => b.Z.compare(e, t)),
         T = (0, c.e7)([O.Z], () => O.Z.getFriendIDs()),
         A = l().difference(T, S),
         C = [...S, ...A],
