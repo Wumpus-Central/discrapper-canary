@@ -8985,6 +8985,7 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     display: flex;
     height: 24px;
     margin: 4px;
+    overflow: hidden;
     padding: 3px;
     position: absolute;
     right: 0;
