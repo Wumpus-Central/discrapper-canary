@@ -24097,9 +24097,17 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     margin-top: 16px
 }
 
-.sectionFooter__61424 {
+.nitroFooter__61424 {
     background-color: hsl(var(--premium-tier-2-purple-hsl)/.35);
+    height: 20px
+}
+
+.nitroFooter__61424.lastSection__61424 {
     height: 60px
+}
+
+.nonNitroFooter__61424 {
+    height: 70px
 }
 
 .sectionTitle__61424 {
