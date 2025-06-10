@@ -51829,6 +51829,10 @@ html.disable-forced-colors * {
     margin-left: auto
 }
 
+.closeIcon__68a18 {
+    display: block
+}
+
 .closeIconWithHover__68a18 {
     fill: var(--icon-tertiary)
 }
@@ -51841,11 +51845,6 @@ html.disable-forced-colors * {
     display: flex;
     flex-direction: column;
     gap: 8px
-}
-
-.slider__68a18 {
-    margin: 0 6px;
-    width: auto
 }
 
 .gradientDirectionSliderContainer__68a18 {
@@ -51974,21 +51973,7 @@ html.disable-forced-colors * {
     width: 100%
 }
 
-.nitroIconContainer__68a18 {
-    align-items: center;
-    border-radius: 4px;
-    cursor: pointer;
-    display: inline-flex;
-    justify-content: center
-}
-
-.nitroIconWithHover__68a18 {
-    height: 20px;
-    width: 20px;
-    fill: var(--icon-tertiary)
-}
-
-.nitroIconContainer__68a18:hover .nitroIconWithHover__68a18 {
+.nitroIcon__68a18 {
     fill: var(--icon-primary)
 }
 
