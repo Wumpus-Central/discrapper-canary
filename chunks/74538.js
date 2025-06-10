@@ -26,7 +26,7 @@ n.d(t, {
     Wz: () => tN,
     XK: () => e$,
     Z8: () => eb,
-    ZP: () => tM,
+    ZP: () => tk,
     Zx: () => e0,
     _O: () => tC,
     a5: () => eH,
@@ -146,12 +146,12 @@ function x(e, t) {
         e
     );
 }
-let M = {
+let k = {
         PAYMENT_SOURCE_MANAGEMENT: 'https://support.apple.com/HT201266',
         BILLING_HISTORY: 'https://support.apple.com/HT201266',
         SUBSCRIPTION_MANAGEMENT: 'https://support.apple.com/HT202039'
     },
-    k = {
+    M = {
         SUBSCRIPTION_MANAGEMENT: 'https://play.google.com/store/account/subscriptions',
         PAYMENT_SOURCE_MANAGEMENT: 'https://play.google.com/store/paymentmethods',
         BILLING_HISTORY: 'https://play.google.com/store/account/orderhistory'
@@ -503,8 +503,8 @@ function es(e) {
         D = null == (a = null != (i = null == O ? void 0 : O.taxInclusive) ? i : null == (r = p.latestInvoice) ? void 0 : r.taxInclusive) || a,
         L = C.cb + (g ? em(p.additionalPlans) : 0),
         x = N ? (D ? P.intl.format(P.t['cd+hqK'], { price: m }) : P.intl.format(P.t.NUkcpK, { price: m })) : P.intl.string(P.t.zYx3Y2),
-        M = N ? (D ? P.intl.format(P.t.VsKcFB, { price: m }) : P.intl.format(P.t.hJ5xER, { price: m })) : P.intl.string(P.t['8rSipK']),
-        k = N
+        k = N ? (D ? P.intl.format(P.t.VsKcFB, { price: m }) : P.intl.format(P.t.hJ5xER, { price: m })) : P.intl.string(P.t['8rSipK']),
+        M = N
             ? D
                 ? P.intl.format(P.t['jRy6/P'], {
                       price: m,
@@ -564,7 +564,7 @@ function es(e) {
                           })
                         : P.intl.format(P.t.VlWufn, { pauseDate: p.currentPeriodEnd });
                 case A.O0b.PAUSED:
-                    if (v) return M;
+                    if (v) return k;
                     return P.intl.format(P.t['6RTdZG'], { resumeDate: p.pauseEndsAt });
                 case A.O0b.PAST_DUE:
                     return P.intl.format(P.t['d+0vws'], {
@@ -574,7 +574,7 @@ function es(e) {
                         }
                     });
                 default:
-                    return M;
+                    return k;
             }
         case C.Xh.PREMIUM_MONTH_TIER_2:
         case C.Xh.PREMIUM_YEAR_TIER_2:
@@ -616,7 +616,7 @@ function es(e) {
                           })
                         : P.intl.format(P.t.VlWufn, { pauseDate: p.currentPeriodEnd });
                 case A.O0b.PAUSED:
-                    if (v) return k;
+                    if (v) return M;
                     return P.intl.format(P.t['6RTdZG'], { resumeDate: p.pauseEndsAt });
                 case A.O0b.BILLING_RETRY:
                     return P.intl.format(P.t['IlJ/HR'], { endDate: o()(p.currentPeriodStart).add(C.A5, 'days').toDate() });
@@ -645,7 +645,7 @@ function es(e) {
                                     regularPrice: T,
                                     numMonths: null != (f = null == y ? void 0 : y.duration) ? f : C.rt
                                 })
-                        : k;
+                        : M;
             }
         default:
             throw Error('Invalid planId '.concat(h));
@@ -1043,7 +1043,7 @@ function ex(e, t, n) {
     let r = eL(e, t, n);
     return (0, S.og)(r, e.interval, e.intervalCount);
 }
-function eM(e, t) {
+function ek(e, t) {
     let { planId: n } = e;
     if (e.status === A.O0b.CANCELED || e.status === A.O0b.PAUSE_PENDING) return n;
     i()(null != t, 'Expected invoicePreview');
@@ -1053,7 +1053,7 @@ function eM(e, t) {
     });
     return null == r || (0, f.Q0)(r.subscriptionPlanId) || (null != e.renewalMutations && e.renewalMutations.planId !== e.planId) ? e.planId : r.subscriptionPlanId;
 }
-function ek(e, t) {
+function eM(e, t) {
     let { status: n } = e;
     if (e.status === A.O0b.CANCELED || e.status === A.O0b.PAUSE_PENDING) return n;
     i()(null != t, 'Expected invoicePreview');
@@ -1230,9 +1230,9 @@ function ez(e, t) {
     switch (e) {
         case A.gg$.APPLE_PARTNER:
         case A.gg$.APPLE:
-            return M[t];
-        case A.gg$.GOOGLE:
             return k[t];
+        case A.gg$.GOOGLE:
+            return M[t];
     }
     throw Error('Invalid external payment gateway '.concat(e));
 }
@@ -1463,7 +1463,7 @@ function tx(e) {
         return e + i * r;
     }, 0);
 }
-let tM = Object.freeze({
+let tk = Object.freeze({
     isNewUser: (e) => null != e && Date.now() - e.createdAt.getTime() < G,
     isPremiumAtLeast: T.yd,
     isPremium: T.I5,
@@ -1495,8 +1495,8 @@ let tM = Object.freeze({
     isSwitchingPlansDisabled: eA,
     getSwitchingPlansDisabledMessage: eN,
     isNoneSubscription: f.Q0,
-    getPlanIdFromInvoice: eM,
-    getStatusFromInvoice: ek,
+    getPlanIdFromInvoice: ek,
+    getStatusFromInvoice: eM,
     isBaseSubscriptionCanceled: ej,
     getPremiumGuildIntervalPrice: eB,
     hasAccountCredit: eF,

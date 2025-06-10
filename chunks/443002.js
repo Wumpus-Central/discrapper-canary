@@ -31,7 +31,7 @@ let A = function (e) {
         D = i.useRef(null),
         L = i.useRef(null),
         x = i.useRef(null),
-        M = i.useCallback(() => {
+        k = i.useCallback(() => {
             null != x.current &&
                 null != L.current &&
                 L.current.scrollTo({
@@ -39,7 +39,7 @@ let A = function (e) {
                     animate: !0
                 });
         }, []),
-        k = (0, u.Ek)(n.id, 'GuildBoostingMarketing'),
+        M = (0, u.Ek)(n.id, 'GuildBoostingMarketing'),
         j = i.useCallback(() => {
             null == A || A(),
                 _.default.track(I.rMx.MODAL_DISMISSED, {
@@ -109,11 +109,11 @@ let A = function (e) {
                                 (0, r.jsxs)('div', {
                                     className: S.headerContentWrapper,
                                     children: [
-                                        k &&
+                                        M &&
                                             (0, r.jsx)(d.Z, {
                                                 guild: e.guild,
                                                 themeResponsive: !1,
-                                                onButtonClick: M
+                                                onButtonClick: k
                                             }),
                                         (0, r.jsx)(o.X6q, {
                                             className: S.heading,
@@ -137,7 +137,7 @@ let A = function (e) {
                             className: S.middleBodyContentWrapper,
                             children: [
                                 (0, r.jsx)(O.ZP, { guild: e.guild }),
-                                k &&
+                                M &&
                                     (0, r.jsx)(f.Z, {
                                         ref: x,
                                         guild: e.guild,
@@ -156,7 +156,7 @@ let A = function (e) {
                                             guild: n
                                         }),
                                         (0, r.jsx)(p.Z, {}),
-                                        (0, r.jsx)(m.Z, { isGuildPowerupsExperimentEnabled: k })
+                                        (0, r.jsx)(m.Z, { isGuildPowerupsExperimentEnabled: M })
                                     ]
                                 }),
                                 (0, r.jsx)(v.A, {}),

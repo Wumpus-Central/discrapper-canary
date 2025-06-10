@@ -1,4 +1,4 @@
-a.d(e, { k: () => d });
+a.d(e, { k: () => N });
 var r = a(151122),
     _ = a(263449),
     n = a(233517),
@@ -11,7 +11,7 @@ var r = a(151122),
     u = a(454463),
     I = a(878719),
     R = a(163162);
-let d = (0, r._I)((t = {}) => {
+let N = (0, r._I)((t = {}) => {
     let e = {
         onerror: !0,
         onunhandledrejection: !0,
@@ -29,8 +29,8 @@ let d = (0, r._I)((t = {}) => {
                 (0, o.V)((t) => {
                     let { stackParser: e, attachStacktrace: r } = A();
                     if ((0, _.s3)() !== a || (0, R.Wz)()) return;
-                    let { msg: o, url: i, line: l, column: u, error: d } = t,
-                        N = (function (t, e, a, r) {
+                    let { msg: o, url: i, line: l, column: u, error: N } = t,
+                        d = (function (t, e, a, r) {
                             let _ = (t.exception = t.exception || {}),
                                 n = (_.values = _.values || []),
                                 o = (n[0] = n[0] || {}),
@@ -50,17 +50,17 @@ let d = (0, r._I)((t = {}) => {
                                     }),
                                 t
                             );
-                        })((0, I.ME)(e, d || o, void 0, r, !1), i, l, u);
-                    (N.level = 'error'),
-                        (0, n.eN)(N, {
-                            originalException: d,
+                        })((0, I.ME)(e, N || o, void 0, r, !1), i, l, u);
+                    (d.level = 'error'),
+                        (0, n.eN)(d, {
+                            originalException: N,
                             mechanism: {
                                 handled: !1,
                                 type: 'onerror'
                             }
                         });
                 }),
-                N('onerror')),
+                d('onerror')),
                 e.onunhandledrejection &&
                     ((r = t),
                     (0, i.h)((t) => {
@@ -97,11 +97,11 @@ let d = (0, r._I)((t = {}) => {
                                 }
                             });
                     }),
-                    N('onunhandledrejection'));
+                    d('onunhandledrejection'));
         }
     };
 });
-function N(t) {
+function d(t) {
     u.X && l.kg.log(`Global Handler attached: ${t}`);
 }
 function A() {

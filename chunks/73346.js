@@ -1,7 +1,7 @@
 n.d(t, {
     Gg: () => x,
     Kb: () => R,
-    Ww: () => k,
+    Ww: () => M,
     ZI: () => A,
     _W: () => N,
     uF: () => P
@@ -218,11 +218,11 @@ function x(e, t, n, r, a) {
     }
     return l;
 }
-let M = [];
-function k(e, t, n) {
+let k = [];
+function M(e, t, n) {
     let r = t.get(e),
         i = n.getForSKU(e);
-    if (null == r || null == i) return M;
+    if (null == r || null == i) return k;
     let a = [];
     (0, E.yE)(r.flags, O.l4R.HAS_FREE_PREMIUM_CONTENT) && a.push({ type: O.AzA.HAS_FREE_PREMIUM_CONTENT });
     let s = r.releaseDate;

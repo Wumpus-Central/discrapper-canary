@@ -31,7 +31,7 @@ var r = n(255367),
     D = n(228168),
     L = n(388032),
     x = n(200669);
-function M(e, t, n) {
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,7 +44,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,7 +55,7 @@ function k(e) {
                 })
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -84,21 +84,21 @@ function U(e, t) {
     );
 }
 function G(e) {
-    let { user: t, currentUser: n, guildId: M, channelId: j, messageId: G, roleId: B, openedAt: F, closePopout: V, setPopoutRef: Z, disableUserProfileLink: H = __OVERLAY__, newAnalyticsLocations: Y = [], appContext: W, disableAutoFocus: K = !1 } = e,
+    let { user: t, currentUser: n, guildId: k, channelId: j, messageId: G, roleId: B, openedAt: F, closePopout: V, setPopoutRef: Z, disableUserProfileLink: H = __OVERLAY__, newAnalyticsLocations: Y = [], appContext: W, disableAutoFocus: K = !1 } = e,
         { analyticsLocations: z } = (0, d.ZP)([...Y, u.Z.USER_PROFILE_POPOUT]),
         q = (0, m.ZB)({
             layout: 'POPOUT',
             userId: t.id,
-            guildId: M,
+            guildId: k,
             channelId: j,
             messageId: G,
             roleId: B
         }),
-        X = (0, o.e7)([h.Z], () => (null != M ? h.Z.getGuild(M) : null)),
-        Q = i.useMemo(() => (null != M ? { [M]: [t.id] } : {}), [M, t.id]);
+        X = (0, o.e7)([h.Z], () => (null != k ? h.Z.getGuild(k) : null)),
+        Q = i.useMemo(() => (null != k ? { [k]: [t.id] } : {}), [k, t.id]);
     (0, c.$)(Q);
     let J = i.useRef(null),
-        $ = (0, E.ZP)(t.id, M),
+        $ = (0, E.ZP)(t.id, k),
         ee = (0, l.Z)(J),
         et = (0, b.$m)(),
         en = (0, s.q_F)({
@@ -114,7 +114,7 @@ function G(e) {
             null == V || V(),
                 (0, y.openUserProfileModal)(
                     U(
-                        k(
+                        M(
                             {
                                 sourceAnalyticsLocations: z,
                                 hideRestrictedProfile: !0,
@@ -136,7 +136,7 @@ function G(e) {
                       action: () => {
                           ea(),
                               (0, g.pQ)(
-                                  k(
+                                  M(
                                       {
                                           action: 'PRESS_VIEW_PROFILE',
                                           analyticsLocations: z
@@ -176,7 +176,7 @@ function G(e) {
                                         (0, r.jsx)(N.Z, {
                                             shouldShowTooltip: null === et.interactionType,
                                             user: t,
-                                            guildId: M,
+                                            guildId: k,
                                             channelId: j,
                                             onClose: V,
                                             appContext: W
@@ -190,7 +190,7 @@ function G(e) {
                                             (0, r.jsx)(C.Z, {
                                                 type: 'banner',
                                                 user: t,
-                                                guildId: M,
+                                                guildId: k,
                                                 viewProfileItem: eo(),
                                                 appContext: W
                                             })
@@ -202,7 +202,7 @@ function G(e) {
                                         (0, r.jsx)(v.Z, {
                                             user: t,
                                             displayProfile: $,
-                                            guildId: M,
+                                            guildId: k,
                                             themeType: D.lY.POPOUT
                                         }),
                                         (0, r.jsx)(I.Z, {
@@ -214,7 +214,7 @@ function G(e) {
                                             location: 'UserProfilePopout',
                                             user: t,
                                             displayProfile: $,
-                                            guildId: M,
+                                            guildId: k,
                                             channelId: j,
                                             themeType: D.lY.POPOUT,
                                             onOpenProfile: H ? void 0 : ea
@@ -222,7 +222,7 @@ function G(e) {
                                         (0, r.jsx)(R.Z, {
                                             location: 'UserProfilePopout',
                                             user: t,
-                                            guildId: M,
+                                            guildId: k,
                                             channelId: j,
                                             themeType: D.lY.POPOUT,
                                             onCloseProfile: V,
@@ -242,7 +242,7 @@ function G(e) {
                                 }),
                                 (0, r.jsx)(w.Z, {
                                     user: t,
-                                    guildId: M,
+                                    guildId: k,
                                     channelId: j,
                                     onClose: V,
                                     appContext: W,

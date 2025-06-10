@@ -79,7 +79,7 @@ function x() {
             I,
             setTimeout(
                 () =>
-                    M({
+                    k({
                         feedId: I,
                         feature: i.L.INBOX
                     }),
@@ -87,7 +87,7 @@ function x() {
             )
         );
 }
-async function M(e) {
+async function k(e) {
     let { feedId: t, feature: n, force: r = !1 } = e;
     if (D(t) || r)
         try {
@@ -116,7 +116,7 @@ async function M(e) {
                     t,
                     setTimeout(
                         () =>
-                            M({
+                            k({
                                 feedId: t,
                                 feature: n,
                                 force: r
@@ -133,11 +133,11 @@ async function M(e) {
             A.delete(t);
         }
 }
-function k() {
+function M() {
     x();
 }
 function j() {
-    k();
+    M();
 }
 function U() {
     L(I);
@@ -145,7 +145,7 @@ function U() {
 function G(e) {
     let { feedId: t, feature: n } = e;
     L(t),
-        M({
+        k({
             feedId: t,
             feature: n,
             force: !0
@@ -164,7 +164,7 @@ function F(e) {
 function V() {
     let { enabled: e } = p.iC.getCurrentConfig({ location: 'ContentInventoryManager' }, { autoTrackExposure: !0 });
     e &&
-        M({
+        k({
             feedId: E.YN.GAME_PROFILE_FEED,
             feature: i.L.GAME_PROFILE
         });
@@ -172,7 +172,7 @@ function V() {
 function Z() {
     let { enabled: e } = c.Z.getCurrentConfig({ location: 'ContentInventoryManager' }, { autoTrackExposure: !0 });
     e &&
-        M({
+        k({
             feedId: E.YN.GAME_PROFILE_FEED,
             feature: i.L.OVERLAY_INVITES
         });
@@ -183,9 +183,9 @@ class H extends o.Z {
             y(this, 'actions', {
                 POST_CONNECTION_OPEN: j,
                 CONNECTION_CLOSED: U,
-                WINDOW_FOCUS: k,
-                IDLE: k,
-                CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: k,
+                WINDOW_FOCUS: M,
+                IDLE: M,
+                CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: M,
                 CONTENT_INVENTORY_MANUAL_REFRESH: G,
                 CONTENT_INVENTORY_INBOX_STALE: B,
                 SPOTIFY_NEW_TRACK: F,

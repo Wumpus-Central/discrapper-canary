@@ -99,8 +99,8 @@ let w = a.ZP.connectStores([p.Z, s.ZP, O.Z, h.Z, E.Z, y.Z, b.Z, f.Z, m.ZP], (e) 
     let L = o ? I.IlC.POPOUT : I.IlC.APP;
     a = (null != g && _) || (o && N) ? null : o || !d || N ? (null != g && P ? (null != (n = b.Z.pipActivityWindow) ? n : b.Z.pipVideoWindow) : null != (r = b.Z.pipVideoWindow) ? r : b.Z.pipActivityWindow) : null;
     let x = Array.from(b.Z.pipWindows.values()),
-        M = b.Z.pipWidth(S.cL.VIDEO),
-        k = [x.find((e) => e.component === I.NYg.VIDEO), x.find((e) => e.component === I.NYg.EMBED_IFRAME)].filter(v.lm),
+        k = b.Z.pipWidth(S.cL.VIDEO),
+        M = [x.find((e) => e.component === I.NYg.VIDEO), x.find((e) => e.component === I.NYg.EMBED_IFRAME)].filter(v.lm),
         j = m.ZP.callChatSidebarWidth,
         U = y.Z.getVoiceChannelId(),
         G = y.Z.getChannelId() === U,
@@ -110,8 +110,8 @@ let w = a.ZP.connectStores([p.Z, s.ZP, O.Z, h.Z, E.Z, y.Z, b.Z, f.Z, m.ZP], (e) 
         Z = !F && null != a && G && B;
     return {
         selectedPIPWindow: a,
-        pipWindows: 0 === k.length ? R : k,
-        pipWidth: M,
+        pipWindows: 0 === M.length ? R : M,
+        pipWidth: k,
         maxX: D.width - (Z ? j : 0),
         maxY: D.height,
         theme: h.Z.theme,

@@ -22,8 +22,8 @@ var i = n(255367),
     _ = n(736519),
     x = n(784238),
     E = n(346497),
-    C = n(422034),
-    j = n(206127),
+    j = n(422034),
+    C = n(206127),
     O = n(710220),
     S = n(474936),
     v = n(388032),
@@ -58,7 +58,7 @@ let I = (e) => {
     };
 function y(e) {
     let { variant: t = 'text-lg/normal', withBottomMargin: n = !0, isApplicationHome: r } = e,
-        s = (0, j.$)();
+        s = (0, C.$)();
     return (0, i.jsx)(o.Text, {
         variant: t,
         color: r ? 'header-secondary' : 'always-white',
@@ -71,7 +71,7 @@ function y(e) {
 }
 let A = r.forwardRef((e, t) => {
     var n, r;
-    let { isFullscreen: s, className: u, buttonClassName: x, subscriptionTier: j, entrypoint: A, isDarkMode: P } = e,
+    let { isFullscreen: s, className: u, buttonClassName: x, subscriptionTier: C, entrypoint: A, isDarkMode: P } = e,
         { analyticsLocations: R } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_HERO_CTA),
         D = (0, p._O)(),
         Z = (0, h.Ng)(),
@@ -106,7 +106,7 @@ let A = r.forwardRef((e, t) => {
                             : G
                               ? (0, i.jsx)('div', {
                                     className: T.affinityDescription,
-                                    children: (0, i.jsx)(C.Z, {
+                                    children: (0, i.jsx)(j.Z, {
                                         textColor: 'always-white',
                                         smallerText: !s
                                     })
@@ -121,7 +121,7 @@ let A = r.forwardRef((e, t) => {
                                   })
                               })
                             : (0, i.jsx)(I, {
-                                  subscriptionTier: null != (r = null != j ? j : null == k || null == (n = k.subscription_trial) ? void 0 : n.sku_id) ? r : w,
+                                  subscriptionTier: null != (r = null != C ? C : null == k || null == (n = k.subscription_trial) ? void 0 : n.sku_id) ? r : w,
                                   inOfferExperience: L,
                                   buttonClassName: x,
                                   isDarkMode: P

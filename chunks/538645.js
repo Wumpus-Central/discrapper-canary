@@ -57,16 +57,16 @@ function x() {
         [n, s] = r.useState(),
         x = r.useRef(null),
         E = (0, o.Wu)([m.Z], () => m.Z.profileEffects),
-        [C, j] = r.useState(''),
+        [j, C] = r.useState(''),
         O = r.useMemo(
             () =>
-                '' === C
+                '' === j
                     ? E
                     : E.filter((e) => {
-                          let t = C.toLowerCase();
+                          let t = j.toLowerCase();
                           return e.config.title.toLowerCase().includes(t) || e.config.description.toLowerCase().includes(t);
                       }),
-            [C, E]
+            [j, E]
         ),
         S = r.useCallback(
             (e, n) => {
@@ -154,9 +154,9 @@ function x() {
                                     children: 'All Effects'
                                 }),
                                 (0, i.jsx)('input', {
-                                    value: C,
+                                    value: j,
                                     onChange: (e) => {
-                                        j(e.target.value);
+                                        C(e.target.value);
                                     }
                                 }),
                                 (0, i.jsx)('div', {

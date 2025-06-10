@@ -21,7 +21,7 @@ function E(e) {
     var t;
     let { isNested: n = !1 } = e,
         E = null == (t = (0, m.Z)()) || t,
-        { explicitContentGuilds: C, explicitContentFriendDm: j, explicitContentNonFriendDm: O } = (0, d.B)(),
+        { explicitContentGuilds: j, explicitContentFriendDm: C, explicitContentNonFriendDm: O } = (0, d.B)(),
         S = (e) => {
             let t = Object.values(e);
             if ((0, o.Ks)() && t.includes(r.Q4.SHOW)) return void l.Z.showAgeVerificationGetStartedModal(a.cU.SENSITIVE_MEDIA_FILTER_SETTINGS);
@@ -65,7 +65,7 @@ function E(e) {
                                   (0, i.jsx)(s.q4e, {
                                       look: s.qQH.CUSTOM,
                                       options: v,
-                                      value: j,
+                                      value: C,
                                       onChange: (e) => S({ explicitContentFriendDm: e }),
                                       renderOptionValue: (e) => {
                                           let [t] = e;
@@ -106,7 +106,7 @@ function E(e) {
                                   (0, i.jsx)(s.q4e, {
                                       look: s.qQH.CUSTOM,
                                       options: T,
-                                      value: C,
+                                      value: j,
                                       onChange: (e) => S({ explicitContentGuilds: e }),
                                       isDisabled: !E,
                                       renderOptionValue: (e) => {
@@ -136,7 +136,7 @@ function E(e) {
                               titleClassName: x.selectItemTitle,
                               children: (0, i.jsx)(s.q4e, {
                                   options: v,
-                                  value: j,
+                                  value: C,
                                   onChange: (e) => S({ explicitContentFriendDm: e })
                               })
                           }),
@@ -156,7 +156,7 @@ function E(e) {
                               titleClassName: x.selectItemTitle,
                               children: (0, i.jsx)(s.q4e, {
                                   options: T,
-                                  value: C,
+                                  value: j,
                                   onChange: (e) => S({ explicitContentGuilds: e }),
                                   isDisabled: !E
                               })

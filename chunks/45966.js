@@ -159,8 +159,8 @@ function x(e) {
         r = b[t];
     null != r && (r.mode = n);
 }
-let M = [],
-    k = [],
+let k = [],
+    M = [],
     j = [];
 class U extends (r = o.ZP.Store) {
     initialize() {
@@ -168,15 +168,15 @@ class U extends (r = o.ZP.Store) {
     }
     getOnboardingPromptsForOnboarding(e) {
         var t, n;
-        return null != (n = null == (t = b[e]) ? void 0 : t.onboardingPrompts) ? n : M;
+        return null != (n = null == (t = b[e]) ? void 0 : t.onboardingPrompts) ? n : k;
     }
     getOnboardingPrompts(e) {
         var t, n;
-        return null != (n = null == (t = b[e]) ? void 0 : t.prompts) ? n : M;
+        return null != (n = null == (t = b[e]) ? void 0 : t.prompts) ? n : k;
     }
     getOnboardingResponses(e) {
         var t, n, r;
-        return l.Z.isFullServerPreview(e) ? Array.from(null != (n = l.Z.getOnboardingResponses(e)) ? n : k) : null != (r = null == (t = b[e]) ? void 0 : t.responses) ? r : k;
+        return l.Z.isFullServerPreview(e) ? Array.from(null != (n = l.Z.getOnboardingResponses(e)) ? n : M) : null != (r = null == (t = b[e]) ? void 0 : t.responses) ? r : M;
     }
     getSelectedOptions(e) {
         let t = this.getOnboardingResponses(e);
@@ -187,10 +187,10 @@ class U extends (r = o.ZP.Store) {
     }
     getOnboardingResponsesForPrompt(e, t) {
         let n = b[e];
-        if (null == n) return k;
+        if (null == n) return M;
         let r = n.prompts.find((e) => e.id === t);
         return null == r
-            ? k
+            ? M
             : a().intersection(
                   r.options.map((e) => e.id),
                   this.getOnboardingResponses(e)
@@ -199,7 +199,7 @@ class U extends (r = o.ZP.Store) {
     getEnabledOnboardingPrompts(e) {
         var t, n;
         let r = b[e];
-        return l.Z.isFullServerPreview(e) ? (null != (t = null == r ? void 0 : r.prompts) ? t : M) : null != r && r.enabled && null != (n = r.prompts) ? n : M;
+        return l.Z.isFullServerPreview(e) ? (null != (t = null == r ? void 0 : r.prompts) ? t : k) : null != r && r.enabled && null != (n = r.prompts) ? n : k;
     }
     getDefaultChannelIds(e) {
         var t, n;

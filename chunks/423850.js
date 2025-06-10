@@ -1,6 +1,6 @@
 a.d(e, {
     D: () => A,
-    N: () => d
+    N: () => N
 });
 var r = a(263449),
     _ = a(696486),
@@ -14,16 +14,16 @@ var r = a(263449),
     u = a(108185);
 let I = [],
     R = new Map();
-function d() {
+function N() {
     if ((0, u.QV)() && i.Z1) {
         let t = (0, l.YF)(({ metric: t }) => {
             let e,
                 a = (0, r.s3)();
             if (!a || void 0 == t.value) return;
-            let l = t.entries.find((e) => e.duration === t.value && N[e.name]);
+            let l = t.entries.find((e) => e.duration === t.value && d[e.name]);
             if (!l) return;
             let { interactionId: I } = l,
-                d = N[l.name],
+                N = d[l.name],
                 A = a.getOptions(),
                 f = (0, u.XL)(i.Z1 + l.startTime),
                 T = (0, u.XL)(t.value),
@@ -34,8 +34,8 @@ function d() {
                 D = O ? (0, _.XU)(O).description : p.getScopeData().transactionName,
                 g = p.getUser(),
                 P = a.getIntegrationByName('Replay'),
-                y = P && P.getReplayId(),
-                C = void 0 !== g ? g.email || g.id || g.ip_address : void 0;
+                C = P && P.getReplayId(),
+                y = void 0 !== g ? g.email || g.id || g.ip_address : void 0;
             try {
                 e = p.getScopeData().contexts.profile.profile_id;
             } catch (t) {}
@@ -46,23 +46,23 @@ function d() {
                     transaction: D,
                     [n.JQ]: t.value,
                     [n.S3]: 'auto.http.browser.inp',
-                    user: C || void 0,
+                    user: y || void 0,
                     profile_id: e || void 0,
-                    replay_id: y || void 0,
+                    replay_id: C || void 0,
                     'user_agent.original': s.m.navigator && s.m.navigator.userAgent
                 }),
-                S = (0, o.qp)({
+                U = (0, o.qp)({
                     name: m,
-                    op: `ui.interaction.${d}`,
+                    op: `ui.interaction.${N}`,
                     attributes: v,
                     startTime: f,
                     experimental: { standalone: !0 }
                 });
-            S.addEvent('inp', {
+            U.addEvent('inp', {
                 [n.E1]: 'millisecond',
                 [n.Wb]: t.value
             }),
-                S.end(f + T);
+                U.end(f + T);
         });
         return () => {
             t();
@@ -70,7 +70,7 @@ function d() {
     }
     return () => void 0;
 }
-let N = {
+let d = {
     click: 'click',
     pointerdown: 'click',
     pointerup: 'click',

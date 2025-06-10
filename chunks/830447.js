@@ -381,7 +381,7 @@ function N(e) {
     let L = i.useRef(null);
     (0, u.T)(L);
     let x = s ? d.u2 : d.zJ,
-        M = i.useMemo(
+        k = i.useMemo(
             () => ({
                 onSelect: O,
                 onInteraction: I
@@ -389,7 +389,7 @@ function N(e) {
             [O, I]
         );
     return (0, r.jsx)(m.p.Provider, {
-        value: M,
+        value: k,
         children: (0, r.jsx)(
             'div',
             v(y({ className: o()(E.menu, E[a], f) }, D.getContainerProps()), {

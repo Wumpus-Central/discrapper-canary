@@ -136,7 +136,7 @@ class S extends (r = a.PureComponent) {
     render() {
         var e;
         let { value: t, active: n, focused: r, sortedMarkers: a, markerPositions: o, closestMarkerIndex: l, newClosestIndex: c, min: d, max: f } = this.state,
-            { disabled: m, stickToMarkers: E, className: y, children: v, barStyles: I, fillStyles: T, mini: S, hideBubble: N, defaultValue: C, orientation: R, onValueRender: P, renderMarker: w, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: M = {}, markerPosition: k = 0, 'aria-hidden': j, 'aria-label': U, 'aria-labelledby': G, 'aria-describedby': B } = this.props,
+            { disabled: m, stickToMarkers: E, className: y, children: v, barStyles: I, fillStyles: T, mini: S, hideBubble: N, defaultValue: C, orientation: R, onValueRender: P, renderMarker: w, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: k = {}, markerPosition: M = 0, 'aria-hidden': j, 'aria-label': U, 'aria-labelledby': G, 'aria-describedby': B } = this.props,
             F = 0;
         E ? null != o && (null != c ? (F = o[c]) : null != l && (F = o[l])) : (F = this.scaleValue(t));
         let V = ''.concat(F, '%'),
@@ -151,8 +151,8 @@ class S extends (r = a.PureComponent) {
                               {
                                   className: s()(g.mark, {
                                       [g.defaultValue]: r,
-                                      [g.markAbove]: 0 === k,
-                                      [g.markBelow]: 1 === k
+                                      [g.markAbove]: 0 === M,
+                                      [g.markBelow]: 1 === M
                                   }),
                                   style: { left: ''.concat(e, '%') },
                                   children:
@@ -238,7 +238,7 @@ class S extends (r = a.PureComponent) {
                                             'div',
                                             O(b({}, e), {
                                                 className: s()(g.grabber, x),
-                                                style: O(b({}, M), { left: V }),
+                                                style: O(b({}, k), { left: V }),
                                                 onMouseDown: this.handleMouseDown,
                                                 ref: this.grabberRef
                                             })

@@ -70,10 +70,10 @@ let C = i.memo(function (e) {
     let t,
         { src: n, volume: a = 1, onVolumeChange: _, onMute: h, waveform: b, durationSecs: y, onVolumeShow: C, onVolumeHide: R, onPlay: P, onPause: w, onError: D, playbackCacheKey: L } = e,
         x = i.useRef(null),
-        M = i.useMemo(() => (null != L ? d.ZP.getPlaybackPosition(L) : 0), [L]),
-        k = (0, s.e7)([d.ZP], () => d.ZP.getPlaybackRate(d.Ir.VOICE_MESSAGE)),
-        [j, U] = i.useState(M > 0),
-        [G, B] = i.useState(M),
+        k = i.useMemo(() => (null != L ? d.ZP.getPlaybackPosition(L) : 0), [L]),
+        M = (0, s.e7)([d.ZP], () => d.ZP.getPlaybackRate(d.Ir.VOICE_MESSAGE)),
+        [j, U] = i.useState(k > 0),
+        [G, B] = i.useState(k),
         [F, V] = i.useState(y),
         [Z, H] = i.useState(!1),
         [Y, W] = i.useState(!1),
@@ -156,8 +156,8 @@ let C = i.memo(function (e) {
         eg.current = em;
     }),
         i.useEffect(() => {
-            M > 0 && el(M);
-        }, [M, el]),
+            k > 0 && el(k);
+        }, [k, el]),
         i.useEffect(() => {
             let e;
             return (
@@ -189,8 +189,8 @@ let C = i.memo(function (e) {
         N(n, Y, W);
     let eE = Y ? l.fpf : l.o1U,
         eb = Y ? O.intl.string(O.t.ZcgDJS) : O.intl.string(O.t.RscU7O),
-        ey = O.intl.formatToPlainString(O.t.LgCPMj, { playbackRate: k }),
-        eO = ''.concat(k.toString().replace(/^0/, ''), 'X');
+        ey = O.intl.formatToPlainString(O.t.LgCPMj, { playbackRate: M }),
+        eO = ''.concat(M.toString().replace(/^0/, ''), 'X');
     t =
         'Safari' === platform.name
             ? (0, r.jsx)(i.Suspense, {
@@ -205,7 +205,7 @@ let C = i.memo(function (e) {
                       onError: ec,
                       muted: Z,
                       volume: $,
-                      playbackRate: k
+                      playbackRate: M
                   })
               })
             : (0, r.jsx)(f.Z, {
@@ -218,7 +218,7 @@ let C = i.memo(function (e) {
                   onError: ec,
                   muted: Z,
                   volume: $,
-                  playbackRate: k,
+                  playbackRate: M,
                   playing: Y && !K,
                   children: (0, r.jsx)('source', { src: n })
               });
@@ -259,7 +259,7 @@ let C = i.memo(function (e) {
             }),
             (0, r.jsx)(l.P3F, {
                 className: v.playbackRateContainer,
-                onClick: () => T(k),
+                onClick: () => T(M),
                 'aria-label': ey,
                 children: (0, r.jsx)(l.Text, {
                     variant: 'text-xs/semibold',

@@ -4,13 +4,13 @@ n.d(t, {
     DZ: () => C,
     PS: () => P,
     T6: () => S,
-    Z1: () => M,
+    Z1: () => k,
     aj: () => R,
     bE: () => j,
     fy: () => E.fy,
     hW: () => N,
     nm: () => D,
-    sr: () => k,
+    sr: () => M,
     w9: () => x
 }),
     n(415506),
@@ -344,14 +344,14 @@ function x(e) {
         E.fy.INFREQUENT_USER_ACTION
     );
 }
-function M(e) {
+function k(e) {
     return L(e, {
         lastDismissedVersion: 0,
         lastDismissedAtMs: '0',
         lastDismissedObjectId: '0'
     });
 }
-function k() {
+function M() {
     return N.updateAsync(
         'userContent',
         (e) => {

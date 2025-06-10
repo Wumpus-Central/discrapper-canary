@@ -87,8 +87,8 @@ let C = new h.Z('ChannelStore'),
     D = {},
     L = null,
     x = {},
-    M = {},
-    k = 0,
+    k = {},
+    M = 0,
     j = {},
     U = {},
     G = new Set(),
@@ -192,7 +192,7 @@ function J(e) {
 }
 function $(e) {
     if (null != e.recipients.find((e) => (0, p.Z)(e))) return !1;
-    (D[e.id] = e), e.type === I.d4z.DM && (M[e.getRecipientId()] = e.id), (k += 1);
+    (D[e.id] = e), e.type === I.d4z.DM && (k[e.getRecipientId()] = e.id), (M += 1);
 }
 function ee(e) {
     let t = P[e.parent_id];
@@ -215,7 +215,7 @@ function en(e) {
     et(e);
 }
 function er(e) {
-    if (null == e.guild_id || g.Ec.has(e.type)) (0, g.hv)(e.type) && (k += 1);
+    if (null == e.guild_id || g.Ec.has(e.type)) (0, g.hv)(e.type) && (M += 1);
     else {
         var t;
         j[e.guild_id] = (null != (t = j[e.guild_id]) ? t : 0) + 1;
@@ -223,7 +223,7 @@ function er(e) {
 }
 function ei(e) {
     let t = w;
-    for (let n of ((M = {}), (P = {}), (w = {}), (x = {}), (j = {}), (V = {}), (B = {}), (F = Date.now()), (L = e.initialPrivateChannels), e.initialPrivateChannels.forEach($), e.guilds)) 'partial' === n.dataMode && (a().forEach(t[n.id], et), C.fileOnly('Restoring guild channels for '.concat(n.id, ' #:').concat(eL(n.id)))), ea(n);
+    for (let n of ((k = {}), (P = {}), (w = {}), (x = {}), (j = {}), (V = {}), (B = {}), (F = Date.now()), (L = e.initialPrivateChannels), e.initialPrivateChannels.forEach($), e.guilds)) 'partial' === n.dataMode && (a().forEach(t[n.id], et), C.fileOnly('Restoring guild channels for '.concat(n.id, ' #:').concat(eL(n.id)))), ea(n);
     eP();
 }
 function ea(e) {
@@ -260,7 +260,7 @@ function el(e) {
     return !1;
 }
 function ec() {
-    C.fileOnly('initializeClear()'), (M = {}), (P = {}), (w = {}), (j = {}), (D = {}), (V = {}), (x = {}), (G = new Set()), (B = {}), (F = Date.now());
+    C.fileOnly('initializeClear()'), (k = {}), (P = {}), (w = {}), (j = {}), (D = {}), (V = {}), (x = {}), (G = new Set()), (B = {}), (F = Date.now());
 }
 function eu(e) {
     var t;
@@ -326,7 +326,7 @@ function eb(e) {
 function ey(e) {
     if ('basicPermissions' in e || e.type !== I.d4z.DM) return;
     let t = e.getRecipientId();
-    M[t] === e.id && delete M[t];
+    k[t] === e.id && delete k[t];
 }
 function eO(e) {
     if (null == e) return;
@@ -423,19 +423,19 @@ class eD extends (r = s.ZP.Store) {
             .value();
     }
     getDMFromUserId(e) {
-        if (null != e) return M[e];
+        if (null != e) return k[e];
     }
     getDMChannelFromUserId(e) {
-        if (null != e) return this.getChannel(M[e]);
+        if (null != e) return this.getChannel(k[e]);
     }
     getMutableDMsByUserIds() {
-        return M;
+        return k;
     }
     getDMUserIds() {
-        return b.default.keys(M);
+        return b.default.keys(k);
     }
     getPrivateChannelsVersion() {
-        return k;
+        return M;
     }
     getGuildChannelsVersion(e) {
         var t;

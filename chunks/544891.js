@@ -112,7 +112,7 @@ function E(e, t, n, r, o) {
             }),
         null != t.context)
     ) {
-        let e = M(t.context);
+        let e = k(t.context);
         null != e && b.set('X-Context-Properties', e);
     }
     null != t.retried && 0 !== t.retried && b.set('X-Failed-Requests', ''.concat(t.retried)),
@@ -284,7 +284,7 @@ let L = () => Promise.resolve();
 function x(e) {
     L = e;
 }
-function M(e) {
+function k(e) {
     try {
         return u.from(JSON.stringify(e)).toString('base64');
     } catch (e) {

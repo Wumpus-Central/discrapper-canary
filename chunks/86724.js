@@ -76,13 +76,13 @@ function N(e, t, n, r) {
         (e.isInline = (e) => !!T.has(e.type) || d(e)),
         (e.isVoid = (e) => !!('applicationCommandOption' === e.type && S.has(e.optionType)) || f(e)),
         (e.deleteBackward = (t) => {
-            M(e, () => p(t));
+            k(e, () => p(t));
         }),
         (e.deleteForward = (t) => {
-            M(e, () => h(t));
+            k(e, () => h(t));
         }),
         (e.deleteFragment = (t) => {
-            M(e, () => m(t));
+            k(e, () => m(t));
         });
     let E = null,
         b = null,
@@ -165,7 +165,7 @@ function C(e) {
         let e = y.bN.richValue(i)[0],
             t = e.children[0];
         if (A.has(e.type) && y.LC.isText(t)) {
-            let e = k(t.text, s);
+            let e = M(t.text, s);
             if (null != e)
                 return (
                     a.Po({
@@ -417,7 +417,7 @@ function x(e) {
               commandText: null
           };
 }
-function M(e, t) {
+function k(e, t) {
     let n = m.cu(e)[0];
     t();
     let r = y.M8.toPoint(e.selection);
@@ -430,7 +430,7 @@ function M(e, t) {
         }) &&
         b.Q.insertText(e, ' ');
 }
-function k(e, t) {
+function M(e, t) {
     if (!e.startsWith('/')) return null;
     let n = (0, f.hV)(t, e.substring(1));
     if (!n.hasSpaceTerminator) return null;

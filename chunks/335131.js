@@ -5,9 +5,9 @@ n.d(t, {
     Ov: () => G,
     R2: () => U,
     Sm: () => N,
-    fK: () => k,
+    fK: () => M,
     fi: () => B,
-    jr: () => M,
+    jr: () => k,
     mK: () => C,
     oK: () => P,
     oc: () => D,
@@ -182,7 +182,7 @@ let N = (e) => {
             );
         }
     },
-    M = async (e, t) => {
+    k = async (e, t) => {
         s.Z.dispatch({
             type: 'COLLECTIBLES_PRODUCT_FETCH',
             skuId: e
@@ -210,7 +210,7 @@ let N = (e) => {
                 });
         }
     },
-    k = async (e) => {
+    M = async (e) => {
         s.Z.dispatch({
             type: 'COLLECTIBLES_CLAIM',
             skuId: e

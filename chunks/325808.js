@@ -17,8 +17,8 @@ var i = n(255367),
     _ = n(981631),
     x = n(388032),
     E = n(285425),
-    C = n(893354),
-    j = n(20493);
+    j = n(893354),
+    C = n(20493);
 let O = !h.isPlatformEmbedded,
     S = (0, g.hQ)();
 function v(e) {
@@ -34,12 +34,12 @@ function T(e) {
             h.isPlatformEmbedded || n !== _.pM4.PUSH_TO_TALK
                 ? (0, i.jsx)(o.R94, {
                       type: o.R94.Types.DESCRIPTION,
-                      className: l()(E.pttToolsMessage, j.marginBottom8),
+                      className: l()(E.pttToolsMessage, C.marginBottom8),
                       children: x.intl.format(x.t.HVvn5e, { onClick: () => d.Z.setSection(_.oAB.KEYBINDS) })
                   })
                 : (0, i.jsx)(o.R94, {
                       type: o.R94.Types.DESCRIPTION,
-                      className: l()(E.pttToolsMessage, E.pttToolsWarning, j.marginBottom8),
+                      className: l()(E.pttToolsMessage, E.pttToolsWarning, C.marginBottom8),
                       children: x.intl.format(x.t.zvMPOT, { onDownloadClick: () => (0, b.y)('Help Text PTT') })
                   })),
         (0, i.jsxs)('div', {
@@ -65,7 +65,7 @@ function T(e) {
                                     (0, i.jsx)(o.vwX, {
                                         id: S,
                                         tag: o.RB0.H5,
-                                        className: j.marginBottom8,
+                                        className: C.marginBottom8,
                                         children: x.intl.string(x.t.y0ShVl)
                                     }),
                                     (0, i.jsx)(o.iRW, {
@@ -82,16 +82,16 @@ function T(e) {
                 }),
                 O &&
                     (0, i.jsxs)(o.xJW, {
-                        className: j.marginTop8,
+                        className: C.marginTop8,
                         children: [
                             (0, i.jsx)(g.FG, {
                                 children: (e) =>
                                     (0, i.jsxs)('div', {
-                                        className: l()(C.horizontal, j.marginBottom4),
+                                        className: l()(j.horizontal, C.marginBottom4),
                                         children: [
                                             (0, i.jsx)(o.vwX, {
                                                 tag: o.RB0.H3,
-                                                className: j.marginReset,
+                                                className: C.marginReset,
                                                 children: (0, i.jsx)('label', {
                                                     htmlFor: e,
                                                     children: x.intl.string(x.t.EGn1eH)
@@ -107,7 +107,7 @@ function T(e) {
                             }),
                             (0, i.jsx)(o.R94, {
                                 type: o.R94.Types.DESCRIPTION,
-                                className: j.marginBottom8,
+                                className: C.marginBottom8,
                                 children: x.intl.string(x.t.iT257u)
                             })
                         ]
@@ -184,7 +184,7 @@ function I() {
         children: [
             (0, i.jsx)(o.xJW, {
                 title: x.intl.string(x.t['pS+K2N']),
-                className: j.marginBottom20,
+                className: C.marginBottom20,
                 children: (0, i.jsx)(o.FXm, {
                     onChange: l,
                     options: s,

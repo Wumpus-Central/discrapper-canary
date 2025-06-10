@@ -4492,7 +4492,7 @@ let { Themes: r } = n(15202).V,
                     opacity: 1
                 },
                 [r.LIGHT]: {
-                    raw: 'NEUTRAL_38',
+                    raw: 'NEUTRAL_40',
                     opacity: 1
                 },
                 [r.MIDNIGHT]: {
@@ -8117,7 +8117,7 @@ let { Themes: r } = n(15202).V,
                     opacity: 1
                 },
                 [r.LIGHT]: {
-                    raw: 'NEUTRAL_38',
+                    raw: 'NEUTRAL_40',
                     opacity: 1
                 },
                 [r.MIDNIGHT]: {

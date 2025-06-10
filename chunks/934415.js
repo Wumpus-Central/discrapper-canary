@@ -1,6 +1,6 @@
 n.d(t, {
     EO: () => G,
-    LY: () => k,
+    LY: () => M,
     Nj: () => a.Z,
     a5: () => x,
     c4: () => L,
@@ -12,7 +12,7 @@ n.d(t, {
     rY: () => P,
     rt: () => R,
     wR: () => j,
-    wl: () => M
+    wl: () => k
 }),
     n(415506),
     n(539854),
@@ -162,7 +162,7 @@ function x(e) {
             return null;
     }
 }
-function M(e) {
+function k(e) {
     if (null == e) return 'text';
     let t = e.isMediaChannel();
     if (e.type === g.d4z.GUILD_VOICE) return f.Z.can(g.Plq.CONNECT, e) ? 'voice' : 'voice-locked';
@@ -172,7 +172,7 @@ function M(e) {
     if (e.type === g.d4z.GUILD_MEDIA) return 'media';
     else if (c.sR.has(e.type)) return 'text';
 }
-function k(e) {
+function M(e) {
     let t,
         n = u.Z.getChannel(_.Z.getLastSelectedChannelId());
     if (null != n && n.getGuildId() === e && n.type === g.d4z.GUILD_TEXT) t = n.id;

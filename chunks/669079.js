@@ -15,7 +15,7 @@ n.d(t, {
     e$: () => J,
     iM: () => Q,
     pO: () => U,
-    xr: () => k,
+    xr: () => M,
     z2: () => $
 }),
     n(388685),
@@ -88,8 +88,8 @@ let O = ['discordapp.com/gifts', 'discord.com/gifts'],
     D = 'WUMP-?',
     L = [R, P, w, '[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}'].join('|'),
     x = new RegExp('^('.concat(D, ')?(').concat(L, ')$')),
-    M = '-';
-var k = (function (e) {
+    k = '-';
+var M = (function (e) {
     return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.CUSTOM_STYLE = 1)] = 'CUSTOM_STYLE'), (e[(e.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD = 2)] = 'CUSTOM_MESSAGE_EMOJI_SOUNDBOARD'), e;
 })({});
 let j = (e, t) => (i.tq || i.Em ? 0 : null != e || t ? 2 : 1),
@@ -270,7 +270,7 @@ function ee(e) {
     let t = e.trim().split('/').pop().match(x);
     if (null == t) return null;
     let [n, r, i] = t;
-    return null == i ? null : i.replace(RegExp(M, 'g'), '');
+    return null == i ? null : i.replace(RegExp(k, 'g'), '');
 }
 let et = (e, t) =>
     (0, a.e7)([c.Z], () => {

@@ -23,8 +23,8 @@ var i = n(255367),
     _ = n(326255),
     x = n(956221),
     E = n(771173),
-    C = n(385499),
-    j = n(570908),
+    j = n(385499),
+    C = n(570908),
     O = n(702321),
     S = n(201895),
     v = n(43267),
@@ -180,7 +180,7 @@ let en = q.ZP.getEnableHardwareAcceleration() ? g.Xo$ : g.qEK,
     eo = (e) => {
         var { route: t, selected: n, icon: r, iconClassName: s, interactiveClassName: a, text: o, children: d, locationState: m, onClick: p, className: h, role: f, 'aria-posinset': b, 'aria-setsize': _, listItemRef: x } = e,
             E = et(e, ['route', 'selected', 'icon', 'iconClassName', 'interactiveClassName', 'text', 'children', 'locationState', 'onClick', 'className', 'role', 'aria-posinset', 'aria-setsize', 'listItemRef']);
-        let C = (0, y.Q3)('PrivateChannelLinkButton');
+        let j = (0, y.Q3)('PrivateChannelLinkButton');
         return (0, i.jsx)(I.Z, {
             className: l()(J.channel, { [J.fullWidth]: u.tq }, h),
             onClick: p,
@@ -208,10 +208,10 @@ let en = q.ZP.getEnableHardwareAcceleration() ? g.Xo$ : g.qEK,
                         ),
                         {
                             children: [
-                                (0, i.jsx)(j.Z, {
+                                (0, i.jsx)(C.Z, {
                                     muted: !1,
                                     avatar: (0, i.jsx)(r, {
-                                        size: C ? 'refresh_sm' : void 0,
+                                        size: j ? 'refresh_sm' : void 0,
                                         className: l()(J.linkButtonIcon, s),
                                         color: 'currentColor'
                                     }),
@@ -247,14 +247,14 @@ function ec(e) {
         e_ = (0, M.Q)(),
         ex = !ef && !eb && t.type === X.d4z.DM,
         eE = ex && (null == u ? void 0 : u.primaryGuild) != null,
-        eC = (0, m.e7)([Y.ZP], () => Y.ZP.isChannelMuted(t.getGuildId(), t.id)),
-        { ignored: ej, blocked: eO } = (0, m.cj)([H.Z], () => ({
+        ej = (0, m.e7)([Y.ZP], () => Y.ZP.isChannelMuted(t.getGuildId(), t.id)),
+        { ignored: eC, blocked: eO } = (0, m.cj)([H.Z], () => ({
             ignored: H.Z.isIgnored(t.getRecipientId()),
             blocked: H.Z.isBlocked(t.getRecipientId())
         })),
-        eS = ex && ej,
+        eS = ex && eC,
         ev = ex && eO,
-        eT = (eC || eS || ev) && !(a || K),
+        eT = (ej || eS || ev) && !(a || K),
         eI = (0, m.e7)([F.ZP], () => F.ZP.getMentionCount(t.id) > 0),
         eN = (0, T.ZP)(t),
         ey = (0, m.e7)([A.Z], () => A.Z.isFavorite(t.id)),
@@ -479,7 +479,7 @@ function ec(e) {
                                         r
                                     ),
                                     {
-                                        children: (0, i.jsx)(j.Z, {
+                                        children: (0, i.jsx)(C.Z, {
                                             ref: ez,
                                             avatar: eF(),
                                             highlighted: eI && !(eA && eT),
@@ -490,9 +490,9 @@ function ec(e) {
                                                 children: eH
                                             }),
                                             decorators: t.isSystemDM()
-                                                ? (0, i.jsx)(C.Z, {
+                                                ? (0, i.jsx)(j.Z, {
                                                       className: J.decorator,
-                                                      type: C.Z.Types.SYSTEM_DM,
+                                                      type: j.Z.Types.SYSTEM_DM,
                                                       verified: !0
                                                   })
                                                 : null

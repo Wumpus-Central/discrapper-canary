@@ -3,12 +3,12 @@ n.d(t, {
     Hn: () => v,
     Hu: () => B,
     I0: () => L,
-    Og: () => M,
+    Og: () => k,
     TP: () => T,
     Uu: () => Z,
     e9: () => G,
     iJ: () => j,
-    o4: () => k,
+    o4: () => M,
     oz: () => H,
     r6: () => U,
     uB: () => x,
@@ -118,7 +118,7 @@ function L(e) {
             let e = p.Z.getChannel(r.parent_id);
             return null == e
                 ? v
-                : M(
+                : k(
                       r,
                       L({
                           forceRoles: n,
@@ -174,7 +174,7 @@ function x(e) {
             let e = p.Z.getChannel(o.parent_id);
             if (null == e || e.isScheduledForDeletion()) return v;
             let t = E === (null == (n = g.default.getCurrentUser()) ? void 0 : n.id) && d.Z.hasJoined(o.id);
-            return M(
+            return k(
                 o,
                 x({
                     user: a,
@@ -205,10 +205,10 @@ function x(e) {
         lurkerPermissionsMask: b
     });
 }
-function M(e, t, n) {
+function k(e, t, n) {
     return e.type !== b.d4z.PRIVATE_THREAD || n || a.e$(t, b.Plq.MANAGE_THREADS) ? (a.e$(t, b.Plq.SEND_MESSAGES_IN_THREADS) ? (e.isLockedThread() && !a.e$(t, b.Plq.MANAGE_THREADS) ? a.Od(t, b.Plq.SEND_MESSAGES) : a.$e(t, b.Plq.SEND_MESSAGES)) : a.Od(t, b.Plq.SEND_MESSAGES)) : v;
 }
-function k(e, t) {
+function M(e, t) {
     if (f.Ec.has(e.type)) return !0;
     let { guild_id: n } = e;
     if (null == t || null == n || n !== t.guild_id) return !1;

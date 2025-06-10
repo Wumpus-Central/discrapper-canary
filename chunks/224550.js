@@ -35,7 +35,7 @@ let g = (e, t, n, r) => {
             let e = c.ZP.getIntervalForInvoice(T);
             (t = e.intervalType), (n = e.intervalCount), (s = (0, u.og)((0, u.T4)(T.total, T.currency), t, n)), (E = (0, u.og)((0, u.T4)(T.subtotal, T.currency), t, n));
         } else null != b && ((t = b.interval), (n = b.intervalCount));
-        let M = (0, a.K)({
+        let k = (0, a.K)({
                 purchaseType: N || f.GZQ.SUBSCRIPTION,
                 plan: b,
                 premiumSubscription: null == w ? null : w,
@@ -44,12 +44,12 @@ let g = (e, t, n, r) => {
                 planGroup: x,
                 isPrepaidPaymentSource: !1
             }),
-            k = h.intl.format(h.t.Y2Rkqa, {
-                primaryText: M,
+            M = h.intl.format(h.t.Y2Rkqa, {
+                primaryText: k,
                 paidURL: f.EYA.PAID_TERMS
             }),
             j = h.intl.format(h.t.H2uH5e, {
-                primaryText: M,
+                primaryText: k,
                 paidURL: f.EYA.PAID_TERMS
             }),
             U = '',
@@ -80,16 +80,16 @@ let g = (e, t, n, r) => {
         else if (N === f.GZQ.ONE_TIME)
             switch (C) {
                 case f.POd.COLLECTIBLES:
-                    (G = k), (U = y ? h.intl.format(h.t.ofqyUl, { paidURL: f.EYA.PAID_TERMS }) : h.intl.format(h.t.G3l0s7, { paidURL: f.EYA.PAID_TERMS }));
+                    (G = M), (U = y ? h.intl.format(h.t.ofqyUl, { paidURL: f.EYA.PAID_TERMS }) : h.intl.format(h.t.G3l0s7, { paidURL: f.EYA.PAID_TERMS }));
                     break;
                 case f.POd.GUILD_PRODUCT:
-                    (G = k), (U = h.intl.format(h.t['GEAQ+v'], { paidURL: f.EYA.PAID_TERMS }));
+                    (G = M), (U = h.intl.format(h.t['GEAQ+v'], { paidURL: f.EYA.PAID_TERMS }));
                     break;
                 default:
                     (G = j), (U = h.intl.string(h.t['9/siSU']));
             }
         else if (null == b || y)
-            switch ((y && (G = k), t)) {
+            switch ((y && (G = M), t)) {
                 case p.rV.MONTH:
                     (U = y ? h.intl.string(h.t.IjNapq) : h.intl.string(h.t['/sGXPj'])), (U = y ? h.intl.string(h.t.IjNapq) : 1 === n ? h.intl.string(h.t['/sGXPj']) : h.intl.formatToPlainString(h.t.Fqjiho, { intervalCount: n }));
                     break;

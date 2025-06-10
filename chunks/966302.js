@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(131951),
     L = n(594174),
     x = n(451478),
-    M = n(626135),
-    k = n(768581),
+    k = n(626135),
+    M = n(768581),
     j = n(358221),
     U = n(584511),
     G = n(793865),
@@ -158,7 +158,7 @@ function ea(e) {
                 className: K.actionButton,
                 onClick: () => {
                     (0, B.v)(s, B.d.DISCONNECT),
-                        M.default.track(
+                        k.default.track(
                             Z.rMx.RING_CALL_DECLINED,
                             X(
                                 {
@@ -203,7 +203,7 @@ function ea(e) {
                             onChange: () => {
                                 var e;
                                 (0, B.v)(s, B.d.JOIN_VIDEO_CALL),
-                                    M.default.track(
+                                    k.default.track(
                                         Z.rMx.RING_CALL_ACCEPTED,
                                         X(
                                             {
@@ -224,7 +224,7 @@ function ea(e) {
                 color: 'join',
                 centerButton: !0,
                 onCallJoined: () =>
-                    M.default.track(
+                    k.default.track(
                         Z.rMx.RING_CALL_ACCEPTED,
                         X(
                             {
@@ -247,7 +247,7 @@ function eo(e) {
         I = (0, l.e7)([w.Z], () => w.Z.getGuild(h.guild_id)),
         T =
             null != I
-                ? k.ZP.getGuildIconURL({
+                ? M.ZP.getGuildIconURL({
                       id: I.id,
                       icon: I.icon,
                       size: er
@@ -258,7 +258,7 @@ function eo(e) {
         [N, C] = (0, l.Wu)([D.Z], () => [D.Z.supports(H.AN.VIDEO), Object.keys(D.Z.getVideoDevices()).length]),
         R = null != I ? ''.concat(A, ', ').concat(I.name) : A,
         L = (0, l.e7)([x.Z], () => x.Z.isFocused()),
-        M = (0, l.e7)([j.Z], () => j.Z.getMode(h.id)),
+        k = (0, l.e7)([j.Z], () => j.Z.getMode(h.id)),
         G = i.useCallback((e) => {
             null != e.top && null != e.left && d.Z.move(e.left, e.top);
         }, []),
@@ -275,12 +275,12 @@ function eo(e) {
         };
         return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
     }, [h]);
-    let F = M === Z.WtW.VIDEO && N && C > 0,
+    let F = k === Z.WtW.VIDEO && N && C > 0,
         { enabled: V } = P.Z.useExperiment({
             guildId: null == h ? void 0 : h.guild_id,
             location: 'IncomingCallModal'
         }),
-        q = M === Z.WtW.VOICE || (V && h.type === Z.d4z.GUILD_VOICE) ? Y.intl.string(Y.t.Js8cKy) : Y.intl.string(Y.t.KcnWCA),
+        q = k === Z.WtW.VOICE || (V && h.type === Z.d4z.GUILD_VOICE) ? Y.intl.string(Y.t.Js8cKy) : Y.intl.string(Y.t.KcnWCA),
         Q = (0, r.jsxs)(r.Fragment, {
             children: [
                 null != I && null == T

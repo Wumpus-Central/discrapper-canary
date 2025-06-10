@@ -98,8 +98,8 @@ let T = {
             D = w - C,
             L = A <= N || b,
             x = L && A <= i.premiumTier,
-            M = L && A < i.premiumTier,
-            k = L && A === i.premiumTier,
+            k = L && A < i.premiumTier,
+            M = L && A === i.premiumTier,
             j = i.premiumTier < A && C >= w,
             { scaleFactor: U } = (0, s.q_F)({
                 from: { scaleFactor: 0 },
@@ -168,8 +168,8 @@ let T = {
                                 className: a()(E.progressBarMarker, {
                                     [E.progressBarMarkerUnlocked]: x,
                                     [E.progressBarMarkerLocked]: F,
-                                    [E.progressBarMarkerLower]: M,
-                                    [E.progressBarMarkerCurrent]: k
+                                    [E.progressBarMarkerLower]: k,
+                                    [E.progressBarMarkerCurrent]: M
                                 }),
                                 style: { left: ''.concat(100 * T[A], '%') }
                             },

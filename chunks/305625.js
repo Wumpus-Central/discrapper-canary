@@ -37,10 +37,10 @@ function u(t) {
         I = u && (0, _.EN)(u);
     if (I) return I;
     let R = (0, c.XU)(r),
-        d = R.data || {},
-        N = d[i.TE];
-    null != N && (a.sample_rate = `${N}`);
-    let A = d[i.Zj],
+        N = R.data || {},
+        d = N[i.TE];
+    null != d && (a.sample_rate = `${d}`);
+    let A = N[i.Zj],
         f = R.description;
     return 'url' !== A && f && (a.transaction = f), (a.sampled = String((0, c.Tt)(r))), e.emit('createDsc', a, r), a;
 }

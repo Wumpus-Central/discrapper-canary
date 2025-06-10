@@ -74,11 +74,11 @@ function L(e) {
 function x() {
     O = 1;
 }
-function M(e) {
+function k(e) {
     let { soundboardSounds: t } = e;
     E.set(p.X8, t), (O = 2);
 }
-function k(e) {
+function M(e) {
     var t, n, r;
     let { soundId: i, userId: a } = e,
         o = (null != (n = b.get(i)) ? n : 0) + 1,
@@ -196,14 +196,14 @@ let Y = new H(s.Z, {
     GUILD_SOUNDBOARD_SOUND_CREATE: w,
     GUILD_SOUNDBOARD_SOUND_UPDATE: w,
     GUILD_SOUNDBOARD_SOUND_DELETE: L,
-    GUILD_SOUNDBOARD_SOUND_PLAY_START: k,
+    GUILD_SOUNDBOARD_SOUND_PLAY_START: M,
     GUILD_SOUNDBOARD_SOUND_PLAY_END: j,
     GUILD_SOUNDBOARD_SOUNDS_UPDATE: D,
     USER_SOUNDBOARD_SET_VOLUME: G,
     VOICE_CHANNEL_SELECT: N,
     USER_SETTINGS_PROTO_UPDATE: F,
     SOUNDBOARD_FETCH_DEFAULT_SOUNDS: x,
-    SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: M,
+    SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: k,
     SOUNDBOARD_SOUNDS_RECEIVED: R,
     GUILD_DELETE: P,
     AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: V,

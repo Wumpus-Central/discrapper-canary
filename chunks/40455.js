@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => k }), n(388685);
+n.d(t, { ZP: () => M }), n(388685);
 var r = n(592125),
     i = n(650774),
     a = n(944486),
@@ -103,7 +103,7 @@ class S extends o.Z {
     }
     constructor() {
         super({
-            CACHE_LOADED_LAZY_NO_CACHE: M,
+            CACHE_LOADED_LAZY_NO_CACHE: k,
             CACHE_LOADED_LAZY: () => this.loadCache(),
             CHANNEL_DELETE: P,
             CHANNEL_UPDATES: R,
@@ -146,8 +146,8 @@ function L(e) {
 function x(e) {
     v.clear(), I.clear(), (T = !1);
 }
-function M(e) {
+function k(e) {
     T = !0;
 }
 p(S, 'displayName', 'SaveableChannelsStore'), p(S, 'LATEST_SNAPSHOT_VERSION', 1);
-let k = new S();
+let M = new S();

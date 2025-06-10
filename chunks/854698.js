@@ -10,13 +10,13 @@ n.d(t, {
     Uq: () => G,
     Y4: () => B,
     hn: () => b,
-    iA: () => M,
+    iA: () => k,
     ib: () => R,
     lh: () => J,
     mF: () => q,
     ub: () => D,
     v1: () => j,
-    x6: () => k,
+    x6: () => M,
     zi: () => X
 }),
     n(388685),
@@ -134,7 +134,7 @@ function x(e, t) {
         n
     );
 }
-function M(e, t) {
+function k(e, t) {
     let n = U(t),
         r = a()(u.default.extractTimestamp(e)),
         i = (null == n ? void 0 : n.endDate) != null ? r.clone().add(n.endDate.diff(n.startDate)) : void 0;
@@ -143,7 +143,7 @@ function M(e, t) {
         endDate: i
     };
 }
-function k(e, t) {
+function M(e, t) {
     var n;
     if (null == t) return e;
     let r = null != (n = t.scheduled_end_time) ? n : e.endDate;

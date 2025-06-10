@@ -29,8 +29,8 @@ var i = n(481060),
     _ = n(283595),
     x = n(944486),
     E = n(914010),
-    C = n(626135),
-    j = n(777754),
+    j = n(626135),
+    C = n(777754),
     O = n(823385),
     S = n(981631),
     v = n(176505);
@@ -83,9 +83,9 @@ function P(e, t) {
         l = E.Z.getGuildId(),
         a = x.Z.getChannelId(l),
         o = n[(0, d.gJ)(d.a8.DOWN, -1, n)],
-        c = j.Z.isEmail(r),
-        u = j.Z.isPhoneNumber(r),
-        m = j.Z.isUserTagLike(r),
+        c = C.Z.isEmail(r),
+        u = C.Z.isPhoneNumber(r),
+        m = C.Z.isUserTagLike(r),
         g = null != a && (0, v.AB)(a),
         p = (e) => (null == e ? null : e.type === d.h8.IN_APP_NAVIGATION ? e.type + '_' + e.record.type : e.type),
         h = {
@@ -129,7 +129,7 @@ function P(e, t) {
                 h.selected_user_id = r.id;
         }
     }
-    C.default.track(e, h);
+    j.default.track(e, h);
 }
 function R() {
     r.Z.dispatch({ type: 'QUICKSWITCHER_HIDE' });
@@ -146,7 +146,7 @@ function D() {
             let e = b.Z.getChannel(i);
             t = null != e ? e.type : null;
         }
-        C.default.track(S.rMx.QUICKSWITCHER_OPENED, {
+        j.default.track(S.rMx.QUICKSWITCHER_OPENED, {
             source: e,
             current_guild_id: n,
             current_channel_id: i,
@@ -203,8 +203,8 @@ function L(e) {
             (0, g.Kh)(x.id, { navigationReplace: !0 }), a.Z.channelListScrollTo(S.ME, x.id);
             break;
         case d.h8.APPLICATION:
-            let C = _.Z.getActiveLibraryApplication(x.id);
-            I(x.id, C, {
+            let j = _.Z.getActiveLibraryApplication(x.id);
+            I(x.id, j, {
                 analyticsParams: {
                     source: S.Sbl.QUICK_SWITCHER,
                     location: S.Sbl.QUICK_SWITCHER

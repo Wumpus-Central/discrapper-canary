@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => k,
+    ZP: () => M,
     wU: () => D
 }),
     n(388685);
@@ -151,8 +151,8 @@ function C(e) {
                                             multiplier: 1
                                         })
                                     ),
-                                    M.emitChange());
-                        } else C(E(m({}, e), { value: e.value - 1 })), M.emitChange();
+                                    k.emitChange());
+                        } else C(E(m({}, e), { value: e.value - 1 })), k.emitChange();
                     }
                 }));
 }
@@ -240,9 +240,9 @@ class x extends (r = i.ZP.Store) {
     }
 }
 h(x, 'displayName', 'PoggermodeStore');
-let M = new x(s.Z, {
+let k = new x(s.Z, {
         POGGERMODE_UPDATE_COMBO: P,
         POGGERMODE_UPDATE_MESSAGE_COMBO: w,
         MESSAGE_CREATE: L
     }),
-    k = M;
+    M = k;

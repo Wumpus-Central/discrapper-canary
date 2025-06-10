@@ -48,9 +48,9 @@ function x(e, t) {
     }
     return b.call(t, n, '$&_');
 }
-var M = n(706827),
-    k = M.custom,
-    j = X(k) ? k : null,
+var k = n(706827),
+    M = k.custom,
+    j = X(M) ? M : null,
     U = {
         __proto__: null,
         double: '"',
@@ -152,8 +152,8 @@ e.exports = function e(t, r, i, s) {
         return 'object' != typeof t || P ? C : ed(C);
     }
     if (el(t)) {
-        for (var k = '<' + O.call(String(t.nodeName)), G = t.attributes || [], V = 0; V < G.length; V++) k += ' ' + G[V].name + '=' + B(F(G[V].value), 'double', l);
-        return (k += '>'), t.childNodes && t.childNodes.length && (k += '...'), (k += '</' + O.call(String(t.nodeName)) + '>');
+        for (var M = '<' + O.call(String(t.nodeName)), G = t.attributes || [], V = 0; V < G.length; V++) M += ' ' + G[V].name + '=' + B(F(G[V].value), 'double', l);
+        return (M += '>'), t.childNodes && t.childNodes.length && (M += '...'), (M += '</' + O.call(String(t.nodeName)) + '>');
     }
     if (Z(t)) {
         if (0 === t.length) return '[]';
@@ -165,7 +165,7 @@ e.exports = function e(t, r, i, s) {
         return 'cause' in Error.prototype || !('cause' in t) || D.call(t, 'cause') ? (0 === eu.length ? '[' + String(t) + ']' : '{ [' + String(t) + '] ' + T.call(eu, ', ') + ' }') : '{ [' + String(t) + '] ' + T.call(I.call('[cause]: ' + y(t.cause), eu), ', ') + ' }';
     }
     if ('object' == typeof t && d) {
-        if (j && 'function' == typeof t[j] && M) return M(t, { depth: m - i });
+        if (j && 'function' == typeof t[j] && k) return k(t, { depth: m - i });
         else if ('symbol' !== d && 'function' == typeof t.inspect) return t.inspect();
     }
     if (er(t)) {

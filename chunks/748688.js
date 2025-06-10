@@ -1,13 +1,13 @@
 a.d(e, {
-    $X: () => C,
+    $X: () => y,
     AJ: () => O,
-    Ei: () => y,
-    GC: () => U,
+    Ei: () => C,
+    GC: () => S,
     WU: () => P,
     db: () => h,
     dz: () => G,
     nm: () => m,
-    ph: () => S,
+    ph: () => U,
     x5: () => L
 });
 var r = a(559508),
@@ -22,8 +22,8 @@ var r = a(559508),
     u = a(163162);
 let I = String(0),
     R = '',
-    d = '',
     N = '',
+    d = '',
     A = (u.m9.navigator && u.m9.navigator.userAgent) || '',
     f = '',
     T = (u.m9.navigator && u.m9.navigator.language) || (u.m9.navigator && u.m9.navigator.languages && u.m9.navigator.languages['0']) || '',
@@ -55,7 +55,7 @@ function O(t) {
     p
         .getHighEntropyValues(['architecture', 'model', 'platform', 'platformVersion', 'fullVersionList'])
         .then((t) => {
-            if (((R = t.platform || ''), (N = t.architecture || ''), (f = t.model || ''), (d = t.platformVersion || ''), t.fullVersionList && t.fullVersionList.length > 0)) {
+            if (((R = t.platform || ''), (d = t.architecture || ''), (f = t.model || ''), (N = t.platformVersion || ''), t.fullVersionList && t.fullVersionList.length > 0)) {
                 let e = t.fullVersionList[t.fullVersionList.length - 1];
                 A = `${e.brand} ${e.version}`;
             }
@@ -64,7 +64,7 @@ function O(t) {
 let D = new WeakMap(),
     g = !1,
     P = 30000;
-function y() {
+function C() {
     let t = u.m9.Profiler;
     if ('function' != typeof t) {
         l.X && o.kg.log('[Profiling] Profiling is not supported by this browser, Profiler interface missing on window object.');
@@ -80,7 +80,7 @@ function y() {
         l.X && (o.kg.log("[Profiling] Failed to initialize the Profiling constructor, this is likely due to a missing 'Document-Policy': 'js-profiling' header."), o.kg.log('[Profiling] Disabling profiling for current user session.')), (g = !0);
     }
 }
-function C(t) {
+function y(t) {
     if (g) return l.X && o.kg.log('[Profiling] Profiling has been disabled for the duration of the current user session.'), !1;
     if (!t.isRecording()) return l.X && o.kg.log('[Profiling] Discarding profile because transaction was not sampled.'), !1;
     let e = (0, n.s3)(),
@@ -166,14 +166,14 @@ function m(t, e, a, _) {
         },
         os: {
             name: R,
-            version: d,
+            version: N,
             build_number: A
         },
         device: {
             locale: T,
             model: f,
             manufacturer: A,
-            architecture: N,
+            architecture: d,
             is_emulator: !1
         },
         debug_meta: {
@@ -227,10 +227,10 @@ function m(t, e, a, _) {
     };
 }
 let v = new Map();
-function S() {
+function U() {
     return v.size;
 }
-function U(t) {
+function S(t) {
     let e = v.get(t);
     return e && v.delete(t), e;
 }

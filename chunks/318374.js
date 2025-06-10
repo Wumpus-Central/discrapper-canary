@@ -90,8 +90,8 @@ function O(e) {
     let { users: t, maxUsers: a, guildId: s, channelId: h, className: g, size: O = c.EFr.SIZE_24, overflowCountVariant: v, overflowCountColor: I = 'interactive-normal', overflowCountClassName: T, hideOverflowCount: S = !1, disableUsernameTooltip: A = !1, disableUserPopout: N = !1, onClick: C, onFocus: R, onUserClick: P, onUserPopoutRequestClose: w } = e,
         [D, L] = i.useState(!1),
         x = b(O),
-        M = i.useRef(null);
-    function k() {
+        k = i.useRef(null);
+    function M() {
         return (0, r.jsx)(c.VqE, {
             className: p.popoutWrapper,
             children: (0, r.jsx)(c.Ttm, {
@@ -177,14 +177,14 @@ function O(e) {
             d[d.length - 1] = (0, r.jsx)(
                 c.yRy,
                 {
-                    targetElementRef: M,
-                    renderPopout: k,
+                    targetElementRef: k,
+                    renderPopout: M,
                     shouldShow: D,
                     position: 'bottom',
                     onRequestClose: () => L(!1),
                     children: () =>
                         (0, r.jsx)(c.zxk, {
-                            buttonRef: M,
+                            buttonRef: k,
                             className: o()(p.overflow, x, T),
                             onFocus: R,
                             onClick: (e) => {

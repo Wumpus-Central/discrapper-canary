@@ -99,7 +99,7 @@ function N(e) {
         D = (0, o.e7)([E.default], () => E.default.getUser(d)),
         L = (0, o.e7)([p.Z], () => p.Z.getChannel(v)),
         x = null != L ? L.getGuildId() : null,
-        M =
+        k =
             C || null == D || null == x || null == v
                 ? void 0
                 : (e) => {
@@ -118,7 +118,7 @@ function N(e) {
                                   );
                           });
                   },
-        k = y.ZP.useName(D),
+        M = y.ZP.useName(D),
         j = (0, o.e7)([p.Z, h.ZP, g.Z], () => b.ZP.getNickname(x, v, D)),
         U = m.Z.getGuild(x),
         G = (0, u.Ib)(U, L) && d === O.fL ? O.jM : null;
@@ -136,12 +136,12 @@ function N(e) {
                     {
                         ref: P,
                         className: t,
-                        onContextMenu: M,
+                        onContextMenu: k,
                         color: G
                     },
                     e
                 ),
-                { children: '@'.concat(null != j ? j : k) }
+                { children: '@'.concat(null != j ? j : M) }
             )
         );
     return C

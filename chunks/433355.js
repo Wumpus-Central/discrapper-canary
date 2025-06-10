@@ -84,7 +84,7 @@ function x(e) {
     let { guildId: t } = e;
     return null != A[t] && (delete A[t], !0);
 }
-function M(e) {
+function k(e) {
     let { sidebarType: t, baseChannelId: n, channelId: r, details: i } = e;
     T = !1;
     let a = N(n);
@@ -98,7 +98,7 @@ function M(e) {
         !0)
     );
 }
-function k(e) {
+function M(e) {
     let { parentChannelId: t, parentMessageId: n, location: r } = e;
     T = !1;
     let i = N(t);
@@ -210,9 +210,9 @@ let Y = new H(o.Z, {
     CHANNEL_TOGGLE_MEMBERS_SECTION: P,
     USER_PROFILE_SIDEBAR_TOGGLE_SECTION: D,
     CHANNEL_TOGGLE_SUMMARIES_SECTION: w,
-    SIDEBAR_VIEW_CHANNEL: M,
+    SIDEBAR_VIEW_CHANNEL: k,
     SIDEBAR_VIEW_GUILD: L,
-    SIDEBAR_CREATE_THREAD: k,
+    SIDEBAR_CREATE_THREAD: M,
     SIDEBAR_CLOSE: F,
     SIDEBAR_CLOSE_GUILD: x,
     CHANNEL_DELETE: j,

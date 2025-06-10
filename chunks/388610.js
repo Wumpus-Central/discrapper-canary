@@ -86,10 +86,10 @@ function x(e) {
     }
     return !0;
 }
-function M(e) {
-    (w = !0), k(e);
-}
 function k(e) {
+    (w = !0), M(e);
+}
+function M(e) {
     let t = O.Z.getChannel(e.channelId);
     if (null == t) return U();
     (N = v.QZA.OPEN), (o = a = t), (D = 'location' in e && null != e.location ? e.location : null), (i = 'subsection' in e ? e.subsection : null), null != o && (o = o.set('nsfw', o.isNSFW())), (s = O.Z.getChannel(o.parent_id)), (l = o.getGuildId());
@@ -254,8 +254,8 @@ class $ extends (c = p.ZP.Store) {
 }
 I($, 'displayName', 'ChannelSettingsStore');
 let ee = new $(m.Z, {
-        CHANNEL_SETTINGS_INIT: k,
-        CHANNEL_SETTINGS_OPEN: M,
+        CHANNEL_SETTINGS_INIT: M,
+        CHANNEL_SETTINGS_OPEN: k,
         CHANNEL_SETTINGS_SUBMIT: G,
         CHANNEL_SETTINGS_SUBMIT_SUCCESS: B,
         CHANNEL_SETTINGS_SUBMIT_FAILURE: F,

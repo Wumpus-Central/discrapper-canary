@@ -17,8 +17,8 @@ var i = n(255367),
     _ = n(346497),
     x = n(422034),
     E = n(710220),
-    C = n(635921),
-    j = n(474936),
+    j = n(635921),
+    C = n(474936),
     O = n(388032),
     S = n(909176);
 let v = (e) => {
@@ -40,13 +40,13 @@ let v = (e) => {
             { analyticsLocations: P } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_HERO_CTA),
             R = (0, g._O)(),
             D = (0, p.Ng)(),
-            Z = (0, p.Wp)(D, j.Si.TIER_2) ? j.Si.TIER_2 : void 0,
+            Z = (0, p.Wp)(D, C.Si.TIER_2) ? C.Si.TIER_2 : void 0,
             w = (0, h.N)(),
             k = (0, m.Nx)(),
             L = (0, _.Vi)(),
             B = (0, a.e7)([u.Z], () => u.Z.affinities),
             M = (0, f.Z)(),
-            U = y === j.EZ.ApplicationStoreHome,
+            U = y === C.EZ.ApplicationStoreHome,
             V = U && null != M,
             G = B.length > 0;
         return (0, i.jsx)(d.Gt, {
@@ -91,7 +91,7 @@ let v = (e) => {
                                       color: o.Ttl.WHITE
                                   })
                               })
-                            : (0, i.jsx)(C.PK, {
+                            : (0, i.jsx)(j.PK, {
                                   subscriptionTier: null != (r = null != N ? N : null == w || null == (n = w.subscription_trial) ? void 0 : n.sku_id) ? r : Z,
                                   inOfferExperience: k,
                                   containerClassName: l()(S.marketingPageCTAContainer, { [S.marketingPageCTAMargin]: !(G || V) }),
@@ -99,7 +99,7 @@ let v = (e) => {
                                   isApplicationHome: U,
                                   isDarkMode: A
                               }),
-                        (0, i.jsx)(C._O, {
+                        (0, i.jsx)(j._O, {
                             variant: 'text-md/normal',
                             withBottomMargin: !1,
                             isApplicationHome: U

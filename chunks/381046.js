@@ -81,14 +81,14 @@ var r = n(260674),
             A = E ? L.sort(E) : L;
         }
         var x = f ? String(n).replace(/\./g, '%2E') : String(n),
-            M = o && l(N) && 1 === N.length ? x + '[]' : x;
-        if (s && l(N) && 0 === N.length) return M + '[]';
-        for (var k = 0; k < A.length; ++k) {
-            var j = A[k],
+            k = o && l(N) && 1 === N.length ? x + '[]' : x;
+        if (s && l(N) && 0 === N.length) return k + '[]';
+        for (var M = 0; M < A.length; ++M) {
+            var j = A[M],
                 U = 'object' == typeof j && j && void 0 !== j.value ? j.value : N[j];
             if (!d || null !== U) {
                 var G = b && f ? String(j).replace(/\./g, '%2E') : String(j),
-                    B = l(N) ? ('function' == typeof a ? a(M, G) : M) : M + (b ? '.' + G : '[' + G + ']');
+                    B = l(N) ? ('function' == typeof a ? a(k, G) : k) : k + (b ? '.' + G : '[' + G + ']');
                 S.set(t, R);
                 var F = r();
                 F.set(h, S), u(D, e(U, B, a, o, s, c, d, f, 'comma' === a && I && l(N) ? null : m, g, E, b, y, O, v, I, T, F));

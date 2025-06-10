@@ -79,17 +79,17 @@ function L(e, t) {
     );
 }
 let x = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
-    M = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL),
-    k = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
+    k = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL),
+    M = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
     j = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL),
     U = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_PADDING),
     G = (0, y.Mg)(R.__invalid_unicodeCategoryShortcutHeight),
     B = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
     F = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-    V = k + M + 2 * U,
-    Z = x + M,
+    V = M + k + 2 * U,
+    Z = x + k,
     H = Z + (B + 2 * F),
-    Y = k + j + 2 * U,
+    Y = M + j + 2 * U,
     W = 7;
 function K(e) {
     let { activeIndex: t, categoryIndex: n, analyticsContext: a, categories: s, category: l, handleCategorySelect: u, isWindowFocused: d, useReducedMotion: _ } = e,
@@ -129,8 +129,8 @@ function K(e) {
                         ? (0, r.jsx)(v.Z, {
                               categoryId: h,
                               className: R.categoryIcon,
-                              height: k,
-                              width: k,
+                              height: M,
+                              width: M,
                               size: 'custom'
                           })
                         : null
@@ -248,9 +248,9 @@ let z = (e) => {
                 if (n.type === S.En.RECENT) return t ? 0 : j;
                 if (n.type === S.En.GUILD) {
                     let n = A[e + 1];
-                    return null != n && n.type !== S.En.GUILD ? (t ? B + -2 * F + M + r : M) : t ? r : M;
+                    return null != n && n.type !== S.En.GUILD ? (t ? B + -2 * F + k + r : k) : t ? r : k;
                 }
-                return t ? M + r : 2 * M;
+                return t ? k + r : 2 * k;
             },
             [A, Q]
         ),
@@ -289,8 +289,8 @@ let z = (e) => {
                     children: (0, r.jsx)(f.EO4, {
                         size: 'custom',
                         color: 'currentColor',
-                        height: k,
-                        width: k
+                        height: M,
+                        width: M
                     })
                 },
                 er

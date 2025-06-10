@@ -13,7 +13,7 @@ n.d(t, {
     eu: () => z,
     f_: () => S,
     gc: () => v,
-    iC: () => M,
+    iC: () => k,
     jm: () => $,
     mO: () => B,
     ne: () => J,
@@ -193,12 +193,12 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
     },
     L = (e) => P(e, i.Z.AVATAR_DECORATION),
     x = (e) => w(e, i.Z.AVATAR_DECORATION),
-    M = (e, t) => (0, r.uniqBy)([...L(e), ...x(t)], 'id'),
-    k = (e) => P(e, i.Z.PROFILE_EFFECT),
+    k = (e, t) => (0, r.uniqBy)([...L(e), ...x(t)], 'id'),
+    M = (e) => P(e, i.Z.PROFILE_EFFECT),
     j = (e) => w(e, i.Z.PROFILE_EFFECT),
-    U = (e, t) => (0, r.uniqBy)([...k(e), ...j(t)], 'id'),
+    U = (e, t) => (0, r.uniqBy)([...M(e), ...j(t)], 'id'),
     G = (e, t) => {
-        let n = k(t),
+        let n = M(t),
             r = j(e).filter((e) => {
                 let { id: t } = e;
                 return !n.some((e) => e.id === t);

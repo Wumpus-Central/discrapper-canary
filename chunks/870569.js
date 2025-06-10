@@ -7,7 +7,7 @@ var i = n(255367),
     o = n(686546),
     c = n(168301);
 let d = r.forwardRef(function (e, t) {
-    let { tooltipText: n, children: r, onContextMenu: s, onClick: d, disabled: u, icon: m, iconForeground: g, innerClassName: p, className: h, redGlow: f, orangeGlow: b, tooltipClassName: _, onMouseEnter: x, onMouseLeave: E, 'aria-label': C, 'aria-checked': j, role: O, tooltipColor: S, tooltipForceOpen: v, tooltipContentClassName: T, plated: I } = e,
+    let { tooltipText: n, children: r, onContextMenu: s, onClick: d, disabled: u, icon: m, iconForeground: g, innerClassName: p, className: h, redGlow: f, orangeGlow: b, tooltipClassName: _, onMouseEnter: x, onMouseLeave: E, 'aria-label': j, 'aria-checked': C, role: O, tooltipColor: S, tooltipForceOpen: v, tooltipContentClassName: T, plated: I } = e,
         N =
             'function' == typeof m
                 ? (0, i.jsx)(m, {
@@ -21,14 +21,14 @@ let d = r.forwardRef(function (e, t) {
     return (0, i.jsx)(a.ua7, {
         tooltipClassName: _,
         text: n,
-        'aria-label': C,
+        'aria-label': j,
         color: S,
         tooltipContentClassName: T,
         forceOpen: v,
         children: (e) => {
             var n,
                 m,
-                { onClick: g, onMouseEnter: _, onMouseLeave: C } = e,
+                { onClick: g, onMouseEnter: _, onMouseLeave: j } = e,
                 S = (function (e, t) {
                     if (null == e) return {};
                     var n,
@@ -98,11 +98,11 @@ let d = r.forwardRef(function (e, t) {
                             null == _ || _(), null == x || x();
                         },
                         onMouseLeave: () => {
-                            null == C || C(), null == E || E();
+                            null == j || j(), null == E || E();
                         },
                         onContextMenu: s,
                         role: O,
-                        'aria-checked': j,
+                        'aria-checked': C,
                         focusProps: {
                             offset: {
                                 left: -1,

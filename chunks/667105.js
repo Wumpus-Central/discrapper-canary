@@ -3,10 +3,10 @@ n.d(t, {
     Ks: () => B,
     Ws: () => Z,
     g2: () => j,
-    hf: () => M,
+    hf: () => k,
     k3: () => U,
     qN: () => V,
-    tP: () => k
+    tP: () => M
 }),
     n(388685);
 var r = n(255367),
@@ -89,7 +89,7 @@ function x(e, t) {
         e
     );
 }
-function M(e) {
+function k(e) {
     let { quest: t, location: n, questContentPosition: r, questContentRowIndex: a } = e,
         s = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
         l = null == s ? void 0 : s.hasVerifiedEmailOrPhone(),
@@ -123,7 +123,7 @@ function M(e) {
                   : (0, S.B)());
     }, [t, u, n, r, a, l, c]);
 }
-function k(e) {
+function M(e) {
     var t;
     let n = (0, o.Wu)([u.ZP], () => u.ZP.getGamesSeen(!1)).find((t) => (null == t ? void 0 : t.id) === e);
     return null != n && Date.now() - 25920000000 <= (null != (t = n.lastLaunched) ? t : 0);
@@ -204,7 +204,7 @@ function B(e) {
         default:
             v = N.dr.CONFLICT_CHECKS;
     }
-    let T = M({
+    let T = k({
             quest: n,
             location: o,
             questContentPosition: s,
@@ -215,7 +215,7 @@ function B(e) {
         L = i.useCallback(() => {
             (0, d.$)();
         }, []),
-        k = i.useCallback(() => {
+        M = i.useCallback(() => {
             (0, f.Y)({
                 pageType: C.ZY5.GLOBAL_DISCOVERY_QUESTS,
                 sectionType: C.jXE.QUEST_TILE_CTA,
@@ -323,11 +323,11 @@ function B(e) {
                     return {
                         tooltipText: null,
                         text: P.intl.string(P.t.WYchdX),
-                        onClick: k
+                        onClick: M
                     };
                 return x(D({}, i), { text: P.intl.string(P.t.bAGFz8) });
         }
-    }, [r, p, S, _, T, a, n, o, s, u, j, w, L, k, b, U, B]);
+    }, [r, p, S, _, T, a, n, o, s, u, j, w, L, M, b, U, B]);
 }
 function F() {
     return (0, o.e7)([b.Z], () => {

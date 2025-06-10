@@ -44,8 +44,8 @@ var i = n(658722),
     D = n(580005),
     L = n(984933),
     x = n(271383),
-    M = n(430824),
-    k = n(375954),
+    k = n(430824),
+    M = n(375954),
     j = n(496675),
     U = n(158776),
     G = n(699516),
@@ -243,10 +243,10 @@ function eL(e) {
 function ex(e, t, n) {
     return e === t || ((!!n || !!(0, R.Km)(t)) && (e === L.sH ? (0, R.r8)(t) || (0, R.bw)(t) : e === L.Zb && (0, R.bw)(t)));
 }
-function eM(e, t) {
+function ek(e, t) {
     return e === L.sH && (0, R.bw)(t);
 }
-function ek(e) {
+function eM(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = e
             .split(' ')
@@ -285,7 +285,7 @@ function eU(e, t) {
     let n = t[e.guild_id];
     if (null == n) {
         var r;
-        n = t[e.guild_id] = null == (r = M.Z.getGuild(e.guild_id)) ? void 0 : r.toString().toLocaleLowerCase();
+        n = t[e.guild_id] = null == (r = k.Z.getGuild(e.guild_id)) ? void 0 : r.toString().toLocaleLowerCase();
     }
     return n;
 }
@@ -302,7 +302,7 @@ function eB(e, t) {
     let n = w.Z.getChannel(e);
     return null == e || null == n
         ? []
-        : s()(k.Z.getMessages(e).toArray())
+        : s()(M.Z.getMessages(e).toArray())
               .reverse()
               .uniqBy((e) => e.author.id)
               .map((e) => V.default.getUser(e.author.id))
@@ -393,7 +393,7 @@ let eF = {
     },
     queryGuildUsers(e) {
         let { guildId: t, query: n, limit: r = 10, request: i = !0, checkRecentlyTalkedOnEmptyQuery: a = !0, filter: o, allowSnowflake: s } = e;
-        if (null == M.Z.getGuild(t)) return [];
+        if (null == k.Z.getGuild(t)) return [];
         if (0 === n.length && a) {
             let e = eB(B.Z.getChannelId(t), r);
             if (e.length > 0) return e;
@@ -427,7 +427,7 @@ let eF = {
     queryChannels(e) {
         let t,
             { query: n, guildId: r, limit: i = Q.rnv, fuzzy: a = !0, filter: o = eO, type: l = L.sH, allowEmptyQueries: c = !1, requireVocalConnectAccess: u = !0, boosters: _ = {}, allowSnowflake: p } = e,
-            h = ek(n, c);
+            h = eM(n, c);
         t =
             null != r
                 ? s()(L.ZP.getChannels(r)[l])
@@ -457,7 +457,7 @@ let eF = {
                 0 !== c &&
                     !(t.length > 1) &&
                     (1 !== t.length || t[0].isFullMatch || s) &&
-                    (eM(l, e.type) && (c = Math.max(c - e_, ef / 2)),
+                    (ek(l, e.type) && (c = Math.max(c - e_, ef / 2)),
                     (c = Math.min(c + Math.min(null != (b = D.Z.getScoreWithoutFetchingLatest(e.id)) ? b : 0 / E, 1) * ep, c >= ec ? el : ec)),
                     g.push({
                         type: (0, R.bw)(e.type) ? J.h8.VOICE_CHANNEL : J.h8.TEXT_CHANNEL,
@@ -479,7 +479,7 @@ let eF = {
                 queryLower: o
             },
             c = [];
-        for (let e of s()(M.Z.getGuilds()).values().value()) {
+        for (let e of s()(k.Z.getGuilds()).values().value()) {
             if (!i(e)) continue;
             let t = e.name.toLocaleLowerCase(),
                 n = eP(t, l, r);
@@ -657,9 +657,9 @@ let eF = {
             b = [];
         if (g < _ && c) {
             let e = n.getGuildId(),
-                i = M.Z.getGuild(e);
+                i = k.Z.getGuild(e);
             if (null != i) {
-                let n = s()(M.Z.getRoles(i.id))
+                let n = s()(k.Z.getRoles(i.id))
                     .filter((t) => {
                         let { mentionable: n, name: i, id: o } = t;
                         return (n || r || d) && (a()(E, i.toLowerCase()) || (h && E === o)) && o !== z.default.castGuildIdAsEveryoneGuildRoleId(e);
@@ -690,9 +690,9 @@ let eF = {
             d = t.toLowerCase(),
             f = [];
         if (u < Q.rnv && o) {
-            let e = M.Z.getGuild(n);
+            let e = k.Z.getGuild(n);
             null != e &&
-                (s()(M.Z.getRoles(e.id))
+                (s()(k.Z.getRoles(e.id))
                     .filter((e) => {
                         let { mentionable: t, name: i, id: o } = e;
                         return (t || r || l) && a()(d, i.toLowerCase()) && (0, _.Gy)(n, o);
@@ -915,8 +915,8 @@ let eF = {
     matchSentinel: (e, t, n) => !ev.test(t) && e === n,
     hasSameRoleAsUsername(e, t) {
         if (!t.isPomelo()) return !1;
-        let n = M.Z.getGuild(e.getGuildId());
-        for (let { name: e } of Object.values(null != n ? M.Z.getRoles(n.id) : {})) if (t.username.startsWith(e.toLowerCase())) return !0;
+        let n = k.Z.getGuild(e.getGuildId());
+        for (let { name: e } of Object.values(null != n ? k.Z.getRoles(n.id) : {})) if (t.username.startsWith(e.toLowerCase())) return !0;
         return !1;
     }
 };

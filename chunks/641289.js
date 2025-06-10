@@ -97,11 +97,11 @@ e.exports = function (e) {
             relevance: 0,
             variants: [{ match: `\\b(${D})(\\.(${D}))?([eE][+-]?(${D}))?\\b` }, { match: `\\b0x(${L})(\\.(${L}))?([pP][+-]?(${D}))?\\b` }, { match: /\b0o([0-7]_*)+\b/ }, { match: /\b0b([01]_*)+\b/ }]
         },
-        M = (e = '') => ({
+        k = (e = '') => ({
             className: 'subst',
             variants: [{ match: r(/\\/, e, /[0\\tnr"']/) }, { match: r(/\\/, e, /u\{[0-9a-fA-F]{1,8}\}/) }]
         }),
-        k = (e = '') => ({
+        M = (e = '') => ({
             className: 'subst',
             match: r(/\\/, e, /[\t ]*(?:[\r\n]|\r\n)/)
         }),
@@ -114,12 +114,12 @@ e.exports = function (e) {
         U = (e = '') => ({
             begin: r(e, /"""/),
             end: r(/"""/, e),
-            contains: [M(e), k(e), j(e)]
+            contains: [k(e), M(e), j(e)]
         }),
         G = (e = '') => ({
             begin: r(e, /"/),
             end: r(/"/, e),
-            contains: [M(e), j(e)]
+            contains: [k(e), j(e)]
         }),
         B = {
             className: 'string',

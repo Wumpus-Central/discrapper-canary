@@ -6,7 +6,7 @@ n.d(t, {
     J0: () => C,
     K8: () => D,
     RE: () => v,
-    Vt: () => M,
+    Vt: () => k,
     ZS: () => f,
     a$: () => w,
     aK: () => I,
@@ -161,9 +161,9 @@ let O = ['avatar-decorations', 'profile-effects', 'nameplates', 'bundles'],
 var x = (function (e) {
     return (e[(e.FIAT = 0)] = 'FIAT'), (e[(e.ORB = 1)] = 'ORB'), (e[(e.PREMIUM_PURCHASE = 2)] = 'PREMIUM_PURCHASE'), (e[(e.PROMOTIONAL = 3)] = 'PROMOTIONAL'), (e[(e.TENURE_REWARD = 4)] = 'TENURE_REWARD'), (e[(e.GIFT = 5)] = 'GIFT'), e;
 })({});
-let M = {
+let k = {
         ORB_PROFILE_BADGE: '1342211853484429445',
         FRACTIONAL_PREMIUM: u.a.PREMIUM_TIER_2_3_DAY
     },
-    k = new Set(Object.values(M)),
-    j = (e) => k.has(e);
+    M = new Set(Object.values(k)),
+    j = (e) => M.has(e);

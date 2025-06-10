@@ -241,7 +241,7 @@ function R(e, t) {
             ('thumbnail' in e && null != e.thumbnail && (null == (i = e.thumbnail) ? void 0 : i.width) === 0 && (null == (a = e.thumbnail) ? void 0 : a.height) === 0) ||
             ('image' in e && null != e.image && (null == (o = e.image) ? void 0 : o.width) === 0 && (null == (s = e.image) ? void 0 : s.height) === 0) ||
             ('images' in e && (null == (l = e.images) ? void 0 : l.some((e) => null != e && 0 === e.width && 0 === e.height)))
-        ) && D(M(e), t)
+        ) && D(k(e), t)
     );
 }
 function P(e, t) {
@@ -292,6 +292,6 @@ function x(e) {
         }
     );
 }
-function M(e) {
+function k(e) {
     return null != e.content_scan_version ? e.content_scan_version : null != e.contentScanVersion || null != e.contentScanVersion ? e.contentScanVersion : null;
 }

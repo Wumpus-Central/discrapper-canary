@@ -250,10 +250,10 @@ function L(e) {
 function x() {
     g.error = 'ERROR_ACTIVATING_VOICE_FILTER';
 }
-function M() {
+function k() {
     g.error = null;
 }
-function k() {
+function M() {
     E = Date.now();
 }
 d(A, 'displayName', 'VoiceFilterStore');
@@ -269,6 +269,6 @@ let j = new A(l.Z, {
     VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME: D,
     VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE: L,
     VOICE_FILTER_APPLY_FAILED: x,
-    VOICE_FILTER_REQUEST_SWITCH: M,
-    VOICE_FILTER_LAGGING: k
+    VOICE_FILTER_REQUEST_SWITCH: k,
+    VOICE_FILTER_LAGGING: M
 });

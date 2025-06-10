@@ -7,7 +7,7 @@ n.d(t, {
     aC: () => L,
     pI: () => T,
     sR: () => D,
-    tt: () => k
+    tt: () => M
 }),
     n(539854);
 var r = n(399606),
@@ -86,7 +86,7 @@ function L(e, t) {
         e,
         (n) => {
             (n.joinSound = void 0),
-                M({
+                k({
                     guildId: e,
                     changeType: b.MW.REMOVED,
                     soundType: b.jy.ENTRY,
@@ -107,7 +107,7 @@ function x(e, t, n) {
                 soundId: t.soundId,
                 guildId: i ? v.hY : t.guildId
             }),
-                M({
+                k({
                     guildId: e,
                     changeType: o,
                     soundSource: a,
@@ -118,7 +118,7 @@ function x(e, t, n) {
         s.fy.INFREQUENT_USER_ACTION
     );
 }
-function M(e) {
+function k(e) {
     let { guildId: t, changeType: n, soundType: r, soundSource: i, location: a } = e;
     p.default.track(I.rMx.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, {
         location_stack: a,
@@ -128,7 +128,7 @@ function M(e) {
         sound_source: i
     });
 }
-function k(e) {
+function M(e) {
     let { location: t } = e;
     p.default.track(I.rMx.USER_CUSTOM_CALL_SOUND_SETTING_GUILD_REMOVED, { location_stack: t });
 }

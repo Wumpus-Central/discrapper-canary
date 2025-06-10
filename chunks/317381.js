@@ -91,8 +91,8 @@ let C = {
     D = new Map(),
     L = new Map(),
     x = new Map(),
-    M = new Map(),
-    k = new Map();
+    k = new Map(),
+    M = new Map();
 function j(e, t) {
     return ''.concat(t, ':').concat(e);
 }
@@ -119,7 +119,7 @@ function Q(e) {
     let h = (0, E.p)(l),
         b = null != h && null != (n = x.get(h)) ? n : R,
         y = null != b && 0 === b.length,
-        O = null != (r = k.get(l.id)) ? r : R,
+        O = null != (r = M.get(l.id)) ? r : R,
         v = O.find((e) => e.applicationId === u),
         I = _.map((e) => e.userId),
         T = c.default.getId(),
@@ -128,7 +128,7 @@ function Q(e) {
         C = _.some((e) => (0, g.J)(e)),
         P = D.get(u),
         w = U.get(j(null != h ? h : null, u)),
-        M = null == w ? void 0 : w.launchParams,
+        k = null == w ? void 0 : w.launchParams,
         G = {
             applicationId: u,
             location: l,
@@ -137,8 +137,8 @@ function Q(e) {
             url: p,
             userIds: new Set(I),
             participants: _,
-            referrerId: null != (i = null == P ? void 0 : P.referrerId) ? i : null == M ? void 0 : M.referrerId,
-            customId: null != (a = null == P ? void 0 : P.customId) ? a : null == M ? void 0 : M.customId
+            referrerId: null != (i = null == P ? void 0 : P.referrerId) ? i : null == k ? void 0 : k.referrerId,
+            customId: null != (a = null == P ? void 0 : P.customId) ? a : null == k ? void 0 : k.customId
         };
     A && null != P && D.set(P.applicationId, S({}, P, G));
     let B = !C;
@@ -164,7 +164,7 @@ function Q(e) {
               applicationId: u
           }));
     let F = O.filter((e) => e.applicationId !== u);
-    if ((I.length > 0 && F.push(G), k.set(l.id, F), null != h)) {
+    if ((I.length > 0 && F.push(G), M.set(l.id, F), null != h)) {
         let e = (null != (o = x.get(h)) ? o : []).filter((e) => e.applicationId !== u),
             t = X((0, E.j)(l)),
             n = (null != (s = L.get(t)) ? s : []).filter((e) => e.applicationId !== u || e.location.id !== l.id);
@@ -194,7 +194,7 @@ function $(e) {
 }
 function ee(e) {
     let { guilds: t } = e;
-    x.clear(), L.clear(), k.clear(), M.clear(), t.forEach((e) => J(e));
+    x.clear(), L.clear(), M.clear(), k.clear(), t.forEach((e) => J(e));
     let n = c.default.getId();
     for (let e of Array.from(D.values())) eA.getEmbeddedActivitiesForLocation(e.location).some((t) => t.applicationId === e.applicationId && t.launchId === e.launchId && t.userIds.has(n)) || $(e);
 }
@@ -211,9 +211,9 @@ function en(e) {
         o = (null != (n = L.get(a)) ? n : []).filter((e) => (0, E.p)(e.location) !== r.id);
     L.set(a, o),
         i.forEach((e) => {
-            k.delete(e.location.id);
+            M.delete(e.location.id);
         }),
-        M.set(r.id, []);
+        k.set(r.id, []);
 }
 function er(e) {
     let { applicationId: t, launchId: n, compositeInstanceId: r, location: i, participants: a } = e;
@@ -445,11 +445,11 @@ class eS extends (i = a.ZP.PersistedStore) {
     }
     getEmbeddedActivitiesForLocation(e) {
         var t;
-        return null != (t = k.get(e.id)) ? t : R;
+        return null != (t = M.get(e.id)) ? t : R;
     }
     getEmbeddedActivitiesForStartingChannel(e) {
         var t;
-        return null != (t = M.get(e)) ? t : R;
+        return null != (t = k.get(e)) ? t : R;
     }
     getEmbeddedActivitiesByChannel() {
         return x;
@@ -511,7 +511,7 @@ class eS extends (i = a.ZP.PersistedStore) {
     getEmbeddedActivityForUserId(e, t) {
         let n;
         if (void 0 !== t) {
-            l: for (let [r, i] of k)
+            l: for (let [r, i] of M)
                 for (let r of i)
                     if (r.applicationId === t && r.userIds.has(e)) {
                         n = r;

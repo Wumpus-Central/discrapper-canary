@@ -1,6 +1,6 @@
 n.d(t, {
     ED: () => x,
-    fO: () => j,
+    fO: () => C,
     qp: () => O
 });
 var i = n(255367),
@@ -56,11 +56,11 @@ let x = (e) =>
             )
         ),
     E = [p.Z5c.ME, p.Z5c.COLLECTIBLES_SHOP, p.Z5c.NITRO_HOME],
-    C = {
+    j = {
         position: 'right',
         align: 'bottom'
     },
-    j = (e) => {
+    C = (e) => {
         var t,
             n,
             { onClose: a, onCtaClick: c, targetElementRef: m, isGuildBarScrolling: h, children: f } = e,
@@ -88,7 +88,7 @@ let x = (e) =>
             v = r.useCallback(
                 (e) => {
                     if (S) {
-                        let t = window.innerHeight - ((0, g.t4)() + j.COACHMARK_VERTICAL_OFFSET);
+                        let t = window.innerHeight - ((0, g.t4)() + C.COACHMARK_VERTICAL_OFFSET);
                         return e.top <= t;
                     }
                     return !0;
@@ -113,7 +113,7 @@ let x = (e) =>
                     positionControlRef: O,
                     targetElementRef: m,
                     calculateVisibility: v,
-                    defaultCoachmarkAlign: C.align,
+                    defaultCoachmarkAlign: j.align,
                     popoutElement: (0, i.jsx)(
                         x,
                         _(
@@ -122,12 +122,12 @@ let x = (e) =>
                                 onCtaClick: N
                             },
                             b,
-                            C
+                            j
                         )
                     ),
                     spacing: 8
                 },
-                C
+                j
             )),
             (n = n = { children: f }),
             Object.getOwnPropertyDescriptors
@@ -145,7 +145,7 @@ let x = (e) =>
             t)
         );
     };
-j.COACHMARK_VERTICAL_OFFSET = 10;
+C.COACHMARK_VERTICAL_OFFSET = 10;
 let O = (e) => {
     let { isVirtualCurrencyEnabled: t, discoveryButtonRef: n, scrollToBottom: i } = e,
         s = (0, o.Q3)('VirtualCurrency: DiscoveryOnboardingCoachmark'),

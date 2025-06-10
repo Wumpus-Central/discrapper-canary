@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => S,
-    u: () => j
+    u: () => C
 }),
     n(388685),
     n(539854),
@@ -36,7 +36,7 @@ var i = n(255367),
     _ = n(972118),
     x = n(533936),
     E = n(20493);
-function C(e) {
+function j(e) {
     let { content: t } = e,
         n = (0, a.e7)([g.Z], () => {
             var e, n;
@@ -58,7 +58,7 @@ function C(e) {
               children: r.join(', ')
           });
 }
-function j(e) {
+function C(e) {
     let { className: t, contents: n, content: r, onChange: s } = e,
         l = o.z[r],
         { isDismissed: a, handleToggleDismissState: c } = (0, _.Z)(l, n);
@@ -74,7 +74,7 @@ function j(e) {
                 className: E.marginTop4,
                 children: ''.concat(r.toLowerCase(), ' (').concat(o.z[r], ')')
             }),
-            (0, b.qh)(l) && (0, i.jsx)(C, { content: l })
+            (0, b.qh)(l) && (0, i.jsx)(j, { content: l })
         ]
     });
 }
@@ -85,7 +85,7 @@ function O(e) {
             .filter((e) => isNaN(Number(e)))
             .map((e) =>
                 (0, i.jsx)(
-                    j,
+                    C,
                     {
                         contents: n,
                         content: e,
@@ -108,8 +108,8 @@ function S() {
             dailyCapOverridden: h.Z.dailyCapOverridden,
             newUserMinAgeRequiredOverridden: h.Z.newUserMinAgeRequiredOverridden
         })),
-        [_, C] = r.useState(''),
-        j =
+        [_, j] = r.useState(''),
+        C =
             null !=
             (e = (0, a.e7)([g.Z], () => {
                 var e;
@@ -189,8 +189,8 @@ function S() {
                         className: E.marginBottom20,
                         size: d.E1j.Sizes.LARGE,
                         query: _,
-                        onChange: C,
-                        onClear: () => C('')
+                        onChange: j,
+                        onClear: () => j('')
                     }),
                     (0, i.jsxs)(d.xJW, {
                         className: x.buttonsContainer,
@@ -215,7 +215,7 @@ function S() {
                                   }),
                                   (0, i.jsx)(O, {
                                       items: I,
-                                      dismissedContents: j,
+                                      dismissedContents: C,
                                       handleChange: T
                                   })
                               ]
@@ -230,7 +230,7 @@ function S() {
                                   }),
                                   (0, i.jsx)(O, {
                                       items: N,
-                                      dismissedContents: j,
+                                      dismissedContents: C,
                                       handleChange: T
                                   })
                               ]
@@ -242,7 +242,7 @@ function S() {
                     }),
                     (0, i.jsx)(O, {
                         items: y,
-                        dismissedContents: j,
+                        dismissedContents: C,
                         handleChange: T
                     })
                 ]

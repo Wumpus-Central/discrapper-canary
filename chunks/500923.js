@@ -4896,16 +4896,16 @@
                 O = w.length;
                 var D = [];
                 for (y = 0; y < O; y += 1) {
-                    for ((x = w[y]).a.sc && (e.strokeColorAnim = !0), x.a.sw && (e.strokeWidthAnim = !0), (x.a.fc || x.a.fh || x.a.fs || x.a.fb) && (e.fillColorAnim = !0), j = 0, k = x.s.b, m = 0; m < g; m += 1) ((M = r[m]).anIndexes[y] = j), ((1 == k && '' !== M.val) || (2 == k && '' !== M.val && ' ' !== M.val) || (3 == k && (M.n || ' ' == M.val || m == g - 1)) || (4 == k && (M.n || m == g - 1))) && (1 === x.s.rn && D.push(j), (j += 1));
+                    for ((x = w[y]).a.sc && (e.strokeColorAnim = !0), x.a.sw && (e.strokeWidthAnim = !0), (x.a.fc || x.a.fh || x.a.fs || x.a.fb) && (e.fillColorAnim = !0), j = 0, M = x.s.b, m = 0; m < g; m += 1) ((k = r[m]).anIndexes[y] = j), ((1 == M && '' !== k.val) || (2 == M && '' !== k.val && ' ' !== k.val) || (3 == M && (k.n || ' ' == k.val || m == g - 1)) || (4 == M && (k.n || m == g - 1))) && (1 === x.s.rn && D.push(j), (j += 1));
                     n.a[y].s.totalChars = j;
                     var L,
                         x,
-                        M,
                         k,
+                        M,
                         j,
                         U,
                         G = -1;
-                    if (1 === x.s.rn) for (m = 0; m < g; m += 1) G != (M = r[m]).anIndexes[y] && ((G = M.anIndexes[y]), (U = D.splice(Math.floor(Math.random() * D.length), 1)[0])), (M.anIndexes[y] = U);
+                    if (1 === x.s.rn) for (m = 0; m < g; m += 1) G != (k = r[m]).anIndexes[y] && ((G = k.anIndexes[y]), (U = D.splice(Math.floor(Math.random() * D.length), 1)[0])), (k.anIndexes[y] = U);
                 }
                 (e.yOffset = e.finalLineHeight || 1.2 * e.finalSize), (e.ls = e.ls || 0), (e.ascent = (f.ascent * e.finalSize) / 100);
             }),
@@ -5073,8 +5073,8 @@
                                 D,
                                 L,
                                 x,
-                                M,
                                 k,
+                                M,
                                 j,
                                 U,
                                 G,
@@ -5101,8 +5101,8 @@
                                 (W = bez.buildBezierData(K.v[R], K.v[R + 1], [K.o[R][0] - K.v[R][0], K.o[R][1] - K.v[R][1]], [K.i[R + 1][0] - K.v[R + 1][0], K.i[R + 1][1] - K.v[R + 1][1]])), (w.tLength += W.segmentLength), w.segments.push(W), (V += W.segmentLength);
                             (R = P), Y.v.c && ((W = bez.buildBezierData(K.v[R], K.v[0], [K.o[R][0] - K.v[R][0], K.o[R][1] - K.v[R][1]], [K.i[0][0] - K.v[0][0], K.i[0][1] - K.v[0][1]])), (w.tLength += W.segmentLength), w.segments.push(W), (V += W.segmentLength)), (this._pathData.pi = w);
                         }
-                        if (((w = this._pathData.pi), (D = this._pathData.f.v), (j = 0), (k = 1), (x = 0), (M = !0), (B = w.segments), D < 0 && Y.v.c)) for (w.tLength < Math.abs(D) && (D = -Math.abs(D) % w.tLength), j = B.length - 1, k = (G = B[j].points).length - 1; D < 0; ) (D += G[k].partialLength), (k -= 1) < 0 && ((j -= 1), (k = (G = B[j].points).length - 1));
-                        (U = (G = B[j].points)[k - 1]), (F = (L = G[k]).partialLength);
+                        if (((w = this._pathData.pi), (D = this._pathData.f.v), (j = 0), (M = 1), (x = 0), (k = !0), (B = w.segments), D < 0 && Y.v.c)) for (w.tLength < Math.abs(D) && (D = -Math.abs(D) % w.tLength), j = B.length - 1, M = (G = B[j].points).length - 1; D < 0; ) (D += G[M].partialLength), (M -= 1) < 0 && ((j -= 1), (M = (G = B[j].points).length - 1));
+                        (U = (G = B[j].points)[M - 1]), (F = (L = G[M]).partialLength);
                     }
                     (P = A.length), (N = 0), (C = 0);
                     var z = 1.2 * e.finalSize * 0.714,
@@ -5111,7 +5111,7 @@
                     var X = -1,
                         Q = D,
                         J = j,
-                        $ = k,
+                        $ = M,
                         ee = -1,
                         et = '',
                         en = this.defaultPropsArray;
@@ -5132,7 +5132,7 @@
                         for (er && (er += ei); eo < R; ) (A[eo].animatorJustifyOffset = er), (eo += 1);
                     }
                     for (R = 0; R < P; R += 1) {
-                        if ((I.reset(), (d = 1), A[R].n)) (N = 0), (C += e.yOffset), (C += +!!q), (D = Q), (q = !1), this._hasMaskedPath && ((j = J), (k = $), (U = (G = B[j].points)[k - 1]), (F = (L = G[k]).partialLength), (x = 0)), (et = ''), (E = ''), (m = ''), (b = ''), (en = this.defaultPropsArray);
+                        if ((I.reset(), (d = 1), A[R].n)) (N = 0), (C += e.yOffset), (C += +!!q), (D = Q), (q = !1), this._hasMaskedPath && ((j = J), (M = $), (U = (G = B[j].points)[M - 1]), (F = (L = G[M]).partialLength), (x = 0)), (et = ''), (E = ''), (m = ''), (b = ''), (en = this.defaultPropsArray);
                         else {
                             if (this._hasMaskedPath) {
                                 if (ee !== A[R].line) {
@@ -5148,7 +5148,7 @@
                                 X !== A[R].ind && (A[X] && (D += A[X].extra), (D += A[R].an / 2), (X = A[R].ind)), (D += y[0] * A[R].an * 0.005);
                                 var el = 0;
                                 for (i = 0; i < a; i += 1) (n = O[i].a).p.propType && ((s = (r = O[i].s).getMult(A[R].anIndexes[i], v.a[i].s.totalChars)).length ? (el += n.p.v[0] * s[0]) : (el += n.p.v[0] * s)), n.a.propType && ((s = (r = O[i].s).getMult(A[R].anIndexes[i], v.a[i].s.totalChars)).length ? (el += n.a.v[0] * s[0]) : (el += n.a.v[0] * s));
-                                for (M = !0, this._pathData.a.v && (D = 0.5 * A[0].an + ((V - this._pathData.f.v - 0.5 * A[0].an - 0.5 * A[A.length - 1].an) * X) / (P - 1) + this._pathData.f.v); M; ) x + F >= D + el || !G ? ((Z = (D + el - x) / L.partialLength), (c = U.point[0] + (L.point[0] - U.point[0]) * Z), (u = U.point[1] + (L.point[1] - U.point[1]) * Z), I.translate(-y[0] * A[R].an * 0.005, -(0.01 * (y[1] * z))), (M = !1)) : G && ((x += L.partialLength), (k += 1) >= G.length && ((k = 0), B[(j += 1)] ? (G = B[j].points) : Y.v.c ? ((k = 0), (G = B[(j = 0)].points)) : ((x -= L.partialLength), (G = null))), G && ((U = L), (F = (L = G[k]).partialLength)));
+                                for (k = !0, this._pathData.a.v && (D = 0.5 * A[0].an + ((V - this._pathData.f.v - 0.5 * A[0].an - 0.5 * A[A.length - 1].an) * X) / (P - 1) + this._pathData.f.v); k; ) x + F >= D + el || !G ? ((Z = (D + el - x) / L.partialLength), (c = U.point[0] + (L.point[0] - U.point[0]) * Z), (u = U.point[1] + (L.point[1] - U.point[1]) * Z), I.translate(-y[0] * A[R].an * 0.005, -(0.01 * (y[1] * z))), (k = !1)) : G && ((x += L.partialLength), (M += 1) >= G.length && ((M = 0), B[(j += 1)] ? (G = B[j].points) : Y.v.c ? ((M = 0), (G = B[(j = 0)].points)) : ((x -= L.partialLength), (G = null))), G && ((U = L), (F = (L = G[M]).partialLength)));
                                 (l = A[R].an / 2 - A[R].add), I.translate(-l, 0, 0);
                             } else (l = A[R].an / 2 - A[R].add), I.translate(-l, 0, 0), I.translate(-y[0] * A[R].an * 0.005, -y[1] * z * 0.01, 0);
                             for (i = 0; i < a; i += 1) (n = O[i].a).t.propType && ((s = (r = O[i].s).getMult(A[R].anIndexes[i], v.a[i].s.totalChars)), (0 !== N || 0 !== e.j) && (this._hasMaskedPath ? (s.length ? (D += n.t.v * s[0]) : (D += n.t.v * s)) : s.length ? (N += n.t.v * s[0]) : (N += n.t.v * s)));

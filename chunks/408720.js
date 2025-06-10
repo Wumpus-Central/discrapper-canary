@@ -11,8 +11,8 @@ var r = a(469359),
     u = a(622916),
     I = a(467510),
     R = a(954211),
-    d = a(886115),
-    N = a(873567),
+    N = a(886115),
+    d = a(873567),
     A = a(454463),
     f = a(163162);
 let T = (0, o._I)((t = {}) => {
@@ -41,11 +41,11 @@ let T = (0, o._I)((t = {}) => {
                                 logger: 'console'
                             },
                             level: (0, R.V)(t.level),
-                            message: (0, d.nK)(t.args, ' ')
+                            message: (0, N.nK)(t.args, ' ')
                         };
                         if ('assert' === t.level)
                             if (!1 !== t.args[0]) return;
-                            else (e.message = `Assertion failed: ${(0, d.nK)(t.args.slice(1), ' ') || 'console.assert'}`), (e.data.arguments = t.args.slice(1));
+                            else (e.message = `Assertion failed: ${(0, N.nK)(t.args.slice(1), ' ') || 'console.assert'}`), (e.data.arguments = t.args.slice(1));
                         (0, c.n)(e, {
                             input: t.args,
                             level: t.level
@@ -170,9 +170,9 @@ let T = (0, o._I)((t = {}) => {
                             if ((0, i.s3)() !== h) return;
                             let e = t.from,
                                 a = t.to,
-                                r = (0, N.en)(f.m9.location.href),
-                                _ = e ? (0, N.en)(e) : void 0,
-                                n = (0, N.en)(a);
+                                r = (0, d.en)(f.m9.location.href),
+                                _ = e ? (0, d.en)(e) : void 0,
+                                n = (0, d.en)(a);
                             (_ && _.path) || (_ = r),
                                 r.protocol === n.protocol && r.host === n.host && (a = n.relative),
                                 r.protocol === _.protocol && r.host === _.host && (e = _.relative),

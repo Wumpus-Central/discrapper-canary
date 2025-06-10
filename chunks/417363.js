@@ -79,8 +79,8 @@ let T = 200,
     D = 0,
     L = 0,
     x = [],
-    M = [],
     k = [],
+    M = [],
     j = !1;
 function U() {
     P = !1;
@@ -189,12 +189,12 @@ function Z(e) {
     return e.type === b.vxO.INSTALLING || e.type === b.vxO.UPDATING || e.type === b.vxO.REPAIRING ? e.readerProgress : null;
 }
 function H(e) {
-    M = (M = [
+    k = (k = [
         {
             bytes: e,
             timestamp: Date.now()
         },
-        ...M
+        ...k
     ]).slice(0, S);
 }
 function Y(e) {
@@ -214,12 +214,12 @@ function Y(e) {
         });
 }
 function W(e) {
-    k = (k = [
+    M = (M = [
         {
             bytes: e,
             timestamp: Date.now()
         },
-        ...k
+        ...M
     ]).slice(0, S);
 }
 let K = a().throttle(H, T),
@@ -329,10 +329,10 @@ class J extends (r = o.ZP.Store) {
         return x;
     }
     getHistoricalTotalBytesDownloaded() {
-        return M;
+        return k;
     }
     getHistoricalTotalBytesWritten() {
-        return k;
+        return M;
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {

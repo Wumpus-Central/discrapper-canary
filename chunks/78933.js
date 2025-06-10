@@ -17,8 +17,8 @@ var i = n(255367),
     _ = n(785717),
     x = n(209698),
     E = n(687158),
-    C = n(892001),
-    j = n(899007),
+    j = n(892001),
+    C = n(899007),
     O = n(648052),
     S = n(867176),
     v = n(537006),
@@ -101,8 +101,8 @@ function ee(e) {
         e_ = (0, f.Z)({ analyticsLocations: es }),
         ex = (0, V.I5)(t),
         eE = (0, m.p)({ location: 'UserProfileAccountPopout' }),
-        eC = (0, x.b)({ location: 'UserProfileAccountPopout' }),
-        ej = r.useRef((0, G.Z)((e) => e.shouldRenderTenureLevelUp)),
+        ej = (0, x.b)({ location: 'UserProfileAccountPopout' }),
+        eC = r.useRef((0, G.Z)((e) => e.shouldRenderTenureLevelUp)),
         eO = r.useMemo(() => (0, g.Z)(), []),
         [eS, ev] = r.useState(!0);
     r.useEffect(() => {
@@ -112,7 +112,7 @@ function ee(e) {
     }, []);
     let eT = (e) => {
             null == n || n(),
-                (0, C.openUserProfileModal)(
+                (0, j.openUserProfileModal)(
                     $(
                         {
                             customStatusPrompt: eO,
@@ -123,7 +123,7 @@ function ee(e) {
                     )
                 );
         },
-        eI = (null == er ? void 0 : er.profileEffectId) != null && !ej.current;
+        eI = (null == er ? void 0 : er.profileEffectId) != null && !eC.current;
     return (0, i.jsx)(u.Gt, {
         value: es,
         children: (0, i.jsx)(_.Mt, {
@@ -150,7 +150,7 @@ function ee(e) {
                                         displayProfile: er,
                                         themeType: q.lY.POPOUT
                                     }),
-                                    (0, i.jsx)(j.Z, {
+                                    (0, i.jsx)(C.Z, {
                                         user: t,
                                         displayProfile: er,
                                         themeType: q.lY.POPOUT,
@@ -185,7 +185,7 @@ function ee(e) {
                                             themeType: q.lY.POPOUT,
                                             onClose: n,
                                             shouldOpenBadgeTooltip: null != et ? (e) => e === et : void 0,
-                                            shouldGlowTenureBadge: ej.current
+                                            shouldGlowTenureBadge: eC.current
                                         }),
                                         nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                             children: [
@@ -207,7 +207,7 @@ function ee(e) {
                                         isPremiumUser: ex,
                                         onInteraction: n
                                     }),
-                                    eC
+                                    ej
                                         ? (0, i.jsx)(y.Z, {
                                               user: t,
                                               currentUser: t,

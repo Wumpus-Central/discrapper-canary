@@ -208,7 +208,7 @@ async function x(e) {
     ).body;
     return t;
 }
-async function M(e) {
+async function k(e) {
     let { stripe_payment_intent_client_secret: t, stripe_payment_intent_payment_method_id: n } = (
         await l.tn.get({
             url: O.ANM.BILLING_STRIPE_PAYMENT_INTENTS(e),
@@ -221,7 +221,7 @@ async function M(e) {
         paymentMethodId: n
     };
 }
-async function k() {
+async function M() {
     return (
         await l.tn.post({
             url: O.ANM.BILLING_STRIPE_SETUP_INTENT_SECRET,
@@ -454,7 +454,7 @@ async function K(e, t, n, r) {
     c.Z.dispatch({ type: 'BILLING_PAYMENT_SOURCE_CREATE_START' });
     let i = null;
     try {
-        i = await k();
+        i = await M();
     } catch (e) {
         throw V(e);
     }
@@ -892,7 +892,7 @@ async function ed(e, t) {
 async function ef(e, t) {
     let n = await y.d2();
     if (null == t) throw V('Payment source cannot be null on a redirect.');
-    let { clientSecret: r, paymentMethodId: i } = await M(e);
+    let { clientSecret: r, paymentMethodId: i } = await k(e);
     if (null == n) throw V('Stripe cannot be null on a redirect.');
     if (O.j8d.has(t.type)) {
         let e = await eC(t.type);

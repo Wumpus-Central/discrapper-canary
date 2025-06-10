@@ -59,9 +59,9 @@ let S = (e, t, n, r) => {
                     badges: (0, p.UU)(n)
                 });
             }, [C, R, t, n, w, L, D, P]),
-            M = (0, h.Z)(O.ABu.SPOTIFY);
+            k = (0, h.Z)(O.ABu.SPOTIFY);
         if (null == P || !(0, d.Hi)(L, g.y9)) return null;
-        let k = () => {
+        let M = () => {
                 let e = v.Hw.ALBUM,
                     t = l.Z.isProtocolRegistered() ? v.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : v.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
                 window.open(t);
@@ -74,15 +74,15 @@ let S = (e, t, n, r) => {
         return (0, r.jsxs)(b.yR, {
             children: [
                 (0, r.jsx)(b.wG, {
-                    onClickTitle: k,
+                    onClickTitle: M,
                     onClickSubtitle: j,
-                    onClickThumbnail: k,
+                    onClickThumbnail: M,
                     channel: t,
                     entry: n,
                     headerIcons:
                         N === o.p.SPOTIFY
                             ? (0, r.jsx)(y.Z, {
-                                  onClick: M,
+                                  onClick: k,
                                   Icon: u.Z,
                                   'aria-label': I.intl.string(I.t['0ZB/XF'])
                               })

@@ -418,7 +418,7 @@ class y extends a.Z {
                 },
                 h
             ),
-            { bytes: b, framesDropped: y, framesCodecError: O, framesCodec: v, framesNetwork: I, packets: T, packetsLost: S, nackCount: A, pliCount: N, qpSum: C, pauseCount: R, freezeCount: P, totalPausesDuration: w, totalFreezesDuration: D, totalFramesDuration: L, keyframes: x, passthroughCount: M, cryptorSuccessCount: k, cryptorFailureCount: j, cryptorDuration: U, cryptorAttempts: G, cryptorMissingKeyCount: B, cryptorInvalidNonceCount: F, qualityDecodeErrors: V, qualityDecoderReboots: Z, qualityScoreErrors: H, qualityFrameDrops: Y, qualitySizeMismatches: W } = e.aggregatedProperties;
+            { bytes: b, framesDropped: y, framesCodecError: O, framesCodec: v, framesNetwork: I, packets: T, packetsLost: S, nackCount: A, pliCount: N, qpSum: C, pauseCount: R, freezeCount: P, totalPausesDuration: w, totalFreezesDuration: D, totalFramesDuration: L, keyframes: x, passthroughCount: k, cryptorSuccessCount: M, cryptorFailureCount: j, cryptorDuration: U, cryptorAttempts: G, cryptorMissingKeyCount: B, cryptorInvalidNonceCount: F, qualityDecodeErrors: V, qualityDecoderReboots: Z, qualityScoreErrors: H, qualityFrameDrops: Y, qualitySizeMismatches: W } = e.aggregatedProperties;
         return (
             e instanceof f.nt ? ((E.sender_freeze_count = P), (E.sender_total_freezes_duration = D), (E.sender_total_frames_duration = L)) : ((E.receiver_freeze_count = P), (E.receiver_total_freezes_duration = D), (E.receiver_total_frames_duration = L), (E.receiver_pause_count = R), (E.receiver_total_pauses_duration = w)),
             m(p({}, E), {
@@ -435,8 +435,8 @@ class y extends a.Z {
                 num_plis: N,
                 qp_sum: C,
                 num_keyframes: x,
-                cryptor_passthrough_count: M,
-                cryptor_success_count: k,
+                cryptor_passthrough_count: k,
+                cryptor_success_count: M,
                 cryptor_failure_count: j,
                 cryptor_duration: U,
                 cryptor_attempts: G,

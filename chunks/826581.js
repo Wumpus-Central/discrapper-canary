@@ -111,10 +111,10 @@ function w(e) {
 let D = new s.h(w, (e) => ''.concat(e.joinRequestId)),
     L = new s.h(w, (e) => ''.concat(e.joinRequestId)),
     x = new s.h(w, (e) => ''.concat(e.actionedAt));
-function M(e) {
+function k(e) {
     return D.get(e);
 }
-function k(e) {
+function M(e) {
     delete K[e], D.delete(e), L.delete(e), x.delete(e);
 }
 function j(e) {
@@ -126,13 +126,13 @@ function U(e) {
         i = (0, _.j)(r),
         a = c.default.getCurrentUser();
     if (null == a || i.userId === a.id) return !1;
-    let o = null == (t = M(i.joinRequestId)) ? void 0 : t.applicationStatus;
+    let o = null == (t = k(i.joinRequestId)) ? void 0 : t.applicationStatus;
     return I(n, i.applicationStatus, o), j(i), !0;
 }
 function G(e) {
     let { id: t, guildId: n } = e,
-        r = M(t);
-    null != r && (I(n, E, r.applicationStatus), k(t));
+        r = k(t);
+    null != r && (I(n, E, r.applicationStatus), M(t));
 }
 function B(e) {
     let { guildId: t, action: n } = e;
@@ -192,7 +192,7 @@ class q extends (r = o.ZP.Store) {
     }
     getSelectedGuildJoinRequest(e) {
         let t = Y[e];
-        return null != t ? M(t.joinRequestId) : null;
+        return null != t ? k(t.joinRequestId) : null;
     }
 }
 p(q, 'displayName', 'GuildJoinRequestStoreV2');

@@ -85,12 +85,12 @@ function x(e, t) {
     );
 }
 n(928518), n(972830), n(704806);
-let M = (0, h.Un)({
+let k = (0, h.Un)({
         createPromise: () => n.e('47620').then(n.bind(n, 576184)),
         webpackId: 576184,
         name: 'UnsupportedBrowser'
     }),
-    k = (0, h.Un)({
+    M = (0, h.Un)({
         createPromise: () => n.e('74023').then(n.bind(n, 431583)),
         webpackId: 431583,
         name: 'DownloadApps'
@@ -207,7 +207,7 @@ class ei extends i.Component {
                 n === g.P.IN_PROGRESS
                     ? null
                     : !P.KO || d
-                      ? (0, r.jsx)(o.rs, { children: (0, r.jsx)(p.Z, { component: M }) })
+                      ? (0, r.jsx)(o.rs, { children: (0, r.jsx)(p.Z, { component: k }) })
                       : A.isPlatformEmbedded
                         ? (0, r.jsxs)(o.rs, {
                               children: [
@@ -225,7 +225,7 @@ class ei extends i.Component {
                                   (0, r.jsx)(p.Z, {
                                       exact: !0,
                                       path: C.Z5c.APPS,
-                                      component: k
+                                      component: M
                                   }),
                                   (0, r.jsx)(o.AW, {
                                       path: er([C.Z5c.LOGIN, C.Z5c.REGISTER, C.Z5c.INVITE(':inviteCode'), C.Z5c.INVITE_LOGIN(':inviteCode'), C.Z5c.GIFT_CODE(':giftCode'), C.Z5c.GIFT_CODE_LOGIN(':giftCode'), C.Z5c.RESET], R.a),

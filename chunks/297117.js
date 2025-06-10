@@ -3,7 +3,7 @@ a.d(e, {
     $Q: () => l,
     Dt: () => T,
     HH: () => A,
-    NP: () => d,
+    NP: () => N,
     R2: () => I,
     d8: () => f
 });
@@ -64,18 +64,18 @@ let n = /^\s*at (\S+?)(?::(\d+))(?::(\d+))\s*$/i,
         }
     ],
     R = / line (\d+).*script (?:in )?(\S+)(?:: in function (\S+))?$/i,
-    d = [
+    N = [
         10,
         (t) => {
             let e = R.exec(t);
             return e ? _(e[2], e[3] || r.Fi, +e[1]) : void 0;
         }
     ],
-    N = / line (\d+), column (\d+)\s*(?:in (?:<anonymous function: ([^>]+)>|([^)]+))\(.*\))? in (.*):\s*$/i,
+    d = / line (\d+), column (\d+)\s*(?:in (?:<anonymous function: ([^>]+)>|([^)]+))\(.*\))? in (.*):\s*$/i,
     A = [
         20,
         (t) => {
-            let e = N.exec(t);
+            let e = d.exec(t);
             return e ? _(e[5], e[3] || e[4] || r.Fi, +e[1], +e[2]) : void 0;
         }
     ],

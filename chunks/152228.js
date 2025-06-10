@@ -1,8 +1,8 @@
 a.d(e, {
     GK: () => O,
-    Iw: () => C,
+    Iw: () => y,
     V0: () => D,
-    _d: () => y,
+    _d: () => C,
     qp: () => g,
     yn: () => P
 });
@@ -18,8 +18,8 @@ var r = a(370541),
     u = a(73453),
     I = a(99342),
     R = a(696486),
-    d = a(305625),
-    N = a(966497),
+    N = a(305625),
+    d = a(966497),
     A = a(787659),
     f = a(789112),
     T = a(275689),
@@ -27,7 +27,7 @@ var r = a(370541),
     L = a(881243);
 let h = '__SENTRY_SUPPRESS_TRACING__';
 function O(t, e) {
-    let a = S();
+    let a = U();
     if (a.startSpan) return a.startSpan(t, e);
     let r = v(t),
         { forceTransaction: _, parentSpan: n } = t;
@@ -64,7 +64,7 @@ function O(t, e) {
     );
 }
 function D(t, e) {
-    let a = S();
+    let a = U();
     if (a.startSpanManual) return a.startSpanManual(t, e);
     let r = v(t),
         { forceTransaction: _, parentSpan: n } = t;
@@ -103,11 +103,11 @@ function D(t, e) {
     );
 }
 function g(t) {
-    let e = S();
+    let e = U();
     if (e.startInactiveSpan) return e.startInactiveSpan(t);
     let a = v(t),
         { forceTransaction: r, parentSpan: _ } = t;
-    return (t.scope ? (e) => (0, i.$e)(t.scope, e) : void 0 !== _ ? (t) => y(_, t) : (t) => t())(() => {
+    return (t.scope ? (e) => (0, i.$e)(t.scope, e) : void 0 !== _ ? (t) => C(_, t) : (t) => t())(() => {
         let e = (0, i.nZ)(),
             _ = G(e);
         return t.onlyIfParent && !_
@@ -125,12 +125,12 @@ let P = ({ sentryTrace: t, baggage: e }, a) =>
         let n = (0, r.pT)(t, e);
         return _.setPropagationContext(n), a();
     });
-function y(t, e) {
-    let a = S();
+function C(t, e) {
+    let a = U();
     return a.withActiveSpan ? a.withActiveSpan(t, e) : (0, i.$e)((a) => ((0, I.D)(a, t || void 0), e(a)));
 }
-function C(t) {
-    return (0, i.$e)((e) => (e.setPropagationContext((0, _.Q)()), E.X && n.kg.info(`Starting a new trace with id ${e.getPropagationContext().traceId}`), y(null, t)));
+function y(t) {
+    return (0, i.$e)((e) => (e.setPropagationContext((0, _.Q)()), E.X && n.kg.info(`Starting a new trace with id ${e.getPropagationContext().traceId}`), C(null, t)));
 }
 function m({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
     let _;
@@ -154,10 +154,10 @@ function m({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
         })(t, r, e)),
             (0, R.j5)(t, _);
     else if (t) {
-        let a = (0, d.jC)(t),
+        let a = (0, N.jC)(t),
             { traceId: n, spanId: o } = t.spanContext(),
             i = (0, R.Tt)(t);
-        (_ = U(
+        (_ = S(
             {
                 traceId: n,
                 parentSpanId: o,
@@ -166,7 +166,7 @@ function m({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
             r,
             i
         )),
-            (0, d.Lh)(_, a);
+            (0, N.Lh)(_, a);
     } else {
         let {
             traceId: t,
@@ -177,7 +177,7 @@ function m({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
             ...n.getPropagationContext(),
             ...r.getPropagationContext()
         };
-        (_ = U(
+        (_ = S(
             {
                 traceId: t,
                 parentSpanId: o,
@@ -186,9 +186,9 @@ function m({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
             r,
             i
         )),
-            a && (0, d.Lh)(_, a);
+            a && (0, N.Lh)(_, a);
     }
-    return (0, N.Z)(_), (0, L.YJ)(_, r, n), _;
+    return (0, d.Z)(_), (0, L.YJ)(_, r, n), _;
 }
 function v(t) {
     let e = {
@@ -201,11 +201,11 @@ function v(t) {
     }
     return e;
 }
-function S() {
+function U() {
     let t = (0, o.c)();
     return (0, c.G)(t);
 }
-function U(t, e, a) {
+function S(t, e, a) {
     let r = (0, i.s3)(),
         _ = (r && r.getOptions()) || {},
         { name: n = '', attributes: o } = t,
@@ -237,5 +237,5 @@ function G(t) {
     return (a ? a.getOptions() : {}).parentSpanIsAlwaysRootSpan ? (0, R.Gx)(e) : e;
 }
 function b(t) {
-    return void 0 !== t ? (e) => y(t, e) : (t) => t();
+    return void 0 !== t ? (e) => C(t, e) : (t) => t();
 }

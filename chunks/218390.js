@@ -21,8 +21,8 @@ var i = n(255367),
     _ = n(497321),
     x = n(634894),
     E = n(410030),
-    C = n(607070),
-    j = n(100527),
+    j = n(607070),
+    C = n(100527),
     O = n(906732),
     S = n(211242),
     v = n(975298),
@@ -258,7 +258,7 @@ function eo() {
 function ec(e) {
     var t, n;
     let { className: r, config: s } = e,
-        a = (0, c.e7)([C.Z], () => C.Z.useReducedMotion) ? s.getStaticImageUrl() : s.getAnimatedImageUrl(),
+        a = (0, c.e7)([j.Z], () => j.Z.useReducedMotion) ? s.getStaticImageUrl() : s.getAnimatedImageUrl(),
         o = (0, U.Tl)(null != (t = s.gradientConfig) ? t : void 0),
         d = { color: null != (n = s.textColor) ? n : 'var(--always-white)' };
     return (0, i.jsxs)('div', {
@@ -369,7 +369,7 @@ function ed() {
 }
 let eu = function () {
     let e = (0, S.Q)(),
-        { analyticsLocations: t } = (0, O.ZP)(j.Z.PREMIUM_SETTINGS),
+        { analyticsLocations: t } = (0, O.ZP)(C.Z.PREMIUM_SETTINGS),
         n = (0, c.e7)([R.ZP], () => R.ZP.getPremiumTypeSubscription()),
         s = (0, c.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
         l = (0, T.V)(),
@@ -378,7 +378,7 @@ let eu = function () {
         h = (0, G.n)(),
         b = null == h ? void 0 : h.countryCode,
         E = (0, c.e7)([A.Z], () => A.Z.enabled),
-        C = r.useRef(null),
+        j = r.useRef(null),
         y = 'PremiumManagementSettings';
     (0, x.j)({
         location: y + ' auto on',
@@ -428,12 +428,12 @@ let eu = function () {
                     ]
                 }),
                 (0, i.jsx)(d.$, {
-                    innerRef: C,
+                    innerRef: j,
                     onChange: (e) => {
                         e && !D && (Z.default.track(J.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), w(!0));
                     },
                     children: (0, i.jsx)('div', {
-                        ref: C,
+                        ref: j,
                         className: ee.bottomOfPageVisibilitySensor
                     })
                 })

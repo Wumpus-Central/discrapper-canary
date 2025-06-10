@@ -1,8 +1,8 @@
 a.d(e, {
-    Eg: () => C,
+    Eg: () => y,
     Jd: () => v,
     S1: () => P,
-    jp: () => y,
+    jp: () => C,
     lA: () => m,
     nV: () => g
 });
@@ -18,8 +18,8 @@ var r = a(636361),
     u = a(694043),
     I = a(688838),
     R = a(393523),
-    d = a(833772),
-    N = a(454463),
+    N = a(833772),
+    d = a(454463),
     A = a(163162),
     f = a(408720),
     T = a(515737),
@@ -58,19 +58,19 @@ function P(t = {}) {
         return void (0, l.Cf)(() => {
             console.error('[Sentry] You cannot run Sentry this way in a browser extension, check: https://docs.sentry.io/platforms/javascript/best-practices/browser-extensions/');
         });
-    N.X && !(0, u.Ak)() && l.kg.warn('No Fetch API detected. The Sentry SDK requires a Fetch API compatible environment to send events. Please add a Fetch API polyfill.');
+    d.X && !(0, u.Ak)() && l.kg.warn('No Fetch API detected. The Sentry SDK requires a Fetch API compatible environment to send events. Please add a Fetch API polyfill.');
     let a = {
             ...e,
             stackParser: (0, I.Sq)(e.stackParser || O.Dt),
             integrations: (0, o.m8)(e),
             transport: e.transport || D.f
         },
-        r = (0, i.M)(d.R, a);
+        r = (0, i.M)(N.R, a);
     return (
         e.autoSessionTracking &&
             (function () {
                 if (void 0 === A.m9.document) {
-                    N.X && l.kg.warn('Session tracking in non-browser environment with @sentry/browser is not supported.');
+                    d.X && l.kg.warn('Session tracking in non-browser environment with @sentry/browser is not supported.');
                     return;
                 }
                 (0, E.yj)({ ignoreDuration: !0 }),
@@ -82,16 +82,16 @@ function P(t = {}) {
         r
     );
 }
-function y(t = {}) {
+function C(t = {}) {
     if (!A.m9.document) {
-        N.X && l.kg.error('Global document not defined in showReportDialog call');
+        d.X && l.kg.error('Global document not defined in showReportDialog call');
         return;
     }
     let e = (0, c.nZ)(),
         a = e.getClient(),
         r = a && a.getDsn();
     if (!r) {
-        N.X && l.kg.error('DSN not configured for showReportDialog call');
+        d.X && l.kg.error('DSN not configured for showReportDialog call');
         return;
     }
     if (
@@ -120,9 +120,9 @@ function y(t = {}) {
         A.m9.addEventListener('message', t);
     }
     let o = A.m9.document.head || A.m9.document.body;
-    o ? o.appendChild(_) : N.X && l.kg.error('Not injecting report dialog. No injection point found in HTML');
+    o ? o.appendChild(_) : d.X && l.kg.error('Not injecting report dialog. No injection point found in HTML');
 }
-function C() {}
+function y() {}
 function m(t) {
     t();
 }

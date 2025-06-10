@@ -40,8 +40,8 @@ var r = n(255367),
     D = n(726721),
     L = n(240991),
     x = n(713938),
-    M = n(973616),
-    k = n(881998),
+    k = n(973616),
+    M = n(881998),
     j = n(592125),
     U = n(944486),
     G = n(246946),
@@ -245,7 +245,7 @@ let ec = (e) => {
     ef = (e) => {
         let { scopes: t, application: a, selectedChannelId: s, selectedGuildId: l, onDelete: c, disclosures: d, locale: p, id: g } = e,
             b = a.id,
-            v = i.useMemo(() => M.ZP.createFromServer(a), [a]),
+            v = i.useMemo(() => k.ZP.createFromServer(a), [a]),
             I = (0, V.yE)(v.flags, $.udG.EMBEDDED),
             T = (0, _.e7)(
                 [q.Z],
@@ -258,7 +258,7 @@ let ec = (e) => {
             S = C.w.useExperiment({ location: 'oauth2_authorize' }),
             A = a.bot,
             P = (0, _.e7)([j.Z], () => j.Z.getDMFromUserId(null == A ? void 0 : A.id)),
-            { appDMChannelMuteConfig: k, dmChannelMuted: U } = (0, _.cj)([B.ZP], () =>
+            { appDMChannelMuteConfig: M, dmChannelMuted: U } = (0, _.cj)([B.ZP], () =>
                 null == P
                     ? {
                           appDMChannelMuteConfig: null,
@@ -499,9 +499,9 @@ let ec = (e) => {
                                         onChange: eh,
                                         className: en.dmSettingsSwitch,
                                         note:
-                                            (null == k ? void 0 : k.end_time) != null
+                                            (null == M ? void 0 : M.end_time) != null
                                                 ? et.intl.format(et.t.j7h4AA, {
-                                                      endTime: new Date(k.end_time).toLocaleString(et.intl.currentLocale, {
+                                                      endTime: new Date(M.end_time).toLocaleString(et.intl.currentLocale, {
                                                           month: 'numeric',
                                                           day: 'numeric',
                                                           hour: 'numeric',
@@ -569,7 +569,7 @@ let ec = (e) => {
     e_ = (0, d.U)(() => ({ searchQuery: '' })),
     ep = () => {
         let e = (0, _.e7)([G.Z], () => G.Z.hidePersonalInformation),
-            t = (0, _.e7)([k.Z], () => k.Z.getApps()),
+            t = (0, _.e7)([M.Z], () => M.Z.getApps()),
             a = (0, _.e7)([W.default], () => W.default.locale),
             o = (0, _.e7)([S.ZP], () => S.ZP.getSelfEmbeddedActivities()),
             s = (0, _.e7)([j.Z, U.Z], () => j.Z.getChannel(U.Z.getChannelId())),

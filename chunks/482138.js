@@ -31,8 +31,8 @@ var r,
     D = Math.pow,
     L = c(''.charAt),
     x = c(/./.exec),
-    M = c([].join),
-    k = c((1).toString),
+    k = c([].join),
+    M = c((1).toString),
     j = c([].pop),
     U = c([].push),
     G = c(''.replace),
@@ -148,10 +148,10 @@ var r,
         var t, n, r, i;
         if ('number' == typeof e) {
             for (n = 0, t = []; n < 4; n++) H(t, e % 256), (e = w(e / 256));
-            return M(t, '.');
+            return k(t, '.');
         }
         if ('object' == typeof e) {
-            for (n = 0, t = '', r = ec(e); n < 8; n++) (!i || 0 !== e[n]) && (i && (i = !1), r === n ? ((t += n ? ':' : '::'), (i = !0)) : ((t += k(e[n], 16)), n < 7 && (t += ':')));
+            for (n = 0, t = '', r = ec(e); n < 8; n++) (!i || 0 !== e[n]) && (i && (i = !1), r === n ? ((t += n ? ':' : '::'), (i = !0)) : ((t += M(e[n], 16)), n < 7 && (t += ':')));
             return '[' + t + ']';
         }
         return e;
@@ -222,8 +222,8 @@ var r,
     eD = {},
     eL = {},
     ex = {},
-    eM = {},
     ek = {},
+    eM = {},
     ej = {},
     eU = {},
     eG = {},
@@ -352,7 +352,7 @@ eV.prototype = {
                 case ew:
                 case eD:
                     if (t && 'file' === l.scheme) {
-                        c = ek;
+                        c = eM;
                         continue;
                     }
                     if (':' !== a || p)
@@ -384,7 +384,7 @@ eV.prototype = {
                     }
                     break;
                 case ex:
-                    if (((l.scheme = 'file'), '/' === a || '\\' === a)) c = eM;
+                    if (((l.scheme = 'file'), '/' === a || '\\' === a)) c = ek;
                     else if (n && 'file' === n.scheme)
                         switch (a) {
                             case r:
@@ -397,7 +397,7 @@ eV.prototype = {
                                 (l.host = n.host), (l.path = m(n.path)), (l.query = n.query), (l.fragment = ''), (c = eF);
                                 break;
                             default:
-                                eE(M(m(i, u), '')) || ((l.host = n.host), (l.path = m(n.path)), l.shortenPath()), (c = eU);
+                                eE(k(m(i, u), '')) || ((l.host = n.host), (l.path = m(n.path)), l.shortenPath()), (c = eU);
                                 continue;
                         }
                     else {
@@ -405,14 +405,14 @@ eV.prototype = {
                         continue;
                     }
                     break;
-                case eM:
+                case ek:
                     if ('/' === a || '\\' === a) {
-                        c = ek;
+                        c = eM;
                         break;
                     }
-                    n && 'file' === n.scheme && !eE(M(m(i, u), '')) && (eg(n.path[0], !0) ? U(l.path, n.path[0]) : (l.host = n.host)), (c = eU);
+                    n && 'file' === n.scheme && !eE(k(m(i, u), '')) && (eg(n.path[0], !0) ? U(l.path, n.path[0]) : (l.host = n.host)), (c = eU);
                     continue;
-                case ek:
+                case eM:
                     if (a === r || '/' === a || '\\' === a || '?' === a || '#' === a) {
                         if (!t && eg(d)) c = eU;
                         else if ('' === d) {
@@ -493,7 +493,7 @@ eV.prototype = {
             s = e.query,
             l = e.fragment,
             c = t + ':';
-        return null !== i ? ((c += '//'), e.includesCredentials() && (c += n + (r ? ':' + r : '') + '@'), (c += eu(i)), null !== a && (c += ':' + a)) : 'file' === t && (c += '//'), (c += e.cannotBeABaseURL ? o[0] : o.length ? '/' + M(o, '/') : ''), null !== s && (c += '?' + s), null !== l && (c += '#' + l), c;
+        return null !== i ? ((c += '//'), e.includesCredentials() && (c += n + (r ? ':' + r : '') + '@'), (c += eu(i)), null !== a && (c += ':' + a)) : 'file' === t && (c += '//'), (c += e.cannotBeABaseURL ? o[0] : o.length ? '/' + k(o, '/') : ''), null !== s && (c += '?' + s), null !== l && (c += '#' + l), c;
     },
     setHref: function (e) {
         var t = this.parse(e);
@@ -561,7 +561,7 @@ eV.prototype = {
     },
     getPathname: function () {
         var e = this.path;
-        return this.cannotBeABaseURL ? e[0] : e.length ? '/' + M(e, '/') : '';
+        return this.cannotBeABaseURL ? e[0] : e.length ? '/' + k(e, '/') : '';
     },
     setPathname: function (e) {
         this.cannotBeABaseURL || ((this.path = []), this.parse(e, ej));

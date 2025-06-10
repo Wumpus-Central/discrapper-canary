@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k });
+n.d(t, { Z: () => M });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -177,7 +177,7 @@ function x(e) {
         ]
     });
 }
-function M(e) {
+function k(e) {
     let { badgeType: t, guildTraits: n } = e,
         { tooltipTitle: i, tooltipSubtitle: a, tooltipDescription: o } = (0, I.G)(t, n.visibility);
     return (0, r.jsxs)(r.Fragment, {
@@ -210,13 +210,13 @@ function M(e) {
         ]
     });
 }
-function k(e) {
+function M(e) {
     let t, n;
     var a,
         { guild: o, tooltipColor: l = u.ua7.Colors.BRAND, tooltipPosition: d, className: E, flowerStarClassName: b, iconClassName: y, badgeStrokeColor: I, badgeColor: S, disableBoostClick: N, 'aria-label': R = !1 } = e,
         D = w(e, ['guild', 'tooltipColor', 'tooltipPosition', 'className', 'flowerStarClassName', 'iconClassName', 'badgeStrokeColor', 'badgeColor', 'disableBoostClick', 'aria-label']);
     let x = (0, f.Q3)('GuildBadgeV2'),
-        k = null != (a = D.size) ? a : x ? 18 : 16,
+        M = null != (a = D.size) ? a : x ? 18 : 16,
         j = (0, s.e7)([g.default, m.ZP], () => {
             let e = g.default.getCurrentUser();
             return m.ZP.isMember(null == o ? void 0 : o.id, null == e ? void 0 : e.id);
@@ -247,12 +247,12 @@ function k(e) {
     let Q = (0, c.wj)(U) ? W : K,
         J = (0, c.wj)(U) ? H : Y;
     (t = null != t ? t : Q), (n = null != n ? n : J);
-    let $ = Math.floor(0.75 * k) - (null != X ? X : 0);
+    let $ = Math.floor(0.75 * M) - (null != X ? X : 0);
     return (0, r.jsx)(u.ua7, {
         color: l,
         position: d,
         'aria-label': R,
-        text: (0, r.jsx)(M, {
+        text: (0, r.jsx)(k, {
             badgeType: B,
             guildTraits: G
         }),
@@ -269,7 +269,7 @@ function k(e) {
                         allowFullSizedIcon: !0,
                         color: null != n ? n : S,
                         stroke: I,
-                        size: k,
+                        size: M,
                         children: (0, r.jsx)(Z, {
                             size: 'custom',
                             width: $,

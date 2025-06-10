@@ -43,8 +43,8 @@ var i,
     D = n(145597),
     L = n(370862),
     x = n(981631),
-    M = n(987650);
-function k(e, t, n) {
+    k = n(987650);
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -68,7 +68,7 @@ function j(e) {
                 })
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                M(e, t, n[t]);
             });
     }
     return e;
@@ -466,11 +466,11 @@ function ex(e) {
     let { pid: t } = e;
     (ea = t), (eo = null);
 }
-function eM(e) {
+function ek(e) {
     let { pid: t } = e;
     (eo = t), (ea = null);
 }
-function ek() {
+function eM() {
     ea = null;
 }
 function ej(e) {
@@ -578,7 +578,7 @@ function eK() {
     g.Z.hasLoadedExperiments && Z.length > 0 && (eC(Z), (Z = []));
 }
 !__OVERLAY__ &&
-    ((0, P.isDesktop)() || M.iP) &&
+    ((0, P.isDesktop)() || k.iP) &&
     (en = function () {
         let e = [],
             t = new Set();
@@ -769,14 +769,14 @@ class ez extends (i = c.ZP.Store) {
         ec.add(null != (t = (0, h.F)(e)) ? t : e);
     }
 }
-k(ez, 'displayName', 'RunningGameStore');
+M(ez, 'displayName', 'RunningGameStore');
 let eq = new ez(d.Z, {
         RUNNING_GAMES_CHANGE: ew,
         CANDIDATE_GAMES_CHANGE: eD,
         PERMISSION_CLEAR_PTT_ADMIN_WARNING: eL,
         PERMISSION_REQUEST_ELEVATED_PROCESS: ex,
-        PERMISSION_CLEAR_ELEVATED_PROCESS: ek,
-        PERMISSION_CONTINUE_NONELEVATED_PROCESS: eM,
+        PERMISSION_CLEAR_ELEVATED_PROCESS: eM,
+        PERMISSION_CONTINUE_NONELEVATED_PROCESS: ek,
         RUNNING_GAME_ADD_OVERRIDE: ej,
         RUNNING_GAME_TOGGLE_OVERLAY: eV,
         RUNNING_GAME_TOGGLE_DETECTION: eZ,

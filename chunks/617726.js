@@ -9,7 +9,7 @@ a.d(e, {
     f4: () => I,
     gv: () => E,
     mL: () => A,
-    zQ: () => d
+    zQ: () => N
 });
 var r = a(967752),
     _ = a(202811),
@@ -92,7 +92,7 @@ function I(t) {
 function R(t) {
     return [{ type: 'span' }, t];
 }
-function d(t) {
+function N(t) {
     let e = 'string' == typeof t.data ? l(t.data) : t.data;
     return [
         (0, n.Jr)({
@@ -105,7 +105,7 @@ function d(t) {
         e
     ];
 }
-let N = {
+let d = {
     session: 'session',
     sessions: 'session',
     attachment: 'attachment',
@@ -123,7 +123,7 @@ let N = {
     statsd: 'metric_bucket'
 };
 function A(t) {
-    return N[t];
+    return d[t];
 }
 function f(t) {
     if (!t || !t.sdk) return;

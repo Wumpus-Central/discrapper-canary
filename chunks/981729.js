@@ -171,11 +171,11 @@ let D = (e) => {
         scale: 1,
         opacity: 0
     },
-    M = {
+    k = {
         scale: 1,
         opacity: 1
     },
-    k = (e) => {
+    M = (e) => {
         var { isVisible: t, onAnimationRest: n, targetElementRef: r } = e,
             o = I(e, ['isVisible', 'onAnimationRest', 'targetElementRef']);
         let { reducedMotion: s } = a.useContext(p.S);
@@ -185,7 +185,7 @@ let D = (e) => {
                 keys: (e) => (e ? 'tooltip' : 'empty'),
                 config: _.F,
                 from: s.enabled ? x : L,
-                enter: M,
+                enter: k,
                 leave: s.enabled ? x : L,
                 onRest: n
             },
@@ -271,7 +271,7 @@ class j extends (r = a.Component) {
             b = null;
         return (
             (b = e instanceof Function ? (E ? e() : null) : e),
-            (0, i.jsx)(k, {
+            (0, i.jsx)(M, {
                 disableTooltipPointerEvents: g,
                 targetElementRef: this.domElementRef,
                 tooltipStyle: s,

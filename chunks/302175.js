@@ -69,7 +69,7 @@ function x(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,7 +80,7 @@ function M(e, t) {
         e
     );
 }
-function k(e) {
+function M(e) {
     let { guildId: t, powerup: n, onClose: a } = e,
         { analyticsLocations: l } = (0, _.ZP)(),
         c = null != (0, I.Z)(t, n),
@@ -104,7 +104,7 @@ function k(e) {
         x = i.useCallback(() => {
             a(), (0, S.Z)(t, f.Z.GUILD_POWERUPS_MARKETING, n.skuId);
         }, [t, n.skuId, a]),
-        k = {
+        M = {
             tension: 400,
             friction: 30
         },
@@ -112,16 +112,16 @@ function k(e) {
             transform: A ? 'translateX(-50%) translateY(16px) scale(1)' : 'translateX(-50%) translateY(24px) scale(1.40)',
             borderRadius: '0px',
             transformOrigin: 'center 0%',
-            config: k
+            config: M
         }),
         U = (0, u.q_F)({
             y: A ? -25 : 0,
-            config: k
+            config: M
         }),
         G = (0, u.q_F)({
             opacity: +!!A,
             transform: A ? 'translateY(0)' : 'translateY(20px)',
-            config: k
+            config: M
         }),
         B = i.useCallback((e) => {
             e && b(!0);
@@ -147,7 +147,7 @@ function k(e) {
                 })
             }),
             (0, r.jsxs)(s.animated.div, {
-                style: M(L({}, U), { transform: U.y.to((e) => 'translateY('.concat(e, 'px)')) }),
+                style: k(L({}, U), { transform: U.y.to((e) => 'translateY('.concat(e, 'px)')) }),
                 className: o()(w.contentContainer, P.contentContainer),
                 children: [
                     (0, r.jsx)(m.xm, {
@@ -222,7 +222,7 @@ let j = i.forwardRef((e, t) => {
                       className: P.powerupsContainer,
                       children: _.map((e) =>
                           (0, r.jsx)(
-                              k,
+                              M,
                               {
                                   guildId: o.id,
                                   powerup: e,

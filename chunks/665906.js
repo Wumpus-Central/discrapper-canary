@@ -6,7 +6,7 @@ n.d(t, {
     JQ: () => S,
     NE: () => E,
     RG: () => D,
-    Xb: () => M,
+    Xb: () => k,
     Xu: () => y,
     Y: () => j,
     cD: () => O,
@@ -113,12 +113,12 @@ function C(e, t, n) {
 }
 function R(e) {
     let t = (0, o.e7)([_.Z], () => N(e, _.Z)),
-        n = M(e);
+        n = k(e);
     return C(e, t, n);
 }
 function P(e) {
     let t = N(e, _.Z),
-        n = k(e);
+        n = M(e);
     return C(e, t, n);
 }
 function w(e) {
@@ -137,10 +137,10 @@ function L(e) {
 function x(e, t) {
     return null != e && t.can(m.Plq.MANAGE_THREADS, e);
 }
-function M(e) {
+function k(e) {
     return (0, o.e7)([_.Z], () => x(e, _.Z));
 }
-function k(e) {
+function M(e) {
     return x(e, _.Z);
 }
 function j(e) {
@@ -157,6 +157,6 @@ function j(e) {
     return !t && e.isVocalThread() && i && n && r;
 }
 function U(e) {
-    let t = M(e);
+    let t = k(e);
     return e.isLockedThread() && !t;
 }

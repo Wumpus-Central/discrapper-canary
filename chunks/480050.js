@@ -115,7 +115,7 @@ function E(e) {
                   immediate: e
               }));
     }, [n, N, I, C, R]);
-    let M = (e, t) => {
+    let k = (e, t) => {
             var n;
             let r = null == T ? (null == (n = v.current) ? void 0 : n.getBoundingClientRect()) : null,
                 i = m({
@@ -132,7 +132,7 @@ function E(e) {
                 });
             C.x.set(i.x), C.y.set(i.y);
         },
-        k = (e) => {
+        M = (e) => {
             n &&
                 0 === e.button &&
                 (e.preventDefault(),
@@ -151,10 +151,10 @@ function E(e) {
         };
     return (0, r.jsx)(s.animated.div, {
         ref: v,
-        onMouseDown: k,
+        onMouseDown: M,
         onMouseUp: j,
-        onMouseMove: (e) => P && M(e.movementX, e.movementY),
-        onWheel: (e) => !e.ctrlKey && M(-e.deltaX, -e.deltaY),
+        onMouseMove: (e) => P && k(e.movementX, e.movementY),
+        onWheel: (e) => !e.ctrlKey && k(-e.deltaX, -e.deltaY),
         onMouseLeave: () => w(!1),
         onClick: (e) => e.stopPropagation(),
         className: o()(f, d.wrapper, {

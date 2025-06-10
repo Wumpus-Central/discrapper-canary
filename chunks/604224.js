@@ -46,7 +46,7 @@ function E() {
                 setting: b.s6.VOICE_AND_VIDEO_DEBUG_TAB
             }
         ],
-        C = E.findIndex((e) => null != e.subsection && e.subsection === t);
+        j = E.findIndex((e) => null != e.subsection && e.subsection === t);
     return (0, i.jsx)(l.Gt, {
         value: e,
         children: (0, i.jsx)(o.N, {
@@ -55,7 +55,7 @@ function E() {
                 parentSetting: b.s6.VOICE_AND_VIDEO,
                 settingsSection: _.oAB.VOICE,
                 tabs: E,
-                defaultTabIndex: C > -1 ? C : void 0
+                defaultTabIndex: j > -1 ? j : void 0
             })
         })
     });

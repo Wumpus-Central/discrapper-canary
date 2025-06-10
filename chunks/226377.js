@@ -1,4 +1,4 @@
-a.d(e, { q: () => d });
+a.d(e, { q: () => N });
 var r = a(899517),
     _ = a(622916),
     n = a(101284),
@@ -21,7 +21,7 @@ function I(t, e, a, r, n = {}) {
     let s = (0, c.HN)(),
         l = s ? (0, c.Gx)(s) : void 0,
         R = l && (0, c.XU)(l).description,
-        { unit: d, tags: N, timestamp: A } = n,
+        { unit: N, tags: d, timestamp: A } = n,
         { release: f, environment: T } = E.getOptions(),
         p = {};
     f && (p.release = f),
@@ -32,27 +32,27 @@ function I(t, e, a, r, n = {}) {
             e,
             a,
             r,
-            d,
+            N,
             {
                 ...p,
-                ...N
+                ...d
             },
             A
         );
 }
 function R(t, e, a, r) {
-    I(t, l.g_, e, N(a), r);
+    I(t, l.g_, e, d(a), r);
 }
-let d = {
+let N = {
     increment: function (t, e, a = 1, r) {
-        I(t, l.JM, e, N(a), r);
+        I(t, l.JM, e, d(a), r);
     },
     distribution: R,
     set: function (t, e, a, r) {
         I(t, l.is, e, a, r);
     },
     gauge: function (t, e, a, r) {
-        I(t, l.uG, e, N(a), r);
+        I(t, l.uG, e, d(a), r);
     },
     timing: function (t, e, a, r = 'second', _) {
         if ('function' == typeof a) {
@@ -86,6 +86,6 @@ let d = {
     },
     getMetricsAggregatorForClient: u
 };
-function N(t) {
+function d(t) {
     return 'string' == typeof t ? parseInt(t) : t;
 }

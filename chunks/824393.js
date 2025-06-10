@@ -1,7 +1,7 @@
 n.d(t, {
     default: () => U,
     h: () => j,
-    j: () => k
+    j: () => M
 }),
     n(388685);
 var r = n(255367),
@@ -90,12 +90,12 @@ function L(e) {
                                 onClose: p
                             })
                           : D
-                            ? (0, r.jsx)(k, {
-                                  duration: M(null != (u = null == (n = N.entitlements) ? void 0 : n.items) ? u : []),
+                            ? (0, r.jsx)(M, {
+                                  duration: k(null != (u = null == (n = N.entitlements) ? void 0 : n.items) ? u : []),
                                   onClose: p
                               })
                             : (0, r.jsx)(j, {
-                                  duration: M(null != (d = null == (a = N.entitlements) ? void 0 : a.items) ? d : []),
+                                  duration: k(null != (d = null == (a = N.entitlements) ? void 0 : a.items) ? d : []),
                                   onClose: p
                               })
                 })
@@ -149,11 +149,11 @@ function x(e) {
         ]
     });
 }
-function M(e) {
+function k(e) {
     let t = (0, v.xG)(e.map((e) => e.skuId));
     return t % 24 == 0 ? C.intl.formatToPlainString(C.t['Cz1G9/'], { days: t / 24 }) : C.intl.formatToPlainString(C.t.J9Lu4u, { hours: t });
 }
-function k(e) {
+function M(e) {
     let { duration: t, onClose: n } = e,
         { theme: a } = (0, c.TCT)(),
         o = (0, p.Z)({ forceFetch: !0 }),

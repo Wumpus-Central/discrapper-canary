@@ -115,7 +115,7 @@ function x() {
         ]
     });
 }
-function M(e) {
+function k(e) {
     let { markAsDismissed: t } = e;
     return (0, r.jsxs)('div', {
         className: R.coachmarkHeaderContainer,
@@ -142,7 +142,7 @@ function M(e) {
         ]
     });
 }
-function k(e) {
+function M(e) {
     let { gradientAngle: t, setGradientAngle: n } = e,
         { key: i, handleInternalChange: a } = D(t);
     return (0, r.jsxs)('div', {
@@ -336,7 +336,7 @@ function Z(e) {
                           children: (0, r.jsxs)('div', {
                               className: R.editorBody,
                               children: [
-                                  o ? (0, r.jsx)(M, { markAsDismissed: a }) : (0, r.jsx)(x, {}),
+                                  o ? (0, r.jsx)(k, { markAsDismissed: a }) : (0, r.jsx)(x, {}),
                                   (0, r.jsx)(I.o, {}),
                                   (0, r.jsx)(v.U, {
                                       onChange: (e) => {
@@ -347,7 +347,7 @@ function Z(e) {
                                       setColors: h
                                   }),
                                   d.length > 1 &&
-                                      (0, r.jsx)(k, {
+                                      (0, r.jsx)(M, {
                                           gradientAngle: p,
                                           setGradientAngle: b
                                       }),

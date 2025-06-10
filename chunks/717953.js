@@ -80,7 +80,7 @@ function v(e) {
         x = i.useCallback(() => {
             T === c.z.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE && S(m.L.TAKE_ACTION), null == v || v();
         }, [T, S, v]),
-        M = T === c.z.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE;
+        k = T === c.z.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE;
     return (0, r.jsxs)(h.S4, {
         onSelect: a ? void 0 : x,
         isSelected: !1,
@@ -97,7 +97,7 @@ function v(e) {
                 color: L,
                 className: y.paletteIcon
             }),
-            M &&
+            k &&
                 (0, r.jsx)(u.IGR, {
                     className: y.newBadge,
                     text: b.intl.string(b.t.y2b7CA),

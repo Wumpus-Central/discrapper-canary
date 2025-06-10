@@ -33,46 +33,37 @@ function u() {
         c = (0, s.e7)([o.ZP], () => o.ZP.getFlattenedGuildIds()),
         u = (0, s.e7)([a.Z], () => a.Z.getGuilds()),
         m = c.map((e) => u[e]),
-        [g, p] = (0, r.useState)(!1),
-        h = l.CW.useSetting(),
-        [f, b] = (0, r.useState)(h),
-        _ = async (e) => {
-            b(e);
+        g = l.CW.useSetting(),
+        [p, h] = (0, r.useState)(g),
+        f = async (e) => {
+            h(e);
             try {
                 await l.CW.updateSetting(e);
             } catch (e) {
-                b(h);
+                h(g);
             }
         },
-        x = 0 !== f.length,
-        [E, C] = (0, r.useState)(() => d[n](m, h)),
-        j = E.map((e) => u[e.id]).filter(Boolean),
-        O = '' === e ? j : j.filter((t) => t.name.toLowerCase().includes(e.toLowerCase())),
-        S = '' !== e;
+        b = 0 !== p.length,
+        [_, x] = (0, r.useState)(() => d[n](m, g)),
+        E = _.map((e) => u[e.id]).filter(Boolean);
     return {
-        guilds: g || S ? O : O.slice(0, 10),
+        guilds: '' === e ? E : E.filter((t) => t.name.toLowerCase().includes(e.toLowerCase())),
         sortOrder: n,
         searchQuery: e,
         setSortOrder: (e) => {
-            C(d[e](m, h)), i(e);
+            x(d[e](m, g)), i(e);
         },
         setSearchQuery: t,
         onToggleActivityRestrictedGuild: (e) => {
             let { checked: t, guildId: n } = e,
-                i = new Set(f);
-            t ? i.delete(n) : i.add(n), _([...i]);
+                i = new Set(p);
+            t ? i.delete(n) : i.add(n), f([...i]);
         },
-        isActivityRestricted: (e) => f.includes(e),
-        hasActivityRestrictedGuilds: x,
+        isActivityRestricted: (e) => p.includes(e),
+        hasActivityRestrictedGuilds: b,
         onToggleAllActivityRestrictedGuilds: () => {
-            x ? _([]) : _(c);
+            b ? f([]) : f(c);
         },
-        onToggleShowAllGuilds: () => {
-            p((e) => !e);
-        },
-        isShowingAllGuilds: g,
-        numTotalGuilds: c.length,
-        numGuildsShownLimit: 10,
-        isSearching: S
+        numTotalGuilds: c.length
     };
 }

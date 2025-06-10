@@ -31,10 +31,10 @@ var r = n(98405),
     D = n(992914),
     L = w('iterator'),
     x = 'URLSearchParams',
-    M = x + 'Iterator',
-    k = m.set,
+    k = x + 'Iterator',
+    M = m.set,
     j = m.getterFor(x),
-    U = m.getterFor(M),
+    U = m.getterFor(k),
     G = a('fetch'),
     B = a('Request'),
     F = a('Headers'),
@@ -141,8 +141,8 @@ var r = n(98405),
     },
     eh = h(
         function (e, t) {
-            k(this, {
-                type: M,
+            M(this, {
+                type: k,
                 target: j(e).entries,
                 index: 0,
                 kind: t
@@ -222,7 +222,7 @@ em.prototype = {
 var eg = function () {
         g(this, eE);
         var e = arguments.length > 0 ? arguments[0] : void 0,
-            t = k(this, new em(e));
+            t = M(this, new em(e));
         c || (this.size = t.entries.length);
     },
     eE = eg.prototype;

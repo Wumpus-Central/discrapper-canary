@@ -64,7 +64,7 @@ function d(e, t) {
     let L = e.substreams.find((e) => !e.isRTX && !e.isFlexFEC);
     if (null == L) return;
     let x = e.substreams.reduce((e, t) => e + s(t.rtpStats), 0),
-        M = e.substreams.reduce((e, t) => e + l(t.rtpStats), 0);
+        k = e.substreams.reduce((e, t) => e + l(t.rtpStats), 0);
     return {
         type: 'video',
         ssrc: L.ssrc,
@@ -76,7 +76,7 @@ function d(e, t) {
         },
         keyFrameInterval: e.keyFrameInterval,
         bytesSent: x,
-        packetsSent: M,
+        packetsSent: k,
         packetsLost: null != (O = null == (n = L.rtcpStats) ? void 0 : n.packetsLost) ? O : 0,
         fractionLost: null != (v = null == (i = L.rtcpStats) ? void 0 : i.fractionLost) ? v : 0,
         bitrate: e.mediaBitrate,

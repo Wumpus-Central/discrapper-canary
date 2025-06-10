@@ -15,7 +15,7 @@ var i = n(255367),
     f = n(869783),
     b = n(888723);
 let _ = (e) => {
-    let { name: t, title: n, description: s, descriptionCta: _, previewImage: x, videoUrl: E, shouldLoadVideo: C, index: j, size: O, customVideoStyle: S, isReducedMotion: v, onClick: T, badgeText: I } = e,
+    let { name: t, title: n, description: s, descriptionCta: _, previewImage: x, videoUrl: E, shouldLoadVideo: j, index: C, size: O, customVideoStyle: S, isReducedMotion: v, onClick: T, badgeText: I } = e,
         N = (0, g.rO)(),
         y = r.useRef(null),
         A = r.useRef(0),
@@ -124,7 +124,7 @@ let _ = (e) => {
                     u.Z,
                     {
                         playsInline: !0,
-                        preload: C ? 'auto' : 'none',
+                        preload: j ? 'auto' : 'none',
                         muted: !0,
                         poster: x,
                         loop: !0,
@@ -154,7 +154,7 @@ let _ = (e) => {
         onBlur: L,
         onMouseLeave: L,
         children:
-            j % 2 != 0
+            C % 2 != 0
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [(0, i.jsx)(B, {}), (0, i.jsx)(M, {})]
                   })

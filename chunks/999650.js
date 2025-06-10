@@ -127,8 +127,8 @@ function w() {
 let D = '([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})',
     L = '\\d{4}',
     x = '([0-9]{4})-([0-9]{1,2})',
-    M = '([^\\d\\s]+)',
-    k = RegExp('(?:\\s*('.concat(D, '|').concat(x, '|').concat(L, '|').concat(M, '))'), 'i'),
+    k = '([^\\d\\s]+)',
+    M = RegExp('(?:\\s*('.concat(D, '|').concat(x, '|').concat(L, '|').concat(k, '))'), 'i'),
     j = RegExp('\\s*(true|false)', 'i');
 function U(e) {
     return ''.concat(e, ':');
@@ -357,21 +357,21 @@ function $() {
             getAutocompletions: (e, t, n) => W(e, n, b.dCx.FILTER_AFTER)
         },
         [b.dCx.ANSWER_BEFORE]: {
-            regex: k,
+            regex: M,
             follows: [b.dCx.FILTER_BEFORE],
             componentType: 'ANSWER',
             mutable: !0,
             validator: (e) => F(e, 'before')
         },
         [b.dCx.ANSWER_ON]: {
-            regex: k,
+            regex: M,
             follows: [b.dCx.FILTER_ON],
             componentType: 'ANSWER',
             mutable: !0,
             validator: (e) => F(e, 'on')
         },
         [b.dCx.ANSWER_AFTER]: {
-            regex: k,
+            regex: M,
             follows: [b.dCx.FILTER_AFTER],
             componentType: 'ANSWER',
             mutable: !0,

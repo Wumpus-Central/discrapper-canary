@@ -11,8 +11,8 @@ var r = a(394798),
     u = a(696486),
     I = a(305625),
     R = a(966497),
-    d = a(241225),
-    N = a(881243);
+    N = a(241225),
+    d = a(881243);
 class A {
     constructor(t = {}) {
         (this._traceId = t.traceId || (0, r.DM)()),
@@ -80,7 +80,7 @@ class A {
             _metrics_summary: (0, s.y)(this),
             profile_id: this._attributes[l.p6],
             exclusive_time: this._attributes[l.JQ],
-            measurements: (0, d.l)(this._events),
+            measurements: (0, N.l)(this._events),
             is_segment: (this._isStandaloneSpan && (0, u.Gx)(this) === this) || void 0,
             segment_id: this._isStandaloneSpan ? (0, u.Gx)(this).spanContext().spanId : void 0
         });
@@ -120,12 +120,12 @@ class A {
                   })((0, E.uE)([this], t))
                 : (c.X && o.kg.log('[Tracing] Discarding standalone span because its trace was not chosen to be sampled.'), t && t.recordDroppedEvent('sample_rate', 'span')));
         let e = this._convertSpanToTransaction();
-        e && ((0, N.I1)(this).scope || (0, i.nZ)()).captureEvent(e);
+        e && ((0, d.I1)(this).scope || (0, i.nZ)()).captureEvent(e);
     }
     _convertSpanToTransaction() {
         if (!T((0, u.XU)(this))) return;
         this._name || (c.X && o.kg.warn('Transaction has no name, falling back to `<unlabeled transaction>`.'), (this._name = '<unlabeled transaction>'));
-        let { scope: t, isolationScope: e } = (0, N.I1)(this),
+        let { scope: t, isolationScope: e } = (0, d.I1)(this),
             a = (t || (0, i.nZ)()).getClient() || (0, i.s3)();
         if (!0 !== this._sampled) {
             c.X && o.kg.log('[Tracing] Discarding transaction because its trace was not chosen to be sampled.'), a && a.recordDroppedEvent('sample_rate', 'transaction');
@@ -154,7 +154,7 @@ class A {
                 _metrics_summary: (0, s.y)(this),
                 ...(_ && { transaction_info: { source: _ } })
             },
-            R = (0, d.l)(this._events);
+            R = (0, N.l)(this._events);
         return R && Object.keys(R).length && (c.X && o.kg.log('[Measurements] Adding measurements to transaction event', JSON.stringify(R, void 0, 2)), (E.measurements = R)), E;
     }
 }

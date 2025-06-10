@@ -70,7 +70,7 @@ function x(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,7 +81,7 @@ function M(e, t) {
         e
     );
 }
-function k(e, t) {
+function M(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -119,7 +119,7 @@ let U = new d.Z('ConnectionStore'),
                     null == i
                         ? void 0
                         : i.merge(
-                              M(L({}, r), {
+                              k(L({}, r), {
                                   recipients: i.recipients,
                                   bitrate: null != (n = r.bitrate) ? n : i.bitrate
                               })
@@ -648,7 +648,7 @@ Y(
         (e) => O.o.loadGuildIds([e.guild_id]),
         (e, t) => {
             let { newly_created: n } = e,
-                r = k(e, ['newly_created']);
+                r = M(e, ['newly_created']);
             K({
                 type: t,
                 isNewlyCreated: n,

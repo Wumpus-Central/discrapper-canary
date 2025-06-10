@@ -27,7 +27,7 @@
         return (
             'string' == typeof e && (e = K(e)),
             'object' == typeof e && (W(e.r) && W(e.g) && W(e.b) ? ((t = d(e.r, e.g, e.b)), (l = !0), (c = '%' === String(e.r).substr(-1) ? 'prgb' : 'rgb')) : W(e.h) && W(e.s) && W(e.v) ? ((r = V(e.s)), (i = V(e.v)), (t = h(e.h, r, i)), (l = !0), (c = 'hsv')) : W(e.h) && W(e.s) && W(e.l) && ((r = V(e.s)), (a = V(e.l)), (t = _(e.h, r, a)), (l = !0), (c = 'hsl')), e.hasOwnProperty('a') && (n = e.a)),
-            (n = M(n)),
+            (n = k(n)),
             {
                 ok: l,
                 format: e.format || c,
@@ -40,16 +40,16 @@
     }
     function d(e, t, n) {
         return {
-            r: 255 * k(e, 255),
-            g: 255 * k(t, 255),
-            b: 255 * k(n, 255)
+            r: 255 * M(e, 255),
+            g: 255 * M(t, 255),
+            b: 255 * M(n, 255)
         };
     }
     function f(e, t, n) {
-        e = k(e, 255);
+        e = M(e, 255);
         var r,
             i,
-            a = s(e, (t = k(t, 255)), (n = k(n, 255))),
+            a = s(e, (t = M(t, 255)), (n = M(n, 255))),
             l = o(e, t, n),
             c = (a + l) / 2;
         if (a == l) r = i = 0;
@@ -78,7 +78,7 @@
         function o(e, t, n) {
             return (n < 0 && (n += 1), n > 1 && (n -= 1), n < 1 / 6) ? e + (t - e) * 6 * n : n < 0.5 ? t : n < 2 / 3 ? e + (t - e) * (2 / 3 - n) * 6 : e;
         }
-        if (((e = k(e, 360)), (t = k(t, 100)), (n = k(n, 100)), 0 === t)) r = i = a = n;
+        if (((e = M(e, 360)), (t = M(t, 100)), (n = M(n, 100)), 0 === t)) r = i = a = n;
         else {
             var s = n < 0.5 ? n * (1 + t) : n + t - n * t,
                 l = 2 * n - s;
@@ -91,10 +91,10 @@
         };
     }
     function p(e, t, n) {
-        e = k(e, 255);
+        e = M(e, 255);
         var r,
             i,
-            a = s(e, (t = k(t, 255)), (n = k(n, 255))),
+            a = s(e, (t = M(t, 255)), (n = M(n, 255))),
             l = o(e, t, n),
             c = a,
             u = a - l;
@@ -119,7 +119,7 @@
         };
     }
     function h(e, n, r) {
-        (e = 6 * k(e, 360)), (n = k(n, 100)), (r = k(r, 100));
+        (e = 6 * M(e, 360)), (n = M(n, 100)), (r = M(r, 100));
         var i = t.floor(e),
             a = e - i,
             o = r * (1 - n),
@@ -290,7 +290,7 @@
             return (e = o.r / 255), (n = o.g / 255), (r = o.b / 255), (i = e <= 0.03928 ? e / 12.92 : t.pow((e + 0.055) / 1.055, 2.4)), 0.2126 * i + 0.7152 * (n <= 0.03928 ? n / 12.92 : t.pow((n + 0.055) / 1.055, 2.4)) + 0.0722 * (a = r <= 0.03928 ? r / 12.92 : t.pow((r + 0.055) / 1.055, 2.4));
         },
         setAlpha: function (e) {
-            return (this._a = M(e)), (this._roundA = a(100 * this._a) / 100), this;
+            return (this._a = k(e)), (this._roundA = a(100 * this._a) / 100), this;
         },
         toHsv: function () {
             var e = p(this._r, this._g, this._b);
@@ -349,14 +349,14 @@
         },
         toPercentageRgb: function () {
             return {
-                r: a(100 * k(this._r, 255)) + '%',
-                g: a(100 * k(this._g, 255)) + '%',
-                b: a(100 * k(this._b, 255)) + '%',
+                r: a(100 * M(this._r, 255)) + '%',
+                g: a(100 * M(this._g, 255)) + '%',
+                b: a(100 * M(this._b, 255)) + '%',
                 a: this._a
             };
         },
         toPercentageRgbString: function () {
-            return 1 == this._a ? 'rgb(' + a(100 * k(this._r, 255)) + '%, ' + a(100 * k(this._g, 255)) + '%, ' + a(100 * k(this._b, 255)) + '%)' : 'rgba(' + a(100 * k(this._r, 255)) + '%, ' + a(100 * k(this._g, 255)) + '%, ' + a(100 * k(this._b, 255)) + '%, ' + this._roundA + ')';
+            return 1 == this._a ? 'rgb(' + a(100 * M(this._r, 255)) + '%, ' + a(100 * M(this._g, 255)) + '%, ' + a(100 * M(this._b, 255)) + '%)' : 'rgba(' + a(100 * M(this._r, 255)) + '%, ' + a(100 * M(this._g, 255)) + '%, ' + a(100 * M(this._b, 255)) + '%, ' + this._roundA + ')';
         },
         toName: function () {
             return 0 === this._a ? 'transparent' : !(this._a < 1) && (L[m(this._r, this._g, this._b, !0)] || !1);
@@ -653,10 +653,10 @@
         for (var n in e) e.hasOwnProperty(n) && (t[e[n]] = n);
         return t;
     }
-    function M(e) {
+    function k(e) {
         return (isNaN((e = parseFloat(e))) || e < 0 || e > 1) && (e = 1), e;
     }
-    function k(e, n) {
+    function M(e, n) {
         G(e) && (e = '100%');
         var r = B(e);
         return ((e = o(n, s(0, parseFloat(e)))), r && (e = parseInt(e * n, 10) / 100), 0.000001 > t.abs(e - n)) ? 1 : (e % n) / parseFloat(n);

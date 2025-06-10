@@ -219,12 +219,12 @@ function x(e) {
     if (null == r || r.channelId !== t) return !1;
     A();
 }
-function M(e) {
+function k(e) {
     let { channel: t } = e;
     if (null == r || r.channelId !== t.id) return !1;
     A();
 }
-function k(e) {
+function M(e) {
     let { channelId: t } = e;
     if (null == r || (null != t && r.channelId === t)) return !1;
     A();
@@ -354,14 +354,14 @@ let H = new Z(
               RTC_CONNECTION_CLIENT_DISCONNECT: G,
               VIDEO_SIZE_UPDATE: V,
               VOICE_STATE_UPDATES: R,
-              VOICE_CHANNEL_SELECT: k,
+              VOICE_CHANNEL_SELECT: M,
               VOICE_SERVER_UPDATE: P,
               CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: w,
               REMOTE_SESSION_CONNECT: w,
               CLEAR_LAST_SESSION_VOICE_CHANNEL_ID: D,
               GUILD_DELETE: L,
-              CHANNEL_DELETE: M,
-              THREAD_DELETE: M,
+              CHANNEL_DELETE: k,
+              THREAD_DELETE: k,
               CALL_DELETE: x,
               APP_STATE_UPDATE: j,
               RTC_DEBUG_SET_SIMULCAST_OVERRIDE: F

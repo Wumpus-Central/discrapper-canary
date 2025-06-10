@@ -95,10 +95,10 @@ let A = (e) => {
         D = i.useRef(null),
         L = (0, s.arW)({ orientation: 'horizontal' }),
         { ref: x } = L,
-        M = T(L, ['ref']),
-        k = (0, u.MY)(y, t),
-        j = k === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        U = k !== u.xr.DEFAULT,
+        k = T(L, ['ref']),
+        M = (0, u.MY)(y, t),
+        j = M === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        U = M !== u.xr.DEFAULT,
         G = (0, f.rK)(),
         { enabled: B } = f.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: G }),
         { enabled: F } = _.O.useExperiment({ location: 'gift card' }),
@@ -158,7 +158,7 @@ let A = (e) => {
                             'aria-label': E.intl.string(E.t.v54NrK),
                             ref: x
                         },
-                        M
+                        k
                     ),
                     {
                         children:

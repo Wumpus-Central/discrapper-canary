@@ -63,7 +63,7 @@ function x(e) {
     }
     return e;
 }
-function M(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -75,12 +75,12 @@ function M(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : M(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -259,7 +259,7 @@ function H(e) {
         o = (0, c.e7)([g.ZP, y.default], () => g.ZP.getUserCombo(y.default.getId(), t.id)),
         s = (0, c.e7)([b.Z, p.Z, v.Z], () => (0, _.Z)(t, a, b.Z, p.Z, v.Z)),
         l = Z(t),
-        f = k(x({}, i), {
+        f = M(x({}, i), {
             baseTextColor: (0, d.dQu)(u.Z.colors.INTERACTIVE_NORMAL).hex(),
             activeTextColor: (0, d.dQu)(u.Z.colors.INTERACTIVE_NORMAL).hex(),
             showInviteEducation: s,

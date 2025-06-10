@@ -17,8 +17,8 @@ var i = n(255367),
     _ = n(796634),
     x = n(767714),
     E = n(119269),
-    C = n(938736),
-    j = n(981631),
+    j = n(938736),
+    C = n(981631),
     O = n(388032),
     S = n(357885),
     v = n(691766);
@@ -146,7 +146,7 @@ let N = (e) => {
     },
     P = (e) => {
         let { analyticsLocations: t } = e;
-        g.default.track(j.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
+        g.default.track(C.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e('47435').then(n.bind(n, 204387));
                 return (n) => (0, i.jsx)(e, I(T({}, n), { sourceAnalyticsLocations: t }));
@@ -168,7 +168,7 @@ let N = (e) => {
             e === h.Fe.REDEEMED && I.redeemed++, e === h.Fe.CONVERTED && (I.redeemed++, I.converted++);
         });
         let N = I.sent === _.Q,
-            y = p.Z.getArticleURL(j.BhN.REFERRAL_PROGRAM),
+            y = p.Z.getArticleURL(C.BhN.REFERRAL_PROGRAM),
             { analyticsLocations: R } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
             D = r.useRef(null),
             Z = (I.sent / _.Q) * 100,
@@ -189,12 +189,12 @@ let N = (e) => {
                             (0, i.jsx)(o.X6q, {
                                 variant: t ? 'heading-xl/extrabold' : 'heading-xxl/extrabold',
                                 className: S.expandedProgressBarHeader,
-                                children: (0, C.$s)({ hasSentAll: N })
+                                children: (0, j.$s)({ hasSentAll: N })
                             }),
                             (0, i.jsx)(A, { userRecords: u }),
                             (0, i.jsx)(o.Text, {
                                 variant: t ? 'text-sm/normal' : 'text-lg/medium',
-                                children: (0, C.Hg)({
+                                children: (0, j.Hg)({
                                     helpdeskArticle: y,
                                     referralsStatuses: I
                                 })

@@ -97,7 +97,7 @@ let T = new d.Z('PopoutWindowStore'),
     D = () => Q.emitChange(),
     L = s().debounce(D, 150),
     x = !1;
-function M(e, t) {
+function k(e, t) {
     let n = t.document,
         r = n.head;
     for (let e of (a()(null != r, 'Body for popout window is null!'), document.querySelectorAll('style'))) {
@@ -109,7 +109,7 @@ function M(e, t) {
         r.appendChild(t);
     }
 }
-function k(e) {
+function M(e) {
     let t = N[e];
     null == t ||
         t.closed ||
@@ -144,7 +144,7 @@ function B(e) {
         n = R[e];
     if (null == t) return void T.warn('Failed to open window', e);
     let r = t.document;
-    (0, h.uF)(r, D), t.addEventListener('focus', D), t.addEventListener('blur', D), t.addEventListener('resize', L), x ? M(e, t) : G(e, t);
+    (0, h.uF)(r, D), t.addEventListener('focus', D), t.addEventListener('blur', D), t.addEventListener('resize', L), x ? k(e, t) : G(e, t);
     let i = (0, l.createRoot)(r.getElementById(w));
     a()(null != i, 'No render target for popout!'), (C[e] = i), i.render(n(e));
 }
@@ -183,7 +183,7 @@ function V(e) {
 function Z(e) {
     let t = N[e];
     null != t &&
-        (t.closed || k(e),
+        (t.closed || M(e),
         j(e),
         setTimeout(() => {
             Y(t);
@@ -213,7 +213,7 @@ function Y(e) {
 function W(e) {
     let { key: t } = e,
         n = N[t];
-    null != n && !n.closed && (k(t), f.default.preventPopoutClose || Y(n));
+    null != n && !n.closed && (M(t), f.default.preventPopoutClose || Y(n));
 }
 function K() {
     for (let e of Object.keys(N)) {

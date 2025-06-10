@@ -6,14 +6,14 @@ n.d(t, {
     L1: () => K,
     Ow: () => W,
     PZ: () => z,
-    WA: () => k,
+    WA: () => M,
     Wx: () => R,
     XZ: () => H,
     Y$: () => G,
     Yn: () => Z,
     dF: () => j,
     jD: () => D,
-    lf: () => M,
+    lf: () => k,
     pF: () => Y,
     sl: () => B,
     vJ: () => x,
@@ -137,11 +137,11 @@ function x(e) {
     var t;
     return P(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PARTNER);
 }
-function M(e) {
+function k(e) {
     var t;
     return P(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PROMOTED);
 }
-function k(e) {
+function M(e) {
     let t = U(e),
         n = null == t ? void 0 : t.client_platform_config[(0, s.Z)((0, g.getOS)())];
     if ((null == n ? void 0 : n.label_until) != null && Date.now() < Date.parse(null == n ? void 0 : n.label_until)) {
@@ -151,7 +151,7 @@ function k(e) {
     return o.ww.NONE;
 }
 function j(e) {
-    switch (k(e)) {
+    switch (M(e)) {
         case o.ww.NEW:
             return 'New';
         case o.ww.UPDATED:

@@ -92,7 +92,7 @@ function x(e) {
     }
     null != c ? (N[u] = c) : delete N[u];
 }
-function M(e) {
+function k(e) {
     let { appContext: t, streamKey: n } = e;
     (I[n] = t),
         l().forEach(R, (e) => {
@@ -103,7 +103,7 @@ function M(e) {
         (S[n] = null),
         delete N[n];
 }
-function k(e) {
+function M(e) {
     let { streamKey: t, rtcServerId: n, region: r, viewerIds: i } = e,
         a = R[t];
     if (null == a && null != n) {
@@ -267,8 +267,8 @@ let z = new K(
               RTC_CONNECTION_UPDATE_ID: Z,
               RTC_CONNECTION_SECURE_FRAMES_UPDATE: V,
               STREAM_START: x,
-              STREAM_STOP: M,
-              STREAM_CREATE: k,
+              STREAM_STOP: k,
+              STREAM_CREATE: M,
               STREAM_SERVER_UPDATE: j,
               STREAM_UPDATE: G,
               STREAM_DELETE: B,

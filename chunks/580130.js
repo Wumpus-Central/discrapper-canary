@@ -69,11 +69,11 @@ function L() {}
 function x() {
     y = !0;
 }
-function M(e) {
+function k(e) {
     let { entitlements: t, excludeEnded: n } = e;
     for (let e of ((O = !0), (y = !1), (v = !n), t)) N(e);
 }
-function k() {
+function M() {
     (O = !1), (y = !1), (v = !1);
 }
 function j(e) {
@@ -218,6 +218,6 @@ let V = new F(l.Z, {
     ENTITLEMENT_DELETE: B,
     LOGOUT: A,
     ENTITLEMENTS_FETCH_FOR_USER_START: x,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: M,
-    ENTITLEMENTS_FETCH_FOR_USER_FAIL: k
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: k,
+    ENTITLEMENTS_FETCH_FOR_USER_FAIL: M
 });

@@ -58,7 +58,7 @@ function x(e) {
     }
     return e;
 }
-function M(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -70,12 +70,12 @@ function M(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : M(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -142,7 +142,7 @@ function U(e) {
                                           return (t) =>
                                               (0, r.jsx)(
                                                   e,
-                                                  k(x({}, t), {
+                                                  M(x({}, t), {
                                                       user: _,
                                                       guildId: a,
                                                       channel: p,
@@ -235,7 +235,7 @@ function G(e) {
         value: void 0,
         children: (0, r.jsx)(
             'div',
-            k(
+            M(
                 x(
                     {
                         className: w.rolePopout,
@@ -285,7 +285,7 @@ function B(e) {
         R = (e) =>
             (0, r.jsxs)(
                 O.Z,
-                k(
+                M(
                     x(
                         {
                             ref: C,

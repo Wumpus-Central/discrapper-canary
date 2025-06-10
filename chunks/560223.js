@@ -44,8 +44,8 @@ let b = (e) => {
                 });
     },
     _ = (e) => {
-        let { className: t, variant: n = g.gM.PERKS_DISCOVERABILITY, noBackground: s = !1, leftAlignHeaders: _ = !1, showAllPerksButton: x, headerClassname: E, isFullScreen: C = !0 } = e,
-            j = r.useRef(null),
+        let { className: t, variant: n = g.gM.PERKS_DISCOVERABILITY, noBackground: s = !1, leftAlignHeaders: _ = !1, showAllPerksButton: x, headerClassname: E, isFullScreen: j = !0 } = e,
+            C = r.useRef(null),
             O = n === g.gM.WHATS_NEW,
             S = (0, u.x)();
         r.useEffect(() => {
@@ -60,7 +60,7 @@ let b = (e) => {
             P = (0, p.ZM)({
                 perksCards: T,
                 variant: n,
-                isFullScreen: C,
+                isFullScreen: j,
                 isPremiumSubscriber: I,
                 fractionalState: N,
                 isInReverseTrial: y,
@@ -68,7 +68,7 @@ let b = (e) => {
             }),
             R = P.some((e) => null != e.pillText);
         return (0, i.jsxs)('div', {
-            ref: j,
+            ref: C,
             className: l()(
                 f.section,
                 {
@@ -105,8 +105,8 @@ let b = (e) => {
                     }),
                 (0, i.jsx)('div', {
                     className: l()({
-                        [f.cardContainer]: C,
-                        [f.cardContainerNarrowWidth]: !C
+                        [f.cardContainer]: j,
+                        [f.cardContainerNarrowWidth]: !j
                     }),
                     children: P.map((e, t) => {
                         var n, r;

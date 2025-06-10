@@ -28,8 +28,8 @@ var i = n(442837),
     C = n(200669);
 function R(e) {
     let { user: t, currentUser: n, displayProfile: R, guild: P, isHovering: w, onOpenProfile: D, channelId: L, onClose: x } = e,
-        M = c.ZP.getName(null == P ? void 0 : P.id, L, t),
-        k = (0, i.e7)([u.Z], () => {
+        k = c.ZP.getName(null == P ? void 0 : P.id, L, t),
+        M = (0, i.e7)([u.Z], () => {
             var e;
             return null == (e = u.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
@@ -43,7 +43,7 @@ function R(e) {
             (0, r.jsx)(E.Z, {
                 user: t,
                 onOpenProfile: D,
-                nickname: M,
+                nickname: k,
                 pronouns: null == R ? void 0 : R.pronouns,
                 tags: (0, r.jsx)(_.Z, {
                     displayProfile: R,
@@ -103,11 +103,11 @@ function R(e) {
                       guildId: null == P ? void 0 : P.id,
                       onClose: x
                   }),
-            (null == k ? void 0 : k.popularApplicationCommandIds) != null &&
+            (null == M ? void 0 : M.popularApplicationCommandIds) != null &&
                 null != j &&
                 (0, r.jsx)(f.Z, {
-                    applicationId: k.id,
-                    commandIds: k.popularApplicationCommandIds,
+                    applicationId: M.id,
+                    commandIds: M.popularApplicationCommandIds,
                     channel: j,
                     guildId: null == P ? void 0 : P.id,
                     onClick: x

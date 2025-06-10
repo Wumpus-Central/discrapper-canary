@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(74538),
     L = n(624138),
     x = n(543241),
-    M = n(883661),
-    k = n(880949),
+    k = n(883661),
+    M = n(880949),
     j = n(784222),
     U = n(172800),
     G = n(149203),
@@ -159,14 +159,14 @@ let Y = 0,
                         let c =
                                 s === G.En.GUILD
                                     ? null != i
-                                        ? (0, r.jsx)(k.Z, {
+                                        ? (0, r.jsx)(M.Z, {
                                               guild: i,
                                               height: $,
                                               width: $
                                           })
                                         : null
                                     : null != a
-                                      ? (0, r.jsx)(M.Z, {
+                                      ? (0, r.jsx)(k.Z, {
                                             categoryId: a,
                                             height: $,
                                             width: $,
@@ -250,7 +250,7 @@ let Y = 0,
         };
     },
     ea = i.memo(function (e) {
-        let { diversitySurrogate: t, emojiGrid: n, emojiListRef: a, emojiSize: o, onEmojiSelect: s, onSelectSoundmoji: l, setUpsellConfigs: d, sectionDescriptors: f, rowCountBySection: _, collapsedSections: y, setCollapsedSections: v, getEmojiItemProps: I, getEmojiRowProps: T, rowCount: N, isUsingKeyboardNavigation: L, channelGuildId: x, channelId: M, messageId: k, isBurstReaction: U, listHeaderClassName: G } = e,
+        let { diversitySurrogate: t, emojiGrid: n, emojiListRef: a, emojiSize: o, onEmojiSelect: s, onSelectSoundmoji: l, setUpsellConfigs: d, sectionDescriptors: f, rowCountBySection: _, collapsedSections: y, setCollapsedSections: v, getEmojiItemProps: I, getEmojiRowProps: T, rowCount: N, isUsingKeyboardNavigation: L, channelGuildId: x, channelId: k, messageId: M, isBurstReaction: U, listHeaderClassName: G } = e,
             F = i.useRef(!1),
             W = E.kJ.useStore((e) => e.activeCategoryIndex),
             K = (0, b.Iu)((e) => e.searchQuery),
@@ -287,8 +287,8 @@ let Y = 0,
                 isUsingKeyboardNavigation: L,
                 allowAnimatedEmoji: z,
                 channelGuildId: x,
-                channelId: M,
-                messageId: k,
+                channelId: k,
+                messageId: M,
                 isBurstReaction: U,
                 listHeaderClassName: G,
                 activeSectionIndex: $,

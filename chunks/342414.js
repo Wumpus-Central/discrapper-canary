@@ -18,8 +18,8 @@ var r = n(120356),
     _ = n(775412),
     x = n(695349),
     E = n(249689),
-    C = n(464670),
-    j = n(520540),
+    j = n(464670),
+    C = n(520540),
     O = n(104494),
     S = n(639119),
     v = n(533525),
@@ -80,7 +80,7 @@ let M = () => {
     },
     U = (e) => {
         let { cohort: t } = e;
-        return t === C.XS.Control
+        return t === j.XS.Control
             ? (0, i.jsx)('div', {
                   className: Z.premiumSubscribeButton,
                   children: (0, i.jsx)(I.Z, {
@@ -91,7 +91,7 @@ let M = () => {
                       isGift: !0
                   })
               })
-            : t === C.XS.Variant1
+            : t === j.XS.Variant1
               ? (0, i.jsx)(M, {})
               : void 0;
     },
@@ -105,8 +105,8 @@ let M = () => {
             b = (0, O.Ng)(),
             _ = (0, O.Wp)(b, P.Si.TIER_2) ? P.Si.TIER_2 : void 0,
             x = null != g && g.status !== R.O0b.ACCOUNT_HOLD && g.hasAnyPremiumNitro,
-            C = (0, m.Z)(),
-            j = (0, E.C)('nitro-home', u) && C.isFractionalPremiumActive && !x;
+            j = (0, m.Z)(),
+            C = (0, E.C)('nitro-home', u) && j.isFractionalPremiumActive && !x;
         return (0, i.jsxs)('div', {
             className: s()(Z.container, r),
             'data-testid': 'subscriber-nitro-home-hero-header',
@@ -129,7 +129,7 @@ let M = () => {
                         (0, i.jsxs)('div', {
                             className: Z.heroHeadingOriginalButtonContainer,
                             children: [
-                                j &&
+                                C &&
                                     (0, i.jsx)(T.Z, {
                                         color: a.Ttl.BRAND,
                                         className: s()(Z.button, Z.subscribeButton),
@@ -145,8 +145,8 @@ let M = () => {
     },
     G = (e) => {
         let { location: t, giftingExperimentCohort: n } = e,
-            { subscriberHomeVariant: r } = j.g.useExperiment({ location: t }, { autoTrackExposure: !1 }),
-            s = r === j.p.VARIANT_2,
+            { subscriberHomeVariant: r } = C.g.useExperiment({ location: t }, { autoTrackExposure: !1 }),
+            s = r === C.p.VARIANT_2,
             { headingText: l, headingTop: o } = z();
         return (0, i.jsxs)(i.Fragment, {
             children: [
@@ -213,20 +213,20 @@ let M = () => {
             l = (0, x.W)(),
             o = (0, _._O)(),
             p = D.intl.string(D.t.qYKftb),
-            h = C.PU.useExperiment({ location: 'HeroHeading' }),
+            h = j.PU.useExperiment({ location: 'HeroHeading' }),
             f = (0, v.b)(n),
             E = (0, i.jsx)(V, {
                 className: t,
                 giftingExperimentCohort: h.cohort
             }),
-            j = D.intl.string(D.t.ifwQZW),
+            C = D.intl.string(D.t.ifwQZW),
             { fractionalState: O, endsAt: S } = (0, m.Z)(),
             T = (0, u.ZP)(S, u.aj.CREDITS_ENDS_IN);
         l
-            ? ((j = D.intl.string(D.t.ifwQZW)), (E = (0, i.jsx)(F, { giftingExperimentCohort: h.cohort })))
+            ? ((C = D.intl.string(D.t.ifwQZW)), (E = (0, i.jsx)(F, { giftingExperimentCohort: h.cohort })))
             : f &&
               ((p = D.intl.string(D.t.qYKftb)),
-              (j = D.intl.string(D.t.ifwQZW)),
+              (C = D.intl.string(D.t.ifwQZW)),
               (E = (0, i.jsx)(G, {
                   location: n,
                   giftingExperimentCohort: h.cohort
@@ -317,7 +317,7 @@ let M = () => {
             value: r,
             children: (0, i.jsx)(H.Provider, {
                 value: {
-                    headingText: j,
+                    headingText: C,
                     headingTop: I
                 },
                 children: E

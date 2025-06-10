@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(981631),
     L = n(921944),
     x = n(474936),
-    M = n(388032),
-    k = n(874577);
+    k = n(388032),
+    M = n(874577);
 function j(e, t, n) {
     return (
         t in e
@@ -97,14 +97,14 @@ function Y(e) {
             name: c.ImpressionNames.CHAT_WALLPAPER_PICKER_COACHMARK
         }),
         (0, r.jsxs)('div', {
-            className: k.coachmarkHeaderContainer,
+            className: M.coachmarkHeaderContainer,
             children: [
                 (0, r.jsxs)('div', {
-                    className: k.badgeAndCloseRow,
+                    className: M.badgeAndCloseRow,
                     children: [
-                        (0, r.jsx)(d.lBU, { text: M.intl.string(M.t.oW0eUV) }),
+                        (0, r.jsx)(d.lBU, { text: k.intl.string(k.t.oW0eUV) }),
                         (0, r.jsx)(d.olH, {
-                            className: k.coachmarkCloseIcon,
+                            className: M.coachmarkCloseIcon,
                             onClick: () => {
                                 I.default.track(D.rMx.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED, { cta_location: 'coachmark_header' }), t();
                             }
@@ -112,17 +112,17 @@ function Y(e) {
                     ]
                 }),
                 (0, r.jsxs)('div', {
-                    className: k.coachmarkHeaderTextContainer,
+                    className: M.coachmarkHeaderTextContainer,
                     children: [
                         (0, r.jsx)(d.X6q, {
                             variant: 'heading-lg/extrabold',
-                            children: M.intl.string(M.t.dFhhcX)
+                            children: k.intl.string(k.t.dFhhcX)
                         }),
                         (0, r.jsx)(d.Text, {
-                            className: k.subtitle,
+                            className: M.subtitle,
                             variant: 'text-xs/medium',
                             color: 'text-muted',
-                            children: M.intl.string(M.t.u7Hzjo)
+                            children: k.intl.string(k.t.u7Hzjo)
                         })
                     ]
                 })
@@ -133,23 +133,23 @@ function Y(e) {
 function W(e) {
     let { isPremiumTier2Subscriber: t, handleClose: n } = e;
     return (0, r.jsxs)('div', {
-        className: k.headerContainer,
+        className: M.headerContainer,
         children: [
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsx)(d.X6q, {
                         variant: 'heading-md/semibold',
-                        children: M.intl.string(M.t.EJ4k19)
+                        children: k.intl.string(k.t.EJ4k19)
                     }),
                     (0, r.jsx)(d.Text, {
-                        className: k.subtitle,
+                        className: M.subtitle,
                         variant: 'text-sm/medium',
-                        children: t ? M.intl.string(M.t.MnUZLS) : M.intl.string(M.t.frNDKS)
+                        children: t ? k.intl.string(k.t.MnUZLS) : k.intl.string(k.t.frNDKS)
                     })
                 ]
             }),
             (0, r.jsx)(d.olH, {
-                className: k.closeContainer,
+                className: M.closeContainer,
                 onClick: () => {
                     I.default.track(D.rMx.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED, { cta_location: 'header' }), n();
                 }
@@ -216,11 +216,11 @@ function K(e) {
             children: (e) =>
                 (0, r.jsx)('div', {
                     ref: m,
-                    className: o()(f, t && k.wallpaperSelected),
+                    className: o()(f, t && M.wallpaperSelected),
                     children: (0, r.jsx)(
                         d.P3F,
                         B(U({}, e, p), {
-                            className: k.wallpaperSelectionClickableContainer,
+                            className: M.wallpaperSelectionClickableContainer,
                             tabIndex: p.tabIndex,
                             onClick: t ? D.dG4 : () => n(a),
                             children: _
@@ -260,16 +260,16 @@ function z(e) {
               selectionId: l,
               tooltipText: s,
               label: s,
-              className: k.wallpaper,
+              className: M.wallpaper,
               children: [
-                  c && (0, r.jsx)(d.$jN, { className: k.previewLoadingSpinner }),
+                  c && (0, r.jsx)(d.$jN, { className: M.previewLoadingSpinner }),
                   (0, r.jsx)('img', {
                       src: (0, m.I)(o.icon),
                       alt: s,
                       width: F,
                       height: F,
                       draggable: !1,
-                      className: k.wallpaperImage
+                      className: M.wallpaperImage
                   })
               ]
           });
@@ -280,9 +280,9 @@ function q(e) {
         isSelected: t,
         onSelect: n,
         selectionId: V,
-        tooltipText: M.intl.string(M.t['C/MRFx']),
-        label: M.intl.string(M.t['C/MRFx']),
-        className: k.wallpaperRemoveSelection,
+        tooltipText: k.intl.string(k.t['C/MRFx']),
+        label: k.intl.string(k.t['C/MRFx']),
+        className: M.wallpaperRemoveSelection,
         children: (0, r.jsx)(d.t6m, {
             size: 'lg',
             color: d.TVs.colors.TEXT_MUTED
@@ -295,7 +295,7 @@ function X(e) {
         direction: 'horizontal',
         justify: 'space-between',
         align: 'center',
-        className: k.footerContainerStack,
+        className: M.footerContainerStack,
         padding: 16,
         children: [
             (0, r.jsx)(d.XZJ, {
@@ -304,7 +304,7 @@ function X(e) {
                 onChange: (e, t) => {
                     I.default.track(D.rMx.CHAT_WALLPAPER_PICKER_BLUR_TOGGLED, { selected: t }), a(t);
                 },
-                children: M.intl.string(M.t['3nPvdH'])
+                children: k.intl.string(k.t['3nPvdH'])
             }),
             (0, r.jsxs)(d.Kqy, {
                 direction: 'horizontal',
@@ -319,13 +319,13 @@ function X(e) {
                             I.default.track(D.rMx.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED, { cta_location: 'footer' }), o();
                         },
                         disabled: n,
-                        children: M.intl.string(M.t['ETE/oK'])
+                        children: k.intl.string(k.t['ETE/oK'])
                     }),
                     (0, r.jsx)(d.zxk, {
                         onClick: s,
                         disabled: !t,
                         submitting: n,
-                        children: M.intl.string(M.t['1Qm829'])
+                        children: k.intl.string(k.t['1Qm829'])
                     })
                 ]
             })
@@ -336,24 +336,24 @@ function Q() {
     return (0, r.jsxs)(d.Kqy, {
         direction: 'horizontal',
         justify: 'space-between',
-        className: k.footerContainerStack,
+        className: M.footerContainerStack,
         padding: 16,
         children: [
             (0, r.jsx)(d.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-muted',
-                className: k.nonTier2FooterText,
-                children: M.intl.format(M.t['0Tapv7'], {
+                className: M.nonTier2FooterText,
+                children: k.intl.format(k.t['0Tapv7'], {
                     onClickNitro: () => {
                         I.default.track(D.rMx.CHAT_WALLPAPER_NITRO_LINK_CLICKED), (0, y.uL)(D.Z5c.NITRO_HOME);
                     }
                 })
             }),
             (0, r.jsx)(E.Z, {
-                className: k.getNitroButton,
+                className: M.getNitroButton,
                 textOptions: {
-                    textOverride: M.intl.string(M.t.JST6jo),
-                    textClassName: k.getNitroButtonText
+                    textOverride: k.intl.string(k.t.JST6jo),
+                    textClassName: M.getNitroButtonText
                 },
                 subscriptionTier: x.Si.TIER_2,
                 showGradient: !0,
@@ -412,7 +412,7 @@ let J = function (e) {
                 channel_type: null == e ? void 0 : e.type
             }),
                 J(c, g.wallpaperId, () => {
-                    (0, d.showToast)((0, d.createToast)(M.intl.string(M.t.F8FvU1), d.ToastType.FAILURE));
+                    (0, d.showToast)((0, d.createToast)(k.intl.string(k.t.F8FvU1), d.ToastType.FAILURE));
                 });
         }, [c, g, J, y]),
         et = i.useCallback(
@@ -463,7 +463,7 @@ let J = function (e) {
         (ea =
             B || ei
                 ? (0, r.jsxs)('div', {
-                      className: k.errorContainer,
+                      className: M.errorContainer,
                       children: [
                           (0, r.jsx)(d.Eep, {
                               src: n(167969),
@@ -474,20 +474,20 @@ let J = function (e) {
                           (0, r.jsx)(d.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-muted',
-                              className: k.errorText,
-                              children: M.intl.string(M.t.F8FvU1)
+                              className: M.errorText,
+                              children: k.intl.string(k.t.F8FvU1)
                           })
                       ]
                   })
                 : G
                   ? (0, r.jsx)('div', {
-                        className: k.loadingContainer,
+                        className: M.loadingContainer,
                         children: (0, r.jsx)(d.$jN, {})
                     })
                   : (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsxs)(d.Ttm, {
-                                className: k.wallpapersContainer,
+                                className: M.wallpapersContainer,
                                 children: [
                                     (0, r.jsx)(q, {
                                         isSelected: null == g || null === g.wallpaperId,
@@ -527,11 +527,11 @@ let J = function (e) {
         (0, r.jsx)(p.Gt, {
             value: l,
             children: (0, r.jsx)(O.Z, {
-                className: o()(k.draggableContainer, t),
+                className: o()(M.draggableContainer, t),
                 defaultPosition: a,
                 topOffset: 88,
                 children: (0, r.jsxs)('div', {
-                    className: k.container,
+                    className: M.container,
                     ref: V,
                     onKeyDown: er,
                     children: [
@@ -544,7 +544,7 @@ let J = function (e) {
                                   handleClose: $,
                                   isPremiumTier2Subscriber: E
                               }),
-                        (0, r.jsx)('div', { className: k.divider }),
+                        (0, r.jsx)('div', { className: M.divider }),
                         (0, r.jsx)(d.JcV, {
                             containerRef: V,
                             children: ea

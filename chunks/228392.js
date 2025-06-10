@@ -2,7 +2,7 @@ n.d(t, {
     B: () => D,
     B5: () => R,
     Do: () => w,
-    GX: () => k,
+    GX: () => M,
     HR: () => V,
     Hr: () => C,
     Je: () => A,
@@ -22,7 +22,7 @@ n.d(t, {
     qs: () => E,
     qz: () => F,
     ws: () => x,
-    xI: () => M,
+    xI: () => k,
     zI: () => y
 }),
     n(781311);
@@ -286,11 +286,11 @@ function x(e) {
     let { forumDemoId: t } = e;
     r.ZP.trackWithMetadata(_.rMx.FORUM_UPSELL_MODAL_CLICKED, { forum_demo_id: t });
 }
-function M(e) {
+function k(e) {
     let { added: t } = e;
     r.ZP.trackWithMetadata(_.rMx.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_CLICKED, { added: t });
 }
-function k(e) {
+function M(e) {
     let { readGuideCta: t } = e;
     r.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_HELPER_CARD_CLICKED, { read_guide_cta: t });
 }

@@ -1,8 +1,8 @@
 a.d(e, {
     U0: () => t6,
-    fA: () => y,
+    fA: () => C,
     gS: () => tQ,
-    qm: () => M,
+    qm: () => W,
     rp: () => w
 });
 var r = a(263449),
@@ -17,8 +17,8 @@ let E = n.n,
     u = 'Report a Bug',
     I = 'Cancel',
     R = 'Send Bug Report',
-    d = 'Confirm',
-    N = 'Report a Bug',
+    N = 'Confirm',
+    d = 'Report a Bug',
     A = 'your.email@example.org',
     f = 'Email',
     T = "What's the bug? What did you expect?",
@@ -29,7 +29,7 @@ let E = n.n,
     D = '(required)',
     g = 'Add a screenshot',
     P = 'Remove screenshot',
-    y = (t, e = { includeReplay: !0 }) => {
+    C = (t, e = { includeReplay: !0 }) => {
         if (!t.message) throw Error('Unable to submit feedback with empty message');
         let a = (0, r.s3)();
         if (!a) throw Error('No client setup, cannot send feedback.');
@@ -49,7 +49,7 @@ let E = n.n,
                 });
         });
     },
-    C = 'undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__;
+    y = 'undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__;
 function m(t, e) {
     return {
         ...t,
@@ -91,12 +91,12 @@ function v(t, e) {
         t
     );
 }
-let S = 'rgba(88, 74, 192, 1)',
-    U = {
+let U = 'rgba(88, 74, 192, 1)',
+    S = {
         foreground: '#2b2233',
         background: '#ffffff',
         accentForeground: 'white',
-        accentBackground: S,
+        accentBackground: U,
         successColor: '#268d75',
         errorColor: '#df3338',
         border: '1.5px solid rgba(41, 35, 47, 0.13)',
@@ -108,7 +108,7 @@ let S = 'rgba(88, 74, 192, 1)',
         foreground: '#ebe6ef',
         background: '#29232f',
         accentForeground: 'white',
-        accentBackground: S,
+        accentBackground: U,
         successColor: '#2da98c',
         errorColor: '#f55459',
         border: '1.5px solid rgba(235, 230, 239, 0.15)',
@@ -136,25 +136,25 @@ let w =
         id: _ = 'sentry-feedback',
         autoInject: n = !0,
         showBranding: o = !0,
-        isEmailRequired: S = !1,
+        isEmailRequired: U = !1,
         isNameRequired: w = !1,
-        showEmail: M = !0,
-        showName: W = !0,
+        showEmail: W = !0,
+        showName: M = !0,
         enableScreenshot: B = !0,
         useSentryUser: Y = {
             email: 'email',
             name: 'username'
         },
-        tags: H,
-        colorScheme: K = 'system',
+        tags: K,
+        colorScheme: H = 'system',
         themeLight: k = {},
         themeDark: x = {},
         addScreenshotButtonLabel: F = g,
         cancelButtonLabel: V = I,
-        confirmButtonLabel: j = d,
+        confirmButtonLabel: j = N,
         emailLabel: X = f,
         emailPlaceholder: $ = A,
-        formTitle: q = N,
+        formTitle: q = d,
         isRequiredLabel: z = D,
         messageLabel: J = p,
         messagePlaceholder: Z = T,
@@ -175,14 +175,14 @@ let w =
                 id: _,
                 autoInject: n,
                 showBranding: o,
-                isEmailRequired: S,
+                isEmailRequired: U,
                 isNameRequired: w,
-                showEmail: M,
-                showName: W,
+                showEmail: W,
+                showName: M,
                 enableScreenshot: B,
                 useSentryUser: Y,
-                tags: H,
-                colorScheme: K,
+                tags: K,
+                colorScheme: H,
                 themeDark: x,
                 themeLight: k,
                 triggerLabel: t_,
@@ -240,7 +240,7 @@ let w =
                 ...e
             }
           : {
-                ...U,
+                ...S,
                 ...a
             }
   )}
@@ -268,23 +268,23 @@ ${
                 }
                 return tu;
             },
-            td = async (e, a, _) => {
+            tN = async (e, a, _) => {
                 let n = (0, r.s3)(),
                     o = n && n.getIntegrationByName(e);
                 if (o) return o;
                 let i = ((a && a()) || (await t(_)))();
                 return n && n.addIntegration(i), i;
             },
-            tN = async (t) => {
+            td = async (t) => {
                 let r = t.enableScreenshot && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(l.userAgent) || (/Macintosh/i.test(l.userAgent) && l.maxTouchPoints && l.maxTouchPoints > 1)) && !!isSecureContext,
-                    [_, n] = await Promise.all([td('FeedbackModal', e, 'feedbackModalIntegration'), r ? td('FeedbackScreenshot', a, 'feedbackScreenshotIntegration') : void 0]);
-                if (!_) throw (C && i.kg.error('[Feedback] Missing feedback modal integration. Try using `feedbackSyncIntegration` in your `Sentry.init`.'), Error('[Feedback] Missing feedback modal integration!'));
+                    [_, n] = await Promise.all([tN('FeedbackModal', e, 'feedbackModalIntegration'), r ? tN('FeedbackScreenshot', a, 'feedbackScreenshotIntegration') : void 0]);
+                if (!_) throw (y && i.kg.error('[Feedback] Missing feedback modal integration. Try using `feedbackSyncIntegration` in your `Sentry.init`.'), Error('[Feedback] Missing feedback modal integration!'));
                 return (
-                    r && !n && C && i.kg.error('[Feedback] Missing feedback screenshot integration. Proceeding without screenshots.'),
+                    r && !n && y && i.kg.error('[Feedback] Missing feedback screenshot integration. Proceeding without screenshots.'),
                     _.createDialog({
                         options: t,
                         screenshotIntegration: r ? n : void 0,
-                        sendFeedback: y,
+                        sendFeedback: C,
                         shadow: tR(t)
                     })
                 );
@@ -292,11 +292,11 @@ ${
             tA = (t, e = {}) => {
                 let a = m(tl, e),
                     r = 'string' == typeof t ? s.querySelector(t) : 'function' == typeof t.addEventListener ? t : null;
-                if (!r) throw (C && i.kg.error('[Feedback] Unable to attach to target element'), Error('Unable to attach to target element'));
+                if (!r) throw (y && i.kg.error('[Feedback] Unable to attach to target element'), Error('Unable to attach to target element'));
                 let _ = null,
                     n = async () => {
                         _ ||
-                            (_ = await tN({
+                            (_ = await td({
                                 ...a,
                                 onFormClose: () => {
                                     _ && _.close(), a.onFormClose && a.onFormClose();
@@ -459,21 +459,21 @@ ${
                 let e = tf(m(tl, t));
                 return e.appendToDom(), e;
             },
-            createForm: async (t = {}) => tN(m(tl, t)),
+            createForm: async (t = {}) => td(m(tl, t)),
             remove() {
                 tu && (tu.parentElement && tu.parentElement.remove(), (tu = null)), tI.forEach((t) => t()), (tI = []);
             }
         };
     };
-function M() {
+function W() {
     let t = (0, r.s3)();
     return t && t.getIntegrationByName('Feedback');
 }
-var W,
+var M,
     B,
     Y,
-    H,
     K,
+    H,
     k,
     x,
     F = {},
@@ -494,7 +494,7 @@ function z(t, e, a) {
         n,
         o = {};
     for (n in e) 'key' == n ? (r = e[n]) : 'ref' == n ? (_ = e[n]) : (o[n] = e[n]);
-    if ((arguments.length > 2 && (o.children = arguments.length > 3 ? W.call(arguments, 2) : a), 'function' == typeof t && null != t.defaultProps)) for (n in t.defaultProps) void 0 === o[n] && (o[n] = t.defaultProps[n]);
+    if ((arguments.length > 2 && (o.children = arguments.length > 3 ? M.call(arguments, 2) : a), 'function' == typeof t && null != t.defaultProps)) for (n in t.defaultProps) void 0 === o[n] && (o[n] = t.defaultProps[n]);
     return J(t, o, r, _, null);
 }
 function J(t, e, a, r, _) {
@@ -528,7 +528,7 @@ function tt(t, e) {
     return 'function' == typeof t.type ? tt(t) : null;
 }
 function te(t) {
-    ((!t.__d && (t.__d = !0) && H.push(t) && !ta.__r++) || K !== B.debounceRendering) && ((K = B.debounceRendering) || k)(ta);
+    ((!t.__d && (t.__d = !0) && K.push(t) && !ta.__r++) || H !== B.debounceRendering) && ((H = B.debounceRendering) || k)(ta);
 }
 function ta() {
     var t,
@@ -536,9 +536,9 @@ function ta() {
         a,
         r = [],
         _ = [];
-    for (H.sort(x); (t = H.shift()); )
+    for (K.sort(x); (t = K.shift()); )
         t.__d &&
-            ((a = H.length),
+            ((a = K.length),
             (e =
                 (function (t, e, a) {
                     var r,
@@ -567,7 +567,7 @@ function ta() {
                             r
                         );
                 })(t, r, _) || e),
-            0 === a || H.length > a ? (tE(r, e, _), (_.length = r.length = 0), (e = void 0), H.sort(x)) : e && B.__c && B.__c(e, V));
+            0 === a || K.length > a ? (tE(r, e, _), (_.length = r.length = 0), (e = void 0), K.sort(x)) : e && B.__c && B.__c(e, V));
     e && tE(r, e, _), (ta.__r = 0);
 }
 function tr(t, e, a, r, _, n, o, i, c, E, s) {
@@ -575,8 +575,8 @@ function tr(t, e, a, r, _, n, o, i, c, E, s) {
         u,
         I,
         R,
-        d,
-        N = (r && r.__k) || V,
+        N,
+        d = (r && r.__k) || V,
         A = e.length;
     for (
         a.__d = c,
@@ -620,7 +620,7 @@ function tr(t, e, a, r, _, n, o, i, c, E, s) {
                           null == n || null === n.__v ? (-1 == i && l--, 'function' != typeof _.type && (_.__u |= 65536)) : i !== o && (i === o + 1 ? l++ : i > o ? (s > c - o ? (l += i - o) : l--) : (l = i < o && i == o - 1 ? i - o : 0), i !== r + l && (_.__u |= 65536)))
                         : (n = a[r]) && null == n.key && n.__e && (n.__e == t.__d && (t.__d = tt(n)), tl(n, n, !1), (a[r] = null), s--);
                 if (s) for (r = 0; r < E; r++) null != (n = a[r]) && 0 == (131072 & n.__u) && (n.__e == t.__d && (t.__d = tt(n)), tl(n, n));
-            })(a, e, N),
+            })(a, e, d),
             c = a.__d,
             l = 0;
         l < A;
@@ -629,12 +629,12 @@ function tr(t, e, a, r, _, n, o, i, c, E, s) {
         null != (I = a.__k[l]) &&
             'boolean' != typeof I &&
             'function' != typeof I &&
-            ((u = -1 === I.__i ? F : N[I.__i] || F),
+            ((u = -1 === I.__i ? F : d[I.__i] || F),
             (I.__i = l),
             tc(t, I, u, _, n, o, i, c, E, s),
             (R = I.__e),
             I.ref && u.ref != I.ref && (u.ref && ts(u.ref, null, I), s.push(I.ref, I.__c || R, I)),
-            null == d && null != R && (d = R),
+            null == N && null != R && (N = R),
             65536 & I.__u || u.__k === I.__k
                 ? (c = (function t(e, a, r) {
                       var _, n;
@@ -652,7 +652,7 @@ function tr(t, e, a, r, _, n, o, i, c, E, s) {
                   : R && (c = R.nextSibling),
             (I.__d = void 0),
             (I.__u &= -196609));
-    (a.__d = c), (a.__e = d);
+    (a.__d = c), (a.__e = N);
 }
 function t_(t, e, a) {
     '-' === e[0] ? t.setProperty(e, null == a ? '' : a) : (t[e] = null == a ? '' : 'number' != typeof a || j.test(e) ? a : a + 'px');
@@ -694,8 +694,8 @@ function tc(t, e, a, r, _, n, o, i, c, E) {
         u,
         I,
         R,
-        d,
         N,
+        d,
         A,
         f,
         T,
@@ -709,7 +709,7 @@ function tc(t, e, a, r, _, n, o, i, c, E) {
     128 & a.__u && ((c = !!(32 & a.__u)), (n = [(i = e.__e = a.__e)])), (s = B.__b) && s(e);
     e: if ('function' == typeof g)
         try {
-            if (((A = e.props), (f = (s = g.contextType) && r[s.__c]), (T = s ? (f ? f.props.value : s.__) : r), a.__c ? (N = (l = e.__c = a.__c).__ = l.__E) : ('prototype' in g && g.prototype.render ? (e.__c = l = new g(A, T)) : ((e.__c = l = new Q(A, T)), (l.constructor = g), (l.render = tu)), f && f.sub(l), (l.props = A), l.state || (l.state = {}), (l.context = T), (l.__n = r), (u = l.__d = !0), (l.__h = []), (l._sb = [])), null == l.__s && (l.__s = l.state), null != g.getDerivedStateFromProps && (l.__s == l.state && (l.__s = $({}, l.__s)), $(l.__s, g.getDerivedStateFromProps(A, l.__s))), (I = l.props), (R = l.state), (l.__v = e), u)) null == g.getDerivedStateFromProps && null != l.componentWillMount && l.componentWillMount(), null != l.componentDidMount && l.__h.push(l.componentDidMount);
+            if (((A = e.props), (f = (s = g.contextType) && r[s.__c]), (T = s ? (f ? f.props.value : s.__) : r), a.__c ? (d = (l = e.__c = a.__c).__ = l.__E) : ('prototype' in g && g.prototype.render ? (e.__c = l = new g(A, T)) : ((e.__c = l = new Q(A, T)), (l.constructor = g), (l.render = tu)), f && f.sub(l), (l.props = A), l.state || (l.state = {}), (l.context = T), (l.__n = r), (u = l.__d = !0), (l.__h = []), (l._sb = [])), null == l.__s && (l.__s = l.state), null != g.getDerivedStateFromProps && (l.__s == l.state && (l.__s = $({}, l.__s)), $(l.__s, g.getDerivedStateFromProps(A, l.__s))), (I = l.props), (R = l.state), (l.__v = e), u)) null == g.getDerivedStateFromProps && null != l.componentWillMount && l.componentWillMount(), null != l.componentDidMount && l.__h.push(l.componentDidMount);
             else {
                 if ((null == g.getDerivedStateFromProps && A !== I && null != l.componentWillReceiveProps && l.componentWillReceiveProps(A, T), !l.__e && ((null != l.shouldComponentUpdate && !1 === l.shouldComponentUpdate(A, l.__s, T)) || e.__v === a.__v))) {
                     for (
@@ -730,7 +730,7 @@ function tc(t, e, a, r, _, n, o, i, c, E) {
                 null != l.componentWillUpdate && l.componentWillUpdate(A, l.__s, T),
                     null != l.componentDidUpdate &&
                         l.__h.push(function () {
-                            l.componentDidUpdate(I, R, d);
+                            l.componentDidUpdate(I, R, N);
                         });
             }
             if (((l.context = T), (l.props = A), (l.__P = t), (l.__e = !1), (L = B.__r), (h = 0), 'prototype' in g && g.prototype.render)) {
@@ -739,7 +739,7 @@ function tc(t, e, a, r, _, n, o, i, c, E) {
             } else
                 do (l.__d = !1), L && L(e), (s = l.render(l.props, l.state, l.context)), (l.state = l.__s);
                 while (l.__d && ++h < 25);
-            (l.state = l.__s), null != l.getChildContext && (r = $($({}, r), l.getChildContext())), u || null == l.getSnapshotBeforeUpdate || (d = l.getSnapshotBeforeUpdate(I, R)), tr(t, X((D = null != s && s.type === Z && null == s.key ? s.props.children : s)) ? D : [D], e, a, r, _, n, o, i, c, E), (l.base = e.__e), (e.__u &= -161), l.__h.length && o.push(l), N && (l.__E = l.__ = null);
+            (l.state = l.__s), null != l.getChildContext && (r = $($({}, r), l.getChildContext())), u || null == l.getSnapshotBeforeUpdate || (N = l.getSnapshotBeforeUpdate(I, R)), tr(t, X((D = null != s && s.type === Z && null == s.key ? s.props.children : s)) ? D : [D], e, a, r, _, n, o, i, c, E), (l.base = e.__e), (e.__u &= -161), l.__h.length && o.push(l), d && (l.__E = l.__ = null);
         } catch (t) {
             (e.__v = null), c || null != n ? ((e.__e = i), (e.__u |= c ? 160 : 32), (n[n.indexOf(i)] = null)) : ((e.__e = a.__e), (e.__k = a.__k)), B.__e(t, e, a);
         }
@@ -753,8 +753,8 @@ function tc(t, e, a, r, _, n, o, i, c, E) {
                       u,
                       I,
                       R,
-                      d,
-                      N = a.props,
+                      N,
+                      d = a.props,
                       A = e.props,
                       f = e.type;
                   if (('svg' === f && (_ = !0), null != n)) {
@@ -768,14 +768,14 @@ function tc(t, e, a, r, _, n, o, i, c, E) {
                       if (null === f) return document.createTextNode(A);
                       (t = _ ? document.createElementNS('http://www.w3.org/2000/svg', f) : document.createElement(f, A.is && A)), (n = null), (i = !1);
                   }
-                  if (null === f) N === A || (i && t.data === A) || (t.data = A);
+                  if (null === f) d === A || (i && t.data === A) || (t.data = A);
                   else {
-                      if (((n = n && W.call(t.childNodes)), (N = a.props || F), !i && null != n)) for (N = {}, E = 0; E < t.attributes.length; E++) N[(I = t.attributes[E]).name] = I.value;
-                      for (E in N) (I = N[E]), 'children' == E || ('dangerouslySetInnerHTML' == E ? (l = I) : 'key' === E || E in A || tn(t, E, null, I, _));
-                      for (E in A) (I = A[E]), 'children' == E ? (u = I) : 'dangerouslySetInnerHTML' == E ? (s = I) : 'value' == E ? (R = I) : 'checked' == E ? (d = I) : 'key' === E || (i && 'function' != typeof I) || N[E] === I || tn(t, E, I, N[E], _);
+                      if (((n = n && M.call(t.childNodes)), (d = a.props || F), !i && null != n)) for (d = {}, E = 0; E < t.attributes.length; E++) d[(I = t.attributes[E]).name] = I.value;
+                      for (E in d) (I = d[E]), 'children' == E || ('dangerouslySetInnerHTML' == E ? (l = I) : 'key' === E || E in A || tn(t, E, null, I, _));
+                      for (E in A) (I = A[E]), 'children' == E ? (u = I) : 'dangerouslySetInnerHTML' == E ? (s = I) : 'value' == E ? (R = I) : 'checked' == E ? (N = I) : 'key' === E || (i && 'function' != typeof I) || d[E] === I || tn(t, E, I, d[E], _);
                       if (s) i || (l && (s.__html === l.__html || s.__html === t.innerHTML)) || (t.innerHTML = s.__html), (e.__k = []);
                       else if ((l && (t.innerHTML = ''), tr(t, X(u) ? u : [u], e, a, r, _ && 'foreignObject' !== f, n, o, n ? n[0] : a.__k && tt(a, 0), i, c), null != n)) for (E = n.length; E--; ) null != n[E] && q(n[E]);
-                      i || ((E = 'value'), void 0 === R || (R === t[E] && ('progress' !== f || R) && ('option' !== f || R === N[E])) || tn(t, E, R, N[E], !1), (E = 'checked'), void 0 !== d && d !== t[E] && tn(t, E, d, N[E], !1));
+                      i || ((E = 'value'), void 0 === R || (R === t[E] && ('progress' !== f || R) && ('option' !== f || R === d[E])) || tn(t, E, R, d[E], !1), (E = 'checked'), void 0 !== N && N !== t[E] && tn(t, E, N, d[E], !1));
                   }
                   return t;
               })(a.__e, e, a, r, _, n, o, c, E));
@@ -820,7 +820,7 @@ function tl(t, e, a) {
 function tu(t, e, a) {
     return this.constructor(t, a);
 }
-(W = V.slice),
+(M = V.slice),
     (B = {
         __e: function (t, e, a, r) {
             for (var _, n, o; (e = e.__); )
@@ -842,7 +842,7 @@ function tu(t, e, a) {
         this.__v && ((this.__e = !0), t && this.__h.push(t), te(this));
     }),
     (Q.prototype.render = Z),
-    (H = []),
+    (K = []),
     (k = 'function' == typeof Promise ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout),
     (x = function (t, e) {
         return t.__v.__b - e.__v.__b;
@@ -850,8 +850,8 @@ function tu(t, e, a) {
     (ta.__r = 0);
 var tI,
     tR,
-    td,
     tN,
+    td,
     tA = 0,
     tf = [],
     tT = [],
@@ -862,7 +862,7 @@ var tI,
     tD = tp.__c,
     tg = tp.unmount,
     tP = tp.__;
-function ty(t, e) {
+function tC(t, e) {
     tp.__h && tp.__h(tR, t, tA || e), (tA = 0);
     var a =
         tR.__H ||
@@ -872,11 +872,11 @@ function ty(t, e) {
         });
     return t >= a.__.length && a.__.push({ __V: tT }), a.__[t];
 }
-function tC(t) {
+function ty(t) {
     return (tA = 1), tm(tB, t);
 }
 function tm(t, e, a) {
-    var r = ty(tI++, 2);
+    var r = tC(tI++, 2);
     if (
         ((r.t = t),
         !r.__c &&
@@ -928,17 +928,17 @@ function tm(t, e, a) {
     return r.__N || r.__;
 }
 function tv(t, e) {
-    var a = ty(tI++, 4);
-    !tp.__s && tW(a.__H, e) && ((a.__ = t), (a.i = e), tR.__h.push(a));
-}
-function tS(t, e) {
-    var a = ty(tI++, 7);
-    return tW(a.__H, e) ? ((a.__V = t()), (a.i = e), (a.__h = t), a.__V) : a.__;
+    var a = tC(tI++, 4);
+    !tp.__s && tM(a.__H, e) && ((a.__ = t), (a.i = e), tR.__h.push(a));
 }
 function tU(t, e) {
+    var a = tC(tI++, 7);
+    return tM(a.__H, e) ? ((a.__V = t()), (a.i = e), (a.__h = t), a.__V) : a.__;
+}
+function tS(t, e) {
     return (
         (tA = 8),
-        tS(function () {
+        tU(function () {
             return t;
         }, e)
     );
@@ -947,7 +947,7 @@ function tG() {
     for (var t; (t = tf.shift()); )
         if (t.__P && t.__H)
             try {
-                t.__H.__h.forEach(tw), t.__H.__h.forEach(tM), (t.__H.__h = []);
+                t.__H.__h.forEach(tw), t.__H.__h.forEach(tW), (t.__H.__h = []);
             } catch (e) {
                 (t.__H.__h = []), tp.__e(e, t.__v);
             }
@@ -962,14 +962,14 @@ function tG() {
         th && th(t), (tI = 0);
         var e = (tR = t.__c).__H;
         e &&
-            (td === tR
+            (tN === tR
                 ? ((e.__h = []),
                   (tR.__h = []),
                   e.__.forEach(function (t) {
                       t.__N && (t.__ = t.__N), (t.__V = tT), (t.__N = t.i = void 0);
                   }))
-                : (e.__h.forEach(tw), e.__h.forEach(tM), (e.__h = []), (tI = 0))),
-            (td = tR);
+                : (e.__h.forEach(tw), e.__h.forEach(tW), (e.__h = []), (tI = 0))),
+            (tN = tR);
     }),
     (tp.diffed = function (t) {
         tO && tO(t);
@@ -977,9 +977,9 @@ function tG() {
         e &&
             e.__H &&
             (e.__H.__h.length &&
-                ((1 !== tf.push(e) && tN === tp.requestAnimationFrame) ||
+                ((1 !== tf.push(e) && td === tp.requestAnimationFrame) ||
                     (
-                        (tN = tp.requestAnimationFrame) ||
+                        (td = tp.requestAnimationFrame) ||
                         function (t) {
                             var e,
                                 a = function () {
@@ -992,14 +992,14 @@ function tG() {
             e.__H.__.forEach(function (t) {
                 t.i && (t.__H = t.i), t.__V !== tT && (t.__ = t.__V), (t.i = void 0), (t.__V = tT);
             })),
-            (td = tR = null);
+            (tN = tR = null);
     }),
     (tp.__c = function (t, e) {
         e.some(function (t) {
             try {
                 t.__h.forEach(tw),
                     (t.__h = t.__h.filter(function (t) {
-                        return !t.__ || tM(t);
+                        return !t.__ || tW(t);
                     }));
             } catch (a) {
                 e.some(function (t) {
@@ -1033,11 +1033,11 @@ function tw(t) {
         a = t.__c;
     'function' == typeof a && ((t.__c = void 0), a()), (tR = e);
 }
-function tM(t) {
+function tW(t) {
     var e = tR;
     (t.__c = t.__()), (tR = e);
 }
-function tW(t, e) {
+function tM(t, e) {
     return (
         !t ||
         t.length !== e.length ||
@@ -1051,22 +1051,22 @@ function tB(t, e) {
 }
 let tY = {
         __proto__: null,
-        useCallback: tU,
+        useCallback: tS,
         useContext: function (t) {
             var e = tR.context[t.__c],
-                a = ty(tI++, 9);
+                a = tC(tI++, 9);
             return (a.c = t), e ? (null == a.__ && ((a.__ = !0), e.sub(tR)), e.props.value) : t.__;
         },
         useDebugValue: function (t, e) {
             tp.useDebugValue && tp.useDebugValue(e ? e(t) : t);
         },
         useEffect: function (t, e) {
-            var a = ty(tI++, 3);
-            !tp.__s && tW(a.__H, e) && ((a.__ = t), (a.i = e), tR.__H.__h.push(a));
+            var a = tC(tI++, 3);
+            !tp.__s && tM(a.__H, e) && ((a.__ = t), (a.i = e), tR.__H.__h.push(a));
         },
         useErrorBoundary: function (t) {
-            var e = ty(tI++, 10),
-                a = tC();
+            var e = tC(tI++, 10),
+                a = ty();
             return (
                 (e.__ = t),
                 tR.componentDidCatch ||
@@ -1082,7 +1082,7 @@ let tY = {
             );
         },
         useId: function () {
-            var t = ty(tI++, 11);
+            var t = tC(tI++, 11);
             if (!t.__) {
                 for (var e = tR.__v; null !== e && !e.__m && null !== e.__; ) e = e.__;
                 var a = e.__m || (e.__m = [0, 0]);
@@ -1110,21 +1110,21 @@ let tY = {
                 );
         },
         useLayoutEffect: tv,
-        useMemo: tS,
+        useMemo: tU,
         useReducer: tm,
         useRef: function (t) {
             return (
                 (tA = 5),
-                tS(function () {
+                tU(function () {
                     return { current: t };
                 }, [])
             );
         },
-        useState: tC
+        useState: ty
     },
-    tH = '/home/runner/work/sentry-javascript/sentry-javascript/packages/feedback/src/modal/components/DialogHeader.tsx';
-function tK({ options: t }) {
-    let e = tS(
+    tK = '/home/runner/work/sentry-javascript/sentry-javascript/packages/feedback/src/modal/components/DialogHeader.tsx';
+function tH({ options: t }) {
+    let e = tU(
         () => ({
             __html: (function () {
                 let t = (t) => s.createElementNS('http://www.w3.org/2000/svg', t),
@@ -1149,7 +1149,7 @@ function tK({ options: t }) {
             class: 'dialog__header',
             __self: this,
             __source: {
-                fileName: tH,
+                fileName: tK,
                 lineNumber: 16
             }
         },
@@ -1164,7 +1164,7 @@ function tK({ options: t }) {
                   dangerouslySetInnerHTML: e,
                   __self: this,
                   __source: {
-                      fileName: tH,
+                      fileName: tK,
                       lineNumber: 19
                   }
               })
@@ -1177,21 +1177,21 @@ function tx(t, e) {
     return 'string' == typeof a ? a.trim() : '';
 }
 function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSubmit: _, onSubmitSuccess: n, onSubmitError: o, showEmail: c, showName: E, screenshotInput: s }) {
-    let { tags: l, addScreenshotButtonLabel: u, removeScreenshotButtonLabel: I, cancelButtonLabel: R, emailLabel: d, emailPlaceholder: N, isEmailRequired: A, isNameRequired: f, messageLabel: T, messagePlaceholder: p, nameLabel: L, namePlaceholder: h, submitButtonLabel: O, isRequiredLabel: D } = t,
-        [g, P] = tC(null),
-        [y, m] = tC(!1),
+    let { tags: l, addScreenshotButtonLabel: u, removeScreenshotButtonLabel: I, cancelButtonLabel: R, emailLabel: N, emailPlaceholder: d, isEmailRequired: A, isNameRequired: f, messageLabel: T, messagePlaceholder: p, nameLabel: L, namePlaceholder: h, submitButtonLabel: O, isRequiredLabel: D } = t,
+        [g, P] = ty(null),
+        [C, m] = ty(!1),
         v = s && s.input,
-        [S, U] = tC(null),
-        G = tU((t) => {
-            U(t), m(!1);
+        [U, S] = ty(null),
+        G = tS((t) => {
+            S(t), m(!1);
         }, []),
-        b = tU(
+        b = tS(
             (t) => {
                 let e = (function (t, e) {
                     let a = [];
                     return e.isNameRequired && !t.name && a.push(e.nameLabel), e.isEmailRequired && !t.email && a.push(e.emailLabel), t.message || a.push(e.messageLabel), a;
                 })(t, {
-                    emailLabel: d,
+                    emailLabel: N,
                     isEmailRequired: A,
                     isNameRequired: f,
                     messageLabel: T,
@@ -1199,18 +1199,18 @@ function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                 });
                 return e.length > 0 ? P(`Please enter in the following required fields: ${e.join(', ')}`) : P(null), 0 === e.length;
             },
-            [d, A, f, T, L]
+            [N, A, f, T, L]
         );
     return z(
         'form',
         {
             class: 'form',
-            onSubmit: tU(
+            onSubmit: tS(
                 async (t) => {
                     try {
                         if ((t.preventDefault(), !(t.target instanceof HTMLFormElement))) return;
                         let e = new FormData(t.target),
-                            a = await (s && y ? s.value() : void 0),
+                            a = await (s && C ? s.value() : void 0),
                             r = {
                                 name: tx(e, 'name'),
                                 email: tx(e, 'email'),
@@ -1231,11 +1231,11 @@ function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                             ),
                                 n(r);
                         } catch (t) {
-                            C && i.kg.error(t), P(t), o(t);
+                            y && i.kg.error(t), P(t), o(t);
                         }
                     } catch (t) {}
                 },
-                [s && y, n, o]
+                [s && C, n, o]
             ),
             __self: this,
             __source: {
@@ -1243,7 +1243,7 @@ function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                 lineNumber: 144
             }
         },
-        v && y
+        v && C
             ? z(v, {
                   onError: G,
                   __self: this,
@@ -1349,7 +1349,7 @@ function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                               }
                           },
                           z(tV, {
-                              label: d,
+                              label: N,
                               isRequiredLabel: D,
                               isRequired: A,
                               __self: this,
@@ -1363,7 +1363,7 @@ function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                               defaultValue: e,
                               id: 'email',
                               name: 'email',
-                              placeholder: N,
+                              placeholder: d,
                               required: A,
                               type: 'email',
                               __self: this,
@@ -1438,7 +1438,7 @@ function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                                   class: 'btn btn--default',
                                   type: 'button',
                                   onClick: () => {
-                                      U(null), m((t) => !t);
+                                      S(null), m((t) => !t);
                                   },
                                   __self: this,
                                   __source: {
@@ -1446,9 +1446,9 @@ function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                                       lineNumber: 202
                                   }
                               },
-                              y ? I : u
+                              C ? I : u
                           ),
-                          S
+                          U
                               ? z(
                                     'div',
                                     {
@@ -1459,7 +1459,7 @@ function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                                             lineNumber: 212
                                         }
                                     },
-                                    S.message
+                                    U.message
                                 )
                               : null
                       )
@@ -1536,7 +1536,7 @@ function tV({ label: t, isRequired: e, isRequiredLabel: a }) {
 let tj = '/home/runner/work/sentry-javascript/sentry-javascript/packages/feedback/src/modal/components/Dialog.tsx';
 function tX({ open: t, onFormSubmitted: e, ...a }) {
     let r = a.options,
-        _ = tS(
+        _ = tU(
             () => ({
                 __html: (function () {
                     let t = (t) => E.document.createElementNS('http://www.w3.org/2000/svg', t),
@@ -1567,11 +1567,11 @@ function tX({ open: t, onFormSubmitted: e, ...a }) {
             }),
             []
         ),
-        [n, o] = tC(null),
-        i = tU(() => {
+        [n, o] = ty(null),
+        i = tS(() => {
             n && (clearTimeout(n), o(null)), e();
         }, [n]),
-        c = tU(
+        c = tS(
             (t) => {
                 a.onSubmitSuccess(t),
                     o(
@@ -1660,7 +1660,7 @@ function tX({ open: t, onFormSubmitted: e, ...a }) {
                                   lineNumber: 59
                               }
                           },
-                          z(tK, {
+                          z(tH, {
                               options: r,
                               __self: this,
                               __source: {
@@ -2035,7 +2035,7 @@ ${tZ}
                         (c = (_ && _.__k) || i.__k),
                         (E = []),
                         (s = []),
-                        tc(i, (r = (_ || i).__k = z(Z, null, [r])), c || F, F, void 0 !== i.ownerSVGElement, _ ? [_] : c ? null : i.firstChild ? W.call(i.childNodes) : null, E, _ ? _ : c ? c.__e : i.firstChild, !1, s),
+                        tc(i, (r = (_ || i).__k = z(Z, null, [r])), c || F, F, void 0 !== i.ownerSVGElement, _ ? [_] : c ? null : i.firstChild ? M.call(i.childNodes) : null, E, _ ? _ : c ? c.__e : i.firstChild, !1, s),
                         (r.__d = void 0),
                         tE(E, r, s);
                 };
@@ -2217,13 +2217,13 @@ ${tZ}
                             l = e.useRef(null),
                             u = e.useRef(null),
                             I = e.useRef(null),
-                            [R, d] = e.useState({
+                            [R, N] = e.useState({
                                 startX: 0,
                                 startY: 0,
                                 endX: 0,
                                 endY: 0
                             }),
-                            [N, A] = e.useState(!1),
+                            [d, A] = e.useState(!1),
                             [f, T] = e.useState(!1);
                         function p() {
                             let t = I.current,
@@ -2235,7 +2235,7 @@ ${tZ}
                             }
                             let r = u.current;
                             r && ((r.style.width = `${e.width}px`), (r.style.height = `${e.height}px`)),
-                                d({
+                                N({
                                     startX: 0,
                                     startY: 0,
                                     endX: e.width,
@@ -2272,28 +2272,28 @@ ${tZ}
                                             n = e.clientY - r.y;
                                         switch (t) {
                                             case 'top-left':
-                                                d((t) => ({
+                                                N((t) => ({
                                                     ...t,
                                                     startX: Math.min(Math.max(0, _), t.endX - 33),
                                                     startY: Math.min(Math.max(0, n), t.endY - 33)
                                                 }));
                                                 break;
                                             case 'top-right':
-                                                d((t) => ({
+                                                N((t) => ({
                                                     ...t,
                                                     endX: Math.max(Math.min(_, a.width / t1), t.startX + 33),
                                                     startY: Math.min(Math.max(0, n), t.endY - 33)
                                                 }));
                                                 break;
                                             case 'bottom-left':
-                                                d((t) => ({
+                                                N((t) => ({
                                                     ...t,
                                                     startX: Math.min(Math.max(0, _), t.endX - 33),
                                                     endY: Math.max(Math.min(n, a.height / t1), t.startY + 33)
                                                 }));
                                                 break;
                                             case 'bottom-right':
-                                                d((t) => ({
+                                                N((t) => ({
                                                     ...t,
                                                     endX: Math.max(Math.min(_, a.width / t1), t.startX + 33),
                                                     endY: Math.max(Math.min(n, a.height / t1), t.startY + 33)
@@ -2384,7 +2384,7 @@ ${tZ}
                                                         if (!e) return;
                                                         let a = t.clientX - O.current.initialX,
                                                             r = t.clientY - O.current.initialY;
-                                                        d((_) => {
+                                                        N((_) => {
                                                             let n = Math.max(0, Math.min(_.startX + a, e.width / t1 - (_.endX - _.startX))),
                                                                 o = Math.max(0, Math.min(_.startY + r, e.height / t1 - (_.endY - _.startY))),
                                                                 i = n + (_.endX - _.startX),
@@ -2408,7 +2408,7 @@ ${tZ}
                                             },
                                             style: {
                                                 position: 'absolute',
-                                                cursor: N ? 'move' : 'auto'
+                                                cursor: d ? 'move' : 'auto'
                                             },
                                             ref: I,
                                             __self: this,
@@ -2467,7 +2467,7 @@ ${tZ}
                                                 style: {
                                                     left: Math.max(0, R.endX - 191),
                                                     top: Math.max(0, R.endY + 8),
-                                                    display: N ? 'flex' : 'none'
+                                                    display: d ? 'flex' : 'none'
                                                 },
                                                 class: 'editor__crop-btn-group',
                                                 __self: this,
@@ -2482,7 +2482,7 @@ ${tZ}
                                                     onClick: (t) => {
                                                         t.preventDefault(),
                                                             I.current &&
-                                                                d({
+                                                                N({
                                                                     startX: 0,
                                                                     startY: 0,
                                                                     endX: I.current.width / t1,

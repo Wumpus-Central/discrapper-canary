@@ -105,7 +105,7 @@ function x(e) {
     let { user: t, currentUser: n, displayProfile: a, guildId: p, onOpenUserProfileModal: A, onClose: C } = e,
         { analyticsLocations: R } = (0, d.ZP)(),
         { trackUserProfileAction: x } = (0, h.KZ)(),
-        { live: M, stream: k } = (0, m.Z)(t.id),
+        { live: k, stream: M } = (0, m.Z)(t.id),
         { voiceChannel: j, voiceActivity: U } = (0, g.Z)({
             userId: t.id,
             guildId: p
@@ -116,7 +116,7 @@ function x(e) {
             return e === I.Sk.OFFLINE || e === I.Sk.INVISIBLE;
         }),
         { voiceActivityStatusEnabled: F } = (0, u.U)({ location: 'UserProfileStackedActivity' }),
-        V = F && null == k && null == U && null != j,
+        V = F && null == M && null == U && null != j,
         Z = (0, E.yi)(),
         H = (null == Z ? void 0 : Z.interactionSource) === v.n_.ACTIVITY,
         Y = i.useRef(null),
@@ -134,14 +134,14 @@ function x(e) {
             className: S.card,
             onClose: C
         };
-    null != k &&
+    null != M &&
         et.push(
             (0, r.jsx)(
                 y.Z,
                 N(
                     {
                         location: 'UserProfileStackedActivity',
-                        stream: k,
+                        stream: M,
                         profileGuildId: null == a ? void 0 : a.guildId
                     },
                     en
@@ -149,7 +149,7 @@ function x(e) {
                 'stream'
             )
         ),
-        M.forEach((e, t) => {
+        k.forEach((e, t) => {
             et.push(
                 (0, r.jsx)(
                     b.Z,

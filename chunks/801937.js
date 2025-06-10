@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => k }), n(388685), n(539854);
+n.d(t, { ZP: () => M }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -129,7 +129,7 @@ function x(e) {
         }
     );
 }
-class M extends i.PureComponent {
+class k extends i.PureComponent {
     componentDidMount() {
         var e;
         (0, c.GE)(),
@@ -275,8 +275,8 @@ class M extends i.PureComponent {
             });
     }
 }
-let k = s.ZP.connectStores([m.Z], () => ({
+let M = s.ZP.connectStores([m.Z], () => ({
     ipCountryCode: m.Z.ipCountryCode,
     ipCountryCodeHasError: m.Z.ipCountryCodeHasError,
     localizedPromo: m.Z.localizedPricingPromo
-}))(M);
+}))(k);

@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
-    Jc: () => k,
-    dx: () => M,
+    Jc: () => M,
+    dx: () => k,
     tE: () => G
 });
 var i,
@@ -333,7 +333,7 @@ function L() {
     null == e || R(e, D) ? null != w && cancelAnimationFrame(w) : ((D = e), null == r || r.invalidate()), (w = requestAnimationFrame(L));
 }
 let x = !1,
-    M = {
+    k = {
         get ringsEnabled() {
             return x;
         },
@@ -347,7 +347,7 @@ let x = !1,
             (P = !1), null != w && cancelAnimationFrame(w);
         }
     };
-function k(e) {
+function M(e) {
     let { containerRef: t, children: n, themeOptions: r } = e,
         i = a.useRef(new A());
     return (
@@ -373,7 +373,7 @@ function j() {
             ),
             [e]
         ),
-        M.ringsEnabled && e.visible
+        k.ringsEnabled && e.visible
             ? (0, o.jsx)('div', {
                   className: d('focus-rings-ring', e.className),
                   style: e.getStyle()

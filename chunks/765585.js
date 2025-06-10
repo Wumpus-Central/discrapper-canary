@@ -12,7 +12,7 @@ var i = n(255367),
     g = n(388032),
     p = n(418952);
 let h = r.forwardRef(function (e, t) {
-    let { body: n, header: s, artClassName: h, headerClassName: f, contentClassName: b, tryItText: _, dismissText: x, onTryFeature: E, onClose: C, className: j, inlineArt: O = !1, isPremiumFeature: S = !1, shouldUseHorizontalButtons: v = !1, showGIFTag: T = !1, dismissibleContent: I, position: N = 'top', align: y = 'center', art: A, isPremiumEarlyAccess: P = !1, maxWidth: R = 280, hideDismissButton: D = !1, pointerClassName: Z, dismissIconClassName: w, dismissIcon: k, onDismissIconClick: L, tryItButtonColor: B } = e,
+    let { body: n, header: s, artClassName: h, headerClassName: f, contentClassName: b, tryItText: _, dismissText: x, onTryFeature: E, onClose: j, className: C, inlineArt: O = !1, isPremiumFeature: S = !1, shouldUseHorizontalButtons: v = !1, showGIFTag: T = !1, dismissibleContent: I, position: N = 'top', align: y = 'center', art: A, isPremiumEarlyAccess: P = !1, maxWidth: R = 280, hideDismissButton: D = !1, pointerClassName: Z, dismissIconClassName: w, dismissIcon: k, onDismissIconClick: L, tryItButtonColor: B } = e,
         M = v ? a.zxk.Sizes.LARGE : a.zxk.Sizes.MAX,
         [U, V] = r.useState(!1),
         { ref: G, width: F } = (0, o.ZP)();
@@ -30,7 +30,7 @@ let h = r.forwardRef(function (e, t) {
             (0, d.kk)(I);
         }, [I]),
         (0, i.jsx)('div', {
-            className: j,
+            className: C,
             ref: t,
             children: (0, i.jsxs)('div', {
                 className: l()(p.content, b, {
@@ -106,7 +106,7 @@ let h = r.forwardRef(function (e, t) {
                                               className: p.button,
                                               size: M,
                                               onClick: (e) => {
-                                                  null == C || C(e), E(e), H(m.L.PRIMARY);
+                                                  null == j || j(e), E(e), H(m.L.PRIMARY);
                                               },
                                               color: null != B ? B : S || P ? a.zxk.Colors.BRAND_INVERTED : a.zxk.Colors.WHITE,
                                               children: null != _ ? _ : g.intl.string(g.t.IHf1RE)
@@ -116,7 +116,7 @@ let h = r.forwardRef(function (e, t) {
                                                   className: p.button,
                                                   size: M,
                                                   onClick: (e) => {
-                                                      null == C || C(e), H(m.L.DISMISS);
+                                                      null == j || j(e), H(m.L.DISMISS);
                                                   },
                                                   color: S || P ? a.zxk.Colors.WHITE : a.zxk.Colors.BRAND,
                                                   look: S || P ? a.zxk.Looks.LINK : a.zxk.Looks.FILLED,
@@ -128,7 +128,7 @@ let h = r.forwardRef(function (e, t) {
                                       className: p.button,
                                       size: a.zxk.Sizes.MAX,
                                       onClick: (e) => {
-                                          null == C || C(e), H(m.L.PRIMARY);
+                                          null == j || j(e), H(m.L.PRIMARY);
                                       },
                                       color: a.zxk.Colors.WHITE,
                                       children: g.intl.string(g.t.HU2IR0)

@@ -1,6 +1,6 @@
 n.d(t, {
-    G: () => eS,
-    Z: () => eZ
+    G: () => eO,
+    Z: () => eT
 }),
     n(997841),
     n(953529),
@@ -126,8 +126,22 @@ let eu = (0, O.hQ)(),
         id: '1',
         type: ee.d4z.DM
     }),
-    eN = 'AUTOMATIC_RTC_REGION',
-    eS = d.ZP.connectStores([W.Z], () => {
+    eN = {
+        popoutLocation: {
+            page: ee.ZY5.CHANNEL_SETTINGS,
+            section: ee.jXE.CHANNEL_DEFAULT_REACTION,
+            object: ee.qAy.EMOJI_PICKER_BUTTON
+        }
+    },
+    eS = {
+        popoutLocation: {
+            page: ee.ZY5.CHANNEL_SETTINGS,
+            section: ee.jXE.CHANNEL_NAME,
+            object: ee.qAy.EMOJI_PICKER_BUTTON
+        }
+    },
+    eE = 'AUTOMATIC_RTC_REGION',
+    eO = d.ZP.connectStores([W.Z], () => {
         let { channel: e, submitting: t } = W.Z.getProps();
         return {
             channel: e,
@@ -165,19 +179,12 @@ let eu = (0, O.hQ)(),
             }
         };
     })(j.Z);
-function eE(e) {
+function eZ(e) {
     let { onEmojiPicked: t, channel: n, guildId: r } = e,
         s = l.useRef(null),
         a = l.useCallback(
             (e) => {
-                let { closePopout: l } = e,
-                    s = {
-                        popoutLocation: {
-                            page: ee.ZY5.CHANNEL_SETTINGS,
-                            section: ee.jXE.CHANNEL_NAME,
-                            object: ee.qAy.EMOJI_PICKER_BUTTON
-                        }
-                    };
+                let { closePopout: l } = e;
                 return (0, i.jsx)(w.Z, {
                     channel: n,
                     guildId: r,
@@ -189,7 +196,7 @@ function eE(e) {
                         null != n && n.type === T.B.UNICODE && t(n.surrogates), i && l();
                     },
                     showOnlyUnicode: !0,
-                    analyticsOverride: s
+                    analyticsOverride: eS
                 });
             },
             [n, r, t]
@@ -222,7 +229,7 @@ function eE(e) {
         }
     });
 }
-class eO extends l.PureComponent {
+class ew extends l.PureComponent {
     componentDidMount() {
         null == this.props.regions && null != this.props.guild && p.Z.fetchRegions(this.props.guild.id);
     }
@@ -736,7 +743,7 @@ class eO extends l.PureComponent {
                                           inputClassName: es.nameInputInnerWithEmojiPicker,
                                           focusProps: { offset: { right: -30 } }
                                       }),
-                                      (0, i.jsx)(eE, {
+                                      (0, i.jsx)(eZ, {
                                           onEmojiPicked: this.insertEmojiAtPosition,
                                           channel: e,
                                           guildId: null == e ? void 0 : e.guild_id
@@ -929,9 +936,9 @@ class eO extends l.PureComponent {
                     value: e.id
                 }))).unshift({
                 label: er.intl.string(er.t.JEmsam),
-                value: eN
+                value: eE
             });
-        let a = null != (t = e.rtcRegion) ? t : eN;
+        let a = null != (t = e.rtcRegion) ? t : eE;
         return (0, i.jsxs)(E.Z, {
             direction: E.Z.Direction.VERTICAL,
             children: [
@@ -993,14 +1000,7 @@ class eO extends l.PureComponent {
             eo(this, 'cursorPosition', 0),
             eo(this, 'renderEmojiPicker', (e) => {
                 let { closePopout: t } = e,
-                    { channel: n } = this.props,
-                    l = {
-                        popoutLocation: {
-                            page: ee.ZY5.CHANNEL_SETTINGS,
-                            section: ee.jXE.CHANNEL_DEFAULT_REACTION,
-                            object: ee.qAy.EMOJI_PICKER_BUTTON
-                        }
-                    };
+                    { channel: n } = this.props;
                 return (0, i.jsx)(w.Z, {
                     guildId: null == n ? void 0 : n.guild_id,
                     closePopout: t,
@@ -1010,7 +1010,7 @@ class eO extends l.PureComponent {
                     },
                     pickerIntention: en.Hz.COMMUNITY_CONTENT,
                     channel: n,
-                    analyticsOverride: l
+                    analyticsOverride: eN
                 });
             }),
             eo(this, 'handleRequireTagChanged', (e) => {
@@ -1122,7 +1122,7 @@ class eO extends l.PureComponent {
                 (0, m.pW)({ defaultAutoArchiveDuration: e });
             }),
             eo(this, 'handleRegionChange', (e) => {
-                (0, m.pW)({ rtcRegion: e === eN ? null : e });
+                (0, m.pW)({ rtcRegion: e === eE ? null : e });
             }),
             eo(this, 'handleVideoQualityModeChange', (e) => {
                 (0, m.pW)({ videoQualityMode: e });
@@ -1154,7 +1154,7 @@ class eO extends l.PureComponent {
         };
     }
 }
-function eZ() {
+function eT() {
     let { errors: e, channel: t, submitting: n, subsection: r } = (0, d.cj)([W.Z], () => W.Z.getProps()),
         s = (0, d.e7)([H.Z], () => {
             var e;
@@ -1187,7 +1187,7 @@ function eZ() {
             },
             [j, f]
         );
-    return (0, i.jsx)(eO, {
+    return (0, i.jsx)(ew, {
         errors: e,
         channel: t,
         channelName: m,

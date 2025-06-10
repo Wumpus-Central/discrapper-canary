@@ -1,6 +1,6 @@
 a.d(e, {
     R: () => I,
-    U0: () => d
+    U0: () => N
 });
 var r = a(394798),
     _ = a(101284),
@@ -12,7 +12,7 @@ var r = a(394798),
     s = a(574054),
     l = a(307854),
     u = a(396234);
-function I(t, e, a, I, d, N) {
+function I(t, e, a, I, N, d) {
     var A, f;
     let { normalizeDepth: T = 3, normalizeMaxBreadth: p = 1000 } = t,
         L = {
@@ -31,7 +31,7 @@ function I(t, e, a, I, d, N) {
     })(L, t),
         (A = L),
         (f = h).length > 0 && ((A.sdk = A.sdk || {}), (A.sdk.integrations = [...(A.sdk.integrations || []), ...f])),
-        d && d.emit('applyFrameMetadata', e),
+        N && N.emit('applyFrameMetadata', e),
         void 0 === e.type &&
             (function (t, e) {
                 let a,
@@ -66,10 +66,10 @@ function I(t, e, a, I, d, N) {
         return a.update(e), a;
     })(I, a.captureContext);
     a.mechanism && (0, r.EG)(L, a.mechanism);
-    let D = d ? d.getEventProcessors() : [],
+    let D = N ? N.getEventProcessors() : [],
         g = (0, E.lW)().getScopeData();
-    if (N) {
-        let t = N.getScopeData();
+    if (d) {
+        let t = d.getScopeData();
         (0, u.yo)(g, t);
     }
     if (O) {
@@ -78,8 +78,8 @@ function I(t, e, a, I, d, N) {
     }
     let P = [...(a.attachments || []), ...g.attachments];
     P.length && (a.attachments = P), (0, u.gi)(L, g);
-    let y = [...D, ...g.eventProcessors];
-    return (0, s.R)(y, L, a).then((t) =>
+    let C = [...D, ...g.eventProcessors];
+    return (0, s.R)(C, L, a).then((t) =>
         (t &&
             (function (t) {
                 let e = {};
@@ -130,10 +130,10 @@ function I(t, e, a, I, d, N) {
     );
 }
 let R = new WeakMap();
-function d(t) {
+function N(t) {
     if (t) {
         var e;
-        return (e = t) instanceof l.s || 'function' == typeof e || Object.keys(t).some((t) => N.includes(t)) ? { captureContext: t } : t;
+        return (e = t) instanceof l.s || 'function' == typeof e || Object.keys(t).some((t) => d.includes(t)) ? { captureContext: t } : t;
     }
 }
-let N = ['user', 'level', 'extra', 'contexts', 'tags', 'fingerprint', 'requestSession', 'propagationContext'];
+let d = ['user', 'level', 'extra', 'contexts', 'tags', 'fingerprint', 'requestSession', 'propagationContext'];

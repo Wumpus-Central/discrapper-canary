@@ -39,8 +39,8 @@ var r = n(255367),
     D = n(944486),
     L = n(914010),
     x = n(594174),
-    M = n(626135),
-    k = n(768581),
+    k = n(626135),
+    M = n(768581),
     j = n(900849),
     U = n(74538),
     G = n(886132),
@@ -152,7 +152,7 @@ let X = 32,
         let { expressionSourceGuild: t, hasJoinedExpressionSourceGuild: n, isDisplayingJoinGuildButtonInPopout: i } = e,
             { id: a, icon: s, name: l } = t,
             c = X,
-            d = k.ZP.getGuildIconURL({
+            d = M.ZP.getGuildIconURL({
                 id: a,
                 icon: s,
                 size: c,
@@ -299,14 +299,14 @@ let X = 32,
     },
     en = (e) => {
         var t, n, a;
-        let { node: c, sourceType: g, expressionSourceApplication: y, expressionSourceGuild: I, joinedEmojiSourceGuildRecord: T, closePopout: C, onToggleShowMoreEmojis: w, guildEmoji: D, demoMode: k = !1, nonce: j } = e,
+        let { node: c, sourceType: g, expressionSourceApplication: y, expressionSourceGuild: I, joinedEmojiSourceGuildRecord: T, closePopout: C, onToggleShowMoreEmojis: w, guildEmoji: D, demoMode: M = !1, nonce: j } = e,
             W = (0, l.e7)([x.default], () => x.default.getCurrentUser()),
             K = (0, l.e7)([L.Z], () => L.Z.getGuildId()),
             z = U.ZP.isPremium(W),
             q = null != K && (K === (null == I ? void 0 : I.id) || K === (null == T ? void 0 : T.id)),
             X = null != T,
             Q = null != (t = null == I ? void 0 : I.isDiscoverable()) && t;
-        k && ((z = !0), (Q = !0), (X = !1), (q = !1));
+        M && ((z = !0), (Q = !0), (X = !1), (q = !1));
         let $ = J(),
             {
                 isRoleSubscriptionEmoji: et,
@@ -355,7 +355,7 @@ let X = 32,
                 shouldHideRoleSubscriptionCTA: ea,
                 onOpenPremiumSettings: () => {
                     C(),
-                        M.default.track(F.rMx.PREMIUM_PROMOTION_OPENED, {
+                        k.default.track(F.rMx.PREMIUM_PROMOTION_OPENED, {
                             location_page: $.page,
                             location_section: $.section
                         }),
@@ -370,13 +370,13 @@ let X = 32,
                 popoutData: el,
                 emojiSourceGuildId: null == I ? void 0 : I.id,
                 nonce: j,
-                demoMode: k
+                demoMode: M
             }),
             ef = el.type === G.$.JOIN_GUILD,
             e_ = el.type === G.$.GET_PREMIUM,
             ep = () => {
                 let e = async () => {
-                        if (k || null == I || X) return;
+                        if (M || null == I || X) return;
                         C();
                         let e = I.id;
                         try {
@@ -456,7 +456,7 @@ let X = 32,
                 var e, t;
                 let n = null != I && !X && Q && (null != (t = null == I || null == (e = I.emojis) ? void 0 : e.length) ? t : 0) > 1,
                     i = () => {
-                        n && (null == w || w(), eh || k || M.default.track(F.rMx.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ed), em(!eh));
+                        n && (null == w || w(), eh || M || k.default.track(F.rMx.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ed), em(!eh));
                     },
                     a = () => {
                         let e = H.intl.string(H.t.pnsAS0);

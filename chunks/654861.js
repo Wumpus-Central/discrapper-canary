@@ -27,7 +27,7 @@ var r = (function (e) {
     function p(e) {
         h(e);
         var n = e.length;
-        if (n < 4 && 0 > M(e, a))
+        if (n < 4 && 0 > k(e, a))
             switch (n) {
                 case 0:
                     return 0;
@@ -98,7 +98,7 @@ var r = (function (e) {
     }
     function v(e, t, n) {
         var r;
-        return (M(e, t) >= 0 ? (r = O(e, t)) : ((r = O(t, e)), (n = !n)), 'number' == typeof (r = p(r))) ? (n && (r = -r), new u(r)) : new c(r, n);
+        return (k(e, t) >= 0 ? (r = O(e, t)) : ((r = O(t, e)), (n = !n)), 'number' == typeof (r = p(r))) ? (n && (r = -r), new u(r)) : new c(r, n);
     }
     function I(e, n, r) {
         var i,
@@ -203,13 +203,13 @@ var r = (function (e) {
     }
     function D(e, n) {
         for (var r, i, a, o, s, l = e.length, c = n.length, u = [], d = [], f = t; l; ) {
-            if ((d.unshift(e[--l]), h(d), 0 > M(d, n))) {
+            if ((d.unshift(e[--l]), h(d), 0 > k(d, n))) {
                 u.push(0);
                 continue;
             }
             (i = d.length), (a = d[i - 1] * f + d[i - 2]), (o = n[c - 1] * f + n[c - 2]), i > c && (a = (a + 1) * f), (r = Math.ceil(a / o));
             do {
-                if (0 >= M((s = S(n, r)), d)) break;
+                if (0 >= k((s = S(n, r)), d)) break;
                 r--;
             } while (r);
             u.push(r), (d = O(d, s));
@@ -247,7 +247,7 @@ var r = (function (e) {
             }
             f = _(h);
         }
-        var E = M(o, f);
+        var E = k(o, f);
         if (-1 === E) return [l[0], e];
         if (0 === E) return [l[e.sign === a.sign ? 1 : -1], l[0]];
         r = (i = o.length + f.length <= 200 ? w(o, f) : D(o, f))[0];
@@ -256,12 +256,12 @@ var r = (function (e) {
             O = e.sign;
         return 'number' == typeof r ? (b && (r = -r), (r = new u(r))) : (r = new c(r, b)), 'number' == typeof y ? (O && (y = -y), (y = new u(y))) : (y = new c(y, O)), [r, y];
     }
-    function M(e, t) {
+    function k(e, t) {
         if (e.length !== t.length) return e.length > t.length ? 1 : -1;
         for (var n = e.length - 1; n >= 0; n--) if (e[n] !== t[n]) return e[n] > t[n] ? 1 : -1;
         return 0;
     }
-    function k(e) {
+    function M(e) {
         var t = e.abs();
         return !t.isUnit() && (!!(t.equals(2) || t.equals(3) || t.equals(5)) || (!(t.isEven() || t.isDivisibleBy(3) || t.isDivisibleBy(5)) && (!!t.lesser(49) || void 0)));
     }
@@ -453,7 +453,7 @@ var r = (function (e) {
             var t = ea(e),
                 n = this.value,
                 r = t.value;
-            return t.isSmall ? 1 : M(n, r);
+            return t.isSmall ? 1 : k(n, r);
         }),
         (u.prototype.compareAbs = function (e) {
             var t = ea(e),
@@ -472,7 +472,7 @@ var r = (function (e) {
             var t = ea(e),
                 n = this.value,
                 r = t.value;
-            return this.sign !== t.sign ? (t.sign ? 1 : -1) : t.isSmall ? (this.sign ? -1 : 1) : M(n, r) * (this.sign ? -1 : 1);
+            return this.sign !== t.sign ? (t.sign ? 1 : -1) : t.isSmall ? (this.sign ? -1 : 1) : k(n, r) * (this.sign ? -1 : 1);
         }),
         (c.prototype.compareTo = c.prototype.compare),
         (u.prototype.compare = function (e) {
@@ -572,7 +572,7 @@ var r = (function (e) {
         }),
         (d.prototype.isDivisibleBy = u.prototype.isDivisibleBy = c.prototype.isDivisibleBy),
         (c.prototype.isPrime = function (e) {
-            var t = k(this);
+            var t = M(this);
             if (void 0 !== t) return t;
             var n = this.abs(),
                 i = n.bitLength();
@@ -582,7 +582,7 @@ var r = (function (e) {
         }),
         (d.prototype.isPrime = u.prototype.isPrime = c.prototype.isPrime),
         (c.prototype.isProbablePrime = function (t, n) {
-            var i = k(this);
+            var i = M(this);
             if (void 0 !== i) return i;
             for (var a = this.abs(), o = e === t ? 5 : t, s = [], l = 0; l < o; l++) s.push(r.randBetween(2, a.minus(2), n));
             return j(a, s);

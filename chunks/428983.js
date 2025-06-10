@@ -15,15 +15,15 @@ let u = [2500, 4000],
             let a,
                 l = (0, o.Y)(),
                 R = (0, i.I)('LCP'),
-                d = (t) => {
+                N = (t) => {
                     let e = t[t.length - 1];
                     e && e.startTime < l.firstHiddenTime && ((R.value = Math.max(e.startTime - (0, n.A)(), 0)), (R.entries = [e]), a());
                 },
-                N = (0, c.N)('largest-contentful-paint', d);
-            if (N) {
+                d = (0, c.N)('largest-contentful-paint', N);
+            if (d) {
                 a = (0, _._)(t, R, u, e.reportAllChanges);
                 let n = (0, s.R)(() => {
-                    I[R.id] || (d(N.takeRecords()), N.disconnect(), (I[R.id] = !0), a(!0));
+                    I[R.id] || (N(d.takeRecords()), d.disconnect(), (I[R.id] = !0), a(!0));
                 });
                 ['keydown', 'click'].forEach((t) => {
                     r.m.document && addEventListener(t, () => setTimeout(n, 0), !0);

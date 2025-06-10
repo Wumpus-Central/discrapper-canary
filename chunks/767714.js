@@ -85,7 +85,7 @@ function y(e, t) {
     return i;
 }
 let O = function (e) {
-    var { subscriptionTier: t, onClick: n, size: i, className: h, textOptions: g, iconClassName: y, postSuccessGuild: O, onSubscribeModalClose: v, premiumModalAnalyticsLocation: I, showIcon: T = !0, disableShine: S, applicationId: A, giftMessage: N, shinyButtonClassName: C, showGradient: R = !1, confirmationFooter: P, paymentModalBanner: w, isGift: D, color: L, iconColor: x = 'currentColor', useExpressiveButton: M, giftIconClassName: k } = e,
+    var { subscriptionTier: t, onClick: n, size: i, className: h, textOptions: g, iconClassName: y, postSuccessGuild: O, onSubscribeModalClose: v, premiumModalAnalyticsLocation: I, showIcon: T = !0, disableShine: S, applicationId: A, giftMessage: N, shinyButtonClassName: C, showGradient: R = !1, confirmationFooter: P, paymentModalBanner: w, isGift: D, color: L, iconColor: x = 'currentColor', useExpressiveButton: k, giftIconClassName: M } = e,
         j = b(e, ['subscriptionTier', 'onClick', 'size', 'className', 'textOptions', 'iconClassName', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'showIcon', 'disableShine', 'applicationId', 'giftMessage', 'shinyButtonClassName', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'isGift', 'color', 'iconColor', 'useExpressiveButton', 'giftIconClassName']);
     let U = (0, o.e7)([c.Z], () => c.Z.isFocused()),
         G = (0, d.Z)({
@@ -105,7 +105,7 @@ let O = function (e) {
             isGift: D,
             giftMessage: N
         };
-    if (M && (null == g ? void 0 : g.expressiveButtonText) != null)
+    if (k && (null == g ? void 0 : g.expressiveButtonText) != null)
         return (0, r.jsx)(
             u.Z,
             E(m({}, B), {
@@ -148,7 +148,7 @@ let O = function (e) {
                                         (0, r.jsx)(l.OgN, {
                                             size: 'md',
                                             color: 'currentColor',
-                                            className: a()(p.giftIcon, k)
+                                            className: a()(p.giftIcon, M)
                                         }),
                                     (0, r.jsx)('span', {
                                         className: a()(p.buttonText, null == g ? void 0 : g.textClassName),

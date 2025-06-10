@@ -1,9 +1,9 @@
 n.d(t, {
     EK: () => G,
-    Io: () => k,
+    Io: () => M,
     NY: () => j,
     Ox: () => L,
-    Vq: () => M,
+    Vq: () => k,
     Wf: () => U,
     cB: () => x,
     dy: () => w,
@@ -173,7 +173,7 @@ function x(e) {
     }
     return d;
 }
-function M(e) {
+function k(e) {
     let { id: t, guildId: n } = e,
         o = (0, i.e7)([g.Z], () => (null != n ? g.Z.getRole(n, t) : void 0)),
         s = (0, i.e7)([l.Z], () => l.Z.roleStyle),
@@ -201,7 +201,7 @@ function M(e) {
         ]
     });
 }
-function k(e) {
+function M(e) {
     let { id: t } = e,
         n = (0, i.e7)([m.Z], () => m.Z.getChannel(t)),
         a = T.intl.string(T.t.zLZPmp).toLowerCase(),

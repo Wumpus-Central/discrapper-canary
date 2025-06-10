@@ -287,11 +287,11 @@
         },
         x = t.createContext(null);
     x.displayName = 'ElementsContext';
-    var M = function (e, t) {
+    var k = function (e, t) {
             if (!e) throw Error('Could not find Elements context; You need to wrap the part of your app that '.concat(t, ' in an <Elements> provider.'));
             return e;
         },
-        k = function (e) {
+        M = function (e) {
             var n = e.stripe,
                 r = e.options,
                 i = e.children,
@@ -365,12 +365,12 @@
                 t.createElement(x.Provider, { value: s }, i)
             );
         };
-    k.propTypes = {
+    M.propTypes = {
         stripe: O.any,
         options: O.object
     };
     var j = function (e) {
-            return M(t.useContext(x), e);
+            return k(t.useContext(x), e);
         },
         U = function () {
             return j('calls useElements()').elements;
@@ -507,7 +507,7 @@
             var n = t.useContext(F),
                 r = t.useContext(x);
             if (n && r) throw Error('You cannot wrap the part of your app that '.concat(e, ' in both <CustomCheckoutProvider> and <Elements> providers.'));
-            return n ? V(n, e) : M(r, e);
+            return n ? V(n, e) : k(r, e);
         },
         q = function () {
             K('calls useCustomCheckout()');
@@ -782,5 +782,5 @@
         eI = Q('paymentMethodMessaging', J),
         eT = Q('affirmMessage', J),
         eS = Q('afterpayClearpayMessage', J);
-    (e.AddressElement = eO), (e.AffirmMessageElement = eT), (e.AfterpayClearpayMessageElement = eS), (e.AuBankAccountElement = es), (e.CardCvcElement = ed), (e.CardElement = el), (e.CardExpiryElement = eu), (e.CardNumberElement = ec), (e.CustomCheckoutProvider = W), (e.Elements = k), (e.ElementsConsumer = G), (e.EmbeddedCheckout = ea), (e.EmbeddedCheckoutProvider = en), (e.EpsBankElement = em), (e.ExpressCheckoutElement = eE), (e.FpxBankElement = ef), (e.IbanElement = e_), (e.IdealBankElement = ep), (e.LinkAuthenticationElement = ey), (e.P24BankElement = eh), (e.PaymentElement = eg), (e.PaymentMethodMessagingElement = eI), (e.PaymentRequestButtonElement = eb), (e.ShippingAddressElement = ev), (e.useCustomCheckout = q), (e.useElements = U), (e.useStripe = eo);
+    (e.AddressElement = eO), (e.AffirmMessageElement = eT), (e.AfterpayClearpayMessageElement = eS), (e.AuBankAccountElement = es), (e.CardCvcElement = ed), (e.CardElement = el), (e.CardExpiryElement = eu), (e.CardNumberElement = ec), (e.CustomCheckoutProvider = W), (e.Elements = M), (e.ElementsConsumer = G), (e.EmbeddedCheckout = ea), (e.EmbeddedCheckoutProvider = en), (e.EpsBankElement = em), (e.ExpressCheckoutElement = eE), (e.FpxBankElement = ef), (e.IbanElement = e_), (e.IdealBankElement = ep), (e.LinkAuthenticationElement = ey), (e.P24BankElement = eh), (e.PaymentElement = eg), (e.PaymentMethodMessagingElement = eI), (e.PaymentRequestButtonElement = eb), (e.ShippingAddressElement = ev), (e.useCustomCheckout = q), (e.useElements = U), (e.useStripe = eo);
 });

@@ -3,7 +3,7 @@ n.r(t),
         AnalyticEventConfigs: () => j,
         AnalyticsContext: () => T,
         AnalyticsSchema: () => d,
-        addExtraAnalyticsDecorator: () => k,
+        addExtraAnalyticsDecorator: () => M,
         clearAnalyticsEventsRecording: () => Q,
         debugLogEvent: () => Y,
         default: () => er,
@@ -116,9 +116,9 @@ let I = { location: {} },
     D = 86400000,
     L = 0.001,
     x = performance.now(),
-    M = [];
-function k(e) {
-    M.push(e);
+    k = [];
+function M(e) {
+    k.push(e);
 }
 let j = {
     [p.rMx.APP_OPENED]: {
@@ -382,7 +382,7 @@ function H(e) {
     let o = f.Z.getProcessUptime();
     null != o && (a.uptime_process_renderer = Math.floor(o));
     let { utmSource: s, utmMedium: l, utmCampaign: c, utmContent: u } = S;
-    return (a.utm_source = null != (t = a.utm_source) ? t : s), (a.utm_medium = null != (n = a.utm_medium) ? n : l), (a.utm_campaign = null != (r = a.utm_campaign) ? r : c), (a.utm_content = null != (i = a.utm_content) ? i : u), M.forEach((e) => e(a)), a;
+    return (a.utm_source = null != (t = a.utm_source) ? t : s), (a.utm_medium = null != (n = a.utm_medium) ? n : l), (a.utm_campaign = null != (r = a.utm_campaign) ? r : c), (a.utm_content = null != (i = a.utm_content) ? i : u), k.forEach((e) => e(a)), a;
 }
 function Y(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];

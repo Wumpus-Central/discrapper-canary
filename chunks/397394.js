@@ -1,9 +1,9 @@
 n.d(t, {
-    Jh: () => M,
+    Jh: () => k,
     Lk: () => j,
     Xg: () => U,
     ZP: () => L,
-    _Z: () => k,
+    _Z: () => M,
     c7: () => x,
     j3: () => G
 }),
@@ -135,7 +135,7 @@ function L(e) {
 function x(e) {
     return (0, r.jsx)(L, P(C({}, e), { headerClassName: A.headerSuccess }));
 }
-function M(e) {
+function k(e) {
     var { guild: t, application: n } = e,
         a = w(e, ['guild', 'application']);
     let o = S.intl.string(S.t.se5gLi);
@@ -173,7 +173,7 @@ function M(e) {
         )
     });
 }
-function k(e) {
+function M(e) {
     var { guild: t, application: n } = e;
     let { onClose: a } = w(e, ['guild', 'application']),
         o = i.useCallback(() => {
@@ -245,7 +245,7 @@ function U() {
     var e, t;
     let n = (0, l.TH)();
     return (0, r.jsx)(I.G, {
-        children: (0, r.jsx)(M, {
+        children: (0, r.jsx)(k, {
             guild: null == (e = n.state) ? void 0 : e.guild,
             application: null == (t = n.state) ? void 0 : t.application,
             showsCloseWindowText: !0

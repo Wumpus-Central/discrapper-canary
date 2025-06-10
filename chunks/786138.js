@@ -81,7 +81,7 @@ function b(e) {
                   action: D
               })
             : null,
-        M =
+        k =
             S && !y
                 ? (0, r.jsx)(o.sNh, {
                       id: 'change-windows',
@@ -90,7 +90,7 @@ function b(e) {
                       action: w
                   })
                 : null,
-        k = (0, r.jsx)(o.sNh, {
+        M = (0, r.jsx)(o.sNh, {
             id: 'stop-streaming',
             label: E.intl.string(E.t.S5anIS),
             icon: o.g5r,
@@ -98,9 +98,9 @@ function b(e) {
         });
     return O
         ? (0, r.jsxs)(r.Fragment, {
-              children: [k, M, L, x]
+              children: [M, k, L, x]
           })
         : (0, r.jsxs)(r.Fragment, {
-              children: [L, b ? R : null, x, M, k]
+              children: [L, b ? R : null, x, k, M]
           });
 }

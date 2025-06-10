@@ -11,7 +11,7 @@ let d = (e) => {
     var t;
     let { title: n, titleClassName: r, buttonClassName: d, perkImage: u, isCarousel: m, onCtaClick: g, perkComponent: p, subtitle: h = '', descriptionCta: f = '', cardVariant: b, subtitleClassName: _, imageOverlayText: x } = e,
         E = (0, a._)(b),
-        C = null != x;
+        j = null != x;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', { className: s()(c.cover, c.below) }),
@@ -30,9 +30,9 @@ let d = (e) => {
                         (0, i.jsx)('img', {
                             src: u,
                             alt: '',
-                            className: m ? (C ? c.carouselCardImageGrayscale : c.carouselCardImage) : ''
+                            className: m ? (j ? c.carouselCardImageGrayscale : c.carouselCardImage) : ''
                         }),
-                        C
+                        j
                             ? (0, i.jsx)('div', {
                                   className: c.imageOverlayTextContainer,
                                   children: (0, i.jsx)(l.Text, {

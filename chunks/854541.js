@@ -1,8 +1,8 @@
 n.d(t, {
     AG: () => D,
-    Z$: () => M,
+    Z$: () => k,
     jH: () => L,
-    zH: () => k
+    zH: () => M
 }),
     n(388685);
 var r = n(255367),
@@ -230,7 +230,7 @@ function x(e) {
         });
     }, [A, L]),
         i.useEffect(() => s, [s]);
-    let M = (e) => {
+    let k = (e) => {
             let t = '#' === e[0] ? e : '#'.concat(e);
             if (!(0, c.FX)(t)) return void x((e) => T(v({}, e), { input: t }));
             let n = (0, c._i)(t),
@@ -245,11 +245,11 @@ function x(e) {
             }),
                 a(n);
         },
-        k = async () => {
+        M = async () => {
             if (null != S)
                 try {
                     let { sRGBHex: e } = await S.open();
-                    M(e);
+                    k(e);
                 } catch (e) {}
         },
         j = i.useCallback(
@@ -287,7 +287,7 @@ function x(e) {
                         E &&
                             null != S &&
                             (0, r.jsx)(g.JO, {
-                                onClick: k,
+                                onClick: M,
                                 tooltip: b.intl.string(b.t['0dU9Nz']),
                                 tooltipPosition: 'top',
                                 className: y.customColorPickerEyeDropper,
@@ -296,7 +296,7 @@ function x(e) {
                         (0, r.jsx)(_.o, {
                             className: y.customColorPickerInput,
                             value: L.input,
-                            onChange: M,
+                            onChange: k,
                             maxLength: C
                         })
                     ]
@@ -312,7 +312,7 @@ function x(e) {
                                     'aria-label': '',
                                     style: { backgroundColor: e },
                                     className: y.suggestedColor,
-                                    onClick: () => M(e)
+                                    onClick: () => k(e)
                                 },
                                 ''.concat(e, '-').concat(t)
                             )
@@ -328,8 +328,8 @@ function x(e) {
         children: G
     });
 }
-let M = i.memo(x);
-function k(e) {
+let k = i.memo(x);
+function M(e) {
     let { className: t, defaultColor: n, customColor: i, colors: a, value: c, secondaryValue: u, disabled: d, onChange: f, renderDefaultButton: _, renderCustomButton: p, colorContainerClassName: h, isGradient: m, renderGradientCustomButton: g } = e,
         E = (e) =>
             (0, r.jsx)('div', {

@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => k,
+    Z: () => M,
     u: () => L
 }),
     n(388685);
@@ -105,20 +105,20 @@ let R = 20,
             ]
         });
     };
-function M(e, t) {
+function k(e, t) {
     return {
         '--custom-emoji-sprite-size': ''.concat(t ? w : P, 'px'),
         '--custom-emoji-sprite-row': Math.floor(e / R),
         '--custom-emoji-sprite-col': e % R
     };
 }
-let k = function (e) {
-    let { tabIndex: t, className: n, renderButtonContents: a, active: S, onClick: N, 'aria-controls': R, focusProps: P, shouldShowSoundmojiCoachmark: w = !1, ref: k } = e,
+let M = function (e) {
+    let { tabIndex: t, className: n, renderButtonContents: a, active: S, onClick: N, 'aria-controls': R, focusProps: P, shouldShowSoundmojiCoachmark: w = !1, ref: M } = e,
         [j, U] = i.useState(!1),
         [G, B] = i.useState(50),
         F = j || S,
         V = (0, b.l)(T, 'emojiButton', F ? 'Hovered' : 'Normal'),
-        Z = M(G, (0, f.Q3)('EmojiButton')),
+        Z = k(G, (0, f.Q3)('EmojiButton')),
         H = i.useCallback(() => {
             if (F) return;
             let e = Math.floor(Math.random() * D);
@@ -139,7 +139,7 @@ let k = function (e) {
         [ei, ea] = (0, _.US)(w && er ? [c.z.SOUNDMOJI_COACHMARK] : []),
         eo = !$ && ei === c.z.SOUNDMOJI_COACHMARK && !et,
         es = i.useRef(null),
-        el = null != k ? k : es;
+        el = null != M ? M : es;
     return (0, r.jsx)(u.yRy, {
         targetElementRef: el,
         renderPopout: () => (0, r.jsx)(g.Z, { markAsDismissed: ea }),

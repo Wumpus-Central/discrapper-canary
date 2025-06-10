@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(539854), n(388685), n(997841);
+n.d(t, { Z: () => M }), n(539854), n(388685), n(997841);
 var r,
     i = n(348327),
     a = n.n(i),
@@ -132,7 +132,7 @@ function L() {
 function x() {
     L(), C();
 }
-class M extends (r = l.ZP.Store) {
+class k extends (r = l.ZP.Store) {
     initialize() {
         this.waitFor(_.ZP, u.ZP, b.Z, E.Z, h.Z, g.Z, y.Z), this.syncWith([p.Z], () => C());
     }
@@ -159,8 +159,8 @@ class M extends (r = l.ZP.Store) {
         return null;
     }
 }
-v(M, 'displayName', 'LocalActivityStore');
-let k = new M(c.Z, {
+v(k, 'displayName', 'LocalActivityStore');
+let M = new k(c.Z, {
     OVERLAY_INITIALIZE: D,
     START_SESSION: R,
     LOCAL_ACTIVITY_UPDATE: P,

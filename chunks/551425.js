@@ -97,7 +97,7 @@ let g = l.EFr.SIZE_152,
             children: (0, i.jsx)(h.Z, {
                 nameplate: e,
                 className: m.nameplate,
-                nameplatePreviewSize: 'large',
+                nameplatePreviewSize: 'xlarge',
                 isHighlighted: !0,
                 showPlaceholderUser: !0
             })

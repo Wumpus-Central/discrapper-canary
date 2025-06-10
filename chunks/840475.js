@@ -30,8 +30,8 @@ var r,
     D = l.TypeError,
     L = y('toStringTag'),
     x = O('TYPED_ARRAY_TAG'),
-    M = 'TypedArrayConstructor',
-    k = o && !!b && 'Opera' !== f(l.opera),
+    k = 'TypedArrayConstructor',
+    M = o && !!b && 'Opera' !== f(l.opera),
     j = !1,
     U = {
         Int8Array: 1,
@@ -57,7 +57,7 @@ var r,
         var t = E(e);
         if (u(t)) {
             var n = T(t);
-            return n && d(n, M) ? n[M] : F(t);
+            return n && d(n, k) ? n[k] : F(t);
         }
     },
     V = function (e) {
@@ -87,7 +87,7 @@ var r,
                             } catch (e) {}
                         }
                 }
-            (!P[e] || n) && h(P, e, n ? t : (k && A[e]) || t, r);
+            (!P[e] || n) && h(P, e, n ? t : (M && A[e]) || t, r);
         }
     },
     W = function (e, t, n) {
@@ -103,24 +103,24 @@ var r,
                 }
                 if (R[e] && !n) return;
                 try {
-                    return h(R, e, n ? t : (k && R[e]) || t);
+                    return h(R, e, n ? t : (M && R[e]) || t);
                 } catch (e) {}
             }
             for (r in U) (i = l[r]) && (!i[e] || n) && h(i, e, t);
         }
     };
-for (r in U) (a = (i = l[r]) && i.prototype) ? (I(a)[M] = i) : (k = !1);
-for (r in G) (a = (i = l[r]) && i.prototype) && (I(a)[M] = i);
+for (r in U) (a = (i = l[r]) && i.prototype) ? (I(a)[k] = i) : (M = !1);
+for (r in G) (a = (i = l[r]) && i.prototype) && (I(a)[k] = i);
 if (
-    (!k || !c(R) || R === Function.prototype) &&
+    (!M || !c(R) || R === Function.prototype) &&
     ((R = function () {
         throw new D('Incorrect invocation');
     }),
-    k)
+    M)
 )
     for (r in U) l[r] && b(l[r], R);
-if ((!k || !P || P === w) && ((P = R.prototype), k)) for (r in U) l[r] && b(l[r].prototype, P);
-if ((k && E(C) !== P && b(C, P), s && !d(P, L)))
+if ((!M || !P || P === w) && ((P = R.prototype), M)) for (r in U) l[r] && b(l[r].prototype, P);
+if ((M && E(C) !== P && b(C, P), s && !d(P, L)))
     for (r in ((j = !0),
     m(P, L, {
         configurable: !0,
@@ -131,7 +131,7 @@ if ((k && E(C) !== P && b(C, P), s && !d(P, L)))
     U))
         l[r] && p(l[r], x, r);
 e.exports = {
-    NATIVE_ARRAY_BUFFER_VIEWS: k,
+    NATIVE_ARRAY_BUFFER_VIEWS: M,
     TYPED_ARRAY_TAG: j && x,
     aTypedArray: Z,
     aTypedArrayConstructor: H,

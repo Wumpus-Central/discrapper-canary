@@ -114,10 +114,10 @@ function C(e) {
         L = P(w, m, y),
         x = null != _ && 0 !== _ && null != p && 0 !== p;
     if ('VIDEO' === S && x && null != y) {
-        var M;
+        var k;
         let e = N(y);
         if (null == e) return null;
-        let t = null != (M = n.renderLinkComponent) ? M : f.iT;
+        let t = null != (k = n.renderLinkComponent) ? k : f.iT;
         return (0, r.jsx)(
             c.Z,
             I(O({}, R), {

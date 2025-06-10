@@ -174,11 +174,11 @@ function x(e) {
     let { searchId: t } = e;
     D(t);
 }
-function M(e) {
+function k(e) {
     let { searchId: t } = e;
     null == t ? (s.K.remove(y), (I = {})) : (delete I[t], s.K.set(y, { history: I }));
 }
-function k(e) {
+function M(e) {
     let { searchId: t, query: n } = e;
     null != I[t] && ((I[t] = I[t].filter((e) => e !== n)), s.K.set(y, { history: I }));
 }
@@ -306,8 +306,8 @@ let Z = new V(l.Z, {
     SEARCH_SCREEN_OPEN: x,
     CHANNEL_SELECT: L,
     CHANNEL_TOGGLE_MEMBERS_SECTION: F,
-    SEARCH_CLEAR_HISTORY: M,
-    SEARCH_REMOVE_HISTORY: k,
+    SEARCH_CLEAR_HISTORY: k,
+    SEARCH_REMOVE_HISTORY: M,
     SEARCH_ADD_HISTORY: C,
     LOGOUT: B,
     CONNECTION_OPEN: G

@@ -88,9 +88,9 @@ function T(e, t) {
 function S(e) {
     var t;
     let { legalTermsNodeRef: n, invoiceError: i, planError: a, disablePurchase: d, flashLegalTerms: f, isSubmitting: h, premiumSubscription: b, isGift: O, planGroup: S, isPrepaid: A, isTrial: N, makePurchase: C, needsPaymentSource: R, inReverseTrial: P, onNext: w, onPaymentSourceAdd: D } = e,
-        { application: L, selectedPlan: x, hasAcceptedTerms: M, purchaseType: k, paymentSourceId: j, activeSubscription: U, devShelfFetchState: G, hasPaymentSources: B } = (0, c.JL)(),
+        { application: L, selectedPlan: x, hasAcceptedTerms: k, purchaseType: M, paymentSourceId: j, activeSubscription: U, devShelfFetchState: G, hasPaymentSources: B } = (0, c.JL)(),
         F = I({
-            purchaseType: k,
+            purchaseType: M,
             plan: x,
             premiumSubscription: b,
             isGift: O,
@@ -155,8 +155,8 @@ function S(e) {
     if (N)
         return (0, r.jsxs)(o.gtL, {
             innerClassName: g.innerButton,
-            'data-testid': M ? 'purchase' : 'submitButton',
-            onClick: M ? C : () => T(n, f),
+            'data-testid': k ? 'purchase' : 'submitButton',
+            onClick: k ? C : () => T(n, f),
             color: o.zxk.Colors.GREEN,
             submitting: h,
             children: [
@@ -168,7 +168,7 @@ function S(e) {
                 F
             ]
         });
-    else if (!M)
+    else if (!k)
         return (0, r.jsx)(o.ua7, {
             text: m.intl.string(m.t.XdvBLS),
             children: (e) =>

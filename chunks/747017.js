@@ -39,8 +39,8 @@ function T(e) {
             return null == ('' === i ? null : i) && null == r.emoji ? null : r;
         }, [n]);
     if ((0, l.e7)([p.Z], () => p.Z.isBlockedOrIgnored(null == t ? void 0 : t.id))) return null;
-    let M = (null == t ? void 0 : t.bot) === !0,
-        k = (null == x ? void 0 : x.state) != null && 'xs' === N,
+    let k = (null == t ? void 0 : t.bot) === !0,
+        M = (null == x ? void 0 : x.state) != null && 'xs' === N,
         j = () => {
             if (null != D)
                 return (0, r.jsx)(E.Z, {
@@ -49,8 +49,8 @@ function T(e) {
                     textVariant: 'text-'.concat(N, '/medium'),
                     textClassName: S,
                     iconClassName: A,
-                    hideText: k,
-                    hideIcon: M,
+                    hideText: M,
+                    hideIcon: k,
                     hideTooltip: w
                 });
             let e =
@@ -66,8 +66,8 @@ function T(e) {
                       textVariant: 'text-'.concat(N, '/medium'),
                       textClassName: S,
                       iconClassName: A,
-                      hideText: k,
-                      hideIcon: M,
+                      hideText: M,
+                      hideIcon: k,
                       hideTooltip: w
                   })
                 : null != T
@@ -76,7 +76,7 @@ function T(e) {
                         textVariant: 'text-'.concat(N, '/medium'),
                         textClassName: S,
                         iconClassName: A,
-                        hideText: k,
+                        hideText: M,
                         hideTooltip: w
                     })
                   : null;

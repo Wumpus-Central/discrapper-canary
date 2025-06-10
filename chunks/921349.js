@@ -79,18 +79,18 @@ function x(e, t) {
         e
     );
 }
-function M(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = k(e, t);
+        i = M(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function k(e, t) {
+function M(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -186,8 +186,8 @@ function F(e, t) {
     return null == t ? [] : (Array.isArray(t) ? t : [t]).map((t) => ('object' == typeof t && (null == t || 'value' in t) ? t : e.find((e) => e.value === t))).filter(Boolean);
 }
 let V = i.forwardRef(function (e, t) {
-    var { options: n, value: a, onChange: l, clearable: d = !1, multi: f = !1, closeOnSelect: _ = !0, onOpen: g, onClose: E, placeholder: y = R.intl.string(R.t.XqMe3N), wrapperClassName: O, className: S, isDisabled: w = !1, isProcessing: D = !1, maxVisibleItems: L = 7, look: x = C.q.FILLED, autoFocus: k = !1, popoutPosition: j = 'bottom', filter: V = !0, debounceTime: H, renderOptionLabel: K = G, onSearchChange: z, renderOptionPrefix: Q = () => null, renderOptionSuffix: J = () => null, 'aria-describedby': $, 'aria-invalid': ee, 'aria-labelledby': et, 'aria-required': en, inputClassNames: er, centerCaret: ei = !1, onBlur: ea, matchSorterOptions: eo, clearQueryOnSelect: es = !1, hidePills: el, renderCustomPill: ec, customPillContainerClassName: eu } = e,
-        ed = M(e, ['options', 'value', 'onChange', 'clearable', 'multi', 'closeOnSelect', 'onOpen', 'onClose', 'placeholder', 'wrapperClassName', 'className', 'isDisabled', 'isProcessing', 'maxVisibleItems', 'look', 'autoFocus', 'popoutPosition', 'filter', 'debounceTime', 'renderOptionLabel', 'onSearchChange', 'renderOptionPrefix', 'renderOptionSuffix', 'aria-describedby', 'aria-invalid', 'aria-labelledby', 'aria-required', 'inputClassNames', 'centerCaret', 'onBlur', 'matchSorterOptions', 'clearQueryOnSelect', 'hidePills', 'renderCustomPill', 'customPillContainerClassName']);
+    var { options: n, value: a, onChange: l, clearable: d = !1, multi: f = !1, closeOnSelect: _ = !0, onOpen: g, onClose: E, placeholder: y = R.intl.string(R.t.XqMe3N), wrapperClassName: O, className: S, isDisabled: w = !1, isProcessing: D = !1, maxVisibleItems: L = 7, look: x = C.q.FILLED, autoFocus: M = !1, popoutPosition: j = 'bottom', filter: V = !0, debounceTime: H, renderOptionLabel: K = G, onSearchChange: z, renderOptionPrefix: Q = () => null, renderOptionSuffix: J = () => null, 'aria-describedby': $, 'aria-invalid': ee, 'aria-labelledby': et, 'aria-required': en, inputClassNames: er, centerCaret: ei = !1, onBlur: ea, matchSorterOptions: eo, clearQueryOnSelect: es = !1, hidePills: el, renderCustomPill: ec, customPillContainerClassName: eu } = e,
+        ed = k(e, ['options', 'value', 'onChange', 'clearable', 'multi', 'closeOnSelect', 'onOpen', 'onClose', 'placeholder', 'wrapperClassName', 'className', 'isDisabled', 'isProcessing', 'maxVisibleItems', 'look', 'autoFocus', 'popoutPosition', 'filter', 'debounceTime', 'renderOptionLabel', 'onSearchChange', 'renderOptionPrefix', 'renderOptionSuffix', 'aria-describedby', 'aria-invalid', 'aria-labelledby', 'aria-required', 'inputClassNames', 'centerCaret', 'onBlur', 'matchSorterOptions', 'clearQueryOnSelect', 'hidePills', 'renderCustomPill', 'customPillContainerClassName']);
     let { ref: ef, width: e_ } = (0, I.ZP)(),
         { titleId: ep, errorId: eh, error: em } = (0, m.Gc)(),
         { ref: eg, width: eE } = (0, I.ZP)(),
@@ -209,8 +209,8 @@ let V = i.forwardRef(function (e, t) {
         }),
         eL = i.useMemo(() => F(eP, a), [eP, a]),
         ex = i.useMemo(() => eL.map((e) => e.value), [eL]),
-        eM = eL[eL.length - 1],
-        ek = (0, A.Z)(eM),
+        ek = eL[eL.length - 1],
+        eM = (0, A.Z)(ek),
         ej = i.useId(),
         eU = i.useId(),
         eG = i.useId(),
@@ -257,7 +257,7 @@ let V = i.forwardRef(function (e, t) {
         ),
         eW = (0, c.ZP)({
             id: eU,
-            defaultFocused: null != eM ? String(eM.value) : void 0,
+            defaultFocused: null != ek ? String(ek.value) : void 0,
             scrollToStart: eH,
             scrollToEnd: eY,
             isEnabled: ev,
@@ -270,7 +270,7 @@ let V = i.forwardRef(function (e, t) {
         ez = (0, A.Z)(eP);
     i.useEffect(() => {
         let e = ez.current,
-            t = ek.current;
+            t = eM.current;
         ev &&
             null != t &&
             !ew &&
@@ -283,7 +283,7 @@ let V = i.forwardRef(function (e, t) {
                         row: r
                     });
             });
-    }, [ev, ew, ez, ek]),
+    }, [ev, ew, ez, eM]),
         i.useEffect(() => {
             let e = eK.current;
             if (ev && !ew) {
@@ -296,14 +296,14 @@ let V = i.forwardRef(function (e, t) {
                 }
                 eO(null != (t = e.focusedItemId()) ? t : null);
             } else {
-                let t = ek.current,
+                let t = eM.current,
                     n = null != t ? String(t.value) : null;
                 e.setFocus(n), eO(null);
             }
-        }, [ev, ew, eK, ek]),
+        }, [ev, ew, eK, eM]),
         i.useLayoutEffect(() => {
-            ev || (f ? eS('') : null != eM && eS(eM.label));
-        }, [f, eM, ev]),
+            ev || (f ? eS('') : null != ek && eS(ek.label));
+        }, [f, ek, ev]),
         i.useLayoutEffect(() => {
             f && eS('');
         }, [f, eL.length]);
@@ -325,11 +325,11 @@ let V = i.forwardRef(function (e, t) {
         [n, eP, f, _, es, l, a, eB]
     );
     i.useLayoutEffect(() => {
-        if (k) {
+        if (M) {
             var e;
             null == (e = eb.current) || e.focus();
         }
-    }, [k]);
+    }, [M]);
     let eX = i.useCallback(() => {
             eS(''), eq(null), eB(!0);
         }, [eq, eB]),
@@ -407,7 +407,7 @@ let V = i.forwardRef(function (e, t) {
                         style: { '--icons-width': ''.concat(e_, 'px') },
                         onBlur: (e) => {
                             var t, n, r;
-                            (null == (t = eR.current) ? void 0 : t.contains(e.relatedTarget)) || (null == (r = eC.current) || null == (n = r.getScrollerNode()) ? void 0 : n.contains(e.relatedTarget)) || (f || null == eM || eS(eM.label), eN(!1), eB(!1), null == ea || ea(e));
+                            (null == (t = eR.current) ? void 0 : t.contains(e.relatedTarget)) || (null == (r = eC.current) || null == (n = r.getScrollerNode()) ? void 0 : n.contains(e.relatedTarget)) || (f || null == ek || eS(ek.label), eN(!1), eB(!1), null == ea || ea(e));
                         },
                         children: [
                             (0, r.jsx)(h.t, {
@@ -571,7 +571,7 @@ function Z(e) {
           : (0, r.jsx)(u.SJ, {
                 children: (e) => {
                     var { ref: t, onKeyDown: n } = e,
-                        i = M(e, ['ref', 'onKeyDown']);
+                        i = k(e, ['ref', 'onKeyDown']);
                     return (0, r.jsx)(
                         E._2,
                         x(
@@ -755,7 +755,7 @@ function W(e) {
 }
 function K(e) {
     var { value: t, label: n, prefix: i, suffix: a, onSelect: s, isSelected: l, isFocused: c, multi: d } = e,
-        f = M(e, ['value', 'label', 'prefix', 'suffix', 'onSelect', 'isSelected', 'isFocused', 'multi']);
+        f = k(e, ['value', 'label', 'prefix', 'suffix', 'onSelect', 'isSelected', 'isFocused', 'multi']);
     let _ = (0, u.JA)(String(t));
     return (0, r.jsxs)(
         p.P,
@@ -848,7 +848,7 @@ function z(e) {
 }
 function q(e) {
     var { selectedOptions: t, renderOptionPrefix: n, renderOptionSuffix: i } = e,
-        a = M(e, ['selectedOptions', 'renderOptionPrefix', 'renderOptionSuffix']);
+        a = k(e, ['selectedOptions', 'renderOptionPrefix', 'renderOptionSuffix']);
     let o = t[0],
         s =
             null == n
@@ -884,7 +884,7 @@ function q(e) {
 }
 function X(e) {
     var { query: t, placeholder: n, selectedOptions: a, selectValue: s, onKeyDown: l, isEditing: c, isDisabled: u, isProcessing: d, inputRef: f, renderOptionPrefix: _, renderOptionSuffix: p, inputClassNames: h, hidePills: m } = e,
-        g = M(e, ['query', 'placeholder', 'selectedOptions', 'selectValue', 'onKeyDown', 'isEditing', 'isDisabled', 'isProcessing', 'inputRef', 'renderOptionPrefix', 'renderOptionSuffix', 'inputClassNames', 'hidePills']);
+        g = k(e, ['query', 'placeholder', 'selectedOptions', 'selectValue', 'onKeyDown', 'isEditing', 'isDisabled', 'isProcessing', 'inputRef', 'renderOptionPrefix', 'renderOptionSuffix', 'inputClassNames', 'hidePills']);
     let E = Math.max(n.length, (null != t ? t : '').length),
         b = i.useRef(null),
         { focusPreviousItem: y, focusNextItem: O, focusLastItem: v } = Y(b, f, a);

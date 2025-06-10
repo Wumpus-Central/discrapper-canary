@@ -162,7 +162,7 @@ function A(e) {
         x = (e) => {
             I(e);
         },
-        M = o.length > 1;
+        k = o.length > 1;
     return (0, r.jsxs)('div', {
         className: l()(m.container, a),
         children: [
@@ -194,7 +194,7 @@ function A(e) {
                     })
                 ]
             }),
-            M &&
+            k &&
                 (0, r.jsx)(T, {
                     colors: o,
                     selectedIndex: b,
@@ -247,7 +247,7 @@ function A(e) {
                                             )
                                         )
                                 }),
-                            M &&
+                            k &&
                                 (0, r.jsx)(f.ua7, {
                                     text: h.intl.string(p.default['rTik5+']),
                                     children: (e) =>

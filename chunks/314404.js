@@ -35,8 +35,8 @@ var r = n(255367),
     D = n(811334),
     L = n(55610),
     x = n(553797),
-    M = n(346071),
-    k = n(927699),
+    k = n(346071),
+    M = n(927699),
     j = n(987716),
     U = n(311821),
     G = n(459965),
@@ -190,12 +190,12 @@ function et(e) {
         ),
         ex = null != X ? X : ef;
     l()(null != ex, 'Price option has to be set');
-    let eM = (0, _.Z)({
+    let ek = (0, _.Z)({
             forceFetch: !1,
             excludeReverseTrial: !1,
             excludeReverseTrialFromCountdown: !0
         }),
-        ek = null != eC && V.nG[eC.trial_id].skus.includes(b),
+        eM = null != eC && V.nG[eC.trial_id].skus.includes(b),
         ej = null != eP && $.some((e) => (null == ew ? void 0 : ew.includes(e))) && null != eP.discount,
         eU = (0, v.aS)(V.Xh.PREMIUM_MONTH_TIER_2, !1, ep, ex);
     i.useEffect(() => {
@@ -214,7 +214,7 @@ function et(e) {
         i.useEffect(() => {
             eT && null != ey && ey.length > 0 && eO(ey[0]);
         }, [ey, eO, eT]);
-    let eB = !eI && (ep || (!ek && !ej)) && eG && ei,
+    let eB = !eI && (ep || (!eM && !ej)) && eG && ei,
         eF = (0, u.arW)(),
         { ref: eV } = eF,
         eZ = J(eF, ['ref']),
@@ -223,7 +223,7 @@ function et(e) {
         eW = 'HR' === eY && null != eH && eH.currency === H.pK.EUR,
         eK = (0, v.Ap)(ex.paymentSourceId),
         ez = i.useMemo(() => ((null == eR ? void 0 : eR.interval) === V.rV.DAY ? ((null == eR ? void 0 : eR.interval_count) > 7 ? Y.intl.string(Y.t.Z1V2cn) : Y.intl.string(Y.t.MI1rHh)) : Y.intl.string(Y.t['+S5lra'])), [eR]),
-        eq = !ep && (ej || (null != eR && ek && null != er)),
+        eq = !ep && (ej || (null != eR && eM && null != er)),
         eX = null == ea || null == (s = ea.find((e) => e.subscriptionPlanId === V.Xh.PREMIUM_MONTH_TIER_2)) || null == (a = s.discounts) || null == (n = a.find((e) => e.type === f.eW.SUBSCRIPTION_PLAN)) ? void 0 : n.amount,
         eQ = (e, t, n) => {
             if (eI)
@@ -272,7 +272,7 @@ function et(e) {
         },
         eJ = () => {
             if (ev === y.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null != eE)
-                return (0, r.jsx)(k.Z, {
+                return (0, r.jsx)(M.Z, {
                     sectionTitle: Y.intl.string(Y.t.B3miEx),
                     className: o()(K.customGiftMessageWrapper, { [K.compactCustomGiftMessageWrapper]: eo }),
                     innerClassName: K.customGiftMessage,
@@ -309,23 +309,23 @@ function et(e) {
                                 shouldShowUpdatedPaymentModal: eq,
                                 isEligibleForDiscount: ej,
                                 discountAmountOff: eX,
-                                isEligibleForTrial: ek
+                                isEligibleForTrial: eM
                             },
                             e
                         )
                     )
                 })
             ),
-        e4 = () => eQ(eC, ek, ej),
+        e4 = () => eQ(eC, eM, ej),
         e5 = () => (eW ? (0, r.jsx)(d.Z, { message: Y.intl.formatToPlainString(Y.t['9hnZoK'], { kunaPriceWithCurrency: (0, I.T4)(7.5345 * eH.amount, H.pK.HRK) }) }) : null),
         e6 = null != g && null != U && (0, T.R4)(g, U, z),
-        e8 = eM.isFractionalPremiumActive && (null == g || e6) && !ep && null != U && V.dJ.has(U);
+        e8 = ek.isFractionalPremiumActive && (null == g || e6) && !ep && null != U && V.dJ.has(U);
     return (0, r.jsxs)('div', {
         className: o()(eI ? K.stepBodyCustomGift : K.stepBody, { [K.paddingForHalloweenBanner]: eS }),
         children: [
             e8 &&
-                (0, r.jsx)(M.n, {
-                    fractionalPremiumInfo: eM,
+                (0, r.jsx)(k.n, {
+                    fractionalPremiumInfo: ek,
                     enablePremiumRebrandDesign: e_
                 }),
             (0, r.jsxs)('div', {

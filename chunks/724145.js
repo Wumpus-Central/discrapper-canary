@@ -69,7 +69,7 @@ let L = () =>
             ]
         });
     },
-    M = (e) => {
+    k = (e) => {
         var t, n, i;
         let { onSubscribeSuccess: a, markAsDismissed: o } = e,
             { analyticsLocations: s } = (0, m.ZP)(h.Z.CLIENT_THEMES_EDITOR),
@@ -101,7 +101,7 @@ let L = () =>
             onSubscribeModalClose: y
         });
     },
-    k = (e) => {
+    M = (e) => {
         let { markAsDismissed: t, isCoachmark: n } = e,
             { isPreview: a } = (0, l.cj)([T.Z], () => ({ isPreview: T.Z.isPreview })),
             [o, c] = i.useState(!1),
@@ -121,7 +121,7 @@ let L = () =>
             className: D.editorFooter,
             children: [
                 a &&
-                    (0, r.jsx)(M, {
+                    (0, r.jsx)(k, {
                         onSubscribeSuccess: () => {
                             c(!0);
                         },
@@ -182,7 +182,7 @@ function j(e) {
                                 ]
                             })
                         }),
-                        (0, r.jsx)(k, {
+                        (0, r.jsx)(M, {
                             markAsDismissed: t,
                             isCoachmark: n
                         })

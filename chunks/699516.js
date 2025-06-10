@@ -113,10 +113,10 @@ function x(e) {
                 user: e.relationship.user
             });
 }
-function M(e) {
+function k(e) {
     (g = _({}, g)), delete g[e.relationship.id], null != E[e.relationship.id] && ((E = _({}, E)), delete E[e.relationship.id]), null != b[e.relationship.id] && ((b = _({}, b)), delete b[e.relationship.id]), null != I[e.relationship.id] && ((I = _({}, I)), delete I[e.relationship.id]), e.relationship.userIgnored || (O.delete(e.relationship.id), v.delete(e.relationship.id)), y.delete(e.relationship.id), w();
 }
-function k(e) {
+function M(e) {
     let { relationship: t } = e;
     (g = h(_({}, g), { [t.id]: t.type })), null == t.since ? delete b[t.id] : (b[t.id] = t.since), null == t.nickname ? delete E[t.id] : (E[t.id] = t.nickname), t.isSpamRequest ? y.add(t.id) : y.delete(t.id), null != T[t.id] && delete T[t.id], null == t.originApplicationId ? delete I[t.id] : (I[t.id] = t.originApplicationId), t.userIgnored ? (O.add(t.id), t.type === d.OGo.PENDING_INCOMING && v.add(t.id)) : (O.delete(t.id), v.delete(t.id)), w();
 }
@@ -232,8 +232,8 @@ let B = new G(s.Z, {
     CONNECTION_OPEN: D,
     OVERLAY_INITIALIZE: L,
     RELATIONSHIP_ADD: x,
-    RELATIONSHIP_REMOVE: M,
-    RELATIONSHIP_UPDATE: k,
+    RELATIONSHIP_REMOVE: k,
+    RELATIONSHIP_UPDATE: M,
     RELATIONSHIP_PENDING_INCOMING_REMOVED: j,
     UPDATE_STRANGER_STATUS: U
 });

@@ -56,57 +56,62 @@ function m(e) {
     });
 }
 let g = function () {
-    let { guilds: e, searchQuery: t, setSearchQuery: n, sortOrder: r, setSortOrder: l, hasActivityRestrictedGuilds: a, onToggleAllActivityRestrictedGuilds: g, onToggleShowAllGuilds: p, isShowingAllGuilds: h, numTotalGuilds: f, onToggleActivityRestrictedGuild: b, isActivityRestricted: _, numGuildsShownLimit: x, isSearching: E } = (0, o.F)();
+    let { guilds: e, searchQuery: t, setSearchQuery: n, sortOrder: r, setSortOrder: l, hasActivityRestrictedGuilds: a, onToggleAllActivityRestrictedGuilds: g, onToggleActivityRestrictedGuild: p, isActivityRestricted: h } = (0, o.F)();
     return (0, i.jsxs)('div', {
         className: u.wrapper,
         children: [
-            (0, i.jsx)(s.E1j, {
-                size: s.E1j.Sizes.MEDIUM,
-                query: t,
-                onChange: n,
-                onClear: () => n(''),
-                placeholder: d.intl.string(d.t['H+nRY2']),
-                'aria-label': d.intl.string(d.t['5h0QOD'])
-            }),
-            e.length > 0 &&
-                (0, i.jsxs)('div', {
-                    className: u.controlsContainer,
-                    children: [
-                        (0, i.jsx)(s.PhF, {
-                            className: u.sortOrderSelect,
-                            look: s.qQH.CUSTOM,
-                            popoutWidth: 'auto',
-                            options: [
-                                {
-                                    label: d.intl.string(d.t.STMPJy),
-                                    value: o.W.SERVER_ORDER
-                                },
-                                {
-                                    label: d.intl.string(d.t.CbaapK),
-                                    value: o.W.RECENTLY_JOINED
-                                },
-                                {
-                                    label: d.intl.string(c.default.ZI51JS),
-                                    value: o.W.ACTIVITY_SHARING_ON
-                                },
-                                {
-                                    label: d.intl.string(c.default['+kxafn']),
-                                    value: o.W.ACTIVITY_SHARING_OFF
-                                }
-                            ],
-                            select: l,
-                            isSelected: (e) => r === e,
-                            serialize: String
-                        }),
-                        (0, i.jsx)(s.zxk, {
-                            className: u.toggleAllButton,
-                            look: s.zxk.Looks.LINK,
-                            color: s.zxk.Colors.LINK,
-                            onClick: g,
-                            children: a ? d.intl.string(d.t['7lxcLC']) : d.intl.string(d.t.zh6UEh)
+            (0, i.jsxs)('div', {
+                className: u.headerContainer,
+                children: [
+                    (0, i.jsx)(s.E1j, {
+                        size: s.E1j.Sizes.MEDIUM,
+                        query: t,
+                        onChange: n,
+                        onClear: () => n(''),
+                        placeholder: d.intl.string(d.t['H+nRY2']),
+                        'aria-label': d.intl.string(d.t['5h0QOD'])
+                    }),
+                    e.length > 0 &&
+                        (0, i.jsxs)('div', {
+                            className: u.controlsContainer,
+                            children: [
+                                (0, i.jsx)(s.PhF, {
+                                    className: u.sortOrderSelect,
+                                    look: s.qQH.CUSTOM,
+                                    popoutWidth: 'auto',
+                                    options: [
+                                        {
+                                            label: d.intl.string(d.t.STMPJy),
+                                            value: o.W.SERVER_ORDER
+                                        },
+                                        {
+                                            label: d.intl.string(d.t.CbaapK),
+                                            value: o.W.RECENTLY_JOINED
+                                        },
+                                        {
+                                            label: d.intl.string(c.default.ZI51JS),
+                                            value: o.W.ACTIVITY_SHARING_ON
+                                        },
+                                        {
+                                            label: d.intl.string(c.default['+kxafn']),
+                                            value: o.W.ACTIVITY_SHARING_OFF
+                                        }
+                                    ],
+                                    select: l,
+                                    isSelected: (e) => r === e,
+                                    serialize: String
+                                }),
+                                (0, i.jsx)(s.zxk, {
+                                    className: u.toggleAllButton,
+                                    look: s.zxk.Looks.LINK,
+                                    color: s.zxk.Colors.LINK,
+                                    onClick: g,
+                                    children: a ? d.intl.string(d.t['7lxcLC']) : d.intl.string(d.t.zh6UEh)
+                                })
+                            ]
                         })
-                    ]
-                }),
+                ]
+            }),
             0 === e.length &&
                 (0, i.jsx)('div', {
                     className: u.noResultsContainer,
@@ -121,36 +126,12 @@ let g = function () {
                     m,
                     {
                         guild: e,
-                        isActivityRestricted: _(e.id),
-                        onToggleActivityRestrictedGuild: b
+                        isActivityRestricted: h(e.id),
+                        onToggleActivityRestrictedGuild: p
                     },
                     e.id
                 )
-            ),
-            f > x &&
-                !E &&
-                (0, i.jsxs)(s.P3F, {
-                    className: u.showAllButton,
-                    onClick: p,
-                    children: [
-                        h
-                            ? (0, i.jsx)(s.u04, {
-                                  className: u.showAllIcon,
-                                  size: 'md',
-                                  color: s.TVs.colors.ICON_PRIMARY
-                              })
-                            : (0, i.jsx)(s.CJ0, {
-                                  className: u.showAllIcon,
-                                  size: 'md',
-                                  color: s.TVs.colors.ICON_PRIMARY
-                              }),
-                        (0, i.jsx)(s.Text, {
-                            variant: 'text-md/semibold',
-                            color: 'text-primary',
-                            children: h ? d.intl.string(d.t['8fJE7+']) : d.intl.format(d.t['4AUz5O'], { count: f })
-                        })
-                    ]
-                })
+            )
         ]
     });
 };

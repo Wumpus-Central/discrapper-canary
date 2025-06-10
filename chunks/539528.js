@@ -1,7 +1,7 @@
 n.d(t, {
     Ep: () => _,
     Hp: () => h,
-    PP: () => M,
+    PP: () => k,
     lX: () => A,
     ob: () => p,
     q_: () => L
@@ -158,13 +158,13 @@ function A(e) {
         (0, r.Z)(X, e), (X.length = t.length), P.notifyListeners(X.location, X.action);
     }
     function D(e) {
-        v(e) || M(C(e.state));
+        v(e) || k(C(e.state));
     }
     function L() {
-        M(C(S()));
+        k(C(S()));
     }
     var x = !1;
-    function M(e) {
+    function k(e) {
         if (x) (x = !1), w();
         else {
             var t = 'POP';
@@ -174,11 +174,11 @@ function A(e) {
                           action: t,
                           location: e
                       })
-                    : k(e);
+                    : M(e);
             });
         }
     }
-    function k(e) {
+    function M(e) {
         var t = X.location,
             n = U.indexOf(t.key);
         -1 === n && (n = 0);
@@ -376,10 +376,10 @@ function L(e) {
             var n = v(),
                 r = J.location;
             if ((!S && L(r, n)) || A === _(n)) return;
-            (A = null), M(n);
+            (A = null), k(n);
         }
     }
-    function M(e) {
+    function k(e) {
         if (S) (S = !1), T();
         else {
             var t = 'POP';
@@ -389,11 +389,11 @@ function L(e) {
                           action: t,
                           location: e
                       })
-                    : k(e);
+                    : M(e);
             });
         }
     }
-    function k(e) {
+    function M(e) {
         var t = J.location,
             n = B.lastIndexOf(_(t));
         -1 === n && (n = 0);
@@ -503,7 +503,7 @@ function L(e) {
 function x(e, t, n) {
     return Math.min(Math.max(e, t), n);
 }
-function M(e) {
+function k(e) {
     void 0 === e && (e = {});
     var t = e,
         n = t.getUserConfirmation,

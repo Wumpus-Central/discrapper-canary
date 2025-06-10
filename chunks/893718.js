@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(151574),
     L = n(368844),
     x = n(41776),
-    M = n(849522),
-    k = n(780291),
+    k = n(849522),
+    M = n(780291),
     j = n(328908),
     U = n(576645),
     G = n(913663),
@@ -389,7 +389,7 @@ function ex(e, t, n) {
         handleOuterClick: c
     };
 }
-function eM(e, t, n) {
+function ek(e, t, n) {
     let r = i.useCallback(() => {
         var r, i;
         return !!(!n && (null == (r = t.current) ? void 0 : r.onTabOrEnter(!1))) || (null == (i = e.current) ? void 0 : i.onTabOrEnter(!1)) || !1;
@@ -409,7 +409,7 @@ function eM(e, t, n) {
         )
     };
 }
-function ek(e, t, n, r) {
+function eM(e, t, n, r) {
     var i, a;
     let o = (0, w.pR)(),
         s = (0, _.e7)([G.Z], () => G.Z.getStickerPreview(e.id, t.drafts.type)),
@@ -447,7 +447,7 @@ function ej(e, t) {
         tE = ep.toolbarType === et.OW.STATIC,
         tb = !Z.dN.useSetting() && !(0, $.isAndroidWeb)() && null != window.ResizeObserver,
         ty = !tb || !(null == (n = ep.commands) ? void 0 : n.enabled) || !em || F !== e_.GI,
-        tO = (0, M.Z)(),
+        tO = (0, k.Z)(),
         { isSubmitButtonEnabled: tv, fontSize: tI } = (0, _.cj)([E.Z], () => ({
             fontSize: E.Z.fontSize,
             isSubmitButtonEnabled: E.Z.isSubmitButtonEnabled
@@ -466,8 +466,8 @@ function ej(e, t) {
     let { eventEmitter: tN, handleEditorSelectionChanged: tC } = eR(tr, F, V),
         { submitting: tR, submit: tP, handleSubmit: tw } = eI(eZ, ep, tr, ea.id),
         { autocompleteRef: tD, handleMaybeShowAutocomplete: tL, handleHideAutocomplete: tx } = eP(),
-        tM = eT(tP, ep, tr),
-        tk = eS(tr),
+        tk = eT(tP, ep, tr),
+        tM = eS(tr),
         tj = eA({
             editorRef: tr,
             disabled: tp,
@@ -482,7 +482,7 @@ function ej(e, t) {
             return null == ta || null == (e = ta.current) ? void 0 : e.hide();
         }, []),
         { editorHeight: tB, handleResize: tF } = eD(eG),
-        { handleTab: tV, handleEnter: tZ, handleMoveSelection: tH } = eM(tD, tn, ty),
+        { handleTab: tV, handleEnter: tZ, handleMoveSelection: tH } = ek(tD, tn, ty),
         { expressionPickerView: tY, shouldHideExpressionPicker: tW, handleAutocompleteVisibilityChange: tK, handleOuterClick: tz } = ex(ep, tN, tr);
     (0, ee.S)(tN, ea.guild_id, ea.id);
     let tq = null != ej,
@@ -491,7 +491,7 @@ function ej(e, t) {
     null != tu ? (tQ = null == eE ? void 0 : eE(tu, td, eh.attachButton)) : (!tp || tm) && (tQ = null == eg ? void 0 : eg(tq, eh.attachButton));
     let tJ = tb && null != V && !tp && ep.showCharacterCount && null == tu,
         t$ = tb && !__OVERLAY__ && null != V && null == tu && ep.toolbarType !== et.OW.NONE,
-        t0 = ek(ea, ep, V, tD),
+        t0 = eM(ea, ep, V, tD),
         t1 = (0, eo.c)({
             channel: ea,
             type: ep,
@@ -718,7 +718,7 @@ function ej(e, t) {
                             setValue: (e, t) => (null == tA ? void 0 : tA(null, e, t)),
                             position: e1
                         }),
-                        (0, r.jsx)(k.Z, {
+                        (0, r.jsx)(M.Z, {
                             textValue: F,
                             editorHeight: tB,
                             channelId: ea.id
@@ -742,8 +742,8 @@ function ej(e, t) {
                     : (0, r.jsx)(P.Z, {
                           positionTargetRef: tt,
                           type: ep,
-                          onSelectGIF: tM,
-                          onSelectEmoji: tk,
+                          onSelectGIF: tk,
+                          onSelectEmoji: tM,
                           onSelectSticker: tj,
                           onSelectSound: tU,
                           channel: ea,

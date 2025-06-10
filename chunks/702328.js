@@ -17,8 +17,8 @@ var i = n(255367),
     _ = n(214852),
     x = n(78839),
     E = n(626135),
-    C = n(526167),
-    j = n(74538),
+    j = n(526167),
+    C = n(74538),
     O = n(140465),
     S = n(286961),
     v = n(91802),
@@ -124,13 +124,13 @@ let ea = (e) => {
             eh = (0, c.wj)(ep),
             [ef, eb] = r.useState(!1),
             [e_, ex] = r.useState(!1),
-            [eE, eC] = r.useState(!1),
-            [ej, eO] = r.useState(!1),
-            eS = (0, C.rO)(),
+            [eE, ej] = r.useState(!1),
+            [eC, eO] = r.useState(!1),
+            eS = (0, j.rO)(),
             [ev, eT] = r.useState(!1),
             eI = (0, a.e7)([x.ZP], () => x.ZP.getPremiumTypeSubscription()),
-            eN = null != eI ? (0, j.Af)(eI) : null,
-            ey = null != eN ? j.ZP.getSkuIdForPlan(eN.planId) : null,
+            eN = null != eI ? (0, C.Af)(eI) : null,
+            ey = null != eN ? C.ZP.getSkuIdForPlan(eN.planId) : null,
             eA = null !== ey && ey !== q.Si.TIER_2 ? q.Si.TIER_2 : null,
             eP = (0, v.n)(),
             eR = null != eP,
@@ -161,7 +161,7 @@ let ea = (e) => {
                 }),
                 children: (0, i.jsx)(o.$, {
                     innerRef: z,
-                    onChange: (e) => eC(e),
+                    onChange: (e) => ej(e),
                     threshold: 0.1,
                     active: !0,
                     children: (0, i.jsx)(D.ZP, {
@@ -352,7 +352,7 @@ let ea = (e) => {
                     (0, i.jsx)(o.$, {
                         innerRef: eu,
                         onChange: (e) => {
-                            e && !ej && (E.default.track(X.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eV }), eO(!0));
+                            e && !eC && (E.default.track(X.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eV }), eO(!0));
                         },
                         children: (0, i.jsx)('div', {
                             ref: eu,

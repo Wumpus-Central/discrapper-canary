@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685), n(35282), n(415506);
+n.d(t, { Z: () => k }), n(388685), n(35282), n(415506);
 var r = n(664751),
     i = n(990547),
     a = n(243814),
@@ -156,7 +156,7 @@ async function x(e) {
           }),
           Promise.reject(f));
 }
-let M = {
+let k = {
     addGame(e, t) {
         l.Z.dispatch({
             type: 'RUNNING_GAME_ADD_OVERRIDE',

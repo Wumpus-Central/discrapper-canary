@@ -57,7 +57,7 @@ function g(e, t) {
         D = i.useContext(c.S).reducedMotion.enabled,
         { enabled: L } = d.Z.useExperiment({ location: 'LottieIcon web entry point' }),
         x = D || !L,
-        M = i.useRef(O);
+        k = i.useRef(O);
     return (
         (0, f.zq)(() => {
             var e, t;
@@ -101,7 +101,7 @@ function g(e, t) {
                         let r,
                             { default: i } = e,
                             a = 1 === Object.keys(I).length ? Object.values(I)[0].name : void 0,
-                            o = null != (n = null != (t = C.current) ? t : M.current) ? n : a;
+                            o = null != (n = null != (t = C.current) ? t : k.current) ? n : a;
                         if (null != o && null != I[o]) {
                             let e = I[o];
                             r = [x ? e.start : null != v ? v : e.start, e.start + e.duration];

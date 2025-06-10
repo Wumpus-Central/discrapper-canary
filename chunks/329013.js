@@ -20,8 +20,8 @@ var i = n(255367),
     _ = n(605236),
     x = n(104494),
     E = n(639119),
-    C = n(767714),
-    j = n(165583),
+    j = n(767714),
+    C = n(165583),
     O = n(504983),
     S = n(626135),
     v = n(210887),
@@ -80,7 +80,7 @@ let P = () => {
                                                               onClick: () => P(),
                                                               children: y.intl.string(y.t['E+COuL'])
                                                           }),
-                                                          (0, i.jsx)(C.Z, {
+                                                          (0, i.jsx)(j.Z, {
                                                               showGradient: !1,
                                                               subscriptionTier: N.Si.TIER_2,
                                                               textOptions: { textOverride: d ? y.intl.formatToPlainString(y.t.bkQ4bG, { percent: null == c ? void 0 : c.discount.amount }) : y.intl.string(y.t.mr4K7O) },
@@ -100,7 +100,7 @@ let P = () => {
                                                     children: y.intl.string(y.t['E+COuL'])
                                                 }),
                                                 (0, i.jsx)('div', { className: A.premiumTier2Divider }),
-                                                (0, i.jsx)(j.ZP, {
+                                                (0, i.jsx)(C.ZP, {
                                                     type: N.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
                                                     subscriptionTier: N.Si.TIER_2
                                                 })

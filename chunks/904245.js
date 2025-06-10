@@ -31,8 +31,8 @@ var r = n(278074),
     D = n(779832),
     L = n(786761),
     x = n(459618),
-    M = n(541288),
-    k = n(3148),
+    k = n(541288),
+    M = n(3148),
     j = n(48854),
     U = n(785359),
     G = n(646504),
@@ -265,7 +265,7 @@ function ex(e, t, n, r, i) {
             });
     });
 }
-function eM(e, t) {
+function ek(e, t) {
     let n = eo.Z.getMessage(e, t);
     if (null == n || n.type !== ey.uaV.REPLY) return;
     let r = Q.Z.getMessageByReference(n.messageReference);
@@ -275,7 +275,7 @@ function eM(e, t) {
             replied_user: !1
         };
 }
-let ek = {
+let eM = {
         [ey.evJ.EMAIL_VERIFICATION_REQUIRED]: {
             messageName: 'BOT_REQUIRES_EMAIL_VERIFICATION',
             messageGetter: () => eI.intl.string(eI.t.k1Cjqq)
@@ -326,7 +326,7 @@ let ek = {
                 }),
                 ej.receiveMessage(
                     e,
-                    (0, k.cs)({
+                    (0, M.cs)({
                         messageId: r,
                         channelId: e,
                         content: t,
@@ -335,7 +335,7 @@ let ek = {
                 );
         },
         sendNitroSystemMessage(e, t, n) {
-            let r = (0, k.ZP)({
+            let r = (0, M.ZP)({
                 channelId: e,
                 nonce: n,
                 type: ey.uaV.NITRO_NOTIFICATION,
@@ -359,7 +359,7 @@ let ek = {
             );
         },
         sendGiftingPromptSystemMessage(e, t) {
-            let n = (0, k.ZP)({
+            let n = (0, M.ZP)({
                 channelId: e,
                 type: ey.uaV.GIFTING_PROMPT,
                 content: '',
@@ -380,7 +380,7 @@ let ek = {
                 n,
                 r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
                 i = ei.Z.getChannel(e);
-            null != i && (r === ey.evJ.SLOWMODE_RATE_LIMITED ? ((t = eI.intl.formatToPlainString(eI.t.IWntYm, { seconds: i.rateLimitPerUser })), (n = 'SLOWMODE_RATE_LIMITED')) : r === ey.evJ.INVALID_MESSAGE_SEND_USER ? ((t = eI.intl.formatToPlainString(eI.t.CTMXwM, { helpUrl: eh.Z.getArticleURL(ey.BhN.DM_COULD_NOT_BE_DELIVERED) })), (n = 'INVALID_MESSAGE_SEND_USER')) : r === ey.evJ.TOO_MANY_THREADS ? ((t = i.isForumLikeChannel() || i.isForumPost() ? eI.intl.string(eI.t['/jUd29']) : eI.intl.string(eI.t['5EMPAw'])), (n = 'TOO_MANY_THREADS')) : r === ey.evJ.TOO_MANY_ANNOUNCEMENT_THREADS ? ((t = eI.intl.string(eI.t['aY+lLC'])), (n = 'TOO_MANY_ANNOUNCEMENT_THREADS')) : r === ey.evJ.HARMFUL_LINK_MESSAGE_BLOCKED ? ((t = eI.intl.formatToPlainString(eI.t.zSG3Q0, { helpUrl: ey.EYA.HARMFUL_LINKS })), (n = 'HARMFUL_LINK_MESSAGE_BLOCKED')) : r in ek ? ((n = ek[r].messageName), (t = ek[r].messageGetter())) : ((t = eI.intl.formatToPlainString(eI.t.CTMXwM, { helpUrl: eh.Z.getArticleURL(ey.BhN.DM_COULD_NOT_BE_DELIVERED) })), (n = 'SEND_FAILED ('.concat(r, ')'))), ej.sendBotMessage(e, t, n));
+            null != i && (r === ey.evJ.SLOWMODE_RATE_LIMITED ? ((t = eI.intl.formatToPlainString(eI.t.IWntYm, { seconds: i.rateLimitPerUser })), (n = 'SLOWMODE_RATE_LIMITED')) : r === ey.evJ.INVALID_MESSAGE_SEND_USER ? ((t = eI.intl.formatToPlainString(eI.t.CTMXwM, { helpUrl: eh.Z.getArticleURL(ey.BhN.DM_COULD_NOT_BE_DELIVERED) })), (n = 'INVALID_MESSAGE_SEND_USER')) : r === ey.evJ.TOO_MANY_THREADS ? ((t = i.isForumLikeChannel() || i.isForumPost() ? eI.intl.string(eI.t['/jUd29']) : eI.intl.string(eI.t['5EMPAw'])), (n = 'TOO_MANY_THREADS')) : r === ey.evJ.TOO_MANY_ANNOUNCEMENT_THREADS ? ((t = eI.intl.string(eI.t['aY+lLC'])), (n = 'TOO_MANY_ANNOUNCEMENT_THREADS')) : r === ey.evJ.HARMFUL_LINK_MESSAGE_BLOCKED ? ((t = eI.intl.formatToPlainString(eI.t.zSG3Q0, { helpUrl: ey.EYA.HARMFUL_LINKS })), (n = 'HARMFUL_LINK_MESSAGE_BLOCKED')) : r in eM ? ((n = eM[r].messageName), (t = eM[r].messageGetter())) : ((t = eI.intl.formatToPlainString(eI.t.CTMXwM, { helpUrl: eh.Z.getArticleURL(ey.BhN.DM_COULD_NOT_BE_DELIVERED) })), (n = 'SEND_FAILED ('.concat(r, ')'))), ej.sendBotMessage(e, t, n));
         },
         sendExplicitMediaClydeError(e, t, n) {
             let i = ei.Z.getChannel(e);
@@ -854,7 +854,7 @@ let ek = {
                 })
                 .then(
                     (n) => (
-                        M.Z.donateSentMessage(n.body.content, e),
+                        k.Z.donateSentMessage(n.body.content, e),
                         ej.receiveMessage(e, n.body),
                         o.Z.dispatch({
                             type: 'STICKER_TRACK_USAGE',
@@ -924,7 +924,7 @@ let ek = {
             let X = null != b ? ey.uaV.REPLY : ey.uaV.DEFAULT,
                 Q = null != (a = n.nonce) ? a : (0, j.r)(),
                 ee = Q,
-                et = (0, k.ZP)({
+                et = (0, M.ZP)({
                     channelId: e,
                     content: u,
                     tts: _,
@@ -998,7 +998,7 @@ let ek = {
                         (c) => {
                             let d = Date.now() - i;
                             if (c.ok) {
-                                M.Z.donateSentMessage(u, e),
+                                k.Z.donateSentMessage(u, e),
                                     ej.receiveMessage(e, c.body, !0, {
                                         sendAnalytics: {
                                             duration: d,
@@ -1169,7 +1169,7 @@ let ek = {
         async editMessage(e, t, n) {
             let { content: r } = n;
             await ee.Z.unarchiveThreadIfNecessary(e);
-            let i = eM(e, t),
+            let i = ek(e, t),
                 s = {
                     channelId: e,
                     messageId: t,

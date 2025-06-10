@@ -17,8 +17,8 @@ var i = n(255367),
     _ = n(410030),
     x = n(726542),
     E = n(122021),
-    C = n(275759),
-    j = n(231757),
+    j = n(275759),
+    C = n(231757),
     O = n(888496),
     S = n(605236),
     v = n(565138),
@@ -310,7 +310,7 @@ function Y(e) {
                 var t;
                 let n = null != (t = e.metadata) ? t : {},
                     r = null,
-                    s = (0, C.FI)(n[M.PC.CREATED_AT], g);
+                    s = (0, j.FI)(n[M.PC.CREATED_AT], g);
                 switch (e.type) {
                     case B.ABu.REDDIT:
                         r = (0, O.oP)(n, G.metadataItem);
@@ -441,7 +441,7 @@ function Y(e) {
                             n = +!!e;
                         if (e && !t) {
                             U(n),
-                                (0, j.Z)({
+                                (0, C.Z)({
                                     platformType: o.type,
                                     location: 'User Settings'
                                 });
@@ -469,7 +469,7 @@ function Y(e) {
                                     n = +!!e;
                                 if (e && !t) {
                                     P(n),
-                                        (0, j.Z)({
+                                        (0, C.Z)({
                                             platformType: o.type,
                                             location: 'User Settings'
                                         });
@@ -498,7 +498,7 @@ function Y(e) {
                           className: G.integrationRevoked,
                           children: V.intl.format(V.t['6C4lgI'], {
                               onReconnect: function () {
-                                  (0, j.Z)({
+                                  (0, C.Z)({
                                       platformType: o.type,
                                       location: 'User Settings'
                                   });
@@ -553,7 +553,7 @@ function W() {
 }
 function K(e) {
     let t = x.Z.get(e);
-    (0, j.Z)({ platformType: t.type }),
+    (0, C.Z)({ platformType: t.type }),
         P.default.track(B.rMx.ACCOUNT_LINK_STEP, {
             previous_step: 'desktop connections',
             current_step: 'desktop oauth',

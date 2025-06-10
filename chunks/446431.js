@@ -202,13 +202,13 @@ var m = {
     x = function (e, t) {
         return void 0 === t && (t = !0), !1 === t ? String(e) : String(e).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#x27;');
     },
-    M = function (e) {
+    k = function (e) {
         return Object.keys(e).reduce(function (t, n) {
             var r = void 0 !== e[n] ? n + '="' + e[n] + '"' : '' + n;
             return t ? t + ' ' + r : r;
         }, '');
     },
-    k = function (e, t) {
+    M = function (e, t) {
         return (
             void 0 === t && (t = {}),
             Object.keys(e).reduce(function (t, n) {
@@ -235,11 +235,11 @@ var m = {
                 return {
                     toComponent: function () {
                         var e, n, i, a;
-                        return (n = t.titleAttributes), ((i = { key: (e = t.title) })['data-rh'] = !0), (a = k(n, i)), [r.createElement(m.TITLE, a, e)];
+                        return (n = t.titleAttributes), ((i = { key: (e = t.title) })['data-rh'] = !0), (a = M(n, i)), [r.createElement(m.TITLE, a, e)];
                     },
                     toString: function () {
                         return (function (e, t, n, r) {
-                            var i = M(n),
+                            var i = k(n),
                                 a = P(t);
                             return i ? '<' + e + ' data-rh="true" ' + i + '>' + x(a, r) + '</' + e + '>' : '<' + e + ' data-rh="true">' + x(a, r) + '</' + e + '>';
                         })(e, t.title, t.titleAttributes, n);
@@ -249,10 +249,10 @@ var m = {
             case 'htmlAttributes':
                 return {
                     toComponent: function () {
-                        return k(t);
+                        return M(t);
                     },
                     toString: function () {
-                        return M(t);
+                        return k(t);
                     }
                 };
             default:

@@ -413,7 +413,7 @@ let el = [X.fO.ACTIVITY],
                                             ? (0, r.jsx)('div', {
                                                   className: o()(en.border, {
                                                       [en.voiceChannelEffect]: !e_ && null != eQ,
-                                                      [en.speaking]: eF && !e_
+                                                      [en.speaking]: eF && !e_ && null == eQ
                                                   })
                                               })
                                             : null

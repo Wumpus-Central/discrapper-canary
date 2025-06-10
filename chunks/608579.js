@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -79,9 +79,9 @@ function x(e, t) {
         e
     );
 }
-function M(e) {
+function k(e) {
     var t;
-    let { onClose: n, onComplete: a, onStepChange: w, transitionState: L, loadId: M, skuId: k, isGift: j = !1, giftRecipient: U, giftMessage: G, giftingOrigin: B, analyticsLocations: F, returnRef: V } = e,
+    let { onClose: n, onComplete: a, onStepChange: w, transitionState: L, loadId: k, skuId: M, isGift: j = !1, giftRecipient: U, giftMessage: G, giftingOrigin: B, analyticsLocations: F, returnRef: V } = e,
         { analyticsLocations: Z } = (0, d.ZP)([...F, u.Z.COLLECTIBLES_PAYMENT_MODAL]),
         H = i.useRef(new s.qA()),
         [Y, W] = i.useState(null),
@@ -90,14 +90,14 @@ function M(e) {
             () =>
                 (0, N.UY)({
                     purchaseType: C.o8.FIAT,
-                    skuId: k
+                    skuId: M
                 }),
-            [k]
+            [M]
         ),
         X = (0, l.Wu)([f.Z], () => f.Z.recommendedGiftSkuIds, []),
-        Q = null != k ? [k] : X,
+        Q = null != M ? [M] : X,
         J = null != (t = Q[0]) ? t : null,
-        $ = null != k && p.Rm.has(k),
+        $ = null != M && p.Rm.has(M),
         ee = i.useCallback(() => {
             z(!0), null == a || a();
         }, [a]),
@@ -162,7 +162,7 @@ function M(e) {
                 className: o()(P.customConfetti, { [P.hidden]: !K })
             }),
             (0, r.jsx)(m.PaymentContextProvider, {
-                loadId: M,
+                loadId: k,
                 stepConfigs: er,
                 applicationId: A.XAJ,
                 skuIDs: Q,

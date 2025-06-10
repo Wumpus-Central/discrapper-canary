@@ -69,7 +69,7 @@ function x(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,7 +80,7 @@ function M(e, t) {
         e
     );
 }
-function k(e, t) {
+function M(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -109,10 +109,10 @@ function Z(e) {
     let { isFocused: t, isHidden: n, sendability: i, listIndex: a, sticker: l, onMouseOver: c, onSelectSticker: u } = e,
         d = (0, s.JA)(''.concat(a)),
         { tabIndex: _ } = d,
-        p = k(d, ['tabIndex']);
+        p = M(d, ['tabIndex']);
     return (0, r.jsxs)(
         f.P3F,
-        M(L({}, p), {
+        k(L({}, p), {
             tabIndex: n ? -1 : _,
             className: o()(w.suggestedExpression, { [w.suggestedExpressionFocused]: t }),
             focusProps: { enabled: !1 },
@@ -292,10 +292,10 @@ let Y = i.memo(function (e) {
                             children: (0, r.jsx)(s.SJ, {
                                 children: (e) => {
                                     var { ref: t, tabIndex: n } = e,
-                                        i = k(e, ['ref', 'tabIndex']);
+                                        i = M(e, ['ref', 'tabIndex']);
                                     return (0, r.jsx)(
                                         'div',
-                                        M(
+                                        k(
                                             L(
                                                 {
                                                     className: w.stickerResults,
@@ -373,7 +373,7 @@ let Y = i.memo(function (e) {
                                                 children: (e) =>
                                                     (0, r.jsx)(
                                                         f.Dio,
-                                                        M(
+                                                        k(
                                                             L(
                                                                 {
                                                                     size: 'md',

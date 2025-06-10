@@ -1,7 +1,7 @@
 n.d(t, {
-    JA: () => k,
+    JA: () => M,
     Jw: () => w,
-    Od: () => M,
+    Od: () => k,
     Wj: () => U,
     gK: () => j,
     oD: () => L,
@@ -53,7 +53,7 @@ function L(e, t) {
 function x(e, t) {
     return e.length > t ? e.substring(0, t) + '...' : e;
 }
-function M(e, t) {
+function k(e, t) {
     var n, r, i, a, o, s, l;
     let c = null == t ? null : b.Z.getMessage(e.id, t),
         u = null != (o = null == c || null == (r = c.embeds) || null == (n = r[0]) ? void 0 : n.rawTitle) ? o : '',
@@ -82,7 +82,7 @@ function M(e, t) {
         return x(i, 40);
     }
 }
-function k(e) {
+function M(e) {
     let { parentChannel: t, parentMessageId: n, threadSettings: a, privateThreadMode: o, location: l, onThreadCreated: u, useDefaultThreadName: d, uploadHandler: f } = e;
     return r.useCallback(
         async (e, r, _) => {
@@ -91,7 +91,7 @@ function k(e) {
                 m = L(a, o),
                 b = null != (p = a.name) ? p : '';
             if ('' === b && d) {
-                let e = M(t, n);
+                let e = k(t, n);
                 b = '' !== e ? e : P.intl.string(P.t['7Xm5QE']);
             }
             let y = (0, S.WD)(t),

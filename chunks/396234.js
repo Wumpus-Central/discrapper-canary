@@ -73,7 +73,7 @@ function i(t, e) {
         });
 }
 function c(t, e) {
-    let { extra: a, tags: r, user: _, contexts: n, level: o, sdkProcessingMetadata: i, breadcrumbs: c, fingerprint: s, eventProcessors: l, attachments: u, propagationContext: I, transactionName: R, span: d } = e;
+    let { extra: a, tags: r, user: _, contexts: n, level: o, sdkProcessingMetadata: i, breadcrumbs: c, fingerprint: s, eventProcessors: l, attachments: u, propagationContext: I, transactionName: R, span: N } = e;
     E(t, 'extra', a),
         E(t, 'tags', r),
         E(t, 'user', _),
@@ -81,7 +81,7 @@ function c(t, e) {
         E(t, 'sdkProcessingMetadata', i),
         o && (t.level = o),
         R && (t.transactionName = R),
-        d && (t.span = d),
+        N && (t.span = N),
         c.length && (t.breadcrumbs = [...t.breadcrumbs, ...c]),
         s.length && (t.fingerprint = [...t.fingerprint, ...s]),
         l.length && (t.eventProcessors = [...t.eventProcessors, ...l]),

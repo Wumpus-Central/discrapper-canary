@@ -83,7 +83,7 @@ function P() {
         L();
 }
 function w(e) {
-    for (let t in (delete v[e], delete A[e], delete I[e], delete T[e], delete S[e], D(e), T[e])) M(e, t);
+    for (let t in (delete v[e], delete A[e], delete I[e], delete T[e], delete S[e], D(e), T[e])) k(e, t);
 }
 function D(e) {
     let t = p.Z.getThreadsForGuild(e);
@@ -108,13 +108,13 @@ function D(e) {
         }
 }
 function L() {
-    for (let e in ((N = {}), T)) for (let t in T[e]) M(e, t);
+    for (let e in ((N = {}), T)) for (let t in T[e]) k(e, t);
 }
 function x(e) {
     let t = c.Z.getBasicChannel(e);
-    null != t && l.uC.has(t.type) && M(t.guild_id, t.id);
+    null != t && l.uC.has(t.type) && k(t.guild_id, t.id);
 }
-function M(e, t) {
+function k(e, t) {
     let n = c.Z.getChannel(t);
     if (null == n || !n.isForumLikeChannel() || (null == N[e] && (N[e] = {}), (N[e][t] = 0), null == T[e] || null == T[e][t])) return;
     let r = u.Z.getGuild(e);
@@ -126,7 +126,7 @@ function M(e, t) {
     }
     for (let n in T[e][t]) t === C ? d.ZP.isNewForumThread(n, t, r) && N[e][t]++ : _.default.compare(n, i) > 0 && !d.ZP.hasOpenedThread(n) && N[e][t]++;
 }
-function k(e, t, n) {
+function M(e, t, n) {
     if (null == t) return !1;
     let r = c.Z.getChannel(n),
         i = h.Z.joinTimestamp(n);
@@ -142,11 +142,11 @@ function k(e, t, n) {
             let e = d.ZP.isForumPostUnread(r.id);
             $(v, r, null, !0), $(I, r, null, !0), $(A, r, null, !0), $(T, r, r, !0), $(S, r, e ? r : null, !0), J(r.id);
         }
-        M(e, t);
-    } else ee(v, e, t, n), ee(A, e, t, n), ee(I, e, t, n), ee(T, e, t, n), ee(S, e, t, n), J(n), M(e, t);
+        k(e, t);
+    } else ee(v, e, t, n), ee(A, e, t, n), ee(I, e, t, n), ee(T, e, t, n), ee(S, e, t, n), J(n), k(e, t);
 }
 function j(e) {
-    return k(e.channel.guild_id, e.channel.parent_id, e.channel.id);
+    return M(e.channel.guild_id, e.channel.parent_id, e.channel.id);
 }
 function U(e) {
     let { channels: t } = e;
@@ -170,11 +170,11 @@ function G(e, t) {
 function B(e) {
     let { channel: t } = e,
         n = !1;
-    return null != t.guild_id && null != t.parent_id && (t.guild_id in v && t.parent_id in v[t.guild_id] && (delete v[t.guild_id][t.parent_id], (n = !0)), t.guild_id in I && t.parent_id in I[t.guild_id] && (delete I[t.guild_id][t.parent_id], (n = !0)), t.guild_id in A && t.parent_id in A[t.guild_id] && (_.default.keys(A[t.guild_id][t.parent_id]).forEach(J), delete A[t.guild_id][t.parent_id], (n = !0)), t.guild_id in T && t.parent_id in T[t.guild_id] && (delete T[t.guild_id][t.parent_id], (n = !0)), t.guild_id in S && t.parent_id in S[t.guild_id] && (delete S[t.guild_id][t.parent_id], (n = !0)), n && M(t.guild_id, t.parent_id)), n;
+    return null != t.guild_id && null != t.parent_id && (t.guild_id in v && t.parent_id in v[t.guild_id] && (delete v[t.guild_id][t.parent_id], (n = !0)), t.guild_id in I && t.parent_id in I[t.guild_id] && (delete I[t.guild_id][t.parent_id], (n = !0)), t.guild_id in A && t.parent_id in A[t.guild_id] && (_.default.keys(A[t.guild_id][t.parent_id]).forEach(J), delete A[t.guild_id][t.parent_id], (n = !0)), t.guild_id in T && t.parent_id in T[t.guild_id] && (delete T[t.guild_id][t.parent_id], (n = !0)), t.guild_id in S && t.parent_id in S[t.guild_id] && (delete S[t.guild_id][t.parent_id], (n = !0)), n && k(t.guild_id, t.parent_id)), n;
 }
 function F(e) {
     let t = c.Z.getChannel(e.id);
-    return null != t && !!p.Z.isActive(e.guildId, t.parent_id, e.id) && k(t.guild_id, t.parent_id, t.id);
+    return null != t && !!p.Z.isActive(e.guildId, t.parent_id, e.id) && M(t.guild_id, t.parent_id, t.id);
 }
 function V(e) {
     let t = c.Z.getChannel(e.channelId);
@@ -183,7 +183,7 @@ function V(e) {
         let { guild_id: e, parent_id: r } = t;
         if (!l.Ec.has(t.type)) {
             var n;
-            return Number(null == (n = N[e]) ? void 0 : n[t.id]) > 0 && (M(e, t.id), !0);
+            return Number(null == (n = N[e]) ? void 0 : n[t.id]) > 0 && (k(e, t.id), !0);
         }
         if (null == r) return !1;
         if (et(v, t)) {
@@ -195,7 +195,7 @@ function V(e) {
             let l = v[e][r][t.id],
                 c = n ? l : null,
                 u = i ? l : null;
-            $(I, t, c, !0), $(A, t, u, !0), M(e, r);
+            $(I, t, c, !0), $(A, t, u, !0), k(e, r);
         } else {
             let e = et(S, t),
                 n = d.ZP.isForumPostUnread(t.id);
