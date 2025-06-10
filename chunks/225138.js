@@ -83,7 +83,7 @@ function z(e) {
     });
 }
 function B(e) {
-    let { message: t, channel: n, mediaItem: r, textSelection: a, favoriteableType: s, favoriteableId: c, favoriteableName: z, itemHref: B, itemSrc: K, itemSafeSrc: X, itemTextContent: W, canReport: q, onHeightUpdate: V, onSelect: J, onClose: Q, navId: Y, ariaLabel: $, shouldHideMediaOptions: ee = !1 } = e,
+    let { message: t, channel: n, mediaItem: r, textSelection: a, favoriteableType: s, favoriteableId: c, favoriteableName: z, itemHref: B, itemSrc: K, itemSafeSrc: X, itemTextContent: W, canReport: q, onHeightUpdate: V, onSelect: Q, onClose: J, navId: Y, ariaLabel: $, shouldHideMediaOptions: ee = !1 } = e,
         et = (0, d.Z)(a),
         en = (0, m.Z)(a),
         ei = (0, D.Z)(t, n),
@@ -137,9 +137,9 @@ function B(e) {
         ew = (0, p.Z)(t);
     return (0, i.jsxs)(l.v2r, {
         navId: Y,
-        onClose: Q,
+        onClose: J,
         'aria-label': $,
-        onSelect: J,
+        onSelect: Q,
         children: [
             (0, i.jsx)(l.kSQ, { children: et }),
             (0, i.jsx)(l.kSQ, { children: en }),

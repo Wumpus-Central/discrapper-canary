@@ -4,9 +4,8 @@ n.d(t, {
     _i: () => l
 });
 var r = n(524437),
-    i = n(695346);
-n(592125), n(699516);
-var a = n(594174);
+    i = n(695346),
+    a = n(594174);
 function o(e, t, n) {
     return (
         t in e
@@ -36,7 +35,6 @@ function s(e) {
     }
     return e;
 }
-n(470734), n(721360);
 let l = (e) => {
         let { setting: t, isDm: n = !1, isFriend: i = !1 } = e;
         if (null != t && t !== r.Q4.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
@@ -59,16 +57,16 @@ let l = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
         return t && n ? r.Q4.BLUR : t ? r.Q4.BLOCK : r.Q4.BLUR;
     },
-    d = () => {
-        let e = i.j7.getSetting();
+    d = (e) => {
+        let t = null != e ? e : i.j7.getSetting();
         return {
-            goreContentGuilds: l({ setting: null == e ? void 0 : e.goreContentGuilds }),
+            goreContentGuilds: l({ setting: null == t ? void 0 : t.goreContentGuilds }),
             goreContentNonFriendDm: l({
-                setting: null == e ? void 0 : e.goreContentNonFriendDm,
+                setting: null == t ? void 0 : t.goreContentNonFriendDm,
                 isDm: !0
             }),
             goreContentFriendDm: l({
-                setting: null == e ? void 0 : e.goreContentFriendDm,
+                setting: null == t ? void 0 : t.goreContentFriendDm,
                 isDm: !0,
                 isFriend: !0
             })

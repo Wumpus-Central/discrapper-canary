@@ -13,7 +13,7 @@ var r = n(255367),
     u = n(480916),
     d = n(81643),
     f = n(247206),
-    _ = n(169525),
+    _ = n(936141),
     p = n(823379),
     h = n(388032),
     m = n(703803);
@@ -384,7 +384,7 @@ class N extends i.PureComponent {
     }
 }
 let C = (e) => {
-    let t = (0, f.m8)() && e.reason === _.wk.EXPLICIT_CONTENT,
+    let t = (0, f.m8)() && null != e.reason && _.eq.has(e.reason),
         n = (0, d.Jm)();
     return (0, r.jsx)(
         N,

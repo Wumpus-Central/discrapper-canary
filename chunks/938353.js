@@ -32,8 +32,8 @@ var r,
     O = n(446411),
     j = n(960904),
     C = n(161314),
-    S = n(247206),
-    I = n(25610),
+    S = n(629710),
+    I = n(262777),
     N = n(761538),
     T = n(674611),
     P = n(294734),
@@ -407,7 +407,7 @@ class e2 extends (r = l.Component) {
               });
     }
     renderAttachments(e) {
-        let { channel: t, gifAutoPlay: n, canDeleteAttachments: r, inlineAttachmentMedia: l, onMediaItemContextMenu: a, shouldRedactExplicitContent: o, shouldHideMediaOptions: s } = this.props,
+        let { channel: t, gifAutoPlay: n, canDeleteAttachments: r, inlineAttachmentMedia: l, onMediaItemContextMenu: a, enabledContentHarmTypeFlags: o, shouldHideMediaOptions: s } = this.props,
             { attachments: c, flags: u } = e;
         if (0 === c.length || e.isPoll() || e.isComponentsV2()) return null;
         let d = c.filter((e) => null == e.flags || !(0, eE.yE)(e.flags, eW.J0y.IS_THUMBNAIL));
@@ -424,7 +424,7 @@ class e2 extends (r = l.Component) {
             { srcToOnClickOverride: m, srcToHandlePreloadImage: f } = (0, X.G)(
                 p,
                 {
-                    shouldRedactExplicitContent: o,
+                    enabledContentHarmTypeFlags: o,
                     shouldHideMediaOptions: s
                 },
                 'Media Mosaic'
@@ -509,7 +509,7 @@ class e2 extends (r = l.Component) {
     }
     renderComponentAccessories(e) {
         if (0 === e.components.length) return null;
-        let { gifAutoPlay: t, shouldRedactExplicitContent: n, shouldHideMediaOptions: r, disableComponentInteractivity: l, onMediaItemContextMenu: a } = this.props;
+        let { gifAutoPlay: t, enabledContentHarmTypeFlags: n, shouldHideMediaOptions: r, disableComponentInteractivity: l, onMediaItemContextMenu: a } = this.props;
         return (0, i.jsx)(eL.F, {
             gifAutoPlay: t,
             getGifFavButton: e8,
@@ -520,7 +520,7 @@ class e2 extends (r = l.Component) {
                           t.stopPropagation(), t.preventDefault(), null == a || a(t, e);
                       },
             shouldHideMediaOptions: r,
-            shouldRedactExplicitContent: n,
+            enabledContentHarmTypeFlags: n,
             children: (0, i.jsx)(B.ZP, {
                 message: e,
                 shouldDisableInteractiveComponents: l
@@ -690,9 +690,7 @@ class e2 extends (r = l.Component) {
             });
     }
     renderMediaObscureNotice(e) {
-        if (0 === e.attachments.length && 0 === e.embeds.length) return null;
-        let { obscuredAttachments: t, obscuredEmbeds: n } = (0, S.Tw)(e);
-        return 0 === t.length && 0 === n.length ? null : (0, i.jsx)(N.Z, { message: e });
+        return (0 !== e.attachments.length || 0 !== e.embeds.length) && (0, S.kC)(e) ? (0, i.jsx)(N.Z, { message: e }) : null;
     }
     renderPoll(e, t) {
         if (null != t)
@@ -770,7 +768,7 @@ class e2 extends (r = l.Component) {
                 };
             }),
             eQ(this, 'renderEmbed', (e, t, n, r) => {
-                let { gifAutoPlay: l, inlineEmbedMedia: a, canSuppressEmbeds: o, hasSpoilerEmbeds: s, shouldRedactExplicitContent: c, isSearchResult: u } = this.props,
+                let { gifAutoPlay: l, inlineEmbedMedia: a, canSuppressEmbeds: o, hasSpoilerEmbeds: s, enabledContentHarmTypeFlags: c, isSearchResult: u } = this.props,
                     d = r.channel_id,
                     p = r.id,
                     m = (0, eO.BP)(e, d, p, s, c);
@@ -876,7 +874,7 @@ function e4(e) {
         T = (0, H.A)((null != (t = r.editedTimestamp) ? t : r.timestamp).valueOf()),
         P = (0, K.Z)(null == n ? void 0 : n.id),
         A = (0, q.Z)(r),
-        w = (0, I.V)(n.id, r.author.id),
+        w = (0, I.v)(r),
         k = (0, eS._)(n),
         D = (0, ev.ro)(r.id, r.channel_id);
     return (0, i.jsx)(
@@ -910,7 +908,7 @@ function e4(e) {
                 showListsAndHeaders: T,
                 showMaskedLinks: T,
                 shouldHideMediaOptions: P,
-                shouldRedactExplicitContent: w,
+                enabledContentHarmTypeFlags: w,
                 ctaButtonType: D
             }
         )
@@ -948,7 +946,7 @@ let e6 = (e) => {
         h = ec.QK.useSetting(),
         g = (0, H.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
         _ = (0, K.Z)(null == r ? void 0 : r.id),
-        b = (0, I.V)(r.id, n.author.id),
+        b = (0, I.v)(n),
         E = (0, ev.ro)(n.id, n.channel_id),
         x = (0, q.Z)(n);
     return (0, i.jsx)(
@@ -971,7 +969,7 @@ let e6 = (e) => {
             showListsAndHeaders: g,
             showMaskedLinks: g,
             shouldHideMediaOptions: _,
-            shouldRedactExplicitContent: b,
+            enabledContentHarmTypeFlags: b,
             ctaButtonType: E,
             isSearchResult: u
         })

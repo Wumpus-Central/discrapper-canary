@@ -1,107 +1,126 @@
 n.d(t, {
-    As: () => I,
-    BP: () => y,
-    MC: () => T,
-    Xh: () => g,
-    dn: () => b,
-    eq: () => E,
-    hL: () => S,
-    lK: () => O,
-    wk: () => m
+    As: () => y,
+    BP: () => O,
+    MC: () => j,
+    dn: () => f,
+    hL: () => I,
+    lK: () => g
 }),
-    n(388685),
     n(997841);
 var r = n(399606),
-    i = n(432877),
-    a = n(247206),
-    o = n(25610),
-    s = n(368844),
-    l = n(768494),
-    c = n(695346),
+    i = n(991621),
+    l = n(936141),
+    o = n(629710),
+    a = n(368844),
+    s = n(695346),
     u = n(375954),
-    d = n(496675),
-    f = n(630388),
-    _ = n(255269),
-    p = n(981631),
-    h = n(388032),
-    m = (function (e) {
-        return (e.SPOILER = 'spoiler'), (e.EXPLICIT_CONTENT = 'explicit_content'), (e.POTENTIAL_EXPLICIT_CONTENT = 'potential_explicit_content'), (e.GORE_CONTENT = 'gore_content'), e;
-    })({});
-let g = new Set(['explicit_content', 'gore_content', 'potential_explicit_content']),
-    E = new Set(['explicit_content']),
-    b = (e, t) => {
-        let { spoiler: n, flags: r = 0, content_scan_version: o } = e;
-        if (t) {
-            if ((0, a.Sv)(o)) return 'potential_explicit_content';
-            if ((0, f.yE)(r, p.J0y.CONTAINS_EXPLICIT_MEDIA) || i.ZP.get('obscure_blur_effect_explicit_content_enabled')) return 'explicit_content';
-            if ((0, f.yE)(r, p.J0y.CONTAINS_GORE_CONTENT) || i.ZP.get('obscure_blur_effect_gore_content_enabled')) return 'gore_content';
-        }
-        return n || (0, f.yE)(r, p.J0y.IS_SPOILER) ? 'spoiler' : null;
+    c = n(496675),
+    d = n(630388),
+    m = n(255269),
+    h = n(981631),
+    p = n(388032);
+let f = (e, t) => {
+        let { spoiler: n, flags: r = 0 } = e,
+            a = (0, o.LD)(
+                {
+                    type: i.l.Attachment,
+                    media: e
+                },
+                t
+            ),
+            s = (0, o.UJ)(
+                {
+                    type: i.l.Attachment,
+                    media: e
+                },
+                t
+            );
+        return a.length > 0 ? a[0] : s ? l.wk.POTENTIAL_EXPLICIT_CONTENT : n || (0, d.yE)(r, h.J0y.IS_SPOILER) ? l.wk.SPOILER : null;
     },
-    y = (e, t, n, r, o) => {
-        let { flags: s = 0, contentScanVersion: l } = e,
-            c = u.Z.getMessage(t, n);
-        if (null == c) return null;
-        if (o) {
-            if (!c.author.bot && (0, a.Sv)(l)) return 'potential_explicit_content';
-            if ((0, f.yE)(s, p.xPJ.CONTAINS_EXPLICIT_MEDIA) || i.ZP.get('obscure_blur_effect_explicit_content_enabled')) return 'explicit_content';
-            if ((0, f.yE)(s, p.xPJ.CONTAINS_GORE_CONTENT) || i.ZP.get('obscure_blur_effect_gore_content_enabled')) return 'gore_content';
-        }
-        return r ? 'spoiler' : null;
+    O = (e, t, n, r, a) => {
+        let s = u.Z.getMessage(t, n);
+        if (null == s) return null;
+        let c = (0, o.LD)(
+                {
+                    type: i.l.Embed,
+                    media: e
+                },
+                a
+            ),
+            d =
+                !s.author.bot &&
+                (0, o.UJ)(
+                    {
+                        type: i.l.Embed,
+                        media: e
+                    },
+                    a
+                );
+        return c.length > 0 ? c[0] : d ? l.wk.POTENTIAL_EXPLICIT_CONTENT : r ? l.wk.SPOILER : null;
     },
-    O = function (e, t) {
+    g = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            { contentScanMetadata: o } = e;
-        if (t) {
-            if (!r && (0, a.oh)(o)) return 'potential_explicit_content';
-            let e = null == o ? void 0 : o.flags;
-            if ((null != e && (0, f.yE)(e, l.Cb.EXPLICIT)) || i.ZP.get('obscure_blur_effect_explicit_content_enabled')) return 'explicit_content';
-            if ((null != e && (0, f.yE)(e, l.Cb.GORE)) || i.ZP.get('obscure_blur_effect_gore_content_enabled')) return 'gore_content';
-        }
-        return n ? 'spoiler' : null;
+            a = (0, o.LD)(
+                {
+                    type: i.l.GenericMedia,
+                    media: e
+                },
+                t
+            ),
+            s =
+                !r &&
+                (0, o.UJ)(
+                    {
+                        type: i.l.GenericMedia,
+                        media: e
+                    },
+                    t
+                );
+        return a.includes(l.wk.EXPLICIT_CONTENT) ? l.wk.EXPLICIT_CONTENT : a.includes(l.wk.GORE_CONTENT) ? l.wk.GORE_CONTENT : s ? l.wk.POTENTIAL_EXPLICIT_CONTENT : n ? l.wk.SPOILER : null;
     };
-function v(e) {
-    switch (e.type) {
-        case s.Ah.EMBED:
-            return {
-                type: a.lJ.Embed,
-                media: e
-            };
-        case s.Ah.ATTACHMENT:
-            return {
-                type: a.lJ.Attachment,
-                media: e
-            };
-        case s.Ah.COMPONENT:
-            return {
-                type: a.lJ.GenericMedia,
-                media: e.srcUnfurledMediaItem
-            };
-        default:
-            return null;
-    }
-}
-function I(e, t, n) {
+function y(e, t, n) {
     if (null == e) return [!1, void 0];
-    if (n && (0, a.Sv)(e.contentScanVersion)) return [!0, 'potential_explicit_content'];
-    let r = v(e);
-    return null != r && (0, a.KP)(r, n) ? [!0, 'explicit_content'] : e.spoiler ? [t, 'spoiler'] : [!1, void 0];
+    let r = (function (e) {
+        switch (e.type) {
+            case a.Ah.EMBED:
+                return {
+                    type: i.l.Embed,
+                    media: e
+                };
+            case a.Ah.ATTACHMENT:
+                return {
+                    type: i.l.Attachment,
+                    media: e
+                };
+            case a.Ah.COMPONENT:
+                return {
+                    type: i.l.GenericMedia,
+                    media: e.srcUnfurledMediaItem
+                };
+            default:
+                return null;
+        }
+    })(e);
+    if (null == r) return [!1, void 0];
+    let s = (0, o.LD)(r, n),
+        u = (0, o.UJ)(r, n);
+    return s.length > 0 ? [!0, s[0]] : u ? [!0, l.wk.POTENTIAL_EXPLICIT_CONTENT] : e.spoiler ? [t, l.wk.SPOILER] : [!1, void 0];
 }
-function S(e) {
+function I(e) {
     let { channel: t, media: n } = e,
-        i = (0, r.e7)([d.Z], () => null != t && d.Z.can(p.Plq.MANAGE_MESSAGES, t)),
-        a = c.cC.useSetting(),
-        s = (0, o.m)();
-    return I(n, !(0, _.Z)(a, i), s);
+        l = (0, r.e7)([c.Z], () => null != t && c.Z.can(h.Plq.MANAGE_MESSAGES, t)),
+        a = s.cC.useSetting(),
+        u = (0, o.kh)(i.n.GUILD);
+    return y(n, !(0, m.Z)(a, l), u);
 }
-let T = (e) => {
+let j = (e) => {
     switch (e) {
-        case 'explicit_content':
-        case 'gore_content':
-            return h.intl.string(h.t.SEgHFh);
-        case 'spoiler':
-            return h.intl.string(h.t.XpfDHx);
+        case l.wk.EXPLICIT_CONTENT:
+        case l.wk.GORE_CONTENT:
+            return p.intl.string(p.t.SEgHFh);
+        case l.wk.SPOILER:
+            return p.intl.string(p.t.XpfDHx);
         default:
             return;
     }

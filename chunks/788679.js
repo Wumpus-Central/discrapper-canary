@@ -10,8 +10,8 @@ var r = n(481060),
     u = n(388032);
 function d(e) {
     let { channelId: t, messageId: n, mediaItemUrl: d, embedId: f, transitionState: g, onClose: m } = e,
-        p = (0, s.K)(t, n, d),
-        h = (0, s.b)(t, n, f),
+        p = (0, s.v)(t, n, d),
+        h = (0, s.Z)(t, n, f),
         { reportFalsePositive: b, isReportFalsePositiveLoading: O } = (0, o.$)({
             onSuccess: () => (0, c.s)(m),
             onError: () => {

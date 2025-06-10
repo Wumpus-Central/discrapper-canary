@@ -92,7 +92,7 @@ function J(e, t) {
 function X(e) {
     return null == e.id ? j.ZP.convertSurrogateToName(e.name) : ':'.concat(e.name, ':');
 }
-let q = (e) => {
+let Y = (e) => {
         let { emoji: t, channelId: n, messageId: o } = e,
             [s, l] = r.useState(!0),
             [c, u] = r.useState([]),
@@ -142,7 +142,7 @@ let q = (e) => {
             })
         );
     },
-    Y = r.memo(function (e) {
+    q = r.memo(function (e) {
         let { emoji: t, count: n, isSelected: o, setSelected: s, reactionType: l, colors: u } = e,
             d = r.useMemo(() => X(t), [t]),
             p = r.useMemo(
@@ -337,7 +337,7 @@ class Q extends r.PureComponent {
                 className: G.reactorsContainer,
                 children: [
                     o === x.O.BURST &&
-                        (0, i.jsx)(q, {
+                        (0, i.jsx)(Y, {
                             emoji: n.emoji,
                             channelId: r.getChannelId(),
                             messageId: r.id
@@ -507,7 +507,7 @@ function et(e) {
                               var t;
                               let n = e.burst_count > 0;
                               return (0, i.jsx)(
-                                  Y,
+                                  q,
                                   {
                                       isSelected: en(T, e, n ? x.O.BURST : x.O.NORMAL),
                                       setSelected: S,

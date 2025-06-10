@@ -4,8 +4,8 @@ var n = r(255367),
     i = r(120356),
     o = r.n(i),
     a = r(95398),
-    c = r(768494),
-    s = r(169525),
+    c = r(936141),
+    s = r(768494),
     u = r(499376),
     d = r(128854),
     p = r(524444),
@@ -16,7 +16,7 @@ var n = r(255367),
 function y(e) {
     let { media: t, spoiler: r, description: i } = e,
         y = (0, u.pU)(t),
-        j = (0, f.yE)(t.flags, c.hR.IS_ANIMATED),
+        j = (0, f.yE)(t.flags, s.hR.IS_ANIMATED),
         { gifAutoPlay: g } = (0, d.c)(),
         [h, v] = l.useState(r),
         P = (e) => {
@@ -55,7 +55,7 @@ function y(e) {
     return r
         ? (0, n.jsx)(a.ZP, {
               type: a.ZP.Types.ATTACHMENT,
-              reason: s.wk.SPOILER,
+              reason: c.wk.SPOILER,
               obscured: h,
               onToggleObscurity: () => v((e) => !e),
               children: (e) => P(e)

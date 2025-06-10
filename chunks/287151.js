@@ -53,8 +53,8 @@ var i,
     K = n(183023),
     J = n(524444),
     X = n(89729),
-    q = n(620652),
-    Y = n(640753),
+    Y = n(620652),
+    q = n(640753),
     $ = n(981631),
     Q = n(474936),
     ee = n(388032),
@@ -225,14 +225,14 @@ class ed extends (i = o.PureComponent) {
                                                                           targetPosition: k
                                                                       }),
                                                                   D &&
-                                                                      (0, r.jsx)(Y.Z, {
+                                                                      (0, r.jsx)(q.Z, {
                                                                           count: i,
                                                                           emoji: c,
                                                                           channelId: y.getChannelId(),
                                                                           messageId: y.id,
                                                                           useChatFontScaling: O,
                                                                           color: t,
-                                                                          emojiSize: q.M.NORMAL
+                                                                          emojiSize: Y.M.NORMAL
                                                                       })
                                                               ]
                                                           })

@@ -1631,6 +1631,14 @@ let { Themes: r } = n(15202).V,
                     [r.LIGHT]: {
                         raw: 'BLACK',
                         opacity: 0.04
+                    },
+                    [r.MIDNIGHT]: {
+                        raw: 'PLUM_11',
+                        opacity: 0.24
+                    },
+                    [r.DARKER]: {
+                        raw: 'PLUM_11',
+                        opacity: 0.32
                     }
                 }
             },

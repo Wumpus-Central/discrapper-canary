@@ -18,7 +18,7 @@ var l = r(442837),
 function j(e) {
     let { message: t } = (0, O.CJ)(),
         r = (0, l.e7)([f.Z], () => f.Z.getChannel(null == t ? void 0 : t.channel_id)),
-        { shouldHideMediaOptions: j, shouldRedactExplicitContent: g, gifAutoPlay: h, getGifFavButton: v, getOnMediaItemContextMenu: P } = (0, u.c)();
+        { shouldHideMediaOptions: j, enabledContentHarmTypeFlags: g, gifAutoPlay: h, getGifFavButton: v, getOnMediaItemContextMenu: P } = (0, u.c)();
     if (null == t || null == r) return null;
     let x = e.items.map((e) => (0, o.ze)(e.media, t)).filter((e) => 'INVALID' !== e.type),
         { srcToOnClickOverride: S, srcToHandlePreloadImage: w } =
@@ -27,7 +27,7 @@ function j(e) {
                       x,
                       {
                           shouldHideMediaOptions: j,
-                          shouldRedactExplicitContent: g
+                          enabledContentHarmTypeFlags: g
                       },
                       'Media Mosaic'
                   )

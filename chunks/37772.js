@@ -5,7 +5,7 @@ var r = n(255367),
     a = n.n(l),
     o = n(442837),
     s = n(481060),
-    c = n(25610),
+    c = n(262777),
     u = n(628238),
     d = n(976853),
     p = n(977683),
@@ -111,7 +111,7 @@ let G = i.memo(function e(t) {
             channel: l,
             enabled: ed
         }),
-        em = (0, c.V)(l.id, s.author.id),
+        em = (0, c.v)(s),
         ef = (0, E.ro)(s.id, s.channel_id),
         eh = (0, p.Z)(s);
     return eu
@@ -164,7 +164,7 @@ let G = i.memo(function e(t) {
                     showListsAndHeaders: et,
                     showMaskedLinks: et,
                     shouldHideMediaOptions: en,
-                    shouldRedactExplicitContent: em,
+                    enabledContentHarmTypeFlags: em,
                     ctaButtonType: ef
                 }),
                 childrenExecutedCommand: (0, Z.Z)(s, l, k),

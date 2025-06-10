@@ -11,13 +11,13 @@ var a = n(255367),
     p = n(585483),
     m = n(254109),
     g = n(212459),
-    f = n(730606),
-    y = n(860153),
+    y = n(730606),
+    f = n(860153),
     b = n(981631),
     O = n(388032),
     _ = n(269045);
 function h(e) {
-    var { onClose: t, items: n, startingIndex: o, shouldRedactExplicitContent: h, shouldHideMediaOptions: S = !1, transitionState: v } = e,
+    var { onClose: t, items: n, startingIndex: o, enabledContentHarmTypeFlags: h, shouldHideMediaOptions: S = !1, transitionState: v } = e,
         j = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -36,10 +36,10 @@ function h(e) {
                 for (a = 0; a < o.length; a++) (n = o[a]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
-        })(e, ['onClose', 'items', 'startingIndex', 'shouldRedactExplicitContent', 'shouldHideMediaOptions', 'transitionState']);
-    let [C, E] = r.useState(null != o ? o : 0),
-        [T, x] = r.useState(!1),
-        P = r.useRef(null),
+        })(e, ['onClose', 'items', 'startingIndex', 'enabledContentHarmTypeFlags', 'shouldHideMediaOptions', 'transitionState']);
+    let [C, T] = r.useState(null != o ? o : 0),
+        [E, P] = r.useState(!1),
+        x = r.useRef(null),
         M = (0, d.Q3)('MediaViewerModal');
     r.useEffect(() => {
         if (null != t)
@@ -59,7 +59,7 @@ function h(e) {
                 a = () => {
                     u.Z.disableTemp();
                 },
-                r = null == (t = P.current) || null == (e = t.ownerDocument) ? void 0 : e.defaultView;
+                r = null == (t = x.current) || null == (e = t.ownerDocument) ? void 0 : e.defaultView;
             return (
                 null == r || r.addEventListener('focus', n),
                 null == r || r.addEventListener('blur', a),
@@ -69,15 +69,15 @@ function h(e) {
             );
         }, [v]);
     let w = r.useCallback((e) => {
-            E(e), (0, m.yg)(m.uG.SELECTED_ITEM_CHANGE);
+            T(e), (0, m.yg)(m.uG.SELECTED_ITEM_CHANGE);
         }, []),
         D = r.useMemo(
             () => ({
-                zoomed: T,
-                setZoomed: x,
+                zoomed: E,
+                setZoomed: P,
                 entering: v === l.Dvm.ENTERING || null == v
             }),
-            [T, v]
+            [E, v]
         ),
         I = n[C];
     return (0, a.jsx)(l.f6W, {
@@ -129,20 +129,20 @@ function h(e) {
                         children: (0, a.jsxs)(g.z.Provider, {
                             value: D,
                             children: [
-                                (0, a.jsx)(y.Z, {
+                                (0, a.jsx)(f.Z, {
                                     item: I,
                                     hideMediaOptions: S,
                                     onClose: t
                                 }),
                                 (0, a.jsx)('div', {
                                     style: { display: 'none' },
-                                    ref: P
+                                    ref: x
                                 }),
-                                (0, a.jsx)(f.ZP, {
+                                (0, a.jsx)(y.ZP, {
                                     items: n,
                                     startIndex: C,
                                     onIndexChange: w,
-                                    shouldRedactExplicitContent: h,
+                                    enabledContentHarmTypeFlags: h,
                                     shouldHideMediaOptions: S
                                 })
                             ]
