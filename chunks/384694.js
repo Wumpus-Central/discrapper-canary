@@ -43,8 +43,9 @@ let p = (e) => ({
                               children: [
                                   (0, n.jsx)(i.Z, {
                                       guild: t,
-                                      size: i.Z.Sizes.SMALLER,
-                                      active: !0
+                                      size: i.Z.Sizes.MEDIUM,
+                                      active: !0,
+                                      className: d.guildSelectOptionIcon
                                   }),
                                   (0, n.jsx)(s.Text, {
                                       variant: 'text-sm/medium',

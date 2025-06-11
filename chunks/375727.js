@@ -1,4 +1,4 @@
-r.d(t, { I: () => O }), r(388685);
+r.d(t, { I: () => j }), r(388685);
 var n = r(255367),
     a = r(73800),
     l = r(442837),
@@ -14,18 +14,18 @@ var n = r(255367),
     m = r(384694),
     f = r(273391),
     v = r(793972),
-    x = r(981631),
-    b = r(388032),
+    b = r(981631),
+    x = r(388032),
     _ = r(139797);
-let j = new o.Z('EmojiStudio'),
-    O = (e) => {
+let O = new o.Z('EmojiStudio'),
+    j = (e) => {
         let { userImage: t, guildId: r, back: o } = e,
-            O = (0, l.e7)([c.Z, d.Z, u.Z], () => {
+            j = (0, l.e7)([c.Z, d.Z, u.Z], () => {
                 let e = d.Z.getGuildId(),
                     t = c.Z.getGuild(e);
-                return u.Z.can(x.Plq.CREATE_GUILD_EXPRESSIONS, t) && null != t ? t.id : null;
+                return u.Z.can(b.Plq.CREATE_GUILD_EXPRESSIONS, t) && null != t ? t.id : null;
             }),
-            [N, D] = a.useState(null != r ? r : O),
+            [N, D] = a.useState(null != r ? r : j),
             [I, y] = a.useState(null),
             [S, C] = a.useState(''),
             [w, A] = a.useState(null),
@@ -39,7 +39,7 @@ let j = new o.Z('EmojiStudio'),
                         name: S
                     });
                 } catch (e) {
-                    y((0, g.z)(e)), j.error('Failed to upload emoji.', e);
+                    y((0, g.z)(e)), O.error('Failed to upload emoji.', e);
                     return;
                 }
                 (0, s.Mr3)(h.Hj);
@@ -101,7 +101,7 @@ let j = new o.Z('EmojiStudio'),
                                     onClick: k,
                                     fullWidth: !0,
                                     disabled: null == t || null == N || S.length < 2,
-                                    children: b.intl.string(b.t.DU0dy8)
+                                    children: x.intl.string(x.t.DU0dy8)
                                 })
                             ]
                         })
@@ -114,7 +114,7 @@ let j = new o.Z('EmojiStudio'),
     E = (e) => {
         let { back: t } = e;
         return (0, n.jsx)(s.zxk, {
-            'aria-label': b.intl.string(b.t['13/7kZ']),
+            'aria-label': x.intl.string(x.t['13/7kZ']),
             onClick: t,
             look: s.zxk.Looks.BLANK,
             innerClassName: _.backButtonInnner,
