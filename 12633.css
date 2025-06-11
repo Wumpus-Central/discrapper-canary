@@ -25038,19 +25038,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 }
 
 .addEmojiButton__08434 {
-    height: 32px;
-    margin-left: auto;
-    min-width: 32px;
-    padding: 0 12px
-}
-
-.addEmojiButton__08434>div {
-    align-items: center;
-    display: flex
-}
-
-.addEmojiButton__08434 svg {
-    margin-right: 4px
+    margin-left: auto
 }
 
 .emojiStudioActive__08434 {
