@@ -6296,28 +6296,8 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     height: 100%
 }
 
+.body__468a6,
 .title__468a6 {
-    text-align: center
-}
-
-.minorContainer__468a6 {
-    cursor: pointer;
-    flex: 0 0 auto;
-    margin-bottom: -10px;
-    margin-top: 8px;
-    width: 100%
-}
-
-.secondaryAction__468a6 {
-    opacity: .6;
-    text-align: center
-}
-
-.secondaryAction__468a6:hover {
-    text-decoration: underline
-}
-
-.body__468a6 {
     text-align: center
 }
 
@@ -6326,8 +6306,8 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     flex: 1 1 45%
 }
 
-.gutter__468a6 {
-    margin-left: 10px
+.modalFooter__468a6 {
+    gap: var(--space-8)
 }
 
 .visual-refresh .container__468a6 {
