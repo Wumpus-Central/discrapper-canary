@@ -19,15 +19,15 @@ var i = n(255367),
     E = n(626135),
     j = n(526167),
     C = n(74538),
-    O = n(140465),
-    S = n(286961),
-    v = n(91802),
-    T = n(639119),
-    I = n(8647),
-    N = n(784238),
-    y = n(568126),
-    A = n(605289),
-    P = n(346497),
+    O = n(367074),
+    S = n(140465),
+    v = n(286961),
+    T = n(91802),
+    I = n(639119),
+    N = n(8647),
+    y = n(784238),
+    A = n(568126),
+    P = n(605289),
     R = n(218390),
     D = n(823188),
     Z = n(611116),
@@ -132,15 +132,15 @@ let ea = (e) => {
             eN = null != eI ? (0, C.Af)(eI) : null,
             ey = null != eN ? C.ZP.getSkuIdForPlan(eN.planId) : null,
             eA = null !== ey && ey !== q.Si.TIER_2 ? q.Si.TIER_2 : null,
-            eP = (0, v.n)(),
+            eP = (0, T.n)(),
             eR = null != eP,
             [eD, eZ] = r.useState(!1),
-            ew = (0, T.N)(),
+            ew = (0, I.N)(),
             ek = null == ew || null == (t = ew.subscription_trial) ? void 0 : t.sku_id,
-            eL = (0, O.Nx)(),
-            eB = (0, P.Vi)(),
+            eL = (0, S.Nx)(),
+            eB = (0, O.Vi)(),
             eM = null != eB && eB,
-            eU = null == (n = (0, S.Z)()) ? void 0 : n.billingSettingsMarketingBanner,
+            eU = null == (n = (0, v.Z)()) ? void 0 : n.billingSettingsMarketingBanner,
             { analyticsLocations: eV } = (0, h.ZP)(p.Z.PREMIUM_MARKETING),
             eG = 'PremiumMarketingHome';
         (0, u.j)({
@@ -169,7 +169,7 @@ let ea = (e) => {
                         isApplicationHome: k,
                         showWumpus: !k,
                         tier0CTAButton: k
-                            ? (0, i.jsx)(N.Z, {
+                            ? (0, i.jsx)(y.Z, {
                                   color: eh && !k ? d.Ttl.BRAND_INVERTED : void 0,
                                   showIcon: !1,
                                   subscriptionTier: q.Si.TIER_0,
@@ -177,7 +177,7 @@ let ea = (e) => {
                                   textOptions: { textClassName: k ? $.v2SubButtonText : $.subButtonText },
                                   buttonShineClassName: $.buttonShine
                               })
-                            : (0, i.jsx)(N.Z, {
+                            : (0, i.jsx)(y.Z, {
                                   showIcon: !1,
                                   subscriptionTier: q.Si.TIER_0,
                                   className: $.marginTopForButtons,
@@ -187,7 +187,7 @@ let ea = (e) => {
                               }),
                         tier2CTAButton:
                             ek !== q.Si.TIER_0 || k
-                                ? (0, i.jsx)(N.Z, {
+                                ? (0, i.jsx)(y.Z, {
                                       color: k ? void 0 : d.Ttl.BRAND_INVERTED,
                                       showIcon: !1,
                                       subscriptionTier: q.Si.TIER_2,
@@ -196,7 +196,7 @@ let ea = (e) => {
                                       textOptions: { textClassName: k ? $.v2SubButtonText : $.subButtonText },
                                       buttonShineClassName: $.buttonShine
                                   })
-                                : (0, i.jsx)(N.Z, {
+                                : (0, i.jsx)(y.Z, {
                                       showIcon: !1,
                                       subscriptionTier: q.Si.TIER_2,
                                       className: $.marginTopForButtons,
@@ -234,7 +234,7 @@ let ea = (e) => {
                             inOfferExperience: eL
                         }),
                     !s && eR
-                        ? (0, i.jsx)(A.Z, {
+                        ? (0, i.jsx)(P.Z, {
                               localizedPricingPromo: eP,
                               smallGap: !0
                           })
@@ -292,7 +292,7 @@ let ea = (e) => {
                           }),
                     (0, i.jsxs)('div', {
                         className: $.promoBannerContainer,
-                        children: [(0, i.jsx)(I.Z, { isFullScreen: s }), s && eR && (0, i.jsx)(y.Z, { localizedPricingPromo: eP })]
+                        children: [(0, i.jsx)(N.Z, { isFullScreen: s }), s && eR && (0, i.jsx)(A.Z, { localizedPricingPromo: eP })]
                     }),
                     !k && eF,
                     Z === q.EZ.UserSettings &&

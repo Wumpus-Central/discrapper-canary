@@ -2,15 +2,15 @@ n.d(t, { Z: () => h }), n(388685);
 var i = n(255367),
     r = n(73800),
     o = n(704215),
-    s = n(481060),
-    l = n(243778),
+    l = n(481060),
+    s = n(243778),
     a = n(921944),
     c = n(388032),
     d = n(63791),
     u = n(215916);
 function h(e) {
     let { locked: t } = e,
-        [n, h] = (0, l.US)(t ? [] : [o.z.OVERLAY_OOP_WELCOME_BACKGROUND_SWITCH_FROM_IP_NUX], void 0, !0);
+        [n, h] = (0, s.US)(t ? [] : [o.z.OVERLAY_OOP_WELCOME_BACKGROUND_SWITCH_FROM_IP_NUX], void 0, !0);
     return (r.useEffect(() => {
         if (!t && n === o.z.OVERLAY_OOP_WELCOME_BACKGROUND_SWITCH_FROM_IP_NUX)
             return () => {
@@ -27,13 +27,13 @@ function h(e) {
                       (0, i.jsxs)('div', {
                           className: d.mainTitleContainer,
                           children: [
-                              (0, i.jsx)(s.X6q, {
+                              (0, i.jsx)(l.X6q, {
                                   variant: 'heading-xl/medium',
                                   color: 'header-primary',
                                   className: d.mainTitle,
                                   children: c.intl.format(c.t.Eg5ybG, {})
                               }),
-                              (0, i.jsx)(s.Text, {
+                              (0, i.jsx)(l.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-muted',
                                   className: d.mainTitleBody,
@@ -47,8 +47,8 @@ function h(e) {
                               (0, i.jsxs)('div', {
                                   className: d.widgetCallout,
                                   children: [
-                                      (0, i.jsx)(s.qjv, {}),
-                                      (0, i.jsx)(s.Text, {
+                                      (0, i.jsx)(l.qjv, {}),
+                                      (0, i.jsx)(l.Text, {
                                           variant: 'text-md/medium',
                                           color: 'interactive-normal',
                                           children: c.intl.string(c.t.S6VRyM)
@@ -58,8 +58,8 @@ function h(e) {
                               (0, i.jsxs)('div', {
                                   className: d.widgetCallout,
                                   children: [
-                                      (0, i.jsx)(s.Dkj, {}),
-                                      (0, i.jsx)(s.Text, {
+                                      (0, i.jsx)(l.Dkj, {}),
+                                      (0, i.jsx)(l.Text, {
                                           variant: 'text-md/medium',
                                           color: 'interactive-normal',
                                           children: c.intl.string(c.t.xq8CKS)
@@ -69,8 +69,8 @@ function h(e) {
                               (0, i.jsxs)('div', {
                                   className: d.widgetCallout,
                                   children: [
-                                      (0, i.jsx)(s.Odl, {}),
-                                      (0, i.jsx)(s.Text, {
+                                      (0, i.jsx)(l.Odl, {}),
+                                      (0, i.jsx)(l.Text, {
                                           variant: 'text-md/medium',
                                           color: 'interactive-normal',
                                           children: c.intl.string(c.t.GwpRe3)
@@ -80,8 +80,8 @@ function h(e) {
                               (0, i.jsxs)('div', {
                                   className: d.widgetCallout,
                                   children: [
-                                      (0, i.jsx)(s.KY1, {}),
-                                      (0, i.jsx)(s.Text, {
+                                      (0, i.jsx)(l.KY1, {}),
+                                      (0, i.jsx)(l.Text, {
                                           variant: 'text-md/medium',
                                           color: 'interactive-normal',
                                           children: c.intl.string(c.t.VUoC5O)

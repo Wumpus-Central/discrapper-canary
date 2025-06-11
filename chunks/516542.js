@@ -15,8 +15,8 @@ var i = n(255367),
     g = n(981631),
     y = n(842304);
 function O(e) {
-    let { id: t, replyToMessageId: n, channel: O, onSend: b } = e,
-        v = (0, f.Z)(),
+    let { id: t, replyToMessageId: n, channel: O, onSend: v } = e,
+        b = (0, f.Z)(),
         { placeholder: E, accessibilityLabel: _ } = (0, c.Z)({ channel: O }),
         [x, S] = r.useState(() => (0, d.H2)()),
         { textValue: I, richValue: j } = x,
@@ -40,13 +40,13 @@ function O(e) {
         ),
         k = r.useCallback(
             () => (
-                I.length > v || (o.Z.sendMessage(O.id, h.ZP.parse(O, I), !1), l.Z.setInputLocked(!0, (0, m.getPID)()), l.Z.updateNotificationStatus(t, g._1z.DISMISSED), null == b || b(I)),
+                I.length > b || (o.Z.sendMessage(O.id, h.ZP.parse(O, I), !1), l.Z.setInputLocked(!0, (0, m.getPID)()), l.Z.updateNotificationStatus(t, g._1z.DISMISSED), null == v || v(I)),
                 Promise.resolve({
                     shouldClear: !1,
                     shouldRefocus: !0
                 })
             ),
-            [I, v, O, t, b]
+            [I, b, O, t, v]
         );
     return (0, i.jsx)('div', {
         className: y.container,

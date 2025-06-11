@@ -150,10 +150,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                 },
                 [t.guild_id]
             ),
-            q = (0, j.K)({
-                location: 'ThreadMembers',
-                user: b
-            }),
+            q = (0, j.K)({ user: b }),
             [K, X] = i.useState(!1);
         if (null == b) return null;
         let Q = null == h ? void 0 : h.premiumSince;

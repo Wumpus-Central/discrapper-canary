@@ -20,8 +20,8 @@ var i = n(255367),
     g = n(592125),
     y = n(355863),
     O = n(944486),
-    b = n(353038),
-    v = n(804570),
+    v = n(353038),
+    b = n(804570),
     E = n(350663),
     _ = n(610394),
     x = n(461393),
@@ -97,8 +97,8 @@ let A = (e) => {
         s = Math.max(1, i.width - a) / Math.max(1, i.height - a),
         c = (() => {
             switch (t) {
-                case b.B.RESIZE_NORTH:
-                case b.B.RESIZE_SOUTH:
+                case v.B.RESIZE_NORTH:
+                case v.B.RESIZE_SOUTH:
                     return {
                         height: n.height,
                         width: Math.round((n.height - a) * s + a)
@@ -121,7 +121,7 @@ function R(e) {
     let { width: c, height: u } = A(
             N(
                 {
-                    operation: b.B.RESIZE_NORTH,
+                    operation: v.B.RESIZE_NORTH,
                     computedSize: {
                         width: n.width,
                         height: n.height
@@ -140,7 +140,7 @@ function R(e) {
         { width: d, height: p } = A(
             N(
                 {
-                    operation: b.B.RESIZE_NORTH,
+                    operation: v.B.RESIZE_NORTH,
                     computedSize: {
                         width: o.width,
                         height: o.height
@@ -170,7 +170,7 @@ function R(e) {
     });
 }
 function L(e) {
-    var t, n, a, b, x, P;
+    var t, n, a, v, x, P;
     let { id: A, widget: L, size: M, locked: z, padding: U, borderWidth: V, opacity: W, horizontal: G, pinned: F, anchorTop: B, anchorLeft: H, showEmpty: Y = !0 } = e,
         Q = 2 * U + 2 * V,
         { width: K, height: X } = {
@@ -274,7 +274,7 @@ function L(e) {
                 top: 0,
                 left: 0,
                 bottom: null != (a = null == ef ? void 0 : ef.height) ? a : X,
-                right: null != (b = null == ef ? void 0 : ef.width) ? b : K
+                right: null != (v = null == ef ? void 0 : ef.width) ? v : K
             }
         };
     return (r.useEffect(() => {
@@ -389,7 +389,7 @@ function L(e) {
           ? Y
               ? z
                   ? null
-                  : (0, i.jsx)(v.E, {
+                  : (0, i.jsx)(b.E, {
                         emptyText: j.intl.string(j.t['T6+rX1']),
                         icon: l.hGI,
                         absolute: !0

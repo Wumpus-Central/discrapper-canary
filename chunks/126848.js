@@ -4,11 +4,11 @@ n(73800);
 var i = n(120356),
     s = n.n(i),
     o = n(442837),
-    a = n(104494),
-    l = n(639119),
-    c = n(655525),
-    u = n(52188),
-    d = n(346497),
+    a = n(367074),
+    l = n(104494),
+    c = n(639119),
+    u = n(655525),
+    d = n(52188),
     p = n(924540),
     f = n(351402),
     g = n(170671),
@@ -17,14 +17,14 @@ var i = n(120356),
 function _(e) {
     let t,
         { decoration: n, label: i, isSelected: _ } = e,
-        v = (0, l.N)(),
-        h = (0, a.Ng)(),
-        O = (0, d.Vi)(),
+        v = (0, c.N)(),
+        h = (0, l.Ng)(),
+        O = (0, a.Vi)(),
         y = (0, o.e7)([f.Z], () => f.Z.isLocalizedPromoEnabled) && null == v && null == n,
         j = (null == v ? void 0 : v.trial_id) === b.a7;
     return (
         (t = O
-            ? (0, r.jsx)(c.Z, {})
+            ? (0, r.jsx)(u.Z, {})
             : null != h
               ? (0, r.jsx)(p.GN, {
                     isTabSelected: _,
@@ -35,7 +35,7 @@ function _(e) {
                 ? null != n
                     ? n
                     : y
-                      ? (0, r.jsx)(u.k, { entryPoint: u.U.SettingsMenu })
+                      ? (0, r.jsx)(d.k, { entryPoint: d.U.SettingsMenu })
                       : (0, r.jsx)(g.Z, { isSelected: _ })
                 : (0, r.jsx)(p.$H, {
                       isTabSelected: _,

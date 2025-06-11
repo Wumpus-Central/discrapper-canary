@@ -140,10 +140,7 @@ let X = l.memo((e) => {
         et = i.filter((e) => e.type === q.IIU.PLAYING && (0, h.Z)(e, q.xjy.JOIN)),
         en = (0, o.Wu)([D.Z], () => D.Z.getActivities().filter((e) => e.type === q.IIU.PLAYING && (0, h.Z)(e, q.xjy.JOIN))),
         { voiceChannel: ei } = (0, S.Z)({ userId: t.id }),
-        er = (0, P.K)({
-            location: 'friends-popout',
-            user: t
-        }),
+        er = (0, P.K)({ user: t }),
         {
             status: el,
             applicationStream: es,

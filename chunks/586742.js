@@ -19,8 +19,8 @@ var i = n(255367),
     g = n(796638),
     y = n(592125),
     O = n(131951),
-    b = n(944486),
-    v = n(237997),
+    v = n(944486),
+    b = n(237997),
     E = n(136015),
     _ = n(444295),
     x = n(906037),
@@ -126,7 +126,7 @@ let A = r.memo(function (e) {
         r.useEffect(() => {
             d &&
                 (0, _.zi)(w.Odu.VIDEO, {
-                    locked: v.default.isInstanceLocked(),
+                    locked: b.default.isInstanceLocked(),
                     shownUserIds: Array.from(f),
                     liveUserIds: Array.from(f),
                     contentInventoryIds: []
@@ -240,13 +240,13 @@ let A = r.memo(function (e) {
     };
 function z(e) {
     var t, n, o, l;
-    let s = (0, a.e7)([b.Z, y.Z], () => y.Z.getChannel(b.Z.getVoiceChannelId())),
+    let s = (0, a.e7)([v.Z, y.Z], () => y.Z.getChannel(v.Z.getVoiceChannelId())),
         c = 2 * e.padding + 2 * e.borderWidth,
         h = null == s ? void 0 : s.id,
         [m, O] = (0, a.e7)([p.Z], () => (null == h ? [[], 0] : [p.Z.getVideoParticipants(h), p.Z.getParticipantsVersion(h)]), [h], E.Q),
-        v = 'boolean' != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
+        b = 'boolean' != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
         { width: _ = e.width - c, height: x = e.height - c, ref: I } = (0, d.ZP)(e.locked, e.widget.pinned),
-        { participantTileWidth: j, visibleParticipants: C } = (0, g.ZB)(v ? _ : x, m, {
+        { participantTileWidth: j, visibleParticipants: C } = (0, g.ZB)(b ? _ : x, m, {
             tileWidth: N.vZ,
             tileMinWidth: N.mo,
             tileMargin: N.F$,
@@ -318,7 +318,7 @@ function z(e) {
                     });
                 }, [t]);
         })({
-            horizontal: v,
+            horizontal: b,
             widget: e.widget,
             widgetLayoutSpecs: Z
         }),
@@ -328,8 +328,8 @@ function z(e) {
                 channel: s,
                 participants: C,
                 participantsVersion: O,
-                width: v ? j : null != _ ? _ : e.width,
-                height: v ? (null != x ? x : e.height) : j,
+                width: b ? j : null != _ ? _ : e.width,
+                height: b ? (null != x ? x : e.height) : j,
                 containerRef: I
             })
         )

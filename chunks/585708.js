@@ -16,8 +16,8 @@ var r = n(13245),
     g = n(618373),
     y = n(620954),
     O = n(987650),
-    b = n(981631),
-    v = n(388032);
+    v = n(981631),
+    b = n(388032);
 function E(e, t, n, E) {
     var _;
     let { icon: x, title: S, body: I } = (0, a.Xi)(e, t, n),
@@ -41,7 +41,7 @@ function E(e, t, n, E) {
                       hideSimpleEmbedContent: !1
                   }).content
                 : I,
-        hint: (e, t) => (e && !t ? null : (0, g.Q)((0, y.P)(), v.t.ykjOAA, v.intl.string(v.t.jZkzVF))),
+        hint: (e, t) => (e && !t ? null : (0, g.Q)((0, y.P)(), b.t.ykjOAA, b.intl.string(b.t.jZkzVF))),
         maxBodyLines: 2,
         renderFooter: (n, r, o) =>
             n && !o
@@ -57,7 +57,7 @@ function E(e, t, n, E) {
         },
         onNotificationClick: () => {
             let n = (0, h.getPID)();
-            (0, o.In)(e.id, !0, !0, t.id, { section: b.jXE.OVERLAY }), f.ZP.isInputLocked(n) ? (C('unlock'), r.Z.setInputLocked(!1, n)) : (C('jump'), (0, s.uL)(b.Z5c.CHANNEL(e.guild_id, e.id, t.id)), d.isPlatformEmbedded && p.ZP.focus());
+            (0, o.In)(e.id, !0, !0, t.id, { section: v.jXE.OVERLAY }), f.ZP.isInputLocked(n) ? (C('unlock'), r.Z.setInputLocked(!1, n)) : (C('jump'), (0, s.uL)(v.Z5c.CHANNEL(e.guild_id, e.id, t.id)), d.isPlatformEmbedded && p.ZP.focus());
         },
         onDismissClick: () => {
             C('dismiss');

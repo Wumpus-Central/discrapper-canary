@@ -2,8 +2,8 @@ n.d(t, { Z: () => R }), n(388685);
 var i = n(255367),
     r = n(73800),
     o = n(120356),
-    s = n.n(o),
-    l = n(688642),
+    l = n.n(o),
+    s = n(688642),
     a = n(442837),
     c = n(481060),
     d = n(846027),
@@ -14,20 +14,20 @@ var i = n(255367),
     g = n(77880),
     m = n(870569),
     y = n(345243),
-    v = n(873596),
-    _ = n(917405),
-    O = n(430824),
+    O = n(873596),
+    v = n(917405),
+    _ = n(430824),
     b = n(131951),
     E = n(699516),
-    x = n(594174),
-    S = n(979651),
+    S = n(594174),
+    x = n(979651),
     C = n(362446),
-    j = n(518084),
-    Z = n(981631),
+    Z = n(518084),
+    j = n(981631),
     I = n(388032),
     P = n(738901),
-    N = n(566177);
-function w(e, t, n) {
+    w = n(566177);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,7 +51,7 @@ function T(e) {
                 })
             )),
             i.forEach(function (t) {
-                w(e, t, n[t]);
+                N(e, t, n[t]);
             });
     }
     return e;
@@ -80,32 +80,32 @@ class D extends r.PureComponent {
     }
     renderChannelLink(e) {
         let { guild: t } = this.props,
-            n = (0, p.F6)(e, x.default, E.Z),
+            n = (0, p.F6)(e, S.default, E.Z),
             r = null != t ? ''.concat(n, ' / ').concat(t.name) : n,
-            o = null != t ? t.id : Z.ME;
-        return (0, i.jsx)(l.rU, {
-            to: Z.Z5c.CHANNEL(o),
+            o = null != t ? t.id : j.ME;
+        return (0, i.jsx)(s.rU, {
+            to: j.Z5c.CHANNEL(o),
             onClick: (t) => {
                 t.stopPropagation(), u.Z.channelListScrollTo(o, e.id);
             },
             children: (0, i.jsx)(y.Z, {
-                className: N.channel,
+                className: w.channel,
                 children: r
             })
         });
     }
     render() {
-        let { className: e, contentClassName: t, pinned: n, lobbyId: r, channel: o, quality: l, lastPing: a, hasVideo: d, connectionState: u, deaf: h, mute: p, changeLeaveCallAndActivityIcons: g } = this.props;
+        let { className: e, contentClassName: t, pinned: n, lobbyId: r, channel: o, quality: s, lastPing: a, hasVideo: d, connectionState: u, deaf: h, mute: p, changeLeaveCallAndActivityIcons: g } = this.props;
         return null == o
             ? null
-            : (0, i.jsx)(j.ZP.Bar, {
-                  className: s()(e, P.controls, { [P.unpinned]: !n }),
-                  children: (0, i.jsxs)(j.ZP.Content, {
-                      className: s()(t, P.content),
+            : (0, i.jsx)(Z.ZP.Bar, {
+                  className: l()(e, P.controls, { [P.unpinned]: !n }),
+                  children: (0, i.jsxs)(Z.ZP.Content, {
+                      className: l()(t, P.content),
                       dynamicSize: !0,
                       children: [
                           (0, i.jsx)('div', {
-                              className: N.inner,
+                              className: w.inner,
                               children: (0, i.jsx)(c.yRy, {
                                   targetElementRef: this.rtcConnectionStatusRef,
                                   renderPopout: () => this.renderPopout(o.id),
@@ -115,9 +115,9 @@ class D extends r.PureComponent {
                                           c.P3F,
                                           k(T({}, e), {
                                               innerRef: this.rtcConnectionStatusRef,
-                                              children: (0, i.jsx)(_.Z, {
+                                              children: (0, i.jsx)(v.Z, {
                                                   channelId: o.id,
-                                                  quality: l,
+                                                  quality: s,
                                                   lastPing: a,
                                                   hasVideo: d,
                                                   state: u,
@@ -156,24 +156,24 @@ class D extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            w(this, 'rtcConnectionStatusRef', r.createRef()),
-            w(this, 'handleToggleSelfMute', () => {
+            N(this, 'rtcConnectionStatusRef', r.createRef()),
+            N(this, 'handleToggleSelfMute', () => {
                 let { context: e } = this.props;
                 d.Z.toggleSelfMute({
                     context: e,
                     location: 'Overlay Controls'
                 });
             }),
-            w(this, 'handleToggleSelfDeaf', () => {
+            N(this, 'handleToggleSelfDeaf', () => {
                 let { context: e } = this.props;
                 d.Z.toggleSelfDeaf({
                     context: e,
                     location: 'Overlay Controls'
                 });
             }),
-            w(this, 'renderPopout', (e) => {
+            N(this, 'renderPopout', (e) => {
                 let { lobbyId: t } = this.props;
-                return (0, i.jsx)(v.Z, {
+                return (0, i.jsx)(O.Z, {
                     channelId: e,
                     lobbyId: t,
                     isOverlay: !0
@@ -202,8 +202,8 @@ function R(e) {
             }
             return r;
         })(e, ['context', 'lobbyId', 'channel']);
-    let s = (0, a.e7)([O.Z], () => O.Z.getGuild(null == r ? void 0 : r.getGuildId())),
-        l = (0, a.e7)([S.Z], () => null != r && S.Z.hasVideo(r.id)),
+    let l = (0, a.e7)([_.Z], () => _.Z.getGuild(null == r ? void 0 : r.getGuildId())),
+        s = (0, a.e7)([x.Z], () => null != r && x.Z.hasVideo(r.id)),
         [c, d] = (0, a.Wu)([b.Z], () => [b.Z.isSelfMute(t) || b.Z.isSelfMutedTemporarily(t), b.Z.isSelfDeaf(t)]),
         [u, h, p] = (0, a.Wu)([C.Z], () => [C.Z.getConnectionState(n), C.Z.getLastPing(n), C.Z.getQuality(n)]),
         { changeLeaveCallAndActivityIcons: f } = (0, g.A)({ location: 'Controls' });
@@ -213,8 +213,8 @@ function R(e) {
             context: t,
             lobbyId: n,
             channel: r,
-            guild: s,
-            hasVideo: l,
+            guild: l,
+            hasVideo: s,
             mute: c,
             deaf: d,
             connectionState: u,

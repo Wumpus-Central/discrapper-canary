@@ -6,16 +6,16 @@ var i = n(255367);
 n(73800);
 var r = n(481060),
     o = n(312839),
-    s = n(556296),
-    l = n(13140),
+    l = n(556296),
+    s = n(13140),
     a = n(981631),
     c = n(987650),
     d = n(388032);
 function u() {
     let { trackView: e, trackClick: t } = (0, o.R)(c.n0.ClipsReminderNotification, { notif_type: c.n0.ClipsReminderNotification }),
-        n = s.ZP.getKeybindForAction(a.kg4.SAVE_CLIP);
+        n = l.ZP.getKeybindForAction(a.kg4.SAVE_CLIP);
     if (null == n) return null;
-    let u = l.BB(n.shortcut, !0);
+    let u = s.BB(n.shortcut, !0);
     return {
         title: d.intl.format(d.t.S5uhCA, {
             keybind: u,

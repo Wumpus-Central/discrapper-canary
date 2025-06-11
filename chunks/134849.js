@@ -15,10 +15,10 @@ var i = n(255367),
     g = n(388032),
     y = n(76932);
 let O = [];
-function b(e) {
+function v(e) {
     return e.notification.id;
 }
-function v(e, t, n, r) {
+function b(e, t, n, r) {
     let { index: o, notification: l, locked: a } = t;
     return (0, i.jsx)(
         p.Z,
@@ -68,8 +68,8 @@ let _ = (e) => r.useState(() => new h.AS(e))[0],
                   value: y,
                   children: (0, i.jsx)(l.W3x, {
                       items: p,
-                      renderItem: v,
-                      getItemKey: b,
+                      renderItem: b,
+                      getItemKey: v,
                       wrapChildren: E
                   })
               })

@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var i = n(278323),
     r = n(13245),
     o = n(45114),
-    s = n(593481),
-    l = n(237997),
+    l = n(593481),
+    s = n(237997),
     a = n(312839),
     c = n(981631),
     d = n(987650),
@@ -25,7 +25,7 @@ function h(e, t, n, h) {
         icon: g,
         title: p,
         body: f,
-        hint: (e) => (0, s.QR)(e, (0, a.P)(), u.t['Odi54+']),
+        hint: (e) => (0, l.QR)(e, (0, a.P)(), u.t['Odi54+']),
         confirmText: u.intl.string(u.t['fgP/wc']),
         cancelText: u.intl.string(u.t.tpXzJy),
         onNotificationShow: () => {
@@ -36,7 +36,7 @@ function h(e, t, n, h) {
                 channelId: e.id,
                 type: c.mFx.JOIN,
                 activity: h,
-                location: l.default.isInstanceLocked() ? c.Sbl.LOCKED_OVERLAY : c.Sbl.UNLOCKED_OVERLAY
+                location: s.default.isInstanceLocked() ? c.Sbl.LOCKED_OVERLAY : c.Sbl.UNLOCKED_OVERLAY
             }),
                 y('join'),
                 r.Z.updateNotificationStatus(n);

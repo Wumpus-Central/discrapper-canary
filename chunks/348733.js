@@ -2,8 +2,8 @@ n.d(t, { Z: () => y }), n(388685);
 var i = n(255367),
     r = n(73800),
     o = n(120356),
-    s = n.n(o),
-    l = n(392711),
+    l = n.n(o),
+    s = n(392711),
     a = n(442837),
     c = n(261435),
     d = n(237997),
@@ -19,20 +19,20 @@ function y(e) {
         p = (0, a.Wu)([c.Z], () => c.Z.getNotifications()),
         y = (0, a.e7)([d.default], () => d.default.getNotificationPositionMode());
     if ((0, a.e7)([f.Z], () => f.Z.isNotificationDisabled(u.OverlayNotificationDisabledSetting.TEXT_CHAT)) || y === g._vf.DISABLED) return null;
-    let _ = p.filter((e) => !t || e.status !== g._1z.TIMED_OUT),
-        O = (0, l.groupBy)(_, (e) => e.type);
+    let v = p.filter((e) => !t || e.status !== g._1z.TIMED_OUT),
+        _ = (0, s.groupBy)(v, (e) => e.type);
     return (0, i.jsx)(h.Z, {
         contentDomRef: o,
         observeInterval: 200,
         children: (0, i.jsx)('div', {
             ref: o,
-            className: s()(m.container, m[y]),
-            children: Object.entries(O).map((e) => {
+            className: l()(m.container, m[y]),
+            children: Object.entries(_).map((e) => {
                 let [r, o] = e;
                 return 0 === o.length
                     ? null
                     : (0, i.jsx)(
-                          v,
+                          O,
                           {
                               locked: t,
                               keybind: n,
@@ -45,7 +45,7 @@ function y(e) {
         })
     });
 }
-function v(e) {
+function O(e) {
     let { notification: t, position: n, keybind: r, locked: o } = e;
     return (0, i.jsx)('div', {
         className: m.notificationGroup,

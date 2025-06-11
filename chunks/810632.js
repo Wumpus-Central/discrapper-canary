@@ -16,10 +16,10 @@ function g(e, t) {
     let g = (0, o.e7)([d.Z], () => d.Z.getVoiceChannelId()),
         y = (0, o.e7)([c.Z], () => c.Z.getChannel(g), [g]),
         O = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
-        b = null == y ? void 0 : y.getGuildId(),
-        v = (0, o.e7)([u.Z], () => (0, a.Z)(u.Z));
+        v = null == y ? void 0 : y.getGuildId(),
+        b = (0, o.e7)([u.Z], () => (0, a.Z)(u.Z));
     return r.useCallback(async () => {
-        if (!v || null == g) return;
+        if (!b || null == g) return;
         let [r] = await (0, s.Z)(e);
         if (!r) {
             if (null == O) return void (0, l.showToast)((0, l.createToast)(m.intl.string(m.t.OKnWyc), l.ToastType.FAILURE));
@@ -59,7 +59,7 @@ function g(e, t) {
                                 {
                                     sourcePID: (0, h.getPID)(),
                                     selectSource: !1,
-                                    guildId: b,
+                                    guildId: v,
                                     analyticsLocation: f.Sbl.UNLOCKED_OVERLAY
                                 }),
                             Object.getOwnPropertyDescriptors
@@ -81,5 +81,5 @@ function g(e, t) {
                 { contextKey: null != t ? (0, l.VnL)(t) : void 0 }
             );
         }
-    }, [v, b, g, t, e, O]);
+    }, [b, v, g, t, e, O]);
 }

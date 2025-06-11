@@ -2,8 +2,8 @@ n.d(t, { Z: () => d }), n(388685);
 var i = n(255367),
     r = n(73800),
     o = n(13245),
-    s = n(593481),
-    l = n(981631);
+    l = n(593481),
+    s = n(981631);
 function a(e, t, n) {
     return (
         t in e
@@ -27,16 +27,16 @@ class c extends r.Component {
                 props: { position: r, zIndex: o }
             } = this;
         switch (r) {
-            case l._vf.TOP_LEFT:
-            case l._vf.BOTTOM_LEFT:
+            case s._vf.TOP_LEFT:
+            case s._vf.BOTTOM_LEFT:
                 e = 0;
                 break;
             default:
                 t = 0;
         }
         switch (r) {
-            case l._vf.BOTTOM_LEFT:
-            case l._vf.BOTTOM_RIGHT:
+            case s._vf.BOTTOM_LEFT:
+            case s._vf.BOTTOM_RIGHT:
                 n = 0;
                 break;
             default:
@@ -56,7 +56,7 @@ class c extends r.Component {
                 props: {
                     locked: n,
                     notification: {
-                        props: { renderFooter: r, onNotificationShow: o, onDismissClick: l, onNotificationClick: c, onConfirmClick: d, onCancelClick: u }
+                        props: { renderFooter: r, onNotificationShow: o, onDismissClick: s, onNotificationClick: c, onConfirmClick: d, onCancelClick: u }
                     }
                 }
             } = this,
@@ -80,7 +80,7 @@ class c extends r.Component {
                 return r;
             })(this.props.notification.props, ['renderFooter', 'onNotificationShow', 'onDismissClick', 'onNotificationClick', 'onConfirmClick', 'onCancelClick']);
         return (0, i.jsx)(
-            s.ZP,
+            l.ZP,
             ((e = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -101,7 +101,7 @@ class c extends r.Component {
                 {
                     locked: n,
                     onNotificationShow: this.handleNotificationShow,
-                    onDismissClick: null != l ? this.handleDismissClick : void 0,
+                    onDismissClick: null != s ? this.handleDismissClick : void 0,
                     onNotificationClick: null != c ? this.handleNotificationClick : null,
                     onConfirmClick: null != d ? this.handleConfirmClick : null,
                     onCancelClick: null != u ? this.handleCancelClick : null,

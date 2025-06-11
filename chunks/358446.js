@@ -7,8 +7,8 @@ var i = n(255367);
 n(73800);
 var r = n(704215),
     o = n(481060),
-    s = n(13245),
-    l = n(312839),
+    l = n(13245),
+    s = n(312839),
     a = n(706140),
     c = n(809357),
     d = n(987650),
@@ -28,7 +28,7 @@ function f() {
 }
 function g(e) {
     let { markAsDismissed: t } = e,
-        { trackView: n, trackClick: r } = (0, l.R)(d.n0.KeybindIndicatorsNotification, { notif_type: d.n0.KeybindIndicatorsNotification });
+        { trackView: n, trackClick: r } = (0, s.R)(d.n0.KeybindIndicatorsNotification, { notif_type: d.n0.KeybindIndicatorsNotification });
     return {
         icon: null,
         body: (0, i.jsxs)('div', {
@@ -50,7 +50,7 @@ function g(e) {
             ]
         }),
         onDismissClick: (e, n) => {
-            r('dismiss'), t(u.L.DISMISS), s.Z.updateNotificationStatus(n);
+            r('dismiss'), t(u.L.DISMISS), l.Z.updateNotificationStatus(n);
         },
         onNotificationShow: () => {
             t(u.L.AUTO_DISMISS), n();

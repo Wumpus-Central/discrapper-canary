@@ -3,8 +3,8 @@ var i = n(255367);
 n(73800);
 var r = n(120356),
     o = n.n(r),
-    s = n(382790),
-    l = n(430036),
+    l = n(382790),
+    s = n(430036),
     a = n(518084),
     c = n(724194);
 function d(e) {
@@ -12,12 +12,12 @@ function d(e) {
     return (0, i.jsxs)(a.ZP, {
         className: o()(c.wrapper, u),
         children: [
-            (0, i.jsx)(s.Z, {
+            (0, i.jsx)(l.Z, {
                 contained: !0,
                 dragStart: t,
                 locked: d
             }),
-            (0, i.jsx)(l.Z, {
+            (0, i.jsx)(s.Z, {
                 dragStart: t,
                 locked: d,
                 pinned: r,

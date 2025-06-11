@@ -8271,6 +8271,25 @@ let { Themes: r } = n(15202).V,
                     }
                 }
             },
+            USER_PROFILE_ACTIVITY_TOOLBAR_BACKGROUND: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'NEUTRAL_60',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'NEUTRAL_1',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'NEUTRAL_83',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'NEUTRAL_73',
+                    opacity: 1
+                }
+            },
             USER_PROFILE_BACKGROUND_HOVER: {
                 category: 'generic',
                 [r.DARK]: {

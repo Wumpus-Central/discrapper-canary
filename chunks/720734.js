@@ -770,10 +770,7 @@ function tg() {
         });
     let J = (0, d.e7)([eb.Z], () => eb.Z.hasHadOtherUserPlaySoundInSession()),
         { analyticsLocations: $ } = (0, R.ZP)(P.Z.ACCOUNT),
-        et = (0, ea.K)({
-            location: 'Account',
-            user: t
-        }),
+        et = (0, ea.K)({ user: t }),
         ei = (0, eg.Ws)({ location: tt.dr.CONFLICT_CHECKS }),
         es = (0, d.e7)([ex.Z, eY.default, eM.Z], () => {
             let e,

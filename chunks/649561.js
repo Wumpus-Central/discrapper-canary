@@ -2,9 +2,9 @@ n.d(t, { Z: () => D }), n(388685), n(358797);
 var i = n(255367),
     r = n(73800),
     o = n(120356),
-    s = n.n(o),
-    l = n(392711),
-    a = n.n(l),
+    l = n.n(o),
+    s = n(392711),
+    a = n.n(s),
     c = n(818405),
     d = n(587158),
     u = n(286379),
@@ -14,16 +14,16 @@ var i = n(255367),
     g = n(797614),
     m = n(593481),
     y = n(703656),
-    v = n(254761),
-    _ = n(70956),
-    O = n(960048),
+    O = n(254761),
+    v = n(70956),
+    _ = n(960048),
     b = n(145597),
     E = n(692546),
-    x = n(518084),
-    S = n(987650),
+    S = n(518084),
+    x = n(987650),
     C = n(981631),
-    j = n(388032),
-    Z = n(137180);
+    Z = n(388032),
+    j = n(137180);
 function I(e, t, n) {
     return (
         t in e
@@ -37,8 +37,8 @@ function I(e, t, n) {
         e
     );
 }
-let P = 10 * _.Z.Millis.SECOND;
-function N() {
+let P = 10 * v.Z.Millis.SECOND;
+function w() {
     let e = (0, b.getPID)(),
         t = (0, b.getRPCAuthToken)();
     (0, f.lW)({
@@ -54,9 +54,9 @@ function N() {
         ]
     });
 }
-class w extends r.PureComponent {
+class N extends r.PureComponent {
     componentDidMount() {
-        (this.notificationTimer = setTimeout(this.hideNotification, P)), p.Z.track(C.rMx.NOTIFICATION_VIEWED, { notif_type: S.n0.OverlayCrashed });
+        (this.notificationTimer = setTimeout(this.hideNotification, P)), p.Z.track(C.rMx.NOTIFICATION_VIEWED, { notif_type: x.n0.OverlayCrashed });
     }
     componentWillUnmount() {
         let { notificationTimer: e } = this;
@@ -76,32 +76,32 @@ class w extends r.PureComponent {
                       children: (r) =>
                           (0, i.jsxs)(h.P3F, {
                               innerRef: this.contentDomRef,
-                              className: s()(r, Z.container),
+                              className: l()(r, j.container),
                               onClick: (e) => e.stopPropagation(),
                               children: [
                                   (0, i.jsx)(m.ZP, {
                                       expand: !0,
-                                      icon: (0, i.jsx)(v.Z, {
+                                      icon: (0, i.jsx)(O.Z, {
                                           width: 40,
                                           height: 40,
-                                          className: Z.notificationIcon
+                                          className: j.notificationIcon
                                       }),
-                                      title: j.intl.string(j.t.U38qZm),
-                                      confirmText: j.intl.string(j.t.TzAl1d),
+                                      title: Z.intl.string(Z.t.U38qZm),
+                                      confirmText: Z.intl.string(Z.t.TzAl1d),
                                       onNotificationClick: this.handleNotificationClick,
                                       onConfirmClick: this.handleReload,
                                       onDismissClick: this.hideNotification,
                                       locked: !1
                                   }),
                                   n && null != e
-                                      ? (0, i.jsxs)(x.ZP, {
-                                            className: Z.stackTrace,
+                                      ? (0, i.jsxs)(S.ZP, {
+                                            className: j.stackTrace,
                                             children: [
-                                                (0, i.jsx)(x.ZP.Bar, { children: 'Error Details' }),
-                                                (0, i.jsx)(x.ZP.Content, {
-                                                    className: Z.stackTraceCode,
+                                                (0, i.jsx)(S.ZP.Bar, { children: 'Error Details' }),
+                                                (0, i.jsx)(S.ZP.Content, {
+                                                    className: j.stackTraceCode,
                                                     children: (0, i.jsx)('code', {
-                                                        className: Z.code,
+                                                        className: j.code,
                                                         children: (0, i.jsx)('pre', { children: t.stack })
                                                     })
                                                 })
@@ -122,17 +122,17 @@ class w extends r.PureComponent {
             I(this, 'notificationTimer', void 0),
             I(this, 'contentDomRef', r.createRef()),
             I(this, 'hideNotification', () => {
-                N();
+                w();
                 let { notificationTimer: e } = this;
                 null != e && clearTimeout(e), (this.notificationTimer = null);
             }),
             I(this, 'handleReload', (e) => {
                 this.setState({ busy: !0 }),
-                    N(),
+                    w(),
                     p.Z.track(
                         C.rMx.NOTIFICATION_CLICKED,
                         {
-                            notif_type: S.n0.OverlayCrashed,
+                            notif_type: x.n0.OverlayCrashed,
                             action_type: 'reload'
                         },
                         !0
@@ -186,8 +186,8 @@ class k extends r.PureComponent {
                 }
             ]
         }),
-            setImmediate(() => window.addEventListener('click', N));
-        let o = O.Z.captureCrash(e, { extra: t });
+            setImmediate(() => window.addEventListener('click', w));
+        let o = _.Z.captureCrash(e, { extra: t });
         p.Z.track(C.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
@@ -202,7 +202,7 @@ class k extends r.PureComponent {
         let { children: e, className: t } = this.props,
             { error: n, info: r } = this.state;
         return null != n
-            ? (0, i.jsx)(w, {
+            ? (0, i.jsx)(N, {
                   error: n,
                   info: r
               })

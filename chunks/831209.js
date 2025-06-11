@@ -416,6 +416,7 @@ var r = (function (e) {
         (e.THREAD_CHANNEL_SPINE = 'var(--thread-channel-spine)'),
         (e.TOAST_BG = 'var(--toast-bg)'),
         (e.TYPING_INDICATOR_BG = 'var(--typing-indicator-bg)'),
+        (e.USER_PROFILE_ACTIVITY_TOOLBAR_BACKGROUND = 'var(--user-profile-activity-toolbar-background)'),
         (e.USER_PROFILE_BACKGROUND_HOVER = 'var(--user-profile-background-hover)'),
         (e.USER_PROFILE_BORDER = 'var(--user-profile-border)'),
         (e.USER_PROFILE_HEADER_OVERFLOW_BACKGROUND = 'var(--user-profile-header-overflow-background)'),

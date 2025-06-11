@@ -2013,6 +2013,7 @@ var tC = (function (e) {
             (e.SHOP_ORBS_TAB = 'Shop Orbs Tab'),
             (e.ORBS_ANNOUNCEMENT_MODAL = 'Orbs Announcement Modal'),
             (e.GLOBAL_DISCOVERY_QUESTS = 'Global Discovery Quests'),
+            (e.BOGO_PROMOTION_ACTION_SHEET = 'Bogo Promotion Action Sheet'),
             e
         );
     })({});
@@ -4624,6 +4625,7 @@ var nV = (function (e) {
             (e.DM_WALLPAPERS = '30608198149015-DM-Wallpapers'),
             (e.AV_ERROR_CODES = '30952914470807'),
             (e.SERVER_TAGS = '31444248479639'),
+            (e.SUMMER_BOGO_2025 = '32702667550743'),
             e
         );
     })({}),

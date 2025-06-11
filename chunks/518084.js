@@ -1,13 +1,13 @@
 n.d(t, {
-    ZP: () => x,
+    ZP: () => S,
     wB: () => m
 }),
     n(415506);
 var i,
     r = n(255367),
     o = n(73800),
-    s = n(120356),
-    l = n.n(s),
+    l = n(120356),
+    s = n.n(l),
     a = n(877921),
     c = n.n(a),
     d = n(481060),
@@ -33,8 +33,8 @@ let g = u.t_t.DEFAULT,
         type: g,
         opacity: m
     }),
-    v = o.createContext(void 0),
-    _ = (e) => {
+    O = o.createContext(void 0),
+    v = (e) => {
         var { children: t, className: n } = e,
             i = (function (e, t) {
                 if (null == e) return {};
@@ -58,12 +58,12 @@ let g = u.t_t.DEFAULT,
         return (0, r.jsx)(y.Consumer, {
             children: (e) => {
                 let { type: o } = e;
-                return (0, r.jsx)(v.Consumer, {
+                return (0, r.jsx)(O.Consumer, {
                     children: (e) => {
-                        var s, a;
+                        var l, a;
                         return (0, r.jsx)(
                             'div',
-                            ((s = (function (e) {
+                            ((l = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         i = Object.keys(n);
@@ -80,14 +80,14 @@ let g = u.t_t.DEFAULT,
                                 return e;
                             })(
                                 {
-                                    className: l()(h.bar, h[c()(o)], n),
+                                    className: s()(h.bar, h[c()(o)], n),
                                     style: e
                                 },
                                 i
                             )),
                             (a = a = { children: t }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(a))
+                                ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -96,32 +96,32 @@ let g = u.t_t.DEFAULT,
                                       }
                                       return n;
                                   })(Object(a)).forEach(function (e) {
-                                      Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(a, e));
+                                      Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                                   }),
-                            s)
+                            l)
                         );
                     }
                 });
             }
         });
     };
-class O extends (i = o.PureComponent) {
+class _ extends (i = o.PureComponent) {
     render() {
         let { disableScroll: e, children: t, className: n } = this.props;
-        return (0, r.jsx)(v.Consumer, {
+        return (0, r.jsx)(O.Consumer, {
             children: (i) =>
                 (0, r.jsx)(y.Consumer, {
                     children: (o) => {
-                        let s = l()(h.body, h[c()(o.type)], n);
+                        let l = s()(h.body, h[c()(o.type)], n);
                         return e
                             ? (0, r.jsx)('div', {
-                                  className: s,
+                                  className: l,
                                   style: i,
                                   children: t
                               })
                             : (0, r.jsx)(d.Ttm, {
                                   fade: !0,
-                                  className: s,
+                                  className: l,
                                   children: t
                               });
                     }
@@ -129,16 +129,16 @@ class O extends (i = o.PureComponent) {
         });
     }
 }
-f(O, 'defaultProps', { disableScroll: !1 });
+f(_, 'defaultProps', { disableScroll: !1 });
 let b = (e) => {
-        let { type: t = g, width: n, height: i, children: o, className: s, opacity: a = m, onClick: d } = e;
+        let { type: t = g, width: n, height: i, children: o, className: l, opacity: a = m, onClick: d } = e;
         return (0, r.jsx)(y.Provider, {
             value: {
                 type: t,
                 opacity: a
             },
             children: (0, r.jsx)('div', {
-                className: l()(h.widget, h[c()(t)], s),
+                className: s()(h.widget, h[c()(t)], l),
                 style: {
                     width: n,
                     height: i
@@ -150,10 +150,10 @@ let b = (e) => {
     },
     E = (e) => {
         let { children: t, className: n, dynamicSize: i = !1 } = e;
-        return (0, r.jsx)(v.Consumer, {
+        return (0, r.jsx)(O.Consumer, {
             children: (e) =>
                 (0, r.jsx)('div', {
-                    className: l()(h.content, { [h.staticSize]: !i }, n),
+                    className: s()(h.content, { [h.staticSize]: !i }, n),
                     style: e,
                     children: t
                 })
@@ -162,16 +162,16 @@ let b = (e) => {
 (b.Background = (e) => {
     let { children: t, opacityOverride: n } = e;
     if (null == t) return null;
-    let i = [_, O, E];
+    let i = [v, _, E];
     return (0, r.jsx)(y.Consumer, {
         children: (e) => {
-            let { opacity: s } = e,
-                l = { backgroundColor: 'rgba(54, 57, 63, '.concat('' + (null != n ? n : s), ')') };
-            if ('string' == typeof t.type) return o.cloneElement(t, { style: l });
+            let { opacity: l } = e,
+                s = { backgroundColor: 'rgba(54, 57, 63, '.concat('' + (null != n ? n : l), ')') };
+            if ('string' == typeof t.type) return o.cloneElement(t, { style: s });
             {
                 if (i.includes(t.type))
-                    return (0, r.jsx)(v.Provider, {
-                        value: l,
+                    return (0, r.jsx)(O.Provider, {
+                        value: s,
                         children: t
                     });
                 let e = t.type.displayName;
@@ -180,10 +180,10 @@ let b = (e) => {
         }
     });
 }),
-    (b.Body = O),
+    (b.Body = _),
     (b.Content = E),
     (b.Icon = (e) => {
-        let { ref: t, icon: n, label: i, onClick: o, isActive: s, tooltipPosition: a = 'top', size: c = 20, isTutorial: u = !1 } = e;
+        let { ref: t, icon: n, label: i, onClick: o, isActive: l, tooltipPosition: a = 'top', size: c = 20, isTutorial: u = !1 } = e;
         return (0, r.jsx)(d.ua7, {
             text: u
                 ? (0, r.jsx)('div', {
@@ -204,7 +204,7 @@ let b = (e) => {
                     onClick: o,
                     onMouseEnter: a,
                     onMouseLeave: u,
-                    className: l()(h.icon, { [h.toggledIconOn]: s }),
+                    className: s()(h.icon, { [h.toggledIconOn]: l }),
                     innerClassName: p.flexCenter,
                     'aria-label': i,
                     children: (0, r.jsx)(n, {
@@ -218,5 +218,5 @@ let b = (e) => {
             }
         });
     }),
-    (b.Bar = _);
-let x = b;
+    (b.Bar = v);
+let S = b;

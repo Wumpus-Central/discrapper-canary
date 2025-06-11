@@ -15,8 +15,8 @@ var i = n(255367),
     g = n(353038),
     y = n(306381),
     O = n(610394),
-    b = n(561064),
-    v = n(981631),
+    v = n(561064),
+    b = n(981631),
     E = n(816530);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -65,10 +65,10 @@ let S = r.memo(function (e) {
     let { widget: t, renderWidget: n, renderTitle: o, renderButtons: S, resizeValidation: I, className: j, dragContainerClassName: C } = e,
         N = u.Z.getWidgetConfig(t.type),
         w = (0, a.e7)([d.default], () => d.default.isLocked((0, f.getPID)())),
-        Z = (0, b.Z)(),
+        Z = (0, v.Z)(),
         P = (0, a.e7)([p.Z], () => p.Z.windowSize((0, m.ZY)(Z))),
         T = r.useCallback((e, t, n, i, r) => {
-            let o = p.Z.windowSize((0, m.ZY)((0, b.i)())),
+            let o = p.Z.windowSize((0, m.ZY)((0, v.i)())),
                 l = (0, h.jL)(n, o),
                 a = (0, h.Ox)(i, o);
             (0, s.Os)(t),
@@ -79,7 +79,7 @@ let S = r.memo(function (e) {
                 });
             let d = e === g.B.MOVE,
                 f = (0, h.PY)(n, o.width, o.height, r.width, r.height);
-            c.Z.track(v.rMx.OVERLAY_LAYOUT_UPDATED, {
+            c.Z.track(b.rMx.OVERLAY_LAYOUT_UPDATED, {
                 was_resized: !d,
                 was_dragged: d,
                 widget_type: u.Z.getWidgetType(t),

@@ -22,12 +22,12 @@ var i = n(255367),
     g = n(99690),
     y = n(493773),
     O = n(549879),
-    b = n(620662),
-    v = n(835473),
+    v = n(620662),
+    b = n(835473),
     E = n(194082),
     _ = n(297781),
     x = n(656709),
-    S = n(567409),
+    S = n(233241),
     I = n(225559),
     j = n(703656),
     C = n(93127),
@@ -103,8 +103,8 @@ function Q(e) {
             return () => clearTimeout(e);
         }
     }, [s]);
-    let y = null != n && (0, b.Z)(n, G.xjy.JOIN),
-        v = async (e) => {
+    let y = null != n && (0, v.Z)(n, G.xjy.JOIN),
+        b = async (e) => {
             if (null != a && 'unsent' === s) {
                 e.stopPropagation();
                 try {
@@ -183,7 +183,7 @@ function Q(e) {
                 d.zxk,
                 Y(H({}, e), {
                     submitting: 'sending' === s,
-                    onClick: h ? E : v,
+                    onClick: h ? E : b,
                     className: B.inviteButton,
                     wrapperClassName: B.inviteButtonWrapper,
                     innerClassName: B.inviteButtonInner,
@@ -214,7 +214,7 @@ function K(e) {
         a = null != (t = null == o ? void 0 : o.application_id) ? t : n.extra.application_id,
         s = (0, u.e7)([k.Z], () => (null != l ? k.Z.getApplicationActivity(l.id, a) : null), [a, l]),
         [c, h] = r.useState('unsent');
-    if (!(null != s && (0, b.Z)(s, G.xjy.JOIN))) return null;
+    if (!(null != s && (0, v.Z)(s, G.xjy.JOIN))) return null;
     let f = async (e) => {
             if (null != l && 'unsent' === c) {
                 e.stopPropagation();
@@ -397,7 +397,7 @@ function q(e) {
 }
 function $(e) {
     let { gamingId: t, maxUserShowCount: n, userAffinityThresholdV2: i = 0.0029 } = e,
-        o = (0, S.Ns)(t);
+        o = (0, S.Z)(t, 'useLiveActivityRows');
     (0, y.ZP)(() => {
         (0, C._)();
     });
@@ -482,8 +482,8 @@ function ee(e) {
 }
 function et(e) {
     let { activity: t, currentUser: n, showInviteButton: r = !0 } = e,
-        o = null != t && (0, b.Z)(t, G.xjy.JOIN),
-        l = (0, v.q)(null == t ? void 0 : t.application_id),
+        o = null != t && (0, v.Z)(t, G.xjy.JOIN),
+        l = (0, b.q)(null == t ? void 0 : t.application_id),
         a = null != l && (0, M.yE)(l.flags, G.udG.EMBEDDED);
     return null == t || null == n
         ? null
@@ -519,7 +519,7 @@ function en(e) {
         n = (0, W.II)(),
         r = null == n ? void 0 : n.id,
         o = null == n ? void 0 : n.altId,
-        l = (0, S.Ns)(r),
+        l = (0, S.Z)(r, 'ActivityWidget'),
         a = (0, u.e7)([A.default], () => A.default.getCurrentUser()),
         s = null != o ? o : r,
         c = (0, u.e7)([T.Z], () => (null == s ? null : T.Z.getApplicationActivity(s)), [s]);

@@ -246,10 +246,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                 },
                 [i, t]
             ),
-            p = (0, R.K)({
-                location: 'ChannelMembers',
-                user: l
-            });
+            p = (0, R.K)({ user: l });
         return (0, r.jsx)(
             er,
             $(J({}, n, o), {

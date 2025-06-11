@@ -1,10 +1,8 @@
-n.d(t, { K: () => l });
-var r = n(73800),
-    i = n(598062);
-function l(e) {
-    let { location: t, user: n } = e,
-        l = (0, i.X)(t);
+n.d(t, { K: () => i });
+var r = n(73800);
+function i(e) {
+    let { user: t } = e;
     return (0, r.useMemo)(() => {
-        if ((null == n ? void 0 : n.nameplate) != null && l) return n.nameplate;
-    }, [n, l]);
+        if ((null == t ? void 0 : t.nameplate) != null) return t.nameplate;
+    }, [t]);
 }

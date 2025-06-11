@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var i = n(255367),
     r = n(73800),
     o = n(120356),
@@ -56,15 +56,15 @@ function O(e, t) {
         e
     );
 }
-function b(e) {
+function v(e) {
     let { locked: t, pinned: n, anchorLeft: o } = e,
-        b = (0, a.e7)([d.Z], () => d.Z.getSocket()),
-        v = (0, a.e7)([f.ZP], () => f.ZP.isGPUBoosted());
+        v = (0, a.e7)([d.Z], () => d.Z.getSocket()),
+        b = (0, a.e7)([f.ZP], () => f.ZP.isGPUBoosted());
     (0, u.nU)();
     let E = (0, a.e7)([p.Z], () => p.Z.getWindow(m.$J)),
-        [_, x] = (0, u.m8)(b),
+        [_, x] = (0, u.m8)(v),
         { currentFPS: S, averageFrameTime: I, timeSinceLastDrop: j, onResetFrameData: C, droppedFramesRef: N, renderedFrameCount: w, bufferFramecountRef: Z, frameCheckerEffect: P } = (0, u.d6)(!0, _, !0),
-        [T, k, D] = (0, u.ZF)(b),
+        [T, k, D] = (0, u.ZF)(v),
         [A, R] = (0, u.Y5)(T, P, E),
         L = performance.now() - x.current < u.MC,
         M = k(I, Z.current);
@@ -273,7 +273,7 @@ function b(e) {
                                   })
                               )
                       }),
-                  v &&
+                  b &&
                       (0, i.jsx)(s.Text, {
                           tag: 'span',
                           variant: 'code',

@@ -2,8 +2,8 @@ n.d(t, { Z: () => E }), n(388685);
 var i,
     r = n(255367),
     o = n(73800),
-    s = n(120356),
-    l = n.n(s),
+    l = n(120356),
+    s = n.n(l),
     a = n(442837),
     c = n(552062),
     d = n(416568),
@@ -14,8 +14,8 @@ var i,
     g = n(483962),
     m = n(711553),
     y = n(388032),
-    v = n(708132);
-function _(e, t, n) {
+    O = n(708132);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function _(e, t, n) {
         e
     );
 }
-function O(e) {
+function _(e) {
     let { closePopout: t } = e;
     return (0, r.jsx)(f.Z, { onClose: t });
 }
@@ -47,13 +47,13 @@ class b extends (i = o.PureComponent) {
                       )
                     : (0, r.jsx)(m.Z, {
                           title: y.intl.string(y.t.YUU0RE),
-                          renderSettings: O,
+                          renderSettings: _,
                           onDragStart: this.onDragStart,
                           children: (0, r.jsx)(g.Z, {})
                       }),
-            s = n ? 'div' : h.ZP;
-        return (0, r.jsxs)(s, {
-            className: l()(v.base, { [v.widget]: !n }, i),
+            l = n ? 'div' : h.ZP;
+        return (0, r.jsxs)(l, {
+            className: s()(O.base, { [O.widget]: !n }, i),
             children: [
                 (0, r.jsx)(d.Z, {
                     isOverlay: !0,
@@ -66,11 +66,11 @@ class b extends (i = o.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            _(this, 'onDragStart', (e) => {
+            v(this, 'onDragStart', (e) => {
                 let { dragStart: t } = this.props;
                 t(c.B.MOVE, e.clientX, e.clientY);
             });
     }
 }
-_(b, 'defaultProps', { contained: !1 });
+v(b, 'defaultProps', { contained: !1 });
 let E = a.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(b);
