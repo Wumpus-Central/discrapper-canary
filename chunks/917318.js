@@ -52,13 +52,13 @@ function g(e) {
         _ = (0, o.ZP)(n),
         b = n.getChannelId(),
         E = (0, l.e7)([u.default], () => u.default.getUser(f[0]), [f]),
-        x = (0, o.JZ)(d, i),
-        y = (0, s.l)({
+        y = (0, o.JZ)(d, i),
+        x = (0, s.l)({
             user: d,
             channelId: b,
             guildId: i.guild_id,
             messageId: n.id
-        })(x),
+        })(y),
         v = (0, o.Sw)(E, i),
         O = (0, s.l)({
             user: E,
@@ -66,11 +66,11 @@ function g(e) {
             guildId: i.guild_id,
             messageId: n.id
         })(v),
-        j = null != (t = m[g]) ? t : null;
-    if (null == j) return null;
-    let C = p.intl.format(j(), {
+        C = null != (t = m[g]) ? t : null;
+    if (null == C) return null;
+    let j = p.intl.format(C(), {
         actorName: _.nick,
-        actorHook: y,
+        actorHook: x,
         targetName: null == v ? void 0 : v.nick,
         targetHook: O
     });
@@ -78,7 +78,7 @@ function g(e) {
         iconNode: (0, r.jsx)(h, { type: g }),
         timestamp: n.timestamp,
         compact: a,
-        children: C
+        children: j
     });
 }
 function _(e) {

@@ -52,7 +52,7 @@ function p(e, t) {
     );
 }
 function m(e) {
-    let { application: t, fullWidth: n = !1, size: m = l.zxk.Sizes.LARGE, color: f, customDisabledColor: h, hideNotLaunchable: g, tooltipPosition: _, onClick: b, className: E, source: x, hover: y, innerClassName: v } = e,
+    let { application: t, fullWidth: n = !1, size: m = l.zxk.Sizes.LARGE, color: f, customDisabledColor: h, hideNotLaunchable: g, tooltipPosition: _, onClick: b, className: E, source: y, hover: x, innerClassName: v } = e,
         O = {
             fullWidth: n,
             size: m,
@@ -61,19 +61,19 @@ function m(e) {
             tooltipPosition: _,
             onClick: b,
             className: E,
-            hover: y,
+            hover: x,
             innerClassName: v
         },
-        j = (0, i.e7)([a.Z], () => a.Z.getActiveLibraryApplication(t.id)),
-        C = null != j ? j.sku.id : null,
-        S = null != C ? C : t.primarySkuId,
+        C = (0, i.e7)([a.Z], () => a.Z.getActiveLibraryApplication(t.id)),
+        j = null != C ? C.sku.id : null,
+        S = null != j ? j : t.primarySkuId,
         I = (0, i.e7)([o.Z], () => null != S && !o.Z.didFetchingSkuFail(S));
-    return null != j && (0, s.Je)(j)
+    return null != C && (0, s.Je)(C)
         ? (0, r.jsx)(
               u.Z,
               p(d({}, O), {
-                  libraryApplication: j,
-                  source: x
+                  libraryApplication: C,
+                  source: y
               })
           )
         : I

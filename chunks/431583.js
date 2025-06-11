@@ -16,53 +16,53 @@ var r = n(255367),
     _ = n(594174),
     b = n(626135),
     E = n(361207),
-    x = n(981631),
-    y = n(388032),
+    y = n(981631),
+    x = n(388032),
     v = n(246404);
 let O = [
         {
-            getOs: () => y.intl.string(y.t.NK5ySE),
+            getOs: () => x.intl.string(x.t.NK5ySE),
             icon: v.apple,
             url: () => (0, E.w4)('osx', !1),
             platformKey: 0
         },
         {
-            getOs: () => y.intl.string(y.t.OvKGEx),
+            getOs: () => x.intl.string(x.t.OvKGEx),
             icon: v.windows,
             url: () => (0, E.w4)('win', !1),
             platformKey: 1
         },
         {
-            getOs: () => y.intl.string(y.t.dJB4PD),
+            getOs: () => x.intl.string(x.t.dJB4PD),
             icon: v.linux,
             url: [
                 {
                     url: () => (0, E.w4)('linux', !1, 'deb'),
-                    getText: () => y.intl.string(y.t.Sodsur)
+                    getText: () => x.intl.string(x.t.Sodsur)
                 },
                 {
                     url: () => (0, E.w4)('linux', !1, 'tar.gz'),
-                    getText: () => y.intl.string(y.t.G3U6IS)
+                    getText: () => x.intl.string(x.t.G3U6IS)
                 }
             ],
             platformKey: 2
         }
     ],
-    j = [
+    C = [
         {
-            getOs: () => y.intl.string(y.t.wCVyNT),
+            getOs: () => x.intl.string(x.t.wCVyNT),
             icon: v.ios,
-            url: () => x.fzT.IOS,
+            url: () => y.fzT.IOS,
             platformKey: 3
         },
         {
-            getOs: () => y.intl.string(y.t.wuQpJC),
+            getOs: () => x.intl.string(x.t.wuQpJC),
             icon: v.android,
-            url: () => x.fzT.ANDROID,
+            url: () => y.fzT.ANDROID,
             platformKey: 4
         }
     ],
-    C = (e) => {
+    j = (e) => {
         let { url: t, text: n, onClick: i } = e,
             l = (0, h.Q3)('DownloadButton'),
             o = (0, p.nYM)({ grow: !0 });
@@ -84,7 +84,7 @@ let O = [
             t = d.map((e, t) => {
                 let n = s ? e.url() : '';
                 return (0, r.jsx)(
-                    C,
+                    j,
                     {
                         url: n,
                         onClick: () => i(f),
@@ -95,10 +95,10 @@ let O = [
             });
         else {
             let e = s ? d() : void 0;
-            t = (0, r.jsx)(C, {
+            t = (0, r.jsx)(j, {
                 url: e,
                 onClick: () => i(f),
-                text: y.intl.string(y.t['1WjMbG'])
+                text: x.intl.string(x.t['1WjMbG'])
             });
         }
         return (0, r.jsx)('li', {
@@ -132,7 +132,7 @@ function I(e) {
     let { source: t, onClose: n, transitionState: l } = e,
         o = (0, d.e7)([_.default], () => _.default.getCurrentUser()),
         E = (0, d.e7)([g.default], () => g.default.getFingerprint()),
-        C = null == o || o.isClaimed(),
+        j = null == o || o.isClaimed(),
         [I, N] = i.useState(
             (function () {
                 var e;
@@ -159,21 +159,21 @@ function I(e) {
         );
     function T(e) {
         (null != u.getToken() || null != E) &&
-            b.default.track(x.rMx.DOWNLOAD_APP, {
+            b.default.track(y.rMx.DOWNLOAD_APP, {
                 platform: e,
                 ptb: !1,
                 released: !0,
-                has_e_mail: C,
+                has_e_mail: j,
                 referring_location: t,
                 qr_code: !1
             }),
-            C || (n(), m.j());
+            j || (n(), m.j());
     }
     function P(e) {
         N(e);
     }
     i.useEffect(() => {
-        b.default.track(x.rMx.OPEN_MODAL, {
+        b.default.track(y.rMx.OPEN_MODAL, {
             type: 'Download App',
             source: { location: t }
         });
@@ -181,7 +181,7 @@ function I(e) {
     let A = (0, f.Dt)(),
         w = (0, h.Q3)('DownloadAppsModal');
     return (0, r.jsx)(p.f6W, {
-        theme: x.BRd.LIGHT,
+        theme: y.BRd.LIGHT,
         children: (e) =>
             (0, r.jsxs)(p.Y0X, {
                 className: a()(v.downloadApps, w ? void 0 : e),
@@ -199,7 +199,7 @@ function I(e) {
                             (0, r.jsx)(p.nn4, {
                                 children: (0, r.jsx)(p.H, {
                                     id: A,
-                                    children: y.intl.string(y.t.BK8LKy)
+                                    children: x.intl.string(x.t.BK8LKy)
                                 })
                             }),
                             !c.tq &&
@@ -209,7 +209,7 @@ function I(e) {
                                         (0, r.jsx)(p.X6q, {
                                             variant: 'heading-lg/semibold',
                                             className: v.header,
-                                            children: y.intl.string(y.t['0KK0bG'])
+                                            children: x.intl.string(x.t['0KK0bG'])
                                         }),
                                         (0, r.jsx)('ul', {
                                             className: v.platforms,
@@ -221,7 +221,7 @@ function I(e) {
                                                         platform: e,
                                                         onClick: T,
                                                         onMouseEnter: P,
-                                                        claimed: C
+                                                        claimed: j
                                                     },
                                                     e.platformKey
                                                 )
@@ -236,11 +236,11 @@ function I(e) {
                                         (0, r.jsx)(p.X6q, {
                                             variant: 'heading-lg/semibold',
                                             className: v.header,
-                                            children: y.intl.string(y.t.RdSNWV)
+                                            children: x.intl.string(x.t.RdSNWV)
                                         }),
                                     (0, r.jsx)('ul', {
                                         className: v.platforms,
-                                        children: j.map((e) =>
+                                        children: C.map((e) =>
                                             (0, r.jsx)(
                                                 S,
                                                 {
@@ -248,7 +248,7 @@ function I(e) {
                                                     platform: e,
                                                     onClick: T,
                                                     onMouseEnter: P,
-                                                    claimed: C
+                                                    claimed: j
                                                 },
                                                 e.platformKey
                                             )
@@ -262,7 +262,7 @@ function I(e) {
                         className: v.footer,
                         children: (0, r.jsx)(p.Text, {
                             variant: 'text-sm/normal',
-                            children: y.intl.format(y.t['RJS+1N'], {})
+                            children: x.intl.format(x.t['RJS+1N'], {})
                         })
                     })
                 ]

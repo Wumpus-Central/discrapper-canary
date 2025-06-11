@@ -16,12 +16,12 @@ var r = n(255367),
     _ = n(594174),
     b = n(630388),
     E = n(74538),
-    x = n(566006),
-    y = n(981631),
+    y = n(566006),
+    x = n(981631),
     v = n(185923),
     O = n(474936),
-    j = n(388032),
-    C = n(92254),
+    C = n(388032),
+    j = n(92254),
     S = n(588429);
 function I(e, t, n) {
     return (
@@ -56,14 +56,14 @@ class T extends i.Component {
     render() {
         let { type: e, message: t, className: n, children: i, useChatFontScaling: l, tabIndex: o = 0 } = this.props,
             { isReactionPickerActive: s } = this.state,
-            c = t.state === y.yb.SENDING,
-            m = e === x.O.BURST;
-        if (c || (0, b.yE)(t.flags, y.iLy.EPHEMERAL)) return null;
+            c = t.state === x.yb.SENDING,
+            m = e === y.O.BURST;
+        if (c || (0, b.yE)(t.flags, x.iLy.EPHEMERAL)) return null;
         let f = _.default.getCurrentUser(),
             h = (0, E.I5)(f),
-            g = m ? j.intl.string(j.t.Kfcszs) : j.intl.string(j.t.lfIHs7);
-        !h && m && (g = (0, r.jsx)(p.X, { tooltipText: j.intl.string(j.t.Kfcszs) }));
-        let O = l ? S : C,
+            g = m ? C.intl.string(C.t.Kfcszs) : C.intl.string(C.t.lfIHs7);
+        !h && m && (g = (0, r.jsx)(p.X, { tooltipText: C.intl.string(C.t.Kfcszs) }));
+        let O = l ? S : j,
             I = {
                 size: 'sm',
                 color: 'currentColor',
@@ -81,7 +81,7 @@ class T extends i.Component {
                 return (0, r.jsx)(u.DY3, {
                     text: g,
                     color: u.FGA.PRIMARY,
-                    'aria-label': m ? j.intl.string(j.t.Kfcszs) : j.intl.string(j.t.lfIHs7),
+                    'aria-label': m ? C.intl.string(C.t.Kfcszs) : C.intl.string(C.t.lfIHs7),
                     tooltipClassName: O.__invalid_addReactionTooltip,
                     children: (0, r.jsxs)(
                         u.P3F,
@@ -132,14 +132,14 @@ class T extends i.Component {
                 let { type: t, channel: n } = this.props;
                 e.stopPropagation();
                 let r = _.default.getCurrentUser();
-                t !== x.O.BURST ||
+                t !== y.O.BURST ||
                     (0, E.I5)(r) ||
                     (0, m.m)({
                         analytics: {
                             type: O.cd.BURST_REACTION_UPSELL,
-                            page: null != n.getGuildId() ? y.ZY5.GUILD_CHANNEL : y.ZY5.DM_CHANNEL,
+                            page: null != n.getGuildId() ? x.ZY5.GUILD_CHANNEL : x.ZY5.DM_CHANNEL,
                             section: (0, h.s4)(n),
-                            object: y.qAy.INLINE_REACTION_PICKER_UPSELL
+                            object: x.qAy.INLINE_REACTION_PICKER_UPSELL
                         }
                     }),
                     this.handleReactionPickerToggle();
@@ -149,11 +149,11 @@ class T extends i.Component {
                     { type: n, channel: i, message: l } = this.props,
                     a = N(
                         { openPopoutType: 'message_reaction_emoji_picker' },
-                        n === x.O.BURST && {
+                        n === y.O.BURST && {
                             openPopoutType: 'message_super_reaction_emoji_picker',
-                            page: null != i.getGuildId() ? y.ZY5.GUILD_CHANNEL : y.ZY5.DM_CHANNEL,
+                            page: null != i.getGuildId() ? x.ZY5.GUILD_CHANNEL : x.ZY5.DM_CHANNEL,
                             section: (0, h.s4)(i),
-                            object: y.qAy.REACTION_RAIL
+                            object: x.qAy.REACTION_RAIL
                         }
                     ),
                     o = (0, r.jsx)(g.$, {
@@ -171,7 +171,7 @@ class T extends i.Component {
                         let { inDialog: t } = e;
                         return t
                             ? (0, r.jsx)(u.VqE, {
-                                  'aria-label': j.intl.string(j.t['7Xqzdn']),
+                                  'aria-label': C.intl.string(C.t['7Xqzdn']),
                                   children: o
                               })
                             : o;

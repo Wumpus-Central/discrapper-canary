@@ -17,8 +17,8 @@ var r,
     _ = n(77498),
     E = n(283595),
     O = n(19780),
-    I = n(944486),
-    y = n(981631);
+    y = n(944486),
+    I = n(981631);
 let v = 'ActivityTrackingStore',
     C = 30 * g.Z.Millis.MINUTE,
     S = 5 * g.Z.Millis.MINUTE,
@@ -37,12 +37,12 @@ function A(e) {
         r = null != e.updatedAt ? n - e.updatedAt : 0;
     r > C + S && (r = 0);
     let i = (0, m.OT)(e.applicationId, E.Z),
-        l = I.Z.getVoiceChannelId(),
+        l = y.Z.getVoiceChannelId(),
         a = b.default.getSessionId(),
         o = O.Z.getMediaSessionId();
     d.Z.updateActivity({
         applicationId: e.applicationId,
-        distributor: e.isDiscordApplication ? y.GQo.DISCORD : e.distributor,
+        distributor: e.isDiscordApplication ? I.GQo.DISCORD : e.distributor,
         shareActivity: i,
         token: e.token,
         duration: Math.floor(r / 1000),
@@ -56,7 +56,7 @@ function A(e) {
     let u = T[e.applicationId];
     null == u && (u = T[e.applicationId] = new c.Xp()).start(C, () => A(e)), t || ((N[e.applicationId] = e), s.K.set(v, N));
 }
-function x() {
+function Z() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = h.ZP.getVisibleRunningGames(),
         n = new Set();
@@ -74,39 +74,39 @@ function x() {
     }
     for (let t of Object.keys(N)) n.has(t) || j(N[t], e);
 }
-function Z() {
+function x() {
     for (let e of Object.keys(N)) j(N[e]);
     P = !1;
 }
-class w extends (i = o.ZP.Store) {
+class L extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(h.ZP, f.Z, E.Z), this.syncWith([f.Z], x);
+        this.waitFor(h.ZP, f.Z, E.Z), this.syncWith([f.Z], Z);
     }
     getActivities() {
         return N;
     }
 }
 (a = 'ActivityTrackingStore'),
-    (l = 'displayName') in w
-        ? Object.defineProperty(w, l, {
+    (l = 'displayName') in L
+        ? Object.defineProperty(L, l, {
               value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (w[l] = a),
-    new w(u.Z, {
-        RUNNING_GAMES_CHANGE: () => x(),
+        : (L[l] = a),
+    new L(u.Z, {
+        RUNNING_GAMES_CHANGE: () => Z(),
         CONNECTION_OPEN: function () {
             if (P) return !1;
             for (let e of Object.keys(N)) A(N[e]);
-            x(!1), (P = !0);
+            Z(!1), (P = !0);
         },
         CONNECTION_CLOSED: function (e) {
             let { code: t } = e;
-            4004 === t && Z();
+            4004 === t && x();
         },
-        LOGOUT: Z,
+        LOGOUT: x,
         ACTIVITY_UPDATE_SUCCESS: function (e) {
             let { applicationId: t, token: n } = e,
                 r = N[t];

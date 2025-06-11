@@ -72,7 +72,7 @@ function f(e) {
           });
 }
 function h(e) {
-    let { imageUrl: t, name: n, description: i, formattedPrice: c, role: h, ctaComponent: g, shouldShowFullDescriptionButton: _ = !0, onShowFullDescription: b, productType: E, onTapCard: x, actionMenu: y, showOpaqueBackground: v = !1, hideRoleTag: O = !1, lineClamp: j = 1, cardWidth: C = 332, cardHeight: S, thumbnailHeight: I = 187, descriptionTextVariant: N = 'text-sm/normal', isDraft: T = !1 } = e,
+    let { imageUrl: t, name: n, description: i, formattedPrice: c, role: h, ctaComponent: g, shouldShowFullDescriptionButton: _ = !0, onShowFullDescription: b, productType: E, onTapCard: y, actionMenu: x, showOpaqueBackground: v = !1, hideRoleTag: O = !1, lineClamp: C = 1, cardWidth: j = 332, cardHeight: S, thumbnailHeight: I = 187, descriptionTextVariant: N = 'text-sm/normal', isDraft: T = !1 } = e,
         P = (0, o.hQ)(),
         A = (0, r.jsxs)(r.Fragment, {
             children: [
@@ -103,7 +103,7 @@ function h(e) {
                                     children: (0, r.jsx)(s.Z, {
                                         variant: N,
                                         color: 'text-muted',
-                                        lineClamp: j,
+                                        lineClamp: C,
                                         text: i
                                     })
                                 }),
@@ -119,7 +119,7 @@ function h(e) {
                                       })
                             ]
                         }),
-                        y
+                        x
                     ]
                 }),
                 (0, r.jsxs)('div', {
@@ -148,7 +148,7 @@ function h(e) {
                 })
             ]
         });
-    return null == x
+    return null == y
         ? (0, r.jsx)('article', {
               className: l()(p.productCard, v ? p.opaqueBackground : p.solidBackground),
               'aria-labelledby': P,
@@ -156,14 +156,14 @@ function h(e) {
           })
         : (0, r.jsx)('div', {
               style: {
-                  width: C,
+                  width: j,
                   height: S
               },
               children: (0, r.jsx)(a.kL8, {
                   tag: 'article',
                   'aria-label': d.intl.formatToPlainString(d.t['e+TmJS'], { productName: n }),
                   className: l()(p.productCard, v ? p.opaqueBackground : p.solidBackground, p.cardClickableContainer),
-                  onClick: x,
+                  onClick: y,
                   children: A
               })
           });

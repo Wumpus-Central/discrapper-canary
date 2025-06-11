@@ -103,12 +103,12 @@ let g = (e) => {
         let { stageInstance: n, guild: l, isCard: m = !1, isEmbed: _ = !1, onClick: b } = e,
             E = i.useMemo(() => (null == l ? null : l instanceof p.ZP ? l : new p.ZP(l)), [l]);
         if (null == n || null == E) return null;
-        let { topic: x, speaker_count: y, participant_count: v } = n,
+        let { topic: y, speaker_count: x, participant_count: v } = n,
             O = null != (t = n.members) ? t : [],
-            j = _ ? O.slice(0, 3) : O,
-            C = y - j.length;
+            C = _ ? O.slice(0, 3) : O,
+            j = x - C.length;
         return (
-            _ && (C += O.length - j.length),
+            _ && (j += O.length - C.length),
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsxs)('div', {
@@ -175,16 +175,16 @@ let g = (e) => {
                     (0, r.jsx)(s.Z, {
                         size: m || _ ? s.Z.Sizes.SIZE_16 : s.Z.Sizes.SIZE_20,
                         className: a()(h.header, { [h.embed]: _ }),
-                        children: x
+                        children: y
                     }),
                     (0, r.jsxs)('div', {
                         className: a()(h.members, { [h.embed]: _ }),
                         children: [
-                            j.length > 0 &&
+                            C.length > 0 &&
                                 (0, r.jsxs)('div', {
                                     className: h.speakers,
                                     children: [
-                                        j.map((e) =>
+                                        C.map((e) =>
                                             (0, r.jsx)(
                                                 g,
                                                 {
@@ -195,7 +195,7 @@ let g = (e) => {
                                                 e.user.id
                                             )
                                         ),
-                                        C > 0
+                                        j > 0
                                             ? (0, r.jsxs)('div', {
                                                   className: h.speaker,
                                                   children: [
@@ -211,7 +211,7 @@ let g = (e) => {
                                                       (0, r.jsxs)(c.Z, {
                                                           size: _ ? c.Z.Sizes.SIZE_12 : c.Z.Sizes.SIZE_14,
                                                           color: c.Z.Colors.HEADER_SECONDARY,
-                                                          children: ['+', f.intl.format(f.t.L1pCBQ, { count: C })]
+                                                          children: ['+', f.intl.format(f.t.L1pCBQ, { count: j })]
                                                       })
                                                   ]
                                               })

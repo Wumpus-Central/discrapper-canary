@@ -1,4 +1,4 @@
-n.d(t, { b: () => y }), n(539854), n(953529);
+n.d(t, { b: () => x }), n(539854), n(953529);
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -17,24 +17,24 @@ var i = n(442837),
     _ = n(317381),
     b = n(574952),
     E = n(374065),
-    x = n(388032);
-function y(e) {
+    y = n(388032);
+function x(e) {
     var t, n;
-    let { application: y, customId: v, customLink: O, embedUrl: j, referrerId: C } = e,
-        S = null == y || null == (t = y.bot) ? void 0 : t.id,
+    let { application: x, customId: v, customLink: O, embedUrl: C, referrerId: j } = e,
+        S = null == x || null == (t = x.bot) ? void 0 : t.id,
         I = (0, c.ms)({
             context: { type: 'contextless' },
-            applicationId: y.id,
-            botUserId: null == y || null == (n = y.bot) ? void 0 : n.id
+            applicationId: x.id,
+            botUserId: null == x || null == (n = x.bot) ? void 0 : n.id
         }),
-        N = null != y && (0, s.ye)(y),
+        N = null != x && (0, s.ye)(x),
         T = null != S && N && I,
         { analyticsLocations: P } = (0, a.ZP)(l.Z.ACTIVITY_CUSTOM_LINK),
         A = (0, i.e7)([f.Z], () => f.Z.getChannelId()),
         w = (0, E.KF)(A),
         Z = (0, i.e7)([_.ZP], () => {
             if (null == A) return;
-            let e = _.ZP.getEmbeddedActivitiesForChannel(A).filter((e) => e.applicationId === y.id);
+            let e = _.ZP.getEmbeddedActivitiesForChannel(A).filter((e) => e.applicationId === x.id);
             return e.length > 0 ? e[0].compositeInstanceId : void 0;
         }),
         R = (0, i.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
@@ -44,55 +44,55 @@ function y(e) {
         M = [];
     D &&
         M.push({
-            label: null == Z ? x.intl.string(x.t.cnBQPD) : x.intl.string(x.t.VJlc0d),
+            label: null == Z ? y.intl.string(y.t.cnBQPD) : y.intl.string(y.t.VJlc0d),
             trackingArea: p.j_.PLAY,
             onClick() {
                 (0, g.G6)({
                     channelId: null != A ? A : void 0,
-                    applicationId: y.id,
+                    applicationId: x.id,
                     isStart: null == Z,
                     embeddedActivitiesManager: k,
                     customId: L,
-                    referrerId: C,
+                    referrerId: j,
                     analyticsLocations: P
                 });
             },
-            disabledReason: null != Z && (null == R ? void 0 : R.compositeInstanceId) === Z ? x.intl.string(x.t.wJNK8P) : void 0
+            disabledReason: null != Z && (null == R ? void 0 : R.compositeInstanceId) === Z ? y.intl.string(y.t.wJNK8P) : void 0
         }),
         T &&
             !D &&
             M.push({
-                label: x.intl.string(x.t.JeK1Wl),
+                label: y.intl.string(y.t.JeK1Wl),
                 trackingArea: p.j_.PLAY,
                 onClick() {
                     (0, o.W)({
-                        appId: y.id,
+                        appId: x.id,
                         botId: S,
                         analyticsLocations: P,
                         customId: L,
-                        referrerId: C
+                        referrerId: j
                     });
                 }
             });
-    let U = (0, m.z)(y);
+    let U = (0, m.z)(x);
     return (
         null != M && null != U && M.push(U),
         (0, r.jsx)(d.W, {
             actions: M,
-            embedUrl: j,
-            header: y.name,
+            embedUrl: C,
+            header: x.name,
             iconSrc: h.ZP.getApplicationIconURL({
-                id: y.id,
-                icon: y.icon,
-                bot: y.bot
+                id: x.id,
+                icon: x.icon,
+                bot: x.bot
             }),
             info: (0, r.jsx)('div', { children: O.description }),
             staticBannerSrc: O.getAssetURL(),
             title: O.title,
             trackingConfig: {
-                id: y.id,
+                id: x.id,
                 linkType: u.U.CUSTOM_ACTIVITY_LINK,
-                referrerId: C,
+                referrerId: j,
                 activityCustomId: L
             }
         })

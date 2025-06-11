@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => w }), n(388685), n(583741);
+n.d(t, { Z: () => L }), n(388685), n(583741);
 var i = n(255367);
 n(73800);
 var l = n(481060),
@@ -18,8 +18,8 @@ var l = n(481060),
     _ = n(914010),
     E = n(594174),
     O = n(823379),
-    I = n(358085),
-    y = n(929809),
+    y = n(358085),
+    I = n(929809),
     v = n(179645),
     C = n(701476),
     S = n(785997),
@@ -69,15 +69,15 @@ function A(e, t) {
         e
     );
 }
-function x() {
+function Z() {
     null != r && (0, l.Mr3)(r);
 }
-class Z extends o.Z {
+class x extends o.Z {
     _initialize() {
-        a.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen), a.Z.subscribe('LOGOUT', x);
+        a.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen), a.Z.subscribe('LOGOUT', Z);
     }
     _terminate() {
-        a.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen), a.Z.unsubscribe('LOGOUT', x);
+        a.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen), a.Z.unsubscribe('LOGOUT', Z);
     }
     handleConnectionOpen() {
         var e;
@@ -95,13 +95,13 @@ class Z extends o.Z {
                 h.Z.flowStart(P.MK.ORGANIC_MARKETING, P.EW.NUF_STARTED);
         }
         let o = !1,
-            x = _.Z.getGuildId();
+            Z = _.Z.getGuildId();
         if (a === C.M5.INVITE_UNCLAIMED) {
-            let e = b.Z.getGuild(x);
+            let e = b.Z.getGuild(Z);
             null != e && (0, d.Dc)(e) && ((o = !0), (0, f.RM)(e.id));
         }
-        let Z = () => 0 === m.Z.totalGuilds && !I.isPlatformEmbedded,
-            w = s.bN();
+        let x = () => 0 === m.Z.totalGuilds && !y.isPlatformEmbedded,
+            L = s.bN();
         (e = [
             {
                 key: 'Unified NUF Modal',
@@ -147,16 +147,16 @@ class Z extends o.Z {
                         }
                     );
                 },
-                predicate: () => Z() && !T.a
+                predicate: () => x() && !T.a
             },
             {
                 key: 'New User Age Gate',
                 open: c.i,
-                predicate: () => w && !Z() && !T.a
+                predicate: () => L && !x() && !T.a
             },
             {
                 key: 'Claim Account Modal',
-                open: (e) => c.j(I.isPlatformEmbedded, e),
+                open: (e) => c.j(y.isPlatformEmbedded, e),
                 predicate: () => {
                     var e;
                     return !o && null != E.default.getCurrentUser() && !(null == (e = E.default.getCurrentUser()) ? void 0 : e.isClaimed()) && !T.a && !(0, p.g)('new_user_manager');
@@ -164,7 +164,7 @@ class Z extends o.Z {
             },
             {
                 key: 'Verification Gate with Claim Account',
-                open: (e) => (0, u.hk)(x, null != e ? e : void 0),
+                open: (e) => (0, u.hk)(Z, null != e ? e : void 0),
                 predicate: () => {
                     var e;
                     return o && !(null == (e = E.default.getCurrentUser()) ? void 0 : e.isClaimed()) && !T.a;
@@ -176,15 +176,15 @@ class Z extends o.Z {
                     (0, l.ZDy)(
                         async () => {
                             let { default: e } = await n.e('77578').then(n.bind(n, 184782));
-                            return (t) => (0, i.jsx)(e, A(j({}, t), { guildId: x }));
+                            return (t) => (0, i.jsx)(e, A(j({}, t), { guildId: Z }));
                         },
                         { onCloseCallback: e }
                     ),
-                predicate: () => null != x && null != g.Z.get(x) && g.Z.get(x) !== g.a
+                predicate: () => null != Z && null != g.Z.get(Z) && g.Z.get(Z) !== g.a
             }
         ]),
             (t = () => {
-                y.H(), h.Z.flowStep(P.MK.ANY, P.EW.NUF_COMPLETE, !0);
+                I.H(), h.Z.flowStep(P.MK.ANY, P.EW.NUF_COMPLETE, !0);
             }),
             [...e].reverse().forEach((e) => {
                 let n = t;
@@ -195,4 +195,4 @@ class Z extends o.Z {
             t();
     }
 }
-let w = new Z();
+let L = new x();

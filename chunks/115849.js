@@ -58,8 +58,8 @@ function O(e, t) {
         e
     );
 }
-let I = n(349181),
-    y = {
+let y = n(349181),
+    I = {
         canSend: !1,
         hint: null,
         success: null,
@@ -71,11 +71,11 @@ let I = n(349181),
 function N(e, t) {
     switch (t.type) {
         case 'RESET':
-            return y;
+            return I;
         case 'SUCCESS':
-            return O(E({}, y), { success: t.text });
+            return O(E({}, I), { success: t.text });
         case 'HINT':
-            return O(E({}, y), {
+            return O(E({}, I), {
                 canSend: !0,
                 hint: t.text
             });
@@ -90,7 +90,7 @@ function T(e) {
     let { placeholder: t = m.intl.string(m.t['Rn/sLi']) } = e,
         n = i.useRef(null),
         l = i.useRef(null),
-        [o, d] = i.useReducer(N, y),
+        [o, d] = i.useReducer(N, I),
         { canSend: E, hint: O, success: T, error: P } = o,
         j = (0, p.Q3)('AddFriendInput');
     return (
@@ -142,7 +142,7 @@ function T(e) {
                         }),
                         j
                             ? (0, r.jsx)('img', {
-                                  src: I,
+                                  src: y,
                                   alt: 'Wumpus Waving'
                               })
                             : null

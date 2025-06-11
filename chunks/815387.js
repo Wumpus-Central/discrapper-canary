@@ -16,12 +16,12 @@ var r = n(255367),
     _ = n(825829),
     b = n(623624),
     E = n(29887),
-    x = n(533694),
-    y = n(345114),
+    y = n(533694),
+    x = n(345114),
     v = n(924301),
     O = n(225890),
-    j = n(434404),
-    C = n(507435),
+    C = n(434404),
+    j = n(507435),
     S = n(504733),
     I = n(563959),
     N = n(917318),
@@ -70,12 +70,12 @@ var r = n(255367),
     e_ = n(857640),
     eb = n(614972),
     eE = n(701181),
-    ex = n(29338),
-    ey = n(461135),
+    ey = n(29338),
+    ex = n(461135),
     ev = n(296571),
     eO = n(587737),
-    ej = n(482239),
-    eC = n(328749),
+    eC = n(482239),
+    ej = n(328749),
     eS = n(4305),
     eI = n(910548),
     eN = n(981631),
@@ -210,7 +210,7 @@ let ek = Object.freeze({
                     messageId: t.id
                 });
             return n.isThread()
-                ? (0, r.jsx)(ej.Z, {
+                ? (0, r.jsx)(eC.Z, {
                       message: t,
                       channel: n,
                       compact: i,
@@ -406,7 +406,7 @@ let ek = Object.freeze({
                 message: t,
                 compact: n,
                 onClick: () => {
-                    null != o && j.Z.open(o, eN.pNK.ACCESS, eN.KsC.ACCESS_DISCOVERABLE);
+                    null != o && C.Z.open(o, eN.pNK.ACCESS, eN.KsC.ACCESS_DISCOVERABLE);
                 }
             });
         },
@@ -480,7 +480,7 @@ let ek = Object.freeze({
                 onContextMenuThread: p
             });
         },
-        [eN.uaV.THREAD_STARTER_MESSAGE]: eC.Z,
+        [eN.uaV.THREAD_STARTER_MESSAGE]: ej.Z,
         [eN.uaV.GUILD_INVITE_REMINDER]: function (e) {
             let { message: t, channel: n, compact: i } = e,
                 a = (0, l.e7)([H.default], () => H.default.getCurrentUser()),
@@ -537,12 +537,12 @@ let ek = Object.freeze({
                 usernameHook: l
             });
         },
-        [eN.uaV.ROLE_SUBSCRIPTION_PURCHASE]: y.Z,
+        [eN.uaV.ROLE_SUBSCRIPTION_PURCHASE]: x.Z,
         [eN.uaV.PURCHASE_NOTIFICATION]: function (e) {
             var t;
             let { message: n, channel: i, compact: l } = e;
             return (null == (t = n.purchaseNotification) ? void 0 : t.type) === d.Eh.GUILD_PRODUCT
-                ? (0, r.jsx)(x.Z, {
+                ? (0, r.jsx)(y.Z, {
                       message: n,
                       channel: i,
                       compact: l
@@ -561,7 +561,7 @@ let ek = Object.freeze({
                 o = (0, l.e7)([v.ZP], () => v.ZP.getActiveEventByChannel(n.id), [n.id]);
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(ex.Z, {
+                    (0, r.jsx)(ey.Z, {
                         message: t,
                         compact: i,
                         usernameHook: a
@@ -649,7 +649,7 @@ let ek = Object.freeze({
                     guildId: n.guild_id,
                     messageId: t.id
                 });
-            return (0, r.jsx)(ey.Z, {
+            return (0, r.jsx)(ex.Z, {
                 message: t,
                 compact: i,
                 usernameHook: l
@@ -677,7 +677,7 @@ let ek = Object.freeze({
             });
         },
         [eN.uaV.VOICE_HANGOUT_INVITE]: void 0,
-        [eN.uaV.POLL_RESULT]: C.Z,
+        [eN.uaV.POLL_RESULT]: j.Z,
         [eN.uaV.CHANGELOG]: void 0,
         [eN.uaV.NITRO_NOTIFICATION]: function (e) {
             let { message: t, channel: n } = e;

@@ -29,74 +29,75 @@ var r = n(913527),
 let A = 10;
 function N(e) {
     let { experimentEnabled: t, premiumSubscription: n, mostRecentSubscription: r } = e;
-    if (!t) return !0;
+    if (!t) return !1;
     if (null != r && r.status === S.O0b.ENDED) {
-        var o;
         let e = r.endedAt,
-            t = null == (o = (0, _.Af)(r)) ? void 0 : o.planId,
-            n = null != t && _.ZP.getPremiumType(t) === T.p9.TIER_2;
-        if (null != e && n && i()().subtract(A, 'days').isAfter(e)) return !0;
+            t = r.hasPremiumAtLeast(T.p9.TIER_2);
+        if (null != e && t && i()().subtract(A, 'days').isAfter(e)) return !1;
     }
     if (null != n) {
         let e = n.hasPremiumAtLeast(T.p9.TIER_2),
             t = c.default.getCurrentUser(),
             r = !!(null == n ? void 0 : n.hasActiveTrial) && _.ZP.isPremiumExactly(t, T.p9.TIER_0);
-        if (e || r) return !0;
+        if (e || r) return !1;
     }
-    return !!(a.tq && f.Z.isFractionalPremiumActive());
+    return !(a.tq && f.Z.isFractionalPremiumActive());
 }
 function C() {
     var e;
-    let { paymentsBlocked: t } = l.Z.useExperiment({ location: '153d31_1' }, { autoTrackExposure: !1 }),
-        { promotion: n } = (0, v.mq)(),
-        { enabled: r } = (0, g.ZP)(),
-        { enabled: i } = (0, m.ZP)(),
-        { mostRecentSubscription: s, premiumSubscription: c } = (0, o.cj)([u.ZP], () => ({
+    let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
+        { paymentsBlocked: n } = l.Z.useExperiment({ location: '153d31_1' }, { autoTrackExposure: !1 }),
+        { promotion: r } = (0, v.mq)(),
+        { enabled: i } = (0, g.ZP)(),
+        { enabled: s } = (0, m.ZP)(),
+        { mostRecentSubscription: c, premiumSubscription: d } = (0, o.cj)([u.ZP], () => ({
             mostRecentSubscription: u.ZP.getMostRecentPremiumTypeSubscription(),
             premiumSubscription: u.ZP.getPremiumTypeSubscription()
         })),
-        d = (0, b.N)(),
-        f = (0, E.Ng)(),
-        _ = new Date(null != (e = null == n ? void 0 : n.endDate) ? e : 0).valueOf(),
-        p = Date.now(),
-        O = p > _;
-    (0, y.Z)({ delay: O ? -1 : _ - p });
-    let I = !a.tq || i,
-        T = !N({
-            experimentEnabled: r,
-            premiumSubscription: c,
-            mostRecentSubscription: s
+        f = (0, b.N)(),
+        _ = (0, E.Ng)(),
+        p = new Date(null != (e = null == r ? void 0 : r.endDate) ? e : 0).valueOf(),
+        O = Date.now(),
+        I = O > p;
+    (0, y.Z)({ delay: I ? -1 : p - O });
+    let T = !a.tq || s,
+        S = N({
+            experimentEnabled: i,
+            premiumSubscription: d,
+            mostRecentSubscription: c
         }),
-        S = I && T && null == d && null != n && !t && null == f,
-        { enabled: A } = h.Z.useExperiment(
+        A = T && S && null == f && null != r && !n && null == _,
+        { enabled: C } = h.Z.useExperiment(
             { location: '153d31_2' },
             {
-                autoTrackExposure: S,
-                disable: !S
+                autoTrackExposure: A,
+                disable: !A
             }
         );
-    return !O && A;
+    return !I && (t ? C : A);
 }
 async function R() {
     var e;
-    let t = c.default.getCurrentUser(),
-        n = !(null == t ? void 0 : t.isClaimed()),
-        { paymentsBlocked: r } = l.Z.getCurrentConfig({ location: '153d31_3' }, { autoTrackExposure: !1 }),
-        { enabled: i } = (0, g.aW)(),
-        { enabled: o } = (0, m.oW)(),
-        { enabled: f } = h.Z.getCurrentConfig({ location: '153d31_4' }, { autoTrackExposure: !1 }),
-        E = !a.tq || o;
-    if (n || r || !i || !f || !E || (d.Z.shouldFetchOffer() && !(0, _.I5)(t) && (await (0, p.T)('BogoPromotionUtils')), d.Z.hasFetchedOffer() && (d.Z.hasAnyUnexpiredOffer() || d.Z.hasAnyUnexpiredDiscountOffer()))) return !1;
+    let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
+        n = c.default.getCurrentUser(),
+        r = !(null == n ? void 0 : n.isClaimed()),
+        { paymentsBlocked: i } = l.Z.getCurrentConfig({ location: '153d31_3' }, { autoTrackExposure: !1 }),
+        { enabled: o } = (0, g.aW)(),
+        { enabled: f } = (0, m.oW)(),
+        { enabled: E } = h.Z.getCurrentConfig({ location: '153d31_4' }, { autoTrackExposure: !1 }),
+        b = !a.tq || f;
+    if (r || i || !o || (t && !E) || !b || (d.Z.shouldFetchOffer() && !(0, _.I5)(n) && (await (0, p.T)('BogoPromotionUtils')), d.Z.hasFetchedOffer() && (d.Z.hasAnyUnexpiredOffer() || d.Z.hasAnyUnexpiredDiscountOffer()))) return !1;
     !u.ZP.hasFetchedMostRecentPremiumTypeSubscription() && (null == (e = c.default.getCurrentUser()) ? void 0 : e.hasPurchasedFlag(T.in.PREMIUM_TIER_2)) && (await (0, s.ou)()), u.ZP.hasFetchedSubscriptions() || (await (0, s.jg)());
-    let b = u.ZP.getMostRecentPremiumTypeSubscription();
-    return !N({
-        experimentEnabled: i,
+    let y = u.ZP.getMostRecentPremiumTypeSubscription();
+    return N({
+        experimentEnabled: o,
         premiumSubscription: u.ZP.getPremiumTypeSubscription(),
-        mostRecentSubscription: b
+        mostRecentSubscription: y
     });
 }
 async function P() {
-    if (!(await R())) return;
-    let e = I.Z.bogoPromotion;
-    (null != e && new Date(e.endDate).valueOf() >= Date.now()) || (await (0, O.L9)());
+    let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
+    if (!(await R(e))) return;
+    let t = I.Z.bogoPromotion;
+    (null != t && new Date(t.endDate).valueOf() >= Date.now()) || (await (0, O.L9)());
 }

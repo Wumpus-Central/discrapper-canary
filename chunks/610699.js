@@ -16,12 +16,12 @@ var r = n(255367),
     _ = n(914498),
     b = n(880251),
     E = n(208444),
-    x = n(835473),
-    y = n(471445),
+    y = n(835473),
+    x = n(471445),
     v = n(111028),
     O = n(601964),
-    j = n(592125),
-    C = n(430824),
+    C = n(592125),
+    j = n(430824),
     S = n(496675),
     I = n(594174),
     N = n(626135),
@@ -83,7 +83,7 @@ function k(e) {
 function D(e) {
     let { channel: t, guild: n, hasEnded: i, textColor: l } = e;
     if (null != t && null != n) {
-        let e = (0, y.KS)(t, n);
+        let e = (0, x.KS)(t, n);
         return (0, r.jsxs)('div', {
             className: a()(R.channel, { [R.ended]: i }),
             children: [
@@ -133,8 +133,8 @@ function L(e) {
                 invite_inviter_id: null == (e = a.inviter) ? void 0 : e.id
             });
         }, [null == (t = a.inviter) ? void 0 : t.id, b.id]),
-        y = (0, c.e7)([C.Z], () => (null != a.guild ? C.Z.getGuild(a.guild.id) : null), [a]),
-        v = (0, x.Z)([b.id])[0],
+        x = (0, c.e7)([j.Z], () => (null != a.guild ? j.Z.getGuild(a.guild.id) : null), [a]),
+        v = (0, y.Z)([b.id])[0],
         T = (0, c.e7)([p.ZP], () => {
             var e;
             return (null == a ? void 0 : a.channel) != null && (null == (e = p.ZP.getSelfEmbeddedActivityForChannel(a.channel.id)) ? void 0 : e.applicationId) === b.id;
@@ -146,7 +146,7 @@ function L(e) {
                 return b.id === t;
             });
         }),
-        k = j.Z.getChannel(null == (n = a.channel) ? void 0 : n.id),
+        k = C.Z.getChannel(null == (n = a.channel) ? void 0 : n.id),
         D = (0, c.e7)([S.Z], () => null != k && S.Z.can(A.Plq.USE_EMBEDDED_ACTIVITIES, k), [k]),
         { analyticsLocations: L } = (0, f.ZP)(m.Z.INVITE_EMBED),
         U = (0, c.Wu)(
@@ -177,10 +177,10 @@ function L(e) {
                 });
         }, [a, o, L, u]),
         G = a.state === A.r2o.ACCEPTING,
-        H = null != y;
-    if (null == y) {
+        H = null != x;
+    if (null == x) {
         if (null == a.guild) return (0, r.jsx)(P.Z, {});
-        y = new O.ZP(a.guild);
+        x = new O.ZP(a.guild);
     }
     let V = (H && !D) || (H && T);
     return (H && T && (l = Z.intl.string(Z.t.wJNK8P)), D || (l = Z.intl.string(Z.t.hHGrW1)), null == a.code || '' === a.code || null == v)
@@ -193,7 +193,7 @@ function L(e) {
                   activityUsers: F,
                   isMember: H,
                   channel: k,
-                  guild: y,
+                  guild: x,
                   members: h,
                   membersOnline: g,
                   isActivityActive: R,
@@ -207,13 +207,13 @@ function L(e) {
 }
 function M(e) {
     var t, n;
-    let { app: l, invite: a, activityUsers: o, isMember: s, channel: c, guild: u, members: d, membersOnline: p, isActivityActive: m, submitting: f, isDisabled: x, tooltip: y, handleAcceptInvite: v, onView: O } = e,
-        j = new URL(a.code, 'https://discord.gg').toString(),
-        { bot: C, icon: S } = l,
+    let { app: l, invite: a, activityUsers: o, isMember: s, channel: c, guild: u, members: d, membersOnline: p, isActivityActive: m, submitting: f, isDisabled: y, tooltip: x, handleAcceptInvite: v, onView: O } = e,
+        C = new URL(a.code, 'https://discord.gg').toString(),
+        { bot: j, icon: S } = l,
         I = T.ZP.getApplicationIconURL({
             id: l.id,
             icon: S,
-            bot: C
+            bot: j
         }),
         N = (0, E.z)(l),
         P = (0, b.E)(l),
@@ -224,12 +224,12 @@ function M(e) {
                     label: s ? (m ? Z.intl.string(Z.t.VJlc0d) : Z.intl.string(Z.t.RscU7O)) : Z.intl.string(Z.t['2BP08P']),
                     trackingArea: s ? _.j_.PLAY : _.j_.JOIN_SERVER,
                     submitting: f,
-                    disabledReason: x && null != y ? y : void 0,
+                    disabledReason: y && null != x ? x : void 0,
                     onClick: v
                 }
             ];
             return null != N && e.push(N), e;
-        }, [v, m, x, s, f, y, N]);
+        }, [v, m, y, s, f, x, N]);
     return (0, r.jsx)(
         h.W,
         ((t = (function (e) {
@@ -261,7 +261,7 @@ function M(e) {
                 header: l.name,
                 title: Z.intl.string(Z.t['7vb6n5']),
                 iconSrc: I,
-                embedUrl: j
+                embedUrl: C
             },
             P
         )),

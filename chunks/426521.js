@@ -16,12 +16,12 @@ var r = n(255367),
     _ = n(594174),
     b = n(626135),
     E = n(709054),
-    x = n(591759),
-    y = n(833592),
+    y = n(591759),
+    x = n(833592),
     v = n(497089),
     O = n(178480),
-    j = n(418316),
-    C = n(382865),
+    C = n(418316),
+    j = n(382865),
     S = n(526146),
     I = n(400565),
     N = n(148789),
@@ -104,7 +104,7 @@ let U = i.memo(function (e) {
             { analyticsLocations: u } = (0, c.ZP)(),
             m = (0, S.I)(l, s),
             h = i.useCallback(async () => {
-                if ((m || (0, y.wt)(l), null != l.item_enum && l.item_enum === v.AM.FIND_FRIENDS))
+                if ((m || (0, x.wt)(l), null != l.item_enum && l.item_enum === v.AM.FIND_FRIENDS))
                     return void (0, a.ZDy)(async () => {
                         let { default: e } = await n.e('6074').then(n.bind(n, 443189));
                         return (t) =>
@@ -138,12 +138,12 @@ let U = i.memo(function (e) {
                             );
                     });
                 if (null != l.deeplink) {
-                    let t = x.Z.safeParseWithQuery(l.deeplink);
+                    let t = y.Z.safeParseWithQuery(l.deeplink);
                     if (null == t) return;
                     let n = t.hostname,
                         r = t.path;
                     if (null == n || null == r) return;
-                    if (x.Z.isDiscordHostname(n)) {
+                    if (y.Z.isDiscordHostname(n)) {
                         let t = r.match('^/users/(\\d+)');
                         if (null != t && 2 === t.length) {
                             var e;
@@ -172,7 +172,7 @@ let U = i.memo(function (e) {
                   applicationId: l.applicationId
               }));
         let _ = null != l.local_id,
-            C = (0, j.Z)({
+            j = (0, C.Z)({
                 item: l,
                 renderApplication: (e) => (0, r.jsx)(M, { applicationId: e })
             }),
@@ -191,7 +191,7 @@ let U = i.memo(function (e) {
                 (0, r.jsxs)(a.kL8, {
                     className: w.rowContent,
                     focusProps: { offset: 4 },
-                    'aria-label': C,
+                    'aria-label': j,
                     onClick: h,
                     children: [
                         m ? null : (0, r.jsx)('div', { className: w.unread }),
@@ -203,7 +203,7 @@ let U = i.memo(function (e) {
                                 (0, r.jsxs)(a.Text, {
                                     variant: 'text-md/normal',
                                     color: m ? 'text-muted' : 'text-normal',
-                                    children: ['string' != typeof C ? C : p.Z.parse(C), R]
+                                    children: ['string' != typeof j ? j : p.Z.parse(j), R]
                                 }),
                                 (null == (t = l.message) ? void 0 : t.content) != null ? (0, r.jsx)(k, { item: l }) : null,
                                 null != l.callout ? (0, r.jsx)(D, { item: l }) : null,
@@ -225,7 +225,7 @@ let U = i.memo(function (e) {
         let { items: t } = e,
             n = h.d$.useSetting();
         return (
-            (0, C.c)(t),
+            (0, j.c)(t),
             (0, r.jsx)(r.Fragment, {
                 children: t.map((e) =>
                     (0, r.jsx)(

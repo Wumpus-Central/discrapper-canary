@@ -38,7 +38,7 @@ function m(e) {
     var t,
         n,
         { message: i, channel: m, content: f, className: h, compact: g, popoutProps: _, hideTimestamp: b = !1, withFooter: E = !1 } = e,
-        x = (function (e, t) {
+        y = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -57,13 +57,13 @@ function m(e) {
             }
             return i;
         })(e, ['message', 'channel', 'content', 'className', 'compact', 'popoutProps', 'hideTimestamp', 'withFooter']);
-    let y = (0, o.ZP)(i),
-        v = (0, a.Z)(y);
+    let x = (0, o.ZP)(i),
+        v = (0, a.Z)(x);
     return (0, r.jsx)('div', {
         className: l()({ [d.withFooter]: E }, d.embedCard, { [d.compact]: g }, h),
         children: (0, r.jsx)(
             s.Z,
-            ((t = p({}, x)),
+            ((t = p({}, y)),
             (n = n =
                 {
                     className: l()(d.messageContainer, { [d.compact]: g }),
@@ -79,7 +79,7 @@ function m(e) {
                             {
                                 message: i,
                                 channel: m,
-                                author: y,
+                                author: x,
                                 guildId: null == m ? void 0 : m.guild_id,
                                 compact: g,
                                 hideTimestamp: b,

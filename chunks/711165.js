@@ -16,12 +16,12 @@ var r = n(255367),
     _ = n(156012),
     b = n(74365),
     E = n(618857),
-    x = n(695346),
-    y = n(23750),
+    y = n(695346),
+    x = n(23750),
     v = n(592125),
     O = n(594174),
-    j = n(823379),
-    C = n(324081),
+    C = n(823379),
+    j = n(324081),
     S = n(240126),
     I = n(791914),
     N = n(981631),
@@ -173,7 +173,7 @@ function R(e) {
                 {
                     className: P.channelRow,
                     children: [
-                        (0, r.jsx)(C.Z, {
+                        (0, r.jsx)(j.Z, {
                             channel: n,
                             gotoChannel: () => (0, h.uL)(N.Z5c.CHANNEL(n.getGuildId(), n.id)),
                             children: null
@@ -199,7 +199,7 @@ function R(e) {
 }
 let k = i.memo(function (e) {
     let { scheduledMessage: t, channel: n, isPendingDeletion: l } = e,
-        o = new y.ZP({
+        o = new x.ZP({
             id: t.scheduledMessageId,
             content: t.scheduledMessage.content,
             author: O.default.getUser(t.userId),
@@ -239,7 +239,7 @@ let k = i.memo(function (e) {
                         stateMessage: T.intl.string(T.t.j8uIfH)
                     };
                 default:
-                    (0, j.vE)(e);
+                    (0, C.vE)(e);
             }
         })(t.state),
         d = i.useCallback(() => {
@@ -277,7 +277,7 @@ let k = i.memo(function (e) {
                                           message: o,
                                           channel: n,
                                           className: P.message,
-                                          compact: x.jU.getSetting(),
+                                          compact: y.jU.getSetting(),
                                           animateAvatar: !1,
                                           focusProps: A
                                       },

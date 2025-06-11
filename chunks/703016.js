@@ -17,8 +17,8 @@ var r = n(913527),
     _ = n(131951),
     E = n(292959),
     O = n(699516),
-    I = n(944486),
-    y = n(9156),
+    y = n(944486),
+    I = n(9156),
     v = n(594174),
     C = n(51144),
     S = n(196051),
@@ -27,14 +27,14 @@ var r = n(913527),
     P = n(981631),
     j = n(388032);
 let A = [],
-    x = null,
     Z = null,
-    w = null,
-    L = /\|\|([\s\S]+?)\|\|/g;
+    x = null,
+    L = null,
+    w = /\|\|([\s\S]+?)\|\|/g;
 function R(e, t, n, r) {
     let l = b.Z.getGuild(n),
         a = e
-            .replace(L, j.intl.string(j.t['F+x38P']))
+            .replace(w, j.intl.string(j.t['F+x38P']))
             .replace(/<@!?(\d+)>/g, (e, t) => {
                 var r;
                 let i = v.default.getUser(t);
@@ -70,16 +70,16 @@ function R(e, t, n, r) {
 function D() {
     if (!o.Zh) return !1;
     let e = d.default.locale;
-    if (null == w) {
+    if (null == L) {
         var t;
-        w = null == (t = window.speechSynthesis) ? void 0 : t.getVoices();
+        L = null == (t = window.speechSynthesis) ? void 0 : t.getVoices();
     }
-    let n = w.filter((t) => t.lang === e || t.lang.slice(0, e.length) === e);
-    Z = n.length > 0 ? n[0] : null;
+    let n = L.filter((t) => t.lang === e || t.lang.slice(0, e.length) === e);
+    x = n.length > 0 ? n[0] : null;
 }
 async function k(e, t, n, r, i) {
     let l = o.e6(e, n);
-    null !== l && (null == Z && D(), t ? await (0, S.NB)() : null == x || x.removeEventListener('end', S.NB), l.addEventListener('end', S.NB), null != r && l.addEventListener('start', r), null != i && l.addEventListener('end', i), (x = l), o.iq(l, Z));
+    null !== l && (null == x && D(), t ? await (0, S.NB)() : null == Z || Z.removeEventListener('end', S.NB), l.addEventListener('end', S.NB), null != r && l.addEventListener('start', r), null != i && l.addEventListener('end', i), (Z = l), o.iq(l, x));
 }
 function M(e, t, n, r, i) {
     k(e, t, i, () => {
@@ -91,7 +91,7 @@ function U(e) {
     k(t, n, r, i, l);
 }
 function G() {
-    return null !== x && x.removeEventListener('end', S.NB), o.M9(), (x = null), !0;
+    return null !== Z && Z.removeEventListener('end', S.NB), o.M9(), (Z = null), !0;
 }
 function V(e) {
     var t, n, r;
@@ -109,7 +109,7 @@ function B(e) {
     if (c || _.Z.isSelfDeaf()) return !1;
     let u = g.Z.getChannel(o);
     if (null == u) return !1;
-    let d = I.Z.getChannelId(),
+    let d = y.Z.getChannelId(),
         b = f.ZP.getCurrentSidebarChannelId(d),
         v = o === d || o === b,
         S = p.OW.getSetting() && s.tts && v,
@@ -119,7 +119,7 @@ function B(e) {
         if (A.indexOf(s.id) >= 0) return !1;
         A.unshift(s.id) > 10 && A.pop();
         let e = u.getGuildId();
-        if (null != e && y.ZP.getMutedChannels(e).has(o)) return !1;
+        if (null != e && I.ZP.getMutedChannels(e).has(o)) return !1;
         let t = null != (l = null != (i = m.ZP.getNick(e, null == (n = s.author) ? void 0 : n.id)) ? i : C.ZP.getName(s.author)) ? l : '',
             c = s.type === P.uaV.REPLY ? (null == (r = s.referenced_message) ? void 0 : r.author) : null,
             d = null != c ? (null != (a = m.ZP.getNick(e, null == c ? void 0 : c.id)) ? a : C.ZP.getName(c)) : null;

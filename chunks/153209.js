@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(642613);
+n.d(t, { Z: () => j }), n(388685), n(642613);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -16,14 +16,14 @@ var r = n(255367),
     _ = n(626135),
     b = n(709054),
     E = n(791914),
-    x = n(981631),
-    y = n(388032),
+    y = n(981631),
+    x = n(388032),
     v = n(929968),
     O = n(413813);
-function j(e) {
+function C(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(c.M0o, {
-        tooltip: y.intl.string(y.t['8k+6QU']),
+        tooltip: x.intl.string(x.t['8k+6QU']),
         color: c.YX$.TERTIARY,
         icon: (0, r.jsx)(c.W6s, {
             size: 'xs',
@@ -33,13 +33,13 @@ function j(e) {
         onClick: t
     });
 }
-function C(e) {
+function j(e) {
     let { setTab: t, badgeState: n, closePopout: l } = e,
-        { initialized: c, items: y, loading: O, loadMore: C } = (0, m.y6)(),
+        { initialized: c, items: x, loading: O, loadMore: j } = (0, m.y6)(),
         S = (0, o.e7)([u.Z], () => u.Z.localItems),
         I = (0, h.Us)({ location: 'ForYou' }),
-        N = i.useMemo(() => [...[...y, ...S].sort((e, t) => -1 * b.default.compare(e.id, t.id))], [y, S]),
-        T = y.length > 0 ? y[0] : null,
+        N = i.useMemo(() => [...[...x, ...S].sort((e, t) => -1 * b.default.compare(e.id, t.id))], [x, S]),
+        T = x.length > 0 ? x[0] : null,
         P = g.d$.useSetting(),
         A = i.useMemo(() => {
             if (null != T && 0 >= b.default.compare(T.id, P)) return !1;
@@ -58,9 +58,9 @@ function C(e) {
                 badgeState: n,
                 closePopout: l,
                 children: A
-                    ? (0, r.jsx)(j, {
+                    ? (0, r.jsx)(C, {
                           onClick: () => {
-                              null != T && (g.d$.updateSetting(T.id), _.default.track(x.rMx.NOTIFICATION_CENTER_ACTION, { action_type: d.ud.MARK_ALL_READ }));
+                              null != T && (g.d$.updateSetting(T.id), _.default.track(y.rMx.NOTIFICATION_CENTER_ACTION, { action_type: d.ud.MARK_ALL_READ }));
                           }
                       })
                     : null
@@ -69,7 +69,7 @@ function C(e) {
                 initialized: c,
                 items: N,
                 loading: O,
-                loadMore: C
+                loadMore: j
             })
         ]
     });

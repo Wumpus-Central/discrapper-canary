@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -16,11 +16,11 @@ var r = n(255367),
     _ = n(617379),
     b = n(324081),
     E = n(305248),
-    x = n(520116),
-    y = n(981631),
+    y = n(520116),
+    x = n(981631),
     v = n(388032),
     O = n(28007);
-function j(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function j(e) {
     }
     return e;
 }
-let C = i.memo(function (e) {
+let j = i.memo(function (e) {
         let { channel: t, deleteChannel: n } = e,
             l = i.useRef(null),
             [[a, s], u] = i.useState([0, 0]),
@@ -82,7 +82,7 @@ let C = i.memo(function (e) {
         return (0, r.jsx)(o.animated.div, {
             ref: l,
             style: f,
-            children: (0, r.jsx)(S, j({}, e))
+            children: (0, r.jsx)(S, C({}, e))
         });
     }),
     S = i.memo(function (e) {
@@ -104,12 +104,12 @@ let C = i.memo(function (e) {
         )
             return null;
         let m = (e, r) => {
-            (0, p.yw)(y.rMx.INBOX_CHANNEL_CLICKED, {
+            (0, p.yw)(x.rMx.INBOX_CHANNEL_CLICKED, {
                 channel_id: t.channelId,
                 guild_id: t.guildId
             });
             let i = null != r ? r : t.oldestUnreadMessageId;
-            (0, f.uL)(y.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : i)), n(e);
+            (0, f.uL)(x.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : i)), n(e);
         };
         return (0, r.jsx)('div', {
             className: O.channel,
@@ -120,12 +120,12 @@ let C = i.memo(function (e) {
                     mentionCount: t.mentionCount,
                     toggleCollapsed: a,
                     channelState: t,
-                    children: [(0, r.jsx)(_.Z, { channel: o }), (0, r.jsx)(I, j({}, e)), 'nsfw' === t.type ? null : (0, r.jsx)(N, j({}, e))]
+                    children: [(0, r.jsx)(_.Z, { channel: o }), (0, r.jsx)(I, C({}, e)), 'nsfw' === t.type ? null : (0, r.jsx)(N, C({}, e))]
                 }),
                 children: t.collapsed
                     ? null
                     : 'messages' === t.type
-                      ? (0, r.jsx)(x.Z, {
+                      ? (0, r.jsx)(y.Z, {
                             channel: t,
                             channelRecord: o,
                             gotoChannel: m
@@ -158,7 +158,7 @@ function I(e) {
               }),
         onClick: function () {
             a && null != t.guildId ? i(t.guildId) : n(t),
-                (0, p.yw)(y.rMx.INBOX_CHANNEL_ACKED, {
+                (0, p.yw)(x.rMx.INBOX_CHANNEL_ACKED, {
                     channel_id: t.channelId,
                     guild_id: t.guildId,
                     marked_all_channels_as_read: !1,
@@ -171,7 +171,7 @@ function N(e) {
     let { channel: t, toggle: n, getNumUnreadChannels: i } = e;
     function l() {
         n(t),
-            (0, p.yw)(y.rMx.INBOX_CHANNEL_COLLAPSED, {
+            (0, p.yw)(x.rMx.INBOX_CHANNEL_COLLAPSED, {
                 channel_id: t.channelId,
                 guild_id: t.guildId,
                 num_unread_channels_remaining: i(),
@@ -184,7 +184,7 @@ function N(e) {
             var n, i;
             return (0, r.jsx)(
                 c.P3F,
-                ((n = j({}, e)),
+                ((n = C({}, e)),
                 (i = i =
                     {
                         className: a()(O.collapseButton, { [O.collapsed]: t.collapsed }),

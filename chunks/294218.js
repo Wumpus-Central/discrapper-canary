@@ -16,12 +16,12 @@ var r = n(255367),
     _ = n(750030),
     b = n(900164),
     E = n(739566),
-    x = n(492593),
-    y = n(453687),
+    y = n(492593),
+    x = n(453687),
     v = n(25015),
     O = n(689674),
-    j = n(438075),
-    C = n(963550),
+    C = n(438075),
+    j = n(963550),
     S = n(845080),
     I = n(295790),
     N = n(145807),
@@ -121,10 +121,10 @@ let R = i.memo(function (e) {
             enabled: H
         });
     if ((0, b.Z)(i, ei)) return null;
-    let ea = (0, y.iG)(i),
-        eo = (0, y.Gx)(i);
+    let ea = (0, x.iG)(i),
+        eo = (0, x.Gx)(i);
     return (0, r.jsx)(
-        x.Z,
+        y.Z,
         w(
             {
                 compact: l,
@@ -142,8 +142,8 @@ let R = i.memo(function (e) {
                         roleIcon: er
                     })
                 ),
-                childrenAccessories: e.hideAccessories ? void 0 : (0, j.Q)(e, X),
-                childrenMessageContent: (0, C.Z)(e, Y),
+                childrenAccessories: e.hideAccessories ? void 0 : (0, C.Q)(e, X),
+                childrenMessageContent: (0, j.Z)(e, Y),
                 childrenSystemMessage: (0, I.Z)(Z(w({}, e), { disableInteraction: z })),
                 onContextMenu: k,
                 onClick: D,

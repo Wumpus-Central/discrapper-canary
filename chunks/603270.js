@@ -23,23 +23,23 @@ var r = n(255367),
     _ = n(509545),
     b = n(238),
     E = n(55563),
-    x = n(551428),
-    y = n(626135),
+    y = n(551428),
+    x = n(626135),
     v = n(572004),
     O = n(601911),
-    j = n(504211),
-    C = n(970321),
+    C = n(504211),
+    j = n(970321),
     S = n(680005),
     I = n(981631),
     N = n(979007),
     T = n(388032),
     P = n(197866);
-let A = (0, o.Kb)([E.Z, x.Z, _.Z], {
+let A = (0, o.Kb)([E.Z, y.Z, _.Z], {
         queryId: (e) => I.McO.SKU(e),
         get: (e) => {
             if (null == e) return;
             let t = E.Z.get(e),
-                n = x.Z.getForSKU(e);
+                n = y.Z.getForSKU(e);
             if (null == t || null == n) return;
             let r = _.Z.getForSKU(e);
             return {
@@ -65,8 +65,8 @@ let A = (0, o.Kb)([E.Z, x.Z, _.Z], {
     });
 function Z(e) {
     let { appId: t, message: l } = e,
-        a = (0, C.R)(t),
-        [u, d, f, h, _, E, x] = (0, o.Wu)(
+        a = (0, j.R)(t),
+        [u, d, f, h, _, E, y] = (0, o.Wu)(
             [p.Z, b.Z, g.Z],
             () => {
                 var e;
@@ -115,12 +115,12 @@ function Z(e) {
         description: A,
         link: ''.concat(location.protocol, '//').concat(location.host).concat(I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(u.id, N.GlobalDiscoveryAppsSections.STORE)),
         onLinkCopy: () => {
-            (0, j.X)(t, j.B.STORE_EMBED);
+            (0, C.X)(t, C.B.STORE_EMBED);
         },
-        iconSrc: x,
+        iconSrc: y,
         onIconClick: () => {
             w(),
-                y.default.track(I.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
+                x.default.track(I.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                     application_id: t,
                     area: 'app_icon'
                 });
@@ -128,7 +128,7 @@ function Z(e) {
         children: (0, r.jsx)(s.zxk, {
             onClick: () => {
                 w(),
-                    y.default.track(I.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
+                    x.default.track(I.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                         application_id: t,
                         area: 'open_store_button'
                     });
@@ -161,7 +161,7 @@ function R(e) {
             };
         })(c, a),
         { data: E } = (0, d.IX)(null == m ? void 0 : m.applicationId),
-        x = (0, o.e7)(
+        y = (0, o.e7)(
             [g.Z],
             () => {
                 var e;
@@ -170,10 +170,10 @@ function R(e) {
             [u]
         ),
         v = i.useMemo(() => (null != E ? (0, O.y)(E, 45) : void 0), [E]),
-        Z = (0, C.R)(null != (l = null == E ? void 0 : E.id) ? l : ''),
+        Z = (0, j.R)(null != (l = null == E ? void 0 : E.id) ? l : ''),
         { openModal: R, subscriptionPurchaseButtonState: D } = (0, h.Z)({
             skuId: c,
-            initialSubscribeForGuild: x
+            initialSubscribeForGuild: y
         });
     if (!Z || null == E || null == m) return null;
     let L = m.type === I.epS.SUBSCRIPTION,
@@ -186,7 +186,7 @@ function R(e) {
                         transitionState: t.transitionState,
                         onClose: t.onClose,
                         appId: E.id,
-                        guildId: x
+                        guildId: y
                     });
             });
         },
@@ -203,7 +203,7 @@ function R(e) {
                               transitionState: n.transitionState,
                               appId: E.id,
                               skuId: m.id,
-                              guildId: x,
+                              guildId: y,
                               subscriptionType: M ? 'user' : 'guild',
                               onClose: n.onClose,
                               onHeaderTitleClick: i
@@ -249,7 +249,7 @@ function R(e) {
               : t.trim();
     '' === B && (B = void 0);
     let G = () => {
-        y.default.track(I.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+        x.default.track(I.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
             application_id: E.id,
             sku_id: m.id,
             area: 'purchase_button'
@@ -261,12 +261,12 @@ function R(e) {
         description: B,
         link: ''.concat(location.protocol, '//').concat(location.host).concat(I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(E.id, N.GlobalDiscoveryAppsSections.STORE)),
         onLinkCopy: () => {
-            (0, j.X)(E.id, j.B.SKU_EMBED, c);
+            (0, C.X)(E.id, C.B.SKU_EMBED, c);
         },
         iconSrc: v,
         onIconClick: () => {
             U(),
-                y.default.track(I.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                x.default.track(I.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                     application_id: E.id,
                     sku_id: m.id,
                     area: 'app_icon'
@@ -279,7 +279,7 @@ function R(e) {
                     color: s.Ttl.CUSTOM,
                     onClick: () => {
                         F(),
-                            y.default.track(I.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                            x.default.track(I.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                                 application_id: E.id,
                                 sku_id: m.id,
                                 area: 'view_details'

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => o });
 var l = n(255367);
 n(73800);
 var a = n(120356),
@@ -6,8 +6,8 @@ var a = n(120356),
     r = n(481060),
     s = n(259580),
     u = n(474000);
-function c(e) {
-    let { options: t, onClick: n, className: a, hideCaret: c } = e;
+function o(e) {
+    let { options: t, onClick: n, className: a, hideCaret: o } = e;
     return (0, l.jsx)('div', {
         className: i()(u.root, a),
         children: t.map((e, t) =>
@@ -23,7 +23,7 @@ function c(e) {
                             variant: 'text-md/normal',
                             children: e.label
                         }),
-                        !(null == c ? void 0 : c(e)) &&
+                        !(null == o ? void 0 : o(e)) &&
                             (0, l.jsx)(s.Z, {
                                 className: u.caret,
                                 direction: s.Z.Directions.RIGHT

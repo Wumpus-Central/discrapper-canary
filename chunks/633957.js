@@ -16,12 +16,12 @@ var r = n(255367),
     _ = n(311819),
     b = n(758199),
     E = n(943762),
-    x = n(914498),
-    y = n(208444),
+    y = n(914498),
+    x = n(208444),
     v = n(429551),
     O = n(973616),
-    j = n(314897),
-    C = n(592125),
+    C = n(314897),
+    j = n(592125),
     S = n(158776),
     I = n(594174),
     N = n(626135),
@@ -60,9 +60,9 @@ let U = i.memo(function (e) {
         { application: P, channelId: w, guildId: U } = e,
         { analyticsLocations: F } = (0, h.ZP)(f.Z.ACTIVITY_INSTANCE_EMBED),
         B = (0, s.O)(),
-        G = (0, l.e7)([C.Z], () => C.Z.getChannel(w), [w]),
+        G = (0, l.e7)([j.Z], () => j.Z.getChannel(w), [w]),
         H = (null == G || null == (t = G.isThread) ? void 0 : t.call(G)) ? (null == G ? void 0 : G.parent_id) : w,
-        V = (0, l.e7)([j.default], () => j.default.getId()),
+        V = (0, l.e7)([C.default], () => C.default.getId()),
         {
             embeddedActivity: z,
             currentEmbeddedActivity: W,
@@ -142,7 +142,7 @@ let U = i.memo(function (e) {
                       });
         },
         el = et.disabled ? D.intl.string(D.t.JBnc7O) : D.intl.string(D.t.cX9uLS),
-        ea = (0, y.z)(J, () => {
+        ea = (0, x.z)(J, () => {
             N.default.track(R.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
                 application_id: P.id,
                 channel_id: w,
@@ -164,7 +164,7 @@ let U = i.memo(function (e) {
         em = [
             {
                 label: ee ? D.intl.string(D.t.cnBQPD) : D.intl.string(D.t.VJlc0d),
-                trackingArea: x.j_.PLAY,
+                trackingArea: y.j_.PLAY,
                 onClick: ei,
                 disabledReason: v,
                 submitting: er
@@ -211,7 +211,7 @@ let U = i.memo(function (e) {
             actions: em,
             trackingConfig: {
                 id: P.id,
-                linkType: x.Un.ACTIVITY_INSTANCE
+                linkType: y.Un.ACTIVITY_INSTANCE
             }
         })
     );

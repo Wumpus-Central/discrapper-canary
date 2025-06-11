@@ -1,21 +1,21 @@
 o.d(t, { Z: () => l });
 var n = o(311473),
-    r = o(131951),
-    i = o(626135);
+    i = o(131951),
+    r = o(626135);
 async function l(e, t) {
     let { rating: o, category: l, reasonCode: a, reasonDescription: s, variant: c, feedback: u, analyticsData: d } = t,
-        b = r.Z.getSettings(),
-        p = r.Z.getInputDeviceId(),
-        m = r.Z.getInputDevices()[p],
-        _ = r.Z.getOutputDeviceId(),
-        f = r.Z.getOutputDevices()[_],
-        h = r.Z.getVideoDeviceId(),
-        g = r.Z.getVideoDevices()[h],
-        O = r.Z.getNoiseCancellation(),
-        v = r.Z.getMediaEngine().getAudioSubsystem(),
-        y = r.Z.getMediaEngine().getAudioLayer(),
+        b = i.Z.getSettings(),
+        m = i.Z.getInputDeviceId(),
+        p = i.Z.getInputDevices()[m],
+        _ = i.Z.getOutputDeviceId(),
+        f = i.Z.getOutputDevices()[_],
+        h = i.Z.getVideoDeviceId(),
+        g = i.Z.getVideoDevices()[h],
+        O = i.Z.getNoiseCancellation(),
+        v = i.Z.getMediaEngine().getAudioSubsystem(),
+        y = i.Z.getMediaEngine().getAudioLayer(),
         x = await n.Z.getKrispModel();
-    i.default.track(
+    r.default.track(
         e,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -58,7 +58,7 @@ async function l(e, t) {
                 automatic_gain_control_enabled: b.automaticGainControl,
                 voice_output_volume: b.outputVolume,
                 noise_cancellation_enabled: O,
-                input_device_name: null == m ? void 0 : m.name,
+                input_device_name: null == p ? void 0 : p.name,
                 output_device_name: null == f ? void 0 : f.name,
                 video_device_name: null == g ? void 0 : g.name,
                 audio_subsystem: v,

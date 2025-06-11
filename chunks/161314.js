@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(953529);
+n.d(t, { Z: () => j }), n(388685), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -16,16 +16,16 @@ var r = n(255367),
     _ = n(430824),
     b = n(626135),
     E = n(76535),
-    x = n(866104),
-    y = n(886176),
+    y = n(866104),
+    x = n(886176),
     v = n(981631),
     O = n(388032),
-    j = n(24665);
-function C(e) {
+    C = n(24665);
+function j(e) {
     var t;
     let { guildId: n } = e,
         l = (0, c.e7)([_.Z], () => _.Z.getGuild(n)),
-        { loading: C, subscriptionsSettings: S } = (0, E.H)(n),
+        { loading: j, subscriptionsSettings: S } = (0, E.H)(n),
         { listingsLoaded: I } = (0, f.eD)(n),
         N = (0, f.ue)(n, { publishedOnly: !0 }),
         T = i.useCallback(async () => {
@@ -67,22 +67,22 @@ function C(e) {
         { disableTrack: null == l }
     );
     let P = N.length > 0 ? new Date(Math.min(...N.map((e) => Date.parse(e.published_at)))) : void 0;
-    return C || !I
+    return j || !I
         ? (0, r.jsx)('div', {
-              className: a()(j.guildShopEmbed, j.spinnerContainer),
+              className: a()(C.guildShopEmbed, C.spinnerContainer),
               children: (0, r.jsx)(u.$jN, {})
           })
         : null == l || null == S
           ? null
           : (0, r.jsxs)('div', {
-                className: j.guildShopEmbed,
+                className: C.guildShopEmbed,
                 children: [
-                    (0, r.jsx)(x.Z, { coverImageAsset: null != (t = S.cover_image_asset) ? t : null }),
+                    (0, r.jsx)(y.Z, { coverImageAsset: null != (t = S.cover_image_asset) ? t : null }),
                     (0, r.jsx)(u.LZC, { size: 16 }),
                     (0, r.jsxs)('div', {
-                        className: j.serverShopLabel,
+                        className: C.serverShopLabel,
                         children: [
-                            (0, r.jsx)(y.Z, {
+                            (0, r.jsx)(x.Z, {
                                 height: '16px',
                                 width: '16px',
                                 color: s.Z.INTERACTIVE_NORMAL
@@ -90,7 +90,7 @@ function C(e) {
                             (0, r.jsx)(u.X6q, {
                                 variant: 'heading-sm/semibold',
                                 color: 'interactive-normal',
-                                className: j.serverShopLabelText,
+                                className: C.serverShopLabelText,
                                 children: O.intl.string(O.t.al5EXF)
                             })
                         ]
@@ -112,11 +112,11 @@ function C(e) {
                     (0, r.jsx)(g.Z, {}),
                     (0, r.jsx)(u.LZC, { size: 16 }),
                     (0, r.jsxs)('div', {
-                        className: j.guildShopEmbedFooter,
+                        className: C.guildShopEmbedFooter,
                         children: [
                             (0, r.jsx)(m.Z, { guild: l }),
                             (0, r.jsxs)('ul', {
-                                className: j.guildShopSummary,
+                                className: C.guildShopSummary,
                                 children: [
                                     (0, r.jsx)('li', {
                                         children: (0, r.jsx)(u.Text, {
@@ -136,12 +136,12 @@ function C(e) {
                                 ]
                             }),
                             (0, r.jsx)(u.zxk, {
-                                className: j.guildShopEmbedCta,
+                                className: C.guildShopEmbedCta,
                                 onClick: T,
                                 children: (0, r.jsxs)('div', {
-                                    className: j.guildShopEmbedCtaContent,
+                                    className: C.guildShopEmbedCtaContent,
                                     children: [
-                                        (0, r.jsx)(y.Z, {
+                                        (0, r.jsx)(x.Z, {
                                             height: '18px',
                                             width: '18px'
                                         }),

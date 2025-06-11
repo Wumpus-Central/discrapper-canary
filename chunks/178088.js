@@ -1,4 +1,4 @@
-n.d(t, { k: () => C }), n(388685);
+n.d(t, { k: () => j }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(740442),
@@ -16,13 +16,13 @@ var r = n(255367),
     _ = n(400445),
     b = n(153209),
     E = n(903672),
-    x = n(711165),
-    y = n(946443),
+    y = n(711165),
+    x = n(946443),
     v = n(264233),
     O = n(981631),
-    j = n(388032);
-function C(e) {
-    let { onOpen: t, onClose: n, children: C, badgeState: S, popoutPosition: I, popoutAlign: N, targetElementRef: T } = e,
+    C = n(388032);
+function j(e) {
+    let { onOpen: t, onClose: n, children: j, badgeState: S, popoutPosition: I, popoutAlign: N, targetElementRef: T } = e,
         { analyticsLocations: P } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
         [A, w] = i.useState(!1),
         [Z, R] = [
@@ -91,7 +91,7 @@ function C(e) {
             onRequestClose: L,
             renderPopout: function () {
                 return (0, r.jsx)(s.VqE, {
-                    'aria-label': j.intl.string(j.t.GSmTKC),
+                    'aria-label': C.intl.string(C.t.GSmTKC),
                     children:
                         Z === o.X.FOR_YOU
                             ? (0, r.jsx)(b.Z, {
@@ -119,17 +119,17 @@ function C(e) {
                                         closePopout: L
                                     })
                                   : Z === o.X.SCHEDULED
-                                    ? (0, r.jsx)(x._, {
+                                    ? (0, r.jsx)(y._, {
                                           setTab: R,
                                           closePopout: L
                                       })
                                     : (0, r.jsx)(l.SV, {
-                                          fallback: (0, r.jsx)(y.h, {
+                                          fallback: (0, r.jsx)(x.h, {
                                               setTab: R,
                                               closePopout: L,
                                               badgeState: S
                                           }),
-                                          children: (0, r.jsx)(y.Z, {
+                                          children: (0, r.jsx)(x.Z, {
                                               setTab: R,
                                               onJump: H,
                                               showTutorial: k,
@@ -144,7 +144,7 @@ function C(e) {
             clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return C(M, n, e, B);
+                return j(M, n, e, B);
             }
         })
     });

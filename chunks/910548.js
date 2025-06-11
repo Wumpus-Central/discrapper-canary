@@ -16,12 +16,12 @@ var r,
     _ = n(29270),
     b = n(709586),
     E = n(267642),
-    x = n(739566),
-    y = n(834129),
+    y = n(739566),
+    x = n(834129),
     v = n(981631),
     O = n(388032),
-    j = n(573510);
-function C(e) {
+    C = n(573510);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -127,7 +127,7 @@ let T = ['TOP_LEFT', 'TOP_RIGHT'],
             },
             leafRotationDirection: -1
         },
-        BOTTOM_LEFT: S(C({}, A), {
+        BOTTOM_LEFT: S(j({}, A), {
             getConfettiPosition: (e) => ({
                 x: e - 11,
                 y: 125
@@ -137,7 +137,7 @@ let T = ['TOP_LEFT', 'TOP_RIGHT'],
                 y: -1
             }
         }),
-        BOTTOM_RIGHT: S(C({}, A), {
+        BOTTOM_RIGHT: S(j({}, A), {
             getConfettiPosition: (e) => ({
                 x: 11,
                 y: 125
@@ -184,8 +184,8 @@ function U(e) {
         ),
         { createMultipleConfettiAt: g, confettiCanvas: _ } = l.useContext(f.h),
         [b, E] = l.useState(null),
-        x = (0, s.uR)(_, b),
-        y = (function (e, t) {
+        y = (0, s.uR)(_, b),
+        x = (function (e, t) {
             if (null == e) return 'enter';
             switch (e) {
                 case 'enter':
@@ -203,7 +203,7 @@ function U(e) {
         })(d, h),
         v = T.includes(h),
         O = v && 'exit' === d,
-        C = l.useCallback((e) => {
+        j = l.useCallback((e) => {
             m(e);
         }, []),
         S = l.useCallback(() => {
@@ -248,7 +248,7 @@ function U(e) {
         l.useEffect(() => {
             if (v && 'leaf_fall' === d) {
                 let e = w[h].leafRotationDirection;
-                x.createConfetti(
+                y.createConfetti(
                     {
                         id: ''.concat(Z, '-').concat((0, c.Z)()),
                         position: {
@@ -298,7 +298,7 @@ function U(e) {
                     { sprite: 'TOP_LEFT' === h ? k : D }
                 );
             }
-        }, [v, x, h, d]),
+        }, [v, y, h, d]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(s.Ji, {
@@ -310,18 +310,18 @@ function U(e) {
                 }),
                 (0, i.jsx)(p.P3F, {
                     onClick: n,
-                    className: o()(j.easterEggAnimationClickTarget, {
-                        [j.easterEggAnimationClickTargetTopLeft]: 'TOP_LEFT' === h,
-                        [j.easterEggAnimationClickTargetTopRight]: 'TOP_RIGHT' === h,
-                        [j.easterEggAnimationClickTargetBottomLeft]: 'BOTTOM_LEFT' === h,
-                        [j.easterEggAnimationClickTargetBottomRight]: 'BOTTOM_RIGHT' === h
+                    className: o()(C.easterEggAnimationClickTarget, {
+                        [C.easterEggAnimationClickTargetTopLeft]: 'TOP_LEFT' === h,
+                        [C.easterEggAnimationClickTargetTopRight]: 'TOP_RIGHT' === h,
+                        [C.easterEggAnimationClickTargetBottomLeft]: 'BOTTOM_LEFT' === h,
+                        [C.easterEggAnimationClickTargetBottomRight]: 'BOTTOM_RIGHT' === h
                     }),
                     children: (0, i.jsx)(p.kci, {
                         animationRef: A,
-                        className: o()(j.easterEggAnimation, { [j.easterEggAnimationHideLeaf]: O }),
-                        nextScene: y,
+                        className: o()(C.easterEggAnimation, { [C.easterEggAnimationHideLeaf]: O }),
+                        nextScene: x,
                         sceneSegments: I,
-                        onScenePlay: C,
+                        onScenePlay: j,
                         onSceneComplete: S,
                         importData: M,
                         pauseWhileUnfocused: !1
@@ -346,11 +346,11 @@ function F(e) {
             return null;
         })(n),
         u = (0, _.Z)(n),
-        { createMultipleConfettiAt: d, addClickListener: C } = l.useContext(f.h),
+        { createMultipleConfettiAt: d, addClickListener: j } = l.useContext(f.h),
         [S, I] = l.useState(!1),
         N = l.useRef(null),
         { reducedMotion: T } = l.useContext(p.Sfi),
-        P = (0, x.ZH)(n),
+        P = (0, y.ZH)(n),
         A = P.nick,
         w = o(P);
     t =
@@ -400,30 +400,30 @@ function F(e) {
             },
             [D]
         );
-    l.useEffect(() => C(L));
+    l.useEffect(() => j(L));
     let M = (0, i.jsx)(p.P3F, {
-        className: j.iconWrapper,
+        className: C.iconWrapper,
         innerRef: N,
         onClick: s,
         children: (0, i.jsx)(b.Z, {
-            className: j.icon,
+            className: C.icon,
             onMouseEnter: R
         })
     });
-    return (0, i.jsxs)(y.Z, {
+    return (0, i.jsxs)(x.Z, {
         iconNode: M,
         timestamp: n.timestamp,
         compact: r,
         children: [
             (0, i.jsx)('div', {
                 onClick: s,
-                className: j.message,
+                className: C.message,
                 children: t
             }),
             S
                 ? (0, i.jsx)(h.ZP, {
                       children: (0, i.jsx)('div', {
-                          className: j.cannonWrapper,
+                          className: C.cannonWrapper,
                           children: (0, i.jsx)(U, {
                               onAnimationComplete: k,
                               onClick: D

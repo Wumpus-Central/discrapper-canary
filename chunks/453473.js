@@ -20,12 +20,12 @@ var r = n(255367),
     _ = n(724757),
     b = n(213609),
     E = n(294218),
-    x = n(373662),
-    y = n(695346),
+    y = n(373662),
+    x = n(695346),
     v = n(496675),
     O = n(626135),
-    j = n(585483),
-    C = n(70956),
+    C = n(585483),
+    j = n(70956),
     S = n(324701),
     I = n(575016),
     N = n(768943),
@@ -134,7 +134,7 @@ function G(e) {
         p = i.useCallback(() => {
             c(!s), s ? null == n || n() : null == t || t();
         }, [n, t, s]);
-    i.useEffect(() => (j.S.subscribe(R.CkL.TOGGLE_FOR_LATER, p), () => void j.S.unsubscribe(R.CkL.TOGGLE_FOR_LATER, p)), [p]);
+    i.useEffect(() => (C.S.subscribe(R.CkL.TOGGLE_FOR_LATER, p), () => void C.S.unsubscribe(R.CkL.TOGGLE_FOR_LATER, p)), [p]);
     let h = (0, m.e7)([N.Z], () => N.Z.hasOverdueReminder(), []);
     return (0, r.jsx)(f.yRy, {
         targetElementRef: u,
@@ -161,7 +161,7 @@ function H(e) {
         [o, s] = i.useState(new Date());
     return (
         i.useEffect(() => {
-            let e = setInterval(() => s(new Date()), C.Z.Millis.MINUTE);
+            let e = setInterval(() => s(new Date()), j.Z.Millis.MINUTE);
             return () => {
                 clearInterval(e);
             };
@@ -264,14 +264,14 @@ function V(e) {
                           message: t.message,
                           channel: o,
                           className: D.message,
-                          compact: y.jU.getSetting(),
+                          compact: x.jU.getSetting(),
                           animateAvatar: !1,
                           focusProps: U,
                           trackAnnouncementViews: !0
                       },
                       t.message.id
                   ),
-                  (0, r.jsx)(x.ZP, {
+                  (0, r.jsx)(y.ZP, {
                       className: D.hoverBar,
                       children: (0, r.jsx)(W, {
                           savedMessage: t,
@@ -295,10 +295,10 @@ function V(e) {
                       color: 'header-secondary',
                       children: null != t.saveData.dueAt ? k.intl.string(k.t['wuQm+v']) : k.intl.string(k.t.o572FR)
                   }),
-                  (0, r.jsx)(x.ZP, {
+                  (0, r.jsx)(y.ZP, {
                       className: D.hoverBar,
                       children: (0, r.jsx)(
-                          x.sF,
+                          y.sF,
                           {
                               label: k.intl.string(k.t.SvXS1d),
                               icon: f.XHJ,
@@ -328,7 +328,7 @@ function W(e) {
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(
-                      x.sF,
+                      y.sF,
                       {
                           label: k.intl.string(k.t.yjGtdH),
                           icon: f.dz2,
@@ -342,7 +342,7 @@ function W(e) {
                       'mark-complete'
                   ),
                   (0, r.jsx)(
-                      x.sF,
+                      y.sF,
                       {
                           label: k.intl.string(k.t.vrbqs7),
                           icon: f.vdY,
@@ -361,9 +361,9 @@ function W(e) {
                       },
                       'edit-reminder'
                   ),
-                  (0, r.jsx)(x.fO, {}),
+                  (0, r.jsx)(y.fO, {}),
                   (0, r.jsx)(
-                      x.sF,
+                      y.sF,
                       {
                           label: k.intl.string(k.t['+TSRGB']),
                           icon: f.d4D,
@@ -372,7 +372,7 @@ function W(e) {
                       'jump-to-message'
                   ),
                   (0, r.jsx)(
-                      x.sF,
+                      y.sF,
                       {
                           label: k.intl.string(k.t.SvXS1d),
                           icon: f.plf,
@@ -385,7 +385,7 @@ function W(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(
-                      x.sF,
+                      y.sF,
                       {
                           label: k.intl.string(k.t.mJ3P0N),
                           icon: f.T39,
@@ -405,7 +405,7 @@ function W(e) {
                       'create-reminder'
                   ),
                   (0, r.jsx)(
-                      x.sF,
+                      y.sF,
                       {
                           label: k.intl.string(k.t['+TSRGB']),
                           icon: f.d4D,
@@ -414,7 +414,7 @@ function W(e) {
                       'jump-to-message'
                   ),
                   (0, r.jsx)(
-                      x.sF,
+                      y.sF,
                       {
                           label: k.intl.string(k.t.SvXS1d),
                           icon: f.plf,

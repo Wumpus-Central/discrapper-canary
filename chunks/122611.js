@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(118470),
     E = n(413307),
     O = n(374023),
-    I = n(661599),
-    y = n(617899),
+    y = n(661599),
+    I = n(617899),
     v = n(8521),
     C = n(760326),
     S = n(785203),
@@ -61,7 +61,7 @@ function A(e) {
                                 markAsDismissed: l
                             });
                         case a.z.CHANNEL_NOTICE_INVITE:
-                            return (0, r.jsx)(y.Z, {
+                            return (0, r.jsx)(I.Z, {
                                 guild: n,
                                 markAsDismissed: l
                             });
@@ -98,7 +98,7 @@ function A(e) {
         }
     });
 }
-let x = (e) => {
+let Z = (e) => {
     let { guild: t } = e;
     switch ((0, S.Z)(t)) {
         case S.R.ENABLE_PUBLIC_GUILD:
@@ -110,7 +110,7 @@ let x = (e) => {
         case S.R.GUILD_LIVE_CHANNEL:
             return (0, r.jsx)(h.ZP, { guild: t });
         case S.R.GUILD_MFA_WARNING:
-            return (0, r.jsx)(I.Z, { guild: t });
+            return (0, r.jsx)(y.Z, { guild: t });
         case S.R.COMMANDS_MIGRATION:
             return (0, r.jsx)(m.Z, { guild: t });
         case S.R.APPLICATION_SUBSCRIPTION_EXPIRATION:

@@ -16,12 +16,12 @@ var r = n(255367),
     _ = n(885714),
     b = n(314897),
     E = n(430824),
-    x = n(701190),
-    y = n(411198),
+    y = n(701190),
+    x = n(411198),
     v = n(610699),
     O = n(313876),
-    j = n(778333),
-    C = n(949981),
+    C = n(778333),
+    j = n(949981),
     S = n(680668),
     I = n(508273),
     N = n(143708),
@@ -33,10 +33,10 @@ var r = n(255367),
 function R(e) {
     let { code: t, message: n, getAcceptInviteContext: R } = e,
         { invite: k, inviteError: D } = (0, l.cj)(
-            [x.Z],
+            [y.Z],
             () => ({
-                invite: x.Z.getInvite(t),
-                inviteError: x.Z.getInviteError(t)
+                invite: y.Z.getInvite(t),
+                inviteError: y.Z.getInviteError(t)
             }),
             [t]
         ),
@@ -68,7 +68,7 @@ function R(e) {
         },
         z = () => {
             if (null == B && (null == k ? void 0 : k.guild) != null) {
-                let e = y.Qs(k.guild);
+                let e = x.Qs(k.guild);
                 if ((0, c.bN)() && (0, c.Yt)(e)) return void (0, s.mN)(Z.L0.NSFW_SERVER_INVITE_EMBED);
             }
             (0, g.yU)()
@@ -114,7 +114,7 @@ function R(e) {
         default:
             switch ((0, h.VR)(M)) {
                 case h.wx.GROUP_DM:
-                    W = (0, r.jsx)(C.Z, {
+                    W = (0, r.jsx)(j.Z, {
                         onTransitionToInviteChannel: V,
                         onAcceptInstantInvite: z,
                         currentUserId: G,
@@ -123,7 +123,7 @@ function R(e) {
                     });
                     break;
                 case h.wx.FRIEND:
-                    W = (0, r.jsx)(j.Z, {
+                    W = (0, r.jsx)(C.Z, {
                         invite: M,
                         message: n,
                         getAcceptInviteContext: R

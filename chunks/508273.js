@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -16,16 +16,16 @@ var r = n(255367),
     _ = n(15210),
     b = n(43542),
     E = n(910200),
-    x = n(358595),
-    y = n(981631),
+    y = n(358595),
+    x = n(981631),
     v = n(388032),
     O = n(583136);
-function j(e) {
+function C(e) {
     let { invite: t, isMemberOfGuild: n, message: l, onTransitionToInviteChannel: c, onAcceptInstantInvite: d, currentUserId: p } = e,
         h = i.useRef(null),
-        [_, j] = i.useState(!0),
+        [_, C] = i.useState(!0),
         [S, I] = i.useState(!1),
-        N = t.state === y.r2o.ACCEPTING,
+        N = t.state === x.r2o.ACCEPTING,
         T = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         { updateButton: P, updateCopy: A } = (0, f.n2)(),
         w = p === l.author.id,
@@ -36,10 +36,10 @@ function j(e) {
     }, [Z, I]);
     let R = (0, m.PC)(t),
         k = i.useCallback(() => {
-            S && _ && j(!1);
+            S && _ && C(!1);
         }, [_, S]),
         D = i.useCallback(() => {
-            S && (_ || j(!0));
+            S && (_ || C(!0));
         }, [_, S]),
         L = i.useMemo(() => {
             var e;
@@ -51,7 +51,7 @@ function j(e) {
                 : {};
         }, [_, S, T, Z]);
     return null == R
-        ? (0, r.jsx)(x.Z, {})
+        ? (0, r.jsx)(y.Z, {})
         : (0, r.jsxs)(s.P3F, {
               className: a()(O.guildInviteContainer, { [O.clickable]: S && _ }),
               onClick: k,
@@ -106,7 +106,7 @@ function j(e) {
                               className: a()(O.footerContent, { [O.collapsedFooterContent]: S && _ }),
                               children: (0, r.jsx)('div', {
                                   className: O.buttonContainer,
-                                  children: (0, r.jsx)(C, {
+                                  children: (0, r.jsx)(j, {
                                       invite: t,
                                       profile: R,
                                       isMemberOfGuild: n,
@@ -123,7 +123,7 @@ function j(e) {
               ]
           });
 }
-function C(e) {
+function j(e) {
     let { invite: t, profile: n, isMemberOfGuild: l, message: a, submitting: o, onTransitionToInviteChannel: s, onAcceptInstantInvite: u, inIterationExperiment: m } = e,
         { guildId: f, ctaType: g } = (0, h.ZP)(n, h.F3.INVITE),
         { analyticsLocations: b } = (0, p.ZP)(d.Z.INVITE_EMBED),

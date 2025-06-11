@@ -60,7 +60,7 @@ function E(e) {
                               children: [
                                   (0, i.jsx)(s.Text, {
                                       variant: 'text-md/medium',
-                                      children: _.intl.string(_.t['6k0AgI'])
+                                      children: _.intl.string(_.t['+uI23N'])
                                   }),
                                   (0, i.jsx)(s.q4e, {
                                       look: s.qQH.CUSTOM,
@@ -80,7 +80,7 @@ function E(e) {
                               children: [
                                   (0, i.jsx)(s.Text, {
                                       variant: 'text-md/medium',
-                                      children: _.intl.string(_.t.D2EGSk)
+                                      children: _.intl.string(_.t['Yh+HX1'])
                                   }),
                                   (0, i.jsx)(s.q4e, {
                                       look: s.qQH.CUSTOM,

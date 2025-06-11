@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(666743),
     E = n(115130),
     O = n(812206),
-    I = n(770146),
-    y = n(600164),
+    y = n(770146),
+    I = n(600164),
     v = n(606081),
     C = n(252618),
     S = n(100159),
@@ -27,10 +27,10 @@ var r = n(255367),
     P = n(706454),
     j = n(210887),
     A = n(430824),
-    x = n(496675),
-    Z = n(525395),
-    w = n(558314),
-    L = n(580130),
+    Z = n(496675),
+    x = n(525395),
+    L = n(558314),
+    w = n(580130),
     R = n(55563),
     D = n(551428),
     k = n(695103),
@@ -295,7 +295,7 @@ class ed extends i.PureComponent {
         if (null == l) throw Error('Rendering ApplicationStoreListing without description');
         return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(I.Z, {
+                (0, r.jsx)(y.Z, {
                     tag: 'h1',
                     children: ea.intl.format(ea.t.tluX4O, { name: n.name })
                 }),
@@ -382,9 +382,9 @@ class ed extends i.PureComponent {
             return (0, r.jsxs)(i.Fragment, {
                 children: [
                     this.renderHeader(e, t),
-                    (0, r.jsx)(y.Z, {
-                        align: y.Z.Align.CENTER,
-                        justify: y.Z.Justify.CENTER,
+                    (0, r.jsx)(I.Z, {
+                        align: I.Z.Align.CENTER,
+                        justify: I.Z.Justify.CENTER,
                         children: (0, r.jsx)(u.$jN, { className: eo.spinner })
                     })
                 ]
@@ -472,7 +472,7 @@ class ed extends i.PureComponent {
             }),
             es(this, 'renderInviteLink', () => {
                 let { channel: e, guild: t } = this.props;
-                return null != e && null != t && (x.Z.can(ei.Plq.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode)
+                return null != e && null != t && (Z.Z.can(ei.Plq.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode)
                     ? (0, r.jsx)(u.zxk, {
                           'aria-label': ea.intl.string(ea.t.zJrgTE),
                           look: u.zxk.Looks.BLANK,
@@ -587,9 +587,9 @@ class ed extends i.PureComponent {
             es(this, 'renderListing', () => {
                 let { application: e, storeListing: t, sku: n, pageSize: i } = this.props;
                 return null == e || null == n || null == t || t.isSlimDirectoryVersion()
-                    ? (0, r.jsx)(y.Z, {
-                          align: y.Z.Align.CENTER,
-                          justify: y.Z.Justify.CENTER,
+                    ? (0, r.jsx)(I.Z, {
+                          align: I.Z.Align.CENTER,
+                          justify: I.Z.Justify.CENTER,
                           children: (0, r.jsx)(u.$jN, {})
                       })
                     : i === er.b.SMALL
@@ -600,7 +600,7 @@ class ed extends i.PureComponent {
 }
 let ep = (0, b.Z)(
     (0, _.Z)(
-        o.ZP.connectStores([w.Z, j.Z, P.default, M.Z, D.Z, R.Z, k.Z, E.Z, O.Z, Z.Z, A.Z, L.Z], (e) => {
+        o.ZP.connectStores([L.Z, j.Z, P.default, M.Z, D.Z, R.Z, k.Z, E.Z, O.Z, x.Z, A.Z, w.Z], (e) => {
             let t,
                 n,
                 r,
@@ -617,9 +617,9 @@ let ep = (0, b.Z)(
             return {
                 skuId: t,
                 application: null != l ? O.Z.getApplication(l) : null,
-                isFetchingEntitlements: null != l && L.Z.applicationIdsFetching.has(l),
-                didFetchEntitlements: null != l && L.Z.applicationIdsFetched.has(l),
-                shouldFetchStatistics: o && null != l && Z.Z.shouldFetchStatisticsForApplication(l),
+                isFetchingEntitlements: null != l && w.Z.applicationIdsFetching.has(l),
+                didFetchEntitlements: null != l && w.Z.applicationIdsFetched.has(l),
+                shouldFetchStatistics: o && null != l && x.Z.shouldFetchStatisticsForApplication(l),
                 sku: n,
                 isFocused: M.Z.isFocused(),
                 storeListing: D.Z.getStoreListing({
@@ -629,7 +629,7 @@ let ep = (0, b.Z)(
                     isTestMode: c
                 }),
                 isInTestMode: null != l && c,
-                matureAgree: w.Z.didMatureAgree,
+                matureAgree: L.Z.didMatureAgree,
                 theme: j.Z.theme,
                 locale: P.default.locale,
                 guild: null != s ? A.Z.getGuild(s.getGuildId()) : null

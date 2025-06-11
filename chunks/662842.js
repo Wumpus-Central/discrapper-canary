@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(497656),
     E = n(554747),
     O = n(230900),
-    I = n(854698),
-    y = n(703656),
+    y = n(854698),
+    I = n(703656),
     v = n(922482),
     C = n(565799),
     S = n(501655),
@@ -27,10 +27,10 @@ var r = n(255367),
     P = n(670188),
     j = n(496675),
     A = n(594174),
-    x = n(662868),
-    Z = n(981631),
-    w = n(765305),
-    L = n(388032),
+    Z = n(662868),
+    x = n(981631),
+    L = n(765305),
+    w = n(388032),
     R = n(29504);
 function D(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
@@ -48,7 +48,7 @@ function D(e) {
         U = null == l ? void 0 : l.id,
         G = (0, o.Wu)([C.Z], () => [...new Set(C.Z.getMutableParticipants(U, S.pV.SPEAKER).map((e) => e.user))], [U]),
         V = (0, o.e7)([C.Z], () => (null != U ? C.Z.getParticipantCount(U, S.pV.AUDIENCE) : 0), [U]),
-        B = (0, o.e7)([j.Z], () => j.Z.can(Z.Plq.CONNECT, l)),
+        B = (0, o.e7)([j.Z], () => j.Z.can(x.Plq.CONNECT, l)),
         H = (0, T.Z)(null == l ? void 0 : l.id),
         F = null == d ? void 0 : d.creator_id,
         z = (0, o.e7)([A.default], () => A.default.getUser(F), [F]);
@@ -70,13 +70,13 @@ function D(e) {
             (function (e) {
                 let { guildEvent: t, stageInstance: n, activeChannel: i, canConnect: l, myRole: a, eventCreator: o, speakers: s, listenerCount: u, isEventNoticeHidden: d, isStageNoticeHidden: h, isStudyRoomNotice: m } = e,
                     _ = null != n && null != i && !h,
-                    E = null != t ? (0, I.DK)(t) : null;
+                    E = null != t ? (0, y.DK)(t) : null;
                 if (m && null != i) {
                     let e = (0, p.KS)(i);
                     return {
                         noticeType: 3,
                         title: '\uD83D\uDCDA\u2615 '.concat(i.name),
-                        location: L.intl.string(L.t.LZA6NT),
+                        location: w.intl.string(w.t.LZA6NT),
                         locationIcon:
                             null != e
                                 ? (0, r.jsx)(e, {
@@ -86,16 +86,16 @@ function D(e) {
                                   })
                                 : null,
                         canListenIn: l,
-                        buttonText: L.intl.string(L.t.wBoE6O),
+                        buttonText: w.intl.string(w.t.wBoE6O),
                         users: [],
                         overflowUsers: null
                     };
                 }
                 if (null == t || d) {
                     if (_) {
-                        let e = L.intl.string(L.t.ZYO5OD);
+                        let e = w.intl.string(w.t.ZYO5OD);
                         return (
-                            (null == a ? void 0 : a.speaker) ? (e = L.intl.string(L.t['/cnSFR'])) : null != a && (e = L.intl.string(L.t.btSGOj)),
+                            (null == a ? void 0 : a.speaker) ? (e = w.intl.string(w.t['/cnSFR'])) : null != a && (e = w.intl.string(w.t.btSGOj)),
                             {
                                 noticeType: 0,
                                 title: n.topic,
@@ -135,10 +135,10 @@ function D(e) {
                             }
                         );
                     }
-                } else if (t.entity_type === w.WX.STAGE_INSTANCE && _) {
-                    let e = L.intl.string(L.t.ZYO5OD);
+                } else if (t.entity_type === L.WX.STAGE_INSTANCE && _) {
+                    let e = w.intl.string(w.t.ZYO5OD);
                     return (
-                        (null == a ? void 0 : a.speaker) ? (e = L.intl.string(L.t['/cnSFR'])) : null != a && (e = L.intl.string(L.t.btSGOj)),
+                        (null == a ? void 0 : a.speaker) ? (e = w.intl.string(w.t['/cnSFR'])) : null != a && (e = w.intl.string(w.t.btSGOj)),
                         {
                             noticeType: 0,
                             title: n.topic,
@@ -177,7 +177,7 @@ function D(e) {
                                       })
                         }
                     );
-                } else if (t.entity_type === w.WX.EXTERNAL) {
+                } else if (t.entity_type === L.WX.EXTERNAL) {
                     let e = (0, O.cS)(t);
                     if (null == e) return { noticeType: null };
                     let n = f.ZP.getUserCount(t.id, E);
@@ -193,7 +193,7 @@ function D(e) {
                             className: R.locationIcon
                         }),
                         canListenIn: !1,
-                        buttonText: L.intl.string(L.t.iW6Xur),
+                        buttonText: w.intl.string(w.t.iW6Xur),
                         onClose: () => (0, g.ji)({ eventId: null == t ? void 0 : t.id }),
                         users: null == o ? [] : [o],
                         overflowUsers:
@@ -218,7 +218,7 @@ function D(e) {
                                       ]
                                   })
                     };
-                } else if (t.entity_type === w.WX.VOICE && null != i) {
+                } else if (t.entity_type === L.WX.VOICE && null != i) {
                     let e = (0, p.KS)(i),
                         n = f.ZP.getUserCount(t.id, E);
                     return {
@@ -234,7 +234,7 @@ function D(e) {
                                   })
                                 : null,
                         canListenIn: l,
-                        buttonText: L.intl.string(L.t.nxUtoa),
+                        buttonText: w.intl.string(w.t.nxUtoa),
                         onClose: () => (0, g.ji)({ eventId: null == t ? void 0 : t.id }),
                         users: null == o ? [] : [o],
                         overflowUsers:
@@ -285,7 +285,7 @@ function D(e) {
                       ? (0, r.jsx)(c.P3F, {
                             onClick: ee,
                             className: R.close,
-                            'aria-label': L.intl.string(L.t.WAI6xs),
+                            'aria-label': w.intl.string(w.t.WAI6xs),
                             children: (0, r.jsx)(c.Dio, {
                                 size: 'md',
                                 color: 'currentColor',
@@ -296,7 +296,7 @@ function D(e) {
                   (0, r.jsxs)('div', {
                       className: R.header,
                       children: [
-                          (0, r.jsx)(x.Z, {
+                          (0, r.jsx)(Z.Z, {
                               color: s.Z.unsafe_rawColors.GREEN_230.css,
                               width: 16,
                               height: 16
@@ -304,7 +304,7 @@ function D(e) {
                           (0, r.jsx)(c.Text, {
                               variant: 'text-xs/semibold',
                               color: 'text-positive',
-                              children: L.intl.string(L.t.dI3q4u)
+                              children: w.intl.string(w.t.dI3q4u)
                           })
                       ]
                   }),
@@ -348,7 +348,7 @@ function D(e) {
                             size: c.zxk.Sizes.SMALL,
                             color: c.zxk.Colors.GREEN,
                             onClick: () => {
-                                if (Q) null != l && null != l.getGuildId() && ((0, v.Cq)(l), (0, y.XU)(l.getGuildId(), l.id));
+                                if (Q) null != l && null != l.getGuildId() && ((0, v.Cq)(l), (0, I.XU)(l.getGuildId(), l.id));
                                 else {
                                     if (null == d) return;
                                     (0, h.bO)({ eventId: d.id });

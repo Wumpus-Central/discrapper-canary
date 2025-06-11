@@ -16,12 +16,12 @@ var r = n(255367),
     _ = n(314897),
     b = n(496675),
     E = n(594174),
-    x = n(55935),
-    y = n(655354),
+    y = n(55935),
+    x = n(655354),
     v = n(809780),
     O = n(981631),
-    j = n(388032),
-    C = n(563142);
+    C = n(388032),
+    j = n(563142);
 let S = {
     left: 4,
     right: -12
@@ -69,7 +69,7 @@ function I(e) {
                 return e;
             })(
                 {
-                    className: C.messageContainer,
+                    className: j.messageContainer,
                     onKeyDown: g
                 },
                 f
@@ -77,15 +77,15 @@ function I(e) {
             (l = l =
                 {
                     children: [
-                        (0, r.jsx)(y.Z, {
-                            className: C.jumpButton,
+                        (0, r.jsx)(x.Z, {
+                            className: j.jumpButton,
                             onJump: (e) => m(e, s.id)
                         }),
                         (0, r.jsx)(h.Z, {
                             id: s.id,
                             message: s,
                             channel: a,
-                            className: C.message,
+                            className: j.message,
                             compact: u,
                             animateAvatar: !1,
                             isGroupStart: d,
@@ -115,7 +115,7 @@ function N(e) {
     var t, n;
     let { channel: i, channelRecord: l, gotoChannel: o } = e,
         { enabled: h } = u.Z.useExperiment({ location: '20e3b0_1' }, { autoTrackExposure: !1 }),
-        y = g.jU.useSetting(),
+        x = g.jU.useSetting(),
         S = (0, s.e7)([b.Z], () => b.Z.can(O.Plq.CREATE_INSTANT_INVITE, l)),
         N = (0, m.P1)(l),
         T = !1,
@@ -129,12 +129,12 @@ function N(e) {
         n.forEach((n) => {
             if (!(0, d.Z)(n, S)) {
                 if (!P && (null == e || !e.isSame(n.timestamp, 'day'))) {
-                    let t = (0, x.vc)(n.timestamp, 'LL');
+                    let t = (0, y.vc)(n.timestamp, 'LL');
                     w.push(
                         (0, r.jsx)(
                             f.Z,
                             {
-                                className: C.divider,
+                                className: j.divider,
                                 children: t
                             },
                             t
@@ -151,7 +151,7 @@ function N(e) {
                             {
                                 channel: l,
                                 message: n,
-                                compact: y,
+                                compact: x,
                                 isGroupStart: i,
                                 treatSpam: !A && h && (0, m.DQ)(n) && N,
                                 gotoChannel: o
@@ -169,7 +169,7 @@ function N(e) {
                             color: c.zxk.Colors.LINK,
                             look: c.zxk.Looks.LINK,
                             onClick: (e) => o(e, n[n.length - 1].id),
-                            children: [j.intl.string(j.t['9OB9ho']), ' \u203A']
+                            children: [C.intl.string(C.t['9OB9ho']), ' \u203A']
                         },
                         'view-all'
                     )
@@ -179,7 +179,7 @@ function N(e) {
     return (
         T && N && u.Z.trackExposure({ location: '20e3b0_2' }),
         (0, r.jsx)('div', {
-            className: C.messages,
+            className: j.messages,
             children: w
         })
     );

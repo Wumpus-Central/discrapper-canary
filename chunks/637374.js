@@ -16,12 +16,12 @@ var r = n(255367),
     _ = n(600164),
     b = n(479446),
     E = n(930114),
-    x = n(981632),
-    y = n(108989),
+    y = n(981632),
+    x = n(108989),
     v = n(703656),
     O = n(314897),
-    j = n(82142),
-    C = n(283595),
+    C = n(82142),
+    j = n(283595),
     S = n(594174),
     I = n(509545),
     N = n(55563),
@@ -365,13 +365,13 @@ class z extends i.Component {
                     children: [
                         !t &&
                             L.eZ.includes(e.giftStyle) &&
-                            (0, r.jsx)(y.Z, {
+                            (0, r.jsx)(x.Z, {
                                 className: U.snow,
                                 wind: 5
                             }),
                         i && (0, r.jsx)(T.Z, { className: U.headerIcon }),
                         null != e.giftStyle &&
-                            (0, r.jsx)(x.Z, {
+                            (0, r.jsx)(y.Z, {
                                 defaultAnimationState: e.redeemed ? b.SR.LOOP : b.SR.IDLE,
                                 giftStyle: e.giftStyle,
                                 className: o
@@ -382,9 +382,9 @@ class z extends i.Component {
     }
 }
 let W = (0, f.Z)((0, m.Z)(z)),
-    K = c.ZP.connectStores([j.Z, N.Z, S.default, C.Z, I.Z, O.default, h.Z], (e) => {
+    K = c.ZP.connectStores([C.Z, N.Z, S.default, j.Z, I.Z, O.default, h.Z], (e) => {
         let { code: t, author: n, currentUser: r } = e,
-            i = j.Z.get(t),
+            i = C.Z.get(t),
             l = null != i ? N.Z.get(i.skuId) : null,
             a = null != i && null != i.userId ? S.default.getUser(i.userId) : null,
             o = h.Z.useReducedMotion;
@@ -395,8 +395,8 @@ let W = (0, f.Z)((0, m.Z)(z)),
             currentUser: r,
             subscriptionPlan: null != i && null != i.subscriptionPlanId ? (0, Z.oE)(i.subscriptionPlanId) : null,
             isSelfGift: null != i ? O.default.getId() === i.userId : O.default.getId() === n.id,
-            resolved: j.Z.getIsResolved(t),
-            libraryApplication: null != l && (null == i ? void 0 : i.entitlementBranches) != null ? A.z2(i.entitlementBranches, l, C.Z) : null,
+            resolved: C.Z.getIsResolved(t),
+            libraryApplication: null != l && (null == i ? void 0 : i.entitlementBranches) != null ? A.z2(i.entitlementBranches, l, j.Z) : null,
             useReducedMotion: o
         };
     })(W);

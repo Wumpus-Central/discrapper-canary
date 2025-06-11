@@ -16,14 +16,14 @@ var r = n(255367),
 function _(e) {
     let { setTab: t, badgeState: l, closePopout: _ } = e,
         E = (0, o.Wu)([u.Z], () => u.Z.getInvites()),
-        x = (0, o.e7)([u.Z], () => u.Z.getInviteStatuses()),
-        [y, v] = i.useMemo(
+        y = (0, o.e7)([u.Z], () => u.Z.getInviteStatuses()),
+        [x, v] = i.useMemo(
             () =>
                 a().partition(E, (e) => {
                     var t;
-                    return (null == (t = x[e.invite_id]) ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
+                    return (null == (t = y[e.invite_id]) ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
                 }),
-            [E, x]
+            [E, y]
         );
     return (i.useEffect(() => {
         (0, d.sJ)();
@@ -122,12 +122,12 @@ function _(e) {
                       children: (0, r.jsxs)('div', {
                           className: g.invitesContainer,
                           children: [
-                              y.length > 0 &&
+                              x.length > 0 &&
                                   (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(b, { title: h.intl.string(h.t.yflAJS) }),
                                           (0, r.jsx)(r.Fragment, {
-                                              children: y.map((e) =>
+                                              children: x.map((e) =>
                                                   (0, r.jsx)(
                                                       f.Z,
                                                       {

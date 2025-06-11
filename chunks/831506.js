@@ -67,12 +67,12 @@ function E(e, t) {
         n
     );
 }
-function x() {
+function y() {
     let e = s.default.getId(),
         t = u.Z.getActivities();
     return _(d.ME, e, t);
 }
-function y(e) {
+function x(e) {
     let { relationship: t } = e;
     if (!c.Z.isBlocked(t.id) && !c.Z.isIgnored(t.id)) return !1;
     let n = m[t.id];
@@ -84,7 +84,7 @@ function y(e) {
 }
 class v extends (r = a.ZP.Store) {
     initialize() {
-        this.syncWith([u.Z], x), this.waitFor(u.Z, c.Z);
+        this.syncWith([u.Z], y), this.waitFor(u.Z, c.Z);
     }
     getParty(e) {
         return null != e && null != f[e] ? f[e] : null;
@@ -159,8 +159,8 @@ let O = new v(o.Z, {
             )
         );
     },
-    RELATIONSHIP_ADD: y,
-    RELATIONSHIP_UPDATE: y,
+    RELATIONSHIP_ADD: x,
+    RELATIONSHIP_UPDATE: x,
     RELATIONSHIP_REMOVE: function (e) {
         let { relationship: t } = e,
             n = m[t.id];

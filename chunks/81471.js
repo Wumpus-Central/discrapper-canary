@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(981631),
     E = n(217702),
     O = n(388032),
-    I = n(391587),
-    y = n(73433);
+    y = n(391587),
+    I = n(73433);
 let v = i.memo(function (e) {
     let { channel: t } = e,
         { loaded: n, error: l, message: v } = (0, b.a)(t),
@@ -47,7 +47,7 @@ let v = i.memo(function (e) {
         A = null;
     if (l)
         A = (0, r.jsx)(s.Text, {
-            className: I.messageReplacement,
+            className: y.messageReplacement,
             variant: 'text-sm/normal',
             color: 'text-muted',
             children: O.intl.string(O.t.BZHld3)
@@ -55,22 +55,22 @@ let v = i.memo(function (e) {
     else if (n)
         if (null != v && S)
             A = (0, r.jsx)(s.Text, {
-                className: I.messageReplacement,
+                className: y.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: O.intl.string(O.t['WPe+xM'])
             });
         else if (null != v && N)
             A = (0, r.jsx)(s.Text, {
-                className: I.messageReplacement,
+                className: y.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: O.intl.string(O.t.uxrh1N)
             });
         else if (null != v) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, h.f)(v, j, S, N, a()(I.messageContent, y.inlineFormat), {
-                leadingIconClass: I.messageContentIcon,
-                trailingIconClass: I.messageContentIcon,
+            let { contentPlaceholder: e, renderedContent: t } = (0, h.f)(v, j, S, N, a()(y.messageContent, I.inlineFormat), {
+                leadingIconClass: y.messageContentIcon,
+                trailingIconClass: y.messageContentIcon,
                 iconSize: E.WW
             });
             A =
@@ -78,19 +78,19 @@ let v = i.memo(function (e) {
                     ? (0, r.jsx)(s.Text, {
                           variant: 'text-sm/normal',
                           color: 'text-muted',
-                          className: I.messageContent,
+                          className: y.messageContent,
                           children: t
                       })
                     : (0, r.jsx)(s.Text, {
                           tag: 'span',
                           variant: 'text-sm/normal',
                           color: 'text-muted',
-                          className: I.messageReplacement,
+                          className: y.messageReplacement,
                           children: e
                       });
         } else
             A = (0, r.jsx)(s.Text, {
-                className: I.messageReplacement,
+                className: y.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: O.intl.string(O.t['0KfDxM'])
@@ -99,7 +99,7 @@ let v = i.memo(function (e) {
     return (0, r.jsx)(c.aQ.Provider, {
         value: (0, d.Z)(P, T),
         children: (0, r.jsx)(s.Rny, {
-            className: I.messageFocusBlock,
+            className: y.messageFocusBlock,
             children: A
         })
     });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => x });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -16,27 +16,27 @@ var r = n(255367),
     _ = n(388032),
     b = n(537670),
     E = n(848697),
-    x = n(328756);
-let y = (e) => {
-    let { reportingUserId: t, guildId: n, compact: l, channel: o, messageId: y, reportedTimestamp: v } = e,
+    y = n(328756);
+let x = (e) => {
+    let { reportingUserId: t, guildId: n, compact: l, channel: o, messageId: x, reportedTimestamp: v } = e,
         O = f.default.getUser(t),
-        j = i.useMemo(() => (l ? (0, p.Z)((0, h.vc)(s()(), 'LT')) : null), [l]),
-        C = (0, m.l)({
+        C = i.useMemo(() => (l ? (0, p.Z)((0, h.vc)(s()(), 'LT')) : null), [l]),
+        j = (0, m.l)({
             user: O,
             channelId: o.id,
             guildId: n,
-            messageId: y
+            messageId: x
         })((0, u.JZ)(O, o)),
-        S = null != O ? O.getAvatarURL(n, (0, c.pxk)(c.EFr.SIZE_16)) : x,
+        S = null != O ? O.getAvatarURL(n, (0, c.pxk)(c.EFr.SIZE_16)) : y,
         I =
             null != O
                 ? _.intl.format(g.default['+zqXZm'], {
                       username: O.username,
-                      onUserClick: C
+                      onUserClick: j
                   })
                 : _.intl.string(g.default.xpRjfX);
     return (0, r.jsxs)('div', {
-        className: a()(E.messageSpine, E.repliedMessage, j),
+        className: a()(E.messageSpine, E.repliedMessage, C),
         children: [
             (0, r.jsx)(c.qEK, {
                 src: S,

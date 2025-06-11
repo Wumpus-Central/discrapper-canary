@@ -18,8 +18,8 @@ var i = n(120356),
     _ = n(984370),
     E = n(299657),
     O = n(594174),
-    I = n(74538),
-    y = n(981631),
+    y = n(74538),
+    I = n(981631),
     v = n(474936),
     C = n(388032),
     S = n(881207);
@@ -28,14 +28,14 @@ let N = s.ZP.connectStores([O.default], () => ({ user: O.default.getCurrentUser(
         (0, p.Z)((e) => {
             let { isAuthenticated: t, user: n } = e,
                 { analyticsLocations: i } = (0, m.ZP)(g.Z.HOME_PAGE_PREMIUM_TAB),
-                s = (0, I.I5)(n, v.p9.TIER_2),
+                s = (0, y.I5)(n, v.p9.TIER_2),
                 p = (0, f.ZP)();
             return t
                 ? (0, r.jsxs)('div', {
                       className: S.homeWrapperNormal,
                       children: [
                           (0, r.jsx)(d.Z, {
-                              section: y.jXE.NAVIGATION,
+                              section: I.jXE.NAVIGATION,
                               children: (0, r.jsx)(u.f6W, {
                                   theme: p,
                                   children: (e) =>
@@ -70,7 +70,7 @@ let N = s.ZP.connectStores([O.default], () => ({ user: O.default.getCurrentUser(
                           })
                       ]
                   })
-                : (0, r.jsx)(a.l_, { to: y.Z5c.LOGIN });
+                : (0, r.jsx)(a.l_, { to: I.Z5c.LOGIN });
         })
     )
 );

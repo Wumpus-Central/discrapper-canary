@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(627845),
     E = n(185666),
     O = n(503737),
-    I = n(513202),
-    y = n(318891),
+    y = n(513202),
+    I = n(318891),
     v = n(687751),
     C = n(64514),
     S = n(912471),
@@ -27,10 +27,10 @@ var r = n(255367),
     P = n(679891),
     j = n(491575),
     A = n(954709),
-    x = n(644679),
-    Z = n(403763),
-    w = n(314533),
-    L = n(9029),
+    Z = n(644679),
+    x = n(403763),
+    L = n(314533),
+    w = n(9029),
     R = n(935347),
     D = n(560067),
     k = n(823169),
@@ -71,8 +71,8 @@ var r = n(255367),
     e_ = n(329557),
     eE = n(304445),
     eO = n(893607),
-    eI = n(703656),
-    ey = n(298969),
+    ey = n(703656),
+    eI = n(298969),
     ev = n(719256),
     eC = n(6025),
     eS = n(897473),
@@ -81,10 +81,10 @@ var r = n(255367),
     eP = n(639033),
     ej = n(479313),
     eA = n(911560),
-    ex = n(703016),
-    eZ = n(892001),
-    ew = n(497805),
-    eL = n(332754),
+    eZ = n(703016),
+    ex = n(892001),
+    eL = n(497805),
+    ew = n(332754),
     eR = n(507468),
     eD = n(722589),
     ek = n(282506),
@@ -122,7 +122,7 @@ function e4(e, t, n) {
         e
     );
 }
-function e7(e) {
+function e2(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -139,10 +139,10 @@ function e7(e) {
     return e;
 }
 n(117240), n(801077), n(967368), n(272053), n(974180), n(574254), n(551428), n(55563), n(882029), n(959457), n(653255), n(663389), n(25990), n(778825), n(999382), n(388610), n(533947), n(277053), n(371398), n(141233), n(471073), n(606206);
-let e2 = !1;
+let e7 = !1;
 (0, S.DL)(),
     o.ZP.initialize(),
-    ey.Z.loadServer(),
+    eI.Z.loadServer(),
     eJ.isPlatformEmbedded &&
         (e$.ZP.on('USER_SETTINGS_OPEN', (e, t) => {
             eF.Z.getLayers().includes(e1.S9g.USER_SETTINGS) || f.Z.open(null != t ? t : e1.oAB.ACCOUNT);
@@ -240,7 +240,7 @@ let ti = [
                 { id: n } = t.params;
             return (
                 (0, q.h)(() =>
-                    (0, eZ.openUserProfileModal)({
+                    (0, ex.openUserProfileModal)({
                         userId: n,
                         sourceAnalyticsLocations: [N.Z.URI_SCHEME]
                     })
@@ -329,7 +329,7 @@ let ti = [
                             var n, l;
                             return (0, r.jsx)(
                                 e,
-                                ((n = e7({}, t)),
+                                ((n = e2({}, t)),
                                 (l = l = { guildId: i }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
@@ -423,13 +423,13 @@ function tl(e) {
 function ta(e) {
     let { channelId: t, guildId: n, pathname: r } = e;
     if (!K.Z.isConnected()) return;
-    let { location: i } = (0, eI.s1)();
-    i.pathname === r && (null == eV.Z.getChannel(t) ? (0, eI.dL)(e1.Z5c.CHANNEL(n)) : (0, eI.dL)(r));
+    let { location: i } = (0, ey.s1)();
+    i.pathname === r && (null == eV.Z.getChannel(t) ? (0, ey.dL)(e1.Z5c.CHANNEL(n)) : (0, ey.dL)(r));
 }
 class to extends i.PureComponent {
     componentDidMount() {
         e$.ZP.setZoomFactor(b.Z.zoom),
-            ey.Z.init(),
+            eI.Z.init(),
             P.Z.initialize(),
             ef.Z.initialize(),
             F.Z.initialize(),
@@ -445,20 +445,20 @@ class to extends i.PureComponent {
             v.Z.initialize(),
             V.Z.initialize(),
             eb.Z.initialize(),
-            y.ZP.initialize(),
+            I.ZP.initialize(),
             ek.Z.initialize(),
             eh.Z.initialize(),
-            I.Z.initialize(),
+            y.Z.initialize(),
             en.Z.init(),
-            Z.Z.init(),
+            x.Z.init(),
             eX.Z.init(),
             O.Z.initialize(),
-            ex.Z.init(),
+            eZ.Z.init(),
             eq.Z.init(),
-            eL.Z.init(),
+            ew.Z.init(),
             eT.Z.initialize(),
             eP.Z.initialize(),
-            ew.Z.initialize(),
+            eL.Z.initialize(),
             eR.Z.init(),
             G.Z.initialize(),
             E.Z.initialize(),
@@ -467,15 +467,15 @@ class to extends i.PureComponent {
             ed.Z.initialize(),
             eu.Z.initialize(),
             ep.Z.initialize(),
-            w.Z.initialize(),
             L.Z.initialize(),
+            w.Z.initialize(),
             H.Z.initialize(),
             er.Z.init({
                 hasModalOpen: s.$sL,
                 openModal: () =>
                     (0, s.ZDy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 650233));
-                        return (t) => (0, r.jsx)(e, e7({}, t));
+                        return (t) => (0, r.jsx)(e, e2({}, t));
                     })
             }),
             U.Z.init(),
@@ -484,13 +484,13 @@ class to extends i.PureComponent {
             eg.Z.initialize(),
             k.Z.initialize(),
             A.Z.initialize(),
-            x.Z.initialize(),
+            Z.Z.initialize(),
             C.Z.initialize(),
             (this.rewriterUnlisten = eE.Z.addRouteRewriter(this.ensureChannelMatchesGuild)),
             (this.historyUnlisten = eE.Z.addRouteChangeListener(this.handleHistoryChange));
     }
     componentWillUnmount() {
-        ey.Z.terminate(), eM.Z.terminate(), em.Z.terminate(), ef.Z.terminate(), P.Z.terminate(), y.ZP.terminate(), ek.Z.terminate(), I.Z.terminate(), eb.Z.terminate(), eh.Z.terminate(), ew.Z.terminate(), O.Z.terminate(), G.Z.terminate(), el.Z.terminate(), E.Z.terminate(), e_.Z.terminate(), ev.Z.terminate(), eN.Z.terminate(), ed.Z.terminate(), eu.Z.terminate(), ep.Z.terminate(), w.Z.terminate(), L.Z.terminate(), eg.Z.terminate(), k.Z.terminate(), B.Z.terminate(), A.Z.terminate(), x.Z.terminate(), C.Z.terminate(), H.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
+        eI.Z.terminate(), eM.Z.terminate(), em.Z.terminate(), ef.Z.terminate(), P.Z.terminate(), I.ZP.terminate(), ek.Z.terminate(), y.Z.terminate(), eb.Z.terminate(), eh.Z.terminate(), eL.Z.terminate(), O.Z.terminate(), G.Z.terminate(), el.Z.terminate(), E.Z.terminate(), e_.Z.terminate(), ev.Z.terminate(), eN.Z.terminate(), ed.Z.terminate(), eu.Z.terminate(), ep.Z.terminate(), L.Z.terminate(), w.Z.terminate(), eg.Z.terminate(), k.Z.terminate(), B.Z.terminate(), A.Z.terminate(), Z.Z.terminate(), C.Z.terminate(), H.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
     }
     handleHistoryChange(e) {
         let { pathname: t, search: n } = e;
@@ -521,8 +521,8 @@ class to extends i.PureComponent {
                 if ((c && g && d.Z.selectGuild(r), c && u)) {
                     let n = eW.Z.getChannelId(f),
                         a = n !== i;
-                    if (!e2 || g || a || null != o) {
-                        (e2 = !0),
+                    if (!e7 || g || a || null != o) {
+                        (e7 = !0),
                             p.default.selectChannel({
                                 guildId: r,
                                 channelId: i,
@@ -535,7 +535,7 @@ class to extends i.PureComponent {
                         let e = eG.ZP.getCurrentSidebarChannelId(n) !== s,
                             t = null != eG.ZP.getGuildSidebarState(r);
                         if (null != i && null != s && e)
-                            if (t) (0, eI.dL)(e1.Z5c.CHANNEL(r, s, o));
+                            if (t) (0, ey.dL)(e1.Z5c.CHANNEL(r, s, o));
                             else {
                                 let e = { type: eS.Ff.THREAD };
                                 null != o && (e.initialMessageId = o),
@@ -558,7 +558,7 @@ class to extends i.PureComponent {
                     tn.some((t) => {
                         var n;
                         return (null == (n = (0, a.LX)(e, t)) ? void 0 : n.isExact) === !0;
-                    }) || (0, eI.dL)(eB.Z.fallbackRoute);
+                    }) || (0, ey.dL)(eB.Z.fallbackRoute);
             })(t, n);
     }
     ensureChannelMatchesGuild(e) {

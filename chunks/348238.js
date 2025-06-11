@@ -35,12 +35,12 @@ var r = n(255367),
     _ = n(594174),
     b = n(585483),
     E = n(5967),
-    x = n(630388),
-    y = n(358085),
+    y = n(630388),
+    x = n(358085),
     v = n(51144),
     O = n(91047),
-    j = n(50284),
-    C = n(804063),
+    C = n(50284),
+    j = n(804063),
     S = n(981631);
 function I(e, t, n) {
     return i.useCallback(() => {
@@ -100,12 +100,12 @@ function D(e, t) {
 function L(e, t, a, o) {
     let { id: c } = t,
         { id: u, flags: d } = e,
-        p = (0, x.yE)(d, S.iLy.EPHEMERAL),
+        p = (0, y.yE)(d, S.iLy.EPHEMERAL),
         m = (0, s.bp)();
     return i.useCallback(
         (e, t) => {
             if (p) return;
-            if (!y.isPlatformEmbedded) {
+            if (!x.isPlatformEmbedded) {
                 let t = e.target;
                 if (('A' === t.tagName && '' !== t.textContent) || null == window.getSelection) return;
                 let n = window.getSelection();
@@ -225,7 +225,7 @@ function B(e, t) {
         { id: r } = t;
     return i.useCallback(
         (e) => {
-            e.altKey && (e.preventDefault(), (0, j.Z)(r, n));
+            e.altKey && (e.preventDefault(), (0, C.Z)(r, n));
         },
         [r, n]
     );
@@ -261,21 +261,21 @@ function G(e) {
                 },
                 [t, n]
             )),
-        [E, x] = i.useState(a);
+        [E, y] = i.useState(a);
     g.current = E || g.current;
-    let y = i.useCallback(
+    let x = i.useCallback(
             (e) => {
-                s && (0, m.T6)(), E || (b.S.dispatchKeyed(S.LPv.ANIMATE_CHAT_AVATAR, h, !0), _(e), x(!0));
+                s && (0, m.T6)(), E || (b.S.dispatchKeyed(S.LPv.ANIMATE_CHAT_AVATAR, h, !0), _(e), y(!0));
             },
             [E, h, s, _]
         ),
         v = i.useCallback(() => {
-            b.S.dispatchKeyed(S.LPv.ANIMATE_CHAT_AVATAR, h, !1), x(!1);
+            b.S.dispatchKeyed(S.LPv.ANIMATE_CHAT_AVATAR, h, !1), y(!1);
         }, [h]);
     return {
         hasHovered: g.current,
         isHovered: E,
-        handleMouseEnter: y,
+        handleMouseEnter: x,
         handleMouseLeave: v
     };
 }
@@ -306,7 +306,7 @@ function H(e, t) {
 function V(e, t) {
     return i.useCallback(() => {
         let { messageReference: n } = e;
-        (null == t || (0, C.Z)(t)) &&
+        (null == t || (0, j.Z)(t)) &&
             a.Z.jumpToMessage({
                 channelId: n.channel_id,
                 messageId: n.message_id,

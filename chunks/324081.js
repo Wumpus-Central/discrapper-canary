@@ -17,12 +17,12 @@ var i = n(120356),
     _ = n(313201),
     b = n(565138),
     E = n(199902),
-    x = n(592125),
-    y = n(430824),
+    y = n(592125),
+    x = n(430824),
     v = n(158776),
     O = n(306680),
-    j = n(594174),
-    C = n(388032),
+    C = n(594174),
+    j = n(388032),
     S = n(265938);
 let I = {
     top: 8,
@@ -113,7 +113,7 @@ function T(e) {
 }
 function P(e) {
     let { channel: t, gotoChannel: n } = e,
-        i = (0, o.e7)([j.default], () => (t.isDM() ? j.default.getUser(t.getRecipientId()) : null)),
+        i = (0, o.e7)([C.default], () => (t.isDM() ? C.default.getUser(t.getRecipientId()) : null)),
         l = null == i ? (0, m.x)(t) : i.getAvatarURL(void 0, 40);
     return (0, r.jsx)(s.P3F, {
         onClick: n,
@@ -128,7 +128,7 @@ function P(e) {
 }
 function A(e) {
     let { channel: t, gotoChannel: n } = e,
-        i = (0, o.e7)([y.Z], () => y.Z.getGuild(t.guild_id));
+        i = (0, o.e7)([x.Z], () => x.Z.getGuild(t.guild_id));
     return null == i
         ? null
         : (0, r.jsx)(b.Z, {
@@ -143,14 +143,14 @@ function A(e) {
 }
 function w(e) {
     let { channel: t, gotoChannel: n, mentionCount: i } = e,
-        a = (0, o.e7)([y.Z], () => y.Z.getGuild(t.guild_id)),
-        c = (0, o.e7)([x.Z], () => x.Z.getChannel(t.parent_id)),
+        a = (0, o.e7)([x.Z], () => x.Z.getGuild(t.guild_id)),
+        c = (0, o.e7)([y.Z], () => y.Z.getChannel(t.parent_id)),
         u = (0, o.e7)([O.ZP], () => O.ZP.getIsMentionLowImportance(t.id)),
         d = (0, h.KS)(t, a),
         p = (0, f.ZP)(t, !1),
         m = null == c ? (null == a ? void 0 : a.name) : ''.concat(null == a ? void 0 : a.name, ' \u203A ').concat(c.name),
         _ = t.isMultiUserDM()
-            ? C.intl.formatToPlainString(C.t.CxSA5O, { members: t.recipients.length + 1 })
+            ? j.intl.formatToPlainString(j.t.CxSA5O, { members: t.recipients.length + 1 })
             : t.isPrivate()
               ? (0, r.jsx)(Z, { channel: t })
               : (0, r.jsx)(s.P3F, {
@@ -209,8 +209,8 @@ function Z(e) {
             status: i,
             activities: l,
             applicationStream: a
-        } = (0, o.cj)([j.default, v.Z, E.Z], () => {
-            let e = j.default.getUser(t.getRecipientId());
+        } = (0, o.cj)([C.default, v.Z, E.Z], () => {
+            let e = C.default.getUser(t.getRecipientId());
             return {
                 user: e,
                 status: null != e ? v.Z.getStatus(e.id) : null,

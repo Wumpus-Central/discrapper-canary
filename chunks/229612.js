@@ -81,22 +81,22 @@ let h = function (e) {
         a = (0, b.Dt)(),
         h = (0, d.e)({ getOptions: c.bM }),
         p = (0, d.e)({ getOptions: c.cc }),
-        x = t === O.aZ.BAD,
-        S = i.useMemo(() => {
+        S = t === O.aZ.BAD,
+        x = i.useMemo(() => {
             let e = [];
-            return x && e.push(h), e.push(p), e.every(c.cp);
-        }, [x, p, h]),
-        T = i.useCallback(() => {
-            S &&
+            return S && e.push(h), e.push(p), e.every(c.cp);
+        }, [S, p, h]),
+        m = i.useCallback(() => {
+            x &&
                 (s.ZP.trackWithMetadata(f.rMx.SEARCH_RESULTS_FEEDBACK_SUBMITTED, {
                     rating: t,
-                    unsatisfied_question_option: x ? (0, c.HO)(h) : null,
-                    unsatisfied_question_text: x ? (0, c.sG)(h) : null,
+                    unsatisfied_question_option: S ? (0, c.HO)(h) : null,
+                    unsatisfied_question_text: S ? (0, c.sG)(h) : null,
                     describe_search_question_option: (0, c.HO)(p),
                     describe_search_question_text: (0, c.sG)(p)
                 }),
                 r());
-        }, [h, x, S, r, t, p]);
+        }, [h, S, x, r, t, p]);
     return (0, l.jsxs)(u.Y0X, {
         size: u.CgR.MEDIUM,
         transitionState: n,
@@ -118,7 +118,7 @@ let h = function (e) {
             }),
             (0, l.jsxs)(u.hzk, {
                 className: _.content,
-                children: [x && (0, l.jsx)(g, E({ title: v.intl.string(v.t.UyBQFx) }, h)), (0, l.jsx)(g, E({ title: v.intl.string(v.t.LhMLCg) }, p))]
+                children: [S && (0, l.jsx)(g, E({ title: v.intl.string(v.t.UyBQFx) }, h)), (0, l.jsx)(g, E({ title: v.intl.string(v.t.LhMLCg) }, p))]
             }),
             (0, l.jsxs)(u.mzw, {
                 separator: !0,
@@ -135,8 +135,8 @@ let h = function (e) {
                     }),
                     (0, l.jsx)(u.zxk, {
                         size: u.zxk.Sizes.MEDIUM,
-                        onClick: T,
-                        disabled: !S,
+                        onClick: m,
+                        disabled: !x,
                         children: v.intl.string(v.t['4Zpxtr'])
                     })
                 ]

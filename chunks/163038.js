@@ -16,12 +16,12 @@ var r = n(255367),
     _ = n(930282),
     b = n(464891),
     E = n(507418),
-    x = n(348238),
-    y = n(38267),
+    y = n(348238),
+    x = n(38267),
     v = n(25015),
     O = n(438075),
-    j = n(359110),
-    C = n(6025),
+    C = n(359110),
+    j = n(6025),
     S = n(695346),
     I = n(433355),
     N = n(592125),
@@ -50,12 +50,12 @@ function M(e) {
                 null == i ||
                 s ||
                 null == l ||
-                (C.Z.openThreadAsSidebar({
+                (j.Z.openThreadAsSidebar({
                     channelId: r.id,
                     baseChannelId: l,
                     guildId: r.guild_id
                 }),
-                (0, j.Kh)(l));
+                (0, C.Kh)(l));
         }, [t]);
     return null == f
         ? null
@@ -93,12 +93,12 @@ function U(e) {
             showUsernamePopout: p,
             showAvatarPopout: m
         } = (function (e, t) {
-            let { popouts: n, setPopout: r } = (0, y.Z)(e.id, D.d$),
+            let { popouts: n, setPopout: r } = (0, x.Z)(e.id, D.d$),
                 { usernameProfile: l, avatarProfile: a } = n,
-                o = (0, x.XO)(e, t, l, r);
+                o = (0, y.XO)(e, t, l, r);
             return {
                 onClickUsername: o,
-                onClickAvatar: (0, x.R9)(a, r),
+                onClickAvatar: (0, y.R9)(a, r),
                 onPopoutRequestClose: i.useCallback(
                     () =>
                         r({
@@ -168,7 +168,7 @@ function F(e) {
         _ = S.NA.useSetting(),
         b = (0, a.e7)([T.Z], () => T.Z.isDeveloper),
         E = (0, f.A)((null != (l = h.editedTimestamp) ? l : h.timestamp).valueOf()),
-        { content: x, hasSpoilerEmbeds: y } = (0, v.Z)(h, {
+        { content: y, hasSpoilerEmbeds: x } = (0, v.Z)(h, {
             hideSimpleEmbedContent: g && _,
             isInteracting: !1,
             formatInline: !1,
@@ -178,8 +178,8 @@ function F(e) {
             allowDevLinks: b,
             previewLinkTarget: !0
         }),
-        j = (0, a.e7)([N.Z], () => N.Z.getChannel(o.channel_id));
-    return null == j
+        C = (0, a.e7)([N.Z], () => N.Z.getChannel(o.channel_id));
+    return null == C
         ? null
         : (0, r.jsx)(
               'div',
@@ -190,18 +190,18 @@ function F(e) {
                       children: [
                           (0, r.jsx)(U, {
                               mergedMessageRecord: h,
-                              content: x,
-                              channel: j,
+                              content: y,
+                              channel: C,
                               reportingUserId: null == s || null == (n = s.moderatorReport) ? void 0 : n.reporting_user_id,
                               reportedTimestamp: o.timestamp
                           }),
                           (0, O.Z)({
                               channelMessageProps: {
                                   message: h,
-                                  channel: j,
+                                  channel: C,
                                   compact: !1
                               },
-                              hasSpoilerEmbeds: y,
+                              hasSpoilerEmbeds: x,
                               isInteracting: !1,
                               isMessageSnapshot: !0,
                               renderThreadAccessory: !1,

@@ -53,7 +53,7 @@ function b() {
                     children: [
                         (0, i.jsx)(s.Text, {
                             variant: 'text-md/medium',
-                            children: h.intl.string(h.t['6k0AgI'])
+                            children: h.intl.string(h.t['+uI23N'])
                         }),
                         (0, i.jsx)(s.q4e, {
                             look: s.qQH.CUSTOM,
@@ -73,7 +73,7 @@ function b() {
                     children: [
                         (0, i.jsx)(s.Text, {
                             variant: 'text-md/medium',
-                            children: h.intl.string(h.t.D2EGSk)
+                            children: h.intl.string(h.t['Yh+HX1'])
                         }),
                         (0, i.jsx)(s.q4e, {
                             look: s.qQH.CUSTOM,

@@ -13,8 +13,8 @@ var l = n(392711),
     r = n(695346),
     s = n(626135),
     u = n(178635),
-    c = n(250454),
-    o = n(531578),
+    o = n(250454),
+    c = n(531578),
     d = n(981631),
     b = n(760359),
     O = n(388032);
@@ -72,14 +72,14 @@ let h = (e, t) => {
 };
 function v(e) {
     let { feedbackType: t, location: n } = e,
-        { persistToBackend: l } = (0, c.O)({ location: n }),
+        { persistToBackend: l } = (0, o.O)({ location: n }),
         a = u.R[t].hotspot;
     l
         ? (s.default.track(d.rMx.USER_SETTINGS_IN_APP_FEEDBACK_OPTED_OUT, {
-              feedback_type: o.nw[t],
-              opted_out_until: o.uf
+              feedback_type: c.nw[t],
+              opted_out_until: c.uf
           }),
-          r.A2.updateSetting((e) => E(f({}, e), { [t]: E(f({}, e[t]), { optOutExpiryTime: o.uf }) })))
+          r.A2.updateSetting((e) => E(f({}, e), { [t]: E(f({}, e[t]), { optOutExpiryTime: c.uf }) })))
         : (0, i.Kw)(a);
 }
 function p(e) {
@@ -114,24 +114,29 @@ function p(e) {
 function x() {
     return p([
         {
-            variant: o.$7.SELF,
-            value: o.T_.COULD_NOT_CONNECT,
+            variant: c.$7.SELF,
+            value: c.T_.COULD_NOT_CONNECT,
             label: O.intl.string(b.default.gMHKDA)
         },
         {
-            value: o.T_.HIGH_TTC,
-            variant: o.$7.SELF,
+            value: c.T_.HIGH_TTC,
+            variant: c.$7.SELF,
             label: O.intl.string(b.default.y06Ays)
         },
         {
-            value: o.T_.HIGH_LATENCY,
-            variant: o.$7.SELF,
+            value: c.T_.HIGH_LATENCY,
+            variant: c.$7.SELF,
             label: O.intl.string(b.default.y5k8Ji)
         },
         {
-            value: o.T_.ROBOT_VOICE,
-            variant: o.$7.SOMEONE,
+            value: c.T_.ROBOT_VOICE,
+            variant: c.$7.SOMEONE,
             label: O.intl.string(b.default.f2914u)
+        },
+        {
+            value: c.T_.DESYNC,
+            variant: c.$7.UNSPECIFIED,
+            label: O.intl.string(b.default['zk+QLy'])
         }
     ]);
 }
@@ -139,68 +144,63 @@ function N(e) {
     let { isMobile: t } = e;
     return p([
         {
-            value: o.b9.NO_AUDIO,
-            variant: o.$7.SELF,
+            value: c.b9.NO_AUDIO,
+            variant: c.$7.SELF,
             label: O.intl.string(b.default.GWypHx)
         },
         {
-            value: o.b9.NO_AUDIO,
-            variant: o.$7.OTHERS,
+            value: c.b9.NO_AUDIO,
+            variant: c.$7.OTHERS,
             label: O.intl.string(b.default.ftSvQ0)
         },
         {
-            value: o.b9.LOW_QUALITY_AUDIO,
-            variant: o.$7.OTHERS,
+            value: c.b9.LOW_QUALITY_AUDIO,
+            variant: c.$7.OTHERS,
             label: O.intl.string(b.default['1DnNRE'])
         },
         {
-            value: o.b9.ROBOT_VOICE,
-            variant: o.$7.SOMEONE,
+            value: c.b9.ROBOT_VOICE,
+            variant: c.$7.SOMEONE,
             label: O.intl.string(b.default.yGe0BA)
         },
         {
-            value: o.b9.ECHO,
-            variant: o.$7.OTHERS,
+            value: c.b9.ECHO,
+            variant: c.$7.OTHERS,
             label: O.intl.string(b.default.Q5Dsa2)
         },
         {
-            value: o.b9.TOO_QUIET,
-            variant: o.$7.SOMEONE,
-            label: O.intl.string(b.default.WyMQjI)
+            value: c.b9.TOO_QUIET,
+            variant: c.$7.SOMEONE,
+            label: O.intl.string(b.default['1o77Iy'])
         },
         {
-            value: o.b9.TOO_LOUD,
-            variant: o.$7.SOMEONE,
-            label: O.intl.string(b.default.RuTscn)
-        },
-        {
-            value: o.b9.CUTTING,
-            variant: o.$7.SOMEONE,
+            value: c.b9.CUTTING,
+            variant: c.$7.SOMEONE,
             label: O.intl.string(b.default.RK9DUl)
         },
         {
-            value: o.b9.DELAYED,
-            variant: o.$7.UNSPECIFIED,
+            value: c.b9.DELAYED,
+            variant: c.$7.UNSPECIFIED,
             label: O.intl.string(b.default.RGRgmJ)
         },
         {
-            value: o.b9.BACKGROUND_NOISE,
-            variant: o.$7.SOMEONE,
+            value: c.b9.BACKGROUND_NOISE,
+            variant: c.$7.SOMEONE,
             label: O.intl.string(b.default.anHk19)
         },
         {
-            value: o.b9.UNABLE_TO_FIND_INPUT_DEVICE,
-            variant: o.$7.SELF,
-            label: O.intl.string(b.default.J2FWpq)
+            value: c.b9.UNABLE_TO_FIND_DEVICE,
+            variant: c.$7.SELF,
+            label: O.intl.string(b.default['05VSjo'])
         },
         {
-            value: o.b9.UNABLE_TO_FIND_OUTPUT_DEVICE,
-            variant: o.$7.SELF,
-            label: O.intl.string(b.default['Fx8+Ji'])
+            value: c.b9.COMPLAINTS,
+            variant: c.$7.OTHERS,
+            label: O.intl.string(b.default.kbbtws)
         },
         {
-            value: o.b9.TROUBLE_WITH_SPEAKERPHONE,
-            variant: o.$7.SELF,
+            value: c.b9.TROUBLE_WITH_SPEAKERPHONE,
+            variant: c.$7.SELF,
             label: O.intl.string(b.default['4qlGrK']),
             disabled: !t
         }
@@ -209,42 +209,42 @@ function N(e) {
 function m() {
     return p([
         {
-            value: o.ct.NO_VIDEO,
-            variant: o.$7.SELF,
+            value: c.ct.NO_VIDEO,
+            variant: c.$7.SELF,
             label: O.intl.string(b.default['Bh+02d'])
         },
         {
-            value: o.ct.NO_VIDEO,
-            variant: o.$7.SOMEONE,
+            value: c.ct.NO_VIDEO,
+            variant: c.$7.SOMEONE,
             label: O.intl.string(b.default['R+wqwc'])
         },
         {
-            value: o.ct.FREEZING_OR_HITCHING,
-            variant: o.$7.SOMEONE,
+            value: c.ct.FREEZING_OR_HITCHING,
+            variant: c.$7.SOMEONE,
             label: O.intl.string(b.default['8I/GUF'])
         },
         {
-            value: o.ct.BLURRY_OR_PIXELATED,
-            variant: o.$7.SOMEONE,
+            value: c.ct.BLURRY_OR_PIXELATED,
+            variant: c.$7.SOMEONE,
             label: O.intl.string(b.default.k7Ido6)
         },
         {
-            value: o.ct.UNABLE_TO_ENABLE_DEVICE,
-            variant: o.$7.SELF,
+            value: c.ct.UNABLE_TO_ENABLE_DEVICE,
+            variant: c.$7.SELF,
             label: O.intl.string(b.default.QbC6LS)
         },
         {
-            value: o.ct.DESYNC,
-            variant: o.$7.SOMEONE,
-            label: O.intl.string(b.default['9NnNHx'])
+            value: c.ct.DESYNC,
+            variant: c.$7.UNSPECIFIED,
+            label: O.intl.string(b.default.vRDE5O)
         }
     ]);
 }
 function g() {
     return p([
         {
-            value: o.s_.TOXIC_OR_INAPPROPRIATE,
-            variant: o.$7.OTHERS,
+            value: c.s_.TOXIC_OR_INAPPROPRIATE,
+            variant: c.$7.OTHERS,
             label: O.intl.string(b.default.PLBRzM)
         }
     ]);

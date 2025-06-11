@@ -19,12 +19,12 @@ var r,
     _ = n(541716),
     b = n(28546),
     E = n(963249),
-    x = n(703656),
-    y = n(594174),
+    y = n(703656),
+    x = n(594174),
     v = n(626135),
     O = n(51144),
-    j = n(479446),
-    C = n(795448),
+    C = n(479446),
+    j = n(795448),
     S = n(441623),
     I = n(317271),
     N = n(474936),
@@ -36,7 +36,7 @@ var r,
     R = (((r = {}).SYSTEM_MESSAGE = 'system_message'), (r.COACHMARK = 'coachmark'), r);
 function k(e) {
     let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: r, onMouseEnter: a, onMouseLeave: R, popoutPosition: k, analyticsPage: D, analyticsSection: L, glow: M, giftIntentSecondaryAction: U } = e,
-        F = (0, c.e7)([y.default], () => y.default.getCurrentUser()),
+        F = (0, c.e7)([x.default], () => x.default.getCurrentUser()),
         { analyticsLocations: B } = (0, h.ZP)(),
         G = (0, c.e7)([S.Z], () => S.Z.getFriendAnniversaryYears(r.id));
     l.useEffect(() => {
@@ -50,7 +50,7 @@ function k(e) {
             }
         });
     }, [t, n]);
-    let H = () => (t === N.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t['L2s/Nz'], { numberOfYears: G }) : (0, j.Ou)(t)),
+    let H = () => (t === N.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t['L2s/Nz'], { numberOfYears: G }) : (0, C.Ou)(t)),
         V = 'coachmark' === n,
         z = V ? Z.innerContentCoachmark : Z.innerContent,
         W = V ? Z.recipientUserAvatarCoachmark : Z.recipientUserAvatar,
@@ -99,12 +99,12 @@ function k(e) {
                                     variant: 'text-md/medium',
                                     color: V ? 'header-primary' : 'always-white',
                                     lineClamp: 3,
-                                    children: t === N.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t.BWJvAA, { friendUserName: O.ZP.getName(r) }) : (0, j.Ou)(t)
+                                    children: t === N.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t.BWJvAA, { friendUserName: O.ZP.getName(r) }) : (0, C.Ou)(t)
                                 }),
                                 (0, i.jsx)(d.Text, {
                                     className: Y,
                                     variant: 'text-sm/normal',
-                                    children: t === N.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t.S3fdq6, { numberOfYears: G }) : (0, j.Ou)(t)
+                                    children: t === N.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t.S3fdq6, { numberOfYears: G }) : (0, C.Ou)(t)
                                 })
                             ]
                         })
@@ -123,9 +123,9 @@ function k(e) {
                                             cta_type: U
                                         }),
                                         U === N.X2.VIEW_ALL
-                                            ? ((0, x.uL)(T.Z5c.FRIENDS), m.Z.setSection(T.pJs.ALL))
+                                            ? ((0, y.uL)(T.Z5c.FRIENDS), m.Z.setSection(T.pJs.ALL))
                                             : U === N.X2.SEND_MESSAGE &&
-                                              ((0, C.PV)(r.id),
+                                              ((0, j.PV)(r.id),
                                               p.Z.openPrivateChannel({ recipientIds: r.id }).then(() => {
                                                   setTimeout(() => {
                                                       (0, b.PG)(A.X1.GIF, _.Ie.NORMAL),

@@ -1,4 +1,4 @@
-n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r,
     i = n(442837),
     l = n(570140),
@@ -39,7 +39,7 @@ class p {
         (this.messages = [...(null != (n = this.messages) ? n : []), ...c]), (this.hasNextPage = null != this.cursor), (this.totalResults = l);
     }
     filterBlockedMessages(e) {
-        return e.filter((e) => !u.Z.isBlockedOrIgnoredForMessage(e));
+        return e;
     }
     dedupMessages(e) {
         return e.filter((e) => !this.messageIds.has(e.id) && (this.messageIds.add(e.id), !0));
@@ -48,18 +48,18 @@ class p {
         d(this, 'isIndexing', !1), d(this, 'isHistoricalIndexing', !1), d(this, 'isFetching', !1), d(this, 'analyticsId', null), d(this, 'error', null), d(this, 'messages', null), d(this, 'documentsIndexed', 0), d(this, 'totalResults', null), d(this, 'resultsBlocked', 0), d(this, 'showBlockedResults', !1), d(this, 'showNoResultsAlt', !1), d(this, 'hasNextPage', !1), d(this, 'messageIds', new Set()), d(this, 'isInitialFetchComplete', !1), d(this, 'cursor', null);
     }
 }
-let h = new Map(),
+let m = new Map(),
     f = new Map(),
-    g = null;
-function m(e) {
+    h = null;
+function g(e) {
     var t;
-    return null != (t = h.get(e)) ? t : new p();
+    return null != (t = m.get(e)) ? t : new p();
 }
-function b(e) {
-    let t = m(e);
-    return h.set(e, t), t;
+function _(e) {
+    let t = g(e);
+    return m.set(e, t), t;
 }
-function _(e, t) {
+function b(e, t) {
     let n = f.get(e);
     if (null == n) return !1;
     let r = t(n);
@@ -69,12 +69,12 @@ function E(e) {
     let { type: t, messageId: n, userId: r, emoji: i } = e;
     if (!(0, s.sm)(e)) return !1;
     let l = c.default.getId() === r;
-    return _(n, (n) => {
+    return b(n, (n) => {
         let { reactionType: r } = e;
         return 'MESSAGE_REACTION_ADD' === t ? n.addReaction(i, l, e.colors, r) : n.removeReaction(i, l, r);
     });
 }
-class O extends (r = i.ZP.Store) {
+class y extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(u.Z);
     }
@@ -82,95 +82,98 @@ class O extends (r = i.ZP.Store) {
         return f.get(e);
     }
     getTotalCount(e) {
-        return m(e).totalResults;
+        return g(e).totalResults;
     }
     getIsInitialFetchComplete(e) {
-        return m(e).isInitialFetchComplete;
+        return g(e).isInitialFetchComplete;
     }
     getIsIndexing(e) {
-        return m(e).isIndexing;
+        return g(e).isIndexing;
     }
     getIsHistoricalIndexing(e) {
-        return m(e).isHistoricalIndexing;
+        return g(e).isHistoricalIndexing;
     }
     getDocumentsIndexed(e) {
-        return m(e).documentsIndexed;
+        return g(e).documentsIndexed;
     }
     getIsFetching(e) {
-        return m(e).isFetching;
+        return g(e).isFetching;
     }
     getHasNextPage(e) {
-        return m(e).hasNextPage;
+        return g(e).hasNextPage;
     }
     getError(e) {
-        return m(e).error;
+        return g(e).error;
     }
     getMessages(e) {
-        return m(e).messages;
+        return g(e).messages;
     }
     getCursor(e) {
-        return m(e).cursor;
+        return g(e).cursor;
+    }
+    getShowNoResultsAlt(e) {
+        return g(e).showNoResultsAlt;
     }
     getLastSearchAnalyticsId() {
-        return g;
+        return h;
     }
 }
-d(O, 'displayName', 'SearchMessageStore'),
-    new O(l.Z, {
-        SEARCH_MESSAGES_START: function (e) {
-            e.ids.forEach((e) => {
-                b(e).handleSearchStart();
+d(y, 'displayName', 'SearchMessageStore');
+let x = new y(l.Z, {
+    SEARCH_MESSAGES_START: function (e) {
+        e.ids.forEach((e) => {
+            _(e).handleSearchStart();
+        });
+    },
+    SEARCH_MESSAGES_SUCCESS: function (e) {
+        var t;
+        (h = null == (t = e.data[0]) ? void 0 : t.analyticsId),
+            e.data.forEach((e) => {
+                let t = _(e.id),
+                    n = e.messages.map((e) => {
+                        let [t] = e;
+                        return (0, o.e5)(t);
+                    });
+                t.handleSearchSuccess(e, n), n.forEach((e) => f.set(e.id, e));
             });
-        },
-        SEARCH_MESSAGES_SUCCESS: function (e) {
-            var t;
-            (g = null == (t = e.data[0]) ? void 0 : t.analyticsId),
-                e.data.forEach((e) => {
-                    let t = b(e.id),
-                        n = e.messages.map((e) => {
-                            let [t] = e;
-                            return (0, o.e5)(t);
-                        });
-                    t.handleSearchSuccess(e, n), n.forEach((e) => f.set(e.id, e));
-                });
-        },
-        SEARCH_MESSAGES_INDEXING: function (e) {
-            e.ids.forEach((e) => {
-                b(e).handleSearchIndexing();
-            });
-        },
-        SEARCH_MESSAGES_FAILURE: function (e) {
-            e.ids.forEach((t) => {
-                b(t).handleSearchFailure(e.error);
-            });
-        },
-        SEARCH_MESSAGES_CLEAR_ALL: function (e) {
-            (h = new Map()), (f = new Map());
-        },
-        MESSAGE_UPDATE: function (e) {
-            let t = e.message.id;
-            if (null == t) return !1;
-            let n = f.get(t);
-            if (null == n) return !1;
-            let r = (0, o.wi)(n, e.message);
-            f.set(t, r);
-        },
-        MESSAGE_REACTION_ADD: E,
-        MESSAGE_REACTION_ADD_MANY: function (e) {
-            let { messageId: t, reactions: n } = e,
-                r = c.default.getId();
-            return _(t, (e) => e.addReactionBatch(n, r));
-        },
-        MESSAGE_REACTION_REMOVE: E,
-        MESSAGE_REACTION_REMOVE_ALL: function (e) {
-            let { messageId: t } = e;
-            return _(t, (e) => e.set('reactions', []));
-        },
-        MESSAGE_REACTION_REMOVE_EMOJI: function (e) {
-            let { messageId: t, emoji: n } = e;
-            return _(t, (e) => e.removeReactionsForEmoji(n));
-        },
-        CONNECTION_OPEN: function () {
-            (h = new Map()), (f = new Map());
-        }
-    });
+    },
+    SEARCH_MESSAGES_INDEXING: function (e) {
+        e.ids.forEach((e) => {
+            _(e).handleSearchIndexing();
+        });
+    },
+    SEARCH_MESSAGES_FAILURE: function (e) {
+        e.ids.forEach((t) => {
+            _(t).handleSearchFailure(e.error);
+        });
+    },
+    SEARCH_MESSAGES_CLEAR_ALL: function (e) {
+        (m = new Map()), (f = new Map());
+    },
+    MESSAGE_UPDATE: function (e) {
+        let t = e.message.id;
+        if (null == t) return !1;
+        let n = f.get(t);
+        if (null == n) return !1;
+        let r = (0, o.wi)(n, e.message);
+        f.set(t, r);
+    },
+    MESSAGE_REACTION_ADD: E,
+    MESSAGE_REACTION_ADD_MANY: function (e) {
+        let { messageId: t, reactions: n } = e,
+            r = c.default.getId();
+        return b(t, (e) => e.addReactionBatch(n, r));
+    },
+    MESSAGE_REACTION_REMOVE: E,
+    MESSAGE_REACTION_REMOVE_ALL: function (e) {
+        let { messageId: t } = e;
+        return b(t, (e) => e.set('reactions', []));
+    },
+    MESSAGE_REACTION_REMOVE_EMOJI: function (e) {
+        let { messageId: t, emoji: n } = e;
+        return b(t, (e) => e.removeReactionsForEmoji(n));
+    },
+    CONNECTION_OPEN: function () {
+        (m = new Map()), (f = new Map());
+    }
+});

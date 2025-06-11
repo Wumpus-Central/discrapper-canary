@@ -23,13 +23,13 @@ async function _(e, t) {
     let E = d.default.getCurrentUser();
     if (null == E) return;
     await (0, o.$p)();
-    let x = Array.from(s.Z.getAllStickersIterator()),
-        y = x
+    let y = Array.from(s.Z.getAllStickersIterator()),
+        x = y
             .filter((e) => e.type === c.n0.GUILD)
             .filter((e) => g(e.guild_id) && (0, a.kl)(e, E, t))
             .sort((e, t) => -m.default.compare(e.id, t.id));
-    if (y.length > 5) {
-        let i = [y[Math.floor(Math.pow(Math.random(), 2) * y.length)].id];
+    if (x.length > 5) {
+        let i = [x[Math.floor(Math.pow(Math.random(), 2) * x.length)].id];
         r.Z.sendStickers(t.id, i, '', {
             messageReference: {
                 guild_id: null != (n = t.getGuildId()) ? n : void 0,
@@ -65,9 +65,9 @@ async function _(e, t) {
         });
         return;
     }
-    let O = x.filter((e) => e.type === c.n0.STANDARD),
-        j = [O[Math.floor(Math.random() * O.length)].id];
-    r.Z.sendStickers(t.id, j, '', {
+    let O = y.filter((e) => e.type === c.n0.STANDARD),
+        C = [O[Math.floor(Math.random() * O.length)].id];
+    r.Z.sendStickers(t.id, C, '', {
         messageReference: {
             guild_id: null != (_ = t.getGuildId()) ? _ : void 0,
             channel_id: t.id,

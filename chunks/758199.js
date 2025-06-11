@@ -26,8 +26,8 @@ var r,
     _ = n(217702),
     b = n(388032),
     E = n(383195);
-function x() {
-    return (x =
+function y() {
+    return (y =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -37,7 +37,7 @@ function x() {
             return e;
         }).apply(this, arguments);
 }
-function y(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -65,7 +65,7 @@ function y(e) {
 var v = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
 function O(e) {
     var t, n, r, a;
-    let { title: v, header: O, info: j, staticBannerSrc: C, videoBannerSrc: S, bannerAspectRatio: I = 0, iconSrc: N, embedUrl: T, infoUrl: P, actions: A = [], trackingConfig: w } = e;
+    let { title: v, header: O, info: C, staticBannerSrc: j, videoBannerSrc: S, bannerAspectRatio: I = 0, iconSrc: N, embedUrl: T, infoUrl: P, actions: A = [], trackingConfig: w } = e;
     w = {
         id: null != (n = null == (t = w) ? void 0 : t.id) ? n : '0',
         linkType: null != (r = null == t ? void 0 : t.linkType) ? r : g.Un.UNKNOWN,
@@ -74,7 +74,7 @@ function O(e) {
         onView: null == t ? void 0 : t.onView,
         onLinkCopied: null == t ? void 0 : t.onLinkCopied
     };
-    let { primaryColor: Z, secondaryColor: R } = (0, p.Z)(null != N ? N : C),
+    let { primaryColor: Z, secondaryColor: R } = (0, p.Z)(null != N ? N : j),
         k = 'linear-gradient(45deg, '.concat(Z, ', ').concat(R, ')'),
         D = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
         L = l.useRef(!1),
@@ -115,7 +115,7 @@ function O(e) {
                       })
                   })
                 : null,
-        B = null != C,
+        B = null != j,
         G = null != S && !1 === D,
         H = B || G,
         V = 0 === I ? E.bannerAspectRatioBot : E.bannerAspectRatioActivity,
@@ -150,7 +150,7 @@ function O(e) {
                         B &&
                             (0, i.jsx)('div', {
                                 className: E.staticBanner,
-                                style: { backgroundImage: 'url('.concat(C, ')') },
+                                style: { backgroundImage: 'url('.concat(j, ')') },
                                 onTransitionEnd: W
                             })
                     ]
@@ -188,7 +188,7 @@ function O(e) {
                                         lineClamp: 1,
                                         children: v
                                     }),
-                                    j
+                                    C
                                 ]
                             }),
                             null == O && (null != U ? U : F)
@@ -223,19 +223,19 @@ function O(e) {
                                           {
                                               text: a,
                                               children: (e) => {
-                                                  var t = x(
+                                                  var t = y(
                                                       {},
                                                       (function (e) {
                                                           if (null == e) throw TypeError('Cannot destructure ' + e);
                                                           return e;
                                                       })(e)
                                                   );
-                                                  return (0, i.jsx)(c.zxk, y({}, m, t));
+                                                  return (0, i.jsx)(c.zxk, x({}, m, t));
                                               }
                                           },
                                           n
                                       )
-                                    : (0, i.jsx)(c.zxk, y({}, m), n);
+                                    : (0, i.jsx)(c.zxk, x({}, m), n);
                             })
                         })
                 ]
