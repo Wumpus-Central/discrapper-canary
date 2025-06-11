@@ -1,48 +1,26 @@
-n.d(t, { R: () => f }), n(388685);
-var r = n(255367);
-n(73800);
-var i = n(704215),
-    l = n(481060),
+n.d(t, { R: () => g }), n(388685);
+var r = n(255367),
+    i = n(73800),
+    l = n(704215),
     a = n(230711),
     o = n(243778),
-    s = n(981631),
-    c = n(921944),
-    u = n(526761),
-    d = n(726985),
-    p = n(388032),
-    h = n(306194);
-function f() {
-    let [e, t] = (0, o.US)([i.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE]),
-        n = e === i.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE,
-        f = () => {
-            a.Z.open(s.oAB.CONTENT_AND_SOCIAL, d.s6.RESTRICTED_USERS, { scrollPosition: u.FY.RESTRICTED_ACCOUNTS });
-        };
-    return n
-        ? (0, r.jsxs)('div', {
-              className: h.blockedIgnoredSettingsNotice,
-              children: [
-                  (0, r.jsx)(l.d3s, { size: 'md' }),
-                  (0, r.jsx)(l.Text, {
-                      variant: 'text-sm/medium',
-                      color: 'interactive-active',
-                      children: p.intl.format(p.t.zqv4nZ, {
-                          hook: (e, t) =>
-                              (0, r.jsx)(
-                                  l.eee,
-                                  {
-                                      onClick: f,
-                                      children: e
-                                  },
-                                  t
-                              )
-                      })
-                  }),
-                  (0, r.jsx)(l.P3F, {
-                      className: h.closeButton,
-                      onClick: () => t(c.L.USER_DISMISS),
-                      children: (0, r.jsx)(l.Dio, {})
-                  })
-              ]
+    s = n(907995),
+    c = n(981631),
+    u = n(921944),
+    d = n(526761),
+    p = n(726985),
+    h = n(388032),
+    f = n(306194);
+function g() {
+    let [e, t] = (0, o.US)([l.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE]);
+    return i.useMemo(() => e === l.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE, [e])
+        ? (0, r.jsx)(s.f, {
+              label: h.t.zqv4nZ,
+              labelHook: () => {
+                  a.Z.open(c.oAB.CONTENT_AND_SOCIAL, p.s6.RESTRICTED_USERS, { scrollPosition: d.FY.RESTRICTED_ACCOUNTS });
+              },
+              dismissNotice: () => t(u.L.USER_DISMISS),
+              className: f.blockedIgnoredSettingsNotice
           })
         : null;
 }

@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(845767),
     U = n(620360),
     G = n(96051),
-    B = n(750995),
-    V = n(696287),
+    V = n(750995),
+    B = n(696287),
     H = n(657030),
     F = n(408026),
     z = n(763916),
@@ -91,8 +91,8 @@ var r = n(255367),
     eM = n(444961),
     eU = n(314897),
     eG = n(433355),
-    eB = n(592125),
-    eV = n(896797),
+    eV = n(592125),
+    eB = n(896797),
     eH = n(430824),
     eF = n(819640),
     ez = n(283595),
@@ -122,7 +122,7 @@ function e4(e, t, n) {
         e
     );
 }
-function e2(e) {
+function e7(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -139,7 +139,7 @@ function e2(e) {
     return e;
 }
 n(117240), n(801077), n(967368), n(272053), n(974180), n(574254), n(551428), n(55563), n(882029), n(959457), n(653255), n(663389), n(25990), n(778825), n(999382), n(388610), n(533947), n(277053), n(371398), n(141233), n(471073), n(606206);
-let e7 = !1;
+let e2 = !1;
 (0, S.DL)(),
     o.ZP.initialize(),
     ey.Z.loadServer(),
@@ -181,14 +181,14 @@ let e6 = (0, m.l)((e) => {
                         fingerprint: t
                     };
                 },
-                children: [(0, r.jsx)(a.l_, { to: eV.Z.defaultRoute }), ';']
+                children: [(0, r.jsx)(a.l_, { to: eB.Z.defaultRoute }), ';']
             })
         );
     }),
-    e9 = o.ZP.connectStores([K.Z, eV.Z, eU.default], () => ({
+    e9 = o.ZP.connectStores([K.Z, eB.Z, eU.default], () => ({
         isConnected: K.Z.isConnected(),
-        defaultRoute: eV.Z.defaultRoute,
-        defaultRouteFallback: eV.Z.fallbackRoute,
+        defaultRoute: eB.Z.defaultRoute,
+        defaultRouteFallback: eB.Z.fallbackRoute,
         token: eU.default.getToken()
     }))(
         class extends i.Component {
@@ -201,7 +201,7 @@ let e6 = (0, m.l)((e) => {
                 if (null == n) return (0, r.jsx)(a.l_, { to: e1.Z5c.DEFAULT_LOGGED_OUT });
                 if (e) {
                     let e = tl(t);
-                    return null == e || ((e.params.guildId === e1.ME || null != eH.Z.getGuild(e.params.guildId)) && null != eB.Z.getChannel(e.params.channelId)) ? (0, r.jsx)(a.l_, { to: t }) : (0, r.jsx)(a.l_, { to: i });
+                    return null == e || ((e.params.guildId === e1.ME || null != eH.Z.getGuild(e.params.guildId)) && null != eV.Z.getChannel(e.params.channelId)) ? (0, r.jsx)(a.l_, { to: t }) : (0, r.jsx)(a.l_, { to: i });
                 }
                 return null;
             }
@@ -245,7 +245,7 @@ let ti = [
                         sourceAnalyticsLocations: [N.Z.URI_SCHEME]
                     })
                 ),
-                (0, r.jsx)(a.l_, { to: eV.Z.defaultRoute })
+                (0, r.jsx)(a.l_, { to: eB.Z.defaultRoute })
             );
         }
     },
@@ -289,7 +289,7 @@ let ti = [
     {
         path: [e1.Z5c.GUILD_CREATE],
         render: function () {
-            return (0, q.h)(() => D.Z.openCreateGuildModal({ location: 'External link' })), (0, r.jsx)(a.l_, { to: eV.Z.defaultRoute });
+            return (0, q.h)(() => D.Z.openCreateGuildModal({ location: 'External link' })), (0, r.jsx)(a.l_, { to: eB.Z.defaultRoute });
         }
     },
     {
@@ -306,7 +306,7 @@ let ti = [
                         feature: o
                     })
                 ),
-                (0, r.jsx)(a.l_, { to: eV.Z.defaultRoute })
+                (0, r.jsx)(a.l_, { to: eB.Z.defaultRoute })
             );
         },
         isSessionRequired: !0
@@ -329,7 +329,7 @@ let ti = [
                             var n, l;
                             return (0, r.jsx)(
                                 e,
-                                ((n = e2({}, t)),
+                                ((n = e7({}, t)),
                                 (l = l = { guildId: i }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
@@ -356,7 +356,7 @@ let ti = [
     {
         path: [e1.Z5c.APPLICATION_LIBRARY_INVENTORY],
         render: function () {
-            return (0, q.h)(() => f.Z.open(e1.oAB.INVENTORY)), (0, r.jsx)(a.l_, { to: eV.Z.defaultRoute });
+            return (0, q.h)(() => f.Z.open(e1.oAB.INVENTORY)), (0, r.jsx)(a.l_, { to: eB.Z.defaultRoute });
         },
         isSessionRequired: !0
     },
@@ -424,7 +424,7 @@ function ta(e) {
     let { channelId: t, guildId: n, pathname: r } = e;
     if (!K.Z.isConnected()) return;
     let { location: i } = (0, eI.s1)();
-    i.pathname === r && (null == eB.Z.getChannel(t) ? (0, eI.dL)(e1.Z5c.CHANNEL(n)) : (0, eI.dL)(r));
+    i.pathname === r && (null == eV.Z.getChannel(t) ? (0, eI.dL)(e1.Z5c.CHANNEL(n)) : (0, eI.dL)(r));
 }
 class to extends i.PureComponent {
     componentDidMount() {
@@ -443,7 +443,7 @@ class to extends i.PureComponent {
             W.Z.init(),
             ec.Z.initialize(),
             v.Z.initialize(),
-            B.Z.initialize(),
+            V.Z.initialize(),
             eb.Z.initialize(),
             y.ZP.initialize(),
             ek.Z.initialize(),
@@ -475,7 +475,7 @@ class to extends i.PureComponent {
                 openModal: () =>
                     (0, s.ZDy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 650233));
-                        return (t) => (0, r.jsx)(e, e2({}, t));
+                        return (t) => (0, r.jsx)(e, e7({}, t));
                     })
             }),
             U.Z.init(),
@@ -490,7 +490,7 @@ class to extends i.PureComponent {
             (this.historyUnlisten = eE.Z.addRouteChangeListener(this.handleHistoryChange));
     }
     componentWillUnmount() {
-        ey.Z.terminate(), eM.Z.terminate(), em.Z.terminate(), ef.Z.terminate(), P.Z.terminate(), y.ZP.terminate(), ek.Z.terminate(), I.Z.terminate(), eb.Z.terminate(), eh.Z.terminate(), ew.Z.terminate(), O.Z.terminate(), G.Z.terminate(), el.Z.terminate(), E.Z.terminate(), e_.Z.terminate(), ev.Z.terminate(), eN.Z.terminate(), ed.Z.terminate(), eu.Z.terminate(), ep.Z.terminate(), w.Z.terminate(), L.Z.terminate(), eg.Z.terminate(), k.Z.terminate(), V.Z.terminate(), A.Z.terminate(), x.Z.terminate(), C.Z.terminate(), H.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
+        ey.Z.terminate(), eM.Z.terminate(), em.Z.terminate(), ef.Z.terminate(), P.Z.terminate(), y.ZP.terminate(), ek.Z.terminate(), I.Z.terminate(), eb.Z.terminate(), eh.Z.terminate(), ew.Z.terminate(), O.Z.terminate(), G.Z.terminate(), el.Z.terminate(), E.Z.terminate(), e_.Z.terminate(), ev.Z.terminate(), eN.Z.terminate(), ed.Z.terminate(), eu.Z.terminate(), ep.Z.terminate(), w.Z.terminate(), L.Z.terminate(), eg.Z.terminate(), k.Z.terminate(), B.Z.terminate(), A.Z.terminate(), x.Z.terminate(), C.Z.terminate(), H.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
     }
     handleHistoryChange(e) {
         let { pathname: t, search: n } = e;
@@ -521,8 +521,8 @@ class to extends i.PureComponent {
                 if ((c && g && d.Z.selectGuild(r), c && u)) {
                     let n = eW.Z.getChannelId(f),
                         a = n !== i;
-                    if (!e7 || g || a || null != o) {
-                        (e7 = !0),
+                    if (!e2 || g || a || null != o) {
+                        (e2 = !0),
                             p.default.selectChannel({
                                 guildId: r,
                                 channelId: i,
@@ -558,7 +558,7 @@ class to extends i.PureComponent {
                     tn.some((t) => {
                         var n;
                         return (null == (n = (0, a.LX)(e, t)) ? void 0 : n.isExact) === !0;
-                    }) || (0, eI.dL)(eV.Z.fallbackRoute);
+                    }) || (0, eI.dL)(eB.Z.fallbackRoute);
             })(t, n);
     }
     ensureChannelMatchesGuild(e) {
@@ -569,7 +569,7 @@ class to extends i.PureComponent {
         let { guildId: r, channelId: i, threadId: l } = tr(n),
             a = (0, eO.Ss)(r) && r !== e1.ME && r !== e1.I_8;
         if (null != i && (0, eO.cq)(i) && !(0, e3.AB)(i) && a) {
-            let n = eB.Z.getChannel(i);
+            let n = eV.Z.getChannel(i);
             if (null == n)
                 eA.Z.loadThread(i).then(() =>
                     ta({
@@ -585,7 +585,7 @@ class to extends i.PureComponent {
                 };
             if (null != l) {
                 if (!((0, eO.cq)(l) && !(0, e3.AB)(i))) return null;
-                let n = eB.Z.getChannel(l);
+                let n = eV.Z.getChannel(l);
                 if (null == n)
                     eA.Z.loadThread(l).then(() =>
                         ta({

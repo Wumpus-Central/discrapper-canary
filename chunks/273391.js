@@ -66,7 +66,7 @@ let m = new i.Z('ImageEditor'),
             j = a.useRef(null),
             [E, N] = a.useState(1),
             [I, D] = a.useState(null),
-            [y, S] = a.useState({
+            [S, y] = a.useState({
                 top: 0,
                 bottom: 0,
                 left: 0,
@@ -79,21 +79,21 @@ let m = new i.Z('ImageEditor'),
             }),
             [M, R] = a.useState(!1),
             T = 'image/gif' === t.type,
-            [L, P] = a.useState(null);
+            [P, L] = a.useState(null);
         a.useEffect(() => {
             (0, c.Z)();
         }, []);
         let z = a.useCallback(
                 (e) => {
                     if (null == j.current) return;
-                    let { x: t, y: r } = (0, o.U$)(e.x, e.y, y);
+                    let { x: t, y: r } = (0, o.U$)(e.x, e.y, S);
                     (v.current = {
                         x: t,
                         y: r
                     }),
                         (j.current.style.transform = 'translate3d('.concat(t, 'px, ').concat(r, 'px, 0) rotate(').concat(C, 'deg)'));
                 },
-                [j, C, y]
+                [j, C, S]
             ),
             Z = a.useCallback(
                 (e) => {
@@ -101,7 +101,7 @@ let m = new i.Z('ImageEditor'),
                     let t = _(I, e, T),
                         { x: r, y: n } = v.current;
                     N(e),
-                        S(t),
+                        y(t),
                         z({
                             x: r,
                             y: n
@@ -133,11 +133,11 @@ let m = new i.Z('ImageEditor'),
                         width: n,
                         height: a
                     }),
-                    S(l);
+                    y(l);
             }, [I, C, z, E, T]),
             U = a.useCallback(() => {
                 if (null == I) return {};
-                let { height: e, width: t } = b(x(I, C), E);
+                let { height: e, width: t } = x(b(I, C), E);
                 return {
                     height: e,
                     width: t,
@@ -229,7 +229,7 @@ let m = new i.Z('ImageEditor'),
             }, [t, C, T, i, I, E]);
         a.useEffect(() => {
             V();
-        }, [V, C, I, M, E, L]);
+        }, [V, C, I, M, E, P]);
         let H = a.useCallback(() => {
             if (null == j.current) return;
             let e = j.current.naturalWidth,
@@ -239,9 +239,9 @@ let m = new i.Z('ImageEditor'),
                 height: t
             });
             let r = Math.min(Math.max(e, t) / Math.min(e, t), 4);
-            P(r),
+            L(r),
                 N(r),
-                S(
+                y(
                     _(
                         {
                             width: e,
@@ -349,10 +349,10 @@ let m = new i.Z('ImageEditor'),
                                     color: s.TVs.colors.ICON_SECONDARY,
                                     size: 'sm'
                                 }),
-                                null != L &&
+                                null != P &&
                                     (0, n.jsx)(s.iRW, {
                                         className: p.slider,
-                                        initialValue: L,
+                                        initialValue: P,
                                         minValue: 1,
                                         maxValue: 4,
                                         keyboardStep: 0.025,
@@ -372,7 +372,7 @@ let m = new i.Z('ImageEditor'),
             ]
         });
     },
-    x = (e, t) => {
+    b = (e, t) => {
         let { width: r, height: n } = e;
         return t % 180 != 0
             ? {
@@ -384,7 +384,7 @@ let m = new i.Z('ImageEditor'),
                   height: n
               };
     },
-    b = (e, t) => {
+    x = (e, t) => {
         let { width: r, height: n } = e,
             a = 256 * t,
             l = r / n;
@@ -397,7 +397,7 @@ let m = new i.Z('ImageEditor'),
         );
     };
 function _(e, t, r) {
-    let { width: n, height: a } = b(e, t),
+    let { width: n, height: a } = x(e, t),
         l = Math.abs(256 - n) / 2,
         s = Math.abs(256 - a) / 2;
     return r && (n < 256 || a < 256)
@@ -415,7 +415,7 @@ function _(e, t, r) {
           };
 }
 let O = (e, t, r) => {
-    let { height: n, width: a } = b(t, r),
+    let { height: n, width: a } = x(t, r),
         l = (n = Math.min(n, 256)) / (a = Math.min(a, 256)),
         s = {
             height: n,

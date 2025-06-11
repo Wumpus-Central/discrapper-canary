@@ -3,10 +3,11 @@ var i = n(255367),
     r = n(481060),
     s = n(704912);
 let l = (e) => {
-    let { children: t, header: n } = e;
+    let { children: t, header: n, notice: l } = e;
     return (0, i.jsxs)('div', {
         className: s.settingsPage,
         children: [
+            l,
             (0, i.jsx)(r.y5t, {
                 children: (0, i.jsx)(r.X6q, {
                     variant: 'heading-xl/semibold',

@@ -44,16 +44,17 @@ function g(e) {
 let E = function (e, t) {
     let m = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         E = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        b = u.Z.getChannel(e),
-        y = p.Z.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
-        O = null != b ? f.Z.getCheck(b.guild_id) : null;
-    if (!(null != t && (0, a.n)(t)) && (null == O || O.canChat || (0, o.jU)(b))) {
-        if (null != b && !y) {
-            let e = (0, h.rY)(b, p.Z, d.Z);
-            if (e && b.isGuildStageVoice() && (0, s.xJ)(b.id))
+        { lockVoiceStateForResume: b = !1 } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
+        y = u.Z.getChannel(e),
+        O = p.Z.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
+        v = null != y ? f.Z.getCheck(y.guild_id) : null;
+    if (!(null != t && (0, a.n)(t)) && (null == v || v.canChat || (0, o.jU)(y))) {
+        if (null != y && !O) {
+            let e = (0, h.rY)(y, p.Z, d.Z);
+            if (e && y.isGuildStageVoice() && (0, s.xJ)(y.id))
                 return void (0, r.ZD)(async () => {
                     let { default: e } = await n.e('46398').then(n.bind(n, 523794));
-                    return (t) => e(g({ channel: b }, t));
+                    return (t) => e(g({ channel: y }, t));
                 });
             if (e)
                 return void (0, r.ZD)(async () => {
@@ -61,16 +62,17 @@ let E = function (e, t) {
                     return (t) => e(t);
                 });
         }
-        m && (0, l.eH)(), (0, c.Z)(v, e, E, m);
+        m && (0, l.eH)(), (0, c.Z)(I, e, E, m);
     }
-    function v() {
+    function I() {
         i.Z.dispatch({
             type: 'VOICE_CHANNEL_SELECT',
             guildId: t,
             channelId: e,
             currentVoiceChannelId: _.Z.getVoiceChannelId(),
             video: m,
-            stream: E
+            stream: E,
+            lockVoiceStateForResume: b
         });
     }
 };

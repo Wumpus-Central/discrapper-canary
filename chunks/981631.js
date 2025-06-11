@@ -3311,6 +3311,7 @@ var n_ = (function (e) {
             (e.SEARCH_V2_INDEXING_VIEWED = 'search_v2_indexing_viewed'),
             (e.SEARCH_V2_RESULT_EMPTY = 'search_v2_result_empty'),
             (e.SEARCH_V2_RESULT_CLICKED = 'search_v2_result_clicked'),
+            (e.SEARCH_V2_RESULTS_VIEWED_AGGREGATE = 'search_v2_results_viewed_aggregate'),
             (e.SEARCH_V2_HISTORY_CLICKED = 'search_v2_history_clicked'),
             (e.SEARCH_V2_SUGGESTED_CLICKED = 'search_v2_suggested_clicked'),
             (e.SEARCH_V2_FILTERS_OPENED = 'search_v2_filters_opened'),

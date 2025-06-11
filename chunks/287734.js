@@ -36,10 +36,11 @@ let E = {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            i = c.Z.getChannel(e),
-            a = null == i ? void 0 : i.getGuildId();
-        if ((null == i ? void 0 : i.isGuildVocal()) && (null == i ? void 0 : i.isNSFW()) && (!(null == (t = p.default.getCurrentUser()) ? void 0 : t.nsfwAllowed) || !u.Z.didAgree(a))) return void (0, s.uL)(g.Z5c.CHANNEL(a, e));
-        d.Z.isSupported() && (null != e && d.Z.getMediaEngine().interact(), (0, m.h)(e, a, n, r));
+            i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+            a = c.Z.getChannel(e),
+            o = null == a ? void 0 : a.getGuildId();
+        if ((null == a ? void 0 : a.isGuildVocal()) && (null == a ? void 0 : a.isNSFW()) && (!(null == (t = p.default.getCurrentUser()) ? void 0 : t.nsfwAllowed) || !u.Z.didAgree(o))) return void (0, s.uL)(g.Z5c.CHANNEL(o, e));
+        d.Z.isSupported() && (null != e && d.Z.getMediaEngine().interact(), (0, m.h)(e, o, n, r, i));
     },
     disconnect() {
         let e = a.Z.getRemoteSessionId();

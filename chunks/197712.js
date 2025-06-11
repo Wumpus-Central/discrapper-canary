@@ -44,7 +44,7 @@ async function s(e) {
         }),
         f = await t.arrayBuffer(),
         v = new Worker(new URL('/assets/' + r.u('86047'), r.b)),
-        x = new Promise((e, t) => {
+        b = new Promise((e, t) => {
             v.onmessage = (r) => {
                 let { data: n } = r;
                 if (n.type === l.u.CROP_GIF_COMPLETE) {
@@ -78,7 +78,7 @@ async function s(e) {
             resizeHeight: d
         }),
         {
-            result: x,
+            result: b,
             cancelFn: () => v.terminate()
         }
     );
