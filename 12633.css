@@ -13420,6 +13420,10 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     overflow: hidden
 }
 
+.activityContainer_c9d15c.iconOnly_c9d15c {
+    gap: 1px
+}
+
 .activitiesTooltip_c9d15c,
 .tooltipText_c9d15c {
     word-break: break-word
@@ -41891,6 +41895,7 @@ img.thumbnail__0f2e8 {
     backdrop-filter: blur(16px);
     background-color: var(--user-profile-overlay-background);
     border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    color: var(--text-tertiary);
     flex-grow: 1;
     margin: 0 8px;
     opacity: 1;
@@ -41918,18 +41923,19 @@ img.thumbnail__0f2e8 {
 .firstCardContainer__84832:not(.isInteracting__84832):hover .showMoreButton__84832,
 .showMoreButton__84832:focus,
 .showMoreButton__84832:hover {
+    color: var(--header-primary);
     transform: translateY(0)
 }
 
 .full-motion .showMoreButton__84832 {
-    transition: transform .2s ease-in-out .1s, opacity .1s ease-in-out
+    transition: transform .2s ease-in-out .1s, color .2s ease-in-out .1s, opacity .1s ease-in-out
 }
 
 .full-motion .firstCardContainer__84832:focus-within .showMoreButton__84832,
 .full-motion .firstCardContainer__84832:hover .showMoreButton__84832,
 .full-motion .showMoreButton__84832:focus,
 .full-motion .showMoreButton__84832:hover {
-    transition: transform .2s ease-in-out, opacity .1s ease-in-out, background-color var(--custom-button-transition-duration) ease-in-out
+    transition: transform .2s ease-in-out, color .2s ease-in-out, opacity .1s ease-in-out, background-color var(--custom-button-transition-duration) ease-in-out
 }
 
 .remainingCardContainer__84832 {
