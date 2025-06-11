@@ -63,7 +63,7 @@ let a = (t) => {
                       cancelText: c.intl.string(c.t['ETE/oK']),
                       onConfirm: e,
                       onConfirmSecondary: () => {
-                          o.ZP.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: !0 }), e();
+                          o.ZP.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: !0 });
                       },
                       body: c.intl.format(c.t['vA+uEh'], { channel: u })
                   },

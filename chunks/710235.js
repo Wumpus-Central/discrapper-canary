@@ -1,7 +1,7 @@
 n.d(t, { Z: () => p });
 var r = n(255367),
-    s = n(73800),
-    o = n(113434),
+    o = n(73800),
+    s = n(113434),
     a = n(497505),
     i = n(467628),
     l = n(373370),
@@ -10,7 +10,7 @@ var r = n(255367),
     u = n(388032);
 let p = function (e) {
     let { quest: t, taskDetails: n } = e,
-        p = (0, o.pe)(t),
+        p = (0, s.pe)(t),
         m = (0, l.DD)({
             quest: t,
             taskDetails: n,
@@ -18,18 +18,18 @@ let p = function (e) {
             questContent: a.jn.QUEST_BAR_V2
         }),
         f = (0, i.j)({ location: d.dr.QUESTS_BAR }),
-        g = s.useMemo(() => {
+        g = o.useMemo(() => {
             var e;
             let n = t.config.messages.gameTitle,
-                s = (null == (e = t.userStatus) ? void 0 : e.completedAt) != null;
+                o = (null == (e = t.userStatus) ? void 0 : e.completedAt) != null;
             return [
                 {
                     renderContent: () => (0, r.jsx)(c.y3, { children: u.intl.formatToPlainString(u.t['26nQp6'], { gameTitle: n }) }),
-                    isComplete: p || s
+                    isComplete: p || o
                 },
                 {
                     renderContent: () => (0, r.jsx)(c.y3, { children: m }),
-                    isComplete: s
+                    isComplete: o
                 }
             ];
         }, [m, p, t]);

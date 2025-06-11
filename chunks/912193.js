@@ -10,7 +10,7 @@ function s() {
     null !== c && (0, i.Mr3)(c), (c = null);
 }
 function u() {
-    l.Z.setSilenceWarning(!1), s();
+    l.Z.setSilenceWarning(!1);
 }
 function d() {
     c = (0, i.h7j)((e) =>

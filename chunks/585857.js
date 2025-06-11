@@ -1,8 +1,8 @@
 n.d(t, { Q: () => m });
 var r = n(255367);
 n(73800);
-var s = n(481060),
-    o = n(230711),
+var o = n(481060),
+    s = n(230711),
     a = n(617136),
     i = n(497505),
     l = n(981631),
@@ -11,7 +11,7 @@ var s = n(481060),
 function u(e) {
     let { text: t, quest: n } = e,
         c = (0, a.O5)();
-    return (0, r.jsx)(s.P3F, {
+    return (0, r.jsx)(o.P3F, {
         className: d.showConnectionsButton,
         onClick: () => {
             c({
@@ -19,9 +19,9 @@ function u(e) {
                 questContent: i.jn.QUEST_BAR_V2,
                 questContentCTA: a.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
             }),
-                o.Z.open(l.oAB.CONNECTIONS);
+                s.Z.open(l.oAB.CONNECTIONS);
         },
-        children: (0, r.jsx)(s.Text, {
+        children: (0, r.jsx)(o.Text, {
             'aria-label': t,
             color: 'none',
             variant: 'text-xxs/normal',
@@ -41,7 +41,7 @@ function p(e) {
 function m(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(o.Text, {
                 color: 'text-muted',
                 variant: 'text-xs/medium',
                 children: c.intl.string(c.t.EJFSvL)

@@ -10,5 +10,6 @@ e.exports = {
     hexInput: 'hexInput_b29565',
     trailingIcons: 'trailingIcons_b29565',
     iconWithHover: 'iconWithHover_b29565',
-    iconButton: 'iconButton_b29565'
+    iconButton: 'iconButton_b29565',
+    eyeDropperTooltip: 'eyeDropperTooltip_b29565'
 };

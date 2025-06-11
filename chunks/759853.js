@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j }), n(388685);
 var r = n(255367),
-    s = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    o = n(73800),
+    s = n(120356),
+    a = n.n(s),
     i = n(505266),
     l = n(867309),
     c = n(524979),
@@ -17,36 +17,36 @@ var r = n(255367),
 let b = ['#51BC9D'],
     j = (e) => {
         var t;
-        let { expansionSpring: n, overlayRef: o, quest: j, progressBarRef: v, isExpanded: y } = e,
-            { completionSpring: _, startCompletionAnimation: O } = (0, f.G)(),
-            C = (null == (t = j.userStatus) ? void 0 : t.completedAt) != null,
-            w = s.useRef(!1),
+        let { expansionSpring: n, overlayRef: s, quest: j, progressBarRef: v, isExpanded: y } = e,
+            { completionSpring: _, startCompletionAnimation: C } = (0, f.G)(),
+            O = (null == (t = j.userStatus) ? void 0 : t.completedAt) != null,
+            w = o.useRef(!1),
             S = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
-            P = s.useRef(null),
+            P = o.useRef(null),
             E = (0, d.e7)([m.Z], () => m.Z.hasLayers()),
             T = (0, u.Z)(E),
-            [N, A] = s.useState(null),
-            [R, k] = s.useState(null),
-            B = s.useRef(
+            [N, A] = o.useState(null),
+            [R, k] = o.useState(null),
+            B = o.useRef(
                 new i.qA({
                     gravity: 0,
                     wind: 0
                 })
             ),
             q = (0, i.uR)(N, R),
-            I = s.useCallback(() => {
+            I = o.useCallback(() => {
                 if (S) return;
                 let e = v.current,
                     t = P.current;
                 if (null != t && null != e && q.isReady) {
-                    var n, r, s, o, a, i;
+                    var n, r, o, s, a, i;
                     let { x: l, y: c } = e.getBoundingClientRect(),
                         { x: d, y: u } = t.getBoundingClientRect();
                     q.createMultipleConfetti(
                         ((n = l - d),
                         (r = c - u),
-                        (s = e.clientHeight),
-                        (o = e.clientWidth),
+                        (o = e.clientHeight),
+                        (s = e.clientWidth),
                         (a = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -81,8 +81,8 @@ let b = ['#51BC9D'],
                                         y: r
                                     },
                                     maxValue: {
-                                        x: n + s,
-                                        y: r + o
+                                        x: n + o,
+                                        y: r + s
                                     }
                                 },
                                 velocity: {
@@ -129,20 +129,20 @@ let b = ['#51BC9D'],
                 }
             }, [v, P, q, S]),
             D = (0, u.Z)(y);
-        return (s.useEffect(() => {
-            C && y && !D && (O(), I());
-        }, [y, C, O, I, D]),
-        s.useEffect(() => {
-            C &&
+        return (o.useEffect(() => {
+            O && y && !D && (C(), I());
+        }, [y, O, C, I, D]),
+        o.useEffect(() => {
+            O &&
                 !E &&
                 T &&
                 setTimeout(() => {
-                    O(), I();
+                    C(), I();
                 }, 200);
-        }, [C, T, E, O, I]),
-        s.useEffect(() => {
-            q.isReady && (!w.current && C && (O(), I()), (w.current = C));
-        }, [C, w, I, O, q]),
+        }, [O, T, E, C, I]),
+        o.useEffect(() => {
+            q.isReady && (!w.current && O && (C(), I()), (w.current = O));
+        }, [O, w, I, C, q]),
         S)
             ? null
             : (0, r.jsxs)('div', {
@@ -181,13 +181,13 @@ let b = ['#51BC9D'],
                                   spriteWidth: g.Ko,
                                   spriteHeight: g.Ko
                               }),
-                              null != o.current &&
+                              null != s.current &&
                                   (0, l.createPortal)(
                                       (0, r.jsx)(c.animated.div, {
                                           className: a()(x.borders, x.bordersBottom),
                                           style: { opacity: _ }
                                       }),
-                                      o.current
+                                      s.current
                                   )
                           ]
                       })

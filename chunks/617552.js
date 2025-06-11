@@ -38,7 +38,7 @@ function u(e) {
 function d(e) {
     let { onConfirm: t, onCancel: n, usesPopoutContext: c = !1 } = e,
         d = () => {
-            a.ZP.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: !0 }), t();
+            a.ZP.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: !0 });
         };
     s.ZP.disableEmbeddedActivityPopOutAlert
         ? t()

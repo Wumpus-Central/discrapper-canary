@@ -157,11 +157,13 @@ class D extends m.Z {
         };
     }
     handleSend(e, t) {
-        let n,
-            { channelId: r } = e,
-            i = S(e, ['channelId']),
-            o = (0, u.d)(),
-            s = v({ mobile_network_type: _.Z.getType() }, i, null != o && { signal_strength: o });
+        var n;
+        let { channelId: r, analyticsLocation: i } = e,
+            o = S(e, ['channelId', 'analyticsLocation']),
+            s = null != (n = (0, d.Z)()) ? n : i,
+            l = null != s ? { location: s } : void 0,
+            f = (0, u.d)(),
+            p = v({ mobile_network_type: _.Z.getType() }, o, null != f && { signal_strength: f });
         if (c.ZP.get('send_fail_100')) {
             this.logger.log('Skipping message send because send_fail_100 is enabled'),
                 t(null, {
@@ -174,31 +176,29 @@ class D extends m.Z {
                 });
             return;
         }
-        let l = (0, d.Z)();
-        null != l && ((n = { location: l }), this.logger.log('Overlay location: ', n));
-        let f = this.createResponseHandler(e.nonce, t),
-            p = new AbortController();
+        let h = this.createResponseHandler(e.nonce, t),
+            m = new AbortController();
         this.startQueueMetricTimers(e.nonce),
             a.tn.post(
                 T(
                     v(
                         {
                             url: b.ANM.MESSAGES(r),
-                            body: s,
-                            context: n,
+                            body: p,
+                            context: l,
                             oldFormErrors: !0
                         },
                         y.hs
                     ),
                     {
-                        signal: p.signal,
+                        signal: m.signal,
                         rejectWithError: !0,
                         onRequestCreated: () => {
-                            null != e.nonce && this.requests.set(e.nonce, p);
+                            null != e.nonce && this.requests.set(e.nonce, m);
                         }
                     }
                 ),
-                f
+                h
             );
     }
     handleEdit(e, t) {

@@ -225,6 +225,7 @@ function A(e) {
                             null != g &&
                                 (0, r.jsx)(f.ua7, {
                                     text: h.intl.string(p.default['8QXO8v']),
+                                    tooltipClassName: m.eyeDropperTooltip,
                                     children: (e) =>
                                         (0, r.jsx)(
                                             f.zxk,

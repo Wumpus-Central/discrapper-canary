@@ -61,13 +61,12 @@ function j(e, t) {
     if (null == e.id || null == e.channel_id) return !1;
     let n = k(e);
     if (null != x[n]) {
-        let { timeout: r } = x[n];
-        return clearTimeout(r), U(e, t), delete x[n], !0;
+        let { timeout: r, setAt: i } = x[n];
+        return U(e, t, i), clearTimeout(r), delete x[n], !0;
     }
     return !1;
 }
-function U(e, t) {
-    let { setAt: n } = x[k(e)];
+function U(e, t, n) {
     if (t === I.Pq.UPDATE) {
         var r, i;
         let t = null != (r = e.attachments) ? r : [],

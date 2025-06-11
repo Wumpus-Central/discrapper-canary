@@ -1,59 +1,59 @@
-n.d(e, { Z: () => x });
-var o = n(255367),
-    i = n(73800),
-    r = n(442837),
-    a = n(481060),
+n.d(e, { Z: () => v });
+var i = n(255367),
+    o = n(73800),
+    a = n(442837),
+    r = n(481060),
     l = n(100527),
-    c = n(906732),
-    s = n(118012),
-    u = n(767714),
-    _ = n(411477),
-    d = n(594174),
-    f = n(626135),
-    m = n(74538),
-    p = n(981631),
-    b = n(486324),
-    g = n(474936),
-    v = n(388032),
-    C = n(886563);
-function x(t) {
+    s = n(906732),
+    d = n(118012),
+    c = n(767714),
+    u = n(411477),
+    _ = n(594174),
+    g = n(626135),
+    h = n(74538),
+    m = n(981631),
+    x = n(486324),
+    f = n(474936),
+    p = n(388032),
+    N = n(886563);
+function v(t) {
     let { analyticsSection: e, type: n } = t,
-        x = (0, r.e7)([d.default], () => d.default.getCurrentUser()),
-        y = m.ZP.canUseAnimatedAvatar(x),
-        A = m.ZP.canUsePremiumProfileCustomization(x),
-        E = (n === b.pC.BANNER && A) || (n === b.pC.AVATAR && y),
-        { sourceAnalyticsLocations: N } = (0, c.ZP)(l.Z.PREMIUM_PREVIEW_UPSELL_HEADER);
+        v = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
+        y = h.ZP.canUseAnimatedAvatar(v),
+        A = h.ZP.canUsePremiumProfileCustomization(v),
+        b = (n === x.pC.BANNER && A) || (n === x.pC.AVATAR && y),
+        { sourceAnalyticsLocations: E } = (0, s.ZP)(l.Z.PREMIUM_PREVIEW_UPSELL_HEADER);
     if (
-        (i.useEffect(() => {
-            E ||
-                f.default.track(p.rMx.PREMIUM_UPSELL_VIEWED, {
+        (o.useEffect(() => {
+            b ||
+                g.default.track(m.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: e,
-                    location_stack: N
+                    location_stack: E
                 });
-        }, [E, e, N]),
-        E)
+        }, [b, e, E]),
+        b)
     )
         return null;
-    let h = (0, o.jsx)(u.Z, {
-        className: C.__invalid_getNitroLink,
-        size: a.zxk.Sizes.SMALL,
-        look: a.zxk.Looks.LINK,
-        color: a.zxk.Colors.LINK,
-        subscriptionTier: g.Si.TIER_2,
-        textOptions: { textOverride: v.intl.format(v.t['944tDg'], {}) },
+    let C = (0, i.jsx)(c.Z, {
+        className: N.__invalid_getNitroLink,
+        size: r.zxk.Sizes.SMALL,
+        look: r.zxk.Looks.LINK,
+        color: r.zxk.Colors.LINK,
+        subscriptionTier: f.Si.TIER_2,
+        textOptions: { textOverride: p.intl.format(p.t['944tDg'], {}) },
         showIcon: !1,
         premiumModalAnalyticsLocation: {
             section: e,
-            object: p.qAy.BUTTON_CTA
+            object: m.qAy.BUTTON_CTA
         },
         disableShine: !0
     });
-    return (0, o.jsx)(_.Z, {
+    return (0, i.jsx)(u.Z, {
         reducedRightPadding: !0,
-        className: C.nitroPreviewUpsell,
-        text: v.intl.format(v.t.Og8039, {}),
-        textSize: s.Z.Sizes.SIZE_14,
-        textColor: s.Z.Colors.HEADER_PRIMARY,
-        button: h
+        className: N.nitroPreviewUpsell,
+        text: p.intl.format(p.t.Og8039, {}),
+        textSize: d.Z.Sizes.SIZE_14,
+        textColor: d.Z.Colors.HEADER_PRIMARY,
+        button: C
     });
 }

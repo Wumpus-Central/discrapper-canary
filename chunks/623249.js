@@ -4,9 +4,9 @@ n.d(t, {
 }),
     n(388685);
 var r = n(255367),
-    s = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    o = n(73800),
+    s = n(120356),
+    a = n.n(s),
     i = n(442837),
     l = n(780384),
     c = n(481060),
@@ -23,8 +23,8 @@ var r = n(255367),
     v = n(981631),
     y = n(388032),
     _ = n(912621),
-    O = n(708901);
-function C(e) {
+    C = n(708901);
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,10 +51,10 @@ function C(e) {
 }
 function w(e) {
     var t;
-    let { questId: n, errorHints: o, transitionState: w, onClose: P } = e,
+    let { questId: n, errorHints: s, transitionState: w, onClose: P } = e,
         E = (0, g.sf)(n);
     null == E && P();
-    let [T, N] = (0, s.useState)(o),
+    let [T, N] = (0, o.useState)(s),
         A = (0, g.KX)(),
         R = (0, m.O5)(),
         k = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
@@ -67,7 +67,7 @@ function w(e) {
         D = (0, h.Bz)(E),
         M = (0, i.e7)([p.Z], () => p.Z.getState().theme),
         L = (0, l.wj)(M) ? v.BRd.DARK : v.BRd.LIGHT,
-        { startConsoleQuest: V, startingConsoleQuest: Z } = (0, g.GI)({
+        { startConsoleQuest: W, startingConsoleQuest: V } = (0, g.GI)({
             questId: E.id,
             beforeRequest: () => {
                 q.startAnimation(),
@@ -100,7 +100,7 @@ function w(e) {
                                 children: (0, r.jsx)('img', {
                                     className: _.icon,
                                     alt: '',
-                                    src: O
+                                    src: C
                                 })
                             }),
                             (0, r.jsx)(c.olH, {
@@ -133,8 +133,8 @@ function w(e) {
                                 children: y.intl.string(y.t['+/hZMz'])
                             }),
                             (0, r.jsxs)(c.P3F, {
-                                className: a()(_.refreshWrapper, { [_.disabled]: Z }),
-                                onClick: V,
+                                className: a()(_.refreshWrapper, { [_.disabled]: V }),
+                                onClick: W,
                                 children: [
                                     q.render(),
                                     (0, r.jsx)(c.Text, {
@@ -180,7 +180,7 @@ function w(e) {
                                               var t, n;
                                               return (0, r.jsx)(
                                                   'img',
-                                                  ((t = C({}, e)),
+                                                  ((t = O({}, e)),
                                                   (n = n =
                                                       {
                                                           className: _.gameTile,
@@ -240,8 +240,8 @@ function w(e) {
     });
 }
 function S(e) {
-    let { icon: t, text: n, errors: s = [], gameTile: o } = e,
-        i = s.length > 0,
+    let { icon: t, text: n, errors: o = [], gameTile: s } = e,
+        i = o.length > 0,
         l = i ? c._3e : c.B_b;
     return (0, r.jsxs)('div', {
         className: _.connectionRow,
@@ -263,7 +263,7 @@ function S(e) {
                     (0, r.jsxs)('div', {
                         className: _.connectionRowHeaderContent,
                         children: [
-                            o,
+                            s,
                             (0, r.jsx)(l, {
                                 color: 'currentColor',
                                 size: 'sm',
@@ -278,7 +278,7 @@ function S(e) {
             }),
             (0, r.jsx)('div', {
                 className: _.errorsContainer,
-                children: s.map((e) =>
+                children: o.map((e) =>
                     (0, r.jsxs)(
                         'div',
                         {
@@ -306,6 +306,6 @@ function S(e) {
 function P(e) {
     (0, c.ZDy)(async () => {
         let { default: t } = await Promise.resolve().then(n.bind(n, 623249));
-        return (n) => (0, r.jsx)(t, C({}, n, e));
+        return (n) => (0, r.jsx)(t, O({}, n, e));
     });
 }

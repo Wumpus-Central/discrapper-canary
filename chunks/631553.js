@@ -258,7 +258,7 @@ class eC extends o.Component {
                           confirmText: ey.intl.string(ey.t['3PatS0']),
                           cancelText: ey.intl.string(ey.t['ETE/oK']),
                           onConfirmSecondary: () => {
-                              v.Z.disableExternalLinkAlert(), $.ZP.send('OPEN_EXTERNAL_URL', t);
+                              v.Z.disableExternalLinkAlert();
                           },
                           onConfirm: () => $.ZP.send('OPEN_EXTERNAL_URL', t)
                       });

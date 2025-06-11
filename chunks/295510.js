@@ -62,7 +62,7 @@ function a(e) {
                 cancelText: u.intl.string(u.t['ETE/oK']),
                 onConfirm: n,
                 onConfirmSecondary: () => {
-                    l.ZP.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 }), n();
+                    l.ZP.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 });
                 },
                 body: d
             },

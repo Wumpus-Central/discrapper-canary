@@ -1,31 +1,31 @@
 n.d(t, { Z: () => p });
 var r = n(255367),
-    s = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    o = n(73800),
+    s = n(120356),
+    a = n.n(s),
     i = n(524979),
     l = n(481060),
     c = n(569379),
     d = n(642145),
     u = n(704247);
-let p = s.forwardRef((e, t) => {
-    let { quest: n, percentComplete: s, size: o = 42, strokeWidth: p = 3, glowBlur: m = 0.4, percentCompleteText: f, percentCompleteTextVariant: g = 'text-lg/medium', children: x } = e,
-        h = (0, c.E)(n, s > 0),
-        b = o / 2,
-        j = o / 2 - p / 2,
+let p = o.forwardRef((e, t) => {
+    let { quest: n, percentComplete: o, size: s = 42, strokeWidth: p = 3, glowBlur: m = 0.4, percentCompleteText: f, percentCompleteTextVariant: g = 'text-lg/medium', children: x } = e,
+        h = (0, c.E)(n, o > 0),
+        b = s / 2,
+        j = s / 2 - p / 2,
         v = 2 * Math.PI * j,
-        y = v - s * v,
+        y = v - o * v,
         _ = {
             strokeDasharray: ''.concat(v, ' ').concat(v),
             strokeDashoffset: y
         },
-        O = {
+        C = {
             strokeDasharray: ''.concat(v, ' ').concat(v),
-            strokeDashoffset: -s * v
+            strokeDashoffset: -o * v
         },
-        C = { boxShadow: '0 0 30px 0px '.concat(h.glow) },
+        O = { boxShadow: '0 0 30px 0px '.concat(h.glow) },
         { progressTextAnimation: w } = (0, l.q_F)({
-            progressTextAnimation: +(null != f && 1 !== s),
+            progressTextAnimation: +(null != f && 1 !== o),
             config: d.Y
         });
     return (0, r.jsxs)('div', {
@@ -34,7 +34,7 @@ let p = s.forwardRef((e, t) => {
         children: [
             (0, r.jsxs)('div', {
                 className: u.inner,
-                style: C,
+                style: O,
                 children: [
                     x,
                     (0, r.jsxs)(i.animated.div, {
@@ -54,8 +54,8 @@ let p = s.forwardRef((e, t) => {
             }),
             (0, r.jsxs)('svg', {
                 className: u.progressBar,
-                height: o,
-                width: o,
+                height: s,
+                width: s,
                 children: [
                     (0, r.jsxs)('defs', {
                         children: [
@@ -98,7 +98,7 @@ let p = s.forwardRef((e, t) => {
                         cx: b,
                         cy: b,
                         stroke: 'url(#linear)',
-                        style: O
+                        style: C
                     }),
                     (0, r.jsx)('circle', {
                         className: u.progress,

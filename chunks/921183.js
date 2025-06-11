@@ -31,5 +31,7 @@ e.exports = {
     postEnrollmentBackgroundCollapsed: 'postEnrollmentBackgroundCollapsed__636a2',
     postEnrollmentBackgroundExpanded: 'postEnrollmentBackgroundExpanded__636a2',
     previewPlayButtonCont: 'previewPlayButtonCont__636a2',
-    previewPlayButton: 'previewPlayButton__636a2'
+    previewPlayButton: 'previewPlayButton__636a2',
+    contentCollapsedBackgroundWrapper: 'contentCollapsedBackgroundWrapper__636a2',
+    contentCollapsedBackground: 'contentCollapsedBackground__636a2'
 };

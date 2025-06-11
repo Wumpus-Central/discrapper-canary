@@ -4,9 +4,9 @@ n.d(t, {
     y3: () => f
 });
 var r = n(255367),
-    s = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    o = n(73800),
+    s = n(120356),
+    a = n.n(s),
     i = n(481060),
     l = n(918701),
     c = n(373370),
@@ -14,9 +14,9 @@ var r = n(255367),
     u = n(388032),
     p = n(141572);
 function m(e) {
-    let { children: t, isComplete: n, hasNextStep: s } = e;
+    let { children: t, isComplete: n, hasNextStep: o } = e;
     return (0, r.jsxs)('li', {
-        className: a()(p.stepWrapper, { [p.stepWrapperComplete]: n }, { [p.stepWrapperWithNextStep]: s }),
+        className: a()(p.stepWrapper, { [p.stepWrapperComplete]: n }, { [p.stepWrapperWithNextStep]: o }),
         children: [
             (0, r.jsxs)('div', {
                 className: p.stepIndicator,
@@ -30,7 +30,7 @@ function m(e) {
                                 color: i.TVs.colors.WHITE
                             })
                     }),
-                    s && (0, r.jsx)('div', { className: p.stepConnector })
+                    o && (0, r.jsx)('div', { className: p.stepConnector })
                 ]
             }),
             (0, r.jsx)('div', {
@@ -50,7 +50,7 @@ function f(e) {
 }
 function g(e) {
     let { quest: t } = e,
-        { rewardName: n, rewardDuration: o } = s.useMemo(
+        { rewardName: n, rewardDuration: s } = o.useMemo(
             () => ({
                 rewardName: d.r.build(t.config).defaultReward.messages.name,
                 rewardDuration: (0, l.Kr)(t.config)
@@ -64,7 +64,7 @@ function g(e) {
             (0, r.jsx)(i.X6q, {
                 color: 'header-primary',
                 variant: 'text-xs/semibold',
-                children: null == o ? u.intl.string(u.t['7Rdjmp']) : u.intl.formatToPlainString(u.t.coKAb2, { rewardsDuration: o })
+                children: null == s ? u.intl.string(u.t['7Rdjmp']) : u.intl.formatToPlainString(u.t.coKAb2, { rewardsDuration: s })
             }),
             (0, r.jsx)('ul', {
                 className: p.rewardsListBody,
@@ -85,7 +85,7 @@ function g(e) {
     });
 }
 let x = function (e) {
-    let { children: t, heading: n, steps: s } = e;
+    let { children: t, heading: n, steps: o } = e;
     return (0, r.jsxs)('div', {
         className: p.wrapper,
         children: [
@@ -101,12 +101,12 @@ let x = function (e) {
             (0, r.jsx)('div', {
                 className: p.stepsWrapper,
                 children: (0, r.jsx)('ul', {
-                    children: s.map((e, t) =>
+                    children: o.map((e, t) =>
                         (0, r.jsx)(
                             m,
                             {
                                 isComplete: e.isComplete,
-                                hasNextStep: t < s.length - 1,
+                                hasNextStep: t < o.length - 1,
                                 children: e.renderContent()
                             },
                             t

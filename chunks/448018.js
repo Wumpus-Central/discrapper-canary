@@ -1,7 +1,7 @@
 n.d(t, { v: () => p });
 var r = n(497505),
-    s = n(988303),
-    o = n(941348),
+    o = n(988303),
+    s = n(941348),
     a = n(658590),
     i = n(647365),
     l = n(743294);
@@ -20,7 +20,7 @@ let c = {
     },
     d = l.Li,
     u = {
-        component: o.Z,
+        component: s.Z,
         getCollapsedHeight: (e) => {
             var t;
             return (null == (t = e.userStatus) ? void 0 : t.enrolledAt) != null ? 66 : 40;
@@ -33,9 +33,9 @@ let c = {
         getVerticalPadding: () => d
     },
     p = (e, t, n) => {
-        var o;
-        let i = (null == (o = e.userStatus) ? void 0 : o.enrolledAt) != null,
-            l = (!i && t === s.P.V2) || (i && n === s.P.V2) || (0, a.a)(e),
+        var s;
+        let i = (null == (s = e.userStatus) ? void 0 : s.enrolledAt) != null,
+            l = (!i && t === o.P.V2) || (i && n === o.P.V2) || (0, a.a)(e),
             d = l ? u : c;
         return {
             component: d.component,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => P });
 var r = n(255367),
-    s = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    o = n(73800),
+    s = n(120356),
+    a = n.n(s),
     i = n(959078),
     l = n(442837),
     c = n(481060),
@@ -19,11 +19,11 @@ var r = n(255367),
     v = n(585857),
     y = n(795057),
     _ = n(46140),
-    O = n(388032),
-    C = n(22559);
+    C = n(388032),
+    O = n(22559);
 function w(e) {
     return (0, r.jsx)(c.Text, {
-        className: C.microphoneUnitBodyText,
+        className: O.microphoneUnitBodyText,
         color: 'text-muted',
         variant: 'text-xxs/normal',
         children: e.children
@@ -31,7 +31,7 @@ function w(e) {
 }
 function S(e) {
     let { quest: t, useReducedMotion: n } = e,
-        o = (0, f.n)(),
+        s = (0, f.n)(),
         l = (0, j.k3)(t.id, x.jn.QUEST_BAR_V2),
         d = (0, j.g2)({ useReducedMotion: n }),
         b = (0, p.O5)(),
@@ -52,24 +52,24 @@ function S(e) {
             },
             afterRequest: d.stopAnimation
         }),
-        { header: P, renderBody: E } = s.useMemo(() => {
+        { header: P, renderBody: E } = o.useMemo(() => {
             let e = y.length > 0,
                 n = t.config.messages.gameTitle;
             return {
-                header: e ? O.intl.formatToPlainString(O.t['28Ql29'], { gameTitle: n }) : O.intl.formatToPlainString(O.t.gX0Qc3, { gameTitle: n }),
+                header: e ? C.intl.formatToPlainString(C.t['28Ql29'], { gameTitle: n }) : C.intl.formatToPlainString(C.t.gX0Qc3, { gameTitle: n }),
                 renderBody: e
                     ? () =>
                           (0, r.jsx)(r.Fragment, {
                               children: y.map((e, n) => {
-                                  if (e.type === i.K.EXPIRED_CREDENTIAL && o) {
-                                      let s = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
-                                          o = (0, h.C9)(e),
+                                  if (e.type === i.K.EXPIRED_CREDENTIAL && s) {
+                                      let o = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
+                                          s = (0, h.C9)(e),
                                           a = (0, h._j)(e);
                                       return (0, r.jsx)(
                                           w,
                                           {
-                                              children: O.intl.format(o, {
-                                                  account_name: null == s ? void 0 : s.name,
+                                              children: C.intl.format(s, {
+                                                  account_name: null == o ? void 0 : o.name,
                                                   onClick: () => {
                                                       (0, h.fY)(
                                                           {
@@ -93,23 +93,23 @@ function S(e) {
                           })
                     : () =>
                           (0, r.jsx)(c.Text, {
-                              className: C.microphoneUnitBodyText,
+                              className: O.microphoneUnitBodyText,
                               color: 'text-muted',
                               variant: 'text-xxs/normal',
-                              children: O.intl.format(O.t.GXqvCw, { gameTitle: n })
+                              children: C.intl.format(C.t.GXqvCw, { gameTitle: n })
                           })
             };
-        }, [y, t, o, v]);
+        }, [y, t, s, v]);
     return (0, r.jsxs)('div', {
-        className: C.microphoneUnit,
+        className: O.microphoneUnit,
         children: [
             (0, r.jsxs)('div', {
-                className: C.microphoneUnitHeader,
+                className: O.microphoneUnitHeader,
                 children: [
                     (0, r.jsx)(c.P4T, {
                         size: 'custom',
                         color: 'currentColor',
-                        className: 0 === y.length ? C.warningCircle : C.errorCircle,
+                        className: 0 === y.length ? O.warningCircle : O.errorCircle,
                         width: 16,
                         height: 16
                     }),
@@ -118,14 +118,14 @@ function S(e) {
                         children: P
                     }),
                     (0, r.jsx)(c.P3F, {
-                        className: a()(C.microphoneUnitRefreshIconWrapper, { [C.disabled]: _ }),
+                        className: a()(O.microphoneUnitRefreshIconWrapper, { [O.disabled]: _ }),
                         onClick: () => S(),
                         children: d.render()
                     })
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: a()({ [C.opacity_50]: _ }),
+                className: a()({ [O.opacity_50]: _ }),
                 children: [E(), 0 === y.length ? null : (0, r.jsx)(w, { children: l })]
             })
         ]
@@ -133,19 +133,19 @@ function S(e) {
 }
 let P = function (e) {
     let { quest: t, taskDetails: n } = e,
-        o = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        s = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         a = (0, g.z6)(),
         i = (0, b.j)({ location: _.dr.QUESTS_BAR }),
-        c = s.useMemo(() => (0, h.B3)(t).filter((e) => a.xboxAndPlaystationAccounts.find((t) => t.type === e)), [a.xboxAndPlaystationAccounts, t]),
+        c = o.useMemo(() => (0, h.B3)(t).filter((e) => a.xboxAndPlaystationAccounts.find((t) => t.type === e)), [a.xboxAndPlaystationAccounts, t]),
         {
             steps: u,
             hasConnectedAccounts: p,
             isProgressingQuestForLaunchedGame: m,
             isQuestComplete: f
-        } = s.useMemo(() => {
+        } = o.useMemo(() => {
             var e;
-            let s = c.length > 0,
-                o = s && (0, h.Bz)(t),
+            let o = c.length > 0,
+                s = o && (0, h.Bz)(t),
                 i = t.config.messages.gameTitle,
                 l = (null == (e = t.userStatus) ? void 0 : e.completedAt) != null;
             return {
@@ -196,24 +196,24 @@ let P = function (e) {
                                 e)
                             );
                         },
-                        isComplete: s || o || l
+                        isComplete: o || s || l
                     },
                     {
-                        renderContent: () => (0, r.jsx)(y.y3, { children: O.intl.formatToPlainString(O.t['+8JB6e'], { gameTitle: i }) }),
-                        isComplete: o || l
+                        renderContent: () => (0, r.jsx)(y.y3, { children: C.intl.formatToPlainString(C.t['+8JB6e'], { gameTitle: i }) }),
+                        isComplete: s || l
                     },
                     {
-                        renderContent: () => (0, r.jsx)(y.y3, { children: O.intl.formatToPlainString(O.t.HhfrYW, { numMinutes: n.targetMinutes }) }),
+                        renderContent: () => (0, r.jsx)(y.y3, { children: C.intl.formatToPlainString(C.t.HhfrYW, { numMinutes: n.targetMinutes }) }),
                         isComplete: l
                     }
                 ],
-                hasConnectedAccounts: s,
-                isProgressingQuestForLaunchedGame: o,
+                hasConnectedAccounts: o,
+                isProgressingQuestForLaunchedGame: s,
                 isQuestComplete: l
             };
         }, [a, c.length, t, n.targetMinutes]);
     return (0, r.jsxs)(y.ZP, {
-        heading: O.intl.string(O.t.UPWlJi),
+        heading: C.intl.string(C.t.UPWlJi),
         steps: u,
         children: [
             i && (0, r.jsx)(y.Om, { quest: t }),
@@ -221,7 +221,7 @@ let P = function (e) {
                 !m &&
                 !f &&
                 (0, r.jsx)(S, {
-                    useReducedMotion: o,
+                    useReducedMotion: s,
                     quest: t
                 })
         ]

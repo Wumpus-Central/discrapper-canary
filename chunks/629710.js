@@ -284,13 +284,19 @@ function L(e) {
 function x(e) {
     let t = null,
         n = null;
-    return (
-        null == e || ('channel_id' in e && (t = e.channel_id), 'author_id' in e && (n = e.author_id)),
-        {
+    if (null == e)
+        return {
             channelId: t,
             authorId: n
-        }
-    );
+        };
+    if (('channel_id' in e && (t = e.channel_id), 'author' in e)) {
+        var r;
+        n = null == (r = e.author) ? void 0 : r.id;
+    } else 'author_id' in e && (n = e.author_id);
+    return {
+        channelId: t,
+        authorId: n
+    };
 }
 function k(e) {
     return null != e.content_scan_version ? e.content_scan_version : null != e.contentScanVersion || null != e.contentScanVersion ? e.contentScanVersion : null;
