@@ -61,14 +61,14 @@ function I(e) {
     null != i && s()(1 === t.length, 'footer only gets applied to single items');
     let l = t.length;
     if (1 === l)
-        return (0, r.jsx)(j, {
+        return (0, r.jsx)(x, {
             itemsForLayout: t,
             isSingleImage: !0,
             footer: i,
             maxWidth: n
         });
     if (2 === l)
-        return (0, r.jsx)(x, {
+        return (0, r.jsx)(j, {
             itemsForLayout: t,
             maxWidth: n
         });
@@ -86,12 +86,12 @@ function I(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             1 === o &&
-                (0, r.jsx)(j, {
+                (0, r.jsx)(x, {
                     itemsForLayout: t.slice(0, o),
                     maxWidth: n
                 }),
             2 === o &&
-                (0, r.jsx)(x, {
+                (0, r.jsx)(j, {
                     itemsForLayout: t.slice(0, o),
                     maxWidth: n
                 }),
@@ -107,7 +107,7 @@ function I(e) {
         ]
     });
 }
-function j(e) {
+function x(e) {
     let { itemsForLayout: t, maxWidth: n, isSingleImage: i, footer: l } = e,
         a = t[0];
     return (0, r.jsx)('div', {
@@ -125,7 +125,7 @@ function j(e) {
         })
     });
 }
-function x(e) {
+function j(e) {
     let { itemsForLayout: t, maxWidth: n } = e,
         i = Math.round((n - 4) / 2);
     return (0, r.jsx)('div', {

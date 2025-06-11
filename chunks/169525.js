@@ -1,7 +1,7 @@
 n.d(t, {
     As: () => y,
     BP: () => O,
-    MC: () => j,
+    MC: () => x,
     dn: () => f,
     hL: () => I,
     lK: () => g
@@ -114,7 +114,7 @@ function I(e) {
         u = (0, o.kh)(i.n.GUILD);
     return y(n, !(0, m.Z)(a, l), u);
 }
-let j = (e) => {
+let x = (e) => {
     switch (e) {
         case l.wk.EXPLICIT_CONTENT:
         case l.wk.GORE_CONTENT:

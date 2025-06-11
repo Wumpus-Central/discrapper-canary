@@ -301,7 +301,7 @@ function U(e) {
     let { className: t, showHeader: n = !0 } = e,
         { showRedesign: r } = T.b.useExperiment({ location: 'activity privacy tab' }),
         { showPerGuildActivityStatusSetting: s } = (0, b.c)('activity privacy tab'),
-        { isEnabled: l } = (0, f.D)('activity privacy tab');
+        { showUpdatedSettingsPage: l } = (0, f.D)('activity privacy tab');
     return s || l
         ? (0, i.jsx)(_.Z, {})
         : (0, i.jsxs)(m.hjN, {

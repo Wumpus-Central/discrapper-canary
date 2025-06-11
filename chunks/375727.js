@@ -14,8 +14,8 @@ var n = r(255367),
     m = r(384694),
     f = r(273391),
     v = r(793972),
-    b = r(981631),
-    x = r(388032),
+    x = r(981631),
+    b = r(388032),
     _ = r(139797);
 let O = new o.Z('EmojiStudio'),
     j = (e) => {
@@ -23,10 +23,10 @@ let O = new o.Z('EmojiStudio'),
             j = (0, l.e7)([c.Z, d.Z, u.Z], () => {
                 let e = d.Z.getGuildId(),
                     t = c.Z.getGuild(e);
-                return u.Z.can(b.Plq.CREATE_GUILD_EXPRESSIONS, t) && null != t ? t.id : null;
+                return u.Z.can(x.Plq.CREATE_GUILD_EXPRESSIONS, t) && null != t ? t.id : null;
             }),
-            [N, D] = a.useState(null != r ? r : j),
-            [I, y] = a.useState(null),
+            [N, I] = a.useState(null != r ? r : j),
+            [D, y] = a.useState(null),
             [S, C] = a.useState(''),
             [w, A] = a.useState(null),
             k = async () => {
@@ -69,7 +69,7 @@ let O = new o.Z('EmojiStudio'),
                 (0, n.jsxs)('footer', {
                     className: _.footer,
                     children: [
-                        null != I && (0, n.jsx)(g.H, { error: I }),
+                        null != D && (0, n.jsx)(g.H, { error: D }),
                         (0, n.jsxs)('div', {
                             className: _.grid,
                             children: [
@@ -91,7 +91,7 @@ let O = new o.Z('EmojiStudio'),
                                 (0, n.jsx)('div', {
                                     className: _.selector,
                                     children: (0, n.jsx)(m.q, {
-                                        onChange: D,
+                                        onChange: I,
                                         selected: N,
                                         onError: () => y(h.ze.NO_PERMISSIONS)
                                     })
@@ -101,7 +101,7 @@ let O = new o.Z('EmojiStudio'),
                                     onClick: k,
                                     fullWidth: !0,
                                     disabled: null == t || null == N || S.length < 2,
-                                    children: x.intl.string(x.t.DU0dy8)
+                                    children: b.intl.string(b.t.DU0dy8)
                                 })
                             ]
                         })
@@ -114,7 +114,7 @@ let O = new o.Z('EmojiStudio'),
     E = (e) => {
         let { back: t } = e;
         return (0, n.jsx)(s.zxk, {
-            'aria-label': x.intl.string(x.t['13/7kZ']),
+            'aria-label': b.intl.string(b.t['13/7kZ']),
             onClick: t,
             look: s.zxk.Looks.BLANK,
             innerClassName: _.backButtonInnner,

@@ -113,7 +113,7 @@ function m(e) {
                         children: (0, r.jsxs)(o.Text, {
                             className: p.textItem,
                             color: 'text-secondary',
-                            variant: 'text-md/semibold',
+                            variant: 'text-xxs/semibold',
                             children: ['+', y]
                         })
                     })
