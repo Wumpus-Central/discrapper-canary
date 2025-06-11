@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => z,
-    b: () => W
+    b: () => V
 }),
     n(388685),
     n(314940);
@@ -28,8 +28,8 @@ var r = n(255367),
     O = n(341907),
     w = n(478977),
     S = n(456799),
-    P = n(210851),
-    E = n(602683),
+    E = n(210851),
+    P = n(602683),
     T = n(916028),
     N = n(749912),
     A = n(815183),
@@ -85,7 +85,7 @@ function I(e, t) {
 let D = ['png', 'gif', 'webp'],
     M = [...D, 'jpg', 'jpeg'],
     L = Array.from(new Set([...M, 'gif', 'mp4', 'webm']));
-function W(e) {
+function V(e) {
     var t, n;
     return {
         code: 'PREVIEW-MODE-CODE',
@@ -96,7 +96,7 @@ function W(e) {
         claimedAt: null != (n = null == (t = e.userStatus) ? void 0 : t.claimedAt) ? n : ''
     };
 }
-function V() {
+function W() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { streamProgressSeconds: t = 0, completedAt: n = null, enrolledAt: r = null, claimedAt: o = null } = e;
     return {
@@ -192,8 +192,8 @@ let Z = '1193992107035983872',
         userStatus: null,
         targetedContent: []
     };
-function H() {
-    var e, t, s, d, u, B, W, Z, H, U, z, F, K, X;
+function U() {
+    var e, t, s, d, u, B, V, Z, U, H, z, F, K, X;
     let [Y, G] = o.useState(Q),
         J = o.useCallback((e) => {
             G(I(q({}, e), { preview: !0 }));
@@ -370,19 +370,19 @@ function H() {
                 (0, r.jsxs)('div', {
                     className: k.fields,
                     children: [
-                        (0, r.jsx)(E.Z, {
+                        (0, r.jsx)(P.Z, {
                             title: 'Quest Name',
                             assetKey: 'questName',
                             onMessageChange: eu,
                             initialValue: Y.config.messages.questName
                         }),
-                        (0, r.jsx)(E.Z, {
+                        (0, r.jsx)(P.Z, {
                             title: 'Game Title',
                             assetKey: 'gameTitle',
                             onMessageChange: eu,
                             initialValue: Y.config.messages.gameTitle
                         }),
-                        (0, r.jsx)(E.Z, {
+                        (0, r.jsx)(P.Z, {
                             title: 'Game Publisher',
                             assetKey: 'gamePublisher',
                             onMessageChange: eu,
@@ -391,19 +391,19 @@ function H() {
                         eh &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, r.jsx)(E.Z, {
+                                    (0, r.jsx)(P.Z, {
                                         title: 'Video Title',
                                         assetKey: 'videoTitle',
                                         onMessageChange: ep,
                                         initialValue: null == (e = Y.config.videoMetadata) ? void 0 : e.messages.videoTitle
                                     }),
-                                    (0, r.jsx)(E.Z, {
+                                    (0, r.jsx)(P.Z, {
                                         title: 'End CTA Title',
                                         assetKey: 'videoEndCtaTitle',
                                         onMessageChange: ep,
                                         initialValue: null == (t = Y.config.videoMetadata) ? void 0 : t.messages.videoEndCtaTitle
                                     }),
-                                    (0, r.jsx)(E.Z, {
+                                    (0, r.jsx)(P.Z, {
                                         title: 'End CTA Subtitle',
                                         assetKey: 'videoEndCtaSubtitle',
                                         onMessageChange: ep,
@@ -421,42 +421,42 @@ function H() {
                 (0, r.jsxs)('div', {
                     className: k.fields,
                     children: [
-                        (0, r.jsx)(P.Z, {
+                        (0, r.jsx)(E.Z, {
                             title: 'Hero',
                             assetKey: 'hero',
                             onFileChange: el,
                             filters: L,
                             initialValue: Y.config.assets.hero
                         }),
-                        (0, r.jsx)(P.Z, {
+                        (0, r.jsx)(E.Z, {
                             title: 'Hero Video (optional)',
                             assetKey: 'heroVideo',
                             onFileChange: el,
                             filters: L,
                             initialValue: null != (F = Y.config.assets.heroVideo) ? F : void 0
                         }),
-                        (0, r.jsx)(P.Z, {
+                        (0, r.jsx)(E.Z, {
                             title: 'Quest Bar Hero',
                             assetKey: 'questBarHero',
                             onFileChange: el,
                             filters: L,
                             initialValue: Y.config.assets.questBarHero
                         }),
-                        (0, r.jsx)(P.Z, {
+                        (0, r.jsx)(E.Z, {
                             title: 'Quest Bar Hero Video (optional)',
                             assetKey: 'questBarHeroVideo',
                             onFileChange: el,
                             filters: L,
                             initialValue: null != (K = Y.config.assets.questBarHeroVideo) ? K : void 0
                         }),
-                        (0, r.jsx)(P.Z, {
+                        (0, r.jsx)(E.Z, {
                             title: 'Game Tile',
                             assetKey: 'gameTile',
                             onFileChange: el,
                             filters: [...M, 'svg'],
                             initialValue: Y.config.assets.gameTile
                         }),
-                        (0, r.jsx)(P.Z, {
+                        (0, r.jsx)(E.Z, {
                             title: 'Logotype',
                             assetKey: 'logotype',
                             onFileChange: el,
@@ -466,40 +466,40 @@ function H() {
                         eh &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, r.jsx)(P.Z, {
+                                    (0, r.jsx)(E.Z, {
                                         title: 'Quest Video',
                                         assetKey: 'videoPlayerVideo',
                                         onFileChange: ec,
                                         filters: L,
                                         initialValue: null == (d = Y.config.videoMetadata) ? void 0 : d.assets.videoPlayerVideo
                                     }),
-                                    (0, r.jsx)(P.Z, {
+                                    (0, r.jsx)(E.Z, {
                                         title: 'Quest Video (Low Resolution)',
                                         assetKey: 'videoPlayerVideoLowRes',
                                         onFileChange: ec,
                                         filters: L,
                                         initialValue: null == (u = Y.config.videoMetadata) ? void 0 : u.assets.videoPlayerVideoLowRes
                                     }),
-                                    (0, r.jsx)(P.Z, {
+                                    (0, r.jsx)(E.Z, {
                                         title: 'Video Player Thumbnail (optional)',
                                         assetKey: 'videoPlayerThumbnail',
                                         onFileChange: ec,
                                         filters: M,
-                                        initialValue: null == (W = Y.config.videoMetadata) || null == (B = W.assets) ? void 0 : B.videoPlayerThumbnail
+                                        initialValue: null == (V = Y.config.videoMetadata) || null == (B = V.assets) ? void 0 : B.videoPlayerThumbnail
                                     }),
-                                    (0, r.jsx)(P.Z, {
+                                    (0, r.jsx)(E.Z, {
                                         title: 'Quest Bar Preview Video (optional)',
                                         assetKey: 'questBarPreviewVideo',
                                         onFileChange: ed,
                                         filters: L,
                                         initialValue: null == (Z = Y.config.videoMetadata) ? void 0 : Z.assets.questBarPreviewVideo
                                     }),
-                                    (0, r.jsx)(P.Z, {
+                                    (0, r.jsx)(E.Z, {
                                         title: 'Quest Home Video (optional)',
                                         assetKey: 'questHomeVideo',
                                         onFileChange: ed,
                                         filters: L,
-                                        initialValue: null == (H = Y.config.videoMetadata) ? void 0 : H.assets.questHomeVideo
+                                        initialValue: null == (U = Y.config.videoMetadata) ? void 0 : U.assets.questHomeVideo
                                     })
                                 ]
                             })
@@ -518,20 +518,20 @@ function H() {
                                 (0, r.jsxs)('div', {
                                     className: k.fields,
                                     children: [
-                                        (0, r.jsx)(E.Z, {
+                                        (0, r.jsx)(P.Z, {
                                             title: 'Name',
                                             assetKey: 'name',
                                             onMessageChange: (e, n) => em(e, n, t),
                                             initialValue: e.messages.name
                                         }),
-                                        (0, r.jsx)(E.Z, {
+                                        (0, r.jsx)(P.Z, {
                                             title: 'Name With Article',
                                             assetKey: 'nameWithArticle',
                                             onMessageChange: (e, n) => em(e, n, t),
                                             initialValue: e.messages.nameWithArticle
                                         }),
                                         e.type !== c.w.VIRTUAL_CURRENCY &&
-                                            (0, r.jsx)(P.Z, {
+                                            (0, r.jsx)(E.Z, {
                                                 title: 'Asset',
                                                 assetKey: 'asset',
                                                 onFileChange: (e, n) =>
@@ -619,12 +619,12 @@ function H() {
                                         J(I(q({}, Y), { userStatus: null }));
                                         break;
                                     case R.a.ENROLLED:
-                                        J(I(q({}, Y), { userStatus: V({ enrolledAt: new Date().toISOString() }) }));
+                                        J(I(q({}, Y), { userStatus: W({ enrolledAt: new Date().toISOString() }) }));
                                         break;
                                     case R.a.COMPLETED_25:
                                         J(
                                             I(q({}, Y), {
-                                                userStatus: V({
+                                                userStatus: W({
                                                     enrolledAt: new Date().toISOString(),
                                                     streamProgressSeconds: 0.25 * ex
                                                 })
@@ -634,7 +634,7 @@ function H() {
                                     case R.a.COMPLETED_50:
                                         J(
                                             I(q({}, Y), {
-                                                userStatus: V({
+                                                userStatus: W({
                                                     enrolledAt: new Date().toISOString(),
                                                     streamProgressSeconds: 0.5 * ex
                                                 })
@@ -644,7 +644,7 @@ function H() {
                                     case R.a.COMPLETED_75:
                                         J(
                                             I(q({}, Y), {
-                                                userStatus: V({
+                                                userStatus: W({
                                                     enrolledAt: new Date().toISOString(),
                                                     streamProgressSeconds: 0.75 * ex
                                                 })
@@ -654,7 +654,7 @@ function H() {
                                     case R.a.COMPLETED_100:
                                         J(
                                             I(q({}, Y), {
-                                                userStatus: V({
+                                                userStatus: W({
                                                     completedAt: new Date().toISOString(),
                                                     enrolledAt: new Date().toISOString(),
                                                     streamProgressSeconds: ex
@@ -665,7 +665,7 @@ function H() {
                                     case R.a.CLAIMED:
                                         J(
                                             I(q({}, Y), {
-                                                userStatus: V({
+                                                userStatus: W({
                                                     claimedAt: new Date().toISOString(),
                                                     completedAt: new Date().toISOString(),
                                                     enrolledAt: new Date().toISOString(),
@@ -694,7 +694,7 @@ function H() {
                                 (0, r.jsxs)('div', {
                                     className: k.questBarPreviewWrapper,
                                     children: [
-                                        (null == (U = Y.userStatus) ? void 0 : U.claimedAt) != null &&
+                                        (null == (H = Y.userStatus) ? void 0 : H.claimedAt) != null &&
                                             (0, r.jsx)(p.Text, {
                                                 color: 'text-secondary',
                                                 variant: 'text-sm/normal',
@@ -834,7 +834,7 @@ function H() {
         })
     );
 }
-class U extends o.Component {
+class H extends o.Component {
     componentDidCatch(e) {
         this.setState({ error: e });
     }
@@ -864,7 +864,7 @@ class U extends o.Component {
                           })
                   ]
               })
-            : (0, r.jsx)(H, {}, t);
+            : (0, r.jsx)(U, {}, t);
     }
     constructor(...e) {
         super(...e),
@@ -880,4 +880,4 @@ class U extends o.Component {
             });
     }
 }
-let z = U;
+let z = H;

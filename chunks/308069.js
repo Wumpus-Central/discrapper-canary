@@ -31,10 +31,10 @@ let j = (e) => {
                 impressionId: O
             });
         }, [O, t]),
-        P = _ && C,
-        E = (0, r.jsx)(l.P3F, {
+        E = _ && C,
+        P = (0, r.jsx)(l.P3F, {
             onClick: S,
-            className: a()(b.clickable, { [b.logo]: P }),
+            className: a()(b.clickable, { [b.logo]: E }),
             children: (0, r.jsx)(m.ZP, {
                 quest: t,
                 logotypeClassName: b.rewardHighlightLogotype,
@@ -42,7 +42,7 @@ let j = (e) => {
             })
         });
     return (0, r.jsxs)(i.animated.div, {
-        className: a()(b.wrapper, b.rewardHighlightWrapper, { [b.interactable]: P }),
+        className: a()(b.wrapper, b.rewardHighlightWrapper, { [b.interactable]: E }),
         style: {
             transform: (0, i.to)(
                 [
@@ -67,8 +67,8 @@ let j = (e) => {
             (0, r.jsx)(x.Z, {
                 quest: t,
                 expansionSpring: n,
-                isFullyExpanded: P,
-                partnerBranding: E,
+                isFullyExpanded: E,
+                partnerBranding: P,
                 useReducedMotion: y
             }),
             (0, r.jsxs)(i.animated.div, {

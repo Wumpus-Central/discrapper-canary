@@ -507,7 +507,7 @@ let et = l.memo(function (e) {
                 n = (function () {
                     let e = (0, o.e7)([D.Z], () => D.Z.getPrimaryActivity()),
                         t = null == e ? void 0 : e.application_id,
-                        n = (0, j.Ns)(t);
+                        n = (0, j.N)(t);
                     return (0, o.cj)(
                         [U.Z, x.default, R.Z, F.Z],
                         () => {

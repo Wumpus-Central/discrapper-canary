@@ -1,9 +1,10 @@
 if (
     (e.d(n, {
-        D: () => c,
-        fW: () => E,
-        j4: () => I,
-        s: () => g
+        D: () => I,
+        YH: () => E,
+        fW: () => g,
+        j4: () => T,
+        s: () => c
     }),
     e(467055),
     12633 == e.j)
@@ -21,27 +22,28 @@ var u = e(709054),
     o = e(982183),
     p = e(981631);
 function E(t) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.Z,
+        e = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.Z,
+        i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : _.ZP;
+    if (!i.hasUnread(t.channel_id)) return !1;
+    let l = e.getChannel(t.channel_id);
+    if (null == l) return !1;
+    let r = n.getGuild(l.guild_id);
+    if (null == r || null == r.joinedAt) return !1;
+    let d = i.ackMessageId(l.id);
+    if (null == d) {
+        let t = n.getGuild(l.guild_id);
+        null != t && null != t.joinedAt && (d = u.default.fromTimestamp(t.joinedAt.getTime()));
+    }
+    return u.default.compare(t.id, d) > 0;
+}
+function g(t) {
     let n = (0, r.cj)([a.Z, _.ZP, s.Z], () =>
         Object.fromEntries(
             t.map((t) => [
                 t.message.id,
                 (function (t) {
-                    if (
-                        (function (t) {
-                            if (!_.ZP.hasUnread(t.channel_id)) return !1;
-                            let n = a.Z.getChannel(t.channel_id);
-                            if (null == n) return !1;
-                            let e = s.Z.getGuild(n.guild_id);
-                            if (null == e || null == e.joinedAt) return !1;
-                            let i = _.ZP.ackMessageId(n.id);
-                            if (null == i) {
-                                let t = s.Z.getGuild(n.guild_id);
-                                null != t && null != t.joinedAt && (i = u.default.fromTimestamp(t.joinedAt.getTime()));
-                            }
-                            return u.default.compare(t.id, i) > 0;
-                        })(t)
-                    )
-                        return o.KZ.UNREAD;
+                    if (E(t)) return o.KZ.UNREAD;
                     let n = (0, i.default)(new Date(), t.timestamp);
                     return 0 === n ? o.KZ.TODAY : 1 === n ? o.KZ.YESTERDAY : o.KZ.OLDER;
                 })(t.message)
@@ -50,14 +52,14 @@ function E(t) {
     );
     return (t) => n[t];
 }
-function g(t) {
+function c(t) {
     let n = new Date(new Date().setHours(0, 0, 0, 0));
     return t.OLDER ? null : t.YESTERDAY ? u.default.fromTimestamp(new Date(n.setDate(n.getDate() - 1)).getTime()) : t.TODAY ? u.default.fromTimestamp(n.getTime()) : null;
 }
-function c() {
+function I() {
     let { pathname: t } = (0, l.TH)();
     return t.startsWith(p.Z5c.NOTIFICATIONS_INBOX());
 }
-function I(t) {
+function T(t) {
     d.Z.open(p.oAB.NOTIFICATIONS, void 0, { analyticsLocations: t });
 }

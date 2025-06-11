@@ -1,48 +1,82 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(91192),
     o = n(442837),
     s = n(481060),
-    a = n(276952),
-    c = n(682662),
-    u = n(593364),
-    d = n(888369),
-    h = n(944486),
-    p = n(821020),
-    f = n(370774),
-    g = n(961040),
-    m = n(932711),
-    b = n(981631),
-    y = n(522458);
-function O(e) {
+    a = n(377171),
+    c = n(276952),
+    u = n(682662),
+    d = n(593364),
+    h = n(455199),
+    p = n(592125),
+    f = n(430824),
+    g = n(306680),
+    m = n(944486),
+    b = n(821020),
+    y = n(370774),
+    O = n(961040),
+    v = n(739340),
+    _ = n(932711),
+    C = n(981631),
+    j = n(522458);
+function S(e) {
     var t, n;
-    let { onClick: g, selectedOverride: O = !1, popoutProps: v, ref: _ } = e,
-        C = (0, l.Ie)('notifications-inbox'),
-        [j, S] = i.useState(!1),
-        x = (0, f.D)(),
-        E = O || x,
-        P = (0, o.e7)([d.default], () => d.default.getTotalMentionCount(!0)),
-        I = P > 0 ? (0, u.N)(P) : null,
-        { notificationCenterVariant: w } = p.L.useExperiment({ location: 'NotificationsInboxButtonInner' }),
-        N = (0, o.e7)([h.Z], () => h.Z.getChannelId()),
-        Z = i.useMemo(() => {
-            if ('sidebar' === w) return b.Z5c.NOTIFICATIONS_INBOX(null != N ? N : void 0);
-        }, [w, N]);
-    return (0, r.jsxs)(c.H, {
-        ref: _,
+    let { onClick: O, selectedOverride: S = !1, popoutProps: x, ref: E } = e,
+        P = (0, l.Ie)('notifications-inbox'),
+        [I, w] = i.useState(!1),
+        N = (0, y.D)(),
+        Z = S || N,
+        { anyUnread: T, unreadRecentMentionsCount: A } = (function () {
+            let e = (0, v.wt)(),
+                t = (0, o.e7)([g.ZP], () => e.some((e) => g.ZP.hasUnread(e))),
+                n = (0, o.e7)([h.Z], () => h.Z.getSettingsFilteredMentions());
+            return {
+                anyUnread: t,
+                unreadRecentMentionsCount: (0, o.e7)(
+                    [g.ZP, p.Z, f.Z],
+                    () => {
+                        var e, t;
+                        return null != (t = null == n || null == (e = n.filter((e) => (0, y.YH)(e, f.Z, p.Z, g.ZP))) ? void 0 : e.length) ? t : 0;
+                    },
+                    [n]
+                )
+            };
+        })(),
+        R =
+            A > 0
+                ? (0, d.N)(A)
+                : T
+                  ? (0, r.jsx)(s.fWl, {
+                        style: {
+                            height: 12,
+                            width: 12,
+                            top: -2,
+                            left: -2,
+                            position: 'relative'
+                        },
+                        color: a.Z.BG_BRAND
+                    })
+                  : null,
+        { notificationCenterVariant: D } = b.L.useExperiment({ location: 'NotificationsInboxButtonInner' }),
+        L = (0, o.e7)([m.Z], () => m.Z.getChannelId()),
+        M = i.useMemo(() => {
+            if ('sidebar' === D) return C.Z5c.NOTIFICATIONS_INBOX(null != L ? L : void 0);
+        }, [D, L]);
+    return (0, r.jsxs)(u.H, {
+        ref: E,
         children: [
-            'sidebar' === w &&
-                (0, r.jsx)(a.Z, {
-                    selected: E,
-                    hovered: j,
-                    unread: P > 0,
-                    className: y.pill
+            'sidebar' === D &&
+                (0, r.jsx)(c.Z, {
+                    selected: Z,
+                    hovered: I,
+                    unread: T,
+                    className: j.pill
                 }),
-            (0, r.jsx)(m.Z, {
+            (0, r.jsx)(_.Z, {
                 children: (0, r.jsx)(s.aRk, {
-                    selected: E || j,
-                    lowerBadge: I,
+                    selected: Z || I,
+                    lowerBadge: R,
                     children: (0, r.jsx)(
                         s.LYs,
                         ((t = (function (e) {
@@ -69,18 +103,18 @@ function O(e) {
                                     });
                             }
                             return e;
-                        })({}, C, v)),
+                        })({}, P, x)),
                         (n = n =
                             {
-                                onClick: g,
-                                to: Z,
-                                selected: E || j,
-                                onMouseEnter: () => S(!0),
-                                onMouseLeave: () => S(!1),
+                                onClick: O,
+                                to: M,
+                                selected: Z || I,
+                                onMouseEnter: () => w(!0),
+                                onMouseLeave: () => w(!1),
                                 children: (0, r.jsx)(s.Dkj, {
                                     size: 'custom',
                                     color: 'currentColor',
-                                    className: y.notificationsIcon,
+                                    className: j.notificationsIcon,
                                     width: 20,
                                     height: 20
                                 })
@@ -104,18 +138,18 @@ function O(e) {
         ]
     });
 }
-function v() {
+function x() {
     let e = i.useRef(null),
-        { notificationCenterVariant: t } = p.L.useExperiment({ location: 'NotificationsInboxButton' });
+        { notificationCenterVariant: t } = b.L.useExperiment({ location: 'NotificationsInboxButton' });
     return 'sidebar' === t
-        ? (0, r.jsx)(O, {})
+        ? (0, r.jsx)(S, {})
         : 'popout' === t
-          ? (0, r.jsx)(g.Z, {
+          ? (0, r.jsx)(O.Z, {
                 targetElementRef: e,
                 popoutPosition: 'right',
                 popoutAlign: 'bottom',
                 children: (t, n, i) =>
-                    (0, r.jsx)(O, {
+                    (0, r.jsx)(S, {
                         ref: e,
                         selectedOverride: n,
                         onClick: t,

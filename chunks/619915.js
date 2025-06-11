@@ -1,6 +1,6 @@
 n.d(t, {
-    QN: () => s,
-    ZP: () => p,
+    QN: () => p,
+    ZP: () => s,
     gb: () => f,
     uF: () => v
 }),
@@ -11,17 +11,17 @@ var i = n(73800),
     l = n(835473),
     o = n(158776),
     a = n(594174),
-    c = n(823379),
-    u = n(317381),
+    u = n(823379),
+    c = n(317381),
     d = n(16609);
-function p(e, t) {
+function s(e, t) {
     return f(
-        (0, r.Wu)([u.ZP], () => (null != e && null != e.id && '' !== e.id ? u.ZP.getEmbeddedActivitiesForChannel(e.id) : u.i6)),
+        (0, r.Wu)([c.ZP], () => (null != e && null != e.id && '' !== e.id ? c.ZP.getEmbeddedActivitiesForChannel(e.id) : c.i6)),
         t
     );
 }
-function s(e) {
-    let t = f((0, r.e7)([u.ZP], () => (null != e ? u.ZP.getEmbeddedActivitiesForGuild(e) : u.i6)));
+function p(e) {
+    let t = f((0, r.e7)([c.ZP], () => (null != e ? c.ZP.getEmbeddedActivitiesForGuild(e) : c.i6)));
     return i.useMemo(() => {
         let e = new Map();
         return (
@@ -39,16 +39,16 @@ function s(e) {
 function f(e, t) {
     let n = e.map((e) => e.applicationId),
         o = (0, l.Z)(n),
-        u = new Set([]);
-    for (let t of e) for (let e of t.userIds) u.add(e);
+        c = new Set([]);
+    for (let t of e) for (let e of t.userIds) c.add(e);
     let d = (0, r.Wu)(
         [a.default],
         () => {
             let e = [];
-            for (let t of u) e.push(a.default.getUser(t));
+            for (let t of c) e.push(a.default.getUser(t));
             return e;
         },
-        [u]
+        [c]
     );
     return i.useMemo(() => {
         let n = new Map();
@@ -76,7 +76,7 @@ function f(e, t) {
                               userParticipantAvatarUrls: l
                           };
                 })
-                .filter(c.lm)
+                .filter(u.lm)
         );
     }, [e, o, d, t]);
 }

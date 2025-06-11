@@ -1,24 +1,24 @@
-n.d(t, { Z: () => R }), n(539854), n(388685);
+n.d(t, { Z: () => P }), n(539854), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    l = n.n(i),
-    o = n(114858),
-    a = n(442837),
-    c = n(481060),
-    s = n(430824),
+    l = n.n(i);
+if (12633 == n.j) var o = n(114858);
+var a = n(442837),
+    s = n(481060),
+    c = n(430824),
     u = n(914010),
-    d = n(693546),
-    _ = n(305325),
-    E = n(246364),
+    E = n(693546),
+    d = n(305325),
+    _ = n(246364),
     I = n(983736),
     O = n(937111),
     T = n(981631),
-    p = n(176505),
-    N = n(388032),
-    S = n(246752),
-    f = n(240211);
-function A(e) {
+    N = n(176505),
+    S = n(388032),
+    R = n(246752),
+    A = n(240211);
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,96 +43,99 @@ function A(e) {
     }
     return e;
 }
-let R = () => {
-    var e, t;
-    let i = (0, a.e7)([u.Z], () => u.Z.getGuildId(), []),
-        R = (0, a.e7)([s.Z], () => s.Z.getGuild(i), [i]),
-        m = (0, a.e7)([O.Z], () => (null != i ? O.Z.getRequest(i) : null), [i]),
-        C = (0, o.TH)(),
-        g = (null == (e = (0, o.LX)(C.pathname, T.Z5c.CHANNEL(null == R ? void 0 : R.id, p.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
-    if (null == R || !(0, I.Dc)(R) || g) return null;
-    let P = null != (t = null == m ? void 0 : m.applicationStatus) ? t : E.wB.STARTED,
-        y = null,
-        D = null,
-        b = null,
-        h = [S.notice, f.notice];
-    switch (P) {
-        case E.wB.SUBMITTED:
-            (y = N.intl.string(N.t['5iLvS0'])),
-                (D = N.intl.string(N.t.mqtdmZ)),
-                (b = () => {
-                    (0, c.h7j)((e) => {
-                        var t, n;
-                        return (0, r.jsx)(
-                            c.ConfirmModal,
-                            ((t = A(
-                                {
-                                    header: N.intl.string(N.t.aIz1oa),
-                                    confirmText: N.intl.string(N.t['cY+Ooa']),
-                                    cancelText: N.intl.string(N.t['ETE/oK']),
-                                    onConfirm: () => d.Z.removeGuildJoinRequest(R.id),
-                                    confirmButtonColor: c.zxk.Colors.BRAND
-                                },
-                                e
-                            )),
-                            (n = n =
-                                {
-                                    children: (0, r.jsx)(c.Text, {
-                                        variant: 'text-md/normal',
-                                        children: N.intl.string(N.t['13tjTU'])
-                                    })
-                                }),
-                            Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                                : (function (e, t) {
-                                      var n = Object.keys(e);
-                                      if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
-                                      }
-                                      return n;
-                                  })(Object(n)).forEach(function (e) {
-                                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                                  }),
-                            t)
-                        );
-                    });
-                });
-            break;
-        case E.wB.REJECTED:
-            (y = N.intl.string(N.t.lk30cX)),
-                (D = N.intl.string(N.t['8RrsHh'])),
-                (b = () => {
-                    (0, c.ZDy)(async () => {
-                        let { default: e } = await n.e('3378').then(n.bind(n, 76075));
-                        return (t) => (0, r.jsx)(e, A({ guildId: R.id }, t));
-                    });
-                }),
-                h.push(S.error);
-            break;
-        default:
-            (y = N.intl.string(N.t.G5YKXF)),
-                (D = N.intl.string(N.t['r8/DT0'])),
-                (b = () => {
-                    (0, _.hk)(R.id);
-                });
-    }
-    return (0, r.jsxs)('div', {
-        className: l()(...h),
-        children: [
-            (0, r.jsx)(c.Text, {
-                className: S.header,
-                variant: 'text-sm/normal',
-                children: y
-            }),
-            (0, r.jsx)(c.zxk, {
-                className: S.button,
-                look: c.zxk.Looks.OUTLINED,
-                color: c.zxk.Colors.WHITE,
-                size: c.zxk.Sizes.NONE,
-                onClick: b,
-                children: D
-            })
-        ]
-    });
-};
+let P =
+    12633 == n.j
+        ? () => {
+              var e, t;
+              let i = (0, a.e7)([u.Z], () => u.Z.getGuildId(), []),
+                  P = (0, a.e7)([c.Z], () => c.Z.getGuild(i), [i]),
+                  C = (0, a.e7)([O.Z], () => (null != i ? O.Z.getRequest(i) : null), [i]),
+                  D = (0, o.TH)(),
+                  f = (null == (e = (0, o.LX)(D.pathname, T.Z5c.CHANNEL(null == P ? void 0 : P.id, N.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
+              if (null == P || !(0, I.Dc)(P) || f) return null;
+              let m = null != (t = null == C ? void 0 : C.applicationStatus) ? t : _.wB.STARTED,
+                  g = null,
+                  y = null,
+                  U = null,
+                  h = [R.notice, A.notice];
+              switch (m) {
+                  case _.wB.SUBMITTED:
+                      (g = S.intl.string(S.t['5iLvS0'])),
+                          (y = S.intl.string(S.t.mqtdmZ)),
+                          (U = () => {
+                              (0, s.h7j)((e) => {
+                                  var t, n;
+                                  return (0, r.jsx)(
+                                      s.ConfirmModal,
+                                      ((t = p(
+                                          {
+                                              header: S.intl.string(S.t.aIz1oa),
+                                              confirmText: S.intl.string(S.t['cY+Ooa']),
+                                              cancelText: S.intl.string(S.t['ETE/oK']),
+                                              onConfirm: () => E.Z.removeGuildJoinRequest(P.id),
+                                              confirmButtonColor: s.zxk.Colors.BRAND
+                                          },
+                                          e
+                                      )),
+                                      (n = n =
+                                          {
+                                              children: (0, r.jsx)(s.Text, {
+                                                  variant: 'text-md/normal',
+                                                  children: S.intl.string(S.t['13tjTU'])
+                                              })
+                                          }),
+                                      Object.getOwnPropertyDescriptors
+                                          ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                                          : (function (e, t) {
+                                                var n = Object.keys(e);
+                                                if (Object.getOwnPropertySymbols) {
+                                                    var r = Object.getOwnPropertySymbols(e);
+                                                    n.push.apply(n, r);
+                                                }
+                                                return n;
+                                            })(Object(n)).forEach(function (e) {
+                                                Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                                            }),
+                                      t)
+                                  );
+                              });
+                          });
+                      break;
+                  case _.wB.REJECTED:
+                      (g = S.intl.string(S.t.lk30cX)),
+                          (y = S.intl.string(S.t['8RrsHh'])),
+                          (U = () => {
+                              (0, s.ZDy)(async () => {
+                                  let { default: e } = await n.e('3378').then(n.bind(n, 76075));
+                                  return (t) => (0, r.jsx)(e, p({ guildId: P.id }, t));
+                              });
+                          }),
+                          h.push(R.error);
+                      break;
+                  default:
+                      (g = S.intl.string(S.t.G5YKXF)),
+                          (y = S.intl.string(S.t['r8/DT0'])),
+                          (U = () => {
+                              (0, d.hk)(P.id);
+                          });
+              }
+              return (0, r.jsxs)('div', {
+                  className: l()(...h),
+                  children: [
+                      (0, r.jsx)(s.Text, {
+                          className: R.header,
+                          variant: 'text-sm/normal',
+                          children: g
+                      }),
+                      (0, r.jsx)(s.zxk, {
+                          className: R.button,
+                          look: s.zxk.Looks.OUTLINED,
+                          color: s.zxk.Colors.WHITE,
+                          size: s.zxk.Sizes.NONE,
+                          onClick: U,
+                          children: y
+                      })
+                  ]
+              });
+          }
+        : null;

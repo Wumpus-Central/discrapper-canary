@@ -12,10 +12,10 @@ var r,
     p = n(19780),
     m = n(594174),
     g = n(979651),
-    _ = n(938475),
-    b = n(981631),
-    h = n(354459);
-let v = new c.Z(),
+    b = n(938475),
+    _ = n(981631),
+    v = n(354459);
+let h = new c.Z(),
     y = new c.Z(),
     O = new Set();
 function j(e, t, n) {
@@ -23,10 +23,10 @@ function j(e, t, n) {
             userId: e.id,
             channelId: n
         }),
-        i = (0, _.PH)(r, null != t ? t : b.ME, e.id);
-    v.set(e.id, i);
+        i = (0, b.PH)(r, null != t ? t : _.ME, e.id);
+    h.set(e.id, i);
     let l = {
-        type: h.fO.USER,
+        type: v.fO.USER,
         user: e,
         id: e.id,
         streamId: null,
@@ -42,7 +42,7 @@ function j(e, t, n) {
     y.set(e.id, l);
 }
 function S(e) {
-    let t = v.delete(e),
+    let t = h.delete(e),
         n = y.delete(e),
         r = O.delete(e);
     return t || n || r;
@@ -63,20 +63,20 @@ function x() {
     );
 }
 function I() {
-    v.clear(), y.clear(), O.clear();
+    h.clear(), y.clear(), O.clear();
 }
 class P extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(g.Z, m.default, f.Z, p.Z), this.syncWith([m.default], x);
     }
     get desyncedVoiceStatesCount() {
-        return v.size();
+        return h.size();
     }
     getDesyncedUserIds() {
-        return v.keys();
+        return h.keys();
     }
     getDesyncedVoiceStates() {
-        return v.values();
+        return h.values();
     }
     getDesyncedParticipants() {
         return y.values();
@@ -98,7 +98,7 @@ let C = new P(s.Z, {
     VOICE_CHANNEL_SELECT: I,
     RTC_CONNECTION_STATE: function (e) {
         let { state: t, context: n } = e;
-        if (n !== o.Yn.DEFAULT || t !== b.hes.DISCONNECTED) return !1;
+        if (n !== o.Yn.DEFAULT || t !== _.hes.DISCONNECTED) return !1;
         I();
     },
     VOICE_STATE_UPDATES: function (e) {

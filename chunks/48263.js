@@ -43,7 +43,7 @@ let f = {
     v = 'username',
     y = 'friendNickname',
     O = 'globalName',
-    g = new Set(['isFriend', 'isBot', 'isProvisional', v, y, O]),
+    g = new Set(['isFriend', 'isStaff', 'isBot', 'isProvisional', v, y, O]),
     E = a()(
         () => {
             0 !== b.size &&
@@ -68,9 +68,9 @@ function m(e, r) {
         g = null != f && f.strict && null != (t = f.guild) ? t : null,
         E = null != (n = r.boosters) ? n : {},
         m = RegExp('^'.concat(i.Z.escape(l)), 'i'),
-        S = RegExp(i.Z.escape(l), 'i'),
+        w = RegExp(i.Z.escape(l), 'i'),
         j = [];
-    if ('' === l) return w(l, j, e);
+    if ('' === l) return S(l, j, e);
     let P = l.toLocaleLowerCase(),
         R = (0, c.Fv)(P);
     p.forEach((e, r) => {
@@ -80,8 +80,8 @@ function m(e, r) {
                 if (null != n && n.indexOf(e) >= 0) return !1;
                 if (null != o && o.indexOf(e) >= 0) return !0;
                 if (null != t) {
-                    let { friends: e, guild: n, provisional: o } = t;
-                    return (null == o || r.isProvisional === o) && ((!0 === e && !0 === r.isFriend) || (null != n && (null != r[n] || null === r[n])));
+                    let { friends: e, staff: n, guild: o, provisional: l } = t;
+                    return (null == l || r.isProvisional === l) && ((!0 === e && !0 === r.isFriend) || (!0 === n && !0 === r.isStaff) || (null != o && (null != r[o] || null === r[o])));
                 }
                 return !0;
             })(r, e, f, d, b)
@@ -106,7 +106,7 @@ function m(e, r) {
                             comparator: f,
                             score: h(10, E[r])
                         })
-                      : S.test(f)
+                      : w.test(f)
                         ? (u = {
                               comparator: f,
                               score: h(5, E[r])
@@ -147,9 +147,9 @@ function m(e, r) {
     }),
         j.sort(u.Z),
         j.length > a && (j.length = a),
-        w(l, j, e);
+        S(l, j, e);
 }
-function w(e, r, t) {
+function S(e, r, t) {
     let n = {
         type: f.USER_RESULTS,
         uuid: t,
@@ -195,14 +195,14 @@ self.addEventListener('message', (e) => {
                         i = s({}, a, l);
                     p.set(o, i),
                         d.size > 0 &&
-                            ((i.isFriend !== (null == a ? void 0 : a.isFriend) || i.friendNickname !== (null == a ? void 0 : a.friendNickname)) && (t = !0),
+                            ((i.isFriend !== (null == a ? void 0 : a.isFriend) || i.friendNickname !== (null == a ? void 0 : a.friendNickname) || i.isStaff !== (null == a ? void 0 : a.isStaff)) && (t = !0),
                             Object.keys(i).forEach((e) => {
                                 g.has(e) || n.add(e);
                             }));
                 }),
                     d.forEach((e, r) => {
                         let { filters: o } = e;
-                        (null == o || o.friends === t || n.has(o.guild)) && b.add(r);
+                        (null == o || o.friends === t || o.staff === t || n.has(o.guild)) && b.add(r);
                     }),
                     E();
             })(r);

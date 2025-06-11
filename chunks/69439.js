@@ -53,7 +53,7 @@ function C(e) {
 }
 function O(e) {
     var t, n, s, O;
-    let { quest: w, location: S, onReceiveErrorHints: P, contentPosition: E, rowIndex: T } = e,
+    let { quest: w, location: S, onReceiveErrorHints: E, contentPosition: P, rowIndex: T } = e,
         N = (0, d.Q3)('QuestTileCta'),
         A = (0, i.e7)([c.Z], () => c.Z.useReducedMotion),
         R = (0, x.g2)({ useReducedMotion: A }),
@@ -73,12 +73,12 @@ function O(e) {
             isEnrolling: m.Z.isEnrolling(w.id),
             isQuestEnrollmentBlocked: null != m.Z.questEnrollmentBlockedUntil
         })),
-        W = (null == (t = w.userStatus) ? void 0 : t.enrolledAt) != null,
-        V = (null == (n = w.userStatus) ? void 0 : n.completedAt) != null,
-        Z = V && (null == (s = w.userStatus) ? void 0 : s.claimedAt) == null,
+        V = (null == (t = w.userStatus) ? void 0 : t.enrolledAt) != null,
+        W = (null == (n = w.userStatus) ? void 0 : n.completedAt) != null,
+        Z = W && (null == (s = w.userStatus) ? void 0 : s.claimedAt) == null,
         Q = (0, g.iQ)(w),
-        H = !(0, g.zi)(w),
-        U = (0, p._Q)(w),
+        U = !(0, g.zi)(w),
+        H = (0, p._Q)(w),
         z = (0, g.Xv)(w.config),
         F = (0, g.PB)(w),
         K = (0, g.HJ)(w),
@@ -86,21 +86,21 @@ function O(e) {
         Y = o.useRef(null),
         G = (0, p.Rf)(w),
         [J, $, ee] = (0, p.me)(w, G),
-        et = H && U === p.OH.ACCEPTED,
+        et = U && H === p.OH.ACCEPTED,
         en = et && J === f.LI.SELECT,
         er = et && !en && $.length > 1,
         eo = o.useCallback(
             (e) => {
-                ee(e), e === j.cd.DESKTOP && P([]);
+                ee(e), e === j.cd.DESKTOP && E([]);
             },
-            [ee, P]
+            [ee, E]
         ),
         { text: es, onClick: ea } = (0, x.Ks)({
-            progressState: U,
+            progressState: H,
             quest: w,
             location: S,
             isCollectibleQuest: z,
-            questContentPosition: E,
+            questContentPosition: P,
             questContentRowIndex: T,
             inGiftInventory: !0,
             isVideoQuest: F,
@@ -114,12 +114,12 @@ function O(e) {
                         questId: w.id,
                         questContent: S,
                         questContentCTA: u.jZ.DEFIBRILLATOR,
-                        questContentPosition: E,
+                        questContentPosition: P,
                         questContentRowIndex: T
                     });
             },
             afterRequest: (e) => {
-                R.stopAnimation(), P(e);
+                R.stopAnimation(), E(e);
             }
         }),
         ec = (null == (O = w.userStatus) ? void 0 : O.claimedAt) != null,
@@ -132,7 +132,7 @@ function O(e) {
               className: y.button,
               children: es
           }))
-        : V
+        : W
           ? (ed = F
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
@@ -168,8 +168,8 @@ function O(e) {
                       onClick: null != ea ? ea : void 0,
                       children: es
                   }))
-          : H
-            ? H && Z
+          : U
+            ? U && Z
                 ? (ed = (0, r.jsx)(l.zxk, {
                       color: l.Ttl.BRAND,
                       submitting: D,
@@ -184,7 +184,7 @@ function O(e) {
                         className: y.button,
                         children: v.intl.string(v.t.BkZhUF)
                     }))
-                  : H && W && !ec
+                  : U && V && !ec
                     ? (ed = en
                           ? (0, r.jsx)(l.PhF, {
                                 className: y.platformSelectorPrimary,
@@ -233,8 +233,8 @@ function O(e) {
                                     className: y.button,
                                     children: v.intl.string(v.t['9KoPyM'])
                                 }))
-                    : H &&
-                      !W &&
+                    : U &&
+                      !V &&
                       (ed = L
                           ? (0, r.jsxs)(r.Fragment, {
                                 children: [

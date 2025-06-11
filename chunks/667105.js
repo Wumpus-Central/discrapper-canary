@@ -345,14 +345,53 @@ function V(e) {
             hasFetchedSubscriptions: p.ZP.hasFetchedSubscriptions()
         })),
         c = (0, o.e7)([b.Z], () => null != b.Z.questDeliveryOverride);
-    if (null == r || ((0, O.Bg)(r.config) && (!l || (null == s ? void 0 : s.isPurchasedExternally)))) return !1;
+    if (null == r)
+        return {
+            isQuestBarVisible: !1,
+            reason: 'quest_is_null'
+        };
+    if ((0, O.Bg)(r.config)) {
+        if (!l)
+            return {
+                isQuestBarVisible: !1,
+                reason: 'premium_subscription_not_fetched'
+            };
+        if (null == s ? void 0 : s.isPurchasedExternally)
+            return {
+                isQuestBarVisible: !1,
+                reason: 'premium_subscription_is_purchased_externally'
+            };
+    }
     let u = (null == (t = r.userStatus) ? void 0 : t.claimedAt) != null,
         d = !c && null != r.userStatus && (0, O.zE)(r.userStatus, y.jn.QUEST_BAR);
-    return i && !d && !u && !a;
+    return u
+        ? {
+              isQuestBarVisible: !1,
+              reason: 'quest_claimed'
+          }
+        : a
+          ? {
+                isQuestBarVisible: !1,
+                reason: 'quest_expired'
+            }
+          : i
+            ? d
+                ? {
+                      isQuestBarVisible: !1,
+                      reason: 'quest_dismissed'
+                  }
+                : {
+                      isQuestBarVisible: !0,
+                      reason: 'quest_bar_visible'
+                  }
+            : {
+                  isQuestBarVisible: !1,
+                  reason: 'quest_not_eligible_for_quests'
+              };
 }
 function Z(e) {
     let { location: t } = e,
-        n = V({
+        { isQuestBarVisible: n } = V({
             location: t,
             quest: F()
         }),

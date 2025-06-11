@@ -8,7 +8,7 @@ var i = n(73800),
     s = n(594174),
     u = n(709054);
 function d(e) {
-    let t = (0, a.Ns)(e.id),
+    let t = (0, a.N)(e.id),
         n = (0, o.cj)([s.default, c.Z], () => {
             let e = {};
             for (let n of t.values()) {

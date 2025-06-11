@@ -8,13 +8,13 @@ var i = n(120356),
     s = n(829820),
     c = n(862863);
 function u(e) {
-    let { activity: t, user: n, channelId: i, guildId: u, source: d, size: f, look: p, color: m, className: g, onAction: _ } = e,
-        { tooltip: b, loading: h, disabled: v, onClick: y } = (0, s.Fe)(t, n, d, o.ZP.getNickname(u, i, n)),
+    let { activity: t, user: n, channelId: i, guildId: u, source: d, size: f, look: p, color: m, className: g, onAction: b } = e,
+        { tooltip: _, loading: v, disabled: h, onClick: y } = (0, s.Fe)(t, n, d, o.ZP.getNickname(u, i, n)),
         O = () => {
-            null == _ || _(), y();
+            null == b || b(), y();
         };
     return (0, r.jsx)(a.ua7, {
-        text: b,
+        text: _,
         children: (e) => {
             let { onMouseEnter: n, onMouseLeave: i } = e;
             return (0, r.jsx)(a.zxk, {
@@ -26,9 +26,9 @@ function u(e) {
                 onClick: O,
                 onMouseEnter: n,
                 onMouseLeave: i,
-                disabled: v,
-                submitting: h,
-                'aria-label': null != b ? b : t.name,
+                disabled: h,
+                submitting: v,
+                'aria-label': null != _ ? _ : t.name,
                 children: (0, r.jsx)(a.iOO, {
                     size: 'xs',
                     color: 'currentColor'

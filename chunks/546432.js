@@ -387,11 +387,8 @@ let k = function (e) {
         })(e, ['className', 'item', 'message', 'getObscureReason', 'useFullWidth', 'mediaLayoutType', 'isSingleMosaicItem', 'footer']);
     let { width: p, height: y, type: I } = n,
         x = a(n, (0, g.v)(l)),
-        [j, E] = i.useState(null != x && O.Xh.has(x));
-    i.useEffect(() => {
-        E(null != x && O.Xh.has(x));
-    }, [x]);
-    let b = u === v.hV.MOSAIC,
+        [j, E] = i.useState(null != x),
+        b = u === v.hV.MOSAIC,
         P = !b && ((null != p && p < 200) || (null != y && y < 50)),
         T = 'IMAGE' === I || 'VIDEO' === I,
         M = (0, C.R_)(I),
@@ -415,7 +412,7 @@ let k = function (e) {
                     className: o()(t, N.mosaicItemContent, {
                         [N.obscured]: j && !P,
                         [N.hiddenSpoiler]: j && x === O.wk.SPOILER,
-                        [N.hiddenExplicit]: j,
+                        [N.hiddenExplicit]: j && null != x && O.Xh.has(x),
                         [N.hiddenMosaicItem]: j && e,
                         [N.inline]: j && P
                     }),

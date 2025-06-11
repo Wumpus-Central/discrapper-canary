@@ -1,7 +1,7 @@
 n.d(t, {
-    Es: () => b,
-    Eu: () => v,
-    bt: () => h
+    Es: () => _,
+    Eu: () => h,
+    bt: () => v
 }),
     n(388685),
     n(539854);
@@ -18,13 +18,13 @@ var r = n(73800),
     p = n(19780),
     m = n(594174),
     g = n(979651),
-    _ = n(823379);
-function b(e, t) {
+    b = n(823379);
+function _(e, t) {
     let n = (0, l.e7)([f.Z, p.Z], () => (e === p.Z.getChannelId() ? f.Z.getDesyncedVoiceStates() : null)),
         a = (0, l.Wu)([o.Z], () => (null == e ? [] : [...o.Z.getGuildRingingUsers(e)])),
-        c = (0, l.Wu)([m.default], () => a.map((e) => m.default.getUser(e)).filter(_.lm)),
+        c = (0, l.Wu)([m.default], () => a.map((e) => m.default.getUser(e)).filter(b.lm)),
         g = (0, l.e7)([u.Z], () => u.Z.getBasicChannel(e)),
-        b = r.useMemo(
+        _ = r.useMemo(
             () =>
                 c.map((e) => ({
                     voiceState: new s.Z(e.id),
@@ -69,11 +69,11 @@ function b(e, t) {
                         }),
                     r
                 );
-            })(n, t, b),
-        [n, t, b]
+            })(n, t, _),
+        [n, t, _]
     );
 }
-function h(e, t) {
+function v(e, t) {
     let n = (0, l.e7)([f.Z, p.Z], () => (e === p.Z.getChannelId() ? f.Z.getDesyncedParticipants() : null));
     return r.useMemo(
         () =>
@@ -94,7 +94,7 @@ function h(e, t) {
         [n, t]
     );
 }
-function v(e, t) {
+function h(e, t) {
     let n = (0, l.e7)([c.default], () => c.default.getId() === t),
         i = (0, l.e7)([p.Z], () => p.Z.getChannelId()),
         a = r.useRef(null),

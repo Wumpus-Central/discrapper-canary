@@ -1,4 +1,4 @@
-n.d(t, { J: () => h }), n(388685);
+n.d(t, { J: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -142,7 +142,7 @@ let m = (e) => {
             children: [(0, r.jsx)('div', { className: f.tinyDot }), (0, r.jsx)('div', { className: f.tinyDot })]
         });
     },
-    _ = (e) => {
+    b = (e) => {
         let { digits: t } = e;
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -157,14 +157,14 @@ let m = (e) => {
             ]
         });
     },
-    b = (e) => {
+    _ = (e) => {
         let { countdown: t } = e;
         return (0, r.jsxs)('div', {
             className: f.digitsContainer,
-            children: [(0, r.jsx)(_, { digits: t.hours }), (0, r.jsx)(g, {}), (0, r.jsx)(_, { digits: t.minutes }), (0, r.jsx)(g, {}), (0, r.jsx)(_, { digits: t.seconds })]
+            children: [(0, r.jsx)(b, { digits: t.hours }), (0, r.jsx)(g, {}), (0, r.jsx)(b, { digits: t.minutes }), (0, r.jsx)(g, {}), (0, r.jsx)(b, { digits: t.seconds })]
         });
     };
-function h(e) {
+function v(e) {
     let { textVariant: t, className: n, catalogUpdateTime: l, isScrolled: o } = e,
         [s, u] = i.useState(() => p(l));
     return (
@@ -200,7 +200,7 @@ function h(e) {
                 }),
                 (0, r.jsx)('div', {
                     className: f.digitsContainer,
-                    children: (0, r.jsx)(b, { countdown: s })
+                    children: (0, r.jsx)(_, { countdown: s })
                 })
             ]
         })

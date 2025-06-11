@@ -15,7 +15,7 @@ var i = n(255367),
     f = n(276444),
     b = n(520540),
     _ = n(796634),
-    x = n(767714),
+    x = n(736519),
     E = n(119269),
     j = n(938736),
     C = n(981631),
@@ -207,9 +207,7 @@ let N = (e) => {
                                         (0, i.jsx)(x.Z, {
                                             color: o.Ttl.CUSTOM,
                                             textOptions: { textOverride: O.intl.string(O.t.Ve9Ge3) },
-                                            className: l()(S.expandedProgressBarGiftingCTA, { [S.expandedProgressBarGiftingCTALayout]: !t }),
-                                            look: o.iLD.OUTLINED,
-                                            isGift: !0
+                                            className: l()(S.expandedProgressBarGiftingCTA, { [S.expandedProgressBarGiftingCTALayout]: !t })
                                         }),
                                     (0, i.jsx)(o.gtL, {
                                         className: S.expandedProgressBarSelectFriendsCTA,

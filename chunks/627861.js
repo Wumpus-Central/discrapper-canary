@@ -474,7 +474,7 @@ function ec(e) {
                   referrerId: I
               })
             : void 0,
-        eI = (0, O.Ns)(j.id).some((e) => (0, x.ig)(e) === l.o.GLOBAL)
+        eI = (0, O.N)(j.id).some((e) => (0, x.ig)(e) === l.o.GLOBAL)
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)(o.YqE, {

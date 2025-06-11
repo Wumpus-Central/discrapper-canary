@@ -22,9 +22,9 @@ let b = ['#51BC9D'],
             O = (null == (t = j.userStatus) ? void 0 : t.completedAt) != null,
             w = o.useRef(!1),
             S = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
-            P = o.useRef(null),
-            E = (0, d.e7)([m.Z], () => m.Z.hasLayers()),
-            T = (0, u.Z)(E),
+            E = o.useRef(null),
+            P = (0, d.e7)([m.Z], () => m.Z.hasLayers()),
+            T = (0, u.Z)(P),
             [N, A] = o.useState(null),
             [R, k] = o.useState(null),
             B = o.useRef(
@@ -37,7 +37,7 @@ let b = ['#51BC9D'],
             I = o.useCallback(() => {
                 if (S) return;
                 let e = v.current,
-                    t = P.current;
+                    t = E.current;
                 if (null != t && null != e && q.isReady) {
                     var n, r, o, s, a, i;
                     let { x: l, y: c } = e.getBoundingClientRect(),
@@ -127,19 +127,19 @@ let b = ['#51BC9D'],
                         100
                     );
                 }
-            }, [v, P, q, S]),
+            }, [v, E, q, S]),
             D = (0, u.Z)(y);
         return (o.useEffect(() => {
             O && y && !D && (C(), I());
         }, [y, O, C, I, D]),
         o.useEffect(() => {
             O &&
-                !E &&
+                !P &&
                 T &&
                 setTimeout(() => {
                     C(), I();
                 }, 200);
-        }, [O, T, E, C, I]),
+        }, [O, T, P, C, I]),
         o.useEffect(() => {
             q.isReady && (!w.current && O && (C(), I()), (w.current = O));
         }, [O, w, I, C, q]),
@@ -148,7 +148,7 @@ let b = ['#51BC9D'],
             : (0, r.jsxs)('div', {
                   className: x.wrapper,
                   'aria-hidden': 'true',
-                  ref: P,
+                  ref: E,
                   children: [
                       (0, r.jsx)(c.animated.div, {
                           className: x.background,

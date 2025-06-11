@@ -1,45 +1,45 @@
 n.d(t, { default: () => O });
 var r = n(255367),
-    l = n(73800),
-    o = n(442837),
+    o = n(73800),
+    l = n(442837),
     i = n(481060),
     c = n(541099),
-    u = n(827498),
-    a = n(421591),
+    a = n(827498),
+    u = n(421591),
     s = n(496977),
-    f = n(314734),
+    p = n(314734),
     d = n(388032),
-    p = n(472088);
-let O = l.memo(function (e) {
+    f = n(472088);
+let O = o.memo(function (e) {
     var t,
         n,
         { context: O } = e,
-        m = (function (e, t) {
+        b = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                l = (function (e, t) {
+                o = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        l = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                    return l;
+                        o = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                    return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
-            return l;
+            return o;
         })(e, ['context']);
-    let b = (0, o.e7)([c.Z], () => c.Z.shouldShowModal());
-    l.useEffect(() => {
-        b || (0, i.Fvk)(f.e9);
+    let m = (0, l.e7)([c.Z], () => c.Z.shouldShowModal());
+    o.useEffect(() => {
+        m || (0, i.Fvk)(p.e9);
     });
     let y = (0, s.Z)();
     return (0, r.jsx)('span', {
-        style: f.u$,
+        style: p.u$,
         children: (0, r.jsx)(
             i.Y0X,
             ((t = (function (e) {
@@ -68,18 +68,18 @@ let O = l.memo(function (e) {
                 return e;
             })(
                 {
-                    className: p.root,
+                    className: f.root,
                     'aria-label': d.intl.string(d.t.shUONj),
                     size: i.CgR.DYNAMIC
                 },
-                m
+                b
             )),
             (n = n =
                 {
                     parentComponent: 'AppLauncherModal',
-                    children: (0, r.jsx)(a.Z, {
+                    children: (0, r.jsx)(u.Z, {
                         context: O,
-                        entrypoint: u._b.VOICE,
+                        entrypoint: a._b.VOICE,
                         initHistory: y
                     })
                 }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(772848),
@@ -12,18 +12,18 @@ var r = n(255367),
     p = n(39127),
     m = n(981631),
     g = n(490650);
-function _(e) {
-    let { channelId: t, guildId: n, userId: _, containerDimensions: b } = e,
-        h = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-        [v, y] = i.useState([]),
-        O = v.length < 50;
+function b(e) {
+    let { channelId: t, guildId: n, userId: b, containerDimensions: _ } = e,
+        v = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
+        [h, y] = i.useState([]),
+        O = h.length < 50;
     i.useEffect(() => {
         function e(e) {
             var r;
             let { channelId: i, userId: a, emoji: o, animationType: s, animationId: p } = e;
-            if ((null != _ && _ !== a) || (u.Z.getEnabled() && (0, d.Z)(null != (r = null == o ? void 0 : o.name) ? r : ''))) return;
+            if ((null != b && b !== a) || (u.Z.getEnabled() && (0, d.Z)(null != (r = null == o ? void 0 : o.name) ? r : ''))) return;
             let g = null != o && null != s && null != p;
-            if (i === t && !h && O && g) {
+            if (i === t && !v && O && g) {
                 let e = (0, f._r)(o),
                     r = null != o.id && !o.animated,
                     i = {
@@ -47,7 +47,7 @@ function _(e) {
                 o.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
             }
         );
-    }, [t, n, _, h, O]);
+    }, [t, n, b, v, O]);
     let j = i.useCallback((e) => {
         y((t) => {
             let n = [...t],
@@ -55,18 +55,18 @@ function _(e) {
             return n.splice(r, 1), n;
         });
     }, []);
-    return h
+    return v
         ? null
         : (0, r.jsx)('div', {
               className: g.effectsWrapper,
-              style: { width: b.width },
+              style: { width: _.width },
               children: (0, r.jsx)('div', {
                   className: g.effects,
-                  children: v.map((e) =>
+                  children: h.map((e) =>
                       (0, r.jsx)(
                           p.Z,
                           {
-                              containerDimensions: b,
+                              containerDimensions: _,
                               effect: e,
                               onComplete: j
                           },

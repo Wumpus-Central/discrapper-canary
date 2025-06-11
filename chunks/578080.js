@@ -1,4 +1,4 @@
-n.d(t, { Z: () => W }), n(953529);
+n.d(t, { Z: () => V }), n(953529);
 var r = n(255367),
     o = n(73800),
     s = n(120356),
@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(475595),
     w = n(566078),
     S = n(340100),
-    P = n(611855),
-    E = n(644646),
+    E = n(611855),
+    P = n(644646),
     T = n(78826),
     N = n(670638),
     A = n(667105),
@@ -93,9 +93,9 @@ function L(e) {
           })
         : null;
 }
-let W = o.forwardRef(function (e, t) {
+let V = o.forwardRef(function (e, t) {
     var n, s;
-    let { children: _, className: W, collapsedHeight: V, expansionSpring: Z, isExpanded: Q, isExpansionAnimationComplete: H, onCtxMenuOpen: U, onCtxMenuClose: z, onCtxMenuSelect: F, quest: K, useReducedMotion: X } = e,
+    let { children: _, className: V, collapsedHeight: W, expansionSpring: Z, isExpanded: Q, isExpansionAnimationComplete: U, onCtxMenuOpen: H, onCtxMenuClose: z, onCtxMenuSelect: F, quest: K, useReducedMotion: X } = e,
         Y = (0, l.e7)([j.Z], () => j.Z.isEnrolling(K.id), [K]),
         G = (0, x.aM)(),
         J = (0, b.B6)(K.config.expiresAt),
@@ -130,7 +130,7 @@ let W = o.forwardRef(function (e, t) {
         ep = (null == (n = K.userStatus) ? void 0 : n.enrolledAt) != null,
         em = (null == (s = K.userStatus) ? void 0 : s.completedAt) != null,
         ef = o.useMemo(() => (0, y.Xv)(K.config), [K.config]),
-        eg = Q && H,
+        eg = Q && U,
         ex = (0, C.DD)({
             quest: K,
             taskDetails: ec,
@@ -151,7 +151,7 @@ let W = o.forwardRef(function (e, t) {
             };
         }, [K.config.colors.primary]);
     return (0, r.jsxs)(i.animated.div, {
-        className: a()(W, I.contentExpanded, { [I.contentInteractable]: eg }),
+        className: a()(V, I.contentExpanded, { [I.contentInteractable]: eg }),
         style: {
             backgroundColor: K.config.colors.secondary,
             transform: em
@@ -164,7 +164,7 @@ let W = o.forwardRef(function (e, t) {
                           }),
                           Z.to({
                               range: [0, 1],
-                              output: [0, V]
+                              output: [0, W]
                           })
                       ],
                       (e, t) => 'translateY(calc('.concat(e, '% + ').concat(t, 'px))')
@@ -185,7 +185,7 @@ let W = o.forwardRef(function (e, t) {
                                       (0, r.jsxs)('div', {
                                           className: I.questAcceptedContentHeading,
                                           children: [
-                                              (0, r.jsx)(E.Z, {
+                                              (0, r.jsx)(P.Z, {
                                                   className: I.questProgressRewardTile,
                                                   learnMoreStyle: 'icon',
                                                   quest: K,
@@ -214,7 +214,7 @@ let W = o.forwardRef(function (e, t) {
                                           ]
                                       }),
                                       (0, r.jsx)(N.r, {
-                                          onOpen: U,
+                                          onOpen: H,
                                           onClose: z,
                                           onSelect: F,
                                           questContent: v.jn.QUEST_BAR,
@@ -266,9 +266,9 @@ let W = o.forwardRef(function (e, t) {
                                       (0, r.jsxs)('div', {
                                           className: I.utils,
                                           children: [
-                                              (0, r.jsx)(P.Z, { color: 'always-white' }),
+                                              (0, r.jsx)(E.Z, { color: 'always-white' }),
                                               (0, r.jsx)(N.r, {
-                                                  onOpen: U,
+                                                  onOpen: H,
                                                   onClose: z,
                                                   onSelect: F,
                                                   questContent: v.jn.QUEST_BAR,
@@ -294,7 +294,7 @@ let W = o.forwardRef(function (e, t) {
                                       (0, r.jsxs)('div', {
                                           className: I.details,
                                           children: [
-                                              (0, r.jsx)(E.Z, {
+                                              (0, r.jsx)(P.Z, {
                                                   className: I.rewardTile,
                                                   learnMoreStyle: 'text',
                                                   quest: K,

@@ -28,7 +28,7 @@ let u = () => (0, r.Z)(),
                 game_name: r,
                 application_id: l,
                 author_id: c,
-                request_id: i.Z.getFeedRequestId(s.YN.GAME_PROFILE_FEED)
+                request_id: i.Z.getFeedRequestId(s.YN.GLOBAL_FEED)
             }),
             t
         );
@@ -42,7 +42,7 @@ let u = () => (0, r.Z)(),
             played_friend_ids: l,
             played_friends_data: c,
             similar_games: u,
-            request_id: i.Z.getFeedRequestId(s.YN.GAME_PROFILE_FEED),
+            request_id: i.Z.getFeedRequestId(s.YN.GLOBAL_FEED),
             official_guild_id: d
         });
     },

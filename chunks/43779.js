@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(953529);
+n.d(t, { Z: () => P }), n(953529);
 var r = n(255367),
     o = n(73800),
     s = n(120356),
@@ -23,23 +23,23 @@ var r = n(255367),
     O = n(642145),
     w = n(388032),
     S = n(882067);
-let P = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
-function E(e) {
-    var t, n, s, E, N;
+let E = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
+function P(e) {
+    var t, n, s, P, N;
     let { quest: A, questContent: R, isHovering: k, contentPosition: B, rowIndex: q, isVisibleInViewport: I, onReceiveErrorHints: D } = e,
         M = (0, g.j)({ location: C.dr.QUESTS_BAR_MOBILE }),
         L = o.useMemo(() => x.r.build(A.config), [A.config]),
-        W = L.defaultReward.messages.name,
-        V = L.defaultReward.messages.nameWithArticle,
-        Z = M ? W : V,
+        V = L.defaultReward.messages.name,
+        W = L.defaultReward.messages.nameWithArticle,
+        Z = M ? V : W,
         Q = (null == (t = A.userStatus) ? void 0 : t.enrolledAt) != null,
-        { ref: H, scrollHeight: U } = (0, d.kE)(),
-        z = 104 !== U,
+        { ref: U, scrollHeight: H } = (0, d.kE)(),
+        z = 104 !== H,
         { onAssetLoadComplete: F } = o.useContext(j.k),
         { expansionSpring: K } = (0, c.q_F)({
             expansionSpring: +!!k,
             config:
-                ((E = (function (e) {
+                ((P = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
@@ -66,7 +66,7 @@ function E(e) {
                 })({}, O.Y)),
                 (N = N = { clamp: !0 }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(E, Object.getOwnPropertyDescriptors(N))
+                    ? Object.defineProperties(P, Object.getOwnPropertyDescriptors(N))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -75,9 +75,9 @@ function E(e) {
                           }
                           return n;
                       })(Object(N)).forEach(function (e) {
-                          Object.defineProperty(E, e, Object.getOwnPropertyDescriptor(N, e));
+                          Object.defineProperty(P, e, Object.getOwnPropertyDescriptor(N, e));
                       }),
-                E)
+                P)
         }),
         X = (null == (n = A.userStatus) ? void 0 : n.completedAt) != null,
         Y = (null == (s = A.userStatus) ? void 0 : s.claimedAt) != null,
@@ -104,7 +104,7 @@ function E(e) {
                     : Y
                       ? (0, r.jsx)(T, {
                             questId: A.id,
-                            children: W
+                            children: V
                         })
                       : G
                         ? w.intl.format(w.t.ro1szc, {
@@ -127,7 +127,7 @@ function E(e) {
                                       children: Z
                                   })
                           }),
-            [W, Y, Z, A.id, J, G]
+            [V, Y, Z, A.id, J, G]
         ),
         er = o.useMemo(() => {
             if (null != et)
@@ -144,7 +144,7 @@ function E(e) {
         children: [
             (0, r.jsxs)(i.animated.div, {
                 style: {
-                    maxHeight: K.to([0, 1], [104, (null != U ? U : 0) + 12])
+                    maxHeight: K.to([0, 1], [104, (null != H ? H : 0) + 12])
                 },
                 className: S.rewardDescriptionContainer,
                 children: [
@@ -162,7 +162,7 @@ function E(e) {
                                           children: [
                                               X &&
                                                   (0, r.jsx)(c.Fmz, {
-                                                      importData: P,
+                                                      importData: E,
                                                       className: S.confetti,
                                                       loop: !1,
                                                       autoplay: !1,
@@ -199,7 +199,7 @@ function E(e) {
                         })
                     }),
                     (0, r.jsxs)('div', {
-                        ref: H,
+                        ref: U,
                         className: a()(S.textContainer, { [S.justifyCenter]: !z }),
                         children: [
                             (0, r.jsx)(c.X6q, {

@@ -52,7 +52,7 @@ function D(e) {
             loading: p,
             hasLoadedEver: f
         } = (0, c.cj)([b.Z], () => ({
-            messages: b.Z.getMentions(),
+            messages: b.Z.getSettingsFilteredMentions(),
             hasMore: b.Z.hasMore,
             loading: b.Z.loading,
             hasLoadedEver: b.Z.hasLoadedEver,

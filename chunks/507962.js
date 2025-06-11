@@ -1,7 +1,8 @@
 n.d(t, {
-    Vb: () => u,
+    Om: () => c,
+    Vb: () => d,
     hf: () => l,
-    uf: () => c
+    uf: () => u
 });
 var r = n(73800),
     i = n(906732),
@@ -19,8 +20,11 @@ let l = (e, t) => {
         }, [e, n]);
     },
     c = () => {
-        a.default.track(o.rMx.CUSTOM_THEME_RESET_BUTTON_CLICKED, {});
+        a.default.track(o.rMx.CUSTOM_THEMES_SURPRISE_BUTTON_CLICKED, {});
     },
     u = () => {
+        a.default.track(o.rMx.CUSTOM_THEME_RESET_BUTTON_CLICKED, {});
+    },
+    d = () => {
         a.default.track(o.rMx.CUSTOM_THEMES_BACK_BUTTON_CLICKED, {});
     };

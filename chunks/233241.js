@@ -6,22 +6,22 @@ var i = n(73800),
     a = n(752048),
     s = n(70956),
     c = n(709054),
-    u = n(146282),
-    d = n(26033),
+    u = n(26033),
+    d = n(897674),
     p = n(561308),
     h = n(206583);
 let f = s.Z.Millis.WEEK;
 function m(e, t) {
-    let { feed: n } = (0, o.cj)([u.Z], () => ({ feed: u.Z.getFeed(h.YN.GLOBAL_FEED) })),
+    let n = (0, d.Z)({
+            id: h.YN.GLOBAL_FEED,
+            unrankedEntries: !0
+        }),
         r = (0, o.cj)([a.Z], () => a.Z.getUserAffinitiesMap()),
         { treatmentType: s } = (0, l.ZB)(t);
     return i.useMemo(() => {
-        var t;
-        if (null == s) return [];
-        let i = null == n || null == (t = n.unranked_game_entries) ? void 0 : t.map((e) => e.content);
-        if (null == i) return [];
-        let o = i.filter((t) => (0, d.dX)(t) && (0, d.m9)(t) && t.extra.application_id === e && c.default.age(t.id) < f);
-        return 'recency' === s ? o.sort((e, t) => c.default.compare(t.id, e.id)) : 'art' === s ? o.sort((e, t) => y(r, t) - y(r, e)) : o;
+        if (null == s || null == n) return [];
+        let t = n.filter((t) => (0, u.dX)(t) && (0, u.m9)(t) && t.extra.application_id === e && c.default.age(t.id) < f);
+        return 'recency' === s ? t.sort((e, t) => c.default.compare(t.id, e.id)) : 'art' === s ? t.sort((e, t) => y(r, t) - y(r, e)) : t;
     }, [n, e, s, r]);
 }
 let g = 30 * s.Z.Seconds.MINUTE;

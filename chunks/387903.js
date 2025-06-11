@@ -17,10 +17,10 @@ var r,
     p = n(438139),
     m = n(410030),
     g = n(726542),
-    _ = n(600164),
-    b = n(686546),
-    h = n(111028),
-    v = n(925329),
+    b = n(600164),
+    _ = n(686546),
+    v = n(111028),
+    h = n(925329),
     y = n(810568),
     O = n(168524),
     j = n(565138),
@@ -36,8 +36,8 @@ var r,
     Z = n(833664),
     A = n(503438),
     D = n(802856),
-    L = n(420660),
-    k = n(39628),
+    k = n(420660),
+    L = n(39628),
     M = n(701488),
     R = n(981631),
     F = n(388032),
@@ -117,7 +117,7 @@ class H extends (r = a.PureComponent) {
         return (0, w.l)(U, e, this.props.type, t);
     }
     isStreamerOnTypeActivityFeed() {
-        return (0, L.Z)(this.activity) && 'ActivityFeed' === this.props.type;
+        return (0, k.Z)(this.activity) && 'ActivityFeed' === this.props.type;
     }
     renderHeader(e) {
         let t,
@@ -153,7 +153,7 @@ class H extends (r = a.PureComponent) {
                 (0, l.jsx)(f.X6q, {
                     className: s()((0, w.l)(U, 'headerText', e ? 'EmptyBody' : 'Normal')),
                     variant: i ? 'text-xs/semibold' : 'eyebrow',
-                    children: (0, l.jsx)(h.Z, { children: t })
+                    children: (0, l.jsx)(v.Z, { children: t })
                 }),
                 null == a ? void 0 : a()
             ]
@@ -176,7 +176,7 @@ class H extends (r = a.PureComponent) {
             { type: c } = this.props,
             { assets: u, application_id: d } = e;
         if (null == u || (null == u.large_image && null == u.small_image)) return null;
-        (0, L.Z)(e) && (i = W[c]);
+        (0, k.Z)(e) && (i = W[c]);
         let p = (0, A.Z)(e),
             m =
                 null != u.large_image
@@ -197,8 +197,8 @@ class H extends (r = a.PureComponent) {
         else if ((0, I.dS)(e)) {
             let t = (0, I.rq)(e);
             if (null == t) return null;
-            m = (0, l.jsx)(b.ZP, {
-                mask: b.ZP.Masks.SQUIRCLE,
+            m = (0, l.jsx)(_.ZP, {
+                mask: _.ZP.Masks.SQUIRCLE,
                 width: M.Si.SMALL,
                 height: M.Si.SMALL,
                 children: (0, l.jsx)('img', {
@@ -293,7 +293,7 @@ class H extends (r = a.PureComponent) {
             ? null
             : null == r && null != i
               ? (0, l.jsx)('div', { className: s()(U.gameIcon, U.screenshareIcon) })
-              : (0, l.jsx)(v.Z, {
+              : (0, l.jsx)(h.Z, {
                     className: U.gameIcon,
                     game: r
                 });
@@ -359,7 +359,7 @@ class H extends (r = a.PureComponent) {
         }
         return null == i || '' === i
             ? null
-            : ((0, L.Z)(e) && (i = F.intl.formatToPlainString(F.t.gmCZRU, { game: i })), null != t)
+            : ((0, k.Z)(e) && (i = F.intl.formatToPlainString(F.t.gmCZRU, { game: i })), null != t)
               ? (0, l.jsx)(f.P3F, {
                     onClick: t,
                     title: null != a ? a : void 0,
@@ -368,7 +368,7 @@ class H extends (r = a.PureComponent) {
                 })
               : (0, l.jsx)('div', {
                     title: null != a ? a : void 0,
-                    className: (0, L.Z)(e) || (0, A.Z)(e) ? U.detailsWrap : U.details,
+                    className: (0, k.Z)(e) || (0, A.Z)(e) ? U.detailsWrap : U.details,
                     children: i
                 });
     }
@@ -377,11 +377,11 @@ class H extends (r = a.PureComponent) {
         return n && null != t
             ? null == r
                 ? (0, l.jsx)('div', {
-                      className: (0, L.Z)(e) || (0, A.Z)(e) ? U.detailsWrap : U.details,
+                      className: (0, k.Z)(e) || (0, A.Z)(e) ? U.detailsWrap : U.details,
                       children: F.intl.format(F.t['hq/Qzc'], { guildName: t.name })
                   })
                 : (0, l.jsxs)('div', {
-                      className: s()((0, L.Z)(e) || (0, A.Z)(e) ? U.detailsWrap : U.details, U.guildDetails),
+                      className: s()((0, k.Z)(e) || (0, A.Z)(e) ? U.detailsWrap : U.details, U.guildDetails),
                       children: [
                           (0, l.jsx)(j.Z, {
                               guild: t,
@@ -431,7 +431,7 @@ class H extends (r = a.PureComponent) {
         let { start: n, end: r } = t;
         return null == n || null == r
             ? null
-            : (0, l.jsx)(k.Z, {
+            : (0, l.jsx)(L.Z, {
                   start: n,
                   end: r,
                   className: this.getTypeClass('timeBar'),
@@ -511,12 +511,12 @@ class H extends (r = a.PureComponent) {
         (0, D.Z)(c) ? ((e = this.renderXboxImage()), (p = !0)) : null == (e = this.renderImage(c)) && (p = null != (e = this.renderGameImage(c)));
         let m = this.renderName(c),
             g = this.renderDetails(c),
-            b = this.renderState(c, i),
-            h = this.renderTimePlayed(c),
-            v = this.renderChannelDetails(c),
+            _ = this.renderState(c, i),
+            v = this.renderTimePlayed(c),
+            h = this.renderChannelDetails(c),
             y = null != n ? n() : null,
             O = this.renderTimeBar(c),
-            j = ![e, m, g, b, h, O, y].some((e) => null != e);
+            j = ![e, m, g, _, v, O, y].some((e) => null != e);
         return (0, l.jsxs)('div', {
             className: s()(this.getTypeClass('activity'), r),
             children: [
@@ -529,7 +529,7 @@ class H extends (r = a.PureComponent) {
                             e,
                             this.isStreamerOnTypeActivityFeed()
                                 ? null
-                                : (0, l.jsxs)(_.Z.Child, {
+                                : (0, l.jsxs)(b.Z.Child, {
                                       className: s()((0, w.l)(U, 'content', p ? 'GameImage' : null != e ? 'Images' : 'NoImages', t)),
                                       children: [
                                           (0, l.jsxs)(f.P3F, {
@@ -540,9 +540,9 @@ class H extends (r = a.PureComponent) {
                                                             o(e), null == a || a();
                                                         }
                                                       : void 0,
-                                              children: [m, g, b, h]
+                                              children: [m, g, _, v]
                                           }),
-                                          v,
+                                          h,
                                           d ? null : O,
                                           u ? y : null
                                       ]

@@ -35,64 +35,69 @@ function T(e) {
 function A() {
     if (!j) return !1;
     let e = b.Z.getChannel(Z);
-    if (0 === O.trim().length) {
-        var t;
-        let n;
+    if (0 === O.trim().length)
         return (
             null != r && r.clearQuery(),
-            (t = e),
-            (n = C.Z.getFriendIDs()),
-            (null == t ? void 0 : t.isPrivate()) && (n = n.filter((e) => !t.recipients.includes(e))),
-            (I = n
-                .reduce((e, t) => {
-                    let n = x.default.getUser(t);
-                    return (
-                        null == n ||
-                            n.isProvisional ||
-                            e.push({
-                                user: n,
-                                comparator: g.ZP.getName(n)
-                            }),
-                        e
-                    );
-                }, [])
-                .sort(R)),
+            (I = (function (e) {
+                let t = C.Z.getFriendIDs(),
+                    n = x.default.getCurrentUser();
+                return (
+                    (null == n ? void 0 : n.isStaff()) && (t = Array.from(new Set([...t, ...x.default.filter((e) => e.isStaff() && e.id !== n.id, !1).map((e) => e.id)]))),
+                    (null == e ? void 0 : e.isPrivate()) && (t = t.filter((t) => !e.recipients.includes(t))),
+                    t
+                        .reduce((e, t) => {
+                            let n = x.default.getUser(t);
+                            return (
+                                null == n ||
+                                    n.isProvisional ||
+                                    e.push({
+                                        user: n,
+                                        comparator: g.ZP.getName(n)
+                                    }),
+                                e
+                            );
+                        }, [])
+                        .sort(R)
+                );
+            })(e)),
             !0
         );
+    let t = null != e ? e.recipients : [];
+    if (null != r) {
+        var n;
+        let e = x.default.getCurrentUser(),
+            i = null != (n = null == e ? void 0 : e.isStaff()) && n;
+        r.setQuery(
+            O,
+            {
+                friends: !0,
+                staff: i,
+                provisional: !1
+            },
+            t,
+            (function () {
+                let e = y.Z.getFrequentlyWithoutFetchingLatest().filter((e) => e instanceof f.mn && e.isDM()),
+                    t = Math.max(
+                        ...e.map((e) => {
+                            let { id: t } = e;
+                            return y.Z.getScoreWithoutFetchingLatest(t);
+                        })
+                    ),
+                    n = {};
+                return (
+                    e.forEach((e) => {
+                        let r = y.Z.getScoreWithoutFetchingLatest(e.id),
+                            i = e.getRecipientId(),
+                            l = 0.2 * !!C.Z.isFriend(i),
+                            a = 0.1 * (null != b.Z.getDMFromUserId(i));
+                        n[i] = 1 + r / t + l + a;
+                    }),
+                    n
+                );
+            })()
+        );
     }
-    let n = null != e ? e.recipients : [];
-    return (
-        null != r &&
-            r.setQuery(
-                O,
-                {
-                    friends: !0,
-                    provisional: !1
-                },
-                n,
-                (function () {
-                    let e = y.Z.getFrequentlyWithoutFetchingLatest().filter((e) => e instanceof f.mn && e.isDM()),
-                        t = Math.max(
-                            ...e.map((e) => {
-                                let { id: t } = e;
-                                return y.Z.getScoreWithoutFetchingLatest(t);
-                            })
-                        ),
-                        n = {};
-                    return (
-                        e.forEach((e) => {
-                            let r = y.Z.getScoreWithoutFetchingLatest(e.id),
-                                i = e.getRecipientId(),
-                                l = 0.2 * !!C.Z.isFriend(i),
-                                a = 0.1 * (null != b.Z.getDMFromUserId(i));
-                            n[i] = 1 + r / t + l + a;
-                        }),
-                        n
-                    );
-                })()
-            ),
-        !1
-    );
+    return !1;
 }
 function w() {
     if (!j) return !1;

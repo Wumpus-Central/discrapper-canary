@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => y });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -10,9 +10,8 @@ var i = n(120356),
     u = n(648613),
     d = n(433390),
     f = n(474936),
-    _ = n(388032),
-    p = n(163882);
-function h(e, t, n) {
+    _ = n(163882);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +24,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +35,12 @@ function m(e) {
                 })
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,29 +52,29 @@ function g(e, t) {
     }
     return n;
 }
-function E(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function b(e, t) {
+function E(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = y(e, t);
+        i = b(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function y(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -84,126 +83,83 @@ function y(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let O = function (e) {
-    var { subscriptionTier: t, onClick: n, size: i, className: h, textOptions: g, iconClassName: y, postSuccessGuild: O, onSubscribeModalClose: v, premiumModalAnalyticsLocation: I, showIcon: T = !0, disableShine: S, applicationId: A, giftMessage: N, shinyButtonClassName: C, showGradient: R = !1, confirmationFooter: P, paymentModalBanner: w, isGift: D, color: L, iconColor: x = 'currentColor', useExpressiveButton: k, giftIconClassName: M } = e,
-        j = b(e, ['subscriptionTier', 'onClick', 'size', 'className', 'textOptions', 'iconClassName', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'showIcon', 'disableShine', 'applicationId', 'giftMessage', 'shinyButtonClassName', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'isGift', 'color', 'iconColor', 'useExpressiveButton', 'giftIconClassName']);
-    let U = (0, o.e7)([c.Z], () => c.Z.isFocused()),
-        G = (0, d.Z)({
+let y = function (e) {
+    var { subscriptionTier: t, onClick: n, size: i, className: p, textOptions: m, iconClassName: b, postSuccessGuild: y, onSubscribeModalClose: O, premiumModalAnalyticsLocation: v, showIcon: I = !0, disableShine: T, applicationId: S, shinyButtonClassName: A, showGradient: N = !1, confirmationFooter: C, paymentModalBanner: R, color: P, iconColor: w = 'currentColor', useExpressiveButton: D } = e,
+        L = E(e, ['subscriptionTier', 'onClick', 'size', 'className', 'textOptions', 'iconClassName', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'showIcon', 'disableShine', 'applicationId', 'shinyButtonClassName', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'color', 'iconColor', 'useExpressiveButton']);
+    let x = (0, o.e7)([c.Z], () => c.Z.isFocused()),
+        k = (0, d.Z)({
             subscriptionTier: t,
-            buttonTextOverride: null == g ? void 0 : g.textOverride,
-            defaultTextOverride: null == g ? void 0 : g.subscribeText
+            buttonTextOverride: null == m ? void 0 : m.textOverride,
+            defaultTextOverride: null == m ? void 0 : m.subscribeText
         }),
-        B = {
+        M = {
             onClick: n,
             subscriptionTier: t,
-            postSuccessGuild: O,
-            onSubscribeModalClose: v,
-            premiumModalAnalyticsLocation: I,
-            applicationId: A,
-            confirmationFooter: P,
-            paymentModalBanner: w,
-            isGift: D,
-            giftMessage: N
+            postSuccessGuild: y,
+            onSubscribeModalClose: O,
+            premiumModalAnalyticsLocation: v,
+            applicationId: S,
+            confirmationFooter: C,
+            paymentModalBanner: R
         };
-    if (k && (null == g ? void 0 : g.expressiveButtonText) != null)
+    if (D && (null == m ? void 0 : m.expressiveButtonText) != null)
         return (0, r.jsx)(
             u.Z,
-            E(m({}, B), {
+            g(h({}, M), {
                 children: (e) => {
                     var t;
                     let { onClick: n } = e;
                     return (0, r.jsx)(s.z, {
                         onClick: n,
                         variant: 'expressive',
-                        text: null != (t = null == g ? void 0 : g.expressiveButtonText) ? t : '',
+                        text: null != (t = null == m ? void 0 : m.expressiveButtonText) ? t : '',
                         icon: l.SrA
                     });
                 }
             })
         );
-    if (D) {
-        let e = t === f.Si.TIER_0 ? _.intl.string(_.t.rk4Uu7) : _.intl.string(_.t.Ve9Ge3);
+    function j(e) {
+        let n = null != P ? P : t === f.Si.TIER_1 ? l.zxk.Colors.PRIMARY : l.zxk.Colors.GREEN;
         return (0, r.jsx)(
             u.Z,
-            E(m({}, B), {
-                children: (t) => {
-                    var n;
-                    let { onClick: o } = t;
-                    return (0, r.jsxs)(
-                        l.zxk,
-                        E(
-                            m(
-                                {
-                                    size: i,
-                                    className: h,
-                                    innerClassName: p.giftButton,
-                                    color: null != L ? L : l.zxk.Colors.PRIMARY,
-                                    onClick: o
-                                },
-                                j
-                            ),
-                            {
-                                children: [
-                                    T &&
-                                        (0, r.jsx)(l.OgN, {
-                                            size: 'md',
-                                            color: 'currentColor',
-                                            className: a()(p.giftIcon, M)
-                                        }),
-                                    (0, r.jsx)('span', {
-                                        className: a()(p.buttonText, null == g ? void 0 : g.textClassName),
-                                        children: null != (n = null == g ? void 0 : g.textOverride) ? n : e
-                                    })
-                                ]
-                            }
-                        )
-                    );
-                }
-            })
-        );
-    }
-    function F(e) {
-        let n = null != L ? L : t === f.Si.TIER_1 ? l.zxk.Colors.PRIMARY : l.zxk.Colors.GREEN;
-        return (0, r.jsx)(
-            u.Z,
-            E(m({}, B), {
+            g(h({}, M), {
                 children: (o) => {
                     let { onClick: s } = o;
                     return (0, r.jsxs)(
                         l.gtL,
-                        E(
-                            m(
+                        g(
+                            h(
                                 {
-                                    disabled: G.disabled,
+                                    disabled: k.disabled,
                                     onClick: s,
-                                    innerClassName: p.premiumSubscribeButton,
+                                    innerClassName: _.premiumSubscribeButton,
                                     color: n,
                                     size: i,
-                                    className: C,
+                                    className: A,
                                     wrapperClassName: a()(
                                         {
-                                            [p.tier2Gradient]: R && t === f.Si.TIER_2,
-                                            [p.tier1Gradient]: R && t === f.Si.TIER_1
+                                            [_.tier2Gradient]: N && t === f.Si.TIER_2,
+                                            [_.tier1Gradient]: N && t === f.Si.TIER_1
                                         },
-                                        h
+                                        p
                                     ),
-                                    buttonShineClassName: 'buttonShineClassName' in j ? j.buttonShineClassName : n === l.Ttl.BRAND_INVERTED ? p.brandShine : void 0,
-                                    pauseAnimation: !U || S
+                                    buttonShineClassName: 'buttonShineClassName' in L ? L.buttonShineClassName : n === l.Ttl.BRAND_INVERTED ? _.brandShine : void 0,
+                                    pauseAnimation: !x || T
                                 },
-                                j,
+                                L,
                                 e
                             ),
                             {
                                 children: [
-                                    T &&
+                                    I &&
                                         (0, r.jsx)(l.SrA, {
                                             size: 'md',
-                                            color: x,
-                                            className: a()(p.premiumIcon, y)
+                                            color: w,
+                                            className: a()(_.premiumIcon, b)
                                         }),
                                     (0, r.jsx)('span', {
-                                        className: a()(p.buttonText, null == g ? void 0 : g.textClassName),
-                                        children: G.buttonText
+                                        className: a()(_.buttonText, null == m ? void 0 : m.textClassName),
+                                        children: k.buttonText
                                     })
                                 ]
                             }
@@ -213,10 +169,10 @@ let O = function (e) {
             })
         );
     }
-    return null != G.buttonTooltipText
+    return null != k.buttonTooltipText
         ? (0, r.jsx)(l.ua7, {
-              text: G.buttonTooltipText,
-              children: F
+              text: k.buttonTooltipText,
+              children: j
           })
-        : F();
+        : j();
 };

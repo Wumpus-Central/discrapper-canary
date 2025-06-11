@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(415506), n(388685);
+n.d(t, { Z: () => b }), n(415506), n(388685);
 var r,
     i,
     l = n(255367),
@@ -108,7 +108,7 @@ let m = (e) => (t, n) => (null == n ? '' : c.intl.format(e(), d({ time: t }, n))
             }
         }
     };
-function _(e) {
+function b(e) {
     var t, n;
     return (
         (n = class extends (t = a.PureComponent) {
@@ -176,12 +176,12 @@ function _(e) {
                 let p = this.getTimeUnit(u, i, f),
                     m = g[i][f];
                 if (null == m) return null;
-                let _ = m[p],
-                    b = Math.floor((0, o.A3)(u, p));
+                let b = m[p],
+                    _ = Math.floor((0, o.A3)(u, p));
                 return (0, l.jsx)(
                     e,
                     ((t = d({}, c)),
-                    (n = n = { children: null == _ ? void 0 : _(b, a, s) }),
+                    (n = n = { children: null == b ? void 0 : b(_, a, s) }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {

@@ -1,5 +1,5 @@
 n.d(t, {
-    i0: () => P,
+    i0: () => E,
     yD: () => T
 });
 var r = n(255367),
@@ -114,7 +114,7 @@ let O = (e) => {
               })
             : null;
     },
-    P = (e) => {
+    E = (e) => {
         var t,
             n,
             s,
@@ -143,7 +143,7 @@ let O = (e) => {
                 location: m.jn.QUEST_BAR_V2
             }),
             S = (0, g.up)(b.dr.QUESTS_BAR),
-            P = o.useCallback(
+            E = o.useCallback(
                 (e) => {
                     var t;
                     null == C || C(e),
@@ -164,7 +164,7 @@ let O = (e) => {
                 {
                     fullWidth: !0,
                     size: i.zxk.Sizes.SMALL,
-                    onClick: P,
+                    onClick: E,
                     pauseAnimation: u || !p,
                     className: a()(y.cta, h),
                     buttonShineClassName: y.shine
@@ -187,14 +187,14 @@ let O = (e) => {
             t)
         );
     },
-    E = (e) => {
+    P = (e) => {
         var t;
         let { quest: n, useReducedMotion: o, isExpanded: s, awaitingConsoleConnections: a, hasMadeProgress: i, isProgressing: l, activeScreen: c, taskDetails: d } = e,
             u = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
             p = (0, f.q8)(n),
             g = (0, f.Vl)(n);
         if (u)
-            return (0, r.jsx)(P, {
+            return (0, r.jsx)(E, {
                 quest: n,
                 useReducedMotion: o,
                 isExpanded: s
@@ -224,7 +224,7 @@ function T(e) {
                     onClick: e.onBack,
                     children: (0, r.jsx)(i.V7D, { className: y.backIcon })
                 }),
-            (0, r.jsx)(E, _({}, e))
+            (0, r.jsx)(P, _({}, e))
         ]
     });
 }

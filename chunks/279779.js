@@ -30,17 +30,13 @@ function b(e, t, n) {
 }
 let y = 10;
 function O(e) {
+    var t, n;
     if (null == e || d.Z.isBlockedOrIgnored(e.id)) return null;
-    let t = {
+    let r = {
         id: e.id,
         username: '0' !== e.discriminator ? ''.concat(e.username, '#').concat(e.discriminator) : e.username
     };
-    if ((null != g.ZP.getGlobalName(e) && (t.globalName = e.globalName), e.bot && (t.isBot = !0), e instanceof l.Z)) t.isProvisional = e.isProvisional;
-    else if ('flags' in e) {
-        var n;
-        t.isProvisional = _.yE(null != (n = e.flags) ? n : 0, E.xW$.PROVISIONAL_ACCOUNT);
-    } else t.isProvisional = !1;
-    return d.Z.isFriend(e.id) && ((t.isFriend = !0), (t.friendNickname = d.Z.getNickname(e.id))), t;
+    return null != g.ZP.getGlobalName(e) && (r.globalName = e.globalName), e.bot && (r.isBot = !0), e instanceof l.Z ? (r.isProvisional = e.isProvisional) : 'flags' in e ? (r.isProvisional = _.yE(null != (t = e.flags) ? t : 0, E.xW$.PROVISIONAL_ACCOUNT)) : (r.isProvisional = !1), d.Z.isFriend(e.id) && ((r.isFriend = !0), (r.friendNickname = d.Z.getNickname(e.id))), e instanceof l.Z ? (r.isStaff = e.isStaff()) : 'flags' in e ? (r.isStaff = _.yE(null != (n = e.flags) ? n : 0, E.xW$.STAFF)) : (r.isStaff = !1), r;
 }
 function v(e, t, n) {
     null != e && (e[t] = null != n && '' !== n ? n : null);

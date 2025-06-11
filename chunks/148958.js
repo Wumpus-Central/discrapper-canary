@@ -1,22 +1,22 @@
-n.d(t, { h: () => u }), n(388685), n(539854), n(642613);
+n.d(t, { h: () => s }), n(388685), n(539854), n(642613);
 var r = n(73800),
-    i = n(442837),
+    o = n(442837),
     l = n(581364),
-    a = n(675478),
-    o = n(709054),
-    s = n(822245),
-    c = n(526761);
-function u(e, t) {
+    i = n(675478),
+    c = n(709054),
+    a = n(822245),
+    u = n(526761);
+function s(e, t) {
     r.useEffect(() => {
-        a.DZ.loadIfUncached(c.yP.FRECENCY_AND_FAVORITES_SETTINGS);
+        i.DZ.loadIfUncached(u.yP.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
-    let n = (0, i.e7)([s.Z], () => s.Z.getApplicationFrecencyWithoutLoadingLatest()),
-        u = r.useMemo(
+    let n = (0, o.e7)([a.Z], () => a.Z.getApplicationFrecencyWithoutLoadingLatest()),
+        s = r.useMemo(
             () =>
                 null == t || 0 === t.length
                     ? e
                     : e.map((e) => {
-                          var n, r, i;
+                          var n, r, o;
                           return (
                               (r = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
@@ -43,9 +43,9 @@ function u(e, t) {
                                   }
                                   return e;
                               })({}, e)),
-                              (i = i = { isUserApp: null != (n = null == t ? void 0 : t.some((t) => t.application.id === e.id)) && n }),
+                              (o = o = { isUserApp: null != (n = null == t ? void 0 : t.some((t) => t.application.id === e.id)) && n }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
+                                  ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(o))
                                   : (function (e, t) {
                                         var n = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
@@ -53,49 +53,49 @@ function u(e, t) {
                                             n.push.apply(n, r);
                                         }
                                         return n;
-                                    })(Object(i)).forEach(function (e) {
-                                        Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
+                                    })(Object(o)).forEach(function (e) {
+                                        Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(o, e));
                                     }),
                               r
                           );
                       }),
             [e, t]
         ),
-        d = r.useMemo(() => (null == t ? void 0 : t.filter((t) => !e.some((e) => e.id === t.application.id))), [e, t]),
-        m = r.useMemo(() => {
+        p = r.useMemo(() => (null == t ? void 0 : t.filter((t) => !e.some((e) => e.id === t.application.id))), [e, t]),
+        d = r.useMemo(() => {
             var e;
-            null == d ||
-                d.forEach((e) => {
-                    let t = o.default.extractTimestamp(e.id);
+            null == p ||
+                p.forEach((e) => {
+                    let t = c.default.extractTimestamp(e.id);
                     null == n.getEntry(e.application.id) && n.track(e.application.id, t);
                 }),
                 n.compute();
-            let t = null != (e = null == d ? void 0 : d.map((e) => (0, l.X0)(e.application, !0))) ? e : [],
-                r = [...u];
+            let t = null != (e = null == p ? void 0 : p.map((e) => (0, l.X0)(e.application, !0))) ? e : [],
+                r = [...s];
             return (
                 r.push(...t),
                 r.sort((e, t) => {
-                    var r, i;
-                    let l = (null != (r = n.getScore(t.id)) ? r : 0) - (null != (i = n.getScore(e.id)) ? i : 0);
+                    var r, o;
+                    let l = (null != (r = n.getScore(t.id)) ? r : 0) - (null != (o = n.getScore(e.id)) ? o : 0);
                     return 0 !== l ? l : e.name.localeCompare(t.name);
                 }),
                 r
             );
-        }, [u, n, d]);
+        }, [s, n, p]);
     return r.useMemo(() => {
         var e, r;
-        let i, l;
+        let o, l;
         null == t ||
             t.forEach((e) => {
-                let t = o.default.extractTimestamp(e.id);
-                (null == l || t > l) && ((i = e), (l = t));
+                let t = c.default.extractTimestamp(e.id);
+                (null == l || t > l) && ((o = e), (l = t));
             }),
-            u.forEach((e) => {
+            s.forEach((e) => {
                 var t, r;
-                let a = Math.max(...(null != (r = null == (t = n.getEntry(e.id)) ? void 0 : t.recentUses) ? r : []));
-                (null == l || a > l) && ((i = e), (l = a));
+                let i = Math.max(...(null != (r = null == (t = n.getEntry(e.id)) ? void 0 : t.recentUses) ? r : []));
+                (null == l || i > l) && ((o = e), (l = i));
             });
-        let a = null != (r = null == i || null == (e = i.application) ? void 0 : e.id) ? r : '';
-        return [...m.filter((e) => e.id === a), ...m.filter((e) => e.id !== a)];
-    }, [m, u, n, t]);
+        let i = null != (r = null == o || null == (e = o.application) ? void 0 : e.id) ? r : '';
+        return [...d.filter((e) => e.id === i), ...d.filter((e) => e.id !== i)];
+    }, [d, s, n, t]);
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => E });
 var r = n(255367),
     o = n(73800),
     s = n(120356),
@@ -52,7 +52,7 @@ function S(e) {
             },
             afterRequest: d.stopAnimation
         }),
-        { header: P, renderBody: E } = o.useMemo(() => {
+        { header: E, renderBody: P } = o.useMemo(() => {
             let e = y.length > 0,
                 n = t.config.messages.gameTitle;
             return {
@@ -115,7 +115,7 @@ function S(e) {
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: 'text-xs/medium',
-                        children: P
+                        children: E
                     }),
                     (0, r.jsx)(c.P3F, {
                         className: a()(O.microphoneUnitRefreshIconWrapper, { [O.disabled]: _ }),
@@ -126,12 +126,12 @@ function S(e) {
             }),
             (0, r.jsxs)('div', {
                 className: a()({ [O.opacity_50]: _ }),
-                children: [E(), 0 === y.length ? null : (0, r.jsx)(w, { children: l })]
+                children: [P(), 0 === y.length ? null : (0, r.jsx)(w, { children: l })]
             })
         ]
     });
 }
-let P = function (e) {
+let E = function (e) {
     let { quest: t, taskDetails: n } = e,
         s = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         a = (0, g.z6)(),

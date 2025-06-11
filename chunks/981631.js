@@ -504,6 +504,7 @@ var o = n(106351),
             (e.ENHANCED_ROLE_COLORS = 'ENHANCED_ROLE_COLORS'),
             (e.PREMIUM_TIER_3_OVERRIDE = 'PREMIUM_TIER_3_OVERRIDE'),
             (e.REPORT_TO_MOD_PILOT = 'REPORT_TO_MOD_PILOT'),
+            (e.TIERLESS_BOOSTING_SYSTEM_MESSAGE = 'TIERLESS_BOOSTING_SYSTEM_MESSAGE'),
             e
         );
     })({});
@@ -2014,6 +2015,7 @@ var tC = (function (e) {
             (e.ORBS_ANNOUNCEMENT_MODAL = 'Orbs Announcement Modal'),
             (e.GLOBAL_DISCOVERY_QUESTS = 'Global Discovery Quests'),
             (e.BOGO_PROMOTION_ACTION_SHEET = 'Bogo Promotion Action Sheet'),
+            (e.BOGO_PROMOTION_MARKETING_PAGE_BANNER = 'Bogo Promotion Marketing Page Banner'),
             e
         );
     })({});
@@ -3218,6 +3220,8 @@ var n_ = (function (e) {
             (e.QUEST_CONTENT_VIEWED = 'quest_content_viewed'),
             (e.QUEST_CONTENT_VIEW_TIME = 'quest_content_view_time'),
             (e.QUEST_DECISION_ROUNDTRIP = 'quest_decision_roundtrip'),
+            (e.QUEST_DECISION_ROUNDTRIP_ERROR = 'quest_decision_roundtrip_error'),
+            (e.QUEST_DECISION_RECEIVED = 'quest_decision_received'),
             (e.QUEST_ASSET_LOADING_FAILURE = 'quest_asset_loading_failure'),
             (e.QUEST_CONTENT_RENDERING_FAILURE = 'quest_content_rendering_failure'),
             (e.QUEST_BAR_RENDER_PERFORMANCE_MEASURED = 'quest_bar_render_performance_measured'),
@@ -3875,6 +3879,7 @@ var n_ = (function (e) {
             (e.CLIENT_THEME_PREVIEW_CLOSED = 'client_theme_preview_closed'),
             (e.CUSTOM_THEME_RESET_BUTTON_CLICKED = 'custom_theme_reset_button_clicked'),
             (e.CUSTOM_THEMES_BACK_BUTTON_CLICKED = 'custom_themes_back_button_clicked'),
+            (e.CUSTOM_THEMES_SURPRISE_BUTTON_CLICKED = 'custom_themes_surprise_button_clicked'),
             (e.GUILD_DROPDOWN_MENU_VIEWED = 'guild_dropdown_menu_viewed'),
             (e.VOICE_MESSAGE_PLAYBACK_ENDED = 'voice_message_playback_ended'),
             (e.VOICE_MESSAGE_PLAYBACK_FAILED = 'voice_message_playback_failed'),

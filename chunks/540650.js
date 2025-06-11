@@ -4,7 +4,7 @@ var r = n(255367),
     i = n(875527),
     a = n(306609);
 function o(e) {
-    let { onClose: t, onInteraction: n, location: o } = e;
+    let { onClose: t, onInteraction: n, location: o, overlayLimitedInteraction: u = !1 } = e;
     return (0, i.Hu)({
         location: o,
         autoTrackExposure: !0
@@ -12,7 +12,8 @@ function o(e) {
         ? (0, r.jsx)(a.l, {
               wide: !0,
               showOutputDevices: !0,
-              onSettingsButtonClick: t
+              onSettingsButtonClick: t,
+              showSearchBar: !u
           })
         : (0, r.jsx)(l.default, {
               onClose: t,

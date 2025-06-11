@@ -19,7 +19,7 @@ var i = n(255367),
     E = n(333867),
     j = n(963249),
     C = n(87484),
-    O = n(767714),
+    O = n(736519),
     S = n(911367),
     v = n(43747),
     T = n(970815),
@@ -153,8 +153,9 @@ let w = function () {
                         }),
                         (0, i.jsx)(O.Z, {
                             subscriptionTier: e,
-                            isGift: !0,
-                            premiumModalAnalyticsLocation: {}
+                            premiumModalAnalyticsLocation: {},
+                            color: o.Ttl.PRIMARY,
+                            look: o.iLD.FILLED
                         })
                     ]
                 }),

@@ -179,7 +179,7 @@ function D(e) {
             },
             []
         ),
-        u = (0, _.Ns)(t.id),
+        u = (0, _.N)(t.id),
         d = (0, o.Wu)(
             [v.default, y.Z],
             () => {

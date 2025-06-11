@@ -6,8 +6,8 @@ n.r(t),
         transformUser: () => S,
         users: () => b
     }),
-    n(388685),
     n(997841),
+    n(388685),
     n(825670),
     n(539854),
     n(642613);
@@ -77,19 +77,26 @@ function S(e) {
     let i = e.age_verification_status;
     null != i && ((e.ageVerificationStatus = i), delete e.age_verification_status);
     let a = e.public_flags;
-    null != a && ((e.publicFlags = a), delete e.public_flags);
-    let c = e.purchased_flags;
-    void 0 !== c && ((e.purchasedFlags = c), delete e.purchased_flags);
-    let d = e.premium_usage_flags;
-    void 0 !== d && ((e.premiumUsageFlags = d), delete e.premium_usage_flags), null === e.banner_color && delete e.banner_color;
-    let f = e.avatar_decoration_data;
-    void 0 !== f && ((e.avatarDecorationData = (0, o.FG)(f)), delete e.avatar_decoration_data);
-    let _ = e.collectibles;
-    void 0 !== _ && (delete e.collectibles, (e.collectibles = (0, s.Xm)(_)));
-    let p = e.global_name;
-    void 0 !== p && ((e.globalName = p), delete e.global_name);
-    let h = e.primary_guild;
-    return void 0 !== h && (e.primary_guild = (0, l.l)(h)), e;
+    if (null != a) {
+        if (((e.publicFlags = a), (a & m.xW$.STAFF) != 0)) {
+            var c;
+            let t = null != (c = e.flags) ? c : 0;
+            e.flags = t | m.xW$.STAFF;
+        }
+        delete e.public_flags;
+    }
+    let d = e.purchased_flags;
+    void 0 !== d && ((e.purchasedFlags = d), delete e.purchased_flags);
+    let f = e.premium_usage_flags;
+    void 0 !== f && ((e.premiumUsageFlags = f), delete e.premium_usage_flags), null === e.banner_color && delete e.banner_color;
+    let _ = e.avatar_decoration_data;
+    void 0 !== _ && ((e.avatarDecorationData = (0, o.FG)(_)), delete e.avatar_decoration_data);
+    let p = e.collectibles;
+    void 0 !== p && (delete e.collectibles, (e.collectibles = (0, s.Xm)(p)));
+    let h = e.global_name;
+    void 0 !== h && ((e.globalName = h), delete e.global_name);
+    let g = e.primary_guild;
+    return void 0 !== g && (e.primary_guild = (0, l.l)(g)), e;
 }
 function A(e) {
     return e.id !== p.default.getId();
@@ -152,14 +159,21 @@ function P(e, t) {
             });
 }
 function w(e) {
-    let { user: t, users: n, guilds: r } = e;
+    let { user: t, users: r, guilds: i } = e;
     delete t.premium,
         delete t.banner_color,
         N(t),
-        n.forEach((e) => {
+        r.forEach((e) => {
             N(e);
         }),
-        r.forEach((e) => {
+        n
+            .e('831')
+            .then(n.bind(n, 475941))
+            .then((e) => {
+                let { default: t } = e;
+                t.preloadStaffMembers();
+            }),
+        i.forEach((e) => {
             e.members.forEach((t) => {
                 v(t.user.id, e.id, t.avatar), I(t.user.id, t.user);
             });

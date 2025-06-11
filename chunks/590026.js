@@ -10,7 +10,7 @@ var r = n(73800),
     d = n(206583);
 let p = new Set([i.s.PLAYED_GAME, i.s.WATCHED_MEDIA, i.s.TOP_GAME, i.s.TOP_ARTIST, i.s.LISTENED_SESSION, i.s.LAUNCHED_ACTIVITY]);
 function h(e) {
-    let t = (0, u.Z)(d.YN.GLOBAL_FEED);
+    let t = (0, u.Z)({ id: d.YN.GLOBAL_FEED });
     (t = (0, s.Z)({
         entries: t,
         channelId: e

@@ -161,12 +161,10 @@ function B(e) {
     null != n && (null == (t = c.Z.getAccount(n, E.ABu.SPOTIFY)) ? void 0 : t.showActivity) && C(n, r);
 }
 function F() {
-    let { enabled: e } = _.iC.getCurrentConfig({ location: 'ContentInventoryManager' }, { autoTrackExposure: !0 });
-    e &&
-        x({
-            feedId: g.YN.GAME_PROFILE_FEED,
-            feature: i.L.GAME_PROFILE
-        });
+    x({
+        feedId: g.YN.GLOBAL_FEED,
+        feature: i.L.GAME_PROFILE
+    });
 }
 class V extends o.Z {
     constructor(...e) {
