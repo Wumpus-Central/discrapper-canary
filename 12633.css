@@ -19195,7 +19195,9 @@ span.clanTag__5d473 {
 
 :where(.outer_c0bea0).user-profile-modal-v2 {
     background: var(--background-base-lower);
+    border: 1px solid var(--border-normal);
     border-radius: var(--radius-lg);
+    box-sizing: border-box;
     height: 800px;
     max-width: 100%;
     min-width: 800px;
