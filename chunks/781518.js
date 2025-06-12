@@ -19,7 +19,7 @@ var r = n(544891),
     c = n(18323),
     u = n(616922),
     d = n(981631);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,7 +43,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -75,7 +75,7 @@ let m = 5000,
     g = 5000;
 function E(e, t, n, r) {
     let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1;
-    return e((r = h(_({}, r), { headers: { authorization: 'Bearer '.concat(n) } })))
+    return e((r = h(f({}, r), { headers: { authorization: 'Bearer '.concat(n) } })))
         .then((e) => (202 === e.status ? Promise.reject(e) : e))
         .catch((n) => {
             let o = !0 !== r.onlyRetryOnAuthorizationErrors && 202 === n.status;

@@ -5,7 +5,7 @@ n.d(t, {
     Xg: () => d,
     dw: () => g,
     ej: () => c,
-    i4: () => f,
+    i4: () => _,
     jX: () => u,
     ld: () => o,
     uv: () => l
@@ -20,8 +20,8 @@ let a = '--theme-base-color-amount',
     c = '--theme-base-color-light-hsl',
     u = '--theme-base-color-dark',
     d = '--theme-text-color-dark',
-    f = '--theme-base-color-dark-hsl',
-    _ = 50,
+    _ = '--theme-base-color-dark-hsl',
+    f = 50,
     p = 38;
 function h(e) {
     let { primaryColor: t, secondaryColor: n, isDarkTheme: r } = e,
@@ -32,9 +32,9 @@ function h(e) {
     (0 === c || Number.isNaN(c)) && (l = s);
     let u = r ? s.set('hsl.s', 1) : l.set('hsl.s', 1),
         d = u.get('hsl.h'),
-        f = d >= 200 && d <= 300 ? (r ? 0.8 : 0.25) : r ? 0.95 : 0.15;
+        _ = d >= 200 && d <= 300 ? (r ? 0.8 : 0.25) : r ? 0.95 : 0.15;
     return (
-        (u = u.set('hsl.l', f)),
+        (u = u.set('hsl.l', _)),
         {
             base: r ? l.set('hsl.s', 1).set('hsl.l', 0.05) : s.set('hsl.s', 1).set('hsl.l', 0.9),
             text: u
@@ -42,7 +42,7 @@ function h(e) {
     );
 }
 function m(e) {
-    let { enabled: t, primaryColor: n, secondaryColor: r, baseMixAmount: i = _, textMixAmount: m = p } = e,
+    let { enabled: t, primaryColor: n, secondaryColor: r, baseMixAmount: i = f, textMixAmount: m = p } = e,
         { base: E, text: b } = h({
             primaryColor: n,
             secondaryColor: r,
@@ -57,7 +57,7 @@ function m(e) {
         [c]: g(y),
         [s]: y.css(),
         [l]: O.css(),
-        [f]: g(E),
+        [_]: g(E),
         [u]: E.css(),
         [d]: b.css(),
         [a]: ''.concat(t ? i : 0, '%'),

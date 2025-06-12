@@ -44,10 +44,10 @@ function s(e, t, n) {
         },
         l = (e) => {
             let { start: n, end: i, shouldScrollToStart: o = !1, padding: l = 0, animate: c, callback: u } = e,
-                { scrollPosition: d, offsetSize: f } = a(t(), r);
+                { scrollPosition: d, offsetSize: _ } = a(t(), r);
             (n -= l),
                 (i += l),
-                n >= d && i <= d + f
+                n >= d && i <= d + _
                     ? null != u && u()
                     : n < d || o
                       ? s({
@@ -56,7 +56,7 @@ function s(e, t, n) {
                             callback: u
                         })
                       : s({
-                            to: i - f,
+                            to: i - _,
                             animate: c,
                             callback: u
                         });
@@ -70,10 +70,10 @@ function s(e, t, n) {
             let { node: n, shouldScrollToStart: a = !1, padding: o = 0, animate: s = !1, callback: c } = t,
                 { current: u } = e;
             if (null == u) return;
-            let { offset: d, offsetSize: f } = i(n, r, u);
+            let { offset: d, offsetSize: _ } = i(n, r, u);
             l({
                 start: d,
-                end: d + f,
+                end: d + _,
                 shouldScrollToStart: a,
                 padding: o,
                 animate: s,

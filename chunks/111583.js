@@ -8,8 +8,8 @@ var i,
     c = n(70956),
     u = n(314897),
     d = n(300429),
-    f = n(981631);
-function _(e, t, n) {
+    _ = n(981631);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
@@ -65,7 +65,7 @@ function O(e) {
                 R(t) > g ||
                     o.tn
                         .post({
-                            url: f.ANM.TYPING(t),
+                            url: _.ANM.TYPING(t),
                             oldFormErrors: !0,
                             rejectWithError: !0
                         })
@@ -176,7 +176,7 @@ class P extends (i = a.ZP.Store) {
         return null != y(e)[t];
     }
 }
-_(P, 'displayName', 'TypingStore');
+f(P, 'displayName', 'TypingStore');
 let w = new P(s.Z, {
     TYPING_START: S,
     TYPING_STOP: A,

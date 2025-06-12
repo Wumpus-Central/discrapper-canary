@@ -1,4 +1,4 @@
-n.d(t, { y: () => _ }), n(388685), n(583741);
+n.d(t, { y: () => f }), n(388685), n(583741);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -36,12 +36,12 @@ function d(e) {
     }
     return e;
 }
-var f = (function (e) {
+var _ = (function (e) {
     return (e.XSMALL = 'xsmall'), (e.SMALL = 'small'), (e.LARGE = 'large'), e;
-})(f || {});
-function _(e) {
-    let { className: t, percents: n, size: i = 'small', foregroundColors: o = [l.Z.unsafe_rawColors.BRAND_500.css], backgroundColor: u = 'var(--background-modifier-active)', animate: f = !0 } = e,
-        _ = s()
+})(_ || {});
+function f(e) {
+    let { className: t, percents: n, size: i = 'small', foregroundColors: o = [l.Z.unsafe_rawColors.BRAND_500.css], backgroundColor: u = 'var(--background-modifier-active)', animate: _ = !0 } = e,
+        f = s()
             .zip(n, o)
             .map((e, t) => {
                 let n,
@@ -51,7 +51,7 @@ function _(e) {
                     (0, r.jsx)(
                         'div',
                         {
-                            className: a()(c.progressBar, c[i], { [c.animating]: f }),
+                            className: a()(c.progressBar, c[i], { [c.animating]: _ }),
                             style: d({ transform: 'translate3d('.concat(Math.min(Math.max(0, o), 100) - 100, '%, 0, 0)') }, n)
                         },
                         t
@@ -62,7 +62,7 @@ function _(e) {
     return (0, r.jsx)('div', {
         className: a()(t, c.progress, c[i]),
         style: { backgroundColor: u },
-        children: _
+        children: f
     });
 }
-_.Sizes = f;
+f.Sizes = _;

@@ -3,12 +3,12 @@ n.d(t, {
     FZ: () => A,
     Hl: () => et,
     Je: () => P,
-    Jh: () => M,
+    Jh: () => k,
     KK: () => X,
     Oe: () => S,
     Qi: () => W,
     Ro: () => I,
-    Vx: () => V,
+    Vx: () => F,
     _k: () => Z,
     _p: () => x,
     aq: () => B,
@@ -17,7 +17,7 @@ n.d(t, {
     ee: () => J,
     f2: () => U,
     gZ: () => Y,
-    ge: () => k,
+    ge: () => M,
     ig: () => C,
     nL: () => z,
     nW: () => D,
@@ -42,8 +42,8 @@ var a = n(278074),
     c = n(317169),
     u = n(151494),
     d = n(430824),
-    f = n(314884),
-    _ = n(78839),
+    _ = n(314884),
+    f = n(78839),
     p = n(424218),
     h = n(823379),
     m = n(63063),
@@ -283,8 +283,8 @@ function L(e) {
     }
 }
 let x = i().memoize((e) => (O.HO[b.Eu4.TIER_1].features.includes(e) ? b.Eu4.TIER_1 : O.HO[b.Eu4.TIER_2].features.includes(e) ? b.Eu4.TIER_2 : O.HO[b.Eu4.TIER_3].features.includes(e) ? b.Eu4.TIER_3 : null)),
-    k = (e) => (e === b.Eu4.NONE ? b.Qqv.NONE : e === b.Eu4.TIER_1 ? b.Qqv.TIER_1 : e === b.Eu4.TIER_2 ? b.Qqv.TIER_2 : e === b.Eu4.TIER_3 ? b.Qqv.TIER_3 : null);
-function M(e) {
+    M = (e) => (e === b.Eu4.NONE ? b.Qqv.NONE : e === b.Eu4.TIER_1 ? b.Qqv.TIER_1 : e === b.Eu4.TIER_2 ? b.Qqv.TIER_2 : e === b.Eu4.TIER_3 ? b.Qqv.TIER_3 : null);
+function k(e) {
     var t;
     let n = null == (t = d.Z.getGuild(e)) ? void 0 : t.premiumTier;
     return null != n ? n : b.Eu4.NONE;
@@ -302,9 +302,9 @@ function G(e) {
 }
 function B(e) {
     let { isBoostManagementDisabledForFractionalPremium: t } = e,
-        n = _.ZP.getPremiumTypeSubscription();
-    f.Z.hasFetched || f.Z.isFetching || (0, s.X8)();
-    let r = G(f.Z.boostSlots),
+        n = f.ZP.getPremiumTypeSubscription();
+    _.Z.hasFetched || _.Z.isFetching || (0, s.X8)();
+    let r = G(_.Z.boostSlots),
         i = null == n ? void 0 : n.isPausedOrPausePending,
         o = r.length > 0,
         l = v.intl.format(v.t.kJ1AZG, { helpCenterLink: m.Z.getArticleURL(b.BhN.FRACTIONAL_PREMIUM_ABOUT) }),
@@ -344,7 +344,7 @@ function B(e) {
             )
             .otherwise(() => null);
     if (null != c) return c;
-    let { numAvailableGuildBoostSlots: u, numCanceledGuildBoostSlots: d } = Object.values(f.Z.boostSlots).reduce((e, t) => (Q(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
+    let { numAvailableGuildBoostSlots: u, numCanceledGuildBoostSlots: d } = Object.values(_.Z.boostSlots).reduce((e, t) => (Q(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
         numAvailableGuildBoostSlots: 0,
         numCanceledGuildBoostSlots: 0
     });
@@ -356,16 +356,16 @@ function B(e) {
     let p = g.uV(n.renewalMutations.additionalPlans);
     return g.uV(n.additionalPlans) > p ? v.intl.string(v.t.x25mZW) : v.intl.string(v.t['W/bb8f']);
 }
-function F(e) {
+function V(e) {
     return e.sort((e, t) => (null != e.endsAt && null != t.endsAt ? e.endsAt.getTime() - t.endsAt.getTime() : -1));
 }
-function V(e, t) {
+function F(e, t) {
     return Z(e, t) > 0;
 }
 function Z(e, t) {
     var n;
     if ((null == (n = d.Z.getGuild(t)) ? void 0 : n.hasFeature(b.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0) return 0;
-    let r = M(t),
+    let r = k(t),
         i = b.oCV[r],
         a = e.filter((e) => null != e.endsAt);
     return i - (e.length - a.length);
@@ -390,7 +390,7 @@ let H = [
 function Y(e, t) {
     let n = Z(e, t);
     if (n > 0) {
-        let r = F(e).filter((e) => null != e.endsAt),
+        let r = V(e).filter((e) => null != e.endsAt),
             i = r.length - n;
         i < 0 &&
             E.Z.addBreadcrumb({
@@ -398,7 +398,7 @@ function Y(e, t) {
                 message: 'Negative index while checking grace period ending date.',
                 data: {
                     subscriptionLength: e.length,
-                    subscriptionsNeededForPremiumTier: b.oCV[M(t)],
+                    subscriptionsNeededForPremiumTier: b.oCV[k(t)],
                     endingSubscriptionLength: r.length
                 }
             });

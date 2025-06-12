@@ -31,13 +31,13 @@ let s = /^[0]+/,
     c = /(AM|ΠΜ|सुबह)/i,
     u = /(PM|ΜΜ|शाम)/i,
     d = /\s+/,
-    f = (e) => e.replace(s, '').replace(l, '').replace(c, '').replace(d, ''),
-    _ = (e) => e.replace(s, '').replace(u, '').replace(d, ''),
+    _ = (e) => e.replace(s, '').replace(l, '').replace(c, '').replace(d, ''),
+    f = (e) => e.replace(s, '').replace(u, '').replace(d, ''),
     p = (e, t) => {
         let n = t.toUpperCase().trim();
         if (n.length > 0) {
             let t = i()(''.concat(null == e ? void 0 : e.format('YYYY-MM-DD'), ' ').concat(n), 'YYYY-MM-DD LT');
-            if (f(t.format('LT')) === f(n)) return t;
+            if (_(t.format('LT')) === _(n)) return t;
         }
     },
     h = i()('2021-04-12T00:00:00'),
@@ -91,7 +91,7 @@ class y {
             if (null != n) {
                 t.push(n.clone());
                 let r = n.add({ hours: 12 });
-                r.isBefore(h.clone().add({ hours: 24 })) && _(r.format('LT')) === _(e) && t.push(r);
+                r.isBefore(h.clone().add({ hours: 24 })) && f(r.format('LT')) === f(e) && t.push(r);
             }
         }
         return t;

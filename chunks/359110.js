@@ -1,5 +1,5 @@
 n.d(t, {
-    Kh: () => _,
+    Kh: () => f,
     ad: () => p
 });
 var r = n(512722),
@@ -23,7 +23,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,14 +39,14 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     let n = l.Z.getChannel(e);
     if (null == n) return;
     let r = (0, s.e)(n);
-    a.Z.preload(n.guild_id, n.id), (0, c.uL)(u.Z5c.CHANNEL(r, n.id), f({ openChannel: !0 }, t)), (null == t ? void 0 : t.openTextInVoiceIfVoiceChannel) && n.isGuildVocal() && o.Z.updateChatOpen(n.id, !0);
+    a.Z.preload(n.guild_id, n.id), (0, c.uL)(u.Z5c.CHANNEL(r, n.id), _({ openChannel: !0 }, t)), (null == t ? void 0 : t.openTextInVoiceIfVoiceChannel) && n.isGuildVocal() && o.Z.updateChatOpen(n.id, !0);
 }
 function p(e, t) {
     i()(null != e.parent_id, 'Thread must have a parent ID.');
     let n = (0, s.e)(e);
-    (0, c.uL)(u.Z5c.CHANNEL(n, e.id), f({ openChannel: !0 }, t));
+    (0, c.uL)(u.Z5c.CHANNEL(n, e.id), _({ openChannel: !0 }, t));
 }

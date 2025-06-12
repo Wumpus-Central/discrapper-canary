@@ -9,7 +9,7 @@ n.d(t, {
     _A: () => h,
     bd: () => g,
     f$: () => C,
-    gc: () => _,
+    gc: () => f,
     gd: () => N,
     s6: () => T,
     xQ: () => E
@@ -24,8 +24,8 @@ var r = n(73800),
     c = n(350327),
     u = n(621853),
     d = n(271383),
-    f = n(25990);
-function _(e) {
+    _ = n(25990);
+function f(e) {
     return r.useMemo(() => {
         let t = d.ZP.getMutableAllGuildsAndMembers(),
             n = {};
@@ -40,9 +40,9 @@ function _(e) {
 function p(e, t) {
     let n = (0, i.e7)([d.ZP], () => (void 0 === t ? null : d.ZP.getMember(t.id, e.id))),
         r = (0, o.Z)(e.avatarDecoration),
-        { pendingUserAvatarDecoration: a, userErrors: s } = (0, i.cj)([f.Z], () => ({
-            pendingUserAvatarDecoration: f.Z.getPendingAvatarDecoration(),
-            userErrors: f.Z.getErrors().avatarDecoration
+        { pendingUserAvatarDecoration: a, userErrors: s } = (0, i.cj)([_.Z], () => ({
+            pendingUserAvatarDecoration: _.Z.getPendingAvatarDecoration(),
+            userErrors: _.Z.getErrors().avatarDecoration
         })),
         { pendingGuildAvatarDecoration: c, guildErrors: u } = (0, i.cj)([l.Z], () => ({
             pendingGuildAvatarDecoration: l.Z.getPendingAvatarDecoration(),
@@ -56,9 +56,9 @@ function p(e, t) {
     };
 }
 function h() {
-    let { pendingUserNameplate: e, userErrors: t } = (0, i.cj)([f.Z], () => ({
-        pendingUserNameplate: f.Z.getPendingNameplate(),
-        userErrors: f.Z.getErrors().nameplate
+    let { pendingUserNameplate: e, userErrors: t } = (0, i.cj)([_.Z], () => ({
+        pendingUserNameplate: _.Z.getPendingNameplate(),
+        userErrors: _.Z.getErrors().nameplate
     }));
     return {
         pendingNameplate: e,
@@ -77,12 +77,12 @@ function m(e, t) {
 }
 function g(e) {
     return (0, i.cj)(
-        [f.Z, l.Z],
+        [_.Z, l.Z],
         () =>
             null == e
                 ? {
-                      pendingProfileEffectId: f.Z.getPendingProfileEffectId(),
-                      errors: f.Z.getErrors().profileEffect
+                      pendingProfileEffectId: _.Z.getPendingProfileEffectId(),
+                      errors: _.Z.getErrors().profileEffect
                   }
                 : {
                       pendingProfileEffectId: l.Z.getPendingProfileEffectId(),

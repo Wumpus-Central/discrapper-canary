@@ -89,15 +89,15 @@ function d(e) {
 }
 n.d(t, {
     L3: () => p,
-    W_: () => _,
+    W_: () => f,
     ZP: () => h
 });
-let f = (0, n(97519).U)(() => ({
+let _ = (0, n(97519).U)(() => ({
         imgCache: {},
         toolsCache: {}
     })),
-    _ = () => {
-        let e = f;
+    f = () => {
+        let e = _;
         return {
             getImgCache: (t) => {
                 if (null != t) return e.getState().imgCache[t];
@@ -115,7 +115,7 @@ let f = (0, n(97519).U)(() => ({
         };
     },
     p = () => {
-        let e = f;
+        let e = _;
         return {
             toolsCache: e.getState().toolsCache,
             setToolsCache: (t, n, r) => {
@@ -142,4 +142,4 @@ let f = (0, n(97519).U)(() => ({
             }
         };
     },
-    h = f;
+    h = _;

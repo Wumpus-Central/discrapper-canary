@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(827498),
     u = n(311819),
     d = n(433534),
-    f = n(541716),
-    _ = n(433355),
+    _ = n(541716),
+    f = n(433355),
     p = n(592125),
     h = n(944486),
     m = n(626135),
@@ -95,16 +95,16 @@ function R(e) {
             [w]
         ),
         x = (0, s.Z)({ context: L }),
-        k = t.id,
-        M = i.useCallback(() => {
+        M = t.id,
+        k = i.useCallback(() => {
             if (null != R)
                 if (x) {
                     let e = h.Z.getCurrentlySelectedChannelId(),
                         t = p.Z.getChannel(e),
-                        r = null != _.ZP.getSidebarState(e) || (null == t ? void 0 : t.isGuildVocal()) ? f.Ie.SIDEBAR : f.Ie.NORMAL;
-                    l.__(c._b.TEXT, r, { applicationId: R.id }), (0, o.Mr3)((0, O.z)(k, D)), null == n || n(), m.default.track(I.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: R.id });
+                        r = null != f.ZP.getSidebarState(e) || (null == t ? void 0 : t.isGuildVocal()) ? _.Ie.SIDEBAR : _.Ie.NORMAL;
+                    l.__(c._b.TEXT, r, { applicationId: R.id }), (0, o.Mr3)((0, O.z)(M, D)), null == n || n(), m.default.track(I.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: R.id });
                 } else (0, b.L)(A({ applicationId: R.id }, R));
-        }, [x, R, k, D, n]),
+        }, [x, R, M, D, n]),
         j = x ? T.intl.string(T.t['Cia+Aw']) : T.intl.string(T.t.NgXl3N);
     if (null == R || !(0, d.Eb)(R)) return null;
     let { customInstallUrl: U } = R,
@@ -141,7 +141,7 @@ function R(e) {
                               text: j,
                               icon: B,
                               onContextMenu: t,
-                              onClick: M
+                              onClick: k
                           },
                           n,
                           S
@@ -156,7 +156,7 @@ function R(e) {
                       action: 'PRESS_ADD_APP',
                       text: j,
                       icon: B,
-                      onClick: M
+                      onClick: k
                   },
                   S
               )

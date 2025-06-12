@@ -1,7 +1,7 @@
 n.d(t, {
     Ib: () => c,
-    M9: () => f,
-    g0: () => _,
+    M9: () => _,
+    g0: () => f,
     gJ: () => d
 }),
     n(73800),
@@ -29,7 +29,7 @@ function c(e, t) {
     return u(l(e, n), e, t);
 }
 function u(e, t, n) {
-    if (null == t) return !!(null != n && n.isPrivate()) && (!!n.hasFlag(s.zZ.CLYDE_AI) || r.Z.getGuildIds().some((e) => f(r.Z.getGuild(e))));
+    if (null == t) return !!(null != n && n.isPrivate()) && (!!n.hasFlag(s.zZ.CLYDE_AI) || r.Z.getGuildIds().some((e) => _(r.Z.getGuild(e))));
     return null != e && e !== a.P.None && i.Z.can(o.Plq.USE_CLYDE_AI, n);
 }
 function d(e, t) {
@@ -48,11 +48,11 @@ function d(e, t) {
         t
     );
 }
-function f(e) {
+function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return p(e, t) !== a.P.None;
 }
-function _(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return p(e, t) === a.P.ClydeProfiles;
 }

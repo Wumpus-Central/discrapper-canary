@@ -8,8 +8,8 @@ var r,
     c = n(570140),
     u = n(353926),
     d = n(752048),
-    f = n(480294),
-    _ = n(699516),
+    _ = n(480294),
+    f = n(699516),
     p = n(709054),
     h = n(522558),
     m = n(981631);
@@ -73,14 +73,14 @@ function w(e) {
 }
 function D() {
     if (null != R) return void z(R);
-    if ((k(), !f.Z.hasConsented(m.pjP.PERSONALIZATION))) return;
+    if ((M(), !_.Z.hasConsented(m.pjP.PERSONALIZATION))) return;
     let { enabled: e } = h.w.getCurrentConfig({ location: 'PremiumGiftingIntentStore updateFriendAnniversaries' }, { autoTrackExposure: !1 });
     if (e) {
-        for (let e of p.default.keys(_.Z.getRelationships())) {
+        for (let e of p.default.keys(f.Z.getRelationships())) {
             if (A.length >= y) break;
-            let t = _.Z.getSince(e),
+            let t = f.Z.getSince(e),
                 n = d.Z.getUserAffinity(e);
-            if (_.Z.getRelationshipType(e) === m.OGo.FRIEND && !_.Z.isIgnored(e) && null != n && n.communicationProbability > 0 && null != t) {
+            if (f.Z.getRelationshipType(e) === m.OGo.FRIEND && !f.Z.isIgnored(e) && null != n && n.communicationProbability > 0 && null != t) {
                 let n = new Date(t);
                 w(n) && (A.push(e), (C[e] = { friendsSince: n }));
             }
@@ -100,30 +100,30 @@ function L(e) {
 function x() {
     return Array.from(N).some((e) => !S.lastShownFriendsListGiftIntents.includes(e));
 }
-function k() {
+function M() {
     (A.length = 0), N.clear(), (C = {});
 }
-function M() {
-    k();
+function k() {
+    M();
 }
 function j() {
-    (S = T()), k();
+    (S = T()), M();
 }
 function U() {
     S.lastShownFriendsListGiftIntents = Array.from(N);
 }
 function G(e) {
     let { recipientUserId: t } = e;
-    V(t);
+    F(t);
 }
 function B() {
     S.friendsTabBadgeLastDismissedTime = Date.now();
 }
-function F(e) {
-    let { recipientUserId: t } = e;
-    V(t);
-}
 function V(e) {
+    let { recipientUserId: t } = e;
+    F(t);
+}
+function F(e) {
     null == S.messageGiftIntentLastShownMap[e] && (S.messageGiftIntentLastShownMap[e] = Date.now());
 }
 function Z() {
@@ -150,15 +150,15 @@ function K(e) {
     z(t);
 }
 function z(e) {
-    k();
+    M();
     let { enabled: t } = h.w.getCurrentConfig({ location: 'PremiumGiftingIntentStore generateFriendAnniversaries' }, { autoTrackExposure: !1 });
     if (!t) return;
     R = e;
-    let n = _.Z.getFriendIDs().filter((e) => !_.Z.isIgnored(e));
+    let n = f.Z.getFriendIDs().filter((e) => !f.Z.isIgnored(e));
     a()
         .sampleSize(n, e)
         .forEach((e) => {
-            let t = _.Z.getSince(e);
+            let t = f.Z.getSince(e);
             if (null != t) {
                 let n = new Date(t);
                 A.push(e), (C[e] = { friendsSince: n });
@@ -168,7 +168,7 @@ function z(e) {
 }
 class q extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        (S = T()), null != e && ((S.friendsTabBadgeLastDismissedTime = e.friendsTabBadgeLastDismissedTime), (S.lastShownFriendsListGiftIntents = Array.from(e.lastShownFriendsListGiftIntents)), (S.messageGiftIntentLastShownMap = E({}, e.messageGiftIntentLastShownMap))), this.syncWith([_.Z, d.Z, f.Z, u.Z], D), Z();
+        (S = T()), null != e && ((S.friendsTabBadgeLastDismissedTime = e.friendsTabBadgeLastDismissedTime), (S.lastShownFriendsListGiftIntents = Array.from(e.lastShownFriendsListGiftIntents)), (S.messageGiftIntentLastShownMap = E({}, e.messageGiftIntentLastShownMap))), this.syncWith([f.Z, d.Z, _.Z, u.Z], D), Z();
     }
     getState() {
         return S;
@@ -212,12 +212,12 @@ g(q, 'displayName', 'PremiumGiftingIntentStore'),
         }
     ]);
 let X = new q(c.Z, {
-    CONNECTION_OPEN: M,
+    CONNECTION_OPEN: k,
     LOGOUT: j,
     MESSAGE_GIFT_INTENT_SHOWN: G,
     FRIENDS_LIST_GIFT_INTENTS_SHOWN: U,
     FRIENDS_TAB_BADGE_DISMISS: B,
-    GIFT_INTENT_FLOW_PURCHASED_GIFT: F,
+    GIFT_INTENT_FLOW_PURCHASED_GIFT: V,
     DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET: H,
     DEV_TOOLS_GIFT_MESSAGE_COOLDOWN_RESET: Y,
     DEV_TOOLS_FRIENDS_TAB_BADGE_COOLDOWN_RESET: W,

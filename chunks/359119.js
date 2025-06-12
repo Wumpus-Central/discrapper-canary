@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => C,
-    ny: () => f,
+    ny: () => _,
     pj: () => d
 }),
     n(388685);
@@ -63,10 +63,10 @@ let u = 5 * n(70956).Z.Millis.SECOND;
 var d = (function (e) {
         return (e[(e.STRANGER_DANGER = 1)] = 'STRANGER_DANGER'), (e[(e.INAPPROPRIATE_CONVERSATION_TIER_1 = 2)] = 'INAPPROPRIATE_CONVERSATION_TIER_1'), (e[(e.INAPPROPRIATE_CONVERSATION_TIER_2 = 3)] = 'INAPPROPRIATE_CONVERSATION_TIER_2'), (e[(e.LIKELY_ATO = 4)] = 'LIKELY_ATO'), e;
     })({}),
-    f = (function (e) {
+    _ = (function (e) {
         return (e[(e.UPVOTE = 0)] = 'UPVOTE'), (e[(e.DOWNVOTE = 1)] = 'DOWNVOTE'), e;
     })({});
-let _ = [],
+let f = [],
     p = {},
     h = new Set();
 function m(e) {
@@ -128,7 +128,7 @@ class N extends r.ZP.Store {
     }
     getChannelSafetyWarnings(e) {
         var t;
-        return null != (t = p[e]) ? t : _;
+        return null != (t = p[e]) ? t : f;
     }
     hasShownInitialTooltipForChannel(e) {
         return h.has(e);

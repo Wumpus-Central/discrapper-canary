@@ -16,8 +16,8 @@ var r = n(392711),
     c = n(314897),
     u = n(523746),
     d = n(592125),
-    f = n(131951),
-    _ = n(606304),
+    _ = n(131951),
+    f = n(606304),
     p = n(594174),
     h = n(33039),
     m = n(979651),
@@ -173,7 +173,7 @@ class P {
                                           S(I({}, n), {
                                               speaking: t,
                                               lastSpoke: this.lastSpoke[e],
-                                              soundsharing: _.Z.isSoundSharing(e)
+                                              soundsharing: f.Z.isSoundSharing(e)
                                           })
                                       ),
                                       !0
@@ -254,10 +254,10 @@ class P {
                     checkIsMuted: !0
                 }),
                 lastSpoke: null != (i = this.lastSpoke[e]) ? i : 0,
-                soundsharing: _.Z.isSoundSharing(e),
+                soundsharing: f.Z.isSoundSharing(e),
                 ringing: R,
                 userNick: g.ZP.getName(null == C ? void 0 : C.getGuildId(), this.channelId, T),
-                localVideoDisabled: f.Z.isLocalVideoDisabled(T.id)
+                localVideoDisabled: _.Z.isLocalVideoDisabled(T.id)
             })),
             v.push(E));
         let P = null != (o = l.Z.getStreamForUser(e, null == C ? void 0 : C.getGuildId())) ? o : l.Z.getActiveStreamForUser(e, null == C ? void 0 : C.getGuildId());

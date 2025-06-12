@@ -43,8 +43,8 @@ function c(e) {
 (l[r.ForwardRef] = o), (l[r.Memo] = s);
 var u = Object.defineProperty,
     d = Object.getOwnPropertyNames,
-    f = Object.getOwnPropertySymbols,
-    _ = Object.getOwnPropertyDescriptor,
+    _ = Object.getOwnPropertySymbols,
+    f = Object.getOwnPropertyDescriptor,
     p = Object.getPrototypeOf,
     h = Object.prototype;
 function m(e, t, n) {
@@ -54,11 +54,11 @@ function m(e, t, n) {
             r && r !== h && m(e, r, n);
         }
         var i = d(t);
-        f && (i = i.concat(f(t)));
+        _ && (i = i.concat(_(t)));
         for (var o = c(e), s = c(t), l = 0; l < i.length; ++l) {
             var g = i[l];
             if (!a[g] && !(n && n[g]) && !(s && s[g]) && !(o && o[g])) {
-                var E = _(t, g);
+                var E = f(t, g);
                 try {
                     u(e, g, E);
                 } catch (e) {}

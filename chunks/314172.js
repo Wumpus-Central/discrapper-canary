@@ -9,8 +9,8 @@ var i = n(442837),
     c = n(607070),
     u = n(605436),
     d = n(496675),
-    f = n(475413),
-    _ = n(981631),
+    _ = n(475413),
+    f = n(981631),
     p = n(388032),
     h = n(645214);
 function m(e, t, n) {
@@ -68,7 +68,7 @@ function b(e, t) {
 function y(e) {
     let { guild: t, guildMember: n, numRoles: m, highestRole: E, onAddRole: y, buttonRef: O } = e,
         v = (0, i.e7)([c.Z], () => c.Z.roleStyle);
-    if (!(0, i.e7)([d.Z], () => d.Z.can(_.Plq.MANAGE_ROLES, t))) return null;
+    if (!(0, i.e7)([d.Z], () => d.Z.can(f.Plq.MANAGE_ROLES, t))) return null;
     let I = (e) => (0, u.Gy)(t.id, e.id) && !e.managed && d.Z.isRoleHigher(t, E, e) && -1 === n.roles.indexOf(e.id);
     return (0, r.jsx)(o.y, {
         targetElementRef: O,
@@ -90,7 +90,7 @@ function y(e) {
                 'aria-label': !1,
                 shouldShow: m > 0,
                 children: (0, r.jsxs)(
-                    f.kF,
+                    _.kF,
                     b(
                         g(
                             {

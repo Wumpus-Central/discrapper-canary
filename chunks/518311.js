@@ -40,8 +40,8 @@ var r,
     A = n(429090),
     w = n(912114),
     R = n(366980),
-    M = n(703656),
-    k = n(93127),
+    k = n(703656),
+    M = n(93127),
     L = n(752048),
     D = n(131704),
     U = n(592125),
@@ -153,7 +153,7 @@ let eh = (e) => {
             });
         return (0, i.jsx)(h.P3F, {
             onClick: () => {
-                (0, M.XU)(en.ME, n.id), r();
+                (0, k.XU)(en.ME, n.id), r();
             },
             children: (0, i.jsxs)('div', {
                 className: ei.confirmChannelItemContainer,
@@ -675,7 +675,7 @@ class em extends (r = l.PureComponent) {
                 t.has(e) ? y.Z.removeUser(e) : (y.Z.addUser(e), n.length > 0 && y.Z.clear(null == r ? void 0 : r.id)), this.forceFocus();
             }),
             ea(this, 'handleAddFriendNavigation', () => {
-                (0, M.uL)(en.Z5c.FRIENDS), b.Z.setSection(en.pJs.ADD_FRIEND), this.props.onClose();
+                (0, k.uL)(en.Z5c.FRIENDS), b.Z.setSection(en.pJs.ADD_FRIEND), this.props.onClose();
             }),
             ea(this, 'handleScroll', () => {
                 let e = this.scrollerRef.current;
@@ -899,7 +899,7 @@ function e_(e) {
     );
     let P = (0, p.e7)([W.default], () => W.default.getUser(null == r ? void 0 : r.getRecipientId()));
     return ((0, j.ZP)(() => {
-        (0, k._)();
+        (0, M._)();
     }),
     (null != (t = null == P ? void 0 : P.bot) && t) || (null != (n = null == P ? void 0 : P.isProvisional) && n))
         ? null
@@ -951,7 +951,7 @@ function e_(e) {
 function ey(e) {
     let { channel: t, className: n, popoutPosition: r = 'bottom', popoutAlign: a = 'right' } = e;
     (0, j.ZP)(() => {
-        (0, k._)();
+        (0, M._)();
     });
     let o = (0, A.a)('PrivateChannelRecipientsInviteTextButton'),
         s = l.useRef(null),

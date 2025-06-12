@@ -24,8 +24,8 @@ function u(e) {
             tooltip: c.intl.formatToPlainString(c.t.lFApm5, { game: n })
         };
     if ((0, o.Z)(e) && t && null != d) {
-        var f;
-        let e = null == (f = d.split(';')) ? void 0 : f.join(', ');
+        var _;
+        let e = null == (_ = d.split(';')) ? void 0 : _.join(', ');
         return {
             text: c.intl.format(c.t.Vnuxub, { name: e }),
             tooltip: c.intl.formatToPlainString(c.t.Vnuxub, { name: e })

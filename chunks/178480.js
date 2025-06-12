@@ -1,6 +1,6 @@
 n.d(t, {
     LF: () => u,
-    RB: () => f,
+    RB: () => _,
     a3: () => s,
     hn: () => d,
     mH: () => c,
@@ -57,4 +57,4 @@ function d(e) {
         deeplink: e.urls.install.toString()
     };
 }
-let f = (e) => e.type === a.DY.RECENT_MENTION || e.type === a.DY.REPLY_MENTION;
+let _ = (e) => e.type === a.DY.RECENT_MENTION || e.type === a.DY.REPLY_MENTION;

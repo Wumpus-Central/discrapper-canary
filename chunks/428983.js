@@ -8,22 +8,22 @@ var r = a(395848),
     E = a(433691),
     s = a(135813),
     l = a(662355);
-let u = [2500, 4000],
-    I = {},
+let I = [2500, 4000],
+    u = {},
     R = (t, e = {}) => {
         (0, l.A)(() => {
             let a,
                 l = (0, o.Y)(),
                 R = (0, i.I)('LCP'),
-                N = (t) => {
+                A = (t) => {
                     let e = t[t.length - 1];
                     e && e.startTime < l.firstHiddenTime && ((R.value = Math.max(e.startTime - (0, n.A)(), 0)), (R.entries = [e]), a());
                 },
-                d = (0, c.N)('largest-contentful-paint', N);
-            if (d) {
-                a = (0, _._)(t, R, u, e.reportAllChanges);
+                T = (0, c.N)('largest-contentful-paint', A);
+            if (T) {
+                a = (0, _._)(t, R, I, e.reportAllChanges);
                 let n = (0, s.R)(() => {
-                    I[R.id] || (N(d.takeRecords()), d.disconnect(), (I[R.id] = !0), a(!0));
+                    u[R.id] || (A(T.takeRecords()), T.disconnect(), (u[R.id] = !0), a(!0));
                 });
                 ['keydown', 'click'].forEach((t) => {
                     r.m.document && addEventListener(t, () => setTimeout(n, 0), !0);

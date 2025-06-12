@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(906732),
     u = n(201895),
     d = n(933557),
-    f = n(482798),
-    _ = n(209698),
+    _ = n(482798),
+    f = n(209698),
     p = n(788858),
     h = n(814454),
     m = n(170187),
@@ -71,22 +71,22 @@ function T(e, t) {
 }
 function S(e) {
     let { channel: t, textVariant: n, textClassName: a, iconClassName: g, hideText: O = !1, hideTooltip: I = !1, canTruncate: S = !0, showChannelName: A = !1 } = e,
-        N = (0, _.b)({ location: 'ActivityStatusIcon' }),
+        N = (0, f.b)({ location: 'ActivityStatusIcon' }),
         C = (0, l.vjg)(l.Skl.ONLINE),
         R = N ? s.Z.colors.TEXT_POSITIVE : C,
         P = (0, d.ZP)(t),
         w = t.isDM() || t.isGroupDM(),
-        { enableTopNavButton: D } = (0, f.Cq)({ location: 'VoiceActivityStatus' }),
+        { enableTopNavButton: D } = (0, _.Cq)({ location: 'VoiceActivityStatus' }),
         L = !D && A,
         { analyticsLocations: x } = (0, c.ZP)(),
-        k = i.useCallback(() => {
+        M = i.useCallback(() => {
             (0, h.A)({
                 analyticsLocations: x,
                 activityType: 'VOICE',
                 voiceChannelId: t.id
             });
         }, [x, t.id]),
-        M = () =>
+        k = () =>
             I || w
                 ? (0, r.jsx)(p.Z, {
                       size: 'custom',
@@ -98,7 +98,7 @@ function S(e) {
                       text: P,
                       'aria-label': (0, u.ZP)({ channel: t }),
                       delay: E.X,
-                      onTooltipShow: k,
+                      onTooltipShow: M,
                       children: (e) =>
                           (0, r.jsx)(
                               p.Z,
@@ -113,7 +113,7 @@ function S(e) {
         j = () => (D ? P : w ? b.intl.string(b.t['9FaEzs']) : t.isGuildStageVoice() ? b.intl.string(b.t.QygGCA) : b.intl.string(b.t.msxteH));
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            M(),
+            k(),
             !O &&
                 (0, r.jsxs)(m.Z, {
                     variant: n,
@@ -126,14 +126,14 @@ function S(e) {
     });
 }
 function A(e) {
-    let { channel: t, textVariant: n, textClassName: i, iconClassName: a, hideText: s = !1, hideTooltip: c = !1, canTruncate: u = !0, showChannelName: _ = !1 } = e,
+    let { channel: t, textVariant: n, textClassName: i, iconClassName: a, hideText: s = !1, hideTooltip: c = !1, canTruncate: u = !0, showChannelName: f = !1 } = e,
         h = (0, l.vjg)(l.Skl.ONLINE),
         m = (0, d.ZP)(t),
         E = t.isDM() || t.isGroupDM(),
-        { enableTopNavButton: O } = (0, f.Cq)({ location: 'VoiceActivityStatusWithCombinedTooltip' }),
+        { enableTopNavButton: O } = (0, _.Cq)({ location: 'VoiceActivityStatusWithCombinedTooltip' }),
         v = O && null != m ? m : E ? b.intl.string(b.t['9FaEzs']) : t.isGuildStageVoice() ? b.intl.string(b.t.QygGCA) : b.intl.string(b.t.msxteH),
         I = null == m || O ? v : ''.concat(v, ' (').concat(m, ')'),
-        T = _ ? I : v;
+        T = f ? I : v;
     return (0, r.jsx)(g.Z, {
         icon: (0, r.jsx)(p.Z, {
             size: 'custom',
@@ -152,5 +152,5 @@ function A(e) {
     });
 }
 function N(e) {
-    return (0, _.b)({ location: 'VoiceActivityStatusExperimentWrapper' }) ? (0, r.jsx)(A, v({}, e)) : (0, r.jsx)(S, v({}, e));
+    return (0, f.b)({ location: 'VoiceActivityStatusExperimentWrapper' }) ? (0, r.jsx)(A, v({}, e)) : (0, r.jsx)(S, v({}, e));
 }

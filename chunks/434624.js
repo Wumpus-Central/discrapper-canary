@@ -15,7 +15,7 @@ var r = n(255367),
 let g = i.memo(function (e) {
         let t,
             n,
-            { useChatFontScaling: i, hideEmoji: l, emoji: c, className: g, count: _, me: b, me_burst: E, burst_count: y, burst_colors: x, readOnly: v, isLurking: O, isGuest: C, isPendingMember: j, type: S, emojiSize: I } = e,
+            { useChatFontScaling: i, hideEmoji: l, emoji: c, className: g, count: _, me: b, me_burst: E, burst_count: y, burst_colors: x, readOnly: v, isLurking: O, isGuest: j, isPendingMember: C, type: S, emojiSize: I } = e,
             N = S === p.O.BURST,
             T = (0, m.y4)(b, E, S),
             P = (0, d.v)(N && null != x ? x : []),
@@ -37,7 +37,7 @@ let g = i.memo(function (e) {
         return (0, r.jsxs)('div', {
             className: a()(A.reaction, A.reactionInner, g, {
                 [A.reactionMe]: T,
-                [A.reactionReadOnly]: v && !O && !j && !C
+                [A.reactionReadOnly]: v && !O && !C && !j
             }),
             style: R,
             children: [

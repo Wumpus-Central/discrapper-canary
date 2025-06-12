@@ -21,7 +21,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,7 +54,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -206,13 +206,13 @@ let h = 4,
 function y(e) {
     let { users: t, channel: n } = e,
         { themeType: d } = (0, l.z)(),
-        _ = d === c.lY.MODAL_V2 ? b : E,
+        f = d === c.lY.MODAL_V2 ? b : E,
         y = t.length > h,
         O = t.length - h + 1,
         v = O >= 10 ? g : m;
     return (0, r.jsx)('div', {
         className: u.container,
-        children: _[(0, i.clamp)(t.length - 1, 0, _.length - 1)].map((e, i) => {
+        children: f[(0, i.clamp)(t.length - 1, 0, f.length - 1)].map((e, i) => {
             let l = t[i];
             return null == l
                 ? null
@@ -236,7 +236,7 @@ function y(e) {
                                         children: (e) =>
                                             (0, r.jsx)(
                                                 'img',
-                                                p(f({}, e), {
+                                                p(_({}, e), {
                                                     className: u.avatar,
                                                     src: l.getAvatarURL(n.guild_id, (0, a.pxk)(a.EFr.SIZE_80)),
                                                     alt: ''

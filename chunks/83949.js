@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r = n(73800),
     i = n(719711),
     a = n(433517),
@@ -11,7 +11,7 @@ function d(e) {
     var t;
     return null == e || null == (t = e._state) ? void 0 : t.lastTestTimestamp;
 }
-function f() {
+function _() {
     return (
         r.useEffect(() => {
             window.location.origin === window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN &&
@@ -35,10 +35,10 @@ function f() {
                         n = 0 !== t.length,
                         r = null != e.token,
                         l = null == e.RTCRegionStore ? null : JSON.parse(e.RTCRegionStore),
-                        f = null == l || null == d(l) || d(l) <= d(a.K.get('RTCRegionStore'));
+                        _ = null == l || null == d(l) || d(l) <= d(a.K.get('RTCRegionStore'));
                     n &&
                         r &&
-                        !f &&
+                        !_ &&
                         (a.K.clear(),
                         t.forEach((t) => {
                             let n = e[t];
@@ -50,7 +50,7 @@ function f() {
                             u.rMx.DOMAIN_MIGRATED,
                             {
                                 success: !0,
-                                current_is_newer: f,
+                                current_is_newer: _,
                                 has_data: n
                             },
                             { flush: !0 }

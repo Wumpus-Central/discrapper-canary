@@ -11,7 +11,7 @@ var r = n(255367),
     c = n(540059),
     u = n(709692),
     d = n(115589);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -43,7 +43,7 @@ function _(e) {
 function p(e) {
     let t,
         n,
-        { header: a, children: f, confirmText: _, cancelText: p, className: h, onConfirm: m, onCancel: g, onClose: E, onCloseCallback: b, bodyClassName: y, transitionState: O, loading: v = !1, confirmButtonColor: I = s.zx.Colors.RED, focusCancel: T = !1, impression: S } = e,
+        { header: a, children: _, confirmText: f, cancelText: p, className: h, onConfirm: m, onCancel: g, onClose: E, onCloseCallback: b, bodyClassName: y, transitionState: O, loading: v = !1, confirmButtonColor: I = s.zx.Colors.RED, focusCancel: T = !1, impression: S } = e,
         A = i.useRef(null),
         N = (0, c.Q3)('ConfirmModal');
     return (
@@ -69,7 +69,7 @@ function p(e) {
                 autoFocus: T,
                 children: p
             })),
-        null != _ &&
+        null != f &&
             (n = (0, r.jsx)(s.zx, {
                 buttonRef: A,
                 type: 'submit',
@@ -84,7 +84,7 @@ function p(e) {
                     }
                 },
                 autoFocus: !T,
-                children: _
+                children: f
             })),
         (0, r.jsxs)(u.Y0, {
             className: h,
@@ -103,7 +103,7 @@ function p(e) {
                     : null,
                 (0, r.jsx)(u.hz, {
                     className: o()(d.content, y),
-                    children: f
+                    children: _
                 }),
                 (0, r.jsxs)(u.mz, {
                     children: [n, t]
@@ -115,6 +115,6 @@ function p(e) {
 function h(e) {
     return (0, r.jsx)(u.u_, {
         onCloseRequest: e.dismissable ? e.onCancel : null,
-        renderModal: (t) => (0, r.jsx)(p, _({}, t, e))
+        renderModal: (t) => (0, r.jsx)(p, f({}, t, e))
     });
 }

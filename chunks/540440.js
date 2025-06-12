@@ -1,6 +1,6 @@
 n.d(t, {
-    B: () => _,
-    y: () => f
+    B: () => f,
+    y: () => _
 });
 var r = n(255367);
 n(73800);
@@ -39,11 +39,11 @@ function d(e) {
     }
     return e;
 }
-function f(e) {
+function _(e) {
     return (0, o.dX)(e) ? c.intl.string(c.t['4f8iur']) : (0, o.y0)(e) ? c.intl.string(c.t.yX2hNz) : (0, o.kq)(e) ? c.intl.string(c.t.oSs8en) : c.intl.string(c.t.bK9GT0);
 }
-function _(e) {
-    let { user: t, entry: c, display: u, onAction: _, onClose: p } = e,
+function f(e) {
+    let { user: t, entry: c, display: u, onAction: f, onClose: p } = e,
         h = (0, l.Z)({ onClose: p }),
         m = (0, i.e7)([s.default], () => s.default.getCurrentUser());
     if (t.id !== (null == m ? void 0 : m.id) || 'recent' !== u || !(0, o.Rh)(c)) return null;
@@ -57,7 +57,7 @@ function _(e) {
                         {
                             entry: c,
                             user: t,
-                            onAction: _,
+                            onAction: f,
                             onOpenGameSettings: h
                         },
                         n
@@ -67,9 +67,9 @@ function _(e) {
     };
     return (0, r.jsx)(a.sNh, {
         id: 'delete-entry-history',
-        label: f(c),
+        label: _(c),
         action: () => {
-            null == _ || _({ action: 'PRESS_DELETE_HISTORY_MENU_ITEM' }), g();
+            null == f || f({ action: 'PRESS_DELETE_HISTORY_MENU_ITEM' }), g();
         },
         color: 'danger'
     });

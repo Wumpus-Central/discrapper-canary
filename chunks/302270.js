@@ -31,8 +31,8 @@ var r = n(255367),
     A = n(427679),
     w = n(592473),
     R = n(903108),
-    M = n(981631),
-    k = n(474936),
+    k = n(981631),
+    M = n(474936),
     L = n(388032),
     D = n(523335);
 function U(e) {
@@ -102,17 +102,17 @@ function B(e) {
         b = (0, S.Rk)(l.id, Z.pV.AUDIENCE),
         _ = (0, o.e7)([E.Z], () => E.Z.getGuild(l.guild_id), [l.guild_id]),
         j = null != (t = null == _ ? void 0 : _.maxStageVideoChannelUsers) ? t : 0,
-        O = (null == _ ? void 0 : _.isCommunity()) ? j < M.TU7 : (null == _ ? void 0 : _.premiumTier) !== M.Eu4.TIER_3 && j <= M.eez,
+        O = (null == _ ? void 0 : _.isCommunity()) ? j < k.TU7 : (null == _ ? void 0 : _.premiumTier) !== k.Eu4.TIER_3 && j <= k.eez,
         N = (0, R.Z)(l),
         w = (0, o.e7)([I.Z], () => I.Z.can(T.yP, l)),
         B = (0, y.Q3)('StageChannelCallHeader'),
         G = () => {
             u.Z.updateStageVideoLimitBoostUpsellDismissed(l.id, !0),
-                P.default.track(M.rMx.BOOSTING_UPSELL_CLICKED, {
+                P.default.track(k.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: l.guild_id,
-                    type: k.cd.VIDEO_STAGE_LIMIT,
+                    type: M.cd.VIDEO_STAGE_LIMIT,
                     is_moderator: w,
-                    action: k.T7.DISMISS
+                    action: M.T7.DISMISS
                 });
         },
         H = {
@@ -128,15 +128,15 @@ function B(e) {
         i.useEffect(() => {
             let { canModerate: e, audienceCount: t, channel: n, speakerCount: r } = V.current;
             N &&
-                P.default.track(M.rMx.BOOSTING_UPSELL_VIEWED, {
+                P.default.track(k.rMx.BOOSTING_UPSELL_VIEWED, {
                     guild_id: n.guild_id,
-                    type: k.cd.VIDEO_STAGE_LIMIT,
+                    type: M.cd.VIDEO_STAGE_LIMIT,
                     is_moderator: e,
                     listener_count: r + t
                 });
         }, [N]);
     let z = (0, r.jsx)(c.f6W, {
-        theme: M.BRd.DARK,
+        theme: k.BRd.DARK,
         children: (e) => {
             var t;
             return (0, r.jsxs)(x.ZP, {
@@ -232,13 +232,13 @@ function B(e) {
                                                 onClick: () => {
                                                     (0, C.f)({
                                                         guildId: l.guild_id,
-                                                        location: { section: M.jXE.STAGE_VIDEO_LIMIT }
+                                                        location: { section: k.jXE.STAGE_VIDEO_LIMIT }
                                                     }),
-                                                        P.default.track(M.rMx.BOOSTING_UPSELL_CLICKED, {
+                                                        P.default.track(k.rMx.BOOSTING_UPSELL_CLICKED, {
                                                             guild_id: l.guild_id,
-                                                            type: k.cd.VIDEO_STAGE_LIMIT,
+                                                            type: M.cd.VIDEO_STAGE_LIMIT,
                                                             is_moderator: w,
-                                                            action: k.T7.BOOST
+                                                            action: M.T7.BOOST
                                                         });
                                                 },
                                                 className: D.boostButton,

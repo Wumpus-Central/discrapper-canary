@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(389052),
     u = n(158508),
     d = n(710631),
-    f = n(622724),
-    _ = n(785717),
+    _ = n(622724),
+    f = n(785717),
     p = n(475413),
     h = n(388032);
 function m(e, t, n) {
@@ -65,7 +65,7 @@ function y(e) {
     var { type: t, user: n, guildId: m, viewProfileItem: b, appContext: y } = e,
         O = E(e, ['type', 'user', 'guildId', 'viewProfileItem', 'appContext']);
     let v = i.useRef(null),
-        { trackUserProfileAction: I } = (0, _.KZ)(),
+        { trackUserProfileAction: I } = (0, f.KZ)(),
         { analyticsLocations: T, newestAnalyticsLocation: S } = (0, s.ZP)(o.Z.USER_PROFILE_OVERFLOW_MENU),
         A = (0, d.Z)({
             user: n,
@@ -119,7 +119,7 @@ function y(e) {
                     analyticsLocations: T
                 })
         }),
-        R = (0, f.Z)({
+        R = (0, _.Z)({
             user: n,
             guildId: m,
             location: S,
@@ -137,7 +137,7 @@ function y(e) {
                 C,
                 N,
                 R,
-                (0, f.T)({
+                (0, _.T)({
                     user: n,
                     guildId: m,
                     location: S,

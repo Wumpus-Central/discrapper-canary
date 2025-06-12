@@ -44,7 +44,7 @@ function d(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,12 +56,12 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -108,7 +108,7 @@ let m = (e) => {
             s = p(e, ['children', 'className', 'id']);
         return (0, r.jsx)(
             o.X6q,
-            _(
+            f(
                 d(
                     {
                         className: a()(c.header, n),
@@ -129,7 +129,7 @@ let b = (e) => {
             a = p(e, ['className', 'title', 'description']);
         return (0, r.jsxs)(
             'div',
-            _(d({ className: t }, a), {
+            f(d({ className: t }, a), {
                 children: [
                     (0, r.jsx)(o.X6q, {
                         variant: 'heading-md/bold',
@@ -150,7 +150,7 @@ let b = (e) => {
             s = p(e, ['applicationId', 'storeListingBenefits', 'skuBenefits', 'className']);
         return (0, r.jsx)(
             'div',
-            _(d({ className: a()(c.benefitsContainer, o) }, s), {
+            f(d({ className: a()(c.benefitsContainer, o) }, s), {
                 children: (0, r.jsx)(l.GU, {
                     applicationId: t,
                     storeListingBenefits: n,
@@ -163,5 +163,5 @@ let b = (e) => {
     O = (e) => {
         var { children: t, className: n } = e,
             i = p(e, ['children', 'className']);
-        return (0, r.jsx)('div', _(d({ className: a()(c.container, n) }, i), { children: t }));
+        return (0, r.jsx)('div', f(d({ className: a()(c.container, n) }, i), { children: t }));
     };

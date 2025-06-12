@@ -8,17 +8,17 @@ var r = n(255367),
     c = n(970731),
     u = n(210887),
     d = n(921944),
-    f = n(957825),
-    _ = n(231338),
+    _ = n(957825),
+    f = n(231338),
     p = n(388032),
     h = n(245541),
     m = n(512668),
     g = n(179998);
 function E(e) {
     let { markAsDismissed: t } = e,
-        n = (0, a.e7)([u.Z], () => u.Z.theme) === _.BR.LIGHT ? g.Z : m.Z,
+        n = (0, a.e7)([u.Z], () => u.Z.theme) === f.BR.LIGHT ? g.Z : m.Z,
         E = i.useCallback(() => {
-            (0, l.RO)(f.X1.SOUNDBOARD, s.Ie.NORMAL);
+            (0, l.RO)(_.X1.SOUNDBOARD, s.Ie.NORMAL);
         }, []);
     return (0, r.jsx)(c.ZP, {
         className: h.container,

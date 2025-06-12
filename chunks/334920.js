@@ -8,9 +8,9 @@ let l = (e) => {
     let { src: t, alt: n, size: a, 'aria-label': l, className: c } = e,
         u = i.useRef(null),
         d = i.useRef(!1),
-        f = d.current ? s.image : s.imageLoading;
+        _ = d.current ? s.image : s.imageLoading;
     return (0, r.jsx)('img', {
-        className: o()(f, c),
+        className: o()(_, c),
         alt: n,
         src: t,
         ref: u,

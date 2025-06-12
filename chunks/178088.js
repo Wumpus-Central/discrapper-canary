@@ -1,4 +1,4 @@
-n.d(t, { k: () => j }), n(388685);
+n.d(t, { k: () => C }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(740442),
@@ -20,9 +20,9 @@ var r = n(255367),
     x = n(946443),
     v = n(264233),
     O = n(981631),
-    C = n(388032);
-function j(e) {
-    let { onOpen: t, onClose: n, children: j, badgeState: S, popoutPosition: I, popoutAlign: N, targetElementRef: T } = e,
+    j = n(388032);
+function C(e) {
+    let { onOpen: t, onClose: n, children: C, badgeState: S, popoutPosition: I, popoutAlign: N, targetElementRef: T } = e,
         { analyticsLocations: P } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
         [A, w] = i.useState(!1),
         [Z, R] = [
@@ -91,7 +91,7 @@ function j(e) {
             onRequestClose: L,
             renderPopout: function () {
                 return (0, r.jsx)(s.VqE, {
-                    'aria-label': C.intl.string(C.t.GSmTKC),
+                    'aria-label': j.intl.string(j.t.GSmTKC),
                     children:
                         Z === o.X.FOR_YOU
                             ? (0, r.jsx)(b.Z, {
@@ -144,7 +144,7 @@ function j(e) {
             clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return j(M, n, e, B);
+                return C(M, n, e, B);
             }
         })
     });

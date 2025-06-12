@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685), n(642613);
+n.d(t, { Z: () => _ }), n(388685), n(642613);
 var r = n(255367),
     i = n(73800),
     a = n(793030),
@@ -8,9 +8,9 @@ var r = n(255367),
     c = n(388032),
     u = n(340181);
 let d = 5;
-function f(e) {
+function _(e) {
     var t;
-    let { selectedGuildId: n, selectedChannelId: f, onChannelChange: _, error: p } = e,
+    let { selectedGuildId: n, selectedChannelId: _, onChannelChange: f, error: p } = e,
         [h, m] = i.useState(null),
         g = i.useRef(!1);
     if (
@@ -25,11 +25,11 @@ function f(e) {
                     }),
                     (g.current = !0));
             }
-            m(null), null == n ? _(null) : e(n);
-        }, [_, n]),
+            m(null), null == n ? f(null) : e(n);
+        }, [f, n]),
         i.useEffect(() => {
-            g.current && (null == h ? null != f && _(null) : h.channels.some((e) => e.id === f) || _(null));
-        }, [h, _, f, n]),
+            g.current && (null == h ? null != _ && f(null) : h.channels.some((e) => e.id === _) || f(null));
+        }, [h, f, _, n]),
         null == n)
     )
         return null;
@@ -58,10 +58,10 @@ function f(e) {
             (0, r.jsx)(s.VcW, {
                 wrapperClassName: u.select,
                 maxVisibleItems: d,
-                onChange: _,
+                onChange: f,
                 placeholder: c.intl.string(c.t['Re/64e']),
                 options: E,
-                value: f,
+                value: _,
                 renderOptionLabel: (e) =>
                     (0, r.jsx)(o.x, {
                         variant: 'text-md/normal',

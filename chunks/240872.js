@@ -58,7 +58,7 @@ function u(e, t) {
 }
 let d = {
     show(e) {
-        let { title: t, body: n, confirmColor: o, confirmText: s, cancelText: c, onConfirm: d, onCancel: f, onCloseCallback: _, secondaryConfirmText: p, onConfirmSecondary: h, className: m, titleClassName: g, contextKey: E } = e;
+        let { title: t, body: n, confirmColor: o, confirmText: s, cancelText: c, onConfirm: d, onCancel: _, onCloseCallback: f, secondaryConfirmText: p, onConfirmSecondary: h, className: m, titleClassName: g, contextKey: E } = e;
         (0, i.h7)(
             (e) =>
                 (0, r.jsx)(
@@ -70,14 +70,14 @@ let d = {
                         confirmText: s,
                         cancelText: c,
                         onConfirm: d,
-                        onCancel: f,
+                        onCancel: _,
                         secondaryConfirmText: p,
                         onConfirmSecondary: h,
                         className: m,
                         titleClassName: g
                     })
                 ),
-            { onCloseCallback: _ },
+            { onCloseCallback: f },
             E
         );
     },

@@ -6,11 +6,11 @@ n.r(t),
         openAppWithQuest: () => Z,
         openDisclosureModal: () => j,
         openQuestInGameRewardModal: () => x,
-        openQuestMinorEnrollmentBlockModal: () => M,
-        openQuestOrbsRewardModal: () => k,
+        openQuestMinorEnrollmentBlockModal: () => k,
+        openQuestOrbsRewardModal: () => M,
         openQuestsNitroRewardModal: () => L,
         openQuestsRewardCodeModal: () => D,
-        openVideoQuestModal: () => F
+        openVideoQuestModal: () => V
     });
 var r = n(255367);
 n(73800);
@@ -22,8 +22,8 @@ var i = n(772848),
     c = n(836768),
     u = n(98278),
     d = n(703656),
-    f = n(314897),
-    _ = n(626135),
+    _ = n(314897),
+    f = n(626135),
     p = n(954824),
     h = n(617136),
     m = n(497505),
@@ -136,7 +136,7 @@ function x(e, t) {
             );
     });
 }
-function k(e, t) {
+function M(e, t) {
     (0, s.ZDy)(async () => {
         let { default: i } = await Promise.all([n.e('66317'), n.e('94784')]).then(n.bind(n, 383294));
         return (n) =>
@@ -149,7 +149,7 @@ function k(e, t) {
             );
     });
 }
-function M(e, t) {
+function k(e, t) {
     (0, s.ZDy)(async () => {
         let { default: i } = await n.e('58641').then(n.bind(n, 828664));
         return (n) =>
@@ -207,7 +207,7 @@ function G(e) {
 function B() {
     return Promise.all([n.e('66816'), n.e('32249'), n.e('58914')]).then(n.bind(n, 536687));
 }
-function F(e) {
+function V(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = (0, i.Z)();
     (0, s.ZDy)(
@@ -235,12 +235,12 @@ function F(e) {
         }
     );
 }
-function V(e) {
+function F(e) {
     var t;
     let n = null == (t = platform.os) ? void 0 : t.family,
         r = 'quest';
     if ('Android' === n || 'iOS' === n) {
-        let t = f.default.getFingerprint(),
+        let t = _.default.getFingerprint(),
             n = (0, a.WS)(),
             i = ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT, '/quests/').concat(e);
         return (0, a.ZP)(i, {
@@ -252,10 +252,10 @@ function V(e) {
     return 'discord://';
 }
 function Z(e) {
-    let t = V(e),
+    let t = F(e),
         n = (0, a.zS)(t);
     null != n &&
-        _.default.track(T.rMx.DEEP_LINK_CLICKED, {
+        f.default.track(T.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, o.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource

@@ -15,22 +15,22 @@ let o = 60,
         months: a.t.kHo4Oj,
         years: a.t.KjKr2N
     }),
-    f = (e, t) => null != t && null != t[e],
-    _ = (e, t, n) => {
+    _ = (e, t) => null != t && null != t[e],
+    f = (e, t, n) => {
         var r, i, a;
-        return f(e, t) ? (null != (i = null != (r = t[e]) ? r : null == n ? void 0 : n[e]) ? i : null) : null != (a = null == n ? void 0 : n[e]) ? a : null;
+        return _(e, t) ? (null != (i = null != (r = t[e]) ? r : null == n ? void 0 : n[e]) ? i : null) : null != (a = null == n ? void 0 : n[e]) ? a : null;
     },
     p = function (e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
             r = i()().diff(i()(e), 's'),
-            f = null != t ? t() : void 0,
+            _ = null != t ? t() : void 0,
             p = d(),
             h = (e, t) => {
-                let r = _(e, f, n ? p : void 0);
+                let r = f(e, _, n ? p : void 0);
                 return null == r ? null : 'string' == typeof r ? r : a.intl.formatToPlainString(r, { count: t });
             };
         if (r < o) {
-            let e = (null == f ? void 0 : f.seconds) != null ? h('seconds', r) : h('minutes', 1);
+            let e = (null == _ ? void 0 : _.seconds) != null ? h('seconds', r) : h('minutes', 1);
             if (null != e) return e;
         }
         if (r < s) {
@@ -49,7 +49,7 @@ let o = 60,
             let e = h('months', Math.floor(r / c));
             if (null != e) return e;
         }
-        if (r >= u && (null == f ? void 0 : f.years) != null) {
+        if (r >= u && (null == _ ? void 0 : _.years) != null) {
             let e = h('years', Math.floor(r / u));
             if (null != e) return e;
         }

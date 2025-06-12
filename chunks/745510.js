@@ -49,7 +49,7 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,7 +60,7 @@ function f(e, t) {
         e
     );
 }
-let _ = 20,
+let f = 20,
     p = {
         confettiCanvas: null,
         cannon: null,
@@ -87,7 +87,7 @@ function m(e) {
                           createConfettiAt: (e, t, n, r) =>
                               g.createConfetti(
                                   u(
-                                      f(u({}, c), {
+                                      _(u({}, c), {
                                           position: {
                                               type: 'static',
                                               value: {
@@ -101,16 +101,16 @@ function m(e) {
                                   r
                               ),
                           createMultipleConfetti: function (e) {
-                              let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _,
+                              let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f,
                                   n = arguments.length > 2 ? arguments[2] : void 0;
                               return g.createMultipleConfetti(u({}, c, e), t, n);
                           },
                           createMultipleConfettiAt: function (e, t, n) {
-                              let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : _,
+                              let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : f,
                                   i = arguments.length > 4 ? arguments[4] : void 0;
                               return g.createMultipleConfetti(
                                   u(
-                                      f(u({}, c), {
+                                      _(u({}, c), {
                                           position: {
                                               type: 'static',
                                               value: {

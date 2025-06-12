@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(570908),
     d = n(204418),
-    f = n(172751),
-    _ = n(359135),
+    _ = n(172751),
+    f = n(359135),
     p = n(516817),
     h = n(210887),
     m = n(158776),
@@ -29,8 +29,8 @@ let v = {
             D = null != n ? (0, E.EU)(n) : a,
             L = (0, s.e7)([m.Z], () => (null != t ? m.Z.getStatus(t.id) : c.Skl.ONLINE)),
             x = w ? '#706F74' : '#aaaab2',
-            k = i.useRef(null),
-            M = v[R];
+            M = i.useRef(null),
+            k = v[R];
         return (0, r.jsxs)('div', {
             className: o()(I, b.nameplatePreview, {
                 [b.nameplatePurchased]: P && !S,
@@ -45,8 +45,8 @@ let v = {
                         {
                             nameplate: D,
                             hovered: S,
-                            placement: _.i.PREVIEW,
-                            content: N ? void 0 : k
+                            placement: f.i.PREVIEW,
+                            content: N ? void 0 : M
                         },
                         null == n ? void 0 : n.id
                     ),
@@ -57,15 +57,15 @@ let v = {
                             ? (0, r.jsx)('div', {
                                   className: o()(b.avatarContainer, !N && b.avatarVisible),
                                   children: (0, r.jsx)(u.Z, {
-                                      ref: k,
+                                      ref: M,
                                       avatar: (0, r.jsx)(d.Z, {
                                           user: t,
                                           guildId: null,
-                                          avatarSize: M,
+                                          avatarSize: k,
                                           status: A ? L : void 0,
                                           'aria-hidden': !0
                                       }),
-                                      decorators: (0, r.jsx)(f.ZP, {
+                                      decorators: (0, r.jsx)(_.ZP, {
                                           userId: t.id,
                                           className: b.tagChiplet
                                       }),
@@ -79,7 +79,7 @@ let v = {
                             children: [
                                 (0, r.jsx)(c.qEK, {
                                     src: w ? y : O,
-                                    size: M,
+                                    size: k,
                                     'aria-hidden': !0,
                                     status: c.Skl.ONLINE,
                                     statusColor: x,

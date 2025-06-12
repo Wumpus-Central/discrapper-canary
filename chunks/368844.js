@@ -21,8 +21,8 @@ var r = n(73800),
     c = n(695346),
     u = n(592125),
     d = n(375954),
-    f = n(594174),
-    _ = n(630388),
+    _ = n(594174),
+    f = n(630388),
     p = n(823379),
     h = n(709054),
     m = n(591759),
@@ -52,10 +52,10 @@ function v(e) {
               .filter(y)
               .map((e, t) => {
                   var n;
-                  let { proxy_url: r, url: i, description: a, spoiler: o, flags: l, width: c, height: u, filename: d, content_scan_version: f } = e;
+                  let { proxy_url: r, url: i, description: a, spoiler: o, flags: l, width: c, height: u, filename: d, content_scan_version: _ } = e;
                   if (null == c || null == u) return null;
                   let p = (0, s.NU)(d),
-                      h = null != e.flags && (0, _.yE)(e.flags, g.J0y.IS_THUMBNAIL),
+                      h = null != e.flags && (0, f.yE)(e.flags, g.J0y.IS_THUMBNAIL),
                       E = null != r ? r : i;
                   if (p) {
                       let e = m.Z.toURLSafe(r);
@@ -69,13 +69,13 @@ function v(e) {
                       height: u,
                       spoiler: null != o && o,
                       flags: l,
-                      contentScanVersion: f,
+                      contentScanVersion: _,
                       alt: a,
                       isVideo: p,
                       isThumbnail: h,
                       attachmentId: e.id,
                       mediaIndex: t,
-                      srcIsAnimated: (0, _.yE)(null != (n = e.flags) ? n : 0, g.J0y.IS_ANIMATED)
+                      srcIsAnimated: (0, f.yE)(null != (n = e.flags) ? n : 0, g.J0y.IS_ANIMATED)
                   };
               })
               .filter(p.lm);
@@ -107,7 +107,7 @@ function T(e, t) {
                           contentScanVersion: e.contentScanVersion,
                           isVideo: u,
                           mediaIndex: n,
-                          srcIsAnimated: (0, _.yE)(null != c ? c : 0, g.FoC.IS_ANIMATED)
+                          srcIsAnimated: (0, f.yE)(null != c ? c : 0, g.FoC.IS_ANIMATED)
                       };
                   }
               })
@@ -149,7 +149,7 @@ function A(e, t) {
               spoiler: t,
               contentScanVersion: null == (n = e.contentScanMetadata) ? void 0 : n.version,
               flags: 0,
-              srcIsAnimated: (0, _.yE)(e.flags, o.hR.IS_ANIMATED),
+              srcIsAnimated: (0, f.yE)(e.flags, o.hR.IS_ANIMATED),
               isVideo: 'VIDEO' === a,
               mediaIndex: 0,
               srcUnfurledMediaItem: e
@@ -189,7 +189,7 @@ function w(e, t) {
     let r = u.Z.getChannel(t);
     if (null == r) return !1;
     let i = d.Z.getMessage(r.id, h.default.castChannelIdAsMessageId(r.id));
-    return null != i && e.length > 0 && null != e.find((e) => e.isImage || e.isVideo) && r.isForumPost() && r.ownerId === (null == (n = f.default.getCurrentUser()) ? void 0 : n.id) && 0 === l.Z.getCount(r.id) && (0 === i.attachments.length || null == i.attachments.find((e) => E(e) || b(e)));
+    return null != i && e.length > 0 && null != e.find((e) => e.isImage || e.isVideo) && r.isForumPost() && r.ownerId === (null == (n = _.default.getCurrentUser()) ? void 0 : n.id) && 0 === l.Z.getCount(r.id) && (0 === i.attachments.length || null == i.attachments.find((e) => E(e) || b(e)));
 }
 function D(e) {
     return e.reduce(

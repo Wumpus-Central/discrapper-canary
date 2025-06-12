@@ -31,23 +31,23 @@ var s = (function () {
         c.sort(function (e, n) {
             return t[e] < t[n] ? -1 : 1;
         });
-        for (var d = [], f = [], _ = [], p = 0; p < l - 1; p++) (i = t[p + 1] - t[p]), (a = n[p + 1] - n[p]), f.push(i), d.push(a), _.push(a / i);
-        for (var h = [_[0]], m = 0; m < f.length - 1; m++) {
-            var g = _[m],
-                E = _[m + 1];
+        for (var d = [], _ = [], f = [], p = 0; p < l - 1; p++) (i = t[p + 1] - t[p]), (a = n[p + 1] - n[p]), _.push(i), d.push(a), f.push(a / i);
+        for (var h = [f[0]], m = 0; m < _.length - 1; m++) {
+            var g = f[m],
+                E = f[m + 1];
             if (g * E <= 0) h.push(0);
             else {
-                i = f[m];
-                var b = f[m + 1],
+                i = _[m];
+                var b = _[m + 1],
                     y = i + b;
                 h.push((3 * y) / ((y + b) / g + (y + i) / E));
             }
         }
-        h.push(_[_.length - 1]);
+        h.push(f[f.length - 1]);
         for (var O = [], v = [], I = 0; I < h.length - 1; I++) {
-            s = _[I];
+            s = f[I];
             var T = h[I],
-                S = 1 / f[I],
+                S = 1 / _[I],
                 A = T + h[I + 1] - s - s;
             O.push((s - T - A) * S), v.push(A * S * S);
         }
@@ -75,8 +75,8 @@ var s = (function () {
                         }
                     }
                     var d = e - n[(s = Math.max(0, c))],
-                        f = d * d;
-                    return r[s] + i[s] * d + a[s] * f + o[s] * d * f;
+                        _ = d * d;
+                    return r[s] + i[s] * d + a[s] * _ + o[s] * d * _;
                 }
             }
         ]),

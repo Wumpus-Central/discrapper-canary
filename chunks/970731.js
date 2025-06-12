@@ -41,7 +41,7 @@ function d(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,12 +53,12 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -91,7 +91,7 @@ function y(e) {
         className: n,
         header: i,
         headerClassName: u,
-        content: f,
+        content: _,
         contentClassName: p,
         buttonCTA: h,
         secondaryButtonCTA: m,
@@ -134,7 +134,7 @@ function y(e) {
                 color: b[t],
                 className: a()(p, c.content),
                 variant: 'text-sm/normal',
-                children: f
+                children: _
             }),
             null != h || R
                 ? (0, r.jsxs)('div', {
@@ -146,7 +146,7 @@ function y(e) {
                           R
                               ? (0, r.jsx)(
                                     o.zxk,
-                                    _(d({}, I), {
+                                    f(d({}, I), {
                                         fullWidth: 1 === C,
                                         onClick: w,
                                         children: m
@@ -157,7 +157,7 @@ function y(e) {
                               ? null
                               : (0, r.jsx)(
                                     o.zxk,
-                                    _(d({}, v), {
+                                    f(d({}, v), {
                                         fullWidth: !R || 1 === C,
                                         onClick: P,
                                         children: h

@@ -23,11 +23,11 @@ function s(e, t, n, a) {
         u = (0, r.Dm)(l);
     if (null == u) return null;
     let d = (0, r.Q2)(e.id, l, { newCdn: c }),
-        f = r.N0.includes(u);
+        _ = r.N0.includes(u);
     return {
         url: d,
         mimetype: u,
-        isAnimated: f
+        isAnimated: _
     };
 }
 let l = {

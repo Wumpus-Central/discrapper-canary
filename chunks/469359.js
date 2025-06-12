@@ -10,7 +10,7 @@ function s(t) {
 function l() {
     if (!E.m.document) return;
     let t = o.rK.bind(null, 'dom'),
-        e = u(t, !0);
+        e = I(t, !0);
     E.m.document.addEventListener('click', e, !1),
         E.m.document.addEventListener('keypress', e, !1),
         ['EventTarget', 'Node'].forEach((e) => {
@@ -25,7 +25,7 @@ function l() {
                                 let r = (this.__sentry_instrumentation_handlers__ = this.__sentry_instrumentation_handlers__ || {}),
                                     n = (r[a] = r[a] || { refCount: 0 });
                                 if (!n.handler) {
-                                    let r = u(t);
+                                    let r = I(t);
                                     (n.handler = r), e.call(this, a, r, _);
                                 }
                                 n.refCount++;
@@ -46,7 +46,7 @@ function l() {
                 }));
         });
 }
-function u(t, e = !1) {
+function I(t, e = !1) {
     return (a) => {
         var o;
         if (!a || a._sentryCaptured) return;

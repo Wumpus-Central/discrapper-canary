@@ -30,8 +30,8 @@ function b(e, t) {
         {
             rawMediaPostEmbedData: v,
             guild: O,
-            parentChannel: C,
-            user: j,
+            parentChannel: j,
+            user: C,
             selectedGuildId: S,
             canAccess: I
         } = (0, i.cj)(
@@ -60,8 +60,8 @@ function b(e, t) {
             let n = (0, g.ku)({
                 mediaPostEmbedData: v,
                 guild: O,
-                parentChannel: C,
-                user: j,
+                parentChannel: j,
+                user: C,
                 selectedGuildId: S,
                 canAccess: I
             });
@@ -92,7 +92,7 @@ function b(e, t) {
                       }
                       return e;
                   })({}, n)),
-                  (t = t = { user: j }),
+                  (t = t = { user: C }),
                   Object.getOwnPropertyDescriptors
                       ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                       : (function (e, t) {
@@ -106,7 +106,7 @@ function b(e, t) {
                             Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                         }),
                   e);
-        }, [v, O, C, j, S, I]);
+        }, [v, O, j, C, S, I]);
     return (
         r.useEffect(() => {
             if ((null == b ? void 0 : b.threadId) != null) {

@@ -6,24 +6,24 @@ e.exports = function (e, t, n, o, s, l) {
         u = r(e),
         d = u.length;
     if (d != r(t).length && !c) return !1;
-    for (var f = d; f--; ) {
-        var _ = u[f];
-        if (!(c ? _ in t : a.call(t, _))) return !1;
+    for (var _ = d; _--; ) {
+        var f = u[_];
+        if (!(c ? f in t : a.call(t, f))) return !1;
     }
     var p = l.get(e),
         h = l.get(t);
     if (p && h) return p == t && h == e;
     var m = !0;
     l.set(e, t), l.set(t, e);
-    for (var g = c; ++f < d; ) {
-        var E = e[(_ = u[f])],
-            b = t[_];
-        if (o) var y = c ? o(b, E, _, t, e, l) : o(E, b, _, e, t, l);
+    for (var g = c; ++_ < d; ) {
+        var E = e[(f = u[_])],
+            b = t[f];
+        if (o) var y = c ? o(b, E, f, t, e, l) : o(E, b, f, e, t, l);
         if (!(void 0 === y ? E === b || s(E, b, n, o, l) : y)) {
             m = !1;
             break;
         }
-        g || (g = 'constructor' == _);
+        g || (g = 'constructor' == f);
     }
     if (m && !g) {
         var O = e.constructor,

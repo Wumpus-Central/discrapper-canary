@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(841784),
     u = n(429589),
     d = n(499254),
-    f = n(827498),
-    _ = n(541716),
+    _ = n(827498),
+    f = n(541716),
     p = n(706454),
     h = n(823379),
     m = n(5192),
@@ -86,12 +86,12 @@ let R = (e, t) =>
                 entry: n,
                 showCoverImage: !1
             }),
-            { user: x, details: k, activity: M, embeddedActivity: j } = (0, T.n)(n),
+            { user: x, details: M, activity: k, embeddedActivity: j } = (0, T.n)(n),
             { primaryColor: U, secondaryColor: G } = (0, O.Z)(null == L ? void 0 : L.src),
             B = (0, a.e7)([p.default], () => p.default.locale),
-            { displayParticipants: F, participant1: V, participant2: Z, numOtherParticipants: H } = (0, E.Z)(n, 3),
+            { displayParticipants: V, participant1: F, participant2: Z, numOtherParticipants: H } = (0, E.Z)(n, 3),
             Y = () => {
-                d.__(f._b.TEXT, _.Ie.NORMAL, { applicationId: n.extra.application_id });
+                d.__(_._b.TEXT, f.Ie.NORMAL, { applicationId: n.extra.application_id });
             },
             W = i.useCallback(
                 (e) => {
@@ -101,21 +101,21 @@ let R = (e, t) =>
                             ? w({
                                   entry: n,
                                   channel: t,
-                                  users: [V, Z],
+                                  users: [F, Z],
                                   countOthers: H
                               })
                             : P(n, t, x);
                     return (0, y.C4)({
                         entry: n,
                         applicationImageSrc: null == L ? void 0 : L.src,
-                        avatarSrcs: F.map((e) => e.getAvatarURL(t.guild_id, 128)),
+                        avatarSrcs: V.map((e) => e.getAvatarURL(t.guild_id, 128)),
                         description: r,
                         timestamp: (0, b.yh)(n, B),
                         colors: [U, G],
                         channelId: e
                     });
                 },
-                [null == L ? void 0 : L.src, t, F, n, B, H, V, Z, U, G, x]
+                [null == L ? void 0 : L.src, t, V, n, B, H, F, Z, U, G, x]
             ),
             { enabled: K } = s.c.useExperiment({ location: 'MemberListAcitivtyContentPopout' }, { autoTrackExposure: !0 });
         if (null == x) return null;
@@ -127,7 +127,7 @@ let R = (e, t) =>
                 channel: t,
                 userDescription: (0, b.kr)(n) ? A.t.vPg1JS : A.t.rPqqtr,
                 title: n.extra.activity_name,
-                subtitle: k,
+                subtitle: M,
                 badges: z,
                 entry: n,
                 showCoverImage: !1,
@@ -135,11 +135,11 @@ let R = (e, t) =>
                 onClickSubtitle: D ? void 0 : Y,
                 onClickThumbnail: D ? void 0 : Y
             }),
-            X = (0, l.Z)(M, S.xjy.JOIN) || (0, c.Z)(M),
+            X = (0, l.Z)(k, S.xjy.JOIN) || (0, c.Z)(k),
             Q = X
                 ? (0, r.jsx)(u.Z, {
                       embeddedActivity: j,
-                      activity: M,
+                      activity: k,
                       user: x,
                       ButtonComponent: (e) => (0, r.jsx)(I.Ll, C({ IconComponent: o.YVR }, e))
                   })

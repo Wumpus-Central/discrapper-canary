@@ -1,4 +1,4 @@
-n.d(t, { kZ: () => _ });
+n.d(t, { kZ: () => f });
 var r = n(4313),
     i = n(493623),
     a = n(620720),
@@ -12,17 +12,17 @@ var r = n(4313),
         modifiers: [],
         strategy: 'absolute'
     };
-function f() {
+function _() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     return !t.some(function (e) {
         return !(e && 'function' == typeof e.getBoundingClientRect);
     });
 }
-function _(e) {
+function f(e) {
     void 0 === e && (e = {});
     var t = e,
         n = t.defaultModifiers,
-        _ = void 0 === n ? [] : n,
+        f = void 0 === n ? [] : n,
         p = t.defaultOptions,
         h = void 0 === p ? d : p;
     return function (e, t, n) {
@@ -51,7 +51,7 @@ function _(e) {
                             reference: (0, u.kK)(e) ? (0, a.Z)(e) : e.contextElement ? (0, a.Z)(e.contextElement) : [],
                             popper: (0, a.Z)(t)
                         });
-                    var i = (0, s.Z)((0, c.Z)([].concat(_, p.options.modifiers)));
+                    var i = (0, s.Z)((0, c.Z)([].concat(f, p.options.modifiers)));
                     return (
                         (p.orderedModifiers = i.filter(function (e) {
                             return e.enabled;
@@ -65,7 +65,7 @@ function _(e) {
                         var e = p.elements,
                             t = e.reference,
                             n = e.popper;
-                        if (f(t, n)) {
+                        if (_(t, n)) {
                             (p.rects = {
                                 reference: (0, r.Z)(t, (0, o.Z)(n), 'fixed' === p.options.strategy),
                                 popper: (0, i.Z)(n)
@@ -106,7 +106,7 @@ function _(e) {
                     y(), (g = !0);
                 }
             };
-        if (!f(e, t)) return E;
+        if (!_(e, t)) return E;
         function b() {
             p.orderedModifiers.forEach(function (e) {
                 var t = e.name,

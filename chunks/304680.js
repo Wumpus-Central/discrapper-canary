@@ -1,8 +1,8 @@
 n.d(t, {
-    MS: () => f,
+    MS: () => _,
     TC: () => d,
     bA: () => s,
-    gl: () => _,
+    gl: () => f,
     xv: () => l,
     z4: () => c,
     zc: () => u
@@ -37,7 +37,7 @@ function d(e) {
             value: e
         });
 }
-function f(e, t, n) {
+function _(e, t, n) {
     r.Z.dispatch({
         type: 'RTC_DEBUG_SET_SIMULCAST_OVERRIDE',
         userId: e,
@@ -45,7 +45,7 @@ function f(e, t, n) {
         quality: n
     });
 }
-function _() {
+function f() {
     i.Z.fileManager
         .showOpenDialog({
             filters: [

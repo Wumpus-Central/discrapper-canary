@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V }), n(388685), n(539854);
+n.d(t, { Z: () => F }), n(388685), n(539854);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -8,8 +8,8 @@ var r,
     c = n(959546),
     u = n(283595),
     d = n(780570),
-    f = n(55563),
-    _ = n(981631),
+    _ = n(55563),
+    f = n(981631),
     p = n(474936);
 function h(e, t, n) {
     return (
@@ -69,11 +69,11 @@ function L() {}
 function x() {
     y = !0;
 }
-function k(e) {
+function M(e) {
     let { entitlements: t, excludeEnded: n } = e;
     for (let e of ((O = !0), (y = !1), (v = !n), t)) N(e);
 }
-function M() {
+function k() {
     (O = !1), (y = !1), (v = !1);
 }
 function j(e) {
@@ -90,7 +90,7 @@ function G(e) {
 function B(e) {
     return R(e.entitlement);
 }
-class F extends (r = s.yh) {
+class V extends (r = s.yh) {
     initialize() {
         this.syncWith([u.Z], () => !0);
     }
@@ -148,7 +148,7 @@ class F extends (r = s.yh) {
         if (null != i)
             for (let t of i) {
                 let n = m[t];
-                if (null != n && n.isValid(e, f.Z, r)) return !0;
+                if (null != n && n.isValid(e, _.Z, r)) return !0;
             }
         if (T.has(n)) return !1;
         let a = null != r ? u.Z.getLibraryApplication(n, r) : u.Z.getActiveLibraryApplication(n);
@@ -164,7 +164,7 @@ class F extends (r = s.yh) {
             for (let r of n) {
                 let n = null != r.endsAt && r.endsAt < t,
                     i = null != r.startsAt;
-                if (r.type === _.qc2.FRACTIONAL_REDEMPTION && r.sourceType === _.kNB.REVERSE_TRIAL && (!n || e) && i) return r;
+                if (r.type === f.qc2.FRACTIONAL_REDEMPTION && r.sourceType === f.kNB.REVERSE_TRIAL && (!n || e) && i) return r;
             }
         return null;
     }
@@ -177,8 +177,8 @@ class F extends (r = s.yh) {
             null == (e = this.getForApplication(p.CL)) ||
                 e.forEach((e) => {
                     let a = null != e.endsAt && e.endsAt < i,
-                        o = e.sourceType === _.kNB.REVERSE_TRIAL && n;
-                    e.type !== _.qc2.FRACTIONAL_REDEMPTION || (a && !t) || o || r.push(e);
+                        o = e.sourceType === f.kNB.REVERSE_TRIAL && n;
+                    e.type !== f.qc2.FRACTIONAL_REDEMPTION || (a && !t) || o || r.push(e);
                 }),
             r
         );
@@ -204,8 +204,8 @@ class F extends (r = s.yh) {
         );
     }
 }
-h(F, 'displayName', 'EntitlementStore');
-let V = new F(l.Z, {
+h(V, 'displayName', 'EntitlementStore');
+let F = new V(l.Z, {
     ENTITLEMENT_FETCH_APPLICATION_START: P,
     ENTITLEMENT_FETCH_APPLICATION_SUCCESS: w,
     ENTITLEMENT_FETCH_APPLICATION_FAIL: L,
@@ -218,6 +218,6 @@ let V = new F(l.Z, {
     ENTITLEMENT_DELETE: B,
     LOGOUT: A,
     ENTITLEMENTS_FETCH_FOR_USER_START: x,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: k,
-    ENTITLEMENTS_FETCH_FOR_USER_FAIL: M
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: M,
+    ENTITLEMENTS_FETCH_FOR_USER_FAIL: k
 });

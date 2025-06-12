@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(240872),
     d = n(19780),
-    f = n(942389),
-    _ = n(572004),
+    _ = n(942389),
+    f = n(572004),
     p = n(63063),
     h = n(358085),
     m = n(145022),
@@ -25,13 +25,13 @@ function O(e) {
         s = i.useRef(void 0),
         l = i.useCallback(() => {
             n ||
-                (0, _.JG)(t, () => {
+                (0, f.JG)(t, () => {
                     a(!0), (s.current = setTimeout(() => a(!1), 2000));
                 });
         }, [t, n]);
     return (
         i.useEffect(() => () => clearTimeout(s.current), []),
-        _.wS
+        f.wS
             ? (0, r.jsxs)(c.P3F, {
                   className: o()(b.copyLink, n ? b.copied : null),
                   onClick: l,
@@ -92,10 +92,10 @@ function T(e) {
     let t,
         n,
         r,
-        { currentOverrides: i, linkMeta: a, applyBuildOverride: o, clearBuildOverride: s, submitting: f } = e,
-        _ = ['discord_web'];
-    h.isPlatformEmbedded || _.push('discord_marketing', 'discord_developers');
-    let p = (0, m.Z)(a, _);
+        { currentOverrides: i, linkMeta: a, applyBuildOverride: o, clearBuildOverride: s, submitting: _ } = e,
+        f = ['discord_web'];
+    h.isPlatformEmbedded || f.push('discord_marketing', 'discord_developers');
+    let p = (0, m.Z)(a, f);
     if (!p.valid) return S(p.reason);
     l()(null != a, 'BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved');
     let { discord_web: g, discord_developers: b } = a.targetBuildOverride,
@@ -118,7 +118,7 @@ function T(e) {
         buttonClick: v,
         buttonText: n,
         buttonColor: r,
-        submitting: f
+        submitting: _
     });
 }
 function S(e) {
@@ -159,7 +159,7 @@ let N = (e) => {
         d = i.useCallback(() => {
             c || (u(!0), s().catch(() => u(!1)));
         }, [s, c]),
-        _ = i.useCallback(() => {
+        f = i.useCallback(() => {
             c || (u(!0), l().catch(() => u(!1)));
         }, [l, c]);
     return (0, r.jsxs)('div', {
@@ -169,14 +169,14 @@ let N = (e) => {
             (0, r.jsxs)('div', {
                 className: b.content,
                 children: [
-                    (0, r.jsx)(f.Z, { className: b.icon }),
+                    (0, r.jsx)(_.Z, { className: b.icon }),
                     t
                         ? v()
                         : T({
                               currentOverrides: n,
                               linkMeta: a,
                               applyBuildOverride: d,
-                              clearBuildOverride: _,
+                              clearBuildOverride: f,
                               submitting: c
                           })
                 ]

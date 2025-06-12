@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(493773),
     u = n(468363),
     d = n(906732),
-    f = n(158776),
-    _ = n(885110),
+    _ = n(158776),
+    f = n(885110),
     p = n(823379),
     h = n(785717),
     m = n(369566),
@@ -105,18 +105,18 @@ function x(e) {
     let { user: t, currentUser: n, displayProfile: a, guildId: p, onOpenUserProfileModal: A, onClose: C } = e,
         { analyticsLocations: R } = (0, d.ZP)(),
         { trackUserProfileAction: x } = (0, h.KZ)(),
-        { live: k, stream: M } = (0, m.Z)(t.id),
+        { live: M, stream: k } = (0, m.Z)(t.id),
         { voiceChannel: j, voiceActivity: U } = (0, g.Z)({
             userId: t.id,
             guildId: p
         }),
         G = t.id === n.id,
-        B = (0, s.e7)([_.Z, f.Z], () => {
-            let e = G ? _.Z.getStatus() : f.Z.getStatus(t.id, p);
+        B = (0, s.e7)([f.Z, _.Z], () => {
+            let e = G ? f.Z.getStatus() : _.Z.getStatus(t.id, p);
             return e === I.Sk.OFFLINE || e === I.Sk.INVISIBLE;
         }),
-        { voiceActivityStatusEnabled: F } = (0, u.U)({ location: 'UserProfileStackedActivity' }),
-        V = F && null == M && null == U && null != j,
+        { voiceActivityStatusEnabled: V } = (0, u.U)({ location: 'UserProfileStackedActivity' }),
+        F = V && null == k && null == U && null != j,
         Z = (0, E.yi)(),
         H = (null == Z ? void 0 : Z.interactionSource) === v.n_.ACTIVITY,
         Y = i.useRef(null),
@@ -134,14 +134,14 @@ function x(e) {
             className: S.card,
             onClose: C
         };
-    null != M &&
+    null != k &&
         et.push(
             (0, r.jsx)(
                 y.Z,
                 N(
                     {
                         location: 'UserProfileStackedActivity',
-                        stream: M,
+                        stream: k,
                         profileGuildId: null == a ? void 0 : a.guildId
                     },
                     en
@@ -149,7 +149,7 @@ function x(e) {
                 'stream'
             )
         ),
-        k.forEach((e, t) => {
+        M.forEach((e, t) => {
             et.push(
                 (0, r.jsx)(
                     b.Z,
@@ -164,7 +164,7 @@ function x(e) {
                 )
             );
         }),
-        V && et.push((0, r.jsx)(O.Z, N({ voiceChannel: j }, en), 'voice'));
+        F && et.push((0, r.jsx)(O.Z, N({ voiceChannel: j }, en), 'voice'));
     let [er, ...ei] = et,
         ea = ei.length > 0,
         eo =

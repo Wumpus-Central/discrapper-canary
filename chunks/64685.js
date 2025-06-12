@@ -14,7 +14,7 @@ function E(t, e) {
 }
 function s(t) {
     let e = 'fetch-body-resolved';
-    (0, c.Hj)(e, t), (0, c.D2)(e, () => l(u));
+    (0, c.Hj)(e, t), (0, c.D2)(e, () => l(I));
 }
 function l(t, e = !1) {
     (!e || (0, n.t$)()) &&
@@ -30,13 +30,13 @@ function l(t, e = !1) {
                             let [e, a] = t;
                             return {
                                 url: R(e),
-                                method: I(a, 'method') ? String(a.method).toUpperCase() : 'GET'
+                                method: u(a, 'method') ? String(a.method).toUpperCase() : 'GET'
                             };
                         }
                         let e = t[0];
                         return {
                             url: R(e),
-                            method: I(e, 'method') ? String(e.method).toUpperCase() : 'GET'
+                            method: u(e, 'method') ? String(e.method).toUpperCase() : 'GET'
                         };
                     })(a),
                     s = {
@@ -76,7 +76,7 @@ function l(t, e = !1) {
             };
         });
 }
-async function u(t) {
+async function I(t) {
     let e;
     try {
         e = t.clone();
@@ -112,9 +112,9 @@ async function u(t) {
         });
     });
 }
-function I(t, e) {
+function u(t, e) {
     return !!t && 'object' == typeof t && !!t[e];
 }
 function R(t) {
-    return 'string' == typeof t ? t : t ? (I(t, 'url') ? t.url : t.toString ? t.toString() : '') : '';
+    return 'string' == typeof t ? t : t ? (u(t, 'url') ? t.url : t.toString ? t.toString() : '') : '';
 }

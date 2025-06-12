@@ -35,7 +35,7 @@ function d(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,12 +47,12 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -79,11 +79,11 @@ function h(e, t) {
     return i;
 }
 let m = i.forwardRef(function (e, t) {
-        var { as: n = 'div', gap: i = 8, direction: a = 'vertical', align: s = 'stretch', justify: l = 'start', padding: u = 0, style: f, className: h, children: m } = e,
+        var { as: n = 'div', gap: i = 8, direction: a = 'vertical', align: s = 'stretch', justify: l = 'start', padding: u = 0, style: _, className: h, children: m } = e,
             b = p(e, ['as', 'gap', 'direction', 'align', 'justify', 'padding', 'style', 'className', 'children']);
         return (0, r.jsx)(
             n,
-            _(
+            f(
                 d(
                     {
                         ref: t,
@@ -91,7 +91,7 @@ let m = i.forwardRef(function (e, t) {
                         'data-justify': l,
                         'data-direction': a,
                         className: o()(c.stack, h),
-                        style: d(_(d({}, f), { gap: g(i) }), E(u))
+                        style: d(f(d({}, _), { gap: g(i) }), E(u))
                     },
                     b
                 ),

@@ -38,10 +38,10 @@ function E(t, e) {
         },
         s = e && e.getOptions().beforeSendSpan,
         l = s ? (t) => s((0, o.XU)(t)) : (t) => (0, o.XU)(t),
-        u = [];
+        I = [];
     for (let e of t) {
         let t = l(e);
-        t && u.push((0, r.KQ)(t));
+        t && I.push((0, r.KQ)(t));
     }
-    return (0, r.Jd)(E, u);
+    return (0, r.Jd)(E, I);
 }

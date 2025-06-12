@@ -14,12 +14,12 @@ var l = n(915486),
     c = n(68985),
     u = n(211644),
     d = n(605236),
-    f = n(57207),
-    _ = n(526761);
+    _ = n(57207),
+    f = n(526761);
 function p(e, t, n, o) {
     let s = (0, u.ZP)((t) => null != e && t.currentlyShown.has(e)),
         l = (0, a.xG)(),
-        f = (0, i.e7)([c.Z], () => null != e && c.Z.hasUserHitDCCap(e));
+        _ = (0, i.e7)([c.Z], () => null != e && c.Z.hasUserHitDCCap(e));
     return (
         r.useEffect(() => {
             if (null != e)
@@ -45,7 +45,7 @@ function p(e, t, n, o) {
                         );
                     }
                 );
-        }, [e, n, t, f, l, o]),
+        }, [e, n, t, _, l, o]),
         s && null != e ? e : null
     );
 }
@@ -55,10 +55,10 @@ function h(e, t) {
             return null == (e = o.Z.settings.userContent) ? void 0 : e.dismissedContents;
         }),
         a = (0, i.e7)([s.Z], () => s.Z.getGuildId()),
-        c = (0, f.i)(e),
+        c = (0, _.i)(e),
         u = null;
     return (
-        o.Z.hasLoaded(_.yP.PRELOADED_USER_SETTINGS) ? (u = c.find((e) => null == n || !(0, l.jl)(n, e))) : null != n && (u = c.find((e) => !(0, l.jl)(n, e))),
+        o.Z.hasLoaded(f.yP.PRELOADED_USER_SETTINGS) ? (u = c.find((e) => null == n || !(0, l.jl)(n, e))) : null != n && (u = c.find((e) => !(0, l.jl)(n, e))),
         [
             p(u, a, t),
             r.useCallback(
@@ -84,8 +84,8 @@ function m(e, t, n) {
         l = (0, i.e7)([s.Z], () => s.Z.getGuildId()),
         c = null;
     if (null != e) {
-        let n = !(0, f.B)(e);
-        o.Z.hasLoaded(_.yP.PRELOADED_USER_SETTINGS) ? (c = n && (null == a || a < t) ? e : null) : null != a && (c = n && a < t ? e : null);
+        let n = !(0, _.B)(e);
+        o.Z.hasLoaded(f.yP.PRELOADED_USER_SETTINGS) ? (c = n && (null == a || a < t) ? e : null) : null != a && (c = n && a < t ? e : null);
     }
     return [
         p(c, l, n, t),
@@ -113,11 +113,11 @@ function g(e, t, n) {
         c = (0, i.e7)([s.Z], () => s.Z.getGuildId()),
         u = null;
     if (null != e) {
-        let n = !(0, f.B)(e),
+        let n = !(0, _.B)(e),
             r = void 0 === l ? 0 : l + t.cooldownDurationMs,
             i = Date.now(),
             a = null == t.showAfterTimestamp || (i >= t.showAfterTimestamp && (null != l ? l : 0) <= t.showAfterTimestamp);
-        o.Z.hasLoaded(_.yP.PRELOADED_USER_SETTINGS) ? (u = n && a && (null == l || i >= r) ? e : null) : null != l && (u = n && a && i >= r ? e : null);
+        o.Z.hasLoaded(f.yP.PRELOADED_USER_SETTINGS) ? (u = n && a && (null == l || i >= r) ? e : null) : null != l && (u = n && a && i >= r ? e : null);
     }
     return [
         p(u, c, n),

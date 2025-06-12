@@ -8,8 +8,8 @@ var r,
     c = n(709054),
     u = n(225675),
     d = n(981631),
-    f = n(526761);
-function _(e, t, n) {
+    _ = n(526761);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
@@ -87,7 +87,7 @@ function O(e) {
         c.default.keys(r).forEach((e) => {
             var t;
             let n = r[e];
-            s.yE(null != (t = n.flags) ? t : 0, f.ic.OPT_IN_ENABLED) ? a.add(e) : a.delete(e);
+            s.yE(null != (t = n.flags) ? t : 0, _.ic.OPT_IN_ENABLED) ? a.add(e) : a.delete(e);
         }),
         (i.optInChannels = a),
         !0
@@ -187,7 +187,7 @@ class T extends (r = i.ZP.Store) {
         }
     }
 }
-_(T, 'displayName', 'ImpersonateStore');
+f(T, 'displayName', 'ImpersonateStore');
 let S = new T(a.Z, {
     IMPERSONATE_UPDATE: E,
     IMPERSONATE_STOP: b,

@@ -26,8 +26,8 @@ var r = n(73800),
                 },
                 attributes: {}
             }),
-            f = d[0],
-            _ = d[1],
+            _ = d[0],
+            f = d[1],
             p = r.useMemo(function () {
                 return {
                     name: 'updateState',
@@ -37,7 +37,7 @@ var r = n(73800),
                         var t = e.state,
                             n = Object.keys(t.elements);
                         i.flushSync(function () {
-                            _({
+                            f({
                                 styles: (0, l.sq)(
                                     n.map(function (e) {
                                         return [e, t.styles[e] || {}];
@@ -97,8 +97,8 @@ var r = n(73800),
             ),
             {
                 state: m.current ? m.current.state : null,
-                styles: f.styles,
-                attributes: f.attributes,
+                styles: _.styles,
+                attributes: _.attributes,
                 update: m.current ? m.current.update : null,
                 forceUpdate: m.current ? m.current.forceUpdate : null
             }

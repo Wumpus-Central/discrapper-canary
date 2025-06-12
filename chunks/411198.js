@@ -4,8 +4,8 @@ n.d(t, {
     Qs: () => g,
     cL: () => y,
     di: () => p,
-    rk: () => f,
-    sp: () => _,
+    rk: () => _,
+    sp: () => f,
     tK: () => b,
     wD: () => d
 }),
@@ -47,7 +47,7 @@ function u(e) {
     return e;
 }
 function d(e, t) {
-    var n, r, s, c, u, d, f, _, p, g, E, b, y;
+    var n, r, s, c, u, d, _, f, p, g, E, b, y;
     let O = null != e.joined_at ? new Date(e.joined_at) : null == t ? void 0 : t.joinedAt,
         v = null != (n = e.premium_subscription_count) ? n : 0;
     if (null == e.properties) {
@@ -80,8 +80,8 @@ function d(e, t) {
         systemChannelId: e.properties.system_channel_id,
         verificationLevel: null != (u = e.properties.verification_level) ? u : l.sFg.NONE,
         explicitContentFilter: null != (d = e.properties.explicit_content_filter) ? d : l.lxg.DISABLED,
-        defaultMessageNotifications: null != (f = e.properties.default_message_notifications) ? f : l.bL.ALL_MESSAGES,
-        mfaLevel: null != (_ = e.properties.mfa_level) ? _ : l.BpS.NONE,
+        defaultMessageNotifications: null != (_ = e.properties.default_message_notifications) ? _ : l.bL.ALL_MESSAGES,
+        mfaLevel: null != (f = e.properties.mfa_level) ? f : l.BpS.NONE,
         vanityURLCode: e.properties.vanity_url_code,
         premiumTier: null != (p = e.properties.premium_tier) ? p : l.Eu4.NONE,
         premiumProgressBarEnabled: e.properties.premium_progress_bar_enabled || !1,
@@ -102,11 +102,11 @@ function d(e, t) {
     };
     return null == t ? (0, a.gh)(I, o.ZP) : t.merge(I);
 }
-function f(e, t) {
+function _(e, t) {
     return new o.Bg(u({}, e, t));
 }
-function _(e, t) {
-    var n, r, i, a, o, s, c, u, d, f, _, p, h;
+function f(e, t) {
+    var n, r, i, a, o, s, c, u, d, _, f, p, h;
     let m = null != (n = e.properties) ? n : b(t),
         g = {
             id: e.id,
@@ -135,8 +135,8 @@ function _(e, t) {
             rulesChannelId: m.rules_channel_id,
             safetyAlertsChannelId: m.safety_alerts_channel_id,
             publicUpdatesChannelId: m.public_updates_channel_id,
-            maxStageVideoChannelUsers: null != (f = m.max_stage_video_channel_users) ? f : -1,
-            maxVideoChannelUsers: null != (_ = m.max_video_channel_users) ? _ : -1,
+            maxStageVideoChannelUsers: null != (_ = m.max_stage_video_channel_users) ? _ : -1,
+            maxVideoChannelUsers: null != (f = m.max_video_channel_users) ? f : -1,
             maxMembers: null != (p = m.max_members) ? p : -1,
             nsfwLevel: null != (h = m.nsfw_level) ? h : l.V_K.DEFAULT,
             hubType: m.hub_type,

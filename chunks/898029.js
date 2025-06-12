@@ -15,7 +15,7 @@ let s = (0, c._I)((t = {}) => {
             return (function (t, e = {}, a, c, s) {
                 if (!e.originalException || !(0, r.VZ)(e.originalException)) return t;
                 let l = e.originalException.name || e.originalException.constructor.name,
-                    u = (function (t, e, a) {
+                    I = (function (t, e, a) {
                         try {
                             let _ = ['name', 'message', 'stack', 'line', 'column', 'fileName', 'lineNumber', 'columnNumber', 'toJSON'],
                                 n = {};
@@ -37,9 +37,9 @@ let s = (0, c._I)((t = {}) => {
                         }
                         return null;
                     })(e.originalException, c, s);
-                if (u) {
+                if (I) {
                     let e = { ...t.contexts },
-                        o = (0, _.Fv)(u, a);
+                        o = (0, _.Fv)(I, a);
                     return (
                         (0, r.PO)(o) && ((0, n.xp)(o, '__sentry_skip_normalization__', !0), (e[l] = o)),
                         {

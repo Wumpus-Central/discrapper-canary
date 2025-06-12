@@ -5,13 +5,13 @@ var r = n(73800),
     o = n(691251),
     s = n(98528);
 let l = (e) => {
-    let { columnCounts: t, stickersGrid: n, stickersListRef: l, store: c, gridNavigatorId: u, setInspectedStickerPosition: d, onGridItemSelect: f } = e,
-        _ = (0, a.O)(),
+    let { columnCounts: t, stickersGrid: n, stickersListRef: l, store: c, gridNavigatorId: u, setInspectedStickerPosition: d, onGridItemSelect: _ } = e,
+        f = (0, a.O)(),
         p = r.useCallback(
             (e) => {
-                f(e, _);
+                _(e, f);
             },
-            [f, _]
+            [_, f]
         ),
         h = r.useCallback(
             (e, t) => {

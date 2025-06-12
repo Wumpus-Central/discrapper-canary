@@ -12,7 +12,7 @@ function s(e, t = 100, n = Infinity) {
 }
 function l(e, t = 3, n = 102400) {
     let r = s(e, t);
-    return _(r) > n ? l(e, t - 1, n) : r;
+    return f(r) > n ? l(e, t - 1, n) : r;
 }
 function c(e, t, n = Infinity, r = Infinity, o = (0, i.i)()) {
     let [s, l] = o;
@@ -20,14 +20,14 @@ function c(e, t, n = Infinity, r = Infinity, o = (0, i.i)()) {
     let d = u(e, t);
     if (!d.startsWith('[object ')) return d;
     if (t.__sentry_skip_normalization__) return t;
-    let f = 'number' == typeof t.__sentry_override_normalization_depth__ ? t.__sentry_override_normalization_depth__ : n;
-    if (0 === f) return d.replace('object ', '');
+    let _ = 'number' == typeof t.__sentry_override_normalization_depth__ ? t.__sentry_override_normalization_depth__ : n;
+    if (0 === _) return d.replace('object ', '');
     if (s(t)) return '[Circular ~]';
-    let _ = t;
-    if (_ && 'function' == typeof _.toJSON)
+    let f = t;
+    if (f && 'function' == typeof f.toJSON)
         try {
-            let e = _.toJSON();
-            return c('', e, f - 1, r, o);
+            let e = f.toJSON();
+            return c('', e, _ - 1, r, o);
         } catch (e) {}
     let p = Array.isArray(t) ? [] : {},
         h = 0,
@@ -39,7 +39,7 @@ function c(e, t, n = Infinity, r = Infinity, o = (0, i.i)()) {
             break;
         }
         let t = m[e];
-        (p[e] = c(e, t, f - 1, r, o)), h++;
+        (p[e] = c(e, t, _ - 1, r, o)), h++;
     }
     return l(t), p;
 }
@@ -67,9 +67,9 @@ function d(e) {
     let t = Object.getPrototypeOf(e);
     return t ? t.constructor.name : 'null prototype';
 }
-function f(e) {
+function _(e) {
     return ~-encodeURI(e).split(/%..|./).length;
 }
-function _(e) {
-    return f(JSON.stringify(e));
+function f(e) {
+    return _(JSON.stringify(e));
 }

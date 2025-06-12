@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r,
     i = n(442837),
     a = n(570140);
@@ -40,4 +40,4 @@ let d = new u(a.Z, {
         NUF_NEW_USER: c,
         NUF_COMPLETE: l
     }),
-    f = d;
+    _ = d;

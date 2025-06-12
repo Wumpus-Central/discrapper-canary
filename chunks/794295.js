@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,7 +53,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -81,7 +81,7 @@ function m(e, t) {
 }
 let g = 1,
     E = i.memo(function (e) {
-        let { onClick: t, trusted: n, title: a, href: d, children: _, messageId: m, channelId: E } = e,
+        let { onClick: t, trusted: n, title: a, href: d, children: f, messageId: m, channelId: E } = e,
             b = h(e, ['onClick', 'trusted', 'title', 'href', 'children', 'messageId', 'channelId']),
             { analyticsLocations: y } = (0, c.ZP)(l.Z.MASKED_LINK),
             O = i.useCallback((t) => (0, u.q)(e, t, y), [y, e]),
@@ -94,14 +94,14 @@ let g = 1,
             I = o().sanitizeUrl(d);
         return (0, r.jsx)(
             s.eee,
-            p(f({}, b), {
+            p(_({}, b), {
                 title: a,
                 target: '_blank',
                 rel: 'noreferrer noopener',
                 href: I,
                 onClick: O,
                 onAuxClick: v,
-                children: null != _ ? _ : a
+                children: null != f ? f : a
             })
         );
     });

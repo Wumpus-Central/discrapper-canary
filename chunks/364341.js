@@ -7,15 +7,15 @@ var r = n(127849),
     c = n(621523),
     u = r.RangeError,
     d = r.Int8Array,
-    f = d && d.prototype,
-    _ = f && f.set,
+    _ = d && d.prototype,
+    f = _ && _.set,
     p = a.aTypedArray,
     h = a.exportTypedArrayMethod,
     m = !c(function () {
         var e = new Uint8ClampedArray(2);
         return (
             i(
-                _,
+                f,
                 e,
                 {
                     length: 1,
@@ -39,7 +39,7 @@ h(
         p(this);
         var t = s(arguments.length > 1 ? arguments[1] : void 0, 1),
             n = l(e);
-        if (m) return i(_, this, n, t);
+        if (m) return i(f, this, n, t);
         var r = this.length,
             a = o(n),
             c = 0;

@@ -6,7 +6,7 @@ e.exports = function (e, t, n, s) {
     var l = 0,
         c = null == e ? 0 : e.length;
     if (0 === c) return 0;
-    for (var u = (t = n(t)) != t, d = null === t, f = r(t), _ = void 0 === t; l < c; ) {
+    for (var u = (t = n(t)) != t, d = null === t, _ = r(t), f = void 0 === t; l < c; ) {
         var p = a((l + c) / 2),
             h = n(e[p]),
             m = void 0 !== h,
@@ -14,7 +14,7 @@ e.exports = function (e, t, n, s) {
             E = h == h,
             b = r(h);
         if (u) var y = s || E;
-        else y = _ ? E && (s || m) : d ? E && m && (s || !g) : f ? E && m && !g && (s || !b) : !g && !b && (s ? h <= t : h < t);
+        else y = f ? E && (s || m) : d ? E && m && (s || !g) : _ ? E && m && !g && (s || !b) : !g && !b && (s ? h <= t : h < t);
         y ? (l = p + 1) : (c = p);
     }
     return o(c, i);

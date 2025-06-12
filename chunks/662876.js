@@ -42,15 +42,15 @@ function d(e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
-function f(e) {
+function _(e) {
     var t = h();
     return function () {
         var n,
             r = m(e);
-        return (n = t ? Reflect.construct(r, arguments, m(this).constructor) : r.apply(this, arguments)), _(this, n);
+        return (n = t ? Reflect.construct(r, arguments, m(this).constructor) : r.apply(this, arguments)), f(this, n);
     };
 }
-function _(e, t) {
+function f(e, t) {
     return t && ('object' === o(t) || 'function' == typeof t) ? t : p(e);
 }
 function p(e) {
@@ -88,7 +88,7 @@ function g(e, t, n) {
 }
 var E = (function (e) {
     u(n, e);
-    var t = f(n);
+    var t = _(n);
     function n() {
         var e;
         s(this, n);

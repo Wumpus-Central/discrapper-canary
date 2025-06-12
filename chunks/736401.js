@@ -20,16 +20,16 @@ function u(e, t, n) {
     );
 }
 let d = 604800000,
-    f = 'lastSawPomelo',
-    _ = 'lastSawPomeloMigration';
+    _ = 'lastSawPomelo',
+    f = 'lastSawPomeloMigration';
 function p() {
-    r.K.set(f, Date.now());
+    r.K.set(_, Date.now());
 }
 function h() {
     if (!o.w8.getCurrentConfig({ location: 'b9eb97_1' }, { autoTrackExposure: !1 }).enabled) return !1;
     let e = a.default.getCurrentUser();
     if (null == e || e.isPomelo() || !e.hasVerifiedEmailOrPhone()) return !1;
-    let t = (0, l.ov)() ? _ : f,
+    let t = (0, l.ov)() ? f : _,
         n = r.K.get(t);
     return !(null != n && Date.now() - n < d);
 }

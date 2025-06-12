@@ -8,7 +8,7 @@ var r,
     c = n(496675),
     u = n(709054),
     d = n(533244);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,7 +32,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -45,7 +45,7 @@ function m() {
         n = l.Z.getGuilds(),
         r = u.default.keys(n);
     for (let e of ((h = {}), r))
-        h[e] = _(
+        h[e] = f(
             {
                 guildId: e,
                 guildName: n[e].name
@@ -102,7 +102,7 @@ class I extends (r = i.ZP.Store) {
         return h;
     }
 }
-f(I, 'displayName', 'GuildIncidentsStore');
+_(I, 'displayName', 'GuildIncidentsStore');
 let T = new I(a.Z, {
     CONNECTION_OPEN: E,
     GUILD_CREATE: b,

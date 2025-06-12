@@ -9,15 +9,15 @@ var i = n(120356),
     c = n(493773),
     u = n(540059),
     d = n(569545),
-    f = n(592125),
-    _ = n(112560),
+    _ = n(592125),
+    f = n(112560),
     p = n(231338),
     h = n(388032),
     m = n(65558);
 let g = n(340109);
 function E(e) {
     let { stream: t, width: n, noArt: i = !1, selected: E = !1 } = e,
-        b = (0, o.e7)([f.Z], () => f.Z.getChannel(t.channelId)),
+        b = (0, o.e7)([_.Z], () => _.Z.getChannel(t.channelId)),
         y = (0, u.Q3)('StreamEnded');
     function O(e) {
         return e < 550 ? 'small' : e < 1000 ? 'medium' : 'large';
@@ -69,11 +69,11 @@ function E(e) {
                       })
                   })
           })
-        : (0, r.jsx)(_.Z, {
+        : (0, r.jsx)(f.Z, {
               artURL: g,
               noArt: i,
               selected: E,
-              size: (0, _.L)(n),
+              size: (0, f.L)(n),
               header: h.intl.formatToMarkdownString(h.t['1Ww0Hh'], {}),
               onCTAClick: v,
               callToAction: I

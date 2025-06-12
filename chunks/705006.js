@@ -56,9 +56,9 @@ function d(e, t) {
         e
     );
 }
-let f = 0.1;
-function _(e) {
-    if (Math.random() > f) return;
+let _ = 0.1;
+function f(e) {
+    if (Math.random() > _) return;
     let t = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
         n = (0, i.d)();
     o.default.track(
@@ -85,14 +85,14 @@ class p {
         this.pendingRequests.set(e, t),
             setTimeout(() => {
                 let t = this.pendingRequests.get(e);
-                null != t && (_(t), this.pendingRequests.delete(e));
+                null != t && (f(t), this.pendingRequests.delete(e));
             }, 30000);
     }
     recordQuestRequestApiResponse(e, t) {
         let { wasSuccessful: n } = t,
             r = this.pendingRequests.get(e);
         null != r &&
-            (_(
+            (f(
                 d(c({}, r), {
                     apiResponseTimestamp: Date.now(),
                     wasSuccessful: n

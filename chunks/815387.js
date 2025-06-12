@@ -20,8 +20,8 @@ var r = n(255367),
     x = n(345114),
     v = n(924301),
     O = n(225890),
-    C = n(434404),
-    j = n(507435),
+    j = n(434404),
+    C = n(507435),
     S = n(504733),
     I = n(563959),
     N = n(917318),
@@ -74,8 +74,8 @@ var r = n(255367),
     ex = n(461135),
     ev = n(296571),
     eO = n(587737),
-    eC = n(482239),
-    ej = n(328749),
+    ej = n(482239),
+    eC = n(328749),
     eS = n(4305),
     eI = n(910548),
     eN = n(981631),
@@ -210,7 +210,7 @@ let ek = Object.freeze({
                     messageId: t.id
                 });
             return n.isThread()
-                ? (0, r.jsx)(eC.Z, {
+                ? (0, r.jsx)(ej.Z, {
                       message: t,
                       channel: n,
                       compact: i,
@@ -406,7 +406,7 @@ let ek = Object.freeze({
                 message: t,
                 compact: n,
                 onClick: () => {
-                    null != o && C.Z.open(o, eN.pNK.ACCESS, eN.KsC.ACCESS_DISCOVERABLE);
+                    null != o && j.Z.open(o, eN.pNK.ACCESS, eN.KsC.ACCESS_DISCOVERABLE);
                 }
             });
         },
@@ -480,7 +480,7 @@ let ek = Object.freeze({
                 onContextMenuThread: p
             });
         },
-        [eN.uaV.THREAD_STARTER_MESSAGE]: ej.Z,
+        [eN.uaV.THREAD_STARTER_MESSAGE]: eC.Z,
         [eN.uaV.GUILD_INVITE_REMINDER]: function (e) {
             let { message: t, channel: n, compact: i } = e,
                 a = (0, l.e7)([H.default], () => H.default.getCurrentUser()),
@@ -677,7 +677,7 @@ let ek = Object.freeze({
             });
         },
         [eN.uaV.VOICE_HANGOUT_INVITE]: void 0,
-        [eN.uaV.POLL_RESULT]: j.Z,
+        [eN.uaV.POLL_RESULT]: C.Z,
         [eN.uaV.CHANGELOG]: void 0,
         [eN.uaV.NITRO_NOTIFICATION]: function (e) {
             let { message: t, channel: n } = e;

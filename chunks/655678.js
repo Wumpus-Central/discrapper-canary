@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(328908),
     u = n(992970),
     d = n(443603),
-    f = n(957825),
-    _ = n(388032),
+    _ = n(957825),
+    f = n(388032),
     p = n(302195);
 function h(e, t) {
     let { disabled: n, channel: a } = e,
@@ -21,14 +21,14 @@ function h(e, t) {
     return n
         ? null
         : (0, r.jsx)('div', {
-              className: o()(f.CT, p.buttonContainer),
+              className: o()(_.CT, p.buttonContainer),
               ref: t,
               children: (0, r.jsx)(d.Z, {
                   innerClassName: o()(p.button, p.messageConfettiButton),
                   childClassName: o()(p.messageConfettiIcon, { [p.active]: m }),
                   onClick: g,
                   isActive: m,
-                  'aria-label': _.intl.string(_.t.yvN8bG),
+                  'aria-label': f.intl.string(f.t.yvN8bG),
                   'aria-haspopup': 'false',
                   children: (0, r.jsx)(s.l22, {
                       size: h ? 'refresh_sm' : void 0,

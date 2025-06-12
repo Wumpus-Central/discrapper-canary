@@ -17,16 +17,16 @@ function l(e) {
             r = n.publishSource,
             a = void 0 === r || r,
             l = n.clientOffset,
-            _ = n.getSourceClientOffset,
+            f = n.getSourceClientOffset,
             p = e.getMonitor(),
             h = e.getRegistry();
         e.dispatch((0, i.T)(l)), c(t, p, h);
-        var m = f(t, p);
+        var m = _(t, p);
         if (null === m) return void e.dispatch(s);
         var g = null;
         if (l) {
-            if (!_) throw Error('getSourceClientOffset must be defined');
-            u(_), (g = _(m));
+            if (!f) throw Error('getSourceClientOffset must be defined');
+            u(f), (g = f(m));
         }
         e.dispatch((0, i.T)(l, g));
         var E = h.getSource(m).beginDrag(p, m);
@@ -59,7 +59,7 @@ function u(e) {
 function d(e) {
     (0, r.k)((0, a.Kn)(e), 'Item must be an object.');
 }
-function f(e, t) {
+function _(e, t) {
     for (var n = null, r = e.length - 1; r >= 0; r--)
         if (t.canDragSource(e[r])) {
             n = e[r];

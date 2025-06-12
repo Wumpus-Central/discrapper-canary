@@ -8,8 +8,8 @@ var i = n(392711),
     c = n(430824),
     u = n(594174),
     d = n(70956),
-    f = n(51144),
-    _ = n(388032);
+    _ = n(51144),
+    f = n(388032);
 let p = new (s())({ maxAge: +d.Z.Millis.MINUTE });
 function h(e, t, n) {
     null != r && clearTimeout(r),
@@ -40,8 +40,8 @@ function m(e, t) {
 let g = {
     getGuildNameSuggestion: function (e) {
         let t = u.default.getCurrentUser(),
-            n = f.oY(t);
-        return null == n || 0 === n.length ? '' : _.intl.formatToPlainString(_.t.Y6Qfjo, { username: (null == e ? void 0 : e.truncateUsername) ? n.slice(0, 20) : n });
+            n = _.oY(t);
+        return null == n || 0 === n.length ? '' : f.intl.formatToPlainString(f.t.Y6Qfjo, { username: (null == e ? void 0 : e.truncateUsername) ? n.slice(0, 20) : n });
     },
     requestMembers(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,

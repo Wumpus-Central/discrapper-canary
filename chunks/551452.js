@@ -9,8 +9,8 @@ var i = n(481060),
     c = n(336197),
     u = n(124072),
     d = n(891984),
-    f = n(131704),
-    _ = n(592125),
+    _ = n(131704),
+    f = n(592125),
     p = n(430824),
     h = n(900849),
     m = n(746878),
@@ -91,20 +91,20 @@ async function v(e, t, n) {
                 return;
             } catch (e) {}
     }
-    let r = _.Z.getChannel(t);
-    if (null != r && null == n && (0, f.bw)(r.type) && (0, l.YO)(r)) return void o.default.selectVoiceChannel(r.id);
+    let r = f.Z.getChannel(t);
+    if (null != r && null == n && (0, _.bw)(r.type) && (0, l.YO)(r)) return void o.default.selectVoiceChannel(r.id);
     (0, c.Z)(g.Z5c.CHANNEL(e, t, n));
 }
 function I(e) {
     return {
         react(t, o, s) {
-            let l = _.Z.getChannel(t.channelId),
+            let l = f.Z.getChannel(t.channelId),
                 c = s.noStyleAndInteraction
                     ? void 0
                     : (n) => {
                           e.shouldStopPropagation && (null == n || n.stopPropagation()), v(t.guildId, t.channelId, t.messageId), e.shouldCloseDefaultModals && (0, i.pTH)();
                       },
-                f =
+                _ =
                     s.noStyleAndInteraction || null == t.channelId || (null == l && null == t.originalLink)
                         ? g.dG4
                         : (e) => {
@@ -129,7 +129,7 @@ function I(e) {
                 {
                     role: 'link',
                     onClick: c,
-                    onContextMenu: f,
+                    onContextMenu: _,
                     className: 'channelMention',
                     children: [null != t.inContent ? o(t.inContent, s) : null, null != t.inContent ? (0, r.jsx)(d.Z, {}) : null, (0, m.S)(t, o, s)]
                 },

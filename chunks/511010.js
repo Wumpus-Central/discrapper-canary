@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,11 +79,11 @@ function p(e, t) {
 }
 let h = i.forwardRef(function (e, t) {
         var { className: n, isBeforeGroup: i = !1 } = e,
-            a = _(e, ['className', 'isBeforeGroup']);
+            a = f(e, ['className', 'isBeforeGroup']);
         let { children: c } = a;
         return (0, r.jsx)(
             s.Z,
-            f(u({}, a), {
+            _(u({}, a), {
                 ref: t,
                 role: 'separator',
                 'aria-label': 'string' == typeof c ? c : void 0,

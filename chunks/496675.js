@@ -8,8 +8,8 @@ var r,
     c = n(160404),
     u = n(41776),
     d = n(427679),
-    f = n(569471),
-    _ = n(195663),
+    _ = n(569471),
+    f = n(195663),
     p = n(131704),
     h = n(601964),
     m = n(598077),
@@ -85,10 +85,10 @@ function x() {
     for (let e in ((A = {}), (N = {}), C)) C[e] += 1;
     R += 1;
 }
-function k() {
+function M() {
     x();
 }
-function M() {
+function k() {
     J();
 }
 function j() {
@@ -129,15 +129,15 @@ function B(e) {
     }
     return !!n && ((R += 1), n);
 }
-function F() {
+function V() {
     return !0;
 }
-function V(e) {
+function F(e) {
     var t;
     return (null == (t = v.default.getCurrentUser()) ? void 0 : t.id) === e.userId && (L(e.guildId), !0);
 }
 function Z(e) {
-    return !!(0, _.s)(e) && (L(e.guildId), !0);
+    return !!(0, f.s)(e) && (L(e.guildId), !0);
 }
 function H(e) {
     let { messages: t } = e;
@@ -188,7 +188,7 @@ function X(e, t, n, r) {
     if (e instanceof p.Sf) {
         if (p.Ec.has(e.type)) {
             let i = b.Z.getChannel(e.parent_id);
-            return null == i ? E.Hn : E.Og(e, X(i, t, n, r), f.Z.hasJoined(e.id));
+            return null == i ? E.Hn : E.Og(e, X(i, t, n, r), _.Z.hasJoined(e.id));
         }
         i = D(e.id);
     } else e instanceof h.ZP && (i = P(e.id));
@@ -205,7 +205,7 @@ function X(e, t, n, r) {
 }
 class Q extends (r = s.ZP.Store) {
     initialize() {
-        this.waitFor(v.default, O.Z, b.Z, y.ZP, f.Z, d.Z, c.Z);
+        this.waitFor(v.default, O.Z, b.Z, y.ZP, _.Z, d.Z, c.Z);
     }
     getChannelPermissions(e) {
         return p.Ec.has(e.type) ? w(e.id) : D(e.id);
@@ -292,12 +292,12 @@ function J() {
 }
 S(Q, 'displayName', 'PermissionStore');
 let $ = new Q(l.Z, {
-    BACKGROUND_SYNC: k,
-    CONNECTION_OPEN: k,
-    OVERLAY_INITIALIZE: k,
-    CACHE_LOADED: k,
-    CACHE_LOADED_LAZY: k,
-    CONNECTION_CLOSED: M,
+    BACKGROUND_SYNC: M,
+    CONNECTION_OPEN: M,
+    OVERLAY_INITIALIZE: M,
+    CACHE_LOADED: M,
+    CACHE_LOADED_LAZY: M,
+    CONNECTION_CLOSED: k,
     GUILD_CREATE: j,
     GUILD_UPDATE: j,
     GUILD_DELETE: j,
@@ -305,16 +305,16 @@ let $ = new Q(l.Z, {
     GUILD_MEMBER_UPDATE: U,
     CURRENT_USER_UPDATE: U,
     CHANNEL_CREATE: G,
-    THREAD_CREATE: F,
-    THREAD_UPDATE: F,
-    THREAD_LIST_SYNC: F,
-    LOAD_THREADS_SUCCESS: F,
-    LOAD_ARCHIVED_THREADS_SUCCESS: F,
+    THREAD_CREATE: V,
+    THREAD_UPDATE: V,
+    THREAD_LIST_SYNC: V,
+    LOAD_THREADS_SUCCESS: V,
+    LOAD_ARCHIVED_THREADS_SUCCESS: V,
     CHANNEL_UPDATES: B,
     LOAD_MESSAGES_SUCCESS: H,
     SEARCH_FINISH: Y,
     MOD_VIEW_SEARCH_FINISH: Y,
-    THREAD_MEMBER_UPDATE: V,
+    THREAD_MEMBER_UPDATE: F,
     THREAD_MEMBERS_UPDATE: Z,
     CHANNEL_DELETE: W,
     GUILD_ROLE_CREATE: K,

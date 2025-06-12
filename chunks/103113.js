@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(580552),
     u = n(688465),
     d = n(680295),
-    f = n(5192),
-    _ = n(785717),
+    _ = n(5192),
+    f = n(785717),
     p = n(221292),
     h = n(687158),
     m = n(892001),
@@ -54,10 +54,10 @@ function R(e) {
     return e;
 }
 function P(e) {
-    let { user: t, guildId: n, channelId: C, messageId: P, roleId: w, openedAt: D, setPopoutRef: L, closePopout: x, disableUserProfileLink: k = __OVERLAY__, newAnalyticsLocations: M = [], disableAutoFocus: j = !1 } = e,
+    let { user: t, guildId: n, channelId: C, messageId: P, roleId: w, openedAt: D, setPopoutRef: L, closePopout: x, disableUserProfileLink: M = __OVERLAY__, newAnalyticsLocations: k = [], disableAutoFocus: j = !1 } = e,
         U = (0, h.ZP)(t.id, n),
-        { analyticsLocations: G } = (0, l.ZP)([...M, s.Z.USER_PROFILE_POPOUT]),
-        B = (0, _.ZB)({
+        { analyticsLocations: G } = (0, l.ZP)([...k, s.Z.USER_PROFILE_POPOUT]),
+        B = (0, f.ZB)({
             layout: 'POPOUT',
             userId: t.id,
             guildId: n,
@@ -65,11 +65,11 @@ function P(e) {
             messageId: P,
             roleId: w
         }),
-        F = i.useRef(null),
-        V = (0, o.Z)(F);
+        V = i.useRef(null),
+        F = (0, o.Z)(V);
     i.useEffect(() => {
-        null == L || L(null == F ? void 0 : F.current);
-    }, [F, L]);
+        null == L || L(null == V ? void 0 : V.current);
+    }, [V, L]);
     let Z = () => {
             null == x || x(),
                 (0, m.openUserProfileModal)(
@@ -82,7 +82,7 @@ function P(e) {
                     )
                 );
         },
-        H = !k && (0, c.Z)(t.id),
+        H = !M && (0, c.Z)(t.id),
         Y = () =>
             H
                 ? (0, r.jsx)(a.sNh, {
@@ -105,14 +105,14 @@ function P(e) {
         W = j ? 'div' : a.VqE;
     return (0, r.jsx)(l.Gt, {
         value: G,
-        children: (0, r.jsx)(_.Mt, {
+        children: (0, r.jsx)(f.Mt, {
             value: B,
             openedAt: D,
             fetchStartedAt: null == U ? void 0 : U.fetchStartedAt,
             fetchEndedAt: null == U ? void 0 : U.fetchEndedAt,
             isLoaded: null == U ? void 0 : U.isLoaded,
             children: (0, r.jsxs)(W, {
-                ref: F,
+                ref: V,
                 'aria-label': t.username,
                 children: [
                     (0, r.jsxs)(O.Z, {
@@ -152,7 +152,7 @@ function P(e) {
                                 children: [
                                     (0, r.jsx)(v.Z, {
                                         user: t,
-                                        nickname: f.ZP.getName(n, C, t),
+                                        nickname: _.ZP.getName(n, C, t),
                                         onOpenProfile: H ? Z : void 0,
                                         tags: (0, r.jsx)(E.Z, {
                                             displayProfile: U,
@@ -174,7 +174,7 @@ function P(e) {
                     (null == U ? void 0 : U.profileEffectId) != null &&
                         (0, r.jsx)(d.Z, {
                             profileEffectId: null == U ? void 0 : U.profileEffectId,
-                            isHovering: V
+                            isHovering: F
                         })
                 ]
             })

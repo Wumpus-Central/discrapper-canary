@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => M }), n(388685), n(539854);
+n.d(t, { ZP: () => k }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(355467),
     u = n(269128),
     d = n(987032),
-    f = n(502109),
-    _ = n(710845),
+    _ = n(502109),
+    f = n(710845),
     p = n(219929),
     h = n(985754),
     m = n(351402),
@@ -70,7 +70,7 @@ function S(e, t) {
         e
     );
 }
-let A = new _.Z('ChoosePaymentSourceType'),
+let A = new f.Z('ChoosePaymentSourceType'),
     N = {
         [E.HeQ.CARD]: p.ZP.Types.UNKNOWN,
         [E.HeQ.PAYPAL]: p.ZP.Types.PAYPAL,
@@ -129,7 +129,7 @@ function x(e) {
         }
     );
 }
-class k extends i.PureComponent {
+class M extends i.PureComponent {
     componentDidMount() {
         var e;
         (0, c.GE)(),
@@ -194,7 +194,7 @@ class k extends i.PureComponent {
     render() {
         var e;
         let { showAllPaymentMethods: t } = this.state,
-            { onChooseType: n, className: i, onStripePaymentMethodReceived: a, ipCountryCode: s, ipCountryCodeHasError: c, paymentRequestPaymentContext: d, isEligibleForTrial: _ = !1 } = this.props,
+            { onChooseType: n, className: i, onStripePaymentMethodReceived: a, ipCountryCode: s, ipCountryCodeHasError: c, paymentRequestPaymentContext: d, isEligibleForTrial: f = !1 } = this.props,
             p = null != (e = this.props.paymentRequestWallets) ? e : [],
             h = {
                 iconClassName: y.buttonIcon,
@@ -210,7 +210,7 @@ class k extends i.PureComponent {
                         onPaymentRequestFailure: n
                     },
                     a = ''.concat(e, '-').concat(t);
-                return 'applePay' === e ? (0, r.jsx)(f.Ch, I({}, h, i), a) : (0, r.jsx)(f.Tr, I({}, h, i), a);
+                return 'applePay' === e ? (0, r.jsx)(_.Ch, I({}, h, i), a) : (0, r.jsx)(_.Tr, I({}, h, i), a);
             }),
             g = [],
             E = [],
@@ -255,13 +255,13 @@ class k extends i.PureComponent {
                 })),
             (0, r.jsxs)('div', {
                 children: [
-                    _ && (0, r.jsx)('hr', { className: y.SeparatorUpper }),
+                    f && (0, r.jsx)('hr', { className: y.SeparatorUpper }),
                     (0, r.jsx)(l.hjN, {
-                        title: _ ? b.intl.string(b.t.tywMsb) : b.intl.string(b.t['8lqkf3']),
+                        title: f ? b.intl.string(b.t.tywMsb) : b.intl.string(b.t['8lqkf3']),
                         className: i,
                         children: T
                     }),
-                    _ && (0, r.jsx)('hr', { className: y.SeparatorLower })
+                    f && (0, r.jsx)('hr', { className: y.SeparatorLower })
                 ]
             })
         );
@@ -275,8 +275,8 @@ class k extends i.PureComponent {
             });
     }
 }
-let M = s.ZP.connectStores([m.Z], () => ({
+let k = s.ZP.connectStores([m.Z], () => ({
     ipCountryCode: m.Z.ipCountryCode,
     ipCountryCodeHasError: m.Z.ipCountryCodeHasError,
     localizedPromo: m.Z.localizedPricingPromo
-}))(k);
+}))(M);

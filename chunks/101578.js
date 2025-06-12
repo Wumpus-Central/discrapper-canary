@@ -38,10 +38,10 @@ let E = (e) => {
         x = (0, a.l)(),
         v = b(d),
         { data: O } = (0, u.IX)(null == (t = d.application) ? void 0 : t.id),
-        C = null != O ? O : v;
-    return null != C && x
+        j = null != O ? O : v;
+    return null != j && x
         ? (0, r.jsx)(o.c, {
-              app: C,
+              app: j,
               channel: n,
               message: d,
               hideParty: p,

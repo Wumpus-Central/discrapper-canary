@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(415506);
+n.d(t, { Z: () => C }), n(388685), n(415506);
 var r,
     i = n(255367),
     l = n(73800),
@@ -64,7 +64,7 @@ function O(e, t) {
         e
     );
 }
-class C extends (r = l.PureComponent) {
+class j extends (r = l.PureComponent) {
     get analyticsLocation() {
         return O(v({}, this.props.analyticsContext.location), { object: b.qAy.BUTTON_CTA });
     }
@@ -163,14 +163,14 @@ class C extends (r = l.PureComponent) {
             });
     }
 }
-function j(e) {
+function C(e) {
     let { applicationId: t, libraryApplication: n } = e,
         r = (0, d.O)(),
         [l, a] = (0, s.Wu)([f.Z, m.Z, h.Z], () => [f.Z.isConnected(t) || m.Z.isLaunchable(t) || (null != n && h.Z.isLaunchable(n.id, n.branchId)), m.Z.launchingGames.has(t)], [t, n]),
         o = (0, s.e7)([p.ZP], () => new Set(p.ZP.getRunningVerifiedApplicationIds()).has(t), [t]),
         c = (0, s.e7)([h.Z], () => (null != n ? h.Z.getState(n.id, n.branchId) : null), [n]);
     return (0, i.jsx)(
-        C,
+        j,
         O(v({}, e), {
             analyticsContext: r,
             isLaunchable: l,
@@ -180,7 +180,7 @@ function j(e) {
         })
     );
 }
-x(C, 'defaultProps', {
+x(j, 'defaultProps', {
     fullWidth: !1,
     size: c.zxk.Sizes.LARGE,
     tooltipPosition: 'top',

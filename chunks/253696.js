@@ -11,8 +11,8 @@ var r = n(73800),
     c = n(944486),
     u = n(176354),
     d = n(304852),
-    f = n(199257),
-    _ = n(981631),
+    _ = n(199257),
+    f = n(981631),
     p = n(185923),
     h = n(957825);
 function m(e, t, n) {
@@ -67,7 +67,7 @@ function b(e) {
         N = T.slice(0, A),
         C = null != O ? a.ZP.getGuildEmoji(O) : [],
         R = Object.values(null != (t = a.ZP.getDisambiguatedEmojiContext(null == y ? void 0 : y.getGuildId()).groupedCustomEmojis) ? t : {}).reduce((e, t) => (e += t.length), 0),
-        { topEmojis: P, newlyAddedEmojis: w } = (0, f._)({
+        { topEmojis: P, newlyAddedEmojis: w } = (0, _._)({
             guildId: null == y ? void 0 : y.getGuildId(),
             pickerIntention: n
         }),
@@ -77,7 +77,7 @@ function b(e) {
             rowSize: m
         });
     i.ZP.trackWithMetadata(
-        n === p.Hz.REACTION ? _.rMx.REACTION_PICKER_OPENED : _.rMx.EXPRESSION_PICKER_OPENED,
+        n === p.Hz.REACTION ? f.rMx.REACTION_PICKER_OPENED : f.rMx.EXPRESSION_PICKER_OPENED,
         g(
             {
                 width: r,

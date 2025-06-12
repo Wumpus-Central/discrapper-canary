@@ -1,4 +1,4 @@
-n.d(t, { B: () => f }), n(539854), n(953529);
+n.d(t, { B: () => _ }), n(539854), n(953529);
 var r = n(55000),
     i = n(693824),
     a = n(690725),
@@ -50,8 +50,8 @@ let u = (e, t, n) => c({ AvatarImage: e }, null != t && { MediaImage: t }, null 
             n
         );
     },
-    f = async (e) => {
-        let { mediaImageSrc: t, entry: n, avatarSrc: l, description: c, timestamp: f, episodeDescription: _, colors: p, channelId: h } = e,
+    _ = async (e) => {
+        let { mediaImageSrc: t, entry: n, avatarSrc: l, description: c, timestamp: _, episodeDescription: f, colors: p, channelId: h } = e,
             m = n.extra.media_title,
             g = u(l, t),
             E = (e) => {
@@ -149,7 +149,7 @@ let u = (e, t, n) => c({ AvatarImage: e }, null != t && { MediaImage: t }, null 
                         },
                         !0
                     );
-                let a = d(f, _);
+                let a = d(_, f);
                 (0, o.J)({
                     canvas: e,
                     badges: a,

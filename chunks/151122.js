@@ -1,6 +1,6 @@
 a.d(e, {
-    M5: () => u,
-    _I: () => I,
+    M5: () => I,
+    _I: () => u,
     m7: () => l,
     m8: () => c,
     q4: () => E,
@@ -64,7 +64,7 @@ function l(t, e, a) {
     }
     o.X && _.kg.log(`Integration installed: ${e.name}`);
 }
-function u(t) {
+function I(t) {
     let e = (0, n.s3)();
     if (!e) {
         o.X && _.kg.warn(`Cannot add integration "${t.name}" because no SDK Client is available.`);
@@ -72,6 +72,6 @@ function u(t) {
     }
     e.addIntegration(t);
 }
-function I(t) {
+function u(t) {
     return t;
 }

@@ -20,8 +20,8 @@ var r = n(255367),
 function x(e) {
     var t, x, v;
     let O,
-        C,
         j,
+        C,
         { onTransitionToInviteChannel: S, onAcceptInstantInvite: I, guild: N, invite: T, message: P, currentUserId: A } = e,
         w = A === P.author.id,
         { channel: Z, approximate_member_count: R, approximate_presence_count: k } = T,
@@ -67,7 +67,7 @@ function x(e) {
         isStream: !1
     });
     return (
-        (C = (0, r.jsxs)('span', {
+        (j = (0, r.jsxs)('span', {
             className: y.infoTitle,
             children: [
                 (0, r.jsx)(u.Z, {
@@ -93,7 +93,7 @@ function x(e) {
             ]
         })),
         G &&
-            (j = (0, r.jsx)(a.DY3, {
+            (C = (0, r.jsx)(a.DY3, {
                 className: y.tooltipContainer,
                 text: E.intl.string(E.t['/FeTKy']),
                 children: (0, r.jsx)(a.d3s, {
@@ -103,7 +103,7 @@ function x(e) {
                 })
             })),
         F
-            ? ((C = (0, r.jsx)(p.Z.Channel, { channel: L })),
+            ? ((j = (0, r.jsx)(p.Z.Channel, { channel: L })),
               (O = (0, r.jsxs)('span', {
                   className: y.infoTitle,
                   children: [
@@ -132,7 +132,7 @@ function x(e) {
                 (0, r.jsx)(p.Z.GuildSplash, { guild: N }),
                 (0, r.jsx)(p.Z.Header, {
                     text: J,
-                    extra: j
+                    extra: C
                 }),
                 (0, r.jsxs)(p.Z.Body, {
                     children: [
@@ -141,7 +141,7 @@ function x(e) {
                             children: [
                                 (0, r.jsx)(p.Z.Icon, { guild: N }),
                                 (0, r.jsx)(p.Z.Info, {
-                                    title: C,
+                                    title: j,
                                     onClick: q,
                                     children: O
                                 })

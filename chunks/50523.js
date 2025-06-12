@@ -20,7 +20,7 @@ var i = n(442837),
     y = n(388032);
 function x(e) {
     var t, n;
-    let { application: x, customId: v, customLink: O, embedUrl: C, referrerId: j } = e,
+    let { application: x, customId: v, customLink: O, embedUrl: j, referrerId: C } = e,
         S = null == x || null == (t = x.bot) ? void 0 : t.id,
         I = (0, c.ms)({
             context: { type: 'contextless' },
@@ -53,7 +53,7 @@ function x(e) {
                     isStart: null == Z,
                     embeddedActivitiesManager: k,
                     customId: L,
-                    referrerId: j,
+                    referrerId: C,
                     analyticsLocations: P
                 });
             },
@@ -70,7 +70,7 @@ function x(e) {
                         botId: S,
                         analyticsLocations: P,
                         customId: L,
-                        referrerId: j
+                        referrerId: C
                     });
                 }
             });
@@ -79,7 +79,7 @@ function x(e) {
         null != M && null != U && M.push(U),
         (0, r.jsx)(d.W, {
             actions: M,
-            embedUrl: C,
+            embedUrl: j,
             header: x.name,
             iconSrc: h.ZP.getApplicationIconURL({
                 id: x.id,
@@ -92,7 +92,7 @@ function x(e) {
             trackingConfig: {
                 id: x.id,
                 linkType: u.U.CUSTOM_ACTIVITY_LINK,
-                referrerId: j,
+                referrerId: C,
                 activityCustomId: L
             }
         })

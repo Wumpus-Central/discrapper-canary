@@ -9,8 +9,8 @@ var i = n(512722),
     c = n(594174),
     u = n(907285),
     d = n(737013),
-    f = n(137810),
-    _ = n(981631),
+    _ = n(137810),
+    f = n(981631),
     p = n(388032);
 function h(e) {
     let { onClose: t, onSelect: n, minimal: i = !1, appContext: h, onInteraction: m } = e,
@@ -20,9 +20,9 @@ function h(e) {
         }),
         E = (0, u.Z)(i),
         b = (0, d.Z)(g.id, h),
-        y = (0, f.Z)(h);
+        y = (0, _.Z)(h);
     return (0, r.jsx)(l.Z, {
-        object: _.qAy.CONTEXT_MENU,
+        object: f.qAy.CONTEXT_MENU,
         children: (0, r.jsxs)(s.v2r, {
             onClose: t,
             navId: 'video-device-context',

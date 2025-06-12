@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(884697),
     d = n(449217),
-    f = n(905357),
-    _ = n(95422),
+    _ = n(905357),
+    f = n(95422),
     p = n(222062),
     h = n(706454),
     m = n(158776),
@@ -41,7 +41,7 @@ let v = [
             n = (0, l.e7)([h.default], () => h.default.locale),
             i = (0, u.qS)(t),
             a = null != t.expiresAt ? (0, g.TD)(Date.now(), t.expiresAt) : null,
-            o = (0, _.a)(t),
+            o = (0, f.a)(t),
             s = t.purchasedAt.toLocaleDateString(n, {
                 month: 'long',
                 year: 'numeric'
@@ -92,7 +92,7 @@ let v = [
         });
     },
     T = (e) => {
-        let { user: t, guildId: n, avatarDecorationOverride: a, className: _ } = e,
+        let { user: t, guildId: n, avatarDecorationOverride: a, className: f } = e,
             h = (0, l.e7)([m.Z], () => m.Z.getStatus(t.id)),
             { product: g, purchase: T } = (0, d.Z)(null == a ? void 0 : a.skuId),
             S = E.ZP.canUseCollectibles(t),
@@ -100,7 +100,7 @@ let v = [
             N = (0, u.G1)(g),
             C = !S && A,
             R = (0, p.M)(!N || S),
-            P = (0, f.k)(g),
+            P = (0, _.k)(g),
             w = i.useMemo(
                 () =>
                     C
@@ -114,7 +114,7 @@ let v = [
             );
         return null != g && (null == T || C)
             ? (0, r.jsxs)('div', {
-                  className: o()(O.modalPreview, O.shopPreviewContainer, _),
+                  className: o()(O.modalPreview, O.shopPreviewContainer, f),
                   children: [
                       (0, r.jsx)('div', {
                           className: O.shopPreviewBanner,
@@ -140,7 +140,7 @@ let v = [
                   ]
               })
             : (0, r.jsxs)('div', {
-                  className: o()(O.modalPreview, _),
+                  className: o()(O.modalPreview, f),
                   children: [
                       (0, r.jsxs)('div', {
                           className: O.previewSections,

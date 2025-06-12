@@ -31,8 +31,8 @@ var r = n(255367),
     A = n(390322),
     w = n(871499),
     R = n(88479),
-    M = n(386000),
-    k = n(25827),
+    k = n(386000),
+    M = n(25827),
     L = n(314897),
     D = n(131951),
     U = n(496675),
@@ -278,7 +278,7 @@ let eh = i.memo(function (e) {
         children: (e, t) => {
             let { onClick: n } = e,
                 { isShown: i } = t;
-            return (0, r.jsx)(k.C, {
+            return (0, r.jsx)(M.C, {
                 ref: Y,
                 centerButton: !0,
                 hasPermission: v,
@@ -325,7 +325,7 @@ let eh = i.memo(function (e) {
                               children: (e, t) => {
                                   let { onClick: n } = e,
                                       { isShown: i } = t;
-                                  return (0, r.jsx)(M.Z, {
+                                  return (0, r.jsx)(k.Z, {
                                       ref: q,
                                       centerButton: !0,
                                       onPopoutClick: n,

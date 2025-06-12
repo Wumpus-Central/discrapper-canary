@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(963838),
     u = n(39127),
     d = n(594174),
-    f = n(353368),
-    _ = n(297928);
+    _ = n(353368),
+    f = n(297928);
 let p = 50;
 function h(e) {
     var t;
@@ -44,7 +44,7 @@ let m = i.forwardRef(function (e, t) {
                         animated: !1
                     }),
                     r = null != n.emojiId,
-                    i = f.q.PREMIUM,
+                    i = _.q.PREMIUM,
                     s = (0, a.random)(c.Jw[i].length, !1),
                     l = {
                         id: (0, o.Z)(),
@@ -68,7 +68,7 @@ let m = i.forwardRef(function (e, t) {
     return g || !O
         ? null
         : (0, r.jsx)('div', {
-              className: _.effects,
+              className: f.effects,
               style: {
                   width: h.width,
                   height: h.height

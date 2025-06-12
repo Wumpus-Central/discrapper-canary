@@ -13,8 +13,8 @@ var i = n(399606),
     c = n(93841),
     u = n(501867),
     d = n(567949),
-    f = n(552781),
-    _ = n(952567),
+    _ = n(552781),
+    f = n(952567),
     p = n(807159);
 function h(e, t, n) {
     return (
@@ -154,13 +154,13 @@ let O = function (e) {
                     (0, r.jsx)(y, {
                         description: l.intl.string(l.t.wOYbTk),
                         heading: l.intl.string(l.t.G6jZo6),
-                        imgSrc: n ? f : d,
+                        imgSrc: n ? _ : d,
                         label: h ? l.intl.string(c.default.na6fmJ) : void 0
                     }),
                     (0, r.jsx)(y, {
                         description: l.intl.string(l.t.HTvLGh),
                         heading: l.intl.string(l.t.IpRQw8),
-                        imgSrc: _,
+                        imgSrc: f,
                         label: h ? l.intl.string(c.default.dyNT9v) : void 0
                     }),
                     (0, r.jsx)(y, {

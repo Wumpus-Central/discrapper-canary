@@ -9,8 +9,8 @@ var i = n(772848),
     c = n(626135),
     u = n(409813),
     d = n(608579),
-    f = n(981631);
-function _(e, t, n) {
+    _ = n(981631);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
@@ -87,7 +87,7 @@ let b = 'payment-modal',
     O = new Set([u.h8.REVIEW, u.h8.CONFIRM, u.h8.GIFT_CUSTOMIZATION]);
 function v(e) {
     let t,
-        { skuId: n, isGift: u = !1, giftMessage: _, giftingOrigin: h, onClose: E, onComplete: v, analyticsLocations: I, analyticsObject: T, giftRecipient: S, variantsReturnStyle: A } = e,
+        { skuId: n, isGift: u = !1, giftMessage: f, giftingOrigin: h, onClose: E, onComplete: v, analyticsLocations: I, analyticsObject: T, giftRecipient: S, variantsReturnStyle: A } = e,
         N = !1,
         C = (0, i.Z)(),
         R = (e) => {
@@ -104,7 +104,7 @@ function v(e) {
                     loadId: C,
                     skuId: n,
                     isGift: u,
-                    giftMessage: _,
+                    giftMessage: f,
                     giftingOrigin: h,
                     analyticsLocations: I,
                     giftRecipient: S,
@@ -123,9 +123,9 @@ function v(e) {
             modalKey: P,
             onCloseCallback: () => {
                 N ||
-                    c.default.track(f.rMx.PAYMENT_FLOW_CANCELED, {
+                    c.default.track(_.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: C,
-                        payment_type: f.Zuq[f.GZQ.ONE_TIME],
+                        payment_type: _.Zuq[_.GZQ.ONE_TIME],
                         location: T,
                         is_gift: u,
                         sku_id: n,

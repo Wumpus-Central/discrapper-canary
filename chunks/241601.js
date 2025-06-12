@@ -58,8 +58,8 @@ async function u(e) {
         ),
         null != r && (r.setLocale(e), n.push(r.loadPromise)),
         n.push(d(e)),
-        n.push(f(e)),
         n.push(_(e)),
+        n.push(f(e)),
         await Promise.all(n).catch((n) => t.setLoadingFailed(n, e)),
         t.setLoadingSucceeded(e);
 }
@@ -72,7 +72,7 @@ async function d(e) {
         t(e, r);
     }
 }
-async function f(e) {
+async function _(e) {
     let t = n(352968).y[e];
     null != t && (await t());
     let r = [],
@@ -80,7 +80,7 @@ async function f(e) {
     for (; i.length > 0; ) r.push(i.join('-')), i.pop();
     r.push('en-US'), n(913527).locale(r);
 }
-function _(e) {
+function f(e) {
     let { setTags: t } = n(960048).Z;
     return t({ locale: e }), Promise.resolve();
 }

@@ -1,7 +1,7 @@
 n.d(t, {
-    KS: () => _,
+    KS: () => f,
     Th: () => p,
-    bT: () => f
+    bT: () => _
 });
 var r = n(481060),
     i = n(281956),
@@ -12,7 +12,7 @@ var r = n(481060),
     c = n(176505),
     u = n(981631),
     d = n(388032);
-function f(e, t, n, r) {
+function _(e, t, n, r) {
     if (null == e) return null;
     if (e.id === (null == t ? void 0 : t.rulesChannelId)) return d.intl.string(d.t['/7EhaW']);
     switch (e.type) {
@@ -59,9 +59,9 @@ function f(e, t, n, r) {
             return null;
     }
 }
-function _(e, t) {
+function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { locked: d = !1, video: f = !1, stream: _ = !1, hasActiveThreads: p = !1, textFocused: h = !1 } = n;
+        { locked: d = !1, video: _ = !1, stream: f = !1, hasActiveThreads: p = !1, textFocused: h = !1 } = n;
     if (null == e) return null;
     null == t && (t = o.Z.getGuild(e.getGuildId()));
     let m = (0, i.n)(null == t ? void 0 : t.id, [o.Z, s.default, a.ZP]);
@@ -110,13 +110,13 @@ function _(e, t) {
         case u.d4z.GUILD_VOICE:
             if (h) return r.kBi;
             if (e.isNSFW()) return r.BVY;
-            if (_) return r.hGI;
+            if (f) return r.hGI;
             if (m)
                 if ((0, l.Z)(e)) return r.mBM;
-                else return f ? r.TLW : r.gjC;
+                else return _ ? r.TLW : r.gjC;
             if (d) return r.mBM;
-            if ((0, l.Z)(e)) return f ? r.TLW : r.gjC;
-            else return f ? r.Odl : r.gj8;
+            if ((0, l.Z)(e)) return _ ? r.TLW : r.gjC;
+            else return _ ? r.Odl : r.gj8;
         case u.d4z.GUILD_DIRECTORY:
             return r.aVH;
         case u.d4z.GUILD_CATEGORY:

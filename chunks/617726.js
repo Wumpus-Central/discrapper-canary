@@ -1,15 +1,15 @@
 a.d(e, {
     BO: () => c,
-    Cd: () => T,
-    HY: () => f,
+    Cd: () => L,
+    HY: () => d,
     Jd: () => i,
     KQ: () => R,
     R: () => s,
-    V$: () => u,
-    f4: () => I,
+    V$: () => I,
+    f4: () => u,
     gv: () => E,
-    mL: () => A,
-    zQ: () => N
+    mL: () => N,
+    zQ: () => A
 });
 var r = a(967752),
     _ = a(202811),
@@ -35,7 +35,7 @@ function s(t, e) {
 function l(t) {
     return o.n.__SENTRY__ && o.n.__SENTRY__.encodePolyfill ? o.n.__SENTRY__.encodePolyfill(t) : new TextEncoder().encode(t);
 }
-function u(t) {
+function I(t) {
     let [e, a] = t,
         r = JSON.stringify(e);
     function n(t) {
@@ -69,7 +69,7 @@ ${JSON.stringify(e)}
               return e;
           })(r);
 }
-function I(t) {
+function u(t) {
     let e = 'string' == typeof t ? l(t) : t;
     function a(t) {
         let a = e.subarray(0, t);
@@ -92,7 +92,7 @@ function I(t) {
 function R(t) {
     return [{ type: 'span' }, t];
 }
-function N(t) {
+function A(t) {
     let e = 'string' == typeof t.data ? l(t.data) : t.data;
     return [
         (0, n.Jr)({
@@ -105,7 +105,7 @@ function N(t) {
         e
     ];
 }
-let d = {
+let T = {
     session: 'session',
     sessions: 'session',
     attachment: 'attachment',
@@ -122,10 +122,10 @@ let d = {
     span: 'span',
     statsd: 'metric_bucket'
 };
-function A(t) {
-    return d[t];
+function N(t) {
+    return T[t];
 }
-function f(t) {
+function d(t) {
     if (!t || !t.sdk) return;
     let { name: e, version: a } = t.sdk;
     return {
@@ -133,7 +133,7 @@ function f(t) {
         version: a
     };
 }
-function T(t, e, a, _) {
+function L(t, e, a, _) {
     let o = t.sdkProcessingMetadata && t.sdkProcessingMetadata.dynamicSamplingContext;
     return {
         event_id: t.event_id,

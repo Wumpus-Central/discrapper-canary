@@ -1,4 +1,4 @@
-n.d(t, { n: () => f });
+n.d(t, { n: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(853872),
@@ -57,12 +57,12 @@ function d(e, t) {
         e
     );
 }
-let f = {
+let _ = {
     key: o.h8.ADD_PAYMENT_STEPS,
-    renderStep: (e) => (0, r.jsx)(_, c({}, e)),
+    renderStep: (e) => (0, r.jsx)(f, c({}, e)),
     options: { renderHeader: !0 }
 };
-function _(e) {
+function f(e) {
     let { isGift: t } = (0, a.wD)();
     return (0, r.jsx)(
         s.J,

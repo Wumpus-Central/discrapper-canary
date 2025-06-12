@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => d,
-    cs: () => f,
+    cs: () => _,
     pe: () => u
 }),
     n(997841),
@@ -24,10 +24,10 @@ function u(e) {
     };
 }
 function d(e) {
-    let { channelId: t, content: n, tts: r = !1, type: d = c.uaV.DEFAULT, messageReference: f, allowedMentions: _, author: p, flags: h, nonce: m, poll: g, changelogId: E, giftingPrompt: b, state: y } = e,
+    let { channelId: t, content: n, tts: r = !1, type: d = c.uaV.DEFAULT, messageReference: _, allowedMentions: f, author: p, flags: h, nonce: m, poll: g, changelogId: E, giftingPrompt: b, state: y } = e,
         O = [];
-    if (d === c.uaV.REPLY && (i()(null != f, 'Replies must have a message reference'), null == _ || _.replied_user)) {
-        let e = a.Z.getMessageByReference(f);
+    if (d === c.uaV.REPLY && (i()(null != _, 'Replies must have a message reference'), null == f || f.replied_user)) {
+        let e = a.Z.getMessageByReference(_);
         (null == e ? void 0 : e.state) === a.Y.LOADED && O.push(u(e.message.author));
     }
     return (
@@ -50,7 +50,7 @@ function d(e) {
             timestamp: new Date().toISOString(),
             state: y || c.yb.SENDING,
             tts: r,
-            message_reference: f,
+            message_reference: _,
             message_snapshots: [],
             flags: h,
             nonce: m,
@@ -60,7 +60,7 @@ function d(e) {
         }
     );
 }
-function f(e) {
+function _(e) {
     let { messageId: t, channelId: n, content: r, embeds: i, loggingName: a } = e;
     return {
         id: null != t ? t : (0, l.r)(),

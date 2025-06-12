@@ -16,7 +16,7 @@ var r = n(873546),
     s = n(49012),
     l = n(981631);
 function c(e) {
-    let { applicationId: t, customInstallUrl: n, installParams: c, integrationTypesConfig: u, guildId: d, channelId: f, disableGuildSelect: _, source: p, oauth2Callback: h } = e;
+    let { applicationId: t, customInstallUrl: n, installParams: c, integrationTypesConfig: u, guildId: d, channelId: _, disableGuildSelect: f, source: p, oauth2Callback: h } = e;
     if (null != n) {
         o.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
             application_id: t,
@@ -39,8 +39,8 @@ function c(e) {
             (0, a.openOAuth2Modal)({
                 clientId: t,
                 guildId: d,
-                channelId: f,
-                disableGuildSelect: _,
+                channelId: _,
+                disableGuildSelect: f,
                 callback: h
             });
         return;
@@ -56,8 +56,8 @@ function c(e) {
         (0, a.openOAuth2Modal)({
             clientId: t,
             guildId: d,
-            channelId: f,
-            disableGuildSelect: _,
+            channelId: _,
+            disableGuildSelect: f,
             scopes: c.scopes,
             permissions: null != c.permissions ? i.vB(c.permissions) : void 0,
             callback: h

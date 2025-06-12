@@ -1,5 +1,5 @@
 n.d(t, {
-    Hu: () => f,
+    Hu: () => _,
     wt: () => d
 }),
     n(388685);
@@ -59,10 +59,10 @@ function d(e) {
     let { enabled: r } = c.getCurrentConfig({ location: t }, { autoTrackExposure: n });
     return r;
 }
-function f(e) {
+function _(e) {
     let { location: t, autoTrackExposure: n } = e,
         { enabled: i, isTester: s } = c.useExperiment({ location: t }, { autoTrackExposure: n }),
         d = (0, r.e7)([o.Z, a.Z], () => a.Z.getChannel(o.Z.getVoiceChannelId())),
-        f = !s || (null != d && l.has(d.guild_id));
-    return !__OVERLAY__ && i && u() && f;
+        _ = !s || (null != d && l.has(d.guild_id));
+    return !__OVERLAY__ && i && u() && _;
 }

@@ -27,10 +27,10 @@ function l() {
 let c = l(),
     u = !1,
     d = null;
-function f() {
+function _() {
     u = !0;
 }
-function _() {
+function f() {
     (c.bogoPromotion = null), (u = !1);
 }
 function p(e) {
@@ -117,8 +117,8 @@ let C = new N(a.Z, {
     ACTIVE_OUTBOUND_PROMOTIONS_FETCH: y,
     ACTIVE_OUTBOUND_PROMOTIONS_FETCH_FAIL: O,
     ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS: p,
-    ACTIVE_BOGO_PROMOTION_FETCH: f,
-    ACTIVE_BOGO_PROMOTION_FETCH_FAIL: _,
+    ACTIVE_BOGO_PROMOTION_FETCH: _,
+    ACTIVE_BOGO_PROMOTION_FETCH_FAIL: f,
     OUTBOUND_PROMOTION_NOTICE_DISMISS: I,
     OUTBOUND_PROMOTIONS_SEEN: T,
     LOGOUT: S

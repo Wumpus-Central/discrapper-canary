@@ -1,10 +1,10 @@
 n.d(t, {
     Cg: () => f,
     Cp: () => T,
-    Cs: () => C,
+    Cs: () => j,
     EY: () => v,
     I5: () => g,
-    JQ: () => j,
+    JQ: () => C,
     RY: () => y,
     Sv: () => x,
     TX: () => N,
@@ -62,8 +62,8 @@ let y = [0, 1, 2, 3],
     x = 372,
     v = 279,
     O = { impression_group: u.ImpressionGroups.APPEAL_INGESTION };
-var C = (((o = {}).SPEED_BUMP = 'speed-bump'), (o.COLLECT_SIGNAL = 'collect-signal'), (o.CONFIRM_SUBMISSION = 'confirm-submission'), (o.REQUEST_SENT = 'request-sent'), (o.THANKS = 'thanks'), o);
-let j = {
+var j = (((o = {}).SPEED_BUMP = 'speed-bump'), (o.COLLECT_SIGNAL = 'collect-signal'), (o.CONFIRM_SUBMISSION = 'confirm-submission'), (o.REQUEST_SENT = 'request-sent'), (o.THANKS = 'thanks'), o);
+let C = {
     'speed-bump': {
         next: 'collect-signal',
         prev: null

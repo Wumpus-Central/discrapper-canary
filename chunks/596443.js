@@ -34,7 +34,7 @@ function P(e) {
         A = v.Qn.includes(s),
         w = g.length,
         R = (0, c.e7)([_.Z], () => _.Z.can(j.Plq.MANAGE_ROLES, y), [y]),
-        M = i.useCallback(
+        k = i.useCallback(
             async (e) => {
                 R && (await f.Z.open(y.id, j.pNK.ROLES), await f.Z.selectRole(e));
             },
@@ -200,7 +200,7 @@ function P(e) {
                               u.P3F,
                               {
                                   className: a()(I.roleTooltipItem, { [I.editable]: R && !(0, d.pM)(y.id, e) }),
-                                  onClick: () => M(e),
+                                  onClick: () => k(e),
                                   children: (0, r.jsx)(h.Z, {
                                       role: P[e],
                                       guildId: y.id,
@@ -227,16 +227,16 @@ function Z(e) {
         N = i.useMemo(() => (null != h ? C.Z.getGuildPermissionSpecMap(h) : null), [h]),
         T = i.useMemo(() => (null != h ? C.Z.generateGuildPermissionSpec(h) : null), [h]),
         [A, w] = i.useState(''),
-        [R, M] = i.useState(''),
-        k = i.useMemo(() => s()(M, 300), []),
+        [R, k] = i.useState(''),
+        M = i.useMemo(() => s()(k, 300), []),
         L = i.useCallback(
             (e) => {
-                w(e), k(e);
+                w(e), M(e);
             },
-            [k]
+            [M]
         ),
         D = i.useCallback(() => {
-            w(''), M('');
+            w(''), k('');
         }, []),
         U = i.useMemo(() => {
             if (null == h || null == N || null == f) return null;

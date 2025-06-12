@@ -8,8 +8,8 @@ var r,
     c = n(430824),
     u = n(594174),
     d = n(981631),
-    f = n(372897);
-function _(e, t, n) {
+    _ = n(372897);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function g(e) {
     let i = l.ZP.getMember(n.id, r.id);
     if (null != i) {
         var s;
-        if ((0, o.yE)(null != (s = i.flags) ? s : 0, f.q.BYPASSES_VERIFICATION)) return;
+        if ((0, o.yE)(null != (s = i.flags) ? s : 0, _.q.BYPASSES_VERIFICATION)) return;
         let e = new Set();
         for (let t of i.roles) {
             let r = c.Z.getRole(n.id, t);
@@ -51,17 +51,17 @@ function g(e) {
             r = null == i.joinedAt || new Date(i.joinedAt) < t;
         if (!(n.hasFeature(d.oNc.GUILD_ONBOARDING_EVER_ENABLED) && !r) && e.size > 0) return;
     }
-    let _ = +r.createdAt + 60000 * d.YeM.ACCOUNT_AGE - Date.now(),
+    let f = +r.createdAt + 60000 * d.YeM.ACCOUNT_AGE - Date.now(),
         p = +n.joinedAt + 60000 * d.YeM.MEMBER_AGE - Date.now(),
         g = n.verificationLevel >= d.sFg.LOW && !r.isClaimed(),
         b = !1,
         y = !1,
         O = !1,
         v = !1;
-    r.isPhoneVerified() || r.isStaff() || ((b = n.verificationLevel >= d.sFg.LOW && !r.verified), (y = n.verificationLevel >= d.sFg.VERY_HIGH), (O = n.verificationLevel >= d.sFg.MEDIUM && _ > 0), (v = n.verificationLevel >= d.sFg.HIGH && p > 0));
+    r.isPhoneVerified() || r.isStaff() || ((b = n.verificationLevel >= d.sFg.LOW && !r.verified), (y = n.verificationLevel >= d.sFg.VERY_HIGH), (O = n.verificationLevel >= d.sFg.MEDIUM && f > 0), (v = n.verificationLevel >= d.sFg.HIGH && p > 0));
     let I = [];
     v && I.push(p),
-        O && I.push(_),
+        O && I.push(f),
         I.length > 0 &&
             (t = setTimeout(
                 () =>
@@ -78,7 +78,7 @@ function g(e) {
             newAccount: O,
             newMember: v,
             canChat: !(g || b || y || O || v),
-            accountDeadline: new Date(Date.now() + _),
+            accountDeadline: new Date(Date.now() + f),
             memberDeadline: new Date(Date.now() + p),
             timeoutRef: t
         });
@@ -125,7 +125,7 @@ class A extends (r = i.ZP.Store) {
         return this.getCheck(e).canChat;
     }
 }
-_(A, 'displayName', 'GuildVerificationStore');
+f(A, 'displayName', 'GuildVerificationStore');
 let N = new A(a.Z, {
     CONNECTION_OPEN: b,
     CONNECTION_CLOSED: y,

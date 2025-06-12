@@ -39,14 +39,14 @@ function d(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -55,7 +55,7 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = (e) => {
+let f = (e) => {
     switch (e.id) {
         case s.bi.BUILT_IN:
             return o.SsZ;
@@ -66,13 +66,13 @@ let _ = (e) => {
     }
 };
 function p(e) {
-    var { section: t, className: n, width: i, height: o, padding: s, isSelected: c, selectable: f = !1 } = e,
+    var { section: t, className: n, width: i, height: o, padding: s, isSelected: c, selectable: _ = !1 } = e,
         p = d(e, ['section', 'className', 'width', 'height', 'padding', 'isSelected', 'selectable']);
-    let h = _(t);
+    let h = f(t);
     return (0, r.jsx)('div', {
         className: a()(l.wrapper, n, {
-            [l.selectable]: f,
-            [l.selected]: f && c
+            [l.selectable]: _,
+            [l.selected]: _ && c
         }),
         style: {
             width: i,

@@ -20,7 +20,7 @@ let h = {},
     x = {},
     v = {},
     O = new Set();
-function C(e) {
+function j(e) {
     let t = p.Z.createFromServer(e),
         n = t.code;
     if (g.has(n)) g.set(n, g.get(n).merge(t));
@@ -40,7 +40,7 @@ function C(e) {
             })(n);
     }
 }
-function j(e) {
+function C(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (t && !O.has(e.channel_id)) return !1;
     let n = (0, m.Fp)(e) ? (0, m.Q_)((null == e ? void 0 : e.embeds) != null ? (null == e ? void 0 : e.embeds[0].url) : void 0) : (0, m.Q_)(e.content);
@@ -58,16 +58,16 @@ function S(e) {
 }
 function I(e) {
     let { message: t } = e;
-    return j(t, !0);
+    return C(t, !0);
 }
 function N(e) {
     let { channelId: t, messages: n } = e;
-    O.add(t), n.forEach((e) => j(e, !0));
+    O.add(t), n.forEach((e) => C(e, !0));
 }
 function T(e) {
     let { firstMessages: t } = e;
     if (null == t) return !1;
-    null == t || t.forEach((e) => j(e));
+    null == t || t.forEach((e) => C(e));
 }
 class P extends (r = s.ZP.Store) {
     get(e) {
@@ -125,7 +125,7 @@ let A = new P(u.Z, {
         GIFT_CODE_RESOLVE: S,
         GIFT_CODE_RESOLVE_SUCCESS: function (e) {
             let { giftCode: t } = e;
-            return (_ = _.filter((e) => e !== t.code)), E.includes(t.code) || (E = [...E, t.code]), C(t);
+            return (_ = _.filter((e) => e !== t.code)), E.includes(t.code) || (E = [...E, t.code]), j(t);
         },
         GIFT_CODE_RESOLVE_FAILURE: function (e) {
             let { code: t } = e;
@@ -169,7 +169,7 @@ let A = new P(u.Z, {
         },
         GIFT_CODE_CREATE_SUCCESS: function (e) {
             let { giftCode: t } = e;
-            C(t);
+            j(t);
         },
         GIFT_CODES_FETCH: function (e) {
             let { skuId: t, subscriptionPlanId: n } = e;
@@ -177,7 +177,7 @@ let A = new P(u.Z, {
         },
         GIFT_CODES_FETCH_SUCCESS: function (e) {
             let { giftCodes: t, skuId: n, subscriptionPlanId: r } = e;
-            t.forEach(C);
+            t.forEach(j);
             let i = (0, m.Bg)(n, r);
             (x[i] = Date.now()), y.delete(i);
         },
@@ -192,18 +192,18 @@ let A = new P(u.Z, {
         LOAD_MESSAGES_AROUND_SUCCESS: N,
         LOAD_RECENT_MENTIONS_SUCCESS: function (e) {
             let { messages: t } = e;
-            t.forEach((e) => j(e));
+            t.forEach((e) => C(e));
         },
         LOAD_PINNED_MESSAGES_SUCCESS: function (e) {
             let { pins: t } = e;
             t.forEach((e) => {
                 let { message: t } = e;
-                return j(t);
+                return C(t);
             });
         },
         SEARCH_FINISH: function (e) {
             e.messages.forEach((e) => {
-                e.forEach((e) => j(e));
+                e.forEach((e) => C(e));
             });
         },
         GIFT_CODE_UPDATE: function (e) {
@@ -217,7 +217,7 @@ let A = new P(u.Z, {
             let { threads: t } = e;
             Object.values(t).map((e) => {
                 let { first_message: t } = e;
-                return null != t && j(t);
+                return null != t && C(t);
             });
         }
     }),

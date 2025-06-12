@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(670596),
     u = n(743236),
     d = n(525220),
-    f = n(481060),
-    _ = n(939350),
+    _ = n(481060),
+    f = n(939350),
     p = n(906944);
 function h(e, t, n) {
     return (
@@ -64,16 +64,16 @@ function E(e, t) {
     );
 }
 function b(e) {
-    let { color: t = 'default', label: n, icon: a, iconLeft: h, iconLeftSize: g = 'md', hint: b, subtext: y, subtextLineClamp: O, hasSubmenu: v, disabled: I, isFocused: T, menuItemProps: S, action: A, onClose: N, onFocus: C, className: R, focusedClassName: P, subMenuIconClassName: w, dontCloseOnActionIfHoldingShiftKey: D, dontCloseOnAction: L, iconProps: x, sparkle: k } = e,
-        { onSelect: M, onInteraction: j } = i.useContext(c.p),
+    let { color: t = 'default', label: n, icon: a, iconLeft: h, iconLeftSize: g = 'md', hint: b, subtext: y, subtextLineClamp: O, hasSubmenu: v, disabled: I, isFocused: T, menuItemProps: S, action: A, onClose: N, onFocus: C, className: R, focusedClassName: P, subMenuIconClassName: w, dontCloseOnActionIfHoldingShiftKey: D, dontCloseOnAction: L, iconProps: x, sparkle: M } = e,
+        { onSelect: k, onInteraction: j } = i.useContext(c.p),
         U = i.useRef(null),
         G = i.useCallback(
             (e) => {
                 var t;
                 if ((null == j || j({ type: c.U.DEFAULT }), null == A)) return !1;
-                (e.shiftKey && D) || L || N(), e.persist(), null == M || M(), (null != (t = e.nativeEvent.view) ? t : window).requestAnimationFrame(() => A(e));
+                (e.shiftKey && D) || L || N(), e.persist(), null == k || k(), (null != (t = e.nativeEvent.view) ? t : window).requestAnimationFrame(() => A(e));
             },
-            [A, N, M, D, L, j]
+            [A, N, k, D, L, j]
         );
     return (
         i.useEffect(() => {
@@ -85,7 +85,7 @@ function b(e) {
                 m(
                     {
                         innerRef: U,
-                        className: o()(p.item, p.labelContainer, _._[t], R, {
+                        className: o()(p.item, p.labelContainer, f._[t], R, {
                             [p.disabled]: I,
                             [p.focused]: T,
                             [null != P ? P : '']: T
@@ -108,7 +108,7 @@ function b(e) {
                             children: [
                                 (0, l.I)(n, e),
                                 null != y &&
-                                    (0, r.jsx)(f.Text, {
+                                    (0, r.jsx)(_.Text, {
                                         variant: 'text-xs/normal',
                                         className: o()(p.subtext, { [p.subtextLineClamp]: null != O }),
                                         lineClamp: O,
@@ -132,12 +132,12 @@ function b(e) {
                             (0, r.jsxs)('div', {
                                 className: p.iconContainer,
                                 children: [
-                                    (0, r.jsx)(f.Fbu, {
+                                    (0, r.jsx)(_.Fbu, {
                                         size: 'md',
                                         color: 'currentColor',
                                         className: o()(p.caret, w)
                                     }),
-                                    k && (0, r.jsx)(f.K1N, { className: p.sparkles })
+                                    M && (0, r.jsx)(_.K1N, { className: p.sparkles })
                                 ]
                             })
                     ]

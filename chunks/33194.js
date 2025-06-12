@@ -1,8 +1,8 @@
 n.d(t, {
     Iu: () => u,
     OS: () => d,
-    g6: () => _,
-    v3: () => f
+    g6: () => f,
+    v3: () => _
 });
 var r = n(97519),
     i = n(296574);
@@ -76,9 +76,9 @@ function u(e) {
 function d() {
     return c.getState().queuedWarning;
 }
-function f() {
+function _() {
     c.setState({ queuedWarning: !1 });
 }
-function _(e) {
+function f(e) {
     c.setState((t) => ({ channelDismissTimestamps: l(o({}, t.channelDismissTimestamps), { [e]: Date.now() }) }));
 }

@@ -49,8 +49,8 @@ function d(e) {
         return !0;
     }
 }
-function f(e, t) {
+function _(e, t) {
     return t();
 }
-var _ = 'undefined' == typeof window || void 0 === window.document || void 0 === window.document.createElement ? f : u;
-t.useSyncExternalStore = void 0 !== r.useSyncExternalStore ? r.useSyncExternalStore : _;
+var f = 'undefined' == typeof window || void 0 === window.document || void 0 === window.document.createElement ? _ : u;
+t.useSyncExternalStore = void 0 !== r.useSyncExternalStore ? r.useSyncExternalStore : f;

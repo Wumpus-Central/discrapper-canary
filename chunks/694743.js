@@ -1,4 +1,4 @@
-n.d(t, { E: () => _ });
+n.d(t, { E: () => f });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -37,18 +37,18 @@ function u(e) {
 var d = (function (e) {
     return (e.XXSMALL = 'xxsmall'), (e.XSMALL = 'xsmall'), (e.SMALL = 'small'), (e.LARGE = 'large'), e;
 })(d || {});
-let f = 'indeterminate';
-function _(e) {
+let _ = 'indeterminate';
+function f(e) {
     let t,
-        { className: n, percent: a, size: c = 'small', foregroundColor: d = s.Z.unsafe_rawColors.BRAND_500.css, backgroundColor: _ = 'var(--background-modifier-active)', foregroundGradientColor: p, animate: h = !0 } = e,
+        { className: n, percent: a, size: c = 'small', foregroundColor: d = s.Z.unsafe_rawColors.BRAND_500.css, backgroundColor: f = 'var(--background-modifier-active)', foregroundGradientColor: p, animate: h = !0 } = e,
         m = null != a ? a : 0;
     return (
         (t = null != p ? { background: 'linear-gradient(to right, '.concat(p[0], ', ').concat(p[1], ')') } : { backgroundColor: d }),
         (0, r.jsx)('div', {
             className: o()(n, l.progress, l[c]),
-            style: { backgroundColor: _ },
+            style: { backgroundColor: f },
             children:
-                m !== f && 'number' == typeof m
+                m !== _ && 'number' == typeof m
                     ? (0, r.jsx)('div', {
                           className: o()(l.progressBar, l[c], { [l.animating]: h }),
                           style: u({ transform: 'translate3d('.concat(Math.min(Math.max(0, m), 100) - 100, '%, 0, 0)') }, t)
@@ -68,4 +68,4 @@ function _(e) {
         })
     );
 }
-(_.Sizes = d), (_.INDETERMINATE = f);
+(f.Sizes = d), (f.INDETERMINATE = _);

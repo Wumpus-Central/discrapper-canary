@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(670596),
     u = n(743236),
     d = n(481060),
-    f = n(540059),
-    _ = n(186523),
+    _ = n(540059),
+    f = n(186523),
     p = n(553826),
     h = n(939350),
     m = n(906944);
@@ -69,7 +69,7 @@ function O(e) {
     let { color: t = 'default', label: n, checked: a, subtext: g, disabled: b, isFocused: O, menuItemProps: v, action: I } = e,
         { onInteraction: T } = i.useContext(c.p),
         S = i.useRef(null),
-        A = (0, f.Q3)('MenuRadioItem');
+        A = (0, _.Q3)('MenuRadioItem');
     i.useEffect(() => {
         O && (0, u.F)(S);
     }, [O]);
@@ -122,7 +122,7 @@ function O(e) {
                                     background: m.__invalid_radio,
                                     foreground: m.radioSelection
                                 })
-                              : (0, r.jsx)(_.Z, {
+                              : (0, r.jsx)(f.Z, {
                                     className: m.icon,
                                     foreground: m.__invalid_radio
                                 })

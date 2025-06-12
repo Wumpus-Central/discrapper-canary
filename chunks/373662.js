@@ -58,7 +58,7 @@ function f(e, t) {
     return i;
 }
 let h = i.forwardRef(function (e, t) {
-    var { label: n, ariaLabel: i, tooltipText: l, tooltipColor: h, icon: g, iconProps: _, onClick: b, onTooltipShow: E, onTooltipHide: y, disabled: x, dangerous: v, separator: O, sparkle: C, showNewBadge: j, buttonClassName: S, children: I } = e,
+    var { label: n, ariaLabel: i, tooltipText: l, tooltipColor: h, icon: g, iconProps: _, onClick: b, onTooltipShow: E, onTooltipHide: y, disabled: x, dangerous: v, separator: O, sparkle: j, showNewBadge: C, buttonClassName: S, children: I } = e,
         N = f(e, ['label', 'ariaLabel', 'tooltipText', 'tooltipColor', 'icon', 'iconProps', 'onClick', 'onTooltipShow', 'onTooltipHide', 'disabled', 'dangerous', 'separator', 'sparkle', 'showNewBadge', 'buttonClassName', 'children']);
     let { canShowReactionsOnMessageHover: T } = u.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
     return (
@@ -114,8 +114,8 @@ let h = i.forwardRef(function (e, t) {
                                                   children: I
                                               })
                                             : null,
-                                        C && (0, r.jsx)(o.K1N, {}),
-                                        j &&
+                                        j && (0, r.jsx)(o.K1N, {}),
+                                        C &&
                                             (0, r.jsx)(o.IGR, {
                                                 text: d.intl.string(d.t.y2b7CA),
                                                 color: s.Z.BG_BRAND,

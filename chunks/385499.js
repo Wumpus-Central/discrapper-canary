@@ -21,7 +21,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,7 +54,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -62,13 +62,13 @@ function p(e, t) {
 }
 let h = (e) => {
     let t,
-        { invertColor: n = !1, type: i = l.Hb.BOT, className: d, verified: _, hideIcon: h = !1, useRemSizes: m = !1, children: g = [] } = e,
+        { invertColor: n = !1, type: i = l.Hb.BOT, className: d, verified: f, hideIcon: h = !1, useRemSizes: m = !1, children: g = [] } = e,
         E = null,
         b = c.intl.string(c.t.g76OcH);
     switch (i) {
         case l.Hb.SYSTEM_DM:
         case l.Hb.OFFICIAL:
-            (_ = !0), (b = c.intl.string(c.t['7s687u'])), (E = c.intl.string(c.t.lKQ7Wl));
+            (f = !0), (b = c.intl.string(c.t['7s687u'])), (E = c.intl.string(c.t.lKQ7Wl));
             break;
         case l.Hb.SERVER:
             E = c.intl.string(c.t.PuJGuL);
@@ -80,10 +80,10 @@ let h = (e) => {
             E = c.intl.string(c.t.oMx98P);
             break;
         case l.Hb.AI:
-            (_ = !0), (b = c.intl.string(c.t.d5YwQE)), (E = c.intl.string(c.t.pLTJZG));
+            (f = !0), (b = c.intl.string(c.t.d5YwQE)), (E = c.intl.string(c.t.pLTJZG));
             break;
         case l.Hb.REMIX:
-            (_ = !1), (E = c.intl.string(c.t.uXDG39));
+            (f = !1), (E = c.intl.string(c.t.uXDG39));
             break;
         case l.Hb.BOT:
         default:
@@ -92,7 +92,7 @@ let h = (e) => {
     let y = i === l.Hb.ORIGINAL_POSTER,
         O = i === l.Hb.REMIX,
         v = null;
-    _ &&
+    f &&
         (v = (0, r.jsx)(o.u, {
             text: b,
             align: 'center',
@@ -100,7 +100,7 @@ let h = (e) => {
             children: (e) =>
                 (0, r.jsx)(
                     s.kSu,
-                    p(f({}, e), {
+                    p(_({}, e), {
                         className: u.botTagVerified,
                         color: s.TVs.colors.WHITE
                     })
@@ -110,7 +110,7 @@ let h = (e) => {
     let I = (e) =>
         (0, r.jsxs)(
             'span',
-            p(f({}, e), {
+            p(_({}, e), {
                 className: a()(d, t, m ? u.rem : u.px, {
                     [u.botTagOP]: y,
                     [u.botTagRemix]: O

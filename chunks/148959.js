@@ -12,7 +12,7 @@ var r = n(392711),
     c = n(70956),
     u = n(960048),
     d = n(65154);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function f(e, t, n) {
         e
     );
 }
-let _ = 10 * c.Z.Millis.SECOND,
+let f = 10 * c.Z.Millis.SECOND,
     p = 10 * c.Z.Millis.SECOND,
     h = 500;
 var m = (function (e) {
@@ -128,7 +128,7 @@ class E extends a.Z {
         return -1 !== this.currentSSRC;
     }
     isDowngradeChangeAllowed(e) {
-        return !this.throttleDowngradeChanges || void 0 === this.lastDowngradeChangeTime || (e ? Date.now() - this.lastDowngradeChangeTime >= p : Date.now() - this.lastDowngradeChangeTime >= _);
+        return !this.throttleDowngradeChanges || void 0 === this.lastDowngradeChangeTime || (e ? Date.now() - this.lastDowngradeChangeTime >= p : Date.now() - this.lastDowngradeChangeTime >= f);
     }
     shouldSeamlessTransition(e) {
         if (!this.supportsSeamless || !this.isReceiving()) return !1;
@@ -214,27 +214,27 @@ class E extends a.Z {
     }
     constructor(e) {
         super(),
-            f(this, 'supportsSeamless', void 0),
-            f(this, 'logger', void 0),
-            f(this, 'userId', void 0),
-            f(this, 'streamId', void 0),
-            f(this, 'resolutionWidth', void 0),
-            f(this, 'resolutionHeight', void 0),
-            f(this, 'videoStreams', void 0),
-            f(this, 'audioSSRC', void 0),
-            f(this, 'hqSSRC', void 0),
-            f(this, 'lqSSRC', void 0),
-            f(this, 'switchState', void 0),
-            f(this, 'pendingSSRC', void 0),
-            f(this, 'currentSSRC', void 0),
-            f(this, 'downgraded', void 0),
-            f(this, 'throttleDowngradeChanges', void 0),
-            f(this, 'lastDowngradeChangeTime', void 0),
-            f(this, 'otherUsers', void 0),
-            f(this, 'debugQualityOverride', void 0),
-            f(this, 'incomingVideoEnabled', void 0),
-            f(this, 'delayedCall', void 0),
-            f(this, 'delayedUpdate', void 0),
+            _(this, 'supportsSeamless', void 0),
+            _(this, 'logger', void 0),
+            _(this, 'userId', void 0),
+            _(this, 'streamId', void 0),
+            _(this, 'resolutionWidth', void 0),
+            _(this, 'resolutionHeight', void 0),
+            _(this, 'videoStreams', void 0),
+            _(this, 'audioSSRC', void 0),
+            _(this, 'hqSSRC', void 0),
+            _(this, 'lqSSRC', void 0),
+            _(this, 'switchState', void 0),
+            _(this, 'pendingSSRC', void 0),
+            _(this, 'currentSSRC', void 0),
+            _(this, 'downgraded', void 0),
+            _(this, 'throttleDowngradeChanges', void 0),
+            _(this, 'lastDowngradeChangeTime', void 0),
+            _(this, 'otherUsers', void 0),
+            _(this, 'debugQualityOverride', void 0),
+            _(this, 'incomingVideoEnabled', void 0),
+            _(this, 'delayedCall', void 0),
+            _(this, 'delayedUpdate', void 0),
             (this.supportsSeamless = e),
             (this.streamId = null),
             (this.resolutionWidth = 0),

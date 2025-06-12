@@ -21,7 +21,7 @@ function c(e) {
         var n = null != arguments[t] ? arguments[t] : {};
         t % 2
             ? l(Object(n), !0).forEach(function (t) {
-                  _(e, t, n[t]);
+                  f(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -40,10 +40,10 @@ function d(e, t) {
         (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
     }
 }
-function f(e, t, n) {
+function _(e, t, n) {
     return t && d(e.prototype, t), n && d(e, n), e;
 }
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -60,43 +60,43 @@ var p = (function () {
     function e(t, n, o) {
         var l = this;
         u(this, e),
-            _(this, 'options', void 0),
-            _(this, 'actions', void 0),
-            _(this, 'monitor', void 0),
-            _(this, 'registry', void 0),
-            _(this, 'enterLeaveCounter', void 0),
-            _(this, 'sourcePreviewNodes', new Map()),
-            _(this, 'sourcePreviewNodeOptions', new Map()),
-            _(this, 'sourceNodes', new Map()),
-            _(this, 'sourceNodeOptions', new Map()),
-            _(this, 'dragStartSourceIds', null),
-            _(this, 'dropTargetIds', []),
-            _(this, 'dragEnterTargetIds', []),
-            _(this, 'currentNativeSource', null),
-            _(this, 'currentNativeHandle', null),
-            _(this, 'currentDragSourceNode', null),
-            _(this, 'altKeyPressed', !1),
-            _(this, 'mouseMoveTimeoutTimer', null),
-            _(this, 'asyncEndDragFrameId', null),
-            _(this, 'dragOverTargetIds', null),
-            _(this, 'getSourceClientOffset', function (e) {
+            f(this, 'options', void 0),
+            f(this, 'actions', void 0),
+            f(this, 'monitor', void 0),
+            f(this, 'registry', void 0),
+            f(this, 'enterLeaveCounter', void 0),
+            f(this, 'sourcePreviewNodes', new Map()),
+            f(this, 'sourcePreviewNodeOptions', new Map()),
+            f(this, 'sourceNodes', new Map()),
+            f(this, 'sourceNodeOptions', new Map()),
+            f(this, 'dragStartSourceIds', null),
+            f(this, 'dropTargetIds', []),
+            f(this, 'dragEnterTargetIds', []),
+            f(this, 'currentNativeSource', null),
+            f(this, 'currentNativeHandle', null),
+            f(this, 'currentDragSourceNode', null),
+            f(this, 'altKeyPressed', !1),
+            f(this, 'mouseMoveTimeoutTimer', null),
+            f(this, 'asyncEndDragFrameId', null),
+            f(this, 'dragOverTargetIds', null),
+            f(this, 'getSourceClientOffset', function (e) {
                 var t = l.sourceNodes.get(e);
                 return (t && (0, i.g2)(t)) || null;
             }),
-            _(this, 'endDragNativeItem', function () {
+            f(this, 'endDragNativeItem', function () {
                 l.isDraggingNativeItem() && (l.actions.endDrag(), l.currentNativeHandle && l.registry.removeSource(l.currentNativeHandle), (l.currentNativeHandle = null), (l.currentNativeSource = null));
             }),
-            _(this, 'isNodeInDocument', function (e) {
+            f(this, 'isNodeInDocument', function (e) {
                 return !!(e && l.document && l.document.body && l.document.body.contains(e));
             }),
-            _(this, 'endDragIfSourceWasRemovedFromDOM', function () {
+            f(this, 'endDragIfSourceWasRemovedFromDOM', function () {
                 var e = l.currentDragSourceNode;
                 !(null == e || l.isNodeInDocument(e)) && l.clearCurrentDragSourceNode() && l.monitor.isDragging() && l.actions.endDrag();
             }),
-            _(this, 'handleTopDragStartCapture', function () {
+            f(this, 'handleTopDragStartCapture', function () {
                 l.clearCurrentDragSourceNode(), (l.dragStartSourceIds = []);
             }),
-            _(this, 'handleTopDragStart', function (e) {
+            f(this, 'handleTopDragStart', function (e) {
                 if (!e.defaultPrevented) {
                     var t = l.dragStartSourceIds;
                     l.dragStartSourceIds = null;
@@ -116,13 +116,13 @@ var p = (function () {
                                 u = l.sourcePreviewNodes.get(s) || c;
                             if (u) {
                                 var d = l.getCurrentSourcePreviewNodeOptions(),
-                                    f = d.anchorX,
-                                    _ = d.anchorY,
+                                    _ = d.anchorX,
+                                    f = d.anchorY,
                                     p = d.offsetX,
                                     h = d.offsetY,
                                     m = {
-                                        anchorX: f,
-                                        anchorY: _
+                                        anchorX: _,
+                                        anchorY: f
                                     },
                                     g = {
                                         offsetX: p,
@@ -148,17 +148,17 @@ var p = (function () {
                     }
                 }
             }),
-            _(this, 'handleTopDragEndCapture', function () {
+            f(this, 'handleTopDragEndCapture', function () {
                 l.clearCurrentDragSourceNode() && l.monitor.isDragging() && l.actions.endDrag();
             }),
-            _(this, 'handleTopDragEnterCapture', function (e) {
+            f(this, 'handleTopDragEnterCapture', function (e) {
                 if (((l.dragEnterTargetIds = []), !(!l.enterLeaveCounter.enter(e.target) || l.monitor.isDragging()))) {
                     var t = e.dataTransfer,
                         n = (0, a.w)(t);
                     n && l.beginDragNativeItem(n, t);
                 }
             }),
-            _(this, 'handleTopDragEnter', function (e) {
+            f(this, 'handleTopDragEnter', function (e) {
                 var t = l.dragEnterTargetIds;
                 if (((l.dragEnterTargetIds = []), l.monitor.isDragging())) {
                     (l.altKeyPressed = e.altKey), t.length > 0 && l.actions.hover(t, { clientOffset: (0, i.K5)(e) });
@@ -168,10 +168,10 @@ var p = (function () {
                     n && (e.preventDefault(), e.dataTransfer && (e.dataTransfer.dropEffect = l.getCurrentDropEffect()));
                 }
             }),
-            _(this, 'handleTopDragOverCapture', function () {
+            f(this, 'handleTopDragOverCapture', function () {
                 l.dragOverTargetIds = [];
             }),
-            _(this, 'handleTopDragOver', function (e) {
+            f(this, 'handleTopDragOver', function (e) {
                 var t = l.dragOverTargetIds;
                 if (((l.dragOverTargetIds = []), !l.monitor.isDragging())) {
                     e.preventDefault(), e.dataTransfer && (e.dataTransfer.dropEffect = 'none');
@@ -187,7 +187,7 @@ var p = (function () {
                           ? e.preventDefault()
                           : (e.preventDefault(), e.dataTransfer && (e.dataTransfer.dropEffect = 'none'));
             }),
-            _(this, 'handleTopDragLeaveCapture', function (e) {
+            f(this, 'handleTopDragLeaveCapture', function (e) {
                 l.isDraggingNativeItem() && e.preventDefault(),
                     l.enterLeaveCounter.leave(e.target) &&
                         l.isDraggingNativeItem() &&
@@ -195,18 +195,18 @@ var p = (function () {
                             return l.endDragNativeItem();
                         }, 0);
             }),
-            _(this, 'handleTopDropCapture', function (e) {
+            f(this, 'handleTopDropCapture', function (e) {
                 if (((l.dropTargetIds = []), l.isDraggingNativeItem())) {
                     var t;
                     e.preventDefault(), null == (t = l.currentNativeSource) || t.loadDataTransfer(e.dataTransfer);
                 } else (0, a.w)(e.dataTransfer) && e.preventDefault();
                 l.enterLeaveCounter.reset();
             }),
-            _(this, 'handleTopDrop', function (e) {
+            f(this, 'handleTopDrop', function (e) {
                 var t = l.dropTargetIds;
                 (l.dropTargetIds = []), l.actions.hover(t, { clientOffset: (0, i.K5)(e) }), l.actions.drop({ dropEffect: l.getCurrentDropEffect() }), l.isDraggingNativeItem() ? l.endDragNativeItem() : l.monitor.isDragging() && l.actions.endDrag();
             }),
-            _(this, 'handleSelectStart', function (e) {
+            f(this, 'handleSelectStart', function (e) {
                 var t = e.target;
                 'function' == typeof t.dragDrop && ('INPUT' === t.tagName || 'SELECT' === t.tagName || 'TEXTAREA' === t.tagName || t.isContentEditable || (e.preventDefault(), t.dragDrop()));
             }),
@@ -217,7 +217,7 @@ var p = (function () {
             (this.enterLeaveCounter = new r.e(this.isNodeInDocument));
     }
     return (
-        f(e, [
+        _(e, [
             {
                 key: 'profile',
                 value: function () {

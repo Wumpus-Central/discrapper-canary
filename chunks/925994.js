@@ -15,8 +15,8 @@ var r = n(512722),
     c = n(430824),
     u = n(699516),
     d = n(914010),
-    f = n(594174),
-    _ = n(51144),
+    _ = n(594174),
+    f = n(51144),
     p = n(887490);
 function h(e, t, n) {
     return (
@@ -86,31 +86,31 @@ function y(e, t) {
     let { mode: i, start: a, end: o, separator: s, ignoreEmptyNodes: l, ignoreTrailingEmptyNodes: c, preventEmojiSurrogates: u } = null != t ? t : {},
         d = e.length > 0 && !p.LC.isText(e[0]);
     null == s && (s = d ? '\n' : '');
-    let f = null != (n = null == a ? void 0 : a.path[0]) ? n : 0,
-        _ = null != (r = null == o ? void 0 : o.path[0]) ? r : e.length - 1;
+    let _ = null != (n = null == a ? void 0 : a.path[0]) ? n : 0,
+        f = null != (r = null == o ? void 0 : o.path[0]) ? r : e.length - 1;
     if (c)
-        for (let t = _; t >= f; t--) {
+        for (let t = f; t >= _; t--) {
             let n = e[t];
             if (p.LC.isText(n)) {
                 if (n.text.length > 0) {
-                    _ = t;
+                    f = t;
                     break;
                 }
             } else if (!p.q.isEmpty(n)) {
-                _ = t;
+                f = t;
                 break;
             }
-            if (t === f) return '';
+            if (t === _) return '';
         }
-    let h = f > 0 && p.aj.isType(e[f - 1], 'blockQuote'),
-        m = p.aj.isType(e[f], 'blockQuote'),
-        g = p.aj.isType(e[_], 'blockQuote'),
+    let h = _ > 0 && p.aj.isType(e[_ - 1], 'blockQuote'),
+        m = p.aj.isType(e[_], 'blockQuote'),
+        g = p.aj.isType(e[f], 'blockQuote'),
         E = [];
-    for (let t = f; t <= _; t++) {
+    for (let t = _; t <= f; t++) {
         let n = e[t];
         if (l && p.LC.isText(n) && 0 === n.text.length) continue;
         let r =
-                null != a && t === f
+                null != a && t === _
                     ? {
                           path: a.path.slice(1),
                           offset: a.offset
@@ -120,7 +120,7 @@ function y(e, t) {
                 mode: i,
                 start: r,
                 end:
-                    null != o && t === _
+                    null != o && t === f
                         ? {
                               path: o.path.slice(1),
                               offset: o.offset
@@ -169,7 +169,7 @@ function O(e, t) {
             if ('raw' === n) return t;
             let r = l.Z.getChannel(e.channelId);
             if (null == r) return t;
-            return (0, a.F6)(r, f.default, u.Z, !0, !0);
+            return (0, a.F6)(r, _.default, u.Z, !0, !0);
         }
         case 'soundboard': {
             let t = '<sound:'.concat(e.guildId, ':').concat(e.soundId, '>');
@@ -191,9 +191,9 @@ function O(e, t) {
         case 'userMention': {
             let t = '<@'.concat(e.userId, '>');
             if ('raw' === n) return t;
-            let r = f.default.getUser(e.userId);
+            let r = _.default.getUser(e.userId);
             if (null == r) return t;
-            return '@'.concat(_.ZP.getUserTag(r, { decoration: 'never' }));
+            return '@'.concat(f.ZP.getUserTag(r, { decoration: 'never' }));
         }
         case 'commandMention':
             return '</'.concat(e.commandName, ':').concat(e.commandId, '>');

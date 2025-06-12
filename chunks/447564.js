@@ -1,5 +1,5 @@
 n.d(t, {
-    default: () => C,
+    default: () => j,
     k: () => O
 }),
     n(388685);
@@ -54,10 +54,10 @@ let O = (e, t) => {
                 let { default: t } = await Promise.resolve().then(n.bind(n, 447564));
                 return (n) => (0, r.jsx)(t, v({ channel: e }, n));
             },
-            { modalKey: j }
+            { modalKey: C }
         );
 };
-function C(e) {
+function j(e) {
     let { transitionState: t, channel: n } = e;
     return (0, r.jsx)(o.Y0X, {
         size: o.CgR.DYNAMIC,
@@ -66,7 +66,7 @@ function C(e) {
         children: (0, r.jsx)(S, { channel: n })
     });
 }
-let j = 'HD_STREAMING_POTION_MODAL_KEY';
+let C = 'HD_STREAMING_POTION_MODAL_KEY';
 function S(e) {
     let { channel: t } = e,
         n = (0, m.T$)(t),
@@ -75,32 +75,32 @@ function S(e) {
         { entitlement: E, fetchedEntitlement: y, error: x } = (0, m.t6)(f.FX),
         v = _ || x,
         { analyticsLocations: O } = (0, c.ZP)([s.Z.HD_STREAMING_POTION_MODAL]),
-        C = null != E && !E.consumed;
+        j = null != E && !E.consumed;
     (0, i.useEffect)(
         () => () => {
             v && (0, p.SN)(f.FX);
         },
         [E, t, a, v]
     );
-    let j = (0, i.useCallback)(() => {
+    let C = (0, i.useCallback)(() => {
             (0, p.Zu)(t.id), (0, o.pTH)();
         }, [t.id]),
         S = (0, i.useCallback)(() => {
             (0, d.Z)({
                 skuId: f.FX,
                 analyticsLocations: O,
-                onComplete: j,
+                onComplete: C,
                 variantsReturnStyle: l.v.INDIVIDUAL_PRODUCTS
             });
-        }, [O, j]),
-        N = (0, i.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == E ? void 0 : E.type) === b.qc2.DEVELOPER_GIFT ? 1 : 2 * !!C) : 3), [t.isHDStreamSplashed, n, null == E ? void 0 : E.type, C]),
+        }, [O, C]),
+        N = (0, i.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == E ? void 0 : E.type) === b.qc2.DEVELOPER_GIFT ? 1 : 2 * !!j) : 3), [t.isHDStreamSplashed, n, null == E ? void 0 : E.type, j]),
         T = (0, i.useMemo)(() => N(), [N]);
     return (0, r.jsx)(I, {
         channel: t,
         buttonState: T,
         price: h,
         onActionClick: () => {
-            u(!0), (C ? j : S)();
+            u(!0), (j ? C : S)();
         },
         loading: g || !y
     });
@@ -185,7 +185,7 @@ let I = (e) => {
             children: [
                 (0, r.jsx)(o.zxk, {
                     onClick: () => {
-                        (0, o.Mr3)(j);
+                        (0, o.Mr3)(C);
                     },
                     color: o.zxk.Colors.PRIMARY,
                     children: E.intl.string(E.t.Avt5KS)

@@ -15,8 +15,8 @@ function l(e) {
         c = n.getCurrentUser(),
         u = !1;
     if (null != c) {
-        var d, f;
-        u = null != (f = null == (d = r.getMember(e, c.id)) ? void 0 : d.isPending) && f;
+        var d, _;
+        u = null != (_ = null == (d = r.getMember(e, c.id)) ? void 0 : d.isPending) && _;
     }
     return u && !!(0, s.Dc)(l);
 }

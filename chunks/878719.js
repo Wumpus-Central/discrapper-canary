@@ -1,8 +1,8 @@
 a.d(e, {
     GJ: () => E,
-    ME: () => N,
+    ME: () => A,
     aB: () => R,
-    dr: () => I
+    dr: () => u
 });
 var r = a(263449),
     _ = a(202811),
@@ -27,59 +27,59 @@ function s(t, e) {
 function l(t, e) {
     var a, r;
     let _ = e.stacktrace || e.stack || '',
-        n = (a = e) && u.test(a.message) ? 1 : 0,
+        n = (a = e) && I.test(a.message) ? 1 : 0,
         o = 'number' == typeof (r = e).framesToPop ? r.framesToPop : 0;
     try {
         return t(_, n, o);
     } catch (t) {}
     return [];
 }
-let u = /Minified React error #\d+;/i;
-function I(t, e, a, r) {
-    let _ = N(t, e, (a && a.syntheticException) || void 0, r);
+let I = /Minified React error #\d+;/i;
+function u(t, e, a, r) {
+    let _ = A(t, e, (a && a.syntheticException) || void 0, r);
     return (0, o.EG)(_), (_.level = 'error'), a && a.event_id && (_.event_id = a.event_id), (0, i.WD)(_);
 }
 function R(t, e, a = 'info', r, _) {
-    let n = d(t, e, (r && r.syntheticException) || void 0, _);
+    let n = T(t, e, (r && r.syntheticException) || void 0, _);
     return (n.level = a), r && r.event_id && (n.event_id = r.event_id), (0, i.WD)(n);
 }
-function N(t, e, a, i, u) {
-    let I;
+function A(t, e, a, i, I) {
+    let u;
     if ((0, n.VW)(e) && e.error) return s(t, e.error);
     if ((0, n.TX)(e) || (0, n.fm)(e)) {
-        if ('stack' in e) I = s(t, e);
+        if ('stack' in e) u = s(t, e);
         else {
             let r = e.name || ((0, n.TX)(e) ? 'DOMError' : 'DOMException'),
                 _ = e.message ? `${r}: ${e.message}` : r;
-            (I = d(t, _, a, i)), (0, o.Db)(I, _);
+            (u = T(t, _, a, i)), (0, o.Db)(u, _);
         }
         return (
             'code' in e &&
-                (I.tags = {
-                    ...I.tags,
+                (u.tags = {
+                    ...u.tags,
                     'DOMException.code': `${e.code}`
                 }),
-            I
+            u
         );
     }
     return (0, n.VZ)(e)
         ? s(t, e)
         : ((0, n.PO)(e) || (0, n.cO)(e)
-              ? (I = (function (t, e, a, o) {
+              ? (u = (function (t, e, a, o) {
                     let i = (0, r.s3)(),
                         s = i && i.getOptions().normalizeDepth,
-                        u = (function (t) {
+                        I = (function (t) {
                             for (let e in t)
                                 if (Object.prototype.hasOwnProperty.call(t, e)) {
                                     let a = t[e];
                                     if (a instanceof Error) return a;
                                 }
                         })(e),
-                        I = { __serialized__: (0, _.Qy)(e, s) };
-                    if (u)
+                        u = { __serialized__: (0, _.Qy)(e, s) };
+                    if (I)
                         return {
-                            exception: { values: [E(t, u)] },
-                            extra: I
+                            exception: { values: [E(t, I)] },
+                            extra: u
                         };
                     let R = {
                         exception: {
@@ -104,19 +104,19 @@ function N(t, e, a, i, u) {
                                 }
                             ]
                         },
-                        extra: I
+                        extra: u
                     };
                     if (a) {
                         let e = l(t, a);
                         e.length && (R.exception.values[0].stacktrace = { frames: e });
                     }
                     return R;
-                })(t, e, a, u))
-              : ((I = d(t, e, a, i)), (0, o.Db)(I, `${e}`, void 0)),
-          (0, o.EG)(I, { synthetic: !0 }),
-          I);
+                })(t, e, a, I))
+              : ((u = T(t, e, a, i)), (0, o.Db)(u, `${e}`, void 0)),
+          (0, o.EG)(u, { synthetic: !0 }),
+          u);
 }
-function d(t, e, a, r) {
+function T(t, e, a, r) {
     let _ = {};
     if (r && a) {
         let r = l(t, a);

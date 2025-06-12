@@ -8,8 +8,8 @@ var r = n(544891),
     c = n(496675),
     u = n(594174),
     d = n(960048),
-    f = n(50101),
-    _ = n(172299),
+    _ = n(50101),
+    f = n(172299),
     p = n(639777),
     h = n(981631),
     m = n(526761);
@@ -31,7 +31,7 @@ class E extends a.Z {
         let e = Object.values(l.Z.getGuilds()),
             t = u.default.getCurrentUser();
         return e.find((e) => {
-            let n = (0, f.gV)(e.id, 'guild_powerups_system_message'),
+            let n = (0, _.gV)(e.id, 'guild_powerups_system_message'),
                 r = e.hasFeature(h.oNc.TIERLESS_BOOSTING_SYSTEM_MESSAGE),
                 i = e.isOwner(t) || (0, p.D)(c.Z, e);
             return n && r && i;
@@ -40,7 +40,7 @@ class E extends a.Z {
     async maybeSendSystemMessage() {
         if (this.isRequestInProgress || !s.Z.hasLoaded(m.yP.PRELOADED_USER_SETTINGS)) return;
         let e = (0, o.un)(i.z.TIERLESS_BOOSTING_SYSTEM_MESSAGE),
-            t = (0, _.V)('guild_powerups_system_message');
+            t = (0, f.V)('guild_powerups_system_message');
         if (e || !t) return;
         let n = this.findEligibleGuild();
         if (null != n) {

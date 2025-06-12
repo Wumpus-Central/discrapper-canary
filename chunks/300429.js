@@ -1,5 +1,5 @@
 n.d(t, {
-    S: () => _,
+    S: () => f,
     Z: () => A
 }),
     n(388685);
@@ -24,8 +24,8 @@ function d(e, t, n) {
         e
     );
 }
-let f = 100;
-var _ = (function (e) {
+let _ = 100;
+var f = (function (e) {
     return (e[(e.SendMessage = 0)] = 'SendMessage'), (e[(e.CreateThread = 1)] = 'CreateThread'), e;
 })({});
 let p = {
@@ -60,7 +60,7 @@ function m(e, t) {
 function g(e, t) {
     let n = l.Z.getChannel(e);
     if (null == n) return !1;
-    h(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * s.Z.Millis.SECOND + f);
+    h(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * s.Z.Millis.SECOND + _);
 }
 function E(e, t) {
     return 0 === t ? c.Z.can(u.Plq.MANAGE_CHANNELS, e) || c.Z.can(u.Plq.MANAGE_MESSAGES, e) : c.Z.can(u.Plq.MANAGE_THREADS, e);
@@ -82,7 +82,7 @@ function v(e) {
     let { channelId: t, slowmodeType: n, cooldownMs: r } = e,
         i = l.Z.getChannel(t);
     if (null == i) return !1;
-    h(i, n, 0 === r ? 0 : r + f);
+    h(i, n, 0 === r ? 0 : r + _);
 }
 function I(e) {
     let { channels: t } = e;

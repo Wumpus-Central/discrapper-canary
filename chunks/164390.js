@@ -12,7 +12,7 @@ function a() {
 function o(e, t, n, o) {
     void 0 === o && (o = a()), l(e, '', 0, [], void 0, 0, o);
     try {
-        s = 0 === i.length ? JSON.stringify(e, t, n) : JSON.stringify(e, f(t), n);
+        s = 0 === i.length ? JSON.stringify(e, t, n) : JSON.stringify(e, _(t), n);
     } catch (e) {
         return JSON.stringify('[unable to serialize, circular reference is too complex to analyze]');
     } finally {
@@ -35,10 +35,10 @@ function l(e, r, i, a, o, c, u) {
         if ((a.push(e), Array.isArray(e))) for (d = 0; d < e.length; d++) l(e[d], d, d, a, e, c, u);
         else {
             var d,
-                f = Object.keys(e);
-            for (d = 0; d < f.length; d++) {
-                var _ = f[d];
-                l(e[_], _, d, a, e, c, u);
+                _ = Object.keys(e);
+            for (d = 0; d < _.length; d++) {
+                var f = _[d];
+                l(e[f], f, d, a, e, c, u);
             }
         }
         a.pop();
@@ -52,7 +52,7 @@ function u(e, t, n, o) {
     var s,
         l = d(e, '', 0, [], void 0, 0, o) || e;
     try {
-        s = 0 === i.length ? JSON.stringify(l, t, n) : JSON.stringify(l, f(t), n);
+        s = 0 === i.length ? JSON.stringify(l, t, n) : JSON.stringify(l, _(t), n);
     } catch (e) {
         return JSON.stringify('[unable to serialize, circular reference is too complex to analyze]');
     } finally {
@@ -63,23 +63,23 @@ function u(e, t, n, o) {
     }
     return s;
 }
-function d(e, i, a, o, l, u, f) {
+function d(e, i, a, o, l, u, _) {
     if (((u += 1), 'object' == typeof e && null !== e)) {
-        for (_ = 0; _ < o.length; _++) if (o[_] === e) return void s(n, e, i, l);
+        for (f = 0; f < o.length; f++) if (o[f] === e) return void s(n, e, i, l);
         try {
             if ('function' == typeof e.toJSON) return;
         } catch (e) {
             return;
         }
-        if ((void 0 !== f.depthLimit && u > f.depthLimit) || (void 0 !== f.edgesLimit && a + 1 > f.edgesLimit)) return void s(t, e, i, l);
-        if ((o.push(e), Array.isArray(e))) for (_ = 0; _ < e.length; _++) d(e[_], _, _, o, e, u, f);
+        if ((void 0 !== _.depthLimit && u > _.depthLimit) || (void 0 !== _.edgesLimit && a + 1 > _.edgesLimit)) return void s(t, e, i, l);
+        if ((o.push(e), Array.isArray(e))) for (f = 0; f < e.length; f++) d(e[f], f, f, o, e, u, _);
         else {
-            var _,
+            var f,
                 p = {},
                 h = Object.keys(e).sort(c);
-            for (_ = 0; _ < h.length; _++) {
-                var m = h[_];
-                d(e[m], m, _, o, e, u, f), (p[m] = e[m]);
+            for (f = 0; f < h.length; f++) {
+                var m = h[f];
+                d(e[m], m, f, o, e, u, _), (p[m] = e[m]);
             }
             if (void 0 === l) return p;
             r.push([l, i, e]), (l[i] = p);
@@ -87,7 +87,7 @@ function d(e, i, a, o, l, u, f) {
         o.pop();
     }
 }
-function f(e) {
+function _(e) {
     return (
         (e =
             void 0 !== e

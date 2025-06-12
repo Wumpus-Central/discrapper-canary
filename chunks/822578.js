@@ -1,6 +1,6 @@
 a.d(e, {
-    R: () => I,
-    U0: () => N
+    R: () => u,
+    U0: () => A
 });
 var r = a(394798),
     _ = a(101284),
@@ -11,16 +11,16 @@ var r = a(394798),
     E = a(263449),
     s = a(574054),
     l = a(307854),
-    u = a(396234);
-function I(t, e, a, I, N, d) {
-    var A, f;
-    let { normalizeDepth: T = 3, normalizeMaxBreadth: p = 1000 } = t,
-        L = {
+    I = a(396234);
+function u(t, e, a, u, A, T) {
+    var N, d;
+    let { normalizeDepth: L = 3, normalizeMaxBreadth: p = 1000 } = t,
+        f = {
             ...e,
             event_id: e.event_id || a.event_id || (0, r.DM)(),
             timestamp: e.timestamp || (0, _.yW)()
         },
-        h = a.integrations || t.integrations.map((t) => t.name);
+        O = a.integrations || t.integrations.map((t) => t.name);
     (function (t, e) {
         let { environment: a, release: r, dist: _, maxValueLength: o = 250 } = e;
         'environment' in t || (t.environment = 'environment' in e ? a : c.J), void 0 === t.release && void 0 !== r && (t.release = r), void 0 === t.dist && void 0 !== _ && (t.dist = _), t.message && (t.message = (0, n.$G)(t.message, o));
@@ -28,10 +28,10 @@ function I(t, e, a, I, N, d) {
         i && i.value && (i.value = (0, n.$G)(i.value, o));
         let E = t.request;
         E && E.url && (E.url = (0, n.$G)(E.url, o));
-    })(L, t),
-        (A = L),
-        (f = h).length > 0 && ((A.sdk = A.sdk || {}), (A.sdk.integrations = [...(A.sdk.integrations || []), ...f])),
-        N && N.emit('applyFrameMetadata', e),
+    })(f, t),
+        (N = f),
+        (d = O).length > 0 && ((N.sdk = N.sdk || {}), (N.sdk.integrations = [...(N.sdk.integrations || []), ...d])),
+        A && A.emit('applyFrameMetadata', e),
         void 0 === e.type &&
             (function (t, e) {
                 let a,
@@ -59,27 +59,27 @@ function I(t, e, a, I, N, d) {
                         });
                     });
                 } catch (t) {}
-            })(L, t.stackParser);
-    let O = (function (t, e) {
+            })(f, t.stackParser);
+    let h = (function (t, e) {
         if (!e) return t;
         let a = t ? t.clone() : new l.s();
         return a.update(e), a;
-    })(I, a.captureContext);
-    a.mechanism && (0, r.EG)(L, a.mechanism);
-    let D = N ? N.getEventProcessors() : [],
-        g = (0, E.lW)().getScopeData();
-    if (d) {
-        let t = d.getScopeData();
-        (0, u.yo)(g, t);
+    })(u, a.captureContext);
+    a.mechanism && (0, r.EG)(f, a.mechanism);
+    let D = A ? A.getEventProcessors() : [],
+        P = (0, E.lW)().getScopeData();
+    if (T) {
+        let t = T.getScopeData();
+        (0, I.yo)(P, t);
     }
-    if (O) {
-        let t = O.getScopeData();
-        (0, u.yo)(g, t);
+    if (h) {
+        let t = h.getScopeData();
+        (0, I.yo)(P, t);
     }
-    let P = [...(a.attachments || []), ...g.attachments];
-    P.length && (a.attachments = P), (0, u.gi)(L, g);
-    let C = [...D, ...g.eventProcessors];
-    return (0, s.R)(C, L, a).then((t) =>
+    let g = [...(a.attachments || []), ...P.attachments];
+    g.length && (a.attachments = g), (0, I.gi)(f, P);
+    let C = [...D, ...P.eventProcessors];
+    return (0, s.R)(C, f, a).then((t) =>
         (t &&
             (function (t) {
                 let e = {};
@@ -101,7 +101,7 @@ function I(t, e, a, I, N, d) {
                     });
                 });
             })(t),
-        'number' == typeof T && T > 0)
+        'number' == typeof L && L > 0)
             ? (function (t, e, a) {
                   if (!t) return null;
                   let r = {
@@ -125,15 +125,15 @@ function I(t, e, a, I, N, d) {
                           }))),
                       r
                   );
-              })(t, T, p)
+              })(t, L, p)
             : t
     );
 }
 let R = new WeakMap();
-function N(t) {
+function A(t) {
     if (t) {
         var e;
-        return (e = t) instanceof l.s || 'function' == typeof e || Object.keys(t).some((t) => d.includes(t)) ? { captureContext: t } : t;
+        return (e = t) instanceof l.s || 'function' == typeof e || Object.keys(t).some((t) => T.includes(t)) ? { captureContext: t } : t;
     }
 }
-let d = ['user', 'level', 'extra', 'contexts', 'tags', 'fingerprint', 'requestSession', 'propagationContext'];
+let T = ['user', 'level', 'extra', 'contexts', 'tags', 'fingerprint', 'requestSession', 'propagationContext'];

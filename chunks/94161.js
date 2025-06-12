@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -8,9 +8,9 @@ var r = n(255367),
     c = n(28546),
     u = n(957825),
     d = n(302195);
-function f(e, t) {
+function _(e, t) {
     let { disabled: n, type: a } = e,
-        [f, _, p] = (0, c.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], s.X),
+        [_, f, p] = (0, c.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], s.X),
         h = i.useCallback(() => {
             (0, c.RO)(u.X1.EMOJI, a);
         }, [a]);
@@ -22,7 +22,7 @@ function f(e, t) {
               children: (0, r.jsx)(l.Z, {
                   className: d.emojiButton,
                   onClick: h,
-                  active: f === u.X1.EMOJI && _ === a,
+                  active: _ === u.X1.EMOJI && f === a,
                   'aria-controls': p,
                   tabIndex: 0,
                   focusProps: {
@@ -37,4 +37,4 @@ function f(e, t) {
               })
           });
 }
-let _ = i.memo(i.forwardRef(f));
+let f = i.memo(i.forwardRef(_));

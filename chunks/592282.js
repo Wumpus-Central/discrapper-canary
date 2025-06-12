@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(670596),
     u = n(743236),
     d = n(481060),
-    f = n(540059),
-    _ = n(448239),
+    _ = n(540059),
+    f = n(448239),
     p = n(247442),
     h = n(939350),
     m = n(906944);
@@ -69,7 +69,7 @@ function O(e) {
     let { color: t = 'default', label: n, checked: a, subtext: g, disabled: b, isFocused: O, menuItemProps: v, action: I, className: T, focusedClassName: S } = e,
         { onInteraction: A } = i.useContext(c.p),
         N = i.useRef(null),
-        C = (0, f.Q3)('MenuCheckboxItem');
+        C = (0, _.Q3)('MenuCheckboxItem');
     i.useEffect(() => {
         O && (0, u.F)(N);
     }, [O]);
@@ -124,7 +124,7 @@ function O(e) {
                                     background: m.checkbox,
                                     foreground: m.check
                                 })
-                              : (0, r.jsx)(_.Z, {
+                              : (0, r.jsx)(f.Z, {
                                     className: m.icon,
                                     foreground: m.__invalid_checkboxEmpty
                                 })

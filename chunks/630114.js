@@ -8,8 +8,8 @@ var r = n(392711),
     c = n(580005),
     u = n(496675),
     d = n(9156),
-    f = n(70956),
-    _ = n(630388),
+    _ = n(70956),
+    f = n(630388),
     p = n(823379),
     h = n(789662),
     m = n(981631),
@@ -74,7 +74,7 @@ function O() {
 }
 function v(e, t, n) {
     var r, i;
-    (e.flags = (0, _.mB)(null != (i = null != (r = e.flags) ? r : t.flags) ? i : 0, g.vc.UNREADS_ALL_MESSAGES, n)), (e.flags = (0, _.mB)(e.flags, g.vc.UNREADS_ONLY_MENTIONS, !n));
+    (e.flags = (0, f.mB)(null != (i = null != (r = e.flags) ? r : t.flags) ? i : 0, g.vc.UNREADS_ALL_MESSAGES, n)), (e.flags = (0, f.mB)(e.flags, g.vc.UNREADS_ONLY_MENTIONS, !n));
 }
 function I(e) {
     let t = [],
@@ -138,27 +138,27 @@ function S(e, t, n, r, a) {
                 return e + Number(null != (n = t.num_three_month_opens) ? n : 0);
             }, 0) * a.frecency.totalOpensPercent
         ),
-        f = [],
-        _ = [];
+        _ = [],
+        f = [];
     t.forEach((e) => {
         var t, n, r, i;
         let a = null != (t = l[e.id]) ? t : {};
-        Number(null != (n = a.num_year_opens) ? n : 0) > c || Number(null != (r = a.num_month_opens) ? r : 0) > u ? f.push(e) : Number(null != (i = a.num_three_month_opens) ? i : 0) > 2 && _.push(e);
+        Number(null != (n = a.num_year_opens) ? n : 0) > c || Number(null != (r = a.num_month_opens) ? r : 0) > u ? _.push(e) : Number(null != (i = a.num_three_month_opens) ? i : 0) > 2 && f.push(e);
     });
     let p = [];
     return (
-        f.length > 0 &&
-            p.push({
-                label: 'Setting '.concat(f.length, ' channels to white-dot since they are recent and frequently viewed'),
-                debug: f.map((e) => '\n    - #'.concat(e.name, ' (').concat(JSON.stringify(l[e.id]), ')')).join(''),
-                apply: (e, t) => {
-                    for (let n of f) R(e, t, n.id, !0);
-                }
-            }),
         _.length > 0 &&
             p.push({
-                label: 'NOT setting '.concat(_.length, ' channels to white-dot because they were only viewed a little.'),
-                debug: _.map((e) => '\n    - #'.concat(e.name, ' (').concat(JSON.stringify(l[e.id]), ')')).join('')
+                label: 'Setting '.concat(_.length, ' channels to white-dot since they are recent and frequently viewed'),
+                debug: _.map((e) => '\n    - #'.concat(e.name, ' (').concat(JSON.stringify(l[e.id]), ')')).join(''),
+                apply: (e, t) => {
+                    for (let n of _) R(e, t, n.id, !0);
+                }
+            }),
+        f.length > 0 &&
+            p.push({
+                label: 'NOT setting '.concat(f.length, ' channels to white-dot because they were only viewed a little.'),
+                debug: f.map((e) => '\n    - #'.concat(e.name, ' (').concat(JSON.stringify(l[e.id]), ')')).join('')
             }),
         p
     );
@@ -167,7 +167,7 @@ function A(e, t) {
     if (d.ZP.isMuted(e.id) && !d.ZP.isTemporarilyMuted(e.id)) return [];
     let n = [],
         r = new Set(t.map((e) => e.id)),
-        i = Date.now() - f.Z.Millis.DAYS_30,
+        i = Date.now() - _.Z.Millis.DAYS_30,
         o = c.Z.getFrequentlyWithoutFetchingLatest()
             .filter((e) => e instanceof a.Sf && r.has(e.id))
             .filter((e) => {
@@ -224,6 +224,6 @@ function C(e, t, n, r) {
 function R(e, t, n, r) {
     C(e, t, n, (e, t) => {
         var n, i;
-        (e.flags = (0, _.mB)(null != (i = null != (n = e.flags) ? n : t.flags) ? i : 0, g.ic.UNREADS_ALL_MESSAGES, r)), (e.flags = (0, _.mB)(e.flags, g.ic.UNREADS_ONLY_MENTIONS, !r));
+        (e.flags = (0, f.mB)(null != (i = null != (n = e.flags) ? n : t.flags) ? i : 0, g.ic.UNREADS_ALL_MESSAGES, r)), (e.flags = (0, f.mB)(e.flags, g.ic.UNREADS_ONLY_MENTIONS, !r));
     });
 }

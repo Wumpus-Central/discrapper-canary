@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(841784),
     u = n(833664),
     d = n(420660),
-    f = n(100527),
-    _ = n(906732),
+    _ = n(100527),
+    f = n(906732),
     p = n(379357),
     h = n(358696),
     m = n(649700),
@@ -31,14 +31,14 @@ var r = n(255367),
     D = n(336383),
     L = n(194811),
     x = n(373826),
-    k = n(668700),
-    M = n(262210),
+    M = n(668700),
+    k = n(262210),
     j = n(386019),
     U = n(881530),
     G = n(228168),
     B = n(981631),
-    F = n(701488),
-    V = n(388032),
+    V = n(701488),
+    F = n(388032),
     Z = n(227832);
 function H(e, t, n) {
     return (
@@ -75,7 +75,7 @@ function W(e) {
         J = (0, g.Dt)(),
         $ = (0, g.Dt)(),
         ee = i.useRef(null),
-        { analyticsLocations: et } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        { analyticsLocations: et } = (0, f.ZP)(_.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         { themeType: en } = (0, C.z)(),
         { interactionSource: er, interactionSourceId: ei } = (0, S.Xo)(),
         ea = (0, m.Z)({
@@ -96,7 +96,7 @@ function W(e) {
         el = (0, v.Z)(H),
         ec = null != el.text && '' !== el.text,
         { largeImage: eu, smallImage: ed } = (0, p.FO)(H, W),
-        ef = (0, U.Z)({
+        e_ = (0, U.Z)({
             location: 'UserProfileActivityCardWithInteractionToolbar',
             user: n,
             currentUser: a,
@@ -105,10 +105,10 @@ function W(e) {
             entry: ea,
             onClose: Q
         }),
-        e_ = () => {
+        ef = () => {
             let e = (0, l.Z)(H) ? 'crunchyroll' : 'default',
                 t = en === G.lY.MODAL_V2 ? h.J.SIZE_100 : h.J.SIZE_60;
-            return null == ef
+            return null == e_
                 ? (0, r.jsx)(h.E, {
                       image: eu,
                       smallImage: ed,
@@ -123,7 +123,7 @@ function W(e) {
                       className: Z.clickableImage,
                       aspectRatio: e,
                       onClick: (e) => {
-                          e.stopPropagation(), eo({ action: 'PRESS_IMAGE' }), ef(e);
+                          e.stopPropagation(), eo({ action: 'PRESS_IMAGE' }), e_(e);
                       }
                   });
         },
@@ -161,7 +161,7 @@ function W(e) {
             if ((0, d.Z)(H) && null != K)
                 return (0, r.jsx)(x.Z, {
                     variant: 'text-xs/normal',
-                    text: V.intl.formatToPlainString(V.t['hq/Qzc'], { guildName: K.name }),
+                    text: F.intl.formatToPlainString(F.t['hq/Qzc'], { guildName: K.name }),
                     onClick: () => {
                         (0, E.X)(K.id), eo({ action: 'OPEN_VOICE_GUILD' }), null == Q || Q();
                     }
@@ -188,7 +188,7 @@ function W(e) {
             if (H.type === B.IIU.WATCHING) return null;
             if ((0, u.Z)(H)) return eg();
             if ((0, b.dS)(H) && (null == (e = H.party) ? void 0 : e.size) != null && (null == (t = H.party) ? void 0 : t.size.length) >= 2) {
-                let e = V.intl.formatToPlainString(V.t['JC/3x8'], {
+                let e = F.intl.formatToPlainString(F.t['JC/3x8'], {
                     numSpeakers: null == (i = H.party) ? void 0 : i.size[0],
                     numListeners: (null == (a = H.party) ? void 0 : a.size[1]) - (null == (o = H.party) ? void 0 : o.size[0])
                 });
@@ -204,7 +204,7 @@ function W(e) {
         },
         eg = () => {
             var e, t, n, i;
-            return (null == (e = H.party) ? void 0 : e.size) == null && H.application_id === F.Zc
+            return (null == (e = H.party) ? void 0 : e.size) == null && H.application_id === V.Zc
                 ? (0, r.jsxs)('div', {
                       className: Z.gameState,
                       children: [
@@ -214,7 +214,7 @@ function W(e) {
                           }),
                           (0, r.jsx)(x.Z, {
                               variant: 'text-xs/normal',
-                              text: V.intl.formatToPlainString(V.t['u//9Bw'], {
+                              text: F.intl.formatToPlainString(F.t['u//9Bw'], {
                                   count: '0',
                                   max: null != (i = null == W ? void 0 : W.getMaxParticipants()) ? i : 0
                               })
@@ -233,8 +233,8 @@ function W(e) {
                                 variant: 'text-xs/normal',
                                 text:
                                     0 === H.party.size[1]
-                                        ? V.intl.formatToPlainString(V.t.IM4J4e, { count: H.party.size[0] })
-                                        : V.intl.formatToPlainString(V.t['u//9Bw'], {
+                                        ? F.intl.formatToPlainString(F.t.IM4J4e, { count: H.party.size[0] })
+                                        : F.intl.formatToPlainString(F.t['u//9Bw'], {
                                               count: H.party.size[0],
                                               max: H.party.size[1]
                                           })
@@ -251,27 +251,27 @@ function W(e) {
         eE = () => {
             if (!(0, T.Z)(H)) return null;
             let { start: e, end: t } = H.timestamps;
-            return (0, r.jsx)(M.Z, {
+            return (0, r.jsx)(k.Z, {
                 start: e,
                 end: t
             });
         },
         eb = () =>
-            null == ef
+            null == e_
                 ? (0, r.jsxs)('div', {
                       children: [ep(), eh(), em()]
                   })
                 : (0, r.jsxs)(s.P3F, {
                       className: Z.clickableText,
                       onClick: (e) => {
-                          e.stopPropagation(), eo({ action: 'PRESS_TEXT' }), ef(e);
+                          e.stopPropagation(), eo({ action: 'PRESS_TEXT' }), e_(e);
                       },
                       children: [ep(), eh(), em()]
                   }),
         ey = () =>
             null == K || null == z
                 ? null
-                : (0, r.jsx)(k.Z, {
+                : (0, r.jsx)(M.Z, {
                       user: n,
                       guild: K,
                       channel: z,
@@ -293,7 +293,7 @@ function W(e) {
     if (null === en) return null;
     let ev = null != (t = H.application_id) ? t : H.name,
         eI = er === G.n_.ACTIVITY && ei === ev;
-    return (0, r.jsx)(_.Gt, {
+    return (0, r.jsx)(f.Gt, {
         value: et,
         children: (0, r.jsx)(R.Z, {
             targetElementRef: ee,
@@ -340,7 +340,7 @@ function W(e) {
                                         (0, r.jsxs)('div', {
                                             className: Z.content,
                                             children: [
-                                                !n.bot && e_(),
+                                                !n.bot && ef(),
                                                 (0, r.jsxs)('div', {
                                                     className: Z.details,
                                                     children: [

@@ -12,18 +12,18 @@ let s = [100, 300],
             let a,
                 E = (0, _.Y)(),
                 l = (0, n.I)('FID'),
-                u = (t) => {
+                I = (t) => {
                     t.startTime < E.firstHiddenTime && ((l.value = t.processingStart - t.startTime), l.entries.push(t), a(!0));
                 },
-                I = (t) => {
-                    t.forEach(u);
+                u = (t) => {
+                    t.forEach(I);
                 },
-                R = (0, o.N)('first-input', I);
+                R = (0, o.N)('first-input', u);
             (a = (0, r._)(t, l, s, e.reportAllChanges)),
                 R &&
                     (0, i.u)(
                         (0, c.R)(() => {
-                            I(R.takeRecords()), R.disconnect();
+                            u(R.takeRecords()), R.disconnect();
                         })
                     );
         });

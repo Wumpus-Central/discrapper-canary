@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(147913),
     i = n(430824),
     a = n(70956),
@@ -20,7 +20,7 @@ function u(e, t, n) {
     );
 }
 let d = 0;
-class f extends r.Z {
+class _ extends r.Z {
     constructor(...e) {
         super(...e),
             u(this, 'actions', {
@@ -55,4 +55,4 @@ class f extends r.Z {
             });
     }
 }
-let _ = new f();
+let f = new _();

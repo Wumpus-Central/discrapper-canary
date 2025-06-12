@@ -20,8 +20,8 @@ var r = n(255367),
     x = n(471445),
     v = n(111028),
     O = n(601964),
-    C = n(592125),
-    j = n(430824),
+    j = n(592125),
+    C = n(430824),
     S = n(496675),
     I = n(594174),
     N = n(626135),
@@ -133,7 +133,7 @@ function L(e) {
                 invite_inviter_id: null == (e = a.inviter) ? void 0 : e.id
             });
         }, [null == (t = a.inviter) ? void 0 : t.id, b.id]),
-        x = (0, c.e7)([j.Z], () => (null != a.guild ? j.Z.getGuild(a.guild.id) : null), [a]),
+        x = (0, c.e7)([C.Z], () => (null != a.guild ? C.Z.getGuild(a.guild.id) : null), [a]),
         v = (0, y.Z)([b.id])[0],
         T = (0, c.e7)([p.ZP], () => {
             var e;
@@ -146,7 +146,7 @@ function L(e) {
                 return b.id === t;
             });
         }),
-        k = C.Z.getChannel(null == (n = a.channel) ? void 0 : n.id),
+        k = j.Z.getChannel(null == (n = a.channel) ? void 0 : n.id),
         D = (0, c.e7)([S.Z], () => null != k && S.Z.can(A.Plq.USE_EMBEDDED_ACTIVITIES, k), [k]),
         { analyticsLocations: L } = (0, f.ZP)(m.Z.INVITE_EMBED),
         U = (0, c.Wu)(
@@ -208,12 +208,12 @@ function L(e) {
 function M(e) {
     var t, n;
     let { app: l, invite: a, activityUsers: o, isMember: s, channel: c, guild: u, members: d, membersOnline: p, isActivityActive: m, submitting: f, isDisabled: y, tooltip: x, handleAcceptInvite: v, onView: O } = e,
-        C = new URL(a.code, 'https://discord.gg').toString(),
-        { bot: j, icon: S } = l,
+        j = new URL(a.code, 'https://discord.gg').toString(),
+        { bot: C, icon: S } = l,
         I = T.ZP.getApplicationIconURL({
             id: l.id,
             icon: S,
-            bot: j
+            bot: C
         }),
         N = (0, E.z)(l),
         P = (0, b.E)(l),
@@ -261,7 +261,7 @@ function M(e) {
                 header: l.name,
                 title: Z.intl.string(Z.t['7vb6n5']),
                 iconSrc: I,
-                embedUrl: C
+                embedUrl: j
             },
             P
         )),

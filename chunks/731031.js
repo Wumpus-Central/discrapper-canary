@@ -8,7 +8,7 @@ var r = n(358221),
     c = n(442741),
     u = n(150457),
     d = n(981631);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,7 +32,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -44,12 +44,12 @@ let p = {
         if (null == t || t.state === d.jm8.PAUSED || 0 === a.Z.getViewerIds(t).length) return null;
         let n = null == (e = o.Z.getRTCConnection((0, i.V9)(t))) ? void 0 : e.getMediaEngineConnectionId();
         if (null == n) return null;
-        let f = r.Z.getParticipant(t.channelId, (0, i.V9)(t));
-        if (null == f) return null;
+        let _ = r.Z.getParticipant(t.channelId, (0, i.V9)(t));
+        if (null == _) return null;
         let p = (0, u.hj)(n, t.ownerId);
         if (null == p) return null;
-        let h = (0, s.Wc)(f);
-        return null == h ? null : p.short.frameRate < (0, u.dj)(h.maxFrameRate) || p.long.frameRate < (0, u.dj)(h.maxFrameRate) ? [_({ type: l.u.STREAM_SEND_LOW_FPS }, (0, c.rT)((0, i.V9)(t)))] : null;
+        let h = (0, s.Wc)(_);
+        return null == h ? null : p.short.frameRate < (0, u.dj)(h.maxFrameRate) || p.long.frameRate < (0, u.dj)(h.maxFrameRate) ? [f({ type: l.u.STREAM_SEND_LOW_FPS }, (0, c.rT)((0, i.V9)(t)))] : null;
     },
     makeErrorContextKey: (e) => ''.concat(e.streamKey, ':').concat(e.mediaSessionId)
 };

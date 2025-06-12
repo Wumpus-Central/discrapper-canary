@@ -18,17 +18,17 @@ function i(t) {
         });
     let [a, r, o = '', i = '', E = '', s = ''] = e.slice(1),
         l = '',
-        u = s,
-        I = u.split('/');
-    if ((I.length > 1 && ((l = I.slice(0, -1).join('/')), (u = I.pop())), u)) {
-        let t = u.match(/^\d+/);
-        t && (u = t[0]);
+        I = s,
+        u = I.split('/');
+    if ((u.length > 1 && ((l = u.slice(0, -1).join('/')), (I = u.pop())), I)) {
+        let t = I.match(/^\d+/);
+        t && (I = t[0]);
     }
     return c({
         host: i,
         pass: o,
         path: l,
-        projectId: u,
+        projectId: I,
         port: E,
         protocol: a,
         publicKey: r

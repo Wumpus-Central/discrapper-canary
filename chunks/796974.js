@@ -26,7 +26,7 @@ function d(e) {
         scrollTo: null
     };
 }
-function f(e) {
+function _(e) {
     let { channelId: t, scrollTop: n, scrollHeight: r, offsetHeight: i } = e,
         o = l[t];
     if (null == n || null == r || null == i) {
@@ -43,7 +43,7 @@ function f(e) {
         l[t] = e;
     }
 }
-function _(e) {
+function f(e) {
     let { scrollTop: t } = e;
     u.scrollTop = t;
 }
@@ -86,8 +86,8 @@ class g extends (r = i.ZP.Store) {
 }
 s(g, 'displayName', 'DimensionStore');
 let E = new g(o.Z, {
-    UPDATE_CHANNEL_DIMENSIONS: f,
+    UPDATE_CHANNEL_DIMENSIONS: _,
     UPDATE_CHANNEL_LIST_DIMENSIONS: m,
-    UPDATE_GUILD_LIST_DIMENSIONS: _,
+    UPDATE_GUILD_LIST_DIMENSIONS: f,
     CALL_CREATE: p
 });

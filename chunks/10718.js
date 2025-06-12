@@ -19,8 +19,8 @@ var r = n(73800),
     c = n(367790),
     u = n(895924),
     d = n(581364),
-    f = n(689079),
-    _ = n(981631);
+    _ = n(689079),
+    f = n(981631);
 function p(e, t, n) {
     return (
         t in e
@@ -131,10 +131,10 @@ function b(e, t) {
 }
 function y(e, t, n) {
     var r, i, a, o, s, c, u, d;
-    let f = l.ZP.getUserState(),
-        _ = l.ZP.getContextState(e),
+    let _ = l.ZP.getUserState(),
+        f = l.ZP.getContextState(e),
         p = l.ZP.getApplicationState(n),
-        h = null != (d = null != (u = null == (i = f.result) || null == (r = i.sections) ? void 0 : r[n]) ? u : null == (o = _.result) || null == (a = o.sections) ? void 0 : a[n]) ? d : null == (c = p.result) || null == (s = c.sections) ? void 0 : s[n];
+        h = null != (d = null != (u = null == (i = _.result) || null == (r = i.sections) ? void 0 : r[n]) ? u : null == (o = f.result) || null == (a = o.sections) ? void 0 : a[n]) ? d : null == (c = p.result) || null == (s = c.sections) ? void 0 : s[n];
     return null == h ? void 0 : h.descriptor;
 }
 function O(e, t, n) {
@@ -182,7 +182,7 @@ function I(e) {
             filterSection: (e) => {
                 O(e);
             },
-            scrollDown: _.dG4
+            scrollDown: f.dG4
         };
         if (null != y) {
             let t = E.find((e) => e.section.id === y);
@@ -199,7 +199,7 @@ function I(e) {
                     ...E.slice(1)
                 ];
             else {
-                let t = s.Tm[f.bi.BUILT_IN];
+                let t = s.Tm[_.bi.BUILT_IN];
                 (e.activeSections = [t]),
                     (e.commandsByActiveSection = [
                         {
@@ -219,7 +219,7 @@ function T(e, t, n) {
         c = C(o && null != (r = n.placeholderCount) ? r : 0, t.commandTypes[0]);
     return {
         commands: o ? [...a, ...c] : a,
-        sections: o && 0 === i.length ? [s.Tm[f.bi.BUILT_IN]] : i
+        sections: o && 0 === i.length ? [s.Tm[_.bi.BUILT_IN]] : i
     };
 }
 function S(e, t) {
@@ -248,8 +248,8 @@ function A(e, t, n) {
         a = (0, l.em)(e, !0, !0);
     return r.useMemo(() => {
         var e, r, s, l, c, u;
-        let f = null != (c = null == (r = i.result) || null == (e = r.sections) ? void 0 : e[t]) ? c : null == (s = a.result) ? void 0 : s.sections[t],
-            _ = Object.values(null != (u = null == f ? void 0 : f.commands) ? u : {})
+        let _ = null != (c = null == (r = i.result) || null == (e = r.sections) ? void 0 : e[t]) ? c : null == (s = a.result) ? void 0 : s.sections[t],
+            f = Object.values(null != (u = null == _ ? void 0 : _.commands) ? u : {})
                 .map((e) =>
                     null == e.rootCommand
                         ? e
@@ -261,8 +261,8 @@ function A(e, t, n) {
                 )
                 .reduce((e, t) => ((e[t.id] = t), e), {});
         return {
-            application: null == f || null == (l = f.descriptor) ? void 0 : l.application,
-            commands: n.map((e) => _[e]).filter(o.lm)
+            application: null == _ || null == (l = _.descriptor) ? void 0 : l.application,
+            commands: n.map((e) => f[e]).filter(o.lm)
         };
     }, [null == i ? void 0 : i.result, null == a ? void 0 : a.result, t, n]);
 }

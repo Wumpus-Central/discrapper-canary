@@ -50,7 +50,7 @@ class I extends (r = d.ZP.Store) {
     }
     showNotice() {
         let e = this.getTemplate();
-        return null != e && null != this.name && '' !== this.name && (this.name.trim() !== e.name || this.description.trim() !== e.description);
+        return null != e && null != this.name && (this.name.trim() !== e.name || this.description.trim() !== e.description);
     }
     constructor(...e) {
         super(...e),
@@ -89,7 +89,8 @@ function S() {
     return (0, i.jsx)(f.Z, {
         submitting: e,
         onReset: E.reset,
-        onSave: n
+        onSave: n,
+        disabled: '' === E.name.trim()
     });
 }
 function T() {

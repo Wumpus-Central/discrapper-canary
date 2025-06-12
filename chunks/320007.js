@@ -22,8 +22,8 @@ function b(e) {
             hasClips: x,
             hasNewClips: v,
             lastClipsSession: O,
-            remindersEnabled: C,
-            hasAnyClipAnimations: j
+            remindersEnabled: j,
+            hasAnyClipAnimations: C
         } = (0, l.cj)([p.Z], () => ({
             hasClips: p.Z.hasClips(),
             hasNewClips: p.Z.getNewClipIds().length > 0,
@@ -73,12 +73,12 @@ function b(e) {
             { modalKey: g.Qr }
         );
     }
-    return (i.useEffect(() => (j ? P() : A(), () => A()), [j, P, A]), y && E && x)
+    return (i.useEffect(() => (C ? P() : A(), () => A()), [C, P, A]), y && E && x)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   null != I &&
                       t &&
-                      C &&
+                      j &&
                       S &&
                       !(0, a.$sL)() &&
                       !T &&

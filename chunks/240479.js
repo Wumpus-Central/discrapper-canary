@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(749210),
     u = n(231053),
     d = n(183023),
-    f = n(524444),
-    _ = n(208049),
+    _ = n(524444),
+    f = n(208049),
     p = n(697426),
     h = n(294206),
     m = n(430824),
@@ -61,7 +61,7 @@ function A(e) {
     i.useEffect(() => {
         P ||
             (D(!0),
-            (0, _.xU)(t.soundId, t.guildId)
+            (0, f.xU)(t.soundId, t.guildId)
                 .then((e) => {
                     C(e);
                 })
@@ -70,15 +70,15 @@ function A(e) {
                 }));
     }, [g, P, t.guildId, t.soundId]);
     let { buttonType: L, description: x } = (0, b.Z)(t, n, A, N),
-        k = L === b.y.JOIN_GUILD,
-        M = !y && w,
+        M = L === b.y.JOIN_GUILD,
+        k = !y && w,
         j = i.useMemo(() => (A ? u.JO.createFromGuildRecord(O) : null != N ? u.JO.createFromDiscoverableGuild(N) : void 0), [O, A, N]);
-    return M
-        ? (0, r.jsx)(f.SE, {})
+    return k
+        ? (0, r.jsx)(_.SE, {})
         : (0, r.jsxs)('div', {
               className: T.infoContainer,
               children: [
-                  (0, r.jsxs)(f.W_, {
+                  (0, r.jsxs)(_.W_, {
                       children: [
                           (0, r.jsxs)('div', {
                               className: T.infoExpandedSoundContainer,
@@ -111,7 +111,7 @@ function A(e) {
                                           children: (0, r.jsx)(d.Oe, {
                                               expressionSourceGuild: j,
                                               hasJoinedExpressionSourceGuild: A,
-                                              isDisplayingJoinGuildButtonInPopout: k
+                                              isDisplayingJoinGuildButtonInPopout: M
                                           })
                                       }),
                                       (0, r.jsx)(S, {

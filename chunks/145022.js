@@ -11,16 +11,18 @@ function c(e, t, n) {
             valid: !1,
             reason: l.intl.string(l.t.d34xi4)
         };
-    let { releaseChannel: r, expiresAt: c, validForUserIds: u, allowedVersions: d, targetBuildOverride: f } = e,
-        _ = Object.keys(f);
-    if (0 === i().intersection(_, t).length)
+    let { releaseChannel: r, expiresAt: c, validForUserIds: u, allowedVersions: d, targetBuildOverride: _ } = e,
+        f = Object.keys(_);
+    if (0 === i().intersection(f, t).length)
         return {
             valid: !1,
             reason: l.intl.formatToPlainString(l.t.wySUzs, {
-                requestedTargets: _.map((e) => {
-                    var t;
-                    return null != (t = o.o0[e]) ? t : 'unknown';
-                }).join(', ')
+                requestedTargets: f
+                    .map((e) => {
+                        var t;
+                        return null != (t = o.o0[e]) ? t : 'unknown';
+                    })
+                    .join(', ')
             })
         };
     if (null != r && r !== window.GLOBAL_ENV.RELEASE_CHANNEL) {

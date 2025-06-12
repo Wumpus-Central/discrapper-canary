@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(906732),
     u = n(933557),
     d = n(430824),
-    f = n(957575),
-    _ = n(323038),
+    _ = n(957575),
+    f = n(323038),
     p = n(960870),
     h = n(139793),
     m = n(652853),
@@ -91,10 +91,10 @@ function w(e) {
             userId: t.id,
             onAction: L
         }),
-        k = (0, o.e7)([d.Z], () => d.Z.getGuild(i.guild_id)),
-        M = (0, _.Z)(i),
+        M = (0, o.e7)([d.Z], () => d.Z.getGuild(i.guild_id)),
+        k = (0, f.Z)(i),
         j = (0, u.ZP)(i),
-        { channelStatusEnabled: U } = (0, f.D)({ location: 'UserProfileVoiceActivityCard' }),
+        { channelStatusEnabled: U } = (0, _.D)({ location: 'UserProfileVoiceActivityCard' }),
         G = () => {
             if (t.id !== n.id) return null;
             let e = i.isDM() || i.isGroupDM() ? S.intl.string(S.t['+DsWbW']) : S.intl.string(S.t.xOVEjY);
@@ -112,7 +112,7 @@ function w(e) {
                     onClose: R
                 })
             }),
-        F = i.isDM() || i.isGroupDM() ? S.intl.string(S.t['9FaEzs']) : i.isGuildStageVoice() ? S.intl.string(S.t.QygGCA) : S.intl.string(S.t.msxteH);
+        V = i.isDM() || i.isGroupDM() ? S.intl.string(S.t['9FaEzs']) : i.isGuildStageVoice() ? S.intl.string(S.t.QygGCA) : S.intl.string(S.t.msxteH);
     return (0, r.jsx)(c.Gt, {
         value: D,
         children: (0, r.jsxs)(g.Z, {
@@ -120,10 +120,10 @@ function w(e) {
             className: a()(A.card, N),
             onAction: L,
             onClose: R,
-            'aria-label': ''.concat(F, ', ').concat(j),
+            'aria-label': ''.concat(V, ', ').concat(j),
             children: [
                 (0, r.jsx)(E.Z, {
-                    text: F,
+                    text: V,
                     tags: G(),
                     contextMenu: (0, r.jsx)(I.Z, {
                         display: 'voice',
@@ -137,7 +137,7 @@ function w(e) {
                         className: A.content,
                         children: [
                             (0, r.jsx)(y.Z, {
-                                users: M,
+                                users: k,
                                 channel: i
                             }),
                             (0, r.jsxs)('div', {
@@ -145,7 +145,7 @@ function w(e) {
                                 children: [
                                     (0, r.jsx)(b.Z, {
                                         channel: i,
-                                        guild: k,
+                                        guild: M,
                                         onAction: L,
                                         onClose: R
                                     }),

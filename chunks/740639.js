@@ -1,4 +1,4 @@
-n.d(t, { z: () => _ });
+n.d(t, { z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(692547),
@@ -60,14 +60,14 @@ function d(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -76,14 +76,14 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = (e) => {
+let f = (e) => {
     var t,
         n,
-        { size: s = 'md', width: c, height: f, color: _ = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = '' } = e,
+        { size: s = 'md', width: c, height: _, color: f = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = '' } = e,
         h = d(e, ['size', 'width', 'height', 'color', 'colorClass']);
     let m = (0, o.m)(s),
         g = null != (t = null == m ? void 0 : m.width) ? t : c,
-        E = null != (n = null == m ? void 0 : m.height) ? n : f;
+        E = null != (n = null == m ? void 0 : m.height) ? n : _;
     return (0, r.jsxs)(
         'svg',
         u(l({}, (0, a.Z)(h)), {
@@ -95,12 +95,12 @@ let _ = (e) => {
             children: [
                 (0, r.jsx)('path', {
                     d: 'M14.5 8a3 3 0 1 0-2.7-4.3c-.2.4.06.86.44 1.12a5 5 0 0 1 2.14 3.08c.01.06.06.1.12.1ZM20 15a1 1 0 1 0-2 0v5.59l-1.08-1.08-1.21-1.22a1 1 0 0 0-1.42 1.42l1.85 1.84 2.15 2.16a1 1 0 0 0 1.42 0l4-4a1 1 0 0 0-1.42-1.42L20 20.6V15ZM19 12c.4 0 .94-.68.65-.95a7.47 7.47 0 0 0-4.15-1.98c-.55-.08-.99.38-1.1.92-.06.3-.15.6-.26.87-.23.58-.05 1.3.47 1.63.39.25.75.52 1.1.82.26.23.7.15.9-.14A3 3 0 0 1 19 12Z',
-                    fill: 'string' == typeof _ ? _ : _.css,
+                    fill: 'string' == typeof f ? f : f.css,
                     className: p
                 }),
                 (0, r.jsx)('path', {
                     d: 'M14.29 16.09c.44-.11.74-.67.42-.99A7.5 7.5 0 0 0 2 20.5c-.01.83.66 1.5 1.49 1.5a.2.2 0 0 0 .2-.16c.2-.96.56-1.87.88-2.54.1-.23.42-.15.42.1v2.1c0 .28.22.5.5.5h8c.1 0 .13-.13.06-.2l-.68-.68a3 3 0 0 1 1.4-5.03ZM9.5 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z',
-                    fill: 'string' == typeof _ ? _ : _.css,
+                    fill: 'string' == typeof f ? f : f.css,
                     className: p
                 })
             ]

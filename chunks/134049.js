@@ -1,6 +1,6 @@
 n.d(t, {
     i: () => d,
-    l: () => f
+    l: () => _
 }),
     n(388685);
 var r = n(94171),
@@ -28,6 +28,6 @@ function d(e) {
     let [t, n] = (0, i.s)(u, (e) => [e.notificationDismissedInGuilds, e.dismissNotification], r.X);
     return [!t.has(e), n];
 }
-function f(e) {
+function _(e) {
     return u.getState().resetNotification(e);
 }

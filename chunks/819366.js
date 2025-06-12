@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(906732),
     u = n(797610),
     d = n(927723),
-    f = n(124072),
-    _ = n(670188),
+    _ = n(124072),
+    f = n(670188),
     p = n(592125),
     h = n(271383),
     m = n(430824),
@@ -85,7 +85,7 @@ function A(e) {
             },
             [t]
         );
-    return (0, r.jsx)(f.Z, {
+    return (0, r.jsx)(_.Z, {
         className: a,
         onClick: l,
         onContextMenu: c,
@@ -99,7 +99,7 @@ function N(e) {
         D = (0, o.e7)([E.default], () => E.default.getUser(d)),
         L = (0, o.e7)([p.Z], () => p.Z.getChannel(v)),
         x = null != L ? L.getGuildId() : null,
-        k =
+        M =
             C || null == D || null == x || null == v
                 ? void 0
                 : (e) => {
@@ -118,7 +118,7 @@ function N(e) {
                                   );
                           });
                   },
-        M = y.ZP.useName(D),
+        k = y.ZP.useName(D),
         j = (0, o.e7)([p.Z, h.ZP, g.Z], () => b.ZP.getNickname(x, v, D)),
         U = m.Z.getGuild(x),
         G = (0, u.Ib)(U, L) && d === O.fL ? O.jM : null;
@@ -130,18 +130,18 @@ function N(e) {
         });
     let B = (e) =>
         (0, r.jsx)(
-            f.Z,
+            _.Z,
             S(
                 I(
                     {
                         ref: P,
                         className: t,
-                        onContextMenu: k,
+                        onContextMenu: M,
                         color: G
                     },
                     e
                 ),
-                { children: '@'.concat(null != j ? j : M) }
+                { children: '@'.concat(null != j ? j : k) }
             )
         );
     return C
@@ -151,7 +151,7 @@ function N(e) {
           })
         : (0, r.jsx)(c.Gt, {
               value: w,
-              children: (0, r.jsx)(_.Z, {
+              children: (0, r.jsx)(f.Z, {
                   targetElementRef: P,
                   user: D,
                   guildId: null != x ? x : void 0,

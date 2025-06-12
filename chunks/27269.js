@@ -44,7 +44,7 @@ async function c(t) {
     } catch (e) {
         throw Error(`Error when loading integration: ${t}`);
     }
-    let u = a[t];
-    if ('function' != typeof u) throw Error(`Could not load integration: ${t}`);
-    return u;
+    let I = a[t];
+    if ('function' != typeof I) throw Error(`Could not load integration: ${t}`);
+    return I;
 }

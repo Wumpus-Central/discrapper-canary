@@ -5,7 +5,7 @@ var i = n(120356),
     l = n.n(i),
     a = n(990547),
     o = n(442837),
-    s = n(844477),
+    s = n(680018),
     c = n(481060),
     u = n(26151),
     d = n(213609),
@@ -115,7 +115,7 @@ function j(e) {
     return a
         ? (0, r.jsx)(s.z, {
               variant: i ? 'destructive-secondary' : 'secondary',
-              size: 'xs',
+              size: 'sm',
               text: o,
               iconPosition: 'start',
               icon: c.gj8,

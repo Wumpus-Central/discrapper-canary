@@ -8,8 +8,8 @@ var r = n(911969),
     c = n(695346),
     u = n(594174),
     d = n(5192),
-    f = n(417574),
-    _ = n(877565),
+    _ = n(417574),
+    f = n(877565),
     p = n(590921),
     h = n(126226),
     m = n(388032);
@@ -66,7 +66,7 @@ function y(e, t) {
     );
 }
 function O(e) {
-    let t = f.X.exec(e);
+    let t = _.X.exec(e);
     if (null != t) {
         let n = t[1],
             r = u.default.getUser(n);
@@ -93,7 +93,7 @@ let v = y(E({}, h.Z), {
         let u = O(n);
         if (null == u) return h.K;
         let d = (0, s.hV)(e, u.cleanedQuery),
-            { commands: f, sections: _ } = i.JT(
+            { commands: _, sections: f } = i.JT(
                 {
                     channel: e,
                     type: 'channel'
@@ -109,8 +109,8 @@ let v = y(E({}, h.Z), {
                     allowFetch: l
                 }
             );
-        if (null == f) return h.K;
-        let m = f.filter((e) => e.section.botId === u.user.id);
+        if (null == _) return h.K;
+        let m = _.filter((e) => e.section.botId === u.user.id);
         if (d.hasSpaceTerminator) {
             let e = d.text.trim(),
                 t = e + ' ';
@@ -122,7 +122,7 @@ let v = y(E({}, h.Z), {
                   results: {
                       entries: m.slice(0, p.AQ).map((e) => ({
                           command: e,
-                          section: null == _ ? void 0 : _.find((t) => t.id === e.applicationId)
+                          section: null == f ? void 0 : f.find((t) => t.id === e.applicationId)
                       }))
                   }
               };
@@ -138,7 +138,7 @@ let v = y(E({}, h.Z), {
             onHover: s,
             onClick: c
         } = e;
-        return (0, _.HI)({
+        return (0, f.HI)({
             query: a,
             selectedIndex: n,
             autocompletes: t,
@@ -162,7 +162,7 @@ let v = y(E({}, h.Z), {
                 let t = O(e);
                 if ('mention' !== t.type) return e;
                 let n = d.ZP.getName(null == r ? void 0 : r.id, i.id, t.user);
-                return e.replace(f.X, '@'.concat(n));
+                return e.replace(_.X, '@'.concat(n));
             },
             key: 'commands'
         });

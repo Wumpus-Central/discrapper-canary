@@ -3,7 +3,7 @@ n.d(t, {
     Fm: () => d,
     Lc: () => u,
     U4: () => c,
-    hn: () => f,
+    hn: () => _,
     zz: () => o
 }),
     n(953529),
@@ -133,12 +133,12 @@ function d(e) {
             r.send();
     });
 }
-function f(e) {
+function _(e) {
     var t, n, r, i, o, s;
     let l,
-        { uri: c, i: u, overrideFilename: d, overrideType: f } = e,
-        _ = c.split('/'),
-        p = _[_.length - 1];
+        { uri: c, i: u, overrideFilename: d, overrideType: _ } = e,
+        f = c.split('/'),
+        p = f[f.length - 1];
     p = null != (r = null == (n = p.split('?')) || null == (t = n[0]) ? void 0 : t.toLowerCase()) ? r : '';
     let h = a.find((e) => e.reName.test(p));
     if ((null == h && null != d && (h = a.find((e) => e.reName.test(d))), null != h && null != d)) {
@@ -149,8 +149,8 @@ function f(e) {
     return {
         uri: c,
         filename: l,
-        type: null != (i = null != f ? f : null == h ? void 0 : h.type) ? i : 'unknown',
-        isVideo: -1 !== (null != (o = null != f ? f : null == h ? void 0 : h.name(u)) ? o : '').indexOf('video'),
-        isImage: -1 !== (null != (s = null != f ? f : null == h ? void 0 : h.name(u)) ? s : '').indexOf('image')
+        type: null != (i = null != _ ? _ : null == h ? void 0 : h.type) ? i : 'unknown',
+        isVideo: -1 !== (null != (o = null != _ ? _ : null == h ? void 0 : h.name(u)) ? o : '').indexOf('video'),
+        isImage: -1 !== (null != (s = null != _ ? _ : null == h ? void 0 : h.name(u)) ? s : '').indexOf('image')
     };
 }

@@ -8,8 +8,8 @@ var r,
     c = n(856472),
     u = n(633302),
     d = n(41776),
-    f = n(93093),
-    _ = n(430824),
+    _ = n(93093),
+    f = n(430824),
     p = n(70956),
     h = n(373228),
     m = n(378233);
@@ -92,8 +92,8 @@ let O = 2,
 function D(e) {
     let { stickers: t } = e;
     for (let [e, n] of t)
-        if (f.Z.isMember(e) && !C.has(e)) {
-            let t = _.Z.getGuild(e);
+        if (_.Z.isMember(e) && !C.has(e)) {
+            let t = f.Z.getGuild(e);
             for (let e of n) L(e, !0, t);
             R(e, n);
         }
@@ -158,7 +158,7 @@ let L = function (e) {
                 T.set(e.id, a);
         }
     },
-    k = (e, t, n) => {
+    M = (e, t, n) => {
         v.set(e.id, e);
         let r = [...S];
         if (t) {
@@ -167,9 +167,9 @@ let L = function (e) {
         }
         (t || n) && e.stickers.forEach((e) => L(e));
     },
-    M = () => {
+    k = () => {
         C.forEach((e, t) => {
-            let n = _.Z.getGuild(t);
+            let n = f.Z.getGuild(t);
             null != n && e.forEach((e) => x(e, n));
         }),
             S.forEach((e) => {
@@ -184,14 +184,14 @@ let L = function (e) {
         (T = null), (I = new Map()), (C = new Map()), (O = 0);
     };
 function G(e) {
-    let t = _.Z.getGuild(e.id);
+    let t = f.Z.getGuild(e.id);
     null != t && null != e.stickers && (e.stickers.forEach((e) => L(e, !0, t)), R(t.id, e.stickers));
 }
 function B(e) {
     let { guild: t } = e;
     d.Z.isLurking(t.id) || (G(t), 1 === O && null == t.stickers && null != t.stickerUpdates && (O = 0));
 }
-function F(e) {
+function V(e) {
     var t;
     let { guild: n } = e;
     (null != (t = C.get(n.id)) ? t : []).forEach((e) => {
@@ -200,7 +200,7 @@ function F(e) {
         C.delete(n.id),
         (C = new Map(C));
 }
-let V = () => {
+let F = () => {
         (O = 0), (S = []), I.clear(), v.clear(), (T = null), C.clear(), (C = new Map(C)), (N = !1), (A = null);
     },
     Z = () => {
@@ -208,11 +208,11 @@ let V = () => {
     },
     H = (e) => {
         let { packs: t } = e;
-        t.forEach((e) => k(e, !0)), (A = Date.now()), (N = !1);
+        t.forEach((e) => M(e, !0)), (A = Date.now()), (N = !1);
     },
     Y = (e) => {
         let { pack: t, ingestStickers: n } = e;
-        k(t, !1, n);
+        M(t, !1, n);
     },
     W = (e) => {
         let { guildId: t, stickers: n } = e;
@@ -246,7 +246,7 @@ let V = () => {
     };
 class X extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(s.Z, f.Z, _.Z);
+        this.waitFor(s.Z, _.Z, f.Z);
     }
     get isLoaded() {
         return 0 !== O;
@@ -255,7 +255,7 @@ class X extends (r = a.ZP.Store) {
         return O;
     }
     get stickerMetadata() {
-        return w(), null == T && ((T = new Map()), M()), T;
+        return w(), null == T && ((T = new Map()), k()), T;
     }
     get hasLoadedStickerPacks() {
         return null != A && A + P > Date.now();
@@ -293,8 +293,8 @@ let Q = new X(o.Z, {
     BACKGROUND_SYNC: U,
     CONNECTION_OPEN: j,
     GUILD_CREATE: B,
-    GUILD_DELETE: F,
-    LOGOUT: V,
+    GUILD_DELETE: V,
+    LOGOUT: F,
     STICKER_PACKS_FETCH_START: Z,
     STICKER_PACKS_FETCH_SUCCESS: H,
     STICKER_PACK_FETCH_SUCCESS: Y,

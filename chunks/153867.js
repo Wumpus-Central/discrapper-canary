@@ -12,11 +12,11 @@ var r = n(524437),
     c = n(781391),
     u = n(210887),
     d = n(695346),
-    f = n(675478),
-    _ = n(981631),
+    _ = n(675478),
+    f = n(981631),
     p = n(874893);
 function h(e) {
-    return f.hW.updateAsync(
+    return _.hW.updateAsync(
         'guildFolders',
         (t) => {
             t.folders = e.map((e) => {
@@ -24,18 +24,18 @@ function h(e) {
                 return null != e.folderId && (t.id = i.r1.create({ value: String(e.folderId) })), null != e.folderColor && (t.color = i.wA.create({ value: String(e.folderColor) })), null != e.folderName && '' !== e.folderName && (t.name = i.Gm.create({ value: String(e.folderName) })), t;
             });
         },
-        f.fy.FREQUENT_USER_ACTION
+        _.fy.FREQUENT_USER_ACTION
     );
 }
 function m(e) {
     switch (e) {
-        case _.BRd.DARK:
+        case f.BRd.DARK:
             return r.Q2.DARK;
-        case _.BRd.LIGHT:
+        case f.BRd.LIGHT:
             return r.Q2.LIGHT;
-        case _.BRd.DARKER:
+        case f.BRd.DARKER:
             return r.Q2.DARKER;
-        case _.BRd.MIDNIGHT:
+        case f.BRd.MIDNIGHT:
             return r.Q2.MIDNIGHT;
         default:
             return r.Q2.DARK;
@@ -57,7 +57,7 @@ function g(e) {
 }
 function E(e) {
     let { backgroundGradientPresetId: t, customUserThemeSettings: n, theme: r, useSystemTheme: i } = e,
-        s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.fy.INFREQUENT_USER_ACTION,
+        s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.fy.INFREQUENT_USER_ACTION,
         u = 'system' === r ? p.KW.ON : p.KW.OFF,
         d = null != i ? i : u;
     if (
@@ -82,7 +82,7 @@ function E(e) {
         }),
         l.Z.shouldSync('appearance'))
     )
-        return f.hW.updateAsync(
+        return _.hW.updateAsync(
             'appearance',
             (e) => {
                 (e.theme = m(r)),
@@ -160,12 +160,12 @@ let b = {
         });
     },
     updateLocale: (e) =>
-        f.hW.updateAsync(
+        _.hW.updateAsync(
             'localization',
             (t) => {
                 t.locale = i.Gm.create({ value: e });
             },
-            f.fy.INFREQUENT_USER_ACTION
+            _.fy.INFREQUENT_USER_ACTION
         ),
     updateTheme(e) {
         o.Z.dispatch({
@@ -173,12 +173,12 @@ let b = {
             changes: { appearance: { settings: { theme: e } } }
         }),
             l.Z.shouldSync('appearance') &&
-                f.hW.updateAsync(
+                _.hW.updateAsync(
                     'appearance',
                     (t) => {
                         t.theme = m(e);
                     },
-                    f.fy.INFREQUENT_USER_ACTION
+                    _.fy.INFREQUENT_USER_ACTION
                 );
     }
 };

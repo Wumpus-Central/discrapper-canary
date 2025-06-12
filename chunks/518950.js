@@ -5,7 +5,7 @@ var r = n(73800),
     o = n(125988),
     s = n(287008);
 function l(e) {
-    let { user: t, guildId: n, size: l, showPending: c = !1, showTryItOut: u = !1, animateOnHover: d = !1, avatarDecorationOverride: f, avatarOverride: _ } = e,
+    let { user: t, guildId: n, size: l, showPending: c = !1, showTryItOut: u = !1, animateOnHover: d = !1, avatarDecorationOverride: _, avatarOverride: f } = e,
         {
             avatarSrc: p,
             isAvatarAnimating: h,
@@ -16,7 +16,7 @@ function l(e) {
             size: (0, i.pxk)(l),
             showPending: c,
             animateOnHover: d,
-            avatarOverride: _
+            avatarOverride: f
         }),
         {
             avatarPlaceholderSrc: g,
@@ -28,7 +28,7 @@ function l(e) {
             size: (0, a.y9)(l),
             showPending: c,
             onlyAnimateOnHover: d,
-            avatarDecorationOverride: f,
+            avatarDecorationOverride: _,
             showTryItOut: u
         });
     return {

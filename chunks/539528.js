@@ -1,7 +1,7 @@
 n.d(t, {
-    Ep: () => _,
+    Ep: () => f,
     Hp: () => h,
-    PP: () => k,
+    PP: () => M,
     lX: () => A,
     ob: () => p,
     q_: () => L
@@ -25,7 +25,7 @@ function u(e, t) {
 function d(e) {
     return '/' === e.charAt(e.length - 1) ? e.slice(0, -1) : e;
 }
-function f(e) {
+function _(e) {
     var t = e || '/',
         n = '',
         r = '',
@@ -41,7 +41,7 @@ function f(e) {
         }
     );
 }
-function _(e) {
+function f(e) {
     var t = e.pathname,
         n = e.search,
         r = e.hash,
@@ -50,7 +50,7 @@ function _(e) {
 }
 function p(e, t, n, a) {
     var o;
-    'string' == typeof e ? ((o = f(e)).state = t) : (void 0 === (o = (0, r.Z)({}, e)).pathname && (o.pathname = ''), o.search ? '?' !== o.search.charAt(0) && (o.search = '?' + o.search) : (o.search = ''), o.hash ? '#' !== o.hash.charAt(0) && (o.hash = '#' + o.hash) : (o.hash = ''), void 0 !== t && void 0 === o.state && (o.state = t));
+    'string' == typeof e ? ((o = _(e)).state = t) : (void 0 === (o = (0, r.Z)({}, e)).pathname && (o.pathname = ''), o.search ? '?' !== o.search.charAt(0) && (o.search = '?' + o.search) : (o.search = ''), o.hash ? '#' !== o.hash.charAt(0) && (o.hash = '#' + o.hash) : (o.hash = ''), void 0 !== t && void 0 === o.state && (o.state = t));
     try {
         o.pathname = decodeURI(o.pathname);
     } catch (e) {
@@ -137,8 +137,8 @@ function A(e) {
         a = e,
         l = a.forceRefresh,
         c = void 0 !== l && l,
-        f = a.getUserConfirmation,
-        h = void 0 === f ? E : f,
+        _ = a.getUserConfirmation,
+        h = void 0 === _ ? E : _,
         O = a.keyLength,
         A = void 0 === O ? 6 : O,
         N = e.basename ? d(s(e.basename)) : '';
@@ -158,13 +158,13 @@ function A(e) {
         (0, r.Z)(X, e), (X.length = t.length), P.notifyListeners(X.location, X.action);
     }
     function D(e) {
-        v(e) || k(C(e.state));
+        v(e) || M(C(e.state));
     }
     function L() {
-        k(C(S()));
+        M(C(S()));
     }
     var x = !1;
-    function k(e) {
+    function M(e) {
         if (x) (x = !1), w();
         else {
             var t = 'POP';
@@ -174,23 +174,23 @@ function A(e) {
                           action: t,
                           location: e
                       })
-                    : M(e);
+                    : k(e);
             });
         }
     }
-    function M(e) {
+    function k(e) {
         var t = X.location,
             n = U.indexOf(t.key);
         -1 === n && (n = 0);
         var r = U.indexOf(e.key);
         -1 === r && (r = 0);
         var i = n - r;
-        i && ((x = !0), V(i));
+        i && ((x = !0), F(i));
     }
     var j = C(S()),
         U = [j.key];
     function G(e) {
-        return N + _(e);
+        return N + f(e);
     }
     function B(e, r) {
         var i = 'PUSH',
@@ -227,7 +227,7 @@ function A(e) {
             }
         });
     }
-    function F(e, r) {
+    function V(e, r) {
         var i = 'REPLACE',
             a = p(e, r, R(), X.location);
         P.confirmTransitionTo(a, i, h, function (e) {
@@ -260,14 +260,14 @@ function A(e) {
             }
         });
     }
-    function V(e) {
+    function F(e) {
         t.go(e);
     }
     function Z() {
-        V(-1);
+        F(-1);
     }
     function H() {
-        V(1);
+        F(1);
     }
     var Y = 0;
     function W(e) {
@@ -299,8 +299,8 @@ function A(e) {
         location: j,
         createHref: G,
         push: B,
-        replace: F,
-        go: V,
+        replace: V,
+        go: F,
         goBack: Z,
         goForward: H,
         block: z,
@@ -351,13 +351,13 @@ function L(e) {
         a = void 0 === i ? E : i,
         l = n.hashType,
         c = void 0 === l ? 'slash' : l,
-        f = e.basename ? d(s(e.basename)) : '',
+        _ = e.basename ? d(s(e.basename)) : '',
         h = C[c],
         b = h.encodePath,
         y = h.decodePath;
     function v() {
         var e = y(P());
-        return f && (e = u(e, f)), p(e);
+        return _ && (e = u(e, _)), p(e);
     }
     var I = m();
     function T(e) {
@@ -375,11 +375,11 @@ function L(e) {
         else {
             var n = v(),
                 r = J.location;
-            if ((!S && L(r, n)) || A === _(n)) return;
-            (A = null), k(n);
+            if ((!S && L(r, n)) || A === f(n)) return;
+            (A = null), M(n);
         }
     }
-    function k(e) {
+    function M(e) {
         if (S) (S = !1), T();
         else {
             var t = 'POP';
@@ -389,15 +389,15 @@ function L(e) {
                           action: t,
                           location: e
                       })
-                    : M(e);
+                    : k(e);
             });
         }
     }
-    function M(e) {
+    function k(e) {
         var t = J.location,
-            n = B.lastIndexOf(_(t));
+            n = B.lastIndexOf(f(t));
         -1 === n && (n = 0);
-        var r = B.lastIndexOf(_(e));
+        var r = B.lastIndexOf(f(e));
         -1 === r && (r = 0);
         var i = n - r;
         i && ((S = !0), H(i));
@@ -406,23 +406,23 @@ function L(e) {
         U = b(j);
     j !== U && D(U);
     var G = v(),
-        B = [_(G)];
-    function F(e) {
+        B = [f(G)];
+    function V(e) {
         var t = document.querySelector('base'),
             n = '';
-        return t && t.getAttribute('href') && (n = R(window.location.href)), n + '#' + b(f + _(e));
+        return t && t.getAttribute('href') && (n = R(window.location.href)), n + '#' + b(_ + f(e));
     }
-    function V(e, t) {
+    function F(e, t) {
         var n = 'PUSH',
             r = p(e, void 0, void 0, J.location);
         I.confirmTransitionTo(r, n, a, function (e) {
             if (e) {
-                var t = _(r),
-                    i = b(f + t),
+                var t = f(r),
+                    i = b(_ + t),
                     a = P() !== i;
                 if (a) {
                     (A = t), w(i);
-                    var o = B.lastIndexOf(_(J.location)),
+                    var o = B.lastIndexOf(f(J.location)),
                         s = B.slice(0, o + 1);
                     s.push(t),
                         (B = s),
@@ -439,11 +439,11 @@ function L(e) {
             r = p(e, void 0, void 0, J.location);
         I.confirmTransitionTo(r, n, a, function (e) {
             if (e) {
-                var t = _(r),
-                    i = b(f + t),
+                var t = f(r),
+                    i = b(_ + t),
                     a = P() !== i;
                 a && ((A = t), D(i));
-                var o = B.indexOf(_(J.location));
+                var o = B.indexOf(f(J.location));
                 -1 !== o && (B[o] = t),
                     T({
                         action: n,
@@ -489,8 +489,8 @@ function L(e) {
         length: t.length,
         action: 'POP',
         location: G,
-        createHref: F,
-        push: V,
+        createHref: V,
+        push: F,
         replace: Z,
         go: H,
         goBack: Y,
@@ -503,7 +503,7 @@ function L(e) {
 function x(e, t, n) {
     return Math.min(Math.max(e, t), n);
 }
-function k(e) {
+function M(e) {
     void 0 === e && (e = {});
     var t = e,
         n = t.getUserConfirmation,
@@ -517,17 +517,17 @@ function k(e) {
     function d(e) {
         (0, r.Z)(N, e), (N.length = N.entries.length), u.notifyListeners(N.location, N.action);
     }
-    function f() {
+    function _() {
         return Math.random().toString(36).substr(2, c);
     }
     var h = x(s, 0, a.length - 1),
         g = a.map(function (e) {
-            return 'string' == typeof e ? p(e, void 0, f()) : p(e, void 0, e.key || f());
+            return 'string' == typeof e ? p(e, void 0, _()) : p(e, void 0, e.key || _());
         }),
-        E = _;
+        E = f;
     function b(e, t) {
         var r = 'PUSH',
-            i = p(e, t, f(), N.location);
+            i = p(e, t, _(), N.location);
         u.confirmTransitionTo(i, r, n, function (e) {
             if (e) {
                 var t = N.index,
@@ -545,7 +545,7 @@ function k(e) {
     }
     function y(e, t) {
         var r = 'REPLACE',
-            i = p(e, t, f(), N.location);
+            i = p(e, t, _(), N.location);
         u.confirmTransitionTo(i, r, n, function (e) {
             e &&
                 ((N.entries[N.index] = i),

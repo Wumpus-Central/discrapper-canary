@@ -49,7 +49,7 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,18 +60,18 @@ function f(e, t) {
         e
     );
 }
-let _ = 20;
+let f = 20;
 var p = (function (e) {
     return (e[(e.FETCHING = 0)] = 'FETCHING'), (e[(e.FETCHED = 1)] = 'FETCHED'), (e[(e.ERROR = 2)] = 'ERROR'), e;
 })({});
 function h(e) {
-    let { query: t, guildId: n, page: r, pageSize: i, categoryId: a, integrationType: s, minUserInstallCommandCount: l, excludeAppsWithCustomInstallUrl: c, excludeNonEmbeddedApps: u, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: d, source: f = o.F.APP_DIRECTORY } = e;
-    return "query:'".concat(t, "' guildId:").concat(n, ' page:').concat(r, ' pageSize:').concat(i, ' categoryId:').concat(a, ' integrationType:').concat(s, ' minUserInstallCommandCount:').concat(l, ' excludeAppsWithCustomInstallUrl:').concat(c, ' excludeNonEmbeddedApps:').concat(u, ' excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand:').concat(d, ' source:').concat(f);
+    let { query: t, guildId: n, page: r, pageSize: i, categoryId: a, integrationType: s, minUserInstallCommandCount: l, excludeAppsWithCustomInstallUrl: c, excludeNonEmbeddedApps: u, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: d, source: _ = o.F.APP_DIRECTORY } = e;
+    return "query:'".concat(t, "' guildId:").concat(n, ' page:').concat(r, ' pageSize:').concat(i, ' categoryId:').concat(a, ' integrationType:').concat(s, ' minUserInstallCommandCount:').concat(l, ' excludeAppsWithCustomInstallUrl:').concat(c, ' excludeNonEmbeddedApps:').concat(u, ' excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand:').concat(d, ' source:').concat(_);
 }
-let m = new (a())({ max: _ }),
+let m = new (a())({ max: f }),
     g = {};
 function E(e) {
-    let { query: t, guildId: n, page: r, pageSize: i, categoryId: a, integrationType: o, minUserInstallCommandCount: s, excludeAppsWithCustomInstallUrl: l, excludeNonEmbeddedApps: c, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: d, source: _ } = e,
+    let { query: t, guildId: n, page: r, pageSize: i, categoryId: a, integrationType: o, minUserInstallCommandCount: s, excludeAppsWithCustomInstallUrl: l, excludeNonEmbeddedApps: c, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: d, source: f } = e,
         p = h({
             query: t,
             guildId: n,
@@ -83,12 +83,12 @@ function E(e) {
             excludeAppsWithCustomInstallUrl: l,
             excludeNonEmbeddedApps: c,
             excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: d,
-            source: _
+            source: f
         });
-    g = f(u({}, g), { [p]: 0 });
+    g = _(u({}, g), { [p]: 0 });
 }
 function b(e) {
-    let { query: t, guildId: n, page: r, pageSize: i, categoryId: a, result: o, integrationType: s, minUserInstallCommandCount: l, excludeAppsWithCustomInstallUrl: c, excludeNonEmbeddedApps: d, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: _, source: p } = e,
+    let { query: t, guildId: n, page: r, pageSize: i, categoryId: a, result: o, integrationType: s, minUserInstallCommandCount: l, excludeAppsWithCustomInstallUrl: c, excludeNonEmbeddedApps: d, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: f, source: p } = e,
         E = h({
             query: t,
             guildId: n,
@@ -99,13 +99,13 @@ function b(e) {
             minUserInstallCommandCount: l,
             excludeAppsWithCustomInstallUrl: c,
             excludeNonEmbeddedApps: d,
-            excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: _,
+            excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: f,
             source: p
         });
-    m.set(E, u({ lastFetchTimeMs: Date.now() }, o)), (g = f(u({}, g), { [E]: 1 }));
+    m.set(E, u({ lastFetchTimeMs: Date.now() }, o)), (g = _(u({}, g), { [E]: 1 }));
 }
 function y(e) {
-    let { query: t, guildId: n, page: r, pageSize: i, categoryId: a, integrationType: o, minUserInstallCommandCount: s, excludeAppsWithCustomInstallUrl: l, excludeNonEmbeddedApps: c, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: d, source: _ } = e,
+    let { query: t, guildId: n, page: r, pageSize: i, categoryId: a, integrationType: o, minUserInstallCommandCount: s, excludeAppsWithCustomInstallUrl: l, excludeNonEmbeddedApps: c, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: d, source: f } = e,
         p = h({
             query: t,
             guildId: n,
@@ -117,14 +117,14 @@ function y(e) {
             excludeAppsWithCustomInstallUrl: l,
             excludeNonEmbeddedApps: c,
             excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: d,
-            source: _
+            source: f
         });
-    g = f(u({}, g), { [p]: 2 });
+    g = _(u({}, g), { [p]: 2 });
 }
 class O extends (r = s.ZP.Store) {
     getSearchResults(e) {
         let { query: t, guildId: n, page: r, pageSize: i, categoryId: a, integrationType: o, minUserInstallCommandCount: s, excludeAppsWithCustomInstallUrl: l, excludeNonEmbeddedApps: c, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u, source: d } = e,
-            f = h({
+            _ = h({
                 query: t,
                 guildId: n,
                 page: r,
@@ -137,7 +137,7 @@ class O extends (r = s.ZP.Store) {
                 excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u,
                 source: d
             });
-        return m.get(f);
+        return m.get(_);
     }
     getFetchState(e) {
         let { query: t, guildId: n, page: r, pageSize: i, categoryId: a, integrationType: o, minUserInstallCommandCount: s, excludeAppsWithCustomInstallUrl: l, excludeNonEmbeddedApps: c, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u, source: d } = e;

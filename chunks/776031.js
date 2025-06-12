@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(451467),
     u = n(361291),
     d = n(592125),
-    f = n(430824),
-    _ = n(131951),
+    _ = n(430824),
+    f = n(131951),
     p = n(944486),
     h = n(594174),
     m = n(981631),
@@ -79,11 +79,11 @@ function T(e, t) {
 }
 function S(e, t) {
     let { preset: n, resolution: y, fps: v } = (0, a.cj)([u.Z], () => u.Z.getState()),
-        S = (0, a.e7)([_.Z], () => _.Z.getGoLiveSource()),
+        S = (0, a.e7)([f.Z], () => f.Z.getGoLiveSource()),
         A = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
-        N = (0, a.e7)([f.Z], () => {
+        N = (0, a.e7)([_.Z], () => {
             var t;
-            return null == (t = f.Z.getGuild(null == e ? void 0 : e.guildId)) ? void 0 : t.premiumTier;
+            return null == (t = _.Z.getGuild(null == e ? void 0 : e.guildId)) ? void 0 : t.premiumTier;
         }),
         { location: C } = (0, l.O)(),
         R = (0, a.e7)([p.Z, d.Z], () => d.Z.getChannel(p.Z.getVoiceChannelId())),

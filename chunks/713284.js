@@ -35,14 +35,14 @@ let l = !0,
                 dismissibleContent: n
             });
     },
-    f = (e) => {
+    _ = (e) => {
         let { eventType: t, dismissibleContent: n } = e;
         d({
             eventType: t,
             dismissibleContent: n
         });
     },
-    _ = (e) => {
+    f = (e) => {
         let { dismissibleContent: t } = e;
         d({
             eventType: 2,
@@ -64,7 +64,7 @@ class h extends (r = i.ZP.Store) {
 o(h, 'displayName', 'DCFEventStore');
 let m = new h(a.Z, {
     LOGOUT: u,
-    DCF_EVENT_LOGGED: f,
-    DCF_HANDLE_DC_DISMISSED: _,
+    DCF_EVENT_LOGGED: _,
+    DCF_HANDLE_DC_DISMISSED: f,
     DCF_HANDLE_DC_SHOWN: p
 });

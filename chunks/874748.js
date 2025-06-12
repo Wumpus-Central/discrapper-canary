@@ -1,7 +1,7 @@
 n.d(t, {
     BC: () => m,
     LR: () => p,
-    ku: () => _
+    ku: () => f
 }),
     n(953529),
     n(997841);
@@ -14,21 +14,21 @@ var r = n(830121),
     c = n(981631),
     u = n(959517),
     d = n(388032);
-let f = 40;
-function _(e) {
+let _ = 40;
+function f(e) {
     var t, n, r, i, a;
-    let { mediaPostEmbedData: c, guild: _, parentChannel: p, postThread: m, user: g, selectedGuildId: E, canAccess: b = !1 } = e;
+    let { mediaPostEmbedData: c, guild: f, parentChannel: p, postThread: m, user: g, selectedGuildId: E, canAccess: b = !1 } = e;
     if (null == c) return null;
     let y = (0, l.EY)(c.thumbnail),
         O = !b && c.has_media_attachment,
         v = b ? d.intl.string(d.t.UsZEBA) : d.intl.string(d.t.ReFzYW),
         I = null != g ? s.ZP.getName(c.guild_id, c.channel_id, g) : void 0,
-        T = null == g ? void 0 : g.getAvatarURL(null == _ ? void 0 : _.id, f);
+        T = null == g ? void 0 : g.getAvatarURL(null == f ? void 0 : f.id, _);
     (null == T || E !== c.guild_id) &&
         (T = o.ZP.getGuildIconURL({
             id: c.guild_id,
             icon: c.guild_icon,
-            size: f,
+            size: _,
             canAnimate: !1
         }));
     let S = h(c.thumbnail) && !O,
@@ -45,7 +45,7 @@ function _(e) {
         messageId: c.message_id,
         canAccess: b,
         guildId: c.guild_id,
-        guildName: null != (a = null == _ ? void 0 : _.name) ? a : c.guild_name,
+        guildName: null != (a = null == f ? void 0 : f.name) ? a : c.guild_name,
         authorId: null == c ? void 0 : c.author_id,
         authorName: I,
         channelName: null == p ? void 0 : p.name,

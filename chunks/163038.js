@@ -20,8 +20,8 @@ var r = n(255367),
     x = n(38267),
     v = n(25015),
     O = n(438075),
-    C = n(359110),
-    j = n(6025),
+    j = n(359110),
+    C = n(6025),
     S = n(695346),
     I = n(433355),
     N = n(592125),
@@ -50,12 +50,12 @@ function M(e) {
                 null == i ||
                 s ||
                 null == l ||
-                (j.Z.openThreadAsSidebar({
+                (C.Z.openThreadAsSidebar({
                     channelId: r.id,
                     baseChannelId: l,
                     guildId: r.guild_id
                 }),
-                (0, C.Kh)(l));
+                (0, j.Kh)(l));
         }, [t]);
     return null == f
         ? null
@@ -178,8 +178,8 @@ function F(e) {
             allowDevLinks: b,
             previewLinkTarget: !0
         }),
-        C = (0, a.e7)([N.Z], () => N.Z.getChannel(o.channel_id));
-    return null == C
+        j = (0, a.e7)([N.Z], () => N.Z.getChannel(o.channel_id));
+    return null == j
         ? null
         : (0, r.jsx)(
               'div',
@@ -191,14 +191,14 @@ function F(e) {
                           (0, r.jsx)(U, {
                               mergedMessageRecord: h,
                               content: y,
-                              channel: C,
+                              channel: j,
                               reportingUserId: null == s || null == (n = s.moderatorReport) ? void 0 : n.reporting_user_id,
                               reportedTimestamp: o.timestamp
                           }),
                           (0, O.Z)({
                               channelMessageProps: {
                                   message: h,
-                                  channel: C,
+                                  channel: j,
                                   compact: !1
                               },
                               hasSpoilerEmbeds: x,

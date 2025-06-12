@@ -20,8 +20,8 @@ var r = n(255367),
     x = n(108989),
     v = n(703656),
     O = n(314897),
-    C = n(82142),
-    j = n(283595),
+    j = n(82142),
+    C = n(283595),
     S = n(594174),
     I = n(509545),
     N = n(55563),
@@ -382,9 +382,9 @@ class z extends i.Component {
     }
 }
 let W = (0, f.Z)((0, m.Z)(z)),
-    K = c.ZP.connectStores([C.Z, N.Z, S.default, j.Z, I.Z, O.default, h.Z], (e) => {
+    K = c.ZP.connectStores([j.Z, N.Z, S.default, C.Z, I.Z, O.default, h.Z], (e) => {
         let { code: t, author: n, currentUser: r } = e,
-            i = C.Z.get(t),
+            i = j.Z.get(t),
             l = null != i ? N.Z.get(i.skuId) : null,
             a = null != i && null != i.userId ? S.default.getUser(i.userId) : null,
             o = h.Z.useReducedMotion;
@@ -395,8 +395,8 @@ let W = (0, f.Z)((0, m.Z)(z)),
             currentUser: r,
             subscriptionPlan: null != i && null != i.subscriptionPlanId ? (0, Z.oE)(i.subscriptionPlanId) : null,
             isSelfGift: null != i ? O.default.getId() === i.userId : O.default.getId() === n.id,
-            resolved: C.Z.getIsResolved(t),
-            libraryApplication: null != l && (null == i ? void 0 : i.entitlementBranches) != null ? A.z2(i.entitlementBranches, l, j.Z) : null,
+            resolved: j.Z.getIsResolved(t),
+            libraryApplication: null != l && (null == i ? void 0 : i.entitlementBranches) != null ? A.z2(i.entitlementBranches, l, C.Z) : null,
             useReducedMotion: o
         };
     })(W);

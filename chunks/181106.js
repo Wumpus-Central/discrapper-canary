@@ -35,8 +35,8 @@ function c(e) {
 }
 let u = {},
     d = {},
-    f = 120000;
-function _(e) {
+    _ = 120000;
+function f(e) {
     let { applicationId: t, activityType: n } = e,
         r = u[t];
     if (null == r || r[n] !== s.OcF.FAILED) return !1;
@@ -49,7 +49,7 @@ function p(e, t, n) {
     if (((l[t] = e), (u[i] = l), !__OVERLAY__ && e === s.OcF.FAILED)) {
         null != d[i] && d[i].stop();
         let e = new a.V7();
-        e.start(f, () =>
+        e.start(_, () =>
             o.Z.dispatch({
                 type: 'ACTIVITY_LAUNCH_FAIL',
                 applicationId: i,
@@ -82,5 +82,5 @@ let E = new g(o.Z, {
     ACTIVITY_JOIN_FAILED: (e) => p(s.OcF.FAILED, s.mFx.JOIN, e),
     ACTIVITY_JOIN: m,
     EMBEDDED_ACTIVITY_CLOSE: m,
-    ACTIVITY_LAUNCH_FAIL: _
+    ACTIVITY_LAUNCH_FAIL: f
 });

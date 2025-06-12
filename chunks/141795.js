@@ -16,8 +16,8 @@ var r = n(392711),
     c = n(549464),
     u = n(609763),
     d = n(740492),
-    f = n(866960),
-    _ = n(626135),
+    _ = n(866960),
+    f = n(626135),
     p = n(510990),
     h = n(70956),
     m = n(960048),
@@ -458,22 +458,22 @@ class P extends E.ZP {
     }
     trackUploadStart() {
         var e;
-        _.default.track(y.rMx.ATTACHMENT_UPLOAD_STARTED, {
+        f.default.track(y.rMx.ATTACHMENT_UPLOAD_STARTED, {
             file_size: this.currentSize,
             mime_type: null != (e = this.mimeType) ? e : 'unknown',
             video_upload_quality: d.ZP.videoUploadQuality,
             data_saving_mode: d.ZP.dataSavingMode,
             low_quality_image_mode: d.ZP.dataSavingMode,
             channel_id: this.channelId,
-            connection_type: f.Z.getType(),
-            effective_connection_speed: f.Z.getEffectiveConnectionSpeed(),
-            service_provider: f.Z.getServiceProvider()
+            connection_type: _.Z.getType(),
+            effective_connection_speed: _.Z.getEffectiveConnectionSpeed(),
+            service_provider: _.Z.getServiceProvider()
         });
     }
     trackUploadFinished(e) {
         var t, n, r, i, a;
         let o = null != this.startTime ? performance.now() - this.startTime : -1;
-        _.default.track(y.rMx.ATTACHMENT_UPLOAD_FINISHED, {
+        f.default.track(y.rMx.ATTACHMENT_UPLOAD_FINISHED, {
             duration_ms: o,
             file_size: this.currentSize,
             pre_compression_file_size: this.preCompressionSize,
@@ -512,9 +512,9 @@ class P extends E.ZP {
             channel_id: this.channelId,
             hash_time_ms: this.uploadAnalytics.timing.hashTimeMs,
             valid_upload_hash: this.uploadAnalytics.validUploadHash,
-            connection_type: f.Z.getType(),
-            effective_connection_speed: f.Z.getEffectiveConnectionSpeed(),
-            service_provider: f.Z.getServiceProvider()
+            connection_type: _.Z.getType(),
+            effective_connection_speed: _.Z.getEffectiveConnectionSpeed(),
+            service_provider: _.Z.getServiceProvider()
         });
     }
     constructor(e, t, n, r) {

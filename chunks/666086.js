@@ -8,8 +8,8 @@ var r = n(392711),
     c = n(650774),
     u = n(271383),
     d = n(430824),
-    f = n(375954),
-    _ = n(944486),
+    _ = n(375954),
+    f = n(944486),
     p = n(522558),
     h = n(795448),
     m = n(441623),
@@ -45,10 +45,10 @@ class O extends o.Z {
     }
     maybeSendGiftingPromptSystemMessageDebounced(e, t, n, i) {
         (0, r.debounce)(() => {
-            let r = _.Z.getChannelId();
+            let r = f.Z.getChannelId();
             !m.Z.isGiftIntentMessageInCooldown(n) &&
                 e === r &&
-                f.Z.isReady(e) &&
+                _.Z.isReady(e) &&
                 (a.Z.sendGiftingPromptSystemMessage(e, {
                     giftIntentType: t,
                     recipientUserId: n,
@@ -74,7 +74,7 @@ class O extends o.Z {
         this.handleChannelSelect(t, n);
     }
     onPostConnectionOpen() {
-        let e = _.Z.getChannelId();
+        let e = f.Z.getChannelId();
         if (null != e) {
             let t = l.Z.getChannel(e);
             this.handleChannelSelect(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id);

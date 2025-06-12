@@ -1,14 +1,14 @@
 a.d(e, {
     $X: () => y,
-    AJ: () => O,
+    AJ: () => h,
     Ei: () => C,
     GC: () => S,
-    WU: () => P,
-    db: () => h,
+    WU: () => g,
+    db: () => O,
     dz: () => G,
     nm: () => m,
     ph: () => U,
-    x5: () => L
+    x5: () => f
 });
 var r = a(559508),
     _ = a(696486),
@@ -19,24 +19,24 @@ var r = a(559508),
     E = a(617726),
     s = a(899517),
     l = a(454463),
-    u = a(163162);
-let I = String(0),
+    I = a(163162);
+let u = String(0),
     R = '',
-    N = '',
+    A = '',
+    T = '',
+    N = (I.m9.navigator && I.m9.navigator.userAgent) || '',
     d = '',
-    A = (u.m9.navigator && u.m9.navigator.userAgent) || '',
-    f = '',
-    T = (u.m9.navigator && u.m9.navigator.language) || (u.m9.navigator && u.m9.navigator.languages && u.m9.navigator.languages['0']) || '',
-    p = u.m9.navigator && u.m9.navigator.userAgentData;
-function L(t) {
+    L = (I.m9.navigator && I.m9.navigator.language) || (I.m9.navigator && I.m9.navigator.languages && I.m9.navigator.languages['0']) || '',
+    p = I.m9.navigator && I.m9.navigator.userAgentData;
+function f(t) {
     return 'pageload' === (0, _.XU)(t).op;
 }
-function h(t, e) {
+function O(t, e) {
     if (!e.length) return t;
     for (let a of e) t[1].push([{ type: 'profile' }, a]);
     return t;
 }
-function O(t) {
+function h(t) {
     let e = [];
     return (
         (0, E.gv)(t, (t, a) => {
@@ -55,33 +55,33 @@ function O(t) {
     p
         .getHighEntropyValues(['architecture', 'model', 'platform', 'platformVersion', 'fullVersionList'])
         .then((t) => {
-            if (((R = t.platform || ''), (d = t.architecture || ''), (f = t.model || ''), (N = t.platformVersion || ''), t.fullVersionList && t.fullVersionList.length > 0)) {
+            if (((R = t.platform || ''), (T = t.architecture || ''), (d = t.model || ''), (A = t.platformVersion || ''), t.fullVersionList && t.fullVersionList.length > 0)) {
                 let e = t.fullVersionList[t.fullVersionList.length - 1];
-                A = `${e.brand} ${e.version}`;
+                N = `${e.brand} ${e.version}`;
             }
         })
         .catch((t) => void 0);
 let D = new WeakMap(),
-    g = !1,
-    P = 30000;
+    P = !1,
+    g = 30000;
 function C() {
-    let t = u.m9.Profiler;
+    let t = I.m9.Profiler;
     if ('function' != typeof t) {
         l.X && o.kg.log('[Profiling] Profiling is not supported by this browser, Profiler interface missing on window object.');
         return;
     }
-    let e = Math.floor(P / 10);
+    let e = Math.floor(g / 10);
     try {
         return new t({
             sampleInterval: 10,
             maxBufferSize: e
         });
     } catch (t) {
-        l.X && (o.kg.log("[Profiling] Failed to initialize the Profiling constructor, this is likely due to a missing 'Document-Policy': 'js-profiling' header."), o.kg.log('[Profiling] Disabling profiling for current user session.')), (g = !0);
+        l.X && (o.kg.log("[Profiling] Failed to initialize the Profiling constructor, this is likely due to a missing 'Document-Policy': 'js-profiling' header."), o.kg.log('[Profiling] Disabling profiling for current user session.')), (P = !0);
     }
 }
 function y(t) {
-    if (g) return l.X && o.kg.log('[Profiling] Profiling has been disabled for the duration of the current user session.'), !1;
+    if (P) return l.X && o.kg.log('[Profiling] Profiling has been disabled for the duration of the current user session.'), !1;
     if (!t.isRecording()) return l.X && o.kg.log('[Profiling] Discarding profile because transaction was not sampled.'), !1;
     let e = (0, n.s3)(),
         a = e && e.getOptions();
@@ -98,7 +98,7 @@ function m(t, e, a, _) {
             let e = t && t.contexts && t.contexts.trace && t.contexts.trace.trace_id;
             return ('string' == typeof e && 32 !== e.length && l.X && o.kg.log(`[Profiling] Invalid traceId: ${e} on profiled event`), 'string' != typeof e) ? '' : e;
         })(_),
-        L =
+        f =
             'thread_metadata' in (E = a)
                 ? E
                 : (function (t) {
@@ -108,7 +108,7 @@ function m(t, e, a, _) {
                               samples: [],
                               stacks: [],
                               frames: [],
-                              thread_metadata: { [I]: { name: 'main' } }
+                              thread_metadata: { [u]: { name: 'main' } }
                           },
                           _ = t.samples[0];
                       if (!_) return r;
@@ -122,7 +122,7 @@ function m(t, e, a, _) {
                                       (r.samples[o] = {
                                           elapsed_since_start_ns: ((_.timestamp + c - n) * 1000000).toFixed(0),
                                           stack_id: e,
-                                          thread_id: I
+                                          thread_id: u
                                       });
                                   return;
                               }
@@ -144,36 +144,36 @@ function m(t, e, a, _) {
                               let s = {
                                   elapsed_since_start_ns: ((_.timestamp + c - n) * 1000000).toFixed(0),
                                   stack_id: a,
-                                  thread_id: I
+                                  thread_id: u
                               };
                               (r.stacks[a] = E), (r.samples[o] = s), a++;
                           }),
                           r
                       );
                   })(E),
-        h = e || ('number' == typeof _.start_timestamp ? 1000 * _.start_timestamp : 1000 * (0, i.ph)()),
-        O = 'number' == typeof _.timestamp ? 1000 * _.timestamp : 1000 * (0, i.ph)();
+        O = e || ('number' == typeof _.start_timestamp ? 1000 * _.start_timestamp : 1000 * (0, i.ph)()),
+        h = 'number' == typeof _.timestamp ? 1000 * _.timestamp : 1000 * (0, i.ph)();
     return {
         event_id: t,
-        timestamp: new Date(h).toISOString(),
+        timestamp: new Date(O).toISOString(),
         platform: 'javascript',
         version: '1',
         release: _.release || '',
         environment: _.environment || r.J,
         runtime: {
             name: 'javascript',
-            version: u.m9.navigator.userAgent
+            version: I.m9.navigator.userAgent
         },
         os: {
             name: R,
-            version: N,
-            build_number: A
+            version: A,
+            build_number: N
         },
         device: {
-            locale: T,
-            model: f,
-            manufacturer: A,
-            architecture: d,
+            locale: L,
+            model: d,
+            manufacturer: N,
+            architecture: T,
             is_emulator: !1
         },
         debug_meta: {
@@ -213,15 +213,15 @@ function m(t, e, a, _) {
                 return E;
             })(a.resources)
         },
-        profile: L,
+        profile: f,
         transactions: [
             {
                 name: _.transaction || '',
                 id: _.event_id || (0, c.DM)(),
                 trace_id: p,
-                active_thread_id: I,
+                active_thread_id: u,
                 relative_start_ns: '0',
-                relative_end_ns: ((O - h) * 1000000).toFixed(0)
+                relative_end_ns: ((h - O) * 1000000).toFixed(0)
             }
         ]
     };

@@ -19,8 +19,8 @@ function c(e, t, n) {
 }
 let u = [],
     d = [],
-    f = !1,
-    _ = u,
+    _ = !1,
+    f = u,
     p = {},
     h = null,
     m = 0,
@@ -28,9 +28,9 @@ let u = [],
     E = 60000,
     b = 3600000,
     y = (e) => {
-        _ = (0, o.cloneDeep)(e);
+        f = (0, o.cloneDeep)(e);
         let t = {};
-        _.forEach((e) => {
+        f.forEach((e) => {
             if (((t[e.id] = e), d.length > 0)) {
                 var n;
                 t[e.id].config.effects = null != (n = (0, o.sample)(d)) ? n : [];
@@ -39,35 +39,35 @@ let u = [],
             (p = t);
     },
     O = () => {
-        f = !0;
+        _ = !0;
     },
     v = (e) => {
         let { profileEffects: t } = e;
-        (r = void 0), (i = Date.now() + g), (m = 0), y(0 === t.length ? u : t), (f = !1);
+        (r = void 0), (i = Date.now() + g), (m = 0), y(0 === t.length ? u : t), (_ = !1);
     },
     I = (e) => {
         let { error: t } = e;
-        (r = t), (i = Date.now() + Math.min(E * 2 ** m, b)), ++m, y(u), (f = !1);
+        (r = t), (i = Date.now() + Math.min(E * 2 ** m, b)), ++m, y(u), (_ = !1);
     },
     T = (e) => {
         let { id: t } = e;
         h = t;
     },
     S = () => {
-        y(u), (h = null), (i = void 0), (f = !1);
+        y(u), (h = null), (i = void 0), (_ = !1);
     },
     A = (e) => {
         S();
     };
 class N extends (a = s.ZP.Store) {
     get isFetching() {
-        return f;
+        return _;
     }
     get fetchError() {
         return r;
     }
     get profileEffects() {
-        return _;
+        return f;
     }
     get tryItOutId() {
         return h;

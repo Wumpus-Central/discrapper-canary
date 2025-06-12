@@ -7,13 +7,13 @@ let a = Date.now(),
     for (var s = arguments.length, l = Array(s > 3 ? s - 3 : 0), c = 3; c < s; c++) l[c - 3] = arguments[c];
     let u = Date.now(),
         d = ((u - a) / 1000).toFixed(3),
-        f = ((u - o) / 1000).toFixed(3),
-        _ = 'Σ:'.concat(d, 's, Δ:').concat(f, 's');
+        _ = ((u - o) / 1000).toFixed(3),
+        f = 'Σ:'.concat(d, 's, Δ:').concat(_, 's');
     (o = u),
         i.Hj(
             {
                 name: e,
-                timing: _
+                timing: f
             },
             n,
             ...l

@@ -11,8 +11,8 @@ var r = n(255367),
     c = n(686546),
     u = n(540059),
     d = n(855981),
-    f = n(55543),
-    _ = n(504684);
+    _ = n(55543),
+    f = n(504684);
 function p(e, t, n) {
     return (
         t in e
@@ -95,22 +95,22 @@ let b = 24,
     };
 function v(e) {
     let { className: t, disabled: n = !1, innerClassName: i, childClassName: a, iconClassName: p, icon: m, children: E, onClick: v, isActive: I, onMouseEnter: T, onMouseLeave: S, onFocus: A, onBlur: N, pulse: C, sparkle: R, notification: P, 'aria-label': w, 'aria-expanded': D, 'aria-haspopup': L, 'aria-controls': x } = e,
-        k = (0, u.Q3)('ChannelTextAreaButton'),
-        M = (0, l.Yzy)(null != E, g(h({}, O), { keys: (e) => (e ? 'children' : 'icon') })),
+        M = (0, u.Q3)('ChannelTextAreaButton'),
+        k = (0, l.Yzy)(null != E, g(h({}, O), { keys: (e) => (e ? 'children' : 'icon') })),
         j = (e) => {
             let { component: t } = e;
             return null != P
                 ? (0, r.jsxs)('div', {
-                      className: _.buttonContent,
+                      className: f.buttonContent,
                       children: [
                           (0, r.jsx)(c.ZP, {
-                              className: _.iconMask,
+                              className: f.iconMask,
                               mask: c.QS.CHAT_INPUT_BUTTON_NOTIFICATION,
-                              width: k ? y : b,
-                              height: k ? y : b,
+                              width: M ? y : b,
+                              height: M ? y : b,
                               children: t
                           }),
-                          (0, r.jsx)('span', { className: _.notificationDot })
+                          (0, r.jsx)('span', { className: f.notificationDot })
                       ]
                   })
                 : t;
@@ -123,8 +123,8 @@ function v(e) {
         'aria-haspopup': L,
         'aria-controls': x,
         disabled: n,
-        className: o()(t, { [_.active]: I }),
-        innerClassName: o()(_.button, i, { [_.pulseButton]: C }),
+        className: o()(t, { [f.active]: I }),
+        innerClassName: o()(f.button, i, { [f.pulseButton]: C }),
         onClick: v,
         onMouseEnter: T,
         onMouseLeave: S,
@@ -137,14 +137,14 @@ function v(e) {
             }
         },
         children: [
-            M((e, t, n) => {
+            k((e, t, n) => {
                 let { key: i } = n;
                 return t
                     ? (0, r.jsx)(
                           s.animated.div,
                           {
                               style: e,
-                              className: o()(_.buttonWrapper, a),
+                              className: o()(f.buttonWrapper, a),
                               children: j({ component: E })
                           },
                           i
@@ -154,10 +154,10 @@ function v(e) {
                             s.animated.div,
                             {
                                 style: e,
-                                className: o()(_.buttonWrapper, a),
+                                className: o()(f.buttonWrapper, a),
                                 children: j({
                                     component: (0, r.jsx)(m, {
-                                        className: o()(_.icon, p, { [_.pulseIcon]: C }),
+                                        className: o()(f.icon, p, { [f.pulseIcon]: C }),
                                         color: 'currentColor'
                                     })
                                 })
@@ -168,8 +168,8 @@ function v(e) {
             }),
             R &&
                 (0, r.jsxs)('div', {
-                    className: _.sparkleContainer,
-                    children: [(0, r.jsx)(f.Z, { className: _.sparkleStar }), (0, r.jsx)(d.Z, { className: _.sparklePlus })]
+                    className: f.sparkleContainer,
+                    children: [(0, r.jsx)(_.Z, { className: f.sparkleStar }), (0, r.jsx)(d.Z, { className: f.sparklePlus })]
                 })
         ]
     });

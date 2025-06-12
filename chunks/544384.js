@@ -11,15 +11,15 @@ var r = n(255367),
     c = n(418469),
     u = n(786138),
     d = n(803647),
-    f = n(199902),
-    _ = n(594174),
+    _ = n(199902),
+    f = n(594174),
     p = n(5192),
     h = n(981631),
     m = n(388032);
 function g(e, t, n) {
     let r = (0, a.e7)([l.Z], () => (null != e ? l.Z.getSelectedParticipantId(e.id) : null)),
-        o = (0, a.e7)([f.Z], () => (null != r ? f.Z.getActiveStreamForStreamKey(r) : null), [r]),
-        s = (0, a.cj)([_.default], () => n.reduce((e, t) => ((e[t.ownerId] = _.default.getUser(t.ownerId)), e), {}), [n]);
+        o = (0, a.e7)([_.Z], () => (null != r ? _.Z.getActiveStreamForStreamKey(r) : null), [r]),
+        s = (0, a.cj)([f.default], () => n.reduce((e, t) => ((e[t.ownerId] = f.default.getUser(t.ownerId)), e), {}), [n]);
     return i.useMemo(() => {
         if (null == e) return [];
         let r = n.filter((e) => e.ownerId !== (null == t ? void 0 : t.id));
@@ -33,15 +33,15 @@ function g(e, t, n) {
 }
 function E(e) {
     var t;
-    let { channel: n, currentUser: i, activeStreams: a, hideSelfOptions: l = !1, showReportOption: f = !1, handleGoLive: _, onClose: p, onSelect: E, appContext: b = h.IlC.APP, disableChangeWindows: y = !1, onInteraction: O } = e,
+    let { channel: n, currentUser: i, activeStreams: a, hideSelfOptions: l = !1, showReportOption: _ = !1, handleGoLive: f, onClose: p, onSelect: E, appContext: b = h.IlC.APP, disableChangeWindows: y = !1, onInteraction: O } = e,
         v = null != (t = a.find((e) => e.ownerId === (null == i ? void 0 : i.id))) ? t : null,
         I = g(n, i, a),
         T = (0, c.Z)(v, b),
         S = (0, u.b)({
             disableChangeWindows: y,
             stream: v,
-            showReportOption: f,
-            handleGoLive: _,
+            showReportOption: _,
+            handleGoLive: f,
             minimal: !0,
             appContext: b
         });

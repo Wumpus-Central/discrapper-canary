@@ -7,8 +7,8 @@ var r = n(73800),
     l = n(369111),
     c = n(442552);
 function u(e) {
-    let { user: t, guildId: n, size: u, showPending: d = !1, animateOnHover: f = !1, avatarOverride: _ } = e,
-        { onMouseEnter: p, onMouseLeave: h, shouldAnimate: m } = (0, c.Z)(f),
+    let { user: t, guildId: n, size: u, showPending: d = !1, animateOnHover: _ = !1, avatarOverride: f } = e,
+        { onMouseEnter: p, onMouseLeave: h, shouldAnimate: m } = (0, c.Z)(_),
         { pendingAvatar: g } = (0, l.Z)({}),
         E =
             d && null != t
@@ -19,7 +19,7 @@ function u(e) {
                       size: u
                   })
                 : void 0,
-        b = void 0 !== _ ? _ : E,
+        b = void 0 !== f ? f : E,
         y = (0, i.e7)([s.ZP], () => (null != n && null != t ? s.ZP.getMember(n, t.id) : null));
     return {
         avatarSrc: r.useMemo(

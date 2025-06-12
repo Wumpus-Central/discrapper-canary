@@ -14,12 +14,12 @@ function l(t) {
     if (!a) return;
     c.X && o.kg.log(`[Profiling] started profiling span: ${(0, r.XU)(t).description}`);
     let l = (0, i.DM)();
-    async function u() {
+    async function I() {
         if (t && a)
             return a
                 .stop()
                 .then((e) => {
-                    if ((I && (E.m9.clearTimeout(I), (I = void 0)), c.X && o.kg.log(`[Profiling] stopped profiling of span: ${(0, r.XU)(t).description}`), !e)) {
+                    if ((u && (E.m9.clearTimeout(u), (u = void 0)), c.X && o.kg.log(`[Profiling] stopped profiling of span: ${(0, r.XU)(t).description}`), !e)) {
                         c.X && o.kg.log(`[Profiling] profiler returned null profile for: ${(0, r.XU)(t).description}`, 'this may indicate an overlapping span or a call to stopProfiling with a profile title that was never started');
                         return;
                     }
@@ -33,13 +33,13 @@ function l(t) {
         profile_id: l,
         start_timestamp: e
     });
-    let I = E.m9.setTimeout(() => {
-            c.X && o.kg.log('[Profiling] max profile duration elapsed, stopping profiling for:', (0, r.XU)(t).description), u();
+    let u = E.m9.setTimeout(() => {
+            c.X && o.kg.log('[Profiling] max profile duration elapsed, stopping profiling for:', (0, r.XU)(t).description), I();
         }, s.WU),
         R = t.end.bind(t);
     t.end = function () {
         return t
-            ? (u().then(
+            ? (I().then(
                   () => {
                       R();
                   },

@@ -60,11 +60,11 @@ e.exports = function (e) {
                 }
             ]
         },
-        f = {
+        _ = {
             scope: 'string',
             match: /\$(\\([^0-9]|[0-9]{1,3}|)|.)/
         },
-        _ = {
+        f = {
             scope: 'string',
             match: /"""("*)(?!")[\s\S]*?"""\1/
         },
@@ -120,8 +120,8 @@ e.exports = function (e) {
             end: 'end',
             keywords: r
         };
-    h.contains = [i, o, e.inherit(e.APOS_STRING_MODE, { className: '' }), h, s, p, _, e.QUOTE_STRING_MODE, a, l, c, u, d, f];
-    let m = [i, o, h, s, p, _, e.QUOTE_STRING_MODE, a, l, c, u, d, f];
+    h.contains = [i, o, e.inherit(e.APOS_STRING_MODE, { className: '' }), h, s, p, f, e.QUOTE_STRING_MODE, a, l, c, u, d, _];
+    let m = [i, o, h, s, p, f, e.QUOTE_STRING_MODE, a, l, c, u, d, _];
     (s.contains[1].contains = m), (l.contains = m), (d.contains[1].contains = m);
     let g = ['-module', '-record', '-undef', '-export', '-ifdef', '-ifndef', '-author', '-copyright', '-doc', '-moduledoc', '-vsn', '-import', '-include', '-include_lib', '-compile', '-define', '-else', '-endif', '-file', '-behaviour', '-behavior', '-spec', '-on_load', '-nifs'],
         E = {
@@ -160,17 +160,17 @@ e.exports = function (e) {
                     $pattern: '-' + e.IDENT_RE,
                     keyword: g.map((e) => `${e}|1.5`).join(' ')
                 },
-                contains: [E, p, _, e.QUOTE_STRING_MODE]
+                contains: [E, p, f, e.QUOTE_STRING_MODE]
             },
             a,
             p,
-            _,
+            f,
             e.QUOTE_STRING_MODE,
             d,
             c,
             u,
             l,
-            f,
+            _,
             { begin: /\.$/ }
         ]
     };

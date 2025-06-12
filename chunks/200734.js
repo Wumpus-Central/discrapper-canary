@@ -66,7 +66,7 @@ function d(e) {
                     case 'BYHOUR':
                     case 'BYMINUTE':
                     case 'BYSECOND':
-                        var u = f(l);
+                        var u = _(l);
                         t[a.toLowerCase()] = u;
                         break;
                     case 'BYWEEKDAY':
@@ -91,10 +91,10 @@ function d(e) {
         t
     );
 }
-function f(e) {
-    return -1 !== e.indexOf(',') ? e.split(',').map(_) : _(e);
-}
 function _(e) {
+    return -1 !== e.indexOf(',') ? e.split(',').map(f) : f(e);
+}
+function f(e) {
     return /^[+-]?\d+$/.test(e) ? Number(e) : e;
 }
 function p(e) {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r = n(255367),
     i = n(73800),
     a = n(481060),
@@ -55,9 +55,9 @@ function u(e, t) {
 function d(e, t, n, r) {
     return e.getAvatarURL(r, t, n);
 }
-let f = i.memo(function (e) {
-    var { user: t, guildId: n, size: s = a.EFr.SIZE_32, animate: u = !1, 'aria-hidden': f = !1 } = e,
-        _ = c(e, ['user', 'guildId', 'size', 'animate', 'aria-hidden']);
+let _ = i.memo(function (e) {
+    var { user: t, guildId: n, size: s = a.EFr.SIZE_32, animate: u = !1, 'aria-hidden': _ = !1 } = e,
+        f = c(e, ['user', 'guildId', 'size', 'animate', 'aria-hidden']);
     let p = i.useContext(o.Z);
     return (0, r.jsx)(
         a.qEK,
@@ -65,10 +65,10 @@ let f = i.memo(function (e) {
             {
                 src: d(t, (0, a.pxk)(s), u, null != n ? n : p),
                 size: s,
-                'aria-label': f ? void 0 : t.username,
-                'aria-hidden': f
+                'aria-label': _ ? void 0 : t.username,
+                'aria-hidden': _
             },
-            _
+            f
         )
     );
 });

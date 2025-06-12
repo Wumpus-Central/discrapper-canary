@@ -1,4 +1,4 @@
-a.d(e, { j: () => u }), a(388685);
+a.d(e, { j: () => I }), a(388685);
 var r = a(509068),
     _ = a(804410),
     n = a(408720),
@@ -11,13 +11,13 @@ let s = ['oppobrowser', 'realmebrowser', 'heytapbrowser'],
         maxBudgetMinute: 1,
         maxBudgetHour: 3
     });
-function u() {
+function I() {
     r.S1({
         tunnel: '/error-reporting-proxy/web',
         dsn: 'https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984',
         autoSessionTracking: !1,
         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-        release: 'discord_web-c385e627b4c4cd6679116422bae5ae4fade6c0d1',
+        release: 'discord_web-981cac9b8e956428cd838d6a9c7f2b3da898a632',
         beforeSend: function (t, e) {
             return !((null != t.exception && null != t.exception.values && t.exception.values.every((t) => null == t.stacktrace || (null != t.stacktrace.frames && 1 === t.stacktrace.frames.length)) && 'canary' !== window.GLOBAL_ENV.RELEASE_CHANNEL) || s.some((t) => window.navigator.appVersion.toLowerCase().indexOf(t) >= 0)) && !(0, c.e)() && 'Aborted' !== t.message && 'cancel captcha' !== t.message && l() ? t : null;
         },
@@ -38,8 +38,8 @@ function u() {
         ignoreErrors: ['EADDRINUSE', 'BetterDiscord', 'EnhancedDiscord', 'Powercord', 'RecipeWebview', 'jQuery', 'localStorage', 'has already been declared', 'Cannot call hover while not dragging.', 'Cannot call beginDrag while dragging.', 'getHostNode', 'setupCSS', 'on missing remote object', 'ChunkLoadError', "Cannot find module 'discord_utils'", 'Failed to setup Krisp module', "Error invoking remote method 'DISCORD_NATIVE_MODULES_INSTALL': Error: Module updater is not available!", 'Non-Error promise rejection captured with keys:', 'Request has been terminated', 'Cannot resolve a Slate point from DOM point', 'Failed to fetch', 'no suitable image found', 'ResizeObserver loop limit exceeded', 'ResizeObserver loop completed with undelivered notifications.', 'The play() request was interrupted', 'could not play audio', 'notosans-400-normalitalic'],
         denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
     }),
-        o.YA('buildNumber', '408606'),
-        o.YA('builtAt', String('1749686380247'));
+        o.YA('buildNumber', '408763'),
+        o.YA('builtAt', String('1749745729588'));
     let t = window.GLOBAL_ENV.SENTRY_TAGS;
     if (null != t && 'object' == typeof t) for (let e in t) o.YA(e, t[e]);
     return i;

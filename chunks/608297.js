@@ -60,14 +60,14 @@ function u(e) {
 function d(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function f(e, t) {
+function _(e, t) {
     for (var n = 0; n < t.length; n++) {
         var r = t[n];
         (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
     }
 }
-function _(e, t, n) {
-    return t && f(e.prototype, t), n && f(e, n), e;
+function f(e, t, n) {
+    return t && _(e.prototype, t), n && _(e, n), e;
 }
 function p(e, t, n) {
     return (
@@ -92,7 +92,7 @@ var h = 10,
             d(this, e), p(this, 'subPriority', 0);
         }
         return (
-            _(e, [
+            f(e, [
                 {
                     key: 'validate',
                     value: function (e, t) {
@@ -111,7 +111,7 @@ var h = 10,
             return d(this, n), ((s = t.call(this)).value = e), (s.validateValue = r), (s.setValue = i), (s.priority = a), o && (s.subPriority = o), s;
         }
         return (
-            _(n, [
+            f(n, [
                 {
                     key: 'validate',
                     value: function (e, t) {
@@ -138,7 +138,7 @@ var h = 10,
             return p(l((e = t.call.apply(t, [this].concat(i)))), 'priority', h), p(l(e), 'subPriority', -1), e;
         }
         return (
-            _(n, [
+            f(n, [
                 {
                     key: 'set',
                     value: function (e, t) {

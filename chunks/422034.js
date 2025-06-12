@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(518950),
     u = n(357355),
     d = n(182294),
-    f = n(388032),
-    _ = n(556921);
+    _ = n(388032),
+    f = n(556921);
 function p(e, t, n) {
     return (
         t in e
@@ -61,14 +61,14 @@ function m(e) {
         E = i.useMemo(
             () =>
                 3 === p.length
-                    ? f.intl.formatToPlainString(f.t.c7ETJC, { username: m(p[2]) })
+                    ? _.intl.formatToPlainString(_.t.c7ETJC, { username: m(p[2]) })
                     : 2 === p.length
-                      ? f.intl.formatToPlainString(f.t.st8Rh4, {
+                      ? _.intl.formatToPlainString(_.t.st8Rh4, {
                             username: m(p[1]),
                             otherUsername: m(p[0])
                         })
                       : 1 === p.length
-                        ? f.intl.formatToPlainString(f.t.dpjXPD, { username: m(p[0]) })
+                        ? _.intl.formatToPlainString(_.t.dpjXPD, { username: m(p[0]) })
                         : '',
             [p]
         );
@@ -87,14 +87,14 @@ function m(e) {
               });
     }
     return (0, r.jsxs)('div', {
-        className: o()(_.container, n, { [_.v2Container]: c }),
+        className: o()(f.container, n, { [f.v2Container]: c }),
         children: [
             (0, r.jsx)('div', {
-                className: _.iconContainer,
+                className: f.iconContainer,
                 children: h
             }),
             (0, r.jsx)('div', {
-                className: _.textContainer,
+                className: f.textContainer,
                 children: (0, r.jsx)(b, {})
             })
         ]
@@ -111,7 +111,7 @@ function g(e) {
         l.qEK,
         h(
             {
-                className: o()(_.icon, { [_.mask]: n }),
+                className: o()(f.icon, { [f.mask]: n }),
                 src: a,
                 'aria-label': t.username,
                 size: i

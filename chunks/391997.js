@@ -1,5 +1,5 @@
 n.d(t, {
-    p: () => _,
+    p: () => f,
     t: () => p
 });
 var r = n(608748),
@@ -20,8 +20,8 @@ var r = n(608748),
     d = function (e) {
         return void 0 === e && (e = 0), Date.now() + e;
     },
-    f = !1,
-    _ = new ((function () {
+    _ = !1,
+    f = new ((function () {
         function e() {
             var e = this;
             (this.stopped = !0),
@@ -32,15 +32,15 @@ var r = n(608748),
         return (
             (e.prototype.run = function (e) {
                 var t = this;
-                if ((void 0 === e && (e = l), !f)) {
-                    f = !0;
+                if ((void 0 === e && (e = l), !_)) {
+                    _ = !0;
                     var n = d(e);
                     (0, a.p)(function () {
                         var i = !1;
                         try {
                             i = (0, r.N)();
                         } finally {
-                            if (((f = !1), (e = n - d()), !s())) return;
+                            if (((_ = !1), (e = n - d()), !s())) return;
                             i ? t.run(1000) : e > 0 ? t.run(e) : t.start();
                         }
                     });
@@ -79,5 +79,5 @@ var r = n(608748),
         );
     })())(),
     p = function (e) {
-        !o && e > 0 && _.start(), (o += e) || _.stop();
+        !o && e > 0 && f.start(), (o += e) || f.stop();
     };

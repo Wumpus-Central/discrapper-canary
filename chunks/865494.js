@@ -7,8 +7,8 @@ var r = n(48657),
     c = n(914331),
     u = n(480296),
     d = n(533610),
-    f = n(800054),
-    _ = Array;
+    _ = n(800054),
+    f = Array;
 e.exports = function (e) {
     var t,
         n,
@@ -22,9 +22,9 @@ e.exports = function (e) {
         O = y > 1 ? arguments[1] : void 0,
         v = void 0 !== O;
     v && (O = r(O, y > 2 ? arguments[2] : void 0));
-    var I = f(E),
+    var I = _(E),
         T = 0;
-    if (I && !(this === _ && s(I))) for (n = b ? new this() : [], m = (h = d(E, I)).next; !(p = i(m, h)).done; T++) (g = v ? o(h, O, [p.value, T], !0) : p.value), u(n, T, g);
-    else for (t = c(E), n = b ? new this(t) : _(t); t > T; T++) (g = v ? O(E[T], T) : E[T]), u(n, T, g);
+    if (I && !(this === f && s(I))) for (n = b ? new this() : [], m = (h = d(E, I)).next; !(p = i(m, h)).done; T++) (g = v ? o(h, O, [p.value, T], !0) : p.value), u(n, T, g);
+    else for (t = c(E), n = b ? new this(t) : f(t); t > T; T++) (g = v ? O(E[T], T) : E[T]), u(n, T, g);
     return (n.length = T), n;
 };

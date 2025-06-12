@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(666188),
     u = n(372769),
     d = n(523751),
-    f = n(623624),
-    _ = n(290034),
+    _ = n(623624),
+    f = n(290034),
     p = n(340541),
     h = n(271383),
     m = n(594174),
@@ -104,7 +104,7 @@ function N(e) {
                 e.preventDefault(),
                 c &&
                     !i &&
-                    (0, f.f)({
+                    (0, _.f)({
                         guildId: t.id,
                         location: {
                             section: E.jXE.GUILD_HEADER,
@@ -134,7 +134,7 @@ function N(e) {
                     T(v({}, e), {
                         className: y.__invalid_premiumGuildIcon,
                         onClick: p,
-                        children: (0, r.jsx)(_.Z, {
+                        children: (0, r.jsx)(f.Z, {
                             size: a ? 18 : 16,
                             premiumTier: u,
                             iconBackgroundClassName: n ? y.boostedGuildTierIconBackgroundWithVisibleBanner : void 0,
@@ -148,14 +148,14 @@ function N(e) {
 function C(e) {
     let { guild: t, disableColor: n, disableBoostClick: i } = e,
         o = (0, c.Z)(t),
-        f = (0, l.Q3)('GuildStatusBadge'),
-        { entrypoints: _ } = (0, p._k)({ location: 'guild_status_badge' });
+        _ = (0, l.Q3)('GuildStatusBadge'),
+        { entrypoints: f } = (0, p._k)({ location: 'guild_status_badge' });
     return o
         ? (0, r.jsx)('div', {
-              className: a()(y.guildIconV2Container, { [y.invitesRefresh]: _ }),
+              className: a()(y.guildIconV2Container, { [y.invitesRefresh]: f }),
               children: (0, r.jsx)(d.Z, {
                   guild: t,
-                  size: f ? 18 : 16,
+                  size: _ ? 18 : 16,
                   tooltipPosition: 'bottom',
                   tooltipColor: s.ua7.Colors.PRIMARY,
                   className: a()(y.guildBadge, { [y.disableColor]: n }),
@@ -163,10 +163,10 @@ function C(e) {
               })
           })
         : (0, r.jsx)('div', {
-              className: a()(y.guildIconContainer, { [y.invitesRefresh]: _ }),
+              className: a()(y.guildIconContainer, { [y.invitesRefresh]: f }),
               children: (0, r.jsx)(u.Z, {
                   guild: t,
-                  size: f ? 18 : 20,
+                  size: _ ? 18 : 20,
                   tooltipPosition: 'bottom',
                   tooltipColor: s.ua7.Colors.PRIMARY,
                   className: a()(y.guildBadge, { [y.disableColor]: n })

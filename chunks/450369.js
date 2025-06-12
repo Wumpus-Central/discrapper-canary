@@ -34,8 +34,8 @@ var r = n(255367),
     A = n(248400),
     w = n(981631),
     R = n(354459),
-    M = n(820573);
-function k(e) {
+    k = n(820573);
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -94,7 +94,7 @@ let D = 16 / 9,
                 (0, r.jsx)(
                     c.P3F,
                     L(
-                        k(
+                        M(
                             {
                                 innerRef: h,
                                 onContextMenu: (e) => d(n, e)
@@ -110,7 +110,7 @@ let D = 16 / 9,
                                     blocked: m,
                                     ignored: g,
                                     channel: l,
-                                    className: M.tile,
+                                    className: k.tile,
                                     inCall: !0,
                                     inPopout: p,
                                     pulseSpeakingIndicator: !f.enabled,
@@ -153,7 +153,7 @@ let D = 16 / 9,
                 blocked: g,
                 ignored: _,
                 channel: l,
-                className: M.tile,
+                className: k.tile,
                 inCall: !0,
                 inPopout: h,
                 onClick: N,
@@ -200,7 +200,7 @@ let D = 16 / 9,
                                     return (n) =>
                                         (0, r.jsx)(
                                             t,
-                                            L(k({}, n), {
+                                            L(M({}, n), {
                                                 stream: e.stream,
                                                 appContext: p,
                                                 exitFullscreen: () => {},
@@ -235,7 +235,7 @@ let D = 16 / 9,
                                 return (t) =>
                                     (0, r.jsx)(
                                         e,
-                                        L(k({}, t), {
+                                        L(M({}, t), {
                                             user: x,
                                             guildId: y,
                                             channel: l,

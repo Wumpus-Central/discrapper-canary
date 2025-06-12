@@ -8,8 +8,8 @@ var r = n(73800),
     c = n(797610),
     u = n(271383),
     d = n(496675),
-    f = n(246946),
-    _ = n(594174),
+    _ = n(246946),
+    f = n(594174),
     p = n(106824),
     h = n(691841),
     m = n(981631),
@@ -80,18 +80,18 @@ function I(e, t, n) {
             return !1;
         }),
         x = (0, c.Ib)(e.guild, e.channel) && !L && !(0, c.g0)(e.guild),
-        k = (0, a.e7)([u.ZP, _.default], () => {
+        M = (0, a.e7)([u.ZP, f.default], () => {
             var e, t;
-            let n = _.default.getCurrentUser();
+            let n = f.default.getCurrentUser();
             return null != (t = null != C.guild_id && null != n ? (null == (e = u.ZP.getMember(C.guild_id, n.id)) ? void 0 : e.isPending) : null) && t;
         }),
-        { canMentionEveryone: M, hidePersonalInformation: j } = (0, a.cj)(
-            [d.Z, f.Z],
+        { canMentionEveryone: k, hidePersonalInformation: j } = (0, a.cj)(
+            [d.Z, _.Z],
             () => ({
-                canMentionEveryone: C.isPrivate() || k || R === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, C),
-                hidePersonalInformation: f.Z.hidePersonalInformation
+                canMentionEveryone: C.isPrivate() || M || R === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, C),
+                hidePersonalInformation: _.Z.hidePersonalInformation
             }),
-            [C, R, k]
+            [C, R, M]
         ),
         { activeCommand: U, activeCommandOption: G } = (0, a.cj)([s.Z], () => ({
             activeCommand: s.Z.getActiveCommand(C.id),
@@ -103,25 +103,25 @@ function I(e, t, n) {
             state: P,
             onFocus: (e) => Z.setSelectedIndex(e)
         }),
-        F = null == (b = e.editorRef.current) ? void 0 : b.getCurrentWord(),
-        V = v(y({}, e), {
+        V = null == (b = e.editorRef.current) ? void 0 : b.getCurrentWord(),
+        F = v(y({}, e), {
             navigator: B,
             activeCommand: U,
             activeCommandOption: G,
             canMentionUsers: null != (S = null == (O = R.users) ? void 0 : O.allowMentioning) && S,
-            canMentionEveryone: M,
+            canMentionEveryone: k,
             canMentionClyde: x,
             hidePersonalInformation: j,
             hideMentionDescription: R === l.Ie.RULES_INPUT,
             emojiIntention: R === l.Ie.RULES_INPUT ? E.Hz.COMMUNITY_CONTENT : E.Hz.CHAT,
-            currentWord: null != (A = null == F ? void 0 : F.word) ? A : '',
-            currentWordIsAtStart: (null == F ? void 0 : F.isAtStart) === !0,
+            currentWord: null != (A = null == V ? void 0 : V.word) ? A : '',
+            currentWordIsAtStart: (null == V ? void 0 : V.isAtStart) === !0,
             optionText: null != G ? (0, o.KF)({ [G.name]: null != (N = null == (I = e.editorRef.current) ? void 0 : I.getCurrentCommandOptionValue()) ? N : [] }, G.name) : ''
         }),
-        [Z] = r.useState(() => new p.Z(V));
+        [Z] = r.useState(() => new p.Z(F));
     return (
         r.useEffect(() => {
-            Z.updateProps(V);
+            Z.updateProps(F);
         }),
         r.useImperativeHandle(t, () => Z, [Z]),
         r.useEffect(() => {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(539854);
+n.d(t, { Z: () => f }), n(539854);
 var r,
     i = n(512722),
     a = n.n(i),
@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,9 +57,9 @@ function f(e, t) {
         e
     );
 }
-class _ extends (r = o.ZP.Store) {
+class f extends (r = o.ZP.Store) {
     static clearAll() {
-        _.allStores.forEach((e) => e.clear());
+        f.allStores.forEach((e) => e.clear());
     }
     get persistKey() {
         return ''.concat(this.getClass().displayName, '-snapshot');
@@ -80,7 +80,7 @@ class _ extends (r = o.ZP.Store) {
     constructor(e, t) {
         super(
             l.Z,
-            f(u({}, e), {
+            _(u({}, e), {
                 CLEAR_CACHES: () => (this.clear(), !1),
                 WRITE_CACHES: () => (this.save(), !1)
             }),
@@ -89,7 +89,7 @@ class _ extends (r = o.ZP.Store) {
             a()(null != this.getClass().displayName, 'Snapshot stores need a display name'),
             a()(!('CLEAR_CACHES' in e), "SnapshotStores cannot use the 'CLEAR_CACHES' action"),
             a()(!('WRITE_CACHES' in e), "SnapshotStores cannot use the 'WRITE_CACHES' action"),
-            _.allStores.push(this);
+            f.allStores.push(this);
     }
 }
-c(_, 'allStores', []);
+c(f, 'allStores', []);

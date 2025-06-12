@@ -20,8 +20,8 @@ var r = n(255367),
     x = n(594174),
     v = n(626135),
     O = n(74538),
-    C = n(453070),
-    j = n(926491),
+    j = n(453070),
+    C = n(926491),
     S = n(378233),
     I = n(419922),
     N = n(688179),
@@ -116,13 +116,13 @@ function U(e) {
 }
 let F = (e) => {
         let { closePopout: t, sticker: n, channel: l, refreshPositionKey: a } = e,
-            [c, u, p] = (0, o.Wu)([j.Z], () => [j.Z.getStickerPack(n.pack_id), !j.Z.hasLoadedStickerPacks, j.Z.isPremiumPack(n.pack_id)], [n]),
+            [c, u, p] = (0, o.Wu)([C.Z], () => [C.Z.getStickerPack(n.pack_id), !C.Z.hasLoadedStickerPacks, C.Z.isPremiumPack(n.pack_id)], [n]),
             m = L({
                 sticker: n,
                 stickerPack: c
             });
-        (0, C.Pq)(n.pack_id);
-        let f = (0, C.Sd)(l),
+        (0, j.Pq)(n.pack_id);
+        let f = (0, j.Sd)(l),
             h = {
                 refreshPositionKey: a,
                 channel: l
@@ -203,7 +203,7 @@ let F = (e) => {
     B = (e) => {
         let t,
             { sticker: n, channel: l, closePopout: m, refreshPositionKey: b } = e,
-            [C, j] = i.useState(null),
+            [j, C] = i.useState(null),
             [S, N] = i.useState(!1),
             D = x.default.getCurrentUser(),
             L = O.ZP.canUseCustomStickersEverywhere(D),
@@ -230,11 +230,11 @@ let F = (e) => {
             i.useEffect(() => {
                 let { stickerSourceGuild: e } = X.current;
                 (async () => {
-                    (null == e || e.hasFeature(T.oNc.DISCOVERABLE)) && j(await (0, h.Z)(n.id)), N(!0);
+                    (null == e || e.hasFeature(T.oNc.DISCOVERABLE)) && C(await (0, h.Z)(n.id)), N(!0);
                 })();
             }, [n.id, B]);
         let q = n.guild_id === l.getGuildId(),
-            Q = null != C,
+            Q = null != j,
             J = !1,
             $ = 'Custom Sticker Popout';
         L
@@ -253,7 +253,7 @@ let F = (e) => {
         return (i.useEffect(() => {
             let { refreshPositionKey: e } = X.current;
             e();
-        }, [S, C]),
+        }, [S, j]),
         (0, u.ZP)(() => {
             v.default.track(T.rMx.OPEN_POPOUT, R({ type: $ }, K));
         }),
@@ -263,9 +263,9 @@ let F = (e) => {
                   children: [
                       (() => {
                           let e = async () => {
-                              if (null == C || B) return;
+                              if (null == j || B) return;
                               m();
-                              let e = C.id;
+                              let e = j.id;
                               try {
                                   await c.Z.joinGuild(e), c.Z.transitionToGuildSync(e);
                               } catch (e) {}
@@ -285,7 +285,7 @@ let F = (e) => {
                                           fullWidth: !0,
                                           textOptions: { textOverride: A.intl.string(A.t['gl/XHB']) },
                                           onSubscribeModalClose: (t) => (t ? e() : m()),
-                                          postSuccessGuild: B || null == C ? void 0 : C,
+                                          postSuccessGuild: B || null == j ? void 0 : j,
                                           premiumModalAnalyticsLocation: W
                                       }),
                                   ee &&
@@ -299,15 +299,15 @@ let F = (e) => {
                               ]
                           });
                       })(),
-                      (null != F || null != C) &&
+                      (null != F || null != j) &&
                           (() => {
                               var e;
                               if (!Q && !B) return;
-                              let t = (null != (e = null == C ? void 0 : C.stickers) ? e : [])
+                              let t = (null != (e = null == j ? void 0 : j.stickers) ? e : [])
                                       .slice(0, 13)
                                       .filter((e) => e.id !== n.id)
                                       .slice(0, 12),
-                                  i = null != C ? f.JO.createFromDiscoverableGuild(C) : f.JO.createFromGuildRecord(F);
+                                  i = null != j ? f.JO.createFromDiscoverableGuild(j) : f.JO.createFromGuildRecord(F);
                               return (0, r.jsxs)('div', {
                                   className: Z.guildSection,
                                   children: [
@@ -434,7 +434,7 @@ function G(e) {
 }
 let H = (e) => {
     let { renderableSticker: t, channel: n, closePopout: i, refreshPositionKey: l } = e,
-        [a, o] = (0, C.XW)(t, !0);
+        [a, o] = (0, j.XW)(t, !0);
     return null != a && (0, S.jl)(a)
         ? (0, r.jsx)(F, {
               sticker: a,

@@ -28,8 +28,8 @@ var r = n(544891),
     c = n(893776),
     u = n(981631),
     d = n(792101),
-    f = n(388032);
-function _(e, t, n) {
+    _ = n(388032);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -53,7 +53,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
@@ -65,7 +65,7 @@ function m() {
     o.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_CLOSE' });
 }
 function g(e, t) {
-    let n = t ? f.intl.string(f.t['8lQ2ra']) : f.intl.string(f.t.jf5GGR),
+    let n = t ? _.intl.string(_.t['8lQ2ra']) : _.intl.string(_.t.jf5GGR),
         i = t ? u.ANM.DELETE_ACCOUNT : u.ANM.DISABLE_ACCOUNT,
         a = (t) =>
             r.tn.post({
@@ -113,7 +113,7 @@ async function E(e) {
     );
 }
 function b(e) {
-    let { username: t, discriminator: n, email: r, emailToken: a, password: s, avatar: c, avatarDescription: _, avatarId: h, avatarDecoration: m, newPassword: g, globalName: b, legacyUsername: y, nameplate: O, primaryGuildId: v } = e;
+    let { username: t, discriminator: n, email: r, emailToken: a, password: s, avatar: c, avatarDescription: f, avatarId: h, avatarDecoration: m, newPassword: g, globalName: b, legacyUsername: y, nameplate: O, primaryGuildId: v } = e;
     return (
         o.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT' }),
         (0, l.Z)(
@@ -125,7 +125,7 @@ function b(e) {
                         email_token: a,
                         password: s,
                         avatar: c,
-                        avatar_description: _,
+                        avatar_description: f,
                         avatar_id: h,
                         discriminator: n,
                         global_name: b,
@@ -136,14 +136,14 @@ function b(e) {
                 );
                 null === m && (o.avatar_decoration_id = null), null != m && ((o.avatar_decoration_id = m.id), (o.avatar_decoration_sku_id = m.skuId)), null === O && (o.nameplate_id = null), null != O && ((o.nameplate_id = O.id), (o.nameplate_sku_id = O.skuId)), void 0 !== v && (o.primary_guild_id = v);
                 let l = i.K.get(u.JkL),
-                    f = (0, d.xJ)();
-                null != f && null != l && ((o.push_provider = f), (o.push_token = l));
+                    _ = (0, d.xJ)();
+                null != _ && null != l && ((o.push_provider = _), (o.push_token = l));
                 let I = i.K.get(u.scU);
                 return null != d.mv && null != I && ((o.push_voip_provider = d.mv), (o.push_voip_token = I)), E(o);
             },
             {
                 checkEnabled: !1,
-                modalProps: { title: f.intl.string(f.t.clQc1d) },
+                modalProps: { title: _.intl.string(_.t.clQc1d) },
                 hooks: {
                     onEarlyClose: () =>
                         o.Z.dispatch({
@@ -177,7 +177,7 @@ function O(e) {
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR',
         avatar: e
     }),
-        null == e ? a.uv.announce(f.intl.string(f.t['f1+oNj'])) : a.uv.announce(f.intl.string(f.t.NstziY));
+        null == e ? a.uv.announce(_.intl.string(_.t['f1+oNj'])) : a.uv.announce(_.intl.string(_.t.NstziY));
 }
 function v(e) {
     o.Z.dispatch({

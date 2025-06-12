@@ -9,15 +9,15 @@ var i = n(120356),
 function c(e) {
     var t;
     let { name: n, className: i, state: c, isInline: u, onClick: d } = e,
-        f = n + (u ? ':' : ''),
-        _ = null,
+        _ = n + (u ? ':' : ''),
+        f = null,
         p = s.Z.Colors.HEADER_PRIMARY;
-    (null == c ? void 0 : c.isActive) && !u ? (_ = l.active) : (null == c || null == (t = c.lastValidationResult) ? void 0 : t.success) === !1 ? (_ = l.error) : (null == c ? void 0 : c.hasValue) && !u && (_ = l.set);
+    (null == c ? void 0 : c.isActive) && !u ? (f = l.active) : (null == c || null == (t = c.lastValidationResult) ? void 0 : t.success) === !1 ? (f = l.error) : (null == c ? void 0 : c.hasValue) && !u && (f = l.set);
     let h = (0, r.jsx)(s.Z, {
         size: u ? s.Z.Sizes.SIZE_16 : s.Z.Sizes.SIZE_14,
         color: p,
-        className: a()(l.option, { [l.inline]: u }, _, i),
-        children: f
+        className: a()(l.option, { [l.inline]: u }, f, i),
+        children: _
     });
     return null == d
         ? h

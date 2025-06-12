@@ -24,7 +24,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -57,7 +57,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -100,21 +100,21 @@ function E(e) {
 }
 function b(e) {
     var t, n;
-    let { image: i, smallImage: d, aspectRatio: _, onClick: m, size: b, className: y } = e,
+    let { image: i, smallImage: d, aspectRatio: f, onClick: m, size: b, className: y } = e,
         { imageSize: O, smallImageSize: v, mask: I } = g[b];
     if (null == i)
         return (0, r.jsx)(l.f, {
             src: void 0,
             alt: c.intl.string(c.t['2B/phI']),
             size: O,
-            className: a()(u.contentImage, h[null != _ ? _ : 'default'], y),
+            className: a()(u.contentImage, h[null != f ? f : 'default'], y),
             constrain: 'width'
         });
     let T = (0, r.jsx)(l.f, {
         src: i.src,
         alt: null != (n = null != (t = i.alt) ? t : i.text) ? n : c.intl.string(c.t['2B/phI']),
         size: O,
-        className: a()(u.contentImage, h[null != _ ? _ : 'default']),
+        className: a()(u.contentImage, h[null != f ? f : 'default']),
         constrain: 'width'
     });
     return (0, r.jsxs)('div', {
@@ -129,7 +129,7 @@ function b(e) {
                             null != d
                                 ? (0, r.jsx)(
                                       s.ZP,
-                                      p(f({}, e), {
+                                      p(_({}, e), {
                                           className: u.imageContainer,
                                           mask: I,
                                           width: O,
@@ -139,7 +139,7 @@ function b(e) {
                                   )
                                 : (0, r.jsx)(
                                       'div',
-                                      p(f({}, e), {
+                                      p(_({}, e), {
                                           className: u.imageContainer,
                                           children: T
                                       })
@@ -153,7 +153,7 @@ function b(e) {
                         var t;
                         return (0, r.jsx)(
                             'div',
-                            p(f({}, e), {
+                            p(_({}, e), {
                                 className: u.smallImageContainer,
                                 children: (0, r.jsx)(l.f, {
                                     src: d.src,

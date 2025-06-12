@@ -20,8 +20,8 @@ var r = n(255367),
     x = n(359110),
     v = n(726033),
     O = n(496675),
-    C = n(594174),
-    j = n(5192),
+    j = n(594174),
+    C = n(5192),
     S = n(51144),
     I = n(937889),
     N = n(739566),
@@ -200,13 +200,13 @@ function q(e, t) {
 }
 function Q(e) {
     let { alertAction: t, guildId: n } = e,
-        i = (0, d.e7)([C.default], () => C.default.getUser(t.actor), [t.actor]);
+        i = (0, d.e7)([j.default], () => j.default.getUser(t.actor), [t.actor]);
     try {
         let e = parseInt(t.actionType);
         if (null == i) return q(e, {});
         let l = (function (e, t, n) {
             var r;
-            let i = null != (r = j.ZP.getNickname(n, null, t)) ? r : S.ZP.getUserTag(t),
+            let i = null != (r = C.ZP.getNickname(n, null, t)) ? r : S.ZP.getUserTag(t),
                 l = s()(e.ts),
                 a = ''.concat(i, ' ').concat(l.fromNow());
             try {
@@ -277,9 +277,9 @@ let $ = i.memo(function (e) {
             ),
             c
         ),
-        m = C.default.getUser(o),
+        m = j.default.getUser(o),
         f = W(n, i),
-        h = K(i, m, C.default.getCurrentUser());
+        h = K(i, m, j.default.getCurrentUser());
     if (null != m) {
         let e = (0, N.ij)(m, i),
             r = (0, A.CF)(
@@ -324,7 +324,7 @@ function ee(e) {
     let { id: n, compact: l, message: o, channel: s } = e,
         {
             avatarSrc: v,
-            eventHandlers: { onMouseEnter: C, onMouseLeave: j }
+            eventHandlers: { onMouseEnter: j, onMouseLeave: C }
         } = (0, k.m)(!0),
         S = (0, c.JA)(null != n ? n : ''),
         { onFocus: N } = S,
@@ -367,8 +367,8 @@ function ee(e) {
         ev = o.embeds.length > 0 ? (null == (t = o.embeds[0].fields.find((e) => 'channel_id' === e.rawName)) ? void 0 : t.rawValue) : null,
         eO = null != ev;
     return (0, r.jsx)('div', {
-        onMouseEnter: C,
-        onMouseLeave: j,
+        onMouseEnter: j,
+        onMouseLeave: C,
         children: (0, r.jsx)(D.Z, {
             className: a()(G.mainContainer, { [G.compact]: l }),
             iconNode: l ? null : (0, r.jsx)(k.S, { src: v }),

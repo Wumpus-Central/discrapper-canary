@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r,
     i = n(255367),
     a = n(73800),
@@ -20,10 +20,10 @@ function d(e, t, n) {
         e
     );
 }
-class f extends (r = a.PureComponent) {
+class _ extends (r = a.PureComponent) {
     render() {
         var e;
-        let { title: t, actionText: n, children: r, error: o, isLoading: d, maxLength: f, transitionState: _, helpMessage: p, retryPrompt: h, retrySuccessMessage: m } = this.props,
+        let { title: t, actionText: n, children: r, error: o, isLoading: d, maxLength: _, transitionState: f, helpMessage: p, retryPrompt: h, retrySuccessMessage: m } = this.props,
             { code: g, errorMessage: E, retrySuccess: b } = this.state,
             y =
                 a.Children.count(r) > 0
@@ -62,7 +62,7 @@ class f extends (r = a.PureComponent) {
                   })
                 : null;
         return (0, i.jsx)(l.Y0X, {
-            transitionState: _,
+            transitionState: f,
             parentComponent: 'MFAConfirm',
             children: (0, i.jsxs)('form', {
                 onSubmit: this.handleSubmit,
@@ -94,7 +94,7 @@ class f extends (r = a.PureComponent) {
                                         inputRef: this.setRef,
                                         onChange: this.handleCodeChange,
                                         placeholder: null != (e = this.getPlaceholder()) ? e : void 0,
-                                        maxLength: null != f ? f : 10,
+                                        maxLength: null != _ ? _ : 10,
                                         value: g,
                                         autoComplete: 'one-time-code',
                                         autoFocus: !0
@@ -173,11 +173,11 @@ class f extends (r = a.PureComponent) {
             });
     }
 }
-d(f, 'defaultProps', {
+d(_, 'defaultProps', {
     btnClass: '',
     isLoading: !1,
     disallowBackupCodes: !1,
     error: null,
     forceNoPlaceholder: !1
 });
-let _ = f;
+let f = _;

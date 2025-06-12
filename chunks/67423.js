@@ -1,10 +1,10 @@
 n.d(t, {
-    B_: () => _,
+    B_: () => f,
     Lm: () => c,
     Ol: () => u,
     P4: () => d,
     Tk: () => m,
-    cO: () => f,
+    cO: () => _,
     cj: () => o,
     qi: () => h,
     qu: () => p
@@ -43,10 +43,10 @@ function d(e, t) {
         .add(t.next())
         .toString();
 }
-function f(e) {
+function _(e) {
     return u(c(e) - 1);
 }
-function _(e) {
+function f(e) {
     return Date.now() - c(e);
 }
 function p(e, t) {

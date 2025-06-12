@@ -13,8 +13,8 @@ var r = n(933557),
     c = n(984933),
     u = n(271383),
     d = n(430824),
-    f = n(594174),
-    _ = n(483360),
+    _ = n(594174),
+    f = n(483360),
     p = n(709054),
     h = n(752305),
     m = n(377668);
@@ -37,7 +37,7 @@ function E(e, t, n, r) {
 function b(e, t, n, r, a) {
     let [o, s] = e.slice(1).split('#', 2),
         c = null != t ? d.Z.getGuild(t) : null,
-        f = (0, i.M9)(c);
+        _ = (0, i.M9)(c);
     if (a && null == s && null != c) {
         for (let e of Object.values(d.Z.getRoles(c.id)))
             if (o === e.name)
@@ -66,7 +66,7 @@ function b(e, t, n, r, a) {
                             userId: e,
                             children: [{ text: '' }]
                         };
-                if (f && y(o, s, m.fL))
+                if (_ && y(o, s, m.fL))
                     return {
                         type: 'userMention',
                         userId: m.fL,
@@ -77,7 +77,7 @@ function b(e, t, n, r, a) {
     return null;
 }
 function y(e, t, n) {
-    let r = f.default.getUser(n);
+    let r = _.default.getUser(n);
     return null != r && ((n === m.fL && 'clyde' === e.toLowerCase()) || (r.username === e && r.discriminator === (null != t ? t : '0')));
 }
 function O(e, t) {
@@ -92,7 +92,7 @@ function O(e, t) {
                 channelId: e,
                 children: [{ text: '' }]
             };
-    for (let e of _.k1)
+    for (let e of f.k1)
         if (e !== c.sH) {
             for (let { channel: r } of c.ZP.getChannels(t)[e])
                 if (r.name === n)

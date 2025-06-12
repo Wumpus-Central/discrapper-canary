@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685), n(997841);
+n.d(t, { Z: () => k }), n(388685), n(997841);
 var r = n(570140),
     i = n(430742),
     l = n(904245),
@@ -72,10 +72,10 @@ function R(e, t) {
         e
     );
 }
-let M = {
+let k = {
     uploadFiles: async function (e) {
-        var t, n, S, M;
-        let k,
+        var t, n, S, k;
+        let M,
             { channelId: L, uploads: D, draftType: U, parsedMessage: B, options: F = {}, raiseEndpointErrors: G = !1 } = e,
             H = new u.Z(T.ANM.MESSAGES(L)),
             V = new N.o(),
@@ -96,7 +96,7 @@ let M = {
             K = (0, f.ZP)({
                 channelId: L,
                 content: z.content,
-                tts: null != (M = null == B ? void 0 : B.tts) && M,
+                tts: null != (k = null == B ? void 0 : B.tts) && k,
                 type: z.type,
                 messageReference: z.message_reference,
                 flags: z.flags,
@@ -106,12 +106,12 @@ let M = {
         return (
             (z.nonce = q),
             H.on('start', (e) => {
-                (k = (0, h.e5)(R(w({}, K), { id: e.id }))),
+                (M = (0, h.e5)(R(w({}, K), { id: e.id }))),
                     r.Z.dispatch({
                         type: 'UPLOAD_START',
                         channelId: L,
                         file: e,
-                        message: k,
+                        message: M,
                         uploader: H
                     });
             }),
@@ -128,7 +128,7 @@ let M = {
                         type: 'UPLOAD_FAIL',
                         channelId: L,
                         file: e,
-                        messageId: null == k ? void 0 : k.id
+                        messageId: null == M ? void 0 : M.id
                     }),
                     (0, g.x)({
                         fileItems: e.items,
@@ -144,11 +144,11 @@ let M = {
                             message: null == n ? void 0 : n.message
                         },
                         r =
-                            null == k
+                            null == M
                                 ? null
                                 : {
                                       type: c.$V.SEND,
-                                      message: R(w({}, k), { channelId: L })
+                                      message: R(w({}, M), { channelId: L })
                                   };
                     (0, o.openUploadError)({
                         title: A.intl.string(A.t.B3vFdX),

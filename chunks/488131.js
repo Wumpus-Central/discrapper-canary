@@ -13,8 +13,8 @@ var r = n(512722),
     c = n(40851),
     u = n(367907),
     d = n(727429),
-    f = n(927723),
-    _ = n(982168),
+    _ = n(927723),
+    f = n(982168),
     p = n(703656),
     h = n(359110),
     m = n(695346),
@@ -26,7 +26,7 @@ var r = n(512722),
     v = n(981631),
     I = n(176505);
 function T(e, t, n) {
-    if (!(0, _.WF)(e.id)) return void (0, f.V)();
+    if (!(0, f.WF)(e.id)) return void (0, _.V)();
     c.UI.dispatch(v.CkL.POPOUT_CLOSE);
     let r = !o().isEmpty(b.Z.getVoiceStatesForChannel(e.id));
     if (t || !m.vF.getSetting() || __OVERLAY__ || r) {

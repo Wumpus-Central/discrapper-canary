@@ -1,6 +1,6 @@
 n.d(t, {
-    T: () => f,
-    z: () => _
+    T: () => _,
+    z: () => f
 });
 var r = n(493683),
     i = n(529103),
@@ -25,7 +25,7 @@ function d(e, t, n) {
         }
     );
 }
-function f(e) {
+function _(e) {
     d(e, u.intl.string(u.t['t3+Af3']), () => {
         {
             let { openUserProfileModal: t } = n(892001);
@@ -37,7 +37,7 @@ function f(e) {
         (0, s.uL)(c.Z5c.FRIENDS), i.Z.setSection(c.pJs.PENDING);
     });
 }
-function _(e) {
+function f(e) {
     d(e, u.intl.string(u.t.MYr3KS), () => {
         r.Z.openPrivateChannel({ recipientIds: e.id });
     });

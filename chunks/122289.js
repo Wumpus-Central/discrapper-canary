@@ -1,8 +1,8 @@
 n.d(t, {
     E2: () => u,
     cn: () => d,
-    g9: () => _,
-    q2: () => f
+    g9: () => f,
+    q2: () => _
 });
 var r = n(751767),
     i = n(960048),
@@ -71,9 +71,9 @@ async function d(e) {
     }
     return t;
 }
-function f(e, t) {
+function _(e, t) {
     i.Z.captureException(e, c(s({}, t), { tags: c(s({}, null == t ? void 0 : t.tags), { app_context: 'billing' }) }));
 }
-function _(e, t) {
+function f(e, t) {
     i.Z.captureMessage(e, c(s({}, t), { tags: c(s({}, null == t ? void 0 : t.tags), { app_context: 'billing' }) }));
 }

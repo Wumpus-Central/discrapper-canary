@@ -5,9 +5,9 @@ var r = n(73800),
 function o(e) {
     let { key: t, isExpanded: n, durationMs: o = 100, minHeightOverride: s, maxHeightOverride: l, maxAnimationHeight: c } = e,
         u = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
-        [d, f] = r.useState(null),
-        _ = r.useCallback(() => {}, []),
-        p = u ? _ : f,
+        [d, _] = r.useState(null),
+        f = r.useCallback(() => {}, []),
+        p = u ? f : _,
         h = r.useRef(null),
         m = r.useRef(null),
         g = r.useRef(t),
@@ -36,15 +36,15 @@ function o(e) {
             if (((g.current = t), null == o || null == s || l)) return;
             let c = Math.min(null != (i = O.current) ? i : s, s),
                 u = n ? o : c,
-                f = n ? c : o;
-            if (u === f) return;
+                _ = n ? c : o;
+            if (u === _) return;
             I(!0), (d.style.height = ''.concat(u, 'px')), (d.style.transition = '');
-            let _ = null;
+            let f = null;
             return (
-                (_ = requestAnimationFrame(() => {
-                    (_ = null), (d.style.height = ''.concat(f, 'px')), (d.style.transition = 'height '.concat(E.current, 'ms ease-in-out'));
+                (f = requestAnimationFrame(() => {
+                    (f = null), (d.style.height = ''.concat(_, 'px')), (d.style.transition = 'height '.concat(E.current, 'ms ease-in-out'));
                 })),
-                () => (null != _ ? cancelAnimationFrame(_) : void 0)
+                () => (null != f ? cancelAnimationFrame(f) : void 0)
             );
         }, [t, d, n]),
         r.useLayoutEffect(() => {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(539854), n(388685);
+n.d(t, { Z: () => f }), n(539854), n(388685);
 var r,
     i = n(348327),
     a = n.n(i),
@@ -27,7 +27,7 @@ function d() {
     }
     return !a()(e, u) && ((u = e), !0);
 }
-class f extends (r = o.ZP.Store) {
+class _ extends (r = o.ZP.Store) {
     initialize() {
         this.syncWith(c, d);
     }
@@ -35,5 +35,5 @@ class f extends (r = o.ZP.Store) {
         return u;
     }
 }
-l(f, 'displayName', 'FirstPartyRichPresenceStore');
-let _ = new f(s.Z);
+l(_, 'displayName', 'FirstPartyRichPresenceStore');
+let f = new _(s.Z);

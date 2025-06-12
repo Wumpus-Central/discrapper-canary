@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(442837),
     i = n(570140),
     a = n(710845),
@@ -20,7 +20,7 @@ function l(e, t, n) {
 let c = new a.Z('FileSystemStore'),
     u = 1048576,
     d = 10 * o.Z.Millis.MINUTE;
-class f extends r.ZP.Store {
+class _ extends r.ZP.Store {
     handlePostConnectionOpen() {
         return this.refresh(), !1;
     }
@@ -48,4 +48,4 @@ class f extends r.ZP.Store {
             setInterval(() => this.refresh(), d);
     }
 }
-let _ = new f();
+let f = new _();

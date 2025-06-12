@@ -13,8 +13,8 @@ var r = n(255367),
     c = n(219929),
     u = n(626135),
     d = n(526167),
-    f = n(358085),
-    _ = n(622999),
+    _ = n(358085),
+    f = n(622999),
     p = n(981631),
     h = n(388032),
     m = n(844424);
@@ -99,10 +99,10 @@ let I = new l.Z('PaymentRequest'),
     });
 class S extends i.Component {
     componentDidMount() {
-        if (!(0, f.isDesktop)()) {
+        if (!(0, _.isDesktop)()) {
             if (!this.isBrowserCompatible()) return void this.onPaymentRequestFailure();
             (this.disableWallets = T.filter((e) => e !== this.paymentRequestWallet).sort()),
-                (0, _.d2)().then((e) => {
+                (0, f.d2)().then((e) => {
                     this.initPaymentRequest(e);
                 });
         }
@@ -223,11 +223,11 @@ class S extends i.Component {
             : this.renderButton({
                   iconType: c.ZP.Types.PAYMENT_REQUEST,
                   buttonText: h.intl.string(h.t.f19PPT),
-                  submitting: !(0, f.isDesktop)() && this.state.submitting
+                  submitting: !(0, _.isDesktop)() && this.state.submitting
               });
     }
     render() {
-        if ((0, f.isDesktop)()) return this.renderMain();
+        if ((0, _.isDesktop)()) return this.renderMain();
         if (this.state.submitting) return this.props.loadingComponent;
         let { available: e } = this.validatePaymentRequest();
         return e ? this.renderMain() : null;
@@ -285,7 +285,7 @@ class S extends i.Component {
                 );
             }),
             g(this, 'attemptPaymentRequest', () => {
-                if ((0, f.isDesktop)()) return void this.props.onChooseType(p.HeQ.PAYMENT_REQUEST, this.paymentRequestWallet);
+                if ((0, _.isDesktop)()) return void this.props.onChooseType(p.HeQ.PAYMENT_REQUEST, this.paymentRequestWallet);
                 let { available: e } = this.validatePaymentRequest();
                 if (!e) return void this.onPaymentRequestFailure();
                 let { paymentRequest: t } = this.state;
@@ -357,7 +357,7 @@ class A extends S {
             : this.renderButton({
                   iconType: c.ZP.Types.G_PAY,
                   buttonText: h.intl.string(h.t.p2jr2N),
-                  submitting: !(0, f.isDesktop)() && this.state.submitting
+                  submitting: !(0, _.isDesktop)() && this.state.submitting
               });
     }
     constructor(...e) {
@@ -428,7 +428,7 @@ class N extends S {
             : this.renderButton({
                   iconType: c.ZP.Types.APPLE_LIGHT,
                   buttonText: h.intl.string(h.t.xdGS1t),
-                  submitting: !(0, f.isDesktop)() && this.state.submitting
+                  submitting: !(0, _.isDesktop)() && this.state.submitting
               });
     }
     constructor(...e) {

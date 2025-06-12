@@ -1,6 +1,6 @@
 n.d(t, {
-    X: () => _,
-    e: () => f
+    X: () => f,
+    e: () => _
 });
 var r = n(259443),
     i = n(128813);
@@ -21,7 +21,7 @@ function u(e) {
 function d(e) {
     o.trace(e);
 }
-function f() {
+function _() {
     return (
         null == a &&
             (a = (async () => {
@@ -32,6 +32,6 @@ function f() {
         a
     );
 }
-function _() {
+function f() {
     return void 0 !== window._libdiscoreWasm;
 }

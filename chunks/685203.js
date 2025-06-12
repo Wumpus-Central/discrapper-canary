@@ -57,18 +57,18 @@ function d(e, t) {
         e
     );
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -83,7 +83,7 @@ function p(e) {
         text: l,
         children: (e) => {
             var { onClick: l } = e,
-                u = f(e, ['onClick']);
+                u = _(e, ['onClick']);
             return (0, r.jsx)(
                 o.zxk,
                 d(c({}, u), {

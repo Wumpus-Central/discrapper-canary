@@ -1,7 +1,7 @@
 n.d(t, {
     Bg: () => G,
     E5: () => et,
-    Fp: () => V,
+    Fp: () => F,
     JT: () => ee,
     L2: () => q,
     MY: () => j,
@@ -15,7 +15,7 @@ n.d(t, {
     e$: () => J,
     iM: () => Q,
     pO: () => U,
-    xr: () => M,
+    xr: () => k,
     z2: () => $
 }),
     n(388685),
@@ -34,8 +34,8 @@ var r = n(278074),
     c = n(912788),
     u = n(594174),
     d = n(626135),
-    f = n(823379),
-    _ = n(74538),
+    _ = n(823379),
+    f = n(74538),
     p = n(226951),
     h = n(73346),
     m = n(981631),
@@ -88,8 +88,8 @@ let O = ['discordapp.com/gifts', 'discord.com/gifts'],
     D = 'WUMP-?',
     L = [R, P, w, '[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}'].join('|'),
     x = new RegExp('^('.concat(D, ')?(').concat(L, ')$')),
-    k = '-';
-var M = (function (e) {
+    M = '-';
+var k = (function (e) {
     return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.CUSTOM_STYLE = 1)] = 'CUSTOM_STYLE'), (e[(e.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD = 2)] = 'CUSTOM_MESSAGE_EMOJI_SOUNDBOARD'), e;
 })({});
 let j = (e, t) => (i.tq || i.Em ? 0 : null != e || t ? 2 : 1),
@@ -110,16 +110,16 @@ function B(e) {
         giftStyle: '' !== r && null != r ? Number.parseInt(r) : void 0
     };
 }
-function F(e) {
+function V(e) {
     return e.replace(/[^A-Za-z0-9]/g, '');
 }
-let V = (e) => (null == e ? void 0 : e.type) === m.uaV.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === m.hBH.GIFT,
+let F = (e) => (null == e ? void 0 : e.type) === m.uaV.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === m.hBH.GIFT,
     Z = (e) => {
         let t;
         if (null == e || l.l.getCurrentConfig({ location: 'findGiftCodes' }).enabled) return [];
         let n = new Set();
-        for (; null != (t = T.exec(e)) && n.size < v; ) n.add(F(t[1]));
-        for (; null != (t = A.exec(e)) && n.size < v; ) n.add(F(t[t.length - 1]));
+        for (; null != (t = T.exec(e)) && n.size < v; ) n.add(V(t[1]));
+        for (; null != (t = A.exec(e)) && n.size < v; ) n.add(V(t[t.length - 1]));
         return Array.from(n);
     };
 function H() {
@@ -263,14 +263,14 @@ function J(e, t, n, r, i) {
 function $(e, t, n) {
     let r = t.applicationId,
         i = e.length > 0 ? e : [r],
-        a = i.map((e) => n.getLibraryApplication(r, e, !0)).filter(f.lm);
+        a = i.map((e) => n.getLibraryApplication(r, e, !0)).filter(_.lm);
     return a.length === i.length ? a[0] : null;
 }
 function ee(e) {
     let t = e.trim().split('/').pop().match(x);
     if (null == t) return null;
     let [n, r, i] = t;
-    return null == i ? null : i.replace(RegExp(k, 'g'), '');
+    return null == i ? null : i.replace(RegExp(M, 'g'), '');
 }
 let et = (e, t) =>
     (0, a.e7)([c.Z], () => {
@@ -289,7 +289,7 @@ function en(e, t) {
         case m.evJ.UNKNOWN_GIFT_CODE:
             return E.intl.string(E.t.roztIi);
         case m.evJ.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE:
-            return E.intl.formatToPlainString(E.t['4YTHKy'], { planName: (0, _.M5)(t, g.p9.TIER_2) ? E.intl.string(E.t['lG6a5+']) : E.intl.string(E.t['FSOz7+']) });
+            return E.intl.formatToPlainString(E.t['4YTHKy'], { planName: (0, f.M5)(t, g.p9.TIER_2) ? E.intl.string(E.t['lG6a5+']) : E.intl.string(E.t['FSOz7+']) });
         case m.evJ.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED:
             return E.intl.string(E.t['9i1J39']);
         case m.evJ.INVALID_GIFT_REDEMPTION_INVOICE_OPEN:

@@ -3,7 +3,7 @@ n.d(t, {
     FT: () => b,
     In: () => d,
     Ju: () => E,
-    U6: () => _,
+    U6: () => f,
     iV: () => h,
     jT: () => g,
     y5: () => p
@@ -33,7 +33,7 @@ function d(e) {
         location: a
     });
 }
-function f(e) {
+function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = o.Z.getChannel(e);
@@ -57,8 +57,8 @@ function f(e) {
     u))
         d(e, t, n);
 }
-function _(e) {
-    e.isCategory() ? f(e.id, !0, !0) : e.isForumLikeChannel() ? d(e.id, !0, !0, c.default.fromTimestamp(Date.now())) : d(e.id, !0, !0);
+function f(e) {
+    e.isCategory() ? _(e.id, !0, !0) : e.isForumLikeChannel() ? d(e.id, !0, !0, c.default.fromTimestamp(Date.now())) : d(e.id, !0, !0);
 }
 function p(e, t) {
     r.Z.dispatch({

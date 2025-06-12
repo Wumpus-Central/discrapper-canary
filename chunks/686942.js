@@ -2,8 +2,8 @@ n.d(t, {
     Dw: () => m,
     EN: () => i,
     Sk: () => d,
-    Vl: () => f,
-    Vy: () => _,
+    Vl: () => _,
+    Vy: () => f,
     cS: () => h,
     hj: () => a,
     kJ: () => s,
@@ -45,18 +45,18 @@ function d(e, t, n) {
     var r = String(e);
     return ((t >>= 0), r.length > t) ? String(r) : ((t -= r.length) > n.length && (n += c(n, t / n.length)), n.slice(0, t) + String(r));
 }
-var f = function (e, t, n) {
+var _ = function (e, t, n) {
         var r = e.split(t);
         return n ? r.slice(0, n).concat([r.slice(n).join(t)]) : r;
     },
-    _ = function (e, t) {
+    f = function (e, t) {
         var n = e % t;
         return n * t < 0 ? n + t : n;
     },
     p = function (e, t) {
         return {
             div: Math.floor(e / t),
-            mod: _(e, t)
+            mod: f(e, t)
         };
     },
     h = function (e) {

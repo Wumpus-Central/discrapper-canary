@@ -26,8 +26,8 @@ function d(e, t, n) {
     );
 }
 n(334431);
-let f = +s.Z.Millis.HOUR,
-    _ = 3 * s.Z.Millis.DAY;
+let _ = +s.Z.Millis.HOUR,
+    f = 3 * s.Z.Millis.DAY;
 function p(e) {
     let { channelId: t } = e;
     if (null == t) return;
@@ -49,10 +49,10 @@ function h(e) {
     let { state: t } = e;
 }
 function m(e) {
-    return (0, l.Iu)(e) > Date.now() - f;
+    return (0, l.Iu)(e) > Date.now() - _;
 }
 function g(e) {
-    return (0, l.Iu)(e) > Date.now() - _;
+    return (0, l.Iu)(e) > Date.now() - f;
 }
 class E extends r.Z {
     handleBlockedOrIgnoredUserVoiceChannelJoin(e, t) {

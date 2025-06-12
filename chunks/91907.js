@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r = n(255367),
     i = n(73800),
     a = n(793030),
@@ -56,15 +56,15 @@ function d(e, t) {
         e
     );
 }
-function f(e) {
-    let { user: t, text: n, channel: l, textClassName: u, onPopoutClosed: f } = e,
-        _ = i.useMemo(() => [t], [t]),
+function _(e) {
+    let { user: t, text: n, channel: l, textClassName: u, onPopoutClosed: _ } = e,
+        f = i.useMemo(() => [t], [t]),
         p = i.useRef(null);
     return (0, r.jsx)(s.Z, {
         targetElementRef: p,
-        participants: _,
+        participants: f,
         channel: l,
-        onPopoutClosed: f,
+        onPopoutClosed: _,
         children: (e) =>
             (0, r.jsx)(
                 o.Z,

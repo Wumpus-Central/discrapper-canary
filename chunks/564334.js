@@ -42,28 +42,28 @@ function o(e) {
         c = Math.min(a, o, s),
         u = l - c,
         d = (l + c) / 2,
-        f = u > 0 ? u / (1 - Math.abs(2 * d - 1)) : 0;
+        _ = u > 0 ? u / (1 - Math.abs(2 * d - 1)) : 0;
     if (0 === u)
         return {
             hue: 0,
-            saturation: f,
+            saturation: _,
             lightness: d,
             alpha: i
         };
-    let _ = 0;
+    let f = 0;
     switch (l) {
         case a:
-            _ = ((o - s) / u) % 6;
+            f = ((o - s) / u) % 6;
             break;
         case o:
-            _ = (s - a) / u + 2;
+            f = (s - a) / u + 2;
             break;
         case s:
-            _ = (o - s) / u + 4;
+            f = (o - s) / u + 4;
     }
     return {
-        hue: 60 * _,
-        saturation: f,
+        hue: 60 * f,
+        saturation: _,
         lightness: d,
         alpha: i
     };

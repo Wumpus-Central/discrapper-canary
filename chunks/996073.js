@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(73800),
     i = n(442837),
     a = n(230711),
@@ -35,7 +35,7 @@ function d(e) {
     }
     return e;
 }
-let f = Object.freeze({
+let _ = Object.freeze({
         [l.KQ.ProfileCustomizationScrollPositions.TRY_IT_OUT]: c.oAB.PROFILE_CUSTOMIZATION,
         [l.KQ.ProfileCustomizationScrollPositions.GUILD_TAG]: c.oAB.PROFILE_CUSTOMIZATION,
         [l.KQ.AccessibilityScrollPositions.REDUCED_MOTION]: c.oAB.ACCESSIBILITY,
@@ -48,7 +48,7 @@ let f = Object.freeze({
         [l.KQ.ContentAndSocialScrollPositions.EXPLICIT_MEDIA_REDACTION_V2]: c.oAB.CONTENT_AND_SOCIAL,
         [l.KQ.ContentAndSocialScrollPositions.RESTRICTED_ACCOUNTS]: c.oAB.CONTENT_AND_SOCIAL
     }),
-    _ = function (e, t, n) {
+    f = function (e, t, n) {
         let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
             c = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
             u = (0, i.e7)([s.Z], () => s.Z.getScrollPosition());
@@ -58,7 +58,7 @@ let f = Object.freeze({
                 t === u &&
                 setTimeout(() => {
                     let e = requestAnimationFrame(() => {
-                        r.scrollIntoView(d({ behavior: c ? 'auto' : 'smooth' }, n)), a.Z.clearScrollPosition(f[t]);
+                        r.scrollIntoView(d({ behavior: c ? 'auto' : 'smooth' }, n)), a.Z.clearScrollPosition(_[t]);
                     });
                     return () => cancelAnimationFrame(e);
                 }, l);

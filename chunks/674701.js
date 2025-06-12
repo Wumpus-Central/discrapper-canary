@@ -23,8 +23,8 @@ var r,
     x = n(594174),
     v = n(626135),
     O = n(51144),
-    C = n(479446),
-    j = n(795448),
+    j = n(479446),
+    C = n(795448),
     S = n(441623),
     I = n(317271),
     N = n(474936),
@@ -50,7 +50,7 @@ function k(e) {
             }
         });
     }, [t, n]);
-    let H = () => (t === N.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t['L2s/Nz'], { numberOfYears: G }) : (0, C.Ou)(t)),
+    let H = () => (t === N.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t['L2s/Nz'], { numberOfYears: G }) : (0, j.Ou)(t)),
         V = 'coachmark' === n,
         z = V ? Z.innerContentCoachmark : Z.innerContent,
         W = V ? Z.recipientUserAvatarCoachmark : Z.recipientUserAvatar,
@@ -99,12 +99,12 @@ function k(e) {
                                     variant: 'text-md/medium',
                                     color: V ? 'header-primary' : 'always-white',
                                     lineClamp: 3,
-                                    children: t === N.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t.BWJvAA, { friendUserName: O.ZP.getName(r) }) : (0, C.Ou)(t)
+                                    children: t === N.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t.BWJvAA, { friendUserName: O.ZP.getName(r) }) : (0, j.Ou)(t)
                                 }),
                                 (0, i.jsx)(d.Text, {
                                     className: Y,
                                     variant: 'text-sm/normal',
-                                    children: t === N.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t.S3fdq6, { numberOfYears: G }) : (0, C.Ou)(t)
+                                    children: t === N.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t.S3fdq6, { numberOfYears: G }) : (0, j.Ou)(t)
                                 })
                             ]
                         })
@@ -125,7 +125,7 @@ function k(e) {
                                         U === N.X2.VIEW_ALL
                                             ? ((0, y.uL)(T.Z5c.FRIENDS), m.Z.setSection(T.pJs.ALL))
                                             : U === N.X2.SEND_MESSAGE &&
-                                              ((0, j.PV)(r.id),
+                                              ((0, C.PV)(r.id),
                                               p.Z.openPrivateChannel({ recipientIds: r.id }).then(() => {
                                                   setTimeout(() => {
                                                       (0, b.PG)(A.X1.GIF, _.Ie.NORMAL),

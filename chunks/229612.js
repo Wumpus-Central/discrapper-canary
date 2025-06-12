@@ -86,7 +86,7 @@ let h = function (e) {
             let e = [];
             return S && e.push(h), e.push(p), e.every(c.cp);
         }, [S, p, h]),
-        m = i.useCallback(() => {
+        T = i.useCallback(() => {
             x &&
                 (s.ZP.trackWithMetadata(f.rMx.SEARCH_RESULTS_FEEDBACK_SUBMITTED, {
                     rating: t,
@@ -135,7 +135,7 @@ let h = function (e) {
                     }),
                     (0, l.jsx)(u.zxk, {
                         size: u.zxk.Sizes.MEDIUM,
-                        onClick: m,
+                        onClick: T,
                         disabled: !x,
                         children: v.intl.string(v.t['4Zpxtr'])
                     })

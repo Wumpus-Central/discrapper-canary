@@ -26,7 +26,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -59,7 +59,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -94,8 +94,8 @@ function g(e) {
         let u = r[e];
         if (isNaN(u) || u > a) continue;
         let d = s === n - 1,
-            f = e === t.length - 1;
-        if (!(Math.round(l + u + (d && !f ? o + i : 0)) < Math.round(a))) {
+            _ = e === t.length - 1;
+        if (!(Math.round(l + u + (d && !_ ? o + i : 0)) < Math.round(a))) {
             if (d) break;
             s++, (l = 0);
         }
@@ -110,7 +110,7 @@ function E(e) {
         c = i.useRef(0),
         u = i.useRef(0),
         d = i.useRef(null),
-        f = i.useCallback((e, t) => {
+        _ = i.useCallback((e, t) => {
             l.current[e] = t;
         }, []);
     return (
@@ -131,12 +131,12 @@ function E(e) {
         i.useMemo(
             () => ({
                 lastVisibleIndex: u.current,
-                onItemLayout: f,
+                onItemLayout: _,
                 overflowItemsRef: d,
                 itemWidthsRef: l,
                 version: o
             }),
-            [f, o]
+            [_, o]
         )
     );
 }
@@ -145,13 +145,13 @@ function b(e) {
         i = h(e, ['items', 'renderItem']);
     return (0, r.jsx)(
         s.ua7,
-        p(f({}, i), {
+        p(_({}, i), {
             text: (0, r.jsx)('div', {
                 className: u.tooltip,
                 children: t.map(n)
             }),
             'aria-label': 'overflow',
-            children: (e) => (0, r.jsx)('div', p(f({}, e), { children: n(c.intl.formatToPlainString(c.t.vGclWl, { count: t.length })) }))
+            children: (e) => (0, r.jsx)('div', p(_({}, e), { children: n(c.intl.formatToPlainString(c.t.vGclWl, { count: t.length })) }))
         })
     );
 }
@@ -172,8 +172,8 @@ function O(e) {
     return 'string' == typeof e ? e : e.key;
 }
 function v(e) {
-    let { className: t, items: n, renderItem: a, itemGapPx: s = 0, maxLines: d, renderOverflow: f } = e,
-        { ref: _, width: p = 0 } = (0, l.ZP)(),
+    let { className: t, items: n, renderItem: a, itemGapPx: s = 0, maxLines: d, renderOverflow: _ } = e,
+        { ref: f, width: p = 0 } = (0, l.ZP)(),
         {
             lastVisibleIndex: h,
             onItemLayout: m,
@@ -192,12 +192,12 @@ function v(e) {
                 }),
             [a]
         ),
-        I = null != f ? f : v,
+        I = null != _ ? _ : v,
         T = i.useMemo(() => n.slice(0, h + 1), [n, h]),
         S = i.useMemo(() => n.slice(h + 1), [n, h]);
     return (0, r.jsxs)('div', {
         className: o()(t, u.items),
-        ref: _,
+        ref: f,
         children: [
             (0, r.jsxs)('div', {
                 'aria-hidden': !0,

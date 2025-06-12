@@ -12,7 +12,7 @@ var r = n(255367),
     c = n(690501),
     u = n(981631),
     d = n(388032);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -87,7 +87,7 @@ function g(e, t) {
 function E(e) {
     var { type: t, userId: n, analyticsLocation: l, shouldShowTooltip: c } = e,
         u = m(e, ['type', 'userId', 'analyticsLocation', 'shouldShowTooltip']);
-    let f = i.useCallback(() => {
+    let _ = i.useCallback(() => {
             o.Z.addRelationship({
                 userId: n,
                 context: { location: l }
@@ -96,14 +96,14 @@ function E(e) {
         p = t === s.j8.TEXT ? s.tG : s.oY;
     return (0, r.jsx)(
         p,
-        _(
+        f(
             {
                 action: 'SEND_FRIEND_REQUEST',
                 icon: a.oLu,
                 text: d.intl.string(d.t.w5uwoK),
                 tooltipText: d.intl.string(d.t.w5uwoK),
                 shouldShowTooltip: c,
-                onClick: f
+                onClick: _
             },
             u
         )
@@ -119,11 +119,11 @@ function b(e) {
         u = i.useRef(null),
         d = t === s.j8.ICON ? s.ef : s.oY;
     return 0 === c.length
-        ? (0, r.jsx)(d, h(_({}, o), { disabled: !0 }))
+        ? (0, r.jsx)(d, h(f({}, o), { disabled: !0 }))
         : (0, r.jsx)(l.Z, {
               targetElementRef: u,
               menuItems: c,
-              children: (e) => (0, r.jsx)('div', h(_({ ref: u }, e), { children: (0, r.jsx)(d, _({}, o)) }))
+              children: (e) => (0, r.jsx)('div', h(f({ ref: u }, e), { children: (0, r.jsx)(d, f({}, o)) }))
           });
 }
 let y = {
@@ -143,7 +143,7 @@ function v(e) {
         c = O[i]();
     return (0, r.jsx)(
         b,
-        _(
+        f(
             {
                 type: t,
                 user: n,
@@ -161,7 +161,7 @@ function I(e) {
         u = m(e, ['type', 'user', 'gameFriends', 'hasOutgoingPendingGameFriends', 'hasIncomingPendingGameFriends', 'analyticsLocation', 'shouldShowTooltip']);
     let {
         tooltipText: d,
-        onMouseEnter: f,
+        onMouseEnter: _,
         ariaLabel: p,
         icon: h
     } = (0, c.N)({
@@ -171,7 +171,7 @@ function I(e) {
     });
     return (0, r.jsx)(
         b,
-        _(
+        f(
             {
                 type: t,
                 tooltipText: d,
@@ -180,7 +180,7 @@ function I(e) {
                 ariaLabel: p,
                 shouldShowTooltip: l,
                 icon: h,
-                onMouseEnter: f,
+                onMouseEnter: _,
                 user: n,
                 analyticsLocation: s
             },

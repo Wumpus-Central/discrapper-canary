@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(40851),
     u = n(213609),
     d = n(314910),
-    f = n(210887),
-    _ = n(574254),
+    _ = n(210887),
+    f = n(574254),
     p = n(585483),
     h = n(981631);
 function m(e, t, n) {
@@ -68,7 +68,7 @@ function y() {
     window.getSelection().removeAllRanges();
 }
 let O = (e) => {
-    let { children: t, close: n, onUnmount: o, target: l, rect: f, position: _, align: p, impressionName: m, impressionProperties: g, disableClickTrap: E = !1 } = e,
+    let { children: t, close: n, onUnmount: o, target: l, rect: _, position: f, align: p, impressionName: m, impressionProperties: g, disableClickTrap: E = !1 } = e,
         b = i.useRef(null),
         O = i.useMemo(() => ({ current: l }), [l]),
         v = i.useRef(n);
@@ -125,8 +125,8 @@ let O = (e) => {
         onMount: S,
         onUnmount: A,
         targetRef: O,
-        overrideTargetRect: f,
-        position: null != _ ? _ : 'right',
+        overrideTargetRect: _,
+        position: null != f ? f : 'right',
         align: null != p ? p : 'top',
         autoInvert: !0,
         ref: b,
@@ -205,12 +205,12 @@ function I() {
             contextMenu: e,
             version: t,
             isOpen: n
-        } = (0, o.cj)([_.Z], () => ({
-            contextMenu: _.Z.getContextMenu(),
-            version: _.Z.version,
-            isOpen: _.Z.isOpen()
+        } = (0, o.cj)([f.Z], () => ({
+            contextMenu: f.Z.getContextMenu(),
+            version: f.Z.version,
+            isOpen: f.Z.isOpen()
         })),
-        a = (0, o.e7)([f.Z], () => f.Z.theme),
+        a = (0, o.e7)([_.Z], () => _.Z.theme),
         { appContext: s, renderWindow: u } = i.useContext(c.ZP);
     return (0, r.jsx)(
         v,

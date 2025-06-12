@@ -24,8 +24,8 @@ var r = n(512722),
     c = n(716161),
     u = n(634041),
     d = n(647177),
-    f = n(63985),
-    _ = n(638457),
+    _ = n(63985),
+    f = n(638457),
     p = n(678916),
     h = n(981631);
 function m(e) {
@@ -77,7 +77,7 @@ async function b(e, t, n) {
     if (n === p.f7) return E(e, t, a.zZ.BACKGROUND_BLUR);
     if ('string' == typeof n || 'number' == typeof n) {
         var o;
-        let e = (0, f.Z)()[n];
+        let e = (0, _.Z)()[n];
         (i = null != (o = e.isVideo) && o), (r = e.source);
     } else {
         let e = n.asset;
@@ -119,5 +119,5 @@ function v() {
     let e = o.default.getCurrentUser();
     if (null == e) return;
     let t = (0, l.P)(e);
-    (0, _.Z)() && !u.Z.hasBeenApplied && null != t && y(t, { track: !1 }).catch(h.dG4);
+    (0, f.Z)() && !u.Z.hasBeenApplied && null != t && y(t, { track: !1 }).catch(h.dG4);
 }

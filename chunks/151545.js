@@ -9,15 +9,15 @@ var i = n(442837),
     c = n(592125),
     u = n(430824),
     d = n(979651),
-    f = n(81570),
-    _ = n(409057),
+    _ = n(81570),
+    f = n(409057),
     p = n(443375),
     h = n(128277),
     m = n(263059),
     g = n(981631);
 function E(e) {
     let { user: t, currentUser: n, activity: E, className: b, onClose: y, profileGuildId: O } = e,
-        v = (0, f.T)({ location: 'UserProfileActivityCardWrapper' }),
+        v = (0, _.T)({ location: 'UserProfileActivityCardWrapper' }),
         I = t.id === n.id,
         T = v && !I && !t.bot,
         { voiceGuild: S, voiceChannel: A } = (0, i.cj)([u.Z, d.Z, c.Z], () => {
@@ -63,7 +63,7 @@ function E(e) {
                   className: b,
                   onClose: y
               })
-            : (0, r.jsx)(_.Z, {
+            : (0, r.jsx)(f.Z, {
                   user: t,
                   currentUser: n,
                   activity: E,

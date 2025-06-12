@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => M }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(595519),
     d = n(317381),
-    f = n(16609),
-    _ = n(588468),
+    _ = n(16609),
+    f = n(588468),
     p = n(30465),
     h = n(313201),
     m = n(314910),
@@ -97,54 +97,54 @@ let P = 490,
     D = 245,
     L = 200,
     x = 120,
-    k = i.forwardRef(function (e, t) {
+    M = i.forwardRef(function (e, t) {
         var n, a, T, A, R;
-        let { channel: k, type: M, editorHeight: j, onVisibilityChange: U } = e,
+        let { channel: M, type: k, editorHeight: j, onVisibilityChange: U } = e,
             G = (0, h.Dt)(),
             B = (0, l.e7)(
                 [E.Z],
                 () => {
                     var e;
-                    return null != (e = E.Z.getGuild(k.guild_id)) ? e : null;
+                    return null != (e = E.Z.getGuild(M.guild_id)) ? e : null;
                 },
-                [k.guild_id]
+                [M.guild_id]
             ),
-            F = i.useRef(null),
-            [V, Z, H] = (0, O.Z)(N(S({}, e), { guild: B }), t, F),
-            Y = (null == (n = M.autocomplete) ? void 0 : n.forceChatLayer) ? g.ZP : m.ZP,
-            W = (0, _.DJ)(V.selectedIndex);
-        (0, p.KR)(G, V.isVisible, W);
+            V = i.useRef(null),
+            [F, Z, H] = (0, O.Z)(N(S({}, e), { guild: B }), t, V),
+            Y = (null == (n = k.autocomplete) ? void 0 : n.forceChatLayer) ? g.ZP : m.ZP,
+            W = (0, f.DJ)(F.selectedIndex);
+        (0, p.KR)(G, F.isVisible, W);
         let K = (0, y.Z)({
                 editorHeight: j,
-                type: M,
-                state: V
+                type: k,
+                state: F
             }),
             z = (0, l.e7)(
                 [d.ZP],
                 () => {
-                    let e = d.ZP.getSelfEmbeddedActivityForChannel(k.id),
+                    let e = d.ZP.getSelfEmbeddedActivityForChannel(M.id),
                         t = d.ZP.getActivityPanelMode();
-                    return (0, u.l5)(k) && null != e && (0, f.p)(e.location) === k.id && t === v.Ez.PANEL;
+                    return (0, u.l5)(M) && null != e && (0, _.p)(e.location) === M.id && t === v.Ez.PANEL;
                 },
-                [k]
+                [M]
             ),
             q = i.useMemo(() => ((null == K ? void 0 : K.top) == null && (null == K ? void 0 : K.left) == null && (null == K ? void 0 : K.bottom) == null && (null == K ? void 0 : K.right) == null ? '' : String(Date.now())), [null == K ? void 0 : K.top, null == K ? void 0 : K.left, null == K ? void 0 : K.bottom, null == K ? void 0 : K.right]);
         if (
             (i.useEffect(() => {
-                U(V.isVisible);
-            }, [U, V.isVisible]),
-            !V.isVisible || null == V.query || void 0 === K)
+                U(F.isVisible);
+            }, [U, F.isVisible]),
+            !F.isVisible || null == F.query || void 0 === K)
         )
             return null;
         let X =
             null !=
-            (a = V.query.typeInfo.renderResults({
-                results: V.query.results,
-                selectedIndex: V.selectedIndex,
-                channel: k,
+            (a = F.query.typeInfo.renderResults({
+                results: F.query.results,
+                selectedIndex: F.selectedIndex,
+                channel: M,
                 guild: B,
-                query: V.query.queryText,
-                options: V.query.options,
+                query: F.query.queryText,
+                options: F.query.options,
                 onHover: (e) => Z.onResultHover(e),
                 onClick: (e) => Z.onResultClick(e)
             }))
@@ -158,10 +158,10 @@ let P = 490,
                 [I.autocompleteTop]: z
             },
             J = P;
-        null != K && (J = (null == (T = M.autocomplete) ? void 0 : T.small) ? L : (null == (A = V.query) ? void 0 : A.type) === b.eq.EMOJIS_AND_STICKERS ? w : D);
+        null != K && (J = (null == (T = k.autocomplete) ? void 0 : T.small) ? L : (null == (A = F.query) ? void 0 : A.type) === b.eq.EMOJIS_AND_STICKERS ? w : D);
         let $ = Math.min(0.5 * window.innerHeight, j);
         J = Math.min(window.innerHeight - x - $, J);
-        let ee = (0, r.jsx)(_.ZP, {
+        let ee = (0, r.jsx)(f.ZP, {
             id: G,
             className: o()(I.autocomplete, Q),
             innerClassName: I.autocompleteInner,
@@ -180,7 +180,7 @@ let P = 490,
                                         id: G,
                                         ref: (e) => {
                                             var n;
-                                            (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null), (F.current = e);
+                                            (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null), (V.current = e);
                                         }
                                     },
                                     n
@@ -189,7 +189,7 @@ let P = 490,
                                     className: I.scroller,
                                     style: { maxHeight: J },
                                     role: 'listbox',
-                                    'aria-labelledby': (0, _.rp)(G),
+                                    'aria-labelledby': (0, f.rp)(G),
                                     children: X
                                 }
                             )

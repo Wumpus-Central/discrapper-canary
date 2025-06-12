@@ -22,20 +22,20 @@ let s = new Set(),
 function d(e) {
     return e.isMessageRequest && !e.isSpam;
 }
-function f(e) {
+function _(e) {
     let t = !1;
     return d(e) && !s.has(e.id) && (s.add(e.id), (t = !0)), !d(e) && s.has(e.id) && (s.delete(e.id), (t = !0)), !d(e) && l.has(e.id) && (l.delete(e.id), (t = !0)), t;
 }
-function _(e) {
+function f(e) {
     var t;
     null != e && (u = null != (t = (0, r.Zz)(e)) ? t : (0, r.K4)());
 }
 function p(e) {
-    'CONNECTION_OPEN' === e.type && _(e.countryCode),
+    'CONNECTION_OPEN' === e.type && f(e.countryCode),
         s.clear(),
         l.clear(),
         Object.values(i.Z.getMutablePrivateChannels()).forEach((e) => {
-            f(e);
+            _(e);
         }),
         (c = !0);
 }
@@ -45,11 +45,11 @@ function h(e) {
 }
 function m(e) {
     let { channel: t } = e;
-    return f(t);
+    return _(t);
 }
 function g(e) {
     let { channels: t } = e;
-    for (let e of t) f(e);
+    for (let e of t) _(e);
 }
 function E(e) {
     let { channel: t } = e;
@@ -61,7 +61,7 @@ function b(e) {
 }
 function y(e) {
     let { countryCode: t } = e;
-    _(t);
+    f(t);
 }
 class O extends a.Z {
     initialize() {

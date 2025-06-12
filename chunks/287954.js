@@ -36,7 +36,7 @@ function d(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,12 +48,12 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -103,16 +103,16 @@ function m(e) {
             };
 }
 function g(e) {
-    var { user: t, guildId: n, channelId: u, themeType: f, onClose: h, children: g } = e,
+    var { user: t, guildId: n, channelId: u, themeType: _, onClose: h, children: g } = e,
         E = p(e, ['user', 'guildId', 'channelId', 'themeType', 'onClose', 'children']);
     let { interactionType: b, interactionSource: y, resetInteraction: O, interactionSourceId: v, interactionPopoutTargetRef: I } = (0, a.Xo)(),
-        T = [c.lY.MODAL, c.lY.MODAL_V2].includes(f) ? (0, o.z)(t.id, n) : void 0,
+        T = [c.lY.MODAL, c.lY.MODAL_V2].includes(_) ? (0, o.z)(t.id, n) : void 0,
         S = y === E.sourceType && b === c.P.REACT,
         A = y === E.sourceType && b === c.P.REPLY,
         N = (S || A) && v === E.sourceId;
     return (0, r.jsx)(
         i.yRy,
-        _(
+        f(
             d(
                 {
                     targetElementRef: null != I ? I : void 0,
@@ -126,7 +126,7 @@ function g(e) {
                                     user: t,
                                     guildId: n,
                                     channelId: u,
-                                    themeType: f,
+                                    themeType: _,
                                     onClose: h,
                                     modalKey: T,
                                     setPopoutRef: i
@@ -143,7 +143,7 @@ function g(e) {
                 m({
                     interactionType: b,
                     interactionSource: y,
-                    themeType: f
+                    themeType: _
                 })
             ),
             { children: g }

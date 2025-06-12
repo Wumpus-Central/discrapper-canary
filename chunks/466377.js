@@ -6,7 +6,7 @@ n.d(t, {
     hz: () => j,
     mz: () => U,
     ol: () => G,
-    xB: () => k
+    xB: () => M
 });
 var r = n(255367),
     i = n(73800),
@@ -17,8 +17,8 @@ var r = n(255367),
     c = n(748780),
     u = n(197723),
     d = n(143450),
-    f = n(186325),
-    _ = n(693789),
+    _ = n(186325),
+    f = n(693789),
     p = n(507274),
     h = n(84735),
     m = n(742746),
@@ -116,7 +116,7 @@ var L = (function (e) {
 })({});
 function x(e) {
     var t,
-        { transitionState: n, children: a, size: u = 'small', role: _ = 'dialog', className: m, fullscreenOnMobile: g = !0, hideShadow: E = !1, onAnimationEnd: y = v.dG, returnRef: I, animation: S = 'default', parentComponent: N } = e,
+        { transitionState: n, children: a, size: u = 'small', role: f = 'dialog', className: m, fullscreenOnMobile: g = !0, hideShadow: E = !1, onAnimationEnd: y = v.dG, returnRef: I, animation: S = 'default', parentComponent: N } = e,
         P = R(e, ['transitionState', 'children', 'size', 'role', 'className', 'fullscreenOnMobile', 'hideShadow', 'onAnimationEnd', 'returnRef', 'animation', 'parentComponent']);
     let w = n === O.Dv.ENTERING || n === O.Dv.ENTERED;
     i.useContext(b.Z)({
@@ -124,7 +124,7 @@ function x(e) {
         name: l.ImpressionNames.MODAL_ROOT_LEGACY,
         properties: { variant: N }
     });
-    let { reducedMotion: L } = i.useContext(f.S),
+    let { reducedMotion: L } = i.useContext(_.S),
         x = (0, d.q)(
             {
                 opacity: +!!w,
@@ -138,8 +138,8 @@ function x(e) {
             },
             'animate-always'
         ),
-        k = i.useRef(null),
-        M = null != P['aria-label'],
+        M = i.useRef(null),
+        k = null != P['aria-label'],
         j = null != P['aria-labelledby'],
         U = i.useId(),
         G = null != (t = P['aria-labelledby']) ? t : U,
@@ -158,10 +158,10 @@ function x(e) {
                 A(
                     {
                         className: T.focusLock,
-                        role: _,
+                        role: f,
                         returnRef: I,
                         impressionType: l.ImpressionTypes.MODAL,
-                        'aria-labelledby': M ? void 0 : B.headerId
+                        'aria-labelledby': k ? void 0 : B.headerId
                     },
                     P
                 ),
@@ -171,10 +171,10 @@ function x(e) {
                             [T.fullscreenOnMobile]: g,
                             [T.rootWithShadow]: !E
                         }),
-                        ref: k,
+                        ref: M,
                         style: x,
                         children: (0, r.jsx)(h.J, {
-                            containerRef: k,
+                            containerRef: M,
                             children: a
                         })
                     })
@@ -183,7 +183,7 @@ function x(e) {
         )
     });
 }
-function k(e) {
+function M(e) {
     var t, n, a, s, l;
     let { headerId: c, headerIdIsManaged: u } = i.useContext(O.zM);
     return (0, r.jsx)(y.Z, {
@@ -198,7 +198,7 @@ function k(e) {
         children: e.children
     });
 }
-function M(e) {
+function k(e) {
     switch (null != e ? e : 'thin') {
         case 'auto':
             return g.yW;
@@ -211,7 +211,7 @@ function M(e) {
 function j(e) {
     let { className: t, children: n, scrollerRef: i, scrollbarType: a } = e,
         s = R(e, ['className', 'children', 'scrollerRef', 'scrollbarType']),
-        l = M(a);
+        l = k(a);
     return (0, r.jsx)(
         l,
         C(
@@ -240,11 +240,11 @@ function U(e) {
     });
 }
 function G(e) {
-    return (0, r.jsx)(_.zx, {
+    return (0, r.jsx)(f.zx, {
         focusProps: e.focusProps,
         'aria-label': I.intl.string(I.t.cpT0Cg),
-        look: _.zx.Looks.BLANK,
-        size: _.zx.Sizes.NONE,
+        look: f.zx.Looks.BLANK,
+        size: f.zx.Sizes.NONE,
         onClick: e.onClick,
         innerClassName: o()(e.innerClassName, { [T.closeWithCircleBackground]: e.withCircleBackground }),
         className: o()(e.className, {

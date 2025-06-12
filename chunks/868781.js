@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(482798),
     u = n(750154),
     d = n(209698),
-    f = n(802529),
-    _ = n(11133),
+    _ = n(802529),
+    f = n(11133),
     p = n(814454),
     h = n(473919),
     m = n(170187),
@@ -51,7 +51,7 @@ let O = function (e) {
 function v(e) {
     let { activity: t, textVariant: n, textClassName: a, iconClassName: s, hideIcon: u = !1, hideText: d = !1, hideTooltip: g = !1, canTruncate: E = !0 } = e,
         { enabled: b } = o.c.useExperiment({ location: 'PresenceActivityStatus' }, { autoTrackExposure: !0 }),
-        { descriptiveTextEnabled: y } = (0, f.f)({ location: 'PresenceActivityStatus' }),
+        { descriptiveTextEnabled: y } = (0, _.f)({ location: 'PresenceActivityStatus' }),
         { enableTopNavButton: v } = (0, c.Cq)({ location: 'PresenceActivityStatus' }),
         { analyticsLocations: I } = (0, l.ZP)(),
         T = i.useCallback(() => {
@@ -62,7 +62,7 @@ function v(e) {
             });
         }, [I, t.application_id, t.type]);
     if (u && d) return null;
-    let { text: S, tooltip: A } = (0, _.Z)(t, y || v),
+    let { text: S, tooltip: A } = (0, f.Z)(t, y || v),
         N = O(t, b),
         C = d && !g && null != A;
     return (0, r.jsxs)(r.Fragment, {
@@ -89,9 +89,9 @@ function v(e) {
 function I(e) {
     let { activity: t, textVariant: n, textClassName: i, iconClassName: a, hideIcon: s = !1, hideText: l = !1, hideTooltip: u = !1, canTruncate: d = !0 } = e,
         { enabled: p } = o.c.useExperiment({ location: 'PresenceActivityStatusWithCombinedTooltip' }, { autoTrackExposure: !0 }),
-        { descriptiveTextEnabled: m } = (0, f.f)({ location: 'PresenceActivityStatusWithCombinedTooltip' }),
+        { descriptiveTextEnabled: m } = (0, _.f)({ location: 'PresenceActivityStatusWithCombinedTooltip' }),
         { enableTopNavButton: E } = (0, c.Cq)({ location: 'PresenceActivityStatusWithCombinedTooltip' }),
-        { text: b, tooltip: y } = (0, _.Z)(t, m || E),
+        { text: b, tooltip: y } = (0, f.Z)(t, m || E),
         v = O(t, p),
         I = null != v && !s;
     return (0, r.jsx)(g.Z, {

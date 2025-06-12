@@ -8,11 +8,11 @@ n.d(t, {
     $pe: () => ts,
     A2N: () => rA,
     ABu: () => tX,
-    ADE: () => n_,
+    ADE: () => nf,
     AEg: () => nv,
     ANM: () => eS,
     AQB: () => ew,
-    AeJ: () => nM,
+    AeJ: () => nk,
     Ai1: () => g.Ai,
     AlD: () => g.Al,
     AzA: () => rv,
@@ -22,7 +22,7 @@ n.d(t, {
     BRd: () => g.BR,
     BVn: () => rq,
     BZL: () => g.BZ,
-    BhN: () => nV,
+    BhN: () => nF,
     BiE: () => eq,
     Bjg: () => nZ,
     BmY: () => ea,
@@ -43,13 +43,13 @@ n.d(t, {
     EkH: () => O,
     Etm: () => g.Et,
     Eu4: () => nn,
-    FD8: () => eM,
+    FD8: () => ek,
     FQ1: () => rL,
     Fc: () => tt,
     FoC: () => q,
     FsG: () => E.Fs,
     GI0: () => ez,
-    GNZ: () => nk,
+    GNZ: () => nM,
     GOo: () => e6,
     GQo: () => nX,
     GU0: () => ep,
@@ -60,14 +60,14 @@ n.d(t, {
     HeQ: () => g.He,
     Hqc: () => ny,
     HsE: () => rh,
-    IE4: () => F,
+    IE4: () => V,
     IIU: () => e5,
     IWh: () => rx,
     IXf: () => e7,
     I_8: () => em,
     IlC: () => n5,
     Ilk: () => g.Il,
-    IyS: () => rk,
+    IyS: () => rM,
     J0y: () => z,
     J6R: () => ej,
     JjL: () => g.Jj,
@@ -80,7 +80,7 @@ n.d(t, {
     KFR: () => nR,
     KJ3: () => rC,
     KsC: () => A,
-    L4X: () => eF,
+    L4X: () => eV,
     LAt: () => to,
     LPv: () => tz,
     LYt: () => th,
@@ -119,7 +119,7 @@ n.d(t, {
     PyE: () => g.Py,
     QCD: () => nq,
     QIO: () => tR,
-    QKv: () => V,
+    QKv: () => F,
     QL: () => g.QL,
     QR$: () => rd,
     QZA: () => y,
@@ -131,7 +131,7 @@ n.d(t, {
     RG5: () => g.RG,
     RK: () => g.RK,
     RYY: () => tJ,
-    RcX: () => tf,
+    RcX: () => t_,
     Rg9: () => nw,
     S7T: () => g.S7,
     S9g: () => nT,
@@ -161,7 +161,7 @@ n.d(t, {
     V6Z: () => g.V6,
     V7H: () => ti,
     VD2: () => nU,
-    VKK: () => eV,
+    VKK: () => eF,
     V_K: () => tW,
     VqG: () => g.Vq,
     Vzj: () => g.Vz,
@@ -185,7 +185,7 @@ n.d(t, {
     ZfP: () => C,
     Zuq: () => g.Zu,
     _1z: () => en,
-    _8R: () => rV,
+    _8R: () => rF,
     _s_: () => T,
     _vf: () => er,
     a5g: () => tY,
@@ -228,7 +228,7 @@ n.d(t, {
     fzT: () => t1,
     gLR: () => rK,
     gg$: () => g.gg,
-    gkr: () => rf,
+    gkr: () => r_,
     hBH: () => s.h,
     hCA: () => rZ,
     hUK: () => nu,
@@ -242,16 +242,16 @@ n.d(t, {
     ihW: () => E.ih,
     ipw: () => et,
     ivE: () => nH,
-    j3N: () => ek,
+    j3N: () => eM,
     j8d: () => g.j8,
-    jXE: () => tk,
+    jXE: () => tM,
     jm8: () => rP,
-    jsM: () => r_,
+    jsM: () => rf,
     jwA: () => nN,
     kEZ: () => j,
     kGb: () => rl,
     kNB: () => ra,
-    kVF: () => k,
+    kVF: () => M,
     kg4: () => v,
     kod: () => eb,
     l$U: () => eH,
@@ -262,9 +262,9 @@ n.d(t, {
     lds: () => eE,
     lxg: () => eu,
     mBz: () => eQ,
-    mFx: () => e_,
+    mFx: () => ef,
     n8r: () => nY,
-    nkL: () => nF,
+    nkL: () => nV,
     o3l: () => ni,
     oAB: () => tG,
     oCV: () => nr,
@@ -272,7 +272,7 @@ n.d(t, {
     o_z: () => eg,
     p3w: () => tp,
     p6O: () => t2,
-    pAY: () => t_,
+    pAY: () => tf,
     pJs: () => P,
     pKx: () => g.pK,
     pM4: () => x,
@@ -282,13 +282,13 @@ n.d(t, {
     pmI: () => t3,
     q5t: () => tD,
     q9n: () => nB,
-    qAy: () => tM,
+    qAy: () => tk,
     qWG: () => rB,
     qXD: () => rg,
     qc2: () => ri,
     qhL: () => te,
     qrD: () => w,
-    r2o: () => M,
+    r2o: () => k,
     rMx: () => np,
     rnv: () => tI,
     rsA: () => nS,
@@ -299,7 +299,7 @@ n.d(t, {
     sHY: () => rn,
     scU: () => ty,
     si2: () => rw,
-    t4x: () => tV,
+    t4x: () => tF,
     tG9: () => eG,
     tHP: () => eP,
     tPV: () => eY,
@@ -307,7 +307,7 @@ n.d(t, {
     t_t: () => ee,
     tuJ: () => no,
     u34: () => b,
-    uRl: () => tF,
+    uRl: () => tV,
     uaV: () => c.u,
     udG: () => ng,
     vB8: () => nA,
@@ -321,11 +321,11 @@ n.d(t, {
     w2V: () => rS,
     wC$: () => Q,
     wI2: () => rT,
-    wZ8: () => ef,
-    wli: () => rM,
+    wZ8: () => e_,
+    wli: () => rk,
     x0X: () => nW,
     x8Z: () => rI,
-    xAR: () => rF,
+    xAR: () => rV,
     xGv: () => tl,
     xPJ: () => X,
     xW$: () => nm,
@@ -337,7 +337,7 @@ n.d(t, {
     yYS: () => g.yY,
     yb: () => Y,
     ylB: () => rU,
-    yqN: () => nf,
+    yqN: () => n_,
     ys_: () => e3,
     zMe: () => g.zM,
     zUn: () => nP,
@@ -356,8 +356,8 @@ var o = n(106351),
     c = n(275726),
     u = n(866442),
     d = n(860911),
-    f = n(70956),
-    _ = n(188785),
+    _ = n(70956),
+    f = n(188785),
     p = n(979007),
     h = n(688357),
     m = n(526761),
@@ -411,10 +411,10 @@ var o = n(106351),
     x = (function (e) {
         return (e.PUSH_TO_TALK = 'PUSH_TO_TALK'), (e.VOICE_ACTIVITY = 'VOICE_ACTIVITY'), e;
     })({}),
-    k = (function (e) {
+    M = (function (e) {
         return (e.GENERIC = 'GENERIC'), (e.LAUNCH_GAME_FAILURE = 'LAUNCH_GAME_FAILURE'), (e.UNCLAIMED_ACCOUNT = 'UNCLAIMED_ACCOUNT'), (e.UNVERIFIED_ACCOUNT = 'UNVERIFIED_ACCOUNT'), (e.PENDING_MEMBER = 'PENDING_MEMBER'), (e.DOWNLOAD_NAG = 'DOWNLOAD_NAG'), (e.VOICE_DISABLED = 'VOICE_DISABLED'), (e.SCHEDULED_MAINTENANCE = 'SCHEDULED_MAINTENANCE'), (e.NO_INPUT_DETECTED = 'NO_INPUT_DETECTED'), (e.NO_INPUT_DEVICES_DETECTED = 'NO_INPUT_DEVICES_DETECTED'), (e.H264_DISABLED = 'H264_DISABLED'), (e.STREAMER_MODE = 'STREAMER_MODE'), (e.SURVEY = 'SURVEY'), (e.CORRUPT_INSTALLATION = 'CORRUPT_INSTALLATION'), (e.VIDEO_UNSUPPORTED_BROWSER = 'VIDEO_UNSUPPORTED_BROWSER'), (e.CONNECT_SPOTIFY = 'CONNECT_SPOTIFY'), (e.SPOTIFY_AUTO_PAUSED = 'SPOTIFY_AUTO_PAUSED'), (e.PREMIUM_PROMO = 'PREMIUM_PROMO'), (e.MFA_SMS_BACKUP = 'MFA_SMS_BACKUP'), (e.HARDWARE_MUTE = 'HARDWARE_MUTE'), (e.DISPATCH_ERROR = 'DISPATCH_ERROR'), (e.DISPATCH_INSTALL_SCRIPT_PROGRESS = 'DISPATCH_INSTALL_SCRIPT_PROGRESS'), (e.APPLICATION_TEST_MODE = 'APPLICATION_TEST_MODE'), (e.DETECTED_OFF_PLATFORM_PREMIUM_PERK = 'DETECTED_OFF_PLATFORM_PREMIUM_PERK'), (e.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL = 'DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL'), (e.PREMIUM_TIER_2_TRIAL_ENDING = 'PREMIUM_TIER_2_TRIAL_ENDING'), (e.PREMIUM_TIER_0_TRIAL_ENDING = 'PREMIUM_TIER_0_TRIAL_ENDING'), (e.LURKING_GUILD = 'LURKING_GUILD'), (e.VIEWING_ROLES = 'VIEWING_ROLES'), (e.INVITED_TO_SPEAK = 'INVITED_TO_SPEAK'), (e.OUTBOUND_PROMOTION = 'OUTBOUND_PROMOTION'), (e.PREMIUM_UNCANCEL = 'PREMIUM_UNCANCEL'), (e.PREMIUM_MISSING_PAYMENT = 'PREMIUM_MISSING_PAYMENT'), (e.PREMIUM_PAST_DUE_MISSING_PAYMENT = 'PREMIUM_PAST_DUE_MISSING_PAYMENT'), (e.PREMIUM_PAST_DUE_INVALID_PAYMENT = 'PREMIUM_PAST_DUE_INVALID_PAYMENT'), (e.PREMIUM_REACTIVATE = 'PREMIUM_REACTIVATE'), (e.CONNECT_PLAYSTATION = 'CONNECT_PLAYSTATION'), (e.LOCALIZED_PRICING = 'LOCALIZED_PRICING'), (e.BACK_TO_PREVIOUS_SCREEN = 'BACK_TO_PREVIOUS_SCREEN'), (e.QUARANTINED = 'QUARANTINED'), (e.PREMIUM_TIER_0 = 'PREMIUM_TIER_0'), (e.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT = 'PREMIUM_PAST_DUE_ONE_TIME_PAYMENT'), (e.BOUNCED_EMAIL_DETECTED = 'BOUNCED_EMAIL_DETECTED'), (e.AUTO_MODERATION_MENTION_RAID_DETECTION = 'AUTO_MODERATION_MENTION_RAID_DETECTION'), (e.ACTIVATE_SERVER_SUBSCRIPTION = 'ACTIVATE_SERVER_SUBSCRIPTION'), (e.AUTOMOD_QUARANTINED_USER_PROFILE = 'AUTOMOD_QUARANTINED_USER_PROFILE'), (e.POMELO_ELIGIBLE = 'POMELO_ELIGIBLE'), (e.GUILD_RAID_NOTIFICATION = 'GUILD_RAID_NOTIFICATION'), (e.SAFETY_USER_SENTIMENT_NAGBAR = 'SAFETY_USER_SENTIMENT_NAGBAR'), (e.WIN32_DEPRECATED_MESSAGE = 'WIN32_DEPRECATED_MESSAGE'), (e.BLOCKED_BY_PROXY = 'BLOCKED_BY_PROXY'), (e.VOICE_CONNECTED_LAST_SESSION = 'VOICE_CONNECTED_LAST_SESSION'), (e.HABITUAL_DND = 'HABITUAL_DND'), (e.WIN7_8_DEPRECATED_MESSAGE = 'WIN7_8_DEPRECATED_MESSAGE'), (e.UU_MIGRATION = 'UU_MIGRATION'), (e.QUESTS_PROGRESS_INTERRUPTION = 'QUESTS_PROGRESS_INTERRUPTION'), (e.CHECKOUT_RECOVERY_NAGBAR = 'CHECKOUT_RECOVERY_NAGBAR'), (e.BLOCK_USER_FEEDBACK_NAGBAR = 'BLOCK_USER_FEEDBACK_NAGBAR'), (e.IGNORE_USER_FEEDBACK_NAGBAR = 'IGNORE_USER_FEEDBACK_NAGBAR'), (e.GIFTING_PROMOTION_REMINDER = 'GIFTING_PROMOTION_REMINDER'), (e.LOGIN = 'LOGIN'), (e.REGISTER = 'REGISTER'), (e.MACOS_19_DEPRECATED_MESSAGE = 'MACOS_19_DEPRECATED_MESSAGE'), (e.REPORT_TO_MOD_SURVEY = 'REPORT_TO_MOD_SURVEY'), e;
     })({}),
-    M = (function (e) {
+    k = (function (e) {
         return (e.RESOLVING = 'RESOLVING'), (e.RESOLVED = 'RESOLVED'), (e.EXPIRED = 'EXPIRED'), (e.BANNED = 'BANNED'), (e.ACCEPTING = 'ACCEPTING'), (e.ACCEPTED = 'ACCEPTED'), (e.APP_OPENING = 'APP_OPENING'), (e.APP_OPENED = 'APP_OPENED'), (e.APP_NOT_OPENED = 'APP_NOT_OPENED'), (e.ERROR = 'ERROR'), e;
     })({}),
     j = (function (e) {
@@ -520,10 +520,10 @@ let G = Object.freeze({
 var B = (function (e) {
         return (e.DISCONNECTED = 'DISCONNECTED'), (e.AWAITING_ENDPOINT = 'AWAITING_ENDPOINT'), (e.AUTHENTICATING = 'AUTHENTICATING'), (e.CONNECTING = 'CONNECTING'), (e.RTC_DISCONNECTED = 'RTC_DISCONNECTED'), (e.RTC_CONNECTING = 'RTC_CONNECTING'), (e.RTC_CONNECTED = 'RTC_CONNECTED'), (e.NO_ROUTE = 'NO_ROUTE'), (e.ICE_CHECKING = 'ICE_CHECKING'), (e.DTLS_CONNECTING = 'DTLS_CONNECTING'), e;
     })({}),
-    F = (function (e) {
+    V = (function (e) {
         return (e.UNKNOWN = 'unknown'), (e.BAD = 'bad'), (e.AVERAGE = 'average'), (e.FINE = 'fine'), e;
     })({}),
-    V = (function (e) {
+    F = (function (e) {
         return (e.CONNECTED = 'connected'), (e.CONNECTING = 'connecting'), (e.ERROR = 'error'), e;
     })({}),
     Z = (function (e) {
@@ -594,10 +594,10 @@ var ec = (function (e) {
     ed = (function (e) {
         return (e[(e.NONE = 0)] = 'NONE'), (e[(e.FRIEND = 1)] = 'FRIEND'), (e[(e.BLOCKED = 2)] = 'BLOCKED'), (e[(e.PENDING_INCOMING = 3)] = 'PENDING_INCOMING'), (e[(e.PENDING_OUTGOING = 4)] = 'PENDING_OUTGOING'), (e[(e.IMPLICIT = 5)] = 'IMPLICIT'), (e[(e.SUGGESTION = 6)] = 'SUGGESTION'), e;
     })({}),
-    ef = (function (e) {
+    e_ = (function (e) {
         return (e.CONFIRM = 'CONFIRM'), (e.SUCCESS = 'SUCCESS'), (e.ERROR = 'ERROR'), (e.OPEN = 'OPEN'), e;
     })({}),
-    e_ = (function (e) {
+    ef = (function (e) {
         return (e[(e.JOIN = 1)] = 'JOIN'), (e[(e.LISTEN = 3)] = 'LISTEN'), (e[(e.WATCH = 4)] = 'WATCH'), (e[(e.JOIN_REQUEST = 5)] = 'JOIN_REQUEST'), e;
     })({}),
     ep = (function (e) {
@@ -1435,7 +1435,7 @@ let eh = '@me',
         LOGIN: '/login',
         LOGIN_HANDOFF: '/login/handoff',
         REGISTER: '/register',
-        DEFAULT_LOGGED_OUT: _.a ? '/register' : '/login',
+        DEFAULT_LOGGED_OUT: f.a ? '/register' : '/login',
         INVITE: (e) => '/invite/'.concat(e),
         INVITE_LOGIN: (e) => '/invite/'.concat(e, '/login'),
         INVITE_REGISTER: (e) => '/invite/'.concat(e, '/register'),
@@ -1550,21 +1550,21 @@ let eR = 100,
     eD = 50,
     eL = 25,
     ex = 200,
-    ek = 100,
-    eM = 250,
+    eM = 100,
+    ek = 250,
     ej = 2000,
     eU = 4000,
     eG = 50,
     eB = 100,
-    eF = 1000,
-    eV = 100,
+    eV = 1000,
+    eF = 100,
     eZ = 256,
     eH = 32,
     eY = 190,
     eW = 32,
     eK = 600000,
-    ez = 6 * f.Z.Seconds.HOUR,
-    eq = [0, 5, 10, 15, 30, f.Z.Seconds.MINUTE, 2 * f.Z.Seconds.MINUTE, 5 * f.Z.Seconds.MINUTE, 10 * f.Z.Seconds.MINUTE, 15 * f.Z.Seconds.MINUTE, 30 * f.Z.Seconds.MINUTE, +f.Z.Seconds.HOUR, 2 * f.Z.Seconds.HOUR, ez],
+    ez = 6 * _.Z.Seconds.HOUR,
+    eq = [0, 5, 10, 15, 30, _.Z.Seconds.MINUTE, 2 * _.Z.Seconds.MINUTE, 5 * _.Z.Seconds.MINUTE, 10 * _.Z.Seconds.MINUTE, 15 * _.Z.Seconds.MINUTE, 30 * _.Z.Seconds.MINUTE, +_.Z.Seconds.HOUR, 2 * _.Z.Seconds.HOUR, ez],
     eX = 10,
     eQ = 10485760,
     eJ = 524288000,
@@ -1601,8 +1601,8 @@ let e7 = 128,
     tc = 10000,
     tu = 50,
     td = 150,
-    tf = 300,
-    t_ = 10,
+    t_ = 300,
+    tf = 10,
     tp = 25,
     th = '#0000',
     tm = 240,
@@ -2020,7 +2020,7 @@ var tC = (function (e) {
         );
     })({});
 let tx = 'help_center_cta';
-var tk = (function (e) {
+var tM = (function (e) {
         return (
             (e.HERO = 'Hero'),
             (e.BODY = 'Body'),
@@ -2400,7 +2400,7 @@ var tk = (function (e) {
             e
         );
     })({}),
-    tM = (function (e) {
+    tk = (function (e) {
         return (
             (e.TOOLTIP = 'Tooltip'),
             (e.CARD = 'Card'),
@@ -2647,10 +2647,10 @@ let tU = {
 var tB = (function (e) {
         return (e.APPLICATION_STORE = 'Application Store Verified Guild Invite - Lurker'), (e.CHAT_INPUT_BLOCKER = 'Chat Input Blocker - Lurker Mode'), (e.NOTICE_BAR = 'Notice - Lurker Mode'), (e.MOBILE_GUILD_DISCOVERY = 'iOS Guild Discovery - Lurker'), (e.DIRECTORY_ENTRY = 'Directory Channel Entry'), (e.DIRECTORY_EVENTS = 'Directory Channel Events'), (e.POLL_ALERT = 'Poll Alert'), (e.ICYMI = 'ICYMI'), e;
     })({}),
-    tF = (function (e) {
+    tV = (function (e) {
         return (e.QR_CODE = 'QR Code Login'), (e.MOBILE_WEB_HANDOFF = 'Mobile Web Handoff'), (e.DEFAULT = 'The default username password Login'), (e.MFA = 'MFA Login'), (e.PASSWORDLESS_CONDITIONAL_UI = 'Passwordless Conditional UI'), e;
     })({}),
-    tV = (function (e) {
+    tF = (function (e) {
         return (e.INVITE_NOTICE = 'Invite Notice'), (e.SETTINGS_INVITE = 'Settings Invite'), (e.CONTEXT_MENU = 'Context Menu'), (e.WELCOME_MESSAGE = 'Welcome Message'), (e.GUILD_CHANNELS = 'Guild Channels'), (e.GUILD_HEADER = 'Guild Header'), (e.GUILD_EVENTS = 'Guild Events'), (e.GUILD_CONTEXT_MENU = 'Guild Context Menu'), (e.GUILD_CREATE = 'Guild Create'), (e.STREAM_INVITE = 'Stream Invite'), (e.GUILD_PROGRESS = 'Guild Progress'), (e.CHANNEL_WELCOME = 'Channel Welcome CTA'), (e.CHANNEL_CALL = 'Channel Call'), (e.ACTIVITY_INVITE = 'Activity Invite'), (e.INVITE_SYSTEM_MESSAGE = 'Invite System Message'), (e.HUB_DIRECTORY = 'Hub Directory Channel'), (e.HUB_SIDEBAR = 'Hub Sidebar'), (e.STAGE_CHANNEL = 'Stage Channel'), (e.GROUP_DM = 'Group DM Invite Create'), (e.GUILD_HOME = 'Guild Home'), (e.ACTIVITY_ENTRY_POINT_TILE = 'Activity Entry Point Tile'), (e.ADD_FRIENDS_MODAL = 'Add Friends Modal'), (e.ADD_FRIENDS_WIDGET = 'Add Friends Widget'), (e.ADD_FRIENDS_MODAL_SEARCH = 'Add Friends Modal Search'), (e.PROFILE_CTA = 'Profile CTA'), e;
     })({}),
     tZ = (function (e) {
@@ -2846,7 +2846,7 @@ var nu = (function (e) {
     nd = (function (e) {
         return (e.USER = 'USER'), (e.GLOBAL = 'GLOBAL'), (e.ROLE = 'ROLE'), (e.CHANNEL = 'CHANNEL'), (e.EMOJI = 'EMOJI'), (e.EMOJI_PREMIUM_UPSELL = 'EMOJI_PREMIUM_UPSELL'), (e.SLASH = 'SLASH'), (e.CHOICE = 'CHOICE'), (e.STICKER = 'STICKER'), (e.CHOICE_LOADING = 'CHOICE_LOADING'), (e.LABEL = 'LABEL'), e;
     })({});
-let nf = Object.freeze({
+let n_ = Object.freeze({
     FONT_SIZE_DEFAULT: 16,
     FONT_SIZE_MIN: 12,
     FONT_SIZE_MAX: 24,
@@ -2857,7 +2857,7 @@ let nf = Object.freeze({
     ZOOM_MAX: 200,
     ZOOM_SCALES: [50, 67, 75, 80, 90, 100, 110, 125, 150, 175, 200]
 });
-var n_ = (function (e) {
+var nf = (function (e) {
         return (e.OVERLAY_UNLOCKED = 'overlay_unlocked'), (e.OVERLAY_UNLOCKED_PINNED = 'overlay_unlocked_pinned'), (e.OVERLAY_LOCKED_ACTIVATED = 'overlay_locked_activated'), e;
     })({}),
     np = (function (e) {
@@ -3133,6 +3133,7 @@ var n_ = (function (e) {
             (e.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED = 'explicit_media_redactable_messages_loaded'),
             (e.REDACTABLE_MESSAGE_LOADED = 'redactable_message_loaded'),
             (e.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE = 'explicit_media_retroactive_scan_complete'),
+            (e.SAFETY_SETTINGS_NOTICE_ACTION = 'safety_settings_notice_action'),
             (e.SAFETY_WARNING_VIEWED = 'safety_warning_viewed'),
             (e.SAFETY_WARNING_MODAL_VIEWED = 'safety_warning_modal_viewed'),
             (e.SAFETY_WARNING_CTA_CLICKED = 'safety_warning_cta_clicked'),
@@ -4423,8 +4424,8 @@ var nD = (function (e) {
     nx = (function (e) {
         return (e.CAPTCHA = 'captcha'), (e.EMAIL_OR_PHONE = 'email_or_phone'), (e.PHONE = 'phone'), (e.EMAIL = 'email'), (e.REVERIFY_PHONE = 'reverify_phone'), (e.REVERIFY_EMAIL = 'reverify_email'), e;
     })({});
-let nk = 512;
-var nM = (function (e) {
+let nM = 512;
+var nk = (function (e) {
         return (e[(e.PRIMARY = 0)] = 'PRIMARY'), (e[(e.SECONDARY = 2)] = 'SECONDARY'), (e[(e.WHEEL = 4)] = 'WHEEL'), (e[(e.BACK = 8)] = 'BACK'), (e[(e.FORWARD = 16)] = 'FORWARD'), e;
     })({}),
     nj = (function (e) {
@@ -4439,7 +4440,7 @@ var nM = (function (e) {
     nB = (function (e) {
         return (e.GIF = 'GIF'), (e.STICKER = 'STICKER'), e;
     })({});
-let nF = Object.freeze({
+let nV = Object.freeze({
     GIF: {
         type: 'GIF',
         command: 'gif',
@@ -4453,7 +4454,7 @@ let nF = Object.freeze({
         commandId: '-9'
     }
 });
-var nV = (function (e) {
+var nF = (function (e) {
         return (
             (e.ENABLE_MIC_FIREFOX = '204392448'),
             (e.PUSH_TO_TALK_ADMINISTRATOR_MODE = '205082178'),
@@ -4727,10 +4728,10 @@ var n8 = (function (e) {
     rd = (function (e) {
         return (e.WIN32 = 'win32'), (e.WIN64 = 'win64'), (e.MACOS = 'macos'), (e.LINUX = 'linux'), e;
     })({}),
-    rf = (function (e) {
+    r_ = (function (e) {
         return (e.HOUSE_1 = 'HOUSE_1'), (e.HOUSE_2 = 'HOUSE_2'), (e.HOUSE_3 = 'HOUSE_3'), e;
     })({});
-let r_ = 'RANDOM_HYPESQUAD_HOUSE';
+let rf = 'RANDOM_HYPESQUAD_HOUSE';
 var rp = (function (e) {
     return (e[(e.KEYBOARD_KEY = 0)] = 'KEYBOARD_KEY'), (e[(e.MOUSE_BUTTON = 1)] = 'MOUSE_BUTTON'), (e[(e.KEYBOARD_MODIFIER_KEY = 2)] = 'KEYBOARD_MODIFIER_KEY'), (e[(e.GAMEPAD_BUTTON = 3)] = 'GAMEPAD_BUTTON'), e;
 })({});
@@ -4938,6 +4939,10 @@ let rh = Object.freeze({
         f18: 109,
         f19: 110,
         f20: 111,
+        f21: 112,
+        f22: 113,
+        f23: 114,
+        f24: 115,
         f5: 62,
         f6: 63,
         f7: 64,
@@ -5140,10 +5145,10 @@ var rC = (function (e) {
     rx = (function (e) {
         return (e.NONE = 'none'), (e.WIFI = 'wifi'), (e.CELLULAR = 'cellular'), (e.UNKNOWN = 'unknown'), (e.ETHERNET = 'ethernet'), (e.BLUETOOTH = 'bluetooth'), (e.WIMAX = 'wimax'), (e.OTHER = 'other'), e;
     })({}),
-    rk = (function (e) {
+    rM = (function (e) {
         return (e.UNKNOWN = 'unknown'), (e.SLOW_TWO_G = 'slow-2g'), (e.TWO_G = '2g'), (e.THREE_G = '3g'), (e.FOUR_G = '4g'), (e.FIVE_G = '5g'), e;
     })({});
-let rM = 'discodoEasterEgg';
+let rk = 'discodoEasterEgg';
 var rj = (function (e) {
         return (e.INITIAL = 'initial'), (e.ENTER = 'enter'), (e.UPDATE = 'update'), (e.LEAVE = 'leave'), e;
     })({}),
@@ -5154,8 +5159,8 @@ var rj = (function (e) {
         return (e[(e.APPLICATION = 0)] = 'APPLICATION'), (e[(e.OVERVIEW = 1)] = 'OVERVIEW'), (e[(e.CHANNEL_FOLLOWING = 2)] = 'CHANNEL_FOLLOWING'), (e[(e.TWITCH = 3)] = 'TWITCH'), (e[(e.YOUTUBE = 4)] = 'YOUTUBE'), (e[(e.WEBHOOKS = 5)] = 'WEBHOOKS'), (e[(e.LOBBIES_LINKED = 6)] = 'LOBBIES_LINKED'), e;
     })({});
 let rB = 2500,
-    rF = 0,
-    rV = 2592000000;
+    rV = 0,
+    rF = 2592000000;
 var rZ = (function (e) {
         return (e.USERS = 'users'), (e.ROLES = 'roles'), (e.EVERYONE = 'everyone'), e;
     })({}),

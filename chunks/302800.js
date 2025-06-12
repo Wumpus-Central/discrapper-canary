@@ -15,8 +15,8 @@ var r = n(691324),
     c = n(252802),
     u = n(452823),
     d = n(744709),
-    f = n(39934),
-    _ = n(12981);
+    _ = n(39934),
+    f = n(12981);
 function p(e, t, n) {
     return (
         t in e
@@ -37,7 +37,7 @@ let m = (e) =>
     e === i.T.TIDE
         ? {
               label: () => s.intl.string(s.t['h/uBCQ']),
-              iconSrc: _.Z,
+              iconSrc: f.Z,
               style: {
                   background: 'linear-gradient(180deg, #103A8B -7.5%, #3390FD 128.75%)',
                   boxShadow: '0px 0px 15.4px 0px rgba(23, 160, 236, 0.5)',
@@ -80,7 +80,7 @@ let E = {
             }
         }),
         STORM: new g({
-            src: f.Z,
+            src: _.Z,
             style: {
                 position: 'absolute',
                 width: '850px',

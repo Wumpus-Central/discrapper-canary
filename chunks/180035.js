@@ -9,13 +9,13 @@ function l(e, t) {
         c = (0, r.e7)([a.Z], () => a.Z.saturation),
         u = (0, s.Q3)('useToken'),
         d = (0, s.R6)('useToken'),
-        f = (0, o.Ml)('useToken'),
-        _ = (0, o.CL)('useToken'),
+        _ = (0, o.Ml)('useToken'),
+        f = (0, o.CL)('useToken'),
         p = (0, o.VM)('useToken'),
         h = [];
     return (
-        f && h.push('refresh-fast-follow-avatars'),
-        _ && h.push('refresh-fast-follow-guild-bg'),
+        _ && h.push('refresh-fast-follow-avatars'),
+        f && h.push('refresh-fast-follow-guild-bg'),
         p && h.push('refresh-fast-follow-distinct-borders'),
         u && h.push('visual-refresh'),
         d && h.push('visual-refresh-chat-input'),

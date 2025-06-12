@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(385499),
     u = n(172751),
     d = n(228168),
-    f = n(388032),
-    _ = n(438361);
+    _ = n(388032),
+    f = n(438361);
 function p(e) {
     let { user: t, usernameIcon: n, tags: i, nickname: p, nicknameIcons: h, pronouns: m, className: g, tagClassName: E, isTryItOut: b, onOpenProfile: y, onClose: O, nicknameVariant: v = 'heading-lg/bold' } = e,
         I = (e) =>
@@ -18,20 +18,20 @@ function p(e) {
                 ? e
                 : (0, r.jsx)(o.P3F, {
                       onClick: y,
-                      className: _.clickableUsername,
+                      className: f.clickableUsername,
                       children: e
                   }),
         T = null != m && m.length > 0,
         S = (0, l.D)(t);
     return (0, r.jsxs)('div', {
-        className: a()(_.container, { [_.bot]: null != S }, g),
+        className: a()(f.container, { [f.bot]: null != S }, g),
         children: [
             (0, r.jsxs)('div', {
-                className: _.usernameRow,
+                className: f.usernameRow,
                 children: [
                     I(
                         (0, r.jsx)(o.X6q, {
-                            className: _.nickname,
+                            className: f.nickname,
                             variant: v,
                             children: p
                         })
@@ -43,15 +43,15 @@ function p(e) {
                         }),
                     null != h &&
                         (0, r.jsx)('div', {
-                            className: _.nicknameIcons,
+                            className: f.nicknameIcons,
                             children: h
                         })
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: a()(_.tags, {
-                    [_.pronouns]: T,
-                    [_.bot]: null != S
+                className: a()(f.tags, {
+                    [f.pronouns]: T,
+                    [f.bot]: null != S
                 }),
                 children: [
                     !t.isProvisional &&
@@ -61,9 +61,9 @@ function p(e) {
                                 usernameIcon: n,
                                 forceUsername: !0,
                                 forcePomelo: b,
-                                className: a()(_.userTag, E),
-                                usernameClass: _.userTagUsername,
-                                discriminatorClass: _.userTagDiscriminator,
+                                className: a()(f.userTag, E),
+                                usernameClass: f.userTagUsername,
+                                discriminatorClass: f.userTagDiscriminator,
                                 hideBotTag: !0
                             })
                         ),
@@ -72,14 +72,14 @@ function p(e) {
                             children: [
                                 (0, r.jsx)('div', {
                                     'aria-hidden': 'true',
-                                    className: _.dotSpacer
+                                    className: f.dotSpacer
                                 }),
                                 (0, r.jsx)(o.DY3, {
-                                    className: _.pronounsTooltip,
-                                    text: f.intl.string(f.t.GI2A8P),
+                                    className: f.pronounsTooltip,
+                                    text: _.intl.string(_.t.GI2A8P),
                                     delay: d.vB,
                                     children: (0, r.jsx)(o.Text, {
-                                        className: a()(_.pronounsText, E),
+                                        className: a()(f.pronounsText, E),
                                         variant: 'text-sm/medium',
                                         color: 'header-primary',
                                         children: m
@@ -90,8 +90,8 @@ function p(e) {
                     (0, r.jsx)(u.ZP, {
                         userId: t.id,
                         onClose: O,
-                        containerClassName: _.guildTagContainer,
-                        className: _.guildTag
+                        containerClassName: f.guildTagContainer,
+                        className: f.guildTag
                     }),
                     i
                 ]

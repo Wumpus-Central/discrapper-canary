@@ -1,6 +1,6 @@
 n.d(t, {
     Q: () => c,
-    W: () => f
+    W: () => _
 });
 var r = n(255367);
 n(73800);
@@ -39,18 +39,18 @@ function d(e) {
             return l.positive;
     }
 }
-function f(e) {
+function _(e) {
     let { children: t, messageType: n, className: i, textColor: o = 'text-normal', textVariant: c = 'text-sm/medium' } = e,
-        f = u(n),
-        _ = d(n);
+        _ = u(n),
+        f = d(n);
     return (0, r.jsxs)('div', {
-        className: a()(l.container, _, i),
+        className: a()(l.container, f, i),
         children: [
             (0, r.jsx)('div', {
                 className: l.iconDiv,
                 children:
-                    f &&
-                    (0, r.jsx)(f, {
+                    _ &&
+                    (0, r.jsx)(_, {
                         className: l.icon,
                         color: 'currentColor'
                     })

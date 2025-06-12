@@ -60,18 +60,18 @@ function d(e, t) {
         e
     );
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -85,8 +85,8 @@ var p = (function (e) {
 })({});
 function h(e) {
     let t;
-    var { tag: n = 'h5', children: i, className: l, faded: u, disabled: _, required: p = !1, error: h, errorId: m } = e,
-        g = f(e, ['tag', 'children', 'className', 'faded', 'disabled', 'required', 'error', 'errorId']);
+    var { tag: n = 'h5', children: i, className: l, faded: u, disabled: f, required: p = !1, error: h, errorId: m } = e,
+        g = _(e, ['tag', 'children', 'className', 'faded', 'disabled', 'required', 'error', 'errorId']);
     switch (n) {
         case 'legend':
         case 'label':
@@ -103,7 +103,7 @@ function h(e) {
                     className: a()(s[n], 'h5' !== n ? s.defaultColor : null, l, {
                         [s['defaultMargin'.concat(n)]]: null == l,
                         [s.faded]: u,
-                        [s.disabled]: _,
+                        [s.disabled]: f,
                         [s.error]: null != h
                     })
                 },

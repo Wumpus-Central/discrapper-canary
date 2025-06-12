@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(539854);
+n.d(t, { Z: () => f }), n(539854);
 var r = n(979554),
     i = n(778787),
     a = n(803358);
@@ -74,16 +74,16 @@ function d(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let f = (e) => e === r.Z.VARIANTS_GROUP || e === r.Z.EXTERNAL_SKU;
-class _ extends a.Z {
+let _ = (e) => e === r.Z.VARIANTS_GROUP || e === r.Z.EXTERNAL_SKU;
+class f extends a.Z {
     static fromServer(e) {
         var { products: t, logo: n, hero_ranking: r, pdp_bg: a, mobile_bg: o, success_modal_bg: l, mobile_banner: d, hero_banner: p, hero_banner_asset: h, featured_block: m, hero_logo: g, banner_text_color: E } = e,
             b = u(e, ['products', 'logo', 'hero_ranking', 'pdp_bg', 'mobile_bg', 'success_modal_bg', 'mobile_banner', 'hero_banner', 'hero_banner_asset', 'featured_block', 'hero_logo', 'banner_text_color']);
-        return new _(
+        return new f(
             c(s({}, super.fromServer(b)), {
                 products: t.reduce((e, t) => {
                     let n = i.Z.fromServer(t);
-                    return (f(n.type) || 0 !== n.items.length) && e.push(n), e;
+                    return (_(n.type) || 0 !== n.items.length) && e.push(n), e;
                 }, []),
                 logo: n,
                 heroRanking: r,

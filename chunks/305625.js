@@ -1,8 +1,8 @@
 a.d(e, {
     Lh: () => s,
     _l: () => l,
-    jC: () => u,
-    uc: () => I
+    jC: () => I,
+    uc: () => u
 });
 var r = a(370336),
     _ = a(285883),
@@ -25,7 +25,7 @@ function l(t, e) {
         });
     return e.emit('createDsc', o), o;
 }
-function u(t) {
+function I(t) {
     let e = (0, o.s3)();
     if (!e) return {};
     let a = l((0, c.XU)(t).trace_id || '', e),
@@ -33,18 +33,18 @@ function u(t) {
         n = r[E];
     if (n) return n;
     let s = r.spanContext().traceState,
-        u = s && s.get('sentry.dsc'),
-        I = u && (0, _.EN)(u);
-    if (I) return I;
+        I = s && s.get('sentry.dsc'),
+        u = I && (0, _.EN)(I);
+    if (u) return u;
     let R = (0, c.XU)(r),
-        N = R.data || {},
-        d = N[i.TE];
-    null != d && (a.sample_rate = `${d}`);
-    let A = N[i.Zj],
-        f = R.description;
-    return 'url' !== A && f && (a.transaction = f), (a.sampled = String((0, c.Tt)(r))), e.emit('createDsc', a, r), a;
+        A = R.data || {},
+        T = A[i.TE];
+    null != T && (a.sample_rate = `${T}`);
+    let N = A[i.Zj],
+        d = R.description;
+    return 'url' !== N && d && (a.transaction = d), (a.sampled = String((0, c.Tt)(r))), e.emit('createDsc', a, r), a;
 }
-function I(t) {
-    let e = u(t);
+function u(t) {
+    let e = I(t);
     return (0, _.IQ)(e);
 }

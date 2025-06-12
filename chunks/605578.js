@@ -56,7 +56,7 @@ function u(e, t) {
     );
 }
 let d = i.forwardRef(function (e, t) {
-    let { tag: n = 'div', children: s, className: c, style: d, focusProps: f, onClick: _, onDoubleClick: p, onContextMenu: h, onKeyDown: m, onFocus: g, onBlur: E, onMouseOver: b, onMouseDown: y, onMouseLeave: O, buttonProps: v, 'aria-label': I } = e,
+    let { tag: n = 'div', children: s, className: c, style: d, focusProps: _, onClick: f, onDoubleClick: p, onContextMenu: h, onKeyDown: m, onFocus: g, onBlur: E, onMouseOver: b, onMouseDown: y, onMouseLeave: O, buttonProps: v, 'aria-label': I } = e,
         T = i.useRef(null);
     return (
         i.useImperativeHandle(t, () => T.current),
@@ -64,7 +64,7 @@ let d = i.forwardRef(function (e, t) {
             ref: T,
             className: c,
             style: d,
-            onClick: _,
+            onClick: f,
             onMouseOver: b,
             onMouseLeave: O,
             onDoubleClick: p,
@@ -74,11 +74,11 @@ let d = i.forwardRef(function (e, t) {
                 (0, r.jsx)(
                     a.P,
                     u(l({}, v), {
-                        focusProps: l({ ringTarget: T }, f),
+                        focusProps: l({ ringTarget: T }, _),
                         className: o.focusTarget,
                         'aria-label': I,
                         onClick: (e) => {
-                            e.stopPropagation(), null == _ || _(e);
+                            e.stopPropagation(), null == f || f(e);
                         },
                         onKeyDown: m,
                         onFocus: g,

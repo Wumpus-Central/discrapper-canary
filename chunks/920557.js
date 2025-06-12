@@ -49,12 +49,12 @@ function v(e) {
         [g, _] = i.useState(''),
         [E, v] = i.useState(!1),
         O = '' !== g && E,
-        C = i.useCallback(() => {
+        j = i.useCallback(() => {
             _((0, h.e1)(u, c, a));
         }, [u, c, a]),
-        j = i.useCallback(() => {
-            C(), v(!0);
-        }, [C]),
+        C = i.useCallback(() => {
+            j(), v(!0);
+        }, [j]),
         S = i.useCallback(() => {
             v(!1);
         }, []),
@@ -68,12 +68,12 @@ function v(e) {
     i.useEffect(() => {
         if (E)
             return (
-                m.Z.addReactChangeListener(C),
+                m.Z.addReactChangeListener(j),
                 () => {
-                    m.Z.removeReactChangeListener(C);
+                    m.Z.removeReactChangeListener(j);
                 }
             );
-    }, [E, C]);
+    }, [E, j]);
     let N = (0, r.jsx)(d.Text, {
         variant: 'text-xs/semibold',
         color: 'none',
@@ -103,9 +103,9 @@ function v(e) {
                                       ((t = x({}, e)),
                                       (n = n =
                                           {
-                                              onMouseEnter: j,
+                                              onMouseEnter: C,
                                               onMouseLeave: S,
-                                              onFocus: j,
+                                              onFocus: C,
                                               onBlur: S,
                                               onClick: I,
                                               className: y.voteCountButton,
@@ -166,7 +166,7 @@ function O(e) {
         'aria-hidden': !0
     });
 }
-function C(e) {
+function j(e) {
     let { answersInteraction: t, isSelected: n, didSelfVote: i, isVictor: l, isExpired: a, className: o } = e;
     return (0, c.EQ)({
         answersInteraction: t,
@@ -201,7 +201,7 @@ function C(e) {
         )
         .otherwise(() => null);
 }
-function j(e) {
+function C(e) {
     let { answer: t, isExpired: n, answersInteraction: i, canShowVoteCounts: l, canShowVoterDetails: s } = e,
         c = !0 === t.isSelected,
         u = !0 === t.didSelfVote,
@@ -239,7 +239,7 @@ function j(e) {
                     canShowVoterDetails: s,
                     answerId: t.answerId
                 }),
-            (0, r.jsx)(C, {
+            (0, r.jsx)(j, {
                 answersInteraction: i,
                 isSelected: c,
                 didSelfVote: u,
@@ -280,7 +280,7 @@ function S(e) {
                 answersInteraction: n,
                 canTapAnswers: l,
                 renderAnswerContent: (e) =>
-                    (0, r.jsx)(j, {
+                    (0, r.jsx)(C, {
                         answer: e,
                         isExpired: t,
                         answersInteraction: n,

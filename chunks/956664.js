@@ -63,14 +63,14 @@ function d(e, t) {
         maxHeight: i
     });
 }
-let f = 2,
-    _ = 1.6;
+let _ = 2,
+    f = 1.6;
 function p(e, t, n, r) {
-    let i = Math.max(f, null != e && 0 !== e && null != t && 0 !== t ? e / n : 0),
-        a = f;
-    null != n && n * i > window.innerWidth * _ && (a = (window.innerWidth * _) / n);
-    let o = f;
-    return null != r && r * i > window.innerHeight * _ && (o = (window.innerHeight * _) / r), (i = parseFloat((i = Math.min(i, a, o)).toFixed(2)));
+    let i = Math.max(_, null != e && 0 !== e && null != t && 0 !== t ? e / n : 0),
+        a = _;
+    null != n && n * i > window.innerWidth * f && (a = (window.innerWidth * f) / n);
+    let o = _;
+    return null != r && r * i > window.innerHeight * f && (o = (window.innerHeight * f) / r), (i = parseFloat((i = Math.min(i, a, o)).toFixed(2)));
 }
 function h(e) {
     let { width: t, height: n, maxWidth: r, maxHeight: i } = e,

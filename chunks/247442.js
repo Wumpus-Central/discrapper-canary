@@ -76,10 +76,10 @@ function u(e, t) {
 }
 function d(e) {
     var { width: t = 24, height: n = 24, color: a = 'currentColor', className: s, background: u, foreground: d } = e,
-        f = c(e, ['width', 'height', 'color', 'className', 'background', 'foreground']);
+        _ = c(e, ['width', 'height', 'color', 'className', 'background', 'foreground']);
     return (0, r.jsxs)(
         'svg',
-        l(o({}, (0, i.Z)(f)), {
+        l(o({}, (0, i.Z)(_)), {
             className: s,
             width: t,
             height: n,

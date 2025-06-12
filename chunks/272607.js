@@ -34,16 +34,16 @@ function d(e, t) {
             configurable: !0
         }
     })),
-        t && f(e, t);
+        t && _(e, t);
 }
-function f(e, t) {
-    return (f =
+function _(e, t) {
+    return (_ =
         Object.setPrototypeOf ||
         function (e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
-function _(e) {
+function f(e) {
     var t = m();
     return function () {
         var n,
@@ -89,7 +89,7 @@ function E(e, t, n) {
 }
 var b = (function (e) {
     d(n, e);
-    var t = _(n);
+    var t = f(n);
     function n() {
         var e;
         l(this, n);

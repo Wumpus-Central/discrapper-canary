@@ -1,8 +1,8 @@
 n.d(t, {
     fz: () => P,
-    ge: () => k,
+    ge: () => M,
     gf: () => j,
-    r5: () => M,
+    r5: () => k,
     rk: () => w,
     wV: () => x
 }),
@@ -16,8 +16,8 @@ var r = n(512722),
     c = n(570140),
     u = n(314897),
     d = n(131951),
-    f = n(626135),
-    _ = n(460366),
+    _ = n(626135),
+    f = n(460366),
     p = n(358085),
     h = n(960048),
     m = n(998502),
@@ -123,9 +123,9 @@ function P(e) {
                 else {
                     let n = 'Failed to download voice filter dependency';
                     A.error(n, I({ reason: t }, e)),
-                        f.default.track(O.rMx.VOICE_FILTER_ERROR, {
+                        _.default.track(O.rMx.VOICE_FILTER_ERROR, {
                             error_message: n,
-                            cause: (0, _.X)(Error(t))
+                            cause: (0, f.X)(Error(t))
                         }),
                         h.Z.captureException(Error(n, { cause: t }), {
                             tags: { modelId: r },
@@ -137,7 +137,7 @@ function P(e) {
 }
 async function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-    await M();
+    await k();
     let n = performance.now();
     try {
         let r = m.ZP.getVoiceFilters();
@@ -182,7 +182,7 @@ async function D(e) {
 }
 async function L(e) {
     let t = u.default.getToken(),
-        n = f.default.getSuperPropertiesBase64();
+        n = _.default.getSuperPropertiesBase64();
     i()(null != t, 'Authentication token must be available'), i()(null != n, 'Analytics superProperties must be available');
     let r = JSON.parse(await e.fetchCatalog(t, n));
     if (!r.models) throw Error('Voice filters catalog response is empty');
@@ -207,9 +207,9 @@ async function x() {
                 : await L(e);
         } catch (e) {
             A.warn('Failed to refresh voice filters catalog: '.concat(e.message)),
-                f.default.track(O.rMx.VOICE_FILTER_ERROR, {
+                _.default.track(O.rMx.VOICE_FILTER_ERROR, {
                     error_message: 'Failed to refresh voice filters catalog',
-                    cause: (0, _.X)(e)
+                    cause: (0, f.X)(e)
                 }),
                 h.Z.captureException(e),
                 await c.Z.dispatch({ type: 'VOICE_FILTER_CATALOG_FETCH_FAILED' });
@@ -217,10 +217,10 @@ async function x() {
             R = !1;
         }
 }
-function k() {
+function M() {
     c.Z.dispatch({ type: 'VOICE_FILTER_DOWNLOAD_CANCELED' });
 }
-async function M() {
+async function k() {
     if (!(b.Z.isNativeModuleLoaded() || b.Z.isNativeModuleLoading()) && !__OVERLAY__) {
         if (!(0, p.isWindows)() && !(0, p.isMac)())
             return void c.Z.dispatch({
@@ -255,17 +255,17 @@ async function M() {
             }
             d.Z.getMediaEngine().on(l.aB.VoiceFiltersFailed, (e) => {
                 A.warn('Voice Filters failed in process: '.concat(e)),
-                    f.default.track(O.rMx.VOICE_FILTER_ERROR, {
+                    _.default.track(O.rMx.VOICE_FILTER_ERROR, {
                         error_message: 'Voice Filters failed in process',
-                        cause: (0, _.X)(Error(e))
+                        cause: (0, f.X)(Error(e))
                     }),
                     h.Z.captureException(Error('Voice Filters failed in process', { cause: e }));
             });
         } catch (e) {
             A.warn('Failed to load Voice Filters module: '.concat(e.message)),
-                f.default.track(O.rMx.VOICE_FILTER_ERROR, {
+                _.default.track(O.rMx.VOICE_FILTER_ERROR, {
                     error_message: 'Failed to load Voice Filters module',
-                    cause: (0, _.X)(e)
+                    cause: (0, f.X)(e)
                 }),
                 h.Z.captureException(e),
                 c.Z.dispatch({

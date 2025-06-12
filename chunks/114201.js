@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(314897),
     u = n(553795),
     d = n(430824),
-    f = n(496675),
-    _ = n(626135),
+    _ = n(496675),
+    f = n(626135),
     p = n(70956),
     h = n(425128),
     m = n(979192),
@@ -123,7 +123,7 @@ function R(e) {
         w =
             null != N && null != S
                 ? () => {
-                      _.default.track(y.rMx.LEADERBOARD_USER_DATA_REFRESH_REQUESTED, {
+                      f.default.track(y.rMx.LEADERBOARD_USER_DATA_REFRESH_REQUESTED, {
                           leaderboard_id: p,
                           guild_id: t
                       }),
@@ -140,12 +140,12 @@ function R(e) {
             leaderboardId: p,
             statisticId: a.E.LOL_TOTAL_KILLS
         }),
-        { disabled: k, subtext: M } = C(L, x),
+        { disabled: M, subtext: k } = C(L, x),
         j = (0, o.e7)(
-            [f.Z, d.Z],
+            [_.Z, d.Z],
             () => {
                 let e = d.Z.getGuild(t);
-                return f.Z.can(y.Plq.ADMINISTRATOR, e);
+                return _.Z.can(y.Plq.ADMINISTRATOR, e);
             },
             [t]
         ),
@@ -174,8 +174,8 @@ function R(e) {
                                       id: 'refresh-my-data',
                                       label: O.intl.string(O.t.iopWUV),
                                       action: w,
-                                      disabled: k,
-                                      subtext: M
+                                      disabled: M,
+                                      subtext: k
                                   }),
                               (0, r.jsx)(s.sNh, {
                                   id: 'leaderboard-modal',

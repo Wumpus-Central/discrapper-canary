@@ -25,8 +25,8 @@ var r,
     x = n(551428),
     v = n(73346),
     O = n(981631),
-    C = n(388032),
-    j = n(228016);
+    j = n(388032),
+    C = n(228016);
 function S(e, t, n) {
     return (
         t in e
@@ -91,10 +91,10 @@ class I extends (r = l.Component) {
     renderViewInStoreButton() {
         return (0, i.jsx)(s.zxk.Link, {
             to: this.getStoreListingLocation(),
-            className: j.actionButton,
+            className: C.actionButton,
             color: s.zxk.Colors.GREEN,
             size: s.zxk.Sizes.SMALL,
-            children: C.intl.string(C.t['W+NB9/'])
+            children: j.intl.string(j.t['W+NB9/'])
         });
     }
     render() {
@@ -172,14 +172,14 @@ class I extends (r = l.Component) {
                 let { inLibrary: t, application: n, skuId: r, libraryApplication: l, renderCustomActions: a } = this.props;
                 if (null != a)
                     return (0, i.jsx)('div', {
-                        className: j.tileActions,
+                        className: C.tileActions,
                         children: a()
                     });
                 if (null == n) return null;
                 let o = null != n && n.primarySkuId === r,
                     c = null != l && l.hasFlag(O.eHb.HIDDEN);
                 return (0, i.jsxs)('div', {
-                    className: j.tileActions,
+                    className: C.tileActions,
                     children: [
                         !o || c
                             ? this.renderViewInStoreButton()
@@ -187,7 +187,7 @@ class I extends (r = l.Component) {
                                   application: n,
                                   customDisabledColor: s.zxk.Colors.PRIMARY,
                                   size: s.zxk.Sizes.SMALL,
-                                  className: j.actionButton,
+                                  className: C.actionButton,
                                   source: O.Sbl.MESSAGE_EMBED,
                                   onClick: this.handleActionButtonClick
                               }),

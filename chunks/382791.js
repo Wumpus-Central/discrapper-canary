@@ -1,7 +1,7 @@
 n.d(t, {
     A1: () => g,
     Cy: () => h,
-    VE: () => _,
+    VE: () => f,
     mn: () => p,
     y_: () => m
 });
@@ -15,28 +15,28 @@ var i = n(120356),
     c = n(63802),
     u = n(474936),
     d = n(388032),
-    f = n(781793),
-    _ = (function (e) {
+    _ = n(781793),
+    f = (function (e) {
         return (e[(e.PREMIUM_TIER_0_WHITE_FILL = 0)] = 'PREMIUM_TIER_0_WHITE_FILL'), (e[(e.PREMIUM_TIER_0_GRADIENT_FILL = 1)] = 'PREMIUM_TIER_0_GRADIENT_FILL'), (e[(e.PREMIUM_TIER_2_WHITE_FILL = 2)] = 'PREMIUM_TIER_2_WHITE_FILL'), (e[(e.PREMIUM_TIER_2_NEW_GRADIENT_FILL = 3)] = 'PREMIUM_TIER_2_NEW_GRADIENT_FILL'), (e[(e.PREMIUM_TIER_2_OLD_GRADIENT_FILL = 4)] = 'PREMIUM_TIER_2_OLD_GRADIENT_FILL'), (e[(e.PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE = 5)] = 'PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE'), (e[(e.PREMIUM_TIER_2_GREY_FILL = 6)] = 'PREMIUM_TIER_2_GREY_FILL'), e;
     })({});
 function p(e) {
     let { text: t, className: n, colorOptions: i = 2, icon: o, gap: l = !0 } = e;
     return (0, r.jsxs)('div', {
-        className: a()(n, f.freeTrialPill, {
-            [f.freeTrialPillTier0GradientFill]: 1 === i,
-            [f.freeTrialPillTier2GradientFill]: 3 === i,
-            [f.freeTrialPillTier2OldGradientFill]: 4 === i,
-            [f.lightBackgroundPill]: 5 === i,
-            [f.greyBackgroundPill]: 6 === i,
-            [f.freeTrialPillGap]: l
+        className: a()(n, _.freeTrialPill, {
+            [_.freeTrialPillTier0GradientFill]: 1 === i,
+            [_.freeTrialPillTier2GradientFill]: 3 === i,
+            [_.freeTrialPillTier2OldGradientFill]: 4 === i,
+            [_.lightBackgroundPill]: 5 === i,
+            [_.greyBackgroundPill]: 6 === i,
+            [_.freeTrialPillGap]: l
         }),
         children: [
             (0, r.jsx)(s.Text, {
                 variant: 'text-xs/bold',
-                className: a()(f.freeTrialPillText, {
-                    [f.freeTrialPillTextInverted]: 0 !== i && 2 !== i,
-                    [f.freeTrialPillTextTier0]: 0 === i,
-                    [f.freeTrialPillTextTier2]: 2 === i || 6 === i
+                className: a()(_.freeTrialPillText, {
+                    [_.freeTrialPillTextInverted]: 0 !== i && 2 !== i,
+                    [_.freeTrialPillTextTier0]: 0 === i,
+                    [_.freeTrialPillTextTier2]: 2 === i || 6 === i
                 }),
                 children: t
             }),
@@ -63,18 +63,18 @@ function h(e) {
     }
     return l
         ? (0, r.jsxs)('div', {
-              className: a()(i, f.freeTrialPillWithSparkles),
+              className: a()(i, _.freeTrialPillWithSparkles),
               children: [
                   (0, r.jsx)(c.R9, {
-                      foreground: f.sparkleStar1,
+                      foreground: _.sparkleStar1,
                       color: t
                   }),
                   (0, r.jsx)(c.R9, {
-                      foreground: f.sparkleStar2,
+                      foreground: _.sparkleStar2,
                       color: t
                   }),
                   (0, r.jsx)(c.R9, {
-                      foreground: f.sparkleStar3,
+                      foreground: _.sparkleStar3,
                       color: t
                   }),
                   (0, r.jsx)(p, {
@@ -82,24 +82,24 @@ function h(e) {
                       colorOptions: s
                   }),
                   (0, r.jsx)(c.R9, {
-                      foreground: f.sparkleStar4,
+                      foreground: _.sparkleStar4,
                       color: t
                   }),
                   (0, r.jsx)(c.R9, {
-                      foreground: f.sparkleStar5,
+                      foreground: _.sparkleStar5,
                       color: t
                   })
               ]
           })
         : (0, r.jsxs)('div', {
-              className: a()(i, f.freeTrialPillWithSparkles),
+              className: a()(i, _.freeTrialPillWithSparkles),
               children: [
                   (0, r.jsx)(p, {
                       text: n,
                       colorOptions: s
                   }),
                   (0, r.jsx)(c.R9, {
-                      foreground: f.sparkleStar1,
+                      foreground: _.sparkleStar1,
                       style: {
                           marginLeft: 4,
                           marginBottom: -6
@@ -107,7 +107,7 @@ function h(e) {
                       color: t
                   }),
                   (0, r.jsx)(c.R9, {
-                      foreground: f.sparkleStar2,
+                      foreground: _.sparkleStar2,
                       color: t
                   })
               ]

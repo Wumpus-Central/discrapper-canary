@@ -1,7 +1,7 @@
 n.d(t, {
     Gi: () => E,
     P0: () => m,
-    UD: () => _,
+    UD: () => f,
     WF: () => g,
     gT: () => h,
     iZ: () => p,
@@ -30,10 +30,10 @@ function d(e) {
         i = n.getModeratorReportChannelId();
     return r && null != i;
 }
-function f(e) {
+function _(e) {
     return m(l.Z.getChannel(e));
 }
-function _(e) {
+function f(e) {
     return p(l.Z.getChannel(e));
 }
 function p(e) {
@@ -46,7 +46,7 @@ function m(e) {
     return null != e && (p(e) || h(e));
 }
 function g(e) {
-    if (null == e || !(0, s.U)() || !f(e)) return !0;
+    if (null == e || !(0, s.U)() || !_(e)) return !0;
     let { loaded: t, firstMessage: n } = o.Z.getMessage(e);
     return !t || null == n || !(0, i.X6)(n, r.qn.EXPLICIT);
 }

@@ -8,8 +8,8 @@ var r,
     c = n.n(l),
     u = n(259443),
     d = n(46973),
-    f = n(912095),
-    _ = n(886848),
+    _ = n(912095),
+    f = n(886848),
     p = n(649318),
     h = n(65154),
     m = n(436620);
@@ -32,7 +32,7 @@ let E = 10,
 function O(e, t) {
     e.sender.replaceTrack(t), (e.direction = null != t ? 'sendrecv' : 'recvonly');
 }
-class v extends f.Z {
+class v extends _.Z {
     destroy() {
         super.destroy(), 'closed' !== this.signalingState && this.pc.close();
     }
@@ -101,7 +101,7 @@ class v extends f.Z {
             (super.setBitRate(e),
             this.setAudioEncoderParameters([
                 {
-                    parameter: f.p.AUDIO_BITRATE,
+                    parameter: _.p.AUDIO_BITRATE,
                     value: e
                 }
             ]));
@@ -149,7 +149,7 @@ class v extends f.Z {
             .catch((e) => a(e));
     }
     setAudioEncoderParameters(e) {
-        let t = { [f.p.AUDIO_BITRATE]: 'maxBitrate' },
+        let t = { [_.p.AUDIO_BITRATE]: 'maxBitrate' },
             n = [];
         for (let { parameter: r, value: i } of e) {
             let e = t[r];
@@ -163,9 +163,9 @@ class v extends f.Z {
     }
     setVideoEncoderParameters(e) {
         let t = {
-                [f.p.VIDEO_BITRATE]: 'maxBitrate',
-                [f.p.VIDEO_RESOLUTION_SCALE]: 'scaleResolutionDownBy',
-                [f.p.VIDEO_FRAMERATE]: 'maxFramerate'
+                [_.p.VIDEO_BITRATE]: 'maxBitrate',
+                [_.p.VIDEO_RESOLUTION_SCALE]: 'scaleResolutionDownBy',
+                [_.p.VIDEO_FRAMERATE]: 'maxFramerate'
             },
             n = [];
         for (let { parameter: r, value: i } of e) {
@@ -254,8 +254,8 @@ class v extends f.Z {
             c = this.videoPayloadType,
             u = this.videoSupported && (null == (a = this.videoTransceiver) || null == (i = a.sender) ? void 0 : i.track) != null,
             d = this.rtxPayloadType,
-            f = this.sdp;
-        if (null == o || null == s || null == l || null == c || null == d || null == f)
+            _ = this.sdp;
+        if (null == o || null == s || null == l || null == c || null == d || null == _)
             throw Error(
                 'Invalid payload: audioCodec: '
                     .concat(o, ', audioPayloadType: ')
@@ -263,15 +263,15 @@ class v extends f.Z {
                     .concat(l, ', videoCodecPayloadType: ')
                     .concat(null == c ? 'null' : c, ', rtxPayloadType: ')
                     .concat(null == d ? 'null' : d, ', sdp: ')
-                    .concat(null == f ? 'null' : f)
+                    .concat(null == _ ? 'null' : _)
             );
-        let { ssrcs: _, remainingAudioStreams: h, remainingVideoStreams: m } = this.buildSSRCsFromOutboundStreams(e, t, n, r);
+        let { ssrcs: f, remainingAudioStreams: h, remainingVideoStreams: m } = this.buildSSRCsFromOutboundStreams(e, t, n, r);
         return {
             remainingAudioStreams: h,
             remainingVideoStreams: m,
             answer: (0, p.Rx)({
                 type: 'answer',
-                baseSDP: f,
+                baseSDP: _,
                 audioCodec: o,
                 audioPayloadType: s,
                 audioBitRate: this.voiceBitrate,
@@ -280,7 +280,7 @@ class v extends f.Z {
                 videoBitRate: 2500,
                 sendingVideo: u,
                 rtxPayloadType: d,
-                ssrcs: _,
+                ssrcs: f,
                 extensions: this.extensions,
                 enableAudioNack: this.enableAudioNack
             })
@@ -297,7 +297,7 @@ class v extends f.Z {
         this.unassignedStreams.audio.unshift(...o), this.unassignedStreams.video.unshift(...s), (this.unassignedStreams.audio.length > 0 || this.unassignedStreams.video.length > 0) && ((this.negotiationNeeded = !0), this.logger.info('Renegotiating: Streams left unassigned after negotiation - renegotiate')), (this.negotiating = !1), this.negotiationNeeded && this.handleNegotiationNeeded();
     }
     setConnected() {
-        this.input.reset(), this.setConnectionState(h.$j.CONNECTED), this.on(d.Sh.Stats, this.handleStats), this.input.on(_.G.VoiceActivity, this.handleVoiceActivity);
+        this.input.reset(), this.setConnectionState(h.$j.CONNECTED), this.on(d.Sh.Stats, this.handleStats), this.input.on(f.G.VoiceActivity, this.handleVoiceActivity);
     }
     async handleNegotiationNeeded() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -317,8 +317,8 @@ class v extends f.Z {
         } catch (e) {
             this.logger.warn('Failed to set local offer: '.concat(e, ', type: ').concat(o.type, ', sdp: ').concat(o.sdp)), this.emit(d.Sh.SdpError, 'setLocalDescription', e.message, o.type);
         }
-        let { sdp: l, outboundStreams: c, codecs: u, audioSSRC: f, videoSSRC: _, rtxSSRC: h, extensions: m } = this.parseLocalDescription();
-        (this.codecs = u), (this.extensions = m), (this.audioSSRC = f), (this.videoReady = _ > 0 && h > 0), (this.videoStreamParameters[0].ssrc !== _ || this.videoStreamParameters[0].rtxSsrc !== h || this.videoReady) && ((this.videoStreamParameters[0].ssrc = 0 === _ ? this.videoStreamParameters[0].ssrc : _), (this.videoStreamParameters[0].rtxSsrc = 0 === h ? this.videoStreamParameters[0].rtxSsrc : h), (this.videoStreamParameters[0].active = this.videoReady), this.emit(d.Sh.Video, this.userId, this.input.getVideoStreamId(), this.audioSSRC, _, h, this.videoStreamParameters)), null == this.sdp ? this.emit(d.Sh.Connected, 'webrtc', (0, p.sc)(l)) : this.setRemoteAnswer(c, t, n, r);
+        let { sdp: l, outboundStreams: c, codecs: u, audioSSRC: _, videoSSRC: f, rtxSSRC: h, extensions: m } = this.parseLocalDescription();
+        (this.codecs = u), (this.extensions = m), (this.audioSSRC = _), (this.videoReady = f > 0 && h > 0), (this.videoStreamParameters[0].ssrc !== f || this.videoStreamParameters[0].rtxSsrc !== h || this.videoReady) && ((this.videoStreamParameters[0].ssrc = 0 === f ? this.videoStreamParameters[0].ssrc : f), (this.videoStreamParameters[0].rtxSsrc = 0 === h ? this.videoStreamParameters[0].rtxSsrc : h), (this.videoStreamParameters[0].active = this.videoReady), this.emit(d.Sh.Video, this.userId, this.input.getVideoStreamId(), this.audioSSRC, f, h, this.videoStreamParameters)), null == this.sdp ? this.emit(d.Sh.Connected, 'webrtc', (0, p.sc)(l)) : this.setRemoteAnswer(c, t, n, r);
     }
     constructor(e, t, n, r) {
         super(e, t, n, r),

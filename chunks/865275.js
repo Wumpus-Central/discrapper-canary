@@ -8,8 +8,8 @@ var r = n(836560),
     c = n(983544),
     u = n(596956),
     d = n(981631),
-    f = n(959517),
-    _ = n(388032);
+    _ = n(959517),
+    f = n(388032);
 function p(e, t, n) {
     return (
         t in e
@@ -78,12 +78,12 @@ class b extends r.EventEmitter {
             : !(this._fileSize() > n.getMaxTotalAttachmentSize()) ||
                   (this._handleError({
                       code: d.evJ.ENTITY_TOO_LARGE,
-                      reason: { type: f.xi.POSTCOMPRESSION_SUM_TOO_LARGE }
+                      reason: { type: _.xi.POSTCOMPRESSION_SUM_TOO_LARGE }
                   }),
                   !1);
     }
     setUploadingTextForUI() {
-        let e = 1 === this.files.length && null != this.files[0].filename ? this.files[0].filename : _.intl.formatToPlainString(_.t.D0noUl, { count: this.files.length }),
+        let e = 1 === this.files.length && null != this.files[0].filename ? this.files[0].filename : f.intl.formatToPlainString(f.t.D0noUl, { count: this.files.length }),
             t = this.files.some((e) => e.isImage),
             n = this.files.some((e) => e.isVideo),
             r = this._fileSize();
@@ -201,7 +201,7 @@ class b extends r.EventEmitter {
             p(this, '_handleException', (e) => {
                 this._handleError({
                     reason: {
-                        type: f.xi.ERROR_SOURCE_UNKNOWN,
+                        type: _.xi.ERROR_SOURCE_UNKNOWN,
                         msg: e.toString()
                     }
                 });

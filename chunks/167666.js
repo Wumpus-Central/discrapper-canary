@@ -34,7 +34,7 @@ function d(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,12 +46,12 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -113,7 +113,7 @@ class g extends (r = a.PureComponent) {
         let e = this.props,
             { className: t, children: n, tag: r, size: a, fullscreenOnMobile: o } = e,
             l = p(e, ['className', 'children', 'tag', 'size', 'fullscreenOnMobile']);
-        return (0, i.jsx)(r, _(d({ className: s()(c.modal, t, a, { [c.fullscreenOnMobile]: o }) }, l), { children: this.renderChildren() }));
+        return (0, i.jsx)(r, f(d({ className: s()(c.modal, t, a, { [c.fullscreenOnMobile]: o }) }, l), { children: this.renderChildren() }));
     }
     constructor(e) {
         super(e),

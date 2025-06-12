@@ -29,8 +29,8 @@ var r = n(255367),
     x = n(65145),
     v = n(981631),
     O = n(388032),
-    C = n(56228);
-function j(e) {
+    j = n(56228);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -116,7 +116,7 @@ function T(e) {
     return (0, r.jsx)(
         'div',
         S(
-            j(
+            C(
                 {
                     'aria-label': O.intl.string(O.t.sJpqBQ),
                     ref: l
@@ -135,7 +135,7 @@ function P(e) {
         { pollAnswerRef: c } = (0, x.dv)();
     return (0, r.jsx)(s.P3F, {
         role: 'checkbox',
-        className: a()(t, C.enabled),
+        className: a()(t, j.enabled),
         onClick: n,
         'aria-checked': i,
         ref: l ? c : void 0,
@@ -147,7 +147,7 @@ function A(e) {
         { pollAnswerRef: u } = (0, x.dv)();
     return (0, r.jsx)(s.P3F, {
         role: 'radio',
-        className: a()(t, C.enabled),
+        className: a()(t, j.enabled),
         onClick: i,
         'aria-checked': l,
         tabIndex: o ? (l ? 0 : -1) : c ? 0 : -1,
@@ -247,7 +247,7 @@ function R(e) {
         a = m.QK.useSetting();
     return (0, r.jsx)(p.ZP, {
         className: i,
-        imageClassName: C.attachmentImage,
+        imageClassName: j.attachmentImage,
         src: null != n.proxy_url && '' !== n.proxy_url ? n.proxy_url : n.url,
         alt: null != (t = n.description) ? t : (0, b.fw)(n.filename),
         responsive: !0,
@@ -349,24 +349,24 @@ function U(e) {
         l = {
             width: n,
             height: n,
-            background: C.radioBackground,
+            background: j.radioBackground,
             'aria-hidden': !0
         };
     return t
         ? (0, r.jsx)(
               h.Z,
-              S(j({}, l), {
-                  foreground: C.radioForeground,
+              S(C({}, l), {
+                  foreground: j.radioForeground,
                   className: i
               })
           )
-        : (0, r.jsx)(f.Z, S(j({}, l), { className: i }));
+        : (0, r.jsx)(f.Z, S(C({}, l), { className: i }));
 }
 function F(e) {
     let { isSelected: t, size: n, className: i } = e,
         l = 0.85 * n;
     return (0, r.jsx)('div', {
-        className: a()(C.checkbox, { [C.checkboxSelected]: t }, i),
+        className: a()(j.checkbox, { [j.checkboxSelected]: t }, i),
         style: {
             width: n,
             height: n

@@ -20,8 +20,8 @@ var r = n(255367),
     x = n(411198),
     v = n(610699),
     O = n(313876),
-    C = n(778333),
-    j = n(949981),
+    j = n(778333),
+    C = n(949981),
     S = n(680668),
     I = n(508273),
     N = n(143708),
@@ -114,7 +114,7 @@ function R(e) {
         default:
             switch ((0, h.VR)(M)) {
                 case h.wx.GROUP_DM:
-                    W = (0, r.jsx)(j.Z, {
+                    W = (0, r.jsx)(C.Z, {
                         onTransitionToInviteChannel: V,
                         onAcceptInstantInvite: z,
                         currentUserId: G,
@@ -123,7 +123,7 @@ function R(e) {
                     });
                     break;
                 case h.wx.FRIEND:
-                    W = (0, r.jsx)(C.Z, {
+                    W = (0, r.jsx)(j.Z, {
                         invite: M,
                         message: n,
                         getAcceptInviteContext: R

@@ -9,11 +9,11 @@ n.d(t, {
     W3: () => y,
     b9: () => O,
     cV: () => d,
-    g_: () => _,
+    g_: () => f,
     iq: () => o,
     pG: () => b,
     sr: () => m,
-    xn: () => f,
+    xn: () => _,
     z5: () => g
 }),
     n(415506);
@@ -89,13 +89,13 @@ function d(e) {
         avatarDecoration: e
     });
 }
-function f(e) {
+function _(e) {
     i.Z.dispatch({
         type: 'GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT_ID',
         profileEffectId: e
     });
 }
-function _(e) {
+function f(e) {
     i.Z.dispatch({
         type: 'GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER',
         banner: e

@@ -23,12 +23,12 @@ let c = {
     u = i.forwardRef(function (e, t) {
         let { children: n, type: i = 'premium', isShown: a, hasBackground: l = !1, className: u, backgroundClassName: d } = e;
         if (!a) return n;
-        let { border: f, background: _ } = c[i];
+        let { border: _, background: f } = c[i];
         return (0, r.jsx)('div', {
             ref: t,
-            className: o()(f, u),
+            className: o()(_, u),
             children: (0, r.jsx)('div', {
-                className: o()(l ? _ : s.background, d),
+                className: o()(l ? f : s.background, d),
                 children: n
             })
         });

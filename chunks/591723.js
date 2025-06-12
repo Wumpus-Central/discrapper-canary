@@ -17,10 +17,10 @@ function u(e, t) {
 function d(e, t, n) {
     return t && u(e.prototype, t), n && u(e, n), e;
 }
-function f(e, t) {
-    return g(e) || m(e, t) || p(e, t) || _();
+function _(e, t) {
+    return g(e) || m(e, t) || p(e, t) || f();
 }
-function _() {
+function f() {
     throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
 }
 function p(e, t) {
@@ -86,7 +86,7 @@ function y(e, t) {
     do {
         var i = n.next(),
             a = i.done;
-        if (f(i.value, 2)[1] === t) return !0;
+        if (_(i.value, 2)[1] === t) return !0;
         r = !!a;
     } while (!r);
     return !1;

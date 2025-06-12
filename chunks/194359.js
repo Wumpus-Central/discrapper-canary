@@ -8,8 +8,8 @@ var r = n(544891),
     c = n(681678),
     u = n(397550),
     d = n(594174),
-    f = n(657682),
-    _ = n(51144),
+    _ = n(657682),
+    f = n(51144),
     p = n(668781),
     h = n(239091),
     m = n(981631),
@@ -79,7 +79,7 @@ function I(e, t, n) {
             else if ((0, u.b)(r, a)) break;
             else if (a === m.evJ.RELATIONSHIP_INVALID_NO_CONFIRMATION) break;
             else if (0 === t) {
-                let e = null != n ? (0, f.NF)(a || 0, n) : E.intl.string(E.t.paDJBA);
+                let e = null != n ? (0, _.NF)(a || 0, n) : E.intl.string(E.t.paDJBA);
                 O({
                     title: E.intl.string(E.t['6moJ8v']),
                     body: e,
@@ -133,7 +133,7 @@ let T = {
                 .then(() => {
                     null == t || t();
                 })
-                .catch((e) => (I(e, c, _.ZP.getUserTag(u)), Promise.reject(e)));
+                .catch((e) => (I(e, c, f.ZP.getUserTag(u)), Promise.reject(e)));
         },
         acceptFriendRequest(e) {
             function t() {

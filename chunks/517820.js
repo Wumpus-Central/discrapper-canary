@@ -20,8 +20,8 @@ var r = n(255367),
     x = n(36459),
     v = n(434404),
     O = n(518950),
-    C = n(670188),
-    j = n(592125),
+    j = n(670188),
+    C = n(592125),
     S = n(271383),
     I = n(594174),
     N = n(464891),
@@ -156,7 +156,7 @@ function G(e) {
     var t;
     let { message: n, compact: l } = e,
         a = I.default.getUser((0, E.Sw)(n)),
-        o = null == (t = j.Z.getBasicChannel(n.channel_id)) ? void 0 : t.guild_id,
+        o = null == (t = C.Z.getBasicChannel(n.channel_id)) ? void 0 : t.guild_id,
         c = null != o && null != a ? S.ZP.getMember(o, a.id) : null,
         {
             avatarSrc: u,
@@ -198,7 +198,7 @@ function G(e) {
                                     color: 'text-normal',
                                     children: R.intl.string(R.t.qlFrXV)
                                 }),
-                                (0, r.jsx)(C.Z, {
+                                (0, r.jsx)(j.Z, {
                                     targetElementRef: h,
                                     user: a,
                                     guildId: o,
@@ -260,10 +260,10 @@ function H(e) {
     var t;
     let { message: n, compact: l } = e,
         { joinAttempts: a, raidDatetime: o, dmsSent: u, raidType: h, resolvedReason: g } = (0, E.FL)(n),
-        x = (0, p.e7)([j.Z], () => j.Z.getChannel(n.channel_id), [n.channel_id]),
+        x = (0, p.e7)([C.Z], () => C.Z.getChannel(n.channel_id), [n.channel_id]),
         v = null != (t = null == x ? void 0 : x.guild_id) ? t : null,
         { shouldShowIncidentActions: O } = (0, _.mI)(v),
-        C = (0, T.sR)(n.author.id, n.channel_id),
+        j = (0, T.sR)(n.author.id, n.channel_id),
         S = i.useCallback(() => {
             let e = null == x ? void 0 : x.guild_id;
             null != e && (0, y.kW)(n.id, e);
@@ -327,7 +327,7 @@ function H(e) {
                   children: [
                       (0, r.jsx)(f.zxk, {
                           onClick: (e) => {
-                              C(e);
+                              j(e);
                           },
                           color: f.zxk.Colors.LINK,
                           look: f.zxk.Looks.LINK,
@@ -373,7 +373,7 @@ function H(e) {
 function V(e) {
     var t;
     let { message: n, compact: l } = e,
-        a = null == (t = j.Z.getBasicChannel(n.channel_id)) ? void 0 : t.guild_id,
+        a = null == (t = C.Z.getBasicChannel(n.channel_id)) ? void 0 : t.guild_id,
         { raidDatetime: o, decisionId: c, suspiciousMentionActivityUntil: u } = (0, E.FL)(n);
     return (0, r.jsx)(z, {
         compact: l,

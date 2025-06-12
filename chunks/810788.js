@@ -24,11 +24,11 @@ function d(e) {
     if (c.has(t)) return !1;
     c.add(t);
 }
-function f(e) {
+function _(e) {
     let { location: t, enabled: n } = e;
     u[t] = n;
 }
-function _(e) {
+function f(e) {
     let { location: t } = e;
     if (null == u[t]) return !1;
     delete u[t];
@@ -70,6 +70,6 @@ l(h, 'displayName', 'HotspotStore'),
 let m = new h(a.Z, {
     OVERLAY_INITIALIZE: p,
     HOTSPOT_HIDE: d,
-    HOTSPOT_OVERRIDE_SET: f,
-    HOTSPOT_OVERRIDE_CLEAR: _
+    HOTSPOT_OVERRIDE_SET: _,
+    HOTSPOT_OVERRIDE_CLEAR: f
 });

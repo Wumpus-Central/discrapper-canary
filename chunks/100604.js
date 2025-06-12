@@ -50,11 +50,11 @@ class h {
             E = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : i.Z,
             { snapshotIndex: y, parentMessage: x, messageSnapshot: v } = this,
             O = (0, d.Xf)(v.message.timestamp),
-            C = m.getChannel(this.parentMessage.channel_id);
-        if (null != C && C.guild_id === (null == (e = x.messageReference) ? void 0 : e.guild_id)) {
+            j = m.getChannel(this.parentMessage.channel_id);
+        if (null != j && j.guild_id === (null == (e = x.messageReference) ? void 0 : e.guild_id)) {
             let e = m.getChannel(null == (n = x.messageReference) ? void 0 : n.channel_id);
             if (null == e) {
-                let e = b.getGuild(C.guild_id);
+                let e = b.getGuild(j.guild_id);
                 return null == e
                     ? { snapshotIndex: y }
                     : {
@@ -76,9 +76,9 @@ class h {
                 }
             };
         }
-        let j = null == (t = x.messageReference) ? void 0 : t.guild_id;
-        if (null == j) return { snapshotIndex: y };
-        let S = null != (u = b.getGuild(j)) ? u : E.getGuild(j);
+        let C = null == (t = x.messageReference) ? void 0 : t.guild_id;
+        if (null == C) return { snapshotIndex: y };
+        let S = null != (u = b.getGuild(C)) ? u : E.getGuild(C);
         return null == S
             ? { snapshotIndex: y }
             : {

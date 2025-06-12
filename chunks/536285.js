@@ -8,12 +8,12 @@ var r = n(836560),
     c = n(996106),
     u = n(981631);
 let d = u.V6Z + u.frH - 1;
-function f(e, t) {
+function _(e, t) {
     if (null == e || null == t) throw Error('cmd and name required');
     return ''.concat(e, ':').concat(t);
 }
-let _ = o.parse(location.search.slice(1)),
-    p = parseInt(null != _.rpc && '' !== _.rpc ? _.rpc : u.V6Z, 10),
+let f = o.parse(location.search.slice(1)),
+    p = parseInt(null != f.rpc && '' !== f.rpc ? f.rpc : u.V6Z, 10),
     h = null;
 class m extends r.EventEmitter {
     get port() {
@@ -51,10 +51,10 @@ class m extends r.EventEmitter {
                             this.emit('error', new c.Z({ errorCode: a.code }, a.message)), this.disconnect();
                             return;
                         }
-                        return void this.emit(f(n, r), a);
+                        return void this.emit(_(n, r), a);
                     }
                     let o = null;
-                    r === u.zMe.ERROR && ((o = new c.Z({ errorCode: a.code }, a.message)), (a = null)), this.emit(f(n, i), o, a);
+                    r === u.zMe.ERROR && ((o = new c.Z({ errorCode: a.code }, a.message)), (a = null)), this.emit(_(n, i), o, a);
                 }),
                 (h.onclose = h.onerror = (e) => this.disconnect(e)));
         }
@@ -67,10 +67,10 @@ class m extends r.EventEmitter {
         null != h && (this.emit('disconnected'), h.close(), (h = null));
     }
     subscribe(e, t, n) {
-        return this.on(f(u.Etm.DISPATCH, e), n), this.request(u.Etm.SUBSCRIBE, t, e);
+        return this.on(_(u.Etm.DISPATCH, e), n), this.request(u.Etm.SUBSCRIBE, t, e);
     }
     unsubscribe(e, t, n) {
-        return this.removeListener(f(u.Etm.DISPATCH, e), n), this.request(u.Etm.UNSUBSCRIBE, t, e);
+        return this.removeListener(_(u.Etm.DISPATCH, e), n), this.request(u.Etm.UNSUBSCRIBE, t, e);
     }
     request(e, t, n) {
         return new Promise((r, i) => {
@@ -91,7 +91,7 @@ class m extends r.EventEmitter {
                     evt: n,
                     nonce: a
                 });
-            this.once(f(e, a), (e, t) => (null != e ? i(e) : r(t))), null == h || h.send(o);
+            this.once(_(e, a), (e, t) => (null != e ? i(e) : r(t))), null == h || h.send(o);
         });
     }
     requestOnce(e, t, n) {

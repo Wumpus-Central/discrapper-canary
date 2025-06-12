@@ -14,8 +14,8 @@ var r = n(255367),
     c = n(481060),
     u = n(787014),
     d = n(904245),
-    f = n(12498),
-    _ = n(541716),
+    _ = n(12498),
+    f = n(541716),
     p = n(752305),
     h = n(893718),
     m = n(600164),
@@ -31,12 +31,12 @@ let S = 'VoiceChannelStatusModal',
     A = 500;
 function N(e) {
     let { channel: t, transitionState: n, sourceAnalyticsLocations: a, onClose: N } = e,
-        C = (0, s.e7)([f.Z], () => f.Z.getChannelStatus(t)),
+        C = (0, s.e7)([_.Z], () => _.Z.getChannelStatus(t)),
         R = (0, s.e7)([b.Z], () => b.Z.getMediaSessionId()),
         [P, w] = i.useState(null != C ? C : ''),
         [D, L] = i.useState(!1),
-        [x, k] = i.useState(null),
-        M = (0, s.e7)([y.default], () => y.default.getCurrentUser()),
+        [x, M] = i.useState(null),
+        k = (0, s.e7)([y.default], () => y.default.getCurrentUser()),
         j = P.length > A,
         U = (0, g.Q3)('VoiceChannelStatusModal');
     i.useEffect(() => {
@@ -47,18 +47,18 @@ function N(e) {
         });
     }, [t.guild_id, a]);
     let G = (e) => {
-            k(new l.Hx(e, e.status).getAnyErrorMessage());
+            M(new l.Hx(e, e.status).getAnyErrorMessage());
         },
         B = (e) => {
             let { invalidEmojis: n } = e;
             if (null != n && n.length > 0) {
-                let { errorMessage: e } = d.Z.validateMessage(n, M, t.id);
-                return k(e), L(!1), { hasErrors: !0 };
+                let { errorMessage: e } = d.Z.validateMessage(n, k, t.id);
+                return M(e), L(!1), { hasErrors: !0 };
             }
             return { hasErrors: !1 };
         },
-        F = async (e) => {
-            P === C && N(), null == e || e.preventDefault(), k(null), L(!0);
+        V = async (e) => {
+            P === C && N(), null == e || e.preventDefault(), M(null), L(!0);
             let n = P.length,
                 r = P.replace(/<(a)?:[^:]+:[0-9]+>/g, '--').length,
                 i = E.ZP.parse(void 0, P),
@@ -83,19 +83,19 @@ function N(e) {
                 L(!1);
             }
         },
-        [V, Z] = i.useState((0, p.JM)(P)),
+        [F, Z] = i.useState((0, p.JM)(P)),
         H = (e, t, n) => {
             w(t), Z(n);
         },
         Y = async () => (
-            j || D || (await F()),
+            j || D || (await V()),
             Promise.resolve({
                 shouldClear: !1,
                 shouldRefocus: !0
             })
         );
     return (0, r.jsx)('form', {
-        onSubmit: F,
+        onSubmit: V,
         className: T.form,
         children: (0, r.jsxs)(c.Y0X, {
             transitionState: n,
@@ -135,13 +135,13 @@ function N(e) {
                                 (0, r.jsx)(h.Z, {
                                     innerClassName: T.textArea,
                                     textValue: P,
-                                    richValue: V,
+                                    richValue: F,
                                     placeholder: I.intl.formatToPlainString(I.t.DUXxBg, { channelName: t.name }),
                                     focused: !0,
                                     channel: t,
                                     onChange: H,
                                     onSubmit: Y,
-                                    type: _.Ie.VOICE_CHANNEL_STATUS,
+                                    type: f.Ie.VOICE_CHANNEL_STATUS,
                                     canMentionRoles: !1,
                                     canMentionChannels: !1,
                                     allowNewLines: !1,
@@ -173,7 +173,7 @@ function N(e) {
                             children: I.intl.string(I.t['ETE/oK'])
                         }),
                         (0, r.jsx)(c.zxk, {
-                            onClick: F,
+                            onClick: V,
                             submitting: D,
                             className: T.button,
                             disabled: j,

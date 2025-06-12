@@ -25,11 +25,11 @@ function d(e) {
     let { required_actions: t, user_id: n } = e;
     u((l = n), t);
 }
-function f(e) {
+function _(e) {
     let { user: t } = e;
     c = t.id;
 }
-function _(e) {
+function f(e) {
     let { userId: t } = e;
     u(t, null);
 }
@@ -63,9 +63,9 @@ class m extends (r = i.ZP.PersistedStore) {
 o(m, 'displayName', 'LoginRequiredActionStore'), o(m, 'persistKey', 'LoginRequiredActionStore');
 let g = new m(a.Z, {
     LOGIN_ATTEMPTED: d,
-    CONNECTION_OPEN: f,
-    CURRENT_USER_UPDATE: f,
+    CONNECTION_OPEN: _,
+    CURRENT_USER_UPDATE: _,
     LOGOUT: p,
-    PASSWORD_UPDATED: _,
+    PASSWORD_UPDATED: f,
     MULTI_ACCOUNT_REMOVE_ACCOUNT: h
 });

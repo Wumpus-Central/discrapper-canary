@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(872810),
     u = n(110924),
     d = n(833664),
-    f = n(579630),
-    _ = n(100527),
+    _ = n(579630),
+    f = n(100527),
     p = n(906732),
     h = n(194082),
     m = n(318374),
@@ -32,14 +32,14 @@ var i = n(120356),
     D = n(670451),
     L = n(228168),
     x = n(981631),
-    k = n(388032),
-    M = n(227832),
+    M = n(388032),
+    k = n(227832),
     j = n(162509),
     U = n(924482),
     G = n(774797);
 function B(e) {
-    let { user: t, currentUser: n, stream: i, className: B, onClose: F } = e,
-        { themeType: V, theme: Z } = (0, A.z)(),
+    let { user: t, currentUser: n, stream: i, className: B, onClose: V } = e,
+        { themeType: F, theme: Z } = (0, A.z)(),
         H = (0, o.e7)([y.Z], () => y.Z.getGuild(null == i ? void 0 : i.guildId)),
         Y = (0, o.e7)([b.Z], () => b.Z.getChannel(null == i ? void 0 : i.channelId)),
         W = (0, o.Wu)([I.ZP], () =>
@@ -50,8 +50,8 @@ function B(e) {
                   })
                 : []
         ),
-        K = (0, o.e7)([v.Z], () => v.Z.findActivity(t.id, (e) => (0, d.Z)(e) && !(0, f.Z)(e))),
-        { analyticsLocations: z } = (0, p.ZP)(_.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        K = (0, o.e7)([v.Z], () => v.Z.findActivity(t.id, (e) => (0, d.Z)(e) && !(0, _.Z)(e))),
+        { analyticsLocations: z } = (0, p.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         q = (0, T.Z)({
             display: 'live',
             voiceChannelId: null == Y ? void 0 : Y.id,
@@ -71,7 +71,7 @@ function B(e) {
     if (null == H || null == Y || !1 === i.discoverable) return null;
     let ei = () => {
             let e = (e) => {
-                e.stopPropagation(), $ && (q({ action: 'PRESS_IMAGE' }), l.default.selectVoiceChannel(i.channelId), (0, c.iV)(i), null == F || F());
+                e.stopPropagation(), $ && (q({ action: 'PRESS_IMAGE' }), l.default.selectVoiceChannel(i.channelId), (0, c.iV)(i), null == V || V());
             };
             return null == er && J
                 ? (0, r.jsx)('div', {
@@ -89,8 +89,8 @@ function B(e) {
                                 alt: '',
                                 src: Z === x.BRd.LIGHT ? G : U
                             }),
-                            V !== L.lY.MODAL &&
-                                V !== L.lY.MODAL_V2 &&
+                            F !== L.lY.MODAL &&
+                                F !== L.lY.MODAL_V2 &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(s.Text, {
@@ -101,7 +101,7 @@ function B(e) {
                                         }),
                                         (0, r.jsx)(s.Text, {
                                             variant: 'text-sm/medium',
-                                            children: et ? k.intl.string(k.t.uQZTBQ) : k.intl.string(k.t.pgUTZG)
+                                            children: et ? M.intl.string(M.t.uQZTBQ) : M.intl.string(M.t.pgUTZG)
                                         })
                                     ]
                                 })
@@ -118,8 +118,8 @@ function B(e) {
                                 src: er,
                                 className: j.image
                             }),
-                            V !== L.lY.MODAL &&
-                                V !== L.lY.MODAL_V2 &&
+                            F !== L.lY.MODAL &&
+                                F !== L.lY.MODAL_V2 &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(s.Text, {
@@ -139,16 +139,16 @@ function B(e) {
                     });
         },
         ea = () =>
-            V !== L.lY.MODAL && V !== L.lY.MODAL_V2
+            F !== L.lY.MODAL && F !== L.lY.MODAL_V2
                 ? null
                 : (0, r.jsxs)('div', {
-                      className: M.details,
+                      className: k.details,
                       children: [
                           (0, r.jsx)(R.Z, {
                               channel: Y,
                               guild: H,
                               onAction: q,
-                              onClose: F
+                              onClose: V
                           }),
                           (0, r.jsx)(m.Z, {
                               users: W,
@@ -163,38 +163,38 @@ function B(e) {
                               disableUserPopout: (e) => e === t.id,
                               overflowCountColor: 'text-muted'
                           }),
-                          V === L.lY.MODAL_V2 && es()
+                          F === L.lY.MODAL_V2 && es()
                       ]
                   }),
         eo = () =>
-            V === L.lY.MODAL || V === L.lY.MODAL_V2
+            F === L.lY.MODAL || F === L.lY.MODAL_V2
                 ? null
                 : (0, r.jsx)(P.Z, {
                       user: t,
                       guild: H,
                       channel: Y,
                       onAction: q,
-                      onClose: F
+                      onClose: V
                   }),
         es = () =>
             t.id === n.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: M.actions,
+                      className: k.actions,
                       children: (0, r.jsx)(w.Z, {
                           channel: Y,
                           onAction: q,
-                          onClose: F
+                          onClose: V
                       })
                   }),
-        el = null != K ? k.intl.formatToPlainString(k.t['4CQq9f'], { name: K.name }) : k.intl.string(k.t['Jpkr/v']);
+        el = null != K ? M.intl.formatToPlainString(M.t['4CQq9f'], { name: K.name }) : M.intl.string(M.t['Jpkr/v']);
     return (0, r.jsx)(p.Gt, {
         value: z,
         children: (0, r.jsxs)(N.Z, {
             ref: X,
             className: B,
             onAction: q,
-            onClose: F,
+            onClose: V,
             'aria-label': el,
             children: [
                 (0, r.jsx)(C.Z, {
@@ -203,20 +203,20 @@ function B(e) {
                     contextMenu: (0, r.jsx)(D.Z, {
                         display: 'live',
                         user: t,
-                        onClose: F
+                        onClose: V
                     })
                 }),
                 (0, r.jsxs)('div', {
-                    className: M.body,
+                    className: k.body,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: M.content,
-                            children: [ei(), ea(), V === L.lY.MODAL && es()]
+                            className: k.content,
+                            children: [ei(), ea(), F === L.lY.MODAL && es()]
                         }),
                         eo()
                     ]
                 }),
-                V !== L.lY.MODAL && V !== L.lY.MODAL_V2 && es()
+                F !== L.lY.MODAL && F !== L.lY.MODAL_V2 && es()
             ]
         })
     });

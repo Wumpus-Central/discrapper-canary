@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(287734),
     u = n(872810),
     d = n(110924),
-    f = n(833664),
-    _ = n(579630),
+    _ = n(833664),
+    f = n(579630),
     p = n(100527),
     h = n(906732),
     m = n(194082),
@@ -31,14 +31,14 @@ var r = n(255367),
     D = n(336383),
     L = n(194811),
     x = n(265386),
-    k = n(668700),
-    M = n(384298),
+    M = n(668700),
+    k = n(384298),
     j = n(386019),
     U = n(228168),
     G = n(981631),
     B = n(388032),
-    F = n(227832),
-    V = n(162509),
+    V = n(227832),
+    F = n(162509),
     Z = n(924482),
     H = n(774797);
 function Y(e) {
@@ -56,7 +56,7 @@ function Y(e) {
                   })
                 : []
         ),
-        en = (0, s.e7)([I.Z], () => I.Z.findActivity(t.id, (e) => (0, f.Z)(e) && !(0, _.Z)(e))),
+        en = (0, s.e7)([I.Z], () => I.Z.findActivity(t.id, (e) => (0, _.Z)(e) && !(0, f.Z)(e))),
         { analyticsLocations: er } = (0, h.ZP)(p.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         ei = (0, S.Z)({
             display: 'live',
@@ -73,20 +73,20 @@ function Y(e) {
         { previewUrl: el, isLoading: ec } = (0, E.Z)(a.guildId, a.channelId, a.ownerId),
         eu = (0, s.e7)([v.Z], () => null != ee && v.Z.canBasicChannel(G.S7T.CONNECT, ee)),
         ed = (0, d.Z)(ec ? null : el),
-        ef = ec || null == el ? ed : el;
+        e_ = ec || null == el ? ed : el;
     if (null == $ || null == ee || !1 === a.discoverable || null === q) return null;
-    let e_ = () => {
+    let ef = () => {
             let e = (e) => {
                 e.stopPropagation(), eo && (ei({ action: 'PRESS_IMAGE' }), c.default.selectVoiceChannel(a.channelId), (0, u.iV)(a), null == W || W());
             };
-            return null == ef && ec
+            return null == e_ && ec
                 ? (0, r.jsx)('div', {
-                      className: V.preview,
+                      className: F.preview,
                       children: (0, r.jsx)(l.$jN, {})
                   })
-                : null == ef
+                : null == e_
                   ? (0, r.jsxs)(l.P3F, {
-                        className: o()(V.preview, V.overlay, eo ? V.clickable : V.disabled),
+                        className: o()(F.preview, F.overlay, eo ? F.clickable : F.disabled),
                         onClick: e,
                         'aria-label': (0, b.gR)(es),
                         'aria-disabled': !eo,
@@ -100,7 +100,7 @@ function Y(e) {
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(l.Text, {
-                                            className: V.overlayText,
+                                            className: F.overlayText,
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
                                             children: (0, b.P9)(es)
@@ -114,22 +114,22 @@ function Y(e) {
                         ]
                     })
                   : (0, r.jsxs)(l.P3F, {
-                        className: o()(V.preview, V.overlay, eo ? V.clickable : V.disabled),
+                        className: o()(F.preview, F.overlay, eo ? F.clickable : F.disabled),
                         onClick: e,
                         'aria-label': (0, b.gR)(es),
                         'aria-disabled': !eo,
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
-                                src: ef,
-                                className: V.image
+                                src: e_,
+                                className: F.image
                             }),
                             q !== U.lY.MODAL &&
                                 q !== U.lY.MODAL_V2 &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(l.Text, {
-                                            className: V.overlayText,
+                                            className: F.overlayText,
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
                                             children: (0, b.P9)(es)
@@ -137,7 +137,7 @@ function Y(e) {
                                         (0, r.jsx)(l.gw7, {
                                             size: 'xs',
                                             color: 'currentColor',
-                                            className: V.clyde
+                                            className: F.clyde
                                         })
                                     ]
                                 })
@@ -148,7 +148,7 @@ function Y(e) {
             q !== U.lY.MODAL && q !== U.lY.MODAL_V2
                 ? null
                 : (0, r.jsxs)('div', {
-                      className: F.details,
+                      className: V.details,
                       children: [
                           (0, r.jsx)(x.Z, {
                               channel: ee,
@@ -160,7 +160,7 @@ function Y(e) {
                               users: et,
                               guildId: $.id,
                               channelId: ee.id,
-                              maxUsers: k.W,
+                              maxUsers: M.W,
                               size: l.EFr.SIZE_16,
                               onClick: (e) => {
                                   null == e || e.stopPropagation(), null == ei || ei({ action: 'PRESS_VOICE_CHANNEL_AVATARS' });
@@ -175,7 +175,7 @@ function Y(e) {
         eh = () =>
             q === U.lY.MODAL || q === U.lY.MODAL_V2
                 ? null
-                : (0, r.jsx)(k.Z, {
+                : (0, r.jsx)(M.Z, {
                       user: t,
                       guild: $,
                       channel: ee,
@@ -186,8 +186,8 @@ function Y(e) {
             t.id === n.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: F.actions,
-                      children: (0, r.jsx)(M.Z, {
+                      className: V.actions,
+                      children: (0, r.jsx)(k.Z, {
                           channel: ee,
                           onAction: ei,
                           onClose: W
@@ -214,7 +214,7 @@ function Y(e) {
                     (0, r.jsx)(R.Z, {
                         ref: z,
                         user: t,
-                        className: F.toolbarContainer,
+                        className: V.toolbarContainer,
                         interactionSourceId: eg,
                         sourceType: U.n_.ACTIVITY,
                         onAction: ei,
@@ -228,7 +228,7 @@ function Y(e) {
                             }),
                         children: (0, r.jsxs)(D.Z, {
                             ref: ea,
-                            className: o()(Y, { [F.hoisted]: eE }),
+                            className: o()(Y, { [V.hoisted]: eE }),
                             onAction: ei,
                             onClose: W,
                             'aria-label': eb,
@@ -238,11 +238,11 @@ function Y(e) {
                                     tags: (0, r.jsx)(m.ZP, { size: m.OH.SMALL })
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: F.body,
+                                    className: V.body,
                                     children: [
                                         (0, r.jsxs)('div', {
-                                            className: F.content,
-                                            children: [e_(), ep(), q === U.lY.MODAL && em()]
+                                            className: V.content,
+                                            children: [ef(), ep(), q === U.lY.MODAL && em()]
                                         }),
                                         eh()
                                     ]

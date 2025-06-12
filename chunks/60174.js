@@ -20,8 +20,8 @@ var r = n(255367),
     x = n(981631),
     v = n(185923),
     O = n(474936),
-    C = n(388032),
-    j = n(92254),
+    j = n(388032),
+    C = n(92254),
     S = n(588429);
 function I(e, t, n) {
     return (
@@ -61,9 +61,9 @@ class T extends i.Component {
         if (c || (0, b.yE)(t.flags, x.iLy.EPHEMERAL)) return null;
         let f = _.default.getCurrentUser(),
             h = (0, E.I5)(f),
-            g = m ? C.intl.string(C.t.Kfcszs) : C.intl.string(C.t.lfIHs7);
-        !h && m && (g = (0, r.jsx)(p.X, { tooltipText: C.intl.string(C.t.Kfcszs) }));
-        let O = l ? S : j,
+            g = m ? j.intl.string(j.t.Kfcszs) : j.intl.string(j.t.lfIHs7);
+        !h && m && (g = (0, r.jsx)(p.X, { tooltipText: j.intl.string(j.t.Kfcszs) }));
+        let O = l ? S : C,
             I = {
                 size: 'sm',
                 color: 'currentColor',
@@ -81,7 +81,7 @@ class T extends i.Component {
                 return (0, r.jsx)(u.DY3, {
                     text: g,
                     color: u.FGA.PRIMARY,
-                    'aria-label': m ? C.intl.string(C.t.Kfcszs) : C.intl.string(C.t.lfIHs7),
+                    'aria-label': m ? j.intl.string(j.t.Kfcszs) : j.intl.string(j.t.lfIHs7),
                     tooltipClassName: O.__invalid_addReactionTooltip,
                     children: (0, r.jsxs)(
                         u.P3F,
@@ -171,7 +171,7 @@ class T extends i.Component {
                         let { inDialog: t } = e;
                         return t
                             ? (0, r.jsx)(u.VqE, {
-                                  'aria-label': C.intl.string(C.t['7Xqzdn']),
+                                  'aria-label': j.intl.string(j.t['7Xqzdn']),
                                   children: o
                               })
                             : o;

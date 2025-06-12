@@ -4,7 +4,7 @@ n.d(t, {
     Lv: () => I,
     NH: () => m,
     Ot: () => u,
-    R4: () => f,
+    R4: () => _,
     S7: () => l.S,
     Ts: () => g,
     Uo: () => h,
@@ -12,7 +12,7 @@ n.d(t, {
     V_: () => b,
     XZ: () => d,
     a_: () => s.a,
-    cd: () => _,
+    cd: () => f,
     dr: () => c,
     l$: () => v,
     tD: () => p,
@@ -35,12 +35,12 @@ let u = a.Z.Millis.MINUTE * i.c.ConsecutiveHeartbeatPeriodMinutes,
         friction: 45,
         clamp: !0
     },
-    f = {
+    _ = {
         tension: 360,
         friction: 30,
         clamp: !0
     };
-var _ = (function (e) {
+var f = (function (e) {
     return (e.CONSOLE = 'CONSOLE'), (e.DESKTOP = 'DESKTOP'), e;
 })({});
 let p = 'https://cdn.discordapp.com/quests/',

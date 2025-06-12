@@ -7,8 +7,8 @@ var r = n(127849),
     c = n(573078),
     u = n(477732),
     d = n(621523),
-    f = n(170322),
-    _ = n(77826),
+    _ = n(170322),
+    f = n(77826),
     p = n(554148),
     h = n(730383),
     m = n(953010),
@@ -30,14 +30,14 @@ var r = n(127849),
     D = 'Wrong index',
     L = S.getterFor(C),
     x = S.getterFor(R),
-    k = S.set,
-    M = r[C],
-    j = M,
+    M = S.set,
+    k = r[C],
+    j = k,
     U = j && j[P],
     G = r[R],
     B = G && G[P],
-    F = Object.prototype,
-    V = r.Array,
+    V = Object.prototype,
+    F = r.Array,
     Z = r.RangeError,
     H = i(y),
     Y = i([].reverse),
@@ -85,26 +85,26 @@ var r = n(127849),
             l = r(+i),
             c = !!a;
         if (s + t > o.byteLength) throw new Z(D);
-        for (var u = o.bytes, d = s + o.byteOffset, f = 0; f < t; f++) u[d + f] = l[c ? f : t - f - 1];
+        for (var u = o.bytes, d = s + o.byteOffset, _ = 0; _ < t; _++) u[d + _] = l[c ? _ : t - _ - 1];
     };
 if (o) {
-    var er = A && M.name !== C;
+    var er = A && k.name !== C;
     !d(function () {
-        M(1);
+        k(1);
     }) ||
     !d(function () {
-        new M(-1);
+        new k(-1);
     }) ||
     d(function () {
-        return new M(), new M(1.5), new M(NaN), 1 !== M.length || (er && !N);
+        return new k(), new k(1.5), new k(NaN), 1 !== k.length || (er && !N);
     })
         ? (((j = function (e) {
-              return f(this, U), v(new M(h(e)), this, j);
+              return _(this, U), v(new k(h(e)), this, j);
           })[P] = U),
           (U.constructor = j),
-          I(j, M))
-        : er && N && l(M, 'name', C),
-        b && E(B) !== F && b(B, F);
+          I(j, k))
+        : er && N && l(k, 'name', C),
+        b && E(B) !== V && b(B, V);
     var ei = new G(new j(2)),
         ea = i(B.setInt8);
     ei.setInt8(0, 2147483648),
@@ -124,23 +124,23 @@ if (o) {
             );
 } else
     (U = (j = function (e) {
-        f(this, U);
+        _(this, U);
         var t = h(e);
-        k(this, {
+        M(this, {
             type: C,
-            bytes: H(V(t), 0),
+            bytes: H(F(t), 0),
             byteLength: t
         }),
             a || ((this.byteLength = t), (this.detached = !1));
     })[P]),
         (B = (G = function (e, t, n) {
-            f(this, B), f(e, U);
+            _(this, B), _(e, U);
             var r = L(e),
                 i = r.byteLength,
-                o = _(t);
+                o = f(t);
             if (o < 0 || o > i) throw new Z('Wrong offset');
             if (((n = void 0 === n ? i - o : p(n)), o + n > i)) throw new Z(w);
-            k(this, {
+            M(this, {
                 type: R,
                 buffer: e,
                 byteLength: n,

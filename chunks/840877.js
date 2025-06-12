@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => f,
-    tJ: () => _
+    ZP: () => _,
+    tJ: () => f
 }),
     n(415506);
 var r = n(664751),
@@ -50,7 +50,7 @@ class d {
         l(this, 'indexingPollId', void 0), l(this, 'searchId', void 0), l(this, 'searchType', void 0), l(this, 'query', void 0), l(this, 'retryDelay', void 0), l(this, 'isCanceled', !1), (this.searchId = e), (this.searchType = t), (this.query = n);
     }
 }
-class f extends d {
+class _ extends d {
     getEndpoint() {
         switch (this.searchType) {
             case s.aib.DMS:
@@ -79,7 +79,7 @@ class f extends d {
               });
     }
 }
-class _ extends d {
+class f extends d {
     getEndpoint() {
         switch (this.searchType) {
             case s.aib.DMS:

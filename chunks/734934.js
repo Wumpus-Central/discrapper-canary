@@ -1,6 +1,6 @@
 n.d(t, {
     oW: () => p,
-    p: () => _
+    p: () => f
 });
 var r = n(381499),
     i = n(668781),
@@ -11,8 +11,8 @@ var r = n(381499),
     c = n(626135),
     u = n(468788),
     d = n(981631),
-    f = n(388032);
-function _() {
+    _ = n(388032);
+function f() {
     let e = o.QZ.useSetting(),
         t = o.fv.useSetting();
     return e && ('0' === t || new Date(Number(t)).getTime() - new Date().getTime() > 0);
@@ -35,10 +35,10 @@ function p(e, t) {
             e &&
             null == t &&
             i.Z.show({
-                title: f.intl.string(f.t['B+cbLS']),
-                body: f.intl.string(f.t.CYVgLC),
-                cancelText: f.intl.string(f.t.f3Pet7),
-                confirmText: f.intl.string(f.t.BddRzc),
+                title: _.intl.string(_.t['B+cbLS']),
+                body: _.intl.string(_.t.CYVgLC),
+                cancelText: _.intl.string(_.t.f3Pet7),
+                confirmText: _.intl.string(_.t.BddRzc),
                 onConfirm: () => {
                     (0, a.Z)({ nextStatus: d.Skl.ONLINE });
                 }

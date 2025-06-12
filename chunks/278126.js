@@ -1,4 +1,4 @@
-n.d(t, { _: () => f });
+n.d(t, { _: () => _ });
 var r,
     i = n(255367),
     a = n(73800),
@@ -24,7 +24,7 @@ let u = Object.freeze({
         LARGE: 4
     }),
     d = 20;
-class f extends (r = a.Component) {
+class _ extends (r = a.Component) {
     renderCircle() {
         let { strokeSize: e, percent: t, colorOverride: n, background: r } = this.props,
             a = Math.min(Math.max(t, 0), 100),
@@ -79,4 +79,4 @@ class f extends (r = a.Component) {
         });
     }
 }
-c(f, 'StrokeSizes', u), c(f, 'defaultProps', { strokeSize: u.MEDIUM });
+c(_, 'StrokeSizes', u), c(_, 'defaultProps', { strokeSize: u.MEDIUM });

@@ -16,9 +16,9 @@ let c = Object.freeze({
         x: -4
     });
 function d(e) {
-    let { selected: t = !1, hovered: n = !1, unread: i = !1, disabled: d = !1, className: f } = e;
+    let { selected: t = !1, hovered: n = !1, unread: i = !1, disabled: d = !1, className: _ } = e;
     (t = !d && t), (n = !d && n), (i = !d && i);
-    let _ = {
+    let f = {
             opacity: 1,
             height: t ? 40 : n ? 20 : 8,
             x: 0
@@ -28,16 +28,16 @@ function d(e) {
             {
                 config: c,
                 keys: (e) => (e ? 'pill' : 'empty'),
-                initial: t || n || i ? _ : null,
+                initial: t || n || i ? f : null,
                 from: u,
                 leave: u,
-                enter: _,
-                update: _
+                enter: f,
+                update: f
             },
             n || document.hasFocus() ? 'animate-always' : 'animate-never'
         );
     return (0, r.jsx)('div', {
-        className: a()(f, l.wrapper),
+        className: a()(_, l.wrapper),
         'aria-hidden': !0,
         children: p(
             (e, t) =>

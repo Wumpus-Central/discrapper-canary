@@ -1,6 +1,6 @@
 n.d(t, {
     BA: () => u,
-    DX: () => f,
+    DX: () => _,
     _j: () => l,
     aK: () => c,
     dq: () => s
@@ -24,7 +24,7 @@ function u(e, t) {
 function d(e) {
     return a.Z.isBlockedOrIgnored(e.userId);
 }
-function f(e) {
+function _(e) {
     return i()(e)
         .filter((e) => !d(e))
         .keyBy('userId')

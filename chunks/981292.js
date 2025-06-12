@@ -21,7 +21,7 @@ function s(e) {
     }, []);
     let [, u] = r.useState(a),
         d = r.useRef(null),
-        f = r.useMemo(() => {
+        _ = r.useMemo(() => {
             var e;
             let r = new Set(null == (e = d.current) ? void 0 : e.keys()),
                 a = new Map(d.current);
@@ -78,15 +78,15 @@ function s(e) {
         }, [t, i, n, l]);
     r.useInsertionEffect(
         () => (
-            (d.current = f),
+            (d.current = _),
             () => {
                 var e;
                 return null == (e = d.current) ? void 0 : e.clear();
             }
         ),
-        [f]
+        [_]
     );
-    let _ = [];
-    for (let [, e] of f) _.push(e.children);
-    return _.length > 0 ? s(_, t) : null;
+    let f = [];
+    for (let [, e] of _) f.push(e.children);
+    return f.length > 0 ? s(f, t) : null;
 }

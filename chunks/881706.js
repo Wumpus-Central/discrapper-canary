@@ -18,22 +18,22 @@ function o(e) {
     } catch (e) {}
     let u = c.split('/'),
         d = null,
-        f = 0;
+        _ = 0;
     for (let e = u.length - 1; e >= 0; e--) {
         let t = u[e];
         if ('' !== t && '.' !== t) {
             if ('..' === t) {
-                f++;
+                _++;
                 continue;
             }
-            if (f > e) break;
-            d = u[e - f];
+            if (_ > e) break;
+            d = u[e - _];
             break;
         }
     }
     if (null == d) return null;
-    let _ = d.split('.');
-    if (_.length < 2) return null;
-    let p = null == (t = _.pop()) ? void 0 : t.toLowerCase();
+    let f = d.split('.');
+    if (f.length < 2) return null;
+    let p = null == (t = f.pop()) ? void 0 : t.toLowerCase();
     return null != p && i.has(p) ? p : null;
 }

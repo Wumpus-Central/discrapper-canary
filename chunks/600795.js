@@ -1,6 +1,6 @@
 n.d(t, {
     Tm: () => u,
-    ZP: () => _
+    ZP: () => f
 }),
     n(415506),
     n(388685);
@@ -53,15 +53,15 @@ function d(e) {
         y: n
     };
 }
-class f {
+class _ {
     setup() {
         var e;
-        if (f.isSetUp) throw Error('Cannot have two Keyboard backends at the same time.');
-        (f.isSetUp = !0), (this._handlingFirstEvent = !0), null == (e = this.context.window) || e.addEventListener('keydown', this.handleGlobalKeyDown, { capture: !0 });
+        if (_.isSetUp) throw Error('Cannot have two Keyboard backends at the same time.');
+        (_.isSetUp = !0), (this._handlingFirstEvent = !0), null == (e = this.context.window) || e.addEventListener('keydown', this.handleGlobalKeyDown, { capture: !0 });
     }
     teardown() {
         var e;
-        (f.isSetUp = !1), null == (e = this.context.window) || e.removeEventListener('keydown', this.handleGlobalKeyDown, { capture: !0 }), this.endDrag();
+        (_.isSetUp = !1), null == (e = this.context.window) || e.removeEventListener('keydown', this.handleGlobalKeyDown, { capture: !0 }), this.endDrag();
     }
     setDndMode(e) {
         var t;
@@ -159,5 +159,5 @@ class f {
             (this._announcer = new r.Z(null == n ? void 0 : n.announcer));
     }
 }
-o(f, 'isSetUp', void 0);
-let _ = (e, t, n) => new f(e, t, n);
+o(_, 'isSetUp', void 0);
+let f = (e, t, n) => new _(e, t, n);

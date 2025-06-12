@@ -8,8 +8,8 @@ var r = n(152057),
     c = n(451478),
     u = n(425128),
     d = n(994752),
-    f = n(276344);
-function _(e, t, n) {
+    _ = n(276344);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ function v(e, t) {
     if (b.has(r) || (null != (n = y.get(r)) ? n : 0) > h) return !1;
     if (l.Z.getGuildId() !== e) return;
     if (
-        !(0, f.NM)({
+        !(0, _.NM)({
             guildId: e,
             location: 'GuildLeaderboardManager'
         }) ||
@@ -135,7 +135,7 @@ class C extends a.Z {
     }
     constructor(...e) {
         super(...e),
-            _(this, 'actions', {
+            f(this, 'actions', {
                 POST_CONNECTION_OPEN: N,
                 CONNECTION_CLOSED: A,
                 WINDOW_FOCUS: A,

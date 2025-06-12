@@ -1,5 +1,5 @@
 n.d(t, {
-    $j: () => _,
+    $j: () => f,
     Xv: () => s,
     cq: () => l,
     i0: () => u,
@@ -91,7 +91,7 @@ let c = (e, t) => ({
             (n += '\n]')
         );
     },
-    f = (e) => {
+    _ = (e) => {
         let [t, n] = e.split(','),
             r = atob(n),
             i = t.split(';')[0],
@@ -99,7 +99,7 @@ let c = (e, t) => ({
         for (let e = 0; e < r.length; e++) a[e] = r.charCodeAt(e);
         return new Blob([a], { type: i });
     },
-    _ = (e) => {
-        let t = f(e);
+    f = (e) => {
+        let t = _(e);
         return URL.createObjectURL(t);
     };

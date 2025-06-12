@@ -30,8 +30,8 @@ var r,
     x = n(162297),
     v = n(222709),
     O = n(446411),
-    C = n(960904),
-    j = n(161314),
+    j = n(960904),
+    C = n(161314),
     S = n(629710),
     I = n(262777),
     N = n(761538),
@@ -84,8 +84,8 @@ var r,
     ex = n(591759),
     ev = n(594173),
     eO = n(169525),
-    eC = n(786761),
-    ej = n(161010),
+    ej = n(786761),
+    eC = n(161010),
     eS = n(255269),
     eI = n(461157),
     eN = n(901461),
@@ -257,14 +257,14 @@ class e2 extends (r = l.Component) {
     }
     renderSocialProofingFileSizeNitroUpsell(e) {
         let t = e.attachments.some((e) => e.size > eK.Lw);
-        return (0, ej.M)('attachment') && t ? (0, i.jsx)(e0, {}) : null;
+        return (0, eC.M)('attachment') && t ? (0, i.jsx)(e0, {}) : null;
     }
     renderCodedLinks(e) {
         return 0 === e.codedLinks.length
             ? null
             : e.codedLinks.map((t) => {
                   let { type: n, code: r, url: l } = t;
-                  if (n === C.g.INVITE)
+                  if (n === j.g.INVITE)
                       return this.shouldRenderInvite(r)
                           ? (0, i.jsx)(
                                 eR.Z,
@@ -276,9 +276,9 @@ class e2 extends (r = l.Component) {
                                 r
                             )
                           : null;
-                  if (n === C.g.TEMPLATE) return (0, i.jsx)(L.Z, { code: r }, r);
-                  if (n === C.g.EVENT) return (0, i.jsx)(D.Z, { code: r }, r);
-                  if (n === C.g.CHANNEL_LINK)
+                  if (n === j.g.TEMPLATE) return (0, i.jsx)(L.Z, { code: r }, r);
+                  if (n === j.g.EVENT) return (0, i.jsx)(D.Z, { code: r }, r);
+                  if (n === j.g.CHANNEL_LINK)
                       return (0, i.jsx)(
                           eP.Z,
                           {
@@ -287,7 +287,7 @@ class e2 extends (r = l.Component) {
                           },
                           r
                       );
-                  if (n === C.g.APP_DIRECTORY_PROFILE)
+                  if (n === j.g.APP_DIRECTORY_PROFILE)
                       return (0, i.jsx)(
                           w.Z,
                           {
@@ -297,7 +297,7 @@ class e2 extends (r = l.Component) {
                           },
                           r
                       );
-                  else if (n === C.g.ACTIVITY_BOOKMARK) {
+                  else if (n === j.g.ACTIVITY_BOOKMARK) {
                       let { referrerId: t = e.author.id, customId: n, linkId: a } = (0, y.U)(l);
                       return (0, i.jsx)(
                           g.Z,
@@ -311,10 +311,10 @@ class e2 extends (r = l.Component) {
                           },
                           r
                       );
-                  } else if (n === C.g.GUILD_PRODUCT) return (0, i.jsx)(k.Z, { code: r }, r);
-                  else if (n === C.g.SERVER_SHOP) return (0, i.jsx)(j.Z, { guildId: r }, r);
-                  else if (n === C.g.QUESTS_EMBED) return (0, i.jsx)(ee.Z, { questId: r }, r);
-                  else if (n === C.g.APP_DIRECTORY_STOREFRONT)
+                  } else if (n === j.g.GUILD_PRODUCT) return (0, i.jsx)(k.Z, { code: r }, r);
+                  else if (n === j.g.SERVER_SHOP) return (0, i.jsx)(C.Z, { guildId: r }, r);
+                  else if (n === j.g.QUESTS_EMBED) return (0, i.jsx)(ee.Z, { questId: r }, r);
+                  else if (n === j.g.APP_DIRECTORY_STOREFRONT)
                       return (0, i.jsx)(
                           E.P,
                           {
@@ -323,7 +323,7 @@ class e2 extends (r = l.Component) {
                           },
                           r
                       );
-                  else if (n === C.g.APP_DIRECTORY_STOREFRONT_SKU) {
+                  else if (n === j.g.APP_DIRECTORY_STOREFRONT_SKU) {
                       let t = (0, b.Q)(r);
                       return null == t
                           ? null
@@ -336,7 +336,7 @@ class e2 extends (r = l.Component) {
                                 },
                                 r
                             );
-                  } else if (n === C.g.APP_OAUTH2_LINK)
+                  } else if (n === j.g.APP_OAUTH2_LINK)
                       return (0, i.jsx)(
                           x.Z,
                           {
@@ -345,7 +345,7 @@ class e2 extends (r = l.Component) {
                           },
                           r
                       );
-                  else if (n === C.g.COLLECTIBLES_SHOP) return null;
+                  else if (n === j.g.COLLECTIBLES_SHOP) return null;
                   else throw Error('Unknown coded link type: '.concat(n));
               });
     }
@@ -545,7 +545,7 @@ class e2 extends (r = l.Component) {
               });
     }
     renderEphemeralAccessories(e) {
-        return (0, eC.Pv)(e)
+        return (0, ej.Pv)(e)
             ? (0, i.jsx)(ew.Z, {
                   message: e,
                   onDeleteMessage: () => {
@@ -731,8 +731,8 @@ class e2 extends (r = l.Component) {
             x = this.renderStickersAccessories(t),
             v = this.renderThreadAccessories(t),
             O = this.renderComponentAccessories(t),
-            C = this.renderThreadRoleMentionWarning(t),
-            j = this.renderEmbeddedApplicationInstanceEmbed(t),
+            j = this.renderThreadRoleMentionWarning(t),
+            C = this.renderEmbeddedApplicationInstanceEmbed(t),
             S = this.renderInteractionPremiumUpsell(t),
             I = this.renderMediaPostEmbeds(t),
             N = this.renderSafetyPolicyNotice(t),
@@ -742,12 +742,12 @@ class e2 extends (r = l.Component) {
             w = this.renderPoll(t, r),
             Z = this.renderForwardedMessage(t),
             R = this.renderReportedMessage(t);
-        return null == u && null == m && null == g && null == _ && null == b && null == d && null == p && null == E && null == y && null == x && null == v && null == O && null == j && null == C && null == I && null == N && null != S && null == w && null == P && null == Z && null == R
+        return null == u && null == m && null == g && null == _ && null == b && null == d && null == p && null == E && null == y && null == x && null == v && null == O && null == C && null == j && null == I && null == N && null != S && null == w && null == P && null == Z && null == R
             ? null
             : (0, i.jsxs)('div', {
                   id: (0, eD.bX)(t),
                   className: o()(e, eX.container),
-                  children: [R, Z, C, w, u, d, p, I, m, f, g, A, _, x, O, j, S, h, c, b, E, y, a && this.renderSuppressConfirmModal(), s && this.renderRemoveAttachmentConfirmModal(), v, N, T, P]
+                  children: [R, Z, j, w, u, d, p, I, m, f, g, A, _, x, O, C, S, h, c, b, E, y, a && this.renderSuppressConfirmModal(), s && this.renderRemoveAttachmentConfirmModal(), v, N, T, P]
               });
     }
     constructor(...e) {
@@ -857,8 +857,8 @@ function e4(e) {
         [, x] = (0, R.AB)(n.guild_id),
         v = (0, eo.$R)(n),
         O = (o === r.author.id || E) && r.author.id !== eW.LAt && !1 !== l && !(0, eE.yE)(r.flags, eW.iLy.EPHEMERAL) && v && 1 === (0, eI.Z)(r),
-        C = o === r.author.id && v && !a,
-        j = r.author.id === o,
+        j = o === r.author.id && v && !a,
+        C = r.author.id === o,
         S = r.isFirstMessageInForumPost(n),
         N = (0, eT.Z)({
             channel: n,
@@ -885,7 +885,7 @@ function e4(e) {
                     eJ(
                         {
                             canSuppressEmbeds: O,
-                            canDeleteAttachments: C
+                            canDeleteAttachments: j
                         },
                         N
                     ),
@@ -898,7 +898,7 @@ function e4(e) {
                 isLurking: h && f,
                 isGuest: g && f,
                 isPendingMember: _ && f,
-                isCurrentUser: j,
+                isCurrentUser: C,
                 inlineAttachmentMedia: s,
                 inlineEmbedMedia: u,
                 renderEmbeds: d,

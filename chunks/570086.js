@@ -7,8 +7,8 @@ var r = n(98405),
     c = n(170322),
     u = n(176682),
     d = n(759319),
-    f = n(17204),
-    _ = n(742850),
+    _ = n(17204),
+    f = n(742850),
     p = n(507604),
     h = n(511696),
     m = 'DOMException',
@@ -21,7 +21,7 @@ var r = n(98405),
             n = d(e < 2 ? void 0 : arguments[1], 'Error'),
             r = new E(t, n),
             i = new g(t);
-        return (i.name = m), s(r, 'stack', o(1, _(i.stack, 1))), u(r, this, b), r;
+        return (i.name = m), s(r, 'stack', o(1, f(i.stack, 1))), u(r, this, b), r;
     },
     y = (b.prototype = E.prototype),
     O = 'stack' in new g(m),
@@ -40,9 +40,9 @@ r(
 var A = a(m),
     N = A.prototype;
 if (N.constructor !== A) {
-    for (var C in (h || s(N, 'constructor', o(1, A)), f))
-        if (l(f, C)) {
-            var R = f[C],
+    for (var C in (h || s(N, 'constructor', o(1, A)), _))
+        if (l(_, C)) {
+            var R = _[C],
                 P = R.s;
             l(A, P) || s(A, P, o(6, R.c));
         }

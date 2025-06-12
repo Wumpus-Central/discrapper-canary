@@ -2,19 +2,19 @@ a.d(e, { Z: () => n });
 var r = a(573736),
     _ = a(886115);
 function n(t, e, a = 250, c, E, s, l) {
-    var u, I;
+    var I, u;
     if (!s.exception || !s.exception.values || !l || !(0, r.V9)(l.originalException, Error)) return;
     let R = s.exception.values.length > 0 ? s.exception.values[s.exception.values.length - 1] : void 0;
     R &&
         (s.exception.values =
-            ((u = (function t(e, a, _, n, c, E, s, l) {
+            ((I = (function t(e, a, _, n, c, E, s, l) {
                 if (E.length >= _ + 1) return E;
-                let u = [...E];
+                let I = [...E];
                 if ((0, r.V9)(n[c], Error)) {
                     o(s, l);
                     let r = e(a, n[c]),
-                        E = u.length;
-                    i(r, c, E, l), (u = t(e, a, _, n[c], c, [r, ...u], r, E));
+                        E = I.length;
+                    i(r, c, E, l), (I = t(e, a, _, n[c], c, [r, ...I], r, E));
                 }
                 return (
                     Array.isArray(n.errors) &&
@@ -22,15 +22,15 @@ function n(t, e, a = 250, c, E, s, l) {
                             if ((0, r.V9)(n, Error)) {
                                 o(s, l);
                                 let r = e(a, n),
-                                    I = u.length;
-                                i(r, `errors[${E}]`, I, l), (u = t(e, a, _, n, c, [r, ...u], r, I));
+                                    u = I.length;
+                                i(r, `errors[${E}]`, u, l), (I = t(e, a, _, n, c, [r, ...I], r, u));
                             }
                         }),
-                    u
+                    I
                 );
             })(t, e, E, l.originalException, c, s.exception.values, R, 0)),
-            (I = a),
-            u.map((t) => (t.value && (t.value = (0, _.$G)(t.value, I)), t))));
+            (u = a),
+            I.map((t) => (t.value && (t.value = (0, _.$G)(t.value, u)), t))));
 }
 function o(t, e) {
     (t.mechanism = t.mechanism || {

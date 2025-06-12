@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(249458),
     u = n(146128),
     d = n(134432),
-    f = n(959258),
-    _ = n(695346),
+    _ = n(959258),
+    f = n(695346),
     p = n(237997),
     h = n(768581),
     m = n(176354),
@@ -92,30 +92,30 @@ let S = __OVERLAY__ ? () => (0, s.e7)([p.default], () => p.default.isInstanceFoc
 function A(e) {
     var t,
         n,
-        { src: a, alt: s, className: c, emojiId: f, emojiName: p, channelId: g, messageId: b, animated: O, size: T = 'default', isInteracting: A = !1, shouldAnimate: N, onMouseEnter: C, onMouseLeave: R, canSelect: P = !0, autoplay: w, registerInnerRef: D, registerAnimatedElementRef: L } = e,
+        { src: a, alt: s, className: c, emojiId: _, emojiName: p, channelId: g, messageId: b, animated: O, size: T = 'default', isInteracting: A = !1, shouldAnimate: N, onMouseEnter: C, onMouseLeave: R, canSelect: P = !0, autoplay: w, registerInnerRef: D, registerAnimatedElementRef: L } = e,
         x = I(e, ['src', 'alt', 'className', 'emojiId', 'emojiName', 'channelId', 'messageId', 'animated', 'size', 'isInteracting', 'shouldAnimate', 'onMouseEnter', 'onMouseLeave', 'canSelect', 'autoplay', 'registerInnerRef', 'registerAnimatedElementRef']);
-    let [k, M] = i.useState(!1),
+    let [M, k] = i.useState(!1),
         [j, U] = i.useState(void 0),
         G = i.useRef(void 0),
-        { triggerAnimation: B, untriggerAnimation: F } = i.useContext(u.Rm),
-        V = _.Yk.useSetting(),
+        { triggerAnimation: B, untriggerAnimation: V } = i.useContext(u.Rm),
+        F = f.Yk.useSetting(),
         Z = S(),
-        H = null == w ? V : w,
+        H = null == w ? F : w,
         Y = E.kV[T],
         W = i.useRef(null),
         K = i.useMemo(() => {
             if (null != a) return a;
-            if (null != f) {
+            if (null != _) {
                 let e = !0 === N && H;
                 return h.ZP.getEmojiURL({
-                    id: f,
-                    animated: Z && !0 === O && (e || k || !0 === A),
+                    id: _,
+                    animated: Z && !0 === O && (e || M || !0 === A),
                     size: Y
                 });
             }
             if (null != p) return m.ZP.getURL(p);
             throw Error('Unknown Src for Emoji');
-        }, [O, H, f, p, Y, Z, k, A, N, a]),
+        }, [O, H, _, p, Y, Z, M, A, N, a]),
         z = i.useCallback(() => {
             null != K &&
                 (G.current = (0, d.po)(K, (e) => {
@@ -124,18 +124,18 @@ function A(e) {
         }, [K]),
         q = i.useCallback(
             (e) => {
-                O && M(!0), null == f && B(p), null == C || C(e);
+                O && k(!0), null == _ && B(p), null == C || C(e);
             },
-            [O, p, C, B, f]
+            [O, p, C, B, _]
         ),
         X = i.useCallback(
             (e) => {
-                O && M(!1), null == f && F(p), null == R || R(e);
+                O && k(!1), null == _ && V(p), null == R || R(e);
             },
-            [O, f, p, R, F]
+            [O, _, p, R, V]
         ),
         Q = i.useMemo(() => {
-            let e = null != f && '' !== f ? { 'data-id': f } : { 'data-name': p };
+            let e = null != _ && '' !== _ ? { 'data-id': _ } : { 'data-name': p };
             return y(
                 v(y({}, x), {
                     className: o()('emoji', c, { jumboable: 'jumbo' === T }),
@@ -146,7 +146,7 @@ function A(e) {
                 }),
                 e
             );
-        }, [c, f, p, q, X, z, x, T]);
+        }, [c, _, p, q, X, z, x, T]);
     i.useEffect(
         () => () => {
             var e;
@@ -172,7 +172,7 @@ function A(e) {
                       channelId: g,
                       messageId: b,
                       emojiName: p,
-                      disable: !1 === H || !1 === V,
+                      disable: !1 === H || !1 === F,
                       emojiRef: $
                   }),
                   P
@@ -205,7 +205,7 @@ function A(e) {
           });
 }
 function N(e) {
-    let { useThoughtfullyAnimated: t } = i.useContext(f.q),
+    let { useThoughtfullyAnimated: t } = i.useContext(_.q),
         { animate: n, registerRef: a } = t(),
         { disableAnimations: o } = i.useContext(c.G);
     return (0, r.jsx)(

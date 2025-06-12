@@ -10,7 +10,7 @@ var r = n(255367),
 function d(e) {
     let { onPlay: t, className: n, inactive: a } = e,
         d = i.useRef(null),
-        f = (0, r.jsx)('div', {
+        _ = (0, r.jsx)('div', {
             className: u.iconWrapper,
             ref: d,
             children: (0, r.jsx)(s.o1U, {
@@ -24,7 +24,7 @@ function d(e) {
             a || null == t
                 ? (0, r.jsx)('div', {
                       className: u.cover,
-                      children: f
+                      children: _
                   })
                 : (0, r.jsx)(s.P3F, {
                       className: o()(n, u.cover, { [u.active]: !e.disableInteractions }),
@@ -32,7 +32,7 @@ function d(e) {
                       tabIndex: 0,
                       'aria-label': c.intl.string(c.t.RscU7O),
                       focusProps: { ringTarget: d },
-                      children: f
+                      children: _
                   })
     });
 }

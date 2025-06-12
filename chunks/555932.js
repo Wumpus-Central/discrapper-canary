@@ -8,18 +8,18 @@ var r = n(255367),
     c = n(267642),
     u = n(198466),
     d = n(436444),
-    f = n(981631),
-    _ = n(388032),
+    _ = n(981631),
+    f = n(388032),
     p = n(282412);
 let h = 200,
     m = 250,
     g = 36,
     E = 660,
-    b = [f.Eu4.NONE, f.Eu4.TIER_1, f.Eu4.TIER_2, f.Eu4.TIER_3];
+    b = [_.Eu4.NONE, _.Eu4.TIER_1, _.Eu4.TIER_2, _.Eu4.TIER_3];
 function y(e) {
     let { fillFactor: t, guildBoostCount: n, premiumTier: r, isRevealed: a, useReducedMotion: o } = e,
         [l, c] = i.useState(o ? r : -1),
-        [u, _] = i.useState(0 === n),
+        [u, f] = i.useState(0 === n),
         [p, m] = i.useState(!1),
         b = i.useRef(!0);
     function y(e) {
@@ -40,11 +40,11 @@ function y(e) {
         },
         onChange: y,
         onStart: () => {
-            _(!1);
+            f(!1);
         },
         onRest: () => {
-            _(!0),
-                r === f.Eu4.TIER_3 &&
+            f(!0),
+                r === _.Eu4.TIER_3 &&
                     (m(!0),
                     window.setTimeout(() => {
                         b.current && m(!1);
@@ -102,9 +102,9 @@ function O(e) {
             role: 'progressbar',
             'aria-valuenow': T,
             'aria-valuetext':
-                t.premiumTier === f.Eu4.NONE
-                    ? _.intl.formatToPlainString(_.t.Ukqm9v, { numSubscriptionsApplied: T })
-                    : _.intl.formatToPlainString(_.t.qWunaW, {
+                t.premiumTier === _.Eu4.NONE
+                    ? f.intl.formatToPlainString(f.t.Ukqm9v, { numSubscriptionsApplied: T })
+                    : f.intl.formatToPlainString(f.t.qWunaW, {
                           numSubscriptionsApplied: T,
                           tierName: (0, c.nW)(t.premiumTier, { useLevels: !1 })
                       }),

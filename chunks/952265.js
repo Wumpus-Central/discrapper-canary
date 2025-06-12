@@ -57,7 +57,7 @@ function d(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -69,12 +69,12 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -128,16 +128,16 @@ async function O(e) {
         a = null != t.modalKey ? t.modalKey : i()(),
         o = !1,
         s = setTimeout(() => {
-            (o = !0), v(m, _(d({}, r), { modalKey: a }), n);
+            (o = !0), v(m, f(d({}, r), { modalKey: a }), n);
         }, 300),
         l = await e();
-    return clearTimeout(s), o ? L(a, n) && S(a, l, r.onCloseRequest, r.onCloseCallback, n) : v(l, _(d({}, r), { modalKey: a }), n), a;
+    return clearTimeout(s), o ? L(a, n) && S(a, l, r.onCloseRequest, r.onCloseCallback, n) : v(l, f(d({}, r), { modalKey: a }), n), a;
 }
 function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E(),
         { modalKey: r, instant: a, Layer: s, onCloseRequest: l, onCloseCallback: c, backdropStyle: u } = t,
-        f = null != r ? r : i()();
+        _ = null != r ? r : i()();
     return (
         (0, o.j)(() => {
             y.setState((t) => {
@@ -145,17 +145,17 @@ function v(e) {
                 return void 0 !== r &&
                     r.some((e) => {
                         let { key: t } = e;
-                        return t === f;
+                        return t === _;
                     })
                     ? t
-                    : _(d({}, t), {
+                    : f(d({}, t), {
                           [n]: [
                               ...r,
                               {
-                                  key: f,
+                                  key: _,
                                   Layer: s,
                                   render: e,
-                                  onCloseRequest: null != l ? l : () => I(f, n),
+                                  onCloseRequest: null != l ? l : () => I(_, n),
                                   onCloseCallback: c,
                                   instant: a,
                                   backdropStyle: u
@@ -164,7 +164,7 @@ function v(e) {
                       });
             });
         }),
-        f
+        _
     );
 }
 function I(e) {
@@ -181,7 +181,7 @@ function I(e) {
         y.setState((n) =>
             void 0 === n[t]
                 ? n
-                : _(d({}, n), {
+                : f(d({}, n), {
                       [t]: n[t].filter((t) => {
                           let { key: n } = t;
                           return n !== e;
@@ -238,10 +238,10 @@ function S(e, t, n, r) {
         y.setState((a) =>
             void 0 === a[i]
                 ? a
-                : _(d({}, a), {
+                : f(d({}, a), {
                       [i]: a[i].map((a) =>
                           a.key === e
-                              ? _(d({}, a), {
+                              ? f(d({}, a), {
                                     render: t,
                                     onCloseRequest: null == n ? () => I(e, i) : n,
                                     onCloseCallback: r

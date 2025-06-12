@@ -17,8 +17,8 @@ var r = n(738774),
     c = n(768581),
     u = n(563114),
     d = n(956664),
-    f = n(74538),
-    _ = n(981631),
+    _ = n(74538),
+    f = n(981631),
     p = n(185923);
 let h = 2097152,
     m = new Set([p.Z5.PREMIUM_LOCKED, p.Z5.ROLE_SUBSCRIPTION_LOCKED]),
@@ -37,16 +37,16 @@ function O(e) {
     let d = null != n && (0, o.zi)(n.type),
         h = null != n && (0, o.bw)(n.type),
         m = y(t, i),
-        g = s.Z.can(_.Plq.USE_EXTERNAL_EMOJIS, n);
+        g = s.Z.can(f.Plq.USE_EXTERNAL_EMOJIS, n);
     if (c === p.Hz.COMMUNITY_CONTENT) return m && null != t.guildId && t.available ? null : p.Z5.DISALLOW_EXTERNAL;
     if ((!(0, p.Gt)(c) && !y(t, i) && !u) || ((d || h) && !m && !g)) return p.Z5.DISALLOW_EXTERNAL;
     if (null != t.id && !t.available) return p.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE;
     let E = l.default.getCurrentUser();
-    if (!f.ZP.canUseEmojisEverywhere(E) && !m) {
+    if (!_.ZP.canUseEmojisEverywhere(E) && !m) {
         if (c === p.Hz.STATUS) return p.Z5.PREMIUM_LOCKED;
         else if (!t.managed) return p.Z5.PREMIUM_LOCKED;
     }
-    return (0, a.Fv)(t, null != i ? i : void 0) ? ((0, r.Ol)(t.guildId) ? p.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE : p.Z5.ROLE_SUBSCRIPTION_LOCKED) : !t.animated || f.ZP.canUseAnimatedEmojis(E) || (0, a.yH)(t) ? null : p.Z5.PREMIUM_LOCKED;
+    return (0, a.Fv)(t, null != i ? i : void 0) ? ((0, r.Ol)(t.guildId) ? p.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE : p.Z5.ROLE_SUBSCRIPTION_LOCKED) : !t.animated || _.ZP.canUseAnimatedEmojis(E) || (0, a.yH)(t) ? null : p.Z5.PREMIUM_LOCKED;
 }
 function v(e, t) {
     let n = 0,

@@ -8,8 +8,8 @@ var r,
     c = n(51025),
     u = n(594190),
     d = n(314897),
-    f = n(173747),
-    _ = n(780570),
+    _ = n(173747),
+    f = n(780570),
     p = n(830168),
     h = n(358085),
     m = n(417363),
@@ -54,7 +54,7 @@ function L() {
     let e = v[0];
     if (null != e) {
         let { comboId: t, action: n } = e,
-            { applicationId: r, branchId: i } = (0, _.CP)(t);
+            { applicationId: r, branchId: i } = (0, f.CP)(t);
         if (!D(r, i)) {
             let e = d.default.getToken(),
                 t = d.default.getId();
@@ -64,11 +64,11 @@ function L() {
     }
 }
 function x(e, t) {
-    let n = (0, _.Tu)(e, t);
+    let n = (0, f.Tu)(e, t);
     return v.findIndex((e) => e.comboId === n);
 }
-function k(e, t, n, r) {
-    let i = (0, _.Tu)(e, t),
+function M(e, t, n, r) {
+    let i = (0, f.Tu)(e, t),
         a = {
             comboId: i,
             action: r
@@ -78,8 +78,8 @@ function k(e, t, n, r) {
     let s = x(e, t);
     0 !== s && (n ? -1 === s && (v.push(a), L()) : (s > 0 && v.splice(s, 1), v.unshift(a), L())), !n && T && p.Z.resume(), w();
 }
-function M(e, t) {
-    let n = (0, _.Tu)(e, t),
+function k(e, t) {
+    let n = (0, f.Tu)(e, t),
         r = I.indexOf(n);
     -1 !== r && I.splice(r, 1);
     let i = x(e, t);
@@ -87,24 +87,24 @@ function M(e, t) {
 }
 function j(e) {
     let { applicationId: t, branchId: n } = e;
-    C.set((0, _.Tu)(t, n), 'Install'), k(t, n, !1, 'Patch');
+    C.set((0, f.Tu)(t, n), 'Install'), M(t, n, !1, 'Patch');
 }
 function U(e) {
-    F(e), Z(e);
+    V(e), Z(e);
 }
 function G(e) {
     let { applicationId: t, branchId: n } = e;
-    C.set((0, _.Tu)(t, n), 'Repair'), k(t, n, !1, 'Repair');
+    C.set((0, f.Tu)(t, n), 'Repair'), M(t, n, !1, 'Repair');
 }
 function B(e) {
     let { applicationId: t, branchId: n, automatic: r } = e;
-    k(t, n, r, 'Patch');
-}
-function F(e) {
-    let { applicationId: t, branchId: n } = e;
-    M(t, n);
+    M(t, n, r, 'Patch');
 }
 function V(e) {
+    let { applicationId: t, branchId: n } = e;
+    k(t, n);
+}
+function F(e) {
     let { applicationId: t, branchId: n } = e,
         r = x(t, n);
     if (r < 1) return !1;
@@ -112,7 +112,7 @@ function V(e) {
 }
 function Z(e) {
     let { applicationId: t, branchId: n } = e,
-        r = (0, _.Tu)(t, n),
+        r = (0, f.Tu)(t, n),
         i = I.indexOf(r);
     -1 !== i && I.splice(i, 1);
 }
@@ -124,10 +124,10 @@ function H(e) {
     let r = !1;
     (v = v.filter((e) => {
         let { comboId: t } = e,
-            { applicationId: n, branchId: i } = (0, _.CP)(t),
+            { applicationId: n, branchId: i } = (0, f.CP)(t),
             o = m.Z.getState(n, i),
-            s = f.Z.getTargetBuildId(n, i),
-            l = f.Z.getTargetManifests(n, i);
+            s = _.Z.getTargetBuildId(n, i),
+            l = _.Z.getTargetManifests(n, i);
         if (null != o && o.type === g.vxO.UP_TO_DATE && o.buildId === o.targetBuildId && o.buildId === s && a().isEqual(o.manifestIds, o.targetManifestIds) && a().isEqual(o.manifestIds, l)) {
             if ((I.push(t), C.has(t))) {
                 switch (C.get(t)) {
@@ -160,7 +160,7 @@ function W(e) {
             let { context: e } = t;
             if (null != e) {
                 let { application_id: t, branch_id: n } = e;
-                M(t, n);
+                k(t, n);
             }
         }
     }
@@ -202,11 +202,11 @@ class Q extends (r = o.ZP.Store) {
     get activeItems() {
         return v.map((e) => {
             let { comboId: t } = e;
-            return (0, _.CP)(t);
+            return (0, f.CP)(t);
         });
     }
     get finishedItems() {
-        return I.map(_.CP);
+        return I.map(f.CP);
     }
     get paused() {
         return T;
@@ -223,9 +223,9 @@ let J = new Q(l.Z, {
     DISPATCH_APPLICATION_INSTALL: j,
     DISPATCH_APPLICATION_UPDATE: B,
     DISPATCH_APPLICATION_UNINSTALL: U,
-    DISPATCH_APPLICATION_CANCEL: F,
+    DISPATCH_APPLICATION_CANCEL: V,
     DISPATCH_APPLICATION_REPAIR: G,
-    DISPATCH_APPLICATION_MOVE_UP: V,
+    DISPATCH_APPLICATION_MOVE_UP: F,
     DISPATCH_APPLICATION_REMOVE_FINISHED: Z,
     DISPATCH_APPLICATION_STATE_UPDATE: H,
     DISPATCH_APPLICATION_ERROR: W,

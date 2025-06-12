@@ -20,12 +20,12 @@ function d(e, t, n) {
         e
     );
 }
-let f = 'League of Legends',
-    _ = new r.V7(),
+let _ = 'League of Legends',
+    f = new r.V7(),
     p = !1,
     h = !1;
 function m(e) {
-    return e.some((e) => e.name === f);
+    return e.some((e) => e.name === _);
 }
 function g() {
     let e = a.Z.getAccount(null, u.ABu.RIOT_GAMES),
@@ -44,7 +44,7 @@ function g() {
 async function E(e) {
     let { riotConnectionId: t, lolConnectionId: n, onlyUpdateIfStale: r } = e;
     if (!p && (!h || !r)) {
-        _.stop();
+        f.stop();
         try {
             p = !0;
             let { next_update_timestamp: e } = await (0, l._7)({
@@ -56,7 +56,7 @@ async function E(e) {
             let i = new Date(1000 * e),
                 a = new Date(),
                 o = Math.max(0, i.getTime() - a.getTime());
-            _.start(o, () =>
+            f.start(o, () =>
                 (0, l._7)({
                     riotConnectionId: t,
                     lolConnectionId: n
@@ -97,9 +97,9 @@ class O extends i.Z {
         let e = g(),
             t = 'string' != typeof e,
             n = b() && t;
-        _.isStarted() && !n
-            ? _.stop()
-            : !_.isStarted() &&
+        f.isStarted() && !n
+            ? f.stop()
+            : !f.isStarted() &&
               n &&
               E({
                   riotConnectionId: e.riotConnection.id,

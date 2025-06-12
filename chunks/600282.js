@@ -37,15 +37,15 @@ e.exports = function (e) {
                 }
             ]
         }),
-        f = e.COMMENT(null, /$/, {
+        _ = e.COMMENT(null, /$/, {
             variants: [{ begin: /'/ }, { begin: /([\t ]|^)REM(?=\s)/ }]
         }),
-        _ = {
+        f = {
             className: 'meta',
             begin: /[\t ]*#(const|disable|else|elseif|enable|end|externalsource|if|region)\b/,
             end: /$/,
             keywords: { keyword: 'const disable else elseif enable end externalsource if region then' },
-            contains: [f]
+            contains: [_]
         };
     return {
         name: 'Visual Basic .NET',
@@ -59,6 +59,6 @@ e.exports = function (e) {
             literal: 'true false nothing'
         },
         illegal: '//|\\{|\\}|endif|gosub|variant|wend|^\\$ ',
-        contains: [n, r, l, c, u, d, f, _]
+        contains: [n, r, l, c, u, d, _, f]
     };
 };

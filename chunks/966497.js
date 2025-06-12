@@ -13,13 +13,13 @@ function o(t) {
         E = (0, n.Gx)(t),
         s = E === t,
         l = `[Tracing] Starting ${c ? 'sampled' : 'unsampled'} ${s ? 'root ' : ''}span`,
-        u = [`op: ${a}`, `name: ${e}`, `ID: ${i}`];
-    if ((o && u.push(`parent ID: ${o}`), !s)) {
+        I = [`op: ${a}`, `name: ${e}`, `ID: ${i}`];
+    if ((o && I.push(`parent ID: ${o}`), !s)) {
         let { op: t, description: e } = (0, n.XU)(E);
-        u.push(`root ID: ${E.spanContext().spanId}`), t && u.push(`root op: ${t}`), e && u.push(`root description: ${e}`);
+        I.push(`root ID: ${E.spanContext().spanId}`), t && I.push(`root op: ${t}`), e && I.push(`root description: ${e}`);
     }
     r.kg.log(`${l}
-  ${u.join('\n  ')}`);
+  ${I.join('\n  ')}`);
 }
 function i(t) {
     if (!_.X) return;

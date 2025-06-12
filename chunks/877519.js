@@ -21,8 +21,8 @@ function d(e, t, n) {
         e
     );
 }
-let f = i.Z.Millis.DAY,
-    _ = 30 * i.Z.Millis.MINUTE,
+let _ = i.Z.Millis.DAY,
+    f = 30 * i.Z.Millis.MINUTE,
     p = 5 * i.Z.Millis.SECOND,
     h = 5 * i.Z.Millis.MINUTE,
     m = 12 * i.Z.Millis.HOUR;
@@ -45,8 +45,8 @@ class g extends r.Z {
                 window.clearTimeout(this.initialFetchTimerId),
                     window.clearTimeout(this.recurringFetchTimerId),
                     (this.recurringFetchTimerId = window.setInterval(() => {
-                        Date.now() - this.lastFetchAttemptedAt > f && this._fetch();
-                    }, _));
+                        Date.now() - this.lastFetchAttemptedAt > _ && this._fetch();
+                    }, f));
                 let t = Math.floor(Math.random() * p);
                 this.initialFetchTimerId = window.setTimeout(() => {
                     !(Date.now() - t < o.Z.lastFetchedCurrentQuests) && (e || 0 === o.Z.lastFetchedCurrentQuests) && this._fetch();

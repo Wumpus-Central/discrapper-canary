@@ -9,8 +9,8 @@ var i = n(952265),
     c = n(268350),
     u = n(926491),
     d = n(373228),
-    f = n(419922),
-    _ = n(430824),
+    _ = n(419922),
+    f = n(430824),
     p = n(626135),
     h = n(483360),
     m = n(877565),
@@ -54,7 +54,7 @@ let T = 8,
     N = 40,
     C = 6;
 function R(e, t) {
-    return (0, r.jsx)(f.Z, {
+    return (0, r.jsx)(_.Z, {
         sticker: e,
         isInteracting: t,
         size: 40
@@ -96,32 +96,32 @@ let D = {
             };
             d = d.filter(e);
         }
-        let f = [];
+        let _ = [];
         if (r.allowStickers) {
             (0, c.$p)();
             let t = h.ZP.queryStickers([n], !0, [e, (e, t) => t === l.eb.SENDABLE]),
                 r = Math.max(S, T - d.length);
-            (f = t.slice(0, r)), '-' === n[0] && (f = t.filter((e) => e.sticker.name === n));
+            (_ = t.slice(0, r)), '-' === n[0] && (_ = t.filter((e) => e.sticker.name === n));
         }
-        let _ = [];
+        let f = [];
         a &&
-            ((_ = h.ZP.querySoundmoji(n, e)
+            ((f = h.ZP.querySoundmoji(n, e)
                 .map((e) => ({ sound: e }))
                 .slice(0, A)),
-            '-' === n[0] && (_ = _.filter((e) => e.sound.name === n)));
-        let p = d.slice(0, Math.max(C, u - f.length - _.length));
+            '-' === n[0] && (f = f.filter((e) => e.sound.name === n)));
+        let p = d.slice(0, Math.max(C, u - _.length - f.length));
         return {
             results: {
                 emojis: p,
                 emojisLocked: [],
-                stickers: f,
-                soundmoji: _
+                stickers: _,
+                soundmoji: f
             },
             metadata: {
                 numEmojiResults: p.length,
                 numLockedEmojiResults: 0,
-                numStickerResults: f.length,
-                numSoundmojiResults: _.length
+                numStickerResults: _.length,
+                numSoundmojiResults: f.length
             }
         };
     },
@@ -131,7 +131,7 @@ let D = {
                 selectedIndex: c,
                 query: u,
                 onHover: d,
-                onClick: f
+                onClick: _
             } = e,
             p = () => {
                 (0, i.ZD)(async () => {
@@ -148,7 +148,7 @@ let D = {
                     selectedIndex: c,
                     autocompletes: t,
                     onHover: d,
-                    onClick: f,
+                    onClick: _,
                     titleWithQuery: y.t.ksAVYm,
                     titleWithoutQuery: y.intl.string(y.t.sMOuub),
                     Component: a.ZP.Emoji,
@@ -156,7 +156,7 @@ let D = {
                         emoji: e,
                         key: e.id || e.uniqueName || e.name,
                         sentinel: E.Iv,
-                        guild: null != e.guildId ? _.Z.getGuild(e.guildId) : null
+                        guild: null != e.guildId ? f.Z.getGuild(e.guildId) : null
                     }),
                     getQuery: (e) => ''.concat(E.Iv).concat(e),
                     key: 'emoji'
@@ -189,7 +189,7 @@ let D = {
                     selectedIndex: c,
                     autocompletes: o,
                     onHover: d,
-                    onClick: f,
+                    onClick: _,
                     titleWithQuery: y.t.uferGB,
                     titleWithoutQuery: y.intl.string(y.t['fT+Yjo']),
                     Component: a.ZP.Sticker,
@@ -213,7 +213,7 @@ let D = {
                     selectedIndex: c,
                     autocompletes: s,
                     onHover: d,
-                    onClick: f,
+                    onClick: _,
                     titleWithQuery: y.t['0cKBGB'],
                     titleWithoutQuery: y.intl.string(y.t.EHlAMT),
                     Component: a.ZP.Soundmoji,

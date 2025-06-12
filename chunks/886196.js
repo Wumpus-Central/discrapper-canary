@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(570140),
     i = n(147913),
     a = n(70956),
@@ -68,4 +68,4 @@ class d extends i.Z {
             c(this, 'refreshTimeout', null);
     }
 }
-let f = new d();
+let _ = new d();

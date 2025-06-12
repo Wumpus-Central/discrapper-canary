@@ -13,8 +13,8 @@ var r = n(255367),
     c = n(442837),
     u = n(692547),
     d = n(481060),
-    f = n(980568),
-    _ = n(560768),
+    _ = n(980568),
+    f = n(560768),
     p = n(812206),
     h = n(405701),
     m = n(243778),
@@ -63,7 +63,7 @@ function x(e) {
     }
     return e;
 }
-function k(e, t) {
+function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -75,12 +75,12 @@ function k(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : M(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -155,11 +155,11 @@ class B extends i.PureComponent {
             L(this, 'timeout', null),
             L(this, 'handleDismissInviteEducation', () => {
                 let { activity: e } = this.props;
-                null != e && null != e.application_id && f.Z.dismissForApplicationId(e.application_id);
+                null != e && null != e.application_id && _.Z.dismissForApplicationId(e.application_id);
             });
     }
 }
-function F(e) {
+function V(e) {
     let { channel: t, guild: n } = e,
         i = [];
     return (0, r.jsx)(m.ZP, {
@@ -170,8 +170,8 @@ function F(e) {
         }
     });
 }
-function V(e) {
-    let { guildId: t, activity: n, showInviteEducation: i, isFocused: a, typingUsers: s, className: l, channel: c, isThreadCreation: u, renderDots: f, poggermodeEnabled: _, isComboing: p } = e,
+function F(e) {
+    let { guildId: t, activity: n, showInviteEducation: i, isFocused: a, typingUsers: s, className: l, channel: c, isThreadCreation: u, renderDots: _, poggermodeEnabled: f, isComboing: p } = e,
         { rateLimitPerUser: m } = c,
         g = O.Z.getGuild(t),
         b = m > 0;
@@ -182,7 +182,7 @@ function V(e) {
                   isFocused: a,
                   isRefreshChatInputEnabled: !1
               })
-            : (0, r.jsx)(F, {
+            : (0, r.jsx)(V, {
                   channel: c,
                   guild: g
               });
@@ -208,7 +208,7 @@ function V(e) {
                 D.typing,
                 {
                     'stop-animation': !a,
-                    [D.isComboing]: _ && p
+                    [D.isComboing]: f && p
                 },
                 l
             ),
@@ -217,7 +217,7 @@ function V(e) {
                     className: D.typingDots,
                     children: [
                         s.length > 0 &&
-                            !1 !== f &&
+                            !1 !== _ &&
                             (0, r.jsx)(d.bbz, {
                                 className: D.ellipsis,
                                 dotRadius: 3.5,
@@ -235,7 +235,7 @@ function V(e) {
                     channel: c,
                     isThreadCreation: u
                 }),
-                _ && p && (0, r.jsx)(E.Z, { channelId: c.id })
+                f && p && (0, r.jsx)(E.Z, { channelId: c.id })
             ]
         })
     );
@@ -257,9 +257,9 @@ function H(e) {
         i = j(e, ['channel', 'isThreadCreation']);
     let a = (0, c.e7)([I.Z], () => I.Z.findActivity((e) => null != e.application_id)),
         o = (0, c.e7)([g.ZP, y.default], () => g.ZP.getUserCombo(y.default.getId(), t.id)),
-        s = (0, c.e7)([b.Z, p.Z, v.Z], () => (0, _.Z)(t, a, b.Z, p.Z, v.Z)),
+        s = (0, c.e7)([b.Z, p.Z, v.Z], () => (0, f.Z)(t, a, b.Z, p.Z, v.Z)),
         l = Z(t),
-        f = M(x({}, i), {
+        _ = k(x({}, i), {
             baseTextColor: (0, d.dQu)(u.Z.colors.INTERACTIVE_NORMAL).hex(),
             activeTextColor: (0, d.dQu)(u.Z.colors.INTERACTIVE_NORMAL).hex(),
             showInviteEducation: s,
@@ -271,5 +271,5 @@ function H(e) {
             channel: t,
             isThreadCreation: n
         });
-    return (0, r.jsx)(V, x({}, f));
+    return (0, r.jsx)(F, x({}, _));
 }

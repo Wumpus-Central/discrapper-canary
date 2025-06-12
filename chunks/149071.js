@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,11 +57,11 @@ function f(e, t) {
         e
     );
 }
-let _ = {},
+let f = {},
     p = 0,
     h = 15 * s.Z.Millis.SECOND;
 function m() {
-    _ = u({}, a.Z.getCollapsedCategories());
+    f = u({}, a.Z.getCollapsedCategories());
 }
 function g() {
     __OVERLAY__ || (clearTimeout(p), (p = setTimeout(() => b({}), h)));
@@ -82,10 +82,10 @@ async function b(e) {
         i = y();
     for (let r in i) {
         let i = o.Z.getChannel(r);
-        null != i && null != i.guild_id && (i.guild_id in e || (e[i.guild_id] = {}), null == e[i.guild_id].channel_overrides && (e[i.guild_id].channel_overrides = {}), (e[i.guild_id].channel_overrides[i.id] = f(u({}, e[i.guild_id].channel_overrides[i.id]), { collapsed: i.id in n })), (t = !0));
+        null != i && null != i.guild_id && (i.guild_id in e || (e[i.guild_id] = {}), null == e[i.guild_id].channel_overrides && (e[i.guild_id].channel_overrides = {}), (e[i.guild_id].channel_overrides[i.id] = _(u({}, e[i.guild_id].channel_overrides[i.id]), { collapsed: i.id in n })), (t = !0));
     }
     return t
-        ? ((_ = u({}, n)),
+        ? ((f = u({}, n)),
           delete e[l.I_8],
           (
               await r.tn.patch({
@@ -99,12 +99,12 @@ async function b(e) {
 function y() {
     let e = {},
         t = a.Z.getCollapsedCategories();
-    for (let n in t) t[n] !== _[n] && (e[n] = !0);
-    for (let n in _) t[n] !== _[n] && (e[n] = !0);
+    for (let n in t) t[n] !== f[n] && (e[n] = !0);
+    for (let n in f) t[n] !== f[n] && (e[n] = !0);
     return e;
 }
 function O() {
-    _ = u({}, a.Z.getCollapsedCategories());
+    f = u({}, a.Z.getCollapsedCategories());
 }
 class v extends i.Z {
     constructor(...e) {

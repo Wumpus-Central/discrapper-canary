@@ -2,7 +2,7 @@ n.d(t, {
     T3: () => d,
     T4: () => c,
     og: () => u,
-    xg: () => f
+    xg: () => _
 }),
     n(415506);
 var r = n(221513),
@@ -33,7 +33,7 @@ function d(e, t) {
         minimumFractionDigits: 0
     }).format(t);
 }
-function f(e) {
+function _(e) {
     let t = 'interval_count' in e ? e.interval_count : e.intervalCount,
         n = (0, a.aS)(e.id);
     return u(c(n.amount, n.currency), e.interval, t);

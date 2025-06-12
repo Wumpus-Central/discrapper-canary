@@ -1,5 +1,5 @@
 n.d(t, {
-    Tk: () => f,
+    Tk: () => _,
     kT: () => u,
     wN: () => d
 }),
@@ -15,7 +15,7 @@ let l = /(!|\.|;|,|-|—|–|\?|"|')/g,
     c = /(\n|\t|\s)/g,
     u = (e) => e.replace(l, '').replace(c, ' '),
     d = (e) => (null == e ? [] : u(e).trim().split(' ')),
-    f = i()(
+    _ = i()(
         (e) => {
             a.default.track(s.rMx.AUTO_SUGGEST_DISPLAYED, { suggestion_trigger: e });
         },

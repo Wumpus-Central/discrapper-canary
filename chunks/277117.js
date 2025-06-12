@@ -31,7 +31,7 @@ var i = n(657707),
     T = n(388032),
     A = n(283189);
 function w(e) {
-    let { user: t, currentUser: n, displayProfile: w, channel: R, isHovering: M, onOpenProfile: k } = e,
+    let { user: t, currentUser: n, displayProfile: w, channel: R, isHovering: k, onOpenProfile: M } = e,
         { relationshipType: L, originApplicationId: D } = (0, l.cj)([u.Z], () => ({
             relationshipType: u.Z.getRelationshipType(t.id),
             originApplicationId: u.Z.getOriginApplicationId(t.id)
@@ -51,7 +51,7 @@ function w(e) {
                 user: t,
                 nickname: p.ZP.getName(null, R.id, t),
                 pronouns: null == w ? void 0 : w.pronouns,
-                onOpenProfile: k,
+                onOpenProfile: M,
                 tags: (0, r.jsx)(g.Z, {
                     displayProfile: w,
                     themeType: Z.lY.SIDEBAR
@@ -62,8 +62,8 @@ function w(e) {
                         !F &&
                             (0, r.jsx)(S.Z, {
                                 userId: t.id,
-                                isHovering: M,
-                                onOpenProfile: k
+                                isHovering: k,
+                                onOpenProfile: M
                             })
                     ]
                 })
@@ -112,7 +112,7 @@ function w(e) {
                       user: t,
                       currentUser: n,
                       displayProfile: w,
-                      onOpenUserProfileModal: k
+                      onOpenUserProfileModal: M
                   })
                 : (0, r.jsx)(_.Z, {
                       user: t,
@@ -132,7 +132,7 @@ function w(e) {
                             children: (0, r.jsx)(b.Z, {
                                 userBio: w.bio,
                                 animateOnHover: !0,
-                                isHovering: M,
+                                isHovering: k,
                                 userId: t.id
                             })
                         }),

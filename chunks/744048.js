@@ -9,22 +9,22 @@ var i = n(442837),
     c = n(724145),
     u = n(726034),
     d = n(605236),
-    f = n(243778),
-    _ = n(819640),
+    _ = n(243778),
+    f = n(819640),
     p = n(594174),
     h = n(74538),
     m = n(550385),
     g = n(981631),
     E = n(921944);
 let b = function () {
-    let e = (0, i.e7)([_.Z], () => _.Z.getLayers().includes(g.S9g.USER_SETTINGS)),
+    let e = (0, i.e7)([f.Z], () => f.Z.getLayers().includes(g.S9g.USER_SETTINGS)),
         t = (0, i.e7)([p.default], () => h.ZP.canUseClientThemes(p.default.getCurrentUser())),
         n = (0, i.e7)([s.Z], () => s.Z.isCoachmark),
         b = (0, l.g)(),
         { activePanel: y, metadata: O } = (0, m.oq)(),
         v = [];
     !e && null == y && (n && !t && v.push(a.z.CLIENT_THEMES_COACHMARK), b && v.push(a.z.CUSTOM_THEME_COACHMARK));
-    let [I, T] = (0, f.US)(v, E.R.SIDEBAR, !0),
+    let [I, T] = (0, _.US)(v, E.R.SIDEBAR, !0),
         S = I === a.z.CLIENT_THEMES_COACHMARK,
         A = I === a.z.CUSTOM_THEME_COACHMARK;
     return e

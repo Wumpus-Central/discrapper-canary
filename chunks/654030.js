@@ -20,8 +20,8 @@ var r,
     x = n(456432),
     v = n(789407),
     O = n(598077),
-    C = n(757266),
-    j = n(831506),
+    j = n(757266),
+    C = n(831506),
     S = n(271383),
     I = n(283595),
     N = n(293273),
@@ -239,11 +239,11 @@ class G extends (r = l.PureComponent) {
     }
 }
 U(G, 'defaultProps', { isPreview: !1 });
-let H = a.ZP.connectStores([y.Z, j.Z, N.Z, T.Z, C.Z, A.Z, I.Z, b.Z, w.Z, P.default, S.ZP], (e) => {
+let H = a.ZP.connectStores([y.Z, C.Z, N.Z, T.Z, j.Z, A.Z, I.Z, b.Z, w.Z, P.default, S.ZP], (e) => {
     var t;
     let { activity: n, analyticsLocations: r, application: i, partyId: l, userId: a, guildId: o } = e,
         { id: s } = null != i ? i : {},
-        c = null != n && null != n.party && n.party.id === l ? j.Z.getParty(n.party.id) : null,
+        c = null != n && null != n.party && n.party.id === l ? C.Z.getParty(n.party.id) : null,
         u = null != s ? (null != (t = N.Z.getApplicationActivity(s)) ? t : T.Z.getApplicationActivity(s, !0)) : N.Z.findActivity((e) => e.type === L.IIU.LISTENING),
         d = !1;
     null != s && (d = A.Z.getState(s, L.mFx.JOIN) === L.OcF.LOADING);
@@ -267,7 +267,7 @@ let H = a.ZP.connectStores([y.Z, j.Z, N.Z, T.Z, C.Z, A.Z, I.Z, b.Z, w.Z, P.defau
     return {
         analyticsLocations: r,
         partyMembers: p,
-        connectedApplication: null != s ? C.Z.getApplication(s) : null,
+        connectedApplication: null != s ? j.Z.getApplication(s) : null,
         myPartyId: null != u && null != u.party ? u.party.id : null,
         isLaunching: d,
         isSyncable: m && !h,
@@ -277,7 +277,7 @@ let H = a.ZP.connectStores([y.Z, j.Z, N.Z, T.Z, C.Z, A.Z, I.Z, b.Z, w.Z, P.defau
                 LibraryApplicationStore: I.Z,
                 LaunchableGameStore: b.Z,
                 DispatchApplicationStore: w.Z,
-                ConnectedAppsStore: C.Z,
+                ConnectedAppsStore: j.Z,
                 applicationId: s
             })
     };

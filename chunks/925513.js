@@ -1,7 +1,7 @@
 n.d(t, {
     Jr: () => m,
     O6: () => h,
-    _i: () => f,
+    _i: () => _,
     v6: () => g
 });
 var r = n(73800),
@@ -40,7 +40,7 @@ function d(e) {
     }
     return e;
 }
-let f = (e) => {
+let _ = (e) => {
         let { setting: t, isDm: n = !1, isFriend: r = !1 } = e;
         if (null != t && t !== i.Q4.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
         let a = o.default.getCurrentUser();
@@ -49,12 +49,12 @@ let f = (e) => {
                   isDm: n,
                   isFriend: r
               })
-            : _({
+            : f({
                   isDm: n,
                   isFriend: r
               });
     },
-    _ = (e) => {
+    f = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
         return t && n ? i.Q4.SHOW : t ? i.Q4.BLOCK : i.Q4.SHOW;
     },
@@ -65,12 +65,12 @@ let f = (e) => {
     h = (e) => {
         let t = null != e ? e : a.j7.getSetting();
         return {
-            goreContentGuilds: f({ setting: null == t ? void 0 : t.goreContentGuilds }),
-            goreContentNonFriendDm: f({
+            goreContentGuilds: _({ setting: null == t ? void 0 : t.goreContentGuilds }),
+            goreContentNonFriendDm: _({
                 setting: null == t ? void 0 : t.goreContentNonFriendDm,
                 isDm: !0
             }),
-            goreContentFriendDm: f({
+            goreContentFriendDm: _({
                 setting: null == t ? void 0 : t.goreContentFriendDm,
                 isDm: !0,
                 isFriend: !0

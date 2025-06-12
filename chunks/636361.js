@@ -8,7 +8,7 @@ let c = [/^Script error\.?$/, /^Javascript error: Script error\.? on line 0$/, /
     E = (0, i._I)((t = {}) => ({
         name: 'InboundFilters',
         processEvent: (e, a, i) => {
-            var E, l, u, I, R;
+            var E, l, I, u, R;
             return ((E = e),
             (l = (function (t = {}, e = {}) {
                 return {
@@ -29,11 +29,11 @@ let c = [/^Script error\.?$/, /^Javascript error: Script error\.? on line 0$/, /
                       r.kg.warn(`Event dropped due to being internal Sentry Error.
 Event: ${(0, _.jH)(E)}`),
                   0)
-                : ((u = E),
-                    (I = l.ignoreErrors),
-                    !u.type &&
-                        I &&
-                        I.length &&
+                : ((I = E),
+                    (u = l.ignoreErrors),
+                    !I.type &&
+                        u &&
+                        u.length &&
                         (function (t) {
                             let e,
                                 a = [];
@@ -42,7 +42,7 @@ Event: ${(0, _.jH)(E)}`),
                                 e = t.exception.values[t.exception.values.length - 1];
                             } catch (t) {}
                             return e && e.value && (a.push(e.value), e.type && a.push(`${e.type}: ${e.value}`)), a;
-                        })(u).some((t) => (0, n.U0)(t, I)))
+                        })(I).some((t) => (0, n.U0)(t, u)))
                   ? (o.X &&
                         r.kg.warn(`Event dropped due to being matched by \`ignoreErrors\` option.
 Event: ${(0, _.jH)(E)}`),

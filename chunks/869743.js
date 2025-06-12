@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,7 +53,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -61,7 +61,7 @@ function p(e, t) {
 }
 let h = (e) => {
         let { appRecord: t, closePopout: n, showAppReportingOption: i, selectedGuildId: l, selectedChannelId: u, children: d = null } = e,
-            f = (0, o.Z)({
+            _ = (0, o.Z)({
                 id: t.id,
                 label: c.intl.string(c.t['+NP/b2'])
             });
@@ -86,7 +86,7 @@ let h = (e) => {
                       })
                     : null,
                 d,
-                f
+                _
             ]
         });
     },
@@ -135,7 +135,7 @@ let h = (e) => {
                 (0, r.jsx)(
                     a.P3F,
                     p(
-                        f(
+                        _(
                             {
                                 innerRef: l,
                                 className: u.actionMenuButton,

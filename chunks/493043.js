@@ -56,8 +56,8 @@ function u(e, t) {
 function d(e) {
     var { location: t, profileGuildId: n, user: s, currentUser: u } = e,
         d = c(e, ['location', 'profileGuildId', 'user', 'currentUser']);
-    let f = (0, i.T)({ location: t });
-    return s.id !== u.id && f
+    let _ = (0, i.T)({ location: t });
+    return s.id !== u.id && _
         ? (0, r.jsx)(
               o.Z,
               l(

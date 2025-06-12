@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(539854), n(781311);
+n.d(t, { Z: () => V }), n(539854), n(781311);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(442837),
     u = n(481060),
     d = n(833664),
-    f = n(545957),
-    _ = n(933557),
+    _ = n(545957),
+    f = n(933557),
     p = n(359588),
     h = n(74340),
     m = n(19391),
@@ -69,7 +69,7 @@ function x(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,7 +80,7 @@ function k(e, t) {
         e
     );
 }
-function M(e) {
+function k(e) {
     let t = (null == e ? void 0 : e.name) === '' ? null : null == e ? void 0 : e.name;
     return null != t ? P.intl.formatToPlainString(P.t['0wJXSk'], { name: t }) : P.intl.string(P.t.eXan7O);
 }
@@ -92,10 +92,10 @@ function U(e) {
         i = [],
         { descriptiveTextEnabled: a } = (0, y.f)({ location: 'StackedActivityStatus' }),
         { enableTopNavButton: o } = (0, g.Cq)({ location: 'StackedActivityStatus' }),
-        s = (0, _.ZP)(r),
+        s = (0, f.ZP)(r),
         l = a || o;
     return (
-        null != t && i.push(M(t)),
+        null != t && i.push(k(t)),
         n.forEach((e) => {
             let { tooltip: t } = (0, O.Z)(e, l);
             null != t && i.push(t);
@@ -122,12 +122,12 @@ function B(e) {
         children: C.l
     });
 }
-function F(e) {
-    let { user: t, activities: n, applicationStream: a, voiceChannel: _, textClassName: g, iconClassName: y, textSize: O = 'xs', animateEmoji: P = !0, hasQuest: D = !1, hideEmoji: x = !1, hideTooltip: M = !1 } = e;
-    (0, f.Z)(null == t ? void 0 : t.id);
+function V(e) {
+    let { user: t, activities: n, applicationStream: a, voiceChannel: f, textClassName: g, iconClassName: y, textSize: O = 'xs', animateEmoji: P = !0, hasQuest: D = !1, hideEmoji: x = !1, hideTooltip: k = !1 } = e;
+    (0, _.Z)(null == t ? void 0 : t.id);
     let j = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
-        F = (0, E.Cf)(j),
-        V = i.useMemo(() => {
+        V = (0, E.Cf)(j),
+        F = i.useMemo(() => {
             var e, t;
             let r =
                 null == n
@@ -149,32 +149,32 @@ function F(e) {
                             ? void 0
                             : n.filter((e) => {
                                   let { type: t, name: n } = e;
-                                  return t !== R.IIU.CUSTOM_STATUS && t !== R.IIU.HANG_STATUS && n !== (null == F ? void 0 : F.name);
+                                  return t !== R.IIU.CUSTOM_STATUS && t !== R.IIU.HANG_STATUS && n !== (null == V ? void 0 : V.name);
                               }))
                     ? e
                     : [],
                 (e, t) => (null != e.application_id && null != t.application_id && e.application_id === t.application_id) || (null != e.name && null != t.name && e.name === t.name)
             );
-        }, [n, null == F ? void 0 : F.name]),
-        H = null == n ? void 0 : n.find((e) => e.name === (null == F ? void 0 : F.name)),
+        }, [n, null == V ? void 0 : V.name]),
+        H = null == n ? void 0 : n.find((e) => e.name === (null == V ? void 0 : V.name)),
         Y = (null == t ? void 0 : t.bot) === !0,
         W = (0, c.e7)([b.Z], () => b.Z.isBlockedOrIgnored(null == t ? void 0 : t.id)),
-        K = (0, p.Z)({ location: 'ActivityStatus' }) && null != V ? (0, h.Z)(V) : null,
-        z = (null == V ? void 0 : V.state) != null || null != K,
+        K = (0, p.Z)({ location: 'ActivityStatus' }) && null != F ? (0, h.Z)(F) : null,
+        z = (null == F ? void 0 : F.state) != null || null != K,
         q = null != j,
-        X = !q && null != _,
+        X = !q && null != f,
         Q = Z.length + (q || X ? 1 : 0),
         J = Q > 1,
-        $ = (null == V ? void 0 : V.state) != null && 'xs' === O,
+        $ = (null == F ? void 0 : F.state) != null && 'xs' === O,
         ee = U({
             streamActivity: H,
             otherActivities: Z,
-            voiceActivityChannel: X ? _ : null
+            voiceActivityChannel: X ? f : null
         });
     if (W) return null;
     let et = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-                t = !0 === e || M;
+                t = !0 === e || k;
             if (null != j)
                 return (0, r.jsx)(S.Z, {
                     stream: j,
@@ -197,9 +197,9 @@ function F(e) {
                       hideIcon: Y,
                       hideTooltip: t
                   })
-                : null != _
+                : null != f
                   ? (0, r.jsx)(N.Z, {
-                        channel: _,
+                        channel: f,
                         textVariant: 'text-'.concat(O, '/medium'),
                         textClassName: g,
                         iconClassName: y,
@@ -222,7 +222,7 @@ function F(e) {
                     e.push(
                         (0, r.jsx)(
                             S.Z,
-                            k(
+                            M(
                                 L(
                                     {
                                         stream: j,
@@ -238,7 +238,7 @@ function F(e) {
                 Z.forEach((n, i) => {
                     e.push((0, r.jsx)(A.Z, L({ activity: n }, t), 'activity-'.concat(i)));
                 }),
-                X && e.push((0, r.jsx)(N.Z, k(L({ channel: _ }, t), { showChannelName: !0 }), 'voice')),
+                X && e.push((0, r.jsx)(N.Z, M(L({ channel: f }, t), { showChannelName: !0 }), 'voice')),
                 e
             );
         },
@@ -253,7 +253,7 @@ function F(e) {
             0 === Q
                 ? null
                 : J && !Y
-                  ? M
+                  ? k
                       ? (0, r.jsxs)('div', {
                             className: o()(w.activityContainer, $ && w.iconOnly),
                             children: [et(), er()]
@@ -266,16 +266,16 @@ function F(e) {
                             children: (e) =>
                                 (0, r.jsxs)(
                                     'div',
-                                    k(L({ className: o()(w.activityContainer, $ && w.iconOnly) }, e), {
+                                    M(L({ className: o()(w.activityContainer, $ && w.iconOnly) }, e), {
                                         children: [et(!0), er()]
                                     })
                                 )
                         })
                   : et(),
         ea = () => {
-            if (null == V) return null;
-            let e = V.emoji,
-                t = V.state,
+            if (null == F) return null;
+            let e = F.emoji,
+                t = F.state,
                 n = null != K ? (0, m.Z)(K) : null;
             return (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -291,14 +291,14 @@ function F(e) {
                         (0, r.jsx)(v.Z, {
                             emoji: e,
                             animate: P,
-                            hideTooltip: M,
+                            hideTooltip: k,
                             className: y
                         }),
                     null != t &&
                         (0, r.jsx)(T.Z, {
                             variant: 'text-'.concat(O, '/medium'),
                             className: g,
-                            hideTooltip: M,
+                            hideTooltip: k,
                             children: t
                         })
                 ]
@@ -311,7 +311,7 @@ function F(e) {
         }),
         children: [
             ei(),
-            null != V &&
+            null != F &&
                 Q > 0 &&
                 (0, r.jsx)(B, {
                     textVariant: 'text-'.concat(O, '/normal'),

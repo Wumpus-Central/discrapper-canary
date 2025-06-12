@@ -15,7 +15,7 @@ function s(e, t) {
     var n;
     let r = !1,
         a = t.map((t, n) => {
-            let { guid: i, guid: a, name: s, name: l, index: c, facing: u, hardwareId: d, containerId: f } = t;
+            let { guid: i, guid: a, name: s, name: l, index: c, facing: u, hardwareId: d, containerId: _ } = t;
             return (
                 /^default/.test(s) ? ((r = !0), (i = o.w5), (s = s.replace('default', 'Default'))) : (i = null != i && '' !== i ? i : s),
                 null != c && (n = c),
@@ -28,7 +28,7 @@ function s(e, t) {
                     originalId: a,
                     facing: u,
                     hardwareId: d,
-                    containerId: f
+                    containerId: _
                 }
             );
         });

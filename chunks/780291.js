@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(576125),
     u = n(112843),
     d = n(524484),
-    f = n(675654);
-function _(e, t, n) {
+    _ = n(675654);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
@@ -43,7 +43,7 @@ let h = 16,
 function g(e) {
     var t, n;
     let { editorHeight: r, textValue: c, channelId: d } = e,
-        _ = i.useRef(c),
+        f = i.useRef(c),
         p = (0, o.Z)({ editorHeight: r }),
         g = (0, u.Z)(),
         E = (0, a.e7)([l.ZP, s.default], () => l.ZP.isComboing(s.default.getId(), d)),
@@ -53,7 +53,7 @@ function g(e) {
         v = i.useMemo(() => Math.random() < m, [O]);
     return (
         i.useEffect(() => {
-            0 !== c.length && c !== _.current && E && (g.fire(b, y, v ? { sprite: f.vv } : null), (_.current = c));
+            0 !== c.length && c !== f.current && E && (g.fire(b, y, v ? { sprite: _.vv } : null), (f.current = c));
         }, [c, E, b, y, v, g]),
         null
     );

@@ -1,7 +1,6 @@
 n.d(t, {
-    K3: () => p,
-    Lq: () => f,
-    O0: () => h,
+    K3: () => f,
+    Lq: () => d,
     Sl: () => _
 }),
     n(704826),
@@ -12,40 +11,23 @@ var r = n(73800),
     o = n(691324),
     s = n(399606),
     l = n(900089),
-    c = n(410030),
-    u = n(607070);
-function d(e) {
+    c = n(607070);
+function u(e) {
     return e.toUpperCase().replace(/-/g, '_');
 }
-function f(e) {
-    return (0, l.Fw)(d(e));
+function d(e) {
+    return (0, l.Fw)(u(e));
 }
 function _(e) {
     return null != e ? o.b[e] : null;
 }
-function p(e) {
-    let t = (0, s.e7)([u.Z], () => u.Z.saturation);
+function f(e) {
+    let t = (0, s.e7)([c.Z], () => c.Z.saturation);
     return r.useMemo(() => {
         if (null == e) return null;
         if ('currentColor' === e || e.startsWith('var(')) return e;
         let n = a()(e);
         return n.set('hsl.s', n.get('hsl.s') * t).hex();
     }, [e, t]);
-}
-function h(e, t) {
-    let n = (0, c.Fg)(),
-        i = (0, s.e7)([u.Z], () => u.Z.saturation);
-    return r.useMemo(
-        () =>
-            null == e
-                ? null
-                : {
-                      hex: (0, l.uJ)(d(e), {
-                          theme: null != t ? t : n,
-                          saturation: i
-                      })
-                  },
-        [e, i, n, t]
-    );
 }
 n(981631);

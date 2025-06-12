@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(573385),
     u = n(481060),
     d = n(239091),
-    f = n(276264),
-    _ = n(493773),
+    _ = n(276264),
+    f = n(493773),
     p = n(607070),
     h = n(100527),
     m = n(906732),
@@ -58,7 +58,7 @@ function x(e) {
     }
     return e;
 }
-function k(e, t) {
+function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -70,12 +70,12 @@ function k(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : M(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -105,9 +105,9 @@ function U(e) {
             },
             [a]
         ),
-        _ = (0, l.e7)([C.default], () => C.default.getUser(t.userId), [t.userId]),
+        f = (0, l.e7)([C.default], () => C.default.getUser(t.userId), [t.userId]),
         p = (0, l.e7)([S.Z], () => S.Z.getChannel(o), [o]);
-    return null == _ || null == p
+    return null == f || null == p
         ? null
         : (0, r.jsx)(
               T.Z,
@@ -122,7 +122,7 @@ function U(e) {
                   children: (e, i) => {
                       let { isShown: o } = i;
                       return (0, r.jsx)(
-                          f.Z,
+                          _.Z,
                           x(
                               {
                                   ref: c,
@@ -130,7 +130,7 @@ function U(e) {
                                   colorString: t.colorString,
                                   colorStrings: t.colorStrings,
                                   colorRoleName: s.name,
-                                  user: _,
+                                  user: f,
                                   isOwner: t.userId === u,
                                   nick: t.nick,
                                   premiumSince: null == t.premiumSince ? null : new Date(t.premiumSince),
@@ -142,8 +142,8 @@ function U(e) {
                                           return (t) =>
                                               (0, r.jsx)(
                                                   e,
-                                                  M(x({}, t), {
-                                                      user: _,
+                                                  k(x({}, t), {
+                                                      user: f,
                                                       guildId: a,
                                                       channel: p,
                                                       showMediaItems: !0
@@ -164,15 +164,15 @@ function U(e) {
 function G(e) {
     let { popoutProps: t, roleId: n, guildId: a, channelId: s } = e,
         d = i.useRef(null);
-    (0, _.ZP)(() => {
+    (0, f.ZP)(() => {
         var e;
         null == (e = t.setPopoutRef) || e.call(t, d.current);
     }),
-        (0, _.zq)(() => {
+        (0, f.zq)(() => {
             var e;
             null == (e = t.setPopoutRef) || e.call(t, null);
         });
-    let f = (0, b.Z)(a),
+    let _ = (0, b.Z)(a),
         p = (0, l.e7)(
             [N.Z],
             () => {
@@ -204,7 +204,7 @@ function G(e) {
             },
             [a, n, p]
         ),
-        E = null == n ? null : null == f ? void 0 : f[n],
+        E = null == n ? null : null == _ ? void 0 : _[n],
         y = i.useMemo(
             () =>
                 null != m
@@ -235,7 +235,7 @@ function G(e) {
         value: void 0,
         children: (0, r.jsx)(
             'div',
-            M(
+            k(
                 x(
                     {
                         className: w.rolePopout,
@@ -273,11 +273,11 @@ function G(e) {
     });
 }
 function B(e) {
-    let { roleColor: t, roleColors: n, roleId: a, channelId: o, roleName: c, guildId: d, children: f, inlinePreview: _ = !1 } = e,
+    let { roleColor: t, roleColors: n, roleId: a, channelId: o, roleName: c, guildId: d, children: _, inlinePreview: f = !1 } = e,
         { analyticsLocations: g } = (0, m.ZP)(h.Z.ROLE_MENTION),
         E = (0, l.e7)([p.Z], () => p.Z.roleStyle),
         b = (0, I.$V)(d, 'RoleMention'),
-        T = ((null != t && 0 !== t) || (null != n && null != n.primaryColor)) && !_,
+        T = ((null != t && 0 !== t) || (null != n && null != n.primaryColor)) && !f,
         S = T && 'dot' === E,
         A = T && 'username' === E,
         N = b && null != n && null != n.secondaryColor ? (0, v.f)(n) : null,
@@ -285,7 +285,7 @@ function B(e) {
         R = (e) =>
             (0, r.jsxs)(
                 O.Z,
-                M(
+                k(
                     x(
                         {
                             ref: C,
@@ -306,13 +306,13 @@ function B(e) {
                                     background: !1,
                                     tooltip: !1
                                 }),
-                            f
+                            _
                         ]
                     }
                 )
             ),
         { enabled: P } = j.getCurrentConfig({ location: '2ec235_1' }, { autoTrackExposure: !1 });
-    return !P || _ || null == o || null == d || (null == a && '@everyone' !== c)
+    return !P || f || null == o || null == d || (null == a && '@everyone' !== c)
         ? (0, r.jsx)(m.Gt, {
               value: g,
               children: R()

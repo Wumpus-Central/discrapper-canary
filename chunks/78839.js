@@ -13,8 +13,8 @@ var r,
     c = n(314897),
     u = n(122289),
     d = n(981631),
-    f = n(474936);
-function _(e, t, n) {
+    _ = n(474936);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
@@ -175,10 +175,10 @@ function x(e) {
         T = l.Q.createFromServer(t);
     }
 }
-function k() {
+function M() {
     A = !0;
 }
-function M(e) {
+function k(e) {
     let { eligible: t } = e;
     (N = t), (A = !1);
 }
@@ -196,7 +196,7 @@ function B(e) {
     let t = c.default.getId();
     return e.userId === t;
 }
-function F(e, t) {
+function V(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         r = n ? E : g;
     if (null == r) return null;
@@ -221,7 +221,7 @@ function F(e, t) {
     }
     return null;
 }
-class V extends (r = i.ZP.Store) {
+class F extends (r = i.ZP.Store) {
     hasFetchedSubscriptions() {
         return null != g;
     }
@@ -233,15 +233,15 @@ class V extends (r = i.ZP.Store) {
     }
     getPremiumSubscription() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return F(d.NYc.PREMIUM, (e) => !(0, s.Q0)(e.planId), e);
+        return V(d.NYc.PREMIUM, (e) => !(0, s.Q0)(e.planId), e);
     }
     getPremiumTypeSubscription() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return F(d.NYc.PREMIUM, void 0, e);
+        return V(d.NYc.PREMIUM, void 0, e);
     }
     inReverseTrial() {
-        let e = F(d.NYc.PREMIUM, void 0, !0);
-        return null != e && null != e.trialId && !!f.h8.includes(e.trialId) && null == e.paymentSourceId;
+        let e = V(d.NYc.PREMIUM, void 0, !0);
+        return null != e && null != e.trialId && !!_.h8.includes(e.trialId) && null == e.paymentSourceId;
     }
     getSubscriptions() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
@@ -280,15 +280,15 @@ class V extends (r = i.ZP.Store) {
         return C;
     }
 }
-_(V, 'displayName', 'SubscriptionStore');
-let Z = new V(a.Z, {
+f(F, 'displayName', 'SubscriptionStore');
+let Z = new F(a.Z, {
     BILLING_SUBSCRIPTION_FETCH_SUCCESS: P,
     BILLING_SUBSCRIPTION_UPDATE_SUCCESS: D,
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: L,
     BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: x,
     BILLING_SUBSCRIPTION_RESET: U,
-    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_START: k,
-    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: M,
+    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_START: M,
+    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: k,
     BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: j,
     LOGOUT: U
 });

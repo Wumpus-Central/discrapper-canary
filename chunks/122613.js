@@ -8,7 +8,7 @@ var r = n(592125),
     c = n(224189),
     u = n(574952),
     d = n(981631);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,7 +32,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -69,10 +69,10 @@ async function m(e) {
     } catch (e) {
         return !1;
     }
-    return (0, o.C)(n, () => g(h(_({}, e), { targetApplication: t })));
+    return (0, o.C)(n, () => g(h(f({}, e), { targetApplication: t })));
 }
 async function g(e) {
-    let { targetApplication: t, locationObject: n, channelId: o, analyticsLocations: c, componentId: f, commandOrigin: _, sectionName: p, source: h, onExecutedCallback: m, referrerId: g, customId: E, inviterUserId: b, onConfirmActivityLaunchChecksAlertOpen: y } = e,
+    let { targetApplication: t, locationObject: n, channelId: o, analyticsLocations: c, componentId: _, commandOrigin: f, sectionName: p, source: h, onExecutedCallback: m, referrerId: g, customId: E, inviterUserId: b, onConfirmActivityLaunchChecksAlertOpen: y } = e,
         O = (0, u.Z)(),
         v = i.default.getCurrentUser();
     return null == o
@@ -86,8 +86,8 @@ async function g(e) {
                   applicationId: t.id,
                   isStart: !0,
                   embeddedActivitiesManager: O,
-                  componentId: f,
-                  commandOrigin: _,
+                  componentId: _,
+                  commandOrigin: f,
                   sectionName: p,
                   locationObject: n,
                   analyticsLocations: c,

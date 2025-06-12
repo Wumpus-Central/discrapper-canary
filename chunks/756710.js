@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,14 +53,14 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function h(e) {
-    let { children: t, color: n = 'default', isFocused: a = !1, disabled: d = !1, keepItemStyles: _ = !1, menuItemProps: h, action: m, dontCloseOnActionIfHoldingShiftKey: g, dontCloseOnAction: E, onClose: b } = e,
+    let { children: t, color: n = 'default', isFocused: a = !1, disabled: d = !1, keepItemStyles: f = !1, menuItemProps: h, action: m, dontCloseOnActionIfHoldingShiftKey: g, dontCloseOnAction: E, onClose: b } = e,
         y = i.useRef(null);
     i.useEffect(() => {
         a && (0, l.F)(y);
@@ -72,11 +72,11 @@ function h(e) {
             },
             [m, b, g, E]
         ),
-        v = _ ? o()(u.item, c._[n], { [u.focused]: a }) : u.customItem;
+        v = f ? o()(u.item, c._[n], { [u.focused]: a }) : u.customItem;
     return (0, r.jsx)(
         s.P,
         p(
-            f(
+            _(
                 {
                     innerRef: y,
                     className: v,

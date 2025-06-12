@@ -1,6 +1,6 @@
 n.d(t, {
-    C1: () => _,
-    Ni: () => f,
+    C1: () => f,
+    Ni: () => _,
     TC: () => u,
     TT: () => c,
     qF: () => d
@@ -66,7 +66,7 @@ function c(e) {
     return l(o({}, e), { key: t });
 }
 function u() {
-    let e = i.useContext(f);
+    let e = i.useContext(_);
     if (null == e) throw Error('useThemeContext must be used within a ThemeContext.Provider');
     return e;
 }
@@ -82,8 +82,8 @@ let d = c({
         disableAdaptiveTheme: !1,
         reduceAdaptiveTheme: !1
     }),
-    f = i.createContext(d);
-function _(e) {
+    _ = i.createContext(d);
+function f(e) {
     let { children: t } = e,
         n = u();
     return (0, r.jsx)(r.Fragment, { children: t(n) });

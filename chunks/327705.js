@@ -1,4 +1,4 @@
-n.d(t, { z: () => f });
+n.d(t, { z: () => _ });
 var r = n(255367),
     i = n(73800),
     a = n(723938),
@@ -56,7 +56,7 @@ function d(e, t) {
         e
     );
 }
-let f = i.forwardRef(function (e, t) {
+let _ = i.forwardRef(function (e, t) {
     let { status: n, buffer: i } = (0, s.V)(a.Z);
     return n === s.J.Loading ? null : (0, r.jsx)(o.v, d(c({ buffer: i }, e), { ref: t }));
 });

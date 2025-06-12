@@ -65,7 +65,7 @@ function x(e) {
 var v = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
 function O(e) {
     var t, n, r, a;
-    let { title: v, header: O, info: C, staticBannerSrc: j, videoBannerSrc: S, bannerAspectRatio: I = 0, iconSrc: N, embedUrl: T, infoUrl: P, actions: A = [], trackingConfig: w } = e;
+    let { title: v, header: O, info: j, staticBannerSrc: C, videoBannerSrc: S, bannerAspectRatio: I = 0, iconSrc: N, embedUrl: T, infoUrl: P, actions: A = [], trackingConfig: w } = e;
     w = {
         id: null != (n = null == (t = w) ? void 0 : t.id) ? n : '0',
         linkType: null != (r = null == t ? void 0 : t.linkType) ? r : g.Un.UNKNOWN,
@@ -74,7 +74,7 @@ function O(e) {
         onView: null == t ? void 0 : t.onView,
         onLinkCopied: null == t ? void 0 : t.onLinkCopied
     };
-    let { primaryColor: Z, secondaryColor: R } = (0, p.Z)(null != N ? N : j),
+    let { primaryColor: Z, secondaryColor: R } = (0, p.Z)(null != N ? N : C),
         k = 'linear-gradient(45deg, '.concat(Z, ', ').concat(R, ')'),
         D = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
         L = l.useRef(!1),
@@ -115,7 +115,7 @@ function O(e) {
                       })
                   })
                 : null,
-        B = null != j,
+        B = null != C,
         G = null != S && !1 === D,
         H = B || G,
         V = 0 === I ? E.bannerAspectRatioBot : E.bannerAspectRatioActivity,
@@ -150,7 +150,7 @@ function O(e) {
                         B &&
                             (0, i.jsx)('div', {
                                 className: E.staticBanner,
-                                style: { backgroundImage: 'url('.concat(j, ')') },
+                                style: { backgroundImage: 'url('.concat(C, ')') },
                                 onTransitionEnd: W
                             })
                     ]
@@ -188,7 +188,7 @@ function O(e) {
                                         lineClamp: 1,
                                         children: v
                                     }),
-                                    C
+                                    j
                                 ]
                             }),
                             null == O && (null != U ? U : F)

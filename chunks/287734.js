@@ -9,8 +9,8 @@ var o = n(788983),
     c = n(592125),
     u = n(731290),
     d = n(131951),
-    f = n(944486),
-    _ = n(914010),
+    _ = n(944486),
+    f = n(914010),
     p = n(594174),
     h = n(934415),
     m = n(604151),
@@ -46,10 +46,10 @@ let E = {
         let e = a.Z.getRemoteSessionId();
         if ((null != e && i._(e), (0, l.ur)())) this.selectVoiceChannel(null);
         else {
-            let e = c.Z.getChannel(f.Z.getChannelId()),
-                t = f.Z.getChannelId() === f.Z.getVoiceChannelId() && (null == e ? void 0 : e.isThread()) === !0;
+            let e = c.Z.getChannel(_.Z.getChannelId()),
+                t = _.Z.getChannelId() === _.Z.getVoiceChannelId() && (null == e ? void 0 : e.isThread()) === !0;
             if ((this.selectVoiceChannel(null), o.xv(g.KJ3.CHANNEL_CALL_POPOUT), t)) {
-                let e = _.Z.getGuildId();
+                let e = f.Z.getGuildId();
                 null != e && (0, s.uL)((0, h.LY)(e));
             }
         }

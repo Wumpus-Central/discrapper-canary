@@ -8,7 +8,7 @@ var r = n(846027),
     c = n(19780),
     u = n(743498),
     d = n(875527);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,14 +21,14 @@ function f(e, t, n) {
         e
     );
 }
-function _() {
+function f() {
     return (0, d.wt)({
         location: 'VoiceFilterLoopbackManager',
         autoTrackExposure: !1
     });
 }
 function p() {
-    if (!_() || !l.Z.getVoiceFilterPlaybackEnabled() || !c.Z.isConnected() || null == l.Z.getActiveVoiceFilter()) return !1;
+    if (!f() || !l.Z.getVoiceFilterPlaybackEnabled() || !c.Z.isConnected() || null == l.Z.getActiveVoiceFilter()) return !1;
     let e = c.Z.getChannelId(),
         t = null != e ? s.Z.getChannel(e) : null,
         { mute: n, selfMute: r, suppress: i } = (0, o.b)({ channel: t });
@@ -36,7 +36,7 @@ function p() {
 }
 class h extends i.Z {
     handleExperimentStateChange() {
-        !_() && l.Z.getVoiceFilterPlaybackEnabled() && (0, u._j)(!1);
+        !f() && l.Z.getVoiceFilterPlaybackEnabled() && (0, u._j)(!1);
     }
     updateLoopbackState() {
         let e = p();
@@ -44,7 +44,7 @@ class h extends i.Z {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'actions', {
+            _(this, 'actions', {
                 VOICE_FILTER_LOOPBACK_TOGGLE: this.updateLoopbackState,
                 RTC_CONNECTION_STATE: this.updateLoopbackState,
                 VOICE_FILTER_APPLIED: this.updateLoopbackState,
@@ -52,7 +52,7 @@ class h extends i.Z {
                 AUDIO_SET_TEMPORARY_SELF_MUTE: this.updateLoopbackState,
                 AUDIO_SET_SELF_MUTE: this.updateLoopbackState
             }),
-            f(this, 'stores', new Map().set(a.Z, this.handleExperimentStateChange));
+            _(this, 'stores', new Map().set(a.Z, this.handleExperimentStateChange));
     }
 }
 let m = new h();

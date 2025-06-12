@@ -1,21 +1,21 @@
 n.d(t, {
     AH: () => D,
-    Ag: () => V,
+    Ag: () => F,
     CS: () => N,
     EW: () => B,
-    OR: () => F,
+    OR: () => V,
     QB: () => L,
     T0: () => G,
     Wf: () => j,
     cT: () => Y,
     eT: () => U,
     gU: () => K,
-    gl: () => k,
+    gl: () => M,
     is: () => C,
     it: () => R,
     lL: () => W,
     m0: () => w,
-    nE: () => M,
+    nE: () => k,
     pf: () => x,
     qm: () => Z,
     w: () => H,
@@ -32,8 +32,8 @@ var s = n(930446),
     c = n(186102),
     u = n(626135),
     d = n(573261),
-    f = n(617136),
-    _ = n(705006),
+    _ = n(617136),
+    f = n(705006),
     p = n(569984),
     h = n(497505),
     m = n(918701),
@@ -154,7 +154,7 @@ async function R() {
 }
 async function P() {
     if (!p.Z.isFetchingCurrentQuests) {
-        a.Z.dispatch({ type: 'QUESTS_FETCH_CURRENT_QUESTS_BEGIN' }), _.Z.recordQuestRequestAttempt(y.ANM.QUESTS_CURRENT_QUESTS);
+        a.Z.dispatch({ type: 'QUESTS_FETCH_CURRENT_QUESTS_BEGIN' }), f.Z.recordQuestRequestAttempt(y.ANM.QUESTS_CURRENT_QUESTS);
         try {
             let e = await i.tn.get({
                     url: y.ANM.QUESTS_CURRENT_QUESTS,
@@ -173,13 +173,13 @@ async function P() {
                 excludedQuests: o,
                 questEnrollmentBlockedUntil: n
             }),
-                _.Z.recordQuestRequestApiResponse(y.ANM.QUESTS_CURRENT_QUESTS, { wasSuccessful: !0 });
+                f.Z.recordQuestRequestApiResponse(y.ANM.QUESTS_CURRENT_QUESTS, { wasSuccessful: !0 });
         } catch (e) {
             a.Z.dispatch({
                 type: 'QUESTS_FETCH_CURRENT_QUESTS_FAILURE',
                 error: new o.Z(e)
             }),
-                _.Z.recordQuestRequestApiResponse(y.ANM.QUESTS_CURRENT_QUESTS, { wasSuccessful: !1 });
+                f.Z.recordQuestRequestApiResponse(y.ANM.QUESTS_CURRENT_QUESTS, { wasSuccessful: !1 });
         }
     }
 }
@@ -223,7 +223,7 @@ async function w(e) {
 async function D(e, t) {
     if (
         (null != t.questContentCTA &&
-            (0, f._3)({
+            (0, _._3)({
                 questId: e,
                 questContent: t.questContent,
                 questContentCTA: t.questContentCTA,
@@ -324,7 +324,7 @@ async function x(e) {
         }
     }
 }
-async function k(e, t) {
+async function M(e, t) {
     let n = p.Z.isDismissingContent(e),
         r = (0, m.GN)(t);
     if (!n && r) {
@@ -352,7 +352,7 @@ async function k(e, t) {
         }
     }
 }
-function M(e) {
+function k(e) {
     a.Z.dispatch({
         type: 'QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE',
         streamKey: e
@@ -423,14 +423,14 @@ function B(e) {
         questId: e
     });
 }
-function F(e, t) {
+function V(e, t) {
     a.Z.dispatch({
         type: 'QUESTS_SELECT_TASK_PLATFORM',
         questId: e,
         platform: t
     });
 }
-async function V() {
+async function F() {
     if (!p.Z.isFetchingClaimedQuests) {
         a.Z.dispatch({ type: 'QUESTS_FETCH_CLAIMED_QUESTS_BEGIN' });
         try {
@@ -461,12 +461,12 @@ function Z(e, t, n) {
     });
 }
 async function H(e) {
-    var t, n, r, d, f, p, h;
+    var t, n, r, d, _, p, h;
     a.Z.dispatch({
         type: 'QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN',
         placement: e
     }),
-        _.Z.recordQuestRequestAttempt('/quests/decision');
+        f.Z.recordQuestRequestAttempt('/quests/decision');
     try {
         let o = await (0, l.Gg)(),
             h = await (0, s.Gy)(),
@@ -484,17 +484,17 @@ async function H(e) {
                 adset_id: null == (n = g.ad_identifiers) ? void 0 : n.adset_id,
                 ad_set_id: null == (r = g.ad_identifiers) ? void 0 : r.ad_set_id,
                 campaign_id: null == (d = g.ad_identifiers) ? void 0 : d.campaign_id,
-                creative_id: null == (f = g.ad_identifiers) ? void 0 : f.creative_id,
+                creative_id: null == (_ = g.ad_identifiers) ? void 0 : _.creative_id,
                 creative_type: null == (p = g.ad_identifiers) ? void 0 : p.creative_type,
                 decision_id: g.request_id,
                 is_targeted: null != g.ad_identifiers
             },
             placement: e
         }),
-            _.Z.recordQuestRequestApiResponse('/quests/decision', { wasSuccessful: !0 }),
+            f.Z.recordQuestRequestApiResponse('/quests/decision', { wasSuccessful: !0 }),
             u.default.track(y.rMx.QUEST_DECISION_RECEIVED, S(I({}, (0, c.Z)()), { quest_id: g.quest.id }));
     } catch (t) {
-        _.Z.recordQuestRequestApiResponse('/quests/decision', { wasSuccessful: !1 }),
+        f.Z.recordQuestRequestApiResponse('/quests/decision', { wasSuccessful: !1 }),
             u.default.track(
                 y.rMx.QUEST_DECISION_ROUNDTRIP_ERROR,
                 S(I({}, (0, c.Z)()), {

@@ -9,8 +9,8 @@ var i = n(481060),
     c = n(271383),
     u = n(914010),
     d = n(630388),
-    f = n(526120),
-    _ = n(563534),
+    _ = n(526120),
+    f = n(563534),
     p = n(734893),
     h = n(846121),
     m = n(931261),
@@ -89,7 +89,7 @@ class I extends a.Z {
                 if (a.id === s.default.getId() && !this.onboardingCompleteGuilds.has(o) && (0, d.yE)(null != t ? t : 0, E.q.COMPLETED_HOME_ACTIONS)) {
                     var l, c;
                     this.onboardingCompleteGuilds.add(o);
-                    let e = null != (c = null == (l = _.Z.getNewMemberActions(o)) ? void 0 : l.length) ? c : 0;
+                    let e = null != (c = null == (l = f.Z.getNewMemberActions(o)) ? void 0 : l.length) ? c : 0;
                     if (0 === e) return;
                     (0, i.ZDy)(async () => {
                         let { default: t } = await n.e('92339').then(n.bind(n, 184100));
@@ -113,7 +113,7 @@ class I extends a.Z {
                 if (null == t || null == n) return;
                 let { memberActions: r, completedActions: i } = await this._getOrLoadOnboardingMemberActions(t),
                     a = null == r ? void 0 : r.find((e) => e.channelId === n);
-                (null == i ? void 0 : i[n]) !== !0 && null != a && a.actionType === p.oi.VIEW && (0, f.Oh)(t, n);
+                (null == i ? void 0 : i[n]) !== !0 && null != a && a.actionType === p.oi.VIEW && (0, _.Oh)(t, n);
             }),
             b(this, 'handleMessageSend', (e) => {
                 var t;
@@ -130,7 +130,7 @@ class I extends a.Z {
             b(this, '_completeChatAction', async (e, t) => {
                 let { memberActions: n, completedActions: r } = await this._getOrLoadOnboardingMemberActions(e),
                     i = null == n ? void 0 : n.find((e) => e.channelId === t);
-                (null == r ? void 0 : r[t]) !== !0 && null != i && i.actionType === p.oi.CHAT && (0, f.Oh)(e, t);
+                (null == r ? void 0 : r[t]) !== !0 && null != i && i.actionType === p.oi.CHAT && (0, _.Oh)(e, t);
             }),
             b(this, '_getOrLoadOnboardingMemberActions', async (e) => {
                 let t = (0, m.s)(e),
@@ -145,18 +145,18 @@ class I extends a.Z {
                 };
             }),
             b(this, '_getOrLoadOnboardingHomeSettings', async (e) => {
-                let t = _.Z.getNewMemberActions(e),
-                    n = _.Z.getIsLoading(e);
+                let t = f.Z.getNewMemberActions(e),
+                    n = f.Z.getIsLoading(e);
                 if (!(null == t && !n && (0, g.m)(e))) return t;
                 {
-                    let t = await (0, f.cP)(e);
+                    let t = await (0, _.cP)(e);
                     return null == t ? void 0 : t.newMemberActions;
                 }
             }),
             b(this, '_getOrLoadMemberActions', async (e, t) => {
                 var n;
                 let { completedActions: r, loading: i } = h.Z.getState(e);
-                return null == r && !i && (0, d.yE)(null != (n = t.flags) ? n : 0, E.q.STARTED_HOME_ACTIONS) ? await (0, f.Fg)(e) : r;
+                return null == r && !i && (0, d.yE)(null != (n = t.flags) ? n : 0, E.q.STARTED_HOME_ACTIONS) ? await (0, _.Fg)(e) : r;
             });
     }
 }

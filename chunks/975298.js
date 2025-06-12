@@ -8,8 +8,8 @@ var r = n(73800),
     c = n(442837),
     u = n(496929),
     d = n(493773),
-    f = n(594174),
-    _ = n(78839),
+    _ = n(594174),
+    f = n(78839),
     p = n(580130),
     h = n(122289),
     m = n(74538),
@@ -81,22 +81,22 @@ let I = (e) => {
         };
     if (n) return v(y({}, d), { fetched: !1 });
     if (null == o || (0 === r.length && 0 === i.length)) return d;
-    let f = r.filter((e) => null != e.endsAt && null != e.startsAt).sort((e, t) => ((a()(null != e.endsAt && null != t.endsAt, 'endsAt should not be null'), e.endsAt < t.endsAt) ? -1 : +(e.endsAt > t.endsAt)));
-    if ((f.reverse(), f.length > 0 && (f.length !== r.length || null == f[0].startsAt || null == f[0].endsAt))) {
+    let _ = r.filter((e) => null != e.endsAt && null != e.startsAt).sort((e, t) => ((a()(null != e.endsAt && null != t.endsAt, 'endsAt should not be null'), e.endsAt < t.endsAt) ? -1 : +(e.endsAt > t.endsAt)));
+    if ((_.reverse(), _.length > 0 && (_.length !== r.length || null == _[0].startsAt || null == _[0].endsAt))) {
         let e = Array.from(r.values()).map((e) => e.id),
             t = 'fractional redemption entitlements should have startsAt/endsAt';
         throw ((0, h.g9)(t, { extra: { entitlementIds: e } }), Error(t));
     }
-    let _ = null != (t = f[0]) ? t : null,
+    let f = null != (t = _[0]) ? t : null,
         p = E.a$.NONE;
-    null != _ && (p = null != s && s.status === g.O0b.PAUSED ? E.a$.FP_SUB_PAUSED : E.a$.FP_ONLY);
-    let b = u && (null == _ ? void 0 : _.sourceType) === g.kNB.REVERSE_TRIAL;
+    null != f && (p = null != s && s.status === g.O0b.PAUSED ? E.a$.FP_SUB_PAUSED : E.a$.FP_ONLY);
+    let b = u && (null == f ? void 0 : f.sourceType) === g.kNB.REVERSE_TRIAL;
     return {
-        isFractionalPremiumActive: null != _,
+        isFractionalPremiumActive: null != f,
         fractionalState: p,
-        startsAt: null != _ ? l()(_.startsAt) : l()(0),
-        endsAt: null != _ ? l()((0, m.N1)(_.endsAt, i, void 0, b)) : l()(0),
-        currentEntitlementId: null != _ ? _.id : '',
+        startsAt: null != f ? l()(f.startsAt) : l()(0),
+        endsAt: null != f ? l()((0, m.N1)(f.endsAt, i, void 0, b)) : l()(0),
+        currentEntitlementId: null != f ? f.id : '',
         unactivatedUnits: i,
         fetched: c
     };
@@ -113,11 +113,11 @@ function T() {
                   excludeReverseTrial: !1,
                   excludeReverseTrialFromCountdown: !1
               },
-        i = (0, c.e7)([f.default], () => f.default.getCurrentUser()),
+        i = (0, c.e7)([_.default], () => _.default.getCurrentUser()),
         a = (0, c.Wu)([p.Z], () => p.Z.getFractionalPremium({ excludeReverseTrial: t })),
         s = (0, c.e7)([p.Z], () => p.Z.fetchedAllEntitlements),
         l = (0, c.Wu)([p.Z], () => p.Z.getUnactivatedFractionalPremiumUnits()),
-        h = (0, c.e7)([_.ZP], () => _.ZP.getPremiumTypeSubscription()),
+        h = (0, c.e7)([f.ZP], () => f.ZP.getPremiumTypeSubscription()),
         m = null !== i && !p.Z.fetchingAllEntitlements && (!p.Z.fetchedAllEntitlements || e),
         [E, b] = r.useState(
             I({

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -8,10 +8,10 @@ var r = n(255367),
     c = n(168352),
     u = n(379839),
     d = n(359135),
-    f = n(187182);
-function _(e) {
+    _ = n(187182);
+function f(e) {
     let { nameplate: t, hovered: n, selected: a, content: s, placement: c } = e,
-        _ = (0, u.p)(s, t, n, a, c),
+        f = (0, u.p)(s, t, n, a, c),
         h = (0, l.C)(n, a),
         m = i.useRef(null == t);
     return (i.useEffect(() => {
@@ -20,19 +20,19 @@ function _(e) {
     null == t)
         ? null
         : (0, r.jsx)('div', {
-              className: o()(f.container, { [f.fadeIn]: m.current }),
-              style: { background: _.background },
+              className: o()(_.container, { [_.fadeIn]: m.current }),
+              style: { background: f.background },
               children: (0, r.jsx)(p, {
                   nameplate: t,
-                  className: o()(f.img, {
-                      [f.hover]: n,
-                      [f.selected]: a,
-                      [f.account]: c === d.i.ACCOUNT,
-                      [f.preview]: c === d.i.PREVIEW,
-                      [f.mini_preview]: c === d.i.MINI_PREVIEW,
-                      [f.channel]: c === d.i.CHANNEL
+                  className: o()(_.img, {
+                      [_.hover]: n,
+                      [_.selected]: a,
+                      [_.account]: c === d.i.ACCOUNT,
+                      [_.preview]: c === d.i.PREVIEW,
+                      [_.mini_preview]: c === d.i.MINI_PREVIEW,
+                      [_.channel]: c === d.i.CHANNEL
                   }),
-                  style: { maskImage: _.maskImage },
+                  style: { maskImage: f.maskImage },
                   animate: h,
                   loop: !0 === h && !0 === n
               })
@@ -68,7 +68,7 @@ function h(e) {
             null != u.current && (a || o ? u.current.play() : u.current.pause());
         }, [a, o]),
         (0, r.jsx)('div', {
-            className: f.videoContainer,
+            className: _.videoContainer,
             style: c,
             children: (0, r.jsx)(s.Z, {
                 src: n,

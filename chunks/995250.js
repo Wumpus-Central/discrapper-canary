@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(899007),
     u = n(287954),
     d = n(660579),
-    f = n(64621),
-    _ = n(228168),
+    _ = n(64621),
+    f = n(228168),
     p = n(487784);
 function h(e, t, n) {
     return (
@@ -87,13 +87,13 @@ function O(e) {
     var { user: t, themeType: n, animateOnHover: a, onOpenProfile: h } = e,
         g = b(e, ['user', 'themeType', 'animateOnHover', 'onOpenProfile']);
     let y = i.useRef(null),
-        O = _.n_.AVATAR,
+        O = f.n_.AVATAR,
         { trackUserProfileAction: v } = (0, s.KZ)(),
         { interactionSource: I } = (0, l.Xo)(),
-        T = o()(p.avatar, { [p.hoisted]: I === _.n_.AVATAR || I === _.n_.STATUS });
-    return (0, r.jsx)(f.Z, {
+        T = o()(p.avatar, { [p.hoisted]: I === f.n_.AVATAR || I === f.n_.STATUS });
+    return (0, r.jsx)(_.Z, {
         targetElementRef: y,
-        sourceType: _.n_.AVATAR,
+        sourceType: f.n_.AVATAR,
         user: t,
         children: (0, r.jsx)(
             u.Z,

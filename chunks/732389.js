@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(436774),
     u = n(594174),
     d = n(111361),
-    f = n(773104),
-    _ = n(784238),
+    _ = n(773104),
+    f = n(784238),
     p = n(474936),
     h = n(388032),
     m = n(46350);
@@ -17,7 +17,7 @@ let g = (e) => {
     let { buttonAnalyticsObject: t, className: n, upsellText: i } = e,
         g = u.default.getCurrentUser(),
         E = (0, d.yd)(null == g ? void 0 : g.premiumType, p.p9.TIER_2),
-        b = (0, f._)({
+        b = (0, _._)({
             defaultResponse: h.intl.string(h.t['8x0jKS']),
             onNonTier2Subscriber: h.intl.string(h.t.IJI7ys)
         });
@@ -41,7 +41,7 @@ let g = (e) => {
                           })
                       ]
                   }),
-                  (0, r.jsx)(_.Z, {
+                  (0, r.jsx)(f.Z, {
                       className: m.button,
                       size: l.zxk.Sizes.SMALL,
                       look: l.zxk.Looks.BLANK,

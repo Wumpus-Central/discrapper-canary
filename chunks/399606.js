@@ -39,14 +39,14 @@ function c(e, t, n) {
     (0, r.useInsertionEffect)(() => {
         (u.getStateFromStores = t), (u.prevDeps = n), (u.state = d);
     });
-    let [, f] = (0, r.useState)(null);
+    let [, _] = (0, r.useState)(null);
     return (
         (0, r.useInsertionEffect)(() => {
             let t = () => {
                     let e;
                     void 0 !== u.libDiscoreContext && (0, o.kK)(u.libDiscoreContext), (e = u.getStateFromStores());
                     let t = !1;
-                    l(u.state, e) || ((u.state = e), f({}), (t = !0)), void 0 !== u.libDiscoreContext && (0, o.BC)(u.libDiscoreContext, t);
+                    l(u.state, e) || ((u.state = e), _({}), (t = !0)), void 0 !== u.libDiscoreContext && (0, o.BC)(u.libDiscoreContext, t);
                 },
                 n = new a.F(e, t, u.libDiscoreContext);
             return n.attach('useStateFromStores'), () => n.detach();

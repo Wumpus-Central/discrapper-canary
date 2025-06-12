@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(314897),
     u = n(430824),
     d = n(785717),
-    f = n(475413),
-    _ = n(388032),
+    _ = n(475413),
+    f = n(388032),
     p = n(206435);
 function h(e, t, n) {
     return (
@@ -50,9 +50,9 @@ function g(e) {
         T = i.useRef(null);
     return b
         ? null == y
-            ? (0, r.jsx)(f.tG, {
+            ? (0, r.jsx)(_.tG, {
                   action: 'EDIT_PROFILE',
-                  text: _.intl.string(_.t.s5vZlZ),
+                  text: f.intl.string(f.t.s5vZlZ),
                   icon: o.vdY,
                   autoFocus: !0,
                   fullWidth: h,
@@ -71,20 +71,20 @@ function g(e) {
                           onClose: () => {
                               t(), null == E || E();
                           },
-                          'aria-label': _.intl.string(_.t.AXIHpa),
+                          'aria-label': f.intl.string(f.t.AXIHpa),
                           children: [
                               (0, r.jsx)(o.sNh, {
                                   id: 'edit-server-profile',
-                                  label: _.intl.string(_.t['PKQB/P']),
-                                  subtext: _.intl.string(_.t.VYHWKC),
+                                  label: f.intl.string(f.t['PKQB/P']),
+                                  subtext: f.intl.string(f.t.VYHWKC),
                                   action: () => {
                                       I({ action: 'EDIT_GUILD_PROFILE' }), O(), (0, s.i)(g);
                                   }
                               }),
                               (0, r.jsx)(o.sNh, {
                                   id: 'edit-main-profile',
-                                  label: _.intl.string(_.t.HmFaFB),
-                                  subtext: _.intl.string(_.t['+EERMj']),
+                                  label: f.intl.string(f.t.HmFaFB),
+                                  subtext: f.intl.string(f.t['+EERMj']),
                                   action: () => {
                                       I({ action: 'EDIT_PROFILE' }), v(), (0, s.i)(g);
                                   }
@@ -94,11 +94,11 @@ function g(e) {
                   },
                   children: (e) =>
                       (0, r.jsx)(
-                          f.tG,
+                          _.tG,
                           m(
                               {
                                   ref: T,
-                                  text: _.intl.string(_.t.s5vZlZ),
+                                  text: f.intl.string(f.t.s5vZlZ),
                                   icon: o.vdY,
                                   autoFocus: !0,
                                   fullWidth: h

@@ -1,4 +1,4 @@
-n.d(t, { W: () => _ });
+n.d(t, { W: () => f });
 var r = n(255367);
 n(73800);
 var i = n(692547),
@@ -60,14 +60,14 @@ function d(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -76,14 +76,14 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = (e) => {
+let f = (e) => {
     var t,
         n,
-        { size: s = 'md', width: c, height: f, color: _ = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = '' } = e,
+        { size: s = 'md', width: c, height: _, color: f = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = '' } = e,
         h = d(e, ['size', 'width', 'height', 'color', 'colorClass']);
     let m = (0, o.m)(s),
         g = null != (t = null == m ? void 0 : m.width) ? t : c,
-        E = null != (n = null == m ? void 0 : m.height) ? n : f;
+        E = null != (n = null == m ? void 0 : m.height) ? n : _;
     return (0, r.jsx)(
         'svg',
         u(l({}, (0, a.Z)(h)), {
@@ -93,7 +93,7 @@ let _ = (e) => {
             fill: 'none',
             viewBox: '0 0 24 24',
             children: (0, r.jsx)('path', {
-                fill: 'string' == typeof _ ? _ : _.css,
+                fill: 'string' == typeof f ? f : f.css,
                 d: 'M4 8.5C4 4.36 7.58 1 12 1s8 3.36 8 7.5c0 2.64-.98 4.02-1.9 5.33-.49.7-.96 1.38-1.27 2.2C16.45 17.09 15.6 18 14.5 18h-1a.5.5 0 0 1-.5-.5v-5.77c0-.32.3-.56.6-.44.29.12.53.27.72.44a1 1 0 0 0 1.36-1.46A5.46 5.46 0 0 0 12 9c-1.3 0-2.72.37-3.68 1.27a1 1 0 1 0 1.36 1.46c.19-.17.43-.32.73-.44s.59.12.59.44v5.77a.5.5 0 0 1-.5.5h-1c-1.1 0-1.95-.92-2.33-1.96-.3-.83-.78-1.5-1.27-2.2C4.98 12.51 4 11.13 4 8.5ZM15.1 19c.5 0 .9.4.9.9 0 .7-.28 1.38-.78 1.88l-.34.34a3 3 0 0 1-2.12.88h-1.52a3 3 0 0 1-2.12-.88l-.34-.34c-.5-.5-.78-1.18-.78-1.89 0-.5.4-.89.9-.89h6.2Z',
                 className: p
             })

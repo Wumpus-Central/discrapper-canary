@@ -35,7 +35,7 @@ function d(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,12 +47,12 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -80,13 +80,13 @@ function h(e, t) {
 }
 function m(e, t, n) {
     let a = (0, c.G6)(e);
-    return i.forwardRef(function (u, f) {
+    return i.forwardRef(function (u, _) {
         var { children: h, className: m, dir: g = 'ltr', orientation: E = 'vertical', fade: b = !1, customTheme: y = !1, paddingFix: O = !0, style: v, gap: I, experimental_useStack: T } = u,
             S = p(u, ['children', 'className', 'dir', 'orientation', 'fade', 'customTheme', 'paddingFix', 'style', 'gap', 'experimental_useStack']);
         let { scrollerRef: A, getScrollerState: N } = (0, c.Ke)(),
             C = (0, c.t2)(A, E);
         i.useImperativeHandle(
-            f,
+            _,
             () =>
                 d(
                     {
@@ -108,7 +108,7 @@ function m(e, t, n) {
         return T
             ? (0, r.jsx)(
                   l.K,
-                  _(
+                  f(
                       d(
                           {
                               gap: I,
@@ -133,7 +133,7 @@ function m(e, t, n) {
               )
             : (0, r.jsx)(
                   'div',
-                  _(
+                  f(
                       d(
                           {
                               ref: A,

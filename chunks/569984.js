@@ -1,4 +1,4 @@
-let r, i, a, o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S;
+let r, i, a, o, s, l, c, u, d, _, f, p, h, m, g, E, b, y, O, v, I, T, S;
 n.d(t, { Z: () => eB }), n(388685);
 var A,
     N = n(392711),
@@ -9,8 +9,8 @@ var A,
     D = n(497505),
     L = n(918701),
     x = n(184299),
-    k = n(5881),
-    M = n(46140);
+    M = n(5881),
+    k = n(46140);
 function j(e, t, n) {
     return (
         t in e
@@ -63,11 +63,11 @@ function B(e, t) {
         e
     );
 }
-let F = new Map(),
-    V = null,
+let V = new Map(),
+    F = null,
     Z = 1000;
 function H() {
-    (r = !1), (i = !1), (a = !1), (o = new Map()), (s = new Map()), (l = new Map()), (c = 0), (u = 0), (d = new Set()), (f = new Set()), (_ = new Set()), (p = new Set()), (F = new Map()), (m = new Map()), (g = new Map()), (E = new Map()), (b = null), (y = new Map()), (h = new Set()), (O = new Map()), (v = new Map()), eL(), (I = null), (T = null), (S = !1);
+    (r = !1), (i = !1), (a = !1), (o = new Map()), (s = new Map()), (l = new Map()), (c = 0), (u = 0), (d = new Set()), (_ = new Set()), (f = new Set()), (p = new Set()), (V = new Map()), (m = new Map()), (g = new Map()), (E = new Map()), (b = null), (y = new Map()), (h = new Set()), (O = new Map()), (v = new Map()), eL(), (I = null), (T = null), (S = !1);
 }
 function Y(e, t) {
     var n, r, i, a;
@@ -126,7 +126,7 @@ function ee(e) {
     let { quests: t, excludedQuests: n, questEnrollmentBlockedUntil: i } = e;
     (c = Date.now()), (r = !1), (o = new Map());
     let a = new Map();
-    for (let e of t) o.set(e.id, e), a.set(e.id, (0, L.zi)(e)), e.targetedContent.includes(D.jn.QUEST_BAR) && (0, k.T)({ location: M.dr.QUESTS_STORE }).log('Delivered '.concat(e.config.messages.questName, ' (').concat(e.id, ')'));
+    for (let e of t) o.set(e.id, e), a.set(e.id, (0, L.zi)(e)), e.targetedContent.includes(D.jn.QUEST_BAR) && (0, M.T)({ location: k.dr.QUESTS_STORE }).log('Delivered '.concat(e.config.messages.questName, ' (').concat(e.id, ')'));
     for (let e of ((v = a), (s = new Map()), n)) s.set(e.id, e);
     eD(), (I = null != i ? new Date(i) : null);
 }
@@ -177,39 +177,39 @@ function ed(e) {
     let { enrolledQuestUserStatus: t } = e;
     W(t.questId, { userStatus: t }), ec(t.questId);
 }
-function ef(e) {
+function e_(e) {
     let { questId: t } = e;
     ec(t);
 }
-function e_(e) {
-    let { questId: t } = e,
-        n = new Set(_);
-    n.add(t), (_ = n);
-}
-function ep(e) {
-    let { questId: t, rewardCode: n } = e,
-        r = new Set(_);
-    r.delete(t), (_ = r), z(t, n);
-}
-function eh(e) {
-    let { questId: t } = e,
-        n = new Set(_);
-    n.delete(t), (_ = n);
-}
-function em(e) {
+function ef(e) {
     let { questId: t } = e,
         n = new Set(f);
     n.add(t), (f = n);
 }
-function eg(e) {
-    let { questId: t, entitlements: n } = e,
+function ep(e) {
+    let { questId: t, rewardCode: n } = e,
         r = new Set(f);
-    r.delete(t), (f = r), X(t, n);
+    r.delete(t), (f = r), z(t, n);
 }
-function eE(e) {
+function eh(e) {
     let { questId: t } = e,
         n = new Set(f);
     n.delete(t), (f = n);
+}
+function em(e) {
+    let { questId: t } = e,
+        n = new Set(_);
+    n.add(t), (_ = n);
+}
+function eg(e) {
+    let { questId: t, entitlements: n } = e,
+        r = new Set(_);
+    r.delete(t), (_ = r), X(t, n);
+}
+function eE(e) {
+    let { questId: t } = e,
+        n = new Set(_);
+    n.delete(t), (_ = n);
 }
 function eb(e) {
     let t = new Set(p);
@@ -234,7 +234,7 @@ function eI(e) {
 }
 function eT(e) {
     let { user_status: t } = e,
-        n = (0, k.T)({ location: M.dr.QUESTS_STORE });
+        n = (0, M.T)({ location: k.dr.QUESTS_STORE });
     n.log('Received user status update for '.concat(t.quest_id), t);
     let r = (0, L.U3)(t);
     W(t.quest_id, { userStatus: r });
@@ -243,7 +243,7 @@ function eT(e) {
         let e = (0, L.zi)(i);
         v.get(t.quest_id) !== e && (v = new Map(v).set(t.quest_id, e));
     }
-    0 === Object.keys(r.progress).length && F.has(r.questId) && (n.log('Removing optimistic progress for '.concat(r.questId)), F.delete(r.questId));
+    0 === Object.keys(r.progress).length && V.has(r.questId) && (n.log('Removing optimistic progress for '.concat(r.questId)), V.delete(r.questId));
 }
 function eS(e) {
     let { previewQuestUserStatus: t } = e;
@@ -265,8 +265,8 @@ function eN(e) {
 function eC(e) {
     var t;
     let { questId: n, taskEventName: r, progress: i } = e,
-        a = null != (t = F.get(n)) ? t : new Map();
-    a.set(r, i), F.set(n, a);
+        a = null != (t = V.get(n)) ? t : new Map();
+    a.set(r, i), V.set(n, a);
 }
 function eR(e) {
     let { quest: t, placement: n, adDecisionData: r } = e;
@@ -292,23 +292,23 @@ function ew() {
         e && ((v = t), eG.emitChange());
 }
 function eD() {
-    null === V &&
+    null === F &&
         (ew(),
-        (V = setInterval(() => {
+        (F = setInterval(() => {
             ew();
         }, Z)));
 }
 function eL() {
-    null !== V && (clearInterval(V), (V = null));
+    null !== F && (clearInterval(F), (F = null));
 }
 function ex(e) {
     let { quest_enrollment_blocked_until: t } = e;
     I = null != t ? new Date(t) : null;
 }
-function ek() {
+function eM() {
     S = !0;
 }
-function eM(e) {
+function ek(e) {
     let { googleAdvertisingId: t, isLimitAdTrackingEnabled: n } = e;
     (S = !1),
         (T = {
@@ -362,10 +362,10 @@ class eU extends (A = P.ZP.Store) {
         return d.has(e);
     }
     isClaimingReward(e) {
-        return f.has(e);
+        return _.has(e);
     }
     isFetchingRewardCode(e) {
-        return _.has(e);
+        return f.has(e);
     }
     isDismissingContent(e) {
         return p.has(e);
@@ -391,7 +391,7 @@ class eU extends (A = P.ZP.Store) {
     }
     getOptimisticProgress(e, t) {
         var n;
-        return null == (n = F.get(e)) ? void 0 : n.get(t);
+        return null == (n = V.get(e)) ? void 0 : n.get(t);
     }
     getExpiredQuestsMap() {
         return v;
@@ -423,8 +423,8 @@ let eG = new eU(w.Z, {
         QUESTS_SEND_HEARTBEAT_FAILURE: es,
         QUESTS_ENROLL_BEGIN: eu,
         QUESTS_ENROLL_SUCCESS: ed,
-        QUESTS_ENROLL_FAILURE: ef,
-        QUESTS_FETCH_REWARD_CODE_BEGIN: e_,
+        QUESTS_ENROLL_FAILURE: e_,
+        QUESTS_FETCH_REWARD_CODE_BEGIN: ef,
         QUESTS_FETCH_REWARD_CODE_SUCCESS: ep,
         QUESTS_FETCH_REWARD_CODE_FAILURE: eh,
         QUESTS_CLAIM_REWARD_BEGIN: em,
@@ -441,8 +441,8 @@ let eG = new eU(w.Z, {
         QUESTS_SELECT_TASK_PLATFORM: eN,
         QUESTS_UPDATE_OPTIMISTIC_PROGRESS: eC,
         QUESTS_USER_COMPLETION_UPDATE: ex,
-        FETCH_MOBILE_AD_DATA_BEGIN: ek,
-        FETCH_MOBILE_AD_DATA_SUCCESS: eM,
+        FETCH_MOBILE_AD_DATA_BEGIN: eM,
+        FETCH_MOBILE_AD_DATA_SUCCESS: ek,
         FETCH_MOBILE_AD_DATA_FAILURE: ej
     }),
     eB = eG;

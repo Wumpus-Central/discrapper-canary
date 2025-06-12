@@ -27,7 +27,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,7 +43,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -60,7 +60,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -95,7 +95,7 @@ var E = (function (e) {
     return (e.TEXT = 'text'), (e.ICON = 'icon'), (e.BANNER = 'banner'), (e.HOVER = 'hover'), e;
 })({});
 let b = (e) => {
-    var { action: t, color: n = s.zx.Colors.PRIMARY, themeColor: i = 'primary', className: a, innerClassName: l, onClick: d, ref: _ } = e,
+    var { action: t, color: n = s.zx.Colors.PRIMARY, themeColor: i = 'primary', className: a, innerClassName: l, onClick: d, ref: f } = e,
         p = h(e, ['action', 'color', 'themeColor', 'className', 'innerClassName', 'onClick', 'ref']);
     let { trackUserProfileAction: m } = (0, c.KZ)(),
         E = (e) => {
@@ -103,9 +103,9 @@ let b = (e) => {
         };
     return (0, r.jsx)(
         s.zx,
-        f(
+        _(
             {
-                buttonRef: _,
+                buttonRef: f,
                 className: o()(u.button, a),
                 innerClassName: o()(u.buttonInner, l),
                 color: o()(n, g[i]),
@@ -122,7 +122,7 @@ function y(e) {
         a = h(e, ['text', 'icon', 'ref']);
     return (0, r.jsxs)(
         b,
-        p(f({ 'aria-label': t }, a), {
+        p(_({ 'aria-label': t }, a), {
             ref: i,
             children: [
                 null != n &&
@@ -136,7 +136,7 @@ function y(e) {
     );
 }
 let O = i.forwardRef(function (e, t) {
-        var { icon: n, tooltipText: i, tooltipPosition: a, tooltipAlign: c, tooltipDelay: d, tooltipClassName: _, tooltipContainerClassName: m, ariaLabel: g, className: E, innerClassName: y, shouldShowTooltip: O = !0 } = e,
+        var { icon: n, tooltipText: i, tooltipPosition: a, tooltipAlign: c, tooltipDelay: d, tooltipClassName: f, tooltipContainerClassName: m, ariaLabel: g, className: E, innerClassName: y, shouldShowTooltip: O = !0 } = e,
             v = h(e, ['icon', 'tooltipText', 'tooltipPosition', 'tooltipAlign', 'tooltipDelay', 'tooltipClassName', 'tooltipContainerClassName', 'ariaLabel', 'className', 'innerClassName', 'shouldShowTooltip']);
         return (0, r.jsx)(l.DY3, {
             text: i,
@@ -146,11 +146,11 @@ let O = i.forwardRef(function (e, t) {
             delay: d,
             shouldShow: O,
             className: m,
-            tooltipClassName: _,
+            tooltipClassName: f,
             children: (0, r.jsx)(
                 b,
                 p(
-                    f(
+                    _(
                         {
                             buttonRef: t,
                             className: o()(u.icon, E),
@@ -177,7 +177,7 @@ let O = i.forwardRef(function (e, t) {
             a = h(e, ['className', 'innerClassName']);
         return (0, r.jsx)(
             O,
-            f(
+            _(
                 {
                     ref: t,
                     className: o()(u.banner, n),
@@ -194,7 +194,7 @@ function I(e) {
         a = h(e, ['isHovering', 'className', 'innerClassName']);
     return (0, r.jsx)(
         O,
-        f(
+        _(
             {
                 className: o()(u.hover, { [u.visible]: t }, n),
                 innerClassName: o()(u.hover, i),

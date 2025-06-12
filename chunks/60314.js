@@ -557,7 +557,7 @@ e.exports = function (e) {
         c = i,
         u = '@[a-z-]+',
         d = 'and or not only',
-        f = {
+        _ = {
             className: 'variable',
             begin: '(\\$[a-zA-Z-][a-zA-Z0-9_-]*)\\b',
             relevance: 0
@@ -594,7 +594,7 @@ e.exports = function (e) {
                 className: 'selector-pseudo',
                 begin: ':(:)?(' + l.join('|') + ')'
             },
-            f,
+            _,
             {
                 begin: /\(/,
                 end: /\)/,
@@ -610,7 +610,7 @@ e.exports = function (e) {
                 begin: /:/,
                 end: /[;}{]/,
                 relevance: 0,
-                contains: [s.BLOCK_COMMENT, f, s.HEXCOLOR, s.CSS_NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, s.IMPORTANT, s.FUNCTION_DISPATCH]
+                contains: [s.BLOCK_COMMENT, _, s.HEXCOLOR, s.CSS_NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, s.IMPORTANT, s.FUNCTION_DISPATCH]
             },
             {
                 begin: '@(page|font-face)',
@@ -637,7 +637,7 @@ e.exports = function (e) {
                         begin: /[a-z-]+(?=:)/,
                         className: 'attribute'
                     },
-                    f,
+                    _,
                     e.QUOTE_STRING_MODE,
                     e.APOS_STRING_MODE,
                     s.HEXCOLOR,

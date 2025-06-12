@@ -11,8 +11,8 @@ var r,
     c = n(84735),
     u = n(15127),
     d = n(481060),
-    f = n(699682),
-    _ = n(540059),
+    _ = n(699682),
+    f = n(540059),
     p = n(388032),
     h = n(953100);
 function m(e, t, n) {
@@ -93,7 +93,7 @@ let v = {
 };
 function I(e) {
     let { error: t } = e,
-        n = (0, _.Q3)('TextInputError'),
+        n = (0, f.Q3)('TextInputError'),
         r = (0, d.Yzy)(t, {
             config: {
                 tension: 250,
@@ -118,7 +118,7 @@ function I(e) {
                 transform: 'translate3d(0, -100%, 0)'
             }
         }),
-        a = (0, f.Z)(t);
+        a = (0, _.Z)(t);
     return (0, i.jsx)(i.Fragment, {
         children: r((e, r, o) => {
             let { key: s } = o,
@@ -167,13 +167,13 @@ class T extends (r = a.Component) {
     render() {
         var e, t;
         let n = this.props,
-            { className: r, inputClassName: a, inputPrefix: o, disabled: l, size: u, editable: d, inputRef: f, prefixElement: _, focusProps: p } = n,
+            { className: r, inputClassName: a, inputPrefix: o, disabled: l, size: u, editable: d, inputRef: _, prefixElement: f, focusProps: p } = n,
             m = y(n, ['className', 'inputClassName', 'inputPrefix', 'disabled', 'size', 'editable', 'inputRef', 'prefixElement', 'focusProps']),
             E = null != (t = m['aria-labelledby']) ? t : null == (e = this.context) ? void 0 : e.titleId;
         return (0, i.jsxs)('div', {
             className: s()(h.inputWrapper, r),
             children: [
-                null != _ && _,
+                null != f && f,
                 null != o
                     ? (0, i.jsx)('span', {
                           className: h.inputPrefix,
@@ -203,7 +203,7 @@ class T extends (r = a.Component) {
                                     onChange: this.onChange,
                                     onBlur: this.onBlur,
                                     onFocus: this.onFocus,
-                                    ref: f
+                                    ref: _
                                 }
                             )
                         )

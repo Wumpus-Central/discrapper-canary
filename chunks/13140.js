@@ -2,8 +2,8 @@ n.d(t, {
     BB: () => j,
     C$: () => A,
     H9: () => S,
-    Kd: () => M,
-    d2: () => k,
+    Kd: () => k,
+    d2: () => M,
     dU: () => I
 }),
     n(388685),
@@ -21,7 +21,7 @@ var r = n(921738),
     c = n(358085),
     u = n(378799),
     d = n(981631);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -214,7 +214,7 @@ function L(e) {
 function x(e) {
     return e + 'Key';
 }
-function k(e) {
+function M(e) {
     let t = {
         keyCode: 0,
         key: '',
@@ -228,8 +228,8 @@ function k(e) {
         ? []
         : e.reduce((e, n) => {
               let r = S(n),
-                  i = _({}, t);
-              if (null == r) return e.push(h(_({}, i), { combo: n })), e;
+                  i = f({}, t);
+              if (null == r) return e.push(h(f({}, i), { combo: n })), e;
               if (D.test(r) && L(r)) return (t[x(r)] = !0), e.map((e) => ((e[x(r)] = !0), e));
               {
                   let t = A(r, d.CgE.BROWSER);
@@ -237,7 +237,7 @@ function k(e) {
               }
           }, []);
 }
-function M(e) {
+function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I(),
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.MoX.KEYBOARD_KEY;
     return e

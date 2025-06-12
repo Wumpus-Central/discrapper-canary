@@ -8,8 +8,8 @@ var r = n(264344),
     c = n(997545),
     u = n(501950),
     d = n(992774),
-    f = n(656795),
-    _ = n(650886),
+    _ = n(656795),
+    f = n(650886),
     p = n(65154),
     h = n(149396);
 function m(e, t, n) {
@@ -280,14 +280,14 @@ class v extends o.Z {
         let { frameRate: r, resolution: i } = e.quality,
             a = i <= 480 ? (i / 3) * 4 : (i / 9) * 16,
             o = i,
-            { id: l, soundshareId: c, useLoopback: u, useVideoHook: f, useGraphicsCapture: _, useQuartzCapturer: p, allowScreenCaptureKit: m, hdrCaptureMode: g } = e.desktopDescription;
+            { id: l, soundshareId: c, useLoopback: u, useVideoHook: _, useGraphicsCapture: f, useQuartzCapturer: p, allowScreenCaptureKit: m, hdrCaptureMode: g } = e.desktopDescription;
         n.setOnClipsRecordingEvent((t) => {
             this.logger.info('Clips recording event: '.concat(h.Pf[t], ' received for stream ').concat(l, ' and sound ').concat(c, '.')), t === h.Pf.GoLiveEnded ? this.emit(s.aB.ClipsRecordingRestartNeeded) : t === h.Pf.Error ? this.emit(s.aB.ClipsInitFailure, 'Failed to set clips source in media engine', e.applicationName) : (t === h.Pf.Ended || t === h.Pf.StoppedByGoLive) && this.emit(s.aB.ClipsRecordingEnded, l, c);
         }),
             null == (t = n.applyClipsSettings) ||
                 t.call(n, {
-                    useVideoHook: f,
-                    useGraphicsCapture: _,
+                    useVideoHook: _,
+                    useGraphicsCapture: f,
                     useQuartzCapturer: p,
                     allowScreenCaptureKit: m,
                     hdrCaptureMode: g,
@@ -492,7 +492,7 @@ class v extends o.Z {
               n);
     }
     setOnVideoContainerResized(e) {
-        _.Z.onContainerResized = e;
+        f.Z.onContainerResized = e;
     }
     setMaxSyncDelayOverride(e) {
         let { setMaxSyncDelayOverride: t } = (0, d.zS)();
@@ -592,8 +592,8 @@ class v extends o.Z {
         var e, t, n, r, i, o, c, p;
         super(),
             (e = this),
-            m(this, 'Video', _.Z),
-            m(this, 'Camera', f.Z),
+            m(this, 'Video', f.Z),
+            m(this, 'Camera', _.Z),
             m(this, 'videoInputDeviceId', h.Av),
             m(this, 'connections', new Set()),
             m(this, 'lastVoiceActivity', -1),

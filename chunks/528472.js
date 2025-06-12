@@ -25,7 +25,7 @@ class u {
     async checkCodecCapability(e, t, n, r, i) {
         try {
             var a, c, u, d;
-            let f = {
+            let _ = {
                     type: 'file',
                     video: {
                         contentType: 'video/mp4;codecs='.concat(e),
@@ -41,7 +41,7 @@ class u {
                         bitrate: l
                     }
                 },
-                _ = await (null == (a = navigator.mediaCapabilities) ? void 0 : a.decodingInfo(f));
+                f = await (null == (a = navigator.mediaCapabilities) ? void 0 : a.decodingInfo(_));
             return {
                 videoCodec: e,
                 videoProfile: t,
@@ -52,9 +52,9 @@ class u {
                 audioProfile: s,
                 audioBitrate: l,
                 capability: {
-                    supported: null != (c = null == _ ? void 0 : _.supported) && c,
-                    smooth: null != (u = null == _ ? void 0 : _.smooth) && u,
-                    powerEfficient: null != (d = null == _ ? void 0 : _.powerEfficient) && d
+                    supported: null != (c = null == f ? void 0 : f.supported) && c,
+                    smooth: null != (u = null == f ? void 0 : f.smooth) && u,
+                    powerEfficient: null != (d = null == f ? void 0 : f.powerEfficient) && d
                 }
             };
         } catch (a) {

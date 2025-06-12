@@ -25,12 +25,12 @@ var u = (function (e) {
     return (e.NOT_FETCHED = 'NOT_FETCHED'), (e.FETCHING = 'FETCHING'), (e.FETCHED = 'FETCHED'), e;
 })({});
 let d = null,
-    f = 'NOT_FETCHED';
-function _() {
-    f = 'FETCHING';
+    _ = 'NOT_FETCHED';
+function f() {
+    _ = 'FETCHING';
 }
 function p(e) {
-    (f = 'FETCHED'), (d = e.apps);
+    (_ = 'FETCHED'), (d = e.apps);
 }
 class h extends (r = i.ZP.Store) {
     initialize() {
@@ -40,11 +40,11 @@ class h extends (r = i.ZP.Store) {
         return d;
     }
     getFetchState() {
-        return f;
+        return _;
     }
 }
 c(h, 'displayName', 'AuthorizedAppsStore');
 let m = new h(a.Z, {
-    USER_AUTHORIZED_APPS_REQUEST: _,
+    USER_AUTHORIZED_APPS_REQUEST: f,
     USER_AUTHORIZED_APPS_UPDATE: p
 });

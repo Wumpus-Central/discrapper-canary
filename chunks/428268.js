@@ -9,8 +9,8 @@ var i = n(442837),
     c = n(511010),
     u = n(553795),
     d = n(979192),
-    f = n(873128),
-    _ = n(463031),
+    _ = n(873128),
+    f = n(463031),
     p = n(981631),
     h = n(388032),
     m = n(767826);
@@ -71,11 +71,11 @@ let O = function (e) {
         { leaderboardsDisabled: b } = (0, d.O)(t, g),
         O = (0, i.e7)([u.Z], () => u.Z.getAccount(null, p.ABu.RIOT_GAMES)),
         v = (0, i.e7)([u.Z], () => u.Z.getAccount(null, p.ABu.LEAGUE_OF_LEGENDS)),
-        I = (0, f.Z)({
+        I = (0, _.Z)({
             guildId: t,
             leaderboardId: g
         }),
-        T = g === _.z;
+        T = g === f.z;
     if ((!T || (null != O && null != v)) && !b) return null;
     let S = s.Z.get(p.ABu.RIOT_GAMES),
         A = T && null == O && null == v,

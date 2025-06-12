@@ -9,8 +9,8 @@ var i = n(481060),
     c = n(594174),
     u = n(626135),
     d = n(760729),
-    f = n(74538),
-    _ = n(981631),
+    _ = n(74538),
+    f = n(981631),
     p = n(388032);
 function h(e, t, n) {
     return (
@@ -58,20 +58,20 @@ function g(e, t) {
             )
         )
     ),
-        u.default.track(_.rMx.OPEN_MODAL, {
+        u.default.track(f.rMx.OPEN_MODAL, {
             type: 'Message Too Long Alert',
             message_content_length: e
         });
 }
 function E(e) {
     var t;
-    let { openWarningPopout: n, type: c, content: u, stickers: f, uploads: h, channel: E, restrictMentions: b, respectCooldown: y, userCanUsePremiumMessageLength: O, resolve: v } = e;
-    if (0 === u.length && !(null == (t = c.submit) ? void 0 : t.allowEmptyMessage) && (null == f || 0 === f.length) && (null == h || 0 === h.length))
+    let { openWarningPopout: n, type: c, content: u, stickers: _, uploads: h, channel: E, restrictMentions: b, respectCooldown: y, userCanUsePremiumMessageLength: O, resolve: v } = e;
+    if (0 === u.length && !(null == (t = c.submit) ? void 0 : t.allowEmptyMessage) && (null == _ || 0 === _.length) && (null == h || 0 === h.length))
         return void v({
             valid: !1,
-            failureReason: _.zYc.EMPTY_MESSAGE
+            failureReason: f.zYc.EMPTY_MESSAGE
         });
-    let I = O ? _.en1 : _.J6R,
+    let I = O ? f.en1 : f.J6R,
         T = !O;
     if (u.length > I) {
         T && null != E
@@ -83,7 +83,7 @@ function E(e) {
             : g(u.length, I),
             v({
                 valid: !1,
-                failureReason: _.zYc.MESSAGE_TOO_LONG
+                failureReason: f.zYc.MESSAGE_TOO_LONG
             });
         return;
     }
@@ -91,7 +91,7 @@ function E(e) {
         if (null != E.getGuildId() && y && l.Z.getSlowmodeCooldownGuess(E.id) > 0)
             return void v({
                 valid: !1,
-                failureReason: _.zYc.SLOWMODE_COOLDOWN
+                failureReason: f.zYc.SLOWMODE_COOLDOWN
             });
         if (null != n)
             for (let { check: e, analyticsType: t, animation: r } of d.$) {
@@ -103,7 +103,7 @@ function E(e) {
                         onCancel: () =>
                             v({
                                 valid: !1,
-                                failureReason: _.zYc.SHOUTING_CANCELLED
+                                failureReason: f.zYc.SHOUTING_CANCELLED
                             }),
                         onConfirm: () => v({ valid: !0 }),
                         popoutText: i,
@@ -125,11 +125,11 @@ function E(e) {
                         e
                     )
                 ),
-            { onCloseRequest: _.dG4 }
+            { onCloseRequest: f.dG4 }
         ),
             v({
                 valid: !1,
-                failureReason: _.zYc.RATE_LIMITED
+                failureReason: f.zYc.RATE_LIMITED
             });
         return;
     }
@@ -137,7 +137,7 @@ function E(e) {
 }
 function b(e) {
     let { openWarningPopout: t, type: n, content: r, stickers: i, uploads: a, channel: o, restrictMentions: s = !0, respectCooldown: l = !0 } = e,
-        u = f.ZP.canUseIncreasedMessageLength(c.default.getCurrentUser());
+        u = _.ZP.canUseIncreasedMessageLength(c.default.getCurrentUser());
     return new Promise((e) =>
         E({
             openWarningPopout: t,

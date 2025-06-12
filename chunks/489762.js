@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(788911),
     u = n(2052),
     d = n(100527),
-    f = n(906732),
-    _ = n(218867),
+    _ = n(906732),
+    f = n(218867),
     p = n(880949),
     h = n(806966),
     m = n(28546),
@@ -31,14 +31,14 @@ var r = n(255367),
     D = n(419922),
     L = n(1450),
     x = n(491173),
-    k = n(515005),
-    M = n(652136),
+    M = n(515005),
+    k = n(652136),
     j = n(981631),
     U = n(957825),
     G = n(388032),
     B = n(230584),
-    F = n(239840);
-function V(e, t, n) {
+    V = n(239840);
+function F(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -62,7 +62,7 @@ function Z(e) {
                 })
             )),
             r.forEach(function (t) {
-                V(e, t, n[t]);
+                F(e, t, n[t]);
             });
     }
     return e;
@@ -110,12 +110,12 @@ let W = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     ec = [q, X, Q, J],
     eu = 12,
     ed = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKERS_LIST_EMPTY_GUILD_UPSELL_HEIGHT),
-    ef = ['laugh', 'wave', 'yes', 'dance', 'sad', 'no', 'hi', 'bye', 'cry', 'ok'],
-    e_ = (e) => {
+    e_ = ['laugh', 'wave', 'yes', 'dance', 'sad', 'no', 'hi', 'bye', 'cry', 'ok'],
+    ef = (e) => {
         let { onSuggestionClick: t } = e;
         return (0, r.jsx)('div', {
             className: B.searchSuggestions,
-            children: ef.map((e) =>
+            children: e_.map((e) =>
                 (0, r.jsx)(
                     l.P3F,
                     {
@@ -135,7 +135,7 @@ let W = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     ep = (e) => {
         let { onSelectSticker: t, channel: n, currentUser: r } = e,
             a = (0, u.O)(),
-            { analyticsLocations: o } = (0, f.ZP)(),
+            { analyticsLocations: o } = (0, _.ZP)(),
             s = (0, m.Iu)((e) => e.searchQuery);
         return {
             handleStickerInspect: i.useCallback((e) => {
@@ -157,7 +157,7 @@ let W = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 location: u,
                                 location_stack: o
                             }),
-                            (0, M.Z)({
+                            (0, k.Z)({
                                 stickerPack: e,
                                 analyticsLocations: o
                             }));
@@ -180,7 +180,7 @@ let W = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
         };
     },
     eh = (e) => {
-        let { collapsedStickersCategories: t, gridWidth: n, onSelectSticker: a, getStickerItemProps: s, getStickerRowProps: c, gutterWidth: d, inspectedStickerPosition: f, isScrolling: _, isUsingKeyboardNavigation: h, stickersGrid: m, stickersCategories: g, filteredStickers: E, ownedStickerPacks: T, channel: S } = e,
+        let { collapsedStickersCategories: t, gridWidth: n, onSelectSticker: a, getStickerItemProps: s, getStickerRowProps: c, gutterWidth: d, inspectedStickerPosition: _, isScrolling: f, isUsingKeyboardNavigation: h, stickersGrid: m, stickersCategories: g, filteredStickers: E, ownedStickerPacks: T, channel: S } = e,
             A = (0, u.O)(),
             N = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
             { handleStickerInspect: C, handleSelect: x } = ep({
@@ -188,8 +188,8 @@ let W = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 channel: S,
                 currentUser: N
             }),
-            [M, F] = i.useState(!1),
-            V = i.useCallback((e) => {
+            [k, V] = i.useState(!1),
+            F = i.useCallback((e) => {
                 y._O.updateSetting(Array.from(e));
             }, []),
             Z = i.useCallback(
@@ -197,13 +197,13 @@ let W = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     let t = m[e];
                     return null != t
                         ? (0, r.jsx)(
-                              k.Z,
+                              M.Z,
                               {
                                   getStickerItemProps: s,
                                   getStickerRowProps: c,
                                   gutterWidth: d,
-                                  inspectedStickerPosition: f,
-                                  isScrolling: _,
+                                  inspectedStickerPosition: _,
+                                  isScrolling: f,
                                   isUsingKeyboardNavigation: h,
                                   onInspect: C,
                                   onSelect: x,
@@ -221,7 +221,7 @@ let W = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                           )
                         : null;
                 },
-                [m, s, c, d, f, _, h, C, x, n, T, S, N]
+                [m, s, c, d, _, f, h, C, x, n, T, S, N]
             ),
             H = i.useCallback((e, t) => (0, r.jsx)('div', { children: t }, e), []),
             Y = i.useCallback(
@@ -236,9 +236,9 @@ let W = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                             collapsed: !i,
                             sticker_pack_id: n ? e : null
                         }),
-                        V(r);
+                        F(r);
                 },
-                [A, t, V]
+                [A, t, F]
             ),
             z = i.useCallback(
                 (e) => {
@@ -372,13 +372,13 @@ let W = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                   className: B.emptyGuildUpsell,
                                   guildId: n.id,
                                   channel: S,
-                                  shouldTrackUpsellViewed: !M,
-                                  setTrackedUpsellViewed: F
+                                  shouldTrackUpsellViewed: !k,
+                                  setTrackedUpsellViewed: V
                               },
                               'sticker-picker-empty-guild-inline-upsell-'.concat(n.id)
                           );
                 },
-                [g, t, E, S, M]
+                [g, t, E, S, k]
             ),
             sectionFooterHeight: i.useCallback(
                 (e) => {
@@ -395,15 +395,15 @@ let W = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             A = i.useRef(!1),
             N = i.useRef(null),
             [C, P] = h.ZN.useStore((e) => [e.activeCategoryIndex, e.inspectedExpressionPosition], a.X),
-            { analyticsLocations: w } = (0, f.ZP)(d.Z.STICKER_PICKER),
+            { analyticsLocations: w } = (0, _.ZP)(d.Z.STICKER_PICKER),
             D = (0, m.Iu)((e) => e.searchQuery),
             L = (0, o.e7)([R.Z], () => R.Z.getPremiumPacks()),
             {
-                renderRow: k,
-                renderSection: M,
+                renderRow: M,
+                renderSection: k,
                 renderSectionFooter: j,
                 sectionFooterHeight: U,
-                renderSectionHeader: V,
+                renderSectionHeader: F,
                 sectionHeaderHeight: Z
             } = eh({
                 collapsedStickersCategories: n,
@@ -478,7 +478,7 @@ let W = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 }),
                 []
             ),
-            (0, r.jsx)(f.Gt, {
+            (0, r.jsx)(_.Gt, {
                 value: w,
                 children: (0, r.jsxs)('div', {
                     className: B.wrapper,
@@ -487,16 +487,16 @@ let W = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                             ? (0, r.jsx)(c.Z, {
                                   message: G.intl.string(G.t['zc+LQU']),
                                   className: B.__invalid_noSearchResultsContainer,
-                                  noResultsImageURL: F,
-                                  suggestions: (0, r.jsx)(e_, { onSuggestionClick: (e) => (0, m.ql)(e, !0) })
+                                  noResultsImageURL: V,
+                                  suggestions: (0, r.jsx)(ef, { onSuggestionClick: (e) => (0, m.ql)(e, !0) })
                               })
-                            : (0, r.jsx)(_.Z, {
+                            : (0, r.jsx)(f.Z, {
                                   role: 'none presentation',
                                   listPadding: null != l ? ec : el,
                                   onScroll: H,
-                                  renderRow: k,
-                                  renderSection: null == l ? M : void 0,
-                                  renderSectionHeader: V,
+                                  renderRow: M,
+                                  renderSection: null == l ? k : void 0,
+                                  renderSectionHeader: F,
                                   renderSectionFooter: j,
                                   rowCount: O,
                                   rowCountBySection: v,

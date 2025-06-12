@@ -17,7 +17,7 @@ function c(e) {
         let { current: e } = n;
         null != e && null != t.soundId && u && e.addEventListener('pause', () => d(!1), { once: !0 });
     });
-    let f = r.useCallback(async () => {
+    let _ = r.useCallback(async () => {
         if (null == e) {
             c.current = null;
             return;
@@ -32,16 +32,16 @@ function c(e) {
             function () {
                 var e, r;
                 let { volume: i, outputChannel: o = l.w.DEFAULT } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                f(), null == (e = n.current) || e.pause();
+                _(), null == (e = n.current) || e.pause();
                 let { current: s } = c;
                 return null != s && ((n.current = s), (s.currentTime = 0), (s.volume = null != i ? i : 1), (s.dataset.soundId = t.soundId), o === l.w.VOICE && (null == (r = s.setSinkId) || r.call(s, a.voiceSinkId)), s.play(), (s.onplay = () => d(!0)), (s.onpause = () => d(!1)), (s.onended = () => d(!1)), !0);
             },
-            [n, t.soundId, f]
+            [n, t.soundId, _]
         ),
         stopSound: r.useCallback(() => {
             let { current: e } = n;
             null != e && (null == t.soundId || e.dataset.soundId === t.soundId) && (e.pause(), d(!1));
         }, [n, t.soundId]),
-        preloadSound: f
+        preloadSound: _
     };
 }

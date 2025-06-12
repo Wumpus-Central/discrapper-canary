@@ -8,8 +8,8 @@ var r = n(392711),
     c = n(181918),
     u = n(11637),
     d = n(592125),
-    f = n(430824),
-    _ = n(594174),
+    _ = n(430824),
+    f = n(594174),
     p = n(5192),
     h = n(51144),
     m = n(298552),
@@ -69,7 +69,7 @@ function x(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,12 +80,12 @@ function k(e, t) {
         e
     );
 }
-let M = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
+let k = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
     j = /^$|\n *$/,
     U = /^ *>>> ?/,
     G = /^ *> ?/gm,
     B = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/;
-function F(e) {
+function V(e) {
     let t = (0, b.yw)(e[1]);
     if (null == t)
         return {
@@ -105,23 +105,23 @@ function F(e) {
         title: void 0
     };
 }
-let V = (e) => {
+let F = (e) => {
         let t = d.Z.getChannel(e);
         return null == t ? void 0 : t.getGuildId();
     },
-    Z = (e) => (null != e.guildId ? f.Z.getGuild(e.guildId) : null != e.channelId ? f.Z.getGuild(V(e.channelId)) : null),
+    Z = (e) => (null != e.guildId ? _.Z.getGuild(e.guildId) : null != e.channelId ? _.Z.getGuild(F(e.channelId)) : null),
     H = {
         newline: o().defaultRules.newline,
         paragraph: o().defaultRules.paragraph,
-        escape: k(L({}, o().defaultRules.escape), { match: (e, t, n) => (!1 === t.allowEscape ? null : o().defaultRules.escape.match(e, t, n)) }),
-        blockQuote: k(L({}, o().defaultRules.blockQuote), {
+        escape: M(L({}, o().defaultRules.escape), { match: (e, t, n) => (!1 === t.allowEscape ? null : o().defaultRules.escape.match(e, t, n)) }),
+        blockQuote: M(L({}, o().defaultRules.blockQuote), {
             requiredFirstCharacters: [' ', '>'],
             match(e, t) {
                 let { prevCapture: n, inQuote: r, nested: i } = t;
                 if (r || i) return null;
-                if (null == n) return M.exec(e);
+                if (null == n) return k.exec(e);
                 let a = n[0];
-                return j.test(a) ? M.exec(e) : null;
+                return j.test(a) ? k.exec(e) : null;
             },
             parse(e, t, n) {
                 let r = e[0],
@@ -148,12 +148,12 @@ let V = (e) => {
             }
         }),
         link: b.ZP,
-        autolink: k(L({}, o().defaultRules.autolink), { parse: F }),
-        mailto: k(L({}, o().defaultRules.mailto), {
+        autolink: M(L({}, o().defaultRules.autolink), { parse: V }),
+        mailto: M(L({}, o().defaultRules.mailto), {
             match: o().inlineRegex(/^<([^\s<>@]+@[^\s<>@]+\.[^\s<>@]+)>/),
             requiredFirstCharacters: ['<']
         }),
-        tel: k(L({}, o().defaultRules.mailto), {
+        tel: M(L({}, o().defaultRules.mailto), {
             requiredFirstCharacters: ['<'],
             match: o().inlineRegex(/^<((?:(?:tel|sms):\+?|\+)(?:(?:[0-9]|\([0-9]+\)))(?:[- .\/]?(?:[0-9]|\([0-9]+\)))+)>/),
             parse(e) {
@@ -174,7 +174,7 @@ let V = (e) => {
                 );
             }
         }),
-        url: k(L({}, o().defaultRules.url), {
+        url: M(L({}, o().defaultRules.url), {
             requiredFirstCharacters: ['h', 's'],
             match(e, t) {
                 if (!t.inline) return null;
@@ -194,17 +194,17 @@ let V = (e) => {
                 }
                 return n;
             },
-            parse: F
+            parse: V
         }),
         strong: o().defaultRules.strong,
         em: o().defaultRules.em,
         u: o().defaultRules.u,
         br: o().defaultRules.br,
         text: I.ZP,
-        inlineCode: k(L({}, o().defaultRules.inlineCode), {
+        inlineCode: M(L({}, o().defaultRules.inlineCode), {
             parse(e, t, n) {
                 let r = o().defaultRules.inlineCode.parse(e, t, n);
-                return !0 === n.parseInlineCodeChildContent ? k(L({}, r), { validationChildContent: t(r.content, n) }) : r;
+                return !0 === n.parseInlineCodeChildContent ? M(L({}, r), { validationChildContent: t(r.content, n) }) : r;
             }
         }),
         emoticon: {
@@ -241,19 +241,19 @@ let V = (e) => {
                         type: 'roleMention',
                         id: d
                     };
-                let _ = Z(n),
-                    p = null != _ ? f.Z.getRole(_.id, d) : null;
+                let f = Z(n),
+                    p = null != f ? _.Z.getRole(f.id, d) : null;
                 if (null == p)
                     return {
                         type: 'text',
                         content: '@'.concat(w.intl.string(w.t['YV4F/v']))
                     };
-                let h = (0, c.OC)(null == _ ? void 0 : _.id, 'parse'),
+                let h = (0, c.OC)(null == f ? void 0 : f.id, 'parse'),
                     m = (null == (r = p.colors) ? void 0 : r.primary_color) === 0 && (null == (i = p.colors) ? void 0 : i.secondary_color) == null && (null == (a = p.colors) ? void 0 : a.tertiary_color) == null;
                 return {
                     type: 'mention',
                     channelId: n.channelId,
-                    guildId: null != _ ? _.id : null,
+                    guildId: null != f ? f.id : null,
                     roleId: d,
                     roleColor: p.color,
                     roleColors:
@@ -295,7 +295,7 @@ let V = (e) => {
                               type: 'mention',
                               id: e[1]
                           };
-                let a = _.default.getUser(e[1]),
+                let a = f.default.getUser(e[1]),
                     o = d.Z.getChannel(n.channelId);
                 if (null != a && ((i = a.id), (r = a.toString()), null != o)) {
                     var l;
@@ -304,7 +304,7 @@ let V = (e) => {
                 null == a && '@Clyde' === e[0] && (0, s.gJ)(Z(n), o) && (i = P.fL);
                 let c = e[1],
                     u = null != c && C.Xyh.test(c.trim()),
-                    f = u && n.unknownUserMentionPlaceholder ? '@'.concat(w.intl.string(w.t.sKdZ6e)) : e[0];
+                    _ = u && n.unknownUserMentionPlaceholder ? '@'.concat(w.intl.string(w.t.sKdZ6e)) : e[0];
                 return {
                     userId: i,
                     channelId: n.channelId,
@@ -315,7 +315,7 @@ let V = (e) => {
                     content: [
                         {
                             type: 'text',
-                            content: null != r ? '@'.concat(r) : f
+                            content: null != r ? '@'.concat(r) : _
                         }
                     ]
                 };
@@ -448,7 +448,7 @@ let V = (e) => {
                     itemContent: l(s),
                     itemId: a,
                     id: i,
-                    guildId: V(n.channelId),
+                    guildId: F(n.channelId),
                     channelId: i
                 };
             }
@@ -505,7 +505,7 @@ let et = 10,
                 parse(e, t, n) {
                     var r;
                     let i = null != (r = n.parseDepth) ? r : 0,
-                        a = k(L({}, n), { parseDepth: i + 1 }),
+                        a = M(L({}, n), { parseDepth: i + 1 }),
                         o = t(e[2], a),
                         s = t(e[3], a);
                     return [

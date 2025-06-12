@@ -2,9 +2,9 @@ n.d(t, {
     Iu: () => g,
     PG: () => d,
     RO: () => p,
-    _Q: () => f,
+    _Q: () => _,
     hr: () => h,
-    j9: () => _,
+    j9: () => f,
     ql: () => m
 });
 var r = n(97613),
@@ -39,7 +39,7 @@ let c = Object.freeze({
             })
         );
     },
-    f = (e) => {
+    _ = (e) => {
         let t = u.getState();
         (void 0 === e || e === t.activeViewType) &&
             null !== t.activeView &&
@@ -51,15 +51,15 @@ let c = Object.freeze({
                 })
             );
     },
-    _ = (e) => {
+    f = (e) => {
         let t = u.getState();
         if (null == t.activeView) {
             var n;
             d(null != (n = t.lastActiveView) ? n : l.X1.EMOJI, e);
-        } else f();
+        } else _();
     },
     p = (e, t) => {
-        u.getState().activeView === e ? f() : d(e, t);
+        u.getState().activeView === e ? _() : d(e, t);
     },
     h = (e) => {
         (0, s.j)(() =>

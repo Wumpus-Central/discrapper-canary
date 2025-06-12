@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => k,
+    Z: () => M,
     v: () => x
 });
 var r = n(255367),
@@ -11,8 +11,8 @@ var r = n(255367),
     c = n(841784),
     u = n(420660),
     d = n(429589),
-    f = n(757182),
-    _ = n(706454),
+    _ = n(757182),
+    f = n(706454),
     p = n(374129),
     h = n(639351),
     m = n(823379),
@@ -70,12 +70,12 @@ let x = {
         [a.z.XBOX]: h.Z,
         [a.z.PLAYSTATION]: p.Z
     },
-    k = (e) => {
-        let { channel: t, entry: n, disableGameProfileLinks: p, onReaction: h, onVoiceChannelPreview: D, onUserPopoutClosed: k, trackRankingItemInteraction: M } = e,
+    M = (e) => {
+        let { channel: t, entry: n, disableGameProfileLinks: p, onReaction: h, onVoiceChannelPreview: D, onUserPopoutClosed: M, trackRankingItemInteraction: k } = e,
             { largeImage: j } = (0, g.rv)({ entry: n }),
-            { user: U, details: G, appName: B, activity: F } = (0, R.n)(n),
-            { primaryColor: V, secondaryColor: Z } = (0, T.Z)(null == j ? void 0 : j.src),
-            H = (0, o.e7)([_.default], () => _.default.locale),
+            { user: U, details: G, appName: B, activity: V } = (0, R.n)(n),
+            { primaryColor: F, secondaryColor: Z } = (0, T.Z)(null == j ? void 0 : j.src),
+            H = (0, o.e7)([f.default], () => f.default.locale),
             { streamPreviewUrl: Y, stream: W } = (0, b.Z)(n),
             { displayParticipants: K, participant1: z, participant2: q, numOtherParticipants: X } = (0, E.Z)(n, 3),
             Q = n.extra.platform,
@@ -100,11 +100,11 @@ let x = {
                         avatarSrcs: K.map((e) => e.getAvatarURL(t.guild_id, 128)),
                         description: r,
                         timestamp: (0, y.yh)(n, H),
-                        colors: [V, Z],
+                        colors: [F, Z],
                         channelId: e
                     });
                 },
-                [null == j ? void 0 : j.src, t, K, n, H, X, z, q, V, Z, U]
+                [null == j ? void 0 : j.src, t, K, n, H, X, z, q, F, Z, U]
             );
         if (null == U) return null;
         let en = (0, r.jsx)(A.Gk, {
@@ -129,8 +129,8 @@ let x = {
                           badges: en,
                           entry: n,
                           disableGameProfileLinks: p,
-                          onUserPopoutClosed: k,
-                          trackRankingItemInteraction: M
+                          onUserPopoutClosed: M,
+                          trackRankingItemInteraction: k
                       })
                     : (0, r.jsx)(N.jL, {
                           channel: t,
@@ -140,20 +140,20 @@ let x = {
                           userDescription: w.t['6oWFUF'],
                           entry: n,
                           stream: W,
-                          onUserPopoutClosed: k,
-                          trackRankingItemInteraction: M
+                          onUserPopoutClosed: M,
+                          trackRankingItemInteraction: k
                       }),
             ei = [
-                (0, l.Z)(F, P.xjy.JOIN) || (0, c.Z)(F)
+                (0, l.Z)(V, P.xjy.JOIN) || (0, c.Z)(V)
                     ? (0, r.jsx)(d.Z, {
-                          activity: F,
+                          activity: V,
                           user: U,
                           ButtonComponent: (e) => (0, r.jsx)(N.Ll, L({ IconComponent: s.iWm }, e))
                       })
                     : null,
-                (0, u.Z)(F)
-                    ? (0, r.jsx)(f.Z, {
-                          activity: F,
+                (0, u.Z)(V)
+                    ? (0, r.jsx)(_.Z, {
+                          activity: V,
                           ButtonComponent: (e) => (0, r.jsx)(N.Ll, L({ IconComponent: s.tEF }, e))
                       })
                     : null

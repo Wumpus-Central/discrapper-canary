@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(692547),
     u = n(39300),
     d = n(954292);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,7 +32,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -84,7 +84,7 @@ let E = Object.fromEntries(Object.keys(c.Z.colors).map((e) => [l()(e), e])),
     b = i.forwardRef(function (e, t) {
         let n;
         var i,
-            { variant: a, tag: s = 'div', selectable: l = !1, className: f, lineClamp: p, color: g, tabularNumbers: b = !1, scaleFontToUserSetting: y = !1 } = e,
+            { variant: a, tag: s = 'div', selectable: l = !1, className: _, lineClamp: p, color: g, tabularNumbers: b = !1, scaleFontToUserSetting: y = !1 } = e,
             O = m(e, ['variant', 'tag', 'selectable', 'className', 'lineClamp', 'color', 'tabularNumbers', 'scaleFontToUserSetting']);
         let v = s,
             I = '',
@@ -113,11 +113,11 @@ let E = Object.fromEntries(Object.keys(c.Z.colors).map((e) => [l()(e), e])),
                 default:
                     n = null == (i = c.Z.colors[E[g]]) ? void 0 : i.css;
             }
-        let S = _({ color: n }, T, O.style);
+        let S = f({ color: n }, T, O.style);
         return (0, r.jsx)(
             v,
             h(
-                _(
+                f(
                     {
                         ref: t,
                         className: o()(
@@ -129,7 +129,7 @@ let E = Object.fromEntries(Object.keys(c.Z.colors).map((e) => [l()(e), e])),
                             },
                             I,
                             d[a],
-                            f
+                            _
                         )
                     },
                     O

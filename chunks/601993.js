@@ -1,8 +1,8 @@
 n.d(t, {
     Gb: () => s,
     RD: () => h,
-    Rs: () => _,
-    WA: () => f,
+    Rs: () => f,
+    WA: () => _,
     _2: () => p,
     f5: () => d,
     fG: () => u,
@@ -31,13 +31,13 @@ async function d(e) {
         n = await l;
     return null != n && n.isMisspelled(e, t);
 }
-async function f(e) {
+async function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 5,
         r = await l;
     return null == r ? [] : r.getCorrectionsForMisspelling(e, t).slice(0, n);
 }
-async function _(e) {
+async function f(e) {
     let t = await l;
     null != t && t.replaceMisspelling(e);
 }

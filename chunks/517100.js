@@ -8,8 +8,8 @@ var r,
     c = n(70956),
     u = n(358085),
     d = n(314897),
-    f = n(981631),
-    _ = n(65154);
+    _ = n(981631),
+    f = n(65154);
 function p(e, t, n) {
     return (
         t in e
@@ -33,7 +33,7 @@ function O() {
     return E || b || ((0, u.isAndroid)() && y);
 }
 function v() {
-    Date.now() - h > Math.min(l.CM.getSetting() * c.Z.Millis.SECOND, f.OSm) || O()
+    Date.now() - h > Math.min(l.CM.getSetting() * c.Z.Millis.SECOND, _.OSm) || O()
         ? g ||
           a.Z.dispatch({
               type: 'AFK',
@@ -46,7 +46,7 @@ function v() {
           });
 }
 function I() {
-    Date.now() - h > f.OSm || O()
+    Date.now() - h > _.OSm || O()
         ? m ||
           a.Z.dispatch({
               type: 'IDLE',
@@ -80,11 +80,11 @@ function N(e) {
 }
 function C(e) {
     let { userId: t, speakingFlags: n } = e;
-    return n !== _.Dg.NONE && t === d.default.getId() && P({}), !1;
+    return n !== f.Dg.NONE && t === d.default.getId() && P({}), !1;
 }
 function R(e) {
     let { state: t } = e;
-    return (y = t === f.$7l.BACKGROUND), (h = Date.now()), T(), !1;
+    return (y = t === _.$7l.BACKGROUND), (h = Date.now()), T(), !1;
 }
 function P(e) {
     let { timestamp: t, type: n } = e,

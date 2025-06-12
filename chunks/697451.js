@@ -20,8 +20,8 @@ var r = n(255367),
     x = n(581364),
     v = n(592180),
     O = n(726033),
-    C = n(598077),
-    j = n(594174),
+    j = n(598077),
+    C = n(594174),
     S = n(768581),
     I = n(585483),
     N = n(55935),
@@ -100,7 +100,7 @@ function U(e, t, n, i, l, o) {
             className: k.replyBadge,
             children: (0, r.jsx)(M, { className: k.commandIcon })
         });
-    let C =
+    let j =
             null !=
             (u = S.ZP.getGuildMemberAvatarURL({
                 avatar: null != (s = i.guildMemberAvatar) ? s : void 0,
@@ -109,7 +109,7 @@ function U(e, t, n, i, l, o) {
             }))
                 ? u
                 : void 0,
-        j = () =>
+        C = () =>
             (function (e) {
                 let { user: t, guildId: n, guildAvatar: i, onClick: l, onContextMenu: o, onMouseDown: s, ref: c } = e;
                 return (0, r.jsx)('img', {
@@ -127,7 +127,7 @@ function U(e, t, n, i, l, o) {
             })({
                 user: t,
                 guildId: f.guild_id,
-                guildAvatar: C,
+                guildAvatar: j,
                 onClick: 1 === n ? x : E,
                 onContextMenu: 1 === n ? v : y,
                 ref: o
@@ -140,9 +140,9 @@ function U(e, t, n, i, l, o) {
               shouldShow: I,
               position: 'right',
               onRequestClose: O,
-              children: j
+              children: C
           })
-        : j();
+        : C();
 }
 function F(e, t, n, i, l) {
     let { message: a, channel: o, showUsernamePopout: s, showTargetUsernamePopout: c, onClickUsername: u, onUserContextMenu: d, onClickTargetUsername: p, onTargetUserContextMenu: m, onPopoutRequestClose: f } = e;
@@ -176,7 +176,7 @@ function H(e) {
     let n,
         { message: l, channel: o } = e,
         { analyticsLocations: c } = (0, E.ZP)(b.Z.EXECUTED_COMMAND),
-        f = (0, d.e7)([j.default], () => j.default.getCurrentUser()),
+        f = (0, d.e7)([C.default], () => C.default.getCurrentUser()),
         S = i.useRef(null),
         P = i.useRef(null),
         M = i.useMemo(
@@ -213,7 +213,7 @@ function H(e) {
             [o, l.id, l.interactionData]
         ),
         V = (0, x.t0)(l),
-        z = (null == V ? void 0 : V.type) === m.B8.APPLICATION_COMMAND && null != V.target_user ? new C.Z(V.target_user) : null,
+        z = (null == V ? void 0 : V.type) === m.B8.APPLICATION_COMMAND && null != V.target_user ? new j.Z(V.target_user) : null,
         W = (null == V ? void 0 : V.type) === m.B8.APPLICATION_COMMAND && null != l.messageReference && null != e.renderTargetMessage,
         K = (0, T.Sw)(null == (t = l.interaction) ? void 0 : t.user, o),
         Y = (0, T.Sw)(z, o),

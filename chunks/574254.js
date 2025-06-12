@@ -23,10 +23,10 @@ function d(e) {
     let { contextMenu: t } = e;
     u++, (c = t);
 }
-function f() {
+function _() {
     c = null;
 }
-class _ extends (r = i.ZP.Store) {
+class f extends (r = i.ZP.Store) {
     isOpen() {
         return null != c;
     }
@@ -40,11 +40,11 @@ class _ extends (r = i.ZP.Store) {
         return !!this.isOpen() && (o.S.dispatch(s.CkL.CONTEXT_MENU_CLOSE), !0);
     }
 }
-l(_, 'displayName', 'ContextMenuStore');
-let p = new _(a.Z, {
+l(f, 'displayName', 'ContextMenuStore');
+let p = new f(a.Z, {
     CONTEXT_MENU_OPEN: d,
-    LAYER_PUSH: f,
-    CONTEXT_MENU_CLOSE: f,
-    OVERLAY_SET_INPUT_LOCKED: f,
-    OVERLAY_DEACTIVATE_ALL_REGIONS: f
+    LAYER_PUSH: _,
+    CONTEXT_MENU_CLOSE: _,
+    OVERLAY_SET_INPUT_LOCKED: _,
+    OVERLAY_DEACTIVATE_ALL_REGIONS: _
 });

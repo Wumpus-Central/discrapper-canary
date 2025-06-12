@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function f(e, t) {
         e
     );
 }
-let _ = {
+let f = {
         MP4: 'mp4',
         TINYMP4: 'tinymp4',
         NANOMP4: 'nanomp4',
@@ -73,7 +73,7 @@ let _ = {
         DOWNSIZED_SMALL_MP4: 'downsized_small.mp4',
         ORIGINAL_MP4: 'original.mp4'
     },
-    h = _.MP4,
+    h = f.MP4,
     m = null,
     g = '',
     E = '',
@@ -96,12 +96,12 @@ function A(e) {
         case p.FIXED_WIDTH_SMALL_MP4:
         case p.DOWNSIZED_SMALL_MP4:
         case p.ORIGINAL_MP4:
-        case _.MP4:
-        case _.TINYMP4:
-        case _.NANOMP4:
-        case _.WEBM:
-        case _.TINYWEBM:
-        case _.NANOWEBM:
+        case f.MP4:
+        case f.TINYMP4:
+        case f.NANOMP4:
+        case f.WEBM:
+        case f.TINYWEBM:
+        case f.NANOWEBM:
             return !0;
         default:
             return !1;
@@ -145,7 +145,7 @@ function P(e) {
               ]
             : []),
         ...t.map((e) =>
-            f(u({}, e), {
+            _(u({}, e), {
                 src: N(e.src),
                 type: s.wI2.TRENDING_CATEGORY,
                 format: a.EO.VIDEO

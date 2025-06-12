@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -81,7 +81,7 @@ function h(e, t) {
     let n = (0, l.G6)(e);
     return i.forwardRef(function (a, c) {
         var { children: d, className: p, dir: h = 'ltr', orientation: m = 'vertical', paddingFix: g = !0, fade: E = !1, onScroll: b, style: y } = a,
-            O = _(a, ['children', 'className', 'dir', 'orientation', 'paddingFix', 'fade', 'onScroll', 'style']);
+            O = f(a, ['children', 'className', 'dir', 'orientation', 'paddingFix', 'fade', 'onScroll', 'style']);
         let v = i.useRef(null),
             I = (0, l.tT)({
                 paddingFix: g,
@@ -93,7 +93,7 @@ function h(e, t) {
             });
         return (0, r.jsx)(
             'div',
-            f(
+            _(
                 u(
                     {
                         ref: (e) => {

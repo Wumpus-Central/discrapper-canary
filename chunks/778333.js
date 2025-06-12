@@ -21,8 +21,8 @@ function E(e) {
         x = (0, l.e7)([p.default], () => p.default.getId()),
         v = (null == (t = n.inviter) ? void 0 : t.id) === x,
         O = n.state === g.r2o.ACCEPTING,
-        { analyticsLocations: C } = (0, c.ZP)(s.Z.INVITE_EMBED),
-        j = (0, l.e7)([f.Z], () => {
+        { analyticsLocations: j } = (0, c.ZP)(s.Z.INVITE_EMBED),
+        C = (0, l.e7)([f.Z], () => {
             var e;
             return null != n.inviter && f.Z.isFriend(null == (e = n.inviter) ? void 0 : e.id);
         }),
@@ -36,9 +36,9 @@ function E(e) {
                         inviter_id: E.author.id,
                         invite_message_id: E.id
                     },
-                    C
+                    j
                 );
-        }, [n, E, C]),
+        }, [n, E, j]),
         I = i.useCallback(() => {
             (0, o.r$)(
                 {
@@ -47,19 +47,19 @@ function E(e) {
                     inviter_id: E.author.id,
                     invite_message_id: E.id
                 },
-                C
+                j
             );
             let e = y('Invite Button Embed');
             o.ZP.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: n.code,
                 context: e
             });
-        }, [n, E, C, y]);
+        }, [n, E, j, y]);
     if (null == n.inviter) return null;
-    let N = j ? S : I,
+    let N = C ? S : I,
         T = _.intl.string(_.t.ib7Ng4),
         P = u.Z.Button.Colors.GREEN;
-    j ? ((T = _.intl.string(_.t.xhxnPj)), (P = u.Z.Button.Colors.PRIMARY)) : v && ((T = _.intl.string(_.t.ib7Ng4)), (P = u.Z.Button.Colors.PRIMARY));
+    C ? ((T = _.intl.string(_.t.xhxnPj)), (P = u.Z.Button.Colors.PRIMARY)) : v && ((T = _.intl.string(_.t.ib7Ng4)), (P = u.Z.Button.Colors.PRIMARY));
     let A = v ? _.intl.string(_.t.eQyu1N) : _.intl.string(_.t.PYJHW1),
         w = null != n.inviter ? ''.concat(n.inviter.username) : '',
         Z = null != n.inviter ? h.ZP.getUserTag(n.inviter) : '';
@@ -73,11 +73,11 @@ function E(e) {
                         children: [
                             (0, r.jsx)(u.Z.Icon, {
                                 user: new d.Z(n.inviter),
-                                onClick: j ? N : void 0
+                                onClick: C ? N : void 0
                             }),
                             (0, r.jsx)(u.Z.Info, {
                                 title: w,
-                                onClick: j ? N : void 0,
+                                onClick: C ? N : void 0,
                                 children: Z
                             })
                         ]

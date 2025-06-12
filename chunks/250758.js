@@ -72,7 +72,7 @@ function v(e, t) {
         })(n, o));
     let { query: s, mode: c, tokens: u, cursorScope: d } = i,
         { autocompletes: p } = i;
-    (p = j(e, c)),
+    (p = C(e, c)),
         (E[e] = x({
             searchId: e,
             query: s,
@@ -126,7 +126,7 @@ function O(e, t, n) {
               results: a
           };
 }
-function C(e) {
+function j(e) {
     let t = (null != e ? e.getFullMatch() : '').trim(),
         n = {
             [b.dCx.FILTER_FROM]: !g.Z.hidePersonalInformation,
@@ -144,7 +144,7 @@ function C(e) {
         results: r
     };
 }
-function j(e, t) {
+function C(e, t) {
     let n = [];
     return (
         t.type === b.Sap.FILTER
@@ -182,12 +182,12 @@ function j(e, t) {
                                     }
                                 })(e, t)
                             )),
-                        5 > (0, p.BU)(r) && r.push(C(e)),
+                        5 > (0, p.BU)(r) && r.push(j(e)),
                         r
                     );
                 })(t.token, e))
               : t.type === b.Sap.EMPTY &&
-                (n.push(C(t.token)),
+                (n.push(j(t.token)),
                 n.push(
                     (function (e) {
                         if (g.Z.hidePersonalInformation) return null;
@@ -229,7 +229,7 @@ function N() {
         mode: n,
         tokens: r,
         cursorScope: i,
-        autocompletes: j(e, n)
+        autocompletes: C(e, n)
     });
 }
 class T extends (r = a.ZP.Store) {
@@ -261,10 +261,10 @@ let P = new T(o.Z, {
                 c = y[r],
                 u = !0;
             if (a === s.query && (null == s.mode || s.mode.filter === o.filter)) (n = s.autocompletes), (u = !1);
-            else if (o.type === b.Sap.EMPTY || (o.type === b.Sap.FILTER && o.filter !== b.dCx.FILTER_FROM && o.filter !== b.dCx.FILTER_MENTIONS)) null != c && (c.context.clearQuery(), (c.results = [])), (n = j(r, o));
+            else if (o.type === b.Sap.EMPTY || (o.type === b.Sap.FILTER && o.filter !== b.dCx.FILTER_FROM && o.filter !== b.dCx.FILTER_MENTIONS)) null != c && (c.context.clearQuery(), (c.results = [])), (n = C(r, o));
             else if (null != c) {
                 let { token: e } = o;
-                null != e && e.getFullMatch().trim().length > 0 ? (d.Z.requestMembers(r, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), { guild: r }), (n = s.autocompletes), (u = !1)) : (c.context.clearQuery(), (n = j(r, o)));
+                null != e && e.getFullMatch().trim().length > 0 ? (d.Z.requestMembers(r, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), { guild: r }), (n = s.autocompletes), (u = !1)) : (c.context.clearQuery(), (n = C(r, o)));
             }
             return (
                 (E[r] = x({

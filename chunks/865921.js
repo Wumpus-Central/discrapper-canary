@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(563132),
     u = n(409813),
     d = n(48931),
-    f = n(456251),
-    _ = n(981631);
+    _ = n(456251),
+    f = n(981631);
 function p(e) {
     let { handleStepChange: t, handleClose: n } = e,
         { blockedPayments: p, hasFetchedSkus: h, paymentSources: m, hasFetchedPaymentSources: g, application: E, skusById: b, selectedSkuId: y } = (0, c.JL)(),
@@ -23,10 +23,10 @@ function p(e) {
     i.useEffect(() => {
         if (v || p || null == y) return;
         let e = b[y];
-        return O && (null == e ? void 0 : e.productLine) === _.POd.COLLECTIBLES ? void t(u.h8.GIFT_CUSTOMIZATION) : 0 === Object.keys(m).length ? void t(u.h8.ADD_PAYMENT_STEPS) : void t(u.h8.REVIEW);
+        return O && (null == e ? void 0 : e.productLine) === f.POd.COLLECTIBLES ? void t(u.h8.GIFT_CUSTOMIZATION) : 0 === Object.keys(m).length ? void t(u.h8.ADD_PAYMENT_STEPS) : void t(u.h8.REVIEW);
     }, [v, p, t, m, O, b, y]),
     v)
-        ? (0, r.jsx)(f.Z, {})
+        ? (0, r.jsx)(_.Z, {})
         : p
           ? (0, r.jsx)(o.Vq, { onClose: n })
           : null != S

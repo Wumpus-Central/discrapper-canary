@@ -2,7 +2,7 @@ n.d(t, {
     A7: () => eo,
     BO: () => eh,
     DR: () => ec,
-    G5: () => ef,
+    G5: () => e_,
     LE: () => ed,
     Rp: () => eu,
     SE: () => eE,
@@ -27,8 +27,8 @@ var r = n(255367),
     c = n(374470),
     u = n(442837),
     d = n(481060),
-    f = n(904245),
-    _ = n(45114),
+    _ = n(904245),
+    f = n(45114),
     p = n(431279),
     h = n(794295),
     m = n(593472),
@@ -50,14 +50,14 @@ var r = n(255367),
     D = n(594174),
     L = n(259580),
     x = n(626135),
-    k = n(823379),
-    M = n(589530),
+    M = n(823379),
+    k = n(589530),
     j = n(709054),
     U = n(217702),
     G = n(981631),
     B = n(420212),
-    F = n(814249),
-    V = n(388032),
+    V = n(814249),
+    F = n(388032),
     Z = n(672);
 function H(e, t, n) {
     return (
@@ -136,19 +136,19 @@ let X = {
         position: 'top'
     },
     Q = (e) => (t) => {
-        null == e || e(t), (0, M.jA)(t);
+        null == e || e(t), (0, k.jA)(t);
     },
     J = (e) => (t) => {
-        null == e || e(t), (0, M.Zj)(t);
+        null == e || e(t), (0, k.Zj)(t);
     };
 function $(e) {
     var { onVolumeChange: t, onMute: n, volume: a, autoMute: o, alt: s, renderAdjacentContent: l, renderOverlayContent: c } = e,
         u = z(e, ['onVolumeChange', 'onMute', 'volume', 'autoMute', 'alt', 'renderAdjacentContent', 'renderOverlayContent']);
     let d = Q(t),
-        f = J(n);
+        _ = J(n);
     return (
-        (a = null == a ? M.FC : a),
-        (o = null == o ? M.rs : o),
+        (a = null == a ? k.FC : a),
+        (o = null == o ? k.rs : o),
         (0, r.jsxs)(i.Fragment, {
             children: [
                 (0, r.jsx)(
@@ -158,7 +158,7 @@ function $(e) {
                         volume: a,
                         autoMute: o,
                         onVolumeChange: d,
-                        onMute: f,
+                        onMute: _,
                         renderLinkComponent: er,
                         renderOverlayContent: c
                     })
@@ -173,8 +173,8 @@ function ee(e) {
         c = z(e, ['onVolumeChange', 'volume', 'onMute', 'onVolumeShow', 'onVolumeHide', 'renderAdjacentContent']);
     let u = Q(t),
         d = J(a);
-    n = null == n ? M.FC : n;
-    let f = () => !1;
+    n = null == n ? k.FC : n;
+    let _ = () => !1;
     return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsx)(
@@ -185,7 +185,7 @@ function ee(e) {
                     onVolumeShow: o,
                     onVolumeHide: s,
                     volume: n,
-                    autoMute: f,
+                    autoMute: _,
                     renderLinkComponent: er
                 })
             ),
@@ -199,7 +199,7 @@ function et(e) {
     let o = Q(t),
         s = J(i);
     return (
-        (n = null == n ? M.FC : n),
+        (n = null == n ? k.FC : n),
         (0, r.jsx)(
             P.Z,
             K(Y({}, a), {
@@ -211,13 +211,13 @@ function et(e) {
     );
 }
 function en(e) {
-    let { alt: t, hiddenSpoilers: n, renderAdjacentContent: a, containerClassName: s, imageContainerClassName: l, disableAltTextDisplay: c = !1, reducedSizeAltTextButton: u = !1, mediaLayoutType: f, imageContainerStyle: _, mosaicStyleAlt: h } = e,
-        m = f === U.hV.MOSAIC || !0 === h,
+    let { alt: t, hiddenSpoilers: n, renderAdjacentContent: a, containerClassName: s, imageContainerClassName: l, disableAltTextDisplay: c = !1, reducedSizeAltTextButton: u = !1, mediaLayoutType: _, imageContainerStyle: f, mosaicStyleAlt: h } = e,
+        m = _ === U.hV.MOSAIC || !0 === h,
         g = !c && R.H1.getSetting() && null != t && '' !== t && !0 !== n,
         E = (e) => {
             let { altText: t } = e;
             return (0, r.jsxs)(d.VqE, {
-                'aria-label': V.intl.string(V.t.fSiQ3N),
+                'aria-label': F.intl.string(F.t.fSiQ3N),
                 className: Z.mediaMosaicAltTextPopout,
                 onKeyDown: (e) => {
                     e.key === B.mR.Escape &&
@@ -229,7 +229,7 @@ function en(e) {
                 children: [
                     (0, r.jsx)('span', {
                         className: Z.mediaMosaicAltTextPopoutTitle,
-                        children: V.intl.string(V.t.fSiQ3N)
+                        children: F.intl.string(F.t.fSiQ3N)
                     }),
                     (0, r.jsx)('span', {
                         className: Z.mediaMosaicAltTextPopoutDescription,
@@ -244,7 +244,7 @@ function en(e) {
         children: [
             (0, r.jsxs)('div', {
                 className: o()(Z.imageContainer, l),
-                style: _,
+                style: f,
                 children: [(0, r.jsx)(p.Z, Y({}, e)), null != a && a()]
             }),
             m &&
@@ -263,9 +263,9 @@ function en(e) {
                                     K(Y({}, e), {
                                         type: 'button',
                                         ref: b,
-                                        'aria-label': V.intl.string(V.t.fSiQ3N),
+                                        'aria-label': F.intl.string(F.t.fSiQ3N),
                                         className: o()(Z.mediaMosaicAltText, { [Z.reducedSize]: u }),
-                                        children: V.intl.string(V.t.jCV1T0)
+                                        children: F.intl.string(F.t.jCV1T0)
                                     })
                                 )
                             })
@@ -299,21 +299,21 @@ var eo = (function (e) {
 function es(e) {
     switch (e) {
         case 0:
-            return V.intl.string(V.t['4EvBb2']);
+            return F.intl.string(F.t['4EvBb2']);
         case 1:
-            return V.intl.string(V.t['1J6Xq6']);
+            return F.intl.string(F.t['1J6Xq6']);
         default:
-            return (0, k.vE)(e);
+            return (0, M.vE)(e);
     }
 }
 function el(e) {
     switch (e) {
         case 0:
-            return V.intl.string(V.t.gpoQsL);
+            return F.intl.string(F.t.gpoQsL);
         case 1:
-            return V.intl.string(V.t['k3RM8/']);
+            return F.intl.string(F.t['k3RM8/']);
         default:
-            return (0, k.vE)(e);
+            return (0, M.vE)(e);
     }
 }
 let ec = (e) => {
@@ -376,7 +376,7 @@ let ec = (e) => {
                           children: [
                               (0, r.jsx)('div', {
                                   className: Z.barButtonMain,
-                                  children: V.intl.string(V.t['1zUvl5'])
+                                  children: F.intl.string(F.t['1zUvl5'])
                               }),
                               n
                                   ? (0, r.jsx)(d.$jN, {
@@ -386,7 +386,7 @@ let ec = (e) => {
                                     })
                                   : (0, r.jsx)('div', {
                                         className: Z.barButtonAlt,
-                                        children: V.intl.string(V.t.TdQXAw)
+                                        children: F.intl.string(F.t.TdQXAw)
                                     })
                           ]
                       })
@@ -398,13 +398,13 @@ function ed(e) {
         s = i.useCallback(() => {
             let e = w.ZP.ackMessageId(n);
             null != e
-                ? f.Z.jumpToMessage({
+                ? _.Z.jumpToMessage({
                       channelId: n,
                       messageId: e,
                       offset: 1,
                       context: 'Mark As Read'
                   })
-                : f.Z.jumpToMessage({
+                : _.Z.jumpToMessage({
                       channelId: n,
                       messageId: j.default.castChannelIdAsMessageId(n),
                       offset: 1,
@@ -412,7 +412,7 @@ function ed(e) {
                   });
         }, [n]),
         l = i.useCallback(() => {
-            (0, _.In)(n);
+            (0, f.In)(n);
         }, [n]),
         { disableInteractions: c } = i.useContext(b.G);
     return c
@@ -426,7 +426,7 @@ function ed(e) {
                           type: 'button',
                           className: Z.barButtonMain,
                           onClick: s,
-                          'aria-label': V.intl.string(V.t.z0Mkp6),
+                          'aria-label': F.intl.string(F.t.z0Mkp6),
                           'aria-describedby': a,
                           children: (0, r.jsx)('span', {
                               id: a,
@@ -442,7 +442,7 @@ function ed(e) {
                           onClick: l,
                           className: Z.barButtonAlt,
                           children: [
-                              V.intl.string(V.t.e6RscX),
+                              F.intl.string(F.t.e6RscX),
                               (0, r.jsx)(d.eQA, {
                                   size: 'md',
                                   color: 'currentColor',
@@ -454,7 +454,7 @@ function ed(e) {
               ]
           });
 }
-function ef(e) {
+function e_(e) {
     var t, n, a;
     let { channel: s, content: p, scrollManager: h } = e,
         { disableInteractions: E } = i.useContext(b.G),
@@ -470,9 +470,9 @@ function ef(e) {
             },
             [s]
         ),
-        M = (0, g.Z)(P);
+        k = (0, g.Z)(P);
     i.useEffect(() => {
-        l().isEqual(M, P) ||
+        l().isEqual(k, P) ||
             x.default.track(G.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: P.length,
                 message_counts: P.map((e) => e.count),
@@ -483,7 +483,7 @@ function ef(e) {
                 channel_id: s.id,
                 channel_type: s.type
             });
-    }, [P, M, s.guild_id, s.id, s.type]);
+    }, [P, k, s.guild_id, s.id, s.type]);
     let U = (0, u.e7)(
             [D.default],
             () => {
@@ -501,7 +501,7 @@ function ef(e) {
                                                 var t;
                                                 return null != (t = D.default.getUser(e)) ? t : null;
                                             })
-                                            .filter(k.lm);
+                                            .filter(M.lm);
                               }))
                     ? e
                     : [];
@@ -554,7 +554,7 @@ function ef(e) {
         }, [z, P, q, s]),
         Q = i.useCallback(
             function (e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : F.DZ.PILL_DROPDOWN,
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : V.DZ.PILL_DROPDOWN,
                     n = P[e];
                 if (null == n) return;
                 (0, A.wv)(s.id, n.id), (0, A.yK)(s.id, n.id);
@@ -573,7 +573,7 @@ function ef(e) {
                         channel_id: s.id,
                         channel_type: s.type
                     }),
-                    f.Z.jumpToMessage({
+                    _.Z.jumpToMessage({
                         channelId: s.id,
                         messageId: n.startId,
                         flash: !0,
@@ -651,13 +651,13 @@ function ef(e) {
         et = i.useCallback(() => {
             let e = w.ZP.ackMessageId(s.id);
             null != e
-                ? f.Z.jumpToMessage({
+                ? _.Z.jumpToMessage({
                       channelId: s.id,
                       messageId: e,
                       offset: 1,
                       context: 'Mark As Read'
                   })
-                : f.Z.jumpToMessage({
+                : _.Z.jumpToMessage({
                       channelId: s.id,
                       messageId: j.default.castChannelIdAsMessageId(s.id),
                       offset: 1,
@@ -665,11 +665,11 @@ function ef(e) {
                   });
         }, [s.id]),
         en = i.useCallback(() => {
-            (0, _.In)(s.id);
+            (0, f.In)(s.id);
         }, [s.id]),
-        er = V.intl.string(V.t['38qwgI']);
+        er = F.intl.string(F.t['38qwgI']);
     return (
-        P.length > 0 && (er = '' === H || null == H ? V.intl.string(V.t.DwnFuL) : H),
+        P.length > 0 && (er = '' === H || null == H ? F.intl.string(F.t.DwnFuL) : H),
         E
             ? null
             : (0, r.jsxs)('div', {
@@ -680,7 +680,7 @@ function ef(e) {
                           className: Z.newTopicsBarTopicSection,
                           children: (0, r.jsx)(d.P3F, {
                               className: Z.newTopicsBarTextClickable,
-                              'aria-label': V.intl.string(V.t.RT3MPz),
+                              'aria-label': F.intl.string(F.t.RT3MPz),
                               onClick: X,
                               children: (0, r.jsxs)('div', {
                                   className: o()({
@@ -719,7 +719,7 @@ function ef(e) {
                           children: [
                               (0, r.jsx)('div', {
                                   className: Z.newTopicsBarCompact,
-                                  children: V.intl.string(V.t.e6RscX)
+                                  children: F.intl.string(F.t.e6RscX)
                               }),
                               (0, r.jsx)(d.eQA, {
                                   size: 'md',
@@ -749,13 +749,13 @@ function ef(e) {
                                                       variant: 'heading-md/bold',
                                                       color: 'header-primary',
                                                       lineClamp: 1,
-                                                      children: V.intl.string(V.t.q21fUl)
+                                                      children: F.intl.string(F.t.q21fUl)
                                                   }),
                                                   (0, r.jsx)(v.Z, { className: Z.summariesBetaTag })
                                               ]
                                           }),
                                           (0, r.jsx)(d.P3F, {
-                                              'aria-label': V.intl.string(V.t.cpT0Cg),
+                                              'aria-label': F.intl.string(F.t.cpT0Cg),
                                               onClick: X,
                                               className: Z.topicsDropdownClose,
                                               children: (0, r.jsx)(d.Dio, {
@@ -777,15 +777,15 @@ function ef(e) {
               })
     );
 }
-function e_(e, t) {
+function ef(e, t) {
     return null != t && e.length === t.length && !e.some((e, n) => t[n] !== e);
 }
 function ep(e, t) {
-    return null != t && e.length === t.length && !e.some((e, n) => !e_(e, t[n]));
+    return null != t && e.length === t.length && !e.some((e, n) => !ef(e, t[n]));
 }
 function eh(e) {
     var t, n, a;
-    let { channel: s, scrollManager: _ } = e,
+    let { channel: s, scrollManager: f } = e,
         { disableInteractions: p } = i.useContext(b.G),
         [h, E] = i.useState(null),
         y = i.useRef(null),
@@ -830,7 +830,7 @@ function eh(e) {
                                                 var t;
                                                 return null != (t = D.default.getUser(e)) ? t : null;
                                             })
-                                            .filter(k.lm);
+                                            .filter(M.lm);
                               }))
                     ? e
                     : [];
@@ -839,8 +839,8 @@ function eh(e) {
             ep
         ),
         w = null != (n = (0, u.e7)([N.Z], () => N.Z.visibleSummaryIndex())) ? n : -1,
-        M = null == S || null == (t = S[w]) ? void 0 : t.topic;
-    null == M && null == h && (null == S ? void 0 : S.length) >= 1 && (M = null == (a = S[0]) ? void 0 : a.topic);
+        k = null == S || null == (t = S[w]) ? void 0 : t.topic;
+    null == k && null == h && (null == S ? void 0 : S.length) >= 1 && (k = null == (a = S[0]) ? void 0 : a.topic);
     let j = i.useMemo(() => l().get(S, w - 1), [w, S]),
         U = i.useMemo(() => l().get(S, w + 1), [w, S]),
         B = i.useMemo(
@@ -885,18 +885,18 @@ function eh(e) {
         }, [W, S, K, s]),
         q = i.useCallback(
             function (e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : F.DZ.PILL_DROPDOWN,
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : V.DZ.PILL_DROPDOWN,
                     n = S[e];
                 if (null == n) return;
                 (0, A.wv)(s.id, n.id), (0, A.yK)(s.id, n.id);
                 let r = () => {
-                    _.removeScrollCompleteCallback(r),
+                    f.removeScrollCompleteCallback(r),
                         setTimeout(() => {
-                            _.addAutomaticAnchorCallback(Y, !1);
+                            f.addAutomaticAnchorCallback(Y, !1);
                         }, 100);
                 };
-                _.removeAutomaticAnchorCallback(Y),
-                    _.addScrollCompleteCallback(r),
+                f.removeAutomaticAnchorCallback(Y),
+                    f.addScrollCompleteCallback(r),
                     x.default.track(G.rMx.SUMMARIES_TOPIC_CLICKED, {
                         source: t,
                         message_id: n.startId,
@@ -904,7 +904,7 @@ function eh(e) {
                         channel_id: s.id,
                         channel_type: s.type
                     }),
-                    f.Z.jumpToMessage({
+                    _.Z.jumpToMessage({
                         channelId: s.id,
                         messageId: n.startId,
                         flash: !0,
@@ -913,13 +913,13 @@ function eh(e) {
                         context: 'Summary Jump'
                     });
             },
-            [S, s, Y, _]
+            [S, s, Y, f]
         ),
         X = i.useCallback(() => {
-            q(w - 1, F.DZ.PILL_NEXT_ARROW);
+            q(w - 1, V.DZ.PILL_NEXT_ARROW);
         }, [q, w]),
         Q = i.useCallback(() => {
-            q(w + 1, F.DZ.PILL_PREVIOUS_ARROW);
+            q(w + 1, V.DZ.PILL_PREVIOUS_ARROW);
         }, [w, q]),
         J = i.useCallback((e) => {
             var t;
@@ -955,12 +955,12 @@ function eh(e) {
     );
     i.useEffect(
         () => (
-            _.addAutomaticAnchorCallback(Y),
+            f.addAutomaticAnchorCallback(Y),
             () => {
-                _.removeAutomaticAnchorCallback(Y);
+                f.removeAutomaticAnchorCallback(Y);
             }
         ),
-        [_, Y]
+        [f, Y]
     ),
         i.useEffect(() => {
             (0, A.G1)(s.id);
@@ -986,9 +986,9 @@ function eh(e) {
         [S, P, q, J, s]
     );
     if (!(0, u.e7)([N.Z], () => N.Z.shouldShowTopicsBar())) return null;
-    let et = V.intl.string(V.t['38qwgI']);
+    let et = F.intl.string(F.t['38qwgI']);
     return (
-        S.length > 0 && (et = '' === M || null == M ? V.intl.string(V.t.DwnFuL) : M),
+        S.length > 0 && (et = '' === k || null == k ? F.intl.string(F.t.DwnFuL) : k),
         p
             ? null
             : (0, r.jsxs)('div', {
@@ -1000,7 +1000,7 @@ function eh(e) {
                           children: [
                               (0, r.jsx)(d.P3F, {
                                   className: Z.topicsPillText,
-                                  'aria-label': V.intl.string(V.t.RT3MPz),
+                                  'aria-label': F.intl.string(F.t.RT3MPz),
                                   onClick: z,
                                   children: (0, r.jsxs)('div', {
                                       className: o()({
@@ -1031,7 +1031,7 @@ function eh(e) {
                                   className: Z.topicsPillCarets,
                                   children: [
                                       (0, r.jsx)(d.P3F, {
-                                          'aria-label': V.intl.string(V.t['4huCnJ']),
+                                          'aria-label': F.intl.string(F.t['4huCnJ']),
                                           onClick: Q,
                                           className: o()(Z.topicsPillCaret, Z.topicsCaretLeft, { [Z.topicsPillCaretDisabled]: null == U }),
                                           children: (0, r.jsx)(L.Z, {
@@ -1041,7 +1041,7 @@ function eh(e) {
                                           })
                                       }),
                                       (0, r.jsx)(d.P3F, {
-                                          'aria-label': V.intl.string(V.t['58KOoK']),
+                                          'aria-label': F.intl.string(F.t['58KOoK']),
                                           onClick: X,
                                           className: o()(Z.topicsPillCaret, Z.topicsCaretRight, { [Z.topicsPillCaretDisabled]: null == j }),
                                           children: (0, r.jsx)(L.Z, {
@@ -1075,13 +1075,13 @@ function eh(e) {
                                                       variant: 'heading-md/bold',
                                                       color: 'header-primary',
                                                       lineClamp: 1,
-                                                      children: V.intl.string(V.t.q21fUl)
+                                                      children: F.intl.string(F.t.q21fUl)
                                                   }),
                                                   (0, r.jsx)(v.Z, { className: Z.summariesBetaTag })
                                               ]
                                           }),
                                           (0, r.jsx)(d.P3F, {
-                                              'aria-label': V.intl.string(V.t.cpT0Cg),
+                                              'aria-label': F.intl.string(F.t.cpT0Cg),
                                               onClick: z,
                                               className: Z.topicsDropdownClose,
                                               children: (0, r.jsx)(d.Dio, {
@@ -1120,7 +1120,7 @@ let em = function (e) {
                         className: Z.clickCTA,
                         color: 'text-muted',
                         variant: 'text-sm/normal',
-                        children: V.intl.string(V.t['515vjI'])
+                        children: F.intl.string(F.t['515vjI'])
                     })
             ]
         });

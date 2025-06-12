@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(442837),
     u = n(335854),
     d = n(481060),
-    f = n(721037),
-    _ = n(490173),
+    _ = n(721037),
+    f = n(490173),
     p = n(114250),
     h = n(735246),
     m = n(315263),
@@ -31,14 +31,14 @@ var r = n(255367),
     D = n(314910),
     L = n(84615),
     x = n(429142),
-    k = n(813744),
-    M = n(746106),
+    M = n(813744),
+    k = n(746106),
     j = n(210887),
     U = n(526665),
     G = n(314897),
     B = n(819640),
-    F = n(451478),
-    V = n(358085),
+    V = n(451478),
+    F = n(358085),
     Z = n(663993),
     H = n(766127),
     Y = n(823453),
@@ -106,7 +106,7 @@ n(167666),
     Promise.resolve()
         .then(n.bind(n, 62883))
         .then((e) => {
-            V.isPlatformEmbedded ? window.addEventListener('contextmenu', e.contextMenuCallbackNative, !1) : window.addEventListener('contextmenu', e.contextMenuCallbackWeb, !1);
+            F.isPlatformEmbedded ? window.addEventListener('contextmenu', e.contextMenuCallbackNative, !1) : window.addEventListener('contextmenu', e.contextMenuCallbackWeb, !1);
         }),
     (0, u.E)({ getDefaultLinkInterceptor: m.default }),
     (0, Z.Un)({
@@ -126,7 +126,7 @@ let ei = (0, Z.Un)({
         webpackId: 420541
     }),
     eo = i.memo(function (e) {
-        let t = (0, c.e7)([F.Z], () => F.Z.isFocused()),
+        let t = (0, c.e7)([V.Z], () => V.Z.isFocused()),
             n = (0, c.e7)([B.Z], () => B.Z.hasLayers()),
             i = (0, U.wy)('AppSkeleton'),
             a = (0, c.e7)([B.Z], () => B.Z.getLayers().includes(J.S9g.USER_SETTINGS)),
@@ -142,18 +142,18 @@ let ei = (0, Z.Un)({
     }),
     es = function (e) {
         let { children: t, skipsSettingDefaultPageTitle: n } = e,
-            a = (0, V.getPlatform)(),
+            a = (0, F.getPlatform)(),
             u = l.tq || l.Em,
             m = (0, c.e7)([j.Z], () => (j.Z.darkSidebar ? J.BRd.DARK : void 0)),
             U = (0, C.Q3)('AppSkeleton'),
             G = (0, c.e7)([E.Z], () => (E.Z.useForcedColors ? 'yes' : 'no')),
             B = i.useRef(document.body),
-            F = ''.concat(U ? 'enabled' : 'disabled').concat(G);
+            V = ''.concat(U ? 'enabled' : 'disabled').concat(G);
         return (
             (0, R.G)(),
             (0, w.G)('AppSkeleton'),
             (0, r.jsx)(
-                M.w,
+                k.w,
                 {
                     children: (0, r.jsxs)(b.Z, {
                         children: [
@@ -195,7 +195,7 @@ let ei = (0, Z.Un)({
                                                                                             children: t
                                                                                         }),
                                                                                         (0, r.jsx)(I.Z, {}),
-                                                                                        (0, r.jsx)(_.Z, {}),
+                                                                                        (0, r.jsx)(f.Z, {}),
                                                                                         (0, r.jsx)(d.nKe, {}),
                                                                                         (0, r.jsx)(p.Z, {}),
                                                                                         (0, r.jsx)(L.Ox, {}),
@@ -203,7 +203,7 @@ let ei = (0, Z.Un)({
                                                                                         (0, r.jsx)(x.ot, {}),
                                                                                         (0, r.jsx)(d.Ixi, {}),
                                                                                         (0, r.jsx)(v.Z, {}),
-                                                                                        (0, r.jsx)(k.Z, {}),
+                                                                                        (0, r.jsx)(M.Z, {}),
                                                                                         (0, r.jsx)(ei, {}),
                                                                                         (0, r.jsx)(ea, {})
                                                                                     ]
@@ -213,7 +213,7 @@ let ei = (0, Z.Un)({
                                                                     })
                                                                 }),
                                                                 (0, r.jsx)(T.Z, {}),
-                                                                (0, r.jsx)(f.Z, {}),
+                                                                (0, r.jsx)(_.Z, {}),
                                                                 (0, r.jsx)(W.Z, {}),
                                                                 (0, r.jsx)(H.Z, {}),
                                                                 (0, r.jsx)(P.Z, { mobile: u })
@@ -231,7 +231,7 @@ let ei = (0, Z.Un)({
                         ]
                     })
                 },
-                F
+                V
             )
         );
     };

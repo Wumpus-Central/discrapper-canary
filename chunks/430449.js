@@ -56,48 +56,48 @@ function d(e, t) {
         e
     );
 }
-let f = {},
-    _ = {};
+let _ = {},
+    f = {};
 function p(e) {
     let { applicationId: t } = e;
-    f = d(c({}, f), { [t]: 1 });
+    _ = d(c({}, _), { [t]: 1 });
 }
 function h(e) {
     let { applicationId: t } = e;
-    f = d(c({}, f), { [t]: 2 });
+    _ = d(c({}, _), { [t]: 2 });
 }
 function m(e) {
     let { applicationId: t, assets: n } = e;
     if (null != n) {
         var r;
-        _[t] = {
+        f[t] = {
             assets: null != (r = a().keyBy(n, 'name')) ? r : {},
             lastUpdated: Date.now()
         };
-    } else delete _[t];
+    } else delete f[t];
 }
 function g(e) {
     let { assets: t } = e,
-        n = c({}, f);
+        n = c({}, _);
     for (let e in t) {
         var r;
         let i = t[e];
         (n[e] = 2),
-            (_[e] = {
+            (f[e] = {
                 assets: null != (r = a().keyBy(i, 'name')) ? r : {},
                 lastUpdated: Date.now()
             });
     }
-    f = n;
+    _ = n;
 }
 class E extends (r = o.ZP.Store) {
     getApplicationAssetFetchState(e) {
         var t;
-        return null != (t = f[e]) ? t : 0;
+        return null != (t = _[e]) ? t : 0;
     }
     getFetchingIds() {
         return [
-            ...Object.entries(f)
+            ...Object.entries(_)
                 .filter((e) => {
                     let [, t] = e;
                     return 1 === t;
@@ -109,7 +109,7 @@ class E extends (r = o.ZP.Store) {
         ];
     }
     getApplicationAssets(e) {
-        return _[e];
+        return f[e];
     }
 }
 l(E, 'displayName', 'ApplicationAssetsStore');

@@ -31,8 +31,8 @@ var r = n(255367),
     A = n(111583),
     w = n(594174),
     R = n(499033),
-    M = n(626135),
-    k = n(585483),
+    k = n(626135),
+    M = n(585483),
     L = n(700785),
     D = n(51144),
     U = n(998502),
@@ -88,7 +88,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             v = (0, p.e7)([N.Z], () => N.Z.isMobileOnline(a)),
             O = (0, p.e7)([N.Z, T.Z], () => (y ? T.Z.getActivities() : N.Z.getActivities(a, t.guild_id))),
             R = (0, p.e7)([P.Z], () => P.Z.getAnyStreamForUser(a)),
-            M = (0, c.JA)(a),
+            k = (0, c.JA)(a),
             L = (0, p.e7)([E.Z], () => E.Z.canUserViewChannel(t.id, l, a)),
             U = (null == b ? void 0 : b.id) != null && b.id === o,
             H = i.useCallback(
@@ -130,8 +130,8 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                 if (null == b) return;
                 let e = '@'.concat(D.ZP.getUserTag(b, { decoration: 'never' })),
                     n = '<@'.concat(b.id, '>');
-                k.S.dispatch(F.CkL.TEXTAREA_FOCUS, { channelId: t.id }),
-                    k.S.dispatchToLastSubscribed(F.CkL.INSERT_TEXT, {
+                M.S.dispatch(F.CkL.TEXTAREA_FOCUS, { channelId: t.id }),
+                    M.S.dispatchToLastSubscribed(F.CkL.INSERT_TEXT, {
                         plainText: e,
                         rawText: n
                     }),
@@ -208,7 +208,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             applicationStream: R,
                             premiumSince: null == Q ? null : new Date(Q),
                             onClickPremiumGuildIcon: Y,
-                            itemProps: M,
+                            itemProps: k,
                             lostPermissionTooltipText: L ? void 0 : G.intl.string(G.t['/QcoT0']),
                             isOwner: U,
                             nameplate: q,
@@ -347,7 +347,7 @@ function Q(e) {
         C = 0 === d.length || d.every((e) => 0 === e.userIds.length);
     if (
         (i.useEffect(() => {
-            M.default.track(F.rMx.MEMBER_LIST_VIEWED, {
+            k.default.track(F.rMx.MEMBER_LIST_VIEWED, {
                 channel_id: t.id,
                 channel_type: t.type,
                 guild_id: t.guild_id

@@ -45,7 +45,7 @@ function c(e, t) {
 }
 var u = n(73800),
     d = n(222142),
-    f = n(805194);
+    _ = n(805194);
 e.exports = function (e) {
     var t = (function (t) {
         function n() {
@@ -63,7 +63,7 @@ e.exports = function (e) {
                 {
                     key: 'setNativeProps',
                     value: function (e) {
-                        !1 === f.current(this.componentRef, e, this) && this.forceUpdate();
+                        !1 === _.current(this.componentRef, e, this) && this.forceUpdate();
                     }
                 },
                 {
@@ -78,7 +78,7 @@ e.exports = function (e) {
                         var t = this,
                             n = this._propsAnimated,
                             r = function () {
-                                !1 === f.current(t.componentRef, t._propsAnimated.__getAnimatedValue(), t) && t.forceUpdate();
+                                !1 === _.current(t.componentRef, t._propsAnimated.__getAnimatedValue(), t) && t.forceUpdate();
                             };
                         (this._propsAnimated = new d(e, r)), n && n.__detach();
                     }
@@ -99,7 +99,7 @@ e.exports = function (e) {
                         return u.createElement(
                             e,
                             r({}, s, {
-                                style: f.transformStyles(a),
+                                style: _.transformStyles(a),
                                 ref: function (e) {
                                     t.componentRef = e;
                                 },

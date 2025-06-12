@@ -14,8 +14,8 @@ var r = n(255367),
     c = n(215569),
     u = n(770278),
     d = n(481060),
-    f = n(40851),
-    _ = n(724723),
+    _ = n(40851),
+    f = n(724723),
     p = n(314910),
     h = n(429142),
     m = n(585483),
@@ -94,13 +94,13 @@ class I extends i.PureComponent {
     }
 }
 function T() {
-    return (0, g.Vn)((0, f.bp)());
+    return (0, g.Vn)((0, _.bp)());
 }
 let S = [];
 function A() {
     let e = T(),
         t = (0, g.s9)((t) => (void 0 !== t[e] ? t[e] : S)),
-        n = (0, _.q)('Modals'),
+        n = (0, f.q)('Modals'),
         a = i.useRef(void 0);
     i.useLayoutEffect(() => {
         a.current = t[t.length - 1];
@@ -123,7 +123,7 @@ function A() {
             let e = a.current;
             null != e && null != e.onCloseRequest && e.onCloseRequest();
         }, []),
-        f = i.useCallback(
+        _ = i.useCallback(
             (t) => {
                 (0, g.Mr)(t, e);
             },
@@ -171,7 +171,7 @@ function A() {
                         LayerComponent: null != a ? a : p.ZP,
                         isTopModal: n === t.length - 1,
                         render: o,
-                        closeModal: f,
+                        closeModal: _,
                         instant: s
                     },
                     i

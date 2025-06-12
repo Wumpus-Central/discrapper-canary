@@ -7,8 +7,8 @@ var r = n(98405),
     c = n(117895).f,
     u = n(556585),
     d = n(573078),
-    f = n(77025),
-    _ = n(170322),
+    _ = n(77025),
+    f = n(170322),
     p = n(179122),
     h = n(266101),
     m = n(759319),
@@ -35,10 +35,10 @@ var r = n(98405),
     R = b.getterFor(v),
     P = 'stack' in new T(v),
     w = function (e) {
-        return f(g, e) && g[e].m ? g[e].c : 0;
+        return _(g, e) && g[e].m ? g[e].c : 0;
     },
     D = function () {
-        _(this, L);
+        f(this, L);
         var e = arguments.length,
             t = m(e < 1 ? void 0 : arguments[0]),
             n = m(e < 2 ? void 0 : arguments[1], 'Error'),
@@ -65,27 +65,27 @@ var r = n(98405),
             get: e
         };
     },
-    k = function (e) {
+    M = function (e) {
         return x(function () {
             return R(this)[e];
         });
     };
-y && (d(L, 'code', k('code')), d(L, 'message', k('message')), d(L, 'name', k('name'))), c(L, 'constructor', l(1, D));
-var M = o(function () {
+y && (d(L, 'code', M('code')), d(L, 'message', M('message')), d(L, 'name', M('name'))), c(L, 'constructor', l(1, D));
+var k = o(function () {
         return !(new S() instanceof T);
     }),
     j =
-        M ||
+        k ||
         o(function () {
             return N.toString !== h || '2: 1' !== String(new S(1, 2));
         }),
     U =
-        M ||
+        k ||
         o(function () {
             return 25 !== new S(1, 'DataCloneError').code;
         }),
-    G = M || 25 !== S[I] || 25 !== A[I],
-    B = O ? j || U || G : M;
+    G = k || 25 !== S[I] || 25 !== A[I],
+    B = O ? j || U || G : k;
 r(
     {
         global: !0,
@@ -94,23 +94,23 @@ r(
     },
     { DOMException: B ? D : S }
 );
-var F = i(v),
-    V = F.prototype;
-for (var Z in (j && (O || S === F) && u(V, 'toString', h),
+var V = i(v),
+    F = V.prototype;
+for (var Z in (j && (O || S === V) && u(F, 'toString', h),
 U &&
     y &&
-    S === F &&
+    S === V &&
     d(
-        V,
+        F,
         'code',
         x(function () {
             return w(p(this).name);
         })
     ),
 g))
-    if (f(g, Z)) {
+    if (_(g, Z)) {
         var H = g[Z],
             Y = H.s,
             W = l(6, H.c);
-        f(F, Y) || c(F, Y, W), f(V, Y) || c(V, Y, W);
+        _(V, Y) || c(V, Y, W), _(F, Y) || c(F, Y, W);
     }

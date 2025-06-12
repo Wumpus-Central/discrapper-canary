@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => f,
+    Z: () => _,
     y: () => d
 }),
     n(314940);
@@ -14,22 +14,22 @@ var r = n(73800),
     d = (function (e) {
         return (e[(e.JOIN_GUILD = 0)] = 'JOIN_GUILD'), (e[(e.GET_NITRO = 1)] = 'GET_NITRO'), (e[(e.NONE = 2)] = 'NONE'), e;
     })({});
-function f(e, t, n, d) {
-    let f = e.guildId === c.X8,
-        _ = (0, a.e7)([o.default], () => s.ZP.canUseSoundboardEverywhere(o.default.getCurrentUser())),
+function _(e, t, n, d) {
+    let _ = e.guildId === c.X8,
+        f = (0, a.e7)([o.default], () => s.ZP.canUseSoundboardEverywhere(o.default.getCurrentUser())),
         p = (0, l.V2)({ location: 'useSoundmojiGuildInfoData' }),
         h = e.guildId !== (null == t ? void 0 : t.guild_id);
     return {
-        buttonType: r.useMemo(() => (f || !p ? 2 : p && !_ ? 1 : n || null == d ? 2 : 0), [f, _, p, n, d]),
+        buttonType: r.useMemo(() => (_ || !p ? 2 : p && !f ? 1 : n || null == d ? 2 : 0), [_, f, p, n, d]),
         description: r.useMemo(() => {
             let e = null != d;
             return (0, i.EQ)({
-                hasSoundmojiPermissions: _,
+                hasSoundmojiPermissions: f,
                 isInGuild: n,
                 isGuildDiscoverable: e,
                 isSoundFromDifferentGuild: h,
                 canSendSoundmojis: p,
-                isDefaultSound: f
+                isDefaultSound: _
             })
                 .with({ canSendSoundmojis: !1 }, () => u.intl.string(u.t.x2kyyM))
                 .with({ isDefaultSound: !0 }, () => u.intl.string(u.t.AabHen))
@@ -90,6 +90,6 @@ function f(e, t, n, d) {
                     () => u.intl.string(u.t.qRkWhY)
                 )
                 .exhaustive();
-        }, [f, d, _, n, h, p])
+        }, [_, d, f, n, h, p])
     };
 }

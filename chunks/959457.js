@@ -8,8 +8,8 @@ var i,
     c = n(442837),
     u = n(570140),
     d = n(594190),
-    f = n(444852),
-    _ = n(569545),
+    _ = n(444852),
+    f = n(569545),
     p = n(687516),
     h = n(139656),
     m = n(358085),
@@ -41,7 +41,7 @@ let I = {},
 function P(e, t, n) {
     return (
         o()(null != r, 'Creating RTCConnection without session.'),
-        new f.Z({
+        new _.Z({
             sessionId: r,
             streamKey: e,
             serverId: t,
@@ -65,7 +65,7 @@ function L() {
 }
 function x(e) {
     let { streamType: t, guildId: n, channelId: r, appContext: i, pid: a, sourceId: o, nativePickerStyleUsed: s, goLiveModalDurationMs: c } = e,
-        u = (0, _.V9)({
+        u = (0, f.V9)({
             streamType: t,
             guildId: n,
             channelId: r,
@@ -92,7 +92,7 @@ function x(e) {
     }
     null != c ? (N[u] = c) : delete N[u];
 }
-function k(e) {
+function M(e) {
     let { appContext: t, streamKey: n } = e;
     (I[n] = t),
         l().forEach(R, (e) => {
@@ -103,14 +103,14 @@ function k(e) {
         (S[n] = null),
         delete N[n];
 }
-function M(e) {
+function k(e) {
     let { streamKey: t, rtcServerId: n, region: r, viewerIds: i } = e,
         a = R[t];
     if (null == a && null != n) {
         null == S[t] && (T[t] = null);
-        let e = (0, _.my)(t);
+        let e = (0, f.my)(t);
         null == T[t] && null == A[t] && (T[t] = (0, p.L2)(e, b.Z));
-        let o = new f.A({
+        let o = new _.A({
             streamRegion: r,
             streamApplication: T[t],
             streamSourceType: W(A[t]),
@@ -153,11 +153,11 @@ function B(e) {
         n.destroy('stream-end'),
         delete R[t];
 }
-function F(e) {
+function V(e) {
     let { layout: t } = e;
     (C = t), Object.values(R).forEach((e) => e.layoutChange(t));
 }
-function V() {
+function F() {
     return !0;
 }
 function Z(e) {
@@ -261,19 +261,19 @@ let z = new K(
         : {
               CONNECTION_OPEN: D,
               CONNECTION_CLOSED: L,
-              RTC_CONNECTION_STATE: V,
-              RTC_CONNECTION_PING: V,
-              RTC_CONNECTION_LOSS_RATE: V,
+              RTC_CONNECTION_STATE: F,
+              RTC_CONNECTION_PING: F,
+              RTC_CONNECTION_LOSS_RATE: F,
               RTC_CONNECTION_UPDATE_ID: Z,
-              RTC_CONNECTION_SECURE_FRAMES_UPDATE: V,
+              RTC_CONNECTION_SECURE_FRAMES_UPDATE: F,
               STREAM_START: x,
-              STREAM_STOP: k,
-              STREAM_CREATE: M,
+              STREAM_STOP: M,
+              STREAM_CREATE: k,
               STREAM_SERVER_UPDATE: j,
               STREAM_UPDATE: G,
               STREAM_DELETE: B,
               MEDIA_ENGINE_CONNECTION_STATS: U,
-              STREAM_LAYOUT_UPDATE: F,
+              STREAM_LAYOUT_UPDATE: V,
               RTC_DEBUG_SET_SIMULCAST_OVERRIDE: H,
               VIDEO_SIZE_UPDATE: Y
           }

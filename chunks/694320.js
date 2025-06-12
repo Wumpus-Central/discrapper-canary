@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(100527),
     u = n(906732),
     d = n(436774),
-    f = n(592125),
-    _ = n(944486),
+    _ = n(592125),
+    f = n(944486),
     p = n(626135),
     h = n(981631),
     m = n(388032),
@@ -51,8 +51,8 @@ function y() {
 }
 function O(e) {
     let { className: t, iconOnly: n } = e,
-        a = (0, s.e7)([_.Z, f.Z], () => {
-            let e = f.Z.getChannel(_.Z.getChannelId());
+        a = (0, s.e7)([f.Z, _.Z], () => {
+            let e = _.Z.getChannel(f.Z.getChannelId());
             return (null == e ? void 0 : e.isPrivate()) ? h.ZY5.DM_CHANNEL : h.ZY5.GUILD_CHANNEL;
         }),
         { analyticsLocations: E } = (0, u.ZP)(c.Z.PREMIUM_UPSELL);

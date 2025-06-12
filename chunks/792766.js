@@ -105,10 +105,10 @@ let g = (e) => {
         if (null == n || null == E) return null;
         let { topic: y, speaker_count: x, participant_count: v } = n,
             O = null != (t = n.members) ? t : [],
-            C = _ ? O.slice(0, 3) : O,
-            j = x - C.length;
+            j = _ ? O.slice(0, 3) : O,
+            C = x - j.length;
         return (
-            _ && (j += O.length - C.length),
+            _ && (C += O.length - j.length),
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsxs)('div', {
@@ -180,11 +180,11 @@ let g = (e) => {
                     (0, r.jsxs)('div', {
                         className: a()(h.members, { [h.embed]: _ }),
                         children: [
-                            C.length > 0 &&
+                            j.length > 0 &&
                                 (0, r.jsxs)('div', {
                                     className: h.speakers,
                                     children: [
-                                        C.map((e) =>
+                                        j.map((e) =>
                                             (0, r.jsx)(
                                                 g,
                                                 {
@@ -195,7 +195,7 @@ let g = (e) => {
                                                 e.user.id
                                             )
                                         ),
-                                        j > 0
+                                        C > 0
                                             ? (0, r.jsxs)('div', {
                                                   className: h.speaker,
                                                   children: [
@@ -211,7 +211,7 @@ let g = (e) => {
                                                       (0, r.jsxs)(c.Z, {
                                                           size: _ ? c.Z.Sizes.SIZE_12 : c.Z.Sizes.SIZE_14,
                                                           color: c.Z.Colors.HEADER_SECONDARY,
-                                                          children: ['+', f.intl.format(f.t.L1pCBQ, { count: j })]
+                                                          children: ['+', f.intl.format(f.t.L1pCBQ, { count: C })]
                                                       })
                                                   ]
                                               })

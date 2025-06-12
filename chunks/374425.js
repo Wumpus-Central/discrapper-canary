@@ -75,8 +75,8 @@ let x = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
             [d, m] = i.useState(!0),
             [g, _] = i.useState(String(Date.now())),
             [O] = (0, p.XW)(t, l),
-            { analyticsLocations: C } = (0, c.ZP)(o.Z.STICKER_MESSAGE),
-            j = (0, r.jsxs)('span', {
+            { analyticsLocations: j } = (0, c.ZP)(o.Z.STICKER_MESSAGE),
+            C = (0, r.jsxs)('span', {
                 className: b.stickerName,
                 children: [
                     (0, r.jsx)(a.B7q, {
@@ -88,7 +88,7 @@ let x = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                 ]
             });
         return (0, r.jsx)(c.Gt, {
-            value: C,
+            value: j,
             children: (0, r.jsx)(a.yRy, {
                 align: 'center',
                 animation: a.yRy.Animation.TRANSLATE,
@@ -112,7 +112,7 @@ let x = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                         a.ua7,
                         y(E({}, u.b_), {
                             shouldShow: d,
-                            text: (0, u.Y)(j),
+                            text: (0, u.Y)(C),
                             'aria-label': !1,
                             onTooltipShow: () => {
                                 v(O);

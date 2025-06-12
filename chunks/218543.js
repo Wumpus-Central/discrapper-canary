@@ -61,7 +61,7 @@ function d(e, t) {
     let n = t - e;
     return n < 0 || n > 1000000 ? null : n;
 }
-class f {
+class _ {
     get start() {
         return this.start_;
     }
@@ -119,7 +119,7 @@ class f {
         a(this, 'emoji', void 0), a(this, 'name', void 0), a(this, 'start_', void 0), a(this, 'startNumImports', void 0), a(this, 'startImportTime', void 0), a(this, 'end_', void 0), a(this, 'endNumImports', void 0), a(this, 'endImportTime', void 0), (this.emoji = e), (this.name = t), (this.start_ = 0), (this.startNumImports = 0), (this.startImportTime = 0), (this.end_ = 0), (this.endNumImports = 0), (this.endImportTime = 0);
     }
 }
-class _ {
+class f {
     get time() {
         return this.time_;
     }
@@ -150,42 +150,42 @@ class p {
 }
 class h {
     constructor() {
-        a(this, 'loadIndex', new f('\u2757', 'Load index.tsx')),
-            a(this, 'loadFastConnectNativeModule', new f('\uD83D\uDCBE', 'Load fast_connect native module')),
-            a(this, 'beginFastConnect', new f('\uD83C\uDF10', 'Fast Connect IDENTIFY')),
-            a(this, 'loadImports', new f('\uD83C\uDFC3', 'Load Imports')),
-            a(this, 'init', new f('\uD83C\uDFC3', 'Initial Initialization')),
-            a(this, 'loadStorage', new f('\uD83D\uDCBE', 'Load Storage')),
-            a(this, 'parseStorage', new f('\uD83D\uDCBE', 'Parse Storage')),
-            a(this, 'loadMiniCache', new f('\uD83D\uDCBE', 'Load Mini Cache')),
-            a(this, 'fetchGuildCache', new f('\uD83D\uDCBE', 'Fetch Guild Cache')),
-            a(this, 'fetchGuildChannelsCache', new f('\uD83D\uDCBE', 'Fetch Initial Guild Channels Cache')),
-            a(this, 'loadCachedMessages', new f('\uD83D\uDCBE', 'Load Cached Messages')),
-            a(this, 'renderApp', new _('\uD83C\uDFA8', 'First React Render')),
-            a(this, 'renderAppEffect', new _('\uD83C\uDFA8', 'First React Render useEffect')),
-            a(this, 'renderMessages', new _('\uD83C\uDFA8', 'React Render Messages', !0)),
-            a(this, 'renderMessagesWithCache', new _('\uD83C\uDFA8', 'React Render Cached Messages', !0)),
-            a(this, 'firstRowGenerator', new f('\uD83C\uDFA8', 'RowGenerator.generate()')),
-            a(this, 'displayMessagesWithCache', new _('\uD83D\uDDA5️', 'Display Cached Messages')),
-            a(this, 'renderLatestMessages', new _('\uD83C\uDFA8', 'React Render Latest Messages')),
-            a(this, 'displayLatestMessages', new _('\uD83D\uDDA5️', 'Display Latest Messages')),
-            a(this, 'initialGuild', new f('\uD83C\uDF10', 'Initial Guild')),
-            a(this, 'loadLazyCache', new f('\uD83D\uDCBE', 'Load Lazy Cache')),
-            a(this, 'fetchLazyCache', new f('\uD83D\uDCBE', 'Fetch Lazy Cache')),
-            a(this, 'parseLazyCache', new f('\uD83D\uDCBE', 'Parse Lazy Cache')),
-            a(this, 'fetchStaleChannels', new f('\uD83D\uDCBE', 'Fetch Stale Channels')),
-            a(this, 'deserializeCache', new f('\uD83D\uDCBE', 'Deserialize Cache')),
-            a(this, 'dispatchLazyCache', new f('\uD83D\uDCBE', 'Dispatch Lazy Cache')),
-            a(this, 'parseReady', new f('\uD83C\uDF10', 'Parse READY')),
-            a(this, 'ready', new f('\uD83C\uDF10', 'READY')),
-            a(this, 'hydrateReady', new f('\uD83C\uDF10', 'Hydrate READY')),
-            a(this, 'dispatchReady', new f('\uD83C\uDF10', 'Dispatch READY')),
-            a(this, 'parseReadySupplemental', new f('\uD83C\uDF10', 'Parse READY Supplemental')),
-            a(this, 'readySupplemental', new f('\uD83C\uDF10', 'READY Supplemental')),
-            a(this, 'hydrateReadySupplemental', new f('\uD83C\uDF10', 'Hydrate READY Supplemental')),
-            a(this, 'dispatchReadySupplemental', new f('\uD83C\uDF10', 'Dispatch READY Supplemental')),
-            a(this, 'fetchMessages', new f('\uD83C\uDF10', 'Fetch messages')),
-            a(this, 'dispatchMessages', new f('\uD83C\uDF10', 'Dispatch messages')),
+        a(this, 'loadIndex', new _('\u2757', 'Load index.tsx')),
+            a(this, 'loadFastConnectNativeModule', new _('\uD83D\uDCBE', 'Load fast_connect native module')),
+            a(this, 'beginFastConnect', new _('\uD83C\uDF10', 'Fast Connect IDENTIFY')),
+            a(this, 'loadImports', new _('\uD83C\uDFC3', 'Load Imports')),
+            a(this, 'init', new _('\uD83C\uDFC3', 'Initial Initialization')),
+            a(this, 'loadStorage', new _('\uD83D\uDCBE', 'Load Storage')),
+            a(this, 'parseStorage', new _('\uD83D\uDCBE', 'Parse Storage')),
+            a(this, 'loadMiniCache', new _('\uD83D\uDCBE', 'Load Mini Cache')),
+            a(this, 'fetchGuildCache', new _('\uD83D\uDCBE', 'Fetch Guild Cache')),
+            a(this, 'fetchGuildChannelsCache', new _('\uD83D\uDCBE', 'Fetch Initial Guild Channels Cache')),
+            a(this, 'loadCachedMessages', new _('\uD83D\uDCBE', 'Load Cached Messages')),
+            a(this, 'renderApp', new f('\uD83C\uDFA8', 'First React Render')),
+            a(this, 'renderAppEffect', new f('\uD83C\uDFA8', 'First React Render useEffect')),
+            a(this, 'renderMessages', new f('\uD83C\uDFA8', 'React Render Messages', !0)),
+            a(this, 'renderMessagesWithCache', new f('\uD83C\uDFA8', 'React Render Cached Messages', !0)),
+            a(this, 'firstRowGenerator', new _('\uD83C\uDFA8', 'RowGenerator.generate()')),
+            a(this, 'displayMessagesWithCache', new f('\uD83D\uDDA5️', 'Display Cached Messages')),
+            a(this, 'renderLatestMessages', new f('\uD83C\uDFA8', 'React Render Latest Messages')),
+            a(this, 'displayLatestMessages', new f('\uD83D\uDDA5️', 'Display Latest Messages')),
+            a(this, 'initialGuild', new _('\uD83C\uDF10', 'Initial Guild')),
+            a(this, 'loadLazyCache', new _('\uD83D\uDCBE', 'Load Lazy Cache')),
+            a(this, 'fetchLazyCache', new _('\uD83D\uDCBE', 'Fetch Lazy Cache')),
+            a(this, 'parseLazyCache', new _('\uD83D\uDCBE', 'Parse Lazy Cache')),
+            a(this, 'fetchStaleChannels', new _('\uD83D\uDCBE', 'Fetch Stale Channels')),
+            a(this, 'deserializeCache', new _('\uD83D\uDCBE', 'Deserialize Cache')),
+            a(this, 'dispatchLazyCache', new _('\uD83D\uDCBE', 'Dispatch Lazy Cache')),
+            a(this, 'parseReady', new _('\uD83C\uDF10', 'Parse READY')),
+            a(this, 'ready', new _('\uD83C\uDF10', 'READY')),
+            a(this, 'hydrateReady', new _('\uD83C\uDF10', 'Hydrate READY')),
+            a(this, 'dispatchReady', new _('\uD83C\uDF10', 'Dispatch READY')),
+            a(this, 'parseReadySupplemental', new _('\uD83C\uDF10', 'Parse READY Supplemental')),
+            a(this, 'readySupplemental', new _('\uD83C\uDF10', 'READY Supplemental')),
+            a(this, 'hydrateReadySupplemental', new _('\uD83C\uDF10', 'Hydrate READY Supplemental')),
+            a(this, 'dispatchReadySupplemental', new _('\uD83C\uDF10', 'Dispatch READY Supplemental')),
+            a(this, 'fetchMessages', new _('\uD83C\uDF10', 'Fetch messages')),
+            a(this, 'dispatchMessages', new _('\uD83C\uDF10', 'Dispatch messages')),
             a(this, 'imports', {
                 polyfillsEnd: new p(),
                 sentryEnd: new p(),
@@ -315,7 +315,7 @@ class m extends h {
     serializeTTITracker(e) {
         var t, i, a, s, c, u;
         let d = this.getStartTime(e),
-            f = n(392711)(r.Z.logGroups['0'].logs)
+            _ = n(392711)(r.Z.logGroups['0'].logs)
                 .filter((e) => e.log.startsWith('Require '))
                 .map((e) => {
                     var t;
@@ -434,7 +434,7 @@ class m extends h {
             message_render_full_count: this.messageRenderFullCount,
             message_render_cached_count: this.messageRenderCachedCount,
             message_render_has_more_after: this.messageRenderHasMoreAfter,
-            duration_major_js_imports: this.loadImports.end - this.loadIndex.start + f,
+            duration_major_js_imports: this.loadImports.end - this.loadIndex.start + _,
             cache_num_guilds: null == (t = this.cacheInfo) ? void 0 : t.guilds,
             cache_num_private_channels: null == (i = this.cacheInfo) ? void 0 : i.privateChannels,
             cache_num_basic_channels: null == (a = this.cacheInfo) ? void 0 : a.basicChannels,

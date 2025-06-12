@@ -1,6 +1,6 @@
 n.d(t, {
-    HI: () => _,
-    gG: () => f,
+    HI: () => f,
+    gG: () => _,
     hb: () => p
 }),
     n(583741);
@@ -61,12 +61,12 @@ function u(e, t) {
     );
 }
 let d = {};
-function f() {
+function _() {
     var e, t;
     return null != (t = null == (e = (0, o.D)().favoriteGifs) ? void 0 : e.gifs) ? t : d;
 }
-function _(e) {
-    let t = f();
+function f(e) {
+    let t = _();
     return r.useMemo(
         () =>
             a()(t)
@@ -84,5 +84,5 @@ function _(e) {
     );
 }
 function p(e) {
-    return null != f()[e];
+    return null != _()[e];
 }

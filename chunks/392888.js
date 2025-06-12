@@ -13,8 +13,8 @@ var i = n(544891),
     c = n(9156),
     u = n(312400),
     d = n(115345),
-    f = n(981631);
-function _(e, t, n) {
+    _ = n(981631);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
@@ -68,7 +68,7 @@ function m(e, t) {
 }
 class g extends s.Z {
     handlePostConnectionOpen() {
-        !a.K.get('turnedOffNewNotifications') && l.Z.hasConsented(f.pjP.PERSONALIZATION) && u.xT.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 }).enabled && (c.ZP.useNewNotifications || (0 > Date.now() && this.checkOldUserExperiment(), this.checkNewUserExperiment()));
+        !a.K.get('turnedOffNewNotifications') && l.Z.hasConsented(_.pjP.PERSONALIZATION) && u.xT.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 }).enabled && (c.ZP.useNewNotifications || (0 > Date.now() && this.checkOldUserExperiment(), this.checkNewUserExperiment()));
     }
     async checkOldUserExperiment() {
         let { logExposure: e, autoOpen: t } = u.fs.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 });
@@ -106,7 +106,7 @@ class g extends s.Z {
         e && (u.ad.trackExposure({ location: 'NotificationMigrationManager' }), t && (0, d.ly)());
     }
     constructor(...e) {
-        super(...e), _(this, 'actions', { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() });
+        super(...e), f(this, 'actions', { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() });
     }
 }
 async function E(e) {

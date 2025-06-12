@@ -30,8 +30,8 @@ function O(e) {
         A = (null == T ? void 0 : T.type) === C.fO.STREAM ? T.stream : null,
         w = (0, i.e7)([o.Z], () => ((null == T ? void 0 : T.type) === C.fO.ACTIVITY ? o.Z.getApplication(T.applicationId) : void 0)),
         R = (0, h.Z)(S),
-        M = (0, _.Z)(S),
-        k = (0, m.Z)(O, N, null == A ? void 0 : A.ownerId, null == w ? void 0 : w.id),
+        k = (0, _.Z)(S),
+        M = (0, m.Z)(O, N, null == A ? void 0 : A.ownerId, null == w ? void 0 : w.id),
         L = (0, p.Z)(S),
         D = (0, y.Z)(),
         U = (0, c.$A)(S),
@@ -48,9 +48,9 @@ function O(e) {
         navId: 'more-settings-context',
         'aria-label': v.intl.string(v.t.FTLzdX),
         children: [
-            (0, r.jsx)(l.kSQ, { children: Z !== x.d4z.GUILD_STAGE_VOICE ? k : null }),
+            (0, r.jsx)(l.kSQ, { children: Z !== x.d4z.GUILD_STAGE_VOICE ? M : null }),
             (0, r.jsxs)(l.kSQ, {
-                children: [Z === x.d4z.GUILD_STAGE_VOICE ? U : null, Z === x.d4z.GUILD_STAGE_VOICE ? B : null, E || Z === x.d4z.GUILD_STAGE_VOICE ? null : L, H, Z !== x.d4z.GUILD_STAGE_VOICE ? R : null, Z === x.d4z.GUILD_STAGE_VOICE || Z === x.d4z.GUILD_VOICE ? M : null]
+                children: [Z === x.d4z.GUILD_STAGE_VOICE ? U : null, Z === x.d4z.GUILD_STAGE_VOICE ? B : null, E || Z === x.d4z.GUILD_STAGE_VOICE ? null : L, H, Z !== x.d4z.GUILD_STAGE_VOICE ? R : null, Z === x.d4z.GUILD_STAGE_VOICE || Z === x.d4z.GUILD_VOICE ? k : null]
             }),
             (0, r.jsx)(l.kSQ, { children: V }),
             (0, r.jsx)(l.kSQ, { children: D }),

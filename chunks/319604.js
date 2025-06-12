@@ -1,7 +1,7 @@
 n.d(t, {
     CR: () => m,
     UU: () => p,
-    jE: () => _
+    jE: () => f
 }),
     n(953529),
     n(804061),
@@ -28,7 +28,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function f(e) {
     }
     return e;
 }
-let _ = (e) => {
+let f = (e) => {
         let { timestamp: t } = e;
         return [
             {
@@ -67,17 +67,17 @@ let _ = (e) => {
     },
     h = (e) => {
         let { avatarSrc: t, mediaImageSrc: n } = e;
-        return f({ AvatarImage: t }, null != n && { MediaImage: n });
+        return _({ AvatarImage: t }, null != n && { MediaImage: n });
     },
     m = async (e) => {
         let { user: t, channel: n, mediaImageSrc: r, artist: i, description: s, colors: u, badges: d } = e,
-            f = h({
+            _ = h({
                 avatarSrc: t.getAvatarURL(n.guild_id, 128),
                 mediaImageSrc: r
             }),
-            _ = i.replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll(' ', '-');
+            f = i.replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll(' ', '-');
         return await (0, o.f)({
-            assetsToLoad: f,
+            assetsToLoad: _,
             drawImage: (e) => {
                 y(e, u),
                     b(e),
@@ -93,7 +93,7 @@ let _ = (e) => {
             exportConfigs: {
                 format: a.kH.CloudUpload,
                 quality: 1,
-                fileName: 'user-reacting-to-'.concat(_, '.png').toLowerCase(),
+                fileName: 'user-reacting-to-'.concat(f, '.png').toLowerCase(),
                 fileType: 'png',
                 channelId: n.id
             }

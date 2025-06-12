@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,7 +53,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -82,7 +82,7 @@ function m(e, t) {
 function g(e, t, n) {
     let a = (0, c.G6)(e),
         d = new Map(),
-        _ = new n((e) => {
+        f = new n((e) => {
             e.forEach((e) => {
                 var t;
                 let { target: n } = e;
@@ -91,16 +91,16 @@ function g(e, t, n) {
         });
     return (0, i.forwardRef)(function (n, m) {
         var g,
-            { onScroll: E, dir: b = 'ltr', sections: y, columns: O, getItemKey: v, getItemHeight: I, getSectionHeight: T, chunkSize: S, renderSection: A, renderItem: N, getSectionProps: C, itemGutter: R, removeEdgeItemGutters: P, sectionGutter: w, padding: D, paddingVertical: L, paddingHorizontal: x, fade: k = !1, className: M, style: j, maxContentWidth: U, renderAccessory: G, onItemVisibilityChange: B } = n,
-            F = h(n, ['onScroll', 'dir', 'sections', 'columns', 'getItemKey', 'getItemHeight', 'getSectionHeight', 'chunkSize', 'renderSection', 'renderItem', 'getSectionProps', 'itemGutter', 'removeEdgeItemGutters', 'sectionGutter', 'padding', 'paddingVertical', 'paddingHorizontal', 'fade', 'className', 'style', 'maxContentWidth', 'renderAccessory', 'onItemVisibilityChange']);
-        let V = i.useRef(null),
+            { onScroll: E, dir: b = 'ltr', sections: y, columns: O, getItemKey: v, getItemHeight: I, getSectionHeight: T, chunkSize: S, renderSection: A, renderItem: N, getSectionProps: C, itemGutter: R, removeEdgeItemGutters: P, sectionGutter: w, padding: D, paddingVertical: L, paddingHorizontal: x, fade: M = !1, className: k, style: j, maxContentWidth: U, renderAccessory: G, onItemVisibilityChange: B } = n,
+            V = h(n, ['onScroll', 'dir', 'sections', 'columns', 'getItemKey', 'getItemHeight', 'getSectionHeight', 'chunkSize', 'renderSection', 'renderItem', 'getSectionProps', 'itemGutter', 'removeEdgeItemGutters', 'sectionGutter', 'padding', 'paddingVertical', 'paddingHorizontal', 'fade', 'className', 'style', 'maxContentWidth', 'renderAccessory', 'onItemVisibilityChange']);
+        let F = i.useRef(null),
             Z = i.useRef(null),
             H = i.useRef({}),
             [Y, W] = i.useState(!1),
             { scrollerRef: K, scrollerState: z, getScrollerState: q } = (0, c.T4)();
         (0, c.tT)({
             scrollerRef: K,
-            className: M,
+            className: k,
             specs: a,
             orientation: 'vertical',
             dir: b
@@ -148,13 +148,13 @@ function g(e, t, n) {
             ref: K,
             key: 'container',
             onUpdate: es,
-            resizeObserver: _,
+            resizeObserver: f,
             listenerMap: d
         }),
             (0, i.useImperativeHandle)(
                 m,
                 () =>
-                    f(
+                    _(
                         {
                             getScrollerNode: () => K.current,
                             getItemGrid: ea,
@@ -168,9 +168,9 @@ function g(e, t, n) {
         let el = (0, i.useCallback)(
             (e) => {
                 er(1),
-                    null == V.current ? W(!0) : clearTimeout(V.current),
-                    (V.current = setTimeout(() => {
-                        (V.current = null), W(!1);
+                    null == F.current ? W(!0) : clearTimeout(F.current),
+                    (F.current = setTimeout(() => {
+                        (F.current = null), W(!1);
                     }, 200)),
                     null != E && E(e);
             },
@@ -183,18 +183,18 @@ function g(e, t, n) {
             (0, r.jsxs)(
                 'div',
                 p(
-                    f(
+                    _(
                         {
                             ref: K,
                             onScroll: el,
-                            className: o()(M, {
+                            className: o()(k, {
                                 [e]: !0,
-                                [t]: k,
+                                [t]: M,
                                 [u.scrolling]: Y
                             }),
                             style: (0, c.uT)(j)
                         },
-                        F
+                        V
                     ),
                     {
                         children: [
@@ -217,8 +217,8 @@ function g(e, t, n) {
                                                 return null != i && null != a
                                                     ? (0, r.jsxs)(
                                                           'div',
-                                                          p(f({}, s), {
-                                                              style: f({}, i, null != (t = null == s ? void 0 : s.style) ? t : {}),
+                                                          p(_({}, s), {
+                                                              style: _({}, i, null != (t = null == s ? void 0 : s.style) ? t : {}),
                                                               children: [
                                                                   null != A && null != o && A(n, o, e),
                                                                   a.map((e) => {

@@ -34,7 +34,7 @@ var l = n(653960),
     c = n(614272),
     u = n(512722),
     d = n(654298);
-function f(e, t) {
+function _(e, t) {
     return null == e ? t : e;
 }
 e.exports = (function (e) {
@@ -42,7 +42,7 @@ e.exports = (function (e) {
         i(this, t);
         var n,
             r = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-        return (r._overshootClamping = f(e.overshootClamping, !1)), (r._restDisplacementThreshold = f(e.restDisplacementThreshold, 0.001)), (r._restSpeedThreshold = f(e.restSpeedThreshold, 0.001)), (r._initialVelocity = e.velocity), (r._lastVelocity = f(e.velocity, 0)), (r._toValue = e.toValue), (r.__isInteraction = void 0 === e.isInteraction || e.isInteraction), void 0 !== e.bounciness || void 0 !== e.speed ? (u(void 0 === e.tension && void 0 === e.friction, 'You can only define bounciness/speed or tension/friction but not both'), (n = d.fromBouncinessAndSpeed(f(e.bounciness, 8), f(e.speed, 12)))) : (n = d.fromOrigamiTensionAndFriction(f(e.tension, 40), f(e.friction, 7))), (r._tension = n.tension), (r._friction = n.friction), r;
+        return (r._overshootClamping = _(e.overshootClamping, !1)), (r._restDisplacementThreshold = _(e.restDisplacementThreshold, 0.001)), (r._restSpeedThreshold = _(e.restSpeedThreshold, 0.001)), (r._initialVelocity = e.velocity), (r._lastVelocity = _(e.velocity, 0)), (r._toValue = e.toValue), (r.__isInteraction = void 0 === e.isInteraction || e.isInteraction), void 0 !== e.bounciness || void 0 !== e.speed ? (u(void 0 === e.tension && void 0 === e.friction, 'You can only define bounciness/speed or tension/friction but not both'), (n = d.fromBouncinessAndSpeed(_(e.bounciness, 8), _(e.speed, 12)))) : (n = d.fromOrigamiTensionAndFriction(_(e.tension, 40), _(e.friction, 7))), (r._tension = n.tension), (r._friction = n.friction), r;
     }
     return (
         o(t, e),
@@ -80,20 +80,20 @@ e.exports = (function (e) {
                     for (var o = 1, s = Math.floor((a - this._lastTime) / o), c = 0; c < s; ++c) {
                         var u = o / 1000,
                             d = t,
-                            f = this._tension * (this._toValue - n) - this._friction * r,
+                            _ = this._tension * (this._toValue - n) - this._friction * r,
                             n = e + (d * u) / 2,
-                            r = t + (f * u) / 2,
-                            _ = r,
+                            r = t + (_ * u) / 2,
+                            f = r,
                             p = this._tension * (this._toValue - n) - this._friction * r;
-                        n = e + (_ * u) / 2;
+                        n = e + (f * u) / 2;
                         var h = (r = t + (p * u) / 2),
                             m = this._tension * (this._toValue - n) - this._friction * r;
                         n = e + (h * u) / 2;
                         var g = (r = t + (m * u) / 2),
                             E = this._tension * (this._toValue - n) - this._friction * r;
                         (n = e + (h * u) / 2), (r = t + (m * u) / 2);
-                        var b = (f + 2 * (p + m) + E) / 6;
-                        (e += ((d + 2 * (_ + h) + g) / 6) * u), (t += b * u);
+                        var b = (_ + 2 * (p + m) + E) / 6;
+                        (e += ((d + 2 * (f + h) + g) / 6) * u), (t += b * u);
                     }
                     if (((this._lastTime = a), (this._lastPosition = e), (this._lastVelocity = t), this._onUpdate(e), this.__active)) {
                         var y = !1;

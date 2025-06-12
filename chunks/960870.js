@@ -35,7 +35,7 @@ function u(e) {
     return e;
 }
 function d(e) {
-    let { user: t, display: n, activity: c, entry: d, stream: f, voiceChannelId: _, analyticsLocations: p } = e,
+    let { user: t, display: n, activity: c, entry: d, stream: _, voiceChannelId: f, analyticsLocations: p } = e,
         { context: h, trackUserProfileAction: m } = (0, s.KZ)(),
         { analyticsLocations: g } = (0, a.ZP)(),
         E = null != p ? p : g,
@@ -54,15 +54,15 @@ function d(e) {
                             display: n,
                             activity: c,
                             entry: d,
-                            stream: f,
+                            stream: _,
                             outbox: b,
-                            voiceChannelId: _,
+                            voiceChannelId: f,
                             analyticsLocations: E
                         },
                         h
                     )
                 );
         },
-        [m, h, n, c, f, d, b, _, E]
+        [m, h, n, c, _, d, b, f, E]
     );
 }

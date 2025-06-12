@@ -38,7 +38,7 @@ function d(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,12 +50,12 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -94,19 +94,19 @@ function g(e) {
     }
 }
 function E(e) {
-    var { type: t = 'wanderingCubes', animated: n = !0, className: a, itemClassName: u, 'aria-label': f } = e,
+    var { type: t = 'wanderingCubes', animated: n = !0, className: a, itemClassName: u, 'aria-label': _ } = e,
         h = p(e, ['type', 'animated', 'className', 'itemClassName', 'aria-label']);
     let { reducedMotion: m } = i.useContext(s.S),
         E = m.enabled ? g(t) : t;
-    if (((f = null != f ? f : l.intl.string(l.t.ZTNur6)), 'spinningCircle' === E || 'spinningCircleSimple' === E))
+    if (((_ = null != _ ? _ : l.intl.string(l.t.ZTNur6)), 'spinningCircle' === E || 'spinningCircleSimple' === E))
         return (0, r.jsx)(
             'div',
-            _(
+            f(
                 d(
                     {
                         className: o()(c.spinner, c[E], a, { [c.stopAnimation]: !n }),
                         role: 'img',
-                        'aria-label': f
+                        'aria-label': _
                     },
                     h
                 ),
@@ -149,12 +149,12 @@ function E(e) {
     let b = o()(c.item, u);
     return (0, r.jsx)(
         'span',
-        _(
+        f(
             d(
                 {
                     className: o()(c.spinner, a, { [c.stopAnimation]: !n }),
                     role: 'img',
-                    'aria-label': f
+                    'aria-label': _
                 },
                 h
             ),

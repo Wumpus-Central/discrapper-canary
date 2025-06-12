@@ -20,13 +20,13 @@ function l(e, t, n) {
 let c = new Map(),
     u = new Map(),
     d = new Map(),
-    f = !1;
-function _(e) {
+    _ = !1;
+function f(e) {
     e(c), (c = new Map(c));
 }
 function p(e) {
     let { feedId: t, feed: n } = e;
-    _((e) => e.set(t, n)), d.set(t, new Date());
+    f((e) => e.set(t, n)), d.set(t, new Date());
 }
 function h(e) {
     let { feedId: t, state: n } = e;
@@ -38,14 +38,14 @@ function m() {
 function g(e) {
     let { feedId: t } = e;
     if (!c.has(t)) return !1;
-    _((e) => e.delete(t));
+    f((e) => e.delete(t));
 }
 function E(e) {
     let { filters: t } = e;
     r = t;
 }
 function b() {
-    f = !f;
+    _ = !_;
 }
 class y extends (i = a.ZP.Store) {
     getFeeds() {
@@ -68,7 +68,7 @@ class y extends (i = a.ZP.Store) {
         return null == (t = this.getFeed(e)) ? void 0 : t.request_id;
     }
     getDebugImpressionCappingDisabled() {
-        return f;
+        return _;
     }
     getMatchingInboxEntry(e) {
         let { activity: t, userId: n, feedId: r } = e,

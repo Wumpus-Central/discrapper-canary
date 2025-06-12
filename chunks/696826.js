@@ -21,8 +21,8 @@ var l = n(44315),
     c = n(686546),
     u = n(540059),
     d = n(981631),
-    f = n(182294),
-    _ = n(121061);
+    _ = n(182294),
+    f = n(121061);
 function p(e, t, n) {
     return (
         t in e
@@ -118,10 +118,10 @@ function O(e, t) {
     return null != a ? a : void 0;
 }
 function v(e, t) {
-    return t === f.VZ.WHITE && e === d.Skl.IDLE ? f.d_.HIGH : f.d_.LOW;
+    return t === _.VZ.WHITE && e === d.Skl.IDLE ? _.d_.HIGH : _.d_.LOW;
 }
 function I(e) {
-    return (0, s.wj)(e) ? f.VZ.BLACK : f.VZ.WHITE;
+    return (0, s.wj)(e) ? _.VZ.BLACK : _.VZ.WHITE;
 }
 function T(e, t, n, r) {
     return 'scale('
@@ -142,7 +142,7 @@ function A(e) {
             bgY: 0.25 * t + s,
             bgX: 0,
             bgHeight: t,
-            bgWidth: t * f.D6,
+            bgWidth: t * _.D6,
             cutoutX: 0.5 * t + l,
             cutoutY: 0.75 * t + s,
             cutoutWidth: 0,
@@ -158,10 +158,10 @@ function A(e) {
         case d.Skl.ONLINE:
             if (r)
                 return {
-                    bgRadius: t * f.EW * f.e7,
+                    bgRadius: t * _.EW * _.e7,
                     bgY: 0,
                     bgX: l,
-                    bgHeight: t * f.EW,
+                    bgHeight: t * _.EW,
                     bgWidth: t,
                     cutoutX: 0.125 * t + l,
                     cutoutY: 0.25 * t,
@@ -277,7 +277,7 @@ function N(e) {
         .concat(0.25 * e);
 }
 function C(e, t, n) {
-    let { bgRadius: i, bgY: a, bgX: s, bgHeight: l, bgWidth: c, cutoutX: u, cutoutY: d, cutoutWidth: f, cutoutHeight: _, cutoutRadius: p, polygonScale: h, polygonOrigin: m, dotY: g, dotX: E, dotRadius: b } = e;
+    let { bgRadius: i, bgY: a, bgX: s, bgHeight: l, bgWidth: c, cutoutX: u, cutoutY: d, cutoutWidth: _, cutoutHeight: f, cutoutRadius: p, polygonScale: h, polygonOrigin: m, dotY: g, dotX: E, dotRadius: b } = e;
     return (0, r.jsxs)('mask', {
         id: n,
         children: [
@@ -293,8 +293,8 @@ function C(e, t, n) {
             (0, r.jsx)(o.animated.rect, {
                 x: u,
                 y: d,
-                width: f,
-                height: _,
+                width: _,
+                height: f,
                 rx: p,
                 ry: p,
                 fill: 'black'
@@ -339,32 +339,32 @@ function P(e, t, n) {
     return t === d.Skl.ONLINE && n && !r
         ? {
               width: e,
-              height: e * f.EW
+              height: e * _.EW
           }
         : {
-              width: r ? e * f.D6 : e,
+              width: r ? e * _.D6 : e,
               height: e
           };
 }
 function w(e) {
     let { status: t, isMobile: n = !1, size: i = E, className: o, style: s, color: l } = e,
         u = t === d.Skl.ONLINE && n,
-        f = O(t, l);
+        _ = O(t, l);
     return (0, r.jsx)(
         c.ZP,
         g(
             h(
                 {
                     mask: R(t, u),
-                    className: a()(_.mask, o),
+                    className: a()(f.mask, o),
                     style: s
                 },
                 P(i, t, u)
             ),
             {
                 children: (0, r.jsx)('div', {
-                    style: { backgroundColor: f },
-                    className: _.status
+                    style: { backgroundColor: _ },
+                    className: f.status
                 })
             }
         )

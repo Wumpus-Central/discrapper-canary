@@ -7,22 +7,22 @@ var r = n(507604),
     c = n(822635),
     u = n(527160),
     d = n(79275),
-    f = Object.assign,
-    _ = Object.defineProperty,
+    _ = Object.assign,
+    f = Object.defineProperty,
     p = i([].concat);
 e.exports =
-    !f ||
+    !_ ||
     o(function () {
         if (
             r &&
             1 !==
-                f(
+                _(
                     { b: 1 },
-                    f(
-                        _({}, 'a', {
+                    _(
+                        f({}, 'a', {
                             enumerable: !0,
                             get: function () {
-                                _(this, 'b', {
+                                f(this, 'b', {
                                     value: 3,
                                     enumerable: !1
                                 });
@@ -42,11 +42,11 @@ e.exports =
             i.split('').forEach(function (e) {
                 t[e] = e;
             }),
-            7 !== f({}, e)[n] || s(f({}, t)).join('') !== i
+            7 !== _({}, e)[n] || s(_({}, t)).join('') !== i
         );
     })
         ? function (e, t) {
-              for (var n = u(e), i = arguments.length, o = 1, f = l.f, _ = c.f; i > o; ) for (var h, m = d(arguments[o++]), g = f ? p(s(m), f(m)) : s(m), E = g.length, b = 0; E > b; ) (h = g[b++]), (!r || a(_, m, h)) && (n[h] = m[h]);
+              for (var n = u(e), i = arguments.length, o = 1, _ = l.f, f = c.f; i > o; ) for (var h, m = d(arguments[o++]), g = _ ? p(s(m), _(m)) : s(m), E = g.length, b = 0; E > b; ) (h = g[b++]), (!r || a(f, m, h)) && (n[h] = m[h]);
               return n;
           }
-        : f;
+        : _;

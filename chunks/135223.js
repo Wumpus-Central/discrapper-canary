@@ -37,7 +37,7 @@ function c(e, t, n) {
     let [a, c] = t;
     if (1 !== c.length || !i.aj.isInTypes(a, s)) return l;
     let { entries: u, serializedChildren: d } = i.q.markdown(a, n, !0),
-        f = [];
+        _ = [];
     for (let t = 0; t < u.length; t++) {
         let n = u[t];
         if (n.attributes.length > 0 && n.text.length > 0) {
@@ -47,7 +47,7 @@ function c(e, t, n) {
                     anchor: (0, r.t)(e, c, d, n.start),
                     focus: (0, r.t)(e, c, d, n.start + n.text.length)
                 },
-                _ = i.bN.nodes(e, {
+                f = i.bN.nodes(e, {
                     at: l,
                     mode: 'lowest',
                     voids: !1
@@ -56,14 +56,14 @@ function c(e, t, n) {
             for (let e of n.attributes)
                 if (((p[e] = !0), 'syntaxBefore' === e && null != s)) for (let e of s.attributes) p['before_'.concat(e)] = !0;
                 else if ('syntaxAfter' === e && null != a) for (let e of a.attributes) p['after_'.concat(e)] = !0;
-            for (let [t, n] of _) {
+            for (let [t, n] of f) {
                 let t = {
                     anchor: i.bN.start(e, n),
                     focus: i.bN.end(e, n)
                 };
-                i.Jz.isBefore(t.anchor, l.anchor) && (t.anchor = l.anchor), i.Jz.isAfter(t.focus, l.focus) && (t.focus = l.focus), f.push(o({}, p, t));
+                i.Jz.isBefore(t.anchor, l.anchor) && (t.anchor = l.anchor), i.Jz.isAfter(t.focus, l.focus) && (t.focus = l.focus), _.push(o({}, p, t));
             }
         }
     }
-    return f;
+    return _;
 }

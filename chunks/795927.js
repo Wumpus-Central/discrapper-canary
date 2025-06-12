@@ -23,11 +23,11 @@ let E = [0.1, 0.25],
                         }),
                             c > i.value && ((i.value = c), (i.entries = s), a());
                     },
-                    u = (0, n.N)('layout-shift', l);
-                u &&
+                    I = (0, n.N)('layout-shift', l);
+                I &&
                     ((a = (0, r._)(t, i, E, e.reportAllChanges)),
                     (0, o.u)(() => {
-                        l(u.takeRecords()), a(!0);
+                        l(I.takeRecords()), a(!0);
                     }),
                     setTimeout(a, 0));
             })

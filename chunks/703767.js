@@ -39,12 +39,12 @@ function u(e) {
     return !1;
 }
 let d = !1;
-function f() {
+function _() {
     let e = {};
     for (let t of c) u(t.gpus) && (e = s({}, e, t.experiment.getCurrentConfig({ location: 'updateFlags' })));
     a.ZP.setChromiumSwitches(e);
 }
-class _ extends r.Z {
+class f extends r.Z {
     constructor(...e) {
         super(...e),
             o(this, 'actions', {
@@ -53,11 +53,11 @@ class _ extends r.Z {
                         var e, t, n, r;
                         if (d || (null == (t = window.DiscordNative) || null == (e = t.gpuSettings) ? void 0 : e.setChromiumSwitches) == null) return;
                         for (let e of null != (r = null == (n = (await i.Z.processUtils.getSystemInfo()).electronGPUInfo) ? void 0 : n.gpuDevice) ? r : []) !0 === e.active && (l = [e.vendorId, e.deviceId]);
-                        for (let e of ((d = !0), c)) u(e.gpus) && e.experiment.subscribe({ location: 'GPU experiment subscription' }, f);
-                        f();
+                        for (let e of ((d = !0), c)) u(e.gpus) && e.experiment.subscribe({ location: 'GPU experiment subscription' }, _);
+                        _();
                     } catch (e) {}
                 }
             });
     }
 }
-let p = new _();
+let p = new f();

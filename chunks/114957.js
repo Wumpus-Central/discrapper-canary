@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(224706),
     i = n(978085),
     a = n(147913),
@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-class f extends a.Z {
+class _ extends a.Z {
     handlePostConnectionOpen() {
         ((0, u.isDesktop)() || (0, o.l)()) && (l.Z.fetched || (0, i.b8)(), r.Z.getDetectableGames(), (this.intervalId = setInterval(r.Z.getDetectableGames, s.Z.detectableGamesTtl + Math.random() * c.Z.Millis.HOUR)));
     }
@@ -31,4 +31,4 @@ class f extends a.Z {
         super(...e), d(this, 'intervalId', void 0), d(this, 'actions', { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() });
     }
 }
-let _ = new f();
+let f = new _();

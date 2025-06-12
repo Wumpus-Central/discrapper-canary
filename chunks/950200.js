@@ -92,12 +92,12 @@ e.exports = (function () {
             c = 1000000,
             u = 0,
             d = 1000000,
-            f = 0;
+            _ = 0;
         return (
             e.forEach(function (e) {
-                (r = e[0] >> n), (i = e[1] >> n), (a = e[2] >> n), r < o ? (o = r) : r > l && (l = r), i < c ? (c = i) : i > u && (u = i), a < d ? (d = a) : a > f && (f = a);
+                (r = e[0] >> n), (i = e[1] >> n), (a = e[2] >> n), r < o ? (o = r) : r > l && (l = r), i < c ? (c = i) : i > u && (u = i), a < d ? (d = a) : a > _ && (_ = a);
             }),
-            new s(o, l, c, u, d, f, t)
+            new s(o, l, c, u, d, _, t)
         );
     }
     function d(e, n) {
@@ -111,28 +111,28 @@ e.exports = (function () {
                 c,
                 u,
                 d,
-                f,
-                _ = 0,
+                _,
+                f = 0,
                 p = [],
                 h = [];
             if (s == r)
                 for (l = n.r1; l <= n.r2; l++) {
-                    for (d = 0, c = n.g1; c <= n.g2; c++) for (u = n.b1; u <= n.b2; u++) d += e[(f = a(l, c, u))] || 0;
-                    (_ += d), (p[l] = _);
+                    for (d = 0, c = n.g1; c <= n.g2; c++) for (u = n.b1; u <= n.b2; u++) d += e[(_ = a(l, c, u))] || 0;
+                    (f += d), (p[l] = f);
                 }
             else if (s == i)
                 for (l = n.g1; l <= n.g2; l++) {
-                    for (d = 0, c = n.r1; c <= n.r2; c++) for (u = n.b1; u <= n.b2; u++) d += e[(f = a(c, l, u))] || 0;
-                    (_ += d), (p[l] = _);
+                    for (d = 0, c = n.r1; c <= n.r2; c++) for (u = n.b1; u <= n.b2; u++) d += e[(_ = a(c, l, u))] || 0;
+                    (f += d), (p[l] = f);
                 }
             else
                 for (l = n.b1; l <= n.b2; l++) {
-                    for (d = 0, c = n.r1; c <= n.r2; c++) for (u = n.g1; u <= n.g2; u++) d += e[(f = a(c, u, l))] || 0;
-                    (_ += d), (p[l] = _);
+                    for (d = 0, c = n.r1; c <= n.r2; c++) for (u = n.g1; u <= n.g2; u++) d += e[(_ = a(c, u, l))] || 0;
+                    (f += d), (p[l] = f);
                 }
             return (
                 p.forEach(function (e, t) {
-                    h[t] = _ - e;
+                    h[t] = f - e;
                 }),
                 m(s == r ? 'r' : s == i ? 'g' : 'b')
             );
@@ -147,7 +147,7 @@ e.exports = (function () {
                 c = e + '2',
                 u = 0;
             for (l = n[s]; l <= n[c]; l++)
-                if (p[l] > _ / 2) {
+                if (p[l] > f / 2) {
                     for (i = n.copy(), a = n.copy(), o = (t = l - n[s]) <= (r = n[c] - l) ? Math.min(n[c] - 1, ~~(l + r / 2)) : Math.max(n[s], ~~(l - 1 - t / 2)); !p[o]; ) o++;
                     for (u = h[o]; !u && p[o - 1]; ) u = h[--o];
                     return (i[c] = o), (a[s] = i[c] + 1), [i, a];
@@ -188,10 +188,10 @@ e.exports = (function () {
                         c = 0,
                         u = 1 << (8 - e),
                         d = 0,
-                        f = 0,
-                        _ = 0;
-                    for (o = n.r1; o <= n.r2; o++) for (s = n.g1; s <= n.g2; s++) for (l = n.b1; l <= n.b2; l++) (c += i = r[a(o, s, l)] || 0), (d += i * (o + 0.5) * u), (f += i * (s + 0.5) * u), (_ += i * (l + 0.5) * u);
-                    c ? (n._avg = [~~(d / c), ~~(f / c), ~~(_ / c)]) : (n._avg = [~~((u * (n.r1 + n.r2 + 1)) / 2), ~~((u * (n.g1 + n.g2 + 1)) / 2), ~~((u * (n.b1 + n.b2 + 1)) / 2)]);
+                        _ = 0,
+                        f = 0;
+                    for (o = n.r1; o <= n.r2; o++) for (s = n.g1; s <= n.g2; s++) for (l = n.b1; l <= n.b2; l++) (c += i = r[a(o, s, l)] || 0), (d += i * (o + 0.5) * u), (_ += i * (s + 0.5) * u), (f += i * (l + 0.5) * u);
+                    c ? (n._avg = [~~(d / c), ~~(_ / c), ~~(f / c)]) : (n._avg = [~~((u * (n.r1 + n.r2 + 1)) / 2), ~~((u * (n.g1 + n.g2 + 1)) / 2), ~~((u * (n.b1 + n.b2 + 1)) / 2)]);
                 }
                 return n._avg;
             },
@@ -244,8 +244,8 @@ e.exports = (function () {
                 a.forEach(function () {
                     s++;
                 });
-                var f = u(e, a),
-                    _ = new o(function (e, n) {
+                var _ = u(e, a),
+                    f = new o(function (e, n) {
                         return t.naturalOrder(e.count(), n.count());
                     });
                 function p(e, t) {
@@ -260,15 +260,15 @@ e.exports = (function () {
                         if (!l || (e.push(l), c && (e.push(c), i++), i >= t || o++ > r)) return;
                     }
                 }
-                _.push(f), p(_, i * n);
+                f.push(_), p(f, i * n);
                 for (
                     var h = new o(function (e, n) {
                         return t.naturalOrder(e.count() * e.volume(), n.count() * n.volume());
                     });
-                    _.size();
+                    f.size();
 
                 )
-                    h.push(_.pop());
+                    h.push(f.pop());
                 p(h, n - h.size());
                 for (var m = new l(); h.size(); ) m.push(h.pop());
                 return m;

@@ -8,8 +8,8 @@ var r = n(114858),
     c = n(131704),
     u = n(592125),
     d = n(944486),
-    f = n(981631),
-    _ = n(176505);
+    _ = n(981631),
+    f = n(176505);
 let p = {},
     h = !1;
 function m() {
@@ -23,18 +23,18 @@ function m() {
         }));
 }
 function g(e) {
-    if (null == e || e === o.V || (0, _.AB)(e) || null != u.Z.getChannel(e) || (m(), !s.Z.isConnected())) return Promise.resolve();
+    if (null == e || e === o.V || (0, f.AB)(e) || null != u.Z.getChannel(e) || (m(), !s.Z.isConnected())) return Promise.resolve();
     let t = p[e];
     if (null != t)
         if ('LOADING' === t.type) return t.promise;
         else return Promise.resolve();
     let n = (0, r.LX)(location.pathname, {
-            path: f.Z5c.CHANNEL(l.Hw.guildId(), l.Hw.channelId(), ':messageId'),
+            path: _.Z5c.CHANNEL(l.Hw.guildId(), l.Hw.channelId(), ':messageId'),
             exact: !0
         }),
         d = i.tn
             .get({
-                url: f.ANM.CHANNEL(e),
+                url: _.ANM.CHANNEL(e),
                 rejectWithError: !1
             })
             .then((t) => {

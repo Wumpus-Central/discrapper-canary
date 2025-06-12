@@ -4,12 +4,12 @@ n.d(t, {
     HD: () => d,
     PD: () => C,
     P_: () => g,
-    X8: () => f,
+    X8: () => _,
     hj: () => I,
     qT: () => R,
     qc: () => T,
     sS: () => m,
-    tY: () => _
+    tY: () => f
 }),
     n(388685);
 var r = n(615287),
@@ -21,8 +21,8 @@ var r = n(615287),
     c = n(998502);
 let u = new a.Z('OverlayRenderUtils'),
     d = 5000,
-    f = 8000,
-    _ = 12000;
+    _ = 8000,
+    f = 12000;
 function p(e) {
     let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.ZP],
         n = t.getGameForPID(e);

@@ -1,7 +1,7 @@
 n.d(t, {
     C$: () => m,
     Fe: () => d,
-    Fz: () => f,
+    Fz: () => _,
     IB: () => E,
     iF: () => h,
     jy: () => g
@@ -34,10 +34,10 @@ let c = 10,
 var d = (function (e) {
         return (e[(e.REDEEMED = 1)] = 'REDEEMED'), (e[(e.PENDING = 2)] = 'PENDING'), (e[(e.CONVERTED = 3)] = 'CONVERTED'), e;
     })({}),
-    f = (function (e) {
+    _ = (function (e) {
         return (e[(e.SUCCESS = 1)] = 'SUCCESS'), (e[(e.FAIL = 2)] = 'FAIL'), e;
     })({});
-class _ {
+class f {
     set(e, t) {
         this.cache.set(e, t);
     }
@@ -54,7 +54,7 @@ class _ {
         l(this, 'cache', void 0), l(this, 'expiration', void 0), (this.cache = new Map()), (this.expiration = Date.now() + u);
     }
 }
-let p = new _();
+let p = new f();
 async function h(e, t, n) {
     let i = JSON.stringify({
         index: e,

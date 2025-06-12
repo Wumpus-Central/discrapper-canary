@@ -13,13 +13,13 @@ let c = {
     },
     u = function (e) {
         let { className: t, defaultPosition: n = l.VD2.BOTTOM_RIGHT, children: u, topOffset: d } = e,
-            [f, _] = i.useState(n),
+            [_, f] = i.useState(n),
             p = (0, a.e7)([s.Z], () => s.Z.windowSize());
         return (0, r.jsx)(o._, {
             className: t,
-            position: f,
+            position: _,
             id: 0,
-            onMove: (e, t) => _(t),
+            onMove: (e, t) => f(t),
             maxX: p.width,
             maxY: p.height,
             edgeOffsetTop: null != d ? d : c.top,

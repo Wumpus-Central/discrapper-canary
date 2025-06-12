@@ -25,7 +25,7 @@ var r = n(392711),
     c = n(709054),
     u = n(981631),
     d = n(388032);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,7 +49,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -234,5 +234,5 @@ function C(e, t) {
     return (null != t || !n) && (null == t || !n || !!u.KA4.test(t.type));
 }
 function R() {
-    (0, o.Pe)(), T.reset(), i()(o.ZP).forOwn((e, t) => T.addRule(_({ type: t }, e)));
+    (0, o.Pe)(), T.reset(), i()(o.ZP).forOwn((e, t) => T.addRule(f({ type: t }, e)));
 }

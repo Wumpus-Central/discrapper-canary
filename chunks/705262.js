@@ -14,8 +14,8 @@ var r = n(255367),
     c = n(524437),
     u = n(481060),
     d = n(37234),
-    f = n(153867),
-    _ = n(607070),
+    _ = n(153867),
+    f = n(607070),
     p = n(100527),
     h = n(906732),
     m = n(550385),
@@ -37,8 +37,8 @@ var r = n(255367),
     D = n(469115),
     L = n(981631),
     x = n(474936),
-    k = n(874893),
-    M = n(526761),
+    M = n(874893),
+    k = n(526761),
     j = n(231338),
     U = n(388032),
     G = n(622581);
@@ -55,7 +55,7 @@ function B(e, t, n) {
         e
     );
 }
-function F(e) {
+function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -71,7 +71,7 @@ function F(e) {
     }
     return e;
 }
-function V(e, t) {
+function F(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -88,7 +88,7 @@ function Z(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : V(Object(t)).forEach(function (n) {
+            : F(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -118,8 +118,8 @@ var W = (function (e) {
     return (e.EDITOR = 'EDITOR'), (e.SETTINGS = 'SETTINGS'), e;
 })({});
 let K = Object.freeze({
-        EDITOR: M.fy.SLOW_USER_ACTION,
-        SETTINGS: M.fy.INFREQUENT_USER_ACTION
+        EDITOR: k.fy.SLOW_USER_ACTION,
+        SETTINGS: k.fy.INFREQUENT_USER_ACTION
     }),
     z = i.createContext({}),
     q = (e) => {
@@ -252,7 +252,7 @@ let K = Object.freeze({
             }),
             [b, y] = i.useState(!1),
             [O, v] = i.useState(-1),
-            I = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
+            I = (0, l.e7)([f.Z], () => f.Z.useReducedMotion),
             T = R.M.useExperiment({ location: 'GradientSelectors' }).enabled;
         i.useEffect(() => {
             ((O === D.XV.length - 2 && 'EDITOR' === a) || E === c.Us.EASTER_EGG) && y(!0);
@@ -265,11 +265,11 @@ let K = Object.freeze({
                         analyticsLocations: s,
                         themeName: c.Us[e.id]
                     }),
-                    (0, f.ZI)(
+                    (0, _.ZI)(
                         {
                             backgroundGradientPresetId: e.id,
                             theme: e.theme,
-                            useSystemTheme: g ? k.KW.OFF : void 0
+                            useSystemTheme: g ? M.KW.OFF : void 0
                         },
                         o
                     ),
@@ -354,7 +354,7 @@ let K = Object.freeze({
         let { systemSelectorFirst: t, hideSystemSelector: n = !1 } = e,
             { delay: a } = i.useContext(z),
             { analyticsLocations: o } = (0, h.ZP)(p.Z.CLIENT_THEMES_THEME_SELECTOR),
-            [s, c, u] = (0, l.Wu)([I.Z, T.ZP, C.Z], () => [I.Z.theme, null == C.Z.gradientPreset && null == S.L1.getSetting().customUserThemeSettings, T.ZP.useSystemTheme === k.KW.ON]),
+            [s, c, u] = (0, l.Wu)([I.Z, T.ZP, C.Z], () => [I.Z.theme, null == C.Z.gradientPreset && null == S.L1.getSetting().customUserThemeSettings, T.ZP.useSystemTheme === M.KW.ON]),
             d = (e) => {
                 (0, N.xs)(),
                     q({
@@ -362,9 +362,9 @@ let K = Object.freeze({
                         analyticsLocations: o,
                         themeName: 'default '.concat(e)
                     }),
-                    (0, f.ZI)({ theme: e }, a);
+                    (0, _.ZI)({ theme: e }, a);
             },
-            _ = (0, E.Q3)('appearance_settings');
+            f = (0, E.Q3)('appearance_settings');
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 !n &&
@@ -384,7 +384,7 @@ let K = Object.freeze({
                     isSelected: c && !u && s === j.BR.DARK,
                     onSelect: () => d(j.BR.DARK)
                 }),
-                _ &&
+                f &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(w.bD, {
@@ -453,7 +453,7 @@ let K = Object.freeze({
             value: c,
             children: (0, r.jsx)(
                 'div',
-                Z(F({ ref: s }, l), {
+                Z(V({ ref: s }, l), {
                     className: G.__invalid_container,
                     children: n
                 })

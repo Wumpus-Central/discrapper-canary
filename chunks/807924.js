@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(126387),
     i = n(493623),
     a = n(67966),
@@ -8,10 +8,10 @@ var r = n(126387),
     c = n(544338),
     u = n(581206),
     d = n(740078),
-    f = function (e, t) {
+    _ = function (e, t) {
         return (e = 'function' == typeof e ? e(Object.assign({}, t.rects, { placement: t.placement })) : e), (0, c.Z)('number' != typeof e ? e : (0, u.Z)(e, d.mv));
     };
-let _ = {
+let f = {
     name: 'arrow',
     enabled: !0,
     phase: 'main',
@@ -21,17 +21,17 @@ let _ = {
             a = e.name,
             c = e.options,
             u = n.elements.arrow,
-            _ = n.modifiersData.popperOffsets,
+            f = n.modifiersData.popperOffsets,
             p = (0, r.Z)(n.placement),
             h = (0, s.Z)(p),
             m = [d.t$, d.F2].indexOf(p) >= 0 ? 'height' : 'width';
-        if (u && _) {
-            var g = f(c.padding, n),
+        if (u && f) {
+            var g = _(c.padding, n),
                 E = (0, i.Z)(u),
                 b = 'y' === h ? d.we : d.t$,
                 y = 'y' === h ? d.I : d.F2,
-                O = n.rects.reference[m] + n.rects.reference[h] - _[h] - n.rects.popper[m],
-                v = _[h] - n.rects.reference[h],
+                O = n.rects.reference[m] + n.rects.reference[h] - f[h] - n.rects.popper[m],
+                v = f[h] - n.rects.reference[h],
                 I = (0, o.Z)(u),
                 T = I ? ('y' === h ? I.clientHeight || 0 : I.clientWidth || 0) : 0,
                 S = O / 2 - v / 2,

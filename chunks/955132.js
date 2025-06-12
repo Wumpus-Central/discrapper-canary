@@ -12,8 +12,8 @@ var r = n(570140),
     c = n(931619),
     u = n(358085),
     d = n(548570),
-    f = n(616810),
-    _ = n(755278),
+    _ = n(616810),
+    f = n(755278),
     p = n(866483),
     h = n(58);
 function m(e, t, n) {
@@ -70,8 +70,8 @@ function b(e, t) {
 }
 let y = new o.Z('ConnectionStore'),
     O = new d.Z(),
-    v = new f.Z(O),
-    I = new _.Z(O);
+    v = new _.Z(O),
+    I = new f.Z(O);
 (O.handleIdentify = () => {
     let e = s.default.getToken();
     if ((y.verbose('handleIdentify called', { hasToken: null != e }), null == e)) return null;

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V });
+n.d(t, { Z: () => F });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(833664),
     u = n(420660),
     d = n(100527),
-    f = n(906732),
-    _ = n(379357),
+    _ = n(906732),
+    f = n(379357),
     p = n(358696),
     h = n(649700),
     m = n(313201),
@@ -32,8 +32,8 @@ var i = n(120356),
     D = n(881530),
     L = n(228168),
     x = n(981631),
-    k = n(701488),
-    M = n(388032),
+    M = n(701488),
+    k = n(388032),
     j = n(227832);
 function U(e, t, n) {
     return (
@@ -76,7 +76,7 @@ function B(e, t) {
     }
     return n;
 }
-function F(e, t) {
+function V(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -87,11 +87,11 @@ function F(e, t) {
         e
     );
 }
-function V(e) {
-    let { user: t, currentUser: n, activity: i, application: U, voiceGuild: B, voiceChannel: V, className: Z, onClose: H, appContext: Y } = e,
+function F(e) {
+    let { user: t, currentUser: n, activity: i, application: U, voiceGuild: B, voiceChannel: F, className: Z, onClose: H, appContext: Y } = e,
         W = (0, m.Dt)(),
         K = (0, m.Dt)(),
-        { analyticsLocations: z } = (0, f.ZP)(d.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        { analyticsLocations: z } = (0, _.ZP)(d.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         { themeType: q } = (0, I.z)(),
         X = (0, h.Z)({
             activity: i,
@@ -110,7 +110,7 @@ function V(e) {
         }),
         $ = (0, O.Z)(i),
         ee = null != $.text && '' !== $.text,
-        { largeImage: et, smallImage: en } = (0, _.FO)(i, U),
+        { largeImage: et, smallImage: en } = (0, f.FO)(i, U),
         er = (0, D.Z)({
             location: 'UserProfileActivityCard',
             user: t,
@@ -144,7 +144,7 @@ function V(e) {
         },
         ea = () => {
             var e;
-            return (0, u.Z)(i) && null != V
+            return (0, u.Z)(i) && null != F
                 ? (0, r.jsxs)('div', {
                       className: j.voiceChannelText,
                       children: [
@@ -155,7 +155,7 @@ function V(e) {
                           }),
                           (0, r.jsx)(C.f, {
                               variant: 'heading-sm/semibold',
-                              text: V.name,
+                              text: F.name,
                               id: W
                           })
                       ]
@@ -176,7 +176,7 @@ function V(e) {
             if ((0, u.Z)(i) && null != B)
                 return (0, r.jsx)(C.Z, {
                     variant: 'text-xs/normal',
-                    text: M.intl.formatToPlainString(M.t['hq/Qzc'], { guildName: B.name }),
+                    text: k.intl.formatToPlainString(k.t['hq/Qzc'], { guildName: B.name }),
                     onClick: () => {
                         (0, g.X)(B.id), Q({ action: 'OPEN_VOICE_GUILD' }), null == H || H();
                     }
@@ -203,7 +203,7 @@ function V(e) {
             if (i.type === x.IIU.WATCHING) return null;
             if ((0, c.Z)(i)) return el();
             if ((0, E.dS)(i) && (null == (e = i.party) ? void 0 : e.size) != null && (null == (t = i.party) ? void 0 : t.size.length) >= 2) {
-                let e = M.intl.formatToPlainString(M.t['JC/3x8'], {
+                let e = k.intl.formatToPlainString(k.t['JC/3x8'], {
                     numSpeakers: null == (a = i.party) ? void 0 : a.size[0],
                     numListeners: (null == (o = i.party) ? void 0 : o.size[1]) - (null == (s = i.party) ? void 0 : s.size[0])
                 });
@@ -219,7 +219,7 @@ function V(e) {
         },
         el = () => {
             var e, t, n, a;
-            return (null == (e = i.party) ? void 0 : e.size) == null && i.application_id === k.Zc
+            return (null == (e = i.party) ? void 0 : e.size) == null && i.application_id === M.Zc
                 ? (0, r.jsxs)('div', {
                       className: j.gameState,
                       children: [
@@ -229,7 +229,7 @@ function V(e) {
                           }),
                           (0, r.jsx)(C.Z, {
                               variant: 'text-xs/normal',
-                              text: M.intl.formatToPlainString(M.t['u//9Bw'], {
+                              text: k.intl.formatToPlainString(k.t['u//9Bw'], {
                                   count: '0',
                                   max: null != (a = null == U ? void 0 : U.getMaxParticipants()) ? a : 0
                               })
@@ -248,8 +248,8 @@ function V(e) {
                                 variant: 'text-xs/normal',
                                 text:
                                     0 === i.party.size[1]
-                                        ? M.intl.formatToPlainString(M.t.IM4J4e, { count: i.party.size[0] })
-                                        : M.intl.formatToPlainString(M.t['u//9Bw'], {
+                                        ? k.intl.formatToPlainString(k.t.IM4J4e, { count: i.party.size[0] })
+                                        : k.intl.formatToPlainString(k.t['u//9Bw'], {
                                               count: i.party.size[0],
                                               max: i.party.size[1]
                                           })
@@ -284,16 +284,16 @@ function V(e) {
                       children: [ea(), eo(), es()]
                   }),
         ed = () =>
-            null == B || null == V
+            null == B || null == F
                 ? null
                 : (0, r.jsx)(R.Z, {
                       user: t,
                       guild: B,
-                      channel: V,
+                      channel: F,
                       onAction: Q,
                       onClose: H
                   }),
-        ef = () =>
+        e_ = () =>
             t.id === n.id
                 ? null
                 : (0, r.jsx)('div', {
@@ -305,7 +305,7 @@ function V(e) {
                           onClose: H
                       })
                   });
-    return (0, r.jsx)(f.Gt, {
+    return (0, r.jsx)(_.Gt, {
         value: z,
         children: (0, r.jsxs)(A.Z, {
             ref: J,
@@ -316,7 +316,7 @@ function V(e) {
             children: [
                 (0, r.jsx)(
                     N.Z,
-                    F(G({ textId: K }, $), {
+                    V(G({ textId: K }, $), {
                         contextMenu: (0, r.jsx)(w.Z, {
                             display: 'live',
                             user: t,
@@ -345,16 +345,16 @@ function V(e) {
                                                 className: j.badges
                                             }),
                                         ec(),
-                                        q === L.lY.MODAL_V2 && ef()
+                                        q === L.lY.MODAL_V2 && e_()
                                     ]
                                 }),
-                                q === L.lY.MODAL && ef()
+                                q === L.lY.MODAL && e_()
                             ]
                         }),
                         ed()
                     ]
                 }),
-                q !== L.lY.MODAL && q !== L.lY.MODAL_V2 && ef()
+                q !== L.lY.MODAL && q !== L.lY.MODAL_V2 && e_()
             ]
         })
     });

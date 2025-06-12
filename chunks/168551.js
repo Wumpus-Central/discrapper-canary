@@ -14,17 +14,17 @@ var r = n(73800),
     c = n(780384),
     u = n(210887),
     d = n(581883),
-    f = n(233398),
-    _ = n(514361),
+    _ = n(233398),
+    f = n(514361),
     p = n(629935),
     h = n(803038);
 let m = 'data-client-themes',
     g = 'custom-theme-background',
     E = () => {
-        let e = (0, l.e7)([_.Z], () => _.Z.gradientPreset);
+        let e = (0, l.e7)([f.Z], () => f.Z.gradientPreset);
         return r.useMemo(() => {
             if (null == e) return null;
-            let t = _.Z.getLinearGradient();
+            let t = f.Z.getLinearGradient();
             if (null == t) return null;
             let n = s.b[e.colors[0].token].hex,
                 r = s.b[e.colors[e.colors.length - 1].token].hex,
@@ -49,24 +49,24 @@ let m = 'data-client-themes',
     b = () => {
         let e = h.M.useExperiment({ location: 'RootThemeContextProvider' }).enabled,
             t = (0, l.e7)([u.Z], () => u.Z.theme),
-            { colors: n, chassisMixAmount: i, gradientAngle: s } = (0, f.I)(),
-            _ = (0, l.e7)([d.Z], () => {
+            { colors: n, chassisMixAmount: i, gradientAngle: s } = (0, _.I)(),
+            f = (0, l.e7)([d.Z], () => {
                 var e, t;
                 return null == (t = d.Z.settings.appearance) || null == (e = t.clientThemeSettings) ? void 0 : e.customUserThemeSettings;
             }),
             m = r.useRef(void 0);
         return (
             r.useEffect(() => {
-                if (!(0, o.isEqual)(_, m.current)) {
+                if (!(0, o.isEqual)(f, m.current)) {
                     var e, t, n;
-                    (m.current = _),
-                        f.I.setState({
-                            colors: null != (e = null == _ ? void 0 : _.colors) ? e : [],
-                            gradientAngle: null != (t = null == _ ? void 0 : _.gradientAngle) ? t : 0,
-                            chassisMixAmount: null != (n = null == _ ? void 0 : _.baseMix) ? n : 80
+                    (m.current = f),
+                        _.I.setState({
+                            colors: null != (e = null == f ? void 0 : f.colors) ? e : [],
+                            gradientAngle: null != (t = null == f ? void 0 : f.gradientAngle) ? t : 0,
+                            chassisMixAmount: null != (n = null == f ? void 0 : f.baseMix) ? n : 80
                         });
                 }
-            }, [_]),
+            }, [f]),
             r.useMemo(() => {
                 if (!e || 0 === n.length) return null;
                 let r = n.slice();
@@ -78,8 +78,8 @@ let m = 'data-client-themes',
                     l = a()(n[o.indexOf(Math.min(...o))]),
                     u = a()(n[o.indexOf(Math.max(...o))]),
                     d = 'linear-gradient('.concat(s, 'deg, ').concat(r.join(', '), ')'),
-                    f = (0, c.wj)(t),
-                    _ = a()(u).set('hsl.s', 1).set('hsl.l', 0.9),
+                    _ = (0, c.wj)(t),
+                    f = a()(u).set('hsl.s', 1).set('hsl.l', 0.9),
                     h = a()(l).set('hsl.s', 1).set('hsl.l', 0.05),
                     m = 100 - i;
                 return '.'
@@ -87,11 +87,11 @@ let m = 'data-client-themes',
                     .concat(d, ';\n      --custom-bg-overlay-opacity-chat-base-light: 0.95;\n      --custom-bg-overlay-opacity-floating-base-light: 1.0;\n      --theme-bg-overlay-opacity-mix-amount: ')
                     .concat(((30 + 0.7 * m) / 100).toFixed(2), ';\n      ')
                     .concat(p.LN, ': ')
-                    .concat(f ? (25 + 0.35 * m).toFixed(1) : (30 - 0.2 * i).toFixed(1), '%;\n      ')
+                    .concat(_ ? (25 + 0.35 * m).toFixed(1) : (30 - 0.2 * i).toFixed(1), '%;\n      ')
                     .concat(p.Po, ': ')
-                    .concat(_.css(), ';\n      ')
+                    .concat(f.css(), ';\n      ')
                     .concat(p.ej, ': ')
-                    .concat((0, p.dw)(_), ';\n      ')
+                    .concat((0, p.dw)(f), ';\n      ')
                     .concat(p.jX, ': ')
                     .concat(h.css(), ';\n      ')
                     .concat(p.i4, ': ')
@@ -111,7 +111,7 @@ let m = 'data-client-themes',
                         ';\n      '
                     )
                     .concat(p.ld, ': ')
-                    .concat(f ? 30 : 40, '%;\n      --bg-overlay-selected: unset;\n      --bg-overlay-hover: unset;\n      --bg-overlay-active: unset;\n    }');
+                    .concat(_ ? 30 : 40, '%;\n      --bg-overlay-selected: unset;\n      --bg-overlay-hover: unset;\n      --bg-overlay-active: unset;\n    }');
             }, [n, i, s, e, t])
         );
     },

@@ -72,7 +72,7 @@ function f(e) {
           });
 }
 function h(e) {
-    let { imageUrl: t, name: n, description: i, formattedPrice: c, role: h, ctaComponent: g, shouldShowFullDescriptionButton: _ = !0, onShowFullDescription: b, productType: E, onTapCard: y, actionMenu: x, showOpaqueBackground: v = !1, hideRoleTag: O = !1, lineClamp: C = 1, cardWidth: j = 332, cardHeight: S, thumbnailHeight: I = 187, descriptionTextVariant: N = 'text-sm/normal', isDraft: T = !1 } = e,
+    let { imageUrl: t, name: n, description: i, formattedPrice: c, role: h, ctaComponent: g, shouldShowFullDescriptionButton: _ = !0, onShowFullDescription: b, productType: E, onTapCard: y, actionMenu: x, showOpaqueBackground: v = !1, hideRoleTag: O = !1, lineClamp: j = 1, cardWidth: C = 332, cardHeight: S, thumbnailHeight: I = 187, descriptionTextVariant: N = 'text-sm/normal', isDraft: T = !1 } = e,
         P = (0, o.hQ)(),
         A = (0, r.jsxs)(r.Fragment, {
             children: [
@@ -103,7 +103,7 @@ function h(e) {
                                     children: (0, r.jsx)(s.Z, {
                                         variant: N,
                                         color: 'text-muted',
-                                        lineClamp: C,
+                                        lineClamp: j,
                                         text: i
                                     })
                                 }),
@@ -156,7 +156,7 @@ function h(e) {
           })
         : (0, r.jsx)('div', {
               style: {
-                  width: j,
+                  width: C,
                   height: S
               },
               children: (0, r.jsx)(a.kL8, {

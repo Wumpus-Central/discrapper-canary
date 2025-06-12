@@ -40,7 +40,7 @@ async function l() {
     else if (u instanceof r.Z && ('object' == typeof d || null == d)) (e = u.id), (t = u.getAvatarURL(void 0, 80)), (n = d);
     else throw Error('Invalid arguments');
     if (null == e) return Promise.resolve();
-    let { waitForRefetch: f } = (0, i.x)({ location: 'preloadUserProfileForPopout' });
+    let { waitForRefetch: _ } = (0, i.x)({ location: 'preloadUserProfileForPopout' });
     await (0, a.Z)(
         e,
         t,
@@ -48,7 +48,7 @@ async function l() {
             {
                 withMutualFriends: !0,
                 withMutualGuilds: !0,
-                waitForRefetch: f
+                waitForRefetch: _
             },
             n
         )

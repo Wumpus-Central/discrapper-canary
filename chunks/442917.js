@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(442837),
     u = n(46973),
     d = n(481060),
-    f = n(846027),
-    _ = n(475179),
+    _ = n(846027),
+    f = n(475179),
     p = n(925549),
     h = n(37234),
     m = n(519938),
@@ -31,14 +31,14 @@ var r = n(255367),
     D = n(703656),
     L = n(937995),
     x = n(618158),
-    k = n(922745),
-    M = n(197016),
+    M = n(922745),
+    k = n(197016),
     j = n(800965),
     U = n(445062),
     G = n(7188),
     B = n(199902),
-    F = n(314897),
-    V = n(131951),
+    V = n(314897),
+    F = n(131951),
     Z = n(699516),
     H = n(594174),
     Y = n(248402),
@@ -89,7 +89,7 @@ function ed(e) {
     }
     return e;
 }
-function ef(e, t) {
+function e_(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -101,12 +101,12 @@ function ef(e, t) {
     }
     return n;
 }
-function e_(e, t) {
+function ef(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : ef(Object(t)).forEach(function (n) {
+            : e_(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -205,7 +205,7 @@ class ep extends i.PureComponent {
     render() {
         let { channel: e, streamId: t, participantOnScreen: n, isVideoEnabled: i, width: a } = this.props,
             o = (0, I.F6)(e, H.default, Z.Z),
-            s = (null == n ? void 0 : n.id) === F.default.getId() && i,
+            s = (null == n ? void 0 : n.id) === V.default.getId() && i,
             l = this.renderStreamState(),
             c = this.activeStreamForSelectedParticipant,
             u = null;
@@ -217,7 +217,7 @@ class ep extends i.PureComponent {
                       (u = (0, r.jsx)(Q.Z, {
                           paused: this.streamerPaused,
                           streamId: t,
-                          component: V.Z.getVideoComponent(),
+                          component: F.Z.getVideoComponent(),
                           mirror: s,
                           children: (0, r.jsx)(P.Z, {
                               size: d.EFr.SIZE_80,
@@ -230,8 +230,8 @@ class ep extends i.PureComponent {
                 children: (e) => {
                     var t;
                     return (0, r.jsx)(
-                        k.Z,
-                        e_(
+                        M.Z,
+                        ef(
                             ed(
                                 {
                                     title: o,
@@ -260,7 +260,7 @@ class ep extends i.PureComponent {
             eu(this, 'state', { screensharePopoutOpen: !1 }),
             eu(this, '_ref', i.createRef()),
             eu(this, 'handleVideo', (e) => {
-                f.Z.setVideoEnabled(e);
+                _.Z.setVideoEnabled(e);
             }),
             eu(this, 'handleEnableVideoWhenUnavailable', () => {
                 let { isVideoAvailable: e } = this.props;
@@ -273,7 +273,7 @@ class ep extends i.PureComponent {
                 let n = null != (e = t.getGuildId()) ? e : eo.ME;
                 (0, D.XU)(n, t.id), p.Z.channelListScrollTo(n, t.id);
                 let r = this.activeStreamForSelectedParticipant;
-                null != r && _.Z.selectParticipant(r.channelId, (0, A.V9)(r));
+                null != r && f.Z.selectParticipant(r.channelId, (0, A.V9)(r));
             }),
             eu(this, 'handleStartStream', () => {
                 let { canGoLive: e, channel: t } = this.props,
@@ -304,7 +304,7 @@ class ep extends i.PureComponent {
                 });
             }),
             eu(this, 'renderDisconnectButton', () =>
-                (0, r.jsx)(M.Z, {
+                (0, r.jsx)(k.Z, {
                     className: el.rightTrayIcon,
                     onClick: () => (0, v.v)(g.Z.VIDEO_PIP, v.d.DISCONNECT)
                 })
@@ -359,13 +359,13 @@ function eh(e) {
     let { channel: t, width: n } = e,
         i = (0, c.e7)([Y.Z], () => Y.Z.getSpeaker(t.id)),
         a = (0, c.e7)([b.Z], () => b.Z.getParticipant(t.id, i), [t.id, i]),
-        o = (0, c.e7)([V.Z], () => l()(V.Z.getVideoDevices()).values().first()),
+        o = (0, c.e7)([F.Z], () => l()(F.Z.getVideoDevices()).values().first()),
         s = (0, c.e7)([W.Z], () => (null != a && a.type !== es.fO.ACTIVITY && a.type !== es.fO.HIDDEN_STREAM ? W.Z.getStreamId(a.user.id, t.getGuildId(), (0, y.Z)(a.type)) : null), [a, t]),
         d = null == o || o.disabled,
-        f = !d,
-        _ = (0, c.e7)([V.Z], () => !d && V.Z.isVideoEnabled(), [d]),
-        p = (0, c.e7)([V.Z], () => (0, N.Z)(V.Z)),
-        h = (0, c.e7)([F.default], () => F.default.getId()),
+        _ = !d,
+        f = (0, c.e7)([F.Z], () => !d && F.Z.isVideoEnabled(), [d]),
+        p = (0, c.e7)([F.Z], () => (0, N.Z)(F.Z)),
+        h = (0, c.e7)([V.default], () => V.default.getId()),
         m = (0, c.e7)([B.Z], () => B.Z.getCurrentUserActiveStream()),
         g = null != a && 'user' in a ? a.user.id : '',
         E = (0, S.Z)((null == a ? void 0 : a.type) === es.fO.STREAM ? u.Yn.STREAM : u.Yn.DEFAULT, g),
@@ -375,8 +375,8 @@ function eh(e) {
         channel: t,
         streamId: s,
         participantOnScreen: a,
-        isVideoAvailable: f,
-        isVideoEnabled: _,
+        isVideoAvailable: _,
+        isVideoEnabled: f,
         canGoLive: p,
         currentUserId: h,
         activeStreams: v,

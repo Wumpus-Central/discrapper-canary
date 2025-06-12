@@ -9,8 +9,8 @@ var a = n(442837),
     c = n(232567),
     u = n(864106),
     d = n(710845),
-    f = n(292419),
-    _ = n(566006),
+    _ = n(292419),
+    f = n(566006),
     p = n(686478),
     h = n(952537),
     m = n(218543),
@@ -70,7 +70,7 @@ function x(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,7 +81,7 @@ function k(e, t) {
         e
     );
 }
-function M(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -119,7 +119,7 @@ let U = new d.Z('ConnectionStore'),
                     null == i
                         ? void 0
                         : i.merge(
-                              k(L({}, r), {
+                              M(L({}, r), {
                                   recipients: i.recipients,
                                   bitrate: null != (n = r.bitrate) ? n : i.bitrate
                               })
@@ -154,7 +154,7 @@ let U = new d.Z('ConnectionStore'),
         ),
         (e) => 'SOUNDBOARD_SOUNDS' !== e
     ),
-    F = new P.Z(
+    V = new P.Z(
         w.Wb,
         (e, t) => (
             (e =
@@ -168,7 +168,7 @@ let U = new d.Z('ConnectionStore'),
         ),
         (e) => 'GUILD_MEMBERS_CHUNK' !== e
     ),
-    V = new P.Z(
+    F = new P.Z(
         w.Wb,
         (e, t) => (
             (e =
@@ -210,9 +210,9 @@ function K(e) {
 }
 function z(e, t, n) {
     var r, a;
-    let { roles: o, nick: s, avatar: l, avatar_decoration_data: c, flags: d, premium_since: f, pending: _, joined_at: p, communication_disabled_until: h, unusual_dm_activity_until: m } = n,
+    let { roles: o, nick: s, avatar: l, avatar_decoration_data: c, flags: d, premium_since: _, pending: f, joined_at: p, communication_disabled_until: h, unusual_dm_activity_until: m } = n,
         g = v.ZP.getMember(e, t.id);
-    (null != g && g.nick === s && g.avatar === l && i().isEqual(g.roles, o) && (0, u.sr)(null != (r = g.avatarDecoration) ? r : null, null != c ? c : null) && g.premiumSince === f && g.isPending === _ && g.joinedAt === p && g.communicationDisabledUntil === h && g.flags === d && (null != (a = g.unusualDMActivityUntil) ? a : null) === (null != m ? m : null)) ||
+    (null != g && g.nick === s && g.avatar === l && i().isEqual(g.roles, o) && (0, u.sr)(null != (r = g.avatarDecoration) ? r : null, null != c ? c : null) && g.premiumSince === _ && g.isPending === f && g.joinedAt === p && g.communicationDisabledUntil === h && g.flags === d && (null != (a = g.unusualDMActivityUntil) ? a : null) === (null != m ? m : null)) ||
         K({
             type: 'GUILD_MEMBER_ADD',
             guildId: e,
@@ -221,8 +221,8 @@ function z(e, t, n) {
             nick: s,
             avatar: l,
             avatarDecoration: c,
-            premiumSince: f,
-            isPending: _,
+            premiumSince: _,
+            isPending: f,
             joinedAt: p,
             communicationDisabledUntil: h,
             unusualDMActivityUntil: m,
@@ -256,7 +256,7 @@ function X(e) {
 }
 function Q(e) {
     let { guildId: t, user: n, status: r, activities: i, hiddenActivities: a, clientStatus: o, processedAtTimestamp: s } = e;
-    V.add({
+    F.add({
         guildId: t,
         user: n,
         status: r,
@@ -648,7 +648,7 @@ Y(
         (e) => O.o.loadGuildIds([e.guild_id]),
         (e, t) => {
             let { newly_created: n } = e,
-                r = M(e, ['newly_created']);
+                r = k(e, ['newly_created']);
             K({
                 type: t,
                 isNewlyCreated: n,
@@ -798,7 +798,7 @@ Y(
     }),
     H(['GUILD_MEMBERS_CHUNK'], (e) => {
         a.ZP.Emitter.batched(() => {
-            F.add({
+            V.add({
                 guildId: e.guild_id,
                 members: e.members,
                 notFound: e.not_found
@@ -1193,7 +1193,7 @@ Y(
                 id: e.answer_id,
                 name: ''
             },
-            reactionType: _.O.VOTE
+            reactionType: f.O.VOTE
         });
     }),
     H(['MESSAGE_REACTION_REMOVE_ALL'], (e) => {
@@ -1501,7 +1501,7 @@ Y(
             customId: e.custom_id,
             application: e.application,
             title: e.title,
-            components: (0, f.uZ)(e.components),
+            components: (0, _.uZ)(e.components),
             nonce: e.nonce
         });
     }),

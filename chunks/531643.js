@@ -12,8 +12,8 @@ var i = n(120356),
     c = n(355314),
     u = n(310752),
     d = n(731994),
-    f = n(948979);
-function _(e, t, n) {
+    _ = n(948979);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,15 +37,15 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
 function h(e) {
-    let { title: t, help: n, showPremiumUpsell: i, transitionState: o, icons: _, fileSize: p, onClose: h } = e,
+    let { title: t, help: n, showPremiumUpsell: i, transitionState: o, icons: f, fileSize: p, onClose: h } = e,
         m = (0, l.Dt)(),
-        g = null != _ ? _ : d.J6;
+        g = null != f ? f : d.J6;
     return i
         ? (0, r.jsx)(c.Z, {
               transitionState: o,
@@ -58,18 +58,18 @@ function h(e) {
               transitionState: o,
               parentComponent: 'UploadError',
               children: (0, r.jsx)('div', {
-                  className: a()(f.uploadDropModal, f.error),
+                  className: a()(_.uploadDropModal, _.error),
                   children: (0, r.jsxs)('div', {
-                      className: f.inner,
+                      className: _.inner,
                       children: [
                           (0, r.jsx)(u.Z, { icons: g }),
                           (0, r.jsx)('div', {
                               id: m,
-                              className: f.title,
+                              className: _.title,
                               children: t
                           }),
                           (0, r.jsx)('div', {
-                              className: f.instructions,
+                              className: _.instructions,
                               children: n
                           })
                       ]

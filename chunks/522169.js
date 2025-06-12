@@ -7,8 +7,8 @@ var r = n(48657),
     c = n(800054),
     u = n(760725),
     d = n(15998),
-    f = n(840475).aTypedArrayConstructor,
-    _ = n(190475);
+    _ = n(840475).aTypedArrayConstructor,
+    f = n(190475);
 e.exports = function (e) {
     var t,
         n,
@@ -25,6 +25,6 @@ e.exports = function (e) {
         T = void 0 !== I,
         S = c(O);
     if (S && !u(S)) for (b = (E = l(O, S)).next, O = []; !(g = i(b, E)).done; ) O.push(g.value);
-    for (T && v > 2 && (I = r(I, arguments[2])), n = s(O), h = d((p = new (f(y))(n))), t = 0; n > t; t++) (m = T ? I(O[t], t) : O[t]), (p[t] = h ? _(m) : +m);
+    for (T && v > 2 && (I = r(I, arguments[2])), n = s(O), h = d((p = new (_(y))(n))), t = 0; n > t; t++) (m = T ? I(O[t], t) : O[t]), (p[t] = h ? f(m) : +m);
     return p;
 };

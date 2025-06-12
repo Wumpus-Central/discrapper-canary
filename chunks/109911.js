@@ -182,7 +182,7 @@ function d(e) {
             }
         ]
     });
-class f extends i.Z {
+class _ extends i.Z {
     _initialize() {
         r.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen);
     }
@@ -193,7 +193,7 @@ class f extends i.Z {
         d('SearchExperimentManager', !1);
     }
 }
-new f(),
+new _(),
     (0, a.B)({
         kind: 'user',
         id: '2025-05_icymi_new_conversation_summaries',

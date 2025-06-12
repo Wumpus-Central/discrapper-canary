@@ -20,8 +20,8 @@ var r = n(255367),
     x = n(884902),
     v = n(670188),
     O = n(695346),
-    C = n(271383),
-    j = n(594174),
+    j = n(271383),
+    C = n(594174),
     S = n(768581),
     I = n(900849),
     N = n(506071),
@@ -89,14 +89,14 @@ function M(e) {
         [q, Q] = i.useState((null == H ? void 0 : H.coverImage) == null),
         J = (0, c.e7)([d.Z], () => d.Z.useReducedMotion),
         $ = (0, c.e7)(
-            [C.ZP, j.default],
+            [j.ZP, C.default],
             () => {
                 var e;
-                return C.ZP.isMember(null == H ? void 0 : H.guildId, null == (e = j.default.getCurrentUser()) ? void 0 : e.id);
+                return j.ZP.isMember(null == H ? void 0 : H.guildId, null == (e = C.default.getCurrentUser()) ? void 0 : e.id);
             },
             [H]
         ),
-        ee = (0, c.e7)([C.ZP], () => ((null == H ? void 0 : H.authorId) != null ? C.ZP.getMember(H.guildId, H.authorId) : null)),
+        ee = (0, c.e7)([j.ZP], () => ((null == H ? void 0 : H.authorId) != null ? j.ZP.getMember(H.guildId, H.authorId) : null)),
         et = (0, f.Z)((null == ee ? void 0 : ee.avatarDecoration) != null ? (null == ee ? void 0 : ee.avatarDecoration) : null == H || null == (t = H.user) ? void 0 : t.avatarDecoration),
         [en, er, ei] = i.useMemo(() => {
             var e;

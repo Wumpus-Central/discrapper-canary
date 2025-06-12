@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(607070),
     d = n(70097),
-    f = n(451478),
-    _ = n(617136),
+    _ = n(451478),
+    f = n(617136),
     p = n(918701),
     h = n(475595),
     m = n(566078),
@@ -21,8 +21,8 @@ var r = n(255367),
 let v = function (e) {
     let t,
         { className: n, quest: a, autoplay: v = !0, learnMoreStyle: I = null } = e,
-        T = (0, _.O5)(),
-        S = (0, l.e7)([f.Z], () => f.Z.isFocused()),
+        T = (0, f.O5)(),
+        S = (0, l.e7)([_.Z], () => _.Z.isFocused()),
         A = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         N = i.useMemo(() => (0, h.fh)(a, h.eC.REWARD), [a]),
         C = i.useCallback(
@@ -33,7 +33,7 @@ let v = function (e) {
                         questId: a.id,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,
-                        questContentCTA: _.jZ.REWARD_LEARN_MORE
+                        questContentCTA: f.jZ.REWARD_LEARN_MORE
                     }),
                     (0, b.navigateToQuestHome)({
                         fromContent: e.questContent,

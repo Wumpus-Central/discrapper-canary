@@ -8,9 +8,9 @@ var r = n(255367),
     c = n(43231);
 let u = (e) => ''.concat(e.toFixed(0), '%'),
     d = i.forwardRef(function (e, t) {
-        let { value: n, minValue: a = 0, maxValue: d = 100, onChange: f, onInteraction: _, renderValue: p = u, 'aria-label': h } = e,
+        let { value: n, minValue: a = 0, maxValue: d = 100, onChange: _, onInteraction: f, renderValue: p = u, 'aria-label': h } = e,
             m = i.useRef(null),
-            g = i.useRef(o().debounce(() => (null == _ ? void 0 : _(s.U.SLIDER)), 100));
+            g = i.useRef(o().debounce(() => (null == f ? void 0 : f(s.U.SLIDER)), 100));
         i.useImperativeHandle(
             t,
             () => ({
@@ -27,7 +27,7 @@ let u = (e) => ''.concat(e.toFixed(0), '%'),
             []
         );
         let E = (e) => {
-            f(e), g.current();
+            _(e), g.current();
         };
         return (0, r.jsx)('div', {
             className: c.sliderContainer,
@@ -40,7 +40,7 @@ let u = (e) => ''.concat(e.toFixed(0), '%'),
                 minValue: a,
                 maxValue: d,
                 onValueChange: E,
-                asValueChanges: f,
+                asValueChanges: _,
                 onValueRender: p,
                 orientation: 'horizontal',
                 'aria-label': h

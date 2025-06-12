@@ -19,9 +19,9 @@ let a = function (e, t) {
         var u = o[o.length - 1];
         n = '.' === u || '..' === u || '' === u;
     } else n = !1;
-    for (var d = 0, f = o.length; f >= 0; f--) {
-        var _ = o[f];
-        '.' === _ ? i(o, f) : '..' === _ ? (i(o, f), d++) : d && (i(o, f), d--);
+    for (var d = 0, _ = o.length; _ >= 0; _--) {
+        var f = o[_];
+        '.' === f ? i(o, _) : '..' === f ? (i(o, _), d++) : d && (i(o, _), d--);
     }
     if (!c) for (; d--; ) o.unshift('..');
     !c || '' === o[0] || (o[0] && r(o[0])) || o.unshift('');
