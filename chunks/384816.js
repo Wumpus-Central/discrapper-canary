@@ -28,8 +28,8 @@ function I(e) {
         N = (0, s.Y)({ userId: n.id }),
         A = (0, r.e7)([d.Z], () => d.Z.hidePersonalInformation),
         C = (0, r.e7)([c.default], () => c.default.locale),
-        _ = (0, g.Z)(n.id),
-        w = (0, p.Z)(n.id);
+        w = (0, g.Z)(n.id),
+        _ = (0, p.Z)(n.id);
     return (0, l.jsxs)(i.zJl, {
         fade: !0,
         className: Z.scroller,
@@ -71,21 +71,21 @@ function I(e) {
                     tooltipDelay: O.vB
                 })
             }),
-            _.length > 0 &&
+            w.length > 0 &&
                 (0, l.jsx)(b.Z, {
                     heading: y.intl.string(y.t['3fe7U1']),
                     scrollIntoView: P === O.Tb.CONNECTIONS,
                     children: (0, l.jsx)(j.ZP, {
-                        connectedAccounts: _,
+                        connectedAccounts: w,
                         className: Z.connections,
                         userId: n.id,
                         locale: C
                     })
                 }),
-            w.length > 0 &&
+            _.length > 0 &&
                 (0, l.jsx)(b.Z, {
                     heading: y.intl.string(y.t.PHjkRE),
-                    children: w.map((e) =>
+                    children: _.map((e) =>
                         (0, l.jsx)(
                             j.tH,
                             {

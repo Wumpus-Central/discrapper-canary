@@ -20,8 +20,8 @@ var r = n(255367),
     v = n(566078),
     y = n(65443),
     O = n(340100),
-    T = n(644646),
-    N = n(667105),
+    N = n(644646),
+    T = n(667105),
     E = n(341907),
     q = n(128535),
     S = n(87894),
@@ -103,7 +103,7 @@ function Z(e) {
         p = (0, a.e7)([g.Z], () => g.Z.isEnrolling(t.id)),
         h = (0, f.q8)(t),
         j = (0, f.Vl)(t),
-        b = (0, N.Ks)({
+        b = (0, T.Ks)({
             progressState: n,
             quest: t,
             location: i,
@@ -142,21 +142,21 @@ function Z(e) {
 }
 let L = (e) => {
     var t;
-    let { quest: n, location: i, size: c, isFocused: N, isQuestExpired: L, isExpanded: B, isAnimating: U, contentPosition: Q } = e,
+    let { quest: n, location: i, size: c, isFocused: T, isQuestExpired: L, isExpanded: B, isAnimating: U, contentPosition: Q } = e,
         W = (0, x._Q)(n),
-        z = (0, x.B6)(null == (t = n.userStatus) ? void 0 : t.completedAt, {
+        G = (0, x.B6)(null == (t = n.userStatus) ? void 0 : t.completedAt, {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
         }),
-        F = W >= x.OH.ACCEPTED,
-        G = W >= x.OH.COMPLETED,
+        z = W >= x.OH.ACCEPTED,
+        F = W >= x.OH.COMPLETED,
         H = W >= x.OH.CLAIMED,
         X = (0, f.Xv)(n.config),
         Y = (0, S.uq)(i),
         V = i === h.jn.QUESTS_EMBED,
         K = B || U,
-        J = F && !H && Y,
+        J = z && !H && Y,
         $ = (0, x.t5)(n, w.dr.QUESTS_CARD, i),
         { xboxAndPlaystationAccounts: ee } = (0, x.z6)(),
         et = (0, p.O5)(),
@@ -173,10 +173,10 @@ let L = (e) => {
         ea = (0, a.e7)([u.default], () => u.default.locale),
         el = (0, x.z)(n),
         ec = Y && X,
-        eu = L && !G,
-        ed = ee.length > 0 && Y && (0, f.$J)(n) && F && !G && !el,
-        em = (0, r.jsx)(T.Z, {
-            autoplay: N,
+        eu = L && !F,
+        ed = ee.length > 0 && Y && (0, f.$J)(n) && z && !F && !el,
+        em = (0, r.jsx)(N.Z, {
+            autoplay: T,
             className: o()(I.gridImg, {
                 [I.questRewardGiftInventory]: Y && 'lg' === c,
                 [I.questRewardEmbed]: V && 'lg' === c,
@@ -219,7 +219,7 @@ let L = (e) => {
                                             ? (0, r.jsx)(P.Z, {
                                                   questConfig: n.config,
                                                   fallback: em,
-                                                  isFocused: N
+                                                  isFocused: T
                                               })
                                             : em
                                     ]
@@ -230,7 +230,7 @@ let L = (e) => {
                         className: o()(I.gridText, I.taskDetails),
                         children: [
                             (0, r.jsx)(l.Text, {
-                                variant: A(i, c, F),
+                                variant: A(i, c, z),
                                 className: I.taskInstructions,
                                 children: L ? _.intl.formatToPlainString(_.t['ge+AJi'], { questName: n.config.messages.questName }) : $
                             }),
@@ -253,8 +253,8 @@ let L = (e) => {
                                               v = c.defaultReward.messages.nameWithArticle,
                                               y = u ? v : C,
                                               O = (0, f.Kr)(o.config),
-                                              T = (0, f.b7)(o),
-                                              N = (0, b.U)();
+                                              N = (0, f.b7)(o),
+                                              T = (0, b.U)();
                                           if (h) {
                                               let e = j
                                                       ? (0, f.o9)({
@@ -294,15 +294,15 @@ let L = (e) => {
                                                       maxRewardCount: (0, m.Bs)(E.approximateCount, a),
                                                       helpCenterLink: d.Z.getArticleURL(R.BhN.QUESTS_LEARN_MORE)
                                                   })
-                                                : N
+                                                : T
                                                   ? p
                                                   : null != O
                                                     ? _.intl.formatToPlainString(_.t.Pu5eyM, {
                                                           reward: y,
                                                           duration: O
                                                       })
-                                                    : null != T
-                                                      ? T.description
+                                                    : null != N
+                                                      ? N.description
                                                       : _.intl.formatToPlainString(_.t.ttFsLi, { reward: y });
                                       })({
                                           quest: n,
@@ -311,7 +311,7 @@ let L = (e) => {
                                           sharedQuestFields: er,
                                           withCopySimplification: en,
                                           collectibleQuestRewardDescription: ei,
-                                          formattedCompletionDate: z
+                                          formattedCompletionDate: G
                                       })
                                   })
                         ]
@@ -354,7 +354,7 @@ let L = (e) => {
                                           },
                                           children: _.intl.string(_.t.LLLLPD)
                                       }),
-                                  L && !G
+                                  L && !F
                                       ? null
                                       : (0, r.jsx)(Z, {
                                             quest: n,
@@ -368,7 +368,7 @@ let L = (e) => {
                     J &&
                         (0, r.jsx)(O.Z, {
                             className: I.gridProgressBar,
-                            color: G ? l.TVs.colors.TEXT_POSITIVE : l.TVs.colors.BG_BRAND,
+                            color: F ? l.TVs.colors.TEXT_POSITIVE : l.TVs.colors.BG_BRAND,
                             quest: n,
                             isInventory: Y
                         })

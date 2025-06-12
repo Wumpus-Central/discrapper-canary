@@ -101,8 +101,8 @@ function x(e) {
         [n, i, a, o, l] = (0, s.Wu)([O.Z], () => [O.Z.isEntitlementFetched(e), O.Z.fetchPotionCount(e), O.Z.isEntitlementFetching(e), O.Z.getEntitlement(e), O.Z.getErrored(e)]);
     return (
         (0, r.useEffect)(() => {
-            n || a || !t || (0, y.gA)(e);
-        }, [n, a, e, t]),
+            null != l || n || a || !t || (0, y.gA)(e);
+        }, [n, a, e, t, l]),
         {
             entitlement: o,
             numPotions: i,

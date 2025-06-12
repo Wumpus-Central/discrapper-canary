@@ -28,33 +28,33 @@ var l = t(255367),
     N = t(349966),
     A = t(923243);
 function C(e) {
-    let { user: n, guildId: t, channelId: C, messageId: _, roleId: w, sessionId: M, transitionState: R, openedAt: U, onClose: L, sourceAnalyticsLocations: D = [] } = e,
+    let { user: n, guildId: t, channelId: C, messageId: w, roleId: _, sessionId: R, transitionState: M, openedAt: U, onClose: L, sourceAnalyticsLocations: D = [] } = e,
         B = t === E.ME ? void 0 : t,
         G = (0, g.ZP)(n.id, B),
         k = f.ZP.getName(B, C, n),
-        { analyticsLocations: V } = (0, c.ZP)([...D, a.Z.USER_PROFILE_MODAL]),
-        Y = (0, p.ZB)({
+        { analyticsLocations: Y } = (0, c.ZP)([...D, a.Z.USER_PROFILE_MODAL]),
+        V = (0, p.ZB)({
             layout: 'MODAL',
             userId: n.id,
-            sourceSessionId: M,
+            sourceSessionId: R,
             guildId: B,
             channelId: C,
-            messageId: _,
-            roleId: w
+            messageId: w,
+            roleId: _
         }),
         F = r.useRef(null),
         W = (0, s.Z)(F),
         z = (0, i.e7)([d.default], () => ['en-US', 'en-GB'].includes(d.default.locale)) ? S.intl.formatToPlainString(S.t.KRe1Fh, { name: k }) : S.intl.string(S.t['3N/J2t']);
     return (0, l.jsx)(c.Gt, {
-        value: V,
+        value: Y,
         children: (0, l.jsx)(p.Mt, {
-            value: Y,
+            value: V,
             openedAt: U,
             fetchStartedAt: null == G ? void 0 : G.fetchStartedAt,
             fetchEndedAt: null == G ? void 0 : G.fetchEndedAt,
             isLoaded: null == G ? void 0 : G.isLoaded,
             children: (0, l.jsxs)(o.Y0X, {
-                transitionState: R,
+                transitionState: M,
                 className: T.root,
                 hideShadow: !0,
                 'aria-label': z,

@@ -1,122 +1,104 @@
-n(388685), n(467055);
+n(388685);
 var r,
-    i,
-    l,
-    a = n(108131),
-    o = n.n(a),
-    s = n(442837),
-    c = n(570140),
-    u = n(314897),
-    d = n(626135),
-    p = n(981631);
-let h = {
-        user: {},
-        guild: {}
-    },
+    i = n(108131),
+    l = n.n(i),
+    a = n(442837),
+    o = n(570140),
+    s = n(314897),
+    c = n(626135),
+    u = n(508825),
+    d = n(981631);
+function p(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let h = [u.Cm.User],
     f = {
         user: {},
         guild: {}
     },
-    g = {};
-class m extends (r = s.ZP.Store) {
+    g = {},
+    m = {};
+function b(e) {
+    let t = m[e];
+    return null == t && ((t = l().v3(e)), (m[e] = t)), t;
+}
+class _ extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(u.default);
-    }
-    handleConnectionOpen(e) {
-        this.processExperimentsMessage(e.apexUserExperiments), this.trackCurrentEvaluationExposure('user', u.default.getId(), 'connection_open');
+        this.waitFor(s.default);
     }
     processExperimentsMessage(e) {
-        var t;
-        if (null == e || null == e.header || null == e.body) return !1;
-        let n = e.header[1],
-            r = e.body[0],
-            i = e.body[1];
-        if (null == n || null == r || null == i) return !1;
-        let l = {
-            evaluationId: n,
-            experiments: Object.fromEntries(
-                (null != (t = e.body[2]) ? t : [])
-                    .filter((e) => {
-                        let [t, n, r] = e;
-                        return null != t && null != n;
-                    })
-                    .map((e) => {
-                        let [t, n, r] = e;
-                        return [
-                            t,
-                            {
-                                hashedId: t,
-                                config: n,
-                                isWarehouseOverride: 1 === r
-                            }
-                        ];
-                    })
-            )
-        };
-        h[r][i] = l;
+        if (null == e) return !1;
+        for (let t of h) {
+            let n = u.Oz[t],
+                r = e.assignments[t];
+            if (null == r || null == n) continue;
+            let i = f[n];
+            for (let e in r) {
+                let { evaluation_id: t, assignments: n } = r[e],
+                    l = {
+                        evaluationId: t,
+                        assignments: {}
+                    };
+                for (let [t, r, a] of ((i[e] = l), n))
+                    null != a || (a = 0),
+                        (l.assignments[t] = {
+                            hashedId: t,
+                            variantId: r,
+                            isServerOverride: (a & u.V8.IsOverride) != 0
+                        });
+            }
+        }
     }
-    registerExperiment(e, t, n) {
-        let r = f[t],
-            i = {
-                id: e,
-                kind: t,
-                defaultConfig: n
-            };
-        return (r[e] = i), (g[e] = o().v3(e)), i;
+    registerExperiment(e) {
+        g[e.name] = e;
     }
-    getAssignedConfig(e, t) {
-        var n;
-        let r = null == (n = this.getExperimentAssignment(e)) ? void 0 : n.config;
-        return null != r && this.isCompatibleConfig(r, t.defaultConfig) ? r : t.defaultConfig;
+    getAssignment(e, t, n) {
+        let r = b(n),
+            i = f[e][t];
+        if (null != i) return i.assignments[r];
     }
     getEvaluation(e, t) {
-        var n, r;
-        return null == (r = h[e]) || null == (n = r[t]) ? void 0 : n.evaluationId;
+        var n;
+        return null == (n = f[e][t]) ? void 0 : n.evaluationId;
     }
-    trackEvaluationExposure(e) {
-        let { evaluationId: t, kind: n, experimentId: r, location: i } = e;
-        d.default.track(p.rMx.EXPERIMENT_USER_EVALUATION_EXPOSED, {
-            evaluation: t,
-            experiment: r,
-            exposure_location: i,
-            unit_type: n
+    getEvaluationAndAssignment(e, t, n) {
+        let r = f[e][t];
+        return null == r ? [void 0, void 0] : [r.evaluationId, r.assignments[n]];
+    }
+    trackEvaluationExposure(e, t, n, r) {
+        c.default.track(d.rMx.EXPERIMENT_USER_EVALUATION_EXPOSED, {
+            evaluation: e,
+            experiment: n,
+            exposure_location: r,
+            unit_type: t
         });
     }
-    trackCurrentEvaluationExposure(e, t, n) {
-        let r = this.getEvaluation(e, t);
-        null != r &&
-            this.trackEvaluationExposure({
-                evaluationId: r,
-                kind: e,
-                location: n
-            });
-    }
-    isCompatibleConfig(e, t) {
-        return Object.keys(t).every((t) => t in e);
-    }
-    getExperimentAssignment(e) {
-        var t, n;
-        let r = g[e.experimentId];
-        return null == (n = h[e.kind]) || null == (t = n[e.unitId]) ? void 0 : t.experiments[r];
+    resetForTests() {
+        f = {
+            user: {},
+            guild: {}
+        };
     }
     constructor() {
         super(
-            c.Z,
+            o.Z,
             {
-                CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
-                CONNECTION_OPEN_STATE_UPDATE: (e) => this.processExperimentsMessage(e.apexUserExperiments)
+                CONNECTION_OPEN: (e) => this.processExperimentsMessage(e.apexExperiments),
+                CONNECTION_OPEN_STATE_UPDATE: (e) => this.processExperimentsMessage(e.apexExperiments)
             },
-            c.c.Early
-        );
+            o.c.Early
+        ),
+            p(this, 'getHash', b);
     }
 }
-(l = 'ApexExperimentStore'),
-    (i = 'displayName') in m
-        ? Object.defineProperty(m, i, {
-              value: l,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (m[i] = l),
-    new m();
+p(_, 'displayName', 'ApexExperimentStore'), new _();

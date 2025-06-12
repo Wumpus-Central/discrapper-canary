@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var l = n(255367),
     a = n(73800),
     r = n(120356),
@@ -11,8 +11,8 @@ var l = n(255367),
     b = n(600164),
     _ = n(313201),
     f = n(237617),
-    h = n(572539),
-    O = n(648159),
+    O = n(572539),
+    h = n(648159),
     E = n(63063),
     v = n(957115),
     g = n(531578),
@@ -27,41 +27,41 @@ function N() {
         children: m.intl.format(m.t.ybi2tL, { helpdeskURL: E.Z.getSubmitRequestURL() })
     });
 }
-function y(e) {
+function T(e) {
     var t, n;
-    let { header: r, body: o, problems: E, transitionState: y, feedbackProblems: T = {}, otherKey: x, hasCloseButton: C, onSubmit: I, onClose: k, canDismissForever: j = !0, showHelpdeskLink: A = !0 } = e,
+    let { header: r, body: o, problems: E, transitionState: T, feedbackProblems: y = {}, otherKey: x, hasCloseButton: C, onSubmit: I, onClose: k, canDismissForever: j = !0, showHelpdeskLink: A = !0 } = e,
         R = (0, d.Z)(E),
         [D, L] = a.useState(!1),
         [P, B] = a.useState(null),
-        [F, M] = a.useState(s().shuffle(E)),
-        [w, U] = a.useState(''),
+        [M, F] = a.useState(s().shuffle(E)),
+        [U, w] = a.useState(''),
         [H, Z] = a.useState(!1),
         $ = (0, _.Dt)(),
         Y = (0, f.Z)(D),
-        z = (0, f.Z)(P),
-        G = (0, f.Z)(I),
-        K = (0, f.Z)(w),
+        G = (0, f.Z)(P),
+        z = (0, f.Z)(I),
+        K = (0, f.Z)(U),
         W = (0, f.Z)(H),
-        V = null != P ? T[P] : null,
+        V = null != P ? y[P] : null,
         X = null != V;
     return (
         a.useEffect(() => {
-            s().isEqual(R, E) || M((0, v.Bi)(E, x));
+            s().isEqual(R, E) || F((0, v.Bi)(E, x));
         }, [E, R, x]),
         (0, c.ZP)(() => () => {
-            G.current({
-                problem: z.current,
+            z.current({
+                problem: G.current,
                 dontShowAgain: Y.current,
                 feedback: K.current,
                 closeClicked: W.current
             });
         }),
         (0, l.jsxs)(u.Y0X, {
-            transitionState: y,
+            transitionState: T,
             'aria-labelledby': $,
             parentComponent: 'SimpleFeedbackModal',
             children: [
-                (0, l.jsx)(O.Z, {}),
+                (0, l.jsx)(h.Z, {}),
                 (0, l.jsxs)(u.xBx, {
                     separator: !1,
                     className: i()(p.headerContainer, S.headerContainer),
@@ -96,11 +96,11 @@ function y(e) {
                             ? null
                             : (0, l.jsx)(u.xJW, {
                                   className: p.problemInfo,
-                                  children: (0, l.jsx)(h.Z, {
-                                      options: F,
+                                  children: (0, l.jsx)(O.Z, {
+                                      options: M,
                                       onClick: function (e) {
                                           let { value: t } = e;
-                                          B(t), Object.keys(T).includes(t) || k();
+                                          B(t), Object.keys(y).includes(t) || k();
                                       }
                                   })
                               }),
@@ -109,9 +109,9 @@ function y(e) {
                                   className: p.problemInfo,
                                   children: [
                                       (0, l.jsx)(u.Kx8, {
-                                          value: w,
+                                          value: U,
                                           maxLength: g.iF,
-                                          onChange: U,
+                                          onChange: w,
                                           className: S.textArea,
                                           placeholder: null != (n = V.hint) ? n : m.intl.string(m.t.h95hcn)
                                       }),
@@ -134,7 +134,7 @@ function y(e) {
                                             look: u.zxk.Looks.LINK,
                                             color: u.zxk.Colors.PRIMARY,
                                             onClick: () => {
-                                                B(null), U('');
+                                                B(null), w('');
                                             },
                                             children: m.intl.string(m.t['13/7kZ'])
                                         }),

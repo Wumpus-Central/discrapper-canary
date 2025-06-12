@@ -82,12 +82,12 @@ let h = function (e) {
         h = (0, d.e)({ getOptions: c.bM }),
         p = (0, d.e)({ getOptions: c.cc }),
         S = t === O.aZ.BAD,
-        x = i.useMemo(() => {
+        T = i.useMemo(() => {
             let e = [];
             return S && e.push(h), e.push(p), e.every(c.cp);
         }, [S, p, h]),
-        T = i.useCallback(() => {
-            x &&
+        x = i.useCallback(() => {
+            T &&
                 (s.ZP.trackWithMetadata(f.rMx.SEARCH_RESULTS_FEEDBACK_SUBMITTED, {
                     rating: t,
                     unsatisfied_question_option: S ? (0, c.HO)(h) : null,
@@ -96,7 +96,7 @@ let h = function (e) {
                     describe_search_question_text: (0, c.sG)(p)
                 }),
                 r());
-        }, [h, S, x, r, t, p]);
+        }, [h, S, T, r, t, p]);
     return (0, l.jsxs)(u.Y0X, {
         size: u.CgR.MEDIUM,
         transitionState: n,
@@ -135,8 +135,8 @@ let h = function (e) {
                     }),
                     (0, l.jsx)(u.zxk, {
                         size: u.zxk.Sizes.MEDIUM,
-                        onClick: T,
-                        disabled: !x,
+                        onClick: x,
+                        disabled: !T,
                         children: v.intl.string(v.t['4Zpxtr'])
                     })
                 ]

@@ -1,13 +1,12 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(120356),
     a = n.n(i),
     o = n(481060),
-    s = n(209698),
-    l = n(556638),
-    c = n(843280);
-function u(e, t, n) {
+    s = n(556638),
+    l = n(843280);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +19,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,12 +30,12 @@ function d(e) {
                 })
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,41 +47,39 @@ function _(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : d(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function p(e) {
-    let { icon: t, tooltipText: n, tooltipAriaLabel: i, className: u, onTooltipShow: _ } = e,
-        p = (0, s.b)({ location: 'ActivityStatusIcon' }),
-        h = (0, o.vjg)(o.Skl.ONLINE),
-        m = p ? o.TVs.colors.TEXT_POSITIVE : h;
+function f(e) {
+    let { icon: t, tooltipText: n, tooltipAriaLabel: i, className: c, onTooltipShow: d } = e,
+        f = (0, o.vjg)(o.Skl.ONLINE);
     return null == n
         ? (0, r.jsx)(t, {
               size: 'custom',
-              color: m,
-              className: a()(c.icon, u)
+              color: f,
+              className: a()(l.icon, c)
           })
         : (0, r.jsx)(o.ua7, {
               text: n,
               'aria-label': i,
-              tooltipContentClassName: c.container,
-              delay: l.X,
-              onTooltipShow: _,
+              tooltipContentClassName: l.container,
+              delay: s.X,
+              onTooltipShow: d,
               children: (e) =>
                   (0, r.jsx)(
                       t,
-                      f(d({}, e), {
+                      _(u({}, e), {
                           size: 'custom',
-                          color: m,
-                          className: a()(c.icon, u)
+                          color: f,
+                          className: a()(l.icon, c)
                       })
                   )
           });

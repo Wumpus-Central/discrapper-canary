@@ -43,6 +43,9 @@ class E {
                 this.flushWaitQueue();
         });
     }
+    dispatchForStoreTest(e, t) {
+        for (let { name: n, actionHandler: r, storeDidChange: i } of (a()(!1, 'dispatchForTest cannot be called in: '.concat('production')), this._actionHandlers.getOrderedActionHandlers(e))) n === t && !1 !== r(e) && i(e);
+    }
     flushWaitQueue() {
         if (!this._processingWaitQueue)
             try {

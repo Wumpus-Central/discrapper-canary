@@ -46,6 +46,12 @@ class c {
 }
 o(c, 'fromMilliseconds', (e) => new c(0, 0, 0, e)), o(c, 'fromSeconds', (e) => new c(0, 0, e)), o(c, 'fromMinutes', (e) => new c(0, e)), o(c, 'fromHours', (e) => new c(e));
 class u {
+    get lastElapsed() {
+        return this.timePassed;
+    }
+    get lastStartTime() {
+        return this.startTime;
+    }
     start() {
         null == this.startTime && (this.startTime = this.timestampProducer.now());
     }

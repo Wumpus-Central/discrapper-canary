@@ -1,8 +1,8 @@
 t.d(n, { x: () => f });
-var l = t(255367);
+var i = t(255367);
 t(73800);
-var i = t(512722),
-    r = t.n(i),
+var l = t(512722),
+    r = t.n(l),
     s = t(780384),
     a = t(481060),
     o = t(410030),
@@ -16,8 +16,8 @@ var i = t(512722),
     j = t(959803);
 function f(e) {
     let { handleStepChange: n, handleClose: t } = e,
-        i = (0, o.ZP)(),
-        { activeSubscription: f, selectedSkuId: m, setSelectedPlanId: _, startedPaymentFlowWithPaymentSourcesRef: L } = (0, u.JL)(),
+        l = (0, o.ZP)(),
+        { activeSubscription: f, selectedSkuId: _, setSelectedPlanId: m, startedPaymentFlowWithPaymentSourcesRef: L } = (0, u.JL)(),
         { isGift: g } = (0, c.wD)(),
         y = null != f ? (0, d.Af)(f) : null,
         S = null != y ? (0, d.gq)(y.planId) : null,
@@ -25,27 +25,27 @@ function f(e) {
         v = (0, x.Kp)({
             isTrial: !1,
             isGift: g,
-            selectedSkuId: m,
+            selectedSkuId: _,
             startedPaymentFlowWithPaymentSources: L.current
         });
     return (
         r()(null != E, 'Expected premium type'),
-        (0, l.jsx)(C.Z, {
+        (0, i.jsx)(C.Z, {
             premiumType: E,
             titleText: h.intl.string(h.t['7VcWW1']),
             subtitleText: h.intl.format(h.t.Qk34Ii, { subscriptionName: S }),
-            footer: (0, l.jsxs)('div', {
+            footer: (0, i.jsxs)('div', {
                 className: j.whatYouLoseButtonContainer,
                 children: [
-                    (0, l.jsx)(a.zxk, {
+                    (0, i.jsx)(a.zxk, {
                         onClick: () => {
-                            v ? (_((0, x.nA)(m, f)), n(p.h8.REVIEW)) : n(p.h8.PLAN_SELECT);
+                            v ? (m((0, x.nA)(_, f)), n(p.h8.REVIEW)) : n(p.h8.PLAN_SELECT);
                         },
                         children: h.intl.string(h.t['3PatS0'])
                     }),
-                    (0, l.jsx)(a.zxk, {
+                    (0, i.jsx)(a.zxk, {
                         look: a.zxk.Looks.LINK,
-                        color: (0, s.wj)(i) ? a.zxk.Colors.WHITE : a.zxk.Colors.PRIMARY,
+                        color: (0, s.wj)(l) ? a.zxk.Colors.WHITE : a.zxk.Colors.PRIMARY,
                         onClick: t,
                         children: h.intl.string(h.t.h9tkAA)
                     })

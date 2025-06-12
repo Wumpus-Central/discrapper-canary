@@ -1,4 +1,4 @@
-n.d(t, { o: () => E }), n(388685);
+n.d(t, { o: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(657707),
@@ -9,35 +9,36 @@ var r = n(255367),
     u = n(740492),
     d = n(695346),
     _ = n(514361),
-    f = n(469115),
-    p = n(874893),
-    h = n(231338),
-    m = n(388032),
-    g = n(531864);
-function E() {
-    let [e, t] = i.useState(h.BR.LIGHT),
+    f = n(507962),
+    p = n(469115),
+    h = n(874893),
+    m = n(231338),
+    g = n(388032),
+    E = n(531864);
+function b() {
+    let [e, t] = i.useState(m.BR.LIGHT),
         n = [
             {
-                name: m.intl.string(m.t.b8Cei4),
-                value: h.BR.DARK,
+                name: g.intl.string(g.t.b8Cei4),
+                value: m.BR.DARK,
                 icon: a.Z6G
             },
             {
-                name: m.intl.string(m.t.K2sFfn),
-                value: h.BR.LIGHT,
+                name: g.intl.string(g.t.K2sFfn),
+                value: m.BR.LIGHT,
                 icon: a.chG
             }
         ],
-        [E, b, y] = (0, o.Wu)([c.Z, u.ZP, _.Z], () => [c.Z.theme, null == _.Z.gradientPreset, u.ZP.useSystemTheme === p.KW.ON]);
+        [b, y, O] = (0, o.Wu)([c.Z, u.ZP, _.Z], () => [c.Z.theme, null == _.Z.gradientPreset, u.ZP.useSystemTheme === h.KW.ON]);
     return (0, r.jsx)(s.sY7, {
-        className: g.themeSelector,
+        className: E.themeSelector,
         options: n,
-        value: b && !y ? E : e,
+        value: y && !O ? b : e,
         onChange: (e) => {
             let { value: n } = e;
-            t(n);
+            (0, f.HV)(), t(n);
             let r = d.L1.getSetting(),
-                i = null != r.backgroundGradientPresetId && r.backgroundGradientPresetId in f.qt && f.qt[r.backgroundGradientPresetId].theme !== n;
+                i = null != r.backgroundGradientPresetId && r.backgroundGradientPresetId in p.qt && p.qt[r.backgroundGradientPresetId].theme !== n;
             (0, l.ZI)({
                 theme: n,
                 backgroundGradientPresetId: i ? void 0 : r.backgroundGradientPresetId,

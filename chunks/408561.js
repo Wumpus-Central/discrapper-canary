@@ -11,25 +11,25 @@ var l = n(255367),
     b = n(626135),
     _ = n(924400),
     f = n(987562),
-    h = n(981631),
-    O = n(388032);
+    O = n(981631),
+    h = n(388032);
 function E(e) {
     let { transitionState: t, onClose: E, channel: v } = e,
         g = (0, s.Z)(f.TL),
         m = (0, r.e7)([d.default], () => d.default.getUser(v.getRecipientId()));
     return (
         a.useEffect(() => {
-            b.default.track(h.rMx.OPEN_MODAL, { type: 'DM Mute Feedback Modal' });
+            b.default.track(O.rMx.OPEN_MODAL, { type: 'DM Mute Feedback Modal' });
         }, []),
         (0, l.jsx)(c.Z, {
             hasCloseButton: !0,
-            header: O.intl.string(O.t.SxsBFB),
-            body: O.intl.formatToPlainString(O.t['7kb7z8'], { username: null == m ? void 0 : m.username }),
+            header: h.intl.string(h.t.SxsBFB),
+            body: h.intl.formatToPlainString(h.t['7kb7z8'], { username: null == m ? void 0 : m.username }),
             problems: g,
             feedbackProblems: {
                 [f.YA.OTHER]: {
-                    subheader: O.intl.string(O.t.VQkdtL),
-                    hint: O.intl.string(O.t.EG3N9f)
+                    subheader: h.intl.string(h.t.VQkdtL),
+                    hint: h.intl.string(h.t.EG3N9f)
                 }
             },
             onSubmit: function (e) {
@@ -67,7 +67,7 @@ function E(e) {
                                                 });
                                         }
                                         return e;
-                                    })({ body: O.intl.string(O.t.sYrCub) }, t)
+                                    })({ body: h.intl.string(h.t.sYrCub) }, t)
                                 );
                         });
             },

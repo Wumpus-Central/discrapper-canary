@@ -1,4 +1,4 @@
-n.d(t, { Z: () => z });
+n.d(t, { Z: () => Y });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -23,61 +23,67 @@ var r = n(255367),
     C = n(507808),
     S = n(822857),
     N = n(775451),
-    T = n(63063),
-    P = n(113434),
-    j = n(833435),
-    A = n(150560),
-    Z = n(558652),
-    x = n(736683),
-    L = n(879438),
-    w = n(251360),
-    R = n(466962),
-    D = n(452081),
-    k = n(46140),
-    M = n(981631),
-    U = n(215023),
-    G = n(388032),
-    V = n(87671),
-    B = n(13299),
-    H = n(843385);
-function F(e) {
+    T = n(526167),
+    P = n(63063),
+    j = n(113434),
+    A = n(833435),
+    Z = n(150560),
+    x = n(558652),
+    L = n(736683),
+    w = n(879438),
+    R = n(251360),
+    D = n(466962),
+    k = n(452081),
+    M = n(46140),
+    U = n(981631),
+    G = n(215023),
+    V = n(388032),
+    B = n(87671),
+    H = n(13299),
+    F = n(428383),
+    z = n(843385);
+function W(e) {
     let { onLoadComplete: t } = e,
-        { enabled: n } = (0, S.WX)({ location: k.dr.QUEST_HOME_DESKTOP }),
+        { enabled: n } = (0, S.WX)({ location: M.dr.QUEST_HOME_DESKTOP }),
         l = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         o = i.useRef(null);
-    return (i.useEffect(() => {
-        var e, t, n, r;
-        null != o && (!l || (null == (e = o.current) ? void 0 : e.paused) ? !l && (null == (t = o.current) ? void 0 : t.paused) && (null == (r = o.current) || r.play()) : null == (n = o.current) || n.pause());
-    }, [l]),
-    n)
-        ? (0, r.jsx)(g.Z, {
-              ref: o,
-              autoPlay: !l,
-              loop: !0,
-              muted: !0,
-              playsInline: !0,
-              className: a()(V.bannerAsset, V.orbsBannerAsset),
-              onProgress: t,
-              'data-mtctest-ignore': 'true',
-              controls: !1,
-              children: (0, r.jsx)('source', {
-                  src: H.Z,
-                  type: 'video/webm'
-              })
-          })
-        : (0, r.jsx)('img', {
-              src: B.ZP,
-              className: a()(V.bannerAsset, V.oversizedImg),
-              alt: '',
-              onLoad: t
-          });
+    if (
+        (i.useEffect(() => {
+            var e, t, n, r;
+            null != o && (!l || (null == (e = o.current) ? void 0 : e.paused) ? !l && (null == (t = o.current) ? void 0 : t.paused) && (null == (r = o.current) || r.play()) : null == (n = o.current) || n.pause());
+        }, [l]),
+        n)
+    ) {
+        let e = (0, T.rO)();
+        return (0, r.jsx)(g.Z, {
+            ref: o,
+            autoPlay: !l,
+            loop: !0,
+            muted: !0,
+            playsInline: !0,
+            className: a()(B.bannerAsset, B.orbsBannerAsset),
+            onProgress: t,
+            'data-mtctest-ignore': 'true',
+            controls: !1,
+            children: (0, r.jsx)('source', {
+                src: e ? F.Z : z.Z,
+                type: e ? 'video/mp4' : 'video/webm'
+            })
+        });
+    }
+    return (0, r.jsx)('img', {
+        src: H.ZP,
+        className: a()(B.bannerAsset, B.oversizedImg),
+        alt: '',
+        onLoad: t
+    });
 }
-let z = function () {
-    let { selectedTab: e, onSelectTab: t, tabs: n } = (0, D.z)(),
+let Y = function () {
+    let { selectedTab: e, onSelectTab: t, tabs: n } = (0, k.z)(),
         { onScroll: l, scrollPosition: s } = (0, m.M)(),
-        u = A.Z.getState().getUtmCurrentContext(),
-        g = (0, j._)({ location: k.dr.QUEST_HOME_DESKTOP }) ? x.Z : x.j,
-        B = (0, L.z)((e) => e.registerAssetLoad),
+        u = Z.Z.getState().getUtmCurrentContext(),
+        g = (0, A._)({ location: M.dr.QUEST_HOME_DESKTOP }) ? L.Z : L.j,
+        T = (0, w.z)((e) => e.registerAssetLoad),
         H = i.useRef(u);
     i.useEffect(() => {
         H.current = u;
@@ -96,21 +102,21 @@ let z = function () {
                 }
             });
         }, [e]);
-    let { enabled: z } = (0, S.WX)({ location: k.dr.QUEST_HOME_DESKTOP }),
-        W = i.useCallback(() => {
-            if (z) return void window.open(M.EYA.PAID_TERMS_ORBS);
-            window.open(T.Z.getArticleURL(M.BhN.QUESTS_LEARN_MORE));
-        }, [z]);
-    (0, f.Tt)({ location: G.intl.string(G.t.JALI2N) });
-    let Y = z ? G.intl.format(G.t.BCBIlp, {}) : G.intl.format(G.t.lmMBf3, {}),
-        K = z ? G.intl.format(G.t.U9FY0N, {}) : G.intl.string(G.t.oWCrBg),
+    let { enabled: F } = (0, S.WX)({ location: M.dr.QUEST_HOME_DESKTOP }),
+        z = i.useCallback(() => {
+            if (F) return void window.open(U.EYA.PAID_TERMS_ORBS);
+            window.open(P.Z.getArticleURL(U.BhN.QUESTS_LEARN_MORE));
+        }, [F]);
+    (0, f.Tt)({ location: V.intl.string(V.t.JALI2N) });
+    let Y = F ? V.intl.format(V.t.BCBIlp, {}) : V.intl.format(V.t.lmMBf3, {}),
+        K = F ? V.intl.format(V.t.U9FY0N, {}) : V.intl.string(V.t.oWCrBg),
         q = i.useRef(null);
-    return (0, r.jsx)(w.k.Provider, {
-        value: { onAssetLoadComplete: B },
+    return (0, r.jsx)(R.k.Provider, {
+        value: { onAssetLoadComplete: T },
         children: (0, r.jsx)('div', {
-            className: V.container,
-            children: z
-                ? (0, r.jsx)(R.t.Provider, {
+            className: B.container,
+            children: F
+                ? (0, r.jsx)(D.t.Provider, {
                       value: q,
                       children: (0, r.jsxs)(v.Z, {
                           onScroll: l,
@@ -122,18 +128,18 @@ let z = function () {
                                   tabs: n,
                                   icon: c.qDn,
                                   children: (0, r.jsx)(N.V9, {
-                                      analyticsPage: M.ZY5.GLOBAL_DISCOVERY_QUESTS,
+                                      analyticsPage: U.ZY5.GLOBAL_DISCOVERY_QUESTS,
                                       cardAlignment: N.ek.END,
-                                      ctaText: G.intl.string(G.t['J+vlIS']),
+                                      ctaText: V.intl.string(V.t['J+vlIS']),
                                       ctaOnClick: () => {
                                           (0, C.Y)({
-                                              pageType: M.ZY5.GLOBAL_DISCOVERY_QUESTS,
-                                              sectionType: M.jXE.ORBS_BALANCE_MENU,
-                                              ctaObject: M.qAy.CTA_TO_ORBS_SHOP
+                                              pageType: U.ZY5.GLOBAL_DISCOVERY_QUESTS,
+                                              sectionType: U.jXE.ORBS_BALANCE_MENU,
+                                              ctaObject: U.qAy.CTA_TO_ORBS_SHOP
                                           }),
                                               (0, h.mK)({
                                                   openInLayer: !1,
-                                                  tab: U.AW.ORBS,
+                                                  tab: G.AW.ORBS,
                                                   analyticsLocations: [],
                                                   analyticsSource: d.Z.ORBS_BALANCE_MENU
                                               });
@@ -143,8 +149,8 @@ let z = function () {
                               (0, r.jsxs)(_.Z, {
                                   title: Y,
                                   description: K,
-                                  betaTag: z,
-                                  button: z
+                                  betaTag: F,
+                                  button: F
                                       ? (0, r.jsxs)(r.Fragment, {
                                             children: [
                                                 (0, r.jsx)(c.zxk, {
@@ -152,29 +158,29 @@ let z = function () {
                                                     onClick: () =>
                                                         (0, h.mK)({
                                                             openInLayer: !1,
-                                                            tab: U.AW.ORBS,
+                                                            tab: G.AW.ORBS,
                                                             analyticsLocations: [],
                                                             analyticsSource: d.Z.INTRO_TO_ORBS_QUEST_BANNER
                                                         }),
-                                                    children: G.intl.string(G.t['1Wm129'])
+                                                    children: V.intl.string(V.t['1Wm129'])
                                                 }),
                                                 (0, r.jsx)(c.zxk, {
                                                     look: c.iLD.LINK,
                                                     color: c.Ttl.CUSTOM,
-                                                    className: V.orbsTermsButton,
-                                                    onClick: W,
-                                                    children: G.intl.string(G.t['7kTAgI'])
+                                                    className: B.orbsTermsButton,
+                                                    onClick: z,
+                                                    children: V.intl.string(V.t['7kTAgI'])
                                                 })
                                             ]
                                         })
                                       : (0, r.jsx)(b.u, {
-                                            text: G.intl.string(G.t.hvVgAQ),
-                                            onClick: W
+                                            text: V.intl.string(V.t.hvVgAQ),
+                                            onClick: z
                                         }),
-                                  className: a()(V.bannerContainer, { [V.orbsContainer]: z }),
-                                  children: [(0, r.jsx)('div', { className: a()(V.bannerGradient, { [V.orbsGradient]: z }) }), (0, r.jsx)(F, { onLoadComplete: B })]
+                                  className: a()(B.bannerContainer, { [B.orbsContainer]: F }),
+                                  children: [(0, r.jsx)('div', { className: a()(B.bannerGradient, { [B.orbsGradient]: F }) }), (0, r.jsx)(W, { onLoadComplete: T })]
                               }),
-                              (0, r.jsx)(E.Z, { children: e === P.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(Z.Z, {}) })
+                              (0, r.jsx)(E.Z, { children: e === j.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(x.Z, {}) })
                           ]
                       })
                   })
@@ -182,9 +188,9 @@ let z = function () {
                       children: [
                           (0, r.jsxs)(y.ZP, {
                               variant: y._6.OVERLAY,
-                              children: [(0, r.jsx)('div', { className: V.dragRegion }), (0, r.jsx)(y.z6, { scrollPosition: s }), (0, r.jsx)(y.aV, { icon: c.qDn })]
+                              children: [(0, r.jsx)('div', { className: B.dragRegion }), (0, r.jsx)(y.z6, { scrollPosition: s }), (0, r.jsx)(y.aV, { icon: c.qDn })]
                           }),
-                          (0, r.jsx)(R.t.Provider, {
+                          (0, r.jsx)(D.t.Provider, {
                               value: q,
                               children: (0, r.jsxs)(v.Z, {
                                   onScroll: l,
@@ -194,23 +200,23 @@ let z = function () {
                                           title: Y,
                                           description: K,
                                           button: (0, r.jsx)(b.u, {
-                                              text: G.intl.string(G.t.hvVgAQ),
-                                              onClick: W
+                                              text: V.intl.string(V.t.hvVgAQ),
+                                              onClick: z
                                           }),
-                                          className: a()(V.bannerContainer, { [V.orbsContainer]: z }),
-                                          children: [(0, r.jsx)('div', { className: a()(V.bannerGradient, { [V.orbsGradient]: z }) }), (0, r.jsx)(F, { onLoadComplete: B })]
+                                          className: a()(B.bannerContainer, { [B.orbsContainer]: F }),
+                                          children: [(0, r.jsx)('div', { className: a()(B.bannerGradient, { [B.orbsGradient]: F }) }), (0, r.jsx)(W, { onLoadComplete: T })]
                                       }),
                                       (0, r.jsxs)(E.Z, {
                                           children: [
                                               (0, r.jsx)('div', {
-                                                  className: V.tabs,
+                                                  className: B.tabs,
                                                   children: (0, r.jsx)(O.Z, {
                                                       tabs: n,
                                                       selectedTab: e,
                                                       onTabSelect: t
                                                   })
                                               }),
-                                              e === P.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(Z.Z, {})
+                                              e === j.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(x.Z, {})
                                           ]
                                       })
                                   ]

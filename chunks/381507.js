@@ -1,7 +1,7 @@
 t.d(n, { Z: () => h });
-var l = t(255367);
+var i = t(255367);
 t(73800);
-var i = t(780384),
+var l = t(780384),
     r = t(481060),
     s = t(410030),
     a = t(518950),
@@ -20,39 +20,39 @@ let h = () => {
             animateOnHover: !0
         }),
         h = (0, s.Fg)(),
-        j = (0, i.ap)(h),
+        j = (0, l.ap)(h),
         f = o.ZP.getName(e),
-        m = j ? d.Z : c.Z;
+        _ = j ? d.Z : c.Z;
     return null == e
         ? null
-        : (0, l.jsxs)('div', {
+        : (0, i.jsxs)('div', {
               className: x.attributionBannerContainer,
               children: [
-                  (0, l.jsx)('div', {
+                  (0, i.jsx)('div', {
                       className: x.avatarContainer,
-                      children: (0, l.jsx)(
+                      children: (0, i.jsx)(
                           r.qEK,
                           (function (e) {
                               for (var n = 1; n < arguments.length; n++) {
                                   var t = null != arguments[n] ? arguments[n] : {},
-                                      l = Object.keys(t);
+                                      i = Object.keys(t);
                                   'function' == typeof Object.getOwnPropertySymbols &&
-                                      (l = l.concat(
+                                      (i = i.concat(
                                           Object.getOwnPropertySymbols(t).filter(function (e) {
                                               return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                           })
                                       )),
-                                      l.forEach(function (n) {
-                                          var l;
-                                          (l = t[n]),
+                                      i.forEach(function (n) {
+                                          var i;
+                                          (i = t[n]),
                                               n in e
                                                   ? Object.defineProperty(e, n, {
-                                                        value: l,
+                                                        value: i,
                                                         enumerable: !0,
                                                         configurable: !0,
                                                         writable: !0
                                                     })
-                                                  : (e[n] = l);
+                                                  : (e[n] = i);
                                       });
                               }
                               return e;
@@ -66,12 +66,12 @@ let h = () => {
                           )
                       )
                   }),
-                  (0, l.jsx)(r.Text, {
+                  (0, i.jsx)(r.Text, {
                       variant: 'text-xs/bold',
                       className: x.bannerHeader,
                       children: p.intl.format(p.t.oxhCOj, { userName: f })
                   }),
-                  (0, l.jsx)(m, { className: x.bannerIcon })
+                  (0, i.jsx)(_, { className: x.bannerIcon })
               ]
           });
 };

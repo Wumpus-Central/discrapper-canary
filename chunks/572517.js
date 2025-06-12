@@ -1,6 +1,6 @@
 t.d(n, { c: () => x });
-var l = t(255367),
-    i = t(442837),
+var i = t(255367),
+    l = t(442837),
     r = t(780384),
     s = t(481060),
     a = t(410030),
@@ -12,31 +12,31 @@ var l = t(255367),
     p = t(42154);
 function x() {
     var e;
-    let n = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
+    let n = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
         t = (0, a.ZP)(),
         x = (0, r.wj)(t),
         h = (0, c.Z)(),
         j = null == h ? void 0 : h.planSelectionBanner,
         { claimableRewards: f } = (0, C.wD)();
     if (null == j || null == f) return null;
-    let m =
+    let _ =
             null == (e = j.gradientConfig)
                 ? void 0
                 : e.call(j, {
                       isDarkMode: x,
                       isAndroid: !1
                   }),
-        _ = (0, d.Tl)(m);
-    return (0, l.jsxs)('div', {
+        m = (0, d.Tl)(_);
+    return (0, i.jsxs)('div', {
         className: p.promotionalFooterBanner,
-        style: _,
+        style: m,
         children: [
-            (0, l.jsx)(u.Z, {
+            (0, i.jsx)(u.Z, {
                 claimableRewards: f,
                 maxRewardImageSrc: j.getImageUrl(x, n),
                 size: s.EFr.SIZE_40
             }),
-            (0, l.jsx)(s.Text, {
+            (0, i.jsx)(s.Text, {
                 variant: 'text-md/medium',
                 className: p.bannerText,
                 children: j.desktopBannerText(f.length)

@@ -110,7 +110,7 @@ function G(e) {
     return (0, r.jsxs)(l.xv, {
         variant: t,
         className: o()(n, w.activityCounter),
-        color: i ? 'text-positive' : 'none',
+        color: i ? 'status-positive' : 'none',
         children: ['+', s]
     });
 }

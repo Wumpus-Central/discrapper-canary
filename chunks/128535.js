@@ -74,8 +74,8 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
             }),
             {
                 errorHints: O,
-                startingConsoleQuest: T,
-                startConsoleQuest: N
+                startingConsoleQuest: N,
+                startConsoleQuest: T
             } = (0, g.GI)({
                 questId: e.quest.id,
                 beforeRequest: () => {
@@ -89,7 +89,7 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
                 afterRequest: h.stopAnimation
             });
         return (0, r.jsxs)('div', {
-            className: i()(b.container, { [b.inFlight]: T }),
+            className: i()(b.container, { [b.inFlight]: N }),
             children: [
                 (0, r.jsxs)('div', {
                     className: b.info,
@@ -125,8 +125,8 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
                     className: b.cta,
                     children: (0, r.jsx)(l.zxk, {
                         color: l.Ttl.PRIMARY,
-                        onClick: N,
-                        disabled: T,
+                        onClick: T,
+                        disabled: N,
                         children: (0, r.jsxs)('div', {
                             className: b.ctaInner,
                             children: [h.render(), j.intl.string(j.t.nPThNT)]

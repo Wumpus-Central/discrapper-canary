@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ep }), n(388685);
+n.d(t, { Z: () => ef }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -121,7 +121,10 @@ function es(e, t) {
     return i;
 }
 let ea = (0, M.isWindows)() ? 4 : 12 * !(0, M.isMac)();
-class ec {
+function ec(e) {
+    return e.startsWith(et.Z5c.GUILD_DISCOVERY) || e.startsWith(et.Z5c.GLOBAL_DISCOVERY);
+}
+class eu {
     setGuildsTree(e) {
         this.guildsTree = e;
     }
@@ -165,7 +168,7 @@ class ec {
             }),
             (this.scrollToGuild = (e, t) => {
                 let n = this.scrollerRef.current;
-                if (null == n || (null == e && window.location.pathname.startsWith(et.Z5c.GUILD_DISCOVERY)) || e === et.x8Z.SERVER_DISCOVERY_BADGE || e === et.x8Z.E3_SERVER_DISCOVERY_BADGE) return;
+                if (null == n || (null == e && ec(window.location.pathname)) || e === et.x8Z.SERVER_DISCOVERY_BADGE || e === et.x8Z.E3_SERVER_DISCOVERY_BADGE) return;
                 if (null == e)
                     return void n.scrollTo({
                         to: 0,
@@ -228,7 +231,7 @@ class ec {
             });
     }
 }
-function eu(e) {
+function ed(e) {
     let { hideDms: t, scrollToTop: n, lurkingGuildIds: i } = e,
         l = (0, S.Z)(),
         { pathname: o } = (0, c.TH)(),
@@ -240,7 +243,7 @@ function eu(e) {
         children: [(0, r.jsx)(K.u, {}), null !== d && (0, r.jsx)(I.Z, {}), l ? (0, r.jsx)(x.Z, {}) : null, (0, r.jsx)(Y.Z, { isOnHubVerificationRoute: s }), !t && (0, r.jsx)(V.Z, {}), u.map((e) => (0, r.jsx)(ee.Z, { guildId: e }, e)), (0, r.jsx)($.Z, { onActivate: n })]
     });
 }
-function ed(e) {
+function eh(e) {
     let { guildDiscoveryButton: t, disableAppDownload: n, isOverlay: i, renderTreeNode: l, lurkingGuildIds: o } = e,
         [s] = (0, h.Wu)([L.ZP], () => {
             let e = L.ZP.getGuildsTree();
@@ -279,7 +282,7 @@ function ed(e) {
         ]
     });
 }
-function eh(e) {
+function ep(e) {
     let { disableAppDownload: t = M.isPlatformEmbedded, isOverlay: n = !1, className: l, themeOverride: s } = e,
         a = (0, j.Q3)('GuildsBar'),
         [d] = (0, h.Wu)([L.ZP], () => {
@@ -302,11 +305,11 @@ function eh(e) {
         K = (0, m.mFp)(),
         [Y, Q] = i.useState(!1),
         [$, ee] = i.useState(!1),
-        ei = (0, m.dQu)(g.Z.modules.guildbar.AVATAR_SIZE),
-        eh = (0, m.dQu)(g.Z.space.SPACE_XS),
+        et = (0, m.dQu)(g.Z.modules.guildbar.AVATAR_SIZE),
+        ei = (0, m.dQu)(g.Z.space.SPACE_XS),
         ep = i.useMemo(
             () =>
-                new ec(
+                new eu(
                     d,
                     Q,
                     ee,
@@ -325,9 +328,9 @@ function eh(e) {
                             separatorSize: l,
                             heightBeforeIcons: ea + l
                         };
-                    })(ei, a, eh)
+                    })(et, a, ei)
                 ),
-            [ei, eh, d, a]
+            [et, ei, d, a]
         );
     i.useEffect(
         () => (
@@ -340,11 +343,10 @@ function eh(e) {
     );
     let { analyticsLocations: ef } = (0, _.ZP)(v.Z.GUILDS_LIST),
         { pathname: eg } = (0, c.TH)(),
-        em = eg.startsWith(et.Z5c.GUILD_DISCOVERY) || eg.startsWith(et.Z5c.GLOBAL_DISCOVERY);
+        em = ec(eg);
     (0, y.Ng)(() => {
         if (!R.current && 0 !== d.size) {
-            if (em) ep.scrollToGuild(null, !1);
-            else {
+            if (!em) {
                 let { scrollTop: e } = A.Z.getGuildListDimensions();
                 ep.scrollTo({
                     to: e,
@@ -478,12 +480,12 @@ function eh(e) {
                                         ref: ep.scrollerRef,
                                         onScroll: ep.handleScroll,
                                         children: [
-                                            (0, r.jsx)(eu, {
+                                            (0, r.jsx)(ed, {
                                                 scrollToTop: eb,
                                                 lurkingGuildIds: b
                                             }),
                                             (0, r.jsx)(q.Z, {}),
-                                            (0, r.jsx)(ed, {
+                                            (0, r.jsx)(eh, {
                                                 guildDiscoveryButton: eI,
                                                 disableAppDownload: t,
                                                 isOverlay: n,
@@ -508,12 +510,12 @@ function eh(e) {
         })
     });
 }
-let ep = i.memo(
+let ef = i.memo(
     function (e) {
         let t = (0, O.Z)('guildsnav');
         return (0, r.jsx)(u.bG, {
             navigator: t,
-            children: (0, r.jsx)(eh, el({}, e))
+            children: (0, r.jsx)(ep, el({}, e))
         });
     },
     (e, t) => !1 === t.isVisible || (0, p.Z)(e, t)

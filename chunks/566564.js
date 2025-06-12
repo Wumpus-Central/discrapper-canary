@@ -184,7 +184,7 @@ let y = (e) => {
             p = (0, d.R)('CollectiblesFeedShop'),
             f = (0, u.sp)();
         return (0, r.jsx)('div', {
-            className: i()(x.shop, { [x.shopFullscreen]: t }),
+            className: x.shop,
             children: (0, r.jsxs)('div', {
                 className: i()(x.content, x.mainContent),
                 children: [

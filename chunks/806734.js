@@ -10,7 +10,6 @@ e.exports = {
     placeholderPulse: 'placeholderPulse__08415',
     shop: 'shop__08415',
     banner: 'banner__08415',
-    shopFullscreen: 'shopFullscreen__08415',
     bannerImage: 'bannerImage__08415',
     responsiveHero: 'responsiveHero__08415',
     bannerVideoBackground: 'bannerVideoBackground__08415',

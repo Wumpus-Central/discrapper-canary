@@ -1,10 +1,10 @@
 n.d(t, {
-    Bi: () => h,
+    Bi: () => v,
     NX: () => m,
-    Uv: () => v,
-    Z1: () => x,
+    Uv: () => h,
+    Z1: () => N,
     hP: () => g,
-    w9: () => N
+    w9: () => x
 }),
     n(539854);
 var l = n(392711),
@@ -61,7 +61,7 @@ function E(e, t) {
         e
     );
 }
-let h = (e, t) => {
+let v = (e, t) => {
     let n = a().shuffle(e),
         l = n.findIndex((e) => e.value === t);
     if (l > -1) {
@@ -70,7 +70,7 @@ let h = (e, t) => {
     }
     return n;
 };
-function v(e) {
+function h(e) {
     let { feedbackType: t, location: n } = e,
         { persistToBackend: l } = (0, o.O)({ location: n }),
         a = u.R[t].hotspot;
@@ -111,7 +111,7 @@ function p(e) {
             })(e, ['disabled']);
         });
 }
-function x() {
+function N() {
     return p([
         {
             variant: c.$7.SELF,
@@ -137,10 +137,15 @@ function x() {
             value: c.T_.DESYNC,
             variant: c.$7.UNSPECIFIED,
             label: O.intl.string(b.default['zk+QLy'])
+        },
+        {
+            value: c.T_.CUTTING,
+            variant: c.$7.SOMEONE,
+            label: O.intl.string(b.default.K5vYQE)
         }
     ]);
 }
-function N(e) {
+function x(e) {
     let { isMobile: t } = e;
     return p([
         {
@@ -169,7 +174,7 @@ function N(e) {
             label: O.intl.string(b.default.Q5Dsa2)
         },
         {
-            value: c.b9.TOO_QUIET,
+            value: c.b9.TOO_QUIET_OR_LOUD,
             variant: c.$7.SOMEONE,
             label: O.intl.string(b.default['1o77Iy'])
         },

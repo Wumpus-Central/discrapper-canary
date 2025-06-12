@@ -418,7 +418,7 @@ Y(
                             experiments: e.experiments,
                             connectedAccounts: e.connected_accounts,
                             guildExperiments: e.guild_experiments,
-                            apexUserExperiments: null != (n = e.apex_user_experiments) ? n : void 0,
+                            apexExperiments: null != (n = e.apex_experiments) ? n : void 0,
                             requiredAction: e.required_action,
                             consents: e.consents,
                             sessions: X(e.sessions || []),
@@ -450,7 +450,7 @@ Y(
         var t, n;
         K({
             type: 'CONNECTION_OPEN_STATE_UPDATE',
-            apexUserExperiments: null != (t = e.apex_user_experiments) ? t : void 0,
+            apexExperiments: null != (t = e.apex_experiments) ? t : void 0,
             userActivities: null != (n = e.user_activities) ? n : void 0
         });
     }),
