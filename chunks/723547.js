@@ -1,62 +1,38 @@
-n.d(t, { v: () => d }), n(953529);
+n.d(t, { v: () => o }), n(953529);
 var i = n(255367);
 n(73800);
-var r = n(704215),
-    s = n(481060),
-    l = n(243778),
-    a = n(921944),
-    o = n(388032),
-    c = n(443257);
-function d(e) {
-    let { children: t, canBeShown: n, onCTA: d, targetElementRef: u } = e;
-    return (0, i.jsx)(l.ZP, {
-        bypassAutoDismiss: !0,
-        contentTypes: n ? [r.z.VOICE_FILTER_FIRST_USE_COACHMARK] : [],
-        children: (e) => {
-            let { visibleContent: n, markAsDismissed: l } = e;
-            return n === r.z.VOICE_FILTER_FIRST_USE_COACHMARK
-                ? (0, i.jsx)(s.yRy, {
-                      targetElementRef: u,
-                      renderPopout: () =>
-                          (0, i.jsx)('div', {
-                              className: c.popup,
-                              children: (0, i.jsxs)('div', {
-                                  className: c.content,
-                                  children: [
-                                      (0, i.jsx)(s.P3F, {
-                                          className: c.closeIcon,
-                                          onClick: () => l(a.L.USER_DISMISS),
-                                          children: (0, i.jsx)(s.Dio, { size: 'xs' })
-                                      }),
-                                      (0, i.jsx)(s.Text, {
-                                          className: c.description,
-                                          variant: 'text-md/normal',
-                                          children: o.intl.string(o.t['Ny/0ur'])
-                                      }),
-                                      (0, i.jsx)(s.zxk, {
-                                          color: s.zxk.Colors.BRAND,
-                                          look: s.zxk.Looks.FILLED,
-                                          size: s.zxk.Sizes.SMALL,
-                                          fullWidth: !0,
-                                          onClick: () => {
-                                              l(a.L.TAKE_ACTION), d();
-                                          },
-                                          children: o.intl.string(o.t.TYo739)
-                                      })
-                                  ]
-                              })
-                          }),
-                      animation: s.yRy.Animation.TRANSLATE,
-                      animationPosition: 'bottom',
-                      position: 'top',
-                      align: 'center',
-                      shouldShow: !0,
-                      children: (e, n) => {
-                          let { isShown: i } = n;
-                          return t(i, () => l(a.L.INDIRECT_ACTION));
-                      }
-                  })
-                : t(!1);
-        }
+var r = n(481060),
+    s = n(921944),
+    l = n(388032),
+    a = n(443257);
+function o(e) {
+    let { markAsDismissed: t, onCTA: n } = e;
+    return (0, i.jsx)('div', {
+        className: a.popup,
+        children: (0, i.jsxs)('div', {
+            className: a.content,
+            children: [
+                (0, i.jsx)(r.P3F, {
+                    className: a.closeIcon,
+                    onClick: () => t(s.L.USER_DISMISS),
+                    children: (0, i.jsx)(r.Dio, { size: 'xs' })
+                }),
+                (0, i.jsx)(r.Text, {
+                    className: a.description,
+                    variant: 'text-md/normal',
+                    children: l.intl.string(l.t['Ny/0ur'])
+                }),
+                (0, i.jsx)(r.zxk, {
+                    color: r.zxk.Colors.BRAND,
+                    look: r.zxk.Looks.FILLED,
+                    size: r.zxk.Sizes.SMALL,
+                    fullWidth: !0,
+                    onClick: () => {
+                        t(s.L.TAKE_ACTION), n();
+                    },
+                    children: l.intl.string(l.t.TYo739)
+                })
+            ]
+        })
     });
 }

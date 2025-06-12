@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => G,
+    Z: () => U,
     r: () => m
 }),
     n(642613),
@@ -115,7 +115,7 @@ function v(e) {
 }
 function I(e) {
     if (null == E.limitedTimeVoices) return void g.warn('No limited time voices available to update');
-    (E.limitedTimeVoices.current_set_end = e.toISOString()), (E.limitedTimeVoices.next_set_start = e.toISOString()), (E.limitedTimeVoices.next_set_end = (0, i.default)(e, 2).toISOString()), R();
+    (E.limitedTimeVoices.current_set_end = e.toISOString()), (E.limitedTimeVoices.next_set_start = e.toISOString()), (E.limitedTimeVoices.next_set_end = (0, i.default)(e, 2).toISOString()), C();
 }
 function T(e) {
     return Object.entries(e)
@@ -126,36 +126,32 @@ function T(e) {
         });
 }
 function S(e) {
-    let { catalog: t } = e,
-        n = y();
+    let { catalog: t, initialModelState: n } = e,
+        r = y();
     (E.catalogFetchFailed = !1), (E.models = t.models), (E.limitedTimeVoices = t.limited_time_voices);
-    let r = {},
-        i = v(E.limitedTimeVoices);
-    if (((E.catalogUpdateTime = i.catalogUpdateTime), n))
+    let i = {},
+        a = v(E.limitedTimeVoices);
+    if (((E.catalogUpdateTime = a.catalogUpdateTime), r))
         for (let e of Object.keys(d.x))
-            r[e] = h(f({}, d.x[e]), {
+            i[e] = h(f({}, d.x[e]), {
                 id: e,
                 modelIds: void 0,
                 available: !0
             });
-    for (let { id: e, models: a, available: o } of t.voices)
+    for (let { id: e, models: n, available: o } of t.voices)
         Object.hasOwn(d.x, e) &&
-            (r[e] = h(f({}, d.x[e]), {
+            (i[e] = h(f({}, d.x[e]), {
                 id: e,
-                modelIds: a,
-                available: !!n || o,
-                temporarilyAvailable: i.currentSet.includes(e)
+                modelIds: n,
+                available: !!r || o,
+                temporarilyAvailable: a.currentSet.includes(e)
             }));
-    (E.voiceFilters = r), (E.sortedVoiceFilters = T(E.voiceFilters)), (E.catalogLastFetchTime = new Date());
+    (E.voiceFilters = i), (E.sortedVoiceFilters = T(E.voiceFilters)), (E.catalogLastFetchTime = new Date()), null != n && (Object.keys(E.modelState).length > 0 ? (E.modelState = n) : g.warn('Attempted to replace existing model state with initial model state'));
 }
 function A() {
     E.catalogFetchFailed = !0;
 }
-function N(e) {
-    let { modelState: t } = e;
-    E.modelState = t;
-}
-class C extends (r = s.ZP.Store) {
+class N extends (r = s.ZP.Store) {
     getVoiceFilterModels() {
         return E.models;
     }
@@ -218,7 +214,7 @@ class C extends (r = s.ZP.Store) {
         return b;
     }
 }
-function R() {
+function C() {
     let e = v(E.limitedTimeVoices);
     (E.catalogUpdateTime = e.catalogUpdateTime),
         Object.keys(E.voiceFilters).forEach((t) => {
@@ -226,61 +222,60 @@ function R() {
         }),
         (E.sortedVoiceFilters = T(E.voiceFilters));
 }
-function P(e) {
+function R(e) {
     let { modelId: t } = e;
     E.modelState[t] = h(f({}, E.modelState[t]), {
         status: u.L.DOWNLOADING,
         downloadedBytes: 0
     });
 }
-function w(e) {
+function P(e) {
     let { modelId: t, downloadedBytes: n, totalBytes: r } = e;
     E.modelState[t] = h(f({}, E.modelState[t]), {
         downloadedBytes: n,
         totalBytes: r
     });
 }
-function D(e) {
+function w(e) {
     var t;
     let { modelId: n, error: r } = e;
     (null == (t = E.modelState[n]) ? void 0 : t.status) !== u.L.DOWNLOADED && ((E.modelState[n] = h(f({}, E.modelState[n]), { status: u.L.MISSING })), 'USER_CANCELED_DOWNLOAD' in (null != r ? r : {}) || (E.error = 'ERROR_DOWNLOADING_DEPENDENCY'));
 }
-function L(e) {
+function D(e) {
     let { modelId: t } = e;
     E.modelState[t] = h(f({}, E.modelState[t]), {
         status: u.L.DOWNLOADED,
         downloadedBytes: void 0
     });
 }
-function x(e) {
+function L(e) {
     let { timeInSeconds: t } = e;
     I((0, a.Z)(new Date(), t));
 }
-function M(e) {
+function x(e) {
     E.nativeVoiceFilterModuleState = e.state;
 }
-function k() {
+function M() {
     E.error = 'ERROR_ACTIVATING_VOICE_FILTER';
 }
-function j() {
+function k() {
     E.error = null;
 }
-function U() {
+function j() {
     b = Date.now();
 }
-_(C, 'displayName', 'VoiceFilterStore');
-let G = new C(l.Z, {
-    VOICE_FILTER_DOWNLOAD_STARTED: P,
-    VOICE_FILTER_DOWNLOAD_PROGRESS: w,
-    VOICE_FILTER_DOWNLOAD_FAILED: D,
-    VOICE_FILTER_FILE_READY: L,
+_(N, 'displayName', 'VoiceFilterStore');
+let U = new N(l.Z, {
+    VOICE_FILTER_DOWNLOAD_STARTED: R,
+    VOICE_FILTER_DOWNLOAD_PROGRESS: P,
+    VOICE_FILTER_DOWNLOAD_FAILED: w,
+    VOICE_FILTER_FILE_READY: D,
     VOICE_FILTER_CATALOG_FETCH_SUCCESS: S,
     VOICE_FILTER_CATALOG_FETCH_FAILED: A,
-    VOICE_FILTER_SET_MODEL_STATE: N,
-    VOICE_FILTER_UPDATE_LIMITED_TIME_VOICES: R,
-    VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME: x,
-    VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE: M,
-    VOICE_FILTER_APPLY_FAILED: k,
-    VOICE_FILTER_REQUEST_SWITCH: j,
-    VOICE_FILTER_LAGGING: U
+    VOICE_FILTER_UPDATE_LIMITED_TIME_VOICES: C,
+    VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME: L,
+    VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE: x,
+    VOICE_FILTER_APPLY_FAILED: M,
+    VOICE_FILTER_REQUEST_SWITCH: k,
+    VOICE_FILTER_LAGGING: j
 });

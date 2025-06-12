@@ -866,134 +866,134 @@ function tg(e) {
     });
 }
 function tp(e) {
-    let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: a, tooltipText: o, tooltipColor: u, tooltipForceOpen: m, iconForeground: g, onMouseEnter: p, onMouseLeave: b, onClick: _, onContextMenu: x, nameplate: E, accountContainerRef: j } = e,
-        C = t || s || n,
-        O = r.useRef(null),
+    let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: a, tooltipText: o, tooltipColor: m, tooltipForceOpen: g, iconForeground: p, onMouseEnter: b, onMouseLeave: _, onClick: x, onContextMenu: E, nameplate: j, accountContainerRef: C } = e,
+        O = t || s || n,
         S = r.useRef(null),
-        v = (0, eZ.b)(C),
-        { activeVoice: T, mostRecentlyRequestedVoiceId: I, lastInitAttemptMayHaveCrashed: N } = (0, eN.o)(),
-        { showSilentLagWarning: P } = (0, eI.Y)(),
-        R = null != T,
-        D = (0, eT.z)(T),
-        Z = (0, d.e7)([eV.Z], () => eV.Z.isConnected()),
-        { Component: w, events: k, play: B } = v,
-        M = n || s ? f.v0G : w,
-        U = P ? tt.intl.string(tt.t.ARRV6u) : null,
-        V = (0, L.Z)(t, n, s, a),
-        G =
+        v = r.useRef(null),
+        T = (0, eZ.b)(O),
+        { activeVoice: I, mostRecentlyRequestedVoiceId: N, lastInitAttemptMayHaveCrashed: P } = (0, eN.o)(),
+        { showSilentLagWarning: R } = (0, eI.Y)(),
+        D = null != I,
+        Z = (0, eT.z)(I),
+        w = (0, d.e7)([eV.Z], () => eV.Z.isConnected()),
+        { Component: k, events: B, play: M } = T,
+        U = n || s ? f.v0G : k,
+        V = R ? tt.intl.string(tt.t.ARRV6u) : null,
+        G = (0, L.Z)(t, n, s, a),
+        F =
             null != o
                 ? o
-                : null != U
+                : null != V
                   ? (0, i.jsxs)('div', {
                         className: tn.tooltipWithSubtext,
                         children: [
                             (0, i.jsx)(f.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'currentColor',
-                                children: V
+                                children: G
                             }),
-                            null != U &&
+                            null != V &&
                                 (0, i.jsx)(f.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'text-warning',
-                                    children: U
+                                    children: V
                                 })
                         ]
                     })
-                  : V,
-        { analyticsLocations: F } = (0, A.ZP)(y.Z.AUDIO_INPUT_BUTTON),
-        H = (0, eS.Hu)({
+                  : G,
+        { analyticsLocations: H } = (0, A.ZP)(y.Z.AUDIO_INPUT_BUTTON),
+        z = (0, eS.Hu)({
             location: y.Z.AUDIO_INPUT_BUTTON,
             autoTrackExposure: !0
         }),
-        z = (0, ev.av)({
+        Y = (0, ev.av)({
             location: y.Z.AUDIO_INPUT_BUTTON,
             autoTrackExposure: !0
         });
-    r.useEffect(() => () => B(), [C, B]);
-    let Y = r.useCallback(
+    r.useEffect(() => () => M(), [O, M]);
+    let W = r.useCallback(
             (e) => {
-                x(e, F);
+                E(e, H);
             },
-            [x, F]
+            [E, H]
         ),
-        [W, K] = r.useState(!1),
-        q = r.useCallback((e) => {
+        [K, q] = r.useState(!1),
+        X = r.useCallback((e) => {
             var t;
-            if ((0, c.k)(null == e ? void 0 : e.target, Node) && (null == (t = O.current) ? void 0 : t.contains(e.target))) return h.F;
-            K(!1);
+            if ((0, c.k)(null == e ? void 0 : e.target, Node) && (null == (t = S.current) ? void 0 : t.contains(e.target))) return h.F;
+            q(!1);
         }, []);
     (0, eX.yp)({
         event: e4.CkL.OPEN_VOICE_FILTER_POPOUT,
         handler: () => {
-            K(!0);
+            q(!0);
         }
     });
-    let [X, Q] = r.useState(!1);
+    let [J, $] = r.useState(!1);
     r.useEffect(() => {
         let e;
         return (
-            Z &&
-                R &&
+            w &&
+                D &&
                 (e = setTimeout(() => {
-                    Q(!0), (e = setTimeout(() => Q(!1), to));
+                    $(!0), (e = setTimeout(() => $(!1), to));
                 }, 300)),
             () => {
-                Q(!1), clearTimeout(e);
+                $(!1), clearTimeout(e);
             }
         );
-    }, [Z]);
-    let J = r.useCallback(() => {
-            N || (0, ey.r5)();
-        }, [N]),
-        $ = C ? f.TVs.colors.STATUS_DANGER : P ? f.TVs.colors.STATUS_WARNING : 'currentColor',
-        ee = C || P;
+    }, [w]);
+    let ee = r.useCallback(() => {
+            P || (0, ey.r5)();
+        }, [P]),
+        et = O ? f.TVs.colors.STATUS_DANGER : R ? f.TVs.colors.STATUS_WARNING : 'currentColor',
+        en = O || R;
     return (0, i.jsx)(A.Gt, {
-        value: F,
+        value: H,
         children: (0, i.jsxs)('div', {
-            ref: O,
-            className: l()(tn.micButtonParent, { [tn.hasColorGlow]: ee }),
+            ref: S,
+            className: l()(tn.micButtonParent, { [tn.hasColorGlow]: en }),
             children: [
                 (0, i.jsx)(e6.Z, {
-                    tooltipText: G,
-                    tooltipColor: u,
-                    tooltipForceOpen: m,
-                    plated: null != E,
+                    tooltipText: F,
+                    tooltipColor: m,
+                    tooltipForceOpen: g,
+                    plated: null != j,
                     onMouseEnter: () => {
-                        p(), k.onMouseEnter();
+                        b(), B.onMouseEnter();
                     },
                     onMouseLeave: () => {
-                        b(), k.onMouseLeave();
+                        _(), B.onMouseLeave();
                     },
-                    icon: (0, i.jsx)(M, {
+                    icon: (0, i.jsx)(U, {
                         size: 'custom',
                         width: 20,
                         height: 20,
-                        color: $,
-                        className: g
+                        color: et,
+                        className: p
                     }),
-                    onClick: _,
-                    onContextMenu: Y,
+                    onClick: x,
+                    onContextMenu: W,
                     role: 'switch',
-                    className: l()({ [tn.micButtonWithMenu]: H }),
-                    orangeGlow: P,
-                    redGlow: C,
+                    className: l()({ [tn.micButtonWithMenu]: z }),
+                    orangeGlow: R,
+                    redGlow: O,
                     'aria-label': tt.intl.string(tt.t['w4m94+']),
-                    'aria-checked': C,
+                    'aria-checked': O,
                     disabled: a
                 }),
-                H &&
+                z &&
                     (0, i.jsx)(f.yRy, {
-                        targetElementRef: j,
+                        targetElementRef: C,
                         position: 'top',
                         align: 'left',
                         nudgeAlignIntoViewport: !1,
                         animation: f.yRy.Animation.FADE,
                         useMouseEnter: !0,
                         ignoreModalClicks: !0,
-                        onRequestOpen: J,
-                        onRequestClose: q,
-                        shouldShow: W,
+                        onRequestOpen: ee,
+                        onRequestClose: X,
+                        shouldShow: K,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
                             return (0, i.jsx)(eR.l, { onSettingsButtonClick: t });
@@ -1020,33 +1020,43 @@ function tp(e) {
                                     return r;
                                 })(e, ['onClick']),
                                 { isShown: s } = t;
-                            let l = s ? f.u04 : f.CJ0;
-                            return (0, i.jsx)('div', {
-                                children: (0, i.jsx)(eP.n, {
-                                    targetElementRef: S,
-                                    onCTA: () => K(!0),
-                                    canBeShown: !s,
-                                    children: (e, t) =>
-                                        (0, i.jsx)(eA.v, {
-                                            targetElementRef: S,
-                                            onCTA: () => K(!0),
-                                            canBeShown: z && Z && !R && !e && !s,
-                                            children: (e, s) =>
+                            let l = s ? f.u04 : f.CJ0,
+                                o = [];
+                            return (
+                                !s && (o.push(u.z.VOICE_FILTER_LAUNCH_COACHMARK), Y && w && !D && o.push(u.z.VOICE_FILTER_FIRST_USE_COACHMARK)),
+                                (0, i.jsx)('div', {
+                                    children: (0, i.jsx)(Q.ZP, {
+                                        bypassAutoDismiss: !0,
+                                        contentTypes: o,
+                                        children: (e) => {
+                                            let { visibleContent: t, markAsDismissed: s } = e,
+                                                o = null;
+                                            t === u.z.VOICE_FILTER_LAUNCH_COACHMARK
+                                                ? (o = (0, i.jsx)(eP.n, {
+                                                      markAsDismissed: s,
+                                                      onCTA: () => q(!0)
+                                                  }))
+                                                : t === u.z.VOICE_FILTER_FIRST_USE_COACHMARK &&
+                                                  (o = (0, i.jsx)(eA.v, {
+                                                      markAsDismissed: s,
+                                                      onCTA: () => q(!0)
+                                                  }));
+                                            let c = () =>
                                                 (0, i.jsx)(
                                                     e6.Z,
                                                     tr(
                                                         {
-                                                            ref: S,
-                                                            plated: null != E,
-                                                            tooltipForceOpen: X,
-                                                            tooltipColor: X ? f.FGA.GREEN : void 0,
-                                                            tooltipContentClassName: X ? tn.voiceFilterWarning : void 0,
-                                                            tooltipText: X
+                                                            ref: v,
+                                                            plated: null != j,
+                                                            tooltipForceOpen: J,
+                                                            tooltipColor: J ? f.FGA.GREEN : void 0,
+                                                            tooltipContentClassName: J ? tn.voiceFilterWarning : void 0,
+                                                            tooltipText: J
                                                                 ? (0, i.jsxs)(i.Fragment, {
                                                                       children: [
                                                                           (0, i.jsx)('img', {
-                                                                              alt: null != D ? tt.intl.string(D.name) : '',
-                                                                              src: null == D ? void 0 : D.iconURL,
+                                                                              alt: null != Z ? tt.intl.string(Z.name) : '',
+                                                                              src: null == Z ? void 0 : Z.iconURL,
                                                                               draggable: !1
                                                                           }),
                                                                           (0, i.jsx)(f.Text, {
@@ -1062,24 +1072,37 @@ function tp(e) {
                                                                 size: 'custom',
                                                                 width: 12,
                                                                 height: 12,
-                                                                color: $
+                                                                color: et
                                                             }),
                                                             role: 'button',
                                                             className: tn.buttonChevron,
-                                                            orangeGlow: P,
-                                                            redGlow: C,
+                                                            orangeGlow: R,
+                                                            redGlow: O,
                                                             'aria-label': tt.intl.string(tt.t.Hapb4O),
                                                             disabled: a,
                                                             onClick: (e) => {
-                                                                null == t || t(), null == s || s(), n(e), null != I && !W && N ? (0, eD.$)(() => K(!0)) : K(!W);
+                                                                s(e9.L.INDIRECT_ACTION), n(e), null != N && !K && P ? (0, eD.$)(() => q(!0)) : q(!K);
                                                             }
                                                         },
                                                         r
                                                     )
-                                                )
-                                        })
+                                                );
+                                            return null != o
+                                                ? (0, i.jsx)(f.yRy, {
+                                                      targetElementRef: v,
+                                                      renderPopout: () => o,
+                                                      animation: f.yRy.Animation.TRANSLATE,
+                                                      animationPosition: 'bottom',
+                                                      position: 'top',
+                                                      align: 'center',
+                                                      shouldShow: !0,
+                                                      children: c
+                                                  })
+                                                : c();
+                                        }
+                                    })
                                 })
-                            });
+                            );
                         }
                     })
             ]

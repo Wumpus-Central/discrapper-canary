@@ -4,17 +4,17 @@ var r = n(688619),
 let a = ['#94E0CF', '#9AF0B1', '#9A90FF', '#9A53FF', '#FDA6E4', '#FFE6C0', '#EFB4AA', '#56B69F', '#29C566', '#5348CA', '#6D24D4', '#CA48C8', '#F0AE29', '#DF4232'],
     o = [0, 45, 90, 135, 180, 225, 270, 315],
     s = [20, 40, 60, 80],
-    l = ['analogous', 'complementary', 'split-complementary', 'triadic', 'monochromatic'];
+    l = ['analogous', 'complementary', 'split-complementary', 'triadic'];
 function c() {
     let e = s[Math.floor(Math.random() * s.length)];
-    if (!(0.5 > Math.random()))
+    if (!(0.8 > Math.random()))
         return {
             type: 'solid',
             colors: [a[Math.floor(Math.random() * a.length)]],
             intensity: e
         };
     let t = o[Math.floor(Math.random() * o.length)];
-    if ('path1' == (0.5 > Math.random() ? 'path1' : 'path2')) {
+    if ('path1' == (0.2 > Math.random() ? 'path1' : 'path2')) {
         let n = Math.floor(Math.random() * a.length),
             r = Math.floor(Math.random() * a.length);
         for (; r === n; ) r = Math.floor(Math.random() * a.length);
@@ -31,7 +31,7 @@ function c() {
             r = l[Math.floor(Math.random() * l.length)];
         return {
             type: 'gradient',
-            colors: h(n, r),
+            colors: p(n, r),
             angle: t,
             intensity: e,
             gradientType: r
@@ -64,15 +64,7 @@ function f(e, t, n, r) {
         o = (r + 240) % 360;
     return [e, i().hsl(a, t, n).hex(), i().hsl(o, t, n).hex()];
 }
-function p(e, t, n, r) {
-    return [
-        e,
-        i()
-            .hsl(r, t, Math.min(n + 0.2, 1))
-            .hex()
-    ];
-}
-function h(e, t) {
+function p(e, t) {
     try {
         let n = i()(e),
             r = n.get('hsl.h'),
@@ -87,8 +79,6 @@ function h(e, t) {
                 return _(e, a, o, r);
             case 'triadic':
                 return f(e, a, o, r);
-            case 'monochromatic':
-                return p(e, a, o, r);
             default:
                 return [e];
         }

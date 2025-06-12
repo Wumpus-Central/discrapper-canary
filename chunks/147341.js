@@ -17,13 +17,13 @@ function s() {
                 children: [
                     (0, r.jsx)(i.X6q, {
                         variant: 'heading-xxl/normal',
-                        color: 'header-primary',
+                        color: 'always-white',
                         className: o.heading,
                         children: a.intl.string(a.t['VAK+h4'])
                     }),
                     (0, r.jsx)(i.Text, {
                         variant: 'text-lg/normal',
-                        color: 'text-secondary',
+                        color: 'always-white',
                         className: o.text,
                         children: a.intl.string(a.t.dcpdhI)
                     })

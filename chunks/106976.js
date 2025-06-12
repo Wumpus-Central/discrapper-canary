@@ -128,6 +128,6 @@ async function E(e) {
         ),
             c(o);
     } catch (n) {
-        'status' in n && 429 === n.status && t < 10 && E(e, t++);
+        'status' in n && 429 === n.status && t < 10 && (await E(e, t++));
     }
 }
