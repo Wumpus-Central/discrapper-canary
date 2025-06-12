@@ -13579,10 +13579,6 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     width: 100%
 }
 
-.visual-refresh.align-chat-input .container__4bbc6 {
-    border-radius: unset
-}
-
 .fadeIn__4bbc6 {
     animation: fadeIn__4bbc6 .12s ease-in forwards;
     opacity: 0
