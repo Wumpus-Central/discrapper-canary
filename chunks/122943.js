@@ -70,55 +70,57 @@ function T(e, t) {
     );
 }
 function S(e) {
-    let { channel: t, textVariant: n, textClassName: a, iconClassName: _, hideText: g = !1, hideTooltip: O = !1, canTruncate: I = !0, showChannelName: S = !1 } = e,
-        A = (0, l.vjg)(l.Skl.ONLINE),
-        N = (0, d.ZP)(t),
-        C = t.isDM() || t.isGroupDM(),
-        { enableTopNavButton: R } = (0, f.Cq)({ location: 'VoiceActivityStatus' }),
-        P = !R && S,
-        { analyticsLocations: w } = (0, c.ZP)(),
-        D = i.useCallback(() => {
+    let { channel: t, textVariant: n, textClassName: a, iconClassName: g, hideText: O = !1, hideTooltip: I = !1, canTruncate: S = !0, showChannelName: A = !1 } = e,
+        N = (0, _.b)({ location: 'ActivityStatusIcon' }),
+        C = (0, l.vjg)(l.Skl.ONLINE),
+        R = N ? s.Z.colors.TEXT_POSITIVE : C,
+        P = (0, d.ZP)(t),
+        w = t.isDM() || t.isGroupDM(),
+        { enableTopNavButton: D } = (0, f.Cq)({ location: 'VoiceActivityStatus' }),
+        L = !D && A,
+        { analyticsLocations: x } = (0, c.ZP)(),
+        k = i.useCallback(() => {
             (0, h.A)({
-                analyticsLocations: w,
+                analyticsLocations: x,
                 activityType: 'VOICE',
                 voiceChannelId: t.id
             });
-        }, [w, t.id]),
-        L = () =>
-            O || C
+        }, [x, t.id]),
+        M = () =>
+            I || w
                 ? (0, r.jsx)(p.Z, {
                       size: 'custom',
-                      color: A,
+                      color: R,
                       channel: t,
-                      className: o()(y.icon, _)
+                      className: o()(y.icon, g)
                   })
                 : (0, r.jsx)(l.ua7, {
-                      text: N,
+                      text: P,
                       'aria-label': (0, u.ZP)({ channel: t }),
                       delay: E.X,
-                      onTooltipShow: D,
+                      onTooltipShow: k,
                       children: (e) =>
                           (0, r.jsx)(
                               p.Z,
                               T(v({}, e), {
                                   size: 'custom',
-                                  color: s.Z.colors.STATUS_POSITIVE,
+                                  color: R,
                                   channel: t,
-                                  className: o()(y.icon, _)
+                                  className: o()(y.icon, g)
                               })
                           )
                   }),
-        x = () => (R ? N : C ? b.intl.string(b.t['9FaEzs']) : t.isGuildStageVoice() ? b.intl.string(b.t.QygGCA) : b.intl.string(b.t.msxteH));
+        j = () => (D ? P : w ? b.intl.string(b.t['9FaEzs']) : t.isGuildStageVoice() ? b.intl.string(b.t.QygGCA) : b.intl.string(b.t.msxteH));
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            L(),
-            !g &&
+            M(),
+            !O &&
                 (0, r.jsxs)(m.Z, {
                     variant: n,
                     className: a,
-                    canTruncate: I,
-                    hideTooltip: O,
-                    children: [x(), P && null != N && ' ('.concat(N, ')')]
+                    canTruncate: S,
+                    hideTooltip: I,
+                    children: [j(), L && null != P && ' ('.concat(P, ')')]
                 })
         ]
     });

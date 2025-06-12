@@ -3,6 +3,7 @@ e.exports = {
     textXs: 'textXs_c9d15c',
     textSm: 'textSm_c9d15c',
     activityContainer: 'activityContainer_c9d15c',
+    iconOnly: 'iconOnly_c9d15c',
     activitiesTooltip: 'activitiesTooltip_c9d15c',
     tooltipText: 'tooltipText_c9d15c',
     icon: 'icon_c9d15c',

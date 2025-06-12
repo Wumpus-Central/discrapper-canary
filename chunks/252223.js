@@ -107,11 +107,11 @@ function U(e) {
 function G(e) {
     let { textVariant: t, className: n, hasCustomStatusText: i, totalActivityCount: a } = e,
         s = a - 1;
-    return (0, r.jsx)(l.xv, {
+    return (0, r.jsxs)(l.xv, {
         variant: t,
         className: o()(n, w.activityCounter),
         color: i ? 'text-positive' : 'none',
-        children: i ? '+'.concat(s) : '(+'.concat(s, ')')
+        children: ['+', s]
     });
 }
 function B(e) {
@@ -255,7 +255,7 @@ function F(e) {
                 : J && !Y
                   ? M
                       ? (0, r.jsxs)('div', {
-                            className: w.activityContainer,
+                            className: o()(w.activityContainer, $ && w.iconOnly),
                             children: [et(), er()]
                         })
                       : (0, r.jsx)(u.ua7, {
@@ -266,7 +266,7 @@ function F(e) {
                             children: (e) =>
                                 (0, r.jsxs)(
                                     'div',
-                                    k(L({ className: w.activityContainer }, e), {
+                                    k(L({ className: o()(w.activityContainer, $ && w.iconOnly) }, e), {
                                         children: [et(!0), er()]
                                     })
                                 )

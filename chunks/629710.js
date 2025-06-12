@@ -39,8 +39,8 @@ let _ = -1,
         return null == t || null == e ? f.qn.NONE : m(t, n);
     },
     m = (e, t) => {
-        var n;
-        if (t === (null == (n = s.default.getCurrentUser()) ? void 0 : n.id)) return f.qn.NONE;
+        let n = s.default.getCurrentUser();
+        if (null == n || t === n.id) return f.qn.NONE;
         let r = C(e, t, [a.Z, o.Z]);
         return null == r ? f.qn.NONE : g(r);
     },
@@ -220,8 +220,9 @@ function N(e) {
 function C(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [a.Z, o.Z],
         [r, i] = n,
-        s = r.getChannel(e);
-    return null == s ? null : s.isDM() || s.isGroupDM() ? (null != t && i.getFriendIDs().includes(t) ? u.n.FRIEND_DM : u.n.NON_FRIEND_DM) : u.n.GUILD;
+        l = r.getChannel(e),
+        c = s.default.getCurrentUser();
+    return null == c || t === c.id || null == l ? null : l.isDM() || l.isGroupDM() ? (null != t && i.getFriendIDs().includes(t) ? u.n.FRIEND_DM : u.n.NON_FRIEND_DM) : u.n.GUILD;
 }
 function R(e, t) {
     var n, r, i, a, o, s, l;

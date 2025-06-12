@@ -249,7 +249,7 @@ function x(e) {
                                                       onClick: es,
                                                       children: (0, r.jsx)(l.Text, {
                                                           variant: 'text-xs/medium',
-                                                          color: 'header-primary',
+                                                          color: 'none',
                                                           children: T.intl.format(T.t.wv8Q7u, { activitiesCount: ei.length })
                                                       })
                                                   })

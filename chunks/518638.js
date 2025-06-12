@@ -38,16 +38,17 @@ function y(e, t) {
     return null != r ? 'https://'.concat(r, '/promotions/').concat(e, '/').concat(n).concat(i) : ''.concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, '/promotions/').concat(e, '/').concat(n).concat(i);
 }
 function O(e) {
+    var t, n, r, i, a;
     return {
         id: e.id,
         startDate: e.start_date,
         endDate: e.end_date,
         outboundRedemptionEndDate: e.outbound_redemption_end_date,
-        outboundTitle: e.outbound_title,
-        outboundRedemptionModalBody: e.outbound_redemption_modal_body,
-        outboundRedemptionPageLink: e.outbound_redemption_page_link,
-        outboundRedemptionUrlFormat: e.outbound_redemption_url_format,
-        outboundTermsAndConditions: e.outbound_terms_and_conditions,
+        outboundTitle: null != (t = e.outbound_title) ? t : '',
+        outboundRedemptionModalBody: null != (n = e.outbound_redemption_modal_body) ? n : '',
+        outboundRedemptionPageLink: null != (r = e.outbound_redemption_page_link) ? r : '',
+        outboundRedemptionUrlFormat: null != (i = e.outbound_redemption_url_format) ? i : '',
+        outboundTermsAndConditions: null != (a = e.outbound_terms_and_conditions) ? a : '',
         flags: e.flags
     };
 }

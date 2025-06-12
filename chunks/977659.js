@@ -7,6 +7,5 @@ e.exports = {
     scrollerSpacer: 'scrollerSpacer__36d07',
     empty: 'empty__36d07',
     emptyForum: 'emptyForum__36d07',
-    navigationDescription: 'navigationDescription__36d07',
-    typingGradient: 'typingGradient__36d07'
+    navigationDescription: 'navigationDescription__36d07'
 };
