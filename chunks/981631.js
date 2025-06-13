@@ -3920,6 +3920,7 @@ var nf = (function (e) {
             (e.CLIENT_THEME_PREVIEW_VIEWED = 'client_theme_preview_viewed'),
             (e.CLIENT_THEME_PREVIEW_CLOSED = 'client_theme_preview_closed'),
             (e.CUSTOM_THEME_RESET_BUTTON_CLICKED = 'custom_theme_reset_button_clicked'),
+            (e.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED = 'custom_themes_editor_controls_changed'),
             (e.CUSTOM_THEMES_BACK_BUTTON_CLICKED = 'custom_themes_back_button_clicked'),
             (e.CUSTOM_THEMES_SURPRISE_BUTTON_CLICKED = 'custom_themes_surprise_button_clicked'),
             (e.CUSTOM_THEMES_UPDATED = 'custom_themes_updated'),
@@ -4184,6 +4185,8 @@ var nf = (function (e) {
             (e.NOTIFICATIONS_INBOX_UNMOUNTED = 'notifications_inbox_unmounted'),
             (e.NOTIFICATIONS_INBOX_LOADED = 'notifications_inbox_loaded'),
             (e.MASKED_LINK_MODAL_CLICKED = 'masked_link_modal_clicked'),
+            (e.ACTIVITY_SHARING_SETTINGS_INTERACTED = 'activity_sharing_settings_interacted'),
+            (e.RUNNING_GAME_CARD_STATE_CHANGED = 'running_game_card_state_changed'),
             e
         );
     })({}),

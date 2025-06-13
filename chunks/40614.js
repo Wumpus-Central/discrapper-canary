@@ -1,64 +1,58 @@
-n.d(t, { V: () => v }), n(388685);
+n.d(t, { V: () => O }), n(388685);
 var r = n(255367),
     i = n(73800),
-    l = n(512722),
-    o = n.n(l),
-    s = n(442837),
-    a = n(481060),
-    c = n(550532),
-    u = n(371991),
-    d = n(561308),
-    h = n(594190),
-    p = n(695346),
-    f = n(885110),
-    g = n(316496),
-    m = n(29953),
-    b = n(388032),
-    y = n(24655);
-function O() {
-    return (0, r.jsx)(a.Text, {
-        className: y.textContent,
-        variant: 'text-xs/medium',
-        color: 'text-secondary',
-        children: b.intl.string(b.t.jfrLLS)
+    l = n(442837),
+    o = n(481060),
+    s = n(550532),
+    a = n(371991),
+    c = n(561308),
+    u = n(594190),
+    d = n(695346),
+    h = n(885110),
+    p = n(316496),
+    f = n(29953),
+    g = n(388032),
+    m = n(24655);
+function b(e) {
+    let { onClick: t } = e;
+    return (0, r.jsx)(o.P3F, {
+        className: m.container,
+        onClick: t,
+        children: (0, r.jsx)(o.Text, {
+            className: m.textContent,
+            variant: 'text-xs/medium',
+            color: 'text-secondary',
+            children: g.intl.string(g.t.jfrLLS)
+        })
     });
 }
-function _() {
-    var e;
-    let t = (0, s.e7)([c.Z], () => c.Z.getFakeGameData()),
-        n = (0, s.e7)([h.ZP], () => h.ZP.getVisibleGame()),
-        l = null != (e = null == t ? void 0 : t.start) ? e : null == n ? void 0 : n.start,
-        f = p.SE.useSetting().length > 0;
-    o()(null != l, 'Start time should be set for currently running game');
-    let { now: g } = (0, u.tS)(),
-        O = (0, i.useMemo)(() => (0, d.T_)({ start: l }, g), [l, g]),
-        _ = [...(f ? [b.intl.string(m.default.jfDsyM)] : []), b.intl.string(b.t.BMTj29), O];
-    return (0, r.jsx)(a.Text, {
-        className: y.textContent,
-        variant: 'text-xs/medium',
-        color: 'text-positive',
-        lineClamp: 1,
-        children: _.join(' \xB7 ')
+function y(e) {
+    var t;
+    let { onClick: n } = e,
+        h = (0, l.e7)([s.Z], () => s.Z.getFakeGameData()),
+        p = (0, l.e7)([u.ZP], () => u.ZP.getVisibleGame()),
+        b = null != (t = null == h ? void 0 : h.start) ? t : null == p ? void 0 : p.start,
+        y = d.SE.useSetting().length > 0,
+        { now: O } = (0, a.tS)(),
+        _ = (0, i.useMemo)(() => (null == b ? null : (0, c.T_)({ start: b }, O)), [b, O]);
+    if (null == b) return null;
+    let v = [...(y ? [g.intl.string(f.default.jfDsyM)] : []), g.intl.string(g.t.BMTj29), _];
+    return (0, r.jsx)(o.P3F, {
+        className: m.container,
+        onClick: n,
+        children: (0, r.jsx)(o.Text, {
+            className: m.textContent,
+            variant: 'text-xs/medium',
+            color: 'text-positive',
+            lineClamp: 1,
+            children: v.join(' \xB7 ')
+        })
     });
 }
-function v(e) {
+function O(e) {
     let { onClick: t } = e,
-        { isEnabled: n, showActivitySharingIndicatorWhenSharing: i } = (0, g.D)('not sharing link'),
-        l = p.G6.useSetting(),
-        o = (0, s.e7)([f.Z], () => f.Z.getStatus());
-    return n
-        ? l && o !== a.Skl.INVISIBLE
-            ? i
-                ? (0, r.jsx)(a.P3F, {
-                      className: y.container,
-                      onClick: t,
-                      children: (0, r.jsx)(_, {})
-                  })
-                : null
-            : (0, r.jsx)(a.P3F, {
-                  className: y.container,
-                  onClick: t,
-                  children: (0, r.jsx)(O, {})
-              })
-        : null;
+        { isEnabled: n, showActivitySharingIndicatorWhenSharing: i } = (0, p.D)('not sharing link'),
+        s = d.G6.useSetting(),
+        a = (0, l.e7)([h.Z], () => h.Z.getStatus());
+    return n ? (s && a !== o.Skl.INVISIBLE ? (i ? (0, r.jsx)(y, { onClick: t }) : null) : (0, r.jsx)(b, { onClick: t })) : null;
 }

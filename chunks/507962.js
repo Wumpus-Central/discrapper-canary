@@ -1,13 +1,18 @@
 n.d(t, {
-    G8: () => c,
-    HV: () => _,
-    Om: () => f,
-    Vb: () => h,
-    fR: () => u,
-    hf: () => g,
-    u7: () => m,
-    uf: () => p,
-    z3: () => d
+    HV: () => g,
+    J4: () => d,
+    JL: () => f,
+    Om: () => E,
+    P0: () => u,
+    Vb: () => y,
+    fR: () => h,
+    gG: () => _,
+    hf: () => v,
+    u7: () => O,
+    uf: () => b,
+    w8: () => p,
+    z3: () => m,
+    zW: () => c
 });
 var r = n(73800),
     i = n(906732),
@@ -16,27 +21,42 @@ var r = n(73800),
     s = n(474936);
 let l = 'manual',
     c = () => {
-        l = 'manual';
+        (l = 'manual'), a.default.track(o.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'hex_input' });
     },
     u = () => {
-        l = 'manual';
+        (l = 'manual'), a.default.track(o.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'color_picker' });
     },
     d = () => {
-        l = 'manual';
+        a.default.track(o.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'eye_dropper' });
     },
     _ = () => {
-        l = 'manual';
+        (l = 'manual'), a.default.track(o.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'add_color' });
     },
     f = () => {
-        (l = 'surprise_me'), a.default.track(o.rMx.CUSTOM_THEMES_SURPRISE_BUTTON_CLICKED, {});
+        (l = 'manual'), a.default.track(o.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'remove_color' });
     },
     p = () => {
-        (l = 'manual'), a.default.track(o.rMx.CUSTOM_THEME_RESET_BUTTON_CLICKED, {});
+        a.default.track(o.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'color_selected' });
     },
     h = () => {
+        (l = 'manual'), a.default.track(o.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'gradient_direction' });
+    },
+    m = () => {
+        (l = 'manual'), a.default.track(o.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'color_intensity' });
+    },
+    g = () => {
+        (l = 'manual'), a.default.track(o.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'base_theme' });
+    },
+    E = () => {
+        (l = 'surprise_me'), a.default.track(o.rMx.CUSTOM_THEMES_SURPRISE_BUTTON_CLICKED, {});
+    },
+    b = () => {
+        (l = 'manual'), a.default.track(o.rMx.CUSTOM_THEME_RESET_BUTTON_CLICKED, {});
+    },
+    y = () => {
         a.default.track(o.rMx.CUSTOM_THEMES_BACK_BUTTON_CLICKED, {});
     },
-    m = (e, t, n, r, i) => {
+    O = (e, t, n, r, i) => {
         a.default.track(o.rMx.CUSTOM_THEMES_UPDATED, {
             colors: e,
             color_intensity: t,
@@ -47,7 +67,7 @@ let l = 'manual',
         }),
             (l = 'manual');
     },
-    g = (e, t) => {
+    v = (e, t) => {
         let { analyticsLocations: n } = (0, i.ZP)(t);
         r.useEffect(() => {
             e ||

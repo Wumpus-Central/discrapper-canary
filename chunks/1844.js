@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => R }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -20,84 +20,84 @@ function l() {
     return {
         hasFetchedConsumedInboundPromotionId: !1,
         consumedInboundPromotionId: null,
-        lastSeenOutboundPromotionStartDate: null,
-        bogoPromotion: null
+        lastSeenOutboundPromotionStartDate: null
     };
 }
 let c = l(),
-    u = !1,
-    d = null,
-    _ = !1,
-    f = null,
-    p = [],
-    h = null;
-function m() {
-    u = !0;
-}
+    u = null,
+    d = !1,
+    _ = null,
+    f = !1,
+    p = null,
+    h = [],
+    m = null;
 function g() {
-    (c.bogoPromotion = null), (u = !1);
+    d = !0;
 }
-function E(e) {
+function E() {
+    (u = null), (d = !1);
+}
+function b(e) {
     let { activePromotion: t } = e;
-    (c.bogoPromotion = {
+    (u = {
         id: t.id,
         startDate: t.startDate.toISOString(),
         endDate: t.endDate.toISOString()
     }),
-        (d = Date.now()),
-        (u = !1);
+        (_ = Date.now()),
+        (d = !1);
 }
-function b(e) {
+function y(e) {
     let { activeOutboundPromotions: t, consumedInboundPromotionId: n } = e;
-    (p = t), (f = Date.now()), (_ = !1), c.hasFetchedConsumedInboundPromotionId || ((c.hasFetchedConsumedInboundPromotionId = !0), (c.consumedInboundPromotionId = n));
-}
-function y() {
-    _ = !0;
+    (h = t), (p = Date.now()), (f = !1), c.hasFetchedConsumedInboundPromotionId || ((c.hasFetchedConsumedInboundPromotionId = !0), (c.consumedInboundPromotionId = n));
 }
 function O() {
-    (p = []), (_ = !1);
+    f = !0;
 }
 function v() {
-    var e;
-    let t = null;
-    for (let e of p) (null == t || e.startDate > t) && (t = e.startDate);
-    return null != (e = null == t ? void 0 : t.toISOString()) ? e : null;
+    (h = []), (f = !1);
 }
 function I() {
-    if (0 === p.length) return !1;
-    let e = v();
-    null != e && (h = e);
+    var e;
+    let t = null;
+    for (let e of h) (null == t || e.startDate > t) && (t = e.startDate);
+    return null != (e = null == t ? void 0 : t.toISOString()) ? e : null;
 }
 function T() {
-    if (0 === p.length) return !1;
-    let e = v();
-    null != e && ((h = e), (c.lastSeenOutboundPromotionStartDate = e));
+    if (0 === h.length) return !1;
+    let e = I();
+    null != e && (m = e);
 }
 function S() {
-    (c = l()), (_ = !1), (f = null), (u = !1), (d = null), (p = []);
+    if (0 === h.length) return !1;
+    let e = I();
+    null != e && ((m = e), (c.lastSeenOutboundPromotionStartDate = e));
 }
 function A() {
-    var e, t, n;
-    h = null != (n = null == (t = o.Z.settings.userContent) || null == (e = t.lastDismissedOutboundPromotionStartDate) ? void 0 : e.value) ? n : null;
+    (c = l()), (f = !1), (p = null), (d = !1), (_ = null), (h = []), (u = null);
 }
-class N extends (r = i.ZP.PersistedStore) {
+function N() {
+    var e, t, n;
+    m = null != (n = null == (t = o.Z.settings.userContent) || null == (e = t.lastDismissedOutboundPromotionStartDate) ? void 0 : e.value) ? n : null;
+}
+class C extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (c = e), this.waitFor(o.Z), this.syncWith([o.Z], A);
+        null != e && (c = e), this.waitFor(o.Z), this.syncWith([o.Z], N);
     }
     get outboundPromotions() {
-        return p;
+        return h;
     }
     get lastSeenOutboundPromotionStartDate() {
         return c.lastSeenOutboundPromotionStartDate;
     }
     get lastDismissedOutboundPromotionStartDate() {
-        return h;
+        return m;
     }
     get lastFetchedActivePromotions() {
-        return f;
+        return p;
     }
     get isFetchingActiveOutboundPromotions() {
-        return _;
+        return f;
     }
     get hasFetchedConsumedInboundPromotionId() {
         return c.hasFetchedConsumedInboundPromotionId;
@@ -106,27 +106,36 @@ class N extends (r = i.ZP.PersistedStore) {
         return c.consumedInboundPromotionId;
     }
     get bogoPromotion() {
-        return c.bogoPromotion;
-    }
-    get isFetchingActiveBogoPromotion() {
         return u;
     }
-    get lastFetchedActiveBogoPromotion() {
+    get isFetchingActiveBogoPromotion() {
         return d;
+    }
+    get lastFetchedActiveBogoPromotion() {
+        return _;
     }
     getState() {
         return c;
     }
 }
-s(N, 'displayName', 'PromotionsStore'), s(N, 'persistKey', 'PromotionsPersistedStore');
-let C = new N(a.Z, {
-    ACTIVE_OUTBOUND_PROMOTIONS_FETCH_SUCCESS: b,
-    ACTIVE_OUTBOUND_PROMOTIONS_FETCH: y,
-    ACTIVE_OUTBOUND_PROMOTIONS_FETCH_FAIL: O,
-    ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS: E,
-    ACTIVE_BOGO_PROMOTION_FETCH: m,
-    ACTIVE_BOGO_PROMOTION_FETCH_FAIL: g,
-    OUTBOUND_PROMOTION_NOTICE_DISMISS: I,
-    OUTBOUND_PROMOTIONS_SEEN: T,
-    LOGOUT: S
+s(C, 'displayName', 'PromotionsStore'),
+    s(C, 'persistKey', 'PromotionsPersistedStore'),
+    s(C, 'migrations', [
+        (e) => {
+            try {
+                delete e.bogoPromotion;
+            } catch (e) {}
+            return e;
+        }
+    ]);
+let R = new C(a.Z, {
+    ACTIVE_OUTBOUND_PROMOTIONS_FETCH_SUCCESS: y,
+    ACTIVE_OUTBOUND_PROMOTIONS_FETCH: O,
+    ACTIVE_OUTBOUND_PROMOTIONS_FETCH_FAIL: v,
+    ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS: b,
+    ACTIVE_BOGO_PROMOTION_FETCH: g,
+    ACTIVE_BOGO_PROMOTION_FETCH_FAIL: E,
+    OUTBOUND_PROMOTION_NOTICE_DISMISS: T,
+    OUTBOUND_PROMOTIONS_SEEN: S,
+    LOGOUT: A
 });

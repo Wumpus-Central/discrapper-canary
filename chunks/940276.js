@@ -1,36 +1,38 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => h });
 var i = n(255367),
     r = n(442837),
     s = n(481060),
     l = n(650774),
-    a = n(797670),
-    o = n(304432),
-    c = n(29953),
-    d = n(388032),
-    u = n(236022);
-function m(e) {
-    let { guild: t, isActivityRestricted: n, onToggleActivityRestrictedGuild: o } = e,
+    a = n(626135),
+    o = n(797670),
+    c = n(304432),
+    d = n(981631),
+    u = n(29953),
+    m = n(388032),
+    g = n(236022);
+function p(e) {
+    let { guild: t, isActivityRestricted: n, onToggleActivityRestrictedGuild: a } = e,
         c = (0, r.e7)([l.Z], () => l.Z.getMemberCount(t.id));
     return (0, i.jsx)(s.j7V, {
-        className: u.guildRowWrapper,
+        className: g.guildRowWrapper,
         value: !n,
         onChange: (e) =>
-            o({
+            a({
                 checked: e,
                 guildId: t.id
             }),
         hideBorder: !0,
         children: (0, i.jsxs)('div', {
-            className: u.guildRow,
+            className: g.guildRow,
             children: [
                 (0, i.jsx)('div', {
-                    children: (0, i.jsx)(a.V, {
+                    children: (0, i.jsx)(o.V, {
                         guild: t,
                         size: 48
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    className: u.guildRowTextContainer,
+                    className: g.guildRowTextContainer,
                     children: [
                         (0, i.jsx)(s.Text, {
                             variant: 'text-md/medium',
@@ -39,13 +41,13 @@ function m(e) {
                             children: t.toString()
                         }),
                         (0, i.jsxs)('div', {
-                            className: u.memberDetailsContainer,
+                            className: g.memberDetailsContainer,
                             children: [
-                                (0, i.jsx)('div', { className: u.memberCountDot }),
+                                (0, i.jsx)('div', { className: g.memberCountDot }),
                                 (0, i.jsx)(s.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'text-secondary',
-                                    children: d.intl.format(d.t.zRl6XV, { count: c })
+                                    children: m.intl.format(m.t.zRl6XV, { count: c })
                                 })
                             ]
                         })
@@ -55,58 +57,88 @@ function m(e) {
         })
     });
 }
-let g = function () {
-    let { guilds: e, searchQuery: t, setSearchQuery: n, sortOrder: r, setSortOrder: l, hasActivityRestrictedGuilds: a, onToggleAllActivityRestrictedGuilds: g, onToggleActivityRestrictedGuild: p, isActivityRestricted: h } = (0, o.F)();
+let h = function () {
+    let { guilds: e, searchQuery: t, setSearchQuery: n, sortOrder: r, setSortOrder: l, hasActivityRestrictedGuilds: o, onToggleAllActivityRestrictedGuilds: h, onToggleActivityRestrictedGuild: f, isActivityRestricted: b, numActivityRestrictedGuilds: _, numTotalGuilds: x } = (0, c.F)();
     return (0, i.jsxs)('div', {
-        className: u.wrapper,
+        className: g.wrapper,
         children: [
             (0, i.jsxs)('div', {
-                className: u.headerContainer,
+                className: g.headerContainer,
                 children: [
                     (0, i.jsx)(s.E1j, {
                         size: s.E1j.Sizes.MEDIUM,
                         query: t,
                         onChange: n,
-                        onClear: () => n(''),
-                        placeholder: d.intl.string(d.t['H+nRY2']),
-                        'aria-label': d.intl.string(d.t['5h0QOD'])
+                        onClear: () => {
+                            a.default.track(d.rMx.ACTIVITY_SHARING_SETTINGS_INTERACTED, {
+                                interaction: 'search_cleared',
+                                sort_order: r,
+                                activity_restricted_guild_count: _,
+                                total_guild_count: x
+                            }),
+                                n('');
+                        },
+                        onFocus: () =>
+                            a.default.track(d.rMx.ACTIVITY_SHARING_SETTINGS_INTERACTED, {
+                                interaction: 'search_focused',
+                                sort_order: r,
+                                activity_restricted_guild_count: _,
+                                total_guild_count: x
+                            }),
+                        onBlur: () =>
+                            a.default.track(d.rMx.ACTIVITY_SHARING_SETTINGS_INTERACTED, {
+                                interaction: 'search_blurred',
+                                sort_order: r,
+                                activity_restricted_guild_count: _,
+                                total_guild_count: x
+                            }),
+                        placeholder: m.intl.string(m.t['H+nRY2']),
+                        'aria-label': m.intl.string(m.t['5h0QOD'])
                     }),
                     e.length > 0 &&
                         (0, i.jsxs)('div', {
-                            className: u.controlsContainer,
+                            className: g.controlsContainer,
                             children: [
                                 (0, i.jsx)(s.PhF, {
-                                    className: u.sortOrderSelect,
+                                    className: g.sortOrderSelect,
                                     look: s.qQH.CUSTOM,
                                     popoutWidth: 'auto',
                                     options: [
                                         {
-                                            label: d.intl.string(d.t.STMPJy),
-                                            value: o.W.SERVER_ORDER
+                                            label: m.intl.string(m.t.STMPJy),
+                                            value: c.W.SERVER_ORDER
                                         },
                                         {
-                                            label: d.intl.string(d.t.CbaapK),
-                                            value: o.W.RECENTLY_JOINED
+                                            label: m.intl.string(m.t.CbaapK),
+                                            value: c.W.RECENTLY_JOINED
                                         },
                                         {
-                                            label: d.intl.string(c.default.ZI51JS),
-                                            value: o.W.ACTIVITY_SHARING_ON
+                                            label: m.intl.string(u.default.ZI51JS),
+                                            value: c.W.ACTIVITY_SHARING_ON
                                         },
                                         {
-                                            label: d.intl.string(c.default['+kxafn']),
-                                            value: o.W.ACTIVITY_SHARING_OFF
+                                            label: m.intl.string(u.default['+kxafn']),
+                                            value: c.W.ACTIVITY_SHARING_OFF
                                         }
                                     ],
-                                    select: l,
+                                    select: (e) => {
+                                        a.default.track(d.rMx.ACTIVITY_SHARING_SETTINGS_INTERACTED, {
+                                            interaction: 'sort_order_changed',
+                                            sort_order: e,
+                                            activity_restricted_guild_count: _,
+                                            total_guild_count: x
+                                        }),
+                                            l(e);
+                                    },
                                     isSelected: (e) => r === e,
                                     serialize: String
                                 }),
                                 (0, i.jsx)(s.zxk, {
-                                    className: u.toggleAllButton,
+                                    className: g.toggleAllButton,
                                     look: s.zxk.Looks.LINK,
                                     color: s.zxk.Colors.LINK,
-                                    onClick: g,
-                                    children: a ? d.intl.string(d.t['7lxcLC']) : d.intl.string(d.t.zh6UEh)
+                                    onClick: h,
+                                    children: o ? m.intl.string(m.t['7lxcLC']) : m.intl.string(m.t.zh6UEh)
                                 })
                             ]
                         })
@@ -114,20 +146,20 @@ let g = function () {
             }),
             0 === e.length &&
                 (0, i.jsx)('div', {
-                    className: u.noResultsContainer,
+                    className: g.noResultsContainer,
                     children: (0, i.jsx)(s.Text, {
-                        className: u.noResultsText,
+                        className: g.noResultsText,
                         variant: 'text-lg/medium',
-                        children: d.intl.string(d.t['Xe+fJC'])
+                        children: m.intl.string(m.t['Xe+fJC'])
                     })
                 }),
             e.map((e) =>
                 (0, i.jsx)(
-                    m,
+                    p,
                     {
                         guild: e,
-                        isActivityRestricted: h(e.id),
-                        onToggleActivityRestrictedGuild: p
+                        isActivityRestricted: b(e.id),
+                        onToggleActivityRestrictedGuild: f
                     },
                     e.id
                 )

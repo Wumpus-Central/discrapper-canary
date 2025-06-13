@@ -64,6 +64,7 @@ function u() {
         onToggleAllActivityRestrictedGuilds: () => {
             b ? f([]) : f(c);
         },
-        numTotalGuilds: c.length
+        numTotalGuilds: c.length,
+        numActivityRestrictedGuilds: p.length
     };
 }

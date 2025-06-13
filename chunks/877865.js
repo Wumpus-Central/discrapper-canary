@@ -127,7 +127,7 @@ function N(e) {
         y >= o.length && T(0);
     }, [y, o, n]);
     let R = (e) => {
-            if ((C(e), (0, c.FX)(e) && ((0, p.G8)(), n(e), o.length > 0))) {
+            if ((C(e), (0, c.FX)(e) && ((0, p.zW)(), n(e), o.length > 0))) {
                 let t = [...o];
                 (t[y] = e), s(t);
             }
@@ -136,7 +136,7 @@ function N(e) {
             C(e.hex);
         }, []),
         w = (e) => {
-            if (((0, p.G8)(), n(e.hex), o.length > 0)) {
+            if (((0, p.P0)(), n(e.hex), o.length > 0)) {
                 let t = [...o];
                 (t[y] = e.hex), s(t);
             }
@@ -145,12 +145,12 @@ function N(e) {
             if (null != E)
                 try {
                     let { sRGBHex: e } = await E.open();
-                    R(e);
+                    (0, p.J4)(), R(e);
                 } catch (e) {}
         },
         L = () => {
             if (o.length === I) return;
-            (0, p.G8)();
+            (0, p.gG)();
             let e = o.length > 0 ? o[o.length - 1] : N,
                 t = o.length > 0 ? A(e) : e,
                 n = [...o, t];
@@ -158,13 +158,13 @@ function N(e) {
         },
         x = (e) => {
             if (o.length > 1) {
-                (0, p.G8)();
+                (0, p.JL)();
                 let t = o.filter((t, n) => n !== e);
                 s(t), y >= t.length ? T(t.length - 1) : y > e && T(y - 1);
             }
         },
         M = (e) => {
-            T(e);
+            T(e), (0, p.w8)();
         },
         k = o.length > 1;
     return (0, r.jsxs)('div', {
