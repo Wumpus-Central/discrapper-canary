@@ -24,8 +24,8 @@ var i = n(255367),
     E = n(136015),
     _ = n(444295),
     x = n(906037),
-    S = n(353038),
-    I = n(804570),
+    I = n(353038),
+    S = n(804570),
     j = n(461393),
     C = n(340101),
     N = n(501787),
@@ -33,7 +33,7 @@ var i = n(255367),
     Z = n(65154),
     P = n(388032),
     T = n(884751);
-function k(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -58,7 +58,7 @@ function k(e) {
     }
     return e;
 }
-function D(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,7 +80,7 @@ let A = r.memo(function (e) {
         var t;
         let { participant: n, channel: r, context: o } = e,
             l = null == (t = n.user) ? void 0 : t.id;
-        return (0, a.e7)([O.Z], () => null != n.user && null != o && null != r && O.Z.isLocalVideoDisabled(l, o), [l, n.user, o, r]) ? null : (0, i.jsx)(m.ZP, k({}, e));
+        return (0, a.e7)([O.Z], () => null != n.user && null != o && null != r && O.Z.isLocalVideoDisabled(l, o), [l, n.user, o, r]) ? null : (0, i.jsx)(m.ZP, D({}, e));
     }),
     R = r.memo(function (e) {
         let { context: t = Z.Yn.DEFAULT, participants: o, locked: l, channel: a, width: s, height: u, shouldDisplay: d } = e,
@@ -97,7 +97,7 @@ let A = r.memo(function (e) {
                             return (n) =>
                                 (0, i.jsx)(
                                     e,
-                                    D(k({}, n), {
+                                    k(D({}, n), {
                                         user: o,
                                         mediaEngineContext: t,
                                         onWatchStream: () => {
@@ -210,7 +210,7 @@ let A = r.memo(function (e) {
             : h
               ? (0, i.jsx)('div', {
                     ref: f,
-                    children: (0, i.jsx)(I.E, {
+                    children: (0, i.jsx)(S.E, {
                         emptyText: P.intl.string(P.t['aTiM4+']),
                         icon: s.Odl,
                         absolute: !0
@@ -245,7 +245,7 @@ function z(e) {
         h = null == s ? void 0 : s.id,
         [m, O] = (0, a.e7)([p.Z], () => (null == h ? [[], 0] : [p.Z.getVideoParticipants(h), p.Z.getParticipantsVersion(h)]), [h], E.Q),
         b = 'boolean' != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
-        { width: _ = e.width - c, height: x = e.height - c, ref: I } = (0, d.ZP)(e.locked, e.widget.pinned),
+        { width: _ = e.width - c, height: x = e.height - c, ref: S } = (0, d.ZP)(e.locked, e.widget.pinned),
         { participantTileWidth: j, visibleParticipants: C } = (0, g.ZB)(b ? _ : x, m, {
             tileWidth: N.vZ,
             tileMinWidth: N.mo,
@@ -295,9 +295,9 @@ function z(e) {
                     let { size: e, id: n, containerWidth: i, containerHeight: r, widget: o, widgetLayoutSpecs: a } = l.current;
                     if (!((t && e.height > e.width) || (!t && e.width > e.height))) return;
                     let { width: s, height: c } = M(
-                        D(k({}, a), {
+                        k(D({}, a), {
                             widget: o,
-                            operation: S.B.RESIZE_NORTH,
+                            operation: I.B.RESIZE_NORTH,
                             computedSize: {
                                 width: r,
                                 height: i
@@ -324,13 +324,13 @@ function z(e) {
         }),
         (0, i.jsx)(
             L,
-            D(k({}, e), {
+            k(D({}, e), {
                 channel: s,
                 participants: C,
                 participantsVersion: O,
                 width: b ? j : null != _ ? _ : e.width,
                 height: b ? (null != x ? x : e.height) : j,
-                containerRef: I
+                containerRef: S
             })
         )
     );

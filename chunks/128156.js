@@ -13,8 +13,8 @@ var r = n(442837),
     p = n(369566),
     m = n(29899),
     b = n(151545),
-    y = n(744802),
-    _ = n(493043),
+    _ = n(744802),
+    y = n(493043),
     x = n(864141),
     h = n(264481),
     g = n(693408),
@@ -27,7 +27,7 @@ function P(e) {
         { voiceActivityStatusEnabled: C } = (0, c.U)({ location: 'UserProfileModalV2Activity' }),
         w = (0, f.b)({ location: 'UserProfileModalV2Activity' }),
         { live: S, recent: E, stream: B } = (0, p.Z)(t.id),
-        { voiceChannel: D, voiceActivity: L } = (0, m.Z)({
+        { voiceChannel: L, voiceActivity: D } = (0, m.Z)({
             userId: t.id,
             guildId: N
         }),
@@ -38,7 +38,7 @@ function P(e) {
             return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
         }),
         R = S.length > 0 || null != B,
-        G = C && null == B && null == L && null != D,
+        G = C && null == B && null == D && null != L,
         V = !M && (R || G),
         F = E.length > 0;
     if (!V && !F && U)
@@ -91,13 +91,13 @@ function P(e) {
                                       children: (0, o.jsx)(x.Z, {
                                           user: t,
                                           currentUser: n,
-                                          voiceChannel: D,
+                                          voiceChannel: L,
                                           onClose: Z
                                       })
                                   }),
                               null != B &&
                                   (0, o.jsx)('li', {
-                                      children: (0, o.jsx)(_.Z, {
+                                      children: (0, o.jsx)(y.Z, {
                                           location: 'UserProfileModalV2Activity',
                                           user: t,
                                           currentUser: n,
@@ -127,7 +127,7 @@ function P(e) {
                                       children: (0, o.jsx)(x.Z, {
                                           user: t,
                                           currentUser: n,
-                                          voiceChannel: D,
+                                          voiceChannel: L,
                                           onClose: Z
                                       })
                                   })
@@ -158,7 +158,7 @@ function P(e) {
                               (0, o.jsx)(
                                   'li',
                                   {
-                                      children: (0, o.jsx)(y.Z, {
+                                      children: (0, o.jsx)(_.Z, {
                                           location: 'UserProfileModalV2Activity',
                                           user: t,
                                           currentUser: n,

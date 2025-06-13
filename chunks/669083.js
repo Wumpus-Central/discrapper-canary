@@ -65,7 +65,7 @@ let S = () => [
             name: v.intl.string(v.t['2OvIZW'])
         }
     ];
-function Z() {
+function j() {
     let e = h.default.getNotificationPositionMode(),
         t = e !== O._vf.DISABLED,
         n = u.ZP.getOverlayKeybind(),
@@ -80,7 +80,7 @@ function Z() {
         text_activation_hotkey: null != i ? (0, f.BB)(i.shortcut) : null
     });
 }
-class j extends r.PureComponent {
+class Z extends r.PureComponent {
     componentDidMount() {
         s.Z.track(O.rMx.SETTINGS_PANE_VIEWED, {
             settings_type: 'overlay',
@@ -89,7 +89,7 @@ class j extends r.PureComponent {
         });
     }
     handleChangeNotificationPositionMode(e, t) {
-        s.Z.setNotificationPositionMode(t), Z();
+        s.Z.setNotificationPositionMode(t), j();
     }
     handleChangeAvatarSizeMode(e) {
         let { value: t } = e;
@@ -304,7 +304,7 @@ class j extends r.PureComponent {
                 this.setState({ selectedSection: e });
             }),
             E(this, 'handleToggleTextChatNotifications', () => {
-                s.Z.setNotificationDisabledSetting(g.OverlayNotificationDisabledSetting.TEXT_CHAT, !this.props.textChatDisabled), Z();
+                s.Z.setNotificationDisabledSetting(g.OverlayNotificationDisabledSetting.TEXT_CHAT, !this.props.textChatDisabled), j();
             }),
             E(this, 'handleToggleInviteNotification', () => {
                 let e = this.props.shouldShowInviteNotification;
@@ -332,7 +332,7 @@ function I(e) {
             shouldShowInviteNotification: !y.Z.isNotificationDisabled(g.OverlayNotificationDisabledSetting.GAME_ACTIVITY)
         })),
         u = (0, m.Z)({ location: 'Overlay Settings' });
-    return (0, i.jsx)(j, {
+    return (0, i.jsx)(Z, {
         onClose: t,
         avatarSizeMode: n,
         displayNameMode: r,

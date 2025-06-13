@@ -1,53 +1,53 @@
-n.d(t, {
-    Mt: () => p,
-    li: () => f,
-    s4: () => _,
-    up: () => m,
-    zv: () => E
+l.d(n, {
+    Mt: () => m,
+    li: () => h,
+    s4: () => v,
+    up: () => x,
+    zv: () => f
 }),
-    n(388685),
-    n(539854);
-var r = n(73800),
-    i = n(106351),
-    a = n(442837);
-n(592125);
-var l = n(984933),
-    o = n(914010);
-n(709054);
-var u = n(853856),
-    c = n(362658),
-    s = n(434065),
-    d = n(981631);
-function f(e) {
-    let { favoritesEnabled: t, hasStaffPrivileges: n } = (0, c.z)('useCanFavoriteChannel'),
-        r = (0, a.e7)([u.Z], () => u.Z.isFavorite(e.id)),
+    l(388685),
+    l(539854);
+var t = l(73800),
+    i = l(106351),
+    a = l(442837);
+l(592125);
+var d = l(984933),
+    o = l(914010);
+l(709054);
+var r = l(853856),
+    c = l(362658),
+    s = l(434065),
+    u = l(981631);
+function h(e) {
+    let { favoritesEnabled: n, hasStaffPrivileges: l } = (0, c.z)('useCanFavoriteChannel'),
+        t = (0, a.e7)([r.Z], () => r.Z.isFavorite(e.id)),
         i = e.isDM() || e.isThread();
-    return t && !__OVERLAY__ && !r && (!i || n);
+    return n && !__OVERLAY__ && !t && (!i || l);
 }
-function _(e) {
-    return (0, a.e7)([u.Z], () => u.Z.getFavorite(e));
+function v(e) {
+    return (0, a.e7)([r.Z], () => r.Z.getFavorite(e));
 }
-function E() {
-    return (0, a.e7)([l.ZP], () => l.ZP.getChannels(d.I_8))[i.d.GUILD_CATEGORY].map((e) => ({
+function f() {
+    return (0, a.e7)([d.ZP], () => d.ZP.getChannels(u.I_8))[i.d.GUILD_CATEGORY].map((e) => ({
         id: 'null' === e.channel.id ? null : e.channel.id,
         name: e.channel.name
     }));
 }
-function p() {
-    return (0, a.e7)([o.Z], () => o.Z.getGuildId()) === d.I_8;
-}
 function m() {
+    return (0, a.e7)([o.Z], () => o.Z.getGuildId()) === u.I_8;
+}
+function x() {
     let { isFavoritesPerk: e } = (0, c.z)('useFavoriteAdded'),
-        t = (0, s.r)(),
-        n = r.useCallback(() => {
-            e && t.notifyFavoriteAdded();
-        }, [t, e]),
-        i = r.useCallback(() => {
-            e && t.clearFavoriteAdded();
-        }, [t, e]);
+        n = (0, s.r)(),
+        l = t.useCallback(() => {
+            e && n.notifyFavoriteAdded();
+        }, [n, e]),
+        i = t.useCallback(() => {
+            e && n.clearFavoriteAdded();
+        }, [n, e]);
     return {
-        favoriteAdded: t.favoriteAdded,
-        notifyFavoriteAdded: n,
+        favoriteAdded: n.favoriteAdded,
+        notifyFavoriteAdded: l,
         clearFavoriteAdded: i
     };
 }

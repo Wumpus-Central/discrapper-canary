@@ -12,5 +12,6 @@ e.exports = {
     profileButtons: 'profileButtons__9c3be',
     profileScroller: 'profileScroller__9c3be',
     profileRolesSection: 'profileRolesSection__9c3be',
+    profileAppConnections: 'profileAppConnections__9c3be',
     profileNote: 'profileNote__9c3be'
 };

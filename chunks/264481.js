@@ -18,8 +18,8 @@ var o = n(255367),
     p = n(981631),
     m = n(388032),
     b = n(771627);
-let y = [() => m.intl.string(m.t.madJdH), () => m.intl.string(m.t.NYmfoK), () => m.intl.string(m.t.R2PaCg), () => m.intl.string(m.t.laSR8v), () => m.intl.string(m.t.DnsJEx)],
-    _ = [() => m.intl.string(m.t.nFSbeH), () => m.intl.string(m.t.gTcxOz), () => m.intl.string(m.t['8T0wYm']), () => m.intl.string(m.t.BIHl1t), () => m.intl.string(m.t.jhBm09)],
+let _ = [() => m.intl.string(m.t.madJdH), () => m.intl.string(m.t.NYmfoK), () => m.intl.string(m.t.R2PaCg), () => m.intl.string(m.t.laSR8v), () => m.intl.string(m.t.DnsJEx)],
+    y = [() => m.intl.string(m.t.nFSbeH), () => m.intl.string(m.t.gTcxOz), () => m.intl.string(m.t['8T0wYm']), () => m.intl.string(m.t.BIHl1t), () => m.intl.string(m.t.jhBm09)],
     x = [() => m.intl.string(m.t.AyMGXF), () => m.intl.string(m.t.aAFW7e), (e) => m.intl.formatToPlainString(m.t.h2g0cH, { name: e }), () => m.intl.string(m.t['rrYh5+']), () => m.intl.string(m.t['HX3K+P']), () => m.intl.string(m.t['/yW3aW']), () => m.intl.string(m.t['PmL/v7']), () => m.intl.string(m.t.IALa3t), () => m.intl.string(m.t.HRcTFB), () => m.intl.string(m.t.NuCqPj), () => m.intl.string(m.t['M1tw+/']), () => m.intl.string(m.t.UBm1y8), () => m.intl.string(m.t.Cu95PT), () => m.intl.string(m.t['R/wFur']), () => m.intl.string(m.t.HQPAVV), () => m.intl.string(m.t.YolGh4)],
     h = [p.ABu.STEAM, p.ABu.PLAYSTATION, p.ABu.XBOX, p.ABu.TWITCH, p.ABu.BATTLENET, p.ABu.LEAGUE_OF_LEGENDS, p.ABu.EPIC_GAMES, p.ABu.RIOT_GAMES, p.ABu.ROBLOX, p.ABu.SPOTIFY, p.ABu.YOUTUBE, p.ABu.CRUNCHYROLL, p.ABu.BUNGIE];
 function g(e) {
@@ -50,7 +50,7 @@ function j() {
     let e = m.intl.string(m.t.RnD2yc),
         [t] = r.useState(() => {
             var e;
-            return (null != (e = (0, i.sample)(y)) ? e : y[0])();
+            return (null != (e = (0, i.sample)(_)) ? e : _[0])();
         });
     return (0, o.jsx)(g, {
         heading: e,
@@ -61,7 +61,7 @@ function I() {
     let e = m.intl.string(m.t.bFgqYG),
         [t] = r.useState(() => {
             var e;
-            return (null != (e = (0, i.sample)(_)) ? e : _[0])();
+            return (null != (e = (0, i.sample)(y)) ? e : y[0])();
         });
     return (0, o.jsx)(g, {
         heading: e,
@@ -72,22 +72,22 @@ function v(e) {
     let { user: t, guildId: n, channelId: a, onClose: s } = e,
         d = u.ZP.getName(n, a, t),
         p = m.intl.formatToPlainString(m.t.sjSitL, { name: d }),
-        [y] = r.useState(() => {
+        [_] = r.useState(() => {
             var e;
             return (null != (e = (0, i.sample)(x)) ? e : x[0])(d);
         }),
-        _ = r.useCallback(() => {
+        y = r.useCallback(() => {
             l.Z.openPrivateChannel({ recipientIds: t.id }), null == s || s();
         }, [t.id, s]);
     return (0, o.jsx)(g, {
         heading: p,
-        bodyText: y,
+        bodyText: _,
         children: (0, o.jsx)('div', {
             className: b.buttonRow,
             children: (0, o.jsx)(f.tG, {
                 icon: c.kBi,
                 text: m.intl.string(m.t['g33r/P']),
-                onClick: _,
+                onClick: y,
                 themeColor: 'secondary'
             })
         })

@@ -224,7 +224,19 @@ class z extends a.EventEmitter {
             (this.getNumUnreadChannels = () => this.state.channels.length),
             (this.markChannelRead = (e) => {
                 let { channelId: t, newestUnreadMessageId: n } = e;
-                d.Z.wait(() => m.In(t, !0, void 0, n, { section: L.jXE.INBOX }));
+                d.Z.wait(() =>
+                    m.In(
+                        t,
+                        {
+                            section: L.jXE.INBOX,
+                            object: L.qAy.ACK_INBOX_NEWEST_UNREAD_MESSAGE,
+                            objectType: L.Qqv.ACK_AUTOMATIC
+                        },
+                        !0,
+                        void 0,
+                        n
+                    )
+                );
                 let r = this.state.channels.find((e) => e.channelId === t);
                 if ((null != r && this.undoStack.push(r), 1 === this.state.channels.length)) return void this.deleteChannel(t);
                 this.setState({ channels: this.updateChannel(t, (e) => B(F({}, e), { deleted: !0 })) }), f.Z.useReducedMotion && this.deleteChannel(t), this.maybeLoadMore();
@@ -233,7 +245,17 @@ class z extends a.EventEmitter {
                 if (0 === this.undoStack.length) return;
                 let e = this.undoStack.pop();
                 if (null == e) return;
-                m.In(e.channelId, !0, void 0, e.oldestReadMessageId, { section: L.jXE.INBOX });
+                m.In(
+                    e.channelId,
+                    {
+                        section: L.jXE.INBOX,
+                        object: L.qAy.UNDO_MARK_AS_READ,
+                        objectType: L.Qqv.ACK_MANUAL
+                    },
+                    !0,
+                    void 0,
+                    e.oldestReadMessageId
+                );
                 let t = this.state.channels.findIndex((t) => t.order > e.order),
                     n = [...this.state.channels];
                 t < 0 ? n.push(e) : n.splice(t, 0, e),

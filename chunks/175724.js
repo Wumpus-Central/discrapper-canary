@@ -58,5 +58,15 @@ function C(e) {
 function E(e) {
     if (null == e) return !1;
     let t = !1;
-    return v.Z.getMessages(e).hasMoreAfter && (i.Z.jumpToPresent(e, I.AQB), (t = !0)), h.ZP.hasUnread(e) && ((0, l.In)(e), (t = !0)), (0, l.iV)(e), t;
+    return (
+        v.Z.getMessages(e).hasMoreAfter && (i.Z.jumpToPresent(e, I.AQB), (t = !0)),
+        h.ZP.hasUnread(e) &&
+            ((0, l.In)(e, {
+                object: I.qAy.MARK_CHANNEL_AS_READ_KEYBIND,
+                objectType: I.Qqv.ACK_MANUAL
+            }),
+            (t = !0)),
+        (0, l.iV)(e),
+        t
+    );
 }

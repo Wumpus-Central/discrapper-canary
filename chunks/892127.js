@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => I });
 var i = n(255367),
     r = n(73800),
     o = n(120356),
@@ -61,8 +61,8 @@ function x(e, t) {
         e
     );
 }
-let S = r.memo(function (e) {
-    let { widget: t, renderWidget: n, renderTitle: o, renderButtons: S, resizeValidation: I, className: j, dragContainerClassName: C } = e,
+let I = r.memo(function (e) {
+    let { widget: t, renderWidget: n, renderTitle: o, renderButtons: I, resizeValidation: S, className: j, dragContainerClassName: C } = e,
         N = u.Z.getWidgetConfig(t.type),
         w = (0, a.e7)([d.default], () => d.default.isLocked((0, f.getPID)())),
         Z = (0, v.Z)(),
@@ -91,10 +91,10 @@ let S = r.memo(function (e) {
                 widget_top: f.top
             });
         }, []),
-        k = r.useCallback((e) => {
+        D = r.useCallback((e) => {
             (0, s.Os)(e);
         }, []),
-        { id: D, pinned: A, zIndex: R, size: L, anchor: M, minSize: z } = t,
+        { id: k, pinned: A, zIndex: R, size: L, anchor: M, minSize: z } = t,
         U = r.useMemo(() => (0, h.w_)(L, P), [L, P]),
         V = (0, h.KR)(M, P),
         { resizeX: W, resizeY: G, dragAnywhere: F } = null != N ? N : {},
@@ -121,18 +121,18 @@ let S = r.memo(function (e) {
         ),
         Q = r.useCallback(
             (e) =>
-                null != o || null != S
+                null != o || null != I
                     ? (0, i.jsxs)('div', {
                           className: E.extrasContainer,
-                          children: [null == o ? void 0 : o(t), null == S ? void 0 : S(t, e)]
+                          children: [null == o ? void 0 : o(t), null == I ? void 0 : I(t, e)]
                       })
                     : null,
-            [t, o, S]
+            [t, o, I]
         ),
         K = (0, a.e7)([O.ZP], () => O.ZP.hasRenderDebugMode(y.G.WidgetAreas)),
         X = r.useMemo(() => {
-            if (null != I) return (e) => I(x(_({}, e), { widget: t }));
-        }, [I, t]);
+            if (null != S) return (e) => S(x(_({}, e), { widget: t }));
+        }, [S, t]);
     return (0, i.jsx)(g.Z, {
         className: l()(
             {
@@ -142,7 +142,7 @@ let S = r.memo(function (e) {
             },
             C
         ),
-        id: D,
+        id: k,
         size: U,
         anchor: V,
         container: H,
@@ -161,7 +161,7 @@ let S = r.memo(function (e) {
         dragAnywhere: null != F && F,
         active: !w,
         onUpdate: T,
-        onClick: k,
+        onClick: D,
         targetWindow: Z,
         renderExtras: Q,
         resizeValidation: X,

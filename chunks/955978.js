@@ -22,8 +22,8 @@ function y(e, t, n) {
         E = l.Z.getApplication(t),
         _ = a.ZP.getRunningGames().find((e) => e.id === t),
         x = null != (y = null == _ ? void 0 : _.name) ? y : null == E ? void 0 : E.name,
-        S = (0, p.oY)(null == b ? void 0 : b.guild_id, null == b ? void 0 : b.id, O),
-        I = (0, i.jsxs)('div', {
+        I = (0, p.oY)(null == b ? void 0 : b.guild_id, null == b ? void 0 : b.id, O),
+        S = (0, i.jsxs)('div', {
             className: g.nowPlayingNotification,
             children: [
                 (0, i.jsx)('div', {
@@ -41,7 +41,7 @@ function y(e, t, n) {
                         color: 'interactive-normal',
                         className: g.bodyText,
                         children: m.intl.format(m.t['q7/rgo'], {
-                            username: null != S ? S : O.username,
+                            username: null != I ? I : O.username,
                             gameName: x,
                             gameIcon: () =>
                                 null != E || null != _
@@ -64,7 +64,7 @@ function y(e, t, n) {
             activity_name: null != x ? x : n.name
         });
     return {
-        body: I,
+        body: S,
         className: g.nowPlayingNotificationContainer,
         wrapperClassName: g.nowPlayingNotificationWrapper,
         animationWrapperClassName: g.nowPlayingNotificationAnimationWrapper,

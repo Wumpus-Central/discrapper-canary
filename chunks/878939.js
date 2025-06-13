@@ -42,19 +42,19 @@ function m(e) {
                     return new Set(i);
                 });
         }, []),
-        S = (0, u.ee)(() => v, [v]),
-        I = (0, u.ee)(() => E, [E]),
+        I = (0, u.ee)(() => v, [v]),
+        S = (0, u.ee)(() => E, [E]),
         j = (0, l.h)(u.zi, 3000, []);
     r.useEffect(() => {
-        0 === S.size ||
+        0 === I.size ||
             t ||
             j(h.Odu.FRIENDS, {
                 locked: t,
-                shownUserIds: Array.from(S),
-                liveUserIds: Array.from(I),
+                shownUserIds: Array.from(I),
+                liveUserIds: Array.from(S),
                 contentInventoryIds: []
             });
-    }, [S, I, t, j]);
+    }, [I, S, t, j]);
     let C = (0, o.e7)([s.Z], () => (null == O ? null : s.Z.getApplicationActivity(O)), [O]),
         N = (0, r.useCallback)((e, t) => {
             let n = (function (e) {

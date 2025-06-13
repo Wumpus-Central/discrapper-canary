@@ -118,7 +118,8 @@ class p {
         return {
             bytes_sent: this.outboundStats.bytesSent,
             bytes_received: e,
-            outbound_bandwidth_estimate: t > 0 ? Math.round((8 * this.outboundStats.bytesAvailable) / t) : 0
+            outbound_bandwidth_estimate: t > 0 ? Math.round((8 * this.outboundStats.bytesAvailable) / t) : 0,
+            audio_target_bitrate: t > 0 ? Math.round((8 * this.outboundStats.bytesTarget) / t) : 0
         };
     }
     getNetworkStats() {
@@ -277,39 +278,44 @@ class p {
                 void 0 !== e && (void 0 !== e.restartCount && (t.restartCount = h(e.restartCount, t.restartCount)), void 0 !== e.bufferViolations && (t.bufferViolations = h(e.bufferViolations, t.bufferViolations)), (null != (n = e.timeToFirstCallbackMs) ? n : 0) !== 0 && void 0 === t.timeToFirstCallbackMs && (t.timeToFirstCallbackMs = e.timeToFirstCallbackMs), (null != (r = e.sessionSampleRate) ? r : 0) !== 0 && (t.sessionSampleRate = e.sessionSampleRate));
             }),
             (this.appendTargetRates = function (e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+                    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
                 if (0 === e.previousTimestampMs) {
                     e.previousTimestampMs = performance.now();
                     return;
                 }
-                let n = performance.now();
-                e.aggregationDurationMs += n - e.previousTimestampMs;
-                let r = (n - e.previousTimestampMs) / 1000;
-                (e.bytesAvailable += (t / 8) * r), (e.previousTimestampMs = n);
+                let r = performance.now();
+                e.aggregationDurationMs += r - e.previousTimestampMs;
+                let i = (r - e.previousTimestampMs) / 1000;
+                (e.bytesAvailable += (t / 8) * i), (e.bytesTarget += (n / 8) * i), (e.previousTimestampMs = r);
             }),
             (this.sampleStats = (e) => {
                 if (null == e) return;
-                this.networkQuality.incrementNetworkStats((0, o.zO)()), this.systemResources.takeSample(), (this.decryptionFailures = e.transport.decryptionFailures), (this.routingFailures = e.transport.routingFailures), this.duration.connected++;
+                this.networkQuality.incrementNetworkStats((0, o.zO)()), this.systemResources.takeSample(), this.duration.connected++;
                 let t = this.outboundStats.packetsSent,
-                    n = i().reduce(this.inboundStats, (e, t) => ((e.packetsReceived += t.packetsReceived), e), { packetsReceived: 0 });
-                this.appendTargetRates(this.outboundStats, e.transport.availableOutgoingBitrate),
-                    i().forEach(e.rtp.outbound, (e) => {
-                        if ('audio' === e.type) {
-                            var t, n, r, i, a, o, s, l;
-                            this.outboundStats = _(u({}, this.outboundStats), {
+                    n = i().reduce(this.inboundStats, (e, t) => ((e.packetsReceived += t.packetsReceived), e), { packetsReceived: 0 }),
+                    r = 0;
+                i().forEach(e.rtp.outbound, (e) => {
+                    if ('audio' === e.type) {
+                        var t, n, i, a, o, s, l, c, d;
+                        (r = null != (t = e.bitrateTarget) ? t : 0),
+                            (this.outboundStats = _(u({}, this.outboundStats), {
                                 packetsSent: e.packetsSent,
                                 bytesSent: e.bytesSent,
-                                packetsLost: null != (t = e.packetsLost) ? t : 0,
-                                passthroughCount: null != (n = e.passthroughCount) ? n : 0,
-                                encryptSuccessCount: null != (r = e.encryptSuccessCount) ? r : 0,
-                                encryptFailureCount: null != (i = e.encryptFailureCount) ? i : 0,
-                                encryptDuration: null != (a = e.encryptDuration) ? a : 0,
-                                encryptAttempts: null != (o = e.encryptAttempts) ? o : 0,
-                                encryptMaxAttempts: null != (s = e.encryptMaxAttempts) ? s : 0,
-                                encryptMissingKeyCount: null != (l = e.encryptMissingKeyCount) ? l : 0
-                            });
-                        }
-                    }),
+                                packetsLost: null != (n = e.packetsLost) ? n : 0,
+                                passthroughCount: null != (i = e.passthroughCount) ? i : 0,
+                                encryptSuccessCount: null != (a = e.encryptSuccessCount) ? a : 0,
+                                encryptFailureCount: null != (o = e.encryptFailureCount) ? o : 0,
+                                encryptDuration: null != (s = e.encryptDuration) ? s : 0,
+                                encryptAttempts: null != (l = e.encryptAttempts) ? l : 0,
+                                encryptMaxAttempts: null != (c = e.encryptMaxAttempts) ? c : 0,
+                                encryptMissingKeyCount: null != (d = e.encryptMissingKeyCount) ? d : 0
+                            }));
+                    }
+                }),
+                    (this.decryptionFailures = e.transport.decryptionFailures),
+                    (this.routingFailures = e.transport.routingFailures),
+                    this.appendTargetRates(this.outboundStats, e.transport.availableOutgoingBitrate, r),
                     i().forEach(e.rtp.inbound, (t, n) => {
                         i().forEach(t, (t) => {
                             if ('audio' === t.type) {
@@ -414,9 +420,9 @@ class p {
                         });
                     }),
                     void 0 !== e.audioDevice && (this.sampleAudioDevice(e.audioDevice.input, this.inputDeviceStats), this.sampleAudioDevice(e.audioDevice.output, this.outputDeviceStats));
-                let r = !1,
-                    a = !1;
-                this.outboundStats.packetsSent > t && ((r = !0), this.duration.speaking++), i().reduce(this.inboundStats, (e, t) => ((e.packetsReceived += t.packetsReceived), e), { packetsReceived: 0 }).packetsReceived > n.packetsReceived && ((a = !0), this.duration.listening++), (r || a) && this.duration.participation++;
+                let a = !1,
+                    s = !1;
+                this.outboundStats.packetsSent > t && ((a = !0), this.duration.speaking++), i().reduce(this.inboundStats, (e, t) => ((e.packetsReceived += t.packetsReceived), e), { packetsReceived: 0 }).packetsReceived > n.packetsReceived && ((s = !0), this.duration.listening++), (a || s) && this.duration.participation++;
             }),
             (this.networkQuality = new s.Z()),
             (this.systemResources = new l.Z()),
@@ -433,6 +439,7 @@ class p {
                 encryptMaxAttempts: 0,
                 encryptMissingKeyCount: 0,
                 bytesAvailable: 0,
+                bytesTarget: 0,
                 previousTimestampMs: 0,
                 aggregationDurationMs: 0
             }),

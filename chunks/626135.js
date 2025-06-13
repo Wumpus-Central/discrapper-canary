@@ -129,10 +129,13 @@ let j = {
         throttlePeriod: C,
         throttleKeys: () => []
     },
-    [p.rMx.ACK_MESSAGES]: {
-        throttlePeriod: P,
-        throttleKeys: (e) => [e.guild_id, e.channel_id, e.location_section]
-    },
+    [p.rMx.ACK_MESSAGES]: (e) =>
+        e.location_object_type === p.Qqv.ACK_MANUAL
+            ? void 0
+            : {
+                  throttlePeriod: P,
+                  throttleKeys: (e) => [e.guild_id, e.channel_id, e.location_section]
+              },
     [p.rMx.GUILD_VIEWED]: {
         throttlePeriod: P,
         throttleKeys: (e) => [e.guild_id, e.is_pending]

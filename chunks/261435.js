@@ -22,8 +22,8 @@ var i,
     S = n(371651),
     x = n(624864),
     C = n(695346),
-    Z = n(163612),
-    j = n(314897),
+    j = n(163612),
+    Z = n(314897),
     I = n(592125),
     P = n(292959),
     w = n(158776),
@@ -137,14 +137,14 @@ function ei(e, t) {
 function er(e) {
     let { channelId: t, ringing: n } = e,
         i = en(t);
-    if (!n.includes(j.default.getId())) return ee(i);
+    if (!n.includes(Z.default.getId())) return ee(i);
     if (null != i) return !1;
     let r = I.Z.getChannel(t);
     if (
         null == r ||
         !r.isRingable() ||
         ('GUILD_RING_START' === e.type &&
-            !Z.Z.getCurrentConfig({
+            !j.Z.getCurrentConfig({
                 guildId: e.guildId,
                 location: 'OverlayStartRinging'
             }).enabled) ||
@@ -214,7 +214,7 @@ let el = new eo(a.Z, {
             if (!(0, _.eF)(l, r, !0, !0)) return !1;
             let e = (function (e, t, n) {
                 let i, r;
-                if ((o()(null != t.activity, 'received null message activity'), n.id === j.default.getId())) return !1;
+                if ((o()(null != t.activity, 'received null message activity'), n.id === Z.default.getId())) return !1;
                 let l = W.Z.getGame();
                 if (null == l) return !1;
                 switch (t.activity.type) {
@@ -262,13 +262,13 @@ let el = new eo(a.Z, {
     GUILD_RING_STOP: function (e) {
         let { channelId: t, guildId: n, ringing: i } = e;
         if (
-            !Z.Z.getCurrentConfig({
+            !j.Z.getCurrentConfig({
                 guildId: n,
                 location: 'OverlayStopRinging'
             }).enabled
         )
             return !1;
-        i.includes(j.default.getId()) && ee(en(t));
+        i.includes(Z.default.getId()) && ee(en(t));
     },
     ACTIVITY_USER_ACTION: function (e) {
         let t,

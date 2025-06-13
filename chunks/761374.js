@@ -25,8 +25,8 @@ var i = n(255367),
     E = n(350663),
     _ = n(610394),
     x = n(461393),
-    S = n(340101),
-    I = n(501787),
+    I = n(340101),
+    S = n(501787),
     j = n(388032),
     C = n(832985);
 function N(e) {
@@ -80,16 +80,16 @@ let Z = [],
         height: t
     }),
     T = P(E.bt, E.fd);
-function k(e, t, n, i, r) {
+function D(e, t, n, i, r) {
     let { padding: o, sizeOffset: l } = r,
         a = Math.max(1, i),
         s = (a - 1) * o,
         c = t * a + s,
         u = n * a + s;
-    return e === S.C5.HORIZONTAL ? (u = n) : (c = t), P(c + l, u + l);
+    return e === I.C5.HORIZONTAL ? (u = n) : (c = t), P(c + l, u + l);
 }
-function D(e, t, n) {
-    return k(e, E.bt, E.fd, t, n);
+function k(e, t, n) {
+    return D(e, E.bt, E.fd, t, n);
 }
 let A = (e) => {
     let { operation: t, computedSize: n, originSize: i, borderWidth: r, padding: o, containerSpecs: l } = e,
@@ -184,7 +184,7 @@ function L(e) {
             () => {
                 var e;
                 let t = y.Z.getWidget(A);
-                return !!(0, S.ZL)(t) && !z && (null == (e = t.meta.showAllStreams) || e);
+                return !!(0, I.ZL)(t) && !z && (null == (e = t.meta.showAllStreams) || e);
             },
             [A, z]
         ),
@@ -231,7 +231,7 @@ function L(e) {
         )),
         es = eo.length,
         ec = null == ei || (0 === el.size && z) || (0 === es && !z),
-        eu = G ? S.C5.HORIZONTAL : S.C5.VERTICAL,
+        eu = G ? I.C5.HORIZONTAL : I.C5.VERTICAL,
         ed = {
             containerWidth: q,
             containerHeight: $
@@ -250,7 +250,7 @@ function L(e) {
                 }
             );
         })(z, ed, eu),
-        ef = (0, o.e7)([h.Z], () => h.Z.getWindowState(I.$J)),
+        ef = (0, o.e7)([h.Z], () => h.Z.getWindowState(S.$J)),
         em = {
             id: A,
             widget: L,
@@ -301,7 +301,7 @@ function L(e) {
                         {
                             widgetId: t,
                             size: T,
-                            minSize: D(a, 1, {
+                            minSize: k(a, 1, {
                                 padding: s,
                                 sizeOffset: r
                             }),
@@ -316,11 +316,11 @@ function L(e) {
                 N(
                     {
                         widgetId: t,
-                        size: k(a, d, p, l, {
+                        size: D(a, d, p, l, {
                             padding: s,
                             sizeOffset: r
                         }),
-                        minSize: D(a, l, {
+                        minSize: k(a, l, {
                             padding: s,
                             sizeOffset: r
                         }),
@@ -341,11 +341,11 @@ function L(e) {
                         N(
                             {
                                 widgetId: t,
-                                size: D(n, a, {
+                                size: k(n, a, {
                                     padding: l,
                                     sizeOffset: i
                                 }),
-                                minSize: D(n, a, {
+                                minSize: k(n, a, {
                                     padding: l,
                                     sizeOffset: i
                                 }),
@@ -366,7 +366,7 @@ function L(e) {
                             {
                                 widgetId: t,
                                 size: T,
-                                minSize: D(n, 0, {
+                                minSize: k(n, 0, {
                                     padding: l,
                                     sizeOffset: i
                                 }),

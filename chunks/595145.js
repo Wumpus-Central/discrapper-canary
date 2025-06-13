@@ -12,8 +12,8 @@ var o = n(255367),
     p = n(100527),
     m = n(906732),
     b = n(368326),
-    y = n(429467),
-    _ = n(320582),
+    _ = n(429467),
+    y = n(320582),
     x = n(246016),
     h = n(680295),
     g = n(189156),
@@ -31,8 +31,8 @@ var o = n(255367),
     S = n(648052),
     E = n(867176),
     B = n(280885),
-    D = n(537006),
-    L = n(681837),
+    L = n(537006),
+    D = n(681837),
     U = n(78806),
     k = n(91433),
     M = n(451834),
@@ -65,8 +65,8 @@ function et(e) {
             roleId: er,
             showGuildProfile: ef
         }),
-        ey = r.useRef(null),
-        e_ = (0, u.Z)(ey),
+        e_ = r.useRef(null),
+        ey = (0, u.Z)(e_),
         ex = (0, C.$m)(),
         eh = (0, s.q_F)({
             opacity: +(null != ex.interactionType),
@@ -89,13 +89,13 @@ function et(e) {
                       size: 1024
                   }),
         eA = (0, b.p)({ location: 'UserProfileModalV2' }),
-        eT = r.useMemo(() => (null != es ? es : (0, y.Z)()), [es]),
+        eT = r.useMemo(() => (null != es ? es : (0, _.Z)()), [es]),
         eZ = (0, q.Z)({
             user: n,
             currentUser: i
         }),
         eC = (0, x.Y)({ userId: n.id }),
-        ew = (0, _.vh)(n.id),
+        ew = (0, y.vh)(n.id),
         eS = (0, Z.Z)(n.id),
         eE = (0, a.e7)([j.default], () => ['en-US', 'en-GB'].includes(j.default.locale)) ? $.intl.formatToPlainString($.t.KRe1Fh, { name: eI }) : $.intl.string($.t['3N/J2t']);
     return (0, o.jsx)(m.Gt, {
@@ -115,7 +115,7 @@ function et(e) {
                     'aria-label': eE,
                     parentComponent: 'UserProfileModalV2',
                     children: (0, o.jsxs)(V.Z, {
-                        ref: (null == ej ? void 0 : ej.profileEffectId) != null ? ey : void 0,
+                        ref: (null == ej ? void 0 : ej.profileEffectId) != null ? e_ : void 0,
                         user: n,
                         displayProfile: ej,
                         themeType: J.lY.MODAL_V2,
@@ -173,7 +173,7 @@ function et(e) {
                                                 onClose: eu,
                                                 className: ee.profileSection,
                                                 nickname: O.ZP.useName(null == ej ? void 0 : ej.guildId, en, n),
-                                                nicknameIcons: (0, o.jsx)(L.Z, {
+                                                nicknameIcons: (0, o.jsx)(D.Z, {
                                                     size: 'sm',
                                                     userId: n.id
                                                 }),
@@ -235,7 +235,7 @@ function et(e) {
                                                             })
                                                         }),
                                                     n.id === i.id &&
-                                                        (0, o.jsx)(D.Z, {
+                                                        (0, o.jsx)(L.Z, {
                                                             className: ee.profileSection,
                                                             isPremiumUser: (0, P.I5)(i),
                                                             onInteraction: eu
@@ -296,7 +296,8 @@ function et(e) {
                                                                     scrollIntoView: el === J.Tb.CONNECTIONS,
                                                                     children: (0, o.jsx)(W.Z, {
                                                                         connections: eS,
-                                                                        userId: n.id
+                                                                        userId: n.id,
+                                                                        className: ee.profileAppConnections
                                                                     })
                                                                 }),
                                                             (0, o.jsx)(z.Z, {
@@ -345,7 +346,7 @@ function et(e) {
                                     (null == ej ? void 0 : ej.profileEffectId) != null &&
                                         (0, o.jsx)(h.Z, {
                                             profileEffectId: null == ej ? void 0 : ej.profileEffectId,
-                                            isHovering: e_
+                                            isHovering: ey
                                         })
                                 ]
                             }),

@@ -79,7 +79,17 @@ let G = {
                     args: { user_id: t }
                 } = e,
                 n = y.Z.getDMFromUserId(t);
-            null != n && (0, u.In)(n, !0, !0);
+            null != n &&
+                (0, u.In)(
+                    n,
+                    {
+                        section: k.jXE.CLOSE_ACTIVITY_JOIN_REQUEST_RPC_COMMAND,
+                        object: k.qAy.ACK_DECLINE_REQUEST_TO_JOIN,
+                        objectType: k.Qqv.ACK_SEMI_AUTOMATIC
+                    },
+                    !0,
+                    !0
+                );
         }
     },
     [k.Etm.ACTIVITY_INVITE_USER]: {

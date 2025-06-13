@@ -1,37 +1,36 @@
 n.d(t, { Z: () => l });
-var r = n(255367),
-    i = n(73800),
-    a = n(70097),
-    o = n(921948),
-    s = n(475595);
+var r = n(255367);
+n(73800);
+var i = n(70097),
+    a = n(921948),
+    o = n(475595);
+function s(e) {
+    let t = (0, a.Z)();
+    return {
+        width: e.width * t,
+        height: e.height * t
+    };
+}
 let l = function (e) {
-    let { quest: t, dimensions: n, className: l } = e,
-        c = (0, s.fh)(t, s.eC.HERO_IMAGE),
-        u = i.useMemo(() => {
-            if (null != n) {
-                let e = (0, o.Z)();
-                return (0, s.f0)(c.url, {
-                    width: n.width * e,
-                    height: n.height * e
-                });
-            }
-            return (0, s.f0)(c.url, n);
-        }, [c.url, n]);
+    let { quest: t, dimensions: n, className: a } = e,
+        l = (0, o.fh)(t, o.eC.HERO_IMAGE),
+        c = null != n ? s(n) : void 0,
+        u = (0, o.f0)(l.url, c);
     return null != u
         ? (0, r.jsx)('img', {
               src: u,
               alt: t.config.messages.questName,
-              className: l
+              className: a
           })
-        : c.isAnimated
-          ? (0, r.jsx)(a.Z, {
-                className: l,
+        : l.isAnimated
+          ? (0, r.jsx)(i.Z, {
+                className: a,
                 autoPlay: !1,
                 loop: !1,
                 muted: !0,
                 playsInline: !0,
                 controls: !1,
-                src: c.url
+                src: l.url
             })
           : null;
 };

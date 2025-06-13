@@ -1,12 +1,12 @@
 t.d(n, {
     AJ: () => $,
-    Bs: () => V,
+    Bs: () => K,
     ES: () => Y,
-    Eg: () => q,
+    Eg: () => G,
     IN: () => J,
     J$: () => el,
     MC: () => ee,
-    O2: () => G,
+    O2: () => q,
     Vm: () => ei,
     W3: () => H,
     XZ: () => es,
@@ -14,12 +14,12 @@ t.d(n, {
     eZ: () => ed,
     iM: () => z,
     jR: () => eo,
-    kF: () => X,
+    kF: () => Q,
     kn: () => ea,
     ku: () => ec,
     mX: () => en,
     n2: () => ef,
-    nP: () => K,
+    nP: () => V,
     ql: () => eu,
     r_: () => et,
     vP: () => eg,
@@ -46,27 +46,27 @@ var r = t(73800),
     E = t(344185),
     p = t(723774),
     _ = t(144140),
-    P = t(91159),
-    b = t(592125),
+    b = t(91159),
+    C = t(592125),
     M = t(720202),
-    C = t(430824),
+    P = t(430824),
     O = t(496675),
     S = t(306680),
-    I = t(594174),
-    y = t(823379),
-    T = t(709054),
-    w = t(883429),
-    A = t(238349),
+    T = t(594174),
+    A = t(823379),
+    I = t(709054),
+    y = t(883429),
+    w = t(238349),
     j = t(368844),
     R = t(660189),
     N = t(581036),
-    k = t(208970),
-    U = t(882252),
+    U = t(208970),
+    k = t(882252),
     F = t(710352),
     D = t(981631),
     L = t(176505),
     x = t(124368);
-let G = (0, f.Z)({
+let q = (0, f.Z)({
     id: '2023-01_forums_non_community',
     label: 'Forum non-community',
     kind: 'guild',
@@ -79,16 +79,16 @@ let G = (0, f.Z)({
         }
     ]
 });
-function q(e) {
-    return G.getCurrentConfig({
+function G(e) {
+    return q.getCurrentConfig({
         guildId: e,
         location: '553713_2'
     }).enabled;
 }
 function H(e) {
-    let n = (0, a.e7)([C.Z], () => C.Z.getGuild(e));
+    let n = (0, a.e7)([P.Z], () => P.Z.getGuild(e));
     return (
-        G.useExperiment(
+        q.useExperiment(
             {
                 guildId: e,
                 location: '553713_1'
@@ -101,9 +101,9 @@ function Y(e, n, t, l) {
     let u = (0, a.e7)([E.Z], () => E.Z.hasLoaded(e.guild_id));
     r.useEffect(() => {
         if (!u) return;
-        let r = A.Z.getThreadIds(e.id, n, t, l),
+        let r = w.Z.getThreadIds(e.id, n, t, l),
             i = N.Z.getThreadIdsMissingCounts(e.guild_id, r)
-                .filter((e) => (0, U.nU)(e, [S.ZP]))
+                .filter((e) => (0, k.nU)(e, [S.ZP]))
                 .slice(0, 180)
                 .map((e) => ({
                     threadId: e,
@@ -118,27 +118,27 @@ function Y(e, n, t, l) {
             });
     }, [e.id, e.guild_id, u, t, n, l]);
 }
-function X(e) {
-    return (0, a.e7)([E.Z, b.Z], () => {
+function Q(e) {
+    return (0, a.e7)([E.Z, C.Z], () => {
         let n = u()(E.Z.getThreadsForParent(e.guild_id, e.parent_id))
             .keys()
             .filter((e) => {
                 var n;
-                return (null == (n = b.Z.getChannel(e)) ? void 0 : n.hasFlag(L.zZ.PINNED)) === !0;
+                return (null == (n = C.Z.getChannel(e)) ? void 0 : n.hasFlag(L.zZ.PINNED)) === !0;
             })
             .head();
-        return b.Z.getChannel(n);
+        return C.Z.getChannel(n);
     });
 }
-let Q = [];
+let X = [];
 function W(e) {
     let n = (function (e) {
         let n = null == e ? void 0 : e.parent_id;
         return (0, a.cj)(
-            [b.Z],
+            [C.Z],
             () => {
                 var e;
-                let t = b.Z.getChannel(n);
+                let t = C.Z.getChannel(n);
                 return (null != (e = null == t ? void 0 : t.availableTags) ? e : []).reduce((e, n) => {
                     var t, r;
                     return (
@@ -189,12 +189,12 @@ function W(e) {
     })(e);
     return r.useMemo(() => {
         var t, r, l;
-        let u = null != (l = null == e || null == (r = e.appliedTags) || null == (t = r.map((e) => n[e])) ? void 0 : t.filter(y.lm)) ? l : Q;
+        let u = null != (l = null == e || null == (r = e.appliedTags) || null == (t = r.map((e) => n[e])) ? void 0 : t.filter(A.lm)) ? l : X;
         return (null == e ? void 0 : e.isModeratorReportChannel()) ? (0, h.iq)(u) : u;
     }, [n, e]);
 }
 function z(e, n) {
-    let t = (0, a.Wu)([I.default], () => n.map((e) => I.default.getUser(e)).filter(y.lm));
+    let t = (0, a.Wu)([T.default], () => n.map((e) => T.default.getUser(e)).filter(A.lm));
     return (
         (0, s.ZP)(() => {
             t.forEach((n) => {
@@ -206,10 +206,10 @@ function z(e, n) {
 }
 function B(e, n) {
     let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : F.R6.DURATION_AGO,
-        l = r.useMemo(() => T.default.extractTimestamp(e.id), [e.id]),
-        u = (0, P.Ok)(e),
-        a = r.useMemo(() => (0, U.Uw)(n, t), [n, t]);
-    return r.useMemo(() => (n === i.z.CREATION_DATE ? (0, P.Ye)(l, a) : (0, P.Ye)(u, a)), [u, n, l, a]);
+        l = r.useMemo(() => I.default.extractTimestamp(e.id), [e.id]),
+        u = (0, b.Ok)(e),
+        a = r.useMemo(() => (0, k.Uw)(n, t), [n, t]);
+    return r.useMemo(() => (n === i.z.CREATION_DATE ? (0, b.Ye)(l, a) : (0, b.Ye)(u, a)), [u, n, l, a]);
 }
 function J(e) {
     return r.useMemo(() => {
@@ -217,7 +217,7 @@ function J(e) {
         return u().maxBy(null != (n = null == e ? void 0 : e.reactions) ? n : [], (e) => Math.max(e.burst_count, e.count));
     }, [null == e ? void 0 : e.reactions]);
 }
-function V(e) {
+function K(e) {
     let n = null == e ? void 0 : e.defaultReactionEmoji,
         t = (0, a.e7)([c.ZP], () => ((null == n ? void 0 : n.emojiId) != null ? c.ZP.getUsableCustomEmojiById(n.emojiId) : null));
     return null == n
@@ -236,13 +236,13 @@ function V(e) {
               }
             : null;
 }
-function K(e) {
+function V(e) {
     let n = (0, a.e7)([_.Z], () => {
             var n;
             return null != (n = _.Z.getCount(e.id)) ? n : 0;
         }),
         t = (0, p.lE)(n, e.id),
-        r = (0, a.e7)([S.ZP], () => (0, U.nU)(e.id, [S.ZP])),
+        r = (0, a.e7)([S.ZP], () => (0, k.nU)(e.id, [S.ZP])),
         l = (0, a.e7)([N.Z], () => {
             if (!r) return null;
             let t = N.Z.getCount(e.id);
@@ -261,7 +261,7 @@ function K(e) {
 }
 function $(e) {
     var n;
-    let t = (0, a.e7)([I.default], () => I.default.getUser(e.ownerId)),
+    let t = (0, a.e7)([T.default], () => T.default.getUser(e.ownerId)),
         l = (0, a.e7)([R.Z], () => {
             var n;
             return null == (n = R.Z.getMessage(e.id)) ? void 0 : n.firstMessage;
@@ -279,7 +279,7 @@ function $(e) {
 }
 function ee(e) {
     var n, t;
-    let r = I.default.getUser(e.ownerId),
+    let r = T.default.getUser(e.ownerId),
         l = null == (n = R.Z.getMessage(e.id)) ? void 0 : n.firstMessage,
         u = (0, m.ij)(null != (t = null == l ? void 0 : l.author) ? t : r, e);
     return {
@@ -323,10 +323,10 @@ let er = {
     hasUnreads: !1
 };
 function el(e) {
-    return (0, a.cj)([C.Z, S.ZP], () => {
+    return (0, a.cj)([P.Z, S.ZP], () => {
         var n;
-        let t = C.Z.getGuild(null != (n = e.getGuildId()) ? n : D.lds);
-        return null == t ? er : (0, U.FS)(e, t, [S.ZP]);
+        let t = P.Z.getGuild(null != (n = e.getGuildId()) ? n : D.lds);
+        return null == t ? er : (0, k.FS)(e, t, [S.ZP]);
     });
 }
 function eu(e) {
@@ -341,7 +341,7 @@ function ei(e) {
     }, [n, null == e ? void 0 : e.availableTags]);
 }
 function ea(e, n) {
-    let t = ei((0, a.e7)([b.Z], () => b.Z.getChannel(null == e ? void 0 : e.parent_id), [e]));
+    let t = ei((0, a.e7)([C.Z], () => C.Z.getChannel(null == e ? void 0 : e.parent_id), [e]));
     return r.useMemo(() => {
         let r = n.filter((e) => t.includes(e));
         return (null == e ? void 0 : e.isModeratorReportChannel()) ? (0, h.iq)(r) : r;
@@ -355,10 +355,10 @@ function ed(e) {
 }
 function es(e) {
     let { channelId: n } = e;
-    return (0, a.cj)([k.Z], () => ({
-        isSearchLoading: k.Z.getSearchLoading(n),
-        searchQuery: k.Z.getSearchQuery(n),
-        searchResults: k.Z.getSearchResults(n)
+    return (0, a.cj)([U.Z], () => ({
+        isSearchLoading: U.Z.getSearchLoading(n),
+        searchQuery: U.Z.getSearchQuery(n),
+        searchResults: U.Z.getSearchResults(n)
     }));
 }
 function ec(e, n, t) {
@@ -369,24 +369,24 @@ function ec(e, n, t) {
         d = r.useRef(new Set());
     r.useEffect(() => {
         if (null == i && null != o.current) {
-            w.Z.clearForumSearch(e.id), (o.current = null);
+            y.Z.clearForumSearch(e.id), (o.current = null);
             return;
         }
         if (null == i || 0 === i.length || l) return;
-        if (!a) return void w.Z.clearForumSearch(e.id);
+        if (!a) return void y.Z.clearForumSearch(e.id);
         if ((o.current === i && d.current === n) || u) return;
         let r = setTimeout(async () => {
             (o.current = i), (d.current = n);
             try {
-                await w.Z.searchForumPosts(e.guild_id, e.id, i, n, t);
+                await y.Z.searchForumPosts(e.guild_id, e.id, i, n, t);
             } catch (e) {}
         }, 350);
         return () => clearTimeout(r);
     }, [a, e.guild_id, e.id, l, u, i, n, t]);
 }
 function ef(e, n) {
-    return (0, a.e7)([v.Z, S.ZP, b.Z], () => {
-        let t = b.Z.getChannel(n);
+    return (0, a.e7)([v.Z, S.ZP, C.Z], () => {
+        let t = C.Z.getChannel(n);
         if (!(null == t ? void 0 : t.isForumLikeChannel())) return 0;
         let r = v.Z.getActiveJoinedUnreadThreadsForParent(e, n),
             l = v.Z.getActiveUnjoinedUnreadThreadsForParent(e, n),
@@ -408,12 +408,16 @@ function ef(e, n) {
 }
 function eg(e) {
     let { channel: n, sortOrder: t, tagFilter: l, tagSetting: u, shouldAutomaticallyAck: i } = e,
-        o = (0, a.Wu)([A.Z], () => A.Z.getThreadIds(n.id, t, l, u)),
+        o = (0, a.Wu)([w.Z], () => w.Z.getThreadIds(n.id, t, l, u)),
         s = ef(n.guild_id, n.id),
-        c = (0, a.e7)([A.Z], () => i && (s > 0 || A.Z.getCanAckThreads()), [i, s]);
+        c = (0, a.e7)([w.Z], () => i && (s > 0 || w.Z.getCanAckThreads()), [i, s]);
     return (
         r.useEffect(() => {
-            c && (0, d.U6)(n);
+            c &&
+                (0, d.U6)(n, {
+                    object: D.qAy.ACK_FORUM_ACTIVE_THREADS,
+                    objectType: D.Qqv.ACK_AUTOMATIC
+                });
         }, [n, c]),
         o
     );

@@ -27,8 +27,8 @@ var i = n(255367),
     E = n(194082),
     _ = n(297781),
     x = n(656709),
-    S = n(233241),
-    I = n(225559),
+    I = n(233241),
+    S = n(225559),
     j = n(703656),
     C = n(93127),
     N = n(752048),
@@ -36,8 +36,8 @@ var i = n(255367),
     Z = n(199902),
     P = n(592125),
     T = n(293273),
-    k = n(158776),
-    D = n(699516),
+    D = n(158776),
+    k = n(699516),
     A = n(594174),
     R = n(801077),
     L = n(237997),
@@ -166,7 +166,7 @@ function Q(e) {
                 });
         },
         _ = y ? F.intl.string(F.t['3fRyS0']) : F.intl.string(F.t.XHxDIS),
-        S = y
+        I = y
             ? (0, i.jsx)(d.ejJ, {
                   color: 'currentColor',
                   size: 'sm'
@@ -202,7 +202,7 @@ function Q(e) {
                                       color: 'currentColor',
                                       size: 'sm'
                                   })
-                            : S
+                            : I
                 })
             )
     });
@@ -212,7 +212,7 @@ function K(e) {
     let { entry: n, currentUserActivity: o } = e,
         l = (0, u.e7)([A.default], () => A.default.getUser(n.author_id)),
         a = null != (t = null == o ? void 0 : o.application_id) ? t : n.extra.application_id,
-        s = (0, u.e7)([k.Z], () => (null != l ? k.Z.getApplicationActivity(l.id, a) : null), [a, l]),
+        s = (0, u.e7)([D.Z], () => (null != l ? D.Z.getApplicationActivity(l.id, a) : null), [a, l]),
         [c, h] = r.useState('unsent');
     if (!(null != s && (0, v.Z)(s, G.xjy.JOIN))) return null;
     let f = async (e) => {
@@ -273,7 +273,7 @@ function X(e) {
         o = (0, u.e7)([A.default], () => A.default.getUser(t.author_id)),
         l = (0, u.e7)([Z.Z], () => (null != o ? Z.Z.getAnyStreamForUser(o.id) : null), [o]),
         { isMobileOnline: a, status: s } = (0, u.cj)(
-            [k.Z],
+            [D.Z],
             () =>
                 null == o
                     ? {
@@ -281,8 +281,8 @@ function X(e) {
                           status: void 0
                       }
                     : {
-                          isMobileOnline: k.Z.isMobileOnline(o.id),
-                          status: k.Z.getStatus(o.id)
+                          isMobileOnline: D.Z.isMobileOnline(o.id),
+                          status: D.Z.getStatus(o.id)
                       },
             [o]
         );
@@ -397,13 +397,13 @@ function q(e) {
 }
 function $(e) {
     let { gamingId: t, maxUserShowCount: n, userAffinityThresholdV2: i = 0.0029 } = e,
-        o = (0, S.Z)(t, 'useLiveActivityRows');
+        o = (0, I.Z)(t, 'useLiveActivityRows');
     (0, y.ZP)(() => {
         (0, C._)();
     });
     let l = (0, u.e7)([T.Z], () => (null == t ? null : T.Z.getApplicationActivity(t)), [t]),
         d = (0, u.Wu)(
-            [R.Z, D.Z, N.Z],
+            [R.Z, k.Z, N.Z],
             () => {
                 if (null == t) return [];
                 let e = R.Z.nowPlayingCards,
@@ -418,7 +418,7 @@ function $(e) {
                     }, [])
                     .filter((e) => {
                         let t = e.activityUser.id,
-                            i = D.Z.isFriend(t);
+                            i = k.Z.isFriend(t);
                         return (function (e, t, n) {
                             let { v2: i } = n;
                             if (null == e) return t;
@@ -438,7 +438,7 @@ function $(e) {
             [t, i]
         );
     return (
-        (0, y.ZP)(() => (I.L(), () => I.v())),
+        (0, y.ZP)(() => (S.L(), () => S.v())),
         {
             entries: r.useMemo(() => {
                 let e = o.filter((e) => !d.some((t) => t.activityUser.id === e.author_id)),
@@ -519,11 +519,11 @@ function en(e) {
         n = (0, W.II)(),
         r = null == n ? void 0 : n.id,
         o = null == n ? void 0 : n.altId,
-        l = (0, S.Z)(r, 'ActivityWidget'),
+        l = (0, I.Z)(r, 'ActivityWidget'),
         a = (0, u.e7)([A.default], () => A.default.getCurrentUser()),
         s = null != o ? o : r,
         c = (0, u.e7)([T.Z], () => (null == s ? null : T.Z.getApplicationActivity(s)), [s]);
-    (0, y.ZP)(() => (I.L(), () => I.v()));
+    (0, y.ZP)(() => (S.L(), () => S.v()));
     let d = $({
         gamingId: s,
         userAffinityThresholdV2: 0.00145,

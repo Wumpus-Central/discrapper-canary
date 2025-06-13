@@ -1,6 +1,6 @@
 n.d(t, {
     IV: () => _,
-    ZP: () => S,
+    ZP: () => I,
     bt: () => v,
     fd: () => b
 }),
@@ -102,8 +102,8 @@ let x = {
         friction: 18,
         clamp: !0
     },
-    S = r.memo(function (e) {
-        let { widgetId: t, tileWidth: n, tileHeight: o, layout: h, locked: v, activeStreams: b, streamParticipants: _, participantsVersion: S, pinned: I, padding: j, sizeOffset: C } = e,
+    I = r.memo(function (e) {
+        let { widgetId: t, tileWidth: n, tileHeight: o, layout: h, locked: v, activeStreams: b, streamParticipants: _, participantsVersion: I, pinned: S, padding: j, sizeOffset: C } = e,
             N = _.map((e) => ({
                 participant: e,
                 key: e.user.id,
@@ -111,25 +111,25 @@ let x = {
                 height: o,
                 locked: v,
                 widgetId: t,
-                pinned: I
+                pinned: S
             })),
             w = (0, c.Z)(n),
             Z = (0, c.Z)(v),
             P = h === f.C5.VERTICAL,
             T = v || Z !== v || w !== n,
-            k = 0,
             D = 0,
+            k = 0,
             A = (0, s.Yzy)(
                 P
                     ? N.map((e, t) =>
                           O(y({}, e), {
-                              y: (k += e.height + (t > 0 ? j : 0)) - e.height,
+                              y: (D += e.height + (t > 0 ? j : 0)) - e.height,
                               x: 0
                           })
                       )
                     : N.map((e, t) =>
                           O(y({}, e), {
-                              x: (D += e.width + (t > 0 ? j : 0)) - e.width,
+                              x: (k += e.width + (t > 0 ? j : 0)) - e.width,
                               y: 0
                           })
                       ),
@@ -167,8 +167,8 @@ let x = {
                 },
                 T ? 'animate-never' : 'respect-motion-settings'
             ),
-            R = (0, p.ee)(() => new Set(_.map((e) => e.user.id)), [_, S]),
-            L = (0, p.ee)(() => new Set(_.filter((e) => b.has((0, u.V9)(e.stream))).map((e) => e.user.id)), [_, b, S]);
+            R = (0, p.ee)(() => new Set(_.map((e) => e.user.id)), [_, I]),
+            L = (0, p.ee)(() => new Set(_.filter((e) => b.has((0, u.V9)(e.stream))).map((e) => e.user.id)), [_, b, I]);
         return (
             r.useEffect(() => {
                 0 !== R.size &&
@@ -185,7 +185,7 @@ let x = {
                     [g.vertical]: P,
                     [g.horizontal]: !P
                 }),
-                style: P ? { height: k } : { width: D },
+                style: P ? { height: D } : { width: k },
                 children: A((e, t, r, l) =>
                     (0, i.jsx)(a.animated.div, {
                         className: g.gridItem,

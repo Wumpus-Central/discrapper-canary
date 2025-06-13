@@ -22,8 +22,8 @@ var r = n(255367),
     S = n(714338),
     x = n(185666),
     C = n(100527),
-    Z = n(906732),
-    j = n(600164);
+    j = n(906732),
+    Z = n(600164);
 n(70097);
 var I = n(605236),
     P = n(594190),
@@ -267,9 +267,9 @@ class eE extends o.Component {
         window.removeEventListener('resize', this.handleWindowResize), window.removeEventListener('keydown', this.onKeyDownGlobal, !0), window.removeEventListener('keyup', this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener('contextmenu', eO, !1), T.Z.terminate(), x.Z.terminate(), k.Z.terminate();
     }
     renderInvalidSizeMessage() {
-        return (0, r.jsx)(j.Z, {
-            justify: j.Z.Justify.CENTER,
-            align: j.Z.Align.CENTER,
+        return (0, r.jsx)(Z.Z, {
+            justify: Z.Z.Justify.CENTER,
+            align: Z.Z.Align.CENTER,
             className: eg.invalidContainer,
             children: (0, r.jsx)('div', {
                 className: eg.inactiveContainer,
@@ -378,10 +378,10 @@ function eS() {
         u = (0, f.e7)([P.ZP, U.Z], () => (0, N.Z)(P.ZP, U.Z)),
         h = (0, f.e7)([z.Z], () => (0, w.Z)(z.Z)),
         p = (0, f.e7)([D.Z], () => null != D.Z.getCurrentUserActiveStream()),
-        { analyticsLocations: g } = (0, Z.ZP)(C.Z.OVERLAY),
+        { analyticsLocations: g } = (0, j.ZP)(C.Z.OVERLAY),
         { showKeybindIndicators: m, dismissKeybindNotification: y } = (0, er.K)(),
         O = (0, en.o4)('ipOverlay').overlayV3UI;
-    return (0, r.jsx)(Z.Gt, {
+    return (0, r.jsx)(j.Gt, {
         value: g,
         children: (0, r.jsx)(eE, {
             locked: e,

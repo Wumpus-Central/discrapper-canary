@@ -46,7 +46,16 @@ let O = (e) => {
             let e = u.ZP.lastMessageId(O.id);
             null != e &&
                 o.Z.wait(() => {
-                    (0, s.In)(O.id, !0, !0, e);
+                    (0, s.In)(
+                        O.id,
+                        {
+                            object: v.qAy.ACK_GUILD_DIRECTORY_CHANNEL_VIEWED,
+                            objectType: v.Qqv.ACK_AUTOMATIC
+                        },
+                        !0,
+                        !0,
+                        e
+                    );
                 });
         },
         [O.id]

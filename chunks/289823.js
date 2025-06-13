@@ -1,17 +1,17 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => g });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
-    l = n(974674),
-    c = n(438784),
-    u = n(481060),
+    l = n(120356),
+    o = n.n(l),
+    a = n(974674),
+    u = n(438784),
+    c = n(481060),
     s = n(686546),
     d = n(3682),
-    _ = n(630403);
-let f = {},
-    p = 1 / 4;
-function m(e) {
+    p = n(630403);
+let E = {},
+    f = 1 / 4;
+function _(e) {
     let { height: t, fillColor: n } = e;
     return (0, r.jsx)('div', {
         style: {
@@ -23,15 +23,15 @@ function m(e) {
             height: t,
             width: t * d.jR
         },
-        children: (0, r.jsx)(c.b, {
-            className: _.dots,
-            dotRadius: t * p
+        children: (0, r.jsx)(u.b, {
+            className: p.dots,
+            dotRadius: t * f
         })
     });
 }
-function b(e) {
+function S(e) {
     let { isTyping: t, statusCoords: n, status: i } = e,
-        o = (0, u.vjg)(u.Skl.ONLINE);
+        l = (0, c.vjg)(c.Skl.ONLINE);
     return t
         ? (0, r.jsx)('div', {
               style: {
@@ -39,13 +39,13 @@ function b(e) {
                   top: n.y,
                   left: n.x
               },
-              children: (0, r.jsx)(m, {
+              children: (0, r.jsx)(_, {
                   height: n.height,
-                  fillColor: o
+                  fillColor: l
               })
           })
         : null != i
-          ? (0, r.jsx)(u.qbd, {
+          ? (0, r.jsx)(c.qbd, {
                 size: n.height,
                 status: i,
                 style: {
@@ -56,67 +56,67 @@ function b(e) {
             })
           : null;
 }
-function h(e) {
+function O(e) {
     let { src: t, size: n } = e;
     return (0, r.jsx)('img', {
-        className: _.circularImage,
+        className: p.circularImage,
         src: t,
         alt: '',
         width: n,
         height: n
     });
 }
-let g = {
-        [u.EFr.SIZE_16]: {
+let I = {
+        [c.EFr.SIZE_16]: {
             default: s.QS.DIAGONAL_FACEPILE_16,
             typing: s.QS.DIAGONAL_FACEPILE_TYPING_16,
             status: s.QS.DIAGONAL_FACEPILE_STATUS_16
         },
-        [u.EFr.SIZE_20]: {
+        [c.EFr.SIZE_20]: {
             default: s.QS.DIAGONAL_FACEPILE_20,
             typing: s.QS.DIAGONAL_FACEPILE_TYPING_20,
             status: s.QS.DIAGONAL_FACEPILE_STATUS_20
         },
-        [u.EFr.SIZE_24]: {
+        [c.EFr.SIZE_24]: {
             default: s.QS.DIAGONAL_FACEPILE_24,
             typing: s.QS.DIAGONAL_FACEPILE_TYPING_24,
             status: s.QS.DIAGONAL_FACEPILE_STATUS_24
         },
-        [u.EFr.SIZE_32]: {
+        [c.EFr.SIZE_32]: {
             default: s.QS.DIAGONAL_FACEPILE_32,
             typing: s.QS.DIAGONAL_FACEPILE_TYPING_32,
             status: s.QS.DIAGONAL_FACEPILE_STATUS_32
         },
-        [u.EFr.SIZE_40]: {
+        [c.EFr.SIZE_40]: {
             default: s.QS.DIAGONAL_FACEPILE_32,
             typing: s.QS.DIAGONAL_FACEPILE_TYPING_32,
             status: s.QS.DIAGONAL_FACEPILE_STATUS_32
         },
-        [u.EFr.SIZE_48]: {
+        [c.EFr.SIZE_48]: {
             default: s.QS.DIAGONAL_FACEPILE_40,
             typing: s.QS.DIAGONAL_FACEPILE_TYPING_40,
             status: s.QS.DIAGONAL_FACEPILE_STATUS_40
         },
-        [u.EFr.SIZE_56]: {
+        [c.EFr.SIZE_56]: {
             default: s.QS.DIAGONAL_FACEPILE_56,
             typing: s.QS.DIAGONAL_FACEPILE_TYPING_56,
             status: s.QS.DIAGONAL_FACEPILE_STATUS_56
         },
-        [u.EFr.SIZE_80]: {
+        [c.EFr.SIZE_80]: {
             default: s.QS.DIAGONAL_FACEPILE_80,
             typing: s.QS.DIAGONAL_FACEPILE_TYPING_80,
             status: s.QS.DIAGONAL_FACEPILE_STATUS_80
         },
-        [u.EFr.SIZE_120]: {
+        [c.EFr.SIZE_120]: {
             default: s.QS.DIAGONAL_FACEPILE_120,
             typing: s.QS.DIAGONAL_FACEPILE_TYPING_120,
             status: s.QS.DIAGONAL_FACEPILE_STATUS_120
         }
     },
-    v = function (e) {
+    g = function (e) {
         var t,
-            { backSrc: n, frontSrc: o, size: c, isTyping: p, status: m, style: v, className: I } = e,
-            E = (function (e, t) {
+            { backSrc: n, frontSrc: l, size: u, isTyping: f, status: _, style: g, className: T } = e,
+            b = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -125,43 +125,43 @@ let g = {
                         var n,
                             r,
                             i = {},
-                            o = Object.keys(e);
-                        for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                            l = Object.keys(e);
+                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var o = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    var l = Object.getOwnPropertySymbols(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                 }
                 return i;
             })(e, ['backSrc', 'frontSrc', 'size', 'isTyping', 'status', 'style', 'className']);
-        let { size: y } = u.ny6[c],
+        let { size: h } = c.ny6[u],
             {
-                statusCoords: O,
-                frontAvatarOffsetPx: S,
-                frontAvatarSizePx: C,
-                backAvatarSizePx: P
+                statusCoords: C,
+                frontAvatarOffsetPx: y,
+                frontAvatarSizePx: P,
+                backAvatarSizePx: N
             } = i.useMemo(() => {
                 var e;
-                let t = ''.concat(y, '-').concat(p);
-                return null != (e = f[t])
+                let t = ''.concat(h, '-').concat(f);
+                return null != (e = E[t])
                     ? e
                     : (function (e, t, n) {
-                          let r = u.ny6[e],
+                          let r = c.ny6[e],
                               i = r.size / (d.z3 + d.o),
-                              o = i * d.z3,
-                              a = i * d.o,
-                              c = {
-                                  statusCoords: (0, l.Vq)(r, u.Skl.ONLINE, !1, t),
-                                  frontAvatarSizePx: o,
+                              l = i * d.z3,
+                              o = i * d.o,
+                              u = {
+                                  statusCoords: (0, a.Vq)(r, c.Skl.ONLINE, !1, t),
+                                  frontAvatarSizePx: l,
                                   backAvatarSizePx: i,
-                                  frontAvatarOffsetPx: a,
-                                  frontAvatarCenter: a + o / 2
+                                  frontAvatarOffsetPx: o,
+                                  frontAvatarCenter: o + l / 2
                               };
-                          return (f[n] = c), c;
-                      })(c, p, t);
-            }, [y, p, c]),
-            A = ((t = null != m), p ? g[c].typing : t ? g[c].status : g[c].default);
+                          return (E[n] = u), u;
+                      })(u, f, t);
+            }, [h, f, u]),
+            m = ((t = null != _), f ? I[u].typing : t ? I[u].status : I[u].default);
         return (0, r.jsxs)('div', {
             style: (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -189,45 +189,45 @@ let g = {
                 return e;
             })(
                 {
-                    width: y,
-                    height: y
+                    width: h,
+                    height: h
                 },
-                v
+                g
             ),
-            'aria-label': E['aria-label'],
-            'aria-hidden': E['aria-hidden'],
-            className: a()(_.container, I),
+            'aria-label': b['aria-label'],
+            'aria-hidden': b['aria-hidden'],
+            className: o()(p.container, T),
             children: [
                 (0, r.jsxs)(s.ZP, {
-                    mask: A,
-                    height: y,
-                    width: y,
+                    mask: m,
+                    height: h,
+                    width: h,
                     children: [
                         (0, r.jsx)('img', {
                             src: n,
                             alt: '',
-                            width: P,
-                            height: P
+                            width: N,
+                            height: N
                         }),
                         (0, r.jsx)('div', {
                             style: {
                                 position: 'absolute',
-                                top: S,
-                                left: S
+                                top: y,
+                                left: y
                             },
-                            children: (0, r.jsx)(h, {
-                                src: o,
-                                size: C,
-                                isTyping: p,
-                                status: m
+                            children: (0, r.jsx)(O, {
+                                src: l,
+                                size: P,
+                                isTyping: f,
+                                status: _
                             })
                         })
                     ]
                 }),
-                (0, r.jsx)(b, {
-                    statusCoords: O,
-                    status: m,
-                    isTyping: p
+                (0, r.jsx)(S, {
+                    statusCoords: C,
+                    status: _,
+                    isTyping: f
                 })
             ]
         });

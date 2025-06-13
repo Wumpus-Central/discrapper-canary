@@ -63,11 +63,11 @@ function v(e) {
     (0, u.nU)();
     let E = (0, a.e7)([p.Z], () => p.Z.getWindow(m.$J)),
         [_, x] = (0, u.m8)(v),
-        { currentFPS: S, averageFrameTime: I, timeSinceLastDrop: j, onResetFrameData: C, droppedFramesRef: N, renderedFrameCount: w, bufferFramecountRef: Z, frameCheckerEffect: P } = (0, u.d6)(!0, _, !0),
-        [T, k, D] = (0, u.ZF)(v),
+        { currentFPS: I, averageFrameTime: S, timeSinceLastDrop: j, onResetFrameData: C, droppedFramesRef: N, renderedFrameCount: w, bufferFramecountRef: Z, frameCheckerEffect: P } = (0, u.d6)(!0, _, !0),
+        [T, D, k] = (0, u.ZF)(v),
         [A, R] = (0, u.Y5)(T, P, E),
         L = performance.now() - x.current < u.MC,
-        M = k(I, Z.current);
+        M = D(S, Z.current);
     (0, c.ZP)(
         () => (
             A(),
@@ -77,8 +77,8 @@ function v(e) {
         )
     );
     let z = r.useCallback(() => {
-            C(), D(), A();
-        }, [C, D, A]),
+            C(), k(), A();
+        }, [C, k, A]),
         [U, V] = r.useState(!0),
         [W, G] = r.useState(!0),
         [F, B] = r.useState(!0),
@@ -112,8 +112,8 @@ function v(e) {
                                       (0, i.jsx)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
-                                          color: S < 30 ? 'text-danger' : S < 45 ? 'text-warning' : 'text-primary',
-                                          children: S.toFixed(2)
+                                          color: I < 30 ? 'text-danger' : I < 45 ? 'text-warning' : 'text-primary',
+                                          children: I.toFixed(2)
                                       })
                                   ]
                               })
@@ -142,8 +142,8 @@ function v(e) {
                                       (0, i.jsxs)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
-                                          color: I > 1.1 * u.tO ? 'text-warning' : 'text-primary',
-                                          children: [I.toFixed(2), 'ms']
+                                          color: S > 1.1 * u.tO ? 'text-warning' : 'text-primary',
+                                          children: [S.toFixed(2), 'ms']
                                       })
                                   ]
                               })

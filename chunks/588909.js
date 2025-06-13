@@ -21,8 +21,8 @@ var r = n(704215),
     E = n(701488),
     _ = n(388032),
     x = n(560226),
-    S = n(19782);
-function I(e) {
+    I = n(19782);
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -106,7 +106,7 @@ function N(e, t) {
                                     return (t) =>
                                         (0, i.jsx)(
                                             e,
-                                            j(I({}, t), {
+                                            j(S({}, t), {
                                                 selectSource: !1,
                                                 sourcePID: (0, h.getPID)(),
                                                 guildId: r.type === O.nc.GO_LIVE_VOICE ? r.voiceGuild.id : void 0,
@@ -125,7 +125,7 @@ function N(e, t) {
                         (0, i.jsx)(m.lX, {
                             gamingId: null == e ? void 0 : e.id,
                             maxUserShowCount: 5,
-                            className: S.container
+                            className: I.container
                         })),
                     (E.onNotificationShow = () => {
                         a.Z.track(v.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
@@ -146,7 +146,7 @@ function N(e, t) {
                       alt: ''
                   });
     return j(
-        I(
+        S(
             {
                 icon: P,
                 title: w,

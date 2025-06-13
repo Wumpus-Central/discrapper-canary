@@ -18,29 +18,28 @@ var r = n(570140),
     l = n(594174),
     c = n(709054),
     u = n(981631);
-function d(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = arguments.length > 3 ? arguments[3] : void 0,
+function d(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         a = arguments.length > 4 ? arguments[4] : void 0;
     r.Z.dispatch({
         type: 'CHANNEL_ACK',
         channelId: e,
-        messageId: i,
-        immediate: t,
-        force: n,
+        messageId: a,
+        immediate: n,
+        force: i,
         context: u.e3s,
-        location: a
+        location: t
     });
 }
-function _(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        r = o.Z.getChannel(e);
-    if (null == r || null == r.guild_id) return;
-    let l = s.Z.getCategories(r.guild_id);
-    if (null == l[e]) return;
-    let c = l[e]
+function _(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        l = o.Z.getChannel(e);
+    if (null == l || null == l.guild_id) return;
+    let c = s.Z.getCategories(l.guild_id);
+    if (null == c[e]) return;
+    let u = c[e]
             .filter((e) => {
                 let { channel: t } = e;
                 return (0, a.Em)(t.type);
@@ -49,16 +48,16 @@ function _(e) {
                 let { channel: t } = e;
                 return t.id;
             }),
-        u = [...c];
-    for (let e of (c.forEach((e) => {
-        let t = i.Z.getActiveJoinedThreadsForParent(r.guild_id, e);
-        for (let e in t) u.push(e);
+        _ = [...u];
+    for (let e of (u.forEach((e) => {
+        let t = i.Z.getActiveJoinedThreadsForParent(l.guild_id, e);
+        for (let e in t) _.push(e);
     }),
-    u))
-        d(e, t, n);
+    _))
+        d(e, t, n, r);
 }
-function f(e) {
-    e.isCategory() ? _(e.id, !0, !0) : e.isForumLikeChannel() ? d(e.id, !0, !0, c.default.fromTimestamp(Date.now())) : d(e.id, !0, !0);
+function f(e, t) {
+    e.isCategory() ? _(e.id, t, !0, !0) : e.isForumLikeChannel() ? d(e.id, t, !0, !0, c.default.fromTimestamp(Date.now())) : d(e.id, t, !0, !0);
 }
 function p(e, t) {
     r.Z.dispatch({

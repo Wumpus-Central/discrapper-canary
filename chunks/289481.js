@@ -97,7 +97,16 @@ let C = i.memo(function (e) {
                     'messages' !== t.type ||
                     0 !== t.messages.length ||
                     u.Z.wait(() => {
-                        (0, d.In)(t.channelId, !0), l(t.channelId);
+                        (0, d.In)(
+                            t.channelId,
+                            {
+                                section: x.jXE.INBOX,
+                                object: x.qAy.ACK_INBOX_CHANNEL_NO_MESSAGES,
+                                objectType: x.Qqv.ACK_AUTOMATIC
+                            },
+                            !0
+                        ),
+                            l(t.channelId);
                     });
             }),
             null == o || !t.hasLoadedAnything)

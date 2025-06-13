@@ -41,7 +41,18 @@ function p(e, t, n, p) {
                 r.Z.updateNotificationStatus(n);
         },
         onCancelClick: (t, n) => {
-            (0, o.In)(e.id, !0, !0), r.Z.updateNotificationStatus(n), y('decline');
+            (0, o.In)(
+                e.id,
+                {
+                    section: u.jXE.OVERLAY,
+                    object: u.qAy.ACK_DECLINE_REQUEST_TO_JOIN,
+                    objectType: u.Qqv.ACK_SEMI_AUTOMATIC
+                },
+                !0,
+                !0
+            ),
+                r.Z.updateNotificationStatus(n),
+                y('decline');
         },
         onDismissClick: () => {
             y('dismiss');

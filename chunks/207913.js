@@ -391,7 +391,18 @@ let z = (0, i.memo)(
                           message: t
                       }),
                           h.Z.trackJump(g.id, t.id, 'Notifications Inbox'),
-                          s && p.In(t.channel_id, !0, void 0, t.id);
+                          s &&
+                              p.In(
+                                  t.channel_id,
+                                  {
+                                      section: L.jXE.INBOX,
+                                      object: L.qAy.ACK_MESSAGE_VIEWED,
+                                      objectType: L.Qqv.ACK_SEMI_AUTOMATIC
+                                  },
+                                  !0,
+                                  void 0,
+                                  t.id
+                              );
                       let e = i ? L.Z5c.NOTIFICATIONS_INBOX(g.id, t.id) : L.Z5c.CHANNEL(g.guild_id, g.id, t.id);
                       (0, I.uL)(e);
                   },

@@ -18,16 +18,26 @@ function O(e) {
     let { id: t, replyToMessageId: n, channel: O, onSend: v } = e,
         b = (0, f.Z)(),
         { placeholder: E, accessibilityLabel: _ } = (0, c.Z)({ channel: O }),
-        [x, S] = r.useState(() => (0, d.H2)()),
-        { textValue: I, richValue: j } = x,
+        [x, I] = r.useState(() => (0, d.H2)()),
+        { textValue: S, richValue: j } = x,
         [C, N] = r.useState(!1),
         w = r.useCallback(() => N(!0), []),
         Z = r.useCallback(() => N(!1), []);
     (0, s.ZP)(() => {
-        (0, a.In)(O.id, !0, !0, n, { section: g.jXE.OVERLAY });
+        (0, a.In)(
+            O.id,
+            {
+                section: g.jXE.OVERLAY,
+                object: g.qAy.ACK_INLINE_REPLY,
+                objectType: g.Qqv.ACK_SEMI_AUTOMATIC
+            },
+            !0,
+            !0,
+            n
+        );
     });
     let P = r.useCallback((e, t, n) => {
-            S({
+            I({
                 textValue: t,
                 richValue: n
             });
@@ -38,15 +48,15 @@ function O(e) {
             },
             [t]
         ),
-        k = r.useCallback(
+        D = r.useCallback(
             () => (
-                I.length > b || (o.Z.sendMessage(O.id, h.ZP.parse(O, I), !1), l.Z.setInputLocked(!0, (0, m.getPID)()), l.Z.updateNotificationStatus(t, g._1z.DISMISSED), null == v || v(I)),
+                S.length > b || (o.Z.sendMessage(O.id, h.ZP.parse(O, S), !1), l.Z.setInputLocked(!0, (0, m.getPID)()), l.Z.updateNotificationStatus(t, g._1z.DISMISSED), null == v || v(S)),
                 Promise.resolve({
                     shouldClear: !1,
                     shouldRefocus: !0
                 })
             ),
-            [I, b, O, t, v]
+            [S, b, O, t, v]
         );
     return (0, i.jsx)('div', {
         className: y.container,
@@ -56,14 +66,14 @@ function O(e) {
             placeholder: E,
             accessibilityLabel: _,
             channel: O,
-            textValue: I,
+            textValue: S,
             richValue: j,
             type: u.Ie.OVERLAY_INLINE_REPLY,
             allowNewLines: !1,
             onBlur: Z,
             onFocus: w,
             focused: C,
-            onSubmit: k,
+            onSubmit: D,
             onKeyDown: T,
             autoCompletePosition: 'bottom',
             disableThemedBackground: !0

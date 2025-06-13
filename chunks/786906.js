@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var i = n(255367),
     r = n(73800),
     o = n(120356),
@@ -34,7 +34,7 @@ function C(e, t, n) {
         e
     );
 }
-class Z extends r.Component {
+class j extends r.Component {
     componentDidUpdate() {
         this.props.locked && this.state.showOpacitySlider && this.setState({ showOpacitySlider: !1 });
     }
@@ -151,7 +151,7 @@ class Z extends r.Component {
             });
     }
 }
-function j(e) {
+function Z(e) {
     var { channel: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -182,7 +182,7 @@ function j(e) {
         c = (0, s.e7)([v.Z], () => !!t.isDM() && null != t.getRecipientId() && v.Z.isBlocked(t.getRecipientId())),
         { changeLeaveCallAndActivityIcons: d } = (0, f.A)({ location: 'TextWidgetHeader' });
     return (0, i.jsx)(
-        Z,
+        j,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},

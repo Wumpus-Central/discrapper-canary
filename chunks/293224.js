@@ -29,8 +29,8 @@ var i = n(255367),
     E = n(55311),
     _ = n(575175),
     x = n(933557),
-    S = n(471445),
-    I = n(74299),
+    I = n(471445),
+    S = n(74299),
     j = n(803647),
     C = n(565138),
     N = n(77880),
@@ -38,8 +38,8 @@ var i = n(255367),
     Z = n(763296),
     P = n(603074),
     T = n(879815),
-    k = n(189771),
-    D = n(294629),
+    D = n(189771),
+    k = n(294629),
     A = n(67844),
     R = n(544384),
     L = n(890828),
@@ -150,7 +150,7 @@ function ea(e) {
     var t;
     let { voiceChannel: n, locked: l } = e,
         a = r.useRef(null),
-        { suppress: s, selfMute: c, mute: u } = (0, D.Z)(n),
+        { suppress: s, selfMute: c, mute: u } = (0, k.Z)(n),
         p = c || u || s,
         h = (0, O.Z)(c, u, s, !1),
         { Component: f, play: g, events: y } = (0, V.b)(p);
@@ -279,7 +279,7 @@ function ec(e) {
         c = (0, o.e7)([B.Z], () => Object.values(B.Z.getVideoDevices())[0]),
         h = null == (t = null == c ? void 0 : c.disabled) || t,
         f = !1 === h,
-        m = (0, k.Z)(n),
+        m = (0, D.Z)(n),
         g = (e) => {
             p.Z.setVideoEnabled(e);
         },
@@ -304,9 +304,9 @@ function ec(e) {
         {
             Component: E,
             play: _,
-            events: { onMouseEnter: x, onMouseLeave: S }
+            events: { onMouseEnter: x, onMouseLeave: I }
         } = (0, u.o)(s ? 'disable' : 'enable'),
-        I =
+        S =
             null != n
                 ? (0, A.X)({
                       enabled: s,
@@ -336,7 +336,7 @@ function ec(e) {
             return (0, i.jsx)(el, {
                 ref: a,
                 iconComponent: E,
-                tooltip: I,
+                tooltip: S,
                 onClick: v,
                 isActive: s,
                 highlightedColor: 'green',
@@ -344,7 +344,7 @@ function ec(e) {
                 popoutOpen: r,
                 onContextMenu: O(n),
                 onMouseEnter: x,
-                onMouseLeave: S,
+                onMouseLeave: I,
                 disabled: C,
                 isTrayButton: !0
             });
@@ -356,8 +356,8 @@ function eu(e) {
         { voiceChannel: n, locked: l } = e,
         a = r.useRef(null),
         c = (0, o.e7)([Q.default], () => Q.default.getCurrentUser()),
-        u = (0, k.Z)(n),
-        p = (0, o.cj)([B.Z], () => (0, I.Z)(B.Z)),
+        u = (0, D.Z)(n),
+        p = (0, o.cj)([B.Z], () => (0, S.Z)(B.Z)),
         h = (0, o.e7)([W.Z], () => W.Z.getCurrentUserActiveStream()),
         f = (0, ee.g)((0, X.getPID)()),
         m = () => {
@@ -445,7 +445,7 @@ function ed(e) {
     let { voiceChannel: l, locked: a } = e,
         s = r.useRef(null),
         u = null != (t = null == l ? void 0 : l.getGuildId()) ? t : null,
-        { mute: p, suppress: f } = (0, D.Z)(l),
+        { mute: p, suppress: f } = (0, k.Z)(l),
         m = (0, o.e7)([B.Z], () => B.Z.isDeaf()),
         y = null == l || p || f || m,
         { analyticsLocations: O } = (0, g.ZP)();
@@ -474,8 +474,8 @@ function ed(e) {
             Component: b,
             events: { onClick: E, onMouseEnter: _, onMouseLeave: x }
         } = (0, c.j)(),
-        S = eo(a),
-        I = (0, o.e7)([Z.Z, G.default], () => Z.Z.isUserPlayingSounds(G.default.getId()), []) ? 'green' : void 0;
+        I = eo(a),
+        S = (0, o.e7)([Z.Z, G.default], () => Z.Z.isUserPlayingSounds(G.default.getId()), []) ? 'green' : void 0;
     return (0, i.jsx)(d.yRy, {
         targetElementRef: s,
         renderPopout: (e) => {
@@ -485,7 +485,7 @@ function ed(e) {
                 : (0, i.jsx)(P.Z, {
                       guildId: u,
                       channel: l,
-                      onClose: S(t),
+                      onClose: I(t),
                       analyticsSource: 'action bar button'
                   });
         },
@@ -508,8 +508,8 @@ function ed(e) {
                         }),
                         n(e);
                 },
-                highlightedColor: I,
-                defaultColor: I,
+                highlightedColor: S,
+                defaultColor: S,
                 onContextMenu: v,
                 onMouseEnter: _,
                 onMouseLeave: x,
@@ -626,7 +626,7 @@ function eh(e) {
 }
 function ef(e) {
     let { voiceChannel: t } = e,
-        n = (0, S.KS)(t),
+        n = (0, I.KS)(t),
         r = (0, x.ZP)(t);
     return (0, i.jsxs)('div', {
         className: ei.voiceChannelNameContainer,

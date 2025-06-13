@@ -1,24 +1,33 @@
-r.d(t, { Z: () => f });
+r.d(t, { Z: () => j });
 var n = r(255367);
 r(73800);
 var i = r(780384),
     l = r(481060),
     a = r(239091),
-    s = r(410030),
     o = r(44315),
-    c = r(111028),
-    u = r(565138),
-    d = r(5192),
+    s = r(111028),
+    c = r(565138),
+    u = r(5192),
+    d = r(652853),
     m = r(228168),
     b = r(981631),
     p = r(69647);
-let j = (0, l.pxk)(l.EFr.SIZE_16);
-function f(e) {
-    let { user: t, guild: f, nick: x, onSelect: v } = e,
-        y = (0, s.ZP)(),
-        O = t.hasAvatarForGuild(f.id);
+let f = (0, l.pxk)(l.EFr.SIZE_16);
+function j(e) {
+    let { user: t, guild: j, nick: x, onSelect: v } = e,
+        { theme: O, themeType: h } = (0, d.z)(),
+        y = t.hasAvatarForGuild(j.id);
     return (0, n.jsxs)(l.P3F, {
-        focusProps: { offset: { right: 8 } },
+        focusProps:
+            h === m.lY.MODAL_V2
+                ? {
+                      offset: {
+                          top: 4,
+                          right: 4,
+                          left: 4
+                      }
+                  }
+                : { offset: { right: 8 } },
         className: p.row,
         onClick: v,
         onContextMenu: (e) => {
@@ -53,7 +62,7 @@ function f(e) {
                             }
                             return e;
                         })({}, t)),
-                        (i = i = { guild: f }),
+                        (i = i = { guild: j }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
                             : (function (e, t) {
@@ -72,15 +81,15 @@ function f(e) {
             });
         },
         children: [
-            (0, n.jsx)(u.Z, {
+            (0, n.jsx)(c.Z, {
                 tabIndex: -1,
-                guild: f,
+                guild: j,
                 showBadge: !0,
-                className: null != f.icon ? p.icon : p.noIcon,
-                badgeStrokeColor: (0, o.Lq)((0, i.wj)(y) ? b.Ilk.PRIMARY_600 : b.Ilk.WHITE_500),
+                className: null != j.icon ? p.icon : p.noIcon,
+                badgeStrokeColor: (0, o.Lq)((0, i.wj)(O) ? b.Ilk.PRIMARY_600 : b.Ilk.WHITE_500),
                 badgeTooltipColor: l.FGA.PRIMARY,
                 badgeTooltipDelay: m.vB,
-                size: u.Z.Sizes.MEDIUM,
+                size: c.Z.Sizes.MEDIUM,
                 active: !0
             }),
             (0, n.jsxs)('div', {
@@ -88,32 +97,32 @@ function f(e) {
                 children: [
                     (0, n.jsx)('div', {
                         className: p.name,
-                        children: f.toString()
+                        children: j.toString()
                     }),
-                    O &&
+                    y &&
                         (0, n.jsxs)('div', {
                             className: p.nick,
                             children: [
                                 (0, n.jsx)(l.qEK, {
-                                    src: t.getAvatarURL(f.id, j),
+                                    src: t.getAvatarURL(j.id, f),
                                     size: l.EFr.SIZE_16,
                                     className: p.avatar,
                                     'aria-hidden': !0
                                 }),
                                 (0, n.jsx)(l.Text, {
                                     variant: 'text-xs/medium',
-                                    children: (0, n.jsx)(c.Z, {
+                                    children: (0, n.jsx)(s.Z, {
                                         delay: m.vB,
-                                        children: null != x ? x : d.ZP.getName(f.id, void 0, t)
+                                        children: null != x ? x : u.ZP.getName(j.id, void 0, t)
                                     })
                                 })
                             ]
                         }),
-                    !O &&
+                    !y &&
                         null != x &&
                         (0, n.jsx)(l.Text, {
                             variant: 'text-xs/medium',
-                            children: (0, n.jsx)(c.Z, {
+                            children: (0, n.jsx)(s.Z, {
                                 delay: m.vB,
                                 children: x
                             })

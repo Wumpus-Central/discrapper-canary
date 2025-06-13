@@ -20,8 +20,8 @@ var i,
     E = n(699516),
     _ = n(944486),
     x = n(885110),
-    S = n(246946),
-    I = n(594174),
+    I = n(246946),
+    S = n(594174),
     j = n(979651),
     C = n(974180),
     N = n(70956),
@@ -29,8 +29,8 @@ var i,
     Z = n(145597),
     P = n(486016),
     T = n(32300),
-    k = n(371651),
-    D = n(624864),
+    D = n(371651),
+    k = n(624864),
     A = n(610394),
     R = n(340101),
     L = n(388627),
@@ -180,7 +180,7 @@ function eh(e, t) {
     return ei || ((en = a), o.timer.start()), i;
 }
 function ef() {
-    if (!(0, T.Yo)('OverlayNotificationStore') || D.Z.isNotificationDisabled(P.OverlayNotificationDisabledSetting.NOW_PLAYING)) return !1;
+    if (!(0, T.Yo)('OverlayNotificationStore') || k.Z.isNotificationDisabled(P.OverlayNotificationDisabledSetting.NOW_PLAYING)) return !1;
     let e = v.Z.usersPlaying,
         t = new Set(),
         n = (function () {
@@ -294,7 +294,7 @@ function em(e) {
 }
 class eg extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, I.default, v.Z, D.Z), this.syncWith([v.Z], ef);
+        this.waitFor(g.Z, S.default, v.Z, k.Z), this.syncWith([v.Z], ef);
     }
     getNotifications() {
         return en;
@@ -311,7 +311,7 @@ let ey = new eg(s.Z, {
         let { nudges: n } = e;
         eu(0);
         let i = null != (t = A.ZP.getFocusedPID()) ? t : Z.UNSET_PID;
-        if (k.default.hasChangedRenderMode(i)) return;
+        if (D.default.hasChangedRenderMode(i)) return;
         let r = (0, B.Z)((0, L.pL)(), n);
         null != r &&
             eh(r, {
@@ -336,7 +336,7 @@ let ey = new eg(s.Z, {
         var t, n, i, r;
         let { channelId: l, message: a } = e,
             s = g.Z.getChannel(l),
-            c = I.default.getUser(null == (t = a.author) ? void 0 : t.id);
+            c = S.default.getUser(null == (t = a.author) ? void 0 : t.id);
         if (null == s || null == c) return !1;
         if ((null == (n = a.activity) ? void 0 : n.type) === H.mFx.JOIN || (null == (i = a.activity) ? void 0 : i.type) === H.mFx.JOIN_REQUEST) {
             if (!(0, p.eF)(a, l, !0, !0)) return !1;
@@ -369,7 +369,7 @@ let ey = new eg(s.Z, {
             })(s, a, c);
             if (!1 !== e) return e;
         }
-        if (D.Z.isNotificationDisabled(P.OverlayNotificationDisabledSetting.TEXT_CHAT) || S.Z.disableNotifications || !(0, p.eF)(a, l)) return !1;
+        if (k.Z.isNotificationDisabled(P.OverlayNotificationDisabledSetting.TEXT_CHAT) || I.Z.disableNotifications || !(0, p.eF)(a, l)) return !1;
         let u = !O.Z.isSoundDisabled(C.Ay),
             h = null != (r = y.Z.getMessage(l, a.id)) ? r : (0, d.e5)(a);
         eh((0, F.Z)(s, h, c, u), {
