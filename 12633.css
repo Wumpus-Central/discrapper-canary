@@ -22561,6 +22561,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     bottom: unset;
     left: 0;
     padding-left: 16px;
+    pointer-events: all;
     right: 0;
     top: -24px
 }
