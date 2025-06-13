@@ -6,8 +6,8 @@ var r = t(255367),
     a = t(442837),
     l = t(179360),
     c = t(899667),
-    d = t(430824),
-    u = t(709054),
+    u = t(430824),
+    d = t(709054),
     p = t(659679),
     m = t(388032),
     _ = t(211886);
@@ -21,10 +21,10 @@ function x(e) {
             },
             [n]
         ),
-        x = i.useMemo(() => t.sort((e, n) => (u.default.extractTimestamp(e.id) < u.default.extractTimestamp(n.id) ? 1 : -1)), [t]),
-        f = (0, a.e7)([d.Z], () => {
+        x = i.useMemo(() => t.sort((e, n) => (d.default.extractTimestamp(e.id) < d.default.extractTimestamp(n.id) ? 1 : -1)), [t]),
+        f = (0, a.e7)([u.Z], () => {
             var e;
-            return null == (e = d.Z.getGuild(n)) ? void 0 : e.premiumSubscriberCount;
+            return null == (e = u.Z.getGuild(n)) ? void 0 : e.premiumSubscriberCount;
         });
     return (i.useEffect(() => {
         f !== t.length && (0, l.C0)(n);

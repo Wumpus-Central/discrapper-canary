@@ -6,8 +6,8 @@ var r = t(255367),
     a = t(243778),
     l = t(430824),
     c = t(618460),
-    d = t(800869),
-    u = t(309945),
+    u = t(800869),
+    d = t(309945),
     p = t(981631),
     m = t(93841),
     _ = t(388032),
@@ -32,12 +32,12 @@ function v(e) {
         b = null != v && v === s.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK,
         h =
             j.length > 0
-                ? (0, r.jsx)(u.Z, {
+                ? (0, r.jsx)(d.Z, {
                       guildId: n,
                       powerups: j
                   })
                 : b
-                  ? (0, r.jsx)(d.Z, { markAsDismissed: g })
+                  ? (0, r.jsx)(u.Z, { markAsDismissed: g })
                   : void 0;
     return null != h || t
         ? (0, r.jsxs)('div', {

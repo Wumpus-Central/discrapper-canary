@@ -127,8 +127,8 @@ let E = (e) => {
     let { channel: i } = e,
         h = (0, u.ZP)(),
         E = (0, c.wj)(h),
-        R = (0, o.e7)([j.Z], () => j.Z.getGuild(i.guild_id)),
-        k = (0, o.e7)([m.Z], () => m.Z.useReducedMotion),
+        k = (0, o.e7)([j.Z], () => j.Z.getGuild(i.guild_id)),
+        R = (0, o.e7)([m.Z], () => m.Z.useReducedMotion),
         Z = (0, o.e7)([g.Z], () => g.Z.hasHidden(i.id)),
         M = (0, p.C)({
             guildId: i.guild_id,
@@ -146,8 +146,8 @@ let E = (e) => {
         B = () => {
             b.Z.open(i.guild_id, _.pNK.ROLE_SUBSCRIPTIONS);
         },
-        H = null != (t = null == R ? void 0 : R.hasFeature(_.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && t ? y.intl.string(y.t.n0q7sL) : y.intl.string(y.t.QoYdiY),
-        U = null != (n = (null == R ? void 0 : R.hasFeature(_.oNc.CREATOR_MONETIZABLE)) || (null == R ? void 0 : R.hasFeature(_.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && n,
+        H = null != (t = null == k ? void 0 : k.hasFeature(_.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && t ? y.intl.string(y.t.n0q7sL) : y.intl.string(y.t.QoYdiY),
+        U = null != (n = (null == k ? void 0 : k.hasFeature(_.oNc.CREATOR_MONETIZABLE)) || (null == k ? void 0 : k.hasFeature(_.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && n,
         V = U ? y.intl.string(y.t['G/7ciY']) : y.intl.string(y.t.IFOiio),
         G = U ? y.intl.string(y.t.GjgQOz) : y.intl.string(y.t.E7AO6u);
     return (0, r.jsx)(r.Fragment, {
@@ -338,7 +338,7 @@ let E = (e) => {
                                                       0 === M.length &&
                                                           (0, r.jsx)(d.gtL, {
                                                               size: d.zxk.Sizes.MEDIUM,
-                                                              pauseAnimation: k,
+                                                              pauseAnimation: R,
                                                               onClick: B,
                                                               className: O.addChannelButton,
                                                               color: d.zxk.Colors.CUSTOM,

@@ -3,15 +3,15 @@ var r = n(255367);
 n(73800);
 var i = n(442837),
     l = n(481060),
-    a = n(914010),
-    o = n(362658),
-    c = n(981631),
+    o = n(914010),
+    c = n(362658),
+    a = n(981631),
     s = n(388032);
 function u(e) {
-    let t = (0, i.e7)([a.Z], () => a.Z.getGuildId()),
-        u = e.type === c.d4z.GUILD_CATEGORY,
-        { isFavoritesPerk: d } = (0, o.z)('useChannelFavoriteSetNickname');
-    return __OVERLAY__ || t !== c.I_8
+    let t = (0, i.e7)([o.Z], () => o.Z.getGuildId()),
+        u = e.type === a.d4z.GUILD_CATEGORY,
+        { isFavoritesPerk: d } = (0, c.z)('useChannelFavoriteSetNickname');
+    return __OVERLAY__ || t !== a.I_8
         ? null
         : (0, r.jsx)(l.sNh, {
               id: 'set-channel-nickname',

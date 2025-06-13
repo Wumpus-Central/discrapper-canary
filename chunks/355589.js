@@ -28,8 +28,8 @@ var r = n(255367),
     T = n(883429),
     I = n(993259),
     E = n(109434),
-    R = n(456269),
-    k = n(228392),
+    k = n(456269),
+    R = n(228392),
     Z = n(432771),
     M = n(538366),
     A = n(470623),
@@ -94,7 +94,7 @@ let V = {
         borderRadius: 10
     },
     q = (e) => {
-        (0, k.e5)({ onboardingCTA: e });
+        (0, R.e5)({ onboardingCTA: e });
     };
 class W {
     addStep(e) {
@@ -168,7 +168,7 @@ let X = (e) => {
                       null != l &&
                           (e.preventDefault(),
                           e.stopPropagation(),
-                          (0, k.qz)(),
+                          (0, R.qz)(),
                           (0, g.ZDy)(async () => {
                               let { default: e } = await n.e('18417').then(n.bind(n, 740696));
                               return (t) => (0, r.jsx)(e, U(H({}, t), { guildId: l }));
@@ -392,7 +392,7 @@ let X = (e) => {
             }, d.X),
             { tagFilter: s } = (0, E.H)(l.id),
             o = (0, h.e7)([y.Z], () => y.Z.getGuild(l.getGuildId())),
-            m = (0, R.r_)(l),
+            m = (0, k.r_)(l),
             { transitions: f, setVisible: x } = el(),
             b = ei(i),
             j = ec(),
@@ -409,9 +409,9 @@ let X = (e) => {
                 handleHide: w
             }),
             I = !P && !N,
-            k = (0, A.AF)(),
+            R = (0, A.AF)(),
             Z = l.isMediaChannel(),
-            L = (e) => k.getState().setOnboardingExpanded(e);
+            L = (e) => R.getState().setOnboardingExpanded(e);
         return (en(T, I, w),
         er({
             isAllDone: T,

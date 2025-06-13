@@ -28,8 +28,8 @@ var r = n(255367),
     T = n(268350),
     I = n(456077),
     E = n(488131),
-    R = n(602034),
-    k = n(23750),
+    k = n(602034),
+    R = n(23750),
     Z = n(703558),
     M = n(496675),
     A = n(300429),
@@ -122,7 +122,7 @@ function es(e) {
         w = (0, h.Wu)([L.Z], () => L.Z.getUploads(t.id, Z.d.FirstThreadMessage)),
         S = f && C && u,
         I = (null == t ? void 0 : t.isMediaChannel()) === !0,
-        k = (function (e, t) {
+        R = (function (e, t) {
             let n = (0, K.AF)(),
                 r = (0, G.ql)(e);
             return l.useCallback(() => {
@@ -143,7 +143,7 @@ function es(e) {
                     return { formOpen: t };
                 }, c.X),
                 n = (0, K.AF)(),
-                r = (0, R.r)({ parentChannel: e });
+                r = (0, k.r)({ parentChannel: e });
             l.useEffect(() => {
                 let { setNameError: e, setMessageError: t } = n.getState();
                 e(null), t(null);
@@ -250,7 +250,7 @@ function es(e) {
             children: (0, r.jsx)('div', {
                 'aria-label': u ? en.intl.string(en.t.dq7mAQ) : en.intl.string(en.t['5h0QOD']),
                 className: a()(er.container, { [er.collapsed]: !f }),
-                onClick: !f && u ? k : void 0,
+                onClick: !f && u ? R : void 0,
                 children: (0, r.jsxs)('form', {
                     onMouseDown: v,
                     onFocus: v,
@@ -488,10 +488,13 @@ let eo = l.memo(function (e) {
                               let o = n.current instanceof g.lcI ? (null == (r = n.current) ? void 0 : r._textArea) : n.current;
                               if ('Home' === e.key || 'End' === e.key) {
                                   if (null == o) return;
-                                  if ((e.preventDefault(), e.stopPropagation(), 'Home' === e.key)) o.setSelectionRange(0, 0);
-                                  else {
-                                      let e = f.length;
-                                      o.setSelectionRange(e, e);
+                                  if ((e.preventDefault(), e.stopPropagation(), 'Home' === e.key)) {
+                                      let t = e.shiftKey ? Math.max(o.selectionStart, o.selectionEnd) : 0;
+                                      o.setSelectionRange(0, t, 'backward');
+                                  } else {
+                                      let t = e.shiftKey ? Math.min(o.selectionStart, o.selectionEnd) : f.length,
+                                          n = f.length;
+                                      o.setSelectionRange(t, n, 'forward');
                                   }
                               }
                               'Escape' !== e.key || b.getState().submitting || (null == (l = n.current) || l.blur(), b.getState().setFormOpen(!1), b.getState().setTitleFocused(!1), b.getState().setBodyFocused(!1), b.getState().setPreviewing(!1));
@@ -551,7 +554,7 @@ function ed(e) {
 }
 let eu = l.memo(function (e) {
         let { parentChannel: t, textValue: n } = e,
-            l = new k.ZP({
+            l = new R.ZP({
                 channelId: t.id,
                 content: n
             }),
@@ -671,7 +674,7 @@ let eu = l.memo(function (e) {
                                           e.preventDefault(), e.stopPropagation();
                                           let t = s.getSlateEditor();
                                           if (null == t) return;
-                                          'Home' === e.key ? C.Q.resetSelectionToStart(t) : C.Q.resetSelectionToEnd(t);
+                                          'Home' === e.key ? (e.shiftKey ? C.Q.makeSelectionToStart(t) : C.Q.resetSelectionToStart(t)) : e.shiftKey ? C.Q.makeSelectionToEnd(t) : C.Q.resetSelectionToEnd(t);
                                       }
                                       b && 'Escape' === e.key && !v.getState().submitting && (null == s || s.blur(), v.getState().setFormOpen(!1), v.getState().setTitleFocused(!1), v.getState().setBodyFocused(!1), v.getState().setPreviewing(!1));
                                   },

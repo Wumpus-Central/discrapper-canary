@@ -344,31 +344,39 @@ function z(e) {
     let { metadata: n, markAsDismissed: a, isCoachmark: o } = e,
         d = I.M.useExperiment({ location: 'ClientThemeColorPickerTools' }).enabled,
         m = (0, v.j)(),
-        { colors: g, chassisMixAmount: E, gradientAngle: O, setColors: N, setChassisMixAmount: R, setGradientAngle: P } = (0, y.I)(),
-        [L, x] = i.useState(null != (t = g[0]) ? t : '#4394D4'),
-        M = (0, s.e7)([b.Z], () => b.Z.theme),
-        k = (0, h.wE)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
-        { analyticsLocations: j } = (0, f.ZP)(_.Z.CUSTOM_THEMES_EDITOR),
-        U = () => {
-            (0, u.ZI)({
-                theme: M,
-                customUserThemeSettings: {
-                    colors: g,
-                    gradientColorStops: [],
-                    gradientAngle: O,
-                    baseMix: E
-                }
-            }),
-                (0, T.u7)(g, E, O, M, j),
+        g = i.useRef(!1),
+        { colors: E, chassisMixAmount: O, gradientAngle: N, setColors: R, setChassisMixAmount: P, setGradientAngle: L } = (0, y.I)(),
+        [x, M] = i.useState(null != (t = E[0]) ? t : '#4394D4'),
+        k = (0, s.e7)([b.Z], () => b.Z.theme),
+        j = (0, h.wE)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+        { analyticsLocations: U } = (0, f.ZP)(_.Z.CUSTOM_THEMES_EDITOR),
+        G = () => {
+            (g.current = !0),
+                (0, u.ZI)({
+                    theme: k,
+                    customUserThemeSettings: {
+                        colors: E,
+                        gradientColorStops: [],
+                        gradientAngle: N,
+                        baseMix: O
+                    }
+                }),
+                (0, T.u7)(E, O, N, k, U),
                 null == a || a(C.L.TAKE_ACTION),
-                k || (0, h.EW)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+                j || (0, h.EW)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
                 (0, p.Ll)();
         },
-        G = () => {
+        V = () => {
             m(), (0, T.uf)();
         },
-        V = g.length > 0;
-    return (i.useEffect(() => m, [m]), d)
+        H = E.length > 0;
+    return (i.useEffect(
+        () => () => {
+            g.current || m();
+        },
+        [m]
+    ),
+    d)
         ? (0, r.jsx)('div', {
               className: D.container,
               'data-app-right-panel': !0,
@@ -386,21 +394,21 @@ function z(e) {
                                   (0, r.jsx)(A.o, {}),
                                   (0, r.jsx)(S.U, {
                                       onChange: (e) => {
-                                          x(e), 0 === g.length && N([e]);
+                                          M(e), 0 === E.length && R([e]);
                                       },
-                                      value: L,
-                                      colors: g,
-                                      setColors: N
+                                      value: x,
+                                      colors: E,
+                                      setColors: R
                                   }),
-                                  g.length > 1 &&
+                                  E.length > 1 &&
                                       (0, r.jsx)(F, {
-                                          gradientAngle: O,
-                                          setGradientAngle: P
+                                          gradientAngle: N,
+                                          setGradientAngle: L
                                       }),
                                   (0, r.jsx)(Z, {
-                                      chassisMixAmount: E,
+                                      chassisMixAmount: O,
                                       setChassisMixAmount: (e) => {
-                                          R(e), 0 === g.length && N([L]);
+                                          P(e), 0 === E.length && R([x]);
                                       }
                                   }),
                                   (0, r.jsxs)(c.zxk, {
@@ -408,7 +416,7 @@ function z(e) {
                                       innerClassName: D.resetButtonContent,
                                       look: c.zxk.Looks.FILLED,
                                       color: c.zxk.Colors.CUSTOM,
-                                      onClick: G,
+                                      onClick: V,
                                       children: [(0, r.jsx)(c.Oe7, { size: 'xs' }), w.intl.string(w.t.yBZMsb)]
                                   })
                               ]
@@ -416,12 +424,12 @@ function z(e) {
                       }),
                       o
                           ? (0, r.jsx)(W, {
-                                onSaveTheme: U,
-                                canApply: V
+                                onSaveTheme: G,
+                                canApply: H
                             })
                           : (0, r.jsx)(K, {
-                                onSaveTheme: U,
-                                canApply: V,
+                                onSaveTheme: G,
+                                canApply: H,
                                 metadata: n
                             })
                   ]

@@ -1,81 +1,81 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(481060),
-    l = n(565138),
-    s = n(430824),
-    a = n(63063),
-    d = n(981631),
-    c = n(388032),
+    s = n(481060),
+    a = n(565138),
+    o = n(430824),
+    l = n(63063),
+    c = n(981631),
+    d = n(388032),
     u = n(905457),
-    x = n(767688);
-function m(e) {
-    let { guildId: t, title: n, transitionState: m, children: g, buttons: j, onClose: f } = e,
-        p = (0, i.e7)([s.Z], () => s.Z.getGuild(t));
-    if (null == p) return null;
-    let b = (0, r.jsx)(o.zxk, {
-        onClick: f,
-        children: c.intl.string(c.t.i4jeWV)
+    f = n(767688);
+function g(e) {
+    let { guildId: t, title: n, transitionState: g, children: h, buttons: b, onClose: m } = e,
+        x = (0, i.e7)([o.Z], () => o.Z.getGuild(t));
+    if (null == x) return null;
+    let p = (0, r.jsx)(s.zxk, {
+        onClick: m,
+        children: d.intl.string(d.t.i4jeWV)
     });
-    return (0, r.jsxs)(o.Y0X, {
-        transitionState: m,
-        size: o.CgR.SMALL,
+    return (0, r.jsxs)(s.Y0X, {
+        transitionState: g,
+        size: s.CgR.SMALL,
         className: u.container,
         parentComponent: 'LeaderboardSettingsBaseModal',
         children: [
-            (0, r.jsxs)(o.xBx, {
+            (0, r.jsxs)(s.xBx, {
                 separator: !1,
                 className: u.modalHeader,
                 children: [
                     (0, r.jsx)('div', { className: u.gradientSplash }),
                     (0, r.jsx)('img', {
                         alt: '',
-                        src: x,
+                        src: f,
                         className: u.heroImage
                     }),
-                    (0, r.jsx)(o.LZC, { size: 16 }),
-                    (0, r.jsx)(o.X6q, {
+                    (0, r.jsx)(s.LZC, { size: 16 }),
+                    (0, r.jsx)(s.X6q, {
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
                         className: u.title,
                         children: n
                     }),
-                    (0, r.jsx)(o.LZC, { size: 4 }),
+                    (0, r.jsx)(s.LZC, { size: 4 }),
                     (0, r.jsxs)('div', {
                         className: u.guildContainer,
                         children: [
-                            (0, r.jsx)(l.Z, {
-                                size: l.Z.Sizes.SMOL,
-                                guild: p,
+                            (0, r.jsx)(a.Z, {
+                                size: a.Z.Sizes.SMOL,
+                                guild: x,
                                 className: u.guildIcon
                             }),
-                            (0, r.jsx)(o.Text, {
+                            (0, r.jsx)(s.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'text-secondary',
-                                children: p.name
+                                children: x.name
                             })
                         ]
                     }),
-                    (0, r.jsx)(o.olH, {
-                        onClick: f,
+                    (0, r.jsx)(s.olH, {
+                        onClick: m,
                         innerClassName: u.closeButton,
                         className: u.close
                     })
                 ]
             }),
-            g,
-            (0, r.jsxs)(o.mzw, {
+            h,
+            (0, r.jsxs)(s.mzw, {
                 className: u.footer,
                 children: [
                     (0, r.jsx)('div', {
                         className: u.footerButtons,
-                        children: null != j ? j : b
+                        children: null != b ? b : p
                     }),
-                    (0, r.jsx)(o.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-secondary',
-                        children: c.intl.format(c.t.zbMH0d, { link: a.Z.getArticleURL(d.BhN.GUILD_LEADERBOARD) })
+                        children: d.intl.format(d.t.zbMH0d, { link: l.Z.getArticleURL(c.BhN.GUILD_LEADERBOARD) })
                     })
                 ]
             })

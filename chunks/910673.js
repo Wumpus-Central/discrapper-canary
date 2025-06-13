@@ -1,160 +1,167 @@
-n.d(t, { default: () => A });
+n.d(e, { default: () => A });
 var r = n(255367),
     l = n(73800),
-    o = n(481060),
-    i = n(230711),
+    i = n(481060),
+    o = n(230711),
     a = n(782568),
     s = n(168107),
     d = n(480916),
     c = n(81643),
-    _ = n(880257),
-    E = n(63063),
-    I = n(247206),
-    u = n(981631),
-    f = n(526761),
-    m = n(388032),
+    E = n(880257),
+    _ = n(63063),
+    u = n(247206),
+    I = n(470734),
+    f = n(981631),
+    m = n(526761),
+    C = n(388032),
     h = n(618386),
-    C = n(444812);
-let A = (e) => {
-    let { channelId: t, messageId: A, transitionState: g, onClose: R } = e,
-        L = (0, _.Z)(),
-        v = (0, c.Jm)(),
-        x = (0, I.m8)(),
-        b = l.useMemo(() => v && x, [v, x]),
-        p = l.useCallback(
-            (e) => {
-                (0, I.aP)({
-                    action: e,
-                    channelId: t,
+    g = n(444812);
+let A = (t) => {
+    let { channelId: e, messageId: A, transitionState: R, onClose: v } = t,
+        L = (0, E.Z)(),
+        x = (0, c.Jm)(),
+        p = (0, u.m8)(),
+        b = (0, I.pn)('SensitiveContentFilterSetting'),
+        M = l.useMemo(() => x && p, [x, p]),
+        T = l.useCallback(
+            (t) => {
+                (0, u.aP)({
+                    action: t,
+                    channelId: e,
                     messageId: A
                 });
             },
-            [t, A]
+            [e, A]
         );
     return (
         l.useEffect(() => {
-            (0, I.aP)({
-                action: I.Yy.EXPLICIT_MEDIA_LEARN_MORE_VIEWED,
-                channelId: t,
+            (0, u.aP)({
+                action: u.Yy.EXPLICIT_MEDIA_LEARN_MORE_VIEWED,
+                channelId: e,
                 messageId: A
             });
-        }, [t, A]),
-        (0, r.jsxs)(o.Y0X, {
-            transitionState: g,
-            'aria-label': m.intl.string(m.t.xdm3XF),
+        }, [e, A]),
+        (0, r.jsxs)(i.Y0X, {
+            transitionState: R,
+            'aria-label': C.intl.string(C.t.xdm3XF),
             parentComponent: 'ExplicitMediaLearnMoreModal',
             children: [
-                (0, r.jsx)(o.xBx, {
+                (0, r.jsx)(i.xBx, {
                     separator: !1,
                     className: h.modalHeader,
                     children: (0, r.jsx)('img', {
-                        src: C,
-                        alt: m.intl.string(m.t.id3fND),
+                        src: g,
+                        alt: C.intl.string(C.t.id3fND),
                         className: h.headerImg
                     })
                 }),
-                (0, r.jsxs)(o.hzk, {
+                (0, r.jsxs)(i.hzk, {
                     className: h.modalBody,
                     children: [
-                        (0, r.jsx)(o.X6q, {
+                        (0, r.jsx)(i.X6q, {
                             variant: 'heading-lg/bold',
                             className: h.modalInteriorHeader,
-                            children: m.intl.string(m.t.sGW77u)
+                            children: C.intl.string(C.t.sGW77u)
                         }),
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(i.Text, {
                             variant: 'text-md/normal',
                             color: 'header-secondary',
-                            children: b ? m.intl.string(m.t.f3ARDQ) : L ? m.intl.string(m.t.XW3vjo) : m.intl.string(m.t.i4daNj)
+                            children: (function () {
+                                if (M) return C.intl.string(C.t.f3ARDQ);
+                                let t = b ? C.intl.string(C.t.RUw0ZG) : C.intl.string(C.t.XW3vjo),
+                                    e = b ? C.intl.string(C.t['E/oQYG']) : C.intl.string(C.t.i4daNj);
+                                return L ? t : e;
+                            })()
                         }),
                         (0, r.jsxs)('div', {
                             className: h.buttonContainer,
                             children: [
-                                b
-                                    ? (0, r.jsx)(o.zxk, {
-                                          color: o.zxk.Colors.BRAND,
+                                M
+                                    ? (0, r.jsx)(i.zxk, {
+                                          color: i.zxk.Colors.BRAND,
                                           onClick: function () {
-                                              R(), p(I.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY), s.Z.showAgeVerificationGetStartedModal(d.cU.SENSITIVE_MEDIA_LEARN_MORE);
+                                              v(), T(u.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY), s.Z.showAgeVerificationGetStartedModal(d.cU.SENSITIVE_MEDIA_LEARN_MORE);
                                           },
                                           fullWidth: !0,
-                                          children: m.intl.string(m.t.KPGVWl)
+                                          children: C.intl.string(C.t.KPGVWl)
                                       })
                                     : L
-                                      ? (0, r.jsx)(o.zxk, {
-                                            color: o.zxk.Colors.BRAND,
+                                      ? (0, r.jsx)(i.zxk, {
+                                            color: i.zxk.Colors.BRAND,
                                             onClick: function () {
-                                                p(I.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), i.Z.open(u.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: f.FY.EXPLICIT_MEDIA_REDACTION_V2 }), R();
+                                                T(u.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), o.Z.open(f.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: m.FY.EXPLICIT_MEDIA_REDACTION_V2 }), v();
                                             },
                                             fullWidth: !0,
-                                            children: m.intl.string(m.t['9D+zGR'])
+                                            children: C.intl.string(C.t['9D+zGR'])
                                         })
-                                      : (0, r.jsx)(o.zxk, {
-                                            color: o.zxk.Colors.BRAND,
+                                      : (0, r.jsx)(i.zxk, {
+                                            color: i.zxk.Colors.BRAND,
                                             onClick: () => {
-                                                (0, a.Z)(E.Z.getArticleURL(u.BhN.EXPLICIT_MEDIA_REDACTION));
+                                                (0, a.Z)(_.Z.getArticleURL(f.BhN.EXPLICIT_MEDIA_REDACTION));
                                             },
                                             fullWidth: !0,
-                                            children: m.intl.string(m.t.hvVgAQ)
+                                            children: C.intl.string(C.t.hvVgAQ)
                                         }),
-                                (0, r.jsx)(o.zxk, {
-                                    color: o.zxk.Colors.PRIMARY,
+                                (0, r.jsx)(i.zxk, {
+                                    color: i.zxk.Colors.PRIMARY,
                                     onClick: function () {
-                                        R(), p(I.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS);
+                                        v(), T(u.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS);
                                     },
                                     fullWidth: !0,
-                                    children: m.intl.string(m.t.bmbHPD)
+                                    children: C.intl.string(C.t.bmbHPD)
                                 }),
-                                (0, r.jsx)(o.Text, {
+                                (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'header-secondary',
-                                    children: b
-                                        ? m.intl.format(m.t['TGqx+v'], {
+                                    children: M
+                                        ? C.intl.format(C.t['TGqx+v'], {
                                               handleOnHelpUrlHook: () => {
-                                                  s.Z.openUrl(E.Z.getArticleURL(u.BhN.TIGGER_PAWTECT_LEARN_MORE)), p(I.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE);
+                                                  s.Z.openUrl(_.Z.getArticleURL(f.BhN.TIGGER_PAWTECT_LEARN_MORE)), T(u.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE);
                                               }
                                           })
-                                        : m.intl.format(m.t.Ge0HUl, {
+                                        : C.intl.format(C.t.Ge0HUl, {
                                               handleFalsePositiveHook: () => {
-                                                  R(),
-                                                      p(I.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
-                                                      (0, o.ZDy)(async () => {
-                                                          let { default: e } = await n(788679);
+                                                  v(),
+                                                      T(u.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
+                                                      (0, i.ZDy)(async () => {
+                                                          let { default: t } = await n(788679);
                                                           return (n) =>
                                                               (0, r.jsx)(
-                                                                  e,
-                                                                  (function (e) {
-                                                                      for (var t = 1; t < arguments.length; t++) {
-                                                                          var n = null != arguments[t] ? arguments[t] : {},
+                                                                  t,
+                                                                  (function (t) {
+                                                                      for (var e = 1; e < arguments.length; e++) {
+                                                                          var n = null != arguments[e] ? arguments[e] : {},
                                                                               r = Object.keys(n);
                                                                           'function' == typeof Object.getOwnPropertySymbols &&
                                                                               (r = r.concat(
-                                                                                  Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                                                      return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                                                  Object.getOwnPropertySymbols(n).filter(function (t) {
+                                                                                      return Object.getOwnPropertyDescriptor(n, t).enumerable;
                                                                                   })
                                                                               )),
-                                                                              r.forEach(function (t) {
+                                                                              r.forEach(function (e) {
                                                                                   var r;
-                                                                                  (r = n[t]),
-                                                                                      t in e
-                                                                                          ? Object.defineProperty(e, t, {
+                                                                                  (r = n[e]),
+                                                                                      e in t
+                                                                                          ? Object.defineProperty(t, e, {
                                                                                                 value: r,
                                                                                                 enumerable: !0,
                                                                                                 configurable: !0,
                                                                                                 writable: !0
                                                                                             })
-                                                                                          : (e[t] = r);
+                                                                                          : (t[e] = r);
                                                                               });
                                                                       }
-                                                                      return e;
+                                                                      return t;
                                                                   })(
                                                                       {
-                                                                          channelId: t,
+                                                                          channelId: e,
                                                                           messageId: A
                                                                       },
                                                                       n
                                                                   )
                                                               );
                                                       }),
-                                                      p(I.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE);
+                                                      T(u.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE);
                                               }
                                           })
                                 })

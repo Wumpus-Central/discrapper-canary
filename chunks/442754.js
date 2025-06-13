@@ -14,8 +14,8 @@ function b(e) {
         n = (0, a.DM)(e.guild_id),
         b = (0, i.e7)([s.ZP], () => s.ZP.isChannelOptedIn(e.guild_id, e.id)),
         f = (0, i.e7)([s.ZP], () => null != e.parent_id && s.ZP.isChannelOptedIn(e.guild_id, e.parent_id)),
-        O = (0, i.e7)([s.ZP], () => s.ZP.isFavorite(e.guild_id, e.id)),
-        p = () => {
+        p = (0, i.e7)([s.ZP], () => s.ZP.isFavorite(e.guild_id, e.id)),
+        O = () => {
             (0, c.XQ)(e.guild_id, e.id, !b, { section: u.jXE.CONTEXT_MENU });
         },
         g = () => {
@@ -26,17 +26,17 @@ function b(e) {
         return (0, r.jsx)(l.sNh, {
             id: 'opt-into-category',
             label: b ? d.intl.string(d.t['3zySTE']) : d.intl.string(d.t['9mysCg']),
-            action: () => p()
+            action: () => O()
         });
-    let y = O ? d.intl.string(d.t.z7I3gY) : d.intl.string(d.t['N2c/Ul']),
-        j = O ? d.intl.string(d.t.M5PWSU) : d.intl.string(d.t.RMpwZm);
+    let y = p ? d.intl.string(d.t.z7I3gY) : d.intl.string(d.t['N2c/Ul']),
+        j = p ? d.intl.string(d.t.M5PWSU) : d.intl.string(d.t.RMpwZm);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.sNh, {
                 id: 'opt-in-favorite-channel',
                 label: t ? j : y,
                 action: () => {
-                    (0, c.dM)(e.guild_id, e.id, !O, { section: u.jXE.CONTEXT_MENU });
+                    (0, c.dM)(e.guild_id, e.id, !p, { section: u.jXE.CONTEXT_MENU });
                 }
             }),
             f
@@ -48,7 +48,7 @@ function b(e) {
                 : (0, r.jsx)(l.sNh, {
                       id: 'opt-into-channel',
                       label: b ? d.intl.string(d.t['3zySTE']) : d.intl.string(d.t['9mysCg']),
-                      action: () => p()
+                      action: () => O()
                   })
         ]
     });

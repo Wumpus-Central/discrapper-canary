@@ -7,8 +7,8 @@ var i = t(114858),
     a = t(906732),
     l = t(213609),
     c = t(353926),
-    d = t(443002),
-    u = t(703656),
+    u = t(443002),
+    d = t(703656),
     p = t(430824),
     m = t(50101),
     _ = t(639777),
@@ -19,15 +19,15 @@ function v(e) {
         v = (0, s.e7)([p.Z], () => p.Z.getGuild(n)),
         g = (0, s.e7)([c.Z], () => c.Z.hasLoadedExperiments),
         j = (0, _.Z)(n),
-        b = (0, u.At)(),
+        b = (0, d.At)(),
         h = (0, m.Ek)(n, 'GuildPowerupsPage'),
         C = !g || null == j || null == v,
-        N = (0, a.ZP)(null != b ? b : []);
+        Z = (0, a.ZP)(null != b ? b : []);
     return ((0, l.Z)(
         {
             type: o.ImpressionTypes.VIEW,
             name: o.ImpressionNames.BOOST_SHOP_OPENED,
-            properties: { location_stack: N.analyticsLocations }
+            properties: { location_stack: Z.analyticsLocations }
         },
         { disableTrack: C }
     ),
@@ -39,7 +39,7 @@ function v(e) {
                     guildId: n,
                     powerupSkuId: t
                 })
-              : (0, r.jsx)(d.Z, {
+              : (0, r.jsx)(u.Z, {
                     analyticsLocation: {
                         section: f.jXE.CHANNEL_LIST,
                         object: f.qAy.GUILD_POWERUPS_CHANNEL_LIST_ITEM
