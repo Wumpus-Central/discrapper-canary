@@ -16493,14 +16493,6 @@ div.modalHeader_c28af8 {
     margin: 8px 0 16px
 }
 
-.card_ac86f6 .price_ac86f6 {
-    margin: 0 0 8px
-}
-
-.price_ac86f6:last-of-type {
-    margin: 0 0 18px
-}
-
 .theme-dark .newCircleIcon_ac86f6 {
     color: var(--white-500)
 }
@@ -16654,11 +16646,6 @@ div.modalHeader_c28af8 {
     right: 5%;
     top: -1px;
     width: 88%
-}
-
-.trialHeader_ac86f6 {
-    margin-bottom: 18px;
-    max-width: 60%
 }
 
 .withPromotionalGradientBanner_ac86f6 {
