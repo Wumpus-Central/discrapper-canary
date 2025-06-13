@@ -18,9 +18,9 @@ var r = n(255367),
     C = n(243126),
     v = n(38900),
     O = n(709999),
-    S = n(328626),
-    E = n(619899),
-    x = n(215023),
+    x = n(328626),
+    S = n(619899),
+    E = n(215023),
     y = n(981631),
     j = n(388032),
     P = n(806734);
@@ -29,13 +29,13 @@ let k = (e) => {
     let { isLoading: n, sortedSkuIds: a, handleTransition: k, numVisibleItems: T, tab: I } = e,
         L = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
         B = g.ZP.canUseCollectibles(L),
-        w = (0, _.s)('useShopHomeSorting') && I === x.AW.HOME,
+        w = (0, _.s)('useShopHomeSorting') && I === E.AW.HOME,
         { sortType: N, setSortType: A, sortedItems: R, sortOptions: Z, shuffleProducts: F, showRecommendationOption: D } = (0, C.N)(a, B),
-        H = (0, E.St)(R),
+        H = (0, S.St)(R),
         M = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         W = (0, o.e7)([p.Z], () => p.Z.isFocused()),
         V = !M && W,
-        { animationPhase: U, startAnimation: G } = (0, S.y)(),
+        { animationPhase: U, startAnimation: G } = (0, x.y)(),
         z = (0, h.sp)(),
         q = null != (t = null == z ? void 0 : z.sessionId) ? t : '',
         K = l.useRef(null),
@@ -65,7 +65,7 @@ let k = (e) => {
                               children: [
                                   (0, r.jsx)(s.X6q, {
                                       variant: 'heading-lg/semibold',
-                                      children: I === x.AW.ORBS ? j.intl.string(j.t.dFgeub) : j.intl.string(j.t.NSv5KS)
+                                      children: I === E.AW.ORBS ? j.intl.string(j.t.dFgeub) : j.intl.string(j.t.NSv5KS)
                                   }),
                                   D &&
                                       (0, r.jsx)(s.ua7, {
@@ -144,7 +144,7 @@ let k = (e) => {
                                               })
                                           ]
                                       }),
-                                  I === x.AW.HOME &&
+                                  I === E.AW.HOME &&
                                       (w
                                           ? (0, r.jsx)(s.zxk, {
                                                 color: s.Ttl.PRIMARY,
@@ -157,7 +157,7 @@ let k = (e) => {
                                                     }),
                                                         f.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, { page_session_id: q });
                                                 },
-                                                disabled: U !== S.g.MOUNTED && U !== S.g.FINISHED,
+                                                disabled: U !== x.g.MOUNTED && U !== x.g.FINISHED,
                                                 children: j.intl.string(j.t.X3tnc3)
                                             })
                                           : (0, r.jsx)(s.zxk, {
@@ -179,8 +179,8 @@ let k = (e) => {
                                     l = m.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;
                                 if (V)
-                                    if (U === S.g.SHUFFLE_OUT) return (0, r.jsx)('div', { className: P.shuffleOutro }, ''.concat(e.skuId, '-').concat(t));
-                                    else U === S.g.SORT_OUT ? (n = P.sortChangedOutro) : U === S.g.SHUFFLE_IN ? (n = P.shuffleIntro) : U === S.g.SORT_IN && (n = P.sortChangedIntro);
+                                    if (U === x.g.SHUFFLE_OUT) return (0, r.jsx)('div', { className: P.shuffleOutro }, ''.concat(e.skuId, '-').concat(t));
+                                    else U === x.g.SORT_OUT ? (n = P.sortChangedOutro) : U === x.g.SHUFFLE_IN ? (n = P.shuffleIntro) : U === x.g.SORT_IN && (n = P.sortChangedIntro);
                                 return (0, r.jsx)(
                                     h.k0,
                                     {

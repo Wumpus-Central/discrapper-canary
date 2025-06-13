@@ -18,22 +18,22 @@ var r = n(255367),
     C = n(963278),
     v = n(384067),
     O = n(215023),
-    S = n(981631),
-    E = n(388032),
-    x = n(806734);
+    x = n(981631),
+    S = n(388032),
+    E = n(806734);
 let y = (e) => {
         var t;
         let { handleTransition: n, numVisibleItems: a, isFetchingCategories: s, tab: c, isFullScreen: d } = e,
-            { noCache: O, includeUnpublished: S } = (0, g.Z)(),
-            E = (0, u.sp)(),
-            y = null != (t = null == E ? void 0 : E.sessionId) ? t : '';
+            { noCache: O, includeUnpublished: x } = (0, g.Z)(),
+            S = (0, u.sp)(),
+            y = null != (t = null == S ? void 0 : S.sessionId) ? t : '';
         l.useEffect(() => {
             (0, f.n)({
                 sessionId: y,
                 checkpoint: f.a.SHOP_MOUNTED,
                 tab: c,
                 isFullScreen: d,
-                unpublishedCategoriesShown: S,
+                unpublishedCategoriesShown: x,
                 cacheDisabled: O
             });
         }, [c]);
@@ -46,7 +46,7 @@ let y = (e) => {
                 c,
                 {
                     noCache: O,
-                    includeUnpublished: S,
+                    includeUnpublished: x,
                     includeBundles: !0,
                     logPerf: !0
                 },
@@ -69,10 +69,10 @@ let y = (e) => {
                         checkpoint: f.a.SHOP_RENDERED,
                         tab: c,
                         isFullScreen: d,
-                        unpublishedCategoriesShown: S,
+                        unpublishedCategoriesShown: x,
                         cacheDisabled: O
                     });
-            }, [P, j, k.length, S, O, y, c, d]),
+            }, [P, j, k.length, x, O, y, c, d]),
             null != P)
         )
             return (0, r.jsx)(b.Z, {
@@ -82,7 +82,7 @@ let y = (e) => {
             });
         if (j || 0 === k.length)
             return (0, r.jsxs)('div', {
-                className: x.loadingContainer,
+                className: E.loadingContainer,
                 children: [
                     (0, r.jsx)(_.Z, {
                         isLoading: j,
@@ -171,7 +171,7 @@ let y = (e) => {
             return (0, r.jsx)(
                 'div',
                 {
-                    className: i()(x.blockContainer, { [x.topBlockContainer]: 0 === t }),
+                    className: i()(E.blockContainer, { [E.topBlockContainer]: 0 === t }),
                     children: l
                 },
                 t
@@ -184,9 +184,9 @@ let y = (e) => {
             p = (0, d.R)('CollectiblesFeedShop'),
             f = (0, u.sp)();
         return (0, r.jsx)('div', {
-            className: x.shop,
+            className: E.shop,
             children: (0, r.jsxs)('div', {
-                className: i()(x.content, x.mainContent),
+                className: i()(E.content, E.mainContent),
                 children: [
                     (0, r.jsx)(y, {
                         handleTransition: n,
@@ -198,17 +198,17 @@ let y = (e) => {
                     a !== O.AW.CATALOG &&
                         l >= p &&
                         (0, r.jsxs)('div', {
-                            className: x.endOfFeed,
+                            className: E.endOfFeed,
                             children: [
                                 (0, r.jsx)(s.X6q, {
                                     variant: 'heading-md/semibold',
-                                    children: E.intl.string(E.t.Yr70c3)
+                                    children: S.intl.string(S.t.Yr70c3)
                                 }),
                                 (0, r.jsx)(s.zxk, {
-                                    className: x.endOfFeedButton,
+                                    className: E.endOfFeedButton,
                                     onClick: () => {
                                         n('shop all button', void 0, !0),
-                                            c.default.track(S.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                            c.default.track(x.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                 collectibles_shop_session_id: null == f ? void 0 : f.sessionId,
                                                 page_type: a,
                                                 page_category: a === O.AW.HOME || null == f ? void 0 : f.pageCategory,
@@ -218,7 +218,7 @@ let y = (e) => {
                                     children: (0, r.jsx)(s.Text, {
                                         variant: 'text-md/medium',
                                         color: 'always-white',
-                                        children: E.intl.string(E.t.AfrvRE)
+                                        children: S.intl.string(S.t.AfrvRE)
                                     })
                                 })
                             ]

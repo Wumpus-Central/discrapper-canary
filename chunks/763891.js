@@ -18,9 +18,9 @@ var r = n(255367),
     C = n(215023),
     v = n(388032),
     O = n(484920),
-    S = n(558513),
-    E = n(662128),
-    x = n(676790),
+    x = n(558513),
+    S = n(662128),
+    E = n(676790),
     y = n(665195),
     j = n(42742),
     P = n(283727),
@@ -44,13 +44,13 @@ function I(e) {
         [U, G, z] = l.useMemo(() => {
             switch (B) {
                 case C.AW.AVATAR_DECORATIONS:
-                    return [v.intl.string(v.t.dRZYND), V ? y.Z : x.Z, a.Z.AVATAR_DECORATION];
+                    return [v.intl.string(v.t.dRZYND), V ? y.Z : E.Z, a.Z.AVATAR_DECORATION];
                 case C.AW.PROFILE_EFFECTS:
                     return [v.intl.string(v.t['1cNjt7']), V ? T.Z : k.Z, a.Z.PROFILE_EFFECT];
                 case C.AW.NAMEPLATES:
                     return [v.intl.string(v.t.V68Fq6), V ? P.Z : j.Z, a.Z.NAMEPLATE];
                 case C.AW.BUNDLES:
-                    return [v.intl.string(v.t.FYFppq), V ? E.Z : S.Z, a.Z.BUNDLE];
+                    return [v.intl.string(v.t.FYFppq), V ? S.Z : x.Z, a.Z.BUNDLE];
             }
         }, [B, V]),
         q = (0, f.a)(),

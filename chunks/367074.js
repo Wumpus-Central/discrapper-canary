@@ -37,7 +37,7 @@ function w(e) {
     if (null != r && r.status === R.O0b.ENDED) {
         let e = r.endedAt,
             t = r.hasPremiumAtLeast(C.p9.TIER_2);
-        if (null != e && t && i()().subtract(P, 'days').isAfter(e)) return !1;
+        if (null != e && t && i()().subtract(P, 'days').isBefore(e)) return !1;
     }
     if (null != n) {
         let e = n.hasPremiumAtLeast(C.p9.TIER_2),

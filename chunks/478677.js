@@ -1,3 +1,3 @@
-n.d(t, { g: () => c }), n(388685);
+n.d(t, { g: () => a }), n(388685);
 var r,
-    c = (((r = {}).MOBILE = 'mobile'), (r.DESKTOP = 'desktop'), (r.WEB = 'web'), (r.DEVICE_CODE = 'device_code'), r);
+    a = (((r = {}).MOBILE = 'mobile'), (r.DESKTOP = 'desktop'), (r.WEB = 'web'), (r.DEVICE_CODE = 'device_code'), r);

@@ -187,7 +187,7 @@ function A(e) {
                     allSounds: _,
                     filterOutEmptyCurrentGuild: t
                 });
-        let a = R || k.enabled;
+        let a = R || k.moveDefaultToBottom;
         return (
             a || S(i, _),
             I({
@@ -212,7 +212,7 @@ function A(e) {
                 }
             }
         );
-    }, [A, _, b, M, x, L, D, P, w, t, R, N, n, O, u, k.enabled]);
+    }, [A, _, b, M, x, L, D, P, w, t, R, N, n, O, u, k.moveDefaultToBottom]);
 }
 function N(e, t, n) {
     return r.useMemo(

@@ -34,7 +34,7 @@ function m(e) {
     return e;
 }
 function g(e) {
-    let { className: t, boxes: n, title: r, shouldLoadVideo: s, isReducedMotion: o, includeSideGradient: d = !1, startLeftAligned: g = !1 } = e;
+    let { className: t, boxLayout: n, title: r, shouldLoadVideo: s, isReducedMotion: d, includeSideGradient: g = !1, startLeftAligned: p = !1 } = e;
     return (0, i.jsxs)('div', {
         className: l()(u.boxBackdrop, t),
         children: [
@@ -46,22 +46,50 @@ function g(e) {
             }),
             (0, i.jsx)('div', {
                 className: u.bentoBoxesGrid,
-                children: n.map((e, t) =>
-                    (0, i.jsx)(
-                        c.Z,
-                        m(
-                            {
-                                shouldLoadVideo: s,
-                                isReducedMotion: o,
-                                index: t + +!!g
-                            },
-                            e
-                        ),
-                        e.name
-                    )
-                )
+                children: n.map((e, t) => {
+                    let n;
+                    switch (e.length) {
+                        case 3:
+                            n = o.y$.SMALL;
+                            break;
+                        case 2:
+                            n = o.y$.MEDIUM;
+                            break;
+                        default:
+                            n = o.y$.LARGE;
+                    }
+                    return (0, i.jsx)(i.Fragment, {
+                        children: e.map((e) => {
+                            var r, l;
+                            return (0, i.jsx)(
+                                c.Z,
+                                ((r = m({ index: t + +!!p }, e)),
+                                (l = l =
+                                    {
+                                        size: n,
+                                        shouldLoadVideo: s,
+                                        isReducedMotion: d
+                                    }),
+                                Object.getOwnPropertyDescriptors
+                                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
+                                    : (function (e, t) {
+                                          var n = Object.keys(e);
+                                          if (Object.getOwnPropertySymbols) {
+                                              var i = Object.getOwnPropertySymbols(e);
+                                              n.push.apply(n, i);
+                                          }
+                                          return n;
+                                      })(Object(l)).forEach(function (e) {
+                                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
+                                      }),
+                                r),
+                                e.name
+                            );
+                        })
+                    });
+                })
             }),
-            d && (0, i.jsx)('div', { className: u.bentoSideGradient })
+            g && (0, i.jsx)('div', { className: u.bentoSideGradient })
         ]
     });
 }
@@ -73,7 +101,7 @@ let p = r.memo(function (e) {
                 g,
                 m(
                     {
-                        boxes: Object.values(t),
+                        boxLayout: t,
                         title: d.intl.string(d.t.LRmNAg)
                     },
                     e
@@ -83,7 +111,7 @@ let p = r.memo(function (e) {
                 g,
                 m(
                     {
-                        boxes: Object.values(n),
+                        boxLayout: n,
                         title: d.intl.string(d.t.EnzW2N),
                         includeSideGradient: !0,
                         startLeftAligned: !0

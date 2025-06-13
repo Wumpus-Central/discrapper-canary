@@ -18,9 +18,9 @@ var r = n(255367),
     C = n(214852),
     v = n(290026),
     O = n(511050),
-    S = n(819640),
-    E = n(594174),
-    x = n(626135),
+    x = n(819640),
+    S = n(594174),
+    E = n(626135),
     y = n(74538),
     j = n(960048),
     P = n(381585),
@@ -106,10 +106,10 @@ let Q = (e) => {
             },
             [u, eO]
         );
-        let eS = (0, s.e7)([S.Z], () => S.Z.getLayers().includes(K.S9g.COLLECTIBLES_SHOP)),
-            { onClose: eE } = (0, H.Db)(),
-            ex = (0, s.e7)([E.default], () => E.default.getCurrentUser()),
-            ey = y.ZP.canUseCollectibles(ex),
+        let ex = (0, s.e7)([x.Z], () => x.Z.getLayers().includes(K.S9g.COLLECTIBLES_SHOP)),
+            { onClose: eS } = (0, H.Db)(),
+            eE = (0, s.e7)([S.default], () => S.default.getCurrentUser()),
+            ey = y.ZP.canUseCollectibles(eE),
             {
                 categories: ej,
                 isFetchingCategories: eP,
@@ -135,7 +135,7 @@ let Q = (e) => {
             [eA, eR] = l.useState(!1);
         (0, Z.Kp)({
             isFetchingCategories: eP,
-            isLayer: eS,
+            isLayer: ex,
             initialItemCardRef: eN
         }),
             l.useEffect(() => {
@@ -143,7 +143,7 @@ let Q = (e) => {
                     var e;
                     let t;
                     (t = eo === q.AW.CATALOG ? em : u),
-                        x.default.track(K.rMx.COLLECTIBLES_SHOP_VIEWED, {
+                        E.default.track(K.rMx.COLLECTIBLES_SHOP_VIEWED, {
                             location_stack: en,
                             source: t,
                             page_session_id: el,
@@ -153,13 +153,13 @@ let Q = (e) => {
                 }
             }, [en, u, el, eg, eh, em, es, eo, et, er]),
             l.useEffect(() => {
-                null == ex ||
+                null == eE ||
                     ey ||
-                    x.default.track(K.rMx.PREMIUM_UPSELL_VIEWED, {
+                    E.default.track(K.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: X.cd.COLLECTIBLES_SHOP,
                         location_stack: en
                     });
-            }, [ey, en, ex]);
+            }, [ey, en, eE]);
         let { dismissShopButtonDC: eZ } = (0, W.Z)();
         l.useEffect(() => {
             eZ(),
@@ -237,8 +237,8 @@ let Q = (e) => {
                     pageSize: eq
                 },
                 children: (0, r.jsxs)(ee, {
-                    onClose: eE,
-                    shouldAddEventListener: n && !eS,
+                    onClose: eS,
+                    shouldAddEventListener: n && !ex,
                     children: [
                         (0, r.jsx)('div', {
                             className: J.shop,
@@ -262,8 +262,8 @@ let Q = (e) => {
                                     children: [
                                         (0, r.jsx)(D.I, {
                                             isFullScreen: n,
-                                            isLayer: eS,
-                                            onClose: eE,
+                                            isLayer: ex,
+                                            onClose: eS,
                                             handleTransition: ec,
                                             selectedTab: eo
                                         }),
@@ -275,7 +275,7 @@ let Q = (e) => {
                                                     null != ek ? e.push('shop load fetch categories error: '.concat(eB.message)) : null != eT ? e.push('shop load fetch purchase error: '.concat(eB.message)) : e.push('shop load claim error: '.concat(eB.message)),
                                                     j.Z.captureMessage(e.join('\n'), {
                                                         tags: {
-                                                            isStaff: null != (l = null == ex || null == (t = ex.isStaff()) ? void 0 : t.toString()) ? l : 'unknown',
+                                                            isStaff: null != (l = null == eE || null == (t = eE.isStaff()) ? void 0 : t.toString()) ? l : 'unknown',
                                                             preloadEnabled: e$.toString(),
                                                             disableCache: eC.toString(),
                                                             includeUnpublished: ev.toString()

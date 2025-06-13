@@ -107,30 +107,31 @@ class V extends i.PureComponent {
                 E.subtitle = U.intl.formatToPlainString(U.t.C5bgrK, { count: e.toLocaleString() });
             }
             (E.buttonText = U.intl.string(U.t['3aOv+v'])), (E.onButtonClick = this.handleFollowAnnouncement), (E.imageSrc = I ? null : n(485195)), t && ((E.onSecondaryButtonClick = this.handleJoinServer), (E.secondaryButtonText = U.intl.string(U.t['RLch7+'])));
-        } else if (i) (E.message = U.intl.string(U.t['Eg3/c3'])), (E.buttonText = U.intl.string(U.t.fiNVio)), (E.onButtonClick = y ? this.handleShowMemberVerification : this.handleClaimAccount), (E.imageSrc = n(102811));
+        } else if (i) (E.message = U.intl.string(U.t['Eg3/c3'])), (E.buttonText = U.intl.string(U.t.fiNVio)), (E.onButtonClick = y ? this.handleShowMemberVerification : this.handleClaimAccount), (E.imageSrc = I ? null : n(102811));
         else if (y)
             switch (null == v ? void 0 : v.applicationStatus) {
                 case _.wB.SUBMITTED:
-                    (E.message = U.intl.string(U.t['5iLvS0'])), (E.subtitle = U.intl.string(U.t.FdsK4u)), (E.buttonText = U.intl.string(U.t.mqtdmZ)), (E.onButtonClick = this.handleCancelApplication), (E.imageSrc = n(281958));
+                    (E.message = U.intl.string(U.t['5iLvS0'])), (E.subtitle = U.intl.string(U.t.FdsK4u)), (E.buttonText = U.intl.string(U.t.mqtdmZ)), (E.onButtonClick = this.handleCancelApplication), (E.imageSrc = I ? null : n(281958));
                     break;
                 case _.wB.REJECTED:
-                    (E.message = U.intl.string(U.t.lk30cX)), (E.buttonText = U.intl.string(U.t['8RrsHh'])), (E.onButtonClick = this.handleViewApplicationRejection), (E.imageSrc = n(809844));
+                    (E.message = U.intl.string(U.t.lk30cX)), (E.buttonText = U.intl.string(U.t['8RrsHh'])), (E.onButtonClick = this.handleViewApplicationRejection), (E.imageSrc = I ? null : n(809844));
                     break;
                 default:
                     (E.message = U.intl.string(U.t.rEBKvr)),
                         (E.buttonText = U.intl.string(U.t['r8/DT0'])),
                         (E.buttonColor = c.Ttl.BRAND),
                         (E.onButtonClick = this.handleShowMemberVerification),
-                        (E.animationSrc = () =>
-                            n
-                                .e('43841')
-                                .then(n.t.bind(n, 737848, 19))
-                                .then((e) => {
-                                    let { default: t } = e;
-                                    return t;
-                                }));
+                        I ||
+                            (E.animationSrc = () =>
+                                n
+                                    .e('43841')
+                                    .then(n.t.bind(n, 737848, 19))
+                                    .then((e) => {
+                                        let { default: t } = e;
+                                        return t;
+                                    }));
             }
-        else l && !x ? ((E.message = U.intl.string(U.t['2dThMD'])), (E.buttonText = U.intl.string(U.t['50gfOj'])), (E.onButtonClick = this.handleVerifyPhone), (E.imageSrc = n(98063))) : a ? ((E.message = U.intl.string(U.t.FkGPS0)), (E.buttonText = U.intl.string(U.t.lm1UKi)), (E.onButtonClick = this.handleResendVerification), (E.imageSrc = n(102811))) : o ? ((E.message = U.intl.formatToPlainString(U.t.IH7RMD, { min: L.YeM.MEMBER_AGE })), (E.countdown = u)) : d && ((E.message = U.intl.formatToPlainString(U.t['2JA2GB'], { min: L.YeM.ACCOUNT_AGE })), (E.countdown = p));
+        else l && !x ? ((E.message = U.intl.string(U.t['2dThMD'])), (E.buttonText = U.intl.string(U.t['50gfOj'])), (E.onButtonClick = this.handleVerifyPhone), (E.imageSrc = I ? null : n(98063))) : a ? ((E.message = U.intl.string(U.t.FkGPS0)), (E.buttonText = U.intl.string(U.t.lm1UKi)), (E.onButtonClick = this.handleResendVerification), (E.imageSrc = I ? null : n(102811))) : o ? ((E.message = U.intl.formatToPlainString(U.t.IH7RMD, { min: L.YeM.MEMBER_AGE })), (E.countdown = u)) : d && ((E.message = U.intl.formatToPlainString(U.t['2JA2GB'], { min: L.YeM.ACCOUNT_AGE })), (E.countdown = p));
         return (0, r.jsx)(c.yRy, {
             targetElementRef: this.textAreaContainerRef,
             position: 'top',

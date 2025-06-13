@@ -18,9 +18,9 @@ var r = n(255367),
     C = n(775451),
     v = n(594174),
     O = n(471731),
-    S = n(335131),
-    E = n(534517),
-    x = n(304742),
+    x = n(335131),
+    S = n(534517),
+    E = n(304742),
     y = n(215023),
     j = n(981631),
     P = n(388032),
@@ -65,7 +65,7 @@ function I(e) {
             },
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(x.Z, {
+                return (0, r.jsx)(E.Z, {
                     handleTransition: i,
                     onClose: t
                 });
@@ -104,11 +104,11 @@ function I(e) {
 }
 function L(e) {
     let { isFullScreen: t, isLayer: n, onClose: a, selectedTab: f, handleTransition: b } = e,
-        x = (0, p.ZP)(),
+        E = (0, p.ZP)(),
         L = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
         B = (null == L ? void 0 : L.isStaff()) || (null == L ? void 0 : L.isStaffPersonal()) || !1,
         { enabled: w } = (0, _.WX)({ location: 'collectibles_shop_header_bar' }),
-        N = (0, E.S)('collectibles_shop_header_bar'),
+        N = (0, S.S)('collectibles_shop_header_bar'),
         A = [
             {
                 tab: y.AW.HOME,
@@ -124,7 +124,7 @@ function L(e) {
             tab: y.AW.ORBS,
             displayText: P.intl.string(P.t['KUYR+P'])
         });
-    let R = n ? S.DR : a,
+    let R = n ? x.DR : a,
         Z = f === y.AW.ORBS ? j.ZY5.SHOP_ORBS_TAB : j.ZY5.COLLECTIBLES_SHOP,
         F = l.useCallback(() => {
             t && (R(), (0, u.Ou)()),
@@ -136,7 +136,7 @@ function L(e) {
                 (0, h.navigateToQuestHome)({ fromContent: o.j.ORBS_BALANCE_MENU });
         }, [R, t, Z]);
     return (0, r.jsx)(c.f6W, {
-        theme: x,
+        theme: E,
         children: (e) =>
             (0, r.jsxs)(g.Z, {
                 className: i()(e, k.headerBar, { [k.fullscreenHeaderBar]: t }),

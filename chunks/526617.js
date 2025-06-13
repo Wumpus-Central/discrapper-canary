@@ -348,9 +348,9 @@ function eu(e) {
         e$ = i.useCallback(
             (e) => {
                 let t = e === eU.length - 1;
-                return eB && e === eG ? (t ? 60 : 20) : eB && t && eP.enabled ? 70 : 0;
+                return eB && t ? 60 : eB && e === eG ? 20 : 0;
             },
-            [eU.length, eB, eG, eP.enabled]
+            [eU.length, eB, eG]
         ),
         e0 = i.useCallback(
             (e, n) => {
@@ -374,10 +374,11 @@ function eu(e) {
         ),
         e1 = i.useCallback(
             (e, t) => {
-                let n = t === eU.length - 1;
-                return eB && t === eG ? (0, r.jsx)('div', { className: o()(z.nitroFooter, { [z.lastSection]: n }) }) : eB && n && eP.enabled ? (0, r.jsx)('div', { className: z.nonNitroFooter }) : null;
+                let n = t === eU.length - 1,
+                    i = t === eG;
+                return eB && n ? (0, r.jsx)('div', { className: o()(z.lastSectionFooter, { [z.nitroLocked]: i }) }) : eB && t === eG ? (0, r.jsx)('div', { className: o()(z.smallPaddingFooter, z.nitroLocked) }) : null;
             },
-            [eG, eB, eU.length, eP.enabled]
+            [eG, eB, eU.length]
         ),
         e2 = i.useCallback((e) => eM((0, G.cK)(e, Array.from(eD.values()).flat(), eI, a, eg)), [a, eI, eD, eg]),
         e3 = i.useCallback(
@@ -432,13 +433,13 @@ function eu(e) {
             () =>
                 eB
                     ? (0, r.jsx)(v.p, {
-                          showUpsell: !!eP.enabled || ek,
+                          showUpsell: eP.alwaysStickyUpsell || ek,
                           text: eQ(),
                           button: K.intl.string(K.t.pj0XBA),
                           buttonAnalyticsObject: { section: Y.jXE.SOUND_PICKER_FLOATING_UPSELL }
                       })
                     : null,
-            [eQ, eB, eP.enabled, ek]
+            [eQ, eB, eP.alwaysStickyUpsell, ek]
         ),
         e8 = i.useCallback(
             (e) => {
