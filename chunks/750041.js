@@ -87,8 +87,8 @@ class f extends (r = o.ZP.Store) {
             t
         ),
             a()(null != this.getClass().displayName, 'Snapshot stores need a display name'),
-            a()(!('CLEAR_CACHES' in e), "SnapshotStores cannot use the 'CLEAR_CACHES' action"),
-            a()(!('WRITE_CACHES' in e), "SnapshotStores cannot use the 'WRITE_CACHES' action"),
+            a()(!('CLEAR_CACHES' in e), "MobileCacheSnapshotStores cannot use the 'CLEAR_CACHES' action"),
+            a()(!('WRITE_CACHES' in e), "MobileCacheSnapshotStores cannot use the 'WRITE_CACHES' action"),
             f.allStores.push(this);
     }
 }
