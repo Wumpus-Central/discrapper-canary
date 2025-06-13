@@ -14,23 +14,16 @@ function i(e) {
     };
 }
 function a(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 5000,
-        n = -1,
-        r = null;
-    return () => ((null == r || Date.now() >= n) && ((n = Date.now() + t), (r = e())), r);
-}
-function o(e) {
     for (var t in e) e.hasOwnProperty(t) && delete e[t];
 }
-function s(e) {
+function o(e) {
     for (let t in e) return !1;
     return !0;
 }
 n.d(t, {
     EF: () => r,
-    Ti: () => o,
-    ad: () => a,
-    ld: () => s,
+    Ti: () => a,
+    ld: () => o,
     oH: () => i
 }),
     n(388685);

@@ -8,8 +8,8 @@ var i,
     r,
     l = n(73800),
     o = n(392711),
-    a = n.n(o),
-    u = n(442837),
+    u = n.n(o),
+    a = n(442837),
     c = n(25209),
     d = n(481060),
     s = n(2052),
@@ -27,8 +27,8 @@ var i,
     P = n(827498),
     _ = n(346683),
     w = n(981631),
-    I = n(388032);
-let A =
+    A = n(388032);
+let I =
         ((i = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -68,10 +68,10 @@ let A =
                   Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(r, e));
               }),
         i),
-    S = a().pick(
+    S = u().pick(
         (0, Z.Z)([
             E.Z.RULES,
-            { commandMention: A },
+            { commandMention: I },
             (0, m.Z)({
                 enableBuildOverrides: !1,
                 enableEmojiClick: !1
@@ -81,15 +81,15 @@ let A =
     ),
     j = c.w4(S);
 function M(e) {
-    let { context: t, application: n, location: i, sectionName: r, commandName: o, autoDismissOnClick: a = !0, launchingComponentId: c, submitting: m = !1, fetchesApplication: E = !0, onConfirmActivityLaunchChecksAlertOpen: Z } = e,
+    let { context: t, application: n, location: i, sectionName: r, commandName: o, autoDismissOnClick: u = !0, launchingComponentId: c, submitting: m = !1, fetchesApplication: E = !0, onConfirmActivityLaunchChecksAlertOpen: Z } = e,
         O = (0, s.O)(),
-        A = (0, p.Qv)({
+        I = (0, p.Qv)({
             context: t,
             applicationId: n.id,
             fetchesApplication: E
         }),
-        S = (0, _.Q)(A),
-        j = (0, u.e7)([h.Z], () => h.Z.entrypoint()),
+        S = (0, _.Q)(I),
+        j = (0, a.e7)([h.Z], () => h.Z.entrypoint()),
         M = l.useMemo(() => {
             var e, i, r;
             if ('channel' !== t.type) return null != (r = null == (e = n.bot) ? void 0 : e.id) ? r : null == (i = (0, y.If)(t, n.id).descriptor) ? void 0 : i.botId;
@@ -102,7 +102,7 @@ function M(e) {
             locationObject: O.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: t } = e;
-                a && g.yT(P.ti.ACTIVITY),
+                u && g.yT(P.ti.ACTIVITY),
                     (0, v.yw)(w.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: t,
@@ -119,14 +119,14 @@ function M(e) {
             onConfirmActivityLaunchChecksAlertOpen: Z
         }),
         D = d.Ttl.BRAND,
-        C = null != o ? o : I.intl.string(I.t.zKX8Nj);
+        L = null != o ? o : A.intl.string(A.t.zKX8Nj);
     return (
-        S === p.JS.JOIN ? ((D = d.Ttl.GREEN), (C = I.intl.string(I.t.d9PsMj))) : S !== p.JS.LEAVE || m || ((D = d.Ttl.RED), (C = I.intl.string(I.t['Hi1/aW']))),
+        S === p.JS.JOIN ? ((D = d.Ttl.GREEN), (L = A.intl.string(A.t.d9PsMj))) : S !== p.JS.LEAVE || m || ((D = d.Ttl.RED), (L = A.intl.string(A.t['Hi1/aW']))),
         {
             onActivityItemSelected: T,
             activityAction: S,
             buttonColor: D,
-            buttonText: C
+            buttonText: L
         }
     );
 }

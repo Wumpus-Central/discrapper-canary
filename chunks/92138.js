@@ -29,6 +29,6 @@ var g = n(981631);
     (l.ZP.PersistedStore.disableWrites = __OVERLAY__),
     l.ZP.initialize();
 let E = window.GLOBAL_ENV.RELEASE_CHANNEL,
-    b = '409366',
-    y = '0b14a6fca561f9d4f1e0d96c92aeeb80962538f2';
+    b = '409447',
+    y = '2b297ed25294bc9cc78e5ae02adf15baa6231f02';
 new m.Z().log('[BUILD INFO] Release Channel: '.concat(E, ', Build Number: ').concat(b, ', Version Hash: ').concat(y)), i.Z.setTags({ appContext: g.e3s }), f.Z.initBasic(), p.Z.init(), u.d.init(), h.S1();

@@ -1,18 +1,17 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
     s = n(94171),
     l = n(532772),
-    c = n(570220),
-    u = n(540059),
-    d = n(28546),
-    _ = n(443603),
-    f = n(957825),
-    p = n(388032),
-    h = n(302195);
-function m(e, t, n) {
+    c = n(540059),
+    u = n(28546),
+    d = n(443603),
+    _ = n(957825),
+    f = n(388032),
+    p = n(302195);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +24,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +35,12 @@ function g(e) {
                 })
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,73 +52,52 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function y(e, t) {
+function b(e, t) {
     let { disabled: n, type: a } = e,
-        [m, E] = (0, d.Iu)((e) => [e.activeView, e.pickerId], s.X),
-        y = i.useContext(c.ZP),
+        [h, g] = (0, u.Iu)((e) => [e.activeView, e.pickerId], s.X),
+        b = !1,
+        y = h === _.X1.STICKER,
         O = !1,
-        [v, I] = i.useState(!1),
-        T = m === f.X1.STICKER,
-        S = !1,
-        A = i.useCallback(() => {
-            (0, d.RO)(f.X1.STICKER, a);
-        }, [a]);
-    i.useEffect(() => {
-        let e = () => {
-                requestAnimationFrame(() => {
-                    I(!0);
-                });
-            },
-            t = () => {
-                requestAnimationFrame(() => {
-                    I(!1);
-                });
-            };
-        return (
-            y.addListener('sticker-suggestions-shown', e),
-            y.addListener('sticker-suggestions-hidden', t),
-            () => {
-                y.removeListener('sticker-suggestions-shown', e), y.removeListener('sticker-suggestions-hidden', t);
-            }
-        );
-    }, [y]);
-    let { Component: N, events: C, play: R } = (0, l.z)(),
-        P = (0, u.Q3)('ChannelStickerPickerButton');
-    if (n) return null;
-    let w = v;
-    return (0, r.jsx)('div', {
-        className: o()(f.CT, h.buttonContainer),
-        ref: t,
-        children: (0, r.jsx)(
-            _.Z,
-            b(g({ innerClassName: o()(h.button, h.stickerButton, { [h.stickerButtonTilted]: w && !T }) }, C), {
-                onClick: () => {
-                    A(), R();
-                },
-                isActive: T,
-                'aria-label': p.intl.string(p.t.rZpidX),
-                'aria-expanded': T,
-                'aria-haspopup': 'dialog',
-                'aria-controls': E,
-                sparkle: O,
-                notification: S ? _.j.UPDATE : null,
-                children: (0, r.jsx)(N, {
-                    size: P ? 'refresh_sm' : void 0,
-                    color: 'currentColor'
-                })
-            })
-        )
-    });
+        v = i.useCallback(() => {
+            (0, u.RO)(_.X1.STICKER, a);
+        }, [a]),
+        { Component: I, events: T, play: S } = (0, l.z)(),
+        A = (0, c.Q3)('ChannelStickerPickerButton');
+    return n
+        ? null
+        : (0, r.jsx)('div', {
+              className: o()(_.CT, p.buttonContainer),
+              ref: t,
+              children: (0, r.jsx)(
+                  d.Z,
+                  E(m({ innerClassName: o()(p.button, p.stickerButton) }, T), {
+                      onClick: () => {
+                          v(), S();
+                      },
+                      isActive: y,
+                      'aria-label': f.intl.string(f.t.rZpidX),
+                      'aria-expanded': y,
+                      'aria-haspopup': 'dialog',
+                      'aria-controls': g,
+                      sparkle: b,
+                      notification: O ? d.j.UPDATE : null,
+                      children: (0, r.jsx)(I, {
+                          size: A ? 'refresh_sm' : void 0,
+                          color: 'currentColor'
+                      })
+                  })
+              )
+          });
 }
-let O = i.memo(i.forwardRef(y));
+let y = i.memo(i.forwardRef(b));

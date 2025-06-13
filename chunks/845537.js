@@ -100,7 +100,8 @@ function w(e) {
                     {
                         src: t.src,
                         emojiName: t.name,
-                        animated: !1
+                        animated: !1,
+                        surrogate: t.surrogate
                     },
                     e
                 )

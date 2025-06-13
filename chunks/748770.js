@@ -9,8 +9,8 @@ var r = n(544891),
     o = n(496929),
     s = n(706454),
     l = n(675478),
-    c = n(164207),
-    u = n(518638),
+    c = n(605338),
+    u = n(164207),
     d = n(1844),
     _ = n(474936),
     f = n(981631);
@@ -18,7 +18,7 @@ async function p() {
     if (!d.Z.isFetchingActiveOutboundPromotions)
         try {
             a.Z.dispatch({ type: 'ACTIVE_OUTBOUND_PROMOTIONS_FETCH' });
-            let t = c.t.getCurrentConfig({ location: '5731cc_1' }, { autoTrackExposure: !1 }).previewEnabled ? f.ANM.OUTBOUND_PROMOTIONS_PREVIEW : f.ANM.OUTBOUND_PROMOTIONS,
+            let t = u.t.getCurrentConfig({ location: '5731cc_1' }, { autoTrackExposure: !1 }).previewEnabled ? f.ANM.OUTBOUND_PROMOTIONS_PREVIEW : f.ANM.OUTBOUND_PROMOTIONS,
                 n = (
                     await r.tn.get({
                         url: t,
@@ -35,7 +35,7 @@ async function p() {
             }
             a.Z.dispatch({
                 type: 'ACTIVE_OUTBOUND_PROMOTIONS_FETCH_SUCCESS',
-                activeOutboundPromotions: n.map((e) => (0, u.X_)(e)),
+                activeOutboundPromotions: n.map((e) => c.Z.createFromServer(e)),
                 consumedInboundPromotionId: i
             });
         } catch (e) {
@@ -55,7 +55,7 @@ async function h() {
             ).body;
             a.Z.dispatch({
                 type: 'ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS',
-                activePromotion: (0, u.kr)(e)
+                activePromotion: c.Z.createFromServer(e)
             });
         } catch (e) {
             a.Z.dispatch({ type: 'ACTIVE_BOGO_PROMOTION_FETCH_FAIL' });

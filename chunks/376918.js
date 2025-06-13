@@ -92,8 +92,6 @@ function f(e) {
     switch (e) {
         case i.V0.AUTOCOMPLETE:
             return 'autocomplete';
-        case i.V0.EXPRESSION_SUGGESTIONS:
-            return 'autosuggest';
         case i.V0.STICKER_PICKER:
             return 'picker';
         case i.V0.BUILT_IN_INTEGRATION:

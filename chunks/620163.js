@@ -1211,11 +1211,6 @@ let e0 = () => {
                 searchableTitles: [eX.intl.string(eX.t['6NtAuL'])],
                 parent: ez.s6.CHAT
             },
-            [ez.s6.CHAT_STICKERS_SUGGESTIONS]: {
-                section: eW.oAB.TEXT,
-                searchableTitles: [eX.intl.string(eX.t['479+PT'])],
-                parent: ez.s6.CHAT_STICKERS
-            },
             [ez.s6.CHAT_STICKERS_AUTOCOMPLETE]: {
                 section: eW.oAB.TEXT,
                 searchableTitles: [eX.intl.string(eX.t['29xPVV'])],

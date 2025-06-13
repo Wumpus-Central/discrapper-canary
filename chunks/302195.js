@@ -32,7 +32,6 @@ e.exports = {
     button: 'button__74017',
     emojiButton: 'emojiButton__74017 button__74017',
     stickerButton: 'stickerButton__74017',
-    stickerButtonTilted: 'stickerButtonTilted__74017',
     messageConfettiButton: 'messageConfettiButton__74017',
     messageConfettiIcon: 'messageConfettiIcon__74017',
     active: 'active__74017',

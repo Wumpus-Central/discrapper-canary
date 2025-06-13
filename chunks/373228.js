@@ -30,5 +30,5 @@ var l = (function (e) {
         return (e[(e.STICKER_NAME = 0)] = 'STICKER_NAME'), (e[(e.TAG = 1)] = 'TAG'), (e[(e.CORRELATED_EMOJI = 2)] = 'CORRELATED_EMOJI'), (e[(e.GUILD_NAME = 3)] = 'GUILD_NAME'), (e[(e.PACK_NAME = 4)] = 'PACK_NAME'), e;
     })({}),
     d = (function (e) {
-        return (e[(e.STICKER_PICKER = 0)] = 'STICKER_PICKER'), (e[(e.EXPRESSION_SUGGESTIONS = 1)] = 'EXPRESSION_SUGGESTIONS'), (e[(e.AUTOCOMPLETE = 2)] = 'AUTOCOMPLETE'), (e[(e.BUILT_IN_INTEGRATION = 3)] = 'BUILT_IN_INTEGRATION'), e;
+        return (e[(e.STICKER_PICKER = 0)] = 'STICKER_PICKER'), (e[(e.AUTOCOMPLETE = 1)] = 'AUTOCOMPLETE'), (e[(e.BUILT_IN_INTEGRATION = 2)] = 'BUILT_IN_INTEGRATION'), e;
     })({});

@@ -1,4 +1,4 @@
-n.d(e, { Z: () => E }), n(388685);
+n.d(e, { Z: () => y }), n(388685);
 var r = n(255367),
     l = n(73800),
     c = n(374470),
@@ -7,9 +7,9 @@ var r = n(255367),
     o = n(295866),
     a = n(398327),
     u = n(63063),
-    d = n(601993),
-    p = n(981631),
-    b = n(388032);
+    p = n(601993),
+    b = n(981631),
+    d = n(388032);
 function f(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
@@ -53,52 +53,52 @@ function h(t, e) {
         t
     );
 }
-function E(t) {
+function y(t) {
     let { text: e = '', target: n } = t,
-        E = (0, i.e7)([a.Z], () => a.Z.isEnabled()),
+        y = (0, i.e7)([a.Z], () => a.Z.isEnabled()),
         O = (0, i.e7)([a.Z], () => a.Z.hasLearnedWord(e), [e]),
-        j = l.useRef(h(f({}, t), { spellcheckEnabled: E }));
-    j.current = h(f({}, t), { spellcheckEnabled: E });
-    let y = l.useRef(!1),
-        [k, g] = l.useState(!1),
-        [m, S] = l.useState([]),
+        j = l.useRef(h(f({}, t), { spellcheckEnabled: y }));
+    j.current = h(f({}, t), { spellcheckEnabled: y });
+    let E = l.useRef(!1),
+        [m, g] = l.useState(!1),
+        [k, P] = l.useState([]),
         x = l.useCallback(() => {
             let { spellcheckEnabled: t, text: e, onHeightUpdate: n } = j.current;
             t &&
-                (0, d.Gb)() &&
-                Promise.all([(0, d.f5)(e, !0), (0, d.WA)(e, !0)]).then((t) => {
+                (0, p.Gb)() &&
+                Promise.all([(0, p.f5)(e, !0), (0, p.WA)(e, !0)]).then((t) => {
                     let [e, r] = t;
-                    y.current && (g(e), S(r), n());
+                    E.current && (g(e), P(r), n());
                 });
         }, []),
-        P = l.useCallback(() => {
+        C = l.useCallback(() => {
             if ((0, c.k)(n, HTMLInputElement) || (0, c.k)(n, HTMLTextAreaElement)) {
                 let { selectionStart: t, selectionEnd: e, value: r } = n;
                 (n.value = ''), (n.value = r), 'email' !== n.type && ((n.selectionStart = t), (n.selectionEnd = e));
             }
         }, [n]);
     return (l.useEffect(() => {
-        let t = (0, d.RD)(x);
+        let t = (0, p.RD)(x);
         return (
-            (y.current = !0),
+            (E.current = !0),
             () => {
-                (y.current = !1), t();
+                (E.current = !1), t();
             }
         );
     }, [x]),
     l.useEffect(() => {
         x();
-    }, [e, E, x]),
-    (0, d.Gb)())
+    }, [e, y, x]),
+    (0, p.Gb)())
         ? [
-              m.map((t, e) =>
+              k.map((t, e) =>
                   (0, r.jsx)(
                       s.sNh,
                       {
                           id: 'correction-'.concat(e),
                           label: t,
                           action: () => {
-                              (0, d.Rs)(t), n.focus();
+                              (0, p.Rs)(t), n.focus();
                           }
                       },
                       'correction-'.concat(e)
@@ -106,36 +106,36 @@ function E(t) {
               ),
               (0, r.jsxs)(r.Fragment, {
                   children: [
-                      k
+                      m
                           ? (0, r.jsx)(s.sNh, {
                                 id: 'add-to-dictionary',
-                                label: b.intl.string(b.t.HJmG1N),
+                                label: d.intl.string(d.t.HJmG1N),
                                 action: () => {
-                                    (0, o.D0)(e), P();
+                                    (0, o.D0)(e), C();
                                 }
                             })
                           : null,
                       O &&
                           (0, r.jsx)(s.sNh, {
                               id: 'remove-from-dictionary',
-                              label: b.intl.string(b.t.xXqIX1),
+                              label: d.intl.string(d.t.xXqIX1),
                               action: () => {
-                                  (0, o.lE)(e), P();
+                                  (0, o.lE)(e), C();
                               }
                           }),
                       (0, r.jsx)(s.S89, {
                           id: 'spellcheck',
-                          label: b.intl.string(b.t.TKkotb),
-                          checked: E,
+                          label: d.intl.string(d.t.TKkotb),
+                          checked: y,
                           action: () => {
-                              (0, o.kY)(), P();
+                              (0, o.kY)(), C();
                           }
                       }),
-                      E
+                      y
                           ? (0, r.jsx)(s.sNh, {
                                 id: 'languages',
-                                label: b.intl.string(b.t.OlOHDA),
-                                action: () => window.open(u.Z.getArticleURL(p.BhN.SPELLCHECK))
+                                label: d.intl.string(d.t.OlOHDA),
+                                action: () => window.open(u.Z.getArticleURL(b.BhN.SPELLCHECK))
                             })
                           : null
                   ]

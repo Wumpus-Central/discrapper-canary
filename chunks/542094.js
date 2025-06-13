@@ -3,7 +3,7 @@ n.d(t, {
     Qv: () => w,
     ZP: () => P,
     fD: () => _,
-    w1: () => I
+    w1: () => A
 }),
     n(997841),
     n(704826),
@@ -12,8 +12,8 @@ var i,
     r = n(493683),
     l = n(911969),
     o = n(906732),
-    a = n(835473),
-    u = n(630388),
+    u = n(835473),
+    a = n(630388),
     c = n(358085),
     d = n(317381),
     s = n(638880),
@@ -29,25 +29,25 @@ var i,
     g = n(981631),
     h = (((i = {})[(i.START = 0)] = 'START'), (i[(i.JOIN = 1)] = 'JOIN'), (i[(i.LEAVE = 2)] = 'LEAVE'), i);
 function P(e) {
-    let { activityItem: t, context: n, locationObject: i, onActivityItemSelected: r, embeddedActivitiesManager: o, assetNames: a = ['embedded_cover'], backgroundResolution: u = 250, launchingComponentId: d, commandOrigin: s, source: p } = e,
+    let { activityItem: t, context: n, locationObject: i, onActivityItemSelected: r, embeddedActivitiesManager: o, assetNames: u = ['embedded_cover'], backgroundResolution: a = 250, launchingComponentId: d, commandOrigin: s, source: p } = e,
         { application: v, activity: m } = t,
         E = m.client_platform_config[(0, y.Z)((0, c.getOS)())],
         O = null != E.label_until && Date.now() < Date.parse(E.label_until),
         g = (0, Z.Z)({
             applicationId: v.id,
-            size: u,
-            names: a
+            size: a,
+            names: u
         }),
         h = null != m.activity_preview_video_asset_id ? (0, b.Z)(v.id, m.activity_preview_video_asset_id) : null,
         P = (0, f.ZP)('channel' === n.type ? n.channel : void 0).find((e) => {
             let { embeddedActivity: t } = e;
             return v.id === t.applicationId;
         }),
-        A = w({
+        I = w({
             context: n,
             applicationId: v.id
         }),
-        S = I({
+        S = A({
             applicationId: t.application.id,
             context: n,
             locationObject: i,
@@ -62,7 +62,7 @@ function P(e) {
         imageBackground: g,
         videoUrl: h,
         joinableEmbeddedApp: P,
-        activityAction: A,
+        activityAction: I,
         onActivityItemSelected: S,
         labelType: O ? E.label_type : l.ww.NONE,
         staffReleasePhase: j
@@ -71,7 +71,7 @@ function P(e) {
 function _(e, t) {
     var n;
     let i = null != (n = e.flags) ? n : 0;
-    if (!((0, u.yE)(i, g.udG.EMBEDDED_RELEASED) || (0, u.yE)(i, g.udG.EMBEDDED_FIRST_PARTY))) return;
+    if (!((0, a.yE)(i, g.udG.EMBEDDED_RELEASED) || (0, a.yE)(i, g.udG.EMBEDDED_FIRST_PARTY))) return;
     let r = t.client_platform_config[(0, y.Z)((0, c.getOS)())].release_phase;
     return O.eB.includes(r) ? r.replace('_', ' ').replace(/(^\w|\s\w)/g, (e) => e.toUpperCase()) : void 0;
 }
@@ -80,18 +80,18 @@ function w(e) {
         r = 0,
         l = 'channel' === t.type ? t.channel : void 0,
         o = (0, m.Z)(),
-        u = (0, E.Z)({ fetchesApplication: i }),
-        c = (0, a.q)(n, i),
+        a = (0, E.Z)({ fetchesApplication: i }),
+        c = (0, u.q)(n, i),
         d = (0, f.ZP)(l).find((e) => {
             let { embeddedActivity: t } = e;
             return null != c && c.id === t.applicationId;
         });
     if (null == c) return r;
     let s = (0, v.p)(null == o ? void 0 : o.location);
-    return null != l && s === l.id && (null == u ? void 0 : u.id) === c.id ? (r = 2) : null != d && (r = 1), r;
+    return null != l && s === l.id && (null == a ? void 0 : a.id) === c.id ? (r = 2) : null != d && (r = 1), r;
 }
-function I(e) {
-    let { applicationId: t, botUserIdForAppDM: n, context: i, locationObject: l, embeddedActivitiesManager: a, onActivityItemSelectedProp: u, launchingComponentId: c, commandOrigin: f, sectionName: v, source: y, fetchesApplication: b = !0, customId: E, referrerId: Z, onConfirmActivityLaunchChecksAlertOpen: O } = e,
+function A(e) {
+    let { applicationId: t, botUserIdForAppDM: n, context: i, locationObject: l, embeddedActivitiesManager: u, onActivityItemSelectedProp: a, launchingComponentId: c, commandOrigin: f, sectionName: v, source: y, fetchesApplication: b = !0, customId: E, referrerId: Z, onConfirmActivityLaunchChecksAlertOpen: O } = e,
         g = w({
             context: i,
             applicationId: t,
@@ -124,7 +124,7 @@ function I(e) {
                     customId: E,
                     referrerId: Z,
                     onConfirmActivityLaunchChecksAlertOpen: O
-                }).then((e) => e && (null == u ? void 0 : u({ applicationId: t })));
+                }).then((e) => e && (null == a ? void 0 : a({ applicationId: t })));
             };
         case 1:
             return async () => {
@@ -139,17 +139,17 @@ function I(e) {
                         source: y,
                         customId: E,
                         referrerId: Z
-                    }).then((e) => e && (null == u ? void 0 : u({ applicationId: t }))));
+                    }).then((e) => e && (null == a ? void 0 : a({ applicationId: t }))));
             };
         case 2:
             return () => {
                 d.ZP.isLaunchingActivity() ||
                     (null != P &&
-                        a.leaveActivity({
+                        u.leaveActivity({
                             location: P.location,
                             applicationId: t
                         }),
-                    null == u || u({ applicationId: t }));
+                    null == a || a({ applicationId: t }));
             };
     }
 }

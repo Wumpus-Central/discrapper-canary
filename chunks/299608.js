@@ -1,16 +1,15 @@
-var r = n(954955),
-    i = n(661233),
-    a = 'Expected a function';
-e.exports = function (e, t, n) {
+var n = r(954955),
+    i = r(661233);
+t.exports = function (t, e, r) {
     var o = !0,
-        s = !0;
-    if ('function' != typeof e) throw TypeError(a);
+        a = !0;
+    if ('function' != typeof t) throw TypeError('Expected a function');
     return (
-        i(n) && ((o = 'leading' in n ? !!n.leading : o), (s = 'trailing' in n ? !!n.trailing : s)),
-        r(e, t, {
+        i(r) && ((o = 'leading' in r ? !!r.leading : o), (a = 'trailing' in r ? !!r.trailing : a)),
+        n(t, e, {
             leading: o,
-            maxWait: t,
-            trailing: s
+            maxWait: e,
+            trailing: a
         })
     );
 };

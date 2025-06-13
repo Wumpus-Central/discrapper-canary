@@ -5,7 +5,7 @@ var r = n(147519),
     o = n(462176);
 r.Z.registerLanguage('ansi', o.Z);
 let s = /(<script\/?\\?>)|(html\\?`)/g,
-    l = new Set(['html', 'xml', 'javascript', 'typescript']),
+    l = new Set(['html', 'xml', 'javascript', 'typescript', 'handlebars']),
     c = /^[a-z0-9_+\-.#]+$/,
     u = r.Z.listLanguages(),
     d = new Map();

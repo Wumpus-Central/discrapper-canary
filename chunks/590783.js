@@ -1,11 +1,12 @@
-n.d(t, { Z: () => d }), n(997841);
+n.d(t, { Z: () => _ }), n(997841);
 var r = n(913527),
     i = n.n(r),
     a = n(81825),
     o = n(630388),
-    s = n(301766),
-    l = n(474936);
-function c(e, t, n) {
+    s = n(605338),
+    l = n(301766),
+    c = n(474936);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,14 +19,14 @@ function c(e, t, n) {
         e
     );
 }
-let u = Object.freeze({
+let d = Object.freeze({
     PAYMENT_SOURCE_REQUIRED: 1,
     EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2,
     NOT_SELF_REDEEMABLE: 4
 });
-class d extends a.Z {
+class _ extends a.Z {
     static createFromServer(e) {
-        return new d({
+        return new _({
             userId: null != e.user ? e.user.id : null,
             code: e.code,
             skuId: e.sku_id,
@@ -36,7 +37,7 @@ class d extends a.Z {
             expiresAt: null != e.expires_at ? i()(e.expires_at) : null,
             redeemed: e.redeemed,
             subscriptionPlanId: null != e.subscription_plan ? e.subscription_plan.id : e.subscription_plan_id,
-            subscriptionPlan: null != e.subscription_plan ? s.ZP.createFromServer(e.subscription_plan) : null,
+            subscriptionPlan: null != e.subscription_plan ? l.ZP.createFromServer(e.subscription_plan) : null,
             revoked: !1,
             entitlementBranches: null != e.entitlement_branches ? e.entitlement_branches : null,
             flags: null != e.flags ? e.flags : 0,
@@ -50,17 +51,7 @@ class d extends a.Z {
                           skuId: e.subscription_trial.sku_id
                       }
                     : null,
-            promotion:
-                null != e.promotion
-                    ? {
-                          id: e.promotion.id,
-                          startDate: e.promotion.start_date,
-                          endDate: e.promotion.end_date,
-                          inboundHeaderText: e.promotion.inbound_header_text,
-                          inboundBodyText: e.promotion.inbound_body_text,
-                          inboundHelpCenterLink: e.promotion.inbound_help_center_link
-                      }
-                    : null
+            promotion: null != e.promotion ? s.Z.createFromServer(e.promotion) : null
         });
     }
     isExpired() {
@@ -80,13 +71,13 @@ class d extends a.Z {
         return null != this.subscriptionPlanId;
     }
     get premiumSubscriptionType() {
-        return (this.isSubscription && l.y7[this.skuId]) || null;
+        return (this.isSubscription && c.y7[this.skuId]) || null;
     }
     get isSelfRedeemable() {
-        return !(0, o.yE)(this.flags, u.NOT_SELF_REDEEMABLE);
+        return !(0, o.yE)(this.flags, d.NOT_SELF_REDEEMABLE);
     }
     get isExistingPremiumSubscriptionDisallowed() {
-        return (0, o.yE)(this.flags, u.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
+        return (0, o.yE)(this.flags, d.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
     }
     get analyticsData() {
         return {
@@ -98,6 +89,6 @@ class d extends a.Z {
         return this.code;
     }
     constructor(e) {
-        super(), c(this, 'userId', void 0), c(this, 'code', void 0), c(this, 'skuId', void 0), c(this, 'applicationId', void 0), c(this, 'uses', void 0), c(this, 'maxUses', void 0), c(this, 'expiresAt', void 0), c(this, 'redeemed', void 0), c(this, 'storeListingId', void 0), c(this, 'subscriptionPlanId', void 0), c(this, 'subscriptionPlan', void 0), c(this, 'revoked', void 0), c(this, 'entitlementBranches', void 0), c(this, 'flags', void 0), c(this, 'subscriptionTrial', void 0), c(this, 'promotion', void 0), c(this, 'giftStyle', void 0), (this.userId = e.userId), (this.code = e.code), (this.skuId = e.skuId), (this.applicationId = e.applicationId), (this.uses = e.uses), (this.maxUses = e.maxUses), (this.expiresAt = e.expiresAt), (this.redeemed = e.redeemed), (this.storeListingId = e.storeListingId), (this.subscriptionPlanId = e.subscriptionPlanId), (this.subscriptionPlan = e.subscriptionPlan), (this.revoked = e.revoked), (this.entitlementBranches = e.entitlementBranches), (this.flags = e.flags), (this.subscriptionTrial = e.subscriptionTrial), (this.promotion = e.promotion), (this.giftStyle = e.giftStyle);
+        super(), u(this, 'userId', void 0), u(this, 'code', void 0), u(this, 'skuId', void 0), u(this, 'applicationId', void 0), u(this, 'uses', void 0), u(this, 'maxUses', void 0), u(this, 'expiresAt', void 0), u(this, 'redeemed', void 0), u(this, 'storeListingId', void 0), u(this, 'subscriptionPlanId', void 0), u(this, 'subscriptionPlan', void 0), u(this, 'revoked', void 0), u(this, 'entitlementBranches', void 0), u(this, 'flags', void 0), u(this, 'subscriptionTrial', void 0), u(this, 'promotion', void 0), u(this, 'giftStyle', void 0), (this.userId = e.userId), (this.code = e.code), (this.skuId = e.skuId), (this.applicationId = e.applicationId), (this.uses = e.uses), (this.maxUses = e.maxUses), (this.expiresAt = e.expiresAt), (this.redeemed = e.redeemed), (this.storeListingId = e.storeListingId), (this.subscriptionPlanId = e.subscriptionPlanId), (this.subscriptionPlan = e.subscriptionPlan), (this.revoked = e.revoked), (this.entitlementBranches = e.entitlementBranches), (this.flags = e.flags), (this.subscriptionTrial = e.subscriptionTrial), (this.promotion = e.promotion), (this.giftStyle = e.giftStyle);
     }
 }

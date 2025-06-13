@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => _ });
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -6,272 +6,250 @@ var r = n(120356),
     l = n(481060),
     a = n(100527),
     o = n(906732),
-    c = n(278754),
-    d = n(454585),
-    u = n(125900),
-    m = n(921801),
-    g = n(626135),
-    p = n(695346),
-    h = n(726985),
-    f = n(981631),
-    b = n(388032),
-    _ = n(20493);
-function x() {
-    let e = (0, c.pR)(),
-        t = (0, c.Ju)(),
-        n = p.fq.useSetting(),
-        r = p.eR.useSetting(),
-        x = (0, u.V2)({ location: 'UserSettingsTextImages' }),
-        E = p.R$.useSetting(),
-        j = p.cC.useSetting(),
-        C = p.vF.useSetting(),
-        O = p.H1.useSetting(),
-        S = p.ev.useSetting(),
-        v = p.x4.useSetting(),
-        T = p.RS.useSetting(),
-        I = p.NA.useSetting(),
-        N = p.nc.useSetting(),
-        { analyticsLocations: y } = (0, o.ZP)(a.Z.TEXT_AND_IMAGES);
+    c = n(454585),
+    d = n(125900),
+    u = n(921801),
+    m = n(626135),
+    g = n(695346),
+    p = n(726985),
+    h = n(981631),
+    f = n(388032),
+    b = n(20493);
+function _() {
+    let e = g.fq.useSetting(),
+        t = g.eR.useSetting(),
+        n = (0, d.V2)({ location: 'UserSettingsTextImages' }),
+        r = g.R$.useSetting(),
+        _ = g.cC.useSetting(),
+        x = g.vF.useSetting(),
+        E = g.H1.useSetting(),
+        j = g.ev.useSetting(),
+        C = g.x4.useSetting(),
+        O = g.RS.useSetting(),
+        S = g.NA.useSetting(),
+        v = g.nc.useSetting(),
+        { analyticsLocations: T } = (0, o.ZP)(a.Z.TEXT_AND_IMAGES);
     return (0, i.jsxs)(l.hjN, {
         tag: l.RB0.H1,
-        title: b.intl.string(b.t['/VQax8']),
+        title: f.intl.string(f.t['/VQax8']),
         children: [
-            (0, i.jsxs)(m.F, {
-                setting: h.s6.CHAT_INLINE_MEDIA,
+            (0, i.jsxs)(u.F, {
+                setting: p.s6.CHAT_INLINE_MEDIA,
                 children: [
                     (0, i.jsx)(l.vwX, {
-                        className: _.marginBottom8,
-                        children: b.intl.string(b.t.U68Dgo)
+                        className: b.marginBottom8,
+                        children: f.intl.string(f.t.U68Dgo)
                     }),
-                    (0, i.jsx)(m.F, {
-                        setting: h.s6.CHAT_INLINE_MEDIA_LINKS,
+                    (0, i.jsx)(u.F, {
+                        setting: p.s6.CHAT_INLINE_MEDIA_LINKS,
                         children: (0, i.jsx)(l.j7V, {
-                            className: s()(_.marginTop8, _.marginBottom20),
-                            value: T,
-                            onChange: p.RS.updateSetting,
-                            children: b.intl.string(b.t.U47N1t)
-                        })
-                    }),
-                    (0, i.jsx)(m.F, {
-                        setting: h.s6.CHAT_INLINE_MEDIA_UPLOADS,
-                        children: (0, i.jsx)(l.j7V, {
-                            className: s()(_.marginTop8, _.marginBottom20),
-                            value: v,
-                            note: b.intl.formatToPlainString(b.t.qjjvqK, { maxSize: 10 }),
-                            onChange: p.x4.updateSetting,
-                            children: b.intl.string(b.t.VP11Nj)
-                        })
-                    }),
-                    (0, i.jsx)(m.F, {
-                        setting: h.s6.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS,
-                        children: (0, i.jsx)(l.j7V, {
-                            className: s()(_.marginTop8, _.marginBottom40),
+                            className: s()(b.marginTop8, b.marginBottom20),
                             value: O,
-                            note: b.intl.string(b.t.T0rbtL),
-                            onChange: p.H1.updateSetting,
-                            children: b.intl.string(b.t['w8j+yc'])
+                            onChange: g.RS.updateSetting,
+                            children: f.intl.string(f.t.U47N1t)
+                        })
+                    }),
+                    (0, i.jsx)(u.F, {
+                        setting: p.s6.CHAT_INLINE_MEDIA_UPLOADS,
+                        children: (0, i.jsx)(l.j7V, {
+                            className: s()(b.marginTop8, b.marginBottom20),
+                            value: C,
+                            note: f.intl.formatToPlainString(f.t.qjjvqK, { maxSize: 10 }),
+                            onChange: g.x4.updateSetting,
+                            children: f.intl.string(f.t.VP11Nj)
+                        })
+                    }),
+                    (0, i.jsx)(u.F, {
+                        setting: p.s6.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS,
+                        children: (0, i.jsx)(l.j7V, {
+                            className: s()(b.marginTop8, b.marginBottom40),
+                            value: E,
+                            note: f.intl.string(f.t.T0rbtL),
+                            onChange: g.H1.updateSetting,
+                            children: f.intl.string(f.t['w8j+yc'])
                         })
                     })
                 ]
             }),
-            (0, i.jsxs)(m.F, {
-                setting: h.s6.CHAT_EMBEDS,
+            (0, i.jsxs)(u.F, {
+                setting: p.s6.CHAT_EMBEDS,
                 children: [
                     (0, i.jsx)(l.vwX, {
-                        className: _.marginBottom8,
-                        children: b.intl.string(b.t.PWZOn5)
+                        className: b.marginBottom8,
+                        children: f.intl.string(f.t.PWZOn5)
                     }),
-                    (0, i.jsx)(m.F, {
-                        setting: h.s6.CHAT_EMBEDS_LINK_PREVIEWS,
+                    (0, i.jsx)(u.F, {
+                        setting: p.s6.CHAT_EMBEDS_LINK_PREVIEWS,
                         children: (0, i.jsx)(l.j7V, {
-                            className: s()(_.marginTop8, _.marginBottom40),
-                            value: I,
-                            onChange: p.NA.updateSetting,
-                            children: b.intl.string(b.t.xX0ZTE)
-                        })
-                    })
-                ]
-            }),
-            (0, i.jsxs)(m.F, {
-                setting: h.s6.CHAT_EMOJI,
-                children: [
-                    (0, i.jsx)(l.vwX, {
-                        className: _.marginBottom8,
-                        children: b.intl.string(b.t.sMOuub)
-                    }),
-                    (0, i.jsx)(m.F, {
-                        setting: h.s6.CHAT_EMOJI_REACTIONS,
-                        children: (0, i.jsx)(l.j7V, {
-                            className: s()(_.marginTop8, _.marginBottom20),
-                            value: N,
-                            onChange: p.nc.updateSetting,
-                            children: b.intl.string(b.t.Iv24sr)
-                        })
-                    }),
-                    (0, i.jsx)(m.F, {
-                        setting: h.s6.CHAT_EMOJI_EMOTICONS,
-                        children: (0, i.jsx)(l.j7V, {
-                            className: _.marginBottom40,
+                            className: s()(b.marginTop8, b.marginBottom40),
                             value: S,
-                            note: d.Z.parse(b.intl.string(b.t['20dvub'])),
-                            onChange: p.ev.updateSetting,
-                            children: b.intl.string(b.t['79qal5'])
+                            onChange: g.NA.updateSetting,
+                            children: f.intl.string(f.t.xX0ZTE)
                         })
                     })
                 ]
             }),
-            (0, i.jsx)(m.F, {
-                setting: h.s6.CHAT_STICKERS,
+            (0, i.jsxs)(u.F, {
+                setting: p.s6.CHAT_EMOJI,
+                children: [
+                    (0, i.jsx)(l.vwX, {
+                        className: b.marginBottom8,
+                        children: f.intl.string(f.t.sMOuub)
+                    }),
+                    (0, i.jsx)(u.F, {
+                        setting: p.s6.CHAT_EMOJI_REACTIONS,
+                        children: (0, i.jsx)(l.j7V, {
+                            className: s()(b.marginTop8, b.marginBottom20),
+                            value: v,
+                            onChange: g.nc.updateSetting,
+                            children: f.intl.string(f.t.Iv24sr)
+                        })
+                    }),
+                    (0, i.jsx)(u.F, {
+                        setting: p.s6.CHAT_EMOJI_EMOTICONS,
+                        children: (0, i.jsx)(l.j7V, {
+                            className: b.marginBottom40,
+                            value: j,
+                            note: c.Z.parse(f.intl.string(f.t['20dvub'])),
+                            onChange: g.ev.updateSetting,
+                            children: f.intl.string(f.t['79qal5'])
+                        })
+                    })
+                ]
+            }),
+            (0, i.jsx)(u.F, {
+                setting: p.s6.CHAT_STICKERS,
                 children: (0, i.jsxs)(l.hjN, {
-                    className: _.marginBottom8,
+                    className: b.marginBottom8,
                     children: [
                         (0, i.jsx)(l.vwX, {
-                            className: _.marginBottom8,
-                            children: b.intl.string(b.t['6NtAuL'])
+                            className: b.marginBottom8,
+                            children: f.intl.string(f.t['6NtAuL'])
                         }),
-                        t
-                            ? null
-                            : (0, i.jsx)(m.F, {
-                                  setting: h.s6.CHAT_STICKERS_SUGGESTIONS,
-                                  children: (0, i.jsx)(l.j7V, {
-                                      className: s()(_.marginTop8, _.marginBottom20),
-                                      value: e,
-                                      note: b.intl.string(b.t.r3uQUV),
-                                      onChange: (t) => {
-                                          g.default.track(f.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
-                                              enabled: !e,
-                                              location: { section: f.jXE.SETTINGS_TEXT_AND_IMAGES },
-                                              location_stack: y
-                                          }),
-                                              (0, c.AW)(!e);
-                                      },
-                                      children: b.intl.string(b.t['479+PT'])
-                                  })
-                              }),
-                        (0, i.jsx)(m.F, {
-                            setting: h.s6.CHAT_STICKERS_AUTOCOMPLETE,
+                        (0, i.jsx)(u.F, {
+                            setting: p.s6.CHAT_STICKERS_AUTOCOMPLETE,
                             children: (0, i.jsx)(l.j7V, {
-                                className: _.marginBottom40,
-                                value: n,
-                                note: b.intl.string(b.t['/eVrj4']),
+                                className: b.marginBottom40,
+                                value: e,
+                                note: f.intl.string(f.t['/eVrj4']),
                                 onChange: (e) => {
-                                    g.default.track(f.rMx.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
+                                    m.default.track(h.rMx.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
                                         enabled: e,
-                                        location: { section: f.jXE.SETTINGS_TEXT_AND_IMAGES },
-                                        location_stack: y
+                                        location: { section: h.jXE.SETTINGS_TEXT_AND_IMAGES },
+                                        location_stack: T
                                     }),
-                                        p.fq.updateSetting(e);
+                                        g.fq.updateSetting(e);
                                 },
-                                children: b.intl.string(b.t['29xPVV'])
+                                children: f.intl.string(f.t['29xPVV'])
                             })
                         })
                     ]
                 })
             }),
-            x &&
-                (0, i.jsx)(m.F, {
-                    setting: h.s6.CHAT_SOUNDMOJI,
+            n &&
+                (0, i.jsx)(u.F, {
+                    setting: p.s6.CHAT_SOUNDMOJI,
                     children: (0, i.jsxs)(l.hjN, {
-                        className: _.marginBottom8,
+                        className: b.marginBottom8,
                         children: [
                             (0, i.jsx)(l.vwX, {
-                                className: _.marginBottom8,
-                                children: b.intl.string(b.t.EHlAMT)
+                                className: b.marginBottom8,
+                                children: f.intl.string(f.t.EHlAMT)
                             }),
-                            (0, i.jsx)(m.F, {
-                                setting: h.s6.CHAT_SOUNDMOJI_AUTOCOMPLETE,
+                            (0, i.jsx)(u.F, {
+                                setting: p.s6.CHAT_SOUNDMOJI_AUTOCOMPLETE,
                                 children: (0, i.jsx)(l.j7V, {
-                                    className: _.marginBottom40,
-                                    value: r,
-                                    note: b.intl.string(b.t.hrSIhI),
+                                    className: b.marginBottom40,
+                                    value: t,
+                                    note: f.intl.string(f.t.hrSIhI),
                                     onChange: (e) => {
-                                        g.default.track(f.rMx.SOUNDMOJI_IN_AUTOCOMPLETE_TOGGLED, {
+                                        m.default.track(h.rMx.SOUNDMOJI_IN_AUTOCOMPLETE_TOGGLED, {
                                             checked: e,
-                                            location: { section: f.jXE.SETTINGS_TEXT_AND_IMAGES }
+                                            location: { section: h.jXE.SETTINGS_TEXT_AND_IMAGES }
                                         }),
-                                            p.eR.updateSetting(e);
+                                            g.eR.updateSetting(e);
                                     },
-                                    children: b.intl.string(b.t['CtYr+f'])
+                                    children: f.intl.string(f.t['CtYr+f'])
                                 })
                             })
                         ]
                     })
                 }),
-            (0, i.jsx)(m.F, {
-                setting: h.s6.CHAT_TEXT_BOX,
+            (0, i.jsx)(u.F, {
+                setting: p.s6.CHAT_TEXT_BOX,
                 children: (0, i.jsxs)(l.hjN, {
-                    className: _.marginBottom8,
+                    className: b.marginBottom8,
                     children: [
                         (0, i.jsx)(l.vwX, {
-                            className: _.marginBottom8,
-                            children: b.intl.string(b.t.afR0pK)
+                            className: b.marginBottom8,
+                            children: f.intl.string(f.t.afR0pK)
                         }),
-                        (0, i.jsx)(m.F, {
-                            setting: h.s6.CHAT_TEXT_BOX_PREVIEW,
+                        (0, i.jsx)(u.F, {
+                            setting: p.s6.CHAT_TEXT_BOX_PREVIEW,
                             children: (0, i.jsx)(l.j7V, {
-                                className: s()(_.marginTop8, _.marginBottom40),
-                                value: E,
+                                className: s()(b.marginTop8, b.marginBottom40),
+                                value: r,
                                 onChange: (e) => {
-                                    g.default.track(f.rMx.PREVIEW_MARKDOWN_TOGGLED, {
+                                    m.default.track(h.rMx.PREVIEW_MARKDOWN_TOGGLED, {
                                         enabled: e,
-                                        location: { section: f.jXE.SETTINGS_TEXT_AND_IMAGES }
+                                        location: { section: h.jXE.SETTINGS_TEXT_AND_IMAGES }
                                     }),
-                                        p.R$.updateSetting(e);
+                                        g.R$.updateSetting(e);
                                 },
-                                children: b.intl.string(b.t.AqGrEB)
+                                children: f.intl.string(f.t.AqGrEB)
                             })
                         })
                     ]
                 })
             }),
-            (0, i.jsx)(m.F, {
-                setting: h.s6.CHAT_THREADS,
+            (0, i.jsx)(u.F, {
+                setting: p.s6.CHAT_THREADS,
                 children: (0, i.jsxs)(l.hjN, {
-                    className: _.marginBottom40,
+                    className: b.marginBottom40,
                     children: [
                         (0, i.jsx)(l.vwX, {
-                            className: _.marginBottom8,
-                            children: b.intl.string(b.t.B2panJ)
+                            className: b.marginBottom8,
+                            children: f.intl.string(f.t.B2panJ)
                         }),
-                        (0, i.jsx)(m.F, {
-                            setting: h.s6.CHAT_THREADS_SPLIT_VIEW,
+                        (0, i.jsx)(u.F, {
+                            setting: p.s6.CHAT_THREADS_SPLIT_VIEW,
                             children: (0, i.jsx)(l.j7V, {
-                                className: _.marginTop8,
-                                value: C,
-                                onChange: p.vF.updateSetting,
-                                children: b.intl.string(b.t.AInv5u)
+                                className: b.marginTop8,
+                                value: x,
+                                onChange: g.vF.updateSetting,
+                                children: f.intl.string(f.t.AInv5u)
                             })
                         })
                     ]
                 })
             }),
-            (0, i.jsx)(m.F, {
-                setting: h.s6.CHAT_SPOILERS,
+            (0, i.jsx)(u.F, {
+                setting: p.s6.CHAT_SPOILERS,
                 children: (0, i.jsxs)(l.xJW, {
-                    title: b.intl.string(b.t.QgwmV1),
+                    title: f.intl.string(f.t.QgwmV1),
                     children: [
                         (0, i.jsx)(l.R94, {
                             type: l.R94.Types.DESCRIPTION,
-                            className: _.marginBottom8,
-                            children: b.intl.string(b.t.TYnRkZ)
+                            className: b.marginBottom8,
+                            children: f.intl.string(f.t.TYnRkZ)
                         }),
                         (0, i.jsx)(l.FXm, {
                             options: [
                                 {
-                                    name: b.intl.string(b.t['KFH/mZ']),
-                                    value: f.A2N.ON_CLICK
+                                    name: f.intl.string(f.t['KFH/mZ']),
+                                    value: h.A2N.ON_CLICK
                                 },
                                 {
-                                    name: b.intl.string(b.t.K5VTBA),
-                                    value: f.A2N.IF_MODERATOR
+                                    name: f.intl.string(f.t.K5VTBA),
+                                    value: h.A2N.IF_MODERATOR
                                 },
                                 {
-                                    name: b.intl.string(b.t.Pe1RbG),
-                                    value: f.A2N.ALWAYS
+                                    name: f.intl.string(f.t.Pe1RbG),
+                                    value: h.A2N.ALWAYS
                                 }
                             ],
-                            onChange: (e) => p.cC.updateSetting(e.value),
-                            value: j
+                            onChange: (e) => g.cC.updateSetting(e.value),
+                            value: _
                         })
                     ]
                 })

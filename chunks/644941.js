@@ -1,4 +1,4 @@
-r.d(t, { default: () => z }), r(388685), r(49124);
+r.d(t, { default: () => B }), r(388685), r(49124);
 var n = r(255367),
     i = r(73800),
     a = r(120356),
@@ -212,7 +212,7 @@ function Y(e) {
     });
 }
 let U = (e) => e.filter(S.z6).slice(0, 5),
-    z = (e) => {
+    B = (e) => {
         var t;
         let { applicationId: r, source: a, sourceUserId: s, transitionState: o, onClose: c, appContext: v } = e,
             { clientThemesClassName: j } = (0, p.ZP)(),

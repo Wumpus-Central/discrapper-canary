@@ -26,71 +26,78 @@ function l() {
 }
 let c = l(),
     u = !1,
-    d = null;
-function _() {
+    d = null,
+    _ = !1,
+    f = null,
+    p = [],
+    h = null;
+function m() {
     u = !0;
 }
-function f() {
+function g() {
     (c.bogoPromotion = null), (u = !1);
 }
-function p(e) {
+function E(e) {
     let { activePromotion: t } = e;
-    (c.bogoPromotion = t), (d = Date.now()), (u = !1);
+    (c.bogoPromotion = {
+        id: t.id,
+        startDate: t.startDate.toISOString(),
+        endDate: t.endDate.toISOString()
+    }),
+        (d = Date.now()),
+        (u = !1);
 }
-let h = !1,
-    m = null,
-    g = [],
-    E = null;
 function b(e) {
     let { activeOutboundPromotions: t, consumedInboundPromotionId: n } = e;
-    (g = t), (m = Date.now()), (h = !1), c.hasFetchedConsumedInboundPromotionId || ((c.hasFetchedConsumedInboundPromotionId = !0), (c.consumedInboundPromotionId = n));
+    (p = t), (f = Date.now()), (_ = !1), c.hasFetchedConsumedInboundPromotionId || ((c.hasFetchedConsumedInboundPromotionId = !0), (c.consumedInboundPromotionId = n));
 }
 function y() {
-    h = !0;
+    _ = !0;
 }
 function O() {
-    (g = []), (h = !1);
+    (p = []), (_ = !1);
 }
 function v() {
-    let e = null;
-    for (let t of g) (null == e || new Date(t.startDate) > new Date(e)) && (e = t.startDate);
-    return e;
+    var e;
+    let t = null;
+    for (let e of p) (null == t || e.startDate > t) && (t = e.startDate);
+    return null != (e = null == t ? void 0 : t.toISOString()) ? e : null;
 }
 function I() {
-    if (0 === g.length) return !1;
+    if (0 === p.length) return !1;
     let e = v();
-    null != e && (E = e);
+    null != e && (h = e);
 }
 function T() {
-    if (0 === g.length) return !1;
+    if (0 === p.length) return !1;
     let e = v();
-    null != e && ((E = e), (c.lastSeenOutboundPromotionStartDate = e));
+    null != e && ((h = e), (c.lastSeenOutboundPromotionStartDate = e));
 }
 function S() {
-    (c = l()), (h = !1), (m = null), (u = !1), (d = null), (g = []);
+    (c = l()), (_ = !1), (f = null), (u = !1), (d = null), (p = []);
 }
 function A() {
     var e, t, n;
-    E = null != (n = null == (t = o.Z.settings.userContent) || null == (e = t.lastDismissedOutboundPromotionStartDate) ? void 0 : e.value) ? n : null;
+    h = null != (n = null == (t = o.Z.settings.userContent) || null == (e = t.lastDismissedOutboundPromotionStartDate) ? void 0 : e.value) ? n : null;
 }
 class N extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         null != e && (c = e), this.waitFor(o.Z), this.syncWith([o.Z], A);
     }
     get outboundPromotions() {
-        return g;
+        return p;
     }
     get lastSeenOutboundPromotionStartDate() {
         return c.lastSeenOutboundPromotionStartDate;
     }
     get lastDismissedOutboundPromotionStartDate() {
-        return E;
+        return h;
     }
     get lastFetchedActivePromotions() {
-        return m;
+        return f;
     }
     get isFetchingActiveOutboundPromotions() {
-        return h;
+        return _;
     }
     get hasFetchedConsumedInboundPromotionId() {
         return c.hasFetchedConsumedInboundPromotionId;
@@ -116,9 +123,9 @@ let C = new N(a.Z, {
     ACTIVE_OUTBOUND_PROMOTIONS_FETCH_SUCCESS: b,
     ACTIVE_OUTBOUND_PROMOTIONS_FETCH: y,
     ACTIVE_OUTBOUND_PROMOTIONS_FETCH_FAIL: O,
-    ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS: p,
-    ACTIVE_BOGO_PROMOTION_FETCH: _,
-    ACTIVE_BOGO_PROMOTION_FETCH_FAIL: f,
+    ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS: E,
+    ACTIVE_BOGO_PROMOTION_FETCH: m,
+    ACTIVE_BOGO_PROMOTION_FETCH_FAIL: g,
     OUTBOUND_PROMOTION_NOTICE_DISMISS: I,
     OUTBOUND_PROMOTIONS_SEEN: T,
     LOGOUT: S
