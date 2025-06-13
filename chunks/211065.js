@@ -11,8 +11,8 @@ var l = n(255367),
     m = n(907040),
     f = n(246133),
     h = n(695346),
-    p = n(293273),
-    b = n(594174),
+    b = n(293273),
+    p = n(594174),
     S = n(626135),
     j = n(720449),
     g = n(684269),
@@ -83,7 +83,7 @@ function E(t) {
         ]
     });
 }
-class I extends r.PureComponent {
+class D extends r.PureComponent {
     componentDidMount() {
         let { sourceAnalyticsLocations: t, sourceAnalyticsContext: e } = this.props;
         S.default.track(C.rMx.OPEN_MODAL, {
@@ -343,16 +343,16 @@ class I extends r.PureComponent {
     }
 }
 let k = o.ZP.connectStores(
-    [p.Z, b.default],
+    [b.Z, p.default],
     () => {
-        let t = b.default.getCurrentUser();
+        let t = p.default.getCurrentUser();
         return (
             i()(null != t, 'CustomStatusModal: user cannot be null'),
             {
-                customStatus: p.Z.getCustomStatusActivity(),
+                customStatus: b.Z.getCustomStatusActivity(),
                 user: t
             }
         );
     },
     { forwardRef: !0 }
-)(I);
+)(D);

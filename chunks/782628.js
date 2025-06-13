@@ -19,6 +19,7 @@ t.exports = {
     footer: 'footer_dbc4b7',
     clearAfterSelectContainer: 'clearAfterSelectContainer_dbc4b7',
     clearAfterSelectOption: 'clearAfterSelectOption_dbc4b7',
+    disabled: 'disabled_dbc4b7',
     clearAfterSelectOptionLabel: 'clearAfterSelectOptionLabel_dbc4b7',
     profilePreview: 'profilePreview_dbc4b7',
     labelSelectorContainer: 'labelSelectorContainer_dbc4b7',

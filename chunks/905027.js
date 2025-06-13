@@ -15,7 +15,7 @@ function p() {
         t = (0, s.e7)([m.Z], () => m.Z.getGuild()),
         n = (0, s.e7)([m.Z], () => m.Z.getErrors()),
         [p, h] = r.useState(!1),
-        f = r.useMemo(() => ((null == n ? void 0 : n.message) != null ? (null == n ? void 0 : n.message) : Object.keys(null != n ? n : {}).length > 0 ? g.intl.string(g.t.s35OuL) : null), [n]),
+        f = r.useMemo(() => ((null == n ? void 0 : n.message) != null ? (null == n ? void 0 : n.message) : (null == n ? void 0 : n.guild_tag) !== void 0 && n.guild_tag.length > 0 ? n.guild_tag[0] : Object.keys(null != n ? n : {}).length > 0 ? g.intl.string(g.t.s35OuL) : null), [n]),
         b = r.useCallback(async () => {
             var e, n, i;
             h(!0);

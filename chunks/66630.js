@@ -1,4 +1,4 @@
-n.d(e, { Z: () => Z }), n(388685);
+n.d(e, { Z: () => R }), n(388685);
 var l = n(255367),
     r = n(73800),
     a = n(120356),
@@ -11,8 +11,8 @@ var l = n(255367),
     m = n(100527),
     f = n(906732),
     h = n(318766),
-    p = n(907040),
-    b = n(594174),
+    b = n(907040),
+    p = n(594174),
     S = n(626135),
     j = n(644540),
     g = n(359588),
@@ -27,47 +27,48 @@ var l = n(255367),
     y = n(346565),
     w = n(562577),
     E = n(926563),
-    I = n(875425),
+    D = n(875425),
     k = n(981631),
-    D = n(185923),
+    I = n(185923),
     A = n(388032),
-    L = n(782628);
-function Z(t) {
+    Z = n(782628);
+let L = 'CLEAR_AFTER';
+function R(t) {
     var e, n;
-    let { transitionState: a, onClose: Z, sourceAnalyticsContext: R, sourceAnalyticsLocations: B = [], prompt: M = null, showLabelSelectorNewTooltip: U = !1 } = t,
-        z = (0, O.p)({ location: 'CustomStatusModalWithPreview' }),
-        Y = (0, j.P)({ location: 'CustomStatusModalWithPreview' }),
-        F = (0, g.Z)({ location: 'CustomStatusModalWithPreview' }),
-        { analyticsLocations: W } = (0, f.ZP)(B, m.Z.CUSTOM_STATUS_MODAL),
-        H = (0, o.e7)([b.default], () => {
+    let { transitionState: a, onClose: R, sourceAnalyticsContext: B, sourceAnalyticsLocations: M = [], prompt: U = null, showLabelSelectorNewTooltip: z = !1 } = t,
+        Y = (0, O.p)({ location: 'CustomStatusModalWithPreview' }),
+        F = (0, j.P)({ location: 'CustomStatusModalWithPreview' }),
+        H = (0, g.Z)({ location: 'CustomStatusModalWithPreview' }),
+        { analyticsLocations: W } = (0, f.ZP)(M, m.Z.CUSTOM_STATUS_MODAL),
+        K = (0, o.e7)([p.default], () => {
             var t;
-            return null != (t = b.default.getCurrentUser()) ? t : null;
+            return null != (t = p.default.getCurrentUser()) ? t : null;
         }),
-        K = (0, N.a)(),
-        [V, G] = r.useState(null != (e = null == K ? void 0 : K.state) ? e : ''),
-        [q, X] = r.useState(null != (n = null == K ? void 0 : K.emoji) ? n : null),
-        [Q, $] = r.useState((0, v.Z)()),
-        J = r.useRef(null),
+        V = (0, N.a)(),
+        [G, q] = r.useState(null != (e = null == V ? void 0 : V.state) ? e : ''),
+        [X, Q] = r.useState(null != (n = null == V ? void 0 : V.emoji) ? n : null),
+        [$, J] = r.useState((0, v.Z)()),
         tt = r.useRef(null),
         te = r.useRef(null),
-        [tn, tl] = r.useState(null != K && F ? (0, T.Z)(K) : null),
-        [tr, ta] = r.useState(U),
-        [ti, to] = r.useState(() => (z && null != M ? M.label() : A.intl.string(A.t['xod36+']))),
-        [ts, tu] = r.useState(ti),
-        { ref: tc, width: td } = (0, c.ZP)(ti);
+        tn = r.useRef(null),
+        [tl, tr] = r.useState(null != V && H ? (0, T.Z)(V) : null),
+        [ta, ti] = r.useState(z),
+        [to, ts] = r.useState(() => (Y && null != U ? U.label() : A.intl.string(A.t['xod36+']))),
+        [tu, tc] = r.useState(to),
+        { ref: td, width: tm } = (0, c.ZP)(to);
     r.useEffect(() => {
-        let t = te.current;
-        if (null == td || null == t) return;
-        let e = td - 78;
-        t.textContent = ti;
+        let t = tn.current;
+        if (null == tm || null == t) return;
+        let e = tm - 78;
+        t.textContent = to;
         let n = t.getBoundingClientRect().width;
-        if (n <= e) tu(ti);
+        if (n <= e) tc(to);
         else {
-            let t = n / ti.length,
+            let t = n / to.length,
                 l = Math.floor((e - 3 * t) / t);
-            tu(''.concat(ti.substring(0, l)).concat('...'));
+            tc(''.concat(to.substring(0, l)).concat('...'));
         }
-    }, [td, ti]),
+    }, [tm, to]),
         r.useEffect(() => {
             S.default.track(k.rMx.OPEN_MODAL, {
                 type: m.Z.CUSTOM_STATUS_MODAL,
@@ -76,11 +77,11 @@ function Z(t) {
         }, [W]),
         (0, d.ZP)(() => {
             var t, e;
-            null == (t = J.current) || t.focus(), null == (e = J.current) || e.setSelection(V.length, V.length);
+            null == (t = tt.current) || t.focus(), null == (e = tt.current) || e.setSelection(G.length, G.length);
         });
-    let tm = (t) => {
+    let tf = (t) => {
             null != t &&
-                X(
+                Q(
                     null != t.id
                         ? {
                               id: t.id,
@@ -94,120 +95,121 @@ function Z(t) {
                           }
                 );
         },
-        tf = () => {
-            (0, x.Z)({
-                text: V,
-                emojiInfo: q,
-                clearAfter: Q,
-                prompt: M,
-                customStatusLabel: tn,
-                analyticsLocations: W,
-                analyticsContext: R
-            }),
-                Z();
+        th = () => {
+            $ !== L &&
+                ((0, x.Z)({
+                    text: G,
+                    emojiInfo: X,
+                    clearAfter: $,
+                    prompt: U,
+                    customStatusLabel: tl,
+                    analyticsLocations: W,
+                    analyticsContext: B
+                }),
+                R());
         },
-        th = () =>
-            null == q
+        tb = () =>
+            null == X
                 ? null
                 : () =>
                       (0, l.jsx)(u.Z, {
-                          className: L.emoji,
-                          emojiId: q.id,
-                          emojiName: q.name,
-                          animated: !!q.animated
+                          className: Z.emoji,
+                          emojiId: X.id,
+                          emojiName: X.name,
+                          animated: !!X.animated
                       }),
-        tp = z ? A.intl.string(A.t.rp0aho) : A.intl.string(A.t.UcdRn5),
-        tb = 'custom-status-placeholder-text';
+        tp = Y ? A.intl.string(A.t.rp0aho) : A.intl.string(A.t.UcdRn5),
+        tS = 'custom-status-placeholder-text';
     return (0, l.jsxs)(s.Y0X, {
         transitionState: a,
         parentComponent: 'CustomStatusModalWithPreview',
         children: [
             (0, l.jsxs)(s.xBx, {
                 separator: !1,
-                className: L.header,
+                className: Z.header,
                 children: [
                     (0, l.jsx)('div', {
-                        className: L.headerTitle,
+                        className: Z.headerTitle,
                         children: (0, l.jsx)(s.X6q, {
                             variant: 'heading-xl/semibold',
                             children: A.intl.string(A.t.Zx4jzM)
                         })
                     }),
                     (0, l.jsx)('div', {
-                        className: L.headerCloseButton,
-                        children: (0, l.jsx)(s.olH, { onClick: Z })
+                        className: Z.headerCloseButton,
+                        children: (0, l.jsx)(s.olH, { onClick: R })
                     })
                 ]
             }),
             (0, l.jsxs)(s.hzk, {
                 children: [
-                    null != H &&
+                    null != K &&
                         (0, l.jsx)('div', {
-                            className: L.profilePreview,
+                            className: Z.profilePreview,
                             children: (0, l.jsx)(E.Z, {
-                                user: H,
-                                previewText: V,
-                                previewEmoji: q,
-                                placeHolderText: ti,
+                                user: K,
+                                previewText: G,
+                                previewEmoji: X,
+                                placeHolderText: to,
                                 transitionState: a,
-                                label: tn
+                                label: tl
                             })
                         }),
                     (0, l.jsxs)(s.hjN, {
-                        className: L.formGroup,
-                        titleClassName: L.customStatusInputTitle,
+                        className: Z.formGroup,
+                        titleClassName: Z.customStatusInputTitle,
                         title: tp,
                         children: [
-                            F &&
+                            H &&
                                 (0, l.jsx)('div', {
-                                    className: L.labelSelectorContainer,
+                                    className: Z.labelSelectorContainer,
                                     children: (0, l.jsx)(s.DY3, {
                                         position: 'right',
                                         color: s.FGA.BRAND,
                                         'aria-label': A.intl.string(A.t.y2b7CA),
-                                        shouldShow: tr,
-                                        forceOpen: tr && a === s.Dvm.ENTERED,
-                                        tooltipClassName: L.labelSelectorTooltip,
+                                        shouldShow: ta,
+                                        forceOpen: ta && a === s.Dvm.ENTERED,
+                                        tooltipClassName: Z.labelSelectorTooltip,
                                         text: A.intl.string(A.t.y2b7CA),
                                         children: (0, l.jsx)(w.Z, {
-                                            currentValue: tn,
+                                            currentValue: tl,
                                             onChange: (t) => {
-                                                let e = t === tn ? null : t;
+                                                let e = t === tl ? null : t;
                                                 S.default.track(k.rMx.CUSTOM_STATUS_LABEL_CLICKED, {
-                                                    previous_label: tn,
+                                                    previous_label: tl,
                                                     new_label: e,
-                                                    location_stack: B
+                                                    location_stack: M
                                                 }),
-                                                    tl(e),
-                                                    ta(!1),
-                                                    null != e && to((0, P.Z)(e));
+                                                    tr(e),
+                                                    ti(!1),
+                                                    null != e && ts((0, P.Z)(e));
                                             }
                                         })
                                     })
                                 }),
                             (0, l.jsxs)('div', {
-                                className: L.inputContainer,
-                                ref: tc,
+                                className: Z.inputContainer,
+                                ref: td,
                                 children: [
                                     (0, l.jsx)('span', {
-                                        ref: te,
-                                        className: L.hiddenPlaceholder,
+                                        ref: tn,
+                                        className: Z.hiddenPlaceholder,
                                         'aria-hidden': 'true'
                                     }),
                                     (0, l.jsx)('div', {
-                                        className: i()(L.emojiButtonContainer, null != tn && L.emojiButtonContainerWithLabel),
+                                        className: i()(Z.emojiButtonContainer, null != tl && Z.emojiButtonContainerWithLabel),
                                         children: (0, l.jsx)(s.yRy, {
-                                            targetElementRef: tt,
+                                            targetElementRef: te,
                                             renderPopout: (t) => {
                                                 let { closePopout: e } = t;
-                                                return (0, l.jsx)(p.Z, {
+                                                return (0, l.jsx)(b.Z, {
                                                     closePopout: e,
                                                     onSelectEmoji: (t) => {
                                                         let { emoji: n, willClose: l } = t;
-                                                        tm(n), l && e();
+                                                        tf(n), l && e();
                                                     },
-                                                    pickerIntention: D.Hz.STATUS,
-                                                    onNavigateAway: Z
+                                                    pickerIntention: I.Hz.STATUS,
+                                                    onNavigateAway: R
                                                 });
                                             },
                                             position: 'left',
@@ -245,11 +247,11 @@ function Z(t) {
                                                     })({}, t)),
                                                     (r = r =
                                                         {
-                                                            ref: tt,
+                                                            ref: te,
                                                             active: a,
-                                                            className: L.emojiButton,
+                                                            className: Z.emojiButton,
                                                             tabIndex: 0,
-                                                            renderButtonContents: th()
+                                                            renderButtonContents: tb()
                                                         }),
                                                     Object.getOwnPropertyDescriptors
                                                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -272,35 +274,35 @@ function Z(t) {
                                         s.Kx8,
                                         {
                                             autosize: !0,
-                                            'aria-describedby': tb,
-                                            value: V,
-                                            maxLength: I.s0,
+                                            'aria-describedby': tS,
+                                            value: G,
+                                            maxLength: D.s0,
                                             rows: 1,
                                             showRemainingCharacterCount: !1,
-                                            placeholder: ts,
+                                            placeholder: tu,
                                             onChange: (t) => {
-                                                G(t);
+                                                q(t);
                                             },
                                             onKeyDown: (t) => {
-                                                'Enter' === t.key && tf();
+                                                'Enter' === t.key && th();
                                             },
-                                            className: i()(L.input, null != tn && L.inputWithLabel),
-                                            inputRef: J
+                                            className: i()(Z.input, null != tl && Z.inputWithLabel),
+                                            inputRef: tt
                                         },
-                                        null != tn ? 'with-label' : 'without-label'
+                                        null != tl ? 'with-label' : 'without-label'
                                     ),
-                                    null != tn &&
+                                    null != tl &&
                                         (0, l.jsx)('div', {
-                                            className: L.inputCustomStatusLabelRow,
-                                            children: (0, l.jsx)(y.Z, { label: tn })
+                                            className: Z.inputCustomStatusLabelRow,
+                                            children: (0, l.jsx)(y.Z, { label: tl })
                                         }),
                                     (0, l.jsx)(s.nn4, {
-                                        id: tb,
-                                        children: ''.concat(A.intl.string(A.t.EVV6ub), ': ').concat(ti)
+                                        id: tS,
+                                        children: ''.concat(A.intl.string(A.t.EVV6ub), ': ').concat(to)
                                     }),
-                                    (V.length > 0 || null != q) &&
+                                    (G.length > 0 || null != X) &&
                                         (0, l.jsx)('div', {
-                                            className: i()(L.clearButtonWrapper, null != tn && L.buttonContainerWithLabel),
+                                            className: i()(Z.clearButtonWrapper, null != tl && Z.buttonContainerWithLabel),
                                             children: (0, l.jsx)(s.zxk, {
                                                 focusProps: {
                                                     offset: {
@@ -311,16 +313,16 @@ function Z(t) {
                                                     }
                                                 },
                                                 'aria-label': A.intl.string(A.t.wfYTHR),
-                                                className: L.clearButton,
+                                                className: Z.clearButton,
                                                 onClick: () => {
-                                                    G(''), X(null);
+                                                    q(''), Q(null);
                                                 },
                                                 look: s.zxk.Looks.BLANK,
                                                 size: s.zxk.Sizes.NONE,
                                                 children: (0, l.jsx)(s.k$p, {
                                                     size: 'md',
                                                     color: 'currentColor',
-                                                    className: L.clearIcon
+                                                    className: Z.clearIcon
                                                 })
                                             })
                                         })
@@ -332,25 +334,39 @@ function Z(t) {
             }),
             (0, l.jsx)(s.mzw, {
                 children: (0, l.jsxs)('div', {
-                    className: L.footer,
+                    className: Z.footer,
                     children: [
                         (0, l.jsx)('div', {
-                            className: L.clearAfterSelectContainer,
+                            className: Z.clearAfterSelectContainer,
                             children: (0, l.jsx)(s.q4e, {
-                                maxVisibleItems: I.wS.length,
-                                value: Q,
-                                options: I.wS.map((t) => ({
-                                    value: t,
-                                    key: t,
-                                    label: (0, C.Z)(t, Y)
-                                })),
-                                onChange: (t) => $(t),
-                                optionClassName: L.clearAfterSelectOption,
+                                maxVisibleItems: D.wS.length + 1,
+                                value: $,
+                                options: F
+                                    ? [
+                                          {
+                                              value: L,
+                                              key: L,
+                                              label: A.intl.string(A.t.E45wvL),
+                                              disabled: !0
+                                          },
+                                          ...D.wS.map((t) => ({
+                                              value: t,
+                                              key: t,
+                                              label: (0, C.Z)(t, !0)
+                                          }))
+                                      ]
+                                    : D.wS.map((t) => ({
+                                          value: t,
+                                          key: t,
+                                          label: (0, C.Z)(t)
+                                      })),
+                                onChange: (t) => J(t),
+                                optionClassName: Z.clearAfterSelectOption,
                                 renderOptionLabel: (t) => {
-                                    let { value: e } = t;
+                                    let { value: e, label: n, disabled: r } = t;
                                     return (0, l.jsx)('span', {
-                                        className: L.clearAfterSelectOptionLabel,
-                                        children: (0, _.Z)(e, Y)
+                                        className: i()(Z.clearAfterSelectOptionLabel, r ? Z.disabled : void 0),
+                                        children: e === L ? n : (0, _.Z)(e, F)
                                     });
                                 },
                                 look: s.qQH.CUSTOM,
@@ -362,7 +378,7 @@ function Z(t) {
                             type: 'submit',
                             size: s.zxk.Sizes.MEDIUM,
                             color: s.zxk.Colors.BRAND,
-                            onClick: tf,
+                            onClick: th,
                             children: A.intl.string(A.t.R3BPHx)
                         })
                     ]

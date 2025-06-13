@@ -1,22 +1,31 @@
-n.d(e, { Z: () => i });
-var l = n(823379),
-    r = n(875425),
-    a = n(388032);
-function i(t) {
+n.d(e, { Z: () => u });
+var l = n(55935),
+    r = n(70956),
+    a = n(823379),
+    i = n(875425),
+    o = n(388032);
+let s = (t) => {
+    let e = Date.now() + t;
+    return (0, l.KC)(new Date(), new Date(e)) ? o.intl.formatToPlainString(o.t['+3jw2t'], { time: o.intl.data.formatTime(e, { format: 'short' }) }) : o.intl.formatToPlainString(o.t['/Avy4O'], { time: o.intl.data.formatTime(e, { format: 'short' }) });
+};
+function u(t) {
     let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     switch (t) {
-        case r.FO.TODAY:
-            if (e) return a.intl.formatToPlainString(a.t.Yizuvb, { hours: 24 });
-            return a.intl.string(a.t.TOEOaW);
-        case r.FO.HOURS_4:
-            return a.intl.formatToPlainString(a.t.Yizuvb, { hours: 4 });
-        case r.FO.HOURS_1:
-            return a.intl.formatToPlainString(a.t.Yizuvb, { hours: 1 });
-        case r.FO.MINUTES_30:
-            return a.intl.formatToPlainString(a.t['/XUoq6'], { minutes: 30 });
-        case r.FO.DONT_CLEAR:
-            return a.intl.string(a.t.bRn8cn);
+        case i.FO.TODAY:
+            if (e) return s(r.Z.Millis.DAY);
+            return o.intl.string(o.t.TOEOaW);
+        case i.FO.HOURS_4:
+            if (e) return s(4 * r.Z.Millis.HOUR);
+            return o.intl.formatToPlainString(o.t.Yizuvb, { hours: 4 });
+        case i.FO.HOURS_1:
+            if (e) return s(+r.Z.Millis.HOUR);
+            return o.intl.formatToPlainString(o.t.Yizuvb, { hours: 1 });
+        case i.FO.MINUTES_30:
+            if (e) return s(30 * r.Z.Millis.MINUTE);
+            return o.intl.formatToPlainString(o.t['/XUoq6'], { minutes: 30 });
+        case i.FO.DONT_CLEAR:
+            return o.intl.string(o.t.bRn8cn);
         default:
-            (0, l.vE)(t);
+            (0, a.vE)(t);
     }
 }
