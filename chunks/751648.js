@@ -1,21 +1,25 @@
 r.d(t, {
-    ZO: () => o,
-    df: () => u,
-    hF: () => c,
-    j2: () => s,
-    qD: () => d
-});
+    ZO: () => s,
+    df: () => d,
+    hF: () => b,
+    j2: () => f,
+    qD: () => h
+}),
+    r(415506);
 var n = r(544891),
     a = r(570140),
     l = r(881052),
-    i = r(981631);
-async function o() {
+    i = r(710845),
+    o = r(960048),
+    u = r(981631);
+let c = new i.Z('VirtualCurrencyActionCreators');
+async function s() {
     a.Z.wait(() => {
         a.Z.dispatch({ type: 'VIRTUAL_CURRENCY_BALANCE_FETCH' });
     });
     try {
         let e = await n.tn.get({
-                url: i.ANM.VIRTUAL_CURRENCY_USER_BALANCE,
+                url: u.ANM.VIRTUAL_CURRENCY_USER_BALANCE,
                 rejectWithError: !1
             }),
             t = e.body.balance;
@@ -34,31 +38,36 @@ async function o() {
         });
     }
 }
-async function u(e) {
-    let { skuId: t, loadId: r, onRedeemStart: u, onRedeemSucceed: c, onRedeemFail: s, shouldRefetchBalance: d = !0 } = e;
+async function d(e) {
+    let { skuId: t, loadId: r, onRedeemStart: i, onRedeemSucceed: d, onRedeemFail: b, shouldRefetchBalance: f = !0 } = e;
     a.Z.wait(() => {
         a.Z.dispatch({
             type: 'VIRTUAL_CURRENCY_REDEEM_START',
             skuId: t
         });
     }),
-        null == u || u();
+        null == i || i();
     try {
         let e = (
             await n.tn.post({
-                url: i.ANM.VIRTUAL_CURRENCY_SKU_REDEEM(t),
+                url: u.ANM.VIRTUAL_CURRENCY_SKU_REDEEM(t),
                 body: { checkout_session_id: r },
                 rejectWithError: !1
             })
         ).body;
+        if (null == e || !Array.isArray(e)) {
+            let t = 'Could not read entitlements from Virtual Currency redemption response. Response: ',
+                r = Error(t, e);
+            throw (c.error(t, e), o.Z.captureException(r, { tags: { app_context: 'virtual_currency' } }), r);
+        }
         return (
             a.Z.dispatch({
                 type: 'VIRTUAL_CURRENCY_REDEEM_SUCCESS',
                 skuId: t,
                 entitlements: e
             }),
-            d && o(),
-            null == c || c(e),
+            f && s(),
+            null == d || d(e),
             e
         );
     } catch (r) {
@@ -68,11 +77,11 @@ async function u(e) {
             skuId: t,
             error: e
         }),
-            d && o(),
-            null == s || s(e);
+            f && s(),
+            null == b || b(e);
     }
 }
-function c(e) {
+function b(e) {
     let { earnedOrbsQuantity: t, dedupeKey: r } = e;
     return a.Z.dispatch({
         type: 'VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK_OPEN',
@@ -80,10 +89,10 @@ function c(e) {
         dedupeKey: r
     });
 }
-function s() {
+function f() {
     return a.Z.dispatch({ type: 'VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK_CLOSE' });
 }
-function d(e) {
+function h(e) {
     return a.Z.dispatch({
         type: 'VIRTUAL_CURRENCY_SET_BALANCE_PILL_OVERLAY',
         balancePillOverlay: e

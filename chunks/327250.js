@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => M });
+n.d(t, { ZP: () => k });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -177,7 +177,7 @@ function R(e) {
             )
     });
 }
-function k(e) {
+function M(e) {
     let { user: t, member: i, guildId: l } = e,
         m = (0, a.e7)([y.Z], () => y.Z.getGuild(l)),
         {
@@ -200,8 +200,8 @@ function k(e) {
             location: S,
             locations: P
         }),
-        k = (0, a.e7)([g.default], () => g.default.getId() === (null == t ? void 0 : t.id)),
-        M = (0, a.e7)(
+        M = (0, a.e7)([g.default], () => g.default.getId() === (null == t ? void 0 : t.id)),
+        k = (0, a.e7)(
             [v.Z, b.Z],
             () => {
                 var e;
@@ -214,7 +214,7 @@ function k(e) {
         className: N.bottomRow,
         children: [
             (0, r.jsx)(R, {
-                disabled: k,
+                disabled: M,
                 text: Z.intl.string(Z.t['g33r/P']),
                 onClick: () => {
                     s.Z.openPrivateChannel({ recipientIds: t.id });
@@ -239,7 +239,7 @@ function k(e) {
                                     location: S,
                                     guildId: l,
                                     user: t,
-                                    modReportId: M
+                                    modReportId: k
                                 })
                             );
                     });
@@ -264,7 +264,7 @@ function k(e) {
                                     location: S,
                                     guildId: l,
                                     user: t,
-                                    modReportId: M
+                                    modReportId: k
                                 })
                             );
                     });
@@ -290,7 +290,7 @@ function k(e) {
                               guildId: i.guildId,
                               userId: i.userId,
                               anaylticsLocations: P,
-                              modReportId: M
+                              modReportId: k
                           });
                 },
                 children: (0, r.jsx)(o.YlB, {
@@ -316,7 +316,7 @@ function k(e) {
         ]
     });
 }
-function M(e) {
+function k(e) {
     let { userId: t, guildId: n, onClose: i } = e,
         l = (0, a.e7)([O.default], () => O.default.getUser(t), [t]),
         o = (0, a.e7)([_.ZP], () => _.ZP.getMember(n, t), [n, t]);
@@ -330,7 +330,7 @@ function M(e) {
                       guildId: n,
                       onClose: i
                   }),
-                  (0, r.jsx)(k, {
+                  (0, r.jsx)(M, {
                       user: l,
                       member: o,
                       guildId: n

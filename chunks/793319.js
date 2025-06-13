@@ -36,8 +36,8 @@ var r = n(255367),
     A = n(446226),
     w = n(569545),
     R = n(74299),
-    k = n(803647),
-    M = n(554747),
+    M = n(803647),
+    k = n(554747),
     L = n(95764),
     D = n(459502),
     U = n(140465),
@@ -156,7 +156,7 @@ function eI(e) {
             (0, em.Z)();
         },
         I = () => {
-            (0, S.v)(c, S.d.STREAM, !1), (0, k.Z)(m);
+            (0, S.v)(c, S.d.STREAM, !1), (0, M.Z)(m);
         },
         P = (e, t) => {
             let n = null != e ? e : { onClick: void 0 },
@@ -296,7 +296,7 @@ let eS = i.memo(function (e) {
                 return n !== (null == t ? void 0 : t.id);
             })
         ),
-        x = (0, M.qY)(l.id),
+        x = (0, k.qY)(l.id),
         O = i.useRef(null),
         E = i.useCallback(() => ((null == s ? void 0 : s.type) === ey.fO.ACTIVITY && s.applicationId === (null == a ? void 0 : a.applicationId) ? 'ACTIVITY' : y ? 'STREAM' : null != x ? 'EVENT' : 'CALL'), [s, null == a ? void 0 : a.applicationId, y, x]),
         [I, P] = i.useState(E()),
@@ -468,13 +468,13 @@ let eT = function (e) {
         { cameraUnavailable: C, enabled: j } = (0, el.Z)(),
         S = (0, es.Z)(n),
         { suppress: Z, selfMute: N, mute: w } = (0, ec.Z)(n),
-        { canGoLive: k } = (0, u.cj)([en.Z], () => ({ canGoLive: (0, R.Z)(en.Z) })),
-        M = (0, A.Z)(),
+        { canGoLive: M } = (0, u.cj)([en.Z], () => ({ canGoLive: (0, R.Z)(en.Z) })),
+        k = (0, A.Z)(),
         L = (0, u.e7)([T.Z], () => null != T.Z.getAwaitingRemoteSessionInfo()),
-        U = null != M,
+        U = null != k,
         B = (0, u.e7)([er.Z], () => {
             var e;
-            return (null != (e = null == M ? void 0 : M.channelId) ? e : er.Z.getVoiceChannelId()) === n.id;
+            return (null != (e = null == k ? void 0 : k.channelId) ? e : er.Z.getVoiceChannelId()) === n.id;
         }),
         G = (0, O.Z)(n, !0),
         V = (0, u.e7)([y.ZP], () => y.ZP.getCurrentEmbeddedActivity()),
@@ -602,7 +602,7 @@ let eT = function (e) {
                                               channel: n,
                                               currentUser: _,
                                               exitFullScreen: c,
-                                              canGoLive: k,
+                                              canGoLive: M,
                                               hasPermission: S
                                           }),
                                       !U &&

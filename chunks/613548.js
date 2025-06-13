@@ -31,7 +31,7 @@ var r = n(255367),
     A = n(354459),
     w = n(388032),
     R = n(232989);
-function k(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function k(e) {
     }
     return e;
 }
-function M(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -98,7 +98,7 @@ function L(e) {
                           children: (l) =>
                               (0, r.jsx)(
                                   P.ZP,
-                                  M(k({}, l), {
+                                  k(M({}, l), {
                                       className: a()(R.speaker, { [R.last]: t === i.length - 1 }),
                                       user: e.user,
                                       speaking: !0,
@@ -208,7 +208,7 @@ function D(e) {
                             let { isShown: n } = t;
                             return (0, i.createElement)(
                                 I.Z,
-                                M(k({}, e), {
+                                k(M({}, e), {
                                     buttonRef: o,
                                     isActive: n,
                                     count: w,

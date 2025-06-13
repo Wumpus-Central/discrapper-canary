@@ -32,9 +32,10 @@ class E extends a.Z {
             t = u.default.getCurrentUser();
         return e.find((e) => {
             let n = (0, _.gV)(e.id, 'guild_powerups_system_message'),
-                r = e.hasFeature(h.oNc.TIERLESS_BOOSTING_SYSTEM_MESSAGE),
-                i = e.isOwner(t) || (0, p.D)(c.Z, e);
-            return n && r && i;
+                r = e.premiumSubscriberCount > 0,
+                i = e.hasFeature(h.oNc.TIERLESS_BOOSTING_SYSTEM_MESSAGE),
+                a = e.isOwner(t) || (0, p.D)(c.Z, e);
+            return n && (r || i) && a;
         });
     }
     async maybeSendSystemMessage() {

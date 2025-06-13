@@ -518,9 +518,9 @@ function eS(e) {
             getItemKey: e$,
             renderGridSection: e0,
             renderGridItem: e3,
-            getGridSectionHeight: e6,
-            getSectionProps: e1,
-            handleGridFocus: e8
+            getGridSectionHeight: e8,
+            getSectionProps: e6,
+            handleGridFocus: e1
         } = (function (e) {
             let { masonryListScrollerRef: t, threadIdsBySection: n, goToThread: i, renderSectionOrItem: s, hasActiveThreads: o, isShowingSearchResult: c, canSearchForumPosts: d, canViewArchivedPosts: u, observePostVisibilityAnalytics: m, focusedThreadId: h, headerHeight: g } = e,
                 f = l.useRef(null),
@@ -704,7 +704,7 @@ function eS(e) {
         e5 = (0, ec.ZP)({
             id: 'forum-grid-view',
             isEnabled: es && e4,
-            setFocus: e8
+            setFocus: e1
         }),
         e2 = (0, ed.Z)({
             listRef: el,
@@ -758,11 +758,11 @@ function eS(e) {
                                               columns: eR,
                                               sections: eL,
                                               getItemKey: e$,
-                                              getSectionHeight: e6,
+                                              getSectionHeight: e8,
                                               getItemHeight: eC,
                                               renderSection: e0,
                                               renderItem: e3,
-                                              getSectionProps: e1,
+                                              getSectionProps: e6,
                                               onScroll: v ? e9 : void 0,
                                               chunkSize: 350
                                           },

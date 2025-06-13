@@ -31,8 +31,8 @@ var r = n(255367),
     A = n(367907),
     w = n(906732),
     R = n(213609),
-    k = n(600164),
-    M = n(540059),
+    M = n(600164),
+    k = n(540059),
     L = n(211644),
     D = n(258609),
     U = n(446226),
@@ -85,8 +85,8 @@ var r = n(255367),
     eA = n(221888),
     ew = n(185935),
     eR = n(900211),
-    ek = n(18759),
-    eM = n(522651),
+    eM = n(18759),
+    ek = n(522651),
     eL = n(795318),
     eD = n(878752),
     eU = n(354459),
@@ -376,7 +376,7 @@ class eq extends i.PureComponent {
             eH(this, '_lastIdleProps', null),
             eH(this, 'state', {
                 resizedHeight: q.ZP.callHeaderHeight,
-                isDesktopVisualRefreshEnabled: (0, M.i9)('ChannelCall')
+                isDesktopVisualRefreshEnabled: (0, k.i9)('ChannelCall')
             }),
             eH(this, 'handleFullScreenChange', () => {
                 let e = this.getRootNode();
@@ -557,7 +557,7 @@ class eq extends i.PureComponent {
                 null == t || (0, I.R)() ? n() : (0, N.Z)({ onConfirm: n });
             }),
             eH(this, 'handleStayOnTop', (e) => {
-                (0, eM.v)(T.Z.VOICE_CONTROL_TRAY, eM.d.STAY_ON_TOP, e), H.hY(eB.KJ3.CHANNEL_CALL_POPOUT, e);
+                (0, ek.v)(T.Z.VOICE_CONTROL_TRAY, ek.d.STAY_ON_TOP, e), H.hY(eB.KJ3.CHANNEL_CALL_POPOUT, e);
             }),
             eH(this, 'handleClosePopout', () => {
                 H.xv(eB.KJ3.CHANNEL_CALL_POPOUT);
@@ -572,8 +572,8 @@ class eq extends i.PureComponent {
                     { call: t, channel: n, layout: i } = this.props;
                 return (
                     this.inPopout || i === eB.AEg.FULL_SCREEN || null == t || n.isManaged() || (e = (0, r.jsx)(x.Z, { call: t })),
-                    (0, r.jsx)(k.Z, {
-                        justify: k.Z.Justify.END,
+                    (0, r.jsx)(M.Z, {
+                        justify: M.Z.Justify.END,
                         children: e
                     })
                 );
@@ -623,9 +623,9 @@ class eq extends i.PureComponent {
                     children: [
                         _ && !s ? y : null,
                         b
-                            ? (0, r.jsxs)(k.Z, {
+                            ? (0, r.jsxs)(M.Z, {
                                   className: eG.iconWrapper,
-                                  align: k.Z.Align.CENTER,
+                                  align: M.Z.Align.CENTER,
                                   grow: 0,
                                   children: [
                                       (0, r.jsx)(en.Z, {
@@ -633,7 +633,7 @@ class eq extends i.PureComponent {
                                           direction: p,
                                           className: eG.leftTrayIcon,
                                           onClick: () => {
-                                              (0, eM.v)(T.Z.VOICE_CONTROL_TRAY, eM.d.CHAT, h), g();
+                                              (0, ek.v)(T.Z.VOICE_CONTROL_TRAY, ek.d.CHAT, h), g();
                                           }
                                       }),
                                       h && t > 0
@@ -694,10 +694,10 @@ class eq extends i.PureComponent {
                                   popoutOpen: this.popoutOpen,
                                   className: eG.rightTrayIcon,
                                   onOpenPopout: () => {
-                                      (0, eM.v)(T.Z.VOICE_CONTROL_TRAY, eM.d.POPOUT, !0), this.handleOpenPopout();
+                                      (0, ek.v)(T.Z.VOICE_CONTROL_TRAY, ek.d.POPOUT, !0), this.handleOpenPopout();
                                   },
                                   onClosePopout: () => {
-                                      (0, eM.v)(T.Z.VOICE_CONTROL_TRAY, eM.d.POPOUT, !1), this.handleClosePopout();
+                                      (0, ek.v)(T.Z.VOICE_CONTROL_TRAY, ek.d.POPOUT, !1), this.handleClosePopout();
                                   }
                               })
                             : null,
@@ -708,7 +708,7 @@ class eq extends i.PureComponent {
                                   guestWindow: e,
                                   className: eG.rightTrayIcon,
                                   onClick: () => {
-                                      (0, eM.v)(T.Z.VOICE_CONTROL_TRAY, eM.d.FULL_SCREEN, this.props.layout !== eB.AEg.FULL_SCREEN), this.handleFullScreen();
+                                      (0, ek.v)(T.Z.VOICE_CONTROL_TRAY, ek.d.FULL_SCREEN, this.props.layout !== eB.AEg.FULL_SCREEN), this.handleFullScreen();
                                   }
                               })
                             : null
@@ -728,7 +728,7 @@ class eq extends i.PureComponent {
             }),
             eH(this, 'renderVoiceChannelEffects', () => {
                 let { channel: e, callContainerDimensions: t } = this.props;
-                return (0, r.jsx)(ek.ZP, {
+                return (0, r.jsx)(eM.ZP, {
                     children: (0, r.jsx)(es.Z, {
                         callHeight: t.height,
                         channelId: e.id
@@ -782,7 +782,7 @@ let eK = function (e) {
             mode: N,
             layout: A,
             participantsOpen: R,
-            participantsListOpen: k,
+            participantsListOpen: M,
             chatOpen: F,
             selectedParticipant: G
         } = (0, u.cj)(
@@ -853,20 +853,20 @@ let eK = function (e) {
         { analyticsLocations: ex } = (0, w.ZP)(T.Z.CHANNEL_CALL),
         ev = S.ZP.getEmbeddedActivitiesForChannel(n.id),
         { theme: eO } = (0, f.TCT)(),
-        eI = (0, M.Q3)('ChannelCall');
+        eI = (0, k.Q3)('ChannelCall');
     return (0, r.jsx)(w.Gt, {
         value: ex,
         children: (0, r.jsx)(v.Z, {
             page: eB.ZY5.CHANNEL_CALL,
             children: (0, r.jsx)(eS.B2, {
-                children: (0, r.jsxs)(ek._A, {
+                children: (0, r.jsxs)(eM._A, {
                     children: [
                         (0, r.jsx)(eq, {
                             channel: n,
                             guild: W,
                             hasConnectPermission: $,
                             participantsOpen: R,
-                            participantsListOpen: k && ey,
+                            participantsListOpen: M && ey,
                             renderExternalHeader: l,
                             appContext: g,
                             call: Y,
@@ -907,7 +907,7 @@ let eK = function (e) {
                             theme: eO,
                             isRefreshEnabled: eI
                         }),
-                        !n.isPrivate() && (0, r.jsx)(ek.YR, {}),
+                        !n.isPrivate() && (0, r.jsx)(eM.YR, {}),
                         (0, r.jsx)(eS.H_, {})
                     ]
                 })

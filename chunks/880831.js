@@ -75,7 +75,7 @@ function N(e) {
             iconSize: P.WW
         }),
         R = (0, y.cv)(n),
-        k =
+        M =
             R.length > 0
                 ? R.map((e) =>
                       (0, r.jsx)(
@@ -102,7 +102,7 @@ function N(e) {
         children: [
             (0, r.jsxs)('div', {
                 className: a()(S.messageContentWrapper, { [S.mentioned]: n.mentioned }),
-                children: [null != k ? null : w, null != (t = null != T ? T : k) ? t : (0, r.jsx)('span', { children: N }), null != k ? null : A]
+                children: [null != M ? null : w, null != (t = null != T ? T : M) ? t : (0, r.jsx)('span', { children: N }), null != M ? null : A]
             }),
             (0, r.jsx)('img', {
                 alt: '',

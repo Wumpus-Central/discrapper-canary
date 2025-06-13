@@ -1,48 +1,44 @@
-n.d(t, { o: () => b }), n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(657707),
-    o = n(442837),
-    s = n(481060),
-    l = n(153867),
-    c = n(210887),
-    u = n(740492),
-    d = n(695346),
-    _ = n(514361),
-    f = n(507962),
-    p = n(469115),
-    h = n(874893),
-    m = n(231338),
-    g = n(388032),
-    E = n(531864);
-function b() {
-    let [e, t] = i.useState(m.BR.LIGHT),
-        n = [
+n.d(t, { o: () => h });
+var r = n(255367);
+n(73800);
+var i = n(657707),
+    a = n(442837),
+    o = n(481060),
+    s = n(153867),
+    l = n(210887),
+    c = n(695346),
+    u = n(507962),
+    d = n(469115),
+    _ = n(231338),
+    f = n(388032),
+    p = n(531864);
+function h() {
+    let e = [
             {
-                name: g.intl.string(g.t.b8Cei4),
-                value: m.BR.DARK,
-                icon: a.Z6G
+                name: f.intl.string(f.t.b8Cei4),
+                value: _.BR.DARK,
+                icon: i.Z6G
             },
             {
-                name: g.intl.string(g.t.K2sFfn),
-                value: m.BR.LIGHT,
-                icon: a.chG
+                name: f.intl.string(f.t.K2sFfn),
+                value: _.BR.LIGHT,
+                icon: i.chG
             }
         ],
-        [b, y, O] = (0, o.Wu)([c.Z, u.ZP, _.Z], () => [c.Z.theme, null == _.Z.gradientPreset, u.ZP.useSystemTheme === h.KW.ON]);
-    return (0, r.jsx)(s.sY7, {
-        className: E.themeSelector,
-        options: n,
-        value: y && !O ? b : e,
+        t = (0, a.e7)([l.Z], () => l.Z.theme);
+    return (0, r.jsx)(o.sY7, {
+        className: p.themeSelector,
+        options: e,
+        value: t,
         onChange: (e) => {
-            let { value: n } = e;
-            (0, f.HV)(), t(n);
-            let r = d.L1.getSetting(),
-                i = null != r.backgroundGradientPresetId && r.backgroundGradientPresetId in p.qt && p.qt[r.backgroundGradientPresetId].theme !== n;
-            (0, l.ZI)({
-                theme: n,
-                backgroundGradientPresetId: i ? void 0 : r.backgroundGradientPresetId,
-                customUserThemeSettings: r.customUserThemeSettings
+            let { value: t } = e;
+            (0, u.HV)();
+            let n = c.L1.getSetting(),
+                r = null != n.backgroundGradientPresetId && n.backgroundGradientPresetId in d.qt && d.qt[n.backgroundGradientPresetId].theme !== t;
+            (0, s.ZI)({
+                theme: t,
+                backgroundGradientPresetId: r ? void 0 : n.backgroundGradientPresetId,
+                customUserThemeSettings: n.customUserThemeSettings
             });
         },
         look: 'pill'

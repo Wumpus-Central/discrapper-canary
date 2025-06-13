@@ -124,6 +124,7 @@ function N(e) {
             let e = o[y];
             (0, c.FX)(e) && (C(e), n(e));
         }
+        y >= o.length && T(0);
     }, [y, o, n]);
     let R = (e) => {
             if ((C(e), (0, c.FX)(e) && ((0, p.G8)(), n(e), o.length > 0))) {

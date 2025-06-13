@@ -97,31 +97,44 @@ function _(e) {
 function y() {
     let e = l.useRef(null);
     return (0, r.jsxs)(o.Kqy, {
+        className: v.container,
         direction: 'vertical',
         align: 'center',
         justify: 'center',
         padding: {
-            top: 32,
-            bottom: 16
+            top: 24,
+            bottom: 24
         },
         ref: e,
         children: [
-            (0, r.jsx)(o.X6q, {
-                className: v.header,
-                variant: 'heading-md/medium',
-                children: j.intl.string(b.default.h6QNk5)
+            (0, r.jsx)(o.l22, {
+                size: 'custom',
+                width: 48,
+                height: 48
             }),
-            (0, r.jsx)(o.Text, {
-                className: v.text,
-                variant: 'text-md/medium',
-                color: 'text-secondary',
-                children: j.intl.format(b.default['8N4c5+'], {
-                    airhornHook: (t) =>
-                        (0, r.jsx)(_, {
-                            containerRef: e,
-                            text: t
+            (0, r.jsxs)(o.Kqy, {
+                direction: 'vertical',
+                align: 'center',
+                justify: 'center',
+                children: [
+                    (0, r.jsx)(o.X6q, {
+                        className: v.header,
+                        variant: 'heading-md/medium',
+                        children: j.intl.string(b.default.h6QNk5)
+                    }),
+                    (0, r.jsx)(o.Text, {
+                        className: v.text,
+                        variant: 'text-md/medium',
+                        color: 'text-secondary',
+                        children: j.intl.format(b.default['8N4c5+'], {
+                            airhornHook: (t) =>
+                                (0, r.jsx)(_, {
+                                    containerRef: e,
+                                    text: t
+                                })
                         })
-                })
+                    })
+                ]
             })
         ]
     });

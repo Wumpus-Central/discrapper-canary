@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(539854);
+n.d(t, { Z: () => j }), n(539854);
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -15,13 +15,13 @@ var i = n(442837),
     y = n(695346),
     O = n(874893),
     f = n(981631),
-    j = n(388032);
-function h() {
+    h = n(388032);
+function j() {
     let e = y.jU.useSetting(),
         { analyticsLocations: t } = (0, u.ZP)(),
         {
             theme: n,
-            useSystemTheme: h,
+            useSystemTheme: j,
             useForcedColors: v
         } = (0, i.cj)([g.Z, b.ZP, s.Z], () => ({
             theme: g.Z.theme,
@@ -37,7 +37,7 @@ function h() {
                 group: 'input-modes',
                 label: i,
                 disabled: v,
-                checked: h === O.KW.ON ? 'system' === e : e === n,
+                checked: j === O.KW.ON ? 'system' === e : e === n,
                 action: () => {
                     (0, d.Yk)({
                         isPersisted: !0,
@@ -47,8 +47,8 @@ function h() {
                         (0, o.ZI)({ theme: e });
                 }
             }),
-        x = m(f.BRd.DARK, E ? j.intl.string(j.t.SMPT1t) : j.intl.string(j.t.b8Cei4)),
-        w = m(f.BRd.LIGHT, j.intl.string(j.t.K2sFfn)),
+        x = m(f.BRd.DARK, E ? h.intl.string(h.t.SMPT1t) : h.intl.string(h.t.b8Cei4)),
+        w = m(f.BRd.LIGHT, h.intl.string(h.t.K2sFfn)),
         k = [
             (0, r.jsxs)(
                 a.kSQ,
@@ -56,12 +56,12 @@ function h() {
                     children: [
                         E
                             ? (0, r.jsxs)(r.Fragment, {
-                                  children: [w, x, m(f.BRd.DARKER, j.intl.string(j.t.b8Cei4)), m(f.BRd.MIDNIGHT, j.intl.string(j.t.Do4ZJy))]
+                                  children: [w, x, m(f.BRd.DARKER, h.intl.string(h.t.b8Cei4)), m(f.BRd.MIDNIGHT, h.intl.string(h.t.Do4ZJy))]
                               })
                             : (0, r.jsxs)(r.Fragment, {
                                   children: [x, w]
                               }),
-                        m('system', j.intl.string(j.t['7rOU6u']))
+                        m('system', h.intl.string(h.t['7rOU6u']))
                     ]
                 },
                 'theme-items'
@@ -79,7 +79,7 @@ function h() {
                               (0, r.jsx)(a.k5B, {
                                   id: 'compact-ui',
                                   group: 'list-density',
-                                  label: j.intl.string(j.t['7iegX1']),
+                                  label: h.intl.string(h.t['7iegX1']),
                                   checked: S === l.Pi.COMPACT,
                                   action: () => {
                                       y.YC.updateSetting(l.Pi.COMPACT);
@@ -88,7 +88,7 @@ function h() {
                               (0, r.jsx)(a.k5B, {
                                   id: 'default-ui',
                                   group: 'list-density',
-                                  label: j.intl.string(j.t.bBvAEB),
+                                  label: h.intl.string(h.t.bBvAEB),
                                   checked: S === l.Pi.DEFAULT,
                                   action: () => {
                                       y.YC.updateSetting(l.Pi.DEFAULT);
@@ -97,7 +97,7 @@ function h() {
                               (0, r.jsx)(a.k5B, {
                                   id: 'cozy-ui',
                                   group: 'list-density',
-                                  label: j.intl.string(j.t['4cuYHx']),
+                                  label: h.intl.string(h.t['4cuYHx']),
                                   checked: S === l.Pi.COZY,
                                   action: () => {
                                       y.YC.updateSetting(l.Pi.COZY);
@@ -117,7 +117,7 @@ function h() {
                               (0, r.jsx)(a.k5B, {
                                   id: 'cozy-chat',
                                   group: 'chat-density',
-                                  label: j.intl.string(j.t.Jqj4cX),
+                                  label: h.intl.string(h.t.Jqj4cX),
                                   checked: !e,
                                   action: () => {
                                       y.jU.updateSetting(!1), (0, c.ZZ)();
@@ -126,7 +126,7 @@ function h() {
                               (0, r.jsx)(a.k5B, {
                                   id: 'compact-chat',
                                   group: 'chat-density',
-                                  label: j.intl.string(j.t['1JNcPT']),
+                                  label: h.intl.string(h.t['1JNcPT']),
                                   checked: e,
                                   action: () => {
                                       y.jU.updateSetting(!0), (0, c.ZZ)();
@@ -143,7 +143,7 @@ function h() {
                       {
                           children: (0, r.jsx)(a.sNh, {
                               id: 'compact-mode',
-                              label: e ? j.intl.string(j.t.CTpwDw) : j.intl.string(j.t['J/FISU']),
+                              label: e ? h.intl.string(h.t.CTpwDw) : h.intl.string(h.t['J/FISU']),
                               action: () => {
                                   y.jU.updateSetting(!e), (0, c.ZZ)();
                               }

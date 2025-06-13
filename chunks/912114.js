@@ -126,12 +126,12 @@ let E = function (e) {
         [N, T] = i.useState(null != S ? S : ''),
         [A, w] = i.useState(void 0),
         R = void 0 !== A,
-        { analyticsLocations: k } = (0, p.ZP)(E, d.Z.GROUP_DM_EDIT_MODAL),
-        M = {
+        { analyticsLocations: M } = (0, p.ZP)(E, d.Z.GROUP_DM_EDIT_MODAL),
+        k = {
             channel_id: t,
             channel_type: null == P ? void 0 : P.type,
             location: E,
-            location_stack: k,
+            location_stack: M,
             old_name_set: '' !== S,
             old_icon_set: (null == P ? void 0 : P.icon) != null
         };
@@ -140,16 +140,16 @@ let E = function (e) {
     }, [N, S, R, a]),
     (0, u.ZP)(
         () => (
-            b.default.track(y.rMx.GDM_EDIT_INTERACTED, j(v({}, M), { action: 'opened' })),
+            b.default.track(y.rMx.GDM_EDIT_INTERACTED, j(v({}, k), { action: 'opened' })),
             () => {
-                b.default.track(y.rMx.GDM_EDIT_INTERACTED, j(v({}, M), { action: 'dismissed' }));
+                b.default.track(y.rMx.GDM_EDIT_INTERACTED, j(v({}, k), { action: 'dismissed' }));
             }
         )
     ),
     null == P)
         ? null
         : (0, r.jsx)(p.Gt, {
-              value: k,
+              value: M,
               children: (0, r.jsx)('form', {
                   onSubmit: (e) => {
                       e.preventDefault();
@@ -158,7 +158,7 @@ let E = function (e) {
                       if (
                           (b.default.track(
                               y.rMx.GDM_EDIT_INTERACTED,
-                              j(v({}, M), {
+                              j(v({}, k), {
                                   action: 'saved',
                                   new_name_set: '' !== N,
                                   new_icon_set: (i ? A : null == P ? void 0 : P.icon) != null,
@@ -203,7 +203,7 @@ let E = function (e) {
                                       previewIcon: A,
                                       onIconChange: (e) => w(e.imageUri),
                                       onIconRemove: () => w(null),
-                                      analyticsLocations: k
+                                      analyticsLocations: M
                                   }),
                                   (0, r.jsx)(s.oil, {
                                       'aria-label': C.intl.string(C.t.GEGW3N),

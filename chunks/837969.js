@@ -127,7 +127,7 @@ function d(e) {
                 R = r.useCallback(() => {
                     E || (g ? S(C(t, d), d) : T(!0));
                 }, [C, t, S, g, E, d, T]),
-                k = r.useCallback(
+                M = r.useCallback(
                     (e) => {
                         e.currentTarget.contains(e.relatedTarget) ||
                             requestAnimationFrame(() => {
@@ -137,26 +137,26 @@ function d(e) {
                     },
                     [C, t, d, S]
                 ),
-                M = r.useRef(null);
+                k = r.useRef(null);
             r.useLayoutEffect(() => {
-                let e = M.current;
+                let e = k.current;
                 if (null != e)
                     return (
                         e.addEventListener('focusin', w),
                         e.addEventListener('focus', R),
-                        e.addEventListener('focusout', k),
+                        e.addEventListener('focusout', M),
                         () => {
-                            e.removeEventListener('focusin', w), e.removeEventListener('focus', R), e.removeEventListener('focusout', k);
+                            e.removeEventListener('focusin', w), e.removeEventListener('focus', R), e.removeEventListener('focusout', M);
                         }
                     );
-            }, [R, w, k]);
+            }, [R, w, M]);
             let L = r.useCallback(
                     () => ({
                         role: 'list',
                         tabIndex: E && g ? -1 : 0,
                         id: t,
                         onKeyDown: A,
-                        ref: M
+                        ref: k
                     }),
                     [t, E, A, g]
                 ),

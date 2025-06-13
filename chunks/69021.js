@@ -61,8 +61,8 @@ function f() {
             isStaff: t,
             isDeveloper: n,
             isLoggingGatewayEvents: f,
-            isLoggingOverlayEvents: j,
-            isLoggingAnalyticsEvents: h,
+            isLoggingOverlayEvents: h,
+            isLoggingAnalyticsEvents: j,
             isAnalyticsDebuggerEnabled: v,
             isTracingRequests: S,
             isForcedCanary: E,
@@ -93,8 +93,8 @@ function f() {
             };
         }),
         { horizontalSpacing: D, verticalSpacing: A, maxHorizontalSpacing: C, maxVerticalSpacing: I } = (0, c.i)(),
-        { setHorizontalSpacing: T, setVerticalSpacing: _ } = c.i.getState(),
-        N = p.zY.useSetting(),
+        { setHorizontalSpacing: T, setVerticalSpacing: N } = c.i.getState(),
+        _ = p.zY.useSetting(),
         R = [];
     return (
         t &&
@@ -164,9 +164,9 @@ function f() {
                                 {
                                     id: 'always-deliver',
                                     label: 'Ads auto-targeting',
-                                    checked: N,
+                                    checked: _,
                                     action: () => {
-                                        p.zY.updateSetting(!N);
+                                        p.zY.updateSetting(!_);
                                     }
                                 },
                                 'always-deliver'
@@ -275,9 +275,9 @@ function f() {
                                 {
                                     id: 'overlay-events',
                                     label: 'Overlay RPC Events',
-                                    checked: j,
+                                    checked: h,
                                     action: () => {
-                                        (0, a.y)({ logOverlayEvents: !j });
+                                        (0, a.y)({ logOverlayEvents: !h });
                                     }
                                 },
                                 'overlay-events'
@@ -287,9 +287,9 @@ function f() {
                                 {
                                     id: 'analytics-events',
                                     label: 'Analytics Events',
-                                    checked: h,
+                                    checked: j,
                                     action: () => {
-                                        (0, a.y)({ logAnalyticsEvents: !h });
+                                        (0, a.y)({ logAnalyticsEvents: !j });
                                     }
                                 },
                                 'analytics-events'
@@ -374,7 +374,7 @@ function f() {
                                         value: A,
                                         minValue: 0,
                                         maxValue: I,
-                                        onChange: (e) => _(e),
+                                        onChange: (e) => N(e),
                                         'aria-label': 'Horizontal Spacing',
                                         renderValue: (e) => ''.concat(Math.round(e), 'px')
                                     })

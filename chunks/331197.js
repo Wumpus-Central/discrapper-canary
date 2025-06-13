@@ -30,9 +30,9 @@ function O(e) {
         } = (0, o.j)(),
         A = t.getGuildId(),
         { mute: w, suppress: R } = (0, _.Z)(t),
-        k = (0, l.e7)([y.Z], () => y.Z.isDeaf()),
-        M = w || R || k,
-        L = (0, m.sR)({ isSoundboardButtonDisabled: M }),
+        M = (0, l.e7)([y.Z], () => y.Z.isDeaf()),
+        k = w || R || M,
+        L = (0, m.sR)({ isSoundboardButtonDisabled: k }),
         [D, U] = (0, h.cv)(L),
         { analyticsLocations: B } = (0, u.ZP)(),
         { isHovered: F, setIsHovered: G, onMouseEnter: H, onMouseLeave: V } = (0, f.Z)(200, 300);
@@ -110,7 +110,7 @@ function O(e) {
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return M
+            return k
                 ? null
                 : (0, r.jsx)(C.Z, {
                       children: (0, r.jsx)('div', {
@@ -136,9 +136,9 @@ function O(e) {
                 ref: Y,
                 isTrayButton: !0,
                 themeable: O,
-                label: w ? j.intl.string(j.t['Ox4/zc']) : R ? j.intl.string(j.t['+YBKYG']) : k ? j.intl.string(j.t.X1lQlp) : void 0,
+                label: w ? j.intl.string(j.t['Ox4/zc']) : R ? j.intl.string(j.t['+YBKYG']) : M ? j.intl.string(j.t.X1lQlp) : void 0,
                 iconComponent: S,
-                disabled: M,
+                disabled: k,
                 onContextMenu: z,
                 onClick: W,
                 onMouseEnter: () => {

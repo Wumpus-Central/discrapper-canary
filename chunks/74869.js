@@ -74,11 +74,11 @@ function O() {
     }, [e, t]);
     let d = i.useMemo(
             () =>
-                l.filter((e) => {
+                e.filter((e) => {
                     let { currentBucket: t } = e;
                     return -1 !== t;
                 }),
-            [l]
+            [e]
         ),
         g = i.useMemo(
             () =>
@@ -89,9 +89,8 @@ function O() {
             [l]
         ),
         O = i.useMemo(() => d.map(y), [d]),
-        f = i.useMemo(() => g.map(y), [g]);
-    return [
-        (0, r.jsx)(
+        f = i.useMemo(() => g.map(y), [g]),
+        h = (0, r.jsx)(
             u.II_,
             {
                 id: 'experiments-search',
@@ -148,10 +147,27 @@ function O() {
                 }
             },
             'experiments-search'
-        ),
-        (0, r.jsx)(u.Clw, {}, 'separator'),
-        ...O,
-        O.length > 0 ? (0, r.jsx)(u.Clw, {}, 'separator-2') : null,
-        ...f
-    ];
+        );
+    return O.length > 0
+        ? [
+              (0, r.jsx)(
+                  u.kSQ,
+                  {
+                      label: 'Overridden Experiments',
+                      children: O
+                  },
+                  'overridden-group'
+              ),
+              (0, r.jsx)(u.Clw, {}, 'separator-2'),
+              (0, r.jsxs)(
+                  u.sNh,
+                  {
+                      id: 'other-experiments',
+                      label: 'Other Experiments',
+                      children: [h, f]
+                  },
+                  'other-experiments'
+              )
+          ]
+        : [h, ...f];
 }

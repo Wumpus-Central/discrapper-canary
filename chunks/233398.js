@@ -23,5 +23,15 @@ let a = 20,
             (0, i.j)(() => {
                 e({ gradientAngle: Math.round(t) });
             });
+        },
+        setAll: (t) => {
+            let { colors: n, chassisMixAmount: r, gradientAngle: a } = t;
+            (0, i.j)(() => {
+                e({
+                    colors: n,
+                    chassisMixAmount: r,
+                    gradientAngle: a
+                });
+            });
         }
     }));

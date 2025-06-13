@@ -57,8 +57,8 @@ function w(e) {
 function R(e) {
     let { user: t, channel: n } = e,
         R = __OVERLAY__ || !(0, d.Z)(t.id),
-        k = (0, b.ZP)(t.id),
-        M = (0, s.ZP)(),
+        M = (0, b.ZP)(t.id),
+        k = (0, s.ZP)(),
         L = i.useRef(Date.now()),
         { analyticsLocations: D } = (0, u.ZP)(c.Z.USER_PROFILE_SIDEBAR),
         U = (0, m.ZB)({
@@ -85,15 +85,15 @@ function R(e) {
         children: (0, r.jsx)(m.Mt, {
             value: U,
             openedAt: L.current,
-            fetchStartedAt: null == k ? void 0 : k.fetchStartedAt,
-            fetchEndedAt: null == k ? void 0 : k.fetchEndedAt,
-            isLoaded: null == k ? void 0 : k.isLoaded,
+            fetchStartedAt: null == M ? void 0 : M.fetchStartedAt,
+            fetchEndedAt: null == M ? void 0 : M.fetchEndedAt,
+            isLoaded: null == M ? void 0 : M.isLoaded,
             children: (0, r.jsxs)(E.Z, {
                 ref: B,
                 user: t,
-                displayProfile: k,
+                displayProfile: M,
                 themeType: Z.lY.SIDEBAR,
-                themeOverride: M,
+                themeOverride: k,
                 children: [
                     (0, r.jsxs)(l.u2, {
                         children: [
@@ -103,13 +103,13 @@ function R(e) {
                                 children: [
                                     (0, r.jsx)(x.Z, {
                                         user: t,
-                                        displayProfile: k,
+                                        displayProfile: M,
                                         themeType: Z.lY.SIDEBAR,
                                         animateOnHover: !F
                                     }),
                                     (0, r.jsx)(y.Z, {
                                         user: t,
-                                        displayProfile: k,
+                                        displayProfile: M,
                                         channelId: n.id,
                                         themeType: Z.lY.SIDEBAR,
                                         onOpenProfile: R ? void 0 : G
@@ -123,10 +123,10 @@ function R(e) {
                                     (0, r.jsx)(I.Z, {
                                         user: t,
                                         nickname: f.ZP.getName(null, n.id, t),
-                                        pronouns: null == k ? void 0 : k.pronouns,
+                                        pronouns: null == M ? void 0 : M.pronouns,
                                         onOpenProfile: R ? void 0 : G,
                                         tags: (0, r.jsx)(C.Z, {
-                                            displayProfile: k,
+                                            displayProfile: M,
                                             themeType: Z.lY.SIDEBAR
                                         })
                                     }),
@@ -137,7 +137,7 @@ function R(e) {
                                                 heading: N.intl.string(N.t['61W33d']),
                                                 headingColor: 'header-primary',
                                                 children: (0, r.jsx)(v.Z, {
-                                                    userBio: null == k ? void 0 : k.bio,
+                                                    userBio: null == M ? void 0 : M.bio,
                                                     userId: t.id,
                                                     animateOnHover: !0,
                                                     isHovering: F
@@ -177,9 +177,9 @@ function R(e) {
                                 children: N.intl.string(N.t['+Xp3ho'])
                             })
                         }),
-                    (null == k ? void 0 : k.profileEffectId) != null &&
+                    (null == M ? void 0 : M.profileEffectId) != null &&
                         (0, r.jsx)(h.Z, {
-                            profileEffectId: null == k ? void 0 : k.profileEffectId,
+                            profileEffectId: null == M ? void 0 : M.profileEffectId,
                             isHovering: F
                         })
                 ]

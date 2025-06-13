@@ -25,7 +25,7 @@ let b = () =>
             R = (0, a.useMemo)(() => f(h, _), [h, _]),
             [j, v] = (0, a.useState)(!1),
             [P, S] = (0, a.useState)(!1),
-            [w, A] = (0, a.useState)(0.9 * s.D2),
+            [A, w] = (0, a.useState)(0.9 * s.D2),
             L = null === l;
         (0, a.useEffect)(() => {
             L &&
@@ -100,7 +100,7 @@ let b = () =>
                                 {
                                     currentAnimationType: N,
                                     animationTypeRef: I,
-                                    onSetAnimationDurationMS: A
+                                    onSetAnimationDurationMS: w
                                 }
                             )
                         )
@@ -109,7 +109,7 @@ let b = () =>
                         value: D,
                         onValueChange: V,
                         onValueReached: T,
-                        targetTotalCounterTime: w,
+                        targetTotalCounterTime: A,
                         className: k ? d.counterLoading : void 0
                     }),
                     O && (0, n.jsx)(b, {})

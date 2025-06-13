@@ -31,8 +31,8 @@ var r = n(255367),
     A = n(358221),
     w = n(677601),
     R = n(541716),
-    k = n(236091),
-    M = n(663993),
+    M = n(236091),
+    k = n(663993),
     L = n(252618),
     D = n(540059),
     U = n(201493),
@@ -85,8 +85,8 @@ var r = n(255367),
     eA = n(892001),
     ew = n(402130),
     eR = n(524329),
-    ek = n(995532),
-    eM = n(738643),
+    eM = n(995532),
+    ek = n(738643),
     eL = n(433355),
     eD = n(592125),
     eU = n(703558),
@@ -163,7 +163,7 @@ function ti(e, t) {
         e
     );
 }
-let tl = (0, M.Un)({
+let tl = (0, k.Un)({
     createPromise: () => n.e('49131').then(n.bind(n, 346975)),
     webpackId: 346975,
     renderLoader: () =>
@@ -536,7 +536,7 @@ class ta extends i.PureComponent {
             }),
             tn(this, 'renderClipsEnabledIndicatorToolbarItem', () => {
                 let { inCall: e, voiceChannel: t } = this.props;
-                return e ? (0, r.jsx)(k.Z, { channelId: null != t ? t.id : null }) : null;
+                return e ? (0, r.jsx)(M.Z, { channelId: null != t ? t.id : null }) : null;
             }),
             tn(this, 'renderStreamQualityLiveIndicatorToolbarItem', () => {
                 let { selectedParticipant: e, premiumIndicatorEnabled: t } = this.props;
@@ -768,20 +768,20 @@ let to = (0, j.Z)(ta),
                     })
                 );
         }, [R, c, j, P]);
-        let k = (0, p.e7)([I.ZP], () => I.ZP.getCurrentEmbeddedActivity()),
-            M = (0, p.e7)([I.ZP], () => I.ZP.getActivityPanelMode()),
-            L = null != k && !(0, S.Z)(null == c ? void 0 : c.id) && M === e8.Ez.PANEL,
+        let M = (0, p.e7)([I.ZP], () => I.ZP.getCurrentEmbeddedActivity()),
+            k = (0, p.e7)([I.ZP], () => I.ZP.getActivityPanelMode()),
+            L = null != M && !(0, S.Z)(null == c ? void 0 : c.id) && k === e8.Ez.PANEL,
             U = (0, p.e7)([eK.Z], () => null != c && c.isVocalThread() && !u().isEmpty(eK.Z.getVoiceStatesForChannel(c.id)), [c]),
             F = null != c && c.isPrivate() && !L && x,
             G = (null == c ? void 0 : c.isGuildVocal()) || F || U,
             { welcomeModalChannelId: V } = (0, d.TH)(),
             z = (0, p.e7)([ef.Z], () => null != c && ef.Z.isLurking(c.guild_id), [c]),
-            W = (0, p.e7)([ek.Z], () => ek.Z.hasSeen(null == c ? void 0 : c.guild_id, z), [c, z]),
+            W = (0, p.e7)([eM.Z], () => eM.Z.hasSeen(null == c ? void 0 : c.guild_id, z), [c, z]),
             Y = (0, p.e7)([A.Z, I.ZP], () => (null != I.ZP.getConnectedActivityLocation() && I.ZP.getActivityPanelMode() === e8.Ez.PANEL ? (I.ZP.getFocusedLayout() === e8.MI.NO_CHAT ? e7.AEg.NO_CHAT : e7.AEg.NORMAL) : null != o ? A.Z.getLayout(o) : e7.AEg.NORMAL), [o]),
             q = (0, p.e7)([A.Z], () => (null != c ? A.Z.getSelectedParticipant(c.id) : null)),
             X = (0, p.e7)([eq.default], () => eq.default.getCurrentUser()),
             Q = (0, ep.Z)(null == y ? void 0 : y.id),
-            J = (0, eM.Z)(V, null == y ? void 0 : y.id),
+            J = (0, ek.Z)(V, null == y ? void 0 : y.id),
             { section: $, channelSidebarState: ee } = (0, p.cj)(
                 [eL.ZP],
                 () => ({
@@ -872,7 +872,7 @@ let to = (0, j.Z)(ta),
                     premiumIndicatorEnabled: !1,
                     hasTextActivityInPanelMode: L,
                     isRefreshEnabled: ex,
-                    embeddedActivity: k
+                    embeddedActivity: M
                 }
             )
         );

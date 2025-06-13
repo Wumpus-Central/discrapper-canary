@@ -49,24 +49,24 @@ let m = 'data-client-themes',
     b = () => {
         let e = h.M.useExperiment({ location: 'RootThemeContextProvider' }).enabled,
             t = (0, l.e7)([u.Z], () => u.Z.theme),
-            { colors: n, chassisMixAmount: i, gradientAngle: s } = (0, _.I)(),
-            f = (0, l.e7)([d.Z], () => {
+            { colors: n, chassisMixAmount: i, gradientAngle: s, setAll: f } = (0, _.I)(),
+            m = (0, l.e7)([d.Z], () => {
                 var e, t;
                 return null == (t = d.Z.settings.appearance) || null == (e = t.clientThemeSettings) ? void 0 : e.customUserThemeSettings;
             }),
-            m = r.useRef(void 0);
+            E = r.useRef(void 0);
         return (
             r.useEffect(() => {
-                if (!(0, o.isEqual)(f, m.current)) {
+                if (!(0, o.isEqual)(m, E.current)) {
                     var e, t, n;
-                    (m.current = f),
-                        _.I.setState({
-                            colors: null != (e = null == f ? void 0 : f.colors) ? e : [],
-                            gradientAngle: null != (t = null == f ? void 0 : f.gradientAngle) ? t : 0,
-                            chassisMixAmount: null != (n = null == f ? void 0 : f.baseMix) ? n : 80
+                    (E.current = m),
+                        f({
+                            colors: null != (e = null == m ? void 0 : m.colors) ? e : [],
+                            gradientAngle: null != (t = null == m ? void 0 : m.gradientAngle) ? t : 0,
+                            chassisMixAmount: null != (n = null == m ? void 0 : m.baseMix) ? n : _.B
                         });
                 }
-            }, [f]),
+            }, [m, f]),
             r.useMemo(() => {
                 if (!e || 0 === n.length) return null;
                 let r = n.slice();
