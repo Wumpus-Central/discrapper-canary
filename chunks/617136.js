@@ -1,33 +1,35 @@
 n.d(t, {
-    Ic: () => D,
-    O5: () => x,
-    Zk: () => M,
-    _3: () => w,
-    _F: () => L,
-    _b: () => S,
-    dA: () => R,
-    jZ: () => P,
-    mH: () => C,
-    uk: () => A
+    Ic: () => x,
+    O5: () => k,
+    Zk: () => j,
+    _3: () => L,
+    _F: () => M,
+    _b: () => N,
+    dA: () => w,
+    jZ: () => D,
+    mH: () => P,
+    uk: () => C
 }),
     n(388685);
 var r = n(73800),
     i = n(772848),
-    a = n(930446),
-    o = n(367907),
-    s = n(186102),
-    l = n(857192),
-    c = n(819640),
-    u = n(626135),
-    d = n(915750),
-    _ = n(569984),
-    f = n(497505),
-    p = n(918701),
-    h = n(977156),
-    m = n(566078),
-    g = n(46140),
-    E = n(981631);
-function b(e, t, n) {
+    a = n(516796),
+    o = n(930446),
+    s = n(367907),
+    l = n(186102),
+    c = n(857192),
+    u = n(819640),
+    d = n(626135),
+    _ = n(358085),
+    f = n(915750),
+    p = n(569984),
+    h = n(497505),
+    m = n(918701),
+    g = n(977156),
+    E = n(566078),
+    b = n(46140),
+    y = n(981631);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +42,7 @@ function b(e, t, n) {
         e
     );
 }
-function y(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,12 +53,12 @@ function y(e) {
                 })
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                O(e, t, n[t]);
             });
     }
     return e;
 }
-function O(e, t) {
+function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,130 +70,132 @@ function O(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : O(Object(t)).forEach(function (n) {
+            : I(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let I = Object.keys(f.jn),
-    T = new Set([E.rMx.QUEST_CONTENT_VIEWED, E.rMx.QUEST_CONTENT_CLICKED]);
-function S(e) {
+let S = Object.keys(h.jn),
+    A = new Set([y.rMx.QUEST_CONTENT_VIEWED, y.rMx.QUEST_CONTENT_CLICKED]);
+function N(e) {
     var t;
-    return null != (t = I.find((t) => f.jn[t] === e)) ? t : '';
+    return null != (t = S.find((t) => h.jn[t] === e)) ? t : '';
 }
-function A(e) {
+function C(e) {
     var t, n, r;
     return (null == (t = e.userStatus) ? void 0 : t.claimedAt) != null ? 'COMPLETED_CLAIMED' : (null == (n = e.userStatus) ? void 0 : n.completedAt) != null ? 'COMPLETED' : (null == (r = e.userStatus) ? void 0 : r.enrolledAt) != null ? 'ENROLLED' : 'NONE';
 }
-function N(e, t) {
-    let n = m.r.build(e.config);
+function R(e, t) {
+    let n = E.r.build(e.config);
     return {
         quest_id: e.id,
         quest_type: n.questType,
         game_id: n.application.id,
         game_name: n.application.name,
-        client_ad_session_id: (0, a.Gy)(t).uuid
+        client_ad_session_id: (0, o.Gy)(t).uuid
     };
 }
-function C(e, t, n) {
+function P(e, t, n) {
     return {
         content_id: e,
-        content_name: S(e),
+        content_name: N(e),
         content_position: t,
         row_index: n
     };
 }
-function R(e) {
+function w(e) {
     let { questId: t, event: n, properties: r, trackGuildAndChannelMetadata: i = !1, shouldExtendSession: a = !1 } = e,
-        s = _.Z.quests.get(t);
-    if (null == s || ((0, h.X7)({ location: g.dr.QUEST_PREVIEW_TOOL }) && c.Z.getLayers().includes(E.S9g.USER_SETTINGS))) return;
-    let d = y({}, N(s, a), r);
-    if ((l.default.isLoggingAnalyticsEvents && console.info('[Quest] AnalyticsUtils.track', n, d), s.preview)) return;
-    let f = T.has(n);
-    if (i) return o.ZP.trackWithMetadata(n, d, f);
-    u.default.track(n, d, { flush: f });
+        o = p.Z.quests.get(t);
+    if (null == o || ((0, g.X7)({ location: b.dr.QUEST_PREVIEW_TOOL }) && u.Z.getLayers().includes(y.S9g.USER_SETTINGS))) return;
+    let l = v({}, R(o, a), r);
+    if ((c.default.isLoggingAnalyticsEvents && console.info('[Quest] AnalyticsUtils.track', n, l), o.preview)) return;
+    let _ = A.has(n);
+    if (i) return s.ZP.trackWithMetadata(n, l, _);
+    d.default.track(n, l, { flush: _ });
 }
-var P = (function (e) {
+var D = (function (e) {
     return (e.LEARN_MORE = 'LEARN_MORE'), (e.SHOW_REWARD = 'SHOW_REWARD'), (e.CLAIM_REWARD = 'CLAIM_REWARD'), (e.GET_REWARD_CODE = 'GET_REWARD_CODE'), (e.COPY_REWARD_CODE = 'COPY_REWARD_CODE'), (e.ACCEPT_QUEST = 'ACCEPT_QUEST'), (e.COPY_QUEST_URL = 'COPY_QUEST_URL'), (e.MOBILE_SHARESHEET = 'MOBILE_SHARESHEET'), (e.TRACK_PROGRESS = 'TRACK_PROGRESS'), (e.CONNECT_CONSOLE = 'CONNECT_CONSOLE'), (e.CONNECT_CONSOLE_LINK = 'CONNECT_CONSOLE_LINK'), (e.VIEW_CONSOLE_CONNECTIONS = 'VIEW_CONSOLE_CONNECTION'), (e.VIEW_CONSOLE_CONNECTIONS_LINK = 'VIEW_CONSOLE_CONNECTIONS_LINK'), (e.VIEW_REQUIREMENTS = 'VIEW_REQUIREMENTS'), (e.SELECT_CONSOLE_PLATFORM = 'SELECT_CONSOLE_PLATFORM'), (e.SELECT_DESKTOP_PLATFORM = 'SELECT_DESKTOP_PLATFORM'), (e.DESELECT_PLATFORM = 'DESELECT_PLATFORM'), (e.DEFIBRILLATOR = 'DEFIBRILLATOR'), (e.DEFIBRILLATOR_RECONNECT_CONSOLE = 'DEFIBRILLATOR_RECONNECT_CONSOLE'), (e.OPEN_DISCLOSURE = 'OPEN_DISCLOSURE'), (e.WATCH_STREAM = 'WATCH_STREAM'), (e.WATCH_STREAM_CONFIRM = 'WATCH_STREAM_CONFIRM'), (e.REWARD_LEARN_MORE = 'REWARD_LEARN_MORE'), (e.OPEN_GAME_LINK = 'OPEN_GAME_LINK'), (e.OPEN_CONTEXT_MENU = 'OPEN_CONTEXT_MENU'), (e.OPEN_QUEST_HOME = 'OPEN_QUEST_HOME'), (e.QUEST_BAR_COPY_LINK = 'QUEST_BAR.COPY_LINK'), (e.CONTEXT_MENU_COPY_LINK = 'CONTEXT_MENU.COPY_LINK'), (e.CONTEXT_MENU_HIDE_CONTENT = 'CONTEXT_MENU.HIDE_CONTENT'), (e.CONTEXT_MENU_OPEN_GAME_LINK = 'CONTEXT_MENU.OPEN_GAME_LINK'), (e.CONTEXT_MENU_OPEN_DISCLOSURE = 'CONTEXT_MENU.OPEN_DISCLOSURE'), (e.CONTEXT_MENU_LEARN_MORE = 'CONTEXT_MENU.LEARN_MORE'), (e.HOW_TO_HELP_ARTICLE_XBOX = 'HOW_TO_HELP_ARTICLE_XBOX'), (e.HOW_TO_HELP_ARTICLE_PLAYSTATION = 'HOW_TO_HELP_ARTICLE_PLAYSTATION'), (e.VIEW_QUESTS = 'VIEW_QUESTS'), (e.EXPAND = 'EXPAND'), (e.COLLAPSE = 'COLLAPSE'), (e.START_QUEST = 'START_QUEST'), (e.TRANSCRIPT_ENABLE = 'TRANSCRIPT_ENABLE'), (e.TRANSCRIPT_DISABLE = 'TRANSCRIPT_DISABLE'), (e.CLOSED_CAPTIONING_ENABLE = 'CLOSED_CAPTIONING_ENABLE'), (e.CLOSED_CAPTIONING_DISABLE = 'CLOSED_CAPTIONING_DISABLE'), (e.SEEK_BACKWARD = 'SEEK_BACKWARD'), (e.SEEK_FORWARD = 'SEEK_FORWARD'), (e.WATCH_VIDEO = 'WATCH_VIDEO'), (e.REDEEM_REWARD = 'REDEEM_REWARD'), (e.VISIT_REDEMPTION_LINK = 'VISIT_REDEMPTION_LINK'), e;
 })({});
-function w(e) {
-    let { questId: t, questContent: n, questContentCTA: r, questContentPosition: a, questContentRowIndex: o, impressionId: l, trackGuildAndChannelMetadata: c = !1 } = e,
-        u = (0, p.qe)(n),
-        d = _.Z.getQuest(t);
-    R({
+function L(e) {
+    let { questId: t, questContent: n, questContentCTA: r, questContentPosition: o, questContentRowIndex: s, impressionId: c, trackGuildAndChannelMetadata: u = !1 } = e,
+        d = (0, m.qe)(n),
+        f = p.Z.getQuest(t),
+        h = (0, a.S)();
+    w({
         questId: t,
-        event: E.rMx.QUEST_CONTENT_CLICKED,
-        properties: v(y({}, u, C(n, a, o), (0, s.Z)()), {
+        event: y.rMx.QUEST_CONTENT_CLICKED,
+        properties: T(v({}, d, P(n, o, s), (0, l.Z)()), {
             cta_name: r,
-            quest_status: null != d ? A(d) : null,
-            impression_id: l,
-            google_advertising_id: _.Z.googleAdvertisingId,
+            quest_status: null != f ? C(f) : null,
+            impression_id: c,
+            android_advertising_id: null != h && (0, _.isAndroid)() ? h.advertisingId : null,
             click_id: (0, i.Z)()
         }),
-        trackGuildAndChannelMetadata: c,
-        shouldExtendSession: (0, p.VB)(n)
+        trackGuildAndChannelMetadata: u,
+        shouldExtendSession: (0, m.VB)(n)
     });
 }
-function D(e) {
+function x(e) {
     let { questContent: t, questId: n, mode: r, prevMode: i } = e;
-    R({
+    w({
         questId: n,
-        event: E.rMx.QUEST_BAR_MODE_CHANGED,
-        properties: v(y({}, C(t)), {
+        event: y.rMx.QUEST_BAR_MODE_CHANGED,
+        properties: T(v({}, P(t)), {
             mode: r,
             previous_mode: i
         })
     });
 }
-function L() {
-    let e = (0, d.WD)();
+function M() {
+    let e = (0, f.WD)();
     function t(t) {
         let { questId: n, event: r, properties: i, trackGuildAndChannelMetadata: a = !1, shouldExtendSession: o = !1 } = t;
-        R({
+        w({
             questId: n,
             event: r,
-            properties: v(y({}, i), { impression_id: null == e ? void 0 : e.getId() }),
+            properties: T(v({}, i), { impression_id: null == e ? void 0 : e.getId() }),
             trackGuildAndChannelMetadata: a,
             shouldExtendSession: o
         });
     }
     return r.useCallback(t, [e]);
 }
-function x() {
-    let e = L();
+function k() {
+    let e = M();
     return r.useCallback(
         (t) => {
-            let { questId: n, questContent: r, questContentCTA: a, questContentPosition: o, questContentRowIndex: l, trackGuildAndChannelMetadata: c = !1 } = t,
-                u = _.Z.getQuest(n);
+            let { questId: n, questContent: r, questContentCTA: o, questContentPosition: s, questContentRowIndex: c, trackGuildAndChannelMetadata: u = !1 } = t,
+                d = p.Z.getQuest(n),
+                f = (0, a.S)();
             e({
                 questId: n,
-                event: E.rMx.QUEST_CONTENT_CLICKED,
-                properties: v(y({}, (0, p.qe)(r), C(r, o, l), (0, s.Z)()), {
-                    cta_name: a,
-                    quest_status: null != u ? A(u) : null,
+                event: y.rMx.QUEST_CONTENT_CLICKED,
+                properties: T(v({}, (0, m.qe)(r), P(r, s, c), (0, l.Z)()), {
+                    cta_name: o,
+                    quest_status: null != d ? C(d) : null,
                     click_id: (0, i.Z)(),
-                    google_advertising_id: _.Z.googleAdvertisingId
+                    android_advertising_id: null != f && (0, _.isAndroid)() ? f.advertisingId : null
                 }),
-                trackGuildAndChannelMetadata: c,
-                shouldExtendSession: (0, p.VB)(r)
+                trackGuildAndChannelMetadata: u,
+                shouldExtendSession: (0, m.VB)(r)
             });
         },
         [e]
     );
 }
-function M(e, t) {
+function j(e, t) {
     r.useEffect(() => {
-        k(t, e);
+        U(t, e);
     }, [e, t]);
 }
-function k(e, t) {
-    o.ZP.trackWithMetadata(E.rMx.QUEST_EMBED_FALLBACK_VIEWED, {
+function U(e, t) {
+    s.ZP.trackWithMetadata(y.rMx.QUEST_EMBED_FALLBACK_VIEWED, {
         quest_id: e,
         reason: t
     });

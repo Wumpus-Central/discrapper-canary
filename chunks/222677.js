@@ -82,6 +82,7 @@ var T = (function (e) {
 function S(e, t, n) {
     let { headers: r, status: i, body: a } = e;
     if (429 === i) {
+        if (n.isRetry) return !0;
         let e = parseInt(r['retry-after']);
         return isNaN(e) || setTimeout(t, e * h.Z.Millis.SECOND), !1;
     }

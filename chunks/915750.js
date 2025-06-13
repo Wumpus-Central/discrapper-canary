@@ -94,7 +94,7 @@ class w {
         return this.questContentPosition;
     }
     constructor({ questOrQuests: e, questContent: t, adDecisionData: n, triggeredByStatusChange: r, trackGuildAndChannelMetadata: i, questContentPosition: s, questContentRowIndex: l, minViewTimeSeconds: c = N, isQuestEnrollmentBlocked: h }) {
-        var T = this;
+        var m = this;
         v(this, 'id', void 0),
             v(this, 'quests', void 0),
             v(this, 'questContent', void 0),
@@ -129,14 +129,13 @@ class w {
                             {
                                 min_view_time_seconds: this.minViewTimeSeconds,
                                 min_viewport_percentage: this.minViewportPercentage,
-                                triggered_by_status_change: this.triggeredByStatusChange,
-                                google_advertising_id: m.Z.googleAdvertisingId
+                                triggered_by_status_change: this.triggeredByStatusChange
                             },
                             (0, d.Z)(),
                             this.commonProperties(e)
                         ),
                         i = (0, u.S)();
-                    null != i && (0, f.isIOS)() && (r.apple_advertising_id = i.advertisingId),
+                    null != i && ((0, f.isIOS)() ? (r.apple_advertising_id = i.advertisingId) : (0, f.isAndroid)() && (r.android_advertising_id = i.advertisingId)),
                         (0, p.dA)({
                             questId: e.id,
                             event: O.rMx.QUEST_CONTENT_VIEWED,
@@ -148,15 +147,15 @@ class w {
             }),
             v(this, 'beat', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                T.quests.forEach((t) => {
-                    if (null != T.lastBeatTime) {
-                        let n = Math.round(Date.now() - T.lastBeatTime);
+                m.quests.forEach((t) => {
+                    if (null != m.lastBeatTime) {
+                        let n = Math.round(Date.now() - m.lastBeatTime);
                         (0, b.T)().info(
                             ''
                                 .concat(t.config.messages.questName, ' Quest impression ')
                                 .concat(e ? 'terminal ' : '', 'heartbeat: ')
                                 .concat(n, 'ms since last heartbeat'),
-                            { impressionId: T.id }
+                            { impressionId: m.id }
                         ),
                             (0, p.dA)({
                                 questId: t.id,
@@ -165,15 +164,15 @@ class w {
                                     {
                                         is_termination_beat: e,
                                         viewed_time_ms: n,
-                                        triggered_by_status_change: T.triggeredByStatusChange
+                                        triggered_by_status_change: m.triggeredByStatusChange
                                     },
-                                    T.commonProperties(t)
+                                    m.commonProperties(t)
                                 ),
-                                trackGuildAndChannelMetadata: T.trackGuildAndChannelMetadata
+                                trackGuildAndChannelMetadata: m.trackGuildAndChannelMetadata
                             });
                     }
                 }),
-                    (T.lastBeatTime = Date.now());
+                    (m.lastBeatTime = Date.now());
             }),
             v(this, 'commonProperties', (e) =>
                 I(
@@ -223,7 +222,7 @@ class w {
             }),
             v(this, 'stop', function () {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-                e && T.beat(!0), (T.lastBeatTime = void 0), clearInterval(T.heartbeatTimeoutId), clearTimeout(T.minViewTimeReachedTimeoutId), (T.isRunning = !1);
+                e && m.beat(!0), (m.lastBeatTime = void 0), clearInterval(m.heartbeatTimeoutId), clearTimeout(m.minViewTimeReachedTimeoutId), (m.isRunning = !1);
             }),
             (this.id = (0, a.Z)()),
             (this.adDecisionData = null != n ? n : y.Jp),

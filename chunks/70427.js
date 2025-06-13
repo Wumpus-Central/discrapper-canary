@@ -1,1 +1,1 @@
-s.exports = JSON.parse('{"M6cPwM":"Kar Küresi"}');
+a.exports = JSON.parse('{"+utqa2":["Hediye Arka Planı Seçeneği: ",[1,"giftStyle"]],"B9XqQk":"Kutu","AJ4iio":"Pasta","P5keo6":"Sandık","w84vER":"Kahve","6dCq/v":"Kupa","+HMF8v":"Nitrocadı","vd1fu7":"Tatil Kutusu","aubYGR":"Tatil Pastası","vjxYqa":"Tatil Sandığı","bHuJLS":"Tatil Kahvesi","M6cPwM":"Kar Küresi","GzPel5":"Kutu"}');

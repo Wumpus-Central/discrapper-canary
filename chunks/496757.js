@@ -1,1 +1,1 @@
-p.exports = JSON.parse('{"M6cPwM":"Palla di vetro con neve"}');
+a.exports = JSON.parse('{"+utqa2":["Opzione sfondo per regalo: ",[1,"giftStyle"]],"B9XqQk":"Scatola","AJ4iio":"Torta","P5keo6":"Forziere","w84vER":"Caffè","6dCq/v":"Tazza","+HMF8v":"Nitroween","vd1fu7":"Scatola delle vacanze","aubYGR":"Torta festiva","vjxYqa":"Forziere delle vacanze","bHuJLS":"Caffè delle vacanze","M6cPwM":"Palla di vetro con neve","GzPel5":"Scatola"}');

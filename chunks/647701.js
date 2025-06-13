@@ -1,1 +1,1 @@
-p.exports = JSON.parse('{"M6cPwM":"雪花玻璃球"}');
+e.exports = JSON.parse('{"+utqa2":["禮物背景選項\uFF1A",[1,"giftStyle"]],"B9XqQk":"禮盒","AJ4iio":"蛋糕","P5keo6":"寶箱","w84vER":"咖啡","6dCq/v":"杯子","+HMF8v":"Nitroween","vd1fu7":"慶祝禮盒","aubYGR":"慶祝蛋糕","vjxYqa":"慶祝寶箱","bHuJLS":"慶祝咖啡","M6cPwM":"雪花玻璃球","GzPel5":"禮盒"}');
