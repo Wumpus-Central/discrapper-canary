@@ -31,8 +31,8 @@ var i = t(255367),
     M = t(614277),
     T = t(435020),
     A = t(809144),
-    k = t(698708),
-    N = t(844068),
+    N = t(698708),
+    k = t(844068),
     U = t(981631),
     R = t(474936),
     F = t(388032),
@@ -102,10 +102,10 @@ function B(e) {
     let eM = null != (B = null == ew ? void 0 : ew.message) ? B : F.intl.string(F.t.R0RpRU),
         eT = eS && null == ew,
         eA = eS && null != ew,
-        ek = eT && null == q && !!eS && (null == eI ? void 0 : eI.subscriptionPeriodEnd) == null,
-        eN = !es && (null == eb ? void 0 : eb.skuId) === R.Si.TIER_2 && (null == e_ ? void 0 : e_.referrer_id) != null,
+        eN = eT && null == q && !!eS && (null == eI ? void 0 : eI.subscriptionPeriodEnd) == null,
+        ek = !es && (null == eb ? void 0 : eb.skuId) === R.Si.TIER_2 && (null == e_ ? void 0 : e_.referrer_id) != null,
         eU = null;
-    return ((eU = null != ed ? ed : eN ? (0, i.jsx)(m.Z, {}) : (0, i.jsx)(_.Z, {})), ek)
+    return ((eU = null != ed ? ed : ek ? (0, i.jsx)(m.Z, {}) : (0, i.jsx)(_.Z, {})), eN)
         ? (0, i.jsx)(w.Z, {})
         : (s()(null != en, 'Step should be set'),
           s()(eE.length > 0, 'Premium plan options should be set'),
@@ -117,8 +117,8 @@ function B(e) {
                       children: [
                           eT && (0, i.jsx)('hr', { className: H.planSelectSeparatorUpper }),
                           eU,
-                          (0, i.jsx)(N.Z, {}),
                           (0, i.jsx)(k.Z, {}),
+                          (0, i.jsx)(N.Z, {}),
                           eA
                               ? (0, i.jsx)(o.kzN, { children: eM })
                               : (0, i.jsx)(L.O, {

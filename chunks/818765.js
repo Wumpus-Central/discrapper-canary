@@ -18,16 +18,16 @@ let f = (0, l.uk)('poggermode_applause', o.Z.getSoundpack()),
     O = () => {
         g || (f.loop(), (g = !0));
     },
-    v = () => {
+    _ = () => {
         f.stop(), (g = !1);
     },
-    _ = () => {
+    v = () => {
         let e = d.Z.isEnabled(),
             t = d.Z.comboSoundsEnabled;
         return !!e && !!t && null != c.Z.getChannelId();
     },
     C = () => {
-        if (0 === b.length || !_() || m) return;
+        if (0 === b.length || !v() || m) return;
         m = !0;
         let [e, t] = b[b.length - 1];
         (0, l.GN)(e, t), (y = setTimeout(j, 1000));
@@ -53,24 +53,24 @@ class x extends i.Z {
     }
     handleTypingStop(e) {
         let { userId: t } = e;
-        s.default.getId() === t && v();
+        s.default.getId() === t && _();
     }
     stopAudio() {
-        v();
+        _();
     }
     startAudio() {
         var e;
-        if (!_()) return;
+        if (!v()) return;
         let t = c.Z.getChannelId();
         if (null == t) return;
         let n = s.default.getId(),
             r = u.Z.isTyping(t, n),
             i = h.ZP.getUserCombo(n, t),
             l = null != (e = null == i ? void 0 : i.multiplier) ? e : 1;
-        r && l >= 7 ? O() : v();
+        r && l >= 7 ? O() : _();
     }
     playAchievementUnlockSound() {
-        _() && S('poggermode_achievement_unlock');
+        v() && S('poggermode_achievement_unlock');
     }
 }
 let E = new x();

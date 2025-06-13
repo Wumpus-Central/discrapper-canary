@@ -1,4 +1,4 @@
-n.d(t, { V: () => _ }), n(388685);
+n.d(t, { V: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(512722),
@@ -23,7 +23,7 @@ function O() {
         children: b.intl.string(b.t.jfrLLS)
     });
 }
-function v() {
+function _() {
     var e;
     let t = (0, s.e7)([c.Z], () => c.Z.getFakeGameData()),
         n = (0, s.e7)([h.ZP], () => h.ZP.getVisibleGame()),
@@ -32,16 +32,16 @@ function v() {
     o()(null != l, 'Start time should be set for currently running game');
     let { now: g } = (0, u.tS)(),
         O = (0, i.useMemo)(() => (0, d.T_)({ start: l }, g), [l, g]),
-        v = [...(f ? [b.intl.string(m.default.jfDsyM)] : []), b.intl.string(b.t.BMTj29), O];
+        _ = [...(f ? [b.intl.string(m.default.jfDsyM)] : []), b.intl.string(b.t.BMTj29), O];
     return (0, r.jsx)(a.Text, {
         className: y.textContent,
         variant: 'text-xs/medium',
         color: 'text-positive',
         lineClamp: 1,
-        children: v.join(' \xB7 ')
+        children: _.join(' \xB7 ')
     });
 }
-function _(e) {
+function v(e) {
     let { onClick: t } = e,
         { isEnabled: n, showActivitySharingIndicatorWhenSharing: i } = (0, g.D)('not sharing link'),
         l = p.G6.useSetting(),
@@ -52,7 +52,7 @@ function _(e) {
                 ? (0, r.jsx)(a.P3F, {
                       className: y.container,
                       onClick: t,
-                      children: (0, r.jsx)(v, {})
+                      children: (0, r.jsx)(_, {})
                   })
                 : null
             : (0, r.jsx)(a.P3F, {

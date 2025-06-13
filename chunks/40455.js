@@ -1,8 +1,8 @@
 n.d(t, { ZP: () => k }), n(388685);
 var r = n(592125),
     i = n(650774),
-    a = n(944486),
-    o = n(412788),
+    a = n(750041),
+    o = n(944486),
     s = n(368321),
     l = n(553245),
     c = n(143806),
@@ -33,9 +33,9 @@ let h = 750,
     v = new l.b(h, g),
     I = new c.S(m),
     T = !1;
-class S extends o.Z {
+class S extends a.Z {
     initialize() {
-        this.waitFor(r.Z), this.waitFor(a.Z), this.waitFor(i.Z), this.syncWith([s.Z], () => !0), this.syncWith([a.Z], A);
+        this.waitFor(r.Z), this.waitFor(o.Z), this.waitFor(i.Z), this.syncWith([s.Z], () => !0), this.syncWith([o.Z], A);
     }
     loadCache() {
         let e = this.readSnapshot(S.LATEST_SNAPSHOT_VERSION);
@@ -116,7 +116,7 @@ class S extends o.Z {
     }
 }
 function A() {
-    let e = a.Z.getChannelId();
+    let e = o.Z.getChannelId();
     null != e && S.recordChannel(e);
 }
 function N() {
@@ -125,7 +125,7 @@ function N() {
 function C(e) {
     let t = e.id,
         n = (0, _.v)(e),
-        r = a.Z.getChannelId();
+        r = o.Z.getChannelId();
     n && t === r && S.recordChannel(t), n || S.deleteChannel(t);
 }
 function R(e) {

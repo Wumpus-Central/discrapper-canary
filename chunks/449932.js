@@ -17,8 +17,8 @@ var i = n(120356),
     b = n(768581),
     y = n(51144),
     O = n(754231),
-    v = n(302708);
-function _(e) {
+    _ = n(302708);
+function v(e) {
     let { guildId: t, member: n, className: i } = e,
         o = null != n.member ? (0, b.CA)(n.member) : null;
     return (0, r.jsx)(s.ua7, {
@@ -56,7 +56,7 @@ function _(e) {
                     {
                         src: null != o ? o : n.user.getAvatarURL(t, 16),
                         size: s.EFr.SIZE_16,
-                        className: l()(i, v.partyAvatar),
+                        className: l()(i, _.partyAvatar),
                         'aria-label': null != (a = n.nick) ? a : y.ZP.getName(n.user)
                     },
                     e
@@ -68,13 +68,13 @@ function _(e) {
 function C(e) {
     let { members: t, guildId: n } = e;
     return (0, r.jsx)(p.Z, {
-        className: v.partyMembers,
+        className: _.partyMembers,
         guildId: n,
         users: t,
         max: 6,
         renderUser: (e, t, i) =>
             (0, r.jsx)(
-                _,
+                v,
                 {
                     guildId: n,
                     member: e,
@@ -86,7 +86,7 @@ function C(e) {
             (0, r.jsx)(
                 'div',
                 {
-                    className: l()(v.morePartyMembers, t),
+                    className: l()(_.morePartyMembers, t),
                     children: e
                 },
                 n
@@ -97,9 +97,9 @@ let j = (e) => {
     let { channel: t, presenceActivity: n, members: i, embeddedApp: l, onAction: p } = e,
         b = (0, d.Q3)('ChannelActivityRow'),
         y = null != l,
-        _ = y ? Array.from(l.embeddedActivity.userIds) : [],
+        v = y ? Array.from(l.embeddedActivity.userIds) : [],
         j = (0, o.e7)([m.default, g.default], () => {
-            if (y) return m.default.getUser(_[0]);
+            if (y) return m.default.getUser(v[0]);
             if (null != i) {
                 var e, t;
                 return i.length <= 0 ? null : null != (t = null == (e = i.find((e) => e.user.id !== g.default.getId())) ? void 0 : e.user) ? t : i[0].user;
@@ -109,10 +109,10 @@ let j = (e) => {
     let S = y || (0, c.Z)(n),
         x = (0, f.vd)(t.type);
     return (0, r.jsxs)('div', {
-        className: v.activity,
+        className: _.activity,
         children: [
             (0, r.jsx)('div', {
-                className: v.channelActivityContainer,
+                className: _.channelActivityContainer,
                 children: S
                     ? (0, r.jsx)(O.Z, {
                           activity: n,
@@ -141,7 +141,7 @@ let j = (e) => {
                       })
             }),
             (0, r.jsx)('div', {
-                className: v.activityActionsContainer,
+                className: _.activityActionsContainer,
                 children: (0, r.jsx)(u.Z, {
                     type: a.P.VOICE_CHANNEL,
                     activity: n,
@@ -149,7 +149,7 @@ let j = (e) => {
                     user: j,
                     guildId: t.getGuildId(),
                     channelId: t.id,
-                    color: b ? s.zxk.Colors.PRIMARY : v.button,
+                    color: b ? s.zxk.Colors.PRIMARY : _.button,
                     look: b ? s.zxk.Looks.FILLED : void 0,
                     onAction: p
                 })

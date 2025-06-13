@@ -65,7 +65,7 @@ function m(e) {
             visibleGuilds: b,
             numTruncated: y,
             visibleGuildsTooltip: O,
-            numTruncatedTooltipGuilds: v
+            numTruncatedTooltipGuilds: _
         } = (0, i.useMemo)(() => {
             let e = [...m];
             if (null != n) {
@@ -90,7 +90,7 @@ function m(e) {
         'aria-label': h.intl.string(d.default.TG0Qsb),
         text: (0, r.jsx)(g, {
             guilds: O,
-            numTruncated: v
+            numTruncated: _
         }),
         position: 'top',
         children: (0, r.jsxs)('div', {

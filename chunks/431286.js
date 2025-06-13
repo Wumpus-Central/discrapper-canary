@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(479766),
     y = n(331663),
     O = n(981631),
-    v = n(921944),
-    _ = n(46140);
+    _ = n(921944),
+    v = n(46140);
 let C = 'orb-announcement-modal-key';
 function j() {
     let { hasLayers: e } = (0, o.cj)([f.Z], () => ({ hasLayers: f.Z.hasLayers() })),
@@ -38,20 +38,20 @@ function j() {
                         return function (t) {
                             let { onClose: n, transitionState: i } = t,
                                 o = async () => {
-                                    await n(), x(v.L.USER_DISMISS);
+                                    await n(), x(_.L.USER_DISMISS);
                                 };
                             return (0, r.jsx)(e, {
                                 transitionState: i,
                                 onClose: o,
                                 ctaOnClick: () => {
-                                    x(v.L.TAKE_ACTION),
+                                    x(_.L.TAKE_ACTION),
                                         (0, d.EW)(s.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK, {
-                                            dismissAction: v.L.INDIRECT_ACTION,
-                                            groupName: v.R.VIRTUAL_CURRENCY_ONBOARDING
+                                            dismissAction: _.L.INDIRECT_ACTION,
+                                            groupName: _.R.VIRTUAL_CURRENCY_ONBOARDING
                                         }),
                                         (0, d.EW)(s.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
-                                            dismissAction: v.L.INDIRECT_ACTION,
-                                            groupName: v.R.VIRTUAL_CURRENCY_ONBOARDING
+                                            dismissAction: _.L.INDIRECT_ACTION,
+                                            groupName: _.R.VIRTUAL_CURRENCY_ONBOARDING
                                         }),
                                         (0, g.Y)({
                                             pageType: O.ZY5.ORBS_ANNOUNCEMENT_MODAL,
@@ -59,7 +59,7 @@ function j() {
                                             ctaObject: O.qAy.CTA_TO_ORB_INTRO_QUEST
                                         }),
                                         (0, p.navigateToQuestHome)({
-                                            questId: _.V6,
+                                            questId: v.V6,
                                             fromContent: l.j.ORBS_ANNOUNCEMENT_MODAL
                                         }),
                                         n();
@@ -70,7 +70,7 @@ function j() {
                     {
                         modalKey: C,
                         onCloseRequest: () => {
-                            x(v.L.USER_DISMISS), (0, c.Mr3)(C);
+                            x(_.L.USER_DISMISS), (0, c.Mr3)(C);
                         }
                     }
                 )));

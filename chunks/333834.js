@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(538397),
     y = n(389160),
     O = n(370774),
-    v = n(982183),
-    _ = n(981631),
+    _ = n(982183),
+    v = n(981631),
     C = n(388032),
     j = n(709701);
 function S(e) {
@@ -37,7 +37,7 @@ function x(e) {
                     variant: 'text-sm/medium',
                     color: 'text-secondary',
                     className: j.messagesGroupHeader,
-                    children: (0, s.capitalize)(C.intl.string(v.Vv[t]).toLowerCase())
+                    children: (0, s.capitalize)(C.intl.string(_.Vv[t]).toLowerCase())
                 }),
                 (0, r.jsx)(u.CJ0, {
                     size: 'xxs',
@@ -47,7 +47,7 @@ function x(e) {
         })
     });
 }
-let E = [v.KZ.UNREAD, v.KZ.TODAY, v.KZ.YESTERDAY, v.KZ.OLDER];
+let E = [_.KZ.UNREAD, _.KZ.TODAY, _.KZ.YESTERDAY, _.KZ.OLDER];
 function P() {
     let { analyticsLocations: e } = (0, p.ZP)(h.Z.NOTIFICATIONS_INBOX);
     return (0, r.jsx)('div', {
@@ -68,7 +68,7 @@ function P() {
                         }),
                         (0, r.jsx)(u.Text, {
                             variant: 'text-sm/medium',
-                            color: _.tPk.TEXT_MUTED,
+                            color: v.tPk.TEXT_MUTED,
                             style: { textAlign: 'center' },
                             children: C.intl.string(C.t['O+racX'])
                         })
@@ -100,10 +100,10 @@ function I(e) {
             null == (e = T.current) || e.scrollPageDown({ animate: !0 });
         }
         return (
-            f.S.subscribe(_.CkL.SCROLL_PAGE_DOWN, t),
-            f.S.subscribe(_.CkL.SCROLL_PAGE_UP, e),
+            f.S.subscribe(v.CkL.SCROLL_PAGE_DOWN, t),
+            f.S.subscribe(v.CkL.SCROLL_PAGE_UP, e),
             () => {
-                f.S.unsubscribe(_.CkL.SCROLL_PAGE_DOWN, t), f.S.unsubscribe(_.CkL.SCROLL_PAGE_UP, e);
+                f.S.unsubscribe(v.CkL.SCROLL_PAGE_DOWN, t), f.S.unsubscribe(v.CkL.SCROLL_PAGE_UP, e);
             }
         );
     }, []);
@@ -117,22 +117,22 @@ function I(e) {
         U = i.useMemo(() => {
             if (null == t || n) return null;
             let e = {
-                    [v.KZ.UNREAD]: [],
-                    [v.KZ.TODAY]: [],
-                    [v.KZ.YESTERDAY]: [],
-                    [v.KZ.OLDER]: []
+                    [_.KZ.UNREAD]: [],
+                    [_.KZ.TODAY]: [],
+                    [_.KZ.YESTERDAY]: [],
+                    [_.KZ.OLDER]: []
                 },
                 r = {
-                    [v.KZ.UNREAD]: [],
-                    [v.KZ.TODAY]: [],
-                    [v.KZ.YESTERDAY]: [],
-                    [v.KZ.OLDER]: []
+                    [_.KZ.UNREAD]: [],
+                    [_.KZ.TODAY]: [],
+                    [_.KZ.YESTERDAY]: [],
+                    [_.KZ.OLDER]: []
                 },
                 i = {
-                    [v.KZ.UNREAD]: {},
-                    [v.KZ.TODAY]: {},
-                    [v.KZ.YESTERDAY]: {},
-                    [v.KZ.OLDER]: {}
+                    [_.KZ.UNREAD]: {},
+                    [_.KZ.TODAY]: {},
+                    [_.KZ.YESTERDAY]: {},
+                    [_.KZ.OLDER]: {}
                 };
             return (
                 null != t &&
@@ -140,7 +140,7 @@ function I(e) {
                     (a().each(t, (e) => {
                         let { message: t, kind: n } = e,
                             l = k(t.id);
-                        n === v.fL.MENTION ? r[l].push(t) : t.channel_id in i[l] ? i[l][t.channel_id].push(t) : (i[l][t.channel_id] = [t]);
+                        n === _.fL.MENTION ? r[l].push(t) : t.channel_id in i[l] ? i[l][t.channel_id].push(t) : (i[l][t.channel_id] = [t]);
                     }),
                     a().each(E, (t) => {
                         [...Object.values(i[t]).map((e) => e.reverse()), ...r[t].map((e) => [e])]
@@ -163,7 +163,7 @@ function I(e) {
                         ? e.push(
                               ...t.map((e) => {
                                   let { message: t } = e;
-                                  return p([t], 'sidebar' === R, k(t.id) === v.KZ.UNREAD);
+                                  return p([t], 'sidebar' === R, k(t.id) === _.KZ.UNREAD);
                               })
                           )
                         : null != U &&
@@ -183,14 +183,14 @@ function I(e) {
                                           }
                                       })
                                   ),
-                                  D[t] && e.push(...U[t].map((e) => p(e, 'sidebar' === R, k(e[0].id) === v.KZ.UNREAD))));
+                                  D[t] && e.push(...U[t].map((e) => p(e, 'sidebar' === R, k(e[0].id) === _.KZ.UNREAD))));
                           }),
                 (null == t ? void 0 : t.length) !== 0 && e.push((0, r.jsx)(u.LZC, { size: 8 }, 'spacer')),
                 e
             );
         }, [n, t, h, D, L, U, Z, p, R, k]);
     i.useEffect(() => {
-        null != U && 0 === U.UNREAD.length ? C(v.xM.READ) : C(v.xM.UNREAD);
+        null != U && 0 === U.UNREAD.length ? C(_.xM.READ) : C(_.xM.UNREAD);
     }, [U, C]);
     let B = null;
     return (

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -103,10 +103,14 @@ function y(e) {
     let { dismissibleContent: t } = e;
     (h.lastDCDismissed = t), h.renderedAtTimestamps.delete(t);
 }
-function O() {
+function O(e) {
+    let { dismissibleContent: t } = e;
+    h.lastDCDismissed = null != t ? t : null;
+}
+function v() {
     (h.dailyCapPeriodStart = null), (h.numberOfDCsShownToday = 0), (h.dismissibleContentSeenDuringSession = new Set()), (h.lastDCDismissed = null);
 }
-class v extends (r = i.ZP.PersistedStore) {
+class I extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var t, n, r;
@@ -135,12 +139,13 @@ class v extends (r = i.ZP.PersistedStore) {
         return t.setHours(0, 0, 0, 0), null != h.dailyCapPeriodStart && h.dailyCapPeriodStart < t.getTime() && ((h.numberOfDCsShownToday = 0), (h.dailyCapPeriodStart = null)), h.numberOfDCsShownToday >= p;
     }
 }
-c(v, 'displayName', 'DismissibleContentFrameworkStore'), c(v, 'persistKey', 'DismissibleContentFrameworkStore'), c(v, 'migrations', [(e) => u({}, e)]);
-let I = new v(a.Z, {
+c(I, 'displayName', 'DismissibleContentFrameworkStore'), c(I, 'persistKey', 'DismissibleContentFrameworkStore'), c(I, 'migrations', [(e) => u({}, e)]);
+let T = new I(a.Z, {
     LOGOUT: m,
     DCF_DAILY_CAP_OVERRIDE: g,
     DCF_NEW_USER_MIN_AGE_REQUIRED_OVERRIDE: E,
     DCF_HANDLE_DC_SHOWN: b,
     DCF_HANDLE_DC_DISMISSED: y,
-    DCF_RESET: O
+    DCF_OVERRIDE_LAST_DC_DISMISSED: O,
+    DCF_RESET: v
 });

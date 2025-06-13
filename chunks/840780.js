@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(607070),
     y = n(636449),
     O = n(566620),
-    v = n(317381),
-    _ = n(889441),
+    _ = n(317381),
+    v = n(889441),
     C = n(736409),
     j = n(367907),
     S = n(835473),
@@ -211,7 +211,7 @@ class eb extends i.PureComponent {
                       children: n.name
                   })
               });
-        let v = (0, r.jsxs)(r.Fragment, {
+        let _ = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(A.Z, {
                     className: eh.gameIcon,
@@ -260,13 +260,13 @@ class eb extends i.PureComponent {
                               onClick: () => {
                                   h.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }), c && u(eu.L.TAKE_ACTION), (0, j.yw)(ea.rMx.ACTIVITY_PANEL_GAME_CARD_ACTIVITY_POPOUT_REFOCUS_CLICKED);
                               },
-                              children: v
+                              children: _
                           })
                       )
               })
             : (0, r.jsx)('div', {
                   className: eh.gameWrapper,
-                  children: v
+                  children: _
               });
     }
     render() {
@@ -328,17 +328,17 @@ let ey = (0, m.Z)(function (e) {
     let o = (0, c.e7)([z.default], () => z.default.getId()),
         s = (0, c.e7)([T.ZP, et.Z], () => (0, k.Z)(T.ZP, et.Z)),
         a = (0, c.e7)([$.Z, W.Z], () => W.Z.getChannel($.Z.getVoiceChannelId())),
-        d = (0, c.e7)([v.ZP], () => v.ZP.getConnectedActivityChannelId()),
+        d = (0, c.e7)([_.ZP], () => _.ZP.getConnectedActivityChannelId()),
         h = (0, c.e7)([W.Z], () => W.Z.getChannel(d)),
         p = (0, c.e7)([Y.Z], () => Y.Z.getGuild(null == h ? void 0 : h.guild_id)),
         [f, g] = (0, c.Wu)([F.Z], () => [F.Z.getCurrentUserActiveStream(), F.Z.getStreamerActiveStreamMetadata()]),
         m = (0, c.e7)([b.Z], () => b.Z.useReducedMotion),
-        O = (0, c.e7)([v.ZP], () => v.ZP.getCurrentEmbeddedActivity()),
+        O = (0, c.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
         C = (0, c.e7)([Y.Z, Q.Z, K.ZP], () => (null != a ? R.JL(a, Y.Z, Q.Z, !1) : null != n && R.h_(K.ZP.getChannels(n), Y.Z, Q.Z).length > 0)),
         [j] = (0, S.Z)([null != (t = null != g && null != g.id ? g.id : null != s && null != s.id ? s.id : null != O ? O.applicationId : void 0) ? t : '']),
         x = (0, c.e7)([I.Z], () => I.Z.getFakeGameData()),
-        P = (0, c.e7)([v.ZP], () => v.ZP.getCurrentEmbeddedActivity()),
-        w = (0, _.Z)() && null != P && (0, y.R)(),
+        P = (0, c.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
+        w = (0, v.Z)() && null != P && (0, y.R)(),
         A = (0, c.e7)([q.Z], () => (0, D.Z)(q.Z) && (0, er.isWindows)()),
         L = (0, c.e7)([X.Z], () => (null != o ? X.Z.findActivity(o, (e) => e.type === ea.IIU.PLAYING) : null)),
         M = null != f && f.ownerId === o && f.state !== ea.jm8.ENDED,

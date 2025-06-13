@@ -17,8 +17,8 @@ var i = n(617735),
     b = n(430824),
     y = n(496675),
     O = n(914010),
-    v = n(281029),
-    _ = n(700785),
+    _ = n(281029),
+    v = n(700785),
     C = n(981631);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -62,14 +62,14 @@ function E(e) {
                 let n,
                     i = O.Z.getGuildId(),
                     l = t.getItem(),
-                    c = (0, v.if)(x(i, l.id), l.position, e.channel, e.position, l.channelList);
+                    c = (0, _.if)(x(i, l.id), l.position, e.channel, e.position, l.channelList);
                 if (null == c) return;
                 let d = x(i, l.id);
                 if (null == d) return;
                 let h = g.Z.getCategories(i),
                     p = b.Z.getGuild(i);
                 if (null == p) return;
-                let m = (0, v.Dn)(d, x(i, c.referenceId), c.parentId, h);
+                let m = (0, _.Dn)(d, x(i, c.referenceId), c.parentId, h);
                 if (0 !== m.length) {
                     if (i === C.I_8) return void (0, u.s3)(m);
                     if (
@@ -85,8 +85,8 @@ function E(e) {
                                 if (e.id !== d.id) return !1;
                                 let t = f.Z.getChannel(e.parent_id);
                                 if (!(null != t && y.Z.can(C.Plq.MANAGE_ROLES, d) && y.Z.can(C.Plq.MANAGE_ROLES, t))) return !0;
-                                let r = _.o4(d, t),
-                                    i = _.o4(d, f.Z.getChannel(d.parent_id));
+                                let r = v.o4(d, t),
+                                    i = v.o4(d, f.Z.getChannel(d.parent_id));
                                 return ((null != d.parent_id || r) && (!i || r)) || (n = e), !0;
                             }),
                         null != n)
@@ -131,7 +131,7 @@ function E(e) {
                 let n = t.getItem(),
                     r = f.Z.getChannel(n.id);
                 if (null == r) return !1;
-                let i = (0, v.if)(f.Z.getChannel(n.id), n.position, e.channel, e.position, n.channelList);
+                let i = (0, _.if)(f.Z.getChannel(n.id), n.position, e.channel, e.position, n.channelList);
                 if (null == i) return !1;
                 if (O.Z.getGuildId() === C.I_8) return !0;
                 let l = b.Z.getGuild(n.guildId);

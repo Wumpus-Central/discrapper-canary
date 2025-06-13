@@ -1,7 +1,7 @@
 n.d(t, {
-    ZP: () => _,
+    ZP: () => v,
     jd: () => O,
-    wt: () => v
+    wt: () => _
 }),
     n(361932),
     n(187205),
@@ -25,7 +25,7 @@ var r,
     b = n(709054),
     y = n(982183),
     O = (((r = {}).Loading = 'loading'), (r.Loaded = 'loaded'), (r.Done = 'done'), r);
-function v() {
+function _() {
     let e = (0, o.Wu)([g.ZP], () => g.ZP.getFlattenedGuildIds()),
         t = (0, o.Wu)([h.ZP], () => e.flatMap((e) => h.ZP.getSelectableChannelIds(e)), [e]),
         n = (0, o.cj)([u.Z], () => u.Z.getAllActiveJoinedThreads());
@@ -55,10 +55,10 @@ function v() {
         [t, n]
     );
 }
-function _() {
+function v() {
     let [e, t] = i.useState(!1),
         [n, r] = i.useState('loading'),
-        l = v(),
+        l = _(),
         u = (0, o.Wu)([p.Z], () => (0, c.K)(l.map((e) => p.Z.getMessages(e))), [l]),
         d = i.useCallback(
             async (e) => {

@@ -1,6 +1,6 @@
 n.d(t, {
     Wj: () => C,
-    ZP: () => _
+    ZP: () => v
 }),
     n(388685);
 var r = n(255367),
@@ -20,11 +20,11 @@ var r = n(255367),
     b = n(317169),
     y = n(19394),
     O = n(535396),
-    v = n(921944);
-function _(e) {
+    _ = n(921944);
+function v(e) {
     let t = (0, l.e7)([f.Z], () => f.Z.getNotificationStateForGuild(e), [e]),
         n = (0, l.e7)([g.Z], () => g.Z.getStateForGuild(e)),
-        { trailing: p, showUnread: v } = (function (e, t, n) {
+        { trailing: p, showUnread: _ } = (function (e, t, n) {
             let l = (0, b.Z)(e).available;
             return i.useMemo(() => {
                 var e, i, o;
@@ -60,7 +60,7 @@ function _(e) {
                         };
             }, [l, null == n ? void 0 : n.lastBoostCount, null == n ? void 0 : n.lastSeenWarningNotification, t]);
         })(e, n, t),
-        _ = (function (e, t) {
+        v = (function (e, t) {
             let [n, r] = (0, c.US)(null != t ? [o.z.GUILD_POWERUP_PERKS_COACHMARK] : []),
                 { available: l } = (0, b.Z)(e),
                 s = i.useMemo(() => {
@@ -178,22 +178,22 @@ function _(e) {
                 }
             }, [t, n, r, s, a, p]);
         })(e, n);
-    if (null !== n && (null != p || v || null != _))
+    if (null !== n && (null != p || _ || null != v))
         return {
             trailing: p,
-            showUnread: v,
-            popout: _
+            showUnread: _,
+            popout: v
         };
 }
 function C(e) {
     let t = (0, l.e7)([g.Z], () => g.Z.getStateForGuild(e)),
-        n = _(e);
+        n = v(e);
     i.useEffect(() => {
         (0, p.jd)(e);
     }, [e]),
         i.useEffect(() => {
             var e;
-            null == n || null == (e = n.popout) || e.markAsDismissed(v.L.AUTO_DISMISS);
+            null == n || null == (e = n.popout) || e.markAsDismissed(_.L.AUTO_DISMISS);
         }, [n]),
         i.useEffect(() => {
             null != t &&
@@ -201,7 +201,7 @@ function C(e) {
                     let r = O.Cp[n];
                     if (null == r || null == t.unlockedPowerups[r]) return;
                     let i = O.Q1[n];
-                    null != i && (0, u.Qd)(i, e, !1, v.L.AUTO_DISMISS);
+                    null != i && (0, u.Qd)(i, e, !1, _.L.AUTO_DISMISS);
                 });
         }, [e, t]);
 }

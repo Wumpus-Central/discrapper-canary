@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(455199),
     y = n(768943),
     O = n(592125),
-    v = n(594174),
-    _ = n(70956),
+    _ = n(594174),
+    v = n(70956),
     C = n(709054),
     j = n(821020),
     S = n(370774),
@@ -70,7 +70,7 @@ function D(e) {
                 (0, h.ZP)(() => {
                     let e = setTimeout(() => {
                         l(!0);
-                    }, 0.25 * _.Z.Millis.SECOND);
+                    }, 0.25 * v.Z.Millis.SECOND);
                     return () => {
                         clearTimeout(e);
                     };
@@ -84,7 +84,7 @@ function D(e) {
     (0, i.useEffect)(() => {
         if (!f) return void L(null);
     }, [f]);
-    let z = (0, c.e7)([v.default], () => v.default.getCurrentUser()),
+    let z = (0, c.e7)([_.default], () => _.default.getCurrentUser()),
         W = (0, c.e7)([y.Z], () => y.Z.getSavedMessages()),
         K = i.useMemo(() => {
             var e;

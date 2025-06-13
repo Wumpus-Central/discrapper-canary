@@ -16,8 +16,8 @@ var r,
     b = n(906732),
     y = n(453542),
     O = n(702321),
-    v = n(46148),
-    _ = n(82295),
+    _ = n(46148),
+    v = n(82295),
     C = n(313201),
     j = n(540059),
     S = n(860144),
@@ -388,7 +388,7 @@ class V extends (r = l.Component) {
                 return null == a
                     ? null
                     : (0, i.jsx)(
-                          v.s,
+                          _.s,
                           {
                               channelId: a.id,
                               selectedChannelId: l,
@@ -422,7 +422,7 @@ class V extends (r = l.Component) {
                     { showDMHeader: n, isVisualRefreshEnabled: r } = this.props;
                 return 0 !== t && n
                     ? (0, i.jsxs)(
-                          _.Z,
+                          v.Z,
                           {
                               className: M.privateChannelsHeaderContainer,
                               children: [
@@ -475,7 +475,7 @@ let H = (e) => {
         m = l.Children.count(d),
         y = Z.Z.getMutablePrivateChannels(),
         O = (0, I.k1)(y),
-        v = (0, u.Wu)(
+        _ = (0, u.Wu)(
             [A.Z, P.Z, w.Z],
             () => {
                 let e = A.Z.getPrivateChannelIds();
@@ -484,7 +484,7 @@ let H = (e) => {
             []
         );
     (0, x.z)(S.R);
-    let { analyticsLocations: _ } = (0, b.ZP)(g.Z.CONTACTS_LIST),
+    let { analyticsLocations: v } = (0, b.ZP)(g.Z.CONTACTS_LIST),
         E = (0, u.cj)([f.Z, N.Z, Z.Z], () => ({
             theme: N.Z.darkSidebar ? D.BRd.DARK : s,
             keyboardModeEnabled: f.Z.keyboardModeEnabled,
@@ -542,7 +542,7 @@ let H = (e) => {
             setFocus: L
         });
     return (0, i.jsx)(b.Gt, {
-        value: _,
+        value: v,
         children: (0, i.jsx)(a.bG, {
             navigator: H,
             children: (0, i.jsx)(
@@ -554,7 +554,7 @@ let H = (e) => {
                                 density: r,
                                 isVisualRefreshEnabled: n,
                                 channels: O,
-                                privateChannelIds: v,
+                                privateChannelIds: _,
                                 listRef: R,
                                 theme: s,
                                 version: o

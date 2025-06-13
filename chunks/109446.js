@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(768581),
     y = n(709054),
     O = n(981631),
-    v = n(124368),
-    _ = n(388032),
+    _ = n(124368),
+    v = n(388032),
     C = n(571658);
 function j(e) {
     let { channel: t } = e,
@@ -48,7 +48,7 @@ function j(e) {
                     className: C.title,
                     variant: 'text-xs/bold',
                     color: 'header-secondary',
-                    children: t.isForumLikeChannel() ? _.intl.string(_.t.ioVdOz) : _.intl.string(_.t.VNYs2t)
+                    children: t.isForumLikeChannel() ? v.intl.string(v.t.ioVdOz) : v.intl.string(v.t.VNYs2t)
                 }),
                 l
                     .slice(0, t.isForumLikeChannel() ? l.length : c)
@@ -96,7 +96,7 @@ function j(e) {
                     children: (0, r.jsx)(a.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: _.intl.string(_.t['4qdZ9/'])
+                        children: v.intl.string(v.t['4qdZ9/'])
                     })
                 })
             ]
@@ -110,7 +110,7 @@ function S(e) {
     return (0, r.jsxs)(a.P3F, {
         className: C.row,
         onClick: (e) => {
-            (0, p.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, v.on.POPOUT);
+            (0, p.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, _.on.POPOUT);
         },
         children: [
             null == n

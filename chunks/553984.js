@@ -82,14 +82,14 @@ function O(e, t) {
     }
     return i;
 }
-let v = () => {
+let _ = () => {
         let e = (0, s.e7)([d.Z], () => d.Z.getSavedMessageCount());
         return (0, i.useMemo)(() => {
             let t = [f.V5.ALL, f.V5.MENTIONS];
             return ((0, h.Z)() || e > 0) && t.push(f.V5.BOOKMARKS), t.push(f.V5.ANNOUNCEMENTS), t;
         }, [e]);
     },
-    _ = {
+    v = {
         [f.V5.ALL]: !1,
         [f.V5.BOOKMARKS]: !1,
         [f.V5.MENTIONS]: !1,
@@ -98,8 +98,8 @@ let v = () => {
 function C(e) {
     let { selectedFilter: t, setSelectedFilter: n } = e,
         l = f.by,
-        s = v(),
-        [c, u] = (0, i.useState)(_),
+        s = _(),
+        [c, u] = (0, i.useState)(v),
         d = s.filter((e) => !c[e]);
     return (0, r.jsxs)('div', {
         className: m.filters,
@@ -218,11 +218,11 @@ function S(e) {
 }
 function x(e) {
     let { selectedFilter: t, setSelectedFilter: n, className: l } = e,
-        o = v(),
+        o = _(),
         s = (0, i.useRef)(null),
         [c, d] = (0, i.useState)(!1),
         [h, m] = (0, i.useState)(!1),
-        _ = f.by;
+        v = f.by;
     return 0 === o.length
         ? null
         : (0, r.jsx)(a.yRy, {
@@ -261,7 +261,7 @@ function x(e) {
                                                       enabled: !0
                                                   });
                                           },
-                                          label: _[e],
+                                          label: v[e],
                                           dontCloseOnAction: !0,
                                           icon: e === t ? (0, r.jsx)(a.dz2, { size: 'sm' }) : void 0
                                       },

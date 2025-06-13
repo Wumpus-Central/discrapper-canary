@@ -67,7 +67,7 @@ let y = {
             let n = y[j(e)];
             return t ? ['ACK', ...n] : n;
         }, [e, t]);
-function v(e) {
+function _(e) {
     let { label: t, onClick: n, message: l, Icon: s, interactionType: a } = e,
         [c, u] = (0, i.useState)(!1);
     return (0, r.jsx)(o.ua7, {
@@ -97,7 +97,7 @@ function v(e) {
             )
     });
 }
-function _(e) {
+function v(e) {
     let { channel: t, message: n, label: l, Icon: s, Menu: a, interactionType: c } = e,
         [u, d] = (0, i.useState)(!1),
         [p, f] = (0, i.useState)(!1),
@@ -256,10 +256,10 @@ function S(e) {
             let i = C[e];
             switch (i.type) {
                 case 'standard':
-                    return (0, r.jsx)(v, b(m({}, i), { message: t }), e);
+                    return (0, r.jsx)(_, b(m({}, i), { message: t }), e);
                 case 'menu':
                     return (0, r.jsx)(
-                        _,
+                        v,
                         b(m({}, i), {
                             channel: n,
                             message: t

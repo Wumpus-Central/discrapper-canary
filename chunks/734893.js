@@ -21,7 +21,8 @@ n.d(t, {
     vD: () => b,
     x3: () => m
 }),
-    n(953529);
+    n(953529),
+    n(388685);
 var r = n(592125),
     i = n(823379),
     a = n(700785),
@@ -149,7 +150,15 @@ function T(e) {
 }
 function S(e) {
     var t, n;
-    return null != e && (!!T(e) || ((null == (t = e.welcomeMessage) ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < s) && (null == (n = e.welcomeMessage) ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < d)));
+    if (null == e) return !1;
+    if (T(e)) return !0;
+    if ((null == (t = e.welcomeMessage) ? void 0 : t.message) == null || e.welcomeMessage.message.length < s || (null == (n = e.welcomeMessage) ? void 0 : n.authorIds) == null || 0 === e.welcomeMessage.authorIds.length || null == e.newMemberActions || e.newMemberActions.length < d) return !1;
+    if (null != e.newMemberActions)
+        for (let t of e.newMemberActions) {
+            let e = r.Z.getChannel(t.channelId);
+            if (null == e || !a.Uu(o.Plq.VIEW_CHANNEL, e)) return !1;
+        }
+    return !0;
 }
 function A(e) {
     return e.type === o.d4z.GUILD_TEXT && !a.Uu(o.Plq.SEND_MESSAGES, e) && a.Uu(o.Plq.VIEW_CHANNEL, e);

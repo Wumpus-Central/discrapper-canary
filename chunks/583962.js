@@ -1,7 +1,7 @@
 n.d(t, {
-    PD: () => D,
-    ZP: () => k,
-    aR: () => L
+    PD: () => N,
+    ZP: () => A,
+    aR: () => Z
 }),
     n(388685);
 var r = n(255367),
@@ -14,25 +14,21 @@ var r = n(255367),
     u = n(477690),
     d = n(481060),
     h = n(239091),
-    p = n(100527),
-    f = n(367907),
-    g = n(906732),
-    m = n(540059),
-    b = n(434404),
-    y = n(151494),
-    O = n(496675),
-    v = n(259580),
-    _ = n(267642),
-    C = n(624138),
-    j = n(667815),
-    S = n(531572),
-    x = n(26323),
-    E = n(30513),
-    P = n(981631),
-    I = n(388032),
-    w = n(93841),
-    N = n(30009);
-function Z(e) {
+    p = n(540059),
+    f = n(151494),
+    g = n(496675),
+    m = n(259580),
+    b = n(267642),
+    y = n(624138),
+    O = n(667815),
+    _ = n(531572),
+    v = n(651138),
+    C = n(18857),
+    j = n(981631),
+    S = n(388032),
+    x = n(93841),
+    E = n(30009);
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,7 +53,7 @@ function Z(e) {
     }
     return e;
 }
-function T(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -75,92 +71,52 @@ function T(e, t) {
         e
     );
 }
-let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
-    R = (e) => {
-        let { guild: t, onSelect: n } = e,
-            [l, o] = i.useState(t.premiumProgressBarEnabled),
-            [s, a] = i.useState(!1),
-            u = (0, c.e7)([O.Z], () => O.Z.can(P.Plq.MANAGE_GUILD, t)),
-            p = async () => {
-                u && (a(!0), await b.Z.saveGuild(t.id, { premiumProgressBarEnabled: !l }), o(!l), a(!1));
-            };
-        return (0, r.jsx)(d.v2r, {
-            navId: 'progress-bar-context',
-            onClose: h.Zy,
-            'aria-label': I.intl.string(I.t['m85s/v']),
-            onSelect: n,
-            children: (0, r.jsx)(d.S89, {
-                id: 'progress-bar-enabled',
-                label: I.intl.string(I.t['0CJWPz']),
-                checked: l,
-                disabled: s,
-                action: p
-            })
-        });
-    },
-    D = 57,
-    L = 57 + A,
-    M = {
+let w = (0, y.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+    N = 57,
+    Z = 57 + w,
+    T = {
         tension: 180,
         friction: 80
     },
-    k = (e) => {
+    A = (e) => {
         let { guild: t, withMargin: n } = e,
-            l = (0, m.Q3)('GuildBoostingSidebarDisplay'),
-            { analyticsLocations: u } = (0, g.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
-            b = (0, _.Jh)(t.id),
-            C = (0, y.Z)(t.id),
-            A = (0, _.FZ)(b),
-            D = null == A,
-            L = null != A ? A : b,
-            k = (0, c.e7)([S.Z], () => {
+            l = (0, p.Q3)('GuildBoostingSidebarDisplay'),
+            u = (0, b.Jh)(t.id),
+            y = (0, f.Z)(t.id),
+            w = (0, b.FZ)(u),
+            N = null == w,
+            Z = null != w ? w : u,
+            A = (0, c.e7)([_.Z], () => {
                 var e;
-                return null != (e = S.Z.getCountForGuild(t.id)) ? e : 0;
+                return null != (e = _.Z.getCountForGuild(t.id)) ? e : 0;
             }),
-            U = (0, c.e7)([O.Z], () => O.Z.can(P.Plq.MANAGE_GUILD, t));
+            R = (0, c.e7)([g.Z], () => g.Z.can(j.Plq.MANAGE_GUILD, t));
         i.useEffect(() => {
-            k !== C && (0, j.v)(t.id, C);
-        }, [t.id, k, C]);
-        let G = D ? '100%' : ''.concat(Math.min(100, (C / P.oCV[L]) * 100), '%'),
-            { current: B } = i.useRef(G),
-            [V] = (0, d.q_F)(
+            A !== y && (0, O.v)(t.id, y);
+        }, [t.id, A, y]);
+        let D = N ? '100%' : ''.concat(Math.min(100, (y / j.oCV[Z]) * 100), '%'),
+            { current: L } = i.useRef(D),
+            [M] = (0, d.q_F)(
                 () => ({
-                    from: { width: k === C ? B : '0%' },
-                    to: { width: G },
-                    config: M
+                    from: { width: A === y ? L : '0%' },
+                    to: { width: D },
+                    config: T
                 }),
                 'respect-motion-settings',
-                [k, C, B, G]
+                [A, y, L, D]
             ),
-            H = t.premiumTier < L && k >= P.oCV[L],
-            F = () => {
-                (0, f.yw)(P.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
-                    location: { section: P.jXE.PREMIUM_GUILD_PROGRESS_BAR },
-                    guild_id: t.id,
-                    location_stack: u
-                }),
-                    (0, x.Z)({
-                        analyticsLocations: u,
-                        analyticsSourceLocation: {
-                            page: P.ZY5.GUILD_CHANNEL,
-                            section: P.jXE.PREMIUM_GUILD_PROGRESS_BAR,
-                            object: P.qAy.TOOLTIP
-                        },
-                        guild: t,
-                        perks: (0, E.VF)(),
-                        perkIntro: I.intl.string(I.t.ZhvSn5)
-                    });
-            },
-            z = I.intl.formatToPlainString(I.t['2oNfMT'], { levelName: (0, _.e9)(L) }),
-            W = I.intl.format(I.t.dhKnYm, {
-                numBoosts: C,
-                numTotal: P.oCV[L]
+            k = t.premiumTier < Z && A >= j.oCV[Z],
+            U = (0, C.Z)(t),
+            G = S.intl.formatToPlainString(S.t['2oNfMT'], { levelName: (0, b.e9)(Z) }),
+            B = S.intl.format(S.t.dhKnYm, {
+                numBoosts: y,
+                numTotal: j.oCV[Z]
             });
-        D && ((z = (0, _.e9)(L)), (W = I.intl.format(I.t.B2byER, { numBoosts: C }))), l && (z = z.toLocaleLowerCase());
-        let K = (0, a.JA)('boosts-'.concat(t.id));
+        N && ((G = (0, b.e9)(Z)), (B = S.intl.format(S.t.B2byER, { numBoosts: y }))), l && (G = G.toLocaleLowerCase());
+        let V = (0, a.JA)('boosts-'.concat(t.id));
         return (0, r.jsx)('li', {
             children: (0, r.jsx)(d.ua7, {
-                text: H ? I.intl.formatToPlainString(w.default['9CtPjo'], { perk: (0, _.nW)(L) }) : D ? I.intl.string(I.t['Y+V9go']) : I.intl.formatToPlainString(I.t.UyDKl5, { levelName: (0, _.nW)(L) }),
+                text: k ? S.intl.formatToPlainString(x.default['9CtPjo'], { perk: (0, b.nW)(Z) }) : N ? S.intl.string(S.t['Y+V9go']) : S.intl.formatToPlainString(S.t.UyDKl5, { levelName: (0, b.nW)(Z) }),
                 color: d.ua7.Colors.BLACK,
                 position: 'top',
                 delay: 200,
@@ -168,7 +124,7 @@ let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                 children: (e) =>
                     (0, r.jsxs)(
                         d.P3F,
-                        T(Z({}, K, e), {
+                        I(P({}, V, e), {
                             'aria-label': void 0,
                             role: 'button',
                             focusProps: {
@@ -177,58 +133,58 @@ let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                     right: 4
                                 }
                             },
-                            onClick: F,
-                            className: o()(N.container, { [N.containerWithMargin]: n }),
+                            onClick: U,
+                            className: o()(E.container, { [E.containerWithMargin]: n }),
                             onContextMenu: (e) => {
-                                U && (0, h.vq)(e, (e) => (0, r.jsx)(R, T(Z({}, e), { guild: t })));
+                                R && (0, h.vq)(e, (e) => (0, r.jsx)(v.default, I(P({}, e), { guild: t })));
                             },
                             children: [
                                 (0, r.jsx)(d.nn4, { children: e['aria-label'] }),
                                 (0, r.jsxs)('div', {
-                                    className: N.textArea,
+                                    className: E.textArea,
                                     children: [
                                         (0, r.jsx)('div', {
-                                            className: N.goalTextContainer,
+                                            className: E.goalTextContainer,
                                             children: (0, r.jsx)(d.Text, {
-                                                className: N.goalText,
+                                                className: E.goalText,
                                                 color: l ? 'none' : 'interactive-active',
                                                 variant: l ? 'text-sm/medium' : 'text-xs/bold',
                                                 lineClamp: 1,
-                                                children: z
+                                                children: G
                                             })
                                         }),
                                         (0, r.jsxs)('div', {
-                                            className: N.progressFraction,
+                                            className: E.progressFraction,
                                             children: [
                                                 (0, r.jsx)(d.Text, {
                                                     color: l ? 'none' : 'interactive-normal',
                                                     variant: l ? 'text-sm/medium' : 'text-xs/normal',
-                                                    className: N.progressText,
+                                                    className: E.progressText,
                                                     lineClamp: 1,
-                                                    children: W
+                                                    children: B
                                                 }),
-                                                (0, r.jsx)(v.Z, {
-                                                    className: N.count,
+                                                (0, r.jsx)(m.Z, {
+                                                    className: E.count,
                                                     height: 16,
                                                     width: 16,
-                                                    direction: v.Z.Directions.RIGHT
+                                                    direction: m.Z.Directions.RIGHT
                                                 })
                                             ]
                                         })
                                     ]
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: o()(N.progressBarContainer, { [N.progressBarContainerComplete]: D }),
+                                    className: o()(E.progressBarContainer, { [E.progressBarContainerComplete]: N }),
                                     children: [
                                         (0, r.jsx)(s.animated.div, {
-                                            className: N.progressBar,
-                                            style: V
+                                            className: E.progressBar,
+                                            style: M
                                         }),
-                                        D
+                                        N
                                             ? (0, r.jsx)('span', {
-                                                  'aria-label': I.intl.string(I.t['7iL1q6']),
+                                                  'aria-label': S.intl.string(S.t['7iL1q6']),
                                                   role: 'img',
-                                                  className: N.tadaIcon,
+                                                  className: E.tadaIcon,
                                                   children: '\uD83C\uDF89'
                                               })
                                             : null

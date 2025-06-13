@@ -1,4 +1,7 @@
-n.d(t, { v: () => i });
+n.d(t, {
+    q: () => l,
+    v: () => i
+});
 var r = n(570140);
 let i = (e, t) => {
     r.Z.wait(() => {
@@ -9,3 +12,6 @@ let i = (e, t) => {
         });
     });
 };
+function l() {
+    r.Z.dispatch({ type: 'APPLIED_GUILD_BOOST_COUNT_RESET' });
+}

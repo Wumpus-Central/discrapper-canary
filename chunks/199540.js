@@ -81,8 +81,8 @@ function b(e) {
             tooltipName: b,
             folderGroupId: y,
             folderButtonContent: O,
-            onClick: v,
-            onContextMenu: _,
+            onClick: _,
+            onContextMenu: v,
             onHoverChange: C,
             onKeyDown: j,
             treeItemProps: { onFocus: S },
@@ -147,8 +147,8 @@ function b(e) {
             })(
                 {
                     className: f.folderButton,
-                    onClick: v,
-                    onContextMenu: _,
+                    onClick: _,
+                    onContextMenu: v,
                     onMouseEnter: N,
                     onMouseLeave: Z,
                     onKeyDown: j,

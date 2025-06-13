@@ -17,8 +17,8 @@ var i = n(120356),
     b = n(592125),
     y = n(594174),
     O = n(938475),
-    v = n(823379),
-    _ = n(709054),
+    _ = n(823379),
+    v = n(709054),
     C = n(853856),
     j = n(981631),
     S = n(388032),
@@ -44,10 +44,10 @@ function P(e, t) {
 }
 function I() {
     let e = (0, a.Wu)([C.Z, b.Z], () =>
-            _.default
+            v.default
                 .keys(C.Z.getFavoriteChannels())
                 .map((e) => b.Z.getChannel(e))
-                .filter(v.lm)
+                .filter(_.lm)
         ),
         t = e.map((e) => e.id),
         n = e.filter((e) => e.type === j.d4z.GUILD_VOICE),

@@ -60,9 +60,9 @@ function A(e) {
     }
     return e;
 }
-let k = [j.h8.PLAN_SELECT, j.h8.ADD_PAYMENT_STEPS, j.h8.REVIEW, j.h8.CONFIRM];
-function N(e) {
-    let { analyticsLocation: n, analyticsObject: t, analyticsSourceLocation: r, onComplete: o, transitionState: d, initialPlanId: u, subscriptionTier: f, onClose: m, trialId: L, trialFooterMessageOverride: g, reviewWarningMessage: y, openInvoiceId: S, onSubscriptionConfirmation: E, renderPurchaseConfirmation: v, postSuccessGuild: b, followupSKUInfo: P, renderHeader: Z, applicationId: O, guildId: M, referralTrialOfferId: T, skuId: A, returnRef: k, skipConfirm: N = !1, continueSessionToInitialStep: U } = e,
+let N = [j.h8.PLAN_SELECT, j.h8.ADD_PAYMENT_STEPS, j.h8.REVIEW, j.h8.CONFIRM];
+function k(e) {
+    let { analyticsLocation: n, analyticsObject: t, analyticsSourceLocation: r, onComplete: o, transitionState: d, initialPlanId: u, subscriptionTier: f, onClose: m, trialId: L, trialFooterMessageOverride: g, reviewWarningMessage: y, openInvoiceId: S, onSubscriptionConfirmation: E, renderPurchaseConfirmation: v, postSuccessGuild: b, followupSKUInfo: P, renderHeader: Z, applicationId: O, guildId: M, referralTrialOfferId: T, skuId: A, returnRef: N, skipConfirm: k = !1, continueSessionToInitialStep: U } = e,
         { analyticsLocations: R } = (0, C.ZP)();
     l.useEffect(() => {
         c.Z.isLoadedForPremiumSKUs() || s.Z.wait(() => (0, a.Y2)());
@@ -99,8 +99,8 @@ function N(e) {
         skuId: A,
         shakeWhilePurchasing: !0,
         isDynamicModal: D,
-        returnRef: k,
-        skipConfirm: N,
+        returnRef: N,
+        skipConfirm: k,
         continueSessionToInitialStep: U
     });
 }
@@ -121,7 +121,7 @@ function U(e) {
         ((n = A({}, e)),
         (t = t =
             {
-                breadcrumbSteps: k,
+                breadcrumbSteps: N,
                 onReturn: () => {
                     let e = Object.values(a),
                         n = e.length < 1 && null == l ? j.h8.PLAN_SELECT : j.h8.REVIEW;
@@ -235,7 +235,7 @@ function F(e) {
                     giftMessage: d,
                     giftStyle: p,
                     giftingOrigin: a,
-                    children: (0, i.jsx)(N, A({}, e))
+                    children: (0, i.jsx)(k, A({}, e))
                 })
             })
         })

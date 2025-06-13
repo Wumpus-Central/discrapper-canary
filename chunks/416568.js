@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(925549),
     y = n(493773),
     O = n(209613),
-    v = n(100527),
-    _ = n(906732),
+    _ = n(100527),
+    v = n(906732),
     C = n(358221),
     j = n(540059),
     S = n(706590),
@@ -341,7 +341,7 @@ function ep(e) {
         ),
         [ep]
     );
-    let { analyticsLocations: ef } = (0, _.ZP)(v.Z.GUILDS_LIST),
+    let { analyticsLocations: ef } = (0, v.ZP)(_.Z.GUILDS_LIST),
         { pathname: eg } = (0, c.TH)(),
         em = ec(eg);
     (0, y.Ng)(() => {
@@ -415,17 +415,17 @@ function ep(e) {
         ),
         { enabled: eO } = (0, N.WX)({ location: 'GuildsBar' });
     (0, T.t)();
-    let ev = i.useRef(null),
-        e_ = (0, Z.qp)({
+    let e_ = i.useRef(null),
+        ev = (0, Z.qp)({
             isVirtualCurrencyEnabled: eO,
-            discoveryButtonRef: ev,
+            discoveryButtonRef: e_,
             scrollToBottom: ep.scrollToBottom
         }),
-        { shouldShow: eC, questId: ej, onDiscoveryButtonClick: eS } = e_,
-        ex = es(e_, ['shouldShow', 'questId', 'onDiscoveryButtonClick']),
+        { shouldShow: eC, questId: ej, onDiscoveryButtonClick: eS } = ev,
+        ex = es(ev, ['shouldShow', 'questId', 'onDiscoveryButtonClick']),
         eE = eO && eC,
         eP = (0, r.jsx)(W.Z, {
-            ref: ev,
+            ref: e_,
             questId: eE ? ej : void 0,
             selected: em,
             className: er.discoveryIcon,
@@ -437,7 +437,7 @@ function ep(e) {
                   eo(
                       el(
                           {
-                              targetElementRef: ev,
+                              targetElementRef: e_,
                               isGuildBarScrolling: Y
                           },
                           ex
@@ -446,7 +446,7 @@ function ep(e) {
                   )
               )
             : eP;
-    return (0, r.jsx)(_.Gt, {
+    return (0, r.jsx)(v.Gt, {
         value: ef,
         children: (0, r.jsx)(m.f6W, {
             theme: s,

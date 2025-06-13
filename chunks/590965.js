@@ -28,7 +28,7 @@ function O(e, t, n) {
         e
     );
 }
-function v(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function v(e) {
     }
     return e;
 }
-let _ = b.IlC.APP,
+let v = b.IlC.APP,
     C = !1,
     j = !1,
     S = [];
@@ -57,7 +57,7 @@ class E extends (i = l.ZP.Store) {
     }
     isOpen() {
         let e = __OVERLAY__ ? b.IlC.OVERLAY : b.IlC.APP;
-        return !!(C && S.length > 0 && _ === e);
+        return !!(C && S.length > 0 && v === e);
     }
     getProps() {
         return {
@@ -105,7 +105,7 @@ let P = new E(o.Z, {
             })
         )
             return !1;
-        (_ = e.context), (j = !1);
+        (v = e.context), (j = !1);
         let n = (function (e) {
             let { approximate_member_count: t, approximate_presence_count: n, code: r, state: i, target_type: l, target_user: o, target_application: s, stage_instance: a, type: c, channel: d, guild: h, is_nickname_changeable: p } = e,
                 f = {
@@ -120,7 +120,7 @@ let P = new E(o.Z, {
                     type: c,
                     is_nickname_changeable: p
                 };
-            return null != d && (f.channel = v({}, d)), null != h && (f.guild = new u.ZP(h)), null != e.inviter && (f.inviter = v({}, e.inviter)), f;
+            return null != d && (f.channel = _({}, d)), null != h && (f.guild = new u.ZP(h)), null != e.inviter && (f.inviter = _({}, e.inviter)), f;
         })(t);
         S.push([n, e.resolve]);
     },
