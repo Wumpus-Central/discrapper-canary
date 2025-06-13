@@ -18069,7 +18069,8 @@ div.modalHeader_c28af8 {
     background-color: var(--modal-footer-background);
     display: grid;
     grid-area: header;
-    grid-template: "layer" 1fr/1fr
+    grid-template: "layer" 1fr/1fr;
+    max-height: 123px
 }
 
 .headerBackground_b0ba57 {
