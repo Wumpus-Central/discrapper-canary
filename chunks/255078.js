@@ -1,19 +1,20 @@
 n.d(t, {
-    Q: () => E,
-    Z: () => b
+    Q: () => b,
+    Z: () => y
 }),
     n(388685);
 var r = n(512722),
     i = n.n(r),
     a = n(81825),
     o = n(491819),
-    s = n(358085),
-    l = n(111361),
-    c = n(146528),
-    u = n(981631),
-    d = n(362786),
-    _ = n(474936);
-function f(e, t, n) {
+    s = n(563089),
+    l = n(358085),
+    c = n(111361),
+    u = n(146528),
+    d = n(981631),
+    _ = n(362786),
+    f = n(474936);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +27,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +38,12 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,30 +55,30 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function g(e) {
+function E(e) {
     return {
         id: e.id,
         planId: e.plan_id,
         quantity: e.quantity
     };
 }
-class E extends a.Z {
+class b extends a.Z {
     static createFromServer(e) {
         var t;
-        return new E(
-            m(
-                p(
+        return new b(
+            g(
+                h(
                     {
                         id: e.id,
                         type: e.type,
@@ -92,11 +93,11 @@ class E extends a.Z {
                         paymentGatewaySubscriptionId: e.payment_gateway_subscription_id,
                         trialId: e.trial_id,
                         trialEndsAt: null != e.trial_ends_at ? new Date(e.trial_ends_at) : null,
-                        items: e.items.map(g),
+                        items: e.items.map(E),
                         renewalMutations:
                             null != e.renewal_mutations
                                 ? {
-                                      items: e.renewal_mutations.items.map(g),
+                                      items: e.renewal_mutations.items.map(E),
                                       paymentGatewayPlanId: e.renewal_mutations.payment_gateway_plan_id
                                   }
                                 : null,
@@ -109,9 +110,12 @@ class E extends a.Z {
                         price: e.price,
                         userId: e.user_id
                     },
-                    null != e.latest_invoice ? { latestInvoice: c.Z.createInvoiceFromServer(e.latest_invoice) } : {}
+                    null != e.latest_invoice ? { latestInvoice: u.Z.createInvoiceFromServer(e.latest_invoice) } : {}
                 ),
-                { eligiblePaymentGateways: null != (t = e.eligible_payment_gateways) ? t : null }
+                {
+                    eligiblePaymentGateways: null != (t = e.eligible_payment_gateways) ? t : null,
+                    priceChange: null != e.price_change ? s.ZP.createFromServer(e.price_change) : null
+                }
             )
         );
     }
@@ -120,93 +124,93 @@ class E extends a.Z {
         return null == (t = this.items.find((t) => e.includes(t.planId))) ? void 0 : t.planId;
     }
     get isPremium() {
-        return this.type === u.NYc.PREMIUM;
+        return this.type === d.NYc.PREMIUM;
     }
     get planIdForCurrencies() {
         let e;
         return this.isPremium ? (i()(this.planIdFromItems, 'Premium subscription has no planId for currencies'), (e = this.planIdFromItems)) : (e = this.planId), e;
     }
     get planIdFromItems() {
-        return this.getCurrentSubscriptionPlanIdForGroup(Object.values(_.Xh));
+        return this.getCurrentSubscriptionPlanIdForGroup(Object.values(f.Xh));
     }
     get premiumPlanIdFromItems() {
-        return this.getCurrentSubscriptionPlanIdForGroup([..._.dJ]);
+        return this.getCurrentSubscriptionPlanIdForGroup([...f.dJ]);
     }
     get isPurchasedViaApple() {
-        return this.paymentGateway === u.gg$.APPLE;
+        return this.paymentGateway === d.gg$.APPLE;
     }
     get isPurchasedViaGoogle() {
-        return this.paymentGateway === u.gg$.GOOGLE;
+        return this.paymentGateway === d.gg$.GOOGLE;
     }
     get isPurchasedExternally() {
         return this.isPurchasedViaApple || this.isPurchasedViaGoogle;
     }
     get isOnPlatformMatchingExternalPaymentGateway() {
-        return (this.isPurchasedViaApple && (0, s.isIOS)()) || (this.isPurchasedViaGoogle && (0, s.isAndroid)());
+        return (this.isPurchasedViaApple && (0, l.isIOS)()) || (this.isPurchasedViaGoogle && (0, l.isAndroid)());
     }
     get hasExternalPlanChange() {
         return this.isPurchasedExternally && null != this.renewalMutations && this.paymentGatewayPlanId !== this.renewalMutations.paymentGatewayPlanId;
     }
     get hasPremiumNitroMonthly() {
-        return null != this.items.find((e) => e.planId === _.Xh.PREMIUM_MONTH_TIER_2);
+        return null != this.items.find((e) => e.planId === f.Xh.PREMIUM_MONTH_TIER_2);
     }
     get isBoostOnly() {
-        return this.items.every((e) => [_.Xh.PREMIUM_MONTH_GUILD, _.Xh.PREMIUM_YEAR_GUILD].includes(e.planId));
+        return this.items.every((e) => [f.Xh.PREMIUM_MONTH_GUILD, f.Xh.PREMIUM_YEAR_GUILD].includes(e.planId));
     }
     get isPausedOrPausePending() {
-        return u.JwP.ALL_PAUSE.has(this.status);
+        return d.JwP.ALL_PAUSE.has(this.status);
     }
     get isPaused() {
-        return this.status === u.O0b.PAUSED;
+        return this.status === d.O0b.PAUSED;
     }
     get isPausedForFractionalPremium() {
-        return this.status === u.O0b.PAUSED && this.pauseReason === d.Id.FRACTIONAL_PREMIUM;
+        return this.status === d.O0b.PAUSED && this.pauseReason === _.Id.FRACTIONAL_PREMIUM;
     }
     get isPausedAllowsUpdatesButNotResume() {
-        return this.status === u.O0b.PAUSED && d.rN.CAN_MAKE_SUBSCRIPTION_UPDATES.has(this.pauseReason);
+        return this.status === d.O0b.PAUSED && _.rN.CAN_MAKE_SUBSCRIPTION_UPDATES.has(this.pauseReason);
     }
     get isPausedAllowsResumeButNotUpdates() {
-        return this.status === u.O0b.PAUSED && (null === this.pauseReason || !d.rN.CAN_MAKE_SUBSCRIPTION_UPDATES.has(this.pauseReason));
+        return this.status === d.O0b.PAUSED && (null === this.pauseReason || !_.rN.CAN_MAKE_SUBSCRIPTION_UPDATES.has(this.pauseReason));
     }
     get isEnded() {
-        return this.status === u.O0b.ENDED;
+        return this.status === d.O0b.ENDED;
     }
     get endedAt() {
         var e;
-        return this.status !== u.O0b.ENDED ? null : (null == (e = this.metadata) ? void 0 : e.ended_at) != null ? new Date(this.metadata.ended_at) : this.currentPeriodEnd;
+        return this.status !== d.O0b.ENDED ? null : (null == (e = this.metadata) ? void 0 : e.ended_at) != null ? new Date(this.metadata.ended_at) : this.currentPeriodEnd;
     }
     get isActive() {
-        return this.status === u.O0b.ACTIVE;
+        return this.status === d.O0b.ACTIVE;
     }
     get hasActiveTrial() {
         return null != this.trialId && null != this.trialEndsAt && new Date() < this.trialEndsAt;
     }
     get inReverseTrial() {
-        return null != this.trialId && _.h8.includes(this.trialId) && null == this.paymentSourceId;
+        return null != this.trialId && f.h8.includes(this.trialId) && null == this.paymentSourceId;
     }
     get premiumSince() {
         var e;
         return null != (e = this.streakStartedAt) ? e : this.createdAt;
     }
     get hasAnyPremiumNitro() {
-        return this.items.some((e) => _.dJ.has(e.planId));
+        return this.items.some((e) => f.dJ.has(e.planId));
     }
     hasPremiumAtLeast(e) {
         return (
             !!this.isPremium &&
             this.items.some((t) => {
-                let n = _.GP[t.planId];
-                return (0, l.yd)(n.premiumType, e);
+                let n = f.GP[t.planId];
+                return (0, c.yd)(n.premiumType, e);
             })
         );
     }
     constructor(e) {
-        super(), f(this, 'id', void 0), f(this, 'type', void 0), f(this, 'items', void 0), f(this, 'createdAt', void 0), f(this, 'canceledAt', void 0), f(this, 'currentPeriodStart', void 0), f(this, 'currentPeriodEnd', void 0), f(this, 'status', void 0), f(this, 'paymentSourceId', void 0), f(this, 'paymentGateway', void 0), f(this, 'paymentGatewayPlanId', void 0), f(this, 'paymentGatewaySubscriptionId', void 0), f(this, 'trialId', void 0), f(this, 'trialEndsAt', void 0), f(this, 'renewalMutations', void 0), f(this, 'streakStartedAt', void 0), f(this, 'currency', void 0), f(this, 'pauseEndsAt', void 0), f(this, 'pauseReason', void 0), f(this, 'planId', void 0), f(this, 'additionalPlans', void 0), f(this, 'metadata', void 0), f(this, 'latestInvoice', void 0), f(this, 'useStorekitResubscribe', void 0), f(this, 'price', void 0), f(this, 'userId', void 0), f(this, 'eligiblePaymentGateways', void 0), (this.id = e.id), (this.type = e.type), (this.items = e.items), (this.createdAt = e.createdAt), (this.canceledAt = e.canceledAt), (this.currentPeriodStart = e.currentPeriodStart), (this.currentPeriodEnd = e.currentPeriodEnd), (this.status = e.status), (this.paymentSourceId = e.paymentSourceId), (this.paymentGateway = e.paymentGateway), (this.paymentGatewayPlanId = e.paymentGatewayPlanId), (this.paymentGatewaySubscriptionId = e.paymentGatewaySubscriptionId), (this.trialId = e.trialId), (this.trialEndsAt = e.trialEndsAt), (this.renewalMutations = e.renewalMutations), (this.currency = e.currency), (this.pauseEndsAt = e.pauseEndsAt), (this.pauseReason = e.pauseReason), (this.metadata = e.metadata), (this.latestInvoice = e.latestInvoice), (this.useStorekitResubscribe = e.useStorekitResubscribe), (this.price = e.price), (this.userId = e.userId), (this.streakStartedAt = e.streakStartedAt), (this.eligiblePaymentGateways = e.eligiblePaymentGateways);
+        super(), p(this, 'id', void 0), p(this, 'type', void 0), p(this, 'items', void 0), p(this, 'createdAt', void 0), p(this, 'canceledAt', void 0), p(this, 'currentPeriodStart', void 0), p(this, 'currentPeriodEnd', void 0), p(this, 'status', void 0), p(this, 'paymentSourceId', void 0), p(this, 'paymentGateway', void 0), p(this, 'paymentGatewayPlanId', void 0), p(this, 'paymentGatewaySubscriptionId', void 0), p(this, 'trialId', void 0), p(this, 'trialEndsAt', void 0), p(this, 'renewalMutations', void 0), p(this, 'streakStartedAt', void 0), p(this, 'currency', void 0), p(this, 'pauseEndsAt', void 0), p(this, 'pauseReason', void 0), p(this, 'planId', void 0), p(this, 'additionalPlans', void 0), p(this, 'metadata', void 0), p(this, 'latestInvoice', void 0), p(this, 'useStorekitResubscribe', void 0), p(this, 'price', void 0), p(this, 'userId', void 0), p(this, 'eligiblePaymentGateways', void 0), p(this, 'priceChange', void 0), (this.id = e.id), (this.type = e.type), (this.items = e.items), (this.createdAt = e.createdAt), (this.canceledAt = e.canceledAt), (this.currentPeriodStart = e.currentPeriodStart), (this.currentPeriodEnd = e.currentPeriodEnd), (this.status = e.status), (this.paymentSourceId = e.paymentSourceId), (this.paymentGateway = e.paymentGateway), (this.paymentGatewayPlanId = e.paymentGatewayPlanId), (this.paymentGatewaySubscriptionId = e.paymentGatewaySubscriptionId), (this.trialId = e.trialId), (this.trialEndsAt = e.trialEndsAt), (this.renewalMutations = e.renewalMutations), (this.currency = e.currency), (this.pauseEndsAt = e.pauseEndsAt), (this.pauseReason = e.pauseReason), (this.metadata = e.metadata), (this.latestInvoice = e.latestInvoice), (this.useStorekitResubscribe = e.useStorekitResubscribe), (this.price = e.price), (this.userId = e.userId), (this.streakStartedAt = e.streakStartedAt), (this.eligiblePaymentGateways = e.eligiblePaymentGateways), (this.priceChange = e.priceChange);
         let t = this.renewalMutations,
             n = e.items[0].planId,
             r = null;
-        if (e.type === u.NYc.PREMIUM) {
-            let i = _.GP[e.items[0].planId],
+        if (e.type === d.NYc.PREMIUM) {
+            let i = f.GP[e.items[0].planId],
                 a = i.interval,
                 s = i.intervalCount;
             (n = (0, o.Xr)(e.items, a, s)), null != t && (r = (0, o.Xr)(t.items, a, s));
@@ -214,4 +218,4 @@ class E extends a.Z {
         (this.planId = n), (this.additionalPlans = e.items.filter((e) => e.planId !== n)), null != t && null != r && ((t.planId = r), (t.additionalPlans = t.items.filter((e) => e.planId !== r)));
     }
 }
-let b = E;
+let y = b;

@@ -1,12 +1,12 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => b });
 var r,
-    i = n(255367);
+    s = n(255367);
 n(73800);
-var s = n(481060),
-    l = n(600164),
-    a = n(390668),
-    o = (((r = o || {}).UPGRADE = 'UPGRADE'), (r.CANCEL = 'CANCEL'), (r.UNVERIFIED = 'UNVERIFIED'), (r.UNCLAIMED = 'UNCLAIMED'), (r.GRANDFATHERED = 'GRANDFATHERED'), r);
-let c = {
+var i = n(481060),
+    o = n(600164),
+    c = n(390668),
+    a = (((r = a || {}).UPGRADE = 'UPGRADE'), (r.CANCEL = 'CANCEL'), (r.UNVERIFIED = 'UNVERIFIED'), (r.UNCLAIMED = 'UNCLAIMED'), (r.GRANDFATHERED = 'GRANDFATHERED'), r);
+let l = {
         UPGRADE: 'imageUpgrade',
         CANCEL: 'imageCancel',
         UNVERIFIED: 'imageUnverified',
@@ -17,27 +17,27 @@ let c = {
         var t,
             n,
             { children: r } = e,
-            l = (function (e, t) {
+            o = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
-                    i = (function (e, t) {
+                    s = (function (e, t) {
                         if (null == e) return {};
                         var n,
                             r,
-                            i = {},
-                            s = Object.keys(e);
-                        for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                        return i;
+                            s = {},
+                            i = Object.keys(e);
+                        for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (s[n] = e[n]);
+                        return s;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var s = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    var i = Object.getOwnPropertySymbols(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
                 }
-                return i;
+                return s;
             })(e, ['children']);
-        return (0, i.jsx)(
-            s.Y0X,
+        return (0, s.jsx)(
+            i.Y0X,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -62,7 +62,7 @@ let c = {
                         });
                 }
                 return e;
-            })({}, l)),
+            })({}, o)),
             (n = n =
                 {
                     parentComponent: 'PremiumModal',
@@ -85,17 +85,17 @@ let c = {
     };
 (u.Header = (e) => {
     let { children: t, onClose: n } = e;
-    return (0, i.jsxs)(s.xBx, {
-        justify: l.Z.Justify.BETWEEN,
+    return (0, s.jsxs)(i.xBx, {
+        justify: o.Z.Justify.BETWEEN,
         separator: !1,
         children: [
-            (0, i.jsx)(s.vwX, {
-                tag: s.RB0.H4,
+            (0, s.jsx)(i.vwX, {
+                tag: i.RB0.H4,
                 children: t
             }),
             null != n
-                ? (0, i.jsx)(s.olH, {
-                      className: a.__invalid_closeIcon,
+                ? (0, s.jsx)(i.olH, {
+                      className: c.__invalid_closeIcon,
                       onClick: n
                   })
                 : null
@@ -104,11 +104,11 @@ let c = {
 }),
     (u.Content = (e) => {
         let { children: t, type: n } = e;
-        return (0, i.jsxs)(s.hzk, {
+        return (0, s.jsxs)(i.hzk, {
             children: [
-                (0, i.jsx)('div', { className: a[c[n]] }),
-                (0, i.jsx)('div', {
-                    className: a.message,
+                (0, s.jsx)('div', { className: c[l[n]] }),
+                (0, s.jsx)('div', {
+                    className: c.message,
                     children: t
                 })
             ]
@@ -116,22 +116,22 @@ let c = {
     }),
     (u.Footer = (e) => {
         let { primary: t, primaryRenderer: n, secondary: r } = e;
-        return (0, i.jsx)(s.mzw, {
-            children: (0, i.jsxs)(l.Z, {
-                justify: l.Z.Justify.END,
+        return (0, s.jsx)(i.mzw, {
+            children: (0, s.jsxs)(o.Z, {
+                justify: o.Z.Justify.END,
                 children: [
                     null != r
-                        ? (0, i.jsx)(s.zxk, {
+                        ? (0, s.jsx)(i.zxk, {
                               onClick: r.onClick,
-                              look: s.zxk.Looks.LINK,
-                              innerClassName: a.secondaryButton,
+                              look: i.zxk.Looks.LINK,
+                              innerClassName: c.secondaryButton,
                               children: r.label
                           })
                         : null,
                     null != t
-                        ? (0, i.jsx)(s.zxk, {
+                        ? (0, s.jsx)(i.zxk, {
                               onClick: t.onClick,
-                              color: s.zxk.Colors.BRAND,
+                              color: i.zxk.Colors.BRAND,
                               children: t.label
                           })
                         : n
@@ -139,5 +139,5 @@ let c = {
             })
         });
     }),
-    (u.Types = o);
-let d = u;
+    (u.Types = a);
+let b = u;

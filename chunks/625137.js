@@ -8,7 +8,7 @@ n.d(t, {
     n(642613);
 var r = n(149765),
     i = n(866442),
-    a = n(850568),
+    a = n(606318),
     o = n(709054);
 function s(e) {
     e.permissions = r.vB(e.permissions);
