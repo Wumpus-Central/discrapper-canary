@@ -2,8 +2,8 @@ n.d(t, { Z: () => x }), n(388685), n(35282), n(457542);
 var r = n(255367),
     i = n(73800),
     l = n(593473),
-    o = n(114858),
-    a = n(442837),
+    a = n(114858),
+    o = n(442837),
     s = n(893776),
     c = n(899742),
     u = n(493773),
@@ -21,7 +21,7 @@ function x(e) {
                 if (
                     (function (e) {
                         var t;
-                        let n = (0, o.LX)(e, { path: f.Z5c.CHANNEL(h.Hw.guildId(), h.Hw.channelId()) });
+                        let n = (0, a.LX)(e, { path: f.Z5c.CHANNEL(h.Hw.guildId(), h.Hw.channelId()) });
                         return (null == n || null == (t = n.params) ? void 0 : t.channelId) === _.oC.ROLE_SUBSCRIPTIONS;
                     })(t)
                 )
@@ -33,7 +33,7 @@ function x(e) {
             },
             [e.transitionTo]
         ),
-        { isAuthenticated: E, loginStatus: b } = (0, a.cj)([p.default], () => ({
+        { isAuthenticated: E, loginStatus: b } = (0, o.cj)([p.default], () => ({
             isAuthenticated: p.default.isAuthenticated(),
             loginStatus: p.default.getLoginStatus()
         })),

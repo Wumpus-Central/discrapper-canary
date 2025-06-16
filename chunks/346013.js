@@ -102,7 +102,7 @@ function M(e) {
             var e;
             return [null != (e = null == ee ? void 0 : ee.colorString) ? e : 'inherit', null == ee ? void 0 : ee.colorStrings, null == ee ? void 0 : ee.colorRoleId];
         }, [ee]),
-        el = (0, x.X)(null == ee ? void 0 : ee.guildId, er),
+        el = (0, x.X)(null == ee ? void 0 : ee.guildId, er, 'MediaPostEmbed'),
         { reducedMotion: ea } = i.useContext(u.Sfi),
         [eo, es] = i.useState(!1),
         ec = i.useCallback(() => {

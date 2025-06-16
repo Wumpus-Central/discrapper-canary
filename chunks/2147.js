@@ -44,8 +44,8 @@ var i = n(255367),
     B = n(131704),
     V = n(314897),
     W = n(388610),
-    U = n(430824),
-    G = n(496675),
+    G = n(430824),
+    U = n(496675),
     H = n(903223),
     F = n(594174),
     z = n(934415),
@@ -423,7 +423,7 @@ class ew extends l.PureComponent {
                       ]
                   })
                 : null,
-            U = e.isForumChannel()
+            G = e.isForumChannel()
                 ? (0, i.jsxs)('div', {
                       children: [
                           (0, i.jsxs)('div', {
@@ -463,7 +463,7 @@ class ew extends l.PureComponent {
                       ]
                   })
                 : null,
-            G = e.isForumLikeChannel()
+            U = e.isForumLikeChannel()
                 ? (0, i.jsxs)('div', {
                       children: [
                           (0, i.jsx)(g.xJW, {
@@ -769,8 +769,8 @@ class ew extends l.PureComponent {
                     W,
                     X,
                     J,
-                    U,
                     G,
+                    U,
                     H,
                     $,
                     en,
@@ -1161,12 +1161,12 @@ function eT() {
             return H.Z.getRegions(null != (e = null == t ? void 0 : t.getGuildId()) ? e : null);
         }),
         a = (0, d.e7)([k.Z], () => k.Z.theme),
-        o = (0, d.e7)([U.Z], () => U.Z.getGuild(null == t ? void 0 : t.getGuildId())),
+        o = (0, d.e7)([G.Z], () => G.Z.getGuild(null == t ? void 0 : t.getGuildId())),
         c = (0, L.C7)(t),
         u = (0, L.Xb)(t),
-        { canManageChannels: h, canSendMessages: g } = (0, d.cj)([G.Z], () => ({
-            canManageChannels: G.Z.can(ee.Plq.MANAGE_CHANNELS, t),
-            canSendMessages: G.Z.can(ee.Plq.SEND_MESSAGES, t)
+        { canManageChannels: h, canSendMessages: g } = (0, d.cj)([U.Z], () => ({
+            canManageChannels: U.Z.can(ee.Plq.MANAGE_CHANNELS, t),
+            canSendMessages: U.Z.can(ee.Plq.SEND_MESSAGES, t)
         })),
         m = (0, y.ZP)(t),
         p = V.default.getId(),

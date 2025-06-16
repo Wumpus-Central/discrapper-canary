@@ -1,4 +1,4 @@
-n.d(l, { default: () => V });
+n.d(l, { default: () => H });
 var t = n(255367);
 n(73800);
 var r = n(442837),
@@ -40,12 +40,12 @@ var r = n(442837),
     L = n(332031),
     D = n(981631),
     Q = n(388032);
-let V = (0, o.Z)(
+let H = (0, o.Z)(
     (0, s.Z)(
         function (e) {
-            let { user: l, guildId: n, channel: s, showMediaItems: o = !1, showChatItems: u = !0, showChannelCallItems: V = !1, showModalItems: H = !0, showStageChannelItems: B = !1, context: F, onSelect: X, onHeightUpdate: Y, viewingChannelId: K, onInteraction: W } = e,
-                $ = s.id,
-                J = {
+            let { user: l, guildId: n, channel: s, showMediaItems: o = !1, showChatItems: u = !0, showChannelCallItems: H = !1, showModalItems: V = !0, showStageChannelItems: B = !1, context: F, onSelect: X, onHeightUpdate: Y, viewingChannelId: K, onInteraction: W } = e,
+                J = s.id,
+                $ = {
                     page: D.ZY5.GUILD_CHANNEL,
                     section: D.jXE.CHAT_USERNAME,
                     object: D.qAy.CONTEXT_MENU_ITEM
@@ -53,7 +53,7 @@ let V = (0, o.Z)(
                 z = (0, G.Z)({
                     userId: l.id,
                     guildId: n,
-                    channelId: $,
+                    channelId: J,
                     showGuildProfile: !0
                 }),
                 ee = (0, R.Z)(l, n, F),
@@ -66,7 +66,7 @@ let V = (0, o.Z)(
                 er = (0, C.Z)({
                     user: l,
                     guildId: n,
-                    channelId: $,
+                    channelId: J,
                     context: F
                 }),
                 ei = (0, m.Z)({ user: l }),
@@ -74,13 +74,13 @@ let V = (0, o.Z)(
                 es = (0, T.Z)(l.id),
                 eo = (0, f.B)({
                     userId: l.id,
-                    channelId: $,
+                    channelId: J,
                     guildId: s.getGuildId()
                 }),
                 ea = (0, p.Z)({
                     guildId: n,
                     userId: l.id,
-                    analyticsLocation: J,
+                    analyticsLocation: $,
                     context: F
                 }),
                 ec = (0, I.Z)({
@@ -92,27 +92,27 @@ let V = (0, o.Z)(
                 eg = (0, S.Z)({
                     user: l,
                     guildId: n,
-                    channelId: $,
+                    channelId: J,
                     location: 'GuildChannelUserContextMenu'
                 }),
                 eh = (0, _.Z)({
                     user: l,
                     guildId: n,
-                    channelId: $,
+                    channelId: J,
                     location: 'GuildChannelUserContextMenu'
                 }),
-                ef = (0, x.Z)(l, n, $),
+                ef = (0, x.Z)(l, n, J),
                 eO = (0, w.Z)(l.id, n),
                 ep = (0, A.Z)(l, n),
                 eb = (0, O.Z)({
                     id: l.id,
                     label: Q.intl.string(Q.t['/AXYnJ'])
                 }),
-                ej = (0, v.Z)(l.id, $),
+                ej = (0, v.Z)(l.id, J),
                 eE = (0, g.Z)(l.id),
-                eN = (0, Z.Z)($),
+                eN = (0, Z.Z)(J),
                 eP = (0, b.Z)(l),
-                em = (0, j.Z)(l, n, $),
+                em = (0, j.Z)(l, n, J),
                 eC = (0, r.e7)([E.Z], () => (null != K ? E.Z.getChannel(K) : null)),
                 ex = (0, M.Z)({
                     commandType: a.yU.USER,
@@ -140,18 +140,18 @@ let V = (0, o.Z)(
                                     children: [eP, B && em]
                                 }),
                                 (0, t.jsxs)(i.kSQ, {
-                                    children: [H && z, u && ee, el, et, ey, H && er, H && ei, en]
+                                    children: [V && z, u && ee, el, et, ey, V && er, V && ei, en]
                                 }),
                                 o && (0, t.jsx)(i.kSQ, { children: ed }),
-                                (0, t.jsx)(i.kSQ, { children: H && eu }),
+                                (0, t.jsx)(i.kSQ, { children: V && eu }),
                                 (0, t.jsxs)(i.kSQ, {
-                                    children: [o && es, o && eo, o && ej, H && ea, ex, H && ec, eZ, H && eh, H && eg, V && eM]
+                                    children: [o && es, o && eo, o && ej, V && ea, ex, V && ec, eZ, V && eh, V && eg, H && eM]
                                 }),
                                 (0, t.jsx)(i.kSQ, { children: ef }),
                                 (0, t.jsxs)(i.kSQ, {
                                     children: [eO, ep]
                                 }),
-                                V &&
+                                H &&
                                     (0, t.jsxs)(i.kSQ, {
                                         children: [eN, eE]
                                     })

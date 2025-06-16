@@ -22,7 +22,7 @@ var r,
     m = n(933557),
     g = n(471445),
     E = n(511618),
-    b = n(181918),
+    b = n(884902),
     y = n(887120),
     O = n(926491),
     v = n(378233),
@@ -263,8 +263,8 @@ class q extends Z {
             { colorString: r, colorStrings: a } = e,
             o = 'dot' === _.Z.roleStyle,
             l = 'username' === _.Z.roleStyle && (null != r || null != a),
-            c = (0, b.OC)(n, 'AutocompleteRow') && null != a && null != a.primaryColor && null != a.secondaryColor,
-            u = c && l,
+            c = (0, b.A)(n, a, 'AutocompleteRow'),
+            u = null != c && l,
             { gradientStyle: f, gradientClassname: p } = (0, d.JUn)({
                 primaryColor: null == a ? void 0 : a.primaryColor,
                 secondaryColor: null == a ? void 0 : a.secondaryColor,
@@ -283,7 +283,7 @@ class q extends Z {
                                 (0, i.jsx)(d.FhE, {
                                     className: L.roleDot,
                                     color: r,
-                                    colors: c ? a : null,
+                                    colors: c,
                                     tooltip: !1
                                 }),
                             (0, i.jsxs)('span', {

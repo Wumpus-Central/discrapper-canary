@@ -4,7 +4,7 @@ var i = n(255367),
     o = n(481060),
     a = n(100527),
     s = n(906732),
-    l = n(181918),
+    l = n(402235),
     c = n(670188),
     u = n(592125),
     d = n(91047);
@@ -37,7 +37,7 @@ function p(e) {
     let { user: t, channelId: n, guildId: p, messageId: m, stopPropagation: f = !1, ariaLabel: g } = e,
         b = r.useRef(null),
         { analyticsLocations: j } = (0, s.ZP)(a.Z.USERNAME),
-        v = (0, l.$V)(p, 'useUsernameHook'),
+        v = (0, l.Z)(p, 'useUsernameHook'),
         O = r.useCallback(
             (e) => {
                 let i = u.Z.getChannel(n);

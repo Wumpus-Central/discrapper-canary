@@ -31,7 +31,7 @@ function _(e) {
             },
             [n]
         ),
-        v = (0, u.X)(n.guildId, f);
+        v = (0, u.X)(n.guildId, f, 'GuildPowerupsRecentActivityRow');
     return (0, r.jsx)(a.Z, {
         className: m.systemMessageContainer,
         contentClassName: m.systemMessageContent,

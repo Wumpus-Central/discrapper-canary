@@ -88,7 +88,7 @@ function O(e) {
             },
             [t, I]
         ),
-        S = (0, c.X)(t, null == I ? void 0 : I.colorStrings);
+        S = (0, c.X)(t, null == I ? void 0 : I.colorStrings, 'ContentCard');
     if (null == g) return null;
     let A = null == I ? void 0 : I.colorString,
         N = f.ZP.getName(t, n, g);

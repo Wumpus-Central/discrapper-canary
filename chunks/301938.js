@@ -2,8 +2,8 @@ n.d(t, { Z: () => x }), n(388685), n(415506), n(457542);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(990547),
+    a = n.n(l),
+    o = n(990547),
     s = n(481060),
     c = n(479531),
     u = n(388905),
@@ -32,7 +32,7 @@ function x(e) {
             children: [
                 (0, r.jsx)(u.Ee, {
                     src: null == S ? n(26230) : n(935227),
-                    className: o()(_.marginBottom20, _.marginTop8)
+                    className: a()(_.marginBottom20, _.marginTop8)
                 }),
                 (0, r.jsx)(u.Dx, { children: m.intl.string(m.t['IfBQ5+']) }),
                 null != S && '' !== S
@@ -43,7 +43,7 @@ function x(e) {
                       })
                     : null,
                 (0, r.jsxs)(u.gO, {
-                    className: o()(_.marginBottom20, _.marginTop20),
+                    className: a()(_.marginBottom20, _.marginTop20),
                     children: [
                         (0, r.jsx)(u.II, {
                             name: 'password',
@@ -77,7 +77,7 @@ function x(e) {
                                                 token: E,
                                                 password: j
                                             },
-                                            trackedActionData: { event: a.NetworkActionNames.ACCOUNT_REVERT },
+                                            trackedActionData: { event: o.NetworkActionNames.ACCOUNT_REVERT },
                                             rejectWithError: !1
                                         })
                                             .then((e) => {

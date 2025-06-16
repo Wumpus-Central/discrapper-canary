@@ -1,6 +1,6 @@
 n.d(t, {
     M: () => u,
-    Z: () => m
+    Z: () => g
 });
 var r,
     i = n(442837),
@@ -25,26 +25,31 @@ var u = (function (e) {
     return (e.NOT_FETCHED = 'NOT_FETCHED'), (e.FETCHING = 'FETCHING'), (e.FETCHED = 'FETCHED'), e;
 })({});
 let d = null,
-    _ = 'NOT_FETCHED';
-function f() {
-    _ = 'FETCHING';
+    _ = null,
+    f = 'NOT_FETCHED';
+function p() {
+    f = 'FETCHING';
 }
-function p(e) {
-    (_ = 'FETCHED'), (d = e.apps);
+function h(e) {
+    var t;
+    (f = 'FETCHED'), (_ = null != (t = null == (d = e.apps) ? void 0 : d.filter((e) => null == e.application.parent_id)) ? t : null);
 }
-class h extends (r = i.ZP.Store) {
+class m extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(o.Z, s.Z, l.Z);
     }
     getApps() {
         return d;
     }
-    getFetchState() {
+    getNonChildrenApps() {
         return _;
     }
+    getFetchState() {
+        return f;
+    }
 }
-c(h, 'displayName', 'AuthorizedAppsStore');
-let m = new h(a.Z, {
-    USER_AUTHORIZED_APPS_REQUEST: f,
-    USER_AUTHORIZED_APPS_UPDATE: p
+c(m, 'displayName', 'AuthorizedAppsStore');
+let g = new m(a.Z, {
+    USER_AUTHORIZED_APPS_REQUEST: p,
+    USER_AUTHORIZED_APPS_UPDATE: h
 });

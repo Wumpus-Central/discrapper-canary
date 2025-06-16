@@ -143,7 +143,7 @@ function K(e, t) {
     }
     if (null != i) {
         var c, u;
-        null == i.colorString && i.color > 0 && (i.colorString = (0, o.Rf)(i.color)), (n = null != (c = i.colorString) ? c : void 0), null == i.colorStrings && null != i.colors && (i.colorStrings = (0, m.D)(i.colors)), (r = null != (u = i.colorStrings) ? u : void 0);
+        null == i.colorString && i.color > 0 && (i.colorString = (0, o.Rf)(i.color)), (n = null != (c = i.colorString) ? c : void 0), null == i.colorStrings && null != i.colors && (i.colorStrings = (0, m.DX)(i.colors)), (r = null != (u = i.colorStrings) ? u : void 0);
     }
     return {
         colorString: n,

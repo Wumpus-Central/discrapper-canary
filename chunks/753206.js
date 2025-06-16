@@ -1,32 +1,30 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => g });
 var r = n(255367),
     i = n(73800),
     s = n(120356),
     o = n.n(s),
     a = n(628238),
-    l = n(367814),
-    c = n(750030),
-    u = n(492593),
-    d = n(25015),
-    p = n(963550),
-    f = n(845080),
-    g = n(30804);
-let b = i.memo(function (e) {
+    l = n(750030),
+    c = n(492593),
+    u = n(25015),
+    d = n(963550),
+    p = n(845080),
+    f = n(30804);
+let g = i.memo(function (e) {
     var t;
-    let { message: n, channel: s, compact: b, className: m, isGroupStart: _, hideSimpleEmbedContent: v = !0, disableInteraction: h, previewGuildId: O, preview: y, author: j } = e,
-        x = null != O ? O : (0, c.k)(n),
-        C = (0, l.Z)(j),
-        S = (0, a.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
-        { content: E } = (0, d.Z)(n, {
-            hideSimpleEmbedContent: v,
-            allowList: S,
-            allowHeading: S,
+    let { message: n, channel: s, compact: g, className: b, isGroupStart: m, hideSimpleEmbedContent: _ = !0, disableInteraction: v, previewGuildId: h, preview: O, author: y } = e,
+        j = null != h ? h : (0, l.k)(n),
+        x = (0, a.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
+        { content: C } = (0, u.Z)(n, {
+            hideSimpleEmbedContent: _,
+            allowList: x,
+            allowHeading: x,
             allowLinks: !0,
             previewLinkTarget: !0
         }),
-        P = i.useMemo(() => {
+        S = i.useMemo(() => {
             var t, n;
-            return (0, f.Z)(
+            return (0, p.Z)(
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,7 +53,7 @@ let b = i.memo(function (e) {
                 (n = n =
                     {
                         channel: s,
-                        guildId: x
+                        guildId: j
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -71,19 +69,18 @@ let b = i.memo(function (e) {
                       }),
                 t)
             );
-        }, [e, s, x]);
-    return (0, r.jsx)(u.Z, {
-        compact: b,
-        className: o()(m, {
-            [g.message]: !0,
-            [g.cozyMessage]: !b,
-            [g.groupStart]: _
+        }, [e, s, j]);
+    return (0, r.jsx)(c.Z, {
+        compact: g,
+        className: o()(b, {
+            [f.message]: !0,
+            [f.cozyMessage]: !g,
+            [f.groupStart]: m
         }),
-        childrenHeader: P,
-        childrenMessageContent: (0, p.Z)(e, E),
-        disableInteraction: h,
-        authorHasGradientRole: C,
-        guildId: x,
-        preview: y
+        childrenHeader: S,
+        childrenMessageContent: (0, d.Z)(e, C),
+        disableInteraction: v,
+        author: y,
+        preview: O
     });
 });

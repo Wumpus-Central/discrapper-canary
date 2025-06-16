@@ -226,7 +226,7 @@ function C() {
     });
 }
 function O() {
-    let { showLoadingIndicator: e, slayerSdkApplications: t } = (0, m.Z)();
+    let { showLoadingIndicator: e, slayerSdkApplications: t } = (0, m.Z)(!0);
     return (0, i.jsx)(g.Z, {
         children: e
             ? (0, i.jsx)(l.$jN, {})

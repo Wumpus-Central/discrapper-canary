@@ -1,79 +1,90 @@
 n.d(t, {
-    HV: () => g,
-    J4: () => d,
-    JL: () => f,
-    Om: () => E,
-    P0: () => u,
-    Vb: () => y,
-    fR: () => h,
-    gG: () => _,
-    hf: () => v,
-    u7: () => O,
-    uf: () => b,
-    w8: () => p,
-    z3: () => m,
-    zW: () => c
+    HA: () => A,
+    HV: () => y,
+    J4: () => p,
+    JL: () => m,
+    Om: () => O,
+    P0: () => f,
+    Vb: () => I,
+    fR: () => E,
+    gG: () => h,
+    hf: () => S,
+    u7: () => T,
+    uf: () => v,
+    w8: () => g,
+    z3: () => b,
+    zW: () => _
 });
 var r = n(73800),
-    i = n(906732),
-    a = n(626135),
-    o = n(981631),
-    s = n(474936);
-let l = 'manual',
-    c = () => {
-        (l = 'manual'), a.default.track(o.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'hex_input' });
-    },
-    u = () => {
-        (l = 'manual'), a.default.track(o.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'color_picker' });
-    },
-    d = () => {
-        a.default.track(o.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'eye_dropper' });
-    },
+    i = n(704215),
+    a = n(906732),
+    o = n(211644),
+    s = n(605236),
+    l = n(626135),
+    c = n(981631),
+    u = n(474936);
+let d = 'manual',
     _ = () => {
-        (l = 'manual'), a.default.track(o.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'add_color' });
+        (d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'hex_input' });
     },
     f = () => {
-        (l = 'manual'), a.default.track(o.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'remove_color' });
+        (d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'color_picker' });
     },
     p = () => {
-        a.default.track(o.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'color_selected' });
+        l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'eye_dropper' });
     },
     h = () => {
-        (l = 'manual'), a.default.track(o.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'gradient_direction' });
+        (d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'add_color' });
     },
     m = () => {
-        (l = 'manual'), a.default.track(o.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'color_intensity' });
+        (d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'remove_color' });
     },
     g = () => {
-        (l = 'manual'), a.default.track(o.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'base_theme' });
+        l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'color_selected' });
     },
     E = () => {
-        (l = 'surprise_me'), a.default.track(o.rMx.CUSTOM_THEMES_SURPRISE_BUTTON_CLICKED, {});
+        (d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'gradient_direction' });
     },
     b = () => {
-        (l = 'manual'), a.default.track(o.rMx.CUSTOM_THEME_RESET_BUTTON_CLICKED, {});
+        (d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'color_intensity' });
     },
     y = () => {
-        a.default.track(o.rMx.CUSTOM_THEMES_BACK_BUTTON_CLICKED, {});
+        (d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'base_theme' });
     },
-    O = (e, t, n, r, i) => {
-        a.default.track(o.rMx.CUSTOM_THEMES_UPDATED, {
+    O = () => {
+        (d = 'surprise_me'), l.default.track(c.rMx.CUSTOM_THEMES_SURPRISE_BUTTON_CLICKED, {});
+    },
+    v = () => {
+        (d = 'manual'), l.default.track(c.rMx.CUSTOM_THEME_RESET_BUTTON_CLICKED, {});
+    },
+    I = () => {
+        l.default.track(c.rMx.CUSTOM_THEMES_BACK_BUTTON_CLICKED, {});
+    },
+    T = (e, t, n, r, i) => {
+        l.default.track(c.rMx.CUSTOM_THEMES_UPDATED, {
             colors: e,
             color_intensity: t,
             gradient_angle: n,
             base_theme: r,
             location_stack: i,
-            creation_method: l
+            creation_method: d
         }),
-            (l = 'manual');
+            (d = 'manual');
     },
-    v = (e, t) => {
-        let { analyticsLocations: n } = (0, i.ZP)(t);
+    S = (e, t) => {
+        let { analyticsLocations: n } = (0, a.ZP)(t);
         r.useEffect(() => {
             e ||
-                a.default.track(o.rMx.PREMIUM_UPSELL_VIEWED, {
-                    type: s.cd.CUSTOM_THEMES_UPSELL,
+                l.default.track(c.rMx.PREMIUM_UPSELL_VIEWED, {
+                    type: u.cd.CUSTOM_THEMES_UPSELL,
                     location_stack: n
                 });
         }, [e, n]);
+    },
+    A = (e, t) => {
+        let n = (0, s.wE)(i.z.CUSTOM_THEME_COACHMARK),
+            a = (0, o.ZP)((e) => e.recentlyShown[0]);
+        r.useEffect(() => {
+            e && !n && null != t && t !== i.z.CUSTOM_THEME_COACHMARK && l.default.track(c.rMx.CUSTOM_THEMES_COACHMARK_NOT_SHOWN_REASON, { last_dismissible_content_winner: null != a ? i.z[a] : 'None' });
+        }, [e, n, t, a]);
     };

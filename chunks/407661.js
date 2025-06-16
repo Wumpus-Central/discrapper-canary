@@ -84,7 +84,7 @@ function S(e) {
     let { reply: t, chatInputType: n } = e,
         { channel: i, message: a, shouldMention: s, showMentionToggle: c } = t,
         { guildId: h, nick: m, colorString: v, colorStrings: S, colorRoleName: A } = (0, u.ZP)(a),
-        N = (0, d.X)(h, S),
+        N = (0, d.X)(h, S, 'ChannelReplyingBar'),
         C = I(i, a),
         R = (0, p.NE)(i, a),
         P = n.showThreadPromptOnReply && C >= O && R,

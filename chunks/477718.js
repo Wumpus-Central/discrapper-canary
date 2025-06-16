@@ -34,7 +34,7 @@ function S(e) {
         P = g.J5(n),
         S = (0, h.LJ)(n.id),
         Z = (0, c.e7)([y.ZP], () => (null != n.userId ? y.ZP.getMember(l.guildId, n.userId) : null), [l.guildId, n.userId]),
-        N = (0, _.X)(null == Z ? void 0 : Z.guildId, null == Z ? void 0 : Z.colorStrings),
+        N = (0, _.X)(null == Z ? void 0 : Z.guildId, null == Z ? void 0 : Z.colorStrings, 'UserModInfoAuditLog'),
         T = i.useCallback(
             (e) => (t) => {
                 t.preventDefault(), t.stopPropagation(), null != e && (0, f.RE)(e, d);

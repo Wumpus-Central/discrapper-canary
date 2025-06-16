@@ -25,7 +25,7 @@ function l(e) {
         color: e.color,
         colorString: null != e.color && 0 !== e.color ? (0, i.Rf)(e.color) : null,
         colors: e.colors,
-        colorStrings: null != e.colors ? (0, a.D)(e.colors) : null,
+        colorStrings: null != e.colors ? (0, a.DX)(e.colors) : null,
         hoist: e.hoist,
         managed: e.managed,
         tags: e.tags,

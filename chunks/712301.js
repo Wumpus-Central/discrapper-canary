@@ -10,8 +10,8 @@ var i = t(442837),
     c = t(592125),
     d = t(984933),
     g = t(271383),
-    b = t(430824),
-    Z = t(496675),
+    Z = t(430824),
+    b = t(496675),
     f = t(699516),
     p = t(594174),
     O = t(979651),
@@ -31,21 +31,21 @@ function x(e, n) {
         );
     if ((0, i.e7)([g.ZP], () => g.ZP.isGuestOrLurker(n, e.id), [n, e.id]) || null == x) return null;
     let v = e.id === s.default.getId();
-    if (!v && !Z.Z.can(j.Plq.MOVE_MEMBERS, x)) return null;
+    if (!v && !b.Z.can(j.Plq.MOVE_MEMBERS, x)) return null;
     let _ = t.filter((n) => {
         let { channel: t } = n;
         return (
             t.id !== x.id &&
             (v
-                ? Z.Z.can(j.Plq.CONNECT, t) && !(0, m.rY)(t, O.Z, b.Z)
-                : Z.Z.can(j.Plq.MOVE_MEMBERS, t) &&
-                  (Z.Z.can(j.Plq.CONNECT, t) ||
+                ? b.Z.can(j.Plq.CONNECT, t) && !(0, m.rY)(t, O.Z, Z.Z)
+                : b.Z.can(j.Plq.MOVE_MEMBERS, t) &&
+                  (b.Z.can(j.Plq.CONNECT, t) ||
                       h.BT({
                           permission: j.Plq.CONNECT,
                           user: e,
                           context: t
                       })) &&
-                  !(0, m.rY)(t, O.Z, b.Z))
+                  !(0, m.rY)(t, O.Z, Z.Z))
         );
     });
     return 0 === _.length

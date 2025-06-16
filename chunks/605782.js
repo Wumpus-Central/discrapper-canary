@@ -2,8 +2,8 @@ n.d(t, { Z: () => d }), n(35282);
 var r = n(255367),
     i = n(73800),
     l = n(114858),
-    o = n(215569);
-function a(e) {
+    a = n(215569);
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -76,21 +76,21 @@ class u extends i.Component {
             i.Children.forEach(t, (e) => {
                 if (null == p && i.isValidElement(e)) {
                     let t = e.props,
-                        { component: r, render: o } = t,
+                        { component: r, render: a } = t,
                         h = c(t, ['component', 'render']),
                         g = h.path || h.from;
-                    null != (p = null != g ? (0, l.LX)(n.pathname, s(a({}, h), { path: g })) : null) &&
-                        ((h = s(a({}, h), {
+                    null != (p = null != g ? (0, l.LX)(n.pathname, s(o({}, h), { path: g })) : null) &&
+                        ((h = s(o({}, h), {
                             key: g,
                             location: n,
                             match: p,
                             history: u,
                             staticContext: d
                         })),
-                        null != r ? (m = i.createElement(r, h)) : null != o && (m = o(h)));
+                        null != r ? (m = i.createElement(r, h)) : null != a && (m = a(h)));
                 }
             }),
-            (0, r.jsx)(o.W, s(a({}, g), { children: m }))
+            (0, r.jsx)(a.W, s(o({}, g), { children: m }))
         );
     }
 }

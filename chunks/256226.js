@@ -125,7 +125,7 @@ let N = i.forwardRef(function (e, t) {
         H = u.Z.unsafe_rawColors.WHITE_500.css,
         Y = (0, l._i)(F);
     null != Y && 0.3 > (0, l.Bd)(Y) && (H = u.Z.unsafe_rawColors.PRIMARY_630.css);
-    let W = (0, E.X)(w, R.colorStrings);
+    let W = (0, E.X)(w, R.colorStrings, 'UserProfileMemberRole');
     A = G
         ? (0, r.jsx)(p.Z, {
               className: y.roleFlowerStar,

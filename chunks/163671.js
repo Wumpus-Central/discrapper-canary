@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    o = n(388905),
-    a = n(414718);
+    a = n(388905),
+    o = n(414718);
 function s(e) {
     var t,
         n,
@@ -30,7 +30,7 @@ function s(e) {
         })(e, ['children', 'className']);
     let u = i();
     return (0, r.jsx)(
-        o.ZP,
+        a.ZP,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -58,13 +58,13 @@ function s(e) {
         })({}, c)),
         (n = n =
             {
-                className: l()(s, a.container),
-                contentClassName: a.content,
+                className: l()(s, o.container),
+                contentClassName: o.content,
                 children: u.map((e, t) =>
                     (0, r.jsx)(
                         'div',
                         {
-                            className: a.column,
+                            className: o.column,
                             style: { flexBasis: ''.concat(100 / u.length, '%') },
                             children: e
                         },

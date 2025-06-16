@@ -2,8 +2,8 @@ n.d(t, { Z: () => b }), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(481060),
-    a = n(388905),
+    a = n(481060),
+    o = n(388905),
     s = n(409059),
     c = n(962220),
     u = n(306453),
@@ -34,15 +34,15 @@ function b(e) {
         (0, d.e)('guild_template_mobile');
     }, []),
     null == n || n.state === f.Rj.RESOLVING)
-        ? (0, r.jsx)(a.ZP, { children: (0, r.jsx)(o.$jN, {}) })
+        ? (0, r.jsx)(o.ZP, { children: (0, r.jsx)(a.$jN, {}) })
         : n.state === f.Rj.RESOLVED
-          ? (0, r.jsxs)(a.ZP, {
+          ? (0, r.jsxs)(o.ZP, {
                 children: [
                     (0, r.jsx)(u.Z, {
                         guildTemplate: n,
                         tall: !0
                     }),
-                    (0, r.jsx)(a.zx, {
+                    (0, r.jsx)(o.zx, {
                         onClick: (e) => E(e, t, n),
                         className: x.marginTop20,
                         children: _.intl.string(_.t['a3Gl+f'])

@@ -32,7 +32,7 @@ function O(e) {
     let { creator: t, guildId: l, channelId: r } = e,
         { analyticsLocations: a } = (0, c.ZP)(),
         s = (0, d.e7)([m.ZP], () => m.ZP.getMember(l, t.id), [t, l]),
-        u = (0, g.X)(null == s ? void 0 : s.guildId, null == s ? void 0 : s.colorStrings);
+        u = (0, g.X)(null == s ? void 0 : s.guildId, null == s ? void 0 : s.colorStrings, 'EventDetailInfoTab');
     return (0, i.jsxs)('div', {
         className: D.row,
         children: [

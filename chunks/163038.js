@@ -150,7 +150,8 @@ function B(e) {
         }),
         disableInteraction: !0,
         compact: !1,
-        className: U.message
+        className: U.message,
+        author: s
     });
 }
 function G(e) {

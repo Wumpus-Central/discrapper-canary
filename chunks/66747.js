@@ -240,7 +240,7 @@ let G = l.memo(function (e) {
                 },
                 [n, i]
             ),
-            s = (0, O.X)(null == n ? void 0 : n.guildId, null == n ? void 0 : n.colorStrings);
+            s = (0, O.X)(null == n ? void 0 : n.guildId, null == n ? void 0 : n.colorStrings, 'MembersTableRow');
         return null == o || null == n
             ? null
             : (0, r.jsxs)('div', {

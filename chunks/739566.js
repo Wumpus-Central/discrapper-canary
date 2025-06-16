@@ -136,6 +136,7 @@ function E(e) {
                   guildMemberAvatar: u.avatar,
                   guildMemberAvatarDecoration: u.avatarDecoration,
                   primaryGuild: null != (a = o.primaryGuild) ? a : void 0,
-                  guildId: l.id
+                  guildId: l.id,
+                  authorId: o.id
               };
 }

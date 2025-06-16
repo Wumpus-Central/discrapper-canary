@@ -246,12 +246,12 @@ let P = (e) => {
                 source: r,
                 violationType: S
             },
-            R = a.useRef(M);
+            Y = a.useRef(M);
         return (a.useEffect(() => {
-            R.current = M;
+            Y.current = M;
         }),
         a.useEffect(() => {
-            let { accountStanding: e, classificationId: t, hasFlaggedContent: n, isDsaEligible: i, source: a, violationType: l } = R.current;
+            let { accountStanding: e, classificationId: t, hasFlaggedContent: n, isDsaEligible: i, source: a, violationType: l } = Y.current;
             U &&
                 u.default.track(O.rMx.SAFETY_HUB_ACTION, {
                     action: b.n0.ViewViolationDetail,

@@ -228,7 +228,7 @@ function W(e) {
         sectionHeight: 49
     });
 }
-function U(e) {
+function G(e) {
     let { guild: t, channel: l, permissionUpdates: r } = e,
         c = (0, a.e7)([E.Z], () => E.Z.getRoles(t.id)),
         d = R.RZ(t, c, l, y.yP, r),
@@ -297,7 +297,7 @@ function U(e) {
         ]
     });
 }
-function G(e) {
+function U(e) {
     let { guild: t, channel: l, isPrivateGuildChannel: r, roles: c, members: d } = e,
         u = (0, a.e7)([O.Z], () => O.Z.can(D.Pl.ADMINISTRATOR, t)),
         h = T.Uu(D.Pl.VIEW_CHANNEL, t),
@@ -517,13 +517,13 @@ let F = a.ZP.connectStores([N.Z, O.Z, S.ZP, E.Z], () => {
                           })
                     : null,
                 s.isGuildStageVoice()
-                    ? (0, i.jsx)(U, {
+                    ? (0, i.jsx)(G, {
                           guild: d,
                           channel: s,
                           permissionUpdates: m
                       })
                     : null,
-                (0, i.jsx)(G, {
+                (0, i.jsx)(U, {
                     channel: s,
                     guild: d,
                     isPrivateGuildChannel: h,

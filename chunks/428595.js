@@ -4,7 +4,7 @@ var r = n(392711),
     a = n(159635),
     o = n.n(a),
     s = n(633302),
-    l = n(181918),
+    l = n(402235),
     c = n(11637),
     u = n(592125),
     d = n(430824),
@@ -246,7 +246,7 @@ let B = (e) => {
                         type: 'text',
                         content: '@'.concat(R.intl.string(R.t['YV4F/v']))
                     };
-                let h = (0, l.OC)(null == f ? void 0 : f.id, 'parse'),
+                let h = (0, l.i)(null == f ? void 0 : f.id, 'parse'),
                     m = (null == (r = p.colors) ? void 0 : r.primary_color) === 0 && (null == (i = p.colors) ? void 0 : i.secondary_color) == null && (null == (a = p.colors) ? void 0 : a.tertiary_color) == null;
                 return {
                     type: 'mention',

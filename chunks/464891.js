@@ -32,8 +32,8 @@ var r = n(255367),
     S = n(740492),
     N = n(430824),
     E = n(496675),
-    R = n(594174),
-    T = n(768581),
+    T = n(594174),
+    R = n(768581),
     Z = n(585483),
     _ = n(630388),
     k = n(74538),
@@ -141,7 +141,7 @@ let Y = o.memo(function (e) {
         w = o.useRef(null),
         S = (0, a.e7)([N.Z], () => N.Z.getGuild(i)),
         E = o.useMemo(() => $(s, y, u, S), [s, y, u, S]),
-        T = o.useMemo(
+        R = o.useMemo(
             () =>
                 null == u
                     ? null
@@ -179,7 +179,7 @@ let Y = o.memo(function (e) {
                         : null,
             [E, u, S]
         ),
-        Z = (0, a.e7)([R.default], () => R.default.getCurrentUser()),
+        Z = (0, a.e7)([T.default], () => T.default.getCurrentUser()),
         _ = o.useMemo(() => {
             let e = [],
                 n = k.ZP.isPremium(t.author),
@@ -200,7 +200,7 @@ let Y = o.memo(function (e) {
                             'nitro-author'
                         )
                     ),
-                null != T && e.push(T),
+                null != R && e.push(R),
                 null != S &&
                     (e.push(
                         (0, r.jsx)(
@@ -238,7 +238,7 @@ let Y = o.memo(function (e) {
                     ),
                 e
             );
-        }, [t, l, u, s, T, S, Z]);
+        }, [t, l, u, s, R, S, Z]);
     return null == x
         ? null
         : (0, r.jsxs)(r.Fragment, {
@@ -394,7 +394,7 @@ let ee = o.memo(function (e) {
     }),
     et = o.memo(function (e) {
         let { message: t, repliedMessage: n, compact: l = !1, renderPopout: p, showTimestampOnHover: m, roleIcon: g, subscribeToGroupId: b, hideTimestamp: h, className: y, channel: P, preview: C } = e,
-            R = o.useMemo(() => (null != p ? (e) => p(e, t) : void 0), [p, t]),
+            T = o.useMemo(() => (null != p ? (e) => p(e, t) : void 0), [p, t]),
             [, k] = (0, f.ZP)(t.author.id, e.guildId),
             I = (0, a.e7)(
                 [E.Z, N.Z],
@@ -411,7 +411,7 @@ let ee = o.memo(function (e) {
                     { message: g, author: f, compact: b = !1, subscribeToGroupId: h, animate: O = !0, onContextMenu: y, onClickAvatar: j, onPopoutRequestClose: v, showAvatarPopout: P } = l,
                     C = o.useRef(null),
                     [N, E] = o.useState(!1),
-                    { analyticsLocations: R } = (0, d.ZP)(u.Z.AVATAR),
+                    { analyticsLocations: T } = (0, d.ZP)(u.Z.AVATAR),
                     _ = (0, a.e7)([S.ZP], () => {
                         var e;
                         return null != (e = l.displayCompactAvatars) ? e : S.ZP.displayCompactAvatars;
@@ -438,7 +438,7 @@ let ee = o.memo(function (e) {
                             null == k.avatar &&
                             (null == (e = g.application) ? void 0 : e.icon) != null &&
                             null !=
-                                (t = T.ZP.getApplicationIconURL({
+                                (t = R.ZP.getApplicationIconURL({
                                     id: g.application.id,
                                     icon: g.application.icon,
                                     size: D,
@@ -455,7 +455,7 @@ let ee = o.memo(function (e) {
                 )
                     return null != c && null != P
                         ? (0, r.jsx)(d.Gt, {
-                              value: R,
+                              value: T,
                               children: (0, r.jsx)(w.Z, {
                                   targetElementRef: C,
                                   user: g.author,
@@ -468,7 +468,7 @@ let ee = o.memo(function (e) {
                                   position: s.tq ? 'window_center' : 'right',
                                   avatarUrl:
                                       null != f.guildMemberAvatar && null != i
-                                          ? T.ZP.getGuildMemberAvatarURLSimple({
+                                          ? R.ZP.getGuildMemberAvatarURLSimple({
                                                 guildId: i,
                                                 userId: g.author.id,
                                                 avatar: f.guildMemberAvatar,
@@ -495,7 +495,7 @@ let ee = o.memo(function (e) {
                               })
                           })
                         : (0, r.jsx)(d.Gt, {
-                              value: R,
+                              value: T,
                               children: q(
                                   W(K({}, G), {
                                       avatarSrc: z,
@@ -513,7 +513,7 @@ let ee = o.memo(function (e) {
             })({
                 props: e,
                 guildId: e.guildId,
-                handleRenderPopout: R,
+                handleRenderPopout: T,
                 showCommunicationDisabledStyles: M
             }),
             L = (0, a.e7)([S.ZP], () => {
@@ -575,7 +575,7 @@ let ee = o.memo(function (e) {
                             channel: P,
                             compact: l,
                             roleIconProps: g,
-                            renderPopout: R,
+                            renderPopout: T,
                             preview: C,
                             subscribeToGroupId: b
                         })
