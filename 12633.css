@@ -19732,20 +19732,17 @@ span.clanTag__5d473 {
     margin-top: 16px
 }
 
-.twoWayWarningV1__50a54 {
-    margin-top: 24px
+.warningContainer__50a54 {
+    flex-grow: 1;
+    margin-right: 4px
 }
 
-.twoWayWarningV2__50a54 {
-    flex-grow: 1
-}
-
-.twoWayWarning__50a54 {
+.warningOuterContainer__50a54 {
     align-items: center;
     display: flex
 }
 
-.twoWayWarningIcon__50a54 {
+.warningIcon__50a54 {
     color: var(--text-muted);
     height: 24px;
     margin-right: 8px;
