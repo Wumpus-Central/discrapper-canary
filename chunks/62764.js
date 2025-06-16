@@ -31,10 +31,10 @@ var r = n(255367),
     A = n(456269),
     w = n(109590),
     R = n(228392),
-    M = n(981631),
-    k = n(388032),
-    D = n(130883),
-    L = n(184844),
+    k = n(981631),
+    M = n(388032),
+    L = n(130883),
+    D = n(184844),
     U = n(92254);
 function B(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -111,7 +111,7 @@ function G(e) {
                         });
               },
               disabled: l,
-              innerClassName: L.actionButton,
+              innerClassName: D.actionButton,
               submitting: o,
               children: [
                   (0, r.jsx)(c.dz2, {
@@ -120,7 +120,7 @@ function G(e) {
                       width: 16,
                       height: 16
                   }),
-                  l ? k.intl.string(D.default['2Y4vkp']) : k.intl.string(D.default.YIbR4u)
+                  l ? M.intl.string(L.default['2Y4vkp']) : M.intl.string(L.default.YIbR4u)
               ]
           })
         : null;
@@ -128,7 +128,7 @@ function G(e) {
 function H(e) {
     let { postId: t, isFirstMessage: n, isLastItem: l = !1, parentChannelId: s } = e,
         { ref: v, width: j } = (0, p.ZP)(),
-        [O, D] = i.useState(3),
+        [O, L] = i.useState(3),
         [H, V] = i.useState(!n),
         [z, W] = (0, h.Z)(!1, 2000),
         Y = (0, o.e7)([Z.Z], () => Z.Z.getChannel(t), [t]),
@@ -164,7 +164,7 @@ function H(e) {
     let [ea, eo] = i.useState(!0);
     if (
         (i.useEffect(() => {
-            null != j && (D(Math.floor((j - 280) / 58)), eo(!1));
+            null != j && (L(Math.floor((j - 280) / 58)), eo(!1));
         }, [j]),
         null == Y || null == q)
     )
@@ -176,7 +176,7 @@ function H(e) {
         eu = () => {
             (0, R.B)({
                 postId: Y.id,
-                location: { section: M.jXE.CHANNEL_HEADER }
+                location: { section: k.jXE.CHANNEL_HEADER }
             }),
                 (0, T.JG)((0, N.EO)(Y, en), () => W(!0));
         },
@@ -192,19 +192,19 @@ function H(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: a()(L.container, { [L.header]: H }),
+                className: a()(D.container, { [D.header]: H }),
                 ref: v,
                 children: [
                     et
                         ? (0, r.jsx)('div', {
-                              className: L.reportedMessageActions,
+                              className: D.reportedMessageActions,
                               children: (0, r.jsx)(I.Z, {
                                   message: q,
                                   channel: Y
                               })
                           })
                         : (0, r.jsxs)('div', {
-                              className: a()(L.reactButtons, { [L.loading]: ea }),
+                              className: a()(D.reactButtons, { [D.loading]: ea }),
                               children: [
                                   !es &&
                                       !Q &&
@@ -237,7 +237,7 @@ function H(e) {
                                       isGuest: $,
                                       isPendingMember: ee,
                                       maxReactions: O,
-                                      className: L.reactions,
+                                      className: D.reactions,
                                       useChatFontScaling: !1,
                                       isForumToolbar: !0,
                                       forceHideReactionCreates: !0
@@ -248,19 +248,19 @@ function H(e) {
                                           message: q,
                                           channel: Y,
                                           useChatFontScaling: !1,
-                                          className: a()(L.addReactButton, { [L.hasNoReactions]: !es }),
+                                          className: a()(D.addReactButton, { [D.hasNoReactions]: !es }),
                                           isForumToolbar: !0,
-                                          children: !es && k.intl.string(k.t.xpOyTE)
+                                          children: !es && M.intl.string(M.t.xpOyTE)
                                       })
                               ]
                           }),
                     (0, r.jsxs)('div', {
-                        className: L.buttons,
+                        className: D.buttons,
                         children: [
                             et
                                 ? (0, r.jsx)(G, { channel: Y })
                                 : (0, r.jsx)(c.ua7, {
-                                      text: k.intl.string(k.t.F7oeDg),
+                                      text: M.intl.string(M.t.F7oeDg),
                                       children: (e) =>
                                           (0, r.jsxs)(
                                               c.zxk,
@@ -268,20 +268,20 @@ function H(e) {
                                                   look: c.zxk.Looks.BLANK,
                                                   size: c.zxk.Sizes.SMALL,
                                                   onClick: ec,
-                                                  className: L.button,
-                                                  innerClassName: a()(L.buttonInner, { [L.active]: K }),
+                                                  className: D.button,
+                                                  innerClassName: a()(D.buttonInner, { [D.active]: K }),
                                                   children: [
                                                       (0, r.jsx)(ep, {
                                                           size: 'xs',
                                                           color: 'currentColor'
                                                       }),
-                                                      K ? k.intl.string(k.t['7OkUzs']) : k.intl.string(k.t['3aOv+v'])
+                                                      K ? M.intl.string(M.t['7OkUzs']) : M.intl.string(M.t['3aOv+v'])
                                                   ]
                                               })
                                           )
                                   }),
                             (0, r.jsx)(c.ua7, {
-                                text: k.intl.string(k.t.WqhZsr),
+                                text: M.intl.string(M.t.WqhZsr),
                                 children: (e) =>
                                     (0, r.jsxs)(
                                         c.zxk,
@@ -289,8 +289,8 @@ function H(e) {
                                             look: c.zxk.Looks.BLANK,
                                             size: c.zxk.Sizes.SMALL,
                                             onClick: eu,
-                                            className: L.button,
-                                            innerClassName: L.buttonInner,
+                                            className: D.button,
+                                            innerClassName: D.buttonInner,
                                             children: [
                                                 z
                                                     ? (0, r.jsx)(c.dz2, {
@@ -305,14 +305,14 @@ function H(e) {
                                                           width: 16,
                                                           height: 16
                                                       }),
-                                                z ? k.intl.string(k.t['t5VZ8/']) : null
+                                                z ? M.intl.string(M.t['t5VZ8/']) : null
                                             ]
                                         })
                                     )
                             }),
                             !n &&
                                 (0, r.jsx)(c.ua7, {
-                                    text: k.intl.string(k.t.nFP4oa),
+                                    text: M.intl.string(M.t.nFP4oa),
                                     children: (e) =>
                                         (0, r.jsx)(
                                             c.zxk,
@@ -320,8 +320,8 @@ function H(e) {
                                                 look: c.zxk.Looks.BLANK,
                                                 size: c.zxk.Sizes.SMALL,
                                                 onClick: ed,
-                                                className: L.button,
-                                                innerClassName: L.buttonInner,
+                                                className: D.button,
+                                                innerClassName: D.buttonInner,
                                                 children: (0, r.jsx)(c.Za2, {
                                                     size: 'custom',
                                                     color: 'currentColor',

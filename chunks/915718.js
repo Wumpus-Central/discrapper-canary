@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685), n(539854);
+n.d(t, { Z: () => M }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -43,7 +43,7 @@ function R(e, t, n) {
         e
     );
 }
-class M extends i.PureComponent {
+class k extends i.PureComponent {
     componentDidMount() {
         I.S.subscribe(Z.CkL.CALL_START, this.handleVoiceClick);
     }
@@ -165,7 +165,7 @@ class M extends i.PureComponent {
             });
     }
 }
-function k(e) {
+function M(e) {
     var t;
     let { channel: n } = e,
         o = (0, g.Z)(),
@@ -196,7 +196,7 @@ function k(e) {
     }, []),
     o || (null == I ? void 0 : I.bot))
         ? null
-        : (0, r.jsx)(M, {
+        : (0, r.jsx)(k, {
               channel: n,
               mode: s,
               inCall: c,

@@ -67,9 +67,9 @@ let E = i.memo(function (e) {
     let { baseMessage: n, referencedMessage: E, channel: I, compact: P = !1, referencedUsernameProfile: S, referencedAvatarProfile: Z, setPopout: N, isReplySpineClickable: T, showReplySpine: A } = e,
         w = E.state === h.Y.LOADED ? E.message : void 0,
         R = (0, b.Uj)(w),
-        M = (0, c.p)(),
-        k = (0, u.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
-        D = i.useMemo(() => {
+        k = (0, c.p)(),
+        M = (0, u.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
+        L = i.useMemo(() => {
             if (null == w) return null;
             let e = (0, o.Z)(w);
             if (e.type === x.uaV.USER_JOIN)
@@ -113,7 +113,7 @@ let E = i.memo(function (e) {
                 let t = {
                         formatInline: !0,
                         allowLinks: !0,
-                        shouldFilterKeywords: M
+                        shouldFilterKeywords: k
                     },
                     n = e.isFirstMessageInForumPost(I)
                         ? O(j({}, t), {
@@ -123,14 +123,14 @@ let E = i.memo(function (e) {
                           })
                         : O(j({}, t), {
                               formatInline: !0,
-                              allowHeading: k,
-                              allowList: k
+                              allowHeading: M,
+                              allowList: M
                           });
                 return (0, g.ZP)(e, n).content;
             }
             return null;
-        }, [w, R, I, k, M]),
-        { isReplyAuthorBlocked: L, isReplyAuthorIgnored: U } = (0, l.cj)(
+        }, [w, R, I, M, k]),
+        { isReplyAuthorBlocked: D, isReplyAuthorIgnored: U } = (0, l.cj)(
             [f.Z],
             () => ({
                 isReplyAuthorBlocked: null != w && f.Z.isBlockedForMessage(w),
@@ -155,9 +155,9 @@ let E = i.memo(function (e) {
         channel: I,
         baseAuthor: z,
         referencedMessage: E,
-        content: D,
+        content: L,
         compact: P,
-        isReplyAuthorBlocked: L,
+        isReplyAuthorBlocked: D,
         isReplyAuthorIgnored: U,
         showAvatarPopout: Z,
         showUsernamePopout: S,

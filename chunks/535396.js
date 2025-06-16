@@ -72,7 +72,7 @@ let c = '1340102344645283891',
         },
         [o.oNc.MAX_FILE_SIZE_50_MB]: {
             perkIcon: i.Ro.UPLOAD,
-            description: s.intl.formatToPlainString(s.t['aFRl5+'], { uploadSizeLimit: s.intl.string(s.t.yMOW8P) })
+            description: s.intl.formatToPlainString(s.t['aFRl5+'], { uploadSizeLimit: s.intl.string(s.t.M6qV8v) })
         },
         [o.oNc.BANNER]: {
             perkIcon: i.Ro.CUSTOMIZATION,

@@ -35,10 +35,10 @@ var r = n(255367),
     A = n(800965),
     w = n(107169),
     R = n(891551),
-    M = n(314897),
-    k = n(979696),
-    D = n(430824),
-    L = n(496675),
+    k = n(314897),
+    M = n(979696),
+    L = n(430824),
+    D = n(496675),
     U = n(944486),
     B = n(358085),
     F = n(998502),
@@ -100,7 +100,7 @@ function eu(e) {
         { parentAnalyticsLocation: u } = (0, g.ZP)(),
         d = t.getGuildId(),
         p = (0, s.e7)([U.Z], () => U.Z.getMostRecentSelectedTextChannelId(d), [d]),
-        h = M.default.getId(),
+        h = k.default.getId(),
         f = !(0, s.e7)([b.Z], () => b.Z.isFullscreenInContext(n)) && (!B.isPlatformEmbedded || (B.isPlatformEmbedded && F.ZP.supportsFeature(et.eRX.POPOUT_WINDOWS))),
         m = null != c && c.type !== en.fO.ACTIVITY && c.user.id !== h,
         y = i.useMemo(() => {
@@ -152,8 +152,8 @@ function eu(e) {
 function ed(e) {
     let { channel: t } = e,
         n = (0, f.bp)(),
-        i = (0, s.e7)([L.Z], () => L.Z.can(et.Plq.CREATE_INSTANT_INVITE, t)),
-        l = (0, s.e7)([D.Z], () => D.Z.getGuild(t.guild_id)),
+        i = (0, s.e7)([D.Z], () => D.Z.can(et.Plq.CREATE_INSTANT_INVITE, t)),
+        l = (0, s.e7)([L.Z], () => L.Z.getGuild(t.guild_id)),
         a = (0, s.e7)([z.Z], () => z.Z.getStageInstanceByChannel(t.id)),
         o = i || (null == a ? void 0 : a.invite_code) != null,
         c = (0, O.Q3)('StageChannelInviteButton');
@@ -175,19 +175,19 @@ function ep(e) {
         { analyticsLocations: j } = (0, g.ZP)(m.Z.VOICE_CONTROL_TRAY),
         E = (0, f.bp)(),
         I = (0, s.e7)([U.Z], () => U.Z.getVoiceChannelId() === c.id, [c.id]),
-        P = (0, s.e7)([L.Z], () => L.Z.can(et.Plq.CONNECT, c)),
+        P = (0, s.e7)([D.Z], () => D.Z.can(et.Plq.CONNECT, c)),
         S = (0, H.w8)(c.id, V.pV.SPEAKER),
         Z = (0, s.e7)([b.Z], () => b.Z.getSelectedParticipant(c.id)),
         A = C && E !== et.IlC.POPOUT,
         w = (0, O.Q3)('StageChannelCallContent'),
-        [R, M] = i.useState(0),
-        D = (0, u._q$)('StageChannelCall'),
+        [R, k] = i.useState(0),
+        L = (0, u._q$)('StageChannelCall'),
         { isOnStartStageScreen: B } = (0, W.ZP)();
     (0, W.MV)(c);
-    let F = (0, s.e7)([k.Z], () => k.Z.getToastsEnabled(c.id)),
+    let F = (0, s.e7)([M.Z], () => M.Z.getToastsEnabled(c.id)),
         z = (0, ee.Z)(c) ? (null != Z ? '84px' : '124px') : null != Z ? '0px' : '48px';
     return (
-        D && B && (z = '0px'),
+        L && B && (z = '0px'),
         (l = B
             ? (0, r.jsx)(J.Z, {
                   channel: c,
@@ -200,7 +200,7 @@ function ep(e) {
                     channel: c,
                     onScroll: (e) => {
                         let { scrollTop: t } = e.target;
-                        (0, o.debounce)(() => M(t), 1000, { leading: !0 })();
+                        (0, o.debounce)(() => k(t), 1000, { leading: !0 })();
                     }
                 })
               : (0, r.jsx)(q.Z, {
@@ -306,7 +306,7 @@ function eh(e) {
             }),
             [t.id]
         ),
-        T = (0, s.e7)([D.Z], () => D.Z.getGuild(t.guild_id), [t.guild_id]),
+        T = (0, s.e7)([L.Z], () => L.Z.getGuild(t.guild_id), [t.guild_id]),
         { hasParticipantsPanel: A } = (0, v.Z)({ location: 'StageChannelCall' });
     (0, h.ZP)(() => {
         null == c.K.get(ea) &&
@@ -317,8 +317,8 @@ function eh(e) {
             c.K.set(ea, Date.now()));
     });
     let { width: w = 0, ref: R } = (0, p.ZP)(),
-        M = w - 550,
-        k = !O || (O && P === et.IlC.POPOUT);
+        k = w - 550,
+        M = !O || (O && P === et.IlC.POPOUT);
     return (0, r.jsx)(g.Gt, {
         value: E,
         children: (0, r.jsxs)(y.B2, {
@@ -362,18 +362,18 @@ function eh(e) {
                             className: ei.channelChatWrapper,
                             children: [
                                 S &&
-                                    k &&
+                                    M &&
                                     (0, r.jsx)(C.Z, {
                                         channel: t,
                                         guild: T,
-                                        maxWidth: M
+                                        maxWidth: k
                                     }),
                                 N &&
                                     A &&
-                                    k &&
+                                    M &&
                                     (0, r.jsx)(x.Z, {
                                         channel: t,
-                                        maxWidth: M
+                                        maxWidth: k
                                     })
                             ]
                         })

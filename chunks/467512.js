@@ -56,7 +56,7 @@ function c(e, t) {
 }
 async function u(e) {
     let { channelId: t, message: n, items: o, shouldUploadFailureSendNotification: l } = e,
-        u = new i.Z('missing'),
+        u = new i.Z(),
         d = (0, a.e5)(c(s({}, n), { id: u._file.id }));
     u.on('start', (e) => {
         r.Z.dispatch({

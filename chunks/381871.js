@@ -31,13 +31,13 @@ var r = n(255367),
     A = n(474936),
     w = n(526761),
     R = n(388032),
-    M = n(934680);
-let k = T.Hz.CHAT,
-    D = {
+    k = n(934680);
+let M = T.Hz.CHAT,
+    L = {
         section: Z.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
         openPopoutType: 'voice_channel_effect_emoji_picker'
     },
-    L = [m.ZP.getByName('thumbsup'), m.ZP.getByName('eyes'), m.ZP.getByName('laughing'), m.ZP.getByName('watermelon'), m.ZP.getByName('fork_and_knife'), m.ZP.getByName('yum')].filter(y.lm);
+    D = [m.ZP.getByName('thumbsup'), m.ZP.getByName('eyes'), m.ZP.getByName('laughing'), m.ZP.getByName('watermelon'), m.ZP.getByName('fork_and_knife'), m.ZP.getByName('yum')].filter(y.lm);
 function U(e) {
     var t;
     let { channel: n, closePopout: m, onFocus: y } = e,
@@ -48,13 +48,13 @@ function U(e) {
         G = i.useRef(!1),
         H = i.useRef(null),
         V = (0, f.wC)(n.guild_id),
-        z = (0, l.uniqBy)([...V, ...L], 'name')
+        z = (0, l.uniqBy)([...V, ...D], 'name')
             .filter(
                 (e) =>
                     !_.ZP.isEmojiFilteredOrLocked({
                         emoji: e,
                         channel: n,
-                        intention: k
+                        intention: M
                     })
             )
             .slice(0, N.e5),
@@ -115,7 +115,7 @@ function U(e) {
                     (0, r.jsx)('div', {
                         onMouseEnter: y,
                         children: (0, r.jsx)(g.ZP, {
-                            className: M.reducedMotionTooltip,
+                            className: k.reducedMotionTooltip,
                             header: R.intl.string(R.t['6gGHnZ']),
                             content: R.intl.string(R.t.S2RGUF),
                             onClick: () => {
@@ -137,7 +137,7 @@ function U(e) {
                         onSelectDisabledEmoji: K,
                         onFocus: y,
                         onExpandedToggle: X,
-                        analyticsOverride: D,
+                        analyticsOverride: L,
                         emojiSearchProps: {
                             accessory: (0, r.jsx)(E.Z, {
                                 labelText: R.intl.string(R.t['ktEv/v']),

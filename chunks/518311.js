@@ -40,10 +40,10 @@ var r,
     A = n(429090),
     w = n(912114),
     R = n(366980),
-    M = n(703656),
-    k = n(93127),
-    D = n(752048),
-    L = n(131704),
+    k = n(703656),
+    M = n(93127),
+    L = n(752048),
+    D = n(131704),
     U = n(592125),
     B = n(341165),
     F = n(544610),
@@ -153,7 +153,7 @@ let eh = (e) => {
             });
         return (0, i.jsx)(h.P3F, {
             onClick: () => {
-                (0, M.XU)(en.ME, n.id), r();
+                (0, k.XU)(en.ME, n.id), r();
             },
             children: (0, i.jsxs)('div', {
                 className: ei.confirmChannelItemContainer,
@@ -554,7 +554,7 @@ class em extends (r = l.PureComponent) {
         return {
             affinities: e.map((e) => {
                 var t;
-                let n = D.Z.getUserAffinity(e);
+                let n = L.Z.getUserAffinity(e);
                 return null != (t = null == n ? void 0 : n.communicationProbability) ? t : -1;
             })
         };
@@ -675,7 +675,7 @@ class em extends (r = l.PureComponent) {
                 t.has(e) ? y.Z.removeUser(e) : (y.Z.addUser(e), n.length > 0 && y.Z.clear(null == r ? void 0 : r.id)), this.forceFocus();
             }),
             ea(this, 'handleAddFriendNavigation', () => {
-                (0, M.uL)(en.Z5c.FRIENDS), b.Z.setSection(en.pJs.ADD_FRIEND), this.props.onClose();
+                (0, k.uL)(en.Z5c.FRIENDS), b.Z.setSection(en.pJs.ADD_FRIEND), this.props.onClose();
             }),
             ea(this, 'handleScroll', () => {
                 let e = this.scrollerRef.current;
@@ -899,7 +899,7 @@ function e_(e) {
     );
     let P = (0, p.e7)([W.default], () => W.default.getUser(null == r ? void 0 : r.getRecipientId()));
     return ((0, j.ZP)(() => {
-        (0, k._)();
+        (0, M._)();
     }),
     (null != (t = null == P ? void 0 : P.bot) && t) || (null != (n = null == P ? void 0 : P.isProvisional) && n))
         ? null
@@ -951,7 +951,7 @@ function e_(e) {
 function ey(e) {
     let { channel: t, className: n, popoutPosition: r = 'bottom', popoutAlign: a = 'right' } = e;
     (0, j.ZP)(() => {
-        (0, k._)();
+        (0, M._)();
     });
     let o = (0, A.a)('PrivateChannelRecipientsInviteTextButton'),
         s = l.useRef(null),
@@ -1020,7 +1020,7 @@ function eC(e) {
     return new Set(
         (0, s.chain)(U.Z.getMutablePrivateChannels())
             .values()
-            .filter((e) => (0, L.bc)(e.type))
+            .filter((e) => (0, D.bc)(e.type))
             .filter((e) => ex(e.recipients) === t)
             .map((e) => e.id)
             .value()

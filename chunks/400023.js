@@ -31,10 +31,10 @@ var r = n(255367),
     A = n(255269),
     w = n(47481),
     R = n(977391),
-    M = n(959258),
-    k = n(73274),
-    D = n(419388),
-    L = n(406534),
+    k = n(959258),
+    M = n(73274),
+    L = n(419388),
+    D = n(406534),
     U = n(981631),
     B = n(388032),
     F = n(977659);
@@ -104,7 +104,7 @@ let z = i.memo(
         function (e) {
             var t;
             let { className: n, messageGroupSpacing: l, scrollerClassName: p, channel: m, messages: g, unreadCount: b, showNewMessagesBar: _, messageDisplayCompact: y, channelStream: x, uploads: v, hasUnreads: j, editingMessageId: O, fontSize: E, keyboardModeEnabled: I, filterAfterTimestamp: S, showingQuarantineBanner: Z, hideSummaries: N = !1, jumpBarClassName: A, typingGradient: w } = e,
-                [M, z] = i.useState(!1),
+                [k, z] = i.useState(!1),
                 W = i.useMemo(
                     () =>
                         y
@@ -126,7 +126,7 @@ let z = i.memo(
                               }),
                     [y, E, l]
                 ),
-                Y = (0, D.ZP)({
+                Y = (0, L.ZP)({
                     messages: g,
                     channel: m,
                     compact: y,
@@ -137,7 +137,7 @@ let z = i.memo(
                     handleScrollToBottom: i.useCallback(() => z(!0), [z]),
                     handleScrollFromBottom: i.useCallback(() => z(!1), [z])
                 }),
-                q = (0, k.Z)({
+                q = (0, M.Z)({
                     scrollerRef: Y.ref,
                     isEditing: null != O,
                     keyboardModeEnabled: I,
@@ -150,7 +150,7 @@ let z = i.memo(
                     jumpToPresentBar: J,
                     forumPostActionBar: $,
                     safetyWarningBanner: ee
-                } = (0, L.Z)({
+                } = (0, D.Z)({
                     channel: m,
                     messages: g,
                     unreadCount: b,
@@ -164,7 +164,7 @@ let z = i.memo(
                     filterAfterTimestamp: null != S ? S : K,
                     showingQuarantineBanner: Z,
                     hideSummaries: N,
-                    isAtBottom: M,
+                    isAtBottom: k,
                     jumpToPresent: () => {
                         if (g.hasPresent()) {
                             var e;
@@ -208,7 +208,7 @@ let z = i.memo(
                     (Y.ref.current = e), (er.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                 }),
                 { fadeStart: ea, maskOpacity: eo } = (0, u.q_F)({
-                    fadeStart: M ? 28 : 84,
+                    fadeStart: k ? 28 : 84,
                     maskOpacity: +!w,
                     config: {
                         tension: 100,
@@ -317,9 +317,9 @@ let z = i.memo(
             {
                 messageGroupSpacing: T,
                 fontSize: R,
-                messageDisplayCompact: k,
-                renderSpoilers: D,
-                keyboardModeEnabled: L
+                messageDisplayCompact: M,
+                renderSpoilers: L,
+                keyboardModeEnabled: D
             } = (function () {
                 let e = v.jU.useSetting(),
                     t = v.cC.useSetting(),
@@ -408,15 +408,15 @@ let z = i.memo(
                 };
             })(t);
         return (0, r.jsx)(b.aQ.Provider, {
-            value: (0, A.Z)(D, d),
-            children: (0, r.jsx)(M.v, {
+            value: (0, A.Z)(L, d),
+            children: (0, r.jsx)(k.v, {
                 children: (0, r.jsx)(
                     z,
                     H(G({}, u), {
                         messageGroupSpacing: T,
                         showNewMessagesBar: !0,
                         channel: t,
-                        messageDisplayCompact: !o && (a || k),
+                        messageDisplayCompact: !o && (a || M),
                         messages: B,
                         channelStream: F,
                         permissionVersion: h,
@@ -426,7 +426,7 @@ let z = i.memo(
                         canChat: C,
                         editingMessageId: Y,
                         fontSize: R,
-                        keyboardModeEnabled: L,
+                        keyboardModeEnabled: D,
                         showingQuarantineBanner: n,
                         hideSummaries: l,
                         typingGradient: s

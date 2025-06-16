@@ -31,10 +31,10 @@ var r = n(255367),
     A = n(127654),
     w = n(316595),
     R = n(193910),
-    M = n(951211),
-    k = n(981631),
-    D = n(356659),
-    L = n(921944),
+    k = n(951211),
+    M = n(981631),
+    L = n(356659),
+    D = n(921944),
     U = n(388032),
     B = n(911777);
 function F(e) {
@@ -93,13 +93,13 @@ let H = i.memo(function (e) {
         en = (0, o.e7)([E.ZP], () => null == E.ZP.getCurrentSidebarChannelId(V.id)),
         { showClipsHeaderEntrypoint: er } = m.NV.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
         ei = (0, o.e7)([C.qc], () => C.qc.hasHotspot(C.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
-        el = (0, c.s9z)((e) => (0, c.DEQ)(e, D.Qr)),
+        el = (0, c.s9z)((e) => (0, c.DEQ)(e, L.Qr)),
         ea = (0, o.e7)([I.Z], () => I.Z.hasLayers()),
         eo = (0, o.e7)([g.Z], () => g.Z.hasClips()),
         [es, ec] = i.useState(null),
         eu = (0, m.Go)() && ($ || eo),
         ed = V.isPrivate(),
-        ep = (0, o.e7)([S.Z], () => ed || (S.Z.can(k.Plq.ATTACH_FILES, V) && S.Z.can(k.Plq.SEND_MESSAGES, V))),
+        ep = (0, o.e7)([S.Z], () => ed || (S.Z.can(M.Plq.ATTACH_FILES, V) && S.Z.can(M.Plq.SEND_MESSAGES, V))),
         eh = (0, d.Z)(ee);
     (null == eh ? void 0 : eh.newClipIds.length) !== (null == ee ? void 0 : ee.newClipIds.length) && (null != (t = null == ee ? void 0 : ee.newClipIds.length) ? t : 0) > 0 && null == es && ei && en && !el && !er && !ea && ec('recentClips');
     let ef = (e, t, n) => {
@@ -109,7 +109,7 @@ let H = i.memo(function (e) {
                       requireConfirm: !0,
                       showLargeMessageDialog: n
                   }),
-                N.S.dispatchToLastSubscribed(k.CkL.TEXTAREA_FOCUS);
+                N.S.dispatchToLastSubscribed(M.CkL.TEXTAREA_FOCUS);
         },
         em = (0, o.e7)([P.Z], () => P.Z.hasCurrentUserSentMessageSinceAppStart());
     function eg() {
@@ -118,7 +118,7 @@ let H = i.memo(function (e) {
                 let { default: e } = await Promise.all([n.e('2668'), n.e('71248')]).then(n.bind(n, 542055));
                 return (t) => (0, r.jsx)(e, G(F({}, t), { channelId: V.id }));
             },
-            { modalKey: D.Qr }
+            { modalKey: L.Qr }
         ),
             ec(null);
     }
@@ -128,9 +128,9 @@ let H = i.memo(function (e) {
             return null == (e = X.current) ? void 0 : e.activateUploadDialogue();
         };
         return (
-            N.S.subscribe(k.CkL.UPLOAD_FILE, e),
+            N.S.subscribe(M.CkL.UPLOAD_FILE, e),
             () => {
-                N.S.unsubscribe(k.CkL.UPLOAD_FILE, e);
+                N.S.unsubscribe(M.CkL.UPLOAD_FILE, e);
             }
         );
     });
@@ -141,7 +141,7 @@ let H = i.memo(function (e) {
         ex = (0, h.qB)(),
         ev = (0, v.Us)({ location: 'ChannelAttachButton' }),
         ej = null != (l = null == et ? void 0 : et.length) ? l : 0,
-        eO = (0, M.Z)({
+        eO = (0, k.Z)({
             canAttachFiles: ep,
             canStartThreads: eb || e_,
             useSlate: ey,
@@ -189,10 +189,10 @@ let H = i.memo(function (e) {
             position: 'top',
             positionKey: null != es ? es : 'null',
             onRequestOpen: () => {
-                em && (0, y.EW)(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: L.L.TAKE_ACTION }), ec('attachMenu');
+                em && (0, y.EW)(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: D.L.TAKE_ACTION }), ec('attachMenu');
             },
             onRequestClose: () => {
-                (0, c.$sL)() || (em && (0, y.EW)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: L.L.TAKE_ACTION }), ec(null));
+                (0, c.$sL)() || (em && (0, y.EW)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: D.L.TAKE_ACTION }), ec(null));
             },
             renderPopout: (e) => {
                 switch (es) {

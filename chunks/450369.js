@@ -1,5 +1,5 @@
 n.d(t, {
-    Q: () => L,
+    Q: () => D,
     Z: () => F
 });
 var r = n(255367),
@@ -34,8 +34,8 @@ var r = n(255367),
     A = n(248400),
     w = n(981631),
     R = n(354459),
-    M = n(820573);
-function k(e) {
+    k = n(820573);
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function k(e) {
     }
     return e;
 }
-function D(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -78,7 +78,7 @@ function D(e, t) {
         e
     );
 }
-let L = 16 / 9,
+let D = 16 / 9,
     U = (e) => {
         let { stageParticipant: t, rtcParticipant: n, channel: l, guildId: a, user: o, width: s, isModerator: u, onContextMenu: d, inPopout: p } = e,
             h = i.useRef(null),
@@ -93,8 +93,8 @@ let L = 16 / 9,
             children: (e) =>
                 (0, r.jsx)(
                     c.P3F,
-                    D(
-                        k(
+                    L(
+                        M(
                             {
                                 innerRef: h,
                                 onContextMenu: (e) => d(n, e)
@@ -106,11 +106,11 @@ let L = 16 / 9,
                                 T.Z,
                                 {
                                     participant: n,
-                                    aspectRatio: L,
+                                    aspectRatio: D,
                                     blocked: m,
                                     ignored: g,
                                     channel: l,
-                                    className: M.tile,
+                                    className: k.tile,
                                     inCall: !0,
                                     inPopout: p,
                                     pulseSpeakingIndicator: !f.enabled,
@@ -148,12 +148,12 @@ let L = 16 / 9,
             T.Z,
             {
                 participant: n,
-                aspectRatio: L,
+                aspectRatio: D,
                 fit: n.type === R.fO.USER ? v.L.COVER : void 0,
                 blocked: g,
                 ignored: _,
                 channel: l,
-                className: M.tile,
+                className: k.tile,
                 inCall: !0,
                 inPopout: h,
                 onClick: N,
@@ -200,7 +200,7 @@ let L = 16 / 9,
                                     return (n) =>
                                         (0, r.jsx)(
                                             t,
-                                            D(k({}, n), {
+                                            L(M({}, n), {
                                                 stream: e.stream,
                                                 appContext: p,
                                                 exitFullscreen: () => {},
@@ -235,7 +235,7 @@ let L = 16 / 9,
                                 return (t) =>
                                     (0, r.jsx)(
                                         e,
-                                        D(k({}, t), {
+                                        L(M({}, t), {
                                             user: x,
                                             guildId: y,
                                             channel: l,

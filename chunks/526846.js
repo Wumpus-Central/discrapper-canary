@@ -31,10 +31,10 @@ var r = n(255367),
     A = n(403404),
     w = n(981631),
     R = n(388032),
-    M = n(210408);
-let k = c.Y.APP_LAUNCHER_IN_VOICE_BANNER,
-    D = 'vc-activities-'.concat((0, o.Z)());
-function L(e) {
+    k = n(210408);
+let M = c.Y.APP_LAUNCHER_IN_VOICE_BANNER,
+    L = 'vc-activities-'.concat((0, o.Z)());
+function D(e) {
     var t;
     let n,
         { channel: l, openInPopout: a, onClick: o } = e,
@@ -43,20 +43,20 @@ function L(e) {
             return (
                 i.useEffect(() => {
                     (0, x.XK)({
-                        surface: k,
+                        surface: M,
                         activeState: e
                     });
                 }, [e]),
                 {
                     fetchState: (0, d.e7)([v.Z], () =>
                         v.Z.getFetchState({
-                            surface: k,
+                            surface: M,
                             activeState: e
                         })
                     ),
                     voiceBannerCollection: (0, d.e7)([v.Z], () =>
                         v.Z.getCollections({
-                            surface: k,
+                            surface: M,
                             activeState: e
                         })
                     )[0]
@@ -86,7 +86,7 @@ function L(e) {
                   containerWidth: 584
               })),
           (0, r.jsxs)(p.P3F, {
-              className: M.clickableBanner,
+              className: k.clickableBanner,
               innerRef: C,
               onClick: () => {
                   o(),
@@ -104,9 +104,9 @@ function L(e) {
                   (0, r.jsx)('img', {
                       alt: g.description,
                       src: n,
-                      className: M.poster
+                      className: k.poster
                   }),
-                  (0, r.jsx)('div', { className: M.posterDivider })
+                  (0, r.jsx)('div', { className: k.posterDivider })
               ]
           }));
 }
@@ -126,7 +126,7 @@ let U = i.forwardRef(function (e, t) {
         }, [s, o]);
     let j = (0, h.bp)(),
         { analyticsLocations: E } = (0, g.ZP)(m.Z.ACTIVITIES_MINI_SHELF),
-        k = j === w.IlC.POPOUT,
+        M = j === w.IlC.POPOUT,
         U = ((n = l.getGuildId()), (0, Z.Z)({ guildId: n }).slice(0, 5));
     i.useEffect(() => {
         let e = setTimeout(() => S.ux(), 1000);
@@ -136,12 +136,12 @@ let U = i.forwardRef(function (e, t) {
         F = i.useCallback(() => {
             (0, A.Z)({
                 channel: l,
-                openInPopout: k,
+                openInPopout: M,
                 analyticsLocations: E
             }),
                 u(),
                 b();
-        }, [E, l, b, u, k]),
+        }, [E, l, b, u, M]),
         G = i.useCallback(
             (e) => {
                 c(),
@@ -158,32 +158,32 @@ let U = i.forwardRef(function (e, t) {
         children: (0, r.jsx)(O.Z, {
             children: (0, r.jsxs)(p.VqE, {
                 ref: t,
-                'aria-labelledby': D,
+                'aria-labelledby': L,
                 className: _,
                 children: [
                     (0, r.jsx)(p.y5t, {
                         forceLevel: 2,
                         children: (0, r.jsx)(p.nn4, {
                             children: (0, r.jsx)(p.H, {
-                                id: D,
+                                id: L,
                                 children: R.intl.string(R.t['2lnYtL'])
                             })
                         })
                     }),
                     (0, r.jsxs)('div', {
-                        className: M.container,
+                        className: k.container,
                         onMouseEnter: G,
                         onMouseLeave: u,
                         children: [
                             (0, r.jsxs)('div', {
-                                className: M.titleContainer,
+                                className: k.titleContainer,
                                 children: [
                                     (0, r.jsxs)('div', {
-                                        className: M.titleLeft,
+                                        className: k.titleLeft,
                                         children: [
                                             (0, r.jsx)(H, {
                                                 size: 'md',
-                                                className: M.titleLeftIcon,
+                                                className: k.titleLeftIcon,
                                                 color: 'var(--interactive-active)'
                                             }),
                                             (0, r.jsx)(p.Text, {
@@ -193,7 +193,7 @@ let U = i.forwardRef(function (e, t) {
                                         ]
                                     }),
                                     (0, r.jsxs)(p.P3F, {
-                                        className: M.titleRight,
+                                        className: k.titleRight,
                                         onClick: F,
                                         children: [
                                             (0, r.jsx)(p.Text, {
@@ -205,21 +205,21 @@ let U = i.forwardRef(function (e, t) {
                                                 width: 12,
                                                 height: 12,
                                                 color: 'var(--interactive-active)',
-                                                className: M.titleRightIcon
+                                                className: k.titleRightIcon
                                             })
                                         ]
                                     })
                                 ]
                             }),
-                            (0, r.jsx)(L, {
-                                openInPopout: k,
+                            (0, r.jsx)(D, {
+                                openInPopout: M,
                                 channel: l,
                                 onClick: () => {
                                     b(), s();
                                 }
                             }),
                             (0, r.jsxs)('div', {
-                                className: M.activityContainer,
+                                className: k.activityContainer,
                                 children: [
                                     U.map((e) =>
                                         (0, r.jsx)(
@@ -234,17 +234,17 @@ let U = i.forwardRef(function (e, t) {
                                                     s(), b();
                                                 },
                                                 aspectRatio: N.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
-                                                animatedDivClass: M.activitySuggestion,
+                                                animatedDivClass: k.activitySuggestion,
                                                 commandOrigin: C.bB.MINI_SHELF
                                             },
                                             e.application.id
                                         )
                                     ),
                                     (0, r.jsx)('div', {
-                                        className: a()(M.wumpusRocketOuterContainer, { [M.wumpusReducedMotion]: y }),
+                                        className: a()(k.wumpusRocketOuterContainer, { [k.wumpusReducedMotion]: y }),
                                         children: (0, r.jsx)('div', {
-                                            className: M.wumpusRocketInnerContainer,
-                                            children: (0, r.jsx)(T.Z, { className: M.wumpusRocket })
+                                            className: k.wumpusRocketInnerContainer,
+                                            children: (0, r.jsx)(T.Z, { className: k.wumpusRocket })
                                         })
                                     })
                                 ]

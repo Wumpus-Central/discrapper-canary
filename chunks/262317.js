@@ -1,7 +1,7 @@
 n.d(t, {
     XX: () => R,
-    ZP: () => k,
-    ul: () => M
+    ZP: () => M,
+    ul: () => k
 }),
     n(388685);
 var r = n(255367),
@@ -87,7 +87,7 @@ function R(e) {
         })
     });
 }
-function M(e) {
+function k(e) {
     let { numAudience: t, collapsed: n } = e,
         i = n ? t : N.intl.formatToPlainString(N.t['+v2pNz'], { count: t });
     return (0, r.jsxs)('div', {
@@ -109,9 +109,9 @@ function M(e) {
         ]
     });
 }
-let k = (0, p.$)(function (e) {
+let M = (0, p.$)(function (e) {
     var t;
-    let { collapsed: l, user: p, channel: R, mute: M, localMute: k, localVideoDisabled: D, deaf: L, video: U, embeddedApplication: B, serverMute: F, serverDeaf: G, nick: H, ringing: V, speaking: z, disconnected: W, connectUserDragSource: Y, canDrag: q, isStreaming: K, isWatching: X, isGuest: Q, priority: J, showPreview: $, hidePreview: ee, shouldShowPreview: et, previewIsOpen: en, otherClientSessionType: er, voicePlatform: ei, isSelfOnOtherClient: el = !1, tabIndex: ea, location: eo, isSelf: es, application: ec } = e,
+    let { collapsed: l, user: p, channel: R, mute: k, localMute: M, localVideoDisabled: L, deaf: D, video: U, embeddedApplication: B, serverMute: F, serverDeaf: G, nick: H, ringing: V, speaking: z, disconnected: W, connectUserDragSource: Y, canDrag: q, isStreaming: K, isWatching: X, isGuest: Q, priority: J, showPreview: $, hidePreview: ee, shouldShowPreview: et, previewIsOpen: en, otherClientSessionType: er, voicePlatform: ei, isSelfOnOtherClient: el = !1, tabIndex: ea, location: eo, isSelf: es, application: ec } = e,
         eu = i.useRef(null),
         [ed, ep] = i.useState(!1),
         eh = () => {
@@ -162,15 +162,15 @@ let k = (0, p.$)(function (e) {
                     user: p,
                     speaking: z,
                     disconnected: W,
-                    mute: M,
-                    localMute: k,
-                    localVideoDisabled: D,
+                    mute: k,
+                    localMute: M,
+                    localVideoDisabled: L,
                     isStreaming: K,
                     isGuest: Q,
                     video: U,
                     priority: J,
                     ringing: V,
-                    deaf: L,
+                    deaf: D,
                     nick: H,
                     collapsed: l,
                     overlap: l,

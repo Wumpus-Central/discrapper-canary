@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(539854);
+n.d(t, { Z: () => D }), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -31,7 +31,7 @@ var r = n(255367),
     A = n(354459),
     w = n(388032),
     R = n(232989);
-function M(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function M(e) {
     }
     return e;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,7 +74,7 @@ function k(e, t) {
         e
     );
 }
-function D(e) {
+function L(e) {
     let { channelId: t, guildId: n } = e,
         i = (0, c.Wu)([S.Z, Z.Z], () => {
             let e = Date.now();
@@ -98,7 +98,7 @@ function D(e) {
                           children: (l) =>
                               (0, r.jsx)(
                                   P.ZP,
-                                  k(M({}, l), {
+                                  M(k({}, l), {
                                       className: a()(R.speaker, { [R.last]: t === i.length - 1 }),
                                       user: e.user,
                                       speaking: !0,
@@ -112,7 +112,7 @@ function D(e) {
               )
           });
 }
-function L(e) {
+function D(e) {
     let { inPopout: t, channel: n, isChatOpen: l } = e,
         o = i.useRef(null),
         { analyticsLocations: s } = (0, h.ZP)(p.Z.VOICE_CHANNEL_HEADER),
@@ -121,7 +121,7 @@ function L(e) {
             voiceParticipantsHidden: P,
             selectedParticipant: S,
             userParticipantCount: w,
-            participantsListOpen: L
+            participantsListOpen: D
         } = (0, c.cj)(
             [Z.Z],
             () => ({
@@ -134,7 +134,7 @@ function L(e) {
         ),
         U = n.isGuildVoice() && !l,
         { hasParticipantsPanel: B } = (0, T.Z)({ location: 'ChannelCallHeaderToolbar' }),
-        F = !L && B && (n.isGuildVoice() || n.isGroupDM()),
+        F = !D && B && (n.isGuildVoice() || n.isGroupDM()),
         { enabled: G, inInbox: H } = y.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
         V = (0, b.Q3)('ChannelCallHeaderToolbar'),
         z = [];
@@ -142,7 +142,7 @@ function L(e) {
         P &&
             z.push(
                 (0, r.jsx)(
-                    D,
+                    L,
                     {
                         channelId: x,
                         guildId: n.guild_id
@@ -208,7 +208,7 @@ function L(e) {
                             let { isShown: n } = t;
                             return (0, i.createElement)(
                                 I.Z,
-                                k(M({}, e), {
+                                M(k({}, e), {
                                     buttonRef: o,
                                     isActive: n,
                                     count: w,
@@ -229,7 +229,7 @@ function L(e) {
                     I.Z,
                     {
                         className: a()(R.button, { [R.lastButton]: l }),
-                        onClick: () => d.Z.toggleParticipantsList(n.id, !L)
+                        onClick: () => d.Z.toggleParticipantsList(n.id, !D)
                     },
                     'participants-list-button'
                 )
@@ -240,7 +240,7 @@ function L(e) {
                     E.T,
                     {
                         channelId: n.id,
-                        className: a()(R.button, { [R.lastButton]: L }),
+                        className: a()(R.button, { [R.lastButton]: D }),
                         disabled: l
                     },
                     'chat-spacer'

@@ -74,13 +74,13 @@ function _(e) {
         text: t,
         position: 'top',
         spacing: 4,
+        onTooltipShow: () => u(!0),
+        onTooltipHide: () => u(!1),
         children: (e) =>
             (0, r.jsx)(
                 o.P3F,
                 b(m({}, e), {
                     className: g.action,
-                    onMouseEnter: () => u(!0),
-                    onMouseLeave: () => u(!1),
                     onClick: (e) => {
                         (0, h.Qz)({
                             message: l,
@@ -124,14 +124,14 @@ function v(e) {
                 text: l,
                 position: 'top',
                 spacing: 4,
+                onTooltipShow: () => d(!0),
+                onTooltipHide: () => d(!1),
                 children: (t) =>
                     (0, r.jsx)(
                         o.P3F,
                         b(m({}, t), {
                             innerRef: y,
                             className: g.action,
-                            onMouseEnter: () => d(!0),
-                            onMouseLeave: () => d(!1),
                             onClick: (e) => {
                                 (0, h.Qz)({
                                     message: n,

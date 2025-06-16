@@ -54,17 +54,17 @@ function T() {
     );
 }
 function A(e) {
-    let { channel: t, options: a, onFileUpload: f, onClose: m, onSelect: _, draftType: A, editorTextContent: w, setValue: R, openClips: M } = e,
-        { analyticsLocations: k } = (0, p.ZP)(),
-        D = (0, g.Dt)({ channel: t });
-    function L() {
+    let { channel: t, options: a, onFileUpload: f, onClose: m, onSelect: _, draftType: A, editorTextContent: w, setValue: R, openClips: k } = e,
+        { analyticsLocations: M } = (0, p.ZP)(),
+        L = (0, g.Dt)({ channel: t });
+    function D() {
         (0, b.R6)(t, void 0, 'Plus Button');
     }
     function U() {
         y.default.track(E.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R('/', (0, j.JM)('/'));
     }
     function B() {
-        M();
+        k();
     }
     function F() {
         (0, h.EW)(o.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: I.L.TAKE_ACTION }),
@@ -129,7 +129,7 @@ function A(e) {
             (0, d.Z)({
                 channel: t,
                 openInPopout: !1,
-                analyticsLocations: k
+                analyticsLocations: M
             }),
             (0, u.w1)({ guildId: t.guild_id });
     }
@@ -232,7 +232,7 @@ function A(e) {
                                             channelId: t.id,
                                             type: E.mFx.JOIN,
                                             activity: n,
-                                            location: k[k.length - 1]
+                                            location: M[M.length - 1]
                                         })
                                     );
                                 }
@@ -253,7 +253,7 @@ function A(e) {
                                             channelId: t.id,
                                             type: E.mFx.LISTEN,
                                             activity: n,
-                                            location: k[k.length - 1]
+                                            location: M[M.length - 1]
                                         })
                                     );
                                 }
@@ -274,7 +274,7 @@ function A(e) {
                                             channelId: t.id,
                                             type: E.mFx.WATCH,
                                             activity: n,
-                                            location: k[k.length - 1]
+                                            location: M[M.length - 1]
                                         })
                                     );
                                 }
@@ -287,7 +287,7 @@ function A(e) {
                             {
                                 id: 'THREAD',
                                 label: i,
-                                action: L
+                                action: D
                             },
                             'THREAD'
                         );
@@ -319,7 +319,7 @@ function A(e) {
                                 id: 'scheduled_message',
                                 label: i,
                                 action: () => (0, g.$f)({ channel: t }),
-                                children: D
+                                children: L
                             },
                             'scheduled_message'
                         );

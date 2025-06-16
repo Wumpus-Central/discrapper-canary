@@ -73,29 +73,29 @@ function T(e) {
         A = (0, o.e7)([C.Z], () => C.Z.getChannel(t)),
         w = (0, o.e7)([v.Z], () => v.Z.getGuild(null == A ? void 0 : A.getGuildId())),
         R = (0, f.ZP)(A);
-    var M = A;
-    let k = (0, o.e7)([j.Z], () => null != M && !a().isEmpty(j.Z.getVoiceStatesForChannel(M.id)));
+    var k = A;
+    let M = (0, o.e7)([j.Z], () => null != k && !a().isEmpty(j.Z.getVoiceStatesForChannel(k.id)));
     i.useEffect(() => {
-        k &&
-            null != M &&
+        M &&
+            null != k &&
             (s.Z.dispatch({
                 type: 'SIDEBAR_CLOSE',
-                baseChannelId: M.parent_id
+                baseChannelId: k.parent_id
             }),
-            (0, y.ad)(M, { source: E.on.VOICE_AUTO_OPEN }));
-    }, [k, M]);
-    let D = i.useRef(!1);
+            (0, y.ad)(k, { source: E.on.VOICE_AUTO_OPEN }));
+    }, [M, k]);
+    let L = i.useRef(!1);
     if (
         (i.useEffect(() => {
-            if (null == A || D.current) return;
-            D.current = !0;
+            if (null == A || L.current) return;
+            L.current = !0;
             let e = (0, p.K)(C.Z.getChannel(A.id), !0);
             (0, d.yw)(I.rMx.CHANNEL_OPENED, N(Z({}, e, (0, d.$H)(A.id)), { channel_view: T })), (0, h.a)(I.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: A.id });
         }, [A, T]),
         null == A || null == w)
     )
         return null;
-    let L = (0, r.jsx)(O.Z, {
+    let D = (0, r.jsx)(O.Z, {
         channel: A,
         baseChannelId: l
     });
@@ -106,7 +106,7 @@ function T(e) {
                 draftType: x.d.ChannelMessage
             }),
             (0, r.jsx)(b.ZP, {
-                toolbar: L,
+                toolbar: D,
                 'aria-label': P.intl.string(P.t.Pwe8tL),
                 children: (0, _.ud)({
                     channel: A,

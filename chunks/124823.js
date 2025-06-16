@@ -57,10 +57,10 @@ function w(e) {
     let { user: t, channel: n } = e,
         w = __OVERLAY__ || !(0, d.Z)(t.id),
         R = (0, g.ZP)(t.id),
-        M = (0, s.ZP)(),
-        k = i.useRef(Date.now()),
-        { analyticsLocations: D } = (0, u.ZP)(c.Z.USER_PROFILE_SIDEBAR),
-        L = (0, f.ZB)({
+        k = (0, s.ZP)(),
+        M = i.useRef(Date.now()),
+        { analyticsLocations: L } = (0, u.ZP)(c.Z.USER_PROFILE_SIDEBAR),
+        D = (0, f.ZB)({
             layout: 'SIDEBAR',
             userId: t.id,
             channelId: n.id
@@ -71,19 +71,19 @@ function w(e) {
             (0, b.openUserProfileModal)(
                 A(
                     {
-                        sourceAnalyticsLocations: D,
+                        sourceAnalyticsLocations: L,
                         hideRestrictedProfile: !0
                     },
-                    L,
+                    D,
                     e
                 )
             );
         };
     return (0, r.jsx)(u.Gt, {
-        value: D,
+        value: L,
         children: (0, r.jsx)(f.Mt, {
-            value: L,
-            openedAt: k.current,
+            value: D,
+            openedAt: M.current,
             fetchStartedAt: null == R ? void 0 : R.fetchStartedAt,
             fetchEndedAt: null == R ? void 0 : R.fetchEndedAt,
             isLoaded: null == R ? void 0 : R.isLoaded,
@@ -92,7 +92,7 @@ function w(e) {
                 user: t,
                 displayProfile: R,
                 themeType: S.lY.SIDEBAR,
-                themeOverride: M,
+                themeOverride: k,
                 children: [
                     (0, r.jsxs)(l.u2, {
                         children: [
@@ -166,9 +166,9 @@ function w(e) {
                                             A(
                                                 {
                                                     action: 'PRESS_VIEW_PROFILE',
-                                                    analyticsLocations: D
+                                                    analyticsLocations: L
                                                 },
-                                                L
+                                                D
                                             )
                                         );
                                 },

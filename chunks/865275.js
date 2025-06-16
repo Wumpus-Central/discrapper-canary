@@ -159,16 +159,12 @@ class b extends r.EventEmitter {
                 items: t
             });
     }
-    constructor(e, t = 'POST', n) {
-        var r;
+    constructor() {
         super(),
             p(this, 'id', void 0),
             p(this, '_file', void 0),
             p(this, '_aborted', !1),
             p(this, '_errored', !1),
-            p(this, '_url', void 0),
-            p(this, '_method', void 0),
-            p(this, '_raiseEndpointErrors', !1),
             p(this, 'processingMessageChangeInterval', void 0),
             p(this, 'files', []),
             p(this, '_lastUpdate', 0),
@@ -217,9 +213,6 @@ class b extends r.EventEmitter {
                 this.clearProcessingMessageInterval(), E.log('_handleComplete for '.concat(this.id)), this.emit('complete', this._file, e), this.removeAllListeners();
             }),
             (this.id = a().uniqueId('Uploader')),
-            (this._url = e),
-            (this._method = t),
-            (this._raiseEndpointErrors = null != (r = null == n ? void 0 : n.raiseEndpointErrors) && r),
             (this._file = {
                 id: this.id,
                 name: '',

@@ -50,7 +50,7 @@ function g(e) {
     });
 }
 async function b(e) {
-    let t = new c.Z('unused'),
+    let t = new c.Z(),
         n = await t.uploadFilesSimple(e);
     return {
         uploaderFile: t._file,

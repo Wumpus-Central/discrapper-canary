@@ -28,10 +28,10 @@ function I(e) {
         Z = (0, p.KF)(t.id),
         N = (0, p.g5)(Z),
         T = Z !== p.jy.CAN_LAUNCH || S,
-        { isHovered: A, setIsHovered: w, onMouseEnter: R, onMouseLeave: M } = (0, C.Z)(200, 300),
-        k = (0, d.a)({ surface: s.eR.VOICE_LAUNCHER }),
-        D = (0, l.e7)([u.ZP], () => null != u.ZP.getSelfEmbeddedActivityForLocation(u.ZP.getConnectedActivityLocation())),
-        L = !T,
+        { isHovered: A, setIsHovered: w, onMouseEnter: R, onMouseLeave: k } = (0, C.Z)(200, 300),
+        M = (0, d.a)({ surface: s.eR.VOICE_LAUNCHER }),
+        L = (0, l.e7)([u.ZP], () => null != u.ZP.getSelfEmbeddedActivityForLocation(u.ZP.getConnectedActivityLocation())),
+        D = !T,
         U = i.useCallback(
             (e) => {
                 'focus' !== e.type && R();
@@ -74,7 +74,7 @@ function I(e) {
                     },
                     renderPopout: (e) => {
                         let { closePopout: n, setPopoutRef: i } = e;
-                        return L
+                        return D
                             ? (0, r.jsx)(f.m, {
                                   ref: (e) => {
                                       null == i || i(e);
@@ -82,7 +82,7 @@ function I(e) {
                                   channel: t,
                                   closePopout: n,
                                   onMouseEnter: R,
-                                  onMouseLeave: M,
+                                  onMouseLeave: k,
                                   isHovered: A,
                                   onClick: () => l(O.L.UNKNOWN)
                               })
@@ -130,13 +130,13 @@ function I(e) {
                                                     children: (0, r.jsx)(x.Z, {
                                                         disabled: T,
                                                         'aria-label': N,
-                                                        label: L ? void 0 : N,
-                                                        isActivityActive: D,
+                                                        label: D ? void 0 : N,
+                                                        isActivityActive: L,
                                                         onClick: () => {
                                                             H(), (i === a.z.ACTIVITIES_MINI_SHELF_SPARKLES || i === a.z.ACTIVITY_GDM_ROCKET_SPARKLE || i === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || i === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || i === a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && l(O.L.TAKE_ACTION);
                                                         },
                                                         onMouseEnter: U,
-                                                        onMouseLeave: M
+                                                        onMouseLeave: k
                                                     })
                                                 }),
                                             Object.getOwnPropertyDescriptors
@@ -155,7 +155,7 @@ function I(e) {
                                         );
                                     }
                                 }),
-                                k
+                                M
                                     ? (0, r.jsx)(m.r, {
                                           top: 2,
                                           right: 2,

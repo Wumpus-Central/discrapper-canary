@@ -118,30 +118,30 @@ function O(e) {
         event: C.CkL.FOCUS_CHAT_BUTTON,
         handler: I ? null : R
     });
-    let [M, k] = i.useState(!1),
-        D = i.useCallback(() => {
-            f && k(!0);
+    let [k, M] = i.useState(!1),
+        L = i.useCallback(() => {
+            f && M(!0);
         }, [f]);
     (0, g.yp)({
         event: C.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
-        handler: D
+        handler: L
     }),
         i.useEffect(() => {
             let e;
             return (
-                M &&
+                k &&
                     (e = setTimeout(() => {
-                        k(!1);
+                        M(!1);
                     }, 3000)),
                 () => {
                     clearTimeout(e);
                 }
             );
-        }, [M]);
-    let L = [(t = f && I ? x.intl.string(x.t.DPgc5u) : S ? x.intl.string(x.t.nthdxM) : x.intl.string(x.t['5KxXrK']))];
+        }, [k]);
+    let D = [(t = f && I ? x.intl.string(x.t.DPgc5u) : S ? x.intl.string(x.t.nthdxM) : x.intl.string(x.t['5KxXrK']))];
     return (
-        T > 0 && L.push(x.intl.formatToPlainString(x.t['3l1GOz'], { mentionCount: T })),
-        N > 0 && L.push(x.intl.string(x.t.x5zAGR)),
+        T > 0 && D.push(x.intl.formatToPlainString(x.t['3l1GOz'], { mentionCount: T })),
+        N > 0 && D.push(x.intl.string(x.t.x5zAGR)),
         (0, r.jsx)(
             y.Z,
             (function (e) {
@@ -173,11 +173,11 @@ function O(e) {
                     buttonRef: P,
                     onClick: A,
                     label: t,
-                    'aria-label': L.join(', '),
+                    'aria-label': D.join(', '),
                     iconComponent: w,
                     tooltipPosition: 'bottom',
                     wrapperClassName: a()(l, null != o && { [o]: Z }),
-                    forceTooltipOpen: M
+                    forceTooltipOpen: k
                 },
                 O
             )

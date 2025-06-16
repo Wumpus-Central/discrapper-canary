@@ -31,8 +31,8 @@ var r = n(255367),
     A = n(531578),
     w = n(862825),
     R = n(388032),
-    M = n(682065);
-function k(e, t, n) {
+    k = n(682065);
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,11 +45,11 @@ function k(e, t, n) {
         e
     );
 }
-function D(e) {
+function L(e) {
     let t = null != e ? C.Z.getEditorState(e) : null;
     return null != t ? j.Sq(t) : null;
 }
-class L extends i.Component {
+class D extends i.Component {
     componentDidMount() {
         this.autoAnalytics();
     }
@@ -63,7 +63,7 @@ class L extends i.Component {
         var t;
         super(...e),
             (t = this),
-            k(this, 'autoAnalytics', function () {
+            M(this, 'autoAnalytics', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
                 if (null == t.props.searchAnalyticsId || t.props.isSearching) return;
                 let n = 0,
@@ -82,7 +82,7 @@ class L extends i.Component {
                               searchId: t.props.searchId,
                               searchType: t.props.searchType,
                               searchAnalyticsId: t.props.searchAnalyticsId,
-                              searchQueryString: D(t.props.searchId),
+                              searchQueryString: L(t.props.searchId),
                               searchQuery: C.Z.getQuery(t.props.searchId)
                           })
                         : (0, E.hM)({
@@ -101,7 +101,7 @@ class L extends i.Component {
                               pageNumLinks: l,
                               pageNumEmbeds: i,
                               pageNumAttachments: r,
-                              searchQueryString: D(t.props.searchId),
+                              searchQueryString: L(t.props.searchId),
                               searchQuery: C.Z.getQuery(t.props.searchId)
                           });
             });
@@ -110,9 +110,9 @@ class L extends i.Component {
 let U = (e) => {
     let { children: t } = e;
     return (0, r.jsx)('div', {
-        className: M.emptyResultsWrap,
+        className: k.emptyResultsWrap,
         children: (0, r.jsx)('div', {
-            className: M.emptyResultsContent,
+            className: k.emptyResultsContent,
             children: t
         })
     });
@@ -145,17 +145,17 @@ class B extends i.PureComponent {
         let { searchAnalyticsId: e, searchType: t, searchResults: n, searchId: i } = this.props,
             { offset: l, hasError: a, totalResults: o, isHistoricalIndexing: s, isSearching: c } = this.props.search;
         return (0, r.jsxs)('section', {
-            className: M.searchResultsWrap,
+            className: k.searchResultsWrap,
             'aria-label': R.intl.string(R.t.zkoeq6),
             children: [
                 this.renderHeader(),
                 (0, r.jsx)(u.Den, {
                     ref: this.scrollerRef,
-                    className: M.scroller,
+                    className: k.scroller,
                     children: this.renderContent()
                 }),
                 this.renderFooter(),
-                (0, r.jsx)(L, {
+                (0, r.jsx)(D, {
                     searchId: i,
                     searchType: t,
                     searchAnalyticsId: e,
@@ -172,12 +172,12 @@ class B extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            k(this, 'state', {
+            M(this, 'state', {
                 searchMode: T.QIO.NEWEST,
                 searchQuery: null
             }),
-            k(this, 'scrollerRef', i.createRef()),
-            k(this, 'scrollTo', (e, t, n) => {
+            M(this, 'scrollerRef', i.createRef()),
+            M(this, 'scrollTo', (e, t, n) => {
                 let r = this.scrollerRef.current;
                 if (null == r) return;
                 let i = r.getScrollerState().scrollTop - e;
@@ -187,34 +187,34 @@ class B extends i.PureComponent {
                     callback: n
                 });
             }),
-            k(this, 'selectChannel', (e) => {
+            M(this, 'selectChannel', (e) => {
                 e !== x.Z.getChannelId() && d.ZP.transitionToInviteChannelSync(e);
             }),
-            k(this, 'searchPrevious', () => {
+            M(this, 'searchPrevious', () => {
                 let {
                     searchId: e,
                     search: { isSearching: t }
                 } = this.props;
                 if (!t) {
-                    let t = D(e);
+                    let t = L(e);
                     p.jn(e, T.vpv, t);
                 }
             }),
-            k(this, 'searchNext', () => {
+            M(this, 'searchNext', () => {
                 let {
                     searchId: e,
                     search: { isSearching: t }
                 } = this.props;
                 if (!t) {
-                    let t = D(e);
+                    let t = L(e);
                     p.m$(e, T.vpv, t);
                 }
             }),
-            k(this, 'handleSearchResultsClose', () => {
+            M(this, 'handleSearchResultsClose', () => {
                 let { searchId: e } = this.props;
                 p.qt(e);
             }),
-            k(this, 'searchByMode', (e) => {
+            M(this, 'searchByMode', (e) => {
                 let {
                         searchId: t,
                         searchType: n,
@@ -234,15 +234,15 @@ class B extends i.PureComponent {
                     p.Nz(t, e, l), this.setState({ searchMode: e });
                 }
             }),
-            k(this, 'toggleShowBlockedMessages', () => {
+            M(this, 'toggleShowBlockedMessages', () => {
                 let {
                     searchId: e,
                     search: { showBlockedResults: t }
                 } = this.props;
                 p.QY(e, !t);
             }),
-            k(this, 'renderFooter', () => (this.props.isFeedbackVisible ? (0, r.jsx)(N.Z, { dismissFeedbackEntrypoint: this.props.dismissFeedbackEntrypoint }) : null)),
-            k(this, 'renderHeader', () => {
+            M(this, 'renderFooter', () => (this.props.isFeedbackVisible ? (0, r.jsx)(N.Z, { dismissFeedbackEntrypoint: this.props.dismissFeedbackEntrypoint }) : null)),
+            M(this, 'renderHeader', () => {
                 let { searchMode: e } = this.state,
                     { totalResults: t, isSearching: n, isHistoricalIndexing: i, documentsIndexed: l } = this.props.search;
                 return (0, r.jsx)(P.Z, {
@@ -254,43 +254,43 @@ class B extends i.PureComponent {
                     documentsIndexed: l
                 });
             }),
-            k(this, 'renderIndexing', () => {
+            M(this, 'renderIndexing', () => {
                 let e = C.Z.getSearchType(this.props.searchId) === T.aib.GUILD ? R.intl.string(R.t.AXPbZm) : R.intl.string(R.t.Q0JJjo);
                 return (0, r.jsxs)(U, {
                     children: [
                         (0, r.jsx)(S.Z, {}),
                         (0, r.jsx)('div', {
-                            className: (M.emptyResultsText, M.stillIndexing),
+                            className: (k.emptyResultsText, k.stillIndexing),
                             children: e
                         })
                     ]
                 });
             }),
-            k(this, 'renderNoResults', () => {
+            M(this, 'renderNoResults', () => {
                 let { showNoResultsAlt: e } = this.props.search,
                     t = e ? R.intl.string(R.t['VrK/2d']) : R.intl.string(R.t.V6nAfH);
                 return (0, r.jsxs)(U, {
                     children: [
-                        (0, r.jsx)('div', { className: a()(M.noResultsImage, { [M.alt]: e }) }),
+                        (0, r.jsx)('div', { className: a()(k.noResultsImage, { [k.alt]: e }) }),
                         (0, r.jsx)('div', {
-                            className: a()(M.emptyResultsText, M.noResults, { [M.alt]: e }),
+                            className: a()(k.emptyResultsText, k.noResults, { [k.alt]: e }),
                             children: t
                         })
                     ]
                 });
             }),
-            k(this, 'renderError', () =>
+            M(this, 'renderError', () =>
                 (0, r.jsxs)(U, {
                     children: [
-                        (0, r.jsx)('div', { className: M.errorImage }),
+                        (0, r.jsx)('div', { className: k.errorImage }),
                         (0, r.jsx)('div', {
-                            className: a()(M.emptyResultsText, M.errorMessage),
+                            className: a()(k.emptyResultsText, k.errorMessage),
                             children: R.intl.string(R.t.uvDZBQ)
                         })
                     ]
                 })
             ),
-            k(this, 'handleSearchResultClick', (e, t) => {
+            M(this, 'handleSearchResultClick', (e, t) => {
                 let n = y.Z.getChannel(e.channel_id),
                     r = null != n ? n.getGuildId() : null,
                     { searchId: i, searchType: l, searchAnalyticsId: a } = this.props,
@@ -307,11 +307,11 @@ class B extends i.PureComponent {
                     page: Math.floor(o / T.vpv) + 1,
                     offset: o,
                     index: t,
-                    searchQueryString: D(i),
+                    searchQueryString: L(i),
                     searchQuery: C.Z.getQuery(i)
                 });
             }),
-            k(this, 'renderContent', () => {
+            M(this, 'renderContent', () => {
                 let { searchResults: e, blockCount: t, ignoreCount: n } = this.props,
                     { totalResults: i, isSearching: l, isIndexing: a, hasError: o } = this.props.search;
                 return o
