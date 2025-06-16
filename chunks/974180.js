@@ -191,7 +191,7 @@ eo(eA, 'displayName', 'NotificationStore'),
                       if (t === ea.$Ab.ENABLED && !en.isPlatformEmbedded) {
                           let e = !(0, O.QU)('NotificationStore.handleSetHavePermission');
                           et.Z.showNotification(
-                              n(185672),
+                              n(910653),
                               eu.intl.string(eu.t.VSgOVl),
                               eu.intl.string(eu.t['1UJvqa']),
                               { notif_type: 'NOTIFICATIONS_SET_PERMISSION_STATE' },

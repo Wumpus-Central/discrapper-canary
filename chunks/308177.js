@@ -62,12 +62,12 @@ let O = (0, a.Z)((e) => {
             [u.pV.AUDIENCE]: R,
             [u.pV.SELECTED]: 1
         },
-        L = (0, d.Dx)(a.id),
-        [D, U] = (0, d.aP)(a.id, k, L),
-        B = [Math.max(null != (t = D[0]) ? t : 1, 1), Math.max(null != (n = D[1]) ? n : 1, 1), D[2]],
+        D = (0, d.Dx)(a.id),
+        [L, U] = (0, d.aP)(a.id, k, D),
+        B = [Math.max(null != (t = L[0]) ? t : 1, 1), Math.max(null != (n = L[1]) ? n : 1, 1), L[2]],
         { speakerTileWidth: F, speakerTileHeight: G } = C(y, M),
         H = I ? y - 32 : Math.min(y - 64, 3 * F + 8),
-        V = (e) => e === D.length - 1 || (0 === Z && 1 === e),
+        V = (e) => e === L.length - 1 || (0 === Z && 1 === e),
         [z, W] = i.useState(!1),
         [Y, q] = i.useState(!1);
     return (0, r.jsx)(h.Z, {

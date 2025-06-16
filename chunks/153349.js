@@ -112,10 +112,10 @@ let A = i.memo(function (e) {
         function k() {
             (0, x.DT)(t, l.user.id, !1);
         }
-        function L() {
+        function D() {
             (0, x.DT)(t, l.user.id, !0);
         }
-        let D = (e) => {
+        let L = (e) => {
             (0, d.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('74800')]).then(n.bind(n, 757387));
                 return (n) =>
@@ -150,7 +150,7 @@ let A = i.memo(function (e) {
                                     {
                                         innerRef: m,
                                         className: Z.participantMemberContainer,
-                                        onContextMenu: D
+                                        onContextMenu: L
                                     },
                                     e
                                 ),
@@ -212,7 +212,7 @@ let A = i.memo(function (e) {
                                 innerClassName: a()(Z.buttonContainer, Z.buttonMargin),
                                 look: u.zxk.Looks.BLANK,
                                 size: u.zxk.Sizes.NONE,
-                                onClick: L,
+                                onClick: D,
                                 children: (0, r.jsx)(u.Dio, {
                                     size: 'xs',
                                     color: 'currentColor'

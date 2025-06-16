@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(55935),
     M = n(70956),
     k = n(709054),
-    L = n(534091),
-    D = n(900164),
+    D = n(534091),
+    L = n(900164),
     U = n(554838),
     B = n(481369),
     F = n(186877),
@@ -202,7 +202,7 @@ function ei(e) {
             }
             if (null != ed && ed > e.content.timestamp.getTime() * M.Z.Millis.SECOND) return;
             let l = N.Z.can(J.Plq.CREATE_INSTANT_INVITE, f);
-            if ((0, D.Z)(e.content, l)) return;
+            if ((0, L.Z)(e.content, l)) return;
             e.type === J.ys_.MESSAGE && null == eZ && (eZ = e);
             let a = e.groupId === (null == eZ ? void 0 : eZ.groupId) ? eZ.content.id : e.groupId,
                 o = eS && e.content.isFirstMessageInForumPost(f),
@@ -215,7 +215,7 @@ function ei(e) {
                     message: e.content,
                     groupId: a,
                     flashKey: e.flashKey,
-                    id: (0, L.p)(f.id, e.content.id),
+                    id: (0, D.p)(f.id, e.content.id),
                     isLastItem: t >= eo.length - 1,
                     renderContentOnly: eP || o
                 },

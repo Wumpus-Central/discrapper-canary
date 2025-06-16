@@ -148,7 +148,7 @@ let V = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
     Y = i.memo(function (e) {
         let { user: t } = e;
         if (null == t || !t.bot) return null;
-        let n = t.isClyde() ? w.Hb.AI : w.Hb.BOT;
+        let n = w.Hb.BOT;
         return (0, r.jsx)(h.Z, {
             className: x.botTag,
             type: n,

@@ -230,7 +230,6 @@ let G = Object.freeze({
         USE_EXTERNAL_STICKERS: i.r0(37),
         SEND_MESSAGES_IN_THREADS: i.r0(38),
         SEND_VOICE_MESSAGES: i.r0(46),
-        USE_CLYDE_AI: i.r0(47),
         SEND_POLLS: i.r0(49),
         CONNECT: i.r0(20),
         SPEAK: i.r0(21),

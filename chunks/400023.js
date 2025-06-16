@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(977391),
     M = n(959258),
     k = n(73274),
-    L = n(419388),
-    D = n(406534),
+    D = n(419388),
+    L = n(406534),
     U = n(981631),
     B = n(388032),
     F = n(977659);
@@ -126,7 +126,7 @@ let z = i.memo(
                               }),
                     [y, E, l]
                 ),
-                Y = (0, L.ZP)({
+                Y = (0, D.ZP)({
                     messages: g,
                     channel: m,
                     compact: y,
@@ -150,7 +150,7 @@ let z = i.memo(
                     jumpToPresentBar: J,
                     forumPostActionBar: $,
                     safetyWarningBanner: ee
-                } = (0, D.Z)({
+                } = (0, L.Z)({
                     channel: m,
                     messages: g,
                     unreadCount: b,
@@ -318,8 +318,8 @@ let z = i.memo(
                 messageGroupSpacing: T,
                 fontSize: R,
                 messageDisplayCompact: k,
-                renderSpoilers: L,
-                keyboardModeEnabled: D
+                renderSpoilers: D,
+                keyboardModeEnabled: L
             } = (function () {
                 let e = v.jU.useSetting(),
                     t = v.cC.useSetting(),
@@ -408,7 +408,7 @@ let z = i.memo(
                 };
             })(t);
         return (0, r.jsx)(b.aQ.Provider, {
-            value: (0, A.Z)(L, d),
+            value: (0, A.Z)(D, d),
             children: (0, r.jsx)(M.v, {
                 children: (0, r.jsx)(
                     z,
@@ -426,7 +426,7 @@ let z = i.memo(
                         canChat: C,
                         editingMessageId: Y,
                         fontSize: R,
-                        keyboardModeEnabled: D,
+                        keyboardModeEnabled: L,
                         showingQuarantineBanner: n,
                         hideSummaries: l,
                         typingGradient: s

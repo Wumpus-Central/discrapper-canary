@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(438306),
     M = n(544142),
     k = n(128557),
-    L = n(981631),
-    D = n(176505),
+    D = n(981631),
+    L = n(176505),
     U = n(388032),
     B = n(906667),
     F = n(20493);
@@ -57,12 +57,12 @@ function H(e) {
         P = (0, l.e7)([j.default], () => (p.isPrivate() ? j.default.getUser(p.getRecipientId()) : null)),
         A = O.ZP.useUserTag(P),
         { canManageRoles: R, canReadMessageHistory: M } = (0, l.cj)([v.Z], () => ({
-            canManageRoles: v.Z.can(L.Plq.MANAGE_ROLES, p),
-            canReadMessageHistory: v.Z.can(L.Plq.READ_MESSAGE_HISTORY, p)
+            canManageRoles: v.Z.can(D.Plq.MANAGE_ROLES, p),
+            canReadMessageHistory: v.Z.can(D.Plq.READ_MESSAGE_HISTORY, p)
         })),
-        k = (0, l.e7)([b.Z], () => (x === L.d4z.DM ? b.Z.getMutualGuilds(p.getRecipientId()) : null), [p, x]),
+        k = (0, l.e7)([b.Z], () => (x === D.d4z.DM ? b.Z.getMutualGuilds(p.getRecipientId()) : null), [p, x]),
         { systemDMRedesignEnabled: H } = g.Z.useExperiment({ location: 'bf1a4f_1' }, { autoTrackExposure: null != (t = p.isSystemDM()) && t }),
-        V = (0, u.Z)(null != (n = null == P ? void 0 : P.id) ? n : L.lds),
+        V = (0, u.Z)(null != (n = null == P ? void 0 : P.id) ? n : D.lds),
         { authorizedAppToken: z, authorizedAppsFetchState: W } = (0, l.cj)([C.Z], () => {
             var e;
             return {
@@ -73,7 +73,7 @@ function H(e) {
         Y = c.Z.useExperiment({ location: 'EmptyMessages' }).enabledDesktop;
     if (
         (i.useEffect(() => {
-            x === L.d4z.DM && null == k && null != P && o.Z.wait(() => (0, _.Z)(p.getRecipientId(), P.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
+            x === D.d4z.DM && null == k && null != P && o.Z.wait(() => (0, _.Z)(p.getRecipientId(), P.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
         }, [k, x, p, P]),
         i.useEffect(() => {
             (null == P ? void 0 : P.bot) && W === C.M.NOT_FETCHED && s.Z.fetch();
@@ -86,7 +86,7 @@ function H(e) {
                   channel: p,
                   children: U.intl.string(U.t.Rzvnio)
               });
-    if (x === L.d4z.DM) {
+    if (x === D.d4z.DM) {
         let e;
         return (
             null != P && null != V
@@ -143,7 +143,7 @@ function H(e) {
                 channelId: p.id,
                 children: [(0, r.jsx)(I.Ot, { children: U.intl.format(U.t.I3R7Vl, { channelName: y }) }), (0, r.jsx)(I.jz, { children: U.intl.string(U.t.M8Ao6O) })]
             });
-        else if (p.hasFlag(D.zZ.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)) return (0, r.jsx)(S.Z, { channel: p });
+        else if (p.hasFlag(L.zZ.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)) return (0, r.jsx)(S.Z, { channel: p });
         else
             return (0, r.jsx)(T.Z, {
                 channel: p,

@@ -84,7 +84,7 @@ function b(e, t) {
     return i;
 }
 function y(e) {
-    return e.isSystemUser() ? c.J.SYSTEM_DM : e.isClyde() ? c.J.AI : e.bot ? c.J.BOT : null;
+    return e.isSystemUser() ? c.J.SYSTEM_DM : e.bot ? c.J.BOT : null;
 }
 let O = (e) => {
         let { primary: t, secondary: n, botType: i, botVerified: o, discriminatorClass: c, className: u, usernameClass: d, color: p, botClass: m, showStreamerModeTooltip: E } = e;

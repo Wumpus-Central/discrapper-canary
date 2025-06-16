@@ -70,13 +70,13 @@ function O(e) {
     if (null != t) {
         let n = t[1],
             r = u.default.getUser(n);
-        return null == r || !r.bot || r.isClyde()
-            ? null
-            : {
+        return null != r && r.bot
+            ? {
                   type: 'mention',
                   cleanedQuery: e.substring(t[0].length).trim(),
                   user: r
-              };
+              }
+            : null;
     }
     return null;
 }

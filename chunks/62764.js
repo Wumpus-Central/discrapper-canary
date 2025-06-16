@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(228392),
     M = n(981631),
     k = n(388032),
-    L = n(130883),
-    D = n(184844),
+    D = n(130883),
+    L = n(184844),
     U = n(92254);
 function B(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -111,7 +111,7 @@ function G(e) {
                         });
               },
               disabled: l,
-              innerClassName: D.actionButton,
+              innerClassName: L.actionButton,
               submitting: o,
               children: [
                   (0, r.jsx)(c.dz2, {
@@ -120,7 +120,7 @@ function G(e) {
                       width: 16,
                       height: 16
                   }),
-                  l ? k.intl.string(L.default['2Y4vkp']) : k.intl.string(L.default.YIbR4u)
+                  l ? k.intl.string(D.default['2Y4vkp']) : k.intl.string(D.default.YIbR4u)
               ]
           })
         : null;
@@ -128,7 +128,7 @@ function G(e) {
 function H(e) {
     let { postId: t, isFirstMessage: n, isLastItem: l = !1, parentChannelId: s } = e,
         { ref: v, width: j } = (0, p.ZP)(),
-        [O, L] = i.useState(3),
+        [O, D] = i.useState(3),
         [H, V] = i.useState(!n),
         [z, W] = (0, h.Z)(!1, 2000),
         Y = (0, o.e7)([Z.Z], () => Z.Z.getChannel(t), [t]),
@@ -164,7 +164,7 @@ function H(e) {
     let [ea, eo] = i.useState(!0);
     if (
         (i.useEffect(() => {
-            null != j && (L(Math.floor((j - 280) / 58)), eo(!1));
+            null != j && (D(Math.floor((j - 280) / 58)), eo(!1));
         }, [j]),
         null == Y || null == q)
     )
@@ -192,19 +192,19 @@ function H(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: a()(D.container, { [D.header]: H }),
+                className: a()(L.container, { [L.header]: H }),
                 ref: v,
                 children: [
                     et
                         ? (0, r.jsx)('div', {
-                              className: D.reportedMessageActions,
+                              className: L.reportedMessageActions,
                               children: (0, r.jsx)(I.Z, {
                                   message: q,
                                   channel: Y
                               })
                           })
                         : (0, r.jsxs)('div', {
-                              className: a()(D.reactButtons, { [D.loading]: ea }),
+                              className: a()(L.reactButtons, { [L.loading]: ea }),
                               children: [
                                   !es &&
                                       !Q &&
@@ -237,7 +237,7 @@ function H(e) {
                                       isGuest: $,
                                       isPendingMember: ee,
                                       maxReactions: O,
-                                      className: D.reactions,
+                                      className: L.reactions,
                                       useChatFontScaling: !1,
                                       isForumToolbar: !0,
                                       forceHideReactionCreates: !0
@@ -248,14 +248,14 @@ function H(e) {
                                           message: q,
                                           channel: Y,
                                           useChatFontScaling: !1,
-                                          className: a()(D.addReactButton, { [D.hasNoReactions]: !es }),
+                                          className: a()(L.addReactButton, { [L.hasNoReactions]: !es }),
                                           isForumToolbar: !0,
                                           children: !es && k.intl.string(k.t.xpOyTE)
                                       })
                               ]
                           }),
                     (0, r.jsxs)('div', {
-                        className: D.buttons,
+                        className: L.buttons,
                         children: [
                             et
                                 ? (0, r.jsx)(G, { channel: Y })
@@ -268,8 +268,8 @@ function H(e) {
                                                   look: c.zxk.Looks.BLANK,
                                                   size: c.zxk.Sizes.SMALL,
                                                   onClick: ec,
-                                                  className: D.button,
-                                                  innerClassName: a()(D.buttonInner, { [D.active]: K }),
+                                                  className: L.button,
+                                                  innerClassName: a()(L.buttonInner, { [L.active]: K }),
                                                   children: [
                                                       (0, r.jsx)(ep, {
                                                           size: 'xs',
@@ -289,8 +289,8 @@ function H(e) {
                                             look: c.zxk.Looks.BLANK,
                                             size: c.zxk.Sizes.SMALL,
                                             onClick: eu,
-                                            className: D.button,
-                                            innerClassName: D.buttonInner,
+                                            className: L.button,
+                                            innerClassName: L.buttonInner,
                                             children: [
                                                 z
                                                     ? (0, r.jsx)(c.dz2, {
@@ -320,8 +320,8 @@ function H(e) {
                                                 look: c.zxk.Looks.BLANK,
                                                 size: c.zxk.Sizes.SMALL,
                                                 onClick: ed,
-                                                className: D.button,
-                                                innerClassName: D.buttonInner,
+                                                className: L.button,
+                                                innerClassName: L.buttonInner,
                                                 children: (0, r.jsx)(c.Za2, {
                                                     size: 'custom',
                                                     color: 'currentColor',

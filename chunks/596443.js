@@ -229,13 +229,13 @@ function Z(e) {
         [A, w] = i.useState(''),
         [R, M] = i.useState(''),
         k = i.useMemo(() => s()(M, 300), []),
-        L = i.useCallback(
+        D = i.useCallback(
             (e) => {
                 w(e), k(e);
             },
             [k]
         ),
-        D = i.useCallback(() => {
+        L = i.useCallback(() => {
             w(''), M('');
         }, []),
         U = i.useMemo(() => {
@@ -310,8 +310,8 @@ function Z(e) {
                                       className: I.searchBar,
                                       query: A,
                                       placeholder: O.intl.string(O.t['yD9+dH']),
-                                      onChange: L,
-                                      onClear: D,
+                                      onChange: D,
+                                      onClear: L,
                                       autoComplete: 'off',
                                       inputProps: {
                                           autoCapitalize: 'none',

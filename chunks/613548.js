@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(539854);
+n.d(t, { Z: () => L }), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -74,7 +74,7 @@ function k(e, t) {
         e
     );
 }
-function L(e) {
+function D(e) {
     let { channelId: t, guildId: n } = e,
         i = (0, c.Wu)([S.Z, Z.Z], () => {
             let e = Date.now();
@@ -112,7 +112,7 @@ function L(e) {
               )
           });
 }
-function D(e) {
+function L(e) {
     let { inPopout: t, channel: n, isChatOpen: l } = e,
         o = i.useRef(null),
         { analyticsLocations: s } = (0, h.ZP)(p.Z.VOICE_CHANNEL_HEADER),
@@ -121,7 +121,7 @@ function D(e) {
             voiceParticipantsHidden: P,
             selectedParticipant: S,
             userParticipantCount: w,
-            participantsListOpen: D
+            participantsListOpen: L
         } = (0, c.cj)(
             [Z.Z],
             () => ({
@@ -134,7 +134,7 @@ function D(e) {
         ),
         U = n.isGuildVoice() && !l,
         { hasParticipantsPanel: B } = (0, T.Z)({ location: 'ChannelCallHeaderToolbar' }),
-        F = !D && B && (n.isGuildVoice() || n.isGroupDM()),
+        F = !L && B && (n.isGuildVoice() || n.isGroupDM()),
         { enabled: G, inInbox: H } = y.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
         V = (0, b.Q3)('ChannelCallHeaderToolbar'),
         z = [];
@@ -142,7 +142,7 @@ function D(e) {
         P &&
             z.push(
                 (0, r.jsx)(
-                    L,
+                    D,
                     {
                         channelId: x,
                         guildId: n.guild_id
@@ -229,7 +229,7 @@ function D(e) {
                     I.Z,
                     {
                         className: a()(R.button, { [R.lastButton]: l }),
-                        onClick: () => d.Z.toggleParticipantsList(n.id, !D)
+                        onClick: () => d.Z.toggleParticipantsList(n.id, !L)
                     },
                     'participants-list-button'
                 )
@@ -240,7 +240,7 @@ function D(e) {
                     E.T,
                     {
                         channelId: n.id,
-                        className: a()(R.button, { [R.lastButton]: D }),
+                        className: a()(R.button, { [R.lastButton]: L }),
                         disabled: l
                     },
                     'chat-spacer'

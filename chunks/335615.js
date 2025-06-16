@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(850020),
     M = n(155409),
     k = n(670188),
-    L = n(706454),
-    D = n(662594),
+    D = n(706454),
+    L = n(662594),
     U = n(430824),
     B = n(944486),
     F = n(111583),
@@ -264,7 +264,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                 guildId: l,
                 size: 16
             }),
-            o = (0, h.e7)([L.default], () => new Intl.NumberFormat(L.default.locale).format(i), [i]);
+            o = (0, h.e7)([D.default], () => new Intl.NumberFormat(D.default.locale).format(i), [i]);
         return t === q.Skl.UNKNOWN
             ? (0, r.jsx)('div', {
                   className: X.membersGroup,
@@ -436,7 +436,7 @@ class eo extends i.Component {
                     { channel: l } = this.props,
                     a = this.getRowProps(e);
                 if (null != a) {
-                    if (a.type === D.so.MEMBER && 'user' in a) {
+                    if (a.type === L.so.MEMBER && 'user' in a) {
                         let { colorString: e, colorStrings: t, colorRoleId: n, user: o, status: s, isOwner: c, isMobileOnline: u, nick: d, activities: p, applicationStream: h, premiumSince: f } = a;
                         return (0, r.jsx)(
                             ei,
@@ -459,7 +459,7 @@ class eo extends i.Component {
                             'member-'.concat(a.user.id)
                         );
                     }
-                    if (a.type === D.so.CONTENT_INVENTORY) {
+                    if (a.type === L.so.CONTENT_INVENTORY) {
                         let e = 'content-inventory-'.concat(a.entry.id);
                         null != a.entry.original_id && (e += '-'.concat(a.entry.original_id));
                         let t = (0, r.jsx)(
@@ -472,7 +472,7 @@ class eo extends i.Component {
                         );
                         return a.entry.content_type === p.s.LEADERBOARD ? (0, r.jsx)(w.N, { children: t }, e) : t;
                     }
-                    if (a.type === D.so.HIDDEN_CONTENT_INVENTORY) return (0, r.jsx)(E.Z, {}, 'content-inventory-hidden-entry');
+                    if (a.type === L.so.HIDDEN_CONTENT_INVENTORY) return (0, r.jsx)(E.Z, {}, 'content-inventory-hidden-entry');
                 }
                 return (0, r.jsx)(ea, { index: i }, 'placeholder-'.concat(t, ':').concat(n));
             }),
@@ -546,7 +546,7 @@ class eo extends i.Component {
                 let i = r.reduce(
                     (e, t) => {
                         var n;
-                        return t.type !== D.so.MEMBER || (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some((e) => e.type === q.IIU.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, (null == (n = t.user.collectibles) ? void 0 : n.nameplate) != null && e.num_users_visible_with_nameplate++), e;
+                        return t.type !== L.so.MEMBER || (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some((e) => e.type === q.IIU.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, (null == (n = t.user.collectibles) ? void 0 : n.nameplate) != null && e.num_users_visible_with_nameplate++), e;
                     },
                     {
                         num_users_visible: 0,
@@ -565,7 +565,7 @@ function es(e) {
     let { channel: t, className: n } = e,
         { analyticsLocations: l } = (0, v.ZP)(C.Z.MEMBER_LIST),
         o = (0, h.e7)([y.Z], () => y.Z.keyboardModeEnabled),
-        s = (0, h.cj)([D.ZP], () => D.ZP.getProps(t.guild_id, t.id)),
+        s = (0, h.cj)([L.ZP], () => L.ZP.getProps(t.guild_id, t.id)),
         {
             rows: d,
             groups: p,

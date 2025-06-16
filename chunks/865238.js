@@ -60,8 +60,8 @@ function Z(e) {
     (0, i.useEffect)(() => {
         k(!0);
     }, []);
-    let L = (0, i.useContext)(m.h9),
-        D = (0, d.q_F)({
+    let D = (0, i.useContext)(m.h9),
+        L = (0, d.q_F)({
             from: M
                 ? {
                       opacity: 0,
@@ -70,7 +70,7 @@ function Z(e) {
                 : {},
             to: {
                 opacity: 1,
-                transform: L ? 'translateX(-50%) translateY(0px) scale(1)' : 'translateX(-50%) translateY(-66px) scale(1)'
+                transform: D ? 'translateX(-50%) translateY(0px) scale(1)' : 'translateX(-50%) translateY(-66px) scale(1)'
             },
             config: {
                 duration: 250,
@@ -106,7 +106,7 @@ function Z(e) {
     return null == l || null == T
         ? null
         : (0, r.jsxs)(c.animated.div, {
-              style: D,
+              style: L,
               className: E.banner,
               children: [
                   (0, r.jsxs)('div', {

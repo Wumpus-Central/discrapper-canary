@@ -49,7 +49,7 @@ function w(e) {
                     : [],
             [w, R]
         ),
-        L = i.useMemo(
+        D = i.useMemo(
             () =>
                 s()(k)
                     .filter((e) => {
@@ -63,7 +63,7 @@ function w(e) {
                     .value(),
             [t, w, k]
         ),
-        D = (0, d.Wu)(
+        L = (0, d.Wu)(
             [O.default],
             () => {
                 let e = {};
@@ -133,14 +133,14 @@ function w(e) {
                 className: A.members,
                 children: [
                     (function () {
-                        if (1 !== D.length || L.length > 0)
+                        if (1 !== L.length || D.length > 0)
                             return (0, r.jsx)(Z.Z, {
                                 guildId: t.guild_id,
                                 className: A.avatars,
                                 maxUsers: 5,
-                                users: D
+                                users: L
                             });
-                        let e = D[0],
+                        let e = L[0],
                             n = I.ZP.getName(e);
                         return (0, r.jsxs)('div', {
                             className: A.avatars,
@@ -166,7 +166,7 @@ function w(e) {
                             ]
                         });
                     })(),
-                    L.map((e, n) => {
+                    D.map((e, n) => {
                         var i, l;
                         let o = null != (l = e.colorString) ? l : (0, u.Rf)(N.p6O),
                             s = (null == (i = e.tags) ? void 0 : i.guild_connections) !== void 0;
@@ -174,7 +174,7 @@ function w(e) {
                             ? (0, r.jsx)(
                                   _.Z,
                                   {
-                                      className: a()(A.role, { [A.last]: n === L.length - 1 }),
+                                      className: a()(A.role, { [A.last]: n === D.length - 1 }),
                                       roleName: e.name,
                                       roleColor: o,
                                       disabled: !U,
@@ -188,7 +188,7 @@ function w(e) {
                             : (0, r.jsx)(
                                   y.Z,
                                   {
-                                      className: a()(A.role, { [A.last]: n === L.length - 1 }),
+                                      className: a()(A.role, { [A.last]: n === D.length - 1 }),
                                       roleName: e.name,
                                       roleColor: o,
                                       verified: s

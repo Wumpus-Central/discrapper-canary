@@ -38,7 +38,7 @@ var r = n(255367),
     R = n(538548),
     M = n(753033),
     k = n(15717);
-function L(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,7 +63,7 @@ function L(e) {
     }
     return e;
 }
-function D(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -149,7 +149,7 @@ function B(e) {
                                 return (n) =>
                                     (0, r.jsx)(
                                         t,
-                                        D(L({}, n), {
+                                        L(D({}, n), {
                                             guild: e,
                                             source: S.t4x.CHANNEL_WELCOME,
                                             analyticsLocation: { section: S.jXE.CHANNEL_WELCOME_CTA }
@@ -185,7 +185,7 @@ function B(e) {
                     }),
                         (0, u.ZDy)(async () => {
                             let { default: e } = await Promise.resolve().then(n.bind(n, 431583));
-                            return (t) => (0, r.jsx)(e, L({ source: S.jXE.CHANNEL_WELCOME_CTA }, t));
+                            return (t) => (0, r.jsx)(e, D({ source: S.jXE.CHANNEL_WELCOME_CTA }, t));
                         });
                 }, []),
                 handleAddApplication: i.useCallback(() => {
@@ -198,7 +198,7 @@ function B(e) {
                             let { default: t } = await n.e('77046').then(n.bind(n, 272509));
                             return (n) => {
                                 var i;
-                                return (0, r.jsx)(t, D(L({ guildId: null != (i = e.id) ? i : '' }, n), { analyticsType: c.z.APP_DIRECTORY_SERVER_SETUP_UPSELL_MODAL }));
+                                return (0, r.jsx)(t, L(D({ guildId: null != (i = e.id) ? i : '' }, n), { analyticsType: c.z.APP_DIRECTORY_SERVER_SETUP_UPSELL_MODAL }));
                             };
                         }));
                 }, [e])

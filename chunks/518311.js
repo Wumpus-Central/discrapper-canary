@@ -42,8 +42,8 @@ var r,
     R = n(366980),
     M = n(703656),
     k = n(93127),
-    L = n(752048),
-    D = n(131704),
+    D = n(752048),
+    L = n(131704),
     U = n(592125),
     B = n(341165),
     F = n(544610),
@@ -554,7 +554,7 @@ class em extends (r = l.PureComponent) {
         return {
             affinities: e.map((e) => {
                 var t;
-                let n = L.Z.getUserAffinity(e);
+                let n = D.Z.getUserAffinity(e);
                 return null != (t = null == n ? void 0 : n.communicationProbability) ? t : -1;
             })
         };
@@ -1020,7 +1020,7 @@ function eC(e) {
     return new Set(
         (0, s.chain)(U.Z.getMutablePrivateChannels())
             .values()
-            .filter((e) => (0, D.bc)(e.type))
+            .filter((e) => (0, L.bc)(e.type))
             .filter((e) => ex(e.recipients) === t)
             .map((e) => e.id)
             .value()

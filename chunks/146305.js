@@ -535,7 +535,6 @@ let eO = {
             case ef.pNK.ROLE_EDIT:
             case ef.pNK.ROLE_PERMISSIONS:
             case ef.pNK.MEMBER_VERIFICATION:
-            case ef.pNK.CLYDE:
             case ef.pNK.INTEGRATION_SETTINGS:
             case ef.pNK.SECURITY:
             case ef.pNK.AUDIT_LOG_FILTER:

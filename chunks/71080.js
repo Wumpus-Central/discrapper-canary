@@ -199,11 +199,6 @@ function f(e, t, n, c) {
             description: u === s.d4z.GUILD_CATEGORY ? l.t['18Ya7O'] : l.t.ckKKIC,
             flag: s.Plq.SEND_POLLS
         },
-        [s.Plq.USE_CLYDE_AI.toString()]: {
-            title: l.intl.string(l.t['8eeEZm']),
-            description: u === s.d4z.GUILD_CATEGORY ? l.t.Tx5TjI : l.t.d664Fx,
-            flag: s.Plq.USE_CLYDE_AI
-        },
         [s.Plq.CONNECT.toString()]: {
             title: l.intl.string(l.t.S0W8Z2),
             description: (() => {

@@ -33,7 +33,7 @@ var r = n(255367),
     R = n(981631),
     M = n(388032),
     k = n(378869);
-function L(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -58,7 +58,7 @@ function L(e) {
     }
     return e;
 }
-function D(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -187,7 +187,7 @@ function U(e) {
         children: [
             (0, r.jsx)(
                 'div',
-                D(L({ ref: q }, H.getContainerProps(), K), {
+                L(D({ ref: q }, H.getContainerProps(), K), {
                     'aria-busy': j,
                     children: Y
                 })
@@ -306,7 +306,7 @@ function F(e) {
                                 children: (e) =>
                                     (0, r.jsxs)(
                                         'span',
-                                        D(L({}, e), {
+                                        L(D({}, e), {
                                             ref: X,
                                             className: k.channelNameText,
                                             children: [M && null !== V && ''.concat(V, ' : '), K]

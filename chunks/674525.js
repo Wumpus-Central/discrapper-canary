@@ -4,24 +4,24 @@ var r,
     l,
     o = n(442837),
     a = n(570140);
-let s = [];
-class c extends (l = o.ZP.Store) {
+let c = [];
+class s extends (l = o.ZP.Store) {
     getEligibleGuildsForNagActivate() {
-        return s;
+        return c;
     }
 }
 (i = 'CreatorMonetizationMarketingStore'),
-    (r = 'displayName') in c
-        ? Object.defineProperty(c, r, {
+    (r = 'displayName') in s
+        ? Object.defineProperty(s, r, {
               value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (c[r] = i);
-let u = new c(a.Z, {
+        : (s[r] = i);
+let u = new s(a.Z, {
     CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY_FETCH_SUCCESS: function (e) {
         let { eligibleGuilds: t } = e;
-        s = t;
+        c = t;
     }
 });

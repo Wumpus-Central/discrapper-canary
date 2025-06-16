@@ -1,4 +1,4 @@
-n.d(t, { K: () => p });
+n.d(t, { K: () => m });
 var r = n(255367),
     o = n(73800),
     s = n(120356),
@@ -6,59 +6,63 @@ var r = n(255367),
     i = n(442837),
     l = n(607070),
     c = n(70097),
-    d = n(78826),
-    u = n(536087);
-function p(e) {
-    let { videoActive: t, imageAsset: n, videoAsset: s, onLoadComplete: p } = e,
-        m = o.useRef(null),
-        f = o.useRef(t),
-        g = (0, i.e7)([l.Z], () => l.Z.useReducedMotion);
+    d = n(475595),
+    u = n(78826),
+    p = n(536087);
+function m(e) {
+    let { videoActive: t, imageAsset: n, videoAsset: s, imageDimensions: m, onLoadComplete: f } = e,
+        g = o.useRef(null),
+        x = o.useRef(t),
+        h = (0, i.e7)([l.Z], () => l.Z.useReducedMotion);
     o.useEffect(() => {
         var e;
-        if (null != s && null != m.current) {
-            if (!(null == (e = s.asset) ? void 0 : e.isAnimated) || g) {
-                (m.current.currentTime = 0), m.current.pause();
+        if (null != s && null != g.current) {
+            if (!(null == (e = s.asset) ? void 0 : e.isAnimated) || h) {
+                (g.current.currentTime = 0), g.current.pause();
                 return;
             }
-            t && !f.current ? m.current.play() : !t && f.current && ((m.current.currentTime = 0), m.current.pause()), (f.current = t);
+            t && !x.current ? g.current.play() : !t && x.current && ((g.current.currentTime = 0), g.current.pause()), (x.current = t);
         }
-    }, [t, s, g]);
-    let x = null != n && !n.asset.isAnimated,
-        h = null != s && s.asset.isAnimated;
+    }, [t, s, h]);
+    let b = null != n && !n.asset.isAnimated,
+        j = null != s && s.asset.isAnimated,
+        v = null != m ? (0, d.nK)(m.width, m.height) : null;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            x &&
-                (0, r.jsx)(d.Fl, {
+            b &&
+                (0, r.jsx)(u.Fl, {
                     id: n.assetId,
-                    children: (e) => {
-                        var o;
-                        return (0, r.jsx)('img', {
+                    children: (e) =>
+                        (0, r.jsx)('img', {
                             ref: e,
                             alt: n.alt,
-                            className: a()(n.className, { [u.hidden]: t && h }),
-                            src: null == (o = n.asset) ? void 0 : o.url,
-                            onLoad: p
-                        });
-                    }
+                            className: a()(n.className, { [p.hidden]: t && j }),
+                            src: (0, d.sN)(n.asset.url, {
+                                format: 'webp',
+                                width: null == v ? void 0 : v.width,
+                                height: null == v ? void 0 : v.height
+                            }),
+                            onLoad: f
+                        })
                 }),
-            h &&
-                (0, r.jsx)(d.Fl, {
+            j &&
+                (0, r.jsx)(u.Fl, {
                     id: s.assetId,
                     children: (e) => {
                         var o, i, l, d;
                         return (0, r.jsx)(c.Z, {
                             ref: (t) => {
-                                (e.current = t), (m.current = t);
+                                (e.current = t), (g.current = t);
                             },
-                            autoPlay: !g && t,
+                            autoPlay: !h && t,
                             loop: !0,
                             muted: !0,
-                            preload: x ? 'none' : 'auto',
-                            poster: x ? (null == (o = n.asset) ? void 0 : o.url) : void 0,
+                            preload: b ? 'none' : 'auto',
+                            poster: b ? (null == (o = n.asset) ? void 0 : o.url) : void 0,
                             playsInline: !0,
-                            className: a()(s.className, { [u.hidden]: !t && x }),
+                            className: a()(s.className, { [p.hidden]: !t && b }),
                             controls: !1,
-                            onProgress: p,
+                            onProgress: f,
                             children: (0, r.jsx)('source', {
                                 src: null == (i = s.asset) ? void 0 : i.url,
                                 type: null != (d = null == (l = s.asset) ? void 0 : l.mimetype) ? d : void 0

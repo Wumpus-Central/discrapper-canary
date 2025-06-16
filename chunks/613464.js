@@ -31,7 +31,7 @@ function E(e) {
         R = i.useRef(null),
         { analyticsLocations: M } = (0, f.ZP)(h.Z.GUILD_MEMBER_MOD_VIEW),
         k = (0, g.ZP)(t, n),
-        L = (0, d.ZP)();
+        D = (0, d.ZP)();
     return (i.useEffect(() => {
         S || l();
     }, [S, l]),
@@ -83,7 +83,7 @@ function E(e) {
                           user: Z,
                           displayProfile: k,
                           themeType: null,
-                          themeOverride: L,
+                          themeOverride: D,
                           forceShowPremium: !0,
                           className: O.profileThemedContainer,
                           children: (0, r.jsxs)('div', {

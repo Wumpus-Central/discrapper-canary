@@ -76,25 +76,25 @@ let M = {
     uploadFiles: async function (e) {
         var t, n, S, M;
         let k,
-            { channelId: L, uploads: D, draftType: U, parsedMessage: B, options: F = {}, raiseEndpointErrors: G = !1 } = e,
-            H = new u.Z(T.ANM.MESSAGES(L)),
+            { channelId: D, uploads: L, draftType: U, parsedMessage: B, options: F = {}, raiseEndpointErrors: G = !1 } = e,
+            H = new u.Z(T.ANM.MESSAGES(D)),
             V = new N.o(),
             z = {
                 content: '',
                 nonce: '',
-                channel_id: L,
+                channel_id: D,
                 type: T.uaV.DEFAULT,
                 sticker_ids: null == F ? void 0 : F.stickerIds,
                 poll: null == F ? void 0 : F.poll,
                 confetti_potion: (0, C.vY)(null == F ? void 0 : F.confettiPotionData),
                 scheduled_timestamp: null == F ? void 0 : F.scheduledTimestamp
             };
-        null != B && (z.content = null == B ? void 0 : B.content), null != O.Z.getPendingReply(L) && ((z.type = T.uaV.REPLY), (z.message_reference = F.messageReference), (z.allowed_mentions = F.allowedMentions), (0, j.A6)(L));
+        null != B && (z.content = null == B ? void 0 : B.content), null != O.Z.getPendingReply(D) && ((z.type = T.uaV.REPLY), (z.message_reference = F.messageReference), (z.allowed_mentions = F.allowedMentions), (0, j.A6)(D));
         let [W, Y] = (0, E.Z)(z.content);
         W && ((z.content = Y), (z.flags = (0, Z.pj)(null != (n = z.flags) ? n : 0, T.iLy.SUPPRESS_NOTIFICATIONS)));
         let q = null != (S = F.nonce) ? S : (0, m.r)(),
             K = (0, f.ZP)({
-                channelId: L,
+                channelId: D,
                 content: z.content,
                 tts: null != (M = null == B ? void 0 : B.tts) && M,
                 type: z.type,
@@ -109,7 +109,7 @@ let M = {
                 (k = (0, h.e5)(R(w({}, K), { id: e.id }))),
                     r.Z.dispatch({
                         type: 'UPLOAD_START',
-                        channelId: L,
+                        channelId: D,
                         file: e,
                         message: k,
                         uploader: H
@@ -118,7 +118,7 @@ let M = {
             H.on('progress', (e) => {
                 r.Z.dispatch({
                     type: 'UPLOAD_PROGRESS',
-                    channelId: L,
+                    channelId: D,
                     file: e
                 });
             }),
@@ -126,7 +126,7 @@ let M = {
                 if (
                     (r.Z.dispatch({
                         type: 'UPLOAD_FAIL',
-                        channelId: L,
+                        channelId: D,
                         file: e,
                         messageId: null == k ? void 0 : k.id
                     }),
@@ -137,7 +137,7 @@ let M = {
                     }),
                     t === T.evJ.EXPLICIT_CONTENT)
                 )
-                    return void l.Z.sendExplicitMediaClydeError(L, null == n ? void 0 : n.attachments, d.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
+                    return void l.Z.sendExplicitMediaClydeError(D, null == n ? void 0 : n.attachments, d.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
                 if (t === T.evJ.AUTOMOD_MESSAGE_BLOCKED) {
                     let e = {
                             code: t,
@@ -148,7 +148,7 @@ let M = {
                                 ? null
                                 : {
                                       type: c.$V.SEND,
-                                      message: R(w({}, k), { channelId: L })
+                                      message: R(w({}, k), { channelId: D })
                                   };
                     (0, o.openUploadError)({
                         title: A.intl.string(A.t.B3vFdX),
@@ -174,11 +174,11 @@ let M = {
                             help: null != (h = null == n ? void 0 : n.message) ? h : A.intl.string(A.t.zMEjJi)
                         });
                     }
-                    '' !== z.content && '' === I.Z.getDraft(L, U) && i.Z.saveDraft(L, z.content, U),
-                        0 === P.Z.getUploadCount(L, U) &&
+                    '' !== z.content && '' === I.Z.getDraft(D, U) && i.Z.saveDraft(D, z.content, U),
+                        0 === P.Z.getUploadCount(D, U) &&
                             a.Z.setUploads({
-                                channelId: L,
-                                uploads: D,
+                                channelId: D,
+                                uploads: L,
                                 draftType: U
                             });
                 }
@@ -186,7 +186,7 @@ let M = {
             H.on('complete', (e, t) => {
                 r.Z.dispatch({
                     type: 'UPLOAD_COMPLETE',
-                    channelId: L,
+                    channelId: D,
                     file: e,
                     aborted: H._aborted
                 });
@@ -204,7 +204,7 @@ let M = {
                     ));
             }),
             null == F || null == (t = F.confettiPotionData) || t.callback(),
-            await H.uploadFiles(D, z),
+            await H.uploadFiles(L, z),
             V.resolve(),
             V.promise
         );

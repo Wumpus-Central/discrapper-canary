@@ -345,8 +345,7 @@ class q extends (r = l.ZP.Store) {
         let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
             i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : p.Skl.OFFLINE,
             a = f.default.getUser(e);
-        if ((null != a && a.hasFlag(p.xW$.BOT_HTTP_INTERACTIONS) && (i = p.Skl.UNKNOWN), null == a ? void 0 : a.isClyde())) return p.Skl.ONLINE;
-        if (null == r) return null != (t = E[e]) ? t : i;
+        if ((null != a && a.hasFlag(p.xW$.BOT_HTTP_INTERACTIONS) && (i = p.Skl.UNKNOWN), null == r)) return null != (t = E[e]) ? t : i;
         let o = I(e, r);
         return null != (n = null == o ? void 0 : o.status) ? n : i;
     }

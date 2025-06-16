@@ -293,7 +293,6 @@ function J(e) {
                 : s()(u)
                       .map(T.default.getUser)
                       .filter(R.lm)
-                      .filter((e) => !e.isClyde())
                       .filter((t) => null == l[t.id] && e(t.username.toLowerCase()))
                       .sortBy((e) => e.username.toLowerCase())
                       .value(),

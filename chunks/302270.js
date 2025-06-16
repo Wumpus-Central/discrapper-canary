@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(903108),
     M = n(981631),
     k = n(474936),
-    L = n(388032),
-    D = n(523335);
+    D = n(388032),
+    L = n(523335);
 function U(e) {
     let { inPopout: t, channel: n, toggleRequestToSpeakSidebar: i, showRequestToSpeakSidebar: l } = e,
         { analyticsLocations: s, newestAnalyticsLocation: c } = (0, p.ZP)(d.Z.VOICE_CHANNEL_HEADER),
@@ -55,10 +55,10 @@ function U(e) {
         value: s,
         children: [
             (0, r.jsx)(_.Z, { channelId: n.id }, 'clips-enabled-indicator'),
-            !P && !t && (0, r.jsx)(b.Z, { className: D.button }, 'clips'),
+            !P && !t && (0, r.jsx)(b.Z, { className: L.button }, 'clips'),
             !l && x
                 ? (0, r.jsx)('div', {
-                      className: D.button,
+                      className: L.button,
                       children: (0, r.jsx)(w.Z, {
                           toggleRequestToSpeakSidebar: () => {
                               g && u.Z.updateChatOpen(n.id, !1), C && u.Z.toggleParticipantsList(n.id, !1), (0, m.v)(c, m.d.OPEN_REQUEST_TO_SPEAK_SIDEBAR), i();
@@ -73,7 +73,7 @@ function U(e) {
                 (0, r.jsx)(
                     O.Z,
                     {
-                        className: a()(D.button, { [D.sidebarOpen]: g }),
+                        className: a()(L.button, { [L.sidebarOpen]: g }),
                         onClick: () => {
                             l && i(), u.Z.toggleParticipantsList(n.id, !C);
                         }
@@ -82,12 +82,12 @@ function U(e) {
                 ),
             !g &&
                 (0, r.jsx)('div', {
-                    className: a()(D.button, { [D.sidebarOpen]: I || l }),
+                    className: a()(L.button, { [L.sidebarOpen]: I || l }),
                     children: (0, r.jsx)(j.T, {
                         channelId: n.id,
                         showRequestToSpeakSidebar: l,
                         toggleRequestToSpeakSidebar: i,
-                        iconClassName: D.buttonIcon
+                        iconClassName: L.buttonIcon
                     })
                 })
         ]
@@ -148,21 +148,21 @@ function B(e) {
                 }),
                 onDoubleClick: v.O,
                 transparent: !0,
-                className: a()(e, D.participants),
+                className: a()(e, L.participants),
                 children: [
                     (0, r.jsx)(x.ZP.Icon, {
                         icon: c.ewx,
                         disabled: !0,
-                        'aria-label': L.intl.string(L.t.EErMzM),
-                        className: D.icon,
+                        'aria-label': D.intl.string(D.t.EErMzM),
+                        className: L.icon,
                         color: null != f ? (B ? s.Z.colors.HEADER_MUTED.css : s.Z.unsafe_rawColors.GREEN_360.css) : void 0
                     }),
                     (0, r.jsx)(x.ZP.Title, {
-                        className: D.channelName,
-                        wrapperClassName: D.channelNameWrapper,
+                        className: L.channelName,
+                        wrapperClassName: L.channelNameWrapper,
                         children: null != (t = null == f ? void 0 : f.topic) ? t : h
                     }),
-                    (0, r.jsx)(x.ZP.Divider, { className: D.divider }),
+                    (0, r.jsx)(x.ZP.Divider, { className: L.divider }),
                     (0, r.jsxs)(x.ZP.Title, {
                         children: [
                             (0, r.jsx)(c.S6n, {
@@ -172,19 +172,19 @@ function B(e) {
                             (0, r.jsx)(c.Text, {
                                 variant: B ? 'text-sm/normal' : 'text-xs/medium',
                                 color: B ? 'text-muted' : 'header-secondary',
-                                className: D.speakerCount,
-                                children: L.intl.format(L.t.chmM9P, { count: m })
+                                className: L.speakerCount,
+                                children: D.intl.format(D.t.chmM9P, { count: m })
                             }),
                             (0, r.jsx)(c.BFJ, {
                                 size: 'xs',
-                                className: D.icon,
+                                className: L.icon,
                                 color: 'currentColor'
                             }),
                             (0, r.jsx)(c.Text, {
                                 variant: B ? 'text-sm/normal' : 'text-xs/medium',
                                 color: B ? 'text-muted' : 'header-secondary',
-                                className: D.speakerCount,
-                                children: L.intl.format(L.t['+v2pNz'], { count: b })
+                                className: L.speakerCount,
+                                children: D.intl.format(D.t['+v2pNz'], { count: b })
                             })
                         ]
                     })
@@ -197,35 +197,35 @@ function B(e) {
               children: [
                   z,
                   (0, r.jsxs)('div', {
-                      className: D.boostUpsell,
+                      className: L.boostUpsell,
                       children: [
                           (0, r.jsx)(F, {}),
                           (0, r.jsxs)('div', {
-                              className: D.text,
+                              className: L.text,
                               children: [
                                   (0, r.jsx)(c.Text, {
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
-                                      children: O ? L.intl.string(L.t['T+zF9P']) : L.intl.string(L.t['IZ+SVl'])
+                                      children: O ? D.intl.string(D.t['T+zF9P']) : D.intl.string(D.t['IZ+SVl'])
                                   }),
                                   (0, r.jsx)(c.Text, {
                                       variant: 'text-xs/medium',
                                       color: 'text-normal',
-                                      children: O ? L.intl.string(L.t.Izgpmp) : L.intl.string(L.t['7FHbPD'])
+                                      children: O ? D.intl.string(D.t.Izgpmp) : D.intl.string(D.t['7FHbPD'])
                                   })
                               ]
                           }),
                           (0, r.jsx)('div', {
-                              className: D.buttons,
+                              className: L.buttons,
                               children: O
                                   ? (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(c.zxk, {
-                                                className: D.notNowButton,
+                                                className: L.notNowButton,
                                                 onClick: G,
                                                 look: c.zxk.Looks.BLANK,
                                                 size: c.zxk.Sizes.SMALL,
-                                                children: L.intl.string(L.t.L5eIZ2)
+                                                children: D.intl.string(D.t.L5eIZ2)
                                             }),
                                             (0, r.jsx)(c.gtL, {
                                                 size: c.zxk.Sizes.SMALL,
@@ -241,17 +241,17 @@ function B(e) {
                                                             action: k.T7.BOOST
                                                         });
                                                 },
-                                                className: D.boostButton,
-                                                children: L.intl.string(L.t.Uj0md3)
+                                                className: L.boostButton,
+                                                children: D.intl.string(D.t.Uj0md3)
                                             })
                                         ]
                                     })
                                   : (0, r.jsx)(c.zxk, {
-                                        className: D.notNowButton,
+                                        className: L.notNowButton,
                                         onClick: G,
                                         look: c.zxk.Looks.BLANK,
                                         size: c.zxk.Sizes.SMALL,
-                                        children: L.intl.string(L.t.WAI6xs)
+                                        children: D.intl.string(D.t.WAI6xs)
                                     })
                           })
                       ]

@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(541716),
     M = n(236091),
     k = n(663993),
-    L = n(252618),
-    D = n(540059),
+    D = n(252618),
+    L = n(540059),
     U = n(201493),
     B = n(605236),
     F = n(174130),
@@ -87,8 +87,8 @@ var r = n(255367),
     eR = n(524329),
     eM = n(995532),
     ek = n(738643),
-    eL = n(433355),
-    eD = n(592125),
+    eD = n(433355),
+    eL = n(592125),
     eU = n(703558),
     eB = n(486472),
     eF = n(731290),
@@ -441,7 +441,7 @@ class ta extends i.PureComponent {
             b = null == t ? void 0 : t.name;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(L.yY, {
+                (0, r.jsx)(D.yY, {
                     location: b,
                     subsection: null != n ? n : void 0
                 }),
@@ -731,10 +731,10 @@ let to = (0, j.Z)(ta),
             [l, a] = i.useState(null),
             o = (0, p.e7)([eW.Z], () => eW.Z.getChannelId()),
             s = (0, p.e7)([eW.Z], () => eW.Z.getVoiceChannelId()),
-            c = (0, p.e7)([eD.Z], () => (null != n ? n : eD.Z.getChannel(o)), [o, n]),
-            m = (0, p.e7)([eD.Z], () => eD.Z.getChannel(s), [s]),
+            c = (0, p.e7)([eL.Z], () => (null != n ? n : eL.Z.getChannel(o)), [o, n]),
+            m = (0, p.e7)([eL.Z], () => eL.Z.getChannel(s), [s]),
             b = null == c ? void 0 : c.parent_id,
-            _ = (0, p.e7)([eD.Z], () => eD.Z.getChannel(b), [b]),
+            _ = (0, p.e7)([eL.Z], () => eL.Z.getChannel(b), [b]),
             y = (0, p.e7)([eG.Z], () => eG.Z.getGuild(null == c ? void 0 : c.guild_id), [c]),
             { needSubscriptionToAccess: C } = (0, K.Z)(null != (t = null == c ? void 0 : c.id) ? t : void 0),
             x = (0, p.e7)(
@@ -770,9 +770,9 @@ let to = (0, j.Z)(ta),
         }, [R, c, j, P]);
         let M = (0, p.e7)([I.ZP], () => I.ZP.getCurrentEmbeddedActivity()),
             k = (0, p.e7)([I.ZP], () => I.ZP.getActivityPanelMode()),
-            L = null != M && !(0, S.Z)(null == c ? void 0 : c.id) && k === e8.Ez.PANEL,
+            D = null != M && !(0, S.Z)(null == c ? void 0 : c.id) && k === e8.Ez.PANEL,
             U = (0, p.e7)([eK.Z], () => null != c && c.isVocalThread() && !u().isEmpty(eK.Z.getVoiceStatesForChannel(c.id)), [c]),
-            F = null != c && c.isPrivate() && !L && x,
+            F = null != c && c.isPrivate() && !D && x,
             G = (null == c ? void 0 : c.isGuildVocal()) || F || U,
             { welcomeModalChannelId: V } = (0, d.TH)(),
             z = (0, p.e7)([ef.Z], () => null != c && ef.Z.isLurking(c.guild_id), [c]),
@@ -783,15 +783,15 @@ let to = (0, j.Z)(ta),
             Q = (0, ep.Z)(null == y ? void 0 : y.id),
             J = (0, ek.Z)(V, null == y ? void 0 : y.id),
             { section: $, channelSidebarState: ee } = (0, p.cj)(
-                [eL.ZP],
+                [eD.ZP],
                 () => ({
-                    section: eL.ZP.getSection(o, null == c ? void 0 : c.isDM()),
-                    channelSidebarState: eL.ZP.getSidebarState(o)
+                    section: eD.ZP.getSection(o, null == c ? void 0 : c.isDM()),
+                    channelSidebarState: eD.ZP.getSidebarState(o)
                 }),
                 [o, c]
             ),
             et = null == y ? void 0 : y.id,
-            en = (0, p.e7)([eL.ZP], () => eL.ZP.getGuildSidebarState(et), [et]),
+            en = (0, p.e7)([eD.ZP], () => eD.ZP.getGuildSidebarState(et), [et]),
             er = (0, p.e7)([eY.Z], () => eY.Z.getGuildId()) === e7.I_8,
             ei = (0, em.D)(),
             el = (0, eX.ZP)(c),
@@ -829,7 +829,7 @@ let to = (0, j.Z)(ta),
             (e || t) && (0, B.EW)(h.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: e4.L.AUTO });
         }, [null == c ? void 0 : c.id, ey, eg, e_]);
         let eC = (0, f.f9)(),
-            ex = (0, D.Q3)('Channel');
+            ex = (0, L.Q3)('Channel');
         return (0, r.jsx)(
             to,
             ti(
@@ -852,7 +852,7 @@ let to = (0, j.Z)(ta),
                         guild: y,
                         searchId: (0, p.e7)([ez.Z], () => ez.Z.getCurrentSearchId()),
                         showCall: !C && G,
-                        showActivityPanel: L,
+                        showActivityPanel: D,
                         nsfwAgree: (0, p.e7)([eF.Z], () => eF.Z.didAgree(null == c ? void 0 : c.guild_id)),
                         isMobile: (0, p.e7)([eH.Z], () => (null == c ? void 0 : c.type) === e7.d4z.DM && eH.Z.isMobileOnline(c.getRecipientId()), [c]),
                         isUnavailable: (0, p.e7)([eB.Z], () => (null == c ? void 0 : c.guild_id) != null && eB.Z.isUnavailable(c.guild_id), [c]),
@@ -870,7 +870,7 @@ let to = (0, j.Z)(ta),
                     isFavorites: er,
                     showHeaderGuildBreadcrumb: er || ei,
                     premiumIndicatorEnabled: !1,
-                    hasTextActivityInPanelMode: L,
+                    hasTextActivityInPanelMode: D,
                     isRefreshEnabled: ex,
                     embeddedActivity: M
                 }

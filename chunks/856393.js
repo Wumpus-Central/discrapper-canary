@@ -37,8 +37,8 @@ var r = n(255367),
     R = n(891551),
     M = n(314897),
     k = n(979696),
-    L = n(430824),
-    D = n(496675),
+    D = n(430824),
+    L = n(496675),
     U = n(944486),
     B = n(358085),
     F = n(998502),
@@ -152,8 +152,8 @@ function eu(e) {
 function ed(e) {
     let { channel: t } = e,
         n = (0, f.bp)(),
-        i = (0, s.e7)([D.Z], () => D.Z.can(et.Plq.CREATE_INSTANT_INVITE, t)),
-        l = (0, s.e7)([L.Z], () => L.Z.getGuild(t.guild_id)),
+        i = (0, s.e7)([L.Z], () => L.Z.can(et.Plq.CREATE_INSTANT_INVITE, t)),
+        l = (0, s.e7)([D.Z], () => D.Z.getGuild(t.guild_id)),
         a = (0, s.e7)([z.Z], () => z.Z.getStageInstanceByChannel(t.id)),
         o = i || (null == a ? void 0 : a.invite_code) != null,
         c = (0, O.Q3)('StageChannelInviteButton');
@@ -175,19 +175,19 @@ function ep(e) {
         { analyticsLocations: j } = (0, g.ZP)(m.Z.VOICE_CONTROL_TRAY),
         E = (0, f.bp)(),
         I = (0, s.e7)([U.Z], () => U.Z.getVoiceChannelId() === c.id, [c.id]),
-        P = (0, s.e7)([D.Z], () => D.Z.can(et.Plq.CONNECT, c)),
+        P = (0, s.e7)([L.Z], () => L.Z.can(et.Plq.CONNECT, c)),
         S = (0, H.w8)(c.id, V.pV.SPEAKER),
         Z = (0, s.e7)([b.Z], () => b.Z.getSelectedParticipant(c.id)),
         A = C && E !== et.IlC.POPOUT,
         w = (0, O.Q3)('StageChannelCallContent'),
         [R, M] = i.useState(0),
-        L = (0, u._q$)('StageChannelCall'),
+        D = (0, u._q$)('StageChannelCall'),
         { isOnStartStageScreen: B } = (0, W.ZP)();
     (0, W.MV)(c);
     let F = (0, s.e7)([k.Z], () => k.Z.getToastsEnabled(c.id)),
         z = (0, ee.Z)(c) ? (null != Z ? '84px' : '124px') : null != Z ? '0px' : '48px';
     return (
-        L && B && (z = '0px'),
+        D && B && (z = '0px'),
         (l = B
             ? (0, r.jsx)(J.Z, {
                   channel: c,
@@ -306,7 +306,7 @@ function eh(e) {
             }),
             [t.id]
         ),
-        T = (0, s.e7)([L.Z], () => L.Z.getGuild(t.guild_id), [t.guild_id]),
+        T = (0, s.e7)([D.Z], () => D.Z.getGuild(t.guild_id), [t.guild_id]),
         { hasParticipantsPanel: A } = (0, v.Z)({ location: 'StageChannelCall' });
     (0, h.ZP)(() => {
         null == c.K.get(ea) &&

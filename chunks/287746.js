@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(998698),
     M = n(895924),
     k = n(581364),
-    L = n(667204),
-    D = n(404295),
+    D = n(667204),
+    L = n(404295),
     U = n(104919),
     B = n(541716),
     F = n(752305),
@@ -87,8 +87,8 @@ var r = n(255367),
     eR = n(375954),
     eM = n(496675),
     ek = n(944486),
-    eL = n(117530),
-    eD = n(594174),
+    eD = n(117530),
+    eL = n(594174),
     eU = n(626135),
     eB = n(934415),
     eF = n(459273),
@@ -329,7 +329,7 @@ class tl extends i.PureComponent {
                         return void this.handleIncrementCombo('', 1);
                     case e2.yXg.ARROW_UP:
                         if (i || l) return;
-                        if ((e.preventDefault(), t)) eL.Z.getUploadCount(r.id, eT.d.ChannelMessage) > 0 ? eG.S.dispatchToLastSubscribed(e2.CkL.FOCUS_ATTACHMENT_AREA) : eG.S.dispatchToLastSubscribed(e2.CkL.FOCUS_MESSAGES, { atEnd: !0 });
+                        if ((e.preventDefault(), t)) eD.Z.getUploadCount(r.id, eT.d.ChannelMessage) > 0 ? eG.S.dispatchToLastSubscribed(e2.CkL.FOCUS_ATTACHMENT_AREA) : eG.S.dispatchToLastSubscribed(e2.CkL.FOCUS_MESSAGES, { atEnd: !0 });
                         else {
                             let { channel: e } = this.props,
                                 t = eR.Z.getLastChatCommandMessage(e.id),
@@ -340,7 +340,7 @@ class tl extends i.PureComponent {
                     case e2.yXg.ESCAPE:
                         if (i || e.target !== e.currentTarget) return;
                         if ((e.preventDefault(), t)) return void (0, v.rf)();
-                        if (eL.Z.getUploadCount(r.id, eT.d.ChannelMessage) > 0) return void g.Z.clearAll(r.id, eT.d.ChannelMessage);
+                        if (eD.Z.getUploadCount(r.id, eT.d.ChannelMessage) > 0) return void g.Z.clearAll(r.id, eT.d.ChannelMessage);
                 }
                 null == n || n(e, l);
             }),
@@ -429,7 +429,7 @@ class tl extends i.PureComponent {
                             });
                         (0, eK.SC)(l);
                     }
-                    let n = await (0, L.Z)({
+                    let n = await (0, D.Z)({
                         command: l,
                         optionValues: null != a ? a : {},
                         context: {
@@ -521,7 +521,7 @@ class tl extends i.PureComponent {
                                         reason: i
                                     }) &&
                                         ('' !== t && '' === eT.Z.getDraft(c.id, eT.d.ChannelMessage) && h.Z.saveDraft(c.id, t, eT.d.ChannelMessage),
-                                        0 === eL.Z.getUploadCount(c.id, eT.d.ChannelMessage) &&
+                                        0 === eD.Z.getUploadCount(c.id, eT.d.ChannelMessage) &&
                                             g.Z.setUploads({
                                                 channelId: c.id,
                                                 uploads: n,
@@ -666,11 +666,11 @@ class ta extends i.PureComponent {
             { textAreaFocused: R, textAreaHighlighted: M } = this.state,
             k = d === B.Ie.SIDEBAR;
         n = k && i.type === e2.d4z.GUILD_VOICE ? e7.t.pnnyFR : k && i.type === e2.d4z.GUILD_STAGE_VOICE ? e7.t.YInSkp : u.T.THREADS.has(i.type) ? e7.t['OkzL+f'] : e7.t.UbNmGR;
-        let L = (0, r.jsx)('div', {
+        let D = (0, r.jsx)('div', {
                 className: e8.channelBottomBarArea,
                 children: (0, r.jsx)(eJ.Z, {})
             }),
-            D = (0, r.jsxs)('div', {
+            L = (0, r.jsxs)('div', {
                 className: e8.channelBottomBarArea,
                 children: [
                     (0, r.jsx)(eI.Z, {
@@ -705,7 +705,7 @@ class ta extends i.PureComponent {
                 ]
             }),
             U = E && I,
-            F = U && I ? L : D,
+            F = U && I ? D : L,
             G = a()({
                 [e5.barWithAppLauncherButton]: O,
                 [e5.barWithAppsDMsUI]: E
@@ -931,10 +931,10 @@ class ta extends i.PureComponent {
 let to = i.memo(function (e) {
     let { channel: t, guild: n, chatInputType: l, filterAfterTimestamp: a } = e,
         { placeholder: o, accessibilityLabel: s } = (0, eY.Z)({ channel: t }),
-        c = (0, e_.S)(eD.default.getCurrentUser(), t),
+        c = (0, e_.S)(eL.default.getCurrentUser(), t),
         [u] = (0, en.AB)(null == n ? void 0 : n.id),
         h = (0, $.Ux)(null == n ? void 0 : n.id),
-        f = (0, d.e7)([eD.default], () => eD.default.getCurrentUser()),
+        f = (0, d.e7)([eL.default], () => eL.default.getCurrentUser()),
         m = (0, d.e7)([ew.ZP], () => {
             var e, t, r;
             return null != f && null != (r = null == (e = ew.ZP.getMember(null != (t = null == n ? void 0 : n.id) ? t : e2.lds, null == f ? void 0 : f.id)) ? void 0 : e.isPending) && r;
@@ -946,7 +946,7 @@ let to = i.memo(function (e) {
             channel: t,
             chatInputType: l
         }),
-        v = (0, D.h9)(t.id),
+        v = (0, L.h9)(t.id),
         O = (0, ej.k)(t.id),
         P = (0, x.ZP)(),
         Z = (0, X.Z)(t.id),
@@ -957,7 +957,7 @@ let to = i.memo(function (e) {
             isProfileFetching: R,
             wasProfileFetching: M,
             applicationId: k,
-            channelId: L,
+            channelId: D,
             commands: U
         } = (0, E.Z)({
             context: {
@@ -969,14 +969,14 @@ let to = i.memo(function (e) {
         isProfileFetching: R,
         wasProfileFetching: M,
         applicationId: k,
-        channelId: L,
+        channelId: D,
         commands: U
     });
     let B = i.useRef(null),
         F = (0, d.e7)([S.Z], () => S.Z.appDMChannelsWithFailedLoads().has(t.id)),
         G = (0, d.e7)([ek.Z], () => ek.Z.getVoiceChannelId()),
         H = (0, d.e7)([eN.Z], () => eN.Z.getChannel(G)),
-        V = (0, d.e7)([eD.default], () => (t.type !== e2.d4z.DM ? null : eD.default.getUser(t.getRecipientId()))),
+        V = (0, d.e7)([eL.default], () => (t.type !== e2.d4z.DM ? null : eL.default.getUser(t.getRecipientId()))),
         z = (0, d.e7)([em.ZP, eS.default], () => em.ZP.getUserCombo(eS.default.getId(), t.id)),
         Y = (0, _.i)(t).length > 0 || t.rateLimitPerUser > 0 || null != z,
         q = (0, W.Z)('ChannelChat');

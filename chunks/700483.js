@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(88479),
     M = n(386000),
     k = n(25827),
-    L = n(314897),
-    D = n(131951),
+    D = n(314897),
+    L = n(131951),
     U = n(496675),
     B = n(944486),
     F = n(594174),
@@ -111,7 +111,7 @@ function eu(e) {
         m = (0, o.e7)([x.ZP], () => x.ZP.getGuildScheduledEvent(null == f ? void 0 : f.guild_scheduled_event_id)),
         g = (0, o.e7)([B.Z], () => B.Z.getVoiceChannelId() === t.id, [t.id]),
         { suppress: y } = (0, S.Z)(t),
-        C = L.default.getId(),
+        C = D.default.getId(),
         [v] = (0, en.Z)(t),
         j = Y.ZP.isModerator(C, t.id),
         E = (0, z.B)(t.id),
@@ -249,8 +249,8 @@ let eh = i.memo(function (e) {
         v = (0, P.Z)(t),
         { limit: j, reachedLimit: O } = (0, I.Z)(t),
         w = (0, o.e7)([F.default], () => F.default.getCurrentUser()),
-        R = (0, o.e7)([D.Z], () => (0, C.Z)(D.Z)),
-        L = (0, o.e7)([B.Z], () => B.Z.getVoiceChannelId() === t.id, [t.id]),
+        R = (0, o.e7)([L.Z], () => (0, C.Z)(L.Z)),
+        D = (0, o.e7)([B.Z], () => B.Z.getVoiceChannelId() === t.id, [t.id]),
         U = (0, o.e7)([h.Z], () => h.Z.getStreamParticipants(t.id)[0], [t.id]),
         G = (0, K.PK)(t.id),
         H = j > 0,
@@ -296,7 +296,7 @@ let eh = i.memo(function (e) {
     return (0, r.jsxs)('div', {
         className: ea.wrapper,
         children: [
-            L && !l
+            D && !l
                 ? (0, r.jsxs)('div', {
                       className: ea.buttonSection,
                       children: [
@@ -345,7 +345,7 @@ let eh = i.memo(function (e) {
             (0, r.jsxs)('div', {
                 className: ea.buttonSection,
                 children: [
-                    L && !l && H
+                    D && !l && H
                         ? (0, r.jsx)(Z.NZ, {
                               channel: t,
                               currentUser: w,
@@ -356,9 +356,9 @@ let eh = i.memo(function (e) {
                           })
                         : null,
                     (0, r.jsx)(ep, { channelId: t.id }),
-                    L && (0, r.jsx)(eo, { channel: t }),
-                    L && u && l && (0, r.jsx)(ec, { channel: t }),
-                    L && !l && (0, r.jsx)(ed, { channel: t }),
+                    D && (0, r.jsx)(eo, { channel: t }),
+                    D && u && l && (0, r.jsx)(ec, { channel: t }),
+                    D && !l && (0, r.jsx)(ed, { channel: t }),
                     (0, r.jsx)(N.Z, { channel: t })
                 ]
             }),

@@ -130,11 +130,11 @@ function M(e) {
 function k() {
     return null != r && (r.destroy(), (r = null)), d.Z.getSearchContext(M, 1000);
 }
-function L(e) {
+function D(e) {
     if (e.key !== v.vTt) return !1;
     (j = !0), w(), (r = k()), (Z = null), T('');
 }
-function D(e) {
+function L(e) {
     if (e.key !== v.vTt) return !1;
     U();
 }
@@ -186,13 +186,13 @@ let F = new B(u.Z, {
             let r = j;
             return N(), (j = r), (Z = n), A();
         },
-        MODAL_PUSH: L,
-        SHOW_ACTION_SHEET: L,
+        MODAL_PUSH: D,
+        SHOW_ACTION_SHEET: D,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function (e) {
             (j = !0), w(), (r = k()), (Z = e.channelId), T('');
         },
-        MODAL_POP: D,
-        HIDE_ACTION_SHEET: D,
+        MODAL_POP: L,
+        HIDE_ACTION_SHEET: L,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: U,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function (e) {
             (Z = e.channelId), T(e.query);

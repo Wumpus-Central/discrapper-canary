@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(415506), n(997841);
+n.d(t, { Z: () => E }), n(415506), n(997841);
 var r = n(149765),
     i = n(81825),
     a = n(864106),
@@ -9,9 +9,8 @@ var r = n(149765),
     u = n(111361),
     d = n(709054),
     _ = n(981631),
-    f = n(377668),
-    p = n(474936);
-function h(e, t, n) {
+    f = n(474936);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +23,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,12 +34,12 @@ function m(e) {
                 })
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,18 +51,18 @@ function g(e, t) {
     }
     return n;
 }
-function E(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-class b extends i.Z {
+class E extends i.Z {
     get createdAt() {
         return new Date(d.default.extractTimestamp(this.id));
     }
@@ -86,12 +85,12 @@ class b extends i.Z {
     }
     addGuildAvatarHash(e, t) {
         if (this.guildMemberAvatars[e] === t) return this;
-        let n = E(m({}, this.guildMemberAvatars), { [e]: t });
+        let n = g(h({}, this.guildMemberAvatars), { [e]: t });
         return this.merge({ guildMemberAvatars: n });
     }
     removeGuildAvatarHash(e) {
         if (void 0 === this.guildMemberAvatars[e]) return this;
-        let t = E(m({}, this.guildMemberAvatars), { [e]: void 0 });
+        let t = g(h({}, this.guildMemberAvatars), { [e]: void 0 });
         return this.merge({ guildMemberAvatars: t });
     }
     getAvatarSource(e) {
@@ -133,20 +132,20 @@ class b extends i.Z {
         return (0, c.yE)(this.premiumUsageFlags, e);
     }
     hasHadSKU(e) {
-        let t = p.vL[e];
+        let t = f.vL[e];
         return null != t && this.hasPurchasedFlag(t);
     }
     hasHadPremium() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-            t = this.hasPurchasedFlag(p.in.PREMIUM_TIER_0),
-            n = this.hasPurchasedFlag(p.in.PREMIUM_TIER_1),
-            r = this.hasPurchasedFlag(p.in.PREMIUM_TIER_2);
+            t = this.hasPurchasedFlag(f.in.PREMIUM_TIER_0),
+            n = this.hasPurchasedFlag(f.in.PREMIUM_TIER_1),
+            r = this.hasPurchasedFlag(f.in.PREMIUM_TIER_2);
         switch (e) {
-            case p.p9.TIER_0:
+            case f.p9.TIER_0:
                 return t;
-            case p.p9.TIER_1:
+            case f.p9.TIER_1:
                 return n;
-            case p.p9.TIER_2:
+            case f.p9.TIER_2:
                 return r;
             default:
                 return t || n || r;
@@ -173,9 +172,6 @@ class b extends i.Z {
     }
     isSystemUser() {
         return !0 === this.system;
-    }
-    isClyde() {
-        return this.id === f.fL;
     }
     hasAvatarForGuild(e) {
         return null != e && null != this.guildMemberAvatars[e];
@@ -204,8 +200,8 @@ class b extends i.Z {
               };
     }
     constructor(e) {
-        var t, n, i, a, s, l, c, u, d, f, p, m, g, E, b, y, O, v, I, T, S, A, N, C, R, P, w, D, L, x, M, k;
-        super(), h(this, 'id', void 0), h(this, 'username', void 0), h(this, 'discriminator', void 0), h(this, 'avatar', void 0), h(this, 'avatarDecorationData', void 0), h(this, 'banner', void 0), h(this, 'email', void 0), h(this, 'verified', void 0), h(this, 'bot', void 0), h(this, 'system', void 0), h(this, 'mfaEnabled', void 0), h(this, 'mobile', void 0), h(this, 'desktop', void 0), h(this, 'premiumType', void 0), h(this, 'flags', void 0), h(this, 'publicFlags', void 0), h(this, 'purchasedFlags', void 0), h(this, 'premiumUsageFlags', void 0), h(this, 'phone', void 0), h(this, 'nsfwAllowed', void 0), h(this, 'ageVerificationStatus', void 0), h(this, 'guildMemberAvatars', void 0), h(this, 'hasBouncedEmail', void 0), h(this, 'personalConnectionId', void 0), h(this, 'globalName', void 0), h(this, 'primaryGuild', void 0), h(this, 'collectibles', void 0), h(this, 'hasFlag', (e) => !1), h(this, 'isStaff', () => !1), h(this, 'isStaffPersonal', () => !1), h(this, 'hasAnyStaffLevel', () => !1);
+        var t, n, i, a, s, l, c, u, d, f, h, m, g, E, b, y, O, v, I, T, S, A, N, C, R, P, w, D, L, x, M, k;
+        super(), p(this, 'id', void 0), p(this, 'username', void 0), p(this, 'discriminator', void 0), p(this, 'avatar', void 0), p(this, 'avatarDecorationData', void 0), p(this, 'banner', void 0), p(this, 'email', void 0), p(this, 'verified', void 0), p(this, 'bot', void 0), p(this, 'system', void 0), p(this, 'mfaEnabled', void 0), p(this, 'mobile', void 0), p(this, 'desktop', void 0), p(this, 'premiumType', void 0), p(this, 'flags', void 0), p(this, 'publicFlags', void 0), p(this, 'purchasedFlags', void 0), p(this, 'premiumUsageFlags', void 0), p(this, 'phone', void 0), p(this, 'nsfwAllowed', void 0), p(this, 'ageVerificationStatus', void 0), p(this, 'guildMemberAvatars', void 0), p(this, 'hasBouncedEmail', void 0), p(this, 'personalConnectionId', void 0), p(this, 'globalName', void 0), p(this, 'primaryGuild', void 0), p(this, 'collectibles', void 0), p(this, 'hasFlag', (e) => !1), p(this, 'isStaff', () => !1), p(this, 'isStaffPersonal', () => !1), p(this, 'hasAnyStaffLevel', () => !1);
         let j = null != (n = e.premium_type) ? n : e.premiumType;
         (this.id = e.id),
             (this.username = null != (i = e.username) ? i : ''),
@@ -216,7 +212,7 @@ class b extends i.Z {
             (this.verified = null != (u = e.verified) && u),
             (this.bot = null != (d = e.bot) && d),
             (this.system = null != (f = e.system) && f),
-            (this.mfaEnabled = null != (m = null != (p = e.mfa_enabled) ? p : e.mfaEnabled) && m),
+            (this.mfaEnabled = null != (m = null != (h = e.mfa_enabled) ? h : e.mfaEnabled) && m),
             (this.mobile = null != (g = e.mobile) && g),
             (this.desktop = null != (E = e.desktop) && E),
             (this.premiumType = j === _.WND ? null : j),
@@ -269,4 +265,4 @@ class b extends i.Z {
             (null == (t = this.globalName) ? void 0 : t.length) === 0 && (this.globalName = null);
     }
 }
-new b({ id: '0' });
+new E({ id: '0' });

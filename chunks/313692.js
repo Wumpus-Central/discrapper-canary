@@ -45,7 +45,7 @@ function E(e) {
                 });
         }
     });
-    let L = i.useCallback(
+    let D = i.useCallback(
             (e) => {
                 null != N &&
                     ((T.current = e.target.scrollTop),
@@ -57,7 +57,7 @@ function E(e) {
             },
             [E, l, N, A]
         ),
-        D = (0, o.throttle)(L, 300),
+        L = (0, o.throttle)(D, 300),
         U = i.useCallback(
             (e) => {
                 var t, n;
@@ -183,7 +183,7 @@ function E(e) {
                   (0, r.jsx)(c.Den, {
                       className: O.innerContainer,
                       ref: Z,
-                      onScroll: D,
+                      onScroll: L,
                       children: (0, r.jsx)(m.Z, {
                           searchResults: F,
                           search: G,

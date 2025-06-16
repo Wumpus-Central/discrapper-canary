@@ -61,40 +61,36 @@ function p(e, t) {
     );
 }
 let h = (e) => {
-    let t,
-        { invertColor: n = !1, type: i = l.Hb.BOT, className: d, verified: f, hideIcon: h = !1, useRemSizes: m = !1, children: g = [] } = e,
-        E = null,
-        b = c.intl.string(c.t.g76OcH);
-    switch (i) {
+    let { invertColor: t = !1, type: n = l.Hb.BOT, className: i, verified: d, hideIcon: f = !1, useRemSizes: h = !1, children: m = [] } = e,
+        g = null,
+        E = c.intl.string(c.t.g76OcH);
+    switch (n) {
         case l.Hb.SYSTEM_DM:
         case l.Hb.OFFICIAL:
-            (f = !0), (b = c.intl.string(c.t['7s687u'])), (E = c.intl.string(c.t.lKQ7Wl));
+            (d = !0), (E = c.intl.string(c.t['7s687u'])), (g = c.intl.string(c.t.lKQ7Wl));
             break;
         case l.Hb.SERVER:
-            E = c.intl.string(c.t.PuJGuL);
+            g = c.intl.string(c.t.PuJGuL);
             break;
         case l.Hb.ORIGINAL_POSTER:
-            E = c.intl.string(c.t.fyE8sL);
+            g = c.intl.string(c.t.fyE8sL);
             break;
         case l.Hb.STAFF_ONLY_DM:
-            E = c.intl.string(c.t.oMx98P);
-            break;
-        case l.Hb.AI:
-            (f = !0), (b = c.intl.string(c.t.d5YwQE)), (E = c.intl.string(c.t.pLTJZG));
+            g = c.intl.string(c.t.oMx98P);
             break;
         case l.Hb.REMIX:
-            (f = !1), (E = c.intl.string(c.t.uXDG39));
+            (d = !1), (g = c.intl.string(c.t.uXDG39));
             break;
         case l.Hb.BOT:
         default:
-            E = c.intl.string(c.t['9RNkeH']);
+            g = c.intl.string(c.t['9RNkeH']);
     }
-    let y = i === l.Hb.ORIGINAL_POSTER,
-        O = i === l.Hb.REMIX,
-        v = null;
-    f &&
-        (v = (0, r.jsx)(o.u, {
-            text: b,
+    let b = n === l.Hb.ORIGINAL_POSTER,
+        y = n === l.Hb.REMIX,
+        O = null;
+    d &&
+        (O = (0, r.jsx)(o.u, {
+            text: E,
             align: 'center',
             position: 'top',
             children: (e) =>
@@ -105,27 +101,27 @@ let h = (e) => {
                         color: s.TVs.colors.WHITE
                     })
                 )
-        })),
-        (t = i === l.Hb.AI ? u.botTagAI : n ? u.botTagInvert : u.botTagRegular);
-    let I = (e) =>
-        (0, r.jsxs)(
-            'span',
-            p(_({}, e), {
-                className: a()(d, t, m ? u.rem : u.px, {
-                    [u.botTagOP]: y,
-                    [u.botTagRemix]: O
-                }),
-                children: [
-                    h ? null : v,
-                    g,
-                    (0, r.jsx)('span', {
-                        className: u.botText,
-                        children: E
-                    })
-                ]
-            })
-        );
-    switch (i) {
+        }));
+    let v = t ? u.botTagInvert : u.botTagRegular,
+        I = (e) =>
+            (0, r.jsxs)(
+                'span',
+                p(_({}, e), {
+                    className: a()(i, v, h ? u.rem : u.px, {
+                        [u.botTagOP]: b,
+                        [u.botTagRemix]: y
+                    }),
+                    children: [
+                        f ? null : O,
+                        m,
+                        (0, r.jsx)('span', {
+                            className: u.botText,
+                            children: g
+                        })
+                    ]
+                })
+            );
+    switch (n) {
         case l.Hb.REMIX:
             return (0, r.jsx)(o.u, {
                 text: c.intl.string(c.t.xb0str),

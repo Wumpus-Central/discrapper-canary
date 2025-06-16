@@ -150,7 +150,7 @@ function d(e) {
                         }
                     );
             }, [R, w, M]);
-            let L = r.useCallback(
+            let D = r.useCallback(
                     () => ({
                         role: 'list',
                         tabIndex: E && g ? -1 : 0,
@@ -160,7 +160,7 @@ function d(e) {
                     }),
                     [t, E, A, g]
                 ),
-                D = r.useCallback(
+                L = r.useCallback(
                     (e) => {
                         let { index: n } = e;
                         return {
@@ -177,10 +177,10 @@ function d(e) {
             return r.useMemo(
                 () => ({
                     dispatch: m,
-                    getContainerProps: L,
-                    getItemProps: D
+                    getContainerProps: D,
+                    getItemProps: L
                 }),
-                [m, L, D]
+                [m, D, L]
             );
         })({
             navId: t,

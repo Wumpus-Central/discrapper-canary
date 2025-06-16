@@ -32,8 +32,8 @@ function O(e) {
         R = (0, h.Z)(S),
         M = (0, _.Z)(S),
         k = (0, m.Z)(O, N, null == A ? void 0 : A.ownerId, null == w ? void 0 : w.id),
-        L = (0, p.Z)(S),
-        D = (0, y.Z)(),
+        D = (0, p.Z)(S),
+        L = (0, y.Z)(),
         U = (0, c.$A)(S),
         B = (0, c.j8)(S),
         F = (0, b.Z)(A, P),
@@ -50,10 +50,10 @@ function O(e) {
         children: [
             (0, r.jsx)(l.kSQ, { children: Z !== x.d4z.GUILD_STAGE_VOICE ? k : null }),
             (0, r.jsxs)(l.kSQ, {
-                children: [Z === x.d4z.GUILD_STAGE_VOICE ? U : null, Z === x.d4z.GUILD_STAGE_VOICE ? B : null, E || Z === x.d4z.GUILD_STAGE_VOICE ? null : L, H, Z !== x.d4z.GUILD_STAGE_VOICE ? R : null, Z === x.d4z.GUILD_STAGE_VOICE || Z === x.d4z.GUILD_VOICE ? M : null]
+                children: [Z === x.d4z.GUILD_STAGE_VOICE ? U : null, Z === x.d4z.GUILD_STAGE_VOICE ? B : null, E || Z === x.d4z.GUILD_STAGE_VOICE ? null : D, H, Z !== x.d4z.GUILD_STAGE_VOICE ? R : null, Z === x.d4z.GUILD_STAGE_VOICE || Z === x.d4z.GUILD_VOICE ? M : null]
             }),
             (0, r.jsx)(l.kSQ, { children: V }),
-            (0, r.jsx)(l.kSQ, { children: D }),
+            (0, r.jsx)(l.kSQ, { children: L }),
             (0, r.jsxs)(l.kSQ, {
                 children: [null != A ? F : null, null != w ? G : null]
             })

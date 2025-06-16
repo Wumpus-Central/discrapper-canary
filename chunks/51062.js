@@ -1,21 +1,19 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(73800),
     i = n(710251),
     a = n(442837),
     o = n(456007),
     s = n(998698),
     l = n(541716),
-    c = n(797610),
-    u = n(271383),
-    d = n(496675),
-    _ = n(246946),
-    f = n(594174),
-    p = n(106824),
-    h = n(691841),
-    m = n(981631),
-    g = n(377668),
-    E = n(185923);
-function b(e, t, n) {
+    c = n(271383),
+    u = n(496675),
+    d = n(246946),
+    _ = n(594174),
+    f = n(106824),
+    p = n(691841),
+    h = n(981631),
+    m = n(185923);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +26,7 @@ function b(e, t, n) {
         e
     );
 }
-function y(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,12 +37,12 @@ function y(e) {
                 })
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-function O(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,95 +54,86 @@ function O(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : O(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function I(e, t, n) {
-    var b, O, I, T, S, A, N;
-    let { channel: C, type: R } = e,
-        [P, w] = r.useState(() => (0, p.P)()),
-        D = (0, i.Z)(),
-        L = (0, a.e7)([u.ZP], () => {
-            if (null != e.guild) {
-                var t;
-                return null != u.ZP.getMember(null == (t = e.guild) ? void 0 : t.id, g.fL);
-            }
-            return !1;
-        }),
-        x = (0, c.Ib)(e.guild, e.channel) && !L && !(0, c.g0)(e.guild),
-        M = (0, a.e7)([u.ZP, f.default], () => {
+function O(e, t, n) {
+    var g, b, O, v, I, T, S;
+    let { channel: A, type: N } = e,
+        [C, R] = r.useState(() => (0, f.P)()),
+        P = (0, i.Z)(),
+        w = (0, a.e7)([c.ZP, _.default], () => {
             var e, t;
-            let n = f.default.getCurrentUser();
-            return null != (t = null != C.guild_id && null != n ? (null == (e = u.ZP.getMember(C.guild_id, n.id)) ? void 0 : e.isPending) : null) && t;
+            let n = _.default.getCurrentUser();
+            return null != (t = null != A.guild_id && null != n ? (null == (e = c.ZP.getMember(A.guild_id, n.id)) ? void 0 : e.isPending) : null) && t;
         }),
-        { canMentionEveryone: k, hidePersonalInformation: j } = (0, a.cj)(
-            [d.Z, _.Z],
+        { canMentionEveryone: D, hidePersonalInformation: L } = (0, a.cj)(
+            [u.Z, d.Z],
             () => ({
-                canMentionEveryone: C.isPrivate() || M || R === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, C),
-                hidePersonalInformation: _.Z.hidePersonalInformation
+                canMentionEveryone: A.isPrivate() || w || N === l.Ie.RULES_INPUT || u.Z.can(h.Plq.MENTION_EVERYONE, A),
+                hidePersonalInformation: d.Z.hidePersonalInformation
             }),
-            [C, R, M]
+            [A, N, w]
         ),
-        { activeCommand: U, activeCommandOption: G } = (0, a.cj)([s.Z], () => ({
-            activeCommand: s.Z.getActiveCommand(C.id),
-            activeCommandOption: s.Z.getActiveOption(C.id)
+        { activeCommand: x, activeCommandOption: M } = (0, a.cj)([s.Z], () => ({
+            activeCommand: s.Z.getActiveCommand(A.id),
+            activeCommandOption: s.Z.getActiveOption(A.id)
         })),
-        B = (0, h.Z)({
+        k = (0, p.Z)({
             navId: 'channel-autocomplete',
             scrollerRef: n,
-            state: P,
-            onFocus: (e) => Z.setSelectedIndex(e)
+            state: C,
+            onFocus: (e) => G.setSelectedIndex(e)
         }),
-        V = null == (b = e.editorRef.current) ? void 0 : b.getCurrentWord(),
-        F = v(y({}, e), {
-            navigator: B,
-            activeCommand: U,
-            activeCommandOption: G,
-            canMentionUsers: null != (S = null == (O = R.users) ? void 0 : O.allowMentioning) && S,
-            canMentionEveryone: k,
-            canMentionClyde: x,
-            hidePersonalInformation: j,
-            hideMentionDescription: R === l.Ie.RULES_INPUT,
-            emojiIntention: R === l.Ie.RULES_INPUT ? E.Hz.COMMUNITY_CONTENT : E.Hz.CHAT,
-            currentWord: null != (A = null == V ? void 0 : V.word) ? A : '',
-            currentWordIsAtStart: (null == V ? void 0 : V.isAtStart) === !0,
-            optionText: null != G ? (0, o.KF)({ [G.name]: null != (N = null == (I = e.editorRef.current) ? void 0 : I.getCurrentCommandOptionValue()) ? N : [] }, G.name) : ''
+        j = null == (g = e.editorRef.current) ? void 0 : g.getCurrentWord(),
+        U = y(E({}, e), {
+            navigator: k,
+            activeCommand: x,
+            activeCommandOption: M,
+            canMentionUsers: null != (I = null == (b = N.users) ? void 0 : b.allowMentioning) && I,
+            canMentionEveryone: D,
+            hidePersonalInformation: L,
+            hideMentionDescription: N === l.Ie.RULES_INPUT,
+            emojiIntention: N === l.Ie.RULES_INPUT ? m.Hz.COMMUNITY_CONTENT : m.Hz.CHAT,
+            currentWord: null != (T = null == j ? void 0 : j.word) ? T : '',
+            currentWordIsAtStart: (null == j ? void 0 : j.isAtStart) === !0,
+            optionText: null != M ? (0, o.KF)({ [M.name]: null != (S = null == (O = e.editorRef.current) ? void 0 : O.getCurrentCommandOptionValue()) ? S : [] }, M.name) : ''
         }),
-        [Z] = r.useState(() => new p.Z(F));
+        [G] = r.useState(() => new f.Z(U));
     return (
         r.useEffect(() => {
-            Z.updateProps(F);
+            G.updateProps(U);
         }),
-        r.useImperativeHandle(t, () => Z, [Z]),
+        r.useImperativeHandle(t, () => G, [G]),
         r.useEffect(() => {
-            let e = (e) => w(e);
+            let e = (e) => R(e);
             return (
-                Z.on('change', e),
-                Z.on('update', D),
+                G.on('change', e),
+                G.on('update', P),
                 () => {
-                    Z.off('change', e), Z.off('update', D);
+                    G.off('change', e), G.off('update', P);
                 }
             );
-        }, [D, Z]),
+        }, [P, G]),
         r.useEffect(() => {
             var e;
-            let t = null == (e = P.query) ? void 0 : e.typeInfo.stores;
+            let t = null == (e = C.query) ? void 0 : e.typeInfo.stores;
             if (null != t) {
-                let e = () => Z.queryResults();
+                let e = () => G.queryResults();
                 for (let n of t) n.addChangeListener(e);
                 return () => {
                     for (let n of t) n.removeChangeListener(e);
                 };
             }
-        }, [Z, null == (T = P.query) ? void 0 : T.typeInfo]),
-        [P, Z, B]
+        }, [G, null == (v = C.query) ? void 0 : v.typeInfo]),
+        [C, G, k]
     );
 }

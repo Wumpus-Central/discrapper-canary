@@ -114,14 +114,7 @@ function m(e, t, n) {
             return (0, r.jsxs)(g, {
                 attributes: u,
                 className: b,
-                children: [
-                    (0, r.jsx)(s.Ox, {
-                        text: p.name,
-                        channelId: n,
-                        guildId: t
-                    }),
-                    _
-                ]
+                children: [(0, r.jsx)(s.Ox, { text: p.name }), _]
             });
         case 'userMention':
             return (0, r.jsxs)(g, {

@@ -1098,8 +1098,6 @@ function eg(e, t) {
             return j.intl.string(j.t.kEqgr6);
         case v.Plq.MODERATE_MEMBERS:
             return j.intl.string(j.t['+RL6p6']);
-        case v.Plq.USE_CLYDE_AI:
-            return j.intl.string(j.t['8eeEZm']);
         case v.Plq.SET_VOICE_CHANNEL_STATUS:
             return j.intl.string(j.t.VBwkUV);
         case v.Plq.SEND_POLLS:
